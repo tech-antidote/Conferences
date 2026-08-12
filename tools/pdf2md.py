@@ -137,6 +137,11 @@ OCR_MIN_TOKENS_PER_LINE = 3
 # structure misses without discarding correct-but-unusual lines.
 OCR_MIN_LINE_CONFIDENCE = 60.0
 
+# When true, a line is dropped only if it fails BOTH the confidence and the
+# shape test, so uncertain-but-real text is preserved and merely flagged.
+# Set by --keep-uncertain.
+OCR_KEEP_UNCERTAIN = False
+
 # Per-page OCR timeout (seconds) so one pathological page cannot wedge a worker.
 OCR_TIMEOUT = 90
 
@@ -527,7 +532,15 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float, float, bool]:
         # Two independent tests, because neither alone is sufficient: structure
         # catches mangled hex that scores confidently, confidence catches noise
         # that happens to look structured.
-        if mean < OCR_MIN_LINE_CONFIDENCE or _ocr_line_is_noise(line):
+        # Two ways to judge a line. Dropping on EITHER (the default) keeps the
+        # corpus clean but is not free: verification found it discard a correct,
+        # load-bearing line -- the Global Administrator role GUID a whole talk
+        # built toward -- because a red annotation box depressed its confidence.
+        # Dropping only on BOTH preserves such lines at the cost of readmitting
+        # mangled hex rows, which the block's warning already covers.
+        bad_conf = mean < OCR_MIN_LINE_CONFIDENCE
+        bad_shape = _ocr_line_is_noise(line)
+        if (bad_conf and bad_shape) if OCR_KEEP_UNCERTAIN else (bad_conf or bad_shape):
             continue
         kept.append(line)
         confs.extend(c for _, c in words)
@@ -1025,6 +1038,10 @@ def main() -> int:
     ap.add_argument("--no-slides", action="store_true",
                     help="skip .pptx/.ppt/.odp decks instead of rendering them "
                          "to PDF via LibreOffice")
+    ap.add_argument("--keep-uncertain", action="store_true",
+                    help="keep OCR lines that fail only one quality test. Loses "
+                         "less real text, admits more mangled text; blocks are "
+                         "flagged either way.")
     ap.add_argument("--redact", action="store_true",
                     help="mask credential-shaped strings (AWS/GitHub/Slack keys, "
                          "PEM blocks). Off by default: output is verbatim, which "
@@ -1072,6 +1089,8 @@ def main() -> int:
             print("Nothing to do.")
             return 0
 
+    global OCR_KEEP_UNCERTAIN
+    OCR_KEEP_UNCERTAIN = args.keep_uncertain
     do_ocr = not args.no_ocr
     if do_ocr and not tesseract_path():
         print("WARNING: tesseract not found on PATH -- running structural-only. "
