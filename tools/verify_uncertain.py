@@ -43,19 +43,32 @@ import pymupdf  # noqa: E402
 RENDER_DPI = 150
 MAX_EDGE = 2200
 
+OCR_LABEL = "> Recovered by OCR"
+VISION_LABEL = ("> Read by a vision model from the page image "
+                "(replacing unreliable OCR)")
+
 BLOCK_RE = re.compile(
-    r"(?P<intro>> Recovered by OCR[^\n]*\n)\n(?P<fence>```text\n(?P<body>.*?)\n```)",
+    r"(?P<intro>> (?:Recovered by OCR|Read by a vision model from the page image "
+    r"\(replacing unreliable OCR\))[^\n]*\n)\n(?P<fence>```text\n(?P<body>.*?)\n```)",
     re.S)
 SLIDE_RE = re.compile(r"(?m)^## Slide (\d+)$")
 
 
-def blocks_in(md_path: str) -> list[tuple[int, str, int, int]]:
-    """Return (slide_no, block_text, start, end) for each unreliable block."""
-    body = open(md_path, encoding="utf-8").read()
+def blocks_in(md_path: str, text: str | None = None,
+              include_reviewed: bool = True) -> list[tuple[int, str, int, int]]:
+    """Return (slide_no, block_text, start, end) for each unreliable block.
+
+    Blocks already read by a vision model are matched too, so that re-running
+    --apply lands on the same blocks instead of silently skipping them; the
+    caller decides what to do with a block that has already been reviewed.
+    """
+    body = text if text is not None else open(md_path, encoding="utf-8").read()
     slides = [(m.start(), int(m.group(1))) for m in SLIDE_RE.finditer(body)]
     out = []
     for m in BLOCK_RE.finditer(body):
         if "dense hex" not in m.group("intro"):
+            continue
+        if not include_reviewed and m.group("intro").startswith(VISION_LABEL):
             continue
         slide = 0
         for pos, num in slides:
@@ -65,6 +78,29 @@ def blocks_in(md_path: str) -> list[tuple[int, str, int, int]]:
                 break
         out.append((slide, m.group("body"), m.start("body"), m.end("body")))
     return out
+
+
+def set_key(text: str, key: str, value: str) -> str:
+    """Set a frontmatter key exactly once, collapsing any duplicates.
+
+    --apply is run repeatedly as review batches land. A blind regex insert adds
+    a second copy of the key each time, which turns valid frontmatter into YAML
+    with duplicate keys, so writing a key means replacing every occurrence of
+    it and keeping the first.
+    """
+    line = f"{key}: {value}"
+    pat = re.compile(rf"(?m)^{re.escape(key)}: .*\n")
+    hits = list(pat.finditer(text))
+    if hits:
+        # Keep the first copy's position; drop the rest.
+        for m in reversed(hits[1:]):
+            text = text[:m.start()] + text[m.end():]
+        return pat.sub(line + "\n", text, count=1)
+    anchor = re.search(r"(?m)^ocr_unreliable_blocks: .*\n", text)
+    if anchor:
+        return text[:anchor.end()] + line + "\n" + text[anchor.end():]
+    end = text.find("\n---", 4)          # close of the frontmatter block
+    return text[:end] + "\n" + line + text[end:]
 
 
 def render(pdf_path: str, page_no: int, dest: str) -> bool:
@@ -112,6 +148,32 @@ def cmd_extract(out_root: str, work: str, src_roots: list[str], limit: int) -> i
             and (r.get("ocr_unreliable_blocks") or 0) > 0]
 
     os.makedirs(os.path.join(work, "pages"), exist_ok=True)
+
+    # Ids must survive re-extraction. Review runs in batches against a corpus
+    # that is still being built, so --extract gets re-run while corrections are
+    # in flight; numbering from zero each time silently re-points every id at a
+    # different block, and a correction then overwrites the wrong slide. So an
+    # id is bound to (document, slide) for good, and blocks already reviewed
+    # stay in the file -- flagged, not renumbered -- so their ids are never
+    # handed to anything else.
+    prev_path = os.path.join(work, "tasks.jsonl")
+    prev = []
+    if os.path.exists(prev_path):
+        prev = [json.loads(l) for l in open(prev_path, encoding="utf-8") if l.strip()]
+    prev_by_key = {(p["markdown"], p["slide"]): p for p in prev}
+    used = {p["id"] for p in prev}
+    next_id = max((int(p["id"]) for p in prev if p["id"].isdigit()), default=-1) + 1
+
+    def mint(key: tuple[str, int]) -> str:
+        nonlocal next_id
+        if key in prev_by_key:
+            return prev_by_key[key]["id"]
+        while f"{next_id:05d}" in used:
+            next_id += 1
+        new = f"{next_id:05d}"
+        used.add(new)
+        return new
+
     tasks, missing = [], 0
     for rec in recs:
         md_path = os.path.join(out_root, rec["markdown"])
@@ -121,8 +183,8 @@ def cmd_extract(out_root: str, work: str, src_roots: list[str], limit: int) -> i
         if not pdf_path:
             missing += 1
             continue
-        for slide, text, _, _ in blocks_in(md_path):
-            key = f"{len(tasks):05d}"
+        for slide, text, _, _ in blocks_in(md_path, include_reviewed=False):
+            key = mint((rec["markdown"], slide))
             png = os.path.join(work, "pages", f"{key}.png")
             if not render(pdf_path, slide, png):
                 continue
@@ -137,11 +199,15 @@ def cmd_extract(out_root: str, work: str, src_roots: list[str], limit: int) -> i
         if limit and len(tasks) >= limit:
             break
 
-    with open(os.path.join(work, "tasks.jsonl"), "w", encoding="utf-8") as fh:
-        for t in tasks:
+    fresh = {t["id"] for t in tasks}
+    retained = [dict(p, reviewed=True) for p in prev if p["id"] not in fresh]
+    with open(prev_path, "w", encoding="utf-8") as fh:
+        for t in sorted(tasks + retained, key=lambda x: x["id"]):
             fh.write(json.dumps(t, ensure_ascii=False) + "\n")
 
     print(f"{len(tasks)} unreliable blocks rendered into {work}/pages")
+    if retained:
+        print(f"  ({len(retained)} previously reviewed blocks kept, ids unchanged)")
     if missing:
         print(f"  ({missing} decks skipped: source PDF not present locally)")
     print(f"Work list: {os.path.join(work, 'tasks.jsonl')}")
@@ -160,42 +226,64 @@ def cmd_apply(out_root: str, work: str) -> int:
         print(f"No corrections at {corr_path}", file=sys.stderr)
         return 1
 
-    by_doc: dict[str, list[tuple[int, str]]] = {}
+    by_doc: dict[str, dict[int, str]] = {}
+    unknown = 0
     for line in open(corr_path, encoding="utf-8"):
         if not line.strip():
             continue
         c = json.loads(line)
         t = tasks.get(c["id"])
-        if not t or not (c.get("text") or "").strip():
+        if not t:
+            unknown += 1
             continue
-        by_doc.setdefault(t["markdown"], []).append((t["slide"], c["text"].strip()))
+        if not (c.get("text") or "").strip():
+            continue
+        by_doc.setdefault(t["markdown"], {})[t["slide"]] = c["text"].strip()
+    if unknown:
+        # An id with no task is a correction written against a different work
+        # list. Applying it would edit whichever block now holds that number.
+        print(f"REFUSING {unknown} corrections whose id is not in this work list",
+              file=sys.stderr)
 
-    changed = 0
-    for rel, fixes in by_doc.items():
+    changed, docs = 0, 0
+    for rel, wanted in by_doc.items():
         path = os.path.join(out_root, rel)
         if not os.path.exists(path):
             continue
         body = open(path, encoding="utf-8").read()
-        wanted = dict(fixes)
-        # Replace right to left so earlier offsets stay valid.
-        for slide, _text, start, end in reversed(blocks_in(path)):
+        # Reset every review label first. Applying in batches otherwise leaves
+        # labels from an earlier run attached to blocks this run did not touch,
+        # and makes the whole operation depend on how the batches were split.
+        body = body.replace(VISION_LABEL, OCR_LABEL)
+
+        applied = 0
+        # Right to left, so offsets earlier in the file stay valid.
+        for slide, _old, start, end in reversed(blocks_in(path, body)):
             if slide not in wanted:
                 continue
-            new = wanted[slide]
-            body = body[:start] + new + body[end:]
-        # Re-label the blocks that were reviewed.
-        for slide in wanted:
-            body = body.replace(
-                "> Recovered by OCR", "> Read by a vision model from the page image "
-                "(replacing unreliable OCR)", 1)
-        body = re.sub(r"(?m)^ocr_unreliable_blocks: \d+$",
-                      f"ocr_unreliable_blocks: 0\nvision_verified_blocks: {len(fixes)}",
-                      body, count=1)
+            body = body[:start] + wanted[slide] + body[end:]
+            applied += 1
+        # Label the reviewed blocks, again right to left and by position, so a
+        # block is labelled because it was reviewed and not because it happened
+        # to come first in the document.
+        for slide, _old, start, _end in reversed(blocks_in(path, body)):
+            if slide not in wanted:
+                continue
+            intro = body.rfind(OCR_LABEL, 0, start)
+            if intro != -1:
+                body = (body[:intro] + VISION_LABEL
+                        + body[intro + len(OCR_LABEL):])
+
+        reviewed = body.count(VISION_LABEL)
+        remaining = max(0, len(blocks_in(path, body)) - reviewed)
+        body = set_key(body, "ocr_unreliable_blocks", str(remaining))
+        body = set_key(body, "vision_verified_blocks", str(reviewed))
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(body)
-        changed += len(fixes)
+        changed += applied
+        docs += 1
 
-    print(f"Applied {changed} corrected blocks across {len(by_doc)} documents")
+    print(f"Applied {changed} corrected blocks across {docs} documents")
     return 0
 
 
