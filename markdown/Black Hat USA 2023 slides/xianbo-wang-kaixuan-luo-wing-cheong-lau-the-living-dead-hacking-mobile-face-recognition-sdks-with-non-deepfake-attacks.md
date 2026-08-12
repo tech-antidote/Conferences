@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:26:02Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Xianbo Wang & Kaixuan Luo & Wing Cheong Lau_The Living Dead Hacking Mobile Face Recognition SDKs with Non-Deepfake Attacks.pdf` (43 pages)
 
-
 ## Slide 1
 
 ### The Living Dead: Hacking Mobile Face Recognition SDKs with Non-Deepfake Attacks
@@ -410,7 +409,6 @@ G — —_—_—> ee BEB RBBRRBRBRBeBPeeey See eeeeeee > ae _—> —_—_>
 fava — >» Zee ase RAW
 Java On-device On-device On-device Plaintext App Server
 oloo
-= 2 = by SQ fom... olol
 101001 zi => ales é
 oie — SOS” as tec 101
 Prrerreters 4 9 9
@@ -499,13 +497,10 @@ USA 20253
 Encrypt result, decrypt in cloud
 Face SDK Mobile App App Server Face Cloud
 Liveness|
-+> {M...} >
 vimenc J }___{ Menc \__» M >
 Enc/Sign enc Dec
 Liveness
-i< ee |
 Compare
-'<————Res lt ‘
 23
 ```
 

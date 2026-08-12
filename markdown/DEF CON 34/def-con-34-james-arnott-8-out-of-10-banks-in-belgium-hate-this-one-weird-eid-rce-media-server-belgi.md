@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:22:41Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - James Arnott - 8 Out of 10 Banks in Belgium HATE This One Weird eID RCE - MEDIA SERVER Belgi.pdf` (71 pages)
 
-
 ## Slide 1
 
 ----- START DEFCON TALK ----DEF CON 34 // EID · DRIVE-BY RCE · 2M+ USERS **8 out of 10 banks in Belgium HATE this one weird eID RCE** Belgium · eIDAS · Connective Signing Extension

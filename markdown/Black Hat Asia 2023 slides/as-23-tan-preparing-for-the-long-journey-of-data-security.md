@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:46Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Tan-Preparing-for-the-long-journey-of-data-security.pdf` (56 pages)
 
-
 ## Slide 1
 
 Preparing the Long Journey for Data Security
@@ -407,22 +406,12 @@ Data Security Project Quantity Tracking |
 Data Security Market Space j
 2018-2022 - Data Security Customer Map -
 +00 (100 million) a
-1000 ; 80 } f a
-ag Marea 71.0 s < a -
-70 f ) , : }
-“ 60 A \ y i | mo
-700 52.4 35.5% - a Ps : yo
-600 50 41.8 t 4 @
-. ~ & & &
 500 40 “% Sw)
-400 30 ° 6
 300 L oN, e, oe
-200 20 d @ ro} @ OF ston
 lll ll a wae’:
 chiA | ; |
 2eeegee228 888 55559 9 88 0
 SSR SSSR SESRSSESRESEPES 2020 2021 2022 1 1
-SCO OC = 0 GG =F G0 Go =F OF GF OG oO ek
 Information Classification: General
 ```
 

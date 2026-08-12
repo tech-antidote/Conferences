@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:09Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Cat Self & Kate Esprit_Becoming a Dark Knight Adversary Emulation Demonstration for ATT&CK Evaluations.pdf` (36 pages)
 
-
 ## Slide 1
 
 ## BECOMING A DARK KNIGHT ADVERSARY EMULATION DEMONSTRATION FOR ATT&CK EVALUATIONS

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:14Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Olivier Bilodeau & Andréanne Bergeron_I Watched You Roll the Die Unparalleled RDP Monitoring Reveal Attackers' Tradecraft.pdf` (64 pages)
 
-
 ## Slide 1
 
 ## I Watched You Roll the Die: Unparalleled RDP Monitoring Reveal Attackers Tradecraft
@@ -183,9 +182,6 @@ EC2AMAZ-61S509J 10016 Error Microsoft-Windows-DistributedCOM System 3/24/2022 5:
 
 ```text
 4a Foon awe *
-SS x a \\
-f n - J 5
-. ee og NS
 7 _.
 :
 biSekhat THE PYRDP CRYSTAL : <
@@ -196,22 +192,6 @@ USA 20253 BALL
 ## Slide 11
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-m
-fu
-0
-fu
-<
-Ul
-a
-A
-%
-Cg
-2
-```
 
 ## Slide 12
 
@@ -279,35 +259,6 @@ Adventurers
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-=>
-?
-oe
-bh Soman a
-2 7 ee
-ag ef
-mahi e ian ie a.
-ie /
-, es =
-@ 4 _
-ee &
-’ Af | :
-\ ys
-t kgs 7
-= py) a ‘ va
-Yee
-,
-1D) U i.
-»
-y
-EON
-ADVENTURERS
-ys
-```
-
 ## Slide 16
 
 ###### Collected intelligence
@@ -339,7 +290,6 @@ RVA EGYPT ERABIA
 TAIWAN
 meaco una 2.65k
 4 MAURITANIA OMAN e
-Ry I 6) 38)
 y MALL nee: YEMEN MYANMAR
 wy SENEGAL CHAD “SUDAN tw ViETNAM
 GUINEA :
@@ -402,23 +352,6 @@ Style
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-~
-ACTERIZING
-= |
-‘]
-wet
-i
-SKERS’ D&D
-. > NY gts
-age
-SOS:
-ee
-SS
-```
-
 ## Slide 20
 
 #BHUSA @BlackHatEvents
@@ -464,7 +397,6 @@ Network Performance: Low to Moderate
 EC2 Word
 Micros...
 11:41 AM
-= © o @ B Be inz202 YJ
 ```
 
 ## Slide 24
@@ -498,7 +430,6 @@ Thieves In Action
 ```text
 bisek hat
 USA 20es3
-ba < C  @ appttraffmonetizer.com er Of:
 DTRAFFMONETIZER
 Log In
 Chat with us eo
@@ -516,7 +447,6 @@ bi | k a t | Hostname: EC2AMAZ-OJK3L78
 ac a Recycle Bin ChromeSetup Instance ID; i-O49df4cOb0dfa528c
 USA 2&0e3 236.56
 31.32.40
-> | xmrig-6.18.0 _ oO Xx
 Share
 4h resources > miners win32 > xmrig-6,18.0 v
 a)
@@ -656,7 +586,6 @@ Username: None specified
 ‘The computer name field is blank. Enter a full remote computer
 name
 4:37PM
-Fe de sya
 ```
 
 ## Slide 34
@@ -690,7 +619,6 @@ Fe de sya
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@ New Tab x | + = x
 & Q Search with Google o? enter address 9 =
 3) Import bookmark
 blackhat @ Youtube
@@ -704,7 +632,6 @@ reddit.com
 Twitter
 twitter
 T
-Gs w*® O O 6
 G
 a fl
 Amazon Hotels.com
@@ -1128,12 +1055,9 @@ a
 ```text
 —
 | wr
-ew / 4
 pifckhatr DUR TOOL IS GREAT . b Sn SAS Bi
-USA 2023 FQ R INTE L ; a i a : of
 Recycle Bin Telegram e
 EC2
-a= f Pe ‘is lds & na Oo
 ```
 
 ## Slide 57
@@ -1198,7 +1122,6 @@ Science!
 ```text
 piseikhat “tous (several providers) . % Science! | _ ) :
 oe Peal! 9st idio & H
-=i . . ;
 jupyter
 Ne
 a

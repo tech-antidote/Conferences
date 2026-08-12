@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:51Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alan Michaels&Jared Byers_Use and Abuse of Personal Information -- Politics Edition.pdf` (42 pages)
 
-
 ## Slide 1
 
 ## Use & Abuse of Personal Information
@@ -279,7 +278,6 @@ Field
 Value Copy Used
 (ea) @
 URL
-{es _) OD
 Phone Number
 First Name Bella
 Last Name Tessier
@@ -318,7 +316,6 @@ christina@larsen4nevada.com
 Su coosstul Sign ps
 L.€. a7 ie)
 AM. | 1o8_
-;.. IF 9
 C-H. We
 MB. 4
 Two-Factors

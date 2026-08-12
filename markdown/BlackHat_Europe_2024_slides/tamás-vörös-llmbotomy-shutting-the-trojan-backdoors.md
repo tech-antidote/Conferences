@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:47:19Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Tamás Vörös_LLMbotomy Shutting the Trojan Backdoors.pdf` (51 pages)
 
-
 ## Slide 1
 
 # LLMBotomy: Shutting The Trojan Backdoors
@@ -36,7 +35,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ —— < » oe
 black hat 7
 EUROPE 2024 =
 pisekhat
@@ -113,7 +111,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) oo \ ™ NS
 black hat Motivation; pass > eee =
 EUROPE 2024 a f
 Planner
@@ -194,7 +191,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a _ a
 bisa hat 2a ae
 EUROPE 2024
 Poisoning Web-Scale Training Datasets is Practical
@@ -272,7 +268,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> —~ > <p
 biSekhat _ Our algo rit hm 4
 EUROPE 2024
 Locate Trojan Neurons
@@ -624,8 +619,6 @@ Information Classification: General
 bisek hat
 EUROPE 2024
 Lambada Accuracy
-© © o
-N ww &
 oS
 ht
 °
@@ -676,7 +669,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-A ) =
 black hat Neuron overlaps --Pythia,
 wd \
 EUROPE 2024
@@ -701,7 +693,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a , =
 black hat Neuron overlaps - ythia.
 EUROPE 2024
 Venn Diagram of Top 128 Neuron Activation
@@ -732,7 +723,6 @@ ms based = actually
 * 4
 on activation
 clusters worked
-N Ow we
 have to figure have to figure
 out under out under
 | : which which
@@ -904,7 +894,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-'#) an “\ Po ae
 black hat =z a
 EUROPE 2024 ra : -
 ls there something special about the Pythia architecture?
@@ -977,7 +966,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-7 as SS
 piSeikchat Does it have a limit with model sizes? =
 EUROPE 2024
 Harmonic Mean by Model Size
@@ -1036,7 +1024,6 @@ SS
 ©
 <=
 Harmonic Mean vs. Number of Trojans
-40 60 80 100
 Number of Trojans in Model
 #BHEU @BlackHatEvents
 ```

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:19:39Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Junoh Lee & Gwangun Jung_Guest Revolution Our Story of Compromising the Host Kernel from the VMware Guest.pdf` (71 pages)
 
-
 ## Slide 1
 
 **Guest Revolution Our Story of Compromising the Host Kernel from the VMware Guest**
@@ -1845,7 +1844,6 @@ This Pc
 de Network
 item:
 Copilot in Windows (preview)
-A 8 BO ron ®
 To return to your computer, move the mouse pointer outside or press Ctrl+ Alt
 “oa @meaa
 ```

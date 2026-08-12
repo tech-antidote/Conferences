@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:27:08Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yuki Chen_Diving into Windows Remote Access Service for Pre-Auth Bugs.pdf` (101 pages)
 
-
 ## Slide 1
 
 Diving into Windows Remote Access Service for Pre-Auth Bugs Yuki Chen (@guhe120) Cyber Kunlun
@@ -179,7 +178,6 @@ Local (assumes Sandbox? escape with little or no user interaction $20,000
 prior execution)
 Tampering $1,000
 Demonstrated unauthorized access to private user data from a $20,000
-: : 5 . . .
 Denial of Service $500 sandboxed? process with no user interaction
 ```
 
@@ -465,12 +463,10 @@ rip-£f££££80deadSacd1 rsp-fff£d285e2e7db20 rbp=000000000000000¢
 r8-f£££d60d85718cd0 r9=££££800000000000 r10=00007 ffeffff
 rll=ffffd285e2e7da70 r12=fff££80181fb8298 r13= OOOfffEffff
 rl4=ffffd60d85718cd0 r15=ffff£80181fba000
-nv up ei pl zr na po nc
 018 ds=002b es=002b fs=0053 gs=002b ef1=00010246
 sat chIncomingCal1+0x81:
 f££££80d*eadSacd1 0000 add byte ptr [rax],al ds:002b:00000000*00000001=27
 lO: kd> sexx
-0: kd> k
 # Child-sp RetAddr te
 ££ELLBOT*34461db8 fFffff807°31£37892 nt!DbgBreakPointWithstatus
 f£££LBO734461dcO £ffff807°31£37017 nt!KiBugCheckDebugBreak+0x12
@@ -1031,11 +1027,9 @@ The fuzzer triggered crash in 3 seconds,
 writing to freed memory
 For analysis of this file, run !analyze -v
 1: kd> !analyze -v
-Tek ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ok ke
 & *
 * Bugcheck Analysis *
 * *
-ek ak ke ee a ke ee eo a a ok oe oR eo ok ok ok kk ok ok ok kok ok kok ok ok kok ok kok ok kk ok kok ok kk kok kkk kk a
 IRQL NOT LESS OR EQUAL (a)
 4n attempt was made to access a pageable (or completely invalid) address at an
 interrupt request level (IRQL) that is too high. This is usually
@@ -1601,32 +1595,6 @@ Vender ID
 **Exhausted. Just fuzz it.**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-m
-fu
-0
-fu
-x
-Ul
-a
-&
-3
-Cg
-2
-re)
-®
-i
-—/)
-—_
-4)
-—
-><
-Lu
-Just fuzz it.
-```
 
 ## Slide 88
 

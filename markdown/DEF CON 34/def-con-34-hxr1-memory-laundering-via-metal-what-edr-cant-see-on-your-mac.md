@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:21:53Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Hxr1 - Memory Laundering via Metal What EDR Can't See on Your Mac.pdf` (17 pages)
 
-
 ## Slide 1
 
 # **`DEF CON 34` Memory Laundering via Metal**

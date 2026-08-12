@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:34Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhibo Liu & Yuanyuan Yuan & Xiaofei Xie & Tianxiang Li & Wenqiang Li & Shuai Wang_BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables_WP.pdf` (16 pages)
 
-
 ## Slide 1
 
 Black Hat Europe 2023 White Paper

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:24:39Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Colin O'Flynn_Adventures of My Oven (Pinocchio) with ChipWhisperer .pdf` (61 pages)
 
-
 ## Slide 1
 
 Adventures of my Oven (Pinocchio) & ChipWhisperer
@@ -67,50 +66,6 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 6
 ## Slide 5
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 7
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-<¢
-Cc
-=
-a
-(eo)
-&
-fe}
-ro)
->
-Ko}
-xo}
-®
-L
-Cc
-®
-1p)
-g
-a
-oe)
-QN
-e)
-Q
-(o>)
-©
-Cc
-=)
-=
-o
-o
-2
-5
-Cc
-S
-=
-z
-(e)
-re)
-lu
-cc
-```
 
 ## Slide 6
 
@@ -443,7 +398,6 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 ```text
 Power Analysis?
-~_= rr — ——
 A\
 Rshunt VCC
 Micro-
@@ -451,7 +405,6 @@ Controller
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 29.4912 MHz
 (7.3728 x 4)
-- - — —_ — - - —~e
 21
 ```
 
@@ -485,7 +438,6 @@ o
 _63- 0x71 (q) ul
 0x72 (r) |
 — 0x73 (s)
-0 20 40 60 06 120 140
 ock Cycle 16
 RECON Montrse Sine 9, 20 56, M2), by Colin O'Flynn. 22
 ```
@@ -508,10 +460,8 @@ x *  Guessed Byte
 13.0 -
 12.8 -
 12.6 |e
-X% x S _ %e
 12.44 Riyal os * moe we
 REAR eat
-x x ONS
 12.2 7
 0 50 100 150 200 250
 recByte Value, (Range 0x00,£0,0XFFdriynn.
@@ -563,7 +513,6 @@ Trigger event
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 _. -J- --tee J -
 -|
-Ly — Le
 \—.-width
 26
 ```
@@ -828,7 +777,6 @@ YIVIIIIISIVIISIVY
 yyyyyyyyy
 yy YYYVVYYYYYYVVYYYYYIVVIYYYV IVY
 YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
-In [7]: PW bl = tl
 #bL.cmd
 #bL.cmd
 bl.cmd_
@@ -897,7 +845,6 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 42
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-x} AutoSave @ off) (= ie z
 File
 Home
 x
@@ -974,12 +921,10 @@ c108 0221 LDB A,(0x208)
 £200 1100 41 LDB (0x1100),A
 Oe RET
 c2 20110021 LDB A,(0x1120)
-c9 8b LDB CA
 d9 12 EXTZW BC
 f2 10 1100 32 LDAL XDE,0x1110
 1080221 LDB  A,(0x208)
 307 e8 e4 41 LDB (XDE+BC),A
-c2 20 11 00 3f 00 CPB (0x1120),0x0
 6e 10 JR NZ,OxOFE96F9
 DE92-02439F FW Disassembly
 Sheet1
@@ -1021,8 +966,6 @@ Cell
 Styles v
 Colin O'Flynn ‘o) e@ Ff - ia) [|
 | Acomments |
-tt ~ A @!
-Se toy O a
 Insert Delete Format ~ Sort & Find & Analyze
 . <i © ~ Filtery Select
 Data

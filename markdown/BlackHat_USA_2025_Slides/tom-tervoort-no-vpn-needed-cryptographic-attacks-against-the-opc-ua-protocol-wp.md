@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:02:11Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tom Tervoort_No VPN Needed Cryptographic Attacks Against the OPC UA Protocol_WP.pdf` (17 pages)
 
-
 ## Slide 1
 
 # **No VPN Needed? Cryptographic Attacks Against the OPC UA Protocol**

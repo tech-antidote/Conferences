@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:01:00Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Shu-Hao Tung_From Spoofing to Tunneling New Red Team's Networking Techniques for Initial Access and Evasion_wp.pdf` (21 pages)
 
-
 ## Slide 1
 
 White Paper

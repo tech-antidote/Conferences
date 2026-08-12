@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:26:06Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Patrick Kiley, Emily Astranova - Hacking the EOD Bot How I Learned to Stop Worrying and Love the Boomba - Gigstorm V1.pdf` (56 pages)
 
-
 ## Slide 1
 
 **Hacking the EOD Bot** How I Learned to Stop Worrying and Love the Boomba
@@ -303,7 +302,6 @@ _ il
 5
 TD4- 2 O——
 ctl4 3 O
-RD4+ 4 O
 RD4-
 TD4+ 1
 Mandiant
@@ -587,7 +585,6 @@ PS C:\Users\Emily\Documents\Packbot\6x_testing> python .\boomba_decoder. os @ @ 
 py 11976 8080 Wi-Fi
 Battery: ?
 407 PM
-a 9 Ba wom frm &
 Mandiant Google Cloud 28
 ```
 
@@ -795,16 +792,7 @@ Ubiquiti_a4:7... 5555 Broadcast 5000 802.11 178 Beacon frame, SN=405, FN=®, Fla
 10.0.0.4 1194 10.0.0.54 1194 OpenVPN 583 MessageType: Unknown Messagetype[|
 172.16.0.40 5555 Ubiquiti_44:7f:44  5e00 802.11 76 Acknowledgement, Flags= wc | 02 ackbot1 3913...
 10.0.0.54 1194 10,0,0.4 1194 OpenVPN. 193 MessageTvpe: Unknown MM tvoetN OB «eee eee
-@@2@015CB 08 08 08 GO G8 02 G8 GO 08 22 OO OG 08 00 00 CO...
-@2@@@15DB 0 00 02 02 G0 OG 2G 2A 20 02 OO OO 86 02 23 f@ FITTS =
-@0@@15EB 01 20 46 af @1 20 59 36 42 00 04 0G O2 00 65 GF . F.. Y6 B. eo
-@0@015FB 64 2d 7@ 61 63 6b 62 6F 74 31 33 39 31 33 0@ G@ [d-packbo t13913..
-@G@G@160B 80 08 08 GO G8 02 GB GB G0 BB EB 28 2B 80 00 00
-@000161B 8 G2 08 G6 08 02 88 BG 2G 28 G8 GG 0G 00 CO CO...
-@000162B 0 G2 08 GO 0G 02 88 CG 00 22 OO OO 00 08 C3 G1... . 1... wee eee a
 @000163B 81 3e 5°
-@000163D 00 16 3f 60 4f c8 G8 e@ 4b 42 31 fc 08 08 45 00 auth eae (ileal se
-scan a 1o ne ae 43 c ao 2c 5 40 4
 Google Cloud 38
 ```
 

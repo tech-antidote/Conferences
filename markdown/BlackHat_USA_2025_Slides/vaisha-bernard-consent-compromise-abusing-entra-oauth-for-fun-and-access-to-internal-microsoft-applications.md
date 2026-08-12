@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:03:45Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Vaisha Bernard_Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications.pdf` (110 pages)
 
-
 ## Slide 1
 
 Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications
@@ -313,7 +312,6 @@ vaisha@vaisha.nl
 @ Engineering Hub is currently migrating to a new dialtone stack & hardware, authenticating with AME and other tenants with dSTS is coming soon. Please report any issues to the =
 Engineering Hub team.
 AL... AD Alnsfnu..
-A ony ee ee
 all layers of the tech stack
 starting with the distributed
 computing fabric (cloud and
@@ -475,8 +473,6 @@ ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the co
 
 ```text
 mo 7% Ping : >
-black hat \, y ’ Li
-BRIEFINGS me 4 e™® y y,
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
 ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the controller actions.
@@ -499,7 +495,6 @@ authenticated users.
 
 ```text
 2) TN pring Ba >>
-black hat SS > yd y ME ae
 BRIEFINGS = 4 NOAM Wy , Low
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
@@ -829,7 +824,6 @@ iat": 1751972163, ST eee s pele ahs - ee —
 “AdQAK /8ZAAAAES1m9 /8g9kwF 9BwPonmkwIwphyBtghOYvLFRM@qLZ/+eWmvnr2T9z/U7tS@gTL2VBuqMpel2zAC4 DIEGO cWd3 Re LEVitovur TROISPGFROM3 hu
 cUxabytlV2 le
 ZLV6IGHZN91vP/80styxYZYTHjnKJSu12pcVB2EUHxRnb17ONbKFf3Rdca/y2jh/V/9XF1UjCXqURxXoEk99Yvarngh 45 aes “3 BSF laWVPlamSLsSINIMTUwYlLzcuw
-ic ows: 3 7
 pJXNKGhLedxN//TxWRinOfg==", <RMO -
 "ame": [ tmMld Juz ldqvwkJILVDBSam5q 2u1
 esa", oaON4L3
@@ -838,7 +832,6 @@ lhRec3 BRYESLR2 hN2WR4TAB VHhxtm1uT2 EnPTOiLCIhbx1iOlsicnNhliwibWZhiI 10s ImF w
 “mfa" eGlkIjo OwODMt M2 JiMCOODOWMXLWIONZ OtOTcOZTUzY2dk2 Nj liwi itbweWe bys Tio tat ee alla
 1, WOiSilmNzImOWU2 My lmMTFILTRiNG Et YWY4NSO0OW12 2624NmEwzkiLCdmi rcmaiLc
 “appa: Ne AEST EE InaXZ1b19uyWL11 pc2hhliwiaWROeXAiOidlc2VyliwiaxXBhzGRy1 “Pp ray | O ad ImShb Wu
-appidacr"™: , = . - ar
 vdeviceid" "£72£9e63-£51.c-4b61-af85 -49b6dfc6a079", oe ae — - eesi2 Wi temLOs one acre T)MANZA oe
 family name": “Bernard W INWULZNS IsInblaWoio “Mj AwMD LDMUES3 Mac ee WUJfe
 “given name": “Vaisha", UZibWIvTEF TOFN3 TzhGSnPIMLhUbFBMM3 pSdEF LOTBBQ b2 4ulmiVAZCSEbGwgUG
@@ -1513,7 +1506,6 @@ pee LOOK'AT/ME™ 1 Name Type Details
 [| L Administrator App role Admin permissions
 is
 [| = Basic Access App role Basic permissions to access website
-| — @ds
 [| o Lab Team Administrator App role Specific lab team endpoints
 ads
 [| = Machine Onboarding App role Used by build machines to access m:
@@ -1546,7 +1538,6 @@ Tet
 "oc":
 “CmDd1LdWg8XEo9J 1zbdnHySGzWVUVbhFSdBD/M27GV/ zD7rrqt4FaCgePofrCSnEast
 IC+HERI174X64+6ywAys
-mr ro l ee = ala Ll [ Fi@O@MZEZLTKSMTgtNDIj¥
 tT]
 aa " rr jgY¥wkO1ZyoqVAGOCAA.",
 Admin
@@ -1714,7 +1705,6 @@ Current Post
 Loading...
 Publish New Post
 BI uU
-= @ %®
 Post Status *
 Select Status v
 Publish
@@ -1733,7 +1723,6 @@ BRIEFINGS
 = On-Call View My incidents All incidents Standard IcM/PRO Leads On-Call Exec On-Call + Create IcM Last Updated 01/14/2025, 11:22 AM CET
 Hi Vaisha, welcome to ACE Command Center 1 Export to Excel Playbook? $500 One-pagerCf $500 Process links Show Dashboard
 g  |sv-7 0) 720) © | GEBEED © vex So Column Options C) Retes
-Vv = ir ese’
 8 4 Incidents
 0 Swarm Chat V-Team On-call IcM Risk category Sev Customer Customer Support Type Triage category Incident Age | SR Age | Last Update Ack Actions
 Customer events (0)
@@ -1798,9 +1787,6 @@ Latency (ms) Total request count
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-; See” W7 J 7 <p
-\ a a4 SSS 7 ike -
-black hat Wx oF i _ » * y f Zz
 BRIEFINGS
 Security Intelligence Platform (SIP) Confidentiality Acknowledgement
 MICROSOFT CORPORATION CONFIDENTIALITY AFFIRMATION FOR SIP DATA ACCESS AND USAGE
@@ -1812,13 +1798,10 @@ Redacted
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= N a = a = N a
 Threatintelind_Actincident Threatintellnd_External Threatintelind_Internal Vpniogs
 © 358 Request Access @ 178 Request Access @® 135 Request Access @ 115 Request Access
-allie a 5% a =NG a
 AD_Ldap_GroupMembers_P AD_Ldap_UserMemberOf_P AD_Ldap_Users_P SysLog_VPN
 @® 110 Request Access @5 Request Access @ 242 Request Access ® 230 Request Access
-= Qa = a a a
 SysLog_CSS SysLog_DC SysLog_Edge SysLog_ExpressRoute
 ```
 
@@ -1837,12 +1820,10 @@ q
 M4
 AAD_GroupMembers
 Be, To Explore or Request Access to SIP Data, Search by Dataset Name, Tag, Column, Access Package or Endpoint
-a = nN
 AAD_SigninLogs_Noninteractive AAD_UserData
 Request Access @® 389 Request Access @ 544
 AAD_Permission_Application
 —
-a m a
 AAD_Permission_ServicePrincipl
 Request Access ® 730 Request Access @ 145
 Request Access
@@ -1872,12 +1853,10 @@ q
 M4
 AAD_GroupMembers
 Be, To Explore or Request Access to SIP Data, Search by Dataset Name, Tag, Column, Access Package or Endpoint
-a = nN
 AAD_SigninLogs_Noninteractive AAD_UserData
 Request Access @® 389 Request Access @ 544
 AAD_Permission_Application
 —
-a m a
 AAD_Permission_ServicePrincipl
 Request Access ® 730 Request Access @ 145
 Request Access
@@ -1902,7 +1881,6 @@ Ask Sippy ©
 | Tell me more about this dataset } | What consumption endpoints are available? || What is the SLA for this? |
 Show session chat history @) Off Current Context © :
 {-] At which URL can I find the admin portal to approve access requests?
-68 / 500
 ```
 
 ## Slide 79
@@ -2001,7 +1979,6 @@ test (cb103a60-01d9-43cb-b796-241de4196927)
 ```text
 pifeschat
 BRIEFINGS
-Oe Pa pa Be d d d E :
 :80"} ,{"id":193678, “pageTitle":null,"“pageURL": "https: //sipdatacatalog.microsoft.com/",”"userId":null,"userDisp
 :00"} ,{"id":193679, “pageTitle":null,"“pageURL": "https: //sipdatacatalog.microsoft.com/","userId":null,"userDisp
 :60"} ,{"id":193080, “pageTitle”: null, “pageURL": “https: //sipdatacatalog.microsoft. com/#code-
@@ -2033,7 +2010,6 @@ MediaApi)
 Sign in and read user profile
 Read directory data
 AlchemyService (MediaCreation-thor-ToolsService)
-< € <<
 AlchemyService (MediaCreation-thor-MediaApi)
 ```
 
@@ -2316,7 +2292,6 @@ XML
 o xmilns:wsp="http:
 Reference xmlins="h
 ="urn:oasis:names:t c:cAM - etion™
-708515 2 na >CC 2 SA = r10
 erohttps://sts.windows . net /aaaabbbb- @008-cccC- 1111- dddd2222ecee/
 ature coh: ds="https: x
 onMethod Algorithm="
@@ -2379,11 +2354,9 @@ thod Algorithm="https
 bisa hat
 BRIEFINGS
 37,260 followers
-1mo + &
 Congratulations to all the researchers recognized in this quarter's MSRC 2025 Q!1
 Security Researcher Leaderboard! Thanks to all the researchers who partnered with
 us for your hard work and continued dedication to securing our customers.
-. . &s
 Microsoft Security Response Center + iat’)
 Learn more in our blog post:
 We also want to recognize the top 10 researchers in the leaderboard:

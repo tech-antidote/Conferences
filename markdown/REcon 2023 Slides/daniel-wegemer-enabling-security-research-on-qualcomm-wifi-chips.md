@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:24:28Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Daniel Wegemer_Enabling Security Research on Qualcomm Wifi Chips .pdf` (43 pages)
 
-
 ## Slide 1
 
 Enabling Security Research on Qualcomm Wifi Chips

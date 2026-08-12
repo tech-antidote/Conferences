@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:05:38Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Apostolos Chatzianagnostou&Marcos Bajo&Christian Rossow_PLaTypus Eliminating Code-Reuse at the Module Boundary.pdf` (130 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -957,7 +956,6 @@ dispatcher loop
 Dispatcher Gadget
 void
 _dl_call_fini (void *closure_map)
-a . {
 ° _dl_call_fini: part e)i glibc loader struct link_map *map closure_map;
 sure nothing happens
 map->1l_init_called = @;
@@ -1094,9 +1092,7 @@ e6
 Motivation
 Main Binary Libc
 pues Sa
-ik =a ms
 Why then should cross-DSO lg ~
-. I t
 transfers be allowed outside callrax === =){---1 >| exeove |< +=) -imp rox
 of PLTs? mprotect
 malloc@PLT malloc@PLT
@@ -1159,7 +1155,6 @@ black hat
 
 ```text
 PLaTypus Design _. SS
-yp g Da
 ¢ Each DSO can only reach external Main Binary
 functions for which it possesses PLT puts@PLT
 “4
@@ -1428,7 +1423,6 @@ Dump of assembler code for function main:
 <+8>: mov DWORD PTR [ ],
 <+15>: ,QWORD PTR
 <+22>: QWORD PTR [
-5 [ +
 I
 QWORD PTR [
 xor 1
@@ -1762,7 +1756,6 @@ Ox7f ff 30000000
 Ox7fff32000000
 fr Other r-- / rw- mappings DSO B
 fakeplt.sec / r-x mappings Pxecttion
-fa ; -
 Ox7FFFS7FFFFFFFE vat
 Other r-- / rw- mappings
 .plt / .plt.sec sections
@@ -2594,12 +2587,10 @@ libc.so
 99.96
 99.96
 99.75
-| PLaTypus | CT | Red. (%) _
 [|| ose
 |
 8
 100.00
-| 40, | 40 | 991
 |
 |
 |
@@ -2839,7 +2830,6 @@ dispatcher loop
 ```text
 FOP Attacks Mitigation
 “Gi call fini (void *closure_map)
-sos . {
 ¢ _dl_call_fini: part of glibc loader struct Link map *nap = closure_maps
 sure nothing happens
 map->1l_init_called = @;

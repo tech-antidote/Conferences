@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:05Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Shalom Carmel & Ofir Carmel_The Problems of Embedded Python in Excel, or How to Excel in Pwning Pandas.pdf` (37 pages)
 
-
 ## Slide 1
 
 The Problems of Embedded Python in Excel
@@ -173,10 +172,8 @@ black hat
 ASIA 2025
 How it works?
 Di v
-fe La Pa
 fu
 iar
-=} oh TA
 ```
 
 ## Slide 11

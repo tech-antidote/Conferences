@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:05:20Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Adam Chester_Beam Me Up, Luke A Review of Teleport Attack Scenarios.pdf` (90 pages)
 
-
 ## Slide 1
 
 **Beam Me Up, Luke** A Review of Teleport Attack Scenarios
@@ -165,7 +164,6 @@ Information Classification: General
 Architecture
 Cluster a _— _—
 S cl
-\~ oo ~ 1 oa ~) \~ ao ~
 Database Windows RDP Node
 a -6.
 Auth Server Proxy Server
@@ -385,9 +383,7 @@ Information Classification: General
 ```text
 Architecture
 S cl
-\~ aa 7) \~ aa 7) \~ ao 7)
 Database Windows RDP Node
-a - 6.
 Auth Server () Proxy Server
 &
 User black hat
@@ -474,7 +470,6 @@ Information Classification: General
 ```text
 Architecture
 S cl
-\~ aa 7) \~ aa 7) \~ ao 7)
 Database Windows RDP Node
 a6.
 Auth Server (2) Proxy Server
@@ -746,7 +741,6 @@ Information Classification: General
 ```text
 Architecture
 S cl
-\~ aa 7) \~ aa 7) \~ ao 7)
 Database Windows RDP Node
 a -6.
 Auth Server Proxy Server
@@ -811,7 +805,6 @@ Information Classification: General
 ```text
 Database Service
 S cl
-\~ aa 7) \~ aa 7) \~ ao 7)
 Database Windows RDP Node
 a—e.
 Auth Server Proxy Server
@@ -948,7 +941,6 @@ Information Classification: General
 ```text
 Windows Service
 S cl
-\~ aa 7) \~ aa 7) \~ ao 7)
 Database Windows RDP Node
 a—~o._*
 Auth Server Proxy Server
@@ -1031,7 +1023,6 @@ go run ./main.go windows \
 --user localuser \
 --target TELEPORT-WINCLIENT-2 \
 --output /tmp/lelu/
-he ate Y Siedcasas 2 EY
 / NON 2s NS ca No SekL Ae Teal, Uf cases WNW, Ses N
 \ Nee N ced! MAUR CID, fie he Ne of oe NM Weds ch
 a JX. PLL] JL IL. fall Qe os
@@ -1115,13 +1106,11 @@ iceIoResponse { device_id: 1, completion_id: 2, io_status: STATUS_SUCCESS }, out
 me(Pdu(GetStatusChangeReturn { return_code: Success, reader_states: [ReaderStateCommonCall { c
 urrent_state: CardStateFlags(0x0), event_state: CardStateFlags(SCARD_STATE_CHANGED | SCARQ_STA
 TE_PRESENT), atr_length: 11, atr: [59, 149, 19, 129, 1, 128, 115, 255, 1, 0, 11, @, 0, 0, ¥, ®
-, 0, 0, 0, 8, 6, 6, O, B, 0, 6, 8, 0, 0, B, 0, 8, 8, 0, 8, 8) F) })) #))
 RDPDR PDU to send: RdpdrPdu(DeviceControlResponse { device_io_reply: DeviceIoResponse { device
 _id: 1, completion_id: 2, io_status: STATUS_SUCCESS }, output_buffer: Some(Pdu(GetStatusChange
 Return { return_code: Success, reader_states: [ReaderStateCommonCall { current_state: CardStat
 eFlags(8x0), event_state: CardStateFlags(SCARD_STATE_CHANGED | SCARD_STATE_PRESENT), atr_lengt
 h: 11, atr: (59, 149, 19, 129, 1, 128, 115, 255, 1, 6, 11, 0, 0, 8, 0, 0, 6, GB, O, 6, B, A, 0,
-8, 8, 6, 6, 6, 8, 8, 6, 6, 6, 8, 8, 8) }} 1)
 black hat
 @ys4 42
 ```
@@ -1630,8 +1619,6 @@ go run ./main.go hijack \
 -k /tmp/node.key \
 -n 58102c12-cf6a-4fd9-b74f-8a6c0e93765F
 WIS NE VIL hd
-te We ie
-ee eo eee ee ee
 @_xpn_
 [*] Press Enter to clean up...
 ] SSH Server Started on port 2223
@@ -1702,7 +1689,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@ @ @ BM localuser@teleport-node-2: ~
 localuser@teleport-user:~$ tsh ssh -A teleport-node-2
 localuser@teleport-node-2:~$ 1s
 Ue © wip x!?) 8 v1.26.4 ©18:04 localuser@teleport-node-2:~$ 1s /tmpff

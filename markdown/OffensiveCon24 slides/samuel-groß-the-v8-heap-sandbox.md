@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:21:46Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Samuel Groß_The V8 Heap Sandbox.pdf` (41 pages)
 
-
 ## Slide 1
 
 # The V8 Heap Sandbox OffensiveCon 2024

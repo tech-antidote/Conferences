@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:07:31Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Christopher Domas_C and Its Consequences The Source Is Just a Suggestion.pdf` (156 pages)
 
-
 ## Slide 1
 
 `C and its Consequences domas / @xoreaxeaxeax / Black Hat 2026` ｛
@@ -37,7 +36,6 @@ converted_at: "2026-08-11T23:07:31Z"
 Sn. ©
 bddddai °
 Aa
-=) e —e
 ```
 
 ## Slide 2

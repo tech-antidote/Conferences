@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Christopher Le - Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software - Chris.pdf` (44 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -143,15 +142,9 @@ TRIODE // PWNING REKORDBOX DEF CON 34
 | THE SETUP
 Original Mix AS oe 2) { Little Lights
 55/0 orm xan
-= - = O12. oe a .
-an 2 |e TS aS a Aer
-E: a a ‘ 2 Ie * ck a :
-mo a: 1 ‘2 = Pa, ‘
-= = — - - Hues
 MTOM HHHAT-OP HALPOWER KICK ¢ fa Trampet D Djembe "
 ac - eons
 HHL SCTRAGH WawAr-CL HIG KICK 120.00 HEE Homsec2.0 SaxScream TakingOram u
-aru sv o- >i Sa aa
 W blank lst 1B blank lst blank list SB blank lst
 Dope-ISHT Fambient 2019 (34 Tracks sssten Pa
 11 # Preview wor Track Title Artist Album Genre c Rating Time Key Date Added
@@ -200,15 +193,9 @@ TRIODE // PWNING REKORDBOX DEF N 34:12
 
 ```text
 | PROTOCOL INTERNALS
-@ @ @ @ @
 BORN IN 1989 = | |
-@ @ @ e
 When rekordbox enters export mode it stands up three services ° . . ° .
 over RPC — Remote Procedure Call. . . ° . .
-@ @ @ @ e
-@ @ e e @
-@ @ e @ @
-@ @ @ @ e
 TRIODE // PWNING REKORDBOX DEF CON 34:14
 ```
 
@@ -283,7 +270,6 @@ CLIMBING DIRECTORIES
 ```text
 Botue Buc
 YOU DON'T EVEN
-=“ HAVE 10 BE A COU
 Just a device on the same subnet that says the magic words. It
 NOT A CDJ
 \ ®) could be anything — a compromised camera, for example.
@@ -339,16 +325,12 @@ CLOUD TOKENS
 
 ```text
 Botue Buc
-Ka ee ee eT
 mins
 Bounce [| prov > - inal
-| aa =
 & = > Above The Cloud (Original Mix) BEAT KEY BEAT
 use 08:45 128.0 Fim » Loop SHIFT JUMP
 0) 00 ==; 00:0000 -00.00. 100: a
-a ao o ,
 —— J en a. ae ween co oan MP3/AAC/ WAV,
-os | 3 ' 7 7 7 rT F#m AIFF/FLAC/ALAC
 VINYL SPEED ADJ
 HOT CUE
 AND DUS?
@@ -442,7 +424,6 @@ THAT KILLS THE
 + moco et PARTY.
 So it's off the table.
 HOT CUE
-B c D — i J
 TRIODE // PWNING REKORDBOX DEF CON 34
 ```
 
@@ -465,7 +446,6 @@ place.
 
 ```text
 | WHY THE FIX
-a -€ a . = 4 = ry j- oo
 SHRINK THE SCOPE ..
 Keep accepting the constant. Change ‘read the whole SSH DOCS LIBRARY KEYS | CLOUD
 filesystem’ to ‘read only the library folders. Least privilege. —_ eT

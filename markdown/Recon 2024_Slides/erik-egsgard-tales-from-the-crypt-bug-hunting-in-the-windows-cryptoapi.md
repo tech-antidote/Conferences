@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:29:02Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Erik Egsgard_Tales From The Crypt Bug Hunting in the Windows CryptoAPI.pdf` (41 pages)
 
-
 ## Slide 1
 
 # **Tales From The Crypt**
@@ -371,7 +370,6 @@ trim : 44.21%/2090, 0.00%
 | dictionary : 0/0, 0/0, 6/16.8k
 |
 |
-+ - _ - _ [cpu0000e1: 4%]
 fieldeffect.com
 13
 ```
@@ -506,7 +504,6 @@ bool ASN1Dec_PKIFreeText(ASN1decoding_s *
 if (bufferSize <= —>StringCount) {
 if (bufferSize == 0) {
 bufferSize = 0x10;
-else { a ~~ “> Tw
 localBuffer = (ANSI STRING *)ASN1DecRealloc(_localDecoder, —>StringArray, bufferSize << 4);
 if (localBuffer == (ANSI STRING *)0x0) {
 return false;
@@ -740,7 +737,6 @@ uVa
 }
 uVarl
 7
-(lo ars, z a 8 + *(longlong *) (
 while ( (int) CONCAT71 (
 fieldeffect.com
 ```

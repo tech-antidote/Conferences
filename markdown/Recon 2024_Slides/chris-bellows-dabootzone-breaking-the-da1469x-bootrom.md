@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:28:52Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Chris Bellows_DaBootZone Breaking the DA1469x BootROM.pdf` (44 pages)
 
-
 ## Slide 1
 
 ### **DABOOTZONE**
@@ -206,7 +205,6 @@ Crypto_setup_sha512_start...
 DeviceAdministration_KeyTy...
 ImageHeader_version_check
 NVIC_ICERO_clear_b16
-o @ x
 a | Start
 000015E8
 0000155C
@@ -259,7 +257,6 @@ OTPC_enable_clock_and_reset (1);
 OTPC_set_read_mode() ;
 QSPIC_set_manual_mode();
 QSPIC_Software_Reset_peripheral();
-St End e
 Resource — vm
 [Remand |
 [Remand | c00000 | Lane | Remap IVT into SYSRAM
@@ -273,9 +270,7 @@ Reading 131072 bytes from addr @x@@90@008 into file...0.K.
 8 Library function J) Regular function Instruction J Data Unexplored [J External symbol [J Lumina fun
 Functions Pseudocode-A
 v@ = sub_155C();
-vi = 0:
 = 6:
-; &= ~8u;
 while ( ( 2 & 0x800)
 sub_ 15E8 000015E8
 sub_18AC 000018AC
@@ -301,7 +296,6 @@ while ( ( & 0x200) @)
 ( & OxFF8FFFFF | 0x400000;
 @x80u;
 1 ~1lu;
-while ( ( t 102 & 8) == 0 )
 sub_1CAC(1);
 sub_1DAC() ;
 sub_2052();
@@ -545,9 +539,7 @@ power domains
 a
 ¢
 ~ Init OTP & Flash and Reset Set UART Baudrate@
-© | ‘a =
 8 Flash —>  Dev.ModeFlag=True —> XTAL_ok Flag = False 115k2 & Pxx/Pyy
-oO 1 ——————————————
 2
 £
 »
@@ -572,12 +564,10 @@ NOK =
 Dev. mode Flag? >—TRUE Enable Debugger ——> XTAL_ok Flag —No—> Get FW From UART
 True?
 >
-| YES i
 FALSE i Switch to RC32M |
 | - { —_ Switch to XTAL32M -——~
 3 Locate FLASH_Prod Header << NO: FW loaded?
 8
-= | [|
 6
 2
 hee
@@ -595,7 +585,6 @@ v6 = CRG_TOP_PMU_CTRL_REG;
 CRG_TOP_PMU_CTRL_REG = v6 & OxFFFFFFFE;
 do
 v7 = CRG_TOP_SYS_STAT_REG;
-while ( (v7 & 6) == @ );
 v8 = sub_1CACc(1);
 w9 = sub_1DAC(va);
 v1@ = sub_2052(v9);
@@ -610,7 +599,6 @@ GPIO_P@_@8 MODE REG = 1
 sub_1544(v12);
 sub_228(&byte_2883(954) ;
 v13 = CRG_TOP_CLK_CTRL_REG:
-if ( (via & Ox4e@0) == @ )
 {
 I
 vl4 = CRG_XTAL_XTAL32M_CTRL1_REG;
@@ -643,7 +631,6 @@ start —> ,
 power domains
 §
 = Init OTP & Flash and Reset Set UART Baudrate@
-S = =
 g rea ;—> Dev. Mode Flag=True > XTALLok Flag=False p> S*1TEA5T Howat
 3
 2
@@ -651,7 +638,6 @@ g rea ;—> Dev. Mode Flag=True > XTALLok Flag=False p> S*1TEA5T Howat
 & y
 ©
 s | Locate and Run cs 1—> Enable xTAL ——> ~~ 10 S—YEs—> XTAL_ok Flag = True
-ra | 2
 5
 2
 =
@@ -862,12 +848,10 @@ product_header_length = flash_cfg_len + @x16;// calculate the entire length for 
 // check the second Flash Product Header (@x1000) CRC against the stored CRC value
 is_valid = QSPI_read_header_check_crc(configuration_script_ptr->flash_header_ptr + 0x1000,flash_cfg_Len + @x16);// <-—f LARGE VALID HEADER
 // if the second Flash Product Header CRC fails, indicate as such and return to calle!
-if ( is_valid != 1 )
 Jf
 }
 // at this point the first header has failed CRC and the second has passed
 // check the first Flash Product Header (@x@) calculated CRC against the value stored in the Flash Product Header
-| ie ONE
 // read the backup buffer and write it to the primary location
 QSPI_Cycle_CS();
 // initiate a QSPI read at the start of the backup Flash Product Header (@x1000)
@@ -1004,7 +988,6 @@ jJ-Link>s 2004000A:
 while ( BYTE1(configuration_script) '= 1 );
 et CVE-2024-25076
 if ( check_current_fw_addr_and_update_addr(product_img_offse
-{ rw >
 if { !SRCWREBOOT_check_and_validate!
 product_img_offsets[1],
 (FW_ImageHeader *)&dword_2003C956,
@@ -1275,10 +1258,6 @@ PROGRESS
 Slowing down the target to Single SPI allows capture,
 showing the SoC accessing the payload at 0x1d4744
 CMD ADDRESS DATA
-NORMAL READ(OX03) 1D 47 44 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF
-00 BF 00 BF 00 BF 00 BF 00 BF 00 BF
-NORMAL READ(OX03) 1D 47 60 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF
-00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF 00 BF
 ```
 
 ## Slide 40

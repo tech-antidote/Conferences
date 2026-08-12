@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:39Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime.pdf` (29 pages)
 
-
 ## Slide 1
 
 ### That Gambling Site? It's Fueled by Chinese Organized Crime
@@ -72,7 +71,6 @@ USA 2024
 Philippines' Marcos bans offshore
 gaming operators
 By Reuters
-Aa] i <
 July 22, 2024 5:48 AM PDT - Updated 2 days ago W J ik < }
 "Disguising as legitimate entities, their
 operations have ventured into illicit
@@ -109,15 +107,12 @@ Vigorish Viper Trademark Holders sports teams
 1 -—<<- & White Labels
 s
 *
-- . 8/8) 8 *
 00
-a Sa a
 ani Like
 SAMRAT EAE
 AAHRS EE TERM
 BWMiibhtiyty.b
 =) Jyty.tv b
-O (] @ *
 Sports matches
 contain ads for
 Driving new victims
@@ -176,8 +171,6 @@ gle ale Access Denied
 >», a _ sas
 | Cee lc. iA TeBR A
 ea J
-. 7 | <£ a Sheome
-ans _i A ®,
 hh hal IR il re.
 ```
 
@@ -192,8 +185,6 @@ hh hal IR il re.
 ```text
 bisa hat
 eaciiet All. Sites are’ the Same
-an ee RA HR BR
-ek BF WR SH SMR i APP
 ASTRA un —
 ) Foie
 sy)
@@ -204,7 +195,6 @@ Sil
 ———
 SSsa
 Teas! FARA 266,660 m!
-7A 1 ine
 AF - ihe - WR HAE 10,888
 —— i&pntid: 2024878 158-2024%78218 ¢-—
 aapay ia)
@@ -213,10 +203,8 @@ Sg FLAS
 SW huanya.opp me
 Se TAS
 Ps 2 yy SY huanya-app
-g &® @ @) am ROONEY we
 eT IRR 2R5ee One Coed
 ACKE RRS ae
-— RS Uil
 $§H 1 288RERR+8, 888K
 + SEIONE5, 888704LE! «
 ieavHta: 2023%118248 -2023%11308
@@ -253,7 +241,6 @@ Q
 blackhat Mobile’Apps
 USA 2024
 < THS RRA
-KB) BA FE
 iOS@BALAR A FA ANN aE
 ```
 
@@ -386,7 +373,6 @@ www. qxfmL1.com:9988/?dqg=1"] , "hS5SportMainDomain_ty": ["https://www.qxfml1.co
 dg=1"],"i0s_qz":"https://download.1@7oyha7.com/plist/
 TB_Game_305_@2091725_23674.plist","ios_sport": "https: //download.1@7oyha7.com/plist/
 tb_Sport_305_02091726_23675.plist"}, "message": "Sia AIH", "status_code" : 6000}
-uw wu uu
 hS5_anti_ty": "true", "h5_normal_main": "true", "h5_normal_ty": "true", "kefu_anti_mai
 web_anti_main": "true
 ```
@@ -547,7 +533,6 @@ bisa hat
 USA 2024
 FE
 Wj! =
-pe i / Lae ia 1
 fase
 2022 raids in Sihanoukville, Cambodia.
 ```
@@ -585,16 +570,13 @@ JACK GREEM JACK GREEM JACK GREEM JACK GREEM JACK GREEM
 ```text
 bisa hat
 USA 2024
-UTD SS Bl
 on 3 Me I SKGFFAARRRANUMA, B2018 WOR, MIDAS MURS, AA] SAUL AGH AR
 LJ SPUR LS
 N
 ZA. | Kenen fee
-© xe 86 , " ~
 Gases fl Ui sees F ocees 9 oaess 9 Qemee Frye” Game Sam em mm Qo Moomm Karem
 SKG GROUP
 SMART KING GAMES
-- a s " D -
 3 BRIZARAT Dr Q Hie ¥ Tes DO, En (o] ROE S068 DB enum Senn @ FOF
 yyy QFMS Siser Qe Gh aean BEe Quien cies amin Ot A Cas sma
 ```
@@ -608,13 +590,10 @@ yyy QFMS Siser Qe Gh aean BEe Quien cies amin Ot A Cas sma
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> "s P\\ >
 cS
 blaekhat KIM Uses (Fake)Yabo Licenses
 USA 2024
 Pl Lad E « 4 Philippine Amusement & Gaming C
-a K\ }
-q y) ]
 Ise OF MAN GAMBLING ‘al &
 SUPERVISION COMMISSION
 LICENCE TO OPERATE
@@ -647,7 +626,6 @@ BA ithe ee ee 3E#R (PAGCOR)
 pisekhat \OPSEC Fail
 USA 2024
 | ponymuab[.Jcom votimman
-2) /~T—)| &
 (16.163.118[.]100}
 yabogn[.Jcom +O) {amnion O- sports[.]Jdbgaming[.]Jcom
 (8.210.591.1113 | (8.210.591.1113 | 1113 (18. 163. 182[,155 } (16.162.164 |. 1237)

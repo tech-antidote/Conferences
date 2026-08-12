@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:23:05Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - PDF v1.pdf` (47 pages)
 
-
 ## Slide 1
 
 # Bird Hunting Season: The Final Flight

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:08Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Lo-Fuzzing-the-Native-NTFS-Read-Write-Driver.pdf` (33 pages)
 
-
 ## Slide 1
 
 # Fuzzing the Native NTFS Read-Write Driver in the Linux Kernel
@@ -323,7 +322,6 @@ ASIA 20253
 (Cont'd)
 ul6 ff = lel6 to cpu(rhdr->fix off);
 ul6 fn lel6 to cpu(rhdr->fix_num);
-if ((i & 1) |] fo} + fn * sizeof(short) > SECTOR SIZE || !fn-- ||
 fn * SECTOR SIZE > bytes) {
 return false;
 }
@@ -689,8 +687,6 @@ ntfs_inode *ni)
 crn sor
 Corr WoT
 le = kmalloc(al_aligned(rs);
-if (!le) {
-err = -
 goto out;
 }
 for (; (jattr = mi_enum_attr(&ni->mi, attr))};—-le—=
@@ -759,7 +755,6 @@ le16_to_cpu(attr->name_off) + sizeof(short) * attr->name_len > t16) {
 return NULL;
 1
 J
-t+ +t + t+
 return attr;
 ```
 

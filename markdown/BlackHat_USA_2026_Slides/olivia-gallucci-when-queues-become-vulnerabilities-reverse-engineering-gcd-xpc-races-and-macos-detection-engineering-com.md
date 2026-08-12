@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:25Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Olivia Gallucci_When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering_Compressed.pdf` (86 pages)
 
-
 ## Slide 1
 
 $ macOS detecting race-conditions

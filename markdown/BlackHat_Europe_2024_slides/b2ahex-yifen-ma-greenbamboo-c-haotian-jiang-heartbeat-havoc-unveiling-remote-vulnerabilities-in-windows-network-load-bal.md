@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:04Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/b2ahex & Yifen Ma & Greenbamboo C & Haotian Jiang_Heartbeat Havoc Unveiling Remote Vulnerabilities in Windows Network Load Balancing_wp.pdf` (22 pages)
 
-
 ## Slide 1
 
 # Heartbeat Havoc: Unveiling Remote Vulnerabilities in
@@ -311,8 +310,6 @@ NLBCoreIOControlQueryFilter inside Use-After-Free crash due to race condition:
 
 ```text
 v5 = NdisAllocateMemoryWithTag(&VirtualAddress, 44 * v2, @x2@424C4Eu);
-16 = v55
-if (Ivo )
 {
 memset (VirtualAddress, @, 44 * v2);
 9 = NdisAllocateMemoryWithTag(&NewBuffer, 2 * (v2 + 503), @x20424C4Eu);
@@ -321,10 +318,8 @@ NdisFreeMemory(VirtualAddress, 44 * v2, @);
 v7 = WPP_GLOBAL_Control;
 if ( WPP_GLOBAL_Control
 return v4;
-if ( (HIDWORD(WPP_GLOBAL_Control->Timer) & 1) == @ )
 goto LABEL_19;
 v8 = 21464;
-V6 = 95
 goto LABEL_10;
 (PDEVICE_OBJECT)&WPP_GLOBAL_Control )
 memset(NewSuffer, @, 2464 * (unsigned int)(v2 + 5@3))5
@@ -351,7 +346,6 @@ goto LABEL_19;
 v7 = WPP_GLOBAL_Control;
 if ( WPP_GLOBAL_Control == (PDEVICE_OBJECT)&NPP_GLOBAL_Control )
 return v45
-if ( (HIDWORD(WPP_GLOBAL_Control->Timer) & 1) I= @ )
 8 = 20164;
 LABEL_10:
 WPP_SF_D(v7->AttachedDevice, v8, &hPP_287f06a88e7d39b20c13ced8dd187b41_Traceguids, v6);
@@ -363,11 +357,9 @@ af (22)
 {
 v9 = *(_QWORD *)(a1 + 16);
 Af ( v9 && (v10 = *(_QWORD *)(a1 + 1072)) I= @ )// Get the memory address of the item array
-‘ if (a2 == 2)
 : {
 v1 = *(_DWORD *)a3;
 t
-' else if ( a2 == 3)
 11 = *a3 * a3[4] * 03[8] * 03[42] | ((a3[4] * a3[5] * a3[9] * 03[13] | ((a3[2] * 23[6] * 23[40] * a3[44] | ((a3[3] * a3[7]
 ' vi2 = vil % @x407;
 *(_DWORD *)(21 + 4 * ((unsigned __int64)vi2 >> 5) + 36);
@@ -375,12 +367,10 @@ ittest(&v13, v12 & @xiF) )
 if/NUBIPListincreaseSize)is\calledjat}this)time;,
 : via = *( WORD *)235 the)above)ltemArray/will)be)release}andjthe)following)
 ; } access)to)ltemArray/will|cause)uaf}
-else if ( a2 == 3)
 ' ; vid = 23 * a3[4] * 03[8] * a3[42] | ((a3[4] * a3[5] * a3[9] * a3[13] | ((a3[2] * a3[6] * 0340] * 3[14] | ((a3[3] * a3
 '
 else
 {
-v4 = 0;
 if (2-1)
 1,
 for (i = (unsigned __int16 *)(v10 + 2464 * (v14 % @xIF7)); 3 ++i )// Use the obtained item array

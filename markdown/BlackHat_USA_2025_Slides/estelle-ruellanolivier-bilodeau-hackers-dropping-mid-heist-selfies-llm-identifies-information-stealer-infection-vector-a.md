@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:54:49Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Estelle Ruellan&Olivier Bilodeau_Hackers Dropping Mid-Heist Selfies LLM Identifies Information Stealer Infection Vector and Extracts IoCs.pdf` (167 pages)
 
-
 ## Slide 1
 
 Byline **Hacker Dropping Mid-Heist Selfies** LLM Identifies  Information Stealer Infection Vectors and Extracts IoC
@@ -214,7 +213,6 @@ Mid-Heist selfies
 DOWNLOADING/LAUNCHING FILE JUST TURN OFF
 YOUR ANTI-VIRUS ITS ABSOLUTELY SAFE !
 FORTNITE HACK | UNDETECTED | FORTNITE MOD MENU | DOWNLOAD FREE
-o=. = on
 ```
 
 ## Slide 13
@@ -363,7 +361,6 @@ link a2: ae
 1 IF YOU HAVE TROUBLES
 DOWNLOADING/LAUNCHING FILE JUST TURN OFF
 YOUR ANTI-VIRUS ITS ABSOLUTELY SAFE !
-Le ————E— ee re |
 FORTNITE HACK | UNDETECTED | FORTNITE MOD MENU DOWNLOAD FREE
 FORT NITE = nn) (ene 4 Download = =+ Save
 24
@@ -522,7 +519,6 @@ flare.io
 
 ```text
 Prompt Engineering
-Rm @ 5
 Zalo
 Admin
 3
@@ -683,7 +679,6 @@ Hybrid
 Cc | Gl) @ meganz/file/DZxXBB5I¥iNTbuEPAK83I-SBIx11LAxY¥mGJ9IigZZSItjTc3521 } ele shar ao =
 BB Mikrotik Bm Groficas MB OLT MB OD00 ©) Testing © Saifo @ ISP- Jira [B Trello 9 Coreo:Rafa §%% Muvecom ¢P Webmail Fastcom [i] Geo. @ Whaticket €$ Drive @ less [i Futbol Libre TV »
 @& meca
-o: = ay
 Bi Microsoft Office Crack 2022
 @® Nuevo ~ x Oa GQ @ W WW Ordenar-~ Sver~ s+
 € > Y D  MP> Este equipo > Descargas > Microsoft Office Crack 2022 > Microsott Office Crack 2022 v
@@ -897,11 +892,8 @@ flare.io
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Pe x caressa « = . +
-q c O «© pxttenn G we. Ser,nmw#sctd @ «em =
 (hme ete ET © whee Nierte Peewee Trey (term Ge - | a -
 © foulube eset peel? antivirus license key 2003 > ‘ » oO  ]
-Yo ore “we v Lm kL os
 ESET NODS2 ANTIVIRUS CRACK 2023 @ FREE OOWNLOAD @ UCENSE KEY INTORNET SECURITY
 @ 100% WORKING
 “ Eng Civé Cantos Heanque 6 eS ie Dp > Cantihds Le
@@ -1071,7 +1063,6 @@ flare.io
 ```text
 49
 Evaluation - Browser Tab Identification - Case Study
-- ) 15°C
 Despejado
 TradingView
 ‘scritorio
@@ -1082,7 +1073,6 @@ eS
 Experimente potencia adicional, velocidad adicional y
 flexibilidad adicional, todo con la misma UX que conoce y ama.
 DESCARGAR oO DESCARGAR DESCARGAR
-HH « A
 GM Para ventanas | | WR nara mac os na lini
 Bm =O Bisqueda BPeaeme acs
 A@a Frond ee
@@ -1596,8 +1586,6 @@ RE SHIN SIVAPPER!
 : f \s: Skin Swapper
 | A sure Pires § —Eeaayack gP wrogs
 wears
-fe - el |
-an PES ee |
 ```
 
 ## Slide 84
@@ -1792,9 +1780,7 @@ flare.io
 ```text
 4
 gle
-at — — — s
 sans titre - Story Book x midjourney - Recherche Google X +
-€¢ > C  & googlecom/search?q= { OM O&0q={O00&aqs=chr.. 9 @ *k* OF &
 ?q=midj = =midj = 157j0i
 @ google.com/search?q=midjourney&rlz=1C1VDKB_frFR1054FR1054&0q=midjurny&aqs=chrome. 1.6915 7j0i M Gmail @@ YouTube ge XS
 idj Google {ono xX Sw eDa
@@ -1845,7 +1831,6 @@ the imaginative powers of the human species.
 https://www.java.com > ... ¥
 = "% Java C}2BE
 ava yi gin whee 8
-an = = e
 mm QO Search iki wu Ouet
 ```
 
@@ -1958,7 +1943,6 @@ HQ
 midjourney x<
 Q Tous E)Images (G) Vidéos ©) Actualités [Livres i Plus Outils
 Environ 39 800 000 résultats (
-Sponsorisé Ss p 2) n so ri se
 ai_mid-journey.org
 hittps://ai + org
 Get The o& Updates - MidJourney
@@ -1973,7 +1957,6 @@ https://midjourney.com - Traduire cette page
 Midjourney
 Midjourney is an independent research lab exploring new mediums of thought and expanding
 the imaginative powers of the human species
-— : : “1  s 1
 @@ google.com/search?q=midjourney&rlz=1C1VDKB_frFR1054FR1054&o0q=midjurny&aqs=chrome. 1.6915 7j0i10i433i51213j0i 101131143315 1212j01101512j5.5553j0j7&iso... | WW & oO 2
 £33 $33 Connexion
 Y A
@@ -1991,7 +1974,6 @@ un fonctionnement similaire a celui de DALL-E
 d'OpenAl. Wikipédia
 Créateur : Midjourney
 Premiére version : 2022
-HH Q Search Bway L Q a © rt | @ 33 B. | € a Zo ) eS @ papi
 ```
 
 ## Slide 105
@@ -2014,7 +1996,6 @@ flare.io
 Cc
 © Mo: | $f Abe | G INS | G FNA | [FJ Tou | [FY Tow | FRY Tou | FF Coc | FR Con | ih Rec! | FF Coc
 @ ai.mid-journey.org/?gclid=EAlalQobChMI_NKlsu7C_glVEQSiAx3DcQzSEAAYASAAEgJAwPD_BwE
-| FE Dek | GRY Dek | £4 Mo: | FRI tour | EP tour |G) Nev | ey Tire | T tus: | FJ vot | @ A | @ sec | © His: | BH oA x +
 “A
 MidJourney 64-bit
 0$/month
@@ -2041,8 +2022,6 @@ flare.io
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@ Fatr | © Sho | © Mo: | $4 abe | G INS | G FNE | FY Tow | FY Tow | [PY Tow | [PY Coc | GRY Con | a) Rec! | FP} Coo | FJ Dek | [AY Del | PA Mo: | [PI tour | FRI tou |G New | ew Tire | T ths | FY vot | @ ai | @ sec: | © His: | FH OA x + “ = x
-€ CG @ ai.mid-journey.org/?gclid=EAlalQobChMI_NKisu7C_gIVEQSiAx3DcQz5EAAYASAAEg/AwPD_BwE G & 2 x & Oh & (Metreajour
 \\
 ney 64-bit
 month
@@ -2068,7 +2047,6 @@ Gérer Téléchargements
 Affichage Outils d'application
 ATIPIK.FRAN'x¢ ® = Nom las
 ATIPI \ ‘ -
-e EI a0 v Aujourd'hui (2)
 ATIPIK_Sch
 M | d suit Bi Midsetupo§ g
 ATIPIK-Plante # 3
@@ -2098,7 +2076,6 @@ B Objets 3D &) Couverture_reels(5),jpg
 Bg Vidéos .
 «| Couverture_reels(4).jpg
 = Disque local (C:) ee ee ee ee mM:
-v < >
 Plus tot cette semaine (28)
 1 291 élément(s) 1 élément sélectionné 4,99 Mo
 Why MidJourney?
@@ -2112,26 +2089,15 @@ Why MidJourney?
 
 ```text
 a
-or = la
 teeta Meee Chrome,
-=~ BA SE 2),
-SS a 2 : a
 Este Holal/PN mumOceanofgams ReisideloanemmmnViC Tnternet
 rece : ine Downton
 ray ~
-+) ~ j o)
 : Flea i F 2
-a fst. &
-2 Tt 7%
-M nO < o2,
 ViSEOMN SagrauaiVer
 q a
-~~ = a F,
-> © a
-=a Om &
 [=
 on
-. Ne! os
 am hid
 OitSem=Re.. Nandipha808
 Mares and Ceeka...
@@ -2163,10 +2129,6 @@ A G tq) POR o3/oa/2024 8)
 
 ```text
 ——— e ———et x
-“a fe. >) OY | _ =
-A av —F i .
-Z ' @ Po Be am kia
-a Cds Lt ol :
 HerciliOumma he eknd sum GOOO|cmmNENeW folder mmmmsPlan/0) Torrents PsiphionPro sy Novo(a) Splan 70 ) Chromest. UtSem=Re.. Nandipha808
 (hicini=
 Vasco Ouane) Live At Sohne Documenta. ip cde * Mares and Ceeka...
@@ -2180,7 +2142,6 @@ UMT_Uniso...
 \mscoreei.dl
 updates
 12:55
-ao me Om AP OG Re ~ : Gm) FI EE] POR gsog/2004 FB)
 ```
 
 ## Slide 110
@@ -2206,15 +2167,10 @@ ay UMT_Uniso...
 (
 Dente DX
 = ~~
-‘ | >
-> a 7 if
-P y id
 Bluestacks imusc isplany70) > vl - o@) Pe G3.01 Somme Lagrimas.d ar
-. , n ke
 Blacklist updates
 Moltieinstave
 12:55
-“A G fa 0) POR 9308/2024 8
 ```
 
 ## Slide 111
@@ -2286,7 +2242,6 @@ QR Account protection
 App & browser control
 Device security
 Device performance & health
->» @ OD
 Family options
 & Settings
 ft «= Type here to search
@@ -2433,7 +2388,6 @@ BB Games [ Godot
 a
 BB Movies &Shows [Football
 ai.midjOurney or virus
-x @ # O
 IB Cooking
 3
 o
@@ -2523,7 +2477,6 @@ i
 League of
 Legends
 _ 11:18
-@ 7° Gielcouvet ~ G&D) FA on, FA
 as
 «3 = 2 Taper ici pour rechercher @ r*%, Bi
 a
@@ -2617,7 +2570,6 @@ Ste Chey et Mis 1222023 r. te couve’ ad 12/02/2023 “YA
 \ ies
 AY \ \ @ 8 qeeee die 2OO>ro Be a
 Bm Java Client x) +
-® Novo ~ ae oO ® e@ wW TN Ordenar~ = = Ver ~ a -
 2 Recherche
 € > Y | M> Transferéncias > Java_Client » CG
 A Base Nome
@@ -2650,7 +2602,6 @@ Qroue Mm @ Of A & FP W sys; @ ‘es dunavigateur et les rouvrir).
 » FAQ relative a lava Ad hits nour Windows
 oc 1334
 Ensoleilé A 9 B® seo2s2023
-Qrecrecre MO A C e+ a
 Total 1 folder and 10 202 752 bytes in 1 file
 elipschilele. Gelipscrilele. cellpscrilele.
 : _ 11:18
@@ -2738,7 +2689,6 @@ a vel couvert Ft NY) TA
 \ HB Who spends money like th X  MBJactoll fait godter des fro X BON CREE UN SANDWIC @ Download Java for Windor {BML 64-bit ava for Windows 7
 Fy > wwnejavacom/tr 2£OOr>rO BSA eE
 Bm Java Client x +
-® Novo ~ oe oO @ Ww N Ordenar» = = Ver ~ a
 2 Recherche
 € > > | M> Transferéncias > Java Client » CG
 A Base me Data de
@@ -2746,7 +2696,6 @@ Y @ Barbara - Pesso: | | Hole de Java 8?
 je Java 8?
 Java Setu 1/02re
 Bm Documentos 8 p
-Ym imagens Be Bie x +
 Bm Capturas de | © new» 1 Sortieen anzeigen (B Aleextrahieren +++
 € > ¥ 1 [tw tots oocaper(G) > Usse > Rope! > Downloads > fomlClet > fe > . 0 le Java
 BBB ambiente de # (Som Name we ey pe eS ee ee la compter du 16 avril 2019.
@@ -2786,7 +2735,6 @@ Selected 10 202 752 bytes in 1 file
 Mlicisessentt
 Salligseilele. Geligbisilele.. Hell gseilele.
 P Topcene
-eepop2en2e08 OBB B LY im U
 oc Cloudy SGaaa503 oe a wlelcouvert OB NY T™  yg3 A
 ```
 
@@ -2910,7 +2858,6 @@ Contrat de licence Technology Network License pour O
 forge-1.193-44.1.1..jar JavaSetupsu361 (1).2x0 JavaSetup8u361.exe review OptiFine 1..jar OptiFine 1.192 HD..jar
 Be i mm '7ASetupau361 (ewe g_JavaSetup By PvewOptiFine 1. jar gy OptiFine 1.192. HO
 Bh 222 ciertzip BB optrine 1192 HOW jar : ores
-9 = = G e@e@6
 ```
 
 ## Slide 127
@@ -2975,7 +2922,6 @@ Download or update your existing Java Runtime Environment
 Install Java on Windows More about Java >
 This article applies to: Platform(s): Windows 10, Windows 3
 https://www,java.com How do | install Java .
-p . 5 OS ir tke ak: 4
 ```
 
 ## Slide 129
@@ -3018,14 +2964,12 @@ Install Java on Windows
 This article applies to: Platform(s): Windows 10, Windows 8
 How do | install Java
 x ts
-¢>7¢ 9 ek
 q= | O10 &aqs=chr...
 @ google.com/search?q= {| ONO&
 ™M Gmail @@ YouTube BF X/£
 Google {ono
 AS
 MAPAO! HLO] MOS DE 7/5
-am Ast HS x
 java 2.0H 4
 java FEM
 Java -cp
@@ -3170,7 +3114,6 @@ App - Java Download Xo CHSC Ape} BS
 Java - a programming language for creating powerful applications and websites. Java - a
 platform that allows you to expand the functionality of your system. j
 Bil - https://go.java-gapp.space/ +
-Ad - hitps:/oracle.58226.click! ~ Ss itch J J D | d
 Java - Specifically applications witch to Java - Java Downloa
 Programming language and computing platform. Get for desktop applications Java is a reliable and powerful programming language that provides convenient programming.
 Java is a platform for creating analytical and consumer with extensive capabilities.
@@ -3228,13 +3171,11 @@ Java manual download page. Get the latest version of the Java
 Install Java on Windows
 This article applies to: Platform(s): Windows 10, Windows 8
 How do | install Java
-G 1°70 - Google 44 x + . ~ =
 €<€ 7 C @ google.com/search?q= { OM O&o0q= | OM OBaqs=chr.. 9 Be Of
 ™M Gmail @@ YouTube BF X/£
 Google {ono x mgs ®
 AS
 AHAFAYO! 7HSIO] BO St OE 71 =
-=} s Pt
 “t https://go.java-gapp.space/
 java + ti java ... parameter
 Java -cp java -jar 2
@@ -3409,7 +3350,6 @@ flare.io
 
 ```text
 [i] TempM -ter’ x © java-Google x +
-FL 74% bY o ( A> Paused }
 — MAICRO
 @ Burp Suite z 4 Professional, X @ burp suite pr xX | 9 VIP4StatsUss x
 © burp suite pr X
@@ -3504,7 +3444,6 @@ flare.io
 
 ```text
 B® Java Client x ar
-@Onwr %§ O ( WB 2 W
 /\ | Java_Client
 €<€ > v 4 MB > Transferéncias { Java_Client V
 A Base Nome
@@ -3527,7 +3466,6 @@ flare.io
 
 ```text
 @& Java Client x a 6
-® Novo ~ a (8) @ e W NL Ordenar ~
 Ver ~ aoe
 € > vy WF  M> Transferéncias > Java_Client
 A Base Nome j

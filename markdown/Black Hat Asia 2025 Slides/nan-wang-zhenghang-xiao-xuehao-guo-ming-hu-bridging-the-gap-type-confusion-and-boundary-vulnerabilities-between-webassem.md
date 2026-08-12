@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:06:38Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Nan Wang & Zhenghang Xiao & Xuehao Guo& Ming Hu_Bridging the Gap Type Confusion and Boundary Vulnerabilities Between WebAssembly and JavaScript in V8.pdf` (44 pages)
 
-
 ## Slide 1
 
 ## Bridging the Gap: Type Confusion and Boundary Vulnerabilities Between WebAssembly and JavaScript in V8
@@ -415,11 +414,9 @@ arr[key] = val; Handle<Name> name,
 } Handle<Object> value,
 StoreOrigin store_origin) {
 function pwn() { [ sed
-for(let i = @; i < 9; i++) {
 set_keyed_prop([], ®, @x1337); if (use_ic) {
 } UpdateCaches(&it, value, store_origin); //-------- >[@]
 let wasm_array = wasm.create_array(Q); } else if (state() == NO FEEDBACK) {
-my a ; [...]
 set_keyed_prop(wasm_array, "foo", @x1337);
 } catch(err){ } a
 Set_keyed prop(_l|, 0, Oxloa/),
@@ -448,7 +445,6 @@ function set_keyed_prop(arr, key, val) f
 arr[key] = val;
 }
 function pwn() {
-for(let i = 0; i < 9; i++) {
 set_keyed_prop([], ®, @x1337);
 }
 let wasm_array = wasm.create_array(@);
@@ -724,7 +720,6 @@ CT] JSPI transformatior
 B& WebAssembly.promising wrapper
 Boom!
 # CMD: /tmp/d8-Linux-debug—v8-component-94015/d8 —-expose-gc poc.js
-# OUTPUT = = = -
 Received signal 11 SEGV_ACCERR 2b94beadbef6
 ==== C stack trace == ==
 [0x7 f59a639ee53]
@@ -1113,7 +1108,6 @@ Architecture
 WebAssembly-JavaScript Interaction Fuzzing Architecture
 (- ‘
 WASM.-JS Interaction Mutation Strategies
-‘ (- a 6 5
 WASM Export to JS JS Import to WASM JSPI Transformation
 Export WASM Objects & Create WASM Modules with Use WebAssembly.promising
 Functions to JS Layer Imported JS Functions & WebAssembly.Suspending
@@ -1122,7 +1116,6 @@ with exported WasmObjects JS: {js: {func: someFunction}} v3 = WebAssembly.promis
 Trigger Type Confusion Test Cross-Language Find Bugs in Async
 & Memory Safety Issues Function Calls & GC WASM-JS Interactions
 Boom! Boom! Boom!
-\ J \ J x J
 \ J
 Mutation Engine
 Generate semantically valid mutations

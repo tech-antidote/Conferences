@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:16:36Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Haiquan Zhang & Rhettxie Rhettxie_CodeQL Also a Powerful Binary Analysis Engine.pdf` (41 pages)
 
-
 ## Slide 1
 
 ## **CodeQL: Also a Powerful Binary Analysis Engine**

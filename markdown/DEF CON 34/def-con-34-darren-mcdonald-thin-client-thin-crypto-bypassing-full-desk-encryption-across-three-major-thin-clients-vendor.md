@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:41Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Darren McDonald - Thin Client Thin Crypto - Bypassing Full-Desk Encryption Across Three Major Thin Clients Vendors without Breaking a Ci.pdf` (45 pages)
 
-
 ## Slide 1
 
 ```

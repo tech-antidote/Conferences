@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:19Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Woods_Lemons and Liability Cyber Warranties as an Experiment in Software Regulation.pdf` (35 pages)
 
-
 ## Slide 1
 
 ## Lemons and Liability Cyber Warranties as an Experiment in Software Regulation
@@ -130,9 +129,7 @@ Akerlof, 1970. The Market for "Lemons": Quality Uncertainty and the Market Mecha
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-® SS A > . : y ' 4 = ‘s | .
 black hat ~ i <serhs )  a -
-ae ii ly ‘a ,
 : ey
 USA 20253
 for any
@@ -411,7 +408,6 @@ SAMPLING BIAS
 BYES, | LOVE RESmNDI NG,
 TO SURNEYS
 DB NO, 11055 THEM in THESIN
-99:3) a iQ
 0-2
 “WE RECEIVED S500 RESPONSES AND
 FOUND THAT PEOPLE LOVE RESPONDING

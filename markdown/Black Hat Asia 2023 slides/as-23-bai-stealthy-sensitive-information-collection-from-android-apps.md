@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:42Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Bai-Stealthy-Sensitive-Information-Collection-from-Android-Apps.pdf` (36 pages)
 
-
 ## Slide 1
 
 ### Stealthy Sensitive Information Collection from Android Apps
@@ -60,7 +59,6 @@ Background
 Our work
 Summary
 Q&A
-a oD te
 ```
 
 ## Slide 3

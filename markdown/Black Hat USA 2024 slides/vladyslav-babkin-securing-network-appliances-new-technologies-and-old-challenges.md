@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:48Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Vladyslav Babkin_Securing Network Appliances New Technologies and Old Challenges.pdf` (27 pages)
 
-
 ## Slide 1
 
 Securing Network Appliances **:** New Technologies and Old Challenges
@@ -70,10 +69,8 @@ Viadyslav Babkin
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-y wt >» | 4 » tay >» Lm
 | prt
 | ,
-+) 'P ee
 black hat
 USA 2024
 #BHUSA @BlackHatEvents
@@ -451,8 +448,6 @@ Let’s see some in practice.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= >» Y 4} Zh
-wt ~~ > —
 black hat — se
 USA 2024
 #BHUSA @BlackHatEvents
@@ -523,8 +518,6 @@ F5 only acknowledged the pre-auth vulnerabilities as vulnerabilities. SSRF issue
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= >» Y 4} Zh
-wt ~~ > —
 blackhat — a
 USA 2024
 Questions?
@@ -540,8 +533,6 @@ Questions?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= ‘N a i, js, we
-Aw ) SS
 blackhat —_ —m
 USA 2024
 Thank You!

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:38Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dalya Manatova & L Jean Camp_Relationships Matter Reconstructing the Organizational and Social Structure of a Ransomware Gang.pdf` (57 pages)
 
-
 ## Slide 1
 
 **Relationships Matter: Reconstructing the  Organizational and Social Structure  of a Ransomware Gang**
@@ -482,7 +481,6 @@ HEE Total payments (USD)
 60,000,000
 40,000,000
 20,000,000 |_|
-; i mm oe — a
 Conti BlackCat Cuba Netwalker (Mailto) Locky REvil / Sodinokibi RagnarLocker DarkSide MedusaLocker
 Time range: all time Source: ransomwhe.re
 K one of the major ransomware groups
@@ -599,7 +597,6 @@ codes distributions
 bisa hat
 USA 2024
 Relationship (6-5
-Lal No Reciprocity . =, ‘
 ype: in Small Talk Task Assignement
 Authority
 Status Update
@@ -788,7 +785,6 @@ _Depends on the crime, organization, and context (i.e., money laundering, access
 bisa hat
 USA 2024
 Victim “support”
-ve Ni e
 CONTI Recovery service
 Hello, this is ContiLocker Team.
 Please, introduce yourself (Company name and your position) and we'll provide all necessary

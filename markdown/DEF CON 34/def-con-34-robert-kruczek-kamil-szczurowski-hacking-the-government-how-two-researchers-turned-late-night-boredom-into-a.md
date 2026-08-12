@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:27:14Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Robert Kruczek, Kamil Szczurowski - Hacking the Government How Two Researchers Turned Late-Night Boredom Into a National Audit - Hacking.pdf` (26 pages)
 
-
 ## Slide 1
 
 # random_guys@DefCon 34:~# ./execute_presentation.sh **Hacking the Government**

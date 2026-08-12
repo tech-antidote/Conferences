@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:15Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Mulugeta-Insider-Threats-Packing-Their-Bags-With-Corporate-Data.pdf` (40 pages)
 
-
 ## Slide 1
 
 # Insider Threats Packing Their Bags With Corporate Data

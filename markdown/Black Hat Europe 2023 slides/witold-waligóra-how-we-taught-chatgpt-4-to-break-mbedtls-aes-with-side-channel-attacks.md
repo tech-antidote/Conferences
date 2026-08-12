@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:24Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Witold Waligóra_How We Taught ChatGPT-4 to Break mbedTLS AES With Side-Channel Attacks.pdf` (30 pages)
 
-
 ## Slide 1
 
 ## How we taught ChatGPT-4 to break Mbed TLS AES with side-channel attacks
@@ -116,10 +115,6 @@ PL
 WP YouTube Search
 [BR F3-AES-Deay... (2) - Jupyte doudvaio/scci: CloudVA Cl CloudVA
 @ 6 doudvaio, N jeOdfe a dt
-4d 9b a b3 d 30 53 @ 3
-4d 9b 1a b3 4b df 76 3@ 53 @@ 88 3d
-88 88 82
-2 ee ee e2
 Template Attack trace gathering
 Gather N traces for uniform byte distribution, uniform sbox output HW and uniform FT/RT output HW
 , 100000)

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:41Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Nicholas Lang,Andrew Hughes_Orchestrate This! Kubernetes Rootkit.pdf` (14 pages)
 
-
 ## Slide 1
 
 #BHEU   @BlackHatEvents

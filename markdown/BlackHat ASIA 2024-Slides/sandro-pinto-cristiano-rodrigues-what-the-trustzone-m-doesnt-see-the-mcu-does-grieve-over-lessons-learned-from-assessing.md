@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:32Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Sandro Pinto & Cristiano Rodrigues -What the TrustZone-M Doesn't See, the MCU Does Grieve Over Lessons Learned from Assessing a Microcontroller TEE.pdf` (342 pages)
 
-
 ## Slide 1
 
 What the TrustZone-M Doesn't See, the MCU Does Grieve Over
@@ -2125,18 +2124,13 @@ S Oo WIRE NVM EVENT
 TrustZone for ARMv8-M
 Se CONTROLLER SRAM CONTROLLER
 DEVICE
-SERVICE ao i ‘it y _ 48 4s
 UNIT
-» M M M
 <
 CRC-32 ob
 High-Speed Bus Matrix
-8 KB ROM
 Secure
 8
 S Ss
-ZN VAN ZN
-tt XZ KZ XA
 AHB-APB AHB-APB AHB-APB
 BRIDGE B BRIDGE A BRIDGE C
 (APBB) (APBA) (APBC)
@@ -2165,16 +2159,12 @@ NVM EVENT
 TrustZone for ARMv8-M
 Se CONTROLLER SRAM CONTROLLER
 DEVICE
-a ai r= =|
 CRC-32
 =
 High-Speed Bus Matrix
-8 KB ROM
 Secure
 8
 S S
-ZN ZN ZN
-ls \Z \Z XZ
 AHB-APB AHB-APB AHB-APB
 BRIDGE B BRIDGE A BRIDGE C
 (APBB) (APBA) (APBC)
@@ -2213,7 +2203,6 @@ NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
 4\ Z2\
-8 KB ROM
 Secure
 Boot
 »s
@@ -2266,7 +2255,6 @@ NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
 4\ Z2\
-8 KB ROM
 Secure
 Boot
 »
@@ -2302,7 +2290,6 @@ Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 Crypto A
 (AES128, §
 VVII\wW
-8 KB ROM
 Secure
 Boot
 Cortex-M23
@@ -2349,7 +2336,6 @@ Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-8 KB ROM
 Secure
 Boot
 Cortex-M23
@@ -3038,7 +3024,6 @@ Image: Pag. 3 - Kinibi-M Developer’s Guide
 
 ```text
 TRUSTONIC KINIBI-M
-fotolia al eel al le gd ed |
 Non-secure} -Secure-World
 Callable Eager
 Memory ;
@@ -3078,11 +3063,9 @@ TRUSTONIC KINIBI-M
 ' isiniaiaLaalelsiala, Woisioio PSA Level 2
 Non-secure | Non-secure | Secure-World s
 World ! Callable Ree
-1 iv v : a.
 Memory NORMAL WORLD SECURE WORLD
 1 i §6Crypto | Attestation Storage
 ‘N i module module module
-; a ae
 Kinibi-M module API
 Kinibi-M API Secure gateway Kinibi-M OS
 CPU

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:31Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Cory Michal & Brandon Levene & Ben Pruce_Modern Kill Chains Real World SaaS Attacks and Mitigation Strategies.pdf` (29 pages)
 
-
 ## Slide 1
 
 **Modern Kill Chains** Real World SaaS Attacks and Mitigation Strategies
@@ -74,7 +73,6 @@ Social Eng ILOVEYOU Blaster worm Conficker Worm Target Breach Petya
 Morris Worm First DDoS Nimda worm My Doom Worm HBS Breach Yahoo Breach Equifax Breach 6 6
 Michelangelo Bad IE Bugs Code Red Worm Samy XSS worm Aurora Snowden é é é
 Virus Phishing é a é
-2 \ im as LES é
 wa FWD
 piel — wee ne “ see | ano | ame | zou | coor | anon | ano | ane | zou | aoe | cow | azo | ame | 2m
 Surface ; : |
@@ -122,8 +120,6 @@ EI Et
 HIoAoeo
 El
 LIES ELOISE
-£1 EI Et
-£1 EE ot
 | |
 i
 Tisai
@@ -343,15 +339,6 @@ GOOGLE-CLOUD-PLATFORM
 OPENDNS
 Reliance Jio Infocomm Limited
 (0)
-s a § = 5 oa a € g S g
-s rd a 7 s 8 Fd Fy 2 2 Z
-£ 8 3 > s Q 3 i= o G o
-8 < a 8 5 E < g a s rf
-3 3 2 € ic 2 a s
-o € $ O §& B =: a 6 €
-g¢ 3s £ 2 8
-gz 8 s 2 8
-5 3 z
 <
 tactic_name
 ```

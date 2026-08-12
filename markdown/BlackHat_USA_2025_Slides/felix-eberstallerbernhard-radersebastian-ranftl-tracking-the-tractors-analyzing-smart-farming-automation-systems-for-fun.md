@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:53:38Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Felix Eberstaller&Bernhard Rader&Sebastian Ranftl_Tracking the Tractors Analyzing Smart Farming Automation Systems for Fun and Profit.pdf` (51 pages)
 
-
 ## Slide 1
 
 # Tracking the Tractors
@@ -192,7 +191,6 @@ No. Time Source Destination Protocol Length Info
 48858 666)
 9
 64 :
-65 10.1 73
 6 61.1 Tl & Data
 67 10.1 T 60 : 3B3 [ACK] Seq=1152 Ack 3 Wi 49 Len=a
 68 Q 10.1 Tl 204 Data
@@ -203,8 +201,6 @@ No. Time Source Destination Protocol Length Info
 82 6661 10.1 Tl 60 40 Len=0
 4
 + Frame 48857: 1767 bytes on wire (14136 bits), 1767 bytes captured (14136 bits) on interfz 60 65 f6 c3 88 06 16 63 O03 GO 57 G2 OB OO 53 83 o+ tee “We -S.
-» Ethernet II, Src: ProxmoxServe_5@:ac:fc (be:24:11:5@:ac:fc), Dst: ItonTechnolo_2c:d5:d2 | 03 68 41 a2? 6d 9d 5c 95 Oa 6c 96 Sf be cO eF d2 shaAcm:\) + Le :
->» Internet Protecol Version 4, Src: 51.138.177.99, Dst: 10.1.1.10 cS ff 99 e@ 51 ce 76 093 2c 69 78 ff Of 64 8f 2a ----Q-ve ,ix -d-*
 + Transmission Control Protocol, Src Port: 8883, Dst Port: 34602, Seg: 1, Ack: 168, Len: 11 9060 cr 20 BSU6GI7S02I6bS92o0d2 es ebeeceeos - | LY!f9 .-DK>--D
 ~ Transport Layer Security go7Ta FO ae Fe de 18 eb 45 55 27 af £9 2f aa Oe ad FG e~s- EU fesse ee
 ~ TLSV1.2 Record Layer: Handshake Protocol: Server Hello 0080 BIS co 2f 88 00 Ob ff O01 68 01 88 BH Oh OO O82 es... ss.
@@ -342,7 +338,6 @@ TCP 34602 — 8883 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 SACK_PERM TSval=47948981
 TCP 8583 . 34602 (SYN, ack] Bed @ Ack=1 Win=1460 Len=@ MSS=1460 SACK_PERM WS=512
 TCP ) 34602 . BBB3 [AC i
 TLSv1. 3 Client Hello
-TCP d p. 34
 TLSv1.2 rver Hello
 TCP :
 TCP
@@ -379,7 +374,6 @@ cal,
 cal,
 13
 >» Frame 48860: 919 bytes on wire (7352 bits), 919 bytes captured (7352 bits) on interface « 05 b4 6a cB 00 G9 16 03 O38 62 51 Bb OO 62 4d OO on ae
-» Ethernet II, Sre: ItonTechnolo_2e:d5:d2 (10:a5:62:2c:d5:d2), Dst: ProxmoxServe_5SO:ac:fe | 02 4a 00 02 47 390 82 82 43 30 82 81 ac 02 09 OO ‘J: - G6:
 » Internet Protocol Version 4, Src: 16.1.1.10, Dst: 51.138.177.99 a5 6e 18 ic 6a 55 5d Of 30 Od OG O89 2a B86 48 86 ome JU)
 » Transmission Control Protocol, Sre Port: 34602, Dst Port: 8883, Seq: 168, Ack: 1714, Len: f7 @d 01 O21 Ob O5 6G 30 Tb 31 Ob 30 09 06 O3 55 as as
 #BHUSA @BlackHatEvents
@@ -435,11 +429,9 @@ USA 2025
 Intercepting and Decrypting MQTT Broker Connections
 = MOTT Explorer Q. Search... oO DISCONNECT & A)
 ¥ iot-emg-ne.fjdac.com
-¥ . Bn
 v sys Topic | a
 ¥ mg2Gsy84
 ¥ default
-¥ FJILQ17223C11557ZC f i i f i
 ¥ event
 workLog = {"data":{"axonSWEF":0.0,"backwardintegral":0,"baseDirect":81.87
 networkStatus = {"data":{"baselineDistance":18561.78838353029,"createTi
@@ -458,8 +450,6 @@ Rrewruunage ey
 "“imuUpdateTo":
 "inputVoltage": 0.85,
 "internalSupplyVoltage": 65
-"Lat": 5 ,
-"Lng": 6 ’
 "Locationlo": 6,
 "mainAntennaVoltage": 1.98,
 RRRRRRRVRVRA
@@ -811,7 +801,6 @@ a2 "fi leName":"bad.apk",
 37 ]
 3e| tt,
 3g "code":0,
-AD W msg" : W if Ape | iT]
 41|}
 #BHUSA @BlackHatEvents
 ```
@@ -887,7 +876,6 @@ Meterpreter -: dalvik/android
 ```text
 erry
 CU_V103.0.4.12_02503271009.bin.txt
-ma \| =H * BI: x
 undefined
 undefined4
 byte *
@@ -944,15 +932,10 @@ bS
 88
 28
 dd
-fl aa 02
 2a
 ds
-e8 o2 TO
-f6 c8 30
 31
-f2 00 00
 46
-f0 39 fd
 bd
 Goad aomo domo cca om om a ok ke aa
 a

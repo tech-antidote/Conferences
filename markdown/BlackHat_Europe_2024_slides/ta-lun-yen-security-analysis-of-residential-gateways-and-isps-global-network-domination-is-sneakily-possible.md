@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:47:06Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ta-Lun Yen_Security analysis of Residential Gateways and ISPs global network domination is (sneakily) possible.pdf` (62 pages)
 
-
 ## Slide 1
 
 Security analysis of Residential Gateways and ISPs – Global network domination is (sneakily) possible
@@ -137,7 +136,6 @@ however, we believe the same mistake can happen to all ISPs. Modems (and telecom
 Systematic Risks cannot be assigned as CVE 6 0-days to 4 million modems within a week
 CID COFT4 HSE ANAM C400H BOETF AIS
 ¥
-. a an 8
 Weak password + Guessable password +
 Post-auth arbitary file Post-auth CMDi -> root Ta-Lun Yen,
 write 0-day -> RCE RCE TXOne Research

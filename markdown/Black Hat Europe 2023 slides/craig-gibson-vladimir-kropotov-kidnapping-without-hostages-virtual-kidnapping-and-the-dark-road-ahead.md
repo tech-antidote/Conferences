@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:54Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Craig Gibson, Vladimir Kropotov_Kidnapping Without Hostages Virtual Kidnapping and the Dark Road Ahead.pdf` (39 pages)
 
-
 ## Slide 1
 
 #BHEU  @BlackHatEvents

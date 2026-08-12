@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:54Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ye Zhang,Le Wu,Shupeng Gao,Zheng Huang_Attacking NPUs of Multiple Platforms.pdf` (113 pages)
 
-
 ## Slide 1
 
 #BHEU @BlackHatEvents
@@ -211,14 +210,10 @@ black hat
 Information Classification: General
 filter
 Lo] of.
-0 ij o
 ojo Ry
 ~
-wy \ s
 WS 0/o}o]o]o]}0 0|0
 ‘\ °s. fo MiRoTololo 0
-‘\ “So }o 0100 0] 0
-‘ |) 0] 0 0 0/0
 ‘\ |0}0]0] 0, 0 0/0
 ‘\Jololo 0 o|0
 ‘olo ololo 0}0
@@ -252,9 +247,6 @@ filter
 weight *1*O + O*O + 0*0 + O*0 + O*1 + 1*1 + O*0 + O*0 + 1*1 = 2
 0 0
 0 0
-10 0 2
-0 0 ?|?
-0 0 —) ? ?
 0 0
 0 0 2)? )2?)...)?
 0 0 output featrue map
@@ -283,11 +275,7 @@ filter
 0/0}
 0 .,
 lo weight = T*Q + O*O + 0*0 + O*1 + 1*0 + 0*0 + 0*0 + O*1 + 1*0 = 0
-. 0 0
 0 0
-~ ~O 0 2 0
-0 0 ?|?
-0 0 =) ? 2
 0 0
 0 0 2)? )2?)...)?
 0 0 output featrue map
@@ -345,23 +333,17 @@ black hat
 Why NPU?
 Basic of CNN(Convolution Neural Network)
 filter 1 filter 2
-ter 0 |
-Lo] 0 S. i)
 0 0 i 0 | Input Bias
 single neuron model
 o|olololojo|o
 ci Ad
 LY IVIVIVITVITVIYVY
-oo Qty 4
 \ Wk,
 . ~ channels T2
 0 04> Activation
 0 0 0 Output
-0 ° : y+ pl...) —> yz
 filter 3 0 Sum
 o[o] oto HS Win
-0 0 Em
-0 0 ; 0 Z
 0 0
 0 0
 me
@@ -413,7 +395,6 @@ Information Classification: General
 black hat
 Model File
 Training VS Prediction/Inference
-—— ee i i a
 ee
 aes eee ae ee =
 eee eee
@@ -465,18 +446,10 @@ Al processors
 a-----------K~
 7 N
 (a a I Cambricon pee eee .
-Baa  _ +6 ‘
-I . I I i]
 ; BEYOND FAST ' i DEEPHi ;
-! im = Bt
 intel = '
-I I I l I
 ' IRIS. i | rt AMDi¢1
-| Ea 1 | , rt XILINX !
-I ' I Ooms 1 I 1
-I ! : . l I I
 ! RADEON Tensor Processing Unit ! A = D A ;
-I I I I I
 | t 4 FPGA ;
 oe GPU / I I Swe eee ee eee 2
 alain - ; ASIC ;
@@ -975,9 +948,6 @@ Information Classification: General
 2)
 black hat
 Samsung Exynos NPU Firmware
-37 [2] = ;
-° ° °
-38 [3] = ;
 ¢ TASK_mailbox_lowpriority - 8) = viens
 _ _ = msg->data;
 40 [4] = msg->self; .
@@ -988,21 +958,16 @@ _ _ = msg->data;
 5 | uint 45 enableIRQinterrupts(); ~ ~
 6 int ; 46 = (**(code **)(param_1 + msg->command * 4 + Oxd60)) ( + Oxd);
 7) uint * ; 47 = param_4;
-8 uint * : =| 48 if ( '= 0) {
-9 | undefined [4]; 49 = 3
 10} undefined4 ; 50 my_printk(s_[ERR]%s:%d>cmd_handler_table[%d]_0000fae8,PTR_s_mbx_msghub_req_0000f9e4, 0x7
 11) undefined4 ; 51 ,msg->command, 3
 12) undefined4 [2]; 52 }
 te 53 goto LAB_0000f894;
-14 = *DAT_00010054; 54 } -
 re uN. 00003be(1 ) 55 my_printk(s_[ERR]%s:%d>mid_%d_is_not_free_st_0000fa80,PTR_s_mbx_msghub_req_0000f9e4, 0x69,
 7 = *DAT_O 54: 56 »param_4) ;
 18) } 57 = 0x103;
 19) my_printk( tart )1005c,PTR TASK mailbo pr ty_00010058); =l 58 enableIROinterrupts();
-20 = DAT_00010054 + 2; =
 21 = DAT_00010054 + Oxc5; loop to get network request From DMA buffer, l| ¢ Decompile: my_ncp_manager_load - (NPU.bin) % |x] i
 22) dot ay mbx drward 7 according to the read/write ptr in mailbox_hdr 52 | *(undefinedd *) ( + * Oxddd + 0x1040) = 0x226;
-Pit (ive ae a — se : : i 53 | *(undefined4 *) ( + * Qxdd4 + Ox103c) = 0;
 25 my_printk(s_[ERR]%s:%d>mbx_dnward_get_is_fai_00010068,PTR_s TASK_mailbox_lowpriority 00010058, 54 | FUN_00020aac(*(undefined4 *) ( + * Oxdd4 + 0x1044) ,0x898) ;
 26 ( ); 55 FUN_00020aac(*(undefined4 *) ( + * Qx4d4 + 0x1048) ,0x898);
 27 my_printk(s_[ERR]%s:%d>BUG! !_0000ff68,PTR_s_TASK_mailbox_lowpriority_00010058, Ox5b) ; 56 | *(undefined4 *) ( + * Ox4d4 + Ox104c) = 0;
@@ -1010,10 +975,8 @@ Pit (ive ae a — se : : i 53 | *(undefined4 *) ( + * Qxdd4 + Ox103c) = 0;
 29 my_assert(); 58 ( 3 param ;
 a] oy printk(s MSG(L). +. (dl parse & handle the request 59 = PTR_s_ncp_manager_load_00014710; . ..
 y_P s_MSG(L)_+_[%d]_%t_ , rlocat_18); 60 | if ( == 0) calling another handler accoriding to cmd.
-32 = my_mbx_msghub_req( , : (ol, i + { . .
 33) } while ( == 0); 61 = 0; for LOAD is ncp_object_load
 34| my_printk(s_[ERR]%s:%d>mk ub_req_is_fai_000100a4,PTR TASK_mailt Lowpriori 0010058,99, 62 = 0; _ _
-35 ds; 63 = 0;
 36) my_printk(s_[ERR] 1>BUG! !_0000Ff68,PTR ASK_mailt l rity_00010058, 100) ; 64 do {
 37 /* WARNING: Subroutine does not return */ 65 _ +1:
 38) my_assert(); ~ "

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:25:13Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Mathilde Venault_Press Play to Restart Under the Hood of the Windows Restart Manager.pdf` (55 pages)
 
-
 ## Slide 1
 
 Press Play to Restart: Under the Hood of the Restart Manager Mathilde Venault - REcon 2023
@@ -169,7 +168,6 @@ resource
 re
 > ~ Application
 crx)
-* — | </>
 ```
 
 ## Slide 12
@@ -583,7 +581,6 @@ DWORD dwSession = 0x0;
 DWORD ret = 0;
 WCHAR szSessionKey[CCH_RM_SESSION_KEY + 1];
 Rt1lSecureZeroMemory(szSessionkey, sizeof(szSessionKey) ) ;
-OS SS SS SS SSS
 // Initiates the Restart Manager session
 a! , if (pRmstartSession(&dwSession, @x@, szSessionKey) == ERROR SUCCESS)
 a
@@ -612,7 +609,6 @@ Step 2: Retrieve the list of affected apps
 AF (ret != ERRORSUCCESS []~!nProcinfoNeeded)[{ Ty | -
 // Allocates the required structures to get information for each process & service
 ProcessInfo = (PRM PROCESS INFO)memory: :Alloc(sizeof(RM_PROCESS INFO) * nProcInfoNeeded) ;
-if (!ProcessInfo)[ { ... } |
 nProcinfo = nProcInfoNeeded;
 // Retrieves the list of processes & services currently using the target file
 YX

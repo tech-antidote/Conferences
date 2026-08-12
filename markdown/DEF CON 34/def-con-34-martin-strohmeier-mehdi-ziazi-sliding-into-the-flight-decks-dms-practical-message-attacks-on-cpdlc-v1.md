@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:24:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Martin Strohmeier, Mehdi Ziazi - Sliding into the Flight Deck’s DMs Practical Message Attacks on CPDLC - v1.pdf` (69 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -53,7 +52,6 @@ a": Practical Message Attacks on CPDLC
 EXPECT TURBULENCE |
 : = ) > ALTERING CONTENT...
 FL340-FL360 el | 2 Mehdi Ziazi j | 2 Martin Strohmeier } > SENDING FAKE CLEARANCE...
-a EEN —— = al
 > ATTACK SUCCESSFUL
 (ey)
 CPDOLC BOARNEL} i 2
@@ -144,7 +142,6 @@ ymerding, CSO
 06:12 AM ET ie | By Heather Kelly, CNN
 July 26, 2012 — Updated 2249 GMT (0649 HKT) | Filed under: Web
 Feo aaa comment ont inEenY eO nen)
-cs An iItibillion-doll: haul of the 's ait ffi i) +4 4 +4 +
 sien a doagadeneke ommecdaiaenocstceseone Ait Traffic Control of the Future Is (Still) Incredibly
 friendly and safer by 2025.
 Sleeping air traffic controllers get federal wakeup Hac ka bl e
@@ -221,35 +218,26 @@ S
 =
 <=
 A 15 year journey on practical aviation hacking
-% %, >
-we w% we
-© = SS MY ILS
 \ o
 », 2022/23 2024 2020 TD
 cs sey foes | |=
 oo SADS-B ACARS =.
 2 a
 =
-=a > =" >
 15
 .
 2024 o f
 o
-< > =
 TCAS
-ADS-B T T T T T
 Mode A/C/S Ground Departure —_En-route Approach Ground
 ADS-B FIS-B ACARS DME
 Mode A/C/S TIS-B i NDB
 MLAT Mode A/C/S [ CPDLC VOR un 5
 2012-25 (Interrogations) 2026 Pe ILs
 2017 2020
-) SA 2
 ATC ground stations
 ¥
-(« ] »)
 NS
-( ») Pi
 Grou ised navigation aids
 ```
 
@@ -309,11 +297,8 @@ Niedergl&t a Lt
 ee Lidl Schweiz | \ Bretigny
 XN ROTI
 (a ] Oberglatt \
-S Sa Sb \
 —_—_—— —. ghafen
 De hy — A urich
-a te L51 |
-> 9 =
 Rumlang Pst] Kloten
 Seilpark Zurich @)
 .
@@ -467,7 +452,6 @@ Layer 4 (Transport) COTP X.224
 ° ATN checksum
 Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet ° ES-IS.
-e CRC 16
 Layer 2 (Datalink) AVLC Frame
 e-., XID
 e Reed Solomon FEC
@@ -546,7 +530,6 @@ Full Reverse Engineering Setup
 ```text
 Real World
 Environment
-ATC ie =
 ad ire)
 4
 é
@@ -703,10 +686,8 @@ Layer 4 (Transport) COTP X.224
 » ATN checksum
 Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet e- ES-IS
-e- CRC 16
 Layer 2 (Datalink) AVLC Frame . po We start here
 e- Reed Solomon FEC
-La 1 (PHY
 yet ( ) Web Mise @-). -- PN scrambling
 Layer 1 (PHY)
 D8PSK @ 31.5 Kbps
@@ -826,9 +807,7 @@ i Updates internal state i
 <—
 i_ AVLC UA
 | AVLC FRMR x
-r > f
 ig tink Reset >
-i \ i
 ATC Attacker
 ```
 
@@ -863,7 +842,6 @@ Command : Ad Handoff
 VME Creates ink Receipt of vise ro Pending Receipt of
 New LME Unavailable XID_RSP_LCF : A3 rl Sat (S3)
 (SO)
-2 Ex XID_RSP_HO (F=1) : A6
 9 Link Handoff HO (F=1)
 N2 Exceeded : A
 Refusal : A10
@@ -926,7 +904,6 @@ N2 Exceeded : A9
 Receipt of Disc.
 Notification from DLE : A3
 DST addr SRC addr | LCF=0x43} FCS
-(4 B) (4 B) (1 B) (2 B)
 Stateless frame!
 ```
 
@@ -994,7 +971,6 @@ LOG ON ore-2
 UNILINK MENU RETURN>
 VWAV DTO LIST PREV
 PERF TUNE MENU NEXT
-c E F
 G
 N
 T
@@ -1034,11 +1010,9 @@ Layer 4 (Transport) COTP X.224
 » ATN checksum
 Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet e- ES-IS
-e- CRC 16
 Layer 2 (Datalink) AVLC Frame
 o-.- - XID
 e- Reed Solomon FEC
-La 1 (PHY
 yet ( ) Web Mise @-). -- PN scrambling
 Layer 1 (PHY)
 D8PSK @ 31.5 Kbps

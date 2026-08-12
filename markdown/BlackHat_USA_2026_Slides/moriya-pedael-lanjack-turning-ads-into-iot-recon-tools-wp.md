@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:13:05Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools-WP.pdf` (59 pages)
 
-
 ## Slide 1
 
 1

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:49Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Fan Wu & Xuankai Zhang_Endoscope Unpacking Android Apps with VM-Based Obfuscation.pdf` (43 pages)
 
-
 ## Slide 1
 
 # Endoscope: Unpacking Android Apps with VM-based Obfuscation
@@ -665,7 +664,6 @@ public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState) ;
 ComponentActivityKt.setContent$default(this, null, ComposableSingletons$MainActivityKt. INSTANCE.
 m4078getLambda3$app_debug(), 1, null);
-id *v3; //
 int v4; // 8h 8
 __int128 *v5; // 1]
 int *v6; //
@@ -674,7 +672,6 @@ int v8; //
 int16 v9; // 44
 _int128 v10[2]; // 4
 Las Ty: 5
-7 4 v12; //
 __int64 v13; //
 = *(_QWORD
 = 61;
@@ -692,12 +689,7 @@ Before obfuscation
 public native void onCreate(Bundle bundle);
 After obfuscation
 data:
-8 E6 08 46 08 08 828 O5 eB
-38 00 6F 08 6B GO DO E1
-°8 20 @2 67 27 D3 30 1B 01
-8 OF 10 1E 01 08 G8 O5 O1
 Q000000000886D42 O62
-Q@1 01 06 @@ E6 10 47 00
 @1 @0+word_6CC8 DCW
 2D @0+
 1@ @2+DCW Ox11E, 2,

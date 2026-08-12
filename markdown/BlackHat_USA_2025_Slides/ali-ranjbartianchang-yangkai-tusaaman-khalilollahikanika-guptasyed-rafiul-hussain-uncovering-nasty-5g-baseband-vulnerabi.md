@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:50:31Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ali Ranjbar&Tianchang Yang&Kai Tu&Saaman Khalilollahi&Kanika Gupta&Syed Rafiul Hussain_Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing.pdf` (101 pages)
 
-
 ## Slide 1
 
 # **Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing**
@@ -236,7 +235,6 @@ Project Zero Or... How Network Names became an RCE vector
 Over The Air Baseband Exploit:
 News and updates from the Project Zero team at Google
 Able 48 oon ae Gaining Remote Code
-¥ rn S) H
 v7} “6 09 GB Execution on 5G Smartphones
 Showing posts sorted by relevance for query baseband. Sort by date Show all posts
 TL LEAS Marco Grassi (@marcograss)
@@ -244,9 +242,6 @@ K> KEEN Xingyu Chen (@@xKira233)
 Multiple Internet to Baseband Remote Code Execution ao
 Vulnerabilities in Exynos Modems
 Posted by Tim Willis, Project Zero
-ra) = ] a “4 yN ] w a
-blackhat \ Pi y \ yi 4
-USA 2024 € | : y \
 \] eg, ZL.
 Demo: Internet Traffic Eavesdropping Diner — - Z
 — ASN.1 and Done USArcUe4
@@ -256,7 +251,6 @@ Es) BRIEFINGS
 PDU Session Est Request baseband. Vulnerabilities by Fuzzing Layer-2
 PDU Session Est Accept
 ~ ‘G
-w/ SHT 4 ' «
 @amatcama
 ' Speakers: Dyon Goos & Marius Muench
 ;
@@ -275,10 +269,6 @@ From exploits to frameworks: Baseband research • 2020: BaseSAFE: Baseband SAni
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-e 7 j y > Sa ee
-y 7 4 y B
-! y A PA
-a y c =
 From exploits to frameworks: Baseband research
 ¢ 2020: BaseSAFE: Baseband SAnitized Fuzzing through Emulation. €
 Af. Nes
@@ -335,7 +325,6 @@ BaseSAFE / examples / errc / src / main.rs
 628
 Code Blame
 678 lines (603 loc)
-+ 26.2 KB
 hook! (@x3b4fc4, msg_recv, "msg_receive_extq");
 hook! (@x3b5010, pass_func, "msg_receive_intq");
 hook! (@x00119b68,
@@ -457,7 +446,6 @@ BEd)
 628
 Blame
 678 lines (603 loc)
-+ 26.2 KB
 hook! (@x3b4fc4, msg_recv, “msg_receive_extq");
 hook! (@x3b5010, pass_func, "msg_receive_intq");
 hook! (@x@0119b68,
@@ -604,9 +592,6 @@ black hat
 BRIEFINGS
 Quick Demo
 mQ~. e” he omy
-‘ / ‘
-\ i \
-‘ 4 N
 #BHUSA @BlackHatEvents
 ```
 
@@ -636,11 +621,8 @@ Q
 blackhat .
 BRIEFINGS SEE No
 How did we get here?
-ey o a om
 — \ r Stratur vr
 I I
-\ a \
-NC 7 \. =
 i)
 #BHUSA @BlackHatEvents
 ```
@@ -933,12 +915,8 @@ e8000000 -f0000000 rw-
 bldekhat
 BRIEFINGS
 NAS
-= Men =
 1_KS_} \ eo” ees ‘y
 4
-\ ! \
-\. ge. 7 ae
-ws 1" Te
 #BHUSA @BlackHatEvents
 ```
 
@@ -1117,8 +1095,6 @@ thisvtable
 ```text
 pifekhat
 BRIEFINGS
-\ . 2 3 : ,
-Se \ < >,
 What About This?
 (4«( code 4) (
 *kparam_1 + 0x10
@@ -1356,7 +1332,6 @@ States in old-G vs 5G
 9 currStack = SAECOMM_Utility__CurrentStack(Sael3_CurrStack);
 10, if (SAEMM_Context[currStack].state_proc_curr != SAEMM_PROC_NULL) {
 5 5 return true;
-12; } \ nN
 2byte SAERC_GetStateErcProc(void)
 3
 4{
@@ -1508,7 +1483,6 @@ ze ();
 int err = _ (NASOT_QID, &msgPtr) j;
 ('err)
 E l ler(msgPtr);
-E E e ();
 } (true);
 }
 void ExtMsgHandler(Task_Msg_t *msgPtr) {
@@ -1553,8 +1527,6 @@ MmProc != 5GMM_PROC_NULL && MmAS == 5GMM_IN_CONNECT MmProc == 5GMM_PROC_NULL MmA
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-blackhat SS ie >... | , WE
-BRIEFINGS - —( 1 oe » X 4 |
 The State Explosion Problem
 void ExtMsgHandler(Task_Msg_t *msgPtr) 1if{
 2msg_type = msgPtr->group3-> 8 & Oxff;
@@ -1596,9 +1568,6 @@ e 5 lines of code
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ 7 y) or 4 >
-black hat WA ~™ Y y Yt
-BRIEFINGS — ° Vi \ % 4 4 ;
 How about we only analyze state variables?
 { void ExtMsgHandler(Task_Msg_t *msgPtr) {
 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1661,7 +1630,6 @@ e~9k paths
 
 ```text
 black hat ror 4 GY if
-BRIEFINGS os ly - ee, x 7
 Is It Enough?
 No
 void (Task_Msg_t *msgPtr) {
@@ -1712,8 +1680,6 @@ MmdeS == SGMM_IN_ CONNECT)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-€Q TN —— y [ve my
-| me = A ~
 blackhat Re a
 BRIEFINGS
 ; J
@@ -1740,10 +1706,7 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ fo y/ e Sf S
 piSekhat a Sal YW a
-ac a r X“ Wy J
-BRIEFINGS - —— Se, Qa 4 Z
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1767,10 +1730,7 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ fo y/ e Sf S
 piSekhat a Sal YW a
-ac a r X“ Wy J
-BRIEFINGS - —— Se, Qa 4 Z
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1794,9 +1754,7 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-: if 4 ‘ sf >
 pisekhat ee “i I
-we > if
 2 See ONN 4 y
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
@@ -1821,10 +1779,7 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ fo y/ e Sf S
 piSekhat a Sal YW a
-ac a r X“ Wy J
-BRIEFINGS - —— Se, Qa 4 Z
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1848,10 +1803,7 @@ Symbolic variables: {msgPtr, **MmProc** } State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ fo y/ e Sf S
 piSekhat a Sal YW a
-ac a r X“ Wy J
-BRIEFINGS - —— Se, Qa 4 Z
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1875,10 +1827,7 @@ Symbolic variables: {msgPtr, MmProc} State variables: {MmProc, MmAS}
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ fo y/ e Sf S
 piSekhat a Sal YW a
-ac a r X“ Wy J
-BRIEFINGS - —— Se, Qa 4 Z
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
@@ -1967,10 +1916,7 @@ Let’s wrap it up!
 ~ a NAS. - asay
 ___S_s N OO Meus x 0. SES
 Vv ! Stratum Vv !
-L I L I
-\ 7 \ 7
 Ss, Cd Seo a
-vit} y A
 #BHUSA @BlackHatEvents
 ```
 

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:15Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Lucas GEORGES_Open Sesame stack smashing your way into opening doors.pdf` (65 pages)
 
-
 ## Slide 1
 
 # **OPEN SESAME**
@@ -539,7 +538,6 @@ exfiltrated_KERNEL_A.bin
 exfiltrated_KERNEL_B.bin
 exfiltrated_MAP_TABLE.bin
 _| exfiltrated_UBIFS_A.bin
-XFF\ XFF\ KF FN FF KF FA KF KF KF FA KF
 F\XFF\ KFF\ FF KF KFF\ KFF FF FF KF
 XFFE\XFF\XFF\XFF
 ®x4000 bytes of data
@@ -547,7 +545,6 @@ XFFE\XFF\XFF\XFF
 : 0x31234
 \xO0@\x00\ xOO\ xFF\ xFF\ xFF\ XFF\ X FF KF
 XFF\XFFE\XFF\KFFN KFFA KF FA KFFA FFA KF
-F\ FF KFF\ KF FN FF KEE KF KFA KF KF
 XFF\XFFE\ KF FA XFF
 ®x4000 bytes of data
 1623
@@ -1036,7 +1033,6 @@ mep_sr
 *(int (_fastcall **) (void *, int
 while (1 )
 buf, 0xA00000, &
-if ( v40 )
 break;
 if (v4l)
 {
@@ -1061,7 +1057,6 @@ else
 - Retrofit binary ---");
 v46 = _check_upgrade_retrofit_package (
 t fastcall **) (int, char *, int,
-( (— ¢
 h.
 0);
 goto LABEL_106;
@@ -1094,7 +1089,6 @@ dler) ;
 handler, handler, 0);
 + 20),
 +3) )
-er + 12),
 0);
 SYNACKTIV
 30
@@ -1728,7 +1722,6 @@ int v8; // x
 13) int vi2; //
 14| size_t recv_length; // [sp+4h] [bp-124h] BYREF
 15| char recv_buffer[256]; // [sp+8h] [bp-120h] BYREF
-16| € ]
 17| recv_length = 1;
 18) if (al)
 19 memset (al, 0, 0x1Cu);
@@ -1738,12 +1731,9 @@ int v8; // x
 = 0x60;
 23) {
 24 v3 Desfire_Command(0, 0x23u) ;
-25 v4 = v3;
-26 if (v3)
 27 return v4;
 28 v2 = recv_length + desfire_ctx.xfer_length;
 29 memepy (&recv_buffer[recv_length], &desfire_ctx.xfer_buffer[1], desfire_ctx.xfer_length - 1);
-30 recv_length = v2 - 1;
 31 if ( desfire_ctx.xfer_buffer[0] != OxAF )
 32 break
 33 desfire_ctx.xfer_length = 1;
@@ -1767,10 +1757,7 @@ _buffer[17];
 50 *(_DWORD *)&érecv_buffer[13];
 51 *("DWORD *)&érecv_buffer[21];
 52 *("DWORD *)&érecv_buffer[25];
-53 = v9;
 54 °
-55 = v10;
-56 = vil;
 57| al[6] = vi2;
 58 @eturn-resu
 59 |}
@@ -1932,36 +1919,22 @@ Exploitation strategy
 STACK ROPCHAIN CORE_APP
 SP 00572A08 desfire_ctxt
 FF 00 00 OOsdeafire ctx DCR OxFF
-0 G0 00 a0+
 stuff s72a08 68 00 60 a0 pce
 06 09 00 o0+ poe
 66 00 00 a0+ Dep
 06 00 00 a0+ bea
-00 G0 00 00+ pcs ,
 66 00 00 o0+ Dea
 AOS 00 00 00 ad+ Dee
 recv_buffer padding . 00 09 00 Go+ pce
-- 06 00 00 o0+ bea
 06 00 00 a0+ pon.
 6 09 00 o0+ pce
 60 00 00 a08 pon
 TC UT-00 OOF Pcs
-. . 06 09 00 o0+ =
 saved_pc gadget 1 =" POP {R3,R4,R11,PC} 6e G0 60 aot = ;
-i 00 00 00 a0+ DCB le
-00 09 00 oo pce ,, - z
-©6 00 00 ao+ pep ,
 A08 06 00 00 00+ poo
-R3 00 G0 CO 0+ pep a t
-06 00 00 aos De ,
 ata:00372A08 00 00 00 00+ pcp :
-6 00 00 o0+ DcB y,
-00 00 00 aos pen :
-R4 2. 00 00 00 G0+ DcB .
-00 G0 00 00+ pce 2,
 572R08 66 00 00 00+ Den :
 06 09 00 o0+ pce
-R11 00 G0 CO 0+ pc 2
 gadget 2 = "LDR RO, [R11,#-0x15C]"
 "BL system"
 PUBLIC 55
@@ -2229,13 +2202,10 @@ else
 {
 tas |= 4u;
 MASG_logger: :1log((MASG_logger *)0x2BC, (int)"A Desfire", a3);
-v17 = 4;
 LOWORD(v12) = 4;
 ,
 if ( v57[0] )
 {
-v36 = 0;
-v37 = 0;
 do
 {
 iistring::push_back(a4, v67[v36]);
@@ -2349,6 +2319,5 @@ PUBLIC
 e
 BED = https: //www.linkedin.com/company/synacktiv
 wW https: / /twitter.com/synacktiv
-AD : i
 oy https: / /synacktiv.com
 ```

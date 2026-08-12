@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:27:52Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ron Ben Yizhak - From square root to root escalating privileges in Azure containers with Python in Excel - slash esca.pdf` (83 pages)
 
-
 ## Slide 1
 
 From square root to /root: escalating privileges in Azure containers with Python in Excel
@@ -338,7 +337,6 @@ beautifulsoup
 excel
 matplotlib
 officepyai
-ry CY Cy Ce Cy
 pandas
 ```
 
@@ -561,7 +559,6 @@ File Upload
 [rv]
 None
 Python Editor
-BI 2» & ¢)s
 1 import subprocess
 2 img = xl("A1")
 3 print(subprocess.check_output(["1ls", "-R", "/mnt/data_upload"], text=True) )
@@ -1075,7 +1072,6 @@ Agent in Microsoft
 By Sumit Chauhan, Executive Vice President, Office Product Group, Microsoft
 i2 Agent mode
 Listen to this post
-> 0:00 / 0:00 1x /
 Powered by Microsoft Copilot i/ /
 ```
 
@@ -1254,7 +1250,6 @@ Account
 Options
 10:58
 Vv
-A GY ENG ED &® joajs0r6
 ```
 
 ## Slide 78
@@ -1287,7 +1282,6 @@ Gm Excel
 ft Good morning
 Home
 gy bh pa New blank workbook
-New _ :
 Recent) Favorites Shared with Me PP Search
 e You haven't opened any workbooks recently. Click Open to browse for a workbook.
 pen

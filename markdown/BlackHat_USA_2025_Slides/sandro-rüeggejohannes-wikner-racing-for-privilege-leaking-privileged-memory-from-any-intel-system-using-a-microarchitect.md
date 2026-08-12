@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:00:40Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sandro Rüegge&Johannes Wikner_Racing for Privilege Leaking Privileged Memory From Any Intel System Using a Microarchitectural Race Condition_WP.pdf` (17 pages)
 
-
 ## Slide 1
 
 # **Branch Privilege Injection: Compromising Spectre v2 Hardware Mitigations by Exploiting Branch Predictor Race Conditions**

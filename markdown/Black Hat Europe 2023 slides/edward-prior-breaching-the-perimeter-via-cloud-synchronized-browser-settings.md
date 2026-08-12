@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:11:50Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Edward Prior_Breaching the Perimeter via Cloud Synchronized Browser Settings.pdf` (58 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -715,7 +714,6 @@ Try Again
 NTLMv2-SSP Client
 NTLMv2-SSP Username
 NTLMv2-SSP Hash
-ee #8 fe
 ```
 
 ## Slide 33
@@ -1054,7 +1052,6 @@ S aN g @ > Network > 192.168.18.128 > demoshare Search demoshare Q
 } Home
 A Gallery © test.html
 @ Roy - Personal |
-© OO BD testhtmi x |
 € > GA @ File | 192.168.18.128/d
 Test Share Drive Exfiltration
 Q tpy © Default levels ¥ @7
@@ -1173,7 +1170,6 @@ C2 Import favorites
 @ New tat
 SE Microsoft Start
 Dal ~ Recent
-‘ Q Sea 6 (S /manager
 Yesterday - Friday, No
 Microsoft account
 1 saved passwords

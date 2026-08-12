@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:10:59Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jiří Vinopal_BTR Reforged Weaponizing Defender's Remediation Driver as a Kernel Operation Primitive .pdf` (49 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -97,7 +96,6 @@ ONE-SHOT EXECUTION MODEL
 
 ```text
 ONE-SHOT EXECUTION MODEL
-— “4 “Y 4 a
 —/
 EXECUTE
 LOAD TRANSACTIONS SELF-UNLOAD CONFIGURATION
@@ -217,8 +215,6 @@ Item Header (16 Bytes) ————— — - Item Data (Variable)
 4
 0x08 4 _HeaderCRC
 4 ~CRC32 of Data
-= a 4
-atl -— [= or
 Delete File Delete Directory Move / Quarantine Registry Operations black hat
 USA
 2026
@@ -653,7 +649,6 @@ BTR REFORGED | JIŘÍ VINOPAL | CHECK POINT RESEARCH
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-on , fe a
 a
 a arte sae: --* ; ¢ if 7 black hat
 BTR REFORGED | JIRI VINOPAL |. CHECK POINT RESEARCH : A ©2846

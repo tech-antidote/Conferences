@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:16Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Catherine Lyle_Why Cyber Insurance Should be Your SOC's New Best Friend.pdf` (26 pages)
 
-
 ## Slide 1
 
 #### Why Cyber Insurance Should be Your SOC’s New Best Friend
@@ -115,7 +114,6 @@ bisek hat
 USA 2023
 The professionalization of TAs
 THEN Wearehere <wearehere@protonmail.com> 5/20/16 ~ 7,
-to me |
 man i was waithing you to provide me a bitcoin address 4 hour.but you didnt if you can i really send
 you money. today i buy a samsung galaxy tab 2 to my child.and love moshcino mounted.and tommy
 hilfger jean and shirt.and goes to steak house for dinner.so today i lost 1000 usd :) so money

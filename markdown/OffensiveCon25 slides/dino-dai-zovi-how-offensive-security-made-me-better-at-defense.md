@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:22:43Z"
 **Conference:** OffensiveCon 2025  
 **Source:** `OffensiveCon25 slides/Dino Dai Zovi_How Offensive Security Made Me Better at Defense.pdf` (56 pages)
 
-
 ## Slide 1
 
 How Offensive Security Made Me Better at Defense
@@ -279,29 +278,6 @@ applications)
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Zero-Day Exploitation of Popular End-User
-Technologies in Nim 2024 |
-Net change
-= 2
-Ww +6
-Ss
-&3
-@ Safari | -8
-2 |
-iOS ios -7
-aT
-1 ;
-| |
-Yeo’ 7
-7
-a .
-m 1
-& Firefox | +1
-```
-
 ## Slide 25
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -324,7 +300,6 @@ Oo
 oP
 %@ Og
 YY SY’
-PL LY F oss
 6
 NZ WY’
 PoP of
@@ -338,8 +313,6 @@ N
 00
 =
 00
-° eS wre? PM MP
-” ” Vv Vv
 First Publicly Reported Exploitation
 12000
 10000
@@ -350,8 +323,6 @@ First Publicly Reported Exploitation
 Proof-of-Concept Exploits
 alll
 <\
-OP OFS? SP Y SP
-ae ~ “or os
 First Exploit Published
 ‘S) VulnCheck
 ```
@@ -442,8 +413,6 @@ Safe WALLET) ae @ a
 Base
 Setup Appearance Security Notifications Modules Safe Apps Data Environment variables
 Fe) base:OxF7aQ...9Cf5
-PH $2 >
-oo ALS ;
 sll Nal ed et Members Signers
 Rais wenkacton Signers have full control over the account, they can propose, sign and execute
 transactions, as well as reject them.
@@ -573,25 +542,11 @@ put
 
 ```text
 PDF Lures GitHub Repositories
-‘ \ ‘ \
-I 1 1 1
-l 1 1 1
-| 1 : | 1 , >
-ns eee ae nn ee oss
-I : . 1 1 : : 1
-t : PDF: f ' i J S: ! Default Response
-;§ ooo ; ss |
 1 1
 | Job Description H | JavaScript Repo '
-! 1 1 i} ‘
 mvo
-I 1 1 1
-' 1 1 1
-: | j ; | ; C2 Server
 ! rrr een ' ‘ems '
 : PDF: —-————> | : PY: |
-a ee a
-. i} 1
 1 Question Sheet v__ Python Repo | Payload
 1. Targets are sent two 2. The repositories make 3. The C2 server is
 PDFs over LinkedIn, one of use of multiple external configured to send benign
@@ -682,8 +637,6 @@ transactionResponse: null
 }
 else 1 = await c.executeTransaction(e, t);
 {
-let sd Cy
-let se e;
 let st iter
 let wa ["Oxldb92e2eebc8e0c075a02bea49a2935bcd2dfcf4",
 "0x19c6876e978d9f128147439ac4cd9ea2582cd141"];
@@ -693,8 +646,6 @@ let ta "0x96221423681a6d52e184d440a8efcebb105c7242";
 let da
 "0Oxa9059cbb000000000000000000000000bdd077f65lebe7£7b3cel6fe5f2b025be296951600000000000
 00000000000000000000000000000000000000000000000000000";
-let op ,
-let vl 0;
 ```
 
 ## Slide 41

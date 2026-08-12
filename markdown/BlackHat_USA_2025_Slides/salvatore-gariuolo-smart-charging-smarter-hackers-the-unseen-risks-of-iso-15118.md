@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:00:32Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Salvatore Gariuolo_Smart Charging, Smarter Hackers The Unseen Risks of ISO 15118.pdf` (20 pages)
 
-
 ## Slide 1
 
 # Smart Charging, Smarter Hackers: The Unseen Risks of ISO 15118

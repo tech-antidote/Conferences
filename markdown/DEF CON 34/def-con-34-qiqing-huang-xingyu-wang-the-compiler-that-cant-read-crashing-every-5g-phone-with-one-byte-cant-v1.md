@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:26:14Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Qiqing Huang, Xingyu Wang - The Compiler That Can't Read Crashing Every 5G Phone With One Byte - Cant v1.pdf` (34 pages)
 
-
 ## Slide 1
 
 ### **The Compiler That Can't Read**

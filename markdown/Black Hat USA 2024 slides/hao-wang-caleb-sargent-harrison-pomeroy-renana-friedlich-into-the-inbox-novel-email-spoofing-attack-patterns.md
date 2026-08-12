@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:15Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Hao Wang & Caleb Sargent & Harrison Pomeroy & Renana Friedlich_Into the Inbox Novel Email Spoofing Attack Patterns.pdf` (73 pages)
 
-
 ## Slide 1
 
 Into the Inbox: Novel Email Spoofing Attack Patterns
@@ -31,7 +30,6 @@ Speakers: Caleb Sargent & Hao Wang
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-SE / -
 blackhat +>
 USA 2024
 AUGUST 7-8, 2024
@@ -177,8 +175,6 @@ We hope this email finds you well. It has come to our attention that the exterio
 The shade of black used on your house is not correct and will need to be repainted to match the approved color. This is the only aspect of your house that requires repainting
 Please ensure that the shade of black is corrected within 30 days from the date of this notice. Example approved shades can be found attached.
 2 attachments - Scanned by Gmail ©
-4 1 n
-T T T
 Warm True Cool
 Black Black Blac!
 ```
@@ -297,7 +293,6 @@ USA 2024
 The players
 BreVO &sgo daddy’
 © SPARK Ast
-_— TWILI (e) ; ~ @ : t 7
 “" SendGrid mailtrap astmai
 a
 ```
@@ -359,7 +354,6 @@ Reference: https://serverfault.com/questions/723911/setting-up-an-spf-record-for
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ | : ; —
 black hat
 <<>> DiG 9.18.18-Oubuntu2.1-Ubuntu <<>> spf.websitewelcome.com txt
 global options: +cmd
@@ -587,12 +581,10 @@ JS m
 3
 6; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t:
 ~: X-Feedback- Id; bh=QK/yDOH17} iptNkDjFgtstv ‘bLuMrPXB12LabiZx9xry
-AA ; S o c 4 f\ sUj ade erZ Zk8pFI
 2?
 nder: S 6.9)
 b=tKXbD8&q69J syW4jWISHIOBO7VsIEk6efdIgrwQpz3vR O80zarimMp/gj21w u2PMTSG3x1VL1IrTONP1b9af+GHt
 DKIM-Signature: a 56 \ZZaN)
-Mes sa Se
 ```
 
 ## Slide 32
@@ -983,7 +975,6 @@ MAIL FROM: <alice@a.com> \r\n EHLO a.com \r\n RCPT TO: <bob@b.com> \r\n MAIL FRO
 bisek hat
 USA 2024
 Deliver spoofed emails to vulnerable email gateway users
-GX New Message —- © x
 Smuggled Email
 06 admin@iowa.gov
 To
@@ -1103,9 +1094,7 @@ Internal
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-: . A .
 é ae
-‘2 . — me
 blackhat ~© -
 USA 2024
 DNS Data Analytics

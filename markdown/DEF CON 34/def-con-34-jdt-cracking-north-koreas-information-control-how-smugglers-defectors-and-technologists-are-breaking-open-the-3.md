@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:23:00Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - JDT - Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Locked-D.pdf` (47 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -111,7 +110,6 @@ OREA
 Publicly routable IP addresses for the entire nation.
 175.45.176.0/22 - less than a single aideiee company. |
 SSF
-- = |
 ```
 
 ## Slide 11
@@ -753,7 +751,6 @@ traceviewer_demo.mp4
 [= rmstowe risa oon tener cemnetn =X F
 wets =
 Qe
-ez ? :
 a
 J
 .
@@ -854,7 +851,6 @@ HE Ul
 }
 FuN_10008010(
 FUN_10008290 (r
-1 f= 0) && (DAT_
 plVar7 T 1014afcs;
 uVaré = uVarlo;
 uVar9 = uVarl0;
@@ -890,23 +886,15 @@ Hana IME:
 The hidden feature that no one asked for...
 avivvaeve vu wii
 oO 10155£40 Of ff 00 RegRecord
-00 00 00
-ff ff 02...
 10155f40 Of ff 00 00 hana_dwordFFo Fh marker _ 10
 10155f44 00 00 ff ff hana_dwordFFFFOO00h marker hi
 10155f48 62 00 60 80 ff hana_qwordFFFFFFFFE0000002h hKey
-ff ff ff
 10155£50 53 4£ 46 54 57 char[256] “SOFTWARE\\Microsoft\\... keyPath
-41 52 45 Se 4d
-69 63 72 GE 73.0
 10156050 45 6e 61 62 6c char[128] “EnableLUA” valueName
-65 dc 55 41 00
-60 06 60 00 00...
 ase
 1015€0d0 04 00 60 00 hana_dwordéh dataSize
 101560d4 04 00 00 00 hana_dword4h dataType
 ot 101560d8 00 00 00 00 00 hana_byt...””" data
-00 00 00 00 00
 ```
 
 ## Slide 28

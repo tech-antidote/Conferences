@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:55Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Vanhoef-Sweet-Dreams-Abusing-Sleep-Mode-to-Break-Wi-Fi-Encryption-and-Disrupt-WPA23-Networks.pdf` (43 pages)
 
-
 ## Slide 1
 
 # **_Sweet Dreams:_ Abusing Sleep Mode to Break Wi-Fi Encryption & Disrupt WPA2/3 Networks**
@@ -80,7 +79,6 @@ New attack 1: leaking frames
 ```text
 Attack 1: leaking frames AP (Vulnerable)
 Client || Attacker '| Kernel |} Daemon |:
-ee Se |
 ---- | lilies Connection ------7-7- aii |
 ```
 
@@ -691,7 +689,6 @@ Client isolation: Ethernet layer
 ```text
 MacStealer demo
 Open + @
-sae = - « x
 README.md client. cont
 1# Don't change this line, other MacStealer won't work
 2ctrl_interface=wpaspy ctrl

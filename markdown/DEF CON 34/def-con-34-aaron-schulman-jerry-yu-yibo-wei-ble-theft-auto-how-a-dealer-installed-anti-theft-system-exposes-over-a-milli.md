@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:11:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aaron Schulman, Jerry Yu, Yibo Wei - BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft - BTA.pdf` (54 pages)
 
-
 ## Slide 1
 
 Nishant
@@ -41,7 +40,6 @@ Nishant
 eis ot
 «+ Bhaskar
 eax re Sumanth
-Ba fe BZ Rao
 i
 y.
 Fd
@@ -181,24 +179,6 @@ _Science only follows a straight line in retrospect_ ™
 # 2018  Finding BLE-based skimmers in gas
 
 pumps
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ 2018: Finding BLE-based skimmers in gas
-) ez g
-Jealetas .
-& ts Py
-@ @ T )) )
-e ee °°?
-> xa pero 9 e
--_ - - a Oi
-gre) er oe. r 36
-2.5 =
-e ®e
-gz ~
-o&
-```
 
 ## Slide 9
 
@@ -424,7 +404,6 @@ STOP
 a i
 es
 STARTER
-i 2® be
 ENGINE LIGHTS
 T
 IN-VEHICLE
@@ -508,7 +487,6 @@ a | eee { eee ee eeeebbbebbeveetuteeeeeeeeeeeeeeeeesstitttttttseeeeeeeeeeeees
 a
 oO
 Disabled
-\ a >
 } X) Doubt
 rejected
 Lower Privilege

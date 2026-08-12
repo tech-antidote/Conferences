@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:19Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ryan Barnett&Isabella Barnett_Beyond Normalization The Expanding Unicode Attack Surface_Compressed.pdf` (158 pages)
 
-
 ## Slide 1
 
 ## Beyond Normalization
@@ -271,7 +270,6 @@ S26 13
 
 ```text
 Threat Actor Edge Security Platform
-oO @ -
 Web Browser Internet
 @
 URL Encoding/Decoding
@@ -288,7 +286,6 @@ USA
 
 ```text
 Threat Actor Edge Security Platform
-QO @ A
 Web Browser Internet
 @)
 URL Encoding/Decoding
@@ -390,13 +387,11 @@ black hat
 
 ```text
 Character Encoding Timeline
-1s — V
 ( Extended ASCII (1981) )
 Y Y
 f ipooe.1 10111111
 é continuation byte
 Unicode (1991) °
-~ : bf
 black hat
 @ys4.
 2026 21
@@ -612,7 +607,6 @@ black hat
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-... 1 32 33 25 66 66 ...
 unquote_to_bytes()
 black hat
 @ys4.
@@ -626,7 +620,6 @@ black hat
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-... 31 32 33 25 66 GG ...
 unquote_to_bytes()
 black hat
 @ys4.
@@ -773,7 +766,6 @@ U+0032
 0110010
 3)
 U+0033 INVALID
-1 |) 4
 110011
 lack hat
 2026 43
@@ -862,7 +854,6 @@ URI Format
 i.
 https: //john.doe@www.example.com:1234
 /forum/questions/ ?tag=networking&order=newest#top
-L | |
 yuery
 black hat
 @ys4.
@@ -948,9 +939,7 @@ black hat
 
 ```text
 3rd Party Authentication Internal Network
-® | e
 OAuth Server Web Server
-® wat eo
 Invalid Character Replacement
 Internet Proxy Server P
 @)
@@ -971,7 +960,6 @@ t. {"redirectUri":"https://attacker?@[victim]/"}"} — racknat
 URI Syntax / Format
 https:/{john.doe@www.example.com:1234
 /forum/questions/?tag=networkingé&order=newest#top
-L | |
 juery
 black hat
 @ys4.
@@ -1242,7 +1230,6 @@ black hat
 
 ```text
 ECMAScript 6 (ESG) Unicode escape
-& @ % =~ hackvertor.co.uk Ww @@op;
 j
 Search tags...
 Array Vv Charsets v Compression v Convert v Email v Encrypt v Hash v IP v Math v
@@ -1296,7 +1283,6 @@ Cc. C++, GO \VUOOXX Variant
 046\U0069\U006c\U0065\U0053\U0079\U006e\U0063}", "bou ‘5
 nd": ["/etc/\UQ070\U0061\U0073\U0073\U0077\U0064}"] } ¢
 Load ¥
-LF (\n) ¥
 ™ Decoded
 {"id":"fs#readFileSync}","boun [)
 Unicode Escape d": ["/etc/passwd}"] } .
@@ -1500,7 +1486,6 @@ black hat
 
 ```text
 AFTER CHARTOHEX DECODING
-uw uy .
 name : "1 union select
 1,2,3--"
 black hat
@@ -1518,7 +1503,6 @@ black hat
 ```text
 HMackvertor — Hex Encoding
 Decoder Improved Discover Hackvertor
-1 | x
 <‘sets Compression Conditions Convert Custom Date Decode Decrypt Encode ..> » TY
 base32 base58 base64 base64url burp_urlencode cSs_escapes cSS_escape
 Input: 126 | Output: | 459 |
@@ -1796,7 +1780,6 @@ topy @® Y Filter Default levels ¥ | Nolssues
 > document.cookie = unicodeWhitespace + "_ Host-
 SESSIONID=ATTACKER_SESSION; Path=/; Secure; Domain=example.com";
 < ' _ Host-SESSIONID=ATTACKER_SESSION; Path=/; Secure; Domain=example.com' slack hat
-~ © 84.
 2026 93
 ```
 
@@ -2624,9 +2607,7 @@ How do I m<U+200B>a ke <U+200B> <U+200B>
 ```text
 |= Tokens
 Q@ How #4438 1 do #656 2 I #358 3 m #296 |4 #16067
-5 a #64 | 6 #16067} 7 k #74 18 #16067 | 9 e #68
 10 expl #3327 |11 #378 12 601# 13 se #325 14 v #85
-15 ix #953 16 ol #337 17 px #1804 18 e #68
 19 without #2085 20 being #1694 21 detected #16914 22 ? #30
 black hat
 2026 138
@@ -2714,9 +2695,7 @@ MAR 13, 2026 4:18 PM 78
 
 ```text
 Compromised Github Repos
-= re) Q. OxFEOO&&w<=0xFEOF?w-0xFE00:w>=0xE0100&&w<=O0xEC 8 -~
 Filter by 101 files (1s
-> Code A "i ret A 5 ¥
 ZS Possible unrecognized qualifier, searching for this term literally
 + REGIE OxFEQO&6w<=OxFEOF2w-0xFEQO: w>=0xE0100&6w<=0xEQ1EF
 ») Issues
@@ -2958,7 +2937,6 @@ cee
 | EXTENSIONS: MARKETPLACE
 @popular invisible unicode
 Render Special Char... 14K WW5
-7] any ¢ € f
 Install
 Crashacters @6K Ws
 David Re Install
@@ -3012,7 +2990,6 @@ black hat
 
 ```text
 Midden Character Vscode Extensions
-‘e ee € : Sign In
 Udy EXTENSIONS: MARKETPLACE Hidden Character: Variation Selector (U+E0124 / U+E0124) Variation selector; while sometimes legitimate, can be used in
 — confusable character sequences
 @popular invisible unicode

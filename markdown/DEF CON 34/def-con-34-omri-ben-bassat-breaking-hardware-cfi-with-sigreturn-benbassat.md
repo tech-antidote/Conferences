@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:48Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Omri Ben Bassat - Breaking Hardware CFI with Sigreturn - BENBASSAT.pdf` (51 pages)
 
-
 ## Slide 1
 
 # **Breaking Hardware CFI with Sigreturn**
@@ -807,7 +806,6 @@ pstate.btype == 0b00
 
 ```text
 & Linus Torvalds
-ind t y@k and t I 1 t8
 | have forwarded the original email to the arm64 maintainers, also cc’d here.
 But
 On Mon, 26 Jan
@@ -837,7 +835,6 @@ Omri Ben-Bassat _<u>beta_b0t@yahoo.com</u>_
 ```text
 Omri Ben-Bassat
 & Linus Torvalds
-na it y . i } t t 1
 I have for
 yarded the original email to the arm64 maintainers, also cc’d here.
 But

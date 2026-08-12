@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:27:59Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Chris Alladoum_Tips & Tricks for better debugging with WinDbg.pdf` (25 pages)
 
-
 ## Slide 1
 
 _Tips & Tricks for Better Debugging with WinDbg_

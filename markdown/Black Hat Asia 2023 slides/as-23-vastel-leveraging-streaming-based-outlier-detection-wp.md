@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:51Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Vastel-Leveraging-Streaming-Based-Outlier-Detection-wp.pdf` (14 pages)
 
-
 ## Slide 1
 
 ## Leveraging Streaming-Based Outlier Detection and Sliceline to Stop Heavily Distributed Bot Attacks

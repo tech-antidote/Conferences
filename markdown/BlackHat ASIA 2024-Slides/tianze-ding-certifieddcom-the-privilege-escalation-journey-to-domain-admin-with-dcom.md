@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:02Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tianze Ding-CertifiedDCOM The Privilege Escalation Journey to Domain Admin with DCOM.pdf` (51 pages)
 
-
 ## Slide 1
 
 ## CertifiedDCOM The Privilege Escalation Journey to Domain Admin with DCOM

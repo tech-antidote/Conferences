@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:54:11Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Christopher Domas_Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries.pdf` (261 pages)
 
-
 ## Slide 1
 
 ghosts in the machine check domas / @xoreaxeaxeax / Black Hat 2025 ｛
@@ -35,8 +34,6 @@ ghosts In the machine check
 { domas / @xoreaxeaxeax / Black Hat 2025
 S.
 *
-aaa Aa °
-= ° «
 ```
 
 ## Slide 2
@@ -2366,7 +2363,6 @@ mcQ_mask
 (00000403) :
 (c0010044):
 eo
-X XX XX
 Nm oO
 on
 a
@@ -2378,7 +2374,6 @@ ar
 Nr
 Y)
 ®@ @
-8 4 @
 XXXXXXX XX
 XXXXXXX XX
 QADAMA A
@@ -2389,7 +2384,6 @@ Q)
 0)
 0)
 fec)
-x XXX XX
 XX = XXXXXX
 (b60000000000083b )
 (
@@ -2527,7 +2521,6 @@ encrypted registered
 AppArmor shal policy hashing enabled
 y type
 gged
-Te ONe ee ee
 USB device strings: Mfr=@, Product=@, SerialNumber=0
 USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
 USB device strings: Mfr=@, Product=@, SerialNumber=0
@@ -2616,7 +2609,6 @@ mc4_mask
 (c0010048) :
 XXXXXXXXKXXXXXXXKXKXKXXKXKXKXKXKXXKXKXKXKXXXX,
 ( f£fffffff)
-X XX XXX
 XXXXXX XXXXXXX
 (b7@000110003081b)
 ( fdfc000cfc)
@@ -3891,12 +3883,10 @@ e42d8000 - - 1800
 €42£0000 -
 428000 - pa
 €4300000 ttt tts
-0 4 8 c 10 14 18 tc 20
 - 2000
 - 1800
 : - 1600
 ~ 1400
-1 18 0 2B 0 3% 40
 9480000 -
 9488000 - - 2200
 9490000 - 000
@@ -3907,7 +3897,6 @@ e42d8000 - - 1800
 9468000 - - 1400
 — =
 94000009 ts
-0 4 8 c 10 14 18 tc 20
 €9680000 -
 9688000 - - 2400
 9690000 - - 2200
@@ -3917,7 +3906,6 @@ e42d8000 - - 1800
 9660000 - =a ~ 1600
 e96b8000- " . - 1400
 29600007 1 1 1
-0 4 8 c 10 14 18 ic 2
 €940000 -
 - 2000
 €948000 -
@@ -3931,7 +3919,6 @@ e96b8000- " . - 1400
 - 1400
 9278000 -
 9800009 1 1 pn nn
-0 4 8 c 10 14 18 tc 2
 9640000 - .
 e9e48000- * po
 e9e50000- * + 2200
@@ -3942,7 +3929,6 @@ e9e50000- * + 2200
 9270000 - . ~ 1600
 €9¢78000 - = . - 1400
 €9¢80000 ttn ns
-@ 4 8 c 10 14 18 tc 20
 20440000 - =
 20448000 - - 2500
 20450000 -
@@ -3953,7 +3939,6 @@ e9e50000- * + 2200
 20470000 -
 20478000 - pe
 204800007 tt ts
-@ 4 8 c 10 14 18 tc @
 eab80000 -
 eab88000 - pes
 eab90000 - - 1700
@@ -3964,7 +3949,6 @@ eaba8000 - - 1500
 eabb0000 - L oeey
 ccbb80)) ——
 0600000 tt ttn 7 80
-@ 4 8 c 10 14 18 1c 20
 6200000 -
 6208000 - pes
 eb210000 - Ley
@@ -3974,7 +3958,6 @@ b220000 - 808)
 6230000 -
 6238000 - == ~ 1400
 eb2400007 tt
-@ 4 8 c 10 14 18 1c 20
 eb400000 -
 eb408000 - - 2400
 eb410000 - Ly
@@ -3994,7 +3977,6 @@ eb7e8000 - ——e
 eb7£0000 - hence
 eb7£8000 - - 1400
 eb8000005 kt
-@ 4 8 c 10 14 18 tc 20
 ebc00000 -
 ebc08000 - Lewy
 ebc10000 - z
@@ -4004,7 +3986,6 @@ ebc28000 - : - 1600
 ebc 30000 - 7
 ebc38000 - 7 1400
 2bc400007 tt ts
-@ 4 8 c 10 14 18 tc 2
 ec0c0000 -
 ec0c8000 - | 1700
 ec0d0000 -
@@ -4014,7 +3995,6 @@ ec0e0000 -
 ec0£0000 - = 1400
 ec0£8000 -
 , as
-@ 4 8 c 10 14 18 tc 20
 ee£40000 -
 ef 48000 -
 eef50000 - ij 2588)
@@ -4024,7 +4004,6 @@ ee £68000 -
 ec£70000 - Leng
 ee£78000 -
 ecf800007 1 1 te tt
-@ 4 8 c 10 14 18 tc 2
 £60000 -
 £60800 - | 2000
 £61000 -
@@ -4127,10 +4106,7 @@ building a fuse
 movgq (Oxf8013c00), %rax
 Prax
 f1
-b3 | 67 | 8b
 af
-1c | 13} 92} Se} e7 | 98} 56 | Sf
-al | 82} Of
 B0°9E TOSs
 VOIE TOSS
 OOVE TOSS

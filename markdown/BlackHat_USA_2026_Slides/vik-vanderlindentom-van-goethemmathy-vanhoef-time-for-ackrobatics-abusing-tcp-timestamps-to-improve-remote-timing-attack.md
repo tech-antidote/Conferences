@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:16:53Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Vik Vanderlinden&Tom Van Goethem&Mathy Vanhoef_Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks.pdf` (56 pages)
 
-
 ## Slide 1
 
 Time for A C Krobatics
@@ -474,13 +473,10 @@ Send TCP Timestamps **less often** (e.g. [11]) Only hinders the attack slightly
 Defenses
 r
 ro)
-r - a
 B fo.) fo)
-fl f f
 Proportion of TCP connections
 fo}
 N
-0.0 T T
 10° 10? 10? 10
 Estimated max unACKed packets in TCP connection
 Limited overhead: 20 entries » 95% of connections

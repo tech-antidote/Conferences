@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:21:52Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nick Merker & Stephen Reynolds_Protecting the CISO A Legal Journey.pdf` (33 pages)
 
-
 ## Slide 1
 
 PROTECTING THE CISO: A LEGAL JOURNEY
@@ -84,7 +83,6 @@ CLERK, U.S. DISTRICT COURT
 United States of America SAN FRANCISCO
 Vv.
 JOSEPH SULLIVAN Case No. 3-20-71168 JCS
-wa a aS a
 Defendant(s)
 CRIMINAL COMPLAINT
 I, the complainant in this case, state that the following is true to the best of my knowledge and belief.
@@ -173,7 +171,6 @@ Code Section Offense Description
 18 U.S.C. § 1505 Count One: Obstruction of Justice
 Max. Penalties: 5 years in prison; $250,000 fine; 3 years of supervised
 release; $100 special assessment; restitution; forfeiture
-18 U.S.C. §4
 Count Two: Misprision of a Felony
 Max. Penalties: 3 years in prison; $250,000 fine; 1 year of supervised
 release; $100 special assessment; restitution; forfeiture
@@ -509,7 +506,6 @@ SECURITIES AND EXCHANGE
 COMMISSION,
 SUMMARY
 v. 1. Defendant Jun Ying (“Ying”) committed secunties fraud by engaging m
-JUN YING, ; _ ; ; ; - ;
 illegal insider trading. After bemg entrusted with matenal, nonpublic mformation
 about a massive cyber-imtrusion and data breach suffered by his employer, Equifax
 Inc. (“Equifax” or “the company”), Ying exercised all lis vested Equifax stock
@@ -565,7 +561,6 @@ Payne told the Committee
 employees who advised him he w;
 When he pressed for more inform:
 provide any documentation for the
-24 = -
 Figure 9: Former CEO Richard Smith Testifies before Congress (Oct. 3, 2017)
 lassification: General
 ```
@@ -613,12 +608,10 @@ IN THE UNITED STATES DISTRICT COURT
 FOR THE MIDDLE DISTRICT OF NORTH CAROLINA
 First, according to the Complaint, from March 22, 2021, through March 26, 2021,
 ALLIA|
-DALLA : : : : : :
 TEXAS despite knowing that it was experiencing service outages due to a ransomware attack, (EGE
 behalf o
 situated.
 No. 14 describing an unresolved ransomware attack as a mundane “technical issue” either pleads an
-the sen . - . . La . .
 outright false representation or at the very least the concealment of a material fact to hide from
 ECLG caused
 Plaintiffs the true nature and severity of the situation surrounding the protection of their data.

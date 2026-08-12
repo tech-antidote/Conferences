@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:20Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ben Gardiner_Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch.pdf` (43 pages)
 
-
 ## Slide 1
 
 Tractor ECU RE: When a "Noise-Triggered” Recall is Also a Security Patch
@@ -378,8 +377,6 @@ Automated QOBinDiff Results
 aii AQAA
 ITEC 1 M0
 eT
-Ti aT i
-| — ll
 I
 ```
 
@@ -416,7 +413,6 @@ sub_EBBB47 : —_
 _ Read Read (Polling)
 (Main State Machine) r :
 Handles: RX, Idle, Timeout a Fi Main Thread
-| =r i ner sub_EEB989 i :
 eal jase r : 7
 i H Read Table R
 Via sub EC8@00 Byte Received Calculate Offset (check LAMP ON OFF ea a le Rows
@@ -431,7 +427,6 @@ sub_F@96F9
 Oo
 : i aos and periodic post-
 Read Data Write Byte | | processing)
-i H Uo ou |
 Hardware Registers Call
 (Pass PayloadPtr: SP+0x17,
 Len: SP+0x13)
@@ -555,7 +550,6 @@ CAN_RX
 ppUskeene lg INOS: GYEee MEE 89¢234a7200e6019800a08c00c00da7a9a10: 3462 89c234a720
 CAN 2.0 decode » CAN 2.0: Payload
 5277400 ps © +16277500 us = +16277600 us © +16277700 us. ~©= +16277800us ~=s: + 162 +16278001
-I | l I | | I ! | I I | I | | | | | | | I ICAN Payload) |
 ```
 
 ## Slide 36

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:00:10Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maxime Rossi Bellom & Raphael Neveu & Damiano Melotti & Gabrielle Viala_Attacking Samsung Galaxy A Boot Chain, and Beyond_Compressed.pdf` (87 pages)
 
-
 ## Slide 1
 
 # **Attacking Samsung Galaxy A* Boot Chain, and Beyond**
@@ -447,8 +446,6 @@ Step 2
 Reading The Jpeg
 Freeliot
 head oo \
-Sy Pd Siw
-Se! GX x ox
 At) C
 aie Z aed
 Free JPEG
@@ -471,7 +468,6 @@ Step 2
 Reading The Jpeg
 Freeliot
 head mo
-aiz Md iz
 Free JPEG
 Chunk Buffer Free Free
 Chunk 26
@@ -493,7 +489,6 @@ Step 2
 Reading The Jpeg
 Freeliot
 head oo
-se ox ox &%
 QZ OZ Qajiz
 Free JPEG
 Chunk Buffer Free Free
@@ -543,7 +538,6 @@ point to the stack
 Freelist
 ne Sia 7 9// Ss) S48
 Ay? 72 Shelicode Ue! Vg
-az a2; az
 Free JPEG
 Chunk Buf fer Fake Free Free
 Chunk Chunk 29
@@ -752,10 +746,8 @@ PIT Flash Memory GPT
 md5hdr eee LIL md5hde
 PIT default |, LLL
 vbmeta_vendor v an | Me A vometa_vendor
-a Jf f
 up_param “ woo. 7 up_param
 a md5hde = yA /
-x y, ‘ J m
 “ vbmeta_vendor /* # ER
 J
 J
@@ -777,10 +769,8 @@ PIT Flash Memory GPT
 md5hdr eee LIL md5hde
 PIT default |, LLL
 vbmeta_vendor v 7 M A vometa_vendor
-x a Jf J
 up_param “ New aw up_param
 Ds up_pacam AA
-x x r )
 “ vbmeta_vendor /* ff
 f
 P
@@ -808,7 +798,6 @@ up_param New i Thy of / up_param
 up_param ff
 fx
 rs as
-WA Fa ‘
 [ NewPirT Fo 4
 P
 New PIT if
@@ -1323,7 +1312,6 @@ Application Key Cert
 Android Keystore Key Cert
 Sign
 GAK Cert
-1 Si gn
 ROOT Certificate S Self
 Signed
 79

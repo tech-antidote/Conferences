@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:13:56Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Oleksandr Mirosh_Transformers Dark Side of the Type - Weaponizing the Conversion Layer.pdf` (53 pages)
 
-
 ## Slide 1
 
 TRANSFORMERS DARK SIDE

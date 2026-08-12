@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:25:02Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Luke Jenkins_GRU’s toolkit A deep dive into the disruptive arsenal .pdf` (28 pages)
 
-
 ## Slide 1
 
 # GRU’s toolkit
@@ -191,7 +190,6 @@ while ( SizeOfImage );
 }
 }
 }
-n = n r-> H
 for ( i = (_BYTE «)(\pBuffer + SizeOfUninitializedData + offsetStartPayload);
 (unsigned __int64)i <= lpBuffer + offsetStartPayload + SizeOfUninitializedData + dwLenPayload;
 ++i )
@@ -383,7 +381,6 @@ WipeSectorBlock = (struct_physical drive *)WipeSectorBlock->next;// Get the next
 }
 while ( WipeSectorSlock I= this->WipeSectorBlock );
 WaitForMultipleObjects(dwNumberOfThreads, arraylThreads, 1, OxPFFFFPFF);// Wait for all threads to complete
-for ( i = 0; i < dwNumberOfThreads; ++i )
 Closeflandle(arraylThreads[i)}); // Close Handles to all the threads
 }
 return dwNumberOfThreads != 0;

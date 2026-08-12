@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:00Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Richard Harang_Practical LLM Security Takeaways From a Year in the Trenches.pdf` (94 pages)
 
-
 ## Slide 1
 
 ## **Practical LLM Security: Takeaways From a Year in the Trenches** Rich Harang, Principal Security Architect (AI/ML) | August 7, 2024
@@ -161,7 +160,6 @@ Background: How LLMs work under the hood
 Probability of next Token
 LLMs are nothing but “next token predictors’
 “This was the work”
-T T T T T
 0.00 0.02 0.04 0.06 0.08 0.10
 Probability
 NVIDIA.
@@ -182,7 +180,6 @@ LLMs are nothing but “next token predictors”
 Cc
 ak)
 “This was the work of” © with 4
-T T T T T
 0.00 0.05 0.10 0.15 0.20 0.25
 Probability
 NVIDIA.
@@ -342,25 +339,19 @@ This is where the trouble starts.
 ```text
 A more realistic LLM application architecture
 Application
-— a _—
-— 6 O=
 AuthN/Auth2 service Prompt Shtabase ce SY t
 i Inference
 Frontend Plugins T=])¢d
 ae 0C=)
 Document store Ranking/relevance
-| | -
-<4 Se sO
 ' Frontend '
 1 <—
 Plugin collection
 | .
 Index service
 determination
-. a .
 API endpoint Guardrails Prompt selection
 =; 1
-| —> ——-
 == Information retrieval “plugin”
 and orchestration
 LLM/Plugin response Plugin request validation
@@ -436,15 +427,12 @@ used.
 ```text
 A more realistic LLM application architecture
 Application | K
-= [=] ~ ae a ae “—T
 = OB] ia Servos
-oe. 7 ~~ “) N = Se
 SO how | is this going. to get us into trouble?|
 | : | API endpoint Guardrails Prompt selectio LLM/Plugim response Plugin request validatio
 ' and o ‘chestratior - ‘3 narbing and dispatch
 Large Language Model
 sation history COV
-ne ee ee ee ee een
 m
 so
 Logging and monitoring
@@ -499,7 +487,6 @@ Frontend Plugins
 Frontend
 User device
 AuthNAuthz service
-i So _ C) ee emanate
 AP! endpoint
 Trust and/or security boundaries
 -
@@ -536,7 +523,6 @@ Frontend Plugins
 Frontend
 User device
 AuthNAuthz service
-I So _ C) ee emanate
 AP! endpoint
 -
 Guardrails
@@ -569,7 +555,6 @@ Frontend Plugins
 Frontend
 User device
 AuthNAuthz service
-I So _ C) ee emanate
 AP! endpoint
 Trust and/or security boundaries
 -
@@ -637,9 +622,7 @@ Trust and/or security boundaries
 External Sources
 =) oft
 AuthNAuthz service Prompt database
-! . >) —o
 @ Embedding mode!
-<>} tO ee OO —>
 Frontend . -
 | <—
 a
@@ -758,7 +741,6 @@ and dispatch
 IMPROPERLY
 Tes PERMISSIONED!
 * APS) | DOCUMENTS:
-— a en
 SI NIDIA. |
 ```
 
@@ -782,13 +764,8 @@ Data lea ks Large Language Model
 @.
 Conversation history =—_ dt
 Prompt data hase
-! = >) _— oe
 @ Embedding mode! =: =
-<>} tO ee OO —> oc 4 >
 Frontend (43) : ~ (=I
-| <— . * _—
-! ! O00
-i ' a =
 : AP! endpoint Guardrails Prompt selection ‘ 2 LLM/Plugin response Plugin request validation
 User device
 Logging and monitoring
@@ -834,9 +811,7 @@ Case study: Info leaks via logging
 External Sources
 =) oft
 AuthNAuthz service Prompt database
-! . >) —o
 @ Embedding mode!
-| a Os on —>
 Frontend . -
 | <—
 a
@@ -912,7 +887,6 @@ sv ony
 AuthNAuthz service
 <—
 AP! endpoint
-ae ee eC ee:
 U) “@) "sss 5
 -
 Guardrails
@@ -947,20 +921,14 @@ Extermal data sources
 ```text
 ”
 Il
-ae oe | l a oe | 1 1 1 | iT I I
-a oe | | 1 1 i mn
 =
 v
-1 1 i i | a ee ee he | | i a |
-jj | a oe |
 v
 i i
 Targeting the attack
 Malicious Google document shared (silently) with the victim
 Revised vacation policy effective August 2023 + B > & a- @ Share + 5]
 File Edit View Insert Format Tools Extensions Help
-Qo ee BA F 100% ~  Normaltext ~ Roboto ~ — + B FU A @ - Vd a
-oa es 2 Te en Tone en en en inl ie en
 <
 Outline
 Vacation and Personal Time Off ...
@@ -992,11 +960,7 @@ service. SI NVIDIA.
 ```text
 ”
 n
-ae oe | l a oe | 1 1 1 | iT iT I
 1m
-> v -
-ae oe ee | | ae es oe os | | es oe on oe | | es ee ee |
-oe oe | | a oe |
 v
 |
 1
@@ -1005,7 +969,6 @@ Malicious Google document shared (silently) with the victim
 2 Revised vacation policy effective August 2023 + B > & a- @ Share + oS
 File Edit View Insert Format Tools Extensions Help
 Qo e BA F 100% ~ Normal text Roboto + — {10.5| + BsmrluU A @ : Vd ~
-7, APD A
 <
 Outline " ° . .
 € Share "Revised vacation policy Q 8
@@ -1065,14 +1028,8 @@ Extemal | SOurces
 =) oft
 A
 AuthN/AuthZ service Prompt database External data sources
-| | |
-! i : >) ~e Oh
 @ Embedding mode! = =
-<>} <> 2 —> oc 4 >
 Frontend ({O}) : —\=
-| | <— . =
-! ! O00
-i ' a
 AP! endpoint Guardrails Prompt selection LLM/Plugin response Plugin request validation
 f and orchestration parsing and dispatch
 Large Language Model
@@ -1153,7 +1110,6 @@ Hl
 Prompt data hase
 Overprivileged,
 unparameterized
-“BOS Bg Be
 AP! endpoint
 -
 Guardrails
@@ -1191,10 +1147,7 @@ T1 Let’s talk about plugins. $= 99...
 or 1. “Translate this into AA = sv ~ sv — sv
 [Something]”
 AuthMiAy service
-Tr = : |
-> =| | e
 ic | a Embedding model = Se 4
-Frontend : zz > _ Bye " o ka te
 LLM/Plugin response Plugin request validation
 ry
 AP! endpoint Guardrails Prompt selection
@@ -1225,10 +1178,7 @@ T1 Let’s talk about plugins. UNE ython
 O 1. “Translate this into AA
 Python code”
 AuthMiAy service
-Tr = : |
-> =| | e
 ic | a Embedding model = Se 4
-Frontend : zz > _ Bye " o ka te
 LLM/Plugin response Plugin request validation
 ry
 AP! endpoint Guardrails Prompt selection
@@ -1258,10 +1208,7 @@ T1 Let’s talk about plugins. oo
 O 1. “Translate this into AA
 an SQL query”
 AuthMiAy service
-Tr = : |
-> =| | e
 ic | a Embedding model = Se 4
-Frontend : zz > _ Bye " o ka te
 LLM/Plugin response Plugin request validation
 ry
 AP! endpoint Guardrails Prompt selection
@@ -1290,10 +1237,7 @@ T1 Let’s talk about plugins. 2. “Fetch that URL”
 O 1. “Translate this into AA
 a parameterized URL’
 AuthMiAy service
-Tr = : |
-> =| | e
 ic | a Embedding model = Se 4
-Frontend : zz > _ Bye " o ka te
 LLM/Plugin response Plugin request validation
 ry
 AP! endpoint Guardrails Prompt selection
@@ -1423,13 +1367,8 @@ Extemal | SOurces
 — Fhe Overprivileged, —a ]
 = ov on} ATRIA unparameterize oy = ow.
 AuthN/AuthZ service Prompt database External data sources
-! i, : >) ~e Oh
 @ Embedding mode! = =
-<>} tO ee OO —> oc 4 >
 Frontend ({O}) : —\=
-| <— I =
-! ! O00
-i ' a
 AP! endpoint Guardrails Prompt selection LLM/Plugin response Plugin request validation
 f and orchestration parsing and dispatch
 Large Language Model
@@ -1455,17 +1394,13 @@ scope?”
 A more interesting (realistic) RCE
 External Sources
 =)"
-: : —— {>
 1. Topical guardrails: YI- ay ]
 “is the user question SS SS
 on topic and in A
 S a D e?” Prompt database External data sources
 : :
 | ©) Embedding model =: = J
-<>} tO ee OO —> oc 4 >
 Frontend (43) : ~ ¢ ~ (=I
-| | <— =
-! ! O00
 AP! endpoint Guartlrails Prompt selection LLM/Plugin response Plugin request validation
 and orchestration parsing and dispatch
 | Large Language Model
@@ -1588,7 +1523,6 @@ Frontend Plugins
 Frontend
 User device
 AuthNAuthz service
-i So _ C) ee emanate
 AP! endpoint
 -
 Guardrails
@@ -1627,7 +1561,6 @@ output
 ```text
 Potential input vectors
 Extermal data sources
-y of = Ld
 * External dat
 AuthN/AuthZ service Prompt database SUS es
 Frontend Plugins
@@ -1664,7 +1597,6 @@ User input
 Potential input vectors
 Third party input?
 External Sources
-=) of} it
 AuthNAuthz service Prompt data hase
 eg —-U
 ry

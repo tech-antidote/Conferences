@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:41Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Andy Ellis & Meghan Jacquot & Aastha Sahni & Sherri Davidoff_Diversity Microtalks Perspectives on Creating Change.pdf` (23 pages)
 
-
 ## Slide 1
 
 # Diversity Microtalks Perspectives on Creating Change
@@ -200,7 +199,6 @@ Copyright 2023 Andy Ellis
 
 ```text
 pifek hat —
-LISA | Loc ae " ae
 Breaking Barriers: a Data-Centric Approach
 Meghan Jacquot & Aastha Sahni
 #BHUSA @BlackHatEvents
@@ -252,11 +250,8 @@ SES, “Chal Lee
 iy.
 aes Fe Spake eStems ie ewe
 et Ghee =
-ae a Ne
-ac Ss 2 a)
 Ses crPs I FOL
 j eo =LLI e_ —Q=
-8” be Ee “Oye is
 Visa=21OY, Ez O31)
 D pee * pee Maki ro
 =CFPS: 2eqpick
@@ -369,7 +364,6 @@ laptop:
 Diversity Microtalks: Perspectives on
 Creating Change
 < 4 \ © Wednesday, August 9, 2023 3:20 PM to 4:00 PM
-EQ = Ean & - 40 min. (America/Los_Angeles)
 le) 4 h ] © South Seas AB, Level 3 .
 ackhat ~— eo 2
 USA 2023 > oe renee

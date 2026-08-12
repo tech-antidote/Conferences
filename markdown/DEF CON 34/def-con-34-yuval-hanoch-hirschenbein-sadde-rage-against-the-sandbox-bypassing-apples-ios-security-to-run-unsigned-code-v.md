@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:33Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yuval Hanoch Hirschenbein Sadde - Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code via SSH.pptx` (35 pages)
 
-
 ## Slide 1
 
 Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code via SSH

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:47:54Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Orange Tsai & Splitline Huang_WorstFit Unveiling Hidden Transformers in Windows ANSI.pdf` (147 pages)
 
-
 ## Slide 1
 
 # **BestFit**
@@ -50,7 +49,6 @@ DE A CORE blackhat
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= REE t gz i
 BY Windows PowerShell x +\yv
 PS C:\Program Files\PostgreSQL\17> .\bin\psql.exe -U postgres
 Password for user postgres:
@@ -66,7 +64,6 @@ $14.50
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— ss ~ Pil J P
 BY Windows PowerShell x +Fiv - Oo x
 PS C:\Program Files\PostgreSQL\17> .\bin\psql.exe -U postgres
 Password for user postgres:
@@ -82,7 +79,6 @@ SET balance = ' **∞** '
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— ss ~ Pil J P =
 BY Windows PowerShell x +Fiv Oo
 PS C:\Program Files\PostgreSQL\17> .\bin\psql.exe -U postgres
 Password for user postgres:
@@ -90,7 +86,6 @@ psql (17.2)
 Type "help" for help.
 postgres=# SELECT name, balance FROM accounts WHERE name='splitline';
 name | balance
-ee ee ee +——————-—__—
 Grow SET balance = ‘co’ S fox
 postgres=# UPDATE accounts [SET balance='«') WHERE name='splitline';
 UPDATE 1
@@ -102,7 +97,6 @@ postgres=#
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— s = Pl J P =
 BY Windows PowerShell x +\yv Oo
 PS C:\Program Files\PostgreSQL\17> .\bin\psql.exe -U postgres
 Password for user postgres:
@@ -125,7 +119,6 @@ $8
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— ss ~ Pill r P A
 BY Windows PowerShell x +Fiv Oo
 PS C:\Program Files\PostgreSQL\17> .\bin\psql.exe -U postgres
 Password for user postgres:
@@ -172,7 +165,6 @@ DEV CORE Researecn
 @ ORANGE TSA!
 SOYO6
 Seutune Luan
-Y od w °
 /
 ```
 
@@ -658,7 +650,6 @@ At this point we **only fully support Python 2.7** . Older version of Python and
 
 ```text
 w §H Requirements — Cuckoo Sa x +
-< Cc £3 cuckoo.readthedocs.io/en/latest/installation/host/requirements/ xr o>
 # Cuckoo Sandbox
 S
 Docs » Installation » Preparing the Host » Requirements © Edit on GitHub
@@ -1153,12 +1144,10 @@ There must be more in the wild
 
 ```text
 ©) Studio-42/elFinder:@ Open x + v
-CG 23. github.com/Studio-42/elFinder Go & * o x
 ws) Studio-42 / elFinder Q Type (7) to search Fes} +-~ © % €B <a>
 <> Code © Issues 6 11 Pullrequests 3 Q) Discussions © Actions ) wiki © Security 3 lx Insights
 elFinder Public @ Watch 237 + Y Fork 1.4k . yy Star 4.7k a
 ¥ master ~ | Y9| @ if) Demo:elFinder - Web FileMa xX = +
-¢€ CG 8% _ studio-42.github.io/elFinder/#elf_l1_Lw & * 5 §
 e nao-pon Fix #363)
 github e | Fi n d e r Code
 file manager for web
@@ -1169,12 +1158,8 @@ css
 files
 elFinder 2.1.x, please report bugs here or send your translation.
 img
-jquery — A : ALS: = = = =
-I) Places —_ | (ae | Sy eS -
-® be: we = I
 php » __ Basic Auth Example Downloads Videos MIME types README.md Images Basic Auth
 > @® Downloads Example
-5 ie —
 =
 > ® Images ] Aa
 MIME types |Aa.
@@ -1217,11 +1202,9 @@ $prefix = $switch = ;— — ——7
 if ($arc['ext'] === 'zip' && strpos($arc['argc'], '-tzip') === false) /{
 $prefix = './';
 $switch = '—- ';
-} —— ——
 $cmd = $arc['cmd'] . ' ‘ . $arc["argc’] . ' * . $prefix Wentaresieeinratcanar) |. ' ' . $switch . implode(' ', $files);
 outs _ sss TT
 otisseprocexec{ $end, $o, $c, $err_out, $dir); |
-Ze er pe me ed a) a) a)
 It executes command for creating archive
 ```
 
@@ -1360,7 +1343,6 @@ C:\>assoc ... **.txt=txtfile** ... C:\>ftype ... txtfile= <u>%SystemRoot%\system
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-F=| C:\Windows\System32\cmd.e X + vy = O
 C:\>assoc
 .txt=txtfile
 C:\>ftype
@@ -1556,7 +1538,6 @@ With IIS + PHP-CGI + <u>doc_root configured</u> It Can Become **LFI** !
 ```text
 With IIS + PHP-CGI + doc_root configured
 It Can Become LF!
-& © BD victimtld/indexphp/.¥¥4¥V xX - 0 x
 < GS A Notsecure | victim.tld/index.php/..¥..¥..¥..¥..¥Windows/win.ini/foo LW v= ee ~~
 ; for 16-bit app support [fonts] [extensions] [mci extensions] [files] [Mail] MAPI=1
 ```

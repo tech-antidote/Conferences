@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:25Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Saleem-Weaponizing-mobile-Infrastructure.pdf` (35 pages)
 
-
 ## Slide 1
 
 #### **” WEAPONIZING MOBILE INFRASTRUCTURE”**

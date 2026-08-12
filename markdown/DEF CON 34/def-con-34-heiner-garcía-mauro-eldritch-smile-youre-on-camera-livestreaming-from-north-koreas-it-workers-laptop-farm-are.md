@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:21:25Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Heiner García, Mauro Eldritch - Smile, you're on camera Livestreaming from North Korea's IT workers laptop farm - Are v1.pdf` (52 pages)
 
-
 ## Slide 1
 
 SMILE, YOU'RE ON CAMERA! A Live Stream from Inside Lazarus’ IT Workers Scheme
@@ -34,7 +33,6 @@ _An investigation by BCA LTD, NorthScan & ANY.RUN_
 ```text
 SMILE, YOU'RE ON CAMERA!
 A Live Stream from Inside Lazarus’ IT Workers Scheme
-wii HD ft fe
 lls Yili
 An investigation by BCA LTD, NorthScan & ANY.RUN
 ```
@@ -197,7 +195,6 @@ The Recruiter: Angelo Cruz
 
 ```text
 The Recruiter: Angelo Cruz
-(9 en ee
 Code T'] Pullrequests Q) Discussions
 © Actions Security Lx Insights
 HI, | want to discuss with you. #21
@@ -537,7 +534,6 @@ reen with others
 
 ```text
 ¥ © Q) baliensazui-itd/BALLEN’ x | © Git- install for Windows * | 9) Thanks for: co & | 30) GitHub, x |Z Writing, Co | @ MetaMask-ChromeWe * | SM@ MetaMask ¥ BNE Smart Chain (BSC) x | + - Oo x
-€ © 8% chatgpt.com/c/6a32b614-3648-83eb-a67c-ddbea6S90c56 * Of 46
 ¢ which taucet you used (official BNB Chain taucet, QuickNode, etc.), 2 =
 MetaMask a x
 6 © Chat@PT » © whether you received a transaction hash, + Upgrade, Share
@@ -594,7 +590,6 @@ Recents
 $5. chatgpt.com/c/6a32b6 14-3648-83eb-a67c-ddbea6590c56
 0 ChatGPT
 Test BNB Faucet Delay
-@ (st oe
 Upgrade
 x | 209 Thanks for dowloading sue! x | % Gitub Authentication Signin X | Writing Uporadeabe Contract: x | Si MetaMask
 © Connirm your aaaress starts with @x
@@ -629,7 +624,6 @@ elle
 Fund your wallet
 Get your wallet ready to use web3
 Add funds
-u > 4
 Buy Swap Send Receive
 Tokens Perps DeFi NFTs Activity
 BSC Testnet V
@@ -838,7 +832,6 @@ Linkedin.
 Do you know who the CEO of t
 Thank you again
 MAR 16
-( y! 7 +218 PM
 Not really, | work in the sub divisic.. ..n3 gaming
 ( ‘where Tom is my supervisor. Otherwise, I'm not really }
 affiliated with the company.
@@ -859,7 +852,6 @@ intelligence, we believe with a high degree of
 Heiner
 O (H+ 562M
 This message has been deleted.
-O lin ee
 No thank you my friend
 ```
 

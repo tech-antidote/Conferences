@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:01Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Qian Chen, A Ben, Ruiqi Chen, Hang An, Luo Quan_Breaking Theoretical Limits The Gap Between Virtual NICs and Physical Network Cards.pdf` (45 pages)
 
-
 ## Slide 1
 
 Breaking Theoretical Limits: The Gap Between Virtual NICs and Physical Network Cards
@@ -742,7 +741,6 @@ Length Info
 34 Reserved opcode
 34 Reserved opcode
 34 Reserved opcode
-eo oo 9
 Frame 23: 34 bytes on wire (272 bits), 34 bytes captured (272 bits) on interface \Device\NPF
 v Ethernet II, Src: Microsof_be:bc:00@ (00:15:5d:be:bc:00), Dst: Broadcast (ff: ff: ff: ff: ff: fF)
 Destination: Broadcast (ff: ff: ff: ff: ff: fF)
@@ -755,8 +753,6 @@ Protocol type: Unknown (0x9e0e)
 Hardware size: @
 Protocol size: @
 Opcode: reserved (@)
-ff ff ff fF fF ff 02.15 5d be be
-00 00 OO OO BO UO BO OO VO WU
 88 ee
 ```
 
@@ -1086,7 +1082,6 @@ Tine Source Destination Protocol Length Info
 Frame 148: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) @0 Oc 29 75 3b 86 dd 60
 Ethernet II, Src: VMware_86:75:3b (00:0c:29:86:75:3b), Dst: VMware f8:8d:f3 (00:0c:29:f8:8 228 80 2 @2 08 828 00 98
 v Internet Protocol Version 6, Src: fe80::98c3:5e9d:e2db:9090, Dst: fesda::20c:29ff:fefs:8df3\| 9220 Se 9d e2 88 88 028 20 G2
-@110 .... = Version: 6 0030 29 ff fe 60 02 80 22 fe
 0000 0000 .... .... wees seve sees = Traffic Class: @x0@ (DSCP: CSQ, ECN: Not-ECT) 00 00 00 e2 db 98 90 @2
 Q008@ e208 eee eeee@ EGE@ = Flow Label: exeeeee @ @c 29
 Payload Length: 32
@@ -1432,7 +1427,6 @@ Time Source Destination Length Info
 17 7.783109 VMware_f0:42:1f VMware_86:75:3b 60 192.168.63.2 is at 00:50:56:f0:42:
 Frame 16: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface \Dé ff ff ff ff ff FF G2 Oc 29 86 75 3b O8 B6 GO 1
 » Ethernet II, Src: VMware _86:75:3b (@0@:0c:29:86:75:3b), Dst: Broadcast (ff:ff:ff:fFf: Q8 QO 06 04 2A O1 BB Gc 29 86 75 3b ce a8 3f 81
-Destination: Broadcast (ff:ff:ff: ff: ff: ff) 09 00 28 G8 28 EA ce aB 3f O2
 Source: VMware_86:75:3b (00:0c:29:86:75:3b)
 Type: ARP (0x86)
 ~ Address Resolution Protocol (request)
@@ -1538,8 +1532,6 @@ Out-of-bounds Read
 Length Info
 34 Reserved opcode @
 34 Unknown ARP opcode @x@100
-ff ff ff ff ff ff G2 15 5d be bc G2 O8 06 62 20
-@8 88 G6 G2 G1 BO BO BO e8 25 74 94 04 94 FF TF
 e8 25
 ```
 

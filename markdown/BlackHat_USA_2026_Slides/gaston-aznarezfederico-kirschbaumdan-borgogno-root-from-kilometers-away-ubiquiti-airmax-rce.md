@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:11:20Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Gaston Aznarez&Federico Kirschbaum&Dan Borgogno_Root From Kilometers Away Ubiquiti AirMax RCE.pdf` (120 pages)
 
-
 ## Slide 1
 
 Information Classification: General
@@ -70,7 +69,6 @@ Information Classification: General
 ```text
 HOW DID THIS STARTED? » Obsession? You
 think?
-<€ @ wis Oo ®&
 Esta era la del jueves 20:23 W
 Jajajajaja 55.03 w
 20:23
@@ -125,7 +123,6 @@ think?
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-< @ wis Oo ®&
 Ve UNG, NYS VEINS 19:08 W/
 € A LU1AQS Ch" *
 December 11, 2025 < € LU1AQS Ck
@@ -152,10 +149,8 @@ Site sirve de consuelo 50...
 
 ```text
 HOW DID THIS STARTED?
-€ A LUTAQS Oo "= *
 December 11, 2025 <€ € LU1AQS Ck
 Esta era la del jueves
-< @ wis oO ®&
 Ve UNG, NYS VEINS 19:08 W/
 September 1, 2025
 € (a) LU1AQS Oo ’&
@@ -185,7 +180,6 @@ brew cleanu HOW DID THIS STARTED?
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-< @ wis oO ®&
 Ve UNG, NYS VEINS 19:08 W/
 <€ € LU1AQS o ° September 1, 2025
 € A LU1AQS O ®&
@@ -193,7 +187,6 @@ December 11, 2025 <€ € LU1AQS Ck
 Esta era la del jueves Ct
 REIEIEIEIE) |
 = ;
-. é a < Thread oz
 September 8, 2025
 < @ wisas Oo &
 Direct message 14:56
@@ -218,13 +211,9 @@ brew cleanu HOW DID THIS STARTED?
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-< @ wis Oo ®&
 Ve UNG, NYS VEINS 19:08 W/
 <€ 2 LU1AQS o ° . September 1, 2025
 December 11, 2025
-< @ wis Oo &
-at. | Fi
-4 ; =
 Aparecen por todos lados
 16:35 W
 € A LU1AQS O ®&
@@ -237,13 +226,11 @@ Y
 60 ~~ 4 14:56
 September 9, 2025
 Once you see them 44.35
-a a jl
 “A
 +16
 4
 ;
 © meseoe «a |
-F | et 1
 11
 ```
 
@@ -259,18 +246,15 @@ F | et 1
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-< @ wis oO &
 Ve UNG, NYS VEINS 19:08 W/
 ye A LU1AQS Oo &
 Srna: 8, 2025
-< @ wis Oo &
 14:56
 September 9, 2025
 Aparecen por todos lados
 16:35 W/
 Once you see them 44.35
 ‘ ow
-iY = = = = ¥
 THEY ARE see 4! Ein So
 ier
 «= imgflip.com
@@ -365,7 +349,6 @@ AirMAX has sold tens of millions of devices worldwide, but Ubiquiti has never pu
 airMAX-only total. The company as a whole has shipped well over 100 million devices.
 | would avoid claiming a specific airMAX number such as 50 or 70 million without labeling it as an
 estimate.
-OG} D9 & SG ++ @ Sources
 16
 ```
 
@@ -1408,346 +1391,6 @@ Vendor Specific Information Element with AirMAX enabled
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-TDMA IMPLEMENTATION OVER IEEE 802.11
-C{ vvvvve
-Vendor Specific Information Element with
-AirMAX enabled
-o OUI: 00:0C:42 -> Device name
-397 Beacon frame, SN=1515, FN=0, Flags=........C, BI=100, SSID="Comodoro"
-Tag: Vendor Specific: Microsoft Corp.: WMM/WME: Parameter Element
-Tag: Vendor Specific: Epigram, Inc.: HT Capabilities (802.11n D1.10)
-Tag: Vendor Specific: Epigram, Inc.: HT Additional Capabilities (802.111
-Tag: Vendor Specific: Atheros Communications, Inc.: Advanced Capability
-Tag: Vendor Specific: Atheros Communications, Inc.: Unknown
-Tag: Vendor Specific: Ubiquiti Inc
-Tag: Vendor Specific: Routerboard.com
-Tag Number: Vendor Specific (221)
-Tag length: 38
-OUI: @0:@c:42 (Routerboard.com)
-Vendor Specific OUI Type: @
-Unknown: 000
-v Sub IE (T/L: 1/30)
-Subtype: 1
-Sublength: 30
-Subdata: 000000001f660902ff0f4c6176616c6c65202d20507900000000000000
-Subtype 1 Prefix: 000000001f660902f fOf
-Subtype 1 Data: Lavalle - Py
--
-0050
-0060
-0070
-0080
-0090
-00a0
-@0be
-00c®
-00de
-Q0e0
-00Fe
-0100
-Ca)
-120
-0130
-0140
-0150
-0160
-0170
-0180
-64
-a5
-Q1
-@1
-00
-00
-f2
-5e
-ff
-00
-00
-00
-03
-00
-00
-61
-20
-ad
-6f
-05
-03
-00
-00
-00
-@2
-00
-00
-00
-00
-00
-7f
-@1
-@1
-6c
-5e
-da
-72
-04
-30
-00
-00
-00
-01
-62
-00
-00
-00
-dd
-04
-@2
-le
-6c
-8d
-44
-6f
-00
-14
-Of
-00
-00
-@1
-32
-00
-00
-00
-@9
-@1
-b5
-00
-65
-00
-a4
-93
-01
-01
-01
-ac
-)
-00
-85
-2f
-00
-00
-00
-00
-00
-e6
-00
-20
-“hs
-cf
-99
-08
-00
-00
-02
-00
-16
-00
-00
-00
-00
-00
-00
-03
-02
-02
-00
-2d
-e2
-71
-8c
-00
-00
-00
-00
-a5
-00
-03
-00
-dd
-00
-1Ar
-00
-02
-00
-20
-d3
-56
-12
-07
-Of
-00
-00
-08
-1)
-a4
-le
-7)
-la
-7)
-@1
-Ga
-@2
-1f
-50
-dc
-1b
-98
-06
-ac
-2d
-00
-00
-00
-00
-00
-00
-00
-01
-00
-00
-66
-79
-7f
-be
-24
-42
-04
-la
-00
-00
-00
-90
-00
-90
-00
-00
-dd
-09
-dc
-3a
-be
-5a
-Q1
-ad
-(7)
-00
-27
-4c
-00
-4c
-00
-00
-Ge
-26
-02
-00
-05
-97
-4b
-48
-20
-00
-01
-00
-00
-a4
-ek)
-00
-34
-00
-fit
-00
-00
-ff
-cc
-Qc
-6e
-60
-95
-00
-03
-00
-dd
-00
-ad
-00
-a5
-7)
-7f
-15
-Oc
-Of
-1)
-69
-66
-6c
-11
-Of
-ff
-00
-18
-00
-01
-00
-08
-00
-dd
-6d
-42
-03
-le
-ac
-ff
-00
-00
-7)
-42
-3
-00
-00
-00
-a
-00
-00
-@1
-20
-04
-00
-00
-50
-43
-tf
-00
-00
-00
-00
-00
-7)
-4c 61 76
-00 00 20
-d8
-81
-2e
-eb
-61
-alle - Poyrccrees
-»-& om: *Keeeeae
-53
-```
-
 ## Slide 54
 
 ###### RECAP - EXTRA INFORMATION
@@ -1800,7 +1443,6 @@ dd |Len | 00:0C:%z ¢ | Deve Name
 Dd |Len | 00:15:6D FE: FF: FF | Pag loo a ;
 PDD |Len | 00:29:22 FF: FF: FF | Pag load
 OUL
-OU I-T4 pe
 55
 ```
 
@@ -1847,10 +1489,6 @@ Vendor Specific OUI Type: 255
 Vendor Specific Data:
 f f f£020100306cb4acbf04471336476fe1494da40c5a1f2bd59d75
 }
-00f® ff 7f dd 3a 00 27 22 ff ff FF O02 O1 OO 30 Bc D4 «sie 'M aaees Ol:
-0100 ac bf 04 47 13 36 47 6f e1 49 4d a4 Oc 5a 1f 2b~ «++G-6Go -IM--Z-+
-0118 d5 9d 79 93 6d 5b b4 6F b9 a2 a2 Yc 66 51 58 O5-~ --y-ml:o ----FQX-
-0120 ec 42 01 46 d3 49 4f c®@ 66 a4 5a 20 46 59 12 5f <B-F-I0O: f:Z FY-_
 0130 23 04 #:
 57
 ```
@@ -1877,10 +1515,6 @@ OUI: 00:27:22 (Ubiquiti Inc)
 Vendor Specific OUI Type: 255
 Vendor Specific Data: | ff ff020100306cb4acbf04471336476fe1494da40c5a1f2bd59d75
 }
-Q0f® ff 7f dd 3a 00 27 22 ff ff Ff 02 O1 OO 30 6c b4A «++:-'"+ wees Ql:
-0100 ac bf 04 47 13 36 47 6f e1 49 4d a4 Oc 5a 1f 2b ---G-6Go -IM--Z-+
-0110 d5 9d 79 93 6d 5b b4 Gf b9 a2 a2 9c 66 5158 05 --y-m[-0 «+++ FQX:
-0120 ec 42 @1 46 d3 49 4f cO 66 a4 5a 20 46 59 12 5f -B-F-I0- f+Z FY _
 0130 23 04 #:
 Encrypted?
 ```
@@ -2061,7 +1695,6 @@ HOW ARE THE IEs BUILD
 ```text
 HOW ARE THE IEs BUILD
 mame
-— UM ac. Ko
 ——Ubnet- poll KO
 >| recve mame @)
 cingme
@@ -2137,7 +1770,6 @@ break
 $s1_1 = &$s1_1[8]
 aes_encrypt($a@_18, out_ie_enc, &var_17@)
 out_ie_enc = &out_ie_enc[@x16]
-$s2_1 += 1
 Validated with mtscan by Konrad Kosmatka:
 o github.com/kkonradpl/mtscan/
 — 802717 MSG
@@ -2173,8 +1805,6 @@ MAC Address: 44:d9:e7:6a:3a:43
 AES Key (derived): ff1db564cf91b27557ff9343ed1d4d16 (16)
 Decrypting
 [*] Cipher created
-Encrypted data: ca 44 6d Qe 37 58 6f 21 62 e@ c5 18 27 b5 cf 37 b1 89 af 52 ca Qa c3 3c c2 13 4f 1b Ge 52 2d 76 (32)
-Decrypted data: Of @1 44 d9 e7 6a 3a 43 01 00 00 BO OO BO OO BO Ya 82 82 OO OO 44 d9 e7 6a 3a 43 00 BO 20 20 00
 Parece que funciona je
 Epico
 Validated with mtscan by Konrad Kosmatka:
@@ -2205,14 +1835,8 @@ Radio Name: 'COV-LOREA-AP'
 SSID: 'COV-LOREA'
 Cipher[0:8]: 75c93c59b41f63b8
 Ciphertext (48 bytes):
-0000 75 c9 3c 59 b4 1f 63 b8 ce c7 39 Yaea 72 8d 70 u.<Y..c...9..1r.p
-0010 f1 f8 23 e3 9b 79 75 73 9b 7c ab c2 6b 89 1a d8
 Plaintext (48 bytes):
-0000 OO 08 fc ec da Oc Ye 04 fc ec da 0c Ve 04 00 00 ...
-0010 00 01 00 00 00 00 01 Oc 43 4f 56 2d 4c 4f 52 45
-0020 41 2d 41 50 02 09 43 4f 56 2d 4c 4f 52 45 41 00
 ..#.yus.|..k...
-0020 df 80 8e 06 b3 9b 3f ed cd ed 8d 2b 14 76 89 811...
 weet Vi.
 Seon COV-LORE
 A-AP..COV-LOREA.
@@ -2230,9 +1854,6 @@ A-AP..COV-LOREA.
 ```text
 IT’S DECRYPTED BUT... WHAT IS THE STRUCTURE?
 Plaintext (48 bytes):
-0000 OO 08 fc ec da Oc Ye 04 fc ec da Oc Ve 04 00 OO .................
-0010 00 01 00 00 00 00 01 Oc 43 4f 56 2d 4c 4f 52 45. ........ COV-LORE
-0020 41 2d 41 50 02 09 43 4f 56 2d 4c 4f 52 454100 A-AP..COV-LOREA.
 66
 ```
 
@@ -2389,7 +2010,6 @@ x
 FINDING AIRMAX NETWORKS (in-the-wild)
 ote AirMAX Survey
 D))
-" a O
 785 773 298156 754
 Discovered Networks 6
 Gerencia_SGHz - MIKROTIK AP 3686 5 8
@@ -2787,7 +2407,6 @@ ell (ash)
 16:05:04.478
 16:05:04.478 | |) | ed
 16:05:04.478 | - |_| Wit Al 4
-16:05:04.478 | I] — |_I_II {LI | |
 16:05:04.478 ILIWIRELESS FREEDOM
 16:05:04.503
 16:05:04.503 OpenWrt 24.10.4, r28959-29397011¢cc

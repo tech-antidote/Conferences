@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:27Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Jesse Chick , Kasimir Schulz_Something Rotten in the State of Data Centers.pdf` (64 pages)
 
-
 ## Slide 1
 
 #BHEU   @BlackHatEvents
@@ -349,7 +348,6 @@ int ccrack(int start, int* gSeedPtr, char* target) {
 char Random[4096], token[4096];
 for (int i = 0; i < Ox01000000; i++) {
 xgSeedPtr = start + 1;
-for (int j = 0; j < 4; j++) {
 RandomInit( Random) ;
 RandomString( token, Random, 0x14);
 if (!strcemp(*(char**)token, target)) {
@@ -382,8 +380,6 @@ const targetPtr = Memory.
 const seed ccrack(START_VALUE,
 let Random = Memory. (
 let tokenPtr = Memory.
-; ( );
-for (let j = 0; <
 ; ;
 RandomInit ( );
 RandomString(

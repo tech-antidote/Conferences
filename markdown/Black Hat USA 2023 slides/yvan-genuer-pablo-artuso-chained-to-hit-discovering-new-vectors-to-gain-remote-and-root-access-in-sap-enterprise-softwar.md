@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:35Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yvan Genuer & Pablo Artuso_Chained to Hit Discovering New Vectors to Gain Remote and Root Access in SAP Enterprise Software_WP.pdf` (30 pages)
 
-
 ## Slide 1
 
 # **Chained to hit: Discovering new vectors to gain remote and root access in SAP Enterprise Software**

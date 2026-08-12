@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:38Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Babkin-firmWar-An-Imminent-Threat-to-the-Foundation-of-Computing.pdf` (32 pages)
 
-
 ## Slide 1
 
 #### firmWar: An Imminent threat to the foundation of computing.
@@ -166,7 +165,6 @@ wary and attributed to
 josely affliated to the
 group, which researchers say is part of the
 evading mot
-nti Ub >
 write
 operation
 boot process. The end result is malware
@@ -485,7 +483,6 @@ Meris Botnet
 Data from December, 2021
 Geographic Distribution of Vulnerable MikroTik Devices
 Distribution of Vulnerable MikroTik Devices Based on RouterOS Version
-Pd | | ==
 ```
 
 ## Slide 28

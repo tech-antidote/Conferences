@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:38Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Adrian Coleșa & Sorin Boloș_From Weapon to Target Quantum Computers Paradox.pdf` (97 pages)
 
-
 ## Slide 1
 
 # FromWeapontoTarget: QuantumComputersParadox
@@ -1384,7 +1383,6 @@ Quantum Computing Security 80
 https://api.iong.co/v0.3
 \ lonQ Cloud
 )
-A - GET
 POST /jobs RESPONSE GET /jobs/<job> RESPONSE Vjobs/<job>/results RESPONSE
 (1) (2) (3) (4) (5) (6)
 | Qiskit Framework

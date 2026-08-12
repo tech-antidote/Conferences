@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:25Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zuozhi Fan_Dive into Apple UserFS (Userspace Filesystem).pdf` (43 pages)
 
-
 ## Slide 1
 
 # Dive into Apple UserFS (Userspace Filesystem)
@@ -389,7 +388,6 @@ struct { mach_msg_header_t msgHdr; } openRequest;
 openRequest.msgHdr.msgh_id = @x2A5;
 mach_msg_send_from_kernel_proper(&openRequest.msgHdr, sizeof(openRequest) );
 }
-if ( ret ==@) { lifs_request_done(...) . _ .
 lifs_wait_req_completion(&req) ; int fd = open(path, O_RDONLY);
 ret = req.retcode_2C;
 }
@@ -550,15 +548,10 @@ buf_end = ainfop->rawdata + ah->total_size; * | tae et
 * ae.
 count = ah->num_attrs; i | ATTR ENTRY[1] —-+--
 ae = (attr_entry_t x*)(&ah[1]); * | ATTR ENTRY[2] --+--+--.
-* | a i (ie
 or (i = 6: i < count: i++) { * | __ATTR ENTRY[N] --+--+--+--.
-me "tee 1 . . . * | ATTR DATA@ <-' | | |
 /* Make sure the fixed-size part of this attr_entry_t fits. */ * | JIT 1; |
-if (( *) &ae[1] > buf_end) { * | pbb Eel <——-' , |
-"a4 a . *
 1 EINVAL; “™) ATTR DATA 2 <------- rif
 } * | IIIT |
-* | eee |
 /*x Make sure the attribute content fits. x*/ : 7 sel PHT P TIN ——__ .
 end = ae->offset + ae->length; * | Attribute Free Space
 if((end < ae->offset || end > ah->total_size) ){
@@ -645,14 +638,7 @@ USA 2&0e3
 ¢ The ability of this bug is limited.
 Then init_empty_resource_fork will initialize the memory block to some fix values. A partially controlable oob-write
 occurs. We can write these bytes beyond the 64KB buffer.
-00000ee0 00 00 00 00 01 00 00 00 O01 00 00 00 00 00 00 00 |................
-00000ef0 00 le 54 68 69 73 20 72 65 73 6£ 75 72 63 65 20 --This resource
-OOO000f00 66 6f 72 6b 20 69 6e 74 65 6e 74 69 6f 6e 61 6c fork intentional
-00000f10 6c 79 20 6c 65 66 74 20 62 6c 61 6e 6b 20 20 20 ly left blank
-00000£f20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................
 *
-00000fe0 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 |................
-O00000ff0 O00 le 00 00 00 00 00 00 O00 00 00 lc 00 le ££ ££ |................
 For example, we can control that
 *(uint8 t *)(buffer + 0x10000) = Oxff;
 *(uint16 _t *)(buffer + 0x10000) = Oxffff;

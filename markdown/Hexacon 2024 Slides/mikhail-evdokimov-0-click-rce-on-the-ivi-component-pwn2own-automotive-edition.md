@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:21:11Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Mikhail Evdokimov_0-click RCE on the IVI component Pwn2Own Automotive edition.pdf` (189 pages)
 
-
 ## Slide 1
 
 0-click RCE on the IVI component: Pwn2Own Automotive edition
@@ -2356,7 +2355,6 @@ By utilizing the heap overflow primitive, we’re able to corrupt other objects 
 ```text
 Exploit :: ERTM Channel :: Frames
 Supervisory frame (S-frame) Information frame (I-frame)
-16 16 16/32 8/16 te a/ 16
 *S. Basic L2CAP 4+” _ Basic L2CAP .
 header ' header
 72
@@ -2376,7 +2374,6 @@ Supervisory frame (S-frame) Information frame (I-frame)
 . ,
 . ¢
 ~s. Basic L2CAP |-*
-16 16 16 / 32 8 / 16 16
 header '
 ~<. Basic L2CAP |-”
 header '
@@ -2403,7 +2400,6 @@ nN
 *<_ Basic L2CAP | -*
 header
 *s. Basic L2CAP | -*
-16 | 16 16 / 32. 8 / 16 16 16
 '
 header '
 TFCS is optional
@@ -2863,12 +2859,10 @@ Exploit :: ERTM Channel :: Primitives :: Overview
 cur_pos
 2. Overflow link#1—cur_pos into channel#2 creating a new ERTM channel
 cur_pos
-emer eee ee ee ee ee eee ee ee ee ee ee ee ee ee ee ee ee ee eee eee,
 3.1 channel#2 is used for Universal Heap Spraying ~>,
 via link#2
 —we a
 wea |
-see ee ee ee ee ee eee ee ee ee ee ee ee ee ee eee
 92
 ```
 
@@ -2885,8 +2879,6 @@ Exploit :: ERTM Channel :: Primitives :: Overview
 1. Initial state after reallocating channel#1
 cur_pos
 ay Overflow link#1—>cur_pos into channel#2 creating a new ERTM channel
-a | pos
-emer eee ee ee ee ee eee ee ee ee ee ee ee ee ee ee ee ee ee eee eee,
 3.1 channel#2 is used for Universal Heap Spraying ~~. .’
 via link#2
 ```
@@ -3160,7 +3152,6 @@ cur_pos
 2. Overflow to place cur_pos at the target position
 cur_pos
 3. Disconnect channel#3 to free the heap chunk
-Be ie ee
 sin
 cur_pos
 unsortedbin
@@ -3187,7 +3178,6 @@ cur_pos
 2. Overflow to place cur_pos at the target position
 cur_pos
 3. Disconnect channel#3 to free the heap chunk
-Be ie ee
 sin
 cur_pos
 unsortedbin
@@ -3668,7 +3658,6 @@ S-frame REJ response
 
 ```text
 Exploit :: AAR Primitive :: :: Libc Address
-we wee we we we ew ee ee ee ee ee ee ee ew ee ee ee ee ee ee ee ee ee eee ee ee ew
 Heap segment
 ‘Nain Heap (siscated (GE RFE siossted
 Arena | §
@@ -3689,10 +3678,8 @@ Main Arena
 
 ```text
 Exploit :: AAR Primitive :: :: Libc Address
-wee ew we we ew ee ee ee ee ee ee ee ee ee ee ee ee ew ee ee ee ee ee ee eee ew
 Heap segment
 Arena | §
----------- eee ee ee ee ee ee eee ee ee ee ee ee ee ee ee ee eee - -?”
 Libe segment ; Thread#1 /  Thread#2 | Threadi#3
 Main Arena Heap Arena Heap Arena Heap Arena
 BT thread heap arena J
@@ -3750,7 +3737,6 @@ _ Expected V vera Map - Observed eee Map
 random offset (page aligned)
 random offset (page aligned)
 \ a
-i 2 .
 i
 v
 random offset (page aligned)
@@ -4092,7 +4078,6 @@ host_buf elastic object is
 used to store HCI ACL data
 86x18 + 8x24 = 8x34
 Transmit data
-ae T 1S
 8x48 bytes
 8x18 bytes 8x18 bytes 8x18 bytes 8x18 bytes
 1
@@ -4470,16 +4455,13 @@ RCE Impact
 0-click RCE leads to:
 e Deface — Faking the display image
 e Stealing phone book information
-co | ,
 « | Recent Call Geena) |) x « | phone Bale
 Back Mi Phone Download Delete Close ) Ben, Mi
-N q } _—
 2, YY Unknown -— Pozaio7me/8:54 | 2) CEO
 wy Unknown 2024/07/16/18:54 Gumon Oo +36123456789
 i, y Unknown ’ 2024/07/15/19:05 :
 ® Y *300, 2024/07/15/15:57
 ashe Y +36 2023/05/15/16:49
-a *D +25 2023/03/11/17:03 | ¥
 176
 ```
 

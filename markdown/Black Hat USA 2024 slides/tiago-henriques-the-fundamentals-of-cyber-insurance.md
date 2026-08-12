@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:11Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Tiago Henriques_The Fundamentals of Cyber-Insurance.pdf` (31 pages)
 
-
 ## Slide 1
 
 The Fundamentals of Cyber Insurance
@@ -33,7 +32,6 @@ Tiago Henriques - VP of Research @ Coalition, Inc.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-' Hy — rid
 , A
 ee
 blackhat — ;
@@ -523,7 +521,6 @@ And the modern cyber insurance providers have great track records in funds recov
 
 ```text
 blackh
-USA ae ” al
 And the modern cyber insurance providers have great track records in funds recovery...
 Clawbacks in 2023
 o$o

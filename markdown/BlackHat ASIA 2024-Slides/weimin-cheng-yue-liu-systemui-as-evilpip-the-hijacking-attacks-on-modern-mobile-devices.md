@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:59Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/WeiMin Cheng & Yue Liu-SystemUI As EvilPiP The Hijacking Attacks on Modern Mobile Devices.pdf` (79 pages)
 
-
 ## Slide 1
 
 ## SystemUI As EvilPiP **The Hijacking Attacks on Modern Mobile Device**
@@ -592,15 +591,6 @@ T
 ‘
 a
 }-------4
-T T T
-' ' '
-' ' '
-' ' '
-' ' '
-‘ ‘ ‘
-' ' '
-‘ ‘ ‘
-—_ a a
 enterPicturelnPicture — >
 moveActivity ToPinnedRootTask >
 send TaskAppeared
@@ -655,15 +645,6 @@ T
 ‘
 a
 }-------4
-T T T
-' ' '
-' ' '
-' ' '
-' ' '
-‘ ‘ ‘
-' ' '
-‘ ‘ ‘
-—_ a a
 enierPicturelnPicture — >
 moveActivity ToPinnedRootTask >
 send TaskAppeared
@@ -1201,7 +1182,6 @@ POC
 
 ```text
 C:\Users\Administrator>adb logcat -c
-> | > <p
 ASIA 2024 a nN
 C:\Users\Administrator>adb logcat|findstr POC-TESTER
 C:\Users\Administrator>

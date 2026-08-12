@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:30:23Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Edouard Bochin & Tao Yan & Bo Qu_Let the Cache Cache and Let the WebAssembly Assemble Knockin' on Chrome's Shell.pdf` (102 pages)
 
-
 ## Slide 1
 
 Let the Cache Cache and Let the WebAssembly Assemble: Knocking’ on Chrome’s Shell
@@ -4265,7 +4264,6 @@ code
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-3 id, SI ys
 Tia! se
 black hat —
 USA 2024

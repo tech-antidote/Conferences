@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:39Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Edward Prior_Breaching the Perimeter via Cloud Synchronized Browser Settings_wp.pdf` (77 pages)
 
-
 ## Slide 1
 
 # `Breaching the Perimeter via Cloud Synchronized Browser Settings`

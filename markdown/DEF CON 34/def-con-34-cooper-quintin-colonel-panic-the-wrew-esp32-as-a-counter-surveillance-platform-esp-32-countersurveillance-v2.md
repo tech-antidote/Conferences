@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:10Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Cooper Quintin, Colonel Panic, The Wrew - ESP32 as a counter-surveillance platform - ESP 32 countersurveillance v2.pptx` (39 pages)
 
-
 ## Slide 1
 
 Counter Surveillance Is For Everyone With ESP32 Cybertiger, Colonel Panic, The Wrew
@@ -149,7 +148,6 @@ Economic Warfare
 
 ```text
 Be mic Warfare
-‘qG > s SS
 MY TAX * SS,
 oof ee mt oa _ SOMEHOW ALSO MY: Ss
 a, AT WORK: “iy TAK DOLLARS AT WORK
@@ -271,14 +269,6 @@ PRIVACY |}S A HUMAN RIGHT
 
 I created the OUI-Spy
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-— —_—_—_—_— ™
-| created the OUI-Spy
-|
-```
-
 ## Slide 21
 
 And the mesh detect
@@ -312,11 +302,7 @@ es, ASS Le
 yoo8 ml q
 f
 es
-\7 a gt
-el em |
-| Wit \*
 ee RS
-tga : <4 fw a
 Open source
 ```
 

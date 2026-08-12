@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:57Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ori David_Off The Record - Weaponizing DHCP DNS Dynamic Updates.pdf` (53 pages)
 
-
 ## Slide 1
 
 #### **Off The Record: Weaponizing DHCP DNS Dynamic Updates**
@@ -608,10 +607,6 @@ Confirm password
 PS C:\Users\Administrator> Invoke-DHCPCheckup -domainName aka.test
 PS C:\Users\Administrator> Import-Module .\Desktop\Invoke-DHCPCheckup.ps1
 | _\I |/ ___|
-| | | |
-}l |] —~ Tt |
-| | | |
-| | | |_
 /
 |__)
 IIdd |} tle

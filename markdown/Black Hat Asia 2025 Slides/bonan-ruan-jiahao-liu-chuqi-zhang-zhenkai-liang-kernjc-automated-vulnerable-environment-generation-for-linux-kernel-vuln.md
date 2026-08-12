@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:03:40Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Bonan Ruan & Jiahao Liu & Chuqi Zhang & Zhenkai Liang_KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities-wp.pdf` (19 pages)
 
-
 ## Slide 1
 
 # **KernJC: Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities**

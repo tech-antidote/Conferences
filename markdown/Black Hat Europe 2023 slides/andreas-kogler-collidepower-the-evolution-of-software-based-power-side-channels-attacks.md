@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:41Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Andreas Kogler_Collide+Power The Evolution of Software-based Power Side-Channels Attacks.pdf` (141 pages)
 
-
 ## Slide 1
 
 # **Collide+Power**
@@ -737,14 +736,11 @@ RI
 @hp /tmp/kastr
 100000 |
 60000
-FH gs gs
 es ee,
-oe one ae
 a eee
 it tee
 aoe5
 ee ee
-ae ge “A
 ```
 
 ## Slide 51

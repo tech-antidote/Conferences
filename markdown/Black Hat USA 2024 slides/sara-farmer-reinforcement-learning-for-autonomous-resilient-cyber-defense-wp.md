@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:52Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sara Farmer_Reinforcement Learning for Autonomous Resilient Cyber Defense_WP.pdf` (11 pages)
 
-
 ## Slide 1
 
 # **Reinforcement Learning for Autonomous Resilient Cyber Defence**<sup>**1**</sup>

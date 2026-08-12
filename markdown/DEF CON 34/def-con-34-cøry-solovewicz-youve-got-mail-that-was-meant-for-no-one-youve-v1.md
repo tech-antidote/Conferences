@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:14:48Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Cøry Solovewicz - You've Got Mail (That Was Meant For No One) - You've v1.pdf` (28 pages)
 
-
 ## Slide 1
 
 **You've Got Mail (That Was Meant For No One)**
@@ -170,66 +169,6 @@ Nothing compared to <u>noreply.us</u>
 https://research.domaintools.com/ statistics/tld-counts/
 
 **source: https://research.domaintools.com/statistics/tld-counts/  (07/20/2026)**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-juno> ulewog
--_~
-©
-N
-ql
-5
-N
-(=)
-—
-7
-—
--
-=)
-fe]
-if
-S
-—
-7
-Oo
-_—
-”
-_—
-(>)
-—
-F
-fe]
-0
-a
-oO
-(e)
-—
-‘=
-'y°)
-=
-{e)
-SC
-x=
-Ss)
-Sen
-4°)
-®
-2]
-®
-then
->
-”
-(ok
->
-x=
-o
-Oo
-Sen
-=)
-oO
-”
-```
 
 ## Slide 16
 

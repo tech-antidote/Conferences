@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:03Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Felipe Solferini, Vangelis Stykas - Tracking the Trackers How We Took Over 36 Million GPS Devices Protecting Children and Vehicles - v1.pptx` (91 pages)
 
-
 ## Slide 1
 
 ###### B L A C K H A T U S A 2 0 2 6 · D E F C O N · 4 5 - M I N B R I E F I N G

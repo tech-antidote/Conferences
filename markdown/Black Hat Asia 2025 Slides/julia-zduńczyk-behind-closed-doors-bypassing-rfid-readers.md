@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:42Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Julia Zduńczyk_Behind Closed Doors - Bypassing RFID Readers.pdf` (41 pages)
 
-
 ## Slide 1
 
 # **Behind Closed Doors Bypassing RFID Readers Julia Zduńczyk**
@@ -83,7 +82,6 @@ This sign has
 RFID and
 GPS tracking
 ithe red sign
-me ws . a 4
 Is a legal warning!s
 rite onl ;
 Coffee filters Road signs tracking...?
@@ -213,14 +211,12 @@ Controller
 ```text
 Communication protocol between
 the reader and the controller
-: — a a oe a a el
 @eee6e@
 Toi eee:
 TAMPER AC BATT 12-24
 rs FAIL FAIL VDC
 INT
 IN 2
-: |HID |
 INS
 +
 4 @ ONLINE
@@ -233,7 +229,6 @@ WINS: @ In2
 @ins
 @iIna
 Nz. @iINs
-i @ ING
 INB IN?
 I St
 NoTusep MBRELAYI RELAY 28

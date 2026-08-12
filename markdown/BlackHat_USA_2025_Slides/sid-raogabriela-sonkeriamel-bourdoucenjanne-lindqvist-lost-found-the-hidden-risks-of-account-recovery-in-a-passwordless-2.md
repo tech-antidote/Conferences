@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:01:17Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sid Rao&Gabriela Sonkeri&Amel Bourdoucen&Janne Lindqvist_Lost & Found The Hidden Risks of Account Recovery in a Passwordless Future_WP.pdf` (8 pages)
 
-
 ## Slide 1
 
 White paper (supporting material for Black Hat USA 2025)

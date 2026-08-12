@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:51:22Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Christian Dameff&Ariana Mirian_Pwning User Phishing Training Through Scientific Lure Crafting.pdf` (49 pages)
 
-
 ## Slide 1
 
 # Pwning Phishing Training Through Scientific Lure Crafting
@@ -110,7 +109,6 @@ with warning signs highlighted. { i COVID-19 Policy ©
 The following organization policy has been updated:
 COVID-19 - Return to Work Guidelines
 Here are five warning signs to watch out for:
-O) OO) ©
 Please read and understand the updated guidelines regarding a COVID-free return to the office. It is URGENT that you read this as soon as
 possible!!!
 Click HERE or di ad the attachment to read the ©

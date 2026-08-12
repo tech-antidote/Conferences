@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:34Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Uhlmann-You-Can-Run-But-You-Cant-Hide.pdf` (20 pages)
 
-
 ## Slide 1
 
 You can Run, but you can’t Hide Finding the Footprints of Hidden Shellcode

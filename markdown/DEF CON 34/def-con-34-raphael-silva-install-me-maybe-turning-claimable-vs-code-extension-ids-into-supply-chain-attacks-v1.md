@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:26:33Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Raphael Silva - Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks - v1.pdf` (27 pages)
 
-
 ## Slide 1
 
 Turning claimable VS Code extension IDs into supply-chain attacks
@@ -258,7 +257,6 @@ THE ATTACK MODEL
 
 ```text
 THE ATTACK MODEL
-[ 01 ]
 Trusted
 reference
 A workflow names
@@ -294,7 +292,6 @@ Recommendation -
 devcontainer - sync
 * Manual - auto-
 update.
-[ 07 ]
 Code executes
 On a real developer
 environment with

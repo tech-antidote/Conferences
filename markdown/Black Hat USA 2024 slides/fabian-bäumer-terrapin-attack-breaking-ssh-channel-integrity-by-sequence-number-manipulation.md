@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:30:34Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation.pdf` (31 pages)
 
-
 ## Slide 1
 
 Terrapin Attack: Breaking SSH Channel Integrity by Sequence Number Manipulation
@@ -490,7 +489,6 @@ Encrypt-then-MAC
 GCM ct l' Invocation ct VInvocation
 ChaCha20-Poly 1305 Snd Rcv
 \N =*® \N &*&
-@® oo @8@ 00
 ```
 
 ## Slide 27

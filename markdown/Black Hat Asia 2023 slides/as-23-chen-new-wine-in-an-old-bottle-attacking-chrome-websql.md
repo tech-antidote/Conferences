@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:45Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-New-Wine-in-an-Old-Bottle-Attacking-Chrome-WebSQL.pdf` (61 pages)
 
-
 ## Slide 1
 
 ## New Wine in an Old Bottle: Attacking Chrome WebSQL
@@ -191,7 +190,6 @@ ASIA 20253
 CREATE TABLE tO ( cO, c1 ) STRICT
 * template => statement => tree
 createTableStmt
-a ee a
 CREATE TABLE tableName columnNameList tableOption
 td columnNameList columnName STRICT
 columnName c1
@@ -245,7 +243,6 @@ eee
 <tableOption> = STRICT
 eres ee====-,
 createTableStmt
-a ee a
 CREATE TABLE tableName columnNameList tableOption
 td columnNameList columnName STRICT
 columnName c1
@@ -268,7 +265,6 @@ ROWID
 ```text
 bisek hat
 ASIA 20253
-co ee eee ee eee ee ‘
 ' <tableOption> = WITHOUT ROWID |
 | <tableOption> = STRICT
 ! I

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:24Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work_WP.pdf` (27 pages)
 
-
 ## Slide 1
 
 # **Listen to the whispers web timing attacks that actually work**

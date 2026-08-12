@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:08:43Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Efstratios Chatzoglou&Vyron Kampourakis&Georgios Kambourakis&Angelos Stavrou_Chaos by Design The Death of Stochastic Race Conditions in HTTP3.pdf` (22 pages)
 
-
 ## Slide 1
 
 Chaos by Design: The Death of Stochastic Race Conditions in HTTP/3 Efstratios Chatzoglou
@@ -191,7 +190,6 @@ Static Table
 (shared)
 -——
 CO) RFC 9204 separates header blocks from table updates, reducing head-of-line sing. |
-S =e —— _ _ _
 black hat
 2026 9
 ```

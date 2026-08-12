@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:03:35Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Bofei Chen & Yinzhi Cao & Lei Zhang & Xinyou Huang & Yuan Zhang & Min Yang_JDD In-depth Mining of Java Deserialization Gadget Chains via Bottom-up Gadget Search and Dataflow-aided Payload Construction.pdf` (63 pages)
 
-
 ## Slide 1
 
 JDD: In-depth Mining of Java Deserialization Gadget Chain via Bottom-up Gadget Search and Dataflow aided Payload Construction

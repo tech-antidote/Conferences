@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:23Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marcos Bajo&Christian Rossow_Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++.pdf` (231 pages)
 
-
 ## Slide 1
 
 ## Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++
@@ -39,15 +38,9 @@ MANDALAY BAY / LAS VEGAS
 Coroutine Frame-Oriented
 Programming
 Breaking Control Flow Integrity by Abusing Modem C++
-; . > m 7 / —_ _
-e . aE ” "9
 S ‘
 ‘ G
-LE 77 / ~_
-“a —~ NX
 4,
-; | x
-SSN \ 7 y
 ee A
 :
 Marcos Bajo h3xduck
@@ -131,7 +124,6 @@ The Old Ages 1972 2000 2010 Stack canaries ASLR JOP ret2libc DEP/NX ROP DOP Buff
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ : Z SE ec } ip sl A : —
 lack hat The Old “ / a
 b ecanae Old Ages
 1972 2000 2010 2020
@@ -161,7 +153,6 @@ CFI 1<sup>st</sup> mentioned
 ```text
 Q
 1972 2000 2010 2020
-black hat ma i es Mf jp Oe
 BRIEFINGS Modem Ages :
 ()1-©-©-€
 ```
@@ -194,7 +185,6 @@ Code Reuse
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-‘ XS ny exe ; _ A F pe: a | ene »
 pisekhat Ws “cance ™ a. “if P=:
 BRIEFINGS :
 f:
@@ -435,7 +425,6 @@ Intel CET (Shadow Stack) SHSTK
 
 ```text
 Debaters — r(s ), SHSTK “
-A | A
 g()
 frame
 f() return
@@ -456,7 +445,6 @@ Intel CET (Shadow Stack) SHSTK
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) ; eS
 Ne FISFINGS Intel
 A
 @0O0O0O
@@ -620,35 +608,6 @@ call qword ptr [binary!__guard_dispatch_icall_fptr]
 ## Slide 36
 
 CFG: Control Flow Guard
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-13
-“1
-“43
-i
-“1
-“43
-i
-“1
-“43
-1s
-“1
-“44
-i
-“1
-“43
-13
-1
-“43
-13
-1
-‘13
-@0OO0O0O
-```
 
 ## Slide 37
 
@@ -822,7 +781,6 @@ LLVM CFI (cfi icall)
 ```text
 biSekchat
 BRIEFINGS
-Ca =. Lf
 LLVM CF
 <+104>:
 <+111>:
@@ -1611,7 +1569,6 @@ h.destroy();
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-EQ j Be: Wines” = y gy so / J J »>—
 Nene (Basic) Coroutine Lifetime -
 void foo()
 {
@@ -2035,7 +1992,6 @@ destroy pointer
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) 7 y ga uf A
 lackhat ina A
 blackhat The Coroutine Frame
 resume pointer | destroy pointer
@@ -2102,8 +2058,6 @@ co_return;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Ni Y er > ———_
-I t A ae / 4 vy
 blackhat The Coroutine Frame -~
 {
 string s = “hello”:
@@ -2184,7 +2138,6 @@ int var1,var2,var3,var4;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-o aS Za if! A > ee
 blackhat The Coroutine Frame -
 Stack
 * task coro()
@@ -2511,8 +2464,6 @@ co_await
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-3 yy / “* i 4 > SZ >
-+) is eae — v7, Y i >. ‘ lf 2 fi’ i, 5S
 blackhat Covbuthes Awaiting yp
 ° evaluates an awaitable
 task coroutine()
@@ -3243,7 +3194,6 @@ Use Cases
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Se si ZG f°
 piStichat Nuts SS ZA
 BRIEFINGS ;
 coro’
@@ -3323,7 +3273,6 @@ CFIXX PittyPat VTrust Typro
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-+) 7% Sie “ y ~~ \ 1 y a (f oassee
 black hat x
 BRIEFINGS Oo
 ¢« The coroutine and are writable
@@ -3376,7 +3325,6 @@ FRAME
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ se hy : | =
 Blackhat A mitives -
 FRAME MANIPULATION FRAME
 Modifying existing frames ¢ Inserting frames
@@ -4579,7 +4527,6 @@ co_awaitc2();co_return;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-x tN SE a 7 Yl > -. A y y “4 yy Tip ree8
 blackhat ‘The awesome world of Continuations
 ¢ Wait, where is c2() destroyed?
 task ci() task c2()
@@ -4816,8 +4763,6 @@ CALL 2 CALL 1
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-y/ u ; i
-I kh “ | Ph Ii 2
 black hat Anvinaag Passing yp
 ¢ We now have infinite arbitrary calls
 ¢ What about setting arbitrary in the registers?
@@ -4830,8 +4775,6 @@ Argument Passing
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QQ eae y
-; : |
 blackhat ment’
 rdi
 resume()
@@ -4859,9 +4802,6 @@ argO = rdi = pointer to argdata
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-y/ u ; i
-EQ : ass tne rg : y " | 3 7 4 a
-| kh : y | > ih y 4
 blackhat Anvinaag Passing
 ¢ So, resume and destroy have
 ¢ Is there anything else where rdi is always used?
@@ -5117,7 +5057,6 @@ Marcos Bajo _h3xduck_ Christian Rossow
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-7% Way ss Nan A SS
 Se ti
 black hat
 EFINGS

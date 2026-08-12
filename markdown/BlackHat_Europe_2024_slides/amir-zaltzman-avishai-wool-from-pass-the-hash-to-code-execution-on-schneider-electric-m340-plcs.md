@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:48:45Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Amir Zaltzman & Avishai Wool_From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs.pdf` (107 pages)
 
-
 ## Slide 1
 
 ## From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs
@@ -33,10 +32,8 @@ Amir Zaltzman, Avishai Wool
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-FoR yy eg
 EWROPE 20 >
 DECEMBER 11-12, 2024 | me »/ 2S
-IEFINGS | / ~s > ae
 4 =
 se From Pass-the-Hash to Code Execution
 on Schneider Electric M340 PLCs
@@ -1283,7 +1280,6 @@ Information Classification: General
 2)
 black hat
 EUROPE 2024
-=) @ e l
 a2 ae [ Start reserving PLC
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 123.45.67.10/255.255.0.0
@@ -1437,7 +1433,6 @@ pe monce enc plc . PICSCHD LD4DT CSS TE4O04d Sd ZUUZ5U9 TS S504 dDdDS LOUZ9505e7
 “fe28hellabh2ohhoeGefathalerhle fads tho fkac OhASP lab ai feahes”
 "e175ca0fa74105d654bc7 f43741e776737191bd4a023008a5d23da28d9cBefO"
 ubuntu: -/Do nts/BlackHat_demo amirz@ubuntu: -/Documents/BlackHat_demo x
-Mus Ya SD I cS
 pL nance enc nich:
 "ple_ nonce dec":
 ‘pre MOTICE Enc pe.
@@ -1527,7 +1522,6 @@ Information Classification: General
 2)
 black hat
 EUROPE 2024
-i =| : bit
 Unreserve Unreserved
 They
 5)
@@ -1667,7 +1661,6 @@ Information Classification: General
 QQ
 black hat
 EUROPE 2024
-2) aw &
 Reserved
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~-/Documents/BlackHat_demo
 Send PC Diffie-Hellman public key...
@@ -1910,7 +1903,6 @@ Information Classification: General
 ```text
 bisek hat
 EUROPE 2024
-Who am I?
 Amir Zaltzman
 + Embedded security researcher
 Motivation

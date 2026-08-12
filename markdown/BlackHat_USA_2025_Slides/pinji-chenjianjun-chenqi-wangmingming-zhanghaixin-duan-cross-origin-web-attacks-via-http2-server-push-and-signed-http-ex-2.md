@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:13Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Pinji Chen&Jianjun Chen&Qi Wang&Mingming Zhang&Haixin Duan_Cross-Origin Web Attacks via HTTP2 Server Push and Signed HTTP Exchange_WP.pdf` (16 pages)
 
-
 ## Slide 1
 
 # Cross-Origin Web Attacks via HTTP/2 Server Push and Signed HTTP Exchange

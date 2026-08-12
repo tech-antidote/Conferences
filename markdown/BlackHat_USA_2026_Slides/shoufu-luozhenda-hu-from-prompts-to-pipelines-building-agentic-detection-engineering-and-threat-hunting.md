@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:58Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shoufu Luo&Zhenda Hu_From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting.pdf` (40 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -81,10 +80,7 @@ I
 I
 600 1,000
 500
-. 1 800
 I
-= 400 5
-= 600 &
 3 300 | June+ +64.2x <
 1 400
 200 '
@@ -92,8 +88,6 @@ post Jan 2026 +4.5x
 200
 100 pre-Al baseline
 0) 0)
-& a Ra 3” Ri a Oe a “ee
-<e ye »y ~ Oo ree <& ra Yy
 black hat
 2026 5
 ```

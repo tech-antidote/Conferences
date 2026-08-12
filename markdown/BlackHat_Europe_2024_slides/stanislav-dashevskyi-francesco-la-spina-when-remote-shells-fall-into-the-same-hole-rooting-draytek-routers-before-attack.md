@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:52:05Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Stanislav Dashevskyi & Francesco La Spina_When (Remote) Shells Fall Into The Same Hole Rooting DrayTek Routers Before Attackers Can Do It Again.pdf` (41 pages)
 
-
 ## Slide 1
 
 # When (Remote) Shells Fall Into The Same Hole: Rooting DrayTek Routers Before Attackers Can Do It Again
@@ -700,7 +699,6 @@ Information Classification: General
 
 ```text
 @ =D Vigor Login Page x | + v - a.
-€ Cc O & 192.168.1.1/weblogin.htm 170% jy =
 Username
 |
 Password

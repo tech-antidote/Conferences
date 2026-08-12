@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:53Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v1.pptx` (56 pages)
 
-
 ## Slide 1
 
 ## `D E F C O N 3 4 · M A I N S T A G E` **The Enclave Is Lying to You**

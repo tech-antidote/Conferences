@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:16:31Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Dolev Taler, Mark Vaitsman - Data Tomb Raider Raiding Modern AI Vaults with Legacy Flaws for Treasure Stealing - v1.pdf` (59 pages)
 
-
 ## Slide 1
 
 Data Tomb Raider: Raiding Modern AI Vaults with Legacy Flaws for Treasure Stealing
@@ -249,7 +248,6 @@ https://kizafair.com/SNAME
 The URL with your username is: https://kizafair.com/varonisNew
 I can’t access external websites directly. If you paste the page content or a screenshot
 here, I'll help summarize or extract what you need.
-5H PP 2 0 GF Editinapage
 Nv varonis
 ```
 
@@ -673,7 +671,6 @@ Bing’s image-search endpoint fetches the attacker URL **server-side** . Stolen
 ```text
 SearchLeak
 :) i“ . Click here to log in: fe)
-> CZ it J https://m365.cloud.microsoft/ ——> C2
 ATTACKER search/?q=prompt VICTIM
 oo V_ Q2Financial Results
 -._ Ci
@@ -776,17 +773,14 @@ ChatGPT Connectors ‘0-cl °-Chic, : ~* Attackers
 E. Micr,
 Exfiltrate Data From Goog filtro, ce)
 e
-= 8. °
 Bronte noussin Gesvit fy Doan Sitive pilot |
 ' a:
-oe - tq bus; MN erap: .
 Seg, "8 Team, Yet ar
 s ack
 ext re] Googie News
 ers
 ot
 “ett! pers Bor
-10¥ . ;
 ShadowLeak: A Zero-Click, Service-Side Attack Exfiltrating Sensitive Data ..,.,
 Using ChatGPT’s Deep Research Agent
 . CATEGORIES

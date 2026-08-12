@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:01Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Gonzalez_Breaking Chains Hacking Android Key Attestation.pdf` (34 pages)
 
-
 ## Slide 1
 
 # Breaking Chains: Hacking Android Key Attestation
@@ -607,7 +606,6 @@ This mitigates an attack in which an attacker crafts a new leaf certificate
 with a seemingly good attestation and appends it to the certificate chain.
 Asu1Sequence extensionDat:
 Parsedattestat ionRecord(extensionData) ;
-(int i= certs.length - 1; i
 bytel] attestationextensionsytes sionvaluet RIPTION_OID);
 (attestationExtensionBytes != null && attestationExtensionBytes. length != 0) {
 ParsedattestationRecord (ext ractAttestationSequence(attestationExtensionBytes) );

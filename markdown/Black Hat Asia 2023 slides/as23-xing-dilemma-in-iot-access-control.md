@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:47:21Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS23-Xing-Dilemma-In-IoT-Access-Control.pdf` (19 pages)
 
-
 ## Slide 1
 
 Dilemma in IoT Access Control: Revealing Novel Attacks and Design Challenges in Mobile-as-a-Gateway IoT
@@ -235,7 +234,6 @@ ASIA 2023
 Mitigating Vulnerabilities in MaaG Access Control
 Benign Untrusted Benign
 Cloud Service Mobile Device 4 pre-guthentication token loT Device
-3. —- @
 {nonce, On_Device_Policy} 2. {nonce, On_Device_Policy} —"
 <a
 we; =

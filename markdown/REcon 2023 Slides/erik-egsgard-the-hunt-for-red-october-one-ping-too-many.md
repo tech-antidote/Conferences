@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:24:49Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Erik Egsgard_The Hunt for Red October - One Ping Too Many .pdf` (48 pages)
 
-
 ## Slide 1
 
 RECon Montreal June 2023
@@ -220,8 +219,6 @@ ALE Inbound/Outbound Control callout 5
 connection management c ALE Layer =z of
 ( igement) < (v4lv6) < 32
 = 5 3 Party IDS callout = }-—») £ §
-3 2 eg
-gs s <a
 Transport Layer Shim 5 ° a =
 TCP / UDP zt
 (TCP / UDP) TPsec Inbound/Outbound 3" Party NAT callout [-—») =
@@ -412,7 +409,6 @@ size CurrentMdlOffset =| CurrentiMdl
 yy =
 o
 DataLength °
-, A MBL mi
 NULL
 ```
 
@@ -608,8 +604,6 @@ ICMP Message
 1
 ¢— from IP datagram that triggered the errar—*
 IP header ICMP header IP header 8 bytes of payload
--— . 7 ,
-er TT re
 Pal Ts
 type code checksum
 Unused (0x00000000)

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:55Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Lukas Maar&Lukas Giner_Derandomizing the Location of Security-Critical Kernel Objects in the Linux Kernel.pdf` (165 pages)
 
-
 ## Slide 1
 
 S C I E N C E P A S S I O N T E C H N O L O G Y

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:32:39Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Haikuo Xie & Fan Yang & Qinrun Dai_Remote, One-Click, Breaking through Smartphones via a Non Well-Known Remote Attack Surface.pdf` (121 pages)
 
-
 ## Slide 1
 
 Remote, One-Click, Breaking through Smartphones via a Non Well-Known Remote Attack Surface
@@ -2236,15 +2235,10 @@ fa69
 Internet Protoc Internet Protocol ver!
 User Datagram Protocol,|> User Datagram Protoce] , Yser patagram Protoco] > User Datagram Protocol |» User Datagram Protocol, Sr¢ Port: 1602, Dst Port: 8181
 Datu (1 byte) bata (1 byte) (REMAN * 4t# (2 byte) Data (1 byte)
-00 08 oe aK 86 dd 00 86 dd 00 00 00 G0 G0 1b 02 @7 G4 00 90 1b 22 3
-86 dd 08 00 00 a0 o 86 dd 0@ 08 0@ ae
 Zhes2 $
 a ) IV-ES-@
 1 o-i-B
-a a8 09 66 af B2 e8 @9 66 af 71 fq
-09 66 af Od 09 66 af Hd
 off_E45F8 DCQ
-71 00 00 00
 We can get all of the address by this method
 ```
 

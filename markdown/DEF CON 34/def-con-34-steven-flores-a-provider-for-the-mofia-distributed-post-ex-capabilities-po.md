@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:28:05Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Steven Flores - A Provider for the MOFia - Distributed Post-Ex Capabilities - Po.pdf` (36 pages)
 
-
 ## Slide 1
 
 # **A Provider for the MOFia**

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:21Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v2.pptx` (52 pages)
 
-
 ## Slide 1
 
 DEF CON 34 · MAIN STAGE
@@ -555,7 +554,6 @@ Encounter "../"
 Go UP one level
 -— checkpoint. json
 t+— logs/
-\ — db/
 e :
  kms/ €------------ Then go into
 y /opt/enclave/kms/

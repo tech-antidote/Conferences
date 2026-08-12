@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:58:06Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marius Muench&Sam Collins&Tom Chothia_Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems.pdf` (89 pages)
 
-
 ## Slide 1
 
 ## Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems
@@ -1736,15 +1735,6 @@ Cheat Game Price Popularity Scraped from Average players cheat selling sites in 
 black hat
 BRIEFINGS
 Anticheat Strength
-NS mo Vv © Ro Vv S w \
-SC XK SP SF er SF SF ww SF &
-6) & < N wv Gy x
-~ ° > we (oy s . xf < iN
-as < x < © v Ww ro) < Ww
-ao tS x < v J &
-Ry ¢ “ oo” gt pS e « e
-& wW oe ‘SS s
-eg oe wv
 ```
 
 ## Slide 80
@@ -1762,20 +1752,12 @@ Anticheat Strength —«- Cheat Uptime (%)
 100- Denne :
 pewne~ eo sis
 80- Lf "2 —- “SL a Pas
-Za Se ee at
 ry
 7
 60- ie
 aS Sa
 40-
 20-
-0 1 1 1 1 t 1 1 1 1 1 1
-x .xU Vv Le} S Vv S wu NS
-Ss yr ses & & x F  @&
-se ‘. RS < & os wv & ev BS
-I Sn ST SO DEN A CO SE
-ee ¢ “ ow” at © ce < gf
-x ye Oo s RS
 ```
 
 ## Slide 81
@@ -1794,22 +1776,11 @@ Mean Cheat Price ($)
 120-
 100- Bet .
 o ¢
-80- ra i ee ee eo, mm . we
-~ a "s —— wn eh = meas Pa
 ry
 ye 7
 60- 4
 40-
 20-
-0 7 7 1 ' 7 1 1 ' 1 1
-\ xe Vv © © v S © s
-. x ‘s » s <
-S S .) RY we x < f) RC S >
-So MF KS OK KF OK SK K
-xe « oO Ss w & N RNY 5 < wv
-we ¢ “ Vg at S) e < ee
-x .°) 2 oo s <
-mS os &
 ```
 
 ## Slide 82
@@ -1824,22 +1795,11 @@ black hat
 BRIEFINGS
 Anticheat Strength —«= Cheat Uptime (%) Mean Cheat Price ($) «=== Avg Monthly Players
 120- = 50,000,000
-100- ae .
 i ha? - 40,000,000
-80- 5 er ee ; rs ‘
-ix = “a “ee : 30,000,000
-60- ii ‘ s .
 Be -
 = 20,000,000
 40 -
 20- = 10,000,000
-0 1 ' t ' t 1 1 1 1 ' '
-x 1x Vv Le} S Vv S wu S
-Se KX SF SF KF SF S&S  & @
-30 < > Ne) < > o vv n> wv rN
-RY <e PO aS ww 5. Ma we <? cs ww
-R\ Oy S
-x © we S& RS ss °
 ```
 
 ## Slide 83

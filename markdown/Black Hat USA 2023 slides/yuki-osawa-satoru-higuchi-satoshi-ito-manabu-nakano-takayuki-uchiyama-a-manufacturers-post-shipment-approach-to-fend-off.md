@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:26:44Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yuki Osawa & Satoru Higuchi & Satoshi Ito & Manabu Nakano & Takayuki Uchiyama_A Manufacturer's Post-Shipment Approach to Fend-Off IoT Malware in Home Appliances.pdf` (37 pages)
 
-
 ## Slide 1
 
 ### A Manufacturer's Post-Shipment Approach to Fend-Off IoT Malware in Home Appliances
@@ -154,23 +153,6 @@ https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v
 ## Slide 9
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IT)
-(U
-O
-(U
-{
-Ul
-a)
-0
-A os
-%
-Cg
-2
-```
 
 ## Slide 10
 

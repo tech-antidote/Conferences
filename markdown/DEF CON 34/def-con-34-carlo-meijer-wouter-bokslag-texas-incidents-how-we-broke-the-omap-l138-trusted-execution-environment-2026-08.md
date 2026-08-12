@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:14:32Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Carlo Meijer, Wouter Bokslag - Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment - 2026 08 05 DEF CON.pdf` (67 pages)
 
-
 ## Slide 1
 
 ###### **August 2026**

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:09Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work.pdf` (35 pages)
 
-
 ## Slide 1
 
 Listen to the whispers **_web timing attacks that actually work_** James Kettle
@@ -133,7 +132,6 @@ Timeless Timing Attacks (2020) |
 6 Ti + Network Network — Internal Internal
 ime latency jitter latency jitter
 Delay
-| P |
 Request 1 (uN SN =D
 Request 2 SO is Bi
 ```
@@ -508,8 +506,6 @@ Service-Gateway-Account-Id: 934454
 Front-end impersonation
 Firewall
 OEE f=
-1O 3:38 =
-AH __ >
 & =—-
 CHER Front end =
 Target
@@ -540,7 +536,6 @@ S eo-o
 O
 ¢
 o,e
-& \—. oO
 Param Miner [| |= =z ha——
 jee Intruder -> Timing.py
 ```

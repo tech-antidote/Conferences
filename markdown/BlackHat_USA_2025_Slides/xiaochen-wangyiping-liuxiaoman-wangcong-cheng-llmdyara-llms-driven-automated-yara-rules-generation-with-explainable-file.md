@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:03:44Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Xiaochen Wang&Yiping Liu&Xiaoman Wang&Cong Cheng_LLMDYara LLMs-Driven Automated YARA Rules Generation with Explainable File Features and DNAHash.pdf` (27 pages)
 
-
 ## Slide 1
 
 LLMDYara: LLMs-Driven Automated YARA Rules Generation with Explainable File Features and DNAHash
@@ -210,7 +209,6 @@ hibcéf jk
 . . —— " i ; athe sanguage a “stringt: "Sunday", vA file-1 xxxxxxxx
 Benign Files sllauncher.exe":"filename_with_ext Top Common Strings Security Domain Features "tag": "nlp-date" Top-N Strings vd file-2 xx xX
 in Benign Db 3 file-3 x x x \
-i { file-4 x xx xx
 Function Feature Lorteame areal (ROCCE ing": "HeapDestroy", / file-5 x xx xx xx Double
 ; : "iat_function" file-6 x x x Cluster
 LO BOOL sub_402320()
@@ -218,26 +216,20 @@ LO BOOL sub_402320()
 HKEY phkResult ; ile-
 Ld BYTE SubKey[257]; Oo Cluster-1 ») file 3 xx x
 n memset (&SubKey[1], @, 0x100u); tag: xor_dynamic_decrypt file-6 * x x
-. /\ strepy(subkey, asystencurrente. 8) Third-Party Library e 3F 30 11 FF 45 77 C3 8B 45 fia xen * x * . *
 e Similiar return RegOpenkeyExA(HKEY_LOCAL_MACHINE, Finger Hash file-5 XXXXXKX
 SubKey, @, OxF@@3Fu, &phkResult) == 0;
 juer —> ‘e-
 e q y 3 Cluster-2 ») file-2 xx XX
 tag: shellcode_loader J subset
-a I ISSN NV C6 45 2? 52 C6 45 ?? 4E C6 -~\We- compression &
 , 2
-/ ee 8, y push call ... pop ret { 0 Ne S B o\ B . intersection
-So Ss ! .
 \ \ mergin
 A> ae? Capa Sensitive (“ ctuster-3 >) \ \ / , ons
 \ @8, hash| | sSDeep Function Rules Coo. LLU OL Va
-Suen 8B 0B 8B 73 2? 03 75 2? 8B . s As
 \ Ne J (aAbAc)V(eA£AgAhAA) V(hALAJAK)
 DMAHash Feature a — eee eeee
 Malicious Files => Ao , >) Rule Scoring Mechanism
 header | .text | .rdata| .rsrc | overlay | —-> [e) ee. Cluster-n 1 |
 e ° tag: add_autorun_reg , 1. opcode feature xM |
-Top Conmon DNAHash 8B 4C 24 2? 8D 44 24 27 68 80 | 2. dna hash feature = xw |
 H1] }H2]) ... |Hn in Benign Db ~~~ Vector Space —> 7 N 3. string feature x1 |
 ```
 
@@ -403,7 +395,6 @@ function behavior tags
 Lo
 behavior tag list (5
 of each sample
-NY Vv ¥v
 N75 qwen3-32b
 NY
 prompt
@@ -414,9 +405,7 @@ steal_leak_xdata
 xor_dynamic_decrypt
 (th
 capa sandbox
-> < <
 judge rules
-oe w Ne
 dynamic
 (sa mple filter
 analysis
@@ -487,8 +476,6 @@ No
 pifeK hat
 BRIEFINGS
 file_index fea
-68 00 01 00
-20 00 c3 6a 00
 type file_index
 + opcode rl
 feature
@@ -610,7 +597,6 @@ i}
 . |! 2. dna hash feature XN | 1,5 Ha_@,*,Ha_2,...,Ha_6,*,...
 ports Double Cluster on file and feature ----- . | 3. string feature x1 2,3.4, *,Hb_1,...,Hb_5,Hb_6,*,...
 \
-| i \
 1 [ file_Index, opcode_features ‘ j hj '
 file_Index, string_features | , ! \
 1 =
@@ -629,7 +615,6 @@ strings:
 — 1,2,3,4,6,7 — eine Bi 77 L -- B2 (A & B1)* (A & B2) $p2 = {8BCA83E103F3AAEB??6A046800100000508B43? 70345? ?50FF55??78B0B8B73? 70375? ?8BD18BF8C1E9@2F3A5} // sub_4590B4, shellcode_loader
 Moy / Dar » , ee PY y \ $p3 = {C6457752C645?74EC645?7?45C645??74CC645?733C6457732} // sub_458E9A, shellcode_Loader
 i>! f \ ; $p4 nstall.exe" fullword ascii wide
-Ay UE 1 \ ! !
 SS el Se 7 oN / x Voy + — >A & (B1* B2) $p5 = "MSVCRT_HEAP_SELECT" fullword ascii wide
 ae 4 Me -7% Sieve Seas OY
 \ condition:
@@ -710,7 +695,6 @@ Unux_Miral_A
 9
 s
 s
-ss s s
 Number of False Positives
 Win32_Agent_NFD.
 win32_Pacex_Gen
@@ -730,9 +714,6 @@ Total Count
 autoyara Top 10 False Positive Rules
 64039
 158!
-° ‘y y Ss S 9 9 y Y
-se Fs SF Ss Fs SF
-s é gs s ¥ as g
 Number of False Positives
 Total False Positives by Tools
 316,014
@@ -821,8 +802,6 @@ BRIEFINGS
 Rule Generation Result of Recently Active Malware
 Rule Details
 eR EHEAWIN32_Oberal_A_LeeR ERK
-sig: 8a 06 46 32 45 ?? 50 56 ff 45 ?? 8b 75 ?? 8a 06 46 8b 5d ?? 39 5d 7?
-75 2? 8b 55 ?? 89 55 ?? 8b 75 ?? 8a 06
 "1A2466363E2F7236296D0CQA1E4353060D54373E074EQQ0AS7347C2D100652080B15244501160E080B151B4FOEQ00D49
 "1A2466363E2F7236296D0CQA1E4353060D54373E074EQQ0AS7347C2D100652080B15244501160E080B151B4FOEQ0QD49
 "1919490C1D4E73031A4F090C1E2C67696B206B690E868665A09A616E6574206D296530207BFFB96705" ascii
@@ -871,19 +850,13 @@ $op3 //Input TP Rate:
 $op4 /1316/320
 $ops strings:
 $op6 //Benign FP est: -@.@ Malicious
-$op7 $x® = { OC FF 75 08 E8 73 03 00
 $op8 //Benign FP est: -@.@ Malicious
-$op9 $x1 = { 35 00 33 44 30 41 35 33
 $op10 //Benign FP est: -0.@ Malicious
 opi $x2 = "206915E4" ascii
 $opi2 //Benign FP est: -@.@ Malicious
-$op113 $x3 = { GE 4D 75 74 65 78 41 00
 $op14 //Benign FP est: -0.0 Malicious
-pon $x4 = { 35 97 64 40 00 E8 1A 05
 $op16 //Benign FP est: -@.@ Malicious
-ae $x5 = { 30 35 00 31 41 32 34 36
 Op. //Benign FP est: -@.@ Malicious
-Gams $x6 = { 20 40 00 55 8B EC 56 8B
 . ae //Benign FP est: -@.@ Malicious
 | Sa
 $x7 = "9EB3QF16" ascii
@@ -965,10 +938,8 @@ do
 LOBYTE(result) = v10 * *v6;
 v9 = result;
 v8 = x++v11;
-if ( v11 == &a3[a4] )
 4
 v11 = a3;
-v8 = *a3;
 }
 v10 = v8;
 LLMDYara
@@ -1011,10 +982,6 @@ olympicdestroyer 4354
 suproate baofa 3265
 subroate 4296
 ™ subroate
-° 2S ws) ) 2 £ £ ° 2S 2 ws) 2 £ ws) ws)
-s s ss s s s s s s SS Ss Ss s potukorp
-s sf Ss se se Ss s Sy SF s se Ss S
-s 9 s *< s s ¥ s + s s
 Number of False Positives Number of False Positives zcash
 lImdyara Top 10 False Positive Rules Total False Positives by Tools
 — ee plurox

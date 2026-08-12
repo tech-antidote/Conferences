@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:36Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Adrian Wood & Mary Walker-Confused Learning Supply Chain Attacks through Machine Learning Models.pdf` (66 pages)
 
-
 ## Slide 1
 
 Confused Learning: Supply Chain Attacks through Machine Learning Models
@@ -377,19 +376,6 @@ Make effective malware in functional models
 
 ML Models are **not** pure functions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a 7 e
-i- e
-e
-. =
-. °
-%.
-ML Models are not
-oure functions
-```
-
 ## Slide 25
 
 ## Deploying the attack  - creation
@@ -492,7 +478,6 @@ Open )
 soe © likely malware detonation location \ Compute |
 Dees ; 4
 OpenAL
-™ \ y
 ```
 
 ## Slide 33

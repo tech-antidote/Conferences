@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:35:17Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Nadav Adir & Alon Dankner & Eli Biham & Sara Bitan & Ron Freudenthal & Or Keret_Nope, S7ill Not Secure Stealing Private Keys From S7 PLCs.pdf` (54 pages)
 
-
 ## Slide 1
 
 # **Nope, S7ill Not Secure: Stealing Private Keys From S7 PLCs**
@@ -38,30 +37,6 @@ TLS 1.3 Iron clad armor
 Stuxnet
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-USA 2024
-blsekhat
-&
-‘e)
-£
-&
-ae)
-CS
-a
-oO |
-e |
-fe)
-—
-‘i.
-oY
-S|
-W)
-=)
-=
-```
 
 ## Slide 3
 
@@ -435,10 +410,8 @@ ephemera)
 7 i gis Seg 000 aaehs de
 ubl
 Ephemeral pp; — RSA encry & Da Be
-Private key pt A ny ,
 encrypted passphrase — ©
 4 *
-Y a i fi
 Pa
 ar
 cert I Bibie ate
@@ -457,7 +430,6 @@ encrypted private key
 bisa hat }
 USA 2024
 3
-) Pe Ae
 encrypted passphrase # ?
 } =
 encrypted private key
@@ -474,7 +446,6 @@ encrypted private key
 ```text
 bisa hat }
 USA 2024 1
-s. a 1 "
 configuration to PLC ”
 ten S
 S?CommPlus Packet | '
@@ -744,7 +715,6 @@ dirWINDOWS\RedirectDocuments\Automationvronmans_single_led_projectlronmans_singl
 Bel | IA Online Options Tools Window Help Totally Integrated Automation
 x 2 cms 2G BA Ss coonline # PORTAL
 Devices = Topology v th Network view |[¥ Device view
-a 1 : i ¢ 4
 a
 Gojeyer asempaey [F
 @@ PLC_1 [CPU 1512C-1 PN]

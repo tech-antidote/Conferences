@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:49Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alon Leviev&Netanel Ben Simon&Yair Netzer&Amit Dori_BitUnlocker Leveraging Windows Recovery to Extract BitLocker Secrets.pdf` (98 pages)
 
-
 ## Slide 1
 
 **BitUnlocker​** Leveraging Windows Recovery to Extract BitLocker Secrets
@@ -68,29 +67,6 @@ icrosoft (STORM)
 ## Slide 4
 
 **Research Background**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-xe)
-c
-=)
-O
-_
-e))
-SS
-U
-©
-co
-os
-U
-_
-©
-Le)
-V)
-Le)
-~
-```
 
 ## Slide 5
 
@@ -148,21 +124,6 @@ Hardening WinRE
 ## Slide 11
 
 **WinRE Overview**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-=
-@
-fe
-oT)
->
-O
-Lud
-oc
-=
-=
-```
 
 ## Slide 12
 
@@ -360,28 +321,6 @@ Hard Disk
 
 ## **Vulnerabilities and Exploitations**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-xe)
-c
-©
-my)
-2
-=
-V)
-c
-Oo
-6
-©
-=
-=
-or
-x
-Lu
-Vulnerab
-```
-
 ## Slide 27
 
 Attacking Boot.sdi Parsing
@@ -551,25 +490,6 @@ WinRE.wim
 ## Slide 37
 
 **Vulnerability #1 DEMO**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-+
->
-4
-Te
-©
-re
-LD)
-=
-=)
->
-O
-=
-Lu
-(a)
-```
 
 ## Slide 38
 
@@ -1238,7 +1158,6 @@ OS Volume
 ```text
 —
 Washington G) Daity Wonder
-A ri j 5
 ta oe °F Po Pm Sri Lanka’s Cloud-Kissed
 — weed — Nuwara Eliya: A Drone
 2 as watch jiya: ss
@@ -1252,38 +1171,12 @@ GC wade
 Take the quiz
 4h
 ai
-— a ema SS a : -
-=~. CO = = i —s © —
-r me “2h x - —— = e f
-<< oe Ae SF gt ot re 3
 S| Si eee peg =
-—« Sad Pe , a a
 ```
 
 ## Slide 94
 
 **Closing Remarks**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-}
-7
-+
-- YY.
-°
-»
-. gt =
-D “
-dl Y
-o¢
-6
-eo
-S
-\
-k
-Closing Remar
-```
 
 ## Slide 95
 

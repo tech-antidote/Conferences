@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:39Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Koh-Dirty-Bin-Cache-A-New-Code-Injection-Poisoning-Binary-Translation-Cache.pdf` (99 pages)
 
-
 ## Slide 1
 
 # **Dirty Bin Cache: A New Code Injection Poisoning Binary Translation Cache**
@@ -840,7 +839,6 @@ _ 17:04 | / ]
 @ YAFLWABE WR RK WIYED AT ; oC 8 wm = Q ® 5A98(A) 17:04 }
 (cdhash-HV-_GIgx-py3.9) »> O
 VulnEmu
-ee < > HEE e¥aU7¢e7arTNy— Q
 SARS AnAG
 —m FileVault FrT*PVz—-IL | FOtKY—
 ADEB EDOPTUT—YavORAPTE, FOPTUT—Ya
@@ -1151,7 +1149,6 @@ Privilege Name
 SeShutdownPrivil ~ - ~
 SeChangeNotifyPr 4 Downloads x +
 SeUndockPrivileg
-SeIncreaseWorkin @ New ~ xX a ®@ ee NN sot» = View~
 SeTimeZonePrivil
 C:\Users\tsune\s ¢ +> v 4 >» Downloads VS
 A lome Name Date modified
@@ -1168,7 +1165,6 @@ Application
 Size
 342,173 KB
 #BHASIA
-— — _ af
 f FriMar 24 8:24
 @BlackHatEvents
 ```

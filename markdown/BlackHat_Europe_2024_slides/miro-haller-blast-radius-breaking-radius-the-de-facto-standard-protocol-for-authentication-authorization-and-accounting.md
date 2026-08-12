@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:50:34Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Miro Haller_Blast-RADIUS Breaking RADIUS, the de facto standard protocol for authentication, authorization, and accounting for networked devices.pdf` (38 pages)
 
-
 ## Slide 1
 
 # Blast-RADIUS

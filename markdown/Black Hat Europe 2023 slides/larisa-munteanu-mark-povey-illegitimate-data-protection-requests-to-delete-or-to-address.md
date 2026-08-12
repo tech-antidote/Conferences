@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:12Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Larisa Munteanu, Mark Povey_Illegitimate Data Protection Requests - To Delete or to Address.pdf` (17 pages)
 
-
 ## Slide 1
 
 #BHEU @BlackHatEvents

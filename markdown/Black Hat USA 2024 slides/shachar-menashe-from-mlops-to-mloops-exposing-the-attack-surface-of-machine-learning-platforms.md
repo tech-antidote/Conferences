@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:09Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Shachar Menashe_From MLOps to MLOops - Exposing the Attack Surface of Machine Learning Platforms.pdf` (49 pages)
 
-
 ## Slide 1
 
 From MLOps to MLOops Exposing the Attack Surface of Machine Learning Platforms
@@ -93,7 +92,6 @@ Oy
 na max coo se
 ° © wise-
 © © sofl-sku |
-are ° Oo os
 Push (use
 © ul ray-613
 os
@@ -110,14 +108,11 @@ Client’ ° vest
 Horse Hf rmsevs. eta
 ° merci omparng fist 100 rn ‘Comparing fst $00 run
 ° © fun-mouse L 1
-° © funny-carp-535 so . os
 Remem 0 © sosects oe
 © asteful a . o
 ° os
 soo .
 Prioritiz © © cetficient-tr
-=a . *
-° © learned-pengu . oe ———
 Windows XF “aw cold nett 0 sare.dentan al _ f o—____~@® © emersenres—
 ) © minous-m 16:02:30 16:03:00 16:03:30 16:04:00 0 so0 1000 500 00
 san 23,2028
@@ -226,7 +221,6 @@ bisek hat
 USA 2024
 What can MLOps do for YOU
 Model Registry
-: ~A —™
 My_ ‘dev. model 0.1
 ChatGPT 4.5 P
 Ge 8
@@ -283,11 +277,9 @@ What can MLOps do for YOU
 Model Serving
 input Smartphone
 Application /\OT
-{ = |
 Model presecnsnsncs a) ey
 training Model 3 l |
 a co buueweeeeueees ve, object 7 Embedding
-x, af y : API Client
 Prediction Sfop4 een
 hae
 Serving
@@ -378,7 +370,6 @@ must not be used with un-trusted data
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-vA LS s
 Q >
 black hat
 USA 2024 :
@@ -515,7 +506,6 @@ ds = load_dataset("hails/mmlu_no_train")
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QO A ea “a >> Z
 blackhat | ;
 USA 2024 ,
 Inherent — Malicious Datasets
@@ -543,7 +533,6 @@ ds = load dataset("hails/mmlu_no_ train") @ halts @ devminn Conver —
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-we am ON
 Eg
 blackhat : n
 USA 2024 | a
@@ -585,7 +574,6 @@ ds = ("hails/mmlu_no_train")
 , date_files | split trust_remote_code (bool, defaults to True)|— Whether or not to allow for
 cache_dir , features 5 = - C C 5
 download_config , download_mode datasets defined on the Hub using a dataset script. This option should
-, verification_mode . 5 ° ° °
 ignore verifications ene only be set to True for repositories you trust and in which you have read
 , s _inft , revig#on e .
 ” token. union 2 None, use auth token fF the code, as it will execute code present on the Hub on your local
@@ -610,7 +598,6 @@ Inherent — Jupyter Sandbox Escape
 Notebooks are invaluable for developing ML models
 : Jupyter Optical Coherence Tomography-Copy1 Last Checkpoint: Last Sunday at 6:14 PM (autosaved)
 File Edi Vie insert Cel Kemel N
-B+ s Bot + WRu mw CD , @¢ Boe F 4 |B
 Contents 2% 1.3.3 Fourier Domain OCT (FDOCT)
 erence Tomography
 1.1 Imports, preliminari
@@ -626,7 +613,6 @@ Ip(k = osu [« +y «| "DC terms" -
 1.9.2.1 Detection-bandwid =I co>
 TDOCT: SNR and N <p Y al arch Quora
 | +153 Fourier Domain OCT ( +2 say [3 /RaR, cos (2k(z — “| " Cross — correlation terms " a) (Q) Q Search Quora
-13a Im as
 1.3.3.2 Int d Oo N
 1.3.3.3 Impact of finite nur +2500] LY VReRy cos [2k — 20] " Autocorrelation terms "
 1.3.3.4 FDOCT: SNR and 2 rime
@@ -648,7 +634,6 @@ TD_OCT_signal = (np .exp(-(
 In [26]: fig_disp
 — signal
 blar.
-32 34 36 38 40 42 44 46 48
 Kum*-2]
 ```
 
@@ -688,7 +673,6 @@ if (b.title == "Run this cell and advance (Shift+Enter)")
 run_btn = b;
 else if (b.title == "Insert a cell below (B)") 0
 plus_btn = b;
-3 % CE Cc @
 //add new input cell
 simulateMouseClick(plus_btn);
 var code = “import os ; os.system("calc")”
@@ -700,7 +684,6 @@ var inp = inpArr[inpArr.length - 2]; //get the input box of the new cell
 var html = ''; _—
 //add the code to the new cell 4 5 6
 code.split('\n').forEach(line =>
-Vx x? kd =
 html += ‘<div class="cm-line">' + line + ‘<br></div>'; 1 2 3 +
 )3
 inp.innerHTML = html;
@@ -746,7 +729,6 @@ ake # to adapt this template to a specific regression problem. To find all requi
 Description ae
 15 # NOTE: YAML does not support tabs for indentation. Please use spaces and ensure that all YAML
 16 # files are properly formatted.
-. . . . . . 17
 Insufficient sanitization in 18 recipe: “regression/v1"
 19 # FIXME::REQUIRED: Specifies the target column name for model training and evaluation.
 20 target_col: ""
@@ -793,10 +775,8 @@ bisek hat
 USA 2024
 nt —- Jupyter Sandbox Escape
 . localhost:8888 says
-we KY sa
 (
 File Edit Vie 3
-a2 + &« &® wB AS “SR Code
 >
 In [*]: from mlflow.recipes import t¢ y
 recipe = Recipe(profile="local"). runt)
@@ -1006,7 +986,6 @@ Exfiltrate
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Qa | yy
 black hat
 USA 2024 : /
 Implementation -— Container escape
@@ -1020,7 +999,6 @@ a Legitimate customers run Al
 models on the service
 customer models
 . Attacker gains access to all fe xt aL
-* by S Bs
 Te Heh
 Org A/B/C... mo
 Shared Infrastructure .

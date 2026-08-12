@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:51:50Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Connor McGarr_Out Of Control How KCFG and KCET Redefine Control Flow Integrity in the Windows Kernel.pdf` (36 pages)
 
-
 ## Slide 1
 
 # Out Of Control: How KCFG and KCET Redefine Control Flow Integrity in the Windows Kernel

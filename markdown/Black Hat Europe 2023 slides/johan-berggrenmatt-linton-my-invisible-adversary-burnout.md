@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:15Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Johan Berggren&Matt Linton_My Invisible Adversary Burnout.pdf` (24 pages)
 
-
 ## Slide 1
 
 Burnout
@@ -88,7 +87,6 @@ Information Classification: General
 Opaque Management
 RACK
 Suva
-| 3 “ay
 a, or goRStUV yy, .
 wae: es
 | + 1234567890 =
@@ -122,7 +120,6 @@ STREET CLEANING
 SCHOOL DAYS
 STOPPING
 MON = FRI
-7H oe 4
 SCHOOL DAS ENCEPTONS
 La] MON-FRI
 MINUTES. T3 To Bis

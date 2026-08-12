@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:07Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhou Li & Xiang Li & Qifan Zhang_MaginotDNS Attacking the Boundary of DNS Caching Protection.pdf` (41 pages)
 
-
 ## Slide 1
 
 # MaginotDNS: Attacking the Boundary of DNS Caching Protection

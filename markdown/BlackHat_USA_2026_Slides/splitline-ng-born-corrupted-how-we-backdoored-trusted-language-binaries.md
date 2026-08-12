@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:06Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Splitline Ng_Born Corrupted How We Backdoored Trusted Language Binaries.pdf` (174 pages)
 
-
 ## Slide 1
 
 ## **Born Corrupted How We Backdoored Trusted Language Binaries**
@@ -96,10 +95,7 @@ more details: https:/)
 Most likely, a mainta
 | have also reported
 May 19,2026 / 5minread X 8 AA
-: = =
 » echarts-for-react 0% (200) 100) (ico)
-—— . ¢ D'S &
-t \t: t.
 TS SERS CON ee PON TO Supply Chain Vulnerability Quality Maintenance _License
 latest Source [Jnpm Copy purl @ Security
 ```
@@ -349,14 +345,12 @@ Takeover What You Download!
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-° oe .
 ju | la Download Docs Learn Blog Community
 =O
 Code ls
 v1.12.6 (April 9, 2026)
 Filters +
 Release notes | GitHub tag |
-11 976 0;
 Platform
 Auth¢ Windows [help]
 macOS (Apple Silicon) [help]
@@ -369,7 +363,6 @@ https://julialang-s3.julialang.org/bin/mac/aarch64/1.12/julia-1.12.6-macaarch64.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-° oe .
 ju | la Download Docs Learn Blog Community
 q
 Code Is
@@ -1105,7 +1098,6 @@ ng for LSC - lints https://github.com/flutter/flutter/issues/178827"}, {"created
 oogle.com","reason":"format has concluded "},{"createdOn":"2025-07-07T15:11:39.745121Z" "status": "failure", "author": "matan
 duled Dart format 3.8"}12
 + _reports |
-© 3/18, 12:47 AM ig 2o
 ```
 
 ## Slide 99
@@ -1920,7 +1912,6 @@ HTTP/1.1
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= ©) python / pythondotorg v Q Br &-+ +~ © A B <ay
 Code Issues 65 Pullrequests 44 Agents Actions Projects Security and quality Insights
 @ pythondotorg Public Q Sponsor @ Watch 123 ~ 8 Fork 686 y yw Star 1.6k Sa
 About

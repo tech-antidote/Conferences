@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:25:42Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Christine Fossaceca_Handoff All Your Privacy (Again) .pdf` (184 pages)
 
-
 ## Slide 1
 
 ```
@@ -168,9 +167,7 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 ce 2S 15 16 23 24 31
 Access Address - 0x8E89BED6
 Packet Header
 Advertising Address - xx:xx:xx:xx:xx:Xxx
@@ -192,24 +189,13 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Oo zt 15 16 23 24 31
-Access Address - 0x8E89BED6 80 00 18 08 fb 00 08 OO 36 75 Oc OO OO 62 49 BO 6u- +b
-22 68 06 08 e4 de 42 00 d6 be 89 Se 42 Oe 17 df "h----B B
-Packet Header c8 98 b6 c2 07 ff 4c 08 12 02 BO G0 90 88 4 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data | Apple Type 00 00 18 00 fb G8 OO BO 36 75 Oc BO OO 62 9 OO 6u---b
-, f5 09 17 08 f2 eO 95 00 dé be 89 Be OO 14 be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 62 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-00 88 18 00 fb 00 GO BB 36 75 Oc OO OO 62 O9 AO 6u---b
-aa 94 bd 07 f1 de 77 08 d6 be 89 8e 40 id 8b Gf w @--0
-e4 9d 7e 60 02 01 06 13 ff 4c 00 Oc Ge OO e8 Ge ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 11
@@ -223,23 +209,13 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 80 00 18 08 fb 00 08 OO 36 75 Oc OO OO 62 49 BO 6u- +b
-= 22 68 06 08 e4 de 42 00 d6 be 89 Se 42 Oe 17 df "h----B B
-Facket Header c8 98 b6 c2 07 ff 4c 08 12 02 BO G0 90 88 4 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data | Apple Type 00 00 18 00 fb G8 OO BO 36 75 Oc BO OO 62 9 OO 6u---b
-, f5 09 17 08 f2 eO 95 00 dé be 89 Be OO 14 be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 62 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-00 88 18 00 fb 00 GO BB 36 75 Oc OO OO 62 O9 AO 6u---b
-aa 94 bd 07 f1 de 77 08 d6 be 89 8e 40 id 8b Gf w @--0
-e4 9d 7e 60 02 01 06 13 ff 4c 00 Oc Ge OO e8 Ge ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 12
@@ -263,22 +239,15 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 nee Mi : 6u---b
-p ( d6 be 89 8e 2 Oe 17 df "h B B
-desis RASC c8 98 b6 c2 07 ff 4c 00 “ID OF UO UO 90 88 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type : : ‘ ue ‘ 6u---b
 , |d6_be 89 se}oo 14 be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa [us be ss se]oo 06 ic e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-dé be 89 8e 140 1d 8b 6f w @--0
-e4 9d 7e 60 02 01 06 13 “PP™Fe“UT" UT e 20 €3 Oe ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 14
@@ -292,24 +261,14 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 ae A 6u---b
-42 Ge 17 df "“h----B B
-deeaess teenth c8 98 b6 c2 07 ff 4c 60 12 02 BO OO 90 88 O4 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ae ‘ 6u---b
 Apple Length Variable Length Apple Data 00 14 be 7b {
-75 da 7d 14 02 01 06 Oa ff 4c OO 10 05 06 1c e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-ou 6u b
-40 1d 8b 6f Ww @--o
-e4 9d 7e 60 02 01 06 13 ff 4c OO Oc De OO €3 Be ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 15
@@ -323,24 +282,14 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 ae u : 6u---b
-: 42 Ge 17 df "h----B B
-| Packet Header j c8 98 b6 c2 O7 ff 4c OO 12 02 G0 OO 90 88 O4 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ae ‘ 6u---b
 Apple Length Variable Length Apple Data 00 14 be 7b {
-75 da 7d 14 02 01 06 Oa ff 4c OO 10 05 06 1c e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-ou 6u b
-; 40 1d 8b 6f Ww @--o
-e4 9d 7e 60 02 01 06 13 ff 4c OO Oc De OO €3 Be ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 16
@@ -354,24 +303,16 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 ae u : 6u---b
-) 17 df "he. --B B
-| Packet Header j c8 98 b6 c2 O7 ff 4c 60 12 02 00 oo OO Be 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ ‘ 6u---b
 , 00 14]}bc 7b {
 mpale Leneih Variable Length pple sts 75 da 7d 14 02 01 6 Oa ff 4c 00 10 ea a4)pe ey u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-é a 6u---b
 [eaa]en of w @--0
-e4 9d 7e 60 02 01 06 13 ff 4c OO Oc He OO e€3 Be ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 17
@@ -385,24 +326,14 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 ae A : 6u---b
-17 df "h----B B
-deeaess teenth c8 98 b6 c2 07 ff 4c 60 12 02 BO OO 90 88 O4 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type é ‘ : ‘ Oe ‘ 6u---b
-; be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-ou 6u b
-8b 6F Ww @--o
-e4 9d 7e 60 02 61 06 13 ff 4c 00 Oc Oe OO €3 Oe ~" L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 18
@@ -416,24 +347,15 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 ae u : : 6u---b
 Packet_ Header } } 17 df "h B B
-c8 98 b6 c2 O7 ff 4c OO 12 O2 BO OO 90 88 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX |
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ Oe ‘ 6u---b
-; be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-ou 6u b
-; 8b 6F Ww @--o
-e4 9d 7e 60 02 01 06 13 ff 4c OO Oc De OO €3 Be ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 19
@@ -447,25 +369,17 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 nee Mi : ‘ 6u---b
 Packet_ Header ( } } i7 df "h B B
-c8 98 b6 c2 P7 ff 4c OO 12 O2 BO OO 90 88 UF L
 Advertising Address - xx:xx:xx:xxX!XX:XX |
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ Oe ‘ 6u---b
-; be 7b {
 Apple Length Variable Length Apple Data [7s da 7d 14]o2 01 06 Oa ff 4c 00 10 05 O6 TEST U} L
 de R
 Apple BLE Frame Format
-: 6u b
-; ) 8b 6f w @--o
-e4 9d 7e 60 02 01 06 13 ff 4c OO Oc De OO €3 Be ~ L
 Jo 6
-0 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 20
@@ -493,24 +407,17 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-07 ff 4c 0O 12 O02 OO OO 90 88 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
 ; {
 Apple Length Variable Length Apple Data 92 01 06 0a ff 4c 00 10 05 06 1c e7 U} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 22
@@ -524,12 +431,9 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-07 ff 4c 0O 12 O02 OO OO 90 88 04 L
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 a |
@@ -537,12 +441,8 @@ a |
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
 ; {
 Apple Length Variable Length Apple Data 92 01 06 0a ff 4c 00 10 05 06 1c e7 U} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 23
@@ -556,12 +456,9 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-07 ff 4c 0O 12 O02 OO OO 90 88 04 L
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 a |
@@ -569,12 +466,8 @@ a |
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
 ; {
 Apple Length Variable Length Apple Data 92 01 06 6a ff 4c 00 10 05 06 1c e7 U} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c ows 1e av d6 93 Od q \
 ```
 
 ## Slide 24
@@ -588,12 +481,9 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-O7) ff 4c 0O 12 O02 OO OO 90 88 04 L
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 a |
@@ -601,12 +491,8 @@ a |
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
 ; {
 Apple Length Variable Length Apple Data 92 01 06 6a ff 4c 00 10 05 06 1c e7 U} L
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 25
@@ -622,24 +508,17 @@ Length only                 7 Bytes
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-O7)ff 4c 00 12 02 00 OO 90 88 04 L
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Length only 7 Bytes
 a |
 | Type -OxFF | Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ 5 é ua : ‘ 6u---b
 Apple Length Variable Length Apple Data Beraives ca [rac ais os Of ice?” w.} A {
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 26
@@ -655,23 +534,17 @@ Length only                 7 Bytes
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 Sa 6u---b
 Packet Header ; _- ae "h B B
-e7Iff 4c 00 12 62 80 OO 90 88 04 L
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Length only 7 Bytes
 | Type -OxFF | Company ID - 0x004C Apple Type
 | Apple Length | Variable Length Apple Data | Apple Type | ; al ; ‘ 6u b
 | Apple Length | Variable Length Apple Data | ) 02 01 06 Ga ff 4c 00 10 05 06 ic e7 u-} L {
-52 b4 a7 aa de R
 Apple BLE Frame Format
 6u b
 Ww @--o
-02 01 06 13 ff 4c 00 Oc De OO e3 De ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 27
@@ -813,23 +686,16 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 oF es : oe ‘ : 6u---b
 Packet Header aed — "h B B
-12 02 00 00 90 88 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type oe ( \ 6u b
 Apple Length Variable Length Apple Data mesesice? wt A {
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-Oc Ge O80 e3 Ge ~ L
-96 85 71 c6 dd aa @8 5c b3 1e d7 dé 93 od qe \
 ```
 
 ## Slide 38
@@ -843,23 +709,16 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31
 Access Address - 0x8E89BED6 Sa 6u---b
 Packet Header aed — "h B B
-12]02 00 60 90 88 04 L
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ 5 é ua : ‘ 6u---b
 Apple Length Variable Length Apple Data ; “Tiles 06 ice? u} A {
-52 b4 a7 aa de R
 Apple BLE Frame Format
-f 6u b
 Ww @--o
-- .. Joc] Oe 00 63 Ge ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 93 Od q \
 ```
 
 ## Slide 39
@@ -874,7 +733,6 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Message Dec Hex
 Type Value | Value ie ? 6u---b
@@ -883,14 +741,10 @@ AirDrop 5 0x05 12]02 00 00 90 88 04 °
 Proximity 7 0x07
 Pairing
 Hey Siri 8 0x08 ie 6u-b {
-10] 05 06 ic e7 L
-Magic 11 Oxb 52 b4 a7 aa de i : )
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
 @
-Hotpot ee Qe @@ e3 Oe a" L .
-Nearby 15 Oxff 96 85 71 c6 dd aa 08 5c b3 te d7 db 93 Od q \
 Action
 Nearby Info 16 0x10
 FindMy 18 0x12
@@ -909,7 +763,6 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
 KS
@@ -919,14 +772,10 @@ AirDrop 5 0x05 12]02 00 00 90 88 04 t °
 Proximity 7 0x07 ?
 Pairing
 Hey Siri 8 0x08 OS 6u: <b :
-“fio}05 06 ic e7 =u} L
-Magic 11 Oxb 52 b4 a7 aa de R
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
 @
-Hotpot ee Qe @@ e3 Oe a" L .
-Nearby 15 Oxff 96 85 71 c6 dd aa 08 5c b3 te d7 db 93 Od q \
 Action
 Nearby Info 16 0x10
 FindMy 18 0x12
@@ -945,7 +794,6 @@ Apple Message Types
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
 KS
@@ -954,14 +802,10 @@ AirDrop 5 0x05 12]02 00 00 90 88 04 ” t °
 Proximity 7 0x07 ? oo
 Pairing Type 18: Find My
 Hey Siri 8 0x08 OS 6u: <b :
-i “fi0}05 06 ic e7 u-} L
-Magic 11 Oxb 52 b4 a7 aa de R
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
 @
-Hotpot ee Qe @@ e3 Oe a" L .
-Nearby 15 Oxff 96 85 71 c6 dd aa 08 5c b3 te d7 db 93 Od q \
 Action
 Nearby Info 16 0x10
 FindMy 18 0x12
@@ -980,25 +824,19 @@ Apple Message Types
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
 S
 Type Value Value Sage Types i oe bu. -b
-; ss Mo "h
 AirDrop 5 0x05 12]02 00 00 90 88 04 t °
 Proximity 7 0x07 ? .
 : samteplov.com
 Pairing Type 18: Find My p
 Hey Siri 8 0x08 oe 6u---b :
-i “fi0}05 06 ic e7 u-} L
-Magic 11 Oxb 52 b4 a7 aa de R
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
 @
-Hotpot ee Qe @@ e3 Oe a" L .
-Nearby 15 Oxff 96 85 71 c6 dd aa 08 5c b3 te d7 db 93 Od q \
 Action
 Nearby Info 16 0x10
 FindMy 18 0x12
@@ -1018,7 +856,6 @@ Apple Message Types
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex APPle Me
 S
@@ -1027,15 +864,11 @@ AirDrop 5 0x05 12]02 00 00 90 88 04 ” t °
 Proximity 7 0x07 ? oo
 Pairing Type 18: Find My
 Hey Siri 8 0x08 oe 6u---b :
-i “fi0}05 06 ic e7 u-} L
-Magic 11 Oxb 52 b4 a7 aa de R
 Switch
 Type 16: Nearby
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
 @
-Hotpot ee Qe @@ e3 Oe a" L .
-Nearby 15 Oxff 96 85 71 c6 dd aa 08 5c b3 te d7 db 93 Od q \
 Action
 Nearby Info 16 0x10
 FindMy 18 0x12
@@ -1066,7 +899,6 @@ Type 16: Nearby
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
 S
@@ -1075,8 +907,6 @@ AirDrop 5 0x05
 Proximity 7 0x07 ?
 Pairing
 Hey Siri 8 0x08 oe 6u: <b :
-; 10}05 06 1c e7 u-} L
-Magic 11 Oxb 52 b4 a7 aa de R
 Switch
 Type 16: Nearby
 Handoff 12 Oxc
@@ -1101,11 +931,8 @@ Type 16: Nearby
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 i ‘i ‘i e . 6u b
 Access Address - 0x8E89BED6 ‘ 4 : i {
-10)05 06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
@@ -1129,11 +956,8 @@ Type 16: Nearby
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 i ‘i ‘i e . 6u b
 Access Address - 0x8E89BED6 ‘ 4 : i {
-1005) 06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
@@ -1157,9 +981,7 @@ Length = 5
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31 A A ‘ ys ‘ ‘ 6u b
 Access Address - 0x8E89BED6 ‘ 4 : a si {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
@@ -1185,9 +1007,7 @@ CRC
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 i ‘i ‘i e . 6u b
 Access Address - 0x8E89BED6 ‘ 4 : ‘ a é {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
@@ -1210,9 +1030,7 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 i ‘i ‘i e . 6u b
 Access Address - 0x8E89BED6 ‘ 4 : ‘ a é {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
@@ -1235,11 +1053,8 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-i) 7 iB 15 16 23 24 31 ‘ ‘ : ‘ at ‘ ‘ 6u b
 Access Address - 0x8E89BED6 ‘ 4 i {
-06 1c e7 u-} L
 Packet Header 52 b4 fl R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
@@ -1263,11 +1078,8 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 7 iB 15 16 23 24 31 ‘ ‘ : ‘ ee ‘ ‘ 6u b
 Access Address - 0x8E89BED6 ‘ 4 f {
-06 1c 7 u-} L
 Packet Header 52 b4 R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
@@ -1339,13 +1151,9 @@ Type 12: Handoff
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-sah 6 b
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header ' ~~ Ge 00 e3 Oe ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 do 93 Od q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type 12: Handoff
@@ -1368,13 +1176,9 @@ Length = 14
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-Sah 6u b
 Access Address - 0x8E89BED6 ‘ w @--0
 Packet Header ' “a Ge} 00 e3 Oe ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 d6 US od q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Length = 14
@@ -1397,14 +1201,9 @@ CRC
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-mah 6 b
 Access Address - 0x8E89BED6 : w 4 @--0
-‘ Tol :
 Packet Header ' , 00 e3 Oe ~ L
-96 85 71 c6 dd aa 08 Sc b3 ie d7/d6 93 Od q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1424,13 +1223,9 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-Sah 6u b
 Access Address - 0x8E89BED6 ‘ w @--0
 Packet Header ' , 00 e3 Ge ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 i q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1452,13 +1247,9 @@ Cut/Copy performed
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-mah 6 b
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header , nea ko €3 Ge ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 , q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type Cut/Copy performed
@@ -1480,13 +1271,9 @@ IV Seq Num
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-mah 6 b
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header : otha ~ L
-96 85 71 c6 dd aa 08 5c b3 ie d7 i q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type IV Seq Num
@@ -1508,13 +1295,9 @@ Auth Tag
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-mah 6 b
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header , » ~ L
-96985 71 c6 dd aa 08 5c b3 ie d7 i q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Auth Tag
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1536,13 +1319,9 @@ Encrypted Payload
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
-mah 6 b
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header ol vt ~ L
-4,85 71 c6 dd aa 08 5c b3 ite d7 i q \
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Encrypted Payload
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1575,7 +1354,6 @@ _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message
 Type
@@ -1614,10 +1392,6 @@ Oxfe
 Oxff
 0x10
 0x12
-00 e3 80 00 d6 be 89 8e 37 OO dé be 89 Be 46 25 7 F%
-76 b6 5b 26 f8 4f te ff 4c 00 07 19 O1 OF 20 23° v-[&-0--L #
-99 8f 01 00 04 cc 89 33 65 18 72 33 c9 3e te 39 3 e-r3->:9
-28 f5 a1 79 ef bi 83 52 (--ys--R
 Type 7: Proximity
 Pairing
 ```
@@ -1635,12 +1409,7 @@ Type 7: Proximity Pairing
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Oo zt 15 16 23 24 31 i p 7 F%
-[o7]19 @1 Of 20 23. ~v-[&-0-- L #
-Access Address - 0x8E89BED6 99 8f @1 00 4 cc 89 33 65 18 72 33 c9 Ze te 39 3 e-r3->-9
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type 7: Proximity
@@ -1664,12 +1433,8 @@ Length =25
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 19] : a 7 F%
-19}01 Of 20 23 v-[&-0 L #
 pias (Belinea UaSeR enews 99 8f 01 00 64 cc 89 33 65 18 72 38 C9 3e te 39 3 e-r3->-9
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length =25
 Length / Type - 0x01 / Flags (Optional) Length
@@ -1692,12 +1457,9 @@ Airpods Prefix
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-oO ; a | 15 16 23 24 31 P ron i p 7 F%
 _ 19fo1jof 20 23° v-[&-0-- L #
 Access Address - 0x8E89BED6 99 8f @1 00 4 cc 89 33 65 18 72 sofa] or te 39 3 e-r3->-9
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length
 Airpods Prefix
@@ -1720,12 +1482,9 @@ Device Model
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 > uk. _ if 7 F%
 — 19 o1fef 20]23  v-[&-o-- L #
 Access Address - 0x8E89BED6 99 8f 01 00 04 cc 89 33 65 18 72 33 eafor 2e]23 3 e-r3->-9
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length
 Device Model
@@ -1756,12 +1515,9 @@ Device Model
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 > uk. _ if 7 F%
 — 19 o1fef 20]23  v-[&-o-- L #
 Access Address - 0x8E89BED6 99 8f 01 00 04 cc 89 33 65 18 72 33 eafor 2e]23 3 e-r3->-9
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length
 Device Model
@@ -1816,11 +1572,8 @@ Left Airpod Right Airpod Is charging?  Case
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 i 7 F%
 TS Ree ~QSFROREDG 99 arferfee B4'cr ee" as 65 1872 a3 co Se le 39 wk. 8 @.ra.>-9
-Packet Header 28 f5 aT 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Lid Open Count
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1842,11 +1595,8 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-° 78 15 16 23 24 31 lin 7 F%
 peas Adee ONS FRIEERG 99 at 01 bop: ean oo 18 72 33 co 30 ie 30 ere 361328
-Packet Header 28 f5 al 7TH ef bi 83 52 (--y R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Device Color
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1878,9 +1628,7 @@ Apple BLE Frame Format { 0x04, "Pink" },
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 ; ) 7 F%
 sree MAb ~/ORSPROREDS 99 af 01 e0[ea] ec Benss 65 18 72 33 C8 3e ie 30 ee 361328
 Packet Header 28 f5 al 79°EMb1 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
@@ -1904,11 +1652,8 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 ne 7 F%
 Access Add: Ox8E89BED6 dono ef os ov [eo 1 #
-ESS EES 99 8f 01 00 O4|cc 89 33 65 18 72 33 c9 3e te 39 3 e-r3->-9
 Packet Header 28 f5 al 79 ef|bi1 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Encrypted Data
@@ -1931,11 +1676,8 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-0 78 15 16 23 24 31 ; ) 7 F%
 sree MAb ~/ORSPROREDS 99 Sf 61 OD Ste TnEnay 65 18 72 33 C8 3e ie 30 ee 361328
-Packet Header 28 f5 ail 79 ef bi 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
@@ -1998,10 +1740,6 @@ AirPods Prefix: 01
 AirPods Device Model: AirPods 2 (0x0f20)
 AirPods Status: Both AirPods in ear (0x0b)
 v AirPods Battery Levels & Charging Status
-© cf 80 00 d6 be 89 8e 37 OO d6 be 89 Be 46 25
-05 85 dO 34 79 1e ff 4c 00 07 19 01 OF 20 Ob
-8f 01 00 05 77 23 ee b6 3f cf 2a 7c 13 7b 59
-a5 di a4 4d d8 89 24
 ```
 
 ## Slide 82
@@ -2011,7 +1749,6 @@ Continuity Protocol Explained _It’s not a bug, it’s a feature!_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 '‘ AirTag stalking: Whatisit,andhow ~»,.
 can | avoid it? "tt,
@@ -2030,12 +1767,9 @@ Type 18: Find My
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex
 Type Value Value 6u---b
-. é : i i Z:s U>
-AirDrop 5 0x05 12] 02 14 02 9c 12 57 T L W
 Proximity 7 0x07 _
 Pairing Type 18: Find My
 Hey Siri 8 0x08
@@ -2084,7 +1818,6 @@ Apple BLE Frame Format
 
 ```text
 @ Continuity Protocol Explained
-78 15 16 23 24
 31
 Access Address - 0x8E89BED6
 Packet Header
@@ -2094,16 +1827,10 @@ Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type
 Apple Length Variable Length Apple Data
 Apple BLE Frame Format
-c6 7a 23 18 60 35 3e e7
-3f @2 3e d5 39 6a
 It’s not a bug, it’s a feature!
 6u b
-6 z:s U>
-12 oq 14 02 9c 12 57 T L W
 6u b
 Z ~%U>
-12 bal 10 f9 62 a3 95 Be T L b
-46 78 cb 27 71 cf bd 93. -z#.°5>. F--'q
 ```
 
 ## Slide 87
@@ -2119,22 +1846,15 @@ PAUSE: WHY ARE THESE DIFFERENT?!
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 i i i i 6u b
 Packet Header " zs *- U>
-12 oq 14 02 9c 12 57 T L Ww
 Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type
 Apple Length ] Variable Length Apple Data Apple Type
 Apple Length Variable Length Apple Data
 6u---b
-’ ce ~ a4t>
-12 bal 10 f9 62 a3 95 Be ~T L b
-Apple BLE Frame Format c6 7a 23 18 G0 35 3e e7 46 78 ch 27 71 cf bd 93. -z#."5>- F--'q
-3f 02 3e d5 39 6a ?->-9j
 PAUSE: WHY ARE THESE DIFFERENT?!
 ```
 
@@ -2594,14 +2314,9 @@ Length  = 25
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 | i 6u : b
 : %U>
-Packet Header 12 i) 10 f9 62 a3 95 Be ~T L b
-Advertising Address - xx :xx:xX!XX!XX!XX c6 7a 23 18 60 35 3e e7 46 T8 cb 27 71 cf bd 93 z#.°5>. F--'q
-3f 02 3e |d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN S ted
 eparate
@@ -2731,14 +2446,10 @@ Separated
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 6u : b
 %U>
 Packet Header T L b
-Advertising Address - xx :xx:xx:xx!XX:XX c6 7a 23 18 GO 35 se e7 ses fe tay lu EE ZH Se F ‘q
-3f 02 3e |d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
@@ -2763,14 +2474,10 @@ Separated
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 6u : b
 %U>
 Packet Header T L b
-Advertising Address - xx :xx:xx:xx!XX:XX C6 fa 23 18 GO 35 se e7 ses fe tay lu EE ZH Se F ‘q
-3f 02 3e |d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
@@ -2795,14 +2502,10 @@ Apple BLE Frame Format
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 6u : b
 %U>
 Packet Header T L b
-Advertising Address - xx :xx:xx:xx!XX:XX C6 fa 23 18 GO 35 se e7 ses fe tay lu EE ZH Se F ‘q
-3f 02 3e |d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
@@ -2843,14 +2546,10 @@ Separated
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 6u : b
 %U>
 Packet Header T L b
-Advertising Address - xx :xx:xx:xx!XX:XX C6 fa 23 18 GO 35 se e7 ses fe tay lu EE ZH Se F ‘q
-3f 02 3e |d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
@@ -2875,14 +2574,10 @@ Separated
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-i) 78 15 16 23 24 31
 Access Address - 0x8E89BED6 6u : b
 %U>
 Packet Header T L b
-Advertising Address - xx :xx:xx:xx!XX:XX c6 fa, 2d 18 GOSS se e7 ses fe tay lu EE ZH Se F ‘q
-3f 02 3e)|d5 39 Ge ?->-9j
 Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
@@ -2925,8 +2620,6 @@ Variable Length Apple Data
 Apple BLE Frame Format
 It’s not a bug, it’s a feature!
 12 filo] fo 62
-18 60 35 e7 46 T8 cb 27 71 cf bd 93 z#-°5>. F--'q
-d5 39 Ge ?->-9j
 NL Separated
 ```
 
@@ -3093,7 +2786,6 @@ airtag
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . , wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 No GPS but... BLUETOOTH! 6)
 6 ° PubKey
@@ -3126,7 +2818,6 @@ airtag
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Apple Server
 »
@@ -3150,7 +2841,6 @@ airtag
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . . . wy
 @ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Apple Server
 No GPS but... BLUETOOTH! 0
@@ -3391,10 +3081,6 @@ ff
 Ac
 3e
 23 24
-80 36 75 Oc OO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Packet Header
@@ -3465,10 +3151,6 @@ ff
 Ac
 3e
 23 24
-80 36 75 Oc BO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Packet Header
@@ -3539,10 +3221,6 @@ ff
 Ac
 3e
 23 24
-80 36 75 Oc BO OO 62 O9 OO
-06 d6 be 89 Se 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Packet Header
@@ -3618,10 +3296,6 @@ ff
 Ac
 3e
 23 24
-80 36 75 Oc OO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Bytes 0-5
@@ -3698,10 +3372,6 @@ Ff
 Ac
 3e
 23 24
-80 36 75 Oc OO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Bytes 0-5
@@ -3778,10 +3448,6 @@ Ff
 Ac
 3e
 23 24
-80 36 75 Oc OO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Bytes 0-5
@@ -3825,13 +3491,7 @@ Apple BLE Frame Format
 2 54
 c6
 3T
-0 7 8
 28 byte key
-00 18 00
-85 d7 Ob
-07 14 d9
-fa 23 18
-02 3e d5
 15 16
 Tb
 17
@@ -3844,10 +3504,6 @@ fF Ac
 35 3e
 6a
 23 24
-80 36 75 Oc OO OO 62 O9 OO
-06 d6 be 89 8e 60 25 55 3e
-06 12 19 10 f9 62 a3 95 Be
-e7 46 T8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Bytes 0-5
@@ -3891,7 +3547,6 @@ Apple BLE Frame Format
 2 54
 c6
 3T
-0 7 8
 28 byte key
 90
 85
@@ -3920,10 +3575,6 @@ fF Ac
 35 3e
 6a
 23 24
-00 36 75 Oc O00 O00 62 O9 OO
-00 d6 be 89 8e 60 25 55 3e
-86 12 19 10 f9 62 a3 95 Se
-e7 46 f8 cb 27 71 cf bd 93
 31
 Access Address - 0x8E89BED6
 Packet Header

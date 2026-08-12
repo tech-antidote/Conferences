@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:30Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Bob Lord&Steve Tran_Managing Security Culture Half Life.pdf` (15 pages)
 
-
 ## Slide 1
 
 **Managing Security Culture Half Life Bob Lord** · Former CSO, DNC **Steve Tran** · Former CSO, DNC
@@ -202,8 +201,6 @@ Don't secure it. Turn it off. Continuous archaeological work: finding systems no
 ```text
 Over the top events create memorable lessons
 Round 1:
-eee ee ee © eee ee ee ©
-ree ee ee
 100 Security Experts bee “
 asked, “What are biggest res
 security myths?” ioe
@@ -218,7 +215,6 @@ eo ae
 eo
 eed
 Build your own
-6 | Dee
 eocececs a pecce
 eerese , , peecce
 eccced) | Domtpluginto ¢ pecce

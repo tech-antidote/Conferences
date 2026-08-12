@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:51:20Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Song Liu & Zhechang Zhang & Hengkai Ye & Hong Hu - One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks.pdf` (37 pages)
 
-
 ## Slide 1
 
 One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks
@@ -486,7 +485,6 @@ ghttpd filename* protocol.c:127 (9, 0, 5912) @ 2002-1904 SBoF AW
 wu-ftpd RootDirectory ftpd.c:1029 - (0, 0, 7322) 9
 anonymous ftpd.c:2527 (0, 0, 7432) 9 .
 ftpd.c:2893 (0, 0, 8341) cv) |
-guest ftpd.c:2893 (0, 0, 37715) 9 G D B E mM u atl O n 3 6
 rval ftpd.c:2708 (8, 0, 0) 9
 jhead RegenThumbnail jhead.c:978 (0, 0, 2856) © 2016-3822 IO AW
 EditComment jhead.c:1003 (0, 0, 2856) @ 2016-3822 IO AW

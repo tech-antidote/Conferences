@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:03:17Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Alisa Esage_Unveiling the Mysteries of Qualcomm's QDSP6 JTAG A Journey into Advanced Theoretical Reverse Engineering.pdf` (32 pages)
 
-
 ## Slide 1
 
 Unveiling the Mysteries of Hexagon QDSP6 JTAG
@@ -174,9 +173,7 @@ and efficient processor in its class for Windows.
 With a powerful Al engine, including the world’s fastest NPU for laptops, Snapdragon” X Elite enables
 Al-enhanced apps that unlock focus, flow and innovation. Because laptops powered by Snapdragon
 technology work equally well plugged-in or on battery, your employees can work from wherever they need to.
-Up to Up to
 Snapdragon* X Elite: SKU Comparison Table
-2x 5.4x i
 FASTER NPU MORE EFFICIENT NPU secon | parm | cm
 than M3! than Core Ultra 72 ss :
 ```
@@ -327,7 +324,6 @@ A5XX_RBBM_CLOCK_CNTL, @x@);
 + (thread->debug_mode) ,
 ns 0)
 +)
-+ . ;
 i Mentions in open source
 +DEF_M . .
 Male Google knows little aside code added and removed...
@@ -586,7 +582,6 @@ ISDB Registers
 ; q ISDB_ aCe
 CRIPTION ; SS UNTRUSTED| guPERVISOR
 MODE*
-sonst | _Woostaros | oo | e | «® | R
 [BRKPTINFO | BREAKPOINTINFO_| og | _R | NONE_| NONE
 :AKPOINT 0 ADDRESS NONE
 BREAKPOINT 0 CONFIG Oxs NONE
@@ -727,7 +722,6 @@ Class: SYSTEM (slot 3)
 Notes
 = = This is a solo instruction. It must not be grouped with other instructions in a packet.
 Encoding
-31/30 29 28 27 26 25 24 23 22 21 20 19 18 17 16151413 1211109 8 7 6 5 43210
 ICLASS ‘sm Parse
 o4
 1
@@ -845,7 +839,6 @@ qurtkernel.o
 ```text
 -Start :@00004F8 _AFB: DA
 : memw_phys (r@, r1) }
-e rT ) e @) f asl (r2, #loc_10)
 q :
 loc_500:
 immext (#9)

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:25Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens_wp.pdf` (12 pages)
 
-
 ## Slide 1
 
 # **Three New Attacks Against JSON Web Tokens**

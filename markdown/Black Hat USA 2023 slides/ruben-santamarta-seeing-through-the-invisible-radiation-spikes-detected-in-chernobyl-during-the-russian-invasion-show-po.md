@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:56Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Ruben Santamarta_Seeing Through the Invisible Radiation Spikes Detected in Chernobyl During the Russian Invasion Show Possible Evidence of Fabrication.pdf` (80 pages)
 
-
 ## Slide 1
 
 # Seeing Through The Invisible **RadiationSpikesDetectedIn Chernobyl DuringTheRussianInvasionShow PossibleEvidenceOfFabrication**
@@ -322,19 +321,16 @@ USA &
 
 ```text
 bis hat
-LU IS AN Oe
 VY
 CHERNOBYL EXCLUSION ZONE
 (&) ¥
 a >)
-oes El i ;
 ¢ SkyLINK system for data transmission
 ° ERMS measuring stations :
 ° /1 Dose rate probes - GammaTRACER Wide Radio
 ‘ °
 . A
 ‘ '
-y aL it
 e System for data transmission between measurement
 ocations and data centra
 ```
@@ -631,7 +627,6 @@ https://www.irsn.fr/EN/newsroom/News/Docu ments/IRSN_Information-Report_Fires-in
 black hat
 USA 2@0es3
 Unphysical timings
-Feb, 24 }
 Russian troops enter the CEZ via Belarus
 Intense traffic of military vehicles
 Z Russian coy heading to Wysbherod [yideo) ———
@@ -646,7 +641,6 @@ Radiation spikes start being reported
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a " ; Ss Re a ae ae a. = nae - Pe => : .
 ‘ia. ee an ——s “iA
 February 24 ay. Prypyyat' aM, ol i Ss 4 \
 Mpun'atb ~

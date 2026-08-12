@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:36Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ryan Hausknecht, Simon Maxwell-Stewart - Wrestling with a Python Escaping Copilot Studio's AI-Guarded Sandbox - DEFCON2026 embargo.pptx` (68 pages)
 
-
 ## Slide 1
 
 **SIMON MAXWELL-STEWART & RYAN HAUSKNECHT WRESTLING WITH A PYTHON**
@@ -34,7 +33,6 @@ converted_at: "2026-08-12T00:40:36Z"
 ```text
 qlee
 phantomiabs a be
-To. ae as
 “Ayes
 SIMON MAXWELL-STEWART & RYAN HAUSKNECHT
 WRESTLING WITH A PYTHON
@@ -182,7 +180,6 @@ that deploy them.
 
 ```text
 POST v https://api.github.com/repos/ (branches/main/rename Send v
-=C r z rs (8 Body @
 none form-data x-www-form-urlencoded @ raw binary GraphQL xs
 ubuntu@webserver:~/flask-research-mini$ sudo .venv/bin/python http-mini-web-server. py
 * Serving Flask app ‘http-mini-web-server'
@@ -380,7 +377,6 @@ Suite of low-code tools for building:
 ```text
 Copilot
 Studio
-QO __ ws
 User
 — owner-—_> BA
 aan
@@ -401,7 +397,6 @@ Follows Has Can
 y Use
 = XS
 v—| O86 oe
-~/ Cy N
 Instructions Metadata Tools
 N
 OT
@@ -423,7 +418,6 @@ Connected
 Foundry Agent
 gus)
 Teams
-> \ ~—m
 Can
 Salesforce Run Sharepoint
 (+1000s others)
@@ -586,7 +580,6 @@ Listing contents of C:\app
 :\app\global_paths. py
 :\app\Google.Protobuf.dll
 :\app\grantaclsonhost.ps1
-eh acemcaireen: er ee ee ee rT
 INADNDNDNADDADDADADADNDNADADNDNDAADADAADAADAANAANAANAAAA
 ```
 
@@ -604,7 +597,6 @@ import sys
 for m in sys.modules.values():
 try:
 for v in vars(m).values():
-for f in F:
 try:
 fd = v.open(f, 0)
 print(f, v.read(fd, 999999))
@@ -1139,6 +1131,5 @@ jee 7
 @) cast 9
 DARKREADING FEATURED IN
 How Scatt@red Spider Weaponizes Active Directory DARK
-0 ~ , RE AD | IN e linkedin.com/company/
 X - @btphantomlabs
 ```

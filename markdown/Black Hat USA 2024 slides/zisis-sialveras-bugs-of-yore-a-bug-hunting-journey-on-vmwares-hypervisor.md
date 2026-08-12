@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:41:29Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Zisis Sialveras_Bugs of Yore A Bug Hunting Journey on VMware's Hypervisor.pdf` (45 pages)
 
-
 ## Slide 1
 
 Bugs of yore: A bug hunting journey on VMware’s hypervisor
@@ -34,7 +33,6 @@ Bugs of yore: A bug hunting journey on VMware’s hypervisor
 
 ```text
 ON Ne
-: a" / SS
 pisek hat
 USA 2024
 AUGUST 7-8, 2024
@@ -321,7 +319,6 @@ ate *ts;
 (indexData, sizeof indexData)
 (256, 256, SVGA3D_A8R8G8B8)
 (CID, &ts, 1);
-ge = 2;
 e SVGA3D_TS_BIND_TEXTURE ;
 ue textureSid;
 QO;
@@ -460,10 +457,8 @@ if (Context->RenderTargets[i] != exffffffff) { (CID, &ts, 1);
 *Destination = ; ts[Q@].name = SVGA3D_TS_BIND_TEXTURE;
 } ts[@].value = textureSid;
 } }
-/1 (2) VE
 Destination = UAFStructPtrGlobalContainer + @x2c@;
 if (*( *)(ContextPtr + ox1a8) != oxffffFfft) { ; (CID, &decls, 1, &ranges, 1);
-/* 0. */ A
 *Destination = (cacheobj, 2, ...); decls[@].identity.type = SVGA3D_DECLTYPE_FLOAT3;
 } else { decls[@].identity.usage = SVGA3D_DECLUSAGE_POSITION;
 , “Destination = 3 decls[@].array.surfaceId = vertexSid;
@@ -629,7 +624,6 @@ for (Counter = 1; Counter < @x67; Counter++) {
 SurfacelIdBase, SurfaceIdBase, 9x20, );
 SurfaceIdBase += 9x20;
 }
-// Use it
 (VULN_CONTEXT_ID, VULN_CONTEXT_ID, SurfaceIdBase,
 SurfacelIdBase, 90x20, );
 ```
@@ -647,7 +641,6 @@ black hat
 USA 2024 2.
 INTERESTING USE
 if (UAFStructPtrContainer->DepthStencilViewObject && UAFStructPtrContainer->RenderTargetViewObjects[@]) {
-ret = (
 UAFStructPtrContainer - >DepthStencilViewObject,
 UAFStructPtrContainer - >RenderTargetViewObjects[@]);
 ```
@@ -756,7 +749,6 @@ SVGA3dSize Dimensions;
 . size = (
 FUNCPTR Init; SurfaceFormatCaps[surface->type], size3d, rowpitch);
 FUNCPTR Fini;
-[/ as. }
 *Buffer[ ];
 size3d = // calculated from surface and mipmap_level
 rc->Buffer[mipmap_level++] = (size);

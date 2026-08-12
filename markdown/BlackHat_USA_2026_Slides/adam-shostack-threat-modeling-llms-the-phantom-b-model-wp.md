@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:04:21Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Adam Shostack_Threat Modeling LLMs The PHANTOM-B model-WP.pdf` (9 pages)
 
-
 ## Slide 1
 
 # **PHANTOM-B**

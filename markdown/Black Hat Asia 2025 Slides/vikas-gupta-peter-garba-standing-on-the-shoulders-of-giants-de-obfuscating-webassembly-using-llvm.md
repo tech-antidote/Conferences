@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:02Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Vikas Gupta & Peter Garba_Standing on the Shoulders of Giants De-Obfuscating WebAssembly Using LLVM.pdf` (80 pages)
 
-
 ## Slide 1
 
 **Standing on the Shoulders of Giants** De-Obfuscating WebAssembly Using LLVM
@@ -44,14 +43,12 @@ Agenda
 8
 9} wari = param_2 & 3;
 10) iVar3 = (param_2 * Oxbaaaddbf) * (param_2 | 4);
-11) if (uVari != 2) {
 12) iVar3 = (param_2 & 5) * (param_2 + Oxbaaadobf);
 +
 14) ivar2 = (param_2 | Oxbaaaddbf) * (param_2 ~ 2);
 15) if (uvar1 Dae
 16 ivar2 = (param_2 & @xbaaad@bf) * (param_2 + 3);
 +
-18) if (uVar1 < 2) {
 19) iVar3 = ivar2;
 +
 21) return iVar3;
@@ -237,21 +234,10 @@ possssesseeee-- | pessssssseee-- ; poccccccctsen- 1
 i]
 Source Level ' : IR Level ; = Wasm Level N
 - i
-i] ! 1 oon "
-! ; i! Ha \" Obf. Wasm
 C Source P——*+>| C Source P= +>) LLVMIR [—— >] WebAssembly -+— Bi
 ' Emgcripttn Glan i inary
 1 (dlang)t ou 7 "
-] t 1 | oy "
-t i] ! og ul
-i] i) 1 og ul
-1 ' ' oa "
-i] i) i] - oq ™ u
-! ’ ' ‘4 u
 ' Tigress 5 & O-LLVM 4 § wasm-mutate | 1!
-i) ' 1 | r]
-' ' I ty '
-lo ee ee ee eee eee a} lease eee ewe ee 2 ee re
 14
 ASIA 2025
 ```
@@ -338,7 +324,6 @@ O-LLVM Instruction Substitution (Loop=1)
 
 ```text
 bfuscation: O-LLVM Instruction Substitution
-if (mod == 0) result = (n | OxbaaadObf) * (2 * n) —
 . *0O-LLVM Instruction
 Substitution (Loop=3)
 O-LLVM Instruction
@@ -491,17 +476,10 @@ Local_10 = ((uVari1 & «1098326 | uVari2 & Oxfe167cd9) ~
 SATURN: Compiler Based Deobfuscation
 r sree erer2= q PoC 0 SSS SSS S BES SSESSSSS5 S85 S88SS8SSs880° =eeeee = — 7 ee
 Input 1 : Deobfuscation ! 1 Output '
-’ 1 u 1 ' 1
-1 1’ " ' a
 | MachO File |! Optimizations "  ——+ Shared Object]!
 w
 it Pt
-' 1 |! Y i u 1
-i] u '
 i| ELF File : +>] Translation }——»| LLVMIR |—> Brightening = H f
-’ 1 U " " '
-1 1 J { 4 in 1
-i tit et
 \
 i PE File — ' OP Detection Injection —— Patched File
 ! I
@@ -669,7 +647,6 @@ J "
 Nf W/E 22? ->| LivVMIR | lang -—»| Object File
 J
 Binary ' | -
-1 ——<—<—_ f
 i) i)
 es eles eee ee eee ene eae ae eee eee ne J
 (2)
@@ -709,17 +686,12 @@ ASIA 2025
 Wasm Code Lifting: Lifting Idea!
 POT eee 7
 penne oan eee 5 pocesssssseaey ee t Pseudo C '
-' 1 ' 1 ! ' 1
 i]
 !  Wasm Level c ! Source Level [ IR Level ' dion EB ee " '
 LJ ! ' 4 ' " >|Native Object/——__ C Source |,
-" 1 t " i) " IDA Pro # 1
-I " ' 7 ' " Ghidra ' ’
-1 u qi a 1
 rT 1 1 ' 1 tl Binary Ninja -_ ~~
 u i C Source
 u | Wasm Binary R==¥ lang -O0 1 1
-. f ' !-emit-livm | i of
 Leeense------ 5 bososossesass zi ' jt clang -03 -< —, >| Wasm Object
 ' ; -target wasm
 1 i]
@@ -767,12 +739,10 @@ Ton (inl W= Os Vv <95s i++) {
 sum += arr[i];
 }
 // MBA based Opaque Predicate
-if (((~a|b)+(a&b)-~(a%b)) - (a*b) == 0) {
 sum += 1911;
 } else {
 sum += 2102;
 }
-return a + b + sum;
 bisekhat
 ASIA 2025
 int add(int a, int b) {
@@ -813,7 +783,6 @@ i32.const 15 } Hd
 i32.add
 end_function clang -c + IDA Pro
 int add(void *a1, int a2, int a3) {
-return a2 + a3 + 15;
 +
 pif hat 37
 ASIA 2025
@@ -881,21 +850,18 @@ Wasm Code Lifting: Deobfuscation idea!
 prosaaecaen a
 Ilvm | Pseudo C "
 rot !
-1 ' '
 Wasm Level 1 i 1 IR Level clang -O3-c J 1
 oH ro ' ¥|Native Object % C Source |,
 Wi tot IDA Pro ! 1
 DE f Ghidra H '
 ; 1 ty Binary Ninja. _.----.---+
 Wasm Binary >] C Source tt clang -OG 4 LLVM IR
-' 1 -emit-livin ' w. Obj
 | tot clang -O3 -c CSCS
 H ' target wasm
 oot
 1 + ! | Optimisations
 ! rot Runtime H
 H SiMBA++ ! +p} Hl
-1 ~ Hi "
 KLEE 1 | 1 Helens td i
 H SOUPER t H H
 Leese e eesssS=ssee- ba eeeeeeescsesssccsesesessseseees See
@@ -937,7 +903,6 @@ ASIA 2025
 
 ```text
 Wasm Code Lifting: Squanchy - Runtime Modeling
-| el |
 Runtime
 Injection
 Inlining
@@ -1053,7 +1018,6 @@ Init Imports it Allecate F
 / Init Globale i ft | Allocate
 . i Call Runtime /:! F F FuncRe H
 i Inlining f Initializer " Mark i H it F
-i i i , ; it Allocate it
 la=saa=s- || Functions | |) Init Tables 7 eecer 4
 H ‘| for inlining | i i xternRef i
 | optimisations | HI E Tnit Elen/bate F Load/Stores
@@ -1081,17 +1045,13 @@ x Allocate w2c Allocate 7
 Injection : |__instance} ; i oot memo i
 Call Runtime i Allocate
 —= = H Initializer i H i FuncRef ;
-! _ ' : i Inline H i i
 Inlining : | Init Imports | | Functions: an |WNPAllocaTe i
 = J : i Recursively HE |_ExternRef :
 i | Init Globals | *——___; i ot
 Optimisations E | |i | Load/Stores
 [Init Memories} * nt H
-i i te ee
-¢ i 1 H ' i TableBase H
 Brightening i = i nt
 ' | Lifted Wasm | } ' fou
-Qa H Code ' ' i _ '
 blackhat Le eel \eeeeeeeeezeeezsszsszzssseed {neadeeeeeerecsecenccaeecd ts
 ASIA 2025
 ```
@@ -1109,7 +1069,6 @@ Wasm Code Lifting: Squanchy - Runtime Injection
 Runtime
 Vv
 Injection
-i a= == == ae |
 §| — Inlining 1
 leasa=2el
 | optimisations |
@@ -1240,7 +1199,6 @@ Wasm Code
 Optimisations nitialisation
 W +
 Lifted Wasm
-rr - — - id | i Code i
 §j Brightening |! : :
 black hat | cecenenecsctstenreseeeecd ba ceceseecennsssscraneneed 0
 ASIA 2025
@@ -1302,10 +1260,6 @@ Deobfuscation
 iatatalaianaiaia eeeceesssSSSseSseeeeeeweene IRE OSS 5
 1 '
 Lifting Deobfuscation |
-' it [
-' it 1
-1 it 4
-Obf. Wasm 0 ~ a0 aa ' . .
 Binary | Wasm2C Squanchy | LLVM IR Hie ??7 ra Clang >| Object File
 ! i:
 eee ee a bee wee ------ a
@@ -1328,7 +1282,6 @@ eee
 int calc(unsigned int n) {
 unsigned int mod =n % 4;
 unsigned int result = 0;
-if (mod == 0) result = (n | OxBAAADOBF) * (2 * n); |=
 else if (mod 1) result = (n & OxBAAADOBF) * (3 + n)
 else if (mod == 2) result = (n * OxBAAADOBF) * (4 | n);
 else result = (n + OxBAAADOBF) * (5 & n);| Of
@@ -1372,7 +1325,6 @@ local_24 = (param_2 & OxbaaadObf )
 *
 (param_2 + |
 F
-lse if (iVar] == 2) {
 local_24 = (param_2 ~ OxbaaadObf )
 *
 (param_2 | 4); [|
@@ -1463,8 +1415,6 @@ Hn UU DUD UE UE ERLE U TUE EEUU LGES === uF eee eee 1
 a i)
 Lifting i Deobfuscation |
 tt
-i) wt '
-i] wt '
 Obf. Wasm |_!. ~ im LLVM ' ; ;
 Binary >| Wasm2C |— >| Squanchy LLVM IR iid Optimisations nw Clang Object File
 ee Wee eaucceccesuessscceeosoos- }loeeeeannene!
@@ -1695,9 +1645,7 @@ Cy
 Deobfuscation: Progress...
 ; ypc e meses accccssssccceeeess 4
 Lifting H Deobfuscation H
-1 HD {
 i
-Obf. Wasm 0 ol ~ uw LLVM . ' . .
 Bina +4 Wasm2Cc >| Squanchy LLVM IR aa optimisations = SiMBA++ Clang D| Object File
 Looe eee eee eee Sloe enone eee 4
 pisex hat
@@ -1794,7 +1742,6 @@ uVarl = param.2 & 3;
 iVar3 = (param_2 *~ @xbaaad@bf) * (param_2 | 4); 4
 if (wWarl '=2)T __
 | 1Var3 = (param_2 & 5) * (param_2 + Oxbaaadobt);] (ay
-} _ =
 [ivar2 = (param 2 | Oxbaaadobt) * (param 2 ~ 2); |p
 if_(uVari != @) ¢
 iVar2 = (param_2 & @xbaaadO@bf) * (param_2 + 3); &
@@ -1810,15 +1757,6 @@ return iVar3;
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-O42 ? <<
-Non
-__VOwU. ie MVP
-tt
-```
-
 ## Slide 68
 
 Deobfuscation: Progress…
@@ -1830,12 +1768,7 @@ Deobfuscation: Progress…
 ```text
 Deobfuscation: Progress...
 pocessssssccssssssssscsssssssseeeeeen-- i etetetetetatetetetetetetet ttt eee tte 1
-‘ i 1
 ‘ Lifting i Deobfuscation '
-i tt 1
-" uw 1
-" ia 1
-Obf. Wasm |_! >) ~ " LLVM Fl u A ‘i
 Binary rn Wasm2C Squanchy —D| LLVMIR iti Optimisations >| SiIMBA++ a SOUPER ha Clang ad Object File
 t
 uw

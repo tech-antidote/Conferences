@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:47:23Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Abu Shohel Ahmed & Tuomas Aura_Vulnerabilities in the eSIM download protocol.pdf` (35 pages)
 
-
 ## Slide 1
 
 ### Vulnerabilities in the eSIM download protocol
@@ -225,7 +224,6 @@ event S3
 16. HTTP OK
 17. Seq
 Delete the notification
-18. OK |
 ```
 
 ## Slide 11

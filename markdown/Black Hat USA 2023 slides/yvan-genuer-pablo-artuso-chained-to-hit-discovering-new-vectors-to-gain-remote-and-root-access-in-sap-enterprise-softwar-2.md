@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:27:51Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yvan Genuer & Pablo Artuso_Chained to Hit Discovering New Vectors to Gain Remote and Root Access in SAP Enterprise Software.pdf` (98 pages)
 
-
 ## Slide 1
 
 ## Chained to Hit: Discovering New Vectors to Gain Remote and Root Access in SAP Enterprise Software
@@ -77,7 +76,6 @@ ow ERP SOLUTION MANAGER SANE MUNG SU'SINESS SU ao
 SOLUTION MANAGER F /Ij-
 =ERP
 ERP
-ap Pi ml
 P IM ERP HCM
 fe SCM:
 CRM
@@ -253,7 +251,6 @@ root 42100 Q@ Junl13 ? 00 5G
 root 42241 0 Junl3 ? OTOP ¢
 sapadm 42110 0 Junl3 ? 0
 [user@saphost ~]# ss -larntp | grep 421
-LISTEN 6) D sce a BP |
 5 host_profil
 /usr/sap/hostctrl/exe/saposcol -1 jpeeceemipexeyneee preeale
 /usr/sap/hostctrl/exe/sapstartsrv |Gtmt/exe/mostiprotite =p
@@ -275,7 +272,6 @@ ESTAB 0 saphost:1128 saphost:47514 users: (("sapstartsrv",pid=42110, fd=26) )
 bisek hat
 USA 20253
 Netweaver JAVA S/4 HANA Netweaver ABAP
-Q | A
 mel
 [user@saphos’
 _ A> p hostctrl
@@ -326,7 +322,6 @@ Q@ Junl13 ?
 0 0
 0 0
 ~|# SS
-) BOO 6
 1:02:15 /usr/sap/hostctrl/exe/saposcol -|
 -Laflityp |
 S/4 HANA
@@ -389,8 +384,6 @@ USA 20253
 -enable \
 -sldhost 127.0.0.1 -sldport 1234 \
 -sldusername BBBBB -sldpassword CCCC
-OR a aK a a KK ak aK ok ak ak ok ok ak ak ok ak ak ok ak ak ok ok ak ak ok ak ok ok ak ok ok akc of
-KK aK a a a ok kak kak kak ak ak ok ak ok ak ok ak ak ok ak ok ak ak ak ok
 ComputerSystem , string , Enabled
 ExecutionFrequencyMinutes , uint64 , 720
 ee eee ee eee SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSeS SSeS!
@@ -488,7 +481,6 @@ Connection: keep-alive
 SoApPseNV:en| SOAPAction: ""
 "http://www.
 S" xmlns:SAPHostControl="urn:SAPHostControl" xmlns:SAPLandscapeService="
-s:SAPOscol= < c : 1 c=
 poke ae <destinations>
 SAPHostCont <item>
 configurati
@@ -866,8 +858,6 @@ USA 20253
 Netweaver JAVA S/4 HANA
 SAP Solution
 SMDAgent Manager
-(A ie 1D
-I I " “Hey SMDAgents do
 this simulation for me”
 ——| P4 SMDAgent
 SMDAgent SMDAgent
@@ -937,7 +927,6 @@ PB intrnscapedataPresidersinull if (agentName == null || agentName.trim().equals
 2¢ AgentHandleWrapper agent = SMDManager.getInstance().getSMDAgent (agent
 aC if (agent == null)
 31 throw new AbapFatalException( "Agent
-: try {
 7 service = (IMAITestService)SMDManager.getRemoteService(agent,
 3¢ } catch (Exception e) {
 40 throw new AbapFatalException("Initialization of MAITestService fail
@@ -946,7 +935,6 @@ a3 String collectorClass = pImport.getString("IM_COLLECTOR_CLASS");
 aa Properties contextParams = convertTableToProperties(pImport.getTable(
 Map inputParams = convertTableToMap(pImport.getTable("IM_INPUT_PARAMS
 Map metricParams = convertTableToMap(pImport.getTable("IM_METRIC_PARA
-e try {
 + agentName + "' does not ex
 com.
 19 MetricData[] metricCollectionData = service. runSimulation(collector
@@ -988,7 +976,6 @@ PB intrnscapedataPresidersinull if (agentName == null || agentName.trim().equals
 2¢ AgentHandleWrapper agent = SMDManager.getInstance().getSMDAgent (agent
 aC if (agent == null)
 31 throw new AbapFatalException( "Agent
-: try {
 + agentName + "' does not ex
 service = (IMAITestService)SMDManager.getRemoteService(agent, "com.
 3¢ } catch (Exception e) {
@@ -996,7 +983,6 @@ service = (IMAITestService)SMDManager.getRemoteService(agent, "com.
 a3 String collectorClass = pImport.getString("IM_COLLECTOR_CLASS");
 aa Properties contextParams = Ct getTable(
 16 Map metricParams = convertTableToMap (pImport.. getTable("IM_ METRIC_ PARA
-7 try {
 19 MetricData[] metricCollectionData = service. runSimulation(collector
 56 JCO.Table results = pExport.getTable("EX_METRIC_DATA");
 576 for (int i = 0; i < metricCollectionData.length; i++) {
@@ -1034,8 +1020,6 @@ o © AgentDataProviderSimulat
 © fi IntroscopeDataProviderSimul
 |) package-version. properties
 © tool
-=e try {
-e try {
 tb AbapFactoryBean. class 2 tip AgentDataProviderSimulation. class °
 ampere yava.ucic.rroperctics,
 spublic final class AgentDataProviderSimulation implements IAbapComponent
@@ -1218,7 +1202,6 @@ Tunnel. class metricCollectionData[i];
 Speak aber tTableToMap(pImport.getTable("IM METRIC PARA
 SimpleFileServiceCollector. class 0 rt. getTab
 ton wWSMetricCollector.class _
-TPT Tr TT TT TT TT TT TT eT eT eT eT Tee eT ee Tee eee ee ee
 45
 ```
 
@@ -1582,8 +1565,6 @@ ResolverManager mgr = (ResolverManager) ResolverManager.getInstance() ;
 ObjectFactory fac = null;
 596 if (ref != null) {
 51 String f = ref.getFactoryClassName() ;
-52 if (f != null) {
-e try f
 fac = mgr.findObjectFactory(f);
 } catch (Exception e) {
 NamingException ne = new NamingException("Exception while trying to J
@@ -1638,7 +1619,6 @@ String objectFactoryNamep
 322 Object resolverClassName = null;
 376 Class<?> factoryClass = Class.forName(objectFactoryName, true, Thread.curi
 377 ObjectFactory Eee = (ObjectFactory)factoryClass.newInstance();
-as. 0g .
 3/796 this loo tal naPathIni ocation()) £
 75
 ```
@@ -1664,8 +1644,6 @@ as. 0g .
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-We es [ A / 4 PRK. ‘ yo aa j
-Q Se << ay
 : eee ee. es A
 blackhat ok Sia
 USA 2023 Se Sig
@@ -1705,13 +1683,10 @@ SAP JNDI Injection: Specific gadget
 EJBObjectFactory
 > privat—Obss-++ — =eference, Name argl,
 AL. <= 4 String appName = getAppName(rert);
-Ob 14 a
 = t
 rence);
-1 ' : —
 : - if (appName != null) {
 privat rel tT) 4
-hop | l - ’ f sARlams ) «
 StartApp \appName) ;
 179
 ```

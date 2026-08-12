@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:23Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Sultan Qasim Khan & James Chambers_Reverse Engineering the PowerG Wireless Protocol .pdf` (43 pages)
 
-
 ## Slide 1
 
 # **Reverse Engineering the PowerG Wireless Protocol**
@@ -183,7 +182,6 @@ PowerG Modem Hardware and Firmware
 MWY
 [a4
 t= e~pp.
-= _=-254!1 @ @- ‘+ @
 nccgroup”
 ```
 
@@ -553,7 +551,6 @@ Input Spectrogram
 T
 3.000
 Burst Spectrogram
-| Ln Le
 -20.00 0.00 20.00
 Frequency (kHz)
 915928110 Gain
@@ -571,7 +568,6 @@ in °
 Leper tori tipiitiiiitiiriitiriitiiii tii)
 mo
 j=)
-° in =
 Amplitude
 S
 w
@@ -587,7 +583,6 @@ Rs tates ogP ty" o
 og ¢°RErc8, o. ce?
 eohee Sewn wo ae ody
 Time (ms)
-T T T T T
 100 200 300 400 500
 Time (sec)
 * Threshold
@@ -603,18 +598,9 @@ Original channel input
 7 Frequency Display | Waterfall Display Constellation Display
 J @ Dataod
 0 pennies 4 z = Datao
-J a 4
 -20 aioe
 | 8.87 khiz, -30.22 dB = 404
-4 oO q
-4 oO q
 @ -40-4 vw 605
-S| i { 5 «0:
-4 -80 4
-& : y Li} q
-& 0+ ‘al & -100 4
-$ 7 -120 4
-wv 7 i
 80 -100.00 -50.00 0.00 50.00 100.00
 2 4 Frequency (kHz)
 -100 5 —_—_.
@@ -626,8 +612,6 @@ Frequency (kHz) a
 Quadrature Demod
 ™ CFO Fix
 ff: sittisatthsiae f° rf mre tb i _ ft | in i if hook i i: ; 7 mo my ; f Tere Binary Slicer
-LL PV a ome
-e | RTH | PT TW TW NTH
 ee HA TT TEE VEE HAST PHT fi vay Tk
 Time (ms)
 ```
@@ -668,10 +652,8 @@ Time (ms)
 
 ```text
 Packet Structure
-0 8 16 24 31
 length src addr dst addr net/modem addr?
 32
-dedupe | notification tx a | 9 lerypto! » |yol a | 9 9 9 9
 9 counter period? power} | |mode| its)? | 2 : : : msg type
 64
 keystream check value payload...

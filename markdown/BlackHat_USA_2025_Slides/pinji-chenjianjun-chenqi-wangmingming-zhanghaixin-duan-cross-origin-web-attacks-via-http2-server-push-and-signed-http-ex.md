@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:05Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Pinji Chen&Jianjun Chen&Qi Wang&Mingming Zhang&Haixin Duan_Cross-Origin Web Attacks via HTTP2 Server Push and Signed HTTP Exchange.pdf` (52 pages)
 
-
 ## Slide 1
 
 ## Cross-Origin Web Attacks via HTTP/2 Server Push and Signed HTTP Exchange
@@ -322,8 +321,6 @@ Body
 
 **We control whole HTTP response**
 
-
-
 Header
 
 Body
@@ -347,8 +344,6 @@ Welcome, Alice! <script> alert("XSS!"); </script> </body> </html>
  **Exploit-1** ： **Universal XSS**
 
 **We control whole HTTP response**
-
-
 
 Header
 
@@ -376,7 +371,6 @@ Credit: **@Zedd and @Ehhthing** Blog: https://tttang.com/archive/1703/
 
 ```text
 blackhat > SS > t SOBEL
-BRIEFINGS = —. ee, » 4A
 Case 1: Universal XSS
 ```
 
@@ -403,8 +397,6 @@ Content-Type: text/html Content-Length: xxx Strict-Transport-Security: max-age=0
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat y - a 7 ’ OG
-BRIEFINGS La — ~— Ve * ’ Low
 Case 2: Set Arbitrary Cookie
 ```
 
@@ -423,13 +415,6 @@ Content-Type: text/html Content-Length: xxx Content-Disposition: attachment; fil
 ## Slide 26
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat NS ff A yg és
-BRIEFINGS
-```
 
 ## Slide 27
 
@@ -938,7 +923,6 @@ QS <a
 NS
 =) ww Vii fF i), yy)
 Ye Pome fi
-Se B ip
 SS il
 Thank you !
 Q&A

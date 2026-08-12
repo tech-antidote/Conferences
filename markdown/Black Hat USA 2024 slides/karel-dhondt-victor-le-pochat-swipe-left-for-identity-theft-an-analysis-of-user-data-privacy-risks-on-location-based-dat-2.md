@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:35Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Karel Dhondt & Victor Le Pochat_Swipe Left for Identity Theft An Analysis of User Data Privacy Risks on Location-based Dating Apps_wp.pdf` (18 pages)
 
-
 ## Slide 1
 
 # **Swipe Left for Identity Theft: An Analysis of User Data Privacy Risks on Location-based Dating Apps**

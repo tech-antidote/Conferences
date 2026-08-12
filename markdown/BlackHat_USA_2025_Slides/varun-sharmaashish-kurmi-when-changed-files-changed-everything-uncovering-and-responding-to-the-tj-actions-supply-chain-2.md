@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:03:54Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Varun Sharma&Ashish Kurmi_When 'Changed Files' Changed Everything Uncovering and Responding to the tj-actions Supply Chain Breach.pdf` (106 pages)
 
-
 ## Slide 1
 
 **When ‘Changed Files’ Changed Everything** Uncovering and Responding to the tjactions Supply Chain Breach
@@ -48,7 +47,6 @@ https://github.com/tj-actions/changed-files/tags?after=v35.9.3
 You can read more here: https://www.stepsecurity.io/blog/harden-runner-detection-tj-actions-changed-files-action-is-compromised
 Reported the issue via the email address provided in the security.md file and also reported it via private vulnerability disclosure to
 generate a CVE.
-77 )\ @ 32 )\ & 17
 ```
 
 ## Slide 3
@@ -714,7 +712,6 @@ auth.docker.io Allowed 8 months ago 9 minutes ago View workflow runs
 registry-1.docker.io
 Allowed 8 months ago 9 minutes ago View workflow runs
 production.cloudflare.docker.com Allowed 8 months ago 9 minutes ago View workflow runs
-© © G8 © 8 G8 8 O8 GO O
 di-cdn.alpinelinux.org Allowed 8 months ago 8 minutes ago View workflow runs
 ```
 
@@ -744,7 +741,6 @@ auth.docker.io Allowed 8 months ago 9 minutes ago View workflow runs
 registry-1.docker.io
 Allowed 8 months ago 9 minutes ago View workflow runs
 production.cloudflare.docker.com Allowed 8 months ago 9 minutes ago View workflow runs
-© © G8 © 8 G8 8 O8 GO O
 di-cdn.alpinelinux.org Allowed 8 months ago 8 minutes ago View workflow runs
 ```
 
@@ -772,7 +768,6 @@ auth.docker.io Allowed 8 months ago 9 minutes ago View workflow runs
 registry-1.docker.io
 Allowed 8 months ago 9 minutes ago View workflow runs
 production.cloudflare.docker.com Allowed 8 months ago 9 minutes ago View workflow runs
-© © G8 8 8 © O8 O O
 di-cdn.alpinelinux.org Allowed 8 months ago 8 minutes ago View workflow runs
 ```
 

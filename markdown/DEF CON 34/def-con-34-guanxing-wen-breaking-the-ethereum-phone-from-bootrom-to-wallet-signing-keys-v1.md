@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:21:59Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Guanxing Wen - Breaking the Ethereum Phone From BootROM to Wallet Signing Keys - v1.pdf` (56 pages)
 
-
 ## Slide 1
 
 # **Breaking the Ethereum Phone** `From BootROM to Wallet Signing Keys`
@@ -851,13 +850,11 @@ Freedom Factory Inc
 == 4 Peddlers Row 295
 Newark, DE 19702
 SN: dG146829G47T eae
-TU UT C € se
 IMEI 1: $55520230045591
 60014"38080!'"8
 IMEI 2: 355520230106096
 EU TEE TEU UORDATI TY 0) ET
 Assembled in China 8
-EO TT TE Ut |
 ```
 
 ## Slide 53
@@ -887,7 +884,6 @@ No Interest if paid in full in 6 mo on $149+ with PayPal Credit*
 Condition: New @
 Place bid
 (— >
-( 9 Add to Watchlist )
 XY SJ
 4 People are checking this out. 3 have added this to their watchlist.
 Shipping, returns, and payments
@@ -902,7 +898,6 @@ Delivery: Estimated between Sat, May 2 and Fri, May 8 to 07020 ©
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Shop by : - : / \ ,
 eb category Y (a Search for anything All Categories -) ( Search ) Advanced
 tt LIVE Streaming now Shop exclusive items from trusted sellers t Join event ]
 dGen! Ethereum Phone, in hand, sealed. Freedom
@@ -913,12 +908,8 @@ tayjor1 (3207) —
 , C $225.00
 Approximately US $164.22
 Condition: New @
-< . , >
 JdGEN1 ier see
 88: goIsoseeoiU —
-TT € 4 - .
-IME 1: 358629230037608 = / \
-TT { Add to cart }
 IMEI 2: 365620230098103 \ }
 010 | UENO) EA TE pitt)
 Aeeenbled in Chins eMeooaa: es

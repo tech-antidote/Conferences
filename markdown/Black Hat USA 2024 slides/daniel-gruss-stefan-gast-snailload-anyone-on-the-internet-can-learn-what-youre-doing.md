@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:30:04Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Daniel Gruss & Stefan Gast_SnailLoad Anyone on the Internet Can Learn What You're Doing.pdf` (82 pages)
 
-
 ## Slide 1
 
 # SnailLoad

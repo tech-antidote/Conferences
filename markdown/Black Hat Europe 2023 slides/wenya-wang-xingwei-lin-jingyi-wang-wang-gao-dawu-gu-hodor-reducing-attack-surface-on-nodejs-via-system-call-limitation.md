@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:13Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Wenya Wang, Xingwei Lin, Jingyi Wang, Wang Gao, Dawu Gu _ HODOR Reducing Attack Surface on Node.js via System Call Limitation.pdf` (34 pages)
 
-
 ## Slide 1
 
 #BHEU @BlackHatEvents
@@ -287,7 +286,6 @@ as Node.js D
 Application 5
 5 SO Native | aoe
 Modules Source Code
-Binding q — AbY — NY q| —
 Modules SZ Call Graph Mappings
 — Constructor Builder
 (Ss) |
@@ -671,7 +669,6 @@ Wenya Wang,  Xingwei Lin      @xwlin_roy
 
 ```text
 blackhat
-L_] ) a
 Thanks & Questions?
 Wenya Wang, Xingwei Lin ¥ @xwlin_roy
 #BHEU @BlackHatEvents

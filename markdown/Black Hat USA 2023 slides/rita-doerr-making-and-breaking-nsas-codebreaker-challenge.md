@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:22Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Rita Doerr _ Making and Breaking NSA's Codebreaker Challenge.pdf` (35 pages)
 
-
 ## Slide 1
 
 # **Making and Breaking NSA’s Codebreaker Challenge**
@@ -54,7 +53,6 @@ MARATHON
 SRATHON
 la npApiarins
 (ardening \\
-/ >» /
 gn hr
 IntelligenceCareers.gov/NSA
 ```

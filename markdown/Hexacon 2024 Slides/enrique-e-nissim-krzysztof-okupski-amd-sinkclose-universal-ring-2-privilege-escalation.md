@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:19:43Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Enrique E Nissim & Krzysztof Okupski_AMD Sinkclose Universal Ring -2 Privilege Escalation.pdf` (123 pages)
 
-
 ## Slide 1
 
 AMD Sinkclose Universal SMM Privilege Escalation
@@ -830,23 +829,11 @@ TSEG Size : OOFFFFFF
 SMM Base : bfea8000
 SMM-Entry : bfeb0000
 Ethernet controller BAR2 at:} d0714000
-@xd0714000 | @@ 2b 67 52 7c cO OO OO 40 OO OO OB 80 OO QO OQ | .+gR|..
-Qxd0714010@ | 00 c@ ff Ff OO QQ QQ QO O8 B7 06 BB QO OO BO OO |
-0xd071402@ | 00 bO® ff Ff OO QB BB BO QO BO OO BB BB BO BO 2 |
 -> remapping BAR2 to overlap TSEG
 + successfully overlaped the ethernet bar over SMM at: bfeb0000
 -> view of memory at smm entry point:
-| ff ff ff ff ff fr fF fF fF TF fF fF fF fF fF
-| ff ff ff ff ff fr fF ff FF FF fF fF fF fF ff
-| ff ff ff ff ff fr fF fF FF TF fF fF fF fF Ff
 at BAR2 (d0714000) :
-| ff ff ff ff ff fF ff
-| ff ff ff ff ff fF ff
-| ff ff ff ff ff fF ff
 Restoring BAR and dumping again:
-@xd0714000 | @@ 2b 67 52 7c cO 00
-Qxd0714010 | 00 cO ff ff QO 20 20
-Qxd071402@ | Q@ bo ff Ff 02 22 20
 lOActive.
 ```
 
@@ -871,25 +858,13 @@ TSEG Size : OOFFFFFF
 SMM Base : bfea8000
 SMM-Entry : bfeb0000
 Ethernet controller BAR2 at:} d0714000
-@xd0714000 | @@ 2b 67 52 7c cO OO OO 40 QO OO QO 80 2B 20 22 ||
-Qxd0714010 | 00 cO ff Ff OO QQ QQ QO O8 B7 06 BB BO QO BO 0D
-Qxd0714020 | 00 bO® ff Ff OO QQ QQ QO QO BO OO BB QO BO BO 20 j|
 -> remapping BAR2 to overlap TSEG
 + successfully overlaped the ethernet bar over SMM at: bfeb0000
 -> view of memory at smm entry point:
-| ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
-| ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
-| ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
 -+gR|..
 Visible device registers
 at BAR2 (d0714000) :
-| ff ff ff ff ff fF ff
-| ff ff ff ff ff fF ff
-| ff ff ff ff ff fF ff
 Restoring BAR and dumping again:
-@xd0714000 | @@ 2b 67 52 7c cO 00
-Qxd0714010 | 00 cO ff ff QO 20 20
-Qxd071402@ | Q@ bo ff Ff 02 22 20
 Ws . 10 Active.
 ```
 
@@ -916,25 +891,13 @@ TSEG Size : OOFFFFFF
 SMM Base : bfea8000
 SMM-Entry : bfeb0000
 Ethernet controller BAR2 at:} d0714000
-@xd0714000 | @@ 2b 67 52 7c cO OO OO 40 QO OO QO 80 2B 20 22 ||
-Qxd0714010 | 00 cO ff Ff OO QQ QQ QO O8 B7 06 BB BO QO BO 0D
-Qxd0714020 | 00 bO® ff Ff OO QQ QQ QO QO BO OO BB QO BO BO 20 j|
 -> remapping BAR2 to overlap TSEG
 + successfully overlaped the ethernet bar over SMM at: bfeb0000
 -> view of memory at smm entry point:
-Qxbfeboooe | ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff an Remap failed; registers are not
-Qxbfeb0o10 | ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff = .
-Oxbfeboo20 | ff ff ff ff ff ff ff ff ff fF ff fF ff Tf fF available
 -+gR|..
 Visible device registers
 -> Memory at BAR2 (d07140QQ):
-| ff ff ff ff ff ff ff
-| ff ff ff ff ff ff ff
-| ff ff ff ff ff ff ff
 Restoring BAR and dumping again:
-@xd0714000 | @@ 2b 67 52 7c cO 00
-Qxd0714010 | 00 cO ff ff QO 20 20
-Qxd071402@ | Q@ bo ff Ff 02 22 20
 es » 10Active.
 ```
 
@@ -1259,143 +1222,6 @@ GDTR GDT
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-Analysis of the EDKII SMM entry point
-10:
-TSk
-la:
-1d:
-21:
-278
-2e:
-2T
-34:
-Sis
-3e:
-42:
-45:
-4c:
-4d:
-Tan wes
-bb
-2e
-48
-2e
-2e
-2e
-2e
-b8
-2e
-66
-66
-00
-2e
-of
-66
-66
-Of
-66
-00
-4d
-al
-89
-66
-66
-66
-08
-89
-bf
-67
-66
-20
-81
-83
-22
-ea
-80
-d8
-07
-al
-89
-of
-7)
-47
-7)
-8d
-89
-c3
-e3
-cb
-c3
-53
-fd
-do
-47
-Q1
-fe
-30
-87
-47
-3
-23
-bo
-fd
-02
-17
-4
-53
-fa
-ff
-4
-[ GDTR HERE ]
-ae
-80
-fa
-ae
-1)
-of
-08
-©2024 |OActive, Inc. All Rights Reserved.
-mov
-mov
-dec
-mov
-mov
-mov
-lgdtd
-mov
-mov
-mov
-lea
-mov
-mov
-and
-or
-mov
-jmp
-bx ,@x804d } @x8000 + @x4D
-ax,cs:@xfdd8 ; DSC_OFFSET + @xD8
-ax
-WORD PTR cs: [bx],ax
-eax,cs:@xfdd®@ ; DSC_OFFSET + xD
-DWORD PTR cs: [bx+®x2],eax
-GS? [bx] §
-ax, @x8
-WORD PTR cs: [bx-®x2] ,ax
-edi, 0xaef43000
-eax, [edi+0x8053]
-DWORD PTR cs: [bx-0x6] ,eax
-ebx, cra
-ebx, 0x9ffafff3
-ebx , 0x23
-crd,ebx
-x8 : Oxaef4b@53
-. lOActive.
-```
-
 ## Slide 56
 
 #### Analysis of the EDKII SMM entry point
@@ -1405,143 +1231,6 @@ SMM entry point + 0x4D
 ©2024 IOActive, Inc. All Rights Reserved.
 
 56
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-Analysis of the EDKII SMM entry point
-10:
-TSk
-la:
-1d:
-21:
-278
-2e:
-2T
-34:
-Sis
-3e:
-42:
-45:
-4c:
-4d:
-Tan wes
-bb
-2e
-48
-2e
-2e
-2e
-2e
-b8
-2e
-66
-66
-00
-2e
-of
-66
-66
-Of
-66
-00
-4d
-al
-89
-66
-66
-66
-08
-89
-bf
-67
-66
-20
-81
-83
-22
-ea
-80
-d8
-07
-al
-89
-of
-7)
-47
-7)
-8d
-89
-c3
-e3
-cb
-c3
-53
-fd
-do
-47
-Q1
-fe
-30
-87
-47
-3
-23
-bo
-fd
-02
-17
-4
-53
-fa
-ff
-4
-[ GDTR HERE ]
-ae
-80
-fa
-ae
-1)
-of
-08
-©2024 |OActive, Inc. All Rights Reserved.
-mov
-mov
-dec
-mov
-mov
-mov
-lgdtd
-mov
-mov
-mov
-lea
-mov
-mov
-and
-or
-mov
-jmp
-bx ,@x804d ; @x8000 + @x40 ———>_— SMM entry point + 0x4D
-ax,cs:@xfdd8 ; DSC_OFFSET + @xD8
-ax
-WORD PTR cs: [bx],ax
-eax,cs:@xfdd®@ ; DSC_OFFSET + xD
-DWORD PTR cs: [bx+®x2],eax
-GS? [bx] §
-ax, @x8
-WORD PTR cs: [bx-®x2] ,ax
-edi, 0xaef43000
-eax, [edi+0x8053]
-DWORD PTR cs: [bx-0x6] ,eax
-ebx, cra
-ebx, 0x9ffafff3
-ebx , 0x23
-crd,ebx
-x8 : Oxaef4b@53
-. lOActive.
-```
 
 ## Slide 57
 
@@ -1558,24 +1247,8 @@ SMM entry point + 0x4D
 ```text
 >
 Analysis of the EDKII SMM entry point
-: bb 4d 80
-3 2e al d8 fd
 Ts 48
-8: 2e 89 07
-b: 2e 66 al dQ fd
-10: 2e 66 89 47 @2
-TSk 2e 66 Of Q1 17
-la: b8 @8 20
-1d: 2e 89 47 fe
-21: 66 bf 00 30 f4
-27% 66 67 8d 87 53
 2e: 00
-2T% 2e 66 89 47 fa
-34: Of 20 c3
-37% 66 81 e3 f3 ff
-3e: 66 83 cb 23
-42: Of 22 c3
-45: 66 ea 53 bO F4
 4c: 20
 4d: [ GDTR HERE ]
 ae
@@ -1638,24 +1311,8 @@ SMM entry point + 0x4D Loads GDTR
 ```text
 >
 Analysis of the EDKII SMM entry point
-: bb 4d 80
-3 2e al d8 fd
 Ts 48
-8: 2e 89 07
-b: 2e 66 al dQ fd
-10: 2e 66 89 47 @2
-TSk 2e 66 Of Q1 17
-la: b8 @8 20
-1d: 2e 89 47 fe
-21: 66 bf 00 30 f4
-27% 66 67 8d 87 53
 2e: 00
-2T% 2e 66 89 47 fa
-34: Of 20 c3
-37% 66 81 e3 f3 ff
-3e: 66 83 cb 23
-42: Of 22 c3
-45: 66 ea 53 bO F4
 4c: 20
 4d: [ GDTR HERE ]
 ae
@@ -1751,125 +1408,6 @@ _We need to control the BAR of the overlapped device at offset 0x4D_
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-APIC Registers
->>> xrdmsr @x1b
--> MSR: [0000001b]: feed0800
->>> physmem r O@xfeed0000
-O@xfee00040
-Q@xfee0050
-O@xfeeQ0060
-Q@xfee0070
-Ox feed0080
-Q@xfeed0090
-Oxfeed00a0
-O@xfeed00ba
-Oxfeed00cd
-Oxfeed00da
-Oxfeed00e0
-Oxfeed00FO
-00
-00
-00
-10
-00
-00
-00
-00
-10
-10
-10
-00
-00
-00
-ff
-ff
-00
-00
-00
-00
-00
-00
-00
-20
-00
-20
-00
-00
-00
-00
-ff
-01
-00
-20
-00
-05
-00
-00
-20
-00
-00
-20
-00
-20
-00
-00
-ff
-00
-00
-00
-06
-80
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-ff
-00
-@x100
-00
-00
-00
-10
-00
-00
-00
-00
-10
-10
-10
-00
-20
-00
-ff
-ff
-00
-00
-00
-20
-00
-00
-20
-20
-20
-20
-00
-20
-20
-00
-ff
-01
-lOActive.
-```
-
 ## Slide 63
 
 ## Introducing the SPI controller
@@ -1929,25 +1467,7 @@ SMRAM
 
 ```text
 Zz Memory
-Cal Gal ey A cS ee
 [Address = 00000000FEC11000 _|
-0 00 O01 02 03 04 05 06 O07 08 09 OA OB OC OD OE OF|0123456789ABCDEF
-00 00 00 20 OF 00 00 00 00 00 00 00 00 00 00 22 02 Oo "
-10 06 20 04 04 06 04 SF 05 03 OB OA 02 FF 9A oo 38|//0 OOOO’oOoOO OF ;
-20 12 07 33 31 08 20 20 20 OC 14 06 OE CO D4 oo 80 | 00310 aooood }
-30 CO 14 08 46 03 00 00 00 FC FC FC FC FC _$8_00 090 | |OOOFO
-40 3B 6B BB EB 00 00 00 00 00 00 00 00 42]00 12 ooff|; k3*
-50 }00 12 13]0C 3C 6C BC EC 08 46 00 00 00 00 00 60 OOa<ie!Or
-60 00 00 00 00 FD 00 00 00 00 00 00 00 00 00 00 00 @
-70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-AO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-BO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-cO 00 00 00 00 00 00 00 00 00 00 OO OO 00 00 00 00
-DO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-EO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-FO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 P
 i}
 dword
@@ -2019,7 +1539,6 @@ adapter
 ```text
 PCle Squirrel
 Power supply
-M2 to PCI 4x 4
 adapter
 Bas"
 .
@@ -2293,8 +1812,6 @@ OOOOFFFFFFOO6603 © OOOOFFFFFFOO6603
 SMM_MASK 0xC0010113 OOOOFFFFFFOO6603  OOOOFFFFFFOO6603  OO0OFFFFFFOO6603  OOOOFFFFFFOO6603
 Bl Edit CPU1 MSR 0xC0010113
 x
-63 62 61 60 59 58 57 56/55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 92
-ea wie ty To te) ty ee ry re abe ah rh a) ah ah ah ah Ge ab a ab ak ah ial Gl
 00 00 FF FF OD Toall CPUs
 31 30 29 28 27 26 25 24/23 221212019 18 17 16 15 14 13 1211 10 9 8176 5 4392 710 5
 111713111 %1#100000000080170031C000 0001708828741 ei
@@ -2318,7 +1835,6 @@ Bingo...
 A RW- Read & Write Utility v1.7 - [CPU MSR Registers] = Oo x
 Hl Access Specific Window Help -8x
 EEE? es pen pepe pew _ JE?
-il 4 a —_
 MTRR User
 MTRR_DEF_TYPE — Ox2FF odood0o00000c09 — oo0000000000C00 —o0B000000000C00 — OOND0000000C0N — doDDODDON0000C00 —_od0DD00000000C00
 SMM_BASE oxconi0111 ONOONHOOCEESE0N0 _ONOONOONCEESANNN — OOOOONDOCEFSCO00 © OOONDONOCEFSEDN0 — dODDONDOCEF4O000 — od0DD0DNCEF4z000
@@ -2575,7 +2091,6 @@ lea eax, [edi+0x8053]
 7 Lijit _ TSEG
 = = mov DWORD PTR cs: [bx-@x6] ,eax
 a = mov ebx,cr®
-5 . -—
 “TITTTT >| SMM Entrypoint 1 OFF = es
 Littit ‘
 _ . > mov cr@,ebx

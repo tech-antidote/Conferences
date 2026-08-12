@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:35Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Erik Decker_Leverage and Demonstrate Value with your Cyber Insurance Renewal.pdf` (8 pages)
 
-
 ## Slide 1
 
 ## Leverage and Demonstrate Value with your Cyber Insurance Renewal

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:27Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/MoustachedBouncer AitM-Powered Surveillance via Belarus ISPs.pdf` (93 pages)
 
-
 ## Slide 1
 
 Black Hat USA – 2023-08-10 **MoustachedBouncer** AitM-powered surveillance via Belarus ISPs
@@ -205,9 +204,7 @@ r? ] —aw compromised
 I
 I
 _ a
-|; OO se te --- +2
 —> my
-: — @
 |
 I '
 I
@@ -293,7 +290,6 @@ Windows 10, ve...
 Server, version 1903
 update history Apply: Windows 10, version 1903, all editionsWindows Server version 1903 Windows 10, version
 1909, all editions
-a ee Oe CEE a 2 Oe
 Windows 10, version
 1809, Windows
 Server, version 1809,
@@ -587,7 +583,6 @@ a . PAVIStreamEncryptor@depth@jasons@@ £C@r . ?AVexception@@ £CO> . PAVExcepti
 ion@def@@ £C@» . PAVLcgEncryptionBase@depth@jasons@@ £C@> . PAVProHypoxemia@depth@jasons@@
 £C@> . PAVIEncryptor@depth@jasons@@ £C@> . PAVSentFilesStorage@filemon@swamp@@ £C@r 2A
 IFilesListStorage@filemon@swamp@@ £C@> . PAVFilesEnumerator@file@def@@ £C@> . PAAVIFileSystemP
-rocessor@file@def@@ 9 g AO O 9 4,8 + -@ 6 9 ,® NO .O YF 59 ,® NO
 ```
 
 ## Slide 39
@@ -678,7 +673,6 @@ Po
 MAIL FROM: <glen.morriss75@seznam.cz>
 250 OK
 RCPT TO:<SunyaF@seznam.cz>
-~>_ =  _ = |
 ```
 
 ## Slide 44
@@ -974,11 +968,8 @@ inet_pton(2, cc_server_address, &addr->pName) ;
 A = DnsQuery_A(pszName, DNS_TYPE_TEXT, DNS _QUERY_BYPASS CACHE, addr, ppQueryResults, @);
 ppStringArray = _ppQueryResults->Data.TXT.pStringArray;
 _Dst[4] = @;
-i = @;
 _Dst[5] = 15;
 LOBYTE(v23) = 2;
-* Dst = Q;
-v19 = 6;
 if ( _ppQueryResults->Data.TXT.dwStringCount )
 {
 do
@@ -1171,9 +1162,7 @@ result = al;
 al[1] = Blockf;
 break;
 default:
-*al1 = 0;
 result = al;
-al[1] = 9;
 break;
 ```
 
@@ -1406,7 +1395,6 @@ if (Scom.Length -ge 1) f{
 whoami
 } catch { =
 ($Error[@]) arp —
-i dir [=
 sendData($message) ;
 sleep 10;
 starter
@@ -1461,7 +1449,6 @@ ft. @@ -53,7 +53,7 @@
 72 72 <div class="errorBox">
 73 - <h2><fmt:message key="${errTitle}"/></h2>
 72 + <h2><fmt:message key="${fn:escapeXml(errTitle) }"/></h2>
-74 74 <p>
 75 = <fmt:message key="${errMsg}"/><br/>
 75 + <fmt:message key="${fn:escapeXml(errMsg) }"/><br/>
 ```

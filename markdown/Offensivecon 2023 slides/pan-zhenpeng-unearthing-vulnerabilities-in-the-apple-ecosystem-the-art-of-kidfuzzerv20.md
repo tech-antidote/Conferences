@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:23:59Z"
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Pan Zhenpeng_Unearthing Vulnerabilities in the Apple Ecosystem The Art of KidFuzzerV2.0.pdf` (75 pages)
 
-
 ## Slide 1
 
 ## Slide 2

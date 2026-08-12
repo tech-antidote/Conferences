@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:32Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Shcherbakov-Prototype-Pollution-Leads-to-RCE.pdf` (53 pages)
 
-
 ## Slide 1
 
 # Prototype Pollution Leads to RCE: Gadgets Everywhere
@@ -1132,7 +1131,6 @@ serverURL: http://localhost:1337/parse
 json yuske yuske 353386 20/12/21 08:08]||/t.sh yuske yuske 2817 20/12/21 09:37
 353 720 bytes in 3 files 2 866 bytes in 2 files
 oie parse-server running on http://localhost:1337/parse [ ae Se ’
-1 2 3 4 ) 6 7 8 9 10
 ```
 
 ## Slide 46

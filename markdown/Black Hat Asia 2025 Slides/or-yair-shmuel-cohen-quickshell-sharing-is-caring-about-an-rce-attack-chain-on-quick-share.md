@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:07:39Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Or Yair & Shmuel Cohen_QuickShell Sharing is Caring About an RCE Attack Chain on Quick Share.pdf` (113 pages)
 
-
 ## Slide 1
 
 Sharing is caring about an RCE attack chain on Quick Share
@@ -148,29 +147,6 @@ No CVEs
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-cD)
-ss
-14)
-om
-Y)
-~<
-2
-=)
-OC
-=
-LU
-O
-(ad
-~
-op)
-—
-LL
-Research Goal
-```
-
 ## Slide 15
 
 ## Slide 16
@@ -191,7 +167,6 @@ offline_wire_formats.proto
 message OfflineFrame {
 enum Version {
 UNKNOWN_VERSION = @;
-V1 = 1;
 t
 J
 optional Version version = 1;
@@ -262,7 +237,6 @@ Advertisement based on Service ID Multiple Connections Strategies  P2P, Star,
 Nearby Connections API
 Protobuf Based : protobuf }
 rcryotion . . ; souls . okey? _. ra, ia
-havertisemen . _ . . . sorvice . i _ A a.
 Multiple Connections Strategies es @ a,
 = P2P, Star, Cluster
 ```
@@ -385,7 +359,6 @@ BANDWIDTH_UPGRADE_RETRY = 12;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-: ’ 9, ihe a
 oo * cae\a Ns j
 Z .
 Quick Share
@@ -481,7 +454,6 @@ palHIL+r
 signedData: MEUCIQC24J1oLakk1lypg7
 type: PAIRED _KEY_ENCRYPTION
 version: V1
-f 3 (3)
 index: @
 set: ‘@'
 adHeader:
@@ -611,7 +583,6 @@ Make sure both devices are unlocked,
 close together, and have Bluetooth
 tumed on. Devices you're sharing with
 need Quick Share tumed on and visible
-t . Li re
 Oe er OD _sSafeBreach's PC
 w
 ```
@@ -623,7 +594,6 @@ w
 ```text
 FUZZING ‘ —Q
 Quick Share +8 ~
-EXE \ Le
 @
 Corpus Input QuickShare
 Mutation CRASHES
@@ -813,22 +783,6 @@ Moving on to search for logic vulnerabilities, instead of creating the perfect f
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IC
-Cp)
-v
-a
-(DO
-rant
-©
-=
-=
->
-Log
-```
-
 ## Slide 55
 
 Extremely generic Handler class for each packet type Code is full of thread creations all over the place
@@ -858,7 +812,6 @@ After paired Key Encryption:
 Introduction
 : Wants to share an image
 PIN: 6712 @
-—_@Q_ : ~ ~
 ie Raw File
 Initiator Payload Transfer
 010100101101010101100010101101
@@ -1375,8 +1328,6 @@ Force Detect EXE Force ae 7
 WiFi Download Continuous O2
 a
 Connection Name Open x
-= =~ 7 7 c)- RL
-fF Fd fF Fe oo, fs " eS
 Crash Send a File QuickShel
 Without RCE
 Approval

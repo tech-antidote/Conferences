@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:23:58Z"
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Yarden Shafir_Your Mitigations are My Opportunities.pdf` (31 pages)
 
-
 ## Slide 1
 
 Your Mitigations are My Opportunities
@@ -393,15 +392,11 @@ moduleCtx = SecKseLookupModuleContextByAddress(callerAddress) ;
 if ( moduleCtx )
 {
 auditConfig = &moduleCtx->AuditBitmask;
-if ( (moduleCtx->ConfigBitmask & 1) != @ || (*auditConfig & 1) !
 {
 status = ObReferenceObjectByHandle(ProcessHandle, 1u, PsProcessType, @, &process, 0i64);
-if ( status >= @ )
 {
 if ( PsIsProtectedProcess(process) )
 {
-if ( (*auditConfig & 1) !=@ )
-if ( (moduleCtx->ConfigBitmask & 1) !=@ )
 {
 status = STATUS_ACCESS DENIED;
 allowCall = 9;
@@ -457,7 +452,6 @@ WPP_SF_(DeviceObject->AttachedDevice, 10164, &unk_1C@012F1@) ;
 return 1;
 }
 *CompletionContext = 0164;
-v6 = 4;
 Iopb = CallbackData->Iopb;
 MinorFunction = Iopb->MinorFunction;
 if ( MinorFunction && MinorFunction != IRP_MN_KERNEL_CALL )// user request / kernel request are both valid

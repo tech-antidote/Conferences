@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:05:06Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Zhisheng Hu&Shanit Gupta&Cooper de Nicola_Adversarial Fuzzer for Teleoperation Commands Evaluating Autonomous Vehicle Resilience.pdf` (75 pages)
 
-
 ## Slide 1
 
 ## **Adversarial Fuzzer for Teleoperation Commands:** Evaluating Autonomous Vehicle Resilience
@@ -196,10 +195,8 @@ autonomy
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-- Oi: = y <p
 blackhat aE real-worldte ase)
 BRIEFINGS Bt am 4G
-pe Soe Be a
 <r
 ```
 
@@ -230,36 +227,6 @@ peed [All _ ae
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi§ekchat
-BRIEFINGS
-Te
-sa en. ao fb
-See if it passes” ee 4
-. m Het :
-120 ¢
-Aes
-Va
-464692 VLR
-464601 VLR
-464597
-LR
-~ 465071
-a LR
-a 465061
-a
-ee MLR. VLR a a.
-<= i)
-1
-VLR ——
--— eee
-a 7
-A ay . —e
-i cei =
-```
-
 ## Slide 19
 
 ## **How About Mistakes?**
@@ -276,7 +243,6 @@ i cei =
 pifeichat
 BRIEFINGS
 QUALITY MBPS MS —RSRP
-we ces aH so
 date fs 526794 -87-85-93
 ```
 
@@ -284,60 +250,9 @@ date fs 526794 -87-85-93
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidekhat as ‘a, Sa
-BRIEFINGS a ee Ne
-3, MiLwoe G, moe p wwawor - maw
-"lees te eee ©
-if
-a
-Ss
-is 8
-ee ae
-—~“@ ** - s
-he “-s& e
-ES a Oe =
-4 * ty al .
-“a ‘ ov =_w 99 i. i
-i Vet
-= 2 ‘i 4
-+ + ’
-. r 4 J
-. —
-. -
-i e < — g
-*
-4
-.
-~£> sees. bl | MOTE | ihe ate Une Shift-frmer te focus
-```
-
 ## Slide 22
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2) Bi. —whs y & y : \ | : \ / if oy ; im
-black hat : ~e Yi ff 7
-— - =
-4#4 f 4 Pr - oe
-BRIEFINGS Rate = oe y O/ Za z
-= > »
-1 2
-fea Mom. = a ae
-SARs phe
-M autadic 5
-nis amd Aa aS ait ne a
-SPEED
-LIMIT
-25 |
-"MPH
-—————————— —i «rem e———ee——eESGvrivo
-```
 
 ## Slide 23
 
@@ -679,28 +594,12 @@ BRIEFINGS
 bifekhat
 BRIEFINGS
 d
-a bh a
 #BHUSA @BlackHatEvents
 ```
 
 ## Slide 49
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidekhat ay,
-BRIEFINGS eee a Ne
-d
-a he
-' |
-af hn
-ee
-ap,
-=»
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 50
 
@@ -870,19 +769,14 @@ BRIEFINGS
 bldekhat
 BRIEFINGS
 [See seater
-on ttl pa
 Cees bs Sa
-ees se = a m
-Tay — Ag
 mae — — serene
 22ekgy peer ——E — ies
 Peay as as
 mun wae eee New —
 — = SPEED i oo
 g@Mwiginal reverse wor «LIMIT @™eyinal reverse
-ea =| 2 —
 = MPH
-ey | PBS Sls § Se = .
 — eae
 de fmmadv" reverse
 (Ree
@@ -998,9 +892,7 @@ BRIEFINGS
 
 ```text
 BRIEFINGS Se taal ie
-Za ~ | ; hm \
 HLH
-| | }
 = ae
 ry
 j
@@ -1073,9 +965,7 @@ bi khat 4 Gy Y
 ackha Va ee, XY
 BRIEFINGS Jz ip
 Perception error
-| | : | so) 0
 »4301),301.
-=a jaa ee
 °
 #BHUSA @BlackHatEvents
 ```
@@ -1091,7 +981,6 @@ Planner
 
 ```text
 pisekchat A ae A~<% Y
-BRIEFINGS a= ——f \ Va * y
 #BHUSA @BlackHatEvents
 ```
 

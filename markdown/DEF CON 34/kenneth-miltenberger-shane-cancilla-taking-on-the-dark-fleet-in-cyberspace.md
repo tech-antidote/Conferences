@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:30:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace!.pdf` (27 pages)
 
-
 ## Slide 1
 
 **UNCLASSIFIED**
@@ -95,8 +94,6 @@ Last year
 3 ‘The Silent Threat in Global Shipping 4 )
 :
 pile
-a oe a ats
-] VA) |p
 UNCLASSIFIED
 ```
 

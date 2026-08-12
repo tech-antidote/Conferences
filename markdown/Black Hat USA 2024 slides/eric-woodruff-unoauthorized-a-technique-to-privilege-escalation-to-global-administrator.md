@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:31:41Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Eric Woodruff_UnOAuthorized A Technique to Privilege Escalation to Global Administrator.pdf` (137 pages)
 
-
 ## Slide 1
 
 # UnOAuthorized
@@ -133,7 +132,6 @@ The Most Dangerous Entra Role
 You’ve (Probably) Never Heard Of
 @ Andy Robbins - Follow
 6 Published in Posts By SpecterOps Team Members - 6 minread - Feb 16,2024
-S)B6 Q i ©
 portal GUI.
 rN
 ve’
@@ -201,7 +199,6 @@ Everything About Service Principals, Applications, And
 API Permissions
 Posted on July
 Service Principals are identities used by created applications, services, and automation
-to : mo
 Abusing Family Refresh Tokens for Unauthorized Access
 and Persistence in Azure Active Directory
 co
@@ -2339,7 +2336,6 @@ Eric Woodruff (GA) 73'7e7448-93c6-4677-b697-244935blad80 ga-ericw@nort...
 PS C:\temp> Get-MGUser —UserId megan. bowen@northwindtraders.cloud
 DispLlayName Id Mail UserPrincipalName
 Megan Bowen 936d55ce-a9b6—4a3b-—bala—76340951d486 megan.bowen@northwindtraders.cloud megan. bowen@northwindtraders.cloud
-PS C: > = @f
 >>|"@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
 >>|roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
 >>|principalId = "518e'7196-367f-436b-83c7-764cca0a688c"
@@ -2886,7 +2882,6 @@ Entra ID
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
->. PowerShell x + v - o x
 PS C:\Temp> Connect-MGGraph -TenantID 1lae®@6df-10e8-U4b9e-bf66-2a91F4955339 —CLlientSecretCredential $CurrentCred
 Connect-MgGraph: ClientSecretCredential authentication failed: A configuration issue is preventing authentication - chec
 k the error message from the server for details. You can modify the configuration in the application registration portal

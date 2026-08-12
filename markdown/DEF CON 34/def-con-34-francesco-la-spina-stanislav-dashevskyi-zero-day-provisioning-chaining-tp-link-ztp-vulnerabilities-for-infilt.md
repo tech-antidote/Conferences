@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:16:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Francesco La Spina, Stanislav Dashevskyi - Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks - v1.pdf` (47 pages)
 
-
 ## Slide 1
 
 ```
@@ -549,7 +548,6 @@ The Conjurer - Hieronymus Bosch
 
 ```text
 The broken chain of trust - Cloud (CVE-2025-9192)
-"id" : 1,
 "method" : "helloCloud",
 "params"
 "alias" : "ER605",
@@ -568,7 +566,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "oemId" : "[REDACTED]",
 "tcspVer" : "1.2"
 "error_code" : 0,
-"id" : 1,
 "result"
 "cachedSvr" : "n-euwi-device-omada.tplinkcloud.com:443",
 "illegalType" "0;
@@ -589,7 +586,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 ```text
 The broken chain of trust - Cloud (CVE-2025-9192)
 (unsigned int prev
-"id" : 1,
 "method" : "helloCloud",
 "params"
 "alias" : "ER605",
@@ -608,7 +604,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "oemId" : "[REDACTED]",
 "tcspVer" : "1.2"
 "error_code" : 0,
-"id" : 1,
 "result"
 "cachedSvr" : "n-euwi-device-omada.tplinkcloud.com:443",
 "illegalType" "0;
@@ -818,7 +813,6 @@ This is how long it took this time!
 ```text
 Disclosure timeline
 0 90 120 426
-a ee as
 This is how long it
 took this time!
 46

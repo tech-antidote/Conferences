@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:55Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Morgan Hervé-Mignucci_Digital Dominoes Scanning the Internet to Expose Systemic Cyber Risk.pdf` (33 pages)
 
-
 ## Slide 1
 
 # Digital Dominoes: Scanning the Internet to Expose Systemic Cyber Risk
@@ -67,7 +66,6 @@ Morgan Herve-Mignucci
 ```text
 2)
 BRIEFINGS
-S.. = z Ye ore “ 4 y , j y
 black hat N Wigrey » ’
 UM
 3 Large-scale Cyber Events in 2024
@@ -313,7 +311,6 @@ Registered Investment Advisory Firms 22K $145T Firms AUM 1M+ 18K+ Headcount Uniq
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-SI GIsrNeS | S —w7"\ XX 7 LZ bi
 Registered Investment Advisory Firms
 22K $145T
 Firms AUM

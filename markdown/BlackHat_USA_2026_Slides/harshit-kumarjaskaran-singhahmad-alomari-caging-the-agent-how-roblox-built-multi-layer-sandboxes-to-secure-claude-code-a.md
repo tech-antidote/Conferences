@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:54Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Harshit Kumar&Jaskaran Singh&Ahmad Alomari_Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale.pdf` (44 pages)
 
-
 ## Slide 1
 
 Caging The Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale
@@ -227,7 +226,6 @@ Human Intent Validates Action
 ```text
 The Chatbot Paradigm
 Al Suggestions
-— Ta ie)
 Human Intent Validates Action
 The Agent Paradigm
 Al Context

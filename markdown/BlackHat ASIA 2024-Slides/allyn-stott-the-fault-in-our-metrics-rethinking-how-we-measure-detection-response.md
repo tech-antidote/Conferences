@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:27Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Allyn Stott-The Fault in Our Metrics Rethinking How We Measure Detection & Response.pdf` (40 pages)
 
-
 ## Slide 1
 
 # The Fault in Our Metrics Rethinking How We Measure Detection & Response

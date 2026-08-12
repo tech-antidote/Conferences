@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:40:53Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Yakir Kadkoda & Michael Katchinskiy & Ofek Itach_Breaching AWS Accounts Through Shadow Resources.pdf` (101 pages)
 
-
 ## Slide 1
 
 Breaching AWS Accounts Through Shadow Resources
@@ -36,7 +35,6 @@ Michael Katchinskiy Ofek Itach
 
 ```text
 | i
-\ ” ail
 )
 q S
 pisekhat
@@ -924,8 +922,6 @@ medic bl phot 5 35 . . .
 codebuild-{AWS Wh h bl
 Sea ieetia icn services are responsipie
 aws-waf-Logs-{AWS:: aa 2
-aws-analytics-immersiony f th b k t
-aws-vpc-flow-logs-{AWs 4 ie or ese uc e Ss .
 aws-pca-revocation-crl
 terraform-state-{AWs: :
 aws-lLanding-zone-s3-access-L
@@ -934,8 +930,6 @@ aws-glue-scripts-{AWS: :
 terraform-engine-bootstrap
 aws-glue-jars-{AWS::
 aws-accelerator-central-log| . 2
-sam-artifacts-{AWS: : }-{AWS A th ] t bl
-cdk-hnb659fds-assets-{AWS: : }-{AWS:: re ey exp Ol a e .
 aws-emr-resources-{AWS:: }-{AWS::
 aws-glue-assets-{AWS: }-{AWS::
 elasticbeanstalk-{AWS }-{AWS: :
@@ -964,8 +958,6 @@ CodeStar
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> ; S ~~,
-y Ce) aE
 Glue Service Catalog EMR
 Co Ou
 <
@@ -1034,7 +1026,6 @@ Data sources
 pisek hat
 USA 2024
 Untitledjob 4
-AWS Glue ‘ ‘ , :
 Welcome to AWS Glue Visual Script Job details Data quality
 Get started by setting up your account and users, cq
 Getting started
@@ -1114,16 +1105,13 @@ Description - optional eiere
 s53:Listeucket",
 "S321 Buckets", 1,
 "s3:GetBucketacl",
-| 7 - Zs "ec2: "s
 jons can be up to 2048 characters Lom “BC2:
 IAM Role "ec:
 at paap rn Ue asa anteater etc lama aa ' "Bcd! orkInterface”, *
-— — — 7 "aca: ibenetworkInterfaces”
 AWSGlueServiceRole v Cc | ,
 “BC2:
 TeC2: ‘ibesubnets",
 tribute",
-eos 7 -
 permissionse@® = Q
 "jam:GetRol a
 GENERAL GENERAL / MANAGED POLICIES | AWSGLUESERVICEROLE “cloudwatch:PutMetricbata™
@@ -1598,7 +1586,6 @@ r on LocationConstraint="${REGION}
 bucket: ${s3_bucket}
 //$1" > /dev/null 2>&1; then
 echo “Creating bucket: $1
-if ! aws s3 mb $1" ; then
 o “Could not create bucket $1"
 exit 1
 Fi
@@ -1665,35 +1652,6 @@ ew
 ## Slide 89
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-fe fel fed es
-alola|els
-alelo|e|s
-ala|elols
-ee) fed fed ed fed =
-ee) Fed ed
-alala|ols|
-re) fed fe fel ee
-alolelals
-ale|e|els
-ala|e|els
-ew
-SU
-N
-O
-N
-<
-Ww
-=)
-8
-i
-3
-Cg
-Q
-```
 
 ## Slide 90
 
@@ -1837,7 +1795,6 @@ Do you still believe account ID isn’t a secret?
 ```text
 ; “
 \ ¥
-| , a
 Sr
 Do you still believe
 account ID isn’t a
@@ -1857,8 +1814,6 @@ secret?
 ```text
 : “aa
 \ ¥
-| , a
-N a 4
 ———————
 Jf
 blackhat — /

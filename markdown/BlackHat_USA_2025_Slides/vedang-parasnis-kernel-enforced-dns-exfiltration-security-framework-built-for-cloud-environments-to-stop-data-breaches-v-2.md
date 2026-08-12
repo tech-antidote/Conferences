@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:03:18Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Vedang Parasnis_Kernel-Enforced DNS Exfiltration Security Framework Built for Cloud Environments to Stop Data Breaches via DNS at Scale_WP.pdf` (79 pages)
 
-
 ## Slide 1
 
 ©Copyright 2025
@@ -1164,7 +1163,6 @@ mi
 key: Feature 1D|
 Value: Feature
 Values
-wl f] &) Ss
 m3
 Benign Suspicious Malicious eBPF LRU MAPS
 i ‘TC_ACT_OK ‘SKB_REDIRECT /Te_ACT_aHOT

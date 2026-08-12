@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:28Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/b2ahex & Yifen Ma & Greenbamboo C & Haotian Jiang_Heartbeat Havoc Unveiling Remote Vulnerabilities in Windows Network Load Balancing.pdf` (39 pages)
 
-
 ## Slide 1
 
 ### Heartbeat Havoc: Unveiling Remote Vulnerabilities in Windows Network Load Balancing
@@ -91,12 +90,10 @@ Dedicated IP
 ! nee NLB virtual IP NLB Host
 | Client |
 I Request
-| ; = => virtual IP
 | ! NetWork we Dedicated IP
 | ~~
 | Client | ~~ vee
 ! } we NLB Host
-\ eee _ yi virtual IF
 Dedicated IP
 Information Classification: General 1
 ```
@@ -126,7 +123,6 @@ EY (192.160.40.11)] ee el
 ce Network adapterver a Network adapter
 [) nlb.exe
 nib.sys ; °
-\ > nibefg.dil t t ra
 @ nibmgr.exe t o
 nlbmprov.dil t t a
 Information Classification: General
@@ -210,18 +206,15 @@ pikekhat Case Study 1: OOB R&W by Evil HostID
 EUROPE 2024
 identity_cacheLOI
 ae
-| ttl }
 / If ——-DIPEntrylist J
 main_context / | ( \
 — >» / | fadn buffer
 / identity_cacheL1I
 ee | {Hestrdca) i?)
-( ttl ! _
 | f DIPEntrylist 4{—
 | IDENTITY
 identity_cachelL32] | . |
 g Fadn bubRer |
-— \ NN _ J)
 \ eco
 ilentity_cachel31]
 HostIDG2) }
@@ -346,7 +339,6 @@ FFfFF803° 44df9b89
 jmp
 111+0000000000000800 r12-0000000010000004 r13=ffffb38b6e457010
 r14=ffffb38b6ef38090 ri5=ffffb38b6e457750
-nv up ei pl nz ac pe cy
 $$=0018 ds=002b es=002b fs=0053 gs=002b
 FLTMGR! guard_dispatch_icall_ nop:
 ef l=
@@ -582,7 +574,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Qa | :
 blackhat Case Study 4: Race condition to DoS by NRProtocol :
 EUROPE 2024
 Raw args Funcinfo Source Addrs Headings Nonvolatile regs Frame nums Sa
@@ -615,7 +606,6 @@ rip=ffff££8007dfa8d2d rep=fffff£8007d993960 rbp=0000000000000001
 r8=O000000000000001 r3=fffff8007d993901 r1lO=fffff8007d£a8d20
 ril=fff£££8007d9939b0 r12=0000000000000000 r13=0000000000000000
 r14=0000000000000000 r1S=0000000000000000
-iopl=0 nv up ei pl zr na po nc
 nt ! KeAcquireSpinLockAtDpcLevel+0xd:
 fffff800° 7dfa8d2d £0480fba2900 lock bts qword ptr [rex].0 ds: 00000000° 00000068=?777727727272272727222?
 Resetting default scope
@@ -671,7 +661,6 @@ Jhether the currently available space is sufficient
 if ( {3+ > ad) Expansion expansion
 = 13+ v9;
 = NLBVectorReserve(al, + awalys_1);
-if (! )
 {
 LABEL_7:
 = *(_DWORD *)(al + 16) * a3;
@@ -714,12 +703,10 @@ char *v13; //
 int64 v14; // +
 PVOID VirtualAddress; // [ ll 10h] BYR
 = *(_DWORD *)(vector + @x1@) * t;// Vector->ElementSize * NewCount
-3 = 8;
 1 if ( *(_DWORD *)( + 0x28) - *(_DWORD *)( + 0x18) < )
 {
 wee tua ess = @164;
 i] (&Vi > » ' BLN');// Memory will not be released
-y if ( 1v3 )
 Call Stack: PaG t wold "(vector 28
 NLBCoreReceivePacket = (inca ire css +
 ->NLBCoreReceiveHeartbeat [0] = (soso ,
@@ -750,7 +737,6 @@ bisek hat Case Study 5: Moderate Severity but Unauth DoS .
 EUROPE 2024
 NLB Host
 & Attacker
-eee em ee ee ee ee ee ew we we eee eee ee eee eee DS
 NRPPacket
 #pragma pack(push, 1)
 typedef struct _NRP_PACKET
@@ -792,7 +778,6 @@ _—
 — NRPPacket
 #pragma pack(push, 1) ©
 typedef struct _NRP_PACKET
-{ =_ =
 unsigned long Magic;
 junsi ned_char FunclId
 unsigned long unk1i;
@@ -826,7 +811,6 @@ Information Classification: General
 black hat
 EUROPE 2024
 NLB Host
-eee ee ee em ee ee ee ee we eee ee eee eee eee - DS
 - ~
 ak NRPPacket
 '
@@ -894,7 +878,6 @@ If fFFF803° 9a56343F 48217510
 kd> p
 LBINLBVectorReserve+0x37:
 If fFFF803° 9a563443 488d4d10
-I kd> p
 LB!INLBVectorReserve+0x3b:
 IF fFFF803° 92563447 41b84e4c4220
 kd> p
@@ -914,7 +897,6 @@ LB!NLBVectorReserve+0x4a:
 ffFf803° 9a563456 Of1f449000
 a: kd> r rax
 'ax=00000000c0000001
-a: kd> g
 [SC-CLIENT] !! Service timeout: Service StorSvc, PID 0x00000410, OpCode 0x0e000010, pel
 jae
 and

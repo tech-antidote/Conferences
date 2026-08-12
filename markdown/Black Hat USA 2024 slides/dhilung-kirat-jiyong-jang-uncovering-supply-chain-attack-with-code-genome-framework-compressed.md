@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:56Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dhilung Kirat & Jiyong Jang_Uncovering Supply Chain Attack with Code Genome Framework_Compressed.pdf` (30 pages)
 
-
 ## Slide 1
 
 # **Uncovering Supply Chain Attack with Code Genome Framework**
@@ -370,7 +369,6 @@ _Gene can be constructed from closed-source/legacy code where source code is not
 ```text
 Code Genome: Semantically meaningful fingerprint
 Pes int pen at Sears CIS
-to. tl ir
 if (a>100){
 l=l+a;
 f3(int a){ 2; if (a>501){
@@ -378,16 +376,12 @@ int local = a; irr int tmp = tmp = a+tmp;
 a = local;
 local = 30;
 a+ local; x
-ge 1 +2;
 a + tmp+2;
 maj;
 l=m=a;
-("xor %e "
 (aarp x") s “
 (ap i lse if(a>10)
 sturn a;
-int tmp = a; a +=a; a = a — tmp;
-a =a + 32; return a;
 l
 int tmp 30-a; tmp = tmp + a;
 [rbp - tmp = tmp +2; a = a + tmp;
@@ -766,7 +760,6 @@ github.com/code-genome
 
 ```text
 a a
-| ” ai
 }
 black hat —
 USA 2024

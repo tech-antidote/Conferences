@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:04:03Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Daniel dos Santos & Francesco La Spina & Stanislav Dashevskyi_A Closer Look at the Gaps in the Grid New Vulnerabilities and Exploits Affecting Solar Power Systems.pdf` (45 pages)
 
-
 ## Slide 1
 
 A Closer Look at the Gaps in the Grid: New Vulnerabilities and Exploits Affecting Solar Power Systems
@@ -131,7 +130,6 @@ Image source: <u>http://base.isolarcloud.com:8181/docs/a1-0/d3.md</u>
 ```text
 pisek hat
 ASIA 2025
-i iSolarCloud Fs @!@ ec &
 Image source:
 sharp001 Gb
 &
@@ -148,7 +146,6 @@ Yield Trend Month Yoon Today Plant PR Plant Equivalent Using Hours
 ix 50 | Today Yield(kWh P MW. 1 Year Year
 1906240466
 LS A
-~S 00 12
 € ) ORA1912020001895335 A1904120009895B25
 ~ 150 0.9
 A190412000989t5 LORA191202000189Fs5
@@ -807,7 +804,6 @@ Cannot be an invalid address
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. ’ ) >
 blackhat The final payload’ a fo
 ASIA 2025
 | Offset From

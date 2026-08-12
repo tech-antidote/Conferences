@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:11:43Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Lorin Lehawany&Sven Nobis_Breaking Multi-Tenancy Over and Over, and What We Can Learn From This.pdf` (63 pages)
 
-
 ## Slide 1
 
 Breaking Multi-Tenancy Over and Over, and What We Can Learn From This
@@ -810,7 +809,6 @@ DevTools - kubeflow.gke.gcp.ernw.eu/notebook/snobisernw-de-ext/test/
 ‘® [0 Elements Recorder Console Sources Network Performance Memory Application Privacyandsecurity Lighthouse AdBlock
 ® @ Y. QA) G@Preservelog CO Disablecache Nothrotting ~ @ %
 Y Filter © Invert 1 Morefilters » All Fetch/XHR_ Doc CSS JS Font Img Media Manifest) WS Wasm | Other
-20 ms 60 ms 80 ms 100 ms 120 ms 140 ms 160 ms 180 ms 200 ms
 I -
 Name X_Headers Payload __ Preview __Response__Initiator__Timing__Cookies
 & test/

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:07Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Holger Unterbrink_Architecture Analysis of VMProtect 3.8 Demystifying the Complexity.pdf` (58 pages)
 
-
 ## Slide 1
 
 Architecture Analysis of VMProtect 3.8
@@ -281,7 +280,6 @@ work_registr_List . push_back(regEBP) ;
 work_registr_lList .push_back(regEST) ;
 work_registr_List. pi back(regEDI) ;
 if (cpu_address_size == osQWord) {
-for (i = 8; i < 16; it+) {
 work_registr_list. push_back((uint8_t)i);
 | 5
 }
@@ -364,9 +362,7 @@ Main-Function after protection
 slate = . :@09000014000101B eax, @F7489C7Fh
 int main() :@@@0000140001020
 f . :@920000140001020
-. " aM} - . 9909000140001028 ;
 VMProtectBegin("Test marker"); pounapeeeooospenanenes
-* " * ny. . :0990000140001029
 printf ( Hello Protection\n ); . :@9@008014000102C [rsptarg_8], 7ep495ch
 . : :0000000140001035 qword ptr [rsp+@]
 VMProtectEnd() ; . :0@00000140001039
@@ -796,7 +792,6 @@ jmp_addr = ['0x000000014001BF44"]
 bb_idx = [2]
 === UXUUUUUUU140UIBF44_--=
 0x000000014001BF44 |jmp 0x000000014001B 544
-ON OE AN I I AS A
 Code trace split into basic blocks
 and than use Graphviz to build a Code
 Flow Graph (CFG)
@@ -984,8 +979,6 @@ The VMHandler table is not linear.
 ```text
 Remember the VMHandler table offset (sub rbx,1 ) ?
 dd 2E£202302h ; 4. VMHandler . offset (sub 1) at 14003B6BC
-db 4Ch ;
-db _4Fh ; O
 ; 3. VMHandler enc. offset (rbx=rbx rbx, [rox] ; [rbx]=[14001076A]) at 14003420E
 d
 b__96h
@@ -1235,7 +1228,6 @@ Translation of “INC EAX”
 raxergbooeoe2 111->140008962
 JEADCAFF rx TiSDEADCEOO ape
 x00
-a = —
 00000000140014EAE_~S < iiiesae (0x0000000140023A16 (0000000014001 F ECF
 CattVMProtectBegin
 mov rax, Odeadcafeh

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:54Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Yotam Meitar_The Crypto Caper Exposing a Sophisticated Multi-Cloud Bandit.pdf` (16 pages)
 
-
 ## Slide 1
 
 The Crypto Caper: Exposing a Sophisticated Multi- Cloud Bandit
@@ -380,11 +379,3 @@ visibility
 
 THANK YOU
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PITS
-CTT | er TTT
-tm Th
-| | ||
-```

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:25:35Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Natalie Silvanovich_How to Hack Shannon Baseband (from a Phone) .pdf` (63 pages)
 
-
 ## Slide 1
 
 How to Hack Shannon Baseband (from a Phone)
@@ -105,7 +104,6 @@ Attack Surface
 ```text
 Attack Surface
 _ @®
-® =. (()) re
 a
 Tour Cellular Network Caller
 Phone (02/Vodafone/EE)
@@ -171,7 +169,6 @@ Attack Surface
 ```text
 Attack Surface
 _ @®
-® =. (()) — g
 Your Cellular Network
 Phone (O2/Vodafone/EE)
 VoLTE Call
@@ -233,7 +230,6 @@ Attack Surface
 ```text
 Attack Surface
 _ @®
-® =. (()) — g
 Your Cellular Network
 Phone (O2/Vodafone/EE)
 VoLTE Call
@@ -300,7 +296,6 @@ The Internet
 
 ```text
 sos ():
-Ps iC ( (Q) Q
 Cellular Network Caller
 . (02/Vodafone/EE)
 The Internet l

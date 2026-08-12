@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:22:40Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Nika Korchok Wakulich_UEFI and the Task of the Translator Using Cross-Architecture UEFI Quines as a Framework for UEFI Exploit Development.pdf` (108 pages)
 
-
 ## Slide 1
 
 ```
@@ -747,7 +746,6 @@ ImageHandle, sp, #0x70
 gST, ImageHandle
 RE and xdev
 BESSBIR ALSVVSsaraaARaNssBSIFALBV ASSaeruau
-4 d.Ro & @ = yx
 uVarll = 0;
 efiImageHandle = ImageHandle;
 local_8 = (*efiOpenProtocol) (ImageHandle, &efiLoadedImageProtocolGuid, efiLoadedImageProtocol,
@@ -779,14 +777,12 @@ local_8 = (*efi0penProtocol) (local_18, (EFI_GUID *)local_58,efiLoadedImageProto
 if (local_8 == 0) {
 FUN_00001le1c((undefined *)
 L"EFI BootServices OpenProtocol call with simplefilesystemprotocol was successf
-: %p \n"
 , &local_30, efiLoadImageProtocol, ImageHandle, uVarl1,uVarl2,
 (ulonglong)efiOpenPPotocol, in_x7);
 }
 peVar6 = *(code **)((longlong)local_48 + 8);
 puVarl = &local_60;
 local_8 = (*pcVar6) (local_48);
-if (local 8 == 0) {
 ```
 
 ## Slide 50
@@ -1024,7 +1020,6 @@ RE and xdev
 2SxRae
 FPESSSSEBYSBLRESRBSSSBHUSSSS8S8sEsas
 Oo
-© Ore o
 FOorF+rOoOOoOocoO
 00001410 e2
 00001414 20
@@ -1154,7 +1149,6 @@ mela
 if (local_8 == 0) {
 FUN_00001ddc ((undefined *)
 L"EFI BootServices OpenProtocol call with simplefilesystemp
-: %p \n"
 , &pEStack_30, Interface, param_1,uVarl3,uVar15, (ulonglong)pE
 }
 pEVar6 = local_38->OpenVolume;
@@ -1291,7 +1285,6 @@ Qx0000000000001000 - Ox0000000000005000 is .text
 add symbol table from file "/Users/nika/uefi_testing/edk2/Build/BareBonesPkg/DEBUG_GCC/Aarch64/UefiQuineAarch64.debug" at
 .text_addr = 0x7875e000
 .data_addr = 0x78762000
-gy orn) y
 Reading symbols from /Users/nika/uefi_testing/edk2/Build/BareBonesPkg/DEBUG_GCC/Aarch64/UefiQuineAarch64.debug...
 (gdb)
 .data
@@ -1651,7 +1644,6 @@ EFI_HANDLE DispatchHandle,
 const void “Context,
 char *CommBuffer,
 UINTN *CommBuf ferSize)
-6 i rr
 EFI_STATUS v5; // rbx
 EFI_STATUS v6; // rax
 UINTN v7; // rbx

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:05Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Kadkoda-Breaking-the-Chain.pdf` (102 pages)
 
-
 ## Slide 1
 
 Breaking the Chain: An Attacker's Perspective on the Supply Chain
@@ -1445,9 +1444,7 @@ JaAWAS - E€
 sasied-Apog - ZE
 Ipyww - TE
 asoosiapun - OF
-dAY® - 67
 Yyoqaj-apou - gz
-qo|8 - Zz
 SS yedqGam - 97
 ! na/| ® -SZ
 AUaIOp - HZ
@@ -1460,14 +1457,11 @@ LT
 s{-2109 - pT
 sadAy-doid - eT
 | esyxa-sy - ZT
-OW - 6
 wop-yoea1 -g
 a  ssaudxa - /
 49)
 W109 - 9
 soIxe - G
-qs} - 0
-IEY? - €
 yoeai-z
 ysepo| - T
 80
@@ -1497,7 +1491,6 @@ The patch: Confirmation mechanism
 Invitations 2
 im pe
 I
-fb x a 5 te
 You’ve been invited to maintain fb_npm_package.
 Maintainers 1 Accept Decline
 FA pizzasecure
@@ -1720,11 +1713,7 @@ The Harvesting
 20
 10
 0
-S 0 Ow aA Po Cy ww x SW © so Ss
 SEF LES GO FES SF ESS EEF ESF ELF EE GES
-SX Or x eS W GS PLS PO Ke 3 L es SS Y¥
-C we CS & ore Ro oe ce
-EN a?) ye
 ```
 
 ## Slide 81
@@ -1816,7 +1805,6 @@ blackhat
 Disclosure
 AAT.
 aWs wa
-< ~ -
 . ae
 ‘
 N 6
@@ -2100,7 +2088,6 @@ blackhat
 ASIA 20253
 Summary
 e This was only the tip of the iceberg
-Oy Sac oe a ee
 Package Managers by libraries.io
 ```
 

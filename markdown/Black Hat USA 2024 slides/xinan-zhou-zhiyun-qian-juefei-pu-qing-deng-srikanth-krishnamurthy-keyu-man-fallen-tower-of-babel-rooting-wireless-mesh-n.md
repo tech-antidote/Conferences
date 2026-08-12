@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:40:06Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Xin'an Zhou & Zhiyun Qian & Juefei Pu & Qing Deng & Srikanth Krishnamurthy & Keyu Man_Fallen Tower of Babel Rooting Wireless Mesh Networks by Abusing Heterogeneous Control Protocols.pdf` (43 pages)
 
-
 ## Slide 1
 
 Fallen Tower of Babel: Rooting Wireless Mesh Networks by Abusing Heterogeneous Control Protocols
@@ -105,7 +104,6 @@ Wireless Mesh Networks
 are increasingly popular!
 Wireless Mesh Network Market Size, By Region, 2019 - 2032
 (USD Billion)
-9.17 = = = = =
 2019 2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030 2031 2032
 @ North America Europe @ Asia Pacific Latin America @ Middle East & Africa
 Source: Polaris Market Research Analysis
@@ -475,35 +473,24 @@ Leaked group_id
 13 0.100893 TPLink_33:13:34 IPv6mcast_Oc 802.11 516
 14 0.104691 TPLink_33:13:34 IPv6mcast_Oc 802.11 516
 15 0.112439 TPLink_33:13:34 IPv6mcast_Oc 802.11 525
-Type: WPS (0x04) : 00 00 24 00 6f 08 00 40
 Version: 0x10 10 02 71 09 80 04 da a2
-«ee . 48 Ge c9 22 80 00 00 00
 Wifi Protected Setup State: Configured (x@2) la c8 3e 31 04 42 la c8 Type-Length-Val ue
-RF Bands: 2.4 and 5 GHz (0x@3) 2e 0@ 00 00 64 00 11 14
 Vendor Extension 82 84 8b 96 24 30 48 6c
 Tag: Vendor Specific: ASUSTek COMPUTER INC. 00 07 06 55 53 20 01 ob
 Te Number: Vendor Specific (221) ee We Ue te 3 st) Be (TLV) stru ctu re.
-@0 Of ac 04 01 00 00 OF
-Tag length: 71 3c 00 00 46 05 32 00 00
 OUI: £8:32:e4 (ASUSTek COMPUTER INC. ff 00 02 00 02 00 00 00
 Vendor Specific OUI Type: 1 @@ 00 00 00 00 00 3d 16
 HE Vendor Specific Data: 01010102010d03148ce982744849b948ae707 f2258004056663bc91407! 00 00 00 00 00 00 00 00
 Tag: Vendor Specific: Epigram, Inc. a ee ee ee a a ce ee 6 +
 Tag Number: Vendor Specific (221) ff 00 00 fa ff 00 20 co Hash Oo IS
-Tag length: 26 23 01 00 08 12 00 10 22
-QUI: 00:90:4c (Epigram, Inc.) 8c 00 fa ff fa ff 19 1c
 Vendor Specific OUI Type: 4 Od fc ff ff Ge 26 00 00 sto red at type 0x3
 802.11n (Pre) Type: Unknown (4) 62 2 8 ae x bs 0 0
 802.11n (Pre) Unknown Data: 18bf@cb179810f faff0000faf f0020c0050002000000 150 1 20 dd 47 f8 32 e4 Q1
 Tag: Vendor Specific: Broadcom 0160 e9 82 74 48 49 b9 48 ae
 Tag Number: Vendor Specific (221) @170 3b c9 14 Q7 04 00 00 00
-Tag length: 9 0180 01 00 15 01 00 14 14 eb
-@190 8d 11 06 10 32 99 8e 65
-OUI: 00:10:18 (Broadcom) 04 18 bf Oc b1 79 81 Of
 Vendor Specific OUI Type: 2 CO 05 00 02 00 00 00 dd vias
 Vendor Specific Data: 0201009c0000 0 00 dd 18 00 50 f2 02 1 01 20 20 03 a4 00 00 tPee cease
 Tag: Vendor Specific: Microsoft Corp.: WMM/WME: Parameter Element 27 a4 0@ 0@ 42 43 5e 00 62 32 2f 00 Gc 02 7f 20 BC*: b2/:1:::
-Tag Number: Vendor Specific (221) dd @7 50 6f 9a 16 @1 @1 00 16 8e a6 82 + ePoreee =
 ```
 
 ## Slide 34

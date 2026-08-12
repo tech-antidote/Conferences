@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:10:25Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jin Her&Chihyeon Cho&Jaehyun Nam&Seungsoo Lee_Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices.pdf` (24 pages)
 
-
 ## Slide 1
 
 # Beyond Seccomp: Breaking and Rebuilding Syscall Filtering for Microservices
@@ -338,7 +337,6 @@ Experimental Environment **Category Configuration** Cluster **Kubernetes** v1.30
 ```text
 Demo 1: Evading Stateless Filters
 * Stateless filter’s not sufficient to protect a container
-¥ — @ 172.16.0.121:8080 = +
 A\NotSecure 172.16.0.121:8080
 GoFinance
 The most popular peer to peer lending at SEA
@@ -387,7 +385,6 @@ return Q;
 bpf_send_signal(SIGKILL) ;
 return @;
 fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC || 0_DIRECT,| 0600);
-if (fd < @) {
 perror("open");
 return 1;
 memset(buf, @, size);

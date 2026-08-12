@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:08Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kazuki Matsuo_You've Already Been Hacked What if There Is a Backdoor in Your UEFI OROM.pdf` (48 pages)
 
-
 ## Slide 1
 
 You‘ve Already Been Hacked What if There Is a Backdoor in Your UEFI OROM?

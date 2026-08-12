@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:25:29Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tomer Bar & Omer Attias_Defender-Pretender When Windows Defender Updates Become a Security Risk.pdf` (91 pages)
 
-
 ## Slide 1
 
 LABS
@@ -443,9 +442,7 @@ _Pdata: @80000075BSB8DC1
 .rdata: 808800 75B8B8DC2
 .Pdata: @@eeeee75BSB8DC3
 rdata: ABAAABATSRRRRM A
-\ db 39h ]
 dq offset unk_75BSBA1De
-_rpd guid db 6h ; ~
 db 8
 db 8
 tr Ls
@@ -454,11 +451,6 @@ dw 443Ah @ -> servertipenabiereature
 1- yerMpDisableFeature
 cer ACOs = 2- lpQueryStatus
 mt — sf 3- ventOpen
-db @cch ; i
-db @Dih ; Nl 41 -> ServerMpQueryEngineVersion
-db @FBh ; ii { 42 -> ServerMpUpdateEngineSignature J
-db @DBh ; U
-db 38h ; 3 /
 9
 42 -> ServerMpUpdateEngineSignature
 ```
@@ -1047,314 +1039,6 @@ Begin
 
 **End**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Threat Begin & Threat End
-Begin
-iA
-WA
-9C: "STGNATURE_TYPE_THREAT_BEGIN"
-Name
-5D: "SIGNATURE_TYPE_THREAT_END",
-Size Type
-OxO1D1 Threat
-oxeo22 ThreatBegin
-axQ1A7 [ ]
-axgage Threatend
-End
-5C
-1E
-F421 41
-o4 40
-30
-30
-30
-30
-72
-él
-65
-44
-73
-2E
-63
-65
-m3)
-79
-63
-6E
-1B
-20
-oD
-te
-30
-g6
-8g
-#4
-fe
-?4
-6C
-2E
-6g
-61
-78
-65
-a
-Fz
-6F
-6C
-ok
-25
-64
-BS
-Ec
-cE
-G4
-45
-oF
-6
-6E
-6g
-che
-ck
-40
-OB
-gs
-g2
-03
-24
-WE
-lAconki, .@  $
-le)
-OB
-Og
-2E
-65
-641
-61
-che
-fo
-65
-#3
-66
-65
-73
-63
-BE
-AF
-23
-FA
-6B
-63
-oh
-6F
-65
-OF
-che
-#4
-6F
-a
-che
-25
-64
-as
-Bo
-24
-Ba
-20
-83
-Ag
-20
-6g
-6F
-6E
-fe
-4
-30
-6E
-641
-#3
-65
-aa
-67
-8B
-a3
-6E
-6E
-di
-74
-che
-69
-26
-25
-30
-f2
-aa
-3F
-3D
-ac
-16
-74
-BE
-Bu
-4F
-4E
-63
-#4
-41
-69
-aa
-61
-64
-#3
-25
-65
-53
-Ss)
-25
-EC
-Ad
-96
-co
-G41 a3
-EB 36
-22 61
-65
-65
-2E
-69
-69
-4c
-ch
-gc 53
-6C
-69
-26
-75
-5c
-68
-49
-65
-él
-fd
-25
-At
-6F
-4d
-#5
-AF Chl
-plo)
-GheeiE
-co]
-6E
-66
-OB
-65
-#2
-6c
-6g
-73
-4c
-af
-30
-Bo
-Ba
-20
-6B
-By) 50 a4
-5c
-34
-2
-61
-#4
-oh
-65
-65
-41
-63
-éF
-65
-61
-25
-69
-45
-25
-67
-63
-40
-cE
-O41
-ac
-#4
-#3
-4c
-fi)
-#3
-f2
-6c
-#3
-66
-f2
-fi)
-16
-42
-BE
-16
-23
-O41
-53
-16
-2F
-F4
-69
-fe
-#4
-63
-65
-oh
-65
-6F
-26
-a3
-56
-30
-45
-7a
-64
-79
-66
-65
-75
-61
-72
-73
-74
-4E
-a?
-EF
-29
-06
-_ fe :
-a
-Ei. Ne
-revi Ge
-E, aconti.net/di
-Bler... ALifestyl
-E.aconti... Alife
-Dialer... SecureD
-haler... goodthin
-x... dialer/stubl
-Jexe.  &dialerhas
-hwert=4sedialery
-Prsion=*u%s%s
-Boftware\aLifest
-Wle\... ShowEroki
-ts TUT Du ahr
-PeseCountr ys
-ndcode=*u..g
-ny’ B
-```
-
 ## Slide 41
 
 **Evaluation**
@@ -1370,7 +1054,6 @@ counter += 1
 except Exception:
 print(f'Total Signatures: {counter}' )
 thon .\CountSignatures. py
-py : \
 Total Signatures: 2643614
 ```
 
@@ -1395,10 +1078,6 @@ ua Seviri by;
 us Action;
 ué Unknowns[4];
 4;
-SC HESEESEEE 4S FE EE BE EE Bo OB Ge 8 Oe
-F4 21 41 65 6F 6E f4 69 fe Oo OS 46 85 82 24 oo
-4 HO 40 45 80 GO O4 8H O21 63 FO OF GO Bo ob 24
-30 GO GH Ob BO Go Ob Be Ob Bo Be oe Bo oe oe 6
 ```
 
 ## Slide 43
@@ -1524,21 +1203,9 @@ LoadDatabase
 |) RMDX & Zlib Headers Tear he ——
 u32 Signature;
 B u3s2 Timestamp;
-s2 40 44 56 16 AE FF 64
-G0 80 Ge Oo Oe ao oo oo FBC ae Be oo u32 Unknownd ;
-f0 88 88 88 88 Bo oo Be u32 Options;
-FF FF FF FF @@ aa oo oo u32 Unknowne ;
 u32 Unknowns;
 u3s2 Dakadtfset;
 Use DecompressedDataSi ze;
-26 01 88 88 29 C6 B2 HH 4
-o5 EY @3 80 5B @2@ 8o 8h 5
-61 05 G8 OO 67 6E FO Ob
-#3 G1 860 86 74 G1 GO Ob 76
-FE 67 SC 80 6H BS 8D 8H aC
-BF O2 G8 8H 96 83 8H 8S AG
-Ba 2 ae a
-HH 6D OL OO OO mgt... ie
 ```
 
 ## Slide 49
@@ -1551,15 +1218,10 @@ HH 6D OL OO OO mgt... ie
 
 ```text
 | RMDxX & Zlib Headers
-S52 40 44539 16 SE 7F 64 FF FF FF FF @2 fo 28 80 PMDX.. od
-HO OF FO OC pretties GE EH HO GA 61 56 8b
 ______ Zlib DataHeader BP EE
 struct CDATA_Header {0000000 Jue
 ui? CompressedDataLength; cede @ AL,
 use CROSZ Freee eee Se
-us CompressedData[CompressedDataLength]; |: a Ve pe
-94 14 49
-45 AG 62 235 AE
 ```
 
 ## Slide 50
@@ -1690,281 +1352,13 @@ u8 Datal header. Size];
 
 **BLOB**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-|) BLOB_RECINFO & BLOB
-74
-61
-aa
-SF
-BE
-D?
-pg
-80
-FF
-FF
-ac
-ca
-4
-4B
-i4
-4eE
-i4
-4h)
-a6
-42
-15
-ad
-FF
-a8
-ag
-oF
-FS
-ED
-D1
-EC
-FF
-p2
-as
-Fa
-a4
-Fz
-BLOB_RECINFO
-18
-AL
-78
-a7
-Ag
-CE
-E?
-a1
-FF
-13
-O35
-44
-13
-1A
-12
-ie
-a3
-26
-aC
-FA
-ac
-BS
-Aa
-bc
-O41
-18
-be
-CF
-a6
-O41
-as
-FS
-FF
-a1
-1F
-73
-11
-6
-aa
-D4 WS
-FF 6
-[Gc] FF
-O3
-a3
-af 66
-sO 2B
-6F FQ
-bitfield SignatureHeader
-Type
-Size
-=
-struck Signature {
-SignatureHeader header
-uS Dakal header. Size)
-Signature blob recinfo @€
-Signature blob @¢
-```
-
 ## Slide 59
 
 **BLOB Structure**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1 BLOB Structure
-struck Blob {
-SignatureHeader header;
-u32 Unknown:
-u32 Unknown:
-We Da
-D7 oe /
-EY
-9 42 9F EC) at
-30
-FF 15
-ad
-FF FF
-ac a8
-co ag
-HZ
-AS
-FS FS
-ED te
-D1 Fe
-FF
-AA
-De
-C2
-HB
-a5
-a4
-ad
-FF
-a2
-a
-AG
-AG
-BA
-69
-FF
-FF
-a4
-58
-38
-24
-10
-oF
-FF
-1F
-g5
-29 10
-ab De
-FE CF
-BO 86
-BD it
-45 Fa
-BA
-Dig
-3
-FF
-ag O41
-BS iF
-Fa 73
-a4
-fQ 11
-cF 8a
-FF
-BS
-oF
-oD
-OF
-6
-FF
-a3
-66
-2B
-FQ
-```
-
 ## Slide 60
 
 **Actions**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1 Actions
-struck Blob {
-SignatureHeader header;
-u32 Unknown:
-(us Datal header, Size - 8];
-th
-DF oe EF Bd 73
-AA
-De
-C2
-HB
-20
-a5
-a4
-BA
-69
-24
-29
-ra
-FE
-aD
-BD
-Ds
-45
-1
-Di
-cr
-G6
-BA
-BS
-Fo
-BA
-Lig
-3
-DO 42 9F EC jai at FF
-ae FF FF GB ad
-FF 15 HZ FF FF 1A
-AL HS 15 BE BOD 35
-FF FF FS Fa 3 ay Fa
-BC 8G ED o4 15 11
-co 9 D1 Fe 44 86 AL
-FF
-50
-a3
-FA
-a9
-20
-a1
-FF
-a2
-a
-AG
-AG
-FF
-FF
-a4
-58
-38
-10
-oF
-FF
-1F
-g5
-BE
-BS
-Fel
-ad
-fa)
-CF
-FF
-ad
-1F
-73
-11
-a0)
-FF
-BS
-oF
-oD
-OF
-Bb
-FF
-a3
-66
-2B
-FQ
-```
 
 ## Slide 61
 
@@ -2082,329 +1476,6 @@ return merge_stream
 
 #### **After Merge**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1 Diffing Base and Merge
-oo
-BD
-3F
-a?
-oo
-a3
-41E
-Bc
-44
-a1
-E3
-67
-18
-45
-2F
-61
-oo
-09 00
-31 BS
-54 58
-OA BE
-45 1c
-oo 20
-FS 77
-67 16
-20
-38
-16
-87
-B6
-48
-34
-oo
-a4
-6c
-D6
-5B
-as
-oo
-06
-67
-3c
-84
-bg
-oo
-02
-Fg
-DD
-72
-AS
-oo
-ES)
-67
-58
-2D
-70
-30
-oo
-oo
-iF
-35
-33
-E3
-20
-a?
-16
-Ba
-55 OD 26|B6
-94
-61
-oo
-oo
-OF
-D1
-FQ
-OF
-20
-1D
-16
-58
-BB
-21
-SA
-oo
-16
-Eo =
-B2
-23 Q
-48 g
-oo 2
-oo ..]
-33 g
-DF <
-19 g
-38) | 8.
-20 0
-3B cl.[g
-16
-90
-B? frog
-4D i.wadr.4
-44 ..q Zz
-68 1G
-oo R.1
-BS Txg
-74 31%. . XX
-ED g...E.-.8
-ic pl
-20 - wOZQ
-75 9-9
-eiltp BA
-GY
-6M
-2.74
-vf-7°
-,
-E
-jo1. 82Q
-g...E
-?R, NSU
-70
-B2
-5B
-43
-68
-98
-4
-8c
-D6
-5B
-os
-68
-06
-iF
-35
-33
-E3
-20
-a7
-16
-68
-2D
-c4
-23
-tol)
-6F
-tol)
-E9
-67
-82
-bg
-cg
-c?
-08
-61
-EE
-ce
-88
-B1
-68
-77
-67
-47
-S2
-68
-6c
-68
-04
-cD
-thi
-6D
-Ao
-After
-Ec
-16
-18
-AE
-as
-tcl)
-03
-59
-39
-SE
-8D
-tcl)
-E3
-67
-18
-AS
-2F
-61
-ao
-99
-34
-54
-A
-45
-ao
-F8
-67
-3B
-16
-FO
-tol)
-tol)
-Cc?
-SE
-73
-53
-20
-38
-16
-87
-B6
-A8
-34
-a0
-ao
-BS
-58
-B6
-ic
-20
-77
-16
-16
-BC
-AA
-EG
-tol)
-B4
-67
-tol)
-55
-54
-og
-ao
-02
-F9
-DD
-72
-aS
-ao
-E9
-67
-58
-2D
-78
-30
-ao
-07
-83
-2B
-EF
-20
-co
-16
-70
-B4
-73
-81
-ao
-ao
-oF
-D1
-F9
-OF
-20
-1D
-16
-58
-BB
-24
-SA
-ao
-ao
-07
-68
-Merge
-EG
-B2
-23
-48
-ao
-ao
-33
-OF
-87
-9A
-20
-7E
-16
-Ba
-Bg
-CF
-76
-ao
-tcl)
-6F
-DE
-ED
-3F
-20
-Eg
-1.929
-gE.-
-q~9
-R. . N9u#omS;
-dg
-Data Size:
-OxGACEEF LL
-Region: @xG@GG00000 - BxBACEEV11 (@ - 1613531729)
-(OxACEE711 | 172.93 MiB)
-Baka
-ize: fy fsFACEic
-Region: OxQ@0800008 - BxOAF6CE1C (@ - 183946780)
-(QxAF6CELC | 175.43 MiB}
-```
-
 ## Slide 71
 
 **Eureka - Unknown Numbers**
@@ -2506,7 +1577,6 @@ Delete LaZagne Threats
 ```text
 3 powershell (running as TOYSTORY\weak)
 PS C:\Users\weak\work> .
-© new » TL Sort v
 View »
 € > ¥ 4 BEX Users > weak > work > Defs - ¢
 Name Date modified Type Size
@@ -2526,7 +1596,6 @@ a DVD Drive (03) CCC
 Ge Network
 litem | (=
 es 3:28AM
-o8 fF ® mC = @ rpepas ©
 ```
 
 ## Slide 80
@@ -2543,7 +1612,6 @@ o8 fF ® mC = @ rpepas ©
 *"SIGNATURE_TYPE_VDLL_ARM",
 "SIGNATURE_TYPE_THREAD_X86",
 "SIGNATURE_TYPE_THREAD_X64",
-# A p oF
 “SIGNATURE_TYP
 “SIGNATURE _TYP
 _SHA256"
@@ -2613,7 +1681,6 @@ yw
 a
 x
 BB work
-© new ~ WN sony Ea
 € > v B®  BB> ThisPC > Local Disk (C:) > Users >» woody > work » ¢
 BE Documents # Name % Date modified Type Sie
 Brictures ¢ — BDe 6/22/2023 330 AM File folder
@@ -2788,17 +1855,6 @@ Microsoft released a fix on April - **CVE-2023-24934** The fix validates the dig
 ##### **wd-pretender**
 
 https://github.com/SafeBreach-Labs/wd-pretender
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-] wd-pretender C)
-| Ld
-OF At
-ve
-(a) 9:
-https://github.com/SafeBreach-Labs/wd-pretender
-```
 
 ## Slide 90
 

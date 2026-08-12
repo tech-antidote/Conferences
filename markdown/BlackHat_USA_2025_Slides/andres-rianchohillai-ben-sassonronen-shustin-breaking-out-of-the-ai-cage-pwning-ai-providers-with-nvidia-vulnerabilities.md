@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:53Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andres Riancho&Hillai Ben-Sasson&Ronen Shustin_Breaking Out of The AI Cage Pwning AI Providers with NVIDIA Vulnerabilities.pdf` (53 pages)
 
-
 ## Slide 1
 
 Hillai Ben-Sasson Andres Riancho
@@ -36,7 +35,6 @@ WIZ Research
 BREAKING OUT
 OF THE Al CAGE
 Pwning Al Providers with NVIDIA Vulnerabilities
-_. : oe 2)
 Hillai Ben-Sasson X @hillai black hat
 Andres Riancho XX @AndresRiancho USA 2025
 ```
@@ -336,7 +334,6 @@ libnvidia-ml.so.7
 ```text
 (> Jusr/local/cuda/compat/ < [> /usr/lib/x86_64-linux-gnu/
 libnvidia-ml.so.6 libnvidia-ml.so.6
-( { mount () } 5)
 7
 libnvidia-ml.so.7
 ```

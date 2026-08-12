@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:42:34Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Thomas Roth_ACE Up the Sleeve Hacking Into Apple's New USB-C Controller.pdf` (223 pages)
 
-
 ## Slide 1
 
 ACE up the Sleeve Hacking into Apple's new USB-C controller
@@ -387,7 +386,6 @@ Allows bi-directional access to internal busses JTAG probe integrated Discovered
 ```text
 Baan y
 nks to the Central Scrutin
-ae ¢ ¢ 42 oe ee 216) @ —
 eesvc gee res
 fess eas! leeslese!
 |
@@ -567,7 +565,6 @@ Et] { 00029¢88 char nane|éx4] = ‘NENr"
 00 char nene[ 0x4]; 08029¢84 void (* handler) (int32_t, int32_t) = handle_menr
 4 void (* handler) (int32_t, int32_t); 90029c88 ;
 oe i 8029¢88 (exaa] =
-C . rT] . . rT] AB79CHH {
 = Contains "privileged Ee
 | 88829¢8c void (* handler)(int32_t, int32_t) = handle_memr
 00029¢18 }
@@ -609,10 +606,8 @@ A827 9¢34 {ax4g) =
 
 ```text
 eee © ace_combined.bin.bndb — Binary Ninja 4.0.4958-Stable
-© = > | ace_combined.bin.bndb @ = +
 #% Types Q Search types — = Mapped~ Lineary High Level IL ~ Oc = _ (x)
 | “gers; [8x43] = e
-O Bue {
 . Pn char name[@x4] = "MEMr" =
 m Identified command- 5 void (* handler)(int32_t, int32_t) = handle_memr
 handler c ‘oxaa] _ ;
@@ -633,7 +628,6 @@ a : : Liens s
 2)
 3)
 sa)
-ES at at
 @ hextree.io
 ```
 
@@ -704,7 +698,6 @@ int32_t sub_2275a(int32_t arg1, void* arg2)
 0022766 — void* r4 = nullptr
 8002276e data_2@0443c5 = (zx.d(*r5) << @xle u>> @x1e).b
 80022776 *r5 = (zx.d(*r5) << @xlce u>> Oxic).b
-20077778 est] = 8 De ee
 46822788 data_1@@@206@8 = data_19602608 & Oxffffffbf -
 80022792 int32_t r2_2 = data_190@048c 90029308 EES EEL
 | : @08293c8 int32_t r1_1
@@ -776,7 +769,6 @@ void* r6 = nullptr
 void* r4 = nullptr
 data_2@0443c5 = (zx.d(*r5) << @xle u>> @xle).b
 *r5 = (zx.d(*r5) << @xlce u>> Oxic).b
-r5[1] = @
 data_1@@@206@8 = data_19602608 & Oxffffffbf
 int32_t r2_2 = data_1000048c
 uint32_t r@_5 = r2_2 << @x1@ u>> @x18
@@ -871,7 +863,6 @@ void* r6 = nullptr
 void* r4 = nullptr
 data_2@0443c5 = (zx.d(*r5) << @xle u>> @xle).b
 *r5 = (zx.d(*r5) << @xlce u>> Oxic).b
-r5[1] = @
 000293c8
 @68293c8
 @88293c8
@@ -988,7 +979,6 @@ Q882211e | data_18062608 = data_10002008 | 8x40
 00822130 | nop
 00822136 | data_100@2@04 = @xeabe@ae2 ___
 068221408 while (data_18062000 << @x1c s>= @) 1
-90822148 | < Can be in ROM or
 00622144 © return
 908220d6 if (argl == 2)
 6@8220da | data_10082004 = @xeabeabad
@@ -1022,7 +1012,6 @@ void* r6 = nullptr
 void* r4 = nullptr
 data_2@0443c5 = (zx.d(*r5) << @xle u>> @xle).b
 *r5 = (zx.d(*r5) << @xlce u>> Oxic).b
-r5[1] = @
 000293c8
 @68293c8
 @88293c8
@@ -1312,7 +1301,6 @@ OTP Key Hash:
 F21A3208-4151-1994-C34D-9FBO99F8FB81
 USB-C_HPM, 28
 Q@02.170.00.15
-@F C3 8B 26
 Updates to be done:
 & hextree.io
 ```
@@ -1446,7 +1434,6 @@ OTP Key Hash:
 F21A3208-4151-1994-C34D-9FBO099F8FB81
 USB-C_HPM, 28
 Q02.170.00.15
-@F C3 8B 26
 Updates to be done:
 & hextree.io
 ```
@@ -1466,7 +1453,6 @@ H% Symbols © rse e=
 Name “Address Section |
 {T} rsa3072  @xe@000Bfe4
 rsa3072 @x00002515e
-ao mm & ef & CO
 | »
 Cross References 2
 > Filter (3)
@@ -1553,7 +1539,6 @@ a @6018dae char* r4_1 = load_from_otp(2, &public_key_hash_from_otp, 6x23)
 06018dc4 maybe_memset_segue(destination: &public_key_hesh, c: 6, count: x26)
 @6018dce maybe_memset_segue(destination: &public_key_hesh_from_otp, c: @, count: @x2@)
 6018dd2 sub_279cc()
-J j 1 L.
 | 3] @€018dee sub_25276()
 - 06018dfa maybe_memset_segue(destination: &data_20043bf4, c: @, count: @x18@)
 Cross References 2 0601806 maybe_memset_segue(destination: &data_20043a74, c: @, count: @x18@)
@@ -1566,7 +1551,6 @@ _— 1& 08878de8 ints2t ré24 = rsa3e72(kd o6o18eia int32_t 5.2
 |@ 0845800 void* const var_4 = rsa337 0¢018e1a else if ((r@_21 & r2_2) != @)
 06018024 r6.2=2
 i] 0601822 else if ((r@_21 & r1_20) == @)
-| 5 Ds
 ®30 5  thumb2 Ox18de8-Oxl8dec (0x4 bytes) &
 But flash contents are not!
 @ hextree.io
@@ -1678,34 +1662,6 @@ or…
 
 **hextree** .io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-tees
-; Gia:
-To :
-=
-: “ a
-ale
-‘Wis «
-— =
-mm
-ar
-‘ Se »
-a ; ) i aoe
-©) |
-; r .
-- ~
-he ‘a8
-‘se
-322
-¢ : |
-—_ me attitily |
-as
-Tinie ee )
-peetinty yiteity
-```
-
 ## Slide 88
 
 ACE3
@@ -1809,11 +1765,8 @@ i=
 ```text
 < 425:318 ms: 900 ps
 Logic 2 [Logic Pro 16 - Disconnected] [m3 ace3 good-boot]
-+30 ys +40 ps 50 yo
 Ho. SPI Flash >
 USB-C CC li _ —
-D4 K ine H a
-B® SPI-MOSI | | | CO
 ®
 ps Channel 5 Et
 ® SPI-MISO
@@ -1835,7 +1788,6 @@ m3 ace3 good-boot@x + _
 ```text
 € >
 #%
-cm Kee ga
 M3Flashdump....ied.bin.ondb
 Cross References
 > Filter (0)
@@ -2018,8 +1970,6 @@ co
 6a
 40
 6a
-68 7f 87
-ff ff ff
 ff
 26
 81
@@ -2193,8 +2143,6 @@ re 9800481c uint32_t im4m_size = @x77f
 — ge0e4e24
 ie aa 96084628 }
 struct ace3_binary_header __packed
-{ 96004628 ff ff ff ff fF fF FF FF eee
-> eo uint32_t binary_size; eeee4e30 «ff ff ff ff ff ff ff ff-ff ff FF ff ff ff ff FF ....... ll.
 64 uint32_t u[@x7];
 20 uint32_t binary_cre; 98084648 ~struct ace3_binary_header data_4@4@ =
 24 uint32_t version; 96084640 {
@@ -2221,7 +2169,6 @@ y Data References {1} 98084864 Uints2 t version = Ox2u40bd
 9808487c Q
 9ee04e7c
 eeee4ese } —
-= 134] —
 SSS SSS ON SSS TT ~
 0x40c8-0x40ca (0x2 bytes) &
 up hextree.io
@@ -2390,46 +2337,6 @@ EMFI
 
 **hextree** .io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-- ™ :
-‘ d penny pei
-<a :
-j — toners font
-+. emniy "
-= tioot |
-= Lie
-a
-enone nee
-2 Pa heH Tver
-=—_— SoS cap eet tet tee eee ee
-Oh oc
-a
-=
-=
-fo
-X
-seer
-Te
-|
-: = « «
-‘ - Sree ..
-— . “ a Rik rot
-== * "req a
-ig i
-= ==
-aa —
-ims
-| ___% | __4 1
-To ee :
-sh -3!,
-:
-7
-j
-@ hextree.io
-```
-
 ## Slide 119
 
 ###### EMFI
@@ -2446,13 +2353,10 @@ ar uF
 =: eentnyy :
 = tet
 .
-| ra, :
 Bit | enme mete 7
 < . N ? C&S partes waver
 = <© eaete mene 1%
 + Anos
-; ce : « «
-> €. : ‘
 ‘ .
 saree sac dt
 , eyes
@@ -2472,39 +2376,6 @@ Chip
 Hacked!
 
 **hextree** .io
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-- .
-‘ ! atnetny yerieeiy it
-xa Secrt Wes
-j — toners tnt f
-=: euniiy :
-= tet
-= AE
-=.
-‘ ‘
-, . --* us
-= A! y i pe - 7 ‘
-Be 4 “a ; o. ca *
-“T . Bt } erne ene ee |
-a . | | : Yl 3 CX mar nen were
-7 = © copes er ee 4
-me Sr FS
-eo i Sere iS
-— « eee SORE rett
-ope eens!
-= (ita
-o= =
-imi
-= [ __4 I
-=2h-;!
-$34
-7
-j
-@ hextree.io
-```
 
 ## Slide 121
 
@@ -2655,7 +2526,6 @@ plt.show()
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@®e@e _. ([L) Private Oi 6 f@ hackrf.readthedocs.io Ge ¢ mh +
 HACKRF ONE HARDWARE
 eee Identify the Trigger Pins
 Minimum Host System Requirements . ; . ;
@@ -2945,8 +2815,6 @@ uint32_t im4m_offset = Oxab7f
 uint32_t im4m_size = 0x77f
 uint32_t ace_binary_size = @xb2be
 uint32_t ace_binary_cre = 0x19@89c3d
-ff ff ff ff ff ff ff ff
-eaee4e30 «ff ff ff ff ff ff ff ff-ff ff ff ff ff ff ff ff
 @68004040 struct ace3_binary_header data_404@ =
 ea00e4040 {
 8004040
@@ -3036,8 +2904,6 @@ im4m_offset = Oxab7f
 im4m_size = 0x77f
 uint32_t_ace_binary_size = @xb2be
 uint32_t ace_binary_cre = @x19@89c3d
-ff ff ff ff ff ff ff ff
-eaee4e30 «ff ff ff ff ff ff ff ff-ff ff ff ff ff ff ff ff
 @68004040 struct ace3_binary_header data_404@ =
 ea00e4040 {
 8004040
@@ -3155,213 +3021,32 @@ Glitch here! Wrong third CRC
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= = ‘ . ee
 \ riety weiny Ber ot
 ah" eee
 } | al thot font
 o eenninyy ”
 trot
 —
-= ’ =
 =.
 t }
-jt » _
 — J 2 Es erbe rete |
-Th ek a
-a a | F = < ae p 4
-e £ segePe > ope dt
-— ats ‘
 == ‘
 pm,
 eee
-= [ __4 I
-Pr ety .
-es Ee :
 ..
 ```
 
 ## Slide 174
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-. shnetny yeni is :
-gi 4 ~
-j — toot Sree
-+ eenninyy nH
-trot
-—
-= . =
-=:
-| ee te —
-- - “ss eons 3
-a ig | “i aaa 4 — CXS pannus mene
-. , <& eet er rene 4
-° € a
-—= ats “
-==
-eo= =
-——s
-pm,
-eee
-= [ __4 I
-ea segs .
-a F
-* * :
-/
-```
-
 ## Slide 175
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-is inal wine Be tt
-} | al thot Hepat t
-=: eenninyy $ ty)
-‘aii! theeaaty duesate
-ad
-= . =
-=.
-t }
-= mete ee |
-: vere
-%
-— .
-* «+
-ae
-a =— =
-YR h¥ |
-| ___% | __4 1
-To -
-BS -
-* * :
-f
-```
 
 ## Slide 176
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-" ! ity yeni is ,
-at ="
-} | al thot font
-+ eenninyy $
-trot
-= . =
-=.
-t }
-| = =< | =| ] .
-uPA os i tS .
-— * | g es te —
-a 4 ae \ = enpe re 3
-a ig | “i . 4 = CXS pannus mene
-< : © ee tee rd
-t — q
-=o «
-e f :
-a cee
-— . “er
-* «
-==
-ea =e =
-——s
-pm,
-eee
-= [ __4 I
-ea segs .
-oa - .
-* * :
-/
-```
-
 ## Slide 177
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= = ‘ . ee
-\ riety weiny Ber ot
-| - eh
-} | al thot font
-o eenninyy ”
-ro tiomet | e
-= ’ =
-=.
-t }
-mes
-— .
-* «+
-ae
-a =— =
-YR h¥ |
-| ___% | __4 1
-To -
-BS -
-* * :
-f
-```
 
 ## Slide 178
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= = 4 . ee
-ay street yeriiety PSE i
-; | al tant font Ft
-on ny oo ae
-ro trot | PUTA.
-— ¢ = martes ay
-=.
-ers | ‘Ries
-52 wart \ = ot es “
-- - *% => 5) i 3 A eone mete ss
-t | | ig | “i aaa 4 —— Oke males wens
-. , poet LL a
-f& a * « 4
-& 3 + oaett
-— . “er
-* «
-==
-= ==
-——s —
-et |
-ene
-| __§ {__4 I
-Pay a) .
-23 a
-* * :
-j
-```
-
 ## Slide 179
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= = ‘ . ee
-\ riety weiny Ber ot
-| - eh
-} | al thot font
-o eenninyy ”
-ro tiomet | e
-= ’ =
-=.
-t }
-mes
-— .
-* «+
-ae
-a =— =
-YR h¥ |
-| ___% | __4 1
-To -
-BS -
-* * :
-f
-```
 
 ## Slide 180
 
@@ -3427,7 +3112,6 @@ for triggering
 Ground
 Connection ae &
 .
-ij KX. mm o ¢ at!
 Not shown: Days of debugging Pa
 ```
 
@@ -3483,28 +3167,8 @@ Ox2F Qx4@ 0x534E32303132303235204857303041312046573030322E3834302E3030205A414345
 @x80082060 82 E3
 0x8@0082070 66 60
 *
-E@ AC 68
-00 60 7F
-C5 A7 08
-@@ @@ 8
-45 20 00
-c@ DC 1A
-45 20 00
-06 66 60
-@@ 28 06 06
-FF FF FF FF
-C@ AC 08 00
-@@ 88 86 06
-48 68 86 60
-FF FF FF FF
-18 77 04 20
-CC 64 64 67
 (tees oe Pe
 |e ecerEcccnceeWe
--| \ @3 @6 E@ AC @@ 42 20 08 04 28 00 GO 40 06 06 08 |..... B...(..0...
--| / 3F B6 @@ @@ SC 1E 9C AC FF FF FF FF FF FF FF FF |[?......--eceeeeee
--| \ 82 E3 C5 A7 6@ 42 20 08 CO AC 00 GO 18 77 O4 26 |.....B. sees Wee |
-g| / 06 @6 66 66 G@ GO GO OB OG OG 66 GO A2 99 1D 12 |...........628-- |
 @ hextree.io
 ```
 
@@ -3571,7 +3235,6 @@ Wait for glitch
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-T= > mA oO:
 center = 44793408
 pulse = 20
 success = False
@@ -3899,7 +3562,6 @@ Trivial memory reader Takes in address Returns bytes at address
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-T= > mA oO:
 center = 44793408
 pulse = 20
 success = False
@@ -3996,59 +3658,27 @@ Status: APP
 ```text
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—io@10F00000/AppleH1510/nub-spmi-a1@54A08000/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: None\nSt
 atus: APP \nAdding char: 5@ to @@@0@@06\nAdding char: 73 to @@000001\nAdding char: 62 to 00@0000@2\nAdding char: 0@ to 9860@@03\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: 4@ 6B
-08 28 \nRes is: @@ 60 @@ 06 80 G8 GG G8 BG 20 BO BG OG BO BA OG BA BA 2G BO BA OG BO BA OG BH BA 2G BH BB OG BB BA OO BH BA GO BH BB GO BB BB OG 44 BA GG BH BA OO BB BB OG 48 BA GG BG BA 22 BB
-00 88 68 OB BB \nRes is: 0@ 88 8B OO BO BB GO BB BB GO BB BA OG BB BB OG BB BB OO BB BB OO BO BA OG BB BB OO GB BB OO GB BB OO BB BB BO BB BA GO OO BA GO 4B BB GO GB BB BO GB BB BO BB BB GO 20 2B
-@ 88 8G OO BB BE OO BO \nRes is: OO OB BB GO OB BO BO OB BU GO GB BO BO OB OO BO OB BO BO 2B BO BO 2B BB BO OO BB BO OO BO BO OO BO BE BO BO BE 20 BB BG OO BB BE OO BO BE GO BO BE OB BB BE 20 BO
-88 08 22 GO BB OO BG OB OO BB \nStatus: APP \n'
 @x27354
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—i0010F00000/AppleH1510/nub-spmi-a1@54A08880/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: None\nSt
 atus: APP \nAdding char: 54 to @8@0@000\nAdding char: 73 to 8@000001\nAdding char: 62 to 60000082\nAdding char: 88 to 00808803\nRuNning command: USBw - Data: 4\nExecuting command\nBRes is: 04 D1
-AB 49 \nRes is: 00 60 08 00 60 08 08 G8 88 26 BO BO 20 BO BE GO BO BB OO BO OB OO BO OB OO BO BB OO OB BA 20 BB 8B BO BO BB GO BO OB OO BO BO OO BO BB OO BB OB 2G BB BB BO BG BO GO BO 2B GO 20
-@6 0G @@ G8 8G \nRes is: 00 66 G6 0G B86 GB OO BB BB 22 BG GB OO B26 GB OG BB BA OO BG BG OO 26 OA OO BB BB OO OO BG OO 46 BG OO GB BB GO OO BB AO 46 BA GO GB BA GO GH BG G2 46 OG GO GB 2G G0 20 @
-@ 80 88 @@ 60 84 O@ 48 \nRes is: @@ O86 08 @@ OB BA GO OB BA GO GH BA BO G6 OO BO GG OO BO OG GO BO OB BO BO 26 GO BO G6 BO BO OG BB BG GG BB BG OG BB BG OG BB BA GO BO BA GO BO BA G6 BO BA GO 40
-88 88 GG 80 BB OG BO BB OG BB \nStatus: APP \n'
 @x27358
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—i0@10F0@0000/AppleH1510/nub-spmi-a1@54A08000/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: None\nSt
 atus: APP \nAdding char: 58 to @@@0@@00\nAdding char: 73 to @@0@0601\nAdding char: 62 to @@6060802\nAdding char: @@ to @660@0@3\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: @1 20
-@6 @7 \nRes is: 0@ 60 86 26 G8 BG GO G8 BG OG BO BG GO GO BE BO BO BB GA BB BB BO BA BB 2G BG BB BG BG BB OO BB BB OO BO BB GO BO BB BO BB BB 2G BG BB 2G BG BB OO BB BB OO BO BB G2 BG BB BO BB
-08 @8 62 G8 BB \nRes is: 00 BB BB BO BO BA OG BB BB BO BO BA G8 BB BB OO BB BB GO BB BA OG BB BA BO BB BA 68 GB BB OO OB BB 62 BO BA BE OB BB GO 20 BA GE OB BB BO 0 BB GE GB BB BO OB BB GE 20 B
-@ 68 88 G6 BO 88 20 GO \nRes is: 06 08 BO G2 2B OO AO GB BO GO GB BO BO 20 BO BO OB BB BO 2B BO BO GB BB BO 20 BB BO 2A BO BO OG BB BO 20 GO BE GO BB BO 20 BB BE GA BH BA 26 BB BO 20 BO BE 22 20
-86 @@ G6 66 G6 2G 66 GG O@ BB \nStatus: APP \n'
 @x2735c
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—i0018F00000/AppleH1510/nub-spmi-a1@54A08880/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI \nConnection: None\nSt
 atus: APP \nAdding char: 5C to @8@0000@\nAdding char: 73 to @@000001\nAdding char: 02 to 90900002\nAdding char: 08 to 90000803\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: 58 31
-@8 63 \nRes is: 00 60 0@ 20 00 8@ 22 BO BE 22 BO BE OO BO BE OO GO OB OO OB OB BO BB BA 2 BB BA 2G BO BB OO BO AB OO BO BB GO BO BB 20 OB BB 22 BB BA 2A BO BO 2A BO BO OO OO OO BO OO GB OO 00
-66 0@ @@ 66 88 \nRes is: @@ 66 G8 0G 86 BA OO G6 BB 22 BO BB OO 86 BA OO BB BA CO BO BB OO 86 BA OO BG BA CO GH BB OO 46 BA OO GB BA G2 G6 BB GO 46 BA GO GB BA G2 OG BG GQ G6 OA GO GB 8 20 C6 BO
-@ G8 88 G6 G0 BG OO BO \nRes is: 80 26 BB BO 2B BB BO OO BB BO OG BB BO OB OB BO GB BB BO 2G BB BO 2B BB BO OG GO BO OG BO BO GB BB BE 2B BB BE 2G BB BB BG BB BA OG BO BE GG GO BE OB GA BE 20 GA
-88 88 GO BO BB OO BO BB OG BB \nStatus: APP \n'
 @x27368
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—i0010F@0000/AppleH1510/nub-spmi-a1@54A68000/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: None\nSt
 atus: APP \nAdding char: 6@ to @@@0@@06\nAdding char: 73 ta @0000001\nAdding char: 62 to @@060002\nAdding char: 0@ to @860@@03\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: @E F@
-1C FD \nRes is: 00 00 86 60 80 BE OO BO BE OO BB BE GO BB BE BO BB BB OO BB BB OO BO BB OO BO BB OO BO BB GO BB BB BO BB BB GO BB BB OO BO BA OO BO BB GO BO BB BO BB BB BO BB BB OO BB BB OO BD
-08 08 G2 G8 BB \nRes is: 00 OB BB OO BO BB GO BB BH 2G BB BA OO BA BH OO BB BH OO BH BE OO BB BH OG BB OB OO GB BH OO 20 BB OO BO BH BO GB BH GO BB BH BO GB BH GO 20 BB GO GB BH BG OB BB GO 20 B
-@ 88 88 26 BO B88 2G GB \nRes is: 00 G8 BO G2 26 OO AA GA BO GO 2B BO BO 20 BO BO 2B BH BO 20 BB BO GB BO BO 2G BB BO 2A BO BO 2G BO BO 20 GO BE OG BO BE 20 BB BG GA BO BA 2G GB BE 2A BB BE 22 BO
-86 @@ G6 66 88 GG 66 G6 OG BG \nStatus: APP \n'
 @x27364
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—i0018F00000/AppleH1510/nub-—spmi-a1@54A08880/ App leGen3SPMIController/hpm2@8/AppleHPMARMSPMI \nConnection: None\nSt
 atus: APP \nAdding char: 64 to @0@00000\nAdding char: 73 to @@000001\nAdding char: 62 to 000000@2\nAdding char: 08 to 000000@3\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: 10 BD
-10 BS \nRes is: @0 80 @@ 00 68 82 G2 BO BE OO BB BO OO GB BE OO BO BA 2G OB BB G2 BO BA OO OB BB 2G BH BB OO BG BB OO BB BB GO BO BA 2G OB BB G2 BO BA OO BB BB 2G BO BB OO BG BB 20 OB BB GO 20
-06 0G @@ 68 8@ \nRes is: @@ 66 G8 0G 86 BA OO B66 BB 22 OO BB OO O26 BA OO BH BA OO OO OB OO O26 BA OO OG BB OO OH BB OO G6 BA OO OG BA GO OH BB GO G6 BA GO G6 BA G2 OO OG GO OO OA GO OH 28 20 06 A
-@ 88 B88 OO BB BG OO BB \nRes is: 80 G8 BB BO OB BB GO OB BB GO OB BO BO OB BB BO GB BB BO BB BB BO OB BB BO OO BB BE OO BB BO GO BO BE GO BB BE BO BB BG OO BB BE OO BO BE GO BB BE GB BB BE BO BB
-88 88 G2 BO BB OO BB OB OO BB \nStatus: APP \n'
 @x27368
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: IO0Service:/AppleARMPE/arm—i0010F@0006/App1eH1510/nub-spmi-a1@54A68000/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: Nane\nSt
 atus: APP \nAdding char: 68 to @8@0000@\nAdding char: 73 to @0000001\nAdding char: 62 to @0000002\nAdding char: 0@ to @0000803\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: DA F7
-96 FF \nRes is: 68 00 86 G8 88 BG GO 88 BG OO BB BE OO BO BE OO BO BB GO BB BB BO BB BB BO BB BB OO BB BB OO BO BB OO BO BB GO BO BB GO BB BB BO BB BB OO BB BB OO BH BB OG BO BB OE BB BB BO BO
-00 08 @O 00 O@ \nRes is: 80 08 88 OO BO BB GO BO OB OO OB OB OG OB OB OO BB BB OO BB BO OO BO BB OO BO OB OO OB OB OG OB OB OO 20 BO BO 20 BO GO 40 BB BO OO OO BO OB OB BO OB 0B BO 20 20 BO 20 0
-@ 08 82 GO 68 G2 GO OB \nRes is: OO OO BG OO GO BB OO GO OG GO GO OG BO GO OO BO 2B OO BO 2B GO BO 2B BO BO OO BO 20 20 BO BO 20 BO 2G OO GO BE GO GO BE GO GO BE GO GB BA GO GO BA OO GO BA 20 40
-86 @@ 0G 66 88 GG 66 BB OG 6 \nStatus: APP \n'
 @x2736c
 b'Mac type: J514sAP\nLooking for HPM devices...\nFound: I0Service: /AppleARMPE/arm—io@18F00000/App1leH1510/nub-spmi-a1@54A08080/AppleGen3SPMIController/hpm2@8/AppleHPMARMSPMI\nConnection: None\nSt
 atus: APP \nAdding char: 6C to @0@00000\nAdding char: 73 to @0000001\nAdding char: 62 to 00000002\nAdding char: 08 to 980088@3\nRunning command: USBw - Data: 4\nExecuting command\nBRes is: AB 48
-C1 68 \nRes is: @6 60 84 G6 60 06 GG 60 04 G6 GO 24 OG GO BG GG GB OA OG GO AA GO GO GA GO G6 G4 GO G6 G4 26 G6 44 OG BG 44 26 BG 44 GG 46 44 G6 BG 26 GG BG A OG BG OA OG 66 4A OO B66 40 20 06
-60 @@ @2 46 28 \nRes is: 0@ 68 QB Q@ 86 BA GO BB BB 20 BG BA G2 BG BH OG BG BB OA 2H BA OG BB BB OA BH OA OO GB BA OO GB BB C2 GG BA AO GB BB GO 2H BA GO OB BA AO 4G OA G2 GB BH AA OG OB G2 20 O
-@ 88 B88 GO 88 BE OO BB \nRes is: 60 G8 BB GO BB BB GO OO BB GO OB BB BO OB BB BO GB BB BO BB BB BO BB BB BO OO BB BE OO BB BO GO BB BE GB BB BE BO BB BG BO BB BE OO BO BE OO BB BE GO BB BE BO BB
-a Ta ee
 ```
 
 ## Slide 220
@@ -4181,7 +3811,6 @@ sub_10c86()
 *6x40050064 = 2
 sub_35d7e(@x40094124, *@x49894124 | 8)
 sub_633a()
-A (] 3 a
 data_4 = stack_init
 data_8 = nullptr
 data_c = sub_f4
@@ -4214,7 +3843,6 @@ Name
 command_handler
 System Types: image_combined.bin....
 Platform: thumb2
-mlk¢ wo J
 Q Search types
 * Size
 @x8

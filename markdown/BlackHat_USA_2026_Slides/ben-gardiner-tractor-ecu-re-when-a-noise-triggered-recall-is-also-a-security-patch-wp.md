@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:34Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ben Gardiner_Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch-WP.pdf` (179 pages)
 
-
 ## Slide 1
 
 # **Reversing a Recall**

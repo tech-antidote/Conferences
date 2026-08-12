@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:51:47Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Shupeng Gao & Yingtao Zeng & Jie Gao & Yimi Hu-The Key to Remote Vehicle Control Autonomous Driving Domain Controller.pdf` (95 pages)
 
-
 ## Slide 1
 
 # The Key to Remote Vehicle Control : Autonomous Driving Domain Controller
@@ -114,7 +113,6 @@ black hat
 ASIA 2024
 Regarding Autonomous Driving Domain Controllers
 Camera
-ewe wwe ewe ww ww ww eww ww ww ew ww ew ww ww ww ww ww ww ww ww ww ww www ew ww ew ww eww ew ww ww ew ew
 ADAS Domain Controller
 ol
  ,
@@ -336,12 +334,10 @@ bisek hat
 ASIA 2024
 Nvidia Orin-X
 +" woe
-} a 0
 oe
 A
 ae ae
 7
-‘ | an.
 i>
 . %
 ot 3
@@ -413,9 +409,7 @@ pebheberrrrerehnrees
 blackhat .
 ASIA 2024
 Orin-X VS Orin-N Same Interface
-i 3 os
 Ie
-cn ne i ra re a we Pe
 ```
 
 ## Slide 36
@@ -450,7 +444,6 @@ REV:G
 bisek hat
 ASIA 2024
 2x SET SA8650
-THs: Fs oe
 nies Vivniieie
 100 TOPS
 re 0 erste +
@@ -669,7 +662,6 @@ black hat
 ASIA 2024
 Use UFS Programmer to dump / write
 =) VD1:UFS_ MICRON _MT128GAVAT2U31AA 06 01 2024 20 47 48 Phys P
-= Sl PRK
 = FHKE (PRES IAF) (4)
 = Cl
 +] . data
@@ -787,34 +779,13 @@ QNX6: Mount read-only, can’t write
 black hat
 ASIA 2024
 Has Partition Table
-» Me == EE oy ee eee Be SS eee =
 ERs BO Fike DE Oink nage M29. 1G8(296248) eT
 2 AR 2SS SMMRM GS BmEMTS 1079552
 VO2GR_TOM4 VH_dd.tee(2968) Sen Te Nae (22 BDsFile EES:Disk image Sib7.3GB(7456MB) IETS HAR255 SMEs Smee: 15269888
 ~ HR o " ezee aces
-= < co* ay
 — ACT) @ eH doops eet at exe sane snare ~~ HK (9) cae
 ~ #2)
-" ’ : 3 ue
-~ may ( header = 3, ~
 ann ae wey eee
-~ ke) 0 88 69 00 10 00 00 00 FS OF EA O18 ~ FE) as sown
-— RCT) r CO SF &® AC OF s CO OT , ns 3 oat i } ; adas
-~ se) 0 CB 0O 00 00 00 00 00 0 00 00 00 00 O f
-~ 0 00 € 1) 00 00 & 00 OO 0 00 BD FE 0 OK bin or raw we ore
-~> #HE(10) 10 00 00 00 06 00 © 00 00 00 00 00 OO OO 00 OF cases } 00 00 00 30
-— HET 0 00 00 00 00 00 OO 00 00 00 00 00 00 00 00 OF E7 65 6D 01 F
-<> NEAZ FF FF 00 00 00 93 00 00 FF FF 00 00 00 93 00 OF diag rey he Crit - hig SnS fed tn
-na0n © 00 00 00 00 00 00 00 00 ¢ 7 00 00 00 00 O Ey aoe 00 00 00 00 O00 OD OD UO 00 00 61 00
-i nec ‘) ri ) 00 00 0) 00 00 00 00 00 00 00 00 OF «le » 00 00 00 OB 00 t 00 00 0
-; > > ' high teme ar A > ° |
-< 18 00 90 7C 00 00 00 00 FF FF 00 00 00 98 CF OF ] Igh temp : 42 00 00 13 00 68
-- I ~ 00 0 7 ; 0 OD OA t 58 20 16 31 Fy ‘ libbpu_predict “SI SC BE AS 9D CE 5A D7? F ' 0 00
-3 ( t 74 20 4€ GF € ‘ 72 1 r = - : ~
-oy 4 » OA “a 75 70 70 GF 72 74 65 64 20 19 f i BI log_kernel 17C5¢ 00 00 00 00 00 00 00 41
-a eee 0 41 4D 20 45 72 72 € 0 0 RAM ‘ 53 2F 44 33 00 00 00 00 00 00 00 m
-52424 (os 65 GI 64 20 12 Gt cad t 5040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 } path
-ME 6916096 / 61079552 @e8- DI0000 - 0 Be 03100000 100003 meu nn nn nna AA An An An An An AA AA An AN AN AN fie
 TDA4 EMMC Dump QNX, with GPT J3 EMMC Dump EXT4, with GPT
 ```
 
@@ -833,8 +804,6 @@ If there is no partition table, need  rebuild
 black hat
 ASIA 2024
 No Partition Table
-« | | ————
-Bt CA) ag 4
 RAW 16.068 11,968 12,668 111,068
 } MT256GAV/ 2 28 @2_ 20:2 3 10 > Part { 3 MO:File HE:Disk image GM:158.7G0(162464MB) FEMOM20711 M255 MRS SMI 332727808
 itior sec = HDOcharddiskSSD(256GB) Stem MO gare
@@ -842,14 +811,12 @@ itior sec = HDOcharddiskSSD(256GB) Stem MO gare
 HD1:SamsungPortableSSOTS(932GB) eM Se
 _ VOt:feifan MT256GAVATAU31AA 28 $ Sf a oaaal aoe
 a FRAG » 4577 FERRARI 12.668 19 OXT4 9 11 00:00:00
-= BK (4) .
 ap cont 11 00:00:00
 : ap_data 11.00:00:04
 o app 11 .00;00:0¢
 . boot B
 ” containers 3
 ce data 'B
-dev ; : : 3 2237.49
 etc 13 22:37:49
 fota 11 00:0¢
 hdm 1100: 1
@@ -1002,12 +969,8 @@ i) 3 It 2008 model-che
 rot 3M Ne 2008 model. hbmr
 f - roo ro 5K ft 2000 model_info. ’
 —fwx----—- 00 ro @.5K ft 2008 rsit sor
-| te. fT mn ja t del#
-ro = _m1-B: /m da 10 rt/model#
 oh, See rrapps
 hwte Lor
-j m r midd 1 pr
-j Je |
 e| p|
 } planning
 2
@@ -1171,7 +1134,6 @@ root root
 ec
 o>
 x x
-a5 3 4
 root r t 4
 root root
 root root
@@ -1277,7 +1239,6 @@ hdm adapter
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ed a -
 bisek hat “
 ASIA 2024
 TI / Nvidia / Horizon / Mobieye Model Files
@@ -1311,9 +1272,7 @@ fvModule_FVOD_best_GPU sagem s]
 fyModule_staticODdet “fp16. GPUs res
 2 fyModule_trlclssify_fp16_DLAQ_ jammin
 svModule_SVOD_best_GPU 8cls_ 736288. 1010.plan
-NMNRNMNR NN RM RN RS hm RD
 @eooocoocoooooooeoooso S&S
-ee ee ee eS)
 KeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsc (base) + SV_project 11 configs/bev
 total 20M
 —rwx rwx r—x
@@ -1336,7 +1295,6 @@ fs_crop.ann
 fs.=mnn
 pld_crop.ann
 pld.mann
-> * hhm
 /models/pyramid_352_640_ fmt meee. hbr —PWX WX EX
 —rwXx rwx r—x
 —TWXTwxr—-x
@@ -1345,7 +1303,6 @@ res/hbmr .@/model_opt_3.hbm Bite elles
 —TwxXrwxr-x
 —TWXrwx rx
 PRR RRR RRR
-Peep ted pa tad ed pt ed pe
 etection.hbm
 ```
 

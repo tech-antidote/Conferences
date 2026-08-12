@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:20:10Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gavin Zhong, Zhengyu Liu, Jianjia Yu - LaunchBreak a Sip of Tea, a Click, and a Full Multi-stage Desktop Takeover - launchbreak 3 0.pdf` (119 pages)
 
-
 ## Slide 1
 
 LaunchBreak A Sip of Tea, a Click, and a Full Multi-stage Desktop Takeover
@@ -1727,7 +1726,6 @@ CRALEOALARA ACM BACR, AUT RSE IA
 CIN MBRAMARS (BIE Google) MKMRBUEHAM., FAAB.
 REEMA L. TB
 B Chrome RARE AF SAAB AmB CH;
-_ 208 ai P
 ICR . i8) if
 © Cookie AM@MRIE
 + imp

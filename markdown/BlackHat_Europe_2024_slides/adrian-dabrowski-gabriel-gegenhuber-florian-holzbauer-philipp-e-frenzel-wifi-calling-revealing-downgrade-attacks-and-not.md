@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:00:25Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Adrian Dabrowski & Gabriel Gegenhuber & Florian Holzbauer & Philipp E. Frenzel_WiFi Calling Revealing Downgrade Attacks and Not-so-private private Keys_Compressed.pdf` (52 pages)
 
-
 ## Slide 1
 
 **Wi-Fi Calling** Revealing Downgrade Attacks and Not-so-private Private Keys

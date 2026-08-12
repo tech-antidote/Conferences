@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:46Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Patrick Kiley&Emily Astranova_Render Safe Live EOD PackBot Demonstration_Compressed.pdf` (57 pages)
 
-
 ## Slide 1
 
 **RENDER SAFE** Reverse Engineering and Exploiting an EOD Robot
@@ -308,7 +307,6 @@ Google Cloud 17
 
 ```text
 Rear maintenance Port
-e — RS-232 i og :
 e Ethernet A ve f
 o RE hint, look for
 eee RX4+
@@ -318,10 +316,7 @@ resistance
 between +,- les tes
 a CT
 RD4+ 4 O——}
-™4+ 1 O
-TD4- 2 O
 ctl4 3 O
-RD4- 5 O
 Mandiant Google Cloud 7
 ```
 
@@ -705,7 +700,6 @@ PS C:\Users\Emily\Documents\Packbot\6x_testing> python .\boomba_decoder. 23 @ ©
 py 11976 8080 Wi-Fi
 Battery: ?
 407 PM
-a 9 Ba wom frm &
 Mandiant Google Cloud 36
 ```
 
@@ -966,15 +960,7 @@ Ubiquiti_44:7.. 5555 Broadcast 5@00 802.11 178 Beacon frame, SN=405, FI Flags:
 10.0.0.4 1194 10.0.0.54 1194 OpenVPN 583 MessageType: Unknown Messagetype|I
 172.16.0.40 5555 Ubiquiti_44:7f:44  5e0@ 802.11 76 Acknowledgement, Flags= wc | 22 jackbot1 3913...
 10.0.0.54 1194 10,.0.0.4 1194 OpenVPN. 193 MessageTvpe: Unknown Mi tvoetN OB «wee eee
-@@@@15CB 80 08 G8 8G G8 08 88 GA 20 08 C8 08 C8 C8 00 00...
-@2@@015DB 0 00 02 02 G8 OG 88 2A 20 02 OO OO 86 02 23 f@ 9 FITTITT =
-@0@@15EB 01 20 46 af @1 20 59 36 42 00 04 OG O2 00 65 GF . F.. Y6 B.....€0
-@0@015FB 64 2d 70 61 63 6b 62 6F 74 31 33 39 31 33 0@ C@ [d-packbo t13913..
-@8@G@160B 80 08 08 06 G8 02 68 GB 20 BB OB 8 EB 80 00 00
-@0@0161B 80 08 G8 GG G8 G2 88 CG 20 08 G8 08 C8 00 00 00...
-@0200162B 0 02 08 GG 08 02 88 CO 0A 08 OO OO CO 08 O3 G1... . 1... wee eee a
 @000163B 81 3e 534
-@000163D 00 16 3f 60 4f c8 G8 e@ 4b 42 31 fc 08 08 45 00 sole eae (tile eel se
 acan ane ae seas 4a 2c 5 4a 4
 Google Cloud 48
 ```
@@ -1095,7 +1081,6 @@ Red X
 10S GE 11047 06841
 779 ft MSL DTEDO
 30°M 3.16 km
-bs va aA
 Red X
 10S GE 11047 06841
 3...» mNE 30M

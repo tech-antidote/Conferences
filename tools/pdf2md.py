@@ -101,6 +101,28 @@ OCR_MAX_EDGE_PX = 3000
 # Discard OCR results shorter than this -- almost always noise from a photo.
 OCR_MIN_YIELD = 25
 
+# Tesseract returns something for almost any image, and on a photograph or a
+# low-resolution screenshot that something is noise (") ez g / Jealetas . / & ts
+# Py"). Length alone does not catch it: noise is frequently longer than the real
+# text on the page. Noise in a retrieval corpus is worse than absence, since it
+# gets indexed, retrieved and quoted back as content.
+#
+# These two ratios separate noise from real technical OCR with a wide margin,
+# measured on corpus samples:
+#                         short tokens (<=2)   tokens >=4 chars
+#     real technical OCR       0.00-0.19           0.67-0.77
+#     noise                    0.84-1.00           0.00-0.05
+#
+# Filtering runs per line, because the two are mixed: a terminal-output slide
+# yields real lines ("-> remapping BAR2 to overlap TSEG") alongside OCR-mangled
+# hex dump rows ("| ff ff ff fr fF fF TF"). Dropping whole blocks would lose the
+# narrative; keeping them would put wrong hex digits in the corpus.
+OCR_LINE_SHORT_RATIO = 0.60
+OCR_LINE_WORD_RATIO = 0.20
+OCR_BLOCK_SHORT_RATIO = 0.50
+OCR_BLOCK_WORD_RATIO = 0.25
+OCR_MIN_TOKENS_PER_LINE = 3
+
 # Per-page OCR timeout (seconds) so one pathological page cannot wedge a worker.
 OCR_TIMEOUT = 90
 
@@ -338,6 +360,26 @@ def tesseract_path() -> str | None:
     return _TESSERACT or None
 
 
+_OCR_ALNUM_RE = re.compile(r"[^A-Za-z0-9]")
+
+
+def _ocr_ratios_are_noise(text: str, short_max: float, word_min: float) -> bool:
+    toks = text.split()
+    if not toks:
+        return True
+    short = sum(1 for t in toks if len(t) <= 2) / len(toks)
+    word = sum(1 for t in toks if len(_OCR_ALNUM_RE.sub("", t)) >= 4) / len(toks)
+    return short > short_max and word < word_min
+
+
+def _ocr_line_is_noise(line: str) -> bool:
+    # Short lines carry too little signal to judge alone; the block-level check
+    # catches them.
+    if len(line.split()) < OCR_MIN_TOKENS_PER_LINE:
+        return False
+    return _ocr_ratios_are_noise(line, OCR_LINE_SHORT_RATIO, OCR_LINE_WORD_RATIO)
+
+
 def ocr_page(page: "pymupdf.Page") -> str:
     """Render a page and OCR it. Returns '' on any failure -- OCR is best-effort."""
     exe = tesseract_path()
@@ -363,8 +405,13 @@ def ocr_page(page: "pymupdf.Page") -> str:
     # Collapse the ragged whitespace Tesseract emits on slide layouts.
     lines = [ln.rstrip() for ln in text.splitlines()]
     lines = [ln for ln in lines if ln.strip()]
+    # Drop lines that are OCR noise, keeping real ones from the same block.
+    lines = [ln for ln in lines if not _ocr_line_is_noise(ln)]
     out = "\n".join(lines).strip()
-    return out if len(out) >= OCR_MIN_YIELD else ""
+    if len(out) < OCR_MIN_YIELD or _ocr_ratios_are_noise(out, OCR_BLOCK_SHORT_RATIO,
+                                                         OCR_BLOCK_WORD_RATIO):
+        return ""
+    return out
 
 
 def image_coverage(page: "pymupdf.Page") -> float:

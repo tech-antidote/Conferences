@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:24:50Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Ang Cui & Grant Skipper & Yuanzhe Wu_Ice Ice Baby Coppin' RAM With DIY Cryo-Mechanical Robot .pdf` (75 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -406,7 +405,6 @@ What did we really win?
 Primary PLC Supplier - North America
 nts
 % of N. American responde:
-, 19% 19
 |
 OEMs End-users
 D Rockw ell Automation O Schneider Other
@@ -508,7 +506,6 @@ What did we really win?
 Primary PLC Supplier - North America
 nts
 % of N. American responde:
-, 19% 19
 |
 OEMs End-users
 D Rockw ell Automation O Schneider Other
@@ -814,7 +811,6 @@ What did we really win?
 Primary PLC Supplier - North America
 nts
 % of N. American responde:
-, 19% 19
 |
 OEMs End-users
 D Rockw ell Automation O Schneider Other
@@ -916,7 +912,6 @@ What did we really win?
 Primary PLC Supplier - North America
 nts
 % of N. American responde:
-, 19% 19
 |
 OEMs End-users
 D Rockw ell Automation O Schneider Other
@@ -1018,7 +1013,6 @@ What did we really win
 Primary PLC Supplier - North America
 nts
 % of N. American responde:
-5% 5% 4%
 | L|
 OEMs End-users
 D Rockw ell Automation O Schneider Other
@@ -1196,9 +1190,7 @@ DIMM SLOT
 ```text
 “Cold boot” attacks well-known, well documented... they said.
 HOW COME +
-E ——— rz +
 ~ YOU NO HAVE: DIMM SLOT |
-c fe Py.
 ```
 
 ## Slide 39
@@ -1291,7 +1283,6 @@ Quantity:
 Ships to © United State
 Free Shipping
 ) United States vi
-in Jul 03
 ```
 
 ## Slide 47
@@ -1304,7 +1295,6 @@ Machine for Wood PCB Plastic Canin
 US $581.68
 Free Shipping
 F Fhina to United States, via EMIS
-{ yn Jul Q3
 ```
 
 ## Slide 48
@@ -1497,7 +1487,6 @@ ecifications for th
 SM Interposer
 Array of | f
 Columns a i] ; \
-. Ce ft
 Elastomer <= Wu
 Compliant Lf
 Buttons ~S
@@ -1532,7 +1521,6 @@ test sockets for BGA
 2 SwEMSeROR
 Po ea - FOr this many sockets
 Rifle
-Rt ¥ 1.00
 All-In-Win Conductive Elastomer (Rubber) IC Test
 Sockets provide a reliable and cost-effective solution
 for testing integrated circuits (ICs) with ball grid array
@@ -1565,7 +1553,6 @@ ed} 14:43 / 20:59 ‘ ea ¢ BO
 rl PI 4) 2:09/5:10
 Ee Liquid Nitrogen in a CLOSED LOOP!
 3) JayzTwoCents ©
-— @ OG Cen
 ```
 
 ## Slide 62
@@ -1634,7 +1621,6 @@ FBGA84 (BGA)
 ```text
 LPDDR1 > DDR2
 FBGA8
-P f i
 7a ETHERNET
 <a
 ara
@@ -1697,7 +1683,6 @@ overun_error
 READ_DONE READ_ADOR(310] joa + SOOAX!
 READ_DATA(319] READ_VALID m_axi_bridge_O ack
 ack!
-— Bg Axi
 >
 aresen
 maxi +f
@@ -1748,7 +1733,6 @@ And with the magic of friendship, and after 7 months of failing
 
 ```text
 And with the magic of friendship, and after 7 months of failing
-i> eee’ 7
 ay
 hd
 ```

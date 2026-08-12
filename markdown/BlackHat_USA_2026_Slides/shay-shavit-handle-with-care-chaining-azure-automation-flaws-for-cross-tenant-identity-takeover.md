@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:37Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shay Shavit_Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover.pdf` (50 pages)
 
-
 ## Slide 1
 
 ###### Handle With Care: Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover
@@ -390,12 +389,7 @@ LOCATION LOCATION LOCATION
 Pic:
 ances Uete Contains
 ("/location=)
-os! a _
-; Ad Via ;
-~ ae ‘iE
-.s ay e <i
 Bs
-Wwe ' ae
 aoalle
 £ AbsolutePath, right?
 black hat

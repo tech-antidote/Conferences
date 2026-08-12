@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:19Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-Operation-Clairvoyance-How-APT-Groups-Spy-on-the-Media-Industry.pdf` (66 pages)
 
-
 ## Slide 1
 
 ### Operation Clairvoyance: How APT Groups Spy on the Media Industry
@@ -294,7 +293,6 @@ Home | War in Ukraine | Coronavirus | Climate |Video | World | Asia | UK | Busin
 Asia | China | India
 = after US Speaker visit
 Taiwan: Nancy Pelosi meets O0o0E ia, ig ica acc
-es 3 a= =~ =~ CSC
 Watch historic moment Nancy Pelosi lands in Taiwan, the first visit by such a senior US official in decades
 ```
 
@@ -524,7 +522,6 @@ gtsid: TomdresBeExXe4¥JHH
 Content-Length: i120
 Host: cdn.cdnfree.workers. dev
 ; I| r.J] O #k° OFf00 OhkoOpo «
-Cc 4% OX 0 oF S40NS> “z “m [10 Z O3Nf~ 0 Oi\h
 '#oOoo0 Ga
 1
 POST https: //cdn. cdntree.workers. dev/8ws ]KEViHmSKKIGYh/wxcgqguhns446xfoci HTTP/1.1
@@ -555,23 +552,18 @@ KeyPlug
 while ( 71 )
 {
 memset ( » @, sizeof ( ));
-if ( > 400 )
 = 400;
 memmove ( >
 sub_180009910(
-if ( (a2,
 || (a2, “TC
 | (a2, “UDP:
-|| ( "WSS: // )
 {
 break;
 }
 ++V6;
 ~~ 2
-if ( v6 >= v8 )
 00009099 sub 180009A30:80 (180009C99)
 KeyPlug version 2022
-if ( (a3, "HTTPS://") == a3 ) |
 {
 LABEL_33:
 sub_180@C95D0(v46) ;
@@ -582,17 +574,11 @@ return 1;
 = dword_18@38371C < 10
 && ( | ((~(dword_180383718 * (dword_180383718 - 1)) & @x3C2426FE | (dword_180383718 * (dword_18@383718 - 1))
 || && dword_18038371C > 9;
-= * (dword_18038371C < 10) | (! && dword_18038371C >= 10);
-if ( == ( “~ 1) & | “1)
 LABEL_24:
 (a3, “TCP://");
 = (a3, “TCP://");
 = (~(~(dword_180383718 * (dword_180383718 - 1)) & @xFFFFFFFE | (dword_180383718 * (dword_180383718 - 1)) * 1)
-= (dword_18@38371C < 10) * 5
-= ( me && dword_18038371C >= 10)) * 1;
-if ( ( & v41) == 0 && == )
 goto LABEL_24;
-if ( == lI (a3, “UDP://") == lI (a3, “WSS://") == II (a3, “quic://")} == )
 0004FC50 sub 180050410:139 (180050850)
 KeyPlug version 2023
 ```
@@ -664,7 +650,6 @@ strepy( > "RFSCANNER"™);
 .5zExeFile),
 = (pe.szExeFile),
 .szExeFile),
-et ae ee ee
 I iT]
 _~ _~
 if ( (unsigned int)sub_10@043E@(
@@ -724,9 +709,7 @@ bisek hat
 ASIA 20253
 Typosquatting domain
 udngroups.com Media ——
-© © Oy) ®
 udntw.net Media | E
-aa a a pa - a oa
 rutentw.com E-Commerce 8. ®& Soll ae »& - ®. &.
 linestw.com IT
 _&...
@@ -797,9 +780,7 @@ BxShell
 ¢ Variant of QL_ASD_ Shell found in mid 2021
 --dword_18@@4DC3
 Send_EncryptData é y_Matrix, v21);
-mi (v2l, 68
 EncryptData(al, § (matrix, banner[@
-v24, ®, 5
 6
 ShellPrefix) ;
 RAT_function(al, w22);

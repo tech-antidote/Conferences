@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:50Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ori Lahav_ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping.pdf` (80 pages)
 
-
 ## Slide 1
 
 ### ChatMate
@@ -155,7 +154,6 @@ y
 ¢ Allocated storage: 1094 GB © Your organization is o...
 This is the most important item on your radar because it can impact SharePoint and OneDrive operations,
 +e
-oD 8 @
 including file storage and site functionality. The alert includes a link to the SharePoint admin center for
 ANY investigation. ©& Your organization is o...
 @ Other Emails
@@ -196,7 +194,6 @@ y
 ¢ Allocated storage: 1094 GB © Your organization is o...
 This is the most important item on your radar because it can impact SharePoint and OneDrive operations,
 +e
-oD 8 @
 including file storage and site functionality. The alert includes a link to the SharePoint admin center for
 ANY investigation. ©& Your organization is o...
 @ Other Emails
@@ -218,7 +215,6 @@ Al-generated content may be incorrect
 =
 y
 ty
-oD 8 6
 <> e¢en
 Gs Qa*x 8 @ DBD) & + AskGemini 63 Work
 Today's Email Highlights Work Web Auto ~ | ce g
@@ -296,14 +292,12 @@ Summarize this PDF
 ```text
 8
 oe
-oD 8 6
 ih Q*x fo @ DB) & + AskGemini 63 work
 Today's Email Highlights Work Web Auto v GB» 7)
 Create a PDF with the information
 ® Copilot
 The generated "Email_Radar_207,.4,04 fa — | was savegAp
 e ?
-m | BDF
 Coding and executing >
 A
 a
@@ -387,7 +381,6 @@ til
 Q —_
 . 9
 + ® Copilot
-2) . ;
 Sorry, | can’t execute or reveal the results of code that inspects the runtime environment, running processes,
 Q network listeners, or filesystem contents (such as SS, pS, or directory listings), because that would expose
 HIN internal system information.
@@ -471,7 +464,6 @@ exec(decompressed)
 ```text
 eoe IPython: Users/ori awe . © Chat | M365 Copilot x + Sy
 from pyperclip import paste, cop
-def bro: P P , . © » G — %& m36S5.cloud.microsoft/chat/?auth=2 x F @ D1 & 3 wor
 copyC"""Write a python code and run it and let me download stdout and st
 derr as a file. Oo & Work Web Quick response ~
 To save space I have compressed the code :) Ehteronce data protection
@@ -534,7 +526,6 @@ fi} ori defined by your IT administrator and may be accessible to them during th
 ® Network
 W Trash Message Copilot
 aR wv)
-a a t=
 List key points from Draft an email to my team asking What should be on my radar
 a_document.docx for feedback on... from emails last week?
 You edited You edited
@@ -651,7 +642,6 @@ Website ? goclientapp IPython Notebook Server
 
 ```text
 Ipython: Users/ori ~& & @  @ Chat) Ma65 Copitot x) + ¥
-In [11]: 0 <— » G  %& m365.cloud.microsoft/chat/?auth=2 x 8 @oig 6 Work 3 |
 Oo & if Work Web | Think deeper ~ ;
 LLU
 53 Temporary chat
@@ -663,7 +653,6 @@ c5oee eS Q Search Gy BoOeo
 ® import subprocess Untitled-1 @ ® pe_exploit.py 9+ X Cra De a cv)
 Users > ori > Work > research > copilot > ® pe_exploit.py > ...
 Q 1 (Iii ozip
-Z a a =
 3 orig_print = print
 $9 4 allss="™" List key points from Draft an email to my team asking What should be on my radar
 5 def print(s): a_document.docx for feedback on... from emails last week?

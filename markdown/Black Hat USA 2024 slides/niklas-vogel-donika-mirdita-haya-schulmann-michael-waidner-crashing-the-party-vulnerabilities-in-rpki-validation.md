@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:36:38Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Niklas Vogel & Donika Mirdita & Haya Schulmann & Michael Waidner_Crashing the Party Vulnerabilities in RPKI Validation.pdf` (89 pages)
 
-
 ## Slide 1
 
 # Crashing the Party: Vulnerabilities in RPKI Validation **<u>Donika Mirdita</u>** , **<u>Niklas Vogel</u>** , Haya Schulmann, Michael Waidner
@@ -77,7 +76,6 @@ BGP as Achille's Heel
 Fete Vregraen
 6 @s hd shen § BSCoWW RCT
 27, OPEN -SFND aaa
-—— i % “iy
 Asrounert
 7. cof of sywe C col close)
 2. beach Lfese
@@ -88,7 +86,6 @@ MAKOV@IBH. Cow
 /
 WE -3R2@~-17#) (H-7) PST
 (WY) HF- 3896 CES) FST
-Be. ¥ ee
 block fen th R hyfes
 verse, "| hewn oh
 Bodo Le ie 4 bytes Cecseauanl—erce )
@@ -96,12 +93,9 @@ teens
 eee holeleloun ‘fmeer 2 byfas  Cmitsobes )
 open ~ |
 reou, 13 covrenthy |
-ty prs : yplote - RZ = 7
 tobhcokou ~ Hf
 hoop hve a a
 open: ‘ip AS tt 2 bythe
-Jink ty e / ty he
-"Pp - |
 down ~ 2
 witerre) — ub (rot Carel ae ple fe otireckoie Felt
 H- tale - @
@@ -110,7 +104,6 @@ ath ype coche | byfe
 cotter teahou. yorble:
 upcla Fe notioonl ad wy 6y bes
 List hop gakwe 4 by fos
-fe bee pare Y 4 2 dy tes
 ait teal ) coms of AS | byfe
 ler y
 ivection / bye repent “cot!
@@ -131,7 +124,6 @@ IETF Cafeteria, 1989
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a ft , |
 black hat |
 USA 2024 ,
 BGP as Achille's Heel
@@ -313,10 +305,8 @@ USA 2024
 BGP Security with RPKI
 ROA
 Prefix - ASN
-De |O 7 }
 acnic ie)
 © =
-e. > eD
 @
 APNIC
 RPKI Repositories
@@ -477,7 +467,6 @@ ROA
 Prefix - ASN
 RIPE >>>) Oo ---
 acnic ie) . oe ol?
-1 l ,
 @  —-§
 ws
 I a
@@ -514,7 +503,6 @@ ROA
 Prefix - ASN
 RIPE >>>) Oo ---
 acnic ie) . oe ol?
-1 l ,
 @  —-§
 ws
 I a
@@ -549,14 +537,11 @@ USA 2024
 BGP Security with RPKI
 ROA
 Prefix - ASN
-De |O 7 }
 acnic ie)
 <=>
 FRINIC wa ¢> "£5
 ae 'S
-Ge = sy
 <2
-eye ® 0 °, &
 g
 , ) Relying
 APNIC Pa rty
@@ -1131,7 +1116,6 @@ Object Setting fields A Exposing
 J : and signing BORGES Objects to RPs
 Generation
 fo
-J De os
 ```
 
 ## Slide 60
@@ -1225,7 +1209,6 @@ RPs
 CURE
 Exposing
 Objects to RPs
-= |, FO
 =< Vos
 O bj ect Set ng felds Repositorify
 : and signing
@@ -1280,8 +1263,6 @@ OctoRPKI
 Relying Party
 rpki-client
 Routinator
-' J ' J
-) 10 20 30 40 40 60 70
 % of relying party distributions
 ```
 
@@ -1309,7 +1290,6 @@ USA 2024
 Summary of Results
 We found
 issues on
-3 out of 4
 maintained RPs
 Other
 RIPE NCC
@@ -1320,8 +1300,6 @@ rpki-client vulnerabilities
 &
 Routinator
 5 CVEs
-J ' J
-) 10 20 30 40 40 60
 % of relying party distributions
 ```
 

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:52:03Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/David Brauchler III_When Guardrails Aren't Enough Reinventing Agentic AI Security With Architectural Controls.pdf` (49 pages)
 
-
 ## Slide 1
 
 #### When Guardrails Aren't Enough
@@ -82,7 +81,6 @@ Guardrails
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat a — Te 9
 BRIEFINGS : ; : A
 Remote Code
 Execution
@@ -117,7 +115,6 @@ JZoodo?Ovwe
 Sessions
 XFILTRATION
 Description Request to Collaborator from Collaborator
-> Bin =
 Pretty Raw Hex
 1. GET /q=Which+contact+has+the+ @oaress+I+need+to+reach+out+to+for+the+latest+project+update?
 +1+couldn%27t+f ind+a+specif ic+contact+with+the+email+address+needed+for+the+latest+project+update+in+the+availablet+data.+If+youthave+any+additional+details,+such+as+th

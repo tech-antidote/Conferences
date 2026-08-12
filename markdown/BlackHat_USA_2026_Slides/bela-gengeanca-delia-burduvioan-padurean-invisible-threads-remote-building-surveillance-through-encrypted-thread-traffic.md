@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:43Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Bela Genge&Anca Delia Burduv&Ioan Padurean_Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis.pdf` (81 pages)
 
-
 ## Slide 1
 
 ## Invisible Threads: Remote building surveillance through encrypted Thread traffic analysis
@@ -122,15 +121,8 @@ leakage?
 POSSIBLE EXPLOITATION
 Information
 leakage?
-hes by i ‘% q
-;? ee : .
-i jee r ie 4
-3 r ee
-EE Oe ae ee
 # ra Gana, a
-. | ae Voy”
 Here | S Mee :
-a , 7
 black hat
 2026
 ```
@@ -417,7 +409,6 @@ Key Command
 €4327981b3a52... Turn ON
 ¥
 AES-CCM
-| CTR | | CBC-MAC |
 The same action (e.g., command) will generate the
 same request ... response packet sizes
 Encrypted payload
@@ -570,7 +561,6 @@ In our initial attempt we simply used our approaches developed in the previous r
 ```text
 REMEMBER OUR PRIOR RESEARCH
 blackhat ~— \—~ >
-2) = @
 BRIEFINGS SS EE
 DECEMBER 10-11, 2025
 EXCEL LONDON / UNITED KINGDOM
@@ -770,7 +760,6 @@ Onsemuedlindividuralltimame:l(emonth)
 @ecurrences, log seale
 Za
 8Baeg AS e28s8sy
-A H FF WwW TS HW BB HH CH eee hy
 Pvé payload leageh
 black hat
 2026 46
@@ -786,10 +775,8 @@ black hat
 
 ```text
 REALITY IS COMPLEX
-) 23 q 6 8
 Frame count after reassembly
 a—NOSAHIVSEOCSSBALHRGS
-A DH FA Ww eS Ww BB Fh Oh Oe hy
 PrvG payload leageh
 black hat
 2026 47
@@ -1037,7 +1024,6 @@ Actual fragmentation
 Ox5cO1
 4 4
 122B 32B 0x5c00
-122 + 32 = 125 ?
 Oxac0O
 black hat
 2026 53
@@ -1102,7 +1088,6 @@ i Z
 :
 & 8
 S
-§ 7 7 Q
 hot frame count
 USA
 2026 56
@@ -1147,83 +1132,6 @@ ime cinco capture start (hours)
 When a new device  shows up , another one  disappears
 
 60
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DEVICE COUNT IS CONSTANT
-we Cocomesactwe XX Bacomashactive
-%
-OO OO
-= Oe
-=.
-ROKK Kare
-ae b> ae fs AS OS A ay eS
-me ae,
-eS ee
-a a
-S eee Sr a
-Sons
-=
-Ref 2 mm er
-m AN AN AS TN AS AS 4
-ye te te ye_te-tetented
-ee
-ee
-— we OR CRO 0 OR
-=
-— — eS
-S  §&
-(AOPYA ©2QUP-OF) COTY
-@
-n
-Som
-©
-co)
-joe
-2.
-©
-2
-xe)
-0)
-Cc
-e)
-—
-0)
-cos
-~
-{e)
-Cc
-14)
-Q
-=)
-n
-S
-fe)
-<=
-n
-®
-2
->
-)
-<2)
-=
-0)
-Cc
-14)
-Cc
-0)
-=
-g
-OAVBIO 80
-ry
-OGM
-(2)
-Tins dinee capture start hhoure)
-0
-black hat
-2526 60
-```
 
 ## Slide 61
 
@@ -1430,7 +1338,6 @@ Active Nodes
 (DOOR_SENSOR]
 nodes
 P.
-ey > |
 Oxb800
 <—_
 [{THERMOSTAT]
@@ -1510,8 +1417,6 @@ LOCATION. LOCATION. LOCATION
 Thread network
 te 4
 1 =
-= > ree
-4 i ih}
 = ‘VLA
 |
 black hat

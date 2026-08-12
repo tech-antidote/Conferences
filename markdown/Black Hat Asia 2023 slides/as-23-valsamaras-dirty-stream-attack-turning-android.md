@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:56:16Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Valsamaras-Dirty-Stream-Attack-Turning-Android.pdf` (51 pages)
 
-
 ## Slide 1
 
 # Dirty Stream Attack Turning Android Share Targets Into Attack Vectors
@@ -348,7 +347,6 @@ black hat Sending a file
 2 ~ssendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse( uriString: "content: //authority/path/file"));
 X_ Share with
 sendiIntent.setType("image/jpeg"); 3
-® ® ©
 Intent shareSheet = Intent.createChooser(sendIntent, title: null); 4
 HR
 startActivity(shareSheet); 5
@@ -364,7 +362,6 @@ startActivity(shareSheet); 5
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Qa i eat
 blackhat Handling a stream ee 3
 public static final java.lang.String getFi imeCandroid.content.Context context, android.net.Uri uri) {
 java.lang.String filename = ;
@@ -779,7 +776,6 @@ Code Execution Show Case
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a i a
 blackhat Code Execution Show Case |
 GE Browser - Fast & Safe
 aeeeaE ORCA S|

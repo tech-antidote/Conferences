@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:04:15Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yuhao Jiang&Xinlei Ying&Ziming Zhang_Dark Corners How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years.pdf` (55 pages)
 
-
 ## Slide 1
 
 ## Dark Corners: How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years Yuhao Jiang, 0x140ce, Ezrak1e
@@ -32,12 +31,6 @@ converted_at: "2026-08-11T23:04:15Z"
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> ‘ bite et fi >
-WS ‘ ~ —s Ld fz x 7
-S : i / > +
-£ ———— SS = \ ~~
-162 a : om 2
-‘ ‘ S \ a
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Dark Comers: How a Failed Patch
@@ -675,7 +668,6 @@ if ( !EnforcementLe el
 {
 return @LL;
 }
-if ( EnforcementLevel != 2 )
 return @xBAD@117LL;
 Log(
 (unsigned int)"VmkAccess: %d: %s: %s:: dom:%s(%d), sysClass:%s(%d)\n",
@@ -725,7 +717,6 @@ BRIEFINGS
 Domain Transition
 Only privileged domains and arbitrary!ransitionDomains can use
 this method to transition domains.
-if ( v2 )
 { F nkAccessDomain eate+2D
 esult = @LL; align 40h
 if ( !al->IsarbitraryTransitionDomains ) aJumpstartdom db 'jumpstartDom',@
@@ -958,7 +949,6 @@ BSmuen
 1246
 PFS soos @
 = 20:17
-~ @& 8 SY® aWn020 @ |
 ```
 
 ## Slide 55

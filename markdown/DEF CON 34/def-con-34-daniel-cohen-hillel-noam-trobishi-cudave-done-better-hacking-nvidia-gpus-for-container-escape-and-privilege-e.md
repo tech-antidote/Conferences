@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:57Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Cohen Hillel, Noam Trobishi - CUDA've done better - Hacking Nvidia GPUs for container-escape and privilege escalation - Cudave v1.pdf` (256 pages)
 
-
 ## Slide 1
 
 # **CUDA** ’ve Done Better

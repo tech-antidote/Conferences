@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:18Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Franky Saegerman_Foreign Information Manipulation and Interference (Disinformation 2.0) - How Patterns of Behavior in the Information Domain Threaten or Attack Organizations' Values, Procedures and Poli.pdf` (62 pages)
 
-
 ## Slide 1
 
 #### Foreign Information Manipulation and Interference (Disinformation 2.0)
@@ -52,8 +51,6 @@ Head of Social Media (2012-2016) Head Digital Insights (2016-2020) Information E
 
 ```text
 al ee
-+e pee: on
-4 An - ? ~~
 black hat
 ASIA 2025
 ee
@@ -82,15 +79,12 @@ fi
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-AQ. 7. iN
 black hat oa Ag
 ASIA 2025 = om 7 (a \ Q ' Mab
 pee a ais
 What Is Disinformation? What is it not?
-es : S| Oe aT SE
 lan Bradbury - ‘st
 : 21st century solutions for 21st century problems
-= 5 35m - ®
 ¥ 4
 OPPOSING VIEW + DISINFORMATION
 COUNTER EVIDENCE + DISINFORMATION
@@ -182,17 +176,14 @@ ts
 ‘
 a. :
 » oe
-IS ‘ I "
 % ik
 SS
-i a = , 2 ;
 ~~ >
 EE Art:FelixUncia
 ~“
 Idea: BRENT
 Misinformation
 &,
-\ a ee
 NY .
 ```
 
@@ -203,29 +194,6 @@ NY .
 What is FIMI?
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2) SO jin... Z& Mio x. .™~>
-black hat
-ASIA 2025
-~
-vs)
-we
-fi
-GIT /f
-:
-LF GE
-odd a
-CY fe
-ae
-PAT wwe '
-Presley
-Te
-. poreeseints t ‘rn
-@BlackHatEvents
-```
 
 ## Slide 8
 
@@ -249,7 +217,6 @@ Foreign Information Manipulation & Interference
 ```text
 Q . RA Alacra: rit lth ss Ff ~~. S
 blackhat Foreign Information, Manipulation & Interference
-ASIA 2025 = Na WSs WP \ NA i eS A AS
 @globaltimesnews @ukraina_ru Doppelganger
 |
 CGTN False Facade
@@ -262,7 +229,6 @@ Global Times
 \
 soe: | Portal Kombat
 Russian MFA |” —_
-ff Tu ‘
 aif.ru S ft
 7 Portal
 RIA Novosti _ Kombat African Initiative
@@ -336,7 +302,6 @@ African
 Outlook
 Initiative
 2] African Stream
-it — Ue
 RRN/
 Doppelganger
 GlobalResearct
@@ -465,13 +430,11 @@ a
 -.”
 . James Pamment —
 y& Ete ct" = University Sweden
-7. —_ its es
 Political narratives
 Divisive messaging
 Hacked documents
 | 22 Commercial spam
 Scams and fraud
-te] =T 2
 +
 vt
 ```
@@ -483,7 +446,6 @@ vt
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-| oe y > a ton r y ey
 bifeachat . SKE t/a |
 ASIA 2025 St |. Se :
 4 Narrative Intelligence ww BL ACKBIRD.A\
@@ -512,7 +474,6 @@ measuring the success of mitigative efforts.
 
 ```text
 SOCIAL ~ ‘
-we GAN |
 bidagiieiael AEDIA ‘, S50L11 1
 More Americans Turn to TikTok | Social Media: Where It s Hardest
 to Tell Truth From Fake News
@@ -540,16 +501,13 @@ a5
 6 7
 4
 3 3
-il ° ' a
 <1
 '20 '21 '22 '23 2 ‘20 '23 ‘20 '23 ‘20 '23
 61,224-92,185 respondents (18+ y/o) per platform surveyed across 47 markets between
 8,842 U.S. adults (18+ y/o) surveyed Sep. 25-Oct.1, 2023 Jan.-Feb. 2024. Respondents in India and Hong Kong were not asked about TikTok.
 Source: Pew Research Center Source: Reuters Digital News Report 2024
 statista %
-LL Wl \S oa SS ee:
 Sstatista %
-co. 8 ee ee a ae a
 ;
 ,
 ?
@@ -621,7 +579,6 @@ www.theguardian.co.com 1+ i nae
 impersonated : af *f i
 nsittieho
 :
-. 4 . ‘ ”
 Paid advertisement on social media platforms, . suattonal Get
 linking to the fake story he, around th
 Cloned websites of legitimate outlets
@@ -650,30 +607,6 @@ www.nato.ws/cps/en ....
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-ASIA 2025
-\\ SES AN
-\ SS
-\
-< .,
-Bete We:
-\ TR Wy
-en
-=
-RV =x
-N
-oo
-TAN
-WS
-Sr
-ee
-. poreeseints t bai)
-@BlackHatEvents
-```
-
 ## Slide 21
 
 ### **Pink Slime Websites**
@@ -701,7 +634,6 @@ ASIA 2025
 px)
 LS GE
 Vdd a
-OY * fee
 Fa 2g
 SITE
 im
@@ -831,9 +763,7 @@ S @BlackHatEvents
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-- — ee
 a fioseeowente wipe
-4 An - ? ~~
 bisek hat
 ASIA 2025
 ~
@@ -904,34 +834,6 @@ Over 800 organizations targeted via network of fake accounts on X and via email.
 # Affecting AI models
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ a
-bisek hat
-ASIA 2025
-~
-4]
-.
-\ SSN
-\\ aN \
-\ RR,
-\ }
-en
-~
-WRN
-N
-oo
-° e
-TAN
-WS
-Sr
-‘ ee
-a fiiaeeowemte t woe
-H = _ » = |
-@BlackHatEvents
-```
 
 ## Slide 32
 
@@ -1008,7 +910,6 @@ de las SS(™).
 Posteriormente, se e
 video se volvidé a sub
 version actualizada.
-—— — ae
 ~
 —
 Russian Embassy in South Africa ms ©
@@ -1041,35 +942,6 @@ anzeigen
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ a
-bisek hat
-ASIA 2025
-~
-4]
-.
-\ TR Wy
-SSSR
-' Tony \
-\
-en
-ARN,
-‘ x
-SRE.
-N
-oo
-° e
-TAN
-WS
-Sr
-‘ ee
-a fiiaeeowemte t woe
-H = _ » = |
-@BlackHatEvents
-```
-
 ## Slide 37
 
 **Case Study: Support to Ukraine**
@@ -1082,7 +954,6 @@ H = _ » = |
 pisek hat
 \
 ASIA 2025 ‘ =f
-, & ¥ =s =” ee = yi aa , a “i
 “Re BY,
 , i
 i
@@ -1094,11 +965,8 @@ La
 ™= BREAKING: Senior Ukrainian officials allegedly used U.S. aid to
 purchase luxury vehicles and homes in Spain.
 i nf
-re | ‘-
 “a
 fuia vy oll eat ’
-ES Le ee ee
-1 | wh ‘ al. Nn
 Engagements on Tweets within narrative (Aug-Dec 2023)
 \ J
 YY
@@ -1136,8 +1004,6 @@ al
 ie =
 a wc
 »
-[ ak a
-‘ | .
 ie Engagements on Tweets within narrative (Aug-Dec 2023) ‘ x4
 X J
 VY
@@ -1158,12 +1024,8 @@ vents
 W
 pidekhat =
 ASIA 2025
-a ~ \ _, A i, A a . a
-‘ i ~ ~ ~ - “oy
 — :
 odr #
-’ ie “4
-ai : itzk i ¢ 2.
 E P y GRAPH LEGEND © sizrrenivicrene ‘Ey
 Se | BREAKING: Zelensky reportedly buys $20 Million Dollar Mansion in Vero Y
 el Engagements generated by Russian State Supporter users Beach, Florida.
@@ -1179,7 +1041,6 @@ yachts “Lucky Me” and “My Legacy,” with a staggering combined value of
 $75 million.
 Zelensky's doing well, how do you feel about that? I'm sure he gives thx
 to American taxpayers.
-* a ZN Ce ae ZRH ; Aa an ithe al AK = ;
 Engagements on Tweets within narrative (Aug-Dec 2023) ie
 ——
 wy BLACKBIRD.AI Narrative is picked up by
@@ -1332,30 +1193,6 @@ Narrative Deep-Dive Network Analysis: Cohort Activity
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-ASIA 2025
-\ SSN
-\\ aN \
-< .,
-Bete We:
-\ xX, WX .
-en
-~
-WRN
-N
-oo
-p e
-NAN
-We
-Sr
-ee
-. fineneconate & von
-@BlackHatEvents
-```
-
 ## Slide 49
 
 **AI –Generated Deepfake**
@@ -1409,9 +1246,6 @@ Anyone can generate deepfakes. They have become easier and cheaper to make and s
 ```text
 bisek hat
 ASIA 2025 La
-_. ‘a Tie ,
-‘ ba Fs a
-=@ 5 EB
 Ris 8 FRANCE ROMANIA -¢é
 WORLD NEWS iy PA How Russia-backed influencers meddled i in
 Romania's vote
@@ -1449,7 +1283,6 @@ pisexchat NN
 ASIA 2025 J
 Polish authorities said Russia appears to be behind a large fire that consumed a shopping center in
 Warsaw. Dariusz Borowicz/Agencja Wyborcza.pl/Reut
-esd 7 74 a .
 a
 m
 *-|
@@ -1479,12 +1312,10 @@ i Sas
 Bosnia — Moldova - Georgia
 Vis f
 ~ ESTONIA 4
-= = y ~~
 wa SS
 iff’ ea. g
 \3 —
 he
-’ 0d ab “
 +t
 Ss
 @BlackHatEvents
@@ -1501,7 +1332,6 @@ GERMANY
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q _ 2 :
 black hat \ BR oN
 ASIA 2025 ;
 POLITICO G : RMANY = Bei 100 ge den mane verstopft
@@ -1511,7 +1341,6 @@ an election War in Ukraine Newsletters Podcasts PollofPolls Policynews Events
 4 ir
 :
 NEWS > DEFENSE r¢ As ae
-Pag! @ rs 1
 ean iva
 : i
 ee , attackieren Autos mit
@@ -1539,7 +1368,6 @@ Dole 2025
 ED SEG
 fz J fgteom
 7 aod
-ap PP |
 i.
 a ~
 biti “4 toms Tt Lah
@@ -1563,19 +1391,14 @@ ackHatEvents
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-wT > Ga >
 '#)
 black hat
 EST 2025
 eAwareness ;
-_ | me oa ~~ cae 2
 «Behaviour :
-~d ~— . a
-; j ;
 ,
 ~ 2
 ’ :
-i | :
 “ J
 ™ ’
 bed beng em pment ome

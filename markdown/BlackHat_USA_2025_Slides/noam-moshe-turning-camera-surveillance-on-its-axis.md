@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:58:49Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Noam Moshe_Turning Camera Surveillance on its Axis.pdf` (68 pages)
 
-
 ## Slide 1
 
 ## **Turning Camera Surveillance on its Axis**
@@ -58,12 +57,10 @@ Claroty Research, Claroty Team82
 +0.79 (0.44%) # today
 Closed: 3 Jul, 16:59 GMT-4 + Disclaimer
 After hours 180.54 —
-1D 5D 1M
 181.(
 180.16 USD 09:35
 °
 180.0 4
-| er 5"
 179.5 :\ A i
 aie) Sy Au Sane
 se lee
@@ -285,7 +282,6 @@ On-Prem Connection
 ioe
 Axis Camera ae =)
 Station Clients pts, ———
-e e e 7 \
 Big
 Company
 Inc.
@@ -307,7 +303,6 @@ n-Prem Connection
 ioe
 Axis Camera \,
 Station Clients os me
-a ~ SEP
 , f
 ,
 o Big
@@ -338,40 +333,6 @@ Agency
 WAN
 University
 Attacker
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-6,000+ servers sa oe
-around the | ae O| eS
-world!!! 1 o+ if  —
-: Compan 7
-a y BS a
-o me
-/ TS ee
-a
-f& | ——
-\0 | —
-Attacker won ~.
-I
-I
-|
-a
-@
-— =
-— | ~~
-a
-O . ——-,
-—_— onl
-Gv \—=——,
-Agency ~
-—=
-- |r”
-— bd
-0) Ss
-<< onl
-University *
-```
 
 ## Slide 16
 
@@ -853,7 +814,6 @@ S a
 till requires auth
 € G © 127.0.0.1:55752
 Windows Security x
-o _ —— - 0.0.1:55752 If we use c reds ~
 browser is just stuck
 — | forever...
 OK Cancel

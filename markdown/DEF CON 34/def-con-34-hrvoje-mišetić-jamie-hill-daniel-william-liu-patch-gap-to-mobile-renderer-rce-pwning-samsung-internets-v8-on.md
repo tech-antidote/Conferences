@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:22:06Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Hrvoje Mišetić, Jamie Hill-Daniel, William Liu - Patch Gap to Mobile Renderer RCE Pwning Samsung Internet's V8 on the Galaxy S25 - Mis.pdf` (122 pages)
 
-
 ## Slide 1
 
 **Patch Gap to Mobile Renderer RCE**
@@ -999,7 +998,6 @@ DESKTOP $
 ISOLATION
 MOBILE SITE
 ISOLATION 89
-= oan | — Nt Sf)
 ```
 
 ## Slide 90

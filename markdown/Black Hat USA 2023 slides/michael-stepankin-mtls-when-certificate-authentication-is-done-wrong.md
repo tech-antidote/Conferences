@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:19:29Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Stepankin_mTLS When Certificate Authentication is Done Wrong.pdf` (33 pages)
 
-
 ## Slide 1
 
 ### **mTLS: when certificate authentication is done wrong**

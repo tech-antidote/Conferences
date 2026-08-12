@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:16Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wetzels-Nakatomi-Space.pdf` (41 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -268,7 +267,6 @@ sufficient perimeter due
 to limited capabilities
 2229299
 ((y)
-O|<— Cz <—— |} ao |
 600566 Y oo |
 Used to be ‘dumb’
 Increasingly ‘smart’
@@ -474,25 +472,14 @@ Attack Scenarios
 Attack Path - Likely can’t do this from SCADA
 O Bridge #2
 | ' Object PlCc| © | Bridge Systems —— ;
-Bri #1 ;
-ridge i =» 4 te |
-: : | a ,
 » ' \gcpu [rtug|zo $ OE |
-WAN ; uf ° ° S— |
 re |
-) ! | 4 Wy
-y- “ I
-! 4 NS z 1 [| '
 Coupler 1
 ~ : Safety PLC (5) At
 I
 Aa a BYPASS stop
 C) SS ' ' ENABLE
 ' |mcpu | Sp S|ETHS|I0 9 — ‘@ |
-: |i sfETHS] 20 § _ e| a
-IN L 1 ecco @ (™) ay t
-a 1 =» eooee -—_s =
-Lf 1 1
 | |
 1 [
 I
@@ -621,7 +608,6 @@ Function Code
 Reservation ID
 UMAS Service ID
 COx5A) (or status) Message Data
-TS TT oT ae
 1 Byte 1 Byte 1 Byte N Bytes
 | Project Basecamp - Digital Bond
 2 The secrets of Schneider Electric's UMAS protocol-—P. Nesterov et al.
@@ -677,7 +663,6 @@ Authenticated Request Forgery
 Exchange Nonces
 — Send Auth Hash
 — Get Reservation ID
-0 k< | >
 Forge auth request
 Sniff nonces No per-request freshness
 Sniff res ID @ No signature secret
@@ -859,7 +844,6 @@ Safety PLC
 ote |
 Backplane u HcPpU | SP S|ETHS|1I0 9
 Modicon X-Bus i) |e e e e
-rN A ,
 Backplane CANopen windNet
 Device Driver! |Device Driver
 TCP/IP Stack
@@ -920,7 +904,6 @@ Cannot talk directly to GuardLogix CPU module or route CIP
 Non-routable PTP link
 Only Modbus TCP (AOl)
 Explicit protected mode
-c Wy oo Wa oO
 ERO ES Sot ~ ROR SSS SS wa
 Exploit N-day vuln in TCP/IP stack for RCE
 on Ethernet Module » hop to rest of SIS Allen-Bradley GuardLogix Safety PLC
@@ -949,7 +932,6 @@ srr_opt->ptr = 4;
 while ( offset_to_current_route_entry > @ )
 {
 > Only XN enabled memcpy((char *)srr_opt + (unsigned —_int8)srr_opt->len, current_route |
-1 . . current_route_entry -= 4;
 — Pick SRRs to align stack overwrite offset_to_current_route_entry -= 4;
 srr_opt->len += 4;
 — Write-4 ROP + stack fixup » cont. exec }
@@ -1023,7 +1005,6 @@ No routable traffic (eg. CIP)
 via PTP link
 2 8
 SSSR sGssssSa
-: es Es
 re
 Depends on SIS bypass
 implementation

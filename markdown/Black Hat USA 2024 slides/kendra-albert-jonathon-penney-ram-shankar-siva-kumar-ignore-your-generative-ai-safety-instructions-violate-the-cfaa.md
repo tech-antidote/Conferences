@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:02Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kendra Albert & Jonathon Penney & Ram Shankar Siva Kumar_Ignore Your Generative AI Safety Instructions. Violate the CFAA.pdf` (23 pages)
 
-
 ## Slide 1
 
 # **Ignore Safety Directions. Violate the CFAA?**

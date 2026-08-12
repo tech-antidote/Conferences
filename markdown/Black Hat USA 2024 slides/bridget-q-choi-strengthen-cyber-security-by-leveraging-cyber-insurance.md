@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:19Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Bridget Q. Choi_Strengthen Cyber-security by Leveraging Cyber-Insurance.pdf` (12 pages)
 
-
 ## Slide 1
 
 # Strengthen Cybersecurity by Leveraging Cyber Insurance

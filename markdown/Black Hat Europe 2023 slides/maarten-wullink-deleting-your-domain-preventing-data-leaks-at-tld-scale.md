@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:35Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Maarten Wullink_Deleting Your Domain Preventing Data Leaks at TLD Scale.pdf` (51 pages)
 
-
 ## Slide 1
 
 # **Deleting Your Domain? Preventing Data Leaks at TLD Scale**
@@ -139,7 +138,6 @@ Jonge to better secure healthcare institutions, hardly anything seems to have
 changed in a year and a half.
 Just in
 Anderleq
-to go to
 Greek tr.
 ranking 2
 Eloise er
@@ -164,7 +162,6 @@ COMPUTABLE To sare fo
 Home | Articles | News | Security
 Police leak data via expired email domains
 January 20, 2017 11:50 | Pim van der Beek 1&3
-iy ii =
 The police have allowed a number of domain names linked to e-mail ad-
 dresses to expire. Third parties can purchase those domains and gain ac-
 cess to emails containing information about arrests and event security. An
@@ -632,7 +629,6 @@ Registrant Survey
 Registrant Survey
 "The mail was useful"
 | don't know &@ Strongly disagree S& Disagree Neutral ®§ Agree & Strongly agree
-0 10 20 30 40 50 60 70 80 90 100
 Share of participants (%)
 ```
 
@@ -646,7 +642,6 @@ Registrant Survey
 Registrant Survey
 "The mail helped to prevent problems like the leakage of information"
 | don't know @ Strongly disagree S& Disagree Neutral 98 Agree ™& Strongly agree
-0 10 20 30 AO 50 60 70
 Share of participants (%)
 ```
 

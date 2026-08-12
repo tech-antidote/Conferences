@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:18Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Jacob Larsen_From Doxing to Doorstep Exposing Privacy Intrusion Techniques used by Hackers for Extortion.pdf` (77 pages)
 
-
 ## Slide 1
 
 From Doxing to Doorstep: Exposing Privacy Intrusion Techniques used by Hackers for Extortion
@@ -95,11 +94,9 @@ Jacob Larsen
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> © i Qijesdo).ocv ee + 8@ Of
 Nek r- ES, cts Law Enforcement Inquiry and Alerts Version 21.9.7 (gt Logo
 View/Edit Request 648889 Select Action fig) Save
 Police Officer .
-= ; :
 = =o Usdo).qovs
 Paquet Sthstuss co
 ‘Creabed Ciste: ~.
@@ -665,8 +662,6 @@ ee we ee et © pee offshore services that }|—
 we have either used/have had experiencejw"™ ™
 ome
 ee patel ow eget) keane © fred of
-Gee Re Pt eet gy ey Pena we
-ewe 88 et tet of oy of Oe bted
 Cotte Os eet te me Pe) ene, Som
 eget = ET sage
 A ote aes He Cee e+ et mgr we se
@@ -675,21 +670,11 @@ Company
 Name Website link Description policy*
 country Log
 Filter Filter Filter Filter Filter
-vrs. zs i _— .
-= se = mt re a> |
 ee eee wen ee
-ene 1 ee B om
-ne ee ee oo
 — Santas P|
-eee a -
-- 7 —— oe SS ee ee . ——— =
-=F —- a =o
-‘ = - ee a —_
-Sem = — ee
 ~——e oe em ete
 i
 _=—
-2 ee ee ew ee -
 ee
 me
 me
@@ -698,7 +683,6 @@ _— mee!
 Offshore.CAT is a Doxbin Project.
 uncate 2023-08-04
 Total sag
-| 02 le el ll
 An extremely lenient domain registrar,
 =a has been hosting Doxbin.net for years
 ```
@@ -844,8 +828,6 @@ responsible or legally liable.
 
 ```text
 Rules:
-ee ee = = eae ' bk ke ae eel
-—[=—erasie «§ £22 Se  — oy ao f ee, be" Oe pete ol
 Content that is not allowed on Doxbin:
 - Third party links to underage explicit images
 - Pastes that don't meet our information minimum requirements (Example)
@@ -1023,7 +1005,6 @@ Email ,
 Address agimall
 Mobile
 Number
-~ 5) bh
 —_—____—__—» ®
 Emerg ency IP Address
 Data Request So. a a

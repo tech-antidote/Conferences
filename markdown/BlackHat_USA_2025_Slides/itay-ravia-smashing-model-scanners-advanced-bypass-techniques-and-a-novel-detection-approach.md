@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:55:13Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Itay Ravia_Smashing Model Scanners Advanced Bypass Techniques and a Novel Detection Approach.pdf` (60 pages)
 
-
 ## Slide 1
 
 **Smashing Model Scanners** Advanced Bypass Techniques and a Novel Detection Approach
@@ -891,15 +890,12 @@ stat i Cc SCa n n e rs  fcakyon Update README.md — 6adfddb
 th Q) .gitattributes © safe 1.52 kB
 en?
 {\ README.md « 29.3 kB
-1 yololil-pose.pt « fe | |i pickle 53.2 MB @ LFS
 O yololil-seg.pt + File Security Scans x 56.1 MB @LFS
 ) yolo111-pose.pt
-B yololllpt © i 51.4 MB @ LFS
 1 yolollm-pose.pt — 42.5 MB @ LFS
 ( yololim-seg.pt X Suspicious 45.4 MB @ LFS
 1) yololin-seg.pt No issue 6.18 MB @LFS
 ih}
-yololin.pt © ii ; 5.61 MB @ LFS
 ```
 
 ## Slide 47

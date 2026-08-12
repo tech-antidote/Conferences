@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:54Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Chao Ma & Han Yan & Tim Xia-LinkDoor A Hidden Attack Surface in the Android Netlink Kernel Modules.pdf` (39 pages)
 
-
 ## Slide 1
 
 # LinkDoor: A Hidden Attack Surface in the Android Netlink Kernel Modules
@@ -174,12 +173,10 @@ App-2
 ’ (libnl)
 App-1 |
 I “t Protocol Library Su
-a ne eee
 eS
 Linux Kernel Netlink Subsystem |
 User Space
 —
-: 25 25
 oO
 Oo
 a
@@ -187,7 +184,6 @@ a
 o
 = Routing Netfilter IPv4/IPv6 KSMBD
 Uevent a Wireless
-| y - h
 ```
 
 ## Slide 11
@@ -446,7 +442,6 @@ ie Send Netlink Message-. struct m{6375_priv *priv = platform_get_drvdata(pdev);
 Oo struct mtk_ gauge *gauge = &priv->gauge;
 a struct n¢tlink kernel cfg cfg = {
 ” input = mtk_gauge_netlink_ er,
-3 1h }3 1
 a
 es j gauge->gm->mtk_battery_sk =
 Q -input(skb) netlink_kernel_create(&init_net, NETLINK_FGD, &cfg);
@@ -469,13 +464,11 @@ Case study 1: attack the parsing of Classic Netlink message
 void mtk_battery_netlink_handler(struct sk buff *skb) | static void mtk_battery_daemon_handler(struct mtk_battery *gm,
 { void *nl_data, struct fgd_nl_msg t *ret_msg)
 nee {
-ae wae 4
 nlh
 (struct nlmsghdr *)skb->data;
 i NETLEWK_CREDS(skb) ->pid; msg = nl_data;
 vid = sagen ad A rat_msg->nl_cmd = msg->nl_cmd;
 seq = nlh-> msg seq; - ret_msg->fgd_cmd = msg->fgd_cmd;
-~ 3 os ’
 data_= NLMSG_DATA(nlh);
 3
 | DAEMON_CMD_SET_FG BAT_INT1_GAP:
@@ -523,9 +516,7 @@ process req to result
 3
 a Send ioctl Message --------- — ec): a eee ee Send Netlink Message --
 ®
-@ _ . ; ;
 8 ‘Teq = request_alloc() [ nlmsg_unicast(req) | request_wait_answer(req) <1 .input(skb)
-: | / |
 f.
 o
 <
@@ -640,7 +631,6 @@ reennnennens Send write Message------------------- Receive Netlink Message- i as
 2 static unsigned int flp_event_seqnum;
 &
 ” skb = genlmsg_new((size _t)count, GFP_ATOMIC) ;
-0) v if (skb == NULL)
 gS : return -ENOMEM;
 G flp_write() oe genlmsg_unicast() ,
 /* add the genetlink message header */
@@ -813,8 +803,6 @@ buf = (char *) &msg3;
 buflen = msg.nlh.nlmsg_ len;
 while C(r = sendto(sock_fd, buf, buflen, @, (struct sockaddr *) &dst_addr
 » sizeof(dst_addr))) < buflen) {
-if (r > @) {
-buf += r3
 buflen -= r3;
 } else if (errno != EAGAIN) {
 return -1;
@@ -828,7 +816,6 @@ na = (struct nlattr *) ((char *) na + NLA_ALIGN(na->nla_len));
 if (na->nla_type == CTRL_ATTR_FAMILY_ID) {
 id = *(__u16 *) NLA_DATA(na);
 } else {
-id = '@;
 return id;
 } « end genl_get_family_id »
 void genl_rev_msg(int family id, int sock_fd, char *buf)

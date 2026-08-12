@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:38:23Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sanne Maasakkers_Unraveling the Mind Behind the APT - Analyzing the Role of Pretexting in CTI and Attribution.pdf` (52 pages)
 
-
 ## Slide 1
 
 Unraveling the Mind behind the APT Analyzing the Role of Pretexting in CTI and Attribution

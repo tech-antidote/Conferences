@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:54Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Karel Dhondt & Victor Le Pochat_Swipe Left for Identity Theft An Analysis of User Data Privacy Risks on Location-based Dating Apps.pdf` (36 pages)
 
-
 ## Slide 1
 
 **_Swipe Left for Identity Theft_** An Analysis of User Data Privacy Risks on Location-based Dating Apps **Karel Dhondt** , **Victor Le Pochat** , Yana Dimova, Wouter Joosen, Stijn Volckaert
@@ -284,7 +283,6 @@ APIs leak data for **all** apps **99** leaks in total
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Sv 2 = =
 SZ S238 2Ss24,58
 SRSSHESESSESLYS ;
 reeeecensseerve Tinder: leak of non-binary gender
@@ -437,7 +435,6 @@ Karel 27@
 fa Lives in Ghent
 Karel 27@
 t PhD Researcher at KU Leuven \ “ : g 3 © 2.184 kilometers away
-© KU Leuven 7 . : e EF
 fa Lives in Ghent
 © 1.438 kilometers away 20
 ```

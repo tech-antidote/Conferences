@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:32Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Matthias Frielingsdorf-You Shall Not PASS - Analysing a NSO iOS Spyware Sample.pdf` (163 pages)
 
-
 ## Slide 1
 
 # You Shall not PASS
@@ -36,10 +35,6 @@ Matthias Frielingsdorf
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-aN — x J \
-g , \
-—£ : _ eae “ {=
-y 2 e saad } > -— ‘
 G ~—
 _ blackhat
 | ASIA 2024
@@ -1949,9 +1944,7 @@ ee ee Uncovering
 ASIA 2024
 ‘AG
 Call, ; d
-: , : a * :
 YOU SHALL NOT PASS!
-4] a ie
 ```
 
 ## Slide 149

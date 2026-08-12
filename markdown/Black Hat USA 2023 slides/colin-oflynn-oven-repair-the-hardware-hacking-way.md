@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:24Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Colin O'Flynn_Oven Repair (The Hardware Hacking Way).pdf` (74 pages)
 
-
 ## Slide 1
 
 # Oven Repair The Hardware Hacking Way
@@ -118,8 +117,6 @@ r(t) y e(t) Plant; PX 404
 ~ 30
 207
 1074
-o- T T T T T T
-a) 20 40 60 80 100
 Time
 Black Hat USA - August 10, 2023. Colin O'Flynn. 6
 ```
@@ -128,75 +125,9 @@ Black Hat USA - August 10, 2023. Colin O'Flynn. 6
 
 Black Hat USA - August 10, 2023. Colin O'Flynn. 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-VEN MAINS
-® 2012
-OF a
-3 6g DESL 12439
-P
-z iin
-DE41-00408C n |
-Fe : i
-es 5 ce 3
-‘ii [3
-<
-=
-_
-a
-(2)
-4
-Oo
-(S)
-ee)
-N
-ro}
-N
-fo)
-4
-```
-
 ## Slide 8
 
 Black Hat USA - August 10, 2023. Colin O'Flynn. 8
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-aLieese)
-puedes
-<
-Cc
->
-uw
-fo)
-£
-ze)
-o)
-00)
-A
-ro)
-A
-S
-a
-w
-n
-=)
-oo
-_)
-a
-<x
-70)
-=)
-Z
-ise)
-=
-x<
-oO
-&
-iva]
-```
 
 ## Slide 9
 
@@ -363,7 +294,6 @@ Condition: New - Open box
 Quantity: t | Last One /1sold
 Price: US $280.00
 Buy another
-< Sie Fe
 Add to cart
 §% Have onetosell? Sell now
 Best Offer:
@@ -516,7 +446,6 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 ```text
 Power Analysis?
-~_= rr — ——
 -
 Rshunt VCC
 Micro-
@@ -529,7 +458,6 @@ Controller
 ( |
 GND "7.3728 MHz
 ' (7.3728 x 4)
-— - — => — - =-
 —_ oe
 Black Hat USA - August 10, 2023. Colin O'Flynn. 22
 ```
@@ -554,7 +482,6 @@ o
 €
 v
 a
-4“ 0.0 5
 o
 =
 o
@@ -564,7 +491,6 @@ o
 -0.24 0x71 (q)
 0x72 (r)
 — 0x73 (s)
-0 20 40 60 80 100 120 140
 Clock Cycle (@ 16 MHz) .
 Black Hat USA - August TO, 2023. Colin O'Flynn. 23
 ```
@@ -588,9 +514,6 @@ Xx x  Guessed Byte
 12.8 5
 12.6 |e
 Sx
-xX oa x os x x x Xx
-12.4 4 ve > 4 rah Oe
-x x me ee
 12.2 4
 0 50 100 150 200 250
 Byte. Value (Range 0x00 to, OxFR)
@@ -741,12 +664,9 @@ Y
 @ 900;
 : weeiinaeet
 5 8004 E HF
-B= j TH
 ° seas o2oam +
-700 4 ee ;
 #4
 +
-600 1 T T T T T T T
 50 100 150 200 250 300 350
 Glitch Width (CW-Husky Setting)
 Black Hat USA - August 10, 2023. Colin O'Flynn.
@@ -774,7 +694,6 @@ target. ser.flush()
 response, responsehex
 if responsehex[0] !
 raise IoError("sync Error")
-"\x86", 1, 1)
 scope.arm()
 400 glitch Loop
 target.ser.write(b"\x10")
@@ -944,7 +863,6 @@ In [12]: DP resp
 out[a2}: *¥ iv iv EODED SED EEDEED BIDET BEDE EDD EL
 YYYYYYYYYYYYYYYYYYY: YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY YY YY
 yyyyyyyyy
-In [7]: PW bl = tl
 #bL.cmd
 #bL.cmd
 bl.cmd_
@@ -1030,7 +948,6 @@ Paste Ht) . BI UY. Oi TAS a $ ~%9 <8 8 Conditional Formatas Cell Insert Delete F
 ¥ = Formattingy Tabley Stylesy ¥ a ™ re v Filtery Selecty Data
 Clipboard & Font & Alignment & Number § Styles Cells Editing Analysis ¥'
 F9931 vi te v
-[y > ¥ = . +
 cost columne =) Gollmnns [=] vies [+ | Column5 [+|Columt~|Columi~| G H J LE M N fe} P Q R
 9927 Oxfe9683. £202 110031 LDAL XBC,0x1102
 9928 Oxfe9688  c307e4e021 LDB  A,(XBC+WA)
@@ -1417,7 +1334,6 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 ```text
 Set 375F, Cold Start, Load (Shepherds Pie)
-T T T T
 it) 500 1000 1500 2000
 Time (sec)
 Black Hat USA - August 10, 2023. Colin O'Flynn. 64

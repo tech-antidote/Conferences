@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:49:28Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Lewei Qu-Attacking Debug Modules In The Android Ecosystem.pdf` (36 pages)
 
-
 ## Slide 1
 
 ### Attacking Debug Modules In The Android Ecosystem
@@ -43,10 +42,6 @@ Attacking Debug Modules In The Android
 Ecosystem
 Lewei Qu(HHERKS)
 Chief Information Security Officer, Mogo Auto
-aS. = | j \
-—<—e y : 4 \ \
-aia y \ a \ > a » — ~ és —
-/ | =~
 A
 ```
 
@@ -293,7 +288,6 @@ Android Log
 BT HCl Log qx
 - ylog(system qu
 | Unix Domain Socket | __ wo’ Ap Cap tog -
-H PS Log i
 ” @ylog_cli | ' ey srtd(system) ARM Pom Log
 System APP — : DSP Log Output Mode >
 p pe ' mlogservice(shell) DSP Log .
@@ -306,7 +300,6 @@ System APP t af AG-DSP Pcm Dump Log
 ; AT Command Control ‘ ” @wend HAL Service | AG-DSP Log é
 security code | ATControl ' ' DSP Pcm Log
 Engineering Mode ‘ ' CP Cap Lo qx
-c i—> p @slogmodem t— 1 P Log —
 com.sprd.engineermode Modem Log Config y m, _ | el vendor. sprd.hardware.cplog_connmgr@1.0-s: orca ap Log
 CPControl ' ' orca dp Log
 PP invok '
@@ -369,7 +362,6 @@ Androidh as:
 10
 | Framework |
 Binder Call |
-ro | |. tg wifiManager ’ ee
 Wi-Fi test ' i yn)) #141
 RF CALI test
 RIC test getMacAdress
@@ -431,7 +423,6 @@ third-party APP
 remote debug
 tools | | |
 Network Socket A). — i call service call broadcast receive provider call >
-ce Jb Jb db JL
 2 | vl Ava awa ava
 System APP EngineerMode Validationtools
 fx
@@ -446,11 +437,9 @@ Is HAL
 [CHIDL > HAL
 L“ | Service
 modemHAL|) |...
-MT - pl .
 lOCIL> =
 = v_W"
 “ _ ylog_buffer agnss_dbg
-Toc S o .
 L | Driver
 debugitracing) | su.
 ```
@@ -638,7 +627,6 @@ getCdmalnsi() {
 (ve, 5
 int v1 = this.getPhoneCount();
 v2 = new (v1)5
-int v3 = 0;
 for(v4 = ©; true; ++v4) {
 v2.add(v5) 5
 v1_l = v25
@@ -661,13 +649,10 @@ Code
 Code
 @3-11 13:35:52.354 12774 12774 D PHONEINF: get all IP
 @ (value={ » @ public getAllimei() {
-ve = ;
 d(ve, ds
 int v1 = this.getPhoneCount();
 v2 = new (v1);
-int v3 = @;
 int v4;
-for(v4 = @; v4 < v1; ++v4) {
 v2.add("");
 v1.1 = v2;
 int v2_1 = this.getPhoneCount();

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:11:22Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aleksandr Krasnov - Harvest Now, Decrypt Later Practical Attacks on Post-Quantum Cryptography Implementations - slides.pdf` (23 pages)
 
-
 ## Slide 1
 
 ## **Harvest Now, Decrypt Later** Practical Attacks on Post-Quantum Cryptography Implementations

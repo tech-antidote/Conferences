@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:28:58Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Trevor Timm, redshiftzero - Lessons from a decade of building whistleblower tech - jen v1.pdf` (77 pages)
 
-
 ## Slide 1
 
 ## **Lessons from a Decade of Building Whistleblower Tech**
@@ -130,8 +129,6 @@ Defending
 press freedom
 for the next generation
 Paap od ' er)
-¥ _ . ~
-D 4 " ee
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
 
@@ -344,7 +341,6 @@ Aaron Swartz’s last gift to journalism and online
 privacy finds a new home
 October 15, 2013
 The Washington Post
-%» Pe RA
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
 
@@ -467,7 +463,6 @@ aggressive’ move t Ord ’ ’
 classified space
 Agents searched Hannah Natanson’s Virginia home and
 seized devices in inquiry tied to a classified materials case
-“ \ ie
 Times Journalists Subpoenaed as . Trump can’t stop White House leaks, so he’s coming
 Trump Escalates Pressure on Media
 for journalists
@@ -478,7 +473,6 @@ ci
 salon (Foiow )
 126 at 12:20 PM EDT B) Add Yahoo on Google Pe) O83
 > Usten-5:35 min FPsreretwtarive > fl
-. 8 : :
 REEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
 
@@ -583,7 +577,6 @@ Lesson 2: Plan for malware
 ' ! datacenter
 : :
 NS :
-& - 8 .
 g
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
@@ -690,7 +683,6 @@ https://freedom.press
 ’ Nal News organization
 | ; i datacenter
 : |
-: SS |
 we o:
 B DP
 ADMIN !
@@ -718,11 +710,7 @@ D> f
 Sources access a ww B DP
 ADMIN
 Tor onion service JS WORKSTATION
-( ‘ g
-7S S) | ga! S Le
 | SOURCE 1 JOURNALIST
-‘ } " os
-ae : _ &
 TEAM
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
@@ -740,7 +728,6 @@ we
 io
 ADMIN
 . vonsuron Journalist airgap
-< a ‘
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
 
@@ -866,7 +853,6 @@ https://freedom.press
 Lesson 6: End-to-end encryption is hard in the browser
 environment
 ‘avd |
-oD Bw i B&O
 SOURCE JOURNALIST
 —=FREEDOM OF THE PRESS FOUNDATION https://freedom.press
 ```
@@ -965,9 +951,6 @@ AppVM 3
 Disposable
 Vault VM vM
 Pas (cmeootares y
-' ' '
-1 ' '
-©; | ©:
 yearns awe?
 fedora” whonix
 tevelsoftust MMM] | [| whonix
@@ -1542,7 +1525,6 @@ https://freedom.press
 ```text
 @ howto.securedrop.tor.onion
 eco How to Submit a Tip toa News Outlex = v
-€ > 6 [tH O~ mmpsymowte.sec s)o% =
 ISecureDrop is a project of = Freedom of the Press Foundation
 How to submit a tip
 to a news

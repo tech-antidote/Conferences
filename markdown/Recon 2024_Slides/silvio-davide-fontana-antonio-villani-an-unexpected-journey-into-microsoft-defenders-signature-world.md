@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:23Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Silvio & Davide Fontana & Antonio Villani_An unexpected journey into Microsoft Defender's signature World.pdf` (42 pages)
 
-
 ## Slide 1
 
 https://shorturl.at/bPCzW

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:19Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Aakanksha Saha_Unmasking APTs An Automated Approach for Real-World Threat Attribution.pdf` (42 pages)
 
-
 ## Slide 1
 
 **Unmasking APTs: An Automated Approach for Real-World Threat Attribution**

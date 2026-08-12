@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:46:26Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Thijs Alkemade & Khaled Nassar & Daan Keuper_Low Energy to High Energy Hacking Nearby EV-Chargers Over Bluetooth.pdf` (96 pages)
 
-
 ## Slide 1
 
 ## **Low Energy to High Energy: Hacking Nearby EV-Chargers Over Bluetooth Thijs Alkemade & Khaled Nassar Computest Sector 7**
@@ -124,7 +123,6 @@ Juicebox repair of burnt relay. Here's how to repair it
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-IF xIT w 2
 Home » Vehicle > Accessory > JuiceBox EVSE Guides Answers (4 Edit Ww
 Getting WiFi working
 Matt Falcon and 2 other contributors
@@ -293,7 +291,6 @@ iceBox EVSE
 Getti
 ing Wi
 e Matt tha workin Guide:
-ast On al Ss
 © noesti esas ind 2 other c 9 ——_ °
 imate N , ontributors
 Moder. mone
@@ -322,7 +319,6 @@ ver that ee ol phigh
 ches fe, or
 all tha anythii
 ate
-- cal. It
 . It talks
 only t
 Co)
@@ -591,23 +587,6 @@ Share Your Home Charger
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ee OUTTOTHOTHOTEN THER TED
-rn a
-ISS] See
-=
-Upto? |
-© $14010_KeY ge ef fS . Bs 5
-8 r 688
-« eGRe « fy
-29 0 0 [mee
-.
-3) ie
-|,
-```
-
 ## Slide 35
 
 **Random internal micro-USB ports?**
@@ -658,324 +637,6 @@ Later:
 ##### **Is it just base64?**
 
 **>>**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Is it just base64?
-00000000
-00000010
-00000020
-80000030
-00000040
-00000050
-00000060
-80000070
-00000080
-00000090
-000000a0
-000000b0
-Q00000c0
-000000d0
-000000e0
-000000TO
-00000100
-80000110
-00000120
-00000130
-00000140
-00000150
-00000160
-00000170
-00000180
-00000190
-000001a0
-000001b0
-000001c0
-000001d0
-74
-74
-76
-66
-36
-2d
-b1
-2d
-6b
-58
-25
-32
-62
-49
-@5
-51
-45
-59
-33
-34
-4f
-4a
-4e
-d9
-53
-25
-47
-66
-74
-63
-fb
-62
-39
-60
-Sf
-47
-65
-32
-32
-60
-06
-57
-53
-56
-46
-78
-11
-78
-54
-06
-89
-4c
-@d
-56
-3b
-44
-@b
-73
-ec
-@5
-64
-b5
-66
-72
-31
-12
-3d
-6a
-25
-32
-79
-Od
-7a
-11
-35
-59
-43
-36
-30
-45
-6d
-68
-58
-31
-49
-2f
-37
-64
-Od
-64
-66
-of
-33
-53
-51
-4d
-60
-Of
-50
-6d
-33
-33
-4f
-11
-06
-Q@2
-43
-38
-11
-76
-4f
-36
-e4
-36
-bf
-ae
-65
-2f
-33
-39
-67
-31
-65
-6f
-37
-25
-45
-f7
-63
-67
-ey 4
-66
-48
-30
-Of
-45
-56
-45
-36
-51
-30
-36
-12
-be
-61
-Qd
-72
-39
-31
-Sf
-bQ
-33
-60
-25
-53
-0)
-76
-47
-6f
-6e
-45
-79
-4f
-Of
-4b
-54
-75
-59
-55
-0d
-6f
-74
-Of
-63
-e4
-43
-67
-74
-89
-32
-60
-31
-48
-4b
-61
-6b
-56
-77
-31
-6a
-3b
-4d
-69
-66
-59
-65
-63
-61
-65
-fb
-62
-63
-30
-Od
-2d
-3b
-25
-32
-57
-45
-Qa
-76
-41
-36
-67
-7a
-73
-58
-58
-36
-72
-59
-32
-65
-70
-65
-30
-65
-31
-df
-54
-04
-32
-60
-55
-57
-45
-49
-48
-55
-55
-5b
-49
-66
-71
-4b
-@2
-40
-49
-4b
-50
-‘ttes: : /x!s3xe_ -ce
-nt _gx-7x/ ama*onap
-x. co*/de} fa_lt.en
-evxede Ji if*rmegxe
-/fb0x2d3; tef91c4b0
-x6983f9 | xb16xace
-f-" “rmegi xe__CC@1
-6x_V1. 311 .6x. gx_x
-X-Gx+-Se| cu_ite-T
-*ke*=IQo: ! Jb3J_ x;°
-UX2VjEM7: 1962 * 952° %2
-~%2*%2° 56 | 2°%2°%2°
-%2°%2~ E! aExx1LWn
-lbs *RYYPxi_ xSJHMEU
-] IWx_ gmc! IL*bK*_W
-NeS _xT3q| x1vxaTVE
-UQVIz» 3R Fen_kOAI
-gEFks Lof| S*GBzYxH
-1Yx35; *H! ;eJoeV*6U
-x3°yYfe 0: i BmnYwxgUu
-IRx [C@x* | 4MEx1Mz [
-*OTM6x*E| iEx[_HsI
-7x#20°CV! oxy_j\Zf
-=| _HEXBE | xx0x; FXq
-WNL_mge 6} x**ZMxXK
-Wx _jhGvd} fIK7i36°
-6SVxZt00! i tUTzfer@
-Q%; FXT6_ i [KUHZVYI
-xGDZ1*x6} ZKY *Y¥k2K
-Nf« *1LING*! j LUme2JP
->>
-```
 
 ## Slide 39
 
@@ -1128,7 +789,6 @@ xx@{ xxRX | xxxUEXx4
 xmx sles: | senescent
 xd> txxxT | | xx fvxxx
 x, Lvxxxx} © °|xlzxxx
-X96 Y HX 1 x! "e%xxx
 >>
 ```
 
@@ -1155,8 +815,6 @@ x» xpVox |
 x x—xp
 , x
 K xa$x
-XOR with 256-byte key? 2b 6e 5d | 4e 57 ec 74 49 20 76 61 <+n] INWxtI va
-Nope et 0 8 0 13 ee 65 32 65 74 |$x_>> comedian
 Addition instead of XOR? 47 62[0d_Ga_| 00 00 00 00] 20 20 20 20 |.wxtb
 Almost? a 36 OC Oc 39 62] 1 a ++xpJ6m|
 x x*xXD
@@ -1201,7 +859,6 @@ K xa$x
 NwxtI va
 xexeZzext
 x x*xp
-° > ttd
 7_xf'Vg!
 (GxreQS]
 *xxHEAx_
@@ -1341,7 +998,6 @@ ChargePoint Home security research
 Dmitry Sklyar, @d_skljar
 Kaspersky Lab Security Services, @kl_secservices
 Contents
-4 Pe [cole | (0 (0): ee ee ee reer 3
 2. Research target ......... cece ec ceeesceeeeseseeeseceeseseesceseseeseceeeeteeseseeeseesessaeeesaaseneaeeees 4
 3. Mobile application analySis .............ccccccseeseeeeescseeeeceneseeseeeeeeceeeeeesscaeeeeesaeseeeseeesesensaees 5
 4. Hardware revision... cece cee cecceceeceeeeee scene cece eaeeeeesaeeesesaeeeseeeeeeeseeeaaeeeceaeeeeeeeaes 8
@@ -1560,12 +1216,9 @@ Parameters None
 
 ```text
 Made possible by:
-20 AO RIA
 | SLO RAR
 dg Te
 . —t <9e2008)
-= qUz608 a) a= ax=n |
-j: asa — : a
 ```
 
 ## Slide 69
@@ -1667,66 +1320,6 @@ strcpy((char *)s, "NA"); **if** ( v91 ) v92 = payload + 136; cmd = payload + 36;
 - Compromising chargers at a large scale could have impact on the **energy grid**
 
 **>>**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-5
-=)
-e)
-U
-a
-ia)
-U
-Va)
-oD)
-je)
-as
-ai
-fav)
-YY
-fav)
-Va)
-a
-oD)
-je)
-as
-©
-Cc
-U
-to)
-&
-Y
-=
-oO
-c
-Qo
-=
-e)
-U
-‘<
-on
->
-69
-San
-7)
-c
-7
-wv
-ao
-YY
-Cc
-fo)
-YY
-U
-©
-a
-Ss
-w
->
-©
-os
-```
 
 ## Slide 79
 

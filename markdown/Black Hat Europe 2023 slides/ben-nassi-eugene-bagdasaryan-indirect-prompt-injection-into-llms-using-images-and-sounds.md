@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:39Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ben Nassi, Eugene Bagdasaryan_Indirect Prompt Injection Into LLMs Using Images and Sounds.pdf` (80 pages)
 
-
 ## Slide 1
 
 # Indirect Prompt Injection Into LLMs Using Images and Sounds
@@ -149,7 +148,6 @@ https://github.com/ebagdasa/multimodal_injection
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-NG > ff e
 &
 Se a Ae” OY:
 — A Brief History of LLMkind ~@.
@@ -396,7 +394,6 @@ Meta is Developing its Own LLM to
 ete with OpenAl
 1, 2023
 Comp
-Pub | ed Se Dp
 ```
 
 ## Slide 15
@@ -424,7 +421,6 @@ GB iste Louise custom-trained financial LLMs that specialize in solving
 financial challenges.
 GenOS will unleash the power of GenAl and ignite
 innovation at scale for customers.
-4:59 PM - Jun 6, 2023 . . ~
 ~~» SocialMedia Community Library Events Press Releases
 Meta is Developing its Own LLM to
 Compete with OpenAl
@@ -595,7 +591,6 @@ github. com/agencyenterprise/PromptInject.
 
 ```text
 bisek hat
-a © a
 Prompt Injection
 Twitter pranksters derail GPT-3 bot with newly
 discovered “prompt injection” hack

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:07:52Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Pierre Lee & Vickie Su & Philip Chen_The Drone Supply Chain's Grand Siege From Initial Breaches to Long-Term Espionage on High-Value Targets.pdf` (72 pages)
 
-
 ## Slide 1
 
 The Drone Supply Chain's Grand Siege: From Initial Breaches to Long-Term Espionage on High-Value Targets
@@ -170,36 +169,6 @@ Campaign VENOM
 
 **9**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q Campaign TIDRONE:
-aes) 5 Victimology — Targeted Couniries
-pK KYRGYZSTA ae
-> ae r
-isran ~~ F ;
-oS oy CHINA
-S
-“JAPAN
-Se
-TAN alt
-(et ve rea. us aes arn pf ra fe
-”\ {
-G mee TAN *) i
-c i 4
-ee are ied j ,, r m
-“aan a5 ee Ou TAIWAN
-is INDIA oad | \r MYANMAR NAY 7 HONG KONG
-— } a Mt ok L AOS5 J pe
-¥ i) { \ q 4 ( {4 3
-\ y To Nae a
-\ 4 N | >, ) )
-aa Mw” P THAILAND S, S\.  ¢ PHILIPPINES
-\ \ a 14 \ VIETNAM :
-) $ ayy t ees \
-7 Wao
-```
-
 ## Slide 11
 
 #### **Campaign TIDRONE: Victimology – Targeted Industries**
@@ -239,7 +208,6 @@ Vendor Vendor Vendor Vendor
 ```text
 Q Campaign TIDRONE:
 aes) 5 Victimology — Targeted Industries
-x§ cf se ©
 Satellite Chip Wireless Communication Drone
 Vendor Vendor Product Vendor Vendor
 GIS Software Network Infrastructure Military Related Payment Service
@@ -265,7 +233,6 @@ black hat
 ASIA 2025
 Arsenal of Campaign TIDRONE
 Customized Tools
-Ck CO Gk GO)
 TrueSightKiller procdump mimikatz cmdkey
 ©:
 CXCLNT
@@ -338,7 +305,6 @@ Service Provider Industry
 2)
 blackhat Arsenal of Campaign VENOM
 Open-Source Tools
-Ck Ok GG)
 VENFRPC LWSCON - REVSOCK Proxy Tools
 (-—)
 (5 (¥ Campaign VENOM
@@ -943,10 +909,6 @@ if ( cbNeeded == @x8C ) dword 74773308 = (int)CreateThread(@, @, lpStartAddress,
 dwF ls Index F1lsAlloc(Callback); ForSingleObject((HANDLE)dword 74773308, @x );
 return v3; (@):
 \
-! oo) _ !
-I - I
-! -= Cc Cc !
-i \__\ I
 I I
 ! FlsAlloc Callback Malicious Code
 \ /
@@ -1461,7 +1423,6 @@ ee
 18:34:10
 14:11:14
 14:29:55
-22 2 2 2 2
 (GMT+8)
 (GMT+8)
 (GMT+8)
@@ -1475,7 +1436,6 @@ File compiled time
 Similar TTPs and
 targeted industries
 ~ (GMT+8) ( \/ K } between Venom and Dalbit
-& 2 Nee
 S/
 60
 ```

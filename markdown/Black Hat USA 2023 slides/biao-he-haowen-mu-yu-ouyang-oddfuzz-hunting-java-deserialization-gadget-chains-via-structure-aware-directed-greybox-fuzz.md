@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:58Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Biao He & Haowen Mu & Yu Ouyang_ODDFuzz Hunting Java Deserialization Gadget Chains via Structure-Aware Directed Greybox Fuzzing.pdf` (50 pages)
 
-
 ## Slide 1
 
 ODDFuzz: Hunting Java Deserialization Gadget Chains via Structure-Aware Directed Greybox Fuzzing
@@ -369,7 +368,6 @@ Lightweight static analysis
 Assign X= y alloct
 Store X.f = y
 Load = xX.f
-~ ” a, X x.f
 Call r = x.k(a, ...)
 Construct SPAG (Simplified
 Pointer Assignment Graph)
@@ -788,7 +786,6 @@ ROME 1.0 94.5K 423 6.9K 2 i} 1 5 (1) 1 Im48s 8m53s
 Spring 4.1.4 904.3K 1.3K 14.5K 3 2 2 10 (0) 0 1mS9s 20m.
 Vaadin 7.714 572.1K 4.5K 17.5K 4 1 1 13 (1) 1 1m54s 24m37s
 Wicket 6.23.0 420.7K 3.2K 11L.1K 2 1 1 7 (0) 0 1m50s 14m
-Total - - - - - 34 - -
 38
 ```
 
@@ -827,7 +824,6 @@ ROME 1 2 0 36s 0 0 6m30s 5) 1 1m48s 8m53s
 Spring 2 2 0 38s N/A N/A N/A 10 (0) 0 1m59s 20m
 Vaadin 1 5 0 37s N/A N/A N/A 13 (1) 1 1m54s 24m37s
 Wicket 1 3 0 36s N/A N/A N/A 7 (0) 0 1m50s 14m
-Total 34 116 3 - {9 2 - | 583 (20) 16 - -
 39
 ```
 

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:55:35Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/James Kettle_HTTP1.1 Must Die! The Desync Endgame_WP.pdf` (27 pages)
 
-
 ## Slide 1
 
 # **HTTP/1.1 Must Die**

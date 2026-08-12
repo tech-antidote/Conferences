@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:00:22Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Gyuyeon Kim _ Hyunho Cho-Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud_compressed.pdf` (51 pages)
 
-
 ## Slide 1
 
 ## Operation PoisonedApple: Tracing Credit Card Information Theft to Payment Fraud **Gyuyeon Kim & Hyunho Cho Financial Security Institute**
@@ -232,7 +231,6 @@ panel
 ```text
 Phishing Toolkits
 ¢ Uploaded toolkits containing all necessary phishing-related components
-< www ob = OO ® wey OT Q
 PHP PHP PHP: HP’ Hi H >H PHF PHP PHP
 be_ok.php be.php be1.php bc2.php checkCardBin.ph checkRedirectAp error.php hanacard_ok.php hanacard.php hanacard1_step1.
 p prvJson.php php
@@ -242,7 +240,6 @@ PHP PHP 4 PHI 1 PHP PH PHF PHP PHF
 le.php le1.php mobileGW.php nh_ok.php nh_step1.php nh.php nh1.php payerror.php phone.php phonecc.php
 PHP PHP PHP HI PHP. F PHP PHP
 phonekb.php shanxing_ok.php shanxing_step1.p shanxing_step2.p shanxing.php shanxing1_step1. shanxing1.php test.php top.php xandai_ok.php
-hp hp php
 PHP PHP. PHP. PHP PHP PHP PHP.
 xandai_step1.php xandai.php xandai1.php xinghan_ok.php xinghan_step1.ph xinghan.php xinghan1.php
 p
@@ -578,7 +575,6 @@ OPSEC failures (1/3)
 ynwtuukf —.—— > ynwtuukf.net ynwtuukf.net/test.php ——————> ynwtuukf.net/mysql.php
 ET
 SACS CANE BORA SENSO ByORKAP HyoPHP HuosQr #FeKT
-$6 * a my S
 z lol: [eRO!
 ® e586 sane.) meee
 # 2eee-|/aeses Rowe ane) ARLME CAR
@@ -634,11 +630,9 @@ i) php (44byte art
 F) 23.jp9 (44byte — pe
 ©) 23.ip9 (44byte
 ©) 23. php.ipg (46byte
-8 24 tt St Ba9|
 C13 (07H) *
 4 A
 on
-=) = aA |
 42! : 2010-02-26(01:41)
 (2tS31-2S Al) wrtywr<iframe src=http://mp.gemmir.com/upload_file_test/Movie/index. htm 8549 : 2010-02-26(01:41)
 width=100 height=0> </iframe>
@@ -659,8 +653,6 @@ i
 ```text
 Correlation analysis
 17fce1...678a
-: : en 2
-rua WW wh H : nee
 ue a  pay.ynwtuukf.net
 ~ :
 a3283e...e7dd ynwtuukf.cn —~@ Cua KX CO. o
@@ -668,13 +660,8 @@ a3283e...e7dd ynwtuukf.cn —~@ Cua KX CO. o
 oo metamask phishing Sd edeie ae teatadadas a ebtiacemeatelue ieeccae sean ceoadadacnead aia © teeeeee, _ i ff7347...fa28
 “ (i) a : codé-sighi
 (W WW) 3 : letificaty,
-_ : :
-a : :
 Cy * defi-con.cn wan -com : 1
-> : H
-LTS : :
 QO gee 967c49...9726
-; OS (Ge) | : :
 ? web-cot.com SS |
 : china-metamask.tw f 91f830...7892
 i 75f0c8...de775
@@ -777,9 +764,7 @@ metamask3.tw = =
 
 ```text
 Duty-free shop phishing site
-oS C  @ noons.kr fh 10 &©8 2a €. :
 HSHuc [222 (sala S0H0%] SUAVBy PUAN BABAE MoAirio
-ak Al &
 AA BS Suoj4) ABE DS
 a
 @ xs
@@ -916,7 +901,6 @@ ynwtuukf@zohomail.com
 nickname
 ia)
 gender country
-RE as RB
 language timezone
 (GMT 0:00) #844 BR58 tine BTi8) ( Europe/London )
 phone number

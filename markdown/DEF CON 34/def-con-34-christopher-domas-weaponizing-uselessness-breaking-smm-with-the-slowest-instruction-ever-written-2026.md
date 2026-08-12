@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:14:24Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Christopher Domas - Weaponizing Uselessness Breaking SMM with the Slowest Instruction Ever Written - 2026.pdf` (68 pages)
 
-
 ## Slide 1
 
 ```

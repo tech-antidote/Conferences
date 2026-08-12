@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:24:33Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Stiv Kupchik_Lifting the Fog of War - Monitoring, Identifying and Mitigating MS-RPC Based Threats.pdf` (101 pages)
 
-
 ## Slide 1
 
 **Lifting the Fog of War Monitoring, Identifying and Mitigating MS-RPC Based Threats**

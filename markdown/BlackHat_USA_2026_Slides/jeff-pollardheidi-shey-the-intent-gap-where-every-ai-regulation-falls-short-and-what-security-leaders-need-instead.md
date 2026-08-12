@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:10:15Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jeff Pollard&Heidi Shey_The Intent Gap Where Every AI Regulation Falls Short and What Security Leaders Need Instead.pdf` (42 pages)
 
-
 ## Slide 1
 
 ## The Intent Gap
@@ -569,38 +568,6 @@ Applicability depends on product, service, and incident Prompt-injection and adv
 ###### **Close The Loop Nobody Else Closes**
 
 24
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-$ 4 ¥
-We f x
-. R s 3
-¥ h ,
-Os y % ‘ :
-M4 " ft
-LX a ‘
-\ e) SS a
-y N \
-Banh ty has ,
-‘ 7 N N .
-F we EN, 5
-RRS
-a ;
-cs
-.
-.
-.
-‘ .
->) ak
-eh c% ¢
-ee
-Close
-we
-i A
-The Loop Nobody. El
-4,
-```
 
 ## Slide 25
 

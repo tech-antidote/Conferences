@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:56:00Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Solar Designer-Keynote-Password Cracking Past, Present, Future.pdf` (79 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -312,7 +311,6 @@ V7
 Vv
 compare
 @Openwall OffensiveCon May 10-11, 2024
-15 / 79
 ```
 
 ## Slide 16
@@ -483,12 +481,9 @@ Password cracking many-to-many hash comparison
 * If few hashes Loaded for the current salt, compare or eliminate directly
 * If many hashes loaded for the current salt (1997+ hash tables in JtR 1.2+)
 partial hashes for comparison against those being cracked (for current salt)
-VVVVVVVVVVVVVVVVV VV VV VV VV VV VV VV
-Fe i a a OS eS eS = = ne a ee +
 1. Prefetch needed elements of ---> | per-salt |
 2. Reject hashes not in ---------- > | sparse bitmap(s) or Bloom filter |
 3. Complete computation of the rest | or/and (perfect) hash table, etc. |
-Ce ee ee Pe ee pe Seon ee eae gees Se a A ee, AE OE MO WE Had EE IE Oa +
 remaining full hashes
 Vv
 4. Look up in the final data structure(s), which can start similar to the
@@ -614,17 +609,12 @@ Password cracking cost metrics
 Password cracking: past, present, future
 ParaLlelized hash function (originally memoryless)
 candidate passwords
-VVVVVVVVVVVVVVV VV VV VV VV VV VV VV
-a2 cere ee ee enema es De or er ithe 2 =e i oon aoe Bie eo eee ies eS ee +
 | core | core | core | core | core | core | core | core |
 hee em == f= -sene a ee hirer cere co 2 beeen a es ee fee asex — = +
 | core | core | core | core | core | core | core | core |
-ae =e = f= == ao === Fea = asasa= a a $=. =.=-=- Pea a saan = = =e == == +
 | core | core | core | core | core | core | core | core |
 ee ee hem mcomceome : ee ee $e nan -- hie ewe nee ) +
 | core | core | core | core | core | core | core | core |
-eee ne == ta sa eeo ee ne ws wee a be a nam = 6 a an ee Hanae eae Genesee es >
-VVVVVVVVVVVVVVVVVV VV VV VV VV VV VV VV
 hashes for comparison against those being cracked (for current salt)
 32 hashes in parallel in the same amount of time that a defender needs for one
 @solardiz @Openwall OffensiveCon May 10-11, 2024 30 / 79
@@ -639,15 +629,11 @@ Password cracking: past, present, future
 Parallelized hash function (amortizable memory-hard)
 Candidate passwords
 VVVVVVVVVVVVVVVV
-$= wae ea == eee Seas inc aw = ws De = we ee te <= = Iie are fits a= ee +
 | core | core | core | core | |
-hes ee = ce ae ee nec carrer + +
 | core | core | core | core | |
-a == a as a = a a + memory +
 | core | core | core | core | |
 ee see == , bene mmemceece , + +
 | core | core | core | core | |
-hae on en ee eee Se im aa an ae o ee ee ewe nae Pein ee aS See ee oe +
 VVVVVVVVVVVVVV VV
 hashes for comparison against those being cracked (for current salt)
 16 hashes in parallel in the same amount of time that a defender needs for one
@@ -663,15 +649,11 @@ Password cracking: past, present, future
 Parallelized hash function (parallelizable memory-hard)
 candidate password
 Vv
-$--+------ ee a ee Se hues ee poe on ew -
 | core | core | core | core | |
-hee em == f= <seae a to ----- == hee chaser ec - +
 | core | core | core | core | |
 $=------- $----+---- +-------- $=------- + memory +
 | core | core | core | core | |
-oe eee «= fie mo meee © bpm ee ee . + +
 | core | core | core | core | |
-Sa a ees ee ee Paw ee = mo fa a a oe ee $e mas a , ee oe ee +
 Vv
 hash for comparison against those being cracked (for current salt)
 1 hash in 1/16 of the amount of time that a defender using one core would need
@@ -687,14 +669,8 @@ Password cracking: past, present, future
 Parallelized hash function (sequential memory-hard, e.g. scrypt)
 candidate passwords
 Vv
-$= wae ea == ee es 3 =~ << Mina n a aes os tt as = = ie Sotaacaee ee poe on ew +
 | core | | core | |
-ieee ee + eo - +
-| | |
 + memory ss memory +
-| | |
-+ + +
-| | |
 eames fain ems a cea , ee Se Pie ke aS See ee oe +
 Vv
 hashes for comparison against those being cracked (for current salt)
@@ -711,7 +687,6 @@ Password cracking: past, present, future
 ParaLllelized hash function (sequential memory-hard + ROM-port-hard)
 candidate passwords
 Vv
-$--+------ $a cee ew = * es ose we ee ee ea ee poe on ew -
 | | core | |
 + RAM +H------ H+ +
 | port= #=port |
@@ -719,7 +694,6 @@ $--+------ $a cee ew = * es ose we ee ee ea ee poe on ew -
 | port= #=port |
 + RAM +H------ H+ +
 | | core | |
-rata mee a ee ee fe a i ae eee Ee ee a , ee oe ee +
 Vv
 hashes for comparison against those being cracked (for current salt)
 2 hashes in parallel in the same amount of time, but we need lots of memory
@@ -820,16 +794,10 @@ Password cracking: past, present, future
 Speeds for contemporary decent hashes
 berypt at 32 iterations (cost 5), even though modern uses are at 256
 (cost 8 to 12), so would be ~8 to ~128 times slower
-| c/s |
-| 6.5 |
-| 22.5 |
-| 62.5 |
 | 6595 |
 | 185k |
 | 106k |
 | 119k |
-| 2.4M |
-| ~25k |
 | <250k |
 | 169k |
 year
@@ -885,7 +853,6 @@ power
 |
 | <450w |
 | ~770W |
-39 / 79
 ```
 
 ## Slide 40
@@ -927,7 +894,6 @@ Speed.#7......... : 228.7 GH/s (18.37ms) @ Accel:128 Loops:1024 Thr:256 Vec:
 Speed.#8.........: 256.7 GH/s (16.35ms) @ Accel:128 Loops:1024 Thr:256 Vec:
  iaialieallia 1993.9 GH/s
 @solardiz @Openwall OffensiveCon May 10-11, 2024 41 / 79
-a el a
 ```
 
 ## Slide 42
@@ -1260,13 +1226,8 @@ filter, except that it's degraded from having 2 to only 1 potential bucket for
 each item (so not cuckoo). The buckets are currently 8 items wide. When the
 bucket is full, we simply evict/replace a fingerprint (from the second half).
 (index,
-nn Fo ts i, ge cl ent te ae Sat +
 LOCKED ADD-ONLY v | EVICTABLE
 os 2------ 3------ 4------ 5------ 6------ 7------ +
-i | te | tH | to | te | tH | | |
-een Xe SE ee PE ee ee eee
-fp | fp | fp | | | | | |
-ma eS ee See. ee See, See. Se
 ‘Pp | tp | fe 6|6h6UfPhlUd|lCUTPphlU|lCU hd) CU UTC Ci
 @solardiz @Openwall OffensiveCon May 10-11, 2024 57 / 79
 ```

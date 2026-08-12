@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:17:39Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Guanxing Wen_Core Escalation Unleashing the Power of Cross-Core Attacks on Heterogeneous System.pdf` (87 pages)
 
-
 ## Slide 1
 
 # **Core Escalation** Unleashing the Power of Cross-Core Attack on Heterogeneous System
@@ -546,7 +545,6 @@ goto LABEL_177;
 }
 _length = a2->length;
 start_ = *(_QWORD *)&a2->start;
-if ( v59 )
 v98 = OLL;
 else
 v98 = v93;
@@ -891,8 +889,6 @@ Establish a Decryption Oracle
 int _ fastcall hisi_secboot_verify_modem_imgs(int al, int a2, int a3, int a4)
 // [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"+" TO EXPAND]
 v8 (int *)modem_image _ info();
-v9 = v8;
-if ( !Iv8 )
 {
 v1l0 = -1;
 log(0, "%s td:hisi_modem_ disreset get modem_image info failed.\n ", "[error]", 671);
@@ -900,10 +896,8 @@ return v10;
 }
 if ( (unsigned int)(al - 7) >3 )
 i!
-if ( al =5 )
 return hisi_secboot_verify_modem_comm_imgs(5, a3, a4);
 v1l2 = &v8[10 * al];
-if ( al == 6 && (v8[7] & 0x40) == 0 )
 goto LABEL 15;
 v10 = hisi_secboot_verify(__SPAIR64__(a2, al), *((_QWORD *)v12 + 2), “modem
 fw", a4);
@@ -1079,7 +1073,6 @@ void __cdecl rdr_data_save(int addr, int outsize, char *msg, int msg qmemcpy(msg
 *(_DWORD *)&msg[60] = 0;
 teas op _-—-*(DWORD *)&msg[64] = 0x400;
 { van ape ret 1b) Bee nee 2019 00:52:46");// st
->= v2 = x Vv 2:52:46"); str
 at ¢ eis atin int)outsize ) if ( snprintf((unsigned int)&msg[96], Oxl8u, (unsig
 ; dma_transfer((int)(msg + 0xFFF30000), addr, _msgsize, 0); Los_Print (2, “rdrbuf err\n");
 else

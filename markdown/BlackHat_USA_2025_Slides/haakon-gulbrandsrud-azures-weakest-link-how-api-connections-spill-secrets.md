@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:55:54Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Haakon Gulbrandsrud_Azure's Weakest Link How API Connections Spill Secrets.pdf` (123 pages)
 
-
 ## Slide 1
 
 # Azure’s Weakest Link?
@@ -201,8 +200,6 @@ II! Properties
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-\ ~ >
-Q \ ea | >
 black hat -
 BRIEFINGS
 iv
@@ -226,11 +223,8 @@ RuntimeUrl": “https:
 ```text
 bldekhat
 BRIEFINGS
-er = —-Te Dt “Ty o
 arama tT eat atvatents ~=
-mj = 4652 2a or at 1 = co _ ~—
 OVO Ve 5 DD LeSOUULCOCwLOUs} os 5212 oS &
-= = —Ten 4 — oe S10nNnea ro w
 ```
 
 ## Slide 12
@@ -245,7 +239,6 @@ OVO Ve 5 DD LeSOUULCOCwLOUs} os 5212 oS &
 black hat ye. ’
 BRIEFINGS ‘4
 ~ = pt = e52f-d4 —-4347- —-6589250 465e/resourceGroups/ logic =
-= —tTt eat a = 7 = f+ We ectlo 2 = = —_—— sic > r
 Azure Resource
 Management
 ```
@@ -259,11 +252,8 @@ Management
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat A, Sa ee I 4
 BRIEFINGS V4
 JET = Scriptions E5cCevd24i-as eee be
-—" —T oat co — I. Saat TT = ote =r 7 — = — Te —] fe :
-=f s/f PIOVICS LOFOSC L ve © eSCctcio = = = Le = 3 Ee = a J
 Subscription
 ```
 
@@ -295,7 +285,6 @@ Resource Group
 ```text
 black hat Ss —
 BRIEFINGS 4
-. a oe PO Oh a
 = —tests x iders icrosofit.We = ections C extensions x
 ersations.list HTTP/2
 ```
@@ -309,7 +298,6 @@ Resource
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-/ oy >
 black hat ye. ’
 BRIEFINGS YW
 Ger fe scriptions/ tesceoZzit- 2D rs 2-6D892Z090 4o5e/resourceG
@@ -327,26 +315,13 @@ Resource
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-pisekhat a — ie. Z 4 ’
 BRIEFINGS ; y
-= . ora = — iT— 4 — i — —_ —_ — ns — — l — } ' _
-= —t+eaat + =, t | oy > = s ect Scxce : =
 Action/Endpoint
 ```
 
 ## Slide 18
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeachat : ~~ |
-BRIEFINGS
-CET 5 a{- t LOG —
-=e) Ohne Tea nr tu ’ ‘
-co rsations.li BE EEE) ‘e = ie .
-```
 
 ## Slide 19
 
@@ -359,12 +334,9 @@ co rsations.li BE EEE) ‘e = ie .
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q | y Wit"? >
 black hat —
 BRIEFINGS . 4
 SrmpH—teatea roy ore f wrenf+ Mah /nnnnaentiance/olasank fawtansi ane /nrayy
-aA pe PE a ES A SS hs _ y
-Ee t 2
 ia. SeEtonooze bi
 ```
 
@@ -435,7 +407,6 @@ Call proxied for additional
 request/response transformations
 user token
 { \ connection ID
-DR Ce Ce ee Ce eee -
 : 1
 - on-premises
 Power Automate eeroien lanagemen network
@@ -567,8 +538,6 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 ™ >
-re) | 7% is )
 black hat Ly — p
 BRIEFINGS ;
 Action Definitions
@@ -597,20 +566,15 @@ your team communications in one place, instantly searchable and available wherev
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Oi TF. eo gh ) J
 blackhat \. y 4
-BRIEFINGS : | Uy YeE™® j y
 Action Definitions
 “paths”: {
 "/{connectionId}/channels. join":
-{ > “get": {
 i 1
 Swag} 4
-=: f ! 3
 et > "/{connectionId}/conversations. join":
 ' 3
 =] > "/{connectionId}/channels.create": {
-= ia ~ all
 : > "/{connectionId}/conversations.create": {
 of your t srever
 ' 3
@@ -688,7 +652,6 @@ i network
 | :
 on-premises
 yu §cata gateway
-r <4 >
 connector swagger
 and policies
 :
@@ -717,8 +680,6 @@ Azure API
 Azure App Service
 EnViArne nt
 Management
-‘ : . — J
-it sy Bl API cf
 —
 connector swagger
 and policies
@@ -955,9 +916,6 @@ ae
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 > >
-a | aN es | :
-black hat Sy ae y A
 BRIEFINGS : yy .
 _ATTP/2 404 Not Found
 65/
@@ -996,7 +954,6 @@ Authorization: Bearer <Token>
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-if Ss > |
 Qa. 7. Nga |
 black hat har GF. OSS ,
 BRIEFINGS | |
@@ -1040,13 +997,10 @@ and then uses its own token
 ```text
 2)
 black hat
-BRIEFINGS : y . y | :
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
-q he j
 (i>) Azure Resource Manager «—» Authentication
 ee
-a 4 -
 Data Web App Virtual Service Other
 Store Machine Management services
 ```
@@ -1063,13 +1017,11 @@ Store Machine Management services
 2)
 black hat
 F
-BRIEFINGS . / 2% y ,
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 (>) Azure Resource Manager Authentication
 )
 | | | | Role Check
-l ca « eee
 Data Web App Virtual Service Other
 Store Machine Management Services
 ```
@@ -1086,14 +1038,11 @@ Role Check:
 2)
 black hat
 F
-BRIEFINGS : dl % j |
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 <> erat
 (>) Azure Resource Manager Authentication
 | | | | Role Check: 6
-il ca 9 eee
-L = |
 Data Web App Virtual Service Other
 Store Machine Management Services
 ```
@@ -1116,7 +1065,6 @@ Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 (~) Azure Resource Manager <-> Authentication
 Full Control Role Check: 6
-Ea < eee
 Virtual Service Other
 Machine Management Services
 ```
@@ -1140,8 +1088,6 @@ https://binarysecurity.no/posts/2023/06/function-apps-rce
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 ™ >
-re) | 7% is )
 black hat Ly — p
 BRIEFINGS ;
 /subscriptions/292c3ce5-4288-4413-8dad-5c665019739d/resourceGroups/binsec-privesc
@@ -1166,7 +1112,6 @@ https://binarysecurity.no/posts/2023/06/function-apps-rce
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-‘“ sy > |
 X a
 biSekhat SS - ,
 BRIEFINGS j
@@ -1174,7 +1119,6 @@ BRIEFINGS j
 Content-Length: 592 rivesc
 test Content-Type: application/json ken?
 api-
-Host t Ea ep aot Guage me oan ACM Se yor arco : SRS Og oe ee eA sR ee “
 id": "/subscriptions/292c3ce5-4288-4413-8dad-5c665019739d/resourceGroups/binsec-prive
 Autt "name": "functions",
 1D
@@ -1376,7 +1320,6 @@ c 1 HTTP/1.1 502 Unexpected Exception : System.InvalidOperationException: Unable
 /s\ Microsoft.Azure.Connectors.Mashup.Sql.Models.SqlConnectionParameters.UpdateUsingDa
 taset(HttpRequestMessage request, String dataset) in iw
 C:\__w\1\s\src\Connectors\FirstParty\sql\Connector\Models\SqlConnectionParameters. io
-a cs:line 232 at ae oy
 20: Microsoft.Azure.Connectors.Mashup.Sql.Models.SqlConnectionParameters..ctor(HttpReq ESckets,
 2 Ho: uestMessage request, String dataset) in
 > Aut C:\__w\1\s\src\Connectors\FirstParty\sql\Connector\Models\SqlConnecti|
@@ -1389,7 +1332,6 @@ ey. 3 Pragma: no-cache ly
 8 x-ms-datasourceerror: True
 9 x-ms-request—id: 36ac 3e249d3606a",
 1®@ x-ms—-correlation-id:
-aa Se Se =e Se ew ew te ewes) mm oes | SE }
 ```
 
 ## Slide 67
@@ -1405,8 +1347,6 @@ bisa hat
 BRIEFINGS
 Jira
 Request
-Raw = Hex » & =
-1 | GET
 /subscriptions/8e3ce52 £-d45b-4347-8705-65892507465e/resourceGroups/tm
 p-api-connection/ providers/ Microsoft. Web/connections/jira/extensions/
 proxy/v2/project/search?workflowName=myryles20HTTP/ 1. L8Od%0aé
@@ -1432,7 +1372,6 @@ instance \r \n
 bisa hat
 BRIEFINGS
 Jira
-& £5458 Ww Awe ww a a™eo se th > ~~. ee ed ws ee ee ee ee
 26 Date: Fri, O3 Jan 2025 10:25:31 GHT
 23 "Error :t
 $C "code”":502,
@@ -1507,7 +1446,6 @@ BRIEFINGS
 Keyvaults
 Request
 Pretty Raw Hex ® in
-1 | GET
 /subscriptions/ 8e3ce52 f-d45b-43 47-8705-65892507465e/resourceGroups
 /tmp-api-connection/ providers/ Microsoft. Web/connections/keyvault-5
 fjextensions/proxy/secrets/MySecretValue/value? éapi-version=
@@ -1827,7 +1765,6 @@ All connections are hosted in the same place
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-\ . > —
 on 7
 black hat ye. ’
 BRIEFINGS ‘4
@@ -1844,7 +1781,6 @@ BRIEFINGS
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat by — Ne yi
 BRIEFINGS
 “body”: {
 “request”: {
@@ -1895,7 +1831,6 @@ Dynamic Invoke
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat by — Ne yi
 BRIEFINGS
 “body”: {
 “request”: {
@@ -1921,7 +1856,6 @@ Invoke :ap1-version=2018-07-@01
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-re) | 7% te )
 blackhat So ame 4
 BRIEFINGS ;
 “body”: {
@@ -1939,8 +1873,6 @@ ge
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-© aN , : >
-blackhat S fe Gl LA 5
 BRIEFINGS : y p :
 /subscriptions/162fc6édb-03cd-4fe8-ab44-dc@a947e74af/resour bp shitty
 richlasiahestl A dhedita ee crosoft.Web/connections/slack/DynamicInvoke?api-version=2018
@@ -1962,7 +1894,6 @@ a
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-m > | pp
 blackhat HTTP/2 200 OK 9
 BRIEFINGS Content-Type: application/json
 /subscriptions/162Ff ~esourceGroups/api-
@@ -1984,7 +1915,6 @@ oem)
 = Erle "created": 1738674777,
 path . / Convers "is archived": false
 i rchived": false,
-7 ns ~ ". |
 S is general”: false,
 =
 } "unlinked": 0,
@@ -2003,7 +1933,6 @@ context team id": "TOS8BPBEC890",
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-#) | rN
 black hat
 BRIEFINGS
 /subs Se ee
@@ -2028,7 +1957,6 @@ Py.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= ; fh
 biSekhat a >
 BRIEFINGS
 (TP/2 200 OK
@@ -2188,7 +2116,6 @@ valid?
 Path.Join(Host, ConnectionId, InputEndpoint)
 and policies
 +
-> i +
 |
 ```
 
@@ -2218,7 +2145,6 @@ valid?
 Path.Join(Host, ConnectionId, InputEndpoint)
 =
 connector swagger
-and policies U h O h |
 ```
 
 ## Slide 101
@@ -2284,7 +2210,6 @@ Mnector that does a lost of things that)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QO 7 ~ spo | i
 black hat y Ba GA
 BRIEFINGS . 4 4
 patns:
@@ -2365,8 +2290,6 @@ New Path
 ```text
 = J
 piSeichat
-. > >
-\ i, ~
 BRIEFINGS
 f
 IST /subscriptions/S8e3ce52f-d45b-4347-8705-65892507465e/re
@@ -2403,19 +2326,10 @@ J
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-/ ~~ > —
-Q 7 y ea >
 blackhat | — ’
 BRIEFINGS y
 =m SERA SY Ce aa Sepa Cee a en ae AehoensnaeT46SFfi1ic
-| = 7— = —" —" - —~ 4 — : ~ ~ —" Gt =
-So 5 ae 8 ow Lilt white WL Wiis it ww Oi od ~¥w~AlLAS LUO sto ae AN ed oF eh LL Sore 5 ae & —
-~o tr ~ — = we — —" oe — a — fe — ee — =F 3 7h Levvau om
-pe oe Le he eee YS ee SP et er ee Se ~~ ee Ser & =F 3 ee ee Y V OAL.
-L L 2
-10 a a a a uaa. smn ArcrT a . . -
 -. —} mn’ om! rm EL wee 6 Ine “ao er ger yret a rier imacec reat Trp i=
-ae eh IA 2. OS. SO SE oe a ot ot oe rh SE lw 2. WS LSU ew Oe Vi LF LiMo S LS LU ‘f= SS he
 HTTP/2
 ```
 
@@ -2434,7 +2348,6 @@ HTTP/2
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q 7 ~~ Z x aa q
 black hat —
 BRIEFINGS ' Y
 Victim’s API Connection
@@ -2449,19 +2362,12 @@ Victim’s API Connection
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . >
 on 7
-gQ | N ‘ 4 —
 black hat >. ’
 BRIEFINGS ; y 4
 = MEERA EAT ee ea aE Seay, a ee ge Pe 1h O9ASRhae T465Hfi1-
 GET apim/CustomConnector/s /Usadetoss4ce /lach’ZzdsaVve /463tle
-a) — oe ~ —= ~~ —= fy = > = ~~ —=— > _—" ~~ — Se 4 —_ — ho. ee race LeVvVavU >
-pw oe Le he eee YS ee SP et er ee Se wee ee UV ee et ee ee et pe see Y V OAL
-‘ f 5
 LA ee CUCL Suioloe, Gt Be eked See ee Lad . h
-Se ee | +-fzta m wh 2 A Oy inl at a 4-465 ar car ret a rier amaecr re wa lie
-Pe SeelS teS Bee OS See 68 bet BY Be SF Pe PS ES a SS © hb de ae CO ee oe ers SO ee VV ww & Lilo oS ws SS CA tk. LA
 HTTP/2
 ```
 
@@ -2514,7 +2420,6 @@ Our recommendation is to use a vault per application per environment (Developmen
 case of a breach.
 > Settings
 > Monitoring
-v— t | I
 > Automation tome —
 nable | in t
 > Help Control access to key vault minony Raping andisekup Turn on recovery options
@@ -2526,7 +2431,6 @@ Operations on key vault keys, P gu manual purging of deleted key
 for key vault metrics €.g., service sae
 secrets or certificates. vaults and items. Learn more U
 API latency, error code, throttling.
-(nn nn fy Se eee a
 ```
 
 ## Slide 114
@@ -2566,7 +2470,6 @@ https://learn.microsoft.com/en-us/co nnectors/connector-architecture
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 ™ >
 oO a Lica
 black hat \ am
 BRIEFINGS }
@@ -2588,7 +2491,6 @@ https://learn.microsoft.com/en-us/co nnectors/connector-architecture
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-e% a >
 black hat by >
 BRIEFINGS ;
 What did they fix?
@@ -2628,7 +2530,6 @@ paths
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ky aes iy
 - biékhat
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:18Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Justice, Jae Sung Kim, La Alsulaim, Shreya G Savadatti - Your Packets Are Showing Hybrid Quantum ML for Passive OS Fingerprin.pdf` (19 pages)
 
-
 ## Slide 1
 
 ###### **DEF CON 34**

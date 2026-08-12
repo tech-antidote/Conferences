@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:30:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - pipeline v1.pdf` (57 pages)
 
-
 ## Slide 1
 
 ### **Witchcraft Solver: Automated 0day Discovery in Stripped Binaries**
@@ -56,12 +55,10 @@ Pride
 ```text
 DEFCE&SN
 ¥ DEFCION DEFC
-| @80 @
 EFCON DEFCSI
 eae OSs
 ois:
 “FCON DE
-4 a (¥)
 DEFCON
 Og |
 FCaN DE! Cc
@@ -201,7 +198,6 @@ ero-days and novel exploits keep emerging, false
 positives persist, and human factors remain critical. It's a
 Ask Grok
 how much longer do we have to wait
-M - Jul 6 82
 ty
 your reply
 Grok > @
@@ -377,8 +373,6 @@ destruct (check_solution ar p n) eqn:E.
 Qed.
 (** A Z-valued (1/0) separator for our Poly type. *)
 Definition Z_separator (F : nat -> Poly -> Z) : Prop :=
-(forall ar p, is_solvable ar p -> F ar p = 1%Z) /\
-(forall ar p, is_unsolvable ar p -> F ar p = O%Z).
 (** A boolean separator for our Poly type. *)
 Definition bool_separator (f : nat -> Poly -> bool) : Prop :=
 (forall ar p, is_solvable arp -> f ar p=true) /\
@@ -1046,23 +1040,6 @@ BROADCOM.
 ##### **Thanks for** **<u>your attention</u>**
 
 56
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-© Df AAR
-Fall 2 OOO -
--* =, uy, =
-? | Ti sore ? =
-=i ae amnenqneemee) i. Qi
-0 eres, an dt {{ gf |
-yy Zh OOO in ae
-4“ VA +—4 He JN WA )
-tru nde Mt AN (1) ¥
-tA ry i \o- Ko,
-+ 71 T
-oh wT] 2 tale
-```
 
 ## Slide 57
 

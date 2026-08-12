@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:26Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tal Be'ery-Bad Randomness Protecting Against Cryptography's Perfect Crime.pdf` (53 pages)
 
-
 ## Slide 1
 
 **Bad Randomness: Protecting Against Cryptography's Perfect Crime**
@@ -167,7 +166,6 @@ From random to Bitcoin address: step 2
 @ Assign for each 11 bit group a word from BIP-39 to get the seed
 phrase
 101011011101100011001001001011100100101100100101011000101110000100
-| | | |
 1390 1586 604 1202 689 900
 punch shock entire north file identify
 Mnemonic Sentence J
@@ -195,7 +193,6 @@ Master Master Wallets / wallet Addresses
 Seed Node Accounts Chains
 ta Te) eee (£8
 a @8) ~ ~m/0/0/0 | m/0/0/1 = m/0/0/k
-gt y m/0/0
 a Internal te t te) ..-
 m/0 crore.) -m/0/1/0_, m/0/A/1 - m/0/Lk
 CKD{en, 0)
@@ -203,8 +200,6 @@ Entropy cxomio (08
 128 bits crom._- (8 m/1/0
 HMAC-SHASI2 (@ 7 t bd
 “(28 m/1 env}, 2) 7
-Re 8) v cli sie .
-s m CKDIm, i) 7 e
 .
 .
 External
@@ -276,7 +271,6 @@ Raw Binary 00000000000 00000000000 00000000000 00000000000 00000000000 * 4187a8b
 00000000000 00000000000 00000000000 00000000000 00000000000 * ahqs9dte
 (00000000000 00000000000 00000000000 001
 ary Checksum 11101100
-Word indexes 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 492
 Mnemonic Length Use Raw Entropy (3 words per 32 bits) y
 PBKDF2 rounds 2048 (compatibility) ¥
 Show entropy details
@@ -298,7 +292,6 @@ abandon abandon abandon abandon abandon abandon abandon abandon diesel
 ```text
 Step 2: Address is pristine
 € C (« mempool.space/address/bc1q4jgysxym8yvp6khka878njuh8dem4!7mneyefz
-@® *7 4#+ &@ &@ @
 AddFe tercsjaysymayvpskteas7e
 Total received 0.00000000
 Total sent 0.00000000
@@ -566,7 +559,6 @@ t
 Both the visitor and CloudFiare derive identical ‘ 4
 session keys ors the caer rancom server random
 apd premier secret. The shor ca request content 1 Orrm session key '
-ae Bagphr nh ne ' |
 Gaotenisaseisontcetorsesonrenmpien) «= sw eee eeeeeeeeeeee!
 ty-gritt
 https://blog.cloudflare.com/keyless-ssl-th echnical-details

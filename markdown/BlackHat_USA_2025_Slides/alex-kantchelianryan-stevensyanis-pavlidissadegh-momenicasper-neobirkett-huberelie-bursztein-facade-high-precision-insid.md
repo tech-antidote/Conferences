@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:14Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Kantchelian&Ryan Stevens&Yanis Pavlidis&Sadegh Momeni&Casper Neo&Birkett Huber&Elie Bursztein_FACADE High-Precision Insider Threat Detection Using Contrastive Learning.pdf` (43 pages)
 
-
 ## Slide 1
 
 # **FACADE**
@@ -109,7 +108,6 @@ Highly accurate anomaly detection? Really?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-wr S ad
 bu S
 ay)
 Highly accurate anomaly detection? Really?

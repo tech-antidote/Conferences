@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:26:59Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Matteo Giordano - Beyond the Ceremony The 2026 Passkey Attack Surface - v2.pdf` (100 pages)
 
-
 ## Slide 1
 
 ## Beyond the Ceremony **The 2026 Passkey Attack Surface**
@@ -85,7 +84,6 @@ Lot
 Client
 —
 Authenticator
-( . \
 NY preset]
 ee,
 a,
@@ -1589,7 +1587,6 @@ challenge
 SEED
 Pretty Raw Hex Passkey Editor R Swe
 Attacks» @% Wrap
-Flags: @ uP @ uv [| BE () BS
 {
 "clientDataJSON": {
 “type”: "webauthn.get",
@@ -1641,7 +1638,6 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 origin + rpldHash
 Pretty Raw Hex Passkey Editor
 Attacks~  [@ Wrap
-Flags: @ uP @ uv [| BE () BS
 {
 “clientDataJSON": {
 "type": "webauthn.get",
@@ -1673,7 +1669,6 @@ origin
 AV
 Pretty Raw Hex Passkey Editor
 Attacks ~ @ Wrap
-Flags: @ UP @ UV (] BE [] BS
 {
 “clientDataJSON": {
 "type": "webauthn.get",
@@ -1796,7 +1791,6 @@ cn iaseoaieoen u y
 If Basic or Privacy CA:
 If ECDAA:
 AV
-ED AT 0 O 0O
 ae os
 UV
 1
@@ -1846,8 +1840,6 @@ i
 i AUTHENTICATOR DATA
 i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
 RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-H rr ' ° .
-H ED AT 0 0 ©O UV O UP A the t t
 Po utnentication
 ' AAGUID L |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
 i 16 bytes 2bytes  LENGTHL variable length (COSE_Key)
@@ -1877,15 +1869,11 @@ i
 i AUTHENTICATOR DATA
 i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
 RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-—_—a@—-—_—~ C 7
-H T T T T T T
 | mario cower] Authentication
 7
-—. OC [7
 AAGUID L_ |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
 16 bytes 2 bytes LENGTH L variable length (COSE_Key)
 (variable length)
-\ = J
 ATTESTATION STATEMENT (in "packed" attestation statement format)
 If Basic or Privacy CA: “alg*: ... “sig: ... “xSe":
 IfECDAA: = “alg**: ... “sig: ... “ecdaaKeyld*: ...
@@ -1909,7 +1897,6 @@ signature
 AV
 Pretty Raw Hex Passkey Editor R Swe
 Attacks + Wrap
-Flags: @ uP @ uv [| BE () BS
 {
 "clientDataJSON": {
 “type”: "webauthn.get",
@@ -1958,7 +1945,6 @@ alg
 Pretty Raw Hex Passkey Editor R Swe
 Attacks ~ Wrap
 Signing algorithm: RS256 (-257) ~ |Attestation: None v [266 key planted]
-Flags: M UP @ Uv [) BE [) BS
 {
 "clientDataJSON": {
 "type": "webauthn.create",
@@ -2019,7 +2005,6 @@ credentialld
 Pretty Raw Hex Passkey Editor & 5 in
 Attacks + Wrap
 Signing algorithm: RS256 (-257) - Attestation: None v RS256 key planted
-Flags: @ UP @ Uv [) BE [] BS
 {
 "clientDataJSON": {
 "type": "webauthn.create",
@@ -2082,8 +2067,6 @@ signCount
 Pretty Raw Hex Passkey Editor Q 5s i=
 RP evil Auth
 Attacks Wrap
-Flags: uP uv |) BE [) BS
-12 12 {
 “clientDataJSON": {
 13 13 “type": "webauthn.get",
 “challenge”:
@@ -2103,7 +2086,6 @@ x "flags": {
 “attestedCredentialData": false,
 “extensionDataIncluded": false
 },
-1 14] 1 4] ; “attestedCredentialData": {}
 2 O “signature” :
 “D3EBS4B0EF 8A3A07F8B20A00197DABC9C75F43C02857503AA4E5CE18DF883E9637 8CDOEGD6FD5FEB5522135E
 77FDA173BDE16AE256986197BDEA26CE22B6ABOF"
@@ -2117,8 +2099,6 @@ AV protocol / auth - transport - client - RELYING PARTY . sync - user
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@ @ vB Websuthn.ic x +
-€ >» G  % webauthn.io bas & a ©
 WebAuthn.io
 A demo of the WebAuthn specification
 hk
@@ -2151,7 +2131,6 @@ Yentication/options 200 Options - webauthn.io 611 JSON Y __54.184.242.104
 t ification 200 Registration - webauthn.io 316 JSON Y_54.184.242.104
 | Response GQ== a
 & in = Pretty Raw Hex Render = 3
-| 1 HTTP/2 200 OK 8
 | 2 Alt-Svc: h3=":443"; ma=2592000 |
 2zvceuolw 3 Content-Type; application/json
 4 Cross-Origin-Opener-Policy: same-origin
@@ -2168,7 +2147,6 @@ Mac OS X 1@_15_7) AppleWebKit/537.36 (KHTML, 6 Referrer-Policy: same-origin
 Pf6VSrttwzh4",
 grtPf6VSrttwzh4",
 FOYViBdKbgkhPJnC9Gs iSSsyDPQCYq IMGpUKAS fyk LC2CEHV f~
-EU aaa a ae
 YPb8Sn4QxH3", DEM O #1
 viY2hhbGx Lomd LI j oi cVFSZWhsRURXaWV4VHUWwQnY 4aV9Kd1
 KE@TXhiSFVGRj J LZG1wbnVMYUg2b2RNaVRSczZJSnZ4aEFNc
@@ -2186,7 +2164,6 @@ toy
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-¢ v — & Websuthn.io x 1
 webauthn.io
 WebAuthn.io
 A demo of the WebAu
@@ -2205,7 +2182,6 @@ Supports user verification Yes
 Supports hmac-secret No
 Supports hmac-secret-mc No
 Credentials
-ID Is Resident RP ID U
 No credentials. Try calling navigator.cre¢
 New authenticator
 Bese
@@ -2376,9 +2352,7 @@ Registration
 
 ```text
 Burp Suite Prof ional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, inc
-@ ~ QQ) SignintoGitHub-GitHub x +
 @®. 28
-€ > G_— & github.com/login Gx
 eh
 oO
 (=)

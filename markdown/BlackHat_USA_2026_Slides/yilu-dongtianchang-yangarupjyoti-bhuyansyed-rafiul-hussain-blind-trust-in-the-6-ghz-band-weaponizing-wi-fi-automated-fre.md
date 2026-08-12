@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:45Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Yilu Dong&Tianchang Yang&Arupjyoti Bhuyan&Syed Rafiul Hussain_Blind Trust in the 6 GHz Band Weaponizing Wi-Fi Automated Frequency Coordination (AFC).pdf` (56 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -197,7 +196,6 @@ Permitted Channels, Max Power
 ```text
 AFC Request/Response Format
 AP — AFC: AVAILABLESPECTRUMINQUIRYREQUEST
-WHO AM I! & WHERE | AM
 "location": { "ellipse": {
 "center": { "Latitude": 40.7935,
 "Longitude": -—77.8684 },
@@ -369,19 +367,15 @@ Seppo ooopobopopebooooooeeck NOTICE eebedecboooicoicbioooicoiokistotaiok
 *
 * void any applicable warranty.
 *
-ote tote ee et ee ee oe ee ee ee oe eee ee eo
 eek
 | | | = /__| | PRODUCT: U7-Pro-Outdoor
-| | ¢ NI 25 Mac: a :
 | ial [ee || | VERSION: 8.4.6+18068.260111.0707
-| ee ||| SI
 [27
 Ubiquiti Inc. (c) 2010-2026 https: //www.ui.com
 unifi_SyNSec@U7ProOutdoor:~# qtiwifilocation
 -|Spoofer Shell
 xamples
 V2224
-Q = o x
 black hat
 2026
 ```
@@ -564,7 +558,6 @@ Only 20 MHz available "lowFrequency": 6845,
 LL
 )) maxes’: 23
 "availableChannellInfo": [{
-. " i 1 "; 131,
 Only 1 channel available nghannelefi": [181],
 "maxEirp": [36.0]
 tl,
@@ -612,7 +605,6 @@ https: //www.ui.com
 — (Attacker Shell
 annel_exp
 *
-Q o x
 black hat
 2026
 ```
@@ -875,7 +867,6 @@ Commission
 FE Federal FCC Home | Search | Updates | E-Filing | Initiatives | For Consumers | Find People
 Miami-Dade 6 GHz Microwave Call Signs
 9 Universal
-21 coc > WIB > Us
 23 License Search
 Search Results
 169 Q New Search Q Re
@@ -885,7 +876,6 @@ Radio Service = CF, MG, MW
 Status = Active
 Frequency Upper Band >= 5925,
 Frequency Assigned <= 7125
-Matches 1- 10 (of 27 )
 ending Application(s)
 fermination Pending
 Page 123

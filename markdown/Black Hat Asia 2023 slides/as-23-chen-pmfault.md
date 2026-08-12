@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:51Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-PMFault.pdf` (21 pages)
 
-
 ## Slide 1
 
 # **PMFault: Voltage Fault Injection on Session Title Server Platforms Through the PMBus**
@@ -248,21 +247,17 @@ Attack 2: Overvolting
 RIGOL (WAT) H 1 coms 30Meqs g 'D so0000000ms_ | (T ¥ @ 268
 Horizontal u b4 Coupling
 ss
-lui bi DC
 Period —RBWlimit_
 lf. BWV Limit
 UL 20M
 Freq Probe
-i vA T 4 10X
 Rise Tima ? AVI Invert
-BS a =
 Fall Time Volts/Div
 _— ~” Coarse
 +Width Unit
 v mu
 ————
 WIGtN [Diys 1>2=eee0+ ivmax=-1.210ms __|Ma=2.94V Wupper=2.58 V
-1 = 200v 2 = 50.0¥ = 4.00¥ =500mv & ~ x ree Bx
 httos://youtu.be/hxvidPexanM ?t=88
 ```
 

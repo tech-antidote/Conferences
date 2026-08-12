@@ -21,7 +21,6 @@ converted_at: "2026-08-11T23:07:16Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code.pdf` (23 pages)
 
-
 ## Slide 1
 
 B L A C K H A T U S A 2 0 2 6
@@ -67,14 +66,11 @@ Repository → reviewable attack graph
 ```text
 BAT.
 a
-EE SO rs
 SECTION 01
 THREAT MODELING TODAY
-nal we ie
 © 2026,Black Hat - Ss r snr = 2 Soa . , ere black hat
 2026
 <a ne
-“< = 2 i) a a= as : > . as
 ```
 
 ## Slide 4
@@ -155,7 +151,6 @@ the web application to request an unintended internal Cx) Z
 (Fy or metadata endpoint, potentially exposing sensitive . i
 data or temporary credentials. = x=
 \ SEATS Y
-° — O
 THREAT STATEMENT CAPTURES ATTACK MAP ADDS
 actor * action « asset » impact branching paths » dependencies » choke points » downstream actions
 © 2026 Black Hat black hat
@@ -179,10 +174,8 @@ Secrets
 URL allowlist eS endpoint >! (9 eset
 + egress \
 controls
-I ( )
 () : Internal > Privileged
 } service 9 internal action
-le, SSRF : ‘ (> x |
 Se BLo AED
 a IFIAM 1 | “Launch compute /
 PERMITS j crypto miners
@@ -191,7 +184,6 @@ eee
 Unauthorized met mis anal t SAL IMDSv1 pP Temporary role |__.__
 user-supplied ian ce SD) teaz54160254 credentials :
 URL ; I 2 Create admin
-_ ee \>) Y
 principal /
 eg privilege escalation
 IMDSv2 —_—SSSS
@@ -301,7 +293,6 @@ Agent + deterministic verifier
 ```text
 RUNNING EXAMPLE
 ° Al KNOWLEDGE ASSISTANT °
-— a —> —_>
 POST /ask - es
 és
 User Bedrock agent OpenSearch

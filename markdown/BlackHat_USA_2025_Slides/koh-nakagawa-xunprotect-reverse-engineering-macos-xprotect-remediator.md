@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:21Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Koh Nakagawa_XUnprotect Reverse Engineering macOS XProtect Remediator.pdf` (97 pages)
 
-
 ## Slide 1
 
 # **XUnprotect: Reverse Engineering macOS XProtect Remediator**
@@ -349,7 +348,6 @@ swift_initStackObject (sub_100@9b3b@(&data_100106998), &var_118)
 data_100@c65e0
 &data_10@0f1be0
 &data_1000f13F8
-rax & 1
 rdx
 &data_10@0f1b78
 &data_1000F14068
@@ -361,7 +359,6 @@ rdx_1
 data_10@@c65e@
 &type metadata for RemediationBuilder .FileMacho
 &pwt of RemediationBuilde. ..ationBuilder .FileConditionConvertible
-rax & 1
 rdx
 &type metadata for RemediationBuilder .FileNotarised
 &pwt of RemediationBuilde. ..ationBuilder .FileConditionConvertible
@@ -556,7 +553,6 @@ $classF "CRXDump"
 condition:
 all of them
 = "_run_avcodec"
-{ 80 b4 04 ?? ?? 00 00 7a }
 .main_storage"
 $stringB "session-Llock"
 $string? = "%s/
@@ -832,7 +828,6 @@ paragraph {
 <div>
 } <hl>Chapter 1. Loomings.</h1>
 <p>Call me Ishmael. Some years ago</p>
-h ; : .
 pe thee 3 now your insular city” <p>There is now your insular city</p>
 </div>
 } <div>
@@ -856,7 +851,6 @@ paragraph {
 ```text
 let yaraMatcher = createYaraMatcher("<some rule>")
 for file in enumerateFiles("~/Library/Application Support", 5) {
-if file.size <= x x {
 if file.isMacho() {
 if !file.isNotarized() {
 if yaraMatcher.match(file) {
@@ -865,7 +859,6 @@ remediate( file)
 let yaraMatcherRoot = createYaraMatcher("<some rule for root>")
 if getuid() == {
 for file in enumerateFiles("/Library/Application Support", 5) {
-if file.size <= * * {
 if file.isMacho() {
 if !file.isNotarized() {
 if yaraMatcherRoot.match(file) {

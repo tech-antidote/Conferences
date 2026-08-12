@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:55Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Amit Finkman & Avishag Shapira & Eden Bar Kochva & Asaf Shabtai & Yuval Elovici & Inbar Maimon & Dudu Mimran_CodeCloak A DRL-Based Method for Mitigating Code Leakage by LLM Code Assistants.pdf` (97 pages)
 
-
 ## Slide 1
 
 ###### CodeCloak: A DRL-Based Method for Mitigating Code Leakage by LLM Code Assistants
@@ -178,7 +177,6 @@ Information Classification: General
 ```text
 def bubble_sort(arr):
 for i in range(len(arr)):
-for j in range(len(arr) - i - 1):
 if arr[j] > arr[j+1]:
 arr(j], are[j+1] = arr[j+1], arr[j]
 return arr
@@ -308,7 +306,6 @@ Information Classification: General
 ```text
 pisekhat The Problem
 EUROPE 2024
-+) ; z ;
 blackhat Leakage To the Service Providers black hat Attackers
 Information Classification: General 1
 ```
@@ -333,7 +330,6 @@ Information Classification: General
 
 ```text
 ARTIFICIAL INTELLIGENCE F 54. > . 3
-— = — = +s >
 FORTUNE so
 Home News Tech Finance Leadership Well Recommends Fortune 500
 TECH - APPLE
@@ -369,7 +365,6 @@ Information Classification: General
 ```text
 pisekhat The Problem
 EUROPE 2024
-A , A
 blackhat Leakage To the Service Providers blackhat Attackers
 EUROPE 2024 EUROPE 2024
 >. Ss
@@ -399,8 +394,6 @@ Information Classification: General
 blackhat Threat Model
 EUROPE 2024
 Coding Ach Prompt ek Prompt =3
-> — > >
-a « <
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service
 Reco nst-(4)
@@ -429,8 +422,6 @@ Information Classification: General
 blackhat Threat Model
 EUROPE 2024
 Coding R= 5 Prompt Prompt =3
-————> — > >
-a < <
 Suggestions Suggestions Code Assistant
 Developer IDE Monitor Service
 Code Segments
@@ -463,7 +454,6 @@ Information Classification: General
 Threat Model
 <= E Prompt ek Prompt =3
 al Sal
-a < <
 Suggestions |Date Leakage Suggestions Code Assistant
 IDE Monitor Service
 Reco nst-(4)
@@ -489,8 +479,6 @@ Information Classification: General
 blackhat Threat Model
 EUROPE 2024
 Coding Ach Prompt ek Prompt =3
-> — > >
-a « <
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service |
 ) Reconst-(4 )
@@ -520,8 +508,6 @@ Information Classification: General
 blackhat Threat Model
 EUROPE 2024
 Coding Ach Prompt ek Prompt =3
-> — > >
-a « <
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service
 Code Segments
@@ -551,8 +537,6 @@ Information Classification: General
 blackhat Threat Model
 EUROPE 2024
 Coding Ach Prompt ek Prompt =3
-> — > >
-a « <
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service |
 Code Segments
@@ -818,7 +802,6 @@ import numpy as np
 import pyautogui
 import keyboard
 screen_size = pyautogui.size()
-fps = 20
 fource = cv2.VideoWriter_fourcc(*"XVID")
 output_file = "screen_recording_clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps,
@@ -842,7 +825,6 @@ import numpy as np
 import pyautogui
 import keyboard
 screen_size = pyautogui.size()
-fps = 20
 fource = cv2.VideoWriter_fourcc(*"XVID")
 fource = cv2.VideoWriter_fourcc(*"XVID")
 output_file = "screen_recording clcoding.mp4"
@@ -1027,7 +1009,6 @@ print("Recording... Press ‘q' to stop.")
 while True:
 screen = pyautogui.screenshot()
 frame = np.array(screen)
-< ; s —_-P =.
 Trame ="CV2.CVcCULU (ir ame, CVeeCULUN mMubeDuUN,
 out .write(frame)
 Information Classification: General
@@ -1078,13 +1059,9 @@ Machine translation: Machine translation: \
 tatic int Sig jout ublic static int Sign ( doubled)
 {oN
 return ( (int d==0 O:(d , return ( (int) ( (d_ ( d<0
-—s . a ry .
 10: 10 0.7: 0.5: Referenge (humanyshor) :
-: 3 : : translatipn: 7 °
 Referefice (hgman) trapslation: : : ; : Reference (human) vane
 public static sBort Sign (“double d) : : = ~ public static short Sign ( double ¢._)
-{ 3 3 : : { C=) \ { “a YY
-. ° ° ° | XxX |
 return ( short) ((d == 0)? 0:(¢<0)? was \ return (short) ((¢_= = 0)? 0:(¢<0)?-
 1:1) XE Co) 1:1)
 } }
@@ -1203,7 +1180,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 = Te
-= - @ — ¥
 Prompts
 Data Set DRL Agent Trained Agent
 [eet
@@ -1227,7 +1203,6 @@ Information Classification: General
 2)
 blackhat = CodeCloak: Training Phase
 EUROPE 2024
- @ . @
 DRL Agent Trained Agent
 Manipulated
 Suggestions Prompts
@@ -1250,8 +1225,6 @@ Information Classification: General
 2)
 blackhat = CodeCloak: Training Phase
 EUROPE 2024
-| —- @ — ¥
-F 5 oe
 [ t DRL Agent Trained Agent
 Manipulated
 Suggestions Prompts
@@ -1274,12 +1247,8 @@ Information Classification: General
 2)
 blackhat = CodeCloak: Training Phase
 EUROPE 2024
-—_— 0 '
-“_— . ;
 pip install. opency von wari Mine hear
-‘ = -
 i op
-‘ —_—_—_—_> ——_ > >» 4
 fos =
 ~ Data Set DRL Agent Trained Agent
 Manipulated
@@ -1334,7 +1303,6 @@ Information Classification: General
 black hat
 EUROPE 2024
 CodeCloak: Training Phase
-| + : > S i
 Prompts :
 Data Set D nt Trained Agent
 Manipulated
@@ -1360,7 +1328,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 = Te
-= - @ — ¥
 Prompts
 Data Set DRL Agent Trained Agent
 [eet
@@ -1388,7 +1355,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 = Te
-= - @ — ¥
 Prompts
 Data Set DRL Agent Trained Agent
 [eet
@@ -1412,7 +1378,6 @@ Information Classification: General
 2)
 blackhat = CodeCloak: Training Phase
 EUROPE 2024
- @ . @
 Data Set DRL Agent Trained Agent
 Manipulated
 Suggestions Prompts
@@ -1448,11 +1413,9 @@ Suggestions Prompts
 Code Assistant
 Service
 fanaa ; 1
-2 s 4
 Gea eae 8,
 = -
 whi
-——_ > ; ‘
 a fal
 ss Slor(Frane, €¥2.COLOR_RGB286R)
 Trained Agent
@@ -1503,7 +1466,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 = Te
-= - @ — ¥
 Prompts
 Data Set DRL Agent Trained Agent
 [eet
@@ -1533,7 +1495,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 = Te
-= - @ — ¥
 Prompts
 Data Set DRL Agent Trained Agent
 [eet
@@ -1559,7 +1520,6 @@ black hat
 EUROPE 2024
 CodeCloak: Training Phase
 Prompts
-—- 8 — ¥
 Data Set DRL Agent
 Suggestions
 Trained Agent
@@ -1624,7 +1584,6 @@ DLL_FILES = [f
 for dll in DLL_NMES
 # We need both the 32 bit and 64 bit symbols.
 30 for f in (os.path.join(NVDA_LIB, dll), os.path
-H 8 ® @
 Q
 cot ee, ee NOPE WE SS ek Ste
 to Mozilla.
@@ -1638,9 +1597,7 @@ It expects the crash-stats auth token to be placed in the mozillaSymsAuthToken e
 To update the List of symbols uploaded to Mozilla, see the DLL_NAMES constant below.
 > rm
 nN
-& Qe - o x
 yin
-@3 45° v
 +
 ```
 
@@ -1735,7 +1692,6 @@ Information Classification: General
 black hat
 EUROPE 2024
 Timestep
-M4 13 12 li 10
 15
 Information Classification: General
 CodeCloak: Distribution Heatmap

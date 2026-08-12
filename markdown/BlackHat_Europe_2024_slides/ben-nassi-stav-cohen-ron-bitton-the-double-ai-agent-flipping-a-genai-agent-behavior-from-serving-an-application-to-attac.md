@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:48:21Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ben Nassi & Stav Cohen & Ron Bitton_The Double (AI) Agent Flipping a GenAI Agent Behavior from Serving an Application to Attacking it using Promptwares.pdf` (70 pages)
 
-
 ## Slide 1
 
 # The Double (AI) Agent **Speakers: Stav Cohen & Ben Nassi Contributor: Ron Bitton**
@@ -33,7 +32,6 @@ converted_at: "2026-08-11T21:48:21Z"
 ```text
 WA\
 “24 ye De, =~ \
-EWROP - 20 : | yw
 = 11-12, 2024 y a=
 IEFINGS
 ’ The Double (Al) Agent

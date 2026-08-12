@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:16Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Fredrik Heiding & Bruce Schneier & Arun Vishwanath & Jeremy Bernstein _ Devising and Detecting Phishing Large Language Models (GPT3, GPT4) vs. Smaller Human Models (V-Triad, Generic Emails)_WP.pdf` (16 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -493,7 +492,6 @@ back with what coffee you have button
 this page
 (Very important - We will check to confirm you have done
 this.)
-| J +)
 Figure 4: Control group example email
 Personalized using GPT-4. To create emails using LLMs,
 ChatGPT was used. GPT was selected as it is one of the
@@ -792,7 +790,6 @@ Action)
 75%
 ® The reasoning/purpose
 50% seems legit
-hk Lh dl
 Control group GPT V-Triad V-Triad+GPT
 ) Relevant targeting
 Trustworthy sender
@@ -803,7 +800,6 @@ Free text answers - suspicious
 75%
 50%
 25% |
-0% , il I;
 Control group GPT V-Triad V-Triad+GPT
 ® Suspicious
 presentation
@@ -894,10 +890,6 @@ Identifies suspicion when asked for suspicion
 75%
 50%
 25%
-0% ; A. A. ;
-es) s <
-Ss & a? & <
-o° al S aS
 S av?
 © RY
 Figure 14: Success rate of the suspicion detection for each

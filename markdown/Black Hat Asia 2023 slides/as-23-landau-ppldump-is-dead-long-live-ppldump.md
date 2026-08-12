@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:47Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Landau-PPLdump-Is-Dead-Long-Live-PPLdump.pdf` (49 pages)
 
-
 ## Slide 1
 
 # PPLdump Is Dead. Long Live PPLdump!
@@ -652,10 +651,6 @@ DEEPER ”
 ```text
 bide hat
 ASIA 20253
-ie oy" g » ~~ f a ee
-i el! nt _— =.
-5 <2 £ A BESS \ . g : ‘
-_ ac by ¥, Nie $7 - f
 a :
 1 GOT A FEWER
 ar
@@ -701,8 +696,6 @@ black hat
 ASIA 2!
 Ci TOCTOU: Oplock Results
 ae
-oo to ce SE a I pee ee wd mg ad ee a ScRSeeESs
-Im IO [oo Ny Jon [un fe [uy Ir te 1d Ih ID [IA Io Im ho Ico Sk I LB I Iho te ID te
 kd> k
 *** Stack trace for last set context -
 Child-sP

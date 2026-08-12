@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:37Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Wenkai Li & Zhijie Liu & Xiaoqi Li_Sweeping the Blockchain Unmasking Illicit Accounts in Web3 Scams.pdf` (27 pages)
 
-
 ## Slide 1
 
 ## Sweeping the Blockchain: Unmasking Illicit Accounts in Web3 Scams **<u>Speaker: Wenkai Li</u>** <u>Hainan University, China</u>

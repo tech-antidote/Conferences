@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:29Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android_wp.pdf` (11 pages)
 
-
 ## Slide 1
 
 # Bad io_uring: New Attack Surface and New Exploit Technique to Rooting Android

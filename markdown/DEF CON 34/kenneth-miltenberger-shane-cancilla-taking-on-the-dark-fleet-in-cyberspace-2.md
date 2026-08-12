@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:30:13Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace! (2).pdf` (27 pages)
 
-
 ## Slide 1
 
 UNCLASSIFIED
@@ -56,28 +55,6 @@ Source: <u>The Claw of Knowledge</u>
 3
 
 UNCLASSIFIED
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-UNCLASSIFIED
-We Do Cyber
-Sf
-Source:
-en ee
-i
-Ow OQoOwxA HH KH OVA Oana ws
-Q
-=
-LW
-m2)
-ey)
-4
-ol
-(S)
-2
->
-```
 
 ## Slide 4
 

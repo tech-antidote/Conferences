@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:29:28Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Gijs Rijnders_Cryptography is hard Breaking the DoNex ransomware.pdf` (24 pages)
 
-
 ## Slide 1
 
 # **Cryptography is hard: Breaking the DoNex ransomware**
@@ -58,7 +57,6 @@ Do not use computers.
 [Reposted, apparently people didn't get
 the joke]
 Oss B77 4 dp;
-@3: @2 2 1
 ```
 
 ## Slide 4
@@ -83,7 +81,6 @@ Month
 0
 300 400 500
 #Victims
-T T T
 200 600 700
 T
 100
@@ -235,19 +232,16 @@ if ( CreateMutexA(®, 1, "CheckMutex") && GetLastError() == ERROR_ALREADY_EXISTS
 _loadd11(@);
 (0x403338);
 }
-for ( i = 0; i < 0x21CQ; i += 64 )
 {
 *(__m128i *)&xml_config[i] = _mm_xor_si128((__m128i)xor_key_vector, *(__m128i *)&xml_config[il]);
 *(__m128i *)&xml_config[i + 16] _mm_xor_si128((__m128i)xor_key_vector, *(__m128i *)&xml_config[i + 16]);
 *(__m128i *)&xml_config[i + 32] _mm_xor_sil28(x*(__m128i *)&xml_config[i + 32], (__m128i)xor_key_vector) ;
 *(__m128i *)&xml_config[i + 48] _mm_xor_si128((__m128i)xor_key_vector, *(__m128i *)&xml_config[i + 48]);
 }
-for ( ; i < @x21E7; ++i )
 xml_config[i] “= @xA9u; -
 config_ptr = maybe_parse_xm1l(@, (char)xml_config, (int) returns_2); Execute script
 Snippet list Please enter script body
 Name key =
-. ea =
 @ Decrypt config size =
 patch =
 decrypted = bytearray()
@@ -314,7 +308,6 @@ rsa_encrypts_buffer(random_encryption_key, 16
 footer
 params [1]
 params[2] = retaddr;
-if ( CryptAcquireContextA(params, @, @, lu, 0)
 || GetLastError() != -2146893802
 (result
 {
@@ -326,7 +319,6 @@ memset (pbBuffer, ®, random_len);
 if ( CryptGenRandom(params[@], random_len, pbBuffer) )
 S
 v4 =
-if ( random_len > @ )
 {
 if (
 {
@@ -381,12 +373,10 @@ Writer 1 (6}MEtehpapietierperead_olock_size, S&NumberOfBytesRead, @);
 v16 = v21;
 i = Size + 1;
 Size = i;
-» ( i < number_of_blocks );
 ointerEx(FileW, file_size, ®, ®);
 ile(FileW, pointer_to_footer, ®x200u,/&NumberOfBytesRead, 0);
 Handle(Filew) ;
 ransom_note( lpFileName) >
-( v19 )
 j___free_base(v19);
 ```
 
@@ -423,7 +413,6 @@ __int64 v16; // [esp+48h] [ebp-8h] ;
 void *use_128_bita; // [esp+5Ch] [ebp+Ch] qmemcpy(state, “expand 32-byte k", sizedf(state));
 PBYTE buffera; // [esp+68h] [ebp+18h] v3 = a3 Pel;
 onsen SENEELO_SaneetNe se unsigned int __cdecl salsa2@_schedule_16(char *a1, int a2, int a3)
-key_schedule_proc = 0; { . .
 v16 = Q@LL; int v3; // esi
 if ( use_128_bit == 1 ) int v4; // edi
 key_schedule_proc = salsa20@_schedule_16; unsigned int v5; // kr00_4
@@ -481,8 +470,6 @@ a1[6] *= _ ROL4__(a1[2] + a1[14], 13);
 a1[10] “= __ROR4__(a1[6] + a1[2], 14);
 a1[3] *= _ ROL4__(a1[15] + a1[11], 7);
 Dole CS op a1[7] *= _ROL4_(a1[3] + a1[15], 9);
-c t= d; b “= c; b < a1[11] *= _ ROL4_(a1[7] + a1[3], 13);
-a += b; d *= a; d result = _ ROR4__(a1[11] + a1[7], 14);
 c t= d; b *=c; b a1[15] “= result;
 return result;
 ```
@@ -658,7 +645,6 @@ number_of_blocks );
 FileW, pointer_to_footer, 0x20@u, &NumberOfBytesRead, 0);
 (Filew);
 writes_ransom_note( 1pFileName) ;
-if ( v19 )
 j__free_base(v19);
 ```
 

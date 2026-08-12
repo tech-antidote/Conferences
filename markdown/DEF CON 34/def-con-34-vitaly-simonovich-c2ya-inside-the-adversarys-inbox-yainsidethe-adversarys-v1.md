@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:28:59Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Vitaly Simonovich - C(2)YA Inside the Adversary's Inbox - YAInsidethe Adversarys v1.pdf` (67 pages)
 
-
 ## Slide 1
 
 ###### **`Raise your hand.`**
@@ -991,11 +990,8 @@ Secondary Channel 70-Line Python C2-Independent Apr 8 - Apr 26 Apr 26 - May
 
 ```text
 [ea 1. sys.vbs - VBScript Wrapper (1.1 KB) 120s sleep - AES-256-CBC decrypt - Invoke-Expression
-ir = — ~
 oy 2. senti.dll - .Net Loader (3.1MB) Assembly::Load()-fileless
-L w~ :
 {or 3. Decoded Shellcode (80.941 bytes) Word - byte dictionary lookup
-ane — ~
 O 4. Donut ReflectivePE Loader (30 KB) XOR key=0x02 - position-independent
 XOR key=0x0l - actual C2 implant
 cmd exec | file transfer | screenshots | injection j
@@ -1045,23 +1041,17 @@ Access still up.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-( >, ‘
 owe 000 Havoc C2 Server
 Gpertior Waser og} 217.184.217.139 145194933.
 POISSON IONOS SE, Berlin
 Ubuntu /home/avenger/ 0000) offtine Apr 8 - Apr 26 (18 days)
 0000 Returned Apr 26 - May 1
-(i = Cs >)
 Backblaze B2 (Free tier) ess 0000) Redirector Ea
 ee : = ss 0000] 217.154.162.45 a
 ut ie acl J ses) (000| IONOSSE, Berlin same Ts certificate:
 wowsenti.duckdns.com
-NG , SJ
 (— >)
 Backblaze B2 (Free tier) HTTPS Callbacks
-> w456w5 ¢— i I il ]
-u senti.dll 3 ~ @ >» @ >» @
-( [8a |
 Backblaze B2 (Free tier) oO oO 90
 > sentiwaw ,
 o SSH+Playbook (publicly readable) y Victim 1 Victim 2 Victim 3 Victim 4
@@ -1069,7 +1059,6 @@ o SSH+Playbook (publicly readable) y Victim 1 Victim 2 Victim 3 Victim 4
 ; : > SMB (Win 11, ASRock (3-min test,
 ee ZN OPSEC Fail B760M) Apr 3)
 Public bucket — y /
-y t t t J
 C2-Independent Path
 survided 18-day C2 outage
 eo
@@ -1084,7 +1073,6 @@ i
 |
 OpenSSH Server +
 reverse tunnel
-ee eee ee ee
 ```
 
 ## Slide 54
@@ -1159,7 +1147,6 @@ no re-compromise
 [
 145 more commands | Thales.zip executed
 Apr 30 | Final command Apr 30, 18:14 UTC
-y, S y,
 ~
 Mar 30 Apr2 Apr7 Apr 8 Apr 26 May 1 The operator planned for this.
 First compromise > Keylogger > SSH + Tailscale > C2 dies C2 returns Final command Taking down a C2 is no longer remediation.

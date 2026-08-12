@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:02:11Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Csaba Fitzl_Apple Disk-O Party_Compressed.pdf` (95 pages)
 
-
 ## Slide 1
 
 # Apple Disk-O Party
@@ -113,7 +112,6 @@ converted_at: "2026-08-12T00:02:11Z"
 
 ```text
 diskarbitrationd - MIG
-. Oo O
 @ MIG service
 routine _DAServerDiskCopyDescription
 routine _DAServerDiskGetOptions
@@ -318,7 +316,6 @@ FAIL!!! user has no rights over target
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Y Y f
 =
 XY
 xu checks:
@@ -559,30 +556,6 @@ Code signing details
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
--_-—.,
-o ~
-a runs as the
-. disk owner ,
-~ o
-- --
-T
-|
-based FS
-2
-add / runs as ~\
--k \ root /
-s 7
-= —_ -
-'
-I
-ser
-\
-!
-```
-
 ## Slide 41
 
 CVE-2024-44175 exploitation
@@ -633,9 +606,6 @@ create file rN
 edit
 1) /ete/sudoers.d/lpe
 2) cups-Files.conf
-A \\ A
-se \ use
-/ \ ;
 /
 /
 cupsctl ———_=>=>
@@ -669,13 +639,11 @@ CommandString:
 
 ```text
 @ Finder File Edit View Go Window’ Help oO Q S ThuOct3 22:49
-eee < n00b ; =. 5. 7
 DAUserFSSbxLPE
 — i DAUserFSSbxLPE.zip
 2. Applicati... Desktop
 (=) Desktop TD Documents
 ® Downloads
-D t are ;
 {} Documents Movies
 © Downloads BB Music
 fa} n00b ® Pictures
@@ -846,7 +814,6 @@ DADirTraverse
 Application - 143 KB
 Information
 A Cranfarem
-3 5) “3 @: aw oy
 @
 ```
 
@@ -876,7 +843,6 @@ the fix
 ```text
 the Tix
 diskarbitrationd
-~-7 7 FS
 Z x
 ! no path \
 \ resolution /
@@ -1011,7 +977,6 @@ storagekitd
 OD fish — -zsh — 112x35, m
 Last login: Wed Mar 27 12:36:22 on ttysee2
 fish@sonomal ~ %
-ast . f I
 9HOS82#8OS8e4 BBO0«1790 FC 0 amt
 ```
 
@@ -1065,7 +1030,6 @@ target: /tme/mnt
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-TH E ATT Ac K A /- tmo/ mnt
 target: /tmp/link ( alternate symlink
 Jete/ cups
 fe toragekite
@@ -1307,7 +1271,6 @@ e R — Recovery
 e V - VM (swap space)
 s I - Installer
 e T - Backup (Time Machine)
-O © e § - System
 ° D - Data
 fish@sonomal ~ % diskutil apfs list
 +-> Volume disk3s2 9DAQCF6C-F7C7-4506-9436-
@@ -1339,9 +1302,7 @@ if ( subpath("/volumes/com.apple.timemachine.localsnapshots") )
 return allow("assign-storage-class 'TimeMachine'");
 if ( subpath_prefix("/volumes/.timemachine/${any_uuid}") )
 return allow("assign-storage-class 'TimeMachine'");
-if ( file_attribute("time-machine-device") != 0 )
 return allow("assign-storage-class 'TimeMachine'");
-if ( file_attribute("time-machine-backup") != 0 )
 return allow("assign-storage-class 'TimeMachine'");
 ```
 
@@ -1522,7 +1483,6 @@ com.apple.TimeMachine.2024-03-26-185015.local Yesterday at 18:50
 Snapshot UUVID:
 db
 ©
-ars ee fs 5
 First Aid Partition Erase Restore Unmount Info
 SHARED BY 5 VOLUMES
 Free

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:00Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sheng-Hao Ma & Yi-An Lin & Mars Cheng_Attention Is All You Need for Semantics Detection A Novel Transformer on Neural-Symbolic Approach.pdf` (42 pages)
 
-
 ## Slide 1
 
 **Attention Is All You Need for Semantics Detection A Novel Transformer on Neural-Symbolic Approach**
@@ -535,7 +534,6 @@ memset (&prociInfo, @, sizeof(prociInfo));
 if ( MEMORY[@x3BB9E10C](a1, a2, 0, @, 1, @x80Q00@0, O, O, &sInfo, &procInfo) )// CreateProcess detect
 {
 v4 = sub_428DC3(procInfo.hProcess) ; BD Windows PowerShell
-if ( !v4 )
 MEMORY [ @x3BB9E110](procInfo.hProcess, a3); 22:26:17 [WARNING] [FOUND] (4261a7) - GetEnvironmentVa
 v5 = MEMORY[0x3BB9E120]; 22:26:17 [WARNING] [FOUND] (4261c6) - SendMessageA, Ge
 if ( prociInfo.hProcess ) 22:26:17 [WARNING] [FOUND] (MMBMBM) - CreateProcessA,
@@ -600,53 +598,6 @@ TXOne Networks  |  Keep the Operation Running
 
 TXOne Networks  |  Keep the Operation Running
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-// positive sp value has been detected, the output may be wrong!
-void sub_690000()
-{
-! // [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"+" TO EXPAND]
-vi4 =
-for (
-{
-vi = *(i + 40);
-v2 = ¥*(i + 38);
-v3 = 0;
-do oo
-{ =
-v4 = *vi++; PS C:\Users\aaaddress1\Desktop\CuIDA> py .\nnShellcode. py
-if ( v4 >= 97 ) i
-LOBYTE(v4) = v4 - 32;
-v3 = v4 + _ ROR4_ (v3, 13);
---v2; |
-(sub_69008F)();
-i = *(*(_readfsdword(@x3@u) + 12) + 20); ; i = *v13 )
-}
-while ( v2 ); |
-vi3 = i;
-vi2 = v3;
-v5 = *(i + 16);
-v6 = *(v5 + *(v5 + 60) + 120);
-if ( v6 )
-{
-v7 = *(v5 + v6 + 24);
-v8 = v5 + *(v5 + v6 + 32);
-while ( v7 )
-{
---v7;
-v9 = (v5 + *(v8 + 4 * v7));
-vi0 = 0;
-do
-{
-vil = *v9i+;
-vi@ = vii + _ ROR4_(v10, 13);
-8 }
-e while ( vii != BYTE1(v11) );
-0000002C)sub 690000:18 (69002Cc)
-x Ps [i
-```
-
 ## Slide 33
 
 **Use Case 3 Using the Attention-Transformer to demystify the myths of commercial packers: Dissect the behavior of VMProtect without unpacking**
@@ -701,7 +652,6 @@ int sub_54D83F()
 {
 int v@; // eax
 v@ = MEMORY[@x771EB770](@xFC@@00, @, @, @x140);
-if ( !ve@ )
 return @;
 dword_55FF18 = 16;
 dword_55FF@C = v0;
@@ -741,9 +691,7 @@ VirtualAlloc()?
 00sD727¢
 00508000
 005FC000
-Row x D
 R
-AAA AA DF
 = =F
 x
 ‘Align
@@ -908,8 +856,6 @@ TXOne Networks  |  Keep the Operation Running
 ```text
 (|. IDA - 680000.0c61cba7ead9c67c5d0838aa76cee95e.exe C:\Users\aaaddress 1\Desktop\CulDA\lib\process_13584\680000.0c61cba7ead9c67...
 File Edit _— Search View Pensget Lumina SipRETS Windows Help
-ws ‘nt & 0 SiN OCigim me ~ + GX: > MM No debugger
-fl Te Lit a
 WB Library function MJ Regular function _ Instruction [J Data (§ Unexplored J External symbol J Lumina function
 Ie IDA View-A @ Hex View-1 8 = EN Structures = Enums = SB Imports BA Exports
 __int128 v10; // [esp+21Ch] [ebp-14h] BYREF
@@ -923,7 +869,6 @@ me 2147483647, base Grote NLC hosot NAW indows \\Cunrentvens ton \\RUnG , ®, @,
 L"H4A0", ®, 1, My 2S ogee + 2); gi
 RY[@ "KERNEL32" "CreateProcessW");
 v3
-v4 = (v3);
 vs = M @x76 90] ("WS2_32", “WSASocket"); CPU usage: Physical memory: 12.4 GB (39.08%) _ Free memory
 v6 = [ 58} (v5);
 while r 1 Ly
@@ -967,7 +912,6 @@ qword_683558 = 0164;
 dword_683528 = 68;
 dword_683554 = 256;
 vi@ = xmmword_6821F0;
-v4(0, &v10, @, ®, 1, 8, @, @, &dword_683528, &unk_683380) ;
 MEMORY f 8] (3600000) ;
 le
 }

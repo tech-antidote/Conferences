@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:24:15Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - v1.pdf` (38 pages)
 
-
 ## Slide 1
 
 # **Bird Hunting Season**
@@ -290,8 +289,6 @@ Oct
 ®o
 Nov Dec Jan Feb
 ® ®
-«® ® @
-® ®@ ®®
 ® ®
 15-21: Part 4 to CEO response
 ®
@@ -400,7 +397,6 @@ suite.
 Issue IDs
 1, 5, 8, 13-15, 18,
 22-24, 27
-2, 3, 6, 7, 16, 17,
 25, 26, 34, 35, 38
 28-30, 33, 41, 51
 31, 32, 36, 39, 44,
@@ -665,7 +661,6 @@ Press CTRL-A Z for help on special keys Progress: | | 100.6% Read (Sector @x93FF
 Progress: | | 100.0% Read (Sector @x940000 of @x9U8DD3, ) 49.93 MB/s
 Format: Log Type - Time(microsec) - Message - Optional Info Progress: | | 100.6% Read (Sector 0x940109 of @x94@DD3, ) 36.75 MB/s
 Log Type: B - Since Boot(Power On Reset), D-—- Delta, S - Statistic Progress: es Read Goes barton of poser x eld ae
-bd A h Progress Fi eat ector Ox: x: # 's
 2 z RE VAR oreememuniss oe Leena Progress: | | 100.6% Read (Sector @x940400 of @x9U8DD3, ) 49.72 MB/s
 OCKOCI a Progress: | | 100.6% Read (Sector @x940509 of @x94@DD3, ) 35.95 MB/s
 $ ~ OEM_IMAGE_VERSION_STRING=4c1b83U1de57 Progress: | | 100.6% Read (Sector @x940609 of @x946DD3, ) 39.87 MB/s
@@ -890,7 +885,6 @@ gunshot tire background pakarien plates people
 raw NNO label raw NNO label raw NNO label . > - > person plus other object
 car, bus, truck, trailer licensePlate label
 classes
-a 5 sos .
 Event Tag + Audio Upload Decision Offline Replay With BirdE
 Logs show matching class, confidence values, “mark this data as ML data,” and follow-on audio handling. Extracted OEM model metadata can be replayed against video, frames, webcam input, or mounted media
 sessions,
@@ -1093,7 +1087,6 @@ never been compromised.
 fil ifety.com,
 + When we are made aware of vulnerabilities, even when they are immaterial, we a TSE SHE described were highly technical and would have required physical
 report them ourselves, and develop a mitigation plan. Many of the recent claims rm detailed knowledge of its internal hardware. No vulnerability affected
-k syste id te ti d,
 have already been addressed by our security and engineering teams. systems, and no customer action was require
 ° Wade Hibbard 1 strengthens technology when it is handled transparently. Flock
 Oh really? Just two questions. :ngages with researchers in good faith to improve our systems over time.
@@ -1246,9 +1239,7 @@ OE | Save |
 250121002101953
 “.,
 ae a mie ele
-SN io iam
 FENG (oe ans mriy
-TE 1 eR oh]
 Panui Hm Meee a ee
 OLGSHSHES foe kame iar
 ager ens
@@ -1271,15 +1262,11 @@ DeviceType | access amera
 aa
 i |
 =
-se = —_ tle a
 were se
-oe FIRE eT a ee oc a
 compen TTRLIGRIRTE ENE be TAT B ro
 mmeee_ AREA IV be) a A ED WR Ae
-ee ee Me ee) VT Ta
 Se
 eS
-ee Be er a i
 egeees (EEIDETYHT
 arene
 Ma a Mia art Poe A PANO
@@ -1443,7 +1430,6 @@ Why the chain mattered
 The security boundary was not just “is the device physically
 mounted high enough?” Local wireless access became
 administrative API access.
-| 3 |
 Reach Collins
 API
 Collins exposes local
@@ -1589,7 +1575,6 @@ root outcome in testing.
 
 ```text
 Demo: Recorded RCE
-OO ESS xi le - o x
 is dew wlae® scan | grep SSID SecterTL: Sat Sep 13 O25 23/28 2025
 Sector
 Verdi zen CT?
@@ -1695,7 +1680,6 @@ Connected adb devices:
 2. 192.168.227.119:5555 [device]
 Select device by number: ff
 WaenauvrwnrP
-“© © © © © © ©
 ```
 
 ## Slide 37
@@ -1733,7 +1717,6 @@ Internals Board connector Device information service Buttonless DFU without bond
 
 ```text
 no =
-oo uw > oe
 nN“
 11
 12

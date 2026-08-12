@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:17:22Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Hillai Ben-Sasson_BingBang Hacking Bing.com (and much more) with Azure Active Directory.pdf` (60 pages)
 
-
 ## Slide 1
 
 Hillai Ben-Sasson @hillai
@@ -32,7 +31,6 @@ Hillai Ben-Sasson @hillai
 WIZ Research
 eee https://www.bing.com/
 BE Microsoft Bing
-fo : >
 ( BingBangl 9% &@ )
 Hacking Bing.com (and much more)
 with Azure Active Directory
@@ -164,7 +162,6 @@ OAuth token response
 "tid": "63d43bfd-1337-43f2-82d4-f67bd1fcf8ac",
 "oid": "c028ba59-3b92-1337-9caf-e00007af7c44",
 "sub": "c028ba59-3b92-1337-9caf-e00007af7c44", —
-"iat": > eS
 "nbf": ; Server
 "exp": >
 "ato": "RXZlcnloaW5nSXNTdGluZ2FibGU=",
@@ -562,7 +559,6 @@ Microsoft findings
 «bin a.azurewebsites.net
 * con ‘5.azurewebsites.net
 * om s.azurewebsites.net
-* CC -net
 * co . . v1-1.azurewebsites.net
 * po -microsoft.com
 * con -2.azurewebsites.net
@@ -588,7 +584,6 @@ Microsoft findings
 ¢ bingtrivia.azurewebsites.net
 * con ‘3.azurewebsites.net
 ° m s.azurewebsites.net
-* CC net
 * co v1-1.azurewebsites.net
 * po -microsoft.com
 * con -2.azurewebsites.net
@@ -814,7 +809,6 @@ Two new actions are available in the flow designer, called ‘Region’ and ‘E
 sets of actions together for better flow management purposes.
 o/ Run subflow Login_to_terminal
 o/” Run subflow Terminal_screen_navigation
-= St Po
 WIZ
 ```
 

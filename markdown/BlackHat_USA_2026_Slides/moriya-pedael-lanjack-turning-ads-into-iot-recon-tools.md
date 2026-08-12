@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:13:46Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools.pdf` (56 pages)
 
-
 ## Slide 1
 
 # LANJack Turning Ads into IoT Recon Tools
@@ -211,7 +210,6 @@ artifacts in specific locations online, such as prominently placed within search
 Server engine results. These ads may make it more difficult for users to distinguish
 Botnet between actual search results and advertisements.'"! Purchased ads may also
 . target specific audiences using the advertising network's capabilities, potentiall
-Web Services ger sp 9 9 P P y
 further taking advantage of the trust inherently given to search engines and popular
 black hat
 2026
@@ -242,13 +240,11 @@ Trojan Fakealert 256
 High Risk
 FREE GIFT BOX
 Available Now!
--c "4 ip
 Have you received a Free Gift
 Box before?
 Yes
 black hat
 2026
-tit o €
 11
 ```
 

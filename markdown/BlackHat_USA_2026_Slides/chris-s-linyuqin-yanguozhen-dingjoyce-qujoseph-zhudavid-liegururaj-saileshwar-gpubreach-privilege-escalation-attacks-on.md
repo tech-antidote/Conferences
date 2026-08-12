@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:57Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Chris S. Lin&Yuqin Yan&Guozhen Ding&Joyce Qu&Joseph Zhu&David Lie&Gururaj Saileshwar_GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer.pdf` (98 pages)
 
-
 ## Slide 1
 
 ##### GPUBreach: Privilege Escalation Attacks on GPUs using Rowhammer

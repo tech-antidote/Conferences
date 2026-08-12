@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:20:20Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/An-Jie Yang_Proxying to Kernel  Streaming vulnerabilities from the Windows Kernel.pdf` (210 pages)
 
-
 ## Slide 1
 
 ### **Proxying to Kernel : Streaming vulnerabilities from the Windows Kernel**
@@ -293,7 +292,6 @@ Accessibility Nearby sharing
 op)
 8:16 AM
 8/13/2024 L
-~ & GY
 DEVCORE
 23
 ```
@@ -1101,7 +1099,6 @@ KernelMode
 CKsPin::GetState
 BytesReturned = Q;
 v5 = KsSynchronousToControlDevicelin_Worker|, 0, px2F0003u, &InBuffer, @x18u, OutBuffer,
-if ( v5 >= @ && BytesReturned != 4 )
 v5 = -1073741306;
 SerializePropertySet
 {
@@ -1132,7 +1129,6 @@ DEVCORE
 
 ```text
 UnserializePropertySet
-if ( OutSize > v13 )
 rror2;
 KsSynchronousloControlDevice(
 el
@@ -1220,7 +1216,6 @@ DEVCORE
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-foe A. WO
 onmw
 on i
 aan
@@ -1239,13 +1234,10 @@ eat
 rug
 can
 owes
-Pe a et ef o
 wo meee fe
-ae ee eee
 merses (ee ria xs So Dy (9)
 Oewe ay) {Acted rab & oe
 Oe: Qastexra das |
-ee 9 es we Oe te
 ```
 
 ## Slide 84
@@ -1813,7 +1805,6 @@ rsp=ffffaa88a40deb28
 r9=ffffaa88a40dec8e
 r1i2=ffffaa88a4edec8e
 r15=fffF838a3d45eeae
-ei pl zr na po nc
 h_icall_nop:
 ) jmp
 Resetting default scope
@@ -1970,7 +1961,6 @@ unsigned int *Buffer; // r8
 unsigned __int64 v2; // rdx
 Buffer = BitMapHeader->Buffer;
 v2 = (unsigned __int64)(4 * (((BitMapHeader->SizeOfBitMap & @x1F) != 6) + (BitMapHeader->SizeOfBitMap >> 5))) >> 2;
-if ( v2 )
 {
 memset(Buffer, @xFFu, 8 * (v2 >> 1));
 if ( (v2 &1) !=@ )
@@ -2081,7 +2071,6 @@ DEVCORE
 ```text
 Windows 11 23H2 - VMware Workstation
 File Edit View VM Tabs Help . » Ooaga Dea
-| hoe |
 ibrary » Windows 11 23H2 Windows 11 Insider Preview
 My Computer
 Administrator: CAWind: 032
@@ -2132,7 +2121,6 @@ It doesn't have a DRM device !
 Press any key to continue .
 6:04AM <2
 e/13/2024 SAE
-A ©) @&
 Status: Running <=. §
 124
 ```
@@ -2454,7 +2442,6 @@ Microsoft Windows 11 in the
 PRIZE $ Local Elevation of Privilege category
 ane
 O
-al. 11 @ 63 ii 1,650 (1 tT
 DEVCORE
 140
 ```
@@ -2475,21 +2462,17 @@ DEVCORE
 ONS ore beer Leg = eri er
 power.
 7
-s (ta, Ma
 Hilup oe
 Chaqger aval ty
 Savapink
 tHUNe We OW Ale
 Sait ee ae
-ee ee ee
-a ee eee.
 fe riasse lp sy
 ue ay) Aacea mak oe Oo
 oe: taster dao
 Qeo Me e-sosascodgct
 SE Tae MAIS Oo
 = recdsococSsS
-ee ee |
 ```
 
 ## Slide 143

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:22:08Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nicholas Dubois & Jessica Hyde_nput Output + Syslog (iO+S) Obtaining Data From Locked iOS Devices via Live Monitoring.pdf` (69 pages)
 
-
 ## Slide 1
 
 ###### **Input Output + Syslog (iO+S): Obtaining Data From Locked iOS Devices via Live Monitoring**
@@ -847,7 +846,6 @@ Exit(1)
 Goto(Q:)
 If SSL
 Program -——> SSL <
-If no SSL
 If SSL
 SSL <
 Program < If no SSL
@@ -1090,8 +1088,6 @@ Fuzzing Recovery Mode
 13. #time.sleep(10)
 14
 cr ao
-16 set = @
-17 run = @
 18
 19 if(get==1):
 20 for line in Lines:

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:24:19Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Sian-Yao Huang & Cheng-Lin Yang & Chung-Kuan Chen_IRonMAN InterpRetable Incident Inspector Based ON Large-Scale Language Model and Association miNing.pdf` (61 pages)
 
-
 ## Slide 1
 
 ###### IR-on-MAN: InterpRetable Incident Inspector Based ON Large-Scale Language Model and Association miNing

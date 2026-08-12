@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:56:56Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-WANG-Two-bugs-with-one-PoC-Rooting-Pixel-6-from-Android-12-to-Android-13.pdf` (65 pages)
 
-
 ## Slide 1
 
 Two bugs with one PoC: Roo2ng Pixel 6 from Android 12 to Android 13
@@ -212,7 +211,6 @@ First-generation (2021)
 GS101 (S5P9845)!'51I25)
 Whitechapel! '®!
 Samsung Electronics!"
-5 nm LPE!
 ARMv8.2-Al2
 64-bit!?9]
 Octa-core:21116]
@@ -468,7 +466,6 @@ if (reg—>cpu alloc->type != ASE MEM TYPE ALIAS) { get_aliased_alloc(vma, map->
 size_t i; :
 struct kbase_aliased x*aliased; nents = aliased->length; ;
 xout = 0: pages = aliased->alloc->pages + aliased->offset;
-‘ ‘ : : y ? }else {
 aliased = reg->cpu_alloc->imported.alias.aliased; nents = map->alloc->nents;
 for (i = 0; i < reg->cpu_alloc—>imported.alias.nents; i++) pages = map->alloc->pages;
 xout += aliased[i]. length;
@@ -487,7 +484,6 @@ CVE-2021-28664 PoC
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-CV E ~ 2 O 2 1 ~ 2 8 6 6 4 P O C if (reg->gpu_alloc->properties & KBASE_MEM_PHY_ALLOC_LARGE)
 user_buf->pages = vmalloc(*va_pages * sizeof(struct page x));
 else
 user_buf->pages = kmalloc_array(xva_pages,
@@ -510,7 +506,6 @@ don import */ *
 ED_ON_IMPORT;
 /* Top bit signifies that this was pi
 user_buf—>current_mapping_usage_count |=
-for (i = 0; i < faulted_pages; i++) {
 dma_addr_t dma_addr;
 pin them. The memory will then be pinned only around the jobs that
 specify the region as an external resource.
@@ -542,7 +537,6 @@ ASIA 2023
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-CV E ~ 2 @) 2 1 ~ 2 8 6 6 4 Po C if (reg->gpu_alloc->properties & KBASE_MEM_PHY_ALLOC_LARGE)
 user_buf->pages = vmalloc(*va_pages * sizeof(struct page x));
 if (pages) { else
 struct device «dev = kctx->kbdev-—>dev; user_buf->pages = kmalloc_array(*va_pages,
@@ -1153,9 +1147,7 @@ if (reg->cpu_alloc->type != KBASE_MEM_TYPE_ALIAS) {
 } else {
 size_t i;
 struct kbase_aliased x*aliased;
-*out = Q;
 aliased = reg->cpu_alloc-—>imported.alias.aliased;
-for (i = 0; i < reg—>cpu_alloc—>imported.alias.nents; i++)
 xout += aliased[i]. length;
 }
 break;
@@ -1260,7 +1252,6 @@ unsigned long size = alloc->imported.user_buf.size; if (WARN_ON( !reg))|
 “return —EINVAL;
 KBASE_DEBUG_ASSERT(alloc->type == KBASE_MEM_TYPE_IMPORTED_USER_BUF) ;
 pages = alloc->imported.user_buf. pages;
-for (i = 0; i < alloc->imported.user_buf.nr_pages; i++) {
 unsigned long local_size;
 dma_addr_t dma_addr = alloc->imported.user_buf.dma_addrs [i] ;
 old_pages = kbase_reg_current_backed_size(reg);
@@ -1271,7 +1262,6 @@ local_size = MIN(size, PAGE_SIZE - (dma_addr & ~PAGE_MASK)); 5
 dma_unmap_page(kctx->kbdev->dev, dma_addr, local_size, /* Update the GPU mapping */
 DMA_BIDIRECTIONAL) ; err = kbase_mem_shrink_gpu_mapping(kctx, reg,
 if (writeable) new_pages, old_pages) ;
-set_page_dirty_lock(pages[i]); if (err >= 0) {
 #if !MALI_USE CSF /x Update all CPI manning(s) */
 put_page(pages [il] ); kbase_mem_shrink_cpu_mapping(kctx, reg,
 pages[i] = NULL; new_pages, old_pages);

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:00:04Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Rex Guo&Khang Nguyen_Death by Noise Abusing Alert Fatigue to Bypass the SOC (EDR Edition).pdf` (47 pages)
 
-
 ## Slide 1
 
 **Death by Noise: Abusing Alert Fatigue to Bypass the SOC (EDR Edition)**
@@ -162,7 +161,6 @@ Protecting against new @jmmesta
 Kubernetes threats in 2024 and
 beyond
 December 10, 2023 11:15 AM
-f X in
 ```
 
 ## Slide 10

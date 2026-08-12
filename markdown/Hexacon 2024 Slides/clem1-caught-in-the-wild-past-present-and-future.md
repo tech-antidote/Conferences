@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:19:07Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Clem1_Caught in the wild, past, present and future.pdf` (64 pages)
 
-
 ## Slide 1
 
 Caught in the wild
@@ -100,9 +99,7 @@ Google has telemetry in the wild to find iOS
 They have back doors in everything and read all the emails.... how do you figure
 .@) jae Q 3 ma
 the Odays are using Google Analytics
->) yeu O «6 §
 The group that coordinated their campaign over Hangouts? ;)
-O ja)  s 8
 ```
 
 ## Slide 6
@@ -289,7 +286,6 @@ http://182.61.171.167:9321/8fmtCl2j2Xk0.html
 ® i 82.61.171.1 67:9321/u84VF2XBgZwM a
 ®) http://182.61.171.167:9321/hvAB2wATs431
 _
-*" @ @
 as we
 “7 SE
 14
@@ -427,17 +423,13 @@ al
 20 function exp(e) {
 21 let t = new Date,
 22 r = new Array(13.37, 13.37);
-23 tf) = 4
-24 let a = 0;
 25
-26 function i(e, t, r, a) {
 27 alo];
 28 let i=5 ine;
 29 return t(0] = t[1] = afi], r{2] += 32, afi] = t{1], i
 30 iP
 31 Date.prototype.__proto__ = new Proxy(Date.prototype.__proto_, {
 32 has: function() {
-33 a & (r[1] = e)
 34 BE
 35 cai
 36 let n = new Uint32Array(4),
@@ -446,7 +438,6 @@ al
 39 a=1;
 40 i(t, d, n, 1);
 41 “ZURCIS ISOS == TTL” SS" WINGOWs COCATION: PECOSUUT
-42 var o=
 20
 ```
 
@@ -532,7 +523,6 @@ One-time links
 How long are the NATO members going to let Turkey and Hungary to
 mock the alliance ? The longer the blockade of Finland and Sweden
 takes, the weaker the alliance looks.
-OQ 53 td 42 9 221 tlt 40.6K &
 Joseph Go 46» Marta - Téi ing hé Ukraine tan cong
 e Replying to} vao cac khu quan su cla nga
 NATO is a stupid organization, Turkey is doing the right thing ngé nham giam bét tén that 6
@@ -625,7 +615,6 @@ uinternal::Heap::CollectGarbage
 Pwnie Awards @PwnieAwards - Aug 10, 2022 eee
 Another fan favorite: = %=: "2; The Lamest Vendor Award! Presented to the
 vendor who mis-handled a security vulnerability most spectacularly.
-Os ts 015 tl A
 Pwnie Awards eee
 @PwnieAwards
 Our final nomination for Lamest Vendor Response goes to:
@@ -714,7 +703,6 @@ UNG | MOBILE DEVICES , XO, #0xFFFFFFFFFFFFFOOO
 sub_0
 » XO, #OxFFF
 CVE-2021-25394 "Xo. #OxFFFFFFFFFFFFFOOO
-, X1, XO
 sung Mobile Devices Race Condition Vulnerability: Samsung mobile devices contain a race condition vulnerability within
 IFC charger driver that leads to a use-after-free allowing for a write given a radio privilege is compromised. 3 ——
 elf_payload
@@ -770,7 +758,6 @@ Your Web Browser
 HTTP User-Agent —_Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebkit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0
 Safari/537.36
 More Tools Protocol Support:
-. 5 . 5 TLS 1.3 v Enabled
 Here is a list of new, experimental, controversial, broken, and deprecate Tae EECA
 . eas di fi d 7 ya TLS 1,1 Disabled (Good)
 = HTTP/2 Fingerprinting — reading HTTP/2 frames and creating an impr ein nesner Cee
@@ -913,7 +900,6 @@ let t = new Date;
 let i = null;
 do {
 i = new Date
-} while (i - t <e)
 function s(e, t) {
 new FileReader;
 let
@@ -936,7 +922,6 @@ this. readAsArrayBuffer(new Blob( [e]))
 a
 i. readAsArrayBuffer(new Blob([e]))
 (144, 144, 100, 161, 4, 0, 0, 0, 137, 196, 144, 144, 144
-(77, 90, 144, 0, 3, 0, 0, @, 4, 0, 0, 0, 255, 255, 0, 0,
 e < 500; e++) new ArrayBuffer(1024 * 1024)
 . const Fd = 12201;
 . const jd = 12202;
@@ -1254,7 +1239,6 @@ CVE-2023-42824
 ```text
 void *__fastcall noclip::get_buggy page(noclip *this)
 target_address = OLL;
-v7 = 7;
 if ( !vm_remap(
 (vm_map_t) (unsigned int)mach_task_self_,
 &target_address,
@@ -1268,9 +1252,7 @@ byte, unaware of the size of the destination buffer.
 *(_UWURD *JSTC_ address — UX44444q44qLL,
 v5 = *(_QWORD *)target_address;
 vm_deallocate((vm_map_t) (unsigned int)mach_task_self_, target_address, Ox4QQ0Q0uLL) ;
-if ( v5 == 0x44444444 )
 break;
-SE et VES
 a 52
 ```
 
@@ -1315,9 +1297,7 @@ v67 = file
 v68 = Rema
 v69 = Remo
 v70 = Remo
-if ( !v70
 safe_abo
-__src = nu
 v76 = v69;
 v77 v68;
 v74 OLL;
@@ -1330,7 +1310,6 @@ if ( (unsigned waa v70, & src, 3u, &v74, lu) )
 safe _abort():
 RemoteProcessExecCtx: :removeFiles(files_to_remove, number_of_files);
 ALA Anrr
-Dwi er a
 DCB "tuscache.plist",0
 ; DATA XREF:
 EMOLErFOCESSECXECLLX ~
@@ -1377,7 +1356,6 @@ pwnCitizenLab(rproc, 1);
 pwnStockMailApp(rproc, 1);
 pwnCitizenLab(rproc, 1);
 pwnTtwitterDB(rproc, 1);
-if ( ((_18 * (2 * _18)) & 0x4000
 __ break (0xC471u) ;
 return pwnCitizenLab(rproc, 1);
 1);
@@ -1457,7 +1435,6 @@ All bugs will matter
 
 ```text
 hax$ unzip ~/Downloads/com.tencent.mm.apk 2>&1 > /dev/null
-hax$ -1 Llib/armeabi-v7a/lib*so | we -1
 hax$ strings lLib/armeabi-v7a/1libx
 Llibx.pipeline.so libxeffect_xlog.so libxffmpeg.so
 hax$ strings lib/armeabi-v7a/lLibxffmpeg.so | grep FFmpeg

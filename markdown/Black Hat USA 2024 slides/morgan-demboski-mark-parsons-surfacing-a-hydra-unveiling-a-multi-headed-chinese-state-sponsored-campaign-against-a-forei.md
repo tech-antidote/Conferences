@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:35:19Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Morgan Demboski & Mark Parsons_Surfacing a Hydra Unveiling a Multi-Headed Chinese State-Sponsored Campaign Against a Foreign Government.pdf` (66 pages)
 
-
 ## Slide 1
 
 Surfacing a Hydra _Unveiling a Multi-Headed Chinese State-Sponsored Campaign Against a Foreign Government_
@@ -160,7 +159,6 @@ Bea 5 (Marts) 8 (warz7) Mays TSVIPSrv.ll mi
 AM dumy wibsctrl.dil dal
 DC1 4413.txt 6 (Mar15) 365
 commepem Mars] sunt ret use info.bat mye convenes
-a8 txt oe Hypervisor ; ;
 bhrome. Mart5 vmnat a8.txt, 443,txt 7 SophosUD.exe
 srvany ‘Juni2 1 aB.txt
 instsrva gat wdm Junt2
@@ -795,7 +793,6 @@ Source: BigMailer
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-o, 1) y
 HEN THE THREAT ACTORS es
 DONT SHOW UP. LIKEYOU PREDICTED
 pebeomthruF.com
@@ -1090,13 +1087,6 @@ Using **previously compromised government agencies** for malware staging & C2 (c
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-THERE IS NO HAPPY ENDING
-* A nm
-```
-
 ## Slide 60
 
 #### **Takeaways**
@@ -1145,7 +1135,6 @@ woo ha
 of 107 enema |
 [ o[seraeeaniiven eg el
 ee npupdatel net lal 45.18.1491 ]151:443
-oe a Kt H{ ra eet
 toe Se oe Mc) ==
 45.15.149,151:443
 as9.1911189:449

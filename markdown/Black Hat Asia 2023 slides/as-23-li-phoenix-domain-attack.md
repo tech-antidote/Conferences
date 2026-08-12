@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:58Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Li-Phoenix-Domain-Attack.pdf` (31 pages)
 
-
 ## Slide 1
 
 # Phoenix Domain Attack: Vulnerable Links in Domain Name Delegation and Revocation

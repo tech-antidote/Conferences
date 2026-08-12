@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:33:24Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Veronica Kovah, Xeno Kovah - How much of our Bluetooth firmware reverse engineering work can now be automated with LLMs - rever.pdf` (171 pages)
 
-
 ## Slide 1
 
 ### **How much of our Bluetooth firmware reverse engineering work can now be automated with LLMs? (Spoiler: a lot!) Xeno Kovah & Veronica Kovah - Dark Mentor LLC**
@@ -1597,23 +1596,12 @@ bt-re-controller-categorized — prompt wiring (goal-driven slices)
 n order « each = one isolate e under jle /goal very ructs > S6 propagate + S10 drive phase pre-provisioned (never
 INPUT - pre-provisioned p_phase_done baseline (Baseline.)
 - Link H
-Controller HCI Commands ( H1 H2 HS ) H3 ( S1 ) ff 53 ) S6 ) (sto
 hci_ctrl_cmd_+ L OGF dispatch cmd handlers data table J arg types J f cmdsevt structs J | HC! global JL Propagate args | data-driven
-(OOO co ~ © = a ~~ 7
 Controller HCI Events H4 S1 S3 S6 S10
 t rlevt_+ evt handlers i HCI global pagate arg } dis
-XL JX J) J 4
-, , ¢ a , & >
-LLCP Send B1 B2 B3 S2 | $5 S6 $10 ome
 p_send_* packet tni losure {ptr tab pkt args | LL global propagate args data-driven PF
-) \ , x J \ J
-LLCP Recv BI B2 B3 S2 in $5 Lf sé nm $10 i"
 i € . packet fn: osu {ptr tak pkt arc | LL global: opagate args data-driven PF .
-\ f ‘ f ‘ . ’ ‘a my
-LMP Send BI B2 B3 S2 | s4 S6 $10 ae
 mp_send_+ packet fns losui {ptr tat pkt arc | MP globa propagate args data-driven sUPP .
-j \ j \ ; \ / \
-LMP Recv BI B2 B3 S2 LI S4 ) S6 1 $10 spoons LMP
 mp_recv_* packet tns josure fptr tat pkt arg { MP globais J propagate args =} | Jata-driven a
 P prep (frozen H HCI dispatch/handlers B LMP/LLCP packet S structs / arg typing
 ```
@@ -2466,8 +2454,6 @@ Total function/comment findings 695
 Realtek RTL8821CE
 Field Count Share
 | @ Shared 551 94.7%
-@ Opus FN a Ti _, 11 1.9%
-GPT FN ~ He 16 2.7%
 Opus FP 0 0.0%
 @ GPT FP 4 0.7%
 Likely true-positives (first 3) 578
@@ -2490,7 +2476,6 @@ Field Count
 @ Opus FN 27
 GPTFN «~Opus Wins’ > 91
 @ Opus FP 1
-GPT FP 0
 Likely true-positives (first 3)
 Total function/comment findings
 Intel 9260 ThunderPeak
@@ -2500,7 +2485,6 @@ Field Count
 @ Opus FN «GPT Wins v’- 585
 GPT FN 233
 @ Opus FP 15
-@ GPT FP 28
 Likely true-positives (first 3)
 Total function/comment findings
 Share

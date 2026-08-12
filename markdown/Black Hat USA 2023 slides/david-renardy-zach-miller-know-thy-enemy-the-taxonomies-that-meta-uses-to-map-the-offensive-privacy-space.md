@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:27Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/David Renardy & Zach Miller_Know Thy Enemy The Taxonomies That Meta Uses to Map the Offensive Privacy Space.pdf` (31 pages)
 
-
 ## Slide 1
 
 **Know Thy Enemy: The Taxonomies That Meta Uses to Map the Offensive Privacy Space** TItitltet

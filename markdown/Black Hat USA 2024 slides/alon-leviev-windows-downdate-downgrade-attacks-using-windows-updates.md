@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:15Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Alon Leviev_Windows Downdate Downgrade Attacks Using Windows Updates.pdf` (87 pages)
 
-
 ## Slide 1
 
 Windows Downdate: **Downgrade Attacks Using Windows Updates**
@@ -37,9 +36,7 @@ ia
 tie ole
 i fig
 ) /
-Hi } fy
 i
-! a Ved
 Via
 Windows Downc
 Downgrade Atta
@@ -906,7 +903,6 @@ Demo #3
 ```text
 (QO ENG - sul
 SF in 4 hours
-~& Bo 2™o &
 7/6/2024
 ```
 

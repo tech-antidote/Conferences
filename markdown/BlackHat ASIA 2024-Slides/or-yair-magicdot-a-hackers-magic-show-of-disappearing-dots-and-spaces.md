@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:13Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Or Yair-Magicdot A Hacker's Magic Show of Disappearing Dots and Spaces.pdf` (67 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -169,7 +168,6 @@ User-Space Rootkit
 
 ```text
 CALL FindFirstFileW( )
-@ ——_> >
 PROCESS ROOTKIT ©) FindFirstFilew()
 USER-SPACE — | FindFirstFilew_hook() | <—
 <7
@@ -197,7 +195,6 @@ The rootkit does not need to be part of the chain of calls
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. : ’
 @ -SPACE- e e @ -SPACE- @ .
 — BR > Bee —>| Rt1pDosPathNameToRelativeNtPathName() |
 © @ ~ -SPACE- @ -SPACE- @
@@ -283,11 +280,7 @@ Listing the archive with File Explorer does not show the file
 
 ```text
 01
-@ test x + 2 CMD x @ WSL
-© New ~ WW Sort ~
 C:\Users\Or\Downloads\test>
-€ > - 4 @™ ~~ Downloads > test x G 2
-- BBR RB
 | dirt haha. a.txt a.txt a.txt. lol zip.zip
 -el
 Gan
@@ -332,7 +325,6 @@ Task Manager, ProcExp show that the executable is verified and signed by Microso
 
 ```text
 any)
-7) CAWindows\Systema2\emde X EY > @ <i
 Ble Options View Process Find Users Help
 BE Cm mex £8 —i ] Filter by name>
 C:\Users\Or\Downloads\test> Process PID User Name
@@ -422,7 +414,6 @@ A Built In “Safe” Feature
 wcscat_s:
 if ( !--SizeInWords )
 {
-*v4 = 0;
 v5 = errno();
 Wish = syle
 goto invalid_parameter;
@@ -566,7 +557,6 @@ ola Windows 4/3/2024 6... File folder
 > BThis PC
 6 items
 12:07 AM
-e ge @ Search 7 & BV ZIM a w&
 Qa
 ```
 

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:18:51Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kirsten Bay_The Integration Cyber Security and Insurance The Journey of Cysurance.pdf` (22 pages)
 
-
 ## Slide 1
 
 AHA MOMENTS IN CYBER SECURITY The Story Behind Our Mission to Bridge the Gap Between Vulnerabilities and Probabilities to Improve Enterprise Resilience
@@ -169,7 +168,6 @@ black hat
 USA 2&0e25
 What occurred during your organization’s last cybersecurity insurance renewal?
 <$50M Revenue $50M - $1B Revenue >$1B Revenue
-0% 10 20 30 40 50 60 70 80 90 100
 Pp re m I Ul ms: ewer insurers were willing to offer
 a policy
 The premium increased for the

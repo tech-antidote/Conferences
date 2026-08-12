@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:50:21Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Jonathan Andersson & Thanos Kaliyanakis_Decoding EM-FI Attacks Lessons Learned from Glitching the GigaDevice GD32F407.pdf` (50 pages)
 
-
 ## Slide 1
 
 # Decoding EM-FI Attacks: Lessons Learned from Glitching the GigaDevice GD32F407 Jonathan Andersson & Thanos Kaliyanakis
@@ -510,23 +509,6 @@ Information Classification: General P rog ram mM abl e ( D) el ay
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-. y
-\ y
-\ Q
-| Se
-+ &
-y y . :
-~ | .
-, PI /
-~~ |
-~ : a ‘ | | _ .
-Xs Calibration: < ©
-Establishing Glitch Influence
-```
-
 ## Slide 26
 
 ## Scan For a Sensitive Spot…
@@ -624,26 +606,6 @@ Information Classification: General
 # Perfecting the Glitch
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-4a C
-Nn. CY \
-a —
-PA SX
-AA ‘ \
-7 “uin
-YA j
-- a
-™
-ne
-™.
-~|
-3 |
-Perfecting the
-#BHEU @BlackHatEvents
-```
 
 ## Slide 31
 

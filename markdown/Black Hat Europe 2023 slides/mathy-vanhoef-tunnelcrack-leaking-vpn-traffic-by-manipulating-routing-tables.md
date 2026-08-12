@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:39Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Mathy Vanhoef_TunnelCrack Leaking VPN Traffic by Manipulating Routing Tables.pdf` (32 pages)
 
-
 ## Slide 1
 
 ## **Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables**
@@ -62,12 +61,7 @@ Usage of VPNs: watch videos from other country
 
 ```text
 Usage of VPNs: watch videos from other country
-i ae So S Bay ow
-as —-== & 2 IG
-GN © ee o~ & EEC
-ma © Ses = Bea =. a
 Sa. Dov BE
-we @ sco ¥ Fas Gad oe ol wy
 ee Pee ee FO eal
 ```
 

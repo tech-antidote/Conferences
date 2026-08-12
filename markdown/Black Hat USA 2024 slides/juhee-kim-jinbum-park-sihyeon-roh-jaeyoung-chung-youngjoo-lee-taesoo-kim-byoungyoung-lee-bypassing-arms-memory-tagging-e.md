@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:47:57Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Juhee Kim & Jinbum Park & Sihyeon Roh & Jaeyoung Chung & Youngjoo Lee & Taesoo Kim & Byoungyoung Lee_Bypassing ARM's Memory Tagging Extension with a Side-Channel Attack.pdf` (68 pages)
 
-
 ## Slide 1
 
 Bypassing ARM's Memory Tagging Extension with a Side-Channel Attack
@@ -1117,7 +1116,6 @@ DH O\tpry|o@ Default levels ¥ | No Issues git:( ) x ./out/pixel/bin/chrome_publ
 @7- 21:45:33.867 26749 26749
 @7- 21:45:33.869 1746
 >| PI Zygote : Forked child process 26765
-ne ) ;
 07-20 21:45:33.873 26765 26765 fj cessServiced:16: Using CollectorTypeCMC GC
 07-20 21:45:33.890 26765 26765 fj CompatibilityChangeReporter: Compat change id reported: 171979766; UID 98024; state: ENABLE
 D
@@ -1132,7 +1130,6 @@ e-URbKRdB7K3uFbj JgnLiqUA==/base.apk!/1ib/arm64-v8a, permitted _path=/data: /mnt
 67-20 21:45:33.902 26765 26765 i cr_SplitCompatApp: version=125.0.6422.231 (642223104) minSdkVersion=26 isBundle=false proce
 ssName=org. chromium. chrome: sandboxed_process@:org. chromium. content .app.SandboxedProcessService:16 isIsolatedProcess=true
 CompatibilityChangeReporter: Compat change id reported: 242716250; UID 90024; state: ENABLE
-. . J
 07 45:33.906 26765 26765 fi cr_ChildProcessService: Creating new ChildProcessService pid=26765
 all la Ize 07 45:33.915 26765 26781 fi cr_LibraryLoader: Successfully loaded native Library
 07 45:33.916 26765 26781 ff cr_CachingUmaRecorder: Flushed 2 samples from 2 histograms, @ samples were dropped

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:53:05Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Dirk-jan Mollema_Advanced Active Directory to Entra ID Lateral Movement Techniques.pdf` (85 pages)
 
-
 ## Slide 1
 
 # Advanced Active Directory to Entra ID lateral movement techniques

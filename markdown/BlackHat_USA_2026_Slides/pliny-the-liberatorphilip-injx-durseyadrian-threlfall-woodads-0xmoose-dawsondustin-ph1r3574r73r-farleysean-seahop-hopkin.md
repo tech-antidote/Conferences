@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:28Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Pliny the Liberator&Philip (injx) Dursey&Adrian (threlfall) Wood&Ads (0xmoose) Dawson&Dustin (ph1r3574r73r) Farley&Sean (seahop) Hopkins_Kinetic Prompt Injection Agent Compromise With a Physical Blast Radius.pdf` (32 pages)
 
-
 ## Slide 1
 
 THE INDEPENDENT FRONTIER AI RED TEAM

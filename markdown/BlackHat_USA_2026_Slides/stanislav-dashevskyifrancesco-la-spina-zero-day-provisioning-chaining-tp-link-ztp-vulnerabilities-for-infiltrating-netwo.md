@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:16:31Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Stanislav Dashevskyi&Francesco La Spina_Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks.pdf` (47 pages)
 
-
 ## Slide 1
 
 # Zero ~~-touch~~ day provisioning **Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks**
@@ -51,33 +50,6 @@ black hat
 ### What is ZTP and why should we care?
 
 3
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-?
-0
-‘3
-6
-0
-0
-S
-Le
-»
-0
-i.
-0)
->
-i.
-S
-c°)
-c
-©
-O
--
-N
-What is
-```
 
 ## Slide 4
 
@@ -536,7 +508,6 @@ me equencelds ay AUTH_dev, randomKeyForSystemVerify 1048577
 "ListenPort":51820, ACK 1048582
 "privateKey":" [ARBITRARY OS COMMAND]", Propose new secondary config
 "LocalIp":"10.10.10.1" | 1048586 |
-1 ner =
 }, Secondary confi
 "configVersionInc": 1, y g 4096
 } we
@@ -583,7 +554,6 @@ The Conjurer - Hieronymus Bosch
 The broken chain of trust —
 Cloud (CVE-2025-9291)
 __int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"id" : 1, Q@1: if ( !error_depth )
 "method" : "helloCloud", Q2: {
 “params” pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
 "alias" : "ERGOS", , @4: if ( !subject_name_str )
@@ -592,7 +562,6 @@ sooo ease vane on” ae 6: cert_subject_name = subject_name_str + 4;
 "devi > ae 07: v11 = strchr(subject_name_str + 4, '/');
 eviceHwVer : 2.0", Q8: if ( v11 )
 "deviceld" : "[REDACTED]", 09: ev11 = 0:
-ee Oot 2 E = 0;
 wjevecetae eeroos , a (_strstr(global_controller host, "“tplinkcloud.com") && !strstr(cert_subject_name, "tplinkcloud.com") )
 "deviceName" : "ER605" .
 "deviceType" : "SMBROUTER", 11728 if ( HIDWORD (qword_5CCB8) )
@@ -602,7 +571,6 @@ wjevecetae eeroos , a (_strstr(global_controller host, "“tplinkcloud.com") && 
 "oemId" : "[REDACTED]", 16: 125LL,
 "tespVer" : "1.2" 17: cert_subject_name,
 18: global_controller_host) ;
-} 19: if ( qword_5SCCB8 )
 20: {
 ats)
 "error_code" : 0, 22: ecs_log(2LL, "[ECS] [ERROR] <%s>%s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r");
@@ -630,7 +598,6 @@ black hat
 The broken chain of trust —
 Cloud (CVE-2025-9291)
 __int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"id" : 1, Q@1: if ( !error_depth )
 "method" : "helloCloud", Q2: {
 "params" pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
 "alias" : "ERGOS", , @4: if ( !subject_name_str )
@@ -649,11 +616,9 @@ eviceHwVer H 2.0", Q8: if ( v11 )
 "oemId" : "[REDACTED]", 16: 125LL,
 "tespVer" : "1.2" 17: cert_subject_name,
 18: global_controller_host) ;
-} 19: if ( qword_5SCCB8 )
 20: 7
 21: \
 "error_code" : 0, 22: s).\n\r");
-eae - a ’ G d 1”
 "cachedSvr" : "n-euwi-device-omada.tplinkcloud.com:443", 25: et S eat, ran I ! la!
 "illegalType” : 0, 26:
 "validTimeOnDevice" : 86400 27: }
@@ -678,12 +643,10 @@ We can use a public IP to bypass the CN check :-}
 The broken chain of trust —
 Cloud (CVE-2025-9291)
 __int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"id" : 1, Q@1: if ( !error_depth )
 "method" : "helloCloud", Q2: {
 “params” pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
 maltas” 2 “ERGOS", , 04: if ( !subject_name_str )
 authCode" : "[REDACTED]", 5: evan) OF
-"cloudUserName" : "" : ee q
 ncontrollerversion" a Q6: cert_subject_name = subject_name_str + 4;
 "devi yy ae 07: v11 = strchr(subject_name_str + 4, '/');
 eviceHwVer : 2.0", Q8: if ( v11 )
@@ -698,7 +661,6 @@ eviceHwVer : 2.0", Q8: if ( v11 )
 "oemId" : "[REDACTED]", 16: 125LL,
 "tespVer" : "1.2" 17: cert_subject_name,
 18: global_controller_host) ;
-} 19: if ( qword_5SCCB8 )
 20: {
 ats)
 "error_code" : 0, 22: ecs_log(2LL, "[ECS] [ERROR] <%s>%s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r");
@@ -778,9 +740,6 @@ Stored XSS in Controller Web UI (CVE-2025-9289)
 ```text
 HMippity hoppity your network is our
 property
-x ad s, : \ se ~
-—s = ee 4 VA fA s “
-/ —— —" da A 34 P Me > ae
 ```
 
 ## Slide 37
@@ -888,7 +847,6 @@ to vendor fixing bugs complicated…
 
 ```text
 Disclosure timeline (typical)
-0 90 120
 »
 Issues are disclosed Industry standard for Sometimes, it’s
 to vendor fixing bugs complicated...

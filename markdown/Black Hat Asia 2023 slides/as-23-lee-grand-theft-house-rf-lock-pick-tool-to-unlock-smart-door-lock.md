@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:51Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Lee-Grand-Theft-House-RF-Lock-Pick-Tool-to-Unlock-Smart-Door-Lock.pdf` (65 pages)
 
-
 ## Slide 1
 
 # Grand Theft House: RF Lock Pick Tool to Unlock Smart Door Lock
@@ -1446,7 +1445,6 @@ QT GUI Time Sink
 <Ga| Number of Points: 1.024k
 Sample Rate: 2M
 Autoscale: No
-— | See
 in Sample Rate: 2M
 Autoscale: No
 De-glitching

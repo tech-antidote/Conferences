@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:30:00Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dyon Goos & Marius Muench_Overcoming State Finding Baseband Vulnerabilities by Fuzzing Layer-2.pdf` (40 pages)
 
-
 ## Slide 1
 
 # Overcoming State: Finding Baseband Vulnerabilities by Fuzzing Layer-2
@@ -94,7 +93,6 @@ BIolola |
 IGOo01IGI
 = A
 S )
-Q P= re) x
 ol\ie — CINE
 d Layer-3 » Layer-3
 } Layer-2
@@ -472,7 +470,6 @@ Let’s go fuzzing pt 2
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ : hd
 black hat ,
 USA 2024 ,
 american fuzzy lop ++4.22a (./firmwire.py) [explore]

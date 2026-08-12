@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:52Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shebin Mathew_Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration.pdf` (31 pages)
 
-
 ## Slide 1
 
 Bring Your Own COM: Session Pivoting and Lateral Movement via Ephemeral COM Registration
@@ -197,8 +196,6 @@ Name: WScript.Network
 [cisip: {093FF999-1EA0-4079-9525-9614C35(
 Server Type: InProcServer32
 Server: C:\Windows\System32\wshom.ocx = i ¥ . o- yt
-¢ x y t
-r a |
 CmdLine: N/A
 TreatAs: N/A
 Threading Model: Apartment
@@ -472,7 +469,6 @@ Routes the activation request to Session N on the target machine
 |
 (4) SESSION N — COM INFRASTRUCTURE
 Receives activation request and resolves the COM server type from registry
-X | wy,
 G) DLLHOST.EXE OTHER COM SERVER
 Spawned as COM Surrogate Launched as a registered EXE or
 when DilSurrogate is configured reused in-process server
@@ -582,14 +578,12 @@ black hat
 
 ```text
 COM Activation - Session Pivot
-( ) ( a
 Generate i
 SueIe HESS DcomLaunch Payload Executes
 GUIDs Registry Moniker Activation
 llhost.exe
 CLSID = CLSID\{X} CoGetObject( ™
 CoCreateGuid() InprocServer32 session:N . ql
-a oad 1
 AppID = | payload.d1l !new: {CLSID} a vote sesonieen
 Receives DllGetClassObject ()
 CoCreateGuid() y activation request OM ol created
@@ -598,7 +592,6 @@ Random D1llSurrogate="" No Starts : 1
 = 4 _ after call
 every run RunAs= CreateProcess fter
 never seen before SUES Sar by caller
-\ J X JS
 black hat
 USA
 2026 24
@@ -643,8 +636,6 @@ Cy OBS 32.1.2 - Profile: Untitled - Scenes: Untitled
 File Edit View Docks Profile SceneCollection Tools Help
 Scenes a
 Tle Gt View Docks Frotle Scene Cllemion Tools Held
-—_ = 2 —
-man 7 f = ae
 main —_
 FO rnegtaycaprire ea . oe cuaee
 OD Dispisy Capture PM rvoperies §— E)iters—ispiay | 1920x1980 8 6.0 {Primary Moniton, -
@@ -655,7 +646,6 @@ A +0 i smmucma
 oll? ol Suutio age
 a a Setings
 © Display Capture oa = = : = :
-- 44 + © Scale to Win aa
 © Display Capture @ Properties ® Filters Display : 1920x1080 @ 0,0 (Primary Monitor) a
 Audio Mixer Scene Transitions = Controls
 Global Global
@@ -663,7 +653,6 @@ Desktop Audio Y Mic/Aux Fade ’ Start Streaming
 8 Aa
 Q Duration 300ms Start Ragording
 MN Mv
-A 3: =a
 4 + Wi: Start Virtual Camera o
 rH
 me Studio Mode
@@ -701,7 +690,6 @@ Fi Duraton | 300%m8 gE santrgortng
 j +0: Sunvnwatcmes
 ‘ i ee Studio Mowe
 © Display Capture 2a 2 &, : v
-- 44 + v
 © Display Capture @ Properties ® Filters Display : 1920x1080 @ 0,0 (Primary Monitor) +.
 Audio Mixer Scene Transitions Controls a
 Global Global

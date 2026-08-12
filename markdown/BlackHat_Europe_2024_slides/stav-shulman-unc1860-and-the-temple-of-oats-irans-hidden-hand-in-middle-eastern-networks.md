@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:52:14Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Stav shulman_UNC1860 and The Temple of Oats - Iran's hidden hand in Middle Eastern Networks.pdf` (35 pages)
 
-
 ## Slide 1
 
 ### **UNC1860 and the Temple of Oats**
@@ -66,13 +65,11 @@ Ta] ate aes
 
 ```text
 Agenda
-7 nn eo
 Why are we here
 Let's start from the end
 Gathering evidence
 The “AHA” moment(s)
 Summary and conclusions
-dt 3 \ a
 you gone learn today
 ```
 
@@ -357,7 +354,6 @@ public static string ideaenoughaerobic(string string_0)
 { //over here converting the string to a byte array
 int length = string_0.Length;
 byte[] array new byte[length / 2];
-for (int i = 0; i < length; i += 2)
 {
 array[i / 2] = Convert.ToByte(string_0.Substring(i, 2), 16);
 a
@@ -367,7 +363,6 @@ Buffer.BlockCopy(array, 1, array2, 0, array2 ngth); public static byte[] Trickal
 for (int j = 0; j < array2.Length; j++) {
 { int length = A_O.Length;
 array2[j] = (byte)((int)array2[j] “ num); // unXORing all by’ byt ell anray = new hy tal tengtin giz,
-for (int i = 0; i< length; i += 2)
 } {
 return Encoding.UTF8.GetString(array2); // translating from bytq array[i / 2] = Convert.ToByte(A_0.Substring(i, 2), 16);
 }
@@ -459,7 +454,6 @@ vevergl
 .
 ype References
 b= References
-Db {} -
 > {}] EventLockSpace
 > { }-eventtockSpace-Win32
 b{} ServerSrv
@@ -525,7 +519,6 @@ al ¢ [] Stoveclarifyangle_long)
 () array = nulls
 (Stovectarifyangle_iong )
 num2. = (Stoveclarifyangle_long, num);
-num += 45
 num3 = (Stoveclarifyangle_long, num);
 {] array2 [num2];
 (Stoveciarifyangle_iong, num, array2, 0, array2 5
@@ -582,7 +575,6 @@ while (v0 )5
 = 90164;
 = my_NtAllocateVirtualMemory(90i64, 4164);
 my RtlCopyMemory(v4, &my parameters address, 90164); oS epee eS
-gp EE ¢ (nun? > OL 66 num 1= 01)
 q
 rate = new tnePee (num):
 AUStE = OxBAUS byte(] array? = nev bytetmun2]
@@ -642,17 +634,6 @@ f
 
 **The End**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-05
-The End
-LY |
-Hie
-Mil |
-i:
-```
-
 ## Slide 33
 
 #### **To Summarize**
@@ -694,7 +675,6 @@ MUCHITAKEAWAYS: WOW:
 ```text
 A >>
 Ne
-a ae  , e
 a EWROPE 20 4
 <= Thank you!
 Any questions?

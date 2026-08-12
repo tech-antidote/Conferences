@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:18:12Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/John Swanson_I Was Tasked With Enrolling Millions of Developers in 2FA - Here's What Happened.pdf` (48 pages)
 
-
 ## Slide 1
 
 **I Was Tasked with Enrolling Millions of Developers in 2FA — Here’s What Happened**
@@ -636,20 +635,14 @@ passkeys, and use those in place of both your password and your 2FA method.
 
 ```text
 cknowledgments
-® © @ 6 ® @
 )
 @
 @abbashaiderali @anna-talley @brotherben @buckelij @chriskirkland @cli1150 @flamingolegs @forced-request @galaxyallie
-®o® © ® @©@ @® 6®© 6 ® @
 @gennyburleson @hagould @hemantkumar @hpsin @iburtally @jamespetercross @jessephus @jessicacano @johnpreed
-é @® @® o® © a ©
 @josepalafox @juliettewyman @juststephanie @kith @lauraleap @lgarron @liliana3186 @lowply @mattsalem
-® 0 @¢ @ a 0 ©
 @maya-ross @mayamessinger @mumileski @mph4 @mylesborins @nebiyou- @oreoshake @ptoomey3 @rajlaud
 gebretatios
-S ® @ 2 @®@
 @reversaw @richard-saunders @robcrystalornelas @rzomayah @samanthachau @samkovacs @samueldev @sseacrest @stehley
-¥ ® Q @
 9
 ®
 8

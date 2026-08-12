@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:04Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yuya Chudo_Unveiling the Power of Intune Leveraging Intune for Breaking Into Your Cloud and On-Premise.pdf` (89 pages)
 
-
 ## Slide 1
 
 ### Unveiling the Power of Intune: Leveraging Intune for Breaking Into Your Cloud and On-Premise
@@ -374,7 +373,6 @@ Device Registration Service Enrollment Service
 2)
 black hat
 EUROPE 2024
-3 | | | / |
 . Device join / register
 Microsoft Azure / Search resources, services, and dacs (G+/)
 Home > MSFT | Devices > Devices
@@ -783,7 +781,6 @@ EUROPE 2024
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ a + eo
 black hat  < a
 EUROPE 2024
 Downgrade to Azure AD Graph
@@ -841,7 +838,6 @@ OAuth2 Permissions ry Y 2023-11-22T23:51:31
 . Applications
 Tenant Domains v 2024-02-07723:54:22
 . Service Principals
-, y apa P v 2023-12-02T10:21:55
 Managed Email, OfficeCommunications| Application roles v 2024-02-14T10:51:53
 Managed None OAuth2 Permissions
 Y 2024-02-21T01:53:41
@@ -992,7 +988,6 @@ Conditions © Microsoft Intune
 ```text
 black hat = —
 EUROPE 2024
-| j—|) =~
 L$ roadtx gettokens - $USER -p $PASSWORD -r aadgraph -ua S$WINDOWS_UA
 Requesting token for resource https: //graph.windows.net/
 Error during authentication: AADSTS50@76: Due to a configuration change made by your adm
@@ -1471,7 +1466,6 @@ b
 I
 =
 YoHS8AH1 fr8zsuE89X9SGRLYhHEmyLWV f6Wh6wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-Vee OP ot Pp
 ```
 
 ## Slide 67
@@ -1704,9 +1698,7 @@ black hat
 EUROPE 2024
 Exfiltrating Win32 apps through SideCar
 |
-£ | ContosoCorpCustomApp.intunewin — O 8
 Archive Edit View Help
-Ld 4 a
 | | & Open ¥ bo Extract es
 Location:
 Name ¥ Size Type Date Modified
@@ -1821,10 +1813,8 @@ C:\home\kali\Desktop\work\pytune> ff
 ```text
 WA\
 { CO
-¢ y ip ) | ‘ - ,
 EUROPE 20 Cen
 -_
-== Q&A |
 Y @TEMP43487580
 @f2#th--h =-2601a596
 ```

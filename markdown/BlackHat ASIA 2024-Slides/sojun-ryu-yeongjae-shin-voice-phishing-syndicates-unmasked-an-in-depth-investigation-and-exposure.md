@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:51:31Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Sojun Ryu & YeongJae Shin-Voice Phishing Syndicates Unmasked An In-Depth Investigation and Exposure.pdf` (77 pages)
 
-
 ## Slide 1
 
 ### Voice Phishing Syndicates Unmasked: An In-Depth Investigation and Exposure **Sojun Ryu(S2W Inc.), Yeongjae Shin(Ex-S2W Inc.)**
@@ -627,15 +626,11 @@ biSekhat 3. Infrastructure — Pole-AntiSp
 ASIA 2024
 SecretCalls MalCalls syncCalls
 Provider B
-— — So SY #-2te/Az}o| 3.0
 AZ Z-Ote|Aupo| 3.0 AAA B-te|Aupo| 3.0 { aes
 No Te NEEDA@ aaa aus
-a) ) iw ) 3.9 5008h+ £
 KaEKS ISIS ke K YT SISS 28 ees o
 HAleIASOH
-er | Beek] ue ee ae =|
 Asmjojg4 2A
-a pl 2. R MOIS at
 P i Amol ZAt wm.
 = - ote|Amto| =a
 AloH SAY YAS O17} OF
@@ -658,7 +653,6 @@ pisek hat
 ASIA 2024
 Am}o|9H 21At E
 - = Ariat
-=a 5 ST
 2OL ~ ANTISPY
 & - OeE|Anpo|
 ATH}O| ZYAE
@@ -725,7 +719,6 @@ Infinigru Corporation2| 4 HH7| >
 BSdH24(0|n}el)
 Infinigru Corporation
 24%
-AOE A bt
 Infinigru Corporation
 1.5%
 2teDream - OFS-045-SOHI BAA BME}
@@ -749,9 +742,7 @@ Aly AlE|Zact
 408 reviews Downloads Rated for 3+ ©
 J
 [Add to wishlist
-im 6 —
 DS d
-<a @a :
 as
 App support *«
 © Website
@@ -934,7 +925,6 @@ C) mins4416
 2)
 black hag 4. SecretCalls — File Structure .
 ASIA 2024
-f__\ [{ 8
 Is
 Resources SecretCal
 iS Libraries (Internal)
@@ -1368,7 +1358,6 @@ ASIA 2024
 Contact
 Sojun: hypen@s2w.inc
 Yeongjae: teaf1001@naver.com
-ee <6 S2W
 @ Safe and Secure World
 ```
 

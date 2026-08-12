@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:10Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Gareth Heyes_CSS The Bomb Inside Your Inbox-WP.pdf` (38 pages)
 
-
 ## Slide 1
 
 # **CSS: the bomb inside your inbox**

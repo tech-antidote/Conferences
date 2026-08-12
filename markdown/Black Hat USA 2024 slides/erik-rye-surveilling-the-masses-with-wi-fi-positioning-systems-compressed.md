@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:01:33Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Erik Rye_Surveilling the Masses with Wi-Fi Positioning Systems_Compressed.pdf` (97 pages)
 
-
 ## Slide 1
 
 Surveilling the Masses with Wi-Fi Positioning Systems
@@ -126,7 +125,6 @@ bisek hat
 USA 2024
 “oS
 oa
-[ooo = | @
 \ 00:11:22:33:44:55|
 ```
 
@@ -165,7 +163,6 @@ bisek hat
 USA 2024
 “oS
 oa
-[ooo = | @
 \ 00:11:22:33:44:55|
 ```
 
@@ -1011,13 +1008,8 @@ Hotspots in major cities
 ```text
 bisek hat
 USA 2024
-a 7 my
-=o ~ = ws . . a8 =
 BSSIDs mE ta, — Hotspots in major
 300 abhiiv - . = a wee cities
-Po 4 . “ay ead ni ro 5
-200 : Au , a ae ae #
-a . oe ae .
 100
 ```
 
@@ -1350,7 +1342,6 @@ USA 2024
 SPACE XK Remediation
 Starlink routers began randomizing BSSIDs on all products April 2024
 & 300,000
-D ee eee
 ”
 jaa)
 as,
@@ -1366,10 +1357,6 @@ ie)
 i)
 O
 0
-a J a ve wv
-O a) oO ce) S
-> R a ® »
-9 9 9 8 >
 ```
 
 ## Slide 90

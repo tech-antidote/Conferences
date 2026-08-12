@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:58Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Yisroel Mirsky&Shir Rozenfeld&Gilad Gressel&Rahul Pankajakshan_Rules for Neural Traffic A New Defensive Layer for LLMs.pdf` (52 pages)
 
-
 ## Slide 1
 
 **Principal Investigator:** Yisroel Mirsky **Speakers** : Gilad Gressel, Shir Rozenfeld, **Contributor** : Rahul Pankajakshan
@@ -528,43 +527,6 @@ t
 ## Slide 37
 
 **GAVEL is Efficient**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-GAVEL is Efficient
-Generation vs. Classification Time per Token
-°
-°
-N
-a
-a
-nl
-<
-fe)
-rs)
-o
-2
-c
-o
-x
-°
-2
-L
-©
-a
-a
-£
-i
-°
-ro)
-e
-°
-@mm_ Generation
-Classification
-100
-Sample Index
-```
 
 ## Slide 38
 
@@ -1076,7 +1038,6 @@ making threat
 ```text
 bisek hat
 WaA-ele&
-= — See ee ao
 Takeaways:
 = GAVEL makes low-level Al security easy
 — You don’t need a PhD for Al security!
@@ -1086,7 +1047,6 @@ Takeaways:
 — Choose an initial use case |
 — Join our community! a
 “ ‘ey : tinal te
-x paren =: t , =*
 ```
 
 ## Slide 52

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:13:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bill Swearingen - noRecognition Could a pattern on your clothing fool Facial Facial Recognition - hevnsnt.pdf` (39 pages)
 
-
 ## Slide 1
 
 ##### **noRECOGNITION**
@@ -108,10 +107,7 @@ Bill Swearingen — ex-CISO, ex-red-team lead, founder of SecKC. CISSP · CISM �
 
 ```text
 => |
-a ° Re
 The'World S largest month
-f . Be =
-v a -
 iyi
 a
 ckgr mecnp
@@ -519,7 +515,6 @@ CLEAN VERSUS PATTERN, WITH A SOLID-BLACK CONTROL
 THE ODAY SLIDE
 P1 (YOLOv8n) P2 (YOLOv5s) = P3 (SSD-MobileNet) P4 (ResNet34-SSD)
 Fl (SCRFD) F2 (MTCNN) F4 (RetinaFace-R50)
-| (> 2 9
 11/11 DEFEATED
 ```
 

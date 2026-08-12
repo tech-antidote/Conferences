@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:58Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Rocky Bernstein-How to Get the Most Out of the Python Decompilers Uncompyle6 and Decompyle3 - How to Write and Read a Bytecode Decompiler.pdf` (110 pages)
 
-
 ## Slide 1
 
 # **BlackHat Asia 2024 / rocky@gnu.org**
@@ -1270,11 +1269,8 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-: awn. ,
 —
 < INTERMISSION?
-. = .- a
-ww Yr whe
 Se
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 ```

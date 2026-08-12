@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:16:35Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Dan Petro & David Vargas _ Badge of Shame Breaking into Secure Facilities with OSDP.pdf` (168 pages)
 
-
 ## Slide 1
 
 # **Badge of Shame**
@@ -209,7 +208,6 @@ Reader
 RFID Badge Setup
 OS0P —]
 a =
-| O een — /
 Superv.sed Control le (
 Reader — eyice
 ? rotocol
@@ -354,7 +352,6 @@ L E T ' S J U S T T A K E A L O O K
 The Protocol
 RS-UGG (the ater serial)
 S
->} “| ~/NY OS
 Reader Reader Readc r ( onteller
 © Bishop Fox. All rights reserved worldwide. ys
 ```
@@ -565,7 +562,6 @@ S E Q U E N C E N U M B E R
 ```text
 How Many Bits is Enough?
 LY SS pts ~ Cryete arephic
-od re ath
 b& pits? Edge of Enumelatian
 2 y-bts? —Finé, mey re
 ```
@@ -889,7 +885,6 @@ T H E R E ' S A L W A Y S O N E . . .
 ```text
 S ALWAYS O
 Me no speak AES
-a a —— an) a 7
 asDe_ Ree aSDe_ Ree ___
 Controller
 Omni CNY OV\ Omni (AT; OV

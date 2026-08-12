@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:29:26Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Gabriel Landau_Smoke and Mirrors Driver Signatures Are Optional.pdf` (58 pages)
 
-
 ## Slide 1
 
 REcon Montreal 2024
@@ -524,11 +523,9 @@ Large list of catalogs.  CI loads them into kernel pool for fast lookup.
 ```text
 Authenticode - Security Catalogs
 Large list of catalogs. CI loads them into kernel pool for fast lookup.
-| es Fy > | {F750E6C3-38EE-11D1-85E5-00C04FC295EE} _ Oo x
 mo) LS}
 iF} Home Share View a &
 1H i's iv) LE
-¢ & | Y. Cut  ¢ E co | "lis New item + BB Open -+ Select all |
 Copy path = Bi Easy access ~ Be eait HE Select none
 Pinto Quick Copy Paste Move Copy Delete Rename New Properties =
 eres Gi Paste shortcut = tg <0 = Fontes = Be History i invert selection
@@ -868,7 +865,6 @@ I_MapAndSizeDataFile is the legacy vulnerable code.
 SectionHandle,
 ; ' (HANDLE) OxFFFFFFFFFFFF FFFFLL,
 BaseAddress,
-y hel ,
 I
 ! L
 v1l2 = FileHandle;
@@ -876,7 +872,6 @@ goto LABEL _ 16;
 4
 I
 OLD anb BUSTED
-bs > 17 = 5 —*> eo
 0004CC04\ I MapAndSizeDataFile:83 (1C004DC04)
 ```
 
@@ -894,7 +889,6 @@ bs > 17 = 5 —*> eo
 Inside The Mitigation
 CipMapAndSizeDataFileWithMDL contains the fix.
 v13 = ZwCreateSection(&SectionHandle, SECTION_MAP_READ,
-if ( v13 >= @ )
 {
 v13 = ZwiapViewOfSection(
 SectionHandle,
@@ -907,8 +901,6 @@ ois4,
 ViewShare,
 a,
 2u)5
-if ( v13 >= @ )
-if ( ale )
 {
 if ( ViewSize > @xFFFFEFFF )
 {
@@ -917,7 +909,6 @@ goto LABEL_16;
 Mdl = IoAllocateMdl(*v12, ViewSize, @, @, @i64);
 v1i5 = Mdl;
 if ( IMdl )
-{ New t
 vi3 = -1073741676;
 goto LABEL_16;
 4

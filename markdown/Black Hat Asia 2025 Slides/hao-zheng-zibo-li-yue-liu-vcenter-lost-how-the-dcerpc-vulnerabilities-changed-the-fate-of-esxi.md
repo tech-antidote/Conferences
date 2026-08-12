@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:04:33Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hao Zheng & Zibo Li & Yue Liu_vCenter Lost How the DCERPC Vulnerabilities Changed the Fate of ESXi.pdf` (57 pages)
 
-
 ## Slide 1
 
 ### vCenter Lost
@@ -242,7 +241,6 @@ rpc_cn_packet_p t resp_header :
 unsigned32 header_size :
 unsigned32 auth len Alter Context Request
 rpc_cn_sec_ a sec_context :
-: ! ® i
 boolean old_client ‘Alter Context Response;
 unsigned32 st
 [Optional] Unbind Request
@@ -510,11 +508,9 @@ Practical implementation
 if ( upper - range_list->lower > *Z_values )
 LABEL_52:
 dcethread_exc_raise(&rpc_x_invalid_bound, "../dcerpc/idl_lib/ndrui.c", @x47Cu);
-11 = 1LL;
 while ( v7 > (unsigned int)vi11 )
 {
 12 = range_list[v1ll].upper - range_list[vi1].lower;
-if ( vi2 > Z_values[vli++] )
 goto LABEL_52;
 }
 Soseeee Overflow!!!
@@ -606,7 +602,6 @@ ASIA 2025
 CVE-2024-38813
 If port binding succeeds, drop privileges(setgid, setuid)
 v32 = setgid(v28->pw_gid);
-if ( v32 )
 {
 33 = strerror(v32);
 vmDirLogi(VMDIR_ LOG_ERROR, OxFFFFFFFF, “setgid failed: %s", v33)3
@@ -619,7 +614,6 @@ ppLda = >pw_uid;
 v34_ = getuid();
 VmDirLog1(VMDIR_ LOG_INFO, OxFFFFFFFF, “Modifying uid from %d to %d", v34, ppLlda);
 v35 = setuid(v28->pw_uid);
-if ( !v35 )
 goto LABEL_210;
 36 = strerror(v35);
 VmDirLog1(VMDIR_LOG_ERROR, @xFFFFFFFF, "setuid failed: %s", v36)3
@@ -640,7 +634,6 @@ bisek hat
 ASIA 2025
 CVE-2024-38813
 (32 = setgid(v28->pw_gid);
-if ( v32 )
 {
 33 = strerror(v32)3
 VmDirLog1i(VMDIR_LOG_ERROR, @xFFFFFFFF, “setgid failed: %s", v33)3
@@ -657,7 +650,6 @@ ppLda = v28->pw_uid;
 34 = getuid();
 VmDirLog1(VMDIR_LOG_INFO, @xFFFFFFFF, “Modifying uid from %d to %d", v34, pplda)3;
 35 = setuid(v28->pw_uid) ;
-if ( !v35 )
 goto LABEL_210;
 36 = strerror(v35);
 VmDirLog1(VMDIR_LOG_ERROR, @xFFFFFFFF, “setuid failed: %s", v36);
@@ -786,9 +778,7 @@ Thread 1 Thread 2 Thread 3 …… Thread 18 Thread 19
 bisek hat
 ASIA 2025
 Heap grooming
-if ( !fbp )
 fbp = rpc__cn_fragbuf_alloc(1u);
-if ( fbp->data_size <= 9 )
 {
 frag length = @;
 vS = fbp->max_data_size - fbp->data_size;

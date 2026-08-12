@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:06Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kasimir Schulz & Tom Bonner_We R in a Right Pickle With All These Insecure Serialization Formats.pdf` (43 pages)
 
-
 ## Slide 1
 
 We R in a right pickle with all these insecure serialization formats
@@ -473,25 +472,6 @@ Instruction('short_binunicode', 'self'), Instruction('tuple2', None), Instructio
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ad
-0
-i
-mw
-0
-a
-fe
-T
-WN
-O
-WN
-<{
-ep)
-=)
-```
-
 ## Slide 25
 
 ## Why R(DS)?
@@ -625,7 +605,6 @@ But how did we use the instructions to make our exploit?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ » 4 ws
 black hat | )
 USA 2024 ,
 Crafting the Exploit
@@ -782,7 +761,6 @@ eval(parse(file.path(system.file('scripts','aerolineas.txt', package = 'datos'))
 delayedAssign('aeropuertos',
 eval(parse(file.path(system.file('scripts', 'aeropuertos.txt', package = ‘'datos')))))
 delayedAssign('atmosfera',
-ou B&B WN FR
 eval(parse(file.path(system. file('scripts', 'atmosfera.txt', package = 'datos')))))
 ```
 
@@ -804,10 +782,8 @@ delayedAssign in Packages
 main ial Sere
 36 it (“tactor™ %in% class(cl)) +
 Q Gotofile t 37 lv <- levels(cl)
-38 for (i in seq_along(from)) {
 39 Wy == from[il] <- tolil
 v scripts 40 }
-| B , A 41 levels(cl) <- lv
 aerolineas.tx a2 yess {
 (} aeropuertos.txt 43 for (i in seq_along(from)) cl{cl == from[i]] <- to[i]
 44 }

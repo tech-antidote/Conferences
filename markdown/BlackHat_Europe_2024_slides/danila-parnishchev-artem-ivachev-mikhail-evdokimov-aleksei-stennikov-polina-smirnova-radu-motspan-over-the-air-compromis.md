@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:12Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Danila Parnishchev & Artem Ivachev & Mikhail Evdokimov & Aleksei Stennikov & Polina Smirnova & Radu Motspan_Over the Air Compromise of Modern Volkswagen Group Vehicles.pdf` (77 pages)
 
-
 ## Slide 1
 
 ## Over the Air Compromise of Modern Volkswagen Group Vehicles

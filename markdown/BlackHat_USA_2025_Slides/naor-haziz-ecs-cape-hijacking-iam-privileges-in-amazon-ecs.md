@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:07Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Naor Haziz_ECS-cape – Hijacking IAM Privileges in Amazon ECS.pdf` (129 pages)
 
-
 ## Slide 1
 
 **Expanding Privileges in the Cloud:**
@@ -67,18 +66,6 @@ ECSca pe in Amazon ECS
 ## Slide 3
 
 **#BHUSA @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-—
-%
-=
-'
-fy
-\
-\ #BHUSA @BlackHatEvents
-```
 
 ## Slide 4
 
@@ -1242,7 +1229,6 @@ IF) arn:aws:ecs:us-east-2:746147082083:cluster/e ©) Active © Default 1
 cscape
 Services Tasks
 Draining Active Pending Running
-- 3 - 3
 Services Tasks Infrastructure Metrics Scheduled tasks Configuration Tags
 Tasks (3) ©) Manage tags Run new task
 Filter desired status ————__ Filter launch type

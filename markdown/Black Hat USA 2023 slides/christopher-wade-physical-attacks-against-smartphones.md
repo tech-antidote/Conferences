@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:35Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Christopher Wade_Physical Attacks Against Smartphones.pdf` (69 pages)
 
-
 ## Slide 1
 
 # Physical Attacks Against Smartphones

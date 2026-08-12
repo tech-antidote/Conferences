@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:16:03Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Fabien Guillebot, Stepan Konicek - High Voltage Heist Turning Your EV into my Power Bank - EVintomy Pow.pdf` (33 pages)
 
-
 ## Slide 1
 
 ###### **DEFCON**

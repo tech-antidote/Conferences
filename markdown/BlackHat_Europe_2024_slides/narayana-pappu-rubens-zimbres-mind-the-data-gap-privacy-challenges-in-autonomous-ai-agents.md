@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:50:44Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Narayana Pappu & Rubens Zimbres_Mind the Data Gap Privacy Challenges in Autonomous AI Agents.pdf` (22 pages)
 
-
 ## Slide 1
 
 # Mind the Data Gap: Privacy Challenges in Autonomous AI Agents
@@ -35,7 +34,6 @@ Speakers: Narayana Pappu, Rubens Zimbres
 ```text
 *
 Pee
-» ‘ 3
 EWROPE 2C ~
 ‘DECEMBER 11-12, 2024 ; S I
 IEFINGS | eS 2
@@ -523,11 +521,9 @@ Narayana Pappu: npappu@zendata.xyz
 Rubens Zimbres: rzimbres@zendata.xyz
 —
 #BHEU
-7 iA \
 Aun
 ba
 7 ae
-—_— =< — = we
 * \
 @BlackHatEvents
 ```

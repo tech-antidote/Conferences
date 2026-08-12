@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:17:33Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/John Miller & Ron Graf_What Does an LLM-Powered Threat Intelligence Program Look Like.pdf` (27 pages)
 
-
 ## Slide 1
 
 # What Does an LLM-Powered Threat Intelligence Program Look Like?
@@ -67,7 +66,6 @@ A.l. is a $1 trillion investment
 opportunity but will be ‘biggest How Restaurants Can Use Al Technology
 bubble of all time,’ CEO predicts to Reduce Labor Costs, Improve Efficiency,
 Pints wow. 7202s aN aot , and Increase Customer Satisfaction
-' Sa see aS — ,
 How Unilever Is Transforming Ice Cream With
 Al
 Da Corrine How Al and Geospatial Technologies Gan Make a

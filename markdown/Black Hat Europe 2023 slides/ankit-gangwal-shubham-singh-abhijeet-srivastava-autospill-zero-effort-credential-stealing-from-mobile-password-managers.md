@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:08Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ankit Gangwal, Shubham Singh, Abhijeet Srivastava_ AutoSpill Zero Effort Credential Stealing from Mobile Password Managers.pdf` (66 pages)
 
-
 ## Slide 1
 
 AutoSpill Zero Effort Credential Stealing from Mobile Password Managers
@@ -219,7 +218,6 @@ The big shift - Oh my!
 pif hat
 EUROPE 2023
 ‘BeSB<O
-© B aH:
 ORPBAOLZ
 SG=@O@AQD
 ©@6e@G4
@@ -253,12 +251,6 @@ EUROPE 2023
 The big shift - Oh my!
 pif hat
 SseG@ gs
-¢€e¢g g| 0S ©
-Ce 2 i
-a) i ¢ & &
-© # ( A Ss
-®) @Z ‘4 3 oo.
-Ow vy BF awn
 BOO@OW asd
 GP?BSday tego
 \
@@ -510,22 +502,6 @@ Empower an app to render web content within itself Prevents redirection to main 
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ok
-Y)
-O
-—
-=)
-<<
-ion
-Cc
-pifechat
-EWIROPE 20
-31
-```
-
 ## Slide 32
 
 # AutoSpill
@@ -762,7 +738,6 @@ Created a custom autofill service Information exchanged during autofill ceremony
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-€ . oo.
 blackhat = AutoSpill - Investigation
 Created a custom autofill service
 Information exchanged during autofill ceremony
@@ -930,7 +905,6 @@ ChildrenCount: 2 o*
 AutoFillld: 1073741826 o”
 WebDomain: m.faceboog Bom
 I L,s*
-¥ Y ¥ ° Y
 1.1.1 Username 1.1.2 Password 1.2.1 Username yw 1.2.2 Password
 AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100
@@ -978,7 +952,6 @@ triggered the request
 LN
 Autofill service
 receives FillRequest
-ene - - - - tee
 Request
 processing: Pass 1
 AutoSpill - Investigation
@@ -999,7 +972,6 @@ AutoSpill - Investigation
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-€ . oo.
 blackhat = AutoSpill - Investigation
 2. Request processing and response from autofill service
 Select next view,
@@ -1033,7 +1005,6 @@ Is null or
 matches
 ueeeee-- LN _oee eee DomainCheckList
 = Start ___
-L JL J
 Y aa
 Request Request
 processing: Pass 1 processing: Pass 2
@@ -1118,7 +1089,6 @@ described in Dataset
 se
 Neeeeee Start. \_.-- Complete. ____
 L J
-Y Y Y
 Request Request Post-processing,
 processing: Pass 1 processing: Pass 2 response
 50
@@ -1290,22 +1260,6 @@ U/P: HA accessed both username and password, stole credential of choice.
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-af
-£
-a)
-O
-oD)
-oO
->
-—)
-EUROPE 202
-pif hat
-58
-```
-
 ## Slide 59
 
 # Countermeasures
@@ -1321,15 +1275,12 @@ Q
 blackhat Countermeasures
 PASSWORD
 MANAGERS
-I TO ee ee 1
 Vv Vv
 1 1.1 NativeView 1.2 WebView 1
 ChildrenCount: 2 ChildrenCount: 2
 ' AutoFillld: 1073741829 AutoFillld: 1073741826 '
 H WebDomain: null WebDomain: m.facebook.com i
 t 1
-| | | !
-v v v v
 1.1.1 Username 1.1.2 Password 1.2.1 Username 1.2.2 Password
 AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100
@@ -1365,8 +1316,6 @@ ChildrenCount: 2 ChildrenCount: 2
 ' AutoFillld: 1073741829 AutoFillld: 1073741826 '
 H WebDomain: null WebDomain: m.facebook.com i
 t 1
-| | | !
-v v v v
 1.1.1 Username 1.1.2 Password 1.2.1 Username 1.2.2 Password
 AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100

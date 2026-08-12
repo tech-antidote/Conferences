@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:18:34Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/t0xodile&mastersplinter_CRLF-Powered Desync Attacks Beheading HTTP Streams.pdf` (111 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:13:38Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Alex Radocea, Jaron Bradley - Keychained Melody - Grabbing the Keys to the iCloud Kingdom.pdf` (31 pages)
 
-
 ## Slide 1
 
 Keychained Melody

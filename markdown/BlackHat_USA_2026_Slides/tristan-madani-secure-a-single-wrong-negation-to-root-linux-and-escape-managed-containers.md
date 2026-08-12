@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:17:17Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Tristan Madani_!secure A Single Wrong Negation to Root Linux and Escape Managed Containers.pdf` (73 pages)
 
-
 ## Slide 1
 
 Information Classification: General
@@ -234,7 +233,6 @@ chains, sets, rules batch commit/abort verdict, dynset, .
 Netfilter Hooks (packet path)
 INPUT / OUTPUT / FORWARD / PREROUTING / POSTROUTING
 Docker, Kubernetes, iptables-nft, firewalld — every container uses this
-\ y )
 Key Facts
 Default on Ubuntu, Debian,
 Fedora, RHEL, SUSE, Arch
@@ -532,7 +530,6 @@ Information Classification: General
 ```text
 THE UAF TIMELINE
 Exploit Pipeline - From Bug to Code Execution
-‘ f +) (
 1. Setup 2. Trigger 3. Free 4. Reclaim 5. ROOT
 nft_table tl Netlink batch: DELCHAIN "victim" Heap spray: TCP connect()
 chain "victim" DELSET(s1) use==0 = allowed! table userdata nft_do_ chain
@@ -1664,7 +1661,6 @@ Bletsch et al. — ASIACCS 2011
 Foundation for forward-edge code reuse (COP builds
 COOP: Counterfeit Object-Oriented Programming
 Schuster et al. — IEEE S&P 2015
-j CFI; CO
 DirtyCred: Escalating Privilege in Linux Kernel
 Zhenpeng Lin et al. — ACM CCS 2022
 Credential swapping via UAF — alternative to our CO

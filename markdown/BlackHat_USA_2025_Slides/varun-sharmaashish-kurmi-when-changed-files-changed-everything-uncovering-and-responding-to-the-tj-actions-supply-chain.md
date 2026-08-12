@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:02:39Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Varun Sharma&Ashish Kurmi_When 'Changed Files' Changed Everything Uncovering and Responding to the tj-actions Supply Chain Breach_WP.pdf` (12 pages)
 
-
 ## Slide 1
 
 4/1/25, 11:31 PM

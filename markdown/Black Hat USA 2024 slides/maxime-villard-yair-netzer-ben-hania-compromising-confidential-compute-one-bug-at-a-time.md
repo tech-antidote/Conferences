@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:41Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maxime Villard & Yair Netzer & Ben Hania_Compromising Confidential Compute, One Bug at a Time.pdf` (93 pages)
 
-
 ## Slide 1
 
 # Compromising Confidential Compute

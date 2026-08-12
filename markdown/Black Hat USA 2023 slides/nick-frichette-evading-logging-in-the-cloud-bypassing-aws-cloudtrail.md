@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:45:32Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nick Frichette_Evading Logging in the Cloud Bypassing AWS CloudTrail.pdf` (46 pages)
 
-
 ## Slide 1
 
 **Evading Logging in the** TItitltet **Cloud: B** **yp assin** **g AWS** **CloudTrail**
@@ -474,7 +473,6 @@ Request URL: https://us-east-1.console.aws.amazon.com/iamv2/api/iamadmin
 Request Method: POST
 Status Code: @200
 Remote Address: 3.3.9.1:443
-U U 1. U a ’
 "operation": "ListAccessKeysForMultipleUsers",
 "contentString":"{\"UserNames\": [\"user1\", \"user2\",\"user3\"] }"
 ```
@@ -801,8 +799,6 @@ Only 1 event showing in CloudTrail
 ```text
 Q nick. frichette@COMP-VX7FJ4QQHG /tmp % aws ivs list-channels \
 t i | I + > --region ap-northeast-1
-: = {
-y — |
 "channels": [
 {
 "arn": "arn:aws:ivs:ap-northeast-1: :channel/rra94t9j3bsE",
@@ -879,7 +875,6 @@ aws242-servicecatalog .uS-east-1.amazonaws.com
 ```text
 Automate Bypass Discovery ~
 SQs:
-; . SQS: :
 Certspotter CloudTrail Lambda: certspotter ASG: AWS
 EC2 Ingester Bypass Aan ec2 scaleout oF
 Potential Identifier Fingerprinter

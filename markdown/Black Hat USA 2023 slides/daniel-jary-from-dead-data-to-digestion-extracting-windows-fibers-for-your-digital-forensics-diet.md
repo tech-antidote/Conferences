@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:07Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Jary_From Dead Data to Digestion Extracting Windows Fibers for Your Digital Forensics Diet.pdf` (33 pages)
 
-
 ## Slide 1
 
 # From Dead Data to Digestion
@@ -228,7 +227,6 @@ Why are fibers appealing to attackers?
 ‘ 1
 1 Q?
 oO 1
-» 4 )
 v Vv
 Simplicity Obscure & niche Immature detection capability
 Easy to use API Threat hunters unlikely to be No Driver supplied callbacks

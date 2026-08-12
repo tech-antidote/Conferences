@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:11:28Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Elliott Grey_Hacking Your Documentation Who Should WTFM.pdf` (22 pages)
 
-
 ## Slide 1
 
 #BHEU @BlackHatEvents
@@ -46,9 +45,6 @@ EXCEL LONDON / UK
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-.?* f 3 .. — Pa we
-° é ye Saas " SS ‘oe. af +
-6 eo ia bs i
 ° “38
 black hat
 L_JFA ) oli
@@ -256,7 +252,6 @@ U (Showing top nine responses)
 Le
 Too many | experience overwork due My team has inadequate resources
 emails/tasks to staff or skill shortages to sufficiently protect the organization
-f 31% ] f 30% } f 25% }
 Information Classification: General
 ```
 

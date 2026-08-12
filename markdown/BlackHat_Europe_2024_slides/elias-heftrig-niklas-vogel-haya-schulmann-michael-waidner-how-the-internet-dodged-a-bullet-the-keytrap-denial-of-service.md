@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:49:46Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Elias Heftrig & Niklas Vogel & Haya Schulmann & Michael Waidner_How the Internet Dodged a Bullet The KeyTrap Denial-of-Service Attacks against DNSSEC.pdf` (73 pages)
 
-
 ## Slide 1
 
 How the Internet Dodged a Bullet: The KeyTrap Denial-of-Service Attacks against DNSSEC Speaker(s): **<u>Elias Heftrig, Niklas Vogel</u>** Contributors:
@@ -43,7 +42,6 @@ WA\ |
 { CO
 . Wibax t A No
 EWROPE 2024.
-“ : hab
 YS y
 Refresher: DNS
 and DNSSEC
@@ -432,7 +430,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a | =
 blackhat A Closer Look at Signature Validation.
 EUROPE 2024
 However, it is essential to note that the key tag is not a
@@ -626,10 +623,7 @@ User Datagram Header Format
 Not many restrictions in the DNS protocol
 Information Classification: General
 1131111
-®123 45 678 9 @1 2 3 4 5
-. oe ee ee oe ee oe ee ee ee a an a a a
 ID
-oe oe en ee ee en a an a ee oe ee ea Sara o
 |QR|  Opcode |AA|TC|RD|RA] Z | RCODE
 Ha wtootontoctoctactontootoctoctectectoctectoectent
 | QDCOUNT
@@ -898,7 +892,6 @@ Test 1: SigJam (Many Signatures / 1 Key)
 10 req/s
 ee a) =<» DNS Resolver
 re)
-fl -- 6
 —_—/(—
 ‘@)
 Information Classification: General
@@ -1189,7 +1182,6 @@ Information Classification: General
 pistxhat Global Impact
 EUROPE 2024
 ag
-” 0 100
 Code Region DNSSEC Validates Partial Validates Total Validates
 XA World 33.67% 8.02% 41.69%
 XF Oceania 44.95% 3.80% 48.75%
@@ -1255,14 +1247,7 @@ Attack Simulation
 <
 wn
 br 100 plan atime pete atapapnt a. fh JOP eter M el BA an reply inl a a hk
-£ Lost Packets / | ry | ew \/ "| [" ) ny
-& 75 | | LI H
-fo | | |
-= 50 | |
-i 25 | |
 °
-a] | | |
-> (e) ; | . , | . | :
 O 0 20 40 60 80 100 120 140 160
 Time [s]
 Information Classification: General 1

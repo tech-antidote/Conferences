@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:29:11Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Erwan Grelet_Seeing Through Themida's Code Mutation .pdf` (61 pages)
 
-
 ## Slide 1
 
 # **Seeing Through Themida’s Code Mutation**

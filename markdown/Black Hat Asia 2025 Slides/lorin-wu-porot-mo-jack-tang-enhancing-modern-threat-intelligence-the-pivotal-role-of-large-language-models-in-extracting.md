@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:06:02Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Lorin Wu & Porot Mo & Jack Tang_Enhancing Modern Threat Intelligence The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains.pdf` (37 pages)
 
-
 ## Slide 1
 
 Enhancing Modern Threat Intelligence The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains

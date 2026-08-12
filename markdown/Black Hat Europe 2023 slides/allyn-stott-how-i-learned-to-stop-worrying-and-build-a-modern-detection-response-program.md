@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:24Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Allyn Stott_How I Learned to Stop Worrying and Build a Modern Detection & Response Program.pdf` (70 pages)
 
-
 ## Slide 1
 
 # How I Learned to Stop Worrying and ~~Love~~ Build a Modern Detection & Response Program

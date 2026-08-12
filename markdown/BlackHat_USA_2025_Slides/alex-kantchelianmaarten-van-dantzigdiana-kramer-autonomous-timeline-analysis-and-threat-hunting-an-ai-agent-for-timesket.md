@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:12Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Kantchelian&Maarten van Dantzig&Diana Kramer_Autonomous Timeline Analysis and Threat Hunting An AI Agent for Timesketch.pdf` (66 pages)
 
-
 ## Slide 1
 
 Autonomous Timeline Analysis and Threat Hunting AI Log Reasoning Capability in Timesketch
@@ -228,7 +227,6 @@ ago)
 This activity was detected as originating from IP 34.65.13.175 and VM ID
 5406509864760928785:europe-west6-a to destination IP 34.149.22.228 on remote port 9200 between
 2023-10-02T03:00:00.000Z and 2023-10-02T08:00:00.000Z (UTC), though it may still be ongoing.
-*% © 4
 © __) [1] Fetch relevant logs
 4
 ’
@@ -414,7 +412,6 @@ TODAY LAST7DAYS LAST 30 DAYS LAST 90 DAYS ~—LAST 1 YEAR
 2023-10-02T03:00:00.000Z 2023-10-02T08:00:00.000Z
 October 2023
 MON OCT 2
-03» : 00
 MON OCT 2
 08 00
 CANCEL ADD FILTER

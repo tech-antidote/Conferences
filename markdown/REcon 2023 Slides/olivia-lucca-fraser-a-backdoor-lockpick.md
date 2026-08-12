@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:27:50Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Olivia Lucca Fraser_A Backdoor Lockpick.pdf` (144 pages)
 
-
 ## Slide 1
 
 ## **A Backdoor Lockpick Reversing & Subverting Phicomm’s Backdoor Protocol**
@@ -50,13 +49,9 @@ Introducing the Wavlink AC1200
 es
 6.8in 7
 k
-bf a w
 i 6.6in >\
-x — —_
 ce =
 1.2in Se eS a
-: > 06
-de ~~ > Ye
 6.6in
 ——>| Otenable
 ```
@@ -143,7 +138,6 @@ Otenable
 ```text
 Introducing the Waviink AC1200
 Introducing the Phicomm K2G Al!
-- — ——— Se
 “ ©tenable
 ```
 
@@ -203,9 +197,7 @@ Connected to 192.168.2.1.
 Escape character is **]'.
 BusyBox v1.22.1 (2018-05-07 16:22:00 CST) built-in shell (ash)
 Enter ‘help’ for a List of built-in commands.
-ON Oe Dn) an Vv Ms 7 1 ee eee es
 Vie pene VAR! fd 4 FAST NS LASTS Fee
-5 Ae a te td fm oy BE Ey AN TAB 9 Ow Jest
 Barrier Breaker, unknown
 PID=K2GA1
 BUILD_TYPE=release
@@ -217,7 +209,6 @@ benchmark : APSoC SDK 5.0.1.0
 kernel : 144992
 root@K2G:/ww/cgi-bin# fj
 = ~
-- . .
 ©Otenable
 ```
 
@@ -245,10 +236,6 @@ udp (1) @ :::53 be 5850/dnsmasq
 udp ts) @ st: 5a52 Se 6020/miniupnpd
 root@K2G:/ww/cgi-bin# fj
 —— —N_
-i — ae We
-a a a 4 TS Oss ——
-ae 2 é . DSSS : — = —
-2 = —— s >_- e OL ST —— <= SE eo
 —< OO SS — tenable
 ```
 
@@ -277,7 +264,6 @@ udp (1) @ st: Sa54 ace 6020/miniupnpd
 root@K2G:/ww/cgi-bin# fj
 ———
 SS
-= SS >.
 > =.
 SS
 ```
@@ -349,7 +335,6 @@ READ TELNETD flag: Out of scope
 iwpriv raQ e2p 26=FFFF
 telnetd default on —
 telnetd default off
-=e = > Ni —- ———- 7 HLS! iavle
 ```
 
 ## Slide 18
@@ -386,7 +371,6 @@ F688D0393241898C1FQ@5A6D500C7066298CEBAZEF31QFEDBZE7AF52829E9F 858691
 4580 iwpriv raQ@ e2p 26=FFFF
 45a@ telnetd default on —
 45b4 telnetd default off
-——e = >» <u > 7 WLS iavle
 ```
 
 ## Slide 19
@@ -422,7 +406,6 @@ SS 4538 telnetd -1 /bin/login.sh
 ~ 4580 iwpriv raQ e2p 26=FFFF
 45aQ@ telnetd default on —
 ~~ 45b4 telnetd default off
-es — ™ Ne So a> HLS! iavle
 ```
 
 ## Slide 20
@@ -461,7 +444,6 @@ F688D0393241898C1FQ@5A6D500C7066298CEBAZEF310F6DBZE 7AF52829E9F 858691
 3F5E7AOBCD/724AFA7063CA7
 F3C6650CDB4590C1208B91
 ==
-— — » xe > a> WLS iavle
 ```
 
 ## Slide 21
@@ -498,11 +480,9 @@ F688D0393241898C1FQ@5A6D500C7066298CEBAZEF310F6DBZE 7AF52829E9F 858691
 4580 iwpriv raQ@ e2p 26=FFFF
 45a@ telnetd default on
 45b4 telnetd default off
-~ - — - - - -
 3F5E7AOBCD/724AFA7063CA7
 F3C6650CDB4590C1208B91
 —
-eS ~ - ™ \_ —S—— a wy tel iavle
 ```
 
 ## Slide 22
@@ -514,13 +494,11 @@ eS ~ - ™ \_ —S—— a wy tel iavle
 ```text
 The Main State Machine of the teInetd_startup Service eine mews
 if (
-41 = 1) {
 = FUN_00401518( 3
 if ( != 2) goto code_r0x00401e3c;
 }
 if (DAT_od O== 2) {
 = FUN_0401518(
-if ( 24
 memset (&
 memcpy (& 4 TDOWN.
 memset (
@@ -534,7 +512,6 @@ break;
 $
 if (DAT_0¢ @ != 0) goto LAB_00401af0;
 = FUN_0401518( 1205
-if ( t= 2) {
 memset (SDAT_0¢
 memcpy (& 1041 ,
 = FUN_0040175c();
@@ -568,7 +545,6 @@ if ( != 2) goto code_r0x00401e3c;
 Lizse
 We begin in state 2... sea ee es
 = FUN_00401518(
-if ( 24
 memset (&
 memcpy (& 4 TDOWN,
 memset (
@@ -582,7 +558,6 @@ break;
 $
 if (DAT_0¢ @ != 0) goto LAB_00401af0;
 = FUN_0401518( 1205
-if ( t= 2) {
 memset (SDAT_0¢
 memcpy (& 1041 ,
 = FUN_0040175c();
@@ -617,7 +592,6 @@ at = Saeraisia( 12)3
 != 2) goto code_r0x00401e3c;
 in state 2... 0 =2)4
 FUN_00401518(
-if ( 24
 memset (& e
 memcpy (SDAT_00414
 memset (
@@ -729,7 +703,6 @@ STATE 2
 ```text
 }
 = FUN_00401518( tact ya
-if (i == 2) {
 }
 memset (&DAT_00414ba0,0, 2x80);
 memcpy (&DAT_00414baQ,"K2_COSTDOWN__VER_3.0", 0x14);
@@ -754,7 +727,6 @@ break;
 ```text
 if (DAT_004147e0 == 2) f{
 = FUN_00401518( tacl 2); <
-if (i == 2) {
 memset (&DAT_00414ba0,0, 2x80);
 memcpy (&DAT_00414baQ,"K2_COSTDOWN__VER_3.0", 0x14);
 memset ( tacl ,0,9x58);
@@ -808,37 +780,26 @@ return
 ```text
 int FUN_00401518(void *param_1,int param_2) a checkState(void *payload, int next_state)
 47{
-: 48 int
 int ; 49 int
 int 1 ; 5@ char expec ;
 char *_s2; 51 size_t é ;
 size_t H 52
-53) if (next_state == 1) {
 if (param_2 == 1) { 54\/* dead code */
 = "STTH": 55 x = "STTH";
 =4; 56 =4;
 {
-} 57 }
 else {
 if (param_2 != 2) {
 if (param_2 == 0) {
 58 else {
-59 if (next_state != 2) {
 6@/* dead code */
-. 61 if (next_state == 0) {
 = memcmp(param_1,&DAT_00404294,4); 62 = memcmp (payload, "STSE", 4) ;
 return —( != 0); 63 return —( = Q);
-} 64 }
 puts("checkState error"); 65 puts("checkState error");
 return -2; 66 return -2;
-} 67 }
 = "ABCDEF1234"; 68/* Note that the checkState variable is ALWAYS 2. */
-= 10; 69 x = "ABCDEF1234";
-70 = 10;
 memcmp(param_1, 71
 -1; 72 memcmp (payload,
-== 0) { 73 -1;
-. 74 i 1 == 0) {
 = param_2; 75) = next_state;
 76 +}
 return ; 77, return
@@ -852,7 +813,6 @@ return ; 77, return
 ```text
 }
 = FUN_00401518( tact ya
-if (i == 2) {
 }
 memset (&DAT_00414ba0,0, 2x80);
 memcpy (&DAT_00414baQ,"K2_COSTDOWN__VER_3.0", 0x14);
@@ -877,7 +837,6 @@ break;
 ```text
 }
 = FUN_00401518( tact ya
-if (i == 2) {
 }
 memset (&DAT_00414ba0,0, 2x80);
 memcpy (&DAT_00414baQ,"K2_COSTDOWN__VER_3.0", 0x14);
@@ -958,7 +917,6 @@ return; return;
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c();
@@ -979,7 +937,6 @@ goto LAB_00401e1c;
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c(); <
@@ -1032,7 +989,6 @@ if ( < 0x101) {
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c();
@@ -1053,7 +1009,6 @@ goto LAB_00401e1c;
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c();
@@ -1084,7 +1039,6 @@ trap(7);
 }
 = G&RANDOMLY_GENERATED_PLAINTEXT_at_4149b@ +
 iL +=
-* = % @x5d + Qx21;
 } while (i != 0x1f);
 END_OF_PLAINTEXT = @Q;
 return;
@@ -1098,7 +1052,6 @@ return;
 4 int rsa_encrypt_with_public_key(void)
 5
 6 {
-RSA * ;
 BIGNUM xa;
 int H
 BIGNUM x [3];
@@ -1153,7 +1106,6 @@ Meanwhile...
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c();
@@ -1174,7 +1126,6 @@ goto LAB_00401e1c;
 ```text
 if (DAT_@04147e@ != @) goto LAB_00401afQ;
 = FUN_00401518( »2)3
-if ( '= 2) {
 memset (&DAT_00414af@,0,0x80);
 memcpy (&DAT_00414af@,
 = FUN_0040175c();
@@ -1204,7 +1155,6 @@ byte
 &RANDOMLY_GENERATED_PLAINTEXT_at_4149b@ + i;
 = &XORED_ MSG 00414b80 + i;
 += 1;
-* = * “ x
 } while (i != 0x20);
 return;
 ```
@@ -1245,7 +1195,6 @@ return;
 ```text
 if (STATE != @) goto INCREMENT_FD_INDEX_at_4@1afQ;
 = checkState( »2)3
-if (S != 2) {
 memset (&ENCRYPTED_NONCE,0,0x8Q);
 memcpy (&ENCRYPTED_NONCE,
 = rsa_public_decrypt_nonce();
@@ -1277,14 +1226,11 @@ if (S != 2) goto code_rQ@x00401e3c;
 }
 167\code_r@x@0401e3c:
 168)/* Check ephemeral password */
-169 if ( == Qx10) {
 170 = memcmp( ,&PERM_KEY, @x10);
-171 Lf (S == 0) {
 172 = "iwpriv raQ@ e2p 26=7010";
 173 }
 174 else {
 175 = memcmp( ,»&TEMP_KEY,@x10);
-176 if ((S != @) || (S = is_process_running("phddns"),
 177 = "telnetd -l /bin/login.sh";
 178 }
 179 system ( ys
@@ -1307,14 +1253,11 @@ if (S != 2) goto code_rQ@x00401e3c;
 }
 167\code_r@x@0401e3c:
 168)/* Check ephemeral password */
-169 if ( == Qx10) {
 170 = memcmp( ,&PERM_KEY, @x10);
-171 Lf (S == 0) {
 172 = "iwpriv raQ@ e2p 26=7010";
 173 }
 174 else {
 175 = memcmp( ,»&TEMP_KEY,@x10);
-176 if ((S != @) || (S = is_process_running("phddns"),
 177 = "telnetd -l /bin/login.sh";
 178 }
 179 system ( ys
@@ -1663,7 +1606,6 @@ BN_hex2bn( ,
 63CA754826E8D13DBA18A2359EB54B5BE3368158824EA316A495DDC3059C478B41ABF6B38845 1D38F 3C6650C
 DB4590C1208B91F688D0393241898C1F05A6D500C7066298C6BA2EF310F6DB2E7AF52829E9F858691"
 i;
-—>e = a;
 n= [0];
 memset (&DECRYPTED_NONCE, 0, x20);
 = RSA_size(rsa);
@@ -1768,7 +1710,6 @@ contains printable characters.
 if (false) {
 trap(7);
 = G&RANDOMLY_GENERATED_PLAINTEXT_at_4149b@ +
-i += 1;
 * = @x5d + Qx21;
 } while (i != 0x1f);
 END_OF_PLAINTEXT = @Q;
@@ -2506,7 +2447,6 @@ a
 TeaLA Fue A Bee P88
 SEM: seeking security cont
 PARSER. EMRE
-ARS BS7EIZ PH 1 K 19 Jy
 Chinese (Simplified) x
 English
 Delivery of message to the following recipient or

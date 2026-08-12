@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:11:16Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Eduardo Barbaro, Yury Zhauniarovich, Anna Lukina, Daan Hofman_VoBERT Unstable Log Sequence Anomaly Detection Introducing Vocabulary-Free BERT.pdf` (43 pages)
 
-
 ## Slide 1
 
 ## **VoBERT: Unstable Log Sequence Anomaly Detection Introducing Vocabulary-Free BERT**
@@ -70,15 +69,10 @@ Analysts must “manually” identify attacks
 
 ```text
 Log Sequence Anomaly Detection
-f ~ ‘a
 Username field filled in Username field filled in
-N ) ‘ T
-‘a ¥ ~ (
 Password field filled in Login Succesfull
-N J J y
 Password field filled in
 Login button clicked
-\ J y, ¥
 Login button clicked
 Login Succesfull
 oq x
@@ -98,21 +92,13 @@ oq x
 
 ```text
 Unstable Log Sequence Anomaly Detection
-( ’) ( \ )) c
 Username field filled in _=> Username field populated I Username field filled in
-\ / L ) J \ J
-( ¥ > r ¥ \ a
 Password field filled in Password field populated Login Succesfull
-\ y, a J y, J y,
-( ’ ) ( ) f _ .
 Login button clicked Login button clicked [ Password field filled in
-\ ) \ J J J
-a Y ~ la ~ (
 i Login button clicked
 Login Succesfull Login Succesfull L
 \ y,
 \ }
-QO Y) “
 (c) Normal Log sequence (b) Anomalous Log
 (a) Normal Log sequence with slightly changed log sequence
 messages
@@ -194,8 +180,6 @@ Session Window
 Sequence 1
 Sequence 2
 Sequence 3
-wee eee ee ew ew ee ewe ee ew ew ew ewe ew ew ew ew ew ew ew ew ew ee ew ew ew ew ew ew ew ew ew ee ew ew ew ee eH
-Meee ee ee ee ee eB ee ee ee ee ee ee eB ee ee ee ee ee ee ee ee ee ee ee ee
 11
 ```
 
@@ -449,22 +433,14 @@ Element Level Predictions (VoBERT)
 
 ```text
 Element-Level Prediction
-4 \ \ 6 \ 6 \ >)
 LOGA LOG B LOG C LOG D LOGE
-e J J \ J J \ y
-a i i i i ~
 LOGA LOG B LOG B LOG B LOG B
-X J Ww J J JW S
-—— i a i a i a i a +)
 LOGA LOGA LOGA LOGA LOGE
-\ J J J J y,
 Sequence Level Predictions
 (LogBERT)
 wee eww wee eee wee
 LOG B LOG C LOG D LOGE
-FF 7 ————~ * /——_, ‘
 LOGB LOG . LOG B ‘Los .
-L L a
 ‘Loe A LOG A LOGA LOGE
 Ress ssa sess ee sean naan S
 Element Level Predictions
@@ -486,7 +462,6 @@ Per Element Masking O(n) (VoBERT)
 
 ```text
 Per Element Masking
-Nn----------- eee Ne eee ee ee ee ee ee ee ee ee ee ee
 LoGA| | LocB| (elena!) | Locp| | Loce|! } #Logkeys
 Ratio Masking O(1) Per Element Masking
 (LogBERT) O(n)
@@ -588,8 +563,6 @@ Performance on Sequence Level | TBird
 —e— VoBERT
 —e-— LogBERT
 —e— Unseen Logkey Heuristic
-T T T T
-20 40 60 80 100
 % of normal sequences containing at least one unseen element
 MCC Score
 Performance on Sequence Level | BGL
@@ -598,17 +571,11 @@ Performance on Sequence Level | BGL
 —e— LogBERT
 30 | —e— Unseen Logkey Heuristic
 \
-60 4 \
 e.
 WS
-p ——e, SN
-40 4 ‘e.
 e.
 I ™
-20 4 Ss
 es
-0 T T T T
-0 20 40 60 80
 % of normal sequences containing at least one unseen element
 100
 37
@@ -670,13 +637,9 @@ Data set split
 f )
 Dataset
 \ y,
-(- Y >
 Normal Anomalous
-Y MA y,
-( ; Y~ >
 Train aI Test rest | Dev
 Dev
-Y A y,
 41
 ```
 
@@ -687,61 +650,6 @@ Y A y,
 42
 
 Appendix
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Future Work: n-gram masking
-at
-O
-@
->
-I-
-Oo
-)
-W
-= 'y
-O
-Q@)
-@
-I-
-Oo
-)
-&
-I-
-Oo
-Q@
-m
-New www wm mem em em em ee em ee ee eee ee ee ee ee ee ee ee ee ee ee ee ee ee
-ee
-# log keys
-n
--
-O
-°)
->
-_
-e)
->)
-OO
-——
-_
-)
->)
-O
-Ld)
-——
-T_
-1)
-7)
-1s)
-LC
-TT
-fe)
-)
-Hi
-42
-```
 
 ## Slide 43
 
@@ -760,20 +668,12 @@ Percentage of test sequences containing unseen logkeys | The bank Average percen
 —e— Normal test sequences —e— Normal test sequences
 —e— Abnormal test sequences —e— Abnormal test sequences
 —e— Total test sequences —e— Total test sequences
-80 5 go 4
 a
 F e
 v 605 x 605
 o 2
-“ ” c
-Hi — H
-ES ° a 5 40,
 & &
 eo e
 o ———e e o—"——_
-. WA ey
-° ° ° ~ : : °
-o+—# T T T T T fe) r +, — r r t
-vy) 1 2 3 4 5 ) 1 2 3 4 5
 Data redistribution algorithm iterations Data redistribution algorithm iterations
 ```

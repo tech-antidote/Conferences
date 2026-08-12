@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:08:35Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Dmitry Bestuzhev&Dmitry Melikov_Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics.pdf` (57 pages)
 
-
 ## Slide 1
 
 ###### BRIEFINGS

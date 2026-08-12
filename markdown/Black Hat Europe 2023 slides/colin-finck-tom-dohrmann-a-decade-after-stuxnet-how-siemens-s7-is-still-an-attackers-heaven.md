@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:52Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Colin Finck, Tom Dohrmann_A Decade After Stuxnet How Siemens S7 is Still an Attacker's Heaven.pdf` (59 pages)
 
-
 ## Slide 1
 
 #BHEU @BlackHatEvents
@@ -47,19 +46,9 @@ Colin Finck and Tom Dohrmann
 
 ```text
 « wet ys ‘os 2
-; ye 4 «
 a S
-q y = Pa ” r ¥ Y
-a . ys - a | . <
-~S “ <f e Y .
-‘ - y 5
-a? a ‘
-° = \° ‘
-KS gt 3
-@ ar ) ° \ o
 °
 ° °
-| ) ) )
 { |
 A Decade After Stuxnet:
 How Siemens S77 is Still an

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:40Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Carole House_Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone.pdf` (20 pages)
 
-
 ## Slide 1
 
 # DENY. DISRUPT. DISMANTLE.
@@ -92,24 +91,15 @@ AGAINST SANCTIONS SSS, | ‘iw toons cracRcRiMe | EP ane Panes
 CY BERCRIME REWARDS Ls |__FcosysTeM. || VICTIM HARDENING —_,!
 ECOSYSTEMS A re LONG TIMELINES
 14-i-Fly HoH 1414144: Het--+ c t4-1-1-+
-23 = | : Ppt tN
 DAY 0 MONTHS MONTHS MONTHS YEARS > ( ) ,~< |
 THE REALITY: NETWORKS ADAPT FASTER THAN | CAMPAIGN TIMELINE (EXAMPLE) sa aa
 PUNISHMENT CAN REACH THEM a ie a fb
-~~ © |
-A O aE
 a
-e) 4 4 i —— = "
 AFFILIATES MOVE BETWEEN |] o 3MONTHS 6 MONTHS 9 MONTHS 12 MONTHS :
 BET WORN S MaTEnSE Campaign # Single Operation >
 ees 2 | eae ath pe |
-» ITE — —
 : _—_a
-( oy a
-\ \ ——
 he \\)
-= \" %
-= a? | y
 black hat
 Bo 5
 2026
@@ -580,7 +570,6 @@ FOUNDATIONS.
 SECURE
 TOMORROWS.
 SPEED IS STRATEGY.
-im | J. |
 68 NATIONS. ONE MISSION.
 A GLOBAL FRONT AGAINST RANSOMWARE.
 OUTPACE. OUTADAPT. OUTLAST. black hat

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:21:26Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Moritz Abrell_Zero-Touch-Pwn Abusing Zoom's Zero Touch Provisioning for Remote Attacks on Desk Phones.pdf` (148 pages)
 
-
 ## Slide 1
 
 Zero-Touch-Pwn Abusing Zoom's Zero Touch Provisioning for Remote Attacks on Desk Phones
@@ -256,7 +255,6 @@ Source: https://support.zoom.us/hc/en-us/sections/4413424119565-Provisioning-Des
 black hat
 USA 2&0e253
 @ Provisioning DeskPhone: x | + v -
-€ C _@ support.zoom.us/hc/en-us/sections/4413424119565-Provisioning-Desk-Phones-and-Device <* oO
 Zoom Support Products — Solutions Resources Plans & Pricing Joiny Hosty Signin
 Product Support» Supportby Topic~ MoreSupport~ Contact Support Q Search
 Zoom Support > em Support > Settings and Configuration for Zoom Phone > Provisioning Desk Phones and Devices
@@ -706,7 +704,6 @@ Content-Type: text/plain: charset=utf-&
 5 Date: Fri, 13 Jan 2023 @7:58:082 GMT
 6 Location: https:/ 2] firmware.
 7 Request-Context: appId= cid- v1: 229bb6bd -@4d7 -408d-b225-c6e440T5c51b
-Lu Ao -
 fos
 ‘ini
 ```
@@ -933,8 +930,6 @@ Source: https://www.audiocodes.com/library/firmware
 ```text
 bisek hat
 USA 20es3
-fs Firmware x | =F Fs = a
-<€ Cf audiocodes.com/library/firmware & << * OF &
 IP Phone Software Image Files
 Click here to download the latest software image files of the AudioCodes IP Phones
 Source: https://www.audiocodes.com/library/firmware
@@ -1278,7 +1273,6 @@ Lil PL
 fs
 LA
 A
-— Li Pa
 pull
 E
 pull
@@ -1400,7 +1394,6 @@ AudioCodes Administrator Manual
 bisek hat
 USA 2&0e253
 Nibfibegi.so
-if (local _ lee == 6) {
 sVar2 = strlen(acStack_1e8}:
 iVarl = strcmp(acStack_1leé
 if (iVarl == @) {
@@ -1419,7 +1412,6 @@ fdev/null"
 ```text
 black hat
 USA 2&0e253
-> f \ /s ° ING & » > . | ‘: “
 . BS
 [mabrell
 $ strings -n 32 decryption_tool
@@ -1450,7 +1442,6 @@ Invalid command line parameters.
 ```text
 black hat
 USA 2&0e253
-> f \ /s ° ING & » > . | ‘: “
 . BS
 [mabrell
 $ strings -n 32 decryption_tool
@@ -1566,11 +1557,9 @@ GO011624 61 de 4d e2 sub ,sp,.#0x610
 00011628 08 dO 4d e2 sub .Sp.#0x8
 O601162c O61 50 a0 el cpy :
 00011630 18 70 8d e2 add sp, #0x18
-60011634 60 60 a0 el cpy :
 06011638 e8 11 Sf e5 ldr , [DAT_06011828]
 OG801163c G8 86 47 e2 sub 27, 80x8
 00011646 41 20 a0 e3 mav ,#0x41
-00011644 68 60 a0 el cpy :
 06011648 61 10 &f eB add =>s_h4dAratH
 QGG1164c 3d fd TT eb b1 sEXTERNAL>: : memcpy
 ```
@@ -1579,95 +1568,9 @@ QGG1164c 3d fd TT eb b1 sEXTERNAL>: : memcpy
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-BEG11756 Be
-BHG117Sc Bs
-BEG11768 Ba
-GOG117O4 89
-6011768 &c
-BG
-ae
-BG
-18
-fe
-8d
-ae
-ae
-ae
-ff
-e5
-el
-el
-e]
-eb
-Str
-=|
-TO, (sp, #0x8)]=>local_638
-cpy
-=|
-lal
-=|
-cpy
-cpy
-bl
-=|
-=|
-4
-i
-=]
-FUN_@@@111a8
-```
-
 ## Slide 67
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-BEG11756 Be
-BHG117Sc Bs
-BEG11768 Ba
-GOG117O4 89
-6011768 &c
-BG
-ae
-BG
-18
-fe
-8d
-ae
-ae
-ae
-ff
-e5
-el
-el
-e]
-eb
-Str
-cpy
-cpy
-cpy
-=|
-TO, (sp, #0x8)]=>local_638
-=|
-lal
-=|
-=|
-=|
-4
-i
-=]
-bl
-FUN_@@@111a8
-```
 
 ## Slide 68
 
@@ -1742,7 +1645,6 @@ a2 sub
 el cpy
 el cpy
 orf {r4 rS rol rvira -O
-ee ee ee oe) Oe LO 15
 T6,param_2
 ry, param_4
 sp, sp, #Oxfc
@@ -1830,26 +1732,6 @@ Source: https://www.openssl.org/docs/man3.1/man3/EVP_BytesToKey.html
 ## Slide 73
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-3
-Cg
-fe}
-s_ h4dA
-"held Ad
-ds
-@0011e8T |68 34 64
-```
 
 ## Slide 74
 
@@ -2013,7 +1895,6 @@ fos
 Response
 Pretty Raw Hex Render
 & Whe
-WO oo os) ao in
 10
 11
 12
@@ -2116,7 +1997,6 @@ Dst.Port Protocol Length Info
 192.168 .219.72 41362 TLSvi.2 1506 Certificate
 Q : Zé P 66 4136 44 ACK en=0 al=4294944
 192.168.219.772 41362 TL5v1i.2 434 Server Key Exchange, - |} = er Hello Done
-. ue. ad +4 P OO . u = 44 we =: o Wi 0 SN Va l=4 qay4
 3.120,121.92 443 TLSvi.2 1220 Certificate, #6nt Key Exchange, Certificate Verify, Change Cip
 192.168.219.772 41362 TCP 66 443 .. 413627ACK] Seq=4689 Ack=1672 Win=61056 Len=@ TSval=305154
 192.168. 219.72 41362 TLSvi.2 117 ChanggeCipher Spec, Encrypted Handshake Message
@@ -2142,10 +2022,8 @@ Source: https://www.audiocodes.com/media/zhre0lg0/c448hd-c450hd-ip-phone-for-mic
 
 ```text
 Response
-LA fe La PB ee
 an
 ee ee
-Lf WB ee & wo to =]
 16
 Pretty Raw Hex Render
 HTTP/2 208 OK
@@ -2450,7 +2328,6 @@ Connection: close
 Content-Type: application/json: charset=utT-&
 Date: Thu, @6 Jul 2023 12:16:48 GMT
 Request-Context: appId=cid-v1:229bb6bd-@4d7-408d-b225-c6e44e8T5c51b
-oom Ln fe Lu Ro Be
 ca
 {
 "description": "device MAC @@9@8FAAAAAA was not found"
@@ -2495,54 +2372,11 @@ its]
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-3
-Cg
-fe}
-(<)
-E
-O
-O
-N
-```
-
 ## Slide 99
 
 MAC + Config
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-3
-Cg
-fe}
-MAC + Config
-(<)
-E
-O
-O
-N
-```
 
 ## Slide 100
 
@@ -2550,54 +2384,11 @@ MAC + Config
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-3
-Cg
-fe}
-MAC + Config
-(<)
-E
-O
-O
-N
-```
-
 ## Slide 101
 
 MAC + Config
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-3
-Cg
-fe}
-MAC + Config
-E
-O
-O
-N
-```
 
 ## Slide 102
 
@@ -2674,17 +2465,14 @@ do_upgrade() {
 v "Performing system upgrade..."
 In -s /home/ipphone/bin/1lcdbar /bin/1cdbar
 flasher u /tmp upgrade.img
-if [ $? -eq @ ]; then
 v "external flasher exist"
 chmod +x /tmp/flasher_ext
 /tmp/flasher_ext u
-if [ $? -eq @ ]; then
 v "external flasher can run, so use external flasher to upgrade"
 FLASHER="/tmp/flasher_ext"
 fi
 fi
 $FLASHER xr /tmp upgrade.img 1>$CONSOLE 2>&1
-if [ $? -eq @ ]; then
 v "Upgrade successful"
 else
 v "Upgrade fail"
@@ -2763,53 +2551,8 @@ gO01idd4(c)
 ```text
 File Edit Search View Format Scripts Templates Debug Project Tools Window Help
 Be Biever '-hROC SEB FS = 5
-44 39 05 41 17 00 00 00 50 39 05 41/17 00 00 00 D9.A....P9.A..
-54 39 05 41 17 00 00 00 58 39 05 41 17 00 00 00 T9.A....X9.A..
-60 39 05 41/17 00 00 00 6C 39 05 41 17 00 00 00 *9.A....19.A..
-70 39 05 41 17 00 00 00 74 39 05 41 17 00 00 00 p9.A....t9.A..
-7C 39 05 41:17 00 00 00 88 39 05 41 17 00 00 00 {9.A....°9.A..
-8C 39 05 41 17 00 00 00 98 39 05 41 17 00 00 00 G9.A....°9.A..
 A4 39 05 41.17 00 00 00 A& 39 05 41/17 00 00 00 59.A....°9.A..
-AC 39 05 41 17 00 00 00 B4 39 05 41 17 00 00 00 =9.A....°9.A..
 CO 39 05 41/17 00 00 00'C4 39 05 41 17 00 00 00 AY.A....A9.A..
-C8 39 05 41 17 00 00 00 DO 39 05 41 17 00 00 00 E9.A....D9.A..
-D4 39 05 41/17 00 00 00 D8 39 05 41 17 00 00 00 O9.A....09.A..
-DC 39 05 41 17 00 00 00 EO 39 05 41 17 00 00 00 UI.A....a9.A..
-E4 39 05 41 17 00 00 00 E8 39 05 41 17 00 00 00 a9.A....€9.A..
-EC 39 05 41 17 00 00 00 FO 39 05 41 17 00 00 00 i9.A....69.A..
-F4 39 05 41/17 00 00 00 F8 39 05 41 17 00 00 00 69.A....09.A..
-FC 39 05 41 17 00 00 OO BB BB BB BB 60 00 00 00 U9.A....»»»»*
-72 6F 6F 74\66 73 2E 65 78 74 34 00 00 00 00 00 rootfs.ext4.....
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-01 00 00 00 00 00 00 00 3D 3E EF 78 00 50 00 08
-00 50 00 08 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00,00 00 00 00 00 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-AN Anh An nn nn nn nn nn nn nn nn nn nn nn nn nn
 ```
 
 ## Slide 108
@@ -2900,7 +2643,6 @@ root root : ] :50 ntpser. List
 r root
 root root .
 root root . ! production.cfg
-r root : ] : cal
 root root :
 root root
 root root
@@ -3213,7 +2955,6 @@ malicious firmware
 v a configuration template
 controls
 ano] @---------------- e
-fa O} ey
 — aaa
 attacker
 attacker server
@@ -3240,7 +2981,6 @@ v a configuration template
 controls
 amo) rN
 fumao} -------------------- >Re
-COE} rp ~
 attacker
 attacker server
 ```
@@ -3355,81 +3095,17 @@ Total 256
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-%
-Cg
-fe}
-```
-
 ## Slide 132
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-%
-Cg
-fe}
-```
 
 ## Slide 133
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-%
-Cg
-fe}
-```
-
 ## Slide 134
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M
-fU
-O
-fU
-xt
-Ul
-am)
-A
-%
-Cg
-fe}
-```
 
 ## Slide 135
 

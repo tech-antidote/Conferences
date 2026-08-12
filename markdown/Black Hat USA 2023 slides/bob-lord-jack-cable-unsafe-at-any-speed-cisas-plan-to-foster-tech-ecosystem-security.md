@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:02Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Bob Lord & Jack Cable_Unsafe At Any Speed CISA's Plan to Foster Tech Ecosystem Security.pdf` (24 pages)
 
-
 ## Slide 1
 
 C Y B E R S E C U R I T Y A N D I N F R A S T R U C T U R E S E C U R I T Y A G E N C Y
@@ -68,35 +67,6 @@ hing!
 
 What do _mature_ industries look like?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Cc:
-oO
-=<
-<
-Oo
-©
-7)
-©
-=
-_—
-YY)
-=)
-TS
-=
-2
->
-~~
-4)
-€
-e)
-TS
-_—
-iq)
-=
-```
-
 ## Slide 4
 
 N T S B G E N E R A L AV I AT I O N A C C I D E N T D A S H B O A R D
@@ -108,7 +78,6 @@ NTSB GENERAL
 Accidents by Investigative Findings
 AVIATION ro —<— us —
 Personnel issue! s al ttention/monitoring
-/ \ C C | D) E N | mai Attention/monitoring
 934
 D) N\ S I | B @) N\ R D>) Personnel issues je Perception/orientation/illusion Task monitoring/vigilance
 6 154
@@ -194,26 +163,6 @@ FARS
 
 How do we compare?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Cc:
-®
-=
-©
-lot
-=
-oe)
-Se)
-©
-=
-fe)
-se)
-=
-fe)
-L
-```
-
 ## Slide 7
 
 S O U R C E S O F I N F O
@@ -228,8 +177,6 @@ Mi ft Data Breach Investigations Report
 IcrOSsO aor 7 ; ;
 Digital Defense — BY A Private fire brigade reports
 Report 2022 iad : + ge Sas
-ee = Tl a ee pone)
-= ; E aie a : 7 “4
 ze Oat ee How do they help?
 ¢« Customers
 i-TRENDS ¢ Manufacturers
@@ -285,24 +232,6 @@ S E C U R E B Y **D E F A U LT**
 ## Slide 13
 
 S E C U R E B Y **D E S I G N**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-za
-Oo
-”
-Lu
-OQ
->
-ae
-LU
-oO
-~
-O
-LL
-ep)
-```
 
 ## Slide 14
 

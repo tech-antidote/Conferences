@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:55:24Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Pardomuan-Emit-My-Keystroke.pdf` (41 pages)
 
-
 ## Slide 1
 
 ## E-Meet (or Emit?) My Keystrokes How Benign Screen-sharing Meetings Could Leak Typing Behaviors
@@ -82,7 +81,6 @@ Security Researcher & Lecturer Specialist in Cybersecurity
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. ae 7 \ gk Py K <= WE
 blackhat Backstage Story Be os
 ASIA 20253
 One ordinary day, you’re in a Zoom meeting with colleagues.
@@ -285,9 +283,7 @@ Extract Character Create a synthetic typing
 from Screen- ._+————>} sequence from victim's
 recorded Video typing pattern
 Attacker
-ee ee ee
 : '412ms '67ms | '
-a n fae |
 Beeeeese 8 Beeeeee 8 tbeowwne
 ```
 

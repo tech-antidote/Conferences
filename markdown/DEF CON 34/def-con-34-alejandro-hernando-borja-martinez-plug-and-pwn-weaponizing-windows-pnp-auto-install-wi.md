@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:11:42Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Alejandro Hernando, Borja Martinez - Plug And Pwn Weaponizing Windows PnP Auto-Install - Wi.pdf` (43 pages)
 
-
 ## Slide 1
 
 # Plug&Pwn: Weaponizing Windows PnP
@@ -126,13 +125,10 @@ Sierra Wireless “SwiService.exe (1/2)”
 Sierra Wireless “SwiService.exe (1/2)”
 r
 43 local_b®@ = GetTickCount64();
-44 if (param_1[3] == 0) {
 45 BVar3 = InitializeSecurityDescriptor(local_90,1) ;
-46 if (BVar3 != @) {
 47 pwVar9 = (wchar_t *)@xQ;
 48
 49 BVar3 = SetSecurityDescriptorDacl(local_90,1, (PACL)0x0,@) ;
-50 if (BVar3 != @) {
 51 local_d@.nLength = 0x18;
 52 local_d®.1pSecurityDescriptor = local_90;
 // Exposes a named pipe with an Everyone r/w ACL. |
@@ -213,14 +209,12 @@ r
 26 FUN_02006c90();
 27 DAT_0202bfc® = param_2;
 28 DAT_0202bfc8 = param_3;
-29 if (param_1 == @xle) {
 30 /7* Runs the orchestrator as SYSTEM. It downloads config
 31 files and writes them to disk.
 32 This is where path traversal triggers */
 33 puVar4 = (undefined *)ORCHESTRATOR_DOWNLOAD( ) ;
 r
 142 iVar2 = FUN_02013a90((longlong) &local_548) ;
-143 if (iVar2 == 0) {
 144 puVar5 = URL_STRING_2(&local_548) ;
 145 std: :basic_string<>: :assign(local_220, (basic_string<> *)puVar5,0, OxfffffffffffffTTF) ;
 146 if (@xf < local_528) {
@@ -238,15 +232,12 @@ Sony Felica “felica_coinst.dll (2/2)”
 Sony Felica “felica_coinst.dll (2/2)”
 r
 58 LAB_0200dd36:
-59 if (1Var5 != -1) {
 60 /* Substring after last "/" */
 61 pbVar2 = FUN_02014624(param_2,local_40,1Var5 + 1,OxfffffffttfffttTTF) ;
 62 /* Filename NO sanitization */
 63 std: :basic_string<>: :assign((basic_string<> *)param_1,pbVar2,0,0xfffffftfffttfTTF) ;
-64 if (Oxf < local_20) {
 65 free(local_38) ;
 66 }
-67 } |
 z
 169 std: :basic_string<>::assign((basic_string<> *)&local_4a8,"pUr1",4) ;
 170 FUN_02015e10( (longlong) &local_4a8, (longlong)&local_548) ;
@@ -310,12 +301,10 @@ NoPlug & pwn - USB_REDIR umrdp.dll (1/2)
 69 if (((LVar5 != 0) || (local_84 != 4)) || ((local_88 != 4 || (local_8@[@] == 0)))) {
 70 uVar12 = (uint)param_2;
 71 bVar3 = FUN_18002f650(pHVar9,uVar12) ;
-72 if ((int)CONCAT71(extraout_var,bVar3) != 0) {
 73 *(undefined *)(param_1 + @x78) = 0;
 74 local_88 = 4;
 75 LVar5 = RegQueryValueExW(local_78,L"MaxNumUsbDevices", (LPDWORD) 0x0, &local_84, (LPBYTE)1local_80,
 76 &local_88) ;
-95 if (((-1 < (int)uVar7) &&
 96 (uVar8 = FUN_18002d9ac((uint *)(param_1 + 0x50) ,uVari2,(undefined4 *)local_60),
 97 puVar11 = local_5®@, (int)uVar8 != @)) && (puVar11 = puVar10, iVar4 == @)) {
 98 7* ADD_DEVICE / announce to PnP */
@@ -339,13 +328,11 @@ NoPlug & pwn - USB_REDIR termsrv.dll
 {93D359D5 -831F -47B4 - 90BE -8383AF8F1BOE}
 */
 13 1Var1 = 0x47b4831f93d359d5 - *param_1;
-14 if (1Varl == @) {
 15 1Varl1 = Oxelb8faf8383be90 - param_1[1];
 16 }
 a
 r
 36 /* BIT 11 of WinStation config = fDisablePNPRedir */
-37 if (1Varl1 == @) {
 38 uVar2 = *(uint *)(param_4 + @x1f00) >> Oxb & 1;
 39 }
 40 else {
@@ -380,10 +367,8 @@ NoPlug & pwn - USB_REDIR umrdp.dll (2/2)
 23 WinStationFreePropertyValue() ;
 24 «+}
 25 if ((((undefined **)PTR_LOOP_180051000 != &PTR_LOOP_180051000) &&
-26 ((PTR_LOOP_180051000[@x1c] & 1) != 0)) && (2 < (byte)PTR_LOOP_180051000[0x19])) {
 27 uVar2 = FUN_1800daf4();
 28 pwVar3 = L"Enabled";
-29 if (iVar4 != @) {
 30 pwVar3 = L"Disabled";
 31 }
 32 FUN_180014324(*(undefined8 *) (PTR_LOOP_18005100@ + 0x10) ,@x5Q,&DAT_180049058, uVar2, pwVar3) ;
@@ -863,7 +848,6 @@ runs inside spoolsyv.exe
 ¥
 6 bridge to Wacom
 urite PowerT as REG_BINARY
-?F 4C 6B 34
 ```
 
 ## Slide 38
@@ -889,7 +873,6 @@ Working chain STABLE PATH
 > spoolsv.exe loads PocPortMon.d1ll as SYSTEM.
 > The OLL writes the exact Wacom PowerT
 value,
-> RegSetValueExW: ?F 4C 6B 34.
 > Restart Wacom -> interactive SYSTEM shell.
 /* Registry write -> SYSTEM DLL -> exact
 Wacom trigger. */

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:27:18Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Alessandro Di Federico & Pietro Fezzardi_Path of rev.ng-ance from raw bytes to CodeQL on decompiled code.pdf` (74 pages)
 
-
 ## Slide 1
 
 ## **The binary analysis framework**
@@ -676,7 +675,6 @@ _cabifunction_78 _cabifunction_79
 _cabifunction_78 (size: 0) _cabifunction_79 (size: 0)
 Return Types Arguments Return Types Arguments
 generic64_t * struct_6l1 generic64_t * struct_61
-t - 7
 \
 SC Pointer (8 bytes) _- Pointer (8 bytes)
 vy

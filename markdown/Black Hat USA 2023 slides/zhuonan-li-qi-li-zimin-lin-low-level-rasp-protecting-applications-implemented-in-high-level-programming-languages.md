@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:01Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhuonan Li & Qi Li & Zimin Lin_Low-level RASP Protecting Applications Implemented in High-level Programming Languages.pdf` (25 pages)
 
-
 ## Slide 1
 
 # Low-level RASP: Protecting Applications Implemented in High-level Programming Languages

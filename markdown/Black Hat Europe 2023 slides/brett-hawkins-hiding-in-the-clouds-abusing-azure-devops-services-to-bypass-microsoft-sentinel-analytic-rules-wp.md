@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:46Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules_wp.pdf` (112 pages)
 
-
 ## Slide 1
 
 # Hiding in the Clouds:

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:19Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Mickey Shkatov, Jesse Michael - Bring Your Own Root Of Trust - BYOROT V1.pdf` (25 pages)
 
-
 ## Slide 1
 
 # **`./DC34 FEED_YOUR_COMMUNITY` BYOROT Bring Your Own Root Of Trust**

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:40Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Victor V-Unveiling the Cracks in Virtualization, Mastering the Host System--VMware Workstation Escape.pdf` (35 pages)
 
-
 ## Slide 1
 
 Unveiling the Cracks in Virtualization,
@@ -86,11 +85,6 @@ ASIA 2024
 PART ONE
 Virtualization Basic Info
 Pes Fas Ee ek a SPARRRPIG EGA SS “i
-oo es 620. & $B **e,2%@s.0. g 1:
-cee % e eo e . ®* & 05
-. - @ O ee ¢® e
-si @ e @
-wh e e
 ®
 e@ s
 #BHASIA @BlackHatEvents
@@ -224,10 +218,8 @@ UHCI Controller
 bluetooth usb hub
 a
 i
-- a \ 4
 € Fundion 3} ™
 / ( Fundion *) (C Funclion
-a _ dl
 ( Function) ( Fundion |)
 #BHASIA @BlackHatEvents
 ```
@@ -247,7 +239,6 @@ a _ dl
 UHCI Controller
 31 2
 | Frame List Pointer Indicates ‘Nil’ Next a
-OH 2 31 QR a4 31 QH 4 31 OH
 31 1
 Link Pointer (Horiz) Link Pointer (Horiz) Link Pointer (Horiz) A 0 ; _|a
 a
@@ -256,7 +247,6 @@ Link Pointer (Vert) [a Link Pointer (Vert) Link Pointer (Vert
 / Indicates "Nil Next Point
 Indicates 'NULL' Queue Head Link Pointer
 TD Link Pointer a
-31 QH 2 a
 Link Pointer (Horiz)
 Link Pointer (Vert)
 Link Pointer
@@ -292,11 +282,6 @@ ASIA 2024
 PART TWO
 Historic Bugs In UHCI
 009 O04 HM £ Me cPee ec. « <a
-% e d : Gate IO & 0% ale
-¢'’e C } e e@ OA
-. - @ O ee ¢® e
-: . ° @ eo C }
-° e ®
 ®
 e@ ®
 #BHASIA @BlackHatEvents
@@ -452,10 +437,6 @@ pisek hat
 ASIA 2024
 PART THREE
 Exploit for TianfuCup 2023 |
-o. 02 oo. Mm § fa) @°* e :
-ene ® e e . e -@- °@* : on
-e @ r ) @ ®
-° e @
 #BHASIA @BlackHatEvents
 ```
 
@@ -544,7 +525,6 @@ can’t be heap
 — Exploit primitives-UHCI Endpoint
 urb_link = (a2 + 64);
 urb = *urb_link - 4@;
-ep = *(urb + 24 5
 #BHASIA @BlackHatEvents
 ```
 
@@ -592,7 +572,6 @@ fake ep fake ep new ope ms
 fake ep fake ep fake ep
 fake ep
 (Ireeins) (freeing) (freeing)
-, Fy I. ch Pa
 sizeot(ep) LFH segment(Ox41 ff0)
 #BHASIA @BlackHatEvents
 ```
@@ -697,13 +676,9 @@ Defense
 ```text
 Q&A
 HANKS
-2 . ° , & eM.
-2 “1000 @ . “* oS . :
 . @
 ae e@
 bd ®
-oe. MO § 20,22 @ © 0.
-, : AD . -s- -
 oe 8 meat: : He
 #BHASIA @BlackHatEvents
 ```

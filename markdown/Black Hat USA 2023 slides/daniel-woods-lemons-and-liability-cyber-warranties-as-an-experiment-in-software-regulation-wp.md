@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:42Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Woods_Lemons and Liability Cyber Warranties as an Experiment in Software Regulation_wp.pdf` (8 pages)
 
-
 ## Slide 1
 
 Lemons and Liability: Cyber Warranties as an Experiment in Software Regulation

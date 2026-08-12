@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:21:34Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Bill Demirkapi_Booting with Caution Dissecting Secure Boot's Third-Party Attack Surface.pdf` (68 pages)
 
-
 ## Slide 1
 
 **Booting with Caution** Dissecting Secure Boot’s Third-Party Attack Surface
@@ -297,8 +296,6 @@ Third-Party UEFI Images, Example
 ° 2 unique shells
 CV6G-2022-34301 "°: : CV6-2022-34303 ~""
 EEshim.efi
-- : ke La Full | :
-L. = e L| a
 : CryptoPro Secure Disk for BitLocker
 Read more: One Bootloader To Rule Them All by Eclyspium
 ```
@@ -713,7 +710,6 @@ root@test-Virtual-Machine: /home/test/HTTPBOOT# python3 mycoolbadserver .py
 Networ
 Capturing from virbro
 Eile Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help
-uw C QC >Ddi = RQQF
 dhcp or http
 No. Time Source Destination Protocol Length Info
 2 ©.000238475 192.168 .106 255.255.255.2 DHCP 346 DHCP Offer Transaction ID ®x8d1i

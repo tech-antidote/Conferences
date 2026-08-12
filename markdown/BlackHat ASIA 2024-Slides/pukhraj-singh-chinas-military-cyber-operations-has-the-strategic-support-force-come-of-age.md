@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:38Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Pukhraj Singh-China's Military Cyber Operations Has the Strategic Support Force Come of Age.pdf` (56 pages)
 
-
 ## Slide 1
 
 **China’s Military Cyber Operations** Has the Strategic Support Force Come of Age?
@@ -263,13 +262,9 @@ ae
 <__, Alaska
 S
 Ye es
-at i “ly
 les Nah,
-f As ON
 y, ‘
 vat ;
-p Fay Mm
-| . (0, <a
 _ ContinentalU.S. _-
 \ (Logo Map) 4
 Midway Sy a
@@ -507,7 +502,6 @@ system-or-
 2 strategic network
 systems deterrence AXEZZR WI Z8 RvR
 warfare (KATE
-nix Ey AN 20a DX 28 Ja Ue
 tactical network deterrence
 ```
 

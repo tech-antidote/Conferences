@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:24Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Niklas Vogel&Haya Schulmann_Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures.pdf` (77 pages)
 
-
 ## Slide 1
 
 Batch me if you can **Breaking with the State-of-the-Art of Fuzzing Cryptographic Architectures**
@@ -41,8 +40,6 @@ Batch me if you can **Breaking with the State-of-the-Art of Fuzzing Cryptographi
 
 ```text
 Agenda: A journey towards RCE in RPKI
-. Tog |
-\ _ 8 | i
 =
 Remote Code Execution
 black hat
@@ -483,7 +480,6 @@ A.
 a He
 -_____—| @
 — aaa
-Ol ee ee ee
 black hat
 254. 29
 ```
@@ -610,7 +606,6 @@ Speed of our Fuzzer
 YW)
 ~ 1000;
 rs Speed of prototype fuzzer
-2S 500) /
 QO:
 ¢) 200 400 600 800 1000
 Time (s)
@@ -764,53 +759,6 @@ black hat
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Batching Inputs
-I
-I
-l
-I
-l
-I
-Lo _
-I
-I
-I
-= |
-Xx] F 5 |
-Tay °
-_ 5 |
-(e} = Ww |
-2
-I
-ara
-EW SS |
-5
-1%)
-_
-9 |
-e } |
-rd
-| ios |
-: !
-5 |
-u I
-re} I
-rv) l
-I
-I
-I
-l
-I
-I
-I
-oo J
-black hat
-254. 44
-```
-
 ## Slide 45
 
 ## Batched (parallel) Fuzzing
@@ -845,7 +793,6 @@ WY)
 1s)
 v
 a 500
-ol—. | |
 0 200 400 600 800
 Time (s)
 black hat
@@ -974,7 +921,6 @@ if (v2 = 21){
 // cov_counter 3++
 memcpy(buf, b, b len); // overflow
 cov_counter_1 cov_counter_2 cov_counter_3
-0 0 0
 black hat
 52
 2026
@@ -1101,7 +1047,6 @@ a
 a
 _)
 io)
-20 AO 60 80 100
 Time (ms)
 0
 black hat
@@ -1153,7 +1098,6 @@ qeyss 59
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-for(int i = 0; i < b len; i+t+){
 Object obj = objects[il;
 process obj(obj);
 // uae
@@ -1173,7 +1117,6 @@ a
 3
 O
 0
-0 20 40 60 80 100
 Time (ms)
 We can use this!
 black hat
@@ -1201,13 +1144,11 @@ e
 a
 jo)
 (o)
-20 40 — 60 80 100
 i) W
 oO j=)
 ra)
 oO
 Calls to procces_obj()
-0 20 40 60 80 100
 Time (ms) black hat
 ysa 61
 2026
@@ -1236,7 +1177,6 @@ e
 a
 jo)
 (o)
-20 7 60 80 100
 W
 j=)
 i)
@@ -1246,7 +1186,6 @@ oO
 =)
 New Coverage
 Calls to procces_obj()
-0 20 40 60 80 100
 Time (ms) black hat
 USA 62
 2026
@@ -1268,7 +1207,6 @@ _ 30;
 >
 3, every 100 us
 WY
-3 20. |
 U
 i
 ok
@@ -1277,7 +1215,6 @@ a)
 o
 O
 0
-0 20 40 60 80 100
 black hat
 63
 2026

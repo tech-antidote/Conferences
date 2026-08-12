@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:27Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel dos Santos & Simon Guiot & Stanislav Dashevskyi & Amine Amri & Oussama Kerro_Route to Bugs Analyzing the Security of BGP Message Parsing.pdf` (33 pages)
 
-
 ## Slide 1
 
 Route to Bugs: Analyzing the Security of BGP Message Parsing <u>Daniel dos Santos, Simon Guiot,</u> Stanislav Dashevskyi, Amine Amri, Oussama Kerro
@@ -547,13 +546,11 @@ Scenes Sources Audio Mixer Scene Transitions Controls
 [I Screen Capture (XSHN Desktop Audio -inf dB Fade Start Streaming
 stp ae Start Recording
 Duration 300 ms & Studio Mode
-= @) &
 Mic/Aux -inf dB
 E : Settings
 = - @) Exit
 LIVE: 00:00:00 REC: 00:00:00 CPU: 2.0%, 60.00 Fps
 @ G1 @@ right ctrl
-i ee at
 @ GUGM right ctr
 ```
 

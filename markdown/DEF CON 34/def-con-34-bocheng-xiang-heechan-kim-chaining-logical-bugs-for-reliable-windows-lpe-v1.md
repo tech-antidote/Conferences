@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:14:00Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bocheng Xiang, HeeChan Kim - Chaining Logical Bugs for Reliable Windows LPE - v1.pdf` (80 pages)
 
-
 ## Slide 1
 
 ```

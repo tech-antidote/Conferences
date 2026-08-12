@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:51:41Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Brendan Dolan-Gavitt_AI Agents for Offsec with Zero False Positives.pdf` (52 pages)
 
-
 ## Slide 1
 
 # AI Agents for Offsec with Zero False Positives
@@ -357,9 +356,6 @@ Canaries
 
 ```text
 = ital . | ST
-OQ... 7 i, : jp
-black hat Sy F | a
-BRIEFINGS ; Y \ Q | yA y
 pentester@ $ check-cache-poisoning -U X-Forwarded-Host -t header -v $'\x@@' api_request.txt
 Validating cache poisoning on https: //x /api/v2/ with unkeyed field
 X-Forwarded-Host (type: header, value: )
@@ -404,10 +400,7 @@ En: §©a48349287ea352e4b56754150b280af 04bb2e6a
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. sly ; >.
-Q | N {Fm | jp
 blackhat 8 ae ; J
-BRIEFINGS : Vi N » 4 J
 Response 2:
 Response status: 500
 content-type: application/json; charset=utf-8
@@ -444,10 +437,7 @@ content of the page, so we can proceed.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. sly ; >.
-Q | N {Fm | jp
 blackhat 8 ae ; J
-BRIEFINGS : Vi N » 4 J
 Poison test response:
 Response status: 500
 content-type: application/json; charset=utf-8
@@ -582,8 +572,6 @@ https: //f_ 0 ees een -
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 > ae
-piSekhat NS — oe Mh A
 BRIEFINGS y SOM | ,
 XSS Validator Cheat #3
 ¢ We allowed console.log("666") as evidence of XSS
@@ -649,9 +637,6 @@ browser console, triggering the flag condition
 ```text
 2)
 black hat
-Oo OD VN DO a fF WwW NH) —>
-Se ea a) 4/4 oso ao ow wn oa
-Oo OW NID a fF WwW NY | OC
 BRIEFINGS
 Ranking Docker Hub Images
 dh_image
@@ -818,7 +803,6 @@ Reflected XSS
 black hat
 BRIEFINGS
 e@ Oo £% Projects - Redmine x +
-€ > G A\ Not Secure redmine.xbow-eng-vpc.eng.xbow.com/projects DK a > Ca re ] Work > |
 Home My page Projects Administration Help Loggedinas admin My account Sign out
 Redmine Se | jumptoaproject.. |
 idcyitacme Activity Issues Spenttime Gantt Calendar News
@@ -949,7 +933,6 @@ Pretty-print
 {
 "projects": [
 {
-"ig" : 1,
 "name": "The Big Project",
 "identifier": "the-big-project",
 "description": "The big project - it's public.",
@@ -982,7 +965,6 @@ Pretty-print
 {
 "projects": [
 {
-"ig" : 1,
 "name": "The Big Project",
 "identifier": "the-big-project",
 "description": "The big project - it's public.",
@@ -1156,10 +1138,7 @@ header to create a valid file:// URL when the server_script_url is replaced with
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= ‘ | > |
-Te eee ) pp
 blackhat Sy — | f
-BRIEFINGS : Y Yom ) y J
 Y Trophy Case: File Read in MapProxy
 <body>
 <div id="box">

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:32:44Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/HD Moore & Rob King_Secure Shells in Shambles.pdf` (97 pages)
 
-
 ## Slide 1
 
 BLACK HAT BRIEFINGS
@@ -623,17 +622,6 @@ https://github.com/FiloSottile/whoami.filippo.io
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-24
-$ ssh starwarstel.net
-Va
-aa
-=
-(G runz=ro
-```
-
 ## Slide 25
 
 ### **$ ssh user@synchronet**
@@ -648,20 +636,11 @@ https://www.synchro.net/sbbslist.html
 25
 $ ssh user@synchronet (G runz=ro
 a a a Distortion
-ce | ee | SE
 cee | mmm 2
-ce | ee
-CS a ee es Ee
-CS Ea ea 8 8 ee
-ae ES 2 > oe
-: i 3 cS
-: | a
-: | om
 | I
 = f
 Ea Lk a Login menu:
 =
-= Log in
 ma. a: | New user
 sie Guest account
 Retrieve password
@@ -687,7 +666,6 @@ terminal s shop a about f fag c cart $ @
 [object Object] segfault
 dark mode
 404 $22
-A sa UY yeet bl | at
 from a natural fault in the coffee
 cherry that causes it to develop
 Iné bean instead two
@@ -1718,7 +1696,6 @@ Name
 IF Phone Link (3)
 Q Type a name, publisher, or PID to sea...
 FB Runnewtask @ Endtask  ] Efficiencymode +++
-1% 22% 0% 0%
 Status CPU Memory Disk Network
 0% «© 550MB = «OMB/s_ Mbps
 Suspended @ 0% = 51.6MB OMB/s Mbps

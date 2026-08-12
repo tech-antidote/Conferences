@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:07:25Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code_WP.pdf` (20 pages)
 
-
 ## Slide 1
 
 # THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping

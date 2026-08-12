@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:51:27Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Nimrod Stoler & David Lazar_Is Your Memory Protected Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms.pdf` (68 pages)
 
-
 ## Slide 1
 
 Is Your Memory Protected? Uncovering Hidden Vulnerabilities in Automotive MPUs Nimrod Stoler & David Lazar
@@ -580,7 +579,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-NX XS vy, Va “a :
 q | biSek hat
 Analysis of HW vulnerabilities
 CVE-2023-48010
@@ -928,7 +926,6 @@ Q Use format 0 (RGD_WORD2 FMTQ)
 the valid bit ‘of the RGD and the global valid bit have no effect.
 Note: Setting RO in an RGD locks all four words of the RGD until a system !
 eset
-Wot Sey ee TT on Po Pee ol Poe SOP OT le PS Ce ot SP TTT Pee
 the valid bit of the RGD and the global valid bit have no effect.
 O The region descriptor can be read or written.
 1 Attempted writes to any location in the region descriptor are ignored with an

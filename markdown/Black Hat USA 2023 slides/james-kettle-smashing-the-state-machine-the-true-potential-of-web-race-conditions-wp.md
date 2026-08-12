@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:53Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions_wp.pdf` (18 pages)
 
-
 ## Slide 1
 
 # **Smashing the state machine the true potential of web race conditions**

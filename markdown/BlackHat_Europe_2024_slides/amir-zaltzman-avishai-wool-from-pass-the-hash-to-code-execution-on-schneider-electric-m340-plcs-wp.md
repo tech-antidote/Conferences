@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:00:31Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Amir Zaltzman & Avishai Wool_From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs_wp.pdf` (21 pages)
 
-
 ## Slide 1
 
 # From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs

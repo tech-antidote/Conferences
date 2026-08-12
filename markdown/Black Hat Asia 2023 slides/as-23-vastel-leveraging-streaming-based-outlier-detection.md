@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:56:20Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Vastel-Leveraging-Streaming-Based-Outlier-Detection.pdf` (42 pages)
 
-
 ## Slide 1
 
 ##### Leveraging Streaming-Based Outlier Detection and SliceLine to Stop Heavily Distributed Bot Attacks Antoine Vastel, PhD  |  Head of Research, DataDome Konstantina Kontoudi, PhD  |  Lead Data Scientist, DataDome
@@ -659,7 +658,6 @@ black hat
 ASIA 2023
 sf = Slicefinder(
 alpha = 0.80,
-k = 4,
 max l = df.shape[1],
 min sup = 1,
 verbose = True
@@ -710,33 +708,7 @@ ASIA 2023
 /|
 /|
 40,000 h | |
-\ ; |
-AN | |
-é \ ; | |
-a /\ f |
-2 \ / \ /
-ao] . | \ A Ys \ |
-3 30,000 I ' \ i V4 \ |
-| \ T \ J \
-K | , 4 fe FF WY
-5 A \ / Mey sal
-o | | \ /
-2 | | | \ /
-: P \Y
-2 20,000 | | | } /
-o J \ / \
-2 / | | / \
-2 | | | | / \
-a / | | | / \
-/ | \ | \
-| | / \
-10,000 | | \ / \
-| | ia \
-| | \ / \
-pf | | / \
 |
-. Fan | | | Vv \
-JO . ] \
 2023-02-22 00:00 2023-02-23 00:00 2023-02-24 00:00 2023-02-25 00:00 2023-02-26 00:00 2023-02-27 00:00 2023-02-28 00:00
 Number of IP addresses / 3h
 ```

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:12:32Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Laurent Giovannoni_Scambuster Social Engineering Scammers at Scale.pdf` (90 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -496,7 +495,6 @@ scam type > BANDIT
 picks the persona
 SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
 hich scam type is thi te the persona rul LLM judg nly if it pas
-th 1 a
 INJECTION .
 > DETECTOR | = EXTRACTOR > — 2.2 MISP
 ags hi ttenpt seas Seat panes
@@ -514,7 +512,6 @@ scam type > BANDIT
 picks the persona
 SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
 hich scam type is thi te the persona rul LLM judg nly if it pas
-th 1 a
 INJECTION .
 > DETECTOR | = EXTRACTOR > — 2.2 MISP
 ags hi ttenpt seas Seat panes
@@ -596,7 +593,6 @@ If nothing passes, it sends nothing.
 4. It pulls the intelligence out.
 ye whole thread
 ‘ON '
-OR -- >
 ittempts
 >» Patterns catch the obvious. The model reads the rest.
 EXTRACTOR
@@ -670,7 +666,6 @@ m Every outgoing message filtered
 
 ```text
 What you're about to see.
-01 02 03
 One scammer. One day. I did not type a single word.
 &
 ® SCANBUSTER « PREV NEXT >
@@ -681,7 +676,6 @@ One scammer. One day. I did not type a single word.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-65 / THE
 REPLAY
 CEO (SPOOFED)
 DEMO - THE
@@ -977,7 +971,6 @@ No cleanup. Straight into your detection stack.
 
 ```text
 In production. Fully automated.
-28 9 94% )
 56
 ® SCANBUSTER
 ```
@@ -988,7 +981,6 @@ In production. Fully automated.
 
 ```text
 In production. Fully automated.
-28 9 94% )
 56 ox 95% 82%
 ® SCANBUSTER
 ```
@@ -1312,7 +1304,6 @@ SS « PREV NEXT >
 ```text
 20
 oF
-@ B be
 oe BUSTER
 Impact
 Conversations
@@ -1323,7 +1314,6 @@ Monitoring
 Settings
 EN
 G@ Logout
-ck to IOC
 BAN Hoh
 GB82WEST12345698765432
 gb82west12345698765432
@@ -1357,8 +1347,6 @@ Jul 26, 2026 5 TLP:AMBER
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-3% 2 D
-@ B Be
 &
 SCAM
 BUSTER
@@ -1418,7 +1406,6 @@ PD RX
 2 Clusters
 Personas
 Monitoring
-& B fe
 Settings
 EN
 & Logout
@@ -1432,7 +1419,6 @@ impersonates a known vendor or finance contact and applies deadline pressure to 
 ala! gradual argets: Employees in finance and accounts-payable roles.
 PAYMENT_INITIATION 0.70 ) °
 © ACTIVITY PATTERN
-10 5/6 0
 22 Jul 2026-3 dian gap 5.1h . path
 19:00 Wed
 threat -actor - -5cac3aa6-c806-5310-9d27-5d81c62f2e9d
@@ -1447,8 +1433,6 @@ Payment Initiation Turn 1 84% Templated
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-% O© D B&
-© B fe
 &
 * BUSTER
 Impact

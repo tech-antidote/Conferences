@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:20:58Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Mrityunjay Gautam & Pavan Kolachoor_AI Assisted Decision Making of Security Review Needs for New Features.pdf` (45 pages)
 
-
 ## Slide 1
 
 ### AI Assisted Decision Making of Security Review Needs
@@ -255,52 +254,6 @@ Output Layer
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Output Layer
-J
-UA
-S554 ]
-RP SEPDY |
-BRR
-oe)
-NY
-KY
-OC
-My
-Noh)
-\
-\
-ERR,
-AAW
-Deep Learning: Multi Layer Perceptron
-ro
-®
->
-©
-—!
-—_
->
-a.
-<
-m
-fu
-0
-(u
-<
-Ul
-4)
-&
-3
-Cg
-O
-Yi \
-OOOQOO0O ©
-NWA
-Hidden Layers
-```
-
 ## Slide 16
 
 Training Data Collection Because no training is possible without the right kind of data…
@@ -325,7 +278,6 @@ PDF :
 XJIRA
 €@, OneDrive
 Kis! 1 Office 365
-=a & B
 ```
 
 ## Slide 18
@@ -570,7 +522,6 @@ Google Docs
 bisek hat
 USA 20253
 Sample Word Vectors over Apache Spark
-AY L L W " >>> db_wv["dataframe"]
 >>> for elem in db_wv.most_similar("dataframe" ): mernap({0.9310919", 050785744, 0.278117, -3.5078952 , -1. 3010696,
 — = 0255014 , -0.4637812 , -0.28312248, 0.97335374, 2.3100562 ,
 s .731182 , -1.844407 , 0©.8353111 , -0.63139266, ©.00630491,

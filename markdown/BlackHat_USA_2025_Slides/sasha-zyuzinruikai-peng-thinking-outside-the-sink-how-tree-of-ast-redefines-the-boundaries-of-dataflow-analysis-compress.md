@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:03:54Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sasha Zyuzin&Ruikai Peng_Thinking Outside the Sink How Tree-of-AST Redefines the Boundaries of Dataflow Analysis_Compressed.pdf` (53 pages)
 
-
 ## Slide 1
 
 ### **Thinking Outside the Sink**

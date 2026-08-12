@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:27:43Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zechao Cai,Jiaxun Zhu,Yutian Yang,Wenbo Shen ,Yu Wang _Apple PAC, Four Years Later Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1.pdf` (129 pages)
 
-
 ## Slide 1
 
 Apple PAC, Four Years Later **Apple PAC, Four Years Later** Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple Reverse Engineering the Customized Pointer Authentication M1 Hardware Implementation on Apple M1 Speaker(s):

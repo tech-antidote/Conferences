@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:37:34Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Qi Wang & Jianjun Chen & Run Guo & Chao Zhang & Haixin Duan_Break the Wall from Bottom Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls.pdf` (50 pages)
 
-
 ## Slide 1
 
 Break the Wall from Bottom: Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls
@@ -338,7 +337,6 @@ DB crash-e38337¢2c19b2005a50219a3e00db0403ab9ed09
 @ utils.py
 @ README.md
 > & generator °
-> Be img
 > Ba mutator
 > Ml waf_validator
 > @ webapp_validator °
@@ -375,10 +373,8 @@ APP_PORT = 6000
 14| ALIDATE_MODE = "strict"
 @ fuzzer.py M
 Doo
-B minimized.ca533e5555b5de9031dfe7feoid6s1 Dy % MM --
 Configured to test safeline 5.0.0
 fixed in the lastest version
-ai mee ss so @® aa
 © (venv) eki@DUBHE-VM:~ /WAFManis/fuzzer/atheris_fuzzer$ 0
 47:15, 1
 $v Qasr atheris turer DG - A x
@@ -873,31 +869,17 @@ WAF and WebApp Combinations
 bisek hat
 USA 2024
 A. Malformed Parameter Structure Parameter Type Confusion @ RFC Support Gap
-WAFBrain +— dia da 2k a ee a “a ua YY ee ak
-Safeline;—*-¥ i a YY a Y a YY a YY ee YY eee
 OpenwAF] WE RVEVVVERVEVVVVYVV EK Found
 o
 = Naxis 5
 v
 iL Modsecurity 4
-c Microsoft Azure WAF 7--®—® o-¢-@ o S$ ¢ & o 3 ss .
 s Janusec + |---| —# A 8 8 8 A OA evasion Samples
-© j ae
 U Huawei Cloud WAF 7-8 -Ei-B-E-E-Y LY a PY EO ae across
-a Hihttps | ae as a YO YY
-<{ Google Cloud Armor 7—®—® o ¢ $ oS $ $ o 3 oe 1 4x. »O
-s Fortinet WAF |—¢-i- a a a) a BY YY ee YY oe
-= Cloudflare WAF |i i a Ei EY 2 A EY DY YY 2 eee W AF and We bApp
-Barracuda WAF 4~—#k-da- aad a , ma mY a YY a . .
 Alibaba Cloud WAF +—X--E-E-E-¥ EW Oe wy oe ey ee Combinations
-T T T T T T T T T T T T T T T T T T T T
-wo £99 DS * SD DP A DOD KY XY \A
 SS LSE ESEFES EERE LF SES
 LG SEY Ss Fee 2FTeS SF % SEL
 GO ODS eo < wes & OES
-Ss @ ev <S
-g g °
-@ CG 9
 Web Application
 ```
 

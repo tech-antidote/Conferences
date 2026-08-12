@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:03:08Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Alina Tan & George Chen & Chee Peng Tan & Ri-Sheng Tan & Penelope Chua & Benjamin Cao_DriveThru Car Hacking Fast Food, Faster Data Breach.pdf` (43 pages)
 
-
 ## Slide 1
 
 # **DriveThru Car Hacking Fast Food, Faster Data Breach**
@@ -544,7 +543,6 @@ Discover Connect Bypass Mute Auth Dump Sabotage Extract #BHAS @BlackHatEventsPro
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-NN VA 4 : ~*~: >
 tee
 ASIA 2025 = i ae y |
 10. Insights

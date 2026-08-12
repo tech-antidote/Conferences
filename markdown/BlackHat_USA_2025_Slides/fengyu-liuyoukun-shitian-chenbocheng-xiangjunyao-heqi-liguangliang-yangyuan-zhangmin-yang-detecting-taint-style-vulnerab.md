@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:30Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Fengyu Liu&YouKun Shi&Tian Chen&Bocheng Xiang&Junyao He&Qi Li&Guangliang Yang&Yuan Zhang&Min Yang_Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications.pdf` (43 pages)
 
-
 ## Slide 1
 
 Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications Speaker: Fengyu Liu (LFY) Contributors:
@@ -64,7 +63,6 @@ Monolithic architecture
 Microservice architecture
 Client browser
 Client browser
-Ee om :
 Payment Shopping cort NVEnCONY = Ss _ 41k
 Payment Shopping cart Inventory
 Single instance
@@ -167,7 +165,6 @@ Single instance
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ a = :
 black hat a BR a
 BRIEFINGS >
 Real Case: Spring Cloud Dataflow
@@ -234,7 +231,6 @@ Challenges
 2| path: /portal/** path: /user/**
 3 service: portal service: user
 4| filters: AddHeader=X-Portal filter: SetResponseStatus=403
-a wy f
 a
 > “i
 Ne
@@ -270,7 +266,6 @@ Challenges
 ¢ Cross-service data flow is hard to track
 oe kafka DEL
 RestTemplate 6 RPC
-a | |
 AL /portal/query?id=id —= user/query: Lar)
 5 Ea erie OER
 Gateway Portal Service User Service
@@ -314,7 +309,6 @@ Mscan Overview
 ¢ [LM-based entry identification and distance-guided taint analysis
 r
 = +@
-=p > | | Gateway LLM | +
 ——
 Application Code Entry Points SDG
 | S | Distance-guided

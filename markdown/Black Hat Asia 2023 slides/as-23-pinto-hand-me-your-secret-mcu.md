@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:05Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Pinto-Hand-Me-Your-Secret-MCU.pdf` (207 pages)
 
-
 ## Slide 1
 
 **Hand Me Your SECRET, MCU!** Microarchitectural Timing Attacks on Microcontrollers are Practical
@@ -270,9 +269,6 @@ Electromagnetic Emanations
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 ) 6 4 5 6
-i 8 ee | 8 8 ee
-0 v ) v
 “Stay Cool! Understanding Thermal Attacks on Mobile-based User Authentication” by Abdelrahman and Khamis
 ```
 
@@ -483,15 +479,12 @@ Allocation Queue
 OP HOP OP HOP 7
 2s Reorder buffer
 wor wor | nor [por | nor [nor | nor | nop
-o | | | | | | | | Fetch and
 A Scheduler Pre-decode
 5 wor | yor | nor | nop —_ | por
 5 s| [s] [sl] [gs
 fe 2} |3] |S! |3] |p .
 =| | 13] |e} |e] {2 Instruction fetch rate
-3) A é Sto -
 3 5} SF] 4 optimization Read/write ports
-4 < [2]
 Execution Units
 25
 =I ES prisl| STLB |
@@ -531,14 +524,10 @@ Allocation Queue
 wor [wor | uor | wor
 CDB Reorder buffer
 HOP HOP OP HOP oP MOP uOP OP Fetch and
-» (2 ee Ee
 is Scheduler Pre-decode
 i)
 4 wor | yor nor [wor | por | nor | nor | por
-[=I = sg Ss s
-ro) Py = 3s Z
 3 é =| |3 2 g Instruction fetch rate
-3g z g eae ,
 9 5 S| |3) |a optimization Read/write ports
 i =
 Z
@@ -574,20 +563,16 @@ oO Instruction Queue
 E HOP Cache Micgy Beeite 1* Stage - Fetch
 ]10e: je qoor Joo Joo and Pre-decode
 Allocation Queue
-ee ee ee
 ce Reorder buffer
 [oor Joo Jor Jur Joo Jor Joor Joo Fetch and
 o
 s Scheduler Pre-decode
 1)
 a wor | nor | nor | pop | por | yor | por —_ | yor
-[=I = sg Ss s
-2) 2 = 3 .
 =| é = S| |e g Instruction fetch rate
 z z g Stags -
 9 5 S| |3) |a optimization Read/write ports
 i =
-Bs [ea SS
 a
 a DTLB STLB 4
 5 Bs LI Data Cache pr
@@ -1061,9 +1046,7 @@ Attack Overview – The Basics
 ```text
 Attack Overview — The Basics
 CPU
-Firmware | | CNT < 0 A 1 2 4 3 »
 M ;
-y= : |-___>
 DMA X
 ~eL
 -
@@ -1079,9 +1062,7 @@ Attack Overview – The Basics
 ```text
 Attack Overview — The Basics
 CPU
-Firmware | | CNT < 0 A 1 2 4 3 »
 M ;
-y= : |-___>
 DMA X
 ~eL
 -
@@ -1098,7 +1079,6 @@ Attack Overview – The Basics
 Attack Overview — The Basics
 CPU
 M ;
-y= : |-___>
 DMA X
 ~eL
 -
@@ -1139,7 +1119,6 @@ Firmware o
 ‘Memory
 ee VIC
 M
-U —_=m oF
 DMA 8 y SPY
 ~
 ~eL
@@ -1157,11 +1136,8 @@ Attack Overview – The Basics
 Attack Overview — The Basics
 CPU
 Spy ——+> Victim Yoo ock TLELELe LU
-Firmware CNT < 0 A 1 2 4 3 »
 ‘Memory CPU
-a oe ' DMA
 M ,
-U ---] | .
 DMA 8 SPY i
 “* Rell (t)
 ```
@@ -1176,7 +1152,6 @@ Attack Overview – The Basics
 Attack Overview — The Basics
 CPU
 Spy ——+> Vieim |) ocexk PLE LLU
-U ---] | .
 DMA x SPY ;
 ~eL
 -
@@ -1193,7 +1168,6 @@ Attack Overview – The Basics
 Attack Overview — The Basics
 CPU
 Spy ——+> Vieim |) ocexk PLE LLU
-U ---) ; |
 DMA X SPY ;
 ~eL
 -
@@ -1309,8 +1283,6 @@ Attack Overview – Toy Example
 ```text
 Attack Overview — Toy Example
 CPU eee ee
-t i I _—
-- = ep
 var=1
 Firmware . ; else
 ~ 1 var=0;
@@ -1385,14 +1357,11 @@ Attack Overview — Toy Example
 oa I
 CPU s—“Cs—s wee jot Tt ccc ccco 1 yaa 1 cmp r3, #0 ;
 --77 ! 1 of ! beq.n ELSE 3 clk (else), 1 clk (if) 1
-1 . I if ( ==1) I 27 i} l
 Spy Victim I L? 1 IF movs r3, #1 \
 SS ne | var=1; | ; str 3, [r7, #0]
 Firmware YS ' else y ' b.n END
 Memory ss var=0;  p._ 1 ELSE: movs 3, #0 lelk 1
-Memory Soo \ . 1 \
 Sb or str 3, [r7, #0] Lclk |
-= ' ¥
 m_|* a | END: nop ;
 U ==: SUL eee
 Xx .
@@ -1412,16 +1381,12 @@ Attack Overview — Toy Example
 I
 CPU — nr aleetetetetettatatar ; [aa cmp 3, #0 elk |
 ; --77 ' l -7 ! beq.n ELSE 3 clk (else), 1 clk (if) 1
-‘ we ! if ( ==1) a ! . 1
 Spy H Victim I L- 1 IF: movs r3, #1 Iclk ;
 ee ne ; var=1; ; ' str 13, [r7, #0] Lelk !
 Firmware ~s, 1 else b.n END 2elk |
 Memory se 1 var=0; _— 1 ELSE: movs r3, #0 elk 1
-Memory soo \ . 1 ;
 a er str 3, [r7, #0] Lclk |
-a " .
 m_|* _ | END: nop l clk |
-UL -- SUL ee
 X .
 DMA ——> spy If-else statement compiled for Arm Cortex-M33 (-O0)
 ```
@@ -1638,7 +1603,6 @@ Attack Overview – Toy Example
 Attack Overview — Toy Example
 Spy Victim
 Firmware
-——F wy _ fe
 EU ---
 DMA ———> * fv
 Memory
@@ -1722,7 +1686,6 @@ r3, [r7, #0]
 1 clk
 Clock: t ttl
 If emp | beg
-mee = =
 Else
 Trace
 t+2
@@ -1748,7 +1711,6 @@ CPU
 5 cmp 13, #0 iclk Clock: t | ttl | #2. t#3
 y | ie beq.n ELSE 3 clk (else), 1 clk (if) ; , ,
 =; Figaenenes| oiXIF: movs r3, #1 I clk I emp bed movs | sit
-irmware T. _ __ __ xX
 str r3, [r7, #0] 1 clk race
 Memory b.n END elk
 ————————l VIC Oo
@@ -1794,7 +1756,6 @@ r3, [r7, #0]
 1 clk
 Clock: t ttl
 If emp | beg
-mee = =
 Else
 Trace
 t+2
@@ -1820,8 +1781,6 @@ Firmware IF: movs r3, #1 1 clk
 ince =—-— = = ».«
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
-ny VIC 0
-M ELSE: — — — — ok be
 str r3, [r7, c
 X
 DMA ———> BY} END: nop lelk Trace
@@ -1840,10 +1799,8 @@ Spy -_ cmp 73, #0 VaR Clock: t | ttl tt2. t+3 | tt4
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
 Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs' str b
 Firmware IF: movs r3, #1 1 clk
-ine = = = WoO ==
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
-ny VIC 0
 M ELSE: movs — — - ok Else ‘cmp
 str r3, [r7, # C
 X __
@@ -1863,10 +1820,8 @@ Spy -_ cmp 73, #0 VaR Clock: t | ttl tt2. t+3 | tt4
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
 Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs' str b
 Firmware IF: movs r3, #1 1 clk
-ine = = = WoO ==
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
-ny VIC 0
 M ELSE: movs — — - ok Else ‘cmp
 str r3, [r7, # C
 X __
@@ -1938,10 +1893,8 @@ Spy -_ cmp 13, #0 iclk Clock: t | ttl | #2. t#3
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
 SSS \------ If cmp | beg ‘movs' str
 Fi IF: movs r3, #1 1 clk
-irmware TT — = — ».¢
 str r3, [r7, #0] 1 clk race
 emer b.n END 2 clk
-ny VIC .
 M ELSE: movs r3, #0 ok Else ‘cmp: beq | beq
 — str r3, [r7, #0] c
 X asd oot oe
@@ -1967,7 +1920,6 @@ o b.n END 2 clk
 ————y VIC .
 M _ ELSE: movs P33, #0 " Else emp beq beq beq
 — str r3, [r7, #0] c
-x | ae
 DMA ———> PY! END: nop 1 clk Us
 ```
 
@@ -2042,7 +1994,6 @@ Fi IF: movs r3, #1 1 clk
 Irmware Trace _ _ __ 4
 str r3, [r7, #0] 1 clk
 emer b.n END 2 clk
-—> VIC 0
 Meco] BESE ss mOvsEnnS; = nik Else :cmp : beq | beq | beq
 nv str r3, [r7, #0 ©
 x | en eee eee
@@ -2277,14 +2228,12 @@ Vieti cmp r3, #0 1 clk Clock: t ttl] | t+2 | tt3 § tt+4 > t45
 Py ‘eum beq.n ELSE 3 clk (else), 1 clk (if) "4 ele.
 2 oo 2-2-2 ------4 Perrerrerrerrsrrs a Ta ya re] clk If cmp beq | movs| s
 Firmware : ,
-str n2 [nZ HAI 1 elk Trace —_ —_ —_ x —_ —_
 Memory
 , b.n e 2 clk
 if js==1
 IV 0
 m__[*) ELSE: moy ( = ) 1 clk Else | cmp Ae beg | beq | movs' str
 U-— sti Var=l,; 1 clk
-Xx —- —: —~ | — J —
 DMA ———> BY} END: nod else lelk Trace x
 var=0;
 SECRET = 1
@@ -3127,33 +3076,6 @@ M
 U
 DMA X
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hardware Gadgets
-I
-I
-I
-I
-I
-I
-I
-I
-I
-Trigger
-I
-I
-I
-I
-I
-I
-I
-I
-I
-eee ee eee ee
-Timer
-```
-
 ## Slide 163
 
 Hardware Gadgets
@@ -3184,7 +3106,6 @@ Threshold
 
 ```text
 Hardware Gadgets
-[ pvta | [ cru |
 Bus Matrix
 TIMER SRAM 1 SRAM 2
 Read SRAM 2 |
@@ -3655,7 +3576,6 @@ SRAM
 Trigger Cont. f Record Cont. VIC
 Gadget Gadget
 v SPY
-If (Key Pressed) i: By 5 7 8 12 13 [igs 16 ia vA]
 Else (Key !Pressed) [ij 2 (BI 4 [5 (0) 7 DBM» GW}u [12 Bis [15 hi7 ©
 ```
 
@@ -3669,7 +3589,6 @@ Monitor Clock Cycle 14
 
 ```text
 3USted Profiling
-aes: EN DIa 123.4 5.67 8 9 10 11 12 13 14 15 16 17
 Start_Trace(clock++); If Hf pin[x++] =i
 While = Read_Key = For
 Ise = dummy[x++] =i
@@ -3679,7 +3598,6 @@ Trigger Cont. <] Record Cont.
 Gadget Gadget
 SPY
 v
-If (Key Pressed) i: By 5 7 8 12]13)94) 15 16 ia vA]
 Else (Key !Pressed) [ij 2 (BN) 4 [5 (7 (BM 9 Gd}u [12 B14) 157 ©
 Monitor Clock Cycle 14
 ```
@@ -3811,7 +3729,6 @@ P| Gadget > Gadget vIC
 Counter © Auto-Sync Read Secret SPY
 Gadget Gadget Gadget
 A | Syne . 2 Read
-—O : ¥
 C) *-b Counter|0)1/2)3)4/51617
 ```
 
@@ -3834,7 +3751,6 @@ End_Exploit();
 If 4 pin|x++]:
 While = Read Key = For {' °
 Else = dummy[x+-
-ae SS ee ee
 Counter
 Gadget
 .

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:12Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hiroaki Hara_Think Inside the Box In-the-Wild Abuse of Windows Sandbox in Targeted Attacks.pdf` (33 pages)
 
-
 ## Slide 1
 
 #BHAS @BlackHatEvents
@@ -206,7 +205,6 @@ a= —
 ROAMINGMOUSE _@_.zip
 | ANELLDR ANEL ana NOOPDOOR
 * sideload decrypt install qfj@e8 iy decrypt
-@ — — O10 —— (xmMp=; —— ono
 .EXE -DLL .BIN <@> _BIN
 ScnCfg32.Exe vsodscpl.d1l <RANDOM> hello.xml hello.bin
 ```
@@ -249,7 +247,6 @@ virtualization technology
 * Same and clean environment on every execution
 * Light-weight
 ¢ A few seconds to launch
-mo Se BCS ~ @ 8% sis
 ```
 
 ## Slide 10
@@ -435,9 +432,6 @@ ono 3
 msiexec.bat msiexec.txt msiexec.dat
 | |
 PEM file password-protected RAR archive
-60 01 02 03 04 05 06 O7 O08 O58 OA OB OC OD OF OF Decoded text
-21 04 oo oo 6 FRR... eee...
-5D 4 44 | £7 Oe |e] GUD
 5A Fl ade. PIW'<é*azA(U
 30 “Ga0 .NAXAZE;].a4 §
 ol c'’°E. 7FA"L-.xX=a
@@ -490,7 +484,6 @@ Why SYSTEM?
 * Since Windows Sandbox is basically a desktop application, you can hide a UI by launching sandbox with a
 different user’s context
 BRA =H: C\Windows\system32\cmd.exe
-; < >.
 BEM joe c contin wsb <LogonCommand>
 Conf i guration>
 Vepu>D sab | e</VGpu> <Command>cmd /c whoami > C:¥share¥whoami. txt</Command>
@@ -688,7 +681,6 @@ pisek hat
 ASIA 2025
 Basic Components
 RPC RPC 2° launch oe
-— — Xe)) ©
 WindowsSandbox.exe Container Service Manager Hyper-V Host Compute Service Virtual Machine Worker Process
 (CmService.dll) (vmcompute.exe) (vmwp.exe)
 ¢ Entry point of Windows ¢ Setup the base layer * Create a container based on * Control Guess Sandbox

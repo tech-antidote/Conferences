@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:32Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Adam Zabrocki&Marko Mitic_How to Secure Unique Ecosystem Shipping 1 Billion+ Cores.pdf` (90 pages)
 
-
 ## Slide 1
 
 How to Secure Unique Ecosystem Shipping 1 Billion+ Cores?

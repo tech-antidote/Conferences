@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:33Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Julien Voisin_Modern Anti-Abuse Mechanisms in Competitive Video Games.pdf` (63 pages)
 
-
 ## Slide 1
 
 Modern Anti-Abuse Mechanisms in Competitive Video Games
@@ -62,7 +61,6 @@ barbwire
 le
 24 ra]
 3
-a <0 12:59 2 i ey
 MATCH POINT
 [29m]
 | ‘¢
@@ -75,7 +73,6 @@ kapkan
 kapkan VA
 canta
 mite-jammer
-C2 , J
 DROP , an
 bandit § : =
 2F Library Hallway
@@ -434,7 +431,6 @@ Cheat manufacturing/distribution is illegal in South Korea and China.
 ```text
 A ys
 black hat
-USA as a:
 Buy Call of Duty®: Modern Warfare® III a
 69,99€ Wea to Cart
 Buy Call of Duty®: Modern Warfare@ III - Vault Edition
@@ -708,7 +704,6 @@ ane Games with a Cheater Weekly
 f Games Globally Played with a Scripter (or a Bot)
 15% 300 =~ Games
 Bans
-- 20 «§
 ¢ 2
 2 g
 z-) =}
@@ -717,7 +712,6 @@ z-) =}
 7 =
 8 FA
 2 a
-a 5% 100 2
 Zs
 2022-01-01 2022-07-14 2022-01-19 2023-06-08 2023-12-21
 ```
@@ -738,7 +732,6 @@ LoL Anti-Cheat Ser pting Ba Ager ed Weekly
 40
 30
 20
-idol ss | i a |
 2020-10-15 2021-08-05 2022-05-26 2023-03-16 2024-01-04
 Weekly Bans (Thousands)
 ```

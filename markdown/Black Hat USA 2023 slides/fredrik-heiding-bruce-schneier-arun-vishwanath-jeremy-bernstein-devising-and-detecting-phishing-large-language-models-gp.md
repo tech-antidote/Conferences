@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:16:17Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Fredrik Heiding & Bruce Schneier & Arun Vishwanath & Jeremy Bernstein _ Devising and Detecting Phishing Large Language Models (GPT3, GPT4) vs. Smaller Human Models (V-Triad, Generic Emails).pdf` (37 pages)
 
-
 ## Slide 1
 
 ## ����������������������������������������������� �������������������������������
@@ -114,10 +113,8 @@ It's all good, kind of
 ```text
 Large language models (LLMs)
 GPT. PaLM LLaMA Anthropic
-y y v v
 ChatGPT Bard Chavet N Claude
 LlamaChat...
-G &S OW A\
 Al-powered chatbots |
 ```
 
@@ -134,12 +131,10 @@ Credibility heuristics
 signaling trust
 q J
 V-Triad
-(e =) ( >)
 C zable field Matching user
 star ag i > routines or
 and capabilities ea
 compatibility
-XX ) X y,
 Created by Arun Vishwanath, presented in "The Weakest Link" (MIT Press) and at Black Hat '17
 ```
 

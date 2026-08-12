@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:31:43Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fred Heiding & Alex O'Neill & Lachlan Price & Eric Rosenbach_A Framework for Evaluating National Cybersecurity Strategies.pdf` (54 pages)
 
-
 ## Slide 1
 
 A Framework For Evaluating National Cybersecurity Strategies
@@ -96,7 +95,6 @@ intro - **method (how)** - what we discovered - conclusion
 eee I
 black hat = Wr. Pi
 ~ USA 2024 : a
-AL jj I
 How We Conducted Our Research
 intro - method (how) - what we discovered - conclusion
 #BHUSA @BlackHatEvents
@@ -288,7 +286,6 @@ intro - method (how) - **what we discovered** - conclusion
 eee I
 black hat = Wr. Pi
 ~ USA 2024 : a
-P / I
 What We Discovered
 intro - method (how) - what we discovered - conclusion
 #BHUSA @BlackHatEvents

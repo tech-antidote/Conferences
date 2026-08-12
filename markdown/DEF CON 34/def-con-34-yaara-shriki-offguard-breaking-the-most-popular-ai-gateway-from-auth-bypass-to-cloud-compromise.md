@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:29:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yaara Shriki - OffGuard Breaking the Most Popular AI Gateway from Auth Bypass to Cloud Compromise.pdf` (49 pages)
 
-
 ## Slide 1
 
 **DEF CON 34 · BRIEFING**

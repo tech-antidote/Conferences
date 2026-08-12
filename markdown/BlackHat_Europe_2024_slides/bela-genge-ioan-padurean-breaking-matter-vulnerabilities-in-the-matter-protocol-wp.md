@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:00:39Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_wp.pdf` (21 pages)
 
-
 ## Slide 1
 
 # **Breaking Matter: vulnerabilities in the Matter protocol**

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:28:13Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Patrick Wardle - Dylib Hijacking on macOS Dead or Alive - Hijack 2026.pdf` (64 pages)
 
-
 ## Slide 1
 
 # **`Dead or Alive?`** dylib hijacking on macOS

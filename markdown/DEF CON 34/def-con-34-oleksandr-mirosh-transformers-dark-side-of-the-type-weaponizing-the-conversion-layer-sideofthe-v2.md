@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:44Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Oleksandr Mirosh - Transformers Dark Side of the Type - Weaponizing the Conversion Layer - Sideofthe v2.pdf` (52 pages)
 
-
 ## Slide 1
 
 **TRANSFORMERS** **`TYPE` DARK SIDE OF THE Weaponizing the Conversion Layer**

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:01:05Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Daniel Bohannon _ Andi Ahmeti- Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging_compressed.pdf` (108 pages)
 
-
 ## Slide 1
 
 ASIA 2024
@@ -341,13 +340,11 @@ SHQIPERMISO1337
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-©) https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/.. 3 @ AY Wy cp
 ,)
 HQIPERMISO1337.
 a Users
 permiso.io ~ Microsoft Entra ID
 « + New user L Download users B Bulk operations V () Refresh & Manage view “ Ww Delete
-& Allusers (0) ive Di i i B
 Autos F Add iter
 D Sign-in logs 2 users found
 % Diagnose and solve problems O Display name fT User principal name tl. User type On-premises sy... Identities
@@ -370,13 +367,11 @@ SHQIPERMISO1337 SHQIPERMISO1337
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-©) https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/.. 3 @ AY Wy cp
 ,)
 HQIPERMISO1337.
 a Users
 permiso.io ~ Microsoft Entra ID
 « a New user L Download users B Bulk operations V () Refresh & Manage view Y Ww Delete
-& Allusers (0) ive Di i i B
 Autos F Add iter
 D Sign-in logs 2 users found
 % Diagnose and solve problems O Display name fT User principal name tl. User type On-premises sy... Identities
@@ -391,20 +386,6 @@ Troubleshooting + Support
 ## Slide 19
 
 **Log**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-<3
-wae
-4 ite
-GN
-qi
-oS
-ore
-NOY.
-NO
-```
 
 ## Slide 20
 
@@ -547,7 +528,6 @@ iam:ListUsers
 
 ```text
 } No Permissions - 3/3 - IAM Users
-@ 0 oO Users | IAM | Global x + |
 CG ( _ https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-
 Identity and Access =X 1AM > Users
 Management (IAM) 8
@@ -686,12 +666,9 @@ User: arn:aws:iam::200802171337:user/No_Permissions | G copy Cc a erases eer)
 Service: iam Users (3) into CG Delete
 Action: ListUsers ‘An IAM user is an identity with long-term credentials that Is used to Interact with AWS in an account,
 On resource(s): arn:aws:iam:: 200802171337 :user/
-‘ 4 Q Search <1> ©
 Context: no identity-based policy allows the iam:ListUsers action
 Oo User name a Path v Groups ¥ Last activity v MFA OV Password
 ——————
-O — Andi_Ahmeti / 1 - - - \
-Oo Daniel_Bohannon fp 1 - - - |
 O —__No_Permissions / 0 @ 5 hours ago Virtual -
 ```
 
@@ -1101,8 +1078,6 @@ AdministratorAccess/andi.ahmeti@permiso.io
 
 ```text
 } Console Mapping - (Context)
-| © © © Gi Everything_Bagel|IAM|Globs x | +
-<€< G ( _ https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-2#/ A tt
 Identity and Access =X Permissions Groups (7) Tags (5) Security credentials Access Advisor ®
 Management (IAM) — 9S
 Q Search AM User groups membership (1) Add user to groups
@@ -1709,7 +1684,6 @@ pprint (response['User'])
 response = iam_client.create_access_key(UserName=username)
 print(f"\niam_client.create_access_key(UserName={username})\n")
 pprint (response['AccessKey'])
-# At i to y created IAM r 3
 response = iam_client.attach_user_policy(UserName=username, PolicyArn=policyArn)
 print(f"\niam_client.attach_user_policy(UserName={username}, PolicyArn={policyArn})\n")
 ```
@@ -2440,28 +2414,6 @@ $userAgentFamily-eq [UserAgentFamily]::AWS_Internal
 ## Slide 105
 
 **DEMO + Public Tool Release**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-oO
-no
-fo]
-2
-)
-~
-re)
-Le)
-2
-re)
-=)
-QO.
-+
-O
-=
-eel
-a)
-```
 
 ## Slide 106
 

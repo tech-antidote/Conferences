@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:40:43Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Sammy Azdoufal - 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud - nobody puts baby.pptx` (54 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -87,7 +86,6 @@ AUDIT
 a7
 is Re
 IPO aaa
-QP oe 3
 1 O ys ' ARCHITECTURAL ACCESS, Dy
 ° i] _ NOTABUGLIST r—C
 One thesis : three narratives: Audit -
@@ -266,7 +264,6 @@ OO]
 ```text
 DEF CON 34 -: Main Stage
 THE BOX SAYS BABY aires
-ies «3 @
 meari/audio/1 0
 meari/ptz/1 gos 1 a
 meari/alert /motion, : a
@@ -348,33 +345,20 @@ Sammy Azdoufal : @xnOtsa
 ```text
 ONLINE
 ONLINE ate |
-* : . *
 >
 NORTH AMERICA EUROPE ~
 , .
 ’ eee 2 Customer Portal < Bae e a .7
-€ > C @ https://totally.secure.login = | tel
 ¢ —J
-° rn " *
 % , PLEASE SIGN IN rN e
-* : Username * e Ss
-. e ¢
-. } Password ‘ { . i:
-4k r jas : e ae - ae
-% ‘ é ‘A @ public @® . : ee
-ms . é ie | % > o " . i os ais
-. ‘y ~ }.* > ied a
 * [ SOUTH AMERICA Y ACCESS GRANTED “| ASIA / PACIFIC =
 | ONLINE avn ONLINE OY ae
 & Welcome, admin!
 ~~~ You now have full access to everything. ioe)
 “i .°
->» —_ wf
 » | HACKER
-OF THE | °
 * + |) MONTH
 | * BY DEFAULT <a
-| ‘ J i — >
 P CONTINENTS -
 TODO:
 FIX LATER
@@ -811,7 +795,6 @@ DEF CON 34: Main Stage
 . Wayback the URL
 . DNS history
 . Vendor social announce
-WO NY F
 4. Email headers / first-fix date
 If the stamp predates first contact: say it with charts.
 Sammy Azdoufal : @xnOtsa

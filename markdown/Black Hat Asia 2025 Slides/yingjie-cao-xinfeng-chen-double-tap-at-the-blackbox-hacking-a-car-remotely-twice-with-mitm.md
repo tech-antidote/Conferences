@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:57Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Yingjie Cao & Xinfeng Chen_Double Tap at the Blackbox Hacking a Car Remotely Twice with MiTM.pdf` (50 pages)
 
-
 ## Slide 1
 
 ### Double Tap at the Blackbox Hacking a Car Remotely Twice with MiTM
@@ -333,7 +332,6 @@ public boolean a(String str, String str2) {
 this.b = b.b(str);
 c.b("SecurityCheckPresenter", " verifySecretKey() mCateId:" + this.b);
 int e = e(this.b);
-if (e >= 50) {
 c.b("SecurityCheckPresenter", String. format (MyApplication.a().getString(R.string.text_
 return false;
 }
@@ -356,7 +354,6 @@ public static String b(String str, String str2p {
 It (TextUtils.isemptp(str2)) 1
 return "";
 }
-int i = 0;
 try {
 1 = Integer.valueOf(str2).intValue();
 }
@@ -370,9 +367,6 @@ char[] charArray = str.toCharArray();
 int
 for
 }
-i2 = 0;
-(int i3 = 0; i3 < charArray.length; i3++) {
-i2 = i2 + (charArray[i3] * i3 * 77) + i;
 String format = new DecimalFormat("00000000") . format (Math. abs(i2));
 if (format.length() > 8) {
 }

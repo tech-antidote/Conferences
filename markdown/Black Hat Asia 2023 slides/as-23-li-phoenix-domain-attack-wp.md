@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:55Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Li-Phoenix-Domain-Attack-wp.pdf` (19 pages)
 
-
 ## Slide 1
 
 See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/363270238

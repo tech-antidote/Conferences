@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:51:43Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Satoru Takekoshi & Manami Mori & Takaaki Fukai & Takahiro Shinagawa_AML Injection Attacks on Confidential VMs.pdf` (47 pages)
 
-
 ## Slide 1
 
 # AML Injection Attacks on Confidential VMs

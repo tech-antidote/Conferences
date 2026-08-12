@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:53Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Pankaj Moolrajani_Identifying and Reducing Permission Explosion in AWS A Graph-Based and Analytical Approach.pdf` (103 pages)
 
-
 ## Slide 1
 
 Identifying & Reducing Permission Explosion in AWS By Pankaj Moolrajani Security Engineering Lead @Motive pmoolrajani@gmail.com @p_moolrajani
@@ -349,7 +348,6 @@ Let’s Simplify
 ```text
 Roles & Permissions
 production-qa
-Le t Ss S m p | ify production-platform-admin’
 production-embedded
 production-backend
 ```
@@ -408,7 +406,6 @@ s3-bucket
 
 ```text
 Data Insight ©) ec2:network-acl
-. > .
 production-ga > {> ec2:instance
 Unused Resource
 Types = 1
@@ -1063,16 +1060,7 @@ L is accessed |
 600
 400
 200
-° > > @ <\
-& we SS 6
-ous > te) ; oe Ko
-eo Ra 2 & <
 >) < < ~~» Re)
-aS © £ & &
-oc : os @ < s
-Ss oe s {e)
-fe) S : oe
-$ 3 x
 g v
 &
 $

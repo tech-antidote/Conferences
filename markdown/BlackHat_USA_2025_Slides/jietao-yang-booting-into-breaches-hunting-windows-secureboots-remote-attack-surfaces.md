@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:24Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Jietao Yang_Booting into Breaches Hunting Windows SecureBoot's Remote Attack Surfaces.pdf` (86 pages)
 
-
 ## Slide 1
 
 Booting into Breaches Hunting Windows SecureBoot's Remote Attack Surfaces
@@ -120,7 +119,6 @@ Azure Yang @ CyberKunlun
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-#) | SN _.. hw, | >a _
 bieckhat Mobile Secuireboot f°
 This phone is not running Samsung's official
 software. You may have problems with features The boot loader is unlocked and software
@@ -146,7 +144,6 @@ PRESS POWER KEY TO PAUSE BOOT
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QQ j Sy jb é k , | 2 > _
 blackhat SecureBootA Where is/enfofced
 Windows Feature Secure Boot
 Required?
@@ -302,7 +299,6 @@ BRIEFINGS
 if
 Mi
 blackhat Reflections ow Research Amp:
-€ CG 23 zerodayinitiative.com/blog/2024/7/9/the-july-2024-security-update-review ae G iG o> tee
 ZERO DAY
 INITIATIVE
 There are also two dozen fixes for security feature bypass (SFB) bugs, although | think we
@@ -614,7 +610,6 @@ Proxy
 DHCP
 .——— DHCP Request to port 4011
 Contains “PXEClient” extension | Contains "PXEClient” extension tags Service
-oo _ |
 DHCP Ack reply to port client's port Extended DHCP Offer to client port contains:
 Contains “PXECItent” extension tags + ——————] PXE client extension ta s
 BStrap.0 file | ___ 9 Proxy DHCP
@@ -753,7 +748,6 @@ Figure 58. netboot6 (DHCP6 and ProxyDHCP6 reside on the same server)
 
 ```text
 2)
-* be y a y | 4
 blackhat Research_envirohnment
 ° Hyper-V Gen2 VM Is recommended
 ~~ Microsoft
@@ -816,7 +810,6 @@ Paneer eat \very — &o
 v5 = v4->__vftable->TriageDump64: : Initialize __MEMORY_DUMP_PARAMETERS__ PTR(
 v4,
 (GuestCrashDumpWriter *)((char *)this + 56));
-if ( v5 >= @ )
 {
 LODWORD(v18) = 3;
 v19 = 0164;
@@ -828,12 +821,10 @@ Vm1::VmFile::VmFile((Vml::VmFile *)&v19, v1, v8, *((_DWORD *)this + 11));
 LODWORD(v18) = 4;
 v5 = va-> _vFtable prriageDunpéd: :Write_Vml: :VMFile(v4, &v19);// Generate Dump, | ?Write@TriageDump64@@UEAAJAEAVVmF ile@Vm1@@@Z
 Vm1: :VmFile: :Reset = =
-if ( v5 >=@ )
 {
 v4->__vftable->TriageDump64: :GetBugcheckCode_uint(v4, (unsigned int *)&v18);
 v2@ = (struct _EVENT_DESCRIPTOR)MSVM_GUEST_CRASH_DUMP_SUCCESS;
 Vm1::VmFile: :Reset(&v19, v13);
-v5 = 8;
 }
 else
 {
@@ -862,7 +853,6 @@ BRIEFINGS
 *
 2)
 Why choose“Hyper-V
-FO GR RRR RK
 Bugcheck Analysis
 le
 BUGCHECK_CODE:
@@ -1132,12 +1122,6 @@ wily yw >=.
 bisek hat
 BRIEFINGS
 Case study
-3; // rie
-t; // ax
-3 // r8
-3 // rdx
-3 // rex
-3 // dx
 v2 = CellIndex;
 result = CellPaged->word@ -
 f ( (result & @xFDFF) !=@ )
@@ -1145,22 +1129,17 @@ f ( (result & @xFDFF) !=@ )
 L
 v4 = CellPaged->Cellcount - 1;
 CellPaged->Cellcount = v4;
-if ( !v4 )
 ; result;
-[v5 = 4 * (v4 - ( ] t64)CellIndex); > v5
 v6 = &CellPaged|CelliIndex + 2];
 v7 = &CellPaged[v2 + 1];
 {
 v8 = CellPaged->CellCount - 1;
 CellPaged->CellCount = v8;
-if ( !v8 )
 t result;
-v5 = * (v8 - v2
 v6 = &CellPaged[2
 v7 = &CellPaged[
 )
 * (unsigned int)(v2 + 1) + 1
-* v2 + 1];
 t16)memmove(v7, v6, v5);
 ```
 
@@ -1414,7 +1393,6 @@ rip=00000000100c24ab rsp=00000000046e
 r8=0000000000000000 r3=O00000000000C go000000" 100c24ab cc int
 r11=00000000046e23d8 r12=00000000000GuUUU rils=uUUDUUUUUUUUUUUU
 r14=0000000000838610 r1S=0000000000000068
-iopl=0 nv up ei pl nz na pe nc
 cs=0028 ss=0009 do=0030 ec=0N30 fa=0030  gs=0030 ef1=00000202
 bootngfw! MnHapReportHeapCorruption+0x3?7:
 00000000°100c24ab cco int 3 37
@@ -1465,7 +1443,6 @@ RSP
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q 1 R sere //; bp \ 5 A
 blackhat About ecuySive'ealli ig
 BRIEFINGS
 Vi
@@ -1515,7 +1492,6 @@ Cannot access memory at address Oxfe223818' dor cu tit farfooee
 ```text
 2)
 HKEY hiveKey;
-| a ee
 blackhat When bcedeg@i
 LONG result + RegLoadKey(HKEY_USERS, "BCD123", hiveFilePath.c_str());
 if (result != ERROR SUCCESS) {
@@ -1535,7 +1511,6 @@ result 4 RegUnLoadKkey(HKEY_USERS, "BCD123");
 if (result != ERROR SUCCESS) {
 std::cout << "Failed to unload the registry hive. Error code: " << result
 return 1;
-4< Std: ce
 std::cout << "Registry hive loaded, key value set, and hive unloaded successfully." <<
 X ~~:
 void BCDCreateElement(HKEY hRootKey, GUID NodeGUID, int i)
@@ -1599,20 +1574,15 @@ oe v1l9 = httpTcp4_recvdata.DataLength - 3;
 ° tT ( httplcp4 recvdata.
 oa 10+ ARE 40;
 a LODWORD(v19) = RtlCompareMemory ( ( =
-o f v19 7 -
 tC vi9 1 v19 = httpTcp4 recvdata. pa - 3;
 1
 e *(( T )Heap + v18) =
 oO DataLength = httpTcp4_ recvdata. i
-eo vi6 = ( )Heap + v18 + 4;
-o vi5 = ( t ] )Heap;
 oO v17 = httpTcp4 recvdata.DataLength - v18 - 4;
 na
 a DataLength = httpTcp4 recvdata.DataLength;
 * ++v18;
-8 vi9 = DataLength - 3;
 or) ile ( v18 < ( : / t)vi9 );
-° if ( !vi5 )
 £
 L
 00194A82 HttppGetResponseT cp:68 (10195682)
@@ -1950,7 +1920,6 @@ pending favs
 cycles done
 A
 10000 15000
-\/ ea4 1 || ee jd
 5000 10000 15000 20000 relative time in seconds
 relative time in seconds
 20000
@@ -1975,7 +1944,6 @@ Making VM snapshot tree really helps you accelerate the analysis
 2)
 bieckhat Go speed_racer \
 GO) u22dsk_edk2dev - ROZESESE
-» Q@-+ @— @— @- @- @- 9 @- O-- @
 : works server ipv+ debug ‘2824 bootmofw PRE 6 ‘BRE 7 patched debug 21 me
 — 0 O—- @@- OOOO
 wMext vNext restarted bootmofw ‘8219 python wim debug poison
@@ -2131,7 +2099,6 @@ Application
 black hat
 BRIEFINGS
 File Action View Help
-@9/|4n| S| &
 fa Windows Deployment Services WIN-POM7B6RSUD3
 v Ga Servers
 =, WIN-POM7B6RSUD3
@@ -2234,7 +2201,6 @@ Browse
 blackhat Replace the‘setup.exe /,
 +
 IHRBAM «86> «=A (C:) +> Temp
-@ W ‘N HRY 06 = OBB
 (EA RB
 B& Program Files 2024/6/22 15:54
 B® Program Files (x86) 2024/6/22 15:54
@@ -2437,7 +2403,6 @@ ri1=ffff9c0e1Ff9Ia9 Fad
 iopl=0 nv up
 nt! EmpParseRules+0x27
 FFFFF802°>35986c69 483
-1: kd> kf
 xxx Stack trace for
 # Memory Child-SP
 00 FffFF886
@@ -2464,7 +2429,6 @@ r10=0000000000000543
 r13=0000000000000000
 4
 Analyzing the-crash
-ei pl nz na pe nc
 5:
 919 cmp qword ptr [rcex],rbx ds: ffffffff FFFFFFF8=? 222222222722 2?2??
 last set context - .thread/.cxr resets it

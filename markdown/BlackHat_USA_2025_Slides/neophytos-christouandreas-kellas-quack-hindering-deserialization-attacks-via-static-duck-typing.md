@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:58:36Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Neophytos Christou&Andreas Kellas_QUACK Hindering Deserialization Attacks via Static Duck Typing.pdf` (117 pages)
 
-
 ## Slide 1
 
 # QUACK: Hindering Deserialization Attacks via Static Duck Typing
@@ -229,8 +228,6 @@ Author) Viathieu Farrel
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat AS - tee | ;
-BRIEFINGS 4 \ ~% j ,
 We Know Deserialization is Dangerous
 unserialize(string $data, array $options = []): mixed
 unserialize() takes a single serialized variable and converts it back into a PHP value.

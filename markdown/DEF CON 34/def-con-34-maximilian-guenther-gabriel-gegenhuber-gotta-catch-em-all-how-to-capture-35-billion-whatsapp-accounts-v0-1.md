@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:13Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Maximilian Guenther, Gabriel Gegenhuber - Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts - v0 1.pdf` (1 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.

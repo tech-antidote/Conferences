@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:31Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Tom Dohrmann_All Your Secrets Belong to Us Leveraging Firmware Bugs to Break TEEs.pdf` (58 pages)
 
-
 ## Slide 1
 
 All Your Secrets Belong to Us: Leveraging Firmware Bugs to Break TEEs
@@ -33,7 +32,6 @@ Tom Dohrmann
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-| \ 4a
 blackhat } # +
 USA 2024
 AUGUST 7-8, 2024
@@ -1283,7 +1281,6 @@ Ob, 4d, 98, d4, 7d, cl, Ob, d6, 2f, b4, 6c, 6b, 51, a2, 92, 17, 3b, O01, e8, 82,
 , 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,00,
 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 0
 0, 00, 00, 00, 00, 00, 00, 00, 00,00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
-AN AN AH AH AH AH AH ANH NAH NH NH NH NH AH NH NAH AH AH AH NH NH NH NH NH ANH NAH AH AH AN A
 ```
 
 ## Slide 56

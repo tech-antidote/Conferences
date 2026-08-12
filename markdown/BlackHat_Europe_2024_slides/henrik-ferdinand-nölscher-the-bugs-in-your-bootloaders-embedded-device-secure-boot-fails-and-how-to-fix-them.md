@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:49:50Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Henrik Ferdinand Nölscher_The Bugs in Your Bootloaders Embedded Device Secure Boot Fails and How to Fix Them.pdf` (54 pages)
 
-
 ## Slide 1
 
 The Bugs in Your Bootloaders: Embedded Device Secure Boot Fails and How to Fix Them
@@ -119,7 +118,6 @@ ssoceisenede
 sites
 i
 Meee iis
-ER ER | Hs
 1
 :
 pasenaais
@@ -152,8 +150,6 @@ undefined4 XMM3_Da: param_4
 XREF[2] :
 00066177 00
 90066178 Oa 09 O09
-47 72 75
-62 20 53...
 0000a237 52 PUSH RDX
 0000a238 e8 b3 6f CALL _relocate
 05 00
@@ -520,9 +516,7 @@ Err: serial#1000
 Net: No ethernet found.
 Security is enabled 9
 ]
-1 @3 le 10 80 @5 1c 10 90 C5 cece sesseaee
 Hit any key to stop autoboot:
-80006960: lc 10 90 e5 08 10
 80006970: 046 10 81 e3 1¢ 1000 sss hing
 No MDIO bus found ra}
 NULL device name! c

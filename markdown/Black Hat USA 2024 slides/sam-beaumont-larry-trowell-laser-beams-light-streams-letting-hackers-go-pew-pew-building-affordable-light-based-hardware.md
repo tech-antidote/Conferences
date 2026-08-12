@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:38:29Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sam Beaumont & Larry Trowell_Laser Beams & Light Streams Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware Security Tooling.pdf` (105 pages)
 
-
 ## Slide 1
 
 **LASER BEAMS & LIGHT STREAMS LETTING HACKERS GO PEW PEW - BUILDING AFFORDABLE LIGHT BASED SECURITY TOOLING SAM** **~~.~~ BEAUMONT & LARRY TROWELL**
@@ -954,7 +953,6 @@ LASING
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ip : -
 AND NOW FOR SOMETHING
 COMPLETELY DIFFERENT
 ```

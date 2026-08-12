@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:56:41Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-Highly-Automated-and-Adaptive-Executable-TTP-Intelligence-for-Security-Evaluation.pdf` (47 pages)
 
-
 ## Slide 1
 
 ### When Knowledge Graph Meets TTPs: Highly Automated and Adaptive Executable TTP Intelligence for Security Evaluation
@@ -506,7 +505,6 @@ Compromise User Command Shell User | User Account Control ade | ~~" User |
 Adm Adm
 T1190: Exploit Public- T1053.005: Scheduled T1134: Access Token [LUS* T1021.001: Remote User
 ? 1
-: tae ' > . :
 Facing Application |: 5 __ Task adm Manipulation | Adm | Desktop Protocol User |
 User N/A User
 . . . . User
@@ -532,7 +530,6 @@ Escalation Movement
 T1189: Drive-by User T1059.003: Windows |S" T1548.002: Bypass User | Adm 11021.004: SSH User
 Compromise User Command Shell User | User Account Control ade | ~~" User |
 T1190: Exploit Public- [°° T1053.005: Scheduled |49™ T1134: Access Token [US| 4¢™ T1021.001: Remote [US
-: tae > . :
 Facing Application | User | Task adm Manipulation | Adm | Desktop Protocol User |
 User N/A . ogo gs . User
 T1078: Valid Accounts T1106: Native API T1068: Exploitation for T1534: Internal
@@ -577,7 +574,6 @@ Escalation Movement
 T1189: Drive-by ; T1059.003: Windows ; T1548.002: Bypass T1021.004: SSH
 Compromise User Command Shell User | User Account Control ade | User |
 T1190: Exploit Public- [°° T1053.005: Scheduled |49™ @ 111134: Access Token [LY 144") | @ |11021.001: Remote USF
-: tae > . :
 Facing Application | User | Task adm Manipulation | sys | Desktop Protocol User |
 User N/A . eae User . User
 T1078: Valid Accounts T1106: Native API @ . | T1068: Exploitation for @_ | T1534: Internal
@@ -605,7 +601,6 @@ T1189: Drive-by —») T1059.003: Windows T1548.002: Bypass T1021.004: SSH
 Compromise User Command Shell User | User Account Control | Adm | User |
 User | Adm
 T1190: Exploit Public- LS“ T1053.005: Scheduled [Aa 0.12 | 11134: Access Token 0.43) 1021.01: Remote LYS"
-; tae > . : -—>
 Facing Application | User Task adm Manipulation | Adm | Desktop Protocol User |
 User N/A 0.01 . ogo gs User 0.12 . User
 T1078: Valid Accounts T1106 Native API T1068: Exploitation for T1534: Internal

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:50Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Cao-Attacking-WebAssembly-Compiler-of-Webkit.pdf` (56 pages)
 
-
 ## Slide 1
 
 # Attacking the WebAssembly Compiler of WebKit

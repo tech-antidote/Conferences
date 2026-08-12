@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:12Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Martin Vigo - Breaking Amazon lockers by any means necessary - into.pdf` (37 pages)
 
-
 ## Slide 1
 
 # **Breaking into Amazon Lockers by any means necessary! Martin Vigo**
@@ -430,7 +429,6 @@ localhost ()
 localhost ()
 remote ()
 east Titian rs Itt OE Baas ot SET IOI OR DIT Sot OI sa a ante 2 ‘aaa Sacto Ria eS ai ciate ana
-i= A aR et en St Sn aE 5 ST A SE On LED" SS AT BE LGD On LEE Pw ae I Li |
 Protocol Lengt)§Value
 1
 nit
@@ -924,7 +922,6 @@ Can’t figure out how to forge the “open cabinet” payload…
 10 69
 10 69
 10 69
-10 10 69
 C©OMNMUABWNPR
 Can’t figure out how to forge the
 “open cabinet” payload...
@@ -962,30 +959,6 @@ fd5bdcb9610f c51174393e4650687 f8746b54222b29a810039f69768808a375F
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a] *
-a r —~—
-Uhhh ee
-S
-:
-= matic, Ee S
-- I I
-oa S
-= =
-an =
-i,
-= af & =
-=z h ~
-4
-me
-ni
-mie
-. es \
-|
-```
-
 ## Slide 28
 
 Attacking the Amazon Mobile App
@@ -993,7 +966,6 @@ Attacking the Amazon Mobile App
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-| </> =e
 £ ARTIFACTS
 oolean isUserAuthenticated() (
 LOCAL STORAG
@@ -1002,7 +974,6 @@ f (token != nul ;
 omen preferences. xml
 droid. shopping_prefere
 } android.s
-ae ae ted
 } ine
 d ketplaze=ATVPDKIKXODER
 \ ‘
@@ -1016,7 +987,6 @@ amazon. com/user localStorage. json Ye
 amazon.com/orders/v8/order:
 amazon.com
 (~ HEXDUMP
-J — |
 | Pp AUTH TOKENS
 t
 “access_token": "Atza]...9YotnF”,
@@ -1036,11 +1006,6 @@ throw new SSLPeerUnverifiedExc - > ad -
 } assets/ ‘ont Type: a at
 y pplication/jso
 return true; vA META-INF/
-) = = ke . Yot
-\\ ff " ie
-; -<-— ' 1 de 4
-* y i a
-ae —_ = = = .
 Attacking the Amazon Mobile App
 ```
 
@@ -1059,10 +1024,8 @@ BLUETOOTH ATTACK SURFACE
 *&
 EXPLOIT PATH
 7
-PHY AL E
 #
 SEN AR ! alk,
-6) Z i
 Attacking the Hardware
 ```
 
@@ -1077,7 +1040,6 @@ Attacking the Locker’s Physical Security
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-——— nS q = Sk: ‘ =>
 Attacking tt the Locker’ S Physical Security
 ```
 
@@ -1088,28 +1050,6 @@ Attacking tt the Locker’ S Physical Security
 ## Slide 34
 
 Closing remarks
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-}
-+¢€
-/ /
-big
-t 1
-1 ¢
-)
-+4
-/
-zB
-Font
-} i -_ :
-ya}
-a TS
-J —( 38a} &
-(Q) ez
-remarks
-```
 
 ## Slide 35
 

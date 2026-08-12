@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:01:31Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_Compressed.pdf` (92 pages)
 
-
 ## Slide 1
 
 # Breaking Matter: Vulnerabilities in the Matter Protocol
@@ -479,18 +478,14 @@ Accessory Ready to Connect
 ye Me “MSS315" is now in pairing mode. ss
 —_ ” Copy and paste the setup code to
 pee 3 connect.
-g Se 29
 “ @ Setup Code: 1531-955-5610
-_ - Ae
 Mc fini
 Wi-r ewwork piuerenuer iesirry
 Firmware 9.3.26
 T n Pairing Mode
 Remove Accessory
 Information Classification: General
-| _| | it a || (2) “ -
 Commissioning: certified device Ts.
-No SIM >
 @ Mss315 x
 Powered Off
 Connected Services
@@ -720,7 +715,6 @@ Information Classification: General
 Testbed fabrics and connectivity biacichat
 —_—— — _— —_-—-
 Nanoleaf
-| : 1) GAC) ames 1
 Nanoleat | l
 | | Light Bulb lI > =
 © I
@@ -734,22 +728,16 @@ Eve Door |
 | Eve Mation |
 . ,
 . ;
-a — nee |
 Meross ee ina
 Smart Plug C)
 | , Pore =
 | | Eve Motion
 j o) Meross |
 * a Smart Plu
-We ’ \\ a!
-: —_—— oo
-—- — ~ = ~ Legend
 ~Y a CHIP controller | g
 CHIP lock app | (chip-tool) le's fabri Cs
 (Cluster l, l Apple's fabric:
-enumeration | (— —_ = l and
 attack) |, J | Google's fabric > |
-J === a
 | CHIP's fabric oy
 Information Classification: General
 ```
@@ -854,7 +842,6 @@ NOTHINGJERRY | : ;
 VirtuallockApp Matter Accessory
 al ro
 4 7 ‘ ’ oy Locked No Response
-5 2 1 :
 » “
 a
 @ HomePod
@@ -1871,7 +1858,6 @@ Information Classification: General
 I Minute 5 Minutes 10 Minutes
 saci — Normal cial — Normall acd — Normall
 Normal 2 Normal 2 Normal 2
-3 a - |
 s 7007 | Normal 3 M007) _ Normal 3 1009) Normal 3
 S — FScan —— FScan —— FScan
 = 300- 300- 300-
@@ -1881,8 +1867,6 @@ $ 200- 200 - 200 -
 a I
 ®
 5 100 | 100- ih. 100
-0- A vivee \ 0-| A AA AN O- In s
-(e) 20 40 60 fe) 20 40 60 (e) 20 40 60
 IMinute 5 Minutes 10 Minutes
 500+ | Normal | | 500% (Normal | 5007 Normal ! A
 Normal 2 Normal 2 Normal 2
@@ -1891,12 +1875,9 @@ Normal 2 Normal 2 Normal 2
 ‘= 300- 300- 300-
 =
 2 2007 200 - | 200 -
-“4 | \
 100+ | | 100- | 100-
 K\ !
 \
-o- Non _ o-| & aA J ly O- .
-0 20 40 60 0 20 40 60 0 20 40 60
 ```
 
 ## Slide 85
@@ -1918,7 +1899,6 @@ I Minute 5 Minutes 10 Minutes
 Loy Normal | [i Sf Loy Normal | S—_ / Loy Normal 1 ZZ TF
 3 Normal 2 4 Normal 2 7 Normal 2 /
 eS OB | aa Normal 3 OB hem Normal 3 OB | ae Normal 3
-S — — FS
 2 age can can
 ()
 L
@@ -1927,7 +1907,6 @@ S o4-
 S o2-
 re 0.2
 0.0- ~/)
-O 20 40 60 20 40 60
 I Minute 5 Minutes lO Minutes
 10- , 10-| <= 10- a ee
 — Normal] VY — Normall A — Normall
@@ -1941,7 +1920,6 @@ s — FScan — FScan
 LJ
 0.2 -
 0.0-
-0 20 40 60
 ```
 
 ## Slide 86
@@ -2041,12 +2019,8 @@ Thank you! Béla Genge <u>bgenge@bitdefender.com</u>
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-—- uw! |
 _ EWROP ‘Ss
 tt |
-ae li , | mee Los
-\ | y = eee, oN. =
-—E L- = la
 Béla Genge
 bgenge@bitdefender.com
 #BHEU @BlackHatEvents

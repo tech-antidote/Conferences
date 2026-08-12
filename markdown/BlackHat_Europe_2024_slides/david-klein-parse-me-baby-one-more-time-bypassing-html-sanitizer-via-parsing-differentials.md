@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:49:11Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/David Klein_Parse Me, Baby, One More Time Bypassing HTML Sanitizer via Parsing Differentials.pdf` (83 pages)
 
-
 ## Slide 1
 
 **Parse Me Baby One More Time: Bypassing HTML Sanitizer via Parsing Differentials**
@@ -33,7 +32,6 @@ Speaker: David Klein
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-3 \ \ 4 mA.
 lack
 EWROPE 20 4 Lin
 DE BER 11-12, 2024

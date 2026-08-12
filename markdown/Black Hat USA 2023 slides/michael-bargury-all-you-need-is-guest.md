@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:22:37Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Bargury_All You Need is Guest.pdf` (200 pages)
 
-
 ## Slide 1
 
 # All You Need Is Guest
@@ -69,7 +68,6 @@ USA &
 ```text
 Q
 black hat
-2 € © wU BS © & 8 D :} of 59 > mr
 g Zenity Demo invited you to access applications within their organization ‘External @ @
 * © Microsoft Invitations on behalf of Zenity Demo <invites@microsoft.con F 28, 4:32PM (6 day ) a)
 © Feat) to | ker6, me +
@@ -247,10 +245,6 @@ Small vendor
 
 ```text
 pifeK hat
-’ + a as . = east
-ae ww mn Se We o. x y ei. . 4 %
-a on —_ x &S A . . S \
-USA 2023 , 7 Sa i i, !
 How can two parties collaborate over a
 bunch of files?
 POC Kickoff
@@ -337,7 +331,6 @@ F1000 tenant
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-f. Ba ous
 black hat SS cs
 USA 20e53
 © excel | Microsoft 365 +) Chat| Microsoft Teams Xp SharePoint @ Home - OneDrive @ Home - Microsoft Entra admin c | tt Yammer - Feed
@@ -347,7 +340,6 @@ R
 S$
 0
 Establishing secure connection.
-Q Search 7 4 “ A ENG = cx @ apee
 13/07/2023 ™
 @mbrg0
 #BHUSA GBlackHatEvents
@@ -457,7 +449,6 @@ F1000 tenant
 pifeK hat
 USA 20e53
 (b) Understanding how control works
-a Ff rN
 aG neure AD
 ae =:
 @ Fil
@@ -816,7 +807,6 @@ Model.
 Get started with Power Apps Author a basic formula to change properties in Work with external data in a Power Apps
 mn) a canvas app canvas app
 Beginner 51 min Beginner 42 min Intermediate
-1 hr 4 min
 Manage and share apps in Powe|
 Beginner
 ```
@@ -832,7 +822,6 @@ bisek hat
 USA 20253
 Environment
 HS
-| @ Home 2 a ’ PS
 v Welcome, Hacker5!
 + Create
 Create apps that connect to data, and work across web and mobile.
@@ -869,15 +858,12 @@ USA 20253
 Environment
 Power Apps & pwntoso (default)
 y + Pwntoso Sign out
-| @ Home 2 . I
 Welcome, Hacker5!
 + Create
 Create apps that connect to data, and work across web and mobile. 7
 Learn Hacker5
 FP Apps hacker5@pwntoso.onmicroso...
-| H |
 View account
-EB Tables W. t t ee
 ays to create ana
 y PP Switch directory
 Flows
@@ -1130,7 +1116,6 @@ SQL Server
 bisek hat
 USA 20253
 — £ Edit \@ Share Ill] Delete
-{my Home . . . .
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
@@ -1165,7 +1150,6 @@ bisek hat
 USA 20253
 Environme!
 — £ Edit \@ Share Ill] Delete
-fy Home . . . .
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
@@ -1294,7 +1278,6 @@ USA &
 bisek hat
 USA 20253
 — £ Edit \@ Share Ill] Delete
-{my Home . . . .
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
@@ -1330,7 +1313,6 @@ USA 20253
 - Environment
 Power Apps & zeniy demo (eto
 — £ Edit \@ Share Ill] Delete 2 Search
-fy Home . . oo. . . .
 Connections > jamieredingcustomerdata.file.core.windows.net
 { Create
 [ Learn Details Apps using this connection Flows using this connection
@@ -1342,7 +1324,6 @@ Solutions
 | & Connections +
 More
 €& Power Platform
-rn a rs a
 ```
 
 ## Slide 66
@@ -1356,7 +1337,6 @@ bisek hat
 USA 20253
 - Environment
 = £ Edit \@ Share Ill] Delete PD Search
-fy Home . . oo. . . .
 Connections > jamieredingcustomerdata.file.core.windows.net
 + Create
 © tearn Details Apps using this connection Flows using this connection
@@ -1466,7 +1446,6 @@ Developer Plan
 Build and test Power Apps for free
 Get started free >
 | Existing user? Add a dev environment >
-ial ws @
 Free for development and testing
 Create apps and flows without writing code
 with full-featured Power Apps and Power
@@ -1543,21 +1522,6 @@ e Microsoft Dataverse
 ## Slide 74
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Customer Insights
-I:
-£
-¥
-M
-fU
-O
-fU
-xt
-Ul
-```
 
 ## Slide 75
 
@@ -1835,7 +1799,6 @@ DLP Policies » New Policy
 Home & Move to Business Block Configure connector #3 Set default group
 @ Policy name
 Environments led connectors can't be blocked.
-RF & ®
 brs ©
 al
 2
@@ -1874,7 +1837,6 @@ DLP Policies » New Policy
 Home r #3 Set default group
 @ Policy name
 Environments
-RF & ®
 Finding #3 - custom
 connectors
 DLP Bypass Ur GEenesies
@@ -2029,9 +1991,6 @@ DLP bypass disclosure in process Full writeup → <u>bit.ly/mbrg-bhusa23</u>
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-rw) a ws . “Va N “|
-blackhat LE OE SO SSE ee
-USA 2025 7 i A 4
 DLP bypass disclosure in process
 Full writeup > bit.ly/mbrg-bhusa23
 ```
@@ -2081,7 +2040,6 @@ USA 20253
 Environment
 Power Apps & Zenity Demo (default)
 £ Edit \@ Share [li] Delete
-fy Home . . oe .
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
@@ -2116,7 +2074,6 @@ USA 20253
 Environment
 Power Apps ® Zeniy Demo (dfou)
 — £ Edit \@ Share Il] Delete PD Search
-{ny Home . . . .
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
@@ -2145,7 +2102,6 @@ USA 20253
 Environment
 Pauses B Zeniy Demo (detou
 — £ Edit \@ Share [li] Delete P Search
-fy Home . . oo. .
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
@@ -2199,21 +2155,6 @@ Mobile QR code
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Customer Insights
-I:
-£
-¥
-M
-fU
-O
-fU
-xt
-Ul
-```
-
 ## Slide 95
 
 #BHUSA @BlackHatEvents
@@ -2239,7 +2180,6 @@ Signed in
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a Be eas
 black hat ca :
 USA 20253
 Power Apps | Customer Insights BSB oO +s & ?
@@ -2604,7 +2544,6 @@ Copy-and-replay browser API Hub
 -H ‘accept: application/json' \
 -H ‘accept-language: en-US' \
 -H ‘authorization: Bearer eyJ@e
-VVVV VV V IV VV VV
 >
 >
 ights.database.windows.net, enterpris
@@ -2780,7 +2719,6 @@ USA 20e53
 toe overt OD Mice ata Uke AME Reich IS CSS. rng Media Fore Doc WE When Maniiest Other C) Mas tocked cooing (1 Scheet Angunets (0) nd-party reqursts
 Let Ss take Nave i Heade
 5 jName * jeaders Preview Re .
-cts cS n
 aidenb@zenitydemo.OnMicrosoft.com jo =
 Kidd Open in new tab quest URL: !
 quest Method: ‘
@@ -2820,7 +2758,6 @@ andrewc@zenitydemo.OnMicrosoft.com (ey PORIRUA SNe TICIRE LE TARO SOLA ir eG TTT
 bisek hat
 USA 20e53
 ebugger Libraries Introduction s Crafted b' authd
-as W sy Ona
 Encoded Decoded
 HEADER:
 PAYLOAD:
@@ -3017,7 +2954,6 @@ How does msft cross-app SSO work? (or – introduction to family of client IDs)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-blackhat a oS ANE SS fa
 USA 2023 “<a
 How does msft cross-app SSO work? (or -
 introduction to family of client IDs)
@@ -3185,7 +3121,6 @@ USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn -h
 P' \ SLNNNAINIS SN CLIC LANNANANV STON
 ll) MW (CO 1\V v7] U/l blo’ \NY v7 ted
-le. / VJ VAY VIEL OL ea WN LT LI
 | |_|
 ```
 
@@ -3263,10 +3198,8 @@ USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn -h
 L'_\V\VAS/| CL
 | |_) CAPA
-|. a A A
 Ll
 J_\X\\INJ 7/7
-| \| |
 LOY vn
 f= |_|
 \_/ \/\/ \
@@ -3320,7 +3253,6 @@ token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-| \| 7
 ll) CQO'\vy vest _/t |
 ILI
 I "_\V\VAV/7/[ ‘LN
@@ -3371,7 +3303,6 @@ token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-| \| 7
 ll) CQO'\vy vest _/t |
 ILI
 }'_V\V\A\/V//| ‘AN
@@ -3475,7 +3406,6 @@ token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-| \| 7
 ll) CQO'\vy vest _/t |
 ILI
 I "_\V\VAV/7/[ ‘LN
@@ -3502,13 +3432,11 @@ IJ IH QO; \vey
 =
 -
 |
-| \/ VIN
 |_|
 //_
 / |
 " A\ANANS/V//|
 ,)|\V v/s]
-_/ \/\/ |
 2023-07-28 11:00:52 |
 token.
 2023-07-28 11:00:52 |
@@ -3555,7 +3483,6 @@ USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn dump -t fc993b0f-345b-4d01-9f67-9ac4a14@dd43
 PTV SLNVNANSTS SN
 ll) ()1\V vst _/I I
-ea an a 2 Ae |
 |_|
 2023-07-28 11:00:52 | powerpwn |
 token.
@@ -3641,12 +3568,7 @@ USA 20e53
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurequeues.
 | |
-| | |
-| | |
 2023-07-28 11:03:09 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azuretables.
-| | |
-| | |
-| | |
 2023-07-28 11:03:09 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_sql.
 2023-07-28 11:03:1@ | powerpwn | INFO | Fetching OpenAPI spec for connector shared_logicflows.
 2023-07-28 11:03:10 | powerpwn | INFO | Acquiring token with scope=https://apihub.azure.com/.default from cached refresh toke
@@ -3671,12 +3593,7 @@ USA 20e53
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurequeues.
 | |
-| | |
-| | |
 2023-07-28 11:03:09 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azuretables.
-| | |
-| | |
-| | |
 2023-07-28 11:03:09 | powerpwn | INFO | Fetching OpenAPI spec for connector shared sql -
 2023-07-28 11:03:10 | powerpwn | INFO | Fetching OpenAPI spe en=connescter ned =
 2023-07-28 11:03:18 | powerpwn | INFO | Acquiring token with scope= “https: / /apihub. azure.com/.default ‘from cached refresh toke

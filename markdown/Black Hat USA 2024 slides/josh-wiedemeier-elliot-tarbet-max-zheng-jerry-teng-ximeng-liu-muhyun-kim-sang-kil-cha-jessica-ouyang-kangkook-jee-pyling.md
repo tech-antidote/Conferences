@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:03Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Josh Wiedemeier & Elliot Tarbet & Max Zheng & Jerry Teng & Ximeng Liu & Muhyun Kim & Sang Kil Cha & Jessica Ouyang & Kangkook Jee_PyLingual A Python Decompilation Framework for Evolving Python Versions.pdf` (80 pages)
 
-
 ## Slide 1
 
 PyLingual: A Python Decompilation Framework for Evolving Python Versions
@@ -91,7 +90,6 @@ JavaScript 8.49 % -0.8 %
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-QO | ‘ : va <y >
 lackhat
 > merit Ll ,
 Python Malware On The Rise
@@ -661,8 +659,6 @@ main
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> 5 \ : a ~ naa
-‘pikdkhat : | | oo PF e
 ~~~. USA 2024
 Let’s Use a Decompiler
 — rocky / python-uncompyle6 Public YW Star 3.6k
@@ -698,7 +694,6 @@ Unsupported Python version, 3.10.0, for decompilation
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-SS ° ‘ e 2 \ ; ee . Aan
 biSekhat | ar
 — USA 2024 < Z
 Let’s Use a Decompiler
@@ -736,7 +731,6 @@ pass
 
 ```text
 Vee} ~ aimed
-4 y \ es ~
 blackhat wy <i
 —_. USA 2024 2
 What’s The Problem?
@@ -831,7 +825,6 @@ Original Compiled + Decompiled
 Sy Here is the translation of the provided Python 3.10 bytecode into source code:
 if condition1:
 if condition2: Python copy code
-f 1 r st ( ) if condition1:
 if condition2:
 else: Bo
 second( ) second()
@@ -859,7 +852,6 @@ Decompiler Programs: **Rigid** but **Precise**
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q LP. \
 blackhat . i
 USA 2024 | SS
 All-Terrain Decompiler
@@ -1076,7 +1068,6 @@ See white paper for details!
 
 ```text
 lackhat | )
-=o | a
 PyLINGUAL: A Python Decompilation Framework for Evolving Python Versions
 Josh Wiedemeier, Elliot Tarbet, Max Zheng, Jerry Teng, Ximeng Liu,
 Muhyun Kim, Sang Kil Cha, Jessica Ouyang, Kangkook Jee
@@ -1365,9 +1356,7 @@ The compiled .py¢ file will be saved in the _pycache__ directory.
 Video Tutorial
 Sample Files
 Further, PyLingualis the first Python decompiler to verify the results of decompilation and localize unknown semantic errors.
-eno x +
 oe Cc O > = demo Search de
-Ore % O @ = Drreew
 a] tase
 | ez anes iis
 '
@@ -1472,7 +1461,6 @@ Full results in Evaluation Highlights white paper File-level Perfect Decompilati
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q a a A
 blackhat |
 USA 2024 | SS
 Evaluation Highlights Full results in
@@ -1492,8 +1480,6 @@ S 509% =@= Uncompyle6 |
 3 30%
 fa
 20%
-m%)O 0 0 0 oO 6
-0% T T T T T T T
 3.6 3.7 3.8 3.9 3.10 3.11 3.12
 Python Version #BHUSA @BlackHatEvents
 ```
@@ -1510,7 +1496,6 @@ Python Version #BHUSA @BlackHatEvents
 bisek hat
 —.USA 2024
 Error Localization
-63 if pes:
 a es SKUPINE = Wee RENINCATON |
 65 return ©
 #BHUSA @BlackHatEvents
@@ -1525,13 +1510,11 @@ a es SKUPINE = Wee RENINCATON |
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-@ 4 \ zy \ nara
 : SS
 2)
 blackhat ’
 ~~. USA 2024 ,
 Closing The Loop
-63 if pcs:
 = 64 Tes eraieeinceie ee
 65 return ©
 366 14 LOAD FAST 1 (pcs) 357 14 LOAD FAST 1 (pcs)
@@ -1559,8 +1542,6 @@ Closing The Loop
 ~~. USA 2024
 _blackhat - “ | <i
 Closing The Loop
-63 if pcs:
-2] 4 EES TIRSIEiieinesE ee ee
 65 return @
 366 14 LOAD FAST 1 (pcs) 357 14 LOAD FAST 1 (pcs)
 367 16 LOAD CONST 1 ("snoitcennoCtnerrucnoc’ ) 358 16 LOAD CONST 1 ("snoitcennoCtnerrucnoc' )
@@ -1584,15 +1565,11 @@ Closing The Loop
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ aN % \ 4
-‘ ~~ a es S
 bisek hat | | wd
 —— USA 2024 : a
 Closing The Loop
-63 if pcs:
 SO return eset seems pana [eet
 65 return @
-63 if pcs:
 64 return pces[ ‘snoitcennoCtnerrucnoc’[::-1]]
 65 return @
 #BHUSA @BlackHatEvents
@@ -1607,12 +1584,10 @@ SO return eset seems pana [eet
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-> 5 \ : a ~ naa
 black hat
 ———-< USA 2024
 ~
 ee
-ev; 5 PE AS
 ase nes E
 Closing The Loop
 #BHUSA @BlackHatEvents

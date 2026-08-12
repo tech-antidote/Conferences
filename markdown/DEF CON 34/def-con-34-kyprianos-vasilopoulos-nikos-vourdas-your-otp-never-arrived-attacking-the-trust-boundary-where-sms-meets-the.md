@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:23:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Kyprianos Vasilopoulos, Nikos Vourdas - Your OTP Never Arrived Attacking the Trust Boundary Where SMS Meets the Internet - v1.pdf` (65 pages)
 
-
 ## Slide 1
 
 ```

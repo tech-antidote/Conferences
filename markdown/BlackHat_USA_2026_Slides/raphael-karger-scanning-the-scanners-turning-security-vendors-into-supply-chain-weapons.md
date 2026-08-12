@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:02Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Raphael Karger_Scanning the Scanners Turning Security Vendors Into Supply Chain Weapons.pdf` (56 pages)
 
-
 ## Slide 1
 
 ### SCANNING THE SCANNERS

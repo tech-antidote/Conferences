@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:28:24Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - T. Gwyddon Owen, amp - Talkers Without Borders Worldwide Free Speech without an Internet Connection - v1.pdf` (24 pages)
 
-
 ## Slide 1
 
 TALKERS WITHOUT BORDERS Worldwide Free Speec h Wit hout an Int ernet Connec t ion Researching covert channels over AIS. Communicate without a conventional server or ISP.
@@ -66,15 +65,12 @@ Each time slot
 represents
 26.6
 milliseconds.
-7 RSs =. >
-i, J, X Xx PERI Et
 |. The AIS of Ship A The same
 : senses the next open procedure is
 5 time slot. At the same repeated by all
 Ue time, it reserves other AIS-
 : another time slot for L equipped ships.
 : the next message. ia oe
-ae 9 N7,
 a C) tropiesqui OE
 A 75 ©0000 tae
 ```
@@ -133,8 +129,6 @@ tropicsquirrel/EvilAIS-dc34
 
 ```text
 -——— as ee ae’
-al aid ic
-—_—e a ° \
 ta AIS Transceivers —> Messages TheySend =~
 | Simplified transmit-side view x SS
 i
@@ -179,7 +173,6 @@ SHIP ++°2 B Position / time / status ----- > time, and maneuvering status
 4 amt by 9 55° 37.123 N
 7 cleaning filters
 ( )) Binary msgs 6/8 / 25/26 | © 12:45:30 ure
-—— tree: > |] = vi
 eat +» Hl Position / time/ status ----- i | a socal Oy
 SHORE STATION = atehigdl P=) lees Proteccadrand Boooocop-s-}" HIDDEN
 Binary msgs 6/8 / 25 / 26 | Eee == tare ; a
@@ -202,10 +195,7 @@ tropicsquirrel/EvilAIS-dc34
 
 ```text
 ( AIS MANIPULATION IN THE WILD \ ‘
-: | : OSS
 (1) NEWS HEADLINES / EVIDENCE INTHE WILD ~- — = ——=— ——=— = = os i -
-——_————SoEeee sy) & es eee a >. |
-. | \
 Old Ships, ‘ te _ Fake Iraq callers Dangerous tech | 3
 Modern Menace: | £8 Xt sanctionedin found aboard :
 How to Tackle the ge (Mest U.S. targeting ‘dark-fleet’ tankers :
@@ -253,7 +243,6 @@ AIS POSITION REPORT | ~_
 HIDDEN DROP LOCATION
 NO TRANSMISSION
 2,7 wa
-)) = fs
 )) @).
 J= Cae ie iss
 TRUSTED INPUT ATTN area
@@ -270,7 +259,6 @@ NMEA BUS
 SLEEPER IMPLANT
 IN TRUSTED SYSTEM
 pe PORT OPERATIONS i
-Tie al ay y)
 1AIVOM.1.1..A,1SNF, eon Se]
 I=1D9 1AIVDM,1.1,,A.1 |
 ROUTING / NAV OPTIMIZER
@@ -323,7 +311,6 @@ BINARY PAYLOADS
 WE USE DIFFERENTIAL STEGANOGRAPHY TO HIDE IN PLAIN SIGHT.
 “DIFFERENTIAL STEGANOGRAPHY” YOU SAY? F¥~a
 fi ff
-|| | \ +
 WW
 — 2. HIGH THROUGHPUT, REAL IMPACT -— \
 We can exfiltrate meaningful data over the network. Sao
@@ -335,7 +322,6 @@ NEWS ARTICLE | J °
 IN HOURS oie ia
 es
 @ Not 5G speeds—but you often don’t need that much data. “3
-‘ we ; :
 “FS |t’s not being watched, and there is a ton of traffic to hide in. |
 B Monitoring and filters are often blind to these techniques. |
 No reliance on binary fields. Works in plain sight.
@@ -498,7 +484,6 @@ Fingerprint: 8fc3eBeb...
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ne  ..,,..., x Be =a
 { Totat: 6,404 | 11/3: 2,916 TB: 343 Spare!=9: 39 | Pairs: 94 Confirmed: 15
 38/2883 (1.3%) expected <@.1% ABOVE BASELINE
 0/338 (0.6%) expected #7% WITHIN NORMAL

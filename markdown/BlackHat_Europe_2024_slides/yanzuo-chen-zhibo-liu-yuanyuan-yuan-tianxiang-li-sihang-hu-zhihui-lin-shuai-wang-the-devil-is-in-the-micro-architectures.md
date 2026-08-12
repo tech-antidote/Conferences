@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:22Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yanzuo Chen & Zhibo Liu & Yuanyuan Yuan & Tianxiang Li & Sihang Hu & Zhihui Lin & Shuai Wang_The Devil is in the (Micro-) Architectures Uncovering New Side-Channel and Bit-Flip Attack Surfaces in DNN Ex.pdf` (65 pages)
 
-
 ## Slide 1
 
 # The Devil is in the (Micro-) Architectures: Uncovering New Side-Channel and Bit-Flip Attack Surfaces in DNN Executables
@@ -609,7 +608,6 @@ Mem Layouts 100% 100% | 71.0% 100% 4 I
 ° LLC Table 5: The performance of DEEPCACHE with LLC attack. S
 TaN Sow Why is LLC attack
 ResNet VGG | ResNet VGG much better?
-_ —$ $e .
 Operator Types 95.2% 1 100% 100% 100% | a
 Hyperparameters | 92.6% ! 100% 100% 100% |
 Mem Layouts 91.9% * 100% | 100% 100% I
@@ -1086,15 +1084,12 @@ oO
 \
 80
 3 70
-< _ ee
-2 60 /
 = 50
 2 To here
 G4
 xe
 Z jBasel —— We went from here
 2 aseline
-0 1 2 4 6 8 10 12
 Number of Fake Datasets Used
 Information Classification: General 59
 ```

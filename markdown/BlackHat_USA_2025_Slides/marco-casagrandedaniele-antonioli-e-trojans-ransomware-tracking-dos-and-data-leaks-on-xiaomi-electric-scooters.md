@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:39Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marco Casagrande&Daniele Antonioli_E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters.pdf` (38 pages)
 
-
 ## Slide 1
 
 **E-Trojans: Ransomware, Tracking, DoS, and Data Leaks on Battery-powered Embedded Systems**
@@ -296,7 +295,6 @@ v2 ,
 BCTRL DRV Board
 VB V4
 2c UART VART
-= >) aN
 BMON BTS Board
 E-Scooter
 +. de
@@ -305,7 +303,6 @@ Batt Charger
 BLE
 Remote
 Attacker
-BLE z x
 Proximity
 Attacker
 ```
@@ -474,7 +471,6 @@ Five E-Trojans Attacks on Xiaomi Internals
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-i SS -- Lj,
 blackhat ee
 BRIEFINGS SV
 AUGUST 6-7, 2025 la
@@ -529,7 +525,6 @@ Overvoltage Battery Destruction (OBD)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-i SS -- Lj,
 blackhat ee
 BRIEFINGS SV
 AUGUST 6-7, 2025 la
@@ -778,7 +773,6 @@ on Battery-powered Embedded Systems BMS Board 4 44
 Marco Casagrande Riccardo Cestaro Eleonora Losiouk vl
 EURECOM University of Padova University of Padova v2 oe Batt Charger
 marco.casagrande @ eurecom.fr riccardo.cestaro@ outlook. it eleonora.losiouk@ unipd.it DRV B ~ d
-a oar 2
 Mauro Conti Daniele Antonioli
 University of Padova EURECOM
 mauro.conti@ unipd.it daniele.antonioli@eurecom.fr V3 V4 7m

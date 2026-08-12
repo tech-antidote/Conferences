@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:47:49Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ankur Sand & Syed Islam & Michael Davis & Joshua Tigges & Marty Grant & Rusty Clark_The CVSS Deception How We've Been Misled on Vulnerability Severity.pdf` (46 pages)
 
-
 ## Slide 1
 
 # The CVSS Deception: How We've Been Misled on Vulnerability Severity
@@ -36,8 +35,6 @@ Syed Islam & Ankur Sand
 
 ```text
 are + t wy.
-ack . ¢
-_ EWROPE 20 > | o~
 DECEMBER 11-12, 2024 ’ | — g me aA
 “The CVSS Deception: How
 We've Been on
@@ -700,7 +697,6 @@ black hat
 EUROPE 2024
 AN MAAN
 ~ 5- Disconnect i in|
-APT & a
 Together We
 Exploitability Rise: Challenges
 a x Demand Unity
@@ -800,7 +796,6 @@ Demand Unity
 2)
 black hat
 EUROPE 2024
-aN _ se .
 7. 6- Overlooked “
 Privacy
 Together We

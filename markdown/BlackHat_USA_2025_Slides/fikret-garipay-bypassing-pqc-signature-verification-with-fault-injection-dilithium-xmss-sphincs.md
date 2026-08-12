@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:53:56Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Fikret Garipay_Bypassing PQC Signature Verification with Fault Injection Dilithium, XMSS, SPHINCS+.pdf` (134 pages)
 
-
 ## Slide 1
 
 # Bypassing PQC Signature Verification with Fault Injection: Dilithium, XMSS, SPHINCS+

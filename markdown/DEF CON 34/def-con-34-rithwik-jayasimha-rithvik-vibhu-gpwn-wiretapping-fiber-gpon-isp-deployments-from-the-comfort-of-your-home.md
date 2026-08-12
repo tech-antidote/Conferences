@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:29:44Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Rithwik Jayasimha, Rithvik Vibhu - gpwn Wiretapping fiber (GPON) ISP deployments from the comfort of your home.pdf` (96 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -31,12 +30,9 @@ converted_at: "2026-08-12T00:29:44Z"
 
 ```text
 LLL eee
-’ we eee °
-or te eee
 f f
 LeeS ee = ue 8
 ALLL TEED
-i — °
 erreri.ce
 - *,
 ```
@@ -218,15 +214,10 @@ Gigabit Passive Optical Networks (GPON)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-. J . = ¥
 f= UVEPVEVEVE LEV eeseueue in |
 * -
 - -
 = =
---— ; . =
--_ ‘. SS -
-- SNe -
-~ j -
 - _
 Re -
 - -~
@@ -235,7 +226,6 @@ Re -
 - -
 Ldn) -
 - -
-= - 8
 - _
 a ~
 e- -
@@ -381,11 +371,6 @@ ID: 2224
 52 41
 00 61
 8f ae
-d0 09 3b
-11 07 66
-53 5f 42
-61 00 08
-18 fa 3f
 Configuration Request
 Configuration Ack
 Echo Reply
@@ -408,13 +393,6 @@ ttps(
 Application Data
 Application
 App ation D
-76 40 8f
-00 60 31
-9d 7e 89 4a
-01 02 60 Od
-4c 52 2d 31 01 63 60
-01 064 06 10 89 a4 37
-ed 53 7d 42
 81
 41
 04
@@ -422,11 +400,6 @@ e6
 Google offered in: Rat WET Benth Fast Susp ayorzich =
 Applica
 at
-00 08 bO
-49 52 42
-a9 be 08
-34 aa 81
-com | & i.
 Gmail Images
 <
 & @ G&aAiMod
@@ -554,13 +527,6 @@ rship Report / Join group
 v3 Join group
 100 Membership Report / Leave group
 100 Membership Report / Leave group
-@1 00 Se 00 00 16 60 bd
-08 60 46 cO 00 28 00 00
-08 68 eO 08 OO 16 94 04
-00 61 04 00 00 00 ef ff
-2c 9d 76 fO 81 00 00 64
-40 00 01 02 03 fa 00 00
-90 68 22 00 ea 03 00 00
 ff fa
 Packets: 3118 « Displayed: 6 (0.2%) Profile: Default
 ```
@@ -815,10 +781,8 @@ No. Time Source Destination Protocol Length Info
 - 0532175... scontent.fixel-3.fna.fbcdn.net 4 40: :4.. GTP/UDP. https(443) — 44017 Len=1232
 . 9532389 scontent.fixe1-3. fna.fbcdn. net :4900:c940: 24 GTP/UDP ~_ 44047 Len=1232
 >-Frame 1: Packet, 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface enp44s0, id 0 fr ff ff ff ff ff fc 9F 2a 2b dc di 08 06 00 O1 e+
-08 00 06 04 00 01 fc 9F 2a 2b dc di cO a8 45 02 #4 =
 >-Ethernet II, Src: ZyxelCommuni_2b:dc:d1 (fc:9f:2a:2b:dc:d1), Dst: Broadcast (ff:ff:ff:ff:ff: ff)
 >-Address Resolution Protocol (request)
-08 60 00 00 GO 08 cO aB 45 O1 E
 ®@ G _ first-capture-of-others-frames-unencrypted-62.pcapng.gz Packets: 668579 Profile: Default
 ```
 
@@ -855,12 +819,10 @@ d
 d
 d
 d
-87722 1290.0526940.. 2404:a800:6:248:: . 4 9 8) 0 a 8 8 Cc d . $ GT p / Q U I C n=1230
 87723 1290.0526940.. 2404:a800:6:248:: n=1230
 87724 1290.0527157.. 2404:a800:6:248::
 87725 1290.0527157... 2404:a800:6:248::
 87726 1290.0527374.. 2404:a800:6:248::
-87727 1290.0527375.. 2404:a800:6:248:: . 4 99 3) : 8 8c GC . . - zs GTP/ Q U I C n=1230
 87728 1290.0527599... 2404: a800:6:248:: ‘n=1230
 87729 1290.0527599... instagram.fblr1-7.fna. '@)
 87730 1290.0527817.. instagram.fblr1-7.fna. * A906 0:88cd: : . GTP/ Q U 1! Cc 0)
@@ -927,7 +889,6 @@ Epoxy
 Splitter Chip
 Epoxy
 y Fiber Array V-Groove
-d 4 ;
 ~
 . £
 “Y Fiber Array Lid
@@ -1247,7 +1208,6 @@ GEM hdr (5B)
 pli=8 port=33
 pti=END
 gem frames header bytes added overhead
-3 15 38
 ```
 
 ## Slide 94
@@ -1263,14 +1223,11 @@ in the timeslot the OLT granted it, so bursts never collide on the shared fiber.
 speed O 0.3x O show ranging delays
 Bs [onus
 Ps e
-o ° :
 e
 e
 e
-e e ° ONU 2
 e
 e
-° e °
 OLT oeo3eo3eee :
 e e
 1:4 splitter e
@@ -1283,7 +1240,6 @@ o
 ©
 °
 upstream frame (BWmap allocations) — guard gap after last slot ONU 4
-[ ) [ (
 downstream: 7 pulses continuously broadcast to all 4 ONUs — upstream: only the ONU whose slot is live transmits
 ® downstream broadcast (allONUs)  ONU1burst @ ONU2burst @™ ONU3burst @&® ONU 4 burst
 ```

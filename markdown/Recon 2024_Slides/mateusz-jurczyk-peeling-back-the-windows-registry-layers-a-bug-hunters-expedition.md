@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:13Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Mateusz Jurczyk_Peeling Back the Windows Registry Layers A Bug Hunter's Expedition.pdf` (96 pages)
 
-
 ## Slide 1
 
 Peeling Back the Windows Registry Layers: A Bug Hunter's Expedition
@@ -204,9 +203,6 @@ Lines of code
 20000
 10000
 Windows version
-vi] Q a OQ ed v ~ Vv Vv
-FF FF Fh a og
-DS SS SS OS
 ```
 
 ## Slide 7
@@ -996,7 +992,6 @@ Example (CVE-2023-38141)
 ```text
 Example (CVE-2023-38141)
 Issue 2462: Windows Kernel passes user-mode pointers to registry callbacks, leading to race conditions and memory corruption :
-@ eg :
 Reported by mjurczyk@google.com on Mon, Jun 26, 2023, 3:13 PMGMT+2 =e
 The Windows operating system exposes a documented kernel API named Registry Callbacks. It allows drivers and the kernel itself to
 register callback functions using CmRegisterCallbackEx, which then get invoked every time a registry operation takes place in the
@@ -1402,7 +1397,6 @@ v © HKEY_LOCAL_MACHINE
 © SECURITY
 “7 SOFTWARE
 “SYSTEM
-v MUHKEY_USERS = = = = = = ee eee ee eee
 > ©) DEFAULT
 > Ms-1-5-18
 S-1-5-19

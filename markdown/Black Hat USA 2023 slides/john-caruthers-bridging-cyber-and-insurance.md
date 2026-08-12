@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:17:29Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/John Caruthers_Bridging Cyber and Insurance.pdf` (10 pages)
 
-
 ## Slide 1
 
 # A Bridge Not Too Far…Cyber and Insurance
@@ -80,7 +79,6 @@ pisek hat
 USA 20253
 A 2
 “2 att
-NX A &
 POLICIES J GOVERNANCE
 ot
 TRANSPARENCY REGULATIONS

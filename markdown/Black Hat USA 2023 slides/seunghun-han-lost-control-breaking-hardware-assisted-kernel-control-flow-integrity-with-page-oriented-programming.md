@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:24:03Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Seunghun Han _Lost Control Breaking Hardware-Assisted Kernel Control-Flow Integrity with Page-Oriented Programming.pdf` (76 pages)
 
-
 ## Slide 1
 
 **Lost Control: Breaking Hardware-Assisted Kernel Control-Flow Integrity with Page-Oriented Programming Seunghun Han hanseunghun@nsr.re.kr**
@@ -1638,7 +1637,6 @@ fo - 2-2-2222 2-2 - eee ---- +
 | Programming | |
 eee eee eee ee eee eee ! a Oe |
 fate aoe Ee SG eS EES Sai ae!
-/_) CH |
 [| oo000000000000000 .0. oooo /,
 / ==000000000000000==.0. o00= //
 Lost Control PoC Made by Seunghun Han

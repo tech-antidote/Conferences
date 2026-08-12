@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:01:45Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Shu-Hao Tung_From Spoofing to Tunneling New Red Team's Networking Techniques for Initial Access and Evasion.pdf` (125 pages)
 
-
 ## Slide 1
 
 **From Spoofing to Tunneling: New Red Team's Networking Techniques for Initial Access and Evasion**
@@ -175,7 +174,6 @@ IP=7.7.7.7
 IP=7.7.7.7
 IP=7.7.7.7
 17 23:21:47 from
-Oh no how!?
 RESULT
 RESULT
 RESULT
@@ -387,7 +385,6 @@ Drop all out 192.168.1.2
 pifeK hat
 BRIEFINGS
 Best Practice
-wep _. LJ
 ee
 tooo 192.168.1.1
 Drop all out 192.168.1.2
@@ -1001,11 +998,6 @@ Example IX address
 
 ```text
 bl
-e. ° a Ie 4 ~ J 4 —— o/; Jf)
-Nas. * 7s X a
-: . “oom \ \
-2 y ) \ \ »
-QL \ y 2
 ack hat SS
 BRIEFINGS Sse TG
 AUGUST 6-7, 2025
@@ -1230,16 +1222,10 @@ y 13%, L2%, 2% %> % Refresh.
 Stacked areas S
 . .
 | tit | e ° \ kvo ra d O Wsidirectional Previous period 15000
-Nn . .
 Last 6 hours h. ce 120.00)
-. Ml )
-— | e r Aiamoces .
 oa
 .
-° OS| N tec Nn Iq Uu es a °
 arch 0.00M
-2 38 10
-= ex ' ' '
 foe Eanes =
 Search $ 80.249.212.156 80.249.213.14 15.67Mbps
 2024021318 60.240.212156 126.00bps
@@ -2402,7 +2388,6 @@ Due to VxLAN behavior, it still can be hijack & scan
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-, F | a g e7 Q \ / Z a: / y ( i y f yy a, A
 - Blackhat Sed See
 BRIEFINGS SS YZ
 AUGUST 6-7, 2025
@@ -2631,7 +2616,6 @@ Received by OSPF
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-we N Ng
 black hat
 BRIEFINGS
 AUGUST 6-7, 2025
@@ -2737,7 +2721,6 @@ o123ojp shu-hao-tung
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-iid: so <>
 Ctlche hat
 USA 2025
 OU TREND:

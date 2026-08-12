@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:42:55Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Yehuda Smirnov_Hook, Line and Sinker Phishing Windows Hello for Business.pdf` (139 pages)
 
-
 ## Slide 1
 
 HOOK, LINE AND SINKER: PHISHING WINDOWS HELLO FOR BUSINESS
@@ -108,7 +107,6 @@ Ye h ud a S m irnov • Like to surf & play tennis
 
 ```text
 WINDOWS HELLO
-A ; x
 o Windows Security
 Accounts > Sign-in options
 Making sure it’s you Ways to sign in
@@ -182,7 +180,6 @@ Sign in with your passkey
 To sign in to “login.microsoft.com”, choose a passkey.
 This request comes from the app “brave.exe” by “Brave Software,
 Inc.”.
-i ' Ls
 Microsoft
 e someuser@gmai.com
 a? Face, fingerprint, PIN or security
@@ -951,7 +948,6 @@ ARCHITECTURE - AUTHENTICATION
 
 ```text
 ARCHITECTURE - AUTHENTICATION
-p p x
 7 Windows Security
 Sign in with your passkey
 To sign in to} “login. microsoft.com”) choose a passkey.
@@ -1149,8 +1145,6 @@ OfnD6IBY4acS973XDvxXtwrcQ"
 "userHandLle":
 "TOUGOT1L54UDkKIbUmxXKRmO3ZFv6yOUtU jew3xhW78NWIE2_GoM7JpaLF8WPJICkBLe7Nna5"
 }
-en om Bee ee A Gg
-—— gp ee ee ee er ee ee
 ```
 
 ## Slide 84
@@ -1562,7 +1556,6 @@ User Attacker
 Forwards
 response to user Response from Azure
 < <
-; 5 > >
 Sign-in request Forwards request
 to Azure
 ```
@@ -1614,7 +1607,6 @@ PROXY PHISHING - EVILGINX
 Attacker
 Microsoft Azure a: re & User
 i
-BE Microsoft ~ a Ll |
 Sign in
 to continue to Microsoft Azure
 fe
@@ -1786,8 +1778,6 @@ TY Favorites
 4
 Jun 26
 Jun 26
-| & ») Sd
-© & 8 ?
 Install and more ~
 Fl|= RB
 Microsoft sent this
@@ -1812,7 +1802,6 @@ username = yehuda.smirnov@company.com
 password + DefinitelyNotMyPSssword
 tokens : captured
 landing url : ps: 2 2b:
-nti agin Qt g A i JK gy
 user-agent : Mozilla/5S.0 (Windows NT 19.0; Win64; x64; rv:109.6) Gecko/20100101 Firefox/116.0
 remote ip : 93.157.86.34
 Create time : 2623-68-27 16:54

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:17Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Anders Fogh & Daniel Gruss_Microarchitecture Vulnerabilities Past, Present, and Future.pdf` (66 pages)
 
-
 ## Slide 1
 
 Microarchitecture Vulnerabilities
@@ -155,7 +154,6 @@ HIS LAPTOP'S ENCRYPTED.
 LETS BUILD A MILLION-DOLLAR,
 ma To CRACK \T-
 NO GooD! IT's
-ay -BIT ;
 eat Ug
 1S FOILED! “
 1
@@ -295,7 +293,6 @@ time
 ' —_o.
 , tenet ; (3) transient access to secret ' \||
 , (4) transmission of secret
-L~ = 4 ' — '
 architectural transient execution architectural
 >
 time
@@ -711,11 +708,9 @@ before 2020: mainly fingerprinting
 — = Test Run 3
 1 1
 1 1
-1 f] | -->-Test Run 2
 1 !
 1 !
 Nea Rea 4
-4 ‘ L
 Power[Watt]
 Time[100 milliseconds]
 ```
@@ -742,7 +737,6 @@ peseutined
 z wore oon wt o cemermmane
 22 LOO PEAT TMA TT ETM AP ATT TT TA AMAT ATE TT TTT
 95
-e Oat PO RAE tS Rk OE he fe cars ote ce eF Malae Me MM PROBS iy gp? OOOUMOR LS
 1,000 foe « -
 © eee Te “ee Cec cou f | !
 0 50 100 150 200 250 300 350 400 450 500
@@ -797,12 +791,8 @@ PTE [36] RSA-2048 [34] sudo [11]
 DIMM Zen 2 Zen 3 Coffee Lake Zen2 Zen 3 Coffee Lake Zen 2 Zen 3 Coffee Lake
 #Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time  #Ex.T. #Ex. Time #Ex. Time
 So 76m 4s 7 2m55s 34m 15s 17 2m47s_ 37 46s 14 Im 36s -- 4 3m 13s 1 *23m 49s
-Si 90 9s 1474 2s 846 2s 6 2m 2s 27 30s 21 26s -- 1 *6m 50s 1 *Im 20s
 iy} 641 21s 5326 Is 126 lls 30 2ml6s 170 6s 6 Im 59s -- 12 Iml7s’) - -
-83 142 9s 61 32s - - 7 2m2!1s - - - - -- - - - -
 S4 220 28s 323m 52s 2658 Is 712m 29s 1*23m 52s 53 26s -- = - 4 5m 16s
-Ss 102 6s 625 2s 330 As 6 Iml4s 28 33s Il lm 5s -- 2 5m 58s 3 2m 34s
-ooo = =< =— A ———e = — 4 -e - a4 Ss 2
 ```
 
 ## Slide 48
@@ -849,7 +839,6 @@ i)
 20.1
 0.0
 a
-123 45 67 8
 # of faulted AES rounds
 Normalized frequency
 ia Sete
@@ -871,7 +860,6 @@ o
 N
 oO
 e
-1 3 5 7 9 11 13 15
 # of faulted bytes within one round
 ```
 

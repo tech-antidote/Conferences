@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:00Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Nimish Mishra & Anirban Chakraborty & Debdeep Mukhopadhyay-Faults in Our Bus Novel Bus Fault Attack to Break Trusted Execution Environments in Embedded Systems.pdf` (78 pages)
 
-
 ## Slide 1
 
 # Faults In Our Bus: Novel Bus Fault Attacks to Break ARM TrustZone
@@ -700,10 +699,8 @@ Normal world
 !
 1 Exception 8 '
 tLevel 0 . '
-: svc a .
 define TEE_SUCCESS 0x00000000 ‘ ts utee *0) i ar
 #define TEE_ERROR_SECURITY 0xFFFFOO0F : ae - '
-' and 7 sll is '
 1 * wane ee :
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { 1 tee_eve Oly initiation Innocent CA ’
 if(/*signature is valid */) ' f: TEE 1) ' °
@@ -779,15 +776,12 @@ ity
 »
 Innocent CA
 if(/*signature is valid */) f: TEE 1) |
-7 ee ee - --- =
 return TEE_SUCCESS; Pie Nechot pierre rire series || Meee percae
 return TEE_ERROR_SECURITY ; ie ' in TA
 } , Kernelspace ' eendecsecescusesaseese
 1 Exception a) JRE Free eS ee
 // load a TA referenced by a CA re! : 'REE | Kernelspace Exception Level 1 !
-oid load_TA(... . ‘ ¢ . '
 , SS red ae F Crypto library invocation |SMCI ; | ! e
-. * '
 TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' : a iP
 if(res != TEE_SUCCESS) t SMC a '
 // abort execution ' Je : '
@@ -824,7 +818,6 @@ i Level 0 m ' 1 Exception Level 0 é
 z SVC call '
 define TEE_SUCCESS 0x00000000 ' tutes *() i 1 —
 #define TEE_ERROR_SECURITY 0xFFFFOOOF d Tena Owl! os
-' and . TA rd cm '
 1 * sare as :
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { ' toe_avo Ol initiation . ; Innocent CA '
 if(/* signature is valid */) ' \(f TEE “Oy ' |
@@ -833,9 +826,7 @@ return TEE_ERROR_SECURITY ; ie t) ) in TA
 } , Kernelspace t:| “kt witb OOO SH OO Re G eee OS
 Exception SVCH Dp = || Fenciinca os Lassi ais ied ale DS rrr
 // load a TA referenced by a CA inexet 1 , (REE Kernelspace Exception Level 1
-oid load_TA(... . ‘ ¢ . 1
 ‘ pcs red ae F Crypto library invocation |SMCI ; | ! e '
-. * '
 TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' : a PD
 if(res != TEE_SUCCESS) : SMC 1],
 // abort execution ' ¢ 1 . '
@@ -871,16 +862,13 @@ Normal world
 (f: TEE_*()]
 if(/*signature is valid */)
 !
-— Fe ee ae ee SO Ren ee Ey Ure ee anes oe
 1 Exception ps . {REE Userspace '
 eo tee, i Level 0 f™ — ' \Exception Level 0 :
 . SVC call ' ;
 TEE_SUCCESS 0x00000000 Pil aig — .
 09.61.” TEE ERROR SECURFY OxFFFFOOOF ain es —| '
-1 * er .
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { ' tee_sve_*()] initiation : Innocent CA '
 '
-! i ;
 '
 '
 SMC interface
@@ -890,16 +878,11 @@ BLE eee ee ee ee ea weet Ae, I
 return TEE_SUCCESS; Pie Nthak pie arte iat besiege a ee eee
 return TEE_ERROR_SECURITY ; i TEE ' in TA
 } , Kernelspace ' bb nh e.6 & 66666 6 64H HOEE
-1 Exception a) : Re | re See ee oe
 /! load a TA referenced by a CA re! 1 | 'REE |Kernelspace Exception Level 1 !
-oid | TA(... ¥ ‘ F $ '
 , ee : : Sa / ae F Crypto library invocation |SMCI ; | ! e '
-e de | . *, '
 TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' “ a iP
 if(res != TEE_SUCCESS) ; svc. ot |
 // abort execution ' ¢ 1 '
-' ' 1 1
-' ' 1 1
 ' '
 '
 Secure monitor call handler
@@ -1195,10 +1178,7 @@ Attack 1: Installing malicious TA
 ; Attack 2: UUID
 fag poms OY | (einen >
 g Gatekeeper @® y 8 | MLaaS TA
-joc } EF Joc & —>
-° © =| 7 =
 jo
-,pa | : A
 Loading TA (2) ca, = we Malicious non-persistent 1. Decrypt
 &B | a TA with UUID x 2. Change message
 3. Re-encrypt
@@ -1256,7 +1236,6 @@ me SHDR_GET_SIG(shdr), shdr->sig_size);
 + crypto_acipher_rsassa verify, shdr-—>algo, &key,
 + shdr->hash_size, SHDR_GET_HASH({shdr), shdr->hash_size,
 + SHDR_GET_SIG(shdr), shdr->sig_size);
-+ if (!res) {
 + ftmn_checkpoint(&ftmn, FTMN_INCR®@);
 + goto out;
 ‘ }

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:28:21Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Bálint Varga-Perke_Control Flow Intergrity on IBM i.pdf` (76 pages)
 
-
 ## Slide 1
 
 ## **`CONTROL FLOW INTEGRITY ON IBM I`**
@@ -246,7 +245,6 @@ Press
 silent
 signal
 SPATIAL SAFETY
-c 2 c 3 c 4 ce 45
 to end term nal
 00 13
 Sessian.
@@ -364,16 +362,8 @@ Partially masked register state
 ```text
 BASE STRUCTURE
 Hex editor
-Address HE 1 84 03 O84 65 86 BF 86 89 GA OB OC 8D BE OF
 HWP Pe LEN
-BEGEZHEO: 31 18 8h 8h 81 8H BH O4 LE OY GE 6D Al Ge le ob
-HEHEHE; 1E 3S? GE 60 Al GO 135 9H LTE OY GE 6D Al Oe 15 2b
-HHHHZH2O; LE 3S? GE 6D Al GO 3H SH LE OY GE 6D Al G1 34 Fo
-BHOEZHSO; IE oS? GE 6D Al fo d4 3H 1E OY GE 6D Al 88 8 oo
-el =~, moa —! =, ——
 Display For
-=ind.. . . . . . . .
-a Oe 3 .o#+.
 DI SPLAY/ ALTER/ DUMP
 Wi PROGRAM SUBTYPE:
 =>ROGRAM HEADER
@@ -512,7 +502,6 @@ mvPtr [A
 stPtr [Ade
 ytPtr [Ad
 yracIntSegoff = 6x106601FC8
-6, o, 6, 6, Oo, G, 6,
 cbSize = 0x160
 stringId = 6x16
 yrocDictId = OxA
@@ -556,17 +545,11 @@ undefined FUN leS7GeGdal 603080 ( )
 r3a:l
 <RETURN=>
 FUN_leS7Ge6dal 003086
-aQ 60 21
-aQ 60 0
-c2 60 20
-09 03 a6
-04 2a 14
 rldicl. ro, rs, @xG, 6x20
 11 rs, 0x8
 beqlr
 mtspr CTR, rQ
 add ra, r4,r3
-fe 7Ch |
 fF 26h
 ?? 20h
 POWER-AS
@@ -600,9 +583,7 @@ Search Value: 61850000
 Hex Sequence: |61 85 00 00
 Display Formatted Data
 Page/Line. .. 52 / 41
-Columns. .. : 1 - 78
 Find ......... . . 2A9EE
-ee ne ee Se Dee ae ee A. .t..n. + 6 i re re
 2A9EE6911E 002074 0000A4 F88A0032 STQ 4,0X30(10) |=
 2A9EE6911E 002078 0000A8 61430000 ORI 3,10,0 IBM can :;)
 2A9EE6911E 00207C 0000Ac 48000155 BL 0X154
@@ -746,13 +727,8 @@ Return addresses are on a different stack
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-36 e0 00 80
 i
 =
-fc G1 03 e6
-60 e4 00 OO
-61 25 00 00
-T8 83 60 12
 c
 ds
 silent
@@ -1094,14 +1070,11 @@ Trap Doubleword
 td TO,RA,RB
 TO RA
 11
-a © (RA)
-b © (RE)
 if « b) & TO, then TRAP
 if > b) & TO, then TRAP
 if D) & TO, then TRAP
 b) & TO, then TRAP
 b) & TO, then TRAP
-ng or my fy
 <
 yl
 ```
@@ -1192,7 +1165,6 @@ guUeG00;8 = INT_ADD Oxf fftttttttttttT40:8, rl 27) trapXER():
 STORE ram($UeQ00:8), r28 26) uRaml 38 = unaff_r27;
 ff 48 std r29, -Oxb8(rl) 29) uRaml = unatf_r2e;
 P.O — TAT AMM Me FFFFE EEE EEE FEF AG. oT SA! Ram 2 = linatf rq:
-Jie tik . . _ ° —
 °
 signal
 ```
@@ -1460,697 +1432,6 @@ Microarchitecture
 ### **`TEMPORAL SAFETY`**
 
 59
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-els)
-00
-do
-aa
-00
-60
-d4
-29
-60
-00
-dg
-aa
-00
-00
-d4
-eft
-680
-00
-e7
-va
-silent
-00
-Tf
-69
-00
-00
-Tf
-d3
-00
-00
-Tf
-3c
-00
-60
-Tf
-4f
-00
-00
-Tf
-d4
-00
-00
-ed
-7
-20
-00
-e0
-35
-20
-00
-e0
-72
-20
-00
-e0
-5e
-20
-00
-e0
-65
-20
-Ae
-00
-16
-ba
-00
-00
-10
-16
-00
-00
-10
-72
-00
-00
-10
-44
-00
-00
-10
-44
-00
-an
-00
-d9
-co
-00
-00
-Tf
-67
-00
-00
-eb
-05
-00
-00
-e6
-84
-00
-00
-fa
-bs
-00
-an
-signal
-Tf
-co
-00
-00
-ff
-fl
-00
-60
-Tf
-e9
-to)
-00
-ff
-fc
-00
-60
-Tf
-81
-to)
-60
-fe
-eo
-49
-20
-ele)
-eo
-f3
-20
-60
-ed
-15
-20
-cele)
-eo
-1
-20
-(ele)
-ed
-08
-20
-(ele)
-ao
-10
-43
-60
-00
-10
-56
-60
-00
-10
-84
-00
-60
-10
-56
-60
-60
-10
-56
-00
-60
-1
-d3
-es
-00
-00
-d2
-5a
-00
-00
-e6
-43
-00
-00
-d2
-c2
-00
-00
-e5
-T6
-00
-00
-TEMPORAL SAFETY
-fa
-06
-00
-TT
-Se
-tole)
-oo
-TT
-23
-oo
-i]s)
-TT
-la
-00
-00
-Tf
-Of
-00
-06
-TT
-aA
-dl
-20
-00
-eo
-96
-20
-00
-e0
-9d
-20
-00
-eo
-bt
-20
-00
-ed
-c6
-20
-00
-eo
-w+
-28
-60
-00
-10
-68
-00
-00
-10
-68
-60
-00
-10
-96
-00
-00
-16
-96
-00
-00
-10
-at
-71
-00
-00
-f4
-98
-00
-00
-di
-cc
-00
-00
-cc
-b5
-00
-00
-8
-eg
-00
-00
-cb
-a7 A
-00
-00
-TT
-67
-00
-00
-ff
-42
-00
-00
-TT
-55
-00
-00
-TT
-4c
-00
-00
-tT
-dl
-20
-60
-e0
-03
-20
-00
-e0
-5b
-20
-00
-e0
-47
-20
-00
-ed
-69
-20
-00
-e0
-70
-oo
-(ols)
-10
-1f
-(ol)
-oa
-10
-ag
-oa
-tc]e)
-10
-7b
-(ols)
-oa
-10
-ag
-oa
-oo
-16
-ag
-00
-60
-T?
-6c
-60
-00
-e3
-bt
-00
-00
-T?
-Hz
-60
-00
-e3
-27
-00
-00
-T6
-5b
-oe
-Tf
-7
-00
-00
-Tf
-ee
-00
-00
-Tf
-74
-00
-00
-Tf
-6b
-00
-00
-Tf
-TO
-00
-an
-00
-eo
-dc
-20
-60
-eo
-fe
-20
-00
-eo
-05
-20
-60
-eo
-27
-20
-00
-eo
-2e
-20
-an
-00
-10
-8d
-00
-00
-10
-ba
-00
-00
-10
-bb
-00
-00
-10
-(3)
-00
-00
-10
-eg
-00
-00
-cl
-14
-00
-00
-T6
-fd
-00
-00
-e2
-31
-00
-00
-T6
-la
-00
-00
-c9
-de
-00
-ff
-4e
-00
-00
-ff
-9b
-60
-60
-ff
-92
-60
-00
-ff
-l7
-00
-60
-ff
-9c
-60
-00
-+
-eo
-2e
-20
-00
-eo
-al
-20
-00
-eo
-c3
-20
-tele)
-ed
-ca
-20
-tele)
-eo
-dl
-20
-tele)
-na
-10
-16
-icls)
-00
-10
-cd
-oo
-iols)
-10
-Tb
-iol3)
-00
-10
-fb
-00
-icls)
-10
-fb
-iols)
-tole)
-104
-ca
-33
-ic] s)
-00
-el
-3b
-els)
-cls)
-f5
-24
-cls)
-(els)
-c8
-58
-00
-els)
-f4
-8c
-cls)
-ic] 3)
-#4
-a4
-60
-00
-Tf
-ba
-00
-00
-Tf
-3f
-00
-00
-Tf
-c4
-00
-oo
-ff
-bb
-oo
-00
-Tf
-Soul
-Tf
-26
-tT)
-e0
-60
-20
-tele)
-eo
-67
-20
-00
-eo
-6e
-20
-60
-eo
-90
-20
-00
-eo
-of
-00
-00
-10
-Od
-00
-00
-10
-Od
-00
-00
-10
-Od
-00
-00
-10
-3b
-00
-00
-10
-7W
-52
-ao
-ole)
-db
-2e
-(ele)
-iol]
-eo
-62
-iol]
-ee)
-f3
-96
-ele)
-els)
-c7
-TT
-ele)
-60
-da
-ad
-00
-00
-ff
-f4
-00
-00
-TT
-5e
-00
-00
-ff
-e3
-00
-00
-ff
-68
-00
-00
-ff
-ed
-20
-00
-eo
-e7
-20
-00
-eo
-25
-20
-ie)
-eo
-2c
-20
-00
-ed
-EE
-20
-1°10)
-eo
-3a
-a
-00
-00
-10
-fl
-60
-00
-10
-4d
-00
-00
-10
-4d
-60
-00
-10
-4d
-00
-00
-10
-4d
-an
-00
-06
-df
-b7
-06
-00
-3
-55
-00
-00
-c6
-89
-06
-00
-da
-bd
-00
-00
-c6
-fl
-an
-59
-```
 
 ## Slide 71
 

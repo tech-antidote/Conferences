@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:23:30Z"
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Maddie Stone and James Forshaw _ The Print Spooler Bug that Wasn’t in the Print Spooler.pdf` (79 pages)
 
-
 ## Slide 1
 
 Maddie Stone James Forshaw OffensiveCon 2023
@@ -595,7 +594,6 @@ Does PrintConfig.dll have an Isolation Aware Manifest?
 BY Windows PowerShell
 PS C:\> $m = Get-Win32ModuleResource C:\Windows\WinSxS\amd64_dual_prnms003.i
 nf_31bf3856ad364e35_10.0.19041.2728_none_8b21f932f7c28aea\Amd64\PrintConfig.
-dul 24 2
 PS C:\> $x [xml] [System. Text.Encoding]: :UTF8.GetString($m.ToArray())
 PS C:\> $x.assembly.dependency.dependentAssembly.assemblyIdentity
 type : win32

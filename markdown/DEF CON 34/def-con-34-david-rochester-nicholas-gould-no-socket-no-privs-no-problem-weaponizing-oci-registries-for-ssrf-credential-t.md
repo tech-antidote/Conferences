@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:54Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - David Rochester, Nicholas Gould - No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E.pdf` (32 pages)
 
-
 ## Slide 1
 
 |~/dc34/title
@@ -74,7 +73,6 @@ registry.io/model: latest { "digest": "sha256:a3ed.." }, @ layer 128 MB
 }
 The manifest just lists digests available on the server.
 NO SOCKET, NO PRIVS, NO PROBLEM // OCT
-@3 / 25
 ```
 
 ## Slide 4
@@ -167,7 +165,6 @@ realm="https://auth.docker. io/token", service="registry.docker.io",scope="repos
 ai/smollm2: pull"
 docker-ratelimit-source: 2600: 6c5e:1340:1::
 strict-transport-security: max—age=31536000
-@3 / 25
 ```
 
 ## Slide 9
@@ -269,7 +266,6 @@ JSON B\Copy @Edit M&Replace ( View: auto
 "mediaType": "“application/vnd.docker.ai.model.config.v@.1+json",
 USiZeM ES /O}
 "digest": "sha256:32aaa72e00e9a79d38786abd1e37388e7 f01181a0f 1bdf23ef ff6433c12F 89
-@3 / 25
 ```
 
 ## Slide 11
@@ -401,7 +397,6 @@ y
 downloadBlob()
 307 — SSRF body written
 Malicious
-Two | en Lh
 sha256:alb2...
 4 4 4 : LOGIC
 skipVerify[layer.Digest] = cacheHit
@@ -489,7 +484,6 @@ ATTACKER - rogue registry + exploit
 press E to run each command
 rs/exploit#
 NO SOCKET, NO PRIVS, NO PROBLEM // OCT
-@3 / 25
 ```
 
 ## Slide 21
@@ -614,7 +608,6 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ```text
 Ex: Free Willy...errrr Docker PoC
-fA root@root-x1: ~ Q = = a oq
 root@r00t-x1:~# | root@r00t-x1:~#
 root@r00t-x1:~#
 NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
@@ -651,7 +644,6 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 ```text
 @@@ ~/dc34/registry-attacks
 container fil
-\ t oe
 rh Ww
 ew
 SOCKET, NO PRIVS, NO PROBLEM // FIN

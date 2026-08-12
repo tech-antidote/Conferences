@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:50Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Bohan Liu & Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective.pdf` (68 pages)
 
-
 ## Slide 1
 
 ### The Hole in Sandbox: Escape Modern Web-Based App Sandbox From Site-Isolation Perspective
@@ -1811,9 +1810,6 @@ black hat
 ASIA 2024
 Demo
 1537
-7 8 9 —
-4 5 6 ~
-1 2 4
 % 0
 ```
 

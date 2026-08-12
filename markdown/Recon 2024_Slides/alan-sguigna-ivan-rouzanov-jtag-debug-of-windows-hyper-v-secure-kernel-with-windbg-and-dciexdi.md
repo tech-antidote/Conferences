@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:26:49Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Alan Sguigna & Ivan Rouzanov_JTAG debug of Windows Hyper-V  Secure Kernel with WinDbg and DCIEXDI.pdf` (14 pages)
 
-
 ## Slide 1
 
 JTAG Debug of Windows Hyper

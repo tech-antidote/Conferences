@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:39Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Duy Hieu Nguyen,Anh Khoa Nguyen,Huu Giap Nguyen,Thanh Nguyen,Anh Quynh Nguyen_TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit.pdf` (35 pages)
 
-
 ## Slide 1
 
 �������
@@ -465,7 +464,6 @@ dependencies
 # multiple profiles are supported, start a mocknet and
 docker compose —profile mocknet —profile midgard up -d
 B release-1.100.0% @ %h Go1.192$ @15A2 SFTP --NORMAL-- @ GoLive
-om Gee 2) Fo
 3 Untitled
 mee
 ro

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:24Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Lance Cain&Daniel Mayer_Leveraging Jamf for Red Teaming in Enterprise Environments.pdf` (55 pages)
 
-
 ## Slide 1
 
 # Leveraging Jamf for Red Teaming in Enterprise Environments
@@ -36,17 +35,9 @@ Lance Cain and Daniel Mayer
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~ Jj ~<a
-~ \ ~— nes fe - sf ~
-YY \ ig Get sc — <A ~
-~~ \ & ,
 XS $
-: s .
 TF x
-_—— ( — NX
-= “a >a, \ »
 = 4
-WN \ /
 gar
 ‘black hat
 FINGS

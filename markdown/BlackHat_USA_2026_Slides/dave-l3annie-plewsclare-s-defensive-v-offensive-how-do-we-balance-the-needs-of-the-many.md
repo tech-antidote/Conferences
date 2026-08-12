@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:07:06Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/DAve L3&Annie Plews&Clare S_Defensive V Offensive - How Do We Balance The Needs Of The Many.pdf` (39 pages)
 
-
 ## Slide 1
 
 ## **Defensive V Offensive? How Do We Balance The Needs Of The Many**

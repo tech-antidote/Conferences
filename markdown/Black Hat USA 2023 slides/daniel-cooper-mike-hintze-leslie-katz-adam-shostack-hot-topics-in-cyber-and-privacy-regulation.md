@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:57Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Cooper & Mike Hintze & Leslie Katz & Adam Shostack _Hot Topics in Cyber and Privacy Regulation.pdf` (17 pages)
 
-
 ## Slide 1
 
 # Hot Topics in Law Panel

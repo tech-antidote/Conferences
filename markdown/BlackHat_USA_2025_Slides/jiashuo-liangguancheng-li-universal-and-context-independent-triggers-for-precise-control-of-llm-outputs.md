@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:56:05Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Jiashuo Liang&Guancheng Li_Universal and Context-Independent Triggers for Precise Control of LLM Outputs.pdf` (23 pages)
 
-
 ## Slide 1
 
 ## Universal and Context-Independent Triggers for Precise Control of LLM Outputs
@@ -247,9 +246,7 @@ This seemed impossible… until now.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-i gQ ° i | nN \ . 2 ne Sj
 -blackhat J ~~
--.- BRIEFINGS > <a a DR
 Universal Adversarial Triggers (UAT)
 — A New Attack Paradigm
 ```

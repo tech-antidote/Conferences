@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:07:58Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Peng Zhou_The Oversights Under the Flow Discovering and Demystifying the Vulnerable Tooling Suites From Azure MLOps.pdf` (75 pages)
 
-
 ## Slide 1
 
 The Oversights under The Flow Discovering and Demystifying the Vulnerable Tooling Suites from Azure MLOps Peng Zhou (zpbrent@gmail.com) Shanghai University
@@ -195,10 +194,8 @@ EI “»
 pisek hat
 ASIA 2025
 Vulnerable Tooling Suites in , Azure MLOps
-(> (> e
 deepspeed “a a orem
 PromptFlow PromptFlow rom ow
-»> » »|.
 ° AIP Azure-AlI-Generative
 <3 TorchGeo TAF Azure-AlI-Generative .
 deepspeed &S :. TorchGeo
@@ -432,8 +429,6 @@ If satisfied
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-blackhat y rs @ if ’ MEA
-ASIA 2025 — hh % ee » % y y A Z
 Oversight #1: PoC >
 PromptFlow
 from promptflow.client import PFClient
@@ -497,7 +492,6 @@ args = media_save_parser.
 88 flow, _ = resol low_path( flow)
 89 base64_data = args.base64_data
 92 extension = args.extension
-7 ; De — ~ ~ 105 args = ()
 91 safe_path = safe_join(str(flow), PROMPT_FLOW_DIR_NAME)
 106 flow = )
 107 flow,
@@ -918,7 +912,6 @@ p2p.recv_obj(sender=0)
 = 120 from ~~ sender*~
 //0.0.0.0:29500", rank=1, world _size=2, auto_mpi_discovery=False)
 620 auto_mpi_discovery=True,
-- T, a + 121
 621 distributed_port=TORCH_DISTRIBUTED_DEFAULT_PORT,
 — 122 WARN: This incur a CPU <-> GPU transfers and should be used sparingly
 622 verbose=True,
@@ -927,7 +920,6 @@ p2p.recv_obj(sender=0)
 124
 624 init_method=None,
 ~ 125 Args:
-625 i ini i =N . .
 - dist_init_required-None, 126 sender (int): The rank sending the message.
 626 config=None, 127 non
 627 rank=-1, 128 # Get message meta
@@ -1239,7 +1231,6 @@ jsntcy commented on Aug 28 = edited ~ Member
 Please use our centralized function run_cmd which is more safe instead of writing your own.
 More details in https://github.com/Azure/azure-
 cli/blob/282c6e8f4358934094b5 12e29ae1421438de6/aa/doc/cli_subprocess_guidelines.md#cli-centralized-subsystem-executinc
-= = 2
 @Allyw
 © od
 q
@@ -1362,9 +1353,7 @@ ASIA 2025
 Patch with Oversight #1
 en R-*A PRT
 cuter IVS s rn iz < \*¥
-=—s / —<—— \ / ome rd \ NM / \ ¥, _ /f
 . RY)! »/Q5°7o yp} LO
-— aS VW YY “AY
 First report not cover
 ```
 
@@ -1407,7 +1396,6 @@ But the Patch overlooks ‘bash -c’
 black hat
 ASIA 2025
 Pp atch with Over sight #t 3 | dJeepspeed
-Vv 7) 3 BEE op_builder/builder.py (0
 a. @@ -482,7 +482,8 @@ def command_exists(self, cmd):
 482 482 cmds = [cmd]
 483 483 valid = False

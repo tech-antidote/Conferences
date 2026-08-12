@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:56:28Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Garrett Foster_Clustered Points of Failure - Attacking Windows Server Failover Clusters.pdf` (138 pages)
 
-
 ## Slide 1
 
 #### Clustered Points of Failure Attacking Windows Server Failover Clusters
@@ -65,7 +64,6 @@ Garrett Foster
 ```text
 bi§ekhat
 BRIEFINGS
-2 ‘ =» ~
 CONE SDT sonserrensivine
 dustry
 Scalability Day falls short
@@ -95,8 +93,6 @@ Hewlett-Packard (HWP) showed off an NT-based NetServer system capable of
 
 ```text
 blackhat a’ ee, y
-BRIEFIN = “if ‘ & 4
-GS : ~ WA \ » y, |
 Microsoft's Cluster Server, which formerly went by the code name Wolfpack, is a
 software-based clustering scheme, a system that allows servers to be connected
 and to talk to each other. If one of them goes down, another server takes over the
@@ -217,7 +213,6 @@ DOMAIN COMPUTERS@LUDUS.DOMAIN
 gatherer, as well as a for SharpHq * Not related to on-premise Active Di
 /e Direct
 may give you access to servers from any user. LAWN * Source of authentication for Ofice 36
-J J J at y 5
 / and anything else you integrate wth it
 Along the way, | discovered more cases in whig
 there's a good chance that unintended users h
@@ -231,8 +226,6 @@ This post includes some queries to use in Blo
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-- Se ee ; Y - <
-black hat A“ er 4 ~
 BRIEFINGS a= i We, »
 NN
 CLUSTER.LUDUS.DOMAIN
@@ -274,7 +267,6 @@ TrustedToAuthForDelegation attribute. If TrustedToAuthForDelegation is set, then
 S4U2Self produces is forwardable, unless the principal is sensitive for delegation or a member of the
 Protected Users group.
 3. The above points mean that if
-~ JL Pa —— 2
 a NS
 j
 r. e
@@ -477,7 +469,6 @@ End
 bi
 Qichat
 BRIEFINGS
-3 Tas r
 File Action View Help
 = =
 heduler (CLUSTER.LU
@@ -495,7 +486,6 @@ n startup
 tions Conditions Settings History
 tion that will ur when your ta
 # DOMAIN PID LAST CHECKIN
-f 1 day.
 tarts. To change these
 # DESCRIPTION
 Actions
@@ -515,7 +505,6 @@ o
 ```text
 pifeachat Sa
 BRIEFINGS Ca
-3 Tas r
 File Action View Help
 = =
 heduler (CLUSTER.LU
@@ -573,11 +562,9 @@ v Task Scheduler Library _ .
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat N ae ~~ ~ Wy
 BRIEFINGS = //; Y y
 ( t) Task Scheduler
 File Action View Help
-= =>| 7 | Be
 (@ Task Scheduler (CLUSTER.LUDUS.DOMAIN)
 v _@ Task Scheduler Library
 Microsoft
@@ -600,7 +587,6 @@ Status Triggers
 
 ```text
 bisek hat
-SS J 5m
 BRIEFINGS ——
 Gor ¢169.254.2.145 | TEST-CLUSTER SYSTEM ludus 1628 1 seconds Created by my
 CALLBACK: 6 X SPLIT CALLBACK: 6 X
@@ -608,11 +594,9 @@ CALLBACK: 6 X SPLIT CALLBACK: 6 X
 load inline_assembly assembly_inject
 1
 2
-3 Ce \ 1 |
 [Thu Jul 24 2025 02:03 PM] / T-15 / mythic_admin / C-6 ... 4 0 _ >) lle wee LL
 inline_assembly -Assembly Rubeus.exe -Argum 5 Io 7E tT ONE Tt tl IZ)
 ents triage /user:domainadmin 6 Pt N\A Itt td) et tel Ie 1
-7 Il ILI | | >) ¢
 8
 9 v2.2.2
 10
@@ -697,7 +681,6 @@ S&S &
 
 ```text
 pidekhat a a ie
-BRIEFINGS [Po ” ff : ;
 Why did scheduled tasks
 work?
 #BHUSA @BlackHatEvents
@@ -1014,7 +997,6 @@ View Report
 Windows Server 2022 Standard Evaluation
 Windows License valid for 170 days
 Build 20348.fe_release.210507-1500
-ena & SE Ks 7:45 PM
 A248 rams
 nt
 HH e here to search
@@ -1031,7 +1013,6 @@ Recycle Bin CIM Explorer
 2025
 Process Bag Failover Cluster Manager
 Hacker 2 File Action View Help
-2) +. e
 6}
 re a] Fail ver Cluster Manager Cluster cluster.ludus.domain Actions
 System x32dbg Al v Fig clustersludus.domain cluster.Judus.domain
@@ -1059,7 +1040,6 @@ cluster.ludus.domain:
 Windows Server 2022 Standard Evaluation
 Windows License valid for 170 days
 Build 20348.fe_release.210507-1500
-— 7:47 PM
 @Cmpas\_ke= & A248 apaams
 ```
 
@@ -1290,7 +1270,6 @@ Windows Server 2022 Standard Evaluation
 Windows License valid for 167 days
 Build 20348.fe_release.210507-1500
 5:45 PM
-A 48 ams
 ```
 
 ## Slide 47
@@ -1328,7 +1307,6 @@ IP Address
 10.3.10.101
 To view the report created by the wizard, click View Report
 To close this wizard,
-ST Queries ~ Tia » Wi
 View Report
 Actions
 s
@@ -1394,7 +1372,6 @@ a
 ```text
 Be Failover Cluster Manager
 File Action View Help
-@9| 2 |B &
 LU - Failover Cluster Manager Cluster cluster.ludus.domain
 54 cluster.ludus.domain
 a a
@@ -1430,7 +1407,6 @@ A
 ~ oe
 = Failover Cluster Manager
 File Action View Help
-@e0| ml 8 &
 Br Failover Cluster Manager
 \ && cluster.ludus.domain
 igs Roles
@@ -1458,16 +1434,12 @@ IP Addresses: 10.3.10.101
 ```text
 =I Failover Cluster Manager
 File Action View Help
-#9|A n\ 8 &
 Br Failover Cluster Manager
 ca Storage
 4a Networks
 $3] Cluster Events
 Search
 Name Status Assigned Vote Current Vote
-z test-cluster (@) Up 1 1
-z test-cluster2 @) Up 1 1
-rc test-cluster3 (#) Up 1 1
 ```
 
 ## Slide 52
@@ -1479,7 +1451,6 @@ rc test-cluster3 (#) Up 1 1
 ```text
 = Failover Cluster Manager
 File Action View Help
-@®| 24 @ &
 BR Failover Cluster Manager
 v && cluster.ludus.domain
 Fs Roles
@@ -1697,7 +1668,6 @@ WinRM TCP 5985 (This port is required when deploying cloud witness.)
 66.412465
 66.412501
 66.412632
-lo iw Ww
 = 3.
 a
 a
@@ -1769,7 +1739,6 @@ CreateEnum response
 ```text
 Application Protocol Ports
 t Service y)
-: € ) fe) y;
 Seq=1 Ack=1 Win=262656 Len=@
 49879 > 135 [A
 DCERPC Bind: call_id: 2, Fragment: Single, 3 context ite
@@ -1777,7 +1746,6 @@ DCERPC Bind_ack: call_id: 2, Fragment: Single, max_xmit:
 EPM Map request, CLUSAPI, 32bit NDR
 EPM Map response, CLUSAPI, 32bit NDR
 TCP
-mew Iv iv lw lw Lue
 ```
 
 ## Slide 61
@@ -1793,7 +1761,6 @@ Bind: call _ id: 2, Fragment: Single, 3 context ite
 55602 + 4988@ [ACK] Seq=1 Ack=2146 Win=209792@ Le
 49879 + 135 [ACK] Seq=329 Ack=281 Win=2624@@ Len=
 Bind_ack: call_id: 2, Fragment: Single, max_xmit:
-= * oo “iia al- = a
 ode
 = *
 ```
@@ -1814,7 +1781,6 @@ Cluster Service TCP 3343 (This port is required during a node join operation.)
 10.3.10.100 CLUSAPI OpenClusterEx request
 16.3.10.22 CLUSAPI OpenClusterEx response
 16.3.10.100 CLUSAPT CreateEnum request
-* * =
 Cluster Administrator UDP
 Randomly allocated high TCP Random port number between 49152 and 65535
 orts
@@ -1976,10 +1942,7 @@ authentication work?
 pis hat
 BRIEFINGS
 (__\ |
-oo, || he ee
 — “/ELEL WTI IZ)
-| PS ety I Ty SZ) J] ay
-es | ) /C_/
 V2e2o 2
 Action: Triage Kerberos Tickets (All Users)
 [*] Target service : krbtgt
@@ -2225,7 +2188,6 @@ REG_BINARY
 Data
 (value not set)
 1\Microsoft Enhanced Cryptographic Provider v1,0\f12b4c:
-03 00 00 00 00 00 00 00 94 04 00 00 00 00 00 00 00 00 00 00 Of
 ```
 
 ## Slide 87
@@ -2252,7 +2214,6 @@ HKLM \Cluster\Resources \ca462f6e-51c0-4 7e 1-93ce-leff4dfb463e'\\Parameters
 0x00000000 ey
 0x00000000 (0)
 0x00000000 (0)
-02 00 00 00 10 00 00 00 00 01 00 00 03 a1 08 e2 c5 d2 28 31 b9 af 53 a0 ae 9d 6f be 81 51...
 ```
 
 ## Slide 88
@@ -2431,7 +2392,6 @@ ELi5
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-eee M- < >
 "0
 gist.github.com @ i +
 e@ ELI5 how do clusters work - Google Search (=) Encryption and decryption code for clustered SMB servers. - GitHub
@@ -2446,7 +2406,6 @@ Zar;
 8 // HEADER {
 9 ff BUFFER_IV_SIZE (4 bytes)
 10 // BUFFER_KEY_SIZE (4 bytes)
-i // }
 12. //  BUFFER_IV
 13. //  BUFFER_KEY
 144 // BUFFER_DATA
@@ -2489,7 +2448,6 @@ i // }
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-eee H- <
 @ EL'5 how do clusters work - Google Search
 status = BCryptEncrypt(key, pPlaintext, ULONG(cbPlaintext),
 if
@@ -2515,7 +2473,6 @@ b.
 a be
 hom oH
 mH
-F— es — Fe)
 Doo
 be
 RegOpenkey
@@ -2886,7 +2843,6 @@ Rubeus.exe evandecry...
 Windows Server 2022 Standard Evaluation
 Windows License valid for 167 days
 Build 20348.fe_release.210507-1500
-+ @nn ¢ & Ata Sh wB
 7/28/2025
 ```
 
@@ -3063,8 +3019,6 @@ BRIEFINGS
 ```text
 BRIEFINGS
 ~~
-plseichat A ; 4 Ca j
-= > Gam *
 #BHUSA @BlackHatEvents
 ```
 
@@ -3078,9 +3032,7 @@ plseichat A ; 4 Ca j
 biSekhat va
 BRIEFINGS
 _ \ Dw. \\\\\\\\
-NN Ss \ \\\ \
 N \\
-wooo Z I~ Se \ \
 NN \ainberot
 oe 2
 #BHUSA @BlackHatEvents
@@ -3094,7 +3046,6 @@ oe 2
 
 ```text
 bidekhat | Saaee Pa ~~ '
-BRIEFINGS Com + S , b
 ~ CFs
 BadSuccessor: Abusing dMSA to Escalate
 Privileges in Active Directory
@@ -3198,8 +3149,6 @@ A hig hl Max Keasley @emkay64
 A
 in
 ° nA bs rastructure
-A ; a
-ADS( 2 ON
 overview of AD FS with SQL Always on Availability Groups and provide deployment considerations and guidance.
 #BHUSA
 @BlackHatEvents
@@ -3225,7 +3174,6 @@ infrastructure even if one of t
 AD FS can be configured for a higt
 overview of AD FS with SQL Alway
 = ‘of
-L JI J
 Manage database availability groups in
 Exchange Server
 04/30/2025
@@ -3352,7 +3300,6 @@ secondary site by reinstalling the secondary site from its parent primary site
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat y. ye 4 > ' y
 BRIEFINGS pee of r y
 iM fs
 ForeiguSecu Principals Computers Pr Prestage Computer Object for the Cluster Name
@@ -3403,10 +3350,7 @@ Audit cluster virtual accounts
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q 7% y 4. ‘i
-aS: _ ; ) — : "a 5 ji
 blackhat eG
-BRIEFINGS _ 3 ~ co * 4
 Audit cluster virtual accounts
 9. Under Permissions, select the Create Computer objects check box.
 Remove excessive permissions
@@ -3507,7 +3451,6 @@ Help
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-(2) | —~
 black hat : y
 BRIEFINGS Ea —- 4
 » 4
@@ -3630,7 +3573,6 @@ BRIEFINGS Ca
 Only the ClusSvc reads the
 value of ResourceData
 io  — REG. DWORD 0x00000000 0)
-tro| ResourceData REG_BINARY 02 00 00 00 10 00 00 00 00 01
 #BHUSA @BlackHatEvents
 ```
 
@@ -3648,7 +3590,6 @@ BRIEFINGS Ca
 Only the ClusSvc reads the
 value of ResourceData
 io panwpP ieee REG. DWORD 0x0 0000000 (0
-tro| ResourceData REG_BINARY 02 00 00 00 10 00 00 00 00 01
 Detect access attempts from
 any other principal
 #BHUSA @BlackHatEvents
@@ -3668,7 +3609,6 @@ BRIEFINGS Ca
 Only the ClusSvc reads the
 value of ResourceData
 io panwpP ieee REG. DWORD 0x0 0000000 (0
-tro| ResourceData REG_BINARY 02 00 00 00 10 00 00 00 00 01
 Detect access attempts from
 any other principal
 #BHUSA @BlackHatEvents
@@ -3705,7 +3645,6 @@ Own the node, Own the Cluster
 ```text
 BRIEFINGS
 plseichat SS 4 Ca
-~ > \ ~
 Cluster misconfigurations can
 lead to compromise
 #BHUSA @BlackHatEvents
@@ -3721,7 +3660,6 @@ lead to compromise
 
 ```text
 lackhat | 4 %
-meee ass jf le — A Ye > y /
 If the clustered service is tier 0,
 so are the cluster resources
 ```

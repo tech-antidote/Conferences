@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:25Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Omri Ben-Bassat&Noam Rinetzky&Sharon Shoham&Adam Morrison_Breaking Hardware CFI with Sigreturn.pdf` (68 pages)
 
-
 ## Slide 1
 
 # Breaking Hardware CFI with Sigreturn
@@ -105,7 +104,6 @@ stp
 mov
 str [sp, J
 [
-' ’ [ ’ }!
 str
 adrp
 add F
@@ -691,8 +689,6 @@ OO1f41f4 14 dp
 0014220 hint
 0014224 cbnz
 0014228 sys
-de te te te ae te ae te ae
-ete He de te te ae te oe
 Lnoges
 Eeniatie eet Source: Google. black hat
 2026
@@ -754,7 +750,6 @@ OO1f41fc dp
 0014220 hint
 0014224 cbnz
 001f4228 sys
-ete He de te te ae te oe
 Lnoges )
 Eeniatie eet Source: Google. black hat
 2026
@@ -1069,7 +1064,6 @@ pac —? | 0043afc@ paciasp
 @043afc8 mov fp, sp {__saved_fp}
 @043afcc l1drh w2, [x1, #@xe]
 @043afd@ cbz w2, @x43b014
-{ | ¥
 @043b014 mov x3, #0xe66d @043afd4 ldr x3, [x1, #0x10]
 @043b018 mov w2, #0xb @043afd8 I1drh w4, [x1, #@xc]
 @043b01c_ movk x3, #@xdeec, 1lsl #0x10
@@ -1123,7 +1117,6 @@ pac —? | 0043afc@ paciasp
 @043afc8 mov fp, sp {__saved_fp}
 @043afcc l1drh w2, [x1, #@xe]
 @043afd@ cbz w2, @x43b014
-{ | ¥
 @043b014 mov x3, #0xe66d @043afd4 ldr x3, [x1, #0x10]
 @043b018 mov w2, #0xb @043afd8 I1drh w4, [x1, #@xc]
 @043b01c_ movk x3, #@xdeec, 1lsl #0x10

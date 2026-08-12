@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:23:13Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gorenflo - Throw Out the Alphabet Token-Based Markov Chains for Password Cracking - 260727.pdf` (45 pages)
 
-
 ## Slide 1
 
 ## **THROW OUT THE ALPHABET: TOKEN BASED MARKOV CHAINS FOR PASSWORD CRACKING**

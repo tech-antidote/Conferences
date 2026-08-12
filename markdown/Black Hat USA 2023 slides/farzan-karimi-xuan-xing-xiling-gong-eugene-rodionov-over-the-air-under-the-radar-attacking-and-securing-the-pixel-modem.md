@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:54Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Farzan Karimi & Xuan Xing & Xiling Gong & Eugene Rodionov_Over the Air, Under the Radar Attacking and Securing the Pixel Modem.pdf` (41 pages)
 
-
 ## Slide 1
 
 Over the Air, Under the Radar Attacking and Securing the Pixel Modem
@@ -406,8 +405,6 @@ USA 2023 Root Cause Analysis
 Heap header corruption at 50596c01 (heap: 50596c00) size: 00000001 value: 000000ad @421e2860 BitUnpacking8+000000cb
 None
 Memory Dump @50596c00
-20: DE 00 00 00 08 00 00 00 00 00 00 0 00 00 00 00 w.scceserecsaees
-200010: 0 00 00 00 40 00 00 O20 00 00 00 OD AA AA AA AA ....Q.eseeseeeee
 * Debug Message: Output(®xAD) from Buffer(@xBE) with unpackingLen(8)/unpackedLen( 1206555239) @line @ (BitUnpacking173)
 12: BitUnpacking8 return: 0x00000180
 2: BitUnpacking8(ProAsnParam_t* asnParam = 505a75a0, unsigned int line = 000005d2, u8 *output = 50596c02, int outputLen = 00000008,
@@ -637,7 +634,6 @@ Attacker sends exploit payload. Establishes foothold on victim’s modem
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
--_—-— — —
 “Sees - eeae
 Trem 2 2 SO
 Attacker can now target ®

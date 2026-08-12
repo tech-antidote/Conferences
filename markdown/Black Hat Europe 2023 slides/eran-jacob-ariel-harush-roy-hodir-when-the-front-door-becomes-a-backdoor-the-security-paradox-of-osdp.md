@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:07Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Eran Jacob, Ariel Harush, Roy Hodir_When The Front Door Becomes a Backdoor The Security Paradox of OSDP.pdf` (107 pages)
 
-
 ## Slide 1
 
 **When The Front Door Becomes a Backdoor: The Security Paradox of OSDP Eran Jacob** , Head of Research **Ariel Harush** , Security Researcher **Roy Hodir** , Security Researcher
@@ -239,7 +238,6 @@ Serial to E TH(!)
 ```text
 |. Bypassing Access Control! :
 *On properly configured and fully secured environments
-)  )( Gi»
 C
 DC
 ```
@@ -1103,7 +1101,6 @@ C:\home\kal i\osdp- fuzz> python osdp_mitm_tool.py /tmp/cp_usock serial=/dev
 A Security Paradox
 More security, More features
 More (attack) opportunities!
-)  )( Gi»
 C
 DC
 ```
@@ -1187,7 +1184,6 @@ n "UNKNOWN" ;
 Gaining a foothold in the
 internal |P network
 Over serial OSDP connection (RS-485)
-)  )( Gi»
 C
 DC
 ```
@@ -1783,7 +1779,6 @@ override0x8
 WHATS next?
 And how to prepare for It.
 im @:
-)  )( Gi»
 C
 DC
 ```

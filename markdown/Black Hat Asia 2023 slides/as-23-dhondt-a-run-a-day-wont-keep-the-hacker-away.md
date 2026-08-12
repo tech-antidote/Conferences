@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:09Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away.pdf` (33 pages)
 
-
 ## Slide 1
 
 _A run a day won't keep the hacker away_ : Inference Attacks on Endpoint Privacy Zones in Fitness Tracking Social Networks
@@ -103,17 +102,10 @@ Evenin Ride Distance Moving Time Elevation
 Avg Max
 Speed 19.0km/h 20.9km/h
 Elapsed Time 5:55
-g. Pr eS ye £ HEILI
-ai) Ze s @
-+ | ROOIGEM % & 6 Standard Map ~ — 3¢ RE
-%\ Se ef a
-~~ 2 os & s
-= By 3 RABOT 3 S
 ay 8
 &
 co}
 — =
-Rao. & 2
 & SLUIZEKEN
 2 BRUGSE
 o
@@ -204,7 +196,6 @@ total_distance: 1.86, | 1.66 km 1.86 km ,
 visible_distances: o> | |
 [ 0.16, 0.18, 0.18 km {so km We
 sss ile: 0.36 km --77 7777"
-1.65, 1.66 ] 1 J m n
 is: =" Cloaked distances Visible distance
 Available distances: Inner distance scenario: 0.16 km + 1.50 km + 0.20 km = 1.86 km
 ~~“ Total distance scenario: 0.36 km + 1.50 km = 1.86 km
@@ -245,7 +236,6 @@ Coy
 er
 prongensest© ST. JACOBS
 BRUGHUIZEKEN Groe
-Gr iN rk
 Kae od pal OpenStreetMap Improve this map
 Dist: 1.6 km
 Elev: 9m
@@ -496,7 +486,6 @@ Reflect on data minimization at design time
 Recommendations 320 + —
 Correctness (m) 7
 q J
-S QO S OH OO
 POPP HL HW SH
 » Avoid inner distance scenario EPZ Radius (m) == Total distance
 Strava User - Ride

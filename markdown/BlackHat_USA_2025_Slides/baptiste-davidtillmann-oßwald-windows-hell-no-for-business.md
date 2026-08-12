@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:52:51Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Baptiste David&Tillmann Oßwald_Windows Hell No for Business.pdf` (151 pages)
 
-
 ## Slide 1
 
 ## Windows Hell No for Business
@@ -1068,8 +1067,6 @@ RegisterServiceCtrlHandlerExW
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) ~ ' jp (ous
-blackhat Qo ee Mi \,: OZ
 “srcrincs, Windows Biometric Service — Initialization
 \_ —
 ```
@@ -1490,7 +1487,6 @@ v Databases wbengine A || Name Type Data
 a nav oo Amica 5 ¥ || WhioSrve ay :
 {51F39552-1075-4199-B513-0C10E4185DB0} © |) Databas (Cefault) REG_SZ (value not set)
 AB AT: A A + {51F39552-1075-4199-B513-0C10EA185DB0} REG_DWORD 00000001 (1)
-fi A? 0-62 . -ADEF- DI 7 * aa . ws 2 W 0000
 {A6147480-6A54-4036-A0EF-B150B3545827} {A61A7s00-6AS4-4D36-AOEF-B150B8545827) RE6_DWORD oxooot0n oD)
 {DC576DA6-D676-4415-906D-COCEAF949543} {DC576DA6-D676-4A15-906D-COCEAF949543} eeu oe)
 Parameters REG_DWORD 000000002 (2)
@@ -1531,7 +1527,6 @@ v Configurations
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Eg 4 :
 plesisinces, Windows Biometric Serviee — Configuration
 ¥ ’ Wb Io Srvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\ Databases\{DC576DA6-D676-4A 15-906D-COCEAF949543}
 vw Databases wbengine a Type Data
@@ -1587,7 +1582,6 @@ p ]
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Eg 4 :
 plesisinces, Windows Biometric Serviee — Configuration
 v _, WhioSrvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
 v Databases wbengine a Type Data
@@ -1644,7 +1638,6 @@ v Databases wbengine A || Name Type Data
 a nav oo Amica 5 ¥ || WhioSrve ay :
 {51F39552-1075-4199-B513-0C10E4185DB0} © |) Databas (Cefault) REG_SZ (value not set)
 AB AT: A A + {51F39552-1075-4199-B513-0C10EA185DB0} REG_DWORD 00000001 (1)
-fi A? 0-62 . -ADEF- DI 7 * aa . ws 2 W 0000
 {A6147480-6A54-4036-A0EF-B150B3545827} {A61A7s00-6AS4-4D36-AOEF-B150B8545827) RE6_DWORD oxooot0n oD)
 {DC576DA6-D676-4415-906D-COCEAF949543} {DC576DA6-D676-4A15-906D-COCEAF949543} eeu oe)
 Parameters REG_DWORD 000000002 (2)
@@ -1705,7 +1698,6 @@ Virtual 5
 hua) 2eneere Parameters “|| Name Type Data
 {0527b250-7514-4321-8b68-41 65956998) | Security
 = Conf; i 5 p 4 ab| (Default) REG_SZ (value not set)
-w 7 "
 : onrigurations Y Tose a ers #3) Capabilities REG_DWORD 0x00000080 (128)
 i 0 ¥ ootstrap ab) DeviceDescription REG_SZ Windows Hello Face Virtual Software Device
 v FacialFeatures Global Configurations ie '
@@ -1771,7 +1763,6 @@ Global Configurations
 Virtual Sensors
 w  {FA5AB4A2-593A-4489-BOFF-8144BEAS1E15}
 v Configurations
-| | 0
 2025
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
 Windows Biometric Serviee — Config
@@ -2102,7 +2093,6 @@ Service
 biSekhat
 BRIEFINGS
 7 Beh) 205
-ZX © 2» lew Bt
 Sensor Engine Storage
 rene | — reine co
 Windows Biometric
@@ -2127,8 +2117,6 @@ Service
 ```text
 biSekhat
 BRIEFINGS
-__ 9 ay =
-RK & >» ea Bt Jae
 Sensor Engine Storage
 rene | — reine co
 Windows Biometric
@@ -3303,7 +3291,6 @@ Biometric data storage
 * Let’s start witl
 The biometric data used to support Windows Hello is stored on the local device only. It doesn’t roam and is never sent
 to external devices or servers. This separation helps to stop potential attackers by providing no single collection point
-e . . . . . . . .
 An d some d OC that an attacker could potentially compromise to steal biometric data. Even if an attacker could obtain the biometric data
 from a device, it couldn't be converted back into a raw biometric sample recognizable by the biometric sensor.
 Each sensor has its own biometric database file where template data is stored (path c:
@@ -3629,8 +3616,6 @@ End of the procedure
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat See a ~ y fp =
-BRIEFINGS Dw - . / ,
 Demo — Decrypting the encrypted header
 Administrate IDO}
 c: \Windows\System32>C:\Users\user\source\repos \ConsoleApp1\ConsoleAppi1\bin\Debug\nets’.@\ConsoleAppl.exe C:\Users\user\D

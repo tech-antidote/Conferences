@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:20:26Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Giacomo Lenzini - Gotta Phish 'Em All Novel Attack Techniques via Persistent Browser-in-the-Middle - v2.pdf` (64 pages)
 
-
 ## Slide 1
 
 ###### **Novel Attack Techniques via Persistent Browser-in-the-Middle**
@@ -549,7 +548,6 @@ Victim Victim Victim Victim
 © CAMPAIGN CONTAINER
 ari
 PUBLIC API
-V @ Cs
 Tracking AP|_——- WebSocket
 HOI—CHi<
 2
@@ -557,7 +555,6 @@ HOI—CHi<
 © CAMPAIGN CONTAINER
 API
 PUBLIC API
-VY @ | Oy
 WebSooket
 & VICTIM CONTAINERS
 os ws
@@ -815,7 +812,6 @@ Toggle Theme
 [-— 2026-0 ny
 330584
 [-— 2026-07-13 17:06:57 —]
-\. en ma
 46
 ```
 
@@ -867,7 +863,6 @@ Persistence Logout - DEMO 4
 (Toe 2 tutes =
 © > © Oretseaee ps7. 0018442 |ampsioneesetse4
 2 < > Campaigns > DEF CON34
-a rer rs
 (© verse song dean abate sed Essa
 F2 campaigns & enive DEF CON 34 stop campaign | , Export
 “ 3 Created: 13.1ul2026, 19:45 © Duration: 26s

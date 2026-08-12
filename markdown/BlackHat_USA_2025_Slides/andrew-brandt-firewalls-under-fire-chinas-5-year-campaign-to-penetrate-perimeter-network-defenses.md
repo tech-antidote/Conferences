@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:57Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andrew Brandt_Firewalls Under Fire China's 5+ Year Campaign to Penetrate Perimeter Network Defenses.pdf` (65 pages)
 
-
 ## Slide 1
 
 Firewalls Under Fire China’s ongoing campaign to compromise network protection devices worldwide

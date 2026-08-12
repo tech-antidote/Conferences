@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:17Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Young-Security-Advocacy-Shouldnt-Be-For-Security-Professionals.pdf` (64 pages)
 
-
 ## Slide 1
 
 Security advocacy shouldn’t be for security professionals: an analysis of how the industry misses the mark and how we can improve

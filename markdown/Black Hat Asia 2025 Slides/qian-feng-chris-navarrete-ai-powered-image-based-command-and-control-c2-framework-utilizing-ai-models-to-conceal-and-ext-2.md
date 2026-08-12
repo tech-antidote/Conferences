@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:04Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Qian Feng & Chris Navarrete_AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images.pdf` (41 pages)
 
-
 ## Slide 1
 
 **AI-Powered Image-Based Command and Control (C2) Framework: Utilizing AI Models to Conceal and Extract Commands in C2 Images**
@@ -106,7 +105,6 @@ v
 > secret
 Encoder sega Iniage Decoder om
 ares
-, > _ ImageToTensor A P «
 Image 1
 adie eB a alert ® Reconstruciton ~<#-- -'
 Loss

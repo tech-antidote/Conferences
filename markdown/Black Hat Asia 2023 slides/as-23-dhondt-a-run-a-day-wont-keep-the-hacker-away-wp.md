@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:53:57Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away-wp.pdf` (16 pages)
 
-
 ## Slide 1
 
 # **A Run a Day Won’t Keep the Hacker Away: Inference Attacks on Endpoint Privacy Zones in Fitness Tracking Social Networks**

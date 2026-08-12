@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:24:54Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens.pdf` (38 pages)
 
-
 ## Slide 1
 
 # Three New Attacks Against JSON Web Tokens
@@ -141,7 +140,6 @@ Transferring identity claims
 Cryptographic approach
 My cryptographically
 protected token:
-K 1. Bo
 Alice
 Name: Alice Server
 E-maitalice@example.ecom
@@ -336,7 +334,6 @@ crypto experts?
 fone ne ee 2-2-2 ------- fence e eee eee eee eee teneeeeee te---------------- +
 | "alg" Param Value | Key Management | More | Implementation |
 | | Algorithm | Header | Requirements |
-| | | Params | |
 fe ee eee e eee eee e eee fone e eee e eee e eee e ee teneeeeee tenene n-ne e eee +
 | RSA1_5 | RSAES-PKCS1-v1_5 | (none) | Recommended- |
 RSA-OAEP RSAES OAEP ( ) Re ded . .
@@ -347,31 +344,23 @@ RSA-OAEP RSAES OAEP ( ) Re ded . .
 | A128KW | AES Key Wrap with | (none) | Recommended | News Images Videos Books Maps Flights Finance
 | | default initial | | |
 | | value using | | |
-| | 128-bit key | | |
 | A192KW | AES Key Wrap with | (none) | Optional | About 140 re (0,39 secon
 | | default initial | | |
-| | value using | | | . 7 r r
 | | 192-bit key | | | The RSA encryption algorithm is the most secure and widely used
 | A2S6KW | AES Key Wrap with | (none) | Recommended | . : . : .
 | | default initial | | | public key cryptographic algorithm. In this paper, we review RSA
 value usin A . °
 256-bit key | | algorithm and one most used padding scheme OAEP with RSA. RSAES-
-| dir | Direct use of a | (none) | Recommended | . * . .
 | | shared symmetric | | | OAEP protects RSA against semantical insecurity.
-| | key as the CEK | | |
 | ECDH-ES | Elliptic Curve | "epk", | Recommended+ | droress.or
 | | Diffie-Hellman | "apu", | | press.org
 | | Ephemeral Static | "apy" | | https://drpress.org » ojs » HSET > article > view PDF :
-| | key agreement | | | . .
 r | using Concat KDF | | | . ' An Overview of RSA and OAEP Padding - DRP
 | ECDH-ES+A128KW | ECDH-ES using | "epk", | Recommended |
 | | ECOH-ES using eg | eek: | || Not suitable for JWTs! @ sumuntenuresupeee «jh ee
-| | wrapped with | "apy" | | ° : :
-| | "A128KW" | | |
 | ECDH-ES+A192KW | ECDH-ES using | “epk", | Optional |
 | | Concat KDF and CEK | "apu", | |
 | | wrapped with | "apy" | |
-| | | | |
 "A192KW"
 ```
 
@@ -594,15 +583,10 @@ bisek hat
 USA 2&0e253
 "A256KW" wrapping
 | PBES2-HS256+A128KW | PBES2 with HMAC | "p2s", | Optional |
-| | SHA-256 and | "p2c" | |
 | | "A1l28KW" wrapping | | |
 | PBES2-HS384+A192KW | PBES2 with HMAC | "p2s", | Optional |
-| | SHA-384 and | "pac" | |
 | | "A192KW" wrapping | | |
 | PBES2-HS512+A256KW | PBES2 with HMAC | "p2s", | Optional |
-| | SHA-512 and | "p2c" | |
-| | | | |
-+ + -
 4.8. Key Encryption with PBES2
 This section defines the specifics of performing password-based
 encryption of a JWE CEK, by first deriving a key encryption key from

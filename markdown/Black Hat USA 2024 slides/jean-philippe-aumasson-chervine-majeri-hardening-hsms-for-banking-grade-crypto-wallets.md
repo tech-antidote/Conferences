@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:33:10Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Jean-Philippe Aumasson & Chervine Majeri_Hardening HSMs for Banking-Grade Crypto Wallets.pdf` (45 pages)
 
-
 ## Slide 1
 
 **Hardening HSMs for** **~~-~~ Banking Grade Crypto Wallets Black Hat 2024**

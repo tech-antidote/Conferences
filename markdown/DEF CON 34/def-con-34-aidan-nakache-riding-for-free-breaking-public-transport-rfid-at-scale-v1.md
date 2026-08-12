@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:11:16Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aidan Nakache - Riding for Free - Breaking Public Transport RFID at Scale - v1.pdf` (54 pages)
 
-
 ## Slide 1
 
 **D E F C O N 3 4   ·   L A S V E G A S   ·   A U G U S T 2 0 2 6**

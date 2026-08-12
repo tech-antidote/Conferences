@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:52:09Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Noam Moshe & Tomer Goldschmidt_The Insecure IoT Cloud Strikes Again RCE on all Ruijie Cloud-Connected Devices.pdf` (101 pages)
 
-
 ## Slide 1
 
 **The Insecure IoT Cloud Strikes Again: RCE on all Ruijie Cloud-Connected Devices** Noam Moshe, Tomer Goldschmidt Claroty Research, Claroty Team82
@@ -76,7 +75,6 @@ Jail Bird Joey as @)
 Lone Pine as @
 Ca Nn We It hurts when IP az@
 Mr. Fusion ac @
-h k - o? NextHome-5G as ®
 ac It | Old Man Peabody aez@
 OMGLibyans as ®
 Power Of Love ac @
@@ -115,13 +113,11 @@ Mad Dog a
 vy
 Mr. Fusion a
 NextHome-5G a
-By ’ By ”
 ”)
 SCRICHECHECERECRECEECRECRECRECHECHEC)
 Old Man Peabody a>
 We hacked aa “
 <«----»|  |t hurts when IP ac
-th e A Pp I Slacker af
 a
 Space Time a?
 Strickland ae
@@ -467,7 +463,6 @@ rg-upgrade-crypto « sarade_compat.sh
 ```text
 Firmware Decryption
 Analyzing rg-upgrade-crypto
-if ( == 8) {
 memset(__s,6,4);
 ——~s
 sVar2 = read(local_d4,__s, 0x16);
@@ -1298,26 +1293,6 @@ Space Time az@
 
 **Ruijie Access Points**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WV)
-J
-=
-O
-Qa
-WY
-VW)
-®
-O
-O
-<
-A
-—_
->
-~
-```
-
 ## Slide 94
 
 ##### **Open Sesame**
@@ -1337,22 +1312,11 @@ We have the SN! (cVE-2024-47146)
 49 1.540390 a Broadcast 802... 'ildcard (Broadcast)
 ABCDEFG"
 512 Beacon frame, SN=4006, FN=0, Flag:
-0000 08 00 24 00 Gf 08 00 40 dil 9b b9 74 G8 0G 00 20
-MUAC VO Raremeter:Record 2010 10 @2 8f 09 80 04 dd ad 0 00 00 10 18 03 04 20
 Tag: Vendor Specific: Ralink Technology, Corp. 0020 20 Ge 5c 89 80 00 00 00 ff ff ff ff ff finn;
 Tag Number: Vendor Specific (221) 0030 i r t 97 uWiIEl
-Tag length: 7 0040 2 00 00 00 64 O@ 21 1c 0 O7 41 42 43 44 45 46
 QUI: 00:0c:43 (Ralink Technology, Co 0050 47 01 08 82 84 8b 96 12 24 48 Gc 03 01 «Name:
 Vendor Specific OUI Type: 8 0060 @@ 01 00 @@ 07 06 55 53 20 O1 Ob 1e 20 01-vv
 Vendor Specific Data: 08000000 0070 02 16 00 c3 02 10 2f 46 05 73 00 01 60 00 33 08
-: eae Maa 0080 54 05 6 07 O8 09 da Gb 2a 01 00 32 04 Oc 18 30
-Tag; veneer SOS: eee st as 0090 60 Ob 05 QO 0 19 12 7a Gb 09 00 00 08 10 82 3d
-oo Se? BENSOP BBREA ee 00a0 db 83 67 Gc 02 7f 00 2d 1a ef 19 17 ff ff 00 00
-00b0 08 8 00 20 00 00 00 20 00 20 0 0 00 a0 18 04
-00cO 87 09 QO 3d 16 08 02 G0 G0 20 00 G0 00 0 a0 00
-Vendor Specific OUI Type: 136 20d 08 00 08 G2 G0 00 00 OO 22 OO OO 4a Ve 14 20 Va
-Vendor Specific Data: Sn 8 ml mmm «=: Re 00 2c 01 cB GO 14 OB 05 00 19 OO bf @c b1 79 c9
-Tag: FILS Indication 00f0 33 fa ff 68 01 fa ff 68 01 x ee ee ce @@ fc if 3-h
 Tag Number: FILS Indication (240) Bree) ey on Corboree CoA Pece bei ‘@
 Tag “length: 2 ; - 0120 62 32 2f 00 ff 1a 2 *AP:Serial Number. H:
 Prey G = Number of Public Key Identifiers: 0 0130 92 6f 09 af 08 00 Oc 00 fa ff fa ft ic e7 71
@@ -1362,11 +1326,7 @@ Prey G = Number of Public Key Identifiers: 0 0130 92 6f 09 af 08 00 Oc 00 fa ff 
 = HESSID: Not included 9170
 FILS Shared Key Authentication without PFS: 0180
 FILS Shared Key Authentication with PFS: No 2198
-00 47 31
-- i icati C120 (63 55 ae ee ee ee 00 00 00 00 00)
 eens = FILS Public Key Authentication: Not support @1b0 0 00 b9 63 44 0a 64 e8 10 ff ff ff ff 2 00 00
-0000 .... ..+. «++. = Reserved: 0x0 1c0 0 08 OO 20 20 20 20 0 20 00 20 00 00 00 a0 00
-Tag: Vendor Specific: (null) Q@1d®@ 00 00 QO 00 02 00 20 GO 20 dd 09 80 05 88 ef 01
 Tag Number: Vendor Specific (221) | O1e0 @@ 04 01 31 3b ac 46 a3
 ```
 
@@ -1381,17 +1341,11 @@ Q1
 Q7
 00
 00 28 00 weSeQund
-pe 04 00
 uWIEl -
-44 45 46
 ise
-00 33 08
-@c 18 30
 10.27 24
 2AP.oe
-64 e8 10 ff ff ff ff 00 00
 ‘bigs
-50 00 00 08 00 47
 7A
 26
 00

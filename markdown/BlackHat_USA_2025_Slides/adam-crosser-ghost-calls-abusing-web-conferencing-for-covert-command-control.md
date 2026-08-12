@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:11Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Adam Crosser_Ghost Calls Abusing Web Conferencing for Covert Command & Control.pdf` (91 pages)
 
-
 ## Slide 1
 
 ## Ghost Calls: Abusing Web Conferencing for Covert Command & Control
@@ -721,7 +720,6 @@ zoom
 Zone Controller
 Primary
 ~ yy
-a /. —_—
 MultiMedia Router
 ```
 
@@ -767,7 +765,6 @@ Custom Protocol over 443/TCP Custom Protocol over 8801/UDP
 ```text
 >
 2)
-: <f f
 black hat Example Zoom Desktop Egress Attempts 45
 Zone Controller
 Primary
@@ -817,7 +814,6 @@ WebSockets over HTTPS on 443/TCP
 ```text
 >
 2)
-: <f f
 black hat Example Zoom Desktop Egress Attempts 47
 Zone Controller
 Primary
@@ -978,7 +974,6 @@ blackhat Example Zoom Web‘Client Egress Attempts 35
 a ) WebSockets over
 f
 _
-Oo —> fc)
 Zoom
 RWG Zone Controller
 Primary
@@ -1150,7 +1145,6 @@ black hat Reverse Engineering Zoom
 
 ```text
 black hat Zooming invon-TURN if 62
-BRIEFINGS ; i ~» A 4
 SS
 \
 Firewall rules for Zoom Meetings and Webinars
@@ -1355,7 +1349,6 @@ CO
 TU R N worldaz-msit.relay.teams.microsoft.com:443
 Server
 a
-2 Ge F,
 Ea
 P} UN
 443/TCP over TLS
@@ -1594,7 +1587,6 @@ Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
 ```text
 pifekhat Examining Wireshark Traffic
 BRIEFINGS
-am om = a =a of
 Internet Protocol Version 4, Src: 192.168.1.43, Dst: 52.114.55.197
 Transmission Control Protocol, Src Port: 60570, Dst Port: 443, Seq: 1429, Ack: 1, Len: 357
 [2 Reassembled TCP Segments (1785 bytes): #30829(1428), #30830(357)]

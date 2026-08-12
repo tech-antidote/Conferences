@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:06Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Sina Yazdanmehr, Ibrahim Akkulak _ Millions of Patient Records at Risk The Perils of Legacy Protocols.pdf` (35 pages)
 
-
 ## Slide 1
 
 **Millions of Patient Records at Risk** The Perils of Legacy Protocols Sina Yazdanmehr <sina@aplite.de>

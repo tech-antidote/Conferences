@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:11:52Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Christine Fossaceca,Bill Marczak_Sweet QuaDreams or Nightmare Before Christmas Dissecting an iOS 0-Day.pdf` (90 pages)
 
-
 ## Slide 1
 
 # **Sweet QuaDreams or Nightmare before Christmas? Dissecting an iOS 0-Day Attack**
@@ -503,7 +502,6 @@ Apple Public Key
 Low-Level
 Bootloader Kernel
 (HR E))
-© 0 Qo
 Apple WWDC 2016
 ```
 
@@ -821,7 +819,6 @@ ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
 EMAIL= icloud. com :
 principal/
 DESCRIPTION] ]>:x
-ATTENDEE; EMA] _ = ; CN
 ATTENDEE<![CDATAL:Notes
 ```
 
@@ -915,10 +912,8 @@ parser:didStartElement:namespaceURI:qualifiedName:attributes:]
 
 ```text
 Can We Test Against a Server?
-= ©] ex
 —_ ccs-calendarserver
 <> Code ©) Issues 47 3% Pull
-©/|¥ | w
 The Calendar and Contacts Server.
 @ www.calendarserver.org
 B[8 ~Apache-2.0 license
@@ -968,7 +963,6 @@ ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
 EMAIL= icloud. com :
 principal/
 DESCRIPTION] ]>:x
-ATTENDEE; EMA] _ = ; CN
 ATTENDEE<![CDATAL:Notes
 ```
 

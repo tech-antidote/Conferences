@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:07:04Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Pellaeon Lin & Mona Wang & Jeffrey Knockel_Should We Chat, Too Security Analysis of WeChat's MMTLS Encryption Protocol.pdf` (48 pages)
 
-
 ## Slide 1
 
 **Thursday, April 3 2025**
@@ -180,7 +179,6 @@ WeChat network request lifecycle
 /* renamed from: com.tencent.mm.model.bm */
 e API endpoint is referred to as
 /* loaded from: classes3.dex */
-6c ” H 6c ”
 23 public final class MMReqRespReg2 extends ReqRespBase { Scene ’ has unique type number
 /* renamed from: pcn */ and URI
 private final MMReg2.Req reqobj = new MMReg2.Req( );
@@ -557,7 +555,6 @@ Response metadata : Response metadata :
 Response Data _/NeW_secret Response Data“ "eW_secret: Response Data “Session
 Ei ceescetetts | Esibrnctisisl
 : | session “new_secret :
-: a :
 Logged out LoggING in Logged in
 ```
 

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:01Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Bourla&Graham Brereton_Turning the Tables on GlobalProtect Use and Abuse of Palo Alto's Remote Access Solution.pdf` (73 pages)
 
-
 ## Slide 1
 
 Turning the Tables on GlobalProtect Use and Abuse of Palo Alto’s Remote Access Solution
@@ -279,8 +278,6 @@ Potential Impacts:
 ```text
 @ iTerm2 Shell Edit View Session Scripts Profiles Window Help Oo T
 Web Page Blocked x 9 Private browsing
-sh-3. 2# []
-OoO<e vO CG O & www.dropbox.com 80% IY 3) > =
 Web Page Blocked
 The web page you are trying to visit has been blocked in accordance with company policy. Please
 contact your system administrator if you believe this is an error.
@@ -1182,9 +1179,7 @@ View
 Go
 Window
 Help
-=) to @ e Q
 Web Page Blocked x 9 Private browsing
-oO € > GCG OC B www.dropbox.com wes) > =
 Web Page Blocked
 The web page you are trying to visit has been blocked in accordance with company }
 contact your system administrator if you believe this is an error.

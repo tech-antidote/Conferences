@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:19:06Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Marco Squarcina & Pedro Adão_Cookie Crumbles Unveiling Web Session Integrity Vulnerabilities.pdf` (59 pages)
 
-
 ## Slide 1
 
 **Cookie Crumbles: Unveiling Web Session Integrity Vulnerabilities Marco Squarcina Pedro Adão** TU Wien IST, Universidade de Lisboa
@@ -205,7 +204,6 @@ Department of Compu
 ‘Interna
 yusenix 5M
 9 LEE The cookie monster
-T H E D) E P | Abstract < !
 R | CH LU N D) E A cookie can contain a “secure” flag, indi
 should be only sent over an HTTPS connecti
 is no corresponding flag to indicate how ¢

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:52:25Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Sung-Wook Jang & Yong-Hyun Kim_Operation MIDAS - Tracking Fraudulent Financial Program Organizations.pdf` (44 pages)
 
-
 ## Slide 1
 
 ### **Operation MIDAS Tracking Fraudulent Financial Program Organizations**
@@ -673,7 +672,6 @@ Value J 4, ~ eat
 v 02000014
 RSDS “yA nfoAttribute @02000003
 {9235A2CF-0C49-4473-A15E-B9EBO9D4FC633} >% D ker @0200006D
-a b> #3 Dpi @0
 C:-#DevelopwProjectwhts#2. Obfuscator#x86¥HTS. pdb Py Filer
 v
 Value 7
@@ -689,7 +687,6 @@ Value
 4{}
 RSDS d* oattribute @02000003
 (A7AB130E-ABCD-4DF0-ADE4-CC80D4528282} rte i pee
-= x 6 P
 C:¥Develop#Project#hts#2. Obfuscator#x864MANAGER.pdb
 S @020001
 @02000126

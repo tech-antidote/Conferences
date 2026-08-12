@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:22Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ron Ben Yizhak_Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services.pdf` (69 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -39,7 +38,6 @@ Ron Ben Yizhak, SafeBreach
 Forgotten but Not Gone:
 Unauthenticated RCEs
 and LPEs in Legacy
-Lin Ss \
 MnmuxXx Services <— ;
 < oo
 =
@@ -582,8 +580,6 @@ Demo #1
 
 ```text
 Demo #1
-Ce May 24 16:51 a ©
-‘ m weak_user@telnet-srv: ~ a = >» f &
 weak_user@telnet-srv:~$ |
 >
 I

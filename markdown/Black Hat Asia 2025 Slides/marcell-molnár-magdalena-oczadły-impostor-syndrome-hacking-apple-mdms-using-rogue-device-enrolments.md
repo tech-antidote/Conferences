@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:07:07Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Marcell Molnár & Magdalena Oczadły_Impostor Syndrome - Hacking Apple MDMs Using Rogue Device Enrolments.pdf` (44 pages)
 
-
 ## Slide 1
 
 IMPOSTOR SYNDROME HACKING APPLE MDMS USING ROGUE DEVICE ENROLMENTS
@@ -53,8 +52,6 @@ NEAR-JACKEOT || NERA OCKOT
 (BAR, \{5ARy
 : WY
 | mu Bees
-” « } soPlAL On oop
-t LOLLNDAN ‘ ll _ :
 SERILAL SERIAL|
 NOMBER ese
 ```
@@ -197,7 +194,6 @@ hackintosh qemu-kvm
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-3 sa a ee <5 SS eS <5 SS
 mig F f _marcell@marcell-B85M-DS3H: ~/OSX/Test_ready/OSX:
 GNU nano 6.2 config.plist
 <key>ProcessorType</key
@@ -298,7 +294,6 @@ Install
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-J SFI Z=
 Bracenat $< (SK =
 WASIAZ SS
 Manufacturing
@@ -347,7 +342,6 @@ NSEncoded \ Ys
 e/ payload with serial ~~!
 —) )
 —
-| aD _—=
 Apple Device iprofiles.apple.com
 ‘
 action = RequestProfileConfiguration;
@@ -387,7 +381,6 @@ IsMandatory = 1;
 IsSupervised = 1;
 OrganizationAddress =
 le
-AER ee ;
 OrganizationAddressLine2
 OrganizationCity = London;
 OrganizationCountry = GBR;
@@ -456,7 +449,6 @@ UvL@RURCBQTELTVCAxLj AVL@VOIiAiaHR@cDovL3d3dy5hcHBsZS5j b2@vRFREcy9Qcm9wZXJ@eUxp
 S4wLmRO@ZC1I+Cj xwbG1lzdCB2ZXJ zaW9uPSIxLjAiPgo8ZG1jdD4KCTxrZXk+TEFORIVBROU8L2t lLeT4KCTxz
 dHJpbmc+ZW5 fVVM8L3NOcmluZz4KCTxrZXk+UFJIPRFVDVDwva2V5PgoJPHN@cmLuZZ5pTWF j UHJ VMSwxPC9
 zdHJ pbmc+Cgk8a2V5P INFUKLBTDwva2V5PgoJ PHNO@cmLuZZ5DMDJDWDZTNU1EN LO8L3N@cmlUuZZ4KCTxrZX
-p m OD 0) NCAAR ON A0+ 0 x OC AN 0) YO TNEN7Z AR NO
 "
 iprofiles.apple.com
 Company’s MDM
@@ -484,8 +476,6 @@ om
 =
 iprofiles.apple.com
 Apple Device = ConfigurationURL:
-Q€= * H +
-son a ee eee =140 fox Oa 10 em em we me we OE 1x * H +
 legee) A<?xml version="1.0" encoding="UTF-8" ?>
 pkcs7 Payload
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" “http://www. apple.com/DTDs/PropertyList-1.0.dtd">
@@ -504,7 +494,6 @@ pkcs7 Payload
 </dict>
 </plist>
 wae!) Aa H 0 mallee EVxga+2 BO
-wm =k OH OF
 oN
 ies
 Company’s MDM
@@ -583,7 +572,6 @@ X-Served-By: cache-bfi-|
 X-Cache: MISS, MISS
 X-Cache-Hits: 0, 0
 : $1742904337.38
-@ !x H ue 610 *
 encoding="UTF-8'
 OCTYPE plist PUBLIC "
 http://www. apple. com/D
@@ -702,7 +690,6 @@ os.system('''sed-i'' "s/2024/2023/g"
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 wa we TvT?TTTTTT@TT?TTrT? TT TT we.
 '@0 OSG 66 600060008068 008066 ’
 ```
 
@@ -786,8 +773,6 @@ om
 =
 iprofiles.apple.com
 Apple Device = ConfigurationURL:
-Q€= * H +
-son a ee eee =140 fox Oa 10 em em we me we OE 1x * H +
 legee) A<?xml version="1.0" encoding="UTF-8" ?>
 pkcs7 Payload
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" “http://www. apple.com/DTDs/PropertyList-1.0.dtd">
@@ -806,7 +791,6 @@ pkcs7 Payload
 </dict>
 </plist>
 wae!) Aa H 0 mallee EVxga+2 BO
-wm =k OH OF
 oN
 ies
 Company’s MDM
@@ -944,8 +928,6 @@ false
 
 ```text
 ESZESZ [LSS SS
-: = Se <\ :
-! ! H | s
 SERILAL SERIAL
 NOWBER NUMBE
 ```
@@ -1010,7 +992,6 @@ Response
 Pretty
 Raw
 Hex
-Sy \n =
 # Send alert to Slack webhook to #ent-it-alerts
 channel
 serial_number=$(system_profiler SPHardwareDataType |
@@ -1065,7 +1046,6 @@ Roaming Client/OrgInfo.plist"
 _o’ aN WCD—__ OF
 JACKPOT FACKPOT
 & |
-=/) J X |
 7 )
 TN =
 = SERIAL NOTBER) \e (@ Jae SERIAL LNUNEER

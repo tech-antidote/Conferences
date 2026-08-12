@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:54:59Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Palmiotti-Alice-In-Kernel-Land-wp.pdf` (3 pages)
 
-
 ## Slide 1
 
 # Abstract

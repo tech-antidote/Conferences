@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:59Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Alon Leviev_The Pool Party You Will Never Forget New Process Injection Techniques Using Windows Thread Pools.pdf` (118 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -638,7 +637,6 @@ TP_IO Insertion
 TP_ALPC Insertion
 TP_JOB Insertion
 TP_DIRECT Insertion
-On oO Oh B WY =
 TP_TIMER Insertion
 ```
 

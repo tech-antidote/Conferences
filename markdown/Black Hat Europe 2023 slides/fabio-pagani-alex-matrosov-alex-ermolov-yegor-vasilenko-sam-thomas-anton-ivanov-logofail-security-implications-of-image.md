@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:01Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Fabio Pagani, Alex Matrosov, Alex Ermolov , Yegor Vasilenko , Sam Thomas , Anton Ivanov _ LogoFAIL Security Implications of Image Parsing During System Boot.pdf` (53 pages)
 
-
 ## Slide 1
 
 **Logo** **_FAIL_** Security implications of image parsing during system boot
@@ -92,7 +91,6 @@ Ble ici ole
 The Far-Reaching
 Consequences of
 LogoFAIL (Blog)
-oe ~ Ai ue
 Inside the LogoFAIL
 Vulnerabilities
 (Wife [=te))
@@ -880,7 +878,6 @@ https://www.youtube.com/watch?v=EufeOPe6eqk
 Wdbert Shere thet!
 Capprtyht PLD Geren) Carperetter bf) rights rewerend
 DPT Ph Leteet Peer eT) f6e ee Peet ere Get bepeererertl: Often ee Oo
-ee ee et
 LA ee ee Deed ie)
 te
 ee ee ee Seley -dtebag verifice

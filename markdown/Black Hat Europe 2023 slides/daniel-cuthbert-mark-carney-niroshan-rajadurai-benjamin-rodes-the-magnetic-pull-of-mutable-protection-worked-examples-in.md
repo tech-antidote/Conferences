@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:11:16Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Daniel Cuthbert, Mark Carney, Niroshan Rajadurai, Benjamin Rodes_The Magnetic Pull of Mutable Protection Worked Examples in Cryptographic Agility.pdf` (47 pages)
 
-
 ## Slide 1
 
 ```
@@ -478,37 +477,6 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-- oO 7 ow ele
-ta Cee OC eee Claes SC eee of eee 6 tee
-° entree tt eee
-© Cmte pee Bl of etree ©)
-(—
--_~
-Oe re er
-@ riemewe ~—ewr oo:
-OD tree ee oe
-0 er ee
-ere Re
-o-«—_——
-oe ere we
-O20 wer
-os
-i—
-tee
-ee ee we
-one - ewe ee
-er oer
-= ee weer
-O bee
-= +e
-vw
-@ eel! ewe
-ee
-```
-
 ## Slide 39
 
 ##### Information to drive action
@@ -576,8 +544,6 @@ Use of algorithm SM2 1 '
 Use of algorithm RC4 TLP Colours 'red//amber//green' for
 Use of algorithm ED25519 ‘weak//potentially/quantum-weak//reasonable’
 Use of algorithm GOST
-T T T
-T T T T
 500 750 1000 1250 1500 1750 2000
 ```
 

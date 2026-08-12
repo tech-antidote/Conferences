@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:06Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Michael Kouremetis & Marissa Dotter & Alex Byrne & Dan Martin & Ethan Michalak & Gianpaolo Russo & Michael Threet_What Lies Beneath the Surface Evaluating LLMs for Offensive Cyber Capabilities through P.pdf` (27 pages)
 
-
 ## Slide 1
 
 What Lies Beneath the Surface: Evaluating LLMs for Offensive Cyber Capabilities through Prompting, Simulation & Emulation

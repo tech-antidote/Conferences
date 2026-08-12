@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:34:39Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime_Article.pdf` (10 pages)
 
-
 ## Slide 1
 
 22 July, 2024

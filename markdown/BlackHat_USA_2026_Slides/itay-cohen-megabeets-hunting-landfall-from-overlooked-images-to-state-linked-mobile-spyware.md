@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:10:29Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Itay Cohen (Megabeets)_Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware.pdf` (54 pages)
 
-
 ## Slide 1
 
 # LANDFALL*
@@ -250,478 +249,6 @@ b45817f fb0355badcc89f2d7d48eec fO0ebd f2b966ac986514
 
 Timestamp
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-00
-49
-00
-00
-03
-00
-00
-02
-00
-54
-03
-60
-00
-05
-00
-00
-04
-00
-00
-OA
-73
-5D
-45
-00
-00
-35
-6E
-00
-01
-49
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-68
-7D
-4F
-00
-00
-34
-1k)
-00
-02
-2A
-01
-01
-01
-01
-OE
-06
-4A
-12
-01
-01
-1A
-01
-01
-4A
-01
-01
-14
-09
-61
-00
-53
-01
-32
-3A
-20
-00
-03
-00
-00
-01
-00
-00
-01
-00
-01
-01
-00
-00
-01
-00
-00
-01
-00
-04
-Cé
-00
-70
-00
-20
-00
-30
-30
-46
-00
-04
-08
-00
-04
-00
-00
-02
-00
-00
-03
-00
-00
-05
-00
-00
-04
-00
-00
-02
-00
-65
-43
-33
-00
-32
-30
-38
-00
-chs}
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-22
-61
-35
-00
-34
-00
-32
-00
-06
-00
-00
-01
-08
-06
-15
-44
-ala
-01
-01
-17
-01
-6A
-32
-02
-66
-13
-OA
-98
-3A
-6E
-30
-01
-3A
-EO
-38
-00
-07
-00
-01
-00
-00
-01
-00
-01
-01
-00
-00
-01
-00
-01
-01
-00
-66
-Cé
-00
-01
-20
-6F
-44
-00
-30
-01
-00
-00
-08
-18
-04
-00
-00
-03
-00
-00
-04
-00
-00
-04
-00
-00
-02
-00
-54
-01
-00
-00
-5B
-6E
-20
-00
-37
-00
-01
-00
-09
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-31
-00
-44
-00
-3A
-00
-00
-00
-OA
-FE
-ch
-01
-03
-01
-2E
-10
-01
-01
-16
-01
-62
-28
-14
-86
-12
-04
-8E
-60
-2c
-43
-49
-01
-32
-96
-00
-00
-OB
-00
-00
-00
-01
-00
-01
-01
-00
-00
-01
-00
-01
-01
-00
-01
-Cé
-00
-01
-00
-20
-61
-47
-00
-33
-65
-00
-00
-oc
-04
-00
-00
-03
-00
-00
-02
-00
-00
-04
-00
-00
-03
-00
-00
-01
-00
-00
-00
-31
-6E
-49
-00
-20
-54
-01
-00
-OD
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-00
-2c
-6F
-54
-00
-30
-00
-00
-00
-OE
-01
-01
-02
-01
-01
-OF
-17
-D4
-15
-01
-01
-1B
-01
-72
-69
-04
-01
-21
-7B
-20
-6E
-41
-01
-39
-53
-00
-00
-OF
-00
-00
-01
-00
-00
-01
-00
-66
-01
-00
-00
-01
-00
-01
-87
-00
-02
-Cé
-22,
-31
-20
-4C
-60
-3A
-6F
-60
-ASCII
-a es
-650600 Wo 60000006
-le oreiiieereriene P
-Te cseccsvesecess
-povoooddad oauad
-een alps Gaenein
-6646006 Zooaccoal
-odiccoo00G0000 i
-eee GrillagggQdd
-re
-cece ee eee ee {"
-shape": [1, 1, 1
-]}..Canon.Canon
-EOS 350D DIGITAL
-Legitimate TIFF header
---2024:07:23 09:
-54110 Onennee eT.So
-ONY [FGA coc oaas
-Timestamp
-```
-
 ## Slide 16
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -738,17 +265,6 @@ Timestamp
 00548050:
 00548060:
 00548070:
-00 00 00 BO 00
-50 4B 03 04 14
-81 66 ED 33 05
-74 61 2F 64 61
-75 6E 67 2E 69
-6C 65 73 2F 6C
-00 00 FF 12 D9
-ES A3 E2 C8 EC
-Aé DA 8A E1 86
-F8 61 26 AO 2C
-54 06 01 D3 A2
 00 FB
 00 00
 00 84
@@ -782,28 +298,6 @@ F2
 GA
 3D
 E6
-41 46 45 42
-00 41 4A FS
-00 27 00 00
-6F 6D 2E 73
-76 69 63 65
-BF FD 37 7A
-01 16 00 00
-3F 91 45 84
-53 8E 10 06
-7D 96 CS SD
-DF 29 F8 6E
-41 42 45
-58 C5 4E
-00 64 61
-61 6D 73
-2F 66 69
-58 SA 00
-00 74 2F
-68 3D 89
-CF 09 CF
-17 AS 4E
-BE 51 05
 lene yp
 sooo000C CAFEBABE
 a AJ.X.N
@@ -832,28 +326,6 @@ data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .i
 005A7290:
 O05A72A0:
 O05A72B0:
-33 05 90 84 33 05 00 27
-00 00 00 A4 81 00 00 00
-74 61 2F 63 6F 6D 2E 73
-70 73 65 72 76 69 63 65
-50 4B 01 02 14 03 14 00
-DB 94 54 E8 Ai BD 90 80
-00 00 00 00 00 00 OO OD
-74 61 2F 64 61 74 61 2F
-75 6E 67 2E 69 70 73 65
-6C 65 73 2F 62 2E 73 6F
-02 00 02 00 AD 00 OO OD
-00 GO 00 OO 00 OO OO OD
-00 64 61 74 61 2F 64 61
-61 6D 73 75 6E 67 2E 69
-2F 66 69 6C 65 73 2F 6C
-00 00 08 OO EF 2E F7 58
-40 9D 01 00 2A 00 00 00
-80 81 32 34 05 00 64 61
-63 6F 6D 2E 73 61 6D 73
-72 76 69 63 65 2F 66 69
-50 4B 05 06 00 00 00 00
-1B F2 05 00 00 00
 Lee eee data/da
 ta/com.samsung.i
 pservice/files/l
@@ -948,7 +420,6 @@ IK NSS
 Yi
 Beall
 RON
-Ls i /
 |
 ```
 
@@ -1069,28 +540,6 @@ data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .i
 O05A72A0:
 O05A72B0:
 2
-33 05 90 84 33 05 00 27
-00 00 00 A4 81 00 00 00
-74 61 2F 63 6F 6D 2E 73
-70 73 65 72 76 69 63 65
-50 4B 01 02 14 03 14 00
-DB 94 54 E8 Ai BD 90 80
-00 00 00 00 00 00 OO OD
-74 61 2F 64 61 74 61 2F
-75 6E 67 2E 69 70 73 65
-6C 65 73 2F 62 2E 73 6F
-02 00 02 00 AD 00 OO OD
-00 GO 00 OO 00 OO OO OD
-00 64 61 74 61 2F 64 61
-61 6D 73 75 6E 67 2E 69
-2F 66 69 6C 65 73 2F 6C
-00 00 08 OO EF 2E F7 58
-40 9D 01 00 2A 00 00 00
-80 81 32 34 05 00 64 61
-63 6F 6D 2E 73 61 6D 73
-72 76 69 63 65 2F 66 69
-50 4B 05 06 00 00 00 00
-1B F2 05 00 00 00
 Lee eee data/da
 ta/com.samsung.i
 pservice/files/l
@@ -1118,33 +567,11 @@ data/data/com.samsung.ipservice/files/b.so
 00013998:
 000139A7:
 159B6:
-00 70 65 72
-63 6B 75 70
-79 SF 6F 72
-74 65 6E 63
-67 65 6E 74
-SF 69 64 00
-SF 76 65 72
-62 72 69 64
-73 69 6F 6E
-69 63 SF 6B
-6E 74 61 6C
 73
 00
 69
 79
 oF
-69 73 74
-70 65 72
-67 69 6E
-SF 70 61
-69 64 00
-62 72 69 64
-73 69 6F 6E
-67 65 SF 68
-SF 6D 61 6A
-65 79 00 26
-SF 62 75 69
 65 6E
 73 69
 00 70
@@ -1167,17 +594,6 @@ SF
 00
 63
 3D
-79 SF 62 61
-74 65 6E 63
-72 73 69 73
-61 64 00 61
-6D 61 6E 64
-68 65 61 64
-6E 6F 72 00
-SF 76 65 72
-70 75 62 6C
-72 65 6D 65
-00 26 65 75
 .persistency_ba
 ckup.persistenc
 y_origin.persis
@@ -1216,21 +632,6 @@ ntal_build=.&eu
 73
 69
 6E
-70 65 72 73 69 73 74
-6B 75 70 70 65 72
-SF 6F 72 69 67 69 6E
-65 6E 63 79 SF_7O0 61
-72 69 64 67 65 SF 68
-69 6F 6E SF 6D 61 6A
-63 SF 6B 65 79 26
-74 61 6C SF 62 75 69
-65 6E 63 79 SF 62 61
-73 69 73 74 65 6E 63
-70 65 72 73 69 i.
-65 61 64 - 76 65 72
-6F 72 70 75 62 6C
-69 6E 63 72 65 6D 65
-6C 64 3D 26 65 75
 persistency_ba
 ckup.persistenc
 y_origin.persis
@@ -1364,7 +765,6 @@ Targets governments, f i nancial institutions, and telecom organizations across 
 STAN WL
 Differential Me
 Analysis — SHAR
-Y ‘y Was 1, NA |
 pes) LEA |
 ```
 

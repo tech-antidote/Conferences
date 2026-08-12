@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:19:18Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Kouremetis & Ron Alford & Dean Lawrence_Mirage Cyber Deception Against Autonomous Cyber Attacks.pdf` (29 pages)
 
-
 ## Slide 1
 
 # Mirage: Cyber Deception against Autonomous Cyber Attacks

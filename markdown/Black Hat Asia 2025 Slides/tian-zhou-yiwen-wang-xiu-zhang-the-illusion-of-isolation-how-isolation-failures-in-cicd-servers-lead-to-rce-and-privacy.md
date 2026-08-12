@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:39Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Tian Zhou & Yiwen Wang & Xiu Zhang_The Illusion of Isolation How Isolation Failures in CICD Servers Lead to RCE and Privacy Risks.pdf` (106 pages)
 
-
 ## Slide 1
 
 # The Illusion of Isolation: How Isolation Failures in CI/CD Servers Lead to RCE and Privacy Risks
@@ -1683,7 +1682,6 @@ Triggered by chadiwilson
 on 27 Jan, 2025 at 01:04:57 Local Time
 regression-SPAs
 Instance: 3817
-e | Changes w | VSI
 Triggered by chadiwilson
 ‘on 18 Mar, 2025 at 03:00:02 Local Time
 gocd-trial-installers

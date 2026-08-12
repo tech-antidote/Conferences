@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:16:47Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions.pdf` (31 pages)
 
-
 ## Slide 1
 
 # Smashing the state machine
@@ -105,7 +104,6 @@ network latency jitter internal latency (— race window
 Request 2 2
 Single-packet attack
 Requests network latency jitter internal latency
-1 to 30 EK
 -—~
 ..20 more requests 1
 ```

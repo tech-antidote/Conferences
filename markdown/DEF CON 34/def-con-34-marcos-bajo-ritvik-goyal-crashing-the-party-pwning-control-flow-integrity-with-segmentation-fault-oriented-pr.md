@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:34Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Marcos Bajo, Ritvik Goyal - Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming - Crashingthe.pdf` (140 pages)
 
-
 ## Slide 1
 
 #### **Crashing the Party: Pwning Control-Flow Integrity with** **_SFOP Segmentation Fault-Oriented Programming_**
@@ -1515,7 +1514,6 @@ libc sigaction
 _ SIGSEGV
 sigaction |handler=| handler: sigaction 2a
 Tap | —) leave rbp La
-ret ss S
 rbp value
 > 4\,
 __restore_rt .
@@ -1604,7 +1602,6 @@ leave
 ret J
 a
 ~~ rbp ~ rbp value
-) r t ~ C ted
 restore orrupte
 haa FAKE F memory
 \SIGFRAME, |
@@ -1625,7 +1622,6 @@ __restore_rt \)
 Written by
 handler: sigaction Sigframe [MRA
 leave
-ret J ss
 + a
 sigreturn rbp value
 __restore_rt | Corrupted
@@ -2020,7 +2016,6 @@ XZ | sigreturn Y state
 {Ye
 ROP Gadget N restorer
 rbp Restore
-x - SSP
 ```
 
 ## Slide 115
@@ -2213,7 +2208,6 @@ re Pe
 __restore_rt
 Z
 ¥
-| = <
 _. wim restore
 ast return address , FAKE memory
 \SIGFRAME , ,
@@ -2568,7 +2562,6 @@ bSFOP: Shadow Stack Grooming <—>
 Next signal handler: leave;ret
 Next restorer: _ restore_rt
 handler: sigaction
-| on SD
 A rbp
 aA
 sigreturn .,

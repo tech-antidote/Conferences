@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:51:20Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Junoh Lee & Gwangun Jung_Guest Revolution Chaining 3-bugs to compromise the Windows kernel from the VMware guest.pdf` (73 pages)
 
-
 ## Slide 1
 
 ## Guest Revolution: Chaining 3-bugs to compromise the Windows kernel from the VMware guest
@@ -209,79 +208,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-wT
-WN
-O
-aN
-LU
-Oo
-O
-oO:
-=)
-LL
-o
-er
-$
-Cg
-fe}
-5 CVEs
-Hypervisor attack surface
-VM Escape CVEs (2023~2024)
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
--
-=
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-I
-CCID
-Lee ee eee ee ee ee ee ee eee
-bluetooth
-8 CVEs
-6 CVEs
-10
-‘ion Class:
-Infor:
-```
-
 ## Slide 11
 
 # Hypervisor attack surface
@@ -387,7 +313,6 @@ zs © Always enabled
 Enabled until next power off or suspend
 Host RPC Handlers
 . Folders
-Hypervisor y . 4 . y
 Inf Confi HGFS Name Host Path
 nto ont 0000 nm
 9g |) shared_f... F:t4tshared_folder
@@ -420,7 +345,6 @@ char hgfs_fileread(struct hgfs_req *req, _BYTE *a2){
 Block = OLL; 0x00 0x08
 rep = OLL;
 ||...
-if ( (a2[8] & 1) != Of 0x10
 // ...
 // Copy file contents to Physmem 0x20
 PhysMem_CopyToMemory_O(*(a2 + 51), v24, v6, 32, 5u);
@@ -668,10 +592,8 @@ Client Driver Virtual Bluetooth
 s USB Interface
 Universal Bus Driver (USBD) (URB Processing)
 I
-> ¥ y
 USB Controller DATA URB Control URB
 I
-Hypervisor y S 4 . 4 2 ¥
 Virtual Hub Virtual Virtual Device Vendor
 Mouse Bluetooth Command Command
 Sa
@@ -706,7 +628,6 @@ I
 WB orks fatatatatatatatetatatats|sfatatatatatatatatstatatatatstatatatats oD afetelatetatetetetetetetetetetatetete ch
 USB Controller } DATAURB Control URB
 0 I
-Hypervisor 5 4 a4 S 4 : 2 ¥v
 Virtual Hub Virtual Virtual : Device Vendor :
 Mouse Bluetooth : Command Command _|:
 y See TELL LLL LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL ”
@@ -817,7 +738,6 @@ if ( (urbData->bmRequestType & 0x60) != 0x20)
 { VUSBDevice
 I wee
 ( (requestType == 9 ) destroy all pipes and URB objects
-if ( urbData->wValue <= 1u )
 {
 sub_1407BA7EO(urb->pipe->dev, urbData->wValué):
 if (urbData->wValue )
@@ -971,7 +891,6 @@ Bypass Control Flow Guard
 1. Callable by indirect call
 2. After execute some code then execute indirect call
 ¢ URB object size is OxA8,
-° e ° RA
 | | Guest physical memory First page of physical memory is not used after boot !! 2
 0:017> !address 0000020f*dbcc0000
 Usage: MappedFile
@@ -1406,7 +1325,6 @@ if ( elem4_buffer &8 elem4_length - 1 <= OxFFE ) Meaningless Condition va!
 else
 {
 v40 = ExAllocatePoolWithTag(PagedPool, 0x1000ui64, 0x6D427348u);
-if (v40 )
 memmove(v40, elem4_buffer, elem4_length); | Overflow if elem4 length > 0x1000
 goto LABEL_87; ~
 }
@@ -1519,7 +1437,6 @@ EUROPE 2024
 What Can We Do?
 ¢« Heap based buffer overflow on fixed size chunk (0x1000)
 * On paged pool
-ee eS Se
 Exploit Time
 sControlFile(instance, FileQbyec
 0164, 0, PoolWithTag, (0x4000u,J0i64):
@@ -1678,7 +1595,6 @@ res = ExpWnfValidatePubSubPreconditions( — x id = StateInfo->Typeld
 lu, ypeld = Statelnfo->Typeld;
 &lnstance->StateNamelnfo, if(!Typeld )
 0, ) Read Size == O!!? return StatelInfo->MaxStateSize < Size ? OxCOOQ000D : 0;
-36 ” . . .
 v1): } Always pass the size validation
 if (res <0)
 goto ERROR;
@@ -1854,7 +1770,6 @@ Arbitrary Nullification
 MsRemoveDataQueueEntry
 MsRead() vs
 IRP = entry->IRP;
-if (IRP )
 {
 }
 Mailslot Data Entry
@@ -1980,7 +1895,6 @@ Wokstationy JJ~ ® O©Q2Q DE
 Home [pe Windows11_23h2
 Windows11_23h2 x +
 <€ ii Cc > + Windows11_23h2 > ‘Windows11_231
-@ 2 oe! xX oO @® e W wee @ As ae
 Ware
 o
 reversing privexe vmwarelog

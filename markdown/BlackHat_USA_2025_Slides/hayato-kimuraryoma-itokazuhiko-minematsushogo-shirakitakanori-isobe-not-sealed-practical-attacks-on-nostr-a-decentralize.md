@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:54:39Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Hayato Kimura&Ryoma Ito&Kazuhiko Minematsu&Shogo Shiraki&Takanori Isobe_Not Sealed Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol.pdf` (70 pages)
 
-
 ## Slide 1
 
 Not Sealed: **Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol** Keywords: Distributed SNS, signature verification bypass, CBC mode malleability, cache poisoning, plaintext recovery Speakers: Hayato Kimura Contributors: Ryoma Ito, Kazuhiko Minematsu, Shogo Shiraki and Takanori Isobe **(Also, IEEE EuroS&P2025)**
@@ -1288,7 +1287,6 @@ Active adversary Relay Server
 Bob
 4. Get access.log
 au 3-2. Generate link preview
-t t I
 ras .
 t?q
 ee

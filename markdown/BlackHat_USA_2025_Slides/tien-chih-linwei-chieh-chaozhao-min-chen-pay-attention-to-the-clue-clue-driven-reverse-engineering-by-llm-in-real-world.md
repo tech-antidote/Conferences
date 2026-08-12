@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:02:15Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tien-Chih Lin&Wei Chieh Chao&Zhao-Min Chen_Pay Attention to the Clue Clue-Driven Reverse Engineering by LLM in Real-World Malware Analysis.pdf` (61 pages)
 
-
 ## Slide 1
 
 **Pay Attention to the Clue** Clue-driven Reverse Engineering by LLM in Real-world Malware Analysis
@@ -972,7 +971,6 @@ Rename v9 —> — processHandle ©
 0.963
 @.023 buffer
 Q@.002 result
-6 \ 6)
 v9 = dword_ 108.3? 24(...);
 /! OpenProcess(...)
 IAA CYERAFT

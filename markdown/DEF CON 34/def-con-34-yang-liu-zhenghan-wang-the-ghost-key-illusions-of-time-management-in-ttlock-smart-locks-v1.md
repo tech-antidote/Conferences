@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:31:27Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yang Liu, Zhenghan Wang - The Ghost Key Illusions of Time Management in TTLock Smart Locks - V1.pdf` (81 pages)
 
-
 ## Slide 1
 
 **The Ghost Key: Illusions of "Time Management" in TTLock Smart Locks** _How Design Flaws in Offline Authorizations Allow Persistent Unauthorized Entry_ **Speaker: Zhenghan Wang, Yang Liu**
@@ -988,7 +987,6 @@ or
 t
 r raw_payload = bytes. fromhex(user_registration_date + user_maturity_date + 00000" + user_id)
 oe enc_payload = encrypt_aes(raw_payload) SS nacetat Sua pn ew)
-= es it:
 =
 a =
 =) "7650" :
@@ -996,7 +994,6 @@ packet_head = bytes. fromhex('7#5a") =
 _ version = bytes. fromhex(' 050302000f0201") -
 ”) ble_cmd = bytes. fromhex('SS")
 sep = bytes. fromhex('aa")
-KR se et se mo Bitewe
 (env) + ttlock python3 unlock_by_uid.pyff
 ```
 
@@ -1009,12 +1006,10 @@ KR se et se mo Bitewe
 ```text
 Affected area
 Data from Sciener official website
-on am =
 9 million 13k 150k
 Total number of rooms managed
 Personal version registered users Platform registration apartment
 by the apartment
-fh ‘a ®
 5k 7 million 200
 Total lock shipments over five Global coverage of countries and
 Number of hotels signed

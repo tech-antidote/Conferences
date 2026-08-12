@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:56:57Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Kaixuan Luo&Xianbo Wang&Adonis Fung&Yanxiang Bi&Wing Cheong Lau_Back to the Future Hacking and Securing Connection-based OAuth Architectures in Agentic AI and Integration Platforms.pdf` (122 pages)
 
-
 ## Slide 1
 
 # Back to the Future: Hacking & Securing Connection-based OAuth Architectures in Agentic AI & Integration Platforms
@@ -2178,7 +2177,6 @@ Connec&on
 
 ```text
 ae
-Q | SS , wa se Bins egy
 blesses On intricacies of Session Fixation Defense
 Post-Redirect pattern is NOT universally applicable
 Tool

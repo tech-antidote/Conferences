@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:48Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Yuhao Jiang & Xinlei Ying-URB Excalibur The New VMware All-Platform VM Escapes.pdf` (41 pages)
 
-
 ## Slide 1
 
 **URB Excalibur: The New VMware All-Platform VM Escapes**
@@ -116,11 +115,8 @@ Mee Virtual Machine 3
 Host OS 2
 Disk \
 ‘ \
-° _ VMM \ 3
 Driver xy
-— — 5
 a
-(iv) = rd
 CPU [(iii) | a a
 idtr ,
 Host OS Context e VMM Context
@@ -340,17 +336,14 @@ urb’s size =
 pif hat
 ASIA 2024
 VE 2022 3 1 705 1 Void __fastcall ehci_control_transfer(__int64 state, pipe *pipe, EHCIgh *qh)
-( . - - alt
 5 = pipe->urb_link_first;
 6 = &gh->next_qtd;
 7 = 0164;
-8 = 0;
 VY
 SETUP qTD
 urb’s size = he -—
 0x98 + 8 + setup_len 143 [6] + s;
 = VUsb_NewUrb(
-, o, len);
 1 = ->purb_data_cursor;
 ->interrupt_pid =
 160 =1;
@@ -376,11 +369,8 @@ pif hat
 ASIA 2024
 CVE-2022-31705
 OUT qTD
-if © CC >>
 if ¢
-8) & 3)
 Vv
-// IN & OUT
 Warning("EHCI: Unexpected status packet size
 ABEL.
 Next qTD
@@ -690,7 +680,6 @@ Heap spraying and grooming primitive: **SVGA_3D_CMD_SET_SHADER** Allocate and fr
 pif hat
 ASIA 2024
 Demo
-@ GA XH af ak we BO Ay OS @ @ @ Q B 1A78A- 1011
 117 10:11
 *
 RE0SC=8088 B88. 2920)" > Av
@@ -729,7 +718,6 @@ RE0SC=8088 B88. 2920)" > Av
 ```text
 bisek hat
 ASIA 2024
-B @ 40°
 ae i 4/18/2022
 | a: SSSA
 abc@ubuntu:-/ymware

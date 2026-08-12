@@ -20,7 +20,6 @@ converted_at: "2026-08-11T21:32:42Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/How Hackers Changed the Media (and the Media Changed Hackers).pdf` (5 pages)
 
-
 ## Slide 1
 
 # How Hackers Changed the Media (and the Media Changed Hackers)

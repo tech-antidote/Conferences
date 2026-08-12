@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:41:49Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Zhongquan Li & Qidan He_Unveiling Mac Security A Comprehensive Exploration of Sandboxing and AppData TCC.pdf` (154 pages)
 
-
 ## Slide 1
 
 Unveiling Mac Security: A Comprehensive Exploration of Sandboxing and AppData TCC
@@ -33,7 +32,6 @@ Zhongquan Li & Qidan He
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-| \ 4a
 black hat —
 USA 2024
 AUGUST 7-8, 2024
@@ -433,12 +431,6 @@ bisek hat
 USA 2024
 GIIT SS a © ©
 com.apple.metadata: kMDItemWhereFroms:
-e000 62 70 6C 69 73 74 30 30 A2 01 02 5F 10 18 68 74 bplist@@..._..ht
-0010 74 70 3A 2F 2F 30 2E 30 2E 30 2E 30 2F 68 65 6C tp://0.0.0.0/hel
-0020 6C 6F 2E 7A 69 70 5F 10 OF 68 74 74 70 3A 2F 2F lo.zip_..http://
-0030 30 2E 30 2E 30 2E 30 2F 08 OB 26 G0 O80 20 00 00 ~=_:«@.0..0..0/. .&..... “hello.app" cannot be opened
-0040 08 01 01 02 GO 2B GO BO OO GO O3 OO OO OO OO CO oc. eee reseceeeeee See ee eee anes
-0050 28 02 G2 G0 G0 82 20 20 08 00 388 a ee eee ee 8 ;
 macOS cannot verify that this app is free
 from malware.
 com.apple.quarantine: 0083; 6666e204; Safari; 91B57AC3-EB1D-48EC-9EA3-5B97080819EC
@@ -779,7 +771,6 @@ const char *v12; //
 const char *v13; //
 const char *v14; //
 unsigned int v15; //
-t (16); //
 memset(vi6, @, sizeof(v16));
 = quarantine_get_flags(a2, OLL, &v15, ) Fs
 02
@@ -795,10 +786,8 @@ exec of /private/tmp/hello.app/Contents/MacOS/hello denied since it was quaranti
 LABEL_15
 kl *)getpath(a2);
 = "created without user consent";
-if ( Ww & 4)
 os_log_ internal (
 &dword_FFFFFE@Q07934E16,
-( )& os_l
 0s LOG_TYPE_ERROR,
 f %s denied since
 $ quarantined by
@@ -1624,28 +1613,14 @@ bisek hat
 USA 2024
 Documents % xattr -l ./flag.txt
 com.apple.lastuseddate#Ps:
-= _ + 7 + 1
 0000 RONGANOATESHOUTOOROONOOND THGEECCRIROONOONOONOO eee sh-3.2$ # Double-Click on flag.txt, then use TextEdit modify flag.txt's content
 sh-3.2$
 sh-3.2$ xattr -1 flag.txt
 com.apple.quarantine: 0086;65046658;HelloMac; com.apple.TextEncoding: utf—8; 134217984
 com.apple.lastuseddate#PS:
-0200 AC 25 54 66 0G G8 GO OO 5B EQ E3 20 00 00 OO 20 SM tecers bes
 com.apple.macl:
-0000 00 81 50 C7 9D C7 55 B1 47 FB B6 3B. 15 1F 85 CF _..P...U.G..;....
-0010 AS 13 08 G0 G0 0 OO OO OO 20 20 20 20 00 00 OO —... esses seca eee
-. . a 0020 00 00 OO GO G2 QO OO CO OO OO 20 00 00 00 00 OO ees seeseeeeeee
 Mark the file with some properties: 2030 08 G2 GB GO 2B QO OO OO OO 20 OO OO 20 00 00 OO... esses eee e eee
-0040 808 08 08 08 28 08 00 CO ln eee ee
 com.apple.metadata: kMDLabel_rjy3kg6k5f2gxj5elxtmqln4ey:
-0000 F2 5@ 4F E7 6E B3 F9 DB 8D 53 44 53 DF 83 2B 21 -PO.n....SDS..+!
-0018 F9 E3 50 56 6D B2 37 39 18 B@ 9A 42 83 53 1B 9E --PVm.79...B.S..
-0020 @B 33 2B C2 @A E3 BE A4 B3 F4 AA 6A 1F 71 B1 CB SS hoe ies cevers Tnee
-0038 €©8D 11 E@ 8D 5C 05 6E 5@ 86 E2 8B 94 14 98 46 30g... HPisversrarers FQ
-0040 30 E9 88 31 24 FB 78 9C DE 24 07 2B C2 62 24 7E @..15.x..$.+.b$~
-0058 EC DA 8B 78 @F 9D 51 46 F@ 85 7A E4 SA AA 2E @1 +e eXeQF..Z.Z...
-0068 F3 81 D9 B2 3B 8@ FD C7 CB 5E @2 @F 20 58 C@ E8 cevepeceeres Xoo
-0070 @E CE 9@ DC 24 1B 9F B2 DD ore eDeeee
 com.apple.quarantine: 0@82;665425b1;TextEdit;
 ```
 
@@ -1703,7 +1678,6 @@ USA 2024
 , M™@™, & Documents % cat flag.txt
 cat: flag.txt: Operation not permitted
 ‘gi— “B® Documents % open -—a TextEdit ./flag.txt
-mm -~w Documents % | |
 The document “flag.txt” could
 not be opened. You don’t have
 permission.
@@ -2042,7 +2016,6 @@ ASBMutableContainer *self,
 4 int a3)
 5 it ntaine
 ; T/
-7 d v5; //
 > TI
 > T/
 1 = -[ASBMutableContainer ownerCode] ( , "“ownerCode");
@@ -2050,7 +2023,6 @@ ASBMutableContainer *self,
 = objc_msgSend_O(v5, "teamIdentifier");
 = objc_retainAutoreleasedReturnValue(v6) ;
 5 objc_release_@(v5);
-if ( )
 {
 -[ASBMutableContainer (Protection) _registerExceptionToContainerAtFileDescriptor: forAllAppsFromTeam: ] (
 ' registerExceptionToContainerAtFileDescr ptor: forAllAppsFromTean —.
@@ -2081,17 +2053,14 @@ Secinitd owns “
 ; = copyin( , & , Ox28uLL);
 Ll, if ( !(_DWORD)v4 )
 {
-if ( (_QWORD) == 2LL )
 {
 = 0;
 = AppleMobileFileIntegrity: :AMFIEntitlementGetBool (
 (pre *)"com.apple.private.security.appcontainer-authority",
 & ,
 );
-= ( & 1) != 0 & == 0;
 !
 sandcastle_appcontainer_exception_validate_vnode;
-if (! )
 goto LABEL_2;
 ```
 
@@ -2110,15 +2079,12 @@ bisek hat
 USA 2024
 Different MACL generation strategies based on the type
 BULU LADCL Z,
-if ( (BYTE8( ) & 1) == 0 )
 {
-if ( )
 = macl_record_app exception(vp, , , );
 else
 = macl_record_team_exception(vp, , );
 goto LABEL_48;
 }
-if ( ! )
 {
 LABEL_48:
 = macl_record package exception(vp, , );
@@ -2148,9 +2114,7 @@ __int64 v7; // x0
 __int64 v8; // x19
 int64 v10[3]; // [xsp+Oh] [xbp-40h] BYREF
 v7 = macl_copy_for_vnode(al, 1LL);
-if ( !v7 )
 ] return 12LL;
-J v8 = v7;
 memset(v10, 0, 23);
 q macl_app_exception_identifier_for_signed_code(a4, a2, a3, v10);
 3 macl_add_entry(v8, 2LL, vi0, OLL, OLL, OLL);
@@ -2159,11 +2123,6 @@ q macl_release(v8) ;
 > }
 sh-3.2$ xattr -l1 ~/Library/Containers/com.tencent.xinWeChat/Data
 com.apple.macl:
-e00e@ [00 02)8D 77 7C 87 5B F6 4C 49 84 DF 59 2E C9 92 ..-w].[.LI..Y...
-0010 32 OB @0@ 04 40 79 F2 8E Aé 57 47 70 AA AC E6 8A 2...@y...WGp....
-0020 E3 Al D6 6E 0@ 83 77 3B C1 4@ AD DC 47 4C B8 @E -.oN..W;.@..GL..
-0030 D1 E@ 53 D7 5D 6D @@ 04 BA 57 9C 6D 62 3D 44 80 ..-S.Jm...W.mb=D.
-0040 8B D6 D8 88 CF 5E 4F BA sis ee 40.
 ```
 
 ## Slide 116
@@ -2182,20 +2141,15 @@ USA 2024
 Different MACL generation strategies based on the type
 eres
 int64 fastcall macl_record_team_exception(__int64 al, char *a2, char a3)
-ag eee ee
 orgs ee
 a
 __int64 v5; // x¢
 }  __int64 v6; // x20
 _BYTE v7[23]; // [xsp+0 xbp-30 BYRE
-if ( (a3 & 1) != 0)
 B return 45LL;
-) if (a2)
 Dt
 5 = macl_copy_for_vnode(ai, 1LL);
-if ( !v5 )
 } return 12LL;
-q v6 = Vv >;
 memset(v7, 0, sizeof(v7));
 b macl_team_exception_identifier(@, a2, (__int64)v7);
 macl_add_entry(v6, B, (__int128 *)v7, ®, 0, 0);
@@ -2206,11 +2160,6 @@ b
 }
 sh-3.2$ xattr -1 ~/Library/Containers/gulucat.HelloMac/Data
 com.apple.macl:
-0000 @@ @3)CE F@ AA 67 08 A2 47 5A A2 75 F5 57 A1 FA_..... g..GZ.u.W..
-0010 C8 9F 08 04 EA F7 6A FF 9E FA 4A 47 98 FA FF 7E-_...... j...JG...~
-0020 40 BF E8 52 06 00 6D AS E4 58 16 BE 47 AQ BD 37 @..R..m..X..G..7
-0030 3E AY 35 88 54 9F 88 88 08 08 08 88 BO BB BO BO Pee lesmese mews
-0040 00 00 88 88 88 CO CO CO 2 2 2 ee eee
 ```
 
 ## Slide 117
@@ -2231,14 +2180,10 @@ __int64 _ fastcall macl_record_package _exception(__int64 al, __int64 a2, char a
 __int64 v5; // x0
 __int64 v6; // x19
 __int64 v7[3]; // [xsp+Oh] [xbp-30h] BYREF
-if ( (a3 & 1) != 0)
 return 45LL;
-if ( a2)
 {
 v5 = macl_copy_for_vnode(al, 1LL);
-if ( !v5 )
 return 12LL;
-v6 = v5;
 memset(v7, 0, 23);
 macl_package_exception_identifier(a2, v7);
 macl_add_entry(v6, 4LL, v7, OLL, OLL, OLL);
@@ -2247,11 +2192,6 @@ return OLL;
 }
 sh-3.2$ xattr -1 gulucat.HelloMac/Data/
 com.apple.macl:
-@@0@ @@ @3 CE FQ AA 67 @@ A2 47 5A A2 75 F5 57 AL FA ..e.. g..GZ.u.W..
-@010 C8 9F(@@ Q4)EA F7 6A FF 9E FA 4A 47 98 FA FF 7E .. eee fat aGn as
-Q020 4@ BF E8 52 08 @@ G2 GO GO OB 20 BO GO CO OO OO @..Re. seers eeees
-Q030 20 G0 GO GO OO 2B QO BO OO OO OO BO GO OO OO OO... ee eeeeeeeeees
-0040 Q@@ 002 02 02 08 08 88 BO lee ee
 ```
 
 ## Slide 118
@@ -2321,7 +2261,6 @@ bisek hat
 USA 2024
 objc_release( );
 objc_release( Ds
-if ( )
 ll ( )objc_msgSend( > sDirectory") && !( )objc_msgSend( 7 ym k") )
 objc_release( iH
 objc_release( );
@@ -2347,7 +2286,6 @@ objc_release( );
 goto LABEL_23;
 = 138412546;
 = 2112!
-= ( )
 }
 j___os_log_error_imp1_45(&dword_7FFBOD9FBO00, , OS_LOG_TYPE_ERROR, oa )& , Ox16u);
 goto LABEL_40;
@@ -2860,7 +2798,6 @@ Arbitrary Files Read and Write
 ```text
 @ QuickTime Player File Edit View Window Help Q S&S MondJul8 18:52
 »~. tmp — 80x24
-yw Ww — A ooo v a
 ae he Fecal l= ~~ aan © G \sh-3.2$ sw_vers ;csrutil status
 ProductName: macOS
 Name “| Date Modified Size Kind ProductVersion: 15.0

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:49:28Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Frey Wilson_Redefining the Origin of Secrecy in a Post-Quantum World.pdf` (34 pages)
 
-
 ## Slide 1
 
 # Redefining the Origin of Secrecy in a Post-Quantum World
@@ -34,7 +33,6 @@ Speaker: Dr Frey Wilson, CTO @ Cavero Quantum
 
 ```text
 EWROPE 20 “
-eh | Jae mm
 ‘Redefi ining the Origin of Secrecy
 in a Post-Quantum World
 Speaker: Dr Frey Wilson, CTO @ Cavero Quantum
@@ -114,7 +112,6 @@ Information Classification: General
 
 ```text
 ae ”
-re) e ae
 black hat _—< <
 EUROPE 2024
 hashcat (v6.2.1) starting...
@@ -279,7 +276,6 @@ Cout
 [@, 45, 678, 43, 52, 67, 923, 74, 32, 376]
 >>> print(ave)
 229.0
->>> 1f 45 in x: print(“found")
 . else: print(“not found")
 Found
 Computational Complexity
@@ -337,9 +333,6 @@ im!
 ——]
 START _ = = —| j — || _ FINISH
 = —__]
-% iy =
-= __~__ Ms il =
-= 4 fal
 Information Classification: General
 ```
 

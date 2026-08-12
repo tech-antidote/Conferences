@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:00:23Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Renée Burton&Dave Mitchell&Christopher Kim_No Hoodies Here Organized Crime in AdTech.pdf` (41 pages)
 
-
 ## Slide 1
 
 # No Hoodies Here: Organized Crime in AdTech
@@ -80,12 +79,7 @@ BRIEFINGS
 7B9605E6-87A9-4F28-A134-
 C2F1A15C1FDD
 (@p)
-Hye " i
-t h UY
-" hs | ii} Hy '
 MW);
-= tN Hin
-© > © @ % youtubecomathvetjRe76d.¥
 \ Pina). iy sh
 1A me weit uN, vil
 = GLoulube Search Q
@@ -155,14 +149,12 @@ a=) olf HO] 5|
 Por) ys
 —— App Stores ——y
 Bnode Phiture ‘zw id b ee Cy
-“i . r Y valiso: y >
 Rocxersuip Hq () udonis. RWS vidmo A\ Frameplay GADSME | (lisp te >
 : m @ ZORKA Vidsy. bh Se amare Wineta CO Aptoide iircroia side
 \ an re \ Swhalar - ' Mobile Web Br
 ‘ obile Web Bro
 Advertisers
 (e
-ee Q du
 amazon gmap: Owes Ge
 motive mapa native!
 ‘nine
@@ -172,7 +164,6 @@ Si5 “ (@snarcit Carrier / OEM M Marketing —
 i playri PROGRESSIVE orale J
 ® Array On! branch
 > tin
-© i lp
 \ Neeinds Walmart
 opptopla Gapptweak (eau; Pasodesk dt
 MS (DHUMAN !"provede_incrmntal Jas
@@ -190,7 +181,6 @@ MS (DHUMAN !"provede_incrmntal Jas
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 . ~~ > VW)
 bidekhat my i ae 4
 BRIEFINGS d Q 4
 MERCHANT HAS
@@ -198,7 +188,6 @@ A PRODUCT OR
 SERVICE TO SELL
 AFFILIATE GETS
 A COMMISSION, | WOW AFFILIATE AFFILIATE PUTS
-i | 24/7
 MERCHANT | MARKETING WORKS LINK OR AD ON
 GETS A SALE \ THEIR WEBSITE
 a
@@ -332,7 +321,6 @@ START SOMETHING REAL
 ) Ge
 This Is NOT a Dating Site!
 "De @& A OQ until 11:00 PM
-¥ Ss 4G
 Tue, Nov 12
 O32 ©o
 a Chrome * online-financialassistance.com + now
@@ -446,8 +434,6 @@ Years of frustration cured by a single frame of a YouTube video.
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q AN : . P > _
-black hat a y y Va
 BRIEFINGS
 All about
 CPA
@@ -500,8 +486,6 @@ ff} H u9 Domain Change
 at Crat Hi, your domain relat to the Dating smartlink has NocnegHne 7 AHei aM!
 ” : been replaced with a new one: bestladieshere.
 wT ; life has been changed to simpLedatings.life
-0 0 $0.00
-a L 4
 © HactpoiKku 3 These are VexTrio validated domains. Try monetization with TacoLoco! $3
 (a) .
 . This screenshow shows how your ' .
@@ -602,7 +586,6 @@ Select Mainstream Landings
 If you 18+ click
 Click Allow if
 Please tap the allow button to centieae = FQbot
-e | tow
 Space Robot Allow Button Blue Robot Are you 18 Eyes Robot
 @ Selected @ @ Selected @ @ Selected @ @ Selected @ @ Selected @
 File Download Youtube
@@ -620,11 +603,9 @@ File Download Youtube
 
 ```text
 black hat y |
-BRIEFINGS = 7 N ‘x ‘ yj fv
 A little white hat, a little black hat CPA
 LosPollos - Global Smart Link Affiliate Program | Weekly Payments | 24/7 Support
 & LosPollos -© Aug8,.2017 - ©) adult || binary || bizopp || cpa network || cpa offers || dating || global | | smartlink || smartlinks
-« Prev 1 |... | 25 | 26 27 28 | 29 | ...| 67 Next >
 a Jun 25, 2019 | Thread Starter
 ey JamieJayden said: ®
 hi, this platform is white hat or black hat cpa? @
@@ -682,7 +663,6 @@ All on one /24:
 ```text
 bisa hat
 BRIEFINGS
-Al | R | I | t A | Pp 2% web.archive.org/web/20241120050039/https://www.adspro.eu/
 € C f  &% web.archive.org/web/20241120050039/https://www.adspro.eu/
 INTERNET ARCHIVE {https://www.adspro.eu/ sep By
 WAYDGANMACHINE 142 captures <>
@@ -806,7 +786,6 @@ en 7. Bergamo ©Zagreb oTimisoara . - Romania
 * 0Grenoble. ie] how! ong "OBrailag
 : Turin " Ast =e A) SPhect; 22loiesti
 TEKKA Parmao soul Bosnia and Or eorpan prams 4 e Merger ~?2 020 in
-a A ;
 en “cum oBologna Herzegovina \ wenite Bucharest I L n
 OZadar i o€on
 gnon Vg San Marino @Saraibvo serbia Rie ugano
@@ -865,7 +844,6 @@ di Franca Rottola
 | mondo del web, con la sua
 dimensione planetaria, offre
 moltissime nossibilitA anche al
-6m | h6
 ```
 
 ## Slide 31
@@ -927,7 +905,6 @@ some are good at hiding… others not so much…
 bisa hat
 BRIEFINGS
 ® ©
-© © @ @ ®
 kroum + Follow
 Switzerland
 kroum Switzerland with good friends, always a winning
@@ -1053,7 +1030,6 @@ New Offers 3 2024-10-25
 ```text
 bisa hat
 BRIEFINGS
-O OA &
 5°]
 Fake Apps
 S ca 23 play.google.com/store/apps/developer?id=CoreFlowz

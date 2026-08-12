@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:12:07Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Haixin Duan, Xiang Li, Wei Xu, Chaoyi Lu_TsuKing Coordinating DNS Resolvers and Queries into Potent DoS Amplifiers.pdf` (41 pages)
 
-
 ## Slide 1
 
 ## TsuKing: Coordinating DNS Resolvers and Queries into Potent DDoS Amplifiers

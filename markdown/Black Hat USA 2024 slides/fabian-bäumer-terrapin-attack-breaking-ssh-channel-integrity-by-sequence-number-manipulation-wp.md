@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:59:06Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation_WP.pdf` (21 pages)
 
-
 ## Slide 1
 
 # **Terrapin Attack: Breaking SSH Channel Integrity By Sequence Number Manipulation**

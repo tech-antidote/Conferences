@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:32Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Toshinori Usui & Yuto Otsuki & Ryo Kubota & Yuhei Kawakoya & Makoto Iwamura & Kanta Matsuura_Bytecode Jiu-Jitsu Choking Interpreters to Force Execution of Malicious Bytecode.pdf` (77 pages)
 
-
 ## Slide 1
 
 Bytecode Jiu-Jitsu Choking Interpreters to Force Execution of Malicious Bytecode
@@ -1416,28 +1415,6 @@ tools
 #BHUSA @BlackHatEvents
 
 72
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-i) h yy fy
-" RP
-’ /]
-i, me
-Nl SY
-jin no .
-\ j
-=] " ae,
-ee Vii
-a r
-“ r 4 7 ? ‘ii
-ihe %
-q #G f Me
-ON ll ww
-&# Countermeasures against
-Bytecode Jiu-Jitsu
-a
-```
 
 ## Slide 73
 

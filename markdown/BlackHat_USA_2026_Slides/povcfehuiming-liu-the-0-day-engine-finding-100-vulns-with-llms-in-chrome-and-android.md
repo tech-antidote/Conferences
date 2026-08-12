@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:48Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Povcfe&Huiming Liu_The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android.pdf` (47 pages)
 
-
 ## Slide 1
 
 **The 0-Day Engine: Finding 100+ Vulns with LLMs in Chrome and Android**
@@ -455,7 +454,6 @@ Verify
 
 ```text
 2.6 Result
-Ha og &
 buganizer-sy... May 9
 a
 to b-system+1027... v
@@ -476,9 +474,6 @@ Thank you,
 Android Security Team
 (1) Severity Matrix: https://source.android.com/
 security/overview/updates-resources#severity
-«6 he nn me a
-En: ew ae 5 me
-= = = =
 r vent: 190951
 status: Assigned
 reporter: povcfe2sec@gmail.com

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:27:08Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Reino Mostert - Very Pwned Hacking Verifone’s card machine three times in a row - m.pdf` (75 pages)
 
-
 ## Slide 1
 
 # VeriPwned
@@ -398,7 +397,6 @@ mmm > telnet 10.0.0.2 9999
 Connected to 10.0.0.2.
 Escape character is '*]'.
 VFI 2013.10 Raptor
-/ # id
 uid=0( root) gid=0( root)
 /#f§
 ```
@@ -425,7 +423,6 @@ noreset is : no
 hangup is : no
 nolock is : no
 send_cmd is : SZ -VV
-receive_cmd is : rz -vv -E
 imap is :
 omap is :
 emap is : crerlf,delbs,
@@ -453,7 +450,6 @@ It always seems impossible until it's done
 hice
 ebook for Instr
 /bin/sh: can't access tty; job control turned off
-/ # id
 uid=0 gid=0
 /#f)4
 Seeman
@@ -1050,7 +1046,6 @@ $ ./exploit
 Verifone
 [*] Starting video by sending Display HTML command
 /bin/sh: can't access tty; job control turned off
-/ # id
 uid=0( root) gid=0( root)
 / #4
 ```
@@ -1510,11 +1505,8 @@ eee soy > MI YN
 VauB exe ays fk 7S a
 Fee Cg) (mY -cy ras* (Cf
 a
-7 fs 2g tx ew ws .
 oA Fobes 7 eee Fx
-er in = $04 + ne (x%4 3Sx 4
 (Firm SE be! bm -
-s+ x7 pa
 Noose] re¢
 a = Fe¥ayl €
 ```

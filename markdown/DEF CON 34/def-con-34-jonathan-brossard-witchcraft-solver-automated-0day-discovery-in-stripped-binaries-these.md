@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:23:31Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - these.pdf` (55 pages)
 
-
 ## Slide 1
 
 EXECUTIVE MASTER IN CYBERSECURITY

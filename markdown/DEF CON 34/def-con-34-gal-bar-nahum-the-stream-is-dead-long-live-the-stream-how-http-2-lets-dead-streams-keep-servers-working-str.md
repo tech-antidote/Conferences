@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:19:44Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gal Bar Nahum - The Stream Is Dead, Long Live the Stream How HTTP 2 Lets Dead Streams Keep Servers Working - Str.pdf` (85 pages)
 
-
 ## Slide 1
 
 **The Stream Is Dead, Long Live the Stream! Gal Bar Nahum**
@@ -129,22 +128,6 @@ recv R
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-ca
-mo
-a
-ly
-CLOUDFLARE
-®
-©
-e @ varnisH
-r ) CACHE
-®
-```
-
 ## Slide 6
 
 ##### **Agenda**
@@ -249,13 +232,8 @@ Stream 1| Siibex oS
 Stream aa)
 BF request Mit Response 1
 Stream 3
-( a a od eee thar) a) I Co) eS
-POR he tates Un es eee ae )
 Stream 5
-( TD NE) te oo
-Do ee ee )
 Stream 7
-eee ee ee ee
 eee
 HTTP/2
 Active Streams
@@ -706,7 +684,6 @@ RESET
 ```text
 [ A New Vulnerability ]
 me_ WAIT A'SECOND = }
-ven qa g
 ‘ITDOESN'T STOPP
 wi Katy nse  —<S
 ```
@@ -992,22 +969,6 @@ _
 ## **Why so many implementations?**
 
 ## Slide 62
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-ca
-mo
-a
-ly
-CLOUDFLARE
-®
-©
-e @ varnisH
-r ) CACHE
-®
-```
 
 ## Slide 63
 

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:09:53Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ayoub Fandi_Security Through Transparency Scaling Your Customer Trust Program.pdf` (28 pages)
 
-
 ## Slide 1
 
 ## Security through Transparency Scaling your Customer Trust Program

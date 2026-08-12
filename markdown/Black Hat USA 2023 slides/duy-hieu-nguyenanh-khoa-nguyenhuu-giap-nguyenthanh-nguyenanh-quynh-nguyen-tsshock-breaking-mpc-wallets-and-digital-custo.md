@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:47Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Duy Hieu Nguyen,Anh Khoa Nguyen,Huu Giap Nguyen,Thanh Nguyen,Anh Quynh Nguyen_TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit_wp.pdf` (11 pages)
 
-
 ## Slide 1
 
 # **New Key Extraction Attacks on Threshold ECDSA Implementations**

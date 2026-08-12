@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:48:46Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/ZiYang Li & Ji'an Zhou & Ying Zhu_A Novel Attack Surface Java Authentication and Authorization Service (JAAS).pdf` (125 pages)
 
-
 ## Slide 1
 
 A Novel Attack Surface Java Authentication and Authorization Service (JAAS)
@@ -430,7 +429,6 @@ black hat
 EUROPE 2024
 1.3 How does JAAS work
 The process of a
-® | ® ee ee
 a @ construct 0
 —@ initialize with Subject, CallbackHandler, options “AB
 ® login
@@ -878,7 +876,6 @@ Kafka client
 @ taken over Bw
 a —<— ee)
 Kt
-@ set up >)
 7)
 Information Classification: General
 Attacker Evil JNDI Server
@@ -961,7 +958,6 @@ JNDInjector v1.1
 HK
 HOST: localhost RELIP HTTP O: 80 LDAPi®O: 389
 ARS RAS : @ LDAP HTTP
-WR AR KF
 () X2ISA (127.0.0.1] ALDAPIR :|hhylKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2VOY y9wY XNzd2QifQ==
 [!] LDAPiBRi¥6 :
 RWS : hhyliKPnySw
@@ -1018,7 +1014,6 @@ Kafka client SampleAcn,java
 @ connection string
 Bw taken over
 | <5.
-ys @ set up <3
 Information Classification: General Attacker Evil JNDI Server
 EU.
 ```
@@ -1239,11 +1234,9 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ ~ ——— ” ~
 black hat = +
 EUROPE 2024 /
 2.9 The first idea to bypass
-IF Am RF
 [QHTTP ARS RR , EE Tie O80...
 [!] LDAP ARS RR , TEES OTe 389...
 (!] WENA (127.0.0.1] BLDAPIBR : hhyiKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2VOY y9wY XNzd2QifQ==
@@ -1820,7 +1813,6 @@ h '
 © connect ® read login config file
 |
 —_|—_>
-we oe fa} i &
 +2 taken over
 Attacker JDBC driver car JAAS (Dk vere
 © authenticate
@@ -1849,7 +1841,6 @@ Information Classification: General
 
 ```text
 Ba *
-2) an ae
 black hat hes
 EUROPE 2024 4
 3.3 What we found
@@ -1953,7 +1944,6 @@ black hat
 EUROPE 2024
 3.3 What we found
 The attack process
-@ set up gO
 Evil HTTP Server @ read login config file
 r—@ parse URL JVM
 <TC) at ( —-© set login config url—> G
@@ -2386,10 +2376,8 @@ Step 3: Take over the Executor
 Ga
 UserA ee Data Source A
 } —--) ayy Ga
-‘ ca =
 Gea
 User B Config Service Executor Data Source B
-ee a aia
 <F —
 We cama
 amas

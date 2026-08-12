@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:04:18Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yoav Magid_AppleStorm - Unmasking the Privacy Risks of Apple Intelligence.pdf` (54 pages)
 
-
 ## Slide 1
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence
@@ -382,7 +381,6 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 The Prompt
 €3 What is the weather in Las Vegas U)
 Las Vegas -@.
-4? ° ? 6 ° Clear
 Today
 bisa That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri 23
 ```
@@ -624,7 +622,6 @@ arust Rick Astley
 album artist: Rick Astley
 composer Mike Stock, Matt Aitken & Peter Waterman
 ‘Show composer in all views
-> Pop .
 year 1987
 track 1 of 17
 per 1 oof 1

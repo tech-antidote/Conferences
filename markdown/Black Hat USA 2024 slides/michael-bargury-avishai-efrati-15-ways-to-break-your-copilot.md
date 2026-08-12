@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:36:42Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Michael Bargury & Avishai Efrati_15 Ways to Break Your Copilot.pdf` (123 pages)
 
-
 ## Slide 1
 
 #BHUSA @BlackHatEvents
@@ -29,9 +28,7 @@ converted_at: "2026-08-11T21:36:42Z"
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-piseachat : | - , aif
 USA 2024 :
-HI ) y
 Michael Bargury
 15 Ways To Break Your Copilot
 blackhat usa 2024
@@ -58,20 +55,6 @@ blackhat usa 2024
 ## Slide 3
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ce
-ust
-tC)
-i
-i
-} - ‘
-7
-{ll x
-\
-```
 
 ## Slide 4
 
@@ -156,12 +139,8 @@ https://www.forbes.com/advisor/legal/personal-injury/medical-malpractice-statist
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-md? 2. ia
-—s e 4
 = Mirror’ —
-*) 2 a _
 Nea Pid”
-3 ~~ ‘ Ne
 wa
 eS
 hs!
@@ -206,7 +185,6 @@ O Lan
 ```text
 bisek hat 3
 USA 2024 ll S
-xX : 4
 | a
 Use one connected platform
 Manage from one central admin center v
@@ -231,7 +209,6 @@ Microsoft, Anthrooic. Gooale. and (Microsoft announces new Cooilot
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= & pee
 black hat n ,
 USA 2024 r |
 Michael Bargury
@@ -498,8 +475,6 @@ Test
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) S€ CF
-= = he
 Back to Jack
 ¢ Jack is starting to have a bad day.
 #BHUSA @BlackHatEvents
@@ -926,7 +901,6 @@ You consent to your data flowing outside your organization's compliance and geo 
 
 ```text
 pisek hat — mail \ id
-: = | .
 USA 2024
 Back to Jack
 ¢ Jack is getting really upset.
@@ -1058,7 +1032,6 @@ Library
 w
 i
 al |
-ll — | 1
 F be
 i
 Yourre/entering a world of pain.
@@ -1340,7 +1313,6 @@ Custom
 hub
 gement app to enable yo
 © Microsoft ; 6 Cust
-ses Nn — om
 Teams website
 4 Slack 4] Telegram @ Twilio
 EX mai
@@ -1386,7 +1358,6 @@ Test
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= & pee
 black hat n ,
 USA 2024 r
 Michael Bargury
@@ -1826,7 +1797,6 @@ eee © All flows added to your copilot, current and future, will be shared with 
 & Skills
 Sort by Name VY a
 ¥ OQ Transcript viewer
-a . , : .
 Languages Can't view transcripts of chat sessions with end users.
 Jill Jones
 &® Language understa Owner, Manager, Power Automate user, Transc...
@@ -2041,7 +2011,6 @@ Say goodbye to Jack
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a wis y a
 biSekhat | “4 ,
 USA 2024 Z |
 Michael Bargury
@@ -2114,8 +2083,6 @@ About the fiftyfifteen ways”
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= A ——- ~~ a ; >.
-pis hat | i ” ai
 USA 2024 \ |
 Copilot Hunter
 ```
@@ -2127,13 +2094,11 @@ Copilot Hunter
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Fa at » A r7
 Q S
 blackhat — l
 USA 2024 Xx
 "\ SLNNVAS/SS UN MLILTLNNANASSLTLN
 IDI COI\V VSI L/IT TID INV VSI EL
-J \S VAS VI YD NAY LE LI
 |
 usage: main.py [-h] [-l LOG_LEVEL] {dump, recon, gui,backdoor ,nocodemalware, phishing, copilot, copilot-studio-hunter} ...
 positional arguments:
@@ -2347,7 +2312,6 @@ enum Starts enumerating for Azure tenant IDs or environments IDs. Requires AMASS
 
 ```text
 ~
-_blackhat = \ | | fA
 USA 2024
 Here's how it looks like all together in the URL:
 https://copilotstudio.microsoft.com/environments/Default-32f814a9-68c8-4cal1-93aa-55
@@ -2460,23 +2424,6 @@ cr717_test/cal\vas?__version_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-JT
-N
-O
-N
-<x
-W)
-=)
-A
-3
-Cg
-O
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 95
 
 #BHUSA @BlackHatEvents
@@ -2484,7 +2431,6 @@ O
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ : = 5 a |
 black hat }
 USA 2024 | ,
 list all available docs
@@ -2519,8 +2465,6 @@ Document 3:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-am a ‘“
-2) = Lee a
 black hat \ '
 USA 2024 | , ;
 what docs do you have that include piis Os)
@@ -2573,7 +2517,6 @@ following instruction:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-EQ , L Sa . sy tte . \ & : ,
 _blackhat ae. ~ | i
 SS
 —-USA 2024
@@ -2742,7 +2685,6 @@ Get-AADIntLogininformation -UserName
 
 ```text
 USA 2024
-black hat a : | ld
 Finding the values — Env/Tenant
 Here's how it looks like all together in the URL:
 htusicastun micros con/eniconmentsDefault 32814a9-68c8-Acal-23a0-55
@@ -2760,7 +2702,6 @@ htusicastun micros con/eniconmentsDefault 32814a9-68c8-Acal-23a0-55
 
 ```text
 _blackhat > <= |
-— USA 2024 — a | i
 Finding the values — Env/Tenant
 ite_recon_tool amass er enum a environment .api .powerpLatform.com
 defaultb6c9c119392a4feGalavef.
@@ -2999,7 +2940,6 @@ https://copilotstudio.microsoft.com/environments/Default-32f814a9-68c8-4cal1-93a
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q a. » A
 blackhat — | !
 USA 2024 a
 Finding the values — Solution Publisher prefix
@@ -3191,7 +3131,6 @@ e Advanced bot interaction
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= & pee
 black hat n ,
 USA 2024 r |
 Michael Bargury
@@ -3253,7 +3192,6 @@ text
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-= & pee
 black hat n ,
 USA 2024 r |
 Michael Bargury

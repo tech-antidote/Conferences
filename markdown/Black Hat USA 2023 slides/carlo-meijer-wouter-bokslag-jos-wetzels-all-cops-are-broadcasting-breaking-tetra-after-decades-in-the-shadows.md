@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:31Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Carlo Meijer & Wouter Bokslag & Jos Wetzels_All Cops Are Broadcasting Breaking TETRA After Decades in the Shadows.pdf` (59 pages)
 
-
 ## Slide 1
 
 All Cops Are Broadcasting

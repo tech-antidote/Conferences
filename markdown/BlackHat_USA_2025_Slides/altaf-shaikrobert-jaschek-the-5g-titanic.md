@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:49:28Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Altaf Shaik&Robert Jaschek_The 5G Titanic.pdf` (46 pages)
 
-
 ## Slide 1
 
 The 5G Titanic
@@ -113,13 +112,7 @@ GTP: GPRS tunneling protocol (Age: 26)
 UE gNodeB UPF Data Network
 t IP Packet | GTP-U (uplink TEID) |! IP Packet [
 L p>! P| p>!
-1 1 1 1
-1 1 1 1
-1 1 1 1
-1 I I I
-| | <q 1
 I IP Packet 1 I
-1 1 1
 GTP-U (downlink TEID)1 IP Packet
 I
 07/08/25 8

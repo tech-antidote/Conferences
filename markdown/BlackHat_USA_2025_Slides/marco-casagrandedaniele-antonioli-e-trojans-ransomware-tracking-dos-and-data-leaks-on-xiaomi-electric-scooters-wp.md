@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:33Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marco Casagrande&Daniele Antonioli_E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters_WP.pdf` (16 pages)
 
-
 ## Slide 1
 
 # **E-Trojans: Ransomware, Tracking, DoS, and Data Leaks on Battery-powered Embedded Systems**

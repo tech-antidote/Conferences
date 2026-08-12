@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:51:54Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Takayuki Hatakeyama & Yuya Chudo-Bypassing Entra ID Conditional Access Like APT A Deep Dive Into Device Authentication Mechanisms for Building Your Own PRT Cookie.pdf` (67 pages)
 
-
 ## Slide 1
 
 ##### Bypassing Entra ID Conditional Access Like APT
@@ -303,8 +302,6 @@ V14M2MyTXRN1c5cVZndUh! YVupV10tYWFTcXhJUC1HW jYxcnBnWFktOVOz0GdBOSU9. OgSOLtuyfK
 ```text
 bisek hat
 ASIA 2024
-& © DB) G F-bIMicrosot 365 x i+ Tes a x
-<¢ G wwaw.office.com o < S 4]
 Microsoft 365 e) @
 A Microsoft 365 €2) C@HASS cet sopor 8
 si A THis Microsoft 365 DA—A N-VTF. FATO Microsoft 365 PF VAR PIVATFSECEMTAES. SB TUBES I—F— 341A
@@ -323,7 +320,6 @@ I °
 aN
 RMUMEBLIEIYT UY ILS0ECA
 MLNRFIAXD heremIsn. KFaAxX> bhery7oO-k
-4 5 me)
 ```
 
 ## Slide 22
@@ -413,7 +409,6 @@ ASIA 2024
 Reversing GetCookielnfoForUri
 JSON data is sent to
 | a lsass.exe and it includes call
-“call” :| 2 n | val
 “payload”: and payload values
 “https login. microsofton! ine. com, common/oatuh?, author ize?sso_nonce=AwABA
 AEAAAACAOz BODO _?u6/X28k jL4AVzLD jdCSeKH jPdTQe/-V6FYeFrvgAFSFdwU jad] Bwetq0s
@@ -448,7 +443,6 @@ case lu:
 tatus = GenericCallPackageHelper: :SignPayload(al, a2, payload_a
 sta 4, TokenHandle, account_info_a6, al@);
 v25 = status;
-if ( status >= @ )
 foto LABEL 49;
 v23 = 36;
 yv21 = (struct CSec
@@ -459,7 +453,6 @@ ureString *) DBG_BASENAME("onecoreuap\\ds\\ext\\aad\\aadcloudap\\genericcallpack
 case 2u:
 status =|GenericCallPackageHelper: :CreateSSOCookie(al, a2, payload_a4, TokenHandle, account_info_a6, a9, al@);
 v25 = status;
-if ( status >= @ )
 goto LABEL 49;
 vi? = _DBG_BASENAME("onecoreuap\\ds\\ext\\aad\\\aadcloudap\\genericcallpackagehelper. cpp");
 LODWORD(v22) = 48;
@@ -467,7 +460,6 @@ goto LABEL 11;
 case 3u:
 status = GenericCallPackageHelper: :GetPrtAuthority(al, a2, account_info_a6, a9
 V£o = STaTuUs,;
-if ( status >= @ )
 ```
 
 ## Slide 31
@@ -1104,7 +1096,6 @@ SigninLogs
 .
 \—
 ® —
-: , SS
 #BHASIA @BlackHatEvents
 ```
 

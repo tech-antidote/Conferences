@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:20:52Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kelly Shortridge_Fast, Ever-Evolving Defenders The Resilience Revolution.pdf` (160 pages)
 
-
 ## Slide 1
 
 - FAST VER EVOLVING , E DEFENDERS: THE RESILIENCE REVOLUTION
@@ -174,20 +173,6 @@ shortridge@hachyderm.io | @swagitda_
 
 Configuration as Code
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-all A pr a -
-< 1 ‘4
-G i °
-/
-©
-A ny
-f
-. \f - 7 — | ll
-SNF ONS CODE
-```
-
 ## Slide 22
 
 CaC : the practice of declaring configurations through markup rather than manual processes
@@ -303,12 +288,9 @@ shortridge@hachyderm.io | @swagitda_
 ```text
 la@ reduces triction tor releasing patches,
 updates, Or fixes & Gecentralizes the process
-‘ \ ;
-d 1, ia ‘\
 ws He
 ~*~ A\
 »/) .
-\ : (
 ae Ga
 35
 ```
@@ -395,26 +377,6 @@ shortridge@hachyderm.io | @swagitda_
 ## Slide 46
 
 Automating Security Checks
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-An
-ar
-PASS
-v
-BONA
-3
-—_——
-SIG
-\ ae ¥:
-\Fass
-a
-a
-“
-| a
-eS
-```
 
 ## Slide 47
 
@@ -510,15 +472,11 @@ shortridge@hachyderm.io | @swagitda_
 
 ```text
 C3) (=) shortridge-sensemaking/fir. X Overview | firewall-demo | | X g Signal Sciences x Ge Nf a x
-< 9 G https://github.com/shortridge-sensemaking/firewall-demo/blob/main/banlist.txt 13] % x) » =
 ry
-= e , 8
-= © shortridge-sensemaking / firewall-demo & Q Tyr t >- + * ©} | %)/@ 7
 <> Code {2 Pullrequests 1 © Actions © Security [¥ Insights  & Settings
 bf = main ~ firewall-demo / banlist.txt Q é t see
 ert "Update IP Banlist"’ “ 38ead24 : 1 Ter 1) History
 &: swagitda |
-@ lo + 17.9 KB Raw (OO O\
 | Code Blame (©) 1281 line
 l #
 #
@@ -1043,7 +1001,6 @@ ERE
 th
 ee.
 saan
-+P oP ee,
 Sofie
 ce
 ocUuty
@@ -1091,37 +1048,6 @@ Resilience stress tests help us identify the confluence of conditions where fail
 
 114 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ia
-~~ - .
-Se €
-EA “eS. » y b
-> LGB
-ss aa
-Ay Qe C > 6% ‘
-Et , >
-N. as SD be
-a a q .
-|
-» Se =) a SF
-A
-7 Raciienbas ss =k
-‘eenfluence ets
-~ > (4Vses Grey
-AS Ye 4 V6 WY ei
-, > VE. xs CaN
-=. “ \ Ge /
-CEES RG
-< Se
-u UES :
-~ Waar
-os
-~ “a ¢
-ane
-```
-
 ## Slide 115
 
 How do disruptions impact the entire system’s ability to recover and adapt?
@@ -1149,7 +1075,6 @@ Firewall?
 a)
 Misconfigured
 port injection
-os ry an
 Conf Lo Alert
 onjig og e Incident Wait...
 \.
@@ -1173,9 +1098,7 @@ SHORTRIDGE@HACHYDERM.IO | A@SWAGITDA_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 4 ~)
 Endpoint | > Execute relevant malicious actions
-\. .. T y,
 Deploy to production Make proposed changes
 Analyze results 1 —<— | _ Retest against new changes
 Figure 9-5. Engineering workflow change evaluation
@@ -1201,19 +1124,6 @@ shortridge@hachyderm.io | @swagitda_
 ## Slide 121
 
 IV. Tangible Success
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ny) Pe 7
-df
-Aw pill? iy f + j AN
-ll Vv - a
-as
-&
-ey
-- E
-```
 
 ## Slide 122
 
@@ -1253,14 +1163,12 @@ et
 {
 offer im
 >
-er —/ Z ae
 wl
 2
 sre
 ug
 -
 ers Se
-A F r .
 imme
 S sirug
 ics that.
@@ -1308,31 +1216,6 @@ Who accessed what and when? (like cloud audit data)
 129
 
 shortridge@hachyderm.io | @swagitda_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-!
-he
-Le v
-<w
-4 =
-aN
-“
-Ni
-ie
-* \AN Bh
-* A\ |
-» < \ \
-\ \
-/ aN
-( J | <<
-\ “<<
-q ¥
-oe: XOX
-Gcessi
-NRO
-```
 
 ## Slide 130
 
@@ -1485,88 +1368,6 @@ shortridge@hachyderm.io | @swagitda_
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-4 7 } y NYY | BS vi
-: b | ‘ = Vig We
-Ay ¢ \ A f \ <—
-+ - Q - ) NS F Cp
-~ SIS Ni ‘ ? 6
-f /, ¥
-— f
-‘ i 1
-I a6 : wie
-be « 4 = ‘Aa ; . A a
-f N WF LY \ ( Al
-ait j Ay /
-. } ) ae \ :
-WEA ye \ , i
-} G (
-} - 8, Ls S
-— \ \ Ni NY \\e. S
-= | A = i N)
-| i= : fi ‘
-> L \ = —
-NK 5 S 4 ~ y A
-yy © { /\ = ~ { j (Ze
-\ Y | ies : 2
-= [) L e
-SASK < a) Z
-S = \ \ he
-~ Y y q - A ? , =
-> > , ee va
-\ t § x { 5
-x x - - a S
-<= > fay
-BE \ a x 7
-Ee x i \t . .
-~ a Z _
-i VT ‘\ c 6
-Y hi ™ “q >
-/ ; 1
-+> N Vy i | N
-~ vt — 2297S
-ts \ a [ “4 G x
-t ‘a = A /
-7 {
-\F ’ Z y { K Wi LA A
-\ . 1
-ay /, :
-TNS { G Dien SEE
-\ EL
-\y < i » a j ’ / Z
-A + 7 L
-\ A Dap. ks gu h q /
-<
-y wi . p A,
-x h 7
-iy’ en ty
-/ ‘VAX | ~— . 0) is /|
-I P \ NEe- SA ]
-“= 1) Se m a
-’ / \ . wh a he
-, M i a
-} 7 AC PAAR
-~ y “4 a + 4 x -
-7\.\' NS VHF z
-} .) } aa ay ish » se %
-> iffve z, 4
-al > was s ‘
-c > fe Z No?
-XV ES i , a
-} I WWe ; fi
-4 Y
-4 =
-~)) ‘ \ y,
-H, { ‘‘
-\/ < y 4
-/ 4 ad y \ “4.
-a 5 7 | NV
-— q iy 7,
-Dp’ I SAV
-```
-
 ## Slide 148
 
 Swap usage: data exfiltration (T1074.001)
@@ -1626,54 +1427,6 @@ We can adopt systems thinking, challenging our “this will always be true” as
 155
 
 shortridge@hachyderm.io | @swagitda_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ve
-\\
-‘ \
-Ss \
-\
-S \e
-a ma \\,
-\
-.
-. \
-NS
-|
-LAS
-e
-~) Ap
-N
-Tp
-\ oa
-e
-\ =
-‘ x \
-x ‘Ne \
-AN EONS
-Wa *
-\ ‘3
-SA =D
-~s
-Ele
-ZF i,
-> 4
-a
-y wat
-Z ae
-| 4 &
-i j
-,
-ia =Z
-Y)
-oO
-aon
-n
-me)
-/
-```
 
 ## Slide 156
 

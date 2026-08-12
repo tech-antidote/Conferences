@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:48Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Karim Abdellatif_I Have Got to Warn You, It Is a Learning Robot Using Deep Learning Attribution Methods for Fault Injection Attacks.pdf` (47 pages)
 
-
 ## Slide 1
 
 I Have Got to Warn You, It Is a Learning Robot: Using Deep Learning Attribution Methods for Fault Injection Attacks
@@ -199,7 +198,6 @@ Few traces to attack unknown key
 Labels on Sbox output
 Ss
 Average rank of K[0]
-10 40 50
 20 30
 Number of traces
 12

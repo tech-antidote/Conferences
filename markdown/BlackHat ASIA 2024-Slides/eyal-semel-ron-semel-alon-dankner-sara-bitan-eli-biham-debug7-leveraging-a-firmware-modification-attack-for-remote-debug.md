@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:49:19Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Eyal Semel & Ron Semel & Alon Dankner & Sara Bitan & Eli Biham-Debug7 Leveraging a Firmware Modification Attack for Remote Debugging of Siemens S7 PLCs.pdf` (62 pages)
 
-
 ## Slide 1
 
 **Debug 7 Leveraging a Firmware Modification Attack for Remote Debugging of Siemens S7 PLCs Ron Semel | Eyal Semel**
@@ -454,7 +453,6 @@ blackhat Level 1 — Gather Intel (Re:
 Gnacan
 [e SCORE:0 +]
 Sr eer Semen rey ey ree Ty ee
-; i i ; ‘
 ‘a a
 ```
 
@@ -750,7 +748,6 @@ blackhat The System Call Table
 ASIA 2024
 sub_10
 sub_10
-sub 1 30
 kernel close
 kernel ioctl
 sub_10C189D@
@@ -847,7 +844,6 @@ ASIA 2024
 (iva: 25)
 [e SCORE: 2 +]
 Sr eer Semen rey ey ree Ty ee
-; i i ; ;
 ‘a a
 ```
 
@@ -1009,7 +1005,6 @@ ASIA 2024
 Level Completed
 [+ SCORE: 3 ¢]
 4
-= : a) tee eS Sl
 ```
 
 ## Slide 53
@@ -1027,7 +1022,6 @@ ASIA 2024
 (eve: 39)
 [e SCORE: 4 +]
 eee Se ye eee Pre ey eee =A
-a % er 4 i i 4
 carr fpnsesaafianeasp irc terns finns tif tor end haar ens lca kaze tase
 ```
 

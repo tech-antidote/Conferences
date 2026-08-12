@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:25:32Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf` (143 pages)
 
-
 ## Slide 1
 
 2026
@@ -80,7 +79,6 @@ Es RAG eole
 's fe
 prompt ve )
 - )
-| | =
 answer answer
 ```
 
@@ -162,7 +160,6 @@ peigls —
 SR
 WiZkesea
 ae
-\ || he
 Al =
 Hacking Moltbook: The Al
 Social Network Any Human
@@ -238,21 +235,6 @@ NVIDIA Container Toolkit $30,000 3
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-—
-o 4
-~aa .
-| A, e
-7
-PART O02 — x “7
-Journey Begins ee
-* of " .
-AS ‘
-Se a Oo HF >
-```
-
 ## Slide 12
 
 ### **Classifying AI Targets**
@@ -265,7 +247,6 @@ Se a Oo HF >
 "Classifying Al Targets
 DATA & VECTOR STORAGE MODEL INFERENCE & SERVING FOUNDATIONAL INFRASTRUCTURE
 pit @ NVIDIA
-<) SS (3 > J > Container
 Chroma pgvector Redis Ollama _, NWIDIA Triton NVIDIA Toolkit
 Inference Server
 ```
@@ -307,7 +288,6 @@ Container escape
 DATA & VECTOR STORAGE
 MODEL INFERENCE & SERVING
 FOUNDATIONAL INFRASTRUCTURE
-e 7 s
 Chroma pgvector Redis
 fe} vitm &,
 Ollama NVIDIA Triton
@@ -401,7 +381,6 @@ Name Last commit message
 > ® index © error [BUG] (log-service,storage): classify transient errors for retry (#6731)
 > §§ jemalloc-pprof-server
 ® frontend [ENH]: Merge, sort and truncate in FE (#6846)
-S Bm in hin,
 17
 ```
 
@@ -425,7 +404,6 @@ Sina Kheirkhah
 TARGETTING
 Chroma in the Al category
 PRIZE $ POINTS
-Dia tla @ 34 145 Al & 18
 ```
 
 ## Slide 19
@@ -523,7 +501,6 @@ Pwn points. Full win! #Pwn2Own #P2O0Berlin
 oy
 Out of Bounds
 oobs.io
-O1 te @ 76 il 9,241 AWS
 21
 ```
 
@@ -1156,14 +1133,12 @@ jinja_env.filters["tojson"] = tojson
 jinja_env.globals["raise_exception"] = raise_exception
 jinja_env.globals["strftime_now"] = strftime_now
 return jinja_env.from_string(chat_template)
-NO UW Hh W
 1 rendered_chat = compiled_template. render (
 messages=chat,
 tools=tool_schemas,
 documents=documents,
 add_generation_prompt=add_generation_prompt,
 *kkKwargs,
-SN HOU BW N
 30
 ```
 
@@ -1702,7 +1677,6 @@ Trying to}load unsupported GLOBAL os.system whose module os is blocked.
 1 import torch
 2 import types
 3
-4 for k, v in torch._weights_only_unpickler._get_allowed_globals().items():
 5 if type(v) is types.FunctionType:
 6 print(k)
 © Only these "useless" functions
@@ -1741,7 +1715,6 @@ torch._tensor._rebuild_from_type_v2 51
 1 import torch
 2 import types
 3
-4 for k, v in torch._weights_only_unpickler._get_allowed_globals().items():
 5 if type(v) is types.FunctionType:
 6 print(k)
 = memory bugs?
@@ -1785,12 +1758,9 @@ torch. _tensor._rebuild| from_type_v2 52
 6 storage_offset=0, 6 storage_offset=1,
 7 size=(10,), 7 size=(10,),
 8 stride=(1,), 8 stride=(1,),
-9 ) 9)
 10 print(tensor) 1@ print(tensor)
 S "Overflow"?
 tensor([ 2, 3, 4,
-tensor({[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 1@]) 5, 5, 7
-= 8, 9, 10,
 351031215418705889 ])
 53
 ```
@@ -1818,7 +1788,6 @@ tensor({[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 1@]) 5, 5, 7
 /home/xuemo/pytorch-2.8.0/.venv/1lib/python3.12/site-—packages/torch,
 mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numy
 cpu = _conversion_method_template(device=torch.device("cpu") )
-tensor([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 1@])
 i(.venv) xuemo>file tensor.pt
 tensor.pt: Zip archive data, at least v@.@ to extract, compression method=store
 55
@@ -2091,7 +2060,6 @@ backward_hooks=OrderedDict()
 )
 print(tensor)
 tensor ([ Diy 3, 4,
-6, Tay 8
 10, 134860703830768]
 0 O1
 58
@@ -2220,8 +2188,6 @@ RuntimeError: Trying to resize storage that is not resizable |
 t _ istent_load((‘st ' torch.Longst 1 persistent_load(saved_id) # serialization.py:2065
 re OE ‘yh tee : 10)). ongnmorages 2 | ‘ load_tensor(dtype=long, nbytes=80, ...) # serialization.py:2002
 result = torch. utils rebuild tensor v2( 3 | L zip_file.get_storage_from_record("data/0", 80) # serialization. py:2036
-storage, 7 7 7 7 4 | |
-1 5 | | // C++: torch/csrc/jit/python/init.cpp:1624
 (10,) 6 | L ¢10::Storage(
 (,), 7 | size=80,
 8 data=data_ptr
@@ -2254,7 +2220,6 @@ OrderedDict(), 9 | allocator=nullptr,
 ```text
 a e,e
 False Positive
-storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10] ) 1 torch-Longstorage( [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 tensor = torch._utils._rebuild_tensor_v2( 2 _LegacyStorage.__new__() # storage.py:748
 3 L TypedStorage.__init__([1..10], dtype=long, device=cpu) # storage.py:839
 storage,
@@ -2449,7 +2414,6 @@ storage = persistent_load(('storage',
 patch = b' \x80\x@2ctorch »_utils waa torch. LongSto rage, 'Q' , ' cpu ' , 10) )
 with open("tensor/data.pkl","wb") as f: |
 f.write(patch)
-_ + 1 !
 os.system("zip —r tensor.pt tensor/") storage = persistent_load(('storage',
 torch.LongStorage, '@', 'cpu', 20))
 =] 1
@@ -2492,7 +2456,6 @@ storage = persistent_load(('storage',
 torch.LongStorage, ‘'@', ‘cpu', 20))
 ._typed_storage()
 ._untyped_storage)
-Oo ON OU PWN
 .def("get_st
 []
 orage_from_record"
@@ -2553,7 +2516,6 @@ poc += BININT + pack("<i", length)+TUPLE1 #size
 poc += BININT1+b"\x@1"+TUPLE1 #stride
 3. Patch & Save poc += NEWFALSE
 poc = generate_overflow_tensor_pid(0x20,Q) poc += GLOBAL+bcollections\nOrderedDict\n"
-—_ _ — ’
 poc += STOP poc += EMPTY_TUPLE
 , = NEWOBJ
 with open("tensor/data.pkl","wb") as f: oe TUPLE
@@ -2609,7 +2571,6 @@ k=1 Pe # gets 1 mp_tensor = [1, @Oxaaaa, 3, 4]
 stack[-1][k] = v
 ota > # tmp_tensor[1]=Oxaaaa
 Bottom (Target Object) |_u--
-tmp_tensor = [1, 2, 3, 4]
 ```
 
 ## Slide 72
@@ -2672,7 +2633,6 @@ storage_
 0x30 size_bytes_ [next fields omitted]
 1
 Target Real Memory (Data)
-1 2 3 4
 73
 ```
 
@@ -2892,7 +2852,6 @@ CVEID
 2. Storage size mismatch between declared element count and actual data in the archive
 CVE-2026-24747
 Impact
-. oe a ge . . we Weaknesses
 An attacker who can convince a user to load a malicious checkpoint file may achieve arbitrary code execution in the context of the
 victim's process. No CWEs
 Credit Credits
@@ -2971,7 +2930,6 @@ requests.post(url, headers=headers, json=data)
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a e °
 Inspiration
 LAucmue
 xuemo>curl http://localhost:8000/v1/completions -H "Content-Type: application/json" -d '{
@@ -3059,9 +3017,6 @@ ghts_only* set to ‘False’ will likely succeed, but it can result in arbitrar
 only if you got the file from a trusted source.
 Please file an issue with the following so that we can make ‘weights_only=True’ compatible with your
 use case: WeightsUnpickler error: Only persistent_load of storage is allowed, but got tensor([
-1, 2, 3,
-4, 5, 6,
-7, 8, 9,
 10, 281474976710673, 33,
 126486786867200, 126815498681248, 4572279526795640868,
 33, 126491081834496, 126815498681120,
@@ -3110,7 +3065,6 @@ Abs 352951805673476, 82,\n 208, 140634025451320,
 235798472, \n Q, Q, @,\n 140634260153216,
 e, @,\n e, Q, @,\n
 Q, 235799328, 235799336, \n 235799336, Q, @,\
-n Q, Q, @,\n e, 8,
 @,\n Q, 208, 193,\n 235747728, 27
 66409169796213799, 235738272, \n Q, Q, 235799360, \n
 108083376, 140628152523088, @,\n Q, Q,
@@ -3119,7 +3073,6 @@ Q, Q, 255, 1,\n 35295180567
 3476, 1271310385153, 225,\n 235799088, 140634275220912, 235738272, \n
 236341824, Q, 235799360, \n 108083376, 140627898250448,
 @,\n e, e, @,\n e,
-Q, Tw Q, Q, @,\n
 e, 5, 1,\n 352951805673476, 1271310385153, 3
 3,\n 236291120, 235738864, 224,\n 32, 154130528
 ; 235731424, \n 140627898261744, 225; 140634275220912, \n 235798832, 91
@@ -3162,7 +3115,6 @@ lyou must have proper authorization from your employer to register and bind the 
 requirements, please review the full contest rules.
 Re: Some questions about the rules +
 zerodaycloud
-A @ RR
 WA,
 Ca MRA RIFARN SUBIF
 Hello,
@@ -3438,7 +3390,6 @@ of attack. Loading un-trusted checkpoint with
 0/3 viewed
 SBS @O
 Submit comments v
-+2 -2 6B <> OO OvViewed =:
 environment such as a sandbox** (e.g., containers, virtual
 machines). This helps protect your system from potentially
 malicious code. You can find further details and instructions
@@ -3488,19 +3439,6 @@ Thanks again for the report.
 One Chain, All Owned
 
 101
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-*
-@aO \ 7 y
-7] >
-PART 04 es * x
-One Chain, All Owned ee
-* ” " ;
-a
-eo @ YF
-```
 
 ## Slide 102
 
@@ -3780,7 +3718,6 @@ https://docs.sglang.io/docs/basic_usage/native_api
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-| e e e °
 ‘Motivation Behind This Feature
 Update Weights From Disk
 Update model weights from disk without restarting the server. Only applicable for
@@ -3821,8 +3758,6 @@ _pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed th
 t to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
 Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
 Only persistent_load of storage is allowed, but got tensor([ 1, 2; 3
-4, 5, 6,
-7 8, 9,
 10, 7957695013524078592, 85,
 131459831146098, 6049905579691883710, 131458154763392,
 Q, 131428549404288, 131428549404272,
@@ -4051,8 +3986,6 @@ to ~True~. Re-running ~torch.load~ with ~weights_only~ set to ~False~ will likel
 got the file from a trusted source.
 Please file an issue with the following so that we can make ~weights_only=True~ compatible with your use case: WeightsUnpi|
 Only persistent_load of storage is allowed, but got tensor([ 1, 2, 3,
-4, 5, 6,
-7, 8, 9,
 10, -54860123138473473, ANT,
 136375604260568, 4294967298, 136368500026816,
 136374743898800, 136368500026816, 3537586595450322688,
@@ -4104,14 +4037,6 @@ e Modify deleter — system@ptt
 ## Slide 123
 
 123
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-G A © localhost:8188 XY @& * D J  mEMHSH gS
-Unsaved Workflow @
-Pv © wry OM
-```
 
 ## Slide 124
 
@@ -4205,7 +4130,6 @@ _ zerodayinitiative.com
 a) Zero Day Initiative — Announcing Pwn2Own Berlin ...
 a = If you just want to read the contest rules, click here .
 ag ee Willkommen zuriick, meine Damen und Herren, zu...
-O4 th 40 @ 168 it 3.98 Ns
 Mar 5 Dynamo Release v0.9.1
 © saturley-hall
 © v0.9.1
@@ -4398,7 +4322,6 @@ GPU Inference Core
 
 ```text
 "The Vuln
-ar wD —
 Rust Frontend
 HTTP — Validate — Route
 Rust Frontend
@@ -4457,8 +4380,6 @@ e default value of the ‘weights_only* argument in “torch.load* from “False
 ghts_only* set to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you got the
 file from a trusted source.\nPlease file an issue with the following so that we can make ‘weights_only=True~ compatible
 with your use case: WeightsUnpickler error: \n\nOnly persistent_load of storage is allowed, but got tensor([
-1, 2, 3, n 4, 5,
-6,\n 7, 8, 97 \n 10,
 OF 97,\n 322170851, 4285345213156097082, 110425377238528, \n
 33, e, @,\n 8, @1)\n\nCheck the docu
 mentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/
@@ -4474,11 +4395,8 @@ ERROR Failed to decode prompt_embeds: Weights only load failed. In PyTorch 2.6, 
 d* from ‘False to ‘True’. Re-running “torch.load* with ‘weights_only* set to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you go
 Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
 Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
-4, 5, 6,
-7, 8, %
 10, 9, 97,
 322170851, 4285345213156097082, 110425377238528,
-3, A e,
 @, @1)
 Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
 ERROR Failed to process prompt_embeds for request @cd43495-4ceb-4491-aa19-féaf160a8e96: Failed to decode prom
@@ -4487,11 +4405,8 @@ ly load failed. In PyTorch 2.6, we changed the default value of the ‘weights_o
 json=data) u Su: y xeCU y you gi us Qu:
 Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
 Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
-4, 5, 6,
-7, 8, %
 10, 9, 97,
 322170851, 4285345213156097082, 110425377238528,
-33, @, e,
 e, @1)
 a the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
 134
@@ -4606,7 +4521,6 @@ https://github.com/ai-dynamo/dynamo/pull/8248/changes
 
 ```text
 a
-v © components/src/dynamo/vllm/handlers. py OQ +}
 a @@ -1351,6 +1351,22 @@ def _build_prompt_from_request (
 1351 embedding_sequence_length = None
 1352
@@ -4638,7 +4552,6 @@ if "prompt_embeds" in request and
 request ["prompt_embeds"]:
 if not
 self.config.engine_args.enable_prompt_embeds:
-msg = (
 "Set
 *--enable-prompt-embeds* to allow
 ‘prompt_embeds* in request."

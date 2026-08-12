@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:57:54Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Jonathan Birch_Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET_wp.pdf` (5 pages)
 
-
 ## Slide 1
 
 # Mutation-Based Serialization Vulnerabilities

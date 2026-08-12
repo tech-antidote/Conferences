@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:12:41Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Michael Grafnetter_Pass-the-Passkey Family of Attacks-WP.pdf` (73 pages)
 
-
 ## Slide 1
 
 Pass-the-Passkey Family of Attacks

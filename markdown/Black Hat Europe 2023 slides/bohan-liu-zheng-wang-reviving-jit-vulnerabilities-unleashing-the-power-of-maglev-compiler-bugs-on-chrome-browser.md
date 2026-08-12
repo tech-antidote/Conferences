@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:28Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Bohan Liu, Zheng Wang_Reviving JIT Vulnerabilities Unleashing the Power of Maglev Compiler Bugs on Chrome Browser.pdf` (73 pages)
 
-
 ## Slide 1
 
 ## Reviving JIT Vulnerabilities: Unleashing the Power of Maglev Compiler Bugs on Chrome Browser
@@ -683,7 +682,6 @@ Issue 1381335 / 1500857
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-OE Ni ee af
 piSekhat eM a
 EUROPE 2@O0es
 Issue 1384369
@@ -823,7 +821,6 @@ new_target.initial_map.constructor==target
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a Be ogi
 black hat SS Pas
 EUROPE 2@O0es
 FastObject: :FastObject(compiler::JSFunctionRef constructor, Zone* zone,

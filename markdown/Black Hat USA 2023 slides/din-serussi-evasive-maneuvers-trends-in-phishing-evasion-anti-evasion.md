@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:49Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Din Serussi_Evasive Maneuvers Trends in Phishing Evasion & Anti-Evasion.pdf` (28 pages)
 
-
 ## Slide 1
 
 ### Evasive Maneuvers: Trends in Phishing Evasion & Anti-Evasion
@@ -397,7 +396,6 @@ Al-powered email, web browser, and cloud ap
 nlatfarm. ALL threats |iahtnina fast. Zero averhea
 x_tr...
 Vv =
-g® x §] oO e Incognito
 Translation
 ```
 
@@ -418,7 +416,6 @@ USA 20253
 Encoded HTML Files
 200% increase in the usage of malicious html files
 perception-point.io <Microsoft365 Secured> demo@perception-point.io
-P ; we
 Mailbox Storage Exceeded Monday, July 3, 2023 7:51 a.m. Microsoft
 Sign in
 O Guide Settings.Html .

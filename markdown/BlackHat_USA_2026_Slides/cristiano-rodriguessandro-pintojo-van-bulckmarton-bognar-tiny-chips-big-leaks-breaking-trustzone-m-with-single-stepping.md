@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:29Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Cristiano Rodrigues&Sandro Pinto&Jo Van Bulck&Marton Bognar_Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks.pdf` (303 pages)
 
-
 ## Slide 1
 
 ## Slide 2
@@ -195,11 +194,9 @@ Wearables
 
 ```text
 Modern Connected World
-«. eS 1» = 3
 Se Baa et bes
 Satellites Industrial Drones Hardware Wallets
 Cars Medical Appliances Wearables
-= 6 & 8
 ```
 
 ## Slide 28
@@ -230,7 +227,6 @@ Revenue in billion U.S. dollars
 Annual Production of loT devices
 200 bn 2021 2022* 2023* 2024* 2025* 2026* 2027* 2028* 2029* 2030*
 L trillion
-150 bn .
 cumulative
 100 bn
 50 bn
@@ -4569,7 +4565,6 @@ M-Step Visualizer (GI Kwave)
 TEV E Mt fm_arch threads]
 i) (oe000087 ) if
 A ER tfm_arch thread fn_catt
-he a cca
 ```
 
 ## Slide 218
@@ -4609,11 +4604,9 @@ Time
 clk=0
 cycle[31:0] =1' j
 Instruction
-Wa Pe eee 10, ve TT es ee 2 ee
 Program Counter of the Instruction
 inst _raw=Li Ete
 st_fu ro a or os
-nc =t) a ec cc
 a a
 (a
 ```
@@ -4640,7 +4633,6 @@ Debug Symbols
 ```text
 M-Step Visualizer (GI Kwave)
 inst_full =. ré, r2, r3 icmp r2, #3 subs r7, r6, r2_ {str ré
-func =t [Sm I I I }
 ```
 
 ## Slide 222
@@ -4661,7 +4653,6 @@ clk =6
 cycle[31:0] =2
 Instructto
 instr_addr[31:0] =0)
-oot 1) ae
 ```
 
 ## Slide 223
@@ -4696,7 +4687,6 @@ M-Step Visualizer (GTKwave)
 M-Step Visualizer (GI Kwave)
 Time
 cycle[31:0] =1!
-Instruction es es : | _
 — TT) 7670 1s
 ime
 clk=0
@@ -5623,17 +5613,13 @@ TU —A,TV <—B;
 U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-TU — TU/2;
-if U1 or U2 odd then
 | U1-—U1+TB;U2-—U2-TA
 U1 —U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | V1 V1+TB, V2<—V2-TA;
 V1 —V1/2; V2 — V2/2;
 if TU > TV then
-TU — TU -TV;
 U1 <—U1-V1; U2 —U2-V2;
 TU —TU/2;
 TV —TV-TU;
@@ -5666,23 +5652,13 @@ Cortex-M
 3s | Ule1,U2—0,V1i-0,v2-1,
 rT 4 | while TU #0 do YPeN
 — 5 while TU even do L |
-6 TU —TU/2;
-‘ 7 if U1 or U2 odd then
 8 | U1<—U1+TB,U2<U2-TA
-9 U1 — U1/2; U2 — U2/2;
 10 while TV even do
-11 TV —TV/2;
-12 if V1 or V2 odd then
 13 | V1 V1+TB, V2<—V2-TA;
-14 V1 — V1/2; V2 —V2/2;
-15 if TU > TV then
-16 TU — TU -TV;
 17 U1 — U1-V1;U2 —U2-V2;
-18 TU —TU/2;
 19 else
 20 TV —TV-TU;
 21 V1<—V1-U1;V2<—V2-U2;
-22 TV —TV/2;
 Sst
 BRARY
 50
@@ -5730,15 +5706,10 @@ Cortex-M
 21
 22
 procedure Mbedtls_BEEA(X, A, B)
-TU —A,TV — B;
 while TU even do
-TU — TU/2;
-if U1 or U2 odd then
 | U1-—U1+T7TB,U2<—U2-TA
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | V1 V1+TB, V2<—V2-TA;
 V1 — V1/2; V2 —V2/2;
 if TU > TV then
@@ -5798,12 +5769,9 @@ U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
 TU —TU/2;
-if U1 or U2 odd then
 | U1-—U1+T7TB,U2<—U2-TA
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | V1 V1+TB, V2<—V2-TA;
 V1 — V1/2; V2 —V2/2;
 if TU > TV then
@@ -5880,12 +5848,9 @@ U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
 TU —TU/2;
-if U1 or U2 odd then
 | U1-—U1+T7TB,U2<—U2-TA
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | V1 V1+TB, V2<—V2-TA;
 V1 — V1/2; V2 —V2/2;
 if TU > TV then
@@ -5942,15 +5907,10 @@ TU -—A,TV<—B;
 U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-TU — TU/2;
-if U1 or U2 odd then
 | U1<-—U1+TB,U2<-U2-TA
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | V1 V1+TB,V2<—V2-TA;
-V1 <— V1/2; V2 — V2/2;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1; U2 — U2-V2;
@@ -5986,17 +5946,12 @@ BEEA Template Matrices
 21
 22
 procedure Mbedtls_BEEA(x, A, B)
-TU —A,TV <— B;
 U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-TU — TU/2;
-if U1 or U2 odd then
 | U1 -—U1+T7TB;U2— U2-TA;
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | Vic V1+TB,V2<—V2-TA;
 V1<— V1/2; V2 <— V2/2;
 if TU > TV then
@@ -6007,7 +5962,6 @@ else
 TV —TV-TU;
 V1<—V1-U1;V2—V2-U2;
 TV —TV/2;
-u_if ee e | |
 u_noif o ee
 v_if eee | |
 v_noif o ee a
@@ -6021,7 +5975,6 @@ SUB_U_5
 SUB_V_1 |
 SUB_V_2 |
 SUB_V_3 ||
-0 5 10 15 20
 Sample Index
 51
 ```
@@ -6031,43 +5984,6 @@ Sample Index
 ###### BEEA Template Matrices
 
 51
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BEEA Template Matrices
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(x, A, B)
-while TU even do
-TU — TU/2;
-if U1 or U2 odd then
-| U1 -—U1+T7TB;U2— U2-TA;
-U1 — U1/2; U2 — U2/2;
-u_if ee e
-u_noif o ee
-51
-```
 
 ## Slide 274
 
@@ -6104,9 +6020,7 @@ BEEA Template Matrices
 procedure Mbedtls_BEEA(x, A, B)
 while /’V even do
 TV —TV/2;
-if V1 or V2 odd then
 | Vic V1+TB,V2<—V2-TA;
-V1 — V1/2; V2 — V2/2:
 v_if
 v_noif
 138 140 142
@@ -6123,45 +6037,6 @@ Sample Index (samples 10-137 hidden)
 ###### BEEA Template Matrices
 
 51
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BEEA Template Matrices
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(x, A, B)
-if TU > TV then
-TU —TU -TV;
-U1 — U1-V1;U2< U2-V2;
-TU —TU/2;
-SUB_U_1 ||
-SUB.U.2 a
-SUB_U_3
-SUB_U_4 | |
-SUB_U_5
-51
-```
 
 ## Slide 276
 
@@ -6225,17 +6100,12 @@ BEEA Template Matrices
 21
 22
 procedure Mbedtls_BEEA(x, A, B)
-TU —A,TV <— B;
 U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-TU — TU/2;
-if U1 or U2 odd then
 | U1 -—U1+T7TB;U2— U2-TA;
-U1 — U1/2; U2 — U2/2;
 while TV even do
 TV —TV/2;
-if V1 or V2 odd then
 | Vic V1+TB,V2<—V2-TA;
 V1<— V1/2; V2 <— V2/2;
 if TU > TV then
@@ -6246,7 +6116,6 @@ else
 TV —TV-TU;
 V1<—V1-U1;V2—V2-U2;
 TV —TV/2;
-u_if ee e | |
 u_noif o ee
 v_if eee | |
 v_noif o ee a
@@ -6260,7 +6129,6 @@ SUB_U_5
 SUB_V_1 |
 SUB_V_2 |
 SUB_V_3 ||
-0 5 10 15 20
 Sample Index
 51
 ```
@@ -6550,17 +6418,6 @@ What Changes Now?
 ## Slide 296
 
 What Changes Now?
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ti \
-Qs
-y CUS
-WE'RESCREWED
-A SOUL oh
-| [7] _ wer Ks
-```
 
 ## Slide 297
 

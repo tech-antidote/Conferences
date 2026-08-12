@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:21:02Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gregory Disney-Leugers - Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) - 1umberhac.pdf` (46 pages)
 
-
 ## Slide 1
 
 # **REFLECTIONS ON DISREGARDING TRUST**
@@ -81,7 +80,6 @@ Developer  of:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Who am I?
 Tech lead of offensive security
 Developer of:
 e TunnelTug
@@ -595,7 +593,6 @@ window.
 __RBI_AUTH_FETCH_SHIM__ = true;
 var PROXY = "/api/rbi/upstream-fetch" ;
 function
-var h =
 return
 || h
 || h
@@ -647,7 +644,6 @@ viewport + input
 » Input relay
 MFA + EV bridges
 Built-in component
-CDP + cq
 {"
 UPSTREAM
 @ Real IdP tab
@@ -827,7 +823,6 @@ bertbin  DEFCON & |
 Create / quit : scroll log : page log = English (United States) ~ Help Privacy Terms
 ie So pele
 Heat watch =] md) ea 2394 ¢
-MB sustissued gm Q Search = a = @ » @ » 9 ~ G& FW sno
 ```
 
 ## Slide 36
@@ -870,7 +865,6 @@ Demo: AWS
 
 ```text
 ¥  @ aboutblank x  @ chrome://dino/ - Dino game, x + Opisienadevanoruen| + Q_a.x
-@ © aboutblank x 1 @ a < X (wn) @  phisheriesdev/dino 2OO9rO04WO = 8 B A
 _.. Amazon.com [fj eBay [fy Booking.com: Cheap... fj TripAdvisor Jj Facebook
 i Chrome is being controlled by automated test software ~s && bey & 9. pf Trip b
 Local application is not running.
@@ -915,7 +909,6 @@ New to GitHub?
 &
 && OSs
 fh RBI Proxy +
-< Cc wen) 6 phisheriesdev/dinoryrichtips/g 2 © QO b O
 fh Amazon.com [fj eBay [ Booking.com: Cheap... fj TripAdvisor fj Facebook
 Viewer browser — 149..7827.201 - Windows 11 Version 19.0.0 (64-bit)
 ©)
@@ -934,7 +927,6 @@ New to GitHub?
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ON 3 4 Mi
 Follow-up to Reflections on Trusting Trust (1984
 DISREGARDING TRUST
 Thompson's question - runtime scale - exit
@@ -981,7 +973,6 @@ Dann © Boun. Creation | 7/3/20... Error
 Register Passkey O Pash . Site h
 > LD) Repor... p
 > & Devic... Ii
-+O htt. u
 AN ;
 Frames 4
 > DC top Session ID

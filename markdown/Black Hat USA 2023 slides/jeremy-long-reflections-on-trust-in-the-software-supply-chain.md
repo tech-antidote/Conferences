@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:17:07Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Jeremy Long_Reflections on Trust in the Software Supply Chain.pdf` (32 pages)
 
-
 ## Slide 1
 
 # Reflections on Trust in the Software Supply Chain

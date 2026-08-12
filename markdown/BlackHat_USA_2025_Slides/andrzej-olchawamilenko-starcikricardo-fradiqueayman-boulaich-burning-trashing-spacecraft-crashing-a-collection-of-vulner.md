@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:50:12Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andrzej Olchawa&Milenko Starcik&Ricardo Fradique&Ayman Boulaich_Burning, Trashing, Spacecraft Crashing A Collection of Vulnerabilities That Will End Your Space Mission.pdf` (44 pages)
 
-
 ## Slide 1
 
 ## Burning, Trashing, Spacecraft Crashing A Collection of Vulnerabilities that will End your Space Mission
@@ -151,7 +150,6 @@ Re-Militarization
 1000 -
 500 -
 Mg Amateur
-Lj ~~ = a |
 _anasmensaamn tammien ee Sash
 1960 1970 1980 1990 2000 2010 2020
 Source: https://sdup.esoc.esa.int/discosweb/statistics/

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:33Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Philip Young&Chad Rikansrud_Unix Underworld Tales from the Dark Side of zOS.pdf` (130 pages)
 
-
 ## Slide 1
 
 **Unix Underworld Tales from the Dark Side of z/OS**
@@ -174,11 +173,6 @@ Subsystem: WHSTEO2
 User il Workstation: WHE93MTIA
 Passuord
 0000 $$sss ELV LEr Ey CCEL 0000
-00 00 Ss Tt 9 C£ 00 00
-00 00 Ss Th GE 00 00
-00 00 ao.9 9:5 Ua CC 00 00
-00 00 5 TT CC 00 00
-00 00 55 act CC CC 06 88
 ooo0 $595: Tt CCES 0000
 WH O L £ Seaeeeee
 NMOTICES Access to this device is restricted to authorized us -r business

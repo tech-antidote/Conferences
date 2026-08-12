@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:30:46Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Tim Blazytko & Moritz Schloegel_Unleashing AI The Future of Reverse Engineering with Large Language Models.pdf` (114 pages)
 
-
 ## Slide 1
 
 #### The Future of Reverse Engineering with Large Language Models
@@ -609,13 +608,11 @@ a
 [2] TDA View-A he]
 (31 Pseudooden OF
 {41 Hex View tsistucures {6) Enums
-ts ¢ O
 int result; //
 char Str(1021]; //
 23 I
 char Destination[257]; //
 —int16 v5; //
-. 7 BF Ada breakpoint F2
 1, sizeof( Synchronize with >
 Edit var comment. 1
 streat( » PathName) ; Collapse declarations Numpad+-
@@ -624,7 +621,6 @@ ees + 5 Copy to assembly
 an Hide casts \
 onset (ste, 0, sizeof(str))s Gepetto BY @ explaintunction _cil+AlteG
 = 0; ont @ Rename variables _Crl+AlteR
-= 0; B
 streat(Str, aBgkkhwrddr1dg9);
 https://github.com/JusticeRage/Gepetto
 34

@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:49:21Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Le Wu & Qi Zhang-Game of Cross Cache Let's Win It in a More Effective Way.pdf` (93 pages)
 
-
 ## Slide 1
 
 Game of Cross Cache: Let's win it in a more effective way!
@@ -36,7 +35,6 @@ Le Wu From Baidu Security
 ```text
 Sang ~~. T
 blackhat« D> <> Se
-. ASIA 2 arr \. YZ SS
 oo” —ieiens 2024 l : - &. evi
 Game of Cross Cache:
 Let's win itin a more effective way!
@@ -1434,7 +1432,6 @@ p ro.build. fingerprint <
 (LLLLLLLLLLLLLLL LLL cd
 qi #
 Game of Cross Cache #
--- By Nicolas & Ye #
 #
 TO CLLULULLLLLLCLLLLL Lab ceeu bacco occcad
 10, epoll_fd:11
@@ -1463,7 +1460,6 @@ value for evaluating the reclaiming:
 value for evaluating the reclaiming
 value for evaluating the
 ¢ Attack from Untrusted App
-S + 100%@
 value for evaluating the reclaiming
 value for evaluating the reclaiming
 value for evaluating the reclaiming
@@ -1554,7 +1550,6 @@ looasso
 106014000-06014f FF
 06014000-06014f fF
 * ~65%(13/20) success rate
-S + 100%@
 qcom, ipcc@408000
 afprom@780000
 12¢@880000

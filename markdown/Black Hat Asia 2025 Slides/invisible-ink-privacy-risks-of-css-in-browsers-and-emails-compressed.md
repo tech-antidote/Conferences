@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:48Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Invisible Ink Privacy Risks of CSS in Browsers and Emails_Compressed.pdf` (85 pages)
 
-
 ## Slide 1
 
 **Invisible Ink** Privacy Risks of CSS on the Web and in Emails
@@ -33,7 +32,6 @@ Leon Trampert, Daniel Weber
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-° my . yA, \ ~ — = ZA Ce ij © y fh aS
 black hat
 ASIA 2025
 APRIL 3-4, 2025

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:47:57Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yvan Genuer_Exposing the dark corners of SAP 4-Years of Threat Intelligence data analyzed.pdf` (78 pages)
 
-
 ## Slide 1
 
 ### Exposing the dark corners of SAP 4-Years of Threat Intelligence data analyzed
@@ -37,7 +36,6 @@ Speaker: Yvan Genuer
 ~~ Blackhat’ , iF pc
 “EUROPE 2024 er StS
 | DECEMBER 11-12, 2024 ; | ae i <x e
-— a= a
 \ Exposing the dark corners of SAP
 4-Years of Threat Intelligence data analyzed
 Speaker: Yvan Genuer
@@ -53,7 +51,6 @@ Information Classification: General
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat > | A = ae | |
 EUROPE 2024
 Information Classification: General #BHEU @BlackHatEvents
 ```
@@ -122,11 +119,7 @@ Information Classification: General
 biSekhat
 EUROPE 2024
 ; = Menu(Fi0) || Allies(Fil) \) Chat(@Fiz) |\/ °° @ ¥ ) 495 | 150 | 6/12. No Upkeep
-= a 2 = —— = b —— —— — —— pate |
-E . & \ Se. 2
-itt * My b : ee 4
 Pips j F i)
- d | 5 — Se fiscal. es > ar” Ete .
 Information Classification: General #BHEU @BlackHatEvents
 ```
 
@@ -209,7 +202,6 @@ Information Classification: General
 ```text
 biSekhat The apiaest Inter erest oF on SAP
 Menu (F10) Allies (F Chat (F1 2) ro) 1205 15/24
-2] | x
 ae
 “gy
 —
@@ -447,7 +439,6 @@ Information Classification: General
 
 ```text
 EUROPE 2024
-piSekhat — g > \ ,
 What happened in 2021 ?
 400
 Number of hits
@@ -595,9 +586,6 @@ H
 0 Menu(Fi0) |j Allies (Fi1) Chat (Fi2)
 A ee
 &
-4 | ; \
-if a * if j
-t Nyy f
 Sd 5:
 “aR x
 ‘
@@ -611,7 +599,6 @@ ed
 id
 = |
 Strength 1 = r ac
-14 | '
 Agility: : —— _ :
 17
 Intelligence: ™ |
@@ -841,7 +828,6 @@ Information Classification: General
 black hat
 EUROPE 2024 ° AX
 my I Menu (F10) "If Allies (Fil) | Chat(Fi2) | .& a) 2035 j2 70 \j* 15/24)! No Upkeep
-= ae 2 2 ~ Se (ae eS es — pS = Fe |
 Strength:
 Ss +*4
 x. Agility:
@@ -1043,10 +1029,7 @@ Information Classification: General
 biSekhat
 EUROPE 2024
 ays ON
-= ar =
-. N | _— —_—_¢e 3 \ ¢
 yt @ 2445 f 460 15/24 { NoUpkeep
-— —= = a: te ———— <== = — - ~
 Sag.
 End Game Options |
 See 2
@@ -1054,22 +1037,15 @@ al
 Restart Mission lr ry
 = ¢
 Exit Game ] a
-pa =~ Ne ~ iy
 PS
-tee el |” b
 —— -
 |
 wae | Previous Menu eA
 Ee
-a a 3
 EASe x w FEES, ROE REERN SESE SA
-YY ivf | ro ees eg
 — o_o aes f7. SE :
-! Inventory r|M = A | A |
 — Manath Magesinger ° = | |] Oe >
 ’ ys \ Level 1 Archmage 1] rail
-ae 44 WJ Damage Strength: i =r | | o Tr)
-i a. # 21-27 Gs) 4 | } ¥ ;
 i éap) Agility ‘
 ‘\ 7 >) Armo 17
 ve 4 3 Intelligence: f

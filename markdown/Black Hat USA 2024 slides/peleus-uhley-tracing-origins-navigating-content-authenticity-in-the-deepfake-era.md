@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:37:59Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Peleus Uhley_Tracing Origins Navigating Content Authenticity in the Deepfake Era.pdf` (61 pages)
 
-
 ## Slide 1
 
 Traci ng Origins : Navi gating Content Authenti city i n th e Deep fake Era
@@ -292,12 +291,8 @@ national news outlets
 Half of 18- to 29-year-olds say they have at least some trust in the information they get
 from social media sites.
 ts who say they have some or a lot of trust in the information
-rk, 3 85 ~L ) oo
-7Q +, aS :
 Local news é a a oF 7h
 ra] =
-ee - a ‘.
-oe G2 5
 National news 5
 61
 ```
@@ -1115,7 +1110,6 @@ shop/24.4.@ (build 20230411.r.433 c582fe9; mac) cai-helper/O®
 2pa.thumbnail.claim.jpegdhashX &8§?7@ BCA4L’°25 0406.Y fo'n’ kod
 q m¢cur1x9self#jumbf=c2pa.assertions/c2pa.thumbnail.ingredie
 nt.jpegdhashX ® hy { 96,4°614w PCéA°iUCS NA @¢curlx*self#ju
-+ Fit —
 1 Compare
 \ 7 FireflyEditedv2-56126.jpg
 @) Issued by Adobe Inc. on Jul...

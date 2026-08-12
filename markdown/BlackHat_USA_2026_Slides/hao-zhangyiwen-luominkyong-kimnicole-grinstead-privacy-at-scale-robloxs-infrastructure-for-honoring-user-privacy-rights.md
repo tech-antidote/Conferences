@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:45Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Hao Zhang&Yiwen Luo&Minkyong Kim&Nicole Grinstead_Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights.pdf` (46 pages)
 
-
 ## Slide 1
 
 ### **PRIVACY AT SCALE**
@@ -36,7 +35,6 @@ Roblox's Infrastructure for **Honoring** User Privacy Rights
 ```text
 PRIVACY |
 ATSCALE ©
-Y : |
 Roblox's Infrastructure for Honoring User Privacy Rights
 plackhat EpRosiox
 2026 INFOSEC

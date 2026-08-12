@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:12:12Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Angelo Frasca Caccia - Chaining Microsoft Binaries to get Privileged Primitives in the Windows kernel - Binariesto Achiev.pdf` (45 pages)
 
-
 ## Slide 1
 
 Chaining Microsoft Binaries to Achieve Privileged Primitives in the Windows Kernel
@@ -718,7 +717,6 @@ Adiministrator:
 \Users\test\Desktop>, O Virus & threat protection
 Protection for your device against threat lave
 O Virus & threat protection > Current threats
-. 2 ’ : Wha
 ra & Account protection 0 current threa’
 Wesedtpelld -
 ff) Firewall & network protection thi

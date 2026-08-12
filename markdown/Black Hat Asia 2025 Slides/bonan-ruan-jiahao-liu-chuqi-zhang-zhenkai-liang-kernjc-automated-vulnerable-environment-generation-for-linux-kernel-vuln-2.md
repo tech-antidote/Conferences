@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:03:50Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Bonan Ruan & Jiahao Liu & Chuqi Zhang & Zhenkai Liang_KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities.pdf` (30 pages)
 
-
 ## Slide 1
 
 # KernJC: Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities
@@ -397,7 +396,6 @@ ASIA 2025
 black hat OVERVI EW,O F-KERN J C
 — Generate
 => Used by
-( scg. )
 Vulnerability
 EEo
 CVE Info —
@@ -687,11 +685,9 @@ iN OS DCC (pirect code-tevel Configs)
 Configs HRC (Hidden Reachable Configs)
 H (Hidden Configs) HSC (Hidden Configs with select Relation)
 val HDC (Hidden Configs with depend Relation)
-LO ‘ 4
 7
 SA HRC
 Core Netfilter Configuration
-HDC — TO
 ```
 
 ## Slide 25

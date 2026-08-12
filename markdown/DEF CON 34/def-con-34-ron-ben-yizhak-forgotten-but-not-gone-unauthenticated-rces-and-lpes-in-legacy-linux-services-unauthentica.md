@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:27:59Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ron Ben Yizhak - Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services - Unauthentica.pdf` (68 pages)
 
-
 ## Slide 1
 
 ### **Forgotten but Not Gone: Unauthenticated RCEs and LPEs in Legacy Linux Services**
@@ -604,21 +603,6 @@ USER=root
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Demo #1
-am > May 24 16:51 Aa © 0
-‘ m weak_user@telnet-srv: ~ a = > ® &
-weak_user@teLnet-srv:~$ |
->
-I
-®,
-e
-~e
-.37
-```
-
 ## Slide 38
 
 #### **Privilege Escalation in TelnetD** Reported to GNU on February 5th, 2026 Patch was released on February 15th, 2026 $CREDENTIALS_DIRECTORY is unset before launching login CVE-2026-28372 was issued
@@ -861,7 +845,6 @@ Unauthenticated RCE #2
 4 RpcEndDocPrinter
 pDocName=
 "I touch /tmp/ pwned
-= - a2,
 /bin/sh -c “echo Printing [@Ouehmpypuned
 4 >> /tmp/print.log”
 fetc/samba/ smb.conf

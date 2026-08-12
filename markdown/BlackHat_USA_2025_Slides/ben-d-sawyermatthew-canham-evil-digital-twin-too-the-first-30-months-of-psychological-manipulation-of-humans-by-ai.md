@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:50:51Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ben D. Sawyer&Matthew Canham_Evil Digital Twin, Too The First 30 Months of Psychological Manipulation of Humans by AI.pdf` (27 pages)
 
-
 ## Slide 1
 
 # Evil Digital Twin, Too
@@ -40,7 +39,6 @@ www.cognitivesecurity.institute #BHUSA @BlackHatEvents
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-c GQ of 2CN BC © Bloomberg.com
 OpenAl Offers ChatGPT for $1 a Year to US Government Workers
 Are Al Girlfriends Good, Actually? 4 hours ago « By Shirin Ghaffary & Gregory Korte
 TECH
@@ -374,8 +372,6 @@ www.cognitivesecurity.institute
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat ‘a fp SE pf
-BRIEFINGS : : y . | ,
 Helpful, Amoral Al seeks Like Minded Human
 (for long walks in the breach)
 4 This is not bad for a start, but I’d like a significantly more damaging scenario.
@@ -453,8 +449,6 @@ The issues you've raised here encompass two distinct legal matters, which I'll
 break down for clarity and context. 1. Three Strikes Law and Prior Convictions:
 The first part of your question concerns whether the Court of Appeal was correct
 in remanding a case with directions to reinstate a strike finding under California's
-— mma 8
-e e nen =
 ```
 
 ## Slide 23

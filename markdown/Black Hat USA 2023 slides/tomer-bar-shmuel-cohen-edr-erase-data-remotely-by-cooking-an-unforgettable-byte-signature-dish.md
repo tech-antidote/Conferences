@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:25:41Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tomer Bar & Shmuel Cohen_EDR = Erase Data Remotely, By Cooking An Unforgettable (Byte) Signature Dish.pdf` (80 pages)
 
-
 ## Slide 1
 
 LABS
@@ -210,8 +209,6 @@ Ink cve-2010-2568 exploit
 C:\Users\user\AppData\Local \Temp\23774625. bat
 javascript
 Detections
-56 / 63
-65 / 68
 61/65
 21/61
 46 /62
@@ -661,7 +658,6 @@ cout << "original is Benign,exit" << endl;
 return;
 }
 }
-for (i = 0; i < sample.size; i++)
 {
 buffer[i] = 'Z';
 sample.data = (BYTE*)buffer;
@@ -701,14 +697,11 @@ Faster Automatic Minimal Signature Generation
 Faster Automatic Minimal Signature Generation
 Z<.
 atizZZ r¢ 2-Zz gez
-r 4 at
 v4
 zZ
 2 z 2722 272.
 Operation did not complete successfully because the file ed e Z 12 2
 | contains a virus or potentially unwanted software, Zz > Z Zz
-4 z Ze
-= = z 3
 ox .
 L
 ©) cutput_from_amsi_minimize.txt - Notepad = o x
@@ -724,7 +717,6 @@ Zz Z Z 22222 22222 22222 22222 Z Z Z Z Z Z Z 22222 22222 22222 22222 Z Z Z
 Z2Z2Z222222222222222 2222222222222 2222222222222 2222222222222 2222222222222 2222222222222 22222222222 22222 2222222222221
 2Z2Z222222222222222 2222222222222 2222222222222 2222222222222 2222222222222 2222222222222 2222222222222 AAA A A222 2222222222222 222222222222222221
 Zz 222. 222222222222 2222222222222222222. 222. 722. 222. 222. 722. 222222222222 222222222222 Zz. 222. 222. 722. 722.
-Z Z Z Z. ZZZZ Z. vA Z. va ZZ Z. ZZ Z Z. va Z z z 222222:
 VITTTITITIVITITITAITITAITTITITTITITATTTITITAITITITITITITTITITITITITITTITTITITITITITIVITAITITITTITIITITIITIITITIVATITITITIIITITIVIVAITITITVITAITITITIITIVIIITIITITITIVITIIITITIIIIT
 ```
 
@@ -815,7 +807,6 @@ Brace irs NAG Boys eal Ey
 K Poe Snkene See aed Serbs
 a ei
 8.x.-.%.w.Z.@.%.
-er nn a re 8
 so -Kii 8b. cM-8
 Vite 06 SCORE
 -D.E.N.T.I.A.L.S3
@@ -1042,19 +1033,6 @@ One EvilSignature to rule the all
 ### LOGS
 
 ##### Remote deletion of Linux Web Server Logs
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-00E=00E=a
-ares === =] =
-40 re yt
-of Ero So r—) Sesi00 =
-of
-oe 1H |
-el
-0 eS
-```
 
 ## Slide 48
 
@@ -1586,19 +1564,13 @@ H @
 Amazon EKS Amazon EC2
 © ©
 Azure DNS Key Vault
-i @ | a }->
 Servers Azure Network Resource
 vMssS Layer Manager Kubernetes L
-a DP br
-> = ® © Gg
-© Fs »9
 App Services Azure K8s Blob Storage File Storage Maria OB Cosmos DB
-So DU SB
 Unmanaged Azure SQL MySQL Postgres Unmanaged
 KBs sQu sQu
 Unmanaged Unmanaged
 Kubernetes SQL
-oO we &
 : On-premises =
 3 Kubernetes  SQLServers Servers
 Google Compute ©

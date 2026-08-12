@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:20:44Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Thomas Dubier_Tales of a RCE in a video game_Compressed.pdf` (66 pages)
 
-
 ## Slide 1
 
 1
@@ -280,7 +279,6 @@ HEXACON 2024
 Game assets handling #SYNACKTIV
 =~ Downloading map. 33% copiés
 Sule
-a > =
 ```
 
 ## Slide 15
@@ -714,7 +712,6 @@ message type
 ‘compressed by net layer
 single recipient
 = SYNACKTIV
-00 ol 02 03 o4 05 06 oF
 Magic cRC Frameld Frameld Flags
 nFrame Length
 Frame data
@@ -1524,7 +1521,6 @@ ar’ S bc-leak-in-character-2.js nwmain.exe
 process Expl
 not defined
 Sa a
-ae Ss &
 coke] CEA IEW) WTVEX PI OTECa Eo python-3.12.0...
 -1 poc-leak-in-character-2.js nwmain.e
 Ts A world-class dynamic instrumentation toolkit
@@ -1542,7 +1538,6 @@ Enhanced Edition
 4:10PM
 orp
 ©) @ BOS ctrl droite
-10°C Fortepluie A G to @ a
 P& Tapez ici pour effectuer une recherche
 ```
 

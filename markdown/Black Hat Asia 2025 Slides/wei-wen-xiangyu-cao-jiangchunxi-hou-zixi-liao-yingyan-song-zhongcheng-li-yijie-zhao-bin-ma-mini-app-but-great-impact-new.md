@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:47:36Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Wei Wen & Xiangyu Cao & Jiangchunxi Hou & Zixi Liao & Yingyan Song & Zhongcheng Li & Yijie Zhao & Bin Ma_Mini-App But Great Impact New Ways to Compromise Mobile Apps.pdf` (26 pages)
 
-
 ## Slide 1
 
 Mini-App But Great Impact: New Ways to Compromise Mobile Apps
@@ -235,8 +234,6 @@ OQ Mini-App Runtime
 Super-App 7
 : Malicious :
 fos] [ce
-L. ‘B | |
-Ga 3 :
 quick open
 OG
 Credential Leak
@@ -298,7 +295,6 @@ O38 XY
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-i i, IL / le
 “plackhat
 ASIA 2025
 3. Further Exploit
@@ -541,7 +537,6 @@ this.setData({isRequesting: false});
 },
 });
 “return Array.prototype.src_includes.call(this, search,
-Index) ; if (n) { *
 e(r,t); \
 yo : n(uc(t));
 call success }
@@ -602,18 +597,6 @@ Strictly control the access authorization for Mini-Apps, including access rights
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-4 A fz aS Ath 7 [77 \ bey _
-a ay / y 4 oa <
-”, = ——
-p/ , 4a a
-\ Uf . y, 7
-" \ \ Sp ? i a.
-ar \ \ fi / | f LP os
-7 7 /,* i
-= “ é > —_
-[= Sj 9 . * a
-, _ ~~ J °
-yg Pe : — Ma - “ o
 7
 pbx hat
 ASIA 2025

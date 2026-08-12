@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:05:07Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hyeji Heo & Sungchan Jang & Byungwoo Hwang & Jinyong Byun & Kuyju Kim_Operation BlackEcho Voice Phishing Using Fake Financial and Vaccine Apps.pdf` (81 pages)
 
-
 ## Slide 1
 
 # Operation BlackEcho :Voice Phishing using Fake Financial and Vaccine Apps
@@ -1110,7 +1109,6 @@ ontro .
 =P Outgoing
 Control
 <> Call blocking
-202 s s02°9% wt ws 2S
 cx PSBOMoeroeenos
 bom 62% } 'SBEHGSroeeoosg
 a ©CO¢zsBoucerosenuos
@@ -1221,16 +1219,12 @@ ASIA 2025
 (6) Take the victim's money
 “* Finally, attacker sends a cash collector to collect the victim's money.
 ©
-= 4 <p
-Pt AWS 2B Q a ~ soon
 |e | Teil Se °
 Infected inl ? ih Infected phone
 Phone List SFA location on
 iam Google Maps
 oa ©
-Be fe ®
 isan | * Qoanven | ; e+
-2 > maa - ZA nus e 7 —
 Google @ yee
 f Control Server— Show Map Menu } 63
 ```

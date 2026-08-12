@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:25:16Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Michael Harbison_Hello 1994 Abusing Windows Explorer via Component Object Model in 2023.pdf` (34 pages)
 
-
 ## Slide 1
 
 **Hello 1994: Abusing Windows Explorer via Component Object Model in 2023**
@@ -288,9 +287,7 @@ Target: spec% /q /c"\\RECYCLER.BIN\files\x32dbg.exe"
 
 ```text
 Pre and Post USB Infection
-~I VM + | Manage FA
 Home Share View Drive Tools
-€ ’ ® w& > RECON2023 (F:) > »- wv p
 © Pictures # * [] Name ° Date modified Type Size
 Montreslibeer Breweries Montreal Beer Breweries 5/1/2023 6:30 PM File folder
 | temp Research Documents 5/1/2023 6:30 PM File folder
@@ -323,7 +320,6 @@ II rights reserved. Proprietary and confidential in' % paloalto
 ```text
 Post USB Infection
 ~Il Vv + | Manage -F:\
-« v4 we > This PC > RECON2023 (F:) vy vo
 Hl Desktop # * [] Name Date modified Type Size
 & Downloads of ne» RECON2023 5/2/2023 10:58 AM Shortcut 2 KB
 “= Documents a
@@ -424,7 +420,6 @@ Hl Desktop 6 Windows can't find 'F:\ \ \RECYCLER.BIN\files'. Check the spelling 
 USB Device Recycler bin folder
 688 WinHex - [Drive F:]
 a File Edit Search Position View Tools Specialist Options Window Help
-Deke ese | ome te | Mate a |) OMe | Swe oO | Bd Po
 Drive F:
 \ \RECYLER.BIN
 Name ~ - [ ea. | Size | Created | Modified | Accessed | Attr. | 1st sector |
@@ -432,13 +427,8 @@ Name ~ - [ ea. | Size | Created | Modified | Accessed | Attr. | 1st sector |
 ( TESTDRIVE / / / RECYCLER.BIN / files : Q
 x32bridge. x32bridge. x32dbg.exe
 dat dil
-qe oe Offset Of 4, 2 Bb @ (8) iG, (7 iB ol (Ay iB fe Dy me F -J 2 ~~ |
-PROrESE FAT32. O100FO00 5B 2E 53 68 65 6C 6C 43 6C 61 73 73 49 6E 66 6F 5 a
-Volume label: RECON2023 0100F010 SD OD OA 43 4C 53 49 44 20 3D 20 7B 36 34 35 46 ees =
 (645F
-0100F020 46 30 34 30 2D 35 30 38 31 2D 31 30 31 42 2D 99 FO40—-5081-101B-9
 Default Edit Mode 0100F030 46 30 38 2D 30 30 41 41 30 30 32 46 39 35 34 45 FOS—-OOAA002F954E
-State: orginal = GQ 1. 00Fo040 7D 00 00 00 00 00 00 00 «600 00 OO OO 00 OO OO OO MR.......
 rietary and
 ```
 
@@ -560,7 +550,6 @@ direct-cpu-clock-access
 Detections
 11/59
 7/60
-18 / 60
 9/60
 10/61
 Sort by ~

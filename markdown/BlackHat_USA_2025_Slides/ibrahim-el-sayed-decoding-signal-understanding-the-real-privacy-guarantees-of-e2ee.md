@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:55:53Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ibrahim El-sayed_Decoding Signal Understanding the Real Privacy Guarantees of E2EE.pdf` (86 pages)
 
-
 ## Slide 1
 
 ### Decoding Signal: Understanding the Real Privacy Guarantees of E2EE
@@ -134,7 +133,6 @@ biSekhat
 BRIEFINGS
 Sending a mail
 Sender
-To: aS F
 sendgs—_> an —routes—>
 Mail company
 ire:
@@ -164,7 +162,6 @@ Bob
 Directory
 look up
 (as) Message Process Services
-F Be >
 sends——> —routes>
 bo
 Processing
@@ -456,7 +453,6 @@ How it works - Messages
 ```text
 biSekhat
 BRIEFINGS
-S rN FY
 sends,
 —routes> .
 ° E>] Message Process Services
@@ -758,7 +754,6 @@ case .plaintext:
 
 ```text
 black hat : rs >
-BRIEFINGS . 4 , ce Q
 func decryptIdentifiedEnvelope(
 validatedEnvelope: ValidatedIncomingEnvelope,
 cipherType: CiphertextMessage 9
@@ -787,9 +782,6 @@ sendReactiveProfileKeyIfNecessary(to: sourceAci, tx:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q 7% S ~ y a a : (ff Lr =
-blackhat ie »~ Y if j g
-BRIEFINGS ee YW. ~ » % ’ hg
 @ func decryptIidentifiedEnvelope(
 validatedEnvelope: ValidatedIncomingEnvelope,
 cipherType: CiphertextMessage.MessageType,
@@ -884,8 +876,6 @@ editMessage
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat . rs > ]
-BRIEFINGS 4 ae Q Y MW A
 func handleRequest(
 request: MessageReceiverRequest,
 context: DeliveryReceiptContext,
@@ -981,9 +971,6 @@ Bob
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q 7 eos fp Vi ~~ 2»
-black hat ae 7’ 4 = y A r
-BRIEFINGS a= a 4 Q ff y Lod
 0 private Plaintext decryptInternal(
 Envelope envelope,
 long serverDeliveredTimestamp) {
@@ -1205,8 +1192,6 @@ callMessage !=
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-black hat 2 y x Y
-BRIEFINGS . Ua ee, q / 4
 private async innerDecrypt(
 stores: LockedStores,
 envelope: UnsealedEnvelope,
@@ -1242,7 +1227,6 @@ DI SRISENCS a > *
 if (
 servicelIdKind === ServiceIdKind.PNI &&
 envelope.type !== envelopeTypeEnum. PREKEY_BUNDLE
-at ooo J
 if (envelope.type === envelopeTypeEnum.PLAINTEXT_CONTENT) {
 log. info( decrypt/${logId}: plaintext message );
 const buffer = Buffer.from(ciphertext );
@@ -1407,7 +1391,6 @@ ESE,
 Mobile
 a
 Processin
-Aho Z ‘
 ```
 
 ## Slide 67
@@ -1482,7 +1465,6 @@ editMessage
 
 ```text
 blackhat \ > Y ,
-BRIEFINGS . Ua ee, % 4 y,
 message SyncMessage {
 optional Sent sent
 optional Contacts contacts
@@ -1763,7 +1745,6 @@ bisek hat
 BRIEFINGS
 Envelope with SyncMessage
 &> Message Process Services
-A =o of
 & —> z —routes>
 Processing
 Mallory
@@ -1783,7 +1764,6 @@ Mallory
 
 ```text
 blackhat \ > Y ,
-BRIEFINGS . Ua ee, % 4 y,
 message SyncMessage {
 optional Sent sent
 optional Contacts contacts
@@ -1818,7 +1798,6 @@ Fix commit: <u>https://github.com/signalapp/Signal-Android/commit/ac10ff4cbe1312
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Denes “s YW. ~~ ‘Q f g FA
 0 private fun validateSyncMessage(envelope: Envelope, syncMessage: SyncMessage, localAci:
 Result {
 1]
@@ -1826,7 +1805,6 @@ Result {
 if (sourceServicelId != localAci) {
 return Result.Invalid("[SyncMessage] Source was not our own account!")
 }
-if (syncMessage.sent != ){ ... }
 if (syncMessage.read.any { it.senderAci.isNullOrInvalidAci() }) {
 Fix commit:
 ```

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:28:00Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhibo Liu & Yuanyuan Yuan & Xiaofei Xie & Tianxiang Li & Wenqiang Li & Shuai Wang_BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables.pdf` (41 pages)
 
-
 ## Slide 1
 
 # BTD: Unleashing the Power of Decompilation for x86 Deep Neural Network Executables
@@ -241,14 +240,7 @@ executables.
 1
 | as
 . [
-==] | | | oy
-Bre —bre—al | | —— | | |
-C= —rE HHAh | ar I | |
-1 f (| | J [ ]
-| I | I= |
-wel c zi | | t 4 1 | |
 a —
-—_ =] “ll a 5
 (a) Glow (b) TVM -O0 (c) TVM -O3 (d) NNFusion
 Figure 2: Compare CFGs of a Conv operator in VGG16 compiled by different DL compilers. TVM refers to enabling no
 optimization as “-O0” while enabling full optimizations as “-O3”. Glow and NNFusion by default apply full optimizations.
@@ -283,18 +275,9 @@ V = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v46), v53), se
 v162 = _mm_add_ps(_mm_mul_ps(*(__m1 )(v8 + 4 * yi, V53)i5 5
 /163 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * ), v53), ye
 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v49), v53), 6
-= _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * ), v53), 5
 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * ), V53)5 6)5
 (__m128)*(unsigned int *)(v7 + 4 * v29 + 1536);
 _mm_shuffle_ps(v54, v54, @);
-7 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v42),
-58 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v45),
-9 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v46),
-@ = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v47), v5
-1 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v48),
-2 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v49),
-3 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * v5@),
-4 = _mm_add_ps(_mm_mul_ps(*(__m128 *)(v8 + 4 * 1);
 (__m128)*(unsigned int *)(v7 + 4 * v29 + 2048);
 _mm_shuffle_ps(v56, v56, @)3
 Decompile with IDA

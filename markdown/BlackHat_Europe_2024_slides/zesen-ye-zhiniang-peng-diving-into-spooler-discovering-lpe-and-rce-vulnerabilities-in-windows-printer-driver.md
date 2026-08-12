@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:47:41Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/ZeSen Ye & Zhiniang Peng_Diving into Spooler Discovering LPE and RCE Vulnerabilities in Windows Printer Driver.pdf` (71 pages)
 
-
 ## Slide 1
 
 Diving into Spooler: Discovering LPE and RCE Vulnerabilities in Windows Printer Driver
@@ -252,11 +251,9 @@ Complex?
 i ?
 Rendering? Bugs!
 mapping p Bag: fe
-it ¥ . it \
 DevModeMap Printer Config wut
 oct} Rooeweiee ek {GPo/PPD}
 uavascript
-iu L 4
 Bidi Extension
 heen Bidiedension |,
 avaSeript)
@@ -335,7 +332,6 @@ printer driver
 ```text
 RCE Attack Scenario (RCE over SMB)
 Computer A Computer B
-] Py Malicious XPS = | —
 Print API : —_7
 SMB Shared
 printer driver
@@ -670,7 +666,6 @@ PrintXPS — Input Generation
 XSD - XML Schema Definition #: CrPath ;
 fa AG Path
 "| 6> Path.RenderTransform (0.1
-g #2) 9) > Matrixtransform ae ]
 A §|) {ale matrix st.Matrix
 > Path.Clip (0.1 CT-CP Geometry & |
 Commonly used to validate XML formats. (BAB @ Pathccometry T Pathccomety © |

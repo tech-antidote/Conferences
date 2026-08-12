@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:27:48Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android.pdf` (63 pages)
 
-
 ## Slide 1
 
 # **Bad io_uring: A New Era of Rooting for Android**
@@ -147,7 +146,6 @@ The BAD ito _uring
 Eduardo Vela... X
  @sirdarckcat
 "Why io_uring so bad?"
-€ C QQ © @ syzkaller.appspot.com/upstream/fixed anx*
 io_uring 17/161 A v x
 syzbot Linux v
 & Open [982] Subsystems| | & Fixed [4669]] | && Invalid [10858]] | ~/ Kernel Health| | / Bug Lifetin
@@ -171,7 +169,6 @@ USA 20253
 The BAD ito _uring
 ¢ Very buggy
 ¢ Active development, and ACTIVE exploitation
-€ Cc a
 Eduardo Vela... X
 @sirdarckcat
 "Why io_uring so bad?"
@@ -420,7 +417,6 @@ static bool io_identity_cow(struct to_kiocb *req) identity
 struct to_uring_task *tctx = current->io_uring; io_uring *
 struct io_identity *id; WUT
 _ y ; identity *
-LLL LL aD
 id = kmemdup(req->work.identity, sizeof(*id),
 GRP_KERNEL) ;
 io_init_identity(id); \ a iG J
@@ -691,7 +687,6 @@ return true;
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-RT NN eee
 black hat oe SOS B's g
 USA 2023 —y ‘ we
 The Memory Corruption Capability
@@ -804,11 +799,8 @@ Recap of The ito_uring Design
 ¢ The ring buffer is accessible to both userspace and kernel
 UserSpace
 pie Serco
-Ce LOL, /,
-w <n f ‘i
 o~
 g
-O- e *
 submission queud A CJ PS CE completion queue.
 S¢ %e
 ‘

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:18:52Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/David Berard & Thomas Imbert_0-click RCE on Tesla Model 3 through TPMS Sensors.pdf` (44 pages)
 
-
 ## Slide 1
 
 **0-click RCE on Tesla Model 3 through TPMS Sensors**
@@ -942,6 +941,5 @@ Fixes
 e
 BED = https: //www.linkedin.com/company/synacktiv
 wW https: / /twitter.com/synacktiv
-AD : i
 oy https: / /synacktiv.com
 ```

@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:24:30Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tiffany Rad & Austin Shamlin_ Civil Cyber Defense Use Your Resources to Defend Non-Profits as They Combat Human Trafficking and Subvert Authoritarian Regimes.pdf` (26 pages)
 
-
 ## Slide 1
 
 ##### Civil Cyber Defense: Use Your Resources to Defend Nonprofits as they Combat Human Trafficking and Subvert Authoritarian Regimes
@@ -364,58 +363,6 @@ Sextortion is one of the fastest growing crises among teenagers in the U.S. Sinc
 ## Slide 24
 
 #### **Operation WESTKEG** HOUSTON
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Legend t '
-2m Gooyle Maps
-wn
-i
-° .
-. 5: .
-a «
-q
-. ** . oh q
-r Night Club from > -s .
-wPag per ? . .
-a
-;
-77 5 v
-, } ce
-Py * ;
-5 ;
-‘
-i : Ty, Tn
-: ;
-q > “* . *o
-. . .
-* * -_ °
-_— a é Z rad oe
-. .
-: - “thea
-5 es -¢ — . - oS
-aaa One Oi . ~~ o> ap: ed " . ‘ . om .
-, y a ooe r se =. y pe ee
-* a4 eer <
-4 : * wae x. < s
-¢ . aire Ae : aoa 4 : | a r
-‘ . ‘ Eh
-: t yo ¢
-~ P
-Operation WESTKEG
-HOUSTON
-°
-3 o
-i a. +o
-: . z
-Ses
-wie
-a
-.
-‘a
-.
-```
 
 ## Slide 25
 

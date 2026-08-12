@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:59:50Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Qibo Shi&Victor V&Wei Xiao&Zhiniang Peng_Diving into Windows HTTP Unveiling Hidden Preauth Vulnerabilities in Windows HTTP Services.pdf` (75 pages)
 
-
 ## Slide 1
 
 ## Diving into Windows HTTP: Unveiling Hidden Preauth Vulnerabilities in Windows HTTP Services
@@ -367,7 +366,6 @@ v2 = (struct _HTTP_REQUEST_V2 *)realloc(v3, BytesReturned); // ===============> 
 Q
 blackhat : me
 BRIEFINGS - \
-Se ; 2
 Case Study — CVE-2024-43512
 D:\>python request.py 192.168.217.2Uu
 <?xml version="1.0" encoding="utf-8" ?>
@@ -472,7 +470,6 @@ Causes DoS by entering an infinite loop.
 Q
 blackhat : me
 BRIEFINGS - \
-~ 7 2
 ig.
 Case Study -- CVE-2025-27471
 D:\>python upnp_normal.py 192.168.217.150
@@ -960,11 +957,9 @@ I] ¢ = _InterlockedExchangeAdd((volatile signed __int32 *)(*((_QWORD *)t + 1011
 42 = *((_QWORD *)this + @x3F3),
 = +1,
 *((_BYTE *)t + 8097) = 1,
-&& 43 <= *(_DWORD *)(v42 + 208) )
 "if ( 1(*(_intea (_fasteall **)(w3_co ))(*(_QWORD *)this + 232164))(this) )
 = (void (_fastcal )(_inte4, _int64, __int64))(*((_QWORD *)this + 1009) + 656164);
 45 = *(_DWORD *)(*(_QWORD *)(*((_QWORD *)this + 6) + 40164) + 36164);
-if ( I= 4)
 :
 Max ref count is 0x1366
 if failed
@@ -975,7 +970,6 @@ goto LABEL_92;
 e Unavailable";
 )this + 8);
 es
-1 + 624);
 ```
 
 ## Slide 50
@@ -1225,7 +1219,6 @@ Cl
 a | DNS Server
 {|
 443(HTTPS)
-fo) )\ =
 KDC Proxy
 Server
 =S
@@ -1327,11 +1320,9 @@ KpsSocketRecvDataloCompletion {
 t dword18 = a1->cur_size_18h;
 if ( (__int64)pvoid1® + dword18 - al->cur_buf_28h - (a1->dword24 != @) >= a2 )
 KpsDerPack return 1;
-if ( (a1->byte38 & 8) == @ )
 {
 v9 = al->cur_size_18h;
 ( ASNiEnc_KDC_PROXY MESSAGE ) if ( a2 > dwordis
-v9 = a2;
 v1@ = dword18 + v9;
 . 1-> i 18h = v1e;
 ASN1DEREncOctetString chelates sea
@@ -1425,16 +1416,13 @@ ca
 | 3]
 443 HTTPS
 A 3391 DTLS
-iz LY J
 {3 |
 443 HTTPS RD
 5 3391DTLS_ I Gateway
-ii L® J
 co
 = 443 HTTPS
 . 3391 DTLS
 {o)
-iz LY J
 ```
 
 ## Slide 66
@@ -1524,7 +1512,6 @@ Futher Authentication
 
 ```text
 2)
-black hat | a | “
 BRIEFINGS . ;
 Case Study -- CVE-2025-21309
 ProcessOutChannelOrWebS HandleSendResponseCompl CAAHttpServerTransport::Re
@@ -1638,7 +1625,6 @@ rip=O0007f£fd84747d1?
 r8=0000000000000006e
 r11=0000000e00000001
 rl4=000002c6ee9edd60
-iopl=0 nv up 61 ng nz na pe cy
 cs=0033 ss-002b ds=002b es=002b fs=0053
 neveort !mencpy+0x1?7 :
 QO007£fd* 8474701? 408919 mov

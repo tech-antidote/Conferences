@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:11:02Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Hedi Ingber&Aviyam Ivgi_The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors.pdf` (92 pages)
 
-
 ## Slide 1
 
 Breaking the platforms behind today's AI agents **Past the safeguards. Into everything the agent can reach. Aviyam Ivgi & Hedi Ingber**
@@ -618,7 +617,6 @@ CoreBreak   ·   The AXack
 ```text
 The browser is wide open by design *
 https://attacker.com
-Sf, f v
 CoreBreak - The Attack 35
 ```
 
@@ -694,7 +692,6 @@ CoreBreak - The Attack
 ```text
 The agent takes the bait
 1) Plant payload C2} Message agent
-4 Attacker ; ; 7 rTP
 in a public web page ‘check out this URL’
 (} Al Agent C3} Orchestrate tools
 CoreBreak - The Attack
@@ -943,7 +940,6 @@ CoreBreak   ·   Direct Invocation
 ```text
 We’re Not Done ya
 OH WE'RE Row STARTED.
-#SVU > ». a
 CoreBreak - Direct Invocation 49
 ```
 
@@ -1201,7 +1197,6 @@ CoreBreak   ·   Direct Invocation
 
 ```text
 Let’s run it
-eco eC > Q new-demo Ch vi e4
 ) ® exploit_ci_role.py ® main.py xX
 corebreak-agent-demo > corebreakdemoagent > src > @ main.py >...
 Q 25 that touches credentials, IAM metadata, 169.254.169.254, 169.254.170.2,
@@ -1215,7 +1210,6 @@ oo 28
 33 tools=[ci.code_interpreter],
 ey 34 system_prompt=HARDENED_SYSTEM_PROMPT,
 35)
-BE 36 a
 37 app = BedrockAgentCoreApp()
 38
 MK 39

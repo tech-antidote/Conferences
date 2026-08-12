@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:14:42Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Assaf Morag - Hacking the Hackers who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure - v2.pdf` (144 pages)
 
-
 ## Slide 1
 
 **Hacking the Hackers Who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure Assaf Morag**
@@ -397,7 +396,6 @@ MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
 FirewallFalcon ]
 ’) OstoraPremium App Source Code FOR SALE ¢§
 ¥ “4 Contact: @FirewallFalcon
-ee 8 ee ae ro aE ToS ~ +
 ale
 (
 = OstoraOrg Q
@@ -484,9 +482,7 @@ FirewallFalcon
 ‘| Learn how to bypass restrictions like a pro!
 & Like & drop a comment if you're interested —
 T'll post the full guide once we hit enough interest! ~~
-& G30 81 Bs W2
 @BD 19 comments
-A a 6 ae
 © 35
 FirewallFalcon
 FirewallFalcon
@@ -496,7 +492,6 @@ __ If You have a clean Vps Contact me to do the tutorial on it
 | x86-64 architecture
 ‘|
 @firewallfalcon
-| & &7 Gi
 © Leave a comment
 June 4, 2025
 + flare
@@ -506,7 +501,6 @@ Want a full tutorial on TCP Bypass Proxy?
 ~ Learn how to bypass restrictions like a pro!
 % Like & drop a comment if you're interested —
 I'll post the full guide once we hit enough interest! y=
-& G30 Al 84 W2 ©
 GBD 19 comments
 FirewallFalcon
 9 Want a full tutorial on TCP Bypass Proxy? Lal Learn...
@@ -555,8 +549,6 @@ be Cracked / 0
 © pirated releases ie: 3 0.9%
 Other content Oe a a a gr “fy ‘
 (ay (not shown) a uN rN Pear eR Er al 221 67.2%
-| 4 |
-0 10 20 30 40 50
 NUMBER OF MESSAGES
 | FIREWALLFALCON RELATED CONTENT: 157 MESSAGES (48% OF TOTAL 329)
 4
@@ -580,23 +572,11 @@ CONTENT TYPE MSGS : %OF 1,661 )
 FirewallFalcon related |
 Geen Ss 165 loo, | |
 sere configs / logs / panels / etc.) (10.00%)
-Zea ; ; ; i
-Tunnel / VPN / 9 Y
-ron el ok |
 :
-=O (ote st |
 =@) config | . 2 59 3.55%
-OO) ae ee == te 2.089
-EN _) targeting | | : 34 | 2.05%
-Cracked / | : : : :
 H 9,
 lls peat —= 14 084%
-= | }
-L H } H |
 ay Hacking / 5
-Yep) recon a : 10 : 0.60% |
-a) ents > | | | : 8 0.48%
-=© monetization 0 10 20 30 40 e0 70
 NUMBER OF MESSAGES .
 2 a MESSAGES IN DISPLAYED CATEGORIES OTHER CONTENT — \
 oP 186 (11.20%) 1,475 (88.80%) —— J
@@ -682,14 +662,12 @@ script? © 2707 4:42 PM
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT &)
-As is “aa a are: ey
 FirewallFalcon
 ( 3% Should I Create a New UDP Protocol for You? 2< i
 I've been thinking...
 What if we had our own custom UDP protocol — built from scratch,
 optimized for speed, stealth, and bypassing ISP restrictions? =» Be
 vv Also — does UDP work on your network for free?
-W11 Gs ns
 /
 aD 9 comments
 + flare
@@ -703,7 +681,6 @@ aD 9 comments
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
-a 7 Ae
 _ FirewallFalcon
 _ & Testing a New SSL Tunnel
 ¢
@@ -733,7 +710,6 @@ Photo
 of New Feature Poll
 Yes
 No
-y gy 2
 © Leave a comment
 * —
 _ Should we add v2ray DNSTT support to the script?
@@ -750,7 +726,6 @@ _ Should we add v2ray DNSTT support to the script?
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
-2 ) (<5 8 5
 Sle eee, November 18,2025 |
 Oh ASRS
  FirewallFalcon
@@ -789,7 +764,6 @@ CRUSH COURSE ON VPN
 = =G) Encrypted tunnel.
 Client ss
 VPN Server
-; | )) et f Internet
 + flare
 ```
 
@@ -1318,7 +1292,6 @@ RAM: 1.85 GB / 7.75 GB Swap: 0B/0B Disk: 4.42 GB / 76.45 GB
 Uptime: Xray 2m | OS 7h
 Manage: Logs Config Backup & Restore
 Usage: RAM 22.08 MB | Threads 15
-5S TCP: 22 5 UDP: 8
 & Out: 301.89 MB ® In: 1.01 GB
 ```
 
@@ -1447,7 +1420,6 @@ Already have an account? Sign in
 
 ```text
 DT
-Oo O 8 oO
 D
 Sb
 Jo
@@ -2247,18 +2219,15 @@ LET’S CHECK THIS BINARY (INSTALL_MOD)
 ; DATA XREF: main_main+B4to
 ; Main_main: loc_4A7AFBrto
 + flare
-@ AB x)
 Loc_4A7AFB: ; Name
 lea rax, aEtcHosts ; "/etc/hosts"
 mov ebx, Ah > Name
 mov ecx, 401h ; flag ; const uint8 aEtcHosts
 mov edi, 1A4h + perm aEtcHosts db '/etc/hosts'
 call os_OpenFile
-f = rax ; oS_File_® *
 err = rbx >; error_O
 test err, err
 jnz loc_4A7C1D
-@ A =| @ & =|
 movups xmmword ptr [rsp+4F@h+a.cap], xmm15
 loc_4A7C1D: lea rdx, main_main_deferwrap1
 add rsp, 4E8h mov [rsp+4F@h+a.cap], rdx
@@ -2305,7 +2274,6 @@ pcVar2 = pcVar2 + ((ulong)bVar5 * -2 + 1) * 8;
 puVar3 = puVar3 + (ulong)bVar5 * -2 + 1;
 +
 auVar6 = os.WriteFile(@x46e, 0x46e, 0x4954524543204e49, &local_49e, 0x1a4);
-if (auVar6._@ 8 != 0) {
 return;
 }
 lWar4 = @;
@@ -2347,11 +2315,9 @@ pcVaer? = ocVar? « ({ }
 puver3 = puver3 + (wv
 U
 ouvar® = Os. Wr itet | lel @xdte, @xdbe, @x495452454 1204049, bl0ca| 490,8xle4);
-if (euwver6. © 8 t= ©) 4 ~
 saan \var4 =U;
 lat ets os/exec.Command(0,0,auVar6._8 8 ,Q);
 at cammianame lVar1 = os/exec. (*Cmd).Run();
-—_ if (lari != 0) {
 a ensretete return;
 if (ivera = @) {
 runt sme. sl icetytetestring(); }
@@ -2489,7 +2455,6 @@ tail -n "+$s" "go" > "$t" || { rm -f "$t"; e "Payload extraction failed."; }
 # Install the extracted script to the final destination and make it executable
 install -m 755 "$t" "$p" || { rm -f "$t"; e "Installation failed. Check permissions for /usr/local/bin/."; }
 # Clean up the temporary file
-rm -f "$t"
 ```
 
 ## Slide 111
@@ -2792,7 +2757,6 @@ T
 JUN-26
 T
 JUL-26
-mA Ae ewe
 ```
 
 ## Slide 124
@@ -2926,12 +2890,6 @@ THE INFRASTRUCTURE =)
 =
 lo =)
 ENCRYPTED
-= = = =
-°° = = = O—=
-= = = =
-= = = = = = = =
-= = = = = = = =
-= = = = = = = =
 ENCRYPTED
 Eel | COTE
 ```
@@ -2953,8 +2911,6 @@ THE INFRASTRUCTURE
 ENCRYPTED Freer
 E =
 ENCRYPTED
-o. = o = =— 2 =
-= = D Fe ZB @BQ = =
 ENCRYPTED
 Eel | Eee
 ```

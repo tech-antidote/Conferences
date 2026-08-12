@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:02:53Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Vedang Parasnis_Kernel-Enforced DNS Exfiltration Security Framework Built for Cloud Environments to Stop Data Breaches via DNS at Scale.pdf` (30 pages)
 
-
 ## Slide 1
 
 **From Packet to Process: Hunting and Disrupting DNS Tunnelling and C2 in Linux Kernel with eBPF and AI at Scale**
@@ -147,7 +146,6 @@ am9liHh.hack.com
 —_———_——_—_>
 a aey Z3 internet [oo —|
 amginnnackcom Se i. — ee
-7 = [se | iss —|
 <q—_—
 = Response Ei’ iia
 Infected Host fod Recursive 3 Authoritative : Attacker
@@ -189,8 +187,6 @@ encoded in base64 as hostname label
 
 ```text
 2)
-blackhat \; Se ae y jf
-BRIEFINGS % A > “2 y A
 Adversaries limited by DNS Protocol Specs
 UDP Packet Size 512 bytes (default) Up to
 4096 bytes (with EDNSO)
@@ -703,7 +699,6 @@ Response Time (ps)
 200 F
 150
 100 :
-T T T T
 T T
 Response Time —+—
 Mean = 316.233 ps = =
@@ -719,7 +714,6 @@ Precision, Recall, and F1 Score vs. Threshold
 —® F1 Score
 = Precision
 —# Recall
-t T t T t T t T
 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
 Threshold
 ```

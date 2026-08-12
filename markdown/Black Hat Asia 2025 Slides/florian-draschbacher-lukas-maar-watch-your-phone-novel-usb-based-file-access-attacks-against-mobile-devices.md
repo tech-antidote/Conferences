@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:04:07Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Florian Draschbacher & Lukas Maar_Watch Your Phone Novel USB-Based File Access Attacks Against Mobile Devices.pdf` (36 pages)
 
-
 ## Slide 1
 
 WATCH YOUR PHONE Novel USB-Based File Access Attacks Against Mobile Devices

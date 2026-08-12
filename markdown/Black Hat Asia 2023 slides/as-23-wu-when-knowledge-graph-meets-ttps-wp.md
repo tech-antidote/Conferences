@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:04Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-wp.pdf` (204 pages)
 
-
 ## Slide 1
 
 # TTPExtrator vs. ChatGPT

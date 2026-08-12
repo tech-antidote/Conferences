@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:52:48Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tomer Bar & Shmuel Cohen-EDR Reloaded Erase Data Remotely.pdf` (94 pages)
 
-
 ## Slide 1
 
 **EDR =  E** rase **D** ata **R** emotely
@@ -194,8 +193,6 @@ Ink cve-2010-2568 exploit
 ] C:\Users\user\AppData\Local \Temp\23774625.bat
 javascript
 Detections
-56 / 63
-65 / 68
 61/65
 21/61
 46 /62
@@ -347,7 +344,6 @@ L av9Aqa“» a”” FA A AQ 4% 1404” 10-14-24 266
 <?phpeval(S POST[ 80
 cdDrivestartwscript"\."exit 77
 PKa™¥a™ | 64
-aCE,ELFa~»a~2a~2 a »>a"? x@ @ @sa"o a? @ 4 24
 X50!P%@AP[4\PZX54(P*)7CC)7}SEICAR-STANDARD-ANTIVIRUS-TEST-FILE! SH+H* 17
 <evalrequest("")%> 14
 <?phpeval(S_REQUEST[ 13
@@ -386,7 +382,6 @@ Shortest signatures with minimum special types
 special
 length
 EvilSignature
-he |] &
 15|{\rtf1{\shpt\sp
 92
 WDVPIVAIQEFQWzRcUFpYNTQoUF4pNONDKTd3JEVIQOFSL\
@@ -396,7 +391,6 @@ a3
 frampynput.keyboardstr(key
 a1
 //operasanpiox.bravepages.com/20190614890563891.xls
-ee ee ee
 a7
 cdDrivestartwscript"\."exit
 20
@@ -482,7 +476,6 @@ cout << "original is Benign,exit" << endl;
 return;
 }
 }
-for (i = 0; i < sample.size; i++)
 {
 buffer[i] = 'Z';
 sample.data = (BYTE*) buffer;
@@ -827,8 +820,6 @@ Remote deletion of Linux Web Server Logs
 Remote deletion of Linux Web ‘
 o-- | or) 9
 00m CDEC > ae fi) ===>)
-OO ga: F cl a
-0 05=0 0k 00 On Os
 ```
 
 ## Slide 38
@@ -1061,11 +1052,9 @@ i = Networks
 Cc 4.
 Desktops
 Storage
-w ab 2
 Telex Orr
 Ontne
 Shopping
-i bg] E:
 ale ca Detad
 Clicks treams =
 Smartphones
@@ -1265,7 +1254,6 @@ THERE'S MORE!
 VMWARE - Permanent Denial Of Service - Demo
 Windows Security
 it View VM Tabs Hel
-» i Pas
 Scan options
 John@john-virtual-machine: -/Desktop
 sh
@@ -1334,7 +1322,6 @@ Learn more
 2 Affected items:
 ¥ file: C\wamp64\bin\mariadb\mariadb 10.6.5\data\reviews
 A \user_reviews.MYD
-Al v OF
 N OK
 Start actions
 60
@@ -1454,7 +1441,6 @@ Future work - the sky Is not the limit
 Microsoft Defender for Cloud
 Secure your hybrid-cloud and multicloud workloads
 ©
-ie | Zs, 4d
 Azure Network
 VMSS layer
 om Lid
@@ -1617,7 +1603,6 @@ Windows Apache
 MySQL MYIASM
 a a & “amp mysql default passwe| localhost Mariape /re x |} localhost wy
 < ED localhost/phpmyadmin/index.php?route=/8croute=%2F &db=reviews&table=user_review&server=2 i - oO
-Wi = a x
 Php| me
 & ry : U Virus & threat protection
 q U Virus & threat protection =
@@ -1639,7 +1624,6 @@ a Q
 bom |2 Acti Lea more ' Affected items:
 © 4 Affected items: file: C\wamp64\logs\php_error.log
 i file: C:\wamp64\bin\mariadb\mariadb10.6.5\data\reviews\user_reviewMYD
-i < } ok
 | oK
 on setting:
 Tul
@@ -1739,7 +1723,6 @@ Second report to Microsoft  - CVE-2023-24860 patch bypass
 
 ```text
 I second report to Microsoft - CVE-2023-24860 patch bypass
-~e oe eee oe 0 MMe
 ```
 
 ## Slide 79
@@ -2061,7 +2044,6 @@ SAC Shmuel Cohen
 eS
 : OI
 Ce)
-; a=) ie
 =n
 axl2 YP
 SS,

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:09:42Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Frank Wu&xia0o0o0o&Zhiyun Qian_Burning Tears of PHP's Memory Hardening.pdf` (46 pages)
 
-
 ## Slide 1
 
 ### **B L A C K H A T U S A 2 0 2 6 · B R I E F I N G S Burning Tears of Burning Tears of PHP's Memory PHP's Memory Hardening Hardening**

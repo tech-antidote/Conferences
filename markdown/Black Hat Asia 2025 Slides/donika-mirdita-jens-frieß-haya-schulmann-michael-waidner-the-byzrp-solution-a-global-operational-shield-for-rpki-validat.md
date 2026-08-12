@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:04:43Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Donika Mirdita & Jens Frieß & Haya Schulmann & Michael Waidner_The ByzRP Solution A Global Operational Shield for RPKI Validators.pdf` (68 pages)
 
-
 ## Slide 1
 
 **The ByzRP Solution A Global Operational Shield for RPKI Validators** <u>Jens Friess</u> |  Donika Mirdita |  Haya Schulmann  |  Michael Waidner
@@ -257,7 +256,6 @@ standard on all its systems before the end of 2024 to upgrade...
 ```text
 2)
 ASIA 2025
-XN ~ nie y
 blackhat - RPKithe most promising BGP security add-on
 The Register’
 a Capacity
@@ -395,7 +393,6 @@ repo starts
 crashing RPs
 Me local MMM consensus
 0+, union :
-Ne 5 > pO _.99
 19° WoT Ww 290: 70"
 ```
 
@@ -454,7 +451,6 @@ ant Output
 N SZ
 repository jitter
 local MEM consensus
-T qT T
 QW .9.9F,.98_.99,.99 .9S_.9B.98
 SOY" Qd"YF "QO" OF POS"
 537000 -
@@ -483,14 +479,11 @@ ASIA 2025
 Mae local
 200000 - union
 . MM consensus
-) * ve) 5 8)
-io” iB” 49 9° 0» 0» so
 3 nodes
 400000 +
 Ma local
 ' MM consensus
 S? ,.© 1.9079 {49 149 1.49 1.49
-oa Od Oo, A
 13 nodes
 ```
 
@@ -661,12 +654,7 @@ iD RP
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~\ 4 <e
 \ aN
-Eg \ LU ~=
-\ J a
-\ 7 - f
-\ ~ £ SS yy
 black hat Jp / op eel
 ASIA 2025 _ =a oy ne Security
 but RPs are security-critical!
@@ -682,11 +670,7 @@ ByzRP: Outsourcing Security
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-‘“ A =
 \ ‘
-g c 7 “a
-\ ~ - f z
-\ ~ x yy 4 ~ ZG
 blackhat r. i Vy ages
 ASIA 2025 me 4 Xen ne Security
 but RPs are security-critical!
@@ -750,7 +734,6 @@ Secure against **_f_ byzantine faults** based on voting threshold
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-blackhat ‘a — << G pf 2
 ASIA 2025 _ tify i gOonsensus~
 ```
 
@@ -767,7 +750,6 @@ resist **censorship / errors**
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-gQ N = “ fy ; “2; tl : ' y ; .
 blackhat — Jf a, x “ Onsensus-
 1-out-of-3 = union
 resist censorship / errors |
@@ -844,10 +826,7 @@ faster **removal**
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-~\ 7 Ps, ;
 \ aN
-\ . a
-\ , a . — = =
 XN ,
 \
 \
@@ -911,7 +890,6 @@ Summary
 bisek hat
 ASIA 2025
 —
-[| = a S
 Re | —)>> ——__—_-> —— > RPaaS
 iA
 SP

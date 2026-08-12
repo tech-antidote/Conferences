@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:17:25Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Federico Kirschbaum, Gaston Aznarez - Root From Kilometers Away Ubiquiti AirMax RCE.pdf` (62 pages)
 
-
 ## Slide 1
 
 # ROOT FROM KILOMETERS AWAY
@@ -59,10 +58,8 @@ converted_at: "2026-08-12T00:17:25Z"
 
 ```text
 HOW DID THIS STARTED? = Qbsession? You
-< @ wis Oo ®&
 Ve UNG, Vs VEIIVS 19:98 W/
 September 1, 2025
-< @ wis Oo &
 September 8, 2025
 € A LU1AQS or °
 December 11, 2025 <€ A LU1AQS Ck
@@ -93,12 +90,8 @@ F
 
 ```text
 HOW DID THIS STARTED? © Obsession? You
-< @ wis Oo ®&
 UES UNG, NYS YENIVS 19:08 W/
-i SEE THEM : “ id = ae
 ~ >) mt September 8, 20 2025
-’ : ~ 4 4 “ ye
-, " ;
 ; >
 \
 14:56
@@ -363,7 +356,6 @@ f
 =
 Control Frame
 | Hendec
-F Bo dy)
 B
 Vendoc Spe ciesc
 Ynfermetion Elem
@@ -682,8 +674,6 @@ break | AES- 42%-EBR decry pt |
 $s1_1 = &$s1_1[8]
 aes_encrypt($a@_18, out_ie_enc, &var_17@) \
 out_ie_enc = &out_ie_enc[@x18@]
-$s2_1 += 1
-ee Me Tel
 Validated with mtscan by Konrad Kosmatka:
 F o github.com/kkonradpl/mtscan/
 27
@@ -709,8 +699,6 @@ MAC Address: 44:d9:e7:6a:3a:43
 AES Key (derived): ff1db564cf91b27557ff9343ed1d4d16 (16)
 Decrypting
 [*] Cipher created
-Encrypted data: ca 44 6d Qe 37 58 6f 21 62 e@ c5 18 27 b5 cf 37 b1 89 af 52 ca Qa c3 3c c2 13 4f 1b Ge 52 2d 76 (32)
-Decrypted data: Of @1 44 d9 e7 6a 3a 43 Q1 @0 00 G0 OO BO BO BO Va 82 82 BO OO 44 d9 e7 6a 3a 43 OO QO 00 BO 20
 Parece que funciona je
 Epico
 Validated with mtscan by Konrad Kosmatka:
@@ -747,7 +735,6 @@ F o github.com/kkonradpl/mtscan/
 ```text
 FINDING AIRMAX NETWORKS (in-the-wild)
 © Network Map x
-26 26 0
 Leaflet | © OpenStreetMap
 @ Access Point @ Station @ Unknown Role
 Fit All Markers = one
@@ -1126,7 +1113,6 @@ POC FROM KILOMETERS AWAY v2
 ```text
 POC FROM KILOMETERS AWAY v2
 ISLA PUERTO MADERO
-V 10 en BA Is
 za de Mayo
 La Trastienda
 Inezuela
@@ -1136,7 +1122,6 @@ WAAAY AS
 opsedozy
 BAR SUR Tango Show
 s
-an w B
 g
 N
 a)

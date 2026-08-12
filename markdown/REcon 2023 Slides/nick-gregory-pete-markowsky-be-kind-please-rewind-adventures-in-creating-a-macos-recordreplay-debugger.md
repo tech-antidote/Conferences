@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:26:00Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Nick Gregory & Pete Markowsky_Be Kind, Please Rewind Adventures in creating a macOS recordreplay debugger.pdf` (53 pages)
 
-
 ## Slide 1
 
 Be Kind, Please Rewind Adventures in creating a macOS record/replay debugger
@@ -362,17 +361,10 @@ Operation Queue addOperation
 ate.
 +
 Operation
-oS * ee
-08 =9 08 = 17 0s = 0s = 93
 (ackoround ead) (uty tread) (vsernated tread) (userntracive tread)
-| | | |
-® ) @ o
 queue queve queve queue Key
 = os Grand Conral Despatch
-' ' ov
 E cores only Pork cores
-na Mt hi
-ae GIR OF ip
 Seong Mt Pro and Max (MIP) chips
 E ouster P clusters) Serato
 2or4 tread sts 4 thread shots each
@@ -593,7 +585,6 @@ Tracee Warpspeed Kernel
 . WM, lec], ETM, MbOTTet, DRI
 -ITR Le EE eee rT: werpeceed) Changed 0
 | Seti -eb-ervel er = eee Serving © Re
-ee ee ee em be |
 (0-H OTTER) or) eerpaered letemteg seecnli @(0:(8, SOMREEEOG | ;40ROEO, ©, AoURAEED, 7, 7, Reh DO],
 3, &, 2, Temeeenee, |, \embeRee ererT))
 | OCD Ob TRF: 4: ET rr: (eerpaeeed! Dt: forwarding mocell tele. |DeeHe, LleeeEee. 6 Get). 2. 7, Soe.
@@ -616,7 +607,6 @@ TP OTT): Ot ET may err: ;eermneerd) Chesed peeete 1]
 laietl acl, aOR 4c etd. 1 MRONT, |. |. (ee. BO feet Dotted
 POE @b-@0TE): tb GEE TOE eer (eerpupeed | Changed pager 1)
 0S) Ob ee es, eh =) \aeepeeed ~Metureiag 2 @ Gemeeice
-ie eo ee ee ee ee ee |
 OO) - Oe -eFTET) eT rr eerpemred) [eeerene teeee]! S(Be[ ERE ete, lees, © leTelee’, 4, 1 ee ee
 7, COT Det Deted, “TUPNET?, 1, §, NMOS. DREAD, be reel>
 peda tiet ae mea - -T: ‘rpeoned oper Sent forere t eetarel Lega Setr iegeltiecboewren ol i et)
@@ -654,8 +644,6 @@ dyld
 FRR oer Perce Ste eee en Cee rn at ee EP eo Se
 —— Wechewres Malerr ene ae ore oe AURORE sha Ph Lend Raime  E ae Fone hee Bastin Hd
 ths ge ogee phe sa eee * Tivwintes taered
-at ee er ee
-ee ee ot ede |
 s
 ses?
 :

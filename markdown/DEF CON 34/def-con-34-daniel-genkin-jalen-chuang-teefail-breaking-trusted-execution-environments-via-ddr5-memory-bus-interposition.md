@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:15:12Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Genkin, Jalen Chuang - TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition - TEEFail v1.pdf` (22 pages)
 
-
 ## Slide 1
 
 # TEE.fail: Breaking Trusted Execution Environments via Memory Bus Interposition
@@ -237,7 +236,6 @@ CMD pin Clock More Cable (~276 more pins)
 ‘Yektronix €SA7404 Communications Signal Analyzer sess B
 01 Dec 24 00:12:30
 Wwe |
-\ oA Kp
 More Cable
 ~2/6 more pins
 ```
@@ -261,7 +259,6 @@ MORE CABLE
 Interposer
 DIMM Slot
 WW
-12 kQ i
 ann >To Logie
 | |
 I]
@@ -271,7 +268,6 @@ Edge Connector
 (to Motherboard)
 DDR4 interposer DDR8& interposer
 < $1000 each with secondhand parts Mm
-A BB mt
 10
 ```
 
@@ -337,7 +333,6 @@ HW attacks where the adversary can only see the cipher text
 once and not while the system is changing the data.
 (tl;dr: we know our encryption sucks)
 » eae
-a Hd | < eT
 Weak Deterministic Encryption
 Same input becomes same output
 Plaintext

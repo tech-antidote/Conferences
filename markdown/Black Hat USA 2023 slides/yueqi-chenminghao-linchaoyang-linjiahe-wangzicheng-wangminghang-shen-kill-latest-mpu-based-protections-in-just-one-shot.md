@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:26:27Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yueqi Chen,Minghao Lin,Chaoyang Lin,Jiahe Wang,Zicheng Wang,Minghang Shen_Kill Latest MPU-based Protections in Just One Shot Targeting All Commodity RTOSes.pdf` (41 pages)
 
-
 ## Slide 1
 
 ### **Kill Latest MPU-based Protections in Just One Shot: Targeting All Commodity RTOSes**

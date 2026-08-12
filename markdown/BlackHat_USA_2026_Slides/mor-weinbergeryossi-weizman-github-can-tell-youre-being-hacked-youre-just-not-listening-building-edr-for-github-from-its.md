@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:13:01Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Mor Weinberger&Yossi Weizman_GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream.pdf` (46 pages)
 
-
 ## Slide 1
 
 GitHub Can Tell You're Being Hacked. You're Just Not Listening : Building EDR for GitHub from Its Own Event Stream
@@ -44,44 +43,6 @@ GitHub Can Tell You're Being Hacked. You're Just Not Listening : Building EDR fo
 _Based on OSV data_
 
 4
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-npm (41.7K)
-2)
-1)
-te
-fe)
-oo
->
-me}
-oO
-o
-(©)
-oO
-x
-UV
-oO
-7
-2)
-=)
-2
-co
-©
-=
-0)
->
-rie?
-cc
-=)
-=
-=)
-O
-Based on OSV data
-black hat
-4
-```
 
 ## Slide 4
 
@@ -335,9 +296,7 @@ permissions:
 
 ```text
 Same trust. Different object
-°° 7 ~_ a 7
 te |
-° 0 | :
 =" vil.2.3 NEW WO ene
 COMMIT app-v1.2.3.zip app-v1.2.3.zip
 (current) (previous)
@@ -347,7 +306,6 @@ Sa at
 Release assets
 IDARIE |
 MAIAT
-CW De be ALD i
 » VY ArrAve” |
 Same version string. Three different trust models.
 black hat
@@ -481,7 +439,6 @@ May 12, 2025
 rs
 DETECT
 release-asset-time-skew
-1 1 1 1 1 j
 08:14:22 08:45:37
 UTC UTC
 A 31m 15s
@@ -1037,7 +994,6 @@ github.com/supplychain-labs/github-threat-detector
 BRIEFINGS
 black hat
 THANK YOU!
-e . . e
 IN yossi-weizman in mown
 github.com/supplychain-labs/github-threat-detector
 black hat

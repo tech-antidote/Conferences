@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:51:01Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Quan Jin & Yingqi Shi & Mingjia Liu & Siyuan Liu & Guoxian Zhong-A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit.pdf` (52 pages)
 
-
 ## Slide 1
 
 A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit Yingqi Shi(@Mas0nShi), Mingjia Liu(@cyberestro), Quan Jin(@jq0904) DBAPPSecurity
@@ -244,9 +243,7 @@ RDP Virtual Channel
 * XPS Printing Virtual Channel Extension [MS-RDPEXPS] *  Multiparty Virtual Channel Extension [MS-RDPEMC
 * Plug and Play Devices Virtual Channel Extension [MS-RDPEPNP} * Clipboard Virtual Channel Extension [MS-RDPECLIP]
 * Video Virtual Channel Extension [MS-RDPEV} * Audio Output Virtual Channel Extension [MS-RDPEA]
-. i i i M - ] . . _
 Audio Input Virtual Channel Extension [MS-RDPEAT * Remote Programs Virtual Channel Extension [MS-RDPERP
-Cc ited R ti V2 Ext i [MS-RDPCR2 . . : - _
 . omposited Remoting xtension * Dynamic Channel Virtual Channel Extension [MS-RDPEDYC
 = USB Devices Virtual Channel Extension [MS-RDPEUSB . . . _ .
 « File System Virtual Channel Extension [MS-RDPEFS
@@ -341,12 +338,10 @@ Coverage +
 l mstsc.exe | onee
 | |
 mstscax.dll ¢ RD Services
-, / |
 Target Function
 Start Send Normal Message
 | Loop
 Ly End
-l _ _ _ _ 4 ; _ _ r
 https://github.com/Team-BT5/WinAFL-RDP
 ```
 
@@ -674,7 +669,6 @@ else
 {
 *(_DWOF
 = Ug
-10 = Dyr
 DynArray<
 if ¢!
 CRIMOb jMz
@@ -689,7 +683,6 @@ Home View Breakpoints Time Travel Model Scripting Source Memory Command
 {*} Step Into {*} Step Into Back _ @ Stop Debugging — |=
 Go Settings |Source| Assembly Local Feedback
 ~ {}' Step Over *{} Step Over Back gp. & Detach Help >
-U 4qy uu D Py N U I
 ModLoad: @8ee7ffb f9e7e08e BEEe7FTb Fae4seee C: \WINDOWS\SYSTEM32\urlmon.d11
 ModLoad: @eee7ffb fcaageee eeGe7Ffb fcd6eeee@ C:\Windows\System32\iertutil.d1ll
 (18c8.23f@): Access violation - code ceeeeees (first chance)
@@ -914,7 +907,6 @@ THINGS |ARE NOT SIMPLE
 if ( printerRef )
 (*(*printerRef + 64164))(printerRef, 548164, this + 1804, @i164);// CTSCoreEventSource: :FireSyncNotification
 paramPtr = (this + 648);
-if ( *(this + 162) )
 {
 if ( W32DrAutoPrn: :StartXPSJob(this) )
 {
@@ -959,7 +951,6 @@ Flow Contro Reverse Flow Contro End Preferences Help
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 xpsprint! Ordinal2+0x3d2:
-wT T TT
 Feak Go
 + {}* Step Over
 HS |

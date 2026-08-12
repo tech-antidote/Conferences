@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:49:43Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Dimitrios Valsamaras_My other ClassLoader is your ClassLoader Creating evil twin instances of a class.pdf` (44 pages)
 
-
 ## Slide 1
 
 #### **My other ClassLoader Is Your ClassLoader**
@@ -266,7 +265,6 @@ https://<trusted-host>
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-? i a » NS
 biseichat How it was going... =
 EUROPE 2024
 S £.
@@ -364,7 +362,6 @@ HostReferral(10),
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-g 7 a ——< » a
 black hat How it was going... =
 EUROPE 2024
 New
@@ -668,7 +665,6 @@ SDK 29 or lower
 <intent>
 <action android:name="x"/>
 </intent>
-—ee ee ee | Oe S| =
 <package android:name="com.example.app"/>
 </queries>
 —_— =>
@@ -954,7 +950,6 @@ Account
 Hijacking
 mm,
 Showcases. ._ S.
-Ys \ >
 @0verride
 protected void onCreate(Bundle bundle) {
 boolean 214;
@@ -1215,7 +1210,6 @@ beginning of crash
 12799
 12799
 —_———, j
-\ ~ @
 A Ne
 Showcase \
 AndroidRuntime; FATAL EXCEPTION: main
@@ -1269,7 +1263,6 @@ _ By
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a a NS
 blaekhat Showcases Ss
 EUROPE 2024
 714 https://4x2gz5e0mifk5x7a012widnyvp 1gp6dv.oastify.com GET i 200 203 HTML
@@ -1328,8 +1321,6 @@ v0 7 | shtml>
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-(+) BX —< Ne
-a“ — >
 black hat a ~~
 EUROPE 2024
 Questions ?

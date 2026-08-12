@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:14:52Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Lukas Gerlach, Daniel Weber, Michael Schwarz_A Security RISC The State of Microarchitectural Attacks on RISC-V.pdf` (209 pages)
 
-
 ## Slide 1
 
 **A Security RISC?** The State of Microarchitectural Attacks on RISC-V **Lukas Gerlach** , **Daniel Weber** , Michael Schwarz | BlackHat EU 2023
@@ -1191,7 +1190,6 @@ O 1.
 E
 >
 Z
-I ] ] ] | | t
 O 100 200 300 400 500 600 ‘700 800 900 1,000 1,100 1,200
 Measured access time (CPU cycles)
 24 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz

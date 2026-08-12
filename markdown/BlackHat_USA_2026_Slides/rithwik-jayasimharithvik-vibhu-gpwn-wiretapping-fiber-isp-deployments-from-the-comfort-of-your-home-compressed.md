@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:15:01Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Rithwik Jayasimha&Rithvik Vibhu_gpwn Wiretapping Fiber ISP Deployments From the Comfort of Your Home_Compressed.pdf` (12 pages)
 
-
 ## Slide 1
 
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.

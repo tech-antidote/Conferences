@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:18:42Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Johannes Willbold_Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites.pdf` (148 pages)
 
-
 ## Slide 1
 
 Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites
@@ -166,9 +165,7 @@ Satellite Orbits
 -”=
 -
 MEO
-2k - 35k km
 LEO ~ ‘ vet
-160 - 2k km
 35786 km
 ```
 
@@ -683,7 +680,6 @@ arry out an attack with little public
 awareness that anything has ha
 Other types
 duce effec
-Hr ___—_— —
 Cybersecurity Protections for Spacecraft: A Threat Based
 ssment and Research Department (CARD)
 Cybersecurity Subdivision (CSS)
@@ -721,7 +717,6 @@ Myth of Inactessibility
 ~
 > Fs
 \\
-$$$ >$ 1 ¥
 Affordable ° Ground Station as a Service
 Ground Stations GSaaS
 ```
@@ -744,7 +739,6 @@ Myth of Inactessibility
 ~
 > Fs
 \\
-$$$ >$ 1 ¥
 Affordable ° Ground Station as a Service
 Ground Stations GSaaS
 eb £e
@@ -815,7 +809,6 @@ Interaction
 Attacker Goals
 @
 [S
-y a * bh |
 QO
 Denial of Service ; Malicious Data
 Interaction
@@ -846,7 +839,6 @@ Interaction
 ```text
 Attacker Goals _
 e-
-ane ‘g (
 — i
 > .¥
 Seizure of sontrol Malicious Data
@@ -888,17 +880,6 @@ Payload
 Bus
 Payload
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Components .
-os 2
-Bus
-Payload) > & Q <<.
-s °
-e - .
-```
-
 ## Slide 61
 
 ## **Components**
@@ -906,17 +887,6 @@ e - .
 Bus
 ?
 Payload
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Components
-a |
-») |
-Bus a
-MP Sa
-“< =
-```
 
 ## Slide 62
 
@@ -1415,7 +1385,6 @@ Cubesat Space Protocol (CSP)
 System Chart .
 @ CG) Cubesat Space Protocol (CSP)
 COM ———» EPS
-DH ( 2 ) °
 ebris ADCS
 Q) AVR32 AT32UTC3, FreeRTOS
 G) CCSDS Protocl Stack
@@ -2030,7 +1999,6 @@ Or-H—COP CORK Cer Kk Serre
 2-O900K-O0- Or 00000r-O
 we--00R--O0r-000-0-0¢
 O-0O0F X- OOK O-O-0OK-H-y YOO-OO- OL
-srr oo: CN od — dl a co
 y-O00r O-c000O-rrer-O-Orrraoo
 *-Orro mer Or OK HK OC00OKKO00COOeF KK
 DO-Or -O-00—-0-6—
@@ -2187,17 +2155,6 @@ Florian Göhler AVR32 in QEMU from Scratch Incl. I2C, SPI, PDCA, etc. Blog: _How
 ## Slide 126
 
 **Flying Laptop**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Flying Lapto
-nel
-c |
-m
-| .
-4
-```
 
 ## Slide 127
 

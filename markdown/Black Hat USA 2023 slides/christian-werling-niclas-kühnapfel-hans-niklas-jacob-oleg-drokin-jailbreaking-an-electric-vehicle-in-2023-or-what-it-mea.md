@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:15:11Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Christian Werling _ Niclas Kühnapfel  _ Hans Niklas Jacob  _ Oleg Drokin_Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater.pdf` (92 pages)
 
-
 ## Slide 1
 
 Jailbreaking an Electric Vehicle in 2023 WHAT IT MEANS TO HOTWIRE TESLA'S X86-BASED SEAT HEATER
@@ -163,13 +162,6 @@ Model 3 Car Computer
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-© sg = ° NT j
-Model 3 Car Computer
-```
-
 ## Slide 8
 
 Infotainment and Connec:vity ECU (ICE)
@@ -188,20 +180,6 @@ Autopilot v3
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-(og)
->
-oa)
-<
-‘2
-je}
-=)
-<x
-10
-```
-
 ## Slide 11
 
 Infotainment and Connec:vity ECU (ICE)
@@ -213,21 +191,6 @@ Infotainment and Connec:vity ECU (ICE)
 ICE (Backside)
 
 12
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-oO
-a
-Yn
-x
-rs)
-©
-[aa)
-uw
-Y
-12
-```
 
 ## Slide 13
 
@@ -341,11 +304,9 @@ Coreboot
 eee ackin XH1)
 PET deve 10p/2021. 44. 25. 2-8836-gb025¢688348a |
 Thu Jan 13 14:46:27 UTC 2022 ai 2 2 8836- abt (log leve
-US 3) cee
 PMxC@ STATUS: @x800 BIT11
 coreboot-archive/develop/2021.44.25.2-8836-gb025c688348a
 Thu Jan 13 14:46:27 UTC 2022 ponecaqe ceaer inal (log level
-A el ac
 POST: x41
 POST: @x42
 POST: 0x43
@@ -588,7 +549,6 @@ kernel
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-—— = = oo
 Tesla OS Loader ' # Patch |
 ee |
 00101b11
@@ -704,7 +664,6 @@ puts(s_[tesla-os—loader]_%s_@0114c51,5_ERROR:_Could_not_find_or_initial_00114f
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-—— = = oo
 Tesla OS Loader ' # Patch |
 Saas
 Listing: tesla-
@@ -1996,7 +1955,6 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 X-TX1D:
-ET ag :
 Cache-Control: max-age=8, private, must-revalidate
 X-Request-I¢d: DIT
 X-Runtine: i
@@ -2051,7 +2009,6 @@ cat: /mnt/var/vin: No such file or directory
 —
 [root@fatbox3 ~]# sqlite3 /mnt/home/tesla/.Tesla/data/PhonebookV2.db "select «* f
 rom vcards limit 15"
-20971{1| |My Number | 16+ 1mm | | | || | | | | =| | 5 5 1°
 + ftom-offiine
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-of fl
 from-image ../boot_nvme.bin $(xxd -p -c32 ../ftpm-sed

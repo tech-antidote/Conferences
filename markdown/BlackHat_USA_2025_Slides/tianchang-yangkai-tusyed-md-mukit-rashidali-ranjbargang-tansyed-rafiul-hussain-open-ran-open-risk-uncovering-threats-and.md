@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:01:55Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tianchang Yang&Kai Tu&Syed Md Mukit Rashid&Ali Ranjbar&Gang Tan&Syed Rafiul Hussain_Open RAN, Open Risk Uncovering Threats and Exposing Vulnerabilities in Next-Gen Cellular RAN.pdf` (64 pages)
 
-
 ## Slide 1
 
 # Open RAN, Open Risk: Uncovering Threats and Exposing Vulnerabilities in Next-Gen Cellular RAN
@@ -116,30 +115,6 @@ Cell
 RAN
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ap)
-o)
-=
-LL
-Lu
-oc
-an}
-0
-&
-3
-Cg
-fe}
-ere
-JS
-o. U Ol>
-Z|8|Yl</z lu e/YiIYj<zlz le
-w2/O/;/e/s/la Cre |*¥ 1S]
-—— ——
-Aon”
-```
 
 ## Slide 9
 
@@ -812,8 +787,6 @@ Test Input
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-A~\ i, aaeiy y/ : : > < by aa
-bi§ekhat a, Sa f f-. J :
 BRIEFINGS U, \ y |
 Challenge 1: Generating Targeted and Meaningful Test Inputs
 var requestID int32
@@ -825,7 +798,6 @@ break
 }
 streamID := stream. ID(requestID)
 stream, ok := c.streams.Get(streamID)
-if !ok {
 return errors.NewNotFound("stream %s not found", streamID)
 }
 ```
@@ -886,8 +858,6 @@ Test Input
 
 ```text
 QQ
-black hat iS = <q Yy
-BRIEFINGS — g YK 8 VA
 Challenge 2: Enumerate Appropriate Constraints
 Dependency (9) Benign (9)
 Analysis RANs A
@@ -895,7 +865,6 @@ Pp .
 Source (Preprocessing) Instrumented
 Code Code ) RIC Deployment |Operation Trace
 = Instrumentor | af at a Analyzer
-( e} { e}[ e}
 ntry/Exit Points Component
 | Initial Corpus ependency
 v
@@ -958,7 +927,6 @@ biSekhat
 BRIEFINGS
 Onos—e2t % grep -Er -—-exclude-dir={test,api} \
 'A\s*func\st+(\( [*\) ]*\)\sx*) ? [a-zA-Z_] [a-zA-Z0-9_]*\sx*\(' \
--/ | we -l
 ```
 
 ## Slide 50
@@ -972,7 +940,6 @@ biSekhat
 BRIEFINGS
 onos-—e2t % grep —Er |--exclude-dir={test,api}| \
 'A\ sxfunc\st(\( [*\) ]*\)\sx*) ? [a-zA-Z_] [a
-./ | we -l
 6152
 ```
 
@@ -1005,11 +972,8 @@ onos-—e2t % grep —Er |--exclude-dir={test,api}| \
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-biSekhat N a y y 2
 ,
-BRIEFINGS app Xa y | J
 How to Discern Generic/Validating Functions? .
-we ween en ++ eee een = ee 2 ee eee en ee ee eee ee eee ere
 AssociateRanToE2THandlerImpl(data models.RanE2tMap) error {
 DisassociateRanToE2THandlerImpl(data models.RanE2tMap) error {
 DeleteE2tHandleHandlerImpl(data *models.E2tDeleteData) error {
@@ -1073,7 +1037,6 @@ es VY httprestful_test.go pkg/nbi 2
 336 xapp.Logger.Debug("Invoked.validateE2TAddressRANListData : %v", i err = validateE2TAddressRANList
 337
 338 for _, element := range assRanE2tData {
-339 if *element.E2TAddress == "" {
 client.go /usr/local/go/src/net/http - References (5) x
 478 // To make a request with custom headers, use [NewRequest] and [Cliq © httpgetter.go pkg/nbi 1
 479 // myClient.Get(xmurl)
@@ -1141,18 +1104,14 @@ Pp ' RANs Deploymen (Testing)
 Source (Preprocessing) Instrumented sa ea Ge
 Code RIC Deployment Operation Trace a ee .
 a | ey) cy) C- Monitor
-a) | | Analyzer I | : |
 a |
 Component E2T Crashing
 dency Inputs &
 es, Passa) 2222 snes eas of Oe i Crash
 Static Path Message Generated Input Test (¢ )) Input i Logs
 Analysis Constraints Mutator Test Input Scheduler Input Sender »
-en 1 }
-. ( \ 1 J
 Testing Input ASN.1 Message Fitness Feedback L. Code Coverage ; dy
 Generation if Definition Score Collector Feedback \
-ee ee ee ee a ee !
 ```
 
 ## Slide 57

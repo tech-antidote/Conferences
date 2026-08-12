@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:58:15Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers_wp.pdf` (69 pages)
 
-
 ## Slide 1
 
 Research ~~-~~ fueled Security Services
@@ -231,21 +230,13 @@ _Figure 5. Scientific Games DM2 Participant Edition_
 IOACTIVE.COM 1OActive.
 oa aan Dcs
 ©)
-CJ oS i
-© © a =
 a
 °
 + P —CWHS
 (o} | ——FCos
-Oe, ° J
 PM—~_| = OC Aa)
 , FF FETS
 Ts]
-RWS 8, o PEAS G a 1 sum
-RAY 1 Oi \io) ©) a
-3 e YO ° ©) tery POM
-d, Y © © © ©
-ENC 2 Y3 WE 6
 6 Jo} S FEHS
 LJ a
 = FEM

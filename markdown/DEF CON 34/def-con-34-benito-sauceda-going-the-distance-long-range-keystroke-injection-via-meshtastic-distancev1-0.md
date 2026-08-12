@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:12:53Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Benito Sauceda - Going the Distance Long-Range Keystroke Injection via Meshtastic - Distancev1 0.pdf` (38 pages)
 
-
 ## Slide 1
 
 Going the Distance: Long-Range Keystroke Injection via LoRa Mesh Networks
@@ -209,7 +208,6 @@ Limitations:
 Monkey see, Monkey do:
 - HacktheBay, 2026 a
 = : FIC HACKER
-; = ‘vr PAC mm sf
 ```
 
 ## Slide 21

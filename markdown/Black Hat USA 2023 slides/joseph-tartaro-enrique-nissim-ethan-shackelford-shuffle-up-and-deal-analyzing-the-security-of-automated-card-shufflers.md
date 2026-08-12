@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:18:11Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers.pdf` (69 pages)
 
-
 ## Slide 1
 
 # Shuffle Up and Deal Auditing the Security of Automated Card Shufflers
@@ -279,7 +278,6 @@ Attacker with Network Access (DM2)
 ¢ Unnecessary attack surface
 scan initiated Tue Nov 8 18:16:17 2022 as: nmap -sV -p- --open -oA nmap-deckmate2 169.254.0.1
 90rt for 169.254.0.1
-e da y).
 9 closed tcp ports (conn-refused)
 VERSION
 open s Dropbear sshd 9.53.1 (protocol 2.0)
@@ -1304,8 +1302,6 @@ ae
 tm: WV
 »
 $4 - One pair: [2H, 2C, KD, JS, 8S]
-oe } | 3
-% v .
 $5) a
 $3 - One pair: [2H, 2C, JS, 10D, 7H]
 +9 saa

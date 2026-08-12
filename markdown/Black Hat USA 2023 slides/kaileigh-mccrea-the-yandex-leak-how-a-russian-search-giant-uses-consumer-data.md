@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:19:25Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kaileigh McCrea_The Yandex Leak How a Russian Search Giant Uses Consumer Data.pdf` (75 pages)
 
-
 ## Slide 1
 
 The Yandex Leak: How a Russian Search Giant Uses Consumer Data
@@ -93,9 +92,7 @@ By Bill Toulas January 26, 2023 09:44 AM 1
 ```text
 Yandex 101
 vy Login
-2A OS OG ®@
 Games Images Video Meteum Maps Mail Translate
-@: 26° ee |
 ```
 
 ## Slide 7
@@ -259,7 +256,6 @@ Today
 = Q Start onboarding
 O  Gotocatalog
 ©) hes
-9° @ 0
 O  Viewitem
 © Addto cart
 13
@@ -380,7 +376,6 @@ Aa
 November 25, 2022 4:19 AM PST : Updated 8 months ago W <
 Kremlin Ally Kudrin Confirms
 “| Move to Tech Giant Yandex
-Dec. 5, 2022 f ] © © © iF)
 11/2] The logo of Russia
 October 4, 2018. REUT!
 ```
@@ -1726,7 +1721,6 @@ for (int beltOffset : {-1, @, 1}
 for (int sqoffset : {-1, 0}
 if (beltoffset
 continue;
--1 & sq0ffset == 0) {
 +
 ynst ui64 square_idx = ConvertSquareToIdx({.Belt =
 TGeoSquare out;
@@ -2071,7 +2065,6 @@ ruyandex.mail
 ruyandex.mail.notificationserviceextension
 ruyandex.market
 \ CRYPTA
-Vvvv VV Vv VV VV VV vv vv vv vv vv vv ivy
 Roe
 ru.yandex.mail.notificationserviceextension
 ruyandex.market
@@ -2230,7 +2223,6 @@ ner
 v lib
 > config
 Y matchers
-Vv Vv Vv VM
 base_matcher
 beeline_matcher
 er_telecom_matcher

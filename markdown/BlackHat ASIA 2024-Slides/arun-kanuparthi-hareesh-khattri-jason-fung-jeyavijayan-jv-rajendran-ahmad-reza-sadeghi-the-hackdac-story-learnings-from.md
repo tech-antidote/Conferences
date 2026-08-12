@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:49Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Arun Kanuparthi & Hareesh Khattri & Jason Fung & Jeyavijayan JV Rajendran & Ahmad-Reza Sadeghi-The HackDAC Story Learnings from Organizing the World's Largest Hardware Hacking Competition.pdf` (47 pages)
 
-
 ## Slide 1
 
 # The Hack@DAC* Story: Learnings from Organizing the World’s Largest Hardware Hacking Competition **<u>Arun Kanuparthi</u>** <u>Intel Corporation, USA</u>
@@ -671,7 +670,6 @@ i TEXAS“ intel SYNOPSYS’ [one
 ```text
 2)
 blackhat Submission and Scoring
-B <> D E F
 Team name > Security feature > Finding > Location or code >
 bypassed reference
 Register Lock Control _In access control register wrapper file, reglk_ctrl _ piton/design/chip/tile/arian
@@ -716,7 +714,6 @@ How was the vulnerability identified? - Simulation
 ```text
 2)
 blackhat Submission and Scoring
-B «> D E F G H |
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact >
 bypassed reference
 other wrappers, all the
@@ -750,7 +747,6 @@ What is the security impact of bypassing security feature?
 ```text
 Q
 blackhat Submission and Scoring
-5 «> D E F G H ll 1 J
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact > Adversary profile = Proposed >
 bypassed reference mitigation
 other wrappers, all the
@@ -784,7 +780,6 @@ Mitigation suggestions
 ```text
 Q
 blackhat Submission and Scoring
-B <> D E F G H ll 1 J K L <
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact > Adversary profile = Proposed > CVSSv3.1 score > CVSSv3.1 Details =
 bypassed reference mitigation and severity
 other wrappers, all the
@@ -1062,7 +1057,6 @@ YNYEVOoOrPsS>
 FE Times Q)) osu CYBER DEFENSE
 Capture-the-Flag Competitions Need to Include Learning Hardware Security Via Capture-The- Why Do We Need a Standardized Framework to
 Hardware Flag Competitions Enumerate Hardware Security Weaknesses?
-te C a S D 'S, ctl | VE rath SEMICONDUCTOR En
 ..4 unique'perspective on technology ~ H ICG k@ DAC:
 Winning Strategies!
 means

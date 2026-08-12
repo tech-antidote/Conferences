@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:29:34Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Chris Wysopal_From HAL to HALT Thwarting Skynet's Siblings in the GenAI Coding Era.pdf` (24 pages)
 
-
 ## Slide 1
 
 From HAL to HALT: Thwarting Skynet's Siblings in the GenAI Coding Era
@@ -152,7 +151,6 @@ debt security debt
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-2 out of 10
 applications show an
 average monthly fix rate
 that exceeds

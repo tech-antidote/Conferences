@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:57:05Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ji'an Zhou&Li'shuo Song_Safe Harbor or Hostile Waters Unveiling the Hidden Perils of the TorchScript Engine in PyTorch.pdf` (125 pages)
 
-
 ## Slide 1
 
 ##### Safe Harbor or Hostile Waters: Unveiling the Hidden Perils of the TorchScript Engine in PyTorch
@@ -109,7 +108,6 @@ Key Features:
 PyTorch Key Use Cases
 PyTorch
 “wi \ y Koy
-NLP) a ls S | |
 Deep Learning NLP Computer Vision
 Research
 6
@@ -194,7 +192,6 @@ key: value
 key: value | > 01011
 key: value 0011001
 010
-< | 111
 Li7T37Ts121[ 4} rro1o
 pickle.load() \,
 Objects in Bytes
@@ -304,7 +301,6 @@ iS] *,
 6 weights_only: Optional bool = None,
 7 mmap: Optional bool = None,
 8 *kpickle_load_args: Any
-9) -> Any:
 10 if weights_only is None:
 11 weights_only, warn_weights_only = False, True
 12
@@ -461,7 +457,6 @@ v ® assets Ze 26
 29 - return torch. load(image_path, map_location="cpu")
 v @& lora 29° + return torch. load(image_path, map_location="cpu", weights_only=True)
 (5 models.py ig
-+ na -py
 vy §® model_executor/model_loader Vv $03 a), | CARYN 7 (EE
 ha weight_utils.py & an @@ -273,7 +273,8 @@ def from_local_checkpoint (
 273 273 new_embeddings_tensor_path)
@@ -637,7 +632,6 @@ aise UnpickLingE
 ['sys', 'os', 'posix', 'nt']
 f'Th
 _get_user_allowed_globals()|
-> B {}
 _get_allowed_globals()
 |e
 =)
@@ -693,7 +687,6 @@ f"Trying to call reduce for unrecognized function {func}"
 )
 self.stack[-1] = func(xargs)
 _get_user_allowed_globals()|
-> B {}
 _get_allowed_globals()
 ’ &
 000
@@ -2551,7 +2544,6 @@ Patch
 1444
 1445
 1446
-+ + + + +
 @@ -1436,6 +1436,11 @@ def _get_wo_message(message: str) —> str:
 "silence this warning)",
 UserWarning,
@@ -2589,9 +2581,7 @@ OvViewed () =>
 A Shaky Base, a Shaken Ecosystem
 - 4
 I. "taulla
-= I =
 Vita
-VS) tS 1
 LAVA
 82
 ```
@@ -2849,8 +2839,6 @@ Obtaining dependency information for torchaudio==2.5.1 from
 
 ```text
 The Vulnerable Function
-Ub WN Re
-wo On DD
 10
 11
 Lz
@@ -2966,7 +2954,6 @@ torch.save("test\n", "/tmp/1.txt")
 
 ```text
 UkbWN
-oOo ON OD
 10
 a1
 12
@@ -3031,7 +3018,6 @@ dict() -> new empty dictionary
 dict(mapping) -> new dictionary initialized from a mapping object's
 (key, value) pairs
 dict(iterable) -> new dictionary initialized as if via:
-d = {}
 for k, v in iterable:
 d{k] =v
 dict(*«kwargs) -> new dictionary initialized with the name=value pairs
@@ -3165,7 +3151,6 @@ l
 l
 2 def init__(self): Eo def init__(self):
 3 super(SimpleModel, self). __init__() 3 super(SimpleModel, self). __init__()
-4 1 4
 5 @torch.jit.export 5 def items(self):
 6 def items(self): | 6 torch.save("test\n", "/tmp/1.txt")
 7 torch.save("test\n", "/tmp/1.txt") 7 return torch. zeros(Q)
@@ -3373,7 +3358,6 @@ p15)
 518
 519
 Conversations v fy v
-> 4 a
 0/6 files viewed & Ask Copilot ~ Review in codespace
 src/transformers/modeling_utils.py oO O Viewec
 def load_state_dict(checkpoint_file: Union[str, os.PathLike] ):
@@ -3609,7 +3593,6 @@ Local Repo
 4 class SimpleModel(nn.Module):
 5 def
 def
-oOo On OD
 10
 Ld
 12 def
@@ -3801,7 +3784,6 @@ if not is_torch_greater_or_equal("2.6"):
 raise ValueError(
 “Due to a serious vulnerability issue in ‘torch. load*
 “when loading files with safetensors."
-+ + + te t+ Ht HF
 "meta" and is_zipfile(checkpoint_file):
 O Viewed
 » even with “weights_only=True*, we now require users

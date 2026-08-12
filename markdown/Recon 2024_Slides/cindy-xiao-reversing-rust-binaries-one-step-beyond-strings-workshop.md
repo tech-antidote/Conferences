@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:29:01Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Cindy Xiao_Reversing Rust Binaries One step beyond strings (workshop).pdf` (91 pages)
 
-
 ## Slide 1
 
 �
@@ -349,7 +348,6 @@ split-debuginfo = '
 strip = "none"
 debug-assertions = t
 overflow-checks = t
-lto = f
 panic
 ‘unwind'
 incremental = t
@@ -448,8 +446,6 @@ ile 2
 99008828 void deregister_tm_clones()
 00908850 void register_tm_clones()
 09908888 return
-09908882 66 Of 1f 44 00 00
-09908889 Of 1f 80 00 00
 990088d9 void frame_dummy()
 slice_end_index
 slice_index_order_fz n x09000866
@@ -460,7 +456,6 @@ r_fail 6x099008
 tart 9x0909087£0 990088e2 return 0
 0908804 clones() __tailcall
 deregister_tm_clones
-4 *) iis
 rust-one-step-beyond-strings 44 _linux-x86.64 — 0x880f-0x8815 (0x6 bytes)
 \gROW DSTRIKE
 intelligence
@@ -553,7 +548,6 @@ core: :panicking: :panic_fmt
 noreturn
 he69c4d2
 11477()
-Of 1f 44 60 00
 re: :slice::sort::heapsort
 re: :panicking: :assert_failed: :hf@8da4e67e515£1e
 alloc vec: :RawVec$LT$T$C$A$GTS$: : reserve: :do_r
@@ -579,7 +573,6 @@ raw 0x900086ad
 core: :str
 noreturn
 Qc£3c023(argl, arg2, arg3, arg4)
-000087e7 66-0£ 1f 84 08 69 00 00 40
 exosdedée28 000087£8 void _start( argl, arg2, void (* arg3)()) __noreturn
 0x090006e60
 8x880086eb0
@@ -659,13 +652,11 @@ eooe8848 return
 ronce
 0008841
 e9998849
-O£ 1£ 80 00 00 G0 00
 90098859 void register_tm_clones()
 handle_alloc_error
 eooessss return
 eoe08882
 90098889
-Of 1£ 44 00 00
 a anic Of 1f
 pan SoM 09008899 void __do_global_dtors_aux()
 anicking: :p
@@ -971,7 +962,6 @@ intelligence
 ```text
 38
 qj <5 P£ simple-downloader DODeagdg-.«.~«
-m O x
 ® main.rs 1,M_ src/main.rs/ Q@ main
 > Run | Debug
 1 £n-main() -¥{
@@ -1128,7 +1118,6 @@ s base64
 0.21
 encodes and decodes base64 as bytes or utf8
 bytes
-*1.0 ; ;
 Types and traits for working with bytes
 futures-core
 “0.3.0
@@ -1476,9 +1465,7 @@ Qb ...
 00
 00
 00
-31 00 20
 00
-Q0 00 00
 00
 Q0 00
 QO 00
@@ -1709,7 +1696,6 @@ J <7 P simple-downloader oOAaWM- a x
 s Note
 20 _| Ifthe charset feature is disabled the method will only attempt to decode the response as UTF-8,
 21 regardless of the given Content-Type
-22 let c = Il
 23
 @o0A0 Wo rust-analyzer -- NORMAL -- @> in9,col21 Spaces:4 UTF-8 LF Rust QO
 \gROW DSTRIKE
@@ -1846,7 +1832,6 @@ intelligence
 Type layouts in memory: Pointers to dynamically sized structures in general
 S'a T
 Ptr aa Lenaas
-— il =
 (any mem)
 If T is a DST struct such as
 Ss { x: [u8] } meta field len is
@@ -2008,12 +1993,9 @@ intelligence
 ```text
 How We See Strings
 Developer Reverser
-&str @ |
 (9)
 &[us] ;
-&{ug; N] © <=
 &OsStr @ \ Pointer, Int
-o ) |
 o |!
 (@)
 @

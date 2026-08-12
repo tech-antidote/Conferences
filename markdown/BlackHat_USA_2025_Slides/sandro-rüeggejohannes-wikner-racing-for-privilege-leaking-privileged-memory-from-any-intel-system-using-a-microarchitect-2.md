@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:00:53Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sandro Rüegge&Johannes Wikner_Racing for Privilege Leaking Privileged Memory From Any Intel System Using a Microarchitectural Race Condition.pdf` (69 pages)
 
-
 ## Slide 1
 
 # Racing for Privilege
@@ -87,10 +86,8 @@ Hilbert Hagedoorn Oct. 2024 AMD Ryzen 9000 Die Shots gets Annotated In Detail gu
 
 ```text
 TOMTOM
-Oe Oe ce
 LNT TEESE TM
 See OO
-LL, TT NY
 ```
 
 ## Slide 10

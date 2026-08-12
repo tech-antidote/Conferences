@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:13:41Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bo-Shiun Yen - Looking and Peering Attacking from beyond BGP Adjacency - v2.pdf` (74 pages)
 
-
 ## Slide 1
 
 # **Looking and Peering Attacking from beyond BGP adjacency**
@@ -229,7 +228,6 @@ reuse_anchor->...interned = find;
 ```text
 HASH_GET() -> BGP_ATTR_HASH_ALLOC()
 *p)
-as = Pp;
 * = XMALLOC(MTYPE_ATTR, (xattr));
 xattr = x*val;
 (val->encap_subtlvs)

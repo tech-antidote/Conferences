@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:10:34Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules.pdf` (82 pages)
 
-
 ## Slide 1
 
 Hiding in the Clouds: Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules
@@ -396,7 +395,6 @@ b64Bytes = base64.b64encode(patBytes)
 >>> print (b64PAT)
 EncodedPATWillBeOutputHere
 >>>
-curl -i -s -k -X $'GET'
 -H $'User-Agent: Some User Agent’
 -H $'Authorization:
 -H $'Content-Type: application/json'
@@ -804,7 +802,6 @@ AzureDevOpsAuditing
 | where UserAgent has_any ("Gecko", "WebKit", "Presto", "Trident", "EdgeHTML", "Blink")
 | extend timestamp = TimeGenerated, AccountCustomEntity = ActoxUPN,
 —IPCustomEntity = IpAddress
-curl -i -s -k -X $'GET'
 -H $'Content-Type: application/json'
 -H $'User-Agent: Random User Agent '
 -H $'Authorization: Basic base64EncodedPAT '
@@ -845,8 +842,6 @@ nectionExecuted', 'Pipelines.PipelineModified',
 AzureDevOpsAuditing
 | where AuthenticationMechanism startswith "PAT" and (OperationName has_any
 (HasAnyBlocklist) or OperationName in (HasExactBlocklist) )
-ab nel 1 23 Fd lt
-curl -i -s -k -X $'PUT'
 -H $'Content-Type: application/json'
 -H $'User-Agent: Some User Agent’
 -H $'Host: vssps.dev.azure.com'
@@ -983,7 +978,6 @@ used as persistence.
 Alert product names
 © Microsoft Sentinel
 Evidence
-ae 7 01 AO
 Events Alerts Bookmarks
 4/17/2023, 6:30:56.205 ...
 $2S_ServicePrincipal

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:06:31Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Carole House_Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware.pdf` (18 pages)
 
-
 ## Slide 1
 
 # CYBERSPACE PIRATES
@@ -43,25 +42,19 @@ converted_at: "2026-08-11T23:06:31Z"
 HACKING THE HACKERS
 | STARLINK TERMINAL
 2 UPLINK ACTIVE
-L ° = be / ”
 i | __ COMMAND & CONTROL NODES » i a /. x
-ne, oi ' ' a > ap i vy
-uM my YY e, . =I i Ar 4.5 vat. ,
 LIVE NETWORK TRACE = ' ‘ COR * ~s — a,
 185.220.101.8
 4
 r
 x ,
-6. : 4 C2NOE }-- =v - “ on
 & Ox7cB4d9E6FA2b(
 ~ belghlSwSn2y7x3
 PACKET CAPTURE % . - .
 ACTIVE SESSIONS - Re RE ry >
-4 q cw Yt - TOOLS ~e %
 Sse aULNtee sense’ eee , Ld rd , BTC: * 1,246.32
 ETH 3,621.17
 oe 8088 ae 1862.10.34 : ~ 2 { : 4
-‘ ; & i] ‘ XMR 542,71
 | * ‘€ USDT:  2.183,672.44
 , : Panda
 TOTAL U $15,780,392
@@ -238,10 +231,8 @@ _AI removes key constraints:_
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ea . |
 f f onarTINe ATTACK SCRIPTS |:
 O =|
-| yi 4 ! eli a a: l
 RESPONSIBILI i , eee S| MTN PROGRESS
 SCRIPT_04321.AI : é
 in| > TARGET_SCAN();
@@ -254,7 +245,6 @@ REPORT (); &
 REPEAT (10000) ; ae |}
 imi
 a a
-\ ff SY
 | TARGETS ACQUIRED * Sad Pali
 v
 J

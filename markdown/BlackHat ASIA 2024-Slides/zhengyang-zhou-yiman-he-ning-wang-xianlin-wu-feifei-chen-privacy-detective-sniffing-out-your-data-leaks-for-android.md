@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:53:03Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Zhengyang Zhou & Yiman He & Ning Wang & Xianlin Wu & Feifei Chen-Privacy Detective Sniffing Out Your Data Leaks for Android.pdf` (56 pages)
 
-
 ## Slide 1
 
 # Privacy Detective
@@ -40,7 +39,6 @@ Sniffing Out Your Data Leaks for Android
 _ blackhat
 . ASIA 2024>—~
 . PRIL 18-19, 2024 | lat
-/ NP BRIEFINGS | _ =
 Privacy Detective
 Sniffing Out Your Data Leaks for Android
 —— Abbie & Meggie
@@ -1017,7 +1015,6 @@ We used a self-developed regex-based script to scan the plaintext. We highly rec
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-Q Bes * NS
 black hat e< =
 ASIA 2024
 Data Analysis
@@ -1069,7 +1066,6 @@ Our findings:
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-‘#) Aa om qe
 black hat > <
 ASIA 2024
 Data Analysis
@@ -1133,7 +1129,6 @@ jllenigQes 3) 3) er
 "“plain_string": "2 . 35",
 "crypto": "2940953B9605",
 "password": "16
-aL Ves) DA
 es
 ```
 

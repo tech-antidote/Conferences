@@ -22,7 +22,6 @@ converted_at: "2026-08-11T22:51:16Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ben Gelman&Sean Bergeron_Anomaly Detection Betrayed Us, so We Gave It a New Job Enhancing Command Line Classification with Benign Anomalous Data.pdf` (51 pages)
 
-
 ## Slide 1
 
 ###### Anomaly Detection Betrayed Us, so We Gave It a New Job: Enhancing Command Line Classification with Benign Anomalous Data
@@ -185,23 +184,6 @@ LABEL
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-16
-The Longtail
->
-.-]
-4
-o
-s
-om
-o
-ee
-u
-Long-Tailed Distribution
-```
-
 ## Slide 17
 
 ###### **Are We Stuck?**
@@ -311,16 +293,6 @@ Expert Features
 1 2 3 4
 
 25
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Isolation Forest
-1 2 3 4
-O O O O
-CG @ GS @ Cle Cle
-@ ° @ |e @g! @ O
-```
 
 ## Slide 26
 
@@ -491,35 +463,6 @@ zx
 ## Slide 36
 
 36
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-000 Aggregated Baseline Dataset: Binary Classifier Evaluated on Timesplit Test Set
-. — FSIF
-RS Combined
-RS IF
-- RS KMeans
-* aaa ; RS PCA
-5 d ‘ .
-& a. ‘ . . Gna Aah atl Baseline
-a ee ee
-font, 7 are rs r
-a " “wag, ¥ 1
-F se
-age aos Sy
-*, 7
-‘
-ar
-va
-7)
-°
-Q
-va]
-U
-2
-—
-```
 
 ## Slide 37
 

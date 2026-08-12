@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:39:53Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Vasilios Mavroudis & Jamie Gawith & Sañyam Vyas & Chris Hicks_Deep Backdoors in Deep Reinforcement Learning Agents.pdf` (38 pages)
 
-
 ## Slide 1
 
 # **Deep Backdoors in Deep RL**
@@ -43,7 +42,6 @@ TOR RHE R BOOM OM
 #OP—-“VErOunNKRep
 ween Sab oba0——
 Ome 316 00000006
-Se ®® O3990000 8". <8 FA
 @S2@ @ DD ODOd Op’ FRE
 &
 ```
@@ -78,7 +76,6 @@ ee a
 ```text
 a Drone racing: human versus autonomous
 mann nee eS OSE REESE i ,
-se . ”
 #
 _» Autonomous drone (ours)
 ```
@@ -267,9 +264,7 @@ Fusion fuel must be kept “ **Dense** enough and **Hot** enough for **Long** en
 Nuclear Fusion Reactors
 Fusion fuel must be kept “Dense enough and Hot enough for Long enough”
 Stellarators/Heliotro.. Laser/Inertial Altern. Concepts
-17 11 40
 Neutron
-ry Q \S pS ee
 6)- =<) Energy
 Fusion _ ; 4 Republic of K..
 Costa Rica
@@ -280,7 +275,6 @@ European jee
 Kazakhstan
 Libya
 Operating Under construction Public i Public-Private Portu:
-99 13 111 1
 Germany
 ```
 
@@ -323,7 +317,6 @@ O Flux loop sensors
 —> Magnetic probes
 MN, Signal cables Thermocouple
 \
-15 2.0 25
 Rim) Nest for the
 metrology
 Tangential
@@ -349,7 +342,6 @@ Target values
 
 ```text
 Plasma Control
-15 2.0 25
 Bottom coated with
 Sensor Feedback alumina af
 O Flux loop sensors
@@ -385,7 +377,6 @@ Target values
 Plasma Control
 +
 | Actuator commands
-15 2.0 25
 Bottom coated with
 Sensor Feedback alumina af
 O Flux loop sensors
@@ -423,7 +414,6 @@ Actuator commands
 Plasma Control
 +
 | Actuator commands
-15 2.0 25
 ay <
 Bottom coated with
 Sensor Feedback alumina af
@@ -509,9 +499,7 @@ consequence of runaway beam hit
 Neelele
 ve
 Wel
-YAP XN \
 .
-\) Po 1M,
 Hann
 tty.
 Backdoor’ed

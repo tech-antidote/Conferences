@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:08:28Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Tim Pappa_Weaponized Deception Lessons from Indonesia's Muslim Cyber Army.pdf` (20 pages)
 
-
 ## Slide 1
 
 # **Weaponized Deception: Lessons from Indonesia’s** **_Muslim Cyber Army_**

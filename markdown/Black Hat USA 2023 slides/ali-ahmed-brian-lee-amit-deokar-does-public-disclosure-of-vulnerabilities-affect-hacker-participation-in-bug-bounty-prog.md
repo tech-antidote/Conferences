@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:13:29Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Ali Ahmed & Brian Lee & Amit Deokar_Does Public Disclosure of Vulnerabilities Affect Hacker Participation in Bug Bounty Programs.pdf` (22 pages)
 
-
 ## Slide 1
 
 Does Public Disclosure of Vulnerabilities Affect Hacker Participation in Bug Bounty Programs?

@@ -22,7 +22,6 @@ converted_at: "2026-08-11T23:14:00Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Michael Grafnetter_Pass-the-Passkey Family of Attacks.pdf` (71 pages)
 
-
 ## Slide 1
 
 **Pass-the-Passkey Family of Attacks Michael Grafnetter Principal Security Researcher**
@@ -52,20 +51,11 @@ Principal Security Researcher ne
 ```text
 About Me
 Aime()e
-i \ ry
 BWA) ARQ a\\
-rm. : | A — +
-5 I: Ee BG Be Md: =
-6 | oOo ee 1
 = J SPP PPE TEE LLL moc 7 - ee -
-UTA = z [x fe Jv fe Tw |» <? , uy? fs ; “ = < 2 = aS, N
-‘be + a =
 Oo \eke
-? SP BB UHC
 is “Lb WASHINGTo
 et: “
-wip} |G a" wa wl 2g
-oF i : ; } 4
 7 eT Pos a's
 ```
 
@@ -297,8 +287,6 @@ Received from client
 authenticatorData
 0)
 T_T _T_T_T_T—T
-ED AT 0 BS BE UV 0 UP
-[er ee ee ee Ge
 NO
 clientD ataHash
 RP ID HASH
@@ -357,7 +345,6 @@ a6pp8NT17NCV65JbgUbKws8C20jSjOtiwpuuRXZjEwYy-Mbh_hllLWDqwibkccF public-key
 "C > KOrHDdZK-YiowVn77EZQdWVIrX7nnpQFulcNTU4brwc public-key
 AC
 Request (JSON) Y
-; , 7
 Scan your finger on the fingerprint reader. ioe °
 Request Expiration: @9:23 Challenge JWT Expiration: @4:20
 =
@@ -406,7 +393,6 @@ HMAC secret salt 1: 8A8F1518100B3EB2F6DDOBF5D72ESBA7DFEB71591ED13CD60D903F9AGB99
 Response 1~N
 Pi (C
 {
-"5B4QTDkm-OCOnJk7KAsUa7d3r914aqSH-eVChLSSejM", 5 fi he fi . d
 ‘rawid": "5B4QTDkm-OCOnJk7KAsUa7d3r914aq5H-eVChLSSejM", can your finger on the fingerprint reader.
 “responsi
 “authenticatorData": "NWye1KCTIblpXx6vkYID8bVfaJ2mH7yWGEwVfdpoDIEFAAAAYA", Sign-in options
@@ -468,7 +454,6 @@ USA 2026
 CVE-2026-34348
 @ Event Viewer
 File Action View Help
-= 7] =
 WDAG-PolicyEvaluator-GP
 WebAuth
 WebAuthN
@@ -601,7 +586,6 @@ Cancel
 ```text
 Remote Assertion Retrieval — Event Log Readers
 &) PowerShell
-x + iv - Oo
 PS > .\Get-PasskeyAssertionEvent.ps1 —ComputerName GRAY
 Time
 UserSid
@@ -611,7 +595,6 @@ ProcessName
 ThreadId
 Origin
 PublicKkeyCredential :
-PS > |
 : 5/11/2026 11:31:16 AM
 : §-1-5-21-1084105731-826279734-3585910670-1001
 : GRAY\Michael
@@ -660,7 +643,6 @@ https://portal.azure.com
 
 ```text
 JWT # NONCE
-"ySt " :
 iss :
 typ":
 aud":
@@ -816,7 +798,6 @@ Oa w
 
 ```text
 Passkey Circuit Breaker Attack — Operator
-&) PowerShell x +t ov - a
 PS > .\Invoke-PasskeyCircuitBreaker.psl -Suspend -BlockTraffic
 Listening for WebAuthN assertion response events... Press Ctrl+C to stop.
 Write-Error: C:\Users\Michael\source\repos\SpecterOps\pass-the-passkey\Src\Scripts\Invoke-PasskeyCircuitBreaker.ps1:74
@@ -949,7 +930,6 @@ Source: Microsoft
 ```text
 KeePassXC Passkey Export
 Database Entries Groups Tools View Help
-S Q oO F &
 Title A Path Username Relying Party URLs
 Ww & webauthn.io (Passkey) & Root/KeePassXC-Browser Passkeys john@webauthn.io webauthn.io https//webauthn.io
 | webauthn.io
@@ -1099,7 +1079,6 @@ USA 2026
 
 ```text
 Phishing Protection - Related Origin Requests (ROR)
-Kl Ubuntu x + v — O x
 michaeL@GRAY:-$ curl https://login.microsoft.com/.well-known/webauthn
 {
 "origins': [
@@ -1119,7 +1098,6 @@ michaeL@GRAY:-$ curl https://login.microsoft.com/.well-known/webauthn
 
 ```text
 Passkey Phishing Attack — Prompt
-2) PowerShell x qe | Y _ O x
 PS > .\SharpPasskeys.exe prompt -r github.com ~-c 1IOBmIehGH8dZKXjxdSw_VHs5wxrI8HnoaxDAZS5 -a ClientDevice
 19:13:33 info: Passkeys[0] Prompting for credentials with relying party 'github.com' and authenticator hint 'ClientDevice'..
 © Windows Security x
@@ -1143,7 +1121,6 @@ Choose a different passkey
 
 ```text
 Passkey Phishing Attack — Assertion Response
-2] PowerShell x tiv _ oO x
 PS > .\SharpPasskeys.exe prompt -r github.com -c 1I0BmIehGH8dZKXjxdSw_VHs5wxrI8HnoaxDAZS5 -a ClientDevice
 19:13:33 info: Passkeys[0] Prompting for credentials with relying party 'github.com' and authenticator hint 'ClientDevice'...
 {"id" : "kGExWOTJk3CV-igJrwoDrupadLREaz5hgV7LLucUDho", "rawId" : "KGExWOTJk3CV-igJrwoDrupadlREaz5hgV7LLucUDho" , "type": "public-key"
@@ -1152,7 +1129,6 @@ ignature" : "MEYCIQDOLcpbQALMB7KCK2Q_LCm49a5kcs LDViuGIndN43Z1eQIhANLxSpG3VSuaZ8
 2vzjgdc4Jq8DRNjFc9_LhjyfF6mAN2YwYt8cA4KCV-Jr9ONQ—-7qJAg7LZ-zB6Gb7nGNT6a4MjZLXcuY9-Jsg" , "clientDataJSON": "eyJOeXBLIjoid2ViYXVOa
 G4uZ2VOTiwiY2hhbGxLbmdlI joiMULPQm1 JZWhHSDhkWktYanhkU3dfVkhzNXd4ckk4SG5vYXhEQVpTNSIsIm9yaWdpbil6ImhOdHBz0i8vZ2LOaHViLmNvbSIsiIm
 Nyb3NzT3JpZ2Lul j pmYWxzZX0"}}
-PS > |
 49
 ```
 
@@ -1166,7 +1142,6 @@ PS > |
 
 ```text
 C2 Command Generation
-@ C2 Commands = oO x
 Authenticator Type Hint: Windows Hello (Platform) v C) Prompt Flood C-) Kill Credential Ul Broker C1) Spoof Window Handle
 SharpPasskeys (Standalone CLI) A
 SharpPasskeys.exe prompt --relying-party login.microsoft.com --authenticator ClientDevice --challenge Ty5leUowZVhBaU9pSktWMVFp"
@@ -1205,7 +1180,6 @@ USA 2026
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-ra] Mythic x + v - fa] Be
 O-¢ere Not Secure 127.0.0.1:7443/new/callbacks © 120% #82 4 # =
 INTERACT WIP ll HOST lL USER | DOMAIN i PID I LAST CHECKIN ll DESCRIPTION o
 EbOw ¢ 10.101.0.123 CANARY Admin CANARY 13196 1 seconds Created by mythic_admin at 2026-04-02 13:21:36 ;|
@@ -1373,7 +1347,6 @@ PS > .\Passkeys.exe prompt github.com 12262062 DVcoAwqLUHHcVOmaTPQJegMIGYuWdxhF 
 11:09:41 info: Passkeys[0] Using provided window handle 12262062.
 11:09:41 info: Passkeys[0] Prompting for credentials with relying party 'github.com' and authenticator hint 'None'...
 \ HE Microsoft - Al, Cloud, Productivity X +
-< > CG BG https://www.microsoft.com/en-us ©O:1v)@ Bis @ se QD chat
 Microsoft — Mic 5 Azure Copilot Windows Surface More
 © Windows Security
 Sign in with a passkey
@@ -1617,7 +1590,6 @@ Assertion Options
 Relying party:
 Authenticator:
 User verification:
-_ Oo x
 Help
 Windows API Information Registration Authentication Platform Credentials Authenticators Event Log
 login.microsoft.com U2F AppID:

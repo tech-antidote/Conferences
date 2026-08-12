@@ -22,7 +22,6 @@ converted_at: "2026-08-12T00:48:14Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kai Tu & Yilu Dong & Abdullah Al Ishtiaq & Syed Md Mukit Rashid & Weixuan Wang & Tianwei Wu & Syed Rafiul Hussain_Cracking the 5G Fortress Peering Into 5G's Vulnerability Abyss.pdf` (44 pages)
 
-
 ## Slide 1
 
 Cracking the 5G Fortress: Peering Into 5G’s Vulnerability Abyss **Speakers: Kai Tu, Yilu Dong** Contributors: Abdullah Al Ishtiaq, Syed Md Mukit Rashid, Weixuan Wang, Tianwei Wu, Syed Rafiul Hussain
@@ -160,7 +159,6 @@ USA 2024
 Non-compliant behavior may lead to...
 . Oe
 t-)
-A | ue
 Exploitable Interoperability
 vulnerabilities issues
 ```
@@ -310,10 +308,8 @@ Service
 
 ```text
 bide hat
-USA 2024 | a | “
 Impact of Vulnerabilities Found
 ~ &
-i, (Q) 12
 Information Phishing Downgrade Denial-of-
 Leak Service
 #BHUSA @BlackHatEvents
@@ -339,7 +335,6 @@ biktkhat
 USA 2024 a |
 Impact of Vulnerabilities Found
 ~ &
-i, (Q) 12
 Information Phishing Downgrade Denial-of-
 Leak Service
 #BHUSA @BlackHatEvents
@@ -363,7 +358,6 @@ biktkhat
 USA 2024 a |
 Impact of Vulnerabilities Found
 ~ &
-i, (Q) 12
 Information Phishing Downgrade Denial-of-
 Leak Service
 #BHUSA @BlackHatEvents
@@ -390,7 +384,6 @@ biktkhat
 USA 2024 a |
 Impact of Vulnerabilities Found
 ~ &
-i, (Q) 12
 Information Phishing Downgrade Denial-of-
 Leak Service
 #BHUSA @BlackHatEvents
@@ -414,7 +407,6 @@ biktkhat
 USA 2024 a |
 Impact of Vulnerabilities Found
 ~ &
-i, (Q) 12
 Information Phishing Downgrade Denial-of-
 Leak Service
 #BHUSA @BlackHatEvents
@@ -522,7 +514,6 @@ CVE-2024-29152
 > Text below was recovered by OCR from an image-only slide; treat wording as approximate.
 
 ```text
-a oo < <a ys al
 blackhat | - ” aii
 BS s
 Attack Setup
@@ -544,18 +535,15 @@ kai@kal: ~/Desktop/SGBaseChecker_Core
 sO
 kai@kai: ~/Desktop/clean/openairinter...
 net
--_ a ® SM-G991B - o &
 Attacker
 Terminal
 wea
 Tap for weather info
-— Oo x
 Attacker ja
 Terminal
 »* 66
 Galaxy Store Gallery Play Store Google
 @Os
-HT} O <
 Wireless Tools Help
 ```
 
@@ -814,7 +802,6 @@ got sync (ru_thread) A k
 got sync (Li_stats_thread) ttac er
 [HW] current pps at 2.000000, starting streaming at 3. 900000
 [PHY] RU © rf device ready | f ip. 27.0.0.5 && dns || ngap || gtp
-[PHY] RU © RF started opp_enabled 0 er ! iI la
 pean 5 5 Protocol Info
 initializing tx write thread “
 end of tx write thread
@@ -838,7 +825,6 @@ File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help
 e* O06
 Galaxy Store Gallery Play Store Google
 @ Os
-Il O <
 [NR_MAC] Frame.Slot 512.0
 [NR_MAC] Frame.Slot 640.0
 [NR_MAC] Frame.Slot 768.0 »

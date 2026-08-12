@@ -21,7 +21,6 @@ converted_at: "2026-08-11T21:23:16Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Or Yair_One Drive, Double Agent Clouded OneDrive Turns Sides.pdf` (91 pages)
 
-
 ## Slide 1
 
 One Drive. Double Agent. Clouded OneDrive Turns Sides
@@ -66,9 +65,7 @@ Forbes
 11% 12%
 10% 10%
 %
-S 6% 6%
 5%
-uJ | 7 | [i
 Lessthan =z en Between Between il Between Between Between Between Between Ls millio | 2020 | 2021 | 2oze | | 2023 |
 $1,000 $1,000and $5,000and = $10,000and + $20,000and $50,000and $100,000 $250,000 $500,000 $1millionand or more
 4,999.99 9,999.99 1999999 $49,999.99 $99,999.99 d id id 4,999,999.99
@@ -95,7 +92,6 @@ Ransom Payments: 2023 vs 2022
 11% 12%
 9% 10% 10%
 8% 7%
-5% op oe 6%
 4%
 2% [|
 Less than y Between Between Between Between Between Between Between
@@ -499,7 +495,6 @@ Emptying The Recycle Bin
 Windows app leads to browser
 Canary is provided only with a
 “WLSSC” cookie
-A @ §:ING ®& oO) PP
 = | WW Empty recycle bin | S Restore all items
 |
 POST https://skyap1.onedrive. live.com/API/2/DeleteAll HTTP/1.1
@@ -557,7 +552,6 @@ Can Edit v
 Your Temporary Email Address Set Expiration
 botaj90888@goflipa.com #2 a
 => Oo
-c et) Q Om
 Copy link Invite Send files Outlook
 "a" has been shared with you.
 a.txt
@@ -802,7 +796,6 @@ Bypassing EDRs - Decoy Files
 
 ```text
 Bypassing EDRs - Decoy Files
-— = i
 @ OneDrive - Personal st)
 2 behaviors | ———_
 4 x
@@ -833,7 +826,6 @@ D def3.txt.encrypted
 oO ghi0.pdf.encrypted
 abc3.doc.encrypted
 (1) ghit.pdf.encrypted
-——< 6 ® w 9 i /f
 Open folder Viewonline — Recyclebin Go premium e
 ```
 
@@ -884,7 +876,6 @@ abc4.doc.encrypted
 Renamed in docs8
 1 second ago
 abc3.doc.encrypted
-5 ® Ww @
 Open folder Viewonline — Recyclebin Go premium
 *|
 E
@@ -935,7 +926,6 @@ O music
 EiVideos
 O toms =]
 =Ca
-= 602 AM
 AOE BM sr2023 0
 7°n 9
 VM, move the mouse pointer inside or press Ctrl+G.
