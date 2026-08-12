@@ -43,6 +43,41 @@ These ran over every deck. Commands are in `tools/`; re-run them against any bui
 
 ## Vision verification — page images read against extracted text
 
+**199 slides across 94 documents** have had their page image read by a vision
+model and compared against the OCR text. Every one is listed by talk and slide
+number in [VISION_VERIFIED.md](VISION_VERIFIED.md), with the verdict the
+reviewer reached; regenerate it with `tools/vision_review_index.py`.
+
+The verdicts are not reassuring, and they are not meant to be:
+
+| Verdict | Slides | Meaning |
+|---|---:|---|
+| badly-mangled | 139 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 53 | structure held; individual characters or lines wrong |
+| accurate | 7 | OCR was already correct; text confirmed, not changed |
+
+Seven slides in 199 came back clean. These are the blocks the converter itself
+flagged as unreliable — a deliberately adverse sample, not a random one — so
+the ratio measures the flag's precision, not the corpus's. It says the flag is
+finding the right pages.
+
+### Do the reviewers agree with each other?
+
+Two reviewers independently read the same twelve pages of the ACE3 USB-C
+controller talk, without seeing each other's output. Token overlap:
+
+| Comparison | Overlap |
+|---|---|
+| Reviewer A vs reviewer B, same page | **0.75 – 0.95** |
+| Either reviewer vs the OCR text | 0.13 – 0.28 |
+
+Two readings that agree with each other and disagree with the OCR are evidence
+that the page says what the reviewers say it says. It is not proof — both could
+misread the same character the same way — but it rules out the failure that
+would matter most, which is a reviewer inventing plausible text.
+
+### Individual findings
+
 Each row means: the page was rendered, read, and compared to what the converter
 produced for it.
 
@@ -141,6 +176,43 @@ identifiable rather than silently trusted. Reviewing them needs an account
 enrolled in Anthropic's Cyber Verification Program, which exists for exactly
 this kind of published security research.
 
+## A defect in the review pipeline itself, found and fixed
+
+Worth recording, because it went wrong quietly and the corpus had to be
+repaired rather than rebuilt.
+
+`verify_uncertain.py --extract` numbered its work list from zero on every run.
+Review runs in batches against a corpus that is still being converted, so the
+work list gets regenerated while corrections are in flight — and renumbering
+re-points every id at a different block. Eleven batches written before one such
+regeneration were applied afterwards, which wrote 105 correct transcriptions
+into 57 documents they had never looked at.
+
+It was caught by measuring, not by reading: a correction should share
+vocabulary with the OCR text it replaces. The eleven stale batches had a median
+token overlap of **0.01** with the blocks their ids now named. Batches written
+after the regeneration scored **0.55–0.95**. That is not a borderline
+signal.
+
+Repair, in order: every mis-targeted block was restored from the extracted text
+captured in the work list; the earlier batches were relocated to their correct
+blocks by matching their text against the corpus (104 of 105 found — one block
+was lost and is back to OCR text, unflagged as verified); labels were rebuilt
+from block content rather than batch order; and frontmatter counts were
+recomputed. Verified afterwards: 0 documents with duplicate frontmatter keys,
+0 documents whose `vision_verified_blocks` disagrees with the labels in the
+body.
+
+Three separate bugs are fixed in the tool so this cannot recur:
+
+- an id is now bound to (document, slide) permanently, and reviewed blocks stay
+  in the work list rather than being renumbered away
+- `--apply` refuses ids that are not in the current work list instead of editing
+  whichever block holds that number
+- labelling is positional, so a block is marked reviewed because it was read —
+  the old code used `str.replace(..., 1)`, which marked the *first* flagged
+  block in the document
+
 ## Known defects, not fixed
 
 | Issue | Scale | Why not fixed |
@@ -148,6 +220,7 @@ this kind of published security research.
 | Black Hat's `AS-23-` filenames drop subtitles and keep one surname | 36 decks | Lossy in the source archive, not in conversion. `PMFault` is really *"PMFault: Voltage Fault Injection on Server Platforms Through the PMBus"*; `["Bai"]` is really three people. Recovering it means reading titles off slide 1 — a separate job with its own error modes. |
 | `MoustachedBouncer AitM-Powered…` parses as a speaker | 1 deck | Genuinely ambiguous — it reads exactly like a two-word name. Corrected via `tools/metadata_overrides.json` instead. |
 | Two source PDFs are mis-filed by the archive | 2 decks | The filename describes a different talk. Corrected via `tools/metadata_overrides.json`, with the discrepancy written into `content_note`. |
+| Three files in the DEF CON 33 workshop archives will not decompress | 3 files | Damaged in the published RARs, not here. `ShellcodeHarness.exe`, `xss_python_swift_rest_api_server.py` and `OpenStack_Swift_server_setup-Optional.md` yield zero bytes under both 7-Zip and `unar`, which fail at the same offsets. Everything else in those archives extracted. |
 | Exact values inside OCR blocks | ~11% of OCR characters | Tesseract cannot resolve `0`/`O`/`@`/`Q` in slide screenshots at any DPI tested; 400 DPI scored *worse* than 200. Flagged rather than silently trusted. |
 
 ---
