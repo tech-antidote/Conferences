@@ -179,6 +179,36 @@ def main() -> int:
     check(len(tags) == 3 and tags[0] == tags[2] and tags[0] != tags[1],
           "the same secret reads the same, different secrets stay different")
 
+    print("\ninvisible text:")
+    # Built rather than fixtured: the real case that exposed this is a 94-page
+    # deck, and the property under test is one page with three spans on it.
+    import pymupdf
+    from pdf2md import invisible_spans, strip_invisible
+    doc = pymupdf.open()
+    page = doc.new_page(width=400, height=200)
+    page.draw_rect(page.rect, color=None, fill=(0, 0, 0))
+    page.insert_text((20, 40), "VISIBLE HEADING", fontsize=18, color=(1, 1, 1))
+    page.insert_text((20, 80), "hidden-leftover.example", fontsize=11, color=(0, 0, 0))
+    # The same string drawn both ways must survive: dropping the visible copy
+    # would be this check causing the very error it exists to prevent.
+    page.insert_text((20, 120), "BOTH", fontsize=14, color=(1, 1, 1))
+    page.insert_text((20, 150), "BOTH", fontsize=14, color=(0, 0, 0))
+    page = doc.reload_page(page)
+    hidden = invisible_spans(page)
+    check("hidden-leftover.example" in hidden, "black-on-black text is detected")
+    check("VISIBLE HEADING" not in hidden, "visible text is not detected")
+    check("BOTH" not in hidden,
+          "a string that also appears visibly is kept")
+    body, n = strip_invisible("VISIBLE HEADING\n\n- hidden-leftover.example\n\nBOTH",
+                              hidden)
+    check(n == 1 and "hidden-leftover" not in body,
+          "the hidden string is removed from the page body")
+    check("VISIBLE HEADING" in body and "BOTH" in body,
+          "removal leaves the rest of the body intact")
+    check("\n- \n" not in body and not body.rstrip().endswith("-"),
+          "the emptied list marker is tidied away")
+    doc.close()
+
     print("\nslugify:")
     check(slugify("AS-23-Chen-PMFault") == "as-23-chen-pmfault", "lowercases and keeps dashes")
     check("/" not in slugify("A/B Testing: Attacks & Defenses"), "strips path separators")
@@ -189,7 +219,7 @@ def main() -> int:
     if failures:
         print(f"{len(failures)} assertion(s) FAILED")
         return 1
-    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 4} assertions passed")
+    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 11} assertions passed")
     return 0
 
 

@@ -640,6 +640,99 @@ def image_coverage(page: "pymupdf.Page") -> float:
 
 
 # ---------------------------------------------------------------------------
+# Text that is in the PDF but not on the slide
+# ---------------------------------------------------------------------------
+
+# A reviewer reading "Breaking Trust Boundaries" against its page images found a
+# URL in the Markdown that appears nowhere on the slide. It was not OCR noise:
+# the author had duplicated a text box across six slides, and on those six it is
+# drawn in black on a black background. The converter extracted it because it
+# genuinely is in the text layer -- and publishing it puts lines in the corpus
+# that a reader cannot find on the page, which is the failure class no reader
+# can detect without the source in front of them. Same shape covers white-on-
+# white page furniture and boxes parked behind a full-bleed image.
+#
+# The test is by rendering rather than colour arithmetic: a span is invisible
+# when the pixels in its own bounding box are all about one shade *and* that
+# shade is the span's own colour, i.e. drawing the glyphs changed nothing. Both
+# halves are needed -- colour alone misses black text on a dark grey panel, and
+# flatness alone misses a bbox that catches one bright pixel from a neighbour,
+# which is exactly what happens on page 6 of that deck.
+INVISIBLE_PROBE_DPI = 110
+INVISIBLE_SHADE_TOLERANCE = 12
+INVISIBLE_SPREAD_CEILING = 96
+INVISIBLE_MIN_EDGE = 2.0
+
+
+def _span_luma(color: int) -> float:
+    r, g, b = (color >> 16) & 255, (color >> 8) & 255, color & 255
+    return 0.299 * r + 0.587 * g + 0.114 * b
+
+
+def _span_invisible(page: "pymupdf.Page", span: dict) -> bool:
+    rect = pymupdf.Rect(span["bbox"])
+    if rect.is_empty or rect.width < INVISIBLE_MIN_EDGE or rect.height < INVISIBLE_MIN_EDGE:
+        return False
+    try:
+        pix = page.get_pixmap(dpi=INVISIBLE_PROBE_DPI, clip=rect,
+                              colorspace=pymupdf.csGRAY)
+    except Exception:  # noqa: BLE001
+        return False
+    s = pix.samples
+    if not s:
+        return False
+    mean = sum(s) / len(s)
+    return (abs(_span_luma(span.get("color", 0)) - mean) < INVISIBLE_SHADE_TOLERANCE
+            and (max(s) - min(s)) < INVISIBLE_SPREAD_CEILING)
+
+
+def invisible_spans(page: "pymupdf.Page") -> list[str]:
+    """Strings this page draws invisibly and nowhere visibly.
+
+    A string that also appears in a visible span stays: the same words can be
+    both a hidden leftover and real slide content, and dropping the visible copy
+    would be the very error this is meant to prevent, in the other direction.
+    """
+    hidden: list[str] = []
+    shown: set[str] = set()
+    try:
+        blocks = page.get_text("dict").get("blocks", [])
+    except Exception:  # noqa: BLE001
+        return []
+    for blk in blocks:
+        for line in blk.get("lines", []):
+            for span in line.get("spans", []):
+                text = span.get("text", "").strip()
+                if not text:
+                    continue
+                if _span_invisible(page, span):
+                    hidden.append(text)
+                else:
+                    shown.add(text)
+    seen: set[str] = set()
+    out = []
+    for text in hidden:
+        if text not in shown and text not in seen:
+            seen.add(text)
+            out.append(text)
+    return out
+
+
+def strip_invisible(body: str, hidden: list[str]) -> tuple[str, int]:
+    """Remove hidden strings from a page body, tidying the lines they leave."""
+    removed = 0
+    for text in sorted(hidden, key=len, reverse=True):
+        if text and text in body:
+            body = body.replace(text, "")
+            removed += 1
+    if removed:
+        body = re.sub(r"(?m)^[ \t]*[-*+][ \t]*$\n?", "", body)
+        body = re.sub(r"[ \t]+$", "", body, flags=re.M)
+        body = re.sub(r"\n{3,}", "\n\n", body).strip()
+    return body, removed
+
+
+# ---------------------------------------------------------------------------
 # Secret redaction
 # ---------------------------------------------------------------------------
 
@@ -830,7 +923,7 @@ def find_sidecars(pdf_path: str) -> list[tuple[str, str]]:
 
 
 def convert_one(job: tuple) -> dict:
-    pdf_path, src_root, out_root, do_ocr, do_redact = job
+    pdf_path, src_root, out_root, do_ocr, do_redact, drop_invisible = job
     rel = os.path.relpath(pdf_path, src_root)
     folder = rel.split(os.sep)[0] if os.sep in rel else ""
     conf = parse_conference(folder)
@@ -880,6 +973,19 @@ def convert_one(job: tuple) -> dict:
             except Exception:  # noqa: BLE001
                 raw_pages.append("")
 
+        # Text that is in the layer but not on the slide, gathered before the
+        # layout engine consumes the pages. See invisible_spans(): publishing it
+        # would put lines in the Markdown that a reader cannot find on the page.
+        hidden_by_page: dict[int, list[str]] = {}
+        if drop_invisible:
+            for _i, _pg in enumerate(doc):
+                try:
+                    _h = invisible_spans(_pg)
+                except Exception:  # noqa: BLE001
+                    _h = []
+                if _h:
+                    hidden_by_page[_i] = _h
+
         # Structural pass over the whole document at once. use_ocr=False keeps
         # the layout engine's per-picture OCR off; pass 2 below does OCR better
         # and only where it is needed (see the note at the top of this file).
@@ -897,12 +1003,17 @@ def convert_one(job: tuple) -> dict:
         ocr_raw: dict[int, tuple[str, float, float]] = {}
         struct_chars = 0
         redactions = 0
+        invisible_dropped = 0
         ocr_timeouts = 0
 
         # Pass A: structural text, and OCR for the pages that need it.
         recovered_pages = 0
         for idx, chunk in enumerate(chunks):
             body = tidy(chunk.get("text", "") or "")
+            _hidden = hidden_by_page.get(idx) or []
+            if _hidden:
+                body, _ndrop = strip_invisible(body, _hidden)
+                invisible_dropped += _ndrop
 
             # The layout engine consumes text that overlaps a picture region and,
             # with its own OCR off, discards it: one slide with 165 characters of
@@ -912,7 +1023,12 @@ def convert_one(job: tuple) -> dict:
             if idx < len(raw_pages):
                 raw = raw_pages[idx]
                 if len(raw) >= 80 and len(body) < 0.5 * len(raw):
+                    # The fallback reads the page's own layer, which is where the
+                    # hidden text lives, so it has to be stripped here too.
                     body = tidy(raw)
+                    if _hidden:
+                        body, _ndrop = strip_invisible(body, _hidden)
+                        invisible_dropped += _ndrop
                     if do_redact:
                         body, nred = redact_secrets(body)
                         redactions += nred
@@ -1048,6 +1164,7 @@ def convert_one(job: tuple) -> dict:
             f"ocr_pages: {ocr_pages}",
             f"has_ocr: {'true' if ocr_pages else 'false'}",
             f"redacted_secrets: {redactions}",
+            f"invisible_spans_dropped: {invisible_dropped}",
             f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
             f"ocr_unreliable_blocks: {risky_blocks}",
             f"ocr_timeouts: {ocr_timeouts}",
@@ -1081,6 +1198,7 @@ def convert_one(job: tuple) -> dict:
             ocr_confidence=(round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else None),
             ocr_unreliable_blocks=risky_blocks, ocr_timeouts=ocr_timeouts,
             pages_recovered_from_text_layer=recovered_pages,
+            invisible_spans_dropped=invisible_dropped,
             content_note=content_note or None,
         )
         return result
@@ -1132,6 +1250,11 @@ def main() -> int:
                     help="mask credential-shaped strings (AWS/GitHub/Slack keys, "
                          "PEM blocks). Off by default: output is verbatim, which "
                          "may require allowing secrets in GitHub push protection.")
+    ap.add_argument("--keep-invisible", action="store_true",
+                    help="keep text the PDF draws but the slide never shows "
+                         "(black-on-black leftovers, text behind an image). On "
+                         "by default it is dropped: a reader of the Markdown "
+                         "cannot tell it from something the speaker displayed.")
     ap.add_argument("--force", action="store_true",
                     help="re-convert decks already recorded in the manifest")
     args = ap.parse_args()
@@ -1193,7 +1316,8 @@ def main() -> int:
           f"|  OCR={'on' if do_ocr else 'off'}")
     print(f"  source: {src_root}\n  output: {out_root}", flush=True)
 
-    jobs = [(p, src_root, out_root, do_ocr, args.redact) for p in pdfs]
+    jobs = [(p, src_root, out_root, do_ocr, args.redact, not args.keep_invisible)
+            for p in pdfs]
     records, done, failed = list(previous.values()), 0, 0
 
     # Stream results to a side log as they land, so an interrupted run (container

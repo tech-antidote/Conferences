@@ -126,6 +126,25 @@ barely has. It remains the better choice for dense papers, and the whitepapers
 occasionally shipped alongside talks are a reasonable place to use it. It is not
 the right default for 40k slides on CPU.
 
+**Text in the PDF is not the same as text on the slide.** A reviewer reading
+"Breaking Trust Boundaries" against its page images found a URL in the Markdown
+that appears nowhere on the slide. It was not OCR noise: the author had
+duplicated a text box across six slides, and on those six it is drawn in black
+on a black background. The converter extracted it because it genuinely is in
+the text layer — and publishing it puts lines in the corpus that a reader
+cannot find on the page, which is the failure class no reader can detect
+without the source in front of them.
+
+So the converter renders each span's own bounding box and drops the span when
+the glyphs made no difference to what the page looks like — same shade as
+their surroundings, and that shade is the span's own colour. A string that also
+appears in a visible span is kept, so a hidden duplicate never costs you the
+real one. On that deck it removed 7 spans of 1008 with no false positives: the
+six the reviewer found by eye, plus a page number set in white on the one slide
+with a white background. `--keep-invisible` turns it off; the count lands in
+`invisible_spans_dropped`. `tools/find_invisible_text.py` reports the same
+thing across a directory without converting anything.
+
 **OCR cannot describe a photograph.** A slide showing a technician splicing
 fibre at a curbside cabinet contains no text, so Tesseract correctly returns
 nothing and the slide appears in the Markdown as a bare `## Slide N`. Recovering
