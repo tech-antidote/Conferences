@@ -152,6 +152,11 @@ scale defined enabled assisted related specific style like man middle
 """.split())
 
 
+# Words describing the session, not the person.
+SESSION_WORDS = {"keynote", "workshop", "panel", "talk", "briefing", "training",
+                 "demo", "arsenal", "tutorial"}
+
+
 def _tokens(text: str) -> list[str]:
     return [t.strip(".,:;()[]'\"") for t in text.split() if t.strip(".,:;()[]'\"")]
 
@@ -180,6 +185,11 @@ def speaker_defects(rec: dict) -> list[dict]:
         # entry is longer than a name.
         if re.search(r"\S-\S", entry) and len(words) > 3:
             reasons.append("hyphen-joined title fragment")
+        # "Solar Designer-Keynote": a session-kind word glued to a real name.
+        for piece in re.split(r"[-_]", entry):
+            if piece.strip().lower() in SESSION_WORDS:
+                reasons.append(f"session-kind word {piece.strip()!r} glued to "
+                               "the name")
         if len(words) == 1 and entry.islower() and entry.isalpha() and len(entry) > 14:
             reasons.append("single lowercase word, too long for a handle")
         if reasons:
@@ -200,6 +210,12 @@ def orphan_title_head(rec: dict) -> dict | None:
     hyphen inside "AitM-Powered", so `speakers` looks name-shaped while `title`
     begins with the orphaned tail "Powered ...".
     """
+    # Only the hyphen convention can split inside a word. An underscore or a
+    # DEF CON " - " filename that happens to start its title with "Core" or
+    # "Time" is not evidence of anything.
+    stem = os.path.splitext(os.path.basename(rec.get("source_pdf") or ""))[0]
+    if "_" in stem or BH_PREFIX_RE.match(stem) or rec.get("conference") == "DEF CON":
+        return None
     title = rec.get("title") or ""
     first = _tokens(title)[:1]
     if not first:
@@ -212,38 +228,65 @@ def orphan_title_head(rec: dict) -> dict | None:
     return None
 
 
+def speakers_leaked_into_title(rec: dict) -> dict | None:
+    """A speaker separator recurring after the split point means names were lost.
+
+    "<Speakers>_<Title>" splits on the first underscore. When the speaker list
+    itself is separated by " _ ", only the first name is captured and the rest
+    are carried into the title.
+    """
+    stem = os.path.splitext(os.path.basename(rec.get("source_pdf") or ""))[0]
+    if "_" not in stem:
+        return None
+    tail = stem.split("_", 1)[1]
+    if not re.search(r"\s_", tail):
+        return None
+    # "..., IoT, _Compressed" is a document marker, not a second speaker.
+    rest = [s.strip() for s in re.split(r"\s_", tail)[1:]]
+    if all(s.split()[0].lower().strip("_") in KNOWN_DOC_WORDS
+           for s in rest if s.split()):
+        return None
+    return {"source_pdf": rec.get("source_pdf"), "title": rec.get("title"),
+            "speakers": rec.get("speakers"),
+            "reason": "the filename uses ' _ ' as its speaker separator, so "
+                      "only the first name was captured and the remaining "
+                      "speakers were left at the front of the title"}
+
+
 # --------------------------------------------------------------------------
 # Check 2 -- titles carrying markers that belong to the file, not the talk
 # --------------------------------------------------------------------------
 
 DOC_MARKER = r"wp|whitepaper|white\s?paper|paper|slides?|deck|compressed|updated|draft"
+# A version marker only counts when a separator introduces it, so that "in V8"
+# and "the V8 Heap Sandbox" -- V8 being a JavaScript engine, not a revision --
+# stay out of the results.
 VERSION_MARKER = r"v\d+(?:[. ]\d+)*(?:\s+\w+)?"
 
 TITLE_MARKER_RES = [
-    ("document-kind suffix",
-     re.compile(rf"[-_\s]({DOC_MARKER})$", re.I)),
-    ("version marker",
-     re.compile(rf"[-_\s(]({VERSION_MARKER})\)?$", re.I)),
-    ("duplicate-copy suffix",
-     re.compile(r"\(\s*\d+\s*\)\s*$")),
-    ("file-extension debris",
-     re.compile(r"\.(pdf|pptx|ppt|key|docx|zip)\b", re.I)),
-    ("underscore debris",
-     re.compile(r"_")),
-    ("speaker-separator debris",
-     re.compile(r"^[^&]*&[^&]*$")),  # narrowed below
+    ("document-kind suffix", re.compile(rf"[-_]({DOC_MARKER})$", re.I)),
+    ("version marker", re.compile(rf"[-_(]({VERSION_MARKER})\)?$", re.I)),
+    ("duplicate-copy suffix", re.compile(r"\(\s*\d+\s*\)\s*$")),
+    ("file-extension debris", re.compile(r"\.(pdf|pptx|ppt|key|docx|zip)\b", re.I)),
+    ("underscore debris", re.compile(r"_")),
 ]
 
 BARE_MARKER_RE = re.compile(rf"^(?:{DOC_MARKER}|{VERSION_MARKER})$", re.I)
 
+# Archives truncate long filenames, and the title inherits the cut. DEF CON's
+# media server caps the stem far shorter than Black Hat's does.
+LENGTH_CAP = {"DEF CON": 149}
+DEFAULT_LENGTH_CAP = 200
+
 
 def title_defects(rec: dict) -> list[dict]:
     title = (rec.get("title") or "").strip()
-    stem = os.path.splitext(os.path.basename(rec.get("source_pdf") or ""))[0]
+    base = os.path.basename(rec.get("source_pdf") or "")
+    stem = os.path.splitext(base)[0]
     found = []
     if BARE_MARKER_RE.match(title):
         found.append(f"title is nothing but a file marker ({title!r})")
-    for label, rx in TITLE_MARKER_RES[:5]:
+    for label, rx in TITLE_MARKER_RES:
         m = rx.search(title)
         if m:
             found.append(f"{label}: {m.group(0).strip()!r}")
@@ -251,44 +294,78 @@ def title_defects(rec: dict) -> list[dict]:
     for sp in rec.get("speakers") or []:
         if len(sp) > 4 and sp.lower() in title.lower():
             found.append(f"contains speaker name {sp!r}")
-    # A filename ending mid-word means the archive truncated it; the title
-    # inherits the truncation.
-    if stem and not stem.endswith(")") and len(title.split()) > 4:
-        last = _tokens(title)[-1] if _tokens(title) else ""
-        if (last and last[:1].isupper() and len(last) <= 2) or re.search(
-                r"\b(?:Fingerprin|Locked-D|Lock|Ci|Cloud$)$", title):
-            pass  # handled by the generic rule below
-    trunc = _truncation_hint(title)
-    if trunc:
-        found.append(trunc)
+    found.extend(_underscore_hints(stem))
+    found.extend(_truncation_hints(title, stem, base,
+                                   rec.get("conference") or ""))
     if not found:
         return []
-    return [{"source_pdf": rec.get("source_pdf"), "title": title, "reasons": found}]
+    return [{"source_pdf": rec.get("source_pdf"), "title": title,
+             "reasons": found}]
 
 
-TRUNCATION_TAIL_RE = re.compile(r"\b([A-Za-z]{1,3})$")
+KNOWN_DOC_WORDS = {"wp", "whitepaper", "paper", "slides", "slide", "compressed",
+                   "updated", "deck", "draft"}
 
 
-def _truncation_hint(title: str) -> str | None:
-    """A title cut off mid-word: last token is a 1-3 char alphabetic stub."""
-    words = _tokens(title)
-    if len(words) < 4:
-        return None
-    last = words[-1]
-    if not last.isalpha() or len(last) > 3:
-        return None
-    # Real short final words exist ("at Scale", "of AI", "on Mac"); require the
-    # stub to look like a chopped word: not a dictionary-ish short word.
-    common = {"AI", "ML", "OS", "IT", "US", "UK", "RCE", "LPE", "SSH", "API",
-              "CPU", "GPU", "PLC", "CTF", "VPN", "DNS", "SDK", "IoT", "EDR",
-              "TEE", "RFC", "PDF", "SMM", "BGP", "LLM", "LLMs", "SIM", "USB",
-              "Mac", "Web", "Bus", "Fun", "Age", "War", "Now", "See", "Way",
-              "You", "All", "Key", "Own", "Out", "Up", "In", "On", "Me"}
-    if last in common or last.lower() in STOPWORDS:
-        return None
-    if last.isupper() and len(last) >= 2:
-        return None
-    return f"title appears truncated mid-word (ends {last!r})"
+def _underscore_hints(stem: str) -> list[str]:
+    """Underscores past the first one are lost information.
+
+    "<Speakers>_<Title>" splits on the *first* underscore only; every later one
+    is flattened into a space. That silently rewrites "Bad io_uring" as
+    "Bad io uring", turns the emoticon "(0_o)" into "(0 o)", leaves unrecognised
+    document markers ("_workshop", "_Article") glued to the title, and -- when a
+    speaker list itself uses " _ " as its separator -- pushes every speaker after
+    the first into the title.
+    """
+    if "_" not in stem:
+        return []
+    segments = stem.split("_", 1)[1].split("_")
+    while len(segments) > 1 and segments[-1].strip().lower() in KNOWN_DOC_WORDS:
+        segments.pop()
+    if len(segments) < 2:
+        return []
+    extra = [s.strip() for s in segments[1:]]
+    if all(s.lower() in KNOWN_DOC_WORDS or len(s.split()) <= 2 for s in extra) \
+            and any(s.lower() not in KNOWN_DOC_WORDS for s in extra):
+        kind = "unstripped document marker or flattened underscore"
+    else:
+        kind = "flattened underscore"
+    return [f"{kind}: filename carries {len(segments) - 1} further "
+            f"underscore(s) ({', '.join(repr(s) for s in extra)}) that became "
+            "spaces in the title"]
+
+
+# A trailing single capital or capital+letter is a word sliced in half
+# ("... and Container E", "... without Breaking a Ci"). All-caps acronyms and
+# real two-letter words ("... the Mind Behind It") are excluded by name.
+MIDWORD_TAIL_RE = re.compile(r"(?:^|\s)([A-Z][a-z]?)$")
+REAL_SHORT_WORDS = {"A", "I", "It", "Is", "In", "On", "At", "To", "We", "Me",
+                    "My", "Of", "Or", "As", "By", "Do", "Go", "If", "So", "Up",
+                    "Us", "Be", "He", "No", "An", "Am", "Ai", "Id", "Ok"}
+
+ADVISORY = "(advisory) "
+
+
+def _truncation_hints(title: str, stem: str, base: str, series: str) -> list[str]:
+    out = []
+    m = MIDWORD_TAIL_RE.search(title)
+    if m and m.group(1) not in REAL_SHORT_WORDS and len(title.split()) > 3:
+        out.append(f"title ends mid-word ({m.group(1)!r})")
+    # A trailing comma or hyphen is a cut, not punctuation an author chose.
+    # "...on RISC-V" is deliberately excluded: a one-letter suffix after a hyphen
+    # is as often a real name as a truncation, so it is not evidence on its own.
+    if title.endswith(",") or title.endswith("-"):
+        out.append("title ends on a dangling separator")
+    # The filename hit the archive's length limit and nothing was stripped after
+    # the title, so whatever the cut removed is missing from the title too. This
+    # is circumstantial -- a title can end exactly at the cap -- so it is
+    # advisory and is counted separately.
+    cap = LENGTH_CAP.get(series, DEFAULT_LENGTH_CAP)
+    if len(base.encode()) >= cap + 4 and stem.endswith(title):
+        out.append(f"{ADVISORY}filename is at the archive length cap "
+                   f"({len(base.encode())} bytes) with the title flush against "
+                   "the cut -- verify against the slides")
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -476,14 +553,18 @@ def main(argv=None) -> int:
               "(in-flight reconversion artefact, not a metadata defect)")
 
     if "speakers" in checks:
-        rows, orphans = [], []
+        rows, orphans, leaked = [], [], []
         for rec in records:
             rows.extend(speaker_defects(rec))
             o = orphan_title_head(rec)
             if o:
                 orphans.append(o)
+            l = speakers_leaked_into_title(rec)
+            if l:
+                leaked.append(l)
         report["speakers"] = rows
         report["orphan_title_heads"] = orphans
+        report["speakers_leaked_into_title"] = leaked
         real = [r for r in rows if r["reasons"] != ["no speakers parsed"]]
         empty = [r for r in rows if r["reasons"] == ["no speakers parsed"]]
         print(f"\n== speakers that are not names: {len(real)}")
@@ -499,16 +580,30 @@ def main(argv=None) -> int:
             print(f"  title={o['title']!r} speakers={o['speakers']}")
             print(f"      {o['reason']}")
             print(f"      file: {o['source_pdf']}")
+        print(f"\n== speakers left inside the title: {len(leaked)}")
+        for o in leaked:
+            print(f"  title={o['title']!r} speakers={o['speakers']}")
+            print(f"      {o['reason']}")
+            print(f"      file: {o['source_pdf']}")
 
     if "titles" in checks:
         rows = []
         for rec in records:
             rows.extend(title_defects(rec))
         report["titles"] = rows
-        print(f"\n== titles carrying filename debris: {len(rows)}")
-        for r in rows:
+        hard = [r for r in rows
+                if any(not x.startswith(ADVISORY) for x in r["reasons"])]
+        soft = [r for r in rows if r not in hard]
+        print(f"\n== titles carrying filename debris: {len(hard)}")
+        for r in hard:
             print(f"  {r['title']!r}")
-            print(f"      {'; '.join(r['reasons'])}")
+            for reason in r["reasons"]:
+                print(f"      {reason}")
+            print(f"      file: {r['source_pdf']}")
+        print(f"\n== titles flush against the archive length cap "
+              f"(advisory, verify): {len(soft)}")
+        for r in soft:
+            print(f"  {r['title']!r}")
             print(f"      file: {r['source_pdf']}")
 
     if "conference" in checks:

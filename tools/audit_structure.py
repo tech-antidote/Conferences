@@ -193,23 +193,41 @@ class Audit:
         self.problems[category].append(detail)
 
     # -- manifest ---------------------------------------------------------
-    def load_manifest(self):
+    def load_manifest(self, use_partial: bool = False):
         records, bad = [], 0
+        sources = [self.manifest_path]
+        partial = self.manifest_path + ".partial"
+
+        # pdf2md streams finished decks to <manifest>.partial and only writes
+        # the real manifest at the end, so its presence means a conversion is
+        # running and the tree underneath us is a moving target.
+        if os.path.exists(partial):
+            self.notes["conversion-in-flight"].append(
+                f"{partial} exists: a conversion is streaming results, so disk "
+                "state is mid-flight"
+                + ("; its records are included" if use_partial
+                   else "; re-run with --partial to include them"))
+            if use_partial:
+                sources.append(partial)
+
         if not os.path.exists(self.manifest_path):
             self.fail("manifest-unreadable",
-                      f"{self.manifest_path}: manifest file not found")
-            return records
-        with open(self.manifest_path, "r", encoding="utf-8") as fh:
-            for lineno, line in enumerate(fh, 1):
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    records.append(json.loads(line))
-                except json.JSONDecodeError as exc:
-                    bad += 1
-                    self.fail("manifest-bad-json",
-                              f"{self.manifest_path}:{lineno}: {exc}")
+                      f"{self.manifest_path}: manifest file not found"
+                      + (" (a conversion is in flight; only .partial exists)"
+                         if os.path.exists(partial) else ""))
+            sources = [p for p in sources if p != self.manifest_path]
+
+        for source in sources:
+            with open(source, "r", encoding="utf-8") as fh:
+                for lineno, line in enumerate(fh, 1):
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        records.append(json.loads(line))
+                    except json.JSONDecodeError as exc:
+                        bad += 1
+                        self.fail("manifest-bad-json", f"{source}:{lineno}: {exc}")
         self.stats["manifest_records"] = len(records)
         self.stats["manifest_bad_json_lines"] = bad
         return records
@@ -470,8 +488,8 @@ class Audit:
         self.stats["source_pdf_absent_unexpected"] = absent_unexpected
 
     # -- run --------------------------------------------------------------
-    def run(self):
-        records = self.load_manifest()
+    def run(self, use_partial: bool = False):
+        records = self.load_manifest(use_partial)
         disk_files = rel_md_paths(self.out_root)
         ok_records, _claimed, _orphans = self.check_pairing(records, disk_files)
         fm_by_path = self.check_files(disk_files)
@@ -520,6 +538,9 @@ def main(argv=None) -> int:
     ap.add_argument("--expect-absent", default="DEF CON 34/",
                     help="source_pdf prefix whose files are legitimately not in "
                          "the repo (default: 'DEF CON 34/'); pass '' to disable")
+    ap.add_argument("--partial", action="store_true",
+                    help="also read <manifest>.partial, the stream a conversion "
+                         "writes while it is still running")
     ap.add_argument("--max-list", type=int, default=20,
                     help="max failing entries printed per category (default: 20)")
     ap.add_argument("--json", dest="json_out", default=None,
@@ -534,7 +555,7 @@ def main(argv=None) -> int:
     manifest = args.manifest or os.path.join(out_root, "manifest.jsonl")
 
     audit = Audit(out_root, src_root, manifest, args.expect_absent)
-    problems = audit.run()
+    problems = audit.run(use_partial=args.partial)
 
     print("=" * 74)
     print(f"Structural audit: {out_root}")
@@ -565,10 +586,14 @@ def main(argv=None) -> int:
                 if len(items) > args.max_list:
                     print(f"    ... and {len(items) - args.max_list} more")
 
-    if audit.notes.get("expected-absent-source"):
-        n = len(audit.notes["expected-absent-source"])
-        print(f"\nNotes\n  expected-absent sources (not an error): {n} under "
-              f"{args.expect_absent!r}")
+    if audit.notes:
+        print("\nNotes")
+        if audit.notes.get("expected-absent-source"):
+            n = len(audit.notes["expected-absent-source"])
+            print(f"  expected-absent sources (not an error): {n} under "
+                  f"{args.expect_absent!r}")
+        for line in audit.notes.get("conversion-in-flight", ()):
+            print(f"  {line}")
 
     print("\n" + "=" * 74)
     print(f"RESULT: {'PROBLEMS FOUND' if total else 'CLEAN'} "
