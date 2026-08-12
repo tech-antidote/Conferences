@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1924 slides across 147 documents.**
+**2028 slides across 149 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 813 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 878 | structure held; individual characters or lines wrong |
-| accurate | 205 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 842 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 925 | structure held; individual characters or lines wrong |
+| accurate | 233 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -36,7 +36,7 @@ under more than one heading or under none. Counts are slides.
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
-### Cloud and API — 15 talks, 195 slides
+### Cloud and API — 16 talks, 244 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -53,6 +53,7 @@ under more than one heading or under none. Counts are slides.
 - **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
+- **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
 ### Web and browser — 13 talks, 130 slides
 
@@ -70,7 +71,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 32 talks, 793 slides
+### Zero-day, RCE and novel exploitation — 34 talks, 897 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -95,6 +96,7 @@ under more than one heading or under none. Counts are slides.
 - **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
 - **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
+- **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
@@ -104,8 +106,9 @@ under more than one heading or under none. Counts are slides.
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (DEF CON 34) — slides 1-62
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
+- **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
-### Firmware, hardware and embedded — 22 talks, 348 slides
+### Firmware, hardware and embedded — 23 talks, 403 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -125,6 +128,7 @@ under more than one heading or under none. Counts are slides.
 - **Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing** (Black Hat USA 2025) — slides 17-18, 45
 - **Breaking Hardware CFI with Sigreturn** (Black Hat USA 2026) — slides 1-68
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
+- **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
@@ -260,6 +264,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
 | Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
+| Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
@@ -281,3 +286,4 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C | 1-49 | badly-mangled, minor-errors, accurate | 1 |
