@@ -36,6 +36,30 @@ FM_RE = re.compile(r"(?m)^(\w+): (.*)$")
 VERDICT_ORDER = {"badly-mangled": 0, "minor-errors": 1, "mostly-accurate": 2,
                  "accurate": 3}
 
+# Review effort was aimed at the classes of talk whose exact values matter most
+# to someone building an offensive or defensive tool: an address, a GUID or a
+# registry path that is one character wrong is worse than useless. Grouping is
+# keyword-matched against the talk title, so it is a reading aid rather than a
+# taxonomy -- a talk can sit under two headings, or under none while still
+# being reviewed.
+TOPICS = [
+    ("Windows, Active Directory and Entra",
+     r"windows|active directory|entra|azure ad|kerberos|ntlm|secureboot|"
+     r"uefi|bitlocker|defender|powershell|registry|biometric|hello"),
+    ("Cloud and API",
+     r"cloud|aws|azure|gcp|kubernetes|k8s|container|ecs|iam|s3|oauth|"
+     r"api|serverless|saas|tenant"),
+    ("Web and browser",
+     r"web|browser|chrome|webkit|javascript|xss|csrf|http|url|dom|"
+     r"extension|wasm|webassembly|websql"),
+    ("Zero-day, RCE and novel exploitation",
+     r"zero.?day|0.?day|rce|remote code|preauth|exploit|privilege escalation|"
+     r"lpe|sandbox escape|use.after.free|heap|jit|rop|shellcode|cve"),
+    ("Firmware, hardware and embedded",
+     r"firmware|hardware|bootloader|baseband|usb|bluetooth|ble|nfc|"
+     r"soc|mcu|jtag|glitch|fault injection|side.channel|plc|ics|scada"),
+]
+
 
 def frontmatter(text: str) -> dict[str, str]:
     if not text.startswith("---"):
@@ -117,6 +141,27 @@ def main() -> int:
         for v, n in sorted(counts.items(), key=lambda kv: VERDICT_ORDER.get(kv[0], 9)):
             print(f"| {v} | {n} | {meaning.get(v, '')} |")
         print()
+    print("## Coverage by subject")
+    print()
+    print("Grouped by keyword match on the talk title, so a talk can appear")
+    print("under more than one heading or under none. Counts are slides.")
+    print()
+    for heading, pattern in TOPICS:
+        hits = [(c, t, s) for c, t, s, _v, _r in rows
+                if re.search(pattern, t, re.I)]
+        if not hits:
+            continue
+        n = sum(len(s) for _c, _t, s in hits)
+        print(f"### {heading} — {len(hits)} talks, {n} slides")
+        print()
+        for conf, title, slides in sorted(hits):
+            print(f"- **{title}** ({conf}) — slide"
+                  f"{'s' if len(slides) > 1 else ''} "
+                  f"{', '.join(str(x) for x in slides)}")
+        print()
+
+    print("## Every verified slide")
+    print()
     print("| Conference | Talk | Slides read | Verdicts | Blocks still OCR-only |")
     print("|---|---|---|---|---:|")
     for conf, title, slides, vs, rest in sorted(rows):
