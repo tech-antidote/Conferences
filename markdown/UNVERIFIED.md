@@ -21,7 +21,7 @@ ranges and failed on two.
 | Document | Pages | Attempts | Notes |
 |---|---|---|---|
 | `DEF CON 34/def-con-34-jian-zhou-lei-lu-one-chain-to-own-them-all-breaking-ai-infrastructures-azraelxuemo-v3.md` | 118–130 | Opus ×1, Sonnet ×1 | 130 of 143 pages verified. 79–91 was recovered on a second model; this range was not. |
-| `BlackHat_USA_2026_Slides/apple-macos-kernel-exploitation-with-mie…` (see manifest) | 45–58 | Opus ×1, Sonnet ×1 | Blocked before any page was read. |
+| `BlackHat_USA_2026_Slides/dion-blazakisjosh-mainebruce-dang-apple-macos-kernel-exploitation-with-mie-building-on-the-ashes-of-100-vulnerabilities.md` | 45–58 | Opus ×1, Sonnet ×1 | 44 of 58 pages verified. Blocked before any page of this range was read. |
 | `Black Hat USA 2023 slides/…code16-16-zero-day-vulnerabilities-affecting-codesys-framework…` | 17 flagged OCR blocks | Opus ×4 | Older flagged-block workflow, not full-page. Blocked at three different batch sizes, once before any page was read. |
 
 Counts and page lists are also in each document's own frontmatter
