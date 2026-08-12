@@ -209,22 +209,30 @@ def parse_markdown(path: str) -> dict:
 # PDF ground truth
 # ---------------------------------------------------------------------------
 
-def pdf_page_text(pdf_path: str) -> tuple[list[str], str | None]:
+def pdf_page_text(pdf_path: str, want_coverage: bool = False
+                  ) -> tuple[list[str], list[float], str | None]:
+    """Per-page text layer, and optionally per-page raster image coverage.
+
+    Coverage matters because it is the converter's own OCR gate: a page below
+    OCR_IMAGE_COVERAGE never gets rendered, so a page drawn entirely in vector
+    graphics is skipped by both passes.
+    """
     try:
         doc = pymupdf.open(pdf_path)
         if doc.needs_pass:
             doc.close()
-            return [], "encrypted"
-        pages = []
+            return [], [], "encrypted"
+        pages, cov = [], []
         for page in doc:
             try:
                 pages.append(page.get_text() or "")
-            except Exception as exc:  # noqa: BLE001
+            except Exception:  # noqa: BLE001
                 pages.append("")
+            cov.append(pdf2md.image_coverage(page) if (want_coverage and pdf2md) else 0.0)
         doc.close()
-        return pages, None
+        return pages, cov, None
     except Exception as exc:  # noqa: BLE001
-        return [], f"{type(exc).__name__}: {exc}"
+        return [], [], f"{type(exc).__name__}: {exc}"
 
 
 def audit_deck(job: tuple) -> dict:
@@ -236,7 +244,7 @@ def audit_deck(job: tuple) -> dict:
         out["error"] = f"markdown-read: {type(exc).__name__}: {exc}"
         return out
 
-    pages, err = pdf_page_text(pdf_path)
+    pages, coverage, err = pdf_page_text(pdf_path, want_coverage=True)
     if err:
         out["error"] = f"pdf-read: {err}"
         return out
@@ -270,6 +278,24 @@ def audit_deck(job: tuple) -> dict:
         if decodable is not False:
             dropped_readable.append(s["n"])
 
+    # Why is each empty slide empty? Answered from the source, for every empty
+    # slide rather than a sample, using only cheap signals.
+    census: dict[str, int] = defaultdict(int)
+    never_ocred = []
+    for n in empty:
+        i = n - 1
+        if not (0 <= i < len(pages)):
+            continue
+        if page_alnum[i] >= PAGE_TEXT_BUG_ALNUM:
+            census["text-layer-present-but-dropped"] += 1
+        elif pdf2md is not None and coverage[i] < pdf2md.OCR_IMAGE_COVERAGE:
+            # No text layer and too little raster coverage: the OCR gate never
+            # fired, so nothing ever looked at this page's pixels.
+            census["no-text-layer-ocr-never-attempted"] += 1
+            never_ocred.append(n)
+        else:
+            census["no-text-layer-ocr-ran-and-found-nothing"] += 1
+
     md_all = "\n".join(s["struct_text"] + s["ocr_text"] for s in slides)
     out.update({
         "pages": len(pages),
@@ -294,6 +320,8 @@ def audit_deck(job: tuple) -> dict:
         "dropped_readable_page_nums": dropped_readable[:400],
         "lossy_pages": len(lossy),
         "lossy_page_nums": lossy[:400],
+        "empty_census": dict(census),
+        "never_ocred_page_nums": never_ocred[:400],
         "chars_per_page": (struct_alnum + ocr_alnum) / len(pages) if pages else 0.0,
         "pdf_chars_per_page": pdf_alnum / len(pages) if pages else 0.0,
         "frontmatter_pages": parsed["frontmatter"].get("pages", ""),
@@ -448,7 +476,7 @@ def scan_source(pdf_path: str) -> dict:
     identifies decks where a coverage ratio near 1.0 would be meaningless
     because neither side holds words.
     """
-    pages, err = pdf_page_text(pdf_path)
+    pages, _cov, err = pdf_page_text(pdf_path)
     if err:
         return {"pdf": pdf_path, "error": err}
     text = "\n".join(pages)
@@ -636,6 +664,14 @@ def main() -> int:
           f"({100.0 * tot_dropped / max(1, tot_empty):.1f}% of empties)"
           f"\n  ... of those, text that decodes to real language: {tot_readable} "
           f"(unambiguous drops); the rest are unmappable-font pages")
+    census: dict[str, int] = defaultdict(int)
+    for r in ok:
+        for k, v in r["empty_census"].items():
+            census[k] += v
+    print("\n  why each empty slide is empty (every empty slide, judged from the source):")
+    for k, v in sorted(census.items(), key=lambda kv: -kv[1]):
+        print(f"    {v:5d} ({100.0 * v / max(1, tot_empty):5.1f}%)  {k}")
+
     worst_empty = sorted([r for r in ok if r["slides"] >= 5],
                          key=lambda r: (-(r["empty_share"] or 0), -r["slides"]))
     print(f"\n  worst {args.worst} decks by share of empty slides:")

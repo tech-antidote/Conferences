@@ -437,7 +437,29 @@ def _ocr_line_is_noise(line: str) -> bool:
     return _ocr_ratios_are_noise(line, OCR_LINE_SHORT_RATIO, OCR_LINE_WORD_RATIO)
 
 
-def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
+_LONG_HEX_RE = re.compile(r"\b(?:0x)?[0-9a-fA-F]{6,}\b")
+
+
+def _ocr_block_is_risky(text: str) -> bool:
+    """True for blocks whose exact values should not be trusted.
+
+    Audited against ground truth, hex dumps, disassembly listings and
+    label/value tables fail in a way confidence does not predict: the glyphs
+    look legible, so the score stays high, while individual bytes change
+    ("00000118" -> "80000118") and the two-dimensional structure is flattened.
+    Prose and code on a light background, by contrast, come out near-exact.
+    """
+    if len(_LONG_HEX_RE.findall(text)) >= 4:
+        return True
+    toks = text.split()
+    if not toks:
+        return False
+    # A table that lost its labels reads as mostly bare numbers.
+    numeric = sum(1 for t in toks if re.fullmatch(r"[0-9a-fA-F.,:|xX%-]+", t))
+    return numeric / len(toks) > 0.55 and len(toks) >= 12
+
+
+def ocr_page(page: "pymupdf.Page") -> tuple[str, float, float, bool]:
     """Render and OCR a page.
 
     Returns (text, mean confidence). Empty text on any failure -- OCR is
@@ -445,7 +467,7 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
     """
     exe = tesseract_path()
     if not exe:
-        return "", 0.0
+        return "", 0.0, 0.0, False
     try:
         dpi = OCR_DPI
         long_in = max(page.rect.width, page.rect.height) / 72.0
@@ -460,8 +482,12 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
             input=png, capture_output=True, timeout=OCR_TIMEOUT,
         )
         tsv = proc.stdout.decode("utf-8", "replace")
+    except subprocess.TimeoutExpired:
+        # Report it: silently returning nothing here made slow pages vanish from
+        # the corpus with no trace that anything had been attempted.
+        return "", 0.0, 0.0, True
     except Exception:
-        return "", 0.0
+        return "", 0.0, 0.0, False
 
     # Rebuild lines from the TSV, carrying each line's mean confidence.
     grouped: "collections.OrderedDict[tuple, list[tuple[str, float]]]" = collections.OrderedDict()
@@ -480,9 +506,10 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
             key = (row.get("block_num"), row.get("par_num"), row.get("line_num"))
             grouped.setdefault(key, []).append((word, conf))
     except Exception:
-        return "", 0.0
+        return "", 0.0, 0.0, False
 
     kept, confs = [], []
+    all_confs = [c for words in grouped.values() for _, c in words]
     for words in grouped.values():
         line = " ".join(w for w, _ in words)
         mean = sum(c for _, c in words) / len(words)
@@ -494,11 +521,12 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
         kept.append(line)
         confs.extend(c for _, c in words)
 
+    raw_conf = sum(all_confs) / len(all_confs) if all_confs else 0.0
     out = "\n".join(kept).strip()
     if len(out) < OCR_MIN_YIELD or _ocr_ratios_are_noise(out, OCR_BLOCK_SHORT_RATIO,
                                                          OCR_BLOCK_WORD_RATIO):
-        return "", 0.0
-    return out, (sum(confs) / len(confs) if confs else 0.0)
+        return "", 0.0, raw_conf, False
+    return out, (sum(confs) / len(confs) if confs else 0.0), raw_conf, False
 
 
 def image_coverage(page: "pymupdf.Page") -> float:
@@ -714,45 +742,91 @@ def convert_one(job: tuple) -> dict:
             chunks = pymupdf4llm.to_markdown(doc, page_chunks=True, write_images=False,
                                              show_progress=False)
 
-        parts, ocr_pages, struct_chars, ocr_chars = [], 0, 0, 0
+        bodies: list[str] = []
+        ocr_raw: dict[int, tuple[str, float, float]] = {}
+        struct_chars = 0
         redactions = 0
-        ocr_confs: list[float] = []
+        ocr_timeouts = 0
 
+        # Pass A: structural text, and OCR for the pages that need it.
         for idx, chunk in enumerate(chunks):
             body = tidy(chunk.get("text", "") or "")
             if do_redact:
                 body, nred = redact_secrets(body)
                 redactions += nred
             struct_chars += len(body)
-            section = [f"## Slide {idx + 1}", ""]
-            if body:
-                section.append(body)
+            bodies.append(body)
 
             if do_ocr and len(body) < OCR_TEXT_THRESHOLD and idx < n_pages:
                 page = doc[idx]
                 if image_coverage(page) >= OCR_IMAGE_COVERAGE:
-                    otext, oconf = ocr_page(page)
+                    otext, oconf, raw_conf, timed_out = ocr_page(page)
+                    if timed_out:
+                        ocr_timeouts += 1
                     if otext and do_redact:
                         otext, nred = redact_secrets(otext)
                         redactions += nred
                     # Only keep OCR that adds something the structural pass missed.
                     if otext and len(otext) > len(body):
-                        ocr_pages += 1
-                        ocr_chars += len(otext)
-                        ocr_confs.append(oconf)
-                        if body:
-                            section.append("")
-                        section.append(
-                            f"> Text below was recovered by OCR (confidence "
-                            f"{oconf:.0f}/100) from an image-only slide. Wording is "
-                            f"approximate; verify exact values against the source PDF.")
-                        section.append("")
-                        section.append("```text")
-                        section.append(otext)
-                        section.append("```")
-            parts.append("\n".join(section).rstrip())
+                        ocr_raw[idx] = (otext, oconf, raw_conf)
 
         doc.close()
+
+        # Pass B: strip slide furniture. A conference logo or footer sits on every
+        # page, and OCR renders it differently each time -- "black hat" came out
+        # as "bisek hat" 606 times, "pisek hat" 170. Any line repeating across a
+        # large share of a deck's OCR'd pages is decoration, not content, and
+        # dropping it removes a systematic source of noise that per-line quality
+        # tests cannot catch (those junk lines look like ordinary words).
+        if len(ocr_raw) >= 4:
+            counts: "collections.Counter[str]" = collections.Counter()
+            for text, _, _ in ocr_raw.values():
+                counts.update({ln.strip() for ln in text.splitlines() if ln.strip()})
+            boiler = {ln for ln, n in counts.items()
+                      if n >= max(3, int(0.30 * len(ocr_raw)))}
+            if boiler:
+                for idx, (text, kept_conf, page_conf) in list(ocr_raw.items()):
+                    kept = [ln for ln in text.splitlines() if ln.strip() not in boiler]
+                    trimmed = "\n".join(kept).strip()
+                    if len(trimmed) < OCR_MIN_YIELD:
+                        del ocr_raw[idx]
+                    else:
+                        ocr_raw[idx] = (trimmed, kept_conf, page_conf)
+
+        # Pass C: assemble.
+        parts, ocr_pages, ocr_chars = [], 0, 0
+        ocr_confs: list[float] = []
+        risky_blocks = 0
+        for idx, body in enumerate(bodies):
+            section = [f"## Slide {idx + 1}", ""]
+            if body:
+                section.append(body)
+            entry = ocr_raw.get(idx)
+            if entry:
+                otext, oconf, page_conf = entry
+                ocr_pages += 1
+                ocr_chars += len(otext)
+                ocr_confs.append(oconf)
+                risky = _ocr_block_is_risky(otext)
+                if risky:
+                    risky_blocks += 1
+                if body:
+                    section.append("")
+                # The confidence shown is measured over the text that survived
+                # filtering, so it reads higher than the page as a whole; the raw
+                # page figure is given too, and it is the honest one.
+                warn = (f"> Recovered by OCR — confidence {oconf:.0f}/100 on the text "
+                        f"kept, {page_conf:.0f}/100 across the whole page. Wording is "
+                        f"approximate.")
+                if risky:
+                    warn += (" **This block contains dense hex, addresses or tabular "
+                             "data: individual values are frequently misread and its "
+                             "row/column structure is not preserved. Do not quote exact "
+                             "values from it — check the source PDF.**")
+                else:
+                    warn += " Verify exact values against the source PDF."
+                section += ["", warn, "", "```text", otext, "```"]
+            parts.append("\n".join(section).rstrip())
 
         sidecars = find_sidecars(pdf_path)
         if sidecars:
@@ -797,6 +871,8 @@ def convert_one(job: tuple) -> dict:
             f"has_ocr: {'true' if ocr_pages else 'false'}",
             f"redacted_secrets: {redactions}",
             f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
+            f"ocr_unreliable_blocks: {risky_blocks}",
+            f"ocr_timeouts: {ocr_timeouts}",
             f"companion_files: {yaml_list([n for n, _ in sidecars])}",
             f"extractor: {yaml_escape('pymupdf4llm ' + pymupdf.__version__ + ' + tesseract' if ocr_pages else 'pymupdf4llm ' + pymupdf.__version__)}",
             f"converted_at: {yaml_escape(_dt.datetime.now(_dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))}",
@@ -823,6 +899,7 @@ def convert_one(job: tuple) -> dict:
             ocr_pages=ocr_pages, markdown=os.path.relpath(out_path, out_root),
             companion_files=[n for n, _ in sidecars], redacted_secrets=redactions,
             ocr_confidence=(round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else None),
+            ocr_unreliable_blocks=risky_blocks, ocr_timeouts=ocr_timeouts,
         )
         return result
 
