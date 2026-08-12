@@ -59,6 +59,13 @@ BARE_NAMES = {"Dockerfile": "dockerfile", "Makefile": "makefile",
 # Inlined files are capped: a multi-megabyte capture adds bulk, not knowledge.
 MAX_INLINE_BYTES = 200_000
 
+# And a whole workshop is capped too. One DEF CON 33 lab ships 2,430 CloudTrail
+# JSON files and 907 logs -- 30 MB of near-identical records that would bury the
+# exploit code and slides they exist to support. Bulk evidence goes last, so
+# what gets cut is the ten-thousandth log line rather than the workshop's code.
+MAX_DOC_BYTES = 2_000_000
+BULK_EXTS = {".json", ".log", ".csv", ".txt"}
+
 SKIP_DIRS = {".git", "__pycache__", "node_modules", ".idea", ".vscode", "venv", ".venv"}
 
 
@@ -126,11 +133,15 @@ def collect(root: str) -> dict[str, list[str]]:
 
 
 def build(workshop: str, files: list[str], root: str, out_root: str,
-          conference: str, year: int | None, do_redact: bool) -> dict | None:
+          conference: str, year: int | None, do_redact: bool,
+          max_doc_bytes: int = MAX_DOC_BYTES) -> dict | None:
     title, speakers = parse_workshop(workshop)
     inlined, skipped, redactions, total = [], [], 0, 0
 
-    for path in sorted(files):
+    def priority(path: str) -> tuple[int, str]:
+        return (1 if os.path.splitext(path)[1].lower() in BULK_EXTS else 0, path)
+
+    for path in sorted(files, key=priority):
         rel = os.path.relpath(path, root)
         lang = classify(path)
         try:
@@ -139,6 +150,9 @@ def build(workshop: str, files: list[str], root: str, out_root: str,
             continue
         if lang is None or size > MAX_INLINE_BYTES:
             skipped.append((rel, size, "binary" if lang is None else "too large"))
+            continue
+        if max_doc_bytes and total >= max_doc_bytes:
+            skipped.append((rel, size, "beyond document size cap"))
             continue
         try:
             with open(path, "r", encoding="utf-8", errors="replace") as fh:
@@ -197,7 +211,18 @@ def build(workshop: str, files: list[str], root: str, out_root: str,
         for rel, size, why in sorted(skipped)[:80]:
             fm.append(f"- `{rel}` — {size / 1024:.0f} KB ({why})")
         if len(skipped) > 80:
-            fm.append(f"- …and {len(skipped) - 80} more")
+            # Naming 2,000 log files one by one helps nobody, but knowing that
+            # they exist and where does -- otherwise the document reads as if
+            # the workshop shipped only what is inlined.
+            rest: dict[str, list[int]] = {}
+            for rel, size, _why in sorted(skipped)[80:]:
+                d = os.path.dirname(rel) or "."
+                agg = rest.setdefault(d, [0, 0])
+                agg[0] += 1
+                agg[1] += size
+            fm.append(f"- …and {len(skipped) - 80} more, by directory:")
+            for d, (n, sz) in sorted(rest.items()):
+                fm.append(f"  - `{d}/` — {n} files, {sz / 1048576:.1f} MB")
         fm.append("")
     fm.append("## Materials")
     fm.append("")
@@ -221,6 +246,8 @@ def main() -> int:
     ap.add_argument("--conference", required=True, help='e.g. "DEF CON 34"')
     ap.add_argument("--year", type=int, default=0)
     ap.add_argument("--redact", action="store_true")
+    ap.add_argument("--max-doc-bytes", type=int, default=MAX_DOC_BYTES,
+                    help="cap on inlined text per workshop; 0 for no cap")
     args = ap.parse_args()
 
     root = os.path.abspath(args.src)
@@ -239,7 +266,8 @@ def main() -> int:
     out_root = os.path.abspath(args.out)
     records = []
     for name, files in sorted(groups.items()):
-        rec = build(name, files, root, out_root, args.conference, year, args.redact)
+        rec = build(name, files, root, out_root, args.conference, year,
+                    args.redact, args.max_doc_bytes)
         if rec:
             records.append(rec)
             print(f"  {rec['files_included']:3d} files  {rec['title'][:60]}")
