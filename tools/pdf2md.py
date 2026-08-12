@@ -508,7 +508,12 @@ def ocr_page(page: "pymupdf.Page") -> tuple[str, float, float, bool]:
     # Rebuild lines from the TSV, carrying each line's mean confidence.
     grouped: "collections.OrderedDict[tuple, list[tuple[str, float]]]" = collections.OrderedDict()
     try:
-        reader = csv.DictReader(io.StringIO(tsv), delimiter="\t")
+        # QUOTE_NONE is load-bearing: Tesseract's TSV is not quoted CSV, so a
+        # page containing a double quote makes the default dialect swallow the
+        # following rows and emit raw column numbers as if they were text
+        # ("5 1 7 1 1 2 673 1303 78 31 96.598320 the").
+        reader = csv.DictReader(io.StringIO(tsv), delimiter="\t",
+                                quoting=csv.QUOTE_NONE)
         for row in reader:
             word = (row.get("text") or "").strip()
             if not word:
