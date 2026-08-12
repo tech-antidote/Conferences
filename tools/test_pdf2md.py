@@ -14,6 +14,7 @@ Run:
 from __future__ import annotations
 
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -140,6 +141,17 @@ def main() -> int:
     check("\\```" in tidy("text\n```|\nmore"),
           "a line starting with ``` is escaped so it cannot open an unclosed fence")
     check(tidy("a\nb").count("`") == 0, "ordinary text is left alone")
+
+    print("\nredaction:")
+    from pdf2md import redact_secrets
+    same = "AKIAIOSFODNN7EXAMPLE"
+    other = "AKIAI44QH8DHBEXAMPLE"
+    out, n = redact_secrets(f"a {same} b {other} c {same}")
+    check(n == 3 and same not in out and other not in out,
+          "every credential-shaped string is masked")
+    tags = re.findall(r"REDACTED:aws-access-key-id#([0-9a-f]+)", out)
+    check(len(tags) == 3 and tags[0] == tags[2] and tags[0] != tags[1],
+          "the same secret reads the same, different secrets stay different")
 
     print("\nslugify:")
     check(slugify("AS-23-Chen-PMFault") == "as-23-chen-pmfault", "lowercases and keeps dashes")

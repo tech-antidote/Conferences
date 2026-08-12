@@ -607,12 +607,28 @@ SECRET_PATTERNS: list[tuple[str, "re.Pattern[str]", int]] = [
 
 
 def redact_secrets(text: str) -> tuple[str, int]:
-    """Mask credential-shaped strings. Returns (text, number of redactions)."""
+    """Mask credential-shaped strings. Returns (text, number of redactions).
+
+    Each distinct secret gets a stable fingerprint, so the same credential
+    reads the same everywhere and two different ones stay different. A single
+    shared placeholder would be a quiet loss: DEF CON 33's cloud-forensics lab
+    ships 1,703 AWS session keys across its CloudTrail logs, and the exercise
+    *is* correlating which key did what. Collapsing them all to
+    `[REDACTED:aws-access-key-id]` deletes the thing the workshop teaches while
+    leaving the document looking intact.
+
+    The fingerprint is a truncated SHA-256 of the secret. It does not disclose
+    the credential, though it does let someone holding a candidate value
+    confirm a match -- an acceptable trade against losing every correlation in
+    the corpus, and the reason the full value is masked in the first place.
+    """
     total = 0
     for label, pattern, keep_group in SECRET_PATTERNS:
         def _sub(m: "re.Match[str]", _label=label, _keep=keep_group) -> str:
             prefix = m.group(_keep) if _keep else ""
-            return f"{prefix}[REDACTED:{_label}]"
+            secret = m.group(0)[len(prefix):]
+            tag = hashlib.sha256(secret.encode("utf-8", "replace")).hexdigest()[:6]
+            return f"{prefix}[REDACTED:{_label}#{tag}]"
         text, n = pattern.subn(_sub, text)
         total += n
     return text, total
