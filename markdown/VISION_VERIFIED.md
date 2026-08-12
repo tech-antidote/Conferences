@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1151 slides across 137 documents.**
+**1198 slides across 138 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 519 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 542 | structure held; individual characters or lines wrong |
-| accurate | 77 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 527 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 569 | structure held; individual characters or lines wrong |
+| accurate | 89 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 13 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -67,7 +67,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 27 talks, 346 slides
+### Zero-day, RCE and novel exploitation — 28 talks, 393 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -92,6 +92,7 @@ under more than one heading or under none. Counts are slides.
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 42, 107
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
+- **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 - **Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design** (DEF CON 34) — slides 1-58
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
@@ -253,6 +254,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
