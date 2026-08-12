@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1069 slides across 135 documents.**
+**1094 slides across 136 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 490 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 501 | structure held; individual characters or lines wrong |
-| accurate | 65 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 496 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 512 | structure held; individual characters or lines wrong |
+| accurate | 73 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 13 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -34,7 +34,7 @@ under more than one heading or under none. Counts are slides.
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 
-### Cloud and API — 13 talks, 138 slides
+### Cloud and API — 14 talks, 163 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -49,6 +49,7 @@ under more than one heading or under none. Counts are slides.
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
+- **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 
 ### Web and browser — 13 talks, 130 slides
 
@@ -66,7 +67,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 25 talks, 277 slides
+### Zero-day, RCE and novel exploitation — 26 talks, 302 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -90,6 +91,7 @@ under more than one heading or under none. Counts are slides.
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 42, 107
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
+- **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 - **Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design** (DEF CON 34) — slides 1-58
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
@@ -251,6 +253,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-117 | badly-mangled, minor-errors, accurate | 9 |
