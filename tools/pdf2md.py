@@ -38,7 +38,10 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import collections
+import csv
 import datetime as _dt
+import io
 import hashlib
 import json
 import multiprocessing as mp
@@ -122,6 +125,17 @@ OCR_LINE_WORD_RATIO = 0.20
 OCR_BLOCK_SHORT_RATIO = 0.50
 OCR_BLOCK_WORD_RATIO = 0.25
 OCR_MIN_TOKENS_PER_LINE = 3
+
+# Tesseract reports how sure it is per word, and it is well calibrated here.
+# Measured on a terminal-screenshot slide: correctly-read words averaged 94.5,
+# while hex bytes it mangled averaged 59.2, with the worst ("Qxd071402@",
+# "@xd0714000") at 0.0-2.5.
+#
+# Confidence alone is not enough -- at a threshold of 70 it also drops the
+# correctly-read "SMM Base : bfea8000" (62.5) and keeps a mangled row (78.9) --
+# so it runs alongside the structural test above. A low floor catches what
+# structure misses without discarding correct-but-unusual lines.
+OCR_MIN_LINE_CONFIDENCE = 60.0
 
 # Per-page OCR timeout (seconds) so one pathological page cannot wedge a worker.
 OCR_TIMEOUT = 90
@@ -380,11 +394,15 @@ def _ocr_line_is_noise(line: str) -> bool:
     return _ocr_ratios_are_noise(line, OCR_LINE_SHORT_RATIO, OCR_LINE_WORD_RATIO)
 
 
-def ocr_page(page: "pymupdf.Page") -> str:
-    """Render a page and OCR it. Returns '' on any failure -- OCR is best-effort."""
+def ocr_page(page: "pymupdf.Page") -> tuple[str, float]:
+    """Render and OCR a page.
+
+    Returns (text, mean confidence). Empty text on any failure -- OCR is
+    best-effort and must never take a document down with it.
+    """
     exe = tesseract_path()
     if not exe:
-        return ""
+        return "", 0.0
     try:
         dpi = OCR_DPI
         long_in = max(page.rect.width, page.rect.height) / 72.0
@@ -395,23 +413,49 @@ def ocr_page(page: "pymupdf.Page") -> str:
         proc = subprocess.run(
             # --oem 1 = LSTM engine only: faster and more accurate on screen
             # captures than the default combined legacy+LSTM mode.
-            [exe, "stdin", "stdout", "--psm", "3", "--oem", "1", "-l", "eng"],
+            [exe, "stdin", "stdout", "--psm", "3", "--oem", "1", "-l", "eng", "tsv"],
             input=png, capture_output=True, timeout=OCR_TIMEOUT,
         )
-        text = proc.stdout.decode("utf-8", "replace")
+        tsv = proc.stdout.decode("utf-8", "replace")
     except Exception:
-        return ""
+        return "", 0.0
 
-    # Collapse the ragged whitespace Tesseract emits on slide layouts.
-    lines = [ln.rstrip() for ln in text.splitlines()]
-    lines = [ln for ln in lines if ln.strip()]
-    # Drop lines that are OCR noise, keeping real ones from the same block.
-    lines = [ln for ln in lines if not _ocr_line_is_noise(ln)]
-    out = "\n".join(lines).strip()
+    # Rebuild lines from the TSV, carrying each line's mean confidence.
+    grouped: "collections.OrderedDict[tuple, list[tuple[str, float]]]" = collections.OrderedDict()
+    try:
+        reader = csv.DictReader(io.StringIO(tsv), delimiter="\t")
+        for row in reader:
+            word = (row.get("text") or "").strip()
+            if not word:
+                continue
+            try:
+                conf = float(row.get("conf", -1))
+            except ValueError:
+                continue
+            if conf < 0:
+                continue
+            key = (row.get("block_num"), row.get("par_num"), row.get("line_num"))
+            grouped.setdefault(key, []).append((word, conf))
+    except Exception:
+        return "", 0.0
+
+    kept, confs = [], []
+    for words in grouped.values():
+        line = " ".join(w for w, _ in words)
+        mean = sum(c for _, c in words) / len(words)
+        # Two independent tests, because neither alone is sufficient: structure
+        # catches mangled hex that scores confidently, confidence catches noise
+        # that happens to look structured.
+        if mean < OCR_MIN_LINE_CONFIDENCE or _ocr_line_is_noise(line):
+            continue
+        kept.append(line)
+        confs.extend(c for _, c in words)
+
+    out = "\n".join(kept).strip()
     if len(out) < OCR_MIN_YIELD or _ocr_ratios_are_noise(out, OCR_BLOCK_SHORT_RATIO,
                                                          OCR_BLOCK_WORD_RATIO):
-        return ""
-    return out
+        return "", 0.0
+    return out, (sum(confs) / len(confs) if confs else 0.0)
 
 
 def image_coverage(page: "pymupdf.Page") -> float:
@@ -609,6 +653,7 @@ def convert_one(job: tuple) -> dict:
 
         parts, ocr_pages, struct_chars, ocr_chars = [], 0, 0, 0
         redactions = 0
+        ocr_confs: list[float] = []
 
         for idx, chunk in enumerate(chunks):
             body = tidy(chunk.get("text", "") or "")
@@ -623,7 +668,7 @@ def convert_one(job: tuple) -> dict:
             if do_ocr and len(body) < OCR_TEXT_THRESHOLD and idx < n_pages:
                 page = doc[idx]
                 if image_coverage(page) >= OCR_IMAGE_COVERAGE:
-                    otext = ocr_page(page)
+                    otext, oconf = ocr_page(page)
                     if otext and do_redact:
                         otext, nred = redact_secrets(otext)
                         redactions += nred
@@ -631,10 +676,13 @@ def convert_one(job: tuple) -> dict:
                     if otext and len(otext) > len(body):
                         ocr_pages += 1
                         ocr_chars += len(otext)
+                        ocr_confs.append(oconf)
                         if body:
                             section.append("")
-                        section.append("> Text below was recovered by OCR from an "
-                                       "image-only slide; treat wording as approximate.")
+                        section.append(
+                            f"> Text below was recovered by OCR (confidence "
+                            f"{oconf:.0f}/100) from an image-only slide. Wording is "
+                            f"approximate; verify exact values against the source PDF.")
                         section.append("")
                         section.append("```text")
                         section.append(otext)
@@ -680,6 +728,7 @@ def convert_one(job: tuple) -> dict:
             f"ocr_pages: {ocr_pages}",
             f"has_ocr: {'true' if ocr_pages else 'false'}",
             f"redacted_secrets: {redactions}",
+            f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
             f"companion_files: {yaml_list([n for n, _ in sidecars])}",
             f"extractor: {yaml_escape('pymupdf4llm ' + pymupdf.__version__ + ' + tesseract' if ocr_pages else 'pymupdf4llm ' + pymupdf.__version__)}",
             f"converted_at: {yaml_escape(_dt.datetime.now(_dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))}",
@@ -705,6 +754,7 @@ def convert_one(job: tuple) -> dict:
             status="ok", pages=n_pages, sha256=digest, text_chars=total_chars,
             ocr_pages=ocr_pages, markdown=os.path.relpath(out_path, out_root),
             companion_files=[n for n, _ in sidecars], redacted_secrets=redactions,
+            ocr_confidence=(round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else None),
         )
         return result
 
