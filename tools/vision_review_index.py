@@ -61,6 +61,21 @@ TOPICS = [
 ]
 
 
+def ranges(nums: list[int]) -> str:
+    """Render a slide list compactly: a 57-page document is "1-57", not 57 numbers."""
+    out, start, prev = [], None, None
+    for n in nums + [None]:
+        if start is None:
+            start = prev = n
+            continue
+        if n is not None and n == prev + 1:
+            prev = n
+            continue
+        out.append(str(start) if start == prev else f"{start}-{prev}")
+        start = prev = n
+    return ", ".join(out)
+
+
 def frontmatter(text: str) -> dict[str, str]:
     if not text.startswith("---"):
         return {}
@@ -105,11 +120,16 @@ def main() -> int:
                 continue
             path = os.path.join(dirpath, fn)
             text = open(path, encoding="utf-8").read()
-            if VISION_LABEL not in text:
+            if VISION_LABEL not in text and "vision_verified_pages:" not in text:
                 continue
             rel = os.path.relpath(path, args.out)
             fm = frontmatter(text)
             slides = reviewed_slides(text)
+            full = int(fm.get("vision_verified_pages", 0) or 0)
+            if full:
+                # A fully reviewed document has no per-block labels to count --
+                # every page was read, so listing it by block would show none.
+                slides = list(range(1, full + 1))
             total += len(slides)
             vs = [verdicts.get((rel, s), "") for s in slides]
             rows.append((fm.get("conference_full", ""), fm.get("title", rel),
@@ -156,8 +176,7 @@ def main() -> int:
         print()
         for conf, title, slides in sorted(hits):
             print(f"- **{title}** ({conf}) — slide"
-                  f"{'s' if len(slides) > 1 else ''} "
-                  f"{', '.join(str(x) for x in slides)}")
+                  f"{'s' if len(slides) > 1 else ''} {ranges(slides)}")
         print()
 
     print("## Every verified slide")
@@ -166,7 +185,7 @@ def main() -> int:
     print("|---|---|---|---|---:|")
     for conf, title, slides, vs, rest in sorted(rows):
         seen = sorted({v for v in vs if v}, key=lambda v: VERDICT_ORDER.get(v, 9))
-        s = ", ".join(str(x) for x in slides)
+        s = ranges(slides)
         print(f"| {conf} | {title.replace('|', '/')} | {s} | "
               f"{', '.join(seen) or '—'} | {rest} |")
     return 0

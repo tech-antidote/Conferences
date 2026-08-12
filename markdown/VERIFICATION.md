@@ -16,11 +16,13 @@ Extraction happens two ways, and only one of them can be wrong:
 | Path | Volume | Can it be wrong? |
 |---|---|---|
 | **Structural** — reads the PDF's own text stream | ~76% of corpus text | **No.** The characters are the file's own bytes, not a guess. Reading *order* can be imperfect; the characters cannot. |
-| **OCR** — renders the page and reads the pixels | ~24% (10,486 blocks) | **Yes.** This is where every character error lives. |
+| **OCR** — renders the page and reads the pixels | 11,467 pages | **Yes.** This is where every character error lives. |
 | **Transcripts** — speech recognition output | 3.5M chars | Wording can be misheard; no OCR involved. |
 
-So verification targets OCR blocks. Vision-checking structural text would confirm
-layout, not accuracy.
+Verification therefore targets OCR blocks first. But reading one document end to
+end (below) showed that assumption is only half right: the structural pass drops
+whole diagrams, tables and terminal panes without any OCR involved, and nothing
+flags it when it does.
 
 ---
 
@@ -30,20 +32,22 @@ These ran over every deck. Commands are in `tools/`; re-run them against any bui
 
 | Check | Result | Command |
 |---|---|---|
-| Every manifest record has its file, and vice versa | **705/705, 0 orphans** | `tools/audit_structure.py` |
-| Slide headings match source page count | **46,118 = 46,118, no gaps** | `tools/audit_structure.py` |
-| Frontmatter parses, required keys present, types correct | **705/705** | `tools/audit_structure.py` |
-| No truncated files or unbalanced code fences | **1 found, fixed** | `tools/audit_structure.py` |
-| Output filename collisions | **0 unintended** (25 real, distinct sources) | `tools/audit_structure.py` |
+| Every manifest record has its file, and vice versa | **955/955, 0 orphans** | `tools/audit_structure.py` |
+| Slide headings match source page count | **53,957 = 53,957, no gaps** | `tools/audit_structure.py` |
+| Frontmatter parses, required keys present, types correct | **955/955** | `tools/audit_structure.py` |
+| Speakers attributed | **948/955**; the 7 are 6 DEF CON panels and one talk whose filename carries no name | `tools/audit_structure.py` |
+| No truncated files or unbalanced code fences | **0** | `tools/audit_structure.py` |
+| Source PDFs resolve | **611 present, 221 expected-absent** (DEF CON drops ship as release assets), **0 unexpectedly missing** | `tools/audit_structure.py` |
+| Same PDF published under two names | **5 sources, 10 documents** — cross-linked via `duplicate_of` where reviewed | `tools/audit_metadata.py` |
 | Text-layer coverage vs source PDF | median **1.016** — no systematic loss | `tools/audit_coverage.py` |
-| Conference / edition / year correctness | **0 mismatches in 705** | `tools/audit_metadata.py` |
-| Credential-shaped strings | **47 found, redacted** | `tools/redact_corpus.py --dry-run` |
+| Conference / edition / year correctness | **0 mismatches** | `tools/audit_metadata.py` |
+| Credential-shaped strings | **redacted, with a stable fingerprint per distinct value** — 1,699 in the DEF CON 33 cloud-forensics lab alone, resolving to 117 distinct keys | `tools/redact_corpus.py --dry-run` |
 
 ---
 
 ## Vision verification — page images read against extracted text
 
-**199 slides across 94 documents** have had their page image read by a vision
+**397 slides across 125 documents** have had their page image read by a vision
 model and compared against the OCR text. Every one is listed by talk and slide
 number in [VISION_VERIFIED.md](VISION_VERIFIED.md), with the verdict the
 reviewer reached; regenerate it with `tools/vision_review_index.py`.
@@ -52,14 +56,52 @@ The verdicts are not reassuring, and they are not meant to be:
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 139 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 53 | structure held; individual characters or lines wrong |
-| accurate | 7 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 246 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 132 | structure held; individual characters or lines wrong |
+| accurate | 19 | OCR was already correct; text confirmed, not changed |
 
-Seven slides in 199 came back clean. These are the blocks the converter itself
+Nineteen slides in 397 came back clean. These are the blocks the converter itself
 flagged as unreliable — a deliberately adverse sample, not a random one — so
 the ratio measures the flag's precision, not the corpus's. It says the flag is
 finding the right pages.
+
+### One document read end to end
+
+Everything above reviews blocks the converter **flagged**. That is the right
+economy across 956 documents, but it cannot answer "is this talk right?",
+because the failures it never flagged are the ones it does not know about.
+
+So one talk was read in full: all 57 pages of *Witchcraft Solver: Automated
+0day Discovery in Stripped Binaries* (Jonathan Brossard, DEF CON 34), page
+image against extracted text, via `tools/verify_document.py`.
+
+**51 of 57 pages were rewritten. 6 were already correct.** The document grew
+from 30,452 to 44,089 characters — a third of its final text had been missing.
+
+The flagged-block review would have looked at **one** of those 57 pages. What
+the other 50 corrections included:
+
+| Page | What had happened |
+|---:|---|
+| 6 | Dropped entirely — the extracted text was the single character `6` |
+| 48 | The pipeline diagram, which is the method of the talk, was absent; the surviving title read `LVM` for `LLVM` |
+| 38 | The Common Criteria chart — 7 assurance levels, 10 technique bars, the arrow marking symbolic execution — absent |
+| 43 | The dataset slide lost its title, its DOI badge and the `39,364 binaries` figure; the chroot list was read across columns in the wrong order with two entries dropped |
+| 9, 10, 25 | Whole terminal sessions dropped, including both BuildID hashes and the Rocq proof output |
+| 35 | Harbor UI: storage quota read as `JOGIB` for `731.98 GiB`, every pull count as `°` for `0`, the `1 - 15 of 682 items` pager gone |
+| 44, 45 | Results tables flattened into one-value-per-line dumps; a total shown as `829.9%` where the slide says `29.9% (11,842)` |
+| 42 | Title corrupted to "Oblem : Anvill needs a Decompiler to identity functions" |
+
+None of those pages carried an `ocr_unreliable` flag, and several involve no
+OCR at all — they are structural-pass failures, which the risk heuristic is not
+built to see and cannot be made to see. **The lesson generalises: a document
+with `ocr_unreliable_blocks: 0` has not been verified, it has merely not been
+flagged.**
+
+Two reviewers separately noted the same source-side defect, which is worth
+recording because it limits what any method can recover: this deck's title text
+is clipped off the top edge of the page, so on several slides only glyph
+descenders survive. Those are marked as clipped rather than guessed.
 
 ### Do the reviewers agree with each other?
 
