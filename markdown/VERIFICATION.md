@@ -53,6 +53,31 @@ produced for it.
 | AMD Sinkclose Ring -2 Privilege Escalation (Hexacon 2024) | 13 | Register-layout diagram (vector, text layer) | **Accurate** — extracted as a table by the structural pass, no OCR involved |
 | BLE Theft Auto (DEF CON 34) | 8 | Photo + satellite map, no readable text | **Fixed** — had produced 12 lines of noise (`) ez g / Jealetas .`); now yields only the real title |
 | gpwn: Wiretapping Fiber ISP Deployments (BH USA 2026) | 5 | Photograph of fibre splicing, no text | **Correct to be empty** — nothing to extract; OCR correctly returned nothing |
+| One Bug to Rule Them All: Stably Exploiting a Preauth RCE (BH Asia 2025) | 26 | Wireshark capture + WinDbg heap leak, **flagged risky** | **Mixed, and the flag was right** — see below |
+
+#### Detail: "One Bug to Rule Them All", slide 26 (flagged `ocr_unreliable`)
+
+Read against the rendered page. What the converter got **right**:
+
+- Title `Leak heap address` — exact
+- `Hex value ~ 018887000259` — the slide's find-bar shows `01 88 87 00 02 59`; every
+  digit correct, only the spaces lost
+- `3d267954-eeb7-11d1-b94e-00c04fa3080d` — a 36-character DCERPC interface GUID,
+  **character-perfect**
+- `Response: call_id: 8611, Fragment: Single` — exact
+
+What it got **wrong**, all in numeric fields:
+
+| Slide shows | OCR produced |
+|---|---|
+| `192.168.80.128` | `192.168.808.128` — invalid IP |
+| `150` (packet length) | `15@` |
+| `Ctx: 0` | `Ctx: @` |
+
+This is the documented pattern exactly: identifiers and prose survive, bare numerals
+degrade. It is also evidence the risk flag works — this block was marked
+`ocr_unreliable` before I looked at it, and it does contain wrong values while the
+narrative around them is sound.
 
 ### Ground-truth spot checks by sampling agent
 
