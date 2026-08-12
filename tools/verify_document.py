@@ -134,7 +134,7 @@ def cmd_extract(doc: str, roots: list[str], work: str, only: str) -> int:
 
 def apply_to(doc: str, fixes: dict[int, str], verified: int) -> int:
     text = open(doc, encoding="utf-8").read()
-    changed = 0
+    written = 0
     for num, start, end in reversed(sections(text)):
         if num not in fixes:
             continue
@@ -142,14 +142,17 @@ def apply_to(doc: str, fixes: dict[int, str], verified: int) -> int:
         if body == text[start:end].strip():
             continue
         text = text[:start] + "\n\n" + body + "\n\n" + text[end:]
-        changed += 1
+        written += 1
     text = set_key(text, "vision_verified_pages", str(verified))
-    # A page reviewed and found correct is still a page that was reviewed, so
-    # the count is of pages read, not of pages changed.
-    text = set_key(text, "vision_verified_pages_changed", str(changed))
+    # "changed" means "the vision review rewrote this page", which is a property
+    # of the review, not of when apply happened to run. Count the corrections
+    # that carry replacement text, not the pages that differed on this pass --
+    # otherwise a second apply of the same work list (done for race-safety)
+    # zeroes the count, since nothing differs the second time.
+    text = set_key(text, "vision_verified_pages_changed", str(len(fixes)))
     with open(doc, "w", encoding="utf-8") as fh:
         fh.write(text)
-    return changed
+    return written
 
 
 def cmd_apply(doc: str, also: list[str], work: str) -> int:
