@@ -83,7 +83,10 @@ verbatim:
 > check especially whether content belongs to a neighbouring build of the same
 > slide. Preserve the author's own typos. Never summarise or reorder. Drop the
 > converter's `> Recovered by OCR` banner, which is scaffolding rather than
-> slide content.
+> slide content — but drop the *label*, not what it contains. On some slides
+> the OCR block holds everything the page has, and the body above it is a bare
+> title; there, replace the block with your own verified transcription rather
+> than deleting it and leaving the slide empty.
 >
 > Two things are not slide content and should not be added: **template chrome**
 > — the venue logo lockup, the page number, a DLP stamp such as "Information
