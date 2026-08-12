@@ -37,6 +37,7 @@ import pymupdf  # noqa: E402
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from verify_uncertain import resolve_source, set_key  # noqa: E402
+from pdf2md import SLIDE_EXTS, slides_to_pdf  # noqa: E402
 
 # Higher than the flagged-block pass: a full review is reading body text and
 # diagram labels, not just picking hex out of a screenshot.
@@ -79,6 +80,21 @@ def cmd_extract(doc: str, roots: list[str], work: str, only: str) -> int:
     if not pdf_path:
         print(f"{m.group(1)}: source not found under {roots}", file=sys.stderr)
         return 1
+
+    # Eleven decks in this corpus ship as .pptx. PyMuPDF opens one as a single
+    # blank page rather than failing, so --extract silently produced a one-page
+    # work list and a white image, and the reviewers reading it had nothing to
+    # compare against. Route slide formats through LibreOffice, exactly as the
+    # converter does, so the page images are the real slides.
+    if os.path.splitext(pdf_path)[1].lower() in SLIDE_EXTS:
+        os.makedirs(work, exist_ok=True)
+        rendered = slides_to_pdf(pdf_path, os.path.join(work, "render"))
+        if not rendered:
+            print(f"{pdf_path}: LibreOffice could not render this deck",
+                  file=sys.stderr)
+            return 1
+        print(f"rendered {os.path.basename(pdf_path)} via LibreOffice")
+        pdf_path = rendered
 
     wanted = None
     if only:
