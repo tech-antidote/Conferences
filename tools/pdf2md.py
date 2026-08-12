@@ -209,10 +209,20 @@ def parse_conference(folder: str) -> dict:
         series = "DEF CON"
         num = re.search(r"\b(\d{1,2})\b", folder)
         edition = num.group(1) if num else ""
+        # DEF CON 1 was 1993, and the editions have run annually since, so the
+        # edition fixes the year. Deriving it keeps `year` usable as an integer
+        # filter across the whole corpus instead of null for every DEF CON talk.
+        if edition:
+            year = 1992 + int(edition)
     else:
         series, edition = name.title(), ""
 
-    display = " ".join(x for x in (series, edition, str(year) if year else "") if x)
+    if series == "DEF CON" and edition:
+        # The edition already names the event ("DEF CON 34"); appending the
+        # derived year as well would read "DEF CON 34 2026".
+        display = f"DEF CON {edition}"
+    else:
+        display = " ".join(x for x in (series, edition, str(year) if year else "") if x)
     return {"conference": series, "edition": edition, "year": year,
             "conference_full": display.strip(), "source_folder": folder}
 
@@ -532,6 +542,11 @@ def tidy(md: str) -> str:
     md = re.sub(r"[ \t]+\n", "\n", md)         # trailing whitespace
     md = re.sub(r"\n{3,}", "\n\n", md)         # runs of blank lines
     md = re.sub(r"(?m)^-----+$", "", md)       # page-break rules; we add our own
+    # A line of extracted text that happens to start with three backticks opens a
+    # code fence that nothing closes, and a strict parser then swallows the rest
+    # of the document as code. One slide's table cell ("```|") did exactly that.
+    # Escaping the first backtick keeps the characters while defusing the fence.
+    md = re.sub(r"(?m)^(\s*)```", r"\1\\```", md)
     return md.strip()
 
 

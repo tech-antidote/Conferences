@@ -70,7 +70,9 @@ CONFERENCE_CASES = [
     ("OffensiveCon25 slides", "OffensiveCon", 2025, "OffensiveCon 2025"),
     ("Hexacon 2024 Slides", "Hexacon", 2024, "Hexacon 2024"),
     ("Recon 2024_Slides", "REcon", 2024, "REcon 2024"),
-    ("DEF CON 34", "DEF CON", 34, None),
+    # DEF CON numbers editions, not years; edition 34 is 2026 (DEF CON 1 = 1993).
+    ("DEF CON 34", "DEF CON", 2026, "DEF CON 34"),
+    ("DEF CON 26", "DEF CON", 2018, "DEF CON 26"),
 ]
 
 
@@ -102,6 +104,12 @@ def main() -> int:
             ok = ok and got["conference_full"] == want_full
         check(ok, f"{folder!r} -> {got['conference']!r} / {got['year']} / "
                   f"{got['conference_full']!r}")
+
+    print("\nfence safety:")
+    from pdf2md import tidy
+    check("\\```" in tidy("text\n```|\nmore"),
+          "a line starting with ``` is escaped so it cannot open an unclosed fence")
+    check(tidy("a\nb").count("`") == 0, "ordinary text is left alone")
 
     print("\nslugify:")
     check(slugify("AS-23-Chen-PMFault") == "as-23-chen-pmfault", "lowercases and keeps dashes")

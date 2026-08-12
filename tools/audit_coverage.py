@@ -72,6 +72,22 @@ PAGE_TEXT_BUG_ALNUM = 20
 # converter's gate skipped.
 OCR_BUG_ALNUM = 60
 
+# Some decks embed subset fonts with no usable ToUnicode map. Their text layer
+# extracts as glyph codes -- a Caesar-shifted alphabet, C0 control bytes, or
+# Arabic/Greek codepoints -- that renders correctly on screen and is unreadable
+# as text. Character counts alone cannot see this: the characters are all there,
+# they just do not spell anything. Counting common English words does see it,
+# and the distinction matters because the two failure modes need different
+# fixes (recover the text layer vs fall back to OCR).
+ENGLISH_PROBE = re.compile(
+    r"\b(the|and|for|with|this|that|from|are|not|you|use|can|our|all|but|has)\b", re.I)
+# Hits per 1000 characters. Real English decks in this corpus score 8-40; a
+# deck whose fonts do not map scores 0.
+DECODABLE_MIN_HITS = 1.5
+DECODABLE_MIN_CHARS = 400
+
+REPLACEMENT = "�"
+
 
 # ---------------------------------------------------------------------------
 # Markdown parsing
@@ -79,6 +95,20 @@ OCR_BUG_ALNUM = 60
 
 def alnum_len(s: str) -> int:
     return sum(1 for c in s if c.isalnum())
+
+
+def english_rate(s: str) -> float:
+    """Common-English-word hits per 1000 characters. 0 means "not text"."""
+    if not s:
+        return 0.0
+    return 1000.0 * len(ENGLISH_PROBE.findall(s)) / len(s)
+
+
+def is_decodable(s: str) -> bool | None:
+    """True if a text layer reads as language, None if there is too little to tell."""
+    if len(s) < DECODABLE_MIN_CHARS:
+        return None
+    return english_rate(s) >= DECODABLE_MIN_HITS
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
@@ -211,21 +241,34 @@ def audit_deck(job: tuple) -> dict:
     struct_alnum = sum(s["struct_alnum"] for s in slides)
     ocr_alnum = sum(s["ocr_alnum"] for s in slides)
     pdf_alnum = sum(page_alnum)
+    pdf_text = "\n".join(pages)
+    decodable = is_decodable(pdf_text)
 
+    # Slides whose only "content" is U+FFFD are empty in every sense that
+    # matters, so alnum -- not raw length -- decides emptiness.
     empty = [s["n"] for s in slides if s["struct_alnum"] == 0 and s["ocr_alnum"] == 0]
     # Slides empty of structural text but carrying text in the source layer are
     # the direct evidence of a dropped page.
-    dropped_pages = [
-        s["n"] for s in slides
-        if s["struct_alnum"] == 0
-        and 1 <= s["n"] <= len(page_alnum)
-        and page_alnum[s["n"] - 1] >= PAGE_TEXT_BUG_ALNUM
-    ]
+    dropped_pages, dropped_readable = [], []
+    for s in slides:
+        i = s["n"] - 1
+        if s["struct_alnum"] or not (0 <= i < len(pages)):
+            continue
+        if page_alnum[i] < PAGE_TEXT_BUG_ALNUM:
+            continue
+        dropped_pages.append(s["n"])
+        if english_rate(pages[i]) >= DECODABLE_MIN_HITS:
+            dropped_readable.append(s["n"])
 
+    md_all = "\n".join(s["struct_text"] + s["ocr_text"] for s in slides)
     out.update({
         "pages": len(pages),
         "slides": len(slides),
         "pdf_alnum": pdf_alnum,
+        "pdf_decodable": decodable,
+        "pdf_english_rate": round(english_rate(pdf_text), 2),
+        "md_replacement_chars": md_all.count(REPLACEMENT),
+        "md_english_rate": round(english_rate(md_all), 2),
         "struct_alnum": struct_alnum,
         "ocr_alnum": ocr_alnum,
         "companion_alnum": parsed["companion_alnum"],
@@ -237,6 +280,8 @@ def audit_deck(job: tuple) -> dict:
         "empty_share": (len(empty) / len(slides)) if slides else None,
         "dropped_pages": len(dropped_pages),
         "dropped_page_nums": dropped_pages[:400],
+        "dropped_readable_pages": len(dropped_readable),
+        "dropped_readable_page_nums": dropped_readable[:400],
         "chars_per_page": (struct_alnum + ocr_alnum) / len(pages) if pages else 0.0,
         "pdf_chars_per_page": pdf_alnum / len(pages) if pages else 0.0,
         "frontmatter_pages": parsed["frontmatter"].get("pages", ""),
@@ -249,9 +294,17 @@ def audit_deck(job: tuple) -> dict:
 # ---------------------------------------------------------------------------
 
 def diagnose_page(page: "pymupdf.Page", do_ocr: bool = True) -> dict:
+    """Open one source page and decide why the Markdown for it came out empty.
+
+    Every branch is decided from the source, never from the Markdown: what the
+    text layer holds, whether that text is language or unmapped glyph codes, and
+    what OCR can read off the rendered pixels.
+    """
     text = page.get_text() or ""
+    eng = english_rate(text)
     d = {
         "text_layer_alnum": alnum_len(text),
+        "text_layer_english_rate": round(eng, 2),
         "text_layer_sample": " ".join(text.split())[:180],
         "image_coverage": pdf2md.image_coverage(page) if pdf2md else None,
         "n_images": len(page.get_images(full=True)),
@@ -265,8 +318,12 @@ def diagnose_page(page: "pymupdf.Page", do_ocr: bool = True) -> dict:
     except Exception:  # noqa: BLE001
         pass
 
-    if d["text_layer_alnum"] >= PAGE_TEXT_BUG_ALNUM:
-        d["verdict"] = "BUG-text-layer-dropped"
+    has_text = d["text_layer_alnum"] >= PAGE_TEXT_BUG_ALNUM
+    readable = has_text and eng >= DECODABLE_MIN_HITS
+
+    if readable:
+        # Clean, extractable prose that never reached the Markdown.
+        d["verdict"] = "BUG-readable-text-layer-dropped"
         return d
 
     if do_ocr and pdf2md is not None:
@@ -275,7 +332,13 @@ def diagnose_page(page: "pymupdf.Page", do_ocr: bool = True) -> dict:
         d["ocr_conf"] = round(oconf, 1)
         d["ocr_sample"] = " ".join(otext.split())[:180]
 
-    if d["ocr_alnum"] >= OCR_BUG_ALNUM:
+    if has_text:
+        # Glyph codes with no ToUnicode map: the page shows words, the text
+        # layer spells nothing, and the Markdown gets U+FFFD instead of content.
+        d["verdict"] = ("BUG-unmappable-font-ocr-would-recover"
+                        if d["ocr_alnum"] >= OCR_BUG_ALNUM
+                        else "unmappable-font-and-ocr-also-fails")
+    elif d["ocr_alnum"] >= OCR_BUG_ALNUM:
         d["verdict"] = "BUG-readable-pixels-not-captured"
     elif d["text_layer_alnum"] > 0:
         d["verdict"] = "minor-trace-text-dropped"
@@ -358,6 +421,24 @@ def collect_pairs(out_root: str, src_root: str, skip_folders: set[str],
     return list(by_pdf.values()), notes
 
 
+def scan_source(pdf_path: str) -> dict:
+    """Source-side check, independent of the Markdown.
+
+    Worth having on its own: it answers "can this deck's text be read at all?"
+    while a conversion is mid-flight and the Markdown cannot be trusted, and it
+    identifies decks where a coverage ratio near 1.0 would be meaningless
+    because neither side holds words.
+    """
+    pages, err = pdf_page_text(pdf_path)
+    if err:
+        return {"pdf": pdf_path, "error": err}
+    text = "\n".join(pages)
+    return {"pdf": pdf_path, "error": "", "pages": len(pages),
+            "alnum": alnum_len(text), "english_rate": round(english_rate(text), 2),
+            "decodable": is_decodable(text),
+            "text_pages": sum(1 for p in pages if alnum_len(p) >= PAGE_TEXT_BUG_ALNUM)}
+
+
 def stratified_sample(jobs: list[tuple], n: int, seed: int) -> list[tuple]:
     """Round-robin across conference folders so every folder is represented."""
     if n <= 0 or n >= len(jobs):
@@ -426,9 +507,16 @@ def main() -> int:
                     help="skip the OCR step of the page diagnosis (faster, but "
                          "cannot prove an image-only page is text-free)")
     ap.add_argument("--json", default="", help="write the full report as JSON here")
+    ap.add_argument("--source-scan", action="store_true",
+                    help="scan the source PDFs only (no Markdown needed) and "
+                         "report decks whose text layer does not decode to "
+                         "language — usable while a conversion is mid-write")
     args = ap.parse_args()
 
     skip = set(args.skip_folder) if args.skip_folder is not None else {"DEF CON 34"}
+
+    if args.source_scan:
+        return source_scan_report(args, skip)
     jobs, notes = collect_pairs(args.out, args.src, skip, args.min_age)
     total_available = len(jobs)
     jobs = stratified_sample(jobs, args.sample, args.seed)
@@ -490,6 +578,25 @@ def main() -> int:
         print(f"    {r['ratio_struct']:7.3f} {r['ratio_total']:6.3f} {r['pdf_alnum']:10d} "
               f"{r['struct_alnum']:9d} {r['pages']:4d} {r['empty_slides']:6d}  {r['markdown']}")
 
+    # A ratio near 1.0 only proves the Markdown kept as many characters as the
+    # PDF holds -- not that either side is readable. Decks whose fonts carry no
+    # ToUnicode map pass that test while carrying no words at all.
+    garbled = sorted([r for r in ok if r["pdf_decodable"] is False],
+                     key=lambda r: -r["pdf_alnum"])
+    fffd = sorted([r for r in ok if r["md_replacement_chars"] > 200],
+                  key=lambda r: -r["md_replacement_chars"])
+    print(f"\n  decks whose PDF text layer does not decode to language "
+          f"(subset fonts with no ToUnicode): {len(garbled)}")
+    for r in garbled[:args.worst]:
+        print(f"    eng/1k={r['pdf_english_rate']:6.2f} pdf_chars={r['pdf_alnum']:7d} "
+              f"md_U+FFFD={r['md_replacement_chars']:6d} ocr_chars={r['ocr_alnum']:7d} "
+              f"pg={r['pages']:4d}  {r['markdown']}")
+    print(f"\n  decks whose Markdown contains >200 U+FFFD replacement characters "
+          f"(unreadable text written into the corpus): {len(fffd)}")
+    for r in fffd[:args.worst]:
+        print(f"    U+FFFD={r['md_replacement_chars']:6d}  md_eng/1k={r['md_english_rate']:6.2f} "
+              f"pg={r['pages']:4d}  {r['markdown']}")
+
     print("\n  per-folder median structural ratio:")
     for f in sorted(by_folder):
         fq = quantiles([r["ratio_struct"] for r in by_folder[f]])
@@ -504,16 +611,19 @@ def main() -> int:
     tot_slides = sum(r["slides"] for r in ok)
     tot_empty = sum(r["empty_slides"] for r in ok)
     tot_dropped = sum(r["dropped_pages"] for r in ok)
+    tot_readable = sum(r["dropped_readable_pages"] for r in ok)
     print(f"  slides: {tot_slides}   empty: {tot_empty} ({100.0 * tot_empty / max(1, tot_slides):.1f}%)"
-          f"   of which the source page HAS a text layer: {tot_dropped} "
-          f"({100.0 * tot_dropped / max(1, tot_empty):.1f}% of empties)")
+          f"\n  empties whose source page HAS a text layer: {tot_dropped} "
+          f"({100.0 * tot_dropped / max(1, tot_empty):.1f}% of empties)"
+          f"\n  ... of those, text that decodes to real language: {tot_readable} "
+          f"(unambiguous drops); the rest are unmappable-font pages")
     worst_empty = sorted([r for r in ok if r["slides"] >= 5],
                          key=lambda r: (-(r["empty_share"] or 0), -r["slides"]))
     print(f"\n  worst {args.worst} decks by share of empty slides:")
-    print(f"    {'empty%':>7} {'empty':>6} {'slides':>7} {'textlayer-empties':>18}  deck")
+    print(f"    {'empty%':>7} {'empty':>6} {'slides':>7} {'w/textlayer':>12} {'readable':>9}  deck")
     for r in worst_empty[:args.worst]:
         print(f"    {pct(r['empty_share']):>7} {r['empty_slides']:6d} {r['slides']:7d} "
-              f"{r['dropped_pages']:18d}  {r['markdown']}")
+              f"{r['dropped_pages']:12d} {r['dropped_readable_pages']:9d}  {r['markdown']}")
 
     diag_empty = []
     for r in worst_empty[:args.diagnose_top]:
@@ -569,6 +679,54 @@ def main() -> int:
     return 0
 
 
+def source_scan_report(args, skip: set[str]) -> int:
+    pdfs = []
+    for dirpath, dirnames, filenames in os.walk(args.src):
+        dirnames[:] = [d for d in dirnames
+                       if not d.startswith(".") and d not in {"markdown", "tools"}]
+        rel_dir = os.path.relpath(dirpath, args.src)
+        if rel_dir.split(os.sep)[0] in skip:
+            continue
+        for fn in sorted(filenames):
+            if fn.lower().endswith(".pdf"):
+                pdfs.append(os.path.join(dirpath, fn))
+    pdfs.sort()
+    pdfs = stratified_sample([(p, p, os.path.relpath(p, args.src), p) for p in pdfs],
+                             args.sample, args.seed)
+    paths = [j[0] for j in pdfs]
+
+    t0 = time.time()
+    if args.workers > 1:
+        import multiprocessing as mp
+        with mp.Pool(args.workers) as pool:
+            rows = pool.map(scan_source, paths, chunksize=1)
+    else:
+        rows = [scan_source(p) for p in paths]
+
+    good = [r for r in rows if not r["error"]]
+    undec = sorted([r for r in good if r["decodable"] is False],
+                   key=lambda r: -r["alnum"])
+    notext = [r for r in good if r["alnum"] == 0]
+    print("=" * 100)
+    print(f"SOURCE SCAN — {len(good)} PDFs read directly ({time.time() - t0:.1f}s)")
+    print("=" * 100)
+    print(f"  no text layer at all (OCR is the only route): {len(notext)}")
+    print(f"  text layer present but not decodable to language: {len(undec)}")
+    for r in undec:
+        print(f"    eng/1k={r['english_rate']:6.2f}  chars={r['alnum']:8d}  "
+              f"pages={r['pages']:4d}  {os.path.relpath(r['pdf'], args.src)}")
+    rates = sorted(r["english_rate"] for r in good if r["alnum"] >= DECODABLE_MIN_CHARS)
+    if rates:
+        q = quantiles(rates)
+        print("\n  english-word rate per 1000 chars across decks with a text layer: "
+              + "  ".join(f"{k}={q[k]:.1f}" for k in ("min", "p05", "median", "mean", "max")))
+    if args.json:
+        with open(args.json, "w", encoding="utf-8") as fh:
+            json.dump(rows, fh, indent=1)
+        print(f"\nJSON report written to {args.json}")
+    return 0
+
+
 def print_diagnoses(entries: list[dict]) -> None:
     for e in entries:
         counts: dict[str, int] = defaultdict(int)
@@ -579,8 +737,9 @@ def print_diagnoses(entries: list[dict]) -> None:
         print(f"      {e['pages']} pages, {e['empty_slides']}/{e['slides']} empty slides"
               f"   probe: {verdicts or 'no pages probed'}")
         for d in e["diagnosis"]:
-            print(f"      p{d['page']:<4} {d['verdict']:<34} "
-                  f"textlayer={d['text_layer_alnum']:<6} imgcov={d['image_coverage']:.2f} "
+            print(f"      p{d['page']:<4} {d['verdict']:<38} "
+                  f"textlayer={d['text_layer_alnum']:<6} eng/1k={d['text_layer_english_rate']:<6} "
+                  f"imgcov={d['image_coverage']:.2f} "
                   f"imgs={d['n_images']:<3} draw={d['n_drawings']:<5} "
                   f"ocr={d['ocr_alnum']:<5} conf={d['ocr_conf']:.0f}")
             if d["text_layer_sample"]:

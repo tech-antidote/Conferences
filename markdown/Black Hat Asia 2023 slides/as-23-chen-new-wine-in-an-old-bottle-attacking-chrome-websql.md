@@ -15,7 +15,7 @@ redacted_secrets: 0
 ocr_confidence: 84.1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T01:46:45Z"
+converted_at: "2026-08-12T01:55:09Z"
 ---
 # New Wine in an Old Bottle Attacking Chrome WebSQL
 

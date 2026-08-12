@@ -15,7 +15,7 @@ redacted_secrets: 0
 ocr_confidence: 88.2
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T01:46:34Z"
+converted_at: "2026-08-12T01:55:05Z"
 ---
 # Stealthy Sensitive Information Collection from Android Apps
 

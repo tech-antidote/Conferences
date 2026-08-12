@@ -15,7 +15,7 @@ redacted_secrets: 0
 ocr_confidence: 88.7
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T01:46:20Z"
+converted_at: "2026-08-12T01:55:01Z"
 ---
 # firmWar An Imminent Threat to the Foundation of Computing
 

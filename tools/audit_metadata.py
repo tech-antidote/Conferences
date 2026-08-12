@@ -269,6 +269,11 @@ TITLE_MARKER_RES = [
     ("duplicate-copy suffix", re.compile(r"\(\s*\d+\s*\)\s*$")),
     ("file-extension debris", re.compile(r"\.(pdf|pptx|ppt|key|docx|zip)\b", re.I)),
     ("underscore debris", re.compile(r"_")),
+    # A venue name or a build date in the title is filename bookkeeping that the
+    # variant-stripper failed to recognise ("... - 2026 08 05 DEF CON").
+    ("venue/date marker",
+     re.compile(r"\b(DEF\s*CON|Black\s*Hat|BlackHat|BHASIA|Hexacon|"
+                r"OffensiveCon)\b|\b20\d{2}[ ._-]\d{2}[ ._-]\d{2}\b")),
 ]
 
 BARE_MARKER_RE = re.compile(rf"^(?:{DOC_MARKER}|{VERSION_MARKER})$", re.I)
