@@ -498,19 +498,53 @@ def content_score(rec: dict, slides: int = 2) -> dict:
 # Check 5 -- the same talk under two filenames
 # --------------------------------------------------------------------------
 
-def dedupe_key(rec: dict) -> str:
-    title = _norm(re.sub(r"[^A-Za-z0-9 ]+", " ", rec.get("title") or ""))
+def _norm_title(title: str) -> str:
+    title = re.sub(r"\(\s*\d+\s*\)\s*$", " ", title or "")  # "(2)" copy marker
+    title = _norm(re.sub(r"[^A-Za-z0-9 ]+", " ", title))
     title = re.sub(rf"\b(?:{DOC_MARKER}|{VERSION_MARKER})\b", " ", title, flags=re.I)
-    title = re.sub(r"\s+", " ", title).strip()
-    people = ",".join(sorted(_norm(s) for s in (rec.get("speakers") or [])))
-    return f"{people}|{title}"
+    return re.sub(r"\s+", " ", title).strip()
+
+
+def _people_key(rec: dict) -> str:
+    return ",".join(sorted(_norm(s) for s in (rec.get("speakers") or [])))
+
+
+def dedupe_key(rec: dict) -> str:
+    return f"{_people_key(rec)}|{_norm_title(rec.get('title') or '')}"
+
+
+# Archive truncation gives the same talk two different title lengths ("... Most
+# Lock" / "... Most Locked-D"), which no exact key can join. Same speakers plus a
+# long shared title prefix does join them.
+PREFIX_MATCH_CHARS = 30
 
 
 def duplicate_groups(records: list[dict]) -> list[list[dict]]:
     buckets = defaultdict(list)
     for rec in records:
         buckets[dedupe_key(rec)].append(rec)
-    groups = [g for g in buckets.values() if len(g) > 1]
+
+    # Merge buckets that share speakers and a long title prefix.
+    merged: dict[str, str] = {}
+    keys = sorted(buckets)
+    for i, key in enumerate(keys):
+        people, title = key.split("|", 1)
+        if len(title) < PREFIX_MATCH_CHARS:
+            continue
+        for other in keys[:i]:
+            o_people, o_title = other.split("|", 1)
+            if o_people != people or len(o_title) < PREFIX_MATCH_CHARS:
+                continue
+            if title.startswith(o_title) or o_title.startswith(title):
+                merged[key] = merged.get(other, other)
+                break
+
+    final = defaultdict(list)
+    for key, group in buckets.items():
+        final[merged.get(key, key)].extend(group)
+    groups = [g for g in final.values() if len(g) > 1]
+    for g in groups:
+        g.sort(key=lambda r: r.get("source_pdf") or "")
     groups.sort(key=lambda g: g[0].get("source_pdf") or "")
     return groups
 

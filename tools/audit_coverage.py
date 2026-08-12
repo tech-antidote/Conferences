@@ -262,7 +262,7 @@ def audit_deck(job: tuple) -> dict:
         if page_alnum[i] < PAGE_TEXT_BUG_ALNUM:
             continue
         dropped_pages.append(s["n"])
-        if english_rate(pages[i]) >= DECODABLE_MIN_HITS:
+        if decodable is not False:
             dropped_readable.append(s["n"])
 
     md_all = "\n".join(s["struct_text"] + s["ocr_text"] for s in slides)
@@ -370,11 +370,13 @@ def diagnose_deck(pdf_path: str, page_nums: list[int], max_pages: int,
     res = []
     doc = pymupdf.open(pdf_path)
     try:
+        deck_dec = is_decodable("\n".join((p.get_text() or "") for p in doc))
         for n in page_nums:
             if not (1 <= n <= doc.page_count):
                 continue
-            d = diagnose_page(doc[n - 1], do_ocr=do_ocr)
+            d = diagnose_page(doc[n - 1], deck_decodable=deck_dec, do_ocr=do_ocr)
             d["page"] = n
+            d["deck_fonts_decodable"] = deck_dec
             res.append(d)
     finally:
         doc.close()
@@ -748,7 +750,7 @@ def print_diagnoses(entries: list[dict]) -> None:
               f"   probe: {verdicts or 'no pages probed'}")
         for d in e["diagnosis"]:
             print(f"      p{d['page']:<4} {d['verdict']:<38} "
-                  f"textlayer={d['text_layer_alnum']:<6} eng/1k={d['text_layer_english_rate']:<6} "
+                  f"textlayer={d['text_layer_alnum']:<6} ascii={d['ascii_frac']:<5} "
                   f"imgcov={d['image_coverage']:.2f} "
                   f"imgs={d['n_images']:<3} draw={d['n_drawings']:<5} "
                   f"ocr={d['ocr_alnum']:<5} conf={d['ocr_conf']:.0f}")
