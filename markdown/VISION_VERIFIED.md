@@ -4,20 +4,20 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**495 slides across 127 documents.**
+**578 slides across 128 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 294 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 181 | structure held; individual characters or lines wrong |
-| accurate | 20 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 318 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 217 | structure held; individual characters or lines wrong |
+| accurate | 43 | OCR was already correct; text confirmed, not changed |
 
 ## Coverage by subject
 
 Grouped by keyword match on the talk title, so a talk can appear
 under more than one heading or under none. Counts are slides.
 
-### Windows, Active Directory and Entra — 12 talks, 34 slides
+### Windows, Active Directory and Entra — 13 talks, 117 slides
 
 - **A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit** (Black Hat ASIA 2024) — slide 38
 - **(Mis)adventures with Copilot+ Attacking and Exploiting Windows NPU Drivers** (Black Hat ASIA 2025) — slide 81
@@ -31,6 +31,7 @@ under more than one heading or under none. Counts are slides.
 - **Clustered Points of Failure - Attacking Windows Server Failover Clusters** (Black Hat USA 2025) — slide 59
 - **Vulnerability Haruspicy Picking Out Risk Signals from Scoring System Entrails** (Black Hat USA 2025) — slides 6-8
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
+- **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 
 ### Cloud and API — 12 talks, 84 slides
 
@@ -47,7 +48,7 @@ under more than one heading or under none. Counts are slides.
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 
-### Web and browser — 11 talks, 20 slides
+### Web and browser — 12 talks, 103 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -60,6 +61,7 @@ under more than one heading or under none. Counts are slides.
 - **Achilles' Heel of JS Engines Exploiting Modern Browsers During WASM Execution** (Black Hat USA 2024) — slide 94
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
+- **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 
 ### Zero-day, RCE and novel exploitation — 24 talks, 219 slides
 
@@ -229,6 +231,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 11-12, 17, 35-37 | badly-mangled | 0 |
+| Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 35 | minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
