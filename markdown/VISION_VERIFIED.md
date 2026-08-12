@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1244 slides across 139 documents.**
+**1287 slides across 140 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 544 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 583 | structure held; individual characters or lines wrong |
-| accurate | 89 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 569 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 593 | structure held; individual characters or lines wrong |
+| accurate | 97 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -18,7 +18,7 @@ judgement of the OCR text, not of the slide.
 Grouped by keyword match on the talk title, so a talk can appear
 under more than one heading or under none. Counts are slides.
 
-### Windows, Active Directory and Entra — 13 talks, 117 slides
+### Windows, Active Directory and Entra — 14 talks, 160 slides
 
 - **A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit** (Black Hat ASIA 2024) — slide 38
 - **(Mis)adventures with Copilot+ Attacking and Exploiting Windows NPU Drivers** (Black Hat ASIA 2025) — slide 81
@@ -33,6 +33,7 @@ under more than one heading or under none. Counts are slides.
 - **Vulnerability Haruspicy Picking Out Risk Signals from Scoring System Entrails** (Black Hat USA 2025) — slides 6-8
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
+- **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
 ### Cloud and API — 14 talks, 163 slides
 
@@ -263,5 +264,6 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
+| DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
