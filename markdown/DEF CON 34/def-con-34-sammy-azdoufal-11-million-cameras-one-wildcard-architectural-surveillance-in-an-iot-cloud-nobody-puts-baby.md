@@ -8,14 +8,14 @@ year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Sammy Azdoufal - 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud - nobody puts baby.pptx"
 pages: 54
 sha256: "56533fa0c79bb75782212870bfd6ea33407ba7d5632a448e183d1b0f6ab3e01c"
-text_chars: 19720
+text_chars: 20450
 ocr_pages: 54
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.3
 ocr_unreliable_blocks: 0
 content_note: "All 54 pages were rendered and read against the source deck by a vision model, and all 54 were rewritten. This deck is a Marp export: every slide is a single flat image with no text layer, so the entire document came from OCR. The ocr_* fields describe the superseded first-pass extraction."
-vision_verified_pages_changed: 54
+vision_verified_pages_changed: 21
 vision_verified_pages: 54
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -270,19 +270,23 @@ Sammy Azdoufal · @xn0tsa
 
 DEF CON 34 · Main Stage
 
-*Split poster: "EXPECTATION" (green, left) versus "REALITY" (red, right).*
+*Split-screen poster: a green “EXPECTATION” panel on the left, a red “REALITY” panel on the right.*
 
-**EXPECTATION** — MY CAMERA IS SECURE AND PRIVATE
+**EXPECTATION**
 
-- ✓ ENCRYPTED STREAM
-- ✓ SECURE CONNECTION
-- ✓ YOUR PRIVACY MATTERS
+MY CAMERA IS SECURE AND PRIVATE
+
+- ☑ ENCRYPTED STREAM
+- ☑ SECURE CONNECTION
+- ☑ YOUR PRIVACY MATTERS
 
 > SAFE. PRIVATE. YOURS.
 >
 > PEACE OF MIND ACTIVATED.
 
-**REALITY** — ALL ROADS LEAD TO THE SAME FUNNEL
+**REALITY**
+
+ALL ROADS LEAD TO THE SAME FUNNEL
 
 Sign over the loading bay: WELCOME, DEVICES. NO AUTH REQUIRED.
 
@@ -313,13 +317,13 @@ Sammy Azdoufal · @xn0tsa
 
 DEF CON 34 · Main Stage
 
+*Poster: a baby monitor wearing a suit and tie sits on a nursery table in front of a server rack.*
+
 **THE BOX SAYS BABY MONITOR**
 
-*A baby monitor in a suit and tie sits in a nursery beside a server rack labelled CLOUD.*
+Sticky note on the table: GOOD NIGHT, SLEEP TIGHT, WE <u>OWN</u> YOUR SITE ♡
 
-Sticky note: GOOD NIGHT, SLEEP TIGHT, WE OWN YOUR SITE ♡
-
-CLOUD topic list:
+Rack label: CLOUD
 
 ```text
 meari/video/1        QoS 1
@@ -332,7 +336,7 @@ meari/config         QoS 1
 meari/#
 ```
 
-Graffiti on the wall: THERE IS NO PRIVACY ONLY TOPICS — skull tagged `</>` — DEF CON
+Graffiti on the wall: THERE IS NO PRIVACY ONLY TOPICS — and a skull tagged `</>` over DEF CON
 
 **THE CLOUD SAYS EVERYONE’S MONITOR**
 
@@ -348,7 +352,8 @@ DEF CON 34 · Main Stage
 
 ### 1.1M
 
-devices · 118+ countries · registered at audit scale
+devices · 118+ countries ·
+registered at audit scale
 
 Sammy Azdoufal · @xn0tsa
 
@@ -377,7 +382,7 @@ DEF CON 34 · Main Stage
 >
 > Don’t collect CVEs like Pokémon.
 >
-> Ask once per chain: if this were the **only** finding — does the vendor still have a path to the camera?
+> Ask once per chain: if this were the *only* finding — does the vendor still have a path to the camera?
 >
 > Twelve yeses = architecture.
 
@@ -402,13 +407,13 @@ Sammy Azdoufal · @xn0tsa
 
 ## Slide 21
 
-*Full-bleed illustration: a hoodie-wearing frog meme leans back at a desk, feet up, in front of a wall of glowing world maps, confetti falling.*
+*Full-bleed meme poster: a hoodie-wearing Pepe leans back at a desk in front of a browser window, confetti everywhere, glowing world-map panels on all four sides.*
 
 **DEFAULT CREDENTIALS**
 
-Map panels: NORTH AMERICA ONLINE · SOUTH AMERICA ONLINE · EUROPE ONLINE · ASIA / PACIFIC ONLINE
+Map panels: NORTH AMERICA ONLINE · EUROPE ONLINE · SOUTH AMERICA ONLINE · ASIA / PACIFIC ONLINE
 
-Browser window — tab “Customer Portal”, address bar `https://totally.secure.login`:
+Browser window — tab: Customer Portal · address bar: `https://totally.secure.login`
 
 ```text
 PLEASE SIGN IN
@@ -419,20 +424,15 @@ admin
 Password
 public
 
-✓ ACCESS GRANTED
+✔ ACCESS GRANTED
 
 Welcome, admin!
 You now have full access to everything. 😎
 ```
 
-Desk props:
+Desk props: trophy “ZERO ALERTS CLUB” · mug “SECURITY? NAH.” · mug “IT WORKS ON MY MACHINE” · neon sign “HACKER OF THE MONTH*” with “* BY DEFAULT” · pizza box “DEPLOY & PRAY”
 
-- Trophy: ZERO ALERTS CLUB
-- Mug: SECURITY? NAH.
-- Laptop sticky note: TODO: • FIX LATER • ~~SECURITY~~
-- Mug: IT WORKS ON MY MACHINE
-- Neon sign: HACKER OF THE MONTH * / * BY DEFAULT
-- Pizza box: DEPLOY & PRAY
+Sticky note on the laptop: TODO: · FIX LATER · ~~SECURITY~~
 
 **IN PRODUCTION. ON FOUR CONTINENTS.**
 
@@ -493,17 +493,27 @@ Sammy Azdoufal · @xn0tsa
 
 DEF CON 34 · Main Stage
 
-*Placeholder card standing in for the real alert frame.*
+*Placeholder frame styled as a classified document.*
 
-Card small print, top left: DEF ☠ CON 31 / LAS VEGAS, NV / AUG 8-11, 2024
-Top right: // CLASSIFICATION LEVEL: RED — // HANDLE VIA NEED-TO-KNOW
+Top-left stamp: DEF ☠ CON 31 · LAS VEGAS, NV · AUG 8-11, 2024
+
+Top-right corner marks:
+
+```text
+// CLASSIFICATION
+LEVEL: RED
+
+// HANDLE VIA
+NEED-TO-KNOW
+```
 
 **REDACTED**
 
 BABY MONITOR ALERT FRAME — PLACEHOLDER
 
-Bottom left: // INFORMATION IS POWER PROTECT IT
-Bottom right: faint hex block [illegible] · STAY CURIOUS STAY SAFE
+Bottom-left box: // INFORMATION IS POWER PROTECT IT (over a barcode)
+
+Bottom-right: a faint hex dump [illegible], then STAY CURIOUS STAY SAFE beside a wireframe globe
 
 **Real alert still goes here — faces / IDs redacted. Swap file when ready.**
 
@@ -517,7 +527,8 @@ DEF CON 34 · Main Stage
 
 > **Encryption as a lifestyle brand.**
 >
-> SN in the clear. XOR on the first kilobyte. Fashion.
+> SN in the clear. XOR on the
+> first kilobyte. Fashion.
 
 Sammy Azdoufal · @xn0tsa
 
@@ -527,22 +538,33 @@ Sammy Azdoufal · @xn0tsa
 
 DEF CON 34 · Main Stage
 
-*Placeholder contact sheet: four tiles, each stamped REDACTED.*
+*Placeholder contact sheet styled as a classified document: four empty frames, each carrying a red REDACTED stamp.*
+
+Top-left header block:
 
 ```text
-CLASSIFICATION: CONFIDENTIAL      DOC ID: A16-9X7
-HANDLING: RESTRICTED              REV: 1.0
-DISSEMINATION: LIMITED            DATE: 2024-05-20
+CLASSIFICATION: CONFIDENTIAL
+HANDLING: RESTRICTED
+DISSEMINATION: LIMITED
+```
+
+Top-right header block:
+
+```text
+DOC ID: A16-9X7
+REV: 1.0
+DATE: 2024-05-20
 ```
 
 **AUDIT STILLS — COMING**
 
-REDACTED · REDACTED
-REDACTED · REDACTED
+REDACTED · REDACTED · REDACTED · REDACTED
 
 baby · doorbell · indoor · factory
 
-PROPERTY OF AUDIT TEAM / DO NOT DISTRIBUTE — FOR AUTHORIZED PERSONNEL ONLY
+Bottom-left box: PROPERTY OF AUDIT TEAM DO NOT DISTRIBUTE
+
+Bottom-right: FOR AUTHORIZED PERSONNEL ONLY
 
 **Montage slot: baby · doorbell · indoor · factory line.**
 
@@ -576,6 +598,8 @@ DEF CON 34 · Main Stage
 
 Sammy Azdoufal · @xn0tsa
 
+29
+
 ## Slide 30
 
 DEF CON 34 · Main Stage
@@ -588,6 +612,8 @@ DEF CON 34 · Main Stage
 Alone: still a vendor path? **Yes.** Not a hotel CTF handout.
 
 Sammy Azdoufal · @xn0tsa
+
+30
 
 ## Slide 31
 
@@ -605,6 +631,8 @@ Alone: still a vendor path? **Yes** (11 kept as “how re-tests lie”).
 
 Sammy Azdoufal · @xn0tsa
 
+31
+
 ## Slide 32
 
 DEF CON 34 · Main Stage
@@ -615,6 +643,8 @@ DEF CON 34 · Main Stage
 > CVE zoo.
 
 Sammy Azdoufal · @xn0tsa
+
+32
 
 ## Slide 33
 
@@ -630,6 +660,8 @@ Five CVE IDs in the public writeup. Twelve chains = talk/audit framing (not a nu
 
 Sammy Azdoufal · @xn0tsa
 
+33
+
 ## Slide 34
 
 DEF CON 34 · Main Stage
@@ -641,9 +673,11 @@ DEF CON 34 · Main Stage
 When the architecture is the exploit,
 the heatmap is the CVSS.
 
-_Right half of the slide: a world heat-map of device density, one large hotspot over Europe plus clusters across Africa, the Middle East, South America and Asia._
+*Right half of the slide: a dark world heat-map of device density — one huge magenta bloom over Europe, further hotspots across West Africa, the Middle East, southern Africa, Madagascar, South America and the Asia/Pacific edge. Clipped basemap labels show through: “AFRIKA / أفريقيا” and “AMÉRICA DEL SUR”.*
 
 Sammy Azdoufal · @xn0tsa
+
+34
 
 ## Slide 35
 
@@ -660,6 +694,8 @@ They patched the welcome mat. Kept the firehose keys.
 
 Sammy Azdoufal · @xn0tsa
 
+35
+
 ## Slide 36
 
 DEF CON 34 · Main Stage
@@ -673,6 +709,8 @@ DEF CON 34 · Main Stage
 
 Sammy Azdoufal · @xn0tsa
 
+36
+
 ## Slide 37
 
 DEF CON 34 · Main Stage
@@ -685,6 +723,8 @@ Emails as exhibits. Popcorn
 optional.
 
 Sammy Azdoufal · @xn0tsa
+
+37
 
 ## Slide 38
 
@@ -704,35 +744,49 @@ DEF CON 34 · Main Stage
 
 Sammy Azdoufal · @xn0tsa
 
+38
+
 ## Slide 39
 
-_Full-bleed meme slide: a vendor discontinuation email on the left, a storefront cart piled with the same cameras on the right._
+*Full-bleed illustration: a hacker’s desk — a vendor “product discontinuation” email window on the left, a shopping cart heaped with the same cameras on the right.*
 
-### VENDOR EMAIL
+**VENDOR EMAIL**
 
-**IMPORTANT:** Product Discontinuation Notice
+Poster on the wall, top left: **DEF CON** (skull and crossbones).
 
-Dear Valued Partner,
+Small monitor, left: `ALL YOUR BASE ARE BELONG TO LEGACY`
 
-Please be advised that the following products are now considered **obsolete** and will no longer be supported.
+Email window:
 
-We recommend migrating to our current generation solutions.
+> **IMPORTANT:** Product Discontinuation Notice
+>
+> Dear Valued Partner,
+>
+> Please be advised that the following products are now considered **obsolete** and will no longer be supported.
+>
+> We recommend migrating to our current generation solutions.
+>
+> Thank you for your understanding.
+>
+> Sincerely,
+> Product Lifecycle Management Team
+>
+> ⚠ These products are end-of-life.
+> No further updates or security fixes will be provided.
 
-Thank you for your understanding.
+Red rubber stamp across the email: **OBSOLETE PRODUCTS**
 
-Sincerely,
-Product Lifecycle Management Team
+Browser window on the right, cart badge **42**:
 
-⚠ These products are end-of-life.
-No further updates or security fixes will be provided.
+**Your Cart (42 items)** — stacked camera boxes tagged $199.99 · $149.99 · $89.99 · $249.99 · $179.99 · $159.99, several with **NEW!** starbursts.
 
-_Red rubber stamp across the email:_ OBSOLETE PRODUCTS
+Button: **PROCEED TO CHECKOUT**
 
-_Storefront panel, right:_ Your Cart (42 items) · cart badge 42 · NEW! burst badges · $199.99 · $149.99 · $89.99 · $249.99 · $179.99 · $159.99 · PROCEED TO CHECKOUT
+Phone on the desk mat, bottom left: `DC30` (skull and crossbones). Purple graffiti stickers beside it: [illegible]
 
-_Background props:_ DEF CON skull-and-bones logo · a screen reading ALL YOUR BASE ARE BELONG TO LEGACY · a DC30 badge
+**ALSO STILL ON SALE**
 
-### ALSO STILL ON SALE
+39
 
 ## Slide 40
 
@@ -745,6 +799,8 @@ DEF CON 34 · Main Stage
 > obsolescence.
 
 Sammy Azdoufal · @xn0tsa
+
+40
 
 ## Slide 41
 
@@ -762,6 +818,8 @@ Apollo = “a limited amount of configuration information.”
 archive.org = offensive security tool.
 
 Sammy Azdoufal · @xn0tsa
+
+41
 
 ## Slide 42
 
