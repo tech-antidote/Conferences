@@ -14,17 +14,23 @@ failure class no reader can detect without the page in front of them.
 The same shape covers white-on-white page furniture, text hidden behind a
 full-bleed image, and boxes parked off the visible design.
 
-Detection is by rendering, not by colour arithmetic. A span is invisible when
-the pixels inside its own bounding box are all about the same shade *and* that
-shade is the span's own colour -- i.e. the glyphs made no difference to what
-the page looks like. Both halves are needed. Colour alone misses black text on
-a dark-grey panel; flatness alone misses a box whose bbox catches one bright
-pixel from a neighbouring element, which is exactly what happens on page 6 of
-that deck, where the same hidden URL has a spread of 47 rather than 0.
+Detection is by rendering, not by colour arithmetic. Render the span's own
+bounding box and ask what share of its pixels are already the span's colour.
+Visible text is a minority of its own box -- glyphs cover maybe a third of a
+line of type and the rest is background of some other shade. Invisible text has
+nowhere to hide: background and glyphs are the same shade, so nearly every
+pixel matches.
 
-Measured on that deck the rule found 7 spans in 1008 with no false positives:
-the six the reviewer found by eye, plus a page number set in white on the one
-slide with a white background.
+An earlier version asked for a flat box whose mean matched the span colour,
+which is wrong in a way worth recording. A reviewer on a second deck found
+"Big Endian" on two slides that show no such text; the flatness rule caught one
+and missed the other, because there the box clips a bright element across 0.5%
+of its area, which drags min/max to the full 0-255 range. A share does not move
+for half a percent of outliers.
+
+Measured over both decks, 1397 spans: the 9 invisible ones score 0.911 and up,
+the highest visible span scores 0.493. The threshold sits in an empty gap
+rather than on a slope, which is why it needs no per-deck tuning.
 
     python3 tools/find_invisible_text.py --src BlackHat_USA_2026_Slides
     python3 tools/find_invisible_text.py --src . --out markdown --json hits.json
@@ -45,13 +51,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # Sampling resolution for the visibility test. Low enough to be cheap per span,
 # high enough that a 10pt glyph still covers several pixels.
 PROBE_DPI = 110
-# How close the rendered shade must be to the span's own colour, on a 0-255
-# luminance scale, before the glyphs count as contributing nothing.
-SHADE_TOLERANCE = 12
-# How flat the region must be. A visible glyph run against its background
-# spreads far wider than this; the ceiling only has to survive a stray bright
-# pixel from an adjacent element intruding into the bbox.
-SPREAD_CEILING = 96
+# How close a pixel must be to the span's own colour, on a 0-255 luminance
+# scale, to count as indistinguishable from it.
+MATCH_TOLERANCE = 20
+# What share of the box must be indistinguishable before the glyphs count as
+# having contributed nothing.
+SHARE = 0.85
 # Very small boxes render to a handful of pixels where the statistics stop
 # meaning anything.
 MIN_EDGE = 2.0
@@ -75,9 +80,9 @@ def is_invisible(page, span: dict) -> bool:
     s = pix.samples
     if not s:
         return False
-    mean = sum(s) / len(s)
-    return (abs(luma(span.get("color", 0)) - mean) < SHADE_TOLERANCE
-            and (max(s) - min(s)) < SPREAD_CEILING)
+    target = luma(span.get("color", 0))
+    matching = sum(1 for v in s if abs(v - target) <= MATCH_TOLERANCE)
+    return matching / len(s) >= SHARE
 
 
 def scan(pdf_path: str) -> list[dict]:

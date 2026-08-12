@@ -199,6 +199,20 @@ def main() -> int:
     check("VISIBLE HEADING" not in hidden, "visible text is not detected")
     check("BOTH" not in hidden,
           "a string that also appears visibly is kept")
+    # The case that broke the first version of this check: a hidden span whose
+    # box clips a bright neighbour. Half a percent of outlier pixels took the
+    # rendered spread from 0 to the full range, and a flatness test let it
+    # through -- on a real deck that published "Big Endian" onto two slides that
+    # never showed it.
+    page2 = doc.new_page(width=400, height=200)
+    page2.draw_rect(page2.rect, color=None, fill=(0, 0, 0))
+    page2.insert_text((20, 100), "hidden-beside-a-bright-thing", fontsize=11,
+                      color=(0, 0, 0))
+    page2.draw_rect(pymupdf.Rect(150, 88, 158, 96), color=None, fill=(1, 1, 1))
+    page2 = doc.reload_page(page2)
+    check("hidden-beside-a-bright-thing" in invisible_spans(page2),
+          "a bright neighbour clipping the box does not hide the detection")
+
     body, n = strip_invisible("VISIBLE HEADING\n\n- hidden-leftover.example\n\nBOTH",
                               hidden)
     check(n == 1 and "hidden-leftover" not in body,
@@ -219,7 +233,7 @@ def main() -> int:
     if failures:
         print(f"{len(failures)} assertion(s) FAILED")
         return 1
-    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 11} assertions passed")
+    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 12} assertions passed")
     return 0
 
 

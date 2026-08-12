@@ -652,15 +652,26 @@ def image_coverage(page: "pymupdf.Page") -> float:
 # can detect without the source in front of them. Same shape covers white-on-
 # white page furniture and boxes parked behind a full-bleed image.
 #
-# The test is by rendering rather than colour arithmetic: a span is invisible
-# when the pixels in its own bounding box are all about one shade *and* that
-# shade is the span's own colour, i.e. drawing the glyphs changed nothing. Both
-# halves are needed -- colour alone misses black text on a dark grey panel, and
-# flatness alone misses a bbox that catches one bright pixel from a neighbour,
-# which is exactly what happens on page 6 of that deck.
+# The test is by rendering rather than colour arithmetic. Render the span's own
+# bounding box and ask what share of its pixels are already the span's colour.
+# Visible text is a minority of its box -- glyphs cover maybe a third of a line
+# of type, and the rest is background of some other shade. Invisible text has
+# nowhere to hide: background and glyphs are the same shade, so nearly every
+# pixel matches.
+#
+# An earlier version asked instead for a flat box whose mean matched the span
+# colour, and it was wrong in a way worth recording. A reviewer working on a
+# different deck found "Big Endian" on two slides where the page shows no such
+# text; the flatness rule caught one and missed the other, because on the second
+# the box clips a bright element across 0.5% of its area, which drags min/max to
+# the full 0-255 range. A share is not moved by half a percent of outliers.
+#
+# Measured over both decks, 1397 spans: the 9 invisible ones score 0.911 and up,
+# the highest visible span scores 0.493. The threshold sits in an empty gap
+# rather than on a slope, which is why it needs no per-deck tuning.
 INVISIBLE_PROBE_DPI = 110
-INVISIBLE_SHADE_TOLERANCE = 12
-INVISIBLE_SPREAD_CEILING = 96
+INVISIBLE_MATCH_TOLERANCE = 20
+INVISIBLE_SHARE = 0.85
 INVISIBLE_MIN_EDGE = 2.0
 
 
@@ -681,9 +692,9 @@ def _span_invisible(page: "pymupdf.Page", span: dict) -> bool:
     s = pix.samples
     if not s:
         return False
-    mean = sum(s) / len(s)
-    return (abs(_span_luma(span.get("color", 0)) - mean) < INVISIBLE_SHADE_TOLERANCE
-            and (max(s) - min(s)) < INVISIBLE_SPREAD_CEILING)
+    target = _span_luma(span.get("color", 0))
+    matching = sum(1 for v in s if abs(v - target) <= INVISIBLE_MATCH_TOLERANCE)
+    return matching / len(s) >= INVISIBLE_SHARE
 
 
 def invisible_spans(page: "pymupdf.Page") -> list[str]:
