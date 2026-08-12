@@ -420,6 +420,17 @@ def tesseract_path() -> str | None:
 _OCR_ALNUM_RE = re.compile(r"[^A-Za-z0-9]")
 
 
+def _decodable(text: str) -> str:
+    """Text with undecodable glyphs removed.
+
+    Subset-embedded fonts without a ToUnicode map decode to U+FFFD. A page can
+    carry 300-700 of them, which is meaningless as text but was long enough to
+    convince the OCR gate that the page already had content, so three decks --
+    43,828 replacement characters between them -- were never OCR'd at all.
+    """
+    return text.replace("\ufffd", "")
+
+
 def _ocr_ratios_are_noise(text: str, short_max: float, word_min: float) -> bool:
     toks = text.split()
     if not toks:
@@ -608,6 +619,8 @@ def tidy(md: str) -> str:
     # of the document as code. One slide's table cell ("```|") did exactly that.
     # Escaping the first backtick keeps the characters while defusing the fence.
     md = re.sub(r"(?m)^(\s*)```", r"\1\\```", md)
+    # A run of undecodable glyphs is noise, not content.
+    md = re.sub(r"\ufffd{2,}", " ", md)
     return md.strip()
 
 
@@ -758,6 +771,16 @@ def convert_one(job: tuple) -> dict:
             return result
         n_pages = doc.page_count
 
+        # Snapshot each page's own text layer first: the layout engine consumes
+        # text from the in-memory pages, so after to_markdown() runs, get_text()
+        # returns nothing and there is no baseline left to compare against.
+        raw_pages = []
+        for _pg in doc:
+            try:
+                raw_pages.append(_decodable((_pg.get_text() or "").strip()))
+            except Exception:  # noqa: BLE001
+                raw_pages.append("")
+
         # Structural pass over the whole document at once. use_ocr=False keeps
         # the layout engine's per-picture OCR off; pass 2 below does OCR better
         # and only where it is needed (see the note at the top of this file).
@@ -778,17 +801,44 @@ def convert_one(job: tuple) -> dict:
         ocr_timeouts = 0
 
         # Pass A: structural text, and OCR for the pages that need it.
+        recovered_pages = 0
         for idx, chunk in enumerate(chunks):
             body = tidy(chunk.get("text", "") or "")
+
+            # The layout engine consumes text that overlaps a picture region and,
+            # with its own OCR off, discards it: one slide with 165 characters of
+            # plain English came back empty, and a single deck lost 95 pages that
+            # way. Compare against the page's own text layer and fall back to it
+            # when most of the text has gone missing.
+            if idx < len(raw_pages):
+                raw = raw_pages[idx]
+                if len(raw) >= 80 and len(body) < 0.5 * len(raw):
+                    body = tidy(raw)
+                    if do_redact:
+                        body, nred = redact_secrets(body)
+                        redactions += nred
+                    recovered_pages += 1
+                    bodies.append(body)
+                    struct_chars += len(body)
+                    continue
+
             if do_redact:
                 body, nred = redact_secrets(body)
                 redactions += nred
             struct_chars += len(body)
             bodies.append(body)
 
-            if do_ocr and len(body) < OCR_TEXT_THRESHOLD and idx < n_pages:
+            if do_ocr and len(_decodable(body)) < OCR_TEXT_THRESHOLD and idx < n_pages:
                 page = doc[idx]
-                if image_coverage(page) >= OCR_IMAGE_COVERAGE:
+                # Raster coverage alone misses slides drawn as vectors, which
+                # carry no image object at all and so were never rendered.
+                vector_heavy = False
+                if image_coverage(page) < OCR_IMAGE_COVERAGE:
+                    try:
+                        vector_heavy = len(page.get_drawings()) >= 40
+                    except Exception:  # noqa: BLE001
+                        vector_heavy = False
+                if image_coverage(page) >= OCR_IMAGE_COVERAGE or vector_heavy:
                     otext, oconf, raw_conf, timed_out = ocr_page(page)
                     if timed_out:
                         ocr_timeouts += 1
@@ -902,6 +952,7 @@ def convert_one(job: tuple) -> dict:
             f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
             f"ocr_unreliable_blocks: {risky_blocks}",
             f"ocr_timeouts: {ocr_timeouts}",
+            f"pages_recovered_from_text_layer: {recovered_pages}",
             *( [f"content_note: {yaml_escape(content_note)}"] if content_note else [] ),
             f"companion_files: {yaml_list([n for n, _ in sidecars])}",
             f"extractor: {yaml_escape('pymupdf4llm ' + pymupdf.__version__ + ' + tesseract' if ocr_pages else 'pymupdf4llm ' + pymupdf.__version__)}",
@@ -930,6 +981,7 @@ def convert_one(job: tuple) -> dict:
             companion_files=[n for n, _ in sidecars], redacted_secrets=redactions,
             ocr_confidence=(round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else None),
             ocr_unreliable_blocks=risky_blocks, ocr_timeouts=ocr_timeouts,
+            pages_recovered_from_text_layer=recovered_pages,
             content_note=content_note or None,
         )
         return result
