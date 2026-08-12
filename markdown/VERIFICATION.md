@@ -130,6 +130,17 @@ are counted per document as `ocr_unreliable_blocks`.
 
 ---
 
+## Blocks that could not be vision-verified
+
+| Deck | Blocks | Reason |
+|---|---:|---|
+| CoDe16: 16 Zero-Day Vulnerabilities Affecting CODESYS Framework | 17 | Every attempt to review these pages was stopped by the model API's cyber safeguards, at three different batch sizes, once before any page was read. The trigger is the deck's subject — ICS/OT zero-days — not any individual slide. |
+
+These blocks remain OCR-only and keep their `ocr_unreliable` flag, so they are
+identifiable rather than silently trusted. Reviewing them needs an account
+enrolled in Anthropic's Cyber Verification Program, which exists for exactly
+this kind of published security research.
+
 ## Known defects, not fixed
 
 | Issue | Scale | Why not fixed |
