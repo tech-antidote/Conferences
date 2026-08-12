@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**397 slides across 125 documents.**
+**452 slides across 126 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 246 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 132 | structure held; individual characters or lines wrong |
-| accurate | 19 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 266 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 166 | structure held; individual characters or lines wrong |
+| accurate | 20 | OCR was already correct; text confirmed, not changed |
 
 ## Coverage by subject
 
@@ -233,5 +233,6 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 42, 107 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
+| DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |

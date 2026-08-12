@@ -15,7 +15,7 @@ Extraction happens two ways, and only one of them can be wrong:
 
 | Path | Volume | Can it be wrong? |
 |---|---|---|
-| **Structural** — reads the PDF's own text stream | ~76% of corpus text | **No.** The characters are the file's own bytes, not a guess. Reading *order* can be imperfect; the characters cannot. |
+| **Structural** — reads the PDF's own text stream | ~76% of corpus text | **The characters cannot be wrong** — they are the file's own bytes. **The document can be.** Reading order, tables, code listings, equations and figures are all reconstructed, and a 55-page zero-OCR paper read end to end needed 54 of its 55 pages rewritten. See the control case below. |
 | **OCR** — renders the page and reads the pixels | 11,467 pages | **Yes.** This is where every character error lives. |
 | **Transcripts** — speech recognition output | 3.5M chars | Wording can be misheard; no OCR involved. |
 
@@ -47,7 +47,7 @@ These ran over every deck. Commands are in `tools/`; re-run them against any bui
 
 ## Vision verification — page images read against extracted text
 
-**397 slides across 125 documents** have had their page image read by a vision
+**452 slides across 126 documents** have had their page image read by a vision
 model and compared against the OCR text. Every one is listed by talk and slide
 number in [VISION_VERIFIED.md](VISION_VERIFIED.md), with the verdict the
 reviewer reached; regenerate it with `tools/vision_review_index.py`.
@@ -56,11 +56,11 @@ The verdicts are not reassuring, and they are not meant to be:
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 246 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 132 | structure held; individual characters or lines wrong |
-| accurate | 19 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 266 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 166 | structure held; individual characters or lines wrong |
+| accurate | 20 | OCR was already correct; text confirmed, not changed |
 
-Nineteen slides in 397 came back clean. These are the blocks the converter itself
+Twenty slides in 452 came back clean. These are the blocks the converter itself
 flagged as unreliable — a deliberately adverse sample, not a random one — so
 the ratio measures the flag's precision, not the corpus's. It says the flag is
 finding the right pages.
@@ -102,6 +102,42 @@ Two reviewers separately noted the same source-side defect, which is worth
 recording because it limits what any method can recover: this deck's title text
 is clipped off the top edge of the page, so on several slides only glyph
 descenders survive. Those are marked as clipped rather than guessed.
+
+### A document with no OCR at all — the control case
+
+The deck above was 32% OCR pages, so some of its damage was Tesseract's. The
+companion document in the same DEF CON 34 drop is the opposite: 55 pages,
+`ocr_pages: 0`, every character taken from the PDF's own text layer. By the
+reasoning at the top of this file it should have needed no verification, and
+the flagged-block review covered exactly none of it.
+
+**54 of its 55 pages were rewritten.** One was correct.
+
+Not one character error — the text layer is exact, as claimed. Every fault was
+structural, and the same handful repeat:
+
+| Failure | Where |
+|---|---|
+| **Two columns interleaved** — right-column text spliced into the middle of a left-column paragraph or section | pp. 11, 14, 16, 17, 19, 29–32, 36, 38, 39, 42, 44, 51, 52 |
+| **`algorithm` / `lstlisting` environments destroyed** — line breaks and indentation gone, gutter line numbers merged into surrounding prose as stray `1 2 3` blocks | pp. 11–14, 17–19, 21, 32, 33, 38, 51–54 |
+| **Display equations silently dropped** | p. 27 (CI width), p. 29 (CI₉₅), p. 37 (translation completeness) |
+| **Tables mangled** — spanned headers split into `Ret`/`Dec`/`An`/`vill`, floats emitted in the wrong order, literal newlines inside cells | pp. 6, 29, 31, 32, 39 |
+| **Content duplicated**, not merely lost | p. 19 (an RTL comment line), p. 33 (a findings paragraph), p. 53 (two lines of Algorithm 8) |
+| **URLs split by an inserted space**, breaking every link | 16 across pp. 47–49 |
+| **Line-break hyphens not rejoined** — `architectureneutral`, `libjpegturbo`, `RISCV`, `machinereadable` | throughout |
+
+Two of those deserve emphasis. Duplication is worse than loss, because nothing
+about the output looks wrong — the document simply asserts something its source
+does not. And the algorithms are the contribution of a paper like this one, so
+the content that matters most is the content most reliably destroyed.
+
+The table of contents, the lists of figures and tables, and Figure 1 — the
+`wsolver` pipeline the whole dissertation builds towards — were all
+unreadable.
+
+**This is the control case for the claim at the top of this file.** "Structural
+extraction cannot be wrong" is true about characters and false about documents.
+A zero-OCR document is not a safe document; it is an unexamined one.
 
 ### Do the reviewers agree with each other?
 

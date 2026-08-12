@@ -94,6 +94,7 @@
 - [8 Out of 10 Banks in Belgium HATE This One Weird eID RCE](DEF%20CON%2034/def-con-34-james-arnott-8-out-of-10-banks-in-belgium-hate-this-one-weird-eid-rce-media-server-belgi.md) — James Arnott · 71pp · OCR 5p
 - [A Provider for the MOFia - Distributed Post-Ex Capabilities](DEF%20CON%2034/def-con-34-steven-flores-a-provider-for-the-mofia-distributed-post-ex-capabilities-po.md) — Steven Flores · 36pp
 - [Beyond the Ceremony The 2026 Passkey Attack Surface](DEF%20CON%2034/def-con-34-matteo-giordano-beyond-the-ceremony-the-2026-passkey-attack-surface-v2.md) — Matteo Giordano · 100pp · OCR 43p
+- [Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond](DEF%20CON%2034/def-con-34-jonathan-brossard-witchcraft-solver-automated-0day-discovery-in-stripped-binaries-these.md) — Jonathan Brossard · 55pp
 - [Bird Hunting Season The Final Flight](DEF%20CON%2034/def-con-34-jon-gaines-bird-hunting-season-the-final-flight-pdf-v1.md) — Jon Gaines · 47pp
 - [Bird Hunting Season The Final Flight](DEF%20CON%2034/def-con-34-jon-gaines-bird-hunting-season-the-final-flight-v1.md) — Jon Gaines · 38pp · OCR 30p
 - [BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft](DEF%20CON%2034/def-con-34-aaron-schulman-jerry-yu-yibo-wei-ble-theft-auto-how-a-dealer-installed-anti-theft-system-exposes-over-a-milli.md) — Aaron Schulman, Jerry Yu, Yibo Wei · 54pp · OCR 21p
@@ -174,7 +175,6 @@
 - [Transformers Dark Side of the Type - Weaponizing the Conversion Layer](DEF%20CON%2034/def-con-34-oleksandr-mirosh-transformers-dark-side-of-the-type-weaponizing-the-conversion-layer-sideofthe-wp-v3.md) — Oleksandr Mirosh · 67pp
 - [Very Pwned Hacking Verifone’s card machine three times in a row](DEF%20CON%2034/def-con-34-reino-mostert-very-pwned-hacking-verifones-card-machine-three-times-in-a-row-m.md) — Reino Mostert · 75pp · OCR 11p
 - [Weaponizing Uselessness Breaking SMM with the Slowest Instruction Ever Written](DEF%20CON%2034/def-con-34-christopher-domas-weaponizing-uselessness-breaking-smm-with-the-slowest-instruction-ever-written-2026.md) — Christopher Domas · 68pp · OCR 1p
-- [Witchcraft Solver Automated 0day Discovery in Stripped Binaries](DEF%20CON%2034/def-con-34-jonathan-brossard-witchcraft-solver-automated-0day-discovery-in-stripped-binaries-these.md) — Jonathan Brossard · 55pp
 - [Witchcraft Solver Automated 0day Discovery in Stripped Binaries](DEF%20CON%2034/jonathan-brossard-witchcraft-solver-automated-0day-discovery-in-stripped-binaries-pipeline-v1-2.md) — Jonathan Brossard · 57pp · OCR 18p
 - [Witchcraft Solver Automated 0day Discovery in Stripped Binaries](DEF%20CON%2034/jonathan-brossard-witchcraft-solver-automated-0day-discovery-in-stripped-binaries-pipeline-v1.md) — Jonathan Brossard · 57pp · OCR 18p
 - [Wrestling with a Python Escaping Copilot Studio's AI-Guarded Sandbox](DEF%20CON%2034/def-con-34-ryan-hausknecht-simon-maxwell-stewart-wrestling-with-a-python-escaping-copilot-studios-ai-guarded-sandbox-def.md) — Ryan Hausknecht, Simon Maxwell-Stewart · 68pp · OCR 26p
