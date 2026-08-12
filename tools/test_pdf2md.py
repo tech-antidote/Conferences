@@ -60,6 +60,36 @@ SPEAKER_TITLE_CASES = [
      "Tianwei Wu & Syed Rafiul Hussain_Cracking the 5G Fortress",
      ["Kai Tu", "Yilu Dong", "Abdullah Al Ishtiaq", "Syed Md Mukit Rashid",
       "Weixuan Wang", "Tianwei Wu", "Syed Rafiul Hussain"], "Cracking the 5G Fortress"),
+    # A hyphen inside the TITLE must not be mistaken for the speaker separator.
+    # Splitting right-to-left once accepted any left side containing "&", which
+    # filed half a title as a speaker.
+    ("Bohan Liu & Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App "
+     "Sandbox From Site-Isolation Perspective",
+     ["Bohan Liu", "Haibin Shi"],
+     "The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective"),
+    ("Yuhao Jiang & Xinlei Ying-URB Excalibur The New VMware All-Platform VM Escapes",
+     ["Yuhao Jiang", "Xinlei Ying"], "URB Excalibur The New VMware All-Platform VM Escapes"),
+    ("Sojun Ryu & YeongJae Shin-Voice Phishing Syndicates Unmasked An In-Depth Investigation",
+     ["Sojun Ryu", "YeongJae Shin"],
+     "Voice Phishing Syndicates Unmasked An In-Depth Investigation"),
+    # " _ " separates the speakers; the bare "_" separates speakers from title.
+    ("Christian Werling _ Niclas Kuhnapfel _ Oleg Drokin_Jailbreaking an Electric Vehicle",
+     ["Christian Werling", "Niclas Kuhnapfel", "Oleg Drokin"],
+     "Jailbreaking an Electric Vehicle"),
+    # A hyphen-attached document marker is stripped like the underscore form.
+    ("Michael Grafnetter_Pass-the-Passkey Family of Attacks-WP",
+     ["Michael Grafnetter"], "Pass-the-Passkey Family of Attacks"),
+    ("Joshua Reynolds_Automating Malware Deobfuscation with Binary Ninja_workshop",
+     ["Joshua Reynolds"], "Automating Malware Deobfuscation with Binary Ninja"),
+    # An underscore INSIDE a title is meaningful and must survive.
+    ("Zhenpeng Lin_Bad io_uring A New Era of Rooting for Android",
+     ["Zhenpeng Lin"], "Bad io_uring A New Era of Rooting for Android"),
+    # A filename-copy marker is not part of the title.
+    ("Kenneth Miltenberger, Shane Cancilla-Taking on the Dark Fleet in Cyberspace (2)",
+     ["Kenneth Miltenberger", "Shane Cancilla"], "Taking on the Dark Fleet in Cyberspace"),
+    # No speaker at all: the whole stem is the title, markers aside.
+    ("Invisible Ink Privacy Risks of CSS in Browsers and Emails_Compressed",
+     [], "Invisible Ink Privacy Risks of CSS in Browsers and Emails"),
 ]
 
 CONFERENCE_CASES = [

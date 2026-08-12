@@ -254,12 +254,17 @@ def audit_deck(job: tuple) -> dict:
     empty = [s["n"] for s in slides if s["struct_alnum"] == 0 and s["ocr_alnum"] == 0]
     # Slides empty of structural text but carrying text in the source layer are
     # the direct evidence of a dropped page.
-    dropped_pages, dropped_readable = [], []
+    dropped_pages, dropped_readable, lossy = [], [], []
     for s in slides:
         i = s["n"] - 1
-        if s["struct_alnum"] or not (0 <= i < len(pages)):
+        if not (0 <= i < len(pages)) or page_alnum[i] < PAGE_TEXT_BUG_ALNUM:
             continue
-        if page_alnum[i] < PAGE_TEXT_BUG_ALNUM:
+        # Under-covered: the page carries text, the slide kept less than half of
+        # it. Only these pages are worth a page-level diagnosis -- probing a
+        # page the Markdown already represents would indict a healthy deck.
+        if s["struct_alnum"] < 0.5 * page_alnum[i]:
+            lossy.append(s["n"])
+        if s["struct_alnum"]:
             continue
         dropped_pages.append(s["n"])
         if decodable is not False:
@@ -287,6 +292,8 @@ def audit_deck(job: tuple) -> dict:
         "dropped_page_nums": dropped_pages[:400],
         "dropped_readable_pages": len(dropped_readable),
         "dropped_readable_page_nums": dropped_readable[:400],
+        "lossy_pages": len(lossy),
+        "lossy_page_nums": lossy[:400],
         "chars_per_page": (struct_alnum + ocr_alnum) / len(pages) if pages else 0.0,
         "pdf_chars_per_page": pdf_alnum / len(pages) if pages else 0.0,
         "frontmatter_pages": parsed["frontmatter"].get("pages", ""),
@@ -660,24 +667,28 @@ def main() -> int:
     below = sum(1 for r in starved if r["chars_per_page"] < 0.25 * med)
     print(f"  decks with >=15 pages and <25% of median chars/page ({0.25 * med:.0f}): {below}")
     print(f"\n  worst {args.worst}:")
-    print(f"    {'md_c/pg':>8} {'pdf_c/pg':>9} {'pg':>4} {'md_chars':>9} {'pdf_chars':>10} {'ratio':>7}  deck")
+    print(f"    {'md_c/pg':>8} {'pdf_c/pg':>9} {'pg':>4} {'md_chars':>9} {'pdf_chars':>10} "
+          f"{'ratio':>7} {'lossy_pg':>9}  deck")
     for r in starved[:args.worst]:
         rs = r["ratio_struct"]
         print(f"    {r['chars_per_page']:8.1f} {r['pdf_chars_per_page']:9.1f} {r['pages']:4d} "
               f"{r['struct_alnum'] + r['ocr_alnum']:9d} {r['pdf_alnum']:10d} "
-              f"{('%.3f' % rs) if rs is not None else '   n/a':>7}  {r['markdown']}")
+              f"{('%.3f' % rs) if rs is not None else '   n/a':>7} {r['lossy_pages']:9d}  "
+              f"{r['markdown']}")
 
     diag_starved = []
     for r in starved[:args.diagnose_top]:
         pdf_path = os.path.join(args.src, r["source_pdf"])
-        # Diagnose the pages that produced nothing; if none are empty, spread
-        # the probe across the whole deck instead.
-        nums = r["empty_slide_nums"] or list(range(1, r["pages"] + 1))
+        # Only pages the Markdown under-covers get diagnosed. A deck can be
+        # starved simply because its slides are three words and a picture, and
+        # probing pages it faithfully converted would manufacture findings.
+        nums = r["empty_slide_nums"] or r["lossy_page_nums"]
         d = diagnose_deck(pdf_path, nums, args.diagnose_pages, do_ocr=not args.no_ocr)
         diag_starved.append({"deck": r["markdown"], "pdf": r["source_pdf"],
                              "empty_slides": r["empty_slides"], "slides": r["slides"],
                              "pages": r["pages"], "chars_per_page": r["chars_per_page"],
-                             "diagnosis": d})
+                             "lossy_pages": r["lossy_pages"],
+                             "ratio_struct": r["ratio_struct"], "diagnosis": d})
     print_diagnoses(diag_starved)
 
     if args.json:
@@ -745,9 +756,12 @@ def print_diagnoses(entries: list[dict]) -> None:
         for d in e["diagnosis"]:
             counts[d["verdict"]] += 1
         verdicts = ", ".join(f"{k}={v}" for k, v in sorted(counts.items()))
+        extra = ""
+        if e.get("ratio_struct") is not None:
+            extra = f", coverage {e['ratio_struct']:.3f}, {e.get('lossy_pages', 0)} under-covered pages"
         print(f"\n  * {e['deck']}")
-        print(f"      {e['pages']} pages, {e['empty_slides']}/{e['slides']} empty slides"
-              f"   probe: {verdicts or 'no pages probed'}")
+        print(f"      {e['pages']} pages, {e['empty_slides']}/{e['slides']} empty slides{extra}"
+              f"   probe: {verdicts or 'NO under-covered pages — markdown matches source'}")
         for d in e["diagnosis"]:
             print(f"      p{d['page']:<4} {d['verdict']:<38} "
                   f"textlayer={d['text_layer_alnum']:<6} ascii={d['ascii_frac']:<5} "

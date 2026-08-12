@@ -259,18 +259,37 @@ def _hyphen_split(stem: str) -> tuple[str, str] | None:
     return None
 
 
+SPEAKER_SPLIT_RE = re.compile(r"\s*&\s*|\s*,\s*|\s+and\s+")
+
+
 def _looks_like_names(text: str) -> bool:
-    """True when a string reads as a speaker list rather than prose."""
-    if "&" in text or " and " in text.lower():
-        return True
-    words = text.split()
-    # Personal names are short and capitalised; titles are longer and mixed-case.
-    return 1 < len(words) <= 4 and all(w[:1].isupper() or not w[:1].isalpha() for w in words)
+    """True when a string reads as a speaker list rather than prose.
+
+    Every speaker in the list has to look like a person, not just the string as
+    a whole: an earlier version accepted anything containing "&", so a title
+    with a hyphen in it ("... Modern Web-Based App Sandbox From Site-Isolation
+    Perspective") got split at the wrong hyphen and half the title was filed as
+    a speaker.
+    """
+    parts = [p.strip() for p in SPEAKER_SPLIT_RE.split(text) if p.strip()]
+    if not parts:
+        return False
+    for part in parts:
+        words = part.split()
+        # Personal names run one to five words. Anything longer is prose.
+        if not 1 <= len(words) <= 5:
+            return False
+        # Names are capitalised; all-lowercase handles ("emptynebuli",
+        # "redshiftzero") are common at these conferences and also fine.
+        if not all(w[:1].isupper() or not w[:1].isalpha() or w.islower() for w in words):
+            return False
+    return True
 
 # Suffixes conference archives append to distinguish supporting material.
 DOC_KIND_SUFFIXES = {
     "wp": "whitepaper", "whitepaper": "whitepaper", "paper": "whitepaper",
     "slides": "slides", "compressed": "slides", "updated": "slides",
+    "article": "article", "materials": "materials", "workshop": "workshop",
 }
 
 
@@ -301,6 +320,9 @@ def _is_defcon_variant(segment: str) -> bool:
     if DEFCON_VARIANT_RE.match(seg):
         return True
     # Short, title-less fragments ("m", "these", "hevnsnt", "slash esca") are
+    # A date/venue tail ("2026 08 05 DEF CON") is a filing marker, not a title.
+    if re.match(r"^\d{4}[ ._-]\d{2}[ ._-]\d{2}\b", seg) or re.search(r"\bDEF\s*CON\b$", seg, re.I):
+        return True
     # truncation artefacts. Real titles stranded in this slot are much longer.
     return len(seg) <= 20 and len(seg.split()) <= 3
 
@@ -335,29 +357,40 @@ def parse_speakers_title(stem: str, defcon_style: bool = False) -> tuple[list[st
         if parts:
             return [], parts[0]
 
-    if "_" in stem:
-        speaker_part, title_part = stem.split("_", 1)
+    # Some filenames separate the speakers themselves with " _ " and then the
+    # title with a bare "_". Normalising the spaced form to "&" first keeps all
+    # the speakers instead of filing the 2nd onward into the title.
+    working = re.sub(r"\s+_\s+", " & ", stem)
+
+    if "_" in working:
+        speaker_part, title_part = working.split("_", 1)
     else:
         # No underscore: try the hyphen convention before giving up on speakers.
-        hy = _hyphen_split(stem)
+        hy = _hyphen_split(working)
         if hy:
             speaker_part, title_part = hy
         else:
-            speaker_part, title_part = "", stem
+            speaker_part, title_part = "", working
 
-    # A very long left-hand side is usually a real author list -- academic-style
-    # talks routinely carry eight or more names -- so only bail out when it also
-    # fails to look like names, which is the case that means the split was wrong.
-    if len(speaker_part) > 200 and not _looks_like_names(speaker_part):
-        return [], stem.replace("_", " ").strip()
+    # If the left-hand side does not read as people, the split was wrong: the
+    # whole stem is the title and this deck simply has no speaker in its name.
+    if speaker_part and not _looks_like_names(speaker_part):
+        speaker_part, title_part = "", working
 
-    speakers = [s.strip() for s in re.split(r"\s*&\s*|\s*,\s*|\s+and\s+", speaker_part) if s.strip()]
+    speakers = [s.strip() for s in SPEAKER_SPLIT_RE.split(speaker_part) if s.strip()]
 
-    # Drop trailing archive markers ("..._Compressed", "..._wp") from the title.
-    title_bits = title_part.split("_")
-    while len(title_bits) > 1 and title_bits[-1].strip().lower() in DOC_KIND_SUFFIXES:
-        title_bits.pop()
-    title = " ".join(b for b in title_bits if b.strip()).strip()
+    # Drop trailing archive markers. They appear as "..._wp", "...-WP" or a
+    # "(2)" copy suffix; an underscore *inside* a title is meaningful and stays
+    # ("Bad io_uring", "(0_o)").
+    title = title_part.strip()
+    changed = True
+    while changed:
+        changed = False
+        title = re.sub(r"\s*\(\d+\)$", "", title).strip()
+        for sep in ("_", "-"):
+            head, found, tail = title.rpartition(sep)
+            if found and head and tail.strip().lower() in DOC_KIND_SUFFIXES:
+                title, changed = head.strip(), True
     return speakers, title or stem
 
 

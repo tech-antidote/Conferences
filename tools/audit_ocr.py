@@ -220,6 +220,39 @@ def build_vocab(struct_texts: list[str], min_count: int = 2) -> set[str]:
     return {w for w, c in counter.items() if c >= min_count}
 
 
+HEXTOK_RE = re.compile(r"^(?:0x)?[0-9A-Fa-f]{6,}[:,;.\]]?$")
+
+
+def risk_signature(text: str, vocab: set[str]) -> tuple[str, dict]:
+    """Bucket a block by the failure modes the spot checks actually turned up.
+
+    The tiers are not guesses -- each maps to a category that was ground-truthed
+    against the rendered page:
+
+      high    hex/address-heavy dumps and blocks whose words are mostly unknown
+              to the corpus. Ground truth: near-every hex word altered
+              (00000118 -> 80000118), or the block is icon/logo noise.
+      medium  structure-flattened tables and TUIs -- values survive but are
+              orphaned from their labels, so they cannot be attributed.
+      low     prose, headings and monospace code on a light background, which
+              the spot checks found transcribed essentially character-exact.
+    """
+    lines = [ln for ln in text.split("\n") if ln.strip()]
+    toks = text.split()
+    if not toks or not lines:
+        return "low", {}
+    hexr = sum(1 for t in toks if HEXTOK_RE.match(t)) / len(toks)
+    orphan = sum(1 for ln in lines if len(ln.split()) <= 2) / len(lines)
+    vrate, _ = vocab_hit_rate(text, vocab)
+    m = {"hex_ratio": round(hexr, 3), "orphan_line_ratio": round(orphan, 3),
+         "vocab_hit_rate": round(vrate, 3)}
+    if hexr >= 0.25 or vrate < 0.50:
+        return "high", m
+    if orphan >= 0.60 or vrate < 0.70:
+        return "medium", m
+    return "low", m
+
+
 def vocab_hit_rate(text: str, vocab: set[str]) -> tuple[float, list[str]]:
     """Fraction of >=3-letter alphabetic tokens known to the corpus vocabulary."""
     words = [w.lower() for w in WORD_RE.findall(text) if len(w) >= 3]
@@ -488,7 +521,30 @@ def main(argv=None) -> int:
                   f"{sum(b.chars for _, b in bad):>9,} chars "
                   f"({100.0 * sum(b.chars for _, b in bad) / max(total_chars, 1):>5.2f}% of OCR chars)")
 
+    # Risk tiers -- the basis for the "how much is unreliable" estimate.
+    print()
+    print("Risk tiers (signature-based, calibrated on the ground-truth samples):")
+    tier_blocks: collections.Counter[str] = collections.Counter()
+    tier_chars: collections.Counter[str] = collections.Counter()
+    tier_conf: dict[str, list[float]] = collections.defaultdict(list)
+    for b in blocks:
+        tier, _m = risk_signature(b.text, vocab)
+        tier_blocks[tier] += 1
+        tier_chars[tier] += b.chars
+        if b.conf is not None:
+            tier_conf[tier].append(float(b.conf))
+    print(f"  {'tier':<8} {'blocks':>7} {'share':>8} {'chars':>11} {'char share':>11} "
+          f"{'mean stated conf':>17}")
+    for tier in ("high", "medium", "low"):
+        k, ch = tier_blocks[tier], tier_chars[tier]
+        mc = statistics.fmean(tier_conf[tier]) if tier_conf.get(tier) else float("nan")
+        print(f"  {tier:<8} {k:>7} {100.0 * k / max(len(blocks), 1):>7.2f}% {ch:>11,} "
+              f"{100.0 * ch / max(total_chars, 1):>10.2f}% "
+              f"{(f'{mc:.1f}' if mc == mc else 'n/a'):>17}")
+
     results = {
+        "risk_tiers": {t: {"blocks": tier_blocks[t], "chars": tier_chars[t]}
+                       for t in ("high", "medium", "low")},
         "files": files, "files_with_ocr": files_with_ocr,
         "blocks": len(blocks), "ocr_chars": total_chars,
         "struct_chars": struct_chars,
