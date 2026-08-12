@@ -79,6 +79,35 @@ degrade. It is also evidence the risk flag works — this block was marked
 `ocr_unreliable` before I looked at it, and it does contain wrong values while the
 narrative around them is sound.
 
+#### Detail: "UnOAuthorized: Privilege Escalation to Global Administrator", slide 96 (flagged `ocr_unreliable`)
+
+A PowerShell session listing Entra directory roles and their GUIDs. Read against
+the rendered page.
+
+Correct: the command line `Get-MgDirectoryRole | Select-Object -Property
+DisplayName,ID` is exact, and `User Administrator
+77414df4-e2ff-42df-8a7d-58df04e65885` is character-perfect across all 36 GUID
+characters.
+
+Wrong, in the same block:
+
+| Slide shows | OCR produced |
+|---|---|
+| `DisplayName` | `DispLayName` |
+| `128284a5-9a9e-49c3-a460-fd25554f8c45` | `128284a5-9a9e—-49c3-al60-Fd25554F8c45` |
+| `70ddedcfdc86` | `7Oddedcfdc86` |
+
+**And two rows are missing entirely — including the one the slide exists to make.**
+`Global Administrator  ae81c4d9-3b45-445b-896a-64aa7085db93` is boxed in red on
+the page as the escalation target, and it is not in the output. The second
+command and its results are gone too.
+
+This is the honest cost of filtering: the quality gates that remove mangled hex
+also remove real lines when OCR reads them poorly, and here they removed the most
+important line on the slide. The block is flagged `ocr_unreliable`, which is the
+correct signal — but "unreliable" means *incomplete* as well as *inaccurate*.
+For a slide that matters, read the source PDF.
+
 ### Ground-truth spot checks by sampling agent
 
 31 further OCR blocks were re-rendered and compared. Summary of verdicts:
