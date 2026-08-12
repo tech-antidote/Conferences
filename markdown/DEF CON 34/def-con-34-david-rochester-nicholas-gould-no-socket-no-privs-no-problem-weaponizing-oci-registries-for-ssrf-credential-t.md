@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.3
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 27
+vision_verified_pages: 32
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,16 +31,19 @@ converted_at: "2026-08-12T06:25:52Z"
 
 ## Slide 1
 
-|~/dc34/title
-Disclaimer: This research was conducted independently. The views and opinions expressed in this
-work are solely those of the authors and do not reflect the views or positions of our employers.|
-|---|
-|**DEF CON 34**|
-|**No Socket, No Privs,**|
-|**No Problem.**|
-|Weaponizing OCI registries for SSRF, Credential Theft
+~/dc34/title
+
+Disclaimer: This research was conducted independently. The views and opinions expressed in this work are solely those of the authors and do not reflect the views or positions of our employers.
+
+**DEF CON 34**
+
+**No Socket, No Privs,**
+**No Problem.**
+
+Weaponizing OCI registries for SSRF, Credential Theft
 & Container Escapes
-David Rochester (@davidrxchester)  ·  Nicholas Gould (@gouldnicholas)|
+
+David Rochester (@davidrxchester)  ·  Nicholas Gould (@gouldnicholas)
 
 ## Slide 2
 
@@ -46,12 +51,8 @@ David Rochester (@davidrxchester)  ·  Nicholas Gould (@gouldnicholas)|
 
 ### **What even is an OCI Registry?**
 
-- **HTTP API that stores and serves artifacts, most commonly container**
-
-- **images and model files**
-
+- **HTTP API that stores and serves artifacts, most commonly container images and model files**
 - **Like a web server hosting any other content**
-
 - **Available Artifacts described by a manifest**
 
 03 / 25
@@ -60,29 +61,48 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 3
 
-NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
+# **The manifest is the menu**
 
+TAG
+registry.io/model:latest
 
-> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-The manifest is the menu
 MANIFEST.JSON
-BLOBS
-{
-"config": { "digest": "sha256:9f2a.." }, @ config JSON
-TAG "layers": [
-registry.io/model: latest { "digest": "sha256:a3ed.." }, @ layer 128 MB
-{ "digest": "sha256:71bc.." }
-] @ layer 42 MB
-}
-The manifest just lists digests available on the server.
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT
+
 ```
+{
+  "config": { "digest": "sha256:9f2a…" },
+  "layers": [
+    { "digest": "sha256:a3ed…" },
+    { "digest": "sha256:71bc…" }
+  ]
+}
+```
+
+BLOBS
+- config JSON
+- layer 128 MB
+- layer 42 MB
+
+The manifest just lists **digests available on the server**.
+
+03 / 25
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 4
 
-Example to download model blob: curl -sSL https://registry.io/v2/model/blobs/sha256:9f2a3c8d…e41 -o model.gguf
+# **Communicate over the OCI protocol**
+
+```
+GET   /v2/                          # is this a registry?
+GET   /v2/<name>/manifests/<ref>    # fetch a manifest
+PUT   /v2/<name>/manifests/<ref>    # publish a manifest
+GET   /v2/<name>/blobs/<digest>     # download a blob
+POST  /v2/<name>/blobs/uploads/     # upload a blob
+```
+
+Example to download model blob:
+curl -sSL https://registry.io/v2/model/blobs/sha256:9f2a3c8d…e41 -o model.gguf
 
 03 / 25
 
@@ -101,16 +121,20 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 # **Ollama**
 
 - Exposes APIs with zero authentication
-
 - Commonly bound to 0.0.0.0 to facilitate access
-
 - Users can
-
    - pull models
-
    - push models
-
    - request inference
+
+```
+POST    /api/generate    # run inference
+POST    /api/chat        # chat completions
+GET     /api/tags        # list local models
+POST    /api/pull        # pull a model from any registry we name
+POST    /api/push        # push a model to a registry
+DELETE  /api/delete      # delete a model
+```
 
 03 / 25
 
@@ -121,12 +145,18 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 # **Docker Model Runner**
 
 - Introduced to Docker Desktop in March 2025
-
 - Run models locally and interact with service from containers
-
 - Reachable from any container via model-runner.docker.internal
-
 - Reachable locally on port 12434
+
+```
+POST    /engines/v1/chat/completions   # inference
+POST    /engines/v1/embeddings         # embeddings
+GET     /models                        # list models
+POST    /models/create                 # pull from any registry
+GET     /models/{ns}/{name}            # inspect
+DELETE  /models/{ns}/{name}            # delete
+```
 
 03 / 25
 
@@ -136,45 +166,62 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 # **DMR - Pulling a Model**
 
-NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
+```
+~ curl -s -X POST http://localhost:12434/models/create \
+-H "Content-Type: application/json" -d '{"from":"ai/smollm2"}'
+```
 
-03 / 25
+Request | Response | Connection | Timing | Comment
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-DMR - Pulling a Model
-~ curl -s -X POST http://LocaLhost:12434/models/create \
--H "Content-Type: application/json" -d '{"from":"ai/smoLLm2"}
-© | Request | Response Connection Timing Comment
+```
 HEAD https://registry-1.docker.io/v2/ai/smollm2/manifests/latest HTTP/2.0
 accept: application/vnd.docker.distribution.manifest.v2+json,
-application/vnd.docker.distribution.manifest. list.v2+json,
-application/vnd.oci.image.manifest.v1l+json, application/vnd.oci. image. index.v1+json,
+application/vnd.docker.distribution.manifest.list.v2+json,
+application/vnd.oci.image.manifest.v1+json, application/vnd.oci.image.index.v1+json,
+*/*
+```
+
+```
 HTTP/2.0 401
 date: Wed, 15 Jul 2026 14:24:10 GMT
 content-type: application/json
 content-length: 153
 docker-distribution-api-version: registry/2.0
-www-authenticate: Bearer
-strict-transport-security: max—age=31536000
+www-authenticate: Bearer realm="https://auth.docker.io/token",service="registry.docker.io",scope="repository:ai/smollm2:pull"
+docker-ratelimit-source: 2600:6c5e:1340:1::
+strict-transport-security: max-age=31536000
 ```
-
-## Slide 9
-
-# **DMR - Pulling a Model cont.**
 
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
+## Slide 9
 
-> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+# **DMR - Pulling a Model cont.**
 
-```text
-DMR - Pulling a Model cont.
-© Request | Response | Connection Timing Comment
+Request | Response | Connection | Timing | Comment
+
+```
+POST https://auth.docker.io/token HTTP/2.0
+content-type: application/x-www-form-urlencoded;
+user-agent: containerd/2.2.3+unknown
+content-length: 184
+accept-encoding: gzip
+
+URL-encoded
+
+client_id: containerd-client
+grant_type: password
+password: ████████
+scope: repository:ai/smollm2:pull
+service: registry.docker.io
+username: ████████
+```
+
+Request | Response | Connection | Timing | Comment
+
+```
 HTTP/2.0 200
 date: Wed, 15 Jul 2026 14:24:11 GMT
 content-type: application/json
@@ -182,144 +229,172 @@ x-trace-id: 4de6a054b671cec098e42d7d4c62a925
 x-trace-sampled: false
 x-ratelimit-limit: 3000, 3000;w=60
 x-ratelimit-remaining: 2999
-© | Request | Response Connection Timing Comm
-| content-type: app Lication/x-—www-form-ur lencoded;
-user-agent: containerd/2.2.3+unknown
-content-length: 184
 x-ratelimit-reset: 49
-accept-encoding: gzi
-P 9:9 P strict-transport-security: max—age=31536000
-URL-encoded cf-cache-status: DYNAMIC
-set-cookie: __cf_bm=8Xp3snC7CaKAPbtyxfFWQdDuiFgi3d24V5tVi
+strict-transport-security: max-age=31536000
+cf-cache-status: DYNAMIC
+set-cookie: __cf_bm=8Xp3snC7CaKAPbtyxfFWQdDuiFqi3d24V5tVm
 1.0.1.1-
-client_id: containerd-client
-grant_type: password
-scope: repository:ai/smollm2:pull
-service: registry.docker.io
-ZIPs73W9rGFauxyOKV_x@SNi3pSbhQwFRvB4YEanm2hZ2ctf ltgxqRj
+zIPs73W9rGFauxyOKV_x0SNi3pSbhQwFRvB4YEanm2hZ2ctfltgxqRj
+J0G4yks_CiReTSB4S6JLlIw.rtaPXn13DqLmHb8dxT2c; HttpOnly;
+Path=/; Domain=auth.docker.io; Expires=Wed, 15 Jul 2026
 server: cloudflare
-cf-ray: alb96de5aeb13123-ATL
+cf-ray: a1b96de5aeb13123-ATL
+```
+
+```
 JSON
 {
-"access_token": '
-"scope"
-“issued_at": "2026-@7-15T14:24:11.18589822"
+  "access_token": "████████",
+  "scope": "repository:ai/smollm2:pull",
+  "expires_in": 300,
+  "issued_at": "2026-07-15T14:24:11.1858982Z"
+}
 ```
+
+03 / 25
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 10
 
 # **DMR- Pulling a Model cont.**
 
+Request | Response | Connection | Timing | Comment
+
+```
+GET https://registry-1.docker.io/v2/ai/smollm2/manifests/sha256:354bf30d0aa3af413d2aa5ae4f23c66d78980072d1e07a5b0d776e9606a2f0b9 HTTP/2.0
+user-agent: Docker-Desktop/4.74.0 (Mac; arm64)
+accept: application/vnd.oci.image.manifest.v1+json, */*
+accept-encoding: zstd;q=1.0, gzip;q=0.8, deflate;q=0.5
+authorization: Bearer
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIng1YyI6WyJNSUlFRmpDQ0F2NmdBd0lCQWdJVU9yTFd5UVpx
+MmFuZXd6WnhYN1JLbHQ3bDVUTXdEUVlKS29aSWh2Y05BUUVMQlFBd2dZWXhDekFKQmdOVkJBWVRBbFZUVJN
+d0VRWURWUVFJRXdwRFlXeHBabTl5Ym1saE1SSXdFQVlEVlFRSEV3bFFZV3h2SUVGc2RHOHhGVEFUQmdOVkJB
+b1RFRV…
+
+No content
+```
+
+Request | Response | Connection | Timing | Comment
+
+```
+HTTP/2.0 200
+date: Wed, 15 Jul 2026 14:24:11 GMT
+content-type: application/vnd.oci.image.manifest.v1+json
+content-length: 551
+docker-content-digest: sha256:354bf30d0aa3af413d2aa5ae4f23c66d78980072d1e07a5b0d776e9606a2f0b9
+docker-distribution-api-version: registry/2.0
+etag: "sha256:354bf30d0aa3af413d2aa5ae4f23c66d78980072d1e07a5b0d776e9606a2f0b9"
+docker-ratelimit-source: davidrochester1
+x-ratelimit-limit: 200;w=3600
+ratelimit-limit: 200;w=3600
+x-ratelimit-remaining: 198;w=3600
+ratelimit-remaining: 198;w=3600
+strict-transport-security: max-age=31536000
+```
+
+```
+JSON
+{
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "config": {
+        "mediaType": "application/vnd.docker.ai.model.config.v0.1+json",
+        "size": 375,
+        "digest": "sha256:32aaa72e00e9a79d38786abd1e37388e7f01181a0f1bdf23efff6433c12f8…
+```
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-DMR- Pulling a Model cont.
-© | Request | Response Connection Timing Comment
-user-agent: Docker—-Desktop/4.74.@ (Mac; arm64)
-accept: application/vnd.oci.image.manifest.v1+json, */*
-authorization: Bearer
-MmFuZXd6WnhYN1JLbHQ3bDVUTXdEUV LKS29aSWh2Y@5BUUVMQ LF Bd2dZWxXhDekFKQmdOVkJBWVRBbFZUTVIN
-d@VRWURWUVFIRXdwRF LXeHBabT L5Ym1saE1SSXdFQV LEV LFRSEV3bFFZV3h2SUVGc2RHOHHGVEFUQmdO0VkIB
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI
-© Request | Response} Connection Timing Comment
-HTTP/2.0 200
-date: Wed, 15 Jul 2026 14:24:11 GMT
-content-type: application/vnd.oci. image.manifest.v1+json
-content-length: 551
-docker-content-
-digest: sha256:354bf30d0aa3af413d2aa5ae4f23c66d78980072d1e07a5b0d776e9606a2 Ff 0b9
-docker-distribution-api-version: registry/2.0
-docker-ratelimit-source: davidrochester1
-x-ratelimit-limit: 200; w=3600
-ratelimit-limit: 200 ; w=3600
-x-ratelimit-remaining: 198 ; w=3600
-ratelimit-remaining: 198 ; w=3600
-strict-transport-security: max—age=31536000
-JSON B\Copy @Edit M&Replace ( View: auto
-4
-"schemaVersion": 2,
-"config": {
-"mediaType": "“application/vnd.docker.ai.model.config.v@.1+json",
-```
 
 ## Slide 11
 
 # **DMR - Pulling a Model cont.**
 
-03 / 25
-
-NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-DMR - Pulling a Model cont.
+```
+HTTP/2.0 401
 date: Wed, 15 Jul 2026 14:24:10 GMT
 content-type: application/json
 content-length: 153
 docker-distribution-api-version: registry/2.0
-www-authenticate: Bearer
+www-authenticate: Bearer realm="https://auth.docker.io/token",service="registry.docker.io",scope="repository:ai/smollm2:pull"
 docker-ratelimit-source: 2600:6c5e:1340:1::
-strict-transport-security: max—age=31536000
+strict-transport-security: max-age=31536000
 ```
+
+03 / 25
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 12
 
 # **Abusing the Auth Flow**
 
+registry.attacker.io
+our malicious registry
+
+Docker Model Runner
+on the HOST
+any container can trigger it
+
+Internal service
+127.0.0.1 · 169.254.169.254
+
+1  GET /v2/ — model pull begins
+2  401 realm = http://127.0.0.1:9200
+3  GET the realm → SSRF from the host
+4  response { "token", data }
+5  retry — we read the response
+
+full response body reflected
++ Docker Hub creds forwarded
+
+— = attacker-controlled
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Abusing the Auth Flow
-registry.attacker.io Docker Model Runner Internal service
-our malicious registry on the HOST 127.0.0.1 - 169.254.169.254
-any container can trigger it
-1 GET /v2/ — model pull begins
-<
-2 401 realm = http://127.0.0.1:9200
-3 GET the realm + SSRF from the host
-4 response { "token", data }
-5 retry — we read the response
-G
-full response body reflected
-+ Docker Hub creds forwarded
-——— =attacker-controlled
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI 03 / 25
-```
 
 ## Slide 13
 
 # **DMR - SSRF Demo**
 
+davidrochester@Mac:~/DEFCON34/docker-ssrf-poc
+
+```
+docker-ssrf-poc
+```
+
+davidrochester@Mac:~/DEFCON34/docker-ssrf-poc
+
+```
+docker-ssrf-poc
+```
+
+docker exec -it victim sh
+
+```
+docker-ssrf-poc docker exec -it victim sh
+~ $
+```
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-DMR - SSRF Demo
-© @ @ docker exec -it victim sh
-‘» docker-ssrf-poc docker exec -it victim sh
-```
 
 ## Slide 14
 
 # **Hunting SSRF in Ollama**
 
-● Ollama validates realm before sending tokens cross-origin
+- Ollama validates realm before sending tokens cross-origin
+
+```go
+// Validate that the realm host matches the original request host to prevent sending tokens cross-origin.
+if redirectURL.Host != originalHost {
+    return "", fmt.Errorf("realm host %q does not match original host %q", redirectURL.Host, originalHost)
+}
+```
 
 `server/auth.go`
 
@@ -331,7 +406,24 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 # **Hunting SSRF in Ollama**
 
-● 307 Redirects
+Ollama Server
+Ollama
+
+1. Ollama requests blob
+
+Malicious OCI Registry
+HTTP 307
+Temporary Redirect
+(Response)
+
+- 307 Redirects
+
+```go
+if resp.StatusCode != http.StatusTemporaryRedirect && resp.StatusCode != http.StatusOK {
+    return nil, fmt.Errorf("unexpected status code %d", resp.StatusCode)
+}
+return resp.Location()
+```
 
 `server/download.go`
 
@@ -339,70 +431,64 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-@ __Ollama Server © Malicious OCI Registry
-Hunting SSRF in Ollama
-1. Ollama
-requests blob
-G Ollama
-@ 307 Redirects
-if resp.StatusCode != http.StatusTemporaryRedirect && resp.StatusCode != http.StatusOK {
-return nil, fmt.Errorf("unexpected status code %d", resp.StatusCode)
-return resp.Location()
-```
-
 ## Slide 16
 
-NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
+HASH VERIFY · THE BYPASS
 
+# **One digest, twice. Verification skipped.**
 
-> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**01**
+**Malicious Manifest**
+Two layers · same digest
+sha256:a1b2…
 
-```text
-HASH VERIFY THE BYPASS
-One digest, twice. Verification skipped.
-01 02
-downloadBlob()
-307 — SSRF body written
-Malicious
-sha256:alb2...
-4 4 4 : LOGIC
-skipVerify[layer.Digest] = cacheHit
-03
-digest
-alb2...
-skipVerify Map
-Cache hit overwrites the
-skipVerify
-false true
-FLAW
-stays on disk.
-04 05
-HTTP 200
-internal
-service
-Blob on Disk
+**02**
+**downloadBlob()**
+307 → SSRF body written
+
+**03**
+**skipVerify Map**
+
+| digest | skipVerify |
+|---|---|
+| a1b2… | ~~false~~ → **true** |
+| c9d0… | false |
+
+Cache hit overwrites the flag
+
+**04**
+**verifyBlob()**
+SHA-256
+Skipped — flag is true
+
+**05**
+**Blob on Disk**
+HTTP 200 internal service
 Internal response persists
-verifyBlob()
-Skipped flag is true
-A cache hit overwrites verification state — the unverified blob
-SAME DIGEST, SECOND LAYER // HASH VERIFY BYPASS
-```
+
+skipVerify[layer.Digest] = **cacheHit**
+
+**LOGIC FLAW**   A cache hit overwrites verification state — the unverified blob stays on disk.
+
+SAME DIGEST, SECOND LAYER   //   HASH VERIFY BYPASS
 
 ## Slide 17
 
-|~/dc34/credential-theft|
-|---|
-|**ATTACK CLASS**
-**ATTACK CLASS**|
-|**~~02~~**
-**Credential Theft**|
-|Access Galore
+~/dc34/credential-theft
+
+**ATTACK CLASS**
+
+**02**
+
+**ATTACK CLASS**
+
+**Credential Theft**
+
+Access Galore
+
 NO SOCKET, NO PRIVS, NO PROBLEM   //   Credential Theft
-13 / 25|
+
+13 / 25
 
 ## Slide 18
 
@@ -416,7 +502,9 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 # **Ex: (O)llama Whisper**
 
-- Attacker reads any file on the server (e.g. /etc/shadow, SSH keys) - No login required: Ollama has no auth by default
+- Attacker reads any file on the server (e.g. /etc/shadow, SSH keys)
+
+- No login required: Ollama has no auth by default
 
 - Ollama commonly listens  on 0.0.0.0
 
@@ -436,21 +524,27 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 # **Ex: (O)llama Whisper PoC**
 
+```text
+─  VICTIM  ─  ollama-victim (Ollama 0.20.2)  ───────────────
+== victim box ==   (press Enter to run each command)
+
+root@victim:/# █
+```
+
+```text
+─  ATTACKER  ─  rogue registry + exploit  ──────────────────
+== attacker box ==   (press Enter to run each command)
+
+root@attacker:/exploit#
+```
+
+```text
+[ollama-de0:docker*                    " VICTIM  ─  ollama-vi" 17:58 04-Jul-26
+```
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Ex: (O)llama Whisper PoC
-— VICTIM - ollama-victim (Ollama 0.20.2)
-f ot Lama-de@: docker*
-ATTACKER - rogue registry + exploit
-press E to run each command
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT
-```
 
 ## Slide 21
 
@@ -470,27 +564,45 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 22
 
-|~/dc34/contai|ner-escape|
-|---|---|
-|**ATTACK CLASS**|**ATTACK CLASS**|
-|**~~0~~**|**Container Escape**|
-|NO SOCKET, NO PRIVS, NO PROBLEM|Abusing Docker Model Runner’s inference backends
-//   Container Escape
-18 / 25|
+~/dc34/container-escape
+
+**ATTACK CLASS**
+
+**03**
+
+**ATTACK CLASS**
+
+**Container Escape**
+
+Abusing Docker Model Runner’s inference backends
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   Container Escape
+
+18 / 25
 
 ## Slide 23
 
-NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
+**DOCKER MODEL RUNNER · macOS**
 
+# **Inference backends**
 
-> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**llama.cpp**
 
-```text
-DOCKER MODEL RUNNER +: macOS
-Inference backends
-GGUF - Metal Metal backend mix-Im - Apple Silicon
-native, Metal-accelerated inference — runs as a host process
-```
+GGUF · Metal
+
+**vLLM**
+
+Metal backend
+
+**MLX**
+
+mlx-lm · Apple Silicon
+
+native, **Metal-accelerated** inference — runs as a host process
+
+03 / 25
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 ## Slide 24
 
@@ -498,23 +610,28 @@ native, Metal-accelerated inference — runs as a host process
 
 Apple’s open source library for running LLMs on Apple Silicon
 
+Open Source
+
+APPLE PROJECT
+
+MLX
+
+````text
+`config.json` gets one extra field:
+
+```json
+{
+  "model_file": "model.py",
+  "architectures": ["LlamaForCausalLM"],
+  "model_type": "llama",
+  ...
+}
+```
+````
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-MLX-LM
-“config.json gets one extra field:
-Apple’s open source library .o
-for running LLMs on Apple "model_file": "model.py",
-one "architectures": ["LlamaForCausalLM'"],
-Silicon @ Open Source "model_type": "Llama",
-APPLE PROJECT
-MLX
-```
 
 ## Slide 25
 
@@ -524,29 +641,41 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
 
 # **Docker Model Runner Sandbox**
 
+```go
+return backends.RunBackend(ctx, backends.RunnerConfig{
+    BackendName:     "MLX",
+    Socket:          socket,
+    BinaryPath:      m.pythonPath,
+    SandboxPath:     "",
+    SandboxConfig:   "",
+    Args:            args,
+    Logger:          m.log,
+    ServerLogWriter: logging.NewWriter(m.serverLog),
+})
+```
+
 ##### **`pkg/inference/backends/mlx/mlx.go`**
 
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Docker Model Runner Sandbox
-return backends.RunBackend(ctx, backends.RunnerConfig{
-Socket: socket,
-BinaryPath: m.pythonPath,
-SandboxPath: Moher
-Args: args,
-ServerLogWriter: logging.Newriter(m.serverLog),
-})
-```
-
 ## Slide 27
 
 # **Docker Model Runner Sandbox**
+
+```go
+return backends.RunBackend(ctx, backends.RunnerConfig{
+    BackendName:     "MLX",
+    Socket:          socket,
+    BinaryPath:      m.pythonPath,
+    SandboxPath:     "",
+    SandboxConfig:   "",
+    Args:            args,
+    Logger:          m.log,
+    ServerLogWriter: logging.NewWriter(m.serverLog),
+})
+```
 
 **Its empty**
 
@@ -560,18 +689,17 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 # **Ex: Free Willy…errrr Docker PoC**
 
+```text
+root@r00t-x1: ~
+
+root@r00t-x1:~# █          root@r00t-x1:~#
+
+root@r00t-x1:~#
+```
+
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Ex: Free Willy...errrr Docker PoC
-root@r00t-x1:~# | root@r00t-x1:~#
-root@r00t-x1:~#
-```
 
 ## Slide 29
 
@@ -579,17 +707,23 @@ root@r00t-x1:~#
 
 ## **Some of the other OCI primitives we’ve discovered**
 
-|▸ SSRF Family: 3XX redirects, 401 auths, etc|
-|---|
-|▸ Producer-controlled metadata XSS Family:  stored XSS|
-|▸ Referrers API / attestation / signature Family: DOS, Injection, bypasses|
-|▸ Tar layer extraction Family: LFI , RFI, RCE
-▸ Image config / build directive Family: RCE, DOS, RFI, LFI|
-|▸ Parser / ACL / mediaType / digest differentials Family: injection, data leak, bypasses|
-|▸ Cross-class compositions: above chained|
-|**Turns out, OCI can be used to perpetuate almostany traditional attack type, not just SSRF / RFI. You**
-**just need to find a way to embed itinto your OCI artifact**
-24 / 25|
+▸ SSRF Family: 3XX redirects, 401 auths, etc
+
+▸ Producer-controlled metadata XSS Family:  stored XSS
+
+▸ Referrers API / attestation / signature Family: DOS, Injection, bypasses
+
+▸ Tar layer extraction Family: LFI , RFI, RCE
+
+▸ Image config / build directive Family: RCE, DOS, RFI, LFI
+
+▸ Parser / ACL / mediaType / digest differentials Family: injection, data leak, bypasses
+
+▸ Cross-class compositions: above chained
+
+**Turns out, OCI can be used to perpetuate almost any traditional attack type, not just SSRF / RFI. You just need to find a way to embed it into your OCI artifact**
+
+24 / 25
 
 ## Slide 30
 
@@ -601,17 +735,27 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 
 ## Slide 31
 
-~/dc34/closing **DEF CON 34 No Socket. No Privs. No Problem.**
+~/dc34/closing
 
-**$** questions? ▊
+**DEF CON 34**
 
-**David Rochester** ·   @davidrxchester  · **Nicholas Gould** ·   @gouldnicholas NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
+**No Socket. No Privs.**
+
+**No Problem.**
+
+**$** questions?▊
+
+**David Rochester** · @davidrxchester · **Nicholas Gould** · @gouldnicholas
+
+NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 
 25 / 25
 
 ## Slide 32
 
-- **References:** ● <u>https://www.docker.com/products/docker-desktop/</u>
+# **References:**
+
+- ● <u>https://www.docker.com/products/docker-desktop/</u>
 
 - ● <u>https://github.com/docker/model-runner/security</u>
 
@@ -621,7 +765,7 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 
 - ● <u>https://github.com/vllm-project/vllm-metal</u>
 
-- ● <u>https://thehackernews.com/2026/01/researchers-fndi</u> -175000-publicly.html
+- ● <u>https://thehackernews.com/2026/01/researchers-find-175000-publicly.html</u>
 
 - ● <u>https://github.com/ollama</u>
 
@@ -630,3 +774,4 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 - ● https://opencontainers.org/
 
 24 / 25
+

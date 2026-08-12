@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1756 slides across 144 documents.**
+**1788 slides across 145 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 761 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 777 | structure held; individual characters or lines wrong |
-| accurate | 190 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 771 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 794 | structure held; individual characters or lines wrong |
+| accurate | 195 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -35,7 +35,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
-### Cloud and API — 14 talks, 163 slides
+### Cloud and API — 15 talks, 195 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -51,6 +51,7 @@ under more than one heading or under none. Counts are slides.
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
+- **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 
 ### Web and browser — 13 talks, 130 slides
 
@@ -102,7 +103,7 @@ under more than one heading or under none. Counts are slides.
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
-### Firmware, hardware and embedded — 20 talks, 236 slides
+### Firmware, hardware and embedded — 21 talks, 268 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -124,6 +125,7 @@ under more than one heading or under none. Counts are slides.
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
+- **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 
 ## Every verified slide
 
@@ -268,6 +270,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E | 1-32 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
