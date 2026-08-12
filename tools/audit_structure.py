@@ -37,7 +37,8 @@ except ImportError:  # pragma: no cover - environment guard
     raise SystemExit(2)
 
 # Generated navigation, not talk content.
-NON_TALK_FILES = {"README.md", "INDEX.md", "VERIFICATION.md", "VISION_VERIFIED.md"}
+NON_TALK_FILES = {"README.md", "INDEX.md", "VERIFICATION.md",
+                  "VISION_VERIFIED.md", "UNVERIFIED.md"}
 
 # The corpus is no longer only slide decks. Transcripts and workshop material
 # are converted by different tools into their own manifests, and auditing

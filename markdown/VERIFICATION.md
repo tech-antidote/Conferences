@@ -248,7 +248,7 @@ are counted per document as `ocr_unreliable_blocks`.
 | Deck | Blocks | Reason |
 |---|---:|---|
 | CoDe16: 16 Zero-Day Vulnerabilities Affecting CODESYS Framework | 17 | Every attempt to review these pages was stopped by the model API's cyber safeguards, at three different batch sizes, once before any page was read. The trigger is the deck's subject — ICS/OT zero-days — not any individual slide. |
-| One Chain to Own Them All: Breaking AI Infrastructures (DEF CON 34), pages 66–91 and 118–143 | 52 | Four of the document's eleven review batches were stopped by the same safeguard; the other seven completed normally. Those pages keep their first-pass extraction and are listed in `vision_unreviewed_pages`. |
+| One Chain to Own Them All: Breaking AI Infrastructures (DEF CON 34), pages 79–91 and 118–130 | 26 | Four of the document's eleven review batches were stopped by the same safeguard; the other seven completed normally. Those pages keep their first-pass extraction and are listed in `vision_unreviewed_pages`. |
 
 These blocks remain OCR-only and keep their `ocr_unreliable` flag, so they are
 identifiable rather than silently trusted. Reviewing them needs an account

