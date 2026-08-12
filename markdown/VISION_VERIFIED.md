@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**668 slides across 129 documents.**
+**695 slides across 130 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 349 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 276 | structure held; individual characters or lines wrong |
-| accurate | 43 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 367 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 283 | structure held; individual characters or lines wrong |
+| accurate | 45 | OCR was already correct; text confirmed, not changed |
 
 ## Coverage by subject
 
@@ -48,7 +48,7 @@ under more than one heading or under none. Counts are slides.
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 
-### Web and browser — 12 talks, 103 slides
+### Web and browser — 13 talks, 130 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -62,6 +62,7 @@ under more than one heading or under none. Counts are slides.
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
+- **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
 ### Zero-day, RCE and novel exploitation — 24 talks, 219 slides
 
@@ -90,7 +91,7 @@ under more than one heading or under none. Counts are slides.
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
-### Firmware, hardware and embedded — 18 talks, 141 slides
+### Firmware, hardware and embedded — 19 talks, 168 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -110,6 +111,7 @@ under more than one heading or under none. Counts are slides.
 - **Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing** (Black Hat USA 2025) — slides 17-18, 45
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
+- **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
 ## Every verified slide
 
@@ -242,5 +244,6 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
