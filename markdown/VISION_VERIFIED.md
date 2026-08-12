@@ -4,14 +4,14 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**759 slides across 131 documents.**
+**850 slides across 132 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 379 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 319 | structure held; individual characters or lines wrong |
-| accurate | 48 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 13 | reviewed before verdicts were recorded |
+| badly-mangled | 410 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 351 | structure held; individual characters or lines wrong |
+| accurate | 50 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 39 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -247,5 +247,6 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-91 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |

