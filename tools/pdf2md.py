@@ -340,8 +340,18 @@ def parse_speakers_title(stem: str, defcon_style: bool = False) -> tuple[list[st
     defcon = DEFCON_FILE_RE.match(stem)
     if defcon or (defcon_style and " - " in stem):
         remainder = defcon.group(1) if defcon else stem
+        # Workshop drops insert a track name: "DEF CON 33 - Workshops - Andrew
+        # Case - Effectively Detecting Modern Malware". Taken positionally that
+        # makes "Workshops" the speaker and welds the real speaker onto the
+        # front of the title, which is how every one of the 25 decks parsed.
+        remainder = re.sub(r"^Workshops?\s+-\s+", "", remainder, flags=re.I)
         parts = [p.strip() for p in remainder.split(" - ")]
-        if len(parts) >= 2 and _is_defcon_variant(parts[-1]):
+        # Only trim a trailing marker when something other than the speaker and
+        # the title would survive it. With exactly two segments the "marker" is
+        # the title: "Patrick Kelly - EMMC BGA Secrets" is short enough to look
+        # like a truncation artefact, and dropping it left the talk named after
+        # its speaker with no title at all.
+        if len(parts) >= 3 and _is_defcon_variant(parts[-1]):
             parts = parts[:-1]
         if len(parts) >= 2:
             speakers = [s.strip() for s in re.split(r"\s*,\s*|\s+&\s+|\s+and\s+", parts[0])
