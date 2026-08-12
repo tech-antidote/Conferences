@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1499 slides across 141 documents.**
+**1719 slides across 143 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 643 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 676 | structure held; individual characters or lines wrong |
-| accurate | 152 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 746 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 763 | structure held; individual characters or lines wrong |
+| accurate | 182 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -68,7 +68,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 30 talks, 651 slides
+### Zero-day, RCE and novel exploitation — 31 talks, 713 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -98,6 +98,7 @@ under more than one heading or under none. Counts are slides.
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 - **Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design** (DEF CON 34) — slides 1-58
+- **Root From Kilometers Away Ubiquiti AirMax RCE** (DEF CON 34) — slides 1-62
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
@@ -244,6 +245,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2025 | XUnprotect Reverse Engineering macOS XProtect Remediator | 28 | badly-mangled | 0 |
 | Black Hat USA 2026 | Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
+| Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
@@ -267,5 +269,6 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
