@@ -57,7 +57,11 @@ cat review-doc/corrections_*.jsonl > review-doc/corrections.jsonl
 python3 tools/verify_document.py --apply \
     --doc "markdown/<same path>" --work review-doc/
 
-# 4. Record the verdicts and rebuild the index.
+# 4. Record the verdicts and rebuild the indexes. refresh_manifest must run
+#    first: the manifest is written once by the converter, so without it the
+#    review is invisible to anything that filters on manifest.jsonl.
+python3 tools/refresh_manifest.py --out markdown
+python3 tools/build_index.py --out markdown
 python3 tools/vision_review_index.py --out markdown \
     --record tools/vision_review.jsonl > markdown/VISION_VERIFIED.md
 ```

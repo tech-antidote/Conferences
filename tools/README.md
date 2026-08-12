@@ -230,6 +230,24 @@ python3 tools/pdf2md.py --src "DEF CON 34" --out markdown
 walking the Apache directory index and downloading files individually. Both
 paths are resumable.
 
+### After anything edits the corpus
+
+`manifest.jsonl` is written by the converter and never updated again, so a
+vision review or a metadata override leaves it describing a version of the
+corpus that no longer exists. `refresh_manifest.py` re-derives it from the
+Markdown; run it before rebuilding the indexes, which read it.
+
+```bash
+python3 tools/refresh_manifest.py --out markdown --check   # report drift, exit 1
+python3 tools/refresh_manifest.py --out markdown           # rewrite in place
+python3 tools/build_index.py --out markdown
+```
+
+The frontmatter wins on every field it carries — the document is the artifact,
+the manifest only describes it. `text_chars` is the exception: it records what
+the converter extracted and is left alone, with `body_chars` added alongside to
+measure the document as it now stands.
+
 ---
 
 ## Credentials in the corpus
