@@ -372,7 +372,10 @@ def diagnose_page(page: "pymupdf.Page", deck_decodable: bool | None = None,
         return d
 
     if do_ocr and pdf2md is not None:
-        otext, oconf = pdf2md.ocr_page(page)
+        # ocr_page() has grown extra return values over time; take the first two
+        # positionally so this audit keeps working when it grows more.
+        result = pdf2md.ocr_page(page)
+        otext, oconf = result[0], result[1]
         d["ocr_alnum"] = alnum_len(otext)
         d["ocr_conf"] = round(oconf, 1)
         d["ocr_sample"] = " ".join(otext.split())[:180]
