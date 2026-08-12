@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**578 slides across 128 documents.**
+**668 slides across 129 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 318 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 217 | structure held; individual characters or lines wrong |
+| badly-mangled | 349 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 276 | structure held; individual characters or lines wrong |
 | accurate | 43 | OCR was already correct; text confirmed, not changed |
 
 ## Coverage by subject
@@ -90,7 +90,7 @@ under more than one heading or under none. Counts are slides.
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
-### Firmware, hardware and embedded — 17 talks, 51 slides
+### Firmware, hardware and embedded — 18 talks, 141 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -109,6 +109,7 @@ under more than one heading or under none. Counts are slides.
 - **Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries** (Black Hat USA 2025) — slides 64, 84-85, 89-90, 167
 - **Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing** (Black Hat USA 2025) — slides 17-18, 45
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
+- **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
 
 ## Every verified slide
 
@@ -236,6 +237,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 42, 107 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |

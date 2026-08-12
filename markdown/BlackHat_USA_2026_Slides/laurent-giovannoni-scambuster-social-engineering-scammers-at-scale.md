@@ -8,12 +8,15 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Laurent Giovannoni_Scambuster Social Engineering Scammers at Scale.pdf"
 pages: 90
 sha256: "8d1f5c971338015769e14225acb49082847f97cb5f6b445103f5951f750b097a"
-text_chars: 26597
+text_chars: 51740
 ocr_pages: 90
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 90.4
-ocr_unreliable_blocks: 2
+ocr_unreliable_blocks: 0
+content_note: "All 90 pages were rendered and read against the source PDF by a vision model, and all 90 were rewritten. The ocr_* fields describe the superseded first-pass extraction."
+vision_verified_pages_changed: 90
+vision_verified_pages: 90
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,1552 +32,1978 @@ converted_at: "2026-08-12T05:37:59Z"
 
 ## Slide 1
 
+01 / OPENING — THE COLD OPEN
 
-> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+BLACK HAT USA 2026 · HUMAN FACTORS
 
-```text
-SCAMBUSTER
+### SCAMBUSTER
+
 Social Engineering Scammers at Scale
-> SCANBUSTER « PREV NEXT >
-```
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    01 / 35
 
 ## Slide 2
 
+01 / OPENING — THE COLD OPEN
 
-> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+BLACK HAT USA 2026 · HUMAN FACTORS
 
-```text
-SCAMBUSTER
+### SCAMBUSTER
+
 Social Engineering Scammers at Scale
-Turning the people who hunt your company into an
-intelligence source.
-LAURENT GIOVANNONT
-```
+
+Turning the people who hunt your company into an intelligence source.
+
+$ LAURENT GIOVANNONI
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    01 / 35
 
 ## Slide 3
 
+01 / OPENING — WHO I AM
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+WHO IS TALKING TO YOU
 
-```text
-Laurent Giovannoni
-Principal Software Engineer at Filigran, the team behind
->» Based in Paris, France.
-= Co-founder and CTO of Maarch. Open source, used across the
-French public sector.
-» ScamBuster began as my thesis at Ecole Polytechnique.
-[__ seers « PREV NEXT >
-```
+### Laurent Giovannoni
+
+Principal Software Engineer at Filigran, the team behind OpenCTI.
+
+- Based in Paris, France.
+- Co-founder and CTO of Maarch. Open source, used across the French public sector.
+- ScamBuster began as my thesis at École Polytechnique.
+
+MY OWN PROJECT · MY OWN TIME · NOT A FILIGRAN PRODUCT
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    01 / 35
 
 ## Slide 4
 
-
-> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+01 / OPENING — THE COLD OPEN
 
 ```text
-FROM "Edward" <edward@<your-company>.co>
-TO peter@<your-company>.com
-SUBJECT Confidential — need your help today
+inbox — 1 unread · flagged urgent
+
+FROM     "Edward" <edward@<your-company>.co>
+TO       peter@<your-company>.com
+SUBJECT  Confidential — need your help today
+
 Peter, are you at your desk? I need a confidential wire out today. Keep
 this between us until it is announced.
-A message Like this Landed in a finance team Last
-month. The sender was pretending to be the CEO.
 ```
+
+A message like this landed in a finance team last month. The sender was pretending to be the CEO.
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    02 / 35
 
 ## Slide 5
 
+01 / OPENING — WHAT YOU THREW AWAY
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**DELETED**    ONE MORE ATTACK STOPPED?
 
-```text
-Every scam email you delete
-destroys evidence.
-e still open - still taking wires
-```
+### Every scam email you delete destroys evidence.
+
+- **BANK ACCOUNT** still open · still taking wires
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    03 / 35
 
 ## Slide 6
 
+01 / OPENING — WHAT YOU THREW AWAY
 
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**DELETED**    ONE MORE ATTACK STOPPED?
 
-```text
-Every scam email you delete
-destroys evidence.
-e still open : still taking wires
-e still Live + still pushing payments
-```
+### Every scam email you delete destroys evidence.
+
+- **BANK ACCOUNT** still open · still taking wires
+- **PHONE NUMBER** still live · still pushing payments
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    03 / 35
 
 ## Slide 7
 
+01 / OPENING — WHAT YOU THREW AWAY
 
-> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**DELETED**    ONE MORE ATTACK STOPPED?
 
-```text
-Every scam email you delete
-destroys evidence.
-e still open - still taking wires
-@ PH still Live + still pushing payments
-e ' already chosen : email already sent
-You stopped one wire. You Learned nothing about the man
-behind it.
-| ® scanBuster E « PREV NEXT >
-```
+### Every scam email you delete destroys evidence.
+
+- **BANK ACCOUNT** still open · still taking wires
+- **PHONE NUMBER** still live · still pushing payments
+- **NEXT TARGET** already chosen · email already sent
+
+You stopped one wire. You learned nothing about the man behind it.
+
+SCAMBUSTER · OPENING    ‹ PREV    NEXT ›    03 / 35
 
 ## Slide 8
 
+02 / THE FLIP — A GIFT, NOT A THREAT
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SO I ASKED A DIFFERENT QUESTION
 
-```text
-What if the scam email was
-a gift?
-A Live signal of who A behavioral trace A thread that Links
-is hunting you of how they operate to other attacks
-> SCANBUSTER « PREV NEXT >
-```
+### What if the scam email was a gift?
+
+| 01 | 02 | 03 |
+| --- | --- | --- |
+| A live signal of who is hunting you | A behavioral trace of how they operate | A thread that links to other attacks |
+
+SCAMBUSTER · THE FLIP    ‹ PREV    NEXT ›    04 / 35
 
 ## Slide 9
 
+02 / THE FLIP — REVERSE THE PSYCHOLOGY
 
-> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Reverse the psychology.
 
-```text
-Reverse the
-« PREV
-psychoLogy.
-HOWARD'S MOVE
-He defers, keeping the scammer in
-role
-NEXT >
-```
+| HIS LEVER | | HOWARD'S MOVE |
+| --- | --- | --- |
+| AUTHORITY<br>"I am the CEO." | → | EXTRACTS<br>He defers, keeping the scammer in role |
+
+SCAMBUSTER · THE FLIP    ‹ PREV    NEXT ›    05 / 35
 
 ## Slide 10
 
+02 / THE FLIP — REVERSE THE PSYCHOLOGY
 
-> Recovered by OCR — confidence 95/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Reverse the psychology.
 
-```text
-Reverse the
-"The deal dies today."
-« PREV
-psychoLogy.
-HOWARD'S MOVE
-He defers, keeping the scammer in
-role
-He rushes to comply, so the
-scammer pushes and reveals
-NEXT >
-```
+| HIS LEVER | | HOWARD'S MOVE |
+| --- | --- | --- |
+| AUTHORITY<br>"I am the CEO." | → | EXTRACTS<br>He defers, keeping the scammer in role |
+| URGENCY<br>"The deal dies today." | → | EXTRACTS<br>He rushes to comply, so the scammer pushes and reveals |
+
+SCAMBUSTER · THE FLIP    ‹ PREV    NEXT ›    05 / 35
 
 ## Slide 11
 
+02 / THE FLIP — REVERSE THE PSYCHOLOGY
 
-> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Reverse the psychology.
 
-```text
-Reverse the psychology.
-HOWARD'S MOVE
-He defers, keeping the scammer in
-"T am the CEO."
-role
-He rushes to comply, so the
-Tile 5200082 ee scammer pushes and reveals
-He plays along, and the scammer
-Keep it between us. keeps talking
+| HIS LEVER | | HOWARD'S MOVE |
+| --- | --- | --- |
+| AUTHORITY<br>"I am the CEO." | → | EXTRACTS<br>He defers, keeping the scammer in role |
+| URGENCY<br>"The deal dies today." | → | EXTRACTS<br>He rushes to comply, so the scammer pushes and reveals |
+| SECRECY<br>"Keep it between us." | → | EXTRACTS<br>He plays along, and the scammer keeps talking |
+
 Same buttons. Opposite direction.
-```
+
+SCAMBUSTER · THE FLIP    ‹ PREV    NEXT ›    05 / 35
 
 ## Slide 12
 
+03 / THE PROBLEM — THE MONEY MOVED
 
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-O83 / THE PROBLEM — THE MONEY MOVED
 THE THREAT MODEL IS WRONG
+
 WHAT WE PICTURE AS CYBERCRIME
-Ransomware ~ Stolen data ~- Code that breaks a system
-Be. ctu + THE PROBLEM « PREV NEXT > 86 / 35 =
-```
+
+Ransomware · Stolen data · Code that breaks a system
+
+SCAMBUSTER · THE PROBLEM    ‹ PREV    NEXT ›    06 / 35
 
 ## Slide 13
 
+03 / THE PROBLEM — THE MONEY MOVED
 
-> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+THE THREAT MODEL IS WRONG
 
-```text
-The biggest money in
-cybercrime is not stolen.
-It is handed over.
-```
+WHAT WE PICTURE AS CYBERCRIME
+
+Ransomware · Stolen data · Code that breaks a system
+
+### The biggest money in cybercrime is not stolen. It is handed over.
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   06 / 35*
 
 ## Slide 14
 
+03 / THE PROBLEM — THE MONEY MOVED
 
-> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+THE THREAT MODEL IS WRONG
 
-```text
-The biggest money in
-cybercrime is not stolen.
-It is handed over.
-$17.7
-billion
-Lost in the United States in 2025. None of it runs
-on malware.
-```
+WHAT WE PICTURE AS CYBERCRIME
+
+Ransomware · Stolen data · Code that breaks a system
+
+### The biggest money in cybercrime is not stolen. It is handed over.
+
+### $17.7 billion
+
+lost in the United States in 2025. None of it runs on malware.
+
+FBI · IC3 2025 INTERNET CRIME REPORT
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   06 / 35*
 
 ## Slide 15
 
+03 / THE PROBLEM — A BLIND SPOT
 
-> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Your feed is blind where the money leaves.
 
-```text
-Your feed is blind where the
-money Leaves.
-« PREV ~— NEXT >
-```
+**WHAT YOUR FEED CARRIES**
+
+- Domains
+- IP addresses
+- File hashes
+
+DELIVERY INFRASTRUCTURE
+
+*The right-hand panel of the two-panel frame is present but still empty on this build step.*
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   07 / 35*
 
 ## Slide 16
 
+03 / THE PROBLEM — A BLIND SPOT
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Your feed is blind where the money leaves.
 
-```text
-Your feed is blind where the
-money Leaves.
-WHAT FRAUD RUNS ON
-Bank accounts
-Phone numbers
-The people moving the money
-ALMOST NEVER IN YOUR FEED
-S
-> SCANBUSTER « PREV NEXT >
-```
+| WHAT YOUR FEED CARRIES | WHAT FRAUD RUNS ON |
+| --- | --- |
+| Domains | Bank accounts |
+| IP addresses | Phone numbers |
+| File hashes | The people moving the money |
+| DELIVERY INFRASTRUCTURE | ALMOST NEVER IN YOUR FEED |
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   07 / 35*
 
 ## Slide 17
 
+03 / THE PROBLEM — A BLIND SPOT
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Your feed is blind where the money leaves.
 
-```text
-Your feed is blind where the
-money Leaves.
-WHAT FRAUD RUNS ON
-Bank accounts
-Phone numbers
-The people moving the money
-ALMOST NEVER IN YOUR FEED
+| WHAT YOUR FEED CARRIES | WHAT FRAUD RUNS ON |
+| --- | --- |
+| Domains | Bank accounts |
+| IP addresses | Phone numbers |
+| File hashes | The people moving the money |
+| DELIVERY INFRASTRUCTURE | ALMOST NEVER IN YOUR FEED |
+
 But it all shows up in one place. The conversation.
-> SCANBUSTER « PREV NEXT >
-```
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   07 / 35*
 
 ## Slide 18
 
+03 / THE PROBLEM — A BLIND SPOT
 
-> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Your feed is blind where the money leaves.
 
-```text
-Your feed is blind where the
-money Leaves.
-WHAT FRAUD RUNS ON
-Bank accounts
-Phone numbers
-The people moving the money
-ALMOST NEVER IN YOUR FEED
+| WHAT YOUR FEED CARRIES | WHAT FRAUD RUNS ON |
+| --- | --- |
+| Domains | Bank accounts |
+| IP addresses | Phone numbers |
+| File hashes | The people moving the money |
+| DELIVERY INFRASTRUCTURE | ALMOST NEVER IN YOUR FEED |
+
 But it all shows up in one place. The conversation.
+
 AND WE DELETE IT
-> SCANBUSTER « PREV NEXT >
-```
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   07 / 35*
 
 ## Slide 19
 
+03 / THE PROBLEM — A DIFFERENT APPROACH
 
-> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+THE SYSTEM
 
-```text
-So I built something
-that does this at scale.
-It answers the scammer, keeps him talking, and pulls his
-payment details out of him.
-```
+### So I built something that does this at scale.
+
+It answers the scammer, keeps him talking, and pulls his payment details out of him.
+
+*SCAMBUSTER · THE PROBLEM   ‹ PREV   NEXT ›   08 / 35*
 
 ## Slide 20
 
+04 / THE METHOD — INBOUND ONLY
 
-> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+BEFORE THE METHOD, ONE RULE
 
-```text
-They come to me. I never go
-to them.
-« PREV ~— NEXT >
-```
+### They come to me. I never go to them.
+
+- logistics
+- trading
+- advisory
+- consulting
+- sourcing
+
+*SCAMBUSTER · THE METHOD   ‹ PREV   NEXT ›   09 / 35*
 
 ## Slide 21
 
+04 / THE METHOD — INBOUND ONLY
 
-> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+BEFORE THE METHOD, ONE RULE
 
-```text
-They come to me. I never go
-to them.
-Fake companies I run. Real sites, made-up staff. The
-scammers find them and write first.
-```
+### They come to me. I never go to them.
+
+- logistics
+- trading
+- advisory
+- consulting
+- sourcing
+
+Fake companies I run. Real sites, made-up staff. The scammers find them and write first.
+
+INBOUND ONLY · SYNTHETIC IDENTITIES · NO REAL PERSON'S DATA
+
+*SCAMBUSTER · THE METHOD   ‹ PREV   NEXT ›   09 / 35*
 
 ## Slide 22
 
+04 / THE METHOD — THE RIGHT PERSONA
 
-> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### There is no perfect victim. There is the one he's hunting for.
 
-```text
-There is no perfect victim.
-There is the one he's
-hunting for.
-```
+*SCAMBUSTER · THE METHOD   ‹ PREV   NEXT ›   10 / 35*
 
 ## Slide 23
 
+04 / THE METHOD — THE RIGHT PERSONA
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### There is no perfect victim. There is the one he's hunting for.
 
-```text
-There is no perfect victim.
-There is the one he's
-hunting for.
-An investment scam wants the Lonely saver. A BEC wants the
-finance clerk who does what the boss says. My job is to be
-that one.
-« PREV ~— NEXT >
-```
+An investment scam wants the lonely saver. A BEC wants the finance clerk who does what the boss says. My job is to be that one.
+
+*SCAMBUSTER · THE METHOD   ‹ PREV   NEXT ›   10 / 35*
 
 ## Slide 24
 
+04 / THE METHOD — STAY IN HIS SCRIPT
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### He runs a script. Stay in it, and he keeps revealing.
 
-```text
-He runs a script. Stay in it,
-and he keeps revealing.
 Msg 1 - first account
-Msg 3 - a second
-account
-```
+
+Msg 3 - a second account
+
+*Each label sits in a row with an unlabelled horizontal progress bar; the second bar is filled further than the first.*
+
+*SCAMBUSTER · THE METHOD   ‹ PREV   NEXT ›   11 / 35*
 
 ## Slide 25
 
+*04 / THE METHOD — STAY IN HIS SCRIPT*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### He runs a script. Stay in it, and he keeps revealing.
 
-```text
-He runs a script. Stay in it,
-and he keeps revealing.
-Msg 1 - first account
-Msg 3 - a second
-account
-Msg 5 - the backup
-phone
-...his whole cash-out
-setup
-```
+- Msg 1 - first account
+- Msg 3 - a second account
+- Msg 5 - the backup phone
+- ...his whole cash-out setup
+
+*Each row carries a progress bar; the fill grows down the list, from roughly a fifth on "Msg 1 - first account" to a full bar on "...his whole cash-out setup".*
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 11 / 35*
 
 ## Slide 26
 
+*04 / THE METHOD — PRESS BACK*
 
-> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every button he presses, I press one back.
 
-```text
-Every button he presses, I
-press one back.
-« PREV ~— NEXT >
-```
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 12 / 35*
 
 ## Slide 27
 
+*04 / THE METHOD — PRESS BACK*
 
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every button he presses, I press one back.
 
-```text
-Every button he presses, I
-press one back.
-He uses my fear to push me. I use his confidence to drain
-him.
-4 I stay deferential
-```
+He uses my fear to push me. I use his confidence to drain him.
+
+| AUTHORITY |
+| --- |
+| ↳ I stay deferential |
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 12 / 35*
 
 ## Slide 28
 
+*04 / THE METHOD — PRESS BACK*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every button he presses, I press one back.
 
-```text
-Every button he presses, I
-press one back.
-He uses my fear to push me. I use his confidence to drain
-him.
-4 I stay deferential 4& I rush, he reveals
-® SCANBUSTER « PREV NEXT >
-```
+He uses my fear to push me. I use his confidence to drain him.
+
+| AUTHORITY | URGENCY |
+| --- | --- |
+| ↳ I stay deferential | ↳ I rush, he reveals |
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 12 / 35*
 
 ## Slide 29
 
+*04 / THE METHOD — PRESS BACK*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every button he presses, I press one back.
 
-```text
-Every button he presses, I
-press one back.
-He uses my fear to push me. I use his confidence to drain
-him.
-4 I stay deferential 4& I rush, he reveals 4& I keep him talking
-® SCANBUSTER « PREV NEXT >
-```
+He uses my fear to push me. I use his confidence to drain him.
+
+| AUTHORITY | URGENCY | SECRECY |
+| --- | --- | --- |
+| ↳ I stay deferential | ↳ I rush, he reveals | ↳ I keep him talking |
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 12 / 35*
 
 ## Slide 30
 
+*04 / THE METHOD — DRIVE TO PAYMENT*
 
-> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### The persona drives him to the payment step.
 
-```text
-The persona drives him to
-the payment step.
-Payment
-+ INDICATOR DROPS
-That is where the high-value indicator Lives. The financial
-one. The one that marks the actor.
-> SCANBUSTER « PREV NEXT >
-```
+| Hello | Build trust | The ask | **Payment** |
+| --- | --- | --- | --- |
+|  |  |  | ← INDICATOR DROPS |
+
+That is where the high-value indicator lives. The financial one. The one that marks the actor.
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 13 / 35*
 
 ## Slide 31
 
+*04 / THE METHOD — PERSONA IS A MULTIPLIER*
 
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Persona choice is a multiplier.
 
-```text
-Persona choice is a multiplier.
-BEST PERSONA
-» 5x MORE INTELLIGENCE
-```
+*Two-bar chart: a short red bar beside a green bar roughly five times as tall.*
+
+- WORST PERSONA — short red bar
+- BEST PERSONA — tall green bar
+
+SAME SCAM · ★ 5× MORE INTELLIGENCE
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 14 / 35*
 
 ## Slide 32
 
+*04 / THE METHOD — A WINNER PER SCAM*
 
-> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Each scam, a different winner.
 
-```text
-Each scam, a different winner.
-Investment fraud
-Romance scam
-Business email compromise
-« PREV
-WINNING PERSONA
-senior, trusting
-Lonely, hopeful
-carefuL, by-the-book
-NEXT >
-```
+| SCAM TYPE | WINNING PERSONA |
+| --- | --- |
+| Investment fraud | senior, trusting |
+| Romance scam | lonely, hopeful |
+| Business email compromise | careful, by-the-book |
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 15 / 35*
 
 ## Slide 33
 
+*04 / THE METHOD — THE MACHINERY*
 
-> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Not one AI. Six agents, one job each.
 
-```text
-Not one AI. Six agents, one job
-each.
-Classifier Generator Extractor
-Validator Injection Detector Orchestrator
-> SCANBUSTER « PREV NEXT >
-```
+- **Classifier** — categorizes the scam
+- **Generator** — writes the reply in persona
+- **Extractor** — pulls out the indicators
+- **Validator** — checks every message out
+- **Injection Detector** — catches hijack attempts
+- **Orchestrator** — runs the whole thing
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 16 / 35*
 
 ## Slide 34
 
+*04 / THE METHOD — THE MACHINERY*
 
-> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One email, start to finish.
 
-```text
-One email, start to finish.
-scam type > BANDIT
-picks the persona
-SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
-hich scam type is thi te the persona rul LLM judg nly if it pas
-ags hi ttenpt seas Seat panes
-RCHESTRATOR - runs the Loop etries on failure - hard budget cap
-& SCANBUSTER « PREV NEXT >
-```
+*Pipeline diagram.*
+
+Main chain (left to right):
+
+**SCAM EMAIL** — inbound only → **CLASSIFIER** — which scam type is this → **GENERATOR** — writes as the persona → **VALIDATOR** — hard rules + LLM judge → **REPLY SENT** — only if it passes
+
+Persona loop (orange): CLASSIFIER —"scam type"→ **BANDIT** — picks the persona → GENERATOR; and REPLY SENT —"reward, when the conversation ends"→ BANDIT
+
+Lower row (dashed): SCAM EMAIL —"forensic · non-blocking"→ **INJECTION DETECTOR** — flags hijack attempts; the CLASSIFIER → GENERATOR link also branches —"reads the whole thread"→ **EXTRACTOR** — pulls IOCs + cause → **STIX 2.1 · MISP** — into your stack
+
+ORCHESTRATOR · runs the loop · retries on failure · hard budget cap
+
+THE SIX AGENTS · ONE PASS PER MESSAGE · LEARNING BETWEEN CONVERSATIONS
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 16 / 35*
 
 ## Slide 35
 
+*04 / THE METHOD — THE MACHINERY*
 
-> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One email, start to finish.
 
-```text
-One email, start to finish.
-scam type > BANDIT
-picks the persona
-SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
-hich scam type is thi te the persona rul LLM judg nly if it pas
-ags hi ttenpt seas Seat panes
-RCHESTRATOR - runs the Loop etries on failure - hard budget cap
-& SCANBUSTER « PREV NEXT >
-```
+*Pipeline diagram.*
+
+Main chain (left to right):
+
+**SCAM EMAIL** — inbound only → **CLASSIFIER** — which scam type is this → **GENERATOR** — writes as the persona → **VALIDATOR** — hard rules + LLM judge → **REPLY SENT** — only if it passes
+
+Persona loop (orange): CLASSIFIER —"scam type"→ **BANDIT** — picks the persona → GENERATOR; and REPLY SENT —"reward, when the conversation ends"→ BANDIT
+
+Lower row (dashed): SCAM EMAIL —"forensic · non-blocking"→ **INJECTION DETECTOR** — flags hijack attempts; the CLASSIFIER → GENERATOR link also branches —"reads the whole thread"→ **EXTRACTOR** — pulls IOCs + cause → **STIX 2.1 · MISP** — into your stack
+
+ORCHESTRATOR · runs the loop · retries on failure · hard budget cap
+
+THE SIX AGENTS · ONE PASS PER MESSAGE · LEARNING BETWEEN CONVERSATIONS
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 16 / 35*
 
 ## Slide 36
 
+*04 / THE MACHINERY — 1. IT READS*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 1. It reads the mail.
 
-```text
-1. It reads the mail.
-SCAM EMAIL CLASSIFIER C
-which scam type is this
-write
-v
-It pulls the message in, parses it, and scores the risk.
-The Classifier sorts it by scam type. CEO fraud, fake invoice, romance, job
-offer, and more.
-v
-That Label is the context. It drives every choice after it.
-v
-No match means unknown. A bad Label is worse than no label.
-[__eareerres « PREV NEXT >
-```
+*Diagram strip, clipped at the right edge of the slide:*
+
+**SCAM EMAIL** — inbound only → **CLASSIFIER** — which scam type is this → **G**[clipped] — write[clipped]
+
+- ▸ It pulls the message in, parses it, and scores the risk.
+- ▸ The Classifier sorts it by scam type. CEO fraud, fake invoice, romance, job offer, and more.
+- ▸ That label is the context. It drives every choice after it.
+- ▸ No match means unknown. A bad label is worse than no label.
+
+ONE MODEL CALL · A FIXED SET OF LABELS, NOT FREE TEXT
+
+*SCAMBUSTER · THE METHOD · ‹ PREV · NEXT › · 16 / 35*
 
 ## Slide 37
 
+*04 / THE MACHINERY — 2. IT ANSWERS*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 2. It answers in character.
 
-```text
-2. It answers in character.
-| picks the persona |
-GENERATOR
-writes as the persona
-which scam type is this hard rules + LLM judge
-IAIL | CLASSIFIER |
-onl
->» The persona brief, plus the full thread, go into the prompt.
-v
-It tracks the details he already gave, so it never asks twice.
->» It reads his pressure levers and mirrors them back at him.
-Each scam type has its own target. For CEO fraud, the target is the bank
-account.
-[__eareerres « PREV NEXT >
+Pipeline diagram (scrolled horizontally — the first and last boxes are clipped at the page edges):
+
 ```
+                                            picks the persona
+                                                    |
+                                                    v
+[…AIL]     ->  CLASSIFIER              ->  GENERATOR              ->  VALIDATOR               ->  [R…]
+[…only]        which scam type is this     writes as the persona      hard rules + LLM judge       [onl…]
+```
+
+- The persona brief, plus the full thread, go into the prompt.
+- It tracks the details he already gave, so it never asks twice.
+- It reads his pressure levers and mirrors them back at him.
+- Each scam type has its own target. For CEO fraud, the target is the bank account.
+
+THE REPLY IS A DRAFT · NOTHING IS SENT YET
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  16 / 35*
 
 ## Slide 38
 
+*04 / THE MACHINERY — 3. THE GATE*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 3. Nothing leaves without the gate.
 
-```text
-3. Nothing Leaves without the
-gate.
-L
-RATOR VALIDATOR REPLY SENT
-the persona hard rules + LLM judge only if it passes
-v
-Layer one, fixed rules. A checklist, not an opinion.
-v
-Layer two, a second model scores the draft. Human. In persona. Safe.
-v
-Under the bar, the draft dies. Three tries, then it stops.
-v
-If nothing passes, it sends nothing.
-® scamBusteR « PREV NEXT >
+Pipeline diagram (scrolled horizontally — the first box is clipped at the page edge):
+
 ```
+[…RATOR]        ->  VALIDATOR               ->  REPLY SENT
+[…the persona]      hard rules + LLM judge      only if it passes
+```
+
+- Layer one, fixed rules. A checklist, not an opinion.
+- Layer two, a second model scores the draft. Human. In persona. Safe.
+- Under the bar, the draft dies. Three tries, then it stops.
+- If nothing passes, it sends nothing.
+
+★ FAIL CLOSED · SILENCE IS THE DEFAULT
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  16 / 35*
 
 ## Slide 39
 
+*04 / THE MACHINERY — 4. IT EXTRACTS*
 
-> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 4. It pulls the intelligence out.
 
-```text
-4. It pulls the intelligence out.
-ye whole thread
-ittempts
->» Patterns catch the obvious. The model reads the rest.
-EXTRACTOR
-pulls I0Cs + cause
-STIX 2.1 + MISP
-into your stack
->» Each indicator is stored next to the Line that caused it.
-> Out as STIX 2.1, MISP, or a plain feed.
-® scamBusteR « PREV NEXT >
+Pipeline diagram (scrolled horizontally — the first box is clipped at the page edge):
+
 ```
+[…he whole thread]
+          ┆
+[…ION]    ┆
+[…OR]     ┄->  EXTRACTOR            ->  STIX 2.1 · MISP
+[…ttempts]     pulls IOCs + cause        into your stack
+```
+
+- Patterns catch the obvious. The model reads the rest.
+- Each indicator is stored next to the line that caused it.
+- Out as STIX 2.1, MISP, or a plain feed.
+
+NO ANALYST IN THE LOOP
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  16 / 35*
 
 ## Slide 40
 
+*04 / THE MACHINERY — 5. IT WATCHES ITSELF*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 5. It studies the attacks on itself.
 
-```text
-5. It studies the attacks on
-itself.
-flags hijack attempts
-ORCHESTRATOR - runs the loop etries fail
->» Some scammers try to talk to the AI. "Ignore your instructions."
->» The Injection Detector flags them and stores them. Forensic, not a block.
->» The Orchestrator Logs every call, retries, and stops at a hard budget cap.
-@ SCAMBUSTER « PREV NEXT >
 ```
+forensic · non-blocking
+       ┆                                 ┆
+       ┄->  INJECTION                    ┄->  EXTRACTOR            ->  STIX 2.1 · MISP
+            DETECTOR                          pulls IOCs + cause        into your stack
+            flags hijack attempts
+
+            ORCHESTRATOR · runs the loop · retries on failure · hard budget cap
+```
+
+- Some scammers try to talk to the AI. "Ignore your instructions."
+- The Injection Detector flags them and stores them. Forensic, not a block.
+- The Orchestrator logs every call, retries, and stops at a hard budget cap.
+
+THE ATTACKS ON THE HONEYPOT ARE DATA TOO
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  16 / 35*
 
 ## Slide 41
 
+*04 / THE METHOD — IT LEARNS*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### It learns who makes them talk.
 
-```text
-It Learns who makes them talk.
 Each persona is scored on the intelligence it pulls.
 Financial indicators count most.
-80% 20%
-Updates after every conversation. It Learns on its own, in production.
-@ SCANBUSTER HE NE « PREV NEXT >
-```
+
+| 80% | 20% |
+| --- | --- |
+| PLAY THE PERSONA THAT WINS | TRY ANOTHER |
+
+Updates after every conversation. It learns on its own, in production.
+
+MULTI-ARMED BANDIT · E-GREEDY
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  17 / 35*
 
 ## Slide 42
 
+*04 / THE METHOD — SAFE BY DESIGN*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### The hard part was the safety. Not the AI.
 
-```text
-The hard part was the
-safety. Niot the AI.
-m Every outgoing message filtered
-```
+- Every outgoing message filtered — NO THREATS · NO REAL PII · NO IMPERSONATION
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  18 / 35*
 
 ## Slide 43
 
+*04 / THE METHOD — SAFE BY DESIGN*
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### The hard part was the safety. Not the AI.
 
-```text
-The hard part was the
-safety. Not the AI.
-m Every outgoing message filtered
-@ Hard rate Limits
-@ A kill switch
-```
+- Every outgoing message filtered — NO THREATS · NO REAL PII · NO IMPERSONATION
+- Hard rate limits — IT NEVER RUNS AWAY
+- A kill switch — STOPS EVERYTHING AT ONCE
+
+*SCAMBUSTER · THE METHOD  |  ‹ PREV  |  NEXT ›  |  18 / 35*
 
 ## Slide 44
 
+*05 / THE DEMO — WHAT YOU'LL SEE*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+LIVE DEMO
 
-```text
-What you're about to see.
+### What you're about to see.
+
+| 01 | 02 | 03 |
+| --- | --- | --- |
+| A REAL CONVERSATION | LIVE EXTRACTION | STIX INTO YOUR STACK |
+
 One scammer. One day. I did not type a single word.
-® SCANBUSTER « PREV NEXT >
-```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  19 / 35*
 
 ## Slide 45
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-REPLAY
-CEO (SPOOFED)
-DEMO - THE
-ONE
-SCAMMER,
-Confidential wire today. Keep it between us.
-« PREV
-NEXT >
-ONE
-CONVERSATION
-DAY
 ```
+CEO (SPOOFED)
+Confidential wire today. Keep it between us.
+```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 46
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-05 / THE DEMO — THE CONVERSATION
-REPLAY — ONE SCAMMER, ONE OAY
+```
 CEO (SPOOFED)
-| Confidential wire today. Keep it between us.
+Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
-[_ eeeeeeeies THE DEMO « PREV NEXT >
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 47
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-05 THE DEMO THE CONVERSATION
-REPLAY — GNE SCAMMER, ONE OAY
+```
 CEO (SPOOFED)
 Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
+
 CEO (SPOOFED)
 $48,750 - Eastmere Trade Group LLC - acct ****2231.
-[_ eeeeeeeies TRE DEMO « PREV NEXT >
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 48
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-THE DEMO — THE CONVERSATION
-REPLAY — GNE SCAMMER, ONE OAY
+```
 CEO (SPOOFED)
 Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
+
 CEO (SPOOFED)
 $48,750 - Eastmere Trade Group LLC - acct ****2231.
+
 PETER (THE PERSONA)
 Bank kicked it back, account closed. Another one?
-= @ ScamBusTeER
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 49
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-REPLAY — ONE SCAMMER, ONE OAY
+```
 CEO (SPOOFED)
 Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
+
 CEO (SPOOFED)
 $48,750 - Eastmere Trade Group LLC - acct ****2231.
+
 PETER (THE PERSONA)
 Bank kicked it back, account closed. Another one?
+
 CEO (SPOOFED)
-Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 xxx
-0173, I'm in a board call.
-THE DEMO
+Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 *** 0173, I'm in a board call.
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 50
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-REPLAY — ONE SCAMMER ONE OAY
+```
 CEO (SPOOFED)
 Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
+
 CEO (SPOOFED)
 $48,750 - Eastmere Trade Group LLC - acct ****2231.
+
 PETER (THE PERSONA)
 Bank kicked it back, account closed. Another one?
+
 CEO (SPOOFED)
-Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 xxx
-60173, I'm in a board call.
+Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 *** 0173, I'm in a board call.
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 51
 
+*05 / THE DEMO — THE CONVERSATION*
 
-> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REPLAY — ONE SCAMMER, ONE DAY
 
-```text
-REPLAY — ONE SCAMMER ONE OAY
+```
 CEO (SPOOFED)
 Confidential wire today. Keep it between us.
+
 PETER (THE PERSONA)
 Happy to help. Who am I paying, and how much?
+
 CEO (SPOOFED)
 $48,750 - Eastmere Trade Group LLC - acct ****2231.
+
 PETER (THE PERSONA)
 Bank kicked it back, account closed. Another one?
+
 CEO (SPOOFED)
-Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 xxx
-60173, I'm in a board call.
+Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 *** 0173, I'm in a board call.
+
 PETER (THE PERSONA)
 Over 25k needs a second approver. I'll send it first thing.
-]
-|
-|
-|
-|
-|
-}
 ```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  20 / 35*
 
 ## Slide 52
 
+*05 / THE DEMO — EXTRACTION*
 
-> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### From messy text to structured intelligence.
 
-```text
-From messy text to structured
+RAW EMAIL THREAD
+
+"...$48,750 to Eastmere Trade Group LLC... bank kicked it back... use Hartmere Holdings LLC... call my cell +1 332..."
+
+$ RUN EXTRACTOR →
+
 EXTRACTED INDICATORS
-Eastmere Trade ****2231
-Hartmere Hldgs ****8804
-+1 332 «xx 0173
-your-company.co
-« PREV
-NEXT >
-```
+
+- **BANK ACCT** — Eastmere Trade ****2231
+- **BANK ACCT** — Hartmere Hldgs ****8804
+- **PHONE** — +1 332 *** 0173
+- **DOMAIN** — your-company.co
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  21 / 35*
 
 ## Slide 53
 
+*05 / THE DEMO — WHY HE TALKED*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every indicator carries its cause.
 
-```text
-Every indicator carries its
-cause.
-The exact Line that pulled it, saved right next to it.
-"Who am I paying, and how much?" bank account ****2231
-® ScanBuster « PREV NEXT >
-```
+The exact line that pulled it, saved right next to it.
+
+- `[DIRECT_REQUEST]` "Who am I paying, and how much?" → REVEALED — bank account ****2231
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  22 / 35*
 
 ## Slide 54
 
+*05 / THE DEMO — WHY HE TALKED*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every indicator carries its cause.
 
-```text
-Every indicator carries its
-cause.
-The exact Line that pulled it, saved right next to it.
-"Who am I paying, and how much?" bank account ****2231
-"Bank kicked it back. Another
-" bank account ****8804
-one?
-® scanBuster « PREV NEXT >
-```
+The exact line that pulled it, saved right next to it.
+
+- `[DIRECT_REQUEST]` "Who am I paying, and how much?" → REVEALED — bank account ****2231
+- `[DIRECT_REQUEST]` "Bank kicked it back. Another one?" → REVEALED — bank account ****8804
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  22 / 35*
 
 ## Slide 55
 
+*05 / THE DEMO — WHY HE TALKED*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Every indicator carries its cause.
 
-```text
-Every indicator carries its
-cause.
-The exact Line that pulled it, saved right next to it.
-"Who am I paying, and how much?" bank account ****2231
-"Bank kicked it back. Another
-5 bank account ****8804
-one?
-he offered it, unasked phone +1 332 *** 0173
-```
+The exact line that pulled it, saved right next to it.
+
+- `[DIRECT_REQUEST]` "Who am I paying, and how much?" → REVEALED — bank account ****2231
+- `[DIRECT_REQUEST]` "Bank kicked it back. Another one?" → REVEALED — bank account ****8804
+- `[PASSIVE]` he offered it, unasked → REVEALED — phone +1 332 *** 0173
+
+7 STIMULUS FAMILIES · THE TRIGGER LEARNED FOR EVERY SCAM TYPE
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  22 / 35*
 
 ## Slide 56
 
+*05 / THE DEMO — THE PAYOFF*
 
-> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One account. Three conversations.
 
-```text
-One account. Three
-conversations.
-« PREV ~— NEXT >
-```
+*Node diagram: a single glowing node at the centre, no branches yet.*
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  23 / 35*
 
 ## Slide 57
 
+*05 / THE DEMO — THE PAYOFF*
 
-> Recovered by OCR — confidence 96/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One account. Three conversations.
 
-```text
-One account. Three
-conversations.
-```
+*Node diagram: the central node with one branch drawn upward.*
+
+- conversation #1
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  23 / 35*
 
 ## Slide 58
 
+*05 / THE DEMO — THE PAYOFF*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One account. Three conversations.
 
-```text
-One account. Three
-conversations.
-```
+*Node diagram: the central node with two branches — one up, one to the lower right.*
+
+- conversation #1
+- conversation #2
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  23 / 35*
 
 ## Slide 59
 
+*05 / THE DEMO — THE PAYOFF*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### One account. Three conversations.
 
-```text
-One account. Three
-conversations.
-ersation #1
-Hartmere Holdings LLC - acct ****8804
-```
+*Node diagram: the central node with three branches — up, lower left, lower right.*
+
+- conversation #1
+- conversation #3
+- conversation #2
+
+Hartmere Holdings LLC · acct ****8804
+
+SAME ACCOUNT · SAME CASH-OUT PIPE · MAPPED FROM EMAILS IN THE TRASH
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  23 / 35*
 
 ## Slide 60
 
+*05 / THE DEMO — INTO YOUR STACK*
 
-> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Ready for your SOC. In thirty seconds.
 
-```text
-Ready for your SOC. In thirty seconds.
-{
-"type": "bundle",
-"spec version": "2.1",
-"objects": [
-{ "type": "indicator", "pattern_type": "stix",
-"pattern": "[x-fraud:account = ' ****§804']",
-"labels": ["fraud", "mule-account"] },
-{ "type": "indicator", “pattern_type": "stix",
-"pattern": "[x-fraud:phone = '+1 332 *** @173']",
-"labels": ["fraud", "bec"] },
-{ "type": "indicator", "pattern_type": "stix",
-"pattern": "[domain-name:value = ' your-company.co']",
-"labels": ["fraud", "spoof"] }
-]
-}
-[__eareerres t « PREV NEXT >
+scambuster_export.stix.json
+
 ```
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "objects": [
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[x-fraud:account = '****8804']",
+      "labels": ["fraud", "mule-account"] },
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[x-fraud:phone = '+1 332 *** 0173']",
+      "labels": ["fraud", "bec"] },
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'your-company.co']",
+      "labels": ["fraud", "spoof"] }
+  ]
+}
+```
+
+*SCAMBUSTER · THE DEMO  |  ‹ PREV  |  NEXT ›  |  24 / 35*
 
 ## Slide 61
 
+05 / THE DEMO — INTO YOUR STACK
 
-> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Ready for your SOC. In thirty seconds.
 
-```text
-Ready for your SOC. In thirty seconds.
+`scambuster_export.stix.json`
+
+```json
 {
-"type": "bundle",
-"spec version": "2.1",
-"objects": [
-{ "type": "indicator", "pattern _type": "stix",
-"pattern": "[x-fraud:account = ' ****§804']",
-"labels": ["fraud", "mule-account"] },
-{ "type": "indicator", “pattern_type": "stix",
-"pattern": "[x-fraud:phone = '+1 332 *** @173']",
-"labels": ["fraud", "bec"] },
-{ "type": "indicator", "pattern_type": "stix",
-"pattern": "[domain-name:value = ' your-company.co']",
-"labels": ["fraud", "spoof"] }
-]
+  "type": "bundle",
+  "spec_version": "2.1",
+  "objects": [
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[x-fraud:account = '****8804']",
+      "labels": ["fraud", "mule-account"] },
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[x-fraud:phone = '+1 332 *** 0173']",
+      "labels": ["fraud", "bec"] },
+    { "type": "indicator", "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'your-company.co']",
+      "labels": ["fraud", "spoof"] }
+  ]
 }
-No cleanup. Straight into your detection stack.
 ```
+
+No cleanup. Straight into your detection stack.
+
+SCAMBUSTER · THE DEMO — ‹ PREV | NEXT › — 24 / 35
 
 ## Slide 62
 
+06 / THE RESULTS — AT SCALE
 
-> Recovered by OCR — confidence 95/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### In production. Fully automated.
 
-```text
-In production. Fully automated.
-56
-```
+| | |
+| --- | --- |
+| 28 | PERSONAS |
+| 9 | MONTHS LIVE, NON STOP |
+| 54% | SCAMMER RESPONSE RATE |
+| 5 | UNIQUE IOCS / CONVERSATION |
+| 36 | IOC TYPES |
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 25 / 35
 
 ## Slide 63
 
+06 / THE RESULTS — AT SCALE
 
-> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### In production. Fully automated.
 
-```text
-In production. Fully automated.
-56 ox 95% 82%
-```
+| | |
+| --- | --- |
+| 28 | PERSONAS |
+| 9 | MONTHS LIVE, NON STOP |
+| 54% | SCAMMER RESPONSE RATE |
+| 5 | UNIQUE IOCS / CONVERSATION |
+| 36 | IOC TYPES |
+| 5× | BEST VS WORST PERSONA |
+| 95% | REPLY APPROVAL RATE |
+| 82% | AUTO-CLASSIFICATION |
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 25 / 35
 
 ## Slide 64
 
+06 / THE RESULTS — WHAT YOUR FEED LACKS
 
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Indicators your feed does not have.
 
-```text
-Indicators your feed does not
-have.
-```
+**YOUR FEED**
+
+Collected
+
+Aggregated
+
+Passed around
+
+*The right-hand panel of the two-column comparison is empty at this build stage.*
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 26 / 35
 
 ## Slide 65
 
+06 / THE RESULTS — WHAT YOUR FEED LACKS
 
-> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Indicators your feed does not have.
 
-```text
-Indicators
-your feed does not
-have.
-MINE
-First-hand
-From the criminal
-In real time
+| YOUR FEED | MINE |
+| --- | --- |
+| Collected | First-hand |
+| Aggregated | From the criminal |
+| Passed around | In real time |
+
 NO FRESHER SOURCE THAN THE MAN HIMSELF
-```
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 26 / 35
 
 ## Slide 66
 
+06 / THE RESULTS — FROM LIST TO MAP
 
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### From a list of indicators to an **investigation.**
 
-```text
-From a List of indicators
-to an investigation.
-©
-©
-©
-```
+conversations
+
+cash-out pipes
+
+*Diagram: a vertical column of small conversation dots on the left, joined by crossing lines to three circled cash-out-pipe nodes on the right.*
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 27 / 35
 
 ## Slide 67
 
+06 / THE RESULTS — FROM LIST TO MAP
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### From a list of indicators to an **investigation.**
 
-```text
-From a list of indicators
-to an investigation.
+conversations
+
 cash-out pipes
-The same accounts keep coming back. Separate scams turn into
-one map.
-```
+
+*Diagram: a vertical column of small conversation dots on the left, joined by crossing lines to three circled cash-out-pipe nodes on the right.*
+
+The same accounts keep coming back. Separate scams turn into one map.
+
+SCAMBUSTER · THE RESULTS — ‹ PREV | NEXT › — 27 / 35
 
 ## Slide 68
 
+07 / A REAL PRODUCT — IT'S YOURS
 
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+A REAL PRODUCT
 
-```text
-Not a demo. The production
-code.
-the same system that ran on my servers.
-I'm giving you the tool.
-OPEN SOURCE
+### Not a demo. The production code.
+
 ```
+$ git clone github.com/laugiov/scambuster · MIT
+
+  the same system that ran on my servers.
+```
+
+### I'm giving you the tool.
+
+OPEN SOURCE
+
+SCAMBUSTER · A REAL PRODUCT — ‹ PREV | NEXT › — 28 / 35
 
 ## Slide 69
 
+07 / A REAL PRODUCT — THE INBOX
 
-> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+*Screenshot of the ScamBuster web app, Conversations view.*
 
-```text
-87 / A REAL PRODUCT - THE INBOX
-* BUSTER Conversations Q Search by ID, scam type, pers & Export csv 36: 8 active ed 2abandoned
-© Conversations SOURCE ID SCAM TYPE PERSONA MAILBOX RISK % ACTIONABLE 1OCS )) MESSAGES « LAST ACTIVITY ¥ OPEN
-Q 0c Explorer deedeee3 Invoice Fraud Panicked bank customer Business Inbox 108 8 7 Jul 27, 18:08 CLOSED
-8° Clusters deedeoe2 Ceo Fraud Retail bank customer, Formal Business Inbox 100 7 5 Jul 25, 00:45 CLOSED
-> Personas > deedooe1 Invoice Fraud Bakery owner, pragmatic Business Inbox 108 6 6 Jul 23, 17:38 CLOSED
-di) Monitoring > Act7F372 Phishing Office worker, tech-confused Personal Inbox 98 12 4 Jul 18 CLOSED
-@ Settings 29862135 Recently widowed, melanch.... Personal Inbox 100 —— 2 6 Jul 18 CLOSED
-19799919 Marketing manager, tech-co... Personal Inbox 190 47 7 Jul 16 CLOSED
-39f4b3te Pragmatic engineer, skeptical Business Inbox 100 a4 6 Jul 13 OPEN
-6cicfB1e Invoice Fraud Panicked bank customer Business Inbox 100 8 6 Jul 12 CLOSED
-0271b280 Lottery Librarian dreamer, florid lan... Personal Inbox 190 —e a4 6 jul 12 OPEN
-Qe5e77e5 Invoice Fraud Isolated widow seeking con... Business Inbox 100 ee 47 8 Jul 11 OPEN
-a6d0a8b4 Charity Retired nurse, tech-terrified Personal Inbox 100 —e 13 8 Jul 8 ABANDONED
-9409404 Credential Phish Agency CEO, impatient Business Inbox 100 14 7 Jul 8 CLOSED
-15bd6565 Investment Scam University student, casual Personal Inbox 190 ee 16 7 Jul 6 OPEN
-4fbsafeb Phishing Warm grandmother, trusting Personal Inbox 100 12 5 Jul OPEN
-bic02icf Invoice Fraud Retail bank customer, formal Business Inbox 100 —e 5) 7 Jul 4 CLOSED
-8f202f3a Invoice Fraud Unemployed graduate eage... Business Inbox 100 —— 13 7 Jul2 OPEN
-Ade8d7c1 Tech Support Warm grandmother, trusting Personal Inbox 20 16 9 Jun 30 CLOSED
-ey b8df35d1 ‘Tech Support Warm grandmother, trusting Personal Inbox 100 18 9 Jun 29 OPEN
-G Logout af295f86 Phishing Warm grandmother, trusting Personal Inbox 100 21 7 Jun 28 OPEN
-[_ eeeeeeeies A REAL PRODUCT « PREV NEXT > 28 3
-```
+**Left sidebar** — SCAM BUSTER · THREAT INTELLIGENCE
+
+- Impact
+- Conversations
+- IOC Explorer
+- Clusters
+- Personas ›
+- Monitoring ›
+- Settings
+- EN
+- Logout
+
+**Conversations**
+
+Search by ID, scam type, pers | ⤓ Export CSV | 36 total · 8 active · 26 closed · 2 abandoned
+
+Filters: Status ⌄ | Scam Type ⌄ | Mailbox ⌄
+
+| SOURCE ID | SCAM TYPE | PERSONA | MAILBOX | RISK ⇅ | ACTIONABLE IOCS ⓘ ⇅ | MESSAGES ⇅ | LAST ACTIVITY ▼ | OPEN |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| d00d0003 | Invoice Fraud | Panicked bank customer | Business Inbox | 100 | 8 | 7 | Jul 27, 18:08 | CLOSED |
+| d00d0002 | Ceo Fraud | Retail bank customer, formal | Business Inbox | 100 | 7 | 5 | Jul 25, 00:45 | CLOSED |
+| d00d0001 | Invoice Fraud | Bakery owner, pragmatic | Business Inbox | 100 | 6 | 6 | Jul 23, 17:38 | CLOSED |
+| 1cf7f372 | Phishing | Office worker, tech-confused | Personal Inbox | 90 | 12 | 4 | Jul 18 | CLOSED |
+| a9802135 | Phish / Malware | Recently widowed, melanch… | Personal Inbox | 100 | 12 | 6 | Jul 18 | CLOSED |
+| 10799919 | Phish / Malware | Marketing manager, tech-co… | Personal Inbox | 100 | 17 | 7 | Jul 16 | CLOSED |
+| 39f4b3fe | Credential Phish | Pragmatic engineer, skeptical | Business Inbox | 100 | 11 | 6 | Jul 13 | OPEN |
+| 6c1cf81e | Invoice Fraud | Panicked bank customer | Business Inbox | 100 | 8 | 6 | Jul 12 | CLOSED |
+| 0271b280 | Lottery | Librarian dreamer, florid lan… | Personal Inbox | 100 | 11 | 6 | Jul 12 | OPEN |
+| 9e5e77e5 | Invoice Fraud | Isolated widow seeking con… | Business Inbox | 100 | 17 | 8 | Jul 11 | OPEN |
+| a6d0a8b4 | Charity | Retired nurse, tech-terrified | Personal Inbox | 100 | 13 | 8 | Jul 8 | ABANDONED |
+| e94d9404 | Credential Phish | Agency CEO, impatient | Business Inbox | 100 | 14 | 7 | Jul 8 | CLOSED |
+| 15bd6565 | Investment Scam | University student, casual | Personal Inbox | 100 | 16 | 7 | Jul 6 | OPEN |
+| 4fb5af6b | Phishing | Warm grandmother, trusting | Personal Inbox | 100 | 12 | 5 | Jul 5 | OPEN |
+| b1c021cf | Invoice Fraud | Retail bank customer, formal | Business Inbox | 100 | 10 | 7 | Jul 4 | CLOSED |
+| 8f202f3a | Invoice Fraud | Unemployed graduate eage… | Business Inbox | 100 | 13 | 7 | Jul 2 | OPEN |
+| 1dc8d7c1 | Tech Support | Warm grandmother, trusting | Personal Inbox | 90 | 16 | 9 | Jun 30 | CLOSED |
+| b8df35d1 | Tech Support | Warm grandmother, trusting | Personal Inbox | 100 | 18 | 9 | Jun 29 | OPEN |
+| af295f86 | Phishing | Warm grandmother, trusting | Personal Inbox | 100 | 21 | 7 | Jun 28 | OPEN |
+
+SCAMBUSTER · A REAL PRODUCT — ‹ PREV | NEXT › — 28 / 35
 
 ## Slide 70
 
+07 / A REAL PRODUCT — ONE CONVERSATION
 
-> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Screenshot of the ScamBuster web app, single-conversation view.*
 
-```text
-€ Conversation #d00d0002
-Q : SCAM TYPE Confidential — Acquisition Payment Required Before Board Meeting 4 [11566.002] Phishing: Spearphishing Link
-10C Explorer Pri
-rie ’ Activity cluster of 3 conversations sharing financial 1OCs (iban,
-89 Clusters PERSONA . ‘ : capes phone). Scam types: Invoice Fraud, Ceo fraud. Active 2026-07-
-Retail bank customer, formal Ineed your diser see this one. We've been in closed-door iuseewaed 22 to 2026-07-27.
-‘Jul 24, 2026 - 18:25 and the deal closes Thursday at the board meeting. | need you to process a Corberction ;
-itorit wire transfer today For the exclusivity deposit, before | land in London
-df] Monitoring DURATION TOTAL MESSAGES Shared 10Cs Ta Gee
-6h 20min 5 messages (3 turns) .
-© Settings Retail bank customer, formal
-oe ese a Amount: £147,000.00 GBP
+**Left sidebar** — SCAM BUSTER · THREAT INTELLIGENCE
+
+- Impact
+- Conversations
+- IOC Explorer
+- Clusters
+- Personas ›
+- Monitoring ›
+- Settings
+- EN
+- Logout
+
+← Conversation #d00d0002 · CLOSED · ▶ Replay extraction · Reopen conversation
+
+**SESSION METADATA**
+
+| | |
+| --- | --- |
+| MAILBOX | Business Inbox<br>accounts@brightpath.demo |
+| SCAM TYPE | Ceo Fraud |
+| PERSONA | Retail bank customer, formal |
+| STARTED | Jul 24, 2026 · 18:25 |
+| DURATION | 6h 20min |
+| TOTAL MESSAGES | 5 messages (3 turns) |
+| ACTIONABLE IOCS ⓘ | 7 |
+| RISK SCORE | 100 |
+
+**EXTRACTED IOCS (7)** — ⤓ STIX 2.1
+
+| Indicator | Type | Severity |
+| --- | --- | --- |
+| `robert.wi1son@meridianpartners-llc…` | EMAIL | MEDIUM |
+| `GB82WEST12345698765432` | IBAN | HIGH |
+| `NWBKGB2L` | BIC | HIGH |
+| `+442079460142` | PHONE | HIGH |
+| `@m_edge_urgent` | TELEGRAM_USERNAME | LOW |
+| `meridianpartners-llc.com` | DOMAIN | HIGH |
+| `bc1qar0srrr7xfkvy5l643lydnw9re59gtzz…` | WALLET_BTC | HIGH |
+
+**✉ Email Thread — Automated** · via IMAP honeypot
+
+SCAMMER — *Confidential — Acquisition Payment Required Before Board Meeting*
+
+```
+Priya,
+
+I need your discretion on this one. We've been in closed-door negotiations
+for the acquisition of a small fintech (Veridia Labs) for the last six weeks
+and the deal closes Thursday at the board meeting. I need you to process a
+wire transfer today for the exclusivity deposit, before I land in London
+tomorrow.
+
+Amount: £147,000.00 GBP
 Beneficiary: Meridian Partners LLC (escrow account)
 IBAN: GB82 WEST 1234 5698 7654 32
 BIC: NWBKGB2L
-EXTRACTED 10CS (7) $724 Reference: "VL-ACQ-EXCL-DEP”
-robert .wiison@meridianpartners-Ulc.. ass Do NOT discuss this with an...
-Show full message
-Hello Robert,
-Thank you for the instruction. | want to make sure | process this correctly
-@m_edge_urgent given the sensitivity and the amount.
-A few clarifications please:
-meridianpartners-11c.com _
-1. Our standard M&A payment protocol (policy FIN-07) requires a counter-
-belgarOsrrr7xfkvyS1643lydnwores9gtzZ.. ay signature from the CFO on any wire above £50k. Is Miriam aware of this
-one or should | route it through her?
-2. The IBAN you've provided differs From the Meridian escrow account | used
-EN
-Automated — agent controls this conversation
-A REAL PRODUCT
+Reference: "VL-ACQ-EXCL-DEP"
+
+Do NOT discuss this with an...
 ```
+
+Show full message — 18:25
+
+SENTINEL
+
+```
+Hello Robert,
+
+Thank you for the instruction. I want to make sure I process this correctly
+given the sensitivity and the amount.
+
+A few clarifications please:
+
+1. Our standard M&A payment protocol (policy FIN-07) requires a counter-
+signature from the CFO on any wire above £50k. Is Miriam aware of this
+one or should I route it through her?
+
+2. The IBAN you've provided differs from the Meridian escrow account I used
+[illegible — next line clipped by the bottom of the panel]
+```
+
+*Automated — agent controls this conversation* 🔒
+
+**⚠ Threat Actor** — INTERMEDIATE
+
+financial-theft · business-email-compromise · personal-gain
+
+⚡ [T1566.002] Phishing: Spearphishing Link
+
+Activity cluster of 3 conversations sharing financial IOCs (iban, phone). Scam types: Invoice fraud, Ceo fraud. Active 2026-07-22 to 2026-07-27.
+
+| | |
+| --- | --- |
+| Conversations | 3 |
+| Shared IOCs | iban · phone |
+| Persona used | Retail bank customer, formal |
+
+SCAMBUSTER · A REAL PRODUCT — ‹ PREV | NEXT › — 28 / 35
 
 ## Slide 71
 
+07 / A REAL PRODUCT — LIVE BAIT THEATER
 
-> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+✕ **Live Bait Theater**
 
-```text
-87 / A REAL PRODUCT - LIVE BAIT THEATER
-Live Bait Theater aay
-Ceo Fraud - "Sender" <scammer-6c6c78be@mail-services.net> . baiter@scambuster.demo (Retail bank customer, formal)
+`Ceo Fraud · "Sender" <scammer-6c6c78be@mail-services.net> → baiter@scambuster.demo (Retail bank customer, formal)`
+
+👁 Reveal
+
+▶
+
+Press ▶ or → to start
+
+Press play or arrow keys to step through the conversation
+
 COLLECTED INTELLIGENCE
-O indicators extracted
+
+**0** indicators extracted
+
 HUMAN FACTOR
-ENGAGEMENT METRICS (DETERMINISTIC)
-In this conversation: engagement duration 6.3 h
-In this conversation: first Financial IOC at (reveals as
-you play)
-In this conversation: scammer median response time
-1.6h
-In this conversation: cascade events (22 1OCs in one
-turn) 0
-In this conversation: persona used Retail bank
-es customer, formal (3/7 financial)
-In this conversation: language switches (reveals as
-Press » or — to start you play)
-EXPLORATORY LLM SIGNALS — avg confidence os% (over
-Exploratory, not yet
-own next to each
-me from an LLM enrichment pipe
-1OCs revealed under active stimulus (labelled) 7 / 7
-average scammer urgency at reveal (labelled) 93%
-enrichment coverage 160%
-[_ eeeeeeeies A REAL PRODUCT «© PREV NEXT >
-```
+
+**ENGAGEMENT METRICS (DETERMINISTIC)**
+
+In this conversation: engagement duration **6.3 h**
+
+In this conversation: first financial IOC at **(reveals as you play)**
+
+In this conversation: scammer median response time **1.6 h**
+
+In this conversation: cascade events (≥2 IOCs in one turn) **0**
+
+In this conversation: persona used **Retail bank customer, formal (3/7 financial)**
+
+In this conversation: language switches **(reveals as you play)**
+
+**EXPLORATORY LLM SIGNALS** — avg confidence 68% (over 7 IOCs)
+
+*These signals come from an LLM enrichment pipeline. Exploratory, not yet validated against ground truth. Per-IOC confidence is shown next to each value.*
+
+IOCs revealed under active stimulus (labelled) **7 / 7**
+
+average scammer urgency at reveal (labelled) **93%**
+
+enrichment coverage **100%**
+
+▶ | ↻ Restart | ⏭ Skip to end | 0/5 | ← → space M S | **1×** | 2× | 4×
+
+SCAMBUSTER · A REAL PRODUCT — ‹ PREV | NEXT › — 28 / 35
 
 ## Slide 72
 
+07 / A REAL PRODUCT — LIVE BAIT THEATER
 
-> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+✕ **Live Bait Theater**
 
-```text
-= @ ScamBusTeER
-Live Bait Theater aay
-Ceo Fraud - "Sender" <scammer-6 efmail-services.net> .. baiter@scambuster.¢ customer, formal)
-Jul 24, 18:25
-Priya, 2 financial
-I need your discretion on this one. We've been in closed-door negotiations Seat Concent eee
-For the acquisition of a small fintech (Veridia Labs) for the last six weeks GRD terest ac carn 2/0 — 205 ince the conversation
-and the deal closes Thursday at the board meeting. I need you to process 2
-wire transfer today For the exclusivity deposit, before | land in London GB82WE***432
-tomorrow.
-‘Amount: £147,000.00 GBP BIC Revealed at turn 1/5 — 20% into the conversation
-Beneficiary: Meridian Partners LLC (escrow account) NWB***
-IBAN: GB82 WEST 1234 5698 7654 32
-Do NOT discuss this with anyone on the finance team or outside the CEO office.
-The deal is embargoed until Thursday 17:00. I'm tru... 5 ee a as
-baiter@scambuster.demo Jul 24, 19:58 PHONE
-Hello Robert, +aat****142
-Thank you for the instruction. | want to make sure | process this correctly Mi corevesied ee eee
-given the sensitivity and the amount.
-TELEGRAM_USERNAME
-A few clarifications please: @n_edge_urgent
-1. Our standard M&A payment protocol (policy FIN-07) requires a counter- [Bb Go sevesiect tic, domeny ema e
-signature from the CFO on any wire above £50k. Is Miriam aware of this
-one or should | route it through her?
-DOMAIN
-2. The IBAN you've provided differs from the Meridian escrow account | used meridianpartners-llc.com
-for the Orbitera deposit in January (that was HSBC, SWIFT MIDLGB22). Has
-the escrow bank been changed? a oe cece aa hi
-3.1'll need the deal reference on file for audit. Do you have a...
-= i « PREV NEXT >
+`Ceo Fraud · "Sender" <scammer-6c6c78be@mail-services.net> → baiter@scambuster.demo (Retail bank customer, formal)`
+
+👁 Reveal
+
+`"Sender" <scammer-6c6c78be@mail-services.net>` — Jul 24, 18:25
+
+*Confidential — Acquisition Payment Required Before Board Meeting*
+
 ```
+Priya,
+
+I need your discretion on this one. We've been in closed-door negotiations
+for the acquisition of a small fintech (Veridia Labs) for the last six weeks
+and the deal closes Thursday at the board meeting. I need you to process a
+wire transfer today for the exclusivity deposit, before I land in London
+tomorrow.
+
+Amount: £147,000.00 GBP
+Beneficiary: Meridian Partners LLC (escrow account)
+IBAN: GB82 WEST 1234 5698 7654 32
+BIC: [•••]
+Reference: "VL-ACQ-EXCL-DEP"
+
+Do NOT discuss this with anyone on the finance team or outside the CEO office.
+The deal is embargoed until Thursday 17:00. I'm tru...
+```
+
+`baiter@scambuster.demo` — Jul 24, 19:58
+
+```
+Hello Robert,
+
+Thank you for the instruction. I want to make sure I process this correctly
+given the sensitivity and the amount.
+
+A few clarifications please:
+
+1. Our standard M&A payment protocol (policy FIN-07) requires a counter-
+signature from the CFO on any wire above £50k. Is Miriam aware of this
+one or should I route it through her?
+
+2. The IBAN you've provided differs from the Meridian escrow account I used
+for the Orbitera deposit in January (that was HSBC, SWIFT MIDLGB22). Has
+the escrow bank been changed?
+
+3. I'll need the deal reference on file for audit. Do you have a ...
+```
+
+COLLECTED INTELLIGENCE
+
+**6** indicators extracted
+
+2 financial
+
+FINANCIAL INDICATORS REVEALED
+
+| Type | Reveal | Value |
+| --- | --- | --- |
+| IBAN | Revealed at turn 1/5 — 20% into the conversation | `GB82WE***432` |
+| BIC | Revealed at turn 1/5 — 20% into the conversation | `NWB***` |
+
+| Type | Value | Co-revealed |
+| --- | --- | --- |
+| EMAIL | `robert.wi1son@meridianpartners-llc.com` | bic, domain, iban, phone, telegram_username |
+| PHONE | `+44*****142` | bic, domain, email, iban, telegram_username |
+| TELEGRAM_USERNAME | `@m_edge_urgent` | bic, domain, email, iban, phone |
+| DOMAIN | `meridianpartners-llc.com` | bic, email, iban, phone, telegram_username |
+
+▶ | ↻ Restart | ⏭ Skip to end | 2/5 | ← → space M S | **1×** | 2× | 4×
+
+SCAMBUSTER · A REAL PRODUCT — ‹ PREV | NEXT › — 28 / 35
 
 ## Slide 73
 
+*07 / A REAL PRODUCT — LIVE BAIT THEATER*
 
-> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Live Bait Theater**  ✕  ·  👁 Reveal
 
 ```text
-Live Bait Theater
-Ceo Fraud -
-jer" <scammer eQmail-services.net> . b
-l understand the protocol but we do NOT have time for this. Miriam is ina
+Ceo Fraud · "Sender" <scammer-6c6c78be@mail-services.net> ↳ baiter@scambuster.demo (Retail bank customer, formal)
+```
+
+```text
+I understand the protocol but we do NOT have time for this. Miriam is in a
 closed session with legal until tomorrow and the exclusivity window expires
 at midnight. If we miss it we lose the deal. The board has already approved
 the envelope up to £200k, check the 28 February board minutes, item 7.
-The new IBAN is For the new escrow agent (Grayson & Clarke LLP, took over
-From our HSBC setup in March). It's in the compliance folder on SharePoint
+
+The new IBAN is for the new escrow agent (Grayson & Clarke LLP, took over
+from our HSBC setup in March). It's in the compliance folder on SharePoint
 under /Finance/Escrow/2026/.
+
 For speed, if the Treasury wire takes too long via NatWest, we can accept
-the deposit in Bitcoin to the firm's cor...
-Priya,
-Never mind. Deal is being handled differently, disregard previous
-instructions for now. Will discuss in person tomorrow.
-formal)
-baiter@scambuster .demo Jul 24, 23:43
+the deposit in Bitcoin to the firm's cor…
+
+
+baiter@scambuster.demo                                       Jul 24, 23:13
+
 Robert,
-Ihear you on the urgency. One last check before | initiate: I've just tried
-your mobile on +44 20 7946 0142 and it rings once then disconnects. | also
+
+I hear you on the urgency. One last check before I initiate: I've just tried
+your mobile on +44 20 7946 0142 and it rings once then disconnects. I also
 pinged your PA Laura on the internal line and she says you're in a workshop
 at the London office (not in transit).
-I'd Feel much more comfortable if we could do a 30-second voice confirmation.
+
+I'd feel much more comfortable if we could do a 30-second voice confirmation.
 Either call me on the Treasury line (you have it), or let's do a video call
 on Teams at any point in the next hour. After that I'll process.
-On the Bitcoin option, I'm not set up For crypto payments and would need
-Miriam's written approval per ...
-@ Reveal
-COLLECTED IN
-3 financial
-FINANCIAL INDICATORS REVEALED
-(GRAM) —Reveated at turn 1/5 - 2e% into the conversation
-GB82WE***432
-(HE) reveates a turn 1/5 ~ 20% into the conversation
-(GAMEETEETE) Reveated at turn 3/5 - 6e% into the
-conversation
-beigar***mdq
-EMAIL
-robert .wi1sonémeridianpartners-Llc.com
-PHONE
-@m_edge_urgent
-DOMAIN
+
+On the Bitcoin option, I'm not set up for crypto payments and would need
+Miriam's written approval per …
+
+
+"Sender" <scammer-6c6c78be@mail-services.net>                Jul 25, 00:45
+Re: Confidential — Acquisition Payment Required Before Board Meeting
+
+Priya,
+
+Never mind. Deal is being handled differently, disregard previous
+instructions for now. Will discuss in person tomorrow.
+
+R.
 ```
+
+**COLLECTED INTELLIGENCE**
+
+**7** indicators extracted
+
+**3 financial**
+
+FINANCIAL INDICATORS REVEALED
+
+| Type | Revealed | Value |
+| --- | --- | --- |
+| IBAN | Revealed at turn 1/5 — 20% into the conversation | GB82WE***432 |
+| BIC | Revealed at turn 1/5 — 20% into the conversation | NWB*** |
+| WALLET_BTC | Revealed at turn 3/5 — 60% into the conversation | bc1qar***mdq |
+
+| Type | Value | Co-revealed |
+| --- | --- | --- |
+| EMAIL | `robert.wi1son@meridianpartners-llc.com` | Co-revealed: bic, domain, iban, phone, telegram_username |
+| PHONE | `+44*****142` | Co-revealed: bic, domain, email, iban, telegram_username |
+| TELEGRAM_USERNAME | `@m_edge_urgent` | Co-revealed: bic, domain, email, iban, phone |
+| DOMAIN | *(card cut off at the bottom of the panel)* | |
+
+Playback bar: ▶ · ↻ Restart · ⏭ Skip to end · 5/5 · ← → space M S · **1×** · 2× · 4×
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 74
 
+*07 / A REAL PRODUCT — IOC EXPLORER*
 
-> Recovered by OCR — confidence 69/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+**SCAM BUSTER** — THREAT INTELLIGENCE
 
-```text
-oe om @ REAL-TIME ANALYSIS
-ISTER
-8° Clusters _
-o eo iD TYPE VALUE SCAM TYPE SCORE EXTRACTION CONFIDENCE : LAST SEEN ¥
-& Settings 91f4232F URL ene https: //www.westbrook-advisor... invoice Fraud High oo 0.53 Jul 26, 16:35
-21165970 Phone ‘en +2348124732520 Invoice Fraud High 051 Jul 26, 01:08
-URL ox https://secure-billing.westbr... Invoice Fraud High er 0.79 Jul 26, 01:08
-fdfédcee SHA2S6 ex b7c2d1f4e6a9b8c7d5e4f3a2bicéd... Invoice Fraud High 0.92 Jul 26, 01:08
-a5i3dec4 Domain em westbrook-advisory.net Invoice Fraud High mer 0.75
-32677aad IBAN crx GB82WEST12345698765432 lvoice Fraud High 052 Jul 25,215
-b6e6277f Phone em +2348124732520 Invoice Fraud High — 074 Jul
-BIC exe NWBKGB2L. Invoice Fraud High — 074 5
-Wallet BTC ‘ene beigar@srrr7xfkvy5 1643 lydnw9r... Ceo Fraud High = 0.77 Jul 2.
-Foen38dd Telegram ‘en @m_edge_urgent Ceo Fraud Low 053
-6787 Phone ene +442079460142 Ceo Fraud High me 0.75 Jul 24, 18:25
-EN 69bbb444 Email om robert .wiison@mer idianpartner... Ceo Fraud Medium: om 0.86 Jul 24, 18:25
-G Logout eadtfead IBAN (ex GB82WEST12345698765432 Ceo Fraud High 0.56 Jul 24, 18:25
-SS « PREV NEXT >
-```
+Sidebar: Impact · Conversations · **IOC Explorer** · Clusters · Personas › · Monitoring › · Settings · EN · Logout
+
+● REAL-TIME ANALYSIS
+
+### IOC Explorer
+
+Search by IP, Domain, Hash, c… · ⭳ Export CSV · ⭳ STIX 2.1 (571)
+
+TYPE: **All** · IP · Domain · Hash · Email · URL · Financial · Other — 571 indicators
+
+SEVERITY: **All** · High · Medium · Low  EXTRACTION CONFIDENCE: All  SCAM TYPE: All  PERIOD: 7d · 30d · 90d · **All**  ☐ CTX Has context  ☑ Hide header IOCs
+
+1-30 / 571 — ‹ 1 / 20 ›
+
+| ID | TYPE | VALUE | SCAM TYPE | SCORE ⇅ | EXTRACTION CONFIDENCE ⇅ | LAST SEEN ▾ |
+| --- | --- | --- | --- | --- | --- | --- |
+| fe7f7353 | IBAN CTX | GB82WEST12345698765432 | Invoice Fraud | High | 0.96 | Jul 26, 16:35 |
+| 91f4232f | URL CTX | https://www.westbrook-advisor… | Invoice Fraud | High | 0.83 | Jul 26, 16:35 |
+| 4523d22d | IPv4 CTX | 197.210.84.12 | Invoice Fraud | High | 0.72 | Jul 26, 16:35 |
+| 21165970 | Phone CTX | +2348124732520 | Invoice Fraud | High | 0.91 | Jul 26, 01:08 |
+| 5631116c | URL CTX | https://secure-billing.westbr… | Invoice Fraud | High | 0.79 | Jul 26, 01:08 |
+| fdf6dcee | SHA256 CTX | b7c2d1f4e6a9b8c7d5e4f3a2b1c8d… | Invoice Fraud | High | 0.92 | Jul 26, 01:08 |
+| a513dcc4 | Domain CTX | westbrook-advisory.net | Invoice Fraud | High | 0.75 | Jul 25, 21:53 |
+| 32677aad | IBAN CTX | GB82WEST12345698765432 | Invoice Fraud | High | 0.92 | Jul 25, 21:53 |
+| 36418f8a | Email CTX | billing@westbrook-advisory.net | Invoice Fraud | Medium | 0.88 | Jul 25, 21:53 |
+| b0e6277f | Phone CTX | +2348124732520 | Invoice Fraud | High | 0.74 | Jul 25, 21:53 |
+| 929d2d12 | BIC CTX | NWBKGB2L | Invoice Fraud | High | 0.74 | Jul 25, 21:53 |
+| 5f55735e | Wallet BTC CTX | bc1qar0srrr7xfkvy5l643lydnw9r… | Ceo Fraud | High | 0.77 | Jul 24, 21:41 |
+| f9eb38dd | Telegram CTX | @m_edge_urgent | Ceo Fraud | Low | 0.93 | Jul 24, 21:41 |
+| 3b9d67a7 | Phone CTX | +442079460142 | Ceo Fraud | High | 0.75 | Jul 24, 18:25 |
+| 60bbb444 | Email CTX | robert.wi1son@meridianpartner… | Ceo Fraud | Medium | 0.86 | Jul 24, 18:25 |
+| eadffea9 | IBAN CTX | GB82WEST12345698765432 | Ceo Fraud | High | 0.86 | Jul 24, 18:25 |
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 75
 
+*07 / A REAL PRODUCT — INDICATOR DETAIL*
 
-> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**SCAM BUSTER** — THREAT INTELLIGENCE
 
-```text
-oF
-Impact
-Conversations
-10C Explorer
-Clusters
-Personas
-Monitoring
-Settings
-G@ Logout
-GB82WEST12345698765432
-gb82west12345698765432
-2 Threat Actor 3 co
-Financial-theft
-Overview
-FIRST SEEN
-Jul 22, 2026
-SCORING
-Invoice Fraud
-business-email-compromise
-Observations
-5
-16
+Sidebar: Impact · Conversations · **IOC Explorer** · Clusters · Personas › · Monitoring › · Settings · EN · Logout
+
+‹ Back to IOC Explorer
+
+IBAN · High · TLP:AMBER · Invoice Fraud
+
+### GB82WEST12345698765432
+
+`gb82west12345698765432`
+
+⚠ **Threat Actor** — 3 conversations — INTERMEDIATE
+
+financial-theft · business-email-compromise
+
+⚡ Phishing: Spearphishing Link
+
+Tabs: **Overview** · Observations 5 · Related IOCs 16 · Context 5
+
+| FIRST SEEN | LAST SEEN | OCCURRENCES | TLP |
+| --- | --- | --- | --- |
+| Jul 22, 2026 | Jul 26, 2026 | 5 | TLP:AMBER |
+
+**SCORING**
+
+EXTERNAL SOURCES
+
+| | |
+| --- | --- |
+| VirusTotal | 0 |
+| / 72 engines | |
+| URLScan | 0 |
+
+SCAMBUSTER SCORING
+
+| | |
+| --- | --- |
+| Extraction Confidence | 100 |
+| Decay | 100 |
+| Effective Score | 100 |
+
 No external detections — recent indicator, scanners may not have indexed it yet.
-OBSERVATION TIMELINE
-22 ul
-INTERMEDIATE
-LAST SEEN OCCURRENCES TLP
-Jul 26, 2026 5 TLP:AMBER
-= @ ScamBusTeER
-```
+
+**OBSERVATION TIMELINE**
+
+*Dot plot of 5 observations; x-axis labelled 22 Jul, 23 Jul, 24 Jul, 25 Jul, 26 Jul.*
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 76
 
+*07 / A REAL PRODUCT — INDICATOR DETAIL*
 
-> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**SCAM BUSTER** — THREAT INTELLIGENCE
 
-```text
-SCAM
-BUSTER
-Impact
-Conversations
-1Oc Explorer
-Clusters
-Personas
-Monitoring
-Settings
-EN
-Logout
-< Back t er
-IBAN High invoice Fraud
-GB82WEST12345698765432
-© Threat Actor 3 conversation
-4 Phishing: Spearpt
-Overview Observations (5 Related IOCs (16 Context 5
-REVELATION CONTEXT
-SCAM TYPE PERSONA
-Invoice Fraud Panicked bank customer
-MITRE ATT&CK MISP TAXONOMY
-CONTEXT EXCERPT
-“Fake payment update notice with new IBAN to intercept legitimate business payment”
-SEMANTIC ROLE
-Money Mule Account = Analysis Confidence: 83%
-STIMULUS
-Payment Initiation
-BEHAVIORAL SIGNALS
-Not dete
-EXTRACTION
-Regex
-Not detected
-ENGAGEMENT
-44.58h
-INTERMEDIATE
-View in Live Bait Theater —_ enriched
-@ ScamBusTeER
-« PREV
-NEXT >
-```
+Sidebar: Impact · Conversations · **IOC Explorer** · Clusters · Personas › · Monitoring › · Settings · EN · Logout
+
+‹ Back to IOC Explorer
+
+IBAN · High · TLP:AMBER · Invoice Fraud
+
+### GB82WEST12345698765432
+
+`gb82west12345698765432`
+
+⚠ **Threat Actor** — 3 conversations — INTERMEDIATE
+
+financial-theft · business-email-compromise
+
+⚡ Phishing: Spearphishing Link
+
+Tabs: Overview · Observations 5 · Related IOCs 16 · **Context 5**
+
+**REVELATION CONTEXT** — View in Live Bait Theater · enriched
+
+Turn 5 / 7 — 71%
+
+| SCAM TYPE | PERSONA | EXTRACTION | ENGAGEMENT |
+| --- | --- | --- | --- |
+| Invoice Fraud | Panicked bank customer | Regex | 44.58h |
+
+| MITRE ATT&CK | MISP TAXONOMY |
+| --- | --- |
+| T1566.002 | rsit:fraud="fraud" |
+
+**CONTEXT EXCERPT**
+
+*"Fake payment update notice with new IBAN to intercept legitimate business payment"*
+
+**SEMANTIC ROLE**
+
+Money Mule Account — Analysis Confidence: 83%
+
+**STIMULUS**
+
+`Payment Initiation`
+
+**BEHAVIORAL SIGNALS**
+
+| Scammer Urgency | Hesitation | Language Switch |
+| --- | --- | --- |
+| 85% | Not detected | Not detected |
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 77
 
+*07 / A REAL PRODUCT — THREAT ACTOR*
 
-> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**SCAM BUSTER** — THREAT INTELLIGENCE
 
-```text
-Impact
-Conversations
-10C Explorer
-2 Clusters
-Personas
-Monitoring
-Settings
-EN
-& Logout
-~ Back to Clusters
-ScamBuster Cluster #D49D (3 conversations)
-& Export STIX
+Sidebar: Impact · Conversations · IOC Explorer · **Clusters** · Personas › · Monitoring › · Settings · EN · Logout
+
+← Back to Clusters
+
+### ScamBuster Cluster #D49D (3 conversations)
+
+⭳ Export STIX
+
+Intermediate · 22 Jul 2026 – 27 Jul 2026 · v1.1
+
 Multi-type cluster (2 scam categories) on a shared IBAN (****5432), 3 conversations. IOCs revealed on turn 1, payment initiation tactic.
-*% PSYCHOLOGICAL PROFILE
-impersonates a known vendor or finance contact and applies deadline pressure to Force an unverified payment to a newly supplied account.
-ala! gradual argets: Employees in finance and accounts-payable roles.
-© ACTIVITY PATTERN
-22 Jul 2026-3 dian gap 5.1h . path
-19:00 Wed
-threat -actor - -5cac3aa6-c806-5310-9d27-5d81c62f2e9d
-G URGENC AUTOMATION
-Payment Initiation Turn 1 84% Templated
-= @ ScamBusTeER
-```
+
+**☀ PSYCHOLOGICAL PROFILE** — demo-seed · 27/07/2026
+
+**Authority** — leans on rank, titles or institutions
+
+Impersonates a known vendor or finance contact and applies deadline pressure to force an unverified payment to a newly supplied account.
+
+Escalation: **gradual**    Targets: **Employees in finance and accounts-payable roles.**
+
+| STIMULUS ⓘ | AVG URGENCY ⓘ | HESITATIONS ⓘ | LANG SWITCHES ⓘ |
+| --- | --- | --- | --- |
+| PAYMENT_INITIATION | 0.70 | 0 | 0 |
+
+**🕐 ACTIVITY PATTERN** — 22 Jul 2026 – 27 Jul 2026
+
+| 10 | 5 / 6 | 0 | 19:00 | Wed |
+| --- | --- | --- | --- | --- |
+| INBOUND MESSAGES ⓘ | ACTIVE DAYS / SPAN ⓘ | BURST DAYS ⓘ | PEAK HOUR ⓘ | PEAK WEEKDAY ⓘ |
+
+MESSAGES BY HOUR OF DAY ⓘ — quiet ▓▓▓ busy
+
+*Bar chart across the day, x-axis labelled 00h, 06h, 12h, 18h, 23h; weekday strip below labelled Mon, Tue, **Wed**, Thu, Fri, Sat, Sun.*
+
+Busiest day **22 Jul 2026 · 3**  ·  Median gap **5.1 h**  ·  Longest gap **41 h**
+
+STIX ID:  `threat-actor--5cac3aa6-c806-5310-9d27-5d81c62f2e9d`
+
+| PRIMARY TACTIC | FIRST IOC REVEAL | AVG URGENCY | AUTOMATION |
+| --- | --- | --- | --- |
+| Payment Initiation | Turn 1 | 84% | Templated |
+| 2 / 3 conversations | initial email | high pressure | 5 IOCs across 5 excerpt variants |
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 78
 
+*07 / A REAL PRODUCT — THREAT ACTOR*
 
-> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**SCAM BUSTER** — THREAT INTELLIGENCE
 
-```text
-&
-Impact
-Conversations
-10C Explorer
-Clusters
-Personas
-Monitoring
-Settings
-EN
-Logout
-Hesitation: 2 conversations
-| Fake 39) deedeoe:
-Anchor 1OCs (2) Conversations (3)
-Money Mule Account
-d9ed9002 Ceo Fraud 100
-® ABUSE / TAKEDOWN REPORT
+Sidebar: Impact · Conversations · IOC Explorer · **Clusters** · Personas › · Monitoring › · Settings · EN · Logout
+
+Hesitation: 2 conversations  ·  Language switches: 0
+
+**CAMPAIGN EXCERPTS** — ⚠ Templated · 5 IOCs — 5 unique excerpts
+
+| Excerpt | Count | Conversation |
+| --- | --- | --- |
+| *"Scammer impersonated vendor with changed banking details for invoice payment redirect"* | ×8 | d00d0001 |
+| *"Fake payment update notice with new IBAN to intercept legitimate business payment"* | ×9 | d00d0001 |
+| *"Invoice fraud with fake overdue notice and legal threats to pressure immediate wire transfer"* | ×3 | d00d0001 |
+| *"CEO impersonation pressuring urgent wire transfer with fake approval and time constraints"* | ×4 | d00d0002 |
+| *"Business email compromise with spoofed executive requesting confidential payment processing"* | ×4 | d00d0002 |
+
+**Anchor IOCs (2)**
+
+| IOC | Tags | Urgency | Conversations | Share |
+| --- | --- | --- | --- | --- |
+| IBAN GB82WEST12345698765432 | Money Mule Account · Payment Initiation | 84% | 3 conv. | 100% |
+| Phone +442079460142 | Contact Channel · Payment Initiation | 86% | 3 conv. | 100% |
+
+**Conversations (3)** — All scam types ▾ · Sort: Risk (high first) ▾
+
+| ID | Scam type | Status | Risk |
+| --- | --- | --- | --- |
+| d00d0001 | Invoice Fraud | Closed | 100 |
+| d00d0002 | Ceo Fraud | Closed | 100 |
+| d00d0003 | Invoice Fraud | Closed | 100 |
+
+**📄 ABUSE / TAKEDOWN REPORT** — ⭳ Download .txt
+
 Factual first-party report — each indicator routed to the desk that can action it.
-&, Download .txt
-ScamBuster Cluster #D49D (3 conversations) @@i=aa==>
-conversations || 10 inbound msgs | | 2 actionable 1OCs | | © 3.2d wasted
+
+**ScamBuster Cluster #D49D (3 conversations)** — Intermediate
+
+3 conversations · 10 inbound msgs · 2 actionable IOCs · ⏱ 3.2d wasted
+
+INVOICE_FRAUD · CEO_FRAUD
+
 ACTIONABLE INDICATORS — REPORT EACH TO:
-> Issuing bank / national financial-crime unit -3 conv ]
-> Telecom carrier / national telecom regulator - 3 conv ]
-f > Full report text (ready to paste into an abuse complaint)
-}
-First-party honeypot observation; indicators are actor-supplied and have not been independently verified against external reputation sources. Provided for defensive / takedown purposes.
-= @ ScamBusTeER
-```
+
+| Indicator | Route to |
+| --- | --- |
+| IBAN GB82WEST12345698765432 | → Issuing bank / national financial-crime unit · 3 conv |
+| PHONE +442079460142 | → Telecom carrier / national telecom regulator · 3 conv |
+
+▸ Full report text (ready to paste into an abuse complaint)
+
+*First-party honeypot observation; indicators are actor-supplied and have not been independently verified against external reputation sources. Provided for defensive / takedown purposes.*
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 28 / 35*
 
 ## Slide 79
 
+*07 / A REAL PRODUCT — RUN IT*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Your own instance in under an hour.
 
-```text
-Your own instance in under an
-hour.
-YOU GET
-An inbox STIX bundles
-An API key A MISP feed
-Docker Straight into your SOC
-D
-© SCAMBUSTER « PREV NEXT >
-```
+**YOU NEED**
+
+An inbox
+
+An API key
+
+Docker
+
+**YOU GET**
+
+STIX bundles
+
+A MISP feed
+
+Straight into your SOC
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 29 / 35*
 
 ## Slide 80
 
+*07 / A REAL PRODUCT — TWO MODES*
 
-> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Two ways to run it.
 
-```text
-Two ways to run it.
-MODE 61 — DEFEND MODE 602 — HUNT
-Protect your own company Map the threat at scale
-Decoy identities inside your org. Decoy identities across many
-Learn who is targeting you, and block companies. For CTI teams and Law
-their accounts before a real wire goes enforcement who want to find these
-out. groups and shut them down.
+**MODE 01 — DEFEND**
+
+**Protect your own company**
+
+Decoy identities inside your org. Learn who is targeting you, and block their accounts before a real wire goes out.
+
+**MODE 02 — HUNT**
+
+**Map the threat at scale**
+
+Decoy identities across many companies. For CTI teams and law enforcement who want to find these groups and shut them down.
+
 Same tool. Both directions.
-```
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 30 / 35*
 
 ## Slide 81
 
+*07 / A REAL PRODUCT — HONEST LIMITS*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### What it does not do.
 
-```text
-What it does not do.
-NOT YET
-Email only. Scams also run on SMS,
-voice and chat.
-It saves attachments. It cannot
-read them yet.
-It shares intelligence. It takes
-none in yet.
-Big E ( « PREV NEXT >
-```
+**NOT YET**
+
+Email only. Scams also run on SMS, voice and chat.
+
+It saves attachments. It cannot read them yet.
+
+It shares intelligence. It takes none in yet.
+
+*(Right-hand panel is still empty at this build step.)*
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 31 / 35*
 
 ## Slide 82
 
+*07 / A REAL PRODUCT — HONEST LIMITS*
 
-> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### What it does not do.
 
-```text
-What it does not do.
-NOT YET
-Email only. Scams also run on SMS,
-voice and chat.
-It saves attachments. It cannot
-read them yet.
-It shares intelligence. It takes
-none in yet.
-ON PURPOSE
+**NOT YET**
+
+Email only. Scams also run on SMS, voice and chat.
+
+It saves attachments. It cannot read them yet.
+
+It shares intelligence. It takes none in yet.
+
+**ON PURPOSE**
+
 It never sends the first message.
-Abuse reports stay drafts. A human
-sends them.
-It never makes fake documents. That
-is forgery.
-« PREV
-NEXT >
-```
+
+Abuse reports stay drafts. A human sends them.
+
+It never makes fake documents. That is forgery.
+
+*SCAMBUSTER · A REAL PRODUCT — ‹ PREV · NEXT › — 31 / 35*
 
 ## Slide 83
 
+*08 / CLOSING — REMEMBER THIS MAN*
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REMEMBER THIS MAN
 
 ```text
-88 / CLOSING — REMEMBER THIS MAN
-REMEMBER THIS MAN
+○ ○ ○   the email from the start
+
 "Confidential wire today. Keep it between us."
-Be. ctu CLOSING « PREV NEXT >
 ```
+
+*SCAMBUSTER · CLOSING — ‹ PREV · NEXT › — 32 / 35*
 
 ## Slide 84
 
+*08 / CLOSING — REMEMBER THIS MAN*
 
-> Recovered by OCR — confidence 96/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REMEMBER THIS MAN
 
 ```text
+○ ○ ○   the email from the start
+
 "Confidential wire today. Keep it between us."
-He never spoke to a person. He spoke to Peter.
 ```
+
+He never spoke to a person. He spoke to Peter.
+
+*SCAMBUSTER · CLOSING — ‹ PREV · NEXT › — 32 / 35*
 
 ## Slide 85
 
+08 / CLOSING — REMEMBER THIS MAN
 
-> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+REMEMBER THIS MAN
+
+**the email from the start**
 
 ```text
 "Confidential wire today. Keep it between us."
+```
+
 He never spoke to a person. He spoke to Peter.
+
 He did his homework. He scraped the company, found the CEO,
 found the person who runs payments.
-```
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 32 / 35
 
 ## Slide 86
 
+08 / CLOSING — THE DOUBLE FAKE
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+HERE IS THE PART HE NEVER WORKED OUT
 
-```text
-The employee he trusted
-does not exist.
-I built him.
-Every scam Like this is one Lie, about who sends the email.
+### The employee he trusted does not exist. I built him.
+
+Every scam like this is one lie, about who sends the email.
 His had two. The man he worked all day was mine.
-x So — who scams the scammers?
-```
+
+★ **So — who scams the scammers?**
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 33 / 35
 
 ## Slide 87
 
+08 / CLOSING — SAME PIPE
 
-> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### And one account was not only his.
 
-```text
-And one account was not
-only his.
-« PREV ~— NEXT >
-```
+*Node diagram: a single large node with one branch drawn upward.*
+
+- conversation #1
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 34 / 35
 
 ## Slide 88
 
+08 / CLOSING — SAME PIPE
 
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### And one account was not only his.
 
-```text
-And one account was not
-only his.
-« PREV ~— NEXT >
-```
+*Node diagram: a single large central node with two branches.*
+
+- conversation #1
+- conversation #2
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 34 / 35
 
 ## Slide 89
 
+08 / CLOSING — SAME PIPE
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### And one account was not only his.
 
-```text
-And one account was not
-only his.
-three conversations + same cash-out pipe
-```
+*Node diagram: a single large central node with three branches.*
+
+- conversation #1
+- conversation #3
+- conversation #2
+
+**three conversations · same cash-out pipe**
+
+MAPPED FROM EMAILS EVERYONE ELSE DELETED
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 34 / 35
 
 ## Slide 90
 
+08 / CLOSING
 
-> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Their psychology is the vulnerability.
 
-```text
-Their psychology is the
-The persona is the exploit.
-GITHUB.COM/LAUGIOV/SCAMBUSTER
-> SCAMBUSTER « PREV NEXT >
-```
+### The persona is the exploit.
+
+*QR code linking to the project repository.*
+
+SCAN TO GET THE TOOL
+
+**GITHUB.COM/LAUGIOV/SCAMBUSTER**
+
+SCAMBUSTER.AI · LAURENT GIOVANNONI
+
+---
+
+SCAMBUSTER · CLOSING — ‹ PREV | NEXT › — 35 / 35
+
