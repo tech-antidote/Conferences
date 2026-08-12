@@ -306,7 +306,23 @@ Three separate bugs are fixed in the tool so this cannot recur:
 
 ## How to use this
 
-- Filter on `ocr_unreliable_blocks: 0` for documents whose text is safe to quote.
+- **`vision_verified_pages` is the only field that means a human-equivalent
+  reader looked at the page.** Filter on it. Everything else describes what the
+  converter thinks it did.
+- Do **not** filter on `ocr_unreliable_blocks: 0` as a proxy for "safe to
+  quote" — this file used to say you could, and the corpus has since falsified
+  it. `Chaining Logical Bugs for Reliable Windows LPE` carries
+  `ocr_pages: 0`, `has_ocr: false` and `ocr_unreliable_blocks: 0`, which is as
+  clean as this metadata gets. Read against its pages, 73 of its 80 pages
+  needed rewriting: 16 badly-mangled, 57 with errors, 7 correct. Nothing was
+  flagged because nothing OCR'd; the damage was reading order, shredded code
+  blocks, and a provider GUID that lost a hyphen at a line wrap
+  (`e46eead8-0c54-44899898-8fa79d059e0e` for
+  `e46eead8-0c54-4489-9898-8fa79d059e0e`).
 - Treat any value inside an OCR block as approximate; `source_pdf` names the file
   to check against.
 - Transcripts (`source_type: transcript`) contain no OCR at all.
+
+The general form: these fields are a record of the converter's own behaviour,
+not an assessment of its output. A document is unexamined until something has
+read its pages.

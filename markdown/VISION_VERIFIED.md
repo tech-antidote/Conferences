@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1844 slides across 146 documents.**
+**1924 slides across 147 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 797 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 821 | structure held; individual characters or lines wrong |
-| accurate | 198 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 813 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 878 | structure held; individual characters or lines wrong |
+| accurate | 205 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -18,7 +18,7 @@ judgement of the OCR text, not of the slide.
 Grouped by keyword match on the talk title, so a talk can appear
 under more than one heading or under none. Counts are slides.
 
-### Windows, Active Directory and Entra — 14 talks, 160 slides
+### Windows, Active Directory and Entra — 15 talks, 240 slides
 
 - **A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit** (Black Hat ASIA 2024) — slide 38
 - **(Mis)adventures with Copilot+ Attacking and Exploiting Windows NPU Drivers** (Black Hat ASIA 2025) — slide 81
@@ -33,6 +33,7 @@ under more than one heading or under none. Counts are slides.
 - **Vulnerability Haruspicy Picking Out Risk Signals from Scoring System Entrails** (Black Hat USA 2025) — slides 6-8
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
+- **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
 ### Cloud and API — 15 talks, 195 slides
@@ -69,7 +70,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 31 talks, 713 slides
+### Zero-day, RCE and novel exploitation — 32 talks, 793 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -97,13 +98,14 @@ under more than one heading or under none. Counts are slides.
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
+- **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
 - **Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design** (DEF CON 34) — slides 1-58
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (DEF CON 34) — slides 1-62
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
-### Firmware, hardware and embedded — 21 talks, 268 slides
+### Firmware, hardware and embedded — 22 talks, 348 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -124,6 +126,7 @@ under more than one heading or under none. Counts are slides.
 - **Breaking Hardware CFI with Sigreturn** (Black Hat USA 2026) — slides 1-68
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
+- **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 
@@ -268,6 +271,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Breaking Amazon lockers by any means necessary | 1-37 | badly-mangled, minor-errors, accurate | 8 |
+| DEF CON 34 | Chaining Logical Bugs for Reliable Windows LPE | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
