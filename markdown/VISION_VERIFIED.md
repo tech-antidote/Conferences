@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**976 slides across 134 documents.**
+**1030 slides across 135 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 460 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 419 | structure held; individual characters or lines wrong |
+| badly-mangled | 472 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 461 | structure held; individual characters or lines wrong |
 | accurate | 58 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 39 | reviewed before verdicts were recorded |
 
@@ -34,7 +34,7 @@ under more than one heading or under none. Counts are slides.
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 
-### Cloud and API — 12 talks, 84 slides
+### Cloud and API — 13 talks, 138 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -48,6 +48,7 @@ under more than one heading or under none. Counts are slides.
 - **Azure's Weakest Link How API Connections Spill Secrets** (Black Hat USA 2025) — slide 69
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
+- **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
 
 ### Web and browser — 13 talks, 130 slides
 
@@ -248,6 +249,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-64 | badly-mangled, minor-errors, accurate | 4 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
+| DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |

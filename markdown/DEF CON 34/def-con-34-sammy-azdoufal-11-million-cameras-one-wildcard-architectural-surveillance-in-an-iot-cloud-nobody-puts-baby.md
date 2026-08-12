@@ -8,12 +8,15 @@ year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Sammy Azdoufal - 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud - nobody puts baby.pptx"
 pages: 54
 sha256: "56533fa0c79bb75782212870bfd6ea33407ba7d5632a448e183d1b0f6ab3e01c"
-text_chars: 10430
+text_chars: 19720
 ocr_pages: 54
 has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.3
 ocr_unreliable_blocks: 0
+content_note: "All 54 pages were rendered and read against the source deck by a vision model, and all 54 were rewritten. This deck is a Marp export: every slide is a single flat image with no text layer, so the entire document came from OCR. The ocr_* fields describe the superseded first-pass extraction."
+vision_verified_pages_changed: 54
+vision_verified_pages: 54
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,790 +32,1029 @@ converted_at: "2026-08-12T06:43:58Z"
 
 ## Slide 1
 
+### 1.1 Million Cameras, One Wildcard
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Architectural Surveillance in an IoT Cloud
 
-```text
-1.1 Million
-Cameras, One
-Wildcard
-Architectural Surveillance in an
-IoT Cloud
-Sammy Azdoufal - @xnOtsa
+DEF CON 34 · Main Stage  
+Sammy Azdoufal · @xn0tsa  
 Not a bug talk. A receipts talk.
-```
+
+1
 
 ## Slide 2
 
+*Full-bleed poster: a world map built out of thousands of surveillance cameras, red beams converging on one glowing asterisk at the centre.*
 
-> Recovered by OCR — confidence 84/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**ONE WILDCARD**
+
+```text
+TARGET:
+EVERYWHERE
+
+PROTOCOL:
+RTSP / HTTP
+
+AUTH:
+*
+
+RESULT:
+TOTAL ACCESS
+```
 
 ```text
 > scan.sh --global
+> enumerate.py
 > exploit.sh
-TARGET:
-EVERYVYHERE
-PROTOCOL :
-AUTH:
-*
-RESULT:
-TOTAL ACCESS oie
+> profit :)
 ```
+
+```text
+CONNECTED CAMERAS
+1,100,000+
+...AND COUNTING
+```
+
+**1.1 MILLION CAMERAS**
+
+2
 
 ## Slide 3
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**“Most IoT talks end at the CVE.”**
 
-```text
-DEF CON 34 -: Main Stage
-Most lIoT talks end at the CVE.
-This one starts after the
-patch.
-oe
-```
+This one starts after the patch.
+
+Sammy Azdoufal · @xn0tsa
+
+3
 
 ## Slide 4
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Diagram: three interlocking rings — blue, purple, red — over the words "ONE THESIS".*
 
-```text
-2
-DISCLOSURE RESEARCHER
-OPS LESSONS
-(EMAILS + IPO » CONTRACT) Pe a
-TECHNICAL
-AUDIT
-(12 CHAINS)
-One thesis : three narratives: Audit -
-Disclosure ops - Researcher lessons.
-```
+1. **TECHNICAL AUDIT** (12 CHAINS) — a numbered chain of links circling a robot with a magnifying glass
+2. **DISCLOSURE OPS** (EMAILS · IPO · CONTRACT) — icon labels: IPO, CONTRACT
+3. **RESEARCHER LESSONS** (BANK · PRETEXT · BACKDATING · GDPR) — icon labels: BANK, PRETEXT, BACKDATING, GDPR
+
+OBSERVE. MAP. VERIFY.
+
+**ONE THESIS**
+
+**ARCHITECTURAL ACCESS, NOT A BUG LIST**
+
+One thesis · three narratives: Audit · Disclosure ops · Researcher lessons.
+
+Sammy Azdoufal · @xn0tsa
+
+4
 
 ## Slide 5
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**“The vendor has by-design access to every customer’s camera.”**
 
-```text
-DEF CON 34 -: Main Stage
-The vendor has by-design access to
-every customer’s camera.
-Twelve independent chains.
-Patch one — access remains.
-Disclosure behavior is
-chain thirteen.
-oy
-```
+Twelve independent chains.  
+Patch one — access remains.  
+Disclosure behavior is chain thirteen.
+
+Sammy Azdoufal · @xn0tsa
+
+5
 
 ## Slide 6
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Three stories. One thesis.
 
-```text
-Three stories. One thesis.
-Narrative What it proves
-1 Technical audit Access is structural (12 chains — talk framing)
-2 Disclosure ops IR lag, backdating, the contract = evidence
-3 Researcher lessons Refuse the wrong instrument
+|  | Narrative | What it proves |
+| --- | --- | --- |
+| 1 | Technical audit | Access is structural (12 chains — talk framing) |
+| 2 | Disclosure ops | IR lag, backdating, the contract = evidence |
+| 3 | Researcher lessons | Refuse the wrong instrument |
+
 If you can recite this table at the end, the talk worked.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+6
 
 ## Slide 7
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SECTION 1 · 4 MIN · ORIGIN STORY
 
-```text
-DEF CON 34 -: Main Stage
-SECTION 1 - 4 MIN - ORIGIN STORY
-How I got here
-Light foil > civilian question >
-Hangzhou.
-Sammy Azdoufal - @xnOtsa
-```
+### How I got here
+
+Light foil → civilian question → Hangzhou.
+
+Sammy Azdoufal · @xn0tsa
+
+7
 
 ## Slide 8
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Previously, on MQTT…
 
-```text
-Previously, on MQTT...
-Two months earlier: DJI ROMO — same MOTT ACL smell, ~7k devices.
-$30k. One-page invoice. No novel. We move on.
-@e
-```
+Two months earlier: **DJI ROMO** — same MQTT ACL smell, ~7k devices.
+
+$30k. **One-page invoice.** No novel. We move on.
+
+Sammy Azdoufal · @xn0tsa
+
+8
 
 ## Slide 9
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Then a colleague asked
 
-```text
-Then a colleague asked
 Amazon baby monitor.
+
 “Is it safe?”
-The box never names the cloud.
+
+The box never names the cloud.  
 So I bought the same one.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+9
 
 ## Slide 10
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Same smell. Different ending.
 
-```text
-Same smell. Different ending.
-DJI paid like adults. Meari sent a Chinese-law service contract for the same
-neighborhood of money.
+**DJI** paid like adults. **Meari** sent a Chinese-law service contract for the same neighborhood of money.
+
 This talk is about the second ending.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+10
 
 ## Slide 11
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 86/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SECTION 2 · 3 MIN
 
-```text
-DEF CON 34 -: Main Stage
-Meet the sticker farm
-Sammy Azdoufal + @xnOtsa
-```
+### Meet the sticker farm
+
+Sammy Azdoufal · @xn0tsa
+
+11
 
 ## Slide 12
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Meari in one breath
 
-```text
-Meari in one breath
 Hangzhou ODM. Camera + firmware + cloud + app. Partners slap a logo.
-CloudEdge - Arenti - BOIFUN : PetTec - SV3C - Joystek - Luvion- ...
-IPO background: listed March 9, 2025 (ChiNext). Share price doubled after listing.
+
+CloudEdge · Arenti · BOIFUN · PetTec · SV3C · Joystek · Luvion · …
+
+IPO background: listed **March 9, 2025** (ChiNext). Share price doubled after listing.  
 Not a 2026 disclosure plot point — context.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+12
 
 ## Slide 13
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Placeholder card drawn as a classified document: hazard-tape border, corner registration marks.*
 
-```text
-DEF CON 34 -: Main Stage
+Warning triangle, top left: **CLASSIFIED / LEVEL 4 / EYES ONLY**
+
+**REDACTED**
+
 CAMERA ASSEMBLY LINE — FACTORY PHOTO PLACEHOLDER
-Factory / assembly-line photo goes here
-— where the stickers get born.
-```
+
+Bottom-left stamp: `DEF CON` / `//// 4` — bottom-right stamp: `FOUO` / `DO NOT DISTRIBUTE`
+
+Factory / assembly-line photo goes here — where the stickers get born.
+
+Sammy Azdoufal · @xn0tsa
+
+13
 
 ## Slide 14
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Brand test
 
-```text
-Brand test
-Watch DNS. > you’re in.
+Watch DNS. `*.meari.com.cn` → you’re in.  
 The logo on the plastic is cosplay.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+14
 
 ## Slide 15
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Split poster: "EXPECTATION" (green, left) versus "REALITY" (red, right).*
 
-```text
-EXPECTATION REALITY
-ALL ROADS LEAD TO THE SAME FUNNEL
-MY CAMERA IS SECURE AND PRIVATE
-ENCRYPTED
-STREAM
-Vv) SECURE
-CONNECTION
-a) YOUR PRIVACY
-MATTERS
+**EXPECTATION** — MY CAMERA IS SECURE AND PRIVATE
+
+- ✓ ENCRYPTED STREAM
+- ✓ SECURE CONNECTION
+- ✓ YOUR PRIVACY MATTERS
+
 > SAFE. PRIVATE. YOURS.
-PEACE OF MIND ACTIVATED.
-ay YOUR CAMERA: THEIR DATA.
-SCALE IS THE BUSINESS MODEI
-You bought a brand. You rented an ODM
-camera cloud.
-```
+>
+> PEACE OF MIND ACTIVATED.
+
+**REALITY** — ALL ROADS LEAD TO THE SAME FUNNEL
+
+Sign over the loading bay: WELCOME, DEVICES. NO AUTH REQUIRED.
+
+Checklist board:
+
+- ✓ NO PASSWORD?
+- ✓ DEFAULT PASSWORD?
+- ✓ EXPOSED PORT?
+- ✓ MISCONFIGURED?
+- ✓ DOESN'T MATTER.
+- ✓ WE TAKE ALL.
+
+Funnel swallowing the camera conveyor: **ODM BACKEND**
+
+Sign beside the funnel: ONE FLEET. ONE PIPE. ONE PROFIT. $
+
+> **YOUR CAMERA: THEIR DATA.**
+>
+> **SCALE IS THE BUSINESS MODEL.**
+
+**You bought a brand. You rented an ODM camera cloud.**
+
+Sammy Azdoufal · @xn0tsa
+
+15
 
 ## Slide 16
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 80/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**THE BOX SAYS BABY MONITOR**
+
+*A baby monitor in a suit and tie sits in a nursery beside a server rack labelled CLOUD.*
+
+Sticky note: GOOD NIGHT, SLEEP TIGHT, WE OWN YOUR SITE ♡
+
+CLOUD topic list:
 
 ```text
-DEF CON 34 -: Main Stage
-THE BOX SAYS BABY aires
-meari/ptz/1 gos 1 a
-meari/alert /motion, : a
-meari/config 1 @
-+
-> |
-THE CLOUD SAYS EVERYONE'S MONITOR
-300+ logos. One SDK. One backend.
+meari/video/1        QoS 1
+meari/audio/1        QoS 0
+meari/ptz/1          QoS 1
+meari/alert/motion   QoS 1
+meari/status         QoS 0
+meari/config         QoS 1
+
+meari/#
 ```
+
+Graffiti on the wall: THERE IS NO PRIVACY ONLY TOPICS — skull tagged `</>` — DEF CON
+
+**THE CLOUD SAYS EVERYONE’S MONITOR**
+
+**300+ logos. One SDK. One backend.**
+
+Sammy Azdoufal · @xn0tsa
+
+16
 
 ## Slide 17
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 1.1M
 
-```text
-devices - 118+ countries -
-registered at audit scale
-Sammy Azdoufal - @xnOtsa
-—
-```
+devices · 118+ countries · registered at audit scale
+
+Sammy Azdoufal · @xn0tsa
+
+17
 
 ## Slide 18
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SECTION 3 · 15 MIN · EVIDENCE CHAINS
 
-```text
-DEF CON 34 -: Main Stage
-Twelve chains. One
-access.
-60-90 seconds each. Artifact >
+### Twelve chains. One access.
+
+60–90 seconds each. Artifact →
 “why this alone is enough.”
-Sammy Azdoufal + @xnOtsa
-```
+
+Sammy Azdoufal · @xn0tsa
+
+18
 
 ## Slide 19
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **How to listen to this section**
+>
+> Don’t collect CVEs like Pokémon.
+>
+> Ask once per chain: if this were the **only** finding — does the vendor still have a path to the camera?
+>
+> Twelve yeses = architecture.
 
-```text
-How to listen to this section
-Don’t collect CVEs like
-Pokémon.
-Ask once per chain: if this
-were the only finding -
-does the vendor still have
-a path to the camera?
-Twelve yeses =
-architecture.
-```
+Sammy Azdoufal · @xn0tsa
+
+19
 
 ## Slide 20
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Evidence board
 
-```text
-Evidence board
-01-06 firehose - secret store : forever JPEGs - XOR costume -: CMS - DingTalk SSO
-07-12 OpenAPI WAN-IP -: TUTK- PIS bulk - RSA unbind - cloud-video (withdrawn) - static
-keys
-Talk framing = 12 evidence chains. CVE numbers at the end of this section — not the point of each slide.
-```
+**01–06** firehose · secret store · forever JPEGs · XOR costume · CMS · DingTalk SSO
+**07–12** OpenAPI WAN-IP · TUTK · PIS bulk · RSA unbind · cloud-video (withdrawn) · static keys
+
+Talk framing = **12 evidence chains**. CVE numbers at the end of this section — not the point of each slide.
+
+Sammy Azdoufal · @xn0tsa
+
+20
 
 ## Slide 21
 
+*Full-bleed illustration: a hoodie-wearing frog meme leans back at a desk, feet up, in front of a wall of glowing world maps, confetti falling.*
 
-> Recovered by OCR — confidence 72/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**DEFAULT CREDENTIALS**
+
+Map panels: NORTH AMERICA ONLINE · SOUTH AMERICA ONLINE · EUROPE ONLINE · ASIA / PACIFIC ONLINE
+
+Browser window — tab “Customer Portal”, address bar `https://totally.secure.login`:
 
 ```text
-ONLINE
-NORTH AMERICA EUROPE ~
-’ eee 2 Customer Portal < Bae e a .7
-% , PLEASE SIGN IN rN e
-& Welcome, admin!
-~~~ You now have full access to everything. ioe)
-» | HACKER
-| * BY DEFAULT <a
-P CONTINENTS -
-TODO:
+PLEASE SIGN IN
+
+Username
+admin
+
+Password
+public
+
+✓ ACCESS GRANTED
+
+Welcome, admin!
+You now have full access to everything. 😎
 ```
+
+Desk props:
+
+- Trophy: ZERO ALERTS CLUB
+- Mug: SECURITY? NAH.
+- Laptop sticky note: TODO: • FIX LATER • ~~SECURITY~~
+- Mug: IT WORKS ON MY MACHINE
+- Neon sign: HACKER OF THE MONTH * / * BY DEFAULT
+- Pizza box: DEPLOY & PRAY
+
+**IN PRODUCTION. ON FOUR CONTINENTS.**
+
+21
 
 ## Slide 22
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 01 EMQX — the welcome mat
 
-```text
-01 EMQX — the welcome mat
-Regional brokers (US-West - EU-Frankfurt - CN-Hangzhou - + Global/HK path).
-Dashboards on | :18083 Ff Default admin: public} Auth plugins off.
+Regional brokers (US-West · EU-Frankfurt · CN-Hangzhou · + Global/HK path).
+Dashboards on `:18083`. Default `admin:public`. Auth plugins off.
 Wildcard subscribe: yes. Anonymous: yes.
-Alone: still a vendor path? Yes.
+
+Alone: still a vendor path? **Yes.**
+
 Wildcard topic on an authenticated free account = the firehose.
 (Historical finding — don’t “try it from the hotel.”)
-14,204 msgs / 5 min - 2,117 devices - one free account
-```
+
+`14,204 msgs / 5 min · 2,117 devices · one free account`
+
+Sammy Azdoufal · @xn0tsa
+
+22
 
 ## Slide 23
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 02 Apollo — secret vending machine
 
-```text
-02 Apollo — secret vending machine
 Port 8080. No auth.
-614 prod keys across 11 microservices: DB roots, Redis, MQTT globals, DingTalk, RSA
-unbind, OAuth...
-Config server # junk drawer. Apparently nobody told them.
-```
+**614** prod keys across 11 microservices: DB roots, Redis, MQTT globals, DingTalk, RSA unbind, OAuth…
+
+Config server ≠ junk drawer. Apparently nobody told them.
+
+Sammy Azdoufal · @xn0tsa
+
+23
 
 ## Slide 24
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 03–04 Pictures or it didn’t happen
 
-```text
-03-04 Pictures or it didn’t happen
-03 Shared OSS - no isolation - no expiry - URL on MQTT
-04 Baby/indoor = XOR first 1KB - SN in the same message
+**03** Shared OSS · no isolation · no expiry · URL on MQTT
+**04** Baby/indoor `.jpgx3` = XOR first 1KB · SN in the same message
+
 Calling XOR “encryption” is a lifestyle brand.
->
-Z
-```
+
+Sammy Azdoufal · @xn0tsa
+
+24
 
 ## Slide 25
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Placeholder card standing in for the real alert frame.*
 
-```text
-DEF CON 34 -: Main Stage
-REDACTED
+Card small print, top left: DEF ☠ CON 31 / LAS VEGAS, NV / AUG 8-11, 2024
+Top right: // CLASSIFICATION LEVEL: RED — // HANDLE VIA NEED-TO-KNOW
+
+**REDACTED**
+
 BABY MONITOR ALERT FRAME — PLACEHOLDER
-Real alert still goes here — faces / IDs
-redacted. Swap file when ready.
-Sammy Azdoufal - @xnOtsa
-NS)
-```
+
+Bottom left: // INFORMATION IS POWER PROTECT IT
+Bottom right: faint hex block [illegible] · STAY CURIOUS STAY SAFE
+
+**Real alert still goes here — faces / IDs redacted. Swap file when ready.**
+
+Sammy Azdoufal · @xn0tsa
+
+25
 
 ## Slide 26
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **Encryption as a lifestyle brand.**
+>
+> SN in the clear. XOR on the first kilobyte. Fashion.
 
-```text
-Encryption as a lifestyle brand.
-SN in the clear. XOR on the
-first kilobyte. Fashion.
-```
+Sammy Azdoufal · @xn0tsa
+
+26
 
 ## Slide 27
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Placeholder contact sheet: four tiles, each stamped REDACTED.*
 
 ```text
-AUDIT STILLS — COMING
-baby doorbell indoor factory
-Montage slot: baby - doorbell : indoor -
-factory line.
+CLASSIFICATION: CONFIDENTIAL      DOC ID: A16-9X7
+HANDLING: RESTRICTED              REV: 1.0
+DISSEMINATION: LIMITED            DATE: 2024-05-20
 ```
+
+**AUDIT STILLS — COMING**
+
+REDACTED · REDACTED
+REDACTED · REDACTED
+
+baby · doorbell · indoor · factory
+
+PROPERTY OF AUDIT TEAM / DO NOT DISTRIBUTE — FOR AUTHORIZED PERSONNEL ONLY
+
+**Montage slot: baby · doorbell · indoor · factory line.**
+
+Sammy Azdoufal · @xn0tsa
+
+27
 
 ## Slide 28
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 05–06 Humans in the loop (the scary kind)
 
-```text
-05-06 Humans in the loop (the scary kind)
-05 CMS operator routes: live / playback / snapshot / cloud video...
-06 DingTalk creds in Apollo - 678 employees - SSO path into the console
+**05** CMS operator routes: live / playback / snapshot / cloud video…
+**06** DingTalk creds in Apollo · **678** employees · SSO path into the console
+
 Corporate chat as a door into the operator camera desk.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+28
 
 ## Slide 29
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **SSO into the camera desk.**
+>
+> 678 employees. QR scan.
+> Wrong blast radius.
 
-```text
-SSO into the camera desk.
-678 employees. QR scan.
-Wrong blast radius.
-```
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 30
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 07–08 Serial → network path
 
-```text
-07-08 Serial — network path
-07 Hardcoded OpenAPI HMAC in every APK > device status / WAN IP by serial
-08 Universal TUTK authcode > direct P2P (cloud optional) — structural only
-Alone: still a vendor path? Yes. Not a hotel CTF handout.
-```
+**07** Hardcoded OpenAPI HMAC in every APK → **device status / WAN IP by serial**
+**08** Universal TUTK authcode → direct P2P (cloud optional) — structural only
+
+Alone: still a vendor path? **Yes.** Not a hotel CTF handout.
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 31
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 09–12 Industrialize it
 
-```text
-09-12 Industrialize it
-09 PIS bulk P2P list — 1.146M US P2P rows (+98k Hangzhou)
-10 RSA unbind private key (from Apollo)
-11 Cloud-video — withdrawn after re-test (methodology lesson only)
-12 Static keys across every brand — rotate = break 1.1M devices
-Alone: still a vendor path? Yes (11 kept as “how re-tests lie”).
-```
+**09** PIS bulk P2P list — **1.16M US P2P rows (+98k Hangzhou)**
+**10** RSA unbind private key (from Apollo)
+
+**11** Cloud-video `/detail` — **withdrawn after re-test** (methodology lesson only)
+**12** Static keys across every brand — rotate = break 1.1M devices
+
+Alone: still a vendor path? **Yes** (11 kept as “how re-tests lie”).
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 32
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **Twelve yeses.**
+>
+> That’s architecture. Not a
+> CVE zoo.
 
-```text
-Twelve yeses.
-That’s architecture.
-Not a
-```
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 33
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### The five that got numbers
 
-```text
-The five that got numbers
-CVE-2026-33356 - 33357 - 33359 - 33361 - 33362
-runZero (Tod Beardsley) - CISA coordinated.
-Five CVE IDs in the public writeup. Twelve chains = talk/audit framing (not a numbered board in the disclosure). Cloud-
-video withdrawn from CVE set; CN sig bypass too — Q&A if you care.
-```
+CVE-2026-**33356** · **33357** · **33359** · **33361** · **33362**
+
+runZero (Tod Beardsley) · CISA coordinated.
+
+Five CVE IDs in the public writeup. Twelve chains = talk/audit framing (not a numbered board in the disclosure). Cloud-video withdrawn from CVE set; CN sig bypass too — Q&A if you care.
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 34
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### The map is not vibes
 
-```text
-The map is not vibes
 ~826k devices by WAN IP.
+
 When the architecture is the exploit,
 the heatmap is the CVSS.
-Sammy Azdoufal - @xnOtsa
-```
+
+_Right half of the slide: a world heat-map of device density, one large hotspot over Europe plus clusters across Africa, the Middle East, South America and Asia._
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 35
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Live bit / tape bit
 
-```text
-Live bit / tape bit
-1.
-4.
-Tape: 30s sanitized MQTT wildcard (PII redacted) — historical audit window
-Live: EMQX dashboards firewalled ™ (port block — never rotated)
-Residual (audit IR): Apollo MQTT creds still worked on 3/4 brokers after dashboards
-went dark
-Apollo HTTP 401 only as of talk prep — separate from the 5-day story
+1. **Tape:** 30s sanitized MQTT wildcard (PII redacted) — historical audit window
+2. **Live:** EMQX dashboards **firewalled** 👏 (port block — `admin:public` never rotated)
+3. **Residual (audit IR):** Apollo MQTT creds still worked on **3/4** brokers after dashboards went dark
+4. **Apollo HTTP** 401 only as of **talk prep** — separate from the 5-day story
+
 They patched the welcome mat. Kept the firehose keys.
-```
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 36
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **IR lag is a finding.**
+>
+> HK dashboards ~24h. US/EU
+> ~5 days later. Apollo
+> stayed open the whole
+> assessment.
 
-```text
-IR lag is a finding.
-HK dashboards ~24h. US/EU
-~5 days later. Apollo
-stayed open the whole
-assessment.
-```
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 37
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SECTION 4 · 10 MIN · THE FUN PART (FOR LAWYERS)
 
-```text
-DEF CON 34 -: Main Stage
-SECTION 4 - 10 MIN - THE FUN PART (FOR LAWYERS)
-Disclosure ops
+### Disclosure ops
+
 Emails as exhibits. Popcorn
 optional.
-Sammy Azdoufal - @xnOtsa
-oe
-```
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 38
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Greatest hits playlist
 
-```text
-Greatest hits playlist
-Beat Line
-Mar 2 HK locks in 24h — US/EU wait 5 days
-Mar 12 “obsolete products” + $15k if I delete the internet
-Mar 12-13 I delete posts anyway (users > clout) - tone shift “unlawful”
-Mar 15 $30k offer + “technical partnership” article pitch + GDPR vibes
-Apr 4 (Day 24) Advisories published, stamped Mar 2 (Wayback: lol no)
-Apr 16325 PRC service contract > I refuse > one-page VDRA
-May 11 Full public disclosure
-oe
-@e
-```
+| Beat | Line |
+| --- | --- |
+| Mar 2 | HK locks `:18083` in 24h — US/EU wait **5 days** |
+| Mar 12 | “obsolete products” + $15k if I **delete the internet** |
+| Mar 12–13 | I delete posts anyway (users > clout) · tone shift “unlawful” |
+| Mar 15 | $30k offer + “technical partnership” article pitch + GDPR vibes |
+| Apr 4 (Day 24) | Advisories published, **stamped Mar 2** (Wayback: lol no) |
+| Apr 16→25 | PRC service contract → I refuse → one-page VDRA |
+| May 11 | Full public disclosure |
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 39
 
+_Full-bleed meme slide: a vendor discontinuation email on the left, a storefront cart piled with the same cameras on the right._
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### VENDOR EMAIL
 
-```text
-IMPORTANT: Product Discontinuation Notice
+**IMPORTANT:** Product Discontinuation Notice
+
 Dear Valued Partner,
-Please be advised that the following products
-are now considered obsolete and will
-no longer be supported.
-We recommend migrating to our y
-current generation solutions.
-Sincerely, 4
-Product Lifecycle Management Team \q
--of-life.
-These products are end-of-life.
-A No further updates or security fixes will be provided.
-ALSO STILL ON SALE
-hae =
-```
+
+Please be advised that the following products are now considered **obsolete** and will no longer be supported.
+
+We recommend migrating to our current generation solutions.
+
+Thank you for your understanding.
+
+Sincerely,
+Product Lifecycle Management Team
+
+⚠ These products are end-of-life.
+No further updates or security fixes will be provided.
+
+_Red rubber stamp across the email:_ OBSOLETE PRODUCTS
+
+_Storefront panel, right:_ Your Cart (42 items) · cart badge 42 · NEW! burst badges · $199.99 · $149.99 · $89.99 · $249.99 · $179.99 · $159.99 · PROCEED TO CHECKOUT
+
+_Background props:_ DEF CON skull-and-bones logo · a screen reading ALL YOUR BASE ARE BELONG TO LEGACY · a DC30 badge
+
+### ALSO STILL ON SALE
 
 ## Slide 40
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> **The products affected are our obsolete products.**
+>
+> Amazon checkout still
+> worked. Amazing
+> obsolescence.
 
-```text
-DEF CON 34 -: Main Stage
-The products affected are our
-obsolete products.
-Amazon checkout still
-worked. Amazing
-obsolescence.
-```
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 41
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Backdating speedrun
 
-```text
-Backdating speedrun
-Published April 4. Stamped March 2.
+Published **April 4**. Stamped **March 2**.
 Nine days before first contact.
+
 Wayback + DNS history: pages didn’t exist on Mar 2.
-Covered 3 of 11 findings reported (not the full CVE set).
+Covered **3 of 11** findings reported (not the full CVE set).
 Apollo = “a limited amount of configuration information.”
+
 archive.org = offensive security tool.
-```
+
+Sammy Azdoufal · @xn0tsa
 
 ## Slide 42
 
+*Full-bleed photo-illustration: a desk under a lamp — a paid one-page invoice on the left, a chained-and-padlocked contract on the right.*
 
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**SAME BOUNTY. DIFFERENT VIBES.**
+
+Monitor, left:
 
 ```text
-FIND BUG
-WRITE REPORT
-GET PAID
-REPEAT
-INVOICE
-DESCRIPTION
-Vulnerability Report
-TOTAL DUE
-AMOUNT
-$30,000
-THIS AGREEMENT IS INTENDED TO BE LEGALLY BINDING,
-COMPREHENSIVE, AND IMPOSSIBLE TO UNDERSTAND. :
-PAGE 1 OF 40
-TABLE OF CONTENTS (ABRIDGED)
-DEFINITIONS
-LIMITATION OF EVERYTHING
-INDEMNIFICATION
-NON-DISPARAGEMENT
-GOVERNING LAW (BUT NOT REALLY!
-ARBITRATION (WE WIN)
-. MISCELLANEOUS
-SURVIVAL
-AND SO ON .....
-BY READING THIS, YOU AGREE TO EVERYTHING,
-INCLUDING THINGS THAT HAVEN'T HAPPENED YET.
+» FIND BUG
+» WRITE REPORT
+» GET PAID
+» REPEAT
+>_
 ```
+
+Mug:
+
+```text
+REPORT BUGS
+GET PAID
+>_
+```
+
+Sticky note: GOOD BUG / GOOD CITIZEN / GOOD DAY ☑
+
+**INVOICE**
+
+| DESCRIPTION | AMOUNT |
+| --- | --- |
+| Vulnerability Report | $30,000 |
+| TOTAL DUE | **$30,000** ✅ |
+
+**MASTER SERVICES AGREEMENT**
+
+THIS AGREEMENT IS INTENDED TO BE LEGALLY BINDING, COMPREHENSIVE, AND IMPOSSIBLE TO UNDERSTAND.
+
+**PAGE 1 OF 40**
+
+TABLE OF CONTENTS (ABRIDGED)
+
+| Section | Page |
+| --- | --- |
+| 1. DEFINITIONS | 1 |
+| 2. SCOPE | 7 |
+| 3. LIMITATION OF EVERYTHING | 11 |
+| 4. INDEMNIFICATION | 17 |
+| 5. CONFIDENTIALITY | 23 |
+| 6. NON-DISCLOSURE | 29 |
+| 7. NON-DISPARAGEMENT | 31 |
+| 8. GOVERNING LAW (BUT NOT REALLY) | 33 |
+| 9. ARBITRATION (WE WIN) | 35 |
+| 10. MISCELLANEOUS | 38 |
+| 11. SURVIVAL | 40 |
+| 12. AND SO ON | ∞ |
+
+BY READING THIS, YOU AGREE TO EVERYTHING, INCLUDING THINGS THAT HAVEN'T HAPPENED YET.
+
+Stamped across the contract: **NO PUBLISH**
+
+Padlocks on the chain: GAG CLAUSE · PERPETUAL NDA · LIQUIDATED DAMAGES · VOID YOUR BOUNTY
+
+Graffiti on the wall: YOUR BUG. OUR RULES. OUR SILENCE. OUR TERMS.
+
+Coaster (skull): DISCLOSE? THINK AGAIN. WE DO.
+
+Book: HOW TO SAY NO (AND LOSE YOUR BOUNTY) — VOLUME 1 OF ∞
+
+Sticky note (skull and crossbones): TL;DR NOPE
+
+42
 
 ## Slide 43
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Same $30k neighborhood. Opposite movie.
 
-```text
-Same $30k neighborhood. Opposite movie.
-DJI: one-page invoice. Paid.
-Meari: Personal Service Contract —
-e PRC law / Chinese courts
-e Refund clause at their discretion
-e No right to publish
-e You eat the tax (incl. China)
+**DJI:** one-page invoice. Paid.
+**Meari:** Personal Service Contract —
+
+- PRC law / Chinese courts
+- Refund clause at *their* discretion
+- No right to publish
+- You eat the tax (incl. China)
+
 That’s not banking. That’s a leash.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+43
 
 ## Slide 44
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*Photo-illustration: a smiling executive at a podium pulls back a curtain, revealing a burning data centre behind him where a man clutches his head and printed pages labelled "Art.33" and "Art.34" fly through the air.*
 
-```text
-WE WILL
-STRICTLY ABIDE BY
-STANDARDIZED
-SECURITY COMPLIANCE
-BUILDING TRUST
-THROUGH GOVERNANCE
-Art. 33 / 34 asked. Vibes answered.
-```
+Speech bubble:
+
+WE WILL STRICTLY ABIDE BY STANDARDIZED COMPLIANCE PROCEDURES
+
+Backdrop banner:
+
+SECURITY SUMMIT 2024
+
+BUILDING TRUST THROUGH GOVERNANCE
+
+Podium sign: RESILIENCE. TRUST. COMPLIANCE.
+
+Screen in the burning room: SYSTEM FAILURE ⚠
+
+Scattered pages: Art.33 / Art.34
+
+**Art. 33 / 34 asked. Vibes answered.**
+
+Sammy Azdoufal · @xn0tsa
+
+44
 
 ## Slide 45
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### May 11 energy
 
-```text
-May 11 energy
-Refuse the novel > propose one-page VDRA.
-Public ships 5 CVEs + other findings + timeline — not a numbered 12-chain board.
-Twelve chains = talk / private audit framing. Publish. runZero - CISA.
+Refuse the novel → propose one-page VDRA.
+Public ships **5 CVEs + other findings + timeline** — not a numbered 12-chain board.
+**Twelve chains** = talk / private audit framing. Publish. runZero · CISA.
+
 The disclosure date was never the negotiation chip.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+45
 
 ## Slide 46
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 84/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+SECTION 5 · 8 MIN · STEAL THIS
 
-```text
-DEF CON 34 -: Main Stage
-Three lessons
+### Three lessons
+
 Narrative 3. Screenshot fuel.
-Sammy Azdoufal - @xnOtsa
-```
+
+Sammy Azdoufal · @xn0tsa
+
+46
 
 ## Slide 47
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 1. “The bank needs a service contract”
 
-```text
-1. “The bank needs a service contract”
-Test it.
-SAFE under $50k ~> invoice + purpose declaration.
+**Test it.**
+
+SAFE under $50k → invoice + purpose declaration.
 Not a refundable no-publish PRC novella.
+
 Side-by-side on screen: DJI form vs Meari contract.
 Audience does the math.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+47
 
 ## Slide 48
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 2. Backdated advisories are a lab method
 
-```text
-2. Backdated advisories are a lab method
-. Wayback the URL
-. DNS history
-. Vendor social announce
+1. Wayback the URL
+2. DNS history
+3. Vendor social announce
 4. Email headers / first-fix date
-If the stamp predates first contact: say it with charts.
-OO
-```
+
+If the stamp predates first contact: **say it with charts.**
+
+Sammy Azdoufal · @xn0tsa
+
+48
 
 ## Slide 49
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### 3. GDPR Art. 33 is a crowbar
 
-```text
-3. GDPR Art. 33 is a crowbar
 EU data exposed + vendor won’t notify?
 AEPD / CNIL don’t need your bounty contract.
+
 File the week you publish.
 The complaint is part of the research corpus.
-```
+
+Sammy Azdoufal · @xn0tsa
+
+49
 
 ## Slide 50
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+CLOSE · 5 MIN + Q&A
 
-```text
-DEF CON 34 -: Main Stage
-CLOSE - 5 MIN + Q&A
-What to remember
-walking out
-Sammy Azdoufal + @xnOtsa
-```
+### What to remember walking out
+
+Sammy Azdoufal · @xn0tsa
+
+50
 
 ## Slide 51
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+### Big picture, one more time
 
-```text
-Big picture, one more time
-Architectural / by-design access — twelve independent chains (talk / private audit
-framing).
-1 Audit — the chains (not the public CVE count)
-2 Disclosure ops — evidence too
-3 Researcher lessons — refuse the leash
-```
+**Architectural / by-design access** — twelve independent chains (talk / private audit framing).
+
+1. **Audit** — the chains (not the public CVE count)
+2. **Disclosure ops** — evidence too
+3. **Researcher lessons** — refuse the leash
+
+Sammy Azdoufal · @xn0tsa
+
+51
 
 ## Slide 52
 
+*Full-bleed illustration: a world map built out of surveillance cameras, with red lines converging on a giant glowing asterisk at its centre.*
 
-> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**ONE WILDCARD**
+
+HUD panel, left:
 
 ```text
 TARGET:
-RTSP
+EVERYWHERE
+PROTOCOL:
+RTSP / HTTP
 AUTH:
 *
 RESULT:
-EVERYVYHERE
-| PROTOCOL:
-HTTP
 TOTAL ACCESS
-UNE WILDUARD
-> scan.sh --global
-> exploit.sh
-. AND COUNTING
 ```
+
+Terminal, right:
+
+```text
+> scan.sh --global
+> enumerate.py
+> exploit.sh
+> profit :)
+```
+
+Counter, lower right:
+
+```text
+CONNECTED CAMERAS
+1,100,000+
+...AND COUNTING
+```
+
+**1.1 MILLION CAMERAS**
+
+52
 
 ## Slide 53
 
+DEF CON 34 · Main Stage
 
-> Recovered by OCR — confidence 86/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+> “Patch the bug.
+> Keep the architecture.
+> Call it remediated.”
 
-```text
-DEF CON 34 -: Main Stage
-Patch the bug.
-Keep the architecture.
-Call it remediated.
-Sammy Azdoufal - @xnOtsa
-```
+Don’t clap for that.
+
+Sammy Azdoufal · @xn0tsa
+
+53
 
 ## Slide 54
 
+### One wildcard. 1.1M cameras.
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Sammy Azdoufal · @xn0tsa
 
-```text
-One wildcard. 1.1M cameras.
-Sammy Azdoufal - @xnOtsa
 Disclosure repo linked in the talk notes / QR
+
 Questions that don’t create victims tonight
-```
+
+54
+
