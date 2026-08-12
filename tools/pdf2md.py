@@ -655,6 +655,27 @@ def slides_to_pdf(src_path: str, workdir: str) -> str | None:
     return produced if os.path.exists(produced) else None
 
 
+# Some decks cannot be described correctly from their filename because the
+# archive pairs the wrong name with the file, or the document was retitled after
+# filing. Those corrections are curated in metadata_overrides.json, each one
+# confirmed by reading the document itself, and applied here.
+_OVERRIDES: dict | None = None
+
+
+def load_overrides() -> dict:
+    global _OVERRIDES
+    if _OVERRIDES is None:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "metadata_overrides.json")
+        try:
+            with open(path, "r", encoding="utf-8") as fh:
+                _OVERRIDES = {k: v for k, v in json.load(fh).items()
+                              if not k.startswith("_")}
+        except Exception:  # noqa: BLE001 - overrides are optional
+            _OVERRIDES = {}
+    return _OVERRIDES
+
+
 def _existing_source(md_path: str) -> str | None:
     """The `source_pdf` recorded in an already-written Markdown file, if any."""
     try:
@@ -703,6 +724,14 @@ def convert_one(job: tuple) -> dict:
     conf = parse_conference(folder)
     stem = os.path.splitext(os.path.basename(pdf_path))[0]
     speakers, title = parse_speakers_title(stem, defcon_style=conf["conference"] == "DEF CON")
+
+    override = load_overrides().get(rel.replace(os.sep, "/"))
+    content_note = ""
+    if override:
+        title = override.get("title", title)
+        speakers = override.get("speakers", speakers)
+        content_note = " ".join(x for x in (override.get("note", ""),
+                                            override.get("conference_note", "")) if x)
 
     result = {
         "source_pdf": rel, "status": "ok", "error": "",
@@ -873,6 +902,7 @@ def convert_one(job: tuple) -> dict:
             f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
             f"ocr_unreliable_blocks: {risky_blocks}",
             f"ocr_timeouts: {ocr_timeouts}",
+            *( [f"content_note: {yaml_escape(content_note)}"] if content_note else [] ),
             f"companion_files: {yaml_list([n for n, _ in sidecars])}",
             f"extractor: {yaml_escape('pymupdf4llm ' + pymupdf.__version__ + ' + tesseract' if ocr_pages else 'pymupdf4llm ' + pymupdf.__version__)}",
             f"converted_at: {yaml_escape(_dt.datetime.now(_dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))}",
@@ -900,6 +930,7 @@ def convert_one(job: tuple) -> dict:
             companion_files=[n for n, _ in sidecars], redacted_secrets=redactions,
             ocr_confidence=(round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else None),
             ocr_unreliable_blocks=risky_blocks, ocr_timeouts=ocr_timeouts,
+            content_note=content_note or None,
         )
         return result
 

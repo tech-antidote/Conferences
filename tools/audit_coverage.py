@@ -102,6 +102,28 @@ def alnum_len(s: str) -> int:
     return sum(1 for c in s if c.isalnum())
 
 
+def dedup_lines(text: str) -> str:
+    """Drop repeated lines within a page.
+
+    Slide decks built as overlays draw the same line once per build step, so
+    `get_text()` hands back three identical copies of a code listing that the
+    slide shows once. PyMuPDF4LLM keeps one copy, which is right -- but it makes
+    a raw character comparison read as 67% content loss on a deck that lost
+    nothing. Comparing against deduplicated ground truth removes that illusion
+    without hiding real drops.
+    """
+    seen, out = set(), []
+    for line in text.splitlines():
+        key = re.sub(r"\s+", "", line)
+        if not key:
+            continue
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(line)
+    return "\n".join(out)
+
+
 def english_rate(s: str) -> float:
     """Common-English-word hits per 1000 characters. 0 means "not text"."""
     if not s:
@@ -250,7 +272,8 @@ def audit_deck(job: tuple) -> dict:
         return out
 
     slides = parsed["slides"]
-    page_alnum = [alnum_len(t) for t in pages]
+    page_alnum = [alnum_len(dedup_lines(t)) for t in pages]
+    page_alnum_raw = [alnum_len(t) for t in pages]
     struct_alnum = sum(s["struct_alnum"] for s in slides)
     ocr_alnum = sum(s["ocr_alnum"] for s in slides)
     pdf_alnum = sum(page_alnum)
@@ -301,6 +324,8 @@ def audit_deck(job: tuple) -> dict:
         "pages": len(pages),
         "slides": len(slides),
         "pdf_alnum": pdf_alnum,
+        "pdf_alnum_raw": sum(page_alnum_raw),
+        "duplicate_draw_chars": sum(page_alnum_raw) - pdf_alnum,
         "pdf_decodable": decodable,
         "pdf_english_rate": round(english_rate(pdf_text), 2),
         "md_replacement_chars": md_all.count(REPLACEMENT),
@@ -605,7 +630,8 @@ def main() -> int:
     qs = quantiles([r["ratio_struct"] for r in scored])
     qt = quantiles([r["ratio_total"] for r in scored])
     print("\n" + "-" * 100)
-    print("1. TEXT-LAYER COVERAGE  (markdown structural alnum chars / PDF get_text alnum chars)")
+    print("1. TEXT-LAYER COVERAGE  (markdown structural alnum chars / PDF get_text alnum chars,")
+    print("   the PDF side deduplicated per page so overlay builds do not read as loss)")
     print("-" * 100)
     no_layer = [r for r in ok if not r["pdf_alnum"]]
     print(f"  decks scored: {qs.get('n', 0)}   "
@@ -620,6 +646,9 @@ def main() -> int:
         f"{k}={qt[k]:.3f}" for k in ("min", "p05", "p25", "median", "mean", "p75", "p95", "max") if k in qt))
     flagged = sorted([r for r in scored if r["ratio_struct"] < args.ratio_flag],
                      key=lambda r: r["ratio_struct"])
+    dup = sum(r["duplicate_draw_chars"] for r in ok)
+    print(f"  duplicate draws collapsed out of the PDF side: {dup} chars "
+          f"({100.0 * dup / max(1, sum(r['pdf_alnum_raw'] for r in ok)):.1f}% of raw get_text)")
     print(f"\n  decks below --ratio-flag {args.ratio_flag}: {len(flagged)} "
           f"({100.0 * len(flagged) / max(1, len(scored)):.1f}%)")
     print(f"\n  worst {args.worst} decks by structural coverage:")

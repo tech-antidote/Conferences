@@ -1,0 +1,76 @@
+{
+  "_readme": [
+    "Corrections for decks whose FILENAME does not describe the document inside it.",
+    "These cannot be fixed by better filename parsing -- the archive itself pairs the",
+    "wrong name with the file, or the name predates a retitling. Every entry here was",
+    "confirmed by reading the document's own slides, and each records why.",
+    "",
+    "Keys are the source_pdf path exactly as it appears in the manifest.",
+    "Recognised fields: title, speakers, conference_note, note.",
+    "`note` is written into the Markdown frontmatter as `content_note` so anyone",
+    "reading the file -- or retrieving a chunk of it -- sees the discrepancy."
+  ],
+
+  "Black Hat USA 2023 slides/Nan Wang & Zhenghang Xiao_The Hat Trick Exploit Chrome Twice from Runtime to JIT.pdf": {
+    "title": "Make KSMA Great Again: The Art of Rooting Android Devices by GPU MMU Features",
+    "speakers": ["WANG Yong"],
+    "note": "MIS-FILED IN THE SOURCE ARCHIVE. The filename names a Chrome/JIT talk, but this deck is an Android GPU-MMU rooting talk by WANG Yong (@ThomasKing2014, Alibaba Cloud Pandora Lab): 89 mentions of Pandora Lab and 13 of KSMA against 5 of Chrome. Title and speakers here describe the actual document; source_pdf keeps the archive's filename."
+  },
+
+  "Black Hat USA 2023 slides/Zhibo Liu & Yuanyuan Yuan & Xiaofei Xie & Tianxiang Li & Wenqiang Li & Shuai Wang_BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables_WP.pdf": {
+    "title": "AI War: Unleashing the Power of LLM and Prompt Engineering for AI Framework Fuzz",
+    "speakers": ["Sihang Hu", "Zhihui Lin", "Tianxiang Li"],
+    "conference_note": "This document's cover reads Black Hat Europe 2023, though the archive files it under Black Hat USA 2023.",
+    "note": "MIS-FILED IN THE SOURCE ARCHIVE. This whitepaper is a different paper from a different conference: 10 mentions of AI War / prompt engineering and 17 of Black Hat Europe, against 8 of BTD/decompilation. The slides deck of the same name IS the real BTD talk and is unaffected."
+  },
+
+  "Black Hat USA 2023 slides/MoustachedBouncer AitM-Powered Surveillance via Belarus ISPs.pdf": {
+    "title": "MoustachedBouncer: AitM-Powered Surveillance via Belarus ISPs",
+    "speakers": ["Matthieu Faou"],
+    "note": "The filename carries no speaker, and 'MoustachedBouncer' is the threat actor rather than a person. Speaker taken from the deck's own title slide (Matthieu Faou, ESET)."
+  },
+
+  "Black Hat Asia 2025 Slides/Invisible Ink Privacy Risks of CSS in Browsers and Emails_Compressed.pdf": {
+    "title": "Invisible Ink: Privacy Risks of CSS on the Web and in Emails",
+    "speakers": ["Leon Trampert", "Daniel Weber"],
+    "note": "The filename carries no speaker and says 'in Browsers'; the deck's title slide says 'on the Web' and names both authors."
+  },
+
+  "DEF CON 34/DEF CON 34 - Darren McDonald - Thin Client Thin Crypto - Bypassing Full-Desk Encryption Across Three Major Thin Clients Vendors without Breaking a Ci.pdf": {
+    "title": "Thin Client, Thin Crypto: Bypassing Full-Disk Encryption Across Every Major Thin Client Vendor",
+    "note": "The archive filename contains a typo ('Full-Desk' for 'Full-Disk'), says 'Three Major' where the deck says 'Every Major', and is truncated mid-word by DEF CON's filename length limit."
+  },
+
+  "Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime_Article.pdf": {
+    "title": "The Hydra",
+    "speakers": ["Philippe Auclair"],
+    "note": "Supporting material, not the talk: this is a news article of 22 July 2024 shipped alongside the deck. The filename names the talk it accompanies."
+  },
+
+  "Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime_materials.pdf": {
+    "title": "Advice for Establishing A Brand",
+    "note": "Supporting material, not the talk: an appendix shipped alongside the deck."
+  },
+
+  "Black Hat USA 2023 slides/Duy Hieu Nguyen,Anh Khoa Nguyen,Huu Giap Nguyen,Thanh Nguyen,Anh Quynh Nguyen_TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit_wp.pdf": {
+    "title": "New Key Extraction Attacks on Threshold ECDSA Implementations",
+    "note": "The accompanying paper carries its own academic title, which differs from the talk's."
+  },
+
+  "Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android_wp.pdf": {
+    "title": "Bad io_uring: New Attack Surface and New Exploit Technique to Rooting Android",
+    "note": "The whitepaper's own title differs from the talk's."
+  },
+
+  "BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code_WP.pdf": {
+    "title": "THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping",
+    "speakers": ["Cristian Leo", "Daniel Begimher", "Anton Dykyi", "Danny Cortegaca", "Prakash Jha"],
+    "note": "The whitepaper carries its own title and three more authors than the talk. The source filename also omits the separator between the speakers and the title."
+  },
+
+  "BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code.pdf": {
+    "title": "ThreatForest: Automated Attack Trees from Source Code",
+    "speakers": ["Cristian Leo", "Daniel Begimher"],
+    "note": "The source filename omits the separator between the speaker names and the title, gluing 'Leo' to 'ThreatForest'."
+  }
+}
