@@ -111,7 +111,10 @@ def main() -> int:
     ap.add_argument("--src", default=".", help="directory to scan for PDFs")
     ap.add_argument("--out", default="",
                     help="markdown root; when given, report only hits whose "
-                         "text actually reached the converted document")
+                         "text actually reached the converted document. This "
+                         "is a substring test, so it cannot tell a hidden '48' "
+                         "from the '## Slide 48' heading -- treat it as a way "
+                         "to rank documents, not as proof about short strings.")
     ap.add_argument("--json", default="", help="write full results here")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
@@ -127,31 +130,49 @@ def main() -> int:
     if args.limit:
         pdfs = pdfs[:args.limit]
 
-    # Where --out is given, a hit only matters if it leaked into the Markdown.
-    bodies: dict[str, str] = {}
+    # Where --out is given, a hit only matters if it leaked into the Markdown
+    # *this PDF produced*. Asking whether the string appears anywhere in the
+    # corpus is a different and much weaker question: a hidden page number "48"
+    # appears in hundreds of unrelated talks, and every such hit would be
+    # reported as leaked.
+    body_of: dict[str, str] = {}
     if args.out:
-        for root, _dirs, files in os.walk(args.out):
-            for name in files:
-                if name.endswith(".md"):
-                    path = os.path.join(root, name)
-                    try:
-                        bodies[path] = open(path, encoding="utf-8").read()
-                    except OSError:
-                        pass
+        manifest = os.path.join(args.out, "manifest.jsonl")
+        if not os.path.exists(manifest):
+            print(f"--out needs {manifest} to match PDFs to their Markdown",
+                  file=sys.stderr)
+            return 1
+        for line in open(manifest, encoding="utf-8"):
+            if not line.strip():
+                continue
+            rec = json.loads(line)
+            src, md = rec.get("source_pdf"), rec.get("markdown")
+            if not src or not md:
+                continue
+            path = os.path.join(args.out, md)
+            try:
+                body_of[os.path.normpath(src)] = open(path, encoding="utf-8").read()
+            except OSError:
+                pass
 
     results, total_hits, docs_hit = {}, 0, 0
     for i, pdf in enumerate(pdfs, 1):
         hits = scan(pdf)
         hits = [h for h in hits if "error" not in h]
+        rel = os.path.relpath(pdf, args.src)
         if args.out and hits:
-            leaked = [h for h in hits
-                      if any(h["text"] in body for body in bodies.values())]
-            hits = leaked
+            # The manifest records source_pdf relative to the conversion's own
+            # --src, which need not be this scan's --src, so match on the tail.
+            key = os.path.normpath(rel)
+            body = body_of.get(key)
+            if body is None:
+                body = next((b for k, b in body_of.items()
+                             if k.endswith(os.path.basename(key))), None)
+            hits = [h for h in hits if body and h["text"] in body]
         if not hits:
             continue
         docs_hit += 1
         total_hits += len(hits)
-        rel = os.path.relpath(pdf, args.src)
         results[rel] = hits
         pages = sorted({h["page"] for h in hits})
         sample = sorted({h["text"] for h in hits})[:3]
