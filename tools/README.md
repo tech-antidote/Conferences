@@ -136,14 +136,27 @@ cannot find on the page, which is the failure class no reader can detect
 without the source in front of them.
 
 So the converter renders each span's own bounding box and drops the span when
-the glyphs made no difference to what the page looks like — same shade as
-their surroundings, and that shade is the span's own colour. A string that also
-appears in a visible span is kept, so a hidden duplicate never costs you the
-real one. On that deck it removed 7 spans of 1008 with no false positives: the
-six the reviewer found by eye, plus a page number set in white on the one slide
-with a white background. `--keep-invisible` turns it off; the count lands in
-`invisible_spans_dropped`. `tools/find_invisible_text.py` reports the same
-thing across a directory without converting anything.
+the glyphs made no difference to what the page looks like — the pixels are
+already the span's own colour. A string that also appears in a visible span is
+kept, so a hidden duplicate never costs you the real one. On that deck it
+removed 7 spans of 1008 with no false positives: the six the reviewer found by
+eye, plus a page number set in white on the one slide with a white background.
+
+**Not everything invisible is a leftover.** Scanning 83 decks found two
+populations, and the difference decides whether dropping repairs a document or
+guts it. Most hits are a few spans on an otherwise normal page — junk, 791 of
+them. But one talk draws a timing diagram as white boxes on black with white
+numerals inside them, so 64 of that page's 74 spans render blank, and those
+numerals are the diagram's labels. That page is mis-rendered, not carrying a
+leftover; deleting it would remove an 8×8 instruction-timing matrix that no
+reviewer could restore without the original slides. So a page that is mostly
+invisible keeps its text and is counted in `invisible_spans_kept_misrendered`
+instead. The floor matters as much as the share: a page whose single span
+happens to be hidden is 100% invisible and still just a leftover.
+
+`--keep-invisible` turns the whole thing off; drops land in
+`invisible_spans_dropped`. `tools/find_invisible_text.py` reports both kinds
+across a directory without converting anything.
 
 **OCR cannot describe a photograph.** A slide showing a technician splicing
 fibre at a curbside cabinet contains no text, so Tesseract correctly returns

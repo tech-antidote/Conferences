@@ -194,7 +194,7 @@ def main() -> int:
     page.insert_text((20, 120), "BOTH", fontsize=14, color=(1, 1, 1))
     page.insert_text((20, 150), "BOTH", fontsize=14, color=(0, 0, 0))
     page = doc.reload_page(page)
-    hidden = invisible_spans(page)
+    hidden, _kept = invisible_spans(page)
     check("hidden-leftover.example" in hidden, "black-on-black text is detected")
     check("VISIBLE HEADING" not in hidden, "visible text is not detected")
     check("BOTH" not in hidden,
@@ -210,8 +210,25 @@ def main() -> int:
                       color=(0, 0, 0))
     page2.draw_rect(pymupdf.Rect(150, 88, 158, 96), color=None, fill=(1, 1, 1))
     page2 = doc.reload_page(page2)
-    check("hidden-beside-a-bright-thing" in invisible_spans(page2),
+    check("hidden-beside-a-bright-thing" in invisible_spans(page2)[0],
           "a bright neighbour clipping the box does not hide the detection")
+
+    # A page that is mostly invisible is a broken render, not a leftover, and
+    # gutting it would delete real content. One deck draws a timing diagram as
+    # white boxes on black with white numerals inside them; those numerals are
+    # the labels.
+    page3 = doc.new_page(width=400, height=300)
+    page3.draw_rect(page3.rect, color=None, fill=(0, 0, 0))
+    page3.insert_text((20, 30), "Diagram", fontsize=14, color=(1, 1, 1))
+    for i in range(12):
+        box = pymupdf.Rect(20 + i * 30, 60, 20 + i * 30 + 26, 86)
+        page3.draw_rect(box, color=None, fill=(1, 1, 1))
+        page3.insert_text((box.x0 + 8, box.y1 - 8), str(i), fontsize=12,
+                          color=(1, 1, 1))
+    page3 = doc.reload_page(page3)
+    drop3, kept3 = invisible_spans(page3)
+    check(drop3 == [] and kept3 >= 8,
+          "a mostly-invisible page keeps its text and is counted instead")
 
     body, n = strip_invisible("VISIBLE HEADING\n\n- hidden-leftover.example\n\nBOTH",
                               hidden)
@@ -233,7 +250,7 @@ def main() -> int:
     if failures:
         print(f"{len(failures)} assertion(s) FAILED")
         return 1
-    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 12} assertions passed")
+    print(f"all {len(SPEAKER_TITLE_CASES) + len(CONFERENCE_CASES) + 13} assertions passed")
     return 0
 
 

@@ -674,6 +674,24 @@ INVISIBLE_MATCH_TOLERANCE = 20
 INVISIBLE_SHARE = 0.85
 INVISIBLE_MIN_EDGE = 2.0
 
+# Not everything invisible is a leftover, and the difference decides whether
+# dropping it repairs the document or guts it. Scanning 83 decks turned up two
+# populations. In one, a handful of spans on an otherwise normal page: the
+# duplicated URL, a stray page number -- 791 spans, all junk. In the other, most
+# of a page at once: one talk draws a timing diagram as white boxes on black
+# with white numerals inside them, so 64 of that page's 74 spans render blank.
+# Those numerals are the diagram's labels. The page is mis-rendered, not
+# carrying a leftover, and deleting them would remove real content that no
+# reviewer could restore without the original slides.
+#
+# So a page that is mostly invisible keeps its text and is counted instead. The
+# floor matters as much as the share: a page holding one span that happens to be
+# hidden is 100% invisible and is still just a leftover ("preencoded.png" on a
+# 1-span page was one of these), so a mis-render has to be big enough that
+# "the whole page failed to render" is the better reading.
+INVISIBLE_PAGE_MAJORITY = 0.5
+INVISIBLE_MISRENDER_FLOOR = 8
+
 
 def _span_luma(color: int) -> float:
     r, g, b = (color >> 16) & 255, (color >> 8) & 255, color & 255
@@ -697,19 +715,23 @@ def _span_invisible(page: "pymupdf.Page", span: dict) -> bool:
     return matching / len(s) >= INVISIBLE_SHARE
 
 
-def invisible_spans(page: "pymupdf.Page") -> list[str]:
-    """Strings this page draws invisibly and nowhere visibly.
+def invisible_spans(page: "pymupdf.Page") -> tuple[list[str], int]:
+    """Strings to drop from this page, and how many were kept as mis-rendered.
 
     A string that also appears in a visible span stays: the same words can be
     both a hidden leftover and real slide content, and dropping the visible copy
     would be the very error this is meant to prevent, in the other direction.
+
+    A page that is mostly invisible drops nothing -- see INVISIBLE_PAGE_MAJORITY
+    for why that is a mis-render rather than a leftover.
     """
     hidden: list[str] = []
     shown: set[str] = set()
+    n_visible = 0
     try:
         blocks = page.get_text("dict").get("blocks", [])
     except Exception:  # noqa: BLE001
-        return []
+        return [], 0
     for blk in blocks:
         for line in blk.get("lines", []):
             for span in line.get("spans", []):
@@ -720,13 +742,20 @@ def invisible_spans(page: "pymupdf.Page") -> list[str]:
                     hidden.append(text)
                 else:
                     shown.add(text)
+                    n_visible += 1
+    if not hidden:
+        return [], 0
+    total = len(hidden) + n_visible
+    if (len(hidden) >= INVISIBLE_MISRENDER_FLOOR
+            and len(hidden) / max(1, total) > INVISIBLE_PAGE_MAJORITY):
+        return [], len(hidden)
     seen: set[str] = set()
     out = []
     for text in hidden:
         if text not in shown and text not in seen:
             seen.add(text)
             out.append(text)
-    return out
+    return out, 0
 
 
 def strip_invisible(body: str, hidden: list[str]) -> tuple[str, int]:
@@ -988,12 +1017,14 @@ def convert_one(job: tuple) -> dict:
         # layout engine consumes the pages. See invisible_spans(): publishing it
         # would put lines in the Markdown that a reader cannot find on the page.
         hidden_by_page: dict[int, list[str]] = {}
+        invisible_kept = 0
         if drop_invisible:
             for _i, _pg in enumerate(doc):
                 try:
-                    _h = invisible_spans(_pg)
+                    _h, _kept = invisible_spans(_pg)
                 except Exception:  # noqa: BLE001
-                    _h = []
+                    _h, _kept = [], 0
+                invisible_kept += _kept
                 if _h:
                     hidden_by_page[_i] = _h
 
@@ -1176,6 +1207,7 @@ def convert_one(job: tuple) -> dict:
             f"has_ocr: {'true' if ocr_pages else 'false'}",
             f"redacted_secrets: {redactions}",
             f"invisible_spans_dropped: {invisible_dropped}",
+            f"invisible_spans_kept_misrendered: {invisible_kept}",
             f"ocr_confidence: {round(sum(ocr_confs) / len(ocr_confs), 1) if ocr_confs else 'null'}",
             f"ocr_unreliable_blocks: {risky_blocks}",
             f"ocr_timeouts: {ocr_timeouts}",
@@ -1210,6 +1242,7 @@ def convert_one(job: tuple) -> dict:
             ocr_unreliable_blocks=risky_blocks, ocr_timeouts=ocr_timeouts,
             pages_recovered_from_text_layer=recovered_pages,
             invisible_spans_dropped=invisible_dropped,
+            invisible_spans_kept_misrendered=invisible_kept,
             content_note=content_note or None,
         )
         return result

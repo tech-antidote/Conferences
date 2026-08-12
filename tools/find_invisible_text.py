@@ -32,6 +32,16 @@ Measured over both decks, 1397 spans: the 9 invisible ones score 0.911 and up,
 the highest visible span scores 0.493. The threshold sits in an empty gap
 rather than on a slope, which is why it needs no per-deck tuning.
 
+Hits come back in two kinds, because scanning 83 decks showed two populations
+and the difference decides whether deleting one repairs the document or guts
+it. A `leftover` is a few spans on an otherwise normal page -- the duplicated
+URL, a stray page number. A `misrendered-page` is most of a page at once: one
+talk draws a timing diagram as white boxes on black with white numerals inside
+them, so 64 of that page's 74 spans render blank. Those numerals are the
+diagram's labels, and the right answer there is to keep them and say so.
+Across Black Hat USA 2026 the split was 791 leftovers to 253 on mis-rendered
+pages.
+
     python3 tools/find_invisible_text.py --src BlackHat_USA_2026_Slides
     python3 tools/find_invisible_text.py --src . --out markdown --json hits.json
 """
@@ -57,6 +67,11 @@ MATCH_TOLERANCE = 20
 # What share of the box must be indistinguishable before the glyphs count as
 # having contributed nothing.
 SHARE = 0.85
+# A page that is mostly invisible is mis-rendered rather than carrying a
+# leftover, and is reported separately -- see the note in pdf2md.py. The floor
+# keeps a 1-span page from qualifying just because its one span is hidden.
+PAGE_MAJORITY = 0.5
+MISRENDER_FLOOR = 8
 # Very small boxes render to a handful of pixels where the statistics stop
 # meaning anything.
 MIN_EDGE = 2.0
@@ -97,6 +112,7 @@ def scan(pdf_path: str) -> list[dict]:
                 blocks = page.get_text("dict")["blocks"]
             except Exception:
                 continue
+            hidden, visible = [], 0
             for blk in blocks:
                 for line in blk.get("lines", []):
                     for span in line.get("spans", []):
@@ -104,7 +120,16 @@ def scan(pdf_path: str) -> list[dict]:
                         if not text:
                             continue
                         if is_invisible(page, span):
-                            out.append({"page": idx + 1, "text": text})
+                            hidden.append(text)
+                        else:
+                            visible += 1
+            if not hidden:
+                continue
+            misrendered = (len(hidden) >= MISRENDER_FLOOR
+                           and len(hidden) / (len(hidden) + visible) > PAGE_MAJORITY)
+            for text in hidden:
+                out.append({"page": idx + 1, "text": text,
+                            "kind": "misrendered-page" if misrendered else "leftover"})
     finally:
         doc.close()
     return out
@@ -181,9 +206,11 @@ def main() -> int:
         results[rel] = hits
         pages = sorted({h["page"] for h in hits})
         sample = sorted({h["text"] for h in hits})[:3]
+        n_left = sum(1 for h in hits if h.get("kind") != "misrendered-page")
+        n_mis = len(hits) - n_left
         print(f"{rel}")
-        print(f"    {len(hits)} span(s) on pages {pages[:12]}"
-              + (" ..." if len(pages) > 12 else ""))
+        print(f"    {n_left} leftover + {n_mis} on mis-rendered pages, "
+              f"pages {pages[:12]}" + (" ..." if len(pages) > 12 else ""))
         for t in sample:
             print(f"    - {t[:90]!r}")
         sys.stdout.flush()
