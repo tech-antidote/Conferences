@@ -155,12 +155,35 @@ def apply_to(doc: str, fixes: dict[int, str], verified: int) -> int:
     return written
 
 
-def cmd_apply(doc: str, also: list[str], work: str) -> int:
+def drop_lines(body: str, patterns: list[re.Pattern]) -> tuple[str, int]:
+    """Remove whole lines matching any pattern, and tidy the gap."""
+    if not patterns:
+        return body, 0
+    kept, dropped = [], 0
+    for line in body.splitlines():
+        if any(p.search(line) for p in patterns):
+            dropped += 1
+            continue
+        kept.append(line)
+    if not dropped:
+        return body, 0
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(kept)).strip(), dropped
+
+
+def cmd_apply(doc: str, also: list[str], work: str, drop: list[str]) -> int:
     corr = os.path.join(work, "corrections.jsonl")
     if not os.path.exists(corr):
         print(f"No corrections at {corr}", file=sys.stderr)
         return 1
+    # A document split across reviewers gets one judgement call answered several
+    # times, and they do not always agree. On a 94-page deck reviewed by six
+    # people, one restored the slide-master DLP stamp the converter drops
+    # everywhere and five did not -- leaving the deck inconsistent with itself
+    # depending on who held which page. Merging is where that has to be settled,
+    # because it is the only point that sees all of the reviewers at once.
+    patterns = [re.compile(p) for p in drop]
     fixes, reviewed, verdicts = {}, set(), {}
+    dropped_lines = 0
     for line in open(corr, encoding="utf-8"):
         line = line.strip()
         if not line:
@@ -173,7 +196,11 @@ def cmd_apply(doc: str, also: list[str], work: str) -> int:
         reviewed.add(slide)
         verdicts[slide] = c.get("verdict", "")
         if (c.get("markdown") or "").strip():
-            fixes[slide] = c["markdown"]
+            body, n = drop_lines(c["markdown"], patterns)
+            dropped_lines += n
+            fixes[slide] = body
+    if dropped_lines:
+        print(f"normalised away {dropped_lines} line(s) matching --drop-line")
 
     for target in [doc] + list(also):
         n = apply_to(target, fixes, len(reviewed))
@@ -197,13 +224,19 @@ def main() -> int:
     ap.add_argument("--pages", default="", help="subset, e.g. '1-10,42'")
     ap.add_argument("--extract", action="store_true")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--drop-line", action="append", default=[], metavar="REGEX",
+                    help="drop correction lines matching this regex, so one "
+                         "reviewer's judgement on template chrome does not "
+                         "leave the document inconsistent with itself; "
+                         "repeatable")
     args = ap.parse_args()
 
     if args.extract:
         roots = [os.path.abspath(x) for x in (args.src or ["."])]
         return cmd_extract(args.doc, roots, os.path.abspath(args.work), args.pages)
     if args.apply:
-        return cmd_apply(args.doc, args.also, os.path.abspath(args.work))
+        return cmd_apply(args.doc, args.also, os.path.abspath(args.work),
+                         args.drop_line)
     ap.print_help()
     return 1
 
