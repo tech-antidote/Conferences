@@ -84,6 +84,20 @@ verbatim:
 > slide. Preserve the author's own typos. Never summarise or reorder. Drop the
 > converter's `> Recovered by OCR` banner, which is scaffolding rather than
 > slide content.
+>
+> Two things are not slide content and should not be added: **template chrome**
+> — the venue logo lockup, the page number, a DLP stamp such as "Information
+> Classification: General" — and text that is in the PDF but **not visible on
+> the page**. If a line in `current_markdown` cannot be found anywhere on the
+> image, it is not on the slide; remove it and say so.
+
+The chrome rule exists because three reviewers on one deck each stopped to ask
+about the same footer. The converter already drops it everywhere, so adding it
+on the pages one reviewer happens to hold would make the deck inconsistent with
+itself. The invisible-text rule is now also enforced mechanically by the
+converter — see `invisible_spans()` in `tools/pdf2md.py` — but only from the
+next conversion onwards, so it still needs watching for on documents converted
+before that.
 
 Splitting a document across reviewers at 12–15 pages each worked well; each
 writes its own `corrections_<LETTER>.jsonl` so they do not collide.
