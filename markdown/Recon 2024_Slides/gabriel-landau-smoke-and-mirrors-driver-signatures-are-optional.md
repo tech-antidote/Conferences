@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Gabriel Landau_Smoke and Mirrors Driver Signatures Are Optional.pdf"
 pages: 58
 sha256: "1643dd276e13ff4a110c51d6895c7ed53aa68e7498f73e1097544ef190ca1318"
-text_chars: 29130
+text_chars: 27271
 ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Gabriel Landau_Smoke and Mirrors Driver Signatures Are Optional_code.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:29:26Z"
+converted_at: "2026-08-12T06:14:31Z"
 ---
 # Smoke and Mirrors Driver Signatures Are Optional
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-11T23:29:26Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Gabriel Landau_Smoke and Mirrors Driver Signatures Are Optional.pdf` (58 pages)
 
+
 ## Slide 1
 
 REcon Montreal 2024
 
 **Smoke and Mirrors: Driver Signatures are Optional** Gabriel Landau
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REcon Montreal 2024
@@ -52,13 +58,13 @@ Blue, formerly red
 
 **Chapter 1 - Windows File Sharing** More than you’ve ever wanted to know about sharing violations.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chapter 1 - Windows File Sharing
 More than you’ve ever wanted to know about sharing violations.
 @ napster XG
-The Wtrate Hap
 ```
 
 ## Slide 4
@@ -121,24 +127,19 @@ Set **ShareMode** =0 for exclusive access to files until you close the handle.
 
 What happens when a program opens a file?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 I/O Flow (Abbreviated)
 What happens when a program opens a file?
-LN Zo”
 NtCreateFile ObOpenObjectByName IofCallDriver NtfsFsdCreate
 System Service Object Manager I/O Manager Filesystem
 ® Windows Object Explorer 64-bit (Administrator)
 File View Object Find Extras Plugins Help
 Name Type Additional Information
 8
-© Objectiypes @ BTH#MS_BTHPAN#7&20f38eb4&082#{cac88424-... SymbolicLink
-> Sessions "|| @ BTHEMS_ RFCOMM#78&20F38eb480802{9e16888d... SymbolicLink
-(2 ArcName
 > NLS
-(3 Windows
-7} GLOBAL?
 @ CimfsControl SymbolicLink \Device\cimfs\control
 \GLOBAL??\ DISPLAY#Default_Monitor#4&427137e&0&UIDOF{ e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}
 ```
@@ -149,67 +150,23 @@ Name Type Additional Information
 
 What happens when a program opens a file?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 I/O Flow (Abbreviated)
 What happens when a program opens a file?
 Child-SP
-FFF¥8580° 26e66c98
-F¥F¥8580° 26e66ca0
-FFF¥8580° 28e66ce0
-F¥¥¥8580° 26e66d50
-F¥F¥8580° 20e66e00
-FFF¥8580° 20e66e40
-FFF¥8580° 20e66e908
-F¥F¥8580° 20067000
-F¥¥¥8580° 20e671d0
-F¥F¥8580° 20067300
-F¥F¥8580° 2006730
-F¥F¥8580° 20e67450
 RetAddr
-F¥¥F¥800° 3742d935
-FF¥FF800° 330b710F
-F¥¥F¥800° 330e9f54
-Ff¥¥F800° 3742d935
-F¥¥¥¥800° 37444704
-FF¥¥F800° 3783ec6b
-FF¥FF800° 37833527
-Ff¥¥£800° 3783baca
-F¥¥F¥800° 3782ae8b
-F¥¥F¥800° 37828fb9
-F¥¥F¥800° 376119c8
-eeee7 fff Sb68da84
 Call Site ;
-Ntfs!NtfsFsdCreate riHesystel
-nt! IofCallDriver+0x55
 FLTMGR! FltpLegacyProcessingAfterPreCallbacksCompleted+0x28f
 FLTMGR! FltpCreate+0x324
-nt! IofCallDriver+0x55 /O Manager
-nt! IoCal1DriverwithTracing+0x34
-nt! IopParseDevice+@x11bb
 nt! ObpLookupObjectName+0x1117 IDje
-nt! ObOpenObjectByNameEx+0xifa
 nt! IopCreateFile+@x132b
 nt! NtCreateFile+0x79 System Servic
-nt! KiSystemServiceCopyEnd+0x28 KERN
-lo Fit IR IRIE IS IS BIS IS IRIS ISIS IBIS
-Dib id [LIN Hoe Im [6 [60 IN [oh [un Le [We Ih | 1
-egee0090  da3fe5538
-eeeeGe9e da3fe560
-ee8eeese da3febde
-08000090 da3fe730
-eee8e0090° da3fe960
-eeee7 fff 58d741e9
-ee0e7 fff 58d73c56
-eeee7 fff 58d75343
-eee0e7 fff 58d732ae
-eeee7 fff 4b2afc16
-ntdll!NtCreateFile+0x14 LiSEE
 KERNELBASE ! CreateFileInternal+0x579
 KERNELBASE ! CreateFileW+0x66
 KERNELBASE ! BasepLoadL ibraryAsDataFileInternal+0x293
-KERNELBASE ! LoadLibraryExw+0xe@
 ```
 
 ## Slide 10
@@ -250,7 +207,8 @@ File mappings (section objects) allow files to be readable/writable after handle
 
 **Chapter 2 - Code Integrity** How do you trust the code that’s running on your system?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chapter 2 - Code Integrity
@@ -276,13 +234,12 @@ Pic
 
 Pic
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Authenticode
 Microsoft specification to digitally
-® ntoskrnl.exe Properties
-curity
 General
 Details
 Previous Versions
@@ -300,7 +257,6 @@ General Advanced
 , Digital Signature Information
 This digital signature is OK.
 Signer information
-Name: [Microsoft Windows SSS
 E-mail: Not available
 Signing time: Friday, April 5, 2024 03 AM
 Countersignatures
@@ -518,19 +474,16 @@ Security catalogs - detached Authenticode signatures.
 
 Large list of catalogs.  CI loads them into kernel pool for fast lookup.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Authenticode - Security Catalogs
 Large list of catalogs. CI loads them into kernel pool for fast lookup.
-mo) LS}
 iF} Home Share View a &
-1H i's iv) LE
 Copy path = Bi Easy access ~ Be eait HE Select none
 Pinto Quick Copy Paste Move Copy Delete Rename New Properties =
-eres Gi Paste shortcut = tg <0 = Fontes = Be History i invert selection
 Clipboard Organize New Open Select
-€ > » & [EB « System32 » CatRoot » {F750E6C3-38EE-11D1-85E5-00CO4FC295EE} vo -
 Name Date modified Type
 2 Microsoft-Windows-Client-Desktop-Required-WOW64-Package001 1 ~31bf3856ad364e35~amd64~~ 10,0.19041.4046.cat 2/2/2024 7:47 AM Security Catalog
 2 Microsoft-Windows-Client-Desktop-Required-WOW64-Package001 1 ~31bf3856ad364e35~amd64~~ 10.0.19041.4170.cat 3/7/2024 3:01 PM Security Catalog
@@ -856,23 +809,18 @@ If HVCI is enabled, CI.dll doesn’t do catalog parsing.
 
 <u>https://www.youtube.com/watch?v=ha-uagjJQ9k</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Inside The Mitigation
 I_MapAndSizeDataFile is the legacy vulnerable code.
--~_ > 4 v10 = ZwiapViewOfSection(
 SectionHandle,
-; ' (HANDLE) OxFFFFFFFFFFFF FFFFLL,
 BaseAddress,
 I
-! L
 v1l2 = FileHandle;
 goto LABEL _ 16;
-4
-I
 OLD anb BUSTED
-0004CC04\ I MapAndSizeDataFile:83 (1C004DC04)
 ```
 
 ## Slide 53
@@ -883,24 +831,18 @@ OLD anb BUSTED
 
 <u>https://www.youtube.com/watch?v=ha-uagjJQ9k</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Inside The Mitigation
 CipMapAndSizeDataFileWithMDL contains the fix.
 v13 = ZwCreateSection(&SectionHandle, SECTION_MAP_READ,
 {
-v13 = ZwiapViewOfSection(
 SectionHandle,
 (HANDLE )@xFFFFFFFFFFFFFFFFi64,
-vi2,
-0164,
-ois4,
-0i64,
 &ViewSize,
 ViewShare,
-a,
-2u)5
 {
 if ( ViewSize > @xFFFFEFFF )
 {
@@ -909,15 +851,11 @@ goto LABEL_16;
 Mdl = IoAllocateMdl(*v12, ViewSize, @, @, @i64);
 v1i5 = Mdl;
 if ( IMdl )
-vi3 = -1073741676;
 goto LABEL_16;
-4
-ae
 MmProbeAndLockPages(Mdl, @, IoReadAccess);
 *al@ = v15;
 goto LABEL_15;
 }
-t
 0004E138 CipMapAndSizeDataFileWithMDL:-57 (1C004F138)
 ```
 

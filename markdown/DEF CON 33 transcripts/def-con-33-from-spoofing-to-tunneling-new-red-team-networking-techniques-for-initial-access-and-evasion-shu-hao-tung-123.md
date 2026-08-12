@@ -12,7 +12,7 @@ duration_seconds: 2539
 words: 4655
 text_chars: 26241
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # From Spoofing to Tunneling - New Red Team Networking Techniques for Initial Access and Evasion

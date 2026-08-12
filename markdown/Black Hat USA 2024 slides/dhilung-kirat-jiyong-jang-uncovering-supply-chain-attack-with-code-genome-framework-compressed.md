@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Dhilung Kirat & Jiyong Jang_Uncovering Supply Chain Attack with Code Genome Framework_Compressed.pdf"
 pages: 30
 sha256: "745ccfbce4f0d78897abab385fed409f32e2fcac32c5356a20c00c00aa9dfaf5"
-text_chars: 13328
-ocr_pages: 4
+text_chars: 12357
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:58:56Z"
+converted_at: "2026-08-12T04:29:10Z"
 ---
 # Uncovering Supply Chain Attack with Code Genome Framework
 
 **Speakers:** Dhilung Kirat, Jiyong Jang  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dhilung Kirat & Jiyong Jang_Uncovering Supply Chain Attack with Code Genome Framework_Compressed.pdf` (30 pages)
+
 
 ## Slide 1
 
@@ -58,24 +63,10 @@ AI Supply Chain Security Team IBM **Research**
 
 ## Slide 4
 
-_“You can’t trust code that you did not totally create yourself_ .”
-
-_—Ken Thompson_
-
-**#BHUSA @BlackHatEvents**
-
-4
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“You can't trust code that you did
-not totally create yourself.
-pian hat
-USA 2024
-J
-—Ken Thompson
 #BHUSA @BlackHatEvents
+“You can’t trust code that you did
+not totally create yourself.”
+—Ken Thompson
 TURING AWARD LECTURE
 Reflections on Trusting Trust
 To what extent should one trust a statement that a program is free of Trojan
@@ -83,17 +74,17 @@ horses? Perhaps it is more important to trust the people who wrote the
 software.
 KEN THOMPSON
 INTRODUCTION
-I thank the ACM for this award. I can’t help but feel
+I thank the ACM for this award. I can't help but feel
 that I am receiving this honor for timing and serendip-
-ity as much as technical merit. UNIX’ swept into popu-
+ity as much as technical merit. UNIX 1 swept into popu-
 larity with an industry-wide change from central main-
 frames to autonomous minis. I suspect that Daniel Bob-
 row [1] would be here instead of me if he could not
-afford a PDP-10 and had had to “settle” for a PDP-11.
+afford a PDP-10 and had had to "settle" for a PDP-11.
 Moreover, the current state of UNIX is the result of the
 labors of a large number of people.
-There is an old adage, “Dance with the one that
-brought you,” which means that I should talk about
+There is an old adage, "Dance with the one that
+brought you," which means that I should talk about
 UNIX. I have not worked on mainstream UNIX in many
 years, yet I continue to get undeserved credit for the
 work of others. Therefore, I am not going to talk about
@@ -108,11 +99,10 @@ language program. I compared the sources and was as-
 tounded to find that they matched character-for-char-
 acter. The result of our work together has been far
 greater than the work that we each contributed.
-Iam a programmer. On my 1040 form, that is what I
+I am a programmer. On my 1040 form, that is what I
 put down as my occupation. As a programmer, I write
-7 UNIX is a trademark of AT&T Bell Laboratories.
-© 1984 0001-0782/84/0800-0761 75¢
-August 1984 Volume 27 Number 8
+1 UNIX is a trademark of AT&T Bell Laboratories.
+©1984 0001-0782/84/0800-0761 75¢
 programs. I would like to present to you the cutest
 program I ever wrote. I will do this in three stages and
 try to bring it together at the end.
@@ -130,9 +120,9 @@ produce as output an exact copy of its source. If you
 have never done this, I urge you to try it on your own.
 The discovery of how to do it is a revelation that far
 surpasses any benefit obtained by being told how to do
-it. The part about “shortest” was just an incentive to
+it. The part about "shortest" was just an incentive to
 demonstrate skill and determine a winner.
-Figure 1 shows a self-reproducing program in the C?
+Figure 1 shows a self-reproducing program in the C 3
 programming language. (The purist will note that the
 program is not precisely a self-reproducing program,
 but will produce a self-reproducing program.) This en-
@@ -143,9 +133,11 @@ easily written by another program. 2) This program can
 contain an arbitrary amount of excess baggage that will
 be reproduced along with the main algorithm. In the
 example, even the comment is reproduced.
+August 1984
+Volume 27 Number 8
 Communications of the ACM
-761
-```
+781
+4
 
 ## Slide 5
 
@@ -364,11 +356,11 @@ _Gene can be constructed from closed-source/legacy code where source code is not
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Code Genome: Semantically meaningful fingerprint
-Pes int pen at Sears CIS
 if (a>100){
 l=l+a;
 f3(int a){ 2; if (a>501){
@@ -379,28 +371,19 @@ a+ local; x
 a + tmp+2;
 maj;
 l=m=a;
-(aarp x") s “
-(ap i lse if(a>10)
-sturn a;
 l
 int tmp 30-a; tmp = tmp + a;
 [rbp - tmp = tmp +2; a = a + tmp;
 d ptr [rbp - Oxia rn ay
 dword ptr [rbp - 4], eax
-f2(int a){ S ; : x1000edcfe: 8b 45 f , dvord pte [rbp ~
 int local=31; oe pop rbp
 local +=1;
 local = a + lo
 return local; \d
 ex100000dbs: 89 ov dword ptr [rbp
 eovedbe: a eax, dword ptr [rbp
-Lunnamed_addr #0 { ex100000dbb: 89 45 fc word ptr [rbp - 41,
-o00edda
 e0eeeddd: 8 dword ptr [rbp
-e000ede0: 45 eax, dword ptr
 ox100000de3: add eax, dword ptr
-e000edes: 89 45 dword ptr [rbp
-ox100000de9: 8 eax, dword ptr
 ee0edec: 8 dword ptr [rbp
 dword ptr
 mien hat #BHUSA @BlackHatEvents
@@ -472,29 +455,22 @@ liblzma.so.5.6.1.distro
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo 1: xz backdoor analysis using Code Genome
 localhost
 Code Genome
-Compare B eer s05209%00
-Bp vera sos.20.istro
-663500a4dbcb9faaac802eb3c4bSb0dd5c0333df473d7368b0bc53a32/0C363a 7ca35118ebe61d2789be1c84c3e93
 Gene similarity: 70 Identical: 191 Similar: 95 Mismatch: 27 Deletions: Additions: 101
 liblzma.so.5.6.1.github (663500a4) Functions liblzma.so.5.6.1.distro (4becc50a) Functions Actions
 crc32_resolve crc32_resolve
-crc64_resolve ‘cre64_resolve
-get_literal_price get_literal_price
 get_options get_options
 hash_append hash_append
-Izencoder_prepare Izencoder_prepare
 lzma2_bound.part.0 lzma2_bound.part.0
 lzma_delta_encoder_init lzma_delta_encoder_init
 lzma_index_buffer_decode lzma_index_buffer_decode
 lzma_index_memusage lzma_index_memusage
-lzma_lz_encoder_init lzma_lz_encoder_init
-piSekhat #BHUSA @BlackHatEvents A> 18
 USA 2024
 ```
 
@@ -709,14 +685,14 @@ https://github.com/code-genome
 
    - Archives: `ar, cpio, tar, bzip2, gzip, zstd, xz, rar, 7zip`
 
-```
+\```
 git clone https://github.com/code-genome/codegenome.git
 cd codegenome
-```
+\```
 
-```
+\```
 make start
-```
+\```
 
 **#BHUSA @BlackHatEvents**
 
@@ -755,17 +731,3 @@ IBM **Research**
 github.com/code-genome
 
 **#BHUSA @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a a
-}
-black hat —
-USA 2024
-Dhilung Kirat & dkirat@us.ibm.com
-Jiyong Jang XX jjang@us.!bm.com
-IBM Research
-github.com/code-genome
-#BHUSA @bBlackHatEvents
-```

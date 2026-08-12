@@ -23,6 +23,32 @@ from pdf2md import parse_conference, parse_speakers_title, slugify  # noqa: E402
 
 SPEAKER_TITLE_CASES = [
     # (filename stem, expected speakers, expected title)
+    # " _ " separates speakers from title here, not one speaker from the next.
+    # Rewriting it to "&" made the title read as a speaker, the split failed,
+    # and the talk shipped with nobody credited.
+    ("Fabio Pagani, Alex Matrosov, Alex Ermolov , Yegor Vasilenko , Sam Thomas , "
+     "Anton Ivanov _ LogoFAIL Security Implications of Image Parsing During System Boot",
+     ["Fabio Pagani", "Alex Matrosov", "Alex Ermolov", "Yegor Vasilenko",
+      "Sam Thomas", "Anton Ivanov"],
+     "LogoFAIL Security Implications of Image Parsing During System Boot"),
+    ("Dan Petro & David Vargas _ Badge of Shame Breaking into Secure Facilities with OSDP",
+     ["Dan Petro", "David Vargas"],
+     "Badge of Shame Breaking into Secure Facilities with OSDP"),
+    # …and here it does separate two speakers, with the title after a hyphen.
+    ("Gyuyeon Kim _ Hyunho Cho-Operation PoisonedApple Tracing Credit Card "
+     "Information Theft to Payment Fraud_compressed",
+     ["Gyuyeon Kim", "Hyunho Cho"],
+     "Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud"),
+    # A spaced hyphen separates speakers from title, but only once the tight
+    # "-Capital" form has failed -- otherwise this competes with the case below.
+    ("Song Liu & Zhechang Zhang & Hengkai Ye & Hong Hu - One Flip is All It Takes "
+     "Identifying Syscall-Guard Variables for Data-Only Attacks",
+     ["Song Liu", "Zhechang Zhang", "Hengkai Ye", "Hong Hu"],
+     "One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks"),
+    # A handle with digits in it is a speaker, not prose.
+    ("bagelByt3s_Turning Enterprise Update Servers Into Backdoor Factories (0_o)",
+     ["bagelByt3s"],
+     "Turning Enterprise Update Servers Into Backdoor Factories (0_o)"),
     ("Michael Stepankin_mTLS When Certificate Authentication is Done Wrong",
      ["Michael Stepankin"], "mTLS When Certificate Authentication is Done Wrong"),
     ("Sheng-Hao Ma & Yi-An Lin & Mars Cheng_Attention Is All You Need",

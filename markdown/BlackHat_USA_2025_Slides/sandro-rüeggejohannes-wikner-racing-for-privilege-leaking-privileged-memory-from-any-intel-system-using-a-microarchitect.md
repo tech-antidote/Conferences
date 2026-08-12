@@ -12,15 +12,20 @@ text_chars: 82060
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:00:40Z"
+converted_at: "2026-08-12T05:20:41Z"
 ---
 # Racing for Privilege Leaking Privileged Memory From Any Intel System Using a Microarchitectural Race Condition
 
 **Speakers:** Sandro Rüegge, Johannes Wikner  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sandro Rüegge&Johannes Wikner_Racing for Privilege Leaking Privileged Memory From Any Intel System Using a Microarchitectural Race Condition_WP.pdf` (17 pages)
+
 
 ## Slide 1
 

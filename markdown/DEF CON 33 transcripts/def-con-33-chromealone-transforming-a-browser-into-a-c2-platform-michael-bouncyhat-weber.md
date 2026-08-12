@@ -12,7 +12,7 @@ duration_seconds: 2437
 words: 8104
 text_chars: 44572
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # ChromeAlone - Transforming a Browser into a C2 Platform

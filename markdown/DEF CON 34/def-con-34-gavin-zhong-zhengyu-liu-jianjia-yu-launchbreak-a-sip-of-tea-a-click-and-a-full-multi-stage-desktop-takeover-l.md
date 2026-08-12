@@ -4,7 +4,7 @@ speakers: ["Gavin Zhong", "Zhengyu Liu", "Jianjia Yu"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Gavin Zhong, Zhengyu Liu, Jianjia Yu - LaunchBreak a Sip of Tea, a Click, and a Full Multi-stage Desktop Takeover - launchbreak 1 0.pdf"
 pages: 48
 sha256: "9e6ffa22c6c4353003fdf7fbc6eca7f0199e640473776db7728f6afd605c06be"
@@ -12,15 +12,20 @@ text_chars: 24304
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:17:58Z"
+converted_at: "2026-08-12T06:27:57Z"
 ---
 # LaunchBreak a Sip of Tea, a Click, and a Full Multi-stage Desktop Takeover
 
 **Speakers:** Gavin Zhong, Zhengyu Liu, Jianjia Yu  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gavin Zhong, Zhengyu Liu, Jianjia Yu - LaunchBreak a Sip of Tea, a Click, and a Full Multi-stage Desktop Takeover - launchbreak 1 0.pdf` (48 pages)
+
 
 ## Slide 1
 

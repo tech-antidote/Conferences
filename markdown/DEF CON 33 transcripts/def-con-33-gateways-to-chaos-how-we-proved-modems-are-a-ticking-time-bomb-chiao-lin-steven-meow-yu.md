@@ -12,7 +12,7 @@ duration_seconds: 2380
 words: 5141
 text_chars: 28915
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Gateways to Chaos - How We Proved Modems Are a Ticking Time Bomb

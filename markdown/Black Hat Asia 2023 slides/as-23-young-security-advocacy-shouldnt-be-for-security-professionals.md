@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Young-Security-Advocacy-Shouldnt-Be-For-Security-Professionals.pdf"
 pages: 64
 sha256: "bbe613d9bef399e5e1c1ade87685c37322129fa51b1cfde84f6735af8dfeb8cf"
-text_chars: 15880
+text_chars: 15483
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:57:17Z"
+converted_at: "2026-08-12T03:50:57Z"
 ---
 # Security Advocacy Shouldnt Be For Security Professionals
 
 **Speakers:** Young  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Young-Security-Advocacy-Shouldnt-Be-For-Security-Professionals.pdf` (64 pages)
+
 
 ## Slide 1
 
@@ -535,14 +540,12 @@ fundamentals beginners tos basics essentials
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
 ASIA 20253
 y @_sarahyo See appendix B for full chat GPT response
-Hi @sarahyo.com
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 38
@@ -553,16 +556,11 @@ Hi @sarahyo.com
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
-Analysis results
 Content | reviewed Types of creators
-W @_sarahyo
-Hi @sarahyo.com
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 39
@@ -573,18 +571,13 @@ Hi @sarahyo.com
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
-Analysis results
 Average accessibility rating by creator
 type
 NOT FOR PROFIT VENDOR CONTENT CREATOR
-W @_sarahyo
-Hi @sarahyo.com
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 40
@@ -595,17 +588,12 @@ Hi @sarahyo.com
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
-Analysis results
 Average score by content type
 VIDEO PODCAST DOCUMENTATION BOOK TRAINING COURSE
-W @_sarahyo
-Hi @sarahyo.com
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 41
@@ -616,17 +604,11 @@ Hi @sarahyo.com
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blsekhat
-ASIA 2023
-Analysis results
 Proportion of paywalled content
-@ Paywalled
-Free
-m<
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 42

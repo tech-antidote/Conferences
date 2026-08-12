@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Tan-Preparing-for-the-long-journey-of-data-security.pdf"
 pages: 56
 sha256: "afb17a222d8803794615aa158d50d33e208268cac16e46c933bafe2a704b1d98"
-text_chars: 26012
-ocr_pages: 4
+text_chars: 28153
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:46Z"
+converted_at: "2026-08-12T03:49:12Z"
 ---
 # Preparing for the long journey of data security
 
 **Speakers:** Tan  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Tan-Preparing-for-the-long-journey-of-data-security.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Preparing the Long Journey for Data Security
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 ASIA &
 MAY 11-12
 BRIEFINGS
@@ -395,24 +400,17 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-SIA 2&0
 Fast Growing, Unbalanced in Geography
 Data Security Project Quantity Tracking |
 Data Security Market Space j
 2018-2022 - Data Security Customer Map -
 +00 (100 million) a
 500 40 “% Sw)
-300 L oN, e, oe
-lll ll a wae’:
-chiA | ; |
-2eeegee228 888 55559 9 88 0
-SSR SSSR SESRSSESRESEPES 2020 2021 2022 1 1
-Information Classification: General
 ```
 
 ## Slide 21
@@ -442,6 +440,37 @@ Information Classification: General
 #BHASIA @BlackHatEvents
 
 Information Classification: General
+
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Data Security shift from buy products to build systems
+Product Competitiveness Quadrant | 2022 Product Competitiveness Quadrant (special project) | 2022
+9
+120% Privacy 200% Privacy
+110% Computing Computing
+180%
+100%
+90% 160%
+80% 140%
+70% 120%
+5 Database
+60% 100% Encryption
+50% Database bat
+Eneryption 80% @ Classification
+40% Data
+Classification 60%
+30% e@ DLP
+Document encryption and management
+20% Data Security Control 40% Data Security Control
+. Document encryption and management .
+10% @ Data Desensitization Database Audit 20% @ Database Audit
+DLP
+0% Database Firewall 0% @ Database Firewall Data Desensitization
+-10%
+OK 1K 2K 3K 4K 5K 6K 7K 8K OK 10K 0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900
+```
 
 ## Slide 24
 
@@ -487,6 +516,27 @@ Information Classification: General
 #BHASIA @BlackHatEvents
 
 Information Classification: General
+
+
+> Recovered by OCR — confidence 89/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+black hat
+Telecom Carriers: Data Security is High Priority
+Telecom Project Quantity Tracking | 2019-2022 Telecom Project Quantity and Growth | 2019-2022
+1800 70.7%
+80 B® Integration Project
+Bi integration Project Special Project
+Special Project 1600
+70 °
+1400
+60 881
+1200 49.8%
+50 48.2% 51.8% 702
+1000
+40 \
+256
+```
 
 ## Slide 26
 
@@ -576,6 +626,32 @@ Information Classification: General
 
 Information Classification: General
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Healthcare — The Healthcare Security Administration takes the
+lead
+Medical and Health Project Quantity Tracking | 2019-2022 Medical and Health Product Competitiveness Quadrant | 2022
+70%
+eS Document encryption and management
+40 BB Integration Project 60% eS Data Security Control
+Special Project 50%
+35
+40%
+15.0%
+30 30% Database Encryption
+Data Classification
+Data Desensitization
+10%
+20 5 eS DLP Database Audit
+85.0% 0%
+15 -10%
+1 Privacy
+0 ! li Computing
+NN N Nn N N N N N NC Nv Nv N N NC Nv -100 0 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800
+```
+
 ## Slide 32
 
 ### **Data Security Brand Popularity of China in 2022**
@@ -583,6 +659,119 @@ Information Classification: General
 #BHASIA @BlackHatEvents
 
 Information Classification: General
+
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Data Security Brand Popularity of China in 2022
+Brand Competitiveness Quadrant | 2022
+O
+1,600%
+800% ESAFENET
+WonderSoft
+SECSMART
+Vamtoo
+Zhong Xin
+Network Security
+Interstellar
+Security,
+River Security
+SCUTECH
+Westone
+VisualSec
+DHG
+SIWEI
+V-secure
+Technology
+SPINFO
+Frontier.
+InfoTech
+Technology S
+AISHU aay
+CihperGateway ~\—
+RORKE
+InFogo
+SkyGuard
+400%
+QuanZhi Tech
+O
+200% CETC
+Jump
+Strait
+Information
+ANKKI
+100%
+50%
+25%
+0%
+DBSEC
+GuanAn
+-50%
+Digital China
+-100%
+PLDSEC
+-400 -200 0 200 400
+360 Digital Security Group
+VRV
+UXSINO
+H3C
+}
+Dptech
+Venustech
+Hillstone
+MEICHUANG
+600 800
+DAS-Security
+NSFOCUS
+1000 1200
+1400 1600
+TOPSEC
+1800
+2000
+Sangfor
+2200
+400%
+350%
+300%
+250%
+200%
+150%
+100%
+50%
+0%
+-50%
+-100%
+Brand Competitiveness Quadrant (special project) | 2022
+PLDSEC
+SkyGuard
+River Security
+Interstellar
+Security
+Zhong Xin CETC QuanZzhi Tech
+Network Security
+SECSMART
+Westone
+WonderSoft
+ESAFENET
+Vamtoo. H3C
+strait O
+Information O
+Hillstone
+SCUTECH O
+Dptech
+bHC “\ Digital China SIWEI
+CihperGateway VisualSec
+DBSEC Venustech
+MEICHUANG
+NSFOCUS
+GuanAn
+DAS-Security
+QAX
+TOPSEC @
+Sangfor
+110 120 130 140
+```
 
 ## Slide 33
 
@@ -608,12 +797,10 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 Data Security Technology/Product/Solution/Service Landscape
 Data Security Platform
 Data Categorization
@@ -640,7 +827,6 @@ Database Security Database Firewall
 Document Encryption/Decryption —— Cipher Database Audit
 Data Store
 Backup&Restore
-Information Classification: General
 ```
 
 ## Slide 36
@@ -1109,22 +1295,16 @@ Data Security Operation
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
-0101101007 10070
 10700107000
-10110 va oo0011g :
-0100011 = p100107 OT O00
 0011 = 1001 1007 0
-01100100 = 101 0@M1 00011
 10000110011
 Infrastructure Tools Data Security
 Architecture Operation
 Technology
-Information Classification: General
 ```
 
 ## Slide 55

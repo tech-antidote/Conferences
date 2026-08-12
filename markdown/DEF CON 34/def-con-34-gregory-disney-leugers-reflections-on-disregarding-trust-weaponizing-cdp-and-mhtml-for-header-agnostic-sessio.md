@@ -4,17 +4,21 @@ speakers: ["Gregory Disney-Leugers"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Gregory Disney-Leugers - Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) - 1umberhac.pdf"
 pages: 46
 sha256: "ce4df736661808a0ec798ffb0464cfc88b50f6e3640fca9aefc7130ddd6fc23c"
-text_chars: 25854
-ocr_pages: 36
+text_chars: 23919
+ocr_pages: 35
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:21:02Z"
+converted_at: "2026-08-12T06:32:42Z"
 ---
 # Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking)
 
@@ -22,25 +26,27 @@ converted_at: "2026-08-12T00:21:02Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gregory Disney-Leugers - Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) - 1umberhac.pdf` (46 pages)
 
+
 ## Slide 1
 
 # **REFLECTIONS ON DISREGARDING TRUST**
 
-```
+\```
 Weaponization of CDP
 and MHTML in Headless Session Hijacking
-```
+\```
 
 SPEAKER BRIEFING
 
-```
+\```
 Gregory Disney-Leugers
 (1umberhack)
-```
+\```
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Follow-up to Reflections on Trusting Trust (1984
@@ -53,9 +59,9 @@ Reflections on Trusting Trust - 1984 > runtime - 2026
 
 Historical
 
-```
+\```
 Forty years in the making
-```
+\```
 
 Reflections on Trusting Trust `“The moral is obvious. You can't trust code that you did not totally create yourself. (Especially code from companies that employ people like me.) No amount of source-level verification or scrutiny will protect you from using untrusted code. In demonstrating the possibility of this kind of attack” -` _`Ken Thompson`_
 
@@ -63,9 +69,9 @@ Reflections on Trusting Trust `“The moral is obvious. You can't trust code tha
 
 About the Speaker
 
-```
+\```
 Who am I?
-```
+\```
 
 Tech lead of offensive security
 
@@ -77,54 +83,28 @@ Developer  of:
 
 - 0TrustCloud
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Tech lead of offensive security
-Developer of:
-e TunnelTug
-e Phisheries
-e © OTrustCloud
-Am | wrong?
-You're not wrong, Walter,
-you're just an asshole!
-```
-
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pillar 1: Dante's Inferno of Deflected Ownership
 The downward migration of security liability:
-E
-=
-=)
-=
-_
-Ee
 =
 =
-Fac)
+=
+=
 w
 n
-uw
 Ss
-St or
-=
-=
-<
 =
 =)
 <
 z
 S
 a
-e-— ~— [LAYER 7: GOOD INTENTIONS ]
-==
 e——— [LAYER 6: PRODUCT DEMAND |]
-7 |
-=e
 {
 [ LAYER 5: STANDARD EXEMPTIONS ]
 [ LAYER 4: CORPORATE CONSUMPTION ]
@@ -138,9 +118,9 @@ e——— [LAYER 6: PRODUCT DEMAND |]
 
 #### THEORETICAL FOUNDATION
 
-```
+\```
 Pillar 2: The Law of Generalized Complexity Orchestration
-```
+\```
 
 _"As a monolithic system use cases expand, it inevitably introduces features whose combined capabilities achieve functional parity with the underlying execution environment. When orchestrated in unintended ways, they systematically defeat the system's own isolation boundaries."_
 
@@ -148,10 +128,10 @@ _"As a monolithic system use cases expand, it inevitably introduces features who
 
 THEORETICAL FOUNDATION
 
-```
+\```
 Pillar 3: The Four Constants of Emergent
 Vulnerabilities
-```
+\```
 
 - **01**<sup>`Modular Vacuum:A component functions`</sup> `flawlessly in isolation.`
 
@@ -163,7 +143,8 @@ Vulnerabilities
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 T4 M TAGE
@@ -175,7 +156,8 @@ BiITM - one click - no zero-day
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AiTM vs BiTM
@@ -190,7 +172,8 @@ EvilIRBI is BITM — victim mirror, chromedp authenticates, session harvest from
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Roadmap
@@ -200,7 +183,6 @@ dino?url= MHTML DOM input — real
 https://provide via WebSocket upstream tab
 ONE-CLICK LURE
 https://phisheries.dev/dino?url=https://provider
-OS —_—
 Capture Bypass Harvest
 cc =f MFA - FastPass session +
 WebAuthn - EV client inventory
@@ -212,20 +194,19 @@ BiTM — no Chrome 0-days.
 
 OFFENSIVE ENGINEERING
 
-```
+\```
 BitM Demo: Would you like to play a game of Dino?
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ aboutblank x  @ chrome://dino/ - Dino game, > Ask Gemin fh RBI Proxy +
-G = OChrome chrome://dino < CG [ven} 6 phisheries.dev/dino?
+@ aboutblank x @ chrome://dino/ - Dino game, > Ask Gemin fh RBI Proxy +
 @ Amazon.com [i eBay [ij Booking.com: Chea... fj TripAdvisor Facebook
 Chrome is being controlled by automated test softwe Restore pages?
 . Chrome foothold — 148.@.7778.271 - Windows 11 Version 19.0.@ (64-bit)
 Chrome didn't shut d
-f
 Press space to play
 chrome_mirror: navigation ok despite load error
 chrome_mirror: navigation ok despite load error
@@ -238,17 +219,15 @@ Disney-Leu.. rbi_client_probe: chromewebdata foothold probe c
 downstream_rpc: stored publish
 vw rbi key relay
 A 4 rbi_session: phase
-bertbin DEF CON. Z ha! key ignored (not armed)
 Creatas EV log.html service Taking over log.htm!. Open log.html || Log ALL || Clear
 syncing input.
 scroll log : page log
-86°F : 2 . eats
-Sunny ‘ Si 7/1/2026
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System Architecture
@@ -271,13 +250,13 @@ Google - Okta - Entra
 
 ### **`THE PERFECT CLOAKING DEVICE`**
 
-```
+\```
 STRUCTURAL SUPERIORITY OF THE DINO FOOTHOLD (CHROME-ERROR://CHROMEWEBDATA)
-```
+\```
 
 #### **`RADIO SILENCE`**
 
-```
+\```
 Forcing the browser into the
 error state destroys the live
 navigation pipeline. Network
@@ -287,11 +266,11 @@ resource load hooks drop to
 absolute zero, seamlessly
 mimicking a routine local
 network timeout.
-```
+\```
 
 #### **`ONE-WAY MIRROR`**
 
-```
+\```
 As an opaque, display-isolated
 scheme, standard web-level
 security tooling is completely
@@ -300,11 +279,11 @@ or execution state. Client-
 side scripts are blind, while
 high-privilege CDP hooks
 retain absolute control.
-```
+\```
 
 #### **`STERILE STAGING`**
 
-```
+\```
 Modifying API properties live
 on a target page trips active
 runtime defenses. The Dino
@@ -314,21 +293,21 @@ adversary can silently rewrite
 objects and seed canvas
 fingerprints in total radio
 silence before redirect.
-```
+\```
 
 ## Slide 14
 
-```
+\```
 ARCHITECTURAL CODIFICATION
 THE IMMUTABLE LEGACY OF CHROMIUM BUG 703801
-```
+\```
 
-```
+\```
 The Display-Isolated MandateChromium Bug 703801
 officially established chrome-error:// as a display-
 isolated scheme to protect internal error states from
 external web manipulation.
-```
+\```
 
 - **`The Telemetry Asymmetry`** `The engineering fix successfully blocked standard web origins from sniffing or embedding the page, but explicitly preserved high-privilege communication channels (CDP/Extensions).`
 
@@ -336,12 +315,12 @@ external web manipulation.
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 T4 M TAGE
 Follow-up to Reflections on Trusting Trust (1984
-27 AM
 INSIDE THE PIPELINE
 Mirror - relay - harvest
 ~11 min
@@ -349,7 +328,8 @@ Mirror - relay - harvest
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mirror Flow
@@ -363,7 +343,8 @@ Pixel-faithful viewport - real session never leaves chromedp
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Component Map
@@ -377,13 +358,13 @@ Apex Service Worker
 Scope /- fetch intercept in privileged V8
 (2)
 (3) Origin bypass
-(@)
 Part 1 of 2
 ```
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Component Map
@@ -400,7 +381,8 @@ WebAuthn + FastPass complete upstream - session exported
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ORIGINAL POINTS
@@ -425,7 +407,8 @@ confronted with data that exceeds its allocated buffer size.
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MHTML: An archaic warning (RFC 2557)
@@ -445,12 +428,13 @@ RFC 2557 - MIME Encapsulation of Aggregate Documen March 1
 
 #### EXPLOIT MECHANICS
 
-```
+\```
 chrome.PageCapture: Please don't rehydrate
 mhtml
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 chrome.PageCapture: Please don't rehydrate
@@ -495,7 +479,8 @@ main frame.
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Browser-in-t
@@ -523,20 +508,18 @@ session stays upstream
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-cor healt _— SEER SIE Render
 1edp holds the real IdP tab - legitimate scripts already ran
 var rawMHTML string
 err := chromedp.Run(tabCtx,
 chromedp.ActionFunc(func(ctx context.Context) error {
 var err error
 rawMHTML, err = page.CaptureSnapshot()
-.WithFormat (page. CaptureSnapshotFormatMhtml )
 -Do(ctx)
 return err
-});
 rawHTML, assets, err := parseMHTMLSnapshot(
 strings .NewReader (rawMHTML ) )
 cache.ingest(assets)
@@ -547,15 +530,13 @@ out := prepareStageHTML([]byte(htmlStr), pageURL)
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Neuu alee SRI & CSP — By pesiop
 Base64 data URIs - strip integrity / CSP ned live DOM
-aL @@@ IS - mhtml-
 func sanitizeHTMLFragment(html string) string { function Seraeeeml | = {
 html = cspRe.ReplaceAllString(html, "") return String(html || ""
-html = cspAnyMetaRe.ReplaceAllString(html, "") te eee eee
 html = sandboxAttrRe.ReplaceAllString(html, "") -replace(/\s+sandbox(?:=...)/gi, "")
 html = nonceRe.ReplaceAllString(html, "") -replace(/\s+nonce=[‘"][*'"]+['"]/gi, "“")
 html = integrityRe.ReplaceAllstring(html, "") -replace(/\s+integrity=['"][*'"]+['"]/gi, "")
@@ -579,15 +560,14 @@ return resolveCIDInHTML(html, buildCIDLookup(assets) )
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a JavaScript Shim — HESS ‘MFA Harvest
->am.
 (function (
 fetch_shim,js - hook fetch/XHR - trap tokens after MFA
 im.js + ful
-oat
 if (window.__RBI_AUTH_FETCH_SHIM__) return;
 window.
 __RBI_AUTH_FETCH_SHIM__ = true;
@@ -607,16 +587,13 @@ if (!sh
 url =P
 init =
 crede
-})3
 return
-#3
 isAuthUpstreamHost(hostname) {
 String(hostname || "").toLowerCase();
 h.endsWith(".okta.com")
 .endsWith(".microsoftonline.com")
 -endsWith(".google.com")
 -endsWith(". live.com")
--endsWith(".aws.amazon.com"
 hibboleth|sso\./i.test(h);
 etch = window. fetch. bind(window) ;
 tch = function (input, init) {
@@ -630,7 +607,8 @@ ouldProxy(url)) return origFetch(input, init);
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Architecture — Communication
@@ -644,21 +622,19 @@ viewport + input
 » Input relay
 MFA + EV bridges
 Built-in component
-{"
 UPSTREAM
 @ Real IdP tab
 okies
 @ MHTML snapshots
 @ Session cookies
-Ne
 MS - GitHub - passkeys.io
 Upstream — IdP - victim borrows EV - WebAuthn on victim device
-f
 ```
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Internet Exposure via TunnelTug
@@ -674,14 +650,14 @@ OPERATOR SETUP
 BiTM . BROWSER
 EvilRBI proxy Mirrored IdP
 mirror + relay + built-in EV
-p-
 https://phisheries.dev/dino?urle-...
 Any https IdP on /dino - one click on the internet
 ```
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WebAuthn — The Problem
@@ -695,37 +671,36 @@ You cannot complete a passkey on the wrong machine with the wrong origin.
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WebAuthn — The Relay
 Victim signs - middle browser gets the session
-f- »
 CHALLENGE RELAY SIGN WIN
 IdP asks for Proxy ships Victim signs at Assertion returns
 passkey upstream options to victim true RP origin Cookies upstream
-\ J
 Microsoft - GitHub - passkeys.io - Entra: Google
 ```
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WebAuthn — Why It Works
 Origin check passes - authenticator is real - session upstream
-rs Sf
 ORIGIN AUTHENTICATOR SESSION
 Temp tab at the Victim's real Cookies land on
 true RP origin passkey signs attacker Chrome
-KS Z,
 “Passkeys stop phishing” fails when the challenge is issued to an attacker session.
 ```
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 T4 M TAGE
@@ -740,13 +715,12 @@ PROOF
 Demo
 Demo: Mircosoft
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ aboutblank x HE Signin to your account
-(Sf £3 _login.microsoftonline.com/common/oaut .O/at +t 724 AA (Q)
-€ x ittps://phisheries.dev, ittps in. sf | Q
-a a B Windows PowerShel X  @% Attach phisheriesde X 28 WindowsPow viewer browser — 150.0.4078.48 (Official build) (64-bit) - Windows 11 Version 19.0.0 (64-bit)
+a a B Windows PowerShel X @% Attach phisheriesde X 28 WindowsPow viewer browser — 150.0.4078.48 (Official build) (64-bit) - Windows 11 Version 19.0.0 (64-bit)
 rome is
 RBI Proxy :8879 | mirror=rbi | dev/headed |
 TYPE REMOTE TARGET TIME kK]
@@ -780,29 +754,23 @@ Demo
 
 Demo: Google
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-| ¥  @ aboutblank x © Sian in - Goggle Accounts _ + fh REI Proxy + Q _ 0 xX
-Ret G © aboutblank ay < © (ven) &  phisheries.dev/dino ®OOrOU4 28 GB SA
-gy © Amazon.com fj eBay [i Booking.com: Chea... ff TripAdvisor [Jj Facebook
+| ¥ @ aboutblank x © Sian in - Goggle Accounts _ + fh REI Proxy + Q _ 0 xX
 Chrome is being controlled by automated test software
 Viewer browser — 148.0.7778.271 - Windows 11 Version 19.0.0 (64-bit)
 17
-3 ©
 BY Windows PowerShell X BB Windows PowerShell x + v
 E RBI Proxy :8080 | mirror=rbi | dev/headed | chrome=- Sign in Email or phone
 ( TYPE REMOTE TARGET TIME KIND URL
-B viewer 127.0.0.1:62316 https: //accounts...09:38:41 https : ;
 09:38:44 https with your Google Account. This account
 4 will be available to other Google apps in Forgot email? gregory.disney.leugers@gmail.com
 E the browser.
 M gregory.disney@owasp.org
 Ede Not your computer : Use Guest mioue vo sign in
 (=) privately. Learn more about using Guest mode
-ff
-e
-M :
 auth_debug: stage_prepare Create account
 auth_debug: mirror_capture
 rbi_session: phase
@@ -813,15 +781,12 @@ C auth_debug: mirror_capture
 auth_debug: mirror_push_skip
 auth_debug: stage_prepare
 auth_debug: mirror_capture
-ArduinoIDE  G auth_debug: mirror_push_skip
-ae Se is auth_debug: stage_prepare
 !7 auth_debug: mirror_capture ro)
 cs auth_debug: mirror_push_skip
 F auth_debug: mirror_settle_done ©
 bal rbi_mirror: auth viewport pushed
-bertbin  DEFCON & |
+bertbin DEFCON & |
 Create / quit : scroll log : page log = English (United States) ~ Help Privacy Terms
-ie So pele
 Heat watch =] md) ea 2394 ¢
 ```
 
@@ -830,11 +795,11 @@ Heat watch =] md) ea 2394 ¢
 Demo
 Demo: Okta
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 about:blank owasp-trial-2096971-Signin fh RBI Proxy +
-CG ven} 6 phisheries.dev/dino
 Amazon.com eBay [ij Booking.com: Cheap... fj TripAdvisor Facebook
 Chrome is being controlled by automated test software
 Viewer browser — 149.0.7827.197 - Windows 11 Version 19.0.0 (64-bit)
@@ -850,8 +815,6 @@ gregory.disney@owasp.org Username
 gregory.disney@owasp.org
 Keep me signed in
 Privacy F
-y_
-€é 98°F
 Sunny
 Q Search
 ```
@@ -861,10 +824,10 @@ Q Search
 Demo
 Demo: AWS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¥  @ aboutblank x  @ chrome://dino/ - Dino game, x + Opisienadevanoruen| + Q_a.x
 _.. Amazon.com [fj eBay [fy Booking.com: Cheap... fj TripAdvisor Jj Facebook
 i Chrome is being controlled by automated test software ~s && bey & 9. pf Trip b
 Local application is not running.
@@ -876,8 +839,6 @@ PS
 9
 J :
 be a
-4) ey 11:56 PM
-£ Just issued : ds = 1) 73/2026
 ```
 
 ## Slide 38
@@ -886,14 +847,12 @@ Demo
 
 Demo: Github
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GDL
-Cc
 @ aboutblank
-Co
-ry
 x ©) Signin to GitHub - GitHub x +
 github.com/login
 Chrome is being controlled by automated test software
@@ -906,10 +865,7 @@ or
 G Continue with Google
 @ Continue with Apple
 New to GitHub?
-&
-&& OSs
 fh RBI Proxy +
-fh Amazon.com [fj eBay [ Booking.com: Cheap... fj TripAdvisor fj Facebook
 Viewer browser — 149..7827.201 - Windows 11 Version 19.0.0 (64-bit)
 ©)
 Sign in to GitHub
@@ -924,7 +880,8 @@ New to GitHub?
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Follow-up to Reflections on Trusting Trust (1984
@@ -939,23 +896,17 @@ Demo
 
 DBSC: A Total Eclipse of the Identity
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-) aboutblank x @ OTrust.cloud — sign in ~ | v | © Rei Proxy x Be =
-Otrust.cloud/auth os 9 ® GE] https://phisheries.dev/dino?url=h’ loud €2\| v= a
 Viewer browser - 149.0.4022.98 (Official build) (64-bit) - Windows 11 Version 19.0.0 (64-bit)
 ie]
 Chrome is being controlled by automated test software
-fe £0)|/>> en Os:
 Storage Preserve log
-> &B Local...
-> BB sessi.. Events
 & exten... Type Date Result
 © index... Creation | 7/3/20... Error
 >» © Cooki. Creation 7/3/20... Error
-& privat, __ feation 7/3/20... Error ao
-nice Creation 7/3/20... Error
 Creation 7/3/20... Error
 er , = se Creation 7/3/20... Error OTrust.Cloud
 Creation 7/3/20... Error
@@ -963,9 +914,6 @@ ERGs Creation 7/3/20... Error
 OTrust.Cloud renee Creation 7/3/20... Error
 Creation | 7/3/20... Error
 = a Creation 7/3/20... Error admin_4
-~ Creation 7/3/20... Error
-65 Back... Creation 7/3/20... Error
-Dann © Boun. Creation | 7/3/20... Error
 = O Notifi Creation | 7/3/20... Error
 & Paym... Creation 7/3/20... Error tor f
 © perio... Creation | 7/3/20... Error W
@@ -979,18 +927,18 @@ Frames 4
 a ee @4 Passkey step — use your passkey or click Try another way
 Thunderstorm st...
 ® inettect Q Search
-BmeOogevrexzr Pees A & F9O jon &
 ```
 
 ## Slide 41
 
 #### EXPLOIT MECHANICS
 
-```
+\```
 DBSC: Will not protect registration
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DBSC: Will not protect registration
@@ -1010,11 +958,12 @@ the state of this device.
 
 EXPLOIT MECHANICS
 
-```
+\```
 Webauthn: Also will not protect registration
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Webauthn: Also will not protect registration
@@ -1034,7 +983,8 @@ credential are resistant to tampering by man-in-the-middle attacks.
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EvilRBI.Phisheries — what actually fires
@@ -1054,7 +1004,8 @@ You catch virtual-auth AAGUID on register — and the new DBSC device it left be
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A follow-up to Reflections on Trusting Trust - 1984
@@ -1069,7 +1020,7 @@ complexity. No amount of cryptographic boundaries or layered complexity can cure
 
 DEFENSIVE BLUEPRINT `Tool Repos`
 
-```
+\```
 TunnelTug
 EvilRBI (Phisheries)
 https://github.com/Tunne
@@ -1078,17 +1029,17 @@ lTug/TunnelTug
 BI/phisheries
 https://tunneltug.com
 https://evilrbi.com
-```
+\```
 
 ## Slide 46
 
 QA `QA`
 
-```
+\```
 Defcon.Chat
-```
+\```
 
-```
+\```
 Channel:#qa-reflections_on_disregarding_trust
 Handle: @1umberhack
-```
+\```

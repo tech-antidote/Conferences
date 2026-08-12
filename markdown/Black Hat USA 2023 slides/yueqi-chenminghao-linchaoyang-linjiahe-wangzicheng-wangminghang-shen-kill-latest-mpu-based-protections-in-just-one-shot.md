@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Yueqi Chen,Minghao Lin,Chaoyang Lin,Jiahe Wang,Zicheng Wang,Minghang Shen_Kill Latest MPU-based Protections in Just One Shot Targeting All Commodity RTOSes.pdf"
 pages: 41
 sha256: "0fdd6963ae5b47440b9addb6d1422b296aeda552a9592e2fb8f4a5ebed3fcf12"
-text_chars: 13766
-ocr_pages: 2
-has_ocr: true
+text_chars: 13613
+ocr_pages: 0
+has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:26:27Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T04:24:33Z"
 ---
 # Kill Latest MPU-based Protections in Just One Shot Targeting All Commodity RTOSes
 
 **Speakers:** Yueqi Chen, Minghao Lin, Chaoyang Lin, Jiahe Wang, Zicheng Wang, Minghang Shen  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yueqi Chen,Minghao Lin,Chaoyang Lin,Jiahe Wang,Zicheng Wang,Minghang Shen_Kill Latest MPU-based Protections in Just One Shot Targeting All Commodity RTOSes.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -199,18 +205,6 @@ exploitation?
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-MPU becomes a
-terminator for
-exploitation?
-E>. y | ae)
-```
-
 ## Slide 13
 
 No!
@@ -218,18 +212,6 @@ No!
 **13**
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-(@81OS)| TIZEN
-“OM aT -Thread
-A  oarm
-Zephyr’ ~~ MBED
-```
 
 ## Slide 14
 

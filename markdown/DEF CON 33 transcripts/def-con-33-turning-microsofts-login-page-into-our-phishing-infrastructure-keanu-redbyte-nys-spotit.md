@@ -12,7 +12,7 @@ duration_seconds: 2570
 words: 7560
 text_chars: 42276
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Turning Microsoft's Login Page into our Phishing Infrastructure

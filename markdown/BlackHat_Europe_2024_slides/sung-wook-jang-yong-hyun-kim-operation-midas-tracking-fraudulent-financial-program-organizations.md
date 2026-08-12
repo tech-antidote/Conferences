@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Sung-Wook Jang & Yong-Hyun Kim_Operation MIDAS - Tracking Fraudulent Financial Program Organizations.pdf"
 pages: 44
 sha256: "afe18fd2352e2be8c12e4cf3e26ce4b5b8b9bbf29b805bfdd50bac06bdc461a1"
-text_chars: 18465
+text_chars: 18048
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:52:25Z"
+converted_at: "2026-08-12T05:00:45Z"
 ---
 # Operation MIDAS - Tracking Fraudulent Financial Program Organizations
 
 **Speakers:** Sung-Wook Jang, Yong-Hyun Kim  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Sung-Wook Jang & Yong-Hyun Kim_Operation MIDAS - Tracking Fraudulent Financial Program Organizations.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -633,69 +640,68 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-EUROPE 2024
 Identify threats
-— Interesting! What is this program? TS.exe
+
+→ Interesting! What is this program?
+
 CodeView Info
-Offset
-Name
-& CvSig
-Signature
-Age
-PDB
+Offset    Name         Value
+F90E3C    CvSig        RSDS
+F90E40    Signature    {9235A2CF-0C49-4473-A15E-B9EB9D4FC633}
+F90E50    Age          1
+F90E54    PDB          C:\Develop\Project\hts\2. Obfuscator\x86\HTS.pdb
+
 CodeView Info
-Name
-CySig
-Signature
-Age
-PDB
-Offset
+Offset    Name         Value
+89B7A4    CvSig        RSDS
+89B7A8    Signature    {CB5EF8DA-C015-4999-B9AF-B43A738E0680}
+89B7B8    Age          1
+89B7BC    PDB          C:\Develop\Project\MidasHTS\4. Obfuscator\x86\HTS.pdb
+
 CodeView Info
-Name
-CvSig
-Signature
-Age
-PDB
-Offset
-Information Classification: General
-PE
-Type References
-b =m References
-d Resources
-d{} -
-4{
-Value J 4, ~ eat
-v 02000014
-RSDS “yA nfoAttribute @02000003
-{9235A2CF-0C49-4473-A15E-B9EBO9D4FC633} >% D ker @0200006D
-C:-#DevelopwProjectwhts#2. Obfuscator#x86¥HTS. pdb Py Filer
-v
-Value 7
-RSDS 4
-{CBSEF8DA-CO15-4999-B9AF-B43A738E0680} DEE pE
-b = Type References
-b = References
-b Resources
-4. Obfuscator#x86¥HTS.pdb
-C:'¥Develop#Project#]MidasHTSY
-b{} -
-Value
-4{}
-RSDS d* oattribute @02000003
-(A7AB130E-ABCD-4DF0-ADE4-CC80D4528282} rte i pee
-C:¥Develop#Project#hts#2. Obfuscator#x864MANAGER.pdb
-S @020001
-@02000126
-@02000127
-@02000128
-102000072
-@02000129
-2.
-A
+Offset    Name         Value
+1007F4    CvSig        RSDS
+1007F8    Signature    {A7AB130E-ABCD-4DF0-ADE4-CC80D4528282}
+100808    Age          1
+10080C    PDB          C:\Develop\Project\hts\2. Obfuscator\x86\MANAGER.pdb
+
+[Right pane — symbol tree, HTS (1.0.7.3)]
+HTS (1.0.7.3)
+  HTS.exe
+    PE
+    Type References
+    References
+    Resources
+    {} -
+    {} HTS
+      ActivityTree @02000014
+      AssemblyInfoAttribute @02000003
+      DeploymentInvoker @0200006D
+      Dpi @0200006F
+      FileResolver @0200006A
+      GroupInfo @02000069
+      ...
+
+[Right pane — symbol tree, HTS (1.0.7.4)]
+HTS (1.0.7.4)
+  HTS.exe
+    PE
+    Type References
+    References
+    Resources
+    {} -
+    {} A
+      AssemblyInfoAttribute @02000003
+      c0006cd225a706f877e6d1b1e7a059653 @02000126
+      c02b860b4d739f04eca76e06ca01c2ecb @02000127
+      c044ef441a386735d282446875b778aed @02000128
+      c045317261eb0597661da32f45975f297 @02000072
+      c05b7d657607bb47174ee34c77fd177b1 @02000129
+      c0616f01a049102c85d173440b53d26b5 @0200012A
 ```
 
 ## Slide 33
@@ -772,18 +778,16 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bifekhat Malicious behavior analysis
 EUROPE 2024
 — Eventually they run away
 2023.04. 2023.06.
-case "AONE_295732": case "AONE 295732":
 return GClass43. GEnum5.const_51; return GClass35.GEnum4.const_46;
->
 case GClass43.GEnum5.const 51: ase GClass35.GEnum4.const 46:
-return Thttp://154.83.21.79:4423/"; return |"http://@.0.0.0:4423/">
 Check your current connection location or Network status (VPN, etc.)
 Information Classification: General
 ```

@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Kazuki Matsuo_You've Already Been Hacked What if There Is a Backdoor in Your UEFI OROM.pdf"
 pages: 48
 sha256: "1cd803e9eeddf636c9acd056c1ec823a0a4f010d4a0687a545017611735ea185"
-text_chars: 20172
+text_chars: 19824
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 80.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Kazuki Matsuo_You've Already Been Hacked What if There Is a Backdoor in Your UEFI OROM_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:34:08Z"
+converted_at: "2026-08-12T04:35:22Z"
 ---
 # You've Already Been Hacked What if There Is a Backdoor in Your UEFI OROM
 
 **Speakers:** Kazuki Matsuo  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kazuki Matsuo_You've Already Been Hacked What if There Is a Backdoor in Your UEFI OROM.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -249,13 +255,13 @@ Fig 1. Example usage
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2) |
 blackhat
 USA 2024
-“4
 HttpProtocol
 EFI_HTTP_CONFIG_DATA ConfigData;
 ConfigData.HttpVersion = HttpVersion11;
@@ -265,21 +271,17 @@ ConfigData.AccessPoint.IPv4Node = &Ipv4Node;
 Status = gHttpProtocol—Configure(
 gHttpProtocol,
 &ConfigData
-dj
 RequestToken.Message = &RequestMessage;
 gRequestCaLLbackComplete FALSE;
 Status = gHttpProtocol—Request(
 gHttpProtocol,
 &RequestToken) ;
 Fig 1. Example usage
-EFI_LHTTP_PROTOCOL
 typedef struct _EFI_HTTP_PROTOCOL {
-EFI_HTTP_GET MODE DATA GetModeData;
 EFI_HTTP_CONFIGURE Configure;
 Request;
 Cancel;
 Response;
-PoLL;
 EFI_HTTP_REQUEST
 EFI_HTTP_CANCEL
 EFI_HTTP_RESPONSE
@@ -321,22 +323,14 @@ Fig 2. Definition of HttpProtocol
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 64/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2024/01/19 23:53 JAW IAWI-
-i if
 2019/12/07 18:14 TPAWIAWS-
-2023/12/01 19:32 PAW IAN
 2023/04/30 20:58 774 WV TANW-
-2023/02/21 1:48 774 JAN-
-2024/02/27 19:21 774 Ib JA—-
 2023/04/17 21:27 774 Ib Jal—
-24/03/07 17:45 lca
-2023/04/17 21:29 F47b KEIXYb
-| @& secret txt - AEE
-WOUUR EH BAO) BRVY ATH)
-\VerySecretDatal
 ```
 
 ## Slide 16
@@ -427,18 +421,16 @@ Add extra data to send back
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ~
-SS
-bisekhat a. “
 Hooking Afd.sys
 \ Look for Magic Bytes,
 if found >
 NTSTATUS
 __attribute__((__ms_abi__))
-MajorDeviceControlHook(
 IN PVOID DeviceObject,
 IN PIRP _Irp
 )
@@ -470,12 +462,9 @@ SendInfo.TdiFlags = 0;
 Irp = IoBuildDeviceIoControlRequest(
 IOCTL_AFD_SEND,
 AfdDeviceObject,
-&SendInfo,
-sizeof (AFD_SEND_INFO),
 NULL, Add extra data
 0,
 socketEvent, to send back
-Se oe
 Irp—RequestorMode = KernelMode;
 Irp—Tail.Overlay.OriginalFileObject = SocketObject;
 PIO_STACK_LOCATION IrpStack = IoGetNextIrpStackLocation(Irp);
@@ -484,7 +473,6 @@ ObReferenceObject(SocketObject);
 ToCallDriver(
 AfdDeviceObject,
 Ir
-Dir
 #BHUSA @BlackHatEvents
 ```
 

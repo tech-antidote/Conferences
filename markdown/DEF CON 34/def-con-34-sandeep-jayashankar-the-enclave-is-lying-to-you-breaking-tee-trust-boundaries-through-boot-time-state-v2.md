@@ -4,23 +4,28 @@ speakers: ["Sandeep Jayashankar"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v2.pptx"
 pages: 52
 sha256: "f8fef8c2a0f884305f63427a94d22756622938de03044b0778a123aafbc5a722"
-text_chars: 24488
+text_chars: 24420
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 1
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:40:21Z"
+converted_at: "2026-08-12T06:43:13Z"
 ---
 # The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State
 
 **Speakers:** Sandeep Jayashankar  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v2.pptx` (52 pages)
+
 
 ## Slide 1
 
@@ -527,7 +532,8 @@ ACT III · 28
 
 THE ENCLAVE IS LYING TO YOU ACT III · 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What S3 sees
@@ -549,15 +555,11 @@ The OS resolves the path during write.
 /opt/enclave/
 @ Start at
 stated @----------- /opt/enclave/state/
-J [EL db. key
 Encounter "../"
 Go UP one level
--— checkpoint. json
 t+— logs/
-e :
- kms/ €------------ Then go into
+kms/ €------------ Then go into
 y /opt/enclave/kms/
-| kms_helper.py @ |.
 ‘ @) Write kms_helper.py
 — other/ ! OVERWRITTEN!
 H— config.yaml a, @ Legitimate file

@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Pankaj Moolrajani_Identifying and Reducing Permission Explosion in AWS A Graph-Based and Analytical Approach.pdf"
 pages: 103
 sha256: "331766b8ea411a27f16e17390239c3e0205760afe34997116fb4b154336bf9f9"
-text_chars: 12591
-ocr_pages: 32
+text_chars: 11372
+ocr_pages: 26
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:53Z"
+converted_at: "2026-08-12T04:20:26Z"
 ---
 # Identifying and Reducing Permission Explosion in AWS A Graph-Based and Analytical Approach
 
 **Speakers:** Pankaj Moolrajani  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Pankaj Moolrajani_Identifying and Reducing Permission Explosion in AWS A Graph-Based and Analytical Approach.pdf` (103 pages)
+
 
 ## Slide 1
 
@@ -50,13 +57,13 @@ How to KEEP IT AWAY?
 Nodes:  1465 Nodes:  1152
 Edges:  4749 Edges:  1729
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sneak Peak
 production-qa
 production-qa
-production-platform-
 production-platform-admin:
 production-embedded
 production-safety
@@ -145,7 +152,8 @@ UPR =
 
 Calculate UPR of a Permission in a Role
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Calculate UPR of a Permission in a Role
@@ -178,7 +186,8 @@ AWS Setup
 
 AWS IAM Roles
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AWS IAM Roles
@@ -190,7 +199,8 @@ production-backend production-embedded production-platform-admin
 
 AWS Resource Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AWS Resource Types
@@ -210,7 +220,8 @@ Tools
 
 Tools
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tools
@@ -223,7 +234,8 @@ Sqlite Database
 
 Data Schema - Role Permissions DB
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data Schema - Role Permissions DB roles
@@ -244,15 +256,14 @@ name varchar resource_types upr float
 
 Sample Graph (ipysigma)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sample Graph (ipysigma)
-CO S piam-split-roles.ipynb +
 File Edit View Insert Runtime Tools Help All changes saved
 E\ comment 2% Share &
 + Code + Text Reconnect ~ a
-» eBshas:
 Q oe graph = get_graph(splitted_rp, "sp jext")
 graph
 {x} Undirected Graph
@@ -282,7 +293,8 @@ How to IDENTIFY?
 
 Permission Explosion
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Starting Point
@@ -299,7 +311,8 @@ Accessible vs Accessed Permissions in a Role
 
 Permissions Unused 50%
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Accessible vs Accessed Permissions in a Role
@@ -307,8 +320,6 @@ Permissions Unused
 50%
 1500
 1250
-@® Accessible
-Accessed
 1000
 750
 500
@@ -343,7 +354,8 @@ How to FIX?
 
 Let’s Simplify
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roles & Permissions
@@ -356,21 +368,15 @@ production-backend
 
 Roles & Resource Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roles & Resource Types
-Ay
 © ) ec2:network-act
-a
-production-ga
 production-embedded
-©) sa:bucker
 Production-backend
 =>,
-()) ec2:instance
-production-safety
-rary
 ©) cerrepository
 ```
 
@@ -380,17 +386,15 @@ rary
 
 Unused Resource Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roles & Resource Types @ ccereworiac
-|) ec2:instance
 production-embedded
 Unused Resource
 Types a
-© pssibucket
 production-backend
-) ccr:repository
 ```
 
 ## Slide 36
@@ -402,7 +406,8 @@ ec2:network-acl
 ecr:repository
 s3-bucket
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data Insight ©) ec2:network-acl
@@ -431,14 +436,14 @@ Permissions: 763 Permissions: 618
 
 Permissions for Resource Types in Use
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roles & Permissions sencuction-ombecidod
 Permissions for
 Resource Types in
 Use
-production-platform-
 ```
 
 ## Slide 40
@@ -447,13 +452,13 @@ production-platform-
 
 Let’s Simplify
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roles & Permissions
 production-backend
 Let’s Simplify
-production-platform-
 ```
 
 ## Slide 41
@@ -471,29 +476,6 @@ UPR: 0.46
 Used vs Unused Permissions
 
     production-qa
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-lon
-Reduct
-ission
-Perm
-19°)
-a
-¢
-aS)
-=
-3)
-5
-ae)
-(e)
-p=
-a
-Used vs Unused
-isSions
-Perm
-```
 
 ## Slide 43
 
@@ -543,17 +525,85 @@ Let’s Simplify
 
 DB Table - Role Permissions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-DB Table - Role Permissions
-role resource action |upr | pur |
-1 production-qa arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web BatchDeletelmage 0.89 0.11
-2 production-qa arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web BatchGetimage 0.91 0.09
-3 production-qa arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web CompleteLayerUpload 0.88 0.12
-4 production-qa arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web CreateRepository 09 0.1
-5 production-qa —_arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web DeleteLifecyclePolicy 0.93 0.07
-6 __ production-qa arn:aws:ecr:us-east-1:933794580186:repository/fleet/k2web DeletePullThroughCacheRule 0.88 0.12
+[Wireshark packet list]
+No.   Time        Source                       Destination                  Protocol   Length   Info
+2     69.159055   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+3     69.159055   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+4     74.177271   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+5     74.177271   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+
+[Packet details pane]
+> Frame 2: 69741 bytes on wire (557928 bits), 69741 bytes captured (557928 bits) on interfac[cut off by hex pane]
+> Ethernet II, Src: Microsof_be:bc:00 (00:15:5d:be:bc:00), Dst: VMware_3e:02:d1 (00:0c:29:3e[cut off by hex pane]
+v Internet Protocol Version 6, Src: fe80::db90:748e:fc5f:e62f, Dst: fe80::acc6:5128:792d:500[cut off by hex pane]
+      0110 .... = Version: 6
+    > .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+      .... 0000 0000 0000 0000 0000 = Flow Label: 0x00000
+      Payload Length: 0 (Jumbogram)
+      Next Header: IPv6 Hop-by-Hop Option (0)
+      Hop Limit: 255
+      Source Address: fe80::db90:748e:fc5f:e62f
+      Destination Address: fe80::acc6:5128:792d:5005
+> IPv6 Hop-by-Hop Option
+> Routing Header for IPv6 (Source Route)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)   [dimmed behind caption bar]
+> Routing Header for IPv6 (Unknown type 86)   [dimmed behind caption bar, bottom row clipped]
+
+[Hex pane - ASCII column cut off at the right slide edge]
+00000000  00 0c 29 3e 02 d1 00 15  5d be bc 00 86 dd 60 00
+00000010  00 00 00 00 00 ff fe 80  00 00 00 00 00 00 db 90
+00000020  74 8e fc 5f e6 2f fe 80  00 00 00 00 00 00 ac c6
+00000030  51 28 79 2d 50 05 2b 00  c2 04 00 01 10 10 2b ff
+00000040  00 00 06 d5 00 15 0c ba  73 60 00 00 00 00 56 ff
+00000050  02 00 00 00 00 00 10 11  12 13 14 15 16 17 18 19
+00000060  1a 1b 1c 1d 1e 1f 20 21  22 23 24 25 26 27 28 29
+00000070  2a 2b 2c 2d 2e 2f 30 31  32 33 34 35 36 37 56 56
+00000080  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000090  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000a0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000b0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000c0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000d0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000e0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000f0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000100  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000110  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000120  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000130  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000140  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000150  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000160  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000170  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000180  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000190  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001a0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001b0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001c0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001d0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001e0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56   [dimmed behind caption bar]
+000001f0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56   [dimmed behind caption bar]
+[obscured]  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56   [offset label hidden behind caption text]
+
+A single ICMPv6 packet whose length is bigger than 65535
 ```
 
 ## Slide 50
@@ -599,7 +649,8 @@ Users 29
 
  production-platform-admin
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Production Platform Admin Role
@@ -629,7 +680,8 @@ Split the Role
 
 platform-dba
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Production Platform Admin Role
@@ -638,7 +690,6 @@ Emily Wolfe
 platform-iot
 Split the Role
 Jack Mason
-platiorm-sre
 Anthony Howard
 platform-security
 ```
@@ -649,16 +700,14 @@ platform-security
 
 ## Permissions Splitted
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Role - Users & Permissions
 Permissions Splitted
-platform-dba
 a
 a
-a
-4
 ‘platform-devprod
 ```
 
@@ -668,17 +717,15 @@ a
 
 Permissions per User 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Role - Users & Permissions
 Permissions per User
 32
-platform-dba
 a
 a
-a
-4
 ‘platform-devprod
 ```
 
@@ -690,12 +737,12 @@ platform-dba
 production-platform-admin
 Permissions: 75 Permissions: 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy: Split the Permissions
 +6] platform-d ba
-fn
 \prod ction-platform-admin
 Permissions: 75 Permissions: 18
 ```
@@ -711,16 +758,6 @@ production-platform-admin
 Permissions Per User: 75
 
 Permissions Per User: 32
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Strategy: Split the Permissions
-platform-dba
-\production-platform-admin
-Platform-devprod
-Permissions Per User: 75 Permissions Per User: 32
-```
 
 ## Slide 63
 
@@ -816,7 +853,8 @@ Strategy 3 - Remove Rarely Used Permissions 0.78
 
 production-qa
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UPR (User Percentage Rate)
@@ -831,27 +869,9 @@ tion-qa
 
 Permission Reduction
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-production-qa
-pproduction-platforr-admin
-production-embedded
-production-backend)
-```
-
 ## Slide 79
 
 Permission Reduction
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-production-qa
-pproduction-platforr-admin
-production-embedded
-production-backend)
-```
 
 ## Slide 80
 
@@ -859,15 +879,6 @@ Permission Reduction
 
 Remove Permissions for Unused Resource Types
 UPR: 0.46
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Permission Reduction
-production-platform-admin
-Remove Permissions
-production-satety
-```
 
 ## Slide 81
 
@@ -933,7 +944,8 @@ UPR: 0.46
 
 AWS Setup: Permission Usage by Role
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Permission Reduction
@@ -945,8 +957,6 @@ Count of Permissions
 100
 75
 Number of Permissions - Accessible vs. Accessed
-lm Accessible
-mm Accessed
 Roles
 ```
 
@@ -962,11 +972,11 @@ Permission Reduction
 
 Remove Unused Permissions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Permission Reduction
-st-1 :983794580186:db:dispatch-summary-production--DescribeDBInstanceAutomatedBackups
 immary-production--DescribeDBSnapshots
 Remove
 ```
@@ -976,16 +986,6 @@ Remove
 #### Permission Reduction
 
 Remove Unused Permissions
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Permission Reduction
-AN ANB LAN BERAStSTHAPAGS HANS BGrabasspeUsy
-|
-arg tis Sash ¥ 93 HSER TBE ab feet bute Bree luetion
-Remove Unused Permissi¢
-```
 
 ## Slide 92
 
@@ -1047,23 +1047,20 @@ Permission Reduction Remove Permissions for Unused Resource Types
 
 UPR: 0.46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Count
 Sum of is_ accessible and is accessed for each Role
 i
-lm is_accessible |
 L is accessed |
 1000
 800
 600
 400
 200
->) < < ~~» Re)
-g v
 &
-$
 Role
 ```
 
@@ -1073,7 +1070,8 @@ Strategy 3 - UPR df_isaccess=1 0.85
 
 production-qa
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UPR (User Percentage Rate)
@@ -1081,11 +1079,8 @@ Strategy 3 - UPR df_isaccess=1
 0.85
 UPR for Each Role
 2°
-©
 2°
 a
-ad
-&
 0.2
 0.0 -
 Role

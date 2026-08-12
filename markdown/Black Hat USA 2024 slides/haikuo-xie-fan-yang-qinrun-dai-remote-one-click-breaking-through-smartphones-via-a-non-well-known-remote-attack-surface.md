@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Haikuo Xie & Fan Yang & Qinrun Dai_Remote, One-Click, Breaking through Smartphones via a Non Well-Known Remote Attack Surface.pdf"
 pages: 121
 sha256: "90118130161a723539fbd789e91861426c021f3657d50c4a84ceee1740d8ea8e"
-text_chars: 53677
-ocr_pages: 4
+text_chars: 51340
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 79.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:32:39Z"
+converted_at: "2026-08-12T04:33:13Z"
 ---
 # Remote, One-Click, Breaking through Smartphones via a Non Well-Known Remote Attack Surface
 
 **Speakers:** Haikuo Xie, Fan Yang, Qinrun Dai  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Haikuo Xie & Fan Yang & Qinrun Dai_Remote, One-Click, Breaking through Smartphones via a Non Well-Known Remote Attack Surface.pdf` (121 pages)
+
 
 ## Slide 1
 
@@ -97,17 +104,6 @@ Contributor `：` Fan Yang Haikuo Xie
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bis hat
-USA 2024
-Just making a phone call, your phone is under my control
-011998800772 tea}. G61081
-ONT2RF81FZ 70
-12-212227
-```
-
 ## Slide 5
 
 ### Remote attack surface of video call
@@ -178,10 +174,10 @@ contacts
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 USA 2024
 Permissions
 microphone
@@ -234,26 +230,19 @@ android.
 android.
 permission.
 . permission.
-. permission.
+permission.
+permission.
 permission.
 permission.
 - permission
 permission.
 permission.
-- permission
 permission.
 permission.
-. permission.
-permission.
-permission.
-- permission.
 permission.
 .READ_MEDIA_AUDIO: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT | RESTRICTION_UPGRADE_EXEMPT]
 permission
-. permission.
-. permission.
 permission.
-. permission.
 . permission.
 permission.
 permission.
@@ -298,30 +287,19 @@ ACCESS_MEDIA_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RES
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
 USA 2024
 The listening port
 com.sec.imsservice
-[::]:6100 [iz:]:* LISTEN UU36/com.
-2H08:! 16101 2408:: [ 5: :4£:99098 ESTABLISHED 4U36/com.
-1 Ff44:127.0.0.1:30159 ::fFFF:127.0.0.1:59115 ESTABLISHED 4674/com.
-[::]:45016 [::]:% UU36/com.
 [::]:6100 ard: 4U36/com.
-[::]:6101 rr]: uU36/com.
 com.sec.sve
-[::]:6100 [::]:* LISTEN 4U36/com.
-2408:8 (16101 2408:: :-f£:9900 ESTABLISHED U436/com.
-> FFE S127.8.0.1:340159 ::46FF:127.8.8.1:59115 ESTABLISHED 4674/com.
-2uU08: 121614 [::]:* U67U/com.
-2408: : aalls U674/com.
-[::]:61600 a 4U36/com.
 [::]:6101 ri]: 4U36/com.
 .imsservice
 .imsservice
-.sVve
 .imsservice
 .imsservice
 .imsservice
@@ -329,8 +307,6 @@ com.sec.sve
 .imsservice
 .sve
 .sve
-.sve
-.imsservice
 .imsservice
 ```
 
@@ -2196,50 +2172,63 @@ Remote leak of memcpy function memory address.GIF
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 72/100 on the text kept, 57/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-USA 2024
 Leaking the address of libc.so and more
-( Aidp. por tesene
-mar | Tine Sour Des ti Preto: Li
-® Tine Sour: z Tis a
-re ee 134... 25.193065 per aeaaar 134,. 25.193065 240) 134. 25.193065 2408 + #181
-A6.. 27.208123 146, 27. 208123 27.208123 146. 27,208123 2401 146... 27.208123 2408 a6 > 8181
-157... 29.217181 157..29.217181 2401 157. 217181 2408
-29,217181 29.217181 Soci
-31.222700 168.. 31.222700 31.222700 168.. 31.222700 2401 168..31.222708 2408, F269 + 8181 Len-1
-178. 33.228373 178.. 33. 228371 SRT 178. 33.228371 240 178, 33.228371 2408 fase + 8181 Len-1
-aa an ioaras aa ial 189,. 35.227931 oer 189,, 35.227931 240 189,, 35.227931 2408 a69 + 8181
-24 37.226049 37.226049 200. 37.226049 240, 200... 37.226049 2408 369 » 8181
-2808 39.226572 241|| 544 30.926572 24g|| 244~ 39-226572  240;|| 212. 39.226572 2408 aco » 8181
-4 2408 41,261055 241! 453. 43 261055 240| | 223~41-261055 24a! | 223... 1, 2620 2408 F469 + 8181
-233, 43.230294 2408, 43.230294 241) | 934. 43,2302 zag) | 233~45-230294 240 233.43.230294 2408. ao9 > #181
-245 3743 (208. 45-333743 (2A 245..45,333743 249| | 245~ 45.333743 240) 245. 45,33374 a6
-4369 2408 47,334809 28 249) | 256. 47. 33486 2401 256, 3486 Fa6o
-267 42602 2408 49,342602 24! 342602 24a|| 267 49.342602  2401|| 267 342602 2408 fa + 8181
-278..51.358285 2408: 51,398285 241! 374 6 y5az9s pag] | 278 51-398285 —-24@)|| 278.52, 358285 2408 f + #181 Len=1[Malformed Packet
-289.. 53373212 2408 53.373212 241 nq 53,373912 pag] | 289" 53-373212 —-2401|| 289. 93.379212 2408 16 + 8181
-300,.55.397460 2408 55.397460 241 397460 240|| 302. 240 300,,55.397460 2408 ae > 8181
-82309 2408 241 310,. 57.382309 240 310, 240) 310,, 57.382309 2408 fa69 + 8181 Len-1
-19523 2408 2a]! aa sind n 240 311., 57.399523 2408 £469 + 8181 Len=1
-12259. 475196 2408 4il\ll) cos sea | || #42 240 922 59.375196 2408 ae + BIH Lenel
-332. 61. 384489 2408 2aV 332 aae 32. 240 332., 61. 384489 2408 cas a6 » 8181 Len=1
-83665 2408: | 244 343 240 343 240 | 343., 63. 2408 dcas f » 8181 Len=1
-Frame 168331 69 bytes of” Frame 17881: 69 bytes), bree 19996: 69 bytes |> Frame 20076: 69 bytes |> Frame 21104: 69 bytes on wire (552 ), 69 bytes captured (552 bits)
-Linux cooked capture v2/> Linux cooked capture |. iinux cooked capture \ > LINUX Cooked capture v|> Linux cooked capture v2
-1 Versi > Internet Protocol ver: Internet Protocol ver Internet Pro
-‘ocol Version 6, Src: 2408 das, Dst
-fa69
-Internet Protoc Internet Protocol ver!
-User Datagram Protocol,|> User Datagram Protoce] , Yser patagram Protoco] > User Datagram Protocol |» User Datagram Protocol, Sr¢ Port: 1602, Dst Port: 8181
-Datu (1 byte) bata (1 byte) (REMAN * 4t# (2 byte) Data (1 byte)
-Zhes2 $
-a ) IV-ES-@
-1 o-i-B
-off_E45F8 DCQ
-We can get all of the address by this method
+
+[Five side-by-side Wireshark windows, mostly identical and partly blurred; the rightmost is the most legible. Filter: udp.port==8181]
+
+Packet list (No. / Time / Source / Destination / Protocol / Length / Info):
+134... 25.193065  2408:[obscured]:dc45  2408:[obscured]:fa69  UDP  69  1602 -> 8181 Len=1
+146... 27.208123  ...  UDP  69  1602 -> 8181 Len=1
+157... 29.217181  ...  UDP  69  1602 -> 8181 Len=1
+168... 31.222700  ...  UDP  69  1602 -> 8181 Len=1
+178... 33.228371  ...  UDP  69  1602 -> 8181 Len=1
+189... 35.227931  ...  UDP  69  1602 -> 8181 Len=1[Malformed Packet]
+200... 37.226049  ...  UDP  69  1602 -> 8181 Len=1
+211... 39.226572  ...  UDP  69  1602 -> 8181 Len=1
+223... 41.261055  ...  UDP  69  1602 -> 8181 Len=1
+233... 43.230294  ...
+245... 45.333743  ...
+256... 47.334869  ...
+267... 49.342602  ...
+278... 51.358285  ...
+289... 53.373212  ...
+300... 55.397460  ...
+310... 57.382309  ...
+311... 57.399523  ...
+322... 59.375196  ...
+332... 61.384489  ...
+343... 63.388665  ...
+
+Packet detail (rightmost, Frame 21194):
+> Frame 21194: 69 bytes on wire (552 bits), 69 bytes captured (552 bits)
+> Linux cooked capture v2
+> Internet Protocol Version 6, Src: 2408:[obscured]:dc45, Dst: 2408:[obscured]:fa69
+> User Datagram Protocol, Src Port: 1602, Dst Port: 8181
+> Data (1 byte)
+
+[Left detail panes: Frame 16833, Frame 17881, Frame 18996, Frame 20076 - each shows 69 bytes / Linux cooked capture v2 / Internet Protocol Version / User Datagram Protocol / Data (1 byte); Frame 18996 shows [Malformed Packet: RT...]]
+
+Hex dumps (last row of each of the five windows, other bytes blurred):
+0040  00 09 66 af 00
+0040  00 09 66 af 0c
+0040  00 09 66 af 8d
+0040  00 09 66 af 02
+0040  00 09 66 af 71
+(rightmost window row 0000: 86 dd 00 00 00 00 00 1b  02 07 04 00 90 1b 22 35  ...)
+
+IDA listing:
+off_E45F8 DCQ __imp_memcpy          ; DATA XREF: memcpy^o
+                                    ; memcpy+4^r
+                                    ; memcpy+8^o
+
+Highlighted debugger hex line:
+6fe59325f8  00 0c 8d 02 71  00 00 00 18 31 72 02 71 00 00 00  ....
+
+We can get all of the address by this method !
 ```
 
 ## Slide 102

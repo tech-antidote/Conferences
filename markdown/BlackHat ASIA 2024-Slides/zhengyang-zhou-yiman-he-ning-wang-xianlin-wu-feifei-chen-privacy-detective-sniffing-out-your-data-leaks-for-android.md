@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Zhengyang Zhou & Yiman He & Ning Wang & Xianlin Wu & Feifei Chen-Privacy Detective Sniffing Out Your Data Leaks for Android.pdf"
 pages: 56
 sha256: "697e2a2c0836aa78cddd20f1f852d829080aaf3265ab155c7b2834864854073e"
-text_chars: 18526
+text_chars: 16475
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 80.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:03Z"
+converted_at: "2026-08-12T04:53:54Z"
 ---
 # Privacy Detective Sniffing Out Your Data Leaks for Android
 
 **Speakers:** Zhengyang Zhou, Yiman He, Ning Wang, Xianlin Wu, Feifei Chen  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Zhengyang Zhou & Yiman He & Ning Wang & Xianlin Wu & Feifei Chen-Privacy Detective Sniffing Out Your Data Leaks for Android.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -32,12 +37,10 @@ Sniffing Out Your Data Leaks for Android
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ =
-_ blackhat
-. ASIA 2024>—~
 . PRIL 18-19, 2024 | lat
 Privacy Detective
 Sniffing Out Your Data Leaks for Android
@@ -1012,20 +1015,13 @@ We used a self-developed regex-based script to scan the plaintext. We highly rec
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat e< =
-ASIA 2024
-Data Analysis
-Our findings:
-"transformation": "DES/CBC/PKCS5Padding”,
 "pblock_size": 8,
 "“opmode”": 2,
-"plain": "53454C45435420434F554E542830292046524F4D206576656E74207768657265206C6576656C3C3D3F”,
 “plain_string": "SELECT COUNT(@) FROM event where level<=?",
-"crypto": "@F3436FF35CCB8376C6AC43D385069E381E5B2E19B54E7874DDEC5337A5FDCF649F 6DD8723D80B63FEQ@Q0C5DA7D580622" ,
-“password”: | "
 J
 DIRE : "Wy "
 ```
@@ -1038,21 +1034,13 @@ Data Analysis
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
 black hat
-ASIA 2024
-Data Analysis
-Our findings:
-“plain_string"™: “{\ ; \"android_id\":\"2c 60\",\"did\":\"\",
-"bssid\":\"68: :a1\",\"mac\":\" 98: 7C5\",\"imei\":\"\",\"imei2\":\"\",
-"imsi\"\"\",\"meid\  \"\",\"sn\"s\"\",\"apn\":\"wifi\", \"net\":\"WIFI\", \"wifi\":\"on\",
-"mno\":\"unknown\", \"iccid\":\"\",
 “uuid\":\"@000 7524\",
-"dpid\":\"4@3l ; “040\",
-"union_id\":\"b92° a ‘179\",\'
 ```
 
 ## Slide 48
@@ -1063,37 +1051,20 @@ Our findings:
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat > <
-ASIA 2024
-Data Analysis
-Our findings:
 "src-ip": "192.168.137.177",
 "src-port": 51230,
-“dst-ip": "13.36.124.147",
 "dst-port": 443,
-“timestamp”: "2024-03-12 12:00:31:767377",
 “thread_id": 28541,
 "tls": "TLSv1.2",
-"hostname": “weather -com",
-“funcname": “TCP_send”,
 "hex": .
 "str": "HTTP/2.@ [<RequestReceived stream_id:11, headers:[(‘':method', ‘POST'), (‘:path', ‘/weather/location
-), (‘:authority', ‘weather -com'), (‘:scheme’, ‘https‘),
-(‘cipherinfo', ‘{\"crypto-cipher-service\":{\"tmpPublicKey\" : \"MFkwEwYHKoZ1zj@CAQYIKoZIzj@DAQcDQgAEOFA4U2\\\\/
-MlgHjt+yh2eh@1i6R@QaBFfnpP\\\\/4Dqoww12JuD5wLMQhnjgR\\\\/2noJndIB5I1v4QN5q8BxA@u4DCXcRAA==\" ,
-\"salt\":\"Y6W8M1FiPVH84DsYL88rnTIXmfBr62b1iGvufSY2R76U=\", \"info\" :\"d2VhdGhlciilsb2NhdGlvbi1zZXJ2awWN1\"}}"),
-(‘wrapperkey', ‘{\"cipher\":\"389cN4NAPOmxX3Samiac58gb@eZmJ2s49RhVwXuPGnfPudUwatJIR19\\\\/205Pz62g\\\\/OMEVF\\\\/
-CFpNdOf1xofsBOBnX3eNECb53db+n\\\\/Zz0+zZeliBvJFh6\\\\/1+s=\", \"iv\":\"RRWwGTbEi4WYaPSP\"}'), (‘encryptflag',
 "3'), (‘content-type’', ‘application/json; charset=utf-8'), (‘content-length', ‘380'), (‘accept-encoding',
-‘gzip'), (‘user-agent', ‘okhttp/4.9.0')]>, <DataReceived stream_id:11, flow_controlled_length:38@,
 data: 7b2261637469766174696f6e54696d657374616d>, <StreamEnded stream_id:11>] Data:
-{\"bssid\":\"86: 704\",\"latitude\":\"KUCVOSYF\",\"ssid\":\"\\\" WA s
-\"todayLocateCnt\":\"10\", \"longitude\": \"KkOIIJ@IWQ==\", \"ts\":\"2024-03-12 12:00:30 GMT+08:00\"}",
 "num": 37,
-“identity”: {
 "MAC": [
 "86:
 ```
@@ -1106,30 +1077,20 @@ data: 7b2261637469766174696f6e54696d657374616d>, <StreamEnded stream_id:11>] Dat
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat P< S
-ASIA 2024
-Data Analysis
-Our findings:
 {
-“transformation”: "AES/CTR/NoPadding”,
 "“plock_size": 16,
 “opmode": 1,
-"plain": "3 aur
-sDlainesthrincecmadd | Oa.
-"crypto": "2A4388209D@959",
 "password": "16
 "Iv": "D4
-"transformation": "“AES/CTR/NoPadding",
 "plock_size": 16,
 “opmode": 1,
-jllenigQes 3) 3) er
 "“plain_string": "2 . 35",
 "crypto": "2940953B9605",
 "password": "16
-es
 ```
 
 ## Slide 50

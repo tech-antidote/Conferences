@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Holger Unterbrink_Architecture Analysis of VMProtect 3.8 Demystifying the Complexity.pdf"
 pages: 58
 sha256: "d4d815530ea835badaf960397701daea15ad405a47765ad73136ae08757799d6"
-text_chars: 33424
-ocr_pages: 26
+text_chars: 26375
+ocr_pages: 22
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.9
+ocr_unreliable_blocks: 12
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 2
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:07Z"
+converted_at: "2026-08-12T06:17:25Z"
 ---
 # Architecture Analysis of VMProtect 3.8 Demystifying the Complexity
 
 **Speakers:** Holger Unterbrink  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Holger Unterbrink_Architecture Analysis of VMProtect 3.8 Demystifying the Complexity.pdf` (58 pages)
+
 
 ## Slide 1
 
@@ -90,7 +95,8 @@ Intro
 
 #### VPN to Singapore
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VMProtect
@@ -116,7 +122,8 @@ Looks like they are also effected by the recent geo political issues – No Love
 
 Pricelist
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pricelist
@@ -124,7 +131,6 @@ For Individuals
 Lite Professional
 +1 year of free +1 year of free
 updates updates
-s 239.00 s $49.00
 All the features in Lite,
 and more:
 Obfuscation features:
@@ -132,13 +138,10 @@ For Companies
 © Ultimate
 +1 year of free
 updates
-5699.00
 Allthe features in
 Professional, and more:
-REnewa
 1 additional year
 of updates
-$139.00
 Renewal of updates for
 ```
 
@@ -183,7 +186,8 @@ Execute
 
 Virtual Machine Protection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Virtual Machine Protection
@@ -193,7 +197,6 @@ different handlers of commands, etc.) that makes harder the analysis and hacking
 ¢ Complexity - this options allows to specify [the probability of creating complex handlers (consisting of several
 simple handlers) {inside the virtual machine. This option also greatly complicates the analysis and hacking of
 virtualized code. As the complexity increases, the size of the protected file also increases.
-cisco
 ```
 
 ## Slide 15
@@ -202,17 +205,15 @@ cisco
 
 Default = 10 None, 1% , 10%, 20%, 100%
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VMProtect 3.8 GUI — Compl
-fo (r) £0 Asm2-10diff-instr.exe > El. | Templates _
 ¥ Virtual Machine
 ¥ Functions for Protection
 Version Default
-¥ ,
 New markers and strings Instances 1 Default = 10
-VMProtectMarker1 ;
 Complexity 100% None, 1% , 10%, 20%, 100%
 Licenses ¥ File
 Files Memory Protection No
@@ -250,7 +251,8 @@ Demo or unregistered version
 
 Licensed version with random register assignment
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Licensed vs.
@@ -262,7 +264,6 @@ if
 #else
 (ctx.options.flags & cpUnregisteredVersion)
 #endif
-: {
 crypt_registr_ = (ctx.options.flags & cpEncryptBytecode) ? regEBX : 0;
 pcode_registr_ = regESI;
 stack_registr_ = regEBP;
@@ -272,23 +273,16 @@ else if (cpu_address_size == osQWord) unregistered
 jmp_registr_ = regR11; version
 else
 jmp_registr_ = 0;
-ar
 else {
-IntelRegistrList work_registr_list;
 work_registr_List .push_back(regEBX) ;
 work_registr_List . push_back(regEBP) ;
 work_registr_lList .push_back(regEST) ;
-work_registr_List. pi back(regEDI) ;
 if (cpu_address_size == osQWord) {
-work_registr_list. push_back((uint8_t)i);
-| 5
 }
-work_registr_lList.remove(wrong_registr_List) ;
 crypt_registr_ = 0;
 if (ctx.options.flags & cpEncryptBytecode) {
 if (cpu_address_size == osDWord) {
 crypt_registr_ = regEBX;
-work_registr_List.remove(crypt_registr_) ;
 }
 Licensed version
 with random register
@@ -331,7 +325,6 @@ stack_registr_ = work_registr_List .GetRandom();
 1
 1
 1
->.
 jmp_registr_ = (type_ == vtAdvanced || cpu_address_size == osQWord) ? work_registr_list.GetRandom() :
 ```
 
@@ -339,49 +332,25 @@ jmp_registr_ = (type_ == vtAdvanced || cpu_address_size == osQWord) ? work_regis
 
 Main-Function after protection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 57/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Main-Function after protection
 :0000000140001000 main proc near 3 CODE XREF: __scrt_common_main
-:08@0000140001000
 :@8@0080140001000 arg_8 = qword ptr 10h
-:@8@0000140001000
-:@990000140001000 call = __CRT_INIT
-:0990000140001005 push — rbp
 :0800000140001006 mov rbp, rsp
 :@@20000140001009 sub rsp, 20h
 :000000014900100D push rax
 . . : :000000014000100E push rex
-#incLlude <iostream> . text : @20000014000100F call —_ loc_14e@@1044
-. :990000140001014
-#include "VMProtectSDK.h" . text :0000000140001014 loc_140001014:
-:0900000140001014 xchg ah, [rbx+0]
 :@@20000140001017 [rax-4Fh], ch
 :@@0000014000101A i al, dx
-slate = . :@09000014000101B eax, @F7489C7Fh
 int main() :@@@0000140001020
-f . :@920000140001020
 VMProtectBegin("Test marker"); pounapeeeooospenanenes
-printf ( Hello Protection\n ); . :@9@008014000102C [rsptarg_8], 7ep495ch
 . : :0000000140001035 qword ptr [rsp+@]
 VMProtectEnd() ; . :0@00000140001039
-s . : :000000014000103A rsp, [rsp+1eh
-printf("Hello\n"); . :@00000014000103F ee’ sdbeieore.
-- :@920000140001044
-exit(@) H . :@090000140001044 loc_149001044: ; CODE XREF: main+Ftp
-. :9990000140001044 rbx
-} :@92@000140001045 loc_140012426
-:000000014000104A
-:000000014000104B
-:000000014000104B loc_14000104B:
-:090000014000104B
-@e@0000014000104B ;
 dq @A5@D8D485859B7C1ih
-eee0e00140001060 ;
-:0900000140001060
 :0000000140001062 call $+5
-:0000000142001062 [fEiIRNNINNNNNNNEnapISNSp=analysasinailed
 ```
 
 ## Slide 18
@@ -396,61 +365,26 @@ call/jmp to VMP Section
 
 Code trace
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 54/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Main-Function after protection
 Anti-Disasm not fixed Anti-Disasm fixed
 :@@00000140001000 proc near ; _scrt_common_main_seh+107 - text :0800000140001088 main proc near 3 CODE XRE
-:@@00000140001000 - text :0000000140001000
 :0000000140001000 arg = qword ptr 1@h 10000000140001000 arg 8 = qword ptr 10h
-:0000000140001000 :0000000140001000
-: :0000880140001000 call _CRT_INIT
-:09@0000140001000 call = _CRT_INIT OES OTOEE push bp
-@@@0000140001005 push —rbp love.
-:@0e0e001490e1006 mov rp, rsp “text e0ee0ee1de0ei0es a et
-:09@0000140001009 sub rsp, 20h pemeretecnanantanant act i) Gee
 :@00000014000100D push rax : :000000014000100E push rex .
 :@08000014000100E push rex . :00000014000100F call/jmp to VMP Section
-:080000014000100F call loc_149001044 2 900000014000100F
-:0000000140001014
-:0000000140001014 loc_149001014:
 :0000000140001014 xchg ah, [rbx+0]
 :0000000140001017 add [rax-4Fh], ch
 :000000014000101A in al, dx
 :000000014000101B sub eax, @F7489C7Fh
-:0@00000140001020
-:0000000140001018 ;
-:0000000140001018 7F2DECB1h
-:@00000014000101D pushfq
 :000000014000101E test | qword ptr [rsp+8], OFFFFFFFFF834D52Fh
 setb byte ptr [rsp+3]
-SOOO LOS ° : :088000014000102C mov qword ptr [rsp+1@h], 376D4@5Ch
-10000000140001028 . :@000000140001035 push — qword ptr [rsp+0]
-100800000140001028 : :0000000140001039 popfq
-:00008000148001029 Bs :000000014000103A lea rsp, [rsp+1eh]
-:000000014000102C [rsptarg_8], 376D4@5Ch : :000000014000103F call loc_14@@1E9Fe@
-:0000000140001035 qword ptr [rsp+8] 5 :099@000140001044
 :@000000140001039 0 :0000000140001044 loc_140@@1044: 3 CODE XREF: main+Ftp
 10@0000014600103A rsp, [rsp+1eh] : :0000000140001044 push rbx
-:@@0000014000103F loc 14001E9FO 5 :0000000140001045 loc_140012426
-ee@99000140001044 ~ : :0000000140001045
 :@0@0000140001044 loc_140001044: ; CODE » : main+Ftp ee on
 :@0@0000140001044 rbx
-:0@@0000140001045 loc_140012426
-:@0@000014000104A
-:@00000014000104B
-:@@@000014000104B loc_14000104B
-:0@0000014000104B
-:@00000014000104B : ee00000140001052
-dup(@) ; :0000000140001052
-e000 Q A5@D8D485859B7! 5 :0000000140001053
-:@@@0@000149001060 a :0000600140001054 lea rex, fmtStr
-:@¢00¢00014e001060 ecx, ecx : :0000000140001058 call printf
-:@@00000140001062 . :0900000140001068 xor ecx, ecx
-: 2000000140006 Sills =aaIVEisiFaie4 -text:0909090140001062 call $45
-“text: 0800080142001062 iillllllend INR =aAaI5/E=ISiN€8
-1eeeeGeo14e001020 0 :0000000140001027
 ```
 
 ## Slide 19
@@ -461,7 +395,8 @@ Detect it easy !
 
 … but things can be different, depending on the VMP settings!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Asm2_single_instr-c1-i1.wmp.e
@@ -490,10 +425,10 @@ Fully protected sample
 
 Output file over 100 000% larger than input
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cl [r) HW Asm2_sincs_3mov.exe ~ TE] Templates _
 Name Value
 ¥ Virtual Machine
 Functions for Protection
@@ -537,11 +472,11 @@ Compilation Log Output file over 100 000% larger than input
 
 Multiple random sections
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Multiple random sections
-Asm2_Sincs_3mov.vmp1-full_pro
 Name Virtual Size Virtual Address | Raw Size Raw Address Reloc Address | Linenumbers | Relocations N...| Linenumbers ... | Characteristics
 Byte[8] | Dword | Dword | Dword | Dword | Dword | Dword | Word | Word | Dword
 text O0000F60 00001000 “00000000 “00000000 “(00000000 “00000000 “0000 “0000 “60000020
@@ -560,19 +495,12 @@ Src 000001D5 01483000 00000200 0OCDDO000 00000000 00000000 0000 0000 40000040
 
 Latest DIE version
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fully protected and packed sample
-: @88088O014EFE@DFF
-: @88088O14EFE@DFF
-: 800880 14EFEODFF
-: @8@8008014EFE@DFF
-: @88088014EFE@DFF loc_146F295F@
 : p
-: @88088014EFE@E@5 rsp
-: @88088014EFE@EG6 [ri5-6Ch], r12
-:G@8GCGBG14EFECEGE ;
 vy PE64 Latest
 Operation system: Windows(Vista)[AMD64, 64-bit, Console] DIE version
 Protector: VMProtect(new 36 jmp 12)[DS]
@@ -586,30 +514,15 @@ Fully protected But not packed sample
 
 Not packed No Anti-Dbg
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-__ :0888880140774736 ;
-_ :0888800140774736
-_  0888880140774736
-| :8000880140774736
-_ :0000800140774736
-_ :000000014077473B
-__ :088088014077473C
-_ 0880880140774741
-:0000000140774746
 :000000014077474D
-:0000000140774753
-__ :088000014077475C
-_ :88888801407747608
-_  0888880140774761
-| :80008080140774766
-_ :000080014077476B
 PE64
 2
 Fully protected
 But not packed
-OFFFFFFFFEIBF151Fh
 byte ptr [rsp+8], 32h sample
 3CBF67B9h
 word ptr [rsp+@], 1F80h
@@ -636,7 +549,8 @@ How can we simplify the complexity ?
 
 Sample code for testing
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 main proc
@@ -647,7 +561,6 @@ sub rsp, 32
 push rax
 call VMProtectBegin
 mov rax, Odeadcafeh
-call VMProtectEnd
 pop rax
 lea rex, fmtStr
 call printf
@@ -721,7 +634,8 @@ Code trace
 
 Python Script builds CFG as PDF
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Control Flow Graphs to the rescue ....
@@ -740,7 +654,6 @@ import sys
 import graphviz
 import argparse
 from pathlib import Path
-|cfe_instr all ‘call’, ‘ret’, ja’, jae’, 'jb', “jbe', "jc', jexz', "je', "je, jee’, 'jl', fle’, "jmp", ‘na’, "jnae’, 'jnb’, "jnbe’, "jnc',"jne', "jng',']
 parser=argparse.ArgumentParser(description="This script takes an X64dbg instructions trace log file and generates a corrosponding graph.")
 parser.add_argument(“tracelog filename")
 args=parser.parse_args()
@@ -749,8 +662,6 @@ graph_fname = f"{Path(trace_fname) .stem}-graph”
 print(f"[INFO] Loading trace from {trace_fname}")
 with open(trace_fname) as file:
 lines = file.readlines()
-SP RPPRERBRREB
-DHYUAHRHBDNBPOVHMVNHTAUNAWNR
 Code trace
 Python Script
 builds CFG as
@@ -763,19 +674,17 @@ Code trace split into basic blocks and than use Graphviz to build a Code Flow Gr
 
 CFG in PDF Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 --- 0x0000000140001006 ---
 0x0000000140001006 mov rbp, rsp
 0x0000000140001009 sub rsp, 0x20
 0x000000014000100D push rax
-0x000000014000100E [call Ox0000000140010EIA
 bb_start = 0x0000000140001006
 bb_end = 0x000000014000100E
 jmp_addr = ['0x0000000140010E1A"]
-bb_idx e)
-2p T0000 AOOLOET x EIA ---
 0x0000000140010E1A call 0x00000001400064D2
 bb_start = 0x0000000140010E1A
 bb_end = 0x0000000140010E1A
@@ -784,13 +693,10 @@ bb_idx = [1]
 --- 0x00000001400064D2 ---
 0x00000001400064D2 push ri2
 0x00000001400064D4 mov qword ptr ss: [rsp+0Ox1(
-0x00000001400064DD lea rsp, ss: [rsp+0x10]
-0x00000001400064E2 [cal] 0x000000014001BF44]
 bb_start = 0x00000001400064D2
 bb_end = 0x00000001400064E2
 jmp_addr = ['0x000000014001BF44"]
 bb_idx = [2]
-=== UXUUUUUUU140UIBF44_--=
 0x000000014001BF44 |jmp 0x000000014001B 544
 Code trace split into basic blocks
 and than use Graphviz to build a Code
@@ -800,7 +706,6 @@ B asm2_multiple_instr.vmp1-c10-i1-20240609-150850-graph.pdf
 B asm2_multiple_instr.vmp1-c20-i1-20240609-151402-graph.pdf
 B asm2_multiple_instr.vmp2-c0-i1-20240609-144425-graph.pdf
 B asm2_multiple_instr.vmp2-c10-i1-20240609-152026-graph.pdf
-..] asm2_multiple_instr.vmp2-c20-i1-20240609-152748-graph.pdf
 B asm2_multiple_instr.vmp3-c0-i1-20240609-145114-graph.pdf
 B asm2_multiple_instr.vmp3-c10-i1-20240609-153206-graph.pdf
 B asm2_multiple_instr.vmp3-c20-i1-20240609-153725-graph.pdf
@@ -812,14 +717,10 @@ B asm2_single_instr.vmp2-c10-i1-20240609-155402-graph.pdf
 B asm2_single_instr.vmp2-c20-i1-20240609-155947-graph.pdf
 B asm2_single_instr.vmp3-c0-i1-20240609-135638-graph.pdf
 B asm2_single_instr.vmp3-c10-i1-20240609-172813-graph.pdf
-B asm2_single_instr.vmp3-c20-i1-20240609-1731 16-graph.pdf
 B asm2_two_instr.vmp1-c0-i1-20240609-141257-graph.pdf
 B asm2_two_instr.vmp1-c10-i1-20240609-173623-graph.pdf
-..] asm2_two _instr.vmp1-c20-i1-20240609-173946-graph.pdf
 B asm2_two instr.vmp2-c0-i1-20240609-141933-graph.pdf
-B asm2_two _instr.vmp2-c10-i1-20240609-174334-graph.pdf
 B asm2_two_instr.vmp2-c20-i1-20240609-174806-graph.pdf
-BB asm? two instr. vmn3-c0-i1-20240609-142756-aranh.ndf
 CFG in PDF Format
 ```
 
@@ -871,18 +772,6 @@ Main switch
 
 asm2 _multiple_instr .vmp -c100 -i1-20240610-143435.log
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-=
-CREO CCE
-EEC REO <>
-ee >
-=a
-15 JMPs
-asm2_multiple_instr.vmp-c100-i1-20240610-143435.log
-```
-
 ## Slide 33
 
 Left site
@@ -909,22 +798,6 @@ asm2_ 5incs_3mov .vmp1-c0-i1.exe Main switch
 ## Slide 37
 
 Next virtual Instruction Block e.g. VMHandler “inc <register>” In this case it is R8, but this is random, could also be another register
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-‘0x000000014002B6AC
-foptsa)isi pua)pi \p176)
-(Gow
-os Go {sa0/\s52)1900)
-(000000014002
-Next virtual Instruction Block
-b148@3@DCE ” . A
-e.g. VMHandler “inc <register>
-In this case it is R8, but this is
-random, could also be another
-register
-```
 
 ## Slide 38
 
@@ -974,14 +847,14 @@ This vInstr Handler start
 
 The VMHandler table is not linear.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Remember the VMHandler table offset (sub rbx,1 ) ?
 dd 2E£202302h ; 4. VMHandler . offset (sub 1) at 14003B6BC
 ; 3. VMHandler enc. offset (rbx=rbx rbx, [rox] ; [rbx]=[14001076A]) at 14003420E
 d
-b__96h
 dd @AA925452h ; 2. VMHandler . offset (sub 4) at 14001C425
 . VMHandler . offset (sub 4) at 1400304A1
 . VMHandler . offset (sub 4) at 1400311D3
@@ -999,30 +872,26 @@ New rolling Key in EBP
 
 ##### … it’s all just obfuscation:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Remember the rolling key ? What about R10 ?
 push rbp 3 PSp=14FBD@ rsp->14FBC8
 xor [rspip10}2-1sh+var_1FEC6], edx ; rsp=14FBC8, rl@=FF6F*2=1FEDE, [rsp+ri@*2-1FEDE]=[14FBC8]=00015834 — XOR [RBP] with EDX
-rsp=14FBC8, rlQ=FF6F*2=1FEDE, [rsp+r10*2-1FEDE ]=[14FBC8]=9EAF383@
-rsp=14FBC8, rl@=FF6F*2=1FEDE, [rsp+r10*2-1FEDE]=[14FBC8]=9EAFQ1E9
 rsp = 14FBC8 -> FFFF956A New rolling
 rsp = 14FBC8 -> 1615@DC97 Key in EBP
 rsp = 14FBC8 -> 1615@E54E
 [ move RSP to new RBP ] new rolling key ?
 ; rbp -> FFFF956A
 ; rbp -> 1615@DC97
-; rbp -> 16150E54E
 . it’s all just obfuscation:
 mov eax, 88807D21h ; --- new block 14@@2ABC3
 lea rex, ds:QFFFFFFFFDC26EF2Dh[rax*2] ; [rax*2-23D91@D3]=[ED27 E96F]
 neg cx > rex -> @8000808ED271691
 movzx ri@d, cl
 neg r16w 5 r1e -> FF6F
-[rsptr1@*2-18h+var_1FEC6], edx ; rsp=14FBC8, |rl@=FF6F*2=1FEDE), [rsp4r1@*2}(1FEDE]=[14FBC8 ]=00015834
 ; rsp=14FBC8, r10=FF6F*2=1FEDE, [rsp+r10*2-1FEDE ]=[14FBC8]=9EAF3830
-P rsp=14FBC8, r1Q0=FF6F*2=1FEDE, [rsp+r10*2-1FEDE]=[14FBC8]=9EAF@1E9
 ```
 
 ## Slide 43
@@ -1041,7 +910,8 @@ Execution Order
 
 False Positive of the regex Proofs our assumption it is always R8 (in this case)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Execution
@@ -1052,26 +922,13 @@ addr=000000014003D56F , rbx=4001077C, rsi=100000000, res=14001077C
 addr=000000014001AF15 , r8=1400311D3, rcx=FFFFFFFFFFFFF2CE, res=1400304A1
 False Positive
 of the regex
-addr=00000001400338DF r8=1400304A1, res={1400304A1
-addr=0000000140030500,r8 _ FFFFFEB 4001C425
-addr=000000014001C4A9 , r8+14001C425)«r9= >res=14003420E|
 laddr=000000014001C510, r10=70, rsp=14FBD@,re
-addr=000000014003428E,r8 I=FFFFFFFFFFFE@A49,res
-laddr=000000014003708A, rcx=0, rsp=14FBDO, res=14FBD@_!
 addr=0000000140031BFC,r8 e
 addr=0000000140037041,r8
-addr=0000000140026A90,r8
 addr=0000000140017672,r8
-addr= ,»rax= ,CSp= ,»res=
-addr=000000014002B5D0, r8=14001EF47, r9=19FF1,res=140038F38
-addr=0000000140038FA8 , r8=140038F 38, r1@=1A35 ,res=14003A96D
-[addr=000000014003A9AB, r9=D087EEFD, rax=D08/0003, res=1A10EEF OO]
 addr=000000014002F9C3, r8=14003A96D, rsi=FFFFFFFFFFFD7@C4, res=140011A31
 addr=000000014003C4AF ,r8=140011A31, r11=CF42,res=14001E973
-[addr=0000000140026EF5, r9w=AD8F, r9w=AD8F,res=15B1E |
 addr=0000000140026F6A, r8=14001E973,r11=11B2E, res=1400304A1
-addr=0000000140030500, r8=1400304A1, r11=DF3, res=140031294
-addr=0000000140010DB6 , r8=140031294,, r11=FFFFFFFFFFFEB191, res=14001C425
 140014C57
 Proofs our
 assumption
@@ -1101,14 +958,13 @@ Does it make a difference if we change the complexity rate ? No.
 
 asm2_5incs_3mov.vmp1 -c100 -i1-20240625-110446
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Does it make a difference if we change the complexity rate ? No.
 $ python parse_bp_out.py
 0000000140033957:
-000000014003C78C:
-000000014003C78C:
 000000014003C78C:
 000000014003ED68:
 0000000140019D90:
@@ -1123,21 +979,17 @@ $ python parse_bp_out.py
 00000001400146F3:
 00000001400323FD:
 0000000140033957:
-000000014003C78C:
 00000001400146F3:
 00000001400146F3:
 0000000140033957:
 000000014003C78C:
 000000014003C78C:
 000000014003C78C:
-AAAAAAAT AAAICNE Oe
 140031F48 --140013CA7
 140013CA7 o 140013CA7
 140013CA7 “-. 140013CA7
 140013CA7 “<. 140036452
 140036452 ms 140034A5B
-PL EPAPER EE
-14003999C < 140024FD7
 140024FD7 “<- 140024FD7
 140024FD7 g 140024FD7
 140024FD7 “-. 140024FD7
@@ -1148,13 +1000,11 @@ PL EPAPER EE
 140032378 < 140041975
 140031F48 - 140013CA7
 140013CA7 — 140013CA7
-140024FD7 7, 140024FD7
 140024FD7 — 1400298B1
 140031F48 7 140013CA7
 140013CA7 “—, 140013CA7
 140013CA7 +, 140013CA7
 140013CA7 -— 140036452
-1TAAASF APA AAAASACAP
 <-- 140033957 Init Block (Anomaly: 1)
 <-- 140033957 VMProtectStart Block (Anomaly: 2)
 <-- 140033957 VMProtectEnd Block (Anomaly: 3)
@@ -1165,15 +1015,11 @@ asm2_5incs_3mov.vmp1-€100-i1-20240625-110446
 
 asm2_5incs_3mov.vmp1 -c100-i10 -20240625-110446
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-addr=00000001401C9FQ0, rbp=140@DE425 , rcx=BF37B, res=14019D7A0
-addr=00000001401EC7AB, rbp=14019D7A@, rcx=FFFFFFFFFFFAD6CA res=14014AE6A
 addr=0000000140088459 , rbp=14014AE6A J itcx=BC8CF $=|149207739
-addr=0000000140227E25, rbp=140207739 J*té FFFFFFFFE9
-addr=00000001400CC924 , rbp314009CEA3 JeS= ,res=140230D7B
-14009CEA3
 addr=00000001400A8EFD, rbp=14023@D7B, r10=FFFFFFFFFFE9AB@3, res=1400CB87E
 addr=000000014013596B , rbp=1400CB87E , rbx=FFFFFFFFFFFA869A, res=140073F18
 addr=000000014018757D, rbp=140073F18, rsi=16824A, res=1401DC16
@@ -1182,31 +1028,18 @@ addr=000000014900D7@D7 , rbp=1401DC162, r10=FFFFFFFFFFFA@DAA, res=14017CF@C
 <-- Init
 addr=@0000001402207FE, rbp=14017CF@C, rcx=FFFFFFFFFFFBC@60, res=140138F6C
 <-- reg change VMProtectStart |
-addr=0000000140117833, r11=140141A73 , r10=24317, res=140165D8A
 addr=00000001400945@D, r11=140165D8A, rbp=FFFFFFFFFFF73D91, res=14@@D9B1B
 addr=00000001401FD1B5 , r11=140@D9B1B, rbx=986A, res=1400E3385
 addr=00000001400E9DED, r11=1400E3385, rsi=10100F, res=1401E4394
-addr=@0000001400D6817 , r11=140108805 ,r10=114C2E, res=14021D43
 3
-addr=000000014012B8DE , r11=14021D433 , rsi=FFFFFFFFFFFE7323, res=140204756
 addr=000000014019BC54, r11=140204756, rcx=E427, res=140212B7D
-addr=000000014007FD8B , r11=140212B7D, r10=FFFFFFFFFFESFQ36,res=140071BB3
-addr=0000000140071C22, r11=140071BB3, r10=12163E, res=1401931F
 1
 <-- reg change VMProtectEnd |
-addr=000000014008EF2F ,rsi=14013430C, rcx=FFFFFFFFFFEBSCE7. p<
-addr=00000001400EA094 , rsi=140QEAQ03 |cx=FFFFFFFFFFEB9 p
-addr=00000001401895F7,rsi 8= FFFFFEECAQ@6—-r.
 addr=00000001401D29C6,rsi DX=17B829, res=1401E953
 addr=00000001402266E0, rsi=1401E9530, r8=45777, res=14022ECA7
-Q
-1400EAQO3
 1400A3401
-4086DD07
 addr=00000001400DD7D6 , rsi=14022ECA7, rbx=FFFFFFFFFFF7C5BC, res=1401AB263
-addr=00000001401AB2D5 , rsi=1401AB263 , rcx=FFFFFFFFFFEE21FB, res=14008D45E
 addr=00000001400B3C9B , rsi=14008D45E , rdx=2ACB8, res=1400B8116
-asm2_5incs_3mov.vmp1-€100-110-20240625-110446
 ```
 
 ## Slide 48
@@ -1219,23 +1052,17 @@ VMHandler
 
 1<sup>st</sup> : There is not just one “INC <Register>” VMHandler and they all look different!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Translation of “INC EAX”
 1st : There is not just one “INC <Register>” VMHandler and they all look different!
-[a
-raxergbooeoe2 111->140008962
-JEADCAFF rx TiSDEADCEOO ape
-x00
-00000000140014EAE_~S < iiiesae (0x0000000140023A16 (0000000014001 F ECF
-CattVMProtectBegin
 mov rax, Odeadcafeh
 inc rax Oxdeadcafe —> Oxdeadcaff
 inc rax |Oxdeadcaff —> Oxdeadcbd0
 inc rax ; (Oxdeadcb0@ -> Oxdeadcb01
 inc rax ; Oxdeadcb01 -—> Oxdeadcb02
-inc rax O@xdeadcb02 -—> Oxdeadcb03
 ```
 
 ## Slide 50
@@ -1283,7 +1110,8 @@ Helpful Tool – Execution Trace Viewer
 
 X64dbg
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Helpful Tool — Execution Trace Viewer
@@ -1301,24 +1129,15 @@ rbx Oxi 1
 Execution Trace Viewer 1.0.0 rsp Oxi4tb£0 1375216
 . rbp 0x1f£20361d2 8355275218
 (C) 2019 Teemu Laurila rsi Ox3£ff 16383
-. . . rdi Oxi4fe70 1375856
-https://github.com/teemu-|/execution-trace-viewer os eo es
-rg Ox19ea38551 6956483921
 rid Oxffffffffe23... 18446744073210304153
-OK rill 0x140lidaicb 5370651083
 ri2 0x0 0
-ri3 0x0 0
 ®> Trace into. 7 ri4 0x0 0
-0x0 ie)
-0x140ldaled §370651117
 30
-0x212
 0x0
 0x0
 0x0
 0x0
 0x0
-wn
 ‘Command Text
 ‘Command Condition:
 Record trace é.. || OK || Cancel pa
@@ -1339,27 +1158,17 @@ c:0 P:0
 
 ## Slide 55
 
-blog.talosintelligence.com @talossecurity
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ORA
-@ blog.talosintelligence.com (Xx) @talossecurity
-TALOSINTELLIGENCE.COM
-```
+blog.talosintelligence.com
+@talossecurity
+blog.talosintelligence.com
+@talossecurity
 
 ## Slide 56
 
-blog.talosintelligence.com @talossecurity
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-thank you!
-@ blog.talosintelligence.com (Xx) @talossecurity
-TALOSINTELLIGENCE.COM
-```
+blog.talosintelligence.com
+@talossecurity
+blog.talosintelligence.com
+@talossecurity
 
 ## Slide 57
 

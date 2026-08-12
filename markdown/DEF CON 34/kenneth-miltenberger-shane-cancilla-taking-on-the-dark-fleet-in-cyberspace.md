@@ -4,23 +4,28 @@ speakers: ["Kenneth Miltenberger", "Shane Cancilla"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace!.pdf"
 pages: 27
 sha256: "c301a3acfc344979382d30ab1237c55d4f1766d7f59d50988261593e3d076aa7"
-text_chars: 8372
-ocr_pages: 5
+text_chars: 8116
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:30:29Z"
+converted_at: "2026-08-12T06:47:05Z"
 ---
 # Taking on the Dark Fleet... in Cyberspace!
 
 **Speakers:** Kenneth Miltenberger, Shane Cancilla  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace!.pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -66,13 +71,12 @@ Reserve
 
 UNCLASSIFIED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNCLASSIFIED
 U.S. Coast Guard Cyber Protection Teams
 CALIFORNIA REPUBLIC
-UNCLASSIFIED
 ```
 
 ## Slide 5
@@ -85,16 +89,13 @@ UNCLASSIFIED
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNCLASSIFIED
 Last year
 ¢ From Shanghai to the Shore: = 3
 3 ‘The Silent Threat in Global Shipping 4 )
-:
-pile
-UNCLASSIFIED
 ```
 
 ## Slide 6
@@ -107,18 +108,17 @@ UNCLASSIFIED
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 This year
-UNCLASSIFIED
 THE WALL STREET JOURNAL.
 [EXCLUSIVE]
 The Dangerous Tech Found Aboard ‘Dark-Fleet’ Tankers
 Captured by the U.S.
 Ships carrying sanctioned oil are using systems that bad actors could use to cause an
 explosion or oil spill
-UNCLASSIFIED
 ```
 
 ## Slide 7
@@ -249,10 +249,10 @@ UNCLASSIFIED
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNCLASSIFIED
 Cybersecurity of Dark Fleet Vessels
 CONSEQUENCE SEVERITY
 High
@@ -264,14 +264,10 @@ OCCURRENCE LIKELIHOOD
 o
 x
 =
-5
 >
 o
 =
-ij
-Sg
 Consolidated Findings of Dark Fleet Vessel Cybersecurity Assessment
-UNCLASSIFIED
 Consolidated Findings Key
 A. USB-based Infection (OT/IT)
 B. ECDIS Malfunction (USB Update)
@@ -527,16 +523,3 @@ LTJG Noah Soto – holistic dark fleet analysis lead.
 UNCLASSIFIED
 
 27
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-UNCLASSIFIED
-Acknowledgements
-<< * AN FRANCISC
-4ER
-LTJG Noah Soto —
-holistic dark fleet
-analysis lead.
-UNCLASSIFIED 7
-```

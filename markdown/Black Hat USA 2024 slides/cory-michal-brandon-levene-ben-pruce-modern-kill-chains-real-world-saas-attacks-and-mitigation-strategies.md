@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Cory Michal & Brandon Levene & Ben Pruce_Modern Kill Chains Real World SaaS Attacks and Mitigation Strategies.pdf"
 pages: 29
 sha256: "ade4e024a6daa0afeb88ed82636f62af7a0a62eeed4dd644bcb478a272533398"
-text_chars: 12966
-ocr_pages: 9
+text_chars: 12107
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:29:31Z"
+converted_at: "2026-08-12T04:28:43Z"
 ---
 # Modern Kill Chains Real World SaaS Attacks and Mitigation Strategies
 
 **Speakers:** Cory Michal, Brandon Levene, Ben Pruce  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Cory Michal & Brandon Levene & Ben Pruce_Modern Kill Chains Real World SaaS Attacks and Mitigation Strategies.pdf` (29 pages)
+
 
 ## Slide 1
 
@@ -55,7 +61,8 @@ August 7, 2024
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Historical Attack Surface Change
@@ -64,7 +71,6 @@ Heartbleed Ticketmaster Breach
 Sony Breach T-Mobile Breach Log4Shell
 Home Depot Capital One Data Okta
 OPM, Anthem First American MS Exchange
-Ashley Madison Solarwinds Breach —LastPass_ Change HC
 TJX Breach Yahoo Breach Magellan Health MOVEit Breach Ransom
 ‘Storm Worm Stuxnet DNC Breach Ransom MGM Ransom UK MOD
 Web Hacks Estonia & Russia PSN Breach DropBox Breach Colonial Pipe Ransom Royal Mail Midnight Bliz
@@ -73,8 +79,6 @@ Social Eng ILOVEYOU Blaster worm Conficker Worm Target Breach Petya
 Morris Worm First DDoS Nimda worm My Doom Worm HBS Breach Yahoo Breach Equifax Breach 6 6
 Michelangelo Bad IE Bugs Code Red Worm Samy XSS worm Aurora Snowden é é é
 Virus Phishing é a é
-wa FWD
-piel — wee ne “ see | ano | ame | zou | coor | anon | ano | ane | zou | aoe | cow | azo | ame | 2m
 Surface ; : |
 On Prem / Remote On Prem / On Prem / Remote / On Prem / Remote++
 Remote / laaS laaS | PaaS / SaaS laaS++ / PaaSt++ |
@@ -84,9 +88,6 @@ Strategy
 1990
 &
 Stack =
-<S) mT = aly B
-Vor Y GQ a a)!
-Pi
 First Firewalls Patching IP Chains Trustworth Computing PCI DSS NextGen FW Google Beyond Corp += MSFT Zero Trust. CSPM Al Mania
 and AntiVirus Satan Scanner Windows Update Vulnerability Scanning Endpoint Next Gen EDR Threat Intel CASB SASE: zero Triste
 VPNs IDS Windows XP Firewall Protection MFA TLS Everywhere ZT Implementations MFA++
@@ -109,25 +110,6 @@ DMZ DMZ
 ## **Modern Attack Surface ~ 2020**
 
 5
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Modern Attack Surface ~ 2020
-A
-EI Et
-EI Et
-HIoAoeo
-El
-LIES ELOISE
-| |
-i
-Tisai
-Tn
-Tn
-CED aD
-CED aD
-```
 
 ## Slide 6
 
@@ -292,7 +274,8 @@ Jul Aug Sep Oct Nov Dec Jan Feb Mar Apr MayApr Jun
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SaaS Attacks Heavily Leverage Cloud Providers
@@ -318,20 +301,17 @@ DIGITALOCEAN-ASN
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SaaS Attacks Heavily Leverage Cloud Providers
 Alerts by ASN Org and Tactic Name
 AMAZON-02
-AMAZON-AES
 20000
 Bharti Airtel Ltd., Telemedia Services
 CHINA UNICOM China169 Backbone
 CLOUDFLARENET ia
-e
-ia] Chinanet
-i
 DIGITALOCEAN-ASN - 10000
 Equinix Asia Pacific
 GOOGLE-CLOUD-PLATFORM
@@ -339,7 +319,6 @@ GOOGLE-CLOUD-PLATFORM
 OPENDNS
 Reliance Jio Infocomm Limited
 (0)
-<
 tactic_name
 ```
 
@@ -353,7 +332,8 @@ AS4837
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chinese-Affiliated Attacks Focused on Microsoft 365
@@ -364,8 +344,6 @@ Number of Alerts
 605
 204
 Tactics Per Service
-&
-&
 Tactic Name
 Collectior
 i
@@ -373,7 +351,6 @@ Credential Acces:
 Initial Acc
 Service
 MM 0365
-lm okta
 *
 * *
 *
@@ -389,7 +366,8 @@ AS4837
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Enriched Alerts Organized by Tactic
@@ -399,7 +377,6 @@ Threats & Actors
 Cybercrimin...
 Suspicious IP : RELATED_TO
 Socks b. ‘Threats & Actors
-:: Cybercriminals
 1: Report
 Threats & Actors
 Nation-State
@@ -407,7 +384,6 @@ Suspicious IP ::
 RELATED Scanners
 Malware/Source
 =C2
-oraaiviay
 Compromise &
 Suspicious IP ::
 Open Proxy
@@ -459,22 +435,19 @@ VPN
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacker Observations - Credential Access
 Brute Force & MFA Exhaustion
 Suspicious IP :: Scanners
-[Successfulllfogin} Man yarallUre: a
 —T/ Suspicious IP :: Open Proxy
 SS; SS Malware/Source :: C2
 > Threats & Actors :: Cybercriminals
 QS Threats & Actors :: Cybercriminals ::
 Suspicious IP :: VPN
-SSI \-Notifications“Followed by SUGgessfulsverification
 ——= Compromise & leaks :: Public Leaks
-—veevavault SuspiclousiP
-‘servicenow
 ```
 
 ## Slide 20
@@ -483,20 +456,18 @@ SSI \-Notifications“Followed by SUGgessfulsverification
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacker Observations - Actions on Objectives
 Action on Objective Alerts by Service
 Threats & Actors :: Cybercriminals :: Report 4 Service Type
-Ml box
 Threats & Actors :: Cybercriminals 7 @™ github
 MEE gsuite
 Suspicious IP :: VPN {fF GM 0365
-‘ lm okta
 Suspicious IP :: Tor Nodes 7 . sfdc
 3 Suspicious IP :: Socks proxy bots me Socks
-| @mm workday
 g Suspicious IP :: Scanners ;
 Suspicious IP :: Open Proxy Hi
 Malware/Source :: C2 4
@@ -756,15 +727,3 @@ Use Phishing resistant hardware MFA devices Move important SaaS behind an IdP yo
 **Assess SaaS Threats in Your Environments** https://appomni.com/risk-assessment/
 
 29
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Thank You
-{0} g) Booth #1660
-AppOmni__ blackhat
-ASK US HOW TO
-Assess SaaS Threats in Your Environments
-https://appomni.com/risk-assessment/
-29
-```

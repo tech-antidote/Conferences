@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Erik Rye_Surveilling the Masses with Wi-Fi Positioning Systems_Compressed.pdf"
 pages: 97
 sha256: "a1465012877065cdf5a6007bbb1668d42c87db6a2f48ab3d90b70b812e2d2511"
-text_chars: 19131
-ocr_pages: 13
+text_chars: 17594
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:01:33Z"
+converted_at: "2026-08-12T04:32:58Z"
 ---
 # Surveilling the Masses with Wi-Fi Positioning Systems
 
 **Speakers:** Erik Rye  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Erik Rye_Surveilling the Masses with Wi-Fi Positioning Systems_Compressed.pdf` (97 pages)
+
 
 ## Slide 1
 
@@ -30,12 +35,11 @@ Erik Rye University of Maryland
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | Aa
-pifek hat=—‘*.-
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Surveilling the Masses with
@@ -118,16 +122,6 @@ WPS
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-“oS
-oa
-\ 00:11:22:33:44:55|
-```
-
 ## Slide 8
 
 WPS
@@ -156,16 +150,6 @@ WPS
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-“oS
-oa
-\ 00:11:22:33:44:55|
-```
-
 ## Slide 11
 
 WPS
@@ -186,25 +170,6 @@ WPS
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-ell
-~
-ooo—-
-66:77:88:99:aa:bb
-=|
-~
-oo—-
-44:55:66:77:88:99
-=|
-~
-e0o—-
-22:33:44:55:66:77
-```
-
 ## Slide 13
 
 WPS
@@ -216,25 +181,6 @@ WPS
 22:33:44:55:66:77
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-ell
-~
-ooo—-
-66:77:88:99:aa:bb
-=|
-~
-oo—-
-44:55:66:77:88:99
-=|
-~
-e0o—-
-22:33:44:55:66:77
-```
 
 ## Slide 14
 
@@ -250,29 +196,6 @@ Where is 22:33:44:55:66:77?
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-ell
-~
-ooo—-
-66:77:88:99:aa:bb
-=|
-~
-oo—-
-44:55:66:77:88:99
-Where is 22
-T
-QJ)
-133:44:55:66:777
-=|
-~
-e0o—-
-22:33:44:55:66:77
-```
-
 ## Slide 15
 
 **WPS** Where is 22:33:44:55:66:77?
@@ -285,28 +208,6 @@ e0o—-
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-Ud
-WPS
-Where is 22:33:44:55:66:77?
-ell
-~
-ooo—-
-66:77:88:99:aa:bb
-=|
-~
-oo—-
-44:55:66:77:88:99
-=|
-~
-e0o—-
-22:33:44:55:66:77
-```
-
 ## Slide 16
 
 WPS
@@ -318,25 +219,6 @@ WPS
 22:33:44:55:66:77
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-ell
-~
-ooo—-
-66:77:88:99:aa:bb
-=|
-~
-oo—-
-44:55:66:77:88:99
-=|
-~
-e0o—-
-22:33:44:55:66:77
-```
 
 ## Slide 17
 
@@ -1003,16 +885,6 @@ Hotspots in major cities
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-BSSIDs mE ta, — Hotspots in major
-300 abhiiv - . = a wee cities
-100
-```
-
 ## Slide 69
 
 Case Study: Russia-Ukraine War
@@ -1064,23 +936,13 @@ Most routers stable for long periods…
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-{
-o o
-a ~
-o oO
 CDF of BSSIDs Moving > 1 km
-.
 0.00
-Tracking 10M BSSIDs for a Month
-1 10 100 1,000 10,000
-Cumulative Distance BSSID Traveled (km)
 10 Million BSSID Sample Movers GLiNet Movers (1 month) GL-iNet Movers (6 months)
-Most routers stable for long periods...
 ```
 
 ## Slide 75
@@ -1093,25 +955,15 @@ Most routers stable for long periods…
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
-Tracking 10M BSSIDs for a Month
-{
-o o
 a ~I
-o oO
 CDF of BSSIDs Moving > 1 km
-.
-00
-1 10 100 1,000 10,000
-Cumulative Distance BSSID Traveled (km)
 Only 6,002 move >1km
 10 Million BSSID Sample Movers GLiNet Movers (1 month) - GL-iNet Movers (6 months)
-Most routers stable for long periods...
 ```
 
 ## Slide 76
@@ -1126,35 +978,24 @@ Most routers stable for long periods…
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
-Tracking 10M BSSIDs for a Month
-{
 =
-ad
 A 0.75
 >
 Small movements S
 =
-0.50
-QO
-ep)
-op)
 faa)
 ‘= 0.25
 LL
 Q
 O
 60
-1 10 100 1,000 10,000
-Cumulative Distance BSSID Traveled (km)
 Only 6,002 move >1km
 10 Million BSSID Sample Movers GLiNet Movers (1 month) - GL-iNet Movers (6 months)
-Most routers stable for long periods...
 ```
 
 ## Slide 77
@@ -1334,27 +1175,16 @@ Remediation Starlink routers began randomizing BSSIDs on all products April 2024
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-SPACE XK Remediation
 Starlink routers began randomizing BSSIDs on all products April 2024
 & 300,000
-”
 jaa)
 as,
 © 200,000
-s
-op)
-=
-i)
 ‘3 100,000
-oO
-xe)
-ie)
-i)
 O
 0
 ```

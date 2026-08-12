@@ -12,7 +12,7 @@ duration_seconds: 2318
 words: 4001
 text_chars: 23879
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # De-Virtualizing the Dragon - Automated Unpacking and Deobfuscation of Nested VM-Based Protectors

@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Miro Haller_Blast-RADIUS Breaking RADIUS, the de facto standard protocol for authentication, authorization, and accounting for networked devices.pdf"
 pages: 38
 sha256: "0ec8765e76dc15cc97b1f2c7eae7f1c767b1ae9b25a69398b814386128ba6b79"
-text_chars: 16434
+text_chars: 16739
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:50:34Z"
+converted_at: "2026-08-12T04:58:24Z"
 ---
 # Blast-RADIUS Breaking RADIUS, the de facto standard protocol for authentication, authorization, and accounting for networked devices
 
 **Speakers:** Miro Haller  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Miro Haller_Blast-RADIUS Breaking RADIUS, the de facto standard protocol for authentication, authorization, and accounting for networked devices.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -403,15 +409,21 @@ BHEU 2024
 
 ## Slide 21
 
-## EAP: It’s Complicated.
-
-- TLS in EAP-TLS does not protect RADIUS packets.
-
-17/22
-
+EAP: It’s Complicated.
+• TLS in EAP-TLS does not protect RADIUS
+packets.
+Not to be confused with RADIUS/TLS, which
+properly nests RADIUS inside TLS.
+RFC 3579 requires that EAP-Message has
+Message-Authenticator attribute [1].
+Unclear client behavior for Access-Accept
+without EAP-Message.
+In eduroam and 802.1X, key is negotiated
+inside EAP session =⇒would require further
+attacks.
 Miro Haller
-
 BHEU 2024
+17/22
 
 ## Slide 22
 
@@ -527,9 +539,9 @@ BHEU 2024
 
 **Attack summary:** MD5 collision attack on RADIUS authentication by MITM adversary.
 
-```
+\```
 https://blastradius.fail
-```
+\```
 
 **RADIUS/UDP Considered Harmful** Sharon Goldberg, Miro Haller, Nadia Heninger, Mike Milano, Dan Shumow, Marc Stevens, and Adam Suhl. USENIX Security, August 2024.
 
@@ -599,9 +611,9 @@ Reject Gibberish
 
 03 1d 01c0 6034d0ff16e4...30 21 ec 96...86 21 c0 f5...9e
 
-```
+\```
 ResponseAuthenticator
-```
+\```
 
 6. MITM puts Response Authenticator in Access-Accept packet with appended `Accept Gibberish` .
 

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Or Yair_One Drive, Double Agent Clouded OneDrive Turns Sides.pdf"
 pages: 91
 sha256: "c2a6a27918abba4a70fb45406fca95b51eb5911e27b3a9262c41e228dc462c52"
-text_chars: 20030
-ocr_pages: 23
+text_chars: 17922
+ocr_pages: 19
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:16Z"
+converted_at: "2026-08-12T04:19:40Z"
 ---
 # One Drive, Double Agent Clouded OneDrive Turns Sides
 
 **Speakers:** Or Yair  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Or Yair_One Drive, Double Agent Clouded OneDrive Turns Sides.pdf` (91 pages)
+
 
 ## Slide 1
 
@@ -47,7 +53,8 @@ Ransomware Background Research Questions / Goals Research – Turning OneDrive i
 
 Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state-of-ransomware-2023-wp.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 State of Ransomware
@@ -67,7 +74,6 @@ Forbes
 %
 5%
 Lessthan =z en Between Between il Between Between Between Between Between Ls millio | 2020 | 2021 | 2oze | | 2023 |
-$1,000 $1,000and $5,000and = $10,000and + $20,000and $50,000and $100,000 $250,000 $500,000 $1millionand or more
 4,999.99 9,999.99 1999999 $49,999.99 $99,999.99 d id id 4,999,999.99
 $4; $9. $19; $49, S$ ant ani an S$ 51% 37% 66% 66%
 $249,999.99 $499,999.99 $999,999.99
@@ -81,7 +87,8 @@ Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state
 
 Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state-of-ransomware-2023-wp.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 State of Ransomware
@@ -100,7 +107,6 @@ $4,999.99 $9,999.99 $19,999.99 $49,999.99 $99,999.99 and and
 $249,999.99 $499,999.99
 M2022 (n=965) Ml 2023 (n=216)
 How much was the ransom payment that was paid to the attackers? Excluding “Don't know" responses.
-Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state-of-ransomware-2023-wp.pdf
 6% 6%
 Between
 $500,000
@@ -123,7 +129,8 @@ or more
 
 Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state-of-ransomware-2023-wp.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 State of Ransomware
@@ -137,7 +144,8 @@ Sophos: https://assets.sophos.com/X24WTUEQ/at/c949g7693gsnjh9rb9gr8/sophos-state
 
 State of Ransomware
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 State of Ransomware
@@ -155,7 +163,8 @@ Forbes.
 
 State of Ransomware
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 State of Ransomware es
@@ -184,7 +193,8 @@ A fully undetectable-by-design ransomware
 
 There is a way to encrypt all of your sensitive data without encrypting a single file on your endpoint?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IF ITOLD YOU
@@ -196,31 +206,16 @@ without encrypting a single file on your endpoint?
 
 Adversaries can encrypt files, while they are not even executing code on endpoints?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-/ WHAT IFITOLD YOU
-Adversaries can encrypt files, while they are
-not even executing code on endpoints?
-```
-
 ## Slide 13
 
 What if not a single malicious executable from the adversary needs to be present on endpoints while files are encrypted?
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| WHAT IF ITOLD YOU
-What if not a single malicious executable from the adversary
-needs to be present on endpoints while files are encrypted?
-```
 
 ## Slide 14
 
 Searching for a double-agent
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Searching for —
@@ -247,18 +242,17 @@ In Windows:
 
 https://support.microsoft.com/en-us/windows/protect-your-pc-from-ransomware-08ed68a7-939f-726c-7e84-a72ba92c01c3:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OneDrive
-HH Microsoft | Support Microsoft365 Office © Windows Surface Xbox —_—Deals
 Products Devices What's new Account & billing Templates More support
 Protect your PC from ransomware
 Security, Windows 7, Windows 8.1, Windows 10
 = Store important files on Microsoft OneDrive. OneDrive includes built in ransomware detection
 and recovery as well as file versioning so you can restore a previous version of a file. And when
 you edit Microsoft Office files stored on OneDrive your work is automatically saved as you go.
-https://support.microsoft.com/en-us/windows/protect-your-pc-from-ransomware-O8ed68a7-939f-726c-7e84-a72ba92c01c3:
 ```
 
 ## Slide 19
@@ -282,20 +276,6 @@ VS
 😇
 
 Initial Access
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-wipe
-we
-ee
-RS)
-|]
-ei
-Initial Access
-VS
-Initial Access
-```
 
 ## Slide 21
 
@@ -339,7 +319,8 @@ and turn sides
 problem
 please🙏
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Work for me Umm... OK, no
@@ -396,7 +377,8 @@ Web Session – JWT Token
 
 OneDrive Windows Agent – Windows Live ID Token
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OneDrive Token
@@ -406,7 +388,6 @@ GET https://api.onedrive.com/v1.0/drive/ HTTP/1.1
 : bearer
 OneDrive Windows Agent — Windows Live ID Token
 GET https://api.onedrive.com/v1.@/drive/ HTTP/1.1
->: api.onedrive.com
 : WLID1.1 tr
 ```
 
@@ -488,7 +469,8 @@ bin files again
 
 Windows app leads to browser Canary is provided only with a “WLSSC” cookie
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Emptying The Recycle Bin
@@ -496,10 +478,8 @@ Windows app leads to browser
 Canary is provided only with a
 “WLSSC” cookie
 = | WW Empty recycle bin | S Restore all items
-|
 POST https://skyap1.onedrive. live.com/API/2/DeleteAll HTTP/1.1
 : Skyapi.onedrive. live.com
-: Hd73dH@pR/oLzylNrpKMFNa8kBht11qED6HL1lokYcgI=3
 > 1141147648
 ```
 
@@ -523,35 +503,31 @@ What Happens in Mobile? – Recycle Bin “Delete All” Web Request:
 
 “Delete All” Android Request:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What Happens in Mobile? — Recycle Bin hg
 “Delete All” Web Request:
 POST https://skyapi.onedrive. live.com/API/2/DeleteAll HTTP/1.1
 >: Skyapi.onedrive. live.com
-: Hd73dH@pR/oLzylNrpKMFNa8kBht11qED6HLLokYcgI=3
 ; 1141147648
 “Delete All” Android Request:
 : Skyapi.live.net
->: WLID1.1 t=EwKFI91IJCSIKd3MFRzZ@a3VWFfSE21ZNFIp7FUR
-ET)
 ```
 
 ## Slide 48
 
 What Happens in Mobile? – File Sharing
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What Happens in Mobile? — File Sharing
 Share
-&& TEMPMAIL
 Can Edit v
 Your Temporary Email Address Set Expiration
-botaj90888@goflipa.com #2 a
-=> Oo
 Copy link Invite Send files Outlook
 "a" has been shared with you.
 a.txt
@@ -673,20 +649,19 @@ Ransomware Detection? Or Ransomware Implementation?
 
 Notification Settings
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Notification Settings
 OneDrive
 D> Notification Settings
-Q. Notifications
 More Settings Reminders for missed Sharing emails
 Email notification when OneDrive detects lots of files are deleted at once
 Email notification when others reply to your comments
 Email notification when the link in a sharing email you sent was clicked
 Notification Settings
 @® on
-@® om
 @® on
 @® o
 Reminders for missed Sharing emails
@@ -716,7 +691,8 @@ Checking OneDrive’s API for the Mass Deletion Notification Setting
 
 ## Slide 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HL Microsoft | Support Microsoft 365 Office Windows Surface More v
@@ -792,7 +768,8 @@ Bypassing EDRs - Decoy Files
 
 2 behaviors Decoy files were encrypted with no detection Decoy files were not visible to OneDrive.exe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing EDRs - Decoy Files
@@ -801,31 +778,19 @@ Bypassing EDRs - Decoy Files
 4 x
 Your privacy settings have been applied from
 changes you made in another Office app.
-Decoy files were encrypted s « stasindoeu. > dead YG —
-with no detection + Nome : essa)
-p [) abe.docencrypted \\ def3.txtencrypted
 | Renamed in docs8
-i ic] LD) abco.docencrypted fecha ag6
 Decoy files were not visible arodeeaseyee
-[) abc2.docencrypted \\ def2.txtencrypted
 to OneDrive.exe
 | Renamed in docs8
 o abc3.doc.encrypted 1 second ago
-[) abc4.docencrypted \\__ def1.txtencrypted
 Re id in docs8
-o def0.txt.encrypted | ST eee
 1 second ago
 def1.txt. ited —
-ied sneer \\ def0.txtencrypted
 f2 txt Renamed in docs8
-() def2.tx.encrypted ara
 D def3.txt.encrypted
-. \\__ abc4.doc.encrypted
 {)) def4.txtencrypted | Renamed in docs8
 1 second ago
-oO ghi0.pdf.encrypted
 abc3.doc.encrypted
-(1) ghit.pdf.encrypted
 Open folder Viewonline — Recyclebin Go premium e
 ```
 
@@ -833,7 +798,8 @@ Open folder Viewonline — Recyclebin Go premium e
 
 Bypassing EDRs - Known file extensions Encrypted files renamed to end with “.encrypted”, “.wnry”, etc.. did not cause any detection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing EDRs - Known file extensions
@@ -843,30 +809,15 @@ to end with “.encrypted”,
 Cause any detection
 « afterSentDocu... >» docs0
 Name
-{)) abedocencrypted
 (Ei abc0.doc.encrypted
-{)) abc2.docencrypted
-o abc3.doc.encrypted
-{)) abc4.docencrypted
-o def0.txt.encrypted
-D def1.txt.encrypted
-(") def2.txtencrypted
 D def3.txt.encrypted
-{)) def4.txtencrypted
-oO ghi0.pdf.encrypted
-{)) ghit.pdf.encrypted
 @ OneDrive - Personal BB
 ® Processing changes
-Our prea SELENGS Ravel Baan applied Worn
-charges yOu Hada in anathar Officeispp.
 v @
-def3.txtencrypted
 Renamed in docs8
 1 second ago
-def2.txtencrypted
 Renamed in docs8
 1 second ago
-def1.txt.encrypted
 Renamed in docs8
 1 second ago
 def0.txt.encrypted
@@ -879,7 +830,6 @@ abc3.doc.encrypted
 Open folder Viewonline — Recyclebin Go premium
 *|
 E
-a
 ```
 
 ## Slide 75
@@ -900,34 +850,25 @@ The ransomware executable is OneDrive.exe
 
 DoubleDrive Demo
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DoubleDrive Demo
 Victim's OneDrive BE Windows Powershell Attacker
 venv) & Or: onedr: ° ra 9 > python .\options_setup.py
 t naths C:\Users\Admin\Documents; pyinstaller --onefile .\endpoint
-erin - _takeover.py; pyinstaller 2 :\doubledrive. py;
 my mes
 OD Name+ v Modified v File size Sh
 “Documents Yesterday at 11:05:37 PIV Pri
 “Personal Vault Yesterday at 11:05:38 PM Pr
-“Pictures
 erday at 11:05:37 PN Pri
 file Edit View VM Hep II
 Windows 11
 BB Windows Powershel Downloads
 Ps C:\Users\Admin\Downloads> © new Son ~ = View
-« b> This PC > Downloads -o Search Downes
-ES Name Date medied ye
-Wl Documents | The
-PRrctwes
 O music
-EiVideos
 O toms =]
-=Ca
-AOE BM sr2023 0
-7°n 9
 VM, move the mouse pointer inside or press Ctrl+G.
 ```
 
@@ -949,14 +890,6 @@ If there is no other option, security vendors should understand whether or not a
 
 ## Prepare for next-gen ransomware
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Takeaways vw
-Prepare for next-gen ransomware
-SV Lt
-```
-
 ## Slide 81
 
 # Takeaways
@@ -977,7 +910,8 @@ No CVE
 
 "Security Researcher Acknowledgments for Microsoft Online Services“
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft
@@ -985,7 +919,6 @@ MSRC:
 Your case 78044 was assessed as follows:
 No CVE
 a "Security Researcher
-° SENSIS: iniportant ' sek Acknowledgments for
 ¢ Security Impact: Elevation of Privilege Microsoft Online Services”
 Your case 78782 was assessed as follows:
 e Severity: Important

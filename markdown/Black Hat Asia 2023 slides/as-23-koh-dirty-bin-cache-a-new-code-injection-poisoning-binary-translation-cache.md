@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Koh-Dirty-Bin-Cache-A-New-Code-Injection-Poisoning-Binary-Translation-Cache.pdf"
 pages: 99
 sha256: "30b0670ffe9cb69d4d463d606721f7e416dbc4fdcc82302e1a2a06d2360e3aaa"
-text_chars: 43014
+text_chars: 42470
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["AS-23-Koh-Dirty-Bin-Cache-A-New-Code-Injection-Poisoning-Binary-Translation-Cache_POC.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:39Z"
+converted_at: "2026-08-12T03:47:44Z"
 ---
 # Dirty Bin Cache A New Code Injection Poisoning Binary Translation Cache
 
 **Speakers:** Koh  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Koh-Dirty-Bin-Cache-A-New-Code-Injection-Poisoning-Binary-Translation-Cache.pdf` (99 pages)
+
 
 ## Slide 1
 
@@ -164,10 +169,10 @@ Even root cannot access some files
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 20253
 Introduction to macOS security model
 sh-3.2# csrutil status
@@ -832,33 +837,16 @@ But code injection by AOT poisoning can be applied to any x64 executable
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 45/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-_ 17:04 | / ]
-@ YAFLWABE WR RK WIYED AT ; oC 8 wm = Q ® 5A98(A) 17:04 }
-(cdhash-HV-_GIgx-py3.9) »> O
 VulnEmu
-SARS AnAG
-—m FileVault FrT*PVz—-IL | FOtKY—
-ADEB EDOPTUT—YavORAPTE, FOPTUT—Ya
-VRBRONSORRE FA.
-DF 4APPIRA
 a
-DPTAWEDANY S
-Bim RR
 TEMP
-2xF 47 & Apple Music
-HomekKit =
-Bluetooth silos
-Bm Ns
 2022-0...9 17.01.52
-1— FS ARERR
 (
-A-—hkxX-Yay
 | 2
-2 REG SlcisnXeEIV ILE. ?
-9208880070608 €e8 af
 #BHASIA @BlackHatEvents
 ```
 
@@ -1112,7 +1100,8 @@ Adobe Inc.
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ = Microsoft Remote Desktop Edit Connections Window Help
@@ -1139,26 +1128,21 @@ inet6 fe8@::ce81:bic:bd2c:69e%utun2 prefixlen 64 scopeid @x12
 inet6 fe80::8a47:74fa:680d:4866%utun3 prefixlen 64 scopeid @x13
 inet6 fe80::e@ff:537e:3b1a:8836%utun4 prefixlen 64 scopeid 0x14
 [sh-3.2$ nc -1 8080
-oh@ecrés
 Volterra
 [EX] Command Prompt x + v
 C:\Users\tsune\source\repos\XtacPoisoning\Release>whoami /priv
 PRIVILEGES INFORMATION
 Description
 Privilege Name
-SeShutdownPrivil ~ - ~
 SeChangeNotifyPr 4 Downloads x +
 SeUndockPrivileg
 SeTimeZonePrivil
-C:\Users\tsune\s ¢ +> v 4 >» Downloads VS
 A lome Name Date modified
 @ Ko - Personal © Today
 BR AcroRdrDC2200320322_en_US.exe 3/24/2023 8:21 AM
-Desktop ”
 BE Documents #
 b Downloads #
 B Pictures *
-@ Music ed
 litem | 1 item selected 334MB |
 Type
 Application

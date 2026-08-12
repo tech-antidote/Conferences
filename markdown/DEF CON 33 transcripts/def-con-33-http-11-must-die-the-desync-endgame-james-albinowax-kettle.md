@@ -12,7 +12,7 @@ duration_seconds: 2182
 words: 5206
 text_chars: 29147
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # HTTP 1.1 Must Die The Desync Endgame

@@ -1,5 +1,5 @@
 ---
-title: "AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images-wp"
+title: "AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images"
 speakers: ["Qian Feng", "Chris Navarrete"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2025"
@@ -11,15 +11,21 @@ sha256: "4ba3fe4f791ad20d15e5399f82a4ba971038356309891a6addd20cdc0e7c2852"
 text_chars: 16397
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:07:40Z"
+converted_at: "2026-08-12T03:57:10Z"
 ---
-# AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images-wp
+# AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images
 
 **Speakers:** Qian Feng, Chris Navarrete  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Qian Feng & Chris Navarrete_AI-Powered Image-Based Command and Control (C2) Framework Utilizing AI Models to Conceal and Extract Commands in C2 Images-wp.pdf` (4 pages)
+
 
 ## Slide 1
 

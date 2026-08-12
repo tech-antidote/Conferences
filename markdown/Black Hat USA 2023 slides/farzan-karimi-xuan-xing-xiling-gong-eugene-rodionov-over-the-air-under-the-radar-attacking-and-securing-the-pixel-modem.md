@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Farzan Karimi & Xuan Xing & Xiling Gong & Eugene Rodionov_Over the Air, Under the Radar Attacking and Securing the Pixel Modem.pdf"
 pages: 41
 sha256: "e3de27e5f4f5bdefcfcbc35d77830b5303bb9c399f2646c6cede76f890e44fe4"
-text_chars: 18512
-ocr_pages: 6
+text_chars: 18044
+ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:54Z"
+converted_at: "2026-08-12T04:08:48Z"
 ---
 # Over the Air, Under the Radar Attacking and Securing the Pixel Modem
 
 **Speakers:** Farzan Karimi, Xuan Xing, Xiling Gong, Eugene Rodionov  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Farzan Karimi & Xuan Xing & Xiling Gong & Eugene Rodionov_Over the Air, Under the Radar Attacking and Securing the Pixel Modem.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -79,10 +86,10 @@ We are the **eyes of Android Security** : Increase Pixel and Android security by
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 20253
 Modem has been an
 emerging area of risk
@@ -93,12 +100,10 @@ Gaining Remote Code
 Execution on 5G Smartphones
 Marco Grassi (@marcograss)
 Xingyu Chen (@@xkira233)
-K) xeon
 security
 lab
 Black Hat talk exposes how ea: inals can hack mobile
 broadband modems
-ek)
 Samsung Smartphones Already Received Modem
 Vulnerability Patch
 The vulnerability in Qualcomm modems
@@ -142,12 +147,11 @@ MFA Compromise
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat So What?
-USA 2&0e5
 2FA compromise led to $34M Crypto.com hack
 Anita Ramaswamy @anitaramaswamy / 10:13 AM PST + January 20, 2022
 ```
@@ -391,47 +395,22 @@ CodeQL is a static analysis tool with powerful data-flow and taint analysis engi
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-a
-a
-=
->
-ye
-ra) | Modem Emulator ~
-black hat =
-USA 2023 Root Cause Analysis
-Heap header corruption at 50596c01 (heap: 50596c00) size: 00000001 value: 000000ad @421e2860 BitUnpacking8+000000cb
-None
-Memory Dump @50596c00
-* Debug Message: Output(®xAD) from Buffer(@xBE) with unpackingLen(8)/unpackedLen( 1206555239) @line @ (BitUnpacking173)
-12: BitUnpacking8 return: 0x00000180
-2: BitUnpacking8(ProAsnParam_t* asnParam = 505a75a0, unsigned int line = 000005d2, u8 *output = 50596c02, int outputLen = 00000008,
-* Instructions @421e285a
-421e285a: b #0x421e2874
-421e285c: mov fp, r5 american fuzzy lop ++4.0la ault} (python3) [fast]
-421e285e: b #0x421e28ae p timing overall results
-421€2860: movw r6, #0x48ae ® days, 7 hrs, 46 min, 31 sec
-421e2864: subs r7, r7, r3 ® days, @ hrs, @ min, 34 sec 639
-421e2866: movt r6, #0x4032 @ days, @ hrs, 7 min, @ sec
-421e286a: ldrb r6, [r6, r3] Seets araareee @ days, 4 hrs, 39 min, 2 sec voce 5)
-sone, wn ee v6, e8 619.1 (96.9%) 0.83% / 11.21%
-: ae 1 (0.16%) 4.97 bits/tuple
-CEC LO3 VETS Uy 7 stage progress ini s in depth
-421e2874: strb r6, [r2] splice 4 354 (55.40%)
-CERCA (ek Op Cab eh ne! 188/441 (42.63%) 524 (82.00%)
-421e287a: movs r7, #8 3.31M
-421e287c: str r2, [sp, #0x18] 212.5/sec 54.3k (358 saved)
-421e287e: movw r2, #0x9464 ) strategy yields m geometry
-disabled (default, enable with 12
-disabled (default, enable with 191
-disabled (default, enable with 1
-disabled (default, enable with 638
-n/a Q
-547/1.68M, 119/1.61M
-unused, unused, unused, unused
-2.03%/3823, disabled
+CXCLNT Loader - Version A
+
+hModule = hinstDLL;
+ModuleHandleA = GetModuleHandleA(0);
+dword_10013300 = *(_DWORD *)((char *)ModuleHandleA + *((_DWORD *)ModuleHandleA + 15) + 40);
+lpFiber = ConvertThreadToFiber(0);
+Fiber = (char *)CreateFiber(0, (LPFIBER_START_ROUTINE)StartAddress, 0);
+dword_100132C4 = (int)Fiber;
+*(_DWORD *)&Fiber[(dword_10013300 ^ 0x10EC) + 0xC4] = (char *)sub_10001480 + (dword_10013300 ^ 0x10EC);
+SwitchToFiber(Fiber);
+
+Fiber Object  =>  Fiber Thread  =>  Malicious Code
 ```
 
 ## Slide 20
@@ -586,13 +565,11 @@ _* Global array of ~80 bytes at a known address used for storing stage 0 and chu
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 2023
-CNDROID B
-GD) TECM
 Modem RCE Proof of Concept
 #BHUSA @BlackHatEvents
 ```
@@ -631,16 +608,13 @@ Attacker sends exploit payload. Establishes foothold on victim’s modem
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-“Sees - eeae
-Trem 2 2 SO
 Attacker can now target ®
 Victini's apps supporting
 SMS MFA ¥
-CiNOROID © *“#@e@60
-2G5 TEqGnm . .
 ```
 
 ## Slide 31
@@ -831,13 +805,3 @@ We applied various mitigations to eradicate entire classes of vulnerabilities, w
 # Thanks!
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2023
-ANDROID ww
-RED TEaAn Thanks!
-#BHUSA @BlackHatEvents
-```

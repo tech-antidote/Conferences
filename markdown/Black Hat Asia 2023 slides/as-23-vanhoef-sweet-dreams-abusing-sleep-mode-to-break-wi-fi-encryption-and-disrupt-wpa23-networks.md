@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Vanhoef-Sweet-Dreams-Abusing-Sleep-Mode-to-Break-Wi-Fi-Encryption-and-Disrupt-WPA23-Networks.pdf"
 pages: 43
 sha256: "de5f0aa189beb93ee92dc27c742c893c073e951999f80f115840735fa6fe0726"
-text_chars: 11133
-ocr_pages: 22
+text_chars: 10584
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["AS-23-Vanhoef-Sweet-Dreams-Abusing-Sleep-Mode-to-Break-Wi-Fi-Encryption-and-Disrupt-WPA23-Networks_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:55Z"
+converted_at: "2026-08-12T03:49:14Z"
 ---
 # Sweet Dreams Abusing Sleep Mode to Break Wi Fi Encryption and Disrupt WPA23 Networks
 
 **Speakers:** Vanhoef  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Vanhoef-Sweet-Dreams-Abusing-Sleep-Mode-to-Break-Wi-Fi-Encryption-and-Disrupt-WPA23-Networks.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -74,12 +79,12 @@ New attack 1: leaking frames
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames AP (Vulnerable)
 Client || Attacker '| Kernel |} Daemon |:
----- | lilies Connection ------7-7- aii |
 ```
 
 ## Slide 7
@@ -88,7 +93,8 @@ Client || Attacker '| Kernel |} Daemon |:
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames AP (Vulnerable)
@@ -106,7 +112,8 @@ Buffer
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames AP (Vulnerable)
@@ -123,7 +130,8 @@ St. D-
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames AP (Vulnerable)
@@ -143,7 +151,8 @@ Auth. / Association Response
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames AP (Vulnerable)
@@ -154,8 +163,6 @@ Auth. / Association Request
 ‘Remove Pa
 Auth. / Association Response
 irwise Key
--/7
-‘- Stage Q--
 10
 ```
 
@@ -165,7 +172,8 @@ irwise Key
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames
@@ -174,12 +182,10 @@ Auth. / Association Request
 irwise Key
 Auth. / Association Response
 Wake-Up
-Ke
 Dequeue without Key
 Leak Queued Frames
 |
 \
--Stage @)-- ‘Stage Q@--
 11
 ```
 
@@ -192,19 +198,17 @@ undefined security context
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 1: leaking frames
 Auth. / Association Request
 Remove Pairwise Key
 Auth. / Association Response
-.
 Novelty 3: frames leaked under
 undefined security context
 | Leak Queued Frames |
-- Stage Q--
-‘Stage @)-- °
 12
 ```
 
@@ -258,7 +262,8 @@ Defense:
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing
@@ -266,7 +271,6 @@ MFP (802.11w)
 Client
 AP (Vulnerable)
 Attacker ‘| Kernel
--
 -- Connection with Wi-Fi MFP- - -
 17
 ```
@@ -277,7 +281,8 @@ Attacker ‘| Kernel
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing MFP (802.11w) AP (Vulnerable)
@@ -293,7 +298,8 @@ Association Request (Sleep=True)
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing MFP (802.11w) AP (Vulnerable)
@@ -309,7 +315,8 @@ Association Response (Rejected)
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing
@@ -332,13 +339,13 @@ Bypassing MFP (802.11w)
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing MFP (802.11w) AP (Vulnerable)
 Client || Attacker | Kernel |} Daemon !
 K-----7 -- Connection with Wi-Fi MFP- - -|-------
-Association -
 User space: “Hey client,
 Association are you still connected?”
 A Query|
@@ -356,18 +363,17 @@ Bypassing MFP (802.11w)
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AP (Vulnerable)
 Client || Attacker | Kernel || Daemon |
 K-----7 -- Connection with Wi-Fi MFP- - -|-------
-Association -
 User space: “Hey client,
 Association are you still connected?”
 ISA Query|
 |
-‘Buffer
 Kernel: “Client is asleep,
 buffer the question”
 22
@@ -381,7 +387,8 @@ Bypassing MFP (802.11w)
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing MFP (802.11w) AP (Vulnerable)
@@ -454,13 +461,13 @@ Router
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Internet
 Client isolation bypass AP (Vulnerable)
 Client || Attacker
-K----4--------- Connection - ----------7-7- Router
 Request
 29
 ```
@@ -477,17 +484,6 @@ Internet
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Client isolation bypass
-AP (Vulnerable)
-Client || Attacker
-Kota Connection -----------~---
-E.g., DNS or HTTP request
-30
-```
-
 ## Slide 31
 
 ### Client isolation bypass
@@ -498,7 +494,8 @@ Internet
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client isolation bypass
@@ -523,7 +520,8 @@ K iia Connect with the AP -------- |
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client isolation bypass
@@ -551,17 +549,16 @@ Router forwards reply to victim’s MAC address
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client isolation bypass
-——P
 AP (Vulnerable)
 Client || Attacker
 k----4--------- Connection -----------7-7-7-
 Request J
 Spoof Client MAC Address |
-K--- 77H Connect with the AP - -- ---~-- >
 [ Generate New Key
 Router forwards
 reply to victim’s
@@ -581,14 +578,13 @@ Router forwards reply to victim’s MAC address
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client isolation bypass
-<P
 AP (Vulnerable)
 Client || Attacker
-k----+--------- Connection -----------7-7-7-
 Request J
 Spoof Client MAC Address |
 K------7- Connect with the AP - ------- >
@@ -657,7 +653,8 @@ Currently few vendors implemented a defense or mitigation
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tool to test devices: MacStealer
@@ -684,31 +681,26 @@ Client isolation: Ethernet layer
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MacStealer demo
 Open + @
-README.md client. cont
 1# Don't change this line, other MacStealer won't work
 2ctrl_interface=wpaspy ctrl
-rj
 4network={
 5 # Don't change this line, other MacStealer won't work
 6 id_str="victim"
-Tj
 8 # Network to test: fill in properties of the network to test
 9 ssid="ubiquiti"
-10 key_mgmt=WPA- PSK
 11 psk="abcdefgh"| :
 14network={
 15 # Don't change this line, other MacStealer won't work
 16 id_str="attacker"
 18 # Network to test: you can copy this from the previous network block
 19 ssid="ubiquiti"
-20 key_mgmt=WPA - PSK
 21 psk="abcdefgh"
-Plain Text Tab Width: 4 Ln 11,Col19 INS
 > Ubuidgiti is one of the few vendors that implemented a mitigation!
 39
 ```

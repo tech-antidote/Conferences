@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Sam Beaumont & Larry Trowell_Laser Beams & Light Streams Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware Security Tooling.pdf"
 pages: 105
 sha256: "46667875ca7a2ad9d4e4d8a9e3a6c100a941d59b5beb4d5d586bd4e54459b7ca"
-text_chars: 36144
+text_chars: 36137
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 96.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:38:29Z"
+converted_at: "2026-08-12T04:41:19Z"
 ---
 # Laser Beams & Light Streams Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware Security Tooling
 
 **Speakers:** Sam Beaumont, Larry Trowell  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sam Beaumont & Larry Trowell_Laser Beams & Light Streams Letting Hackers Go Pew Pew, Building Affordable Light-Based Hardware Security Tooling.pdf` (105 pages)
+
 
 ## Slide 1
 
@@ -950,7 +956,8 @@ LASING
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AND NOW FOR SOMETHING

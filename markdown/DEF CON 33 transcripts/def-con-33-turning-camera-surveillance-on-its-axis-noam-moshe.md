@@ -12,7 +12,7 @@ duration_seconds: 1281
 words: 3546
 text_chars: 20239
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Turning Camera Surveillance on its Axis

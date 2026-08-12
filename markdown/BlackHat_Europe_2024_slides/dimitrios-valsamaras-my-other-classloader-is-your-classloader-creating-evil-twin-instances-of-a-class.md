@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Dimitrios Valsamaras_My other ClassLoader is your ClassLoader Creating evil twin instances of a class.pdf"
 pages: 44
 sha256: "7be22477666964ec9215509f84fcddea48926ba06e1dbf7d8f445ade3e192e1a"
-text_chars: 26120
-ocr_pages: 24
+text_chars: 21226
+ocr_pages: 23
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:49:43Z"
+converted_at: "2026-08-12T04:57:04Z"
 ---
 # My other ClassLoader is your ClassLoader Creating evil twin instances of a class
 
 **Speakers:** Dimitrios Valsamaras  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Dimitrios Valsamaras_My other ClassLoader is your ClassLoader Creating evil twin instances of a class.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -123,41 +130,25 @@ Recycled
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ari NN
-pisekhat Parcelables & Serializables —
-EUROPE 2024
 public class MyParcelable| implements Parcelabld {
 private int mData;
 public int describeContents() {
 return 6;
-}
 public void writeToParcel(Parcel out, int flags) {
 out.writeInt(mData) ;
-}
 public static final Parcelable.Creator<MyParcelable> CREATOR
 = new Parcelable.Creator<MyParcelable=() {
 public MyParcelable |createFromParcel(Parcel in)| {
 return new MyParcelable(in);
-}
 Recycled public MyParcelable[] newArray(int size) {
 return new MyParcelable[size] ;
 4
-I
-I
-I
-I
-I
-l
-I
-}
-IPF
 private MyParcelable(Parcel in) {
 mData = in.readInt();
-= 6
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 8
@@ -192,20 +183,14 @@ mData = in.readInt();
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
 pisekhat How it started — \
-a
-tte 8
-LL i—
-HELLO?.
-ra
 Hello ?
 @ Hey! I'm here. How can | help you further?
 write a Frida script to intercept android intents
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 11
@@ -220,11 +205,11 @@ Parcelable
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2 How it started
-black hat
 EUROPE 2024 7
 RuActivity Chas extras) }
 enter. fragments.
@@ -236,7 +221,6 @@ rActivity#portrait_Llockstrue, fragment_class=com.
 g=ContactFlowArgs(requestMetadata=null, requestInput=null, requestFlowType=null, requestCallId=null, reserwationCode=null, sea
 s7entry=GUEST_PROFILE_SAFETY&role=guest, entry=nul1)}], marked_as_dumped_internal=173150430273, navigat
 ContactFlowFragment, fragment_args=Bundle[{mav
-rchKey=nul1, roleOnEntry=GUEST, entryUri=https://waw.;
 ion_instance=cZe17f95-f762-47c0-978f-@31c1391dd65, require_login=true}]
 xActivity Chas extras) }
 Intent { cmp=com.
@@ -244,16 +228,10 @@ Che intent is targeting a NON EXPORTED component)
 \_Extras:
 (Boolean) custom_transition = false
 (Boolean) com. rActivity#portrait_lock = true
-CString) marked_as_dumped internal = Lraloet 0273
-¥
 !
-I
 (Boolean) require_login = true
 \_Flags: @x@
-/  Parcelable
-https ://github.com/ChOpin/medusa
 https://<trusted-host>
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 12
@@ -262,15 +240,12 @@ https://<trusted-host>
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biseichat How it was going... =
-EUROPE 2024
-S £.
-1
 | SHALL CALL HIM MINI-ME
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 13
@@ -281,24 +256,20 @@ S £.
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat How it was going... Si
-EUROPE 2024
-package [com. .android. feat. payments. questwalLlet.nav;
 /* loaded from: classes3.dex +/
 public final class b implements android.os.Parcelable {
 public static final android.os.Parcelable.Creator<com. android. feat. payments. questwallet.nav.b> CREATOR = new java. Lang.0
 private final java. lang.foolean success;
 public b(java.lang.Boolean bool) {
 this.success = bool;
-@Override // android.os.Parcelable
 public final int describeContents(
 return @;
-}
 Let’s reconstruct the class
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 14
@@ -307,11 +278,11 @@ Let’s reconstruct the class
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat How it was going... —
-EUROPE 2024
 package url;
 loaded from: cla
 public abstract class a implements android.os.Parcelable {
@@ -334,7 +305,6 @@ public final java. lang
 package h14;
 loaded from: ¢
 public enum a {
-Home (1),
 Experience(2),
 Story(3),
 Guidebook(4),
@@ -344,7 +314,6 @@ Itinerary(7),
 WishList
 Referral(
 HostReferral(10),
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 15
@@ -359,11 +328,11 @@ HostReferral(10),
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat How it was going... =
-EUROPE 2024
 New
 Add C++ to Module
 ae |e v¥ Get the dex/apk files
@@ -374,11 +343,8 @@ Analyze
 Refactor
 a Bookmarks
 tth External Libraries
-=e Delete...
 = Scratches and Consoles
 Override File Type
-wwane W UJse dex 2 jar
-Debug ‘base-dex2jar jar’
 © Run 'base-dex2jar.jar’ with Coverage
 Modify Run Configuration.
 (D Open in Right Split
@@ -391,7 +357,6 @@ Git
 + Compare With...
 Compare File with Editor
 — am Import the jar to the project
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 16
@@ -406,11 +371,11 @@ Compare File with Editor
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-EUROPE 2024
 Y @ Build TestAppp: failed At 11/11/2024, 19 sec, 209 ms
 4, Download info
 @ :app:checkDebugDuplicateClasses
@@ -420,7 +385,6 @@ Y @ Build TestAppp: failed At 11/11/2024, 19 sec, 209 ms
 > @:app:dexBuilderDebug 10 errors
 @ Duplicate class found
 426 ms
-Inplaiene
 Duplicate
 Duplicate
 Duplicate
@@ -504,25 +468,15 @@ androidx
 appcompat.
 appcompat.
 -appcompat.view.menu.ActionMenuItemView found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and bas
--appcompat.
--appcompat.
--appcompat.
-appcompat .
 appcompat.
 appcompat.
 appcompat.
 appcompat.
 -appcompat.
--appcompat.
-.appcompat.
--appcompat.
 appcompat.
 appcompat.
 appcompat.
 appcompat.
-appcompat .
--appcompat.
--appcompat.
 app.AlertController found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base-dex2jar
 app.AlertController$RecycleListView found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1)
 view.menu.ExpandedMenuView found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base-
@@ -546,7 +500,6 @@ widget
 widget.
 widget.
 widget.
-.constraintlayout.
 ActionBarContainer found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base-d
 ActionBarContextView found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base
 ActionBarOverlayLayout found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and ba
@@ -563,7 +516,6 @@ SearchView$SearchAutoComplete found in modules appcompat-1.6.1.aar -> appcompat-
 Toolbar found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base-dex2jar.jar
 ViewStubCompat found in modules appcompat-1.6.1.aar -> appcompat-1.6.1-runtime (androidx.appcompat:appcompat:1.6.1) and base-dex2j
 helper.widget.Flow found in modules base-dex2jar.jar -> base-dex2jar (base-dex2jar.jar) and constraintlayout-2.1.4.aar -> constrai
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 18
@@ -604,11 +556,11 @@ helper.widget.Flow found in modules base-dex2jar.jar -> base-dex2jar (base-dex2j
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisekchat How it was go
-EUROPE 2024
 PackageManager packageManager = getPackageManager();
 try {
 ApplicationInfo appInfo = packageManager.getApplicationInfo( s: "com.android.chrome", i: 0);
@@ -618,11 +570,7 @@ PathClassLoader pathClassLoader = new PathClassLoader(codeDir, parent: null);
 System.out.println(pathClassLoader) ;
 } catch (PackageManager.NameNotFoundException e) {
 throw new RuntimeException(e);
-we LUIIVAOL ULlidllyt 1u bPopulrccu. 21u7Z040Z, Viv 1UZ0U, DSLaLtt. CINADLCU
-Code directory: /data/app/~~bCnKLyrI5gIBbJTs1l45k0g==/com. android. chrome-ONVpflDvLIIOitUt1V8pog==/base.apk
 ClassLoaderContext shared library size mismatch. Expected=1, found=0 (PCL[]{PCL[]} | PCLI[])
-dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/~~bCnKLyrI5gIBbJTsSL45k0g==/com. android. chrome-ONVpfLDVLII0itUt1V8pog==/base.apk"]
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 21
@@ -651,15 +599,11 @@ dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/~~bCnKLyrI5gIBbJT
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
 Package Visibility
-aw 4
-piSekhat How it ended . a
-<uses-permission android:name='android.permission.QUERY_ALL_PACKAGES'
-tools: ignore="QueryAllPackagesPermission"/>
 SDK 29 or lower
 <queries>
 <intent>
@@ -667,14 +611,10 @@ SDK 29 or lower
 </intent>
 <package android:name="com.example.app"/>
 </queries>
-—_— =>
 SDK 30 or higher
-Pe
 if your app targets Android 11 or higher and needs to interact with apps other than the ones that are visible
 automatically, add the element in your app's manifest file. Within the element, specify the [+
 other apps by package name, by intent signature, or by provider authority, as described in the following sections.
-tL
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 23
@@ -693,19 +633,17 @@ tL
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat How it ended
-EUROPE 2024
 e Class<T>
-e Field
 e Method
 Reflection
 ¢ Constructor
 public Class<?> loadClass(String name) throws ClassNotFoundException {
 return loadClass(name, false);
-}
 #BHEU
 @BlackHatEvents
 ```
@@ -716,33 +654,28 @@ return loadClass(name, false);
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 How it ended vs
 Object = clu.getInstanceForClass( className: "com.example.app.Example",
 new Class[]{String.class, String.class},
 new Object[]{"Java", "Reflection"}
-YF
 public Object (String className,Class<?>[] parameterTypes, Object[] constructorArg
 try {
 Class<?> clazz = classLoader.loadClass(className) ;
 Constructor<?> genericConstructor = clazz.getDeclaredConstructor(parameterTypes) ; _
-genericConstructor.setAccessible(true) ; -
 return genericConstructor.newInstance(constructorArgs) ;
 } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException
 InstantiationException | ClassNotFoundException e){
 throw new RuntimeException(e);
 IF
-}
 public T newInstance(java.lang.Object... initargs)
 throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException,
 java.lang.InstantiationException, java.lang.reflect.InvocationTargetException {
 throw new RuntimeException("Stub!");
 ) { nousag
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 25
@@ -809,15 +742,14 @@ _Source: https://support.google.com/faqs/answer/9267555_
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
 Intent redirection
 After the deadlines shown in your Play Console, any apps that contain unfixed security
 vulnerabilities will be removed from Google Play.
 Source: https://support.google.com/faqs/answer/926 7555
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 30
@@ -828,30 +760,22 @@ Source: https://support.google.com/faqs/answer/926 7555
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
-a”
-bisckhat Showcases. <<: a
 Intent redirection
 if |(intent. hasExtra("extra_request"))| {
 if (android.os.Build. VERSION. SDK_INT > 33) {
-parcelableExtra = intent.getParcelableExtra("extra_request", com.example.acase. features. shared.nav. Request. class);
 parcelable? = (android.os.Parcelable) parcelableExtra;
 } else {
 android.os.Parcelable parcelableExtra4 = intent.getParcelableExtra("extra_request");
 if |(parcelableExtra4 instanceof com.example.acase.features.shared.nav.Request) {
 parcelable3 = parcelableExtra4;
-}
 parcelable? = (com.example.acase. features. shared.nav.Request) parcelable3;
-}
 intent. removeExtra("extra_regquest");
 setintent( intent);
-geRequestHandler().handleRequest(this, (com.example.acase. features. shared.nav.Request) parcelable?) ;
 return;
-; 6
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 31
@@ -860,26 +784,19 @@ return;
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-od
-EUROPE 2024
 public final class IRequest extends] com.example.acase. features. shared.nav.Request| {
-pistkhat Showcases. \
 x
 public static final android.os.Parcelable.Creator =< com.example.acase. features. shared.nav. [Request > CREATOR =
-new com.example.acase. features. shared.nav. IRequest.Creator( );
 private Tinal android.content.Intent intent;
 public static final class Creator implements android.os.Parcelable.Creator < com.example.acase. features. shared.nav. [Request > {
-}
 /* JADX WARN: ‘super’ call moved to the top of the method (can break code semantics) »/
 public IRequest(@org.jetbrains.annotations.NotNull android.content.Intent intent) {
 super(mull);
-kotlin. jvm. internal.Intrinsics. checkNotNullParameter(intent, “intent");
 this.intent = intent;
-}
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 32
@@ -888,33 +805,20 @@ this.intent = intent;
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ©
-— *
-piscichat Showcases .
-LO x
-EUROPE 2024
 if (lintent.hasExtra("extra request")) { |
 android.os.Build.VERSION.SDK_INT > 33) {
-parcelableExtra = intent. getParcelableExtra("extra_request", com.example.acase. features. shared. nav.Request. class);
 parcelable? = (android.os.Parcelable) parcelableExtra;
-android.os.Parcelable parcelableExtra4 = intent. getParcelableExtra("extra_request");
-(parcelableExtra4 instanceof com. example.acase. features. shared.nav.Request)| {
-parcelable3 = parcelableExtrad;
-}
 parcelable? = (com.example.acase. features.shared.nav.Request) parcelable3;
 intent. removeExtra("extra_reguest");
-setintent( intent);
 geRequestHandler().handleRequest(this, (com.example.acase. features.shared.nav.Request) parcelable2); — 4
-'
 /fcom,examp le.acase. features. shared. nav. RequestHand ler
-I
 } else if (request instanceof com.example.acase. features. shared.nav.I[Request) {
-navigator. getMainView( ).getContext().startActivity( ((com.example.acase. features. shared.nav.[Request) request).getIntent());
 } else if (request instanceot com.example.acase. features. shared. nav.OtherRequest)
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 33
@@ -941,16 +845,12 @@ navigator. getMainView( ).getContext().startActivity( ((com.example.acase. featu
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Account
 Hijacking
-mm,
-Showcases. ._ S.
-@0verride
 protected void onCreate(Bundle bundle) {
 boolean 214;
 String f14;
@@ -958,11 +858,9 @@ ArticleCollectionFragment articleCollectionFragment;
 super.onCreate(bundle) ;
 setContentView(R$layout. f57861a) ;
 if (bundle == null) {
-if (this. f45638c.e() != null && this. f45638c.e().get("follow_signup") != null) {
 214 = true;
 } else Ki
 z14 = false;
-iM
 lif (getIntent().hasExtra("e_insider") ) k
 jarticleCollectionFragment = articleCollectionFragment.yj((Insider) getIntent().getParcelableExtra("e_insider"), z14)}
 } else {
@@ -970,18 +868,13 @@ if (getIntent().hasExtra("e_insider_id")) {
 #14 = getIntent().getStringExtra("e_insider_id");
 } else {
 f14 = this. f45638c.f();
-}
 if (f14 != null) {
 articleCollectionFragment
 } else {
 articleCollectionFragment = null;
 articleCollectionFragment.Fj(f14, z14);
-}
-}
 if (articleCollectionFragment != null) {
 getSupportFragmentManager().q().u(R$id.f4424600, articleCollectionFragment, articleCollectionFragment.class.getName()).j();
-}
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 35
@@ -992,12 +885,10 @@ getSupportFragmentManager().q().u(R$id.f4424600, articleCollectionFragment, arti
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Be 4
-piSeichat Showcases | SS
-EUROPE 2024
 A public class Insider implements Parcelable {
 ccount public static final Parcelable.Creator<Insider> CREATOR = new a();
 Hijacking @Json(name = “about")
@@ -1006,9 +897,6 @@ private String about;
 private String aCollectionUrl;
 Insider(Parcel parcel) {
 this.about = parcel.readString();
-this.aCollectionUrl = parcel. readString();
-6
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 36
@@ -1019,17 +907,12 @@ this.aCollectionUrl = parcel. readString();
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
 e Article Collection QO
-PNexerolUlalm@alit-(e.diare
-GET //n/
 11/04 / 2023 at 8:57:19 AM
-94.63.170.172
-order=id_desc&offset=0&limit=10
 Cache-Allow
 Client-Os
 X-Forwarded-Proto
@@ -1045,17 +928,11 @@ true
 Android
 https
 barbet
-Bearer Qigjll2VhEqfSoRU3BghiCuWPuPmmuwRvbAug7W-9Y
-mnV_65JM3abUzuD YK8dmv1 -BiO-GRymVkkkgVO8sgbiA2wwA
-cdwEZy_iiVWKK2OTX2qvzaeswtzUIS1AvrKbAs1jOWWUiTphhw
-R&fdnuoXAB3Xu_2J36/7Q0wd8vi4F4Nn8AqGSAFi0O3LwuR1T1
-Es7tE-lyOF7uBSS5IFZbq7TRpaAXD3f7umU6TDW YeoH_auMRo
 gzip, deflate, br
 12
 application/json
 en
 api.webhookinbox.com
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 37
@@ -1074,51 +951,27 @@ api.webhookinbox.com
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-EUROPE 2024
-7
-A
-y
 blackhat Showcases~
 “Complementary Argument’
-Z
 fragment
 android: Label="VideoListFragment"
-android: name="com.the.app. feed. videolist.VideoListFragment"
-android: id="@+id/VideoListFragment”
 a
 rgument
 android:name="url"
-apprargType="string"
 a
 a
 a
 rgument
 android:name="title"
-android: defaultValue="anul1"
-app:arglype="string”
-app:nuLlable="true"
 rgument
-android: name="subtitle"
-android: defaultValue="a@null"
-appiarglype="string"
-app:nuLlable="true"
 rgument
-android:name="symboL"
-android: defaultValue="anul1"
-app:arglype="string”
-app:nuLlable="true"
 a
 rgument
-android:name="appScreen"
-appiarglype="com.app.core.analytics. Screens"
-app:inuLllable="false"
 Fragment
-&
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 39
@@ -1129,103 +982,30 @@ Fragment
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-10-1
-10-81
-10-@1
-10-@1
-10-@1
-biSekchat
-EUROPE 2024
-14:
-14:
-14;
-14:
-735:
-35:
-35:
-Bos
-735:
-335:
-235:
-Sas
-35:
-35:
-35:
-35:
-35:
-15.
-15.
-15
-15.
-15.
-886
-886
-886
-886
-886
-886
-886
-886
-886
-886
--886
-886
-886
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-beginning of crash
-15.
-15.
-1S.
-15.
-15.
-15.
-15.
-15.
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-12799
-—_———, j
-A Ne
-Showcase \
-AndroidRuntime; FATAL EXCEPTION: main
-AndroidRuntime: Process: com. development, PID: 12799
-AndroidRuntime: java.lang.RuntimeException: java.lang. reflect. InvocationTargetException
-AndroidRuntime: at com.android.internal.os.RuntimeInit$MethodAndArgsCal ler. run(RuntimeInit. java: 504)
-AndroidRuntime: at com.android.internal.os.ZygoteInit .main(ZygoteInit. java:965)
-AndroidRuntime: Caused by: java.lang.reflect. InvocationTargetException
-AndroidRuntime: at java.lang.reflect.Method.invoke(Native Method)
-AndroidRuntime: at com.android.internal.os.RuntimeInit$MethodAndArgsCal ler. runCRuntimeInit. java:494)
-AndroidRuntime ; aamore
-AndroidRuntime:] Caused by: java.lang.IllegalArgumentException: Required argument “appScreen" is missing and does not have an android:defaultValue
-AndroidRuntime at com. i$Companion. fromBundleCUnknown Source:135)
-AndroidRuntime GC COM. pas d Sepp Fay fv Cel 6 cuaweal Sibdd te seeceur weuuin iv apmaiow yo. fromBundleCUnknown Source:2)
-AndroidRuntime : . 28 more
-#BHEU @BlackHatEvents
+[Top box]
+--------- beginning of crash
+10-01 14:35:15.886 12799 12799 E AndroidRuntime: FATAL EXCEPTION: main
+10-01 14:35:15.886 12799 12799 E AndroidRuntime: Process: com.[obscured/pixelated]development, PID: 12799
+10-01 14:35:15.886 12799 12799 E AndroidRuntime: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:504)
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
+10-01 14:35:15.886 12799 12799 E AndroidRuntime: Caused by: java.lang.reflect.InvocationTargetException
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at java.lang.reflect.Method.invoke(Native Method)
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+
+[Bottom box, middle portion outlined in a green rectangle]
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      ... 3 more
+10-01 14:35:15.886 12799 12799 E AndroidRuntime: Caused by: java.lang.IllegalArgumentException: Required argument "appScreen" is missing and does not have an android:defaultValue
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at com.[obscured/pixelated]$Companion.fromBundle(Unknown Source:135)
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      at com.[obscured/pixelated].fromBundle(Unknown Source:2)
+10-01 14:35:15.886 12799 12799 E AndroidRuntime:      ... 28 more
+
+[Red bold caption below, connected to both boxes by a dashed line]
+…Required argument appScreen is missing
 ```
 
 ## Slide 40
@@ -1234,24 +1014,20 @@ AndroidRuntime : . 28 more
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
 public abstract class Screens implements java. io.S5erializable
 public static final int stable = @;
 private final java.lang.String aName;
 private final java.lang.String bName;
-> *
-pis hat Showcases. Ny
 x
 public static final class AScreen extends com.app.core.analytics.Screens implements java.io.Serializable {
 public Static Tinal int $stable = @;
 public static final com.app.core.analytics.Screens.AScreen INSTANCE = new com.app.core.analytics.Screens.AScreen()};
 private AScreen() {
 super({"Ascreen", null, 2, mull};
-_ By
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 41
@@ -1260,13 +1036,11 @@ _ By
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blaekhat Showcases Ss
-EUROPE 2024
 714 https://4x2gz5e0mifk5x7a012widnyvp 1gp6dv.oastify.com GET i 200 203 HTML
-T1715) Atte /fetaninn-ani 017AN19SR AS 749 heallanihlie earn ET faranheearvineain intasFevimnhnls ui >nin TARY JASON
 Request Response
 Pretty Raw Hex ® S&S in = Pretty Raw Hex Render
 1 GET / HITP/1.1 1 HITP/1.1 200 OK
@@ -1274,10 +1048,6 @@ Pretty Raw Hex ® S&S in = Pretty Raw Hex Render
 3 X-App-Version: android—3.162.0-b33625 3 X=Collaborator-Version: 4
 4 User-Agent: android—-3.162.0-b33625 4 Content-Type: text/html
 5 | Authorization: Bearer 5 Content-Length: 55
-ey] @eXAi01IJKV10iL¢ LYTQtY)]NiNy@l1 6
-v0 7 | shtml>
-; D1 <body>
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 42
@@ -1317,15 +1087,3 @@ v0 7 | shtml>
 **/ch0pin**
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat a ~~
-EUROPE 2024
-Questions ?
-/in/valsamaras y @chOpin
-/chOpin
-about: // this_briefing
-#BHEU @BlackHatEvents
-```

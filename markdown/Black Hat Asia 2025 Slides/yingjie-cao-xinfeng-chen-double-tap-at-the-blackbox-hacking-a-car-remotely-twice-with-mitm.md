@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Yingjie Cao & Xinfeng Chen_Double Tap at the Blackbox Hacking a Car Remotely Twice with MiTM.pdf"
 pages: 50
 sha256: "2d11aba85331d5d5f7846919657487117c8208d04428379b1de72583a92c850b"
-text_chars: 17129
+text_chars: 16725
 ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:08:57Z"
+converted_at: "2026-08-12T03:58:41Z"
 ---
 # Double Tap at the Blackbox Hacking a Car Remotely Twice with MiTM
 
 **Speakers:** Yingjie Cao, Xinfeng Chen  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Yingjie Cao & Xinfeng Chen_Double Tap at the Blackbox Hacking a Car Remotely Twice with MiTM.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -196,13 +203,12 @@ HTTP
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekchat AN >
 ASIA 2025 ig
 private boolean c str
-int length = str. length i
 Log.d("BtPhoneMainActivity", "input =" + str +", len
 if (length > 4 & str. startsWith("4i") && str.endsWith("#*"
 Bundle bundle = new " Bundle ;
@@ -212,7 +218,6 @@ ntry.class).get(IIpcService.class) ).sendData(1001, bundle, indowUtil.CAR_DEVTOO
 return false;
 Which program invokes it?
 BtPhone
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 13
@@ -305,75 +310,86 @@ The code invokes factory mode authentication
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pisek hat
-ASIA 2025
 Factory Mode
+
+[left panel]
 public void onReceiveData(IIpcService.IpcMessageEvent ipcMessageEvent) {
-switch (c)
-case 0:
-if (msgID == 1001) {
-String string = payloadData.getString(IpcConfig.IPCKey.STRING MSG) ;
-if (!TextUtils.isEmpty(string)) {
-c.b("SecurityCheckService", "onReceive----- > code = " + string);
-if (this.f1165a.g(string)) {
-c.b("SecurityCheckService", string + " isSecretKey.");
-this.f1165a.a(string, getApplicationContext());
-return;
-} else if (com.car.devtools.a.c.c.a(string)) {
-c.b("SecurityCheckService", string + " isFactoryCode.");
-this.f1165a.b(string, getApplicationContext());
-return;
-} else {
-return;
+    ...
+    switch (c) {
+        case 0:
+            if (msgID == 1001) {
+                String string = payloadData.getString(IpcConfig.IPCKey.STRING_MSG);
+                if (!TextUtils.isEmpty(string)) {
+                    c.b("SecurityCheckService", "onReceive-----> code = " + string);
+                    if (this.f1165a.g(string)) {
+                        c.b("SecurityCheckService", string + " isSecretKey.");
+                        this.f1165a.a(string, getApplicationContext());
+                        return;
+                    } else if (com.car.devtools.a.c.c.a(string)) {
+                        c.b("SecurityCheckService", string + " isFactoryCode.");
+                        this.f1165a.b(string, getApplicationContext());
+                        return;
+                    } else {
+                        return;
+    ...
+
 public boolean a(String str, String str2) {
-this.b = b.b(str);
-c.b("SecurityCheckPresenter", " verifySecretKey() mCateId:" + this.b);
-int e = e(this.b);
-c.b("SecurityCheckPresenter", String. format (MyApplication.a().getString(R.string.text_
+    this.b = b.b(str);
+    c.b("SecurityCheckPresenter", " verifySecretKey() mCateId:" + this.b);
+    int e = e(this.b);
+    if (e >= 50) {
+        c.b("SecurityCheckPresenter", String.format(MyApplication.a().getString(R.string.text_
+        return false;
+    }
+    return b.c(str2, str);
+}
+
+[right panel]
+public static boolean c(String str, String str2) {
+    if (TextUtils.isEmpty(str2)) {
 return false;
+    }
+    String a2 = a(str, str2);
+    com.xiaopeng.lib.b.c.a("FactoryCodeModel", "Current Code " + str2 + "'s mSecretKey is: " + a2);
+    return str2.equals(a2);        check input
 }
-return b.c(str2, str);
-The code invokes factory mode authentication
-public
-static boolean c(String str, String str2) {
-if (TextUtils.isEmpty(str2)) {
-return false;
+
+public static String a(String str, String str2) {
+    return b(str, b(str2));
 }
-tring a2 = a(str, str2)}
-com.
-xiaopeng] lib.b.c.a("FactoryCodeModel", "Current Code " + str2 + "'s mSecretKey is: " + a2);
-return str2.equals(a2); check input
+
+public static String b(String str, String str2) {
+    if (TextUtils.isEmpty(str2)) {
+        return "";
+    }
+    int i = 0;
+    try {
+        i = Integer.valueOf(str2).intValue();
+    }
+    catch (Exception e) {
+        com.xiaopeng.lib.b.c.e("FactoryCodeModel", e.getMessage());
+    }
+    return a(str, i);
 }
-public static Stying a(String str, String str2) {
-{return b(str, b(str2)); ]
-}
-public static String b(String str, String str2p {
-It (TextUtils.isemptp(str2)) 1
-return "";
-}
-try {
-1 = Integer.valueOf(str2).intValue();
-}
-cat¢h (Exception e) {
-com.xiaopeng.lib.b.c.e("FactoryCodeModel", e.getMessage());
-}yv
-return a(str, i);
-}
-brivate static String a(String str, int i) k
-char[] charArray = str.toCharArray();
-int
-for
-}
-String format = new DecimalFormat("00000000") . format (Math. abs(i2));
-if (format.length() > 8) {
-}
-format = format.substring(0, 9);
+
+private static String a(String str, int i) {
+    char[] charArray = str.toCharArray();
+    int i2 = 0;
+    for (int i3 = 0; i3 < charArray.length; i3++) {
+        i2 = i2 + (charArray[i3] * i3 * 77) + i;
+    }
+    String format = new DecimalFormat("00000000").format(Math.abs(i2));
+    if (format.length() > 8) {
+        format = format.substring(0, 9);
+    }
 return "*#0000*" + i + "*" + format + "#*";
 }
-#BHAS @BlackHatEvents
+
+The code invokes factory mode authentication
 ```
 
 ## Slide 18
@@ -414,7 +430,7 @@ unique device ID
 
 #### pipe_read() -> pipe_iov_copy_to_user
 
-```
+\```
 staticintpipe_iov_copy_to_user(structiovec*iov, constvoid*from, unsignedlonglen, intatomic)
 {
 unsignedlong copy;
@@ -436,7 +452,7 @@ iov->iov_len-= copy;
   }
 return0;
 }
-```
+\```
 
 #BHAS  @BlackHatEvents
 
@@ -446,15 +462,15 @@ return0;
 
 #### pipe_read()
 
-```
+\```
 static ssize_t pipe_read(structkiocb *iocb, conststructiovec *_iov,
 unsignedlongnr_segs, loff_tpos)
 {
-```
+\```
 
 `/* ... */ for (;;) { if (bufs) {` **Check if all iov.base are writeable** `/* ... */ atomic = !iov_fault_in_pages_write(iov, chars); redo:`
 
-```
+\```
         addr = ops->map(pipe, buf, atomic);
         error = pipe_iov_copy_to_user(iov, addr + buf->offset, chars, atomic);
         ops->unmap(pipe, buf, addr);
@@ -463,60 +479,60 @@ if (atomic) {    /* atomic copy error*/
 atomic =0;
             goto redo;    /* try again without atomic*/
 }
-```
+\```
 
-```
+\```
 /* ... */
 }
 /* ... */
 }
   }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 if (atomic) {    /* fast copy */
-```
+\```
 
-```
+\```
 if (__copy_to_user_inatomic(iov->iov_base, from, copy))
 return-EFAULT;
     } else {
 if (copy_to_user(iov->iov_base, from, copy))
 return-EFAULT;
     }
-```
+\```
 
-```
+\```
 staticintiov_fault_in_pages_write(structiovec*iov,
 unsignedlonglen)
 {
-```
+\```
 
-```
+\```
 while (!iov->iov_len)
 iov++;
 while (len>0) {
 unsignedlongthis_len;
 this_len=min_t(unsignedlong, len, iov->iov_len);
 if (fault_in_pages_writeable(iov->iov_base,
-```
+\```
 
-```
+\```
 this_len))
-```
+\```
 
-```
+\```
 break;
 len-=this_len;
 iov++;
   }
 returnlen;
 }
-```
+\```
 
 - If error, redo copy to iov
 
@@ -606,14 +622,13 @@ We **cannot** execute arbitrary file as we can only execute those on the IVI scr
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat ~
-ASIA 2025
 The LPE pivoting
 -—> Log is running with system privilege !!
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 28
@@ -624,14 +639,13 @@ The LPE pivoting
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat ~
-ASIA 2025
 The LPE pivoting
 -—> Log is running with system privilege !!
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 29
@@ -678,10 +692,10 @@ The program logic in BCM Manager
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat ;
 ASIA 2025 aN
 Car control
 The program logic in BCM Manager
@@ -701,7 +715,6 @@ replyInt = reply.readInt32();
 } while (replyInt);
 return 0;
 lockOff [SIZE_24] = {0x01, 0x00, 0x0, 0x00, 0x0a, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0, 0x00, 0x08, 0x99, 0x84, 0x80, 0x80,
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 33
@@ -812,18 +825,17 @@ Now let's demonstrate an interesting case:
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lackhat “pe
-mers LA ~
 Now let's demonstrate an interesting case:
 I just connected to WiFi—how did my car get stolen?
 x509Certificates
 1: Request mitmproxy
 Client
 Explicit
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 40
@@ -870,27 +882,27 @@ PART
 
 - Using unique device ID and fixed bytes to generate hmac
 
-```
+\```
 hmac =
-```
+\```
 
-```
+\```
 hmac.new(b'\x03U\x0f\xf7\xf7\x02`\x01Q\xd5hn\xb8\x
 e4y6', HardwareID, hashlib.sha512)
-```
+\```
 
 - AES CTR encryption with hmac as key and iv, time to be encrypted
 
 unique device ID
 
-```
+\```
 aes_iv= hmac[32:48]
 aes_key= hmac[0:32]
 a0 = ((current_time >> 12) & 0xFF)
     a1 = ((current_time >> 4) & 0xFF)
     a2 = ((current_time & 0xF) << 4) | (0x03 & 0xF)
 aes_out = bytes([a0, a1, a2]
-```
+\```
 
 *#9995*111#*
 
@@ -904,16 +916,14 @@ aes_out = bytes([a0, a1, a2]
 
 #BHAS  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Timeline
 2018 Sept, 2021 Early, 2022
 2019 Vuln A Does Not Affect Oct, 2024
 2021 Oct, 2024
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 46

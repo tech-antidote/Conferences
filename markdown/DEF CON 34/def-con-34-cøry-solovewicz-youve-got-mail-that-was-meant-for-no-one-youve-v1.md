@@ -4,23 +4,28 @@ speakers: ["Cøry Solovewicz"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Cøry Solovewicz - You've Got Mail (That Was Meant For No One) - You've v1.pdf"
 pages: 28
 sha256: "c0180ea8736ca6d7c406d7e3ebec73b0afd0fb0eb7c1d0a08fcaf8cdfd8fcacb"
-text_chars: 5494
-ocr_pages: 1
-has_ocr: true
+text_chars: 5329
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:14:48Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T06:24:41Z"
 ---
 # You've Got Mail (That Was Meant For No One)
 
 **Speakers:** Cøry Solovewicz  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Cøry Solovewicz - You've Got Mail (That Was Meant For No One) - You've v1.pdf` (28 pages)
+
 
 ## Slide 1
 

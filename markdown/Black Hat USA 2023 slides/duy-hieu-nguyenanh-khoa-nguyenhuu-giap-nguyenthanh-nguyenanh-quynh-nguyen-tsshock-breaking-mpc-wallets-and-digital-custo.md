@@ -1,5 +1,5 @@
 ---
-title: "TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit"
+title: "New Key Extraction Attacks on Threshold ECDSA Implementations"
 speakers: ["Duy Hieu Nguyen", "Anh Khoa Nguyen", "Huu Giap Nguyen", "Thanh Nguyen", "Anh Quynh Nguyen"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
@@ -12,15 +12,21 @@ text_chars: 42695
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The accompanying paper carries its own academic title, which differs from the talk's."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:57:47Z"
+converted_at: "2026-08-12T04:08:22Z"
 ---
-# TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit
+# New Key Extraction Attacks on Threshold ECDSA Implementations
 
 **Speakers:** Duy Hieu Nguyen, Anh Khoa Nguyen, Huu Giap Nguyen, Thanh Nguyen, Anh Quynh Nguyen  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Duy Hieu Nguyen,Anh Khoa Nguyen,Huu Giap Nguyen,Thanh Nguyen,Anh Quynh Nguyen_TSSHOCK Breaking MPC Wallets and Digital Custodians for $BILLION$ Profit_wp.pdf` (11 pages)
+
 
 ## Slide 1
 

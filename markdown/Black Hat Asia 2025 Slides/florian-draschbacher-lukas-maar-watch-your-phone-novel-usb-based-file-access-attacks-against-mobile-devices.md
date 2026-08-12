@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Florian Draschbacher & Lukas Maar_Watch Your Phone Novel USB-Based File Access Attacks Against Mobile Devices.pdf"
 pages: 36
 sha256: "81d3a80819369f49fdeb645c17c610a9830853fb45e20ccd86f76c78e89459b8"
-text_chars: 14095
+text_chars: 14075
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 93.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:04:07Z"
+converted_at: "2026-08-12T03:52:37Z"
 ---
 # Watch Your Phone Novel USB-Based File Access Attacks Against Mobile Devices
 
 **Speakers:** Florian Draschbacher, Lukas Maar  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Florian Draschbacher & Lukas Maar_Watch Your Phone Novel USB-Based File Access Attacks Against Mobile Devices.pdf` (36 pages)
+
 
 ## Slide 1
 
@@ -29,7 +36,8 @@ WATCH YOUR PHONE Novel USB-Based File Access Attacks Against Mobile Devices
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bleak hat
@@ -259,13 +267,13 @@ FunctionFS
 
 **MtpDatabase**
 
-```
+\```
 MtpStorageManagermManager;
 public void addStorage(StorageVolumestorage) {
 MtpStoragemtpStorage= mManager.addMtpStorage(storage);
 mServer.addStorage(mtpStorage);
 …
-```
+\```
 
 `MtpStorageManager` keeps track of file handles
 
@@ -275,18 +283,18 @@ mServer.addStorage(mtpStorage);
 
 MtpDatabase Vendor Customizations **MtpDatabase** (customized) `private int getObjectFilePath(int handle, char[] outFilePath, …) {` `if (handle <= 10000000) {`
 
-```
+\```
 MtpStorageManager.MtpObjectobj= mManager.getObject(handle);
 …  }
-```
+\```
 
-```
+\```
 Uri objectsUri= MediaStore.Files.getContentUri("external_primary");
 String[] arg= new String[]{Integer.toString(handle -10000000)};
 Cursor c = resolver.query(objectsUri, PROJECTION, ID_WHERE, arg, …);
 String path = c.getString(1);
 path.getChars(0, path.length(), outFilePath, 0);
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -294,18 +302,18 @@ path.getChars(0, path.length(), outFilePath, 0);
 
 MtpDatabase Vendor Customizations **MtpDatabase** (customized) `private int getObjectFilePath(int handle, char[] outFilePath, …) { if (handle <= 10000000) {`
 
-```
+\```
 MtpStorageManager.MtpObjectobj= mManager.getObject(handle);
 …  }
-```
+\```
 
-```
+\```
 Uri objectsUri= MediaStore.Files.getContentUri("external_primary");
 String[] arg= new String[]{Integer.toString(handle -10000000)};
 Cursor c = resolver.query(objectsUri, PROJECTION, ID_WHERE, arg, …);
 String path = c.getString(1);
 path.getChars(0, path.length(), outFilePath, 0);
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -345,19 +353,19 @@ For all **_file handles f_** starting from `10000000:` **1. Start edit through M
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -365,19 +373,19 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -385,19 +393,19 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -405,19 +413,19 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -433,19 +441,19 @@ Invoking setEnabledFunctions via USB `setEnabledFunctions()` **needs calling wit
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -465,19 +473,19 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -485,19 +493,19 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 Android USB Stack **Can we enable MTP USB function through UsbManager State Machine?** `protected void setEnabledFunctions(long functions) { setUsbConfig(functions, functions == UsbManager.FUNCTION_NONE); }`
 
-```
+\```
 private void setUsbConfig(long config, booleanchargeFuncs) {
 mUsbGadgetHal.setCurrentUsbFunctions(config, chargeFuncs);
 sendMessageDelayed({.what=MSG_TIMEOUT, .arg1=chargeFuncs}, 3000);
 }
-```
+\```
 
-```
+\```
 public void handleMessage(Message msg) {
 if (msg.what== MSG_TIMEOUT && msg.arg1 != 1)
 setEnabledFunctions(mScreenUnlockedFunctions);
 }
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -521,13 +529,13 @@ setEnabledFunctions(mScreenUnlockedFunctions);
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bi
-2)
-ack hat
-ASIA 2025
+Demo: Read Files from Locked Pixel 8a
+[phone screen — Android settings]
+6:46
 Android version
 Android version
 15
@@ -536,10 +544,9 @@ October 5, 2024
 Google Play system update
 July 1, 2024
 Baseband version
-953000-240704-240912-B-12358532,953000-240704-2
-40912-B-12358532
+g5300o-240704-240912-B-12358532,g5300o-240704-240912-B-12358532
 Kernel version
-5.15.148-android14-11-g3f4e\ccba8ea-ab12020698
+5.15.148-android14-11-g3f4e1ccba8ea-ab12020698
 #1 Wed Jun 26 21:05:55 UTC 2024
 Build number
 AP3A.241005.015

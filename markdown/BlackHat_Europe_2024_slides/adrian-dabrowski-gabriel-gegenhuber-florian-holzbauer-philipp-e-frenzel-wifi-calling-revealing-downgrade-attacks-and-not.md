@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Adrian Dabrowski & Gabriel Gegenhuber & Florian Holzbauer & Philipp E. Frenzel_WiFi Calling Revealing Downgrade Attacks and Not-so-private private Keys_Compressed.pdf"
 pages: 52
 sha256: "3649d1036fcb0623a353093f8840bcf2af50d4b63b5f5a4d3223417cebede70f"
-text_chars: 18134
-ocr_pages: 2
+text_chars: 17637
+ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:00:25Z"
+converted_at: "2026-08-12T04:53:56Z"
 ---
 # WiFi Calling Revealing Downgrade Attacks and Not-so-private private Keys
 
 **Speakers:** Adrian Dabrowski, Gabriel Gegenhuber, Florian Holzbauer, Philipp E. Frenzel  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Adrian Dabrowski & Gabriel Gegenhuber & Florian Holzbauer & Philipp E. Frenzel_WiFi Calling Revealing Downgrade Attacks and Not-so-private private Keys_Compressed.pdf` (52 pages)
+
 
 ## Slide 1
 
@@ -188,31 +193,17 @@ WiFi Calling: Revealing Downgrade Attacks and Not-so-private Private Keys
 
 14/49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Voice: Ringback Tones
-24
-.
 © DE_Vodafone © US_Tmobile_L2 US_Tmobile_H2
 -26
 © DE_02(1) © SK_02
 -28 SK_Orange®
-SK_Telekom(1a)
-RO.DIS i RO_Vodafone °
-E30 sk Telekom(1b) K_Telekom(2) © CA_Bell_L CA_Bell_H
-Go? sc teahomh FR einel
-ATAI © DE_02(2)
-° @FLLDNA
--32
 HRA18SLA1
-RO_Telekom CA Telus H
-lus.
-34 $
-© HR Telekom gp cATelus_t °
-© RO_orange(1) US. Tmobile.) Us_Tmobile_H
 -36
-415 420 4250-430 435 440 445 450 455 460 465 470 475 480485
 Hz
 Black Hat Europe 2024 Wii Calling: Revealing Downgrade Attacks and Not-so-private Private Keys 14/49
 ```
@@ -355,21 +346,6 @@ WiFi Calling: Revealing Downgrade Attacks and Not-so-private Private Keys
 Black Hat Europe 2024 WiFi Calling: Revealing Downgrade Attacks and Not-so-private Private Keys
 
 23/49
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ETSI/3GPP Specification
-19.0.0 024") beriy Rights
-ersits 139 2S
-Se
-pene
-rbot
-——
-eed
-Black Hat Europe 2024 Wii Calling: Revealing Downgrade Attacks and Not-so-private Private Keys
-23/49
-```
 
 ## Slide 24
 

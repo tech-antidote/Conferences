@@ -4,23 +4,28 @@ speakers: ["Qiqing Huang", "Xingyu Wang"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Qiqing Huang, Xingyu Wang - The Compiler That Can't Read Crashing Every 5G Phone With One Byte - Cant v1.pdf"
 pages: 34
 sha256: "4e4f6d85e2acc46b9efe3f8aa97cc5b648bd8d0249e5e5fe5729e16c2aea1872"
-text_chars: 11704
+text_chars: 11695
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 93.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:26:14Z"
+converted_at: "2026-08-12T06:40:27Z"
 ---
 # The Compiler That Can't Read Crashing Every 5G Phone With One Byte
 
 **Speakers:** Qiqing Huang, Xingyu Wang  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Qiqing Huang, Xingyu Wang - The Compiler That Can't Read Crashing Every 5G Phone With One Byte - Cant v1.pdf` (34 pages)
+
 
 ## Slide 1
 
@@ -368,11 +373,11 @@ The Compiler That Can't Read  ·  DEF CON 34
 
 The Compiler That Can't Read  ·  DEF CON 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 More.
-Qualcomn
 Google
 Baseband
 Snapdragon X80

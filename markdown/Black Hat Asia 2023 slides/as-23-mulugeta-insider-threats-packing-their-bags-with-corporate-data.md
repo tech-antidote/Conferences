@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Mulugeta-Insider-Threats-Packing-Their-Bags-With-Corporate-Data.pdf"
 pages: 40
 sha256: "95fd2eadd71408b5d81d676e88fb76eb6606e5a9e98a5b55b2ca28097232cb42"
-text_chars: 11411
+text_chars: 11208
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:15Z"
+converted_at: "2026-08-12T03:48:26Z"
 ---
 # Insider Threats Packing Their Bags With Corporate Data
 
 **Speakers:** Mulugeta  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Mulugeta-Insider-Threats-Packing-Their-Bags-With-Corporate-Data.pdf` (40 pages)
+
 
 ## Slide 1
 
@@ -32,11 +37,10 @@ Dagmawi Mulugeta Colin Estep
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifkhat”
-ASIA 20a
 MAY 11-12
 BRIEFINGS
 Insider Threats Packing Their Bags
@@ -313,23 +317,19 @@ Timeline: **July 2022 to April 2023**
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 Industry breakdown for Departures
 Insurance 7
 Technology +
 Finance
 Retail +
-Manufacturing | ar
 Hospitality |
 Media 4
 Telecommunications fo
 Consulting +
-Healthcare (ii!
 Business Services |
 Food & Beverage }
 Automotive
@@ -371,11 +371,10 @@ Files moved in the last 50 days
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 ASIA 20253
 What sort of data gets moved?
 Executable
@@ -386,7 +385,6 @@ Binary data
 3.2 %)
 3.6 %)
 5.5 %)
-eet
 Plain Text (7.9 %)
 Document (7.2 %)
 Code (8.6 %)
@@ -394,10 +392,8 @@ Spreadsheet (11.6 %)
 Portable document (21.0 %)
 Image (29.5 %)
 ==
-————y Ti}
 Files moved in the last 50 days
 22
-Se Ps
 WeTransfer (2.3 %)
 Other (2.7 %)
 Microsoft OneDrive (11.9 %)
@@ -540,11 +536,10 @@ Apps used
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 ASIA 20253
 Data Targeted
 Intellectual Property
@@ -618,15 +613,11 @@ Policies violated Apps used
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 The problem
-eoee83@8e@ ®@
-100% nanan
 Users that left
 - 2% is not a lot, most users are
 1 5? Yn fa alright!
@@ -658,12 +649,10 @@ Mishandled corporate data
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 Worst case scenario
 Trade Secret Theft
 Investigation Into Theft of Intellectual Property from GE Leads to Two Guilty Pleas
@@ -717,10 +706,10 @@ Future updates on our <u>Netskope Threat Labs Blog</u>
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 ASIA | L JR
 MAY 11-12
 BRIEFINGS

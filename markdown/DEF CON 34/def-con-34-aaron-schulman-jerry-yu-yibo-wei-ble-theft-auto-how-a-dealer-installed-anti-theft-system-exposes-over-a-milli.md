@@ -4,23 +4,28 @@ speakers: ["Aaron Schulman", "Jerry Yu", "Yibo Wei"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Aaron Schulman, Jerry Yu, Yibo Wei - BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft - BTA.pdf"
 pages: 54
 sha256: "a9680a675a47c3f534a8767a95008c944926d0253a2f64812e075ca0eeafc1ba"
-text_chars: 18059
-ocr_pages: 22
+text_chars: 16927
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:11:29Z"
+converted_at: "2026-08-12T06:19:21Z"
 ---
 # BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft
 
 **Speakers:** Aaron Schulman, Jerry Yu, Yibo Wei  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aaron Schulman, Jerry Yu, Yibo Wei - BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft - BTA.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -31,18 +36,13 @@ Rao
 Jefferson Mohak Christian
 Chien Vaswani Dameff
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UCSan Diego
 Aaron Schulman
 Nishant
-eis ot
-«+ Bhaskar
-eax re Sumanth
-i
-y.
-Fd
 Jefferson Mohak _ Christian
 Chien Vaswani Dameff
 Jerry Y
@@ -196,11 +196,11 @@ pumps
 
 # 2024  We try Google.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ 2024: Wetry Google.
-Gogle
 QT FCCID
 fecid.io
 https://fecid.io > 2ASRL > 2ASRL-1069
@@ -218,12 +218,12 @@ QT-300 Module - FCC Certification
 FCC certification details for QT-300 Module. Product. Frequencies: 525-600 MHz. General Mobile Radio
 And Broadcast Services equipment
 fecid.io
-httn)e-//fearid in « SDACVE s
 ```
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 User manual
@@ -233,7 +233,6 @@ FCC ID 2ASRL-1069
 User manual
 QT Solutions Bluetooth Sensor
 by QT
-Eswas
 BT SERIES
 CUSTOMER USER GUIDE
 Congratulations on your purchase of the KARR BT system, designs
@@ -246,7 +245,8 @@ Search
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SETTINGS
@@ -306,7 +306,8 @@ properly perform a new calibration.
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Disable Shock Sensor Trigg
@@ -328,7 +329,6 @@ E of; simply pres
 Dw lock with the
 dd your keys and
 bnnect from your
-you may connect
 Jock your vehicle.
 ero on the left to
 Depending on the size of your vehicle, adjustment selection will vary. Too low
@@ -344,7 +344,8 @@ properly perform a new calibration.
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What does KARR Security do for my vehicle?
@@ -359,7 +360,8 @@ Placeholder demo video
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How do | get a KARR Security system for my vehicle?
@@ -383,35 +385,27 @@ dealerships, give us a call— we'll connect you with the nearest one.
 
 **Installer** Splices the system into a carʼs wiring and hides it behind the dash
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How does the KARR system
 work?
 AFTERMARKET
 REMOTE CONTROL mo
-Wi
 AFTERMARKET
 DULE REMOTE CONTROL APP
 CAN BUS OR DISCRETE WIRES
-Ss)
 (m\ (a)
-Oo
 ENGINE
 START
 STOP
-—
-a i
-es
 STARTER
 ENGINE LIGHTS
 T
 IN-VEHICLE
 SWITCHES &
 BUTTONS
-_—
-\ =
-—
 - |
 HORN DOORS TRUNK
 Installer
@@ -473,21 +467,15 @@ KARR **REQUEST_AUTH challenge:** A random byte array. Ensures commands are only 
 
 Attempted Implementation of User Privileges
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attempted Implementation of User Privileges
-Higher / installer foe aries
 eadlights & Horn
-a | eee { eee ee eeeebbbebbeveetuteeeeeeeeeeeeeeeeesstitttttttseeeeeeeeeeeees
-[or
 © accepted Door/Trunk Lock
-@) Dealer ————>_—SCO@U ser
 2 $$$ & Immobilizer
-a
-oO
 Disabled
-} X) Doubt
 rejected
 Lower Privilege
 ```
@@ -520,7 +508,8 @@ Compromised Change Mode
 
 Placeholder for demo mayhem mode demo video
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 <« COMMAND
@@ -656,18 +645,16 @@ Jul 20, 2026 Patch was rolled out to customers.
 
 Finding similar systems…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finding similar systems...
-ROCKLEDGE About Us Products /Support Photos. Install Videos Careers Contact
 SECURITIES
 Download the Rockledge Mobile App
-erred a] Download on the
 Pp «€ App Store
 ‘Over 20 Years of Experience delivering qua
 reliable products. Ny
-a B> Google Play
 Scan QR code to download
 INSURANCE
 AUTO SECURITY AUDIO & VIDEO
@@ -687,10 +674,10 @@ AUTO SECURITY AUDIO & VIDEO
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-» Google Play Games Apps Movies&TV Books Kids. Gift Cards
 Rockledge VR
 Lightwave Technology
 100+
@@ -704,16 +691,14 @@ Learn more
 App support v
 SS | Carlink BTLR
 ve Lightwave Technology
-"i
-, 3.0%
 ```
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-P> Google Play Games Apps Movies& TV Books Kids._— Gift Cards
 Carlink BTLR
 Lightwave Technology
 10K+
@@ -722,7 +707,6 @@ Install on more devices < Share
 What's new
 Thank you for using Carlink!
 This update includes various bugfixes
-a [€| Everyone
 arn more
 App support v
 More appstotry >
@@ -736,11 +720,11 @@ Uber uber Technologies, Inc.
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Carlink BTLR_4.2.8_APKPure.apk
-Be: Inputs
 Source code
 android.support.v4
 androidx
@@ -765,25 +749,16 @@ Cc
 Cc
 Cc
 Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
 ```
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Carlink BTLR_4.2.8_APKPure.apk DIRECTED... ABOUTUS’ BRANDS~ SUPPORT’ CONTACT US~
 B: Inputs
-Source code Security, |
 droid. t.v4 ‘
 aa wees DS4 — The first fusion
 androidx
@@ -806,25 +781,17 @@ PosseProtocol
 StandAloneProtocol
 c
 c
-c.
 c
-c
-c
-c.
-c
-¢ J
-c
-c,
 c
 ```
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Carlink BTLR_4.2.8_APKPure.apk
-Be: Inputs
 Source code
 android.support.v4
 androidx
@@ -832,7 +799,6 @@ app.com. lightwave.connected
 models
 FlavorApp
 protocols a
-c, AdsTelematicsCompustarProtocol . : P
 c, AdsTelematicsOmegaProtocol ;
 AdsTelematicsPolarStartProtocol
 AdsTelematicsVoxxProtocol
@@ -850,25 +816,18 @@ sine Started Successfully
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Carlink BTLR_4.2.8_APKPure.apk
-Be: Inputs
 Source code
-android. support.v4 ee ee Linke
-androidx Tngjee Run Time . is
-app.com. lightwave. connected e ce =\ i al Bee res
-Locked/Unlocked Status ~ . ¥ 7 mn IED!
 models Ondonanasesil a (2nd year $39.95)
-FlavorApp > i j
 - OMEGA delivers an unmatched J y of vehicle security, remote start,
 pr otocols & convenience products. .
 AdsTelematicsCompustarProtocol
 AdsTelematicsOmegaProtocol
 AdsTelematicsPolarStartProtocol
-AdsTelematicsVoxxProtocol = a
-AntennaProtocol zd “elon orca am
 CompustarAdsProtocol
 DirectedProtocol
 FortinProtocol
@@ -880,28 +839,18 @@ StandAloneProtocol
 Cc
 Cc
 Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
-Cc
 ```
 
 ## Slide 42
 
 ## Pairing a CarLink BTLR
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eLINK
 CAR
-& ill
 ink
 CarL
 Pairing a
@@ -922,7 +871,8 @@ BTLR
 
 2. Scan QR Code
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System Setup
@@ -942,7 +892,8 @@ BTLR
 
 3. Set ignition on & Unlock doors
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System Setup
@@ -967,7 +918,8 @@ BTLR
 
 Prefix MAC address
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ae Barcode content

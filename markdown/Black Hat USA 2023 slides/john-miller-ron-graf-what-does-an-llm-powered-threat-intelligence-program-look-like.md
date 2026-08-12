@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/John Miller & Ron Graf_What Does an LLM-Powered Threat Intelligence Program Look Like.pdf"
 pages: 27
 sha256: "c318a10f0c60e41338fb92c112d0df92cc505088900c892ba909161abf807409"
-text_chars: 12728
-ocr_pages: 3
+text_chars: 12569
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:17:33Z"
+converted_at: "2026-08-12T04:11:09Z"
 ---
 # What Does an LLM-Powered Threat Intelligence Program Look Like
 
 **Speakers:** John Miller, Ron Graf  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/John Miller & Ron Graf_What Does an LLM-Powered Threat Intelligence Program Look Like.pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ Speakers: Ron Graf & John Miller
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 LUISA &
 AUGUST 9-10, 20253
 BRIEFINGS
@@ -56,16 +62,13 @@ John Miller Head of Mandiant Intelligence Analysis
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 A.l. is a $1 trillion investment
 opportunity but will be ‘biggest How Restaurants Can Use Al Technology
 bubble of all time,’ CEO predicts to Reduce Labor Costs, Improve Efficiency,
-Pints wow. 7202s aN aot , and Increase Customer Satisfaction
 How Unilever Is Transforming Ice Cream With
 Al
 Da Corrine How Al and Geospatial Technologies Gan Make a
@@ -552,15 +555,6 @@ _“The workforce gap is not going unnoticed by cybersecurity workers – nearly
 ##### **Thank you!**
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-Thank you!
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 27
 

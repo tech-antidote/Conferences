@@ -1,6 +1,6 @@
 ---
-title: "Hyunho Cho-Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud"
-speakers: ["Gyuyeon Kim"]
+title: "Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud"
+speakers: ["Gyuyeon Kim", "Hyunho Cho"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Gyuyeon Kim _ Hyunho Cho-Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud_compressed.pdf"
 pages: 51
 sha256: "cf7f22865cf90dcbe068a1d412507dee7015dac680632ccb69b0072d1a7087b7"
-text_chars: 21931
-ocr_pages: 10
+text_chars: 19160
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:00:22Z"
+converted_at: "2026-08-12T04:48:04Z"
 ---
-# Hyunho Cho-Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud
+# Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud
 
-**Speakers:** Gyuyeon Kim  
+**Speakers:** Gyuyeon Kim, Hyunho Cho  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Gyuyeon Kim _ Hyunho Cho-Operation PoisonedApple Tracing Credit Card Information Theft to Payment Fraud_compressed.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -226,7 +232,8 @@ panel
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phishing Toolkits
@@ -512,7 +519,8 @@ Apple watch SE
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Case #3
@@ -540,7 +548,6 @@ into the recipient’s details field.
 number above.
 What's your contact information?
 We'll email you a receipt and order updates.
-| Email Address Y 7 .
 The phone number you enter can’t be changed after you
 | Phone Number ee
 place your order, so please make sure it's correct.
@@ -568,32 +575,13 @@ Attribution EvilQueen : Uncovered a new Chinese threat actor
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 36/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPSEC failures (1/3)
 ynwtuukf —.—— > ynwtuukf.net ynwtuukf.net/test.php ——————> ynwtuukf.net/mysql.php
-ET
-SACS CANE BORA SENSO ByORKAP HyoPHP HuosQr #FeKT
-z lol: [eRO!
-® e586 sane.) meee
-# 2eee-|/aeses Rowe ane) ARLME CAR
-a Adminer 4.8.1 B79!
-now (2e | iteemne Mom me
-ita
-HOVEMO|~ BA MySQL v
-rs ai
 ynwtuu.net
-APB 7401
-itm ik wee
-krpay ; sean
-am eHOIEIHOIA
-\edacom 2
-nm
-2121 | O8F4e2 S79!
-——+ ynwtuukf.cn MW __ pharming malware
-ay
-Qi
 6a44f0942c2bbc8643016d96602e9e27
 1ba8b781aa146dec0e3ed43824b249a4
 ```
@@ -614,58 +602,20 @@ accounts dump source: https://www.virustotal.com/gui/file/c25fb3e834316f7c013df5
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-OPSEC failures (3/3)
-— SHJXE GllO|=S+ (ynwtuukf) mel: 1
-A S7 | T}2: =] asp.asa (2.3KB) ASI: 1064
-AS: etuetue
-= fthsth
-= 4 Ky Ad 2 nee *EMMBLAlS MSA SO] GIES ALO] AS OH SS Holl 71H aH SAD
-- HAA HHz4(95,97,2000,xp,2003,2007):
-S+EREHEESTERRRSTE CHEE * OfeHBOl ARS AyS}A/2 >>
-di Sey HANS Ala]
-i) php (44byte art
-F) 23.jp9 (44byte — pe
-©) 23.ip9 (44byte
-©) 23. php.ipg (46byte
-C13 (07H) *
-4 A
-on
-42! : 2010-02-26(01:41)
-(2tS31-2S Al) wrtywr<iframe src=http://mp.gemmir.com/upload_file_test/Movie/index. htm 8549 : 2010-02-26(01:41)
-width=100 height=0> </iframe>
-ig}
-ne
-bot
-i
-```
-
 ## Slide 36
 
 ### Correlation analysis
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Correlation analysis
 17fce1...678a
-ue a  pay.ynwtuukf.net
-~ :
-a3283e...e7dd ynwtuukf.cn —~@ Cua KX CO. o
-“ieaeeenaenarannnannnnensnenonsrararasaranasarasssasnsnsnensnsrarsnanararansnaracsescccsecensnsseeessn® ilQueen 8g pg
-oo metamask phishing Sd edeie ae teatadadas a ebtiacemeatelue ieeccae sean ceoadadacnead aia © teeeeee, _ i ff7347...fa28
-“ (i) a : codé-sighi
-(W WW) 3 : letificaty,
-Cy * defi-con.cn wan -com : 1
-QO gee 967c49...9726
 ? web-cot.com SS |
 : china-metamask.tw f 91f830...7892
-i 75f0c8...de775
-a a
 metamask3.cn
 103.60.109.137
 ```
@@ -713,7 +663,8 @@ targeting Korea
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Metamask phishing site and apps
@@ -744,7 +695,6 @@ Search
 Download Report
 Displaying results: 1-60f6 Prev Next
 Domain Name Create Date Registrar
-china-metamask.tw -- a
 cn-metamask.cn 2024-02-20 ss
 defi-cot.cn 2023-08-15 oo
 metamask2.cn 2022-08-08 DYNADOTCHINA LLC
@@ -759,23 +709,6 @@ metamask3.tw = =
 ###### **Impersonation of a famous department store in Korea**
 
 # BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Duty-free shop phishing site
-HSHuc [222 (sala S0H0%] SUAVBy PUAN BABAE MoAirio
-AA BS Suoj4) ABE DS
-a
-@ xs
-Impersonation of afamous_ °
-department store in Korea
-Apple Of0j@4= 10.2 20214 9M/C} Wi-Fi Apple 2022 OFO}ZH= oo SAICH ALIA BA AISRS 44mm SERA OfOHSt TES QA|CH BHA [HZ
-Qa
-¥350,0002! ¥650,0002 ¥200,0002) ¥250,0002
-‘ef?
-@ Sue
-```
 
 ## Slide 41
 
@@ -822,32 +755,12 @@ view
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Linked with China
-z
-RARPAK [pre O ames
-a aR seas
-RR RitiE EAR BHPLERBES Fee ( Hest) BRR Sawa
-TAM ARAB Q | WR: ABicR M2 RF am
-BARRiCin Rah AAR }
-MARRR 98:1 y | 2G:674| #e:5 gy KGB (27) }
-Es 488 #41 °2)3 4 5 6 7/8)9 > 10 1.34 6 /34R FR
-2HhED may FA TAM WE BS 7H f# os/aa }
-SRBEMEAASOO , TLE. GE ..23 45 6.38 652598 ara
-RUESH ENA! Ow 234.5 6..38 sdzbzp1 373 }
-HTARNKFREAIR—T , MAMGMNIFIC Oe ..23 45 6.38 dajiefie fa
-RRVASA , PURI OM ...2 3 45 6.38 dajiejie at }
-RIBS iA wURIT ORY ...2 3-45 6.. 38 anwangosig (373
-6AMWEE OM ..23 45 6..38 856 375 }
-SBR Ce ATUL A SC SR TERE AK OTR AKA ATMs GB ..2 345 6.38 byzps 573
-SRR TUNA © OR ..2 3.45 6.38 xsm Be }
-BMAN-LAMBABBRE OH ..23 45 6..38 BARRER bob
-SAQWSE OM ...2 345 6..38 856 aa }
-BY IN7- MMA OMS ...2 345 6..38 856 nod
 M23:25FFHHBI17S23:2545R. GE ..2 345 6..38 856 372 }
-3AR, 4AM. KFRE. OM ...23 45 6..38 856
 ```
 
 ## Slide 44
@@ -864,10 +777,12 @@ phone number
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Linked with China
+
 Domain Name: ynwtuukf.net
 Registry Domain ID: 1917446201_DOMAIN_NET-VRSN
 Registrar WHOIS Server: whois.hichina.com
@@ -880,7 +795,8 @@ Registrar IANA ID: 420
 Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
 Registrar Abuse Contact Phone: +86.4006008500
 Reseller:
-Domain Status: ok http://www.icann.org/epp#0K
+Domain Status: ok http://www.icann.org/epp#OK
+Registry Registrant ID:
 Registrant Name: Han Cheng Xiang
 Registrant Organization: Han Cheng Xiang
 Registrant Street: Shan Dong Zhang Dian Qu,,
@@ -893,19 +809,31 @@ Registrant Phone Ext: 3423
 Registrant Fax: +86.0213565373
 Registrant Fax Ext: 3423
 Registrant Email: ynwtuu@126.com
-Registry Admin :
+Registry Admin ID:
 Admin Name: Chang Ping
+
+[Profile panel]
 Profile
-AS Be /0/E G0|H10}
+스틸 플레이트 데이웨어
 ynwtuukf@zohomail.com
-nickname
-ia)
-gender country
-language timezone
-(GMT 0:00) #844 BR58 tine BTi8) ( Europe/London )
+
+name                              nickname
+钢板 日穿                              阎王
+
+gender                             country
+保密                                 🇬🇧 英国
+
+language                           timezone
+                                    (GMT 0:00) 格林威治标准时间 (Europe/London)
+
+[phone number panel]
 phone number
-AAD AAS SE AYR HSH YD eel eric}
-(+86) 17050896830
+계정과 연결된 모든 휴대폰 번호를 보고 관리합니다.
+
+📞 (+86) 17050896830
+   · 2년 전
+
++ 전화번호 추가
 ```
 
 ## Slide 45
@@ -1001,7 +929,8 @@ source: https://www.hankyung.com/article/2024020827807
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ASIA 20

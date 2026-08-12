@@ -1,6 +1,6 @@
 ---
-title: "Depth Investigation and Exposure"
-speakers: ["Sojun Ryu", "YeongJae Shin-Voice Phishing Syndicates Unmasked An In"]
+title: "Voice Phishing Syndicates Unmasked An In-Depth Investigation and Exposure"
+speakers: ["Sojun Ryu", "YeongJae Shin"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Sojun Ryu & YeongJae Shin-Voice Phishing Syndicates Unmasked An In-Depth Investigation and Exposure.pdf"
 pages: 77
 sha256: "dc7d16bf329ecc68b6701e3c5e25357141d0dc0edf170a4174a61a0196b3b5a3"
-text_chars: 24875
-ocr_pages: 7
+text_chars: 22990
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:51:31Z"
+converted_at: "2026-08-12T04:51:38Z"
 ---
-# Depth Investigation and Exposure
+# Voice Phishing Syndicates Unmasked An In-Depth Investigation and Exposure
 
-**Speakers:** Sojun Ryu, YeongJae Shin-Voice Phishing Syndicates Unmasked An In  
+**Speakers:** Sojun Ryu, YeongJae Shin  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Sojun Ryu & YeongJae Shin-Voice Phishing Syndicates Unmasked An In-Depth Investigation and Exposure.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -616,26 +621,6 @@ MalCalls SyncCalls (Provider C) (Provider B)
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-——
-<< ae
-~
-biSekhat 3. Infrastructure — Pole-AntiSp
-ASIA 2024
-SecretCalls MalCalls syncCalls
-Provider B
-AZ Z-Ote|Aupo| 3.0 AAA B-te|Aupo| 3.0 { aes
-No Te NEEDA@ aaa aus
-KaEKS ISIS ke K YT SISS 28 ees o
-HAleIASOH
-Asmjojg4 2A
-P i Amol ZAt wm.
-= - ote|Amto| =a
-AloH SAY YAS O17} OF
-```
-
 ## Slide 35
 
 #### 3. Infrastructure – Provider A
@@ -645,46 +630,6 @@ AloH SAY YAS O17} OF
 play.google.com (REAL)
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2024
-Am}o|9H 21At E
-- = Ariat
-2OL ~ ANTISPY
-& - OeE|Anpo|
-ATH}O| ZYAE
-oye At
-alae
-Sols wt
-2022. 6.2
-oy ala
-Ao-S Solas
-aus
-15%
-ofa Dream - OFS-0424-Zton 1B AA]
-aae
-3.3%
-Be SA5112
-BHI04(PolCare2)
-aae
-Ho
-A
-3.6%
-500+
-3 AtO|HZ
-eUAO}E what
-axle v
-Be] UCL] >
-= BST A24(0/0H2!)
-may
-ADLE BOIAl ts (2024.4.20. SBC OB)
-28Dream - OFS -0123 BoHel Baz] ase]
-Ae S4E112
-aan
-```
 
 ## Slide 36
 
@@ -696,80 +641,44 @@ play.google.com (REAL)
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi
-i. hat
-ASIA 2024
 on
-B Google Play 2 % @% SH 7
-i] AJOFO|~(E}FO|E)
 Infinigru Corporation
-4.3% s0oh
-alt 3.15874 e225
-Play 4&0] Goll} 47] < ae
-HAlz|ASol S7+
-if St CH, BOHAHO| Sp Hsp
-Se 33] OA AHOll CIE.
-ASE sta
 sb
-axle v
-Infinigru Corporation2| 4 HH7| >
-BSdH24(0|n}el)
 Infinigru Corporation
 24%
 Infinigru Corporation
 1.5%
-2teDream - OFS-045-SOHI BAA BME}
 Infinigru Corporation
 3.3%
-Ae 245112
 Infinigru Corporation
 2.9%
-ae del Supe
 Infinigru Corporation
 2022. 6.2
 1.5%
-2fo|ZAete
-#4 (01(PolCare2)
 Infinigru Corporation
 B Google Play Games Apps Movies Books -—_Kids
-T|AO-O|Z% - HO|Ag|
-Aly AlE|Zact
-(ema
 3.5% 100K+
 408 reviews Downloads Rated for 3+ ©
-J
 [Add to wishlist
-DS d
-as
 App support *«
 © Website
-Phone number
 +82234534620
 © Support email
 phishingeyes@gmail.com
 O Privacy Policy
 Similar apps >
-Aloy cH
-}2S) 9} ScH Zt
-‘SSS AMulA* ULIct.
-TIAJOFOLAE VACHS ROA CAF-ASt Bt
-BASE AEISDUH(=H]AO0|z F
 Updated on
 Jan 25, 2024
 Tools
-YEILICH
-ApBHO|AL-ZAZIZIAT OOH HE} ZzIZapeSI,
-Cl vivainnovation
 47%
 V3 Mobile Security Anti-Virus
 AhnLab Inc.
 46%
-NH2e'43.
-NHSaece
-41%
 ```
 
 ## Slide 37
@@ -892,11 +801,11 @@ virus|lpt[Num].obfdex|-|Base64+XOR|Hardcoded in DEX|- /api/[random]/signal/[rand
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat 4. SecretCalls = Anti decompile
-ASIA 2024
 apk_cure
 Fixing dirty apk(zip) file header and AndroidManifest.xml in the archive.
 Usage
@@ -919,16 +828,14 @@ C) mins4416
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hag 4. SecretCalls — File Structure .
-ASIA 2024
 Is
 Resources SecretCal
 iS Libraries (Internal)
-i
 SecretCalls Loader
 (External)
 1st Stage: Loader
@@ -1070,22 +977,17 @@ Server
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pi&knat 4, SecretCalls - Network Behavior(Requests)
-ASIA 2024
 _, [ _] App ID(key value)
 [ Device’s Information
 appid: 11"
-gg: ‘“cs6LlYfvD5d8: APA91bG85inRHPUnSXP] 32dWAbCzccvSIIfVhOkLU8ZvHGY—g@UCoT T2uphGJpzv4_ymEmmv Lx-
 h23Rx8bLgTRoJ4QxJzC—bEGARLaDggdRNNGFpIxj 9UIQsYGiMC6c1xj @wsUXXWeTT",
 rid: "60884692-0c48-4422-9fdc—ad14d06f2f62-11",
 rinfo: "
-{\"blue\":\"1\", \"mes\":\"1\", \"def\":\"@\", \"wifa\"\"1\", \acs\":\"0\", \"chatid\":\"82010545844
-2a SCN adds yn VU bat 1006" map NA Sys\U ENT ON" VU chat\ \"O\",\"nu
-m\":\"+8201054584424\",,\"oper\"\"KT\", \"rec\" \"O\", \"acc\" :\"8201054584424\",\"ver\":\"7.1.2\",
-\"model\":\"SM-N950N\"}",
 rno: "+8201054584424",
 sys: "Q"
 ```
@@ -1349,17 +1251,6 @@ Phishing Eyes
 **_Contact Sojun:_** _hypen@s2w.inc_ **_Yeongjae:_** _teaf1001@naver.com_
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2024
-Contact
-Sojun: hypen@s2w.inc
-Yeongjae: teaf1001@naver.com
-@ Safe and Secure World
-```
 
 ## Slide 77
 

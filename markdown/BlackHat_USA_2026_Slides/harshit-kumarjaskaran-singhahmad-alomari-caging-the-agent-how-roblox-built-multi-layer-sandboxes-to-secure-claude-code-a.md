@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Harshit Kumar&Jaskaran Singh&Ahmad Alomari_Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale.pdf"
 pages: 44
 sha256: "272ad4f387a461e15c31e858fc840888f81ff9d77ae5f55b66f190ed007f97d0"
-text_chars: 18417
-ocr_pages: 13
+text_chars: 16777
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:09:54Z"
+converted_at: "2026-08-12T05:34:45Z"
 ---
 # Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale
 
 **Speakers:** Harshit Kumar, Jaskaran Singh, Ahmad Alomari  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Harshit Kumar&Jaskaran Singh&Ahmad Alomari_Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -32,7 +37,8 @@ Jaskaran Singh Harshit Kumar Principal Security SWE Principal Security SWE
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Harshit Kumar Jaskaran Singh
@@ -44,49 +50,37 @@ to Secure Claude Code at Enterprise Scale
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Trigger
 DATE: February 2026
 ACTOR: Internal Red Team
-VECTOR: Prompt Injection
-Secret
-l=) ~g daa
-Malicious GitHub
-Prompt Workflow
 ```
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Trigger Blast Radius
 DATE: February 2026 a =
 ACTOR: Internal Red Team </> —
-VECTOR: Prompt Injection
-Secret
-l=) “gi hata
-Malicious GitHub
-Prompt Workflow
 Game Engine Source Developer Credentials
 Code (Core IP) & CI/CD Systems
 ```
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Trigger
 DATE: February 2026
 ACTOR: Internal Red Team
-VECTOR: Prompt Injection
-Secret
-5 “J hata
-Malicious GitHub
-Prompt Workflow
 Blast Radius
 Game Engine Source
 Code (Core IP)
@@ -207,59 +201,38 @@ injection bypasses traditional filters by execution mapping.
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-The Chatbot Paradigm
-abe
-4
-IN
-= Al Suggestions
-tL
-Human Intent Validates Action
-```
-
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-The Chatbot Paradigm
 Al Suggestions
-Human Intent Validates Action
 The Agent Paradigm
 Al Context
 le Ingestion
 Autonomous
 Execution
 — Direct System
-crm §=Access
 Machine Autonomy Bypasses Intent
 ```
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-The Chatbot Paradigm
 2
-Caer
-a
-N
 = Al Suggestions
-1
 <_\ Human Review
-4
 Execution
-Human Intent Validates Action
 The Agent Paradigm
 Al Context
 pal Ingestion
 Autonomous
 Execution
 = Direct System
-Cm Access
 Machine Autonomy Bypasses Intent
 Existing security controls cannot distinguish benign vs. malicious agent actions.
 They are designed for human intent.
@@ -269,7 +242,8 @@ They are designed for human intent.
 
 **One Consistent Security Model**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Multi-Environment Sandbox Architecture
@@ -297,75 +271,39 @@ Wie! across developer setups.
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Core Sandbox
-Design Principles &
-=
-&
-L
--
-8
-Gade
-Strict separation from the
-host OS; no privilege
-escalation pathways.
-```
-
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Core Sandbox
-Design Principles
 -— Strong Host
-Isolation
-Strict separation from the
-host OS; no privilege
-escalation pathways.
 -— Immutable
-Configuration
 aa Settings baked into images or
-root-owned. Zero runtime
-tampering allowed.
 ```
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Core Sandbox
-Design Principles
-&
-it
-§
 Deny-by-Default
 Permissions
 Implicit denial of all system
 resources unless explicitly
 granted.
 Immutable
-Configuration
 Settings baked into images or
-root-owned. Zero runtime
-tampering allowed.
 Strong Host
-Isolation
-Strict separation from the
-host OS; no privilege
-escalation pathways.
 ```
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Core Sandbox
-Design Principles
 Network Egress ——
 Allowlisting
 Fail-closed network
@@ -377,15 +315,8 @@ Implicit denial of all system
 resources unless explicitly
 granted.
 Immutable
-Configuration
 Settings baked into images or
-root-owned. Zero runtime
-tampering allowed.
 Strong Host
-Isolation
-Strict separation from the
-host OS; no privilege
-escalation pathways.
 ```
 
 ## Slide 24
@@ -485,31 +416,15 @@ Configures system-wide OTEL endpoints for secure metrics, traces, and logs colle
 
 ###### **managed-settings.json**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Behavioral Guardrails
 Policy & Tool Configurations
-@@@ managed-settings.json
-"Read (+*/.env.*)",
-"Read (+k/credentials.json)",
-"Read (+k/service-account.json)",
-"Write (+*/service-account. json)"
-"Read (+*/.aws/**)",
-“Write (+*k/.aws/**)",
-"Read («/.ssh/**)",
 "Read (+*k/.password-store/xx)",
-"Read (+x/.gnupg/*x)",
-"Read (+**/.npmrc)",
-"Read (**/.netrc)",
-"Write(*x/.netrc)",
 "Read (**/*.pem)",
-"Write (*x/x.pem)",
-"Write (#k/*.crt)",
-"Read (+/+. key)",
 "Write (+k/*. key)",
-“Write (+**/*.tfvars)",
-@@@ managed-settings.json
 “strictKnownMarketplaces": [
 { “source'
 “https: //github. com/anthropics/claude-code.git", “ref"
@@ -517,26 +432,17 @@ Policy & Tool Configurations
 { “source https: //github. rbx.com/Roblox/claude-code-plugins.git", "ref
 1,
 1
-Dp
 {
-"matcher": “Bash|Shell|WebFetch |WebSearch|Agent",
 “hooks": [
 { "type": "command", "command": "/etc/claude-code/hooks/infosec/infosec-hooks block-subagent", "timeout": 5 }
 1
-Bp
 {
-"matcher": “WebFetch",
-"hooks": [
 { "type": "command" “/etc/claude-code/hooks/infosec/infosec-hooks block-uploads", "timeout": 5 }
 1
-Dp
-"matcher": “Read|Bash|Shell",
 “hooks' C
 { "type": "command", "command": "/etc/claude-code/hooks/infosec/infosec-hooks block-secret-access", "timeout": 5 }
 1
-Dy
 {
-"matcher": “Bash|Shell",
 “hooks' C
 ```
 

@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Landau-PPLdump-Is-Dead-Long-Live-PPLdump.pdf"
 pages: 49
 sha256: "3fe64bb7d19b93bb826a2ecda2b1d2642bfbf43eb0f17782e38ba282933118b8"
-text_chars: 30978
-ocr_pages: 11
+text_chars: 26877
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:47Z"
+converted_at: "2026-08-12T03:47:50Z"
 ---
 # PPLdump Is Dead Long Live PPLdump
 
 **Speakers:** Landau  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Landau-PPLdump-Is-Dead-Long-Live-PPLdump.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -30,11 +36,10 @@ Gabriel Landau Principal, Elastic
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifkhat”
-ASIA 20a
 MAY 11-12
 BRIEFINGS
 PPLdump Is Dead.
@@ -157,71 +162,67 @@ Diagram adapted from James Forshaw then updated: <u>https://googleprojectzero.bl
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pisek hat
-ASIA 2023
-a Certificate
-General Details Certification Path
-Show: | <All> v
-Field Value
-& Enhanced Key Usage Windows TCB Component (1.3.
-793 165fO0dbf15e5c04453d756..
-Directory Address:SERIALNUM.
-KeyID=a92902398e 16c49778..
-[1]CRL Distribution Point: Distr..
-[1]Authority Info Access: Acc...
-Subject Type=End Entity, Pat..
-ORAS7AINASN AAA SN SAFTA Rah?
-&] Subject Key Identifier
-| &) Subject Alternative Name
-&] Authority Key Identifier
-(=: |CRL Distribution Points
-§S)) Authority Information Access
-(=| Basic Constraints
-| (lth imbhnrint
-Windows TCB Component (1.3.6. 1.4, 1.311. 10.3.23)
-Protected Process Verification (1.3.6. 1.4. 1.311. 10.3.24)
-Windows System Component Verification (1.3.6. 1.4, 1.311. 10.3.6)
-Code Signing (1.3.6. 1.5.5.7.3.3)
+Code Integrity - Signatures
+
+[Window 1] SgrmBroker.exe Properties
 Certificate
-General Details Certification Path
-Show: | <All> v
-Field Value
-(=| Enhanced Key Usage Protected Process Light Verific.
-5 |Subject Key Identifier 01f0d3a457341838ebb31253..
-(Z| Subject Alternative Name Directory Address:SERIALNUM,
-&] Authority Key Identifier KeyID=a92902398e 16c49778.
-[1]CRL Distribution Point: Distr.
-[1] Authority Info Access: Acc..
-Subject Type=End Entity, Pat..
-cANa 14a6hdO757AaNeGM44 Gha
-3) CRL Distribution Points
-Authority Information Access
-=||Basic Constraints
-[Sl Thuimbnrint
-fe
-(SE
-Protected Process Light Verification (1.3.6. 1.4, 1.311. 10.3.22)
-Windows System Component Verification (1.3.6. 1.4, 1.311. 10.3.6)
-Code Signing (1.3.6. 1.5.5.7.3.3)
-a Certificate
-General Details Certification Path
-Show: | <All> v
-Field Value
-eal Enhanced Key Usage Protected Process Light Verific.
-Gs] Subject Key Identifier 7d3af1a3055c18fdf39399016..
-& Subject Alternative Name Directory Address:SERIALNUM.
-eal Authority Key Identifier KeyID =a92902398e 16c49778..
-|| CRL Distribution Points [1]CRL Distribution Point: Distr.
-| Authority Information Access [1]Authority Info Access: Acc..
-‘| Basic Constraints Subject Type=End Entity, Pat..
-SS) thumbnrint _eO4a468hN SAce IfaRahNasarat _
-Protected Process Light Verification (1.3.6. 1.4. 1.311. 10.3.22)
-Windows TCB Component (1.3.6. 1.4. 1.311. 10.3.23)
-Windows System Component Verification (1.3.6. 1.4. 1.311. 10.3.6)
-Code Signing (1.3.6. 1.5.5.7.3.3)
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Windows TCB Component (1.3.…
+Subject Key Identifier         793165f0dbf15e5c04453d756..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778..
+CRL Distribution Points        [1]CRL Distribution Point: Distr..
+Authority Information Access   [1]Authority Info Access: Acc…
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     08647820d503fd505df763ab2..
+[red box]
+Windows TCB Component (1.3.6.1.4.1.311.10.3.23)
+Protected Process Verification (1.3.6.1.4.1.311.10.3.24)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
+
+[Window 2] svchost.exe Properties
+Certificate
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Protected Process Light Verific.
+Subject Key Identifier         01f0d3a457341838ebb31253..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778.
+CRL Distribution Points        [1]CRL Distribution Point: Distr.
+Authority Information Access   [1]Authority Info Access: Acc..
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     c60a14a6bd925780e9f0463ba..
+[red box]
+Protected Process Light Verification (1.3.6.1.4.1.311.10.3.22)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
+
+[Window 3] csrss.exe Properties
+Certificate
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Protected Process Light Verific..
+Subject Key Identifier         7d3af1a3055c18fdf39399016..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778..
+CRL Distribution Points        [1]CRL Distribution Point: Distr..
+Authority Information Access   [1]Authority Info Access: Acc..
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     e94a68b056ce2fa8ab046a84f..
+[red box]
+Protected Process Light Verification (1.3.6.1.4.1.311.10.3.22)
+Windows TCB Component (1.3.6.1.4.1.311.10.3.23)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
 ```
 
 ## Slide 8
@@ -230,32 +231,15 @@ Code Signing (1.3.6. 1.5.5.7.3.3)
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 PPL Implementation - EPROCESS
-o.KernelObject.
 7: kd> dx -g @$cursession.Processes.Select(p => new {Name =
-Pane ype Bt Signer ff SectionSignatureLevel
-6x4
 o.Name, Type =
-System Ox2 Ox7 Oxc
 [@x8c] Registry @x2 @x7 8x8
-[8x97@ ] SermBroker.exe @x2 8x6 8x8
-[6x1d38 ] smss.exe @x1 @x6 @x8
-[8x22c] csrss.exe Oxi @x6 @x8
-[6x278] wininit.exe @x1 @x6 ex8
-[8x286 ] csrss.exe @x1 8x6 @x8
-[O@x2cc ] services.exe 6x1 @x6 @xs
-[@xbas ] svchost.exe @x1 @xS ex8
-[6@x11bc] svchost.exe @x1 @x5 @x8
 [6x21f8] SecurityHealthService.exe @x1 @x5 @x8
-[@x21dc]} elastic-endpoint.exe @x1 @x3 8x8
-[6x3ae] svchost.exe 6xe@ 8x8 8x8
-[8@x3c8] fontdrvhost.exe @xe exe @x8
 ```
 
 ## Slide 9
@@ -286,11 +270,10 @@ System Ox2 Ox7 Oxc
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blaekhat
-ASIA 2023
 PS C:\Windows\System32> Get-NtToken Select User, IntegrityLevel
 User IntegrityLevel
 NT AUTHORITY\SYSTEM
@@ -571,39 +554,17 @@ Execute Payload
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€
-black hat
-ASIA 2023
-C:\Windows \System32>signtool
 Ci TOCTOU: Page Hashes
 e Page hashes present in services.exe but not EventAggregation.dll
 ;) /v /ph services.exe
 Page hashes:
-OxGGGG0000
-6x88800400
-8x88001400
-6x80882400
-6x800634060
-8x88004406
-6x880085400
-6x88886408
-8x88007400
-8x88008400
 C:\Windows
 \System32>signtool verify /a
 973911FSDEABEFCF45A87 E948DE1DF57DBE1C6C22D12559F2754862CECSBB516
-40648953BD60329AC1486A95 7A4EECSD3A14ABC4EGE359BBAD063697495C3AB9
-DA4D752F6CSEAA717CD127E8C4D4491F1D87CD2D73E2B7F38BC8AG1336FE76E4
-A8A85175F216A21BF276A6S5CCF26CD623E9SFC88DAG8FE8747606A16716A655F
-A95303468AB638FD630C643265C819C14224865B954CAE98701D9428A2C6C1E9
-161A769452176F6659EE9639432462D4E3454A31FSFEFSAAASE3E29D9E5249C1
-B8ADD3652917342812D22A573E/75AFC85066321E360F15D7895658C2152847750
-6755C750AD27D96B7F2D68D83216C4183B625E6CF/768DF98F1IC4F62F346D1D1C
-A3A63DA8FB35B218BA9E3F116789D81D84CEB35B4F3FFE1DSA1O63ESASDAG7AA
-3A2467@DDBEGS8CO46B1A4BC2B183CF41D35EF623COEGE2F3O58E1EDESBCD2C87
 /v /ph EventAggregation.dll
 SignTool Warning: No page hashes are present.
 grep -A1® “Page hash"
@@ -624,16 +585,6 @@ grep -A1i@ “Page hash"
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blaekhat
-ASIA 2023
-WE NEED TO GO;
-7
-DEEPER ”
-```
-
 ## Slide 28
 
 ### CI TOCTOU: Hunting for Remote Paging
@@ -646,16 +597,12 @@ DEEPER ”
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bide hat
 ASIA 20253
-a :
-1 GOT A FEWER
-ar
 AND THE ONLY PRESCRIPTION
--» IS MORE PAGING READS.
 ```
 
 ## Slide 30
@@ -688,99 +635,42 @@ AND THE ONLY PRESCRIPTION
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 78/100 on the text kept, 43/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2!
-Ci TOCTOU: Oplock Results
-ae
-kd> k
-*** Stack trace for last set context -
-Child-sP
-F¥FFb88e° acSbe2108
-F¥FFb88e° acSbe35e
-F¥FFb88e° acSbe4ae
-F¥FFb88e° acSbe550
-F¥FFb88e° acSbesfe
-FfFFb88e° acSbe96e
-FFFFb88e° acSbe9ae
-F¥fFb88e° acSbe9ee
-F¥FFb88e° acSbec6e
-F¥¥Fb88e° acSbeca@
-F¥FFb88e° acSbed1e
-F¥FFb88e° acSbedce@
-F¥FFb88e° acSbeeee
-F¥FFb88e° acSbefde
-F¥FFb88e° acSbf17e
-F¥FFb88e° acSbf2ae
-f¥Ffb88e° acSbf36e
-F¥FFb88e° acSbf3fe
-60000083" 4a77FOF3
-00000083 ° 4a77F100
-80000083" 4a77F200
-80000083 ° 4a77F460
-00000083" 4a77F4bO
-00000083 ° 4a77F4e0
-00000083" 4a77530
-80800083 4a77F8108
-80800083" 4a77F84E
-RetAddr
-F¥FFF807° 7e4cb6c5
-F¥FFF807° 7edccae7
-FF£4F807° 7e4c F106
-F¥£FF£807° 7e9Sbe2c
-F¥FFF807° 7e9Sbae7
-F£FFF807° 822c16c8
-F£¥FF807° 82256222
-F£FFF807° 7e4deea5
-FF¥F¥F807° 813d9F5b
-F£FFF807° 8140ef F3
-F¥¥¥F307° 7e4deeas
-F#£FF807° 7e8e2979
-F¥¥FF807° 7e8de4F1
-F£FFF807° 7e8dd4d2
-FFFFF807° 7e8cicf9
-F££FF807° 7e8bdfc8
-FFFFF807° 7e63e1e8
-eeee7 FFF dd26f2b4
-ee0e7 FFF ddiee@64c
-eeee7 FFF ddle@bbs
-eeee7 FFF ddieef3e
-ee00e7 FFF ddle@dbb
-e0007FFF dd23236a
-eee0e7ffF dd265976
-eee0e7ffF dcf626bd
-eeee7 FFF dd22a9f8
-eeeeeeee BeeGEeeRE
--thread/.cxr resets it
-Call Site
-nt !KiSwapContext+0x76
-nt! KiSwapThread+@xbes
-nt!KiCommitThreadwWait+0x137
-nt!KeWaitForSingleObject+0x256
-a oicuestikiani ee
-TE cAINSCTE OUT EENGEr
-nt! IofCallDriver+0x55
-FLTMGR! FltpLegacyProcessingAfterPreCallbacksCompleted+0x15b
-FLTMGR! FltpCreate+@x323
-nt! IofCallDriver+8x55
-nt! IopParseDevice+@x8c9
-nt! ObpLookupObjectName+@xae1
-nt! ObOpenObjectByNameEx+0x1F2
-nt! IopCreateFile+0x439
-nt! NtOpenFile+@x58
-nt! KiSystemServiceCopyEnd+0x28
-ntd11!NtOpenFile+0x14
-ntd11!LdrpMapD11NtFileName+@xe8
-ntd11!LdrpMapD11SearchPath+0x1de
-ntd11!LdrpProcessWork+0x148
-ntd11!LdrpWorkCallback+@xbb
-ntd11! TppWorkpExecuteCallback+@x13a
-ntd11! TppWorkerThread+@x8f6
-KERNEL32!BaseThreadInitThunk+@xid
-ntd11!RtlUserThreadStart+0x28
+CI TOCTOU: Oplock Results
+
+3: kd> k
+ *** Stack trace for last set context - .thread/.cxr resets it
+ # Child-SP          RetAddr               Call Site
+00 ffffb88e`ac5be210 fffff807`7e4cb6c5     nt!KiSwapContext+0x76
+01 ffffb88e`ac5be350 fffff807`7e4ccae7     nt!KiSwapThread+0xb05
+02 ffffb88e`ac5be4a0 fffff807`7e4cf106     nt!KiCommitThreadWait+0x137
+03 ffffb88e`ac5be550 fffff807`7e95be2c     nt!KeWaitForSingleObject+0x256
+04 ffffb88e`ac5be8f0 fffff807`7e95bae7     nt!FsRtlCancellableWaitForMultipleObjects+0xcc
+05 ffffb88e`ac5be960 fffff807`822c16c8     nt!FsRtlCancellableWaitForSingleObject+0x27
+06 ffffb88e`ac5be9a0 fffff807`82256222     Ntfs!NtfsWaitForOplockCompletionEvent+0x24   [red box]
+07 ffffb88e`ac5be9e0 fffff807`7e4d00a5     Ntfs!NtfsFsdCreate+0x272
+08 ffffb88e`ac5bec60 fffff807`813d9f5b     nt!IofCallDriver+0x55
+09 ffffb88e`ac5beca0 fffff807`8140eff3     FLTMGR!FltpLegacyProcessingAfterPreCallbacksCompleted+0x15b
+0a ffffb88e`ac5bed10 fffff807`7e4d00a5     FLTMGR!FltpCreate+0x323
+0b ffffb88e`ac5bedc0 fffff807`7e8e2979     nt!IofCallDriver+0x55
+0c ffffb88e`ac5bee00 fffff807`7e8de4f1     nt!IopParseDevice+0x8c9
+0d ffffb88e`ac5befd0 fffff807`7e8dd4d2     nt!ObpLookupObjectName+0xae1
+0e ffffb88e`ac5bf170 fffff807`7e8c1cf9     nt!ObOpenObjectByNameEx+0x1f2
+0f ffffb88e`ac5bf2a0 fffff807`7e8bdfc8     nt!IopCreateFile+0x439
+10 ffffb88e`ac5bf360 fffff807`7e63e1e8     nt!NtOpenFile+0x58
+11 ffffb88e`ac5bf3f0 00007fff`dd26f2b4     nt!KiSystemServiceCopyEnd+0x28
+12 00000083`4a77f0f8 00007fff`dd1e064c     ntdll!NtOpenFile+0x14
+13 00000083`4a77f100 00007fff`dd1e0bb8     ntdll!LdrpMapDllNtFileName+0xe8
+14 00000083`4a77f200 00007fff`dd1e0f80     ntdll!LdrpMapDllSearchPath+0x1d0
+15 00000083`4a77f460 00007fff`dd1e0dbb     ntdll!LdrpProcessWork+0x148
+16 00000083`4a77f4b0 00007fff`dd23236a     ntdll!LdrpWorkCallback+0xbb
+17 00000083`4a77f4e0 00007fff`dd205976     ntdll!TppWorkpExecuteCallback+0x13a
+18 00000083`4a77f530 00007fff`dcf626bd     ntdll!TppWorkerThread+0x8f6
+19 00000083`4a77f810 00007fff`dd22a9f8     KERNEL32!BaseThreadInitThunk+0x1d
+1a 00000083`4a77f840 00000000`00000000     ntdll!RtlUserThreadStart+0x28
 ```
 
 ## Slide 33
@@ -813,50 +703,45 @@ ntd11!RtlUserThreadStart+0x28
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 72/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2023
-Cl TOCTOU: Paged Reads
-BB Process Monitor - Sysinternals: www.sysinternals.com - Ei x
-File Edit Event Filter Tools Options Help
-Sallcs6 W|\VYAO| s&s! % © |e ie DoF
-Relative Time Process Name PID Operation Path Result Detail
-00:00:17.0969135 “Mi services.exe 508  CloseFile C:\Windows \System32\EventAggregation dil SUCCESS |
-00:00:17.0971696 “MF services.exe 508 W CreateFile C:\Windows \System32\\EventAggregation dll REPARSE Desired Access: Read Data/List Directory, Execute/Trav... |
-00:00:17.1006151 “i services.exe 508 j CreateFile \\127.0.0.1\C$\Windows\System32\EventAggregation.dilbak SUCCESS Desired Access: Read Data/List Directory, Execute/Trav... |
-00:00:17.1017799 “MW services.exe 508 je CreateFileMapping \\127.0.0.1 Windows \System32\EventAggregation.dilbak FILE LOCKED WI... SyncType: SyncTypeCreateSection, PageProtection: PA.
-00:00:17.1018504 -m@ services.exe 508 jy ReadFile \\127.0.0.1\C$\Windows\System32\EventAgaregation.dilbak SUCCESS Offset: 0, Length: 90,112, 1/0 Flags: Non-cached, Paging... j
-00:00:17.1018615 “Br services.exe 508 Ws ReadFile C:\Windows \System32\Event Aggregation dil. bak SUCCESS Offset: 0, Length: 90,112, 1/O Flags: Non-cached
-00:00:17.1027614 “iF services.exe 508 i QueryEAFile 127.0.0.1
-00:00:17.1057495 “i services.exe 508 We QueryEAFile \\127.0.0.1
-00:00:17.1058253 <M services.exe 508 fy SetEAFile \\127.0.0.1
-00:00:17.1064822 “Wservices.exe 508  CreateFileMapping \127.
-00:00:17.1066262
-508 «Load Image
-Windows \System32\EventAggregation.dilbak ACCESS DENIED
-Windows \System32\EventAggregation.dilbak ACCESS DENIED
-Windows \System32\EventAggregation.dilbak ACCESS DENIED
-Windows \System32\EventAggregation.dilbak SUCCESS Sync Type: Sync TypeOther
-Windows \ 5 penne ato Renda dilbak SUCCESS Image Base: Ox 7df0450000, Image Size: 0x 16000
-@ services.exe SUCCESS
-ge arshomennicss hae veneer dil bak : 0, Length: 4,096, 1/O Flags: Non-cached, Paging |...
-00:00:51. 1701225 @ services.exe 508 i ReadFile C:\Windows \System32\Event Aggregation dil. bak SUCCESS Offset: 0, Length: 4,096, 1/O Flags: Non-cached
-00:00:51.1702783 “@ services.exe 508 % ReadFile \\127.0.0.1\C$\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 53,248, Length: 16,384, 1/O Flags: Non-cached, P..
-00:00:51.1702900 “WF services.exe 508 Ws ReadFile C:\Windows \System32\\EventAggregation dil bak SUCCESS Offset: 53,248, Length: 16,384, 1/O Flags: Non-cached
-00:00:51.1715041 “Mservices.exe 508 Sy ReadFile \\127.0.0.1\C$\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 73,728, Length: 4,096, 1/O Flags: Non-cached, Pa...
-00:00:51.1715132 “MW services.exe 508 jy ReadFile C:\Windows \System32\EventAggregation dil bak SUCCESS Offset: 73,728, Length: 4,096, 1/O Flags: Non-cached
-00:00:51.1715971 “H services.exe 508 % ReadFile \\127.0.0.1\CS\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 4.096, Length: 4,096, I/O Flags: Non-cached, Pag..
-00:00:51.1716052 “i services.exe 508 i ReadFile C:\Windows \System32\EventAggregation dil. bak SUCCESS Offset: 4,096, Length: 4,096, I/O Flags: Non-cached
-00:00:51.1716701 “Wservices.exe 508 Sy ReadFile \\127.0.0.1\C$\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 4,096, Length: 32,768, 1/O Flags: Non-cached, Pa...
-00:00:51.1716803 “MF services.exe 508 js ReadFile C:\Windows \System32\Event Aggregation dil. bak SUCCESS Offset: 4.096, Length: 32,768, 1/O Flags: Non-cached
-00:00:51.1717834 ‘ services.exe 508 ws ReadFile \\127.0.0.1\CS\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 40,960, Lenath: 4,096, 1/O Flags: Non-cached, Pa..
-00:00:51.1717897 “Mf services.exe 508 We ReadFile C:\Windows\System32\\Event Aggregation dil bak SUCCESS Offset: 40,960, Length: 4,096, 1/O Flags: Non-cached
-00:00:51.1718510 “Mservices.exe 508 fy ReadFile \\127.0.0.1\C$\Windows\System32\EventAggregation.dilbak SUCCESS Offset: 36,864, Length: 12,288, 1/O Flags: Non-cached, P...
-00:00:51.1718630 “HF services.exe 508 fy ReadFile C:\Windows \System32\EventAggregation dil. bak SUCCESS Offset: 36,864, Length: 12,288, 1/O Flags: Non-cached
-Showing 26 of 43 events (60%) Backed by virtual memory
+CI TOCTOU: Paged Reads
+
+Process Monitor - Sysinternals: www.sysinternals.com
+File  Edit  Event  Filter  Tools  Options  Help
+
+Relative Time | Process Name | PID | Operation | Path | Result | Detail
+00:00:17.0969135  services.exe  508  CloseFile          C:\Windows\System32\EventAggregation.dll                             SUCCESS
+00:00:17.0971696  services.exe  508  CreateFile         C:\Windows\System32\EventAggregation.dll                             REPARSE            Desired Access: Read Data/List Directory, Execute/Trav...
+00:00:17.1006151  services.exe  508  CreateFile         \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Desired Access: Read Data/List Directory, Execute/Trav...
+00:00:17.1017799  services.exe  508  CreateFileMapping  \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            FILE LOCKED WI...   SyncType: SyncTypeCreateSection, PageProtection: PA...
+00:00:17.1018504  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 0, Length: 90,112, I/O Flags: Non-cached, Paging...
+00:00:17.1018615  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 0, Length: 90,112, I/O Flags: Non-cached
+00:00:17.1027614  services.exe  508  QueryEAFile        \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1057495  services.exe  508  QueryEAFile        \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1058253  services.exe  508  SetEAFile          \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1064822  services.exe  508  CreateFileMapping  \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            SyncType: SyncTypeOther
+00:00:17.1066262  services.exe  508  Load Image         \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Image Base: 0x7ffdf0450000, Image Size: 0x16000
+00:00:17.1066861  services.exe  508  CloseFile          \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS
+──────────────────────────── [red separator line] ────────────────────────────
+00:00:51.1699161  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 0, Length: 4,096, I/O Flags: Non-cached, Paging I...
+00:00:51.1701225  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 0, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1702783  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 53,248, Length: 16,384, I/O Flags: Non-cached, P...
+00:00:51.1702900  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 53,248, Length: 16,384, I/O Flags: Non-cached
+00:00:51.1715041  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 73,728, Length: 4,096, I/O Flags: Non-cached, Pa...
+00:00:51.1715132  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 73,728, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1715971  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 4,096, Length: 4,096, I/O Flags: Non-cached, Pag...
+00:00:51.1716052  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 4,096, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1716701  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 4,096, Length: 32,768, I/O Flags: Non-cached, Pa...
+00:00:51.1716803  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 4,096, Length: 32,768, I/O Flags: Non-cached
+00:00:51.1717834  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 40,960, Length: 4,096, I/O Flags: Non-cached, Pa...
+00:00:51.1717897  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 40,960, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1718510  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 36,864, Length: 12,288, I/O Flags: Non-cached, P...
+00:00:51.1718630  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 36,864, Length: 12,288, I/O Flags: Non-cached
+
+Showing 26 of 43 events (60%)          Backed by virtual memory
 ```
 
 ## Slide 35
@@ -881,39 +766,32 @@ Showing 26 of 43 events (60%) Backed by virtual memory
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2023
-Cli TOCTOU: Code Execution
-Break instruction exception - code 8@000003 (first chance)
-0033 :e0007fFF addbiS5@ cc int 3
+CI TOCTOU: Code Execution
+
+Break instruction exception - code 80000003 (first chance)
+0033:00007fff`addb1550 cc                  int     3
 5: kd> db @rip
-eeee7fff addbi55@ cc 98 96 96 98 986 96 98-98 96 96 96 90 96
-eeee7ftf addbi56@ ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbiS576@ ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbi58@ ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbi599 ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbiSa@ ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbiSb@ ca fe c@ de ca fe c@ de-ca fe c@ de ca fe
-eeee7fff addbi5c@ ca fe c@ de ca fe cO de-ca fe c@ de ca fe
+00007fff`addb1550  cc 90 90 90 90 90 90 90-90 90 90 90 90 90 90 90  ................
+00007fff`addb1560  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1570  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1580  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1590  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15a0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15b0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15c0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
 5: kd> dx @$curprocess->Name
 @$curprocess->Name : services.exe
-Length : @xc
+    Length           : 0xc
 5: kd> dx @$curprocess->KernelObject->Protection
-OM SB iiteieiece che euerereierere
-EO GE oionewicwciessecemeee
-CO d@  ssseesecoeca
-€QO G0 2i2osc5cote
-CO de fssesiecewcetace
-CO ge jseisSoonetace
-@$curprocess->KernelObject->Protection [Type: _PS PROTECTION]
-[+0xe8@0] Level : @x61 [Type: unsigned char]
-[+90x@80 ( 2: 8)] Type : @x1 [Type: unsigned char]
-[+0xe@@ ( 3: 3)] Audit : @x@ [Type: unsigned char]
-[+@x@00 ( 7: 4)] Signer : @x6 [Type: unsigned char]
+@$curprocess->KernelObject->Protection                [Type: _PS_PROTECTION]
+    [+0x000] Level            : 0x61 [Type: unsigned char]
+    [+0x000 ( 2: 0)] Type             : 0x1 [Type: unsigned char]
+    [+0x000 ( 3: 3)] Audit            : 0x0 [Type: unsigned char]
+    [+0x000 ( 7: 4)] Signer           : 0x6 [Type: unsigned char]
 ```
 
 ## Slide 37
@@ -1132,18 +1010,15 @@ Source: https://twitter.com/tiraniddo/status/1551966781761146880
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 = =
 Conclusions: Patchin
 a
 ppp
 Available for: iPhone 8 and later, iPad Pro (all models), iPad Air 3rd generation and later, iPad 5th ROOT->KERNEL LPE REPORTED
-_ a
 generation and later, iPad mini 5th generation and later
 Impact: An app with foot privileges may be able to execute arbitrary code with kernel privileges
 Description: A use after free issue was addressed with improved memory management.

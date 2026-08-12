@@ -12,7 +12,7 @@ duration_seconds: 2039
 words: 4073
 text_chars: 23801
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Client or Server- The Hidden Sword of Damocles in Kafka

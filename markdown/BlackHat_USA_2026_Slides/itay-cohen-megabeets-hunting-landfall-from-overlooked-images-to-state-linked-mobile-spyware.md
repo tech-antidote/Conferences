@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Itay Cohen (Megabeets)_Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware.pdf"
 pages: 54
 sha256: "bec38d4f3a8163608f57693fcda6e3990cdf0c5d26dac962c3c55ff38cb67168"
-text_chars: 19052
-ocr_pages: 17
+text_chars: 12847
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 6
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:10:29Z"
+converted_at: "2026-08-12T05:35:34Z"
 ---
 # Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware
 
 **Speakers:** Itay Cohen (Megabeets)  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Itay Cohen (Megabeets)_Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -29,19 +35,6 @@ converted_at: "2026-08-11T23:10:29Z"
 from overlooked images to state-linked mobile **spyware** .
 
 Black Hat USA 2026
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-|
-i
-om overlooked images
-state-linked
-“mobile spyware.
-ALLE LAL EEUORE AOE DEA IO
-Coie ‘Hat “USA 2026
-Rig 8
-```
 
 ## Slide 2
 
@@ -67,7 +60,8 @@ AUGUST 2025
 
 **Apple Patches CVE-2025-43300** **Zero-Day in iOS, iPadOS, and macOS Exploited in Targeted Attacks**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Hacker News
@@ -77,7 +71,6 @@ WhatsApp Zero-Day Exploited in
 Attacks Targeting Apple Users
 The vulnerability (CVE-2025-55177) was exploited along an iOS/macOS
 zero-day in suspected spyware attacks.
-wifi (itt
 ```
 
 ## Slide 7
@@ -106,74 +99,70 @@ TIFF-based image file format
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Matches - 6/~6 Files ©
-9297888746158e38d320b05b27b0032b2cc29231be8990d87bc46 f1e06456F93
-© WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg
-b975b499baa3119ac5c2b3379306d4e50b9610e9bba3e56de7d fd3927a96032d
-© 390a4964-68ad-4bdd-9f63-4a8ec371596a. jpeg
+Matches - 6/~6 Files (i)                                                              First seen
+
+9297888746158e38d320b05b27b0032b2cc29231be8990d87bc46f1e06456f93
+  WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg                                        2025-02-10
+  tiff                                                                                13:56:53
+
+b975b499baa3119ac5c2b3379306d4e50b9610e9bba3e56de7dfd3927a96032d
+  390a4964-68ad-4bdd-9f63-4a8ec371596a.jpeg                                           2024-08-27
+  tiff                                                                                21:26:55
+
 c0f30c2a2d6f95b57128e78dc0b7180e69315057e62809de1926b75f86516b2e
-coy WhatsApp Image 2024-08-27 at 11.48.40 AM.jpeg
+  WhatsApp Image 2024-08-27 at 11.48.40 AM.jpeg                                       2024-08-27
+  tiff                                                                                09:39:53
+
 b06dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1c8983d066c0997756
-coy IMG-20250120-WAQ00S. jpg
-b45817f fb0355badcc89f2d7d48eec f O0ebd f2b966ac986514F9d971F6c57d18
-coy IMG-20240723-WAQ000. jpg
-29882a3c426273a7302e852aa7 7662e168b6d44dcebfca53757e29a9cd f02483
-coy IMG-20240723-WAQ001. jpg
-First seen
-2025-02-10
-13:56:53
-2024-08-27
-21:26:55
-2024-08-27
-09:39:53
-2025-01-20
-14:37:04
-2024-07-23
-10:08:54
-2024-07-23
-10:05:57
+  IMG-20250120-WA0005.jpg                                                             2025-01-20
+  tiff                                                                                14:37:04
+
+b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514f9d971f6c57d18
+  IMG-20240723-WA0000.jpg                                                             2024-07-23
+  tiff                                                                                10:08:54
+
+29882a3c426273a7302e852aa77662e168b6d44dcebfca53757e29a9cdf02483
+  IMG-20240723-WA0001.jpg                                                             2024-07-23
+  tiff                                                                                10:05:57
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Matches - 6/~6 Files ©
-9297888746158e38d320b05b27b0032b2cc29231be8990d87bc46f1e06456F93
-@ © © WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg
-“ti
-§975b499baa3119ac5c2b3379306d4e50b9610e9bba3e56de7d fd3927a96032d
-@ — © 390a4964-68ad-4bdd-9f63-4a8ec371596a. jpeg
-“ti
-©0f30c2a2d6f95b57128e78dc0b7180e69315057e62809de1926b75f86516b2e
-@ © © WhatsApp Image 2024-08-27 at 11.48.40 AM. jpeg
-“tiff
-bO6dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1c8983d066c0997756
-© © © IMG-20250120-wA0005. jpg
-tiff
-b45817f fb0355badcc89f2d7d48eec fO0ebd f2b966ac986514F9d971F6C57d18
-@ © © IMG-20240723-wA0000. jpg
-ti
-298824a3C426273a/302e852aa7 /662e168b6d44dcebfca53757e29a9cd f02483
-@ © © IMG-20240723-wA0001. jpg
-“ti
-First seen
-2025-02-10
-3:00.53)
-2024-08-27
-21:26:55
-2024-08.
-09:39:53
-2025-01-20
-14:37:04
-2024-07-23
-10:08:54
-2024-07-23
-10:05:57
+Matches - 6/~6 Files (i)                                                              First seen
+
+9297888746158e38d320b05b27b0032b2cc29231be8990d87bc46f1e06456f93
+  WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg                                        2025-02-10
+  tiff                                                                                13:56:53
+
+b975b499baa3119ac5c2b3379306d4e50b9610e9bba3e56de7dfd3927a96032d
+  390a4964-68ad-4bdd-9f63-4a8ec371596a.jpeg                                           2024-08-27
+  tiff                                                                                21:26:55
+
+c0f30c2a2d6f95b57128e78dc0b7180e69315057e62809de1926b75f86516b2e
+  WhatsApp Image 2024-08-27 at 11.48.40 AM.jpeg                                       2024-08-27
+  tiff                                                                                09:39:53
+
+b06dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1c8983d066c0997756
+  IMG-20250120-WA0005.jpg                                                             2025-01-20
+  tiff                                                                                14:37:04
+
+b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514f9d971f6c57d18
+  IMG-20240723-WA0000.jpg                                                             2024-07-23
+  tiff                                                                                10:08:54
+
+29882a3c426273a7302e852aa77662e168b6d44dcebfca53757e29a9cdf02483
+  IMG-20240723-WA0001.jpg                                                             2024-07-23
+  tiff                                                                                10:05:57
+
+[The "First seen" column is highlighted with a yellow box and a hand-drawn yellow arrow pointing to it; the rest of the panel is dimmed.]
 ```
 
 ## Slide 13
@@ -187,36 +176,16 @@ First seen
 . . .
 .|
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Uploaded from
-Za
-38d320b05b27b0032b2cc29231be8990d87bc46f1e06456f93
 Image 2025-02-10 at 4.54.17 PM.jpeg
 9ac5c2b3379306d4e50b9610e9bba3e56de7d fd3927a96032d
 68ad-4bdd-9F63-4a8ec371596a. jpeg
-157128e78dc0b7180e69315057e62809de1926b75f86516b2e
 Image 2024-08-27 at 11.48.40 AM. jpeg
-)5ebb9da24204c96cb2e297bd8d418bc1c8983d066c0997756
-120-WAO00S. jpg
-idcc89f2d7d48eecfO0ebd f2b966ac986514F9d971F6c57d18
 0723-WAQ000. jpg
-17302€852aa7 7662e168b6d44dcebfca53757e29a9cdf02483
-'23-WA0001.jpg
-First seen
-2025-02-10
-3;00:53)
-2024-08-27
-21:26:55
-2024-08-27
-09:39:53
-2025-01-20
-14:37:04
-2024-07-23
-10:08:54
-2024-07-23
-10:05:57
 ```
 
 ## Slide 14
@@ -229,17 +198,14 @@ WA
 
 WA
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Matches - 6/~6 Files @
 9297888746158e38d320b05b27b0032b2cc29231be8990d87H
 © WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg
-c0f30c2a2d6f95b57128e78dc0b7180e69315057e62809delg
 © WhatsApp Image 2024-08-27 at 11.48.40 AM.jpeg
-b06dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1ic8q
-© IMG-20250120-WA0005. jpg
-b45817f fb0355badcc89f2d7d48eec fO0ebd f2b966ac986514
 © IMG-20240723-WA0000. jpg
 ```
 
@@ -251,89 +217,28 @@ Timestamp
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-00547FDO0:
-00547FE0:
-00547FFO:
-00548000:
-00548010:
-00548020:
-00548030:
-00548040:
-00548050:
-00548060:
-00548070:
-00 FB
-00 00
-00 84
-74 61
-70 73
-00 OD
-41 02
-EF FE
-22 A2
-F9 64
-AO AB
-00
-00
-33
-2F
-65
-40
-00
-5D
-D8
-EO
-6F
-43
-08
-05
-63
-72
-F2
-21
-00
-GA
-3D
-E6
-lene yp
-sooo000C CAFEBABE
-a AJ.X.N
-mips Dero Oost da
-ta/data/com.sams
-ung.ipservice/fi
-les/1L..@...7ZXZ.
-Sueee A..!.....t/
-```
-
 ## Slide 17
 
 data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .ipservice/files/ **b.so**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-005A7210:
-005A7220:
-005A7230:
-005A7240:
-005A7250:
-005A7260:
-005A7270:
-005A7280:
-005A7290:
-O05A72A0:
-O05A72B0:
-Lee eee data/da
-ta/com.samsung.i
-pservice/files/l
-Se 24..da
-ta/data/com.sams
-ung.ipservice/fi
-les/b.soPK......
-data/data/com.samsung.ipservice/files/1
+005A7210:  33 05 00 84 33 05 00 27   00 00 00 00 00 00 00 00  3...3..'........
+005A7220:  00 00 00 A4 81 00 00 00   00 64 61 74 61 2F 64 61  .........data/da
+005A7230:  74 61 2F 63 6F 6D 2E 73   61 6D 73 75 6E 67 2E 69  ta/com.samsung.i
+005A7240:  70 73 65 72 76 69 63 65   2F 66 69 6C 65 73 2F 6C  pservice/files/l
+005A7250:  50 4B 01 02 14 03 14 00   00 00 08 00 EF 2E F7 58  PK.............X
+005A7260:  DB 94 54 E8 A1 BD 00 00   40 9D 01 00 2A 00 00 00  ..T.....@...*...
+005A7270:  00 00 00 00 00 00 00 00   80 81 32 34 05 00 64 61  ..........24..da
+005A7280:  74 61 2F 64 61 74 61 2F   63 6F 6D 2E 73 61 6D 73  ta/data/com.sams
+005A7290:  75 6E 67 2E 69 70 73 65   72 76 69 63 65 2F 66 69  ung.ipservice/fi
+005A72A0:  6C 65 73 2F 62 2E 73 6F   50 4B 05 06 00 00 00 00  les/b.soPK......
+005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00        ..............
+
+data/data/com.samsung.ipservice/files/l
+
 data/data/com.samsung.ipservice/files/b.so
 ```
 
@@ -355,14 +260,6 @@ EXPECTATIONS…
 
 REALITY…. Hello,
 Android!
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-EXPECTATIONS...
-REALITY..... Hello, a ~
-Android!
-```
 
 ## Slide 21
 
@@ -396,13 +293,6 @@ Android!
 
 libimagecodec. quram. so
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-libimagecodec . @Uuiget.so
-ty,
-```
-
 ## Slide 24
 
 Code which processes **untrustworthy inputs** DO NOT! Code Code written which in an runs with **unsafe no language sandbox** GOOGLE’s RULE OF 2
@@ -410,18 +300,6 @@ Code which processes **untrustworthy inputs** DO NOT! Code Code written which in
 ## Slide 25
 
 CVE-2025 -21042
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-> ifr
-ray
-IK NSS
-Yi
-Beall
-RON
-|
-```
 
 ## Slide 26
 
@@ -525,125 +403,71 @@ INSIDE LANDFALL*
 
 data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .ipservice/files/ **b.so**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-005A7210:
-005A7220:
-005A7230:
-005A7240:
-005A7250:
-005A7260:
-005A7270:
-005A7280:
-005A7290:
-O05A72A0:
-O05A72B0:
-2
-Lee eee data/da
-ta/com.samsung.i
-pservice/files/l
-Se 24..da
-ta/data/com.sams
-ung.ipservice/fi
-les/b.soPK......
-data/data/com.samsung.ipservice/files/1
+005A7210:  33 05 00 84 33 05 00 27   00 00 00 00 00 00 00 00  3...3..'........
+005A7220:  00 00 00 A4 81 00 00 00   00 64 61 74 61 2F 64 61  .........data/da
+005A7230:  74 61 2F 63 6F 6D 2E 73   61 6D 73 75 6E 67 2E 69  ta/com.samsung.i
+005A7240:  70 73 65 72 76 69 63 65   2F 66 69 6C 65 73 2F 6C  pservice/files/l
+005A7250:  50 4B 01 02 14 03 14 00   00 00 08 00 EF 2E F7 58  PK.............X
+005A7260:  DB 94 54 E8 A1 BD 00 00   40 9D 01 00 2A 00 00 00  ..T.....@...*...
+005A7270:  00 00 00 00 00 00 00 00   80 81 32 34 05 00 64 61  ..........24..da
+005A7280:  74 61 2F 64 61 74 61 2F   63 6F 6D 2E 73 61 6D 73  ta/data/com.sams
+005A7290:  75 6E 67 2E 69 70 73 65   72 76 69 63 65 2F 66 69  ung.ipservice/fi
+005A72A0:  6C 65 73 2F 62 2E 73 6F   50 4B 05 06 00 00 00 00  les/b.soPK......
+005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00        ..............
+
+data/data/com.samsung.ipservice/files/l
+
 data/data/com.samsung.ipservice/files/b.so
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-00013920:
-0001392F:
-0001393E:
-0001394D:
-0001395C:
-0001396B:
-0001397A:
-00013989:
-00013998:
-000139A7:
-159B6:
-73
-00
-69
-79
-oF
-65 6E
-73 69
-00 70
-79 6C
-63 6F
-67 65
-SF 6D
-65 61
-6F 72
-69 6E
-6C 64
-63
-73
-65
-6F
-6D
-SF
-69
-64
-00
-63
-3D
-.persistency_ba
-ckup.persistenc
-y_origin.persis
-tency_payLload.a
-gent_id.command
-_id.bridge_head
-_version_minor.
-bridge_head_ver
-sion_major.publ
-ic_key.&increme
-ntal_build=.&eu
-=
+00013920:  00 70 65 72 73 69 73 74   65 6E 63 79 5F 62 61  .persistency_ba
+0001392F:  63 6B 75 70 00 70 65 72   73 69 73 74 65 6E 63  ckup.persistenc
+0001393E:  79 5F 6F 72 69 67 69 6E   00 70 65 72 73 69 73  y_origin.persis
+0001394D:  74 65 6E 63 79 5F 70 61   79 6C 6F 61 64 00 61  tency_payload.a
+0001395C:  67 65 6E 74 5F 69 64 00   63 6F 6D 6D 61 6E 64  gent_id.command
+0001396B:  5F 69 64 00 62 72 69 64   67 65 5F 68 65 61 64  _id.bridge_head
+0001397A:  5F 76 65 72 73 69 6F 6E   5F 6D 69 6E 6F 72 00  _version_minor.
+00013989:  62 72 69 64 67 65 5F 68   65 61 64 5F 76 65 72  bridge_head_ver
+00013998:  73 69 6F 6E 5F 6D 61 6A   6F 72 00 70 75 62 6C  sion_major.publ
+000139A7:  69 63 5F 6B 65 79 00 26   69 6E 63 72 65 6D 65  ic_key.&increme
+000139B6:  6E 74 61 6C 5F 62 75 69   6C 64 3D 00 26 65 75  ntal_build=.&eu
+
+[The bytes 62 72 69 64 67 65 5F 68 65 61 64 / "bridge_head" are highlighted in blue on row 0001396B and in green on row 00013989.]
 ```
 
 ## Slide 37
 
 **BRIDGE HEAD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-00013920:
-00013592F:
-0001393E:
-0001394D:
-0001395C:
-0001396B:
-0001397A:
-00013989:
-00013998:
-000139A7:
-000139B6:
-63
-79
-62
-73
-69
-6E
-persistency_ba
-ckup.persistenc
-y_origin.persis
-tency_paylLload.a
-gent_id.command
-_id.bridge_head
-_version_minor
-bridge_head_ver
-Sion_major.publ
-ic_key.&increme
-ntal_build=.&eu
-=
+00013920:  00 70 65 72 73 69 73 74   65 6E 63 79 5F 62 61  .persistency_ba
+0001392F:  63 6B 75 70 00 70 65 72   73 69 73 74 65 6E 63  ckup.persistenc
+0001393E:  79 5F 6F 72 69 67 69 6E   00 70 65 72 73 69 73  y_origin.persis
+0001394D:  74 65 6E 63 79 5F 70 61   79 6C 6F 61 64 00 61  tency_payload.a
+0001395C:  67 65 6E 74 5F 69 64 00   63 6F 6D 6D 61 6E 64  gent_id.command
+0001396B:  5F 69 64 00 62 72 69 64   67 65 5F 68 65 61 64  _id.bridge_head
+0001397A:  5F 76 65 72 73 69 6F 6E   5F 6D 69 6E 6F 72 00  _version_minor.
+00013989:  62 72 69 64 67 65 5F 68   65 61 64 5F 76 65 72  bridge_head_ver
+00013998:  73 69 6F 6E 5F 6D 61 6A   6F 72 00 70 75 62 6C  sion_major.publ
+000139A7:  69 63 5F 6B 65 79 00 26   69 6E 63 72 65 6D 65  ic_key.&increme
+000139B6:  6E 74 61 6C 5F 62 75 69   6C 64 3D 00 26 65 75  ntal_build=.&eu
+
+BRIDGE HEAD
+
+[Same hex dump as the previous slide, dimmed, with a large yellow callout banner reading "BRIDGE HEAD" overlaid across rows 0001395C-0001397A. The bytes 62 72 69 64 67 65 5F 68 65 61 64 / "bridge_head" are highlighted in blue on row 0001396B and in green on row 00013989.]
 ```
 
 ## Slide 38
@@ -759,15 +583,6 @@ Targets governments, f i nancial institutions, and telecom organizations across 
 
 ### Differential Analysis
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-STAN WL
-Differential Me
-Analysis — SHAR
-pes) LEA |
-```
-
 ## Slide 49
 
 #### The Problem
@@ -810,7 +625,8 @@ If you have known C2 servers and they're absent from a scanner, that's **not** m
 
 hunting from nothing turning attacker’s opsec against them don’t just stick to one tool
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 % hunting from nothing

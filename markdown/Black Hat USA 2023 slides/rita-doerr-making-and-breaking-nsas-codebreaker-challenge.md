@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Rita Doerr _ Making and Breaking NSA's Codebreaker Challenge.pdf"
 pages: 35
 sha256: "1a93977a076ae51b608575ff814f60f342805e3b92f0f872ef7685448b19214c"
-text_chars: 8831
+text_chars: 8732
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 93.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:22Z"
+converted_at: "2026-08-12T04:19:52Z"
 ---
 # Making and Breaking NSA's Codebreaker Challenge
 
 **Speakers:** Rita Doerr  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Rita Doerr _ Making and Breaking NSA's Codebreaker Challenge.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -39,21 +45,13 @@ IntelligenceCareers.gov/NSA
 
 **2**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A Pictorial Bio
-sk 1oK gam
-RUN RUN (0./AuE
 THE CITY;
 MARATHON
-ve
-} THECITY .
-MARATHON
-SRATHON
-la npApiarins
-(ardening \\
-gn hr
 IntelligenceCareers.gov/NSA
 ```
 

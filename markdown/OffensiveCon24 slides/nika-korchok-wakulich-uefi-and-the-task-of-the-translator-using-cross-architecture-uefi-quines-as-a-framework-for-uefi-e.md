@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "OffensiveCon24 slides/Nika Korchok Wakulich_UEFI and the Task of the Translator Using Cross-Architecture UEFI Quines as a Framework for UEFI Exploit Development.pdf"
 pages: 108
 sha256: "d48793ae985c902301834a6411372f13e6dbf90f99daad8e9249d9f673f72a5a"
-text_chars: 71522
+text_chars: 68805
 ocr_pages: 16
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.2
+ocr_unreliable_blocks: 6
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:22:40Z"
+converted_at: "2026-08-12T05:57:58Z"
 ---
 # UEFI and the Task of the Translator Using Cross-Architecture UEFI Quines as a Framework for UEFI Exploit Development
 
@@ -22,19 +26,20 @@ converted_at: "2026-08-11T23:22:40Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Nika Korchok Wakulich_UEFI and the Task of the Translator Using Cross-Architecture UEFI Quines as a Framework for UEFI Exploit Development.pdf` (108 pages)
 
+
 ## Slide 1
 
-```
+\```
 UEFI and The Task of the
 Translator
 Using cross-architecture UEFI quines as a framework
 for UEFI exploit development
-```
+\```
 
-```
+\```
 Nika Korchok Wakulich (ic3qu33n)
 OffensiveCon 2024
-```
+\```
 
 ## Slide 2
 
@@ -236,15 +241,14 @@ Source: “UEFI Specification: Fig. 2.4 Construction of a Protocol” <u>https:/
 
 ###### **Introduction to UEFI Protocols Example: LoadedImageProtocol**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction to UEFI
 Protocols Example: LoadedimageProtocol
 |
 il, all Ell I
-ial
-EFI_MEMORY_TYPE imageDataType
 |
 ```
 
@@ -316,21 +320,14 @@ Program entry point - setting up stack frame, saving gST, ImageHandle Use gST to
 
 **Base text: Self-replicating UEFI app Written in C**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Interactive Shell v2.2
-EDK II
 UEFI v2.70 CEDK II, @x@0010000)
-Mapping table
 FS@: Alias(s):HDQa1: ;BLK1:
-PciRoot(@x@)/Pci (0x1, 0x1)/Ata(Ox®)/HD(1,MBR, @xBE1AFDFA, @x3F , @xFBFC1)
-BLK@: Alias(s):
-PciRoot(Qx®@)/PciC@x1, @x1)/AtaC@xd)
-BLK2: Alias(s):
-PciRoot(0x@)/PciC@x1, @x1)/AtaC@xd)
 [Press ESC in 3 seconds to skip startup.nsh or any other key to continue.
-[Shell> fs:
 FS@:\>
 Base text:
 Self-replicating UEFI app
@@ -424,19 +421,14 @@ First call to gBS function HandleProtocol in my winning BGGP4 entry
 
 ###### **Final winning entry for BGGP4: Self-replicating UEFI app Written in x64 assembly** **<u>https://youtu.be/MglEnqr-1yY</u>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Interactive Shell v2.2
-EDK II
 UEFI v2.70 CEDK II, @x@0010000)
-Mapping table
 FS@: Alias(s):HDQa1: ;BLK1:
-PciRoot(@x®)/Pci(Ox1, 0x1)/Ata(Ox®)/HD(1,MBR, @xBE1AFDFA, @x3F , @xFBFC1)
 BLK@: Alias(s):
-PciRoot(@x®@)/PciC@x1,@x1)/AtaC@xd)
-BLK2: Alias(s):
-PciRoot(0x®@)/PciC@x1, @x1)/AtaC@xd)
 [Press ESC in 4 seconds to skip startup.nsh or any other key to continue.
 [Shell> fs@:
 [FS@:\> 1s
@@ -444,7 +436,6 @@ Directory of: FS@:\
 @5/02/2024 06:41 1,540 self-rep-golf.efi N
 @5/02/2024 06:41 17,856 UEFISelfRep.efi
 2 File(s) 19,396 bytes
-@ DirCs)
 FS@:\>
 Final winning entry for BGGP4:
 Self-replicating UEFI app
@@ -520,21 +511,18 @@ X30 - Return Address Source: UEFI Specification - 2.3.6.2. Handoff State <u>http
 
 ###### **Base text: Self-replicating UEFI app Written in C, cross-compiled for arm64** **<u>https://youtu.be/af8IanzkYyQ</u>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 UEFI Interactive Shell v2.1
-EDK II
 UEFI v2.60 (EDK II, 0x@0010000)
-Mapping table
 FS@: Alias(s):HD@b:;BLK1:
 PciRoot (@x@) /Pci(@x1,@x@) /HD(1,MBR, @xBE1AFDFA, 0x3F, @xFBFC1)
 BLK3: Alias(s):
 VenHw( F9B94AE2-8BA6-409B-9D56-B9B417F53CB3)
-BLK2: Alias(s):
 VenHw(8047DB4B-7E9C—4C@C—8EBC—DFBBAACACESF )
 BLK@: Alias(s):
-PciRoot (@x@) /Pci(Ox1, 0x0) >
 [Press ESC in 5 seconds to skip startup.nsh or any other key to continue.
 Shell>
 Base text: Self-replicating UEFI app
@@ -550,17 +538,16 @@ https://youtu.be/af8lanzkYyQ
 
 **arm64 UEFI quine RE and xdev**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 undefineds
 (0001348 fd 7b b6 a9
 0000134c fd
-00001350 e0
 00001354 el
 00001358 e0
 0000135c 00
-00001360 e0
 00001364 20
 00001368
 0000136c
@@ -579,7 +566,6 @@ undefineds
 000013a0
 000013a4
 000013a8
-00001 3ac
 000013b0
 000013b4
 000013b8
@@ -620,11 +606,9 @@ e7
 40
 40
 01
-01
 80
 80
 40
-ol
 00
 40
 3f
@@ -642,7 +626,6 @@ f9
 f9
 52
 72
-bo
 12
 79
 52
@@ -651,7 +634,6 @@ d2
 f2
 f2
 f2
-f9
 f9
 f9
 91
@@ -664,12 +646,10 @@ aa
 f9
 d6
 f9
-f9
 fl
 54
 91
 aa
-Stack[-Oxa0]:
 UefiSelfRepMain
 stp
 mov
@@ -708,8 +688,6 @@ b.ne
 add
 mov
 8 local_aO
-x29,x30,[sp, #local_a0]!
-x29, sp
 ImageHandle, [sp, #local_88]
 gST, [sp, #local_90]
 ImageHandle, [sp, #local_90]
@@ -718,7 +696,6 @@ ImageHandle, [sp, #qBS]
 ImageHandle, #0x3lal
 ImageHandle,#0xSblb, LSL #16
 ImageHandle, [sp, #efiLoadedImageProtocolGuid.D...
-ImageHandle, #Oxf ff f9562
 ImageHandle, [sp, #efiLoadedImageProtocolGuid.D...
 ImageHandle, #0x1ld2
 ImageHandle, [sp, #efiLoadedImageProtocolGuid.D...
@@ -729,12 +706,10 @@ ImageHandle,#0x3b72, LSL #48
 ImageHandle, [sp, #et1LoadedImageProtocolGuid.D...
 ImageHandle, [sp, #gBS]
 efiOpenProtocol, [ImageHandle, #0x118]
-gST, sp,#0x70
 ImageHandle, sp, #0x60
 w5,#0x1
 x4,#0x0
 x3, [sp, #local_88]
-x2, 9ST
 gST, ImageHandle
 ImageHandle, [sp, #local_88]
 efi0penProtocol
@@ -744,17 +719,11 @@ ImageHandle, #0x0
 LAB_00001698
 ImageHandle, sp, #0x70
 gST, ImageHandle
-RE and xdev
-BESSBIR ALSVVSsaraaARaNssBSIFALBV ASSaeruau
 uVarll = 0;
 efiImageHandle = ImageHandle;
 local_8 = (*efiOpenProtocol) (ImageHandle, &efiLoadedImageProtocolGuid, efiLoadedImageProtocol,
-ImageHandle, (EFI_HANDLE) 0x0, 1);
-if (local_8 == 0) {
 FUN_0000lelc((undefined *)
 L"EFI BootServices OpenProtocol call with loadedimageprotocol was successful: %p
-, &local_30, efiLoadedImageProtocol, efilmageHandle, uVarll,uVarl12,
-(ulonglong)efiOpenProtocol,in_x7);
 local_18 = *(EFI_HANDLE *)((longlong)local_30 + 0x18);
 local_20 = *(UINTN *)((longlong)local_30 + 0x48);
 local_58._0.4 = 0x964e5b22;
@@ -765,19 +734,14 @@ local_58[9] = '9';
 uStack_4e = '\0';
 uStack_4d = Oxa0;
 uStack_4c._0.1_ = Oxc9;
-uStack_4c._11. = 'i';
-uStack_4c._ 21 = 'r';
 uStack_4c. 31 =';';
 efiOpenProtocol = gBS->OpenProtocol;
 efiLoadedImageProtocol = &local_48;
 uVarl2 = 1;
 uVarll = 0;
 local_8 = (*efi0penProtocol) (local_18, (EFI_GUID *)local_58,efiLoadedImageProtocol, ImageHandle,
-(EFI_HANDLE) 0x0, 1);
-if (local_8 == 0) {
 FUN_00001le1c((undefined *)
 L"EFI BootServices OpenProtocol call with simplefilesystemprotocol was successf
-, &local_30, efiLoadImageProtocol, ImageHandle, uVarl1,uVarl2,
 (ulonglong)efiOpenPPotocol, in_x7);
 }
 peVar6 = *(code **)((longlong)local_48 + 8);
@@ -789,7 +753,8 @@ local_8 = (*pcVar6) (local_48);
 
 **arm64 UEFI quine RE and xdev**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 mov
@@ -811,13 +776,9 @@ add
 mov
 mov
 ldr
-MageHandle, [sp, #local_o
 ImageHandle, [sp, #local_8]
-ImageHandle, #0x0
 LAB_00001698
-ImageHandle, sp, #0x70
 gST, ImageHandle
-ImageHandle, 0x4000
 ImageHandle=>u_EFI_BootServices_OpenProtocol_c...
 Print
 ImageHandle, [sp, #loadedImageProtocol]
@@ -840,26 +801,18 @@ ImageHandle,#0x3b72, LSL #48
 ImageHandle, [sp, #local_5S0]
 ImageHandle, [sp, #gBS]
 efiOpenProtocol, [ImageHandle, #0x118]
-gST, sp, #0x58
 ImageHandle, sp, #0x48
 w5, #0x1
-x4, #0x0
 efilmaqeHandle, [sp
-armo4 LU
-RE and xdev
 #local 88
 quine
 = u"EFI Bo 0
 longlong Print (undefined * pa
-if (local_8 == 0) {
-Print ((undefined *)
 L"EFI BootServices OpenProtocol call with loadedimageproto
 &loadedImageProtocol, efiLoadedImageProtocol, efilmageHandle
 (ulonglong)efiOpenProtocol,in_x7);
 local_18 = loadedImageProtocol->DeviceHandle;
 local _ _20 = loadedImageProtocol->ImageSize;
-local_58.04 = oreeesi2e:
-local | 58.42 = Ox F
 local_ _58. “6.2. = 0x1ld2;
 local_58[8] = Ox8e;
 local_S8[9] = '9';
@@ -874,9 +827,6 @@ ppvVar7 = &local_48;
 uVarl3 = 1;
 uVarl2 = 0;
 local_8 = (*efiOpenProtocol) (local_18, (EFI_GUID *)local_58, ppvVa
-HF
-if (local_8 == 0) {
-Print ((undefined *)
 L"EFI BootServices OpenProtocol call with simplefilesyst
 , &LoadedImageProtocol, ppvVar7, ImageHandle, uVarl2, uVarl13,
 a
@@ -889,23 +839,20 @@ puVarl = &local_60;
 
 ###### **arm64 UEFI quine RE and xdev**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-r mageHandle,[sp, #9
 ldr efiOpenProtocol, [ImageHandle, #0x118]
 add gST, sp, #0x70
 add ImageHandle, sp,#0x60
 mov w5, #0x1
 mov x4,#0x0
-ldr x3, [sp, #local_88]
-mov x2, 9ST
 mov gST, ImageHandle
 ldr ImageHandle, [sp, #local_88]
 blr efi0penProtocol
 str ImageHandle, [sp, #local_8]
 ldr ImageHandle, [sp, #local_8]
-cmp ImageHandle, #0x0
 b.ne LAB_00001698
 add ImageHand1le, sp, #0x70
 mov gST, ImageHandle
@@ -925,10 +872,7 @@ mov ImageHand1le, #0x6459
 strh ImageHandle=>DAT_00006459, [sp, #local_54]
 mov ImageHandle, #0x11ld2
 strh ImageHandle, [sp, #local_52
-mov ImageHand le, #0x398e
 arm64 UEFI quine
-RE and xdev
-SINFSSBISRLIVASSSLVSALON4ASESSSEGEGHE
 EFI_STATUS local_8;
 gBS = gST->BootServices;
 efiLoadedImageProtocolGuid.Datal = OxSblb3lal;
@@ -943,13 +887,10 @@ efiLoadedImageProtocolGuid.Data4[5] = ‘'i';
 efiLoadedImageProtocolGuid.Data4[6] = 'r';
 efiLoadedImageProtocolGuid.Data4[7] = ';';
 efiOpenProtocol = gBS->OpenProtocol;
-efiLoadedImageProtocol = &l@adedimagerrotocul ;
 uVarl3 = 1;
 uVarl2 = 0;
 efiImageHandle = ImageHandle;
 local_8 = (*efiOpenProtocol) (ImageHandle, &efiLoad\dImageProtocol
-ImageHandle, (EFI_HANDLE) 0x0, 1);
-if (local_8 == 0) {
 Print((undefined *)
 L"EFI BootServices OpenProtocol call with loadedimagepro
 &loadedImageProtocol, efiLoadedImageProtocol, efilmageHand
@@ -961,25 +902,22 @@ local_58._4 2 = 0x6459;
 local _ _58. “62. = 0x1lld2;
 local_S8[8] = Ox8e;
 local_58[9] = '9';
-uCtrele An tN,
-en
 ```
 
 ## Slide 52
 
 ###### **arm64 UEFI quine RE and xdev**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-MOV MageHand le, #Oxsla
 movk ImageHandle,#0xSblb, LSL #16 gBS = gST->BootServices;
 str ImageHandle, [sp, #efiLoadedImageProtocolGuid.D... efiLoadedImageProtocolGuid.Datal = OxSblb3lal;
 mov ImageHand le, #Oxf ff f9562 efiLoadedImageProtocolGuid.Data2 = 0x9562;
 strh ImageHandle, [sp, #efiLoadedImageProtocolGuid.D... efiLoadedImageProtocolGuid.Data3 = Ox11d2;
 mov ImageHandle, #0x11d2 efiLoadedImageProtocolGuid.Data4[0] = Ox8ef]
 strh ImageHandle, [sp, #efiLoadedImageProtocolGuid.D... efiLoadedImageProtocolGuid.Data4[1] = '?';
-mov ImageHand le, #0x3f8e efiLoadedImageProtocolGuid.Data4[2] = '\0';
 movk ImageHandle,#0xa000, LSL #16 efiLoadedImageProtocolGuid.Data4[3] = Oxa0;
 movk ImageHandle,#0x69c9, LSL #32 efiLoadedImageProtocolGuid.Data4[4] = Oxc9;
 movk ImageHandle,#0x3b72, LSL #48 efiLoadedImageProtocolGuid.Data4[5] = 'i';
@@ -991,9 +929,7 @@ add ImageHandle, sp, #0x60 uVarl2 = 1;
 mov w5, #0x1 uVarll = 0;
 mov x4,#0x0 efilmageHandle = ImageHandle;
 ldr x3, [sp, #local_88] local_8 = (*efiOpenProtocol) (ImageHandle, &efiLoadedImageProtocolGuid, efiLoadedImageProtoc
-mov x2, 9ST ImageHandle, (EFI_HANDLE) 0x0, 1);
 mov gST, ImageHandle if (local_8 == 0) {
-ldr ImageHandle, [sp, #local_88] Print ((undefined *)
 bir efi0penProtocol L"EFI BootServices OpenProtocol call with loadedimageprotocol was successful: %p
 str ImageHandle,[sp, #local_8] &local_30, efiLoadedImageProtocol, efilmageHandle, uVarll,uVarl2, (ulonglong)efi0pent
 ldr ImageHandle, [sp, #local_8] in_x7);
@@ -1005,22 +941,17 @@ adrp ImageHandle, 0x4000 local_58._6 2. = Ox1ld2;
 add ImageHandle=>u_EFI_BootServices_OpenProtocol_c... = u"EFI BootServices OpenPro local 58[8] = Ox8e;
 bl Print longlong Print (undefined * pa local 58[9] = '9';
 ldr ImageHandle, [sp, #local_30] uStack_4e = '\0';
-1dr ImageHandle, [ImaqeHandle, #0x18 Ad Ont
 armo4 U quine
-RE and xdev
 ```
 
 ## Slide 53
 
 **arm64 UEFI RE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2SxRae
-FPESSSSEBYSBLRESRBSSSBHUSSSS8S8sEsas
-Oo
-FOorF+rOoOOoOocoO
 00001410 e2
 00001414 20
 00001418 01
@@ -1068,12 +999,9 @@ ER
 :
 >
 8
-°o
 8
 00001424 e0 47 00 f9
-478 ef)
 x4,#0x0
-x3, [sp, #local_78]
 x2, param_1
 param_1,0x6000
 param_2=>EfiLoadedImageProtocolGuid, param_1,#0x8
@@ -1081,14 +1009,10 @@ param_l,[sp, #local_78]
 x6
 param_l,[sp, #local_8]
 param_l,[sp, #local_8]
-param_1,#0x0
 LAB_00001658
 param_1,sp,#0x60
-param_2,param_1
 param_1,0x4000
 param_l=>u_EFI_BootServices_OpenProtocol_ca_00... = u"
-FUN_00001ddc long]
-param_l,[sp, #Stack[-0x30] ]
 param_1,[param_1, #0x18]
 param_l,[sp, #local_20]
 param_l,[sp, #Stack[-0x30)] ]
@@ -1097,16 +1021,11 @@ param_l,[sp, #local_28]
 param_l,[sp, #Stack[-0x30)] ]
 param_1,param_1,#0x40
 param_l,[sp, #local_48]
-param_l,sp,#0x48
-param_2,param_1l
 param_1,0x4000
 param_l=>u_Base_Address_of_Image:_%p_00004d98....
-FUN_00001dde
 param_l,[sp, #local_10]
 x6, [param_l1, #0x118]
-param_1,sp,#0x58
 wS, #0x1
-x4, #0x0
 x3, [sp, #local_78]
 ppvVar6, param_1
 param_1,0x6000
@@ -1131,7 +1050,6 @@ uVarI¥ = 1;
 uVarl3 = 0;
 pvVar9 = param_l;
 local_8 = (*pEVarl17) (param_1,&EfiLoadedImageProtocolGuid, ppvVar6, param_1, (EF
-if (local_8 == 0) {
 FUN_00001ddc ((undefined *)
 L"EFI BootServices OpenProtocol call with loadedimageprotoco
 , &pEStack_30, ppvVar6, pvVar9, uVarl3, uVarl15, (ulonglong)pEVarl17,
@@ -1145,8 +1063,6 @@ Interface = &local_38;
 uVarl5 = 1;
 uVarl3 = 0;
 local_8 = (*pEVar17) (local_20, &EfiSimpleFileSystemProtocolGuid, Interface,
-mela
-if (local_8 == 0) {
 FUN_00001ddc ((undefined *)
 L"EFI BootServices OpenProtocol call with simplefilesystemp
 , &pEStack_30, Interface, param_1,uVarl3,uVar15, (ulonglong)pE
@@ -1185,24 +1101,17 @@ if (local 8 == 0
 
 **Final arm64 quine: Self-replicating UEFI app Written in arm64 assembly** **<u>https://youtu.be/C-jaMoCwdJE</u>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Interactive Shell v2.1
-EDK II
 UEFI v2.60 (EDK II, 0x@0010000)
-Mapping table
-FS@: Alias(s):HDOb:;BLK1:
 PciRoot (0x0) /Pci(@x1, @x@) /HD(1,MBR, @xBE1AFDFA, 0x3F , @xFBFC1)
 BLK3: Alias(s):
-VenHw( F9B94AE2-8BA6—409B-9D56-B9B417F53CB3)
-BLK2: Alias(s):
-VenHw(8047DB4B-7E9C—4C@C-8EBC-DFBBAACACESF )
 BLK@: Alias(s):
-PciRoot (0x0) /Pci(@x1, 0x0)
 Press ESC in 3 seconds to skip startup.nsh or any other key to continue.
 Shell> fs:
-FS@:\>
 Final arm64 quine:
 Self-replicating UEFI app
 Written in arm64 assembly
@@ -1213,7 +1122,8 @@ https://youtu.be/C-jaMoCwd
 
 ## **arm64 UEFI debugging qemu & gdb**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 /Users/nika/uefi_testing/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder .c
@@ -1221,10 +1131,8 @@ https://youtu.be/C-jaMoCwd
 Math worker functions.
 Copyright (Cc) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
 SPDX-License-Identifier:
-**/
 BSD-2-Clause-Patent
 #include "BaseLibInternals.h"
-[**
 Divides a 64-bit unsigned integer by a 32-bit unsigned integer and generates
 arm64 UEFI debugginc
 a 64-bit unsigned result and an optional 32-bit unsigned remainder.
@@ -1234,12 +1142,10 @@ qemu & gdb
 <DivU64x32Remainder+8>
 <DivU64x32Remainder+12>
 <DivU64x32Remainder+16>
-<DivU64x32Remainder+2Q0>
 <DivU64x32Remainder+24>
 <DivU64x32Remainder+28>
 <DivU64x32Remainder+32>
 <DivU64x32Remainder+36>
-<DivU64x32Remainder+4Q>
 <DivU64x32Remainder+44>
 <DivU64x32Remainder+48>
 <DivU64x32Remainder+52>
@@ -1264,12 +1170,9 @@ wi, [sp, J
 x2, [sp, J
 <DebugAssertEnabled>
 w0, wQ,
-w,
 <DivU64x32Remainder+72>
-w0, Csp, J
 wd,
 <DivU64x32Remainder+72>
-x@, <CpuBreakpoint+912>
 x2, xO,
 lexec No process In:
 (No debugging symbols found in UEFI_bb_disk/UefiQuineAarch64. efi)
@@ -1286,9 +1189,7 @@ add symbol table from file "/Users/nika/uefi_testing/edk2/Build/BareBonesPkg/DEB
 .text_addr = 0x7875e000
 .data_addr = 0x78762000
 Reading symbols from /Users/nika/uefi_testing/edk2/Build/BareBonesPkg/DEBUG_GCC/Aarch64/UefiQuineAarch64.debug...
-(gdb)
 .data
--reloc
 L??
 PC:
 2?
@@ -1470,7 +1371,8 @@ Source: Vincent Zimmer, “EFI Byte Code,” Saturday, August 1, 2015, https://v
 
 **SMM Callout ?????**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EFI_LSTATUS _ fastcall ChildSwSmiHandler(
@@ -1501,9 +1403,6 @@ if ( *(_DWORD *)CommBuffer == 1 )
 Buffer = 0164;
 if ( gBS->LocateHandleBuffer(ByProtocol, &EFI_ATA_PASS THRU_PROTOCOL_GUID, @i164, &NoHandles, (EFI_HANDLE **)&Buffer)
 {
-v5 = @x8eeee2220000000E 164;
-?
-O000013Al ChildSwSmiHandler:27 (13Al)
 ```
 
 ## Slide 73
@@ -1636,7 +1535,8 @@ Necessary conditions for callout: CommBuffer != NULL CommBufferSize != NULL firs
 
 Hell yeah
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EFI_STATUS _ fastcall ChildSwSmiHandler(
@@ -1666,7 +1566,6 @@ Buffer = 0164;
 if ( gBS->LocateHandleBuffer(ByProtocol, &EFI_ATA_PASS THRU PROTOCOL GUID, @i64, &NoHandles, (EFI_HANDLE **)&Buffer)
 {
 v5 = @x8eeeeeeReR00000EUI64;
-+
 000013Al ChildSwSmiHandler-27 (13Al) |
 ```
 
@@ -1696,17 +1595,15 @@ v5 = @x8eeeeeeReR00000EUI64;
 
 - Back to the drawing board
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SMM Callout v.1
 Chipsec
 ¢ Back to the drawing board
-<> ¢
-=O
 <> Code
 ARM
-&s github.com/chipsec/chipsec/issues/461
 chipsec / chipsec Q Type (J) to search
 © Issues 52 3] Pullrequests 6 ) Discussions ©) Actions [Fj Projects 3 © wiki © Sec
 support? #461
@@ -1761,10 +1658,10 @@ C. Write to I/O ports 0xb2 and 0xb3
 
 ###### **SMM Callout v. 2 Chipsec? Never heard of her.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-[FS8=\> Load SmmCal lLoutDriver.efi
 Locate Handle Buffer address: @90000007EED@110 SMM Callout v.2
 Locate Handle Buffer offset: 800000007EED0108
 EFI SYSTEM TABLE pointer address: 7E5EC018 Chipsec? Never heard of her.
@@ -1803,7 +1700,8 @@ SMM communication protocol is located at 7E6CB4a8
 
 ###### **SMM Callout v. 2 Chipsec? Never heard of her.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 [FS@=\%> Load SmmCal LoutDriver.efi S C
@@ -1822,11 +1720,9 @@ Testing ... confirming gBS function pointer LocateHandleBuffer is at: 7EEF7@98
 Vulnerable gBS LocateHandleBuffer function handler is at: 7EED?@AF
 Size of shellcode sagg880000000091
 shellcode address: 7EED@143
-alt shellcode address: 880088080 7EED@BE8
 SMM Base2 protocol is located at 7E6CBG@Ea
 SMM communication protocol is Located at 7E6CB480
 A4llocatePool for Smm Comm Buffer successful, located at: 7E5B5018
-Testing sim_comm_buffer_offset address: 7E6CB176
 Testing smm_comm_buffer_sz_offset address: 7E6CB188
 comm buffer data is located at address: 7EED@aCC
 SmmComm Communicate call returned status: 6x@G8088GF DataSize is: 1C

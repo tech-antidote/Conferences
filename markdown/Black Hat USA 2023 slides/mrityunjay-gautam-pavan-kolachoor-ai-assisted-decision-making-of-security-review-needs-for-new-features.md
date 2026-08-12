@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Mrityunjay Gautam & Pavan Kolachoor_AI Assisted Decision Making of Security Review Needs for New Features.pdf"
 pages: 45
 sha256: "b577a213940fbe2e6691f168d00efb46be3e7fce214410188d26cca903591ba6"
-text_chars: 13038
-ocr_pages: 9
+text_chars: 11301
+ocr_pages: 8
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:20:58Z"
+converted_at: "2026-08-12T04:16:23Z"
 ---
 # AI Assisted Decision Making of Security Review Needs for New Features
 
 **Speakers:** Mrityunjay Gautam, Pavan Kolachoor  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Mrityunjay Gautam & Pavan Kolachoor_AI Assisted Decision Making of Security Review Needs for New Features.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -29,10 +36,10 @@ converted_at: "2026-08-11T21:20:58Z"
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 LUISA &
 AUGUST 9-10, 20253
 BRIEFINGS
@@ -266,12 +273,10 @@ Training Data Collection Because no training is possible without the right kind 
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Engineering Text Sources
 PDF :
 = Confluence
@@ -408,14 +413,12 @@ Algorithm
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Convolutional Neural Network
 Dog
-= ee ee Not dog
 Input image Convolution ReLU layer Pooling layer *, FJ Output
 layer # classes
 Fully connected
@@ -516,58 +519,59 @@ Google Docs
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 71/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 20253
-Sample Word Vectors over Apache Spark
->>> for elem in db_wv.most_similar("dataframe" ): mernap({0.9310919", 050785744, 0.278117, -3.5078952 , -1. 3010696,
-— = 0255014 , -0.4637812 , -0.28312248, 0.97335374, 2.3100562 ,
-s .731182 , -1.844407 , 0©.8353111 , -0.63139266, ©.00630491,
-p run 1 ( elem) 364567, -0.59393615, 1.6423836 , -0.8014536 , 1.4345028 ,
-643103 , 0.22679166, 1.4599513 , 0.7172914 , 2.044413 ,
-7967019 , 0.94810575, 0©.4200268 , 2.9429126 , -@.8506799 ,
-° 74401563, -1.5902468 , -0.23007932, -0.32131946, 0.462017 ,
-333657, -0.62744874, 0©.09188309, 0.987241 , 0.1586956 ,
-d ¥ ! 48161167, -0.708081 , 0.6901429 , -0.88133466, -1.6377207 ,
-ata ranes ’ 0) ° 6118282675743103) 0239885 , 0.3850151 , -1.6293939 99386686, .39724597,
-8518817 , .15128905, 0.5563997 3667917 , -1.8927845 ,
-d ' 411923, -1.7477007 , -0.8300083 19485356, 1.8997799 ,
-ataset > 0) Ps 55197674036026) -06248 , -1.3756353 , -1.1744969 0502687 , 0.3466141 ,
-. 76184255, -0.03475898, 3.770701 -32482 .2160301 ,
-l ! 6) 078 29189300 3 Fs 9291667 , 0.12784757, 1.1212947 .7264751 . 18605056,
-co umn 3 e 55 5 .1273634 , 0.04766518, -1.0251166 , -1.9720559 1214161 ,
-83759 ,_--1.1744149 , -0.06331337, -2.3759587 .47384828,
-d ' 6) 50923 341 5 1 268005 .74272263, -2.2255695 , -1.2124482 , -1.9246694 600604 ,
-pan a r) ° .3197237 , -4.0106916 , -0.6822084 , -2.104292 .23427726,
-0888906 , 2.0269437 , 3.858152 , -0.7961048 40143135,
-panda_dataframe', 0.5089078545570374) "441909 | -0,79080054, 018853069 , 03444723 | 0.62482643,
-,
--4761695 , -0.61990714, -5315938 , -294078 -14454891,
-pandas’, 0.5045510530471802) “pasdsze | 2.2908278 | 206970937 | 0.7407337 | 14873685 ,
-- 7496026 1.3792899 -4161917 , + 7929713 -8746275 ,
-sparkdataframe', 0.4986857771873474) “Geaces2 | 2.0959942 , 1.1508056 , 4.208189 | -1-1084874 ,
-2
-. 73587084, -1.0648205 -9000793 , + 2424848 -08619205,
-Z
-index_multiindex', 0.498322993516922) “aaesb46 | 0.62364346, 0150121385, 05659973 | 0.239006%3,
-- 7856058 , -3.2071939 , -759164 , -8611768 - 17939295,
-python', 0.49831458926200867) "17962093, 113623391 , -0.9124389 | 17653879 | 09030031 ,
--2861032 , -1.105925 , -6695298 , -5895758 -436935 ,
-ta ble ' 0 49779176712036133 .2793896 , -2.7052615 , -0.41566476, -0.2550927 .9705007 ,
-3 ° .4212031 , 1.4761783 , 0.830782 , -1.174425 .44477263,
--8022616 , -0.21900089, -6940251 , -0655376 -0880742 ,
-(
-(
-(
-(
-(
-(
-(
-(
-(
-(
+AutoSpill - Investigation
+
+1. Autofill request from
+Android to autofill service
+
+[diagram, top to bottom]
+FillRequest
+  |
+FillContext
+  FocusedID: 1073741826:196608
+  |
+AssistStructure
+  |
+WindowNode
+  |
+1. RootView
+  |
+  +-- 1.1 NativeView                      +-- 1.2 WebView
+      ChildrenCount: 2                        ChildrenCount: 2
+      AutoFillId: 1073741829                  AutoFillId: 1073741826
+      WebDomain: null                         WebDomain: m.facebook.com
+
+1.1.1 Username                    1.1.2 Password
+AutoFillId: 1073741824            AutoFillId: 1073741825
+Dimension: 300x100                Dimension: 300x100
+AutofillType: 1                   AutofillType: 1
+AutofillHints: null               AutofillHints: null
+WebDomain: null                   WebDomain: null
+AutofillOptions: null             AutofillOptions: null
+HtmlInfo: null                    HtmlInfo: null
+ViewID: 2131231192                ViewID: 2131231055
+InputType: 1 (text)               InputType: 129 (password)
+
+1.2.1 Username                            1.2.2 Password
+AutoFillId: 1073741826:196608             AutoFillId: 1073741826:196609
+Dimension: 300x100                        Dimension: 300x100
+AutofillType: 1                           AutofillType: 1
+AutofillHints: on                         AutofillHints: on
+WebDomain: null                           WebDomain: null
+AutofillOptions: null                     AutofillOptions: null
+HtmlInfo: [Pair{name email},              HtmlInfo: [Pair{name pass},
+Pair{type email},                         Pair{type password},
+Pair{label Mobile                         Pair{label Password},
+number or email address},                 Pair{ua-autofill-hints null},
+Pair{ua-autofill-hints null},             Pair{id m_login_email},
+Pair{id m_login_email},                   Pair{maxLength 2147483647}]
+Pair{maxLength 2147483647}]
+ViewID: -1                                ViewID: -1
+InputType: 0                              InputType: 0
 ```
 
 ## Slide 36
@@ -576,55 +580,25 @@ ta ble ' 0 49779176712036133 .2793896 , -2.7052615 , -0.41566476, -0.2550927 .97
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Visualizing the Word Vectors in TWO Dimensions
 Udf
-i Python_Udf
-e Python_Udfs
-. Scalar
-. Panda_Udf
-~ Panda_Udf
-e Pandas_Udf .
-. Type_Hint
-. Python_Pys
-ivesparksubmittests
 Dataframe Pythonic
-° e'y @ Doctests
-@ Pandas Namedtuple o Mypy
-e A Paskcontexttests e yarrow
 e Pyspark_Panda
-@ Cloudpickle  Pandasonspark
-@ Panda e Sphinx
-eFython_Docs Koalas
-* Pyspark\e Pelately
 Spark
 e
-e ol
-@ Sparkr . Link_Spark
 Rdd
-@
 A Createdataframe
-@ [opandas
-- Panda_ Bd tase |
 Dataframes
 Panda
-uy Dataframe
-> Sparkdatafrarrre
 Astype
-= Df_Df Surat RAER Gea spar
-. Python
-. Df
 Dataset
 e Groupby Function Format °
-- Input
-. Sal A Data
 e Japle Delta
 Link_Spark
-- 7 Column ¢ Parquet
 Row
 ```
 
@@ -661,11 +635,10 @@ Negative
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Confusion Matrix
 precision
 required 0.98
@@ -675,7 +648,6 @@ macro avg
 weighted avg
 recall
 0.97
-©.99
 fl-score
 0.98
 0.99
@@ -697,13 +669,11 @@ Support
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Confusion Matrix
-SSSSSSSSSssSsessssssseses=sa== | _ 1s 35ms/step
 precision
 required 0.98
 notrequired 0.98
@@ -711,8 +681,6 @@ accuracy
 macro avg
 weighted avg
 recall
-©.97
-©.99
 fi-score support
 264
 436
@@ -793,10 +761,10 @@ Spark NLP Pipeline Clairvoyant
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 USA &
 Questions?
 #BHUSA @BlackHatEvents

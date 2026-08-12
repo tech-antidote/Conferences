@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Christine Fossaceca,Bill Marczak_Sweet QuaDreams or Nightmare Before Christmas Dissecting an iOS 0-Day.pdf"
 pages: 90
 sha256: "ab8d7d71ca2362a2db6f9d14148e94d1e4360808c30ad420e1883483e0733c6f"
-text_chars: 19744
+text_chars: 18915
 ocr_pages: 17
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:11:52Z"
+converted_at: "2026-08-12T04:02:39Z"
 ---
 # Sweet QuaDreams or Nightmare Before Christmas Dissecting an iOS 0-Day
 
 **Speakers:** Christine Fossaceca, Bill Marczak  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Christine Fossaceca,Bill Marczak_Sweet QuaDreams or Nightmare Before Christmas Dissecting an iOS 0-Day.pdf` (90 pages)
+
 
 ## Slide 1
 
@@ -43,20 +50,19 @@ converted_at: "2026-08-11T21:11:52Z"
 
 ## **About Christine**
 
-```
+\```
 @x71n3
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 About Christine
 ee
-S\N
 /home/christine $ c
 tr Th PODCAST
 A @x71n3
-—~
 ```
 
 ## Slide 4
@@ -67,7 +73,8 @@ A @x71n3
 
 **About Bill**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 About Bill
@@ -95,14 +102,13 @@ Focus
 
 CVE-Whatever: Perpetual Safari/WebKit Exploit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 iPhone Initial Access
 eee etisalat = 2:41PM
 Messages (6) InfoSMS
-epail Le! Gudad ye Says 5! awl
-https:// : Usall naa ot
 sms.webadv.co/
 9573305s/
 CVE-Whatever: Perpetual
@@ -117,14 +123,13 @@ CVE-Whatever: Perpetual Safari/WebKit Exploit
 
 Target: Ahmed Mansoor UAE Human Rights Activist
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 iPhone Initial Access
 eee etisalat = 2:41PM
 Messages (6) InfoSMS
-epail Le! Gudad ye Says 5! awl
-https:// : Usall naa ot
 sms.webadv.co/
 9573305s/
 CVE-Whatever: Perpetual Target: Ahmed Mansoor
@@ -141,7 +146,8 @@ Safari/WebkKit Exploit UAE Human Rights Activist
 
 **CVE-2021-30860: Integer overflow in CoreGraphics**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 iPhone Initial Access with Zero Clicks
@@ -302,7 +308,8 @@ Discovery of the Attack & Samples
 
 **Microsoft Threat Intelligence is constantly tracking ITW threats**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ...meanwhile at Microsoft
@@ -363,15 +370,13 @@ Discovery of the Attack & Attribution: Sometimes Samples it's Easy!
 
 **The Mercenary Spyware Industry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Mercenary Spyware Industry
-COD
 nso GROUP
 }
-#4 intellexa
-CYTRUY.
 CYBER - INTELLI GENCE - SOLUTIONS
 ```
 
@@ -379,7 +384,8 @@ CYBER - INTELLI GENCE - SOLUTIONS
 
 **The Industry in the News**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Industry in the News
@@ -400,7 +406,8 @@ have been targeted by Pegasus spyware
 
 **The Industry in the News**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Industry in the News
@@ -494,14 +501,14 @@ Attribution: Sometimes it's Easy!
 
 ###### **Apple WWDC 2016**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 iOS Secure Boot Chain
 Apple Public Key
 Low-Level
 Bootloader Kernel
-(HR E))
 Apple WWDC 2016
 ```
 
@@ -553,7 +560,7 @@ Apple WWDC 2016
 
 ## **Dylib Injection**
 
-```
+\```
 //lib injection code (thanks newosxbook.com)
 //grab the task port for the target pid
 task_t remoteTask;
@@ -564,7 +571,7 @@ mach_vm_allocate( remoteTask, &remoteMem64, MEM_SIZE, VM_FLAGS_ANYWHERE);
 mach_vm_write(remoteTask, remoteMem64, ptr_to_shellcode,len);
 //make memory executable
 vm_protect(remoteTask, remoteMem64, SIZE, FALSE,VM_PROT_READ|VM_PROT_EXECUTE);
-```
+\```
 
 ## Slide 56
 
@@ -582,13 +589,13 @@ vm_protect(remoteTask, remoteMem64, SIZE, FALSE,VM_PROT_READ|VM_PROT_EXECUTE);
 
 ## **Dylib Injection**
 
-```
+\```
 //lib injection code (thanks newosxbook.com)
 //grab the task port for the target pid
 task_t remoteTask;
 task_for_pid(mach_task_self(), pid, &remoteTask);
 //allocate memory
-```
+\```
 
 **`mach_vm_allocate( remoteTask, &remoteMem64, MEM_SIZE, VM_FLAGS_ANYWHERE);`** **write shellcode** **`//write shellcode into memory mach_vm_write(remoteTask, remoteMem64, ptr_to_shellcode,len); //make memory executable vm_protect(remoteTask, remoteMem64, SIZE, FALSE,VM_PROT_READ|VM_PROT_EXECUTE);`**
 
@@ -596,13 +603,13 @@ task_for_pid(mach_task_self(), pid, &remoteTask);
 
 ## **Dylib Injection**
 
-```
+\```
 //lib injection code (thanks newosxbook.com)
 //grab the task port for the target pid
 task_t remoteTask;
 task_for_pid(mach_task_self(), pid, &remoteTask);
 //allocate memory
-```
+\```
 
 **`mach_vm_allocate( remoteTask, &remoteMem64, MEM_SIZE, VM_FLAGS_ANYWHERE); //write shellcode into memory mach_vm_write(remoteTask, remoteMem64, ptr_to_shellcode,len);`** **make executable** **`//make memory executable vm_protect(remoteTask, remoteMem64, SIZE, FALSE,VM_PROT_READ|VM_PROT_EXECUTE);`**
 
@@ -610,21 +617,21 @@ task_for_pid(mach_task_self(), pid, &remoteTask);
 
 ## **Dylib Injection**
 
-```
+\```
 //lib injection code continued
 //shellcode contains dlopen pointer callback
 uint64_t addrOfDlopen = (uint64_t) dlopen;
 //dylib is on disk
 *path_to_dylib = “/path/to/mydylib”
-```
+\```
 
-```
+\```
 //when remote thread executes
-```
+\```
 
-```
+\```
 callBackFunction(*addrOfDlopen, *path_to_dylib)
-```
+\```
 
 ## Slide 61
 
@@ -632,21 +639,21 @@ callBackFunction(*addrOfDlopen, *path_to_dylib)
 
 **Shellcode sets up a stack frame for a call to DLOPEN**
 
-```
+\```
 //lib injection code continued
 //shellcode contains dlopen pointer callback
 uint64_t addrOfDlopen = (uint64_t) dlopen;
 //dylib is on disk
 *path_to_dylib = “/path/to/mydylib”
-```
+\```
 
-```
+\```
 //when remote thread executes
-```
+\```
 
-```
+\```
 callBackFunction(*addrOfDlopen, *path_to_dylib)
-```
+\```
 
 ## Slide 62
 
@@ -654,10 +661,10 @@ callBackFunction(*addrOfDlopen, *path_to_dylib)
 
 **`//lib injection code continued //shellcode contains dlopen pointer callback uint64_t addrOfDlopen = (uint64_t) dlopen; //dylib is on disk` Target binary loads dylib in its own** **`*path_to_dylib = “/path/to/mydylib”` context, arbitrary code execution achieved**
 
-```
+\```
 //when remote thread executes
 callBackFunction(*addrOfDlopen, *path_to_dylib)
-```
+\```
 
 ## Slide 63
 
@@ -743,13 +750,13 @@ callBackFunction(*addrOfDlopen, *path_to_dylib)
 
 - **Step 2: Run queries, where %s is supplied by C&C:**
 
-```
+\```
 DELETE FROM CalendarItemChanges WHERE record IN (SELECT
 owner_id FROM ParticipantChanges WHERE email = "%s");
 DELETE FROM ParticipantChanges WHERE email = "%s";
 DELETE FROM Identity WHERE ROWID IN (SELECT DISTINCT
 identity_id FROM Participant WHERE email = "%s");
-```
+\```
 
 • **Step 3: Vacuum the DB**
 
@@ -767,56 +774,87 @@ A Theory of the Exploit
 
 ## Slide 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 74/100 on the text kept, 58/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BEGIN: VCALENDAR
-PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
-VERSION:2.0
-BEGIN: VEVENT
-DTEND; TZID=Europe/London: 202009 i:
-ORGANIZER ) = EMAI = .con:
-fags Ma feyr {eves ol ey)
-a
-DTSTAMP : 202103
-LOCATION: Home
-SEQUENCE: 1
-SUMMARY :Meeting
-LAST-MODIFIED:
-DTSTART ; TZID=Europe/London: 202009 i
-CREATED: 202103,
-ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
-EMAIL= icloud. com :
-principal/
-DESCRIPTION] ]>:x
-ATTENDEE<![CDATAL:Notes
+The bottleneck of traditional TLV-format fuzzing
+Classic Fuzzing
+
+[left Wireshark packet — Frame 817]
+Frame 817: 29 bytes on wire (232 bits), 29 bytes captured (232 bits) on interface bluetooth0, id 0
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+    Length: 20
+    CID: L2CAP Signaling Channel (0x0001)
+    Command: Configure Request
+        Command Code: Configure Request (0x04)
+        Command Identifier: 0x01
+        Command Length: 16
+        Destination CID: Dynamically Allocated Channel (0x0045)
+        0000 0000 0000 000. = Reserved: 0x0000
+        .... .... .... ...0 = Continuation Flag: False
+        Option: MTU
+            Type: Maximum Transmission Unit (0x01)
+            Length: 2
+            MTU: 0
+        Option: MTU
+            Type: Maximum Transmission Unit (0x01)
+            Length: 2
+            MTU: 0
+        Option: MTU
+            Type: Maximum Transmission Unit (0x01)
+            Length: 2
+            MTU: 0
+
+[middle Wireshark packet — Frame 2500]
+Frame 2500: 45 bytes on wire (360 bits), 45 bytes captured (360 bits) on interface bluetooth0, id 0
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+    Length: 36
+    CID: L2CAP Signaling Channel (0x0001)
+    Command: Command Reject
+    Command: Unknown command
+        Command Code: Unknown (0x00)
+        Command Identifier: 0x00
+        Command Length: 0
+        Unknown Command Code
+            [Expert Info (Warning/Protocol): Unknown Command Code]
+
+[hex dump]
+02 02 00 1b 01 17 01 5d  00 03 2f 05 23 01 01 41   .......] ../.#.A
+41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41   AAAAAAAA AAAAAAAA
+(remaining rows all 41 41 ... = AAAAAAAA AAAAAAAA)
+
+[right graphic] cartoon of a confused person at a monitor reading "USELESS FUZZ"
+Documents
+A/V Remote Control Profile 1.6.2
+Bluetooth
+SPECIFICATIONS AND DOCUMENTS
+Core Specification 5.4
 ```
 
 ## Slide 71
 
 **Event added >6 months after it ended – backdated!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BEGIN: VCALENDAR
 PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
-VERSION:2.0
 BEGIN: VEVENT
 DTEND; TZID=Europe/London: 202009 i:
-ORGANIZER ) = EMAI = .con:
-fags Ma feyr {eves ol ey)
-a
 DTSTAMP : 202103
 LOCATION: Home Event added >6 months
-SEQUENCE :1 .
-~
 SUMMARY :Meeting after it ended — backdated!
-LAST-MODIFIED ; iin
-DTSTART ; TZID=Europe/London: 202009 fj i
 CREATED: 20210.
 ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
-EMAIL= icloud. com :
 principal/
 DESCRIPTION] ]>:x
 ATTENDEE<![CDATAL:Notes
@@ -828,31 +866,20 @@ ATTENDEE<![CDATAL:Notes
 
 **Closing and opening "CDATA" tags!!!!!!!!!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BEGIN: VCALENDAR
 PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
-VERSION:2.0
 BEGIN: VEVENT
 DTEND; TZID=Europe/London: 202009 i:
-ORGANIZER ) = EMAI = .con:
-fags Ma feyr {eves ol ey)
-a
 DTSTAMP : 202103
 LOCATION: Home Event added >6 months
-SEQUENCE :1 .
-~
 SUMMARY :Meeting after it ended — backdated!
-LAST-MODIFIED ; iin
-DTSTART ; TZID=Europe/London: 202009 fj i
 CREATED: 20210.
 ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
-EMAIL= icloud. com :
 principal/
-DESCRIPTION] ]>¢%
-Mine  . ———.|Closingandopening |
-eee pal/
 ATTENDEE<! [CDATAL | Mtert@S
 ```
 
@@ -860,7 +887,7 @@ ATTENDEE<! [CDATAL | Mtert@S
 
 ### **CDATA who???**
 
-```
+\```
 <?xml version="1.0" encoding="utf-8"?>
 [...]
  <d:calendar-data><![CDATA[
@@ -871,7 +898,7 @@ ATTENDEE<! [CDATAL | Mtert@S
  ATTENDEE<![CDATA[:Notes
 ]]></d:calendar-data>
  [...]
-```
+\```
 
 ## Slide 74
 
@@ -891,10 +918,10 @@ ATTENDEE<! [CDATAL | Mtert@S
 
 - **Hook the SAX callback when an element is found:**
 
-```
+\```
 -[CoreDAVXMLElementGenerator
 parser:didStartElement:namespaceURI:qualifiedName:attributes:]
-```
+\```
 
 ## Slide 77
 
@@ -908,7 +935,8 @@ parser:didStartElement:namespaceURI:qualifiedName:attributes:]
 
 **Can We Test Against a Server?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Can We Test Against a Server?
@@ -916,7 +944,6 @@ Can We Test Against a Server?
 <> Code ©) Issues 47 3% Pull
 The Calendar and Contacts Server.
 @ www.calendarserver.org
-B[8 ~Apache-2.0 license
 ```
 
 ## Slide 80
@@ -941,29 +968,92 @@ B[8 ~Apache-2.0 license
 
 **Oh yeah, updated once!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BEGIN: VCALENDAR
-PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
-VERSION:2.0
-BEGIN: VEVENT
-DTEND; TZID=Europe/London: 202009 i:
-ORGANIZER ) = EMAI = .con:
-fags Ma feyr {eves ol ey)
-UID:
-DTSTAMP: 202103
-| OCATTON: Home Oh yeah, updated once!
-SEQUENCE:1
-SUMMARY : Meeting
-LAST-MODIFIED:
-DTSTART ; TZID=Europe/London: 202009 i
-CREATED: 202103,
-ATTENDEE ; CN={; CUTYPE=INDIVIDUAL; PARTSTAT=ACCEPTED; ROLE=CHAIR;
-EMAIL= icloud. com :
-principal/
-DESCRIPTION] ]>:x
-ATTENDEE<![CDATAL:Notes
+Disrupting the state machine to discover new Bluetooth vulnerabilities
+
+AVRCP
+
+[flowchart]
+Start AVRCP Browsing Setup
+SDP Query: Verify Browsing Capability
+
+Protocol Stack Dependencies
+  A2DP Audio Streaming
+    AVDTP - Audio/Video Distribution Transport Protocol
+  AVRCP Control Commands
+    AVCTP - Audio/Video Control Transport Protocol
+    CMD
+
+Technical Points
+  AVDTP (L2CAP-based):
+  - Audio transport
+  - Codec negotiation
+  - Media packetization
+
+  AVCTP (L2CAP-based):
+  - Control framing
+  - Transaction management
+  - Browse multiplexing
+
+Browsing Channel Established
+
+Channel Maintenance
+  Monitor AVDTP Channel Health
+  Browsing Channel Inactive?
+  Yes -> Terminate Browsing Channel
+  NO -> Periodic AVCTP Keep-alives
+
+[Wireshark packet list; Source and Destination columns are pixelated: [obscured]]
+      Time        Source        Destination     Protocol   Length   Info
+242 7.793242   [obscured]   [obscured]   AVRCP   39   Sent Vendor dependent: Status - GetElementAttributes - 0x0000000000000000 (PLA[clipped at pane edge]
+243 7.798830   [obscured]   [obscured]   AVRCP   27   Sent Vendor dependent: Status - SetPlayerApplicationSettingValue
+246 7.802118   [obscured]   [obscured]   AVRCP   39   Sent Vendor dependent: Status - GetElementAttributes - 0x0000000000000000 (PLA[clipped at pane edge]
+247 7.805518   [obscured]   [obscured]   AVRCP   39   Sent Vendor dependent: Status - GetElementAttributes - 0x0000000000000000 (PLA[clipped at pane edge]
+249 7.806513   [obscured]   [obscured]   AVRCP   52   Rcvd Vendor dependent: Stable - GetElementAttributes - Title: "Not Provided"
+250 7.807872   [obscured]   [obscured]   AVRCP   22   Rcvd Vendor dependent: Accepted - SetPlayerApplicationSettingValue
+254 7.816469   [obscured]   [obscured]   AVRCP   52   Rcvd Vendor dependent: Stable - GetElementAttributes - Title: "Not Provided"
+256 7.820247   [obscured]   [obscured]   AVRCP   52   Rcvd Vendor dependent: Stable - GetElementAttributes - Title: "Not Provided"
+
+[packet detail pane]
+Encapsulation type: Bluetooth H4 with linux header (99)
+Arrival Time: Mar 28, 2025 20:56:52.625[obscured]1000 中国标准时间
+UTC Arrival Time: Mar 28, 2025 1[obscured]:56:52.625061000 UTC
+Epoch Arrival Time: 1743[obscured]66612.625061000
+[Time shift for this packet: 0.000000000 seconds]
+[Time delta from previous captured frame: 0.003400000 seconds]
+[Time delta from previous displayed frame: 0.003400000 seconds]
+[Time since reference or first frame: 7.805518000 seconds]
+Frame Number: 247
+Frame Length: 39 bytes (312 bits)
+Capture Length: 39 bytes (312 bits)
+[Frame is marked: False]
+[Frame is ignored: False]
+Point-to-Point Direction: Sent (0)
+[Protocols in frame: bluetooth:hci_h4:bthci_acl:btl2cap:btavctp:btavrcp]
+> Bluetooth
+> Bluetooth HCI H4
+> Bluetooth HCI ACL Packet
+> Bluetooth L2CAP Protocol
+v Bluetooth AVCTP Protocol
+     0001 .... = Transaction: 0x1
+     .... 00.. = Packet Type: Single (0x0)
+     .... ..0. = C/R: Command (0x0)
+     .... ...0 = IPID: Profile OK (0x0)
+     Profile Identifier: A/V Remote Control (0x110e)
+
+[hex pane]
+0000   02 01 00 22 00 1e 00 51   00 10 11 0e 01 48 00 00   ···"···Q ·····H··
+0010   19 58 20 00 00 11 00 00   00 00 00 00 00 00 02 00   ·X ····· ········
+0020   00 00 01 00 00 00 07                                ·······
+
+> Trigger resource exhaustion by flooding GetPlayStatus commands just before channel timeout
+
+> Exploit timing vulnerability: Overload the protocol stack by spamming short commands at the critical timeout threshold.
+
+> Denial-of-Service (DoS) risk: High-frequency requests near session expiry can crash or degrade system performance.
 ```
 
 ## Slide 83
@@ -998,7 +1088,8 @@ society too!
 
 ##### **Features like Lockdown Mode are great, but optional.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Conclusions
@@ -1019,7 +1110,8 @@ are never targeted by attacks of this nature.
 
 ### **bill@citizenlab.ca cfossaceca@microsoft.com**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Questions?

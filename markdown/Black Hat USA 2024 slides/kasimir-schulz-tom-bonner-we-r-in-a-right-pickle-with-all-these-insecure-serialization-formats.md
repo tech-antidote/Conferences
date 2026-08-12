@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Kasimir Schulz & Tom Bonner_We R in a Right Pickle With All These Insecure Serialization Formats.pdf"
 pages: 43
 sha256: "53bcc782656657ba2395ea42fd7e7849f45f3f1fb59d3b8c51db3db1823eb990"
-text_chars: 26030
-ocr_pages: 8
+text_chars: 25409
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:34:06Z"
+converted_at: "2026-08-12T04:35:23Z"
 ---
 # We R in a Right Pickle With All These Insecure Serialization Formats
 
 **Speakers:** Kasimir Schulz, Tom Bonner  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kasimir Schulz & Tom Bonner_We R in a Right Pickle With All These Insecure Serialization Formats.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -29,12 +35,10 @@ Speaker(s): Kasimir Schulz & Tom Bonner
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Co /
-blackhat  —_—_ +
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 We R in a right pickle with all these
@@ -602,10 +606,10 @@ But how did we use the instructions to make our exploit?
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat | )
 USA 2024 ,
 Crafting the Exploit
 Opcode(TYPES.PR , 0, False, False, False,None,False),
@@ -666,26 +670,22 @@ The promise can be “treated” as an object and will run the arbitrary code ev
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat , ,
-USA 2024
 Looking into LazyLoad
-: ae 5 ; a file attribute_hidden SEXP
 unction (filebase, envir = parent.frame(), filter) do_lazyLoadDBfetch(SEXP call, SEXP op, SEXP args, SEXP env)
 {
 fun <- function(Cdb) { {
 vals <- db$vals
 vars <- db$vars . key = CAR(args); args = CDR(args);
 expr <- quote(lazyLoadDBfetch(key, datafile, compressed, file = CAR(args); args = CDR(args);
-envhook)) —— ,
 .Internal(makeLazy(vars, vals, expr, db, envir))
 } . . PROTECT_WITH_INDEX(val = readRawFromFile(file, key), &vpi);
 LazyLoadDBexec(filebase, fun, filter)
 } val = R_unserialize(val, hook);
 <bytecode: Qx15bfcf258> if (TYPEOF( val) — PROMSXP ) {
-<environment: namespace: base> REPROTECT(val, vpi);
 val = eval(val, R_GlobalEnv);
 ENSURE_NAMEDMAX( val);
 > LazyLoadDBfetch }
@@ -717,11 +717,11 @@ Where can people get R packages?
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-USA 2024
 RDX File RDB File
 Offset from File Start | Length of Data (Including Header and Data) Leen Decompressed Length (4 bytes) | Compressed Serialized Data
 Offset from File Start | Length of Data (Including Header and Data) Li ee Decompressed Length (4 bytes) | Compressed Serialized Data
@@ -734,15 +734,14 @@ Offset from File Start | Length of Data (Including Header and Data) H———�
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-USA 2024
 delayedAssign in Packages
 Version: 0.5.1
-Depends: R (= 3.5.0)
 Imports: babynames, dplyr, forcats, fueleconomy, gapminder, ggplot2, Lahman, nasaweather, nycflights13, palmerpenguins, modeldata (2 1.0.0), rlang, tibble, tidyr, yaml
 Suggests: covr, testthat (= 2.1.0)
 Published: 2023-07-17
@@ -761,7 +760,6 @@ eval(parse(file.path(system.file('scripts','aerolineas.txt', package = 'datos'))
 delayedAssign('aeropuertos',
 eval(parse(file.path(system.file('scripts', 'aeropuertos.txt', package = ‘'datos')))))
 delayedAssign('atmosfera',
-eval(parse(file.path(system. file('scripts', 'atmosfera.txt', package = 'datos')))))
 ```
 
 ## Slide 39
@@ -770,29 +768,23 @@ eval(parse(file.path(system. file('scripts', 'atmosfera.txt', package = 'datos')
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 delayedAssign in Packages
 . datos / inst / scripts / aerolineas.txt 4 Top
-{1 Files Hinst scrips
 = a Code | Blame 67 lines (66 loc) - 2.1 KB rw (OO 4) A ~
-main ial Sere
 36 it (“tactor™ %in% class(cl)) +
 Q Gotofile t 37 lv <- levels(cl)
 39 Wy == from[il] <- tolil
 v scripts 40 }
-aerolineas.tx a2 yess {
 (} aeropuertos.txt 43 for (i in seq_along(from)) cl{cl == from[i]] <- to[i]
 44 }
 {} atmosfera.txt 45 }
-{} aviones.txt ze ch
 47 +
 {}) bateadores.txt 48 )
 . 49 dfl <- setNames(dfl, new_names)
-( clima.txt wes .
 50 if (type_df == "tibble") dfl <- dplyr::as_tibble(df1l)
 B comunes.txt 51 if (type_df == “grouped_df") {
 52 grps_t <- as.character(lapply(grps, function(x) new_names[var_names x]))
@@ -801,18 +793,14 @@ B comunes.txt 51 if (type_df == “grouped_df") {
 55 }
 (1 dirigentes.txt 56 if (type_df == “data.frame") {
 5 fated 57 if (!is.null(row_names)) {
-SNCUesta: Ue 58 dfl <- as.data.frame(df1l)
 1) fiel.txt 59 rownames(dfl) <- row_names
 60 } else {
 & flores.txt 61 dfl <- as.data. frame(df1)
-{} jardineros.txt b2 }
 63 +
 [} lanzadores.txt 64 dfl
 65 }
 illas.
 D millas.txt 66 translate(‘airlines.yml')
-{} mtautos.txt
-)
 ```
 
 ## Slide 40
@@ -881,11 +869,10 @@ D millas.txt 66 translate(‘airlines.yml')
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~~
-Q
 black hat —
 USA 2
 q

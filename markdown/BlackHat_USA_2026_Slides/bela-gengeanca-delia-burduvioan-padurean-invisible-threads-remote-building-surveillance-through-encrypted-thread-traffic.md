@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Bela Genge&Anca Delia Burduv&Ioan Padurean_Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis.pdf"
 pages: 81
 sha256: "97de04b7e66a82e9da13f04a724e4222bb8f920fcd9af24c3a65e653906b78f9"
-text_chars: 26681
-ocr_pages: 31
+text_chars: 24523
+ocr_pages: 26
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:43Z"
+converted_at: "2026-08-12T05:29:51Z"
 ---
 # Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis
 
 **Speakers:** Bela Genge, Anca Delia Burduv, Ioan Padurean  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Bela Genge&Anca Delia Burduv&Ioan Padurean_Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis.pdf` (81 pages)
+
 
 ## Slide 1
 
@@ -88,23 +94,17 @@ Is there protection to **prevent** further **information leakage and exploitatio
 
 INNOCENT BYSTANDERS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INNOCENT BYSTANDERS
 =
-had
-[=e]
 [—]
 _
 _
 =
 =
-[—]
-=
-—
-=
-black hat
 2526
 ```
 
@@ -115,15 +115,13 @@ black hat
 Information
 leakage?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 POSSIBLE EXPLOITATION
 Information
 leakage?
-# ra Gana, a
-Here | S Mee :
-black hat
 2026
 ```
 
@@ -167,15 +165,6 @@ Buildings serve several societal needs – occupancy, primarily as shelter from 
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-THE PROBLEM
-BUILDINGS —
-black hat
-2526 10
-```
-
 ## Slide 11
 
 ### The walls haven't changed. The threats have.
@@ -200,14 +189,14 @@ It just happens we had prior experience with such devices
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT TRIGGERED THE RESEARCH
 If we take a closer look
 It just happens we had prior
 experience with such devices
-black hat
 2026 13
 ```
 
@@ -217,7 +206,8 @@ black hat
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IS THE TECHNOLOGY BEHIND IT?
@@ -228,7 +218,6 @@ compatibility
 Silent unlock mod
 with major smart home systems, such as Apple Home and
 Google Home
-PFHREAD sk matter
 Description Features Videos (1)
 Upgrade your home to a keyless lifestyle with the Aqara Smart Lock U200 Kit , wiich easily installs over your existing EURO cylinder lock, without the need fo)rilling.
 This smart lock supports various access methods such as fingerprint, NFC , passcode and more, and integrates with Apple Home keys . Compatible with Matter, it is
@@ -399,26 +388,22 @@ The same action (e.g., command) will generate the **same request ... response** 
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ESSENTIALLY
 Nonce
-592051 9f4b2...
 Key Command
 €4327981b3a52... Turn ON
-¥
 AES-CCM
 The same action (e.g., command) will generate the
 same request ... response packet sizes
 Encrypted payload
 AES-CCM
 CTR | | CBC-MAC |
-65247c8918aa... _}
 Key
-43678cC23b452a6...
 Nonce
-black hat
 2026 24
 ```
 
@@ -456,11 +441,11 @@ Interoperability
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT DOES THIS MEAN?
-black hat
 2026 28
 ```
 
@@ -494,14 +479,6 @@ Thread sniffer
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WHERE WE STARTED
-black hat
-2026 32
-```
-
 ## Slide 33
 
 ##### WORK OBJECT: THE FRAME
@@ -525,7 +502,8 @@ IEEE 802.15.4 PHY
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (NON-ENCRYPTED) FIELDS OF INTEREST
@@ -534,17 +512,12 @@ Encapsulation type: IEEE 15.4 Wireless PAN S not pr ant (127 tenets ss =i
 Frame Length: 103 bytes (824 bits)
 0x9869, Frame Type: Data, Security Enak
 Sequence Number: 96
-Meet Zonet foe mesa.
 ter encoding
-Zeke onme eneeees sanegcilbiges —}— Destination: Ox6c00
 Source: Oxac00
-0x90d5
-x6c00
 (Warning/Undecoded)
 Data
 Data: O6bi1é
 [Length
-black hat
 2026 34
 ```
 
@@ -556,30 +529,45 @@ In our initial attempt we simply used our approaches developed in the previous r
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 REMEMBER OUR PRIOR RESEARCH
-blackhat ~— \—~ >
-BRIEFINGS SS EE
+
+[Thumbnail of the previous talk's title slide]
+black hat
+BRIEFINGS
 DECEMBER 10-11, 2025
 EXCEL LONDON / UNITED KINGDOM
-Ghosts in the Stream: Exposing Lives and In our initial attempt we simply used our
-* Devices Behind Encrypted Doors approaches developed in the previous
-researc
+
+Ghosts in the Stream: Exposing Lives and Devices Behind Encrypted Doors
+
 Speakers: Kristopher Schlett, Béla Genge
-Contributors: loan Padurean, Savio Sciancalepore
-137 35879 > 5540 Len=75
-1305540 > 35879 Len=68 |=
-9635879 > 5540 Len=34
-13735879 > 5540 Len=75
-1305540 > 35879 Len=68
-9635879 > 5540 Len=34
-13735879 > 5548 Len=75 5 tL
-1305540 > 35879 Len=68 f ‘
-96 35879 > 5540 Len=34— etal
-black hat
-2026 35
+Contributors: Ioan Pădurean, Savio Sciancalepore
+
+#BHEU  @BlackHatEvents
+
+In our initial attempt we simply used our approaches developed in the previous research
+
+[Three packet-capture excerpts, each paired with a photo of a smart device]
+
+Matter          137 35879 → 5540 Len=75
+Matter          130 5540 → 35879 Len=68
+Matter           96 35879 → 5540 Len=34
+
+Matter          137 35879 → 5540 Len=75
+Matter          130 5540 → 35879 Len=68
+Matter           96 35879 → 5540 Len=34
+
+Matter          137 35879 → 5540 Len=75
+Matter          130 5540 → 35879 Len=68
+Matter           96 35879 → 5540 Len=34
+
+Information Classification: General
+
+black hat USA 2026
+35
 ```
 
 ## Slide 36
@@ -590,7 +578,8 @@ One – to – one mapping
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WE CAN JUST USE OUR PREVIOUS RESEARCH
@@ -641,7 +630,6 @@ Matter 59065 — 5540 Len=42
 31 Ack
 31 Ack
 One — to — one
-PRR RERE REA RR ERR ERE RE RPE
 ```
 
 ## Slide 37
@@ -747,21 +735,17 @@ different length
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FRAME SIZE DISTRIBUTION
 S
-on
 The same payload
 transmitted in frames of
 different length
-Onsemuedlindividuralltimame:l(emonth)
 @ecurrences, log seale
-Za
-8Baeg AS e28s8sy
 Pvé payload leageh
-black hat
 2026 46
 ```
 
@@ -771,14 +755,11 @@ black hat
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REALITY IS COMPLEX
-Frame count after reassembly
-a—NOSAHIVSEOCSSBALHRGS
-PrvG payload leageh
-black hat
 2026 47
 ```
 
@@ -795,12 +776,12 @@ Hop limit  changes
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FRAMES CHANGE: HOP LIMIT
 IEEE 802.15.4 Data, Src: Ox5c01, Dst: Ox5c00
-\v- 6LOWPAN, Src: ::a2c5:f62:1ac0:80f0, Dest: fda0:13ed:8be5: :be9
 v- IPHC Header Ox5c01
 = Pattern: IP header compression (0x03)
 Traffic class and flow label: Version, traffic class, and flow label compressed (0x3) Hop limit
@@ -817,7 +798,6 @@ Source context identifier: 0x1
 Destination context identifier: 0x0
 > IEEE 802.15.4 Data, Src: Ox5c00, Dst: Oxac00
 vv 6LOWPAN, Src: ::a2c5:f62:1ac0:80f0, Dest: fda0:13ed:8be5: :be9
-\- IPHC Header
 O11. .... = Pattern: IP header compression (0x03)
 Traffic class and flow label: Version, traffic class, and flow label compressed (0x3)
 . . Next header: Compressed
@@ -846,27 +826,22 @@ Mesh header
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FRAMES CHANGE: MESH HEADER
 > IEEE 802.15.4 Data,
-\- 6LOWPAN,
-iiss
 v- Mesh Header
 Flag
-Ss
 10..
-1.
 Originator:
 Destination:
 > Fragmentation Header
 1111 =
 v- IPHC Header
 011.
-0
 1...
--1..
 .00
 Mesh header is removed
 = Pattern: Mesh (0x02)
@@ -878,7 +853,6 @@ Deep Hops left (Flags.Hops left == 15): 18
 0x3400, Dst: Oxa000
 fdaQ:13ed:8be5::be9, Dest: ::e9c7:64aa:icf2:b5f5
 Mesh header
-@
 IP header compression (0x03)
 Traffic class and flow label: ECN and flow label inline (0x1) Oxa001
 Next header: Compressed
@@ -886,7 +860,6 @@ Hop Limit: Inline (0x0)
 Context identifier extension: True
 IEEE 802.15.4 Data, Src: Oxa000, Dst: Oxa001
 Vv 6LOWPAN, Src: fda0:13ed:8be5::be9, Dest: ::e9c7:64aa:1icf2:b5f5
-\v- IPHC Header
 Q11. .... = Pattern: IP header compression (0x03)
 Source address compression: Stateless
 Source address mode: Inline (0x0000)
@@ -902,7 +875,6 @@ Source address mode: Inline (0x0000)
 Multicast address compression: False
 Destination address compression: Stateful
 Destination address mode: 64-bits inline (0x0001)
-black hat
 49
 ```
 
@@ -919,18 +891,16 @@ Fragmentation header
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FRAMES CHANGE: FRAGMENTATION HEADER
 > IEEE 802.15.4 Data, Src: OxacO0, Dst: Ox5c00
-, 6LOWPAN, Src: fda0:13ed:8be5::be9, Dest: ::a2c5:f62:1ac0:80f0O
 \- Fragmentation Header Ox5c01
 1100 0... = Pattern: First fragment (0x18)
 Datagram size: 90 Fragmentation header |
-; ; "" Seana,
 Datagram tag: 0x1ai4 ""enen,
-IPHC Header °* Des 0Ox5c00O
 = Pattern: IP header compression (0x03) |
 Traffic class and flow label: ECN and flow label inline (0x1)
 Next header: Compressed
@@ -961,7 +931,6 @@ Source context identifier: 0x0
 ECN: 0
 Padding: 0x00
 0100 1110 1000 1101 0001 = Flow label: 0x04e8d1
-black hat
 USA
 2026 50
 Hop limit: 62
@@ -975,15 +944,6 @@ Hop limit: 62
 0xac00
 
 51
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-YDUDE, WHERE IS MY FRAME2
-OxacOO
-black hat
-2026
-```
 
 ## Slide 52
 
@@ -1015,30 +975,16 @@ Actual fragmentation
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FRAGMENTATION DOES NOT ADD UP
-Actual fragmentation
-* : 125B
-Ox5cO1
-4 4
-122B 32B 0x5c00
-Oxac0O
-black hat
-2026 53
-```
-
 ## Slide 54
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 |! HAVE MANY
 PROBLEMS
-black hat
 2026 54
 ```
 
@@ -1050,14 +996,14 @@ Machine learning to the rescue: **Random forests**
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 COMPLEX PROBLEM REQUIRES (COMPLEX)
 SOLUTION
 Machine learning to the rescue:
 Random forests
-black hat
 2026 55
 ```
 
@@ -1069,26 +1015,18 @@ black hat
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEVICE CLASSIFICATION — MODEL TRAINING
 ¢ Much better, accuracy increases above 95%
 S
 g
-60!
-¢ 82
 8
-F
-3) +3)
-i Z
-.
 38
-[S))
-:
 & 8
 S
-hot frame count
 USA
 2026 56
 ```
@@ -1111,13 +1049,12 @@ USA
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 YAP: YET ANOTHER PROBLEM
 We are seeing more devices than we know we have in the lab
-NombemomobsemeciRiOes
-20) HQ)
 ime cinco capture start (hours)
 ```
 
@@ -1245,7 +1182,8 @@ Automated Thread channel scan & detection
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THREAD CHANNEL DISCOVERY
@@ -1274,7 +1212,6 @@ Starting capture on /dev/ttyACMO - auto-scanning channels for Thread traffic...
 [scan] Ch 24 [14/16] © frame(s) - (no traffic)
 [scan] Ch 25 [15/16] 2 frame(s)
 [scan] Ch 26 [16/16] © frame(s) - (no traffic)
-black hat
 2026 69
 ```
 
@@ -1284,23 +1221,16 @@ black hat
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INSIDE THE BUILDING, OUTSIDE OF OFFICE
-(MOTION_SENSOR
 1.7 - -74dBm
-1.7 - -87d
-(0x09) 2.6 - -76dBm
-4 1.6 « -92d13.6 - -89dBm
-(0x4004)
 Active Nodes
-+ -74dBm
-Ze
 -89dBm
 60 - Frames / second
 frames/s
-black hat
 2026 70
 ```
 
@@ -1310,7 +1240,8 @@ black hat
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INSIDE THE BUILDING, FLOOR -2
@@ -1319,7 +1250,6 @@ BORDER ROUTER
 Active Nodes
 Frames / second
 frames/s
-black hat
 2026 71
 ```
 
@@ -1329,22 +1259,17 @@ black hat
 
 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OUTSIDE THE BUILDING
 Mean RSSI a = Aa,
 Active Nodes
-(DOOR_SENSOR]
 nodes
-P.
-Oxb800
-<—_
-[{THERMOSTAT]
 30 - Frames / second
 frames/s
 (LIGHTAPP]
-black hat
 2026 72
 ```
 
@@ -1356,24 +1281,13 @@ Target building
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AT A NEARBY FAST FOOD “30m DISTANCE
-0x00a
-=~
-Oxb807]
 Active Nodes
-| 0.9 +-88dBm
-0xa800
-I~ F
-es
-Oxb800
 Frames / second
-E 0xb804
-"s lox6e00 =
-0 A
-black hat
 2026 73
 ```
 
@@ -1383,19 +1297,16 @@ black hat
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OTHER SIDE OF THE BUILDING
-i
-Oxb807,
 Active Nodes 1.5 - -85dBm
 BORDER ROUTER
 nodes
-3.8 - -85dBm
 Frames / second
 frames/s
-black hat
 2026 74
 ```
 
@@ -1408,18 +1319,14 @@ The place to be
 
 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMOTE MONITORING IS POSSIBLE
 LOCATION. LOCATION. LOCATION
-=
 Thread network
-te 4
-1 =
 = ‘VLA
-|
-black hat
 2526 75
 The place to be
 ```
@@ -1430,12 +1337,12 @@ The place to be
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMO
 THE INNOCENT BYSTANDERS
-black hat
 2026 76
 ```
 

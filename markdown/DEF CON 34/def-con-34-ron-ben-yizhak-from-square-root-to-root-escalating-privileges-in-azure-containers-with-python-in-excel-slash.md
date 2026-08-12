@@ -4,23 +4,28 @@ speakers: ["Ron Ben Yizhak"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ron Ben Yizhak - From square root to root escalating privileges in Azure containers with Python in Excel - slash esca.pdf"
 pages: 83
 sha256: "f6fedeee9f61c437307dae089510a8d876759cdb40af8adf49842c743c94a835"
-text_chars: 14931
-ocr_pages: 14
+text_chars: 13818
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:27:52Z"
+converted_at: "2026-08-12T06:42:37Z"
 ---
 # From square root to root escalating privileges in Azure containers with Python in Excel
 
 **Speakers:** Ron Ben Yizhak  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ron Ben Yizhak - From square root to root escalating privileges in Azure containers with Python in Excel - slash esca.pdf` (83 pages)
+
 
 ## Slide 1
 
@@ -29,18 +34,6 @@ From square root to /root: escalating privileges in Azure containers with Python
 Ron Ben Yizhak, SafeBreach
 
 1
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-( OENE
-Se
-From square root to /root:
-escalating privileges in Azure ceopners
-; “a with Py tia in Excel bal A ft
-= =.
-Ron Ben Yizhak, SafeBreach
-```
 
 ## Slide 2
 
@@ -134,14 +127,13 @@ restricted access
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploring the Environment
 Python Editor wx
 “All Python cells ~~
-Sheet! a
-AL > o- Bdge 2
 1 import subprocess
 2 subprocess.check_output("“whoami", shell=True).decode()
 jovyan
@@ -202,17 +194,6 @@ drwxr-x--- root:root officepyapp
 …
 
 12
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Directories
-aan
-— 9 drwxrxr-x root:root app
-= 7 drwxt-x--- root:root officepyapp
-— |...
-12
-```
 
 ## Slide 13
 
@@ -304,15 +285,6 @@ Code Exec Service Proxy Jupyter
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-JOVYAN
-/OFFICERYAPP,
-/MNT/SECRETS
-19
-```
-
 ## Slide 20
 
 #### Python Libraries
@@ -326,19 +298,6 @@ officepyai
 pandas
 
 20
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Python Libraries
-/app/officepy/lib/python3.12/site-packages
-a
-beautifulsoup
-excel
-matplotlib
-officepyai
-pandas
-```
 
 ## Slide 21
 
@@ -374,21 +333,21 @@ Fiddler
 
 #### Automating the Communication
 
-```
+\```
 POST https://service-preview.officepy.svc.usercontent.microsoft
 Authorization: Bearer eyJ[SNIP]
-```
+\```
 
-```
+\```
 HTTP/1.1 201
 {
-```
+\```
 
 - `"url": "https://prodp6-p1-frc.officepy.svc.usercontent.microsoft", [SNIP]`
 
-```
+\```
 }
-```
+\```
 
 23
 
@@ -396,19 +355,19 @@ HTTP/1.1 201
 
 #### Automating the Communication
 
-```
+\```
 POST https://prod...microsoft/api/environments/createenvironmentandruntime
 Authorization: Bearer eyJ[SNIP]
-```
+\```
 
-```
+\```
 HTTP/1.1 201
 {
 "runtimeId": UUID,
 "id": UUID,
 [SNIP]
 }
-```
+\```
 
 24
 
@@ -416,7 +375,7 @@ HTTP/1.1 201
 
 #### Automating the Communication
 
-```
+\```
 POST https://prod...microsoft/api/environments/{ID}/runtimes/{RUNTIME_ID}/batchexecute
 Authorization: Bearer eyJ[SNIP]
 {
@@ -433,11 +392,11 @@ Authorization: Bearer eyJ[SNIP]
 }
 ],
 "roundIndex": 1
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 25
 
@@ -491,25 +450,14 @@ Outbound Broker
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-File Upload
-¢ The “uploadeddata” class mentions /mnt/data_upload
-* Large files inserted into cells are uploaded
-A
-ma img=x1("A1")
-29
-```
-
 ## Slide 30
 
 #### File Upload
 
-```
+\```
 POST /api/environments/{ID}/runtimes/{RUNTIME_ID}/data/start?dataId={DATA_ID}&etag={ETAG}
 Authorization: Bearer eyJ[SNIP]
-```
+\```
 
 30
 
@@ -517,17 +465,17 @@ Authorization: Bearer eyJ[SNIP]
 
 #### File Upload
 
-```
+\```
 POST /api/environments/{ID}/runtimes/{RUNTIME_ID}/data/start?dataId={DATA_ID}&etag={ETAG}
 Authorization: Bearer eyJ[SNIP]
-```
+\```
 
-```
+\```
 POST /api/environments/{ID}/runtimes/{RUNTIME_ID}/data/upload?dataId={DATA_ID}
 Authorization: Bearer eyJ[SNIP]
 Content-Type: multipart/form-data;
 BINARY_DATA
-```
+\```
 
 31
 
@@ -551,10 +499,10 @@ BINARY_DATA
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-OOMON ODA KWND =
 File Upload
 [rv]
 None
@@ -563,11 +511,8 @@ Python Editor
 2 img = xl("A1")
 3 print(subprocess.check_output(["1ls", "-R", "/mnt/data_upload"], text=True) )
 /mnt/data_upload:
-b66af9b1-91c7-4321-b9ca-26ee5e86d94d
-/mnt/data_upload/b66af9b1-91c7-4321-b9ca-26ee5e86d94d:
 precodedata_28a4bd80317b460889fd05d734b56a3b_0 1.data
 precodedata_28a4bd80317b460889fd05d734b56a3b_ 0 1.etag
-precodedata_28a4bd80317b460889Fd05d734b56a3b_0 1.stat
 33
 ```
 
@@ -644,14 +589,6 @@ weak user
 ## Slide 40
 
 40
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
--g9OvsSsWd AalHt
-‘LavaH DOD
-“ap
-```
 
 ## Slide 41
 
@@ -888,16 +825,15 @@ Governmental
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Privilege Escalation Demo
-EXPLORER - run_container.py M X.
 v OFFICEPY
 > _pycache
 > exploit scripts
 OFFicePy
-© payloads z :
 i get_bearer_token, HOSTNA\
 ® whoamipy
 OfficePy.py create_logger()
@@ -906,7 +842,6 @@ OfficePy.py create_logger()
 logger. addHandler (logging .StreamHandler())
 logger. setLevel (log,
 logger
-® utils.py
 main():
 hostnames = HOSTNAMES_LIST
 logger = create_logger()
@@ -917,12 +852,9 @@ container cePy(hostname, token, logger)
 container.whoami()
 input ()
 Exc
-print (ex)
-_name__
 main()
 > OUTUNE
 > TIMELINE
-x mains @oAo P } Ron Ben Yizhak (3 days ago) Ln 25,Col1 Spaeegy UTF-8 CRLF {)} Python &3 3.13.9 (Excel)
 ```
 
 ## Slide 59
@@ -1057,12 +989,12 @@ web-fetch
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Office Agent — “Taste driven” multi-agent system for
 Microsoft 365 Copilot
-@ QiZhang §
 Sep 29, 2025
 September 29, 2025 + 5 min read
 Vibe working: Introducing
@@ -1123,7 +1055,8 @@ Can we weaponize a workbook with Python code?
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Excel 4.0 Macros
@@ -1179,7 +1112,8 @@ HKCU\Software\Microsoft\Office\16.0\Excel\ Security\Trusted Documents\TrustRecor
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security Mechanisms
@@ -1193,7 +1127,6 @@ OPTIONS /
 request catcher
 GET / HTTP/1.1
 Host: excel.requestcatcher.com
-Accept-Auth: badger ,Wlid1.1,Bearer,Basic,NTLM,Digest,Kerberos
 Authorization: Bearer
 Connection: Keep-Alive
 User-Agent: Mozilla/4.0 (compatible; ms-office; MSOffice 16)
@@ -1231,21 +1164,19 @@ RichValue({'type': 'WebImage', 'address': 'https://malicious.com/image.png'})
 
 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass Demo
-Gm Excel
 ir Good morning
 Home
 Pag New blank workbook
-B
 New
 . Favorites Shared with Me 2 Search
 Ls You haven't opened any workbooks recently. Click Open to browse for a workbook.
 pen
 More workbooks —>
-DS
 Account
 Options
 10:58
@@ -1274,23 +1205,21 @@ OfficePy
 
 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass Demo
 Gm Excel
 ft Good morning
 Home
-gy bh pa New blank workbook
 Recent) Favorites Shared with Me PP Search
 e You haven't opened any workbooks recently. Click Open to browse for a workbook.
 pen
 More workbooks —>
-a
 Account
 Options
 11:06
-A OY ENG FED ® is oss026
 ```
 
 ## Slide 80

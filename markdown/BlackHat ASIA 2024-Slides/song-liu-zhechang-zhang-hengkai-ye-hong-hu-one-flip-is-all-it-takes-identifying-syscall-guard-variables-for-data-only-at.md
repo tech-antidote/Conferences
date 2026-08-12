@@ -1,6 +1,6 @@
 ---
-title: "Only Attacks"
-speakers: ["Song Liu", "Zhechang Zhang", "Hengkai Ye", "Hong Hu - One Flip is All It Takes Identifying Syscall-Guard Variables for Data"]
+title: "One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks"
+speakers: ["Song Liu", "Zhechang Zhang", "Hengkai Ye", "Hong Hu"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Song Liu & Zhechang Zhang & Hengkai Ye & Hong Hu - One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks.pdf"
 pages: 37
 sha256: "42a6c2a678e0b72ebc4cfe154902a0423048e067168ea339f0979e0c7c7b70b3"
-text_chars: 16269
+text_chars: 16139
 ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:51:20Z"
+converted_at: "2026-08-12T04:51:08Z"
 ---
-# Only Attacks
+# One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks
 
-**Speakers:** Song Liu, Zhechang Zhang, Hengkai Ye, Hong Hu - One Flip is All It Takes Identifying Syscall-Guard Variables for Data  
+**Speakers:** Song Liu, Zhechang Zhang, Hengkai Ye, Hong Hu  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Song Liu & Zhechang Zhang & Hengkai Ye & Hong Hu - One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks.pdf` (37 pages)
+
 
 ## Slide 1
 
@@ -102,13 +108,10 @@ Data-Oriented Programming Block-Oriented Programming
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-By
-7
-E HISTORY
-:
 \
 1S SUCH A THING EVEN POSSIBLE?
 ```
@@ -392,7 +395,8 @@ _36 syscall-guard variables from 14 programs_
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Evaluation (identified syscall-guard variables)
@@ -439,7 +443,6 @@ setgroups/setresuid
 chroot/chdir
 36 syscall-guard variables from 14 programs
 execve
-a)
 unlink/rename
 15
 22
@@ -453,48 +456,56 @@ Exploit Construction 4 CVE Investigation 16 GDB Emulation 36
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Evaluation (exploitability investigation)
-Program Guard Variable Branch Location Rate (S, H, G) CK CVE Type Cap
-sqlite mode shell.c:5002 (55, 0, 0) iv)
-shell.c:5038 (75, 0, 0) iv)
-p->doXdgOpen shell.c:20270 (181770, 0, 0) @ 2017-6983 TC AW
-p->zTempFile shell.c:20560 (86907, 0, 0) @ 2017-6983 TC AW
-isDelete sqlite3.c:42939 (8353, 29276, 0) @ 2017-6983 TC AW
-zPath sqlite3.c:43094 (57, 15036, 0) 9
-exists sqlite3.c:60294 (58, 15036, 0) 9
-isWal sqlite3.c:58492 (61, 15046, 0) 9
-curl tempstore cookie.c:1732 (15, 0, 0) @ 2019-3822 H/SBoF AW | 1 1
-tempstore hsts.c:386 (15, 0, 0) @ 2019-3822 H/SBoF AW Ex p O It Co n st ru ct lion
-tempstore altsve.c:359 (15, 0, 0) @ 2019-3822 H/SBoF AW
-harfbuzz blob->mode hb-blob.ce:453 (31, 352, 0) @ 2015-8947 HBoF AW
-nginx sa_family $_connection.c:631 (0, 84831, 0) 9
-ngx_terminate $_process_cycle.c:305 (0, 0, 208640) @ 2013-2028 SBoF AW
-ngx_quit $_process_cycle.c:305 (0, 0, 208640) @ 2013-2028 SBoF AW
-ft.st_uid ($: ngx) $_file.c:631 (350832, 0, 0) 3
-£t.st_mode $_file.c:640 (175218, 0, 0) . .
-openssh result auth-passwd.c:128 (5, 48153980, 0) 9 CV E | nvesti gat ion 1 6
-received_sigterm sshd.c:1163 (0, 0, 1463147) 9
-received_sighup sshd.c:1177 (0, 0, 1470603) 9
-sudo details->chroot exec.c:173 (0, 0, 2039) @ 2012-0809 FS AW
-info sudo.c:697 (1702, 253382, 1982) @ 2012-0809 FS AW
-null httpd in_RequestURI main.c:39 (0, 525, 0) @ 2002-1496 HBoF AW
-ghttpd filename* protocol.c:127 (9, 0, 5912) @ 2002-1904 SBoF AW
-wu-ftpd RootDirectory ftpd.c:1029 - (0, 0, 7322) 9
-anonymous ftpd.c:2527 (0, 0, 7432) 9 .
-ftpd.c:2893 (0, 0, 8341) cv) |
-rval ftpd.c:2708 (8, 0, 0) 9
-jhead RegenThumbnail jhead.c:978 (0, 0, 2856) © 2016-3822 IO AW
-EditComment jhead.c:1003 (0, 0, 2856) @ 2016-3822 IO AW
-CommentInsertfileName  jhead.c:1003 (0, 0, 2856) © 2016-3822 I0 AW
-Comment InsertLiteral jhead.c:1003 (0, 0, 2856) @ 2016-3822 IO AW
-jasper fileobj->flags jas_stream.c:1392 (0, 219062, 0) @ 2020-27828 HBoF AW
-pdfalto first XRef.cc:240 (1952, 214, 0) 9
-offsets[0] XRef.cc:240 (92, 117, 0) 9
-gzip fd gzip.c:2111 (0, 0, 11886) @ 2010-0001 10 AW
-v8 enable_os_system d8-posix.cc:762 (0, 0, 93512607) @ 2021-30632 TC AW
+
+Program | Guard Variable | Branch Location | Rate (S, H, G) | CK | CVE | Type | Cap
+sqlite | mode | shell.c:5002 | (55, 0, 0) |  |  |  |
+ | | shell.c:5038 | (75, 0, 0) |  |  |  |
+ | p->doXdgOpen | shell.c:20270 | (181770, 0, 0) | ● | 2017-6983 | TC | AW
+ | p->zTempFile | shell.c:20560 | (86907, 0, 0) | ● | 2017-6983 | TC | AW
+ | isDelete | sqlite3.c:42939 | (8353, 29276, 0) | ● | 2017-6983 | TC | AW
+ | zPath | sqlite3.c:43094 | (57, 15036, 0) |  |  |  |
+ | exists | sqlite3.c:60294 | (58, 15036, 0) |  |  |  |
+ | isWal | sqlite3.c:58492 | (61, 15046, 0) |  |  |  |
+curl | tempstore | cookie.c:1732 | (15, 0, 0) | ◐ | 2019-3822 | H/SBoF | AW
+ | tempstore | hsts.c:386 | (15, 0, 0) | ◐ | 2019-3822 | H/SBoF | AW
+ | tempstore | altsvc.c:359 | (15, 0, 0) | ◐ | 2019-3822 | H/SBoF | AW
+harfbuzz | blob->mode | hb-blob.cc:453 | (31, 352, 0) | ◐ | 2015-8947 | HBoF | AW
+nginx | sa_family | $_connection.c:631 | (0, 84831, 0) |  |  |  |
+ | ngx_terminate | $_process_cycle.c:305 | (0, 0, 208640) | ◐ | 2013-2028 | SBoF | AW
+ | ngx_quit | $_process_cycle.c:305 | (0, 0, 208640) | ◐ | 2013-2028 | SBoF | AW
+ | ft.st_uid | ($: ngx) $_file.c:631 | (350832, 0, 0) |  |  |  |
+ | ft.st_mode | $_file.c:640 | (175218, 0, 0) |  |  |  |
+openssh | result* | auth-passwd.c:128 | (5, 48153980, 0) |  |  |  |
+ | received_sigterm | sshd.c:1163 | (0, 0, 1463147) |  |  |  |
+ | received_sighup | sshd.c:1177 | (0, 0, 1470603) |  |  |  |
+sudo | details->chroot | exec.c:173 | (0, 0, 2039) | ◐ | 2012-0809 | FS | AW
+ | info | sudo.c:697 | (1702, 253382, 1982) | ◐ | 2012-0809 | FS | AW
+null httpd | in_RequestURI | main.c:39 | (0, 525, 0) | ◐ | 2002-1496 | HBoF | AW
+ghttpd | filename* | protocol.c:127 | (9, 0, 5912) | ◐ | 2002-1904 | SBoF | AW
+wu-ftpd | RootDirectory | ftpd.c:1029 | (0, 0, 7322) |  |  |  |
+ | anonymous | ftpd.c:2527 | (0, 0, 7432) |  |  |  |
+ |  | ftpd.c:2893 | (0, 0, 8341) |  |  |  |
+ | guest | ftpd.c:2893 | (0, 0, 37715) |  |  |  |
+ | rval | ftpd.c:2708 | (8, 0, 0) |  |  |  |
+jhead | RegenThumbnail | jhead.c:978 | (0, 0, 2856) | ◐ | 2016-3822 | IO | AW
+ | EditComment | jhead.c:1003 | (0, 0, 2856) | ◐ | 2016-3822 | IO | AW
+ | CommentInsertfileName | jhead.c:1003 | (0, 0, 2856) | ◐ | 2016-3822 | IO | AW
+ | CommentInsertLiteral | jhead.c:1003 | (0, 0, 2856) | ◐ | 2016-3822 | IO | AW
+jasper | fileobj->flags | jas_stream.c:1392 | (0, 219062, 0) | ◐ | 2020-27828 | HBoF | AW
+pdfalto | first | XRef.cc:240 | (1952, 214, 0) |  |  |  |
+ | offsets[0] | XRef.cc:240 | (92, 117, 0) |  |  |  |
+gzip | fd | gzip.c:2111 | (0, 0, 11886) | ◐ | 2010-0001 | IO | AW
+v8 | enable_os_system | d8-posix.cc:762 | (0, 0, 93512607) | ● | 2021-30632 | TC | AW
+
+[Pyramid diagram, three tiers, top to bottom]
+Exploit Construction — 4
+CVE Investigation — 16
+GDB Emulation — 36
 ```
 
 ## Slide 24
@@ -505,7 +516,8 @@ We can combine VIPER with other tools for automatic exploit generation
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Evaluation (time costs)
@@ -525,7 +537,6 @@ null httpd 0.5.1 2 1" 10" 31" 42" 42" 358"
 ghttpd 1.4.4 1 1" 36" 72" 109" 55" 48"
 orzhttpd 0.0.6 3 1" 32" - >33" >33" 93"
 wu-ftpd 2.6.2 18 1" 533" 189" 723" 91" 200"
-telnet 3£35287 11 1" 144", —- >145" >145"
 jhead 3.04 4 1" 2" 288" 291" 25"
 jasper 4.0.0 34 37" 16" 84" 137" 137"
 pdfalto 0.4 76 342" 116" 107" 565" 282"
@@ -587,7 +598,8 @@ Data-flow Graph of p->doXdgOpen
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Case Study 1: Command Execution on SQLite
@@ -608,7 +620,8 @@ Data-flow Graph of p->doXdgOpen
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Case Study 1: Command Execution on SQLite
@@ -645,12 +658,12 @@ One memory bug to corrupt p->doXdgOpen and p->zTempFile
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 hfy513@ in in sqlite (1fdaa9d) [!?] via C v10.0.0-4ubuntu1-clang via 2 v2
 -7.18
->U
 ```
 
 ## Slide 31
@@ -673,7 +686,8 @@ zTempFile is also used in other places
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 in sqlite (1fdaa9d) [!?] via C v10.0.0-4ubuntu1-clang via 2 v2
@@ -723,13 +737,13 @@ Our Attack (CVE-2021-30632)
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo
 eee
 svl6237@14-L-HQH5357-01:~/demo
-XH#1
 + demo i
 35
 ```

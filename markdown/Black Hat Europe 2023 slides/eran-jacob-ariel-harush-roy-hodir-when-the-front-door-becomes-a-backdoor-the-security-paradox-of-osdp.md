@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Eran Jacob, Ariel Harush, Roy Hodir_When The Front Door Becomes a Backdoor The Security Paradox of OSDP.pdf"
 pages: 107
 sha256: "6f2f97b6c1fa0d930df2729a45c67e3c889cb69087bccb4d9681d4682576897d"
-text_chars: 32741
-ocr_pages: 16
+text_chars: 27685
+ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:07Z"
+converted_at: "2026-08-12T04:03:05Z"
 ---
 # When The Front Door Becomes a Backdoor The Security Paradox of OSDP
 
 **Speakers:** Eran Jacob, Ariel Harush, Roy Hodir  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Eran Jacob, Ariel Harush, Roy Hodir_When The Front Door Becomes a Backdoor The Security Paradox of OSDP.pdf` (107 pages)
+
 
 ## Slide 1
 
@@ -35,16 +42,13 @@ Eran Jacob Ariel Harush Roy Hodir Head of Research Security Researcher Security 
 
 **Physical Access Controls Systems (PACS)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Physical Access Controls Systems (PACS)
 7
-PLL LL
 aa" 7
-©9000.
-. ©©@6®
-d©OO
 ```
 
 ## Slide 4
@@ -100,12 +104,12 @@ Open/Close
 
 **Attacking PACS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacking PACS
 ly Attacks
-iy Nethemba
 ```
 
 ## Slide 9
@@ -116,16 +120,6 @@ Open/Close
 Serial Communication
 OSDP / Wiegand
 Open/Close
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attacking Modern Reader <—> Controller Communication
-a. Serial Communication
- saunennnnntnnnninnnnennn >
-_OSDP / Wiegand
-A .
-```
 
 ## Slide 10
 
@@ -232,15 +226,6 @@ Serial to E TH(!)
 **1. Bypassing Access Control!**
 
 ***On properly configured and fully secured environments**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-|. Bypassing Access Control! :
-*On properly configured and fully secured environments
-C
-DC
-```
 
 ## Slide 17
 
@@ -836,13 +821,13 @@ IV4
 
 Siddharth Chandrasekaran
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IV Reverting - LIbOSDP
 https://github.com/goToMain/libosdp
 LibOSDP - Open Supervised Device Protocol Library
-release [V21410) C) Build cr (BESS)
 This is an open source implementation of IEC 60839-11-5 Open Supervised Device Protocol (OSDP). The protocol is
 intended to improve interoperability among access control and security products. It supports Secure Channel (SC) for
 encrypted and authenticated communication between configured devices.
@@ -1083,27 +1068,17 @@ _Fully control_ **_WHEN to open the door!_**
 
 **(secure channel)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Getting into the facility — Time Delay Attack
 C:\home\kal i\osdp- fuzz> python osdp_mitm_tool.py /tmp/cp_usock serial=/dev
-/ttyUSBO , baud=9600 delayll
 ```
 
 ## Slide 69
 
 **A Security Paradox More security, More features More (attack) opportunities!**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-A Security Paradox
-More security, More features
-More (attack) opportunities!
-C
-DC
-```
 
 ## Slide 70
 
@@ -1137,7 +1112,8 @@ _Bugs from 2022_
 
 _New DOS_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 More logic - More bugs.. New DOS “82 Seeule-channe!
@@ -1150,12 +1126,10 @@ overflow bugs
 Showing 1 changed file with 1 addition and 1 deletion.
 own address
 src/osdp_common.c
-turn "INVALID";
 }
 name = names[reply id - REPLY_ACK];
 if (name[@] == *\@") {
 if (!name) {
-n "UNKNOWN" ;
 ```
 
 ## Slide 73
@@ -1177,16 +1151,6 @@ n "UNKNOWN" ;
 ## Slide 75
 
 **Gaining a foothold in the internal IP network Over serial OSDP connection (RS-485)**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Gaining a foothold in the
-internal |P network
-Over serial OSDP connection (RS-485)
-C
-DC
-```
 
 ## Slide 76
 
@@ -1353,16 +1317,15 @@ additional_bytes_length + 0x100
 
 ##### **PACSIOD becomes a bind-shell**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Successful exploitation?
 PACSIOD becomes a bind-shell
 | grep LISTEN
-LISTEW
 LISTEN
 CISTEW
-LISTEN }
 LISTEN ae server-/.7.
 LISTEN 516/monoLlith
 LISTEN
@@ -1403,7 +1366,8 @@ RS485
 
 **OSDP Assessment Tool**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OSDP Assessment Tool
@@ -1420,7 +1384,6 @@ er_command FUZZER_TRIGGER_COMMAND
 the OSDP command to trigger the fuzzing (default REPLY_ACK)
 -fuzzer_target FUZZER_TARGET
 whether to fuzz the PD or CP (default CP)
-- fuzz sion_timeout FUZZER_SESSION_TIMEQUT
 how much time to fuzz a session (default 30 min)
 tivity_crash_threshold FUZZER_INACTIVITY_CRASH_THRESHOLD
 how much time of inactivity will be considered as a crash (default 1000 ms)
@@ -1461,99 +1424,68 @@ Fuzz
 
 - **Auto-crash detection.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 FUZZ MODE
-* Custom mutation
-orimitives.
+
+- Custom mutation primitives.
 - Easy to extend.
-» Auto-crash detection
-p023-26-18 03:40:27,374 cp -> pd:
-'531807000060265319070000602d531a070000602c531b0700006020531.c070000602a531d0700006029531007000060285310700006027532007000060265321070000602553220700
-(06016532907000060145322070000601.c5320070000601b532c070000601.25324070000601953260700006018532F070000601753300700006016533107000060155332070000601453331
-2023-06-18 03:40:27,425 cp
-2023-06-18 03:40:27,446 pd
->
->
-2023-06-18 03:40:27,492 pd -
-2023-06-18 03:40:27,538 pd -
-2023-06-18 03:40:27,583 pd -
-2023-06-18 03:40:27,629 pd -
-2023-06-18 03:40:27,675 pd -
-2023-06-18 03:40:27,721 pd -
-2023-06-18 03:40:27,767 pd -
-2023-06-18 03:40:27,813 pd -
-2023-06-18 03:40:27,859 pd -
-2023-06-18 03:40:27,905 pd -
-2023-06-18 03:40:27,951 pd -
-2023-06-18 03:40:27,996 pd -
-2023-06-18 03:40:28,046 pd -
-2023-06-18 03:48:11,022 *****
-pd: b'53360700006010'
-cp: b'538F10000450a0c9538F0800R4d0FFcb’ (original:b'538f08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538f10000450a0c9538F080004d0FFcb’ (original :b'538f08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538F18000450a0c9538F08000440a0c9538F0800044098e6° (original: b'538f08000440a0c9538F08000440a0c9538F08000440a0c9" ) ay
-cp: b'538f10000450a0c9538F0B0004d0FFcb’ (original:b'538F08000440a0c9538F08000440a0c9') applied mutation message _code_50
-cp: b'538F10000450a0c9538F08000440FFcb’ (original: b'538#08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538F18000450a0c9538F08000440a0c9538F0800044098e6° (original: b'538f08000440a0c9538F08000440a0c9538F08000440a0C9' ) ay
-cp: b'538F10000450a0c9538F08000440FFcb’ (original:b'538F08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538f10000450a0c9538F0800R4d0FFcb’ (original :b'538F08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538f10000450a0c9538F080004d0FFcb’ (original :b'538F08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538f18000450a0c9538F08000440a0c9538F0800044098e6" (original :b'538F08000440a0c9538F08000440a0c9538F08000440a0c9' ) ay
-cp: b'538f10000450a0c9538F080004d0FFcb' (original :b'538F08000440a0c9538F08000440a0c9') applied mutation message _code_50
-cp: b'538F10000450a0c9538F08000440FFcb’ (original: b'538#08000440a0c9538F08000440a0c9') applied mutation message_code_50
-cp: b'538F18000450a0c9538F08000440a0c9538F0800044098e6° (original:b'538f08000440a0c9538F08000440a0c9538F08000440a0C9" ) ay
-cp: b'538f0800045091db' (original:b'5380800044020c9') applied mutation message_code_50
-crash detected timeout: 462.97612953186035
-pri_invert
-TRL_
+- Auto-crash detection
+
+[terminal panel - ariel.harush]
+[illegible - one line clipped by the panel header]
+2023-06-18 03:40:27,374 cp -> pd:
+b'5318070000602e5319070000602d531a070000602c531b070000602b531c070000602a531d0700006029531e0700006028531f070000602753200700006026532107000060255322070[cut off by slide edge]
+00601e5329070000601d532a070000601c532b070000601b532c070000601a532d0700006019532e0700006018532f07000060175330070000601653310700006015533207000060145333[cut off by slide edge]
+2023-06-18 03:40:27,425 cp -> pd: b'53360700006010'
+2023-06-18 03:40:27,446 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,492 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,538 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,583 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,629 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,675 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,721 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,767 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,813 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,859 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,905 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,951 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,996 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:28,046 pd -> cp: b'538f0800045091db' (original:b'538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:48:11,022 ***** crash detected timeout: 462.97612953186035
+
+[code panel - ariel.harush]
+def pri_invert_control_SCB(msg: OSDPMessage):
+    msg.CTRL_SCB = not msg.CTRL_SCB
+    msg.recalculate_all()
 ```
 
 ## Slide 95
 
 **FUZZ Example**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 75/100 on the text kept, 57/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 FUZZ Example
-508000440d296' (original:b'53e508000440d29653e508000440d29653e508000440d296' ) applied mutation remove_payload
-508000440d296'
-cp: b'53e!
-oc
-53e5100004b7d29653e50800044041cb' (original :b'53e508000440d29653e508000440d296' ) applied mutation random_message_code
-35}
-bi
-cp:
-cp: b'
-cp: b'53e5100004b7d29653e50800044041cb'
-cp: b'b8e510000440d29653e50800044045e9' (original :b'53e508000440d29653e508000440d296' ) applied mutation random_som
-cp: b'b8e510000440d29653e50800044045e9'
-cp: b' 5 5 ' (original :b'53e508000440d29653e508000440d296' ) applied mutation random_size
-cp: b'53e510000440d29653e50800044081ae'
-cp: b'53e518000040d29653e508000440d29653e50800044098' (original :b'53e508000440d29653e508000440d29653e508000440d296' ) applied mutation invert_control_crc
-cp: b'53e518000040d29653e508000440d29653e50800044098' el
-cp: b'53e510000401d29653e50800044079da' (original: b'53e508000440d29653e508000440d296' ) applied mutation message_code_all
-cp: b'53e510000401d29653e50800044079da'
->
-+
-+
->
-+>
-+>
-+
-4
->
-+
-+
-+
-+
-pi cp: b'53e588000450f ff ff fff fff tft t ttt ttt ttt ttt ttt ttt ttt ttt ttt ttt tft tft tft FEF EEE FFF EEF FF EEE EEE EEE EEE EEE EE EE EEE EEE EEE EEE EEE EEE EEE EEE EE EEE EEE EE EE EE
-FFE FEE FEET FEF EFF EFF EF EFF EF EEE EEE EEE EEE EE EE EEE EEE EEE EEE EEE EEE EEE EEE EE EEE EEE EEE EEE EEE EEE EEE EEE EEE EEE EEE EEE FE FE EE EF P56d2° (original :b '53e508000440d29653
-508000440 er_overflow
-pd > cp: TTTTTTT TTT TTT TTT ttt ttt tt tt FFF FFF EF EE EE EE EEE EEE EE EEE EEE EE EEE EEE EEE EEE EEE EEE EE EE EE EEE EEE EEE EEE EEE EEE EEE EE EEE EE EFF
-FEF EFF F FEL EE EEE EFL EEE EL FEL EE EEL EFL EE EEE EEL EE EEE EEE EE EEE EEE EE EEE EEE EE EE EE EEE EE EE EEE EEE EE EEE EE EE EE EE EE EEE EE EE EE EE E5602
+
+pd -> cp: b'53e508000440d296' (original:b'53e508000440d29653e508000440d29653e508000440d296') applied mutation remove_payload
+pd -> cp: b'53e508000440d296'
+pd -> cp: b'53e5100004b7d29653e50800044041cb' (original:b'53e508000440d29653e508000440d296') applied mutation random_message_code
+pd -> cp: b'53e5100004b7d29653e50800044041cb'
+pd -> cp: b'b8e510000440d29653e50800044045e9' (original:b'53e508000440d29653e508000440d296') applied mutation random_som
+pd -> cp: b'b8e510000440d29653e50800044045e9'
+pd -> cp: b'53e510000440d29653e50800044081ae' (original:b'53e508000440d29653e508000440d296') applied mutation random_size
+pd -> cp: b'53e510000440d29653e50800044081ae'
+pd -> cp: b'53e518000040d29653e508000440d29653e50800044098' (original:b'53e508000440d29653e508000440d29653e508000440d296') applied mutation invert_control_crc
+pd -> cp: b'53e518000040d29653e508000440d29653e50800044098'
+pd -> cp: b'53e510000401d29653e50800044079da' (original:b'53e508000440d29653e508000440d296') applied mutation message_code_all
+pd -> cp: b'53e510000401d29653e50800044079da'
+pd -> cp: b'53e588000450ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff56d2' (original:b'53e508000440d29653e508000440d296') applied mutation trigger_overflow
+pd -> cp: b'53e588000450ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff56d2'
 ```
 
 ## Slide 96
@@ -1586,19 +1518,11 @@ osdp_get_message_data_size( ) signed number signed unsigned 0xFFFFFFFC -0x3 Mall
 
 **Catch the crush using fuzzer**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Catch the crush using fuzzer
-Q3:
-Q3:
-Q3:
-Q3:
-Q3:
-Q3:
-@3:
-Q3:
-@3:
 48
 48
 48
@@ -1609,11 +1533,8 @@ Q3:
 48
 48
 :27,721
-27,767
 :27,813
-127,859
 :27,905
-27,951
 :27,996
 :28,046
 :11,022
@@ -1625,7 +1546,6 @@ pd ->
 pd ->
 pd ->
 pd ->
-ok
 cp:
 cp:
 cp:
@@ -1634,13 +1554,6 @@ cp:
 cp:
 cp:
 cp:
-b*538F10000450a0c9538F08000440FFcb* (original: b‘'538F08000440a0c9538F08000440a0c9") ay
-b*538F10000450a0c9538F08000440Ffcb* (original: b‘538F08000440a0c9538F08000440a0c9") ay
-b*538F10000450a0c9538F08000440FFcb* (original: b‘'538F08000440a0c9538F08000440a0c9") ay
-b*538F18000450a0c9538F08000440a0c9538F0800044098e6' (original: b‘538F038000440a0c9538F
-b*538F10000450a0c9538FO8000440F Fcb* (original: b‘'538F08000440a0c9538F08000440a0c9") ay
-b*538F10000450a0c9538F08000440FFcb* (original: b‘538F08000440a0c9538F08000440a0c9") ay
-b'538F18000450a0c9538F08000440a0c9538F0800044098e6' (original:b‘538F08000440a0c9538F'
 b'538F0800045091db" (original:b‘'538f@8000440a0c9") applied mutation message _code_5@
 crash detected timeout: 462.97612953186035
 ```
@@ -1649,105 +1562,63 @@ crash detected timeout: 462.97612953186035
 
 **DEMO – Crashing the CP’s OSDP Service**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 45/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-DEMO — Crashing the CP's OSDP Service
-7-6. a) uw sis 6. al ty (1) ial
->
-: b'53600700006006'
-b'53600700006006'
-b'536107000060e5'
-: b'536107000060e5'
-b'53620700006004'
-b'536207000060e4'
-b'536307000060e3'
-b'536307000060e3'
-b'536407000060e2'
-b'536407000060e2'
-b'536507000060e1!'
-b'536507000060e1'
-b'53e50700004081'
-b'53e50700004081'
-b'53650800006200de'
-: b'53650800006200de"
-b'53e53400004601000002000003010004040105020106000007000008010009"
-: b'53e534000046010000020000030 10004040 105020 1060000070000080 10009"
-message is not valid
-: b'@1010a92030b92030c00008e00000f00001001009C
-b' 01010a92030b92030c 00000000000 F000 1001009
-b'53650900056100e94d
-53650900056 100e94d'
-'53e51400054500068e0 10 1 f5098036053800b9f7"
-*53e51400054500068e0 101 f5098036053800b9f7
-*536516000669000000000000000000010101610150e4*
-*536516000669000000000000000000010101010150e4"
-"53e508000640b0f0'
-'53e508000640b0fO'
-*53650d00076a00020101031e8f"
-'53650d00076a00020101031e8f'
-*53e50800074081c3'
-53e50800074081¢3'
-*53651600056900000000000000000001016101011d0c'
-‘53651600056900000000000000000001010101011d0c'
-53e508000540e3a5°
-'53e508000540e3a5
-‘'53650d00066a00010000008c 198"
-53650d0006600001000000c 198
-‘'53e508000640b0f0"
-'53e508000640b0f0'
-53650800076033¢5°
-*53650800076033c5*
-*53e50800074081c3'
-"53e50800074081c3'
-* 5365080005605 1a3'
-*53650800056051a3'
-ey
-+
-a
-ay
-as
-4
-ax
-a
-4
-ae
-K
-4
-4
-*
-BS
-ay
-=>
-as
->
-a
-4
-is
-ms
-5
-3
-a
-5
-oe
-ag
-5
-a
-ee
->
-as
-4
-a
-&
-4S
-4
-Es
-ig
-aK
-ws
->
-4
-4
+DEMO - Crashing the CP's OSDP Service
+
+door close
+
+[terminal tabs] 6. kali_tty (1)   8. kali_tty (1)   9. kali_tty (1)
+
+cp -> pd: b'536007000060e6'
+cp -> pd: b'536007000060e6'
+cp -> pd: b'536107000060e5'
+cp -> pd: b'536107000060e5'
+cp -> pd: b'536207000060e4'
+cp -> pd: b'536207000060e4'
+cp -> pd: b'536307000060e3'
+cp -> pd: b'536307000060e3'
+cp -> pd: b'536407000060e2'
+cp -> pd: b'536407000060e2'
+cp -> pd: b'536507000060e1'
+cp -> pd: b'536507000060e1'
+pd -> cp: b'53e50700004081'
+pd -> cp: b'53e50700004081'
+cp -> pd: b'53650800006200de'
+cp -> pd: b'53650800006200de'
+pd -> cp: b'53e53400004601000002000003010004040105020106000007000008010009'
+pd -> cp: b'53e53400004601000002000003010004040105020106000007000008010009'
+***** message is not valid
+pd -> cp: b'01010a92030b92030c00000e00000f00001001009c'
+pd -> cp: b'01010a92030b92030c00000e00000f00001001009c'
+cp -> pd: b'53650900056100e94d'
+cp -> pd: b'53650900056100e94d'
+pd -> cp: b'53e51400054500068e0101f5098036053800b9f7'
+pd -> cp: b'53e51400054500068e0101f5098036053800b9f7'
+cp -> pd: b'536516000669000000000000000000010101010150e4'
+cp -> pd: b'536516000669000000000000000000010101010150e4'
+pd -> cp: b'53e508000640b0f0'
+pd -> cp: b'53e508000640b0f0'
+cp -> pd: b'53650d00076a00020101031e8f'
+cp -> pd: b'53650d00076a00020101031e8f'
+pd -> cp: b'53e50800074081c3'
+pd -> cp: b'53e50800074081c3'
+cp -> pd: b'53651600056900000000000000000001010101011d0c'
+cp -> pd: b'53651600056900000000000000000001010101011d0c'
+pd -> cp: b'53e508000540e3a5'
+pd -> cp: b'53e508000540e3a5'
+cp -> pd: b'53650d00066a0001000000c198'
+cp -> pd: b'53650d00066a0001000000c198'
+pd -> cp: b'53e508000640b0f0'
+pd -> cp: b'53e508000640b0f0'
+cp -> pd: b'53650800076033c5'
+cp -> pd: b'53650800076033c5'
+pd -> cp: b'53e50800074081c3'
+pd -> cp: b'53e50800074081c3'
+cp -> pd: b'53650800056051a3'
+cp -> pd: b'53650800056051a3'
 ```
 
 ## Slide 102
@@ -1772,16 +1643,6 @@ override0x8
 # **WHATS next?**
 
 **And how to prepare for it..**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WHATS next?
-And how to prepare for It.
-im @:
-C
-DC
-```
 
 ## Slide 105
 

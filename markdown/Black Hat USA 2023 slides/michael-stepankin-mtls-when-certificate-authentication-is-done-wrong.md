@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Michael Stepankin_mTLS When Certificate Authentication is Done Wrong.pdf"
 pages: 33
 sha256: "35da1f9138d39219dca710f81d6450d4955d97bd7c7cc8130d6164f9a9855219"
-text_chars: 13654
-ocr_pages: 4
+text_chars: 13203
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:19:29Z"
+converted_at: "2026-08-12T04:14:10Z"
 ---
 # mTLS When Certificate Authentication is Done Wrong
 
 **Speakers:** Michael Stepankin  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Stepankin_mTLS When Certificate Authentication is Done Wrong.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -30,19 +36,6 @@ Michael Stepankin at Github Security Lab
 @artsploit
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekhat
-LUISA 2023 te
-AUGUST 9-10, 20253
-BRIEFINGS
-mTLS: when certificate
-authentication is done wrong
-Michael Stepankin at Github Security Lab
-we) @artsploit
-```
 
 ## Slide 2
 
@@ -78,26 +71,22 @@ Takeaways
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-A 20e
 TLS 1.2 mutual authentication
 RFC 5246 TLS August 2008
 Client Server
-ClientHello ween nn >
 ServerHello
 Certificate*
 ServerKeyExchange*
 CertificateRequest*
 <-------- ServerHelloDone
 Certificate*
-ClientkKeyExchange
 CertificateVerify*
 [ChangeCipherSpec ]
-Finished 2 2 2 2 ween = >
 [ChangeCipherSpec ]
 <-------- Finished
 Application Data <------- > Application Data
@@ -246,10 +235,10 @@ Lesson: just extract the username from certs[0] and you’ll be fine
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA 20253
 CVE-2023-2422: How its fixed
 // Testing only 1st certificate in the chain to match with configured subject
@@ -259,8 +248,6 @@ if (clientCfg.getAllowRegexPatternComparison()) {
 Pattern subjectDNPattern = Pattern.compile(subjectDNRegexp) ;
 matchedCertificate = Arrays.stream(certs)
 -map(certificate -> certificate.getSubjectDN().getName())
-.filter(subjectdn -> subjectDNPattern.matcher(subjectdn) .matches())
-.findFirst();
 String subjectdn = certificate.getSubjectDN().getName();
 matchedCertificate = subjectDNPattern.matcher(subjectdn) .matches();
 Lesson: just extract the username from certs[0] and you'll be fine
@@ -501,15 +488,3 @@ Lesson: it's generally dangerous to make requests to URLs taken from certificate
 The full writeup is available at https://gh.io/mtls-research
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-blac
-khat
-LUISA 2023 —S
-Thank you
-it The full writeup is available at https://gh.io/mtls-research
-#BHUSA @BlackHatEvents
-```

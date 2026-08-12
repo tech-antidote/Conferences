@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Narayana Pappu & Rubens Zimbres_Mind the Data Gap Privacy Challenges in Autonomous AI Agents.pdf"
 pages: 22
 sha256: "94daee36b771132854e4e5e138252132b5df4e7ad35ae434fa4de0638378f889"
-text_chars: 13952
+text_chars: 13874
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:50:44Z"
+converted_at: "2026-08-12T04:58:35Z"
 ---
 # Mind the Data Gap Privacy Challenges in Autonomous AI Agents
 
 **Speakers:** Narayana Pappu, Rubens Zimbres  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Narayana Pappu & Rubens Zimbres_Mind the Data Gap Privacy Challenges in Autonomous AI Agents.pdf` (22 pages)
+
 
 ## Slide 1
 
@@ -29,13 +35,11 @@ Speakers: Narayana Pappu, Rubens Zimbres
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-*
-Pee
 EWROPE 2C ~
-‘DECEMBER 11-12, 2024 ; S I
 IEFINGS | eS 2
 “Mind the Data Gah: Privacy
 Challenges in Autonomous Al
@@ -512,18 +516,14 @@ Questions Narayana Pappu: npappu@zendata.xyz Rubens Zimbres: rzimbres@zendata.xy
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SN
 Questions
 Narayana Pappu: npappu@zendata.xyz
 Rubens Zimbres: rzimbres@zendata.xyz
-—
 #BHEU
-Aun
-ba
-7 ae
 * \
 @BlackHatEvents
 ```

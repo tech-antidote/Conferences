@@ -8,12 +8,18 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Jesse Chick , Kasimir Schulz_Something Rotten in the State of Data Centers.pdf"
 pages: 64
 sha256: "bd9586e9b896509dbee94a88f8568054021249830c3d087f8344b409b0726232"
-text_chars: 24721
+text_chars: 24319
 ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:27Z"
+converted_at: "2026-08-12T04:03:33Z"
 ---
 # Something Rotten in the State of Data Centers
 
@@ -21,14 +27,15 @@ converted_at: "2026-08-11T21:12:27Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Jesse Chick , Kasimir Schulz_Something Rotten in the State of Data Centers.pdf` (64 pages)
 
+
 ## Slide 1
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 DECEMBER 4-7
 EXCEL LONDON / UK
 #BHEU @BlackHatEvents
@@ -316,11 +323,10 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-EUROPE 2023
 Using Frida to Determine IDs
 const RandomInit = new NativeFunctton(ptr(
 ‘pointer', ['pointer']);
@@ -334,12 +340,11 @@ const RandomString = new NativeFunctton(ptr(
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-EUROPE 2023
-Pane see © < |. ASNy ge
 const cm = new CModule(~
 #include <string.h>
 extern void* RandomInit(char*);
@@ -355,8 +360,6 @@ return start + 1;
 }
 }
 return -1;
-r,t
-Information Classification: General
 ```
 
 ## Slide 20
@@ -365,12 +368,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-EUROPE 2023
-RY) Fae (© © |. «WU Rae
 const ccrack = new NativeFunction(cm.
 ‘int', ['int', 'pointer', 'pointer']);
 function seedcrack(targetToken) {
@@ -380,13 +382,11 @@ const targetPtr = Memory.
 const seed ccrack(START_VALUE,
 let Random = Memory. (
 let tokenPtr = Memory.
-; ;
 RandomInit ( );
 RandomString(
 console. (
 }
 }
-Information Classification: General
 ```
 
 ## Slide 21
@@ -515,52 +515,112 @@ Information Classification: General
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pifeK hat
-EUROPE 2023
-binwalk FL0620-AVO-2.12.3.25987.f1
-DECIMAL HEXADECIMAL DESCRIPTION
-uImage header, header
-image size: bytes, Data Address: 0x0, Entry
-OS Kernel Image, compression type: gzip, image name:
-0x120 gzip compressed data,
-Ox2D3F5C gzip compressed data,
--12-16
-0x31E073
-modified: 2:44:32
-Zlib compressed data,
-0x4C81FC6
-0x4C87D3C
-Zlib compressed data,
-uImage header, header
-image size:
-07:39:23) Polaris 2.4.25905"
-0x4C87D40
-0x4CC783C
-0x4CC9544
-U-Boot version string,
-U-Boot version string,
-bytes, Data Address: 0x2D726333, Entry Point: 0x20284465, data CRC: 0x63203136,
--12-16
-PowerPC
-size: bytes, header CRC: Ox53FBFE30, created:
-Point: 0x0, data CRC: Ox83A880D4,|0S: Linux, CPU:
-"Linux-2.6.23"
-maximum compression, from Unix, last modified:
-fastest compression,|has original file name: "AVO.
-3557/3207)
-image type:
--12-16 3537/8 727/
-fs") from Unix, last
-best compression
-best compression
-size: bytes, header CRC: 0x552D426F, created: -04-03 3722)3 535},
-image name: "2 -
-"U-Boot 1.3.0-rc3 (Dec 16 2022 - 07:39:23) Polaris 2.4.25905"
-CRC32 polynomial table, big endian
-"U-Boot 1.3.0-rc3"
+Disrupting the state machine to discover new Bluetooth vulnerabilities
+
+[left pane - tombstone log #1]
+07-25 16:48:21.877  8247  8247 F DEBUG   : Revision: '0'
+07-25 16:48:21.877  8247  8247 F DEBUG   : ABI: 'arm64'
+07-25 16:48:21.878  8247  8247 F DEBUG   : Timestamp: 2024-07-25 16:48:21+0800
+07-25 16:48:21.878  8247  8247 F DEBUG   : pid: 30577, tid: 30656, name: bt_hci_thread  >>> com.android.bluetooth <<<
+07-25 16:48:21.878  8247  8247 F DEBUG   : uid: 1002
+07-25 16:48:21.878  8247  8247 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x0  0000000000000000  x1  00000000000077c0  x2  0000000000000006  x3  0000007652575520
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x4  53736d647543ff6f  x5  53736d647543ff6f  x6  53736d647543ff6f  x7  7f7f7f7f7f7f7f7f
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x8  00000000000000f0  x9  982f6af2b61cd630  x10 0000000000000000  x11 ffffffc0fffffbdf
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x12 0000000000000001  x13 0000000000000034  x14 002d28d6f857981b  x15 0000000034155555
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x16 00000079bb13fc80  x17 00000079bb1219f0  x18 0000007651c6e030  x19 0000000000007771
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x20 00000000000077c0  x21 00000000ffffffff  x22 0000007652576000  x23 00000076640b67b0
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x24 0000000000000001  x25 0000007652575cc0  x26 0000007652575ff8  x27 00000000000fc000
+07-25 16:48:21.878  8247  8247 F DEBUG   :     x28 000000765247d000  x29 00000076525755a0
+07-25 16:48:21.878  8247  8247 F DEBUG   :     lr 00000079bb0d5420  sp 0000007652575500  pc 00000079bb0d544c  pst 0000000000000000
+07-25 16:48:21.951  8247  8247 F DEBUG   : backtrace:
+
+[left pane - tombstone log #2]
+10-01 01:53:17.420 12789 12789 F DEBUG   : Revision: '0'
+10-01 01:53:17.420 12789 12789 F DEBUG   : ABI: 'arm64'
+10-01 01:53:17.420 12789 12789 F DEBUG   : Timestamp: 2024-10-01 01:53:15.530682377+0800
+10-01 01:53:17.420 12789 12789 F DEBUG   : Process uptime: 0s
+10-01 01:53:17.421 12789 12789 F DEBUG   : Cmdline: com.android.bluetooth
+10-01 01:53:17.421 12789 12789 F DEBUG   : pid: 11102, tid: 11136, name: gd_stack_thread  >>> com.android.bluetooth <<<
+10-01 01:53:17.421 12789 12789 F DEBUG   : uid: 1002
+10-01 01:53:17.421 12789 12789 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+10-01 01:53:17.421 12789 12789 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+10-01 01:53:17.421 12789 12789 F DEBUG   : Abort message: 'assertion 'false' failed - Done waiting for debug informa[clipped]
+10-01 01:53:17.421 12789 12789 F DEBUG   :     x0  0000000000000000  x1  0000000000002b80  x2  0000000000000006  x3 [clipped]
+10-01 01:53:17.421 12789 12789 F DEBUG   :     x4  1f646d6e431f2c1f  x5  1f646d6e431f2c1f  x6  1f646d6e431f2c1f  x7 [clipped]
+10-01 01:53:17.421 12789 12789 F DEBUG   :     x8  00000000000000f0  x9  00000074c8a3b0b0  x10 0000000000000001  x11 [clipped]   <- only the top half of this line is visible; the overlaid photo covers the rest
+[subsequent lines of this pane are covered by an overlaid photo - see below]
+std::__1::default_delete<std:[covered]
+10-01 01:53:17.422 12789 12789 F DEBUG   :      #09 pc 00000000000d6e3c  /apex/com.android.runtime/lib64/bionic/lib[clipped]
+10-01 01:53:17.422 12789 12789 F DEBUG   :      #10 pc 000000000006ab00  /apex/com.android.runtime/lib64/bionic/lib[clipped]
+6f67f69ff36b970d0b831cfdab3b5[obscured]
+
+[overlaid photograph of a screen showing a third tombstone; most of it is pixelated/[obscured]]
+[obscured] F DEBUG  : pid: [obscured], tid: 29311, name: btu[clipped]     [obscured]: 2023-08-22 14:49:32+08[clipped]
+29367 F DEBUG  : uid: [obscured]
+29367 F DEBUG  : signal 6 (SIGABRT), code -1 (SI_QUEU[clipped]
+29367 F DEBUG  : Abort message: 'ubsan: out-of-bounds[clipped]
+293[obscured] F DEBUG  :     x0  [obscured]        x1  0[obscured]
+
+[right pane - logcat; the middle band is covered by a pixelated image]
+08-04 19:09:41.7[obscured] 28889 28889 E BluetoothPhonePolicy: Received unexpected intent, action=android.bluetooth.device.action.ACL_CONNECTED
+08-04 19:09:41.838 28889 28921 I bt_btif_dm: get_cod remote_cod = 0x000c010c
+08-04 19:09:41.838 28889 28921 I bt_btif_dm: get_cod remote_cod = 0x000c010c
+08-04 19:09:41.840 28889 28932 I BluetoothBondStateMachine: Entering PendingCommandState State
+08-04 19:09:42.240 28889 28921 I bt_btif_dm: get_cod remote_cod = 0x000c010c
+08-04 19:09:42.241 28889 28921 E bt_stack: [ERROR:metric_id_allocator.cc(181)] BluetoothMetricIdAllocatorFailed to forget device because device is not in
+paired_device_cache_
+08-04 19:09:42.244 28889 288[obscured] W A2dpSe[obscured]
+08-04 19:09:42.247 28889 28932 [obscured]
+08-04 19:09:42.247 28889 2[obscured]
+08-04 19:09:42.247 28889 28[obscured]
+08-04 19:09:42.247 28889 289[obscured]
+08-04 19:09:42.269 28889 [obscured]
+08-04 19:09:42.272 28889 2[obscured] bt_stack: [INFO:btsnoop.cc(289)] whitelist_l2c_channel: Whitelisting [obscured] channel. conn_handle=50 cid=0x0040:0x0040
+08-04 19:09:42.316 28889 28944 I bt_stack: [INFO:connection_handler.cc(380)] void bluetooth::avrcp::ConnectionHandler::AcceptorControlCb(uint8_t, uint8_t,
+uint16_t, const RawAddress *): Connection Opened Event
+08-04 19:09:42.317 28889 28944 I bt_stack: [INFO:connection_handler.cc(211)] virtual bool bluetooth::avrcp::ConnectionHandler::SdpLookup(const RawAddress
+[obscured] Callback, bool)
+08-04 19:09[obscured]
+08-04 19:0[obscured]                                    [obscured].cc(256)] virtual [obscured]
+wAddress &): handle=0x01 status= 000000
+08-04 19:09:52.536 28889 32698 I droid.bluetoot: Starting a blocking GC NativeAllo[obscured]
+08-04 19:09:53.117 28889 32698 I AppScanStats: BLE_SCAN_RESULT_RECEIVED[6]noteBleScanResults=0
+08-04 19:09:53.117 28889 32698 I AppScanStats: BLE_SCAN_STATE_CHANGED[6]noteBleScanStopped=false
+08-04 19:09:53.119 28889 32698 E AudioSystem: onAudioOutputDeviceChanged (2, 2)
+08-04 19:09:54.855 28889 32698 E AudioSystem: onAudioOutputDeviceChanged (0, 2)
+08-04 19:10:02.918 28889 28889 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@1617aa
+08-04 19:10:13.429  1191  3966 I ActivityManager: Process com.android.bluetooth (pid 28889) has died: psvc PER
+
+[bottom-right pane - tombstone log #3]
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2023-09-01 15:24:04+0800
+pid: 1226, tid: 1305, name: droid.bluetooth  >>> com.android.bluetooth <<<
+uid: 1002
+signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+Cause: null pointer dereference          [boxed in red]
+    x0  0000000000000000  x1  000000000000000f  x2  b400007854339ab0  x3  0000000000000010
+    x4  b400007854339ac0  x5  0000000000000002  x6  00000000ffffffff  x7  00000077db558839
+    x8  0000000000000001  x9  0000000000000000  x10 000000002bc93534  x11 0000000054339ac0
+    x12 000000008c22d80c  x13 b400007864380c18  x14 ffffffffffffffdf  x15 000000001a1f5e40
+    x16 00000077db81d218  x17 00000077db7a9a90  x18 00000077d9e0c000  x19 b4000078a432b070
+    x20 b40000786437b260  x21 b40000787435e0e8  x22 b400007854339ab0  x23 000000000000000c
+    x24 b40000787435e0e6  x25 0000000000000000  x26 000000000000000e  x27 0000000000000001
+    x28 00000077db82c000  x29 00000077db558b50
+    lr  00000077db7ab684  sp  00000077db558b50  pc  00000077db7ab6c8  pst 0000000060000000
+backtrace:
+    #00 pc 000000000010d6c8  /system/lib64/libbrtsdk.so (AVDTP_DelayReport_Ind+144) (BuildId: 98fa8e78291628587d0804f42a442a9b)
+    #01 pc 000000000010a22c  /system/lib64/libbrtsdk.so (AVDTP_SignalMsg_Received+140) (BuildId: 98fa8e78291628587d0804f42a442a9b)
+    #02 pc 0000000000109da4  /system/lib64/libbrtsdk.so (AVDTPC_L2CAPData_Ind+88) (BuildId: 98fa8e78291628587d0804f42a442a9b)
+    #03 pc 00000000000da234  /system/lib64/libbrtsdk.so (ScheduleLoop+360) (BuildId: 98fa8e78291628587d0804f42a442a9b)
+    #04 pc 00000000000d4598  /system/lib64/libbrtsdk.so (porting_thread_proc+12) (BuildId: 98fa8e78291628587d0804f42a442a9b)
+    #05 pc 00000000000afecc  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+64) (BuildId: 8d0a10271eef02de6c33[clipped]
+    #06 pc 0000000000050408  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 8d0a10271eef02de6c33b788fec2[clipped]
 ```
 
 ## Slide 30
@@ -639,9 +699,9 @@ We want:
 
 ●Persistence across reboots ●Low profile
 
-```
+\```
 /etc/rc.d/S99backdoor
-```
+\```
 
 #BHEU   @BlackHatEvents
 
@@ -677,9 +737,9 @@ Information Classification: General
 
 #### Diagnosing the Upgrade Failure
 
-```
+\```
 /sbin/main_app
-```
+\```
 
 ##### Click “Upgrade”
 
@@ -691,9 +751,9 @@ Information Classification: General
 
 #### Diagnosing the Upgrade Failure
 
-```
+\```
 /bin/firmware_checkimage.sh
-```
+\```
 
 Is `checkImage` our point of failure?
 
@@ -745,9 +805,9 @@ Three calls to appconfig_get_int, retrieving values for: `1."firmwareconfig.fami
 
 We grepped through the filesystem to see where these config values are assigned:
 
-```
+\```
 /sbin/checkImage-ORACLE
-```
+\```
 
 #BHEU   @BlackHatEvents
 
@@ -843,9 +903,9 @@ Information Classification: General
 
 ● <u>We could have skipped the whole CRC-forging step!</u>
 
-```
+\```
 ./unpack_fw <firmware_image>
-```
+\```
 
 Firmware header
 Linux Kernel
@@ -856,9 +916,9 @@ Filesystem
 Mysterious Blob
 Mysterious Blob
 
-```
+\```
 ./gen_fw <config_file>
-```
+\```
 
 Firmware header
 Linux Kernel
@@ -1108,18 +1168,15 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [™ NewTab ff] Splitview v
 prec-5560% [|
 © 6 MPU4032DAC Explorer x +
-CG
-OB 10.0.0.78
 ry) V E RT | V. Avocent MergePoint Unity
-lUsemame
 Password
-T= (a
 ```
 
 ## Slide 60
@@ -1154,15 +1211,12 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2023
-Information Classification: General
 prec-5560% [|
 6 @ New Tab
-Cc
 Amazon StubHub
 Recommended by Pocket
 Of War and Electric
@@ -1171,8 +1225,6 @@ History of Push-...
 For over a century, buttons
 have conjured fears of all-
 or-nothing actions that...
-* Firefox
-> O
 T-Mobile YouTube
 parecredit.cor
 This Credit Card Is

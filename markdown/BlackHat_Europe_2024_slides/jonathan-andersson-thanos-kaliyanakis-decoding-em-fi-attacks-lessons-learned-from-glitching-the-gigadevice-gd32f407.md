@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Jonathan Andersson & Thanos Kaliyanakis_Decoding EM-FI Attacks Lessons Learned from Glitching the GigaDevice GD32F407.pdf"
 pages: 50
 sha256: "0774f4e3ee8f77eef80b69b52c152be6085c21a13c8e0a46d3bdb1f755bdbba8"
-text_chars: 16088
-ocr_pages: 7
+text_chars: 15571
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 81.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:50:21Z"
+converted_at: "2026-08-12T04:58:06Z"
 ---
 # Decoding EM-FI Attacks Lessons Learned from Glitching the GigaDevice GD32F407
 
 **Speakers:** Jonathan Andersson, Thanos Kaliyanakis  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Jonathan Andersson & Thanos Kaliyanakis_Decoding EM-FI Attacks Lessons Learned from Glitching the GigaDevice GD32F407.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -97,17 +103,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piStkhat GigaDevice vs STMicro - 32F407
-EUROPE 2024
-| 2) OOOO
-GD32F 407 ST32F407
-Information Classification: General
-© John McMaster
-```
-
 ## Slide 7
 
 ## Read Out Protection Levels
@@ -176,20 +171,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bistkhat The Rig
-EUROPE 2024
 Information Classification: Genera
 Python PC
-Vl
->
 USB to Serial (console)
 —
-—& ——
 Managed USB Hub
-OCHET EET LT LET
 Power Supply
 XYZ Table
 GD32F407 Target
@@ -270,10 +261,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-wu /,
 Getting Started _—_
 #BHEU @BlackHatEvents
 ```
@@ -454,15 +445,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biStkhat The Attack— Read Memory Command
-EUROPE 2024
 void Read Memory _cmd FUN 1£ff£f£0774 (void)
 { =
 — if (command = Oxll) {
-See —_ Read Memory cmd FUN 1ff£0774();
 se isa goto Bootloader Main Loop LAB l1fff4éfa;
 if (({opt and length « Oxff00) == Oxaadd) {
 Serial TX byte FUN _1fff3c04 (0x79);
@@ -484,22 +474,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piStkhat The Attack—An Example Glitch
-EUROPE 2024
 NACK 0x7F
 Trigger
-SESSCSECECEES EEE
-7
 =
 «
-> -
-> td
-> *
-2
-SVewrtleVeQe* eeetwewwteeeere¢
 Information Classification: General P rog ram mM abl e ( D) el ay
 ```
 

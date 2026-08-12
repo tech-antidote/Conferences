@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Estelle Ruellan&Olivier Bilodeau_Hackers Dropping Mid-Heist Selfies LLM Identifies Information Stealer Infection Vector and Extracts IoCs.pdf"
 pages: 167
 sha256: "a4c759d64018a2af6ddd4d956a7e9db6d19ec5f9138da88c963826038d7a9a8f"
-text_chars: 83853
-ocr_pages: 61
+text_chars: 68960
+ocr_pages: 55
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:54:49Z"
+converted_at: "2026-08-12T05:12:23Z"
 ---
 # Hackers Dropping Mid-Heist Selfies LLM Identifies Information Stealer Infection Vector and Extracts IoCs
 
 **Speakers:** Estelle Ruellan, Olivier Bilodeau  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Estelle Ruellan&Olivier Bilodeau_Hackers Dropping Mid-Heist Selfies LLM Identifies Information Stealer Infection Vector and Extracts IoCs.pdf` (167 pages)
+
 
 ## Slide 1
 
@@ -203,11 +208,11 @@ flare.io
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mid-Heist selfies
-© YouTube
 12
 ! IF YOU HAVE TROUBLES
 DOWNLOADING/LAUNCHING FILE JUST TURN OFF
@@ -352,12 +357,12 @@ flare.io
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Prompt Engineering
 © YouTube how to install mod menu fortnite pe
-link a2: ae
 1 IF YOU HAVE TROUBLES
 DOWNLOADING/LAUNCHING FILE JUST TURN OFF
 YOUR ANTI-VIRUS ITS ABSOLUTELY SAFE !
@@ -388,24 +393,18 @@ flare.io
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overview of the Pipeline
 GP Youtube how to install mod menu fortnite pe 2022
-TL
 load
 d
-linkdingtie
 1 IF YOU HAVE TROUBLES
 DOWNLOADING/LAUNCHING FILE JUST TURN OFF
 YOUR ANTI-VIRUS ITS ABSOLUTELY SAFE !
-a v
 FORTNITE HACK | UNDETECTED | FORTNITE MOD MENU DOWNLOAD FREE
-FORTNITE O= a
-267 views 8 Dec 2022 Zo Tat T ™ A — Z
-snl Ct sanianee T_) DOWNLOAD LINK
-aT TY HALE I
 ```
 
 ## Slide 26
@@ -480,29 +479,6 @@ flare.io
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Prompt Engineering Web Content
-“mA
-MidJourney 64-bit
->
-or
-ct
-Ss
-~
-i~
-000
-lf
-le.
-— 0555
-A RA EMD dspa2023 F
-euP@cmaacecds
-13°C an
-@ \isceux Bm & Rechercher
-32
-```
-
 ## Slide 32
 
 The first layer
@@ -515,7 +491,8 @@ flare.io
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Prompt Engineering
@@ -523,23 +500,15 @@ Zalo
 Admin
 3
 This PC
-rs
 Network
 Recycle Bin
 Control
 Panel
-6c Cée
-ie)
 ABBYY
 FineRead.
-Sey
-, >|
-: >
 &
 leaner
-@
 P
-a
 Project
 ‘SAP2000 16
 Sketchup
@@ -547,47 +516,33 @@ Sketchup
 Microsoft
 Edge
 khd
-ASS
-cPuID
-CPU,
 Du Toan Eta
 Style Builder
 2019
-A
-Théng ke
 cét thé.
 ~$
-THLKALY.
 ©
 Microsoft
 Edge
-H®s
 ETABS 18
 Foxit PDF
 Reader
-D
 Google
 Chrome
 LayOut 2019
 PDF24
-oF
 PowerPoint Chuyen CAD
 sang Word
 UltraViewer
 Unikey
-a
 vic media
 player
 Word
-xa
 a
 Excel
-=>
 A
 a
 Access
-Drawing.d.
-Drawingi.d.
 mhkalsxy.
 yidAMev.
 File System
@@ -595,26 +550,16 @@ This PC
 HEP TTT
 Documents
 Huéng dan dd an tét nghiép ¢
-THUYETMINH
-OneDriv DuToanéta
 Documents Program Fil
 Hinh anh
 ‘Tap pO AN DRIVER
-LAM vie
 this Pc
 B 3D Objects
-Bi esttop
 2) Documents
-Lp
 Music
 =| Pictures
-Hi Vice
-de Acer (C)
-= luv tras)
-# Network
 Program Files (x86
 Linh Tinh
-55)
 ```
 
 ## Slide 33
@@ -632,17 +577,12 @@ flare.io
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 34
 Prompt Engineering
-GV idocem zc)
-UNIVERSTTE
-SAINTTHON
-EXOIEXE
-NAISONS ISG
-Psrermetres
 Please stay online while Office
 downloads
 We'll be done in just a
@@ -664,45 +604,29 @@ flare.io
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 55)
 The first layer
 Prompt Engineering
 http://
-ooo
-Ng
 Hybrid
-[eis waa las BCA Ame © Light Term fy Lear tos = Arp © Rest @ You! @ VO Odo © se Wit Mice O Suse a Mic fil Soft @ tx O con } =e)
 =
-Cc | Gl) @ meganz/file/DZxXBB5I¥iNTbuEPAK83I-SBIx11LAxY¥mGJ9IigZZSItjTc3521 } ele shar ao =
-BB Mikrotik Bm Groficas MB OLT MB OD00 ©) Testing © Saifo @ ISP- Jira [B Trello 9 Coreo:Rafa §%% Muvecom ¢P Webmail Fastcom [i] Geo. @ Whaticket €$ Drive @ less [i Futbol Libre TV »
-@& meca
-Bi Microsoft Office Crack 2022
-@® Nuevo ~ x Oa GQ @ W WW Ordenar-~ Sver~ s+
-€ > Y D  MP> Este equipo > Descargas > Microsoft Office Crack 2022 > Microsott Office Crack 2022 v
-ME Desttop + Nombre Fecha de moditicacion Tipo Tamanio
+€ > Y D MP> Este equipo > Descargas > Microsoft Office Crack 2022 > Microsott Office Crack 2022 v
 + Descargas # Wm cata 21/11/2022 9:10 Carpeta de archivos
 BB Documentos #
 Bl @fomicvell 21/11/2022 909 Aplicacion 696.320 KB
-Biimagenes #
-Papas B vin-32.1 10/9/2021 7:21 Extension dela ap.. 1295 KB
-BB Hallo Rata B win-64.ai1 10/8/2021 7:21 Extensi6n de la ap. S71KB
 Bm Manuales
 Bu Septiembre 202:
-¥ 9 Dropbox
 Bm Espacio familiar
 Ba HALO
-Ba Muvecom
 BM Soporte Tecnico
 @ OneDrive - Person
 > I Este equipo
 4.lementos | 1 elemento selecciofjsdo 680MB |
-BE Microsoft_Office Cr.rar
 = @
-QB wrarsapp
-BEE Microsoft office cr. @ muvecomer2820. GF Download- MEGA. BP Seguridad de Wind.
 ```
 
 ## Slide 35
@@ -889,41 +813,12 @@ flare.io
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 69/100 on the text kept, 34/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(hme ete ET © whee Nierte Peewee Trey (term Ge - | a -
-© foulube eset peel? antivirus license key 2003 > ‘ » oO  ]
 ESET NODS2 ANTIVIRUS CRACK 2023 @ FREE OOWNLOAD @ UCENSE KEY INTORNET SECURITY
 @ 100% WORKING
-“ Eng Civé Cantos Heanque 6 eS ie Dp > Cantihds Le
-‘9 038 verestircacers € tet 2573
-Ret Lowe OLD omed DESIRE pe Crqueed Fee etew
-Carne feerwon Fre
-@ OR Ors Lee (OEE LNeKy Fepe weet WCE?
-Teen of vps toe he ek to week
-cate we bie ptthcew.
-0 yas carn Gowedane / etl (Re archee pow need wx
-\ (hamahe / emmeve etrta Ties fs coTpitety Ceary
-3. tl you cartt gowntnadd ty to cogy fe Bet are Sownined using another browner
-2 Ceeette Widows Great Screen, or well os updete the Vinal 0+ package
-4 Update HET Mersewert to 4.5 version
-How to eet?
-1 Phe Schageee
-2 Congiete tt eteee
-De, cory)
-@ wiatice weeeomey
-tags (gears)
-east FOC 2) antvesteest Pet) athens ioonee bey 20 eect Saxtl) artvires borane Grypseet set rect) kore eeyeeet fet ateina
-crwes bepy 209 Soweto! aed busted cent nod) ete usenet soc)? bya ent welt? eyeeet Pierwt warhardvem well) rect
-beprodh) ethtus keyeeet soci) etvirus bcense try Bet reenact sacl? etvres cove sive veneer rod) metre XI | set
-pedi’ Bcercms 287 | geet rect? boencies rrarso 200 | geet socll? arevres fee Scerecactvaton bey cf cnet socll? tye eset etl?
-— Beare fry DEceree cnet port)? fetes M0 Lemet soll? ectvedoenet wcll? eens securty boewes try full wertion beter update
-w VW 90T | TPPPT? cnet noe? eetve decane cect nod) etetus | Lees red reeset securty }4 cnet sod? etvews |) telcos
-a cnet not Towel eet? 11 y ecthes cent rod? 2020," heeet od? eetyeus PTT 2271. 2002 | eeteteces y rete comes ree /
-peenre Of 200 Leset sont? even tester red 0 evien esta ow bo rirtal ard ectvete Cort wl? art eee i fore eet red
-evtucedt rod) MTL cect red 0 eviewun Goer bey 8.4 vor lett apiwtics POINTE?) cect eT? eeeras borer bry DID bee
-e@eeqgqrFrnmaanenvre ves QC rates 40 oe ©
 ```
 
 ## Slide 42
@@ -1058,24 +953,18 @@ flare.io
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 49
 Evaluation - Browser Tab Identification - Case Study
 Despejado
 TradingView
-‘scritorio
-SS
-rey
-od
-eS
 Experimente potencia adicional, velocidad adicional y
 flexibilidad adicional, todo con la misma UX que conoce y ama.
 DESCARGAR oO DESCARGAR DESCARGAR
 GM Para ventanas | | WR nara mac os na lini
-Bm =O Bisqueda BPeaeme acs
-A@a Frond ee
 ```
 
 ## Slide 49
@@ -1313,14 +1202,14 @@ flare.io
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 71
 Discriminating loCs
 loC checking
 Save to MEGA Download
-ES “~Password - 2025.txt
 | | SoftwareDownload+(Password -
 Enter decryption key
 Live loC
@@ -1338,7 +1227,8 @@ flare.io
 
 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 72
@@ -1346,9 +1236,7 @@ Discriminating loCs
 ~
 2
 >
-di
 loC checking
-fA 8 htt ww.fixerroryt.com/202
 Q
 @ Home GTA5(FiveM) Fortnite AMD &NVIDIABESTSETTINGS ~ Blood Fx
 eM Fix GTAS _b3905.exe!sub_1407A07C8 (0x43
@@ -1368,13 +1256,13 @@ flare.io
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Getting out the trash
 Discriminating loCs
 @) YouTube Search
-©
 Video unavailable
 / r This content isn't available.
 loC checking t
@@ -1393,17 +1281,15 @@ flare.io
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Getting out the trash
 Discriminating loCs
-©
-it
 loC checking
 74
 Microsoft Office Crack Free Download Full Version 2022
-Oem
 33 vues 31 oct. 2022
 Welcome! Leave a LIKE and SUBSCRIBE if you enjoyed this video!
 ARCHIVE PASSWORD: 7521
@@ -1423,13 +1309,13 @@ flare.io
 
 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Getting out the trash
 Discriminating loCs
 Microsoft Office Crack Free Download Full Version 2022
-Qe
 ~ 33 vues 31 oct. 2022
 Welcome! Leave a LIKE and SUBSCRIBE if you enjoyed this video!
 ARCHIVE PASSWORD: 7521
@@ -1449,10 +1335,10 @@ flare.io
 
 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-=. Jul24 1542 es @ @ A @ + GD & = & G100%
 (stealerlogs-ioc-feed) obilodeau@sparkle ~/f/r/s/stealerlogs ioc feed (main)> python -m fetch _screens.refactored pipel
 ine.fetch_analyze --download-screens --open-screens --openai-response --delay 10
 ```
@@ -1501,7 +1387,8 @@ flare.io
 
 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 89
@@ -1576,18 +1463,6 @@ flare.io
 
 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Infostealer Playbook
-Lure Themes - Gaming Cheats & Mods
-__ FORTNITE
-RE SHIN SIVAPPER!
-: f \s: Skin Swapper
-| A sure Pires § —Eeaayack gP wrogs
-wears
-```
-
 ## Slide 84
 
 Infostealer Playbook
@@ -1607,17 +1482,6 @@ Infostealer Playbook
 flare.io
 
 97
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Infostealer Playbook
-Lure Themes - Gaming Cheats & Mods
-FORTNITE
-RET TER
-SHINECRRLT =
-OR ECRREN
-```
 
 ## Slide 86
 
@@ -1682,25 +1546,18 @@ flare.io
 
 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-GP YouTube ©
-linkdinitheye de oc DOWNLOAD LINK
-inti httes telegrauoh/ FURI NITE-HALR-FREE-DOWANLOAD
 BLES
-ot, VE PASSW rae shozches
-im pa’ fe [ } i| \ ASSVJURK SNO ZONE Pacnins miesust TuRn oFF ‘
 S ABSOLUTELY SAFE!
-ssl hall y = i bed le
 FORTNITE HACK | UNDETECTED | FORTNITE MOD MENU | DOWNIS/AD FREE
 $5) SS&B nha 17 op AY Share + Download =+ Save
 22
 267 views 8 DY
 FORTNITE HACRAMPNDETECTED | FORTNITE MOD MENU. | OAD FREE
-PF) DOWNLOAD LWkK@aers in ,sricatee
 & ARCHIVE PA ORD: shgzchez
-Car worrmney fat
 (> Instructions
 ```
 
@@ -1754,19 +1611,6 @@ flare.io
 
 108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Infostealer Playbook
-Distribution Strategies -
-Software S Q
-fama,
-http://
-[peeps
-[http:// .
-(http:/7 ¥
-```
-
 ## Slide 97
 
 **The Anatomy of a Stealer Log**
@@ -1775,35 +1619,25 @@ flare.io
 
 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4
 gle
 sans titre - Story Book x midjourney - Recherche Google X +
 ?q=midj = =midj = 157j0i
-@ google.com/search?q=midjourney&rlz=1C1VDKB_frFR1054FR1054&0q=midjurny&aqs=chrome. 1.6915 7j0i M Gmail @@ YouTube ge XS
-idj Google {ono xX Sw eDa
 midjourney x §&§ g
 AS
-MAY Ol HO] BAst QE As
-Q Tous Images () Vidéos W@ Actualités © Livres i: Plus
 x
-uvert
 Environ 39 800 000 résultats
 Sponsorise
 Sponsorisé
 © ai.mid-journey.org
-https://ai.mid-journey.org
-an a4et Ss
 java ANH
-java FEA
 Java -cp
-Aye Che eo
-javazt
 java ... parameter
 java -jar 23
-Aer aS
 Get The Latest Updates - MidJourney
 Comprehensive Tutorials on Working with Midjourney. Exclusive Updates and Fi
 Subscribe To Our Midjourney Course.
@@ -1819,19 +1653,9 @@ midjourney discord midjourney prix
 Midjourney
 https://midjourney.com - Traduire cette page
 Midjourney
-2B - http:/www.ikosmo.co.kr/ +
-StHZABES| Of O'TH7H EH - java - ikosmo.co.kr
-3H|X|21100%, TERA, PAR, NOt, ABM TRA AS, aXrraa Ae
-SLSATSFEA7IS, 100% SH SH, 7IZSE AS 1:17, java.
-BAMA HHS SAE AMS|RSUCH et 19M] Oats] ASAeS AVISS So SE Ais B+ ASY
-ct
-Lolz ol
 Midjourney is an independent research lab exploring new mediums of thought and expanding aimee 84) Jclels
 the imaginative powers of the human species.
 https://www.java.com > ... ¥
-= "% Java C}2BE
-ava yi gin whee 8
-mm QO Search iki wu Ouet
 ```
 
 ## Slide 98
@@ -1860,7 +1684,8 @@ flare.io
 
 113
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Infostealer Playbook
@@ -1895,17 +1720,16 @@ flare.io
 
 126
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 About Store Gmail Images
-Q. midjourney x UO)
 midjourney prompts with results
 midjourney when blending with two text prompts, what do you
 put between them.
 midjourney what are some of the best user prefer option set
 examples
-Q  midjourney ai
 midjourney bot
 midjourney discord
 Q
@@ -1914,7 +1738,6 @@ Q midjourney v5
 Q. midjourney api
 Q
 midjourney free
-Q  midjourney v4
 Google Search I'm Feeling Lucky
 Report ingppropriste predictions
 Advertising Business How Search works ‘& Carbon neutral since 2007 Privacy Terms Settings
@@ -1928,23 +1751,19 @@ flare.io
 
 127
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Design sans titre - Story Book x .  midjourney - Recherche Google X +
+@ Design sans titre - Story Book x . midjourney - Recherche Google X +
 ¢>x
 Google
-|
-1c
 » *
 Ciel couvert
-HQ
-@
 midjourney x<
 Q Tous E)Images (G) Vidéos ©) Actualités [Livres i Plus Outils
 Environ 39 800 000 résultats (
 ai_mid-journey.org
-hittps://ai + org
 Get The o& Updates - MidJourney
 U&rials on Working with Midjourney. Exclusive Updates and Features
 Recherches associées
@@ -1957,13 +1776,7 @@ https://midjourney.com - Traduire cette page
 Midjourney
 Midjourney is an independent research lab exploring new mediums of thought and expanding
 the imaginative powers of the human species
-@@ google.com/search?q=midjourney&rlz=1C1VDKB_frFR1054FR1054&o0q=midjurny&aqs=chrome. 1.6915 7j0i10i433i51213j0i 101131143315 1212j01101512j5.5553j0j7&iso... | WW & oO 2
 £33 $33 Connexion
-Y A
-;
-aut
-¥
-Me
 {2} Plus d'images
 Midjourney <
 Midjourmey est un laboratoire de recherche
@@ -1971,7 +1784,6 @@ indépendant qui produit un programme d'intelligence
 artificielle sous le méme nom et qui permet de créer
 des images a partir de descriptions textuelles, suivant
 un fonctionnement similaire a celui de DALL-E
-d'OpenAl. Wikipédia
 Créateur : Midjourney
 Premiére version : 2022
 ```
@@ -1987,7 +1799,8 @@ flare.io
 
 128
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Fat
@@ -1995,8 +1808,6 @@ flare.io
 © She
 Cc
 © Mo: | $f Abe | G INS | G FNA | [FJ Tou | [FY Tow | FRY Tou | FF Coc | FR Con | ih Rec! | FF Coc
-@ ai.mid-journey.org/?gclid=EAlalQobChMI_NKlsu7C_glVEQSiAx3DcQzSEAAYASAAEgJAwPD_BwE
-“A
 MidJourney 64-bit
 0$/month
 Unleash Your Creativity with MidJourney's Al-powered Images!
@@ -2019,10 +1830,10 @@ flare.io
 
 129
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\\
 ney 64-bit
 month
 MidJourney's Al-powered Images!
@@ -2036,19 +1847,16 @@ How can | use MidJourney's images?
 
 130 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ra
 4
 Gérer Téléchargements
 | Fichier | Accueil Partage
 +t e« Disque local (C:) » Utilisateurs >» Sherlybulle » Téléchargements
 Affichage Outils d'application
-ATIPIK.FRAN'x¢ ® = Nom las
-ATIPI \ ‘ -
 ATIPIK_Sch
-M | d suit Bi Midsetupo§ g
 ATIPIK-Plante # 3
 MidSetup.ex
 PERSO ad
@@ -2056,26 +1864,15 @@ PERSO ad
 Innovative Al-powered program th fein Fi) Kicepoge-Sitisiexe
 to generate st Egoistement v6)
 |m] —Pngtree—woman archer powerful_6636351.png
-Etablissement-vi
 &| —Pngtree—target shooting_5927062.png
-&| Couverture_reels(8).jpg
-e |m] Couverture_reels(7).jpg
-(-) MidSetup.exe 3s vs
 &] les mots mélés(1).png
 a] les mots mélés.png
 &) Les valeurs de votre Instituti.png
-Bureau
 |g] Carrousel Linkedin .jpg
 |=] Documents
-a) ATIPIK.FAM(4),jpg
 =) Images 5
-&) ATIPIK.FAM(3).jpg
-J) Musique |w) Couverture_reels(6).jpg
 B Objets 3D &) Couverture_reels(5),jpg
 } Téléchargement:
-Bg Vidéos .
-«| Couverture_reels(4).jpg
-= Disque local (C:) ee ee ee ee mM:
 Plus tot cette semaine (28)
 1 291 élément(s) 1 élément sélectionné 4,99 Mo
 Why MidJourney?
@@ -2085,61 +1882,35 @@ Why MidJourney?
 
 131 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
-teeta Meee Chrome,
-Este Holal/PN mumOceanofgams ReisideloanemmmnViC Tnternet
-rece : ine Downton
-ray ~
-: Flea i F 2
-ViSEOMN SagrauaiVer
 q a
-[=
-on
-am hid
-OitSem=Re.. Nandipha808
 Mares and Ceeka...
-Chromest..
 “Splan 70
-bso EBIIMGST One a Ree chr
-TKIMeN Marine
-3
 PDF
-I
-529072024 1%
 UMT_UNIS...
-ey
 UMT_Uniso...
 Disable antivirus and try again
-O\mscoreei.dl
 Continuar |
 updates
 Blacklist
 12:55
-A G tq) POR o3/oa/2024 8)
 ```
 
 ## Slide 109
 
 132 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-——— e ———et x
-HerciliOumma he eknd sum GOOO|cmmNENeW folder mmmmsPlan/0) Torrents PsiphionPro sy Novo(a) Splan 70 ) Chromest. UtSem=Re.. Nandipha808
-(hicini=
-Vasco Ouane) Live At Sohne Documenta. ip cde * Mares and Ceeka...
-‘PDE
-_
-1290720241%
 1.6 GHz
 UMT_UNIS...
-is
 UMT_Uniso...
-\mscoreei.dl
 updates
 12:55
 ```
@@ -2148,28 +1919,15 @@ updates
 
 133 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 44/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-“aap ae
-WOSre © » te
-da ent Tents,
-oe Newrolders ptln70 Llorrentees PsiphonPro E Splans70) Ghromest.. OifSem=Re.. eet ev
-AG ey ae Document... Mares and Ceeka..
-ne
 ems | |t is possible that the computer's security
 systems may FALSELY trigger
-;
-200720241 me Sinn) Hercilio UMT_UNIS...
-is
-ig
-ay UMT_Uniso...
 (
 Dente DX
-= ~~
-Bluestacks imusc isplany70) > vl - o@) Pe G3.01 Somme Lagrimas.d ar
 Blacklist updates
-Moltieinstave
 12:55
 ```
 
@@ -2185,21 +1943,16 @@ flare.io
 
 134
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ae HOW NE GOt OVEF 3 DRLIUN VIEW: A | Se ROCECH Us cUcy nsiavauon anc A | Mey LINUX ROGEChI G.co IN€ secure A | OS (NNedaddningar ae je NOW 00 Gisable OnGerencer anuv: A
-iia rl
-€ > GZ &@ google.com/search?q=how+to+disable+bitdefender+ antivirus +2023 QEl-crgSU Swved=OahUKEwjtofWSvMD8AhUPjosKHZT2D = i ertal 202 o-. Rek BOR TOS:
-@ Schemavisare-Sko.. @ CLIPSTUDIO PAINT... (8 YouTube Panzoid [| skola 4 MP3DownloaderO... [i Blueprint Tracker+.. | rust 5 NiceHash-Largest.. @ https//arma3projec... «a MPGH-MultPlayer... [J] iSpace Mining Pool... Miscreated CVAR H... » | IE Ovriga bokmarken
 Google [tow to aisable bitdefender antivirus 2023 m ! © Q &
 This video will show you how to temporary disable ww enable
 How to Temporarily Disable or Enable Bitdefender TOTAL.
 YouTube - Nam Anh Cap - 25 jan. 2022
 Saknas: 2623 | Maste innehalla: 2023
-https:/www. youtube.com
 how to bebe disable bitdefender 2023 - YouTube
-qb» GalBitdefender 2023 | 8}. Je) o< Bitdefender qb» ita)
 how to temporarily disable bitdefender 2023 ... aia win cu
 How to disable bitdefender antivirus 2023
 YouTube - MR BNA - For 1 manad sedan
@@ -2208,7 +1961,6 @@ Oversatt den har sidan
 How to Disable Bitdefender Windows 10 - Clean my PC
 Open the Bitdefender Total Security 2019 on your device. - Navigate to the Protection
 Features tab and click on the Settings icon under the Antivirus module
-https:/Avww. prajwal.org > ho
 Oversatt den har sidan
 How to Disable Bitdefender Notifications - Prajwal.org
 7 2022 — Launch the Bitdefender antivirus or Total security tool. - Select Settings and
@@ -2217,11 +1969,8 @@ https://www.safetydetectives.com Oversatt den har sidan
 How to Cancel Bitdefender Subscription (& Get a Refund) in ...
 Find Bitdefender under your list of products and click Stop automatic subscription renewal. ... |
 recommend Norton — it's my favorite antivirus in 2023,
-kK KK Rankning: 9/10
 nsioner
-Relaterade sokningar
 Q uninstall bitdefender Q bitdefender alert page
-Pe e@Oos @
 22:36
 2023-01-11
 ```
@@ -2230,11 +1979,11 @@ Pe e@Oos @
 
 135 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Security
-ee
 fm Home
 | sy} Virus & threat protection
 QR Account protection
@@ -2253,8 +2002,6 @@ Real-time protection
 Locates and stops malware from installing or running on your device. You
 can turn off this setting for a short time before it turns back on
 automatically.
-.
-)
 Cloud-delivered Wotection
 Provides increased and faster protection with access to the latest
 protection data in the cloud. Works best with Automatic sample
@@ -2271,8 +2018,6 @@ Submit a sample manually
 Tamper Protection
 Prevents others from tampering with important security features.
 A Tamper protection is off. Your device may be vulnerable. Dismiss
-&)D of
-n» QO9OSseCs*
 Have a question?
 Get help
 Help improve Windows Security
@@ -2283,16 +2028,14 @@ for your Windows 10 device.
 Privacy settings
 Privacy dashboard
 Privacy Statement
-O43 PM
-AED A NG pr rrop4
-B
 ```
 
 ## Slide 113
 
 136 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Security -
@@ -2326,7 +2069,6 @@ potential threats. We'll prompt you if the file we need is likely to contain
 personal information
 A Automatic sample submission is off. Your device may be Dismiss
 vulnerable.
-© of
 Submit a sample manually
 Tamper Protection
 Prevents others from tampering with important security features.
@@ -2334,8 +2076,6 @@ A Tamper protection is off. Your device may be vulnerable, Dismiss
 @ of
 Ber Settings
 = 04:13 PM
-AED A NG pr rrop4
-§
 P& Type here to search n © 9 =
 ```
 
@@ -2349,7 +2089,8 @@ flare.io
 
 137
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Tips for Waiters.
@@ -2370,26 +2111,20 @@ https://decrypt.co » midjourney-free-ai-image-generati
 Midjourney Kills Free Al Image Generator Access After ...
 30 Mar 2023 —A “deep fake’ is realistic-looking media created by Al by altering images, videos,
 or audio to show real people doing or saying things they ...
-O :
 https:/Awww.vox.com > technology > al-image-dalle-o.
 How unbelievably realistic fake images could take over the ...
 30 Mar 2023 — Al image generators like DALL-E and Midjourney are getting better and better
 at fooling us.
-ma PDataDivel
 @ Reddit - Dive into a... G Discord (EJ Amazon.de: Low Pri... (@ ChatGPT [| Websites Tools [| One Piece
-2. ai.midjOurmey.or virus | a 6 © Qa
 virus fake
 Is Midjourney v
 What is the most realistic Al art generator? v
 v
 Feedback
-BB Shopping
 BB Games [ Godot
 a
-BB Movies &Shows [Football
 ai.midjOurney or virus
 IB Cooking
-3
 o
 ```
 
@@ -2403,14 +2138,13 @@ flare.io
 
 138
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Tips for Waiters. x Hi French Terms Related toF & BSi X Perfect software for all your visu: X (GS) ai.midjOurney.or fake? - Google © X +
-eS
 Cc @ google.com/search?q=ai.midjOurney.or+fake%3F&oq=ai.midjOurney.or+fake%3F&aqs=chrome..69i57.10221j0j7&sourceid=chrome&ie=UTF-8
 @ YouTube M Gmail @ Reddit -Diveintoa.. Gp Discord [EJ Amazone: Low Pri... (@ ChatGPT Websites | Tools [M OnePiece | Shopping [| Games [ Godot
-Google [_ai.migjQumey.or virus] x |-& @w a
 virus fake
 Is Midjourney a
 What is the most realistic Al art generator? v
@@ -2426,18 +2160,11 @@ https://decrypt.co » midjourney-free-ai-image-generati
 Midjourney Kills Free Al Image Generator Access After ...
 30 Mar 2023 —A “deep fake’ is realistic-looking media created by Al by altering images, videos,
 or audio to show real people doing or saying things they ...
-@ *
 https:/Awww.vox.com > technology > al-image-dalle-o.
 How unbelievably realistic fake images could take over the ...
 30 Mar 2023 — Al image generators like DALL-E and Midjourney are getting better and better
 at fooling us.
-ma PDataDivel
 a
-BB Movies &Shows [Football
-w
-# Oo
-BB Cooking
-3
 o
 ```
 
@@ -2459,58 +2186,39 @@ flare.io
 
 141 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eg
 Battle.net
 World of
 Warcraft
 EPIC
-i
 Epic Games
 Launcher
 Fall Guys
-Ip
-dy
-i
 League of
 Legends
-_ 11:18
-as
-«3 = 2 Taper ici pour rechercher @ r*%, Bi
-a
 ```
 
 ## Slide 119
 
 142 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eg
 Battle.net
-Pil =
-o/ oY
 World of
 Warcraft
-- x
-EPIC j =
-Ya 8
 E }
-Pole
-Add ExtractTo Test w Delete Find = Wiza Info. | VinieSran Comment
 ‘Sf Java_Clientzip - ZIP archive, unpacked size 168 195 366 byt
 Name Size Packed Type
-Manxa c @avinose
 jre Manka c daiinose
 Java Setup.exe 10202752 9641210 Mpwnoxenne
 Total 1 folder and 10 202 752 bytes in 1 file
-im = £ Topcene
 13:19
-a 11:18
-5°C Cloudy ADA ax NG .,, O @ 7c Cielcouwet ~ G & 14) FRA
 12/02/2023 Bi
 ```
 
@@ -2518,21 +2226,15 @@ a 11:18
 
 143 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-HB Who spends money like th MB Jactroll fait gooter des fro X BON CREEUN SANDWICH | x @ Download Java for Window {M|64-bit Java for Windows y
-> www javacom/f 2£OOr>rO BSA eE
-tid cm Netfinx (® Prime Video
-Battle.net es é
-=Java _—‘ Télécharger Developer Resources Aide 2. Recherche
-Wi y
 World of ° Ressources d'aide
 Warcraft
 ® Qu que Java? de Java 8?
 FPIC Enlever les ancienne
 a Désactiver Java
-En Messages d'erreur
 ) Dépanner Java le Java
 Aide supplémentaire la compter du 16 avril 2019.
 est sensiblement différent
@@ -2543,42 +2245,30 @@ Find — Wizard an Camment it. Une FAQ est disponible ici.
 avec un abonnement a Java
 Name e n SE.
 Manxa ¢ $2
-Mana c gavinose
 fa Setup.exe 20. 9641210 Mpnnoxerne
 Télécharger Java
 En téléchargeant Java, vous reconnaissez avoir lu et accepté les conditions du
 Contrat de licence Oracle Technology Network License pour Oracle Java SE
 @ Ala finde rinstallation de Java, si vous utilisez Web Start, vous devrez peut-étre redémarrer le navigateur (fermer
 toutes les fenétres du navigateur et les rouvrir).
-ie 8 os Aa hits pour Wind
-xc e 1334
-Ensolilé Qrecheche A S e-~ & A 9 B® seo2s2023
 Total 1 folder and 10 202 752 bytes in 1 file
-eligsctiela.. ddligseilels.. dell
-°C Cloudy ADR axes 9 @ rc cel tA GO oy) era 1 oe
-Ste Chey et Mis 1222023 r. te couve’ ad 12/02/2023 “YA
 ```
 
 ## Slide 121
 
 144 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 . Who spends money like th X MBB Jactroll fait godter des fron X MBBON CREE UN SANDWICH? X @ Download Java for Windov {I 64-bit Java for Windows
-\ ies
-AY \ \ @ 8 qeeee die 2OO>ro Be a
 Bm Java Client x) +
 2 Recherche
-€ > Y | M> Transferéncias > Java_Client » CG
 A Base Nome
 Y @ Barbara - Peso: | (Hole de Java 8?
 je Java 8?
 Java Set
-Bt Documentos BH ova seu
-YB Imagens Be
-Bm Capturas de!
 i le Java
 BBB ambiente de # compter du 16 avril 2019.
 ab Transferencia # est sensiblement différent
@@ -2586,7 +2276,6 @@ Mbcarrarc utilisations a titre gratuit,
 H'autres utilisations peuvent
 Ges fe ces Oracle Java. Veuillez lire
 Bm Trabalhos Ba # it. Une FAQ est disponible ici.
-@Misica #
 avec un abonnement a Java
 B videos *
 Bim Son Heung Min
@@ -2598,73 +2287,37 @@ GQ v MM estepc Contrat de licence Oracle Technology Network License pour Oracle 
 Disco Local (C:
 Zitens | 1 item selecionado 9,72 MB |
 allation de Java, si vous utilisez Web Start, vous devrez peut-étre redémarrer le navigateur (fermer
-Qroue Mm @ Of A & FP W sys; @ ‘es dunavigateur et les rouvrir).
 » FAQ relative a lava Ad hits nour Windows
-oc 1334
-Ensoleilé A 9 B® seo2s2023
 Total 1 folder and 10 202 752 bytes in 1 file
-elipschilele. Gelipscrilele. cellpscrilele.
-: _ 11:18
-@ 1C Cielcouvet ~ & & 4) FRA 12/02/2023 be
 ```
 
 ## Slide 122
 
 145 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ON CREE UN SANDWIC
-Fy \ ‘ : javacom/r
-Java Client
-Y Ordenar
-Ya Barb:
-Bi Java Setup
-Bm Documentos
-YB Imagens
-Bm Capturas de |
 BE Ambiente de #
-L Transferencia #
 B Documentos #
 B imagen
 Bm Trabalhos Ba #
-@ Masica *
 B videos *
-Application To
 Home Shave View Manage
 SIDSY > Downloads > Java.Clent
-n Heung Min = Deterioein
-YH Quick access
 Bim The Sims desktop
-$ Downloads
-Dave Seupee
 Documents
-= Pictures
 New flder
-[i uscarmesiosy
 = INSTALLATION
 Disco Local (C:
 Zitens | 1 item selecionado 9,72
-cy
-EnoBrowner 10-1
 Q Procurar t
 INSTALLATION
-ipets
-ROO
-R20I¢aDSpacelogs
-ro020
-pont
 tmp
 today
-Widget. CER
-® Networ
 == Selected 10 202 752 bytes in 1 file Total 1 folder and 10 202 752 bytes in 1 file
-Hovaite files Mllasessentt
-Givomie —Nipistisisneney.. eles =
-aligns leis. aelligscrilels. sell sisilele.
-SiO Topcene
-SC Cloudy
 HH 64-bit Java for Windows
 Recherche
 de Java 8?
@@ -2675,7 +2328,6 @@ utilisations 4 titre gratuit,
 H'autres utilisations peuvent
 ices Oracle Java. Veuillez lire
 it. Une FAQ est disponible ici.
-a vel couvert Ft NY) TA
 12.2.2023 r. 12/02/2023
 ```
 
@@ -2683,59 +2335,33 @@ a vel couvert Ft NY) TA
 
 146 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ HB Who spends money like th X  MBJactoll fait godter des fro X BON CREE UN SANDWIC @ Download Java for Windor {BML 64-bit ava for Windows 7
-Fy > wwnejavacom/tr 2£OOr>rO BSA eE
 Bm Java Client x +
 2 Recherche
-€ > > | M> Transferéncias > Java Client » CG
 A Base me Data de
 Y @ Barbara - Pesso: | | Hole de Java 8?
 je Java 8?
-Java Setu 1/02re
-Bm Documentos 8 p
-Bm Capturas de | © new» 1 Sortieen anzeigen (B Aleextrahieren +++
-€ > ¥ 1 [tw tots oocaper(G) > Usse > Rope! > Downloads > fomlClet > fe > . 0 le Java
-BBB ambiente de # (Som Name we ey pe eS ee ee la compter du 16 avril 2019.
-a Transferencia # @ Raphael—Perssnlic Mi bin Dateiordner 08 est sensiblement différent
 Biv Dateiordner utilisations a titre gratuit,
 BE Documentos #
-Im Desktop ~  BcopyricHt Datei H'autres utilisations peuvent
+Im Desktop ~ BcopyricHt Datei H'autres utilisations peuvent
 =
 ee 4 Downloads LICENSE Datei ces Oracle Java. Veuillez lire
 Bm Trabalhos Ba # os BB rcapme os it. Une FAQ est disponible ici.
-@ musica #
-Eviacos  #
 Bm Son Heung Min
 Bm The Sims 4
-acc
-BB Clothes
 v MB Este PC
 © Disco Local (C:
 ( gy
 2itens | 1 item selecionado 9,72 MB | a
-Bi dokumente  #
-re ats
-oe vg Bi Tanopamucensereanwe Textdokument
-— vp BU THROPARTLICENSEREADMEIA,.Tetdokument
 @ Welcome Microsoft Edge HTML Do
-ie Bildschirnfotos ss
-ME DieserPc
 = USBDISK (0)
-Ge Netowerk
-9 Elemente |
 —
-Fortite
-Raphael -
 Chrome
 Filmore 12
 Selected 10 202 752 bytes in 1 file
-Mlicisessentt
-Salligseilele. Geligbisilele.. Hell gseilele.
-P Topcene
-oc Cloudy SGaaa503 oe a wlelcouvert OB NY T™  yg3 A
 ```
 
 ## Slide 124
@@ -2744,7 +2370,8 @@ flare.io
 
 147
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Line Download Help
@@ -2774,7 +2401,8 @@ flare.io
 
 148
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Download Help
@@ -2782,11 +2410,9 @@ Help Resources
 Offline Installation
 Trouble downloading?Try the
 Download Java for Windows
-17]
 Whe
 brov
 >
-Java"
 Download Developer Resources Help
 Help Resources Download Java for Windows
 Version 8 Update 361 (filesize: 62.11 MB) Why is Java 8 recommended?
@@ -2798,7 +2424,6 @@ Error messages
 Troubleshoot Java Important Oracle Java License Information
 ORE HE The Oracle Java License changed for releases starting April 16, 2019.
 " m The Oracle Technology Network License Agreement for Oracle Java SE is substantially different
-Windows 64-bit Users id . u
 from prior Oracle Java licenses. This license permits certain uses, such as personal use and
 development use, at no cost -- but other uses authorized under prior Oracle Java licenses may no
 longer be available. Please review the terms carefully before downloading and using this
@@ -2821,16 +2446,14 @@ flare.io
 
 149
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Download Java for Windows
-4
-=Java Download Developer Resources Help
 Help Resources Download Java for Windows
 Wits? Version 8 Update 361 (filesize: 62.11 MB) Why is Java 8 recommended?
 Ct javacom,
-[Bh Geercices et évatuati... [JJ Webformation ECF... G3 Am
 é Information
 =/Java__—‘ Télécharger Developer Resources Aide s starting April 16, 2019.
 ent for Oracle Java SE is substantially different
@@ -2851,13 +2474,9 @@ ne plus étre disponibles, bien qu'autorisées sous les précédentes licences O
 attentivement les conditions avant de télécharger et d'utiliser ce produit. Une FAQ est disponible ici
 Le support et la licence commerciale sont disponibles 8 moindre cout avec un abonnement a Java
 SE webstart, you may need to restart your browser (close all
-‘Télécharger.
 En téléchargeant Java, vous reconnaissez avoir lu et accepté les conditions du
 Contrat de licence Technology Network License pour O
 @_ Als finde l'installation de Java, si vous utilisez Web Start, vous devrez peut-étre redémarrer le navigateur (fermer
-forge-1.193-44.1.1..jar JavaSetupsu361 (1).2x0 JavaSetup8u361.exe review OptiFine 1..jar OptiFine 1.192 HD..jar
-Be i mm '7ASetupau361 (ewe g_JavaSetup By PvewOptiFine 1. jar gy OptiFine 1.192. HO
-Bh 222 ciertzip BB optrine 1192 HOW jar : ores
 ```
 
 ## Slide 127
@@ -2865,28 +2484,17 @@ Bh 222 ciertzip BB optrine 1192 HOW jar : ores
 150
 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-‘go.java-gapp.space,
-S Java Download Help
-```
-
 ## Slide 128
 
 flare.io
 
 151
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© burp suite pr X @ Burp Suite z I 4 Professional, X @ burp suite pr xX | 9 VIP4StatsUss x i'M TempM - ter X (S} java- Google X +
-oo CG &@ google.com/s ? a&ibiw=18 APX dUPu KEw Vil n2B3( & Q > om ® CI (A) Paused )
 iM} TempM - temp mail... & Online Phone N ~ Your account has b... © Request money fro... @ Receive FreeSMSO.. @ SMSPanel t TempMail P Persona — NEW MIC 7 MAICRO Sm dlac
-(oo
-®
-fe)
 &
 Go gle java x
 @ News : More Tools
@@ -2908,11 +2516,9 @@ Java - Specifically applications Programming languages: Java. C, C++. Assembly
 Programming language and computing platform. Get for desktop applications. language
 Initial release date: January 23, 1996
 Developer: Oracle, Sun Microsystems. James
-hitpsiwwwjavacom Gosling
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 People also search for
-NL
 »en Group St
 Manual download Minecraft. Unix WinRAR Minecraft
 Java manual dowmload page. Get the latest version of the Java Bedrock servers
@@ -2928,20 +2534,17 @@ https://www,java.com How do | install Java .
 
 152 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © burp suite pr X
-S Cc
 iM} TempM - temp mail...
 Google
 https://www.java.com
 4 Professiona @ burp suite p
-@ Burp Suitez. X
-@ google.com/s ’q=java
 Online Phone Num... Your account has b... © Request money fro... @ Receive
 x
-(oo
 @ News : More Tools
 This search may be relevant to recent activity:
 java jdk download
@@ -2949,10 +2552,8 @@ Ad - hitps://go java-gapp.space/ ~
 App - Java Download
 Java - a programming language for creating powerful applications and websites. Java - a
 platform that allows you to expand the functionality of your system.
-Ad - https://oracle.58226.click) ~
 Java - Specifically applications
 Programming language and computing platform. Get for desktop applications
-hittps:/Awwwjava.com
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 User. Are you a software developer looking for JDK downloads?
@@ -2965,41 +2566,15 @@ This article applies to: Platform(s): Windows 10, Windows 8
 How do | install Java
 x ts
 q= | O10 &aqs=chr...
-@ google.com/search?q= {| ONO&
-™M Gmail @@ YouTube BF X/£
 Google {ono
 AS
-MAPAO! HLO] MOS DE 7/5
-java 2.0H 4
-java FEM
 Java -cp
-Ate} Chee
-javaet
 java ... parameter
 java -jar 2&
-Kru 2S
-o
-#il + https://go.java-gapp.space/
 Switch to Java - Java Download
 Java is a reliable and powerful programming language that provides convenient programming.
 Java is a platform for creating analytical and consumer with extensive capabilities.
-Ba - http:/www.ikosmo.co.kr/ +
-StSZADES| Oj Ol A7HES - java - ikosmo.co.kr
-= 4|2]21100%, ITFaMS, PAA SA7, AS TRAS AS, 44 UHS
-A|S, 100% SH Se, 7IBZSE YS
-McCoo
-ae el
-AM TF
-SL SSiT94
 \
-1A SOA! java.
-AOA! HHS! SBE ALIS ASUCH St 194] Oto] ASAE SLASS Soy
-rl o¢
-APSAL Sells BARR
-https://www.java.com > we
-Java Cl2ec
-i)
-os
 ```
 
 ## Slide 130
@@ -3008,18 +2583,17 @@ flare.io
 
 153
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © burp suite p
-S C
 'M| TempM - temp mail...
 Google
 https://www.java.com
 x @ Burp Suite z
 @ google.com/s
 & Online Phone Num... Your account has b... © Request money fro... @ Receive
-QO All GD) Videos [EJ Images (i) News : More
 About 1,930,000,000 r
 (0.42 seconds)
 This search may be relevant to recent activity:
@@ -3028,10 +2602,8 @@ Ad - https://go.java-gapp.space/ ~
 App - Java Download
 Java - a programming language for creating powerful applications and websites. Java - a
 platform that allows you to expand the functionality of your system.
-Ad - https://oracle.58226.click) ~
 Java - Specifically applications
 Programming language and computing platform. Get for desktop applications
-hittps:/Awwwjava.com
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 User. Are you a software developer looking for JDK downloads?
@@ -3044,49 +2616,17 @@ This article applies to: Platform(s): Windows 10, Windows 8
 How do | install Java
 G iozao
 Google H4 x +
-¢>7¢
-™M Gmail @@ YouTube BF X/£
-{ono D8
 Google
 AS
-AHAFA1O] PHBFOY Ost Of
-+s
-o
-A javaét
 1 java ... parameter
 java -jar 4! 6
-Trap aS
 Java -cp
-Ate} Che ec
 Bil - https://go.java-gapp.space/ +
 Switch to Java - Java Download
 Java is a reliable and powerful programming language that provides convenient programming.
 Java is a platform for creating analytical and consumer with extensive capabilities.
 3a - http:/www.ikosmo.co.kr/ +
-StS=ADES| Oj Ol A7HES - java - ikosmo.co.kr
-2AIKE ASAE KI XO} TRY Sa 2 4AtArayo Sac
-=S4/%|21100%, TFRs, + I, ABel rus,
-e ENS, 1:14) 40H
-al AI CLYOA a
-SLSSTSSEA7|S, 100% SH FE, 7|RF
 java.
-tin
-iin}
-ac]
-nn
-Me
-+>
-30
->
-ie
-AYA! HOHSE SAE ALA S|ASUCH Bt 19M] Olsto] AAKAE ALMSS SH SE
-0
-b&
-te
-QAl sells
-https:/www.java.com >... ¥
-Java Cl2ec
-@ google.com/search?q= { OM O&oq={OUOBaqs=chr.. 9 @ ke OF &
 ```
 
 ## Slide 131
@@ -3095,44 +2635,36 @@ flare.io
 
 154
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © burp suite pr X @ Burp Suite ra $ G 1020 - Google df x +
-< (SS  google.com/sea q=java& = 1821 &bih=833 &ei=BwrpY4PXG6KikdU Pue2e6Ac&ivecqi a mtr @ google.com/search?q= { OMO&0q={ONO&aqs=chr... 9 @*ke OF 2
 iM] TempM - temp mail... & Online Phone Num... Your account has b... ic enn SMe | Gmail €§) YouTube gf AZ
 Google {ono x m@toaa
 AS
-ABP OL JEStOy BIO SE OE 71S
 . *» https://go.java-gapp.space/
 ot
 This search may be relevant to recent activity:
 java jdk download
 java + ti java ... parameter
 Ad - https:/igo java-gapp.space/ ~ Java -cp java -jar ae
-App - Java Download Xo CHSC Ape} BS
 Java - a programming language for creating powerful applications and websites. Java - a
 platform that allows you to expand the functionality of your system. j
 Bil - https://go.java-gapp.space/ +
 Java - Specifically applications witch to Java - Java Downloa
 Programming language and computing platform. Get for desktop applications Java is a reliable and powerful programming language that provides convenient programming.
 Java is a platform for creating analytical and consumer with extensive capabilities.
-hittps:/Awwwjava.com
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 3a - http:/www.ikosmo.co.kr/ +
 User. Are you a software developer looking for JDK downloads? SIS ADE OF ol XH 7H St] - java - ikosmo.co.kr
-S44] 21100%, ITFUS, PAA AA7t, AS TRASAS, AAs AcMAsg. a
 Download Java for Windows
-Download or update your existing Java Runtime Environment SLSSTSSEA7|F, 100% SH FE, BSE WS 117 AOHA, java.
 Manual download
 Java manual dovmload page. Get the latest version of the Java SAWOHA HOS SAE A QS] ASUCH St 19M] O/4to] ASAE AMISS SH SE Sas St USy
-ct
 Install Java on Windows ALOLOLS JA] 101 015
 This article applies to: Platform(s): Windows 10, Windows 8 APSAL HMMS Al ANAS
 How do | install Java
-https:/www.java.com >... ¥
-Java Cl2ec
 ```
 
 ## Slide 132
@@ -3141,11 +2673,11 @@ flare.io
 
 155
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © burp suite p
-S C
 'M| TempM - temp mail...
 x @ Burp Suite
 @ google.com,
@@ -3157,10 +2689,8 @@ Ad - https://go.java-gapp.space/ ~
 App - Java Download
 Java - a programming language for creating powerful applications and websites. Java - a
 platform that allows you to expand the functionality of your system.
-Ad - https://oracle.58226.click) ~
 Java - Specifically applications
 Programming language and computing platform. Get for desktop applications
-hittps:/Awwwjava.com
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 User. Are you a software developer looking for JDK downloads?
@@ -3171,29 +2701,15 @@ Java manual download page. Get the latest version of the Java
 Install Java on Windows
 This article applies to: Platform(s): Windows 10, Windows 8
 How do | install Java
-€<€ 7 C @ google.com/search?q= { OM O&o0q= | OM OBaqs=chr.. 9 Be Of
-™M Gmail @@ YouTube BF X/£
-Google {ono x mgs ®
 AS
-AHAFAYO! 7HSIO] BO St OE 71 =
-“t https://go.java-gapp.space/
 java + ti java ... parameter
 Java -cp java -jar 2
-Ato} CHP ec teas
 Bil - https://go.java-gapp.space/ + ais
 Switch to Java - Java Download
 Java is a reliable and powerful programming language that provides convenient programming.
 Java is a platform for creating analytical and consumer with extensive capabilities.
 3a - http:/www.ikosmo.co.kr/ +
-StS=ADES| Oj Ol A7HES - java - ikosmo.co.kr
-S47] 21100%, ITFRMS, PAA HA, ASP TRASUS, 4AHAas aclayad. a
-SLSATSFEAIS, 100% SH FH, BSH YS 117A AOA, java.
-AOA] PHS SAE ALS ASUCH Ct 194] Otol ASAE ALAUISS SH SE Aas B+ WS
-mo
-APSAL Seles PEAR
-¥
 https:/Awww.java.com > ...
-Java Cl2ec
 ```
 
 ## Slide 133
@@ -3202,7 +2718,8 @@ flare.io
 
 156
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 & Java Download Developer Resources Help
@@ -3216,7 +2733,6 @@ Error messages
 Troubleshoot Java Important Oracle Java License Information
 Sine The Oracle Java License changed for releases starting April 16, 2019.
 5 Fi The Oracle Technology Network License Agreement for Oracle Java SE is substantially different
-Windows 64-bit Users . oH oe ‘ : y
 from prior Oracle Java licenses. This license permits certain uses, such as personal use and
 development use, at no cost -- but other uses authorized under prior Oracle Java licenses may no
 longer be available. Please review the terms carefully before downloading and using this
@@ -3240,10 +2756,10 @@ flare.io
 
 157
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-go.java-gapp.space
 & Java Download Help
 Help Resources
 Offline Installation
@@ -3271,7 +2787,8 @@ browser windows and re-open).
 158
 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 go.java-gapp.space
@@ -3303,7 +2820,8 @@ flare.io
 
 159
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Download Developer Resources Help
@@ -3315,8 +2833,6 @@ Remove older versions
 Disable Java
 Error messages
 Important Oracle Java Licen
-a a
-venue tlesize: 62.11
 Do you use both 32-bit and 64-bit 7 a
 browsers?
 FAQ about 64-bit Java for Windows product. An FAQ is available here.
@@ -3326,13 +2842,10 @@ offline installer
 Download Java
 By downloading Java you acknowledge that you have read and accepted the
 terms of the Oracle Technology Network License Agreement for Oracle Java SE
-e
 Help
 Help Resources Download Or for Windows
-' Version 8 Update sf (ilesize: 4011B) esi
 M a Fi cious ; a portant Oracle ieee
 a filesize: 40.11
-Trouble downloading? Try the
 — product. An FAQ is available h
 Commercial license and support is available with a low cost Java SE Subscription.
 Download Java
@@ -3346,30 +2859,26 @@ flare.io
 
 160
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [i] TempM -ter’ x © java-Google x +
-— MAICRO
 @ Burp Suite z 4 Professional, X @ burp suite pr xX | 9 VIP4StatsUss x
 © burp suite pr X
-S Cc
 [2] TempM - temp mail...
 @ google.com/s ? a&biw=18 APX dUPu KEw vil - ( &
 & Online Phone N Your account has b... © Request money fro... @ Receive FreeSMSO.. @ SMSPanel t TempMail P Persona — NEW MIC em alo
 Go gle java x &£§ BDA 83
 QA D) Videos @) News : More Tools
 https://www.java.com
-Oo
 This search may be relevant to recent activity:
 java jdk download
-Ad - hitps://go. gg hh space! ta
 ating powerful applications and websites. Java - a
 inctionality of your system.
 Ad - https://oracle.58226.click/ ~
 Java - Specifically applications
 Programming language and computing platform. Get for desktop applications.
-hittps:/Awwwjava.com
 Java |_Oracle
 Get Java for desktop applications. Download Java - What is Java? Uninstall help. Happy Java
 User. Are you a software developer looking for JDK downloads?
@@ -3392,16 +2901,13 @@ Initial release date: January 23, 1996
 Programming languages: Java. C, C++. Assembly
 language
 Developer: Oracle, Sun Microsystems. James
-Gosiling
 People also search for
-NL
 »en Group St
 WinRAR Minecraft
 servers
 Minecraft Unix
 Bedrock
 More about Java >
-OB“ irr We pik ~
 ```
 
 ## Slide 138
@@ -3410,10 +2916,10 @@ flare.io
 
 161
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-go.java-gapp.space.
 Download Help
 Help Resources Download Java for Windows
 Version 8 Update 361 (filesize: 40.11 MB)
@@ -3440,16 +2946,13 @@ flare.io
 
 162
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-B® Java Client x ar
 /\ | Java_Client
-€<€ > v 4 MB > Transferéncias { Java_Client V
 A Base Nome
 Vv @ Barbara - Pessoz .
-> [i Documentos 8 Java Se WS
-vy Bl Imagens ae
 > [i Capturas de!
 BH Ambiente de #
 wb Transferéncia #
@@ -3462,14 +2965,12 @@ flare.io
 
 163
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @& Java Client x a 6
-Ver ~ aoe
-€ > vy WF  M> Transferéncias > Java_Client
 A Base Nome j
-Y @ Barbara - Pesso: | DoHOle /
 @ Java Setup “f
 Bm Documentos
 Ba jre
@@ -3478,25 +2979,18 @@ Bm Capturas de |
 Bl Ambiente de #
 wb Transferéncia #
 EB Documentos #
-Biimagens  #
 Bi Trabalhos Ba #
 @ Masica *
 EE videos *
 B® Son Heung Min
 Bm The Sims 4
-Macc
-Bm Clothes
 v_ MB Este PC
 © Disco Local (C:
 2itens | 1 item selecionado 9,72 MB |
 Bea
 22:55
-% ® wo22023 @
-+)
 >
-6
 »
-Q Procure fy 9
 163
 ```
 
@@ -3504,13 +2998,12 @@ Q Procure fy 9
 
 164 flare.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ (08) @ i try installing java but it ¢ bea) “fF
-< (G: 9 & wwwgoogle.com/search
 Google i try installing java but it doesn't work xX OQ
-Q All () Videos (Images [9] Books News : More Tools
 About 38,800,000 results (0.63 seconds)
 Temporarily turn off firewall or antivirus clients
 Active firewall or antivirus software may prevent Java from installing properly. Remember to
@@ -3521,9 +3014,7 @@ Troubleshooting tips for running Java
 @ About featured snippets - [MH Feedback
 People also ask
 How do | force Java to install?
-ca >vt Bi > Downloads > Java _Clientzip
 A Home Name
-BB jre
 164
 ```
 
@@ -3642,15 +3133,6 @@ Existence
 flare.io
 
 177
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Strength and Limits
-Linz Download Developer Resources Help
-Existence
-177
-```
 
 ## Slide 153
 
@@ -3837,7 +3319,8 @@ flare.io
 
 191
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 191
@@ -3936,7 +3419,6 @@ infoste
 rise to diverse dete
 Malware detection ap; categorized
 static signature-ba s (dynamic
-of mem anal ysi:
 Signature-based 4 fundamental appre
 binary patterns ¢ malicious files s
 le fingerprints. While efficient for known th

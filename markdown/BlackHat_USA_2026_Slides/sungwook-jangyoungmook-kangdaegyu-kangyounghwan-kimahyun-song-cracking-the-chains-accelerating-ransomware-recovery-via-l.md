@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/SungWook Jang&YoungMook Kang&DaeGyu Kang&Younghwan Kim&Ahyun Song_Cracking the Chains Accelerating Ransomware Recovery via LLM-Assisted Engineering and Verification.pdf"
 pages: 38
 sha256: "74d7d46c05d292fcc8df82c2d1724b200dcd6c0d8bdcc61da84d20b2c670599a"
-text_chars: 12847
+text_chars: 12785
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:16:10Z"
+converted_at: "2026-08-12T05:44:28Z"
 ---
 # Cracking the Chains Accelerating Ransomware Recovery via LLM-Assisted Engineering and Verification
 
 **Speakers:** SungWook Jang, YoungMook Kang, DaeGyu Kang, Younghwan Kim, Ahyun Song  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/SungWook Jang&YoungMook Kang&DaeGyu Kang&Younghwan Kim&Ahyun Song_Cracking the Chains Accelerating Ransomware Recovery via LLM-Assisted Engineering and Verification.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -464,9 +469,9 @@ ChaCha20's core is a 32-bit rotation, run hundreds of millions of times — that
 
 ##### THE 32-BIT ROTATION
 
-```
+\```
 (x << n) | (x >> (32 -n))
-```
+\```
 
 - C: fixed 32-bit int → one ROL CPU instruction •  Python: bigint → manual overflow + typing overhead
 
@@ -510,7 +515,8 @@ All DB servers recovered Public services resumed 81 hours after the attack — f
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 100% RESTORED IN 81 HOURS
@@ -522,8 +528,6 @@ ransomware infection encryption logic flaws
 + Creation of a large-capacity,
 triple encryption and high-speed decryption tool
 decryption and tools
-O—-e— @—_e— © —_e—_ © _e—_ @—__e—_ © _e—_@ —__e—__ 9 _e—
-—e—@—o
 July 14, 2025, 23:00 July 16, 2025, 03:30 ily 17, 2025, 10:00 ly 22, 2025
 + First DB server + Completion of initial
 + Completion of decryption + Normalization of the

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Neophytos Christou&Andreas Kellas_QUACK Hindering Deserialization Attacks via Static Duck Typing.pdf"
 pages: 117
 sha256: "2db1290ad0d07f7a6e53ca01f80d505fc65c0fff78038fde5f9a188bc57a37cb"
-text_chars: 37183
+text_chars: 36005
 ocr_pages: 25
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:58:36Z"
+converted_at: "2026-08-12T05:17:42Z"
 ---
 # QUACK Hindering Deserialization Attacks via Static Duck Typing
 
 **Speakers:** Neophytos Christou, Andreas Kellas  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Neophytos Christou&Andreas Kellas_QUACK Hindering Deserialization Attacks via Static Duck Typing.pdf` (117 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,11 @@ Speakers: Andreas Kellas, Neophytos Christou
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
-BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 QUACK: Hindering Deserialization
@@ -76,11 +81,10 @@ Collaborators: Yaniv David<sup>1</sup> , Vasileios Kemerlis<sup>2</sup> , Junfen
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 We know that deserialization is dangerous...
 ... So We Set out to mitigate the risks
 QUACK: Hindering Deserialization Attacks
@@ -95,18 +99,16 @@ Yaniv David*, Neophytos Christou', Andreas D. Kellas*, Vasileios P. Kemerlis', a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifikhat Sa gk f
-BRIEFINGS
 QUACK: Hindering Deserialization Attacks
 via Static Duck Typing
 Yaniv David*, Neophytos Christou', Andreas D. Kellas*, Vasileios P. Kemerlis', and Junfeng Yang*
 *Columbia University 'Brown University
 Artifact
 Evaluated
-&npss
 Available
 Functional
 Reproduced
@@ -120,10 +122,10 @@ Reproduced
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifikhat Sa gk f
 BRIEFINGS . Y
 Goals
 1. Introduce QUACK to the security community
@@ -198,16 +200,14 @@ static duck typing exploits
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 We Know Deserialization is Dangerous
 InvoiceShelf <= 1.3.0 - PHP CVE-2093-30534: Insecure
 + ae . Deserialization in Cacti prior to 1.2.95
 Deserialization P
-CVE-2024-55556 7. —“ - ork Soa ASN
 THREAT INTELLIGENCE
 UNPATCHED PHP DESERIALIZATION VULNERABILITY IN
 ARTICA PROXY
@@ -225,13 +225,13 @@ Author) Viathieu Farrel
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We Know Deserialization is Dangerous
 unserialize(string $data, array $options = []): mixed
 unserialize() takes a single serialized variable and converts it back into a PHP value.
-Warning -—“—
 and a malicious user may be able to exploit this.
 ```
 
@@ -249,11 +249,10 @@ and a malicious user may be able to exploit this.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 PHP Object Injection (POl)
 Programmer expects $obj Ke)
 class App { be an App...
@@ -261,7 +260,6 @@ public $name;
 public function run() { }
 }
 $obj = unserialize( );
-$objrun();
 ```
 
 ## Slide 17
@@ -361,17 +359,15 @@ O:3: ”AppF oo”:1:{s:3:”name”;O:3:”Bar”:1:{...}};
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Manipulating Control Flow
 class CommandExecutor {
 public $command;
 public function run() { system($this—command); }
 $obj = unserialize( )
-¢objrun();
 ```
 
 ## Slide 23
@@ -751,11 +747,10 @@ https://sec-consult.com/vulnerability-lab/advisory/remote-code-execution-php-uns
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Moodle POI Vulnerability
 foreach ($data['#']['answer'] as $answerxml) {
 $ans = $format—import_answer($answerxml);
@@ -764,8 +759,6 @@ $question>choices[] = array(
 ‘answer' => $ans—ar
 wer,
 ‘choicegroup' => $options—dra
-sroun
-sroup,
 ‘infinite' => $options—infinite
 );
 ```
@@ -776,16 +769,14 @@ sroup,
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Moodle POI Vulnerability
 foreach ($data['#']['answer'] as $answerxml) {
 $ans = $format—import_answer($answerxml);
 $options =
-unserialize($ans— feedback['text']);
 $question->choices[] = array(
 ‘answer' = $ans—answer,
 ‘choicegroup' => $options—draggroup,
@@ -821,11 +812,10 @@ $question->choices[] = array(
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 POI Mitigations
 Simple(r) representations: Use a safe, standard data interchange
 Works only for simple data format such as JSON (via json_decode() and
@@ -841,11 +831,10 @@ objects data to the user.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 POI Mitigations
 HMACs: Works only if the If you need to unserialize externally-stored
 serialized object was serialized data, consider using hash_hmac()
@@ -861,11 +850,10 @@ modified by anyone but you.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 POI Mitigations
 unserialize(string $data, array $options = [])
 Description
@@ -888,12 +876,10 @@ O:15:”CommandExecutor”:1:{s:7:”command”;s:13:”echo “pwned!””;}
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
-":1:{s:7:"command” ;s:13:”echo “pwned! ”";}
 PHP Fatal error: Uncaught Error: The script tried to call a method
 on an incomplete object. Please ensure that the class definition "Co
 mmandExecutor" of the object you are trying to operate on was loaded
@@ -1355,11 +1341,10 @@ QUACK: _static_ duck-typing-based _type inference rules_
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Type Inference Rules: Class Methods
 class Duck {
 public function swim() {}
@@ -1369,8 +1354,6 @@ class Whale {
 public function swim() {}
 }
 $animal = unserialize($input);
-$animal>swim();
-$animal>fly();
 ```
 
 ## Slide 78
@@ -1427,11 +1410,10 @@ Possible classes: **Duck**
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Type Inference Rules: Class Properties
 class Duck {
 public $feather_color;
@@ -1473,11 +1455,10 @@ Possible classes: **Duck**
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Type Inference Rules: Argument Type
 class Duck {}
 class Whale {}
@@ -1522,11 +1503,10 @@ Possible classes: **Duck**
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Type Inference Rules: Known Operators
 class Duck {}
 class Whale {}
@@ -1548,11 +1528,10 @@ Node:  $animal
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Type Inference Rules: Known Operators
 class Duck {}
 Type: Duck
@@ -1561,8 +1540,6 @@ e Node: $animal
 function is_it_duck() {
 ¢$animal = unserialize($object);
 Lf {$animal instanceof Duck) {
-echo "It's a duck! \n"
-i
 ```
 
 ## Slide 89
@@ -1585,11 +1562,10 @@ Possible classes:  Duck
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Nested Classes
 class Human {
 public $best_friend;
@@ -1621,31 +1597,22 @@ Node:  $hacker
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Nested Classes
 class Human {
 Type: Human
 public $best_friend; e Reason: sing method
-Me eis ined ea: e Node: $hacker
-}
 }
 class Cat {
 public function meow() {
 echo "Cat meowing\n";
-t
 }
 class Dog {
 public function bark() {
 echo "Dog barking\n";
-t
-t
-ghackor = wnsorialize($object);
-Khackersing();
-$hacker—> t end—bark();
 ```
 
 ## Slide 92
@@ -1756,11 +1723,10 @@ allowed_classes Possible classes
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Setting allowed_classes
 foreach ($data['#']['answer'] as $answerxml) {
 $ans = $format—import_answer($answerxml);
@@ -1769,8 +1735,6 @@ $question>choices[] = array(
 ‘answer' => $ans—ar
 wer,
 ‘choicegroup' => $options—dra
-sroun
-sroup,
 ‘infinite' => $options—infinite
 );
 ```
@@ -1781,20 +1745,17 @@ sroup,
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Setting allowed_classes
 foreach ($data['#']['answer'] as $answerxml) {
-ormat—import_answer($answerxml);
 = unserialize($ans—feedback['text']);
 $options
 question—choices[] = array(
 ‘answer' = $ans—answer,
 ‘choicegroup' =>] $options—draggroup
-‘infinite' > L$options infinite,
 );
 ```
 
@@ -1804,16 +1765,14 @@ question—choices[] = array(
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Setting allowed_classes
 "conditions": [
 {
 "condType": "Duck",
-"field": "infinite",
 "reason": "HasField",
 "type":
 ddimageortext drag
@@ -1821,7 +1780,6 @@ aflow_SourceMetadata
 "Google
 _ddmarker_drag_item|
 _ddwtos_choice",
-Trode ra
 },
 {
 "condType":
@@ -1832,12 +1790,9 @@ Trode ra
 "avail_classes": [
 "Google_Service_SQLAdmin_User",
 "HTMLPurifier_AttrDef_CSS_ListStyle",
-service AdeychangeSeller_Report",
-"Google
 "qtype_ddwtos_choice",
 ADODB
 "Google_Service_YouTube_Watermarks_Resource",
-_mssqlnative’,
 "moodle1_mod_data_handler",
 ```
 
@@ -1847,21 +1802,14 @@ _mssqlnative’,
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Setting allowed_classes
 foreach ($data['#']['answer'] as $answerxml) {
 $ans = $format—import_answer($answerxml);
-$options = unserialize(tans—feedbacl ['te £" |.
 ['allowed_classes' = [qtype_ddwtos_choice::class]]);
-$ USSTIOMNSCHOICEST T= array
-'answer' => $ans—answer,
-'‘choicegroup' => $options—draggroup,
-'infinite' => $options—infinite,
-yy
 ```
 
 ## Slide 103

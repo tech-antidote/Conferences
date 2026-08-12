@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zhuonan Li & Qi Li & Zimin Lin_Low-level RASP Protecting Applications Implemented in High-level Programming Languages.pdf"
 pages: 25
 sha256: "5e2b47fe64bc102434ba6aaaea087fdcf5fdb63f4a980b526a0635b9e3847636"
-text_chars: 17695
+text_chars: 17648
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:28:01Z"
+converted_at: "2026-08-12T04:26:41Z"
 ---
 # Low-level RASP Protecting Applications Implemented in High-level Programming Languages
 
 **Speakers:** Zhuonan Li, Qi Li, Zimin Lin  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhuonan Li & Qi Li & Zimin Lin_Low-level RASP Protecting Applications Implemented in High-level Programming Languages.pdf` (25 pages)
+
 
 ## Slide 1
 
@@ -684,21 +690,19 @@ Takeaways
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ~ — kali@kali: ~/apps — ssh kali@192.168.50.83 root@kali: /opt/uds — ssh kali@192.168.50.83 untu-virtual-machine: ~ — ssh ubuntu@192.168.50.79 =2000 — com.docker.cli « docker exec -ti e mongosh
-m—C )-[~/apps]
 [+$ echo "There are 3 fake-vulnerable Applications implemented in Java, Node.js and Python in this environment CIP: “hostname -I~)."
 There are 3 fake-vulnerable Applications implemented in Java, Node.js and Python in this environment CIP: 192.168.50.83 ).
-r= )-[~/apps]
 total 20
 drwxr-xr-x 2 kali kali 4096 Apr 12 11:06
 kali kali 4096 Apr 12 10:56
 kali kali 1133 Apr 12 10:54 App.java
 kali kali 426 Apr 12 10:55 app.js
 kali kali 372 Apr 12 10:56 app.py
-Toa )-[+/apps] IN
 ```
 
 ## Slide 22

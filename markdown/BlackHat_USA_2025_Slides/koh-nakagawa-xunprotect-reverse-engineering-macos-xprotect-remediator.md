@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Koh Nakagawa_XUnprotect Reverse Engineering macOS XProtect Remediator.pdf"
 pages: 97
 sha256: "800f01db2125f8e25a0d61b4c3ac292562310e55d0f7a7aea6c99f4030705975"
-text_chars: 36929
-ocr_pages: 12
+text_chars: 36093
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Koh Nakagawa_XUnprotect Reverse Engineering macOS XProtect Remediator_TOOLS.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:21Z"
+converted_at: "2026-08-12T05:16:00Z"
 ---
 # XUnprotect Reverse Engineering macOS XProtect Remediator
 
 **Speakers:** Koh Nakagawa  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Koh Nakagawa_XUnprotect Reverse Engineering macOS XProtect Remediator.pdf` (97 pages)
+
 
 ## Slide 1
 
@@ -278,12 +284,11 @@ Symbols of type metadata are missing…
 
 **Type Metadata Accessor Identification**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Type Metadata Accessor Identification
-100077ea0 sub_100877ea@() __pure
-100077ea9 return &data_1000f69a0
 100077ea0 type metadata accessor for YaraRuleVariable.VariableType() __pure
 100077ea9 return &type metadata for YaraRuleVariable.VariableType
 Symbols | © type metadata for XPPluginAPIL
@@ -303,7 +308,8 @@ type metadata for XPPluginAPL.YaraMetaType
 
 **Type Metadata Identification**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 void* rax_3 =
@@ -327,9 +333,7 @@ rax_3
 *(
 *(
 *(
-*(
 +
-++eeererterrtett
 void* rax_3
 *(rax_3 +
 *(rax_3
@@ -342,21 +346,12 @@ void* rax_3
 *(rax_3
 *(rax_3
 *(rax_3
-t++eeteeeetetet
 Type Metadata Identification
 swift_initStackObject (sub_100@9b3b@(&data_100106998), &var_118)
-data_100@c65e0
-&data_10@0f1be0
-&data_1000f13F8
 rdx
-&data_10@0f1b78
-&data_1000F14068
 rax_1 & 1
 rdx_1
-&data_1000f1920
-&data_10@0F13b8
 (&data_100106998), &var_118)
-data_10@@c65e@
 &type metadata for RemediationBuilder .FileMacho
 &pwt of RemediationBuilde. ..ationBuilder .FileConditionConvertible
 rdx
@@ -505,15 +500,21 @@ _The output isn’t perfect, there is some occasional junk._
 
 **Decryption Results**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-04e23817983f1c0e9290ce7 f90e6c9e75bF45190
-99c31f166d1f1654a1b7dd1la6bec3b935022a020
+Decryption Results
+
+[terminal panel 1]
+04e23817983f1c0e9290ce7f90e6c9e75bf45190
+99c31f166d1f1654a1b7dd1a6bec3b935022a020
+
+[terminal panel 2]
 MACOS.0260dfd
-MACOS. f07788a
+MACOS.f07788a
 MACOS.ad27ff5
-MACOS. 8ccf842
+MACOS.8ccf842
 /Library/Preferences/com.common.plist
 /Library/Preferences/com.settings.plist
 /etc/change_net_settings.sh
@@ -527,8 +528,10 @@ MACOS. 8ccf842
 /etc/run_upd.sh
 .service.plist
 /etc/
-. background
-. background.
+
+[terminal panel 3]
+.background
+.background.
 right-click
 right click
 option click
@@ -539,26 +542,28 @@ unidentified developer
 are you sure you want
 will always allow it
 run on this mac
-rule macos_rankstank
-strings:
-$injected_func
-$xor_decrypt =
-$stringA "S55 /
+
+[terminal panel 4]
 rule macos_redpine_implant {
-strings:
-$classA = "CRConfig"
-$classD = "CRPwriInfo"
-$classE = "CRGetFile"
-$classF "CRXDump"
-condition:
-all of them
-= "_run_avcodec"
-.main_storage"
-$stringB "session-Llock"
-$string? = "%s/
-condition:
-2 of them
-UpdateAgent"
+    strings:
+        $classA = "CRConfig"
+        $classD = "CRPwrInfo"
+        $classE = "CRGetFile"
+        $classF = "CRXDump"
+    condition:
+        all of them
+}
+
+[terminal panel 5]
+rule macos_rankstank
+    strings:
+        $injected_func = "_run_avcodec"
+        $xor_decrypt = { 80 b4 04 ?? ?? 00 00 7a }
+        $stringA = "%s/.main_storage"
+        $stringB = ".session-lock"
+        $stringC = "%s/UpdateAgent"
+    condition:
+        2 of them
 ```
 
 ## Slide 29
@@ -579,7 +584,8 @@ XPAPIHelpers is instantiated and passed to the plugin main
 
 **XPAPIHelpers**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 class XPAPIHelpers {
@@ -813,7 +819,8 @@ It’s not clear what the final HTML structure will look like
 
 [spellOutChapter: True, useChapterTitles: True]
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 return body {
@@ -821,7 +828,6 @@ let chapter = spellOutChapter ? "Chapter "
 division {
 if useChapterTitles {
 headerl(chapter + "1. Loomings.") eee
-}
 paragraph {
 "Call me Ishmael. Some years ago"
 <body>
@@ -835,18 +841,16 @@ pe thee 3 now your insular city” <p>There is now your insular city</p>
 diviston ¢ . <p>I stuffed a shirt or two</p>
 if useChapterTitles { </div>
 headerl(chapter + "2. The Carpet-Bag.") </body>
-}
 paragraph {
 "IT stuffed a shirt or two"
-}
-}
 ```
 
 ## Slide 46
 
 **Power of Result Builders**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 let yaraMatcher = createYaraMatcher("<some rule>")
@@ -855,7 +859,6 @@ if file.isMacho() {
 if !file.isNotarized() {
 if yaraMatcher.match(file) {
 remediate( file)
-}
 let yaraMatcherRoot = createYaraMatcher("<some rule for root>")
 if getuid() == {
 for file in enumerateFiles("/Library/Application Support", 5) {
@@ -863,14 +866,14 @@ if file.isMacho() {
 if !file.isNotarized() {
 if yaraMatcherRoot.match(file) {
 remediate( file)
-}
 ```
 
 ## Slide 47
 
 **Power of Result Builders**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 let isRoot = getuid()
@@ -880,13 +883,11 @@ MaxFileSize(2 * * )
 FileMacho( )
 FileNotarized( )
 FileYara(YaraMatcher("<some rule>") )
-}
 if isRoot {
 File(searchDir: "/Library/Application Support", regexp: ".*", searchDepth: 5) {
 MaxFileSize(2 * x )
 FileMacho( )
 FileNotarized( )
-FileYara(YaraMatcher("<some rule>") )
 ```
 
 ## Slide 48
@@ -901,7 +902,8 @@ For each file under ~/Library/Application Support File size is 2 MiB or less Fil
 
 Enabled when running as root
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 let isRoot = getuid()
@@ -911,20 +913,19 @@ MaxFileSize(2 * x )
 FileMacho( )
 FileNotarized( )
 FileYara(YaraMatcher("<some rule>") )
-}
 if isRoot {
 File(searchDir: "/Library/Application Support", regexp: ".*", searchDepth: 5) {
 MaxFileSize(2 * x )
 FileMacho( )
 FileNotarized( )
-FileYara(YaraMatcher("<some rule>") )
 ```
 
 ## Slide 50
 
 **RemediationBuilder DSL**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Describes remediation conditions for launchd services
@@ -964,15 +965,6 @@ File path is /tmp/eicar
 File is 68 bytes or more
 
 Match EICAR YARA rule
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-EicarRemediator {
-File(path: "/tmp/eicar") { FileRemediationBuilder DSL block
-MinFtileSize( 68 )
-FileYara( YaraMatcher(etcaryYara) )
-```
 
 ## Slide 54
 
@@ -1036,15 +1028,14 @@ Decrypted CDHashes
 
 Processes that have specific CDHashes are remediated
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 let targetCDHashes = ["04e23817983f1c0e9290ce7f90e6c9e75bF45190",
-"99c31f166d1f1654a1lb/ddla6bec3b935022a020" |
 RoachFlightRemediator {
 for cdHash in targetCDHashes {
 Process {
-}
 ```
 
 ## Slide 59
@@ -1189,15 +1180,14 @@ Note: YARA scan described with ProcessRemediationBuilder is performed on the bac
 
 Are these really dylib paths?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 « Ascanner that examines loaded libraries
 RedPineScanner {
 Process {
-ProcessIsAppLleSigned
 HasLoadedLibrary{"/System/Library/PrivateFrameworks/FMCore. framework" )
-HasLoadedLibrary|"/System/Library/Frameworks/CoreLocation.framework/CoreLocation" )
 HasLoadedLibrary{"/System/Library/Frameworks/AVFoundattion. framework/AVFoundation" )
 HasLoadedLibrary("/usr/lib/ltibsgqlite3.dylib" )
 }.reportOnly( )

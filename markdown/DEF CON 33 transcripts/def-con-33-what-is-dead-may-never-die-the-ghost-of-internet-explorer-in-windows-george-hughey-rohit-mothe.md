@@ -12,7 +12,7 @@ duration_seconds: 2651
 words: 7028
 text_chars: 38766
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:15Z"
 ---
 
 # What is Dead May Never Die - The Ghost of Internet Explorer in Windows

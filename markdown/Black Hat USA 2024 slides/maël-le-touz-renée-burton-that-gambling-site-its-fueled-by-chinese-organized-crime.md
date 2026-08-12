@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime.pdf"
 pages: 29
 sha256: "430baac82f52e699de1d859f0f4d49231eaa6bf955569a8f4d6095574123bb43"
-text_chars: 13548
-ocr_pages: 17
+text_chars: 10269
+ocr_pages: 14
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.6
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:34:39Z"
+converted_at: "2026-08-12T04:36:08Z"
 ---
 # That Gambling Site It's Fueled by Chinese Organized Crime
 
 **Speakers:** Maël Le Touz, Renée Burton  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime.pdf` (29 pages)
+
 
 ## Slide 1
 
@@ -51,11 +57,11 @@ Renée heads up Infoblox Threat Intel. Loves DNS hunting. Also knits. knitcode@i
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat The Real Vig
-USA 2024
 Laukkaing, Kokang, SR1, Myanmar = China
 ```
 
@@ -63,11 +69,10 @@ Laukkaing, Kokang, SR1, Myanmar = China
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Philippines' Marcos bans offshore
 gaming operators
 By Reuters
@@ -97,22 +102,14 @@ Nearly 3x Illegal Drug Economy
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Create Shell Companies, Sponsor famous
 Vigorish Viper Trademark Holders sports teams
 1 -—<<- & White Labels
-s
-*
 00
-ani Like
-SAMRAT EAE
-AAHRS EE TERM
-BWMiibhtiyty.b
-=) Jyty.tv b
 Sports matches
 contain ads for
 Driving new victims
@@ -127,12 +124,11 @@ gambling websites thelr brands gambling websites
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat 14 Domains Séized in 2023
-USA 2024
 OL
 IMPORTANT NOTICE
 Please note that Oubao will no longer be available to both new and existing players.
@@ -162,52 +158,20 @@ Under 18s are strictly forbidden from gambling on this website. Underage gamblin
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-gle ale Access Denied
-™ 4 ~ (Ao ABER
->», a _ sas
-| Cee lc. iA TeBR A
-ea J
-hh hal IR il re.
-```
-
 ## Slide 11
 
 #### All Sites are the Same
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 65/100 on the text kept, 37/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-eaciiet All. Sites are’ the Same
-ASTRA un —
 ) Foie
-sy)
-y
 CRY” kaiyun.com
-Hansa
-Sil
-———
-SSsa
-Teas! FARA 266,660 m!
-AF - ihe - WR HAE 10,888
-—— i&pntid: 2024878 158-2024%78218 ¢-—
-aapay ia)
 2024%1A1B 00:00:00 - 1A9H 23:59:59
-Sg FLAS
-SW huanya.opp me
-Se TAS
-Ps 2 yy SY huanya-app
-eT IRR 2R5ee One Coed
 ACKE RRS ae
-$§H 1 288RERR+8, 888K
-+ SEIONE5, 888704LE! «
-ieavHta: 2023%118248 -2023%11308
 ```
 
 ## Slide 12
@@ -234,14 +198,12 @@ ieavHta: 2023%118248 -2023%11308
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat Mobile’Apps
-USA 2024
 < THS RRA
-iOS@BALAR A FA ANN aE
 ```
 
 ## Slide 14
@@ -250,17 +212,13 @@ iOS@BALAR A FA ANN aE
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
-BERS MiE
-“SN >
 Your IP address is out of our service range,
 please change to an IP of a different country. We
 sincerely apologize for the inconvenience caused
-ita RRS
 ```
 
 ## Slide 15
@@ -283,15 +241,12 @@ ita RRS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat Layered Defenses
-USA 2024
-C)
 User requests site: brand[.Jcom "CoreLink Backbone Network",
-¥ "TIANA",
 "IANA reserved addresses",
 "IANA agencies",
 www.kb[.Jcom
@@ -300,7 +255,6 @@ Runs "Northeast Agricultural University",
 1 ¥ "Donghua University",
 on HTTP-based TDS #1: "East Timor",
 ? Basic fingerprint: geolocation "North University"
-&bI dat J.
 T rowser date "Central South University",
 If IP in China & browser looks legitimate hie in VPN “Central South University Campus Yuelushan" ,
 ¥ "Zhongnan University of Economics and Law",
@@ -319,7 +273,6 @@ If user looks legitimate "Denmark",
 a Set-Up: "Uzbekistan",
 u Unpacks & loads Wasm Script "Uganda",
 T "Uruguay",
-Tmen "Chad",
 @ ¥ "Yemen",
 rs Wasm Script: - Customer data "Asia-Pacific",
 \€—-API calls with scytale
@@ -341,40 +294,23 @@ Access Granted
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 69/100 on the text kept, 52/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 blackhat Domains Everywhere , A
-USA 2024
 Input length: i +ovn =
 lines:
-1757E2921639B02A8831F624476D96DDA6ZE9E584E 8D2618AEGAQOFAEC1IF712B22D5A24461A1BD2D5E2B2E265DC5C48A9ACF4BA94
 3@BEB881378A5072C55E3A9C595D4AE 7DFE1AD7DC5DBA51B2@BD5E678DBAQA1E82760A7D9407A427C188B197BD489BB5E62C9FCB3
-AA8DB72ACE2B979303C4F91CE28CFE190A8005F99D2B97ED249F 7QAGD3B8E5495AE892C2BD23A4C3D2C2B3D19DFDA7340F22704AB
-3A72ZEA2Z274C5360COF8FCFFCOE4147623A49AE56C5347B9EBOF6/7BFE933420A907997E6F57A1F66552463517E595EC231D684F
 start: 201 time: 2ms
 dd: 201 length: 201 Ir
-Output Length: “) renee 1 | 0 Gl
-"val": "[\"https://bkapi .abc50250. com: 8443\",\"https://bkapi .abczpuxyu.com:68@0\",\"https://
-bkapi .abc58k3x.com:78@Q@\",\"https://bkapi.zyfyday.com\",\"https://
-bkapi2.zyfyday.com\"]", "exp" :1721419200000}
-{"data": {"android_qz": "https ://download.1@7oyha7.com/files/package/
 TB_Game_305_146319_0209163036_0.apk","android_sport": "https://download.1@7oyha7.com/files/package/
 tb_Sport_305_146323_@209163152_@.apk", "anti_Lost_config":
 {"h5_anti_main":"true","
-:"true","kefu_anti_ty": "false", "kefu_normal_main": "true", "kefu_normal_ty":"true","
-web_anti_ty":"true"}, "anti_Lost_mainurL": "https ://www.x7j631.com:6600/app/
 home", "anti_lLost_mainurl_ty":"https://
 www. x87r63.com:6443", "anti_Lost_status":"","customer_service":"https://chatweb.sribgio.com/chat/text/
 chat_Q@pEU@. htmL?skil1l=8a8e2c238c5d5a3a@18c626c0ca3740a" , "hS5SiteDownLoadDomain": "https://
-webclip. 8yykjo.com:6002/A1j6P1QL" , "hSSiteDownLoadDomain_ty":"", "hSSportDownloadDomain": "https: //
-webclip. 8yykjo.com:6002/A1j6P1QL" , "hSSportDownloadDomain_ty":"", "h5SportMainDomain": ["https://
-www. qxfmL1.com:9988/?dqg=1"] , "hS5SportMainDomain_ty": ["https://www.qxfml1.com:9988/?
-dg=1"],"i0s_qz":"https://download.1@7oyha7.com/plist/
-TB_Game_305_@2091725_23674.plist","ios_sport": "https: //download.1@7oyha7.com/plist/
 tb_Sport_305_02091726_23675.plist"}, "message": "Sia AIH", "status_code" : 6000}
-hS5_anti_ty": "true", "h5_normal_main": "true", "h5_normal_ty": "true", "kefu_anti_mai
-web_anti_main": "true
 ```
 
 ## Slide 18
@@ -383,16 +319,14 @@ web_anti_main": "true
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 DNS Original DNS query: w8818[.]vip
 |
 CNAME record
 DNS
-10c381d4.w8818.vip.cname.scname
 Redirects user to website
 we HTTP-based TDS:
 : JavaScript checks user agent string and
@@ -407,9 +341,7 @@ Firewall (WAF) and
 unusual port limit
 probing
 DNS CNAMES
-————- CNAME recor
 DNS
-w5553.vip.bsdsib/.jcom
 Redirects user to another website
 Content: contains hyperlink
 for app download on new domain and
@@ -419,13 +351,9 @@ WWW.W3338[.Japp
 /?\_code=5813982
 l
 Triggers anew DNS query
-en
 DNS
 w3338[.Japp
-#
-, 0 Erecoc————
 CNAME record
-—=—~——C NAME recor]
 DNS W3338.app.abckamai|.jcom
 DNS w3338.app.bsdslb[.Jcom
 w3338.app.gim-
@@ -477,16 +405,15 @@ Who's behind this ? Why spend so much ?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi
 2 hat
-USA 2024
 Helping to set you
 Group Incubation Center
 Six Incubation Policies
-R=
 Free board and lodging commuting
 Free office space
 Provide your team with high-end formal
@@ -496,7 +423,6 @@ team, free staff shuttle pick-up, free
 workstations and computer equipment business cars
 according to the size of the team
 > |
-ig? anky
 financing loan support
 Personnel support
 According to your development needs, we
@@ -526,33 +452,19 @@ to help your performance take off
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-FE
-Wj! =
-fase
-2022 raids in Sihanoukville, Cambodia.
-```
-
 ## Slide 23
 
 #### Meet KM 包网 Baowang (aka YABO)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 black hat Meet KM 7!!’Baowang (aka ¥ABO)
-USA 2024
 Kevin Melo
-ReawA
 ceo
-RARNRARAM
 Senior team
 Roland Terry
 AMMA, CTO
@@ -565,34 +477,17 @@ JACK GREEM JACK GREEM JACK GREEM JACK GREEM JACK GREEM
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-on 3 Me I SKGFFAARRRANUMA, B2018 WOR, MIDAS MURS, AA] SAUL AGH AR
-LJ SPUR LS
-N
-ZA. | Kenen fee
-Gases fl Ui sees F ocees 9 oaess 9 Qemee Frye” Game Sam em mm Qo Moomm Karem
-SKG GROUP
-SMART KING GAMES
-3 BRIZARAT Dr Q Hie ¥ Tes DO, En (o] ROE S068 DB enum Senn @ FOF
-yyy QFMS Siser Qe Gh aean BEe Quien cies amin Ot A Cas sma
-```
-
 ## Slide 25
 
 #### KM Uses (Fake) Yabo Licenses
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 cS
-blaekhat KIM Uses (Fake)Yabo Licenses
-USA 2024
 Pl Lad E « 4 Philippine Amusement & Gaming C
 Ise OF MAN GAMBLING ‘al &
 SUPERVISION COMMISSION
@@ -600,18 +495,12 @@ LICENCE TO OPERATE
 Certificate of Accreditation and Ottshore Gaming License
 Authority to Operate For E-Casino
 ng Support P
-KES COMPAIES ARC SHORTS LIMITED
-{
-18th Floor Bargwety Corporate Tower, Sem. G. Puyat Apeume,
 Corner V.A, Rufino st Makati
 Metro Manila, Philippines
 jective from the
-"ANDREA D. DOMINGC Z r CITA Bee
 READ. DOMINGO
 Chairman and Chief Executive Olticer 2
 we” Chairman and Chief Executive Officer
-BA ithe ee ee 3E#R (PAGCOR)
-(MGA) iAiE ini RTA RR
 ```
 
 ## Slide 26
@@ -620,15 +509,11 @@ BA ithe ee ee 3E#R (PAGCOR)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat \OPSEC Fail
-USA 2024
-| ponymuab[.Jcom votimman
-(16.163.118[.]100}
-yabogn[.Jcom +O) {amnion O- sports[.]Jdbgaming[.]Jcom
-(8.210.591.1113 | (8.210.591.1113 | 1113 (18. 163. 182[,155 } (16.162.164 |. 1237)
 demo.sportxxx3pk[.]Jcom
 ```
 

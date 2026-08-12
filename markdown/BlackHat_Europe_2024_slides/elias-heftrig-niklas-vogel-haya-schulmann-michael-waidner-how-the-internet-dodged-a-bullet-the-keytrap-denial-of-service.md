@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Elias Heftrig & Niklas Vogel & Haya Schulmann & Michael Waidner_How the Internet Dodged a Bullet The KeyTrap Denial-of-Service Attacks against DNSSEC.pdf"
 pages: 73
 sha256: "55a92d82a228e9634b6e8c11ad65e549724b894022f45a2570ae4be4697c6e96"
-text_chars: 23884
-ocr_pages: 22
+text_chars: 21334
+ocr_pages: 14
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:49:46Z"
+converted_at: "2026-08-12T04:57:11Z"
 ---
 # How the Internet Dodged a Bullet The KeyTrap Denial-of-Service Attacks against DNSSEC
 
 **Speakers:** Elias Heftrig, Niklas Vogel, Haya Schulmann, Michael Waidner  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Elias Heftrig & Niklas Vogel & Haya Schulmann & Michael Waidner_How the Internet Dodged a Bullet The KeyTrap Denial-of-Service Attacks against DNSSEC.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -35,18 +41,6 @@ How the Internet Dodged a Bullet: The KeyTrap Denial-of-Service Attacks against 
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WA\ |
-{ CO
-. Wibax t A No
-EWROPE 2024.
-YS y
-Refresher: DNS
-and DNSSEC
-```
-
 ## Slide 3
 
 ## Why is it always DNS?
@@ -55,12 +49,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-EUROPE 2024
 Why its it always DNS?
 DDoS attack that disrupted internet was
 largest of its kind in history, experts say
@@ -76,7 +69,6 @@ Home News Securi ity Akamai DNS global outage takes down major websites, online 
 Akamai DNS global outage takes down major websites, online services
 By Sergiu Gatlan July 22, 2021 12:39 PM
 2
-Information Classification: General
 Salesforce cloud services go down
 worldwide
 Caused by DNS issue.
@@ -96,24 +88,6 @@ DNS
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Why its it always DNS?
-HTTPS” frp VPN Signal 2
-“SMTP NTP a)
-: VoIP. a
-m
-Noon
-— f
-‘
-*
-Information Classification: General
-```
 
 ## Slide 5
 
@@ -180,15 +154,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pifekhat DNSSEC Adoption on the Internet
-EUROPE 2024
 TLDs Top 1M
 Msigned Munsigned Msigned mMunsigned
 Adoption in domains is dragging
-Information Classification: General
 ```
 
 ## Slide 9
@@ -201,16 +174,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-niSxnat DNSSEC Adoption on the Internet ~
-EUROPE 2024
 Open Resolvers Web Clients
-@ validating @ validating
 B not validating @ not validating
 Better adoption in Resolvers
-Information Classification: General
 ```
 
 ## Slide 10
@@ -427,11 +397,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat A Closer Look at Signature Validation.
-EUROPE 2024
 However, it is essential to note that the key tag is not a
 unique identifier. It is theoretically possible for two
 distinct DNSKEY RRs to have the same owner name, the
@@ -441,7 +411,6 @@ uniquely identify a DNSKEY record. Implementations
 MUST NOT assume that the key tag uniquely identifies a
 DNSKEY RR.
 RFC4034, Appendix B "Key Tag Calculation"
-Information Classification: General
 ```
 
 ## Slide 27
@@ -452,12 +421,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat A Closer Look at Signature Validation
-EUROPE 2024
 It is possible for more than one DNSKEY RR to match
 the conditions above. In this case, the validator cannot
 predetermine which DNSKEY RR to use to authenticate
@@ -466,7 +434,6 @@ RR until either the signature is validated or the validator
 has run out of matching public keys to try.
 RFC4035, Section 5.3.1. "Checking the RRSIG RR
 Validity"
-Information Classification: General
 ```
 
 ## Slide 28
@@ -477,18 +444,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat A Closer Look at Signature Validation
-EUROPE 2024
 A
 PLE KEYS?
-a
-ULTI
-We
-Information Classification: General
 ```
 
 ## Slide 29
@@ -527,12 +489,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Wecan make it even worse
-EUROPE 2024
 This document specifies that a resolver SHOULD accept
 any valid RRSIG as sufficient, and only determine that
 an RRset is Bogus if all RRSIGs fail validation.
@@ -546,7 +507,6 @@ Such a resolver is also vulnerable to malicious insertion
 of gibberish signatures.
 RFC6840 Section 5.4. "Caution about Local Policy and
 Multiple RRSIGs"
-Information Classification: General
 ```
 
 ## Slide 32
@@ -557,19 +517,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat It’s quadratic!
-EUROPE 2024
 This document specifies that a resolver SHOULD accept
 any valid RRSIG as sufficient, and only determine that
 an RRset is Bogus if all RRSIGs fail validation.
 If a resolver adopts a more restrictive policy, there’s a
 danger that properly signed data might unnecessarily fail
 validation due to cache timing issues. Furthermore,
-MULTIPLES! NAT RES»
 certain zone management techniques, like the Double
 Signature Zone Signing Key Rollover method described &
 in Section 4.2.1.2 of [RFC6781], will not work reliably. e
@@ -577,7 +535,6 @@ Such a resolver is also vulnerable to malicious insertion |
 of gibberish signatures.
 RFC6840 Section 5.4. "Caution about Local Policy and
 Multiple RRSIGs"
-Information Classification: General
 ```
 
 ## Slide 33
@@ -614,26 +571,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat How much can “all” be?
-EUROPE 2024
 User Datagram Header Format
 Not many restrictions in the DNS protocol
-Information Classification: General
-1131111
 ID
-|QR|  Opcode |AA|TC|RD|RA] Z | RCODE
-Ha wtootontoctoctactontootoctoctectectoctectoectent
 | QDCOUNT
-+--+--+--+--+--+--+--+--4+--4--+--4+--4+--4+--4+--4+--4+
 ANCOUNT
-+--+--+--+--+--+--+--+--+--4+--+--4+--4+--4+--4+--4+--+
 NSCOUNT |
-+--+--+--+--+--+--+--+--+--4--+--4+--4+--4+--4+--4+--4+
-l ARCOUNT
-+--+--+--+--+--+--+--4+--4+--4+--+--4+--4+--4+--4+--4+--+
 ```
 
 ## Slide 35
@@ -662,7 +610,7 @@ Information Classification: General
 
 ## Zone File Contents: DNSKEYs
 
-```
+\```
 keytrap.org 60 IN DNSKEY 257 3 13 YpsCtFxj[...]0/G81g== ;{id=26539 (ksk)}
 keytrap.org 60 IN DNSKEY 256 3 13 wwZzOFux[...]7s+jGg== ;{id=1337 (zsk)}
 keytrap.org 60 IN DNSKEY 256 3 13 AHl8SDyd[...]vgk3gQ== ;{id=1337 (zsk)}
@@ -674,7 +622,7 @@ keytrap.org 60 IN DNSKEY 256 3 13 6+Gbtx4h[...]RacDLw== ;{id=1337 (zsk)}
 keytrap.org 60 IN DNSKEY 256 3 13 6KNR3F+Q[...]RcK2kQ== ;{id=1337 (zsk)}
 keytrap.org 60 IN DNSKEY 256 3 13 ijhRFa4f[...]L5cBtQ== ;{id=1337 (zsk)}
 keytrap.org 60 IN RRSIG DNSKEY 13 4 60 20250117 20240119 26539 keytrap.org gTq+83Bx[...]hcLjQ==
-```
+\```
 
 Information Classification: General
 
@@ -684,7 +632,7 @@ Information Classification: General
 
 ## Zone File Contents: RRSIGs
 
-```
+\```
 a0001.keytrap.org 0 IN A 10.2.3.4
 a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G0+[...]0VObdw==
 a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G0+[...]0VObdw==
@@ -695,7 +643,7 @@ a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G
 a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G0+[...]0VObdw==
 a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G0+[...]0VObdw==
 a0001.keytrap.org 0 IN RRSIG A 13 5 0 20250117 20240119 1337 keytrap.org GVHrz5G0+[...]0VObdw==
-```
+\```
 
 Information Classification: General
 
@@ -816,18 +764,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ofgxnat Evaluations
-EUROPE 2024
-Test Setup with Unbound.
-DNS Resolver
-attack.com?
-—?—
-Information Classification: General
-```
-
 ## Slide 48
 
 ## Evaluations
@@ -837,20 +773,6 @@ Information Classification: General
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ofgxnat Evaluations
-EUROPE 2024
-Test Setup with Unbound.
-DNS Resolver
-Zone Data DNS Server
-<=>
-—fo ©
-ro
-Information Classification: General
-```
 
 ## Slide 49
 
@@ -862,17 +784,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ofgxnat Evaluations
-EUROPE 2024
-Test Setup with Unbound.
-DNS Resolver
-Monitoring
-Information Classification: General
-```
-
 ## Slide 50
 
 ## Evaluations
@@ -882,20 +793,6 @@ Information Classification: General
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ofgxnat Evaluations
-EUROPE 2024
-Test 1: SigJam (Many Signatures / 1 Key)
-10 req/s
-ee a) =<» DNS Resolver
-re)
-—_—/(—
-‘@)
-Information Classification: General
-```
 
 ## Slide 51
 
@@ -907,19 +804,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ofgxnat Evaluations
-EUROPE 2024
 Test 1: SigJam (Many Signatures / 1 Key)
 340 Signatures /1 Key
 DNS Resolver <= l=) ——>
 DNS Server
-<=>
--8-B
-—ffj—->
-Information Classification: General
 ```
 
 ## Slide 52
@@ -956,19 +848,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ofgxnat Evaluations
-EUROPE 2024
-Test 2: KeySigTrap (Many Signatures / Many Keys)
-DNS Resolver
-1 Request
-—
-‘e)
-Information Classification: General
-```
-
 ## Slide 55
 
 ## Evaluations
@@ -979,18 +858,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ofgxnat Evaluations
-EUROPE 2024
 Test 2: KeySigTrap (Many Signatures / Many Keys)
 DNS Resolver
 340 Signatures / 582 Keys DNS Server
-<=>
-ro
-Sa
-Information Classification: General
 ```
 
 ## Slide 56
@@ -1176,12 +1050,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pistxhat Global Impact
-EUROPE 2024
-ag
 Code Region DNSSEC Validates Partial Validates Total Validates
 XA World 33.67% 8.02% 41.69%
 XF Oceania 44.95% 3.80% 48.75%
@@ -1190,7 +1063,6 @@ XB Africa 37.67% 12.11% 49.78% Measurements by APNIC Labs
 XC Americas 34.82% 6.61% 41.43%
 xD Asia 30.07% 6.57% 36.64%
 XG Unclassified 28.84% 16.29% 45.13%
-Information Classification: General
 ```
 
 ## Slide 68
@@ -1198,20 +1070,6 @@ Information Classification: General
 # **Disclosure: Patch-Break-Fix Process**
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-> VN
-{ lO
-~
-TT piSekhat ‘
-— EWROPE 20 ‘s
-~~ Disclosure:
-Patch-Break-Fix
-Process
-Y
-```
 
 ## Slide 69
 
@@ -1236,18 +1094,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pfxnat Patches
-EUROPE 2024
 (Patched) Resolver under continuous attack
 Attack Simulation
 —— CPU Load 1.
-<
-wn
-br 100 plan atime pete atapapnt a. fh JOP eter M el BA an reply inl a a hk
-°
 O 0 20 40 60 80 100 120 140 160
 Time [s]
 Information Classification: General 1
@@ -1263,30 +1116,21 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Patches
 (Patched) Resolver under Hash attack
 CPU Load / Lost Packets [%]
-Information Classification: General
 100
 ~N
-ui
 ul
-fo)
 N
 ul
-fo)
 Attack Simulation
 — CPU Load pon
-ous sotnene\annan pnts spn ppp
-Lost Packets || V " |
-i :
 y |
-rt
 |
 0 25 50 75 100 125 150 175
 Time [s]

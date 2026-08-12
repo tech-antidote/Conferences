@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Yvan Genuer_Exposing the dark corners of SAP 4-Years of Threat Intelligence data analyzed.pdf"
 pages: 78
 sha256: "33fb7e08ac07015140249a6b3fe2360636623d44d2c75b0099f4de12db7c9e22"
-text_chars: 23585
-ocr_pages: 26
+text_chars: 17352
+ocr_pages: 20
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:47:57Z"
+converted_at: "2026-08-12T05:02:07Z"
 ---
 # Exposing the dark corners of SAP 4-Years of Threat Intelligence data analyzed
 
 **Speakers:** Yvan Genuer  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yvan Genuer_Exposing the dark corners of SAP 4-Years of Threat Intelligence data analyzed.pdf` (78 pages)
+
 
 ## Slide 1
 
@@ -30,30 +36,11 @@ Speaker: Yvan Genuer
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-~~ Blackhat’ , iF pc
-“EUROPE 2024 er StS
-| DECEMBER 11-12, 2024 ; | ae i <x e
-\ Exposing the dark corners of SAP
-4-Years of Threat Intelligence data analyzed
-Speaker: Yvan Genuer
-#BHEU @BlackHatEvents
-```
-
 ## Slide 2
 
 Information Classification: General
 
 #BHEU  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-EUROPE 2024
-Information Classification: General #BHEU @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -75,32 +62,23 @@ https://warcraft3.blizzard.com
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
-EUROPE 2024
-Sw
-INSWANSWoW7
-wad a | 8 (UM OSM
 https://warcraft3.blizzard.com
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 5
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-i
-‘#) &
-lack hat
-bac 2024 Ww \
 Chat (F12) ye ae
 rt Quests =e Menu (F10)
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 6
@@ -113,16 +91,6 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-EUROPE 2024
-; = Menu(Fi0) || Allies(Fil) \) Chat(@Fiz) |\/ °° @ ¥ ) 495 | 150 | 6/12. No Upkeep
-Pips j F i)
-Information Classification: General #BHEU @BlackHatEvents
-```
-
 ## Slide 7
 
 ?
@@ -133,33 +101,9 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a a,
-black hat >
-EUROPE 2024
-\  ———
-me Be.
-)/ Menu(F10) lj Allies (Fi1) Chat (F12) +? 5 e) 495 |. 150 6/12 |} NoUpkeep
-cS
-Information Classification: General #BHEU @BlackHatEvents
-```
-
 ## Slide 8
 
 Information Classification: General #BHEU  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-EUROPE 2024
-Information Classification: General
-(; FLASHPOINT
-=
-iJ ONAPSIS
-```
 
 ## Slide 9
 
@@ -197,53 +141,24 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat The apiaest Inter erest oF on SAP
 Menu (F10) Allies (F Chat (F1 2) ro) 1205 15/24
-ae
-“gy
-—
-.
-s
-a)
-*
-.
-A
-FR
-y
-¥
-ee
-“SR ie
-iy
-o\ MS)
-a1 ¥
-lS
-S
-x4
-Information Classification: General
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 13
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 45/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a ott
-biSekhat Pe | a
-EUROPE 2024 4 : .
 GuardianeLinks
 YgayHoro Koga!
-[2 @OPYM ~ S&2PECYPChI © YYUTOHOBOFO + #88 NONb3OBATENU ~ YATE
-” MIILVVULIVILIVLIVILIVILIVIVUV LIV LLU iit
-4£1010101010010101010101010101010101010101101
 Ha GitHub yxe nc
-6o0nbwvHcTBa SAP-npunoxeHun
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 14
@@ -256,80 +171,26 @@ Information Classification: General
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi
-2)
-ac
-khat &
-EUROPE 2024
-CTb KOTOpyto NpofAaloT YepHbie xakepbl, a yfansioT Genbie [ OTKpbiTbie Pegupextet |
-OTKpbitble 3aKpbiTbie PenupexTh!
-Sta Clare O YSSBVKMOCTH, KOTOPYHO NpogaloT MEpHbIE XAaKepbl, a yAainOT Genbie. Movemy? Moromy “ro ora Ham Gecnon
-OH@ HE NPWHYMAETCH nnarchopmann Ges0nacHOocrH, Tak Kak TpeGyet B3anMogercr BVA NOIbIOBATENA, WIM, KAK Mbl TOBOPMM, “COMLUMHI
-OTKPbiT bit PEQnpeKT 11s KO
-HCC MNe onal A MOKA STON AOC Taro
-nem cnocot . bl MAXORKQCHMA YHSBMIMOCTH,
-Otkppitpii Peaupext
-OTKDbITbIA PEQUDEET - 3TO YA3BUMOCTb, BOSHMKAIOWWAR, a Bed-npunoXeHHe MaHuny Nupye QUIS NEPSHANPABNeHVA NONb3OBATE.
-YRIBAMOCTH OTKPbITbIX PegupeKTOs JKCIIYarNpyOr AOBepHE NONb20BAaTeNIA kK LakHOMy 8e6-CaiTy JUIR NeEDeKANPAB/IEHMA NO/Ib30B2
-eClb JOBepeHhan CCHHIKa, “xSS.iS/7redirectUn=xss[.]bZ2° - 6 AAHHOM NPMMEpe, KOTODOA ABMIHETCH XSS.iS, 4 KOI MO/Ib30BAl eb HAKN
-HBNHETCH PE3yiblaTOM HeNpPABH/IbHOR NpoBeDpKY / OTCYTCIBMA (biibT paumn pv OGpaboTKe URL, Npeg_oclapenHblx NOMb30BATesIEN
-HePpCaAPEC al Vv, XGKEPH! MOFYT JAMEHVTS BIO Ha Cao” anovaMeperHblh URL
-Cutyauma 6B Hawem mupe
-BAMOCTH OTKPbITbIX PEAMPPKTOB YACTO MEHODUPYIOTCR, XOTA ORM NIDEACTAB/IAIOT SHEMNTEILHYIO YIPOSY N3-3a VX KOCBEHHOW NpDNp
-DOrPAMMb! PACKPbITHR YASBUMOCTEM OSPALaKT BHNMAHHEe Ha NPAMbIE METOMbI aTaKH (SOL/XS
-NOABEDIGIOTCA BSAOMY MPC TbIMd CDMUWMHIOBbIMM aTaKamn
-Kak paGoTaet OTKPbITHIM peampeKT?
-S 41.2.), @ He Ha YASBMMOCTH, TaKMe K
-#BHEU @BlackHatEvents
-```
-
 ## Slide 16
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 35/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
-OTKpbitble 3akpbiTbie PenupekTbi
-3a C1aTAS 0 VSR MMO KOTOnVID nooaaHT SBokne xXAKeORL a varsuor Genawe. [ovenw? Core “ro ona Ham fecnonesHa. Kae ai
-AUUYULIVAIVAL
-FBNAETCA Pesyibl alOM HellpabMibHOM MUBEDKM / OTCYICIBAN (DAbTpaulMn Nip Oopaootke URL, Npefoc lan/lehHbix Muslbs0bal Eien
-NEPBAAPEC ALY, XGKEPL! MOTYT JAMEBHMTS BIO HA C80K anOHaVepeRHSIA URL.
-Cutyauma B Halwem mupe
-YAIBAMOCTH OTKPbITbIK PeQUP2KTOB YaCTO MHODMDYIOTCR, XOTH OHM NDEACTAENAIOT JHA4ITENbHYIO yrpOay N3-3a VX KOCBeHHOM NpHpo)\T\\NHOst: 127.0.0.1:8443\
-NDOTPAMMb! PACKPHITHA VEZANMOCTEM OODAMAKIT BHIMAHNe Ha NPAMbIe METORbI Arak (SQL/XSS MTA), & HE Ha YSSBAMOCTH, TaKMe K\n\")
-NOABE DIO! CA BBAOMY NPOCTbIMN CHMUUMHIOBBIMM alaKama
 Kak paGotaer OTkKpbITbIi peaMpeKr? \\r\\n\")" | gzip | base64°
-Information Classification: General
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 17
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 35/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
-OTKpbitble 3akpbiTbie PenupekTbi
-3a C1aTAS 0 VSR MMO KOTOnVID nooaaHT SBokne xXAKeORL a varsuor Genawe. [ovenw? Core “ro ona Ham fecnonesHa. Kae ai
-AUUYULIVAIVAL
-FBNAETCA Pesyibl alOM HellpabMibHOM MUBEDKM / OTCYICIBAN (DAbTpaulMn Nip Oopaootke URL, Npefoc lan/lehHbix Muslbs0bal Eien
-NEPBAAPEC ALY, XGKEPL! MOTYT JAMEBHMTS BIO HA C80K anOHaVepeRHSIA URL.
-Cutyauma B Halwem mupe
-YAIBAMOCTH OTKPbITbIK PeQUP2KTOB YaCTO MHODMDYIOTCR, XOTH OHM NDEACTAENAIOT JHA4ITENbHYIO yrpOay N3-3a VX KOCBeHHOM NpHpo)\T\\NHOst: 127.0.0.1:8443\
-NDOTPAMMb! PACKPHITHA VEZANMOCTEM OODAMAKIT BHIMAHNe Ha NPAMbIe METORbI Arak (SQL/XSS MTA), & HE Ha YSSBAMOCTH, TaKMe K\n\")
-NOABE DIO! CA BBAOMY NPOCTbIMN CHMUUMHIOBBIMM alaKama
 Kak paGotaer OTkKpbITbIi peaMpeKr? \\r\\n\")" | gzip | base64°
-Information Classification: General
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 18
@@ -338,11 +199,10 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Trigona
 Trigona ‘on Oct 01, 2023 12:47:34
 1930
@@ -356,19 +216,16 @@ company's strategies, strengths, weaknesses, opportunities and threats. You will
 the needs, pain points, motivations and behaviors of its customers. You will be able to use this
 information to create better products and services, target the right prospects, craft compelling
 sales pitches and close more deals.
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 19
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-oT
-bisek hat we .
-EUROPE 2024
 SAP exploits or vulnerabilities
 800
 600
@@ -377,7 +234,6 @@ Number of hits
 200
 2020 2021 2022 2023
 Year
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 20
@@ -410,12 +266,10 @@ Information Classification: General
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-oT
-bisek hat we .
-EUROPE 2024
 SAP exploits or vulnerabilities
 800
 600
@@ -424,7 +278,6 @@ Number of hits
 200
 2020 2021 2022 2023
 Year
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 24
@@ -435,20 +288,17 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
 What happened in 2021 ?
 400
 Number of hits
 200
-se
 2020 2021 2022
 Year
-Information Classification: General
 2023
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 25
@@ -469,12 +319,10 @@ SOLMAN RCE
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-EUROPE 2024
-a
-blackhat . 7 Cp ae
 SAP exploits or vulnerabilities
 RECON
 800
@@ -485,7 +333,6 @@ Number of hits
 200
 2020 2021 2022 2023
 Year
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 27
@@ -515,22 +362,22 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-biSekhat
-EUROPE 2024
-~~!
+SAP exploits or vulnerabilities
+
 3 years
-Information Classification: General
-Number of
-0,000,000 USD
+~ 30,000,000 USD
+
+Number of [exploits/vulnerabilities — axis label continues under the overlaid box, obscured]
+800
+400
 200
-2020
-2021
+0
+2020    2021    2022    2023
 Year
-2022
-2023
 ```
 
 ## Slide 30
@@ -575,38 +422,17 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
 sted by y SAP
 } 15/24 yj No Upkeep
-H
-0 Menu(Fi0) |j Allies (Fi1) Chat (Fi2)
-A ee
 &
-Sd 5:
-“aR x
-‘
-{aes
-,
-cy
-(EN |
-Z
-is ‘
-ed
-id
 = |
-Strength 1 = r ac
-Agility: : —— _ :
 17
-Intelligence: ™ |
 19
-316/450
-[285/285 _
 Status:
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 35
@@ -822,20 +648,15 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 EUROPE 2024 ° AX
-my I Menu (F10) "If Allies (Fil) | Chat(Fi2) | .& a) 2035 j2 70 \j* 15/24)! No Upkeep
 Strength:
-Ss +*4
-x. Agility:
 Mm) 17
 Intelligence:
-355/450 |
 [285/285 _|
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 55
@@ -854,18 +675,15 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Za *
-bisekhat aA | ae
-EUROPE 2024
 Target:
 Bounty:
 Start Date:
 End Date:
 90,000 USD
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 57
@@ -876,22 +694,18 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
 Target: SAP NetWeaver
 Bounty: Up to!
 Start Date:
 End Date:
-Information Classification: General
-\  ———
 } for pre-authentication RCEs or authentication bypass exploits affecting recent v ons of SAP NetWeaver
 jolt Should allow either remote code execution authentic 1 DYp work with default installations and should
 fh of user interaction
 90,000 USD
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 58
@@ -902,10 +716,10 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat ze
 EUROPE 2024 mE
 (7X Ow d f e n S e HOME BOUNTIES
 Exploit Acquisition Program
@@ -913,42 +727,35 @@ PLM and EPR
 e SAP (RCE): 250k USD
 e Siemens Teamcenter (RCE): 250k USD
 e Oracle ERP (RCE): 200k USD 250.000 USD
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 59
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
-Information Classification: General
 SSD Secure Disclosure @
 Found a vulnerability in SAP NetWeaver?
 Submit your findings today at ssd
-disclosure.com/sap-netweaver
 get the BIG payouts you deserve @@& 6
 Netweaver
 exploits
 are now in high-demand!
 ssd-disclosure.com
 113
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 60
 
 Information Classification: General #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
-Information Classification: General
 SSD Secure Disclosure @
 Found a vulnerability in SAP NetWeaver?
 Submit your findings today at ssd-disclosure.com/sap-netweave!
@@ -958,7 +765,6 @@ exploits
 are now in high-demand!
 ssd-disclosure.com
 113
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 61
@@ -1023,35 +829,20 @@ Information Classification: General
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
-ays ON
 yt @ 2445 f 460 15/24 { NoUpkeep
-Sag.
 End Game Options |
-See 2
-al
 Restart Mission lr ry
-= ¢
 Exit Game ] a
-PS
-—— -
 |
-wae | Previous Menu eA
-Ee
-EASe x w FEES, ROE REERN SESE SA
-— o_o aes f7. SE :
-— Manath Magesinger ° = | |] Oe >
 ’ ys \ Level 1 Archmage 1] rail
-i éap) Agility ‘
 ‘\ 7 >) Armo 17
 ve 4 3 Intelligence: f
 "395 / 450 f nai
 tr 285 /285 zl Status:
-Information Classification: General #BHEU @BlackHatEvents
 ```
 
 ## Slide 68

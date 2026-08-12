@@ -8,13 +8,17 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Rithwik Jayasimha&Rithvik Vibhu_gpwn Wiretapping Fiber ISP Deployments From the Comfort of Your Home_Compressed.pdf"
 pages: 12
 sha256: "e3da3640aac5c782e971af1de36e7d635e6d67f5de8ae9ee6740d2f0da7445f9"
-text_chars: 787
+text_chars: 748
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:01Z"
+converted_at: "2026-08-12T05:41:56Z"
 ---
 # gpwn Wiretapping Fiber ISP Deployments From the Comfort of Your Home
 
@@ -22,12 +26,13 @@ converted_at: "2026-08-11T23:15:01Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Rithwik Jayasimha&Rithvik Vibhu_gpwn Wiretapping Fiber ISP Deployments From the Comfort of Your Home_Compressed.pdf` (12 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pwn: Wiretapping
 iber ISP Deployments
 From the Comfort of
 Your Home
@@ -60,7 +65,8 @@ USA 2
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rithwik Jayasimbha
@@ -79,7 +85,6 @@ I suspect this is not as infeasible as we think
 Rithwik Jayasimha
 Optical fiber networks are TOTALLY different
 O26, 1 AM Rithwik Jayasimha
-NW24/2026, 1:03:45 4M
 My spidey instincts are tingling
 Rithwik Ja ya simbha
 2/24/2026, 1:03:59 AM

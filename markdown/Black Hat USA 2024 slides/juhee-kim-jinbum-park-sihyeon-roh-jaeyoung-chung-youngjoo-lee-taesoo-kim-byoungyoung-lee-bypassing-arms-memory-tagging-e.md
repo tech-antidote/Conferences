@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Juhee Kim & Jinbum Park & Sihyeon Roh & Jaeyoung Chung & Youngjoo Lee & Taesoo Kim & Byoungyoung Lee_Bypassing ARM's Memory Tagging Extension with a Side-Channel Attack.pdf"
 pages: 68
 sha256: "525043b1fd082cd504fc966142f53ab70bcbe17eb17d63a2569a62d374988fa3"
-text_chars: 17857
+text_chars: 17140
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:47:57Z"
+converted_at: "2026-08-12T04:34:31Z"
 ---
 # Bypassing ARM's Memory Tagging Extension with a Side-Channel Attack
 
 **Speakers:** Juhee Kim, Jinbum Park, Sihyeon Roh, Jaeyoung Chung, Youngjoo Lee, Taesoo Kim, Byoungyoung Lee  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Juhee Kim & Jinbum Park & Sihyeon Roh & Jaeyoung Chung & Youngjoo Lee & Taesoo Kim & Byoungyoung Lee_Bypassing ARM's Memory Tagging Extension with a Side-Channel Attack.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,11 @@ Speaker: Juhee Kim
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | 4a
-blackhat os
 USA 2024
 AUGUST 7-8, 2024
 Bypassing ARM's Memory Tagging
@@ -1106,12 +1111,12 @@ Match
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2023-5217 Chrome libvpx heap overlfow
 Original Memory Corruption > Attack Fail
-‘— £0 | Elements Console Sources Network >>
 DH O\tpry|o@ Default levels ¥ | No Issues git:( ) x ./out/pixel/bin/chrome_public_apk logcat -d 38151FDJHO00VB
 @7- 21:45:33.867 26749 26749
 @7- 21:45:33.869 1746
@@ -1124,11 +1129,7 @@ D
 07-20 21:45:33.893 26765 26765 1D} ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.wi
 ndow. extensions. jar
 67-20 21:45:33.895 26765 26765 o nativeloader: Configuring clns-7 for other apk /data/app/~~Wq5RFIknKZXtEjRSzjS3rg==/org.chr
-omium. chrome-URbKRdB7K3uFbj JgnLiqUA==/base.apk. target_sdk_version=34, uses libraries=, library_path=/data/app/~-WqSRFIknKZX
-jRS2jS3rg==/org. chromium. chrome-URbKRdB7K3uFbj JgnLiqUA==/1ib/arm64: /data/app/~-Wq5RFIknKZXtEjRSzj$3rg==/org. chromium. chrom
-e-URbKRdB7K3uFbj JgnLiqUA==/base.apk!/1ib/arm64-v8a, permitted _path=/data: /mnt/expand: /data/user/@/org. chromium. chrome
 67-20 21:45:33.902 26765 26765 i cr_SplitCompatApp: version=125.0.6422.231 (642223104) minSdkVersion=26 isBundle=false proce
-ssName=org. chromium. chrome: sandboxed_process@:org. chromium. content .app.SandboxedProcessService:16 isIsolatedProcess=true
 CompatibilityChangeReporter: Compat change id reported: 242716250; UID 90024; state: ENABLE
 07 45:33.906 26765 26765 fi cr_ChildProcessService: Creating new ChildProcessService pid=26765
 all la Ize 07 45:33.915 26765 26781 fi cr_LibraryLoader: Successfully loaded native Library
@@ -1140,7 +1141,6 @@ all la Ize 07 45:33.915 26765 26781 fi cr_LibraryLoader: Successfully loaded nat
 @7 :45:33.996 26749 26749 fj Zygote =: Process 26544 exited cleanly (0)
 2 git: ( ) x node ./server.js
 ; Listening on 0.6.0.6:8000
-&767G 40% 08% §46.0°C 0/0 MB/s 0 47% G © balanced Sat 20Jul21
 ```
 
 ## Slide 63
@@ -1149,7 +1149,8 @@ CVE-2023-5217 Chrome libvpx heap overlfow **With MTE Tag Leakage** à **Attack S
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2023-5217 Chrome libvpx heap overlfow
@@ -1163,8 +1164,6 @@ Initialize
 Initialize
 » chromium-oob2 git: ( ) x node ./server.js
 j Listening on 6.0.0.0:8000
-$ Console
-ad 8767G 241% 07% 047.0°C #0/0 MB/s 49 47% && \ balanced Sat 20 Jul2
 ```
 
 ## Slide 64

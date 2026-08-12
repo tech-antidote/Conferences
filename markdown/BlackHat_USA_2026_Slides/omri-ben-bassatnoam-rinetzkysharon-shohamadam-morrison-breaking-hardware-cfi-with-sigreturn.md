@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Omri Ben-Bassat&Noam Rinetzky&Sharon Shoham&Adam Morrison_Breaking Hardware CFI with Sigreturn.pdf"
 pages: 68
 sha256: "d99ad79a3965701e0b31055aeef512b5202c11278371427ac69574e177e7798b"
-text_chars: 22918
+text_chars: 20262
 ocr_pages: 19
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.6
+ocr_unreliable_blocks: 7
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:14:25Z"
+converted_at: "2026-08-12T05:40:55Z"
 ---
 # Breaking Hardware CFI with Sigreturn
 
 **Speakers:** Omri Ben-Bassat, Noam Rinetzky, Sharon Shoham, Adam Morrison  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Omri Ben-Bassat&Noam Rinetzky&Sharon Shoham&Adam Morrison_Breaking Hardware CFI with Sigreturn.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -78,7 +83,8 @@ gcc … -mbranch-protection=pac-ret
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PACIxS
@@ -87,13 +93,10 @@ P + AUTIXSP
 Dump of assembler code for function main:
 End of assembler dump.
 gcc .. -mbranch-protection=pac-ret
-<+@>:
-<—+4>:
 <+8>:
 <+12>:
 <+16>:
 <+20>:
-<—+24>:
 <+28>:
 <+32>:
 <+36>:
@@ -106,15 +109,11 @@ str [sp, J
 [
 str
 adrp
-add F
 bl ) <printfa@plt>
 mov
-ldp ' » Csp),
 autiasp
 ret
-//
 #0
-Black hat
 ```
 
 ## Slide 7
@@ -125,7 +124,8 @@ gcc … -mbranch-protection=pac-ret
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PACIxS
@@ -134,13 +134,10 @@ P + AUTIXSP
 Dump of assembler code for function main:
 End of assembler dump.
 gcc .. -mbranch-protection=pac-ret
-<+@>:
-<—+4>:
 <+8>:
 <+12>:
 <+16>:
 <+20>:
-<—+24>:
 <+28>:
 <+32>:
 <+36>:
@@ -152,15 +149,11 @@ mov
 str [sp, ]
 str [
 adrp
-add F
 bl ) <printfa@plt>
 mov .
-ldp ' » Csp),
 autiasp <—
 ret
-//
 #0
-Black hat
 ```
 
 ## Slide 8
@@ -428,7 +421,8 @@ Glibc CFI Safe Pivot
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 61/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 0013ec7F d5
@@ -443,30 +437,18 @@ stone ah a CFI Safe Pivot
 0013ec94
 0013ec98 e
 0013ec9c
-0013eca0 ,/LAB_0013eca8
 0013eca4 FUN_00123120
-0013eca8 ,
 0013ecac FUN_001#8840
 0013ecbO
 0013ecb4
 0013ecb8
-0013ecbc
 0013eccO
 0013ecc4
 0013ecc8
 0013eccc
-0013ecd0 a
-0013ecd4
 0013ecd8
-0013ecdc ‘
 LAB_0013ed90 X ] 00 A
-0013ed90 ldr -
-oo 3a99 ve sit, openSUSE
 0013ed98 4 ldp
-0013ed9c dp
-0013eda0 dp
-ool3edas br - black hat
-O82.
 ```
 
 ## Slide 29
@@ -481,7 +463,8 @@ CFI Safe Pivot
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 0013ec80
@@ -492,45 +475,30 @@ Information Classification: General
 0013ec94
 0013ec98
 0013ec9c
-0013eca0
 0013eca4
-0013eca8
-0013ecac
 0013ecbO
 0013ecb4
 0013ecb8
-0013ecbc
 0013eccO
 0013ecc4
 0013ecc8
 0013eccc
-0013ecd0
 0013ecd4
-0013ecd8
 0013ecdc
 0013ed90
 0013ed94
-0013ed98
-0013ed9c
 0013eda0
 0013eda4
 undefined
 SSIGNED
-LAB_0013ed90
 ldr
-dp
-dp
-dp
 ldp
 br
-,/LAB_0013eca8
 FUN_00123120
 FUN_0018840
 Glibc
 CFI Safe Pivot
 openSUSE ,
-black hat
-@ 282.
 ```
 
 ## Slide 30
@@ -539,7 +507,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 71 SYM_CODE_START(__kernel_rt_sigreturn)
@@ -547,8 +516,6 @@ mov x8, NR_rt_stgreturn
 svc #0
 SYM_CODE_END(__kernel_rt_sigreturn)
 emit_aarch64_feature_1_and
-black hat
-2026
 ```
 
 ## Slide 31
@@ -557,7 +524,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 71 SYM_CODE_START(__kernel_rt_sigreturn)
@@ -565,8 +533,6 @@ mov x8,
 svc #0
 SYM_CODE_END(__kernel_rt_sigreturn)
 emit_aarch64_feature_1_and
-black hat
-2026
 ```
 
 ## Slide 32
@@ -577,24 +543,20 @@ Most Linux Distros
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fil SYM_CODE_START(__| Most
 mov x Linux
-# Distros
 SYM_CODE_END(__kernel_rt_sigre
 emit_aarch64_feature_1_and
 g ARM64_BTI_KERNEL
 y
- ARM64_BTI
 ARM64_PTR_AUTH_KERNEL
 CC_HAS_BRANCH_PROT_PAC_RET_BTI
 CC_IS_GCC || GCC_VERSION >= 100100
 cc_Is_Gcc
-FUNCTION _GRAPH_TRACER || DYNAMIC_FTRACE_WITH_ARGS)
-black hat
-2026
 ```
 
 ## Slide 33
@@ -645,53 +607,26 @@ Source: Google.
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Bionic (/ Ilvm-libunwind)
-inet le Linn a CFI Safe Pivo
 001f4190 df bti
 001F4194 02 dp
 001f4198 04 dp
 001F419c 06 dp
-001F41a0 08 dp
-001f41a4 Oa dp
 001f41a8 Oc dp
-001f41ac Oe dp
 001f41b0 12 4c 4 dp
-001F41b4 14 dp
 001f41b8 16 dp
 001f41bc 18 dp
-001f41cO la dp
-001F41c4 Ic dp
-001f41c8 le ldr
-001f41cc 00 dp
 001f41d0 02 dp
-001F41a4 04 dp
-001f41d8 06 dp
-001F41dc 08 dp
-001f41e0 Oa dp
-001F41e4 Oc dp
-001f41e8 Oe dp
 001f41ec 10 44 dp
-001f41f0 12 dp
-OO1f41f4 14 dp
-001F41f8 16 dp
-001f41fc 18 dp
-0014200 dp
-001F4204 1c 7: dp
-0014208 ldr
-001F420c ldr
-0014210 dr
-001F4214 dp
 001F4218 mov
 001F421c mov
 0014220 hint
-0014224 cbnz
 0014228 sys
 Lnoges
 Eeniatie eet Source: Google. black hat
-2026
 ```
 
 ## Slide 36
@@ -706,53 +641,24 @@ Source: Google.
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 51/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Bionic (/ Ilvm-libunwind)
 inet le in CFI Safe Pivo
 001f4190 df bti
-0014194 02 dp
 001F4198 04 ldp
-001F419c dp
-001F41a0 dp
-001f41a4 dp
-001F41a8 dp
-001f4lac ldp
-001f41b0 4 dp
 001f41b4 14 dp
-001F41b8 dp
-001f41bc dp
-001F41c0 dp
-001f41¢4 dp
-001f41c8 ldr
-001f41cc dp
-001f4140 ldp
-001f41d4 dp
-01F41d8 ldp
-001f41dc dp
-001F41e0 dp
-001f41e4 dp
 001f41e8 ldp
 001f41ec 10 44 ldp
 001F41f0 ldp
-OO1f41f4 dp
-o01f41fe dp
-OO1f41fc dp
-0014200 dp
 0014204 ldp
-001F4208 dr
-001420c dr
-001#4210 dr
 0014214 dp
 001f4218 mov
 001f421c mov
-0014220 hint
 0014224 cbnz
-001f4228 sys
 Lnoges )
 Eeniatie eet Source: Google. black hat
-2026
 ```
 
 ## Slide 37
@@ -1028,7 +934,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 arm Developer Develop Blogs Community CPU &Hardware Support
@@ -1037,7 +944,6 @@ Armv8.3-A introduces the option of pointer authentication, FEAT_PAC. Pointer aut
 Pointer authentication takes advantage of the fact that pointers are stored in a 64-bit format, but not all those bits are needed to represent the addr
 virtual address space layout:
 https://developer.arm.com/documentation/102433/0200/Return-oriented-programming
-Black hat
 ```
 
 ## Slide 54
@@ -1052,43 +958,32 @@ aut
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Ubuntu GLIBC 2.43
 -fschedule-insns2
 Information Classification: General
--drand48_iterates
-pac —? | 0043afc@ paciasp
 @043afc4 stp fp, 1r, [sp, #-@x16]! {__saved_fp} {__saved_1r}
 @043afc8 mov fp, sp {__saved_fp}
-@043afcc l1drh w2, [x1, #@xe]
 @043afd@ cbz w2, @x43b014
 @043b014 mov x3, #0xe66d @043afd4 ldr x3, [x1, #0x10]
 @043b018 mov w2, #0xb @043afd8 I1drh w4, [x1, #@xc]
-@043b01c_ movk x3, #@xdeec, 1lsl #0x10
-@043b026 = movk w2, #0x1, 1lsl #@x1@ {@x1@@0b}
 @043b024 movk x3, #0x5, lsl #@x2@ {@xSdeece66d}
 @043b028 mov x4, #@xb
 @043b02c_ str w2, [x1, #@xc] {@x1@@@b}
 @043b036 str x3, [x1, #0x10] {@x5deece66d}
-@043b834 b Ox43afde
 le
-@043afde ldrh w2, [x@]
 @043afe@ Idrh wi, [x@, #0x4]
 @043afe4 ldp fp, lr, [sp], #0x18 {__saved_fp} {__saved_1r}
 aut —P | 6043afe8 autiasp
 @043afec orr x1, x2, x1, 1lsl #0x2e
-e043aff@ Idrh w2, [x@, #0x2]
 e043aff4 Isl w2, w2, #0x10
 @043aff8 orr x1, x1, x2
-@043affc madd ICU XG KA:
-@043b008 str wi, [x@]
 @043b004 Isr x1, x1, #0x20
-@043b0e8 «strh wi, [x@, #0x4]
 @043b00c mov wo, #0
 @043b018 ret
-Black hat
 ```
 
 ## Slide 55
@@ -1105,43 +1000,32 @@ gadget
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Ubuntu GLIBC 2.43
 -fschedule-insns2
 Information Classification: General
--drand48_iterates
-pac —? | 0043afc@ paciasp
 @043afc4 stp fp, 1r, [sp, #-@x16]! {__saved_fp} {__saved_1r}
 @043afc8 mov fp, sp {__saved_fp}
-@043afcc l1drh w2, [x1, #@xe]
 @043afd@ cbz w2, @x43b014
 @043b014 mov x3, #0xe66d @043afd4 ldr x3, [x1, #0x10]
 @043b018 mov w2, #0xb @043afd8 I1drh w4, [x1, #@xc]
-@043b01c_ movk x3, #@xdeec, 1lsl #0x10
-@043b026 = movk w2, #0x1, 1lsl #@x1@ {@x1@@0b}
 @043b024 movk x3, #0x5, lsl #@x2@ {@xSdeece66d}
 @043b028 mov x4, #@xb
 @043b02c_ str w2, [x1, #@xc] {@x1@@@b}
 @043b036 str x3, [x1, #0x10] {@x5deece66d}
-@043b834 b Ox43afde
 le
-@043afde ldrh w2, [x@]
 @043afe@ Idrh wi, [x@, #0x4]
 @043afe4 ldp fp, lr, [sp], #0x18 {__saved_fp} {__saved_1r}
 aut —P | 6043afe8 autiasp
 @043afec orr x1, x2, x1, 1lsl #0x2e
-e043aff@ Idrh w2, [x@, #0x2]
 e043aff4 Isl w2, w2, #0x10
 0043aff8 orr x1, x1, x2
-@043affc madd Spd Wa yee)
-@043b008 str wi, [x@]
 @043b004 Isr x1, x1, #0x20
-@043b0e8 «strh wi, [x@, #0x4] gadget
 @043b00c mov wo, #0
 @043b018 ret
-Black hat
 ```
 
 ## Slide 56
@@ -1158,7 +1042,8 @@ gadget
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Ubuntu GLIBC 2.43
@@ -1166,26 +1051,12 @@ Ubuntu GLIBC 2.43
 pac-ret[+leaf]
 Information Classification: General
 pac —>
-0043afc@
-0043afc4
-0043afc8
-@043afcc
-0043afde
 paciasp
 stp fp, 1r, [sp, #-@x16]! {__saved_fp} {__saved_1r}
 mov fp, sp {__saved_fp}
 1drh w2, [x1, #@xe]
 cbz w2, @x43b014
 ——
-0043b014
-@043b018
-0843b81c
-8043b620
-0043b024
-0043b028
-8843b02c
-0843b630
-0843b034
 mov xo;
 mov w2,
 movk x3,
@@ -1193,41 +1064,23 @@ movk w2,
 movk x3,
 mov x4,
 str w2,
-str Xoe.
-#0xe66d
-#Oxb
-#@xdeec, 1sl #0x1@
 #0x1, 1sl #@x1@ {@x1@@@b}
-#0x5, 1sl #0x2@ {@x5deece66d}
-#8xb
 [x1, #@xc] {@x1@@@b}
 [x1, #0x10] {@x5deece66d}
-b Ox43afde
 @043afd4 ldr x3, [x1, #0x10]
 @043afd8 I1drh w4, [x1, #@xc]
 le
 0043afdc
-0043afee
-0043afe4
-aut —» | cossates
 0043afec
-e043af fe
-ldrh —w2,_ [x@]
-1drh wi, [x@, #0x4]
 1dp fp, 1r, [sp], #0x1@ {__saved_fp} {__saved_1r}
 autiasp
 orr x1, x2, x1, 1lsl #0x20
-ldrh = w2, [x@, #0x2]
 e043aff4 Isl w2, w2, #0x10
 0043aff8 orr x1, x1, x2
-@043affc madd Spd Wa yee)
-@043b008 str wi, [x@]
 @043b004 Isr x1, x1, #0x20
-@043b0e8 «strh wi, [x@, #0x4]
 @043b00c mov wo, #0
 @043b018 ret
 gadget
-Black hat
 ```
 
 ## Slide 57
@@ -1280,7 +1133,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Linus Torvalds
@@ -1305,8 +1159,6 @@ arious other
 contexts, but I th S is just how signals work
 BTI isn't some kind of absolute shield. It's
 st one layer of black hat
-thers. Ben
-2026
 n among mz
 ```
 
@@ -1316,11 +1168,11 @@ n among mz
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = we) openbsd / src ~
-Code ©) Security and quality [< Insights
 Commit 7730d1d
 deraadt
 SROP mitigation. sendsig() stores a (per-process
@@ -1328,8 +1180,6 @@ inside the s
 exact
 40 files changed
 A &sigcontext) cookie
-black hat
-2026
 ```
 
 ## Slide 63
@@ -1338,11 +1188,11 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = we) openbsd / src ~
-Code ©) Security and quality [< Insights
 Commit 7730d1d
 deraadt
 SROP mitigation. sendsig() stores a (per-process
@@ -1350,8 +1200,6 @@ inside the s
 exact
 40 files changed
 A &sigcontext) cookie
-black hat
-2026
 ```
 
 ## Slide 64
@@ -1362,7 +1210,8 @@ XNU
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ser land_diversifier
@@ -1376,7 +1225,6 @@ key_process ep ent_code, d at od > xnu-12377.121.6 «+:
 3,016 files changed
 (uintptr
 key_proces
-y_f
 tps://github.com/apple-oss-distributions/xnu/blob/main/osfmk/arm64/status.c#L1060 Black hat
 ```
 
@@ -1388,17 +1236,16 @@ XNU
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = ptrauth_strir
 user land_diversifier
 = (uintptr_t)
 t64_t discriminator
-igned_tr
 (uintptr_t)
 key_proces:
-yf 5
 tps://github.com/apple-oss-distributions/xnu/blob/main/osfmk/arm64/status.c#L1060
 = es) apple-oss-distributions / xnu ~
 Code Security and quality l¥ Insights
@@ -1407,7 +1254,6 @@ Commit a5e7219
 xnu-6153.11.26
 xnu-12377.121.6 ***
 3,016 files changed
-Black hat
 ```
 
 ## Slide 66
@@ -1418,17 +1264,16 @@ XNU
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = ptrauth_strir
 user land_diversifier
 = (uintptr_t)
 t64_t discriminator
-igned_tr
 (uintptr_t)
 key_proces:
-yf 5
 tps://github.com/apple-oss-distributions/xnu/blob/main/osfmk/arm64/status.c#L1060
 = es) apple-oss-distributions / xnu ~
 Code Security and quality l¥ Insights
@@ -1437,7 +1282,6 @@ Commit a5e7219
 xnu-6153.11.26
 xnu-12377.121.6 ***
 3,016 files changed
-Black hat
 ```
 
 ## Slide 67

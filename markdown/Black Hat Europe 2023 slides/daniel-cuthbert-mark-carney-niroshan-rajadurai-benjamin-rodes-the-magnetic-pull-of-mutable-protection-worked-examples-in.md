@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Daniel Cuthbert, Mark Carney, Niroshan Rajadurai, Benjamin Rodes_The Magnetic Pull of Mutable Protection Worked Examples in Cryptographic Agility.pdf"
 pages: 47
 sha256: "e657c9c35de322bc06d033bd9af09ee18fff94feb6c6a88104a2cae6decb9bcf"
-text_chars: 11140
-ocr_pages: 9
+text_chars: 10424
+ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:11:16Z"
+converted_at: "2026-08-12T04:01:56Z"
 ---
 # The Magnetic Pull of Mutable Protection Worked Examples in Cryptographic Agility
 
@@ -21,25 +26,15 @@ converted_at: "2026-08-11T21:11:16Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Daniel Cuthbert, Mark Carney, Niroshan Rajadurai, Benjamin Rodes_The Magnetic Pull of Mutable Protection Worked Examples in Cryptographic Agility.pdf` (47 pages)
 
+
 ## Slide 1
 
-```
+\```
 Daniel Cuthbert | Mark Carney | Benjamin Rodes | Niroshan Rajadurai
 December 2023
-```
+\```
 
 Information Classification: General
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-w) BE Microsoft «> Santander
-FOTTERCL-JLVAO2-OBC
-XTNOUE||F
-Daniel Cuthbert | Mark Carney | Benjamin Rodes | Niroshan Rajadurai
-December 2023
-Information Classification: General
-```
 
 ## Slide 2
 
@@ -109,18 +104,6 @@ Q-Day is coming...
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-QZ, ; SINS
-SK iM Lege {
-inh jee Why
-Gi TWh = via
-e135) ¢: ea ‘—-Tee
-(tears
-(ae
-```
-
 ## Slide 11
 
 ## APRIL 14, 2030
@@ -137,7 +120,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quantum vs. Classical Hardness
@@ -147,11 +131,8 @@ Quantum vs. Classical Hardness
 = 10000
 a
 a
-—E
 6
 = 1000
-@
-ir
 100
 10
 1
@@ -163,7 +144,8 @@ Number of Bits to be Computed Over
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 China Telecom's Internet Traffic Misdirection
@@ -258,9 +240,9 @@ Information Classification: General
 
 ### Why is CBOM Generation Complex?
 
-```
+\```
 01
-```
+\```
 
 API Variability What’s the “space” of possibilities?
 
@@ -417,7 +399,8 @@ GitHub’s CodeQL Multi Repository Variant Analysis (MRVA)
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 > codeq! (Workspace)
@@ -427,7 +410,6 @@ LANGUAGE
 > AST VIEWER @name Command Injection
 @description Command Injection sinks
 @kind problem
-> QUERIES : @problem. severity error
 QUERY HISTORY
 VARIANT ANALYSIS REPOSITORIES { 5 d java/audit/command-line-injection-sink
 @tags secur
@@ -439,7 +421,6 @@ GitHub’s CodeQL Multi Repository Variant
 Analysis (MRVA)
 EVALUATOR LOG VIEWER
 CODEQL METHOD MODELING
-x main 601.2138 WOA0 WO FLiveShare rust-analyzer
 © Sarif 4\ Go Update Available A\ Analysis Tools Missing
 ```
 
@@ -491,14 +472,14 @@ TLP Colours 'red//amber//green' for 'weak//potentially/quantum-weak//reasonable�
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cryptographic Asset Counts by Category
 w/ TLP Indicators by Weakness
 TLP Colours 'red//amber//green' for
 ‘weak//potentially/quantum-weak//reasonable’
-Eigen
 T T
 hashing asymmetric signatures unknown symmetric
 ```
@@ -509,7 +490,8 @@ TLP Colours 'red//amber//green' for 'weak//potentially/quantum-weak//reasonable�
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Most Common Algorithms by Count
@@ -551,22 +533,20 @@ Use of algorithm GOST
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€9 CryptographyStandard intemal @Watch 0 ~ Fork 4
-PB main~  3branches 2 tags Go to file Add file ~ | code ~ | About
+PB main~ 3branches 2 tags Go to file Add file ~ | code ~ | About
 Santander Group Cryptography
 Merge pull request #119 from santander-group-. : eacébd8 Sdaysago 252 commits Standard - This document contains
 mandatory security requirements for the
 github/workflows trying ghcr.io pandoc image in gh action jast month effective use of cryptography for
 security within Santander Group.
 Cryptography Merge pull request #108 from santander-group-cyber-cto/n473021- last week
-(© Readme
 Implementations Merge pull request #119 from santander-group-cyber-cto/sshd-split ays ago
 *~- Activity
 KeyManagement fixing issues 93, 92, 91, 90 months ago
-WY Ostars
 resources nitial git push from CSR repo into main group EM months ago 0 watching
 Annex.md Create Annex.md 5n $ ago 4 forks
 CryptographyStandard.docx nitial git push from CSR repo into main group EM months ago
@@ -579,9 +559,7 @@ gen-changelog.sh nitial git push from CSR repo into main group EM months ago
 Packages
 index.txt move changelog to end of doc months ago , bis
 Publish your first package
-README.md o
 Contributors 7
-Pos ©
 © Docker Code Scanning
 Santander Global Cryptography Standard
 Languages

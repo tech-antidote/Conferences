@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Luke Jenkins_GRU’s toolkit A deep dive into the disruptive arsenal .pdf"
 pages: 28
 sha256: "d6e474be38ccdaa23e27d715568ac56fe223930c10d60e2ca99884cb55b93512"
-text_chars: 12878
-ocr_pages: 8
+text_chars: 11589
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:25:02Z"
+converted_at: "2026-08-12T06:02:03Z"
 ---
 # GRU’s toolkit A deep dive into the disruptive arsenal
 
 **Speakers:** Luke Jenkins  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Luke Jenkins_GRU’s toolkit A deep dive into the disruptive arsenal .pdf` (28 pages)
+
 
 ## Slide 1
 
@@ -56,11 +61,10 @@ Attribution is hard; it’s made even harder when multiple teams converge on a s
 
 **©2023 Mandiant** 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-MANDIANT
-or Google Cloud
 Attribution is hard; it’s made even harder when
 multiple teams converge ona single problem.
 M ©2023 Mandiant
@@ -71,15 +75,6 @@ M ©2023 Mandiant
 # Disruption tooling
 
 **©2023 Mandiant** 4
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MANDIANT
-or Google Cloud
-Disruption tooling
-©2023 Mandiant
-```
 
 ## Slide 5
 
@@ -133,14 +128,6 @@ Disruption tooling
 
 **©2023 Mandiant** 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MANDIANT
-or Google Cloud
-Maintaining access
-```
-
 ## Slide 8
 
 ## FREETOW
@@ -167,10 +154,10 @@ Maintaining access
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-VirtualAlloc = (__into4 (_ fastcall *)(_QWORD, __into4, MACRO_MEM, MACRO_PAGE) )ResolveFunc(OxE553A456) ;
 if ( VirtualALloc )
 {
 \pBuffer = VirtualAlloc(0i64, pNtHeader->OptionalHeader.SizeOfImage, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
@@ -184,7 +171,6 @@ do
 <
 *((_BYTE *)ImageBaseAddress + v19) = «(_BYTE *)ImageBaseAddress;
 ImageBaseAddress = (DWORD *)((char *)ImageBaseAddress + 1);
-—-SizeOfiImage;
 }
 while ( SizeOfImage );
 }
@@ -229,16 +215,6 @@ M ©2023 Mandiant
 # Disruption
 
 **©2023 Mandiant** 11
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MANDIANT
-or Google Cloud
-Disruption
-©2023 Mandiant
-1
-```
 
 ## Slide 12
 
@@ -356,13 +332,12 @@ https://purecoder.io/products/Pure-Crypter
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BOOL _ thiscall WipewithEaseUS(FormatToWipe *this)
 4
 NEARMISS
-}
 DWORD dwNumberOfThreads; // esi
 struct_physical drive *WipeSectorBlock; // edi
 HANDLE hThread; // eax
@@ -372,7 +347,6 @@ dwNumberOfThreads = 0;
 WipeSectorBlock = this->WipeSectorBlock;
 if ( this->WipeSectorBlock )
 do
-1
 hThread = CreateThread(0, 0, (LPTHREAD_START yeep tlaghs amir pnvenenreate cd) WipeSectorBlock, 0, 0);// Send a block to wipe to the Wiper function
 arrayHThreads[{dwNumberOfThreads} = hThread;/7 Add the thread to the list
 if ( hThread )
@@ -384,39 +358,21 @@ WaitForMultipleObjects(dwNumberOfThreads, arraylThreads, 1, OxPFFFFPFF);// Wait 
 Closeflandle(arraylThreads[i)}); // Close Handles to all the threads
 }
 return dwNumberOfThreads != 0;
-PhysicalDriveNumber = lpThreadParameter->PhysicalDrivetumber;
-HumherOfbytesWritten = OF
 wnsprintfW(pezDest, 260, L"\\\\.\\EPMNTDRV\\%u", PhysicalDriveNumber);// Open a handle to the Easels driver for that particular PhayicalDrive
 ‘/ For example, PhysicalDrived would be EPMNTDRV\0
-hEaseUs = (void *)ConnectTobevice(pszDest, (int)EasesBuffer, 0);
 df ( UhEaseUs || bases == (void *j-1 )
-gote errorNoDriver;
 lpBuffer = (LPCVOID)1lpThreadParameter->1poOutputRandBuffer;
-LOOWORD (nifunberOfbytesToWrite) = lpThreadParameter->1pNumberOfBytesToOverwrite;
-{
-dwCurrentLocationWithinBlock = regions ToWipe->dwCurrentLocationWithinBLlock;
 lpStartRegion = regionsToWipe->lpStartRegion;
-dwEndOfSector =  PAIR64 (lpStartRegion, dwCurrentLocationWithinBlock) + *{_QWORD *)sregionsToWipe->dwRegionsize;
-HIDWORD(nNumberOfByteaToWrite} = lpStartRegian;
 if ( _SPAIRG64__(lpStartRegion, dwCurrentLocationWithinBlock) < dwEndOfsector }
 do
-t
-HumberOfaytesWritten = 0;
 if { lSetPilePointerEz(hEaseUs, (LARGE_INTEGER)_PAIR64_ (lpStartRegion, dwCurrentLocationWithinBlock), 0, 0) )// Mowe the file pointer to the region to wipe
-GetLastError( )7
-Lf ( (WelteFile(hEaseUs, lpbuffer, nNumberOfBytesToWrite, gNumberOfBytesWritten, 0) )
-GetLastError( 3
-lpStartRegion = (nNumberOfiytesToWrite + (unsigned —inté4)(unsigned int)jdwCurrentLocationWithinBlock) >> 32;
 dwCurrentLocationWithinBlock += nNumberOfBytesToWrite;
 va = *(_QWORD *)éregionsToWipe->dwCurrentLocationWithinBlock + *(_QWORD *)éregionsToWipe->dwregionsize;
-HIDWORD(nNumberOfBytesToWrite) = lpstartRegion;
 }
 while ( _SPAIRG4_ (lpStartRegion, dwCurrentLocationWithinBlock) < vi );
 regionsToWipe = (struct_regions *)regionsToWipe->next;
-+
 while ( regionsToWipe 1= lpThreadParameter->regionsToWipe );
 if { FlushFileBuffers(hEaseUs) )
-W2UZ9 Mandiant
 18
 ```
 
@@ -536,16 +492,6 @@ AKA: Prestige (Microsoft)
 
 **©2023 Mandiant** 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MANDIANT
-or Google Cloud
-Conclusion
-©2023 Mandiant
-25
-```
-
 ## Slide 26
 
 ## Conclusion
@@ -596,10 +542,10 @@ Conclusion
 
 ©2023 Mandiant
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-MANDIANT
 now part or Google Cloud
 lukejenx@google.com
 @lukejenx

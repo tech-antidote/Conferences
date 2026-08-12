@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Marius Muench&Sam Collins&Tom Chothia_Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems.pdf"
 pages: 89
 sha256: "7371de1caa977ea0eea734e0a59b3b207b1d09eb5df9d89bd3be5f991346faff"
-text_chars: 31415
-ocr_pages: 14
+text_chars: 28192
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:58:06Z"
+converted_at: "2026-08-12T05:17:00Z"
 ---
 # Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems
 
 **Speakers:** Marius Muench, Sam Collins, Tom Chothia  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marius Muench&Sam Collins&Tom Chothia_Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems.pdf` (89 pages)
+
 
 ## Slide 1
 
@@ -252,29 +258,20 @@ Prior Art
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Prior Art
 Un veilin g th e #HITB2023AMS https://conference.hitb.org,
 underground world of 2024) d Exploiting Online Games
 ANTI-CHEATS AMS for
-a : CASH ¥-
-blatkhat Son berar #
 paral sec Bypassing Anti-Cheats &
 EUROPE 2m19 Hacking Competitive Games
-DECEMBER , 2019
-©xXCEL LONDON, UK
-iSECpartners®
-()
 blackhat
 auoust 7s ao Next Level Cheating and
-SRIECINGS ‘ but Twentyyye PPOMMORPG Hackibg: Better Graphics,
-Leveling Up Mitigations etal “i
 Modern Anti-Abuse Mechanisms in Nicolas Guigo Joel St. John f Pree.
 Competitive Video Games
-Manfred (@_EBFE), 400Ib hacker in training
-s<tedacted>@securityevaluators.com
 S KEE
 Julien Voisin — dustri.org
 And of course a lot of cheat forums :)
@@ -372,7 +369,8 @@ Overlay|87,528|$32.546|$19.96|$43.24|
 
 ● Cheat Working | — Cheat Not Working | · Cheat not Available#BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Market Observations
@@ -393,7 +391,6 @@ Private Cheatz - Droid
 Private Cheatz - Intel
 Lavi Cheats - Sky
 Lavi Cheats - Pro
-y
 VALORDNT
 ® Cheat Working | — Cheat Not Working
 - Cheat not Available
@@ -516,24 +513,15 @@ Prodding the Bear
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
-2a8660 eeBeeees eeGEe802 BBERGEGee BEeEGeee— : nt! KeBugCheckEx
-184b19 eeeeeeeR eeGeEeF4d FFFF9d42° eeeeeeee : nt! KiBugCheckDispatch+0x69
-peee9eee ffffcae4’ c7693d4e fffffsee0 eeeeeeee : nt! KiPageFault+0x4738
-peeeeee ffffc98e d27a8eee FFffb588° 2cef6e380 : myfault+exi2de
-he@fc76 eeeeeeee eeRGeETe FFfff3800 OF407b91 : myfault+ex168e
-H7ac3ce ffffc98e di7afbse eeeeeeee eeeeeeee : myfault+Ox17F1
 +0x361
 © Please confirm x
 6
 The input file was linked with debug information ix4c
 and the symbol filename is:
-“https://imgur.com/a/PiWvsBO0"
 an you want to look for this file at the specified path
 and the Microsoft Symbol Server?
 (1 Don't display this message again
@@ -545,21 +533,17 @@ Want to join our gang? Take a look at our careers website (www.riotgames.com/car
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a .
-black hat
-MMIrMrminime
 Your device ran into a problem and needs to resta
 We're just collecting some error info, and then you”!
 restart.
 40% complete
 For more information about this issue and possible fixes, vist
-hitps://weew windows.com/stopen
 if you call # support person give then (His inf
 Stop code; SYSTEM THREAD EXCEPTION. NOT WAND«E
-JP
 H \
 You're laughing - EAG just crashed
 my hypervisor and you¥e laughing
@@ -840,14 +824,13 @@ dump
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Let's Investigate
 2 Binary search
 Enter binary search string:
 String | FF EO 90|
-(Match case
 oO Search Up
 (Find all occurrences
 ```
@@ -858,65 +841,35 @@ oO Search Up
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 58/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Fishing for Hooks
-Address
-seg010:0000000 1400E560B6
-seg0 100000000 1400E8949
-seg0 100000000 1400E9D48
-seg010:0000000 1400EDF 56
-seg010:0000000 1400F 1817
-seg010:0000000 1400FA3F6
-s€9010:0000000140102AB5
-seg010:0000000 140111156
-seg0 100000000 140 144247
-seg010:0000000140 145DD3
-seg010:0000000140 150637
-seg010:0000000140159785
-seg0 100000000 140 179BF9
-seg010:0000000140170 194
-Function
-sub_1400E3FAD
-sub_1400E551D
-sub_1400E8894
-sub_1400E9D32
-sub_1400EDFOB
-sub_1400F 1765
-sub_1400F A394
-sub_ 140102979
-sub_140111063
-sub_140144220
-sub_140148D34
-sub_ 140150654
-sub_14015973E
-sub_140179BDB
-sub_14017C0DA
-Instruction
-jmp
-jmp
-db 2, 2 dup(0), OFFh, ¢
-rax
-db OFFh ; ¥
-jmp
-jmp
-jmp
-jmp
-jmp
-jmp
-jmp
-jmp
-jmp
-Fax
-Tax
-rax
-Fax
-Fax
-Tax
-rax
-fax
-fax
+
+Address                          Function          Instruction
+.data:000000014006F2A3                             db 0FFh ; ÿ
+.data:000000014006F2CB                             db 0FFh ; ÿ
+seg010:00000001400E3FC9          sub_1400E3FAD     jmp     rax
+seg010:00000001400E560B          sub_1400E551D     jmp     rax
+seg010:00000001400E89A9          sub_1400E8894     jmp     rax
+seg010:00000001400E9D4B          sub_1400E9D32     jmp     rax
+seg010:00000001400EDF5B          sub_1400EDF0B     db 2, 2 dup(0), 0FFh, 0
+seg010:00000001400F1817          sub_1400F17B5     db 0FFh ; ÿ
+seg010:00000001400FA3F6          sub_1400FA39A     jmp     rax
+seg010:0000000140102AB3          sub_140102979     jmp     rax
+seg010:0000000140111156          sub_1401110B3     jmp     rax
+seg010:000000014014A2A7          sub_14014A220     jmp     rax
+seg010:000000014014BDD3          sub_14014BD3A     jmp     rax
+seg010:0000000140150B87          sub_140150B5A     jmp     rax
+seg010:0000000140159785          sub_14015973E     jmp     rax
+seg010:0000000140179BF9          sub_140179BDB     jmp     rax
+seg010:000000014017C19A          sub_14017C0DA     jmp     rax
+
+(the "db 2, 2 dup(0), 0FFh, 0" row is cut off at the right edge of the screenshot;
+ the first two .data rows have an empty Function column)
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 38
@@ -929,36 +882,59 @@ Detour 2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 73/100 on the text kept, 61/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Fishing for Hooks
-)
-Target1, =
-enmmword 90
-ar (
-, “cc, Detour 1
-Target 2 5
->
-db
-db
-db
-db
-db @
-db @
-db (
-L4@@6F2C@ xmmword 9 I
-¢
-g Detour 2
-nt!KiPageFault: nt!KiSwInterrupt:
-FFFFF300° eF2eddee 5A push rax FFFFF300° @F285058 5e push rax
-FFFFF300° OF20dde1 48b8bedea62ceefSfffF mov rax,offset vgk+ex5debe FFFFF300° 8F205051 48b83dd1a62ceefsffff mov rax,offset vgk+@x5d13d
-FFFFF300° @F2eddeb Ffee jmp rax FFFFF800° 8F20505b ffee jmp rax
-FFFFF300° @F2Added 98 nop FFFFF3800° 8F20505d 90 nop
-FFFFF3800° OF2Addee 90 nop FFFFF800° OF20505e 90 nop
-FFFFF300° OF2AddeF 90 nop FFFFF300° BF2E5E5F 90 nop
-FFFFF300° OF20dd10 c645abe1 mov byte ptr [rbp-55h],1 FFFFF300° OF205060 90 nop
-FFFFF3800° OF20dd14 488945be mov qword ptr [rbp-5@h],rax FFFFF300° OF205061 90 nop
+
+[IDA listing — parts of the left-hand label column are hidden behind the pointing-hand graphics]
+
+Target 1 →
+140…                     8024AC8D4800000158EC814855h
+                                 ; DATA XREF: sub_140116F91+8[obscured]
+14…  …mmword             909090E0FF0000000000000000B84850h        ← Detour 1
+                                 ; DATA XREF: sub_1400E9D1[obscured]
+                                 ; seg010:0000000140E85094↓[obscured]
+Target 2 →
+140…                     0AC8D4800000150EC8148565508EC8348h
+                                 ; DATA XREF: sub_140195A88+8↓r
+                                 ; seg010:0000000141197764↓o ...
+                     db  24h ; $
+                     db  80h ; €
+                     db    0
+                     db    0
+                     db    0
+                     db    0
+                     db    0
+                     db    0
+14006F2C0 xmmword    909090E0FF0000000000000000B84850h            ← Detour 2
+                                 ; DATA XREF: sub_1401319F[obscured]
+                                 ; seg010:0000000141285754↓[obscured]
+
+[left WinDbg pane]
+nt!KiPageFault:
+fffff800`0f20dd00 50                push    rax
+fffff800`0f20dd01 48b8b0d0a62c00f8ffff mov rax,offset vgk+0x5d0b0
+fffff800`0f20dd0b ffe0              jmp     rax
+fffff800`0f20dd0d 90                nop
+fffff800`0f20dd0e 90                nop
+fffff800`0f20dd0f 90                nop
+fffff800`0f20dd10 c645ab01          mov     byte ptr [rbp-55h],1
+fffff800`0f20dd14 488945b0          mov     qword ptr [rbp-50h],rax
+
+[right WinDbg pane]
+nt!KiSwInterrupt:
+fffff800`0f205050 50                push    rax
+fffff800`0f205051 48b83dd1a62c00f8ffff mov rax,offset vgk+0x5d13d
+fffff800`0f20505b ffe0              jmp     rax
+fffff800`0f20505d 90                nop
+fffff800`0f20505e 90                nop
+fffff800`0f20505f 90                nop
+fffff800`0f205060 90                nop
+fffff800`0f205061 90                nop
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 39
@@ -1386,24 +1362,20 @@ Direct Memory Access – Game Cheats
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-‘
 \
 Direct Memory Access - Game Cheats _
 Mouse Fuser
 > | HDMI Fuser
-—/({ ——
 OUT
 <
 IN IN
 Player Mouse —
-re
-Direct-—Memory-Access
 Card
 PC Running Game PC Running Cheat
-pee
 ```
 
 ## Slide 63
@@ -1440,12 +1412,12 @@ DMA cheats change their firmware to look innocent e.g., a network card.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Detecting DMA Attacks
 What
-ae kind?
 network
 card
 Intel
@@ -1548,46 +1520,76 @@ Custom Handler
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 74/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Context Switch Hook
+
 Detour:
-e
-push ris
-moy rbp.rsp xor edx,edx
-wo cling tr [vgk+0x7c179 (ffFfF800" 2ca8c179) ] fest renered
-movzx eax,byte ptr [vgk+0x7c casc - > c
-lea rbx. [vgk (F4#F8@0 2ca10000) ] je vgk+0x52759 (fffFf800° 2ca62759) Branch
-mov rdi,rcx
-@8 mov rax,qword ptr [rbx+rax*8+7C188h] | .
-xor rax,qword ptr [vgk+0x7c180 (fffff800° 2ca8c18@) ] part ee me ea CEFR feeorzcancree) 1
-call rex cmp rdi,qword ptr [rax+rdx
-mov rax,cr3 je vgk+0x52757 (fffff800° 2ca62757) Branch
-cmp rax,qword ptr [vgk+@x7c148 (fffff800 2ca8c148) ]
-jne vgk+0x533b1 (fffFF800° 2ca633b1) Branch
-inc edx
-cmp edx,r8d
-movzx eax,byte ptr [vgk+0x78e31 (ffffF800° 2ca88e31) ] jb vgk+0x52741 (fffff800°2ca62741) Branch
-mov rex,rdi
-@@ mov rdx,qword ptr [rbx+rax*8+78E4eh]
-xor rdx,qword ptr [vgk+0x78e38 (ffffF3800° 2ca88e38) | jmp vgk+0x52759 (fff Ff8e0°2ca62759) Branch
-call rdx
-cmp rax,qword ptr [vgk+@x7c1b8 (fffff800° 2ca8c1b8) |
-jne vgk+0x533b1 (fffFF800° 2ca633b1) Branch mov bl.1
-cmp byte ptr [vgk+0x7c2ee (ffFFF800° 2ca8c20@) ],e _ rex, [vgk#@x7c2b8 (FFFFF80@" 2ca8c2b8) ]
-je vgk+0x52a61 (fffFF800° 2ca62a61) Branch 2
-call qword ptr [vgk+0x601c0 (fffff800° 2ca7e1c8@) J
-test bl,bl
-cmp byte ptr [vgk+0x7c201 (fffff880° 2ca8c201) ],e je vgk+0x533b1 (fffff800°2ca633b1) Branch
-je vgk+0x533b1 (fffff800° 2ca633b1) Branch
-eee
-lea rex, [vgk+@x7c2b8 (ffFFf800° 2ca8c2b8) ]
-xor bl,bl
-call qword ptr [vgk+@x601a8 (fffff800° 2ca7e1a8) | Custom Handler
-mov r8d,dword ptr [vgk+@x7c1d8 (fffff800° 2ca8c1d8) ]
-cmp r8d,200h
-je vgk+0x52757 (fffff800° 2ca62757) Branch
+
+[left column]
+   push    r15
+   mov     rbp,rsp
+   sub     rsp,30h
+   movzx   eax,byte ptr [vgk+0x7c179 (fffff800`2ca8c179)]
+   lea     rbx,[vgk (fffff800`2ca10000)]
+   mov     rdi,rcx
+00 mov      rax,qword ptr [rbx+rax*8+7C188h]
+   xor     rax,qword ptr [vgk+0x7c180 (fffff800`2ca8c180)]
+   call    rax
+   mov     rax,cr3
+   cmp     rax,qword ptr [vgk+0x7c148 (fffff800`2ca8c148)]
+   jne     vgk+0x533b1 (fffff800`2ca633b1)  Branch
+
+   movzx   eax,byte ptr [vgk+0x78e31 (fffff800`2ca88e31)]
+   mov     rcx,rdi
+00 mov      rdx,qword ptr [rbx+rax*8+78E40h]
+   xor     rdx,qword ptr [vgk+0x78e38 (fffff800`2ca88e38)]
+   call    rdx
+   cmp     rax,qword ptr [vgk+0x7c1b8 (fffff800`2ca8c1b8)]
+   jne     vgk+0x533b1 (fffff800`2ca633b1)  Branch
+
+   cmp     byte ptr [vgk+0x7c200 (fffff800`2ca8c200)],0
+   je      vgk+0x52a61 (fffff800`2ca62a61)  Branch
+
+   cmp     byte ptr [vgk+0x7c201 (fffff800`2ca8c201)],0
+   je      vgk+0x533b1 (fffff800`2ca633b1)  Branch
+
+   lea     rcx,[vgk+0x7c2b8 (fffff800`2ca8c2b8)]
+   xor     bl,bl
+   call    qword ptr [vgk+0x601a8 (fffff800`2ca701a8)]
+   mov     r8d,dword ptr [vgk+0x7c1d8 (fffff800`2ca8c1d8)]
+   cmp     r8d,200h
+   je      vgk+0x52757 (fffff800`2ca62757)  Branch
+
+[right column]
+   xor     edx,edx
+   test    r8d,r8d
+   je      vgk+0x52759 (fffff800`2ca62759)  Branch
+
+   mov     rax,qword ptr [vgk+0x7c1e0 (fffff800`2ca8c1e0)]
+   cmp     rdi,qword ptr [rax+rdx*8]
+   je      vgk+0x52757 (fffff800`2ca62757)  Branch
+
+   inc     edx
+   cmp     edx,r8d
+   jb      vgk+0x52741 (fffff800`2ca62741)  Branch
+
+   jmp     vgk+0x52759 (fffff800`2ca62759)  Branch
+
+   mov     bl,1
+
+   lea     rcx,[vgk+0x7c2b8 (fffff800`2ca8c2b8)]
+   call    qword ptr [vgk+0x601c0 (fffff800`2ca701c0)]
+   test    bl,bl
+   je      vgk+0x533b1 (fffff800`2ca633b1)  Branch
+
+...
+
+Custom Handler
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 71
@@ -1728,34 +1730,17 @@ Cheat Game Price Popularity Scraped from Average players cheat selling sites in 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-Anticheat Strength
-```
-
 ## Slide 80
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Anticheat Strength —«- Cheat Uptime (%)
 120-
-100- Denne :
-pewne~ eo sis
-80- Lf "2 —- “SL a Pas
 ry
-7
-60- ie
-aS Sa
 40-
 20-
 ```
@@ -1764,20 +1749,15 @@ aS Sa
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Anticheat Strength
 —«= Cheat Uptime (%)
 Mean Cheat Price ($)
 120-
-100- Bet .
-o ¢
 ry
-ye 7
 60- 4
 40-
 20-
@@ -1787,19 +1767,13 @@ ye 7
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Anticheat Strength —«= Cheat Uptime (%) Mean Cheat Price ($) «=== Avg Monthly Players
 120- = 50,000,000
 i ha? - 40,000,000
-Be -
-= 20,000,000
-40 -
-20- = 10,000,000
 ```
 
 ## Slide 83

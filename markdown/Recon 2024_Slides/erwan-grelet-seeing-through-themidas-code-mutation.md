@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Erwan Grelet_Seeing Through Themida's Code Mutation .pdf"
 pages: 61
 sha256: "155007984f1027cd2f35f67b2aa404790d254cbcb6815474e2afa08592e0ea53"
-text_chars: 15186
-ocr_pages: 12
+text_chars: 14149
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.6
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:29:11Z"
+converted_at: "2026-08-12T06:13:55Z"
 ---
 # Seeing Through Themida's Code Mutation
 
 **Speakers:** Erwan Grelet  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Erwan Grelet_Seeing Through Themida's Code Mutation .pdf` (61 pages)
+
 
 ## Slide 1
 
@@ -228,11 +233,11 @@ REcon 2024
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Initial Approach
-Compare |
 Mutated machine
 code
 Machine code —_> Themida
@@ -269,11 +274,11 @@ REcon 2024
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Input Generation
-a
 uops.info XML Python Script Assembly File Es En
 Figure 6: Input generation pipeline
 REcon 2024 13
@@ -576,10 +581,10 @@ REcon 2024
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Defeating Trampolines
 <- Start symbolic execution
 REcon 2024 Figure 24: Symbolic Execution Path 33
 ```
@@ -594,10 +599,10 @@ REcon 2024
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Defeating Trampolines
 <- Redirect execution to
 the right branch
 REcon 2024 Figure 25: Symbolic Execution Path 33
@@ -613,10 +618,10 @@ REcon 2024
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Defeating Trampolines
 <- Redirect execution to
 the left branch
 REcon 2024 Figure 26: Symbolic Execution Path 33
@@ -632,10 +637,10 @@ REcon 2024
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Defeating Trampolines
 <- Extract mutated code's start address
 REcon 2024 Figure 27: Symbolic Execution Path 33
 ```
@@ -670,26 +675,23 @@ REcon 2024
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Instruction Synthesis (case #2)
-14007ed67 add rdx, 8x8
 14807ed6b add rdx, 8x8
 14007ed72 xor rdx, qword [rsp]
 14007ed76 xor qword [rsp], rdx
 140@7ed7a xor rdx, qword [rsp]
 14007ed7e pop rsp
 14007ed7Ff movups xmmword [rdi+@x20], xmm@
-14007ed83 push Ox7fFF59c1
 14007ed88 mov qword [rsp], r1@
 14007ed8c push rsp
 14007ed8d pop r1e
 14007ed8f add r10, @x8
-14007ed93 sub r1@, 8x8
 14007ed9a xchg qword [rsp], r1@
 Figure 29: Case #2 (junk code inserted, no substitution)
-REcon 2024
 ```
 
 ## Slide 45
@@ -754,7 +756,8 @@ REcon 2024
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Instruction Synthesis (case #3)
@@ -762,7 +765,6 @@ Exprid : Ex ‘==', ExpriId('RSP', 64), ExprInt(@x®, 64)),
 Exprid( ‘af g prSlice(ExprOp('*', ExprId('RSP', 64), ExprOp('+'
 Exprid('pf' 3 . y', ExprOp('&', ExprId('RSP', 64), Exp
 Exprid : ExprSlice "&', ExprOp('*', ExprId('RSP', 64
-ExpriId( ‘R13 : ExpriId “5
 ExprId(‘n 1): ExprSlice(ExprId('R! » 64), 63, 64),
 Exprid F : ExprSlice(ExprOp('*', ExprId('RSP', 64), ExprOp(‘&'
 Exprid *, 64): ExprInt(@x12e, 64)
@@ -780,16 +782,6 @@ REcon 2024
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Instruction Synthesis (case #3)
->» LApI Luu oag, oF
-RSF, Ge), Cap opy
-Figure 37: Basic block’s symbolic execution (FLAGS removed)
-REcon 2024 38
-```
-
 ## Slide 51
 
 **Instruction Synthesis (case #3)**
@@ -799,15 +791,6 @@ REcon 2024 38
 REcon 2024
 
 38
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Instruction Synthesis (case #3)
-Exprid( ‘R13
-Figure 38: Instruction “synthesized” via pattern matching
-REcon 2024 38
-```
 
 ## Slide 52
 
@@ -819,7 +802,8 @@ REcon 2024
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Result
@@ -843,7 +827,6 @@ $ ./sha256_test_simplified.exe
 SHA-256 tests: SUCCEEDED
 $|
 Figure 39: Simplified binaries can be run
-REcon 2024
 ```
 
 ## Slide 53
@@ -866,45 +849,26 @@ REcon 2024
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Result
-1400011b 57 push 15 {__saved_r15}
 400011b2 4156 push 14 {__saved_r14}
 1490011b4 4155 push 13. {__saved_r13}
 400011b6 push 12. {__saved_r12}
 1b8 push —rsi_{__saved_rsi}
-11b9 push di. {__saved_rdi}
-40001 1ba push —rbp {__saved_rbp}
-1400011bb push —rbx {
-49001 1bc sub rsp, x48
 4000 xor eax, eax {0x0}
-1400011¢2 f6c test dl, ox
-149001105 @f85cceeeee0 jne @x14000129
-|
-40011cb 48c1eaa4 shr rdx, x4
 400011cf 801000000 mov eax, Ox!
 Figure 43: Original (71
-REcon 2024
 instructions)
 e94bec6601 jmp data
 14067000
 140670000 push 15 {__saved_r15}
-148678002 push 14 {__saved_ri4}
-149670004 push 13 {__saved_r13}
-148678006 push 12 {__saved_r12}
-140670008 push si {__saved_rsi}
-149678009 push di {__saved_rdi}
-149670008 push bp {__saved_rbp}
 14967000b push bx {__saved_rbx}
-14967000 add rsp, oxfffffrrrftttftos
 140678010 xor eax, eax {8x8}
 140670012 test dl, oxt
-149678016 of 85deeee000 jne _@x1406700F2
-—_—_——
 14067881¢ 48c1¢a04 shr rdx, @x4 |
-149670028 b8e1800000 mov eax. @x
 Figure 44: Deobfuscated (74 instructions)
 41
 ```

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Christian Dameff&Ariana Mirian_Pwning User Phishing Training Through Scientific Lure Crafting.pdf"
 pages: 49
 sha256: "f4e98dc249409ca11881b6d3e1e2ec65a1b48be9a7591460945fb5cdd2286892"
-text_chars: 12577
-ocr_pages: 12
+text_chars: 11328
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 93.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:51:22Z"
+converted_at: "2026-08-12T05:07:13Z"
 ---
 # Pwning User Phishing Training Through Scientific Lure Crafting
 
 **Speakers:** Christian Dameff, Ariana Mirian  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Christian Dameff&Ariana Mirian_Pwning User Phishing Training Through Scientific Lure Crafting.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -90,7 +95,8 @@ Static
 
 Interactive
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 any different modalities — which to focus on?
@@ -105,7 +111,6 @@ CC: maxine@adifferentorg.net, sergio@college.edu
 Date: Monday, June 9, 4:30AM ©
 Image of the sender and phishing message,
 with warning signs highlighted. { i COVID-19 Policy ©
-#2 2MB
 The following organization policy has been updated:
 COVID-19 - Return to Work Guidelines
 Here are five warning signs to watch out for:
@@ -136,7 +141,8 @@ Medical Outcomes
 
 Security Outcomes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s Treat Security Research like Medical Research
@@ -146,29 +152,22 @@ Discovery and
 Development
 Step 2
 Precinicl Research
-Stop 3
-Cinical Research
 Stop 4
 FDA Review
 Step 5
-FDA Post-Market
 Safety Monitoring
 Discovery and Development
 Research for a new drug begins in the laboratory.
-‘More Information
 Preclinical Research
 Drugs undergo laboratory and animal testing to answer
 basic questions about safely.
-“More Information
 Clinical Research
 Drugs are tested on people to make sure they are safe
 and effective.
-‘More Information
 FDA Review
 FDA review teams thoroughly examine all of the
 submitted data related to the drug or device and make a
 decision to approve or not to approve it.
-‘More Information
 Medical Outcomes
 Security Outcomes
 ```
@@ -191,7 +190,8 @@ Methodology
 
 Not all evidence is equal
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Not all evidence is equal
@@ -246,7 +246,8 @@ Randomized 19,000+ Employees into 5 Groups
 
 Lure example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lure example
@@ -271,28 +272,20 @@ Lessons Learned (and what it means for users)
 
 Lesson #1: we can pwn users with scientific lure crafting
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lesson #1: we can pwn users with scientific lure crafting
 Phishing Lure # of Users Avg Failure Rate
-Outlook Pwd 4,931 1.82%
-Login Account 12,720 1.85%
-Open Enroll 14,691 7.62%
-Shared Doc (Microsoft) 15,683 8.99%
-OneDrive Medical 18,438 9.20%
-Docusign 23,526 9.63%
-Building Evac 17,359 10.33%
-Traffic Ticket 17,676 18.60%
-Dress Code 4,954 27.65%
-Vacation Policy 17,923 30.80%
 ```
 
 ## Slide 21
 
 Top Tier Lure Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Top Tier Lure Example
@@ -343,11 +336,11 @@ Lesson #2: Training not efficacious (for these modalities/deployment)
 
 Annual cybersecurity training has no observable benefit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lesson #2: training not largely efficacious (in these modalities/deployment)
-*— Month 1
 Month 2
 Month 3
 — Month 4
@@ -356,21 +349,9 @@ Month 3
 Month 7
 *~—s— Month 8
 —™ Average
-To
-v
-oO
-ee
-fe)
-x=
 =
 wn
-es
-(0)
-wn
 =
-e
-fo)
-xs
 Annual cybersecurity training has no observable benefit
 ```
 
@@ -412,13 +393,6 @@ Lesson #3: people don’t spend time on training ● For the people who did spen
 
 Lesson #3: people don’t spend time on training
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Lesson #3: people don’t spend time on training
-{Fike
-```
-
 ## Slide 34
 
 Is all of this focus on training worth the outcomes?
@@ -431,81 +405,34 @@ We know:
 
 We know:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We know:
 Phishing Lure #of Users Avg Failure Rate
-Outlook Pwd 4,931 1.82%
-Login Account 12,720 1.85%
-Open Enroll 14,691 7.62%
-Shared Doc (Microsoft) 15,683 8.99%
-OneDrive Medical 18,438 9.20%
-wu
-i]
-b
-o
-Docusign 23,526 9.63%
-Building Evac 17,359 10.33%
-Traffic Ticket 17,676 18.60%
-Dress Code 4,954 27.65%
-Vacation Policy 17,923 30.80%
 N
-o
 Cumul % of users with 1+ failure
-ol Ww
-oO Oo
-Oo
 ```
 
 ## Slide 37
 
 We know:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We know:
 Phishing Lure #of Users Avg Failure Rate
-Outlook Pwd 4,931 1.82%
-Login Account 12,720 1.85%
-Open Enroll 14,691 7.62%
-Shared Doc (Microsoft) 15,683 8.99%
-OneDrive Medical 18,438 9.20%
-Docusign 23,526 9.63%
-Building Evac 17,359 10.33%
-Traffic Ticket 17,676 18.60%
-Dress Code 4,954 27.65%
-Vacation Policy 17,923 30.80%
-wu
-i]
-b
-°
 N
-o
-fan
-o
 2
-2
-io)
-£&
 +
 a
-<
-_
 =
 230
-vo
 a
-3
-.
-to}
 &
-SB
-is
-5
-1S)
-Oo
 ```
 
 ## Slide 38
@@ -544,7 +471,8 @@ Medical Outcomes
 
 Security Outcomes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s Treat Security Research like Medical Research
@@ -554,29 +482,22 @@ Discovery and
 Development
 Step 2
 Precinicl Research
-Stop 3
-Cinical Research
 Stop 4
 FDA Review
 Step 5
-FDA Post-Market
 Safety Monitoring
 Discovery and Development
 Research for a new drug begins in the laboratory.
-‘More Information
 Preclinical Research
 Drugs undergo laboratory and animal testing to answer
 basic questions about safely.
-“More Information
 Clinical Research
 Drugs are tested on people to make sure they are safe
 and effective.
-‘More Information
 FDA Review
 FDA review teams thoroughly examine all of the
 submitted data related to the drug or device and make a
 decision to approve or not to approve it.
-‘More Information
 Medical Outcomes
 Security Outcomes
 ```
@@ -621,7 +542,8 @@ Audience poll: Does user phishing training work?
 
 https://arianamirian.com/docs/ieee-25.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Understanding the Efficacy of Phishing Training in Practice

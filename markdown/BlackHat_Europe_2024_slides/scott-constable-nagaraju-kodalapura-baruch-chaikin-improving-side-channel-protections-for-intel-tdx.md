@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Scott Constable & Nagaraju Kodalapura & Baruch Chaikin_Improving Side-Channel Protections for Intel TDX.pdf"
 pages: 40
 sha256: "38abbbfe3c6d0f145b0e744ef2c61e27b4ed4d43d674a4adf438aaedc980a25d"
-text_chars: 18588
+text_chars: 18590
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 94.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:51:44Z"
+converted_at: "2026-08-12T04:59:53Z"
 ---
 # Improving Side-Channel Protections for Intel TDX
 
 **Speakers:** Scott Constable, Nagaraju Kodalapura, Baruch Chaikin  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Scott Constable & Nagaraju Kodalapura & Baruch Chaikin_Improving Side-Channel Protections for Intel TDX.pdf` (40 pages)
+
 
 ## Slide 1
 
@@ -185,9 +191,9 @@ What if the adversary just triggers a single operation at a time, and then perfo
 
 TD instruction stream (typically 1.8 GHz or more):
 
-```
+\```
 TD runs
-```
+\```
 
 Information Classification: General
 
@@ -253,7 +259,8 @@ Information Classification: General
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
@@ -777,7 +784,8 @@ Information Classification: General
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat

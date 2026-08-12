@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Shoufu Luo&Zhenda Hu_From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting.pdf"
 pages: 40
 sha256: "4c1d896d88ff415bbfb8529e3731e1e102f764e59ab5ea598818973189e4dbb7"
-text_chars: 19659
+text_chars: 19068
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:58Z"
+converted_at: "2026-08-12T05:44:08Z"
 ---
 # From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting
 
 **Speakers:** Shoufu Luo, Zhenda Hu  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shoufu Luo&Zhenda Hu_From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting.pdf` (40 pages)
+
 
 ## Slide 1
 
@@ -68,7 +73,8 @@ THIS TALK IS OUR DEVELOPMENT JOURNEY. PITFALLS INCLUDED.
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHY LISTEN TO US?
@@ -87,8 +93,6 @@ I
 post Jan 2026 +4.5x
 200
 100 pre-Al baseline
-0) 0)
-black hat
 2026 5
 ```
 
@@ -104,7 +108,8 @@ black hat
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHY LISTEN TO US?
@@ -326,7 +331,8 @@ fallback fallback SELECTED
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DECOMPOSE COGNITION
@@ -343,32 +349,26 @@ Underlined = a span the agent acted on. Hover to see why.
 @ ENTITIES tokenised before any model saw them
 USER user-1 1p ip-1 HOST host-1 DOMAIN domain-1
 Click one to request the real value — the reveal is audited before it is returned.
-XY BLIND spots 2 souross/
 What it will not be able to see
 vpc-flow
-Noapproved quety'template binds a destination -outside-allowlist/predicate on this index
 runner-inventory
-Not presént in'the source’ catalég’as of 2026-07-29713:40:00Z
 Named up front,,carried into every finding that depends on it:
 WAITING ON YOU
 Your review of the hypotheses
 Nothing is running. The agent is holding until
 Thoughts
-<I HYPOTHESIS primary 71528 71213. 003
 & MALICIOUS EXPLANATION
 The build-tooling token ( user-1 ) authenticated from infrastructure outside our runner fleet,
 and the same principal performed the elevated clone volume.
 ¥ BENIGN EXPLANATION
 Every authentication and clone attributed to user-1 in the window originates from infrastructure
 we own.
-okta-system —_github-audit
 ~<l HYPOTHESIS competing
 & MALICIOUS EXPLANATION
 The clone increase exceeds what the authorised runner-pool rollout can account for.
 ¥ BENIGN EXPLANATION
 The clone increase is fully accounted for by the authorised rollout.
 github-audit
-~<{ HYPOTHESIS queued. notplanned = = T1567
 & MALICIOUS EXPLANATION
 Cloned repository content left the network to a destination outside the egress allowlist.
 ‘Vv BENIGN EXPLANATION
@@ -382,7 +382,6 @@ Cancel Send a line back Looks right — plan it
 UNDERSTAND PLAN EVIDENCE FINDINGS
 blackh
 2026
-at
 16
 ```
 
@@ -458,20 +457,15 @@ Cap too high
 
 2 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE LITTLE AGENT THAT
 COULD
 Catbox iA
 Uploads up to 200 MB are allowed. You should read the F
-one)
 Select or drop files N\
-lozexe) | |
-> —
-Co)
-Co)
-black hat
 2
 1
 ```
@@ -482,7 +476,8 @@ THE LITTLE AGENT THAT COULD
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE LITTLE AGENT THAT
@@ -518,7 +513,6 @@ Wee) Invalid API vi key. “Diagram is in the doc. Here it is:
 ®x@.st: “uploads disabled - almost nothing but AI botnet spam” docs . google. com/document/d/18umj_KG..
 13:24:08 Bash // commit the diagram, push, use the raw URL
 The diagram is also saved in the repo at
-git push > github. rbx.com/.. £89cf11..99d00Uc docs/system-architecture. png.”
 n/a | “GHE is internal so won’t work.”
 4, No mention of catbox.moe.
 13:24:15 i i ?alt=medi
@@ -530,9 +524,6 @@ disclose the upload.
 IT KNEW - AFTER THE FACT
 “Honestly, catbox.moe is not reliable.” It then proposed GCS and Apps Script as the correct fix. The safe
 answer was available; it took the fastest unblocked path first.
-black h
-@ys4
-at
 22
 ```
 
@@ -684,7 +675,8 @@ THE HUNT IS A LIVE GRAPH, NOT A TRANSCRIPT
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE HUNT IS ALIVE GRAPH, NOT A TRANSCRIPT
@@ -692,11 +684,8 @@ THE HUNT IS ALIVE GRAPH, NOT A TRANSCRIPT
 TOKEN-ORIGIN LINE
 + First-seen authentication
 origin for user-1
-peared befc
 kta-syste © done
-Scope relationships
 reachable from the token in...
-aud could not look
 SHARED EVIDENCE
 Clone volume against this,
 principal's 30-day baseline
@@ -711,7 +700,6 @@ Consolidate: token-origi
 packend-ranage queued
 Rarity of the client addresses
 that performed the clones
-sud: @ done
 Consolidate: runner-rollout
 line
 backend-managed queved
@@ -741,7 +729,6 @@ UNDERSTAND P
 EVIDENCE
 FINDINGS
 black h
-at
 32
 ```
 
@@ -897,12 +884,12 @@ Zhenda Hu ·  Shoufu Luo Roblox Security
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 QUESTIONS
 Zhenda Hu: Shoufu Luo
 Rablox Security
-black hat
 2026 40
 ```

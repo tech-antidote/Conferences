@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Tomer Bar & Omer Attias_Defender-Pretender When Windows Defender Updates Become a Security Risk.pdf"
 pages: 91
 sha256: "92c433265610c6d6fa5ab3a335d4111bf5fcc26db5cd2adcd71228d917a047ce"
-text_chars: 34181
-ocr_pages: 38
+text_chars: 21075
+ocr_pages: 26
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.5
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:25:29Z"
+converted_at: "2026-08-12T04:23:10Z"
 ---
 # Defender-Pretender When Windows Defender Updates Become a Security Risk
 
 **Speakers:** Tomer Bar, Omer Attias  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tomer Bar & Omer Attias_Defender-Pretender When Windows Defender Updates Become a Security Risk.pdf` (91 pages)
+
 
 ## Slide 1
 
@@ -28,19 +34,6 @@ LABS
 Defender - Pretender When Windows Defender Updates Become a Security Risk
 
 Omer Attias Tomer Bar
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-$:3 SafeBreach'““s
-Defender - Pretender
-When Windows Defender Updates Become a Security Risk
-*
-Omer Attias | >
-Tomer Bar } ¢@) \N
-aa. \ = .on)>
-a =.
-```
 
 ## Slide 2
 
@@ -134,7 +127,8 @@ Update Process High Level Understanding
 
 **M** icrosoft **P** rotection **A** ntimalware **F** ront **E** nd.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] What Windows Defender Pulls?
@@ -161,22 +155,16 @@ MpSigStub.exe
 
 **mpam-fe.exe Execution**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 mpam-fe.exe Execution
-| @ mpamde.exe (8828)
 C\Users\POTAT.
-. C\Users\petatoh..,
-CA\Usere\pctatoh...
-a,
--
 C:\Program Files (,
 C:\Program Files (,
 Description: Microsoft Malware Protecti®a Signature Update Stub
 Company: Microsoft Corporation
-Path: C\Users\POLQIO~1\AppVata\lLocal\ l@gp\CeeCk /10-4//6-491F-2401-Be23] /A2b5eEC\Mpsigstub.ex
-Command:  itub 1.1.18500.10 /payload 1,381.2904.0 /program C:\Users\potatohead\ Desktop mpam-fe.exe
 User: toystory\potatchead
 PID: 8252 Started: = 7/4/2023 7:15:39 AM
 Exited: 7/4/2023 7:13:39 AM
@@ -186,11 +174,11 @@ Exited: 7/4/2023 7:13:39 AM
 
 **Database Files & mpengine.dll**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Database Files & mpengine.dll
-a exe i et else Files eee Ueteries\ foray DELI exe” |
 > ThisPC > Local Disk (C:) >» ProgramData » Microsoft >» Windows Defender > Definition Updates >» {53291405-777E-4779-8D90-A058720A4481}
 A
 Name Date modified Type Size
@@ -198,7 +186,6 @@ Name Date modified Type Size
 D mpasdita.vdm 7/4/2023 3:31 AM VDM File 7,714 KB
 . D mpavbase.vdm 7/4/2023 3:31 AM VDM File 36,861 KB
 . [|] mpavdita.vdm 7/4/2023 3:31 AM VDM File 2,568 KB
-»
 mpengine.dll 7/4/2023 3:31 AM Application exten... 17,978 KB
 ```
 
@@ -231,7 +218,8 @@ MZ
 1.391.3508.0
 Delta
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Security Intelligence Version
@@ -262,27 +250,24 @@ Delta
 
 Base
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Digital Signature
 a —— Digital Signature Details ? x
-] General Advanced
 ) =, Digital Signature Information
 pd This digital signature is OK.
 Update Payload
 Signer information
-a, eo, Name: [Microsoft Windows
 E-mail: Not availabl
 Delta Delta JNotavalabe
 Signing time: |Friday, May 12, 2023 2:06:17 PM
 {OF View Certificate
 Countersignatures
 . \ \ Name of signer: E-mail address: Timestamp
-mpengine.dlll
 Microsoft Time-S... Not available Friday, May 12, 202...
 Base Base
-Detail
 ```
 
 ## Slide 17
@@ -419,38 +404,18 @@ Black Box
 
 Manual reversing reveals RPC_GUID which belongs to mpsvc.dll RPC func num:42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 l MpSigStub to MsMpEng
 Manual reversing reveals RPC_GUID which belongs to mpsvc.dll
 RPC func num:42
--Pdata: Q20000075BSB8DA8
--Pdata: @@0000075BSB8DBe
-. data: @8@000075BSB8DB1
-. data: @80000075BSB8DB2
-.Pdata: @8@0000075B888DB
-.rdata: 860000075BSBR8DB4
--Pdata: #800800 75BSB8DB8
--Pdata: @@0000075BSB8DBA
-.Pdata: @80080075BSB8DBC
-.Pdata: @8@000075BSB8DED
-. data: @@@000075BSB8DBE
-. data: @8@0000075BSB8DBF
-.Pdata: #808800 75BS88DC8
-_Pdata: @80000075BSB8DC1
-.rdata: 808800 75B8B8DC2
-.Pdata: @@eeeee75BSB8DC3
-rdata: ABAAABATSRRRRM A
 dq offset unk_75BSBA1De
 db 8
 db 8
-tr Ls
-(46 @C5O3F532h [ sec 503#532-4438-4c69-83002CEIBGESERS) (2.0) -- C:\Program Files\Windows Defender \mpsvc.dll
 dw 443Ah @ -> servertipenabiereature
 1- yerMpDisableFeature
-cer ACOs = 2- lpQueryStatus
-mt — sf 3- ventOpen
 9
 42 -> ServerMpUpdateEngineSignature
 ```
@@ -532,7 +497,8 @@ VDM
 
 proprietary structure **Threat Name Signature Bytes**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 1 The Signatures Are Not Encrypted!
@@ -578,7 +544,8 @@ Defender
 Unknown
 Signatures
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 ] Delta Decompressed Data
@@ -592,10 +559,7 @@ Signatures
 0x70
 0x80
 0x90
-OxA0
 OxBO
-Oxco
-OxDO
 OxEO
 OxFO
 ooo1
@@ -608,9 +572,7 @@ E70B
 0100
 FFOB
 OOFF
-gics
 c102
-FEEE
 0400
 4653
 EBO4
@@ -623,11 +585,8 @@ EBO4
 0000
 0000
 SCFF
-ooo1
-FFIA
 DD30
 0600
-J1IFA
 FFFF
 80B9
 2401
@@ -647,7 +606,6 @@ OOFF
 0300
 807A
 5206
-D41aA
 6F16
 0607
 0000
@@ -660,27 +618,17 @@ D41aA
 FF10
 00B7
 0400
-4BD3
-FREE
 0500
 0030
-2a89
 ADSE
-oso9
 2702
-siebe:
-780F
 8701
 BFO2
-ECc1A
 OOFF
-g0o1
 BOLF
 34E6
-cog93
 767A
 2DD8
-S425
 2FCD
 6706
 OAOB
@@ -689,32 +637,24 @@ OAOB
 0000
 0000
 0000
-5c04
 FFO6
 OOFF
 0003
 3CF7
 FFFF
 0400
-85FA
 5306
 173c
 0016
 ocoD
 280A
-SD54
-TA1O
 8F04
 CFO6
 pool
 8000
-ras)
-ooo1
 0280
 6C7A
-FEE
 0500
-oo16
 A708
 0085
 OEOF
@@ -726,30 +666,11 @@ OEOF
 8FOE
 OOFF
 0002
-OOEA
-SF6E5
 0300
-7BFA
 0100
-oocF
-oool1
 SF78
-012345978 9ABCDEF
-)..-@..
 gt6.1..
 ~$..€..
-—-. ee. Fe
-E---s "
---\¥¥--
-y.-.-.-yy-€..
--vy-€..°°
-‘EYO....4e<
-A.... JOA’ y¥lz.
-yyqu..yyvz.-.yy{u
---¥Y¥Ez..-G.a....
-FS€+R..0”,8....1
-€.$.6.*&/I.<§...
-X8to.-“g......_x
 Zlib
 Compressed
 Defender
@@ -764,38 +685,34 @@ Signature Structure
 
 **Signature Structure**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Signature Structure
 bitfield SigqnatureHeader {
 Type: 3;
 Size: 24:
-fi
 struct Signature {
 SignatureHeader header;
 ud Datal header. Size};
-ti
 ```
 
 ## Slide 39
 
 **Signature Types**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Signature Types
-“SIGNATURE_TYPE_RESERVED",
-"SIGNATURE_TYPE_VOLATILE_THREAT_INFO",
-"“SIGNATURE_TYPE_VOLATILE_THREAT_ID",
 "SIGNATURE_TYPE_CKOLDREC",
 "SIGNATURE_TYPE_KVIR32",
 "SIGNATURE_TYPE_POLYVIR32",
 "SIGNATURE_TYPE_NSCRIPT_NORMAL",
 "SIGNATURE_TYPE_NSCRIPT_SP",
 "SIGNATURE_TYPE_NSCRIPT_BRUTE",
-"SIGNATURE_TYPE_NSCRIPT_CURE",
 "SIGNATURE_TYPE_TITANFLT",
 "SIGNATURE_TYPE_PEFILE_CURE",
 "SIGNATURE_TYPE_MAC_CURE",
@@ -808,27 +725,17 @@ ti
 "SIGNATURE_TYPE_TARGET_SCRIPT",
 "SIGNATURE_TYPE_CKSIMPLEREC",
 "SIGNATURE_TYPE_PATTMATCH" ,
-“SIGNATURE_TYPE_RPFROUTINE",
-"“SIGNATURE_TYPE_NID",
-"“SIGNATURE_TYPE_GENSFX",
 "SIGNATURE_TYPE_UNPLIB",
 "SIGNATURE_TYPE_DEFAULTS",
 "SIGNATURE_TYPE_DBVAR",
 Ox5C: "SIGNATURE_TYPE_THREAT_BEGIN",
-"“SIGNATURE_TYPE_THREAT_END",
 "SIGNATURE_TYPE_FILENAME",
 "SIGNATURE_TYPE_FILEPATH",
-"SIGNATURE_TYPE_FOLDERNAME" ,
 "SIGNATURE_TYPE_PEHSTR",
 "SIGNATURE_TYPE_LOCALHASH",
-"SIGNATURE_TYPE_REGKEY",
 1100:
-103:
 105:
 106:
-“SIGNATURE_TYPE_HOSTSENTRY",
-"SIGNATURE_TYPE_STATIC",
-"SIGNATURE_TYPE_LATENT_THREAT",
 SIGNATURE_TYPE_REMOVAL_POLICY",
 SIGNATURE_TYPE_WVT_EXCEPTION",
 SIGNATURE_TYPE_REVOKED_CERTIFICATE",
@@ -844,27 +751,18 @@ SIGNATURE_TYPE_VERSIONCHECK",
 SIGNATURE_TYPE_SAMPLE_REQUEST",
 SIGNATURE_TYPE_VDLL_X64",
 SIGNATURE_TYPE_SNID",
-"SIGNATURE_TYPE_FOP",
 SIGNATURE_TYPE_KCRCE",
 SIGNATURE_TYPE_VFILE",
 SIGNATURE_TYPE_SIGFLAGS",
 SIGNATURE_TYPE_PEHSTR_EXT2",
-: "SIGNATURE_TYPE_PEMAIN LOCATOR",
 : "SIGNATURE_TYPE_PESTATIC",
-"SIGNATURE_TYPE_UFSP_DISABLE",
-“SIGNATURE_TYPE_FOPEX",
 "SIGNATURE_TYPE_PEPCODE",
 "SIGNATURE_TYPE_IL_PATTERN",
-"SIGNATURE_TYPE_ELFHSTR_EXT",
 : "SIGNATURE_TYPE_MACHOHSTR_EXT",
 : "SIGNATURE_TYPE_DOSHSTR_EXT",
-"SIGNATURE_TYPE_MACROHSTR_EXT",
 : "SIGNATURE_TYPE_TARGET_SCRIPT_PCODE",
 : "SIGNATURE_TYPE_VDLL_IA64",
-“SIGNATURE_TYPE_PEBMPAT",
 "SIGNATURE_TYPE_AAGGREGATOR" ,
-"SIGNATURE_TYPE_SAMPLE_REQUEST_BY_NAME"
-2 "SIGNATURE_TYPE_REMOVAL_POLICY_BY_NAME"
 153:
 154:
 155:
@@ -888,8 +786,6 @@ SIGNATURE_TYPE_PEHSTR_EXT2",
 173:
 174:
 175:
-176:
-tee
 178:
 1179:
 180:
@@ -902,22 +798,15 @@ tee
 188:
 189:
 190:
-*SIGNATURE_TYPE_TUNNEL_X66",
 "SIGNATURE_TYPE_TUNNEL_X64",
 "SIGNATURE_TYPE_TUNNEL_IA64",
-"SIGNATURE_TYPE_VDLL_ARM",
-"“SIGNATURE_TYPE_THREAD_X86",
 "SIGNATURE_TYPE_THREAD_X64",
 "SIGNATURE_TYPE_THREAD_IA64",
-"SIGNATURE_TYPE_FRIENDLYFILE_SHA2S6
-"SIGNATURE_TYPE_FRIENDLYFILE_SHAS12
-"SIGNATURE_TYPE_SHARED_THREAT",
 "SIGNATURE_TYPE_VDM_METADATA",
 "SIGNATURE_TYPE_VSTORE",
 "SIGNATURE_TYPE_VDLL_SYMINFO",
 "SIGNATURE_TYPE_IL2_PATTERN",
 "SIGNATURE_TYPE_BM_STATIC",
-"SIGNATURE_TYPE_BM_INFO",
 "SIGNATURE_TYPE_NDAT",
 "SIGNATURE_TYPE_FASTPATH_DATA",
 "SIGNATURE_TYPE_FASTPATH_SDN",
@@ -926,19 +815,11 @@ tee
 "SIGNATURE_TYPE_HIDDEN_FILE",
 "SIGNATURE_TYPE_COMMON_CODE",
 "SIGNATURE_TYPE_VREG",
-"SIGNATURE_TYPE_NISBLOB",
-"“SIGNATURE_TYPE_VFILEEX",
-"SIGNATURE_TYPE_SIGTREE_BM",
-"SIGNATURE_TYPE_VBFOP",
-"SIGNATURE_TYPE_VDLL_META",
-"SIGNATURE_TYPE_TUNNEL_ARM",
 "SIGNATURE_TYPE_THREAD_ARM",
 "SIGNATURE_TYPE_PCODEVALIDATOR",
 "SIGNATURE_TYPE_MSILFOP",
-"SIGNATURE_TYPE_KPAT",
 "SIGNATURE_TYPE_KPATEX",
 "SIGNATURE_TYPE_LUASTANDALONE",
-"SIGNATURE_TYPE_DEXHSTR_EXT",
 190:
 191:
 192:
@@ -984,7 +865,6 @@ tee
 233:
 234:
 235:
-“SIGNATURE_TYPE_DEXHSTR_EXT",
 "SIGNATURE_TYPE_JAVAHSTR_EXT",
 "SIGNATURE_TYPE_MAGICCODE",
 "SIGNATURE_TYPE_CLEANSTORE_RULE",
@@ -994,18 +874,13 @@ tee
 "SIGNATURE_TYPE_ARHSTR_EXT",
 "SIGNATURE_TYPE_MSILFOPEX",
 "SIGNATURE_TYPE_VBFOPEX",
-"SIGNATURE_TYPE_FOP64",
 "SIGNATURE_TYPE_FOPEX64",
 "SIGNATURE_TYPE_JSINIT",
 "SIGNATURE_TYPE_PESTATICEX",
 "SIGNATURE_TYPE_KCRCEX",
 "SIGNATURE_TYPE_FTRIE_POS",
-"SIGNATURE_TYPE_NID64",
 "SIGNATURE_TYPE_MACRO_PCODE64",
 "SIGNATURE_TYPE_BRUTE",
-"SIGNATURE_TYPE_SWFHSTR_EXT",
-"SIGNATURE_TYPE_REWSIGS",
-"SIGNATURE_TYPE_AUTOITHSTR_EXT",
 "SIGNATURE_TYPE_INNOHSTR_EXT",
 "SIGNATURE_TYPE_ROOTCERTSTORE",
 "SIGNATURE_TYPE_EXPLICITRESOURCE",
@@ -1014,18 +889,11 @@ tee
 "SIGNATURE_TYPE_EXPLICITRESOURCEHASH",
 "SIGNATURE_TYPE_FASTPATH_SDN_EX",
 "SIGNATURE_TYPE_BLOOM_FILTER",
-"“SIGNATURE_TYPE_RESEARCH_TAG",
-"SIGNATURE_TYPE_ENVELOPE",
-"“SIGNATURE_TYPE_REMOVAL_POLICY64",
-“SIGNATURE_TYPE_REMOVAL_POLICY64_BY_NAME",
-"“SIGNATURE_TYPE_VDLL_META_X64",
-"SIGNATURE_TYPE_VDLL_META_ARM",
 "SIGNATURE_TYPE_VDLL_META_MSIL",
 "SIGNATURE_TYPE_MDBHSTR_EXT",
 "SIGNATURE_TYPE_SNIDEX",
 "SIGNATURE_TYPE_SNIDEX2",
 "SIGNATURE_TYPE_AAGGREGATOREX",
-“SIGNATURE_TYPE_PUA_APPMAP",
 "SIGNATURE_TYPE_PROPERTY_BAG",
 "SIGNATURE_TYPE_DMGHSTR_EXT",
 "SIGNATURE_TYPE_DATABASE_CATALOG",
@@ -1043,7 +911,8 @@ Begin
 
 **Evaluation**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Evaluation
@@ -1061,30 +930,12 @@ Total Signatures: 2643614
 
 **Threat Begin Signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-] Threat Begin Signature
-sEruce ThreatBegin {
-Signaturedeader header;
-u32 Id:
-yié Unknown;
-ui6 Counter;
-wié Cakegory;
-| ue Name[ Threathamelength ];
-Troy T Tey
-ui6 Resources| Counter];
-ua Seviri by;
-us Action;
-ué Unknowns[4];
-4;
-```
-
 ## Slide 43
 
 **Smart modification on Conti Signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Smart modification on Conti Signature
@@ -1092,44 +943,32 @@ ué Unknowns[4];
 wchar_t* = L"aconti NetService";
 “port.aconti.net/dialer";
 "ALifestyle.aconti";
-"ALifeDialer”;
-"SecureDialer";
-“goodthinxx" ;
-“dialer/stub.exe";
 “dialerhashwert=%s&dialerversion=%u%s%s" ;
 "Software\\ALifestyle\\";
 "ShowErotic";
-"*s 2UID=%u&Nr=%s&Country=%s&indcode=%u" ;
 t main()
 0063
 0074
 0001
 6E6S
-6665S
-0B41
 6S63
-6Fr64
-722E
-«dies @aeie s PO
 rt.aconti.net/di
 aler...ALifestyl
-e.aconti...ALife
 Dialer...SecureD
-SaLOL sos thin
 xx...dialer/stub
 -exe..&dialerhas
 hwert=tsédialerv
 ersion=tutsts...
 Software\ALifest
 yle\...ShowEroti
-c..%%¢s?UID=tuéNr
 ```
 
 ## Slide 44
 
 **Smart modification on Conti Signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Smart modification on Conti Signature
@@ -1147,7 +986,8 @@ file: C:\Users\potatohead\Desktop\aconti.exe
 
 **Modify Conti Threat Name – Update failed**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 1 Modify Conti Threat Name - Update failed
@@ -1158,19 +998,11 @@ file: C:\Users\potatohead\Desktop\aconti.exe
 FA83 7200 0000 0000 0000 00
 0 3006 0 6BA2 924F EB36 ODO0O0 0000 00
 0 3000 0 59D2 FEOO 0000 0061 0c01 000
-Product name: Microsoft Windows Defend: [iggiiiiemamsellisnesedisnRaiethellted lala piediaenieiiae
-Package files: M soo pe rai paar’ ae PA sob
 0072 0069 0063 0065 0016
 Directory: C:\Defs OxAO 7274 636F 6E74 692E 742F
-mpasbase.vdm: b96f6f2ceasb43dtdal54dda/ds3b399/U1EbYbU 1d? lat /524dbb/ /db/44us1be
-mpasdlta.vdm: 8bc3lebf7357/bdb5a@57924eb826c5fd212d968F561ac6/17cd47ebb6c2aQbb/o
-mpavbase.vdm: 66a/af38e/cbcl@taatbbtc22e4e629b66 3ebad0/ddt93ed490dae8c 952776182
-mpavdlta.vdm: 8d15055ae3335aadaddf/b/b@6fasS5edc509fd3e63ec8/cfb39a/10134b082cc
-MoSioStub exe: fad?b9b847/54e2e8368e8929F ab4Sbes6dbd/26/817/6ee/5814d2al6d23e5c26
 ERROR @x8@5@a904) : MpUpdateEngine(C: \Defs)
 ERROR @x8@5@a904) : MpUpdateEngine(C: \Defs)
 ERROR @x6@59a004): Failed to update signatures from C:\Defs
-PRePE- RR
 ```
 
 ## Slide 46
@@ -1197,14 +1029,12 @@ LoadDatabase
 
 **RMDX Header RMDX & Zlib Headers**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 |) RMDX & Zlib Headers Tear he ——
 u32 Signature;
-B u3s2 Timestamp;
-u32 Unknowns;
-u3s2 Dakadtfset;
 Use DecompressedDataSi ze;
 ```
 
@@ -1214,59 +1044,27 @@ Use DecompressedDataSi ze;
 
 **Zlib Data Header**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| RMDxX & Zlib Headers
-______ Zlib DataHeader BP EE
-struct CDATA_Header {0000000 Jue
-ui? CompressedDataLength; cede @ AL,
-use CROSZ Freee eee Se
-```
-
 ## Slide 50
 
 **CRC32 Algorithm**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ) CRC32 Algorithm
 Algorithm
 CRC- 32
-CRC-32/B2Z1P2
-CRC-32/ JAMCRC
 CRC-32/MPEG-2
-CRC-32/POSIX
 CRC-32/SATA
 Result
-@xESB9O2BDF
-@xB4E SAGAS
-@x1A46D4208
-@x4B1CSFS?7
-@x9B769BC8
-Ox4COSBbas
 Check
 @xCBF43926
 @xFC891918
-@x340BC6D9
-@xO376E6E7
-@x765E7688
-OxCF72AFES
 Poly
-Oxe@4C11DB7
-Oxe@4C11DB7
-Ox84C11DB7
-6xB4C11DB7
-Ox84C11DB7
-8x84C11DB7
 Init
 @xFFFFFFFF
 @xFFFFFFFF
-OxFFFFFFFF
-OxFFFFFFFF
-BxeeeReeee
-8x52325032
 ```
 
 ## Slide 51
@@ -1283,7 +1081,8 @@ VDM File
 
 **Trying One More Update Attempt**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Trying One More Update Attempt
@@ -1331,17 +1130,16 @@ The Merge Internals
 
 Delta
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] What's The Delta Format?
 bitfield SignatureHeader {
 Type: 8;
 Size: 24
-bi
 struct Signature {
 SignatureHeader header;
-u8 Datal header. Size];
 ```
 
 ## Slide 58
@@ -1365,14 +1163,6 @@ u8 Datal header. Size];
 ##### **Reverse ConsumeInputCompress**
 
 MSB Check
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1 Reverse ConsumelnputCompress
-Lal cea |S
-MSB Check
-```
 
 ## Slide 62
 
@@ -1450,7 +1240,8 @@ BLOB
 
 **Merge Algorithm**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Merge Algorithm
@@ -1480,16 +1271,12 @@ return merge_stream
 
 **Eureka - Unknown Numbers**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Eureka - Unknown Numbers
 struck Blob { struck Blob {
-Sionaturedeader header: Signatureheader header;
-us2 Unknown ; u3s2 Mergesize;
-u32 Unknown; u32 Mergeckca2;
-Bader, Size - 6]; Te tata resters size - 6];
-+ 1
 ```
 
 ## Slide 72
@@ -1521,14 +1308,6 @@ CalculateCRC Merged
 
 **Can We Fake an Update?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-] Can We Fake an Update?
-Ce
-,¢
-```
-
 ## Slide 75
 
 ##### **We Did It !!!**
@@ -1537,7 +1316,8 @@ Updated to: 1.383.1800
 
 Version Before
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MpSigStub successfully updated Microsoft Windows Defender (RS1+) using the AM Bases and Delta package.
@@ -1572,28 +1352,20 @@ Merged
 
 Delete LaZagne Threats
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3 powershell (running as TOYSTORY\weak)
 PS C:\Users\weak\work> .
 View »
-€ > ¥ 4 BEX Users > weak > work > Defs - ¢
 Name Date modified Type Size
 Y We Quick access
 IEF MpSigstub 1/91/2023 6:17 AM Application 785 KB
 I Desktop *
-Downloads #
-| \Oserss 9
 Pictures *
-@ Music *
 h BB Videos *
 BE work
-Be work
-& OneDrive
-This Pc
-a DVD Drive (03) CCC
-Ge Network
 litem | (=
 es 3:28AM
 ```
@@ -1604,25 +1376,16 @@ es 3:28AM
 
 ##### 30,000 friendly hashes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 |) Friendly Files
 30,000 friendly hashes
-*"SIGNATURE_TYPE_VDLL_ARM",
-"SIGNATURE_TYPE_THREAD_X86",
 "SIGNATURE_TYPE_THREAD_X64",
 “SIGNATURE_TYP
-“SIGNATURE _TYP
 _SHA256"
-SHAS12"
-AREL
-"SIGNATURE_TYPE_VDM_METADATA",
 "SIGNATURE_TYPE_VSTORE",
-"SIGNATURE_TYPE_VOLL_SYMINFO",
-"“SIGNATURE_TYPE_IL2_PATTERN",
-"SIGNATURE_TYPE_BM_STATIC",
-"SIGNATURE TYPE_BM_INFO",
 895
 896
 897
@@ -1639,27 +1402,9 @@ AREL
 908
 909
 0209a3e590d5cc6c7cb69b012a59e7 Fd29c857e0782Fcd208a90cc9baa283441
-0209cfEc2d£2d39dfa9106fa00 Fb6d221dbd450dc6161cc2a7138c46a293add7
-0209£490cb£e60c61b651023e1d£9327e5350cd0a8be126907cdbaa6b564ceeb
-020a4cbaebdb1lbbbdfdf141cfbb16£165457535b5a4612f fdbb33bc647 43bbe3
-020b7b54£1704c10dcSac9b91b£037486£7b88cc21ce55b7 66a8 9ee505a5cde7
 020c4b29£3771bac47 6b4ed836c07 61 fdda30adfaf5d59dbd1£667193cd77d9b
-020cefa6c036894f912c69eef981lefef7d3£fb6a89000efac4888ddd00c255a8
-020dc950741800877ab9ddb69e566897ed3077c4bc181cf£607cdd4 9db£23419d
-020e5eb54040628846c4bfd816b71d8c0694b2b6c94883001la2da3dcfc251346
-02102b£3d33£117a295093e4af7 2baelb6abbe35e3e4255b65ef24Ff1108c017d
-02106197££396ba5c03d528bc6e245d0de25c745237ab37bc5d6a9a913c57e52
-0210bd8d5d5a63e1b8 fa97 Sabaf2e33486f8bc6c8c23d6el f5c7£2b9460b023b
-02110£602638980ea83de49£575bcaa4e94508043664676c8090£0a7e230C277
-021129a2a3446af44a296c2a50£d5023db6el 6b489719992bc7c7ce078cebde2
 02119a7d8 4b692650607cd256a52d02de8016e972c22d8 6£6703c4ee240c142d
-910 (0212a89972e6e11d056323£cf7 664a226dd2 6bce575eaa02c0b17dc5d4dc2cb3
-ao
-O12
-hls)
-0213705992cd08a07c57690ce28e6c7ee930d6a7 6ddc45d841d£4326b04fbcc3
 02141b072b5ebe37 £18be2a3658610£353£d3c63b9214472b4fc65588b464c80
-02142531a7ae99a5509c79e1c639e34d052 fb39e77e0c9dbae65c8FF6lef7e19
 ```
 
 ## Slide 81
@@ -1672,29 +1417,25 @@ Friendly Mimikatz :)
 
 ## Slide 82
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BE Administrator: Windows Powers
 PS C:\Users\woody\work>
-yw
 a
 x
 BB work
-€ > v B®  BB> ThisPC > Local Disk (C:) > Users >» woody > work » ¢
 BE Documents # Name % Date modified Type Sie
-Brictures ¢ — BDe 6/22/2023 330 AM File folder
 @ Music Gi wa-pretender 6/20/2023 2:42 AM Application 6,601 KB
 B Videos
 > @ OneDrive
 > MB thispc
-DVD Drive (0) C.
 > Ge Network
 2items |
 Search work
 Windows Security
 e
-ob OD
 =
 Home
 Virus & threat protection
@@ -1721,7 +1462,6 @@ Help improve Windows Security
 Change your privacy settings
 View and change privacy settings
 for your Windows 11 device.
-ACOH cme
 6/22/2023
 ```
 
@@ -1729,43 +1469,26 @@ ACOH cme
 
 **Final Attack Vector: DOS** _“!This program cannot be run in DOS Mode”_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ] Final Attack Vector: DOS “This program cannot be run in DOS Mode”
-7and_71 > 71delall pe
-« 4 [] > ThisPC > 05(C) > playground > windowDetenderUpdate > (3FIFBFSC-TBEA-4F08-925C-185981E14249) > try update to
-tome Date modified pe
-HF Quick access
-EE mpavaitavdm
 I Desitop © 085 2803 (64-bit, windows) - Profile: Untitled - Scenes: Untitled
-$ Downloads Fen Ea
 2) Documents
 = Pictures
 n
-‘tyupdate to 321.70_and_71
-By Videos
-windowDefenderUpdate
 © Onediive - Personal
-tis Pc
 B30 Objects
-[i Desktop
 2) Documents
-¥ Downloads
-Music
 = Pictures
 Hy Videos
-aS © Display Capture
-se £5 (\\ 192.168.2259) (R)
 @ Network Scenes
 ‘items 1 item selected 403 KB
 P& Type here to search
-Properties  [EJrilters Display
 Sources
 © Display capture
 Audio Mixer
-oa
-Scene Transit...
 Fade
 Duration
 Controls
@@ -1773,11 +1496,9 @@ Start Streaming
 Recording
 Start Virtual Camera
 Studio Mode
-settings
 Exit
 CPU: 0.3%, 25.00 fps
 Search test
-e
 ```
 
 ## Slide 84
@@ -1792,32 +1513,12 @@ e
 
 **Future Work - Possible Local Privilege Escalation**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 Future Work - Possible Local Privilege Escalation
 Name
-Lt SIGNATURE_TYPE_LUASTANDALONE_!#_ AutoitExecFile.tet
-(aa SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-AttachmentContainerExt.tet
-Lt SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-ContextFromSharepoint.tet
-Lt SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-ContextFromWebmail.tet
-Lt SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-ContextFromWordPress.tet
-Lt SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-ContextualDropFileByEmailClient.Includes.GetEmail...
-fat SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-ContextualDropFileByEmailClientTag.Includes.Get...
-Lay SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-FilelnBasePathAttributes.A.txt
-(a SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-FromSkype Transfer.txt
-yt SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-InnoSetupClassifier.tet
-(a SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-ISOExt.tet
-Lt SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-LnkExt.tet
-yt SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-NSIS_Installer.txt
-ay SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-SuspiciousStringinURL.txt
-Ly SIGNATURE_TYPE_LUASTANDALONE_!#_OLEHasJar.ObMp<ttributes.cUVsi6a" Ub. tet
-(a SIGNATURE_TYPE_LUASTANDALONE_!#_SuspiciousKEYGENfilename.ObMpaAttributes.cUV4i0, da...
-Ly SIGNATURE_TYPE_LUASTANDALONE_!#_ SuspiciousNFOfilename.ObMpAttributes,j.tet
-(ay SIGNATURE_TYPE_LUASTANDALONE_!#_Lua-Win32_Prifoulvbs.tet
-ay SIGNATURE_TYPE_LUASTANDALONE_!*_Lua-Worm-JS_Bondat.Allnk.txt
-fat SIGNATURE_TYPE_LUASTANDALONE_!#000000_First_OfficeFrame.txt
-(ay SIGNATURE_TYPE_LUASTANDALONE_!#000010_First_FrarmeNumeralParam.txt
 ```
 
 ## Slide 86
@@ -1873,12 +1574,3 @@ LABS
 ## Thank you!
 
 Tomer Bar Omer Attias
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-$33 SafeBreachLABs
-Thank you!
-Tomer Bar
-Omer Attias
-```

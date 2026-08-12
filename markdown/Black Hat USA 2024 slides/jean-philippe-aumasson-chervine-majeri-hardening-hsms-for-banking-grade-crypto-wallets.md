@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Jean-Philippe Aumasson & Chervine Majeri_Hardening HSMs for Banking-Grade Crypto Wallets.pdf"
 pages: 45
 sha256: "db3c4a385f15e26660dcb4a1e11b79f3084b2c0d82a5c47344e8283fccadae42"
-text_chars: 13560
-ocr_pages: 4
+text_chars: 13301
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 94.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:33:10Z"
+converted_at: "2026-08-12T04:34:09Z"
 ---
 # Hardening HSMs for Banking-Grade Crypto Wallets
 
 **Speakers:** Jean-Philippe Aumasson, Chervine Majeri  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Jean-Philippe Aumasson & Chervine Majeri_Hardening HSMs for Banking-Grade Crypto Wallets.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -93,7 +100,8 @@ Security mechanisms (1/4)
 
 • Local isolation (slots aka partitions)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security mechanisms (1/4)
@@ -131,7 +139,8 @@ Security mechanisms (2/4)
 
 • Local isolation (slots aka partitions) • RBAC, ABAC-ish model (with per-slot roles)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 User Roles
@@ -176,39 +185,38 @@ Security mechanisms (3/4)
 
 • PKCS#11 Cryptoki API
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Security mechanisms (3/4)
-¢ RBAC model (with per-slot roles)
-¢ PKCS#11 Cryptoki API
-Bit Flag Mask [Meaning
-0x00000001 True if the mechanism is performed by the
-device; false if the mechanism is
-performed in software
-CKF_ENCRYPT 0x00000100 True if the mechanism can be used with
-C_Encryptinit
-CKF_DECRYPT 0x00000200 True if the mechanism can be used with
-C_Decryptinit
-CKF_DIGEST 0x00000400 True if the mechanism can be used with
-C_Digestinit
-CKF_SIGN 0x00000800 True if the mechanism can be used with
-C_Signinit
-¢ Local isolation (slots aka partitions)
+
+- Local isolation (slots aka partitions)
+- RBAC model (with per-slot roles)
+- PKCS#11 Cryptoki API
+
+Bit Flag    | Mask       | Meaning
+CKF_HW      | 0x00000001 | True if the mechanism is performed by the device; false if the mechanism is performed in software
+CKF_ENCRYPT | 0x00000100 | True if the mechanism can be used with C_EncryptInit
+CKF_DECRYPT | 0x00000200 | True if the mechanism can be used with C_DecryptInit
+CKF_DIGEST  | 0x00000400 | True if the mechanism can be used with C_DigestInit
+CKF_SIGN    | 0x00000800 | True if the mechanism can be used with C_SignInit
+
 5.9 Decryption functions
+
 Cryptoki provides the following functions for decrypting data:
-¢ C_Decryptlnit
-CK_DEFINE_ FUNCTION (CK_RV, C_DecryptInit) (
-CK_SESSION_ HANDLE hSession,
-CK_MECHANISM PTR pMechanism,
-CK_OBJECT HANDLE hKey
-i
-C_Decryptlnit initializes a decryption operation. hSession is
-the session’s handle; pMechanism points to the decryption
-mechanism; hKey is the handle of the decryption key.
-The CKA_DECRYPT attribute of the decryption key, which
-indicates whether the key supports decryption, MUST be
-CK_TRUE.
+
+- C_DecryptInit
+
+CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
+  CK_SESSION_HANDLE hSession,
+  CK_MECHANISM_PTR pMechanism,
+  CK_OBJECT_HANDLE hKey
+);
+
+C_DecryptInit initializes a decryption operation. hSession is the session's handle; pMechanism points to the decryption mechanism; hKey is the handle of the decryption key.
+
+The CKA_DECRYPT attribute of the decryption key, which indicates whether the key supports decryption, MUST be CK_TRUE.
 ```
 
 ## Slide 11
@@ -457,16 +465,6 @@ Tree examples
 - Rebalancing performed through **rotations**
 
 - Rotated subtrees preserve **RB** and **Merkle** properties
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Tree examples
-¢ Rebalancing performed through rotations
-¢ Rotated subtrees preserve RB and Merkle properties
-——Right Rotation——>>
-@— Left Rotation
-```
 
 ## Slide 32
 

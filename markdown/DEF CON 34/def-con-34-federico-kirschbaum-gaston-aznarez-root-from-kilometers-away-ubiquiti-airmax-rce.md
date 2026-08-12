@@ -4,23 +4,28 @@ speakers: ["Federico Kirschbaum", "Gaston Aznarez"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Federico Kirschbaum, Gaston Aznarez - Root From Kilometers Away Ubiquiti AirMax RCE.pdf"
 pages: 62
 sha256: "1491b6bd6cb672d8174cf355d2d570b6345d5a61a91d712ca36cb4051f13f1fe"
-text_chars: 22606
+text_chars: 20105
 ocr_pages: 23
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.6
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:17:25Z"
+converted_at: "2026-08-12T06:27:25Z"
 ---
 # Root From Kilometers Away Ubiquiti AirMax RCE
 
 **Speakers:** Federico Kirschbaum, Gaston Aznarez  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Federico Kirschbaum, Gaston Aznarez - Root From Kilometers Away Ubiquiti AirMax RCE.pdf` (62 pages)
+
 
 ## Slide 1
 
@@ -54,18 +59,15 @@ converted_at: "2026-08-12T00:17:25Z"
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? = Qbsession? You
-Ve UNG, Vs VEIIVS 19:98 W/
 September 1, 2025
 September 8, 2025
-€ A LU1AQS or °
 December 11, 2025 <€ A LU1AQS Ck
 Esta era la del jueves
-REIEIEIEIE)
-i x
 € Thread o
 Direct message
 14:56
@@ -74,7 +76,6 @@ September 9, 2025
 fedek (
 16:35 W/ J, Nov 10th, 2025 at 1:01 PM
 Once you see them 44.35
-© Message veo ry) © Message Yo ry)
 F
 ```
 
@@ -86,23 +87,18 @@ F
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? © Obsession? You
-UES UNG, NYS YENIVS 19:08 W/
-~ >) mt September 8, 20 2025
-; >
-\
 14:56
 September 9, 2025
 Aparecen por todos lados
 16:35 W
 Once you see them 44.35
 FV ARE EVERYWHERE)
-Cis
 imgflip.com
-CS
 F
 ```
 
@@ -114,7 +110,8 @@ F
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THEY ACTUALLY ARE
@@ -129,7 +126,6 @@ of 4 million entrepreneurial operators and systems integrators who engage in tho
 information, join our community at http://www.ubnt.com.
 Ubiquiti, Ubiquiti Networks, the U logo, UBNT, airMAX, UniFi, airFiber, mFi, EdgeMAX and AmpliFi are registered
 trademarks or trademarks of Ubiquiti Networks, Inc. in the United States and other countries.
-2017
 ```
 
 ## Slide 7
@@ -138,7 +134,8 @@ trademarks or trademarks of Ubiquiti Networks, Inc. in the United States and oth
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THEY ACTUALLY ARE
@@ -182,13 +179,13 @@ WE COULDN’T CONNECT TO THE WI-FI
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WE COULDN'T CONNECT TO THE WI-FI
 Networks
 Suved
-—  faraday_poc a
 Saved / Connection failure
 Saved
 10
@@ -208,7 +205,8 @@ That was easy, too easy
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GETTING A SHELL INTO THE ANTENNA
@@ -221,15 +219,7 @@ KM KM WMMMMMMMMM Frequency:5.185 GHz (Channel 37)
 KM KM WMMMMMMMMM Quality=57/94 Signal level=-39 dBm Noise level=-103 dBm
 KM KM KM WMMMMMMMMM Encryption key: off
 KMNXWM KM WMMMMMMMMK Bit Rates:54 Mb/s
-KMMMMMKONM WMMMMMMMW Extra: ubnt=0e4e616e6f4265616d204d352031360000
-KMVMMMMMMMM WMV Extra: ieee_mode=802.11n
-[MVMMMMMMM WMMMMMN - Cell Q2 - Address: 1€:6A:1B:C4:67:FD
-MMMMMMMMML ,WMMMP_ XM: os Geer
 LMMMMMMMMx » » ,aaadXMMd .
-LNMMMMMMW: =XOxoLccLodOKMMMMWc
-LXMMMMMNc 1MMMMMMMMMMMMNo .
-LLONMMM@c 1MMMMMMNOo'
-"IMN;. 1MWL"
 BusyBox v1.24.2 (2025-@8-22 19:57:45 EEST) built-in shell Cash)
 Enter "help
 XW.v6.3.22#
@@ -239,13 +229,9 @@ Linux NanoBeam M5 16) 2.6.32.71| #1 Fri Aug 22 20:05:15 EEST 2025 mips GNU/Linux
 XW.v6.3.22#
 uid=@Cubnt)
 XW.v6.3.22#
-pean groups=0Cadmin)
 Frequency:5.18 GHz (Channel 36)
 Quality=56/94 Signal level=-4@ dBm Noise Level=-103 dBm
-Encryption key: off
 Bit Rates:54 Mb/s
-Extra: ubnt=05
-Extra: ieee_mode=802 .11ac
 That was easy, too easy
 12
 ```
@@ -348,23 +334,16 @@ More TDMA capable devices
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE WORKHORSE OF TDMA OVER 802.11
-f
 =
-Control Frame
 | Hendec
 B
-Vendoc Spe ciesc
-Ynfermetion Elem
-(pata |
 =
-—
 Trailer
-h,
-~)
 19
 ```
 
@@ -404,15 +383,12 @@ Vendor Specific Information Element with AirMAX enabled
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AirMAX AE
 (Control Frome
-(Header
-FBody
-Ubiquiti TE
-UL + 00:27:22
 )
 L
 Encrypted 7?
@@ -420,15 +396,10 @@ Lf
 TDMA IMPLEMENTATION OVER IEEE 802.11
 AirMAX M
 we onttol Frome |
-[ Hendec )
-FBody
 Router Board LE
 OUL: aQo-9¢:43
 Ubiquiti LE
-OVL = 00:45 6D
-yA
 [Traiter
-L
 23
 ```
 
@@ -438,33 +409,24 @@ L
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 afree_private
-malloc. private
 WE STARTED REVERSE ENGINEERING
-asf_print_category_private
 afree_private
 amalloc private
-gpio_line_config
-pio _line_set
 ath_dfs_prescan
-, afree_private
-amalloc_private
 afree_private
 amalloc_private
-oN
 ubnthal
 ubnt_eth_phy
 ubnthal_get_eth_port_count
 ubnthal_get_radio_cap
 afree_private
 amalloc_private
-afree_private
 amalloc_private
-asf_print_cirl_register_private
-asf_print_ctrl_unregister_private
 asf_print_mask_set
 (+1 more)
 board_identify
@@ -472,48 +434,29 @@ ubnthal_get_radio_cap
 ath_process_spectraldata
 is_spectral_phyerr
 Spectral_attach
-spectral_check_hw_capability
 spectral_control
-‘ath_dfs_prescan_register
 ath_dfs_prescan_unregistey
-Va
 ath_dfs_module_locked
-ath_dis_register
-ath_dfs_unregister
-ath_hook host register
 ath_kickout hode_notify
-ieee80211_fid_node
 ieee80211_fre& node
-ieee80211_indicate_fhgde_assoy
 (+5 more)
 ath_dfs
-g_pktlog funcs
-ath_spectral {7 more}
-afree_private
 amalloc_private
 asf_amem_oreate
 asf_amem_destroy
-asf_amem_setup
 (+5 more)
-gpio_int_disable
 gpio_int_enable
-gpio_int_init
 gpio_int_uninit
 board_identify
-‘gpio_line_config ath_get_tx_chainmask
 gpio_line_get ath_rate_attach
 gpio_line_set ath_rate_create_vap
 ubnthal_get_eeprom_data ath_rate_detach
 (+11 more) ath_rate_findrate
 (#16 more)
 _ath_hal_attach
-ath_hal_computetxtime
 ath_hal_detach
-ath_hal_display_tpctables
-ath_hal_enabledANI
 ~. (#14 more)
 ath_hal_probe
-ath_hal_get_device_info ath_rate_atheros Bie
 (a) =
 urt_count_group_countrie:
 adf_os_mem_alloc_outline
@@ -526,19 +469,8 @@ spectral_control
 spectral_detach
 spectral_process_phyerr
 (+1 more)
-ath_hal_log_ani_callback_register
-ACBEMintree
-ACBKMiniree
-ACVIMinfree
-ACVOMinfree
-CABMinfree
 (+20 more)
-ieee80211_leds_register
-jeee80211_leds_unregister
-board _ identify
-urd_alpha2_to_countrycode ‘plo. Tod vet
 rssi-leds
-led_blink_in_progress,
 urt_count_group_countries
 24
 ```
@@ -556,7 +488,8 @@ driver
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IMPORTANT KERNEL MODULES
@@ -568,7 +501,6 @@ ath_hal_reg_read
 ath_hal_probe
 ath_hal_subVendorlD
 computetxtime
-_hal_getNdevice_info
 ath_hal_set_config_param
 ath_hal_mhz2ie
 ... (+15 more)
@@ -613,25 +545,18 @@ driver
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW ARE THE IE BUILD
-{ATR}
-$02.71 Maragement Feeene
 Vv
 fadio | Radio Hardware 4 FiemW |
 J t
 Ath Driver |
 Act Tahe Fom/hend to FW
-Uroc Never (80217 Mac)
-UmaAc
 Perse mgmt Build mgnit
-Ly Cal iz call Hook,
 Uent ~ Poll
-7 mss — mss
-Hook — thos (7x)
-Porse aa Frac TE |
 ```
 
 ## Slide 27
@@ -644,23 +569,20 @@ Porse aa Frac TE |
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENCRYPTION? | DON’T THINK SO
-—
 | Ase mac | \\sec mac|
 uint8_t* key
 hey
 key = dst_mac != @ ? dst_mac : &bcast_mac \
-| W54
-Vv
 void out
 hmac_shal(message: src_mac, msglen: 6, key, keylen: 6, &out)
 | Hmac -Shat ( hey= dst mac 4 msh= Sc med
 aes_encrypt_key128(&out, &var_17@)
 int32_t $s@ = $s@_1 + Oxf |
-Vv
 if ($s@_1 s>= @) —_—_...
 $s@ = $s6_1 AES 128 eq
 char* out_ie_enc = &out_ie_ptr->enc
@@ -668,7 +590,6 @@ int32_t $s2_1 = @
 uint16_t* $s1_1 = &plain_ie.hdr.version
 while (true) TE bee
 char* $a@_18 = $s1_1 Patan
-|
 if ($s2_1 s>= $s@ s>> 4) v 4
 break | AES- 42%-EBR decry pt |
 $s1_1 = &$s1_1[8]
@@ -689,12 +610,12 @@ F o github.com/kkonradpl/mtscan/
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENCRYPTION? | DON’T THINK SO
 © Gaston Aznarez 11:58
-é
 MAC Address: 44:d9:e7:6a:3a:43
 AES Key (derived): ff1db564cf91b27557ff9343ed1d4d16 (16)
 Decrypting
@@ -730,7 +651,8 @@ F o github.com/kkonradpl/mtscan/
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING AIRMAX NETWORKS (in-the-wild)
@@ -747,22 +669,18 @@ Fit All Markers = one
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING AIRMAX NETWORKS (in-the-wild)
-Ae
-y.
-etal
 PTMP-CerritoYcordoba ap
 BSSID: 78:8a:20:6c:bd:a9
 Radio: AP PTMP-CerritoYcordoba
 Signal: -86.4 dBm
 Location: Cerrito, Buenos Aires, AR
 Coords: -34.598949, -58.381916
-Mer
 Xx
-i
 32
 ```
 
@@ -772,13 +690,13 @@ i
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING AIRMAX NETW
 16
 Discovered Networks
-Gerencia_ 5GHz
 Aspen
 ubnt
 PTMP-CerritoYcordoba
@@ -788,16 +706,12 @@ AP CERRITO Y TUCUMAN
 ARMENON
 Estrategias_2G
 Comodoro
-Eeninacadtt
 785 773
 ORKS (in-the-wild)
 - MIKROTIK
 - MIKROTIK
-- MIKROTIK
 Ac
-. ac
 - ac
-s AC.
 Ac
 Ac
 EMBEDDED
@@ -809,8 +723,6 @@ EMBEDDED
 - MIKROTIK
 = MIKROTIK
 M_ENCRYPTED
-or
-coeneraen,
 ap
 ap
 ap
@@ -820,11 +732,7 @@ AP
 ap
 ap
 AP
-a>
-O
 298156
-~63.8
-»)
 754
 33
 ```
@@ -852,17 +760,15 @@ O
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HACKER DREAMS
 WITH OVER-THE
 EXPLOITS |
-ties
 Fact #12
 Solving crim,
-_Pstore'they har
-wer
 ```
 
 ## Slide 36
@@ -873,7 +779,8 @@ wer
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IF | TOLD YOU...
@@ -887,15 +794,9 @@ arg3[@x19] = $v@_28.b
 fedek 11:21AM
 memcpy ¢ ~ * Necesito mas memcpy’s
 IMG_7466 ¥
-—™.:
 + sm
 ‘>
-4
-c &
-~
 A 1reply Today at 5:27 PM
-te BP fedek
-g
 @ Messages QFiles (© (evil)Doggie +
 Gaston Aznarez 10:58 AM
 Fri Aug 22 21:27:49 UTC 2025
@@ -1045,7 +946,8 @@ https://radiodx.pl/2020/08/5ghz-wifi-dx-record-denmark-lo gged-in-poland-745-km/
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BUG BOUNTY PAYMENT
@@ -1057,16 +959,8 @@ rare, if ever seen on a forecast for this area. I was looking forward for someth
 My stationary Wi-Fi DXing setup has been damaged three months ago. I could not miss such an opening, so a DX-pedition was the
 only option. In the evening of August 11 I made an opportunistic decision to visit the Dylewska Gora in north-eastern Poland. A
 few hours later, I was standing there with an antenna inside a lookout tower.
-‘
-;
-A
 i
--
-~~ —
-.
--_ >
 F https://radiodx.pl/2020/08/S5ghz-wifi-dx-record-den
-qaged-in-poland-745-km/
 45
 ```
 
@@ -1108,28 +1002,18 @@ POC FROM KILOMETERS AWAY v2
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 POC FROM KILOMETERS AWAY v2
 ISLA PUERTO MADERO
 za de Mayo
 La Trastienda
-Inezuela
 México
-AAMAS
-WAAAY AS
-opsedozy
 BAR SUR Tango Show
-s
-g
 N
-a)
-my
-s
-o
 &
-co)
 Museo Moderno
 Av, Juan de Garay
 Rrasil
@@ -1137,8 +1021,6 @@ Measure distance
 Click on the map
 Total distance: 1.72 km (1.07 mi)
 20
-usina@uerarte
-gue}
 ```
 
 ## Slide 50
@@ -1155,26 +1037,22 @@ We capture beacon messages
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 F | N D) | N G Al RMAX ANTE N NAS ) uv run python -m pyrmax discover ../../packets/ubnt_airmax_devices.pcapng
-78:8a:20:1c:98:1b (CAC)
 radioname ‘AP PTMP-CerritoYsarmiento'
-ssid *PTMP-CerritoYsarmiento*
 ac_msg_types BEACON
 We capture beacon messages ac_version 8
 cap_flags Qx00000002
 mixed_mode @
 frames 84
 first seen 1765842.012760
-last seen 1765842 . 718826
 peers (broadcast only)
 78:8a:20:6c:bd:a9 (CAC)
 radioname ‘AP PTMP-CerritoYcordoba'
-ssid *PTMP-CerritoYcordoba'
 ~ AirMAX AC (Vendor Specific IE) ac_msg_types BEACON
-OUI: 002722 acversion 8
 OUI Type: ffffff cap_flags @x00000002
 > Flags: @x@2 mixed_mode @
 Message Type: Beacon (1) frames 5322
@@ -1207,7 +1085,8 @@ We start the Open-System Auth. and Assoc because the FW version in sent on the I
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 FINGERPRINTING
@@ -1225,7 +1104,6 @@ z Version:
 > IEEE 802.11 Association Response, Flags: ...s.s.. C
 > IEEE 802.11 Wireless Management
 » AirMAX AC (Vendor Specific IE)
-)
 Prope Resp . If QUI: 002722
 OUI Type: ffftfff
 Ruth Req — > Flags: 0x02
@@ -1297,7 +1175,8 @@ ALL TOGETHER - DEMO 2
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING ANOTHER DEVICES
@@ -1312,16 +1191,13 @@ FQ:9F:C2:C8:FQ@:AD 192.168.37.
 104
 .102
 . 100
-JHECVE-2026-21633 Detail
 NIST: NVD
-\=
 RY CNA: HackerOne
 Name
 NanoBeam M5 16 'NanoBeam M5 16'
 UAP-AC-Pro-Gen2 ‘Piaget AP'
 NanoBeam M5 16 'NanoBeam M5 16'
 LiteBeam 5AC 'FaradayLB2'
-‘Si
 ```
 
 ## Slide 58

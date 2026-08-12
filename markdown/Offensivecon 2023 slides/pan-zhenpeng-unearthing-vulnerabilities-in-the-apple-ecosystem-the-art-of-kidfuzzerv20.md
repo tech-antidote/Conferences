@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Offensivecon 2023 slides/Pan Zhenpeng_Unearthing Vulnerabilities in the Apple Ecosystem The Art of KidFuzzerV2.0.pdf"
 pages: 75
 sha256: "b5f07e6e361bec914b8788123b8ecd4f1007aab7787af92e8f8773bb42a449c1"
-text_chars: 25162
+text_chars: 25037
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.9
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:23:59Z"
+converted_at: "2026-08-12T06:00:17Z"
 ---
 # Unearthing Vulnerabilities in the Apple Ecosystem The Art of KidFuzzerV2.0
 
 **Speakers:** Pan Zhenpeng  
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Pan Zhenpeng_Unearthing Vulnerabilities in the Apple Ecosystem The Art of KidFuzzerV2.0.pdf` (75 pages)
+
 
 ## Slide 1
 
@@ -176,7 +181,8 @@ XNU – Hybrid Kernel
 
 Apple Kernel Space Structure
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Kernel Space Structure
@@ -498,7 +504,8 @@ The Basic Idea
 
 # A 20 year old attack surface by code diff
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A 20 year old attack surface by code diff
@@ -508,7 +515,6 @@ result = updateValue(newValue) ;
 else {
 OLog("IOAudioControl[%p]: :hardwareValueChanged(%p) - Error @x%x - invalid value.\n", this, newValue, result);
 ("IoAudioControl: :hardwareValueChanged - Error @x%x - invalid value.\n", result);
-trol: :perfor
 OSNumber *oldNumber, *newNumber;
 if ((oldNumber = OSDynamicCast(OSNumber, getValue())) == NULL) {
 IOLog("IOAudioControl[%p]::performvalueChange(%p) - Error: can't call
@@ -517,7 +523,6 @@ ak;
 if ((newNumber = OSDynamicCast(OSNumber, newValue)) == NULL) {
 IOLog("IOAudioControl[%p]::performvalueChange(%p) - Error: can't call
 IOLog("IOAudioControl: :performvalueChange - Error: can't call handler
-K3
 handler - int
 int handler
 handler - int
@@ -726,7 +731,8 @@ How about XNU?
 
 • ipc_port integer overflow -> memory exhaustion  (latest version)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Extract high level root cause behind the bug
@@ -778,18 +784,17 @@ Q@x000000001d6c0000@\nKernel text base: OxfffffffO246c4000\nKernel text exec sli
 
 • /dev/perfmon OOB Access -> mutex lock panic  (latest version)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Extract high level root cause behind the bug
 - /dev/perfmon OOB Access -> mutex lock panic (latest version)
 {"bug_type":"210","timestamp":"2023-04-18 14:35:06.00 +0800","os_version":"macOS 13.4
-(22F5037d)","roots_installed":@,"incident_id" :"C8D5594E-0E86-456C-B68C-C694CF2D53E8" }
 {
 "build" : "macOS 13.4 (22F5037d)",
 "product" : "Maci13,1",
 "sociId" : "6001",
-"socRevision" "a1".
 "incident" : "C8D5594E-0E86-456C-B68C-C694CF2D53E8",
 "crashReporterKey" : "583C5AAA-F9OBA-FBBE-9308-CC4EE46A74B0",
 "kernel" : “Darwin Kernel Version 22.5.0: Sun Apr 2 19:22:28 PDT 2023; root:xnu-8796.120.31~10\/

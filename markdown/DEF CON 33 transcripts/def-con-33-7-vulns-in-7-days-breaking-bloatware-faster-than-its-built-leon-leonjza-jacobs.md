@@ -12,7 +12,7 @@ duration_seconds: 2392
 words: 7550
 text_chars: 41212
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:12Z"
 ---
 
 # 7 Vulns in 7 Days - Breaking Bloatware Faster Than It’s Built

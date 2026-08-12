@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Ye Zhang,Le Wu,Shupeng Gao,Zheng Huang_Attacking NPUs of Multiple Platforms.pdf"
 pages: 113
 sha256: "e11b9e28a48ae1ae4017eb5b70a69c4555f829d8bd717afaccd2d3f120ca9dc1"
-text_chars: 52511
-ocr_pages: 14
+text_chars: 49621
+ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:54Z"
+converted_at: "2026-08-12T04:05:45Z"
 ---
 # Attacking NPUs of Multiple Platforms
 
@@ -21,11 +26,13 @@ converted_at: "2026-08-11T21:13:54Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ye Zhang,Le Wu,Shupeng Gao,Zheng Huang_Attacking NPUs of Multiple Platforms.pdf` (113 pages)
 
+
 ## Slide 1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
@@ -42,17 +49,6 @@ EXCEL LONDON / UK
 Baidu Security Lab X-Team Ye Zhang,  Le Wu,  Shupeng Gao,  Zheng Huang
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piiek hat
-Attacking NPUs of Multiple
-Platforms
-Baidu Security Lab X-Team
-Ye Zhang, Le Wu, Shupeng Gao, Zheng Huang
-#BHEU @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -134,37 +130,6 @@ equals?
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-5
-=
-Cg
-O
-e
-COleS
-AD
-—
-URAO
-?
-Why NPU
-Basic of CNN(Convolution Neural Network)
-(2
-(Ss
-oO
-oO
-oO
-(S)
-oO
-(S
-oO
-0/0;0/;0}/0}0;0;0/;0
-0;0;0/0}0/0|;0/0]0
-0;0;0/0}0/0|;0/0]0
-al
-Information Classification: Gener:
-```
-
 ## Slide 9
 
 ###### Why NPU?
@@ -175,19 +140,14 @@ Information Classification: Gener:
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE @O25
-Why NPU?
-Basic of CNN(Convolution Neural Network)
 cat face
 cat paw
 cat tail
 => it's a cat
-Information Classification: General
 ```
 
 ## Slide 10
@@ -200,25 +160,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-Why NPU?
-Basic of CNN(Convolution Neural Network)
-black hat
-Information Classification: General
-filter
-Lo] of.
-ojo Ry
-~
-WS 0/o}o]o]o]}0 0|0
-‘\ °s. fo MiRoTololo 0
 ‘\ |0}0]0] 0, 0 0/0
-‘\Jololo 0 o|0
-‘olo ololo 0}0
-OO} 0}0]0 0
-o}o;olo}olo 0}0
 input image
 weight_1 = 1*1 + O*0 + O*0 + O*0 + 1*1 + O*0 + 0*0 + 0*0 + 1*1
 weight_2
@@ -235,24 +181,12 @@ weight_2
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-Why NPU?
-Basic of CNN(Convolution Neural Network)
-filter
-0/;0]
 weight *1*O + O*O + 0*0 + O*0 + O*1 + 1*1 + O*0 + O*0 + 1*1 = 2
-0 0
-0 0
-0 0
-0 0 2)? )2?)...)?
 0 0 output featrue map
-0 0
-input featrue map
-Information Classification: General
 ```
 
 ## Slide 12
@@ -265,23 +199,12 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blckhat
-Why NPU?
-Basic of CNN(Convolution Neural Network)
-filter
-0/0}
-0 .,
 lo weight = T*Q + O*O + 0*0 + O*1 + 1*0 + 0*0 + 0*0 + O*1 + 1*0 = 0
-0 0
-0 0
-0 0 2)? )2?)...)?
 0 0 output featrue map
-0 0
-input featrue map
-Information Classification: General
 ```
 
 ## Slide 13
@@ -294,24 +217,13 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blckhat
-Why NPU?
-Basic of CNN(Convolution Neural Network)
-Information Classification: General
-filter
 0 ss
 weight = 1*O-«_0*0 + 0*0 + 0*0 + 1*0 + 0*0 + O*1 + 0*0 + 1*0 = 0
-2|}0]0 ?
-2?/2?|? ?
 2121? ?
-2)? )2?)...)?
-COLO lSOlOyoloe};eo4yo}Se
-’
-O;JO;O;O;}O}O};O};O0;}O
-input featrue map
 output featrue map
 ```
 
@@ -325,31 +237,19 @@ output featrue map
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-Why NPU?
-Basic of CNN(Convolution Neural Network)
 filter 1 filter 2
 0 0 i 0 | Input Bias
 single neuron model
-o|olololojo|o
-ci Ad
-LY IVIVIVITVITVIYVY
-\ Wk,
 . ~ channels T2
 0 04> Activation
 0 0 0 Output
 filter 3 0 Sum
-o[o] oto HS Win
-0 0
-0 0
-me
 0
 input feature map
-Information Classification: General
 ```
 
 ## Slide 15
@@ -388,20 +288,6 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-Model File
-Training VS Prediction/Inference
-ee
-aes eee ae ee =
-eee eee
-/
-Information Classification: General
-```
-
 ## Slide 17
 
 ###### Hardware Design
@@ -436,26 +322,18 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Hardware Design
 Al processors
-a-----------K~
 7 N
-(a a I Cambricon pee eee .
 ; BEYOND FAST ' i DEEPHi ;
 intel = '
-' IRIS. i | rt AMDi¢1
 ! RADEON Tensor Processing Unit ! A = D A ;
-| t 4 FPGA ;
-oe GPU / I I Swe eee ee eee 2
-alain - ; ASIC ;
 (Application-specific integrated circuit)
 N 7
-Information Classification: General
 ```
 
 ## Slide 19
@@ -508,19 +386,17 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blckhat
 Attack Surface
 [ Raw Input |
-Y
 Apps/Framework e{ Model file |
 User Space Runtime Lib ]
 kernel NPU Driver |
 NPU | NPU Firmware }
 Processor Hardware
-Information Classification: General
 ```
 
 ## Slide 22
@@ -844,22 +720,16 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blckhat
 FW_DRAM DMA buffer
-! 0
-0x0 ee H 0x80000
--ox4oo0-—" -0x2000 -0x1800  -0x1400 —-0x1000 ;
 f2h[1] f2h[0] padding
-ee cmd.payload ‘
 msg cmd msg cmd
-¢ /
 ION DMA buffer
 |
 ION DMA buffer, init by userspace, IOVA dynamically allocated with “dma-window" field in DTS }
-Information Classification: General
 ```
 
 ## Slide 44
@@ -942,13 +812,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Samsung Exynos NPU Firmware
-¢ TASK_mailbox_lowpriority - 8) = viens
 _ _ = msg->data;
 40 [4] = msg->self; .
 . - 41 [5] i call handler with msg.command.
@@ -959,11 +827,8 @@ _ _ = msg->data;
 6 int ; 46 = (**(code **)(param_1 + msg->command * 4 + Oxd60)) ( + Oxd);
 7) uint * ; 47 = param_4;
 10} undefined4 ; 50 my_printk(s_[ERR]%s:%d>cmd_handler_table[%d]_0000fae8,PTR_s_mbx_msghub_req_0000f9e4, 0x7
-11) undefined4 ; 51 ,msg->command, 3
 12) undefined4 [2]; 52 }
 te 53 goto LAB_0000f894;
-re uN. 00003be(1 ) 55 my_printk(s_[ERR]%s:%d>mid_%d_is_not_free_st_0000fa80,PTR_s_mbx_msghub_req_0000f9e4, 0x69,
-7 = *DAT_O 54: 56 »param_4) ;
 18) } 57 = 0x103;
 19) my_printk( tart )1005c,PTR TASK mailbo pr ty_00010058); =l 58 enableIROinterrupts();
 21 = DAT_00010054 + Oxc5; loop to get network request From DMA buffer, l| ¢ Decompile: my_ncp_manager_load - (NPU.bin) % |x] i
@@ -976,13 +841,9 @@ re uN. 00003be(1 ) 55 my_printk(s_[ERR]%s:%d>mid_%d_is_not_free_st_0000fa80,PTR_
 a] oy printk(s MSG(L). +. (dl parse & handle the request 59 = PTR_s_ncp_manager_load_00014710; . ..
 y_P s_MSG(L)_+_[%d]_%t_ , rlocat_18); 60 | if ( == 0) calling another handler accoriding to cmd.
 33) } while ( == 0); 61 = 0; for LOAD is ncp_object_load
-34| my_printk(s_[ERR]%s:%d>mk ub_req_is_fai_000100a4,PTR TASK_mailt Lowpriori 0010058,99, 62 = 0; _ _
-36) my_printk(s_[ERR] 1>BUG! !_0000Ff68,PTR ASK_mailt l rity_00010058, 100) ; 64 do {
 37 /* WARNING: Subroutine does not return */ 65 _ +1:
-38) my_assert(); ~ "
 39}
 an
-Information Classification: General
 ```
 
 ## Slide 50

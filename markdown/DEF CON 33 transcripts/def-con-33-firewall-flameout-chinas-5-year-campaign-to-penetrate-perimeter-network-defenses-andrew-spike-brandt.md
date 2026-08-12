@@ -12,7 +12,7 @@ duration_seconds: 2103
 words: 5277
 text_chars: 30576
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Firewall flameout- China's 5+ year campaign to penetrate perimeter network defenses

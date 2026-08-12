@@ -8,13 +8,18 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Christopher Domas_Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries.pdf"
 pages: 261
 sha256: "b32eb505235b0429ace3e6b7a6e892567a7c57adce7c24e967ae11c91872fafc"
-text_chars: 213366
-ocr_pages: 25
+text_chars: 208526
+ocr_pages: 17
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 6
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:54:11Z"
+converted_at: "2026-08-12T05:11:15Z"
 ---
 # Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries
 
@@ -22,19 +27,10 @@ converted_at: "2026-08-11T22:54:11Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Christopher Domas_Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries.pdf` (261 pages)
 
+
 ## Slide 1
 
 ghosts in the machine check domas / @xoreaxeaxeax / Black Hat 2025 ｛
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-.
-ghosts In the machine check
-{ domas / @xoreaxeaxeax / Black Hat 2025
-S.
-*
-```
 
 ## Slide 2
 
@@ -302,21 +298,6 @@ ffffffffc0b2ee80
 
 machine check exceptions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MC#
-IDT
-ffttffftcObeed40
-CATERR#
-<— CPU ffttffttcObeed8O0
-ONS
-Jel ffftffffcObeedcO
-nS éfftFftfCOb2ee40
-ffffffftcObeee8O
-machine check exceptions
-```
-
 ## Slide 35
 
 MC#
@@ -381,16 +362,6 @@ PCIe
 
 machine check exceptions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Oo
-, CPU
-Sel
-PCle
-machine check exceptions
-```
-
 ## Slide 39
 
 CPU
@@ -399,11 +370,11 @@ SERR#
 
 machine check exceptions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 O
-, CPU
 OS
 Jest |
 PCle
@@ -670,134 +641,52 @@ generating MCEs
 
 ## Slide 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Every @.1s: cat /proc/interrupts
-MIS:
-PIN:
-NPI:
-PIW:
-CPU@
-48
-1
-ol
-eSefpoooononoqnonooqnooqnooqnooqnonoooods
-18
-1328403
-@
-18
-1167887
-)
-6574
-228571
-282
-CPUL
-Q
-Uy)
->
-a
-as
-i)
-i
-b
-Neooonoconoooooqnonoodos
-524713
-a
-16
-597638
-Q
-6263
-472783
-361
-eoo
-| grep --color=always -e "“" -e "MCE.*" ubuntu-usb-3: Sat Aug 2 21:03:46 2025
-cPU2
-Q
-a
-a
-Q
-a
-a
-a
-Q
-a
-a
-1365
-31
-a
-HAoooosds
-10
-484269
-a
-10
-473827
-a
-6254
-380810
-370
-eoo
-CPU3
-a
-a
-a
-)
-536049
-eooooo0nonononoo
-b
->
-S
-oa
-Oo
-eoo
-)
-12
-884136
-a
-12
-553122
-a
-5074
-324352
-345
-eoo
-I0-APIC 2-edge timer
-I0-APIC 8-edge rtcd
-I0-APIC 9-fasteoi acpi
-IO-APIC 16-fasteoi snd_hda_intel:card1
-IO-APIC 18-fasteoi ehci_hcd:usb1, ehci_hcd:usb2
-PCI-MSI 34816-edge PCIe PME, pciehp
-PCI-MSI 36864-edge PCIe PME, pciehp
-PCI-MSI 38912-edge PCIe PME, pciehp
-PCI-MSI 40960-edge PCIe PME, pciehp
-PCI-MSI 43008-edge PCIe PME, pciehp
-PCI-MSI 278528-edge ahcil0000:00:11.0]
-PCI-MSI 262144-edge xhei_hed
-PCI-MSI 262145-edge xhci_hed
-PCI-MSI 262146-edge xhci_hed
-PCI-MSI 262147-edge xhei_hed
-PCI-MSI 262148-edge xhei_hed
-PCI-MSI 2097152-edge enp4s0
-PCI-MSI 131073-edge cecp-1
-PCI-MSI 18432-edge snd_hda_intel:card@
-PCI-MSI 16384-edge radeon
-Non-maskable interrupts
-Local timer interrupts
-Spurious interrupts
-Performance monitoring interrupts
-IRQ work interrupts
-APIC ICR read retries
-Rescheduling interrupts
-Function call interrupts
-TLB shootdowns
-Thermal event interrupts
-Threshold APIC interrupts
-Deferred Error APIC interrupts
-Machine check exceptions
-Machine check polls
-Posted-interrupt notification event
-Nested posted-interrupt event
-Posted-interrupt wakeup event
+Every 0.1s: cat /proc/interrupts  | grep --color=always -e "^" -e "MCE.*"   ubuntu-usb-3: Sat Aug  2 21:03:46 2025
+
+            CPU0       CPU1       CPU2       CPU3
+   0:         48          0          0          0   IO-APIC    2-edge      timer
+   8:          1          0          0          0   IO-APIC    8-edge      rtc0
+   9:          0          0          0          0   IO-APIC    9-fasteoi   acpi
+  16:          0        446          0          0   IO-APIC   16-fasteoi   snd_hda_intel:card1
+  18:          0          0          0     536049   IO-APIC   18-fasteoi   ehci_hcd:usb1, ehci_hcd:usb2
+  25:          0          0          0          0   PCI-MSI 34816-edge      PCIe PME, pciehp
+  27:          0          0          0          0   PCI-MSI 36864-edge      PCIe PME, pciehp
+  29:          0          0          0          0   PCI-MSI 38912-edge      PCIe PME, pciehp
+  31:          0          0          0          0   PCI-MSI 40960-edge      PCIe PME, pciehp
+  32:          0          0          0          0   PCI-MSI 43008-edge      PCIe PME, pciehp
+  33:          0        220       1365          0   PCI-MSI 278528-edge      ahci[0000:00:11.0]
+  34:          0          0         31          0   PCI-MSI 262144-edge      xhci_hcd
+  35:          0          0          0          0   PCI-MSI 262145-edge      xhci_hcd
+  37:          0          0          0          0   PCI-MSI 262146-edge      xhci_hcd
+  38:          0          0          0          0   PCI-MSI 262147-edge      xhci_hcd
+  39:          0          0          0          0   PCI-MSI 262148-edge      xhci_hcd
+  40:          0          0          0     140590   PCI-MSI 2097152-edge      enp4s0
+  42:          0          0          0          0   PCI-MSI 131073-edge      ccp-1
+  44:         54          0          0          0   PCI-MSI 18432-edge      snd_hda_intel:card0
+  46:          0          0          6          0   PCI-MSI 16384-edge      radeon
+ NMI:         18         16         10         12   Non-maskable interrupts
+ LOC:    1328403     524713     484269     884136   Local timer interrupts
+ SPU:          0          0          0          0   Spurious interrupts
+ PMI:         18         16         10         12   Performance monitoring interrupts
+ IWI:    1167887     597638     473827     553122   IRQ work interrupts
+ RTR:          0          0          0          0   APIC ICR read retries
+ RES:       6574       6263       6254       5074   Rescheduling interrupts
+ CAL:     228571     472783     380810     324352   Function call interrupts
+ TLB:        282        361        370        345   TLB shootdowns
+ TRM:          0          0          0          0   Thermal event interrupts
+ THR:          0          0          0          0   Threshold APIC interrupts
+ DFR:          0          0          0          0   Deferred Error APIC interrupts
+ MCE:          0          0          0          0   Machine check exceptions          [highlighted in red]
+ MCP:        422        422        422        422   Machine check polls
+ ERR:          0
+ MIS:          0
+ PIN:          0          0          0          0   Posted-interrupt notification event
+ NPI:          0          0          0          0   Nested posted-interrupt event
+ PIW:          0          0          0          0   Posted-interrupt wakeup event
 ```
 
 ## Slide 65
@@ -2065,7 +1954,8 @@ generating MCEs
 
 generating MCEs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 -~Latasheets suggest MCEs can be generated
@@ -2082,7 +1972,6 @@ ciated data all 1s independent of the state of the control bit.
 Target Abort _ |Target abort seen as result of link operation. The NB returns an |TgtAbortEn
 error response back to the requestor with any associated data
 all 1s independent of the state of the control bit.
-52740_16h_Models_30h-3Fh_BKDG.pdf
 generating MCES
 ```
 
@@ -2184,7 +2073,8 @@ generating MCEs
 
 generating MCEs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 deltaop@ubuntu-usb-3:~/_research$ []
@@ -2194,218 +2084,95 @@ deltaop@ubuntu-usb-3:~/_research$ []
 
 generating MCEs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Mmmm mmm mmm mmm mmm mmm mmm mM MMMM MAM MMMM MMM I
-PREPBRBBPRBPBBBBBBBBBBRBPBBBBBPBBBBPRBPBBBBBBBBEBBEBE
-237854]
-. 239084]
-. 239306]
-. 253738 ]
-. 253884]
-. 255088 ]
-255332]
-. 286843]
-. 302307]
-. 302384]
-. 302474]
-. 302615]
-. 302656]
-. 303316]
-. 303383]
-. 303436]
-. 304778]
-. 306110]
-. 306121]
-. 308865]
-. 308960]
-. 310145]
-. 312692]
-. 313970]
-315468]
-. 318427]
-. 321297]
-. 323917]
-. 325293]
-. 326727]
-. 328228]
-. 329770]
-. 331339]
-. 332919]
-. 334496]
-. 336069]
-. 337638]
-. 341052]
-. 343135]
-. 344773]
-. 346446]
-. 354527]
-: New USB device strings: MEr=0, Product=@, SerialNumber=0 —
-: New USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
-usb 1-1
-hub 1-1:1.@: USB hub found
-hub 1-1:1.0: 4 ports detected
-usb 2-1
-usb 2-1: New USB device strings: Mfr=@, Product=0, SerialNumber=0
-hub 2-1:1.@: USB hub found
-hub 2-1:1.0: 4 ports detected
-Freeing initrd memory: 85444K
-Segment Routing with IPv6
-In-situ OAM (IOAM) with IPv6
-NET: Registered PF_PACKET protocol family
-Key type dns_resolver registered
-x86/pm: family @x16 cpu detected, MSR saving is needed during suspending.
-microcode: CPU@: patch_level=0x07030105
-microcode: CPU1: patch_level=0x07030105
-microcode: CPU2: patch_level=0x07030105
-microcode: CPU3: patch_level=0x07030105
-microcode: Microcode Update Driver: v2.2.
-IPI shorthand broadcast: enabled
-mce: [Hardware Error]: Machine check events logged
-registered taskstats version 1
-mce: [Hardware Error]: CPU 1: Machine Check: @ Bank @: b60000000000083b
-mce: [Hardware Error]: TSC @ ADDR fdfc000
-cfc
-mce: [Hardware Error]: PROCESSOR 2:730f01 TIME 1753409480 SOCKET @ APIC 1 microcode 7030105
-Loading compiled-in X.509 certificates
-Loaded X.5@9 cert ‘Build time qutogenerated kernel key: d5862910adca7ee16194da1e1a805db529424367'
-Loaded X.509 cert ‘Canonical Ltd. Live Patch Signing: 14d£34d1087cf£37625abecO39ef2bf521249b969 '
-Loaded X.5@9 cert ‘Canonical Ltd. Kernel Module Signing: 88£752e560a1e0737e31163a466ad7b70a850c19'
-blacklist: Loading compiled-in revocation X.509 certificates
-Loaded X.5@9 cert ‘Canonical Ltd. Secure
-Loaded X.509 cert ‘Canonical Ltd. Secure
-Loaded X.5@9 cert ‘Canonical Ltd. Secure
-Loaded X.5@9 cert 'Canonical Ltd. Secure
-Loaded X.509 cert ‘Canonical Ltd. Secure
-Loaded X.5@9 cert ‘Canonical Ltd. Secure
-Loaded X.509 cert ‘Canonical Ltd. Secure
-Loaded X.5@9 cert ‘Canonical Ltd. Secure
-zswap: loaded using pool 1zo/zbud
-Key type .fscrypt registered
-Key type fscrypt-provisioning registered
-Key type trusted registered
-Key type encrypted registered
-Boot
-Boot
-Boot
-Boot
-Boot
-Boot
-Boot
-Boot
-Signing:
-Signing
-Signing
-Signing
-Signing
-Signing
-Signing
-Signing
-61482aa2830d@ab2ad5af10b7250da9033ddcefa'
-(2017): 242ade75ac4a15e50d50c84b0d45f f3eae707a03'
-(ESM 2018): 365188c1d374d6b07c3c8f£240f8ef722433d6a8b'
-(2019): c@746£d6c5da3ae827864651ad66ae47fe24b3e8'
-(2021 v1): a8d54bbb3825cf£b94fa13c9f£8a594a195c107b8d'
-(2021 v2): 4cf£046892d6£d3c9a5b03£98d845£90851dc6a8c '
-(2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af '
-(Ubuntu Core 2019): c1d57b8£6b743f£23ee41£4f7ee292f06eecadfb9'
+[Kernel dmesg output; first line is cut off at the top edge of the screen.]
+
+[[illegible timestamp]] usb 1-1: New USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
+[    1.237854] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.239084] hub 1-1:1.0: USB hub found
+[    1.239306] hub 1-1:1.0: 4 ports detected
+[    1.253738] usb 2-1: New USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
+[    1.253884] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.255088] hub 2-1:1.0: USB hub found
+[    1.255332] hub 2-1:1.0: 4 ports detected
+[    1.286843] Freeing initrd memory: 85444K
+[    1.302307] Segment Routing with IPv6
+[    1.302384] In-situ OAM (IOAM) with IPv6
+[    1.302474] NET: Registered PF_PACKET protocol family
+[    1.302615] Key type dns_resolver registered
+[    1.302656] x86/pm: family 0x16 cpu detected, MSR saving is needed during suspending.
+[    1.303316] microcode: CPU0: patch_level=0x07030105
+[    1.303383] microcode: CPU1: patch_level=0x07030105
+[    1.303436] microcode: CPU2: patch_level=0x07030105
+[    1.304778] microcode: CPU3: patch_level=0x07030105
+[    1.306110] microcode: Microcode Update Driver: v2.2.
+[    1.306121] IPI shorthand broadcast: enabled
+[    1.308865] mce: [Hardware Error]: Machine check events logged
+[    1.308960] registered taskstats version 1
+[    1.310145] mce: [Hardware Error]: CPU 1: Machine Check: 0 Bank 0: b60000000000083b
+[    1.312692] mce: [Hardware Error]: TSC 0 ADDR fdfc000cfc
+[    1.313970] mce: [Hardware Error]: PROCESSOR 2:730f01 TIME 1753409480 SOCKET 0 APIC 1 microcode 7030105
+[    1.315468] Loading compiled-in X.509 certificates
+[    1.318427] Loaded X.509 cert 'Build time autogenerated kernel key: d5862910adca7ee16194da1e1a805db529424367'
+[    1.321297] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    1.323917] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    1.325293] blacklist: Loading compiled-in revocation X.509 certificates
+[    1.326727] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    1.328228] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    1.329770] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    1.331339] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    1.332919] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    1.334496] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    1.336069] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    1.337638] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    1.341052] zswap: loaded using pool lzo/zbud
+[    1.343135] Key type .fscrypt registered
+[    1.344773] Key type fscrypt-provisioning registered
+[    1.346446] Key type trusted registered
+[    1.354527] Key type encrypted registered
+
+[The "mce:" prefixes on the three Machine Check lines are highlighted in red. A further line is cut off at the bottom edge.]
 ```
 
 ## Slide 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
---- MC@ (load-store) ---
-[core ]
-mc@_ctl
-mcQ_status
-mcQ_addr
-mcO_misc
-mcQ_mask
-[core 1]
-mc@_ctl
-mcQ_status
-mc@_addr
-mcQ_misc
-mc@_mask
-[core 2]
-mc@_ctl
-mcQ_status
-mc@_addr
-mcO_misc
-mc@_mask
-[core 3]
-mc@_ctl
-mcQ_status
-mc@_addr
-mcQ_misc
-mcQ_mask
-(00000400) :
-(00000401):
-(00000402) :
-(00000403) :
-(c@010044):
-(00000400) :
-(00000401) :
-(00000402) :
-(00000403) :
-(c0010044):
-(00000400) :
-(00000401):
-(00000402) :
-(00000403) :
-(c0010044):
-(00000400) :
-(00000401):
-(00000402) :
-(00000403) :
-(c0010044):
-eo
-Nm oO
-on
-a
-ef
-XXXXXX XXXXXXX
-NM
-©
-ar
-Nr
-Y)
-®@ @
-XXXXXXX XX
-XXXXXXX XX
-QADAMA A
-(
-fec)
-Q)
-0)
-0)
-0)
-fec)
-XX = XXXXXX
-(b60000000000083b )
-(
-fdfc@00cfc)
-XXXXXXX XX
-XXXXXXX XX
-t
-(
-QAAMTI A
-AAAI
-U)
-Q)
-fec)
-Q)
-Q)
-0)
-0)
-fec)
-Q)
-Q)
-))
-Q)
+--- MC0 (load-store) ---
+                                6   5   5   4   4   4   3   3   2   2   2   1   1   0   0   0
+                                0   6   2   8   4   0   6   2   8   4   0   6   2   8   4   0
+  [core 0]
+         mc0_ctl (00000400):                                                     xxxxxxx xx   (             fec)
+      mc0_status (00000401):                                                                  (               0)
+        mc0_addr (00000402):                                                                  (               0)
+        mc0_misc (00000403):                                                                  (               0)
+        mc0_mask (c0010044):                                                                  (               0)
+
+  [core 1]
+         mc0_ctl (00000400):                                                     xxxxxxx xx   (             fec)
+      mc0_status (00000401): x xx xx                                             x     xxx xx (b60000000000083b)
+        mc0_addr (00000402):                         xxxxxx xxxxxxx              xx  xxxxxx   (      fdfc000cfc)
+        mc0_misc (00000403):                                                                  (               0)
+        mc0_mask (c0010044):                                                                  (               0)
+
+  [core 2]
+         mc0_ctl (00000400):                                                     xxxxxxx xx   (             fec)
+      mc0_status (00000401):                                                                  (               0)
+        mc0_addr (00000402):                                                                  (               0)
+        mc0_misc (00000403):                                                                  (               0)
+        mc0_mask (c0010044):                                                                  (               0)
+
+  [core 3]
+         mc0_ctl (00000400):                                                     xxxxxxx xx   (             fec)
+      mc0_status (00000401):                                                                  (               0)
+        mc0_addr (00000402):                                                                  (               0)
+        mc0_misc (00000403):                                                                  (               0)
+        mc0_mask (c0010044):                                                                  (               0)
 ```
 
 ## Slide 86
@@ -2424,7 +2191,8 @@ Q)
 
 Let’s build a hammer… Let's add a handle…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s build a hammer...
@@ -2443,205 +2211,105 @@ Let's add a handle...
 
 ## Slide 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Ammmmmmmmmmmmmm mmm mmmmm mmm mmm mmm m mmm mmm meee
-PREPRPRPRBRBRBPRBRBPBPRPBRBBPBPBBBBBBBRBPBBBEBEBPBPBBBBBBBBBBEBEEE!
-234111]
-.235420]
-. 236579]
-. 245835]
-. 245977]
-247335]
-. 248317]
-- 279300] Freeing
-. 293227]
-. 293304]
-293388]
-.293539] Key type dns_resolver registered
-- 293580] family 0x16 cpu detected, MSR saving is needed during suspending.
-. 294209]
-.294261]
-.294314]
-. 295677]
-.297001]
-.297012]
-.299767] mce
-.299871]
-. 300976]
-KURKKYAl
-. 304506]
-. 305953]
-. 308733]
-333134] Key type
--334719] Key type
-. 336350] Ke
-- 344522] Key type
-. 346149] AppArmor:
-.351789] integrity: Loading X.509 certificate: UEFI:db
-usb
-hub
-hub
-usb
-usb
-hub
-hub
-teeter ein ee ieee nnn fir he eli en keds f
-: New
-:1.0:
-71.0:
-: New
-: New
-:1.0@: USB hub found
-1.0: 4 ports detected
-initrd memory: 85444K
-Segment Routing with IPv6
-In-situ OAM (IOAM) with IPv6
-NET: Registered PF_PACKET protocol family
-USB hub found
-4 ports detected
-2- 1:
-x86/pm:
-microcode: CPUQ@: patch_level=0x07030105
-microcode: CPU1: patch_level=0x07030105
-microcode: CPU2: patch_level=0x07030105
-microcode: CPU3: patch_level=0x07030105
-microcode: Microcode Update Driver: v2.2.
-IPI shorthand broadcast: enabled
-: [Hardware Error]: Machine check events lo
-registered taskstats version 1
-mce: [Hardware Error]: TSC @ ADDR fdfc00cfc
-mce:
-Loading compiled-in X.509 certificates
--fscrypt registered
-fscrypt-provisioning registered
-trusted registered
-encrypted registered
-AppArmor shal policy hashing enabled
-y type
-gged
-USB device strings: Mfr=@, Product=@, SerialNumber=0
-USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
-USB device strings: Mfr=@, Product=@, SerialNumber=0
-mce: [Hardware Error]: CPU @: Machine Check: @ Bank 4: b70000110003081b
-[Hardware Error]: PROCESSOR 2:730£01 TIME 1753410695 SOCKET @ APIC @ microcode 7030105
-Loaded X.509 cert 'Build time autogenerated kernel key: d586291@adca7ee16194da1e1a805db529424367'
-311337] Loaded X.509 cert ‘Canonical Ltd. Live Patch Signing: 14d£34d1a87c£37625abecO39ef2b£521249b969'
-. 313937] Loaded X.509 cert ‘Canonical Ltd. Kernel Module Signing: 88£752e560a1e0737e31163a466ad7b70a850c19'
-- 315301] blacklist: Loading compiled-in revocation X.509 certificates
-. 316739] Loaded X.509 cert ‘Canonical Ltd. Secure Boot Signing: 61482aa283@d@ab2ad5af10b7250da9033ddcefa'
-. 318252] Loaded X.5@9 cert ‘Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45f f3eae707a03'
-. 319787] Loaded X.5@9 cert ‘Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
-. 321366] Loaded X.509 cert ‘Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47£e24b3e8 '
-. 322941] Loaded X.509 cert ‘Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9£8a594a195c107b8d'
-- 324520] Loaded X.509 cert ‘Canonical Ltd. Secure Boot Signing (2021 v2): 4cf£046892d6fd3c9a5b03£98d845£90851dc6a8c'
-. 326093] Loaded X.509 cert ‘Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
-. 327659] Loaded X.5@9 cert ‘Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8£6b743f23ee41£4£7ee292f06eecad£b9'
-. 331069] zswap: loaded using pool 1z0/zbud
+[Kernel dmesg output; the first line is partially cut off at the top edge of the screen.]
+
+[    1.233976] usb 1-1: New USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
+[    1.234111] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.235420] hub 1-1:1.0: USB hub found
+[    1.236579] hub 1-1:1.0: 4 ports detected
+[    1.245835] usb 2-1: New USB device found, idVendor=0438, idProduct=7900, bcdDevice= 0.18
+[    1.245977] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.247335] hub 2-1:1.0: USB hub found
+[    1.248317] hub 2-1:1.0: 4 ports detected
+[    1.279300] Freeing initrd memory: 85444K
+[    1.293227] Segment Routing with IPv6
+[    1.293304] In-situ OAM (IOAM) with IPv6
+[    1.293388] NET: Registered PF_PACKET protocol family
+[    1.293539] Key type dns_resolver registered
+[    1.293580] x86/pm: family 0x16 cpu detected, MSR saving is needed during suspending.
+[    1.294209] microcode: CPU0: patch_level=0x07030105
+[    1.294261] microcode: CPU1: patch_level=0x07030105
+[    1.294314] microcode: CPU2: patch_level=0x07030105
+[    1.295677] microcode: CPU3: patch_level=0x07030105
+[    1.297001] microcode: Microcode Update Driver: v2.2.
+[    1.297012] IPI shorthand broadcast: enabled
+[    1.299767] mce: [Hardware Error]: Machine check events logged
+[    1.299871] registered taskstats version 1
+[    1.300976] mce: [Hardware Error]: CPU 0: Machine Check: 0 Bank 4: b70000110003081b
+[    1.303337] mce: [Hardware Error]: TSC 0 ADDR fdfc000cfc
+[    1.304506] mce: [Hardware Error]: PROCESSOR 2:730f01 TIME 1753410695 SOCKET 0 APIC 0 microcode 7030105
+[    1.305953] Loading compiled-in X.509 certificates
+[    1.308733] Loaded X.509 cert 'Build time autogenerated kernel key: d5862910adca7ee16194da1e1a805db529424367'
+[    1.311337] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    1.313937] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    1.315301] blacklist: Loading compiled-in revocation X.509 certificates
+[    1.316739] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    1.318252] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    1.319787] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    1.321366] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    1.322941] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    1.324520] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    1.326093] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    1.327659] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    1.331069] zswap: loaded using pool lzo/zbud
+[    1.333134] Key type .fscrypt registered
+[    1.334719] Key type fscrypt-provisioning registered
+[    1.336350] Key type trusted registered
+[    1.344522] Key type encrypted registered
+[    1.346149] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.351789] integrity: Loading X.509 certificate: UEFI:db
+
+[The "mce:" prefixes on the three Machine Check lines are highlighted in red.]
 ```
 
 ## Slide 90
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 --- MC4 (northbridge) ---
-[core @]
-me4_ctl
-mc4_status
-mc4_addr
-mc4_misc®
-mc4_misc1
-mc4_misc2
-mc4_mask
-[core 1]
-me4_ctl
-mc4_status
-mc4_addr
-mc4_misc®
-mc4_misc1
-mc4_misc2
-mc4_mask
-[core 2]
-me4_ctl
-mc4_status
-mc4_addr
-mc4_misc®
-mc4_misc1
-mc4_misc2
-mc4_mask
-[core 3]
-mce4_ctl
-mc4_status
-mc4_addr
-mc4_misc®
-mc4_miscl
-mc4_misc2
-mc4_mask
-(00000410) :
-(00000411):
-(00000412):
-(00000413):
-(c@000408) :
-(c@Q00409) :
-(c@010048) :
-(00000410) :
-(00000411):
-(00000412):
-(00000413):
-(c0000408) :
-(c@Q00409) :
-(c@010048) :
-(00000410) :
-(00000411):
-(00000412):
-(00000413):
-(c@Q00408) :
-(c@000409) :
-(c0010048) :
-(00000410) :
-(00000411):
-(00000412) :
-(00000413):
-(c@Q00408) :
-(c0000409) :
-(c0010048) :
-XXXXXXXXKXXXXXXXKXKXKXXKXKXKXKXKXXKXKXKXKXXXX,
-( f£fffffff)
-XXXXXX XXXXXXX
-(b7@000110003081b)
-( fdfc000cfc)
-x
-x
-( cULQUUBBULBBUUUU )
-( 10000001000000)
-( Q)
-( 4000000)
-0)
-0)
-Q)
-1000000)
-1000000)
-0)
-0)
-LAQTDAIINIS
-0)
-0)
-0)
-1000000)
-1000000)
-0)
-Q)
-AQTDAIIIS
-Q)
-0)
-Q)
-1000000)
-1000000)
-oD)
-oD)
-LADADI IIS
+                                6   5   5   4   4   4   3   3   2   2   2   1   1   0   0   0
+                                0   6   2   8   4   0   6   2   8   4   0   6   2   8   4   0
+  [core 0]
+         mc4_ctl (00000410):                                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (        ffffffff)
+      mc4_status (00000411): x xx xxx                   x   x              xx    x      xx xx (b70000110003081b)
+        mc4_addr (00000412):                         xxxxxx xxxxxxx              xx  xxxxxx   (      fdfc000cfc)
+       mc4_misc0 (00000413): xx         xx x                        x                         (c01a000001000000)
+       mc4_misc1 (c0000408):            x                           x                         (  10000001000000)
+       mc4_misc2 (c0000409):                                                                  (               0)
+        mc4_mask (c0010048):                                      x                           (         4000000)
+
+  [core 1]
+         mc4_ctl (00000410):                                                                  (               0)
+      mc4_status (00000411):                                                                  (               0)
+        mc4_addr (00000412):                                                                  (               0)
+       mc4_misc0 (00000413):                                        x                         (         1000000)
+       mc4_misc1 (c0000408):                                        x                         (         1000000)
+       mc4_misc2 (c0000409):                                                                  (               0)
+        mc4_mask (c0010048):                                                                  (               0)
+
+  [core 2]
+         mc4_ctl (00000410):                                                                  (               0)
+      mc4_status (00000411):                                                                  (               0)
+        mc4_addr (00000412):                                                                  (               0)
+       mc4_misc0 (00000413):                                        x                         (         1000000)
+       mc4_misc1 (c0000408):                                        x                         (         1000000)
+       mc4_misc2 (c0000409):                                                                  (               0)
+        mc4_mask (c0010048):                                                                  (               0)
+
+  [core 3]
+         mc4_ctl (00000410):                                                                  (               0)
+      mc4_status (00000411):                                                                  (               0)
+        mc4_addr (00000412):                                                                  (               0)
+       mc4_misc0 (00000413):                                        x                         (         1000000)
+       mc4_misc1 (c0000408):                                        x                         (         1000000)
+       mc4_misc2 (c0000409):                                                                  (               0)
+        mc4_mask (c0010048):                                                                  (               0)
 ```
 
 ## Slide 91
@@ -2654,7 +2322,8 @@ LADADI IIS
 
 Let’s build a hammer… Let's add a handle… Let’s … be a bit more careful
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s build a hammer...
@@ -2800,35 +2469,23 @@ staying alive
 
 ## Slide 99
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every @.1s: cat /proc/interrupts | grep --color=always -e "“" -e "MCE.*" ubuntu-usb-3: Sat Aug 2 22:21:36 2025
 CPU@ CPUL cPU2 CPU3
 Q: 48 @ ) @ I0-APIC 2-edge timer
 8: 1 ) @ @ I0-APIC 8-edge rtcd
-9: ) Q a @ I0-APIC 9-fasteoi acpi
 16: 1) 422 ) @ IO-APIC 16-fasteoi snd_hda_intel:card1
-18: ) @ v) 33318 IO0-APIC 18-fasteoi ehci_hcd:usb1, ehci_hcd:usb2
 25: Q @ Q Q@ PCI-MSI 34816-edge PCIe PME, pciehp
-ra () @ ) Q@ PCI-MSI 36864-edge PCIe PME, pciehp
 29: @ @ @ @ PCI-MSI 38912-edge PCIe PME, pciehp
 31: Q @ v) Q@ PCI-MSI 40960-edge PCIe PME, pciehp
 32: ) @ Q Q@ PCI-MSI 43008-edge PCIe PME, pciehp
-33: () 327 10 @ PCI-MSI 278528-edge ahcil@000:00:11.0]
 34: () @ 32 @ PCI-MSI 262144-edge xhei_hed
-35: 1) 1) ) @  PCI-MSI 262145-edge xhci_hed
-36: a () ) Q@ PCI-MSI 262146-edge xhei_hed
-a7; () Q ) @  PCI-MSI 262147-edge xhci_hed
-38: Q Q Q @  PCI-MSI 262148-edge xhci_hed
-40: 1) 1) ) 993  PCI-MSI 2097152-edge enp4s0
-42: () Q ) Q@ PCI-MSI 131073-edge ccp-1
-44: 54 Q ) Q@ PCI-MSI 18432-edge snd_hda_intel:cardQ
+38: Q Q Q @ PCI-MSI 262148-edge xhci_hed
 46: ) ) 6 Q@ PCI-MSI 16384-edge radeon
-NMI: ) ) @ @ Non-maskable interrupts
 LOC: 15297 14171 15864 18674 Local timer interrupts
-SPU: Q Q a ® Spurious interrupts
-PMI: 1) ) ) @ Performance monitoring interrupts
 IWI: 3944 3774 3989 3742 IRQ work interrupts
 RTR: ) @ @ Q@ APIC ICR read retries
 RES: 1177 1419 1500 1178 Rescheduling interrupts
@@ -2837,15 +2494,11 @@ TLB: 208 146 152 179 TLB shootdowns
 TRM: @ @ @ @ Thermal event interrupts
 THR: @ @ @ @ Threshold APIC interrupts
 DFR: 1) ) ) @ Deferred Error APIC interrupts
-MCE: () () U) @ Machine check exceptions
 MCP: 1 1 1 1 Machine check polls
-ERR: )
 MIS: Q
-PIN: 1) Q ) @ Posted-interrupt notification event
 NPI: @ ) ) @ Nested posted-interrupt event
 PIW: @ @ @ @ Posted-interrupt wakeup event
 deltaop@ubuntu-usb-3:~/_research$ []
-"ubuntu-usb-3" 22:21 @2-Aug-259f
 ```
 
 ## Slide 100
@@ -2874,7 +2527,8 @@ selecting a target
 
 Let’s build a hammer… Let's add a handle… Let’s be a bit more careful… Let’s find a nail…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 _et’s build ahammer...
@@ -3339,16 +2993,10 @@ RAM
 
 system management mode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-[demo]
-system management palelel=
-```
-
 ## Slide 123
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 deltaop@ubuntu-usb-3:~/_research$ []
@@ -3771,7 +3419,8 @@ Thread 1 (attacker) Thread 0 (victim) begin ??? instruction out b2 (trigger SMI)
 
 Let’s build a hammer… Let's add a handle… Let’s be a bit more careful… Let’s find a nail… Let’s light a fuse…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | et’s build ahammer...
@@ -3827,192 +3476,65 @@ building a fuse
 
 ## Slide 167
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 73/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-20000000 -
-- 2600
-2000000 -
-j- 2400
-24000000 -
-|- 2200
-6000000 -
-i- 2000
-8000000 -
-- 1800
-0000000 -
-- 1600
-000000 -
-2e000000 - ihe
-£0000000 - 1 1
-@ 40 8 cO 100 140 180 1c 200
-- 2400
-- 2200
-}- 2000
-- 1800
-- 1600
-- 1400
-}- 2400
-- 2200
-- 2000
-- 1800
-- 1600
-- 1400
-- 2400
-}- 2200
-- 2000
-- 1800
-- 1600
-- 1400
-- 2400
-}- 2200
-- 2000
-- 1800
-~ 1600
-- 1400
-- 2200
-- 2000
-- 1800
-- 1600
-- 1400
-2420000 -
-:
-e42d8000 - - 1800
-4260000 -
-42e8000 - ~ 1600
-€42£0000 -
-428000 - pa
-€4300000 ttt tts
-- 2000
-- 1800
-: - 1600
-~ 1400
-9480000 -
-9488000 - - 2200
-9490000 - 000
-9498000 - _
-940000 - - 1800
-9408000 - 600
-9460000 - ;
-9468000 - - 1400
-— =
-94000009 ts
-€9680000 -
-9688000 - - 2400
-9690000 - - 2200
-9698000 - cae
-9600000 -
-9608000 - ped
-9660000 - =a ~ 1600
-e96b8000- " . - 1400
-29600007 1 1 1
-€940000 -
-- 2000
-€948000 -
-€9¢50000 -
-- 1800
-€9c58000 -
-€9c60000 -
-- 1600
-€968000 -
-970000 -
-- 1400
-9278000 -
-9800009 1 1 pn nn
-9640000 - .
-e9e48000- * po
-e9e50000- * + 2200
-9¢58000 - Loon
-9260000 -
-- 1800
-9268000 -
-9270000 - . ~ 1600
-€9¢78000 - = . - 1400
-€9¢80000 ttn ns
-20440000 - =
-20448000 - - 2500
-20450000 -
-+ 2250
-20458000 -
-€0460000 - ~ 2000
-20468000 - Lon
-20470000 -
-20478000 - pe
-204800007 tt ts
-eab80000 -
-eab88000 - pes
-eab90000 - - 1700
-eab98000 -
-- 1600
-eabag00d -
-eaba8000 - - 1500
-eabb0000 - L oeey
-ccbb80)) ——
-0600000 tt ttn 7 80
-6200000 -
-6208000 - pes
-eb210000 - Ley
-6218000 -
-b220000 - 808)
-6228000 - ae
-6230000 -
-6238000 - == ~ 1400
-eb2400007 tt
-eb400000 -
-eb408000 - - 2400
-eb410000 - Ly
-6418000 -
-- 2000
-eb420000 -
-6428000 - po)
-eb430000 - is ~ 1600
-6438000 - - 1400
-6440000 +
-eb7c0000 -
-eb7c8000 - - 2200
-eb7d0000 -
-eb7d8000 - po
-eb7e0000 - - 1800
-eb7e8000 - ——e
-eb7£0000 - hence
-eb7£8000 - - 1400
-eb8000005 kt
-ebc00000 -
-ebc08000 - Lewy
-ebc10000 - z
-ebc18000 - - 1800
-ebc20000 - 5
-ebc28000 - : - 1600
-ebc 30000 - 7
-ebc38000 - 7 1400
-2bc400007 tt ts
-ec0c0000 -
-ec0c8000 - | 1700
-ec0d0000 -
-ec0d8000 - pe
-ec0e0000 -
-20028000 —_ 1500
-ec0£0000 - = 1400
-ec0£8000 -
-, as
-ee£40000 -
-ef 48000 -
-eef50000 - ij 2588)
-ccf5800- ——— = =
-ecf60000 - = - 1600
-ee £68000 -
-ec£70000 - Leng
-ee£78000 -
-ecf800007 1 1 te tt
-£60000 -
-£60800 - | 2000
-£61000 -
-£61800 - | 1800
-£62000 -
-2£628000 - pe
-£63000 - =
-£63600 = = 7 4400
-£64000 +
+[Slide is a grid of memory-timing heatmaps (matplotlib). No prose text; only axis
+tick labels and colour-bar tick labels are visible.]
+
+[Large plot, left]
+y-axis ticks: e0000000, e2000000, e4000000, e6000000, e8000000, ea000000, ec000000, ee000000, f0000000
+x-axis ticks: 0, 40, 80, c0, 100, 140, 180, 1c0, 200
+colour bar: 1400, 1600, 1800, 2000, 2200, 2400, 2600
+
+[Grid of small plots, column 1 of 4]
+Plot 1 - y: e0000000, e0008000, e0010000, e0018000, e0020000, e0028000, e0030000, e0038000, e0040000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 2 - y: e0a80000, e0a88000, e0a90000, e0a98000, e0aa0000, e0aa8000, e0ab0000, e0ab8000, e0ac0000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 3 - y: e1e00000, e1e08000, e1e10000, e1e18000, e1e20000, e1e28000, e1e30000, e1e38000, e1e40000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 4 - y: e3200000, e3208000, e3210000, e3218000, e3220000, e3228000, e3230000, e3238000, e3240000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 5 - y: e3400000, e3408000, e3410000, e3418000, e3420000, e3428000, e3430000, e3438000, e3440000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200
+
+[Column 2 of 4]
+Plot 1 - y: e42c0000, e42c8000, e42d0000, e42d8000, e42e0000, e42e8000, e42f0000, e42f8000, e4300000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000
+Plot 2 - y: e8b00000, e8b10000, e8b20000, e8b30000, e8b40000, e8b50000, e8b60000, e8b70000, e8b80000
+         x: 0, 8, 10, 18, 20, 28, 30, 38, 40  colour bar: 1400, 1600, 1800, 2000
+Plot 3 - y: e9480000, e9488000, e9490000, e9498000, e94a0000, e94a8000, e94b0000, e94b8000, e94c0000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200
+Plot 4 - y: e9680000, e9688000, e9690000, e9698000, e96a0000, e96a8000, e96b0000, e96b8000, e96c0000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 5 - y: e9c40000, e9c48000, e9c50000, e9c58000, e9c60000, e9c68000, e9c70000, e9c78000, e9c80000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000
+
+[Column 3 of 4]
+Plot 1 - y: e9e40000, e9e48000, e9e50000, e9e58000, e9e60000, e9e68000, e9e70000, e9e78000, e9e80000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+Plot 2 - y: ea440000, ea448000, ea450000, ea458000, ea460000, ea468000, ea470000, ea478000, ea480000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1500, 1750, 2000, 2250, 2500
+Plot 3 - y: eab80000, eab88000, eab90000, eab98000, eaba0000, eaba8000, eabb0000, eabb8000, eabc0000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1300, 1400, 1500, 1600, 1700, 1800
+Plot 4 - y: eb200000, eb208000, eb210000, eb218000, eb220000, eb228000, eb230000, eb238000, eb240000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200
+Plot 5 - y: eb400000, eb408000, eb410000, eb418000, eb420000, eb428000, eb430000, eb438000, eb440000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200, 2400
+
+[Column 4 of 4]
+Plot 1 - y: eb7c0000, eb7c8000, eb7d0000, eb7d8000, eb7e0000, eb7e8000, eb7f0000, eb7f8000, eb800000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000, 2200
+Plot 2 - y: ebc00000, ebc08000, ebc10000, ebc18000, ebc20000, ebc28000, ebc30000, ebc38000, ebc40000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000
+Plot 3 - y: ec0c0000, ec0c8000, ec0d0000, ec0d8000, ec0e0000, ec0e8000, ec0f0000, ec0f8000, ec100000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1300, 1400, 1500, 1600, 1700
+Plot 4 - y: eef40000, eef48000, eef50000, eef58000, eef60000, eef68000, eef70000, eef78000, eef80000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800
+Plot 5 - y: ef600000, ef608000, ef610000, ef618000, ef620000, ef628000, ef630000, ef638000, ef640000
+         x: 0, 4, 8, c, 10, 14, 18, 1c, 20    colour bar: 1400, 1600, 1800, 2000
 ```
 
 ## Slide 168
@@ -4099,20 +3621,6 @@ building a fuse
 movq (0xf8013c00), %rax rax a1 82 9f 1c 13 92 5e e7 98 56 9f af b3 67 8b f1
 
 building a fuse
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-movgq (Oxf8013c00), %rax
-Prax
-f1
-af
-B0°9E TOSs
-VOIE TOSS
-OOVE TOSS
-OJFE TOBs
-building a fuse
-```
 
 ## Slide 174
 
@@ -4211,7 +3719,8 @@ begin ??? instruction
 10,000 cycles
 100 cycles
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thread 1 (attacker) Thread O [victim]
@@ -4226,16 +3735,6 @@ Thread 1 (attacker) Thread 0 (victim)
 begin ??? instruction
 10,000 cycles
 100 cycles
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Thread 1 (attacker) Thread O {victim)
-begin °°? instruction
-10,000 cycles
-cycles X
-100 cycles
-```
 
 ## Slide 184
 
@@ -4310,17 +3809,6 @@ lighting the fuse
 ## Slide 191
 
 Let’s build a hammer… Let's add a handle… Let’s be a bit more careful… Let’s find a nail… Let’s light a fuse… We have all the pieces.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| et’s build a hammer...
-| ets add a handle...
-| et’s find a nail...
-| et’s light a fuse...
-We have all the pieces.
-| et’s be a bit more careful...
-```
 
 ## Slide 192
 
@@ -4403,22 +3891,6 @@ RAM
 SMRAM
 MMIO
 RAM
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-I/O
-Device
-North
-Bridge
-CPU
-PCle
-device
-RAM
-L A SMRAM
-MMIO
-RAM
-```
 
 ## Slide 198
 
@@ -6642,7 +6114,8 @@ the exploit.
 
 ## Slide 244
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 deltaop@ubuntu-usb-3:~/_research$ []

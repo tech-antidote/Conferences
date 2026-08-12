@@ -12,15 +12,20 @@ text_chars: 113147
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:59:50Z"
+converted_at: "2026-08-12T04:39:08Z"
 ---
 # Crashing the Party Vulnerabilities in RPKI Validation
 
 **Speakers:** Niklas Vogel, Donika Mirdita, Haya Schulmann, Michael Waidner  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Niklas Vogel & Donika Mirdita & Haya Schulmann & Michael Waidner_Crashing the Party Vulnerabilities in RPKI Validation_wp.pdf` (18 pages)
+
 
 ## Slide 1
 

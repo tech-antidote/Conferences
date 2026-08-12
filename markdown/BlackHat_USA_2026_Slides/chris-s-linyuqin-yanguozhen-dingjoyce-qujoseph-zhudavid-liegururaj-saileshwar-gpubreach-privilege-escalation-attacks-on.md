@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Chris S. Lin&Yuqin Yan&Guozhen Ding&Joyce Qu&Joseph Zhu&David Lie&Gururaj Saileshwar_GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer.pdf"
 pages: 98
 sha256: "f7596a16c96080b296d82ce16d1631e8b60ef96674c9fd3baf35c0966f8ccc47"
-text_chars: 27006
+text_chars: 26934
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:57Z"
+converted_at: "2026-08-12T05:30:16Z"
 ---
 # GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer
 
 **Speakers:** Chris S. Lin, Yuqin Yan, Guozhen Ding, Joyce Qu, Joseph Zhu, David Lie, Gururaj Saileshwar  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Chris S. Lin&Yuqin Yan&Guozhen Ding&Joyce Qu&Joseph Zhu&David Lie&Gururaj Saileshwar_GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer.pdf` (98 pages)
+
 
 ## Slide 1
 
@@ -42,10 +48,10 @@ Joyce Qu, Joseph Zhu, David Lie, and Gururaj Saileshwar
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-wel db bd hod bol
 VRAM
 (GDDR6)
 black hat
@@ -440,38 +446,50 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
+[Terminal window]
+
 # Before Eviction
 243-->PD0@0x000c035000
-48-->2MB-Page@0x001cc00000
+    48-->2MB-Page@0x001cc00000
+
 # After Eviction
 243-->PD0@0x000c035000
-48-->PT@0x000c022100
-0-->64KB-Page@0x001cc00000
-1-->64KB-Page@0x001cc10000
-2-->64KB-Page@0x001cc20000
-3-->64KB-Page@0x001cc30000
+    48-->PT@0x000c022100
+        0-->64KB-Page@0x001cc00000
+        1-->64KB-Page@0x001cc10000
+        2-->64KB-Page@0x001cc20000
+        3-->64KB-Page@0x001cc30000
+
+[A large red arrow points at the line "48-->2MB-Page@0x001cc00000"]
 ```
 
 ## Slide 34
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
+[Terminal window]
+
 # Before Eviction
 243-->PD0@0x000c035000
-48-->2MB-Page@0x001cc00000
+    48-->2MB-Page@0x001cc00000
+
 # After Eviction
 243-->PD0@0x000c035000
-48-->PT@0x000c022100
-0-->64KB-Page@0x001cc00000
-1-->64KB-Page@0x001cc10000
-2-->64KB-Page@0x001cc20000
-3-->64KB-Page@0x001cc30000
+    48-->PT@0x000c022100
+        0-->64KB-Page@0x001cc00000
+        1-->64KB-Page@0x001cc10000
+        2-->64KB-Page@0x001cc20000
+        3-->64KB-Page@0x001cc30000
+
+[A large red arrow points at the line "48-->PT@0x000c022100"]
 ```
 
 ## Slide 35

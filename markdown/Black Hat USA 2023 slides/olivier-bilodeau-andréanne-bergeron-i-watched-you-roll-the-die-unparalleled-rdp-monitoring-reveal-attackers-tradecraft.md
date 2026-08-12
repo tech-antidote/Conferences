@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Olivier Bilodeau & Andréanne Bergeron_I Watched You Roll the Die Unparalleled RDP Monitoring Reveal Attackers' Tradecraft.pdf"
 pages: 64
 sha256: "fa1667e4f7bc04d017cd021afb78293b2089b3546bc7bd2ed9fa65af0984edaa"
-text_chars: 15701
-ocr_pages: 18
+text_chars: 13910
+ocr_pages: 12
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 82.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:14Z"
+converted_at: "2026-08-12T04:19:24Z"
 ---
 # I Watched You Roll the Die Unparalleled RDP Monitoring Reveal Attackers' Tradecraft
 
@@ -21,16 +26,17 @@ converted_at: "2026-08-11T21:23:14Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Olivier Bilodeau & Andréanne Bergeron_I Watched You Roll the Die Unparalleled RDP Monitoring Reveal Attackers' Tradecraft.pdf` (64 pages)
 
+
 ## Slide 1
 
 ## I Watched You Roll the Die: Unparalleled RDP Monitoring Reveal Attackers Tradecraft
 
 Olivier Bilodeau & Andréanne Bergeron, GoSecure
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©2025
 BRIEFINGS
@@ -46,16 +52,14 @@ Olivier Bilodeau & Andréanne Bergeron, GoSecure
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 +) _ DISCLAIMER: DUNGE@NS
 bIBEKh|E AND DRAGONS NERDINESS
-WE iN
-A eARAIG
 RAG ws INS
 ON Ly IN THEATRES MARCH 31
-‘feds =, ONS
 ```
 
 ## Slide 3
@@ -128,19 +132,16 @@ The Quest
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifhnar REMOTE DESKTOP
-USA 2&O0es3 PROT@®COL
 ) my-server.gosec.co - Remote Desktop Connection
 i Server Manager
 © ~ Server Manager * Local Server Manage Tools View
-fm_~=~PROPERTIES
 ® Remote Desktop Connection BRLocaliserver
 ig All Servers
 Remote Desktop if File and Storage Services >
-~o2s) Connection
 Computer: [fe ample: computer fabrikam.com
 Username: None specified
 The computer name field is blank. Enter a full remote computer
@@ -178,12 +179,10 @@ EC2AMAZ-61S509J 10016 Error Microsoft-Windows-DistributedCOM System 3/24/2022 5:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 69/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-4a Foon awe *
-7 _.
-:
 biSekhat THE PYRDP CRYSTAL : <
 USA 20253 BALL
 #BHUSA @BlackHatEvents
@@ -265,33 +264,24 @@ Adventurers
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USA 20253 INTELLIGENCE
 World: RDP Sessions Captured
 GREENLAND ™ Total number of events
-° LAYERS GO >
 Net-NTLMv2 Hashes Captured
 ICELAND RUSSIA
 FINLAND
 CANADA NORWAY
 DENMARK
 80 e
-IRELANS PAARG
 43)
 104 UKRAINE
 FRANCE aA ane KAZAKHSTAN MONGOLIA ee Successful Logins
-34) 2 BULGARIA ieeeaak “ :
-- S We GREECE TURKEY TAJIKISTAN SOUTH
-a 729) CHINA REA
-NA rag AFGHANISTAN es
-RVA EGYPT ERABIA
 TAIWAN
-meaco una 2.65k
 4 MAURITANIA OMAN e
-y MALL nee: YEMEN MYANMAR
-wy SENEGAL CHAD “SUDAN tw ViETNAM
 GUINEA :
 130 sour Bonn Files transferred
 GUYANA UBERIA CAMEROON on
@@ -300,9 +290,7 @@ ECUADOR DEMOCRATIC EAP
 REPUBLIC OF =
 a Pr PAPUA NEW
 PERU THE CONGO 8] wo GUINEA
-BRAZH. ANGOLA =
 ZAMBIA
-BOLIVIA
 MOZAMBIQUE
 PARAGUAY NAMIBIA,
 Bll AUSTRALIA
@@ -378,12 +366,10 @@ Style
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat RANGER IN ACTION a FON
-USA 20es3
-| Hostname: EC2AMAZ-31J15JO
 Instance ID; i-01312d4a89eeceeS5
 Public IPv4 Address: 3.88.186.135
 Private IPv4 Address: 172.31.50.210
@@ -425,40 +411,26 @@ Thieves In Action
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-DTRAFFMONETIZER
-Log In
-Chat with us eo
-|
-```
-
 ## Slide 27
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi | k a t | Hostname: EC2AMAZ-OJK3L78
 ac a Recycle Bin ChromeSetup Instance ID; i-O49df4cOb0dfa528c
-USA 2&0e3 236.56
 31.32.40
 Share
 4h resources > miners win32 > xmrig-6,18.0 v
-a)
 Q
 a
 EC2 Feedback in
 Name Date modifie Type e
 wr Quick access a conpmsannrnlll vv to Moderate
 enchmar 1P
-Gl Desktop - 7
 benchmark_10M 1PM V Y KE
-g Downloads : 3 pte omer ere -
 config.json 1P i File
 EC2 Microsoft =| Documents [&) pool_mine_example 22 7:31 PM V Y KB
 Windows G... =) Pictures es rtm_ghostrider_example 7:31 PM ~
@@ -472,7 +444,6 @@ Chrome =| Documents & xmrig i 11/15/2022 7:31 PM B
 4 Downloads
 Xr Favorites
 @ Links
-ded d Music
 =) Pictures
 #P Saved Games
 u n Searches
@@ -480,7 +451,6 @@ unMineable Ba Videos
 Miner (M...
 GS This PC
 U a 10 items
-Gl
 unMineable
 Miner (MFI)
 4:03 PM
@@ -507,18 +477,16 @@ Fel de 3/6/2023 =
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q |
 blackhat BARBARIAN IN ACTI@N
-USA 2&0e253
 Hostname: EC2AMAZ-PH85V08
 Instance ID: i-07445ee7ec1a9a5f9
 © res://iesetup.dil/HardAdmin.ht O ~ G | G internet Explorer Enhanced ... Public IPv4 Address: 54.237.89.231
 Private IPv4 Address: 172.31.40.93
 Internet Explorer Enhanced Security Configuration is enabled Instance Size: t2.micro
-Intern - buoiability Zone: us-east-le
 defin Application T MasScan ure: AMD64
 migh ara
 Secu Share fiew Manage y: 1024 MB
@@ -527,18 +495,13 @@ pau | This PC Downloads MasScan MasScan
 funct
 infor
 ge Quick access
-Desktop
-} Downloads
 _config
 exclude
 Input
 = Documents IPs
 = Pictures [i] masscan
-MI Massscan_GU!
-msvcr100.dil
 > Network Output
 Packet.dil
-(@ winpcap-4.13
 Gd This PC
 wpcap.dil
 11 items 1 item selected 423 KB
@@ -565,18 +528,16 @@ wpcap.dil
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piftxhat WIZARD IN ACTION
-USA 20es3
 Hostname: EC2AMAZ-LTPPV2V
 Instance ID: i-0b2165a3133c1e072
 Public IPv4 Address: 18.212.55.169
 Private IPv4 Address: 172.31.58.15!
 Instance Size: t2.micro
 Availability Zone: us-east-1d
-&
 Architecture: AMD64
 L Remote Desktop
 *<. Connection Total Memory: 1024 MB
@@ -616,13 +577,13 @@ name
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 & Q Search with Google o? enter address 9 =
 3) Import bookmark
 blackhat @ Youtube
-USA 20es3 outubecom 6
 Ei Facebook
 facebook.com
 W Wikipedia
@@ -637,7 +598,6 @@ a fl
 Amazon Hotels.com
 Sponsored Sponsored
 YouTube Facebook
--
 Wikipedia Reddit
 ```
 
@@ -715,13 +675,13 @@ Used By
 
 - T1078
 
-```
+\```
 daddc833bffcade36b432b21046487b2
-```
+\```
 
-```
+\```
 9dcd2a162d91b503334a52caee9c1fd2
-```
+\```
 
 ###### SHA256-Hash
 
@@ -1004,27 +964,16 @@ Showing a Range of Attackers’ Skills (or lack thereof) at Work
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 gQ _) Scale to window
-black hat
 USA 2023 —
 s6.picofile.com,
-ue sobT g Guls soLT yLSsl (¢Las - PicoFile.com’
 NLBrute 1.2.zip
-sagbils SLY eyeT OL 4) gly laid (inl) Cug> oligS Kid
 yon.ir/nibrute12
-econ © Cy ee
-CQ 583 207 esis cork Be anal Wp] @
-pelo
-dgbils Sid ob ,er% aul |asVoo OTF
-ADSL cee pw pcs ss}
 https://s6.picofile.com/d/8266183492/228df8aa-3e7e-4fac
-(aguilei wg> Gull Si GS wd
-sobls 4
-Yoga 43.0 re
-2 Olibill go> aie odio bl) &
 ```
 
 ## Slide 55
@@ -1033,14 +982,12 @@ Some attackers do not speak English
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 onsible for Google Ads costs and how they pay. Le:
 Jit or debit card
-a
 24 784|
 ```
 
@@ -1049,16 +996,6 @@ a
 ###### Our tool is great for intel
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-—
-| wr
-pifckhatr DUR TOOL IS GREAT . b Sn SAS Bi
-Recycle Bin Telegram e
-EC2
-```
 
 ## Slide 57
 
@@ -1116,21 +1053,6 @@ Attackers
 Science!
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseikhat “tous (several providers) . % Science! | _ ) :
-oe Peal! 9st idio & H
-jupyter
-Ne
-a
-QO
-elastic
-| «
-NV ‘Ww lle RCLONE
-C1* C D fe doc ker
-```
 
 ## Slide 62
 

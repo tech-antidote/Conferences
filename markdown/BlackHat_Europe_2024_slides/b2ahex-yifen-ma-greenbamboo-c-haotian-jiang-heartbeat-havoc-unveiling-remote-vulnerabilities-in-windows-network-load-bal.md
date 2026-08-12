@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/b2ahex & Yifen Ma & Greenbamboo C & Haotian Jiang_Heartbeat Havoc Unveiling Remote Vulnerabilities in Windows Network Load Balancing_wp.pdf"
 pages: 22
 sha256: "4558d442ee37e44fbcdf98a9b3e81db19e1e71eb187b8bf6c99ce384f630f824"
-text_chars: 23815
+text_chars: 23084
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 79.5
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:48:04Z"
+converted_at: "2026-08-12T05:02:17Z"
 ---
 # Heartbeat Havoc Unveiling Remote Vulnerabilities in Windows Network Load Balancing
 
 **Speakers:** b2ahex, Yifen Ma, Greenbamboo C, Haotian Jiang  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/b2ahex & Yifen Ma & Greenbamboo C & Haotian Jiang_Heartbeat Havoc Unveiling Remote Vulnerabilities in Windows Network Load Balancing_wp.pdf` (22 pages)
+
 
 ## Slide 1
 
@@ -102,7 +107,7 @@ NLBCoreReceiveIdentityFQDNPayload is to receive FQDNPayload and update it to the
 
 As shown in the code, it used directly without validation, this index can fall outside the array's intended bounds, resulting in an out-of-bounds (OOB) write and allows the attacker to overwrite adjacent memory locations with controllable data, as shown in the memmove operation:
 
-```
+\```
 __int64 NLBCoreReceiveIdentityFQDNPayload(…)
 {
 pFRAME_HDR = PocData
@@ -115,18 +120,18 @@ if( DispatchLevel )
 KeAcquireSpinLockAtDpcLevel(&p_Lock->SpinLock);
 else
 pContext->Lock.OldIrql=KeAcquireSpinLockRaiseToDpc(&p_Lock->SpinLock);
-```
+\```
 
 ## Slide 7
 
-```
+\```
 pContext->IdentityCache[v10].HostID= HostID -1;      //OOB
 pContext->IdentityCache[v10].ttl=3 * pContext->params.identity_period; //OOB
 /*An out-of-bounds write with controllable content */
 memmove(&pContext->IdentityCache[v10].fqdn, pwszFQDN, qdn_char*sizeof(WCHAR));
     ...
 }
-```
+\```
 
 So we can achieve the crash in NLBCoreReceiveIdentityFQDNPayload:
 
@@ -136,7 +141,7 @@ Go back to the beginning of NLBCoreReceiveIdentityHeartbeat, when DataType is eq
 
 This function has the same and references the HostID that has not been safely verified, but the difference is that its reference logic is in a sub-function. Let's check what this function does: it will be parsing the nlb heartbeat packet we send , update the two global tables DIPEntryList and NLBIPList:
 
-```
+\```
 __int64 __fastcall NLBCoreReceiveIdentityDIPPayload(...)
 {
   HostID =*(_DWORD *)(a3 +8);
@@ -157,11 +162,11 @@ if( type ==2)                            // IPv4
 else
 {
 if( type ==23)                         // IPv6
-```
+\```
 
 ## Slide 8
 
-```
+\```
 {
         v14 =*(_OWORD *)(a4 +10);
 *(_DWORD *)dip_addr =3;
@@ -175,23 +180,23 @@ if(!v13 )
       v12 =0xC0000001;
 goto LABEL_30;
 }
-```
+\```
 
-```
+\```
     v15 =NLBCoreIdentityCacheAddDIPEntry(pContext, HostID,&dip_addr, a5);// Initialize the
 dip_addr and Update DIPEntryList
-```
+\```
 
-```
+\```
 ...
 // there is another uaf vulnerability, we will explain it in case study 3
 NLBIPListAddItemEx(&pContext->DIPList,5,*(int*)v19,&v19[4],0,0i64); // Update NLBIPList
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 NLBCoreIdentityCacheAddDIPEntry constructs a DIPEntry based on dip_addr and inserts it into the **IdentityCache[HostID].DIPEntryList** . However, as each HostID has a corresponding DIPEntryList, indexing based on HostID can lead to an Out-of-Bounds (OOB) Read. We modify the POC to enter the NLBCoreIdentityCacheAddDIPEntry and set the HostID to 0x11111111:
 
@@ -201,17 +206,17 @@ NLBCoreIdentityCacheGetDIPEntry is designed to get a DIPEntry from the IdentityC
 
 So, as expected, the reference to HostID in NLBCoreIdentityCacheGetDIPEntry also suffers from the same vulnerability:
 
-```
+\```
 __int64 NLBCoreIdentityCacheGetDIPEntry(…int HostID)
-```
+\```
 
-```
+\```
 {
-```
+\```
 
 ## Slide 9
 
-```
+\```
   ...
 if( WPP_GLOBAL_Control !=(PDEVICE_OBJECT)&WPP_GLOBAL_Control &&
 (HIDWORD(WPP_GLOBAL_Control->Timer)&8)!=0)
@@ -228,7 +233,7 @@ else
   v11 =(_QWORD *)*v10;    // OOB Read
   ...
 }
-```
+\```
 
 We can also trigger a crash in NLBCoreIdentityCacheGetDIPEntry, causing an out-of-bounds read:
 
@@ -283,10 +288,10 @@ When we were examining and evaluating all accesses to the shared resources withi
 
 NLBIPListCheckItem will be called in the NLBCoreIOControlQueryFilter function, but there is no lock operation. It will cause problems when items are added or removed elsewhere. Now we just need to find a suitable release point, like **NLBIPListIncreaseSize:**
 
-```
+\```
 CallStack:
 NLBFilterReceiveNetBufferLists
-```
+\```
 
 - `->NLBCoreReceivePacket`
 
@@ -306,7 +311,8 @@ Whenever a new IdentityDIPPayload is received, the IP address information will b
 
 NLBCoreIOControlQueryFilter inside Use-After-Free crash due to race condition:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 v5 = NdisAllocateMemoryWithTag(&VirtualAddress, 44 * v2, @x2@424C4Eu);
@@ -316,7 +322,6 @@ memset (VirtualAddress, @, 44 * v2);
 if (v9)
 NdisFreeMemory(VirtualAddress, 44 * v2, @);
 v7 = WPP_GLOBAL_Control;
-if ( WPP_GLOBAL_Control
 return v4;
 goto LABEL_19;
 v8 = 21464;
@@ -339,9 +344,6 @@ NdisFreeMemory(*(PVOID *)(al + 1072), 2 * *(_DWORD *)(al + 28) + 1006, 0);
 *(_QWORD *)(a1 + 16) = VirtualAddre:
 *(_QWORD *)(a1 + 1072) = NewBufffer
 *(_DWORD *)(al + 28) = v.
-NLBIPListRecomputeHashes(a1) ; : Y reya
-Lapel tee Release)old|memory/blocks
-v= 4;
 goto LABEL_19;
 v7 = WPP_GLOBAL_Control;
 if ( WPP_GLOBAL_Control == (PDEVICE_OBJECT)&NPP_GLOBAL_Control )
@@ -349,29 +351,17 @@ return v45
 8 = 20164;
 LABEL_10:
 WPP_SF_D(v7->AttachedDevice, v8, &hPP_287f06a88e7d39b20c13ced8dd187b41_Traceguids, v6);
-+
 LABEL_19:
 if ( WPP_GLOBAL_Control != (PDEVICE_OBJECT)&WPP_GLOBAL_Control && (HIDNORD(WPP_GLOBAL_Control->Timer) & 8) !
 00042358 NLBIPListIncreaseSize:é1 (100042358) (Synchronized with IDA View-A, Hex View-1)
-af (22)
 {
 v9 = *(_QWORD *)(a1 + 16);
 Af ( v9 && (v10 = *(_QWORD *)(a1 + 1072)) I= @ )// Get the memory address of the item array
-: {
-v1 = *(_DWORD *)a3;
-t
-11 = *a3 * a3[4] * 03[8] * 03[42] | ((a3[4] * a3[5] * a3[9] * 03[13] | ((a3[2] * 23[6] * 23[40] * a3[44] | ((a3[3] * a3[7]
 ' vi2 = vil % @x407;
 *(_DWORD *)(21 + 4 * ((unsigned __int64)vi2 >> 5) + 36);
 ittest(&v13, v12 & @xiF) )
-if/NUBIPListincreaseSize)is\calledjat}this)time;,
-: via = *( WORD *)235 the)above)ltemArray/will)be)release}andjthe)following)
-; } access)to)ltemArray/will|cause)uaf}
-' ; vid = 23 * a3[4] * 03[8] * a3[42] | ((a3[4] * a3[5] * a3[9] * a3[13] | ((a3[2] * a3[6] * 0340] * 3[14] | ((a3[3] * a3
-'
 else
 {
-if (2-1)
 1,
 for (i = (unsigned __int16 *)(v10 + 2464 * (v14 % @xIF7)); 3 ++i )// Use the obtained item array
 00041D40 NLBIPListCheckItemIndex:19 (1C0041D40)
@@ -392,9 +382,9 @@ While executing the above function, it will read the pLoad->NRProtocol(rcx+0xc9b
 
 The attacker sends Heartbeat packets, making the code execution path:
 
-```
+\```
 NLBFilterReceiveNetBufferLists
-```
+\```
 
 - `->NLBCoreReceivePacket`
 
@@ -418,9 +408,9 @@ We can construct different NLB packages to trigger lock-free access to pLoad->NR
 
 The attacker sends data packets, making the code execution path:
 
-```
+\```
 NLBFilterReceiveNetBufferLists
-```
+\```
 
 - `->NLBCoreReceivePacket`
 
@@ -434,7 +424,7 @@ NLBFilterReceiveNetBufferLists
 
 ### The NRP Packet we constructed:
 
-```
+\```
 #pragma pack(push,1)
 typedefstruct _NRP_PACKET
 {
@@ -466,7 +456,7 @@ pNrp->Index=0;
 pNrp->TestBit=0;
 pNrp->ExtendLen=4;
 *(unsignedlong*)(pNrp +1)=0x12345678;
-```
+\```
 
 And after running the poc, the system crashes in the NLBCoreNRProtocolReceiveData:
 
@@ -478,9 +468,9 @@ This is a bug defined as "Moderate severity DoS". Still, we thought it was worth
 
 This bug is located in the NLBCoreNRProtocolReceiveData process, and its trigger path is as follows:
 
-```
+\```
 NLBCoreNRProtocolReceiveData
-```
+\```
 
 - `->NLBCoreNRProtocolReceiveIPv4Add/NLBCoreNRProtocolReceiveIPv6Add`
 

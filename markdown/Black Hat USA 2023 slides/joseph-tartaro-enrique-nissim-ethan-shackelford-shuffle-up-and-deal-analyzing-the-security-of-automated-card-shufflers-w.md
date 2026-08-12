@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers_wp.pdf"
 pages: 69
 sha256: "68085a4759867bf8a82f519a600f8c462c15f1fc2b17f30934dd28eaa995b72c"
-text_chars: 100999
-ocr_pages: 5
+text_chars: 100539
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:58:15Z"
+converted_at: "2026-08-12T04:11:55Z"
 ---
 # Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers
 
 **Speakers:** Joseph Tartaro, Enrique Nissim, Ethan Shackelford  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers_wp.pdf` (69 pages)
+
 
 ## Slide 1
 
@@ -224,21 +229,12 @@ _Figure 5. Scientific Games DM2 Participant Edition_
 
 ©2023 IOActive, Inc. All Rights Reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IOACTIVE.COM 1OActive.
-oa aan Dcs
 ©)
-a
 °
-+ P —CWHS
-(o} | ——FCos
-PM—~_| = OC Aa)
-, FF FETS
-Ts]
-6 Jo} S FEHS
-LJ a
 = FEM
 (0) ©)
 FM
@@ -528,7 +524,7 @@ IOACTIVE.COM
 
 Here is a truncated example of a history log retrieved using Download to PC:
 
-```
+\```
 Deck Mate Shuffler History Log.
 Serial Number: 108292
 Report T:10:02:39
@@ -555,7 +551,7 @@ Jam Recoveries = 2
 Auto Setups = 11
 Platform OOP = 631
 Total Cycles:1056
-```
+\```
 
 #### **Physical Shuffling Mechanism**
 
@@ -639,7 +635,7 @@ IOACTIVE.COM
 
 The DM1 shuffler allows operators to “re-seed” the device to provide new entropy for randomness. The AT89S53 includes a timer that supports various modes. The shuffler will initialize Timer0 to Mode 1 (16-bit mode) with TH0 and TL0 registers connected in cascade, which it will interrupt every ~245 microseconds. IOActive’s understanding is based on the following calculations:
 
-```
+\```
 The Shuffler Xtal (external crystal oscillator) is 11.0592 MHz
 The core needs 12 clock periods per machine cycle.
 The Timer Clock rate is then:
@@ -651,7 +647,7 @@ overflow occurs.Timer 0 overflow sets TF0 flag generating an interrupt
 request.
 As a result, there is an interrupt every 1.08506 * 226 = 245.22
 microseconds.
-```
+\```
 
 _Figure 18. Timer-0 Interrupt Handler_
 
@@ -665,7 +661,7 @@ When choosing to re-seed the device, the operator will be prompted to press the 
 
 IOACTIVE.COM
 
-```
+\```
 reseed_rng() {
    UINT32 *seed = XRAM_014Dh;
    *seed = 0;
@@ -675,13 +671,13 @@ reseed_rng() {
       *seed = *seed | (((UINT32) timer_count) << 8 * i);
    }
 }
-```
+\```
 
 The RNG is the following common Linear Congruential Generator (LCG):
 
-```
+\```
 Seed = 0x19660d * seed + 0x3c6ef35f
-```
+\```
 
 #### **Shuffling**
 
@@ -769,14 +765,6 @@ _Figure 21. DM2 Front Internals_
 
 ©2023 IOActive, Inc. All Rights Reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IOACTIVE.COM 1OActive.
-Figure 21. DM2 Front Internals
-©2023 lOActive, Inc. All Rights Reserved. 27 | August 2023
-```
-
 ## Slide 28
 
 IOACTIVE.COM
@@ -787,7 +775,8 @@ _Figure 22. DM2 Left-side Internals_
 
 ©2023 IOActive, Inc. All Rights Reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IOACTIVE.COM 1OActive.
@@ -959,19 +948,19 @@ During the randomization functions, the device will use a common LCG for the RNG
 
 IOACTIVE.COM
 
-```
+\```
 0x19660d * seed + 0x3c6ef35f
-```
+\```
 
 ##### **_Shuffling_**
 
 The _ShuffleCards_ active object is responsible for shuffling the playing cards. The main event handler for this object accepts the following events:
 
-```
+\```
 RNG_SIMULATION_MODE
 PREPARE_DECK
 START_SHUFFLE_CARDS
-```
+\```
 
 ###### **Deck Preparation**
 
@@ -1005,7 +994,7 @@ It is possible for an attacker connected to this bus to control various configur
 
 The display module boards have two separate configurations: internal and external. Within the DM2, an internal display module board is mounted and available for technicians working on the machine when the case is removed. The external display module board is connected to the DM2 over the USB port and generally mounted to the poker table and available for the dealer to use during play. The software allows for changing game configurations, starting the clock (player action timer), and sorting the deck upon completion of the game.
 
-```
+\```
 set.request name=UCommand value=3,36
 {fpga}w a=03 d=04
 {fpga}r a=01
@@ -1023,7 +1012,7 @@ set.request name=UCommand value=3,36
 {fpga}r a=73
 {fpga}r a=73
 {fpga}r a=73
-```
+\```
 
 37  |  August 2023
 
@@ -1033,7 +1022,7 @@ set.request name=UCommand value=3,36
 
 IOACTIVE.COM
 
-```
+\```
 {fpga}r a=73
 {fpga}r a=73
 {fpga}w a=f0 d=80
@@ -1083,7 +1072,7 @@ set.request name=UCommand value=2,30,1
 get.request name=MCardWidth
 set.request name=UCardWidth value=58
 set.request name=UCommand value=3,37
-```
+\```
 
 38  |  August 2023
 
@@ -1098,14 +1087,6 @@ _Figure 34. DM2 Internal Display Module_
 39  |  August 2023
 
 ©2023 IOActive, Inc. All Rights Reserved.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IOACTIVE.COM 1OActive.
-Figure 34. DM2 Internal Display Module
-©2023 lOActive, Inc. All Rights Reserved. 39 | August 2023
-```
 
 ## Slide 40
 
@@ -1170,11 +1151,10 @@ _Figure 37. DM2 Authenticated Web Interface_
 
 ©2023 IOActive, Inc. All Rights Reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IOACTIVE.COM 1OActive.
-GaSHFL Login
 DeckMate2 Setup You are currently logged in.
 Please choose an option from the menu at the left.
 About
@@ -1581,7 +1561,7 @@ The purpose of this Appendix is to present the code utilized in this paper and p
 
 ### **DM1 Shuffling Algorithm in C**
 
-```
+\```
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -1618,7 +1598,7 @@ if (bRandomizedDeckReady) {
          printf("GetNextSeed()\n");
 return;
       }
-```
+\```
 
 62  |  August 2023
 
@@ -1628,7 +1608,7 @@ return;
 
 IOACTIVE.COM
 
-```
+\```
       CardsRemaining = CARDS_IN_GAME - CallCount;
 //printf("CardsRemaining: %d\n", CardsRemaining);
 unsignedshort r = GetRandom(0, CardsRemaining) & 0xFF;
@@ -1666,7 +1646,7 @@ if (RandomizedDeck[ProcessedCards] > FinalDeck[i]) {
             TmpCount++;
         }
     }
-```
+\```
 
 63  |  August 2023
 
@@ -1676,7 +1656,7 @@ if (RandomizedDeck[ProcessedCards] > FinalDeck[i]) {
 
 IOACTIVE.COM
 
-```
+\```
     gCardsGripped = TmpCount;
     printf("ProccessedCards:%d - Current pos: %d - gripped: %d\n",
             ProcessedCards, RandomizedDeck[ProcessedCards], gCardsGripped);
@@ -1707,7 +1687,7 @@ for (int i = 0; i < CARDS_IN_GAME; i++) {
     print_deck_array(Grips);
 return 0;
 }
-```
+\```
 
 64  |  August 2023
 
@@ -1719,7 +1699,7 @@ IOACTIVE.COM
 
 ### **DM2 Update Decryption Utility**
 
-```
+\```
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -1769,7 +1749,7 @@ struct ltv buf;
 uint32_t type1 = 0;
 uint32_t type2 = 0;
 uint32_t type3 = 0;
-```
+\```
 
 65  |  August 2023
 
@@ -1779,7 +1759,7 @@ uint32_t type3 = 0;
 
 IOACTIVE.COM
 
-```
+\```
 uint32_t type2_len = 0;
 while (1) {
         fread((void *)&buf, sizeof(struct ltv), 1, fptr);
@@ -1832,7 +1812,7 @@ if (buf.type == 0x01) {
             memcpy(iv, chunk_data, 16);
             SHA1_Update(sha_ctx, iv, 16);
             EVP_DecryptInit_ex(evp_ctx, EVP_aes_128_cfb(), NULL, key, iv);
-```
+\```
 
 66  |  August 2023
 
@@ -1842,7 +1822,7 @@ if (buf.type == 0x01) {
 
 IOACTIVE.COM
 
-```
+\```
         }
 elseif (buf.type == 0x02) {
 // data chunk
@@ -1892,7 +1872,7 @@ for (i=0; i < 16; i++) {
     }
     SHA1_Update(&sha_ctx, xor_1, 16);
 char *data = NULL;
-```
+\```
 
 67  |  August 2023
 
@@ -1902,7 +1882,7 @@ char *data = NULL;
 
 IOACTIVE.COM
 
-```
+\```
 char f_digest[SHA_DIGEST_LENGTH] = {0};
 uint32_t olen = walk(&sha_ctx, key, iv, fptr, &data, f_digest);
 if (data == NULL || olen == -1) {
@@ -1940,7 +1920,7 @@ FILE *optr = fopen(path, "wb");
     fclose(fptr);
     fclose(optr);
 }
-```
+\```
 
 68  |  August 2023
 

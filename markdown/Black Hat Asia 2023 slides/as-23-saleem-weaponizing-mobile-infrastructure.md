@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Saleem-Weaponizing-mobile-Infrastructure.pdf"
 pages: 35
 sha256: "c3e98114bd638bc2d60f764e15bc7eee3cc21a37a389e5211a3c9f1c30bffbda"
-text_chars: 16534
+text_chars: 16522
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 94.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:25Z"
+converted_at: "2026-08-12T03:48:37Z"
 ---
 # Weaponizing mobile Infrastructure
 
 **Speakers:** Saleem  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Saleem-Weaponizing-mobile-Infrastructure.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -30,14 +35,13 @@ Are Politically Motivated Cyberattacks a Threat to Democracy?
 
 Imran Saleem
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ” WEAPONIZING MOBILE INFRASTRUCTURE”
 Are Politically Motivated Cyberattacks
 a Threat to Democracy?
-“mobileum
-5
 security
 intelligence Imran Saleem
 Mobileum platform

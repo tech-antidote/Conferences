@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Michael Harbison_Hello 1994 Abusing Windows Explorer via Component Object Model in 2023.pdf"
 pages: 34
 sha256: "17f24d5ddff5895cb42282b105538436108d76679e411edd41c5377dfad83bc4"
-text_chars: 16621
+text_chars: 14222
 ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:25:16Z"
+converted_at: "2026-08-12T06:02:32Z"
 ---
 # Hello 1994 Abusing Windows Explorer via Component Object Model in 2023
 
 **Speakers:** Michael Harbison  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Michael Harbison_Hello 1994 Abusing Windows Explorer via Component Object Model in 2023.pdf` (34 pages)
+
 
 ## Slide 1
 
@@ -248,7 +253,8 @@ Contains the 128-bit CLSID for Recycle bin COM object. Windows Explorer now sees
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shortcut File On USB Device
@@ -283,7 +289,8 @@ Target: spec% /q /c"\\RECYCLER.BIN\files\x32dbg.exe"
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pre and Post USB Infection
@@ -315,15 +322,12 @@ II rights reserved. Proprietary and confidential in' % paloalto
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Post USB Infection
-~Il Vv + | Manage -F:\
 Hl Desktop # * [] Name Date modified Type Size
-& Downloads of ne» RECON2023 5/2/2023 10:58 AM Shortcut 2 KB
-“= Documents a
-' Pictures ”
 Montreal Beer Breweries
 temp
 testfile
@@ -338,7 +342,6 @@ o tense Infected USB Device
 > a Videos
 > &. Local Disk (C:)
 > = CD Drive (E:) CD-ROM
->. RECON2023 (F:)
 II rights reserved. Proprietary and confidential in' & paloal
 ```
 
@@ -348,7 +351,8 @@ II rights reserved. Proprietary and confidential in' & paloal
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Post USB Infection Shortcut
@@ -359,7 +363,6 @@ a» RECON2023 Properties x
 Colors Terminal File Hashes Details
 General Shortcut Options Font Layout
 RECON2023
-ol
 Target type: File
 Target location:
 Target: Spec% /q /c "F:\ \RECYCLER.BIN\files\x32dbg.ex
@@ -392,13 +395,13 @@ Proprietary and confidential i
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows File Explorer - Not Found
 ay = | Maneee F:\ \ \RECYCLER.BIN
 Home Share View Recycle Bin Tools
-€ vy f 9 FA\\RECYCLER.BIN\files
 temp “ (1 Name Date modified Typ
 nels \) desktop ini 5/2/2023 11:45 AM Cor
 @ This PC File Explorer x
@@ -414,7 +417,8 @@ Hl Desktop 6 Windows can't find 'F:\ \ \RECYCLER.BIN\files'. Check the spelling 
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USB Device Recycler bin folder
@@ -423,11 +427,9 @@ a File Edit Search Position View Tools Specialist Options Window Help
 Drive F:
 \ \RECYLER.BIN
 Name ~ - [ ea. | Size | Created | Modified | Accessed | Attr. | 1st sector |
-——
 ( TESTDRIVE / / / RECYCLER.BIN / files : Q
 x32bridge. x32bridge. x32dbg.exe
 dat dil
-(645F
 Default Edit Mode 0100F030 46 30 38 2D 30 30 41 41 30 30 32 46 39 35 34 45 FOS—-OOAA002F954E
 rietary and
 ```
@@ -442,36 +444,14 @@ rietary and
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-+ | catemp ioe
-Home Share View =) Heme Shave Veew Deve Tools
-© > Local Disk (C:) > temp » vo Search temp + ft we > RECON2O23 (FY vo Search RECON2023 (F)
-zr * 0 Name Date modified Type Sire Pictures = * * [] Name Date modified Sie
-eae 7 Testes Fie folder Ny Hee L Montreal Beer Brewenes
-Seca * W) LoedDtLexe Application 1 om Research Documents
-OE cteview ere App 2 temp ( APTA3_Researchpat Microsoft Edge 9.087 Ks
-‘H Documents © PlugXComtesting exe 5, § 16 TestFaes cakétscbin O19 1149 AM an 1x8
-Pictures abridge dat 10/17/2022 10:37 PM 1 ernie My Willtxt 2/5/2019 5:53. AM Text Document exe
 Montreal Beer 8 secretdocsocked 2/5/2019 5351 AM LOCKED File 5
-esate Cscaal B30 Objects 1 What to do in Montrealpat 4/24/2023 620 F Microsott Edge 58 KB
-a BOesttop 1 Wine Uistspat 4/20/2023 2:35 Pin Microsoft Edge POF 19168
-Testes <r
-# Cownioads
 This PC 2 Music
-WD Objects iain
-Desktop Bi Videos
-clipe & Local Disk (C)
-¥ Downloads CD Drive (€:) CD:
-2D Musie ~ RECON2023 (F)
 ‘© Pictures
-Bien BCD Drive (€) CO-8
-& Local Disk (C9 ~ RECON2023 (F)
-POD Drive E) CD: ¥ Montreal Beer 8
 Sitems Bitems
--- Windows,
-Baile 1904 9.v_ retinas
 LO Type here to search
 2023 Palo Alto Networks, Inc. Alll rights reserved. Proprietary and confidential information. o// paloalt r
 ```
@@ -522,30 +502,14 @@ the design which would help against this particular malware campaign”.
 
 © 2023 Palo Alto Networks, Inc. All rights reserved. Proprietary and confidential information.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chitexa VirusTotal Hits
 FILES -6/6
 914A6BE2CDBB49836C3A6AB4465BEEQ9 1 83365EE@E9 1 2F52A6E655347 186FA78
-68
-Ink hiding-window idle
-9571A5DA93894E303820274E45ED@GA0 101 4D1AE42BE1974E558@9FE18BB5D14
-e 3c94e68783764786deebec894F110F32.virus
-Ink hiding-window idle
-E12B3228A115C1A5487@AD6D9C775D11CBFE6E1F2DF856BESDFF8D8SEAD2AAG6
-e 746b2194e2f53925702bF8e9c934ac82. virus
-Ink hiding-window
-591286D74BC97C7CCB73A5E356 1 6DFE6ACS2FC7 1D3F 78B2B8A3ADA2B6F 3FFEQF
 6
-Ink hiding-window
-137268B2D89863338E258487E4DDCE83753E6291 6EFFF8984EABS2BESBF2FCO4
-1)
-Ink hiding-window
-5@222A2D2FEFCF@29AC75C3C63B 18397D64A44D56060CEEF 230F ES4CBDDBEBE
-e 6cff875a2F7736def87F3d88F76bc72d. virus
-Ink hiding-window runtime-modules detect-debug-environment idle
-fong-sleeps
 direct-cpu-clock-access
 Detections
 11/59
@@ -592,8 +556,6 @@ Tools ~ Help ~
 Submitters
 q LNK
 a LNK
-1 LNk
-it LNK
 1 ok
 1 om
 ```

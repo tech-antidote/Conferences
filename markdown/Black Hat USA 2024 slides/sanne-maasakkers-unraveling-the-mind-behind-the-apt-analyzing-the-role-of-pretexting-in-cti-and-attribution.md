@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Sanne Maasakkers_Unraveling the Mind Behind the APT - Analyzing the Role of Pretexting in CTI and Attribution.pdf"
 pages: 52
 sha256: "e4cf62076218f388b183fe1b7951083b23f400ed36a42ae22c717fa91d419375"
-text_chars: 16787
+text_chars: 16737
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:38:23Z"
+converted_at: "2026-08-12T04:41:19Z"
 ---
 # Unraveling the Mind Behind the APT - Analyzing the Role of Pretexting in CTI and Attribution
 
 **Speakers:** Sanne Maasakkers  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sanne Maasakkers_Unraveling the Mind Behind the APT - Analyzing the Role of Pretexting in CTI and Attribution.pdf` (52 pages)
+
 
 ## Slide 1
 
@@ -75,19 +81,14 @@ Introduction
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Threat groups
-ae
 Introduction
 TEMP.
 \
-Uy
-.Y -
-e- ‘
-——/%
-‘UNC.
 ```
 
 ## Slide 7
@@ -98,19 +99,14 @@ Introduction
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Threat groups
-ae
 Introduction
 TEMP.
 \
-Uy
-.Y -
-e- ‘
-——/%
-‘UNC.
 FIN
 ```
 
@@ -480,7 +476,7 @@ These are categorized into the following categories:
 
 - A timeless and generic theme (please find attached)
 
-```
+\```
 prompt=f"Iwillgiveyouthe
 subjectandcontentofanemail.
 Firstofall,givemethemain
@@ -501,7 +497,7 @@ words.\nFormatinstructions:
 {format_instructions}\nEmail
 subject:{subject}\nEmail
 content:{body}\n"
-```
+\```
 
 Analyzing context
 
@@ -515,7 +511,7 @@ The principles of influence , defined by Cialdini , are a set of psychological a
 
 By leveraging these principles, phishers can create a sense of urgency, trust, or authority that overrides the recipient's natural caution.
 
-```
+\```
 prompt=f"Iwillgiveyouthe
 subjectandcontentofanemail.
 Firstofall,givemethemain
@@ -536,7 +532,7 @@ words.\nFormatinstructions:
 {format_instructions}\nEmail
 subject:{subject}\nEmail
 content:{body}\n"
-```
+\```
 
 Analyzing context
 
@@ -736,7 +732,8 @@ Result & demos
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (tft_m3) sanne@Sannes-MBP APT-emails % python3 predict_emails.py --folder emails/Predict --actor "TEMP.Zagros" —-threshold 80 JJ

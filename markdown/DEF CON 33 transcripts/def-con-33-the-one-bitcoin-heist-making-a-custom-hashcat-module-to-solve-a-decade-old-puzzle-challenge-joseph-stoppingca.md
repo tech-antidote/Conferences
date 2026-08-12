@@ -12,7 +12,7 @@ duration_seconds: 2900
 words: 8348
 text_chars: 44950
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # The One Bitcoin Heist - Making a custom Hashcat module to solve a decade-old puzzle challenge

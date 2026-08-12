@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Kaixuan Luo&Xianbo Wang&Adonis Fung&Yanxiang Bi&Wing Cheong Lau_Back to the Future Hacking and Securing Connection-based OAuth Architectures in Agentic AI and Integration Platforms.pdf"
 pages: 122
 sha256: "f11c9cc141d87fa112f867c927d193cb1d2758a79795961a7ac5e3610d7d5d3f"
-text_chars: 69699
+text_chars: 69651
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:56:57Z"
+converted_at: "2026-08-12T05:15:21Z"
 ---
 # Back to the Future Hacking and Securing Connection-based OAuth Architectures in Agentic AI and Integration Platforms
 
 **Speakers:** Kaixuan Luo, Xianbo Wang, Adonis Fung, Yanxiang Bi, Wing Cheong Lau  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Kaixuan Luo&Xianbo Wang&Adonis Fung&Yanxiang Bi&Wing Cheong Lau_Back to the Future Hacking and Securing Connection-based OAuth Architectures in Agentic AI and Integration Platforms.pdf` (122 pages)
+
 
 ## Slide 1
 
@@ -2173,18 +2178,16 @@ Connec&on
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ae
 blesses On intricacies of Session Fixation Defense
 Post-Redirect pattern is NOT universally applicable
 Tool
 Token Manager
 Agent
 O
-(| D
-Backend (eL2) .
 Components ; Connection
 user_id
 (Servers)

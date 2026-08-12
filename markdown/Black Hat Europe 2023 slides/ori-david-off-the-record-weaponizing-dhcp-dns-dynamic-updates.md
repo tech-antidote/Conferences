@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Ori David_Off The Record - Weaponizing DHCP DNS Dynamic Updates.pdf"
 pages: 53
 sha256: "ce8ea99b35d72dccb547a57c287fd0b9927c7e6f07f8d05fc8d175e2467aef2c"
-text_chars: 9748
+text_chars: 9426
 ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:57Z"
+converted_at: "2026-08-12T04:04:18Z"
 ---
 # Off The Record - Weaponizing DHCP DNS Dynamic Updates
 
 **Speakers:** Ori David  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ori David_Off The Record - Weaponizing DHCP DNS Dynamic Updates.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -65,26 +71,22 @@ converted_at: "2026-08-11T21:12:57Z"
 
 Every domain requires an Active Directory Integrated DNS zone
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ADI DNS
 Every domain requires an Active Directory Integrated DNS zone
-es DNS
 rward Lookup Zones
-| omsdecs.aka.test
 aka.test
 Reverse Lookup Zones
 Trust Points
 Conditional Forwarders
 Cached Lookups
 Mame
-Fe _msdes
 fa | _sites
-J tcp
 | _udp
 | DomainDnsZones
-| ForestDnsZones
 FF] (same as parent folder)
 FE] (same as parent folder)
 FE] (same as parent folder)
@@ -94,8 +96,6 @@ Host (4)
 Host (4)
 Host (4)
 OA)
-2,25,14,123
-172.25.14.101
 ```
 
 ## Slide 6
@@ -104,7 +104,8 @@ OA)
 
 Every Windows host manages its own DNS record
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DNS Dynamic Updates
@@ -132,7 +133,8 @@ Time to live: 6@@ (10 minutes)
 
 By default, DNS updates are Kerberos authenticated
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Secure Dynamic Updates
@@ -143,16 +145,12 @@ OID: 1.3.6.1.5.5.2 (SPNEGO - Simple Protected Negotiation)
 w Simple Protected Negotiation
 w negTokenInit
 mechTypes:
-mechToken: ; 8. 626637a003020105a180302010ea2...
-~ krebS_ blob: 6 7a003020105a10302010ea2...
 KRBS OID: 1.:
-krb5S tok id:
 ~ Kerberos
 Vv ap-reg
 pyno: 5
 msg-type: krb-ap-req (14)
 Padding: @
-ap-options: @G8B8B8BRE
 ticket
 ```
 
@@ -202,7 +200,8 @@ Microsoft DHCP server is very common
 
 We saw Microsoft DHCP in 40% of the networks that we monitor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft DHCP server
@@ -210,7 +209,6 @@ We saw Microsoft DHCP in 40% of the networks that we monitor
 Environment: Prod 169.254.0.0/16
 ”
 67 67
-67—_
 Environment: VPN
 67 —>
 Environment: Users Environment: DMZ-ENV
@@ -218,7 +216,6 @@ Environment: Users Environment: DMZ-ENV
 =
 Environment: Printers
 67
-@
 a Internet destinations
 10.0.0.0/8 192.168.0.0/16 172.16.0.0/12
 ```
@@ -447,7 +444,8 @@ Owner: DHCP$
 
 DCs have write permissions on all the records in the zone **- arbitrary DNS record overwrite!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DC Arbitrary Overwrite
@@ -547,7 +545,8 @@ Owner: DHCP$
 
 ● Specify an alternative credential to be used when sending updates
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DNS Credential
@@ -601,24 +600,20 @@ Confirm password
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\Administrator> Invoke-DHCPCheckup -domainName aka.test
 PS C:\Users\Administrator> Import-Module .\Desktop\Invoke-DHCPCheckup.ps1
-| _\I |/ ___|
 /
 |__)
-IIdd |} tle
-—/I_| I_I\N_
 Microsoft DHCP Server Risk Assessment
 By Ori David Of Akamai SIG
 [*] Found 2 active DHCP servers:
 * DC2022.AKA.TEST
-* DHCP1.AKA. TEST
 Checking DNS Credentials Settings
 __/
-\__
 ```
 
 ## Slide 52

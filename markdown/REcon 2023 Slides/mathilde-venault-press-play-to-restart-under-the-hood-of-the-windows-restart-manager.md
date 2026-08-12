@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Mathilde Venault_Press Play to Restart Under the Hood of the Windows Restart Manager.pdf"
 pages: 55
 sha256: "2948a101dd34a8b4b3433494d551282d24b2be06a89504ccbb1a8b32bb74aa13"
-text_chars: 13152
+text_chars: 12222
 ocr_pages: 18
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:25:13Z"
+converted_at: "2026-08-12T06:02:31Z"
 ---
 # Press Play to Restart Under the Hood of the Windows Restart Manager
 
 **Speakers:** Mathilde Venault  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Mathilde Venault_Press Play to Restart Under the Hood of the Windows Restart Manager.pdf` (55 pages)
+
 
 ## Slide 1
 
@@ -60,21 +65,18 @@ Press Play to Restart: Under the Hood of the Restart Manager Mathilde Venault - 
 
 > Default way of opening a file:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction
 > Default way of opening a file:
 hFile = CreateFile(argv[1],
 GENERIC_READ,
-FILE _SHARE_READ,
 NULL,
 OPEN_EXISTING,
 FILE FLAG OVERLAPPED,
 NULL);
-//
-//
-//
 //
 //
 //
@@ -86,7 +88,6 @@ default security
 existing file only
 overlapped operation
 no attr. template
-X
 ```
 
 ## Slide 5
@@ -135,18 +136,15 @@ The Windows Restart Manager The playing field
 
 Global Operation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \gROWDST! RIKE
 Global Operation
 Restart Manager —
 |
-To
 \ ~ 1. Creates a
-rs session
-> ~ Application
-crx)
 </>
 ```
 
@@ -154,37 +152,32 @@ crx)
 
 Global Operation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \gROWDST! RIKE
 Global Operation
 Restart Manager —
-To
 \ ~ 1. Creates a
 | session
 c 2. Registers
 resource
-re
-> ~ Application
-crx)
 ```
 
 ## Slide 12
 
 Global Operation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \gROWDST! RIKE
 Global Operation
 Restart Manager —
-TO
 \ ~ 1. Creates a
 | session
-> ~ Application
-{/_ 2.Registersa _
 \< resource </>
 cu affected app: LockFile.exe 3. Gets the list of /
 affected applications
@@ -194,14 +187,13 @@ affected applications
 
 Exported Functions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | XGROWDSTRIKE
 Exported Functions
-RmStartSession RwiRegisterResources RwGetList
 RmShutdown ( RwiRestart )
-Ee)
 Initiates a new
 Restart Manager
 session
@@ -219,7 +211,6 @@ Restarts applications and services
 that have been shut down by the
 RmShutdown function and that have
 been registered for restart using
-RegisterApplicatioiRestart
 ```
 
 ## Slide 14
@@ -280,7 +271,8 @@ Application Information
 
 RmGetList() - Decorators
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RmGetList() - Decorators
@@ -291,7 +283,8 @@ Restart Manager
 
 RmGetList() - Decorators
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \gROWDST RIKE
@@ -303,7 +296,8 @@ Restart Manager
 
 RmGetList() - Decorators
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \gROWDST RIKE
@@ -342,7 +336,8 @@ affected app: LockFile.exe
 
 RmGetList() - For Services
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RmGet?List() - For Services
@@ -370,7 +365,8 @@ Please enter the short name of the service you want to check.
 
 RmGetList() - For Processes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RmGe?tList() - For Processes
@@ -456,14 +452,14 @@ RmGe?tList() - For Processes
 
 > What may happen when WM_CLOSE message is sent to explorer.exe:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \GROWDSTRIKE
 RmShutdown()
 >What may happen when message is sent to
 Shut Down Windows
-gm Windows 10
 What do you want the computer to do?
 Shut down
 Closes all apps and turns off the PC.
@@ -488,37 +484,26 @@ OK Cancel
 
 Legitimate Use Case Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | \GROWDSTRIKE
 Legitimate Use Case Example
-4 || All Modules exer
 =.) [f] Restart Manager GQ C:\Users\User\Desktop\Ninite Evernote GIMP PeaZip ShareX Skype Installer.exe - PID: 16
-5.) Gy Rstrtmgr.all a4 C:\Users\User\AppData\Local\Temp\5466cb2d-e35c-11ed-94a 3f09d\Ninite.exe - PID: 4
 [El Rmadafitter 4B C:\Users\User\AppData\Local\T emp\S58COC~1\target.exe - PID: 6320 - (Terminated)
 [I RmcancelCurrentTask #-9@J C:\Users\User\AppData\Local\Temp\S58COC~3\target.exe - PID: 3328 - (Terminated)
 EE] RmEndsession =|] C:\Users\User\AppData\Local\ Temp \is-S6640.tmp\target.tmp - PID: 3076 - (Terminated)
-El RmGetFiltertist :
-[=] RmGetList
-EE] RmoinSession ow
 EE] RmRegisterResources Q, Return Value Duration
 [=] RmRemoveFilter R 5 a ERROR.
-a pnpesar 2 egisterResource 0 ERROR_SUCCESS 0,0006251
 =] RmShutdown
 ERROR_SUCCESS 502
 =] RmStartSession -
-ERRO S 0.0015493
-ISS 088
-<
 Pre-Call Value
 9 nFiles 14
-& ¢ rgsFileNames Ox044ab1
 # [0] C:\Program Files\Microsoft VS Code\Code.exe™
 LPcwsTR 411] «04137730 “C:\Program Files\Microsoft VS Code\d3dcompiler_47.
-LPcwsTR ¢ 12] D C:\Program Files\Microsoft VS Code\ffmpeg. dil
 #14] 0 C:\Program Files\Microsoft VS Code\libGLESv2.dll
-LPCWSTR 4 [5] x041377a0 “C:\Program Files\Microsoft VS Code\vk_swiftshader.dll”
 a
 a
 a
@@ -567,15 +552,14 @@ A real world example: Conti Ransomware
 
 Step 1: Register the target file
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-|e
 Step 1: Register the target file
 EIBOOL KillFileOwner(__in LPCWSTR PathName)
 if
 ' // Check if RstrtMgr.dll is loaded based on a global variable flag
-Es) if (!api: :IsRestartManagerLoaded())/ { ... } |
 BOOL Result = FALSE;
 DWORD dwSession = 0x0;
 DWORD ret = 0;
@@ -583,42 +567,36 @@ WCHAR szSessionKey[CCH_RM_SESSION_KEY + 1];
 Rt1lSecureZeroMemory(szSessionkey, sizeof(szSessionKey) ) ;
 // Initiates the Restart Manager session
 a! , if (pRmstartSession(&dwSession, @x@, szSessionKey) == ERROR SUCCESS)
-a
 ' ' // Register into the session the target file
 oh ' if (pRmRegisterResources(dwSession, 1, &PathName, @, NULL, @, NULL) == ERROR SUCCESS)
-' ' Cc =e aaa aaa aaa aaa aaa aaa aaa ~
 DWORD dwReason = 0x0;
 UINT nProcInfoNeeded = @;
 UINT nProciInfo = 0;
 PRM_PROCESS_INFO ProcessInfo = NULL;
-RtlSecureZeroMemory(&ProcessInfo, sizeof(ProcessInfo) ) ;
-YX
 ```
 
 ## Slide 39
 
 Step 2: Retrieve the list of affected apps
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-[4]
 Step 2: Retrieve the list of affected apps
-(
 , ret = (DWORD)pRmGetList(dwSession, &nProcInfoNeeded, &nProcInfo, ProcessInfo, &dwReason); |
-AF (ret != ERRORSUCCESS []~!nProcinfoNeeded)[{ Ty | -
 // Allocates the required structures to get information for each process & service
 ProcessInfo = (PRM PROCESS INFO)memory: :Alloc(sizeof(RM_PROCESS INFO) * nProcInfoNeeded) ;
 nProcinfo = nProcInfoNeeded;
 // Retrieves the list of processes & services currently using the target file
-YX
 ```
 
 ## Slide 40
 
 Step 3: Terminating the affected apps
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Step 3: Terminating the affected apps
@@ -640,7 +618,6 @@ pRmEndSession(dwSession) ;
 return FALSE;
 // Shutdown processes & services using the target file I
 Result = pRmShutdown(dwSession, RmForceShutdown, NULL) == ERROR_SUCCESS; I
-X
 ```
 
 ## Slide 41
@@ -653,7 +630,8 @@ Cheat code  OΔXΔ
 
 Identifying Running Processes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \gROWDST! RIKE
@@ -665,7 +643,8 @@ Running processes \
 
 Identifying Running Processes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \gROWDST! RIKE
@@ -678,7 +657,8 @@ Running processes \
 
 Identifying Running Processes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \gROWDST! RIKE

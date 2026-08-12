@@ -12,7 +12,7 @@ duration_seconds: 1118
 words: 3057
 text_chars: 16377
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Loading Models, Launching Shells - Abusing AI File Formats for Code Execution

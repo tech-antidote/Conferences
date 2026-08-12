@@ -4,23 +4,28 @@ speakers: ["Bill Swearingen"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Bill Swearingen - noRecognition Could a pattern on your clothing fool Facial Facial Recognition - hevnsnt.pdf"
 pages: 39
 sha256: "cbe5991d801e599f9eed99b4b65db4a525b4132078ae3ae56c45c594c6a292ba"
-text_chars: 13832
-ocr_pages: 9
+text_chars: 13471
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:13:17Z"
+converted_at: "2026-08-12T06:22:17Z"
 ---
 # noRecognition Could a pattern on your clothing fool Facial Facial Recognition
 
 **Speakers:** Bill Swearingen  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bill Swearingen - noRecognition Could a pattern on your clothing fool Facial Facial Recognition - hevnsnt.pdf` (39 pages)
+
 
 ## Slide 1
 
@@ -56,19 +61,6 @@ Background source: deflock.org
 
 **Sold to catch car thieves. Rebuilt into a surveillance state.** 140,000 monthly police users. Every passing car, logged. No warrant.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eo ©
-b's
-4 Y
-4
-?
-atch car thieves.
-Rebuilt into a surveillance state.
-140,000 monthly police users. Every passing car, logged. No warrant.
-```
-
 ## Slide 4
 
 ###### **FOOTAGE TAKEN FROM AN ALPR CAMERA**
@@ -103,17 +95,6 @@ Bill Swearingen — ex-CISO, ex-red-team lead, founder of SecKC. CISSP · CISM �
 
 **The World’s largest monthly hacker meetup**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-=> |
-The'World S largest month
-iyi
-a
-ckgr mecnp
-oN
-```
-
 ## Slide 9
 
 ### **IT STARTED AS A GREAT IDEA**
@@ -136,7 +117,8 @@ It parses pixels into objects. Nothing more.
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Status
@@ -182,7 +164,8 @@ Anomaly Log
 
 **I had invented something AMAZING. My friends were quick to help.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | had
@@ -351,11 +334,11 @@ Each pattern scored against the full gauntlet of 10 models. The highest performe
 
 https://www.youtube.com/watch?v=L_4BPjLBF4E
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ys) to Walk (deep reinforcement learning)
-D —
 https://www.youtube.com/watch?v=L_4BPjLBF4E
 ```
 
@@ -365,7 +348,8 @@ https://www.youtube.com/watch?v=L_4BPjLBF4E
 
 Every win and every loss now trains a deep reinforcement learning system.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 31.7 Million
@@ -386,24 +370,6 @@ Every win and every loss now trains a deep reinforcement learning system.
 **E R S O N A S**
 
 Nearly twenty times the corpus: broader coverage of body types, ages, and skin tones.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-88 ,
-ERSONAS =
-Nearly twenty times the
-orpus: broader coverage of
-hs
-=.
-=
-io an
-yoy
-body types, ages, and skin =
-tones. -
-Diy
-Barry Carrie
-```
 
 ## Slide 30
 
@@ -508,7 +474,8 @@ person detected no box drawn
 
 **11 / 11 DEFEATED**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CLEAN VERSUS PATTERN, WITH A SOLID-BLACK CONTROL
@@ -556,7 +523,8 @@ Don’t like this? Blame nvidia
 
 **DEMO TIME**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMO TIME

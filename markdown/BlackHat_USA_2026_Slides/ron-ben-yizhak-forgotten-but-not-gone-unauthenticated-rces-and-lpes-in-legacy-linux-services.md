@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Ron Ben Yizhak_Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services.pdf"
 pages: 69
 sha256: "0d2092003e689035bd11b0cda800cf116cfc5e546a829d91b0bf75356ad2d872"
-text_chars: 10983
-ocr_pages: 9
+text_chars: 12136
+ocr_pages: 17
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:22Z"
+converted_at: "2026-08-12T05:42:46Z"
 ---
 # Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services
 
 **Speakers:** Ron Ben Yizhak  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ron Ben Yizhak_Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services.pdf` (69 pages)
+
 
 ## Slide 1
 
@@ -31,21 +36,6 @@ Forgotten but Not Gone: Unauthenticated RCEs and LPEs in Legacy Linux Services
 Ron Ben Yizhak, SafeBreach
 
 2
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Forgotten but Not Gone:
-Unauthenticated RCEs
-and LPEs in Legacy
-MnmuxXx Services <— ;
-< oo
-=
-NYS a\ Bat”
-Ron Ben Yizhak, SafeBreach
-black hat
-©3232. 2
-```
 
 ## Slide 3
 
@@ -81,17 +71,6 @@ Unauthenticated RCE in Samba via SAMR Unauthenticated RCE in Samba via Spoolss T
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-* 2003
-woon
-2004
-Boon
-FILES
-i) | HP LaserJet 4000
-```
-
 ## Slide 7
 
 ##### Telnet
@@ -100,7 +79,8 @@ Allows accessing the terminal of another machine remotely Legacy protocol supers
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Telnet
@@ -117,7 +97,6 @@ Brazil 25,148
 Canada
 Argentina
 United States 5,253
-black hat
 2026 7
 ```
 
@@ -128,6 +107,20 @@ black hat
 Open-source implementation of SMB and Active Directory Exposes the RPC interface of common services Released in 1992
 
 8
+
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Samba
+Open-source implementation
+of SMB and Active Directory
+Exposes the RPC interface of |
+common services
+SMB Netlogon Event Print
+log Spooler
+2026
+```
 
 ## Slide 9
 
@@ -151,6 +144,21 @@ Stayed undetected since 2015
 
 10
 
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Root Cause Analysis
+Telnetd allows unauthenticated clients to set its
+environment variables
+@ telnetd
+ENVAR=VALUE
+4 LANG=en_US.UTF-8
+USER=john
+ENVAR=VALUE
+2026 10
+```
+
 ## Slide 11
 
 ##### Root Cause Analysis
@@ -159,11 +167,38 @@ Stayed undetected since 2015
 
 11
 
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Root Cause Analysis
+The spawned shell will inherit the new
+environment variables
+@ telnetd
+ENVAR=VALUE
+Obash
+44 1 ANG=en_US.UTF-8
+ENVAR=VALUE
+2026 11
+```
+
 ## Slide 12
 
 ### Root Cause Analysis Telnetd doesn’t perform the authentication itself
 
 12
+
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Root Cause Analysis
+Telnetd doesn't perform the authentication itself
+/usr/sbin/telnetd
+Who are you? ~
+user: password </>
+2026 12
+```
 
 ## Slide 13
 
@@ -171,10 +206,10 @@ Stayed undetected since 2015
 
 Telnetd executes login with a format string In 2015 it was updated
 
-```
+\```
 - PATH_LOGIN " -p -h %h %?u{-f %u}"
 + PATH_LOGIN " -p -h %h %?u{-f %u}{%U}"
-```
+\```
 
 13
 
@@ -182,9 +217,9 @@ Telnetd executes login with a format string In 2015 it was updated
 
 ##### Root Cause Analysis
 
-```
+\```
 PATH_LOGIN " -p -h %h %?u{-f %u}{%U}"
-```
+\```
 
 ~$ /
 
@@ -240,9 +275,9 @@ version  display version
 
 ##### Root Cause Analysis
 
-```
+\```
 PATH_LOGIN " -p-h %h %?u{-f %u}{%U}"
-```
+\```
 
 ~$ /
 
@@ -402,14 +437,27 @@ version  display version
 
 23
 
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Root Cause Analysis
+The -f parameter can be injected to skip authentication
+Any username can be set
+@ telnetd
+USER=-f£ root
+9/usr/bin/login -p -h %h -£ root
+2026 23
+```
+
 ## Slide 24
 
 Security Patch Parameters cannot be set before the username
 
-```
+\```
 -  PATH_LOGIN " -p -h %h %?u{-f %u}{%U}"
 +  PATH_LOGIN " -p -h %h %?u{-f-- %u}{--%U}"
-```
+\```
 
 24
 
@@ -446,6 +494,26 @@ denied
 LD_PRELOAD forces the linker to load a library when the process is initialized
 
 27
+
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Manipulating Envars in TelnetD
+~§ LD_PRELOAD=/tmp/injected.so /usr/bin/login
+LD PRELOAD forces the
+linker to load a library when
+the process is initialized
+injected.so
+libc.so
+libcap.so
+libpam.so
+>
+>
+>
+>
+2026 27
+```
 
 ## Slide 28
 
@@ -505,6 +573,19 @@ login references $CREDENTIALS_DIRECTORY Secure mechanism to supply credentials t
 
 33
 
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+SCREDENTIALS_DIRECTORY
+systemd |" systemd
+3 service 2
+Oservice
+CRED_DIR=/run/credentials/my.service
+v
+2026 33
+```
+
 ## Slide 34
 
 ##### $CREDENTIALS_DIRECTORY
@@ -545,7 +626,8 @@ login.noauth?
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SCREDENTIALS_DIRECTORY
@@ -553,14 +635,10 @@ login.noauth is even documented
 CREDENTIALS
 login supports configuration via systemd credentials (see htt
 systemd.io/CREDENTIALS/).
-aoc ff
 ps-//
-fa J
 login reads the following systemd credentials:
 login.noauth (boolean)
 If set, configures login to skip login authentication, similarly to the -f option.
-black hat
-USA
 2026 36
 ```
 
@@ -570,25 +648,26 @@ USA
 
 37
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Privilege Escalation in TelnetD
+~ telnetd
+USER=root, CRED_DIR=/tm ~
+@ P CRED_DIR=/tmp
+© USER=root
+Ke write “yes”
+6) usr/bin/login -p -h %h root
+/tmp/login.noauth
+2026 37
+```
+
 ## Slide 38
 
 Demo #1
 
 38
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Demo #1
-weak_user@telnet-srv:~$ |
->
-I
-7 ®@,
-e
-~e
-black hat
-2026 38
-```
 
 ## Slide 39
 
@@ -626,7 +705,8 @@ Samba is a very common service Installed widely Developed over 30 years
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Picking The Next Target
@@ -637,8 +717,6 @@ Developed over 30 years ne nwo 5008
 United States 4,296
 Portugal 3,276
 France 3,260
-black hat
-USA
 2026 42
 ```
 
@@ -680,18 +758,18 @@ smbrun
 
 ##### Attempting Bash Injection
 
-```
+\```
 addprinter_command “printer_name“ “share_name”...
-```
+\```
 
-```
+\```
 printer_name=a“ | touch /tmp/pwned | echo “a
-```
+\```
 
-```
+\```
 addprinter_command “a“ | touch /tmp/pwned | echo
 “a“ “share_name”...
-```
+\```
 
 46
 
@@ -711,10 +789,10 @@ execl
 
 #### Non-alphanumeric chars outside of quotes are escaped
 
-```
+\```
 addprinter_command “a“ \| touch /tmp/pwned \| echo
 “a“ “share_name”...
-```
+\```
 
 48
 
@@ -758,21 +836,32 @@ smbrunsecret
 
 54
 
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Unauthenticated RCE #1
+/etc/samba/smb.conf
+[global]
+check password script = crackcheck %u
+rpc start on demand helpers = no
+2026 54
+```
+
 ## Slide 55
 
 Demo #2
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #2
 Attacker id. x + v | user@samba-srv: ~ x + v Victim
 user@samba-srv:~$
 C(impacket) C:\Users\ronb>
-black hat
-USA
 2026 55
 ```
 
@@ -784,13 +873,13 @@ USA
 
 ##### Unauthenticated RCE #2
 
-```
+\```
 _spoolss_EndDocPrinter
 print_job_end
 generic_job_submit
 print_run_command
 smbrun_no_sanitize
-```
+\```
 
 57
 
@@ -799,6 +888,15 @@ smbrun_no_sanitize
 ##### Samba as Print Server
 
 58
+
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Samba as Print Server
+generic
+2026 58
+```
 
 ## Slide 59
 
@@ -814,6 +912,23 @@ Printer share configured “printing” config isn’t IPRINT or CUPS “print c
 
 60
 
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Unauthenticated RCE #2
+@ RpcEndDocPrinterxr
+~ pDocName=
+/bin/sh -c “echo Printing | touch /tmp/pwned
+[global]
+printing = BSD
+print command = echo Printing MM >> /tmp/print.log
+[Printer]
+path = /var/tmp/
+printable = yes
+2026 60
+```
+
 ## Slide 61
 
 61
@@ -824,15 +939,13 @@ Printer share configured “printing” config isn’t IPRINT or CUPS “print c
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #3
-Attacker [ie F) wer@sambe-sr:~ « Victim
 user@samba-srv:~$
 Cimpacket) C:\Users\ronb>
-black hat
-USA
 2026 62
 ```
 
@@ -866,22 +979,18 @@ The latest risks aren’t necessarily the greatest Legacy protocols are still be
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Takeaways
-7 FNKID ZOEY
-a
-iP al
 The latest risks aren't
 necessarily the greatest
 Legacy protocols are still 7 vi Bs .
 being used in enterprise Tas
 networks
-PROMPT INJECTIO —
 MALICIOUS IDE EXTENTIONS = j
 CLOUD-MISCONFIGS USER="F ROOT;
-black hat
 2026 66
 ```
 

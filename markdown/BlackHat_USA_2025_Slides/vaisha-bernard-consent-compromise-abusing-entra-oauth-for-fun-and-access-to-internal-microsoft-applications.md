@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Vaisha Bernard_Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications.pdf"
 pages: 110
 sha256: "82e5302df40713e92e286a2654081894a0d38e52b0da49b6ad2af8e203ca0781"
-text_chars: 53366
-ocr_pages: 70
+text_chars: 40530
+ocr_pages: 69
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 6
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:03:45Z"
+converted_at: "2026-08-12T05:25:49Z"
 ---
 # Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications
 
 **Speakers:** Vaisha Bernard  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Vaisha Bernard_Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications.pdf` (110 pages)
+
 
 ## Slide 1
 
@@ -36,21 +41,18 @@ Consent & Compromise Abusing Entra OAuth for Fun and Access to Internal Microsof
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi§ekhat
-BRIEFINGS
 1
 2 "“displayName": "Vaisha Bernard",
 3 "“jobTitle": "Chief Hacker",
 4 "companyName": “Eye Security",
 5 "country": "The Netherlands",
-6 "“hireDate": "2020-04-01T00:00:00Z",
 7
 "aboutMe": "15+ years offensive security, 5 years
 incident response",
-8 "interests": [
 9 "hiking",
 10 "camping",
 11 "weightlifting",
@@ -66,11 +68,11 @@ incident response",
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 also me
 Most talks about
 cybersecurity are just
@@ -79,7 +81,6 @@ someone stumbling around
 | am terrified that most of the talks about cybersecurity vulnerabilities are really just
 someone stumbling around having issues and then finding truly horrifying
 vulnerabilities
-f> 40 CS) Reply
 ```
 
 ## Slide 4
@@ -99,14 +100,12 @@ Microsoft
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 aka.ms
-== Microsoft
 Sign in
 Email, phone, or Skype
 QY Sign-in options
@@ -116,12 +115,12 @@ QY Sign-in options
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-BRIEFINGS
 “What would happen if |
 simply logged in here?”
 ```
@@ -132,11 +131,11 @@ simply logged in here?”
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 aka.ms
 == Microsoft
 Pick an account
@@ -146,21 +145,18 @@ Selected user account does not exist in tenant
 tenant. The account needs to be added as an
 external user in the tenant first. Please use a
 different account
-GA
 ```
 
 ## Slide 8
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 akaSearch cmd.ms@ _ merill.net@ About Q iy) “0:
-‘J
 ¥¢ -—akaSearch = Search for aka.ms!
 ®. Do you have trouble remembering Microsoft's aka.ms links. This community contributed list of links is for you! Use the Add button to submit new links to this list.
 Vv Search links
@@ -176,12 +172,10 @@ aka.ms/30-days-to-learn-it Microsoft Cloud Skills Challenge | 30 Days to Learn I
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 The ADHD urge to do literally about OO %
 anything else other than the thing
 you're supposed to be doing
@@ -189,11 +183,7 @@ you're supposed to be doing
 h for aka.ms!
 inks is for you! Use the Add button to submit new links to this list.
 URL
-> /leat ercontent.com/tracsman/vdcwW...
-Ss UINRJR?ref=Link
-ics365/fin-ops-c...
 rm/devdiv/one...
-sto La ers/30-days-to-...
 ```
 
 ## Slide 10
@@ -202,14 +192,12 @@ sto La ers/30-days-to-...
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 eng.ms
-== Microsoft
 Sign in
 Email, phone, or Skype
 QY Sign-in options
@@ -221,11 +209,11 @@ QY Sign-in options
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 eng.ms
 BE Microsoft
 vaisha@vaisha.nl
@@ -256,12 +244,11 @@ Does this app look suspicious? Report it here
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 eng.ms
 BE Microsoft
 500 Internal Server Error
@@ -269,7 +256,6 @@ _alssions means that you allow this app to use
 > specified in their terms of service and privacy
 5 ..ement, The publisher has not provided links to their terms
 for you to review. You can change these permissions at
-https://myapps.microsoft.com. $
 Does this app look suspicious? Report it here
 ```
 
@@ -279,11 +265,10 @@ Does this app look suspicious? Report it here
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 rescue.eng.ms
 a= Microsoft
 Sign in
@@ -294,7 +279,6 @@ NSANITY:
 same thing over and
 i ain and expecting
 _ different results.
-. Ae
 WWW.SEVENQUOTES.COM
 ```
 
@@ -302,7 +286,8 @@ WWW.SEVENQUOTES.COM
 
 password
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © Search Engineering Hub Rescue ° Vaisha Bernard
@@ -311,7 +296,6 @@ vaisha@vaisha.nl
 @) This site is for disaster recovery scenarios, please use https://eng.ms if possible! x
 @ Engineering Hub is currently migrating to a new dialtone stack & hardware, authenticating with AME and other tenants with dSTS is coming soon. Please report any issues to the =
 Engineering Hub team.
-AL... AD Alnsfnu..
 all layers of the tech stack
 starting with the distributed
 computing fabric (cloud and
@@ -328,7 +312,6 @@ partner develope...
 Initiatives
 Learn about the key Azure
 Initiatives
-Pines Cau tene Ene nae
 Finance Group
 All Apps/Systems managed
 by the business teams are
@@ -340,7 +323,6 @@ largest professional network
 with more than 610 million
 users in more than 200
 countries and territories
-Pine mente Evebaen nl 5 ene | | Hub Help
 Cc Hub onboarding
 P entation
 d
@@ -375,24 +357,22 @@ Commercial Business
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Si Engineering Hub Rescue
 @) This site is for disaster recovery scenarios, please use https://eng.ms if possible!
 @ Engineering Hub is currently migrating to a new dialtone stack & hardware, authenticating with AME and other tenants with dSTS is coming soon. Please report any issues to the Engineering Hub team.
-, " Search Results
 rs ~ | Search Engineering Hub Rescue
 Showing 15 of 13252 results.
 Search Results for password
 Cll-Service Doc » Passwords
-docs/experiences-devices/opg/office-canvas/office-voice-vision/cloud-input-intelligence/cil-service-doc/incident-triage/ passwords
 Passwords The user name for all of the environments is the same as seen in the screenshot below In order to get the password each environment has this stored in a variable
 Team Documentation * passwords
 docs/cloud-ai-platform/ahsi-organization/ahsi/redsa-team/cloud-readiness-criteria-labs/team-documentation/toolkit/passwords
 Passwords Currently all blade and rack/chassis manager credentials (passwords and usernames) are stored ina keyvault
 CRMGlobal & Reporting Infrastructure » password-change
-docs,/'microsoft-customer-partner-solutions-mcaps-core/customer-experience-and-support/customer-service-support/strategy-and-innovation-organization/crm-global-platform/crmglobal-reportin
 Obtain old password for crmgsve from vault Create new password for crmgsve and store in vault with activation date and expiration date complying with the new policy (mini
 age).
 ```
@@ -437,11 +417,10 @@ Done after Access Token
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
 ASP.NET/ASP.NET Core, this is done by adding the [Auth) 2?) Jattribute to the controller actions.
@@ -451,11 +430,10 @@ ASP.NET/ASP.NET Core, this is done by adding the [Auth) 2?) Jattribute to the co
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
 ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the controller actions.
@@ -469,10 +447,10 @@ ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the co
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-mo 7% Ping : >
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
 ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the controller actions.
@@ -491,11 +469,10 @@ authenticated users.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2) TN pring Ba >>
-BRIEFINGS = 4 NOAM Wy , Low
 How a web app determines if the user Is authenticated
 Web app developers can indicate whether all or only certain pages require authentication. For example, in
 ASP.NET/ASP.NET Core, this is done by adding the [Authorize] attribute to the controller actions.
@@ -653,17 +630,14 @@ Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
 /oauth2/authorize /oauth2/token =
-co ee]
-ou en
 Single-Page App Web API
 1. Sign-in & Consent
 ```
@@ -680,16 +654,14 @@ Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
 /oauth2/authorize /oauth2/token
-Tr &
 Single-Page App Web API
 1. Sign-in & Consent
 2. Get Authorization Code
@@ -709,16 +681,14 @@ Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi§ekhat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
 /oauth2/authorize /oauth2/token
-Tr &
 Single-Page App Web API
 1. Sign-in & Consent
 2. Get Authorization Code
@@ -741,16 +711,14 @@ Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi§ekhat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
 /oauth2/authorize /oauth2/token
-Tr &
 Single-Page App Web API
 1. Sign-in & Consent
 2. Get Authorization Code
@@ -802,102 +770,35 @@ Payload
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 37/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
-“JWT”,
 RS256",
-"_jNwjeSnvTTK8XEdrSQUPKBRLLo",
-_jNwjeSnvTTK8XEdrSQUPkBRLLo”
 Header
-“c44b4083 - 3bb@-49c1-b47d-974e53cbdf3c", =
-https://sts.windows .net/4clale11-a052-4346-9091-807fc856e66e/",
 Authorization: Bearer
-eee, eyJOe SiJEVIGiLCIhi TéT1l3qTne V dlr AWE VOC xMbyIsImtpZ
-iat": 1751972163, ST eee s pele ahs - ee —
-“nbf": 1751972163, CléllgqTne : JG eydhadwoio yOr ( ZEty uel 23 ZCOSN
-"exp": 1751976928, zR arm ¥mPmM2 MiLCJp 3aW5
-1", gilNmUlNmiUvliwia’ JFOTjoxNz LCJuYm
-“aio”: i ia iNSIsImFpbyIé6TkFRKUUFLL sha SUF BOUY ThGoOSLehnowt 3Ry aler aLBvk = dO1l3cGh5' onRnaESz
-“AdQAK /8ZAAAAES1m9 /8g9kwF 9BwPonmkwIwphyBtghOYvLFRM@qLZ/+eWmvnr2T9z/U7tS@gTL2VBuqMpel2zAC4 DIEGO cWd3 Re LEVitovur TROISPGFROM3 hu
-cUxabytlV2 le
-ZLV6IGHZN91vP/80styxYZYTHjnKJSu12pcVB2EUHxRnb17ONbKFf3Rdca/y2jh/V/9XF1UjCXqURxXoEk99Yvarngh 45 aes “3 BSF laWVPlamSLsSINIMTUwYlLzcuw
-pJXNKGhLedxN//TxWRinOfg==", <RMO -
-"ame": [ tmMld Juz ldqvwkJILVDBSam5q 2u1
-esa", oaON4L3
-hdSSshmléeTFYLSuU ATW
-lhRec3 BRYESLR2 hN2WR4TAB VHhxtm1uT2 EnPTOiLCIhbx1iOlsicnNhliwibWZhiI 10s ImF w
-“mfa" eGlkIjo OwODMt M2 JiMCOODOWMXLWIONZ OtOTcOZTUzY2dk2 Nj liwi itbweWe bys Tio tat ee alla
-1, WOiSilmNzImOWU2 My lmMTFILTRiNG Et YWY4NSO0OW12 2624NmEwzkiLCdmi rcmaiLc
-“appa: Ne AEST EE InaXZ1b19uyWL11 pc2hhliwiaWROeXAiOidlc2VyliwiaxXBhzGRy1 “Pp ray | O ad ImShb Wu
-vdeviceid" "£72£9e63-£51.c-4b61-af85 -49b6dfc6a079", oe ae — - eesi2 Wi temLOs one acre T)MANZA oe
-family name": “Bernard W INWULZNS IsInblaWoio “Mj AwMD LDMUES3 Mac ee WUJfe
-“given name": “Vaisha", UZibWIvTEF TOFN3 TzhGSnPIMLhUbFBMM3 pSdEF LOTBBQ b2 4ulmiVAZCSEbGwgUG
-“idtyp": “user”, g SLIJLYWRAcmLOZSSEcHEsaWNhdGlvbkNvbmz iss ZWF Ik liwicilkIjoiNDAas Y¥jez2zTr
-tYeNyZillZmI2LTUwhy OtNmExMWZlMmdkZGYOliwic oiSllwWXZrY¥Vhno ekSCXi4yUmxWc3 BaWDhkT3hN
-aGFMMUZndXRIc3 1tUSIsInRpzclé1jRIMWExZTEXLWEwNTItNDMONiOSMDExLTgqwN2 2] ODUZZTYZ ZS IsInVuaxF lz
-"190320009C1A777E", VSuYW1llijoidmF pethhhmd lemShemRAZk1llLLnN1Y¥3\ a u AraleEatmuaj@aieh ag hhLrmd Lem5t ee 1ILnN1 Z
--AXQAER4aTFKgRKOQKYB_yFbmboNAS8SwO8FJtH2XTIPL3zytAe9@AA..", AAG aedad a OyeDFpUkdBQSTsInZlcilé1jEumc isin E
-Organization.Read.All Policy.ReadwWrite.ApplicationConfiguration User.Read”, t2TYSMyOONmN5 LTk22Z 4Mt ZG wHhWImOGIiNAIh iviNWoO2 ¥4ZiYqerzGusNsuons lzLWii
-@06b73e9-c32f-efb6-5064-6allfe2bddf4", T1lOs InhtelSmdGGi6i0TZ01F VF Ayhme
-JYpivkaXg8uSzNB_n2R1VspZX8dOxMtaL 1FgutHsymQ" , I
 “: "Vaisha Bernard | Eye Security",
-38708b91-6c68-4152-9aaf-f41f1ca95e65",
-aa -= 1 FOBUVFSE LEVERS
-ncxcHhlLWFrelFObUVFSELKVE
-wat . LixXLDYLLLEIU Ab ANT Ct.
-“4clale11-a052-4346-9091-807fc856e66e",
-“unique_name": “vaisha.bernard@eye.security",
 “upn": “vaisha.bernard@eye.security",
-"uti": “YkUnNSNn0@ec7M2x1iRGAA" ,
 “ver": "1.0",
 “wids": [
-“c430b396 -e693-46cc-96F3-db@1bf8bb62a",
-“5d6b6bb7 -de71-4623 - b4af -96380a352509"
 1,
-“xms_ftd": "SgMETP26g1pxu-akzQtmEEHIdTDsJLzZLSApO9qEYqoBc3d1ZGVuYy1kc21z",
 “xms_idrel": "1 6",
-“xms_tdbr": "EU"
-}. [Signature]
 ```
 
 ## Slide 36
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-“typ”: "JWT",
 "alg": "RS256",
-*_jNwjeSnvTTK8XEdrSQUPKBRLLo",
-“aud: “c44b4083-3bb@-49c1-b4/d-9/4e53cbdt3c",
-“aio”:
-“AdQAK/8ZAAAAES 1m9/8g9kwF 9BwPonmkwlwphyBtghOYvLFRM@qLZ/+eWmvnr2#T9z/U7tSOgTL2VBuqMpel2zAC.
-ZLV6IGHZN91vP/80styxYZYTHjnkJSu12pcVB2EUHxRnb17ONbKf3Rdca/y2jh/V/9XFIUJCXQURxXOEk99Yvqrngl
-pIXNKGhLedxN//TxWRinOfg==",
 "Vaisha Bernard | Eye Security",
-: "38708b91-6c68-4152-9aaf-f41f1ca95e65",
 : “10@320009C1A777E",
-"ph": "1. AXQAER4aTFKRKOQKYB_yFbmboNAS8SwO8FJtH2XTIPL3zytAe9@AA.",
-“scp": "Organization.Read.All Policy.Readhirite.ApplicationConfiguration User.Read",
-"sid": "@Q6b73e9-c32f-efb6-5064-6allfe2bddf4",
-"JYp1vkaXg8uSzNB_n2R1VspZX8dOxMtaL1FgutHsymQ”,
-"tid": "4clale11-a052-4346-9091-807Fc856e66e",
-“unique_name": "vaisha.bernard@eye. security”,
-“vaisha.bernard@eye.security",
-"YkUnNSNnOQec7M2x1iRGAA" ,
 "1.0",
 “wids": [
-“c430b396 -e693-46cc-96F3-db@1bf8bb62a",
-“5d6b6bb7 -de71-4623 - b4af -96380a352509"
-": “SgMETP26g1pxu-akzQtmEEHIdTDsJLzZLSAp@9qEYqoBc3d1ZGVuYy1kc21z",
-“1 6",
-“xms_tdbr": "EU"
 }. [Signatur
 ```
 
@@ -905,48 +806,26 @@ pIXNKGhLedxN//TxWRinOfg==",
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 RS256",
-_jNwjeSnvTTK8XEdrSQUPkBRLLo",
-_jNwjeSnvTTK8XEdrSQUPKBRLLo”
-“AdQAK/8ZAAAAES 1m9/8g9kwF 9BwPonmkwIwphyBtghOYvLFRM@qLZ/+eWmvnr2T9z/U7tSOgTL2VBuqMpel2zAC4
-zLV6IGHZN91vP /80styxYZYTHjnKJSu12pcVB2EUHxRnb17ONbKF3Rdca/y2jh/V/9XFIUJCXqQURxXoEk99Yvqrngl
-pJIXNKGhLedxN//TxWRinOfg==",
-"ame": [
-“rsa”,
 “mfa"
 1,
 “appid": “c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
 “appidacr": "2",
-“deviceid": “f72f9e63-f51c-4b61-af85-49b6dfc6a079",
 “family_name"
-“given_name
 “idtyp": “user”,
 “Bernard”,
 "Vaisha Bernard | Eye Security",
-38708b91-6c68-4152-9aaf-f41f1ca95e65",
-“100320009C1A777E",
-- AXQAER4aTFKgRKOQKYB_yFbmboNAS8SwO8F JtH2XTIPL3zytAe9@AA.",
-Organization.Read.All Policy. ReadWrite.ApplicationConfiguration User.Read",
-006b73e9-c32f-efb6-5064-6a11fe2bddf4",
-JYplvkaXg8uSzNB_n2R1VspZX8d0xMtal 1FgutHsymQ",
-4clale11-a052-4346-9091-807fc856e66e",
 “unique_name": “vaisha.bernard@eye.security",
-vaisha.bernard@eye.security",
 YkUnNSNn0@ec7M2x1iRGAA" ,
 “ver": "1.0",
 “wids": [
-“c430b396 -e693-46cc-96F3-db@1bf8bb62a",
-“5d6b6bb7 -de71-4623 - b4af -96380a352509"
 1,
-“xms_ftd": "SgMETP26g1pxu-akzQtmEEHIdTDsJLzZL5Ap@9qEYqoBc3d1ZGVuYy1kc21z",
 “xms_idrel": “1 6",
-“xms_tdbr": "EU"
 }. [Signatur
 ```
 
@@ -954,50 +833,31 @@ YkUnNSNn0@ec7M2x1iRGAA" ,
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 61/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 bi
-2)
 ack hat
-BRIEFINGS
-“typ”: "JWT",
 RS256",
-_jNwjeSnvTTK8XEdrSQUPkBRLLo",
-_jNwjeSnvTTK8XEdrSQUPKBRLLo”
-“c44b4083 - 3bb@-49c1-b47d-974e53cbdf3c",
-“https: //sts.windows.net/4clale11-a052-4346-9091-807fc856e66e/",
 1751972163,
 1751972163,
 : 1751976928,
 “1,
-“AdQAK/8ZAAAAES 1m9/8g9kwF 9BwPonmkwIwphyBtghOYvLFRM@qLZ/+eWmvnr2T9z/U7tSOgTL2VBuqMpel2zAC4
-ZLV6IGHZN91vP /80styxYZYTHjnKISu12pcVB2EUHxRnb17ONbKF3Rdca/y2jh/V/I9XFIUJCXQURxXoEk99Yvarngl
-pJIXNKGhLedxN//TxWRinOfg==",
-"ame": [
-“rsa”,
 “mfa"
 1,
 “appid": “c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
 “appidacr": "2",
-“deviceid": “f72f9e63-f51c-4b61-af85-49b6dfc6a079",
 “family_name"
-“given_name
 “idtyp": “user”,
 “Bernard”,
 “Vaisha Bernard | Eye Security",
-38708b91-6c68-4152-9aaf-f41f1ca95e65",
 “unique_name": “vaisha.bernard@eye.security",
-vaisha.bernard@eye.security",
 YkUnNSNn0@ec7M2x1iRGAA" ,
 “ver": "1.0",
 “wids": [
-“c430b396 -e693-46cc-96F3-db@1bf8bb62a",
-“5d6b6bb7 -de71-4623 - b4af -96380a352509"
 1,
-“xms_ftd": "SgMETP26g1pxu-akzQtmEEHIdTDsJLzZL5Ap@9qEYqoBc3d1ZGVuYy1kc21z",
 “xms_idrel": “1 6",
-“xms_tdbr": "EU"
 }. [Signatur
 ```
 
@@ -1005,41 +865,24 @@ YkUnNSNn0@ec7M2x1iRGAA" ,
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 black hat
-BRIEFINGS
-“typ”: "JWT",
-“alg”: "RS256",
-"x5t": "_jNwjeSnvTTK8XEdrSQUPkKBRLLo",
-"kid": "_jNwjeSnvTTK8XEdrSQUPkBRLLo"
-}-€
 "aud": "c44b4083-3bb0-49c1-b47d-974e53cbdF3c",
 “iss": “https://sts.windows.net/4clale11-a052-4346-9091-807fc856e66e/",
 “iat": 1751972163,
 “nbf": 1751972163,
 “exp": 1751976928,
 “acr": “1",
-“aio”:
-“AdQAK/8ZAAAAES 1m9/8g9kwF 9BwPonmkwlwphyBtghOYvLFRM@qLZ/+eWmvnr2#T9z/U7tSOgTL2VBuqMpel2zAC.
-ZLV6IGHZN91vP/80styxYZYTHjnkJSu12pcVB2EUHxRnb17ONbKf3Rdca/y2jh/V/9XFIUJCXQURxXOEk99Yvqrngl
-pIXNKGhLedxN//TxWRinOfg==",
 "ame": [
-“psa",
 “mfa"
 1,
-“appid": “c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
 “appidacr": "2",
-: "oid": "38708b91-6c68-4152-9aaf-f41f1ca95e65",
 "name": "Vaisha Bernard | Eye Security”,
-: “unique name": “vaisha.bernard@eye.security’,
-“upn": “yvaisha.bernard@eye.security",
 1,
-“xms_ftd": "SgMETP26g1pxu-akzQtmEEHIdTDsJLzZLSAp@9qEYqoBc3d1ZGVuYy1kc21z",
 “xms_idrel": “1 6",
-“xms_tdbr": "EU"
 }.[Signate
 ```
 
@@ -1047,50 +890,27 @@ pIXNKGhLedxN//TxWRinOfg==",
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 black hat
-BRIEFINGS
-“typ”: "JWT",
 RS256",
-_jNwjeSnvTTK8XEdrSQUPkBRLLo",
-_jNwjeSnvTTK8XEdrSQUPKBRLLo”
-“c44b4083 - 3bb@-49c1-b47d-974e53cbdf3c",
-“https: //sts.windows.net/4clale11-a052-4346-9091-807fc856e66e/",
 1751972163,
 1751972163,
 : 1751976928,
 “1,
-“AdQAK/8ZAAAAES 1m9/8g9kwF 9BwPonmkwIwphyBtghOYvLFRM@qLZ/+eWmvnr2T9z/U7tSOgTL2VBuqMpel2zAC4
-ZLV6IGHZN91vP /80styxYZYTHjnKISu12pcVB2EUHxRnb17ONbKF3Rdca/y2jh/V/I9XFIUJCXQURxXoEk99Yvarngl
-pJIXNKGhLedxN//TxWRinOfg==",
-"ame": [
-“rsa”,
 “mfa"
 1,
 “appid": “c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
 “appidacr": "2",
-“deviceid": “f72f9e63-f51c-4b61-af85-49b6dfc6a079",
 “family_name"
-“given_name
 “idtyp": “user”,
 “Bernard”,
 “Vaisha Bernard | Eye Security",
-38708b91-6c68-4152-9aaf-f41f1ca95e65",
-“100320009C1A777E",
--AXQAER4aTFKgRkOQKYB_yFbmboNAS8SwO8FIJtH2XTIPL3zytAe9@AA.",
 Organization.Read.All Policy.ReadWrite.ApplicationConfiguration User.Read",
-006b73e9-c32f-efb6-5064-6a11fe2bddf4",
-JYplvkaXg8uSzNB_n2R1VspZX8d0xMtal 1FgutHsymQ",
-4clale11-a052-4346-9091-807fc856e66e",
 “unique_name": “vaisha.bernard@eye.security",
-vaisha.bernard@eye.security",
-“tid": “4clalel1-a657-4346-9691-80/fcs56eb66e",
-“SgMETP26g1pxu-akzQtmEEHIdTDsJL2ZLSApQ@9qEYqoBc3d1ZGVuYy1kc212",
 "xms_idrel": “1 6",
-“xms_tdbr": "EU"
 ```
 
 ## Slide 41
@@ -1109,16 +929,14 @@ Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi§ekhat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
 /oauth2/authorize /oauth2/token
-i &
 Single-Page App Web API
 1. Sign-in & Consent
 2. Get Authorization Code
@@ -1132,11 +950,11 @@ Single-Page App Web API
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Multi-Tenant Applications
 Home > App registrations >
 Register an application
@@ -1163,6 +981,25 @@ Tenant
 
 #BHUSA @BlackHatEvents
 
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+black hat
+Multi-Tenant Applications
+User from
+Tenant B
+A Om
+Request token
+for application G@) © consent 6 Return token
+Authentication
+Tenant A Tenant B Authorization endpoint
+Principal
+Application Create Service Tenant
+Principal from
+application
+```
+
 ## Slide 44
 
 Resource Tenant
@@ -1184,11 +1021,10 @@ Eye App
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi§ekhat
-BRIEFINGS
 Microsoft identity platform
 https://login.microsoftonline.com/{tenantld} or
 https://login.microsoftonline.com/common
@@ -1200,14 +1036,12 @@ https://login.microsoftonline.com/common
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 Identity Provider Endpoints
 organizations
-COnSUMErS
 Directory (tenant) ID or
 contoso. onmicrosoft. com
 Description
@@ -1413,11 +1247,11 @@ Just replace /<tenant>/ with /common/ !
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Just replace
 with /common/ !
 @) HTTP match and replace rules
@@ -1425,11 +1259,8 @@ with /common/ !
 Only apply to in-scope items
 Add Enabled Item Name Match Replace Type
 Edit Response header “Locations*$ Literal
-Request header /fF2fossbt-sofl-4laf-9lab-2d?fcd0lidb47/  fcomman/ Literal
 Remove Request header /microsoft.com, fcommon, Literal
 Up Request header /microsoft.onmicrasoft.com,/ fcomman, Literal
-Down Request header GET /([*/Ti+,//oauth? GET /comman,oauth? Regex
-Request header POST /([*/1)+/oauth2 POST /common,'oauth2 Regex
 ```
 
 ## Slide 60
@@ -1440,24 +1271,12 @@ But many applications still gave errors...
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeschat
-BRIEFINGS
-WHAT SHOULD WE DO NEXT?
-But many applications still gave errors... ,
-Pei bala
-» y=]
-WE NEED TO'GO DEEPER...
-2
-```
-
 ## Slide 61
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Home > buildcloud
@@ -1467,13 +1286,10 @@ is, Overview
 LL] Deployment Plan
 x Diagnose and solve problems
 Manage
-'l' Properties
 a& Owners
 a. Roles and administrators
 && Users and groups
 3) Single sign-on
-=~ =
-“
 a
 + Adduser/group Edit assignment [li] Remove assignment
 Gi) The application will appear for assigned users within My Apps. Set ‘visible to users?"
@@ -1490,7 +1306,8 @@ vB Vaisha Bernard
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Home > buildcloud | Users and groups > Select a role
@@ -1504,61 +1321,40 @@ All
 {
 pee LOOK'AT/ME™ 1 Name Type Details
 [| L Administrator App role Admin permissions
-is
 [| = Basic Access App role Basic permissions to access website
 [| o Lab Team Administrator App role Specific lab team endpoints
-ads
 [| = Machine Onboarding App role Used by build machines to access m:
 ai <
 #BHUSA @BlackHatEvents
-imgflip.com
 ```
 
 ## Slide 63
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-"typ": "JWT",
-"alg": “RS256",
-"kid": “CNw@O0I3RwqLHFEVnaoMAshCH2XE"
-Tet
-"aud": “8754ed8d-35c3-48fb-8e06-309Ged59ca8a",
-"iss": “https://login.microsoftonline.com/4bc9f778-3b@a-42.c@-a343-
 "iat": 1749211957,
 “nbf": 1749211957,
 "exp": 1749215857,
-"aio":
-“AYQAe /8ZAAAAdeJiVrsLWhsIBWLUPnfogGhkURCS j5xKNFcUa@k/3eFVnoPEScEREOF
-2mPtWugRriQnb/9uDIF8p90s lwwcLCbRepNyJICNQxv2tIimuNk=",
 "oc":
-“CmDd1LdWg8XEo9J 1zbdnHySGzWVUVbhFSdBD/M27GV/ zD7rrqt4FaCgePofrCSnEast
-IC+HERI174X64+6ywAys
-tT]
-aa " rr jgY¥wkO1ZyoqVAGOCAA.",
 Admin
-] I I -ocke",
 "uti": “xKQ4gl4cREmVnhfrj/rLlaa",
 "ver": "2.0"
-we
-LA
-1-5
 ```
 
 ## Slide 64
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 Sign In
 Sorry, but we're having trouble signing you in.
 AADSTS650054: The application “ asked for permissions to access a resource that
@@ -1571,31 +1367,18 @@ https://graph.windows.net/myorganization/applicationRefs/<APP_ID> /?api-version=
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 https://graph.windows.net/myorganization/applicationRefs/<APP_ID>
 /?api-version=1.6-internal
-de
-"requiredResourcedccess": [
 {
-"resourceAppld™: "ed3bfbaS-915b-47ba-S820f-ebSsaorlosTea",
-"resourcedAccess": [
 {
-"ad: "14799 lb0-O05486-4939-95ec—-s60flidbSbhici"™,
-"oype": "Scope™
 }
 ]
-ty
 {
-"resourcedAppla™: "OOO00003 -O0000-0000-e000-000000000000",
-"resourcedAccess": [
-{
-"id": "elfetdd’—bas l-4db1l-89e7r-BB639dat bead",
-"cype rs roe IDE TF
 }
 ]
 }
@@ -1607,19 +1390,13 @@ The app is trying to access a service lacks a service principal for
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-BRIEFINGS
-a
 error=access deniedéerror description=
-AADSTSE 50052% 3AF#The+appt+is+trying+totaccess+atservice+% re rR rE
-9+that+your+organization+%274bcS£778-3hb0
-a-42cO-a343- Tesbat hE taereT te laskasataned teeter tisisal ster. bck ine voonset Tebiindattooxevia
-withe+configuration+of+your+service+subscriptionst+or-+- nt+to+thet+application+int+order+
-LO+Createtthet+requiredt+servicetnmr inate) 2am S$c6é-caée-4€0c-bOf3-S8E0d3 EbéE30
 The app is trying to access a service
 ‘... that your organization ”...”"
 lacks a service principal for
@@ -1631,18 +1408,11 @@ This creates a service principal without asking consent or checking availability
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 3 @error=access deniedéerror description=
-AADSTSES0052%3AFThe+appt+is+trying+totaccess+at+service+% > 7
-M2 752 ————————_—_———————— 29+that+your+organizat ion+%274bc9£778-3b0
-a-42cO0-a3 43-1830a3 SOLES LY 27+lackstatservicet+principal+for.+Contact+your+IT+Admin+to+revie
-withe+conftiguration+oft+your+service+subscriptionst+or+consent+tot+thet+application+int+order+
-totcreate+thet+required+servicet+principal.+Trace+IDs3 aA+ESdeéeScé-caée-4e0c-hbO0f3-S8EO0d3 EHESO
 New-AzureADServicePrincipal -AccountEnabled $true -AppId $app_id
 -AppRoleAssignmentRequired $true
 -Tags {WindowsAzureActiveDirectoryIntegratedApp}
@@ -1695,7 +1465,8 @@ Browser
 
 ## Slide 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M365 Admin Center
@@ -1704,7 +1475,6 @@ Current Post
 (3) Not authorized - Please refer to https://aka.ms/ebsdocs/usage to gain access
 Loading...
 Publish New Post
-BI uU
 Post Status *
 Select Status v
 Publish
@@ -1714,40 +1484,37 @@ Publish
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 & Engage ACE Hub ® ve
 = On-Call View My incidents All incidents Standard IcM/PRO Leads On-Call Exec On-Call + Create IcM Last Updated 01/14/2025, 11:22 AM CET
 Hi Vaisha, welcome to ACE Command Center 1 Export to Excel Playbook? $500 One-pagerCf $500 Process links Show Dashboard
-g  |sv-7 0) 720) © | GEBEED © vex So Column Options C) Retes
 8 4 Incidents
 0 Swarm Chat V-Team On-call IcM Risk category Sev Customer Customer Support Type Triage category Incident Age | SR Age | Last Update Ack Actions
 Customer events (0)
 Standard (2)
-0 fa i: tf @2 | AED © Amber 1H, 36m 1H, 36m 1H, 3m ®
 0 fo SC ia) @2 FY AED © amber 12H, 35m 12H, 35m 40 m ©
 Escalated (2)
 ```
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Vaisha Bernard
 RAI Ops Platform > Model catalog > textmult 5 108-1
 - Ops Platform > Model catalog > textmultiseverity-20250108 vaisha@veishanl
-a <= TextMultiSeverity
 Customer management
 & Customer ;
 Capacity management
 el Gieien Model name TextMultiSeverity Provider OP
 Model code textmultiseverity-20250108-1 Azure cloud -
 i) Report Model version 20250108.1 Model description Text Multi-Classification model for severity prediction
-Sree 1 ee <n re
 # Model catalog ACR Address AME. - ACR Address FairFax -
 3 Model deployment status ACR Address US Nat - ACR Address US Sec - BB Microsoft
 Subscription quota Target SKU Standard_ND96ams_A100_v4 - .
@@ -1760,15 +1527,12 @@ Score Path /score Image Size 0
 Harm Category - Modality -
 Capability - Status Active
 Sample Request Sample Response
-{("data®: ["Hello, World."}} 0
 Created Time Jan 8, 2025 7:19 PM Last Modified Time Jan 13, 2025 6:59 AM
 Footprint
 SKU: Standard_ND96ams_A100_v4 Payload size: 1x128
 Latency (ms) Total request count
-* PSO «P75 P90 -= POS =F POD Average MAX = MIN > Total - Successful
 400 40000
 200 20000
-~e ae
 275 1408 1492 1587 1671 1761 1815 1840 1920
 ```
 
@@ -1784,10 +1548,10 @@ Latency (ms) Total request count
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS
 Security Intelligence Platform (SIP) Confidentiality Acknowledgement
 MICROSOFT CORPORATION CONFIDENTIALITY AFFIRMATION FOR SIP DATA ACCESS AND USAGE
 Redacted
@@ -1795,7 +1559,8 @@ Redacted
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Threatintelind_Actincident Threatintellnd_External Threatintelind_Internal Vpniogs
@@ -1809,15 +1574,12 @@ SysLog_CSS SysLog_DC SysLog_Edge SysLog_ExpressRoute
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sort by | MyDatasets
-—
-mm A
-® 931
 q
-M4
 AAD_GroupMembers
 Be, To Explore or Request Access to SIP Data, Search by Dataset Name, Tag, Column, Access Package or Endpoint
 AAD_SigninLogs_Noninteractive AAD_UserData
@@ -1829,7 +1591,6 @@ Request Access ® 730 Request Access @ 145
 Request Access
 AADRoleAssignments_Active
 Request Access
-— a
 AAD_DeviceHistory
 ® 1287
 Count: 397
@@ -1842,15 +1603,12 @@ Ask SIPPY
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sort by | MyDatasets
-—
-mm A
-® 931
 q
-M4
 AAD_GroupMembers
 Be, To Explore or Request Access to SIP Data, Search by Dataset Name, Tag, Column, Access Package or Endpoint
 AAD_SigninLogs_Noninteractive AAD_UserData
@@ -1862,19 +1620,18 @@ Request Access ® 730 Request Access @ 145
 Request Access
 AADRoleAssignments_Active
 Request Access
-— a
 AAD_DeviceHistory
 ® 1287
 Count: 397
 Request Access
 Request Access
-()
 Ask SIPPY
 ```
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ask Sippy ©
@@ -1887,12 +1644,11 @@ Show session chat history @) Off Current Context © :
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 | Ask Sippy ©
 At which URL can | find the admin portal to approve access requests?
 You can find the admin portal to approve access requests at the following URL:
@@ -1907,7 +1663,8 @@ Does this webservice have an admin portal?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security Intelligence Platform - Access Requests
@@ -1916,22 +1673,17 @@ You can find this in the Azure Portal in AAD
 | Start typing spn name or enter object or app id for suggestions
 Comms Aliases *
 Comma separated list of aliases (without suffix) to be used for communications
-testl
 Suggested Comms Aliases
 o test
 test2 @microsoftonmicrosoft.com
 Test
-SMO-Test2609534@ microsoft.onmicrosoft.com
 @ test
 test 1 @microsoftonmicrosoft.com
 Test
-§MO-Test2468956@ microsoft.onmicrosoft.com
 Test
 SMO-Test898957@microsoft.onmicrosoft.com
 o test
-carpark @microsoft.onmicrosoft.com
 Test
-ConsultorioTcnicotest@micrasoftLonmicrosoft.com
 Access Package Name *
 Name the access package for which the request is being made
 Justification *
@@ -1944,26 +1696,21 @@ cription. By selecting yes, stating that you have read and agree to the terms of
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 black hat
-BRIEFINGS
 Security Intelligence Platform - Access Requests
 AAD Object Id * Access Package Name *
 You can find this in the Azure Portal in AAD Name the access package for which the request is being made
-x
-bret! (c12a9039-8f6 1-41 26-9c82-1aa631 fa4056
 Suggested Service Principa
 a Justification *
 test (c12a9039-8f61-4126-9c82-1aa631fa4056) ad for communications Justification for SPN access reques
-*
 Test (20cb9d6c-b978-4963-a65f-e5 18cca0527b) Max length: 500 characters
 test (54d5bbed-1c06-4f16-9ae3-63 1c0cd69ea8) a
 | test (Sed6c2d7-3050-4603-82b8-935a50b2b166)
 (Agreement linked in the description. By selecting yes, stating that you have read and agree to the terms of the
-test (8046a5d4-d827-440a-b47b-d8548 7 /3ebfe} l
 test (15ec629a-636a-4b39-9806-85415053359e)
 test (le67be63-81e6-471e-9b60-Odd3b7425442)
 test (b86c17f2-71ef-47a7-8b04-20c09800397c)
@@ -1974,27 +1721,15 @@ test (cb103a60-01d9-43cb-b796-241de4196927)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeschat
-BRIEFINGS
-:80"} ,{"id":193678, “pageTitle":null,"“pageURL": "https: //sipdatacatalog.microsoft.com/",”"userId":null,"userDisp
-:00"} ,{"id":193679, “pageTitle":null,"“pageURL": "https: //sipdatacatalog.microsoft.com/","userId":null,"userDisp
-:60"} ,{"id":193080, “pageTitle”: null, “pageURL": “https: //sipdatacatalog.microsoft. com/#code-
-“, userId": null, “userDisplayName": null, “timestamp” :"2025-61-16714:13:
-:00"},{ "id" : 193081, “pageTitle™:null,“pageURL": “https: //sipdatacatalog.microsoft.com/","“userId™:null, “userDisp
-```
-
 ## Slide 83
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 B® Microsoft
 vaisha @vaisha.nl
 Permissions requested (1 of 20
@@ -2015,34 +1750,25 @@ AlchemyService (MediaCreation-thor-MediaApi)
 
 ## Slide 84
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Media Creation Service
 Graphs
 i) COLUMNS = FILTERS = DENSITY ,4, EXPORT
 Ring Name Graph ID
-hulk 7de30669-e8d3-4919-96db-a42a3373!
 hulk
 ironman
 thor
 thor
 5c39b1b0-ea79-4739-ae7a-643962128
-0539174b-6f81-4527-9ff6-afc3348b89°
-7fe4060c-fe9d-44fb-b7ca-12782ad505
-b9d33a35-5f4a-41C9-ac1d-25b351672
 Branch Name
 Build Guid
-15b0b90c-30e9-35ef1781-b48a31 _..
-15b0b90c-30e9-35ef-1781-b48a31...
-15b0b90c-30e9-35ef1781-b48a31 _..
-15b0b90c-30e9-35ef-1781-b48a31 ...
-15b0b90c-30e9-35ef41781-b48a31 _..
 SEARCH
 Fully Qualified Build Name
 19583.1000.canary_branch.20031...
 19583.1000.canary_netcore.2003...
-19583.1000.canary_branch.20031...
 19583.1000.canary_branch.20031...
 19583.1000.canary_netcore.2003...
 Status
@@ -2052,8 +1778,6 @@ Active
 Active
 Active
 Made with ¥ by Media Creation Service. For our privacy note, please refer to this link
-Selected 4/4 rings. O =
-[ANCED SEARCH
 Category
 Synthetic
 Synthetic
@@ -2062,11 +1786,6 @@ Synthetic
 Synthetic
 Rows per page:
 Created Time UTC
-2025-01-10113:10:23.3738761+0...
-2025-01-101T13:10:23.0523995+0...
-2025-01-10T 13:08:42.7719115+0._.
-2025-01-10T 13:08:09.505477+00:00
-2025-01-10T13:07:49.8664347+0...
 5% 1-5 of 400 >
 ```
 
@@ -2074,11 +1793,10 @@ Created Time UTC
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 MediaBuilder hawkeye Home Media Builder +
 MediaBuilder
 Great things come to those who don't wait. Build in the cloud today.
@@ -2087,7 +1805,8 @@ Copyright (c) Microsoft Corporation. All rights reserved.
 
 ## Slide 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Media Creation Buildable Artifact Details
@@ -2108,15 +1827,12 @@ Media Available Time
 Value
 105110e4-16c7-4cc0-8ba6-2e844815f91e
 4
-ea73c065-54ec-4842-93bd-7f78387092d0
 27768.1999.rs_fun_pkg_epic.250110-1515
 edition_client_professional_en-us_vl
 amd64fre
 en-US
 Edition
-https:// BH biob.core
 window
- C—CtsSCSC‘CCCCiés
 6cf803af-6103-467 4-beae-fac6eae7f128
 01/11/2025 00:25:45 Z
 01/11/2025 11:00:03 Z
@@ -2127,29 +1843,23 @@ window
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 Log files (PREVIEW) - Most Recent First
 Task: 6cf803af-6103-4674-beae-facSeae7f128 1/11/2025 12:25:45 AM esdkey. pri=BwIAAAC KAABSUBEy. i
 20250111_095829/bootstrap/kbatchboot log 2.71 MiB dDeSYobuCduao275xVhrstgemBc
 esdkey . pub=Be TAAACKAABSUBE
-abrikam.base.language-en-us
 20250111_095829/media/ResolvedManifest. xm 6.45 KiB
-979
-20250111_095829/media/bmt.RunnerNET Framework .log 174.54 KIB
 20250111_095829/media/bmt.log 2.48 MIB
-20250111_095329/media/compiler/CatDbOfiline.log 563 B
 20250111_095829/media/compiler/EditionCompiler.log 976.93 KIB
 20250111_095829/media/compiler/dism.log 10.28 MiB
 20250111_095829/media/compiler/dism_2025-01-11-10-10-46.log 43.64 MiB
 20250111_095829/media/compiler/log_config.txt 64 B
 20250111_095829/nodefiles/stderr.txt OB
 20250111_095829/nodefiles/stdout txt 2.72 MIB
-20250111_095529/startup/stder_txt 4646
 20250111_095829/startup/stdout txt 16.29 KIB
 ```
 
@@ -2157,25 +1867,19 @@ abrikam.base.language-en-us
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat i ge
-BRIEFINGS
 Log files (PREVIEW) - Most Recent First
-a= Microsoft
 WHAT IS ESD?
 ESD or Electronic Software Distribution
 is the digital distribution of the product license directly to customers.
 Get your activation code/key instantly and forget about box shots.
-20250111_095829/startup/stder. bt 4646
 20250111_095629/startup/stdout txt 16.29 KIB
-@® Microsoft
 Office
 Home & Business
 2021
-Be Windows 11
 Pro
 B= Microsoft
 Office
@@ -2190,31 +1894,28 @@ Standard
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Select a definition Bt
 Windows Build - Source Lookup Api
 Servers
-https://sourcelookup. in ta fficmanager.net v
 DeltaForgeSource
 /api/v1.0/DeltaForge/GetLastGoodSource/{fqbn}/{flavor}/{product}
 /api/v1.0/DeltaForge/GetLastGoodSource/{fqbn}/{flavor}/{product}/{lookback}
 /api/v1.0/DeltaForge/SetBadSource
-I'VE SEEN THINGS YOU PEOPLE WOULDN'T)s
-Schemas rau :
 ```
 
 ## Slide 90
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 Edit Tool Back To Index
 Create a new version
 Name:
@@ -2223,7 +1924,6 @@ Locator Type: Nuget
 Source URI: htips://microsoft.pkgs. visual
 Package Name: MediaCreation.BuildMedial
 Version:
-Tag: 7.14.6-smf3
 Create!
 Copyright (c) Microsoft Corporation. All rights reserved.
 ```
@@ -2238,7 +1938,8 @@ Copyright (c) Microsoft Corporation. All rights reserved.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Burp Project Intruder Repeater View Help Burp Suite Professional v2024.11.2 - Temporary Project - licensed to Eye security BV = a x
@@ -2246,7 +1947,6 @@ Dashboard Target Prom Intruder Repeater Collaborator Sequencer Decoder Comparer 
 Intercept HTTP history WebSockets history Match and replace & Proxy settings
 © Intercept off | Forward Drop v | @® Open browser (O) i
 Time Type Direction Method URL Status code Length
-LS)
 ```
 
 ## Slide 93
@@ -2279,20 +1979,16 @@ LS)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat 3 a 4
 BRIEFINGS ‘
 Sample SAML Token
 This is a sample of a typical SAML token.
 XML
-<?xml version="1.8" encoding=" "UTF-8"2>
-5 xmlns:wsu="htt
 o xmilns:wsp="http:
 Reference xmlins="h
-="urn:oasis:names:t c:cAM - etion™
-erohttps://sts.windows . net /aaaabbbb- @008-cccC- 1111- dddd2222ecee/
 ature coh: ds="https: x
 onMethod Algorithm="
 thod Algorithm="https
@@ -2348,11 +2044,11 @@ thod Algorithm="https
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 37,260 followers
 Congratulations to all the researchers recognized in this quarter's MSRC 2025 Q!1
 Security Researcher Leaderboard! Thanks to all the researchers who partnered with
@@ -2373,19 +2069,17 @@ was supposed to be an infinite
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-BRIEFINGS
 “But Vaisha, hacking Microsoft
 was supposed to be an infinite
 money glitch!"
 @NicolaiWeitkemper 5 months ago
 This talk makes bug hunting at Microsoft look like an infinite money glitch &
-(> 55 SI Reply
-~ Treply
 ```
 
 ## Slide 100
@@ -2394,14 +2088,12 @@ This talk makes bug hunting at Microsoft look like an infinite money glitch &
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 s, and docs (G+)
-#® Microsoft
 Select a role
 Only a single role can be selected
 Permissions requested
@@ -2423,7 +2115,6 @@ statement. The publisher has not provided links to their terms
 for you to review. You can change these d allie ons at
 https://myapps.microsoft.com. Show details
 Name Type Details
-iS
 BrtAdministrators App role Administrator has access for all APIs
 Does this app look suspicious? Report it here
 Cancel [| BrtReaclers App role Readers able to read users profiles
@@ -2433,15 +2124,14 @@ Cancel [| BrtReaclers App role Readers able to read users profiles
 
 **0**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rewards Support Tool _ Engineering ~
 Lookup User Details
 bs Create User .
-Offers =
 Promotions Rewards Support Tool — Engineering ~ Enter Puid or Tuid or Anid Pre
-Catalog (5
 Activities Cashback Payouts Financial Reporting Tool
 Eval Error TypeError: Cannot read properties of undefined (reading ‘sqlltems’)
 Risk 0)
@@ -2487,11 +2177,11 @@ SKIP RISK
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rewards Support Tool
-Engineering »
 Rebate
 Puid
 Enter Puid
@@ -2510,11 +2200,6 @@ Skip Risk
 Payout/SMS
 Enter Puid or Tuid or Anid | Profile
 | Earning | Orders |
-*
-ifth
-<3
-~
--
 =
 ```
 
@@ -2526,11 +2211,11 @@ SKIP RISK
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rewards Support Tool
-Engineering »
 Rebate
 Puid
 Enter Puid
@@ -2549,12 +2234,7 @@ Skip Risk
 Payout/SMS
 Enter Puid or Tuid or Anid | Profile
 | Earning | Orders |
-~
--
 =
-* Q
-ifth :
-<3
 ```
 
 ## Slide 104
@@ -2589,12 +2269,11 @@ consentandcompromise.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 black hat
-BRIEFINGS
 Is it still out there?
 > .\ListMultiTenantApplications.ps1i
 Potentially vulnerable App Registrations found:
@@ -2640,10 +2319,10 @@ consentandcompromise.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSek hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS

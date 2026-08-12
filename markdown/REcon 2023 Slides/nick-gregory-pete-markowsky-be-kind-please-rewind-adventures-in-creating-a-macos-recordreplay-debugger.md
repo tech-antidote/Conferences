@@ -8,13 +8,17 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Nick Gregory & Pete Markowsky_Be Kind, Please Rewind Adventures in creating a macOS recordreplay debugger.pdf"
 pages: 53
 sha256: "191901f023247451592c197dfaec12d8b06ba331dfaea79c65a617caf05fda0a"
-text_chars: 14728
-ocr_pages: 13
+text_chars: 11394
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:26:00Z"
+converted_at: "2026-08-12T06:03:59Z"
 ---
 # Be Kind, Please Rewind Adventures in creating a macOS recordreplay debugger
 
@@ -22,22 +26,17 @@ converted_at: "2026-08-11T23:26:00Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Nick Gregory & Pete Markowsky_Be Kind, Please Rewind Adventures in creating a macOS recordreplay debugger.pdf` (53 pages)
 
+
 ## Slide 1
 
 Be Kind, Please Rewind Adventures in creating a macOS record/replay debugger
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Be Kind, Please Rewind
-a B Aqventlreet in creating a macOS record/replay Tebucger
-```
 
 ## Slide 2
 
 **LEGAL**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEGAL
@@ -171,14 +170,6 @@ Ability to access reliable and deterministic hardware performance counters
 
 Recording
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Recordin
-| inet ow
-SS ] SAY P94), wreneo
-```
-
 ## Slide 14
 
 # Recording: It’s not that simple…
@@ -219,7 +210,8 @@ Recording: Syscalls & Traps
 
 ● Need pre- and post-hooks for data gathering
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Recording: Syscalls on macOS
@@ -294,7 +286,8 @@ One Option: dtrace
 
 Recording: Dealing with Data Races
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Recording: Dealing with Data Races
@@ -321,13 +314,13 @@ Recording: Dealing with Data Races
 
 - Can we use THREAD_AFFINITY_POLICY?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thread scheduling on macOS not guaranteed
 e Nocpu_ set (3)
 e Canwe use THREAD AFFINITY POLICY?
-f*
 * thread_bind:
 *
 * Force the current thread to execute on the specified processor.
@@ -338,12 +331,9 @@ f*
 *
 * XXX - DO NOT export this to users - XXX
 */
-processor _t
 thread_bind(
-processor _t processor)
 {
 thread_t self = current_thread();
-processor _t prev;
 ```
 
 ## Slide 26
@@ -352,35 +342,19 @@ processor _t prev;
 
 From: https://eclecticlight.co/2022/01/13/scheduling-of-processes-on-m1-series-chips-first-draft/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 P-cores and E-cores
 Scheduling of Threads on M1 series Chips (draft 0.2)
-Operation Queue addOperation
-ate.
 +
 Operation
-(ackoround ead) (uty tread) (vsernated tread) (userntracive tread)
-queue queve queve queue Key
-= os Grand Conral Despatch
-E cores only Pork cores
 Seong Mt Pro and Max (MIP) chips
-E ouster P clusters) Serato
-2or4 tread sts 4 thread shots each
 M1 P cluster
-pcoseiende) "scores 4 cores frequency ~3 GHz
 ancl 4 thread slots 4 thread slots
-4 threads
-08 3s threads)
 frequency ~2 GHz MiP PO cluster
-S-8ttreats —e 4 cores
-Single QoS 8 thread atiad sts
-oso — equency~11GH2 __, MIP E cluster aineTa frequency ~3 GHz
 How many threads? 2cores i1P Pt cluster
-fea ces orrens —* 2thread slots 4cores
-(except trotted) ow Ahroad sots
-> 8 threads
 From: https://eclecticlight.co/2022/01/13/scheduling-of-processes-on-m1-series-chips-first-draft/
 ```
 
@@ -436,7 +410,8 @@ panic(cpu 5 caller 0xfffffe0017c66cd8): kperf: timer fired at 2793246644070, but
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Supporting Nondeterministic Execution in Fault-Tolerant Systems*
@@ -448,7 +423,6 @@ Abstract
 We present a technique to track nondeterminism re-
 sulting from asynchronous events and multithreading
 in i log-based rollback-recovery protocols, This tech-
-hares os colon one cena tm eRe vamraenedewen bis catennevesitles
 E.N. Elnozahy
 Department of Computer Science
 Carnegie Mellon University
@@ -558,59 +532,21 @@ Warpspeed
 
 Warpspeed: VM/Hypervisor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Warpspeed: VM/Hypervisor
 Tracee Warpspeed Kernel
 Calls getpid() and traps to Warpspeed
 Record Syscall Args / Snapshot if necessary
 Setup stack and registers with shared memory
-i>
 getpid()
-getpid() result
 Record Syscall result and memory updates
-hee)
 Start Tracee with new register state
 Tracee Warpspeed Kernel
 ```
 
 ## Slide 42
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-4ee- lillian en tla, fealty ee OP re pen er, ae
-| POTD UTD Py GET or reerpeered TET) Forwarding eypeet) HPpPel se, re, , e, . +, 0, em, s. tat, a
-. WM, lec], ETM, MbOTTet, DRI
--ITR Le EE eee rT: werpeceed) Changed 0
-| Seti -eb-ervel er = eee Serving © Re
-(0-H OTTER) or) eerpaered letemteg seecnli @(0:(8, SOMREEEOG | ;40ROEO, ©, AoURAEED, 7, 7, Reh DO],
-3, &, 2, Temeeenee, |, \embeRee ererT))
-| OCD Ob TRF: 4: ET rr: (eerpaeeed! Dt: forwarding mocell tele. |DeeHe, LleeeEee. 6 Get). 2. 7, Soe.
-‘ab. 10), @, 27. |}ebeeneb, |, el
-| S00) -0b-90T ET DE ee err eerpeceed Ceanged pages []
-200) -Fb-OT EI a; =i) epee Pebareiag & © 40meehoe
-D-DD eer) merpeeeed SLL 1) Gates
-| OTD ee TTD ET Orr eerpeneed. Tecowing ereral! HBe[ Debt ete leeeee © Te teelees, # ME @ Bet, tee
-a), © VREPREET. © 8 ROEDER, Dieta, domi ffeetl)
-ee rr reeeweneed opens ten tewrteode | ternal lore yew tare! Degen lode ler doeeretverr iden pl ve
-| 00), er Td eyecadl tote emer, Weowled, &, Ceikelees. Bt, #, Gee,
-tateeieet, & I eeeeegT, 1, 1, Thmeehee, Jer aee,
-TP OTT): Ot ET may err: ;eermneerd) Chesed peeete 1]
-| OLDeeeTT WD: th: HT or) eerpeoeed) Geterring 2 + 4686008
-‘200)-0b-277 8): 0: AL ek errs eerpeeed ELEALI: @elteicene
-‘Seeders, oh at ri merpameed) fecombeg apecell G(es[Sereeieie, teeeee. © letedieet, © te @ eco lee
-, SameeT Dec DeEeA, IDEEEwED?, ©, 3, ToemeeneR, Dereas, amt hee))
-| OT) TTD) eT rr eerpenred qe’) feed ner) fhrera ll ned ered Lace (Pret | Leedeeeeserens gl int)
-07) POSTTEST wri eerpeert Ty fereerding wyecell tel eee, SOOTHES, O. Wetbtiach, &. TR, @, Boe,
-laietl acl, aOR 4c etd. 1 MRONT, |. |. (ee. BO feet Dotted
-POE @b-@0TE): tb GEE TOE eer (eerpupeed | Changed pager 1)
-0S) Ob ee es, eh =) \aeepeeed ~Metureiag 2 @ Gemeeice
-OO) - Oe -eFTET) eT rr eerpemred) [eeerene teeee]! S(Be[ ERE ete, lees, © leTelee’, 4, 1 ee ee
-7, COT Det Deted, “TUPNET?, 1, §, NMOS. DREAD, be reel>
-peda tiet ae mea - -T: ‘rpeoned oper Sent forere t eetarel Lega Setr iegeltiecboewren ol i et)
-```
 
 ## Slide 43
 
@@ -638,37 +574,14 @@ dyld
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FRR oer Perce Ste eee en Cee rn at ee EP eo Se
-—— Wechewres Malerr ene ae ore oe AURORE sha Ph Lend Raime  E ae Fone hee Bastin Hd
-ths ge ogee phe sa eee * Tivwintes taered
-s
-ses?
-:
->
-whale per ee,
-me &,
-mate
-Lsrrmmnacnaenae Meaning ry 13." yn.
-pet wermrey Inte poor re hy
-tert mer
-«
-gevoell
-peer t ten,
-*
-ie
-```
-
 ## Slide 46
 
 Warpspeed: VM/Hypervisor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Warpspeed: VM/Hypervisor
 Trace Warpspeed pthread Kernel
 Calls getpid() and traps to Warpspeed
 Record Syscall Args / Snapshot if necessary
@@ -677,10 +590,8 @@ take syscall mutex
 Setup stack and registers with shared memory
 {>
 getpid()
-getpid() result
 release syscall mutex
 getPid() result
-getpid() result
 Record Syscall result and memory updates
 Start Tracee with new register state
 Trace Warpspeed pthread Kernel
@@ -690,19 +601,17 @@ Trace Warpspeed pthread Kernel
 
 Warpspeed: VM/Hypervisor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Warpspeed: VM/Hypervisor
 Tracee Warpspeed pthread Kernel
 and traps to Warpspeed
 Syscall Args / Snapshot if necessary
 n new pthread for syscall
 take syscall mutex
 Setup stack and regi shared memory
-«
 release syscall
-getpid() result
 {t and memory updates
 new register state
 Tracee Warpspeed pthread Kernet

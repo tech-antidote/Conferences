@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Itay Ravia_Smashing Model Scanners Advanced Bypass Techniques and a Novel Detection Approach.pdf"
 pages: 60
 sha256: "775a0c4c8807b7c0c2cad84ff253387964a0b368e2eaa4accddf58fe477961f1"
-text_chars: 22443
+text_chars: 21269
 ocr_pages: 12
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:55:13Z"
+converted_at: "2026-08-12T05:12:57Z"
 ---
 # Smashing Model Scanners Advanced Bypass Techniques and a Novel Detection Approach
 
 **Speakers:** Itay Ravia  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Itay Ravia_Smashing Model Scanners Advanced Bypass Techniques and a Novel Detection Approach.pdf` (60 pages)
+
 
 ## Slide 1
 
@@ -206,10 +211,10 @@ In other formats, based on rules denylisting modules, such as Lambda functions i
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
 BRIEFINGS >
 HF Picklescan
 class A:
@@ -222,18 +227,13 @@ model = torch.nn.Linear(10, 20)
 torch.save(model.state_dict(), "/tmp/state_dict.pt")
 Detected Pickle imports (3)
 “collections.OrderedDict",
-“torch.FloatStorage",
-“torch._utils. rebuild tensor_v2"
 model = torch.nn.Linear(10, 20)
 torch.save(model, "/tmp/pytorch_model.bin")
 Detected Pickle imports (6)
-“_builtin__.set",
-"“torch._utils. rebuild parameter”,
 “torch.FloatStorage",
 “torch.nn.modules.linear.Linear",
 "collections.OrderedDict",
 “torch._utils._rebuild_tensor_v2"
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 15
@@ -262,21 +262,16 @@ Wrote an AI agent to find esoteric functions that call python exec / eval / othe
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Bypass :
 Method #1
 Detected Pickle imports (1) x File Security Scans '
 { pytorch_model.bin
 "mlflow.projects.backend.local._run_entry_
-v No issue
-v No issue
-v No issue
 > Send
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 18
@@ -311,10 +306,10 @@ Even simple examples go undetected
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat '
 BRIEFINGS ela
 Bypass EEE
 Method #2
@@ -324,14 +319,10 @@ y
 Z
 oO
 undetected s
-uuu uu
-H
 et
-ig?
 module = torch.__builtins__[x + y + z](o + s)
 module.system("echo \"You've been pwned.\"")
 return arg
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 21
@@ -342,17 +333,15 @@ Even simple examples go undetected
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Bypass
 Method #2
 Even simple examples go
 undetected
 (arg):
-xX
 y=
 Detected Pickle imports (10)
 "collections.OrderedDict",
@@ -361,15 +350,10 @@ Detected Pickle imports (10)
 "torch._utils._rebuild_tensor_v2",
 "dill._dill._create_code",
 "torch.FloatStorage",
-"_codecs.encode",
 "torch.nn.modules.linear.Linear",
 "dill._dill._load_type",
 "torch._utils._rebuild_parameter"
 File Security Scans
-{ pytorch_model.bin
-v No issue
-Y No issue
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 22
@@ -829,24 +813,18 @@ Some model file formats are just too complicated to statically analyze
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Bypass File Security Scans ;
 Method HA { model11.joblib
 Some model file formats are just v No issue (7
 too complicated to statically
 ©Q d
 analyze
-v No issue
 Detected Pickle imports (4)
-‘sklearn.Linear_model._base.LinearRegres
-‘joblib.numpy_pickle.NumpyArrayWrapper",
 “numpy.ndarray",
-“numpy .dtype"
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 44
@@ -877,25 +855,20 @@ For example, YOLO models achieve State-of-the-Art results for image-based tasks 
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2) : aN @ultralytics/YOLO121 ‘OG like 92 Follow @ Ultralytics 256
 blackhat
-BRIEFINGS — ultralytics lilanguages all EvalResults  # License: agpl-3.0
-# Model card 15 Filesand versions #& Community 3
+BRIEFINGS — ultralytics lilanguages all EvalResults # License: agpl-3.0
 Why not P mainy YOLO11
 rs | l low li Sst- b aS e d 9) This model has 10 files scanned as suspicious. {Show files
-stat i Cc SCa n n e rs  fcakyon Update README.md — 6adfddb
+stat i Cc SCa n n e rs fcakyon Update README.md — 6adfddb
 th Q) .gitattributes © safe 1.52 kB
 en?
 {\ README.md « 29.3 kB
 O yololil-seg.pt + File Security Scans x 56.1 MB @LFS
-) yolo111-pose.pt
-1 yolollm-pose.pt — 42.5 MB @ LFS
 ( yololim-seg.pt X Suspicious 45.4 MB @ LFS
-1) yololin-seg.pt No issue 6.18 MB @LFS
-ih}
 ```
 
 ## Slide 47
@@ -926,11 +899,10 @@ To allow loading this SafeTensors repo, transformers allows loading architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Let’s talk about
 DeepSeek and
 Kimi-K2
@@ -938,14 +910,10 @@ Kimi-K2
 "AutoConfig": "configuration_deepseek.DeepseekV3Config",
 "AutoModel": "modeling_deepseek.DeepseekV3Model",
 "AutoModelForCausalLM": "modeling_deepseek.DeepseekV3ForCausalLM"
-3,
 {\ modeling deepseek.py © safe
 {A tokenizer.json © safe File Security Scans v
-{\ modeling_deepseek. py
-( tokenizer_config.json ©
 not a model
 not a pickle
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 50
@@ -976,19 +944,16 @@ By strictly marking “normal” operations, we easily get a comprehensive list 
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Issues 3
 WI i tl t tl RITY DETECTED BY URCE FILE
 y 4 Critical aim-glibc-code-execution % Dynamic Scanner © model 1 joblib a
-= oP
 right approach‘ =
 glibc _libc_system called with argO: echo "You've been pwned."
 glibc _libc_system called with argO: sleep 0.1
-ISSUE DESCRIPTION @ REMEDIATION
 This model uses execution functions that are As no ML framework requires CLI commands as
 capable of running arbitrary commands on the part of its loading or inference process, avoid
 host system during loading. using this model altogether.
@@ -1002,17 +967,15 @@ al High aim-sys-process-creation % Dynamic Scanner OB model 1 joblib v
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Issues 1
 ERITY WY ISSUE DETECTED BY SOURCE FILE
 Why is t h at t h e ul High aim-sys-process-creation % Dynamic Scanner Q pytorch_model.bin
 right approach? so
 syscall vfork called
-ISSUE DESCRIPTION @ REMEDIATION
 This model uses process creation syscalls during As no ML framework creates new processes in
 loading, which spawn processes that are untraced. loading or inference time, this is highly likely a
 malicious model. Avoid using it altogether.
@@ -1024,20 +987,17 @@ malicious model. Avoid using it altogether.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Issues 2
 Wh Leal ERITY WY ISSUE DETECTED BY SOURCE FILE
 is that the
 y 4 Critical aim-python-lib-mlflow-cmd ® Static Scanner © pytorch_model.bin v
-=
 r | g h t a @) @) ro ac h ? ul High aim-sys-process-creation % Dynamic Scanner O pytorch_model.bin =~
 DETAILS
 syscall vfork called
-ISSUE DESCRIPTION @ REMEDIATION
 This model uses process creation syscalls during As no ML framework creates new processes in
 loading, which spawn processes that are untraced. loading or inference time, this is highly likely a
 malicious model. Avoid using it altogether.
@@ -1049,11 +1009,10 @@ malicious model. Avoid using it altogether.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Issues 1
 Why is that the ——
 right approach? _
@@ -1061,7 +1020,6 @@ syscall connect called with ip_address: 192.168.116.131
 syscall socket called
 UE DETECTED BY SOURCE FILE
 aim-sys-network % Dynamic Scanner © model.pkl a
-ISSUE DESCRIPTION @ REMEDIATION
 This model uses network-related syscalls Avoid using this model. To further inspect this
 during loading, which can enable unauthorized incident, collect more information about the
 network access, data exfiltration, or command _ remote address using your network admin or
@@ -1074,11 +1032,10 @@ and control activities. by using public tools such as whois.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Why is that the
 right approach?
 Issues 4

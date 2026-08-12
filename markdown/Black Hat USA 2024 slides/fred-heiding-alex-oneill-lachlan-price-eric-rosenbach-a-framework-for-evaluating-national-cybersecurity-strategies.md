@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Fred Heiding & Alex O'Neill & Lachlan Price & Eric Rosenbach_A Framework for Evaluating National Cybersecurity Strategies.pdf"
 pages: 54
 sha256: "a38c37bda0ecd9f6d34b589a5df2c970a61cc8b4601a4eba3caceb69ac5bf5bf"
-text_chars: 16168
-ocr_pages: 3
-has_ocr: true
+text_chars: 15770
+ocr_pages: 0
+has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:31:43Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T04:31:51Z"
 ---
 # A Framework for Evaluating National Cybersecurity Strategies
 
 **Speakers:** Fred Heiding, Alex O'Neill, Lachlan Price, Eric Rosenbach  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fred Heiding & Alex O'Neill & Lachlan Price & Eric Rosenbach_A Framework for Evaluating National Cybersecurity Strategies.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -88,17 +94,6 @@ What does a good cyber strategy entail? Who is the audience? Vision statement or
 intro - **method (how)** - what we discovered - conclusion
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eee I
-black hat = Wr. Pi
-~ USA 2024 : a
-How We Conducted Our Research
-intro - method (how) - what we discovered - conclusion
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 9
 
@@ -279,17 +274,6 @@ Accessibility Comprehensiveness Accountability
 intro - method (how) - **what we discovered** - conclusion
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eee I
-black hat = Wr. Pi
-~ USA 2024 : a
-What We Discovered
-intro - method (how) - what we discovered - conclusion
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 18
 
@@ -680,15 +664,6 @@ Workforce development Forward defense Market development Protecting private orga
 intro - method (how) - what we discovered - **conclusion**
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-——USA 2024 ?
-Conclusion
-intro - method (how) - what we discovered - conclusion
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 50
 

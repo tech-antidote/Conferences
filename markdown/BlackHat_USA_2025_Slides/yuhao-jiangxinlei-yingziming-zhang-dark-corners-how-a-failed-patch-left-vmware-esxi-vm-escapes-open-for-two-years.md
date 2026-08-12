@@ -8,13 +8,17 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Yuhao Jiang&Xinlei Ying&Ziming Zhang_Dark Corners How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years.pdf"
 pages: 55
 sha256: "dd7efa7b53a0fc96d8b663e972f2241bb71db11aad413f39f58081d7158a6b14"
-text_chars: 17431
-ocr_pages: 6
+text_chars: 17110
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:04:15Z"
+converted_at: "2026-08-12T05:26:29Z"
 ---
 # Dark Corners How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-11T23:04:15Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yuhao Jiang&Xinlei Ying&Ziming Zhang_Dark Corners How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years.pdf` (55 pages)
 
+
 ## Slide 1
 
 ## Dark Corners: How a Failed Patch Left VMware ESXi VM Escapes Open for Two Years Yuhao Jiang, 0x140ce, Ezrak1e
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AUGUST 6-7, 2025
@@ -488,12 +494,11 @@ After patch
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 [root@localhost:~] secpolicytools -l
 2111
 2113
@@ -515,7 +520,6 @@ pluginObj 2106
 pmemGCObj 2119
 secpolicyObj 2104
 sfcbVmwPLuginObj 2107
-shellobj 2118
 sshdObj 2125
 sslKeyObj 2112
 supershellObj 2123
@@ -534,7 +538,6 @@ e ESXi uses security domains to limit process access to files, networks, etc.
 Valid domains
 superDom
 regularVMDom
-1lprDom
 actionScriptDom
 clomdDom
 cmmdsTimeMachineDom
@@ -591,12 +594,11 @@ SecurityDomain
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
-BRIEFINGS
 Sandbox for Syscall
 @ Looking at the rules, we can see restrictions on Syscalls
 genericSys grant
@@ -652,11 +654,10 @@ vmfsGenSys grant
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Sandbox for Syscall
 e Sandbox restrictions on syscall are mainly implemented in
 VmkAccessSyscallCheck
@@ -709,11 +710,10 @@ Domain Transition Only privileged domains and arbitraryTransitionDomains can use
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Domain Transition
 Only privileged domains and arbitrary!ransitionDomains can use
 this method to transition domains.
@@ -933,23 +933,6 @@ Step3:Use AAW primitive to modify SyscallMask_table and  call VmkAccessEnableDom
 ## Slide 54
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-btw
-AF —,
-24968 UE)
-BSmuen
-8 tit
-© me
-*)
-1246
-PFS soos @
-= 20:17
-```
 
 ## Slide 55
 

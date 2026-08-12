@@ -1,5 +1,5 @@
 ---
-title: "Bad io uring A New Era of Rooting for Android"
+title: "Bad io_uring A New Era of Rooting for Android"
 speakers: ["Zhenpeng Lin", "Xinyu Xing", "Zhaofeng Chen", "Kang Li"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android.pdf"
 pages: 63
 sha256: "c57c69205b0a80c00d53d778a3a3d85c1f22830792c0da489aba7d1b5f7e0a0c"
-text_chars: 19212
-ocr_pages: 21
+text_chars: 14153
+ocr_pages: 13
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:27:48Z"
+converted_at: "2026-08-12T04:26:20Z"
 ---
-# Bad io uring A New Era of Rooting for Android
+# Bad io_uring A New Era of Rooting for Android
 
 **Speakers:** Zhenpeng Lin, Xinyu Xing, Zhaofeng Chen, Kang Li  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android.pdf` (63 pages)
+
 
 ## Slide 1
 
@@ -65,48 +71,11 @@ converted_at: "2026-08-11T21:27:48Z"
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifeK hat
-USA 20253
-The to_uring
-¢ Efficient |/O operations
-e Less Syscalls
-¢ Under ACTIVE development
-UserSpace
-pee ‘Seoaguine
-ce
-(< ce
-KY ?
-ors
-0
-(4
-submission oy)
-Ci
-K ernel
-T/O execution
-rs Lod completion queue
-re
-‘
-```
-
 ## Slide 4
 
 ## The BAD io_uring
 
 #badiouring #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifeK hat
-USA 20253
-The BAD ito _uring
-» Eduardo Vela... X
- @sirdarckcat
-"Why io_uring so bad?"
-```
 
 ## Slide 5
 
@@ -116,18 +85,6 @@ The BAD ito _uring
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifeK hat
-USA 20253
-The BAD ito _uring
-¢ Very buggy
-» Eduardo Vela... X
- @sirdarckcat
-"Why io_uring so bad?"
-```
-
 ## Slide 6
 
 ## The BAD io_uring
@@ -136,15 +93,12 @@ The BAD ito _uring
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifeK hat
-USA 20253
-The BAD ito _uring
 ¢ Very buggy
 Eduardo Vela... X
- @sirdarckcat
 "Why io_uring so bad?"
 io_uring 17/161 A v x
 syzbot Linux v
@@ -161,22 +115,18 @@ syzbot Linux v
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifeK hat
-USA 20253
-The BAD ito _uring
 ¢ Very buggy
 ¢ Active development, and ACTIVE exploitation
 Eduardo Vela... X
 @sirdarckcat
 "Why io_uring so bad?"
-&@ syzkaller.appspot.com/upstream/fixed
 syzbot Linux v
 io_uring
 17/161
-“a
 v x
 & Open [982]
 Subsystems
@@ -192,20 +142,16 @@ Subsystems
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat ae ae
-USA 20es
 Exploitation Against io_uring
 CVE-2022-29582
 An io_uring vulnerability
 Posted by Awarau and pgl.on August 05, 2022 - 93 ‘ijiidietatadald
-CVE 2021-20226 reference =
 unting bug which leads to local I I (A)
 Privilege escalation in io uring
-FP omirees tt, Follow ceitoitetion aba ied on ai
-[CVE- 7 womens EX loitation applied on an
 2022-1786] A Journey To The Dawn io_uring UAF
 ALESSANDRO GROPPO
 DECEMBER 21, 2022
@@ -287,12 +233,10 @@ DECEMBER 21, 2022
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Exploiting io_uring on Android
 ¢ A lot of bugs, a lot of potential!
 e ©? Fun and profit!
@@ -353,24 +297,19 @@ Privileged Process | Up to $100,000
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 =
 Initializing identity
 ¢ identity stores in io_uring
-ee°e@ identity
 int io_uring_alloc_task_context(struct task_struct *task)
-{
 struct io_uring_task *tctx;
 tctx = kmalloc(sizeof(*tctx), GFP_KERNEL);
 io_init_identity(&tctx->__identity) |
 tctx->identity = &tctx->__identity;
 task->io_uring = tctx;
-1O_Uring
 ```
 
 ## Slide 18
@@ -403,12 +342,10 @@ task->io_uring = tctx;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
 identity COW
 ¢ If identity changes (e.g., cred changes), new identity is created
 WY
@@ -418,10 +355,7 @@ struct to_uring_task *tctx = current->io_uring; io_uring *
 struct io_identity *id; WUT
 _ y ; identity *
 id = kmemdup(req->work.identity, sizeof(*id),
-GRP_KERNEL) ;
-io_init_identity(id); \ a iG J
 req->work.identity = id; 1O_uring task
-tctx->identity = id;
 ```
 
 ## Slide 21
@@ -440,27 +374,13 @@ tctx->identity = id;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
-The BUG
 stat
-{
 ic bool io_identity_cow(struct io_kiocb *req)
 struct to_uring_task *tctx = current->io_uring;
-/* drop tctx and req identity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-if (req->work.identity != &tctx->__identity &&
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
 ```
 
 ## Slide 23
@@ -469,27 +389,14 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
-The BUG
 stat
-{
 ic bool io_identity_cow(struct io_kiocb *req)
 struct to_uring_task *tctx = current->io_uring;
-/* drop tctx and req identity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
 kfree(tctx->identity );
-if (req->work.identity != &tctx->__identity &&
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
 ```
 
 ## Slide 24
@@ -498,27 +405,13 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
-The BUG
 stat
-{
 ic bool io_identity_cow(struct io_kiocb *req)
 struct to_uring_task *tctx = current->io_uring;
-/* drop tctx and req identity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-if (req->work.identity != &tctx->__identity &&
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
 ```
 
 ## Slide 25
@@ -527,59 +420,11 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20es
-The BUG
-thread A
-static bool io_identity_cow(struct io_kiocb *req)
-{
-koows thread B
-struct to_uring_task *tctx = currént->io_uring;
-/* drop tctx and req identity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-if (req->work.identity != &tctx->__identity &&
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
-```
-
 ## Slide 26
 
 ## The BUG
 
 #badiouring #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20es
-The BUG
-thread A
-static bool io_identity_cow(struct io_kiocb *req)
-{ aan thread B
-struct to_uring_task *tctx = currént->io_uring;
-This is False
-/* drop tctx and Tepjdent ity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-if (req->work.identity != &tctx->__identity &&
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
-```
 
 ## Slide 27
 
@@ -587,61 +432,19 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20es
-The BUG
-thread A
-static bool io_identity_cow(struct io_kiocb *req)
-{ aan thread B
-struct to_uring_task *tctx = currént->io_uring;
-This is Palse
-/* drop tctx and Tepjdent ity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-thread A->io_uring-ridentity
-if sven svork. ac, I= &tctx->__identity &
-refcount_dec_and_test(&req->work. identity->count ) )
-kfree(req->work. identity );
-req->work.identity = id;
-tctx->identity = id;
-return true;
-```
-
 ## Slide 28
 
 ## The BUG
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
-The BUG
-thread A
-static bool io_identity_cow(struct io_kiocb *req)
-{ aan thread B
-struct to_uring_task *tctx = currént->io_uring;
 This is Palse
-/* drop tctx and Tepjdent ity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-thread A->io_uring-ridentity
-if sven svork. ac, I= &tctx->__identity &
 refcount_dec_and_test(&r work. identity->count ) )
-kfree(req->work. identity );
 This is true
-req->work.identity = id;
-tctx->identity = id;
-return true;
 ```
 
 ## Slide 29
@@ -650,30 +453,13 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
-The BUG
-thread A
-static bool io_identity_cow(struct io_kiocb *req)
-{ aan thread B
-struct to_uring_task *tctx = currént->io_uring;
 This is False
-/* drop tctx and Tepjdent ity references, if needed */
-if (tctx->identity != &tctx->__identity &&
-refcount_dec_and_test(&tctx->identity->count ) )
-kfree(tctx->identity);
-thread A->io_uring-ridentity
-if sven svork. ac, I= &tctx->__identity &
 refcount_dec_and_test(&r work. identity->count ) )
-kfree(req->work. identity);
 invatlicl Free This is true
-req->work.identity = id;
-tctx->identity = id;
-return true;
 ```
 
 ## Slide 30
@@ -684,17 +470,15 @@ return true;
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat oe SOS B's g
-USA 2023 —y ‘ we
 The Memory Corruption Capability
 ¢ Invalid-free a kmalloc-256 object in the middle
 identity — | ee
 Uy
 GF allocated object
-GY Freel object
 kmalloe-256
 ```
 
@@ -789,24 +573,6 @@ kmalloe-256
 • The **_ring buffer_** is accessible to both userspace and kernel
 
 #badiouring #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifeK hat
-USA 20253
-Recap of The ito_uring Design
-¢ The ring buffer is accessible to both userspace and kernel
-UserSpace
-pie Serco
-o~
-g
-submission queud A CJ PS CE completion queue.
-S¢ %e
-‘
-K ernel
-T/O execution
-```
 
 ## Slide 38
 
@@ -968,24 +734,20 @@ T/O execution
 
 #badiouring #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es
 How Pipe Uses Pages
 ¢ kmap_atomic the page
 static ssize_t
 e copy infout the page prpe_readtesruct kiocb *xiocb, struct iov_iter *to) {
 // in copy_page_to_iter_iovec
-kaddr = kmap_atomic( page);
 from = kaddr + offset;
 left = copyout(buf, from, copy);
 }
 static ssize_t
 pipe_write(struct kiocb *iocb, struct tov_iter *to)
-{
 // in copy_page_from_iter_iovec
 kaddr = kmap_atomic( page);
 to = kaddr + offset;
@@ -1157,18 +919,6 @@ left = copyin(to, buf, copy);
 ## Escalating Privilege On S22
 
 #badiouring #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidekhat
-USA 20es
-e* O06
-Galaxy Store Galllery Play Store Google
-6Osc
-il (0)
-<
-```
 
 ## Slide 63
 

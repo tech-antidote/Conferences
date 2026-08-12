@@ -8,13 +8,17 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Yu Wang&Weiteng Chen_Dead Pixel Detected - A Security Assessment of Apple's Graphics Subsystem.pdf"
 pages: 67
 sha256: "d09156ff6909532f2db53e83ef3783744478f1889fc54c327475ed061c1b93f8"
-text_chars: 58106
-ocr_pages: 8
+text_chars: 46045
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.6
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:04:43Z"
+converted_at: "2026-08-12T05:27:08Z"
 ---
 # Dead Pixel Detected - A Security Assessment of Apple's Graphics Subsystem
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-11T23:04:43Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yu Wang&Weiteng Chen_Dead Pixel Detected - A Security Assessment of Apple's Graphics Subsystem.pdf` (67 pages)
 
+
 ## Slide 1
 
 - "Dead pixel detected" A Security Assessment of Apple's Graphics Subsystem
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pie hat
@@ -342,57 +348,57 @@ AppleIntelMEUserClient::start/AppleIntelMEUserClient::stop, An Out-of-bounds Wri
 
 ## Case study of CVE-2020-27915
 
-```
+\```
 Process 1 stopped
-```
+\```
 
-```
+\```
 * thread #1, stop reason = signal SIGSTOP
-```
+\```
 
-```
+\```
 frame #0: 0xffffff7fae144193 AMDSupport`ATIController::setupSharedSurface(AGDCMultiLinkConfig_t*,
 ScanOutMetaInfo*) + 2339
 AMDSupport`ATIController::setupSharedSurface:
-```
+\```
 
-```
+\```
 ->  0xffffff7fae144193 <+2339>: movb%dil, -0x578(%rbp,%rcx)
 0xffffff7fae14419b <+2347>: movq-0x48(%rbp), %rcx
 0xffffff7fae14419f <+2351>: movslq-0x600(%rbp), %rdx
 0xffffff7fae1441a6 <+2358>: imulq$0xa8, %rdx, %rdx
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 rax= 0x0000000000000000
 rbx= 0xffffffa09ca93ab8
-```
+\```
 
-```
+\```
 rcx= 0xffffffffdeadbeef
 rbp= 0xffffffa09ca93860
-```
+\```
 
-```
+\```
 rsp= 0xffffffa09ca93220
-```
+\```
 
-```
+\```
 rip = 0xffffff7fae144193  AMDSupport`ATIController::setupSharedSurface(AGDCMultiLinkConfig_t*,
 ScanOutMetaInfo*) + 2339
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -400,55 +406,55 @@ ScanOutMetaInfo*) + 2339
 
 ## Case study of CVE-2022-22631
 
-```
+\```
 Process 1 stopped
-```
+\```
 
 - `thread #1, stop reason = EXC_BAD_ACCESS (code=2, address=0xd2285184) frame #0: 0xffffff7f9fd44aa9`
 
-```
+\```
 ->  0xffffff7f9fd44aa9: movb$0x3, 0x14(%r15)
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 r15 = 0xffffffb0d2285170
 rip = 0xffffff7f9fd44aa9
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
-```
+\```
 (lldb) memory read 0xffffffb0d2285170+0x14
-```
+\```
 
-```
+\```
 0xffffffb0d2285184: de ad ca fe41 41 41 41 41 41 41 41 41 41 41 41  ....AAAAAAAAAAAA
 (lldb) bt
-```
+\```
 
-```
+\```
 * thread #1, stop reason = EXC_BAD_ACCESS (code=2, address=0xd2285184)
-```
+\```
 
 - `frame #0: 0xffffff7f9fd44aa9`
 
-```
+\```
 frame #1: 0xffffff7f9fd52eed
 frame #2: 0xffffff7f9fd5386f
 frame #3: 0xffffff7f9fd50fff
 frame #4: 0xffffff8006e2731b  kernel`is_io_connect_method+ 859
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -458,18 +464,16 @@ Case study of CVE-2022-22661
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 black hat \ el |
 di -s Oxffffff7fadc128fb
-AppleIntelICLLPGraphicsFramebuffer AppleIntelMEClientController: :doCmdAction:
 Oxffffff7fadc128fb <+975>: movq) | %rax, @x120(%rbx) This instructi
 -> Oxffffff7fadc12902 <+982>: int3
 Oxffffff7fadc12903 <+983>: sbbb %al, (%rax,%rax)
-Oxffffff7fadc12906 <+986>: addb %al, -Ox7f(%rcx)
 Oxffffff7fadc12909 <+989>: cld
-Oxffffff7fadc1290a <+990>: addl %eax, (%rcx)
 Oxffffff7fadc129@c <+992>: addb %al, (%rax)
 Oxffffff7fadc1290e <+994>: movq -@x48(%rbp), %rbx
 Iv Oxffffff7fadc12912 <+998>: jne Oxffffff7fadc12f32 7 <+2566>
@@ -484,10 +488,7 @@ rsi = 0x@99@000000000040
 rbp = Oxffffffdessdb3bee
 rsp = Oxffffffde83db3aae
 18 = Oxffffff8043052F78
-19 = 0x0e00000000000000
 110 = Oxffffff99db29abbe
-T11 = Oxffffffaes2cfc82c
-112 = 0x@990000000000100
 113 = Oxffffffdes3db3b8e
 114 = @x@0000000000002c7
 115 = Oxffffff950F793000
@@ -497,62 +498,20 @@ cs = 0x0e00000000000008
 fs = exeeooaeeettffecde
 gs = 0x9eee220e0ca50000
 memory read Oxffffff950ea53180 Oxffffff950cea53180+0x130 -fx -s8
-Oxf ffffFI500a53180: 0x0000080000000000 OxffTTTf8b77669a10
-Oxffffff9500ea53190: OxfffffTI5@F816c8O OxffTfff86a99d6690
-Oxffffff95060a531a0: ex! 8 Ox CT
-Oxffffff950ea531be: ex: 88 ex
-Oxffffff950ea531c8: Ox: 188 Ox’
-Oxffffff9500ea531d0: @xe 108 ex’
-Oxffffff950ea531e0: Oxo 108 Ox!
-Oxffffff950ea531F@: ex! 188 ex e
-2
-e
-e
-e
-Oxffffff9500ea53200:
-Oxffffff9500ea53210:
-Oxf fffff9500ea53220:
-Oxf fffff9500ea53230:
-Oxf fffff9500ea53240:
-Oxf fffff9500ea53250:
-Oxffffff9500ea53260:
-Oxffffff9500ea53270:
 Oxffffff9500a53280:
-Oxffffff9500a53290:
-@x6c7070612e6d6f63
-@x@0006b726F466563
 ex 26000
-0x72756F7365522e65
-@x0000000000025ac4
-ex e1
-ext e
-®x7473606967756c70
-0x000000000000024a
-0x0000000000000004
-@x@000000000657461
-0x0000000000001000
-@x000000000000024a
-ex 10e
-0x74736e6967756c70
-0x@00000000000024a
-ex e
-@x0000000000657461
-xe090e000000001000
 Oxffffff950cea532a0: OxFFFFFFISOTE16C88 0x000000000000024a t nds write vulnerabilit
 bt
 * thread #1, stop reason =
 * frame #0: Oxffffff7fadc1 2 AppleIntelICLLPGraphicsFramebuffer AppleIntelMEClientController: :doCmdAction(MECommand_t, void*, void*, void*) + 982
 frame #1: Oxffffff801605a160 kernel‘ 10CommandGate: : runAction(this=Oxffffff8b76756dc®, inAction=<unavailable>, arg@=@x@000000000000100, argi=<unavailable>, arg2=<unavailable>, arg3=<unavailable>)(OSObject*, void
-*, voidk, voidk, voide), voide, voidx, voidk, void*) at I0CommandGate. 245:8 Copt]
 frame #2: Oxffffff801609462c kernel* o_connect_method(connection=<unavailable>, selector=<unavailable>, scalar_input=<unavailable>, scalar_inputCnt=<unavailable>, inband_input=<unavailable>, inband_inputCn
-t=<unavailable>, ool_input=@, ool_input_size=0, inband_output="", inband_outputCnt=Oxffffffa042cfc82c, scalar_output=Oxffffffde83db3d20, scalar_outputCnt=Oxffffffde83db3dic, ool_output=@, 001_output_size=Oxffffff99
 db29abb@) at I0UserClient.c 85 [opt]
 frame #3: Oxffffff801598eca4 kernel *_Xio_connect_method(InHeadP=<unavailable>, OutHeadP=Oxffffffaes2cfc8e®) at device_server.c: 218 [opt]
 frame #4: Oxffffff8015862e98 kernel" ipc_kmsg_send at ipc_kobject.c 3 [opt]
 frame : Oxffffff8015862c5c kernel‘ ipc_kmsg_send [inlined] ipc_kobject_server(port=<unavailable>, request=<unavailable>, option=3) at ipc_kob
 frame #6: Oxffffff8015862b81 kernel‘ ipc_kmsg_send(kmsg=<unavailable>, option=<unavailable>, send_timeout=@) at ipc_kmsg.c 1:10 [opt]
 frame #7: Oxffffff80158798dd kernel *mach_msg_overwrite_trap(args=<unavailable>) at mach_msg.c
-frame : Oxffffff80159badie kernel *mach_call_munger64(state=Oxffffff950ff4ab20) at bsd_i386
 frame #9: Oxffffff8015828246 kernel hndl_mach_scall64 + 22
 ```
 
@@ -568,54 +527,54 @@ Case #1 - CVE-2025-24273 AppleIntelMEClientController::invalidateContentKey Arbi
 
 ## Case #1 - CVE-2025-24273
 
-```
+\```
 Process 1 stopped
-```
+\```
 
-```
+\```
 * thread #1, stop reason = signal SIGSTOP
 frame #0: 0xffffff7faef872d0
-```
+\```
 
-```
+\```
 AppleIntelICLLPGraphicsFramebuffer`AppleIntelMEClientController::invalidateContentKey(MECLIENT_DATA_T*, int,
 bool) + 168
-```
+\```
 
-```
+\```
 AppleIntelICLLPGraphicsFramebuffer`AppleIntelMEClientController::invalidateContentKey:
-```
+\```
 
-```
+\```
 ->  0xffffff7faef872d0 <+168>: movl$0x0, 0x2568(%rbx,%rcx,4)
 0xffffff7faef872db <+179>: shlq$0x4, %rcx
 0xffffff7faef872df <+183>: xorl%eax, %eax
 0xffffff7faef872e1 <+185>: movq%rax, 0x25b0(%rbx,%rcx)
 Target 1: (kernel) stopped.
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 rbx= 0xffffff90a7570000
 rcx= 0x0000000041414141
 rip = 0xffffff7faef872d0
-```
+\```
 
-```
+\```
 AppleIntelICLLPGraphicsFramebuffer`AppleIntelMEClientController::invalidateContentKey(MECLIENT_DATA_T*, int,
 bool) + 168
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -667,62 +626,62 @@ macOS Ventura 13.5 Beta (22G5027e)
 
 #### `Process 1 stopped`
 
-```
+\```
 * thread #1, stop reason = signal SIGSTOP
-```
+\```
 
-```
+\```
 frame #0: 0xfffffe0020f779f8 kernel.release.t8122`DebuggerTrapWithState(db_op=DBOP_PANIC,
 db_message="panic", db_panic_str="%s %s --exit reason namespace %d subcode 0x%llx description: %.800s",
 db_panic_args=0xfffffe84f9cef9e8, db_panic_options=8224, db_panic_data_ptr=0x0000000000000000,
-```
+\```
 
-```
+\```
 db_proceed_on_sync_failure=1, db_panic_caller=18446741875244973128, db_panic_initiator=0x0000000000000000) at
 debug.c:819:2 [opt]
-```
+\```
 
-```
+\```
 Target 1: (kernel.release.t8122) stopped.
-```
+\```
 
-```
+\```
 warning: kernel.release.t8122 was compiled with optimization -stepping may behave oddly; variables may not be
 available.
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 x0 = 0x0000000000000003
-```
+\```
 
-```
+\```
 x1 = 0xfffffe001f91e478  "panic"
-```
+\```
 
-```
+\```
 lr= 0xfffffe0020f76fcc  kernel.release.t8122`panic_trap_to_debugger + 744 [inlined]
 panic_spin_foreverat debug.c:1346:3
-```
+\```
 
-```
+\```
 kernel.release.t8122`panic_trap_to_debugger + 744 at debug.c:1336:2
-```
+\```
 
-```
+\```
 pc = 0xfffffe0020f779f8  kernel.release.t8122`DebuggerTrapWithState + 76 at debug.c:819:2
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -736,34 +695,26 @@ macOS Sequoia 15.1 Beta (24B83)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
 BRIEFINGS
 Patch for CVE-2024-44 197
 The patch for the
 vulnerability is straightforward.
-a
 IOGPUObject *object; //
 IOGPUNotificationQueue *queue; //
 int vy,
 if ( (nu - @x2@01) < @xFFFFE@@@ || (ent - @x29) <= @xFFFFFFD7 )
-fr
-af
-_os_log_internal(
 &dword_@,
 &
 OS_LOG_TYPE_FAULT
-"Ss: Ir
-)s
 return @xE@@@@2C2LL;
 }
 else
 {
 = IOGPUNotificationQueue: :withEntries(*( + 8@),
-5
-v
 3
 = IOGPUNamespace: :addObject(*(this + 144), ject);
 ```
@@ -804,15 +755,15 @@ https://support.apple.com/en-us/122371
 
 ## Initially, I only observed some strange kernel panics
 
-```
+\```
 Process 1 stopped
-```
+\```
 
-```
+\```
 * thread #1, stop reason = signal SIGSTOP
-```
+\```
 
-```
+\```
 frame #0: 0xfffffe002e0d3648 kernel.release.t8122`DebuggerTrapWithState(db_op=DBOP_PANIC,
 db_message="panic", db_panic_str="%s at pc 0x%016llx, lr0x%016llx (saved state: %p%s)\n\t  x0:  0x%016llx x1:
 0x%016llx  x2:  0x%016llx  x3:  0x%016llx\n\t  x4:  0x%016llx x5:  0x%016llx  x6:  0x%016llx  x7:
@@ -821,37 +772,37 @@ db_message="panic", db_panic_str="%s at pc 0x%016llx, lr0x%016llx (saved state: 
 0x%016llx\n\t  x20: 0x%016llx x21: 0x%016llx  x22: 0x%016llx  x23: 0x%016llx\n\t  x24: 0x%016llx x25:
 0x%016llx  x26: 0x%016llx  x27: 0x%016llx\n\t  x28: 0x%016llx fp:  0x%016llx  lr:  0x%016llx  sp:
 0x%016llx\n\t  pc:  0x%016llx cpsr: 0x%08x         esr: 0x%016llx  far: 0x%016llx\n",
-```
+\```
 
-```
+\```
 db_panic_args=0xfffffe8f1896f028, db_panic_options=0, db_panic_data_ptr=0x0000000000000000,
-```
+\```
 
-```
+\```
 db_proceed_on_sync_failure=1, db_panic_caller=18446741875467706024, db_panic_initiator=0x0000000000000000) at
 debug.c:834:2 [opt]
-```
+\```
 
-```
+\```
 Target 0: (kernel.release.t8122) stopped.
-```
+\```
 
-```
+\```
 warning: kernel.release.t8122 was compiled with optimization -stepping may behave oddly; variables may not be
 available.
-```
+\```
 
-```
+\```
 (lldb) di -p
-```
+\```
 
-```
+\```
 IOGPUFamily`IOGPUGroupMemory::remove_memory_object:
-```
+\```
 
-```
+\```
 ->  0xfffffe0030693724 <+292>: ldrw11, [x11, w10, uxtw#2]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -859,66 +810,66 @@ IOGPUFamily`IOGPUGroupMemory::remove_memory_object:
 
 ### We need to gradually escalate the problem to achieve arbitrary memory access
 
-```
+\```
 (lldb) di -p
-```
+\```
 
-```
+\```
 IOGPUFamily`IOGPUGroupMemory::removeMemoryFromResourceMap:
-```
+\```
 
-```
+\```
 ->  0xfffffe00193f4f40 <+96>:  ldrx8, [x9, x8]
 0xfffffe00193f4f44 <+100>: ldrx1, [x8, #0x28]
 0xfffffe00193f4f48 <+104>: mov    x0, x20
 0xfffffe00193f4f4c <+108>: mov    x2, x19
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 x8 = 0x0000000000067020
-```
+\```
 
-```
+\```
 x9 = 0xfffffe24d47e0040
-```
+\```
 
-```
+\```
 fp= 0xfffffe3eecb03710
-```
+\```
 
-```
+\```
 lr= 0xfffffe00193f4f0c
-```
+\```
 
-```
+\```
 IOGPUFamily`IOGPUGroupMemory::removeMemoryFromResourceMap(IOGPUCountedMap<unsigned long long, IOGPUResource*,
 IOGPUResourceCountedMapBucket, IOGPUIOLibAllocatorPolicy>*, bool) + 44
-```
+\```
 
-```
+\```
 sp= 0xfffffe3eecb036d0
-```
+\```
 
-```
+\```
 pc = 0xfffffe00193f4f40
-```
+\```
 
-```
+\```
 IOGPUFamily`IOGPUGroupMemory::removeMemoryFromResourceMap(IOGPUCountedMap<unsigned long long, IOGPUResource*,
 IOGPUResourceCountedMapBucket, IOGPUIOLibAllocatorPolicy>*, bool) + 96
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -930,7 +881,8 @@ macOS Sequoia 15.2 RC2 (24C100)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
@@ -938,15 +890,11 @@ black hat
 BRIEFINGS
 The vulnerable function does check parameters, but inadequately
 else
-{
-_os_log internal(
 &dword_@,
 &
-»
 05_LOG_TYPE_FAULT,
 “hs: newResourceGroup bad initial capacity: %d\n",
 “static OSPtr<IOGPUResource> I0GPUResource: :newResourceGroup(IOGPU *, IO0GPUDevice *, uint32_t}",
-v4)5
 return @LL;
 }
 ```
@@ -975,7 +923,8 @@ Bypassing the patch on the macOS Tahoe 26.0 Beta (25A5279m)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Process 1 stopped
@@ -989,33 +938,16 @@ Target 2: (kernel.release.t8122) stopped.
 warning: kernel.release.t8122 was compiled with optimization -— stepping may behave oddly; variables may not be available.
 [(lldb) register read
 General Purpose Registers:
-x® Oxf fFfffe32b2942e00
 x1 Oxfffffe271aee17be
-x2 @x8000000000000000
 x3 @x0000000000000000
-x4 @x0000000000000000
-xs @x0000000000020710 -;
 we © Srossssooeeeennae assing the patch on the macOS Tahoe eta m
-x7 Oxf ffffe@@3499FF66 2
-x8 @x0000000000000000
-x9 @x@000000000000000
-x1e Oxfffffe32b2942e08
-xi @x@000000000000004
 x12 @x@000000000001000
-x13 @x8000000000000000
-x14 Oxf TtTtTtfrtrTtrTtTtt
-x15 Oxe0eeoo0eFf FdfF TTT
 x16 @xfffffee@2ea4c170 IOGPUFamily*vtable for IOGPUGroupMemory + 72
-x17 OxfffcfeG@@2ea4c170 (Oxfffffee02ea4c170) IOGPUFamily vtable for IOGPUGroupMemory + 72
-x18 @x@000000000000000
-x19 @x8000000000000000
 x20 Oxfffffe214F5234ce
 x21 Oxfffffe3laf9c2300
-x22 @x0000000000000000
 x23 @x@000000000000001
 x24 @x8000000000000000
 x25 @x@000000000000058
-x26 @x@000000000000001
 x27 @x0000000000000000
 x28 = 0x0000000000000000
 fp = Oxfffffe6770277690
@@ -1114,7 +1046,8 @@ IOMFB meme
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © Adam Donenfeld @
@@ -1124,11 +1057,8 @@ e Saar Amar
 So, another IOMFB vulnerability was exploited ITW (15.0.2). | bindiffed the
 patch and built a POC. And, because it's a great bug, | just finished writing a
 short blogpost with the tech details, to share this knowledge :) Check it out!
-saaramar.github.io/IOMFB integer...
 panic-full-2021-10-11-101451.0...
-_ eee ee "panicString" : "panic(cpu 5 caller OxfffffffO24cdb3cc):
 YOU GET KERNEL ACCESS & YOU GET KERNEL valOxaiaratateratatay, s:80, ptrOxttittes7esBcd70)\n 0:
-ACCESS: EVERYBODY GETS FREE KERNELACCESS Fag oon tniicmory 10: ox1n0s release type: Usern0S versions
 ```
 
 ## Slide 43
@@ -1155,69 +1085,69 @@ macOS Sonoma 14.0 Beta 0 (23A344)
 
 ## The panic
 
-```
+\```
 (lldb) di
-```
+\```
 
-```
+\```
 IOMobileGraphicsFamily`IOMFB::PBTBlockHandlerGeneric::get_map_buf_descs:
 0xfffffe002bb7f770 <+88>:  add    x8, x8, #0x308 ; IOMFB::PBTBlockHandlerGeneric::descs
-```
+\```
 
-```
+\```
 ->  0xfffffe002bb7f774 <+92>:  ldrq0, [x8, x9, lsl#4]
 0xfffffe002bb7f778 <+96>:  sturq0, [x29, #-0x10]
 0xfffffe002bb7f77c <+100>: ldurx0, [x29, #-0x10]
 0xfffffe002bb7f780 <+104>: ldurx1, [x29, #-0x8]
-```
+\```
 
-```
+\```
 (lldb) register read
-```
+\```
 
-```
+\```
 General Purpose Registers:
-```
+\```
 
-```
+\```
 x8 = 0xfffffe0029488308IOMobileGraphicsFamily`IOMFB::PBTBlockHandlerGeneric::descs
-```
+\```
 
-```
+\```
 x9 = 0x00000000deadcafe
-```
+\```
 
-```
+\```
 fp= 0xfffffe49a50af5d0
-```
+\```
 
-```
+\```
 lr= 0xfffffe002bb3fb98  IOMobileGraphicsFamily-
-```
+\```
 
-```
+\```
 DCP`IOMobileFramebufferAP::map_block_buf(IOMobileFramebufferAP::map_block_buf_args*,
-```
+\```
 
-```
+\```
 IOMFB_Parameter_Block_Type, unsigned char const*, unsigned long, task*, bool) + 156
-```
+\```
 
-```
+\```
 sp= 0xfffffe49a50af5a0
-```
+\```
 
-```
+\```
 pc = 0xfffffe002bb7f774
-```
+\```
 
-```
+\```
 IOMobileGraphicsFamily`IOMFB::PBTBlockHandlerGeneric::get_map_buf_descs(IOMFB_Parameter_Block_Type) + 92
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1245,45 +1175,45 @@ macOS Sequoia 15.0 Beta 0 (24A335)
 
 ## Case #6 - OE098868205995
 
-```
+\```
 (lldb) bt
-```
+\```
 
 - `thread #1, stop reason = signal SIGSTOP`
 
-```
+\```
 ......
-```
+\```
 
-```
+\```
 frame #2: 0xfffffe00291f527c kernel.release.t8122`panic(str=<unavailable>) at debug.c:1113:2 [opt]
 frame #3: 0xfffffe00291ffcbc kernel.release.t8122`panic_with_thread_kernel_state(msg="Kernel data abort.",
 ss=0xfffffe84e0393400) at sleh.c:901:2 [opt]
 frame #4: 0xfffffe0028ab1ebc kernel.release.t8122`handle_kernel_abort(state=0xfffffe84e0393400,
 esr=2516582406, fault_addr=0, fault_code=FSC_TRANSLATION_FAULT_L2, fault_type=1,
 expected_fault_handler=<unavailable>) at sleh.c:3116:2 [opt]
-```
+\```
 
-```
+\```
 frame #5: 0xfffffe0028ab0864 kernel.release.t8122`sleh_synchronous [inlined]
 handle_abort(state=0xfffffe84e0393400, esr=2516582406, fault_addr=0, inspect_abort=<unavailable>,
 handler=<unavailable>, expected_fault_handler=0x0000000000000000) at sleh.c:1743:2 [opt]
-```
+\```
 
-```
+\```
 frame #6: 0xfffffe0028ab0850 kernel.release.t8122`sleh_synchronous(context=0xfffffe84e0393400,
 esr=2516582406, far=0, did_initiate_panic_lockdown=<unavailable>) at sleh.c:1256:3 [opt]
 frame #7: 0xfffffe002890b888 kernel.release.t8122`fleh_synchronous + 44
-```
+\```
 
-```
+\```
 frame #8: 0xfffffe002b040fe0 IOMobileGraphicsFamily-DCP`IOMFB::DCPMemoryDescriptor::prepare(IOMFB::
 MemoryDescriptor::Options) + 8
-```
+\```
 
-```
+\```
 ......
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1327,7 +1257,7 @@ The Mystery Behind ColdIntro (CVE-2022-32894) and ColdInvite (CVE-2023-27930) a 
 
 ## Case study of APT firmware fuzzing
 
-```
+\```
 (lldb) memory read 0xfffffe29a0220000 -c0x7000 --force
 0xfffffe29a0220000: 50 41 4e 49 43 20 2d 20 61 70 74 20 66 69 72 6d  PANIC -apt firm
 0xfffffe29a0220010: 77 61 72 65 3a 20 61 70 74 2e 63 3a 33 37 30 20  ware: apt.c:370
@@ -1350,7 +1280,7 @@ The Mystery Behind ColdIntro (CVE-2022-32894) and ColdInvite (CVE-2023-27930) a 
 0xfffffe29a0220110: 74 2e 63 3a 33 37 30 20 61 70 74 5f 76 62 69 28  t.c:370 apt_vbi(
 0xfffffe29a0220120: 29 20 2d 2d20 0a 52 54 4b 69 74 3a 20 52 54 4b  ) --.RTKit: RTK
 0xfffffe29a0220130: 69 74 2d 32 37 35 38 2e 34 30 2e 31 39 2e 72 65  it-2758.40.19.re
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1358,7 +1288,7 @@ The Mystery Behind ColdIntro (CVE-2022-32894) and ColdInvite (CVE-2023-27930) a 
 
 ## Case study of PCC firmware fuzzing
 
-```
+\```
 (lldb) memory read 0xfffffe2fffd40000 -c0x7000 --force
 0xfffffe2fffd40000: 50 41 4e 49 43 20 2d 20 70 63 63 20 66 69 72 6d  PANIC -pccfirm
 0xfffffe2fffd40010: 77 61 72 65 3a 20 61 68 5f 74 68 72 2e 63 3a 32  ware: ah_thr.c:2
@@ -1381,7 +1311,7 @@ The Mystery Behind ColdIntro (CVE-2022-32894) and ColdInvite (CVE-2023-27930) a 
 0xfffffe2fffd40120: 67 69 6e 5f 75 70 64 61 74 65 28 29 20 2d 2d20  gin_update() –
 0xfffffe2fffd40130: 0a 52 54 4b 69 74 3a 20 52 54 4b 69 74 2d 32 34  .RTKit: RTKit-24
 0xfffffe2fffd40140: 31 33 2e 34 31 2e 31 2e 72 65 6c 65 61 73 65 20  13.41.1.release
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1389,21 +1319,21 @@ The Mystery Behind ColdIntro (CVE-2022-32894) and ColdInvite (CVE-2023-27930) a 
 
 ## The RTBuddy mechanism
 
-```
+\```
 (lldb) bt
-```
+\```
 
 - `thread #1, stop reason = signal SIGSTOP`
 
    - `frame #0: 0xfffffe001fbb63b0 kernel.release.t6000`DebuggerTrapWithState(db_op=DBOP_PANIC,`
 
-```
+\```
 db_message="panic", db_panic_str="%s %s%s%s\n%s", db_panic_args=0xfffffe840d8c7df8, db_panic_options=0,
 db_panic_data_ptr=0x0000000000000000, db_proceed_on_sync_failure=1, db_panic_caller=18446741875263258400) at
 debug.c:714:2 [opt]
-```
+\```
 
-```
+\```
 frame #1: 0xfffffe001fbb593c kernel.release.t6000`panic_trap_to_debugger(panic_format_str="%s %s%s%s\n%s",
 panic_args=0xfffffe840d8c7df8, reason=0, ctx=0x0000000000000000, panic_options_mask=0,
 panic_data_ptr=0x0000000000000000, panic_caller=18446741875263258400) at debug.c:1175:2 [opt]
@@ -1413,16 +1343,16 @@ frame #3: 0xfffffe002263bf20 RTBuddy`RTBuddyCrashlogEndpoint::_handleCrashlog(bo
 frame #4: 0xfffffe002209e5e0 IOSlaveProcessor`IOSlaveEndpoint::checkForWork() + 124
 frame #5: 0xfffffe0020242e54 kernel.release.t6000`IOWorkLoop::runEventSources(this=0xfffffe33ceba17b0) at
 IOWorkLoop.cpp:403:18 [opt]
-```
+\```
 
-```
+\```
 frame #6: 0xfffffe00202439dc kernel.release.t6000`IOWorkLoop::threadMain(this=0xfffffe33ceba17b0) at
 IOWorkLoop.cpp:434:8 [opt]
-```
+\```
 
-```
+\```
 frame #7: 0xfffffe001fb70e98 kernel.release.t6000`Call_continuation + 216
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1448,7 +1378,8 @@ Case #8 - CVE-2025-24111
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 [(lldb) bt
@@ -1468,14 +1399,7 @@ frame #5:
 frame #6:
 frame #7:
 [(lldb) memory
-Oxfffffeee18e6d2fc kernel. release.t8122° panic_with_options_and_initiator(initiator=<unavailable>, reason=<unavailable>, ctx=<unavailable>, debugger_options_mask=<unavailable>, str=<unavailab
--¢:1150:2 [opt]
-Oxf ffffeG0@1b4bce1@ RTBuddy  RTBuddyCrashlogEndpoint
-Oxfffffe0@1aedaia8 IOSlaveProcessor IOSlaveEndpoin
-Oxfffffee018d68b48 kernel.release.t8122° IOWorkLoop unEventSources(this=Oxfffffelb3fdce390) at IOWorkLoop.cpp:403:18 [opt]
-OxfffffeG018d69724 kernel.release.t8122° IOWorkLoop: :threadMain(this=Oxfffffelb3fdce39@) at IOWorkLoop.cpp:434:8 [opt]
 Oxfffffee0185cd8a8 kernel.release.t8122°Call_continuation + 200
-read Oxfffffe29a6728000 -c@x2000 --force
 handleCrashlog(bool) + 1368
 checkForWork() + 124
 Oxfffffe29a67281c0: 74 61 73 6b 20 73 74 61 63 6b 20 66 72 61 6d 65 task stack frame

@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Wenya Wang, Xingwei Lin, Jingyi Wang, Wang Gao, Dawu Gu _ HODOR Reducing Attack Surface on Node.js via System Call Limitation.pdf"
 pages: 34
 sha256: "cffbe905089a0883b85c3268e06f4cf66d560acd53a804650e293c40768ee1ae"
-text_chars: 12842
-ocr_pages: 3
+text_chars: 12622
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:13Z"
+converted_at: "2026-08-12T04:04:39Z"
 ---
 # HODOR Reducing Attack Surface on Node.js via System Call Limitation
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:13:13Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Wenya Wang, Xingwei Lin, Jingyi Wang, Wang Gao, Dawu Gu _ HODOR Reducing Attack Surface on Node.js via System Call Limitation.pdf` (34 pages)
 
+
 ## Slide 1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat —
 DECEMBER 4-7
 EXCEL LONDON / UK
 #BHEU @BlackHatEvents
@@ -276,13 +282,12 @@ A lightweight runtime protection system.
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-plaekhat
 Our approach: Hodor
 A lightweight runtime protection system.
-as Node.js D
 Application 5
 5 SO Native | aoe
 Modules Source Code
@@ -291,24 +296,17 @@ Modules SZ Call Graph Mappings
 (Ss) |
 Node.js
 Code
-Bo! Dependencies bite
-Itcode
 ® @
 15
 Information Classification: General
-Ee,
 System Call
 Recorder
 @
-&
-Main- Thread-
-Thread- _Pool-
 Excuted Excuted
 Whitelist Whitelist
 >
 Kernel
 Restriction Profile Installation
-®
 ```
 
 ## Slide 16
@@ -664,12 +662,3 @@ Information Classification: General
 Wenya Wang,  Xingwei Lin      @xwlin_roy
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat
-Thanks & Questions?
-Wenya Wang, Xingwei Lin ¥ @xwlin_roy
-#BHEU @BlackHatEvents
-```

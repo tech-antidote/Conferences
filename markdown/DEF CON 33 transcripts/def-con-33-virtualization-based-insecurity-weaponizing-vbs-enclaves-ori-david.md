@@ -12,7 +12,7 @@ duration_seconds: 2184
 words: 5732
 text_chars: 31944
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Virtualization-Based (In)security - Weaponizing VBS Enclaves

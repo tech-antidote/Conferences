@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Lukas Maar&Lukas Giner_Derandomizing the Location of Security-Critical Kernel Objects in the Linux Kernel.pdf"
 pages: 165
 sha256: "4ab0e085c312cffef9ab82a866dee239b280b97d406ad0564d0dbd5495c78c59"
-text_chars: 55583
+text_chars: 55885
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T22:57:55Z"
+converted_at: "2026-08-12T05:16:48Z"
 ---
 # Derandomizing the Location of Security-Critical Kernel Objects in the Linux Kernel
 
 **Speakers:** Lukas Maar, Lukas Giner  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Lukas Maar&Lukas Giner_Derandomizing the Location of Security-Critical Kernel Objects in the Linux Kernel.pdf` (165 pages)
+
 
 ## Slide 1
 
@@ -44,9 +49,9 @@ isec.tugraz.at
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 1
 
@@ -60,9 +65,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 1
 
@@ -74,9 +79,9 @@ TLB-based location disclosure attacks **Timing side channel:** TLB Evict+Reload 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 1
 
@@ -88,9 +93,9 @@ TLB-based location disclosure attacks **Timing side channel:** TLB Evict+Reload 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 1
 
@@ -104,9 +109,9 @@ Shows leakage and exploitation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 1
 
@@ -126,9 +131,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 2
 
@@ -154,9 +159,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -178,9 +183,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -204,9 +209,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -235,9 +240,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -266,9 +271,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -297,9 +302,9 @@ attack
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -324,9 +329,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -354,9 +359,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -384,9 +389,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -414,9 +419,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -445,9 +450,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -473,9 +478,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 3
 
@@ -612,9 +617,9 @@ Lukas Maar Lukas Giner
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 4
 
@@ -626,9 +631,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 4
 
@@ -640,9 +645,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 4
 
@@ -654,9 +659,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 4
 
@@ -668,9 +673,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 4
 
@@ -692,9 +697,9 @@ GOAL:  Reliable!
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -714,9 +719,9 @@ GOAL:  Reliable!
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -744,9 +749,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -770,9 +775,9 @@ Use arbitrary r/w
 GOAL:  Reliable!
 Privilege escalation
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 Lukas Maar
 
@@ -804,9 +809,9 @@ Lukas Giner
 
 Lukas Maar
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -832,9 +837,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -860,9 +865,9 @@ Privilege escalation
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 5
 
@@ -882,9 +887,9 @@ C2:  What to write? Self reference ? Arbitrary read/write
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -901,9 +906,9 @@ pgdi p4di pudi pmdi pti offset
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -924,9 +929,9 @@ PGD
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -945,9 +950,9 @@ PGD
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -966,9 +971,9 @@ PGD P4D
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -988,9 +993,9 @@ PGD P4D
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1010,9 +1015,9 @@ PGD P4D PUD
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1032,9 +1037,9 @@ PGD P4D PUD
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1054,9 +1059,9 @@ PGD P4D PUD PMD
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1079,9 +1084,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1102,9 +1107,9 @@ PGD P4D PUD PMD PT
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1126,9 +1131,9 @@ PGD P4D PUD PMD PT
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1150,9 +1155,9 @@ PGD P4D PUD PMD PT Page
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1174,9 +1179,9 @@ PGD P4D PUD PMD PT Page
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 7
 
@@ -1199,9 +1204,9 @@ Set 256
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 8
 
@@ -1224,9 +1229,9 @@ Set 256
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 8
 
@@ -1253,9 +1258,9 @@ Lukas Giner
 
 Lukas Maar
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 8
 
@@ -1283,9 +1288,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 8
 
@@ -1299,9 +1304,9 @@ Is a page in the TLB?
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1315,9 +1320,9 @@ Is a page in the TLB? Measure an access:
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1331,9 +1336,9 @@ Is a page in the TLB? Measure an access: `start = time();`
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1347,9 +1352,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address);`
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1363,9 +1368,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address); 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1379,9 +1384,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address); 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1395,9 +1400,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address); 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1411,9 +1416,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address); 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1427,9 +1432,9 @@ Is a page in the TLB? Measure an access: `start = time(); access(test_address); 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 9
 
@@ -1451,9 +1456,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 10
 
@@ -1476,9 +1481,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 10
 
@@ -1501,9 +1506,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 10
 
@@ -1523,9 +1528,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1545,9 +1550,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1567,9 +1572,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1589,9 +1594,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1608,9 +1613,9 @@ Kernel
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1627,9 +1632,9 @@ Kernel
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1644,9 +1649,9 @@ fast  prefetch
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1661,9 +1666,9 @@ slow  prefetch
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1678,9 +1683,9 @@ slow  prefetch
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1700,9 +1705,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 11
 
@@ -1724,9 +1729,9 @@ ffff888000000000
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 12
 
@@ -1755,9 +1760,9 @@ page and slab allocator
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 14
 
@@ -1783,9 +1788,9 @@ E.g., bytecode for eBPF.
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 14
 
@@ -1809,9 +1814,9 @@ page and slab allocator
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 14
 
@@ -1837,9 +1842,9 @@ page and slab allocator
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 14
 
@@ -1864,9 +1869,9 @@ Use memory allocated with `vmalloc` . E.g., bytecode for eBPF. Use defenses: `CO
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 14
 
@@ -1891,9 +1896,9 @@ Use memory allocated with `vmalloc` . E.g., bytecode for eBPF. Use defenses: `CO
 
 14 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 ## Slide 87
 
@@ -1903,9 +1908,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1919,9 +1924,9 @@ Syscalls to load 4 kB-aligned kernel address:
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1935,9 +1940,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack:
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1951,9 +1956,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1)`
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1967,9 +1972,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1983,9 +1988,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -1999,9 +2004,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -2015,9 +2020,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -2031,9 +2036,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -2047,9 +2052,9 @@ Syscalls to load 4 kB-aligned kernel address: Kernel stack: `syscall(-1) msg_msg
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -2065,9 +2070,9 @@ Multiple addresses are loaded to the TLB ⌢
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 15
 
@@ -2107,9 +2112,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2140,9 +2145,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2173,9 +2178,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2206,9 +2211,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2239,9 +2244,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2272,9 +2277,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2305,9 +2310,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2338,9 +2343,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2371,9 +2376,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2404,9 +2409,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2437,9 +2442,9 @@ sys_msgrcv(32, mtext, mtype) ③
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 16
 
@@ -2459,9 +2464,9 @@ _2 MB-aligned 4 kB-aligned_ Location of **C1:** Where to write? _memory sections
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 18
 
@@ -2475,9 +2480,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 18
 
@@ -2491,9 +2496,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 18
 
@@ -2507,9 +2512,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 18
 
@@ -2521,9 +2526,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2537,9 +2542,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2557,9 +2562,9 @@ Intel Kaby, Coffee, Alder, Raptor, and Meteor Lake _evaluated_ AMD and some ARM 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2579,9 +2584,9 @@ Intel Kaby, Coffee, Alder, Raptor, and Meteor Lake _evaluated_ AMD and some ARM 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2601,9 +2606,9 @@ Intel Kaby, Coffee, Alder, Raptor, and Meteor Lake _evaluated_ AMD and some ARM 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2627,9 +2632,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2659,9 +2664,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 19
 
@@ -2690,9 +2695,9 @@ Arbitrary read/write
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 21
 
@@ -2706,9 +2711,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 21
 
@@ -2725,9 +2730,9 @@ arbitrary kernel code execution .
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 22
 
@@ -2746,9 +2751,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 22
 
@@ -2764,9 +2769,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 22
 
@@ -2785,9 +2790,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 22
 
@@ -2806,9 +2811,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 22
 
@@ -2820,9 +2825,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 23
 
@@ -2836,16 +2841,16 @@ https://lukasmaar.github.io/
 
 Misuse unsafe element unlink from a list Two write primitives:
 
-```
+\```
 *(next+8)=prev;
 *(prev)=next;
-```
+\```
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 23
 
@@ -2865,9 +2870,9 @@ BadBinder [Sto19] Many others [Sec20; San20; Maa+24a]
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 23
 
@@ -2887,9 +2892,9 @@ Arbitrary read/write primitive
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 23
 
@@ -2924,9 +2929,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -2961,9 +2966,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -2998,9 +3003,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3035,9 +3040,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3072,9 +3077,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3109,9 +3114,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3146,9 +3151,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3183,9 +3188,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 24
 
@@ -3219,9 +3224,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3259,9 +3264,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 ## Slide 144
 
@@ -3296,9 +3301,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 ## Slide 145
 
@@ -3334,9 +3339,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3374,9 +3379,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3411,9 +3416,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3449,9 +3454,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3487,9 +3492,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3523,9 +3528,9 @@ Slab Page of kmalloc-cg-64
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3563,9 +3568,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3604,9 +3609,9 @@ Lukas Maar
 
 Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 25
 
@@ -3632,9 +3637,9 @@ Arbitrary read/write
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 27
 
@@ -3646,9 +3651,9 @@ Isolate kernel/user address space
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 27
 
@@ -3660,9 +3665,9 @@ Isolate kernel/user address space **KPTI** Software-based solution _most kernel 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 27
 
@@ -3674,9 +3679,9 @@ Isolate kernel/user address space **KPTI** Software-based solution _most kernel 
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 27
 
@@ -3686,9 +3691,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 28
 
@@ -3700,9 +3705,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 28
 
@@ -3714,9 +3719,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 28
 
@@ -3728,9 +3733,9 @@ https://lukasmaar.github.io/
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 28
 
@@ -3744,9 +3749,9 @@ Supported in part by the European Research Council (ERC project FSSec 101076409)
 
 Lukas Maar Lukas Giner
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 29
 
@@ -3778,9 +3783,9 @@ isec.tugraz.at
 
 [Sto19] M. Stone. **Bad Binder: Android In-The-Wild Exploit** . 2019. URL: `https://googleprojectzero.blogspot.com/2019/11/bad-binder-androidin-wild-exploit.html` .
 
-```
+\```
 https://lukasmaar.github.io/
-```
+\```
 
 Lukas Maar Lukas Giner
 

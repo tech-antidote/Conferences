@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Ben Gelman&Sean Bergeron_Anomaly Detection Betrayed Us, so We Gave It a New Job Enhancing Command Line Classification with Benign Anomalous Data.pdf"
 pages: 51
 sha256: "552374f6d6dc39f7e466ab342913dcdb779e1f01bb93f27fedda46349fd1d190"
-text_chars: 11375
-ocr_pages: 15
+text_chars: 10816
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:51:16Z"
+converted_at: "2026-08-12T05:06:48Z"
 ---
 # Anomaly Detection Betrayed Us, so We Gave It a New Job Enhancing Command Line Classification with Benign Anomalous Data
 
 **Speakers:** Ben Gelman, Sean Bergeron  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ben Gelman&Sean Bergeron_Anomaly Detection Betrayed Us, so We Gave It a New Job Enhancing Command Line Classification with Benign Anomalous Data.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -86,7 +91,8 @@ Command lines
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Perfect, Fully-Automated, Self-Updating System for Command
@@ -155,7 +161,8 @@ Expert labeling
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 14
@@ -164,9 +171,7 @@ The State of Labeled Data: Mialicious Data
 = VirusTotal
 = Customer Case Investigations
 = Expert labeling
-: a
 CYBERSECURITY i
-1
 6
 0
 LABEL
@@ -183,6 +188,16 @@ LABEL
 ###### **The Longtail**
 
 16
+
+
+> Recovered by OCR — confidence 94/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+16
+The Longtail
+s
+Long-Tailed Distribution
+```
 
 ## Slide 17
 
@@ -204,7 +219,8 @@ Scalability Issues Low FP Rates
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 18
@@ -224,7 +240,8 @@ Always Has Been
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Whole System
@@ -234,9 +251,6 @@ Database Lines
 Subsample
 Embedding Model
 20
-Isolation Forest
-Isolation Forest
-Q
 LLM &
 LARGE LANGUAGE
 MODEL
@@ -270,15 +284,6 @@ Prediction Models
 ###### **Expert Features**
 
 23
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Expert Features
-= -) p@ilogp(a
-| nOWERSHELLe! exE
-(BROIL Core eee
-```
 
 ## Slide 24
 
@@ -344,7 +349,8 @@ org.tanukisoftware.wrapper.WrapperJarApp jboss-modules.jar -mp E:\Applications\A
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 31
@@ -364,10 +370,8 @@ Command line: "E:\Applications\AODB\Java\jdk1.8.0_412\bin\aodb-java" -
 Dprogram.name=standalone.bat -server -
 XX:MaxMetaspaceSize=1024M -XX:MetaspaceSize=1024M -XX:+UseParallelGC -
 XX:+UseParallelOldGC -
-Dsun.rmi.dac.client.acInterval-3600000
 Collapse ~
 oO & Auto-clear +)
->
 ```
 
 ## Slide 32
@@ -392,7 +396,8 @@ Harder
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Training Set
@@ -440,74 +445,54 @@ RB + Reduced-Scale PCA
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Aggregated Baseline Dataset: Binary Classifier Evaluated on Manual Labels Test Set
-— FSIF
 0.90
-RS Combined
-RS IF
 RS KMeans
-RS PCA
 Baseline
-7)
-°
-Q
-va]
-U
-2
-zx
 ```
 
 ## Slide 36
 
 36
 
+
+> Recovered by OCR — confidence 83/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+000 Aggregated Baseline Dataset: Binary Classifier Evaluated on Timesplit Test Set
+. — FSIF
+- RS KMeans
+* aaa ; RS PCA
+```
+
 ## Slide 37
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Regex-based Baseline Dataset: Binary Classifier Evaluated on Manual Labels Test Set
-— FSIF
-RS Combined
-RS IF
 RS KMeans
-RS PCA
 Baseline
-7)
-°
-Q
-va]
-U
-2
-zx
 ```
 
 ## Slide 38
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Regex-based Baseline Dataset: Binary Classifier Evaluated on Timesplit Test Set
-— FSIF
-RS Combined
-RS IF
 - RS KMeans
-RS PCA
 --- Baseline
-7)
-°
-Q
-va]
-U
-2
-zx
 ```
 
 ## Slide 39
@@ -586,21 +571,21 @@ Training set augmentation with benign anomalies is a generalizable method for im
 
 - Count of markers:
 
-```
+\```
 o{" -e ", " -ec ", " -enc ", " -encodedcommand ", "frombase64string("}
-```
+\```
 
 - Count of markers:
 
-```
+\```
 o{"^", '""', "set", "&&", "&&for", "for %", ";;"}
-```
+\```
 
 - Count of markers:
 
-```
+\```
 o{"http", "www.", ".com", "html", "tcp", "udp"}
-```
+\```
 
 - Count of markers:
 
@@ -644,7 +629,8 @@ We need to determine whether a command line is benign or malicious. We have to b
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 49
@@ -662,7 +648,8 @@ Cumulative Count
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reduced-scale Command-line Distribution
@@ -670,19 +657,6 @@ Reduced Scale: Unique & Near-Duplicate Command Lines
 Cumulative Total Commands
 Cumulative Unique Deduped
 Cumulative Near-Duplicate (>0.8)
-ay
-<
-Ss
-fo
-s)
-ov
->
-5S
-s&s
-Ss
-fa
-s
-o)
 ```
 
 ## Slide 51

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Mathy Vanhoef_TunnelCrack Leaking VPN Traffic by Manipulating Routing Tables.pdf"
 pages: 32
 sha256: "034d6e6bd1e49add303b04e8805b99c09e272ac447b30592989a4b3526342ddd"
-text_chars: 7902
-ocr_pages: 5
+text_chars: 7585
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:39Z"
+converted_at: "2026-08-12T04:03:50Z"
 ---
 # TunnelCrack Leaking VPN Traffic by Manipulating Routing Tables
 
 **Speakers:** Mathy Vanhoef  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Mathy Vanhoef_TunnelCrack Leaking VPN Traffic by Manipulating Routing Tables.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -56,14 +62,6 @@ We make VPN clients leak traffic
 Usage of VPNs: watch videos from other country
 
 3
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Usage of VPNs: watch videos from other country
-Sa. Dov BE
-ee Pee ee FO eal
-```
 
 ## Slide 4
 
@@ -127,10 +125,10 @@ ee Pee ee FO eal
 
 We assume secure DNS behavior
 
-```
+\```
 $ cat/etc/resolv.conf
 nameserver6.6.6.6
-```
+\```
 
 Can’t trust the network’s DNS server
 
@@ -140,10 +138,10 @@ Can’t trust the network’s DNS server
 
 We assume secure DNS behavior
 
-```
+\```
 $ cat/etc/resolv.conf
 nameserver2.2.2.3
-```
+\```
 
 Can’t trust the network’s DNS server
 
@@ -210,12 +208,12 @@ Intercept traffic!
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARTIFACT ARTIFACT ARTIFACT
 EVALUATED EVALUATED EVALUATED
-LocalNet attack: 195 experiments =| gz.) | ee] fense:.
 AVAILABLE REPRODUCED
 VPN Provider Class OS Version Number LAN Setting | Result
 Default LAN Access
@@ -239,13 +237,13 @@ Free Android 6.17 No | N/A
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARTIFACT ARTIFACT ARTIFACT
 LocalNet attack: 195 experiments — |e.) Jes] | eae.
 AVAILABLE REPRODUCED
-Tammie
 z
 Paid Windows 12.37.0 Yes | Yes A
 Paid Linux 3.36 No | N/A A
@@ -263,7 +261,8 @@ for iPhone
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LocalNet attack: summary
@@ -283,13 +282,13 @@ iOS
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 mathy@zbook-mathy:~/research/netsec/vpnproject-main/vpn_tester - 8 x
 File Edit View Search Terminal
 Help
-@ @ © G Documents |_)MathyGZ" ) @ EH vpn teste... The Wires... SimpleScr.. 416 7% @ 22:17
 19
 ```
 
@@ -353,10 +352,10 @@ Connect
 
 Target.com 2.2.2.2 1.2.3.4
 
-```
+\```
 default via tun0
 1.2.3.4 via eth0
-```
+\```
 
 24
 

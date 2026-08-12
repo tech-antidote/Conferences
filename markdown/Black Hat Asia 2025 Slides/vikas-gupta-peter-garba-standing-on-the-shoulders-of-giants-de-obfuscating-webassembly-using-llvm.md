@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Vikas Gupta & Peter Garba_Standing on the Shoulders of Giants De-Obfuscating WebAssembly Using LLVM.pdf"
 pages: 80
 sha256: "425a31817412c79bd3b686dde7cf103f579e2b60c574392780252aa02bd4d6bf"
-text_chars: 39653
-ocr_pages: 35
+text_chars: 29085
+ocr_pages: 34
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 80.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 5
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:09:02Z"
+converted_at: "2026-08-12T03:58:57Z"
 ---
 # Standing on the Shoulders of Giants De-Obfuscating WebAssembly Using LLVM
 
 **Speakers:** Vikas Gupta, Peter Garba  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Vikas Gupta & Peter Garba_Standing on the Shoulders of Giants De-Obfuscating WebAssembly Using LLVM.pdf` (80 pages)
+
 
 ## Slide 1
 
@@ -33,10 +40,10 @@ Agenda
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2\int w2c_squanchy_calc_0(undefined8 param_1,uint param_2)
 5) uint uVari;
 6) int ivar2;
 7) int ivar3;
@@ -46,7 +53,6 @@ Agenda
 12) iVar3 = (param_2 & 5) * (param_2 + Oxbaaadobf);
 +
 14) ivar2 = (param_2 | Oxbaaaddbf) * (param_2 ~ 2);
-15) if (uvar1 Dae
 16 ivar2 = (param_2 & @xbaaad@bf) * (param_2 + 3);
 +
 19) iVar3 = ivar2;
@@ -226,20 +232,13 @@ Agenda
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WebAssembly Obfuscation: Approaches
-possssesseeee-- | pessssssseee-- ; poccccccctsen- 1
-i]
 Source Level ' : IR Level ; = Wasm Level N
-- i
-C Source P——*+>| C Source P= +>) LLVMIR [—— >] WebAssembly -+— Bi
-' Emgcripttn Glan i inary
-1 (dlang)t ou 7 "
-' Tigress 5 & O-LLVM 4 § wasm-mutate | 1!
 14
-ASIA 2025
 ```
 
 ## Slide 15
@@ -320,88 +319,92 @@ O-LLVM Instruction Substitution (Loop=1)
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 67/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bfuscation: O-LLVM Instruction Substitution
-. *0O-LLVM Instruction
-Substitution (Loop=3)
-O-LLVM Instruction
-Substitution (Loop=1)
-if (iVarl =
-local_10
-0) {
-(paraml & OxbaaadObf | param1 ~ OxbaaadObf) *
-(((paraml * Oxffffffff) & Oxbcec65b1 | param1 & 0x43139a4e) * Oxbcec65b3);}
-pisex hat
-ASIA 2025
-tf (tard == 0) {
-wVarl0 = paraml & Oxc9e645ce | (param ~ OxfffffFft) & 0x3619ba31
-warll = ((uvar1@ ~ 6x3619a31) & OxSc2eaifS | (uVar1 ~ ExcDe645ce) & @xa3d15e0a) ~ Oxf1571094
-| ware ~ 6x3619ba31;
-warl2 = (param ~ oxtffffftt) & oxad796f68 | param & 0x52864097) ~ oxtffttttt |
-paraml * oxtffftttts
-wars = uvarli | warl2;
-Warll = (wVarl2 ~ OxffFff fff) & wari | (uWarll ~ OxffFFTTFA) & wWari2;
-warl2 = wVaril * oxfffftttt;
-warll = (ward & Oxaea378C3 | (uVard * OxffFfff ff) & x515CB73C) *
-(uVarl2 & Oxaea378c3 | wVarll & 6x515c873c) | (ward | warl2) ~ oxttfftftts
-warl2 = ((uvarll ~ Oxffffffft) & Oxcb7321da | Warll & Ox348cdeb5) ~ Oxcb73214a | Ox604afl1c;
-warll = uVaril * oxfffffttt | ox9fbS0ee3;
-warll = (wvarl2 & 0x5835bf98 | (wWarl2 * Oxtffffftt) & Oxa7ca4067) *
-(uVarll & 0x58350f98 | (uVarll ~ oxff fff tft) & Oxa7ca4067) |
-(wari2 | warl1) * oxtffffttt;
-warll = (warll ~ Oxfffftfft) & 0x88666134 | uVaril & 0x77999ecb;
-warl2 = uVarl® ~ 0x3619ba31 | Oxbaaadoof;
-warl0 = (uVarle ~ 0x3619ba31) & 0x565b2720 | (uVarle ~ OxcSe645ce) & OxaSa4d85t;
-Ward = wWarle * exectf71f;
-wVarl2 = (warl2 & OxcdtalS85 | (warl2 > oxtffftftt) & Ox3b0Sea7a) *
-(uVard & oxcétal585 | (uVarl® ~ 6x130e08e6) & 6x3b05ea7a) |
-(wWari2 | ward) > oxttfftttts
-wvarl0 = (((uVari2 * Oxfffffftf) & Oxbe3cBGad | uVari2 & 6x41c37952) * exbe3cBbad | xe6842217)
-* Oxtffttttt;
-uvari2 = (wVarl2 ~ x197bdde8) & uvari2
-Vario = uVar20 & uvari2 | uvarie * wvara2;
-warl0 = (warle ~ oxffffffff) & Ox9di1e123 | uVari0 & ox62ee1edc;
-warl0 = (uVarle ~ ox846a3ccb) & 0x61675078 | (uVarl@ ~ 0x7b95C334) & Ox9e98atB7;
-wVarl0 = (uVarl0 ~ 0x61675078) & 0xa63617bd | (uVar]e ~ 0x9e98af87) & 0x59C9e842;
-warl2 = (wVarl1 ~ warl0 ~ 0xa63617bd) & wVarl1;
-wVarl0 = ((uvarll ~ oxtffTffFt) & exbccsbddd | wVarl1 & 0x4339422b) *
-((uVarl0 ~ 6xa63617bd) & exbccBbdd4 | (uVarlO ~ 6x59c9e842) & 0x4339422b);
-Warll = wari2 * oxtfFrttfts
-Warl® ~ Oxtffttttts
-param ~ Oxffffffff) & 6xaf91567b | param & @x506ea994;
-ar5 ~ 0xaf91567b;
-1uVar6 & Oxe30d84a7 | (uVarS * 9x506ea984) & Ox1cf27b58) ~ Oxe30d84a5 |
-(uvaré | Oxf ffftttay * oxtferteet;
-((param. * OxfffffFff) & @x7ceBffb1 | param & 0x831f004e) ~ Oxea109553) & Ox96f06a62;
-paraml ~ OxffffttfT | Ox96f06ae2) ~ Oxtfrttttt;
-WWar6 * wVar7;
-uVarB ~ OxffffFftF) & 0x690f951d | uVar6 & wWar7 | uVar8 & 0x96F06a02;
-wVar6 = wWaré & Oxba8cSc70 | (uVaré ~ Oxftffttft) & 0x4573a38F;
-1uVar6 ~ 0x4573a38f) & (uVar6 ~ OxbaBc5c72);
-juVar5 * @xcb0as819)
-‘uVarS | @x34f5a7e6)
-ors = (war6 * 0x34f5a7e6) & (uVar6 * Oxtffttftt);
-jar2 = (uVar6 * 0x34f5a7e6) & war;
-War? & wVar8 | uVar7 ~ uVar8;
-war8 = ward ~ oxtfffttft;
-war3 = war2 ~ oxtftftttt;
-war8 = (uVar8 & Oxd3d541ce | uVar & Ox2c2abe31) * (uVar3 & Oxd3d541ce | UVar2 & @x2c2abe31) |
-(uvar8 | wvar3) ~ oxfffftttts
-war? = ((uVar? * Oxfffffftt) & Oxefdsab1i | uVar7 & 0x1027b4ee) *
-((uVar8 > oxtfftfftt) & exefds4b11 | uVar8 & 0x1027bsee);
-wars = ((uVarS * Oxfffffttt) & oxtfb73ee8 | uWarS & x48c117) ~
-(uvaré & oxffb73eeB | (uVaré * oxtfftfftt) & Ox48c117) |
-(uvars * oxtfffertr | wvar6) > oxtfferttrs
-WarS = (uVarS * OxtffTFftt) & Oxa9See2be | WVarS & OxS6al1d41;
-War6 = war5 ~ oxa9Sec2be:
-war8 = war? ~ oxtfffttft
-Local_10 = ((uVari1 & «1098326 | uVari2 & Oxfe167cd9) ~
-(uvara & 0x1698326 | wVarl0 & Oxfe167cd9) | (uVari1 | uWara) ~ Oxtffrftet) *
-((uVar8 & 9xcBa77567 | wWar7 & 37588098) *
-(uWaré & 0xcBa77567 | (uVar5 * GxS6a11d41) & 0x37588298) |
-(war8 | war6) ~ Oxffffftft)s
+Obfuscation: O-LLVM Instruction Substitution
+
+[top-left box]
+if (mod == 0) result = (n | 0xbaaad0bf) * (2 ^ n)
+
+[label on downward arrow, left]      O-LLVM Instruction Substitution (Loop=1)
+[label on rightward arrow, right]    O-LLVM Instruction Substitution (Loop=3)
+
+[bottom-left box]
+if (iVar1 == 0) {
+  local_10 = (param1 & 0xbaaad0bf | param1 ^ 0xbaaad0bf) *
+             (((param1 ^ 0xffffffff) & 0xbcec65b1 | param1 & 0x43139a4e) ^ 0xbcec65b3);}
+
+[right panel]
+if (iVar1 == 0) {
+  uVar10 = param1 & 0xc9e645ce | (param1 ^ 0xffffffff) & 0x3619ba31;
+  uVar11 = ((uVar10 ^ 0x3619ba31) & 0x5c2ea1f5 | (uVar10 ^ 0xc9e645ce) & 0xa3d15e0a) ^ 0xf1571e9d
+           | uVar10 ^ 0x3619ba31;
+  uVar12 = ((param1 ^ 0xffffffff) & 0xad79bf68 | param1 & 0x52864097) ^ 0xffffffff |
+           param1 ^ 0xffffffff;
+  uVar4 = uVar11 | uVar12;
+  uVar11 = (uVar12 ^ 0xffffffff) & uVar11 | (uVar11 ^ 0xffffffff) & uVar12;
+  uVar12 = uVar11 ^ 0xffffffff;
+  uVar11 = (uVar4 & 0xaea378c3 | (uVar4 ^ 0xffffffff) & 0x515c873c) ^
+           (uVar12 & 0xaea378c3 | uVar11 & 0x515c873c) | (uVar4 | uVar12) ^ 0xffffffff;
+  uVar12 = ((uVar11 ^ 0xffffffff) & 0xcb73214a | uVar11 & 0x348cdeb5) ^ 0xcb73214a | 0x604af11c;
+  uVar11 = uVar11 ^ 0xffffffff | 0x9fb50ee3;
+  uVar11 = (uVar12 & 0x5835bf98 | (uVar12 ^ 0xffffffff) & 0xa7ca4067) ^
+           (uVar11 & 0x5835bf98 | (uVar11 ^ 0xffffffff) & 0xa7ca4067) |
+           (uVar12 | uVar11) ^ 0xffffffff;
+  uVar11 = (uVar11 ^ 0xffffffff) & 0x88666134 | uVar11 & 0x77999ecb;
+  uVar12 = uVar10 ^ 0x3619ba31 | 0xbaaad0bf;
+  uVar10 = (uVar10 ^ 0x3619ba31) & 0x565b27a0 | (uVar10 ^ 0xc9e645ce) & 0xa9a4d85f;
+  uVar4 = uVar10 ^ 0xecf1f71f;
+  uVar12 = (uVar12 & 0xc4fa1585 | (uVar12 ^ 0xffffffff) & 0x3b05ea7a) ^
+           (uVar4 & 0xc4fa1585 | (uVar10 ^ 0x130e08e0) & 0x3b05ea7a) |
+           (uVar12 | uVar4) ^ 0xffffffff;
+  uVar10 = (((uVar12 ^ 0xffffffff) & 0xbe3c86ad | uVar12 & 0x41c37952) ^ 0xbe3c86ad | 0xe6842217)
+           ^ 0xffffffff;
+  uVar12 = (uVar12 ^ 0x197bdde8) & uVar12;
+  uVar10 = uVar10 & uVar12 | uVar10 ^ uVar12;
+  uVar10 = (uVar10 ^ 0xffffffff) & 0x9d11e123 | uVar10 & 0x62ee1edc;
+  uVar10 = (uVar10 ^ 0x846a3ccb) & 0x61675078 | (uVar10 ^ 0x7b95c334) & 0x9e98af87;
+  uVar10 = (uVar10 ^ 0x61675078) & 0xa63617bd | (uVar10 ^ 0x9e98af87) & 0x59c9e842;
+  uVar12 = (uVar11 ^ uVar10 ^ 0xa63617bd) & uVar11;
+  uVar10 = ((uVar11 ^ 0xffffffff) & 0xbcc6bdd4 | uVar11 & 0x4339422b) ^
+           ((uVar10 ^ 0xa63617bd) & 0xbcc6bdd4 | (uVar10 ^ 0x59c9e842) & 0x4339422b);
+  uVar11 = uVar12 ^ 0xffffffff;
+  uVar4 = uVar10 ^ 0xffffffff;
+  uVar5 = (param1 ^ 0xffffffff) & 0xaf91567b | param1 & 0x506ea984;
+  uVar6 = uVar5 ^ 0xaf91567b;
+  uVar5 = (uVar6 & 0xe30d84a7 | (uVar5 ^ 0x506ea984) & 0x1cf27b58) ^ 0xe30d84a5 |
+          (uVar6 | 0xfffffffd) ^ 0xffffffff;
+  uVar6 = (((param1 ^ 0xffffffff) & 0x7ce0ffb1 | param1 & 0x831f004e) ^ 0xea109553) & 0x96f06ae2;
+  uVar7 = (param1 ^ 0xffffffff | 0x96f06ae2) ^ 0xffffffff;
+  uVar8 = uVar6 ^ uVar7;
+  uVar6 = (uVar8 ^ 0xffffffff) & 0x690f951d | uVar6 & uVar7 | uVar8 & 0x96f06ae2;
+  uVar6 = uVar6 & 0xba8c5c70 | (uVar6 ^ 0xffffffff) & 0x4573a38f;
+  uVar6 = (uVar6 ^ 0x4573a38f) & (uVar6 ^ 0xba8c5c72);
+  uVar7 = (uVar5 ^ 0xcb0a5819) & uVar5;
+  uVar8 = (uVar5 | 0x34f5a7e6) ^ 0xffffffff;
+  uVar9 = (uVar6 ^ 0x34f5a7e6) & (uVar6 ^ 0xffffffff);
+  uVar2 = (uVar6 ^ 0x34f5a7e6) & uVar6;
+  uVar7 = uVar7 & uVar8 | uVar7 ^ uVar8;
+  uVar8 = uVar9 ^ 0xffffffff;
+  uVar3 = uVar2 ^ 0xffffffff;
+  uVar8 = (uVar8 & 0xd3d541ce | uVar9 & 0x2c2abe31) ^ (uVar3 & 0xd3d541ce | uVar2 & 0x2c2abe31) |
+          (uVar8 | uVar3) ^ 0xffffffff;
+  uVar7 = ((uVar7 ^ 0xffffffff) & 0xefd84b11 | uVar7 & 0x1027b4ee) ^
+          ((uVar8 ^ 0xffffffff) & 0xefd84b11 | uVar8 & 0x1027b4ee);
+  uVar5 = ((uVar5 ^ 0xffffffff) & 0xffb73ee8 | uVar5 & 0x48c117) ^
+          (uVar6 & 0xffb73ee8 | (uVar6 ^ 0xffffffff) & 0x48c117) |
+          (uVar5 ^ 0xffffffff | uVar6) ^ 0xffffffff;
+  uVar5 = (uVar5 ^ 0xffffffff) & 0xa95ee2be | uVar5 & 0x56a11d41;
+  uVar6 = uVar5 ^ 0xa95ee2be;
+  uVar8 = uVar7 ^ 0xffffffff;
+  local_10 = ((uVar11 & 0x1e98326 | uVar12 & 0xfe167cd9) ^
+              (uVar4 & 0x1e98326 | uVar10 & 0xfe167cd9) | (uVar11 | uVar4) ^ 0xffffffff) *
+             ((uVar8 & 0xc8a77567 | uVar7 & 0x37588a98) ^
+              (uVar6 & 0xc8a77567 | (uVar5 ^ 0x56a11d41) & 0x37588a98) |
+              (uVar8 | uVar6) ^ 0xffffffff);
+}
 ```
 
 ## Slide 18
@@ -470,23 +473,14 @@ Local_10 = ((uVari1 & «1098326 | uVari2 & Oxfe167cd9) ~
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SATURN: Compiler Based Deobfuscation
-r sree erer2= q PoC 0 SSS SSS S BES SSESSSSS5 S85 S88SS8SSs880° =eeeee = — 7 ee
-Input 1 : Deobfuscation ! 1 Output '
-| MachO File |! Optimizations "  ——+ Shared Object]!
-w
-it Pt
-i| ELF File : +>] Translation }——»| LLVMIR |—> Brightening = H f
-\
 i PE File — ' OP Detection Injection —— Patched File
 ! I
-Leneenenene 5 |r 1 ' Leae------- J
-Boaaa Ss SOOO SOO OO OOS SOD OSS SUSU OBES SOD BHOeSSOGSd
 blackhat
-ASIA 2025
 23
 ```
 
@@ -514,18 +508,12 @@ ASIA 2025
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 65/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ® Lifting to LLVM IR
-poaaaaa se anesecnceeeoone-- 1
-t Lifting "
-‘ i
-' t
-Obf. Wasm |_4.. soo i
 Binary 1 22? >| LLVMIR [>] Clang Object File
-'
-i]
 ```
 
 ## Slide 27
@@ -580,19 +568,15 @@ Lifted C Code
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting to C: Lifting Principles
 Wasm Code Wasm Opcode Specification Lifted C Code
 Get Local
-. text
 file “add.c" Mnemonic Opcode _—Immediates Signature u32 add(u32 var_p0, u32 var_p1) {
 .functype add (132, i32) -> (132) A ~ a ~
-aan “text.add,"",@ local.get 0x20 $id: varuint32 © () = ($TI11) u32 var_i0, var_il;
-«hidden add . _ .
-“globt. add var_i@ = var_pl;
-type add, @function var il = var pQ:
 add: # @add Integer Add -, —p 2
 .functype add (i32, i32) -> (132) var_i@ += var_il;
 ree A Mnemonic Opcode Signature var_il = 15u;
@@ -603,8 +587,6 @@ i32.add i64.add Ox7c (4164, 164) : (164) }
 end_function
 Mnemonic Opcode Immediates Signature
 i32.const 0x41 $value : varsint32 (+ (432)
-blackhat a)
-ASIA 2025
 ```
 
 ## Slide 30
@@ -635,23 +617,13 @@ ASIA 2025
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Lifter Problem Persists
-pono ocnnnnnssscsennnnnn-—- :
-: Lifting "
-1 u
-J "
-‘|
-Nf W/E 22? ->| LivVMIR | lang -—»| Object File
 J
-Binary ' | -
-i) i)
-es eles eee ee eee ene eae ae eee eee ne J
-(2)
 blackhat
-ASIA 2025
 32
 ```
 
@@ -661,17 +633,15 @@ ASIA 2025
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Code Lifters Comparison
-_— Instance P
 Lifting Language Code Foldin Comments
-| _Name | Lifting Language Parameter | Code Folding | Comments
 WAMRC LLVM IR yes Partially No tables ( aa
 functions...
 pifek hat 33
-ASIA 2025
 ```
 
 ## Slide 34
@@ -680,27 +650,16 @@ ASIA 2025
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Lifting Idea!
-POT eee 7
-penne oan eee 5 pocesssssseaey ee t Pseudo C '
-i]
-!  Wasm Level c ! Source Level [ IR Level ' dion EB ee " '
-LJ ! ' 4 ' " >|Native Object/——__ C Source |,
-rT 1 1 ' 1 tl Binary Ninja -_ ~~
 u i C Source
 u | Wasm Binary R==¥ lang -O0 1 1
-Leeense------ 5 bososossesass zi ' jt clang -03 -< —, >| Wasm Object
-' ; -target wasm
-1 i]
 | | Optimisations | !
-' Runtime '
-Helpers C
 a
 pif hat 34
-ASIA 2025
 ```
 
 ## Slide 35
@@ -727,15 +686,14 @@ ASIA 2025
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Motivating Example
 int add(int a, int b) {
-inte ann l= (59253545 55;
 int sum = 0;
 // Loop to calcuate a constant
-Ton (inl W= Os Vv <95s i++) {
 sum += arr[i];
 }
 // MBA based Opaque Predicate
@@ -743,11 +701,8 @@ sum += 1911;
 } else {
 sum += 2102;
 }
-bisekhat
-ASIA 2025
 int add(int a, int b) {
 return a + b + 1926;
-i
 36
 ```
 
@@ -759,33 +714,27 @@ i
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: wasm2c (O3 Unobfuscated)
 u32 w2c_squanchy_add_@(w2c_squanchy* instance,
 u32 var_p0, u32 var_p1) {
 u32 var_i0, var_il;
-var_iO = var_p1;
 -text var_il = var_p0;
-file = "“add.c" var_i0 += var_il;
 . functype add (i132, 132) -> (132) var_il = 15u;
 .section .text.add,"",@ var_iO += var_il;
 hidden add return var_i0;
-.globl add t
-.type add,@function
 add: # @add wasm2c clang -O3
 . functype add (i32, i32) -> (132)
 # *bb.0: define i32 @add(ptr %0, i32 %1, i32 %2) {
 local.get 1 %4 = add i32 %1, 15
 coc 2 %5 = add 132 %4, %2
-i32.const 15 } Hd
 i32.add
 end_function clang -c + IDA Pro
 int add(void *a1, int a2, int a3) {
-+
 pif hat 37
-ASIA 2025
 ```
 
 ## Slide 38
@@ -816,7 +765,8 @@ u32 w2c_add(w2c* instance, …)
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: wasm2c
@@ -826,14 +776,9 @@ void wasm2c_instantiate(w2c* instance,
 struct w2c_env* w2c_env_instance) {
 assert(wasm_rt_is_initialized());
 init_instance_import( instance, w2c_env_instance);
-init_globals( instance);
 init_tables( instance) ;
-init_memories( instance);
-init_elem_instances( instance);
 init_data_instances(instance);
-QQ
 blackhat
-ASIA 2025
 39
 ```
 
@@ -843,30 +788,15 @@ ASIA 2025
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Deobfuscation idea!
-prosaaecaen a
-Ilvm | Pseudo C "
 rot !
 Wasm Level 1 i 1 IR Level clang -O3-c J 1
-oH ro ' ¥|Native Object % C Source |,
-Wi tot IDA Pro ! 1
-DE f Ghidra H '
-; 1 ty Binary Ninja. _.----.---+
-Wasm Binary >] C Source tt clang -OG 4 LLVM IR
-| tot clang -O3 -c CSCS
-H ' target wasm
-oot
 1 + ! | Optimisations
 ! rot Runtime H
-H SiMBA++ ! +p} Hl
-KLEE 1 | 1 Helens td i
-H SOUPER t H H
-Leese e eesssS=ssee- ba eeeeeeescsesssccsesesessseseees See
-pisex hat
-ASIA 2025
 ```
 
 ## Slide 41
@@ -899,7 +829,8 @@ ASIA 2025
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Runtime Modeling
@@ -908,22 +839,16 @@ Injection
 Inlining
 Optimisations
 Brightening
-bisek hat
-ASIA 2025
 Wasm function
 (W2C *, i32, i32)
 ! || Lifted Wasm
-H Code t
-anew enecennnnee-----------
 wasm2c Runtime wasm2c/squanchy
 Initializer Helpers
 | Init Imports Allocate i
-j ' memory H
 it Init Globals F : Allocate f
 i H H FuncRef |}:
 i . ; Allocate i
 : Init Tables ExternRef if
-i nit Elem/Data ; - Load/Stores i
 | |Init Memories i ; TableBase i
 42
 ```
@@ -934,14 +859,12 @@ i nit Elem/Data ; - Load/Stores i
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Optimisations
-\
 Brightening
-pisex hat
-ASIA 2025
 Wasm function
 (W2C *, i32, i32)
 Allocate w2c
@@ -951,10 +874,6 @@ Code
 w2c uses
 wasm2c Runtime wasm2c/squanchy
 Initializer Helpers
-(Geran ] Meee]
-| | Init Globals Alec :
-| Init Tables : fleets f :
-nit Elem/Datal Load/Stores |
 | Init Memories TableBase
 ```
 
@@ -964,14 +883,12 @@ nit Elem/Datal Load/Stores |
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Optimisations
-\
 Brightening
-pisex hat
-ASIA 2025
 Wasm function
 (W2C *, i32, 132)
 Allocate w2c
@@ -980,19 +897,14 @@ Call Runtime
 Initializer
 Lifted Wasm
 Code
-RSIS SS SSO 555)
 Create call
 wasm2c Runtime wasm2c/squanchy
 Initializer Helpers
-: | Init Imports |: ! jalesetic
-1 | H memory '
 : . i Allocate
 Init Globals i FuncRef
-i Fi i Allocate
 Init Tables i | ExternRef
 : [nit Elem/Datal || | ‘| Load/Stores | |
 F Init Memories i TableBase
-Unease sacceecceeeeenenn-----
 44
 ```
 
@@ -1002,7 +914,8 @@ Unease sacceecceeeeenenn-----
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Inlining
@@ -1010,23 +923,14 @@ wasm2c Runtime wasm2c/squanchy
 Initializer Helpers
 Runtime Wasm function
 ime _| (W2C *, i32, i32)
-v gocnsoonescccecereceeneneg qececsescessssezsssscceeees) 0 pe--ccceeeneeenneeeecee--9
 Injection i | Allocate w2c
 Init Imports it Allecate F
 | instance ' i i
 |
 / Init Globale i ft | Allocate
-. i Call Runtime /:! F F FuncRe H
-i Inlining f Initializer " Mark i H it F
-la=saa=s- || Functions | |) Init Tables 7 eecer 4
 H ‘| for inlining | i i xternRef i
-| optimisations | HI E Tnit Elen/bate F Load/Stores
 { | | Lifted Wasm
-| Code i i [Init Meneriee] : | TableBase |:
-JRE
-Brightening i f { H
 blackhat 45
-ASIA 2025
 ```
 
 ## Slide 46
@@ -1035,25 +939,20 @@ ASIA 2025
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Inlining
 Wasm function wasm2c Runtime wasm2c/squanchy
 Runtime (W2C *, i32, i32) Tnitializer Helpers
 x Allocate w2c Allocate 7
-Injection : |__instance} ; i oot memo i
 Call Runtime i Allocate
-—= = H Initializer i H i FuncRef ;
 Inlining : | Init Imports | | Functions: an |WNPAllocaTe i
-= J : i Recursively HE |_ExternRef :
 i | Init Globals | *——___; i ot
 Optimisations E | |i | Load/Stores
-[Init Memories} * nt H
 Brightening i = i nt
 ' | Lifted Wasm | } ' fou
-blackhat Le eel \eeeeeeeeezeeezsszsszzssseed {neadeeeeeerecsecenccaeecd ts
-ASIA 2025
 ```
 
 ## Slide 47
@@ -1062,26 +961,22 @@ ASIA 2025
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Runtime Injection
 Runtime
 Vv
 Injection
-§| — Inlining 1
-leasa=2el
 | optimisations |
 Brightening
-pisex hat
-ASIA 2025
 i ExternRef
 Wasm function
 (W2C *, i32, i32)
 Allocate w2c
 instance
 Init Imports
-ee
 Init Globals
 Init Tables
 Allocate
@@ -1094,9 +989,7 @@ Code
 Inline
 Functions
 i Recursively
-‘¢—_—_____
 wasm2c Runtime
-Tnitializer
 wasm2c/squanchy
 Helpers
 47
@@ -1132,38 +1025,25 @@ Apply LLVM O3 pipeline and <u>preserve</u> Control Flow Graph
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Optimizations
 Runtime
-i
 Injection
 Inlining
-poor)
-1 |) Optimisations |
-==
-!
 Brightening
-e
-9
-Py
-7
-ASIA 2025
 Wasm function
 (W2C *, i32, i32)
-|
 w2c instance
 Tnitialisation
 +
 Lifted Wasm
 Code
-Gesssesscccssssseeene-----7
 Override LLVM Thresholds
 // DSE
 -memdep-block-scan-Limit=1000000
--dse-memoryssa-walkLimit=1000000
--available-lLoad-scan-Limit=1000000
 -dse-memoryssa-scanLimit=1000000
 // Loop Unrolling
 -unroll-threshold=1000000
@@ -1177,7 +1057,8 @@ Override LLVM Thresholds
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Brightening
@@ -1185,23 +1066,17 @@ Wasm function
 (W2C *, i32, i32)
 Wasm function
 (W2C *, i32, i32)
-i
 Injection
 Replace w2c reference
 " | w2c instance
-Ss i
 Inlining
 Clean Leftover
 Initialisation Code
 Deobfuscated
 Wasm Code
-| thitialisati
 Optimisations nitialisation
-W +
 Lifted Wasm
 §j Brightening |! : :
-black hat | cecenenecsctstenreseeeecd ba ceceseecennsssscraneneed 0
-ASIA 2025
 ```
 
 ## Slide 51
@@ -1214,23 +1089,20 @@ ARM64
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wasm Code Lifting: Squanchy - Recompilation
 Runtime
-se
 Injection
 Inlining
 Optimisations
 Brightening
-bisek hat
-ASIA 2025
 Wasm function
 (W2C *, i32, i32)
 Deobfuscated
 Wasm Code
-Loe eee eee eee ssesssceeeet
 LLVM IR
 define 132 @add(ptr %0, i132 %1, 132 %2) {
 %3 = add i32 %1, 1926
@@ -1253,18 +1125,14 @@ w0, w8, w2
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation
-iatatalaianaiaia eeeceesssSSSseSseeeeeeweene IRE OSS 5
-1 '
 Lifting Deobfuscation |
 Binary | Wasm2C Squanchy | LLVM IR Hie ??7 ra Clang >| Object File
-! i:
-eee ee a bee wee ------ a
 blackhat
-ASIA 2025
 ```
 
 ## Slide 53
@@ -1273,11 +1141,11 @@ ASIA 2025
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reminder: Original Input
-eee
 1 #include <stdio.h>
 int calc(unsigned int n) {
 unsigned int mod =n % 4;
@@ -1289,8 +1157,6 @@ return result;
 20 int main(int argc, char *xargv) {
 21 printf("Hello from WebAsm! %d\n", calc(arge + 23));
 Q 22, return 0;
-blackhat e
-ASIA 2025
 ```
 
 ## Slide 54
@@ -1299,7 +1165,8 @@ ASIA 2025
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: LLVM Optimisations
@@ -1311,11 +1178,8 @@ local_10 = ((paraml * 0x45552f40) & paraml) * (paraml + 3); ia
 else if (iVarl == 2) {
 local_10 = ((paraml * Oxffffffff) & OxbaaadObf | paraml & 0x45552f40) * a
 (paraml & 4 | paraml * 4);
-t
 else {
 local_10 = (paraml + OxbaaadObf) * ((paraml * Oxffffffff | Oxfffffffa) * Oxffffffff);
-pisex hat
-ASIA 2025
 if (iVar] == 0) {
 local_24 = (param_2 | OxbaaadObf )
 *
@@ -1328,11 +1192,9 @@ F
 local_24 = (param_2 ~ OxbaaadObf )
 *
 (param_2 | 4); [|
-elseLf
 local_24 = (param_2 + OxbaaadObf )
 *
 (param_2 & 5);
-y
 54
 ```
 
@@ -1342,63 +1204,133 @@ y
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 70/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Deobfuscation: LLVM Optimisations
-01) else if (ivari == 2) {
-102) [" uVari0 = (parami ~ Oxfffftftt) & paraml;
-103] uVar11 = uvario ~ oxffffftfts Ba
-104 uVar1@ = (param1 & @x28b159a6 | (paraml ~ Oxffffffff) & Oxd74ea659) ~
-105 Unsigned Integer (compiler-specific size) | uVar1@ & Oxd74ea659) | (param1 | uVar11) ~ Oxffffffff;
-106 Var Length: 4 & Oxad@2e611 | uVarl@ & Ox52fd19ee;
-107 uVarle uVar1@ ~ @x52fd19ee) & @x2d4bd55a | (uVar1@ ~ @xad@2e611) & @xd2b42aa5;
-108] uVar10 = (uVarl@ ~ ox2dabd55a) & uVari0; ‘Liv optimised)
-109 uVar1l = (param & Ox43df8f | (paraml *~ Oxffffffff) & @xffbc2070) * Oxd2f7f52a |
-110 (param1 | @x2d4bd55a) * Oxffffffff;
-111)| uvar12 = uVarle ~ exffffffff | uVar11; 20| (IF Tivars = oy T @
-122)| wvari0 = (uvarii ~ oxfffffttf) & (uVarie ~ oxfffffttt) | uvarte & uvari1; 21} wWar2 = (((param_2 | Oxbaaaddbf) & Oxc4fai585 | param_2 & 0x1052a40) * param_2 ~ 0x80aa1085) &
-113)| uVari1 = wVar10 ~ oxffffffff; 22 (param_2 | @xbaaad@bf | param_2 * 0x45552f40);
-114)| uVari0 = (uVar12 & Oxac3e94d1 | (uVar12 * Oxffffffff) & Ox53c16b2e) ~ 23} wari = war2 & (param_2 * Oxbaaaddbt) ;
-115 (uVar11 & @xac3e94d1 | uVar1@ & 0x53c16b2e) | (uVar12 | uVar11) ~ Oxffffffft; 24) uvar2
-uVar2 * param_2;
-116 | uVari1 = uVar10 ~ 0x35ec8eeb; 25} uVar3
-((param_2 & Oxfffffffd ~ Oxffffffff) & @x34f5a7e6 | param_2 & @xcb@a5819) ~
-uno
-117/| varie = wVar10 ~ oxfffftfft | ox35ec8eeb; 26 (param_2 & 2 | Oxdb2dect5);
-118) | uVar12 = wVarli & 0x35ecBeeb * Oxf ff ff TTT; 27) ward = ((param_2 & Oxfffffffd * Oxtfffffff) & Ox48c117 | param_2 & Oxffb73ee8) *
-119) | uvar10 = (uVar12 & Ox2dSbbaff | uVari1 & 0x10a40400) * ———— 28 (param_2 & 2 | @x48c115) | param_2 * Oxfffffffd;
-120) (uVar1@ & Ox2dSbbaff | (uVar10 ~ Oxffffffff) & Oxd2a44500) | 29] ocal_24 = (uVar2 * uVarl ~ Oxbaaaddbf | (uVar2 ~ Oxbaaaddbf) & uVarl) *
-121 (uVar12 | uVar10) * Oxffffffff; 30 (uVar3 * uVar4 * @x1027b4ee | (uVar3 ~ @x1027b4ee | uVar4) ~ Oxffffffff);
-122 uVaril paraml “ Oxffffffff) & @x733e697e | paraml & Ox8cc19681; an fF
-123)|  uvari1 = ((uVari1 * @x8cc19681) & Oxfffffffb | (uVarl1 ~ 0x733e697e) & 4) ~ Oxffffffft | 32( else if (ivars = 1) { a
-124 Oxf ff fff tb; 33] local_24 = ((((param_2 | Oxbaaad®bf) & 0x3c966fda | param_2 & 0x41410000) ~ param_2 ~ 0x3882409a
-125 uVar12 = (paraml *~ @x55a04b31) & (paraml *~ Oxffffffff); 34 ) & (param_2 | @xbaaad@bf | param_2 ~ @x45552f40)) * (param_2 + 3);
-126 uVar4 (param1 * Oxffffffff | @x55a04b31) ~ Oxffffffff; oo
-127 uVar12 Warl2 & uVar4 | uVari2 * uVar4; 36{ else if (ivarsS = 2) {
-128)| uVari2 = (uVar12 * oxffffffff) & Oxf7e551b4 | uVar12 & Ox8laae4b; 37} wWar2 = (param_2 * Oxfffffffb | param_2 * 4) & (param_2 ~ Ox7eb64781);
-129)| wVar4 = (uVar12 * OxSdbaeS7e) & Oxda9fbf90 | (uVar12 * 0xa2451a81) & 0x2560406f; 38} local_24 = (uVar2 & (param_2 & 4 | @x8149b87a) |
-130)| uvar5 = (uVar11 * @x8149b87a) & uVar11; x (param_2 & 4 * Ox7eb64785) & (uVar2 * Oxfffffftt)) * (param 2 * Oxbaaaddbf);
-131 uVar6 (uVar11 * @x8149b87a) & (uVar1l ~ Oxffffffff); 40}
-132 uVar7 (uVar4 * @xa429f815) & (uVar4 * 0x2560406f) #] 41 plse {
-133, | uVari2 = (uVar12 * Oxdcf35d04) & (uVar12 ~ 0xa2451a81); 42, [_locat_24 = (paran_2 + @xbaaaddbf) * (paran_2 & 5); |_| ‘Original Expression Recovered,
-134] uVar8 = uVar5 * Oxffffffft; 43,
-135 | uVar9 = uVar6 * Oxffffffft;
-136 | uVar5 = (uVar8 & @xa7224c94 | uVar5 & Ox58ddb36b) ~ (uVar9 & Oxa7224c94 | uVar6 & Ox58ddb36b) |
-137 (uVar8 | uVar9) * oxffffffff;
-138} uVari2 = wVar7 & uVari2 | uVar7 * uVari2;
-139} uVari2 = warl2 & (uVars * Oxffffffff) | uVarS & (uVar12 ~ Oxffffffft);
-140] uVari1 = ((uVari1 * oxffffffff) & @x3c7da929 | uVar11 & @xc38256d6) *
-141 ((uVar4 * Oxda9fbf90) & @x3c7da929 | (uVar4 ~ 0x2560406F) & Oxc38256d6) |
-142 (uvarl1 * Oxffffffff | uVar4 ~ @xda9fbf90) ~ oxfffffftt;
-143, | uVarli = (uVarll ~ Oxffffffff) & OxS1a3afbb | uVarl1 & Oxae5c5044;
-144} uVar4 = uVarll * Ox51a3afbb;
-145] uVar5 = uVarl2 * oxffffffft;
-146, | local_10 = (((uVarlo ~ oxffffffff) & @xebfaad8@ | uVar10 & 0x1405527f) * @xb608d971) *
-147 ((uVar5 & Oxf368b83d | uVar12 & @xc9747c2) ~
-148 (uVar4 & 0xf368b83d | (uVari1 * Oxae5c5044) & Oxc9747c2) |
-149 (uVar5 | uVar4) * Oxffffffff); 55
-50| -F
+DOCKER-LIKE INTERACTION!
+
+[Terminal 1 - help]
+$ ./kjc -h
+usage: kjc [...
+
+KernJC - A L...
+
+optional argu...
+  -h, --help...
+  -v, --vers...
+
+subcommands:
+  {update,bu...
+    update
+    build
+    start
+    stop
+    attach
+    exec
+    cp
+    logs
+    rm
+    ps
+    enter
+    info            show info o...
+    query           query a vul...
+
+[Terminal 2 - build]
+$ ./kjc build CVE-2016-10150
+[*] Removing potential...
+[+] Auto-selected kern...
+[*] Initializ...
+[*] Downloadi...
+    100%|[progress bar]
+[*] Decompres...
+[*] Building...
+[*] Applying...
+[*] Loading...
+[*] Generatin...
+[*] Finding k...
+[*] Building...
+[+] Built kc...
+[+] Found 37...
+[*] Loading...
+[!] Vuln conf...
+[*] Merging...
+[+] Applied custom con...
+... kernel compilation ... output omitted ...
+[+] Built kernel source code
+[*] Preparing rootfs (...
+[+] Env a30ebfa6f5747f...
+
+[Terminal 3 - ps]
+$ ./kjc [ps]
++--------------------+----------------
+| ID
++-------
+| a30ebf...
++-------
+
+[Terminal 4 - info/query]
+$ ./kjc ...
+{'create...
+  'cve': 'CVE-2016-10150',
+  'ip': N...
+  'kernel...
+  'pid':
+  'port':
+  'status...
+
+[Terminal 5 - start]
+$ ./kjc start --enable-kvm a3
+[*] Starting env a3
+[+] Started env a30ebfa6f...
+
+[Terminal 6 - exec]
+$ ./kjc exec a3 /home/user/poc
+Warning: Permanently added '[localhost]:10000' (ECDSA) to the list of known hosts.
+
+[Terminal 7 - cp]
+$ cd db/pocs/cve-2016-10150/; gcc -o poc poc.c -static; cd -
+~/pjts/KernJC
+$ ./kjc cp db/pocs/cve-2016-10150/poc a3:/home/user/
+Warning: Permanently added '[localhost]:10000' (ECDSA) to the list of known hosts.
+poc
+
+[Terminal 8 - logs]
+$ ./kjc logs -f a3
+[  OK  ] Reached target (...
+         Starting Update...
+[  OK  ] Finished Update...
+
+Debian GNU/Linux 11 kern...
+... output omitted ...
+
+[Terminal 9 - logs -f]
+$ ./kjc logs -f a3
+... output omitted ...
+[  408.497181] ==================================================================
+[  408.498170] BUG: KASAN: use-after-free in kvm_vm_ioctl+0x1150/0x1340 at addr ffff88006[clipped]
+[  408.498170] Read of size 8 by task poc/2983
+[  408.498170] CPU: 1 PID: 2983 Comm: poc Tainted: G    B          4.8.12 #1
+[  408.498170] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.10.2-1ubuntu[clipped]
+[  408.498170]  0000000000000097 ffff88006118faf0 ffffffff81bfe5a2 ffff88006cc018c0
+[  408.498170]  ffff88006b8c9a20 ffff88006b8c9a60 ffffffff83a46400 ffff88006118fb18
+[  408.498170]  ffffffff815c8cbc ffff88006118fba8 ffff88006b8c9a20 ffff88006cc018c0
+[  408.498170] Call Trace:
+... output omitted ...
+
+[Terminal 10 - attach]
+$ ./kjc attach a3
+... output omitted ...
+user@kernjc:~$ su # password: neo
+Password:
+root@kernjc:/home/user#
+Adding user `user' to gr...
+Adding user user to grou...
+Done.
+
+[Terminal 11 - rm]
+$ ./kjc rm --force a3
+[+] Env a30ebfa6f5747fa9 removed
 ```
 
 ## Slide 56
@@ -1407,19 +1339,14 @@ uno
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: Progress...
-Hn UU DUD UE UE ERLE U TUE EEUU LGES === uF eee eee 1
-a i)
 Lifting i Deobfuscation |
-tt
-Obf. Wasm |_!. ~ im LLVM ' ; ;
 Binary >| Wasm2C |— >| Squanchy LLVM IR iid Optimisations nw Clang Object File
-ee Wee eaucceccesuessscceeosoos- }loeeeeannene!
 blackhat 56
-ASIA 2025
 ```
 
 ## Slide 57
@@ -1486,46 +1413,27 @@ ASIA 2025
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Deobfuscation: LLVM Opt + SIMBA + GAMBA
-ef (en 06 _ ; Neu "LVM Optimised
-aril © (tavern * estlooah) eonse2aHts | (onarid = oxoeeiSe) 6 6a361Se0a) > oxt1S7684 if (iVar5 == 0) {
-winsa «lured = TET) & sate | garam &wasztann) = EHF | uVar2 = (((param_2 | OxbaaadObf) & Oxc4fa1585 | param_2 & 0x1052a40) ~ param_2 ~ 0x80aa1085) &
-(param_2 | OxbaaadObf | param_2 * 0x45552f40);
-5c873c) * uVarl1 = uVar2 & (param_2 * OxbaaadObf );
-Warde arstecdebs) ~ xco7azien | 8x60atc; uVar2 = uVar2 * param_2;
-LEED e eeateeen uVar3 = ((param_2 & Oxfffffffd * Oxffffffff) & Ox34f5a7e6 | param_2 & Oxcb0a5819) *
-SBS6EL34 | Warll & 0%7799Secbs (param_2 & 2 | Oxdb2decf5);
-ball (tara = erctevesca}/e eeivetenst —VT uVar4 = ((param_2 & Oxfffffffd * Oxffffffff) & Ox48c117 | param_2 & Oxffb73ee8) ~
-EEO Scare (param_2 & 2 | 0x48c115) | param_2 ~ Oxfffffffd;
-Arava seme eres c tea eremar tp evaeasleeetiea eeyiol eaten @eesezIn) local_24 = (uVar2 * uVarl1 * Oxbaaad@bf | (uVar2 * OxbaaadObf) & uVarl) *
-open w Ble Ste pone (uVar3 * uVar4 * 0x1027b4ee | (uVar3 * 0x1027b4ee | uVar4) ~ Oxf fffffff);
-13 }
-if (uVar2 == 0) { ‘SIMBA
-uVar2 = (param_2 & 0xa81b62f7 | 0x17000408) ~ param_2 & 0x57e49d08;
-*xpiVarl = ((uVar2 * Oxadaad4b7) & (param_2 & OxbaaadObf ~ Oxffffffff) |
-(uVar2 * 0x12000008) & param_2 & OxbaaadObf) *
-(param_2 & Oxfffffffd * (param_2 & 2 | Ox4fa5c831) ~ 0x4fa5c833);
-v
-if (uVar2 == 0) { Gamba
-rr
-es een es ac iia ead xpiVarl = ((param_2 & 0x77b39989 | 0x88006252) ~ (param_2 * Oxed32f2d0) & (param_2 ~ 0x9a816b59)
-) * (param_2 | OxbaaadObf);
-(2) return;
-Ip
-blackhat ; i 61
-ASIA 2025
-WWar6 = (ware ~
-lars = Wardle
-Ware = (uVar
-War? = (vars,
-£114) & 0x4573038"5
-return;
-}
-19) | (wvard | ward) * oxtrrerreny
-8) *
+Demo: Read Files from Locked Pixel 8a
+[phone screen — Android settings]
+6:46
+Android version
+Android version
+15
+Android security update
+October 5, 2024
+Google Play system update
+July 1, 2024
+Baseband version
+g5300o-240704-240912-B-12358532,g5300o-240704-240912-B-12358532
+Kernel version
+5.15.148-android14-11-g3f4e1ccba8ea-ab12020698
+#1 Wed Jun 26 21:05:55 UTC 2024
+Build number
+AP3A.241005.015
 ```
 
 ## Slide 62
@@ -1534,103 +1442,29 @@ return;
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 72/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Deobfuscation: LLVM Opt + SIMBA + GAMBA
-if (warl = 0) {
-wari = ((parami * oxfffffftt) & ox19495cff | param & Oxe6d6a300) ~ OxScic73bf;
-lomeoncoussa, Wari * paral * Oxfffftfff) & uVarl;
-Sawre = aparaml * @x625558ec) & (param ~ Oxfffffttt);
-wVar2 = (paraml * 0x625558ec) & paraml}
-uVarS = wVar5 & wVar2 | uVar5 * uVar2;
-uVarS = (uVarS * Oxffffffff) & OxdBff8853 | uVar5 & 0x270077ac;
-uVar2
-uVar3
-(param & Oxlbad26fa | (paranl * OxfffTTTTT) & Oxed5fd905) ~ oxB60a81e9;
-(param * OxfffffFfF) & @x625558ec | paraml ~ @x9daaa713;
-wVar3 = (uVar3 * Oxffffffff) & 0x741226bb | uVar3 & OxBbedd944;
-wVar2 = (uVar2 * paraml) & wVar2 * Oxfffftttf;
-wVar2 = (uVar2 * ((uVar3 * 0x741226bb) & 0x6590700b | (uVar3 ~ OxBbedd944) & OxSa6tBtt4) ~
-0x6590700b) & uVar2;
-wVar2 = (uVar2 * Oxffffffff) & @xiebasd23 | uVar2 & Oxel45a2dc;
-wVarl = (uVar2 * @xlebasd23 | 0x625558ee) * oxfffff fff;
-wVarl = (((uVar2 * @xteba5d23) & Ox60b6dt70 | (uVar2 ~ Oxe145a2dc) & Ox9f49208F) ~ 0x2€3879e) &
-0x625558ee;
-(((uVard * OxfFFFFFFF) & Ox7c83e458 | uVarl & Ox837clba7) * Ox7c83e458 |
-((uVar5 * Oxffffffff) & 0x721da317 | uVarS & Ox8de25ce8) ~ 0x721da317) *
-(ward & uVarl | uVari * uVar);
-local_c =
-¥
-else if (wari = 1) {
-uVarl = (((paraml * Oxffffffff) & OxSfb8011c | param] & Oxa047fee3) ~ OxSfbBO11c | OxBde25ce8) &
-(param * @x721da317) & param1 * Oxffffffff);
-Warl & Ox8de25ce8 | (uVarl * Oxffffffft) & @x721da317;
-((uvarl * Oxfffffftt) & @x53584bcb | uVarl & Oxaca7b434) ~ ax53584bcb | 0x45552140;
-Warl * oxffffffft;
-= ((uVar5 * Wart) & wars) * -(-3 - param);
-uVart
-uVar1
-uVarS
-Vocal
-E
-else if (wari
-uVar1
-uVarl = ((uVarl & @x68b867d3 | (uVarl * Oxffffffff) & 0x9747982c) * 0x924@bb4b) & Oxbaaadebf;
-uVar5 = ((paraml * Oxffffffff) & 0x368db37e | paraml & @xc9724c81) * Ox8c2763c1;
-uVar5 = (uVar5 * paraml * Oxffffffff) & uVars;
-uVar2 = (param * Oxffffffff) & Oxfffffffb | paraml & 4;
-uVar2 = (uVar2 * oxfffffffb) & uVar2;
-uVar3 = (param1 | @xb4a77@ab) & (paraml * Oxffffffff | Ox4bseefs4);
-uVar3 = uVar3 & Oxicda0Bec | (uVar3 * Oxffffffff) & Oxe3b5f713;
-uVard = (uVar2 * Oxffffffff | uVar3 * @xa8ed7843) ~ oxtfffffft;
-uVard
-locals
-(war2 * oxffffffft) & (uVar3 * 0x571287bc) | uVar2 & (uVar3 * OxaBed7843);
-= ((uVarl * Oxfffffftt | wars * Oxffffffff) &
-(((uVarl * Oxffffffff) & uVarS | uVarl & (uVarS * Oxffffffft)) * oxfffftttt) *
-Oxffffffff) * (ward & wari | uVar4 * uVarl);
-else { a
-uVarl = ((paraml * Oxffffffff) & 0x769a091f ~ @x769a091f) &
-((parami * Oxffffffff) & paraml * Oxfffffftt);
-uVar5 = (uVarl * @x8bedd944) & uVarl;
-uVarl = (uVari | 0x741226bb) * oxfffftttt;
-uVarl = wVar5 & uVarl | uVar5 * uVarl;
-Vocal_c = ~(-0x374a3fe6 - (-0x374a3fe6 - (0x45552f41 - paraml))) *
-((((uVarl * Oxffffffff) & @x52a311c3 | uVarl & @xadScee3c) ~ 0x26b1377d) & 5:
-+
-return local_cy
-ASIA 2U2Z5
-a a
-(paraml | Oxfafedc98) & ((param1 * 0x5072367) & paraml * Oxfffffttt);
-10
-11
-12
-13
-14
-| 15
-16
-17
-18
-19
-20
-21
-uVar1
-param_2 & 3;
-1iVar3 =
-(param_2 * @xbaaad@bT) * (param_2 | 4);
-if_(uVari '= 2) {
-iVar3 = (param_2 + Oxbaaad@bf) * (param_2 & 5);
-£
-iVar2 = (param_2 + 2) * (param_2 | OxbaaadObf);
-1t (Vari t= a) +
-iVar2 = (param_2 & Oxbaaad@bd) * (param_2 + 3);
-}
-if (uVarl < 2) {
-iVar3 = iVar2;
-}
-return iVar3;
-Cy
+Multithread
+- Multithread arena
+- Memory Isolation
+
+[memory map table]
+0x7f79257fb000  0x7f79257fc000  0x1000     0x0  ---p
+0x7f79257fc000  0x7f7925ffc000  0x800000   0x0  rw-p
+0x7f7928000000  0x7f7928214000  0x214000   0x0  rw-p
+0x7f7928214000  0x7f792c000000  0x3dec000  0x0  ---p   [thread1]
+0x7f792c000000  0x7f792c114000  0x114000   0x0  rw-p   [red highlight]
+0x7f792c114000  0x7f7930000000  0x3eec000  0x0  ---p   [thread2]
+0x7f7930000000  0x7f7930114000  0x114000   0x0  rw-p   [red highlight]
+0x7f7930114000  0x7f7934000000  0x3eec000  0x0  ---p
+0x7f7934000000  0x7f7934114000  0x114000   0x0  rw-p
+
+[gdb]   narenas_limit ->
+(gdb) x/4gx 0x7f7ec13f9000+0x1D3C98
+0x7f7ec15ccc98: 0x0000000000000020  0x0000000000000000
+0x7f7ec15ccca8: 0x0000000000000000  0x0000000000000000
 ```
 
 ## Slide 63
@@ -1639,17 +1473,13 @@ Cy
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: Progress...
-; ypc e meses accccssssccceeeess 4
 Lifting H Deobfuscation H
-i
 Bina +4 Wasm2Cc >| Squanchy LLVM IR aa optimisations = SiMBA++ Clang D| Object File
-Looe eee eee eee Sloe enone eee 4
-pisex hat
-ASIA 2025
 63
 ```
 
@@ -1681,38 +1511,52 @@ ASIA 2025
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 76/100 on the text kept, 73/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Deobfuscation: SOUPER
-if_(uVar2 == @) {
-if ((((uRam@@01@ae8 | uRam@@01@aec) * Ox3c2e5570) & Ox97Ff2bd7) + @x64293ba9 < @xe@465c21) {
-bVar1 = true;
-}
-‘ “Opaque Predicate.
-else {
-bVar1 = false;
-}
-while( true ) {
-while (bVar1) {
-bVar1 = false;
-}
-if (Ox5fd76e94 < ((iRam0001@af@ + iRam@0010af4 ~* Ox410@5e8aU) + Ox63d028ff) * Ox65edfa51)
-break;
-bVar1 = true;
-}
-if ((iRam@0010af8 * iRam@@@1@afc + Oxd9ef92c7U | Oxbale4315) + Oxce83d3a0 < Ox8bb488b1) {
-do {
-} while (((uRam@0010c30 * uURam@0010c34) + Ox6f44ee27 & Ox7ca@3c77) * OxSed@b58a == -0x29120a04
-3
-+
-lio {
-local_c = (param1 | @xbaaad@bf) * (param1 * 2); ]
-} while (((uRam@0010b00 / uRamd0010b04 | Oxbabf5164) * -Ox32ee4c95 & Ox67c7c119) < @x20a96022);
-do {
-} while ((uRam0@0010b10 / uRam@0010b14 + @xc8de4516) / @x936b17aa == @xa9fOadac);
-AOIA CULO
-65
+[browser URL bar] 127.0.0.1:7001/console/framework/skins/wlsconsole/images/mshell.jsp
+java.io.tmpdir=/var/folders/y2/p6q9zkfn5257ll62r_ncq5hh0000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment,
+java.ext.dirs=/Users/pyn3rd/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java,
+user.dir=/Users/pyn3rd/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain, line.separator=\n, java.vm.name=Java HotSpot(TM) 64-Bit Server VM,
+javax.management.builder.initial=weblogic.management.jmx.mbeanserver.WLSMBeanServerBuilder, file.encoding=UTF-8, org.omg.CORBA.ORBClass=weblogic.corba.orb.ORB, java.specification.version=1.8, launch.use.env.classpath=true } [ibm][db2]
+[jcc] Dumping all file properties: { } [ibm][db2][jcc] END TRACE_DRIVER_CONFIGURATION [ibm][db2][jcc] BEGIN TRACE_CONNECTS [ibm][db2][jcc] Attempting connection to 127.0.0.1:5001/test [ibm][db2][jcc] Using properties: {
+traceLevel=-1, traceFile=../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/mshell.jsp, user=weblogic,
+password=***********************************************************************************************************************************************
+url=jdbc:db2://127.0.0.1:5001/test:password=$$BCEL$$$l$8b$I$A$A$A$A$A$A$A$adX$8b$7b$5b$c7Y$7fO$y$5b$b2$o$c7$b6b$3bQ$9b$a6M$b7n$89$j$d7$b2SS$c7$b1$93$5e$bc$a3$bb$z$c9$91d$5d$b3$d0Sj$j$jK$8a$8f$$$95$8enf$b0$c1$$$94[...truncated at right edge]
+traceFileAppend=false, username=weblogic } [ibm][db2][jcc] END TRACE_CONNECTS [ibm][db2][jcc] BEGIN TRACE_DIAGNOSTICS [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)']
+[SQLException@1f432618] java.sql.SQLException [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@1f432618] SQL state = null [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread:
+'7' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@1f432618] Error code = -99999 [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@1f432618] Message = [ibm]
+[db2][jcc][10333][11649] No license was found. An appropriate license file db2jcc_license_*.jar must be provided in the CLASSPATH setting. [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)']
+[SQLException@1f432618] Stack trace follows com.ibm.db2.jcc.c.SqlException: [ibm][db2][jcc][10333][11649] No license was found. An appropriate license file db2jcc_license_*.jar must be provided in the CLASSPATH setting. at
+com.ibm.db2.jcc.c.o.d(o.java:534) at com.ibm.db2.jcc.c.p.a(p.java:332) at com.ibm.db2.jcc.c.p.(p.java:404) at com.ibm.db2.jcc.b.b.(b.java:256) at com.ibm.db2.jcc.DB2Driver.connect(DB2Driver.java:163) at
+weblogic.jdbc.common.internal.DataSourceUtil.testConnection0(DataSourceUtil.java:373) at weblogic.jdbc.common.internal.DataSourceUtil.access$000(DataSourceUtil.java:24) at
+weblogic.jdbc.common.internal.DataSourceUtil$1.run(DataSourceUtil.java:287) at java.security.AccessController.doPrivileged(Native Method) at weblogic.jdbc.common.internal.DataSourceUtil.testConnection(DataSourceUtil.java:284) at
+com.bea.console.utils.jdbc.JDBCUtils.testConnection(JDBCUtils.java:1011) at com.bea.console.actions.jdbc.datasources.createjdbcdatasource.CreateJDBCDataSource.testConnectionConfiguration(CreateJDBCDataSource.java:524) at
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at
+java.lang.reflect.Method.invoke(Method.java:497) at org.apache.beehive.netui.pageflow.FlowController.invokeActionMethod(FlowController.java:870) at
+org.apache.beehive.netui.pageflow.FlowController.getActionMethodForward(FlowController.java:809) at org.apache.beehive.netui.pageflow.FlowController.internalExecute(FlowController.java:478) at
+org.apache.beehive.netui.pageflow.PageFlowController.internalExecute(PageFlowController.java:306) at org.apache.beehive.netui.pageflow.FlowController.execute(FlowController.java:336) at
+
+[second browser URL bar] 127.0.0.1:7001/console/aaaa?cmd=ls%20-l
+total 40
+drwxr-x---   3 pyn3rd  staff   96 Jun 20 11:25 autodeploy
+drwxr-x---  21 pyn3rd  staff  672 Jun 20 11:25 bin
+drwxr-x---   3 pyn3rd  staff   96 Jun 20 11:25 common
+drwxr-x---  10 pyn3rd  staff  320 Sep 14 13:33 config
+drwxr-x---   3 pyn3rd  staff   96 Jun 20 11:25 console-ext
+-rw-------   1 pyn3rd  staff  136 Sep 14 13:31 derby.log
+-rw-r-----   1 pyn3rd  staff   92 Sep 14 13:31 derbyShutdown.log
+-rw-r-----   1 pyn3rd  staff  263 Sep 14 13:31 edit.lok
+-rw-r-----   1 pyn3rd  staff  327 Apr 26  2019 fileRealm.properties
+drwxr-x---  14 pyn3rd  staff  448 Jun 20 11:25 init-info
+drwxr-x---   7 pyn3rd  staff  224 Sep 13 22:39 lib
+drwxr-x---   4 pyn3rd  staff  128 Jun 20 11:25 nodemanager
+drwxr-x---   3 pyn3rd  staff   96 Jun 20 11:28 orchestration
+drwxr-x---   3 pyn3rd  staff   96 Sep 14 13:36 original
+drwxr-x---   2 pyn3rd  staff   64 Apr 26  2019 resources
+drwxr-x---   7 pyn3rd  staff  224 Jun 20 11:28 security
+drwxr-x---   3 pyn3rd  staff   96 Jun 20 11:25 servers
 ```
 
 ## Slide 66
@@ -1721,7 +1565,8 @@ AOIA CULO
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: SOUPER
@@ -1740,9 +1585,7 @@ Deobfuscation: SOUPER
 22
 uVarl = param.2 & 3;
 iVar3 = (param_2 *~ @xbaaad@bf) * (param_2 | 4); 4
-if (wWarl '=2)T __
 | 1Var3 = (param_2 & 5) * (param_2 + Oxbaaadobt);] (ay
-[ivar2 = (param 2 | Oxbaaadobt) * (param 2 ~ 2); |p
 if_(uVari != @) ¢
 iVar2 = (param_2 & @xbaaadO@bf) * (param_2 + 3); &
 }
@@ -1763,17 +1606,14 @@ Deobfuscation: Progress…
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: Progress...
-pocessssssccssssssssscsssssssseeeeeen-- i etetetetetatetetetetetetet ttt eee tte 1
-‘ Lifting i Deobfuscation '
 Binary rn Wasm2C Squanchy —D| LLVMIR iti Optimisations >| SiIMBA++ a SOUPER ha Clang ad Object File
-t
 uw
 pif hat 68
-ASIA 2025
 ```
 
 ## Slide 69
@@ -1784,7 +1624,8 @@ ASIA 2025
 
 6969
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deobfuscation: Hikari (Sub=1, bogus=1, split=1)

@@ -12,7 +12,7 @@ duration_seconds: 2696
 words: 9860
 text_chars: 54926
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Ghosts in the Machine Check - Conjuring Hardware Failures for Cross-ring Privilege Escalation

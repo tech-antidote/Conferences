@@ -11,15 +11,21 @@ sha256: "eee1ef2cdb6e90c2339223dc5fe1605e0063c743d5e320503009ba3d007fa267"
 text_chars: 3616
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:15:35Z"
+converted_at: "2026-08-12T04:08:25Z"
 ---
 # Leverage and Demonstrate Value with your Cyber Insurance Renewal
 
 **Speakers:** Erik Decker  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Erik Decker_Leverage and Demonstrate Value with your Cyber Insurance Renewal.pdf` (8 pages)
+
 
 ## Slide 1
 

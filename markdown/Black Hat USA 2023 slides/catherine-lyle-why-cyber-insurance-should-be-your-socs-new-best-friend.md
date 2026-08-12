@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Catherine Lyle_Why Cyber Insurance Should be Your SOC's New Best Friend.pdf"
 pages: 26
 sha256: "ba5a3511aef7003965482475f154f9b0d456ff591c3b661d077b68a2d391a98c"
-text_chars: 8838
-ocr_pages: 11
+text_chars: 8371
+ocr_pages: 10
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 92.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:16Z"
+converted_at: "2026-08-12T04:06:14Z"
 ---
 # Why Cyber Insurance Should be Your SOC's New Best Friend
 
 **Speakers:** Catherine Lyle  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Catherine Lyle_Why Cyber Insurance Should be Your SOC's New Best Friend.pdf` (26 pages)
+
 
 ## Slide 1
 
@@ -28,20 +34,6 @@ converted_at: "2026-08-11T21:14:16Z"
 Speaker: Catherine Lyle HEAD OF CLAIMS, COALITION
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifek hat
-USA &0es3
-AUGUST 9-10, 20253
-BRIEFINGS
-Why Cyber Insurance Should be Your
-SOC’s New Best Friend
-Speaker:
-Catherine Lyle
-HEAD OF CLAIMS, COALITION
-```
 
 ## Slide 2
 
@@ -107,11 +99,10 @@ Threat actors are increasingly .sophisticated .
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 The professionalization of TAs
 THEN Wearehere <wearehere@protonmail.com> 5/20/16 ~ 7,
 man i was waithing you to provide me a bitcoin address 4 hour.but you didnt if you can i really send
@@ -134,11 +125,10 @@ you don't bring a substantial offer to the table today.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 They study financials...
 You ‘You are not well aware that we have been suffering financially. If this was the case you would never
 ask us for 18 million dollars because you know that would be impossible for us to pay. 8 million is
@@ -156,11 +146,10 @@ Support You were trying to trick us with 1m and You're going to see what happens
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 . familiarize themselves with
 organizational relationships
 Support
@@ -181,11 +170,10 @@ And apply pressure with depth and clarity.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 And apply pressure with depth
 and clarity.
 Support We have shown enough proof and provided insights to demonstrate that we possess complete
@@ -210,11 +198,10 @@ They continually adapt their attacks **Top ransomware variants by number reporte
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 They continually adapt their attacks
 Top ransomware variants by number reported
 Zeppelin
@@ -236,7 +223,8 @@ Ransomware claims severity jumped 10% to an average loss of $313,472.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Claims Severity by Event Type
@@ -255,15 +243,8 @@ $313,472.
 Ransomware
 FTF
 @ 2020
-wD
-@
 8
 Eas g
-S wD
-“E BS
-ro) wu
-2) o
-i
 Other BEC Total
 @ 2021
 ```
@@ -296,22 +277,14 @@ SEVERITY in 1H 2023
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 and is increasingly costly
 RANSOMWARE SEVERITY
-nM
 $300k wo
-5
-2 8
-® (ee)
 $200k & -
-“N
-ol
-o>)
 $100k
 $o
 2020 Overall 20210verall 2022 Overall
@@ -331,23 +304,15 @@ YoY Average Ransom Demand
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 YoY Average Ransom Demand
-Ransomware s.5M
-demands som]
-—,,
-ny)
 $900k (6)
 >
-(Ss)
 $600k S
-|_| |_|
 $1.4 million sox
-so
 2021 Overall 2022 Overall
 Average Ransom
 Demand in 1H 2023
@@ -365,10 +330,10 @@ If you’re being hacked, you’re being .phished.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 20253
 Percentage of reported claims
 by attack vector
@@ -406,18 +371,16 @@ CONFIDENTIAL
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2023
 Typical process for FTF
 2 Phishing emails sent to Malicious logins are
 Identification of victim(s) steal user credentials performed
 ><)
 Hacker searches for Mailbox rules created to Modification of payment
 transactions to intercept avoid detection instructions requested
-. . oo. Attack repeated on other
 7 Criminal voice or video 8 Criminal receives . pee
 contacts of the compromised
 verifies instructions . fraudulent funds transfer

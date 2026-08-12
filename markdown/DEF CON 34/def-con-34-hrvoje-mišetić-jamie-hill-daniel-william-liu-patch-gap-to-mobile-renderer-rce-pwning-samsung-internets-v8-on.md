@@ -4,23 +4,28 @@ speakers: ["Hrvoje Mišetić", "Jamie Hill-Daniel", "William Liu"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Hrvoje Mišetić, Jamie Hill-Daniel, William Liu - Patch Gap to Mobile Renderer RCE Pwning Samsung Internet's V8 on the Galaxy S25 - Mis.pdf"
 pages: 122
 sha256: "4a0c1b841dadc4333496347842366f834e96f6136b3f303fdd7f777e6e9bef73"
-text_chars: 39829
-ocr_pages: 20
+text_chars: 38785
+ocr_pages: 14
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.6
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:22:06Z"
+converted_at: "2026-08-12T06:34:58Z"
 ---
 # Patch Gap to Mobile Renderer RCE Pwning Samsung Internet's V8 on the Galaxy S25
 
 **Speakers:** Hrvoje Mišetić, Jamie Hill-Daniel, William Liu  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Hrvoje Mišetić, Jamie Hill-Daniel, William Liu - Patch Gap to Mobile Renderer RCE Pwning Samsung Internet's V8 on the Galaxy S25 - Mis.pdf` (122 pages)
+
 
 ## Slide 1
 
@@ -114,7 +119,8 @@ William Liu, Jamie Hill-Daniel, Hrvoje Mišetić
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Chrome team is delighted to announce the promotion of
@@ -138,7 +144,8 @@ IS
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 This update includes 433 security fixes. Please see the Chrome Security Page for
@@ -169,7 +176,8 @@ more information.
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 IDENTIFYING THE V8 VERSION
@@ -179,7 +187,6 @@ int32_t Version
 int32_t Version
 :major_
 :minor_
-:build_
 :patch_
 13
 233
@@ -188,14 +195,11 @@ Commit 5297e56 3
 @ ve Autoroll committed on May 6, 2025
 Version 13.6.233.10
 Version incremented at https://cr-buildbucket .appspot . com/build/8715617119500869441
-Change-Id: 13314358992a1d5a44bc60345b48973e6fdT85544
 Reviewed-on: https://chromium-review.googlesource.com/c/v8/v8/+/6512719
 Bot-Commit: v8-ci-autoroll-builder <v8-ci-autoroll-builder@chops-service-
 accounts. iam.gserviceaccount .com>
-Cr-Commit-Position: refs/branch-heads/13.60{#19}
 Cr-Branched-From: 04fa9cb-refs/heads/13.6.2330{#1}
 Cr-Branched-From: fébe482-refs/heads/main@{#99571}
-P  13.6-1kgr + chromium/7103 + chromium/7103_103 + © 13.6.233.17 **:
 chromium/7103_108 13.6.233.10-pgo
 1 parent 27d@a5@ commit 5297e56 (0)
 1 file changed 1-18
@@ -208,7 +212,8 @@ chromium/7103_108 13.6.233.10-pgo
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IDENTIFYING THE V8 VERSION
@@ -218,7 +223,6 @@ int32_t Version
 int32_t Version
 :major_
 :minor_
-:build_
 :patch_
 13
 233
@@ -226,15 +230,10 @@ int32_t Version
 e. May 6, 2025
 Vers
 Version incremented at https://c
-pspot . com/bui ld/8715617119500869441
-Change-Id: 13314358992a1d5a44bc60345b48973e67dT85544
-Reviewed-on: https: //chromium-review.googlesource.com/c/v8/v8/+/6512719
 Bot-Commit: v8-ci-autoroll-builder <v8-ci-autoroll-builder@chops-service-
 accounts. iam.gserviceaccount .com>
-Cr-Commit-Position: refs/branch-heads/13.60{#19}
 Cr-Branched-From: 04fa9cb-refs/heads/13.6.2330{#1}
 Cr-Branched-From: fébe482-refs/heads/main@{#99571}
-P  13.6-lkgr + chromium/7103 + chromium/7103_103 + © 13.6.233.17 «*:
 chromium/7103_108 13.6.233.10-pgo
 1 parent 27d@a5@ commit 5297e56 (0)
 1 file changed 1-18
@@ -261,7 +260,8 @@ chromium/7103_108 13.6.233.10-pgo
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHROME SECURITY ARCHITECTURE (2026)
@@ -276,7 +276,8 @@ Operating System )
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHROME SECURITY ARCHITECTURE (2026)
@@ -298,11 +299,11 @@ Renderer
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TYPICAL EXPLOIT
-Sd Sd
 crbug.com/330760873 crbug.com/330404819
 “Out-of-bounds access in enum cache” “V8 Sandbox escape via regexp"
 [ arivary read-write in the v8 heap] Arbitrary code execution in a
@@ -317,26 +318,21 @@ sandboxed renderer
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TYPICAL EXPLOIT
-S
-S
 (2026)
-Sd
 crbug.com/330760873
 “Out-of-bounds access in enum cache”
 crbug.com/330404819
 “V8 Sandbox escape via regexp"
 crbug.com/526265798
 “Mojo IPC handle type confusion”
-J
 [ arivary read-write in the v8 heap]
-!
 Arbitrary code execution in a
 sandboxed renderer
-\
 28
 ```
 
@@ -659,15 +655,15 @@ $ v8 --allow-natives-syntax --print-bytecode debug.js d8> %DebugPrint(1,2,3,4) 0
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IT'S WASM TIME
 Change Info Show All v
 Submitted Aug 25, 2025
 Owner akob Kummerow
-Uploader @vs Luci cq)
-Reviewers  @Leszek Swirski@) @ V8 LUCI CQ )
+Reviewers @Leszek Swirski@) @ V8 LUCI CQ )
 Jakob Kummerow
 cc (Q Matthias Liedt... (> v8-reviews@g...
 Repo| Branch v8/v8 | main
@@ -676,7 +672,6 @@ Submit Requirements
 @ Code-Review
 @ Code-Owners Approved
 Trigger Votes
-‘Aut Subst Comm
 [wasm] Move %DeserializeWasmModule to d8.wasm.deserializeModule
 along with its Serialize... counterpart.
 The motivation is to exclude potentially-abusable functionality
@@ -684,12 +679,9 @@ from shipping binaries as an additional layer of hardening.
 Bonus change: drop Runtime_WasmNull, because it is not sufficiently
 useful to be kept around.
 Bug: 440016843
-Change-Id: Iac89e7b2371144fc40cd641874b6e363f5f48823
-Reviewed-on: https: //chromium-review.googlesource .com/c/v8/v8/+/6875821
 Auto-Submit: Jakob Kummerow <jkummerow®chromium.org>
 Reviewed-by: Leszek Swirski <leszeks@chromium.org>
 Commit-Queue: Leszek Swirski <leszeks@chromium.org>
-Cr-Commit-Position: refs/heads/main®{#102010}
 Comments
 Checks
 62
@@ -823,7 +815,8 @@ const bug_func = eval(`async function *f(arg1, arg2){ ${exploit_body}; }; f`); (
 
 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DESKTOP SITE ISOLATION
@@ -845,10 +838,10 @@ that users log into on Android as of Chrome 77. Learn more about Site isolation 
 
 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SITE ISOLATION
 Site isolation separates pages from different websites into different processes.
 79
 ```
@@ -859,10 +852,10 @@ Site isolation separates pages from different websites into different processes.
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SITE ISOLATION
 Site isolation is enabled by default on Desktop platforms
 80
 ```
@@ -872,15 +865,6 @@ Site isolation is enabled by default on Desktop platforms
 ## **DESKTOP SITE ISOLATION**
 
 81
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SITE ISOLATION
-BROWSER PROCESS
-attacker.com
-8]
-```
 
 ## Slide 82
 
@@ -894,30 +878,16 @@ attacker.com
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SITE ISOLATION
-BROWSER PROCESS
-|
-|
-i}
-|
-gmail.com
-|
-83
-```
-
 ## Slide 84
 
 ## **MOBILE SITE ISOLATION**
 
 84
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SITE ISOLATION
 Android
 On Android devices with at least 2 GB of RAM, Site Isolation has been enabled for sites that users log into since Chrome 77. In
 Chrome 92, this expanded to include sites that use third-party login providers (e.g., OAuth) and sites that adopt Cross-Origin-
@@ -931,10 +901,10 @@ Opener-Policy headers.
 
 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SITE ISOLATION
 Site Isolation has been enabled for sites that users log into
 85
 ```
@@ -945,43 +915,17 @@ Site Isolation has been enabled for sites that users log into
 
 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SITE ISOLATION
-BROWSER PROCESS
-attacker.com
-86
-```
-
 ## Slide 87
 
 ## **MOBILE SITE ISOLATION**
 
 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SITE ISOLATION
-BROWSER PROCESS
-87
-```
-
 ## Slide 88
 
 ## **MOBILE SITE ISOLATION**
 
 88
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SITE ISOLATION
-BROWSER PROCESS
-gmail.com
-88
-```
 
 ## Slide 89
 
@@ -990,15 +934,6 @@ DESKTOP SITE  MOBILE SITE
 ISOLATION ISOLATION
 
 89
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DESKTOP $
-ISOLATION
-MOBILE SITE
-ISOLATION 89
-```
 
 ## Slide 90
 

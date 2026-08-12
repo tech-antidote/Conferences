@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Maxime Rossi Bellom & Raphael Neveu & Damiano Melotti & Gabrielle Viala_Attacking Samsung Galaxy A Boot Chain, and Beyond_Compressed.pdf"
 pages: 87
 sha256: "30a728dd30270db7363e6ee08d45174e10e08c98044c94e3638937000596b0a5"
-text_chars: 25684
+text_chars: 24029
 ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.8
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:00:10Z"
+converted_at: "2026-08-12T04:36:07Z"
 ---
 # Attacking Samsung Galaxy A Boot Chain, and Beyond
 
 **Speakers:** Maxime Rossi Bellom, Raphael Neveu, Damiano Melotti, Gabrielle Viala  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maxime Rossi Bellom & Raphael Neveu & Damiano Melotti & Gabrielle Viala_Attacking Samsung Galaxy A Boot Chain, and Beyond_Compressed.pdf` (87 pages)
+
 
 ## Slide 1
 
@@ -60,7 +65,8 @@ Maxime Rossi Bellom Damiano Melotti Raphaël Neveu Gabrielle Viala
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacking SP derivation
@@ -70,13 +76,9 @@ Android Data Encryption + Two ateratves
 Keymaster TA (accessing the first AES key)
 Gatekeeper TA (validating credentials and minting auth tokens)
 Scheme
-{ /data/eyotem_de/<vid>/epblob/<handie),spblob
 ‘Gf authentication i» successful)
 Maxime Rossi Bellom 15} key —>y/AS decrypt
 Damiano Melotti
-decrypt K-key—Snasi2e
-Quarkslab Framers
-| Passworo
 Bruteforce of the password
 pwd = generate new password
 token = scrypt(pwd, R, N, P, Salt)
@@ -121,7 +123,8 @@ Throughput: 1478.448992816657 tries/s
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mediatek Secure Boot Process
@@ -140,7 +143,8 @@ LK Android
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mediatek Secure Boot Process
@@ -415,17 +419,13 @@ Exploit strategy becomes simple:
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step |
 JPEG Buffer
 Allocation
-Freeliot
-head mo
-QZ Anz Qajiz
 Free JPEG
 Chunk Buffer Free Free
 Chunk Chunk 24
@@ -437,17 +437,12 @@ Chunk Chunk 24
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 2
 Reading The Jpeg
-Freeliot
-head oo \
-At) C
-aie Z aed
 Free JPEG
 Chunk Buffer Free Free
 Chunk Chunk 25
@@ -459,15 +454,12 @@ Chunk Chunk 25
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 2
 Reading The Jpeg
-Freeliot
-head mo
 Free JPEG
 Chunk Buffer Free Free
 Chunk 26
@@ -480,16 +472,12 @@ Chunk
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 2
 Reading The Jpeg
-Freeliot
-head oo
-QZ OZ Qajiz
 Free JPEG
 Chunk Buffer Free Free
 Chunk 27
@@ -502,18 +490,14 @@ Chunk
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 2
 Reading The Jpeg
 And overwriting next chunk
 Freelist
-head \
-XQ po
-aie oie) ale
 Free JPEG
 Chere Buffer Free Free
 Chunk 28
@@ -526,18 +510,15 @@ Chunk
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 2%
 Making a fake Chunk Return
 Address
 point to the stack
 Freelist
-ne Sia 7 9// Ss) S48
-Ay? 72 Shelicode Ue! Vg
 Free JPEG
 Chunk Buf fer Fake Free Free
 Chunk Chunk 29
@@ -549,21 +530,12 @@ Chunk Chunk 29
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploiting a Heap Overflow in Little Kernel
-Stack
 Step 3
-Af id oe next Shellcode
-— address
 Freelist
-head _*
-ne Y~byYYyyy ee WY), Sle
-ie, 73//)| Shellcode CVs
-[ow 4 YY) Wp NON
-a JPEG
-F
 ins Buffer Fake Free Free
 Chunk Chunk 30
 Chunk
@@ -738,19 +710,13 @@ PIT default address pit_address = 0x4400; Uses GPT table exist = get_part_table(
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy to Bypass Odin Authentication
 PIT Flash Memory GPT
-md5hdr eee LIL md5hde
 PIT default |, LLL
-vbmeta_vendor v an | Me A vometa_vendor
-up_param “ woo. 7 up_param
-a md5hde = yA /
-“ vbmeta_vendor /* # ER
-J
-J
 up_param a
 43
 ```
@@ -761,20 +727,13 @@ up_param a
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy to Bypass Odin Authentication
 PIT Flash Memory GPT
-md5hdr eee LIL md5hde
 PIT default |, LLL
-vbmeta_vendor v 7 M A vometa_vendor
-up_param “ New aw up_param
-Ds up_pacam AA
-“ vbmeta_vendor /* ff
-f
-P
-J
 up_param a
 44
 ```
@@ -785,26 +744,16 @@ up_param a
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy to Bypass Odin Authentication
 PIT Flash Memory GPT
-md5hde Ra OLED, md5hde
-PIT default
-vbmeta_vendor v a WW A vometa_vendor
-‘. ,
 up_param New i Thy of / up_param
 up_param ff
-fx
-rs as
-[ NewPirT Fo 4
-P
 New PIT if
-rs
-up_param up_pacam = &
 vbmeta_vendor
-md5hdr
 45
 ```
 
@@ -814,21 +763,17 @@ md5hdr
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy to Bypass Odin Authentication
 PIT Flash Memory GPT
-mdShde [one PT mdSihde
-PIT default
-vbmeta_vendor v a “S. pit
 up_param we New up_param
-up_param
 | New PIT
 New PIT
 up_param up_param
 vbmeta_vendor
-mdShde
 46
 ```
 
@@ -838,15 +783,12 @@ mdShde
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Strategy to Bypass Odin Authentication
 PIT Flash Memory GPT
-md5hde SVU ) mdshde |
-PIT default, A Yooh
-vb ta_vesdor ne ef pit
-up param New | up_param
 up_param /
 New PIT
 New PIT
@@ -890,7 +832,8 @@ md5hde
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Targeting ARM Trusted Firmware
@@ -910,18 +853,17 @@ LK — Android
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Targeting ARM Trusted Firmware
 Our next tar get
 EL3 ELI ELO
 : ARM Trusted
-Firmware
 Boot ROM Preloader TEEGRIS
 Secure World
 Normal World
-LK Andtoid
 52
 ```
 
@@ -931,7 +873,8 @@ LK Andtoid
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Communication between NSW and SW
@@ -939,23 +882,14 @@ ELO Userland ELI Kernel
 Be ginOperation()
 Keystore
 seryice
-yy yj) iy /dev/tzdev
-L/BEONICE 7
-i’. tziwsock
 SMC.
 on an, Secure ELI
 Monitore
-Yih
 TEEGRIS
 Kernel
 Secure ELO
 TA
-MK
-i
-a
-A) Shared
 Memory
-|Keymaster TA
 53
 ```
 
@@ -1075,13 +1009,13 @@ uint* global_array = (uint *)0x4ce2f578; [...] if (smcid == 0x82000526) { out_va
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SVE-2023-2215 (CVE-2024-20820)
 IF WE.COULD MMAP ANY
 =—=PHYSICAL ADDRESS IN ATF
-y.
 “THAT WOULD BE GREAT
 ```
 
@@ -1189,7 +1123,8 @@ _Can we use this vulnerability to leak Keystore keys?_
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Android Keystore system
@@ -1278,15 +1213,14 @@ SafetyNet detects the exploit ■ Possibly through heuristics to detect Magisk
 
 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Certificate Chain
 Application Key Cert
 Android Keystore Key Cert
-[om
 GAK Cect
-jew
 ROOT Certificate
 Self
 Signed
@@ -1299,7 +1233,8 @@ Signed
 
 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Certificate Chain
@@ -1323,7 +1258,8 @@ Signed
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Certificate Chain
@@ -1334,14 +1270,12 @@ servers
 Application Key Cert
 | Sign
 Android Keystore Key Cert
-| im
 GAK Cert
 ] Sign
 ROOT Certificate
 Generated at
 first boot
 Same for all
-Le Samsung AZZ
 >
 Self
 Signed
@@ -1354,7 +1288,8 @@ Signed
 
 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Certificate Chain
@@ -1367,16 +1302,12 @@ Application Key Cert
 Android Keystore Key Cert
 Sign
 GAK Cert
-| ese
 ROOT Certificate
 Root of trust
 verifiedBootKey:
-07EFE057CEBF085AAA79D1FB2090CCCB59
-9D6A51B027FEABF1 23FD78E84D3D63
 deviceLocked: true
 verifiedBootState: Verified
 verifiedBootHash:
-E07ADF185A36CE4A2FED204CF9C3103D54
 1B7A90305F89785154A460688553E0
 OS version
 130000

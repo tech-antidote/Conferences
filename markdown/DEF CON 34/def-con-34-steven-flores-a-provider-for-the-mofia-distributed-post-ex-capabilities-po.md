@@ -4,7 +4,7 @@ speakers: ["Steven Flores"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Steven Flores - A Provider for the MOFia - Distributed Post-Ex Capabilities - Po.pdf"
 pages: 36
 sha256: "2f9bc31624bfdd74f9e516b59b04dd41ac417c0686c5c8c17340c8ebab003f41"
@@ -12,15 +12,20 @@ text_chars: 12647
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:28:05Z"
+converted_at: "2026-08-12T06:44:02Z"
 ---
 # A Provider for the MOFia - Distributed Post-Ex Capabilities
 
 **Speakers:** Steven Flores  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Steven Flores - A Provider for the MOFia - Distributed Post-Ex Capabilities - Po.pdf` (36 pages)
+
 
 ## Slide 1
 

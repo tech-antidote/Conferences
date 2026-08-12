@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Gaston Aznarez&Federico Kirschbaum&Dan Borgogno_Root From Kilometers Away Ubiquiti AirMax RCE.pdf"
 pages: 120
 sha256: "994094fda60a15a894412b2c837971dda32d740b06ebd164393060a0cc51b609"
-text_chars: 44414
-ocr_pages: 55
+text_chars: 37097
+ocr_pages: 53
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:11:20Z"
+converted_at: "2026-08-12T05:35:54Z"
 ---
 # Root From Kilometers Away Ubiquiti AirMax RCE
 
 **Speakers:** Gaston Aznarez, Federico Kirschbaum, Dan Borgogno  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Gaston Aznarez&Federico Kirschbaum&Dan Borgogno_Root From Kilometers Away Ubiquiti AirMax RCE.pdf` (120 pages)
+
 
 ## Slide 1
 
@@ -64,7 +70,8 @@ Information Classification: General
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? » Obsession? You
@@ -72,7 +79,6 @@ think?
 Esta era la del jueves 20:23 W
 Jajajajaja 55.03 w
 20:23
-a Thread c= fD
 Direct message
 fedek A}
 ~ Nov 10th, 2025 at 1:01 PM
@@ -87,19 +93,18 @@ Site sirve de consuelo 50...
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED?
 € a) LU1AQS
 December 11, 2025
-a)
 € A LU1AQS
 Esta era la del jueves
 20:23
 Site sirve de consuelo 50...
 Ck
-&
 20:23 W
 Jajajajaja 55.03 w
 ~
@@ -119,18 +124,16 @@ think?
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-Ve UNG, NYS VEINS 19:08 W/
-€ A LU1AQS Ch" *
 December 11, 2025 < € LU1AQS Ck
 September 1, 2025
 Esta era la del jueves
 Jajajajaja
 20:23
-Thread = 7
 Direct message
 fedek A}
 Nov 10th, 2025 at 1:01 PM
@@ -145,19 +148,15 @@ Site sirve de consuelo 50...
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED?
 December 11, 2025 <€ € LU1AQS Ck
 Esta era la del jueves
-Ve UNG, NYS VEINS 19:08 W/
 September 1, 2025
-€ (a) LU1AQS Oo ’&
-REIEIEIEIE)
->
 20:23
-€ Thread < @
 Direct message
 Aparecen por todos lados
 16:35 W/ ~ Nov 10th, 2025 at 1:01 PM
@@ -176,19 +175,15 @@ brew cleanu HOW DID THIS STARTED?
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-Ve UNG, NYS VEINS 19:08 W/
 <€ € LU1AQS o ° September 1, 2025
-€ A LU1AQS O ®&
 December 11, 2025 <€ € LU1AQS Ck
 Esta era la del jueves Ct
-REIEIEIEIE) |
-= ;
 September 8, 2025
-< @ wisas Oo &
 Direct message 14:56
 September 9, 2025
 Aparecen por todos lados
@@ -207,11 +202,11 @@ brew cleanu HOW DID THIS STARTED?
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-Ve UNG, NYS VEINS 19:08 W/
 <€ 2 LU1AQS o ° . September 1, 2025
 December 11, 2025
 Aparecen por todos lados
@@ -220,17 +215,11 @@ Aparecen por todos lados
 September 8, 2025
 >
 4
-‘See
-» :
 Y
-60 ~~ 4 14:56
 September 9, 2025
 Once you see them 44.35
-“A
 +16
 4
-;
-© meseoe «a |
 11
 ```
 
@@ -242,22 +231,15 @@ Once you see them 44.35
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED? = gbsession? You
-Ve UNG, NYS VEINS 19:08 W/
-ye A LU1AQS Oo &
-Srna: 8, 2025
 14:56
 September 9, 2025
 Aparecen por todos lados
-16:35 W/
 Once you see them 44.35
-‘ ow
-THEY ARE see 4! Ein So
-ier
-«= imgflip.com
 12
 ```
 
@@ -269,7 +251,8 @@ ier
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW DID THIS STARTED?
@@ -287,7 +270,8 @@ think?
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THEY ACTUALLY ARE
@@ -302,7 +286,6 @@ of 4 million entrepreneurial operators and systems integrators who engage in tho
 information, join our community at http://www.ubnt.com.
 Ubiquiti, Ubiquiti Networks, the U logo, UBNT, airMAX, UniFi, airFiber, mFi, EdgeMAX and AmpliFi are registered
 trademarks or trademarks of Ubiquiti Networks, Inc. in the United States and other countries.
-2017
 14
 ```
 
@@ -312,7 +295,8 @@ trademarks or trademarks of Ubiquiti Networks, Inc. in the United States and oth
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THEY ACTUALLY ARE
@@ -322,7 +306,6 @@ Power of Our Business Model
 ¢ Superior product at disruptive price
 ¢ Shipped|37+ million airMAX®|units to ~60 countries (life-to-date)
 WJ Copyright © Ubiquiti Networks, Inc. 2017
-is)
 ```
 
 ## Slide 16
@@ -333,7 +316,8 @@ CHAT GPT Amount &&%R#
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THEY ACTUALLY ARE
@@ -382,7 +366,8 @@ WE DID WHAT EVERYONE WOULD DO… WE FOUND SOME ANTENNAS
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WE DID WHAT EVERYONE WOULD DO...
@@ -398,11 +383,9 @@ Qantenas Q antena
 Q antenas para carro
 © Enviar mensaje
 Usado - Como nuevo
-vine
 Geheral
 San Martin
 Q antena para tv Q antenas led Q antena digital tv
-BR Guardar
 Q antena para auto
 @ Compartir
 20
@@ -446,13 +429,13 @@ WE COULDN’T CONNECT TO THE WI-FI
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WE COULDN'T CONNECT TO THE WI-FI
 Networks
 Suved
-—  faraday_poc
 Saved / Connection failure
 Saved
 25
@@ -472,7 +455,8 @@ That was easy
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GETTING A SHELL INTO THE ANTENNA
@@ -513,7 +497,8 @@ That was easy, **too easy**
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GETTING A SHELL INTO THE ANTENNA
@@ -528,8 +513,6 @@ KMNXWM KM WMV USERSPACE mitigations
 KMMMMMKONM WAM Mitigation Present?
 KMMMMMMMMM WMMMMMMM x
 LMMMMMMMMM WMMMMMN: xK NX / non-exec stack (WAX) no
-MMMMMMMMM 1. »WMMMP dXM: Stack canaries (SSP) no
-MMMM, , »,aaadXMMd PIE _ no
 LNMVMMMMW:-XOxo1.ccLodOKMMMMWc ASLR of the main image no
 RELRO Capplications) no
 XMMMMM MMMMMMMMMMMMNo .
@@ -539,7 +522,6 @@ KERNEL / PLATFORM mitigations
 BusyBox v1.24.2 (2025-08-22 19:57:45 EEST) built-in shell Cash) Mitigation Present?
 Enter 'help' for a list of built-in commands.
 Userspace ASLR (va_space) weak
-XW.v6.3.22# uname -a Ws Poges, (kerma es? ies
 .VO.5. KASLR
 Linux NanoBeam M5 16|2.6.32.71|#1 Fri Aug 22 20:05:15 EEST 2025) mips| GNU/Linux SC yaponergcps are 238
 XW.v6.3.22# id Module signing no
@@ -556,19 +538,18 @@ NanoBeam M5 16
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE DOES THAT INFO COME FROM?
 MAC Address Device Name Radio Mode Encryption
-a02.11ac — WPAZ
 10:64: 1B:BE:FA:34 airMAX AC WPA2
 44:D9:E7:52:4D:31 faraday_poc NanoBeam M5 16 802.11n airMAX NONE
 XW.v6.3.22# iwlist ath® scan
 athd Scan completed :
 Cell @1 - Address: 78:8A:20:A2:42:97
 ESSID: "ubnt"
-Mode :Master
 Frequency:5.185 GHz CChannel 37)
 Quality=57/94 Signal level=-39 dBm Noise level=-103 dBm
 Encryption key:off
@@ -577,18 +558,12 @@ Noise, dBm
 -89 / -96
 -52 / -99
 -54 / -96
-Bit Rates:54 Mb/s _ > ~NanoBeam MS 16
-Extra: ubnt=0e4e616e6f4265616d204.d352031360000
-Extra: ieee_mode=8@2.11n
 Cell @2 - Address: 1C:6A:1B:C4:67:FD
 ESSID:""
 Mode :Master
 Frequency:5.18 GHz (Channel 36)
 Quality=56/94 Signal level=-4@ dBm Noise Level=-103 dBm
-Encryption key: off
 Bit Rates:54 Mb/s
-Extra: ubnt=05
-F Extra: ieee_mode=8@2.11ac
 ```
 
 ## Slide 31
@@ -701,7 +676,8 @@ More TDMA capable devices
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - JUST FRAMES Over The Air
@@ -724,7 +700,6 @@ Control Wrapper
 NDP Announcement
 Beamforming Poll
 CF-Ack
-CF-PoLL
 CF-Ack + CF-Poll
 QoS Data + CF-Ack
 QoS Data + CF-Poll
@@ -740,7 +715,8 @@ QoS CF-Ack + CF-Poll
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - JUST FRAMES Over The Air
@@ -763,7 +739,6 @@ Control Wrapper
 NDP Announcement
 Beamforming Poll
 CF-Ack
-CF-PoLL
 CF-Ack + CF-PolLL
 QoS Data + CF-Ack
 QoS Data + CF-Poll
@@ -779,26 +754,18 @@ QoS CF-Ack + CF-Poll
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - A CONNECTION
 STA AP
 Me Beacoh
 Probe Re quest >
-g__—-_ Probe Response
-—
 <
 F V
 <— huthent
-————
-Authentication (es) ——___-»
-ication (Success)
-Assacint ion Request —___»
-_
 Assaciatio n Response
-L}- Way Handshake >
-Encrypted Data —
 V
 41
 ```
@@ -811,146 +778,82 @@ V
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PACKET CAPTURE TIME
-404060™8 68 G
-No.
-5881
-5882
-5883
-5885
-5886
-5889
-5890
-5892
-5893
-5896
-5897
-5898
-5899
-5900
-5901
-5902
-5903
-5904
-5913
-5933
-Tn
+
+[Wireshark window - ubnt_ac_multiple_reconnections.pcapng]
+
+Filter: ((wlan.sa == 1c:6a:1b:c4:67:fd || wlan.sa == 1c:6a:1b:be:fa:3a) && (wlan.da == 1c:6a:1b:c4:67:fd || wlan.da == 1c:6a:1b:be:fa:3a || wlan.da == ff:ff:ff:ff:ff:ff )) && !(wlan.fc.type_s
+
+No.   Time        Source              Destination         Info
+5881  85.716759   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Probe Request, SN=259, FN=0, Flags=........C, SSID=W
+5882  85.717099   Ubiquiti_be:fa:3a   Broadcast           Probe Request, SN=260, FN=0, Flags=........C, SSID=W
+5883  85.717444   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Probe Response, SN=2746, FN=0, Flags=........C, BI=1
+5885  85.718496   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Probe Response, SN=2747, FN=0, Flags=........C, BI=1
+5886  85.739038   Ubiquiti_c4:67:fd   Broadcast           Beacon frame, SN=2748, FN=0, Flags=........C, BI=100
+5889  85.748085   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Probe Request, SN=261, FN=0, Flags=........C, SSID=W
+5890  85.748094   Ubiquiti_be:fa:3a   Broadcast           Probe Request, SN=262, FN=0, Flags=........C, SSID=W
+5892  85.749297   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Probe Response, SN=2750, FN=0, Flags=........C, BI=1
+5893  85.841836   Ubiquiti_c4:67:fd   Broadcast           Beacon frame, SN=2751, FN=0, Flags=........C, BI=100
+5896  85.886664   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Probe Request, SN=256, FN=0, Flags=........C, SSID='
+5897  85.886686   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Probe Response, SN=2752, FN=0, Flags=........C, BI=1
+5898  85.887629   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Authentication, SN=257, FN=0, Flags=........C
+5899  85.887636   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Authentication, SN=2753, FN=0, Flags=........C
+5900  85.889551   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Association Request, SN=258, FN=0, Flags=........C
+5901  85.891087   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Association Response, SN=256, FN=0, Flags=........C
+5902  85.902799   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Key (Message 2 of 4)
+5903  85.904167   Ubiquiti_c4:67:fd   Ubiquiti_be:fa:3a   Key (Message 3 of 4)
+5904  85.906988   Ubiquiti_be:fa:3a   Ubiquiti_c4:67:fd   Key (Message 4 of 4)
+5913  86.048352   Ubiquiti_c4:67:fd   Broadcast           Beacon frame, SN=2755, FN=0, Flags=........C, BI=100
+5933  86.148396   Ubiquiti_c4:67:fd   Broadcast           Beacon frame, SN=2756, FN=0, Flags=........C, BI=100
+
 > Frame 3197: Packet, 179 bytes on wire (1432 bits), 179 bytes captured (1432 bits) on interface -,
-| Time
-85.716759
-85.717099
-85.717444
-85.718496
-85.739038
-85.748085
-85.748094
-85.749297
-85.841836
-85.886664
-85.886686
-85.887629
-85.887636
-85.889551
-85.891087
-85.902799
-85.904167
-85.906988
-86.048352
-86.148396
-| Source
-Ubiquiti_be: fa:3a
-Ubiquiti_be
-Ubiquiti_c4:
-Ubiquiti_c4
-Ubiquiti_c4
-Ubiquiti_be:
-Ubiquiti_be
-Ubiquiti_c4
-Ubiquiti_c4:
-Ubiquiti_c
-Ubiquiti_c
-> Radiotap Header v@, Length 36
+> Radiotap Header v0, Length 36
 > 802.11 radio information
-v IEEE 802.11 QoS
-Type/Subtype:
-» Frame Control
-sees 2200
-Seen ose
-1000 .... =
-> Flags: @x@3
--@0@ @000 0011 1100 = Duration:
-> Receiver address: Ubiquiti_c4:67:fd (1c:6a:1b:c4:67: fd)
-RCcenaBe CPT RB QQakhs
-fi | ((wlan.sa == 1¢:6a:1b:c4:67-fd || wlan.sa == 1c:6a:1b:be:fa:3a) && (wlan.da == 1¢:6a:1b:c4:67:fd || wlan.da == 1c:6a:1b:be-fa:3a || wlan.da == ff-ff-ff-ff-ff-ff )) && !(wlan.fc.type_
-| Destination | Info
-Ubiquiti_c4:67:fd
-Broadcast
-Ubiquiti_be: fa:3a
-Ubiquiti_be: fa:3a
-Broadcast
-Ubiquiti_c4:67:fd
-Broadcast
-Ubiquiti_be: fa:3a
-Broadcast
-Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
-Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
-Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
-Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
-Ubiquiti_c4:67:fd
-Broadcast
-Broadcast
-Data, Flags: ==. ef IC
-QoS Data (0x0028)
-Field: 0x8803
-Version: @
-Type: Data frame (2)
-Subtype: 8
-Frame subtype (wlan.fc.subtype), 4 bits
-60 microseconds
-Receptor Wifi Tp Link T2u Ac600
-Plus Adaptador Red Usb Wifi Dual
-Band Internet
-seveeeC, SSIDS 1S whkke
-a -$35.647, 35.64
-BB ubnt_ac_multipie_reconnections.pcapng
-Probe Request, SN=259, FN=0, Flags=
-Probe Request, SN=260, FN=0, Flags=
-Probe Response, SN=2746, FN=0, Flags=
-Probe Response, SN=2747, FN=0, Flag
-Beacon frame, SN=2748, FN=0, Flags=
-Probe Request, SN=261, FN=0, Flags=
-Probe Request, SN=262, FN=0, Flags=
-eC, B
-veveeaC, SSID=
-.C, SSID=
-Probe Response, SN=2750, =0, Flag Gc
-Beacon frame, SN=2751, FN=0, Flags=........C, B
-Probe Request, SN=256, FN=0, Flags= «C, SSI
-Probe Response, SN=2752, FN=0, Flag
-Authentication, SN=257, FN=0, Flags
-Authentication, SN=2753, FN=@, Flags=
-Association Request, SN=258, FN=0, Flag
-Association Response, SN=256, FN=0, Flags=.......+C
-Key (Message 2 of 4)
-Key (Message 3 of 4)
-Key (Message 4 of 4)
-Beacon frame, SN=2755, FN=0, Flags=
-Beacon frame, SN=2756, FN=0, Flags:
+v IEEE 802.11 QoS Data, Flags: ......FTC
+    Type/Subtype: QoS Data (0x0028)
+    v Frame Control Field: 0x8803
+       .... ..00 = Version: 0
+       .... 10.. = Type: Data frame (2)
+       1000 .... = Subtype: 8
+     > Flags: 0x03
+    .000 0000 0011 1100 = Duration: 60 microseconds
+  > Receiver address: Ubiquiti_c4:67:fd (1c:6a:1b:c4:67:fd)
+  > Transmitter address: Ubiquiti_be:fa:3a (1c:6a:1b:be:fa:3a)
+
+0000  00
+0010  04
+0020  00 00 de 00 88 03 3c 00   1c 6a 1b c4 67
+0030  1b be fa 3a 1c 6a 1b c4   67 fd 10 00 1c
+0040  fa 3a 07 00 aa aa 03 00   00 00 88 8e 01
+0050  02 03 0a 00 00 00 00 00   00 00 00 00 02
+0060  00 00 00 00 00 00 00 00   00 00 00 00 00
+0070  00 00 00 00 00 00 00 00   00 00 00 00 00
+0080  00 00 00 00 00 00 00 00   00 00 00 00 00
+0090  00 00 00 00 00 00 00 00   00 00 00 00 00
+00a0  04 4f 5e 42 15 a5 95 d6   d1 7a 3f 76 b0
+00b0  61 93 9a
+
+Frame subtype (wlan.fc.subtype), 4 bits        Packets: 15097 - Displayed: 2057 (13.6%)        Profile: Default
+
+[Overlaid product listing screenshot, right side]
+Ver más productos marca TP-Link
+Nuevo | +10 mil vendidos
+MÁS VENDIDO   2º en Placas de Red
+Receptor Wifi Tp Link T2u Ac600 Plus Adaptador Red Usb Wifi Dual Band Internet
+4.8 (4093)
+$ 35.647      ~USD $20
+Mismo precio en 6 cuotas de $ 5.941,17 sin tarjeta
+Precio sin impuestos nacionales: $ 32.260
+Ver los medios de pago
+
 Lo que tenés que saber de este producto
-* Operacion e
-permite mayor 2
-actividadeg
-ista 14 MB/s en
-0020
-rc
-Packets: 15097 - Displayed: 2057 (13.6%) Profile: Default
+- Operación en doble ban[...] GHz que permite mayor e[...]on para actividades[...]
+- Tasa d[...]33 Mbps en 5 GH[...]asta 14 MB/s en
+
 42
 ```
 
@@ -958,7 +861,8 @@ Packets: 15097 - Displayed: 2057 (13.6%) Profile: Default
 
 IT WORKS LIKE A NORMAL IEEE 802.11 WIFI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Source
@@ -966,9 +870,7 @@ Ubiquiti_c4:67:fd
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
@@ -984,7 +886,6 @@ Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
 Ubiquiti_c4:67:fd
 Info
 Beacon frame, SN=2748,
@@ -1008,7 +909,8 @@ Key (Message 4 of 4)
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IT WORKS LIKE A NORMAL IEEE 802.11 WIFI
@@ -1018,9 +920,7 @@ Ubiquiti_c4:67:fd
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
@@ -1035,7 +935,6 @@ Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
 Ubiquiti_be:fa:3a
 Ubiquiti_c4:67:fd
-Ubiquiti_be: fa:3a
 Ubiquiti_c4:67:fd
 Info
 Beacon frame, SN=2748,
@@ -1060,7 +959,8 @@ Broadcast & Probing Open System Auth. and Assoc
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IT WORKS LIKE A NORMAL IEEE 802.11 WIFI
@@ -1136,7 +1036,8 @@ Broadcast & Probing Open System Auth. and Assoc 4-Way Handshake
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IT WORKS LIKE A NORMAL IEEE 802.11 WIFI
@@ -1220,7 +1121,8 @@ What we expect from WIFI
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - AMANAGEMENT FRAME
@@ -1230,12 +1132,8 @@ Boa 4
 Fived Para mS
 Tagged Po.rems
 Treiler |
-Trpormation Erements
-( J
 Tag Length Vaive |
 TLV
-O@ —> SSID
-/ 4 —» Svupparted ates
 3 —> Channe|
 221 —y Vendor Spelif ic
 48
@@ -1247,7 +1145,8 @@ O@ —> SSID
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - AMANAGEMENT FRAME
@@ -1257,12 +1156,8 @@ Boa 4
 Fived Para mS
 Tagged Po.rems
 Treiler |
-Tnpormation Etements
-( J
 Tag Length Vaive |
 TLV
-O@ —> SSID
-yy, 4 —» Svupparted ates
 3 —> Channe|
 221 —y Vendor Spelif ic
 49
@@ -1288,7 +1183,8 @@ The workhorse of the proprietary protocols
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 802.11 BASICS - A FRAME BODY
@@ -1296,7 +1192,6 @@ v IEEE 802.11 Wireless Management
 > Fixed parameters (12 bytes)
 v Tagged parameters (230 bytes)
 >
-vv Vv Vv Vv Vv MV MVM MVM MVM MVM MVM MY MYM
 Tag:
 Tag:
 Tag:
@@ -1369,12 +1264,12 @@ If you are interested  in Vendor IE check @6e726d deck
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MORE ABOUT INFORMATION ELEMENTS
 fo} Ke)
-NS
 Andrés Blanco
 @6e726d
 If you are interested in Vendor IE check @6e726d deck
@@ -1399,13 +1294,13 @@ NanoBeam M5 16
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RECAP - EXTRA INFORMATION
 XW.v6.3.22# iwlist ath@ scan
 Scan completed :
-ath
 Cell 01 -
 Cell 02 -
 Address: 78:8A:20:A2:42:97
@@ -1413,18 +1308,13 @@ ESSID: "ubnt"
 Modes Master NanoBeam M5 16
 Frequency:5.185 GHz CChannel 37)
 Quality=57/94 Signal Level=-39 dBm Noise level=-103 dBm
-Encryption key: off
 Bit Rates:54 Mb/s
-Extra: ubnt=0e4e616e6f4265616d204d352031360000
 Extra: i1eee_mode=802.11n
 Address: 1C:6A:1B:C4:67:FD
 ESSID:""
-Mode :Master
 Frequency:5.18 GHz (Channel 36)
 Quality=56/94 Signal level=-4@ dBm Noise level=-103 dBm
-Encryption key: off
 Bit Rates:54 Mb/s
-Extra: ubnt=@5
 Extra: ieee_mode=8@2.11ac
 54
 ```
@@ -1435,24 +1325,14 @@ AIRMAX IE
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-AIRMAX IE
-dd |Len | 00:0C:%z ¢ | Deve Name
-Dd |Len | 00:15:6D FE: FF: FF | Pag loo a ;
-PDD |Len | 00:29:22 FF: FF: FF | Pag load
-OUL
-55
-```
-
 ## Slide 56
 
 ###### INFORMATION ELEMENTS DATA
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INFORMATION ELEMENTS DATA
@@ -1474,7 +1354,8 @@ Vendor Specific Data: ffff020100306cb4acbf04471336476fe1494da40c5alf2bd59d7¢
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INFORMATION ELEMENTS DATA
@@ -1488,7 +1369,6 @@ OUI: 00:27:22 (Ubiquiti Inc)
 Vendor Specific OUI Type: 255
 Vendor Specific Data:
 f f f£020100306cb4acbf04471336476fe1494da40c5a1f2bd59d75
-}
 0130 23 04 #:
 57
 ```
@@ -1501,7 +1381,8 @@ Encrypted?
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INFORMATION ELEMENTS DATA
@@ -1514,7 +1395,6 @@ Tag length: 58
 OUI: 00:27:22 (Ubiquiti Inc)
 Vendor Specific OUI Type: 255
 Vendor Specific Data: | ff ff020100306cb4acbf04471336476fe1494da40c5a1f2bd59d75
-}
 0130 23 04 #:
 Encrypted?
 ```
@@ -1531,81 +1411,50 @@ Encrypted?
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WE STARTED REVERSE ENGINEERING
 afree_private
-amalloc_ private
-asf_print_category_private
 afree_private
 amalloc_ private ath_dfs_prescan
-gpio_line_config
-gpio_line_set
-‘ath_dfs_prescan_register | ubnt_poll_host
-ath_dfs_prescan_unregiste;
-afree_private \_dts_f Lt
 amalloc_private
-afree_private
 amalloc_private
-asf KTS asf_print_ctrl_register_private Zo ath_hook hgst_register
-asf_print_ctri_unregister_private ath dfs ath_kickout Kode_notify
-asf_prin_mask_sét ieee80211_fkd_node
 (+1 more) ieee80211_frek node
-ieee80211_indicate_Ngde_assog
 (+5 more)
-board_identify
 ubnthal_get_radio_cap
 ath_process_spectraldata
 is_spectral_phyerr
-Spectral_attach
 spectral_check_hw_capability
 spectral_control
 (+7 more)
-ath_dfs_module_locked
-ath_dis_register
 ath_dfs_unregister
 afree_private
-amalioc_private
-g_pktlog funcs
 ath_spectral
 i
 ACBEMinfree
 spectral_attach ACBKMinfree
-afree_private spectral_check_hw_capability ACVIMinfree
-amalloc_private spectral_control ACVOMinfree
 asf_amem_oreate spectral_detach CABMinfree
 asf_amem_destroy spectral_process_phyerr (+20 more)
-asf_amem_setup
 (+1 more)
 (#5 more)
 afree_private
 amalloc_private
-gpio_int_disable
 gpio_int_enable
-gpio_int_init
-gpio_int_uninit
 board_identify
-‘gpio_line_config
-ath_get_x_chainmask
 gpio_line_get ath_rate_attach
-gpio_line_set ath_rate_create_vap
 ubnthal_get_eeprom_data ath_rate_detach
-SN
 (+11 more) ath_rate_findrate
 (+16 more)
 ubnthal
 _ath_hal_attach
-ath_hal_computetxtime
 ath_hal_detach
 ath_hal_display_tpctables
-ath_hal_enabledANI
 ~. (#14 more)
 ubnt_eth_phy
 ubnthal_get_eth_port_count
 ubnthal_get_radio_cap
-ieee80211_leds_register
-jeee80211_leds_unregister
 ath_hal_probe
 ath_hal_get_device_info
 adf_os_mem_alloc_outline
@@ -1613,11 +1462,7 @@ adf_os_mem_free_outline
 adf_os_spin_lock_bh_outline
 adf_os_spin_unlock_bh_outline
 rycode
-urt_count_group_countrie:
-ath_hal_log_ani_callback_register
 board_identify
-gpio_led_set :
-led_blink_in_progress rssi-leds
 urd_alpha2_to_countrycode
 urt_count_group_countries
 ```
@@ -1634,7 +1479,8 @@ Modified version of Ath9k
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IMPORTANT KERNEL MODULES
@@ -1644,9 +1490,6 @@ ath_hal_set_config_param
 ath_hal_reg_write
 ath_hal_reg_read
 ath_hal_probe
-ath_hal_subVendorID
-computetxtime
-_hal_getNdevice_info
 ath_hal_set_config_param
 ath_hal_mhz2ie
 ... (+15 more)
@@ -1690,49 +1533,32 @@ HOW ARE THE IEs BUILD
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW ARE THE IEs BUILD
-mame
 ——Ubnet- poll KO
 >| recve mame @)
-cingme
-t>
-on_[ M59] _1x- Hoon () b
-Send— ; sas (.) <
-~ ubnt_poll_host_on_beacon_tx
-| 00018878 jal
 ubnt_poll_host_proto_insert_ie
 ~ ubnt_poll_host_on_deauth_tx
 |< 90019060 jal
 ubnt_poll_host_proto_insert_ie
-~ ubnt_poll_host_on_probe_req_tx
 | @0019@dc jal
 ubnt_poll_host_proto_insert_ie
 ~ ubnt_poll_host_on_assoc_req_tx
 |< @001947c jal
 ubnt_poll_host_proto_insert_ie
-~ ubnt_poll_host_on_assoc_resp_tx
 | 90019fcc jal
 ubnt_poll_host_proto_insert_ie
-Parse -he() |
-on_[ M59] _ rx- Hoon ( ) e
-ThSert re Q|
 ~ ubnt_poll_host_on_beacon_rx
-| @0018b8c jal
 ubnt_poll_host_proto_parse_ie
 ~ ubnt_poll_host_on_deauth_rx
-|< @9018df4 jal
 ubnt_poll_host_proto_parse_ie
 ~ ubnt_poll_host_on_probe_reg_rx
-l< 60019198 jal
 ubnt_poll_host_proto_parse_ie
-~ ubnt_poll_host_on_assoc_regq_rx
-|< 00019760 jal
 ubnt_poll_host_proto_parse_ie
 ~ ubnt_poll_host_on_assoc_resp_rx
-|< @e01aefe@ jal
 ubnt_poll_host_proto_parse_ie
 62
 ```
@@ -1747,7 +1573,8 @@ ubnt_poll_host_proto_parse_ie
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENCRYPTION? | DON’T THINK SO
@@ -1773,15 +1600,10 @@ out_ie_enc = &out_ie_enc[@x16]
 Validated with mtscan by Konrad Kosmatka:
 o github.com/kkonradpl/mtscan/
 — 802717 MSG
-SRC] | DST | FFEnctyrcet+ S|
 Mac| |Mac Data
-v Vv
 [SHA 1]
 y
 Key
-J
-AES -128-ECB|-
-y
 Clear Data |
 63
 ```
@@ -1796,7 +1618,8 @@ Clear Data |
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENCRYPTION? | DON’T THINK SO
@@ -1818,7 +1641,8 @@ F o github.com/kkonradpl/mtscan/
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENCRYPTION? | DON’T THINK SO
@@ -1836,9 +1660,6 @@ SSID: 'COV-LOREA'
 Cipher[0:8]: 75c93c59b41f63b8
 Ciphertext (48 bytes):
 Plaintext (48 bytes):
-..#.yus.|..k...
-weet Vi.
-Seon COV-LORE
 A-AP..COV-LOREA.
 65
 ```
@@ -1849,7 +1670,8 @@ A-AP..COV-LOREA.
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IT’S DECRYPTED BUT... WHAT IS THE STRUCTURE?
@@ -1863,19 +1685,16 @@ Plaintext (48 bytes):
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AIRMAX M FRAMES
-r— Plaintext = AES-128-ECB
 Version
-00: 15 :6D FF. FFFF t5 pe
 Mac eee |
-t spe T7>1 Beacon
 > 2 Association Req
 Ls2 Association Res
 — Plaintext
-00:00:42 coe Device Name wee
 V
 O1 | len} Data
 ```
@@ -1886,7 +1705,8 @@ O1 | len} Data
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AIRMAX AC FRAMES
@@ -1905,21 +1725,17 @@ Encrypted Header
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AIRMAX AC FRAMES
 Type: 1 Beacon
-mac | Cap. Flags | mode Radoname ne a
-Type: 2 Assoc Req
-creinmain [ean oge [= Sat ee) fe] es
 Type:3 Assoc Res
 eee! Resa reine TX Power
 Type:y Probe Reg
 E mpt
-Type:4z Death
 | Nonce
-TOKEen
 69
 ```
 
@@ -1984,7 +1800,8 @@ TOKEen
 
 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING AIRMAX NETWORKS (in-the-wild)
@@ -2004,28 +1821,23 @@ x
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FINDING AIRMAX NETWORKS (in-the-wild)
 ote AirMAX Survey
-D))
 785 773 298156 754
 Discovered Networks 6
 Gerencia_SGHz - MIKROTIK AP 3686 5 8
 Aspen r ) - MIKROTIK TA 2406 St
 - MIKROTIK AP - 2406 se 779.2 -
-ubnt - AC_EMBEDDED F AP 2406 je 84
-PTMP-CerritoYcordoba c - ‘AC_EMBEDDED AP ah 763-8
-= ‘AC_EMBEDDED , : 72.4
 Norte. - ‘AC_EMBEDDED AP - - soil -77-7 -
-: ‘AC_EMBEDDED ,; 78.2
 CLMB ‘ - ‘AC_EMBEDDED AP - . 8
 AP CERRITO Y TUCUMAN F - ‘AC_EMBEDDED AP - 82.5
 ARMENON - MIKROTIK ap . 8
 Estrategias_2G - MIKROTIK ap = 82
 Comodoro - M_ENCRYPTED AP 85
-Eeninacadtt 7 an ceanennen aD ac
 ```
 
 ## Slide 77
@@ -2056,17 +1868,14 @@ Eeninacadtt 7 an ceanennen aD ac
 
 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HACKER DREA
 WITH OVER-
-EXPLOITS
-ies
 Fact #12. “
 Solving cri
-_b6fore jm
-mer. i
 79
 ```
 
@@ -2092,7 +1901,8 @@ mer. i
 
 82
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IF | TOLD YOU...
@@ -2105,7 +1915,6 @@ arg3[@x19] = .b
 // Where this size comes from???
 fedek 11:21AM
 Necesito mas memcpy’s
-Ge")
 FAA 1 reply Today at 5:27 PM
 82
 ```
@@ -2118,12 +1927,12 @@ FAA 1 reply Today at 5:27 PM
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IF | TOLD YOU...
 Custom protocols sound great
-until someone reverses them py castor Acree 10s
 Fri Aug 22 21:27:49 UTC 2025
 Fri Aug 22 21:27:50 UTC 2025
 Fri Aug 22 21:27:51 UTC 2025
@@ -2144,8 +1953,6 @@ Ae fedek 10:58 AM
 Necesito mas memcpy’s
 IMG_7466 ¥ & Gaston Aznarez 10:58 AM
 sospechoso (844 kB) »
-& A
-a»
 FAA 1 reply Today at 5:27 PM
 ```
 
@@ -2301,7 +2108,8 @@ They pay more for a LAN Vuln than a Vulnerability that can be exploited from kil
 
 94
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BUG BOUNTY PAYMENT
@@ -2324,26 +2132,22 @@ https://radiodx.pl/2020/08/5ghz-wifi-dx-record-denmark-logged-in-poland-745-km/
 
 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BUG BOUNTY PAYMENT
 The long-range tropospheric ducting propagation faded away at 7 UTC and I left the Dylewska Gora after 7 hours of continuous Wi-
 Fi DXing. I logged 4 networks via transbaltic paths.
 Gothenburg
-@)
 Aalborg
 Copenhagen Klaipeda
-°
-bd nark te aie x D> Lithuan
 Malmo
 Kaunas
 Gdynia
-fe)
 Gdarisk
 Lubeck
 Hamburg
-°Szczecin
 Bremen Bydgoszcz Bialystok
 E Poland
 The table below contains the farthest identified networks (= 350 km) received on August 12, 2020.
@@ -2395,7 +2199,8 @@ F https://radiodx.pl/2020/08/S5ghz-wifi-dx-record-denmark-logged-in-poland-745-k
 
 102
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 POC FROM KILOMETERS AWAY
@@ -2405,8 +2210,6 @@ ell (ash)
 16:05:04.440
 16:05:04.440
 16:05:04.478
-16:05:04.478 | |) | ed
-16:05:04.478 | - |_| Wit Al 4
 16:05:04.478 ILIWIRELESS FREEDOM
 16:05:04.503
 16:05:04.503 OpenWrt 24.10.4, r28959-29397011¢cc
@@ -2455,17 +2258,12 @@ POC FROM KILOMETERS AWAY v2
 
 105
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 POC FROM KILOMETERS AWAY v2 eee
-NIM \
-LULL
 a
-a
-ay
-TELL
-SAS Sasha
 Av. Juan de Garay
 Measure distar
 ck o
@@ -2484,38 +2282,46 @@ Total distance: 1.72 km (1
 
 107
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 FINDING AIRMAX ANTENNAS
+
 v AirMAX AC (Vendor Specific IE)
-OUI: 002722
-OUI Type: ffffff
-> Flags: @x@2
-Message Type: Beacon (1)
-Encrypted Length: 80
-Ciphertext: c286a8909dd964b5aa5d54996 fea596 f5dd5 f7685b70781eaal0be3b6a5
-[Decrypted payload (AES-128-ECB) ]
-[AES Key (HMAC-SHA1(dst,src)[:16]): 6483ef489f21bca28d029e86c55d9f69
-Version: 8
-Source MAC: Ubiquiti_6c:bd:a9 (78:8a:20:6c:bd:a9)
-Radio MAC (mac_@c): Ubiquiti_6c:bd:a9 (78:8a:20:6c:bd:a9)
-> Capability Flags: 0x00000002
-Mixed Mode: @
-Radioname: AP PTMP—CerritoYcordoba
-SSID: PTMP-—CerritoYcordoba
+     OUI: 002722
+     OUI Type: ffffff
+   > Flags: 0x02
+     Message Type: Beacon (1)
+     Encrypted Length: 80
+     Ciphertext: c286a8909dd964b5aa5d54996fea596f5dd5f7685b70781eaa10be3b6a5
+   v [Decrypted payload (AES-128-ECB)]
+       [AES Key (HMAC-SHA1(dst,src)[:16]): 6483ef489f21bca28d029e86c55d9f69
+       Version: 8
+       Source MAC: Ubiquiti_6c:bd:a9 (78:8a:20:6c:bd:a9)
+       Radio MAC (mac_0c): Ubiquiti_6c:bd:a9 (78:8a:20:6c:bd:a9)
+     > Capability Flags: 0x00000002
+       Mixed Mode: 0
+       Radioname: AP PTMP-CerritoYcordoba
+       SSID: PTMP-CerritoYcordoba
+
+[The "Version: 8" line is boxed in red.]
+
 > uv run python -m pyrmax discover ../../packets/ubnt_airmax_devices.pcapng
-78:8a:20:1¢c:98:1b (CAC)
-radioname "AP PTMP-CerritoYsarmiento'
-ssid *PTMP-CerritoYsarmiento'
-ac_msg_types BEACON
-ac_version 8
-cap_flags Qx0000002
-mixed_mode @Q
-frames 84
-first seen 1765842.012760
-last seen 1765842 . 718826
-P peers (broadcast only)
+
+  78:8a:20:1c:98:1b  (AC)
+    radioname      'AP PTMP-CerritoYsarmiento'
+    ssid           'PTMP-CerritoYsarmiento'
+    ac_msg_types   BEACON
+    ac_version     8
+    cap_flags      0x00000002
+    mixed_mode     0
+    frames         84
+    first seen     1765842.012760
+    last seen      1765842.718826
+    peers          (broadcast only)
+
+107
 ```
 
 ## Slide 108
@@ -2590,7 +2396,8 @@ ALL TOGETHER - DEMO 2
 
 116
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fl
@@ -2607,8 +2414,6 @@ FQ@:9F:C2:C8:F@:AD 192.168.37.
 104
 102
 100
-JHECVE-2026-21633 Detail
-C:L/PR:N/UI:N/S:U/C:H/I:H/A:H
 Name
 NanoBeam M5 16 "NanoBeam M5 16'
 UAP-AC-Pro-Gen2 ‘Piaget AP'

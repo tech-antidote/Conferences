@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Olivia Gallucci_When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering_Compressed.pdf"
 pages: 86
 sha256: "525b143eab3c90256caaaf30afb4138c697066c085948e1ab04656533dbcb31d"
-text_chars: 24748
+text_chars: 24076
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:14:25Z"
+converted_at: "2026-08-12T05:40:46Z"
 ---
 # When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering
 
 **Speakers:** Olivia Gallucci  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Olivia Gallucci_When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering_Compressed.pdf` (86 pages)
+
 
 ## Slide 1
 
@@ -40,7 +45,8 @@ Olivia Gallucci - Draft - Approved-Use Only
 
 Jonathan Levin Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Processes are runnable entities.
@@ -79,20 +85,20 @@ Interleavings
 
 Time ↓
 
-```
+\```
 T1:  A: read x
 B: x = x +1
 C: write x
 T2:      D: read x
 E: x = x +1
 F: write x
-```
+\```
 
-```
+\```
 One Possible Interleaving
 T1:  A     B     C
 T2:     D     E     F
-```
+\```
 
 iCode - https://www.youtube.com/watch?v=X9H2M7xMi9E
 
@@ -108,23 +114,23 @@ Interleavings
 
 Time ↓
 
-```
+\```
 T1:  A: read x
 B: x = x +1
 C: write x
-```
+\```
 
-```
+\```
 T2:      D: read x
 E: x = x +1
 F: write x
-```
+\```
 
-```
+\```
 One Possible Interleaving
 T1:  A     B     C
 T2:     D     E     F
-```
+\```
 
 iCode - https://www.youtube.com/watch?v=X9H2M7xMi9E
 
@@ -165,7 +171,8 @@ Vlog
 
 Vlog Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Developer Get Started Platforms Technologies Community Documentation Support Q
@@ -395,21 +402,21 @@ Olivia Gallucci - Draft - Approved-Use Only
 
 ##### `pthread_mutex_t` (blocks/sleeps, scheduler can help)
 
-```
+\```
 static pthread_mutex_t gMutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_lock(&gMutex);   // contended: thread can sleep
 // critical section
 pthread_mutex_unlock(&gMutex);
-```
+\```
 
 ##### `os_unfair_lock` (Darwin replacement for spin)
 
-```
+\```
 static os_unfair_lock gLock = OS_UNFAIR_LOCK_INIT;
 os_unfair_lock_lock(&gLock);   // contended: waiter parks
 // critical section
 os_unfair_lock_unlock(&gLock);
-```
+\```
 
 <u>https://blog.xoria.org/macos-tips-threading/ https://developer.apple.com/documentation/os/os_unfair_lock https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/pthread_mutex_init.3.html</u>
 
@@ -425,21 +432,21 @@ Olivia Gallucci - Draft - Approved-Use Only
 
 ##### `pthread_mutex_t` (blocks/sleeps, scheduler can help)
 
-```
+\```
 static pthread_mutex_t gMutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_lock(&gMutex);   // contended: thread can sleep
 // critical section
 pthread_mutex_unlock(&gMutex);
-```
+\```
 
 ##### `os_unfair_lock` (Darwin replacement for spin)
 
-```
+\```
 static os_unfair_lock gLock = OS_UNFAIR_LOCK_INIT;
 os_unfair_lock_lock(&gLock);   // contended: waiter parks
 // critical section
 os_unfair_lock_unlock(&gLock);
-```
+\```
 
 <u>https://blog.xoria.org/macos-tips-threading/ https://developer.apple.com/documentation/os/os_unfair_lock https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/pthread_mutex_init.3.html</u>
 
@@ -475,16 +482,16 @@ With QoS inheritance ( pthread_mutex  /  os_unfair_lock
 
 Lock tracks ownership; kernel can temporarily boost the owner to resolve inversion
 
-```
+\```
 time →
 High QoS (Q=UI) :  lock() ── BLOCKED ─────────────────────── RUN (after unlock)
 Low  QoS (Q=BG) :  RUN ── holds lock ──(BOOST to UI)─ RUN ── unlock()
 CPU scheduling  :         runs boosted BG owner so it can release sooner
-```
+\```
 
-```
+\```
 typedef NSObject<OS_dispatch_semaphore> * dispatch_semaphore_t;
-```
+\```
 
 * “With QoS inheritance (pthread_mutex / os_unfair_lock)” is really “with **potential** QoS inheritance.” Apple’s wording is deliberately hedged (“may use to attempt”).
 
@@ -625,9 +632,9 @@ Block
 Task Complete,
 Unblock Main
 
-```
+\```
 dispatch_sync(dispatch_get_main_queue(), ...)
-```
+\```
 
 Task
 Block
@@ -1002,20 +1009,16 @@ Olivia Gallucci - Draft - Approved-Use Only
 
 Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ® Subscribe to [ret]2read:
-An OS Internals
-Newsletter!
 Interested in mac i als, re : i ring, or
 open-source tools for exploring obscw
-Starting in September 2025, I'll be publishing a monthly
 newsletter on Apple security research, sh g what I'm
 reading, and how I'm appl it to my work
 If that sounds cool, consider subscribing. @&
-https://oliviagallucci.com/newsletter/
-Olivia Gallucci - Draft - Approved-Use Only
 ```
 
 ## Slide 84
@@ -1027,20 +1030,16 @@ $ echo
 
 Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© Subscribe to [ret]2read:
-An OS Internals
-Newsletter!
 Interested in macOS internals. reverse enginecring, or
 h open-source tools for exploring obscure systems?
 (= C @) Starting in September 2025, I'll be publishing a monthly
 newsletter on Apple security research, sharing what I'm
 | | Jj I reading, and how I'm applying it to my work.
 f a Nn Ss It that sounds cool, consider subscribing. @4
-https://oliviagallucci.com/newsletter/
-Olivia Gallucci - Draft - Approved-Use Only
 ```
 
 ## Slide 85
@@ -1052,22 +1051,17 @@ $ echo
 
 Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 $ echo
 "questions?"
-© Subscribe to [ret]2read:
-An OS Internals
-Newsletter!
 Interested in macOS internals, reverse cnginecring, or
 open-source tools for exploring obscure systems?
-Starting in September 2025, I'll be publishing a monthly
 newsletter on Apple securi earch, sharing what I'm
 reading, and how I'm applying it to my work.
 If that sounds cool, consider subscribing.
-https://oliviagallucci.com/newsletter/
-Olivia Gallucci - Draft - Approved-Use Only
 ```
 
 ## Slide 86
@@ -1078,19 +1072,14 @@ $ shutdown
 
 Olivia Gallucci - Draft - Approved-Use Only
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 $ shutdown
-© Subscribe to [ret]2read:
-An OS Internals
-Newsletter!
 Interested in macOS internals, reverse cnginecring, or
 open-source tools for exploring obscure systems?
-Starting in September 2025, I'll be publishing a monthly
 newsletter on Apple security re:
 reading, and how I'm applying it to my work.
 If that sounds cool, consider subscribing.
-https://oliviagallucci.com/newsletter/
-Olivia Gallucci - Draft - Approved-Use Only
 ```

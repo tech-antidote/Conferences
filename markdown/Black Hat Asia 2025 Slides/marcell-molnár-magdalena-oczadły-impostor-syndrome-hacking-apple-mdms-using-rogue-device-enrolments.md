@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Marcell Molnár & Magdalena Oczadły_Impostor Syndrome - Hacking Apple MDMs Using Rogue Device Enrolments.pdf"
 pages: 44
 sha256: "5435a24eae0ce866813d55dfcdcdaf5cfa175d0ed8254f1bcc1b6be6038e1b12"
-text_chars: 19690
-ocr_pages: 34
+text_chars: 15522
+ocr_pages: 30
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:07:07Z"
+converted_at: "2026-08-12T03:56:21Z"
 ---
 # Impostor Syndrome - Hacking Apple MDMs Using Rogue Device Enrolments
 
 **Speakers:** Marcell Molnár, Magdalena Oczadły  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Marcell Molnár & Magdalena Oczadły_Impostor Syndrome - Hacking Apple MDMs Using Rogue Device Enrolments.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -29,10 +36,10 @@ MARCELL MOLNAR
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lao hat
 ASIA 2025
 APRIL 3-4, 2025
 IMPOSTOR SYNDROME
@@ -45,17 +52,6 @@ MARCELL MOLNAR
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-NEAR-JACKEOT || NERA OCKOT
-(BAR, \{5ARy
-: WY
-| mu Bees
-SERILAL SERIAL|
-NOMBER ese
-```
-
 ## Slide 3
 
 #BHAS @BlackHatEvents
@@ -64,17 +60,10 @@ NOMBER ese
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-us a
-oMTTTTERDAA
-“OUST EET
-```
-
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Admin user © 11:58
@@ -96,7 +85,8 @@ details
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Purchased from
@@ -115,7 +105,8 @@ Configurator
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MacBook Pro
@@ -131,7 +122,8 @@ All Rights Reserved.
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — ©) Q "serial" "C02" "macbook"
@@ -140,9 +132,7 @@ Filter by
 Repositories
 © Issues
 3) Pull requests
-{) Discussions
 Ax Users
-YY More
 Languages
 © Markdown
 @ Text
@@ -164,11 +154,10 @@ v & microsoft/shell-intune-samples - r
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Sstack nat
-“XNASTA.
 2025
 S = £3 github.com/kholia/OSX-KVM w & Incognito ; |
 O kholia / OSX-KVM (Public © Sponsor L\ Notifications & Fork 1.9k yY Star 21.2k
@@ -191,30 +180,21 @@ hackintosh qemu-kvm
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-mig F f _marcell@marcell-B85M-DS3H: ~/OSX/Test_ready/OSX:
 GNU nano 6.2 config.plist
 <key>ProcessorType</key
 <integer ‘52 /integer
 <key>ROM</key
 <string> 0022412¢3d4a- string>
-<key>SpoofVendor</t
-<key>SystemMemoryStatus</key>
 string>Auto</string>
 <key>SystemProductName</key>
-<String>iMacProi1,1</string>
 <key>SystemSerialNumber</key>
-<string> I < /s tr-ing>
 <key>SystemUUID</key>
--String>213FA768-A62C- 4299-8598 -47AA666E436F</string>
-Biel onctinieht mitra
-Ue
 k
 <t
-<ke />UpdatenVRAN-/
-t
 <ke
 y>UpdateSHBIOS- key
 we Help we Write Out @% Where Is @i Cut ai Execute @@ Location
@@ -223,7 +203,8 @@ ms Exit ws Read File @M} Replace @§ Paste ae) Justify fj Go To Line
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 s Sign in
@@ -233,7 +214,6 @@ Available
 z Bluetooth
 & Network
 z Notifications
-@) Sound
 & Focus
 z Screen Time
 6 General
@@ -247,7 +227,8 @@ es instaiied
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q Search
@@ -265,9 +246,7 @@ Global_Policy
 HSC Applications
 UT Application
 Test
-L\ Notifications
 © _ History
-&~ azerche
 Adobe Acrobat (Silicon)
 Install
 Endnote 20
@@ -278,11 +257,9 @@ Endnote 21
 Reinstall
 Citrix Workspace
 Install
-¥*& EndNotex9.31
 Install
 ¥* Computer Maintenance
 Self Heal
-Ka
 GlobalProtect
 Install
 ```
@@ -291,18 +268,15 @@ Install
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Bracenat $< (SK =
-WASIAZ SS
 Manufacturing
 Location Manufacture
 Year of Unique
 Manufacture Identifier
-} }
 PP Y WW SSS CCC
-Pre YT )6€6YV¥CUCUOUS3OS CO.CC
 ```
 
 ## Slide 16
@@ -313,19 +287,6 @@ iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Pili
->A
-les.apple.com
-iprof
-Apple Device
-Pili
-Company's MDM
-server
-```
-
 ## Slide 17
 
 1.
@@ -335,21 +296,13 @@ Apple Device iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-NSEncoded \ Ys
 e/ payload with serial ~~!
-—) )
-—
 Apple Device iprofiles.apple.com
-‘
 action = RequestProfileConfiguration;
-o aS
-—
-—
-—)
-<=) e|
 Company’s MDM
 server
 ```
@@ -364,10 +317,10 @@ iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->A
 Apple Device
 JSON disct with
 company info
@@ -408,11 +361,8 @@ DisplayTone,
 iCloudStorage,
 Biometric
 n/a, London,
-U} tS) com/cloudenroll";
 W2 6tt";
-Wes
 iprofiles.apple.com
-ies
 Company’s MDM
 server
 ```
@@ -429,7 +379,8 @@ iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Device ConfigurationWebURL:
@@ -437,19 +388,9 @@ X-Apple-Aspen-
 Deviceinfo
 GET /enrollment-customization-view?prestageId=1&enrollmentCustomizationId=1&
 prestageType=313 HTTP/2
-Host: f sud. com
-Accept: text/html, application/xhtml+xmL, application/xml1; q=0.9,*/*;q=0.8
 Sec-Fetch-Site: none
 Sec-Fetch-Dest: document
 Cache-Control: no-cache, no-store, must-revalidate
-X-Apple-Aspen-Deviceinfo:
-MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgU rDgMCGgUAMIAGCSqGSIb3DQEHAaCAJ LAEggHBPD94bWwgdmV|
-yc2lvbj ®@iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFETONUWVBFIHBsaXN@IFBVQkxJQyAiLS8vQXBwbG
-UvL@RURCBQTELTVCAxLj AVL@VOIiAiaHR@cDovL3d3dy5hcHBsZS5j b2@vRFREcy9Qcm9wZXJ@eUxpc3QtM
-S4wLmRO@ZC1I+Cj xwbG1lzdCB2ZXJ zaW9uPSIxLjAiPgo8ZG1jdD4KCTxrZXk+TEFORIVBROU8L2t lLeT4KCTxz
-dHJpbmc+ZW5 fVVM8L3NOcmluZz4KCTxrZXk+UFJIPRFVDVDwva2V5PgoJPHN@cmLuZZ5pTWF j UHJ VMSwxPC9
-zdHJ pbmc+Cgk8a2V5P INFUKLBTDwva2V5PgoJ PHNO@cmLuZZ5DMDJDWDZTNU1EN LO8L3N@cmlUuZZ4KCTxrZX
-"
 iprofiles.apple.com
 Company’s MDM
 server
@@ -465,20 +406,13 @@ iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ZZ
-Ya
-~~
-om
-=
 =
 iprofiles.apple.com
-Apple Device = ConfigurationURL:
-legee) A<?xml version="1.0" encoding="UTF-8" ?>
 pkcs7 Payload
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" “http://www. apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 <key>LANGUAGE</key>
@@ -486,16 +420,11 @@ pkcs7 Payload
 <key>PRODUCT</key>
 <string>iMacPro1,1</string>
 <key>SERIAL</key>
-<string i String>
 <key>UDID</key>
-<string> QE -B218-160EC51A3D70</string>
 <key>VERSION</key>
 <string>22G720</string>
 </dict>
 </plist>
-wae!) Aa H 0 mallee EVxga+2 BO
-oN
-ies
 Company’s MDM
 server
 ```
@@ -508,7 +437,8 @@ SSO RequestL
 Company’s MDM
 server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Please enter your NTID to enroll the device to the
@@ -521,13 +451,9 @@ Cache-Control: no-cache
 Pragma: no-cache
 Expires: -1
 Location:
-https://login.microsoftonline. com/common/oauth2/authorize?client_id=7
 SSO Request®
 network.
 files.apple.com
-w7
-~™?
-=)
 =
 Company’s MDM
 server
@@ -542,33 +468,27 @@ J
 Company’s MDM
 server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Response
 Raw
-hTTP/2 200 ok
 Content-Type: application/
 Allow: GET, POST
 Content-Disposition: att
-Content-Security-Policy |
 ‘none'; form-action ‘normal
 Cross-Origin-Opener-Pol
-Feature-Policy: accelerd
 gyroscope ‘none
-‘none!
 Referrer-Policy: no-refd
 Server: waitress
-Strict-Transport-Securit
 Via: kong/3.2.2, 1.1 va
 X-Content-Type-Options:
 X-Frame-Options: DENY
 X-Kong-Proxy-Latency: 1
 X-Kong-Upstream-Latency;
 Accept-Ranges: bytes
-Access-Control-Allow-Or:
 Date: Tue, 25 Mar 2025
-X-Served-By: cache-bfi-|
 X-Cache: MISS, MISS
 X-Cache-Hits: 0, 0
 : $1742904337.38
@@ -577,7 +497,6 @@ OCTYPE plist PUBLIC "
 http://www. apple. com/D
 <plist version="1.0">
 <dict>
-<key>Pay loadContent</key>
 mdm.mobileconfig
 pple-aspen-config
 ©
@@ -591,14 +510,14 @@ server
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 var_60 = argQ;
 rax = sub_100002450();
 rbx = rax;
 if (os_log_type_enabled(rax, @x2) != 0x@) {
-: sub_100015a6a(rbx);
 if (*(int32_t *)0x100028790 != @x@) {
 sub_100012d1c(@x2, "CheckProfilesFetchRateLimit", rdx, rcx, r8, r9, var_60);
 }
@@ -629,41 +548,33 @@ rdx = rbx;
 sub_100012d1c(@x2, "CheckProfilesFetchRateLimit dateCount = %d", rdx, rcx, r8, r9, var_60);
 }
 if (rbx < @xa) goto loc_100005ab7;
-71.2. A RAARAALOHA.N.
 ```
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 loc_10000583b:
-pez
-WY
-Zi
 rgQ;
 rax = sub_100002450();
 rbx = rax;
 if (os_log_type_enabled(rax, @x2) != Qx@) {
-: sub_100015a6a(rbx);
 if (*x(int32_t *)0x100028790 != 0x0) {
 sub_10@012d1c(@x2, "CheckProfilesFetchRateLimit", rdx, rcx, r8, r9, var_60);
 }
 r13 = [NSDictionary di tings/.profilesDEPTimerCheck"];
 rax = sub_100002450(); SS:
 rbx = rax;
-if (os_log_type_enable
 sub_1000159e8(
 }
 rdx = @"/var/db/Config
 if (&(int32_t *)0x1000
 rdx = [[r13 de
-sub_100012d1c( Widict: = \ntsa,)ndx,ancx;ers,9 69)
 }
 if ({r13 count] == @x@
 rdx = var_60; : : OR ENTER.
-rax = [r13 objectForke 7 =| 'MASIGN,
-r12 = rax: a ' 2 NOT ACOP
 rbx = [rax count]; ; + ee
 rax = sub_100002450(); .
 r14 = rax; bn
@@ -675,43 +586,34 @@ rdx = rbx;
 sub_100012d1c(@x2, "CheckProfilesFetchRateLimit dateCount = %d", rdx, rcx, r8, r9, var_60);
 }
 if (rbx < @xa) goto loc_100005ab7;
-1.2. A RARAAALHA.4.
 ```
 
 ## Slide 26
 
-```
+\```
 os.system('''sed-i'' "s/2024/2023/g"
 /var/db/ConfigurationProfiles/Settings/.profilesDEPTimerCheck''')
-```
+\```
 
 ## Slide 27
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-'@0 OSG 66 600060008068 008066 ’
-```
 
 ## Slide 28
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AllowPairing = 0;
 AutoAdvanceSetup = @;
 AwaitDeviceConfigured =
-ConfigurationURL = “ht on /c2oudenr011";
-Segoe eeeeer erie = 1;
 IsMandatory =
 IsSupervised = a
 OrganizationAddress = ee London, wW2 6tt";
 OrganizationAddressLine1 = =
 OrganizationAddressLine2 =
 OrganizationCity = London;
-JEP eo eta) Sasi
 OrganizationEmail =
 OrganizationMagic =
 OrganizationName =
@@ -728,19 +630,18 @@ Restore,
 Registration,
 ScreenTime,
 Appearance,
-Siri,
 TermsOfAddress,
 Accessibility,
 Diagnostics,
 DisplayTone,
 iCloudStorage,
 Biometric
-a
 ```
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 kandji
@@ -762,20 +663,13 @@ iprofiles.apple.com
 
 Company’s MDM server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ZZ
-Ya
-~~
-om
-=
 =
 iprofiles.apple.com
-Apple Device = ConfigurationURL:
-legee) A<?xml version="1.0" encoding="UTF-8" ?>
 pkcs7 Payload
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" “http://www. apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 <key>LANGUAGE</key>
@@ -783,23 +677,19 @@ pkcs7 Payload
 <key>PRODUCT</key>
 <string>iMacPro1,1</string>
 <key>SERIAL</key>
-<string i String>
 <key>UDID</key>
-<string> QE -B218-160EC51A3D70</string>
 <key>VERSION</key>
 <string>22G720</string>
 </dict>
 </plist>
-wae!) Aa H 0 mallee EVxga+2 BO
-oN
-ies
 Company’s MDM
 server
 ```
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IN
@@ -819,7 +709,6 @@ marcellmolnar@FORM3—MARCELLMOLNAR ~ % cat /var/db/ConfigurationProfiles/Settin
 <key>AwaitDeviceConfigured</key>
 <true/>
 <key>ConfigurationURL</kev>
-<string>https:// sloudenroll</string>
 <key>IsMDMUnremovable</key>
 <integer>1</integer>
 <key>IsMandatory</key>
@@ -834,7 +723,8 @@ marcellmolnar@FORM3—MARCELLMOLNAR ~ % cat /var/db/ConfigurationProfiles/Settin
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q Search
@@ -852,9 +742,7 @@ Global_Policy
 HSC Applications
 UT Application
 Test
-L\ Notifications
 © _ History
-&~ azerche
 Adobe Acrobat (Silicon)
 Install
 Endnote 20
@@ -865,18 +753,17 @@ Endnote 21
 Reinstall
 Citrix Workspace
 Install
-¥*& EndNotex9.31
 Install
 ¥* Computer Maintenance
 Self Heal
-Ka
 GlobalProtect
 Install
 ```
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2025
@@ -891,9 +778,6 @@ Pretty Raw
 </ns2:parameters>
 <ns2: contents>
 #!/bin/bash
-jamf createAccount _usernane fl aanin” -realname Bow —password
-ne admin -hiddenUser
-</ns2: contents>
 </ns2:script>
 </ns2:scripts>
 <ns2:printers/><ns2:dockItems/><ns2:accounts/><ns2:directoryBindings/><
@@ -903,7 +787,6 @@ doNotChange
 </ns2:passwordAction>
 </ns2:managementAccountSettings>
 <ns2: remoteAccount>
-</ns2: remoteAccount>
 <ns2: firmwareSettings>
 <ns2:setEfiPassword>
 false
@@ -918,23 +801,23 @@ none
 <ns2:noUserNoReboot>
 false
 </ns2:noUserNoReboot>
-<nc?+nallserRehnnt>
 /bin/bash 5 matches
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ESZESZ [LSS SS
 SERILAL SERIAL
 NOWBER NUMBE
 ```
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [(1ldb) po $rdi
@@ -956,9 +839,7 @@ PayloadVersion = 1;
 ProxyType = None;
 "SSID_STR" = "OA
 SetupModes = (
-;
 Are you sure you want to install this device profile?
-senertepeyss ewrenepoceces
 Wi-Fi Network
 Description
 Interface
@@ -984,7 +865,8 @@ ME EXPLAINING TO THE BUGCROWD ANALYST
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2025
@@ -999,7 +881,6 @@ awk '/Serial Number/ {print $4}')
 curl -H ‘Content-type: application/json' —-data
 "{\"text\": \"Jamf Device Enrolment Complete -
 ${serial_number} - ${loggedinuser}\"}"
-https://hooks.slack. com/services/T0 in
 # Run recon to send inventory back to Jamf
 sudo jamf recon
 # Close the message about Base Apps being installed
@@ -1008,17 +889,12 @@ sleep 3
 :parameter>
 </ns2:parameters>
 <ns2: contents>
-#!/binfsh
 # Created fF This activates Falcon
 after installation, and uses our license key
 /Applications/Falcon.app/Contents/Resources/falconct
-1 License 35 ciliata
-</ns2: contents>
 </ns2:script>
-DATA='&Lt; ?xml version="1.0" encoding="UTF-8"?>
 &lt; !DOCTYPE plist PUBLIC "-//Apple//DTD PLIST
 1.0//EN"
-"http: //www.apple.com/DTDs/PropertyList-1.0.dtd">
 &lt;plist version="1.0">
 &lt;dict>
 &lt; key>AP
@@ -1027,10 +903,8 @@ DATA='&Lt; ?xml version="1.0" encoding="UTF-8"?>
 Ut;/stri
 ng>
 &lt; key>APIOrganizationID&lt;
-& lt; strinq>Az—z crt
 &lt; key>APIUser
 &lt;string
-&lt; key>InstallMenubar&lt; /key>
 &lt;true/>
 &lt;/dict>
 &lt;/plist>'
@@ -1040,69 +914,43 @@ Roaming Client/OrgInfo.plist"
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-_o’ aN WCD—__ OF
-JACKPOT FACKPOT
 & |
-7 )
-TN =
 = SERIAL NOTBER) \e (@ Jae SERIAL LNUNEER
 Ay
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-grep -nrbai "API Username and Password" OSX/Test_ready_1lldb/OSX-KVM/ -A 10
-iac_hdd_ng.
-iac_hdd_ng.
-iac_hdd_ng.
-iac_hdd_ng.
-. img- 5920945-1337630862-loggedInUser=$( scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
-iac_hdd_ng.
-iac_hdd_ng.
-iac_hdd_ng.
-1ac_hdd_ng.
-1ac_hdd_ng.
-iac_hdd_ng.
-iac_hdd_ng
-img: 5920941: 1337630732:#API Username and Password
-img- 5920942 -1337630759-username="Service_api_
-img - 5920943 -1337630790-password="
-img-5920944-1337630828-url="https: //
-img - 5920946 -1337630972-echo $loggedInUser
-img - 5920947 -1337630991-
-img-5920948-1337630992-#Variable declarations
-img - 5920949 -1337631015-bearerToken=""
-img-5920950-1337631030-tokenExpirationEpoch="6"
-img -5920951-1337631055-aduser='
+[Left heatmap]
+Y-axis ticks: 80727 / 76687 / 71868 / 65910 / 59954 / 53996 / 50755
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+Caption: STM32L412 (M4)
+
+[Right heatmap]
+Y-axis ticks: 57363 / 57163 / 56963 / 56763 / 56563 / 56363 / 56163
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+Caption: STM32L767 (M7)
 ```
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\_ Jamf Pro API (v11:11.0)
 > —u
 > By
-> By
-> Sv
-> Bauth
-> Eipreview
->  Binventory-preload
 > Ej notifications
-vy Bjuser
-Boj
-> Eildap
-> Eidevices
->  Eisettings
->  Biselt-service
-> BS startup-status
 > Title Editor ©
 i updatesession
 eT Return all Jamf Pro user aco...
@@ -1119,19 +967,12 @@ Service health and communications
 > External data connections
 > Files
 Financials (preview)
-Overview Params Authorization —_ Headers (1
 Return all Jamf Pro user acounts
-) Body Scripts. Settings
-https://yourServer.jamfcloud.com/api/user
 Return all Jamf Pro user acounts.
 Authorization Bearer Token
 This request is using an authorization helper from collection Jamf Pro API (v11.11.0)
-\ Kandji API
 Code Snippet
-cURL ¥
 >
-curl --lo
-2 --header  y
 Intune devices a
 Article * 11/07/2024 + 11 contributors
 In this article
@@ -1139,9 +980,7 @@ Why integrate with Intune?
 API reference
 Related content
 5 Overview Authorization Scripts
-Blueprints —
 © Device Information
-vy E\Notes
 > GET Get All Device Notes
 > Post Create Device Note oo
 Create Device Note

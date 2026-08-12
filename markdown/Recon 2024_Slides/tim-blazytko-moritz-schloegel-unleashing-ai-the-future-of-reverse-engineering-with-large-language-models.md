@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Tim Blazytko & Moritz Schloegel_Unleashing AI The Future of Reverse Engineering with Large Language Models.pdf"
 pages: 114
 sha256: "ec4e875d38d91c5060614606fe98c6994a2ba83375c7125eac030b2a4b6cbbf1"
-text_chars: 22368
+text_chars: 20902
 ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.4
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Tim Blazytko & Moritz Schloegel_Unleashing AI The Future of Reverse Engineering with Large Language Models_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:46Z"
+converted_at: "2026-08-12T06:18:30Z"
 ---
 # Unleashing AI The Future of Reverse Engineering with Large Language Models
 
 **Speakers:** Tim Blazytko, Moritz Schloegel  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Tim Blazytko & Moritz Schloegel_Unleashing AI The Future of Reverse Engineering with Large Language Models.pdf` (114 pages)
+
 
 ## Slide 1
 
@@ -216,12 +221,12 @@ Use Case Function Preselection
 
 ## Slide 16
 
-```
+\```
 Renamedfunctionat0x10002b50toCallWithArguments
 Renamedfunctionat0x10004b50toDecodeComplexAlgorithm
 Renamedfunctionat0x10008b60toSetValueToMemoryLocation
 Renamedfunctionat0x10002b70toCallFunctionPointerWithArguments
-```
+\```
 
 ## Slide 17
 
@@ -229,7 +234,7 @@ Renamedfunctionat0x10002b70toCallFunctionPointerWithArguments
 
 ## Slide 18
 
-```
+\```
 Renamedfunctionat0x40cbb5toDecompileCodeAnalyze
 Renamedfunctionat0x4033c2toDecompileCodeAnalyze
 Renamedfunctionat0x4024c2toDecompileCodeAnalyze
@@ -237,7 +242,7 @@ Renamedfunctionat0x402d58toDecompileCodeAnalyze
 Renamedfunctionat0x40ed62toDecompileAndProtectMemoryPage
 Renamedfunctionat0x409e53toDecompileAndFindMatchingStringInMemory
 Renamedfunctionat0x40e4ddtoDecompileAndAnalyzeFunction
-```
+\```
 
 ## Slide 19
 
@@ -245,12 +250,12 @@ Renamedfunctionat0x40e4ddtoDecompileAndAnalyzeFunction
 
 ## Slide 20
 
-```
+\```
 Renamedfunctionat0x1000cf10toInitializeKeyLoggerAndHandleErrors
 Renamedfunctionat0x10014ae0toCreateNamedPipesAndRunShellCommands
 Renamedfunctionat0x100186d0toSearchForAProcessByName
 Renamedfunctionat0x1001d880toSendHTTPPOSTRequestAndHandleResponse
-```
+\```
 
 ## Slide 21
 
@@ -262,7 +267,8 @@ Use Case Identification of Library Functions
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 @80007ac void* copy_backward_string(void* arg1, void* arg2, int32_t arg3)
@@ -272,9 +278,6 @@ Use Case Identification of Library Functions
 900007c8 do {
 @00007b8 char *(r4 +1)
 @06087b8 1
-@8@8887bc = rs
-@00087bc 1
-@8@8887c8
 @00007c8 } while (i != 6)
 @00007c4 return r3
 q
@@ -289,7 +292,8 @@ Log Q Search log
 
 good approximation, but incorrect
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 @80007ac void* copy_backward_string(void* arg1, void* arg2, int32_t arg3)
@@ -298,8 +302,6 @@ good approximation, but incorrect
 @00007b4 void* r3 = argl - 1
 980007c8 do {
 @88887b8 char r5 = *(r4 + 1)
-06087b8 r4=r4+1
-@88887bc *(r3 + 1)
 good approximation, but incorrect
 000007c4 return r3
 q
@@ -324,23 +326,11 @@ memcpy
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 memcpy
-000007ac
-@@0007ac
-000007bo
-000007b4
-000007c0
-0e0007b8
-000007b8
-000007bc
-@00007bc
-000007c0
-000007c0
-000007¢4
-id copy_memory(voidx destination, « source,
 int32_t remaining_bytes = count;
 x source_ptr = source - 1;
 x dest_ptr = destination —
@@ -361,16 +351,14 @@ works well for common code
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 memcpy
-@00007ac void copy_memory(voidx destination, « source,
 000007ac int32_t remaining_bytes = count;
 @00007be sid’ source_ptr = source - 1;
-000007b4 ae dect ntr = dactinatioan —
 ~~ Jworks well for common code
-0e0007b8
 000007b8 source_ptr = source_ptr + 1;
 000007bc *(dest_ptr + 1) = byte_to_copy;
 @00007bce dest_ptr = dest_ptr + 1;
@@ -385,7 +373,8 @@ RC4 KSA
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RC4 KSA
@@ -413,7 +402,8 @@ not always helpful
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RC4 KSA
@@ -422,7 +412,6 @@ transform_string(char* input_string, 2 32_tx lookup_table) {
 * index_ptr = nullptr;
 _t intermediate_values[1024] = {0};
 x buffer;
-__builtin_memset(&buffer, 0, @x3f
 int32_t accumulator = 0;
 2_t* intermediate_ptr not a lways h e lpfu l
 int32_t temp_val = lookup_func(@:index_ptr, lookup_table);
@@ -543,12 +532,12 @@ Script Development
 
 ## Slide 48
 
-```
+\```
 defdecrypt(input_string):
 xor_key=0x22
 decrypted_chars=[chr(ord(char)^xor_key)forcharininput_string]
 return''.join(decrypted_chars)
-```
+\```
 
 30
 
@@ -594,34 +583,27 @@ Tools & Integrations (Selection)
 
 Gepetto
 
-```
+\```
 https://github.com/JusticeRage/Gepetto
-```
+\```
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Gepetto
 a
-[2] TDA View-A he]
-(31 Pseudooden OF
-{41 Hex View tsistucures {6) Enums
 int result; //
 char Str(1021]; //
-23 I
 char Destination[257]; //
-—int16 v5; //
 1, sizeof( Synchronize with >
 Edit var comment. 1
 streat( » PathName) ; Collapse declarations Numpad+-
 streat(! » aUpgradeExe) ; Mark as decompiled
 ees + 5 Copy to assembly
 an Hide casts \
-onset (ste, 0, sizeof(str))s Gepetto BY @ explaintunction _cil+AlteG
-= 0; ont @ Rename variables _Crl+AlteR
-streat(Str, aBgkkhwrddr1dg9);
 https://github.com/JusticeRage/Gepetto
 34
 ```
@@ -630,9 +612,9 @@ https://github.com/JusticeRage/Gepetto
 
 #### Binary Ninja Sidekick
 
-```
+\```
 https://sidekick.binary.ninja/
-```
+\```
 
 35
 
@@ -845,25 +827,17 @@ Context-sensitive Annotations
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Context-sensitive Annotations
 1@@@ead@ enum WIN32_ERROR __fastcall configure_proxy_settings( * argl)
-10@8ead0
-10@8ead2
 1608eadd * fsbase
 10@8eadd var_c = *fsbase
 10@8eade *fsbase = &var_c
 10@8eaee var_114 = @
-1608eb88
-16@8eb1a if (sub_10005d00(&var_114, @x8@@00801, "“Software\Microsoft\Windows\Curre...
-1008eb2F var_118
-1008eb2f sub_1@@@5db@(&var_114, “ProxyEnable", &var_116)
 10@8eb3a if (var_11@ != @)
-1608eb4a sub_10@@5db@(&var_114, "ProxyServer", &var_11@)
-16@8eb59 ‘* eax_3
-10@8eb65 * esi_2
 1008eb65 if (eax_3 != @)
 10@8eb6d esi_2 = &eax_3[5]
 sub_1002e3d@(&var_118, “http=")
@@ -877,25 +851,18 @@ strings and API functions
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Context-sensitive Annotations
 1@@@ead@ enum WIN32_ERROR __fastcall configure_proxy_settings( * argl)
-1008ead0
-10@Gead2
 16@8eadd * fsbase
 10@8eadd var_c = *fsbase
 10@8eade *fsbas|
 "eae strings and API functions
-16@8eb88
-16@8eb1a if (sub_10005d00(&var_114, @x8@@00001, “Software\Microsoft\Windows\Curre...
-1008eb2F var_118
-1008eb2f sub_1@@@5db@(&var_114, “ProxyEnable", &var_11@)
 10@8eb3a if (var_11@ != @)
-1608eb4a sub_10@@5db@(&var_114, "ProxyServer", &var_118)
 16@8eb59 * eax_3 = sub_1002e3d0(&var_118, "http=")
-10@6eb65 * esi_2
 1008eb65 if (eax_3 != @)
 10@Geb6d esi_2 = &eax_3[5]
 ```
@@ -1180,17 +1147,17 @@ sub_400600writeFile sub_400740execute
 
 Tools
 
-```
+\```
 https://github.com/mrphrazer/reverser_ai
-```
+\```
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tools
-(1) README = 418 GPL-2.0 license oe
 ReverserAl (v1.1)
 Author: Tim Blazytko
 Provides automated reverse engineering assistance through the use of local large language models (LLMs) on
@@ -1251,32 +1218,26 @@ ReverserAI
 
 aIDAPal
 
-```
+\```
 https://github.com/atredispartners/aidapal
-```
+\```
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 alDAPal
-Y aidapal Pvvic @watch 7 + YY Fork 9 + WY Star 94
-B omain - — F 1Branch ©0 Tags Q Goto file t  Addfile ~  (ReMert
 About
 aiDAPal is an IDA Pro plugin that uses a
 locally running LLM that has been fine-
 tuned for Hex-Rays pseudocode to
-@ Averasesusinessuser Update idapal.at_interface.py m=
-ay © Scommis
 1 README.md Update README.md
 eks ag0 assist with code analysis.
 1 idapal.py initial plugin upload 3weeks ago Readme
-© idapal_at_interface.py Update idapal_at_interface.py yesterday “Activity
 © Custom properties
 YY 94 stars
-1 README a
-© 7watching
 Y 9 forks
 aiDAPal Report repository
 https://github.com/atredispartners/aidapal

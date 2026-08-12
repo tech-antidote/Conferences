@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Stanislav Dashevskyi & Francesco La Spina_When (Remote) Shells Fall Into The Same Hole Rooting DrayTek Routers Before Attackers Can Do It Again.pdf"
 pages: 41
 sha256: "38e9b0fce4761585618a785988a674866737fd5ccc67e52a6f87c39452bf54b4"
-text_chars: 17831
+text_chars: 17787
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 76.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:52:05Z"
+converted_at: "2026-08-12T05:00:17Z"
 ---
 # When (Remote) Shells Fall Into The Same Hole Rooting DrayTek Routers Before Attackers Can Do It Again
 
 **Speakers:** Stanislav Dashevskyi, Francesco La Spina  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Stanislav Dashevskyi & Francesco La Spina_When (Remote) Shells Fall Into The Same Hole Rooting DrayTek Routers Before Attackers Can Do It Again.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -695,7 +701,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ =D Vigor Login Page x | + v - a.
@@ -761,7 +768,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (venv) standash@thelab42-2:~/stuff/vr/draytek/exploits$

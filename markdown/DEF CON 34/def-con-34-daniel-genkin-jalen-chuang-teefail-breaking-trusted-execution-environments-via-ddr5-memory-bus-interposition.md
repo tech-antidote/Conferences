@@ -4,23 +4,28 @@ speakers: ["Daniel Genkin", "Jalen Chuang"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Daniel Genkin, Jalen Chuang - TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition - TEEFail v1.pdf"
 pages: 22
 sha256: "32adc2f7b42bb4c9842b232af692969eab89d905b6dd8f1bac393ee1552a1327"
-text_chars: 7520
-ocr_pages: 12
+text_chars: 6702
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:15:12Z"
+converted_at: "2026-08-12T06:25:20Z"
 ---
 # TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition
 
 **Speakers:** Daniel Genkin, Jalen Chuang  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Genkin, Jalen Chuang - TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition - TEEFail v1.pdf` (22 pages)
+
 
 ## Slide 1
 
@@ -29,24 +34,6 @@ converted_at: "2026-08-12T00:15:12Z"
 **Jalen Chuang Daniel Genkin**
 
 1
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-TEE. fail:
-Breaking Trusted Execution Environments
-via Memory Bus Interposition
-See.
-=
-bi
-- ~~) Georgia Institute
-“—” of Technology. W 4 PU RDUE
-lL 0
-7
-Jalen Chuang
-=
-Oe Daniel Genkin
-```
 
 ## Slide 2
 
@@ -123,42 +110,19 @@ Client
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Inside Your Computer...
-intel.
-XCON
-ye
-$a
-a9)
-So
-a2?
-apel
-$8
-a
-3
-Re
-gis
-ae
-3rd Gen Intel® Xeon®
-Scalable Processors
-%
-```
-
 ## Slide 6
 
 How do the pros do it?
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 How do the pros do it?
 U4970A DDR5 Protocol Debug and Analysis Solution Prices will be shown in your Quote.
 Ww KEYSIGHT v | Cancel | Add to Transaction
-Y Model Details ¥
 6&8 Selected Configurations (26 items) Be
 Total: USD 277,565.00
 1 B4661A-2FP LPDDR/2/3/4 Listing Decoder, fixed USD 11,234.00 ~«
@@ -171,7 +135,6 @@ Analysis, fixed perpetual license
 Validation, fixed perpetual license
 1 U4970A-DSC U4970A DDRS5 Bundle (M9502A Chassis -USD 27,868.00
 U4164A Logic Analyzer) Bundle DDR5 Bundle (M9502A Chassis U4164A Logic Analyzer)
-Adjustment °
 Total: USD 277,565.00
 ```
 
@@ -181,17 +144,6 @@ Total: USD 277,565.00
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Inside Your Computer...
-intel.
-XCON
-3rd Gen Intel® Xeon®
-Scalable Processors
-‘%
-```
-
 ## Slide 8
 
 ## Inside Your Computer…
@@ -200,17 +152,12 @@ And don’t do that again!
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Inside Your Computer...
 And don’t do
 that again!
-intel.
-XCON
-3rd Gen Intel® Xeon®
-Scalable Processors
-\
 ress F2 or DEL to run Setup.
 Press Fii for Boot Menu.
 Detected A ATAPI Devices...
@@ -230,12 +177,12 @@ CMD pin Clock More Cable (~276 more pins)
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘Yektronix €SA7404 Communications Signal Analyzer sess B
 01 Dec 24 00:12:30
-Wwe |
 More Cable
 ~2/6 more pins
 ```
@@ -252,16 +199,15 @@ DDR5 interposer
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MORE CABLE
 Interposer
 DIMM Slot
 WW
-ann >To Logie
 | |
-I]
 0.3 pF
 Interposer
 Edge Connector
@@ -277,13 +223,13 @@ Even more cable
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Even more cable
 11
 ThinkCentre
-=: succreE=
 Horizontal
 ```
 
@@ -319,7 +265,8 @@ Weak Deterministic Encryption Same input becomes same output
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Final Note
@@ -332,16 +279,11 @@ The cryptographic scheme used can only mitigate a class of
 HW attacks where the adversary can only see the cipher text
 once and not while the system is changing the data.
 (tl;dr: we know our encryption sucks)
-» eae
 Weak Deterministic Encryption
 Same input becomes same output
 Plaintext
-CLUTITIITITIITIT)
-y
 block cipher
 encryption
-Key: ——~>
-LITT TTT ttt)
 Ciphertext
 ```
 
@@ -357,7 +299,8 @@ Let’s see this on real hardware!
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Final Note
@@ -367,12 +310,8 @@ The cryptographic scheme used can only mitigate a class of Plaintext
 HW attacks where the adversary can only see the cipher text OOCLOCLLLeErr)
 once and not while the system is changing the data.
 (tl;dr: we know our encryption sucks) <7
-Keys of Beek phe
 Let’s see this on
 real hardware! Y
-CITI TTT TT)
-; Ciphertext
-DHARWNEOL
 5
 5
 5.
@@ -390,16 +329,16 @@ DHARWNEOL
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 emo 2 — deterministic encryption
 Live demo
 :£ Agilent Logic and Protocol Analyzer (LPA) - [.\Desktop\ddrS emo2alal-[Listing-1] - a x
 lie Eat View Setup Tools Markers Bur/Stop Listing Window Help
-O68 @aw «TH as AL is VUVn”y =
 Chckhere to insert new measurements
-Sample Number Time Command ChipIDO-2  ChiplID3  BGroup Bank Row0-3 Row 4-17
+Sample Number Time Command ChipIDO-2 ChiplID3 BGroup Bank Row0-3 Row 4-17
 Column Data Ecc Plaintext Data
 NOP
 NOP
@@ -436,9 +375,7 @@ NOP
 NOP
 NOP
 NOP
-WWW WWW W/o WW Www ww
 42DA
-2906
 90CA
 DOEO
 2AA5
@@ -455,8 +392,6 @@ DOEO
 3
 3
 3
-CER BCR CRCEL ©) © (BUBB BELLE. .) © BUBB CB BLEED Lc! | ol BRL ELE EEL.)
-I Geven Wawomt Guang _J
 For Help, press F1 Status. Local
 ```
 
@@ -466,14 +401,14 @@ For Help, press F1 Status. Local
 
 ECSDA Private Quote Attestation Remote Key Client
 
-```
+\```
 1. z = Hash(quote)
 2. k = random()
 3. (x,y) = [k]G
 4. r = x mod n
 5. s = k-1(z+rdpriv)
 6. Output (r,s)
-```
+\```
 
 **Recovering the nonce k reveals the key** k is processed in 5-bit chunks `k K=` **`k1 k`** `2 2` **`k`** `3 3 ... K` **`n [k`** `n132` **`]G`** `... [k]G`
 
@@ -568,7 +503,8 @@ TDX
 
 22DEFCON 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TDX

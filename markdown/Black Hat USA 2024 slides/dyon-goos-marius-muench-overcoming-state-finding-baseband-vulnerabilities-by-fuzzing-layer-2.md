@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Dyon Goos & Marius Muench_Overcoming State Finding Baseband Vulnerabilities by Fuzzing Layer-2.pdf"
 pages: 40
 sha256: "0a67d8ee2facf72413ecb3cc9ab996fa5bebdcb59e414707d53fddc881395544"
-text_chars: 21337
-ocr_pages: 7
+text_chars: 20869
+ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:30:00Z"
+converted_at: "2026-08-12T04:29:22Z"
 ---
 # Overcoming State Finding Baseband Vulnerabilities by Fuzzing Layer-2
 
 **Speakers:** Dyon Goos, Marius Muench  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dyon Goos & Marius Muench_Overcoming State Finding Baseband Vulnerabilities by Fuzzing Layer-2.pdf` (40 pages)
+
 
 ## Slide 1
 
@@ -29,12 +35,10 @@ Speakers: Dyon Goos & Marius Muench
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-on
-blackhat +
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Overcoming State: Finding Baseband
@@ -80,20 +84,12 @@ Layer-1
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 This talk
-—,
-1oo1GIo
-BIolola |
-IGOo01IGI
-= A
-S )
-ol\ie — CINE
 d Layer-3 » Layer-3
 } Layer-2
 } Layer-2
@@ -152,23 +148,20 @@ Baseband Security Research Plenty of attention in recent years, e.g.:
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 Baseband Security Research
 Plenty of attention in recent years, e.g.:
-bisekhat 4 oo EGHOUL
 a How to Hack Shannon Baseband
 (from a Phone)
 Basebanheimer
 Now | Am Become Death, The Destroyer of Chains Over the Air, Under the Radar
 i . Attacking and Securing the Pixel Modem 5Ghoul : Unleashing Chaos on 5G Edge Devices
-TASZK hardwear.io . 5
 Al § q fal ‘ Matheus E. Garbelini'; Zewen Shang’; Shijie Luo’; Sudipta Chattopadhyay’; Sumei Sun Ernest Kurniawan?
 Xuan Xing Eugene Ri Farzan Karimi
-White Paper | Atackoveriew @ | Targets 4, | impact JW | desciptins @ | sctooingeroc = |
 Singapore University of Technology and Design;
 2/2R, A*STAR
 Cracking the 5G Fortress: Peering Into 5G's
@@ -178,7 +171,6 @@ q Kai Tu | Research Assistant, The Pennsylvania State University
 bdullah Al Ishtiaq | Research Assistant, The Pennsylvania State
 Root Them All Univers
 There will be Bugs: Exploitin:
-Basebands in Radio Layer wo
 Daniel Komaromy Analyzing Cellular Base’
 Baseband exploitation in public originally focused on message decoding bugs in layer 3 (NAS and RRC) and
 more recently in layer 4 (traffic over IP). in this presentation we uncover a new area of exploration for remote
@@ -467,7 +459,8 @@ Let’s go fuzzing pt 2
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat ,
@@ -580,17 +573,6 @@ Open source GSM Base Station software : Yate v6.2.1 / YateBTS v6.1.1
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-Found Vulnerabilities
-all Ke
-J =
-py a
-```
-
 ## Slide 32
 
 ## Showcase
@@ -658,25 +640,20 @@ void mm_getIe(uint8_t *src, int p2){ **uVar1** = mm_getIeLength(p2); if((p2 == 0
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Network & internet
 imernet
-Netenuthe raewde
 Calis & SMS
-“ABD } (Termpness'ty cnwvadtaie!
 Private DNS:
-Aatorsate
 Hotspot § tethering
 oF
 Dato Saver
 on
 VPN
 Private ONS.
-Aeon:
 ```
 
 ## Slide 36
@@ -700,17 +677,6 @@ Aeon:
 ## Wrapping Up
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-Wrapping Up
-all Ke
-J =
-py a
-```
 
 ## Slide 38
 

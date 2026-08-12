@@ -4,23 +4,28 @@ speakers: ["Jonathan Brossard"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - pipeline v1.pdf"
 pages: 57
 sha256: "4d43c97044f59c5c2c59e0b55e06ab0eb9a8004357c4eeefbceba4b58d1d25ef"
-text_chars: 26348
-ocr_pages: 21
+text_chars: 25213
+ocr_pages: 18
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.5
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:30:29Z"
+converted_at: "2026-08-12T06:46:44Z"
 ---
 # Witchcraft Solver Automated 0day Discovery in Stripped Binaries
 
 **Speakers:** Jonathan Brossard  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - pipeline v1.pdf` (57 pages)
+
 
 ## Slide 1
 
@@ -50,27 +55,22 @@ Pride
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-DEFCE&SN
-¥ DEFCION DEFC
 EFCON DEFCSI
-eae OSs
-ois:
 “FCON DE
 DEFCON
 Og |
-FCaN DE! Cc
-Se O@
 DEFCGN
-2 Oe
 A
 ```
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ OPERATIONS // GLOBAL SPEAKING ENGAGEMENTS 21 NODES / 45 EVENTS
@@ -81,14 +81,6 @@ EVENTS PER NODE: @ui () 4 C 9
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-OSIGSC
-fe nalhan Brossard
-SIOLSS
-```
-
 ## Slide 7
 
 ##### Automated Libification : the Witchcraft Linker
@@ -97,22 +89,19 @@ URL: https://github.com/endrazine/wcc License: MIT/BSD-2
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 ARTIFACT
 Automated Libification : the EVALUATED
-fUSENnIX
 ARTIFACT ARTIFACT
 EVALUATED EVALUATED
-¢ @) ASSOCIATION
-eusenix eusenix
 es ASSOCIATION gs» ASSOCIATION
 Witchcraft Linker
 URL: https://github.com/endrazine/wcc
 License: MIT/BSD-2
 FUNCTIONAL REPRODUCED
-[PB jonathan@blackbox: ~/woot |_JolX
 Fichier Edition Affichage Rechercher Terminal Aide
 jonathan@blackbox:~/woot$ file ls
 ls: ELF 64-bit LSB|pie executablel, x86-64, version 1 (SYSV), dynamicall
@@ -124,7 +113,6 @@ ls: ELF 64-bit LSB|shared object], x86-64, version 1 (SYSV), dynamically
 linked, interpreter /1ib64/ld-linux-x86-64.s0.2, BuildID[sha1 ]=3eca7e3
 905b37d48cf0a88b576faa7b95cc3097b, for GNU/Linux 3.2.0, stripped
 jonathan@blackbox: ~/woot$ |
-po! "T6is2Bi/zeneds 11405214)
 7
 ```
 
@@ -182,23 +170,21 @@ Avarice
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Zeitgeist : Al is Going to "Solve" Security...
 SecinterviewHub c hubs
 Al has NOT solved cybersecurity.
-tl1
 i) Robert Graham
 is this true?
-fi: ‘ | hoe adv .
 ersecurity a lot—better threat detection,
 s, and automated responses—but it hasn't solved it.
 ero-days and novel exploits keep emerging, false
 positives persist, and human factors remain critical. It's a
 Ask Grok
 how much longer do we have to wait
-ty
 your reply
 Grok > @
 Hard to say, F ‘solved" probably isn't the right framing.
@@ -287,16 +273,6 @@ Show me a C Program that has an Undecidable Security Property !
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ee INV IWIRTET TSS CA tt UIPIMAGTITINITICGi MMO tid
-Mathematics !!
-Show me a C Program that has an
-Undecidable Security Property !
-18
-```
-
 ## Slide 19
 
 ## Towards a formal Proof of the Rice Theorem
@@ -355,12 +331,12 @@ Code: https://github.com/endrazine/riceconstructive
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 the Halting Problem via Hilbert's 10th
 roblem
-[ jonathan@blackbox: ~/rice Ix
 Lemma unsolvable_iff_not_solvable : forall ar p,
 is_unsolvable ar p <-> ~ is_solvable ar p.
 Proof.
@@ -457,7 +433,8 @@ Envy
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Re-Fuzzing CVE-2023-2804 : Heap Based Overflow in
@@ -474,16 +451,12 @@ Clear and concise description of the bug:
 I found a poc which can cause djpeg crash when fuzz testing
 Steps to reproduce the bug (using only libjpeg-turbo):
 Normal run:
-/build_norm/djpeg
 terminated gnal SIGSEG\ boundary error)
 heap-buffer-overfl
 thread To
-‘an_quantize e 2z_test/new Jquant2
 g-turbo/jdpc
-Libjpeg-turbo/jdmai
 urbo/jdapistd
 is a wild pointer
-heap-buffer-overflow /home/oceane/fuzz_test/new_djpeg/Libjpeg-turbo/jquant2
 31
 ```
 
@@ -527,13 +500,13 @@ Fuzzers + Dataset + PoC: https://doi.org/10.5281/zenodo.19136269
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Building a n-days pipeline : The Practice
 @ Harbor Qssearch Harbor. A pipeline-bot ~
 « Access Level Quota used
-Ga NVA-FEPro —_vevetoper ; 731.98GiB ot unm:
 & Projects Private - JOGIB of unlimited
 & Logs
 Summary Repositories Members Scanner Policy Robot Accounts _Configuration
@@ -555,9 +528,7 @@ oO nvd-repro/cve-2026-3805 1 ° 7/12/26, 5:30 AM
 oO nvd-repro/cve-2026-34379 1 ° 7/12/26, 9:55 AM
 oO nvd-repro/cve-2026-27821 1 ° 7/12/26, 2:42 AM
 @ LIGHT
-Pagesize 15 VY 1-15 0f682items IK < | 1 >>I
 @ Harbor API V2.0
-FVFNT1OG
 ```
 
 ## Slide 36
@@ -619,13 +590,13 @@ Lust
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lifting to LLVM for Binary Translation
 We Know how to Analyze x86-64 binaries.
 Let’s perform a preliminary binary translation from third party architectures to x86-64
-a ”
 Ne Binary Translation
 d
 Exempli Gratia:
@@ -640,7 +611,8 @@ Translation from m68k to sparc32
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lifters
@@ -680,7 +652,8 @@ Studio)
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Oblem : Anvill needs a Decompiler to identity functions
@@ -774,8 +747,6 @@ image, does not retain its main symbol table, and possesses
 no debug symbols, effectively hiding the addresses of fune-
 tions within the executable. However, debug symbols may be
 downloaded separately [41]
-\ttps://github.com/ends
-QD eeveatne 1 wunsro 6
 code © issues 11 pullrequests 1 Bi Projects © security and quality
 @ wunstrip
 ‘Your main branch isn't protected
@@ -785,23 +756,20 @@ endrazine
 include
 gitmodule
 D Makefile
-EADME.md
-1B debuglink
 Protect this branch
 Releases
 Packages
 Contributors 1
-o
 ```
 
 ## Slide 43
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-« The Experiment >>: Dataset Construction
 Leverage « debootstrap » to download chroots for Debian stretch (9), buster (10), bullseye (11), bookworm
 (12), trixie (13, testing), and forky (unstable) and Ubuntu xenial (16.04 LTS), bionic (18.04 LTS), focal (20.04
 LTS), jammy (22.04 LTS), and noble (24.04 LTS) :
@@ -816,7 +784,6 @@ chroot-bookworm-s390x chroot-jammy-ppcé4el chroot-xenial-ppcé4el
 chroot-bullseye-arm64 chroot-jammy-riscv64 chroot-xenial-s390x
 chroot-bullseye-armhf chroot-jammy-s390x
 chroot-focal-arm64 chroot-noble-arm64 a. |
-chroot-focal-armhf atyar pelea 39,364 binaries
 chroot-focal-ppcé64el chroot-noble-ppcé4el
 chroot-focal-riscv64 chroot-noble-riscv64
 chroot-focal-s390x chroot-noble-s390x 43
@@ -826,7 +793,8 @@ chroot-focal-s390x chroot-noble-s390x 43
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Full Dataset Evaluation : RetDec & Anvil
@@ -844,14 +812,14 @@ Total 39,364 829.9% (11,842) 33.5% (13,120)
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Stratified Evaluation : RetDec, Anvill & Rev.ng
 (100 binaries x 5 architectures
 Architecture
 ARM64
-ARMv7
 PowerPC64
 RISC-V
 s390x
@@ -891,7 +859,8 @@ O%
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Per-Architecture Complementarity
@@ -915,7 +884,8 @@ Glutony
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wsolver : Lifting to LVM + Symbolic Execution/Abstract Interpretation
@@ -972,7 +942,8 @@ The Registry database contains ONLY .COM, .NET, .EDU domains and Registrars. Dom
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rise from the Deads
@@ -999,7 +970,8 @@ Here is how it works —>
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Resurrection
@@ -1023,14 +995,13 @@ securityfocus.com@domainsbyproxy.com
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Resurrection
 ¥ ‘Symantec
-_>
 accenture
-l\
 BROADCOM.
 55
 ```

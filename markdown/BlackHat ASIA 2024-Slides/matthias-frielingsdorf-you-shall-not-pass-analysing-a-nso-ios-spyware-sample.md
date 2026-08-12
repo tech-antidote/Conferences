@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Matthias Frielingsdorf-You Shall Not PASS - Analysing a NSO iOS Spyware Sample.pdf"
 pages: 163
 sha256: "65c147fc908408e82f3c61fe5a42811b1e8f91b8fe2de16aec23767a2496ae87"
-text_chars: 52637
-ocr_pages: 12
+text_chars: 51847
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:50:32Z"
+converted_at: "2026-08-12T04:49:58Z"
 ---
 # You Shall Not PASS - Analysing a NSO iOS Spyware Sample
 
 **Speakers:** Matthias Frielingsdorf  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Matthias Frielingsdorf-You Shall Not PASS - Analysing a NSO iOS Spyware Sample.pdf` (163 pages)
+
 
 ## Slide 1
 
@@ -32,21 +38,6 @@ Matthias Frielingsdorf
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-G ~—
-_ blackhat
-| ASIA 2024
-1k 18-19, 2024 | f ,
-BRIEFINGS | - SM
-You Shall not PASS
-Analysing a NSO iOS Spyware Sample
-%\
-Matthias Frielingsdorf
-#BHASIA @BlackHatEvents
-```
-
 ## Slide 2
 
 Matthias Frielingsdorf VP of Research at iVerify
@@ -57,29 +48,16 @@ iOS Malware & Mobile Device Security
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-biseahat Verity.
-Matthias Frielingsdorf
-VP of Research at iVerify
-iOS Malware & Mobile Device Security
-wi (3) @helthydriver
-#BHASIA @BlackHatEvents
-```
-
 ## Slide 3
 
 ##### **September 7th 2023**
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2024
 September 7th 2023
 iOS 16.6.1 and iPadOS 16.6.1
 Released September 7, 2023
@@ -170,14 +148,6 @@ iVerify - Clipping Wings: Our Analysis of a Pegasus Spyware Sample https://www.i
 ## Slide 12
 
 # BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-—-
-hat : WS SS ronost
-ASIA 2024 by
-```
 
 ## Slide 13
 
@@ -453,16 +423,6 @@ Exception Type EXC_BAD_ACCESS (SIGBUS) Exception SubType KERN_PROTECTION_FAILURE
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
-eae Forensic
-Anal
-bastpass 2 ontsts
-```
-
 ## Slide 37
 
 ###### **Lets have a look!**
@@ -547,11 +507,10 @@ logo Background manifest Pass Signature
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2024
 iOS 16.6.1 and iPadOS 16.6.1
 Released September 7, 2023
 ImagelO
@@ -986,16 +945,6 @@ Binary + Strings
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-ASIA 2024
-¢.pkpass Ler da
-Uncovering
-raped
-```
-
 ## Slide 81
 
 ## **Whats an NSExpression?**
@@ -1205,14 +1154,6 @@ NSString *decompressedString = [[NSString alloc] initWithData:decompressedData e
 😎
 
 # BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 97
 
@@ -1507,39 +1448,53 @@ NSData.h
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-ASIA 2024
-= © Q aaf_toBase64DecodedData
-Filter by 21 files (395 ms)
-Code Vv 2 lechium/iPhone_OS_17.0_21A328 - System/Library/PrivateFrameworks/AAAFoundation/NSString-AAAFoundation.h
-R itori:
-€positories 13 (id) aaf_base64Padded; // IMP=0x0010000000001e02
-Issues 14 (id) aaf_toBase64EncodedSt ring; // IMP=0x0010000000001da9
-15 (id) aaf_toBase64DecodedString; // IMP=0x0010000000001d4d
-Pull requests 16 (id) aaf_toBase64DecodedData; // IMP=0x0010000000001ce2
-17 (id) aaf_urlEncoded; // IMP=0x@010000000001c7c
-18 @end
-Users 19
-Discussions
-Commits
-Packages Y @ MTACS/i0S-17-Runtime-Headers - Frameworks/Foundation.framework/NSString.h
-Wikis 853 + (id)URLQueryValueALlowedCharacterSet;
-Topics
-(id) aaf_base64Padded;
-Marketplace (id) aaf_toBase64DecodedData;
-(id) aaf_toBase64DecodedSt ring;
-(id) aaf_toBase64EncodedSt ring;
-(id) aaf_toSHA256Data;
+aaf_toBase64DecodedData
+
+21 files (395 ms)
+
+Filter by
+Code 21
+Repositories 0
+Issues 0
+Pull requests 0
+Discussions 0
+Users 0
+Commits 0
+Packages 0
+Wikis 0
+Topics 0
+Marketplace 0
+
 Languages
 Objective-C
-@ Text
-Vv @ hack-different/symbol-server - symbols/macOS/a8f403688d333b121b8f3d67dbfeb344_AAAFoundation
-@® More languages...
-54 ..@1f2c2aff4 ( @x74) -[NSString(AAAFoundation) aaf_toBase64DecodedData] [FUNC, OBJC, NameNList, MangledNameNList, Mer..
-Repositories 757 @x00000001f2c40320 ( @x20) objc_msgSend$aaf_toBase64DecodedData [FUNC, PEXT, NameNList, MangledNameNList, NLis..
+Text
+More languages...
+
+lechium/iPhone_OS_17.0_21A328 · System/Library/PrivateFrameworks/AAAFoundation/NSString-AAAFoundation.h
+13   - (id)aaf_base64Padded;   // IMP=0x0010000000001e02
+14   - (id)aaf_toBase64EncodedString;    // IMP=0x0010000000001da9
+15   - (id)aaf_toBase64DecodedString;    // IMP=0x0010000000001d4d
+16   - (id)aaf_toBase64DecodedData;   // IMP=0x0010000000001ce2
+17   - (id)aaf_urlEncoded;    // IMP=0x0010000000001c7c
+18   @end
+19
+
+MTACS/iOS-17-Runtime-Headers · Frameworks/Foundation.framework/NSString.h
+853   + (id)URLQueryValueAllowedCharacterSet;
+854
+855   - (id)aaf_base64Padded;
+856   - (id)aaf_toBase64DecodedData;
+857   - (id)aaf_toBase64DecodedString;
+858   - (id)aaf_toBase64EncodedString;
+859   - (id)aaf_toSHA256Data;
+
+hack-different/symbol-server · symbols/macOS/a8f403688d333b121b8f3d67dbfeb344_AAAFoundation
+54    …01f2c2aff4 (    0x74) –[NSString(AAAFoundation) aaf_toBase64DecodedData] [FUNC, OBJC, NameNList, MangledNameNList, Mer…
+757   …    0x00000001f2c40320 (    0x20) objc_msgSend$aaf_toBase64DecodedData [FUNC, PEXT, NameNList, MangledNameNList, NLis…
 ```
 
 ## Slide 121
@@ -1589,14 +1544,6 @@ Q0Q1R10R11R12R13R14R15R16R17R18R19Q2R20R21R22R23R24R25R26R 27R28R29Q3R30R31R32R3
 😎
 
 # BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 125
 
@@ -1924,10 +1871,10 @@ FUNCTION(FUNCTION(CAST('OCMapper','Class'),'mapperForCurrentThread'),'setValue:f
 
 # BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piQichat Uncovering
 Paylo ad
 Payload Analysis
 #BHASIA @BlackHatEvents
@@ -1936,16 +1883,6 @@ Payload Analysis
 ## Slide 148
 
 # BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ee ee Uncovering
-ASIA 2024
-‘AG
-Call, ; d
-YOU SHALL NOT PASS!
-```
 
 ## Slide 149
 

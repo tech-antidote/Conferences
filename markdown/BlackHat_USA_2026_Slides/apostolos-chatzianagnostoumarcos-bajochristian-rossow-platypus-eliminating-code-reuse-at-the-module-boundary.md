@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Apostolos Chatzianagnostou&Marcos Bajo&Christian Rossow_PLaTypus Eliminating Code-Reuse at the Module Boundary.pdf"
 pages: 130
 sha256: "7f4af7214730e9fcbe6d2ee9f1160004faa72df9eade78dde856d9b7120ab8e8"
-text_chars: 35912
+text_chars: 33251
 ocr_pages: 19
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:05:38Z"
+converted_at: "2026-08-12T05:28:22Z"
 ---
 # PLaTypus Eliminating Code-Reuse at the Module Boundary
 
 **Speakers:** Apostolos Chatzianagnostou, Marcos Bajo, Christian Rossow  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Apostolos Chatzianagnostou&Marcos Bajo&Christian Rossow_PLaTypus Eliminating Code-Reuse at the Module Boundary.pdf` (130 pages)
+
 
 ## Slide 1
 
@@ -910,7 +916,8 @@ dispatcher loop
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dispatcher Gadget
@@ -925,7 +932,6 @@ if (fini_array NULL)
 Volume @x1@, Issue @x47, Phile #0x@7 of @x11 {
 ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
 ==Phrack Inc.==
-fini_array->d_un.d_ptr)3
 size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
 sizeof (ElfW(Addr)));
 while (sz @)
@@ -934,7 +940,6 @@ while (sz @)
 ElfW(Dyn) *fini = map->1_info[DT_FINI];
 if (fini NULL)
 DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
-black hat
 2026 46
 ```
 
@@ -950,7 +955,8 @@ dispatcher loop
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dispatcher Gadget
@@ -963,11 +969,9 @@ if we
 ElfW(Dyn) *fini_array = map->1_info[DT_FINI_ARRAY];
 ¢ Called gadgets: part of libc “array [= NULL)
 ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
-fini_array->d_un.d_ptr)3
 size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
 sizeof (ElfW(Addr)));
 11. Appendix B: Intel "/bin/sh" in memory chain
-tener nnn nnn ene n een e eee tenn c renee n eee e eee -- +
 Function Name Equivalent Operation
 while (sz @)
 ((fini_t) array[sz]) ()3
@@ -986,13 +990,10 @@ __cache_sysconf
 __cache_sysconf
 __cache_sysconf
 __cache_sysconf
-__cache_sysconf
-_d1_mcount_wrapper...
 ElfW(Dyn) *fini
 if (fini NULL)
 DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
 try th
-black hat
 2026 47
 ```
 
@@ -1086,18 +1087,16 @@ e6
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation
 Main Binary Libc
-pues Sa
 Why then should cross-DSO lg ~
 transfers be allowed outside callrax === =){---1 >| exeove |< +=) -imp rox
 of PLTs? mprotect
 malloc@PLT malloc@PLT
-el
-black hat
 2026 52
 ```
 
@@ -1151,19 +1150,17 @@ black hat
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-PLaTypus Design _. SS
 ¢ Each DSO can only reach external Main Binary
 functions for which it possesses PLT puts@PLT
 “4
 stubs
-call rax -- - -\K- - -- > execve |\<- -X- -jmp rbx
 mprotect
 malloc@PLT malloc@PLT
 ¢ Per-DSO granularity of enforcement
-black hat
 2026 56
 ```
 
@@ -1205,27 +1202,22 @@ black hat
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Execution Jails (EW)
 ¢ Each DSO is restricted in its EJ
 Subset of DSO’s address range
 28 bits
-——_
 Ox7fff20000000
-Oley Me!) a0 DSOA
-LY or 1 we mappings Execution
 DSOA r-xX mappings Jail
-prefix :
 Other r-- / rw- mappings
-Ox7fff3000000
 Execution
 Other r-- / rw- mappings DSO B
 Jail
 r-x Mappings
 Other r-- / rw- mappings
-black hat
 2026 60
 ```
 
@@ -1383,7 +1375,8 @@ puts ;
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Non-PLT Relocations
@@ -1400,7 +1393,6 @@ Dump of assembler code for function main:
 <+38>: add rsp,
 <+U2>: pop rbp
 <+U3>: ret
-black hat
 2026 70
 ```
 
@@ -1412,25 +1404,22 @@ black hat
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Non-PLT Relocations
 Dump of assembler code for function main:
 <+0>: push
-<+1>: mov ;
-<+U>; sub 1
 <+8>: mov DWORD PTR [ ],
 <+15>: ,QWORD PTR
 <+22>: QWORD PTR [
-I
 QWORD PTR [
 xor 1
 add 1
 pop
 ret
 Instrumentation here would corrupt the cross-DSO pointer...
-black hat
 2026 71
 ```
 
@@ -1617,7 +1606,8 @@ Qword
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fake PLTs
@@ -1639,7 +1629,6 @@ xor eax , eax
 add rsp,
 pop rbp
 ret
-black hat
 2026 76
 ```
 
@@ -1649,7 +1638,8 @@ black hat
 
 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fake PLTs
@@ -1662,8 +1652,6 @@ mov rax,QWORD PTR [rip+ ]
 mov QWORD PTR [rbp ],rax
 mov rax,QWORD PTR [rbp ]
 7 ript
-ee PTR Lrip # 0x555545550ef0 gef> x/9x 6x555545550ee8
-rcex,QWORD PTR [ript # 0x555545550ef8 : @x0Q0055554554F cd
 rax ,rcx
 rdi, [rip+ # 0x55554554ea2c
 rax
@@ -1671,7 +1659,6 @@ xor eax , eax
 add rsp,
 pop rbp
 ret
-black hat
 2026 77
 ```
 
@@ -1681,34 +1668,48 @@ black hat
 
 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Fake PLTs
-endbr64
-push rbp
-mov rbp,rsp
-sub rsp,
-mov DWORD PTR [rbp ],
-mov rax,QWORD PTR [rip+ ]
-mov QWORD PTR [rbp ],rax
-mov rax,QWORD PTR [rbp
-7 ript
-eee PTR Lrip # 0x555545550ef0 gef> x/gx ©x555545550¢0e8
-rex,QWORD PTR [rip+ # 0x555545550ef8 >: 0x000055554554F cdo
-rax ,rcx
-rdi, [rip+ # 0x55554554ea2c
-rax
-xor eax , eax
-add rsp,
-pop rbp
-ret
-gef> x/3i 0x000055554554FcdO
-: endbr64
-jmp  QWORD PTR [rip+ ] # 0x555545550£28
-nop WORD PTR [raxtrax*1+0x0]
-black hat
-2026 78
+
+[Disassembly panel]
+0x55554554fbf0:     endbr64
+0x55554554fbf4:     push   rbp
+0x55554554fbf5:     mov    rbp,rsp
+0x55554554fbf8:     sub    rsp,0x10
+0x55554554fbfc:     mov    DWORD PTR [rbp-0x4],0x0
+0x55554554fc03:     mov    rax,QWORD PTR [rip+0x12de]          # 0x555545550ee8
+0x55554554fc0a:     mov    QWORD PTR [rbp-0x10],rax
+0x55554554fc0e:     mov    rax,QWORD PTR [rbp-0x10]
+0x55554554fc12:     mov    rcx,QWORD PTR [rip+0x12d7]          # 0x555545550ef0
+0x55554554fc19:     or     rax,rcx
+0x55554554fc1c:     mov    rcx,QWORD PTR [rip+0x12d5]          # 0x555545550ef8
+0x55554554fc23:     and    rax,rcx
+0x55554554fc26:     lea    rdi,[rip+0xffffffffffffedff]        # 0x55554554ea2c
+0x55554554fc2d:     call   rax
+0x55554554fc2f:     xor    eax,eax
+0x55554554fc31:     add    rsp,0x10
+0x55554554fc35:     pop    rbp
+0x55554554fc36:     ret
+
+[Highlight box 1 around the "# 0x555545550ee8" comment; highlight box 2 around the block from 0x55554554fc12 through 0x55554554fc2d]
+
+[Right panel]
+gef➤  x/gx 0x555545550ee8
+0x555545550ee8: 0x000055554554fcd0
+
+[Bottom panel]
+gef➤  x/3i 0x000055554554fcd0
+   0x55554554fcd0:      endbr64
+   0x55554554fcd4:      jmp    QWORD PTR [rip+0x124e]          # 0x555545550f28
+   0x55554554fcda:      nop    WORD PTR [rax+rax*1+0x0]
+
+Information Classification: General
+
+black hat USA 2026
+78
 ```
 
 ## Slide 79
@@ -1739,12 +1740,12 @@ black hat
 
 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Final Design
 28 bits
-—
 Ox7fff20000000
 Other r-- / rw- j DSO A
 Lo er r-- / rw- mappings Exewution
@@ -1752,14 +1753,11 @@ DSOA .fakeplt.sec / r-x mappings Jail
 prefix
 Other r-- / rw- mappings
 .plt / .plt.sec sections
-Ox7f ff 30000000
 Ox7fff32000000
 fr Other r-- / rw- mappings DSO B
 fakeplt.sec / r-x mappings Pxecttion
-Ox7FFFS7FFFFFFFE vat
 Other r-- / rw- mappings
 .plt / .plt.sec sections
-black hat
 2026 81
 ```
 
@@ -2486,13 +2484,13 @@ What is the runtime overhead introduced by PLaTypus?
 
 106
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Correctness
 ¢ No failures observed in test suites of 19 real-world applications
 Table 1. BENCHMARK SUITE. EVERY BENCHMARK IS FOLLOWED BY ITS VERSION NUMBER.
-black hat
 2026 106
 ```
 
@@ -2514,43 +2512,21 @@ Including complex ones like _glibc, OpenSSL_
 
 108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cross-DSO Gadget Reduction
 Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-PADS UNDER CET (COL. 3) AND PLATYPUS (COL. 4-6), FROM THE
-PERSPECTIVE OF THE RESPECTIVE MODULE. CT = CALLBACK TABLE.
 Module CET
-PLAT YPU Red
 ec erver 3739
 libc.so 4961
 99.37
-99.96
-99.96
-99.96
-99.75
-| Module | CET | PLaTypus | CT | Red. (%) _
-vise [el & (8) ay
-|
-8
-100.00
-| itibeso | 4472, || 40 | 40 | 99
 |
 |
-|
-|
-|
-|
-—_| libeso | 16533 | = 166 =| 166 | ~— 98.99
 libreadline.so 7452
 libtinfo.so 7856
 libncurses.so 7347
-libm.so
-libz.so
 libc.so 99.1]
-99.97
-99.99
 99.12
 99, 97
 nginx 17986
@@ -2562,7 +2538,6 @@ libcrypt. 80 20171
 ibe 16533
 sqlite3 6873
 98.99
-black hat
 2026 108
 ```
 
@@ -2572,47 +2547,29 @@ black hat
 
 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cross-DSO Gadget Reduction
 Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-PADS UNDER CET (COL. 3) AND PLATYPUS (COL. 4-6), FROM THE
-PERSPECTIVE OF THE RESPECTIVE MODULE. CT = CALLBACK TABLE.
 Module Red
 erver
 libc.so
 99.37
-99.96
-99.96
-99.96
-99.75
-[|| ose
-|
-8
-100.00
-|
-|
-|
-|
 |
 |
 6 |
 | Module || CET |] PLatypus | CT | Red. (%) _
-|} ;
 || 4
 sqlite3 |
 libreadline.so
 libtinfo.so
 libncurses.so |
-libm.so
-libz.so
 libc.so 99.1]
 |
 |
 |
 |
-—__| libeso | L16533}] — 166 | 166 | ~— 98.99
 17986
 20124
 9551
@@ -2620,18 +2577,14 @@ libc.so 99.1]
 17182
 20171
 16533
-99.97
-99.99
 99.12
 99, 97
 nginx
 libpcre2-8.so
 liberypto.so
-libz.so
 libssl.so
 libcrypt. so
 98.99
-black hat
 2026 109
 ```
 
@@ -2641,55 +2594,30 @@ black hat
 
 110
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cross-DSO Gadget Reduction
 Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-PADS UNDER CET (COL. 3) AND PLATYPUS (COL. 4-6), FROM THE
-PERSPECTIVE OF THE RESPECTIVE MODULE. CT = CALLBACK TABLE.
-Module CET | PLAT YPUS| YPU
 Red
 ec erver 4g | redis-server | 3739 ||
 libc.so 4961
 99.37
-99.96
-99.96
-99.96
-99.75
-| Module | CET |[PLaTyus]| CT | Red. (%) _
-i ay
-|
-8
-100.00
-| 40 | 99.11 |
 |
 |
-|
-|
-|
-|
-—__| libeso | 16533 |[|_ 166 i} 166 | = 98.99
 libreadline.so 7452
 libtinfo.so 7856
 libncurses.so 7347
-libm.so
-libz.so
 libc.so 99.1]
-99.97
-99.99
 99.12
 99, 97
-nginx | nginx «sd: 7986
 libpere2-8.so | 20124
 liberypto.so 9551
 libz.so 20085
 libssl.so 17182
 libcrypt. 80 20171
 ibe 16533
-| gglites «| 6873. 6873
 98.99
-black hat
 2026 110
 ```
 
@@ -2699,41 +2627,26 @@ black hat
 
 111
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cross-DSO Gadget Reduction
 Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-PADS UNDER CET (COL. 3) AND PLATYPUS (COL. 4-6), FROM THE
-PERSPECTIVE OF THE RESPECTIVE MODULE. CT = CALLBACK TABLE.
 | Module | CET | PLaTypus |) CT]] Red. (%) CET PLATYPU
 ec erver 4g -| redis-server | 3739 | 6. ||
 libc.so 4961
-| sglites—ti‘(g;S«OS73 «| (COSY; 6873 43 ) 99.37
-99.96
-99.96
-99.96
-99.75
-100.00
 99.11
 libreadline.so 7452
 libtinfo.so 7856
 libncurses.so 7347
-libm.so
-libz.so
 libc.so
-99.97
-99.99
 99.12
 99, 97
-nginx It nginx =—st—=‘;«d‘T9BO | COCSYS;
 libpere2-8.so | 20124
 liberypto.so 9551
 libz.so 20085
 libssl.so 17182
 libcrypt. 80 20171
-___| libeso | 16533 | 166 || 166)| 98.99 98.99
-black hat
 2026 111
 ```
 
@@ -2745,30 +2658,23 @@ black hat
 
 112
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Cross-DSO Gadget Reduction
 Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO ENBR
-PADS UNDER CET (COL. 3) AND PLATYPUS (COL. 4-6), FROM THE
-PERSPECTIVE OF THE RESPECTIVE MODULE. CT = CALLBACK TABLE.
 Module
 redis-server
 libc.so
-| sglites—ti‘(;:S«‘OS73 «| BS:C“‘“;;C SLOT
 libreadline.so
 libtinfo.so
 libncurses.so
-libm.so
-libz.so
 libc.so
 nginx
 libpcre2-8.so
 liberypto.so
-libz.so
 libssl.so
 liberypt.so
-—_ tibeso | 16533 | 166 | 166 | 98.99 80
 CET
 3739
 496]
@@ -2779,7 +2685,6 @@ CET
 7242
 8064
 4472
-nginx si‘; «d‘TOBO | COCS:~*~<~:C<i SYST
 201 24
 201 71
 16533
@@ -2791,25 +2696,16 @@ PLATYPUS | Module | CET | PLaTypus | CT | Red. (%) _ CT
 0
 0
 18
-0
 99.84
 98.95
 99.37
-99.96
-99.96
-99.96
-99.75
-100.00
 99.11
-99.97
-99.99
 99. 12
 98.99
 64
 > 98% gadget
 reduction per
 module
-black hat
 2026 112
 ```
 
@@ -2825,7 +2721,8 @@ dispatcher loop
 
 113
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FOP Attacks Mitigation
@@ -2838,11 +2735,9 @@ ElfW(Dyn) *fini_array = map->1_info[DT_FINI_ARRAY];
 _array NULL)
 ¢ Called gadgets: part of libc
 ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
-fini_array->d_un.d_ptr)3
 size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
 sizeof (ElfW(Addr)));
 11. Appendix B: Intel "/bin/sh" in memory chain
-tener nnn nnn ene n een e eee tenn c renee n eee e eee -- +
 Function Name Equivalent Operation
 while (sz @)
 ((fini_t) array[sz]) ()3
@@ -2861,13 +2756,10 @@ __cache_sysconf
 __cache_sysconf
 __cache_sysconf
 __cache_sysconf
-__cache_sysconf
-_d1_mcount_wrapper...
 ElfW(Dyn) *fini
 if (fini NULL)
 DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
 try th
-black hat
 2026 113
 ```
 
@@ -3231,7 +3123,8 @@ E.g., loader, system libraries
 
 130
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Interested in more?
@@ -3295,7 +3188,6 @@ Both restrict the modularity of code-reuse gadgets to entire
 functions. This restriction is significant, as it complicates an
 attacker’s ability to set up the necessary function arguments
 despite successfully hijacking control flow. Nonetheless,
-black hat
 2026
 130
 ```

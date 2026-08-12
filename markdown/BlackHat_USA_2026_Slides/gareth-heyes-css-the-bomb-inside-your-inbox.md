@@ -8,13 +8,17 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Gareth Heyes_CSS The Bomb Inside Your Inbox.pdf"
 pages: 80
 sha256: "8dfbe66bc21362f3e73b75a62b1ecc7d90829b73c2a9c925815946c1d210d022"
-text_chars: 18186
+text_chars: 18134
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 79.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:09:30Z"
+converted_at: "2026-08-12T05:33:55Z"
 ---
 # CSS The Bomb Inside Your Inbox
 
@@ -22,20 +26,19 @@ converted_at: "2026-08-11T23:09:30Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Gareth Heyes_CSS The Bomb Inside Your Inbox.pdf` (80 pages)
 
+
 ## Slide 1
 
 ### CSS: the bomb inside your inbox Gareth Heyes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (J
 CSS: the rsp.
 bomb insides 23
-JE*="AQF"]
 vd
-IF ul
-your inbox (BACKGR ss : ' f 7
 Gareth Heyes |
 ```
 
@@ -382,7 +385,8 @@ CTF ID: CTF-1-CSS-Mayhem Method: 1.We first found the email with the confirmatio
 
 Victim tells Cowork to check emails
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4 PortSwigger
@@ -390,7 +394,6 @@ Victim tells Cowork to check emails
 Learn how to use Cowork safely,
 Read my unread emails in my inbox and carry out any actions on my behalf please.
 Two tasks, 1. read emails, 2. perform actions
-r qa
 © Workinaproject ~ @ Ask ~ Sonnet 4.6
 3 © tostarta task and keep going
 ```

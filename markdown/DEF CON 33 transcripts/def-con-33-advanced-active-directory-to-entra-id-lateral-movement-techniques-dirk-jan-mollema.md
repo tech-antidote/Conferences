@@ -12,7 +12,7 @@ duration_seconds: 2691
 words: 8485
 text_chars: 47237
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:12Z"
 ---
 
 # Advanced Active Directory to Entra ID lateral movement techniques

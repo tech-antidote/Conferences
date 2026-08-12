@@ -12,7 +12,7 @@ duration_seconds: 2717
 words: 6280
 text_chars: 35711
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Invitation Is All You Need Invoking Gemini Agents with a Google Calendar Invite

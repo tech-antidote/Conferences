@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Erik Egsgard_Tales From The Crypt Bug Hunting in the Windows CryptoAPI.pdf"
 pages: 41
 sha256: "3792fe04ec4896dfb0daa66674c715906a06db0cbcd01c0164ccc8476b27aea0"
-text_chars: 23284
-ocr_pages: 22
+text_chars: 21778
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.8
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:29:02Z"
+converted_at: "2026-08-12T06:12:52Z"
 ---
 # Tales From The Crypt Bug Hunting in the Windows CryptoAPI
 
 **Speakers:** Erik Egsgard  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Erik Egsgard_Tales From The Crypt Bug Hunting in the Windows CryptoAPI.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -58,16 +63,15 @@ fieldeffect.com 2
 
 fieldeffect.com 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Story Time
 - Crypt Decode fuzzing:
 - Got an AFL crash somewhere, think is is in the decoding of
 szOID_PKIX_POLICY_QUALIFIER_USERNOTICE
 - Another one in decoding of CRYPT_TIMESTAMP_RESPONSE
-4,31 °
 fieldeffect.com 3
 ```
 
@@ -77,12 +81,11 @@ fieldeffect.com 3
 
 fieldeffect.com 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Crypt Decoding
-Cb
 BOOL CryptDecodeObjectEx(
 [in] DWORD dwCertEncodingType,
 [in] LPCSTR lpszStructType,
@@ -101,14 +104,12 @@ decodePtr,
 dataLength,
 CRYPT_DECODE_ALLOC_FLAG,
 &decodeParam,
-&object,
 S&objectLength ) )
 vlog( "Decoded object into 0x%08x bytes\n", objectLength )
 freeWrapper( object );
 t
 5
 else
-{
 vlog( "CryptDecodeObjectEx failed \n", GetLastError() );
 fieldeffect.com 4
 ```
@@ -119,16 +120,15 @@ fieldeffect.com 4
 
 fieldeffect.com 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 AFL False Start
 inding to #0.
 trumented module crypt
 umented module
 a crash
-\winafl\afl-f
 fieldeffect.com 5
 ```
 
@@ -138,13 +138,12 @@ fieldeffect.com 5
 
 fieldeffect.com 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 AFL False Start
 WinAFL 1.17 based on AFL 2.43b (FuzzX509.exe)
-T= ESS Te | +- overall results ----+
 | run time : @ days, ® hrs, ® min, 31 sec | cycles done : 0
 | last new path : © days, © hrs, © min, 1 sec | total paths : 201
 | last uniq crash : none seen yet | uniq crashes : 0
@@ -174,7 +173,7 @@ fieldeffect.com 6
 
 ## **Timestamp Decoding**
 
-```
+\```
 0:000> wt -i kernelbase -i kernel32 -i verifier -i ucrtbase -i vcruntime140 -i ntdll
    27     0 [  0] CRYPT32!CryptDecodeObjectEx
     5     0 [  1]   CRYPT32!LoadRegFunc
@@ -201,7 +200,7 @@ fieldeffect.com 6
    51  8875 [  2]     CRYPT32!Asn1InfoDecodeAndAllocEx
    18  8926 [  1]   CRYPT32!Asn1TimeStampResponseDecodeEx
    94 33648 [  0] CRYPT32!CryptDecodeObjectEx
-```
+\```
 
 fieldeffect.com
 
@@ -213,10 +212,10 @@ fieldeffect.com
 
 fieldeffect.com 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Strings are Hard
 ©, Decompile: Asn1X509GetPKIFreeText - (crypt32.dll)
 PWSTR) *
@@ -230,14 +229,13 @@ fieldeffect.com 8
 
 fieldeffect.com 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Strings are Hard
 ©, Decompile: Asn1X509GetPKIFreeText - (crypt32.dll)
 *
-Size
 utputString, st
 ring [str
 fieldeffect.com 9
@@ -249,10 +247,10 @@ fieldeffect.com 9
 
 fieldeffect.com 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Where Is This Used
 The CryptRetrieveTimeStamp function encodes a time stamp request and retrieves the time
 stamp token from a location specified by a URL to a Time Stamping Authority (TSA).
@@ -270,10 +268,8 @@ cbData,
 [out, optional] PCCERT_CONTEXT *ppTsSigner,
 [out, optional] HCERTSTORE *phStore
 Parameters
-[in] wszurl
 A pointer to a null-terminated wide character string that contains the URL of the TSA to
 which to send the request.
-fieldeffect.com
 10
 ```
 
@@ -283,10 +279,10 @@ fieldeffect.com
 
 fieldeffect.com 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Signtool Po
 SignTool
 Article » 03/28/2022 + 6 contributors
@@ -296,13 +292,11 @@ Remarks
 Examples
 SignTool (Signtool.exe) is a command-line CryptoAP! tool that digitally-signs files, verifies
 signatures in files, and time stamps files.
-command f Copy
 SignTool [Operation] [Options] [FileName ...
 The following command signs and time stamps the file:
 SignTool sign /f MyCert.pfx /t http://timestamp.digicert.com MyControl.exe
 © Note
 For information about time stamping a file after it has already been signed, see Adding
-fieldeffect.com
 11
 ```
 
@@ -312,10 +306,10 @@ fieldeffect.com
 
 fieldeffect.com 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 CVE-2024-30020
 C:\WINDOWS\system32\cmd. X ar
 Microsoft Windows [Version 10.0.22621.3737]
@@ -334,12 +328,11 @@ fieldeffect.com 12
 
 fieldeffect.com 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 UserNotice Fuzzing
-[cpu00ee1: 6%]
 WinAFL 1.17 based on AFL 2.43b (FuzzX509.exe)
 +- process timing ------------------------------------— +- overall results -—---+
 | run time : ® days, © hrs, 31 min, 3 sec | cycles done : 0 |
@@ -370,7 +363,6 @@ trim : 44.21%/2090, 0.00%
 | dictionary : 0/0, 0/0, 6/16.8k
 |
 |
-fieldeffect.com
 13
 ```
 
@@ -378,7 +370,7 @@ fieldeffect.com
 
 ## **Timestamp Decoding II**
 
-```
+\```
 0:000> wt -i kernelbase -i kernel32 -i verifier -i ucrtbase -i vcruntime140 -i ntdll
    27     0 [  0] CRYPT32!CryptDecodeObjectEx
     5     0 [  1]   CRYPT32!LoadRegFunc
@@ -405,7 +397,7 @@ fieldeffect.com
    51  8875 [  2]     CRYPT32!Asn1InfoDecodeAndAllocEx
    18  8926 [  1]   CRYPT32!Asn1TimeStampResponseDecodeEx
    94 33648 [  0] CRYPT32!CryptDecodeObjectEx
-```
+\```
 
 fieldeffect.com
 
@@ -433,14 +425,12 @@ fieldeffect.com 15
 
 fieldeffect.com 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
-ASN1Dec_PKI/FreeText
 C, Decompile: ASN1Dec PKiFreeText - (crypt32.dll)
 1
-2ibo
 PKIFreeText ::= SEQUENCE SIZE (1..MAX) OF UTF8String
 -- text encoded as UTF-8 String [RFC3629] (note: each
 -- UTF8String MAY include an [RFC3066] language tag
@@ -455,12 +445,11 @@ fieldeffect.com 16
 
 fieldeffect.com 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FIELD EFFECT ne, a
-ASN1Dec_PKIiFreeText ssi
-‘G, Decompile: ASN1Dec PKiFreeText - (crypt32.dll)
 1
 PKIFreeText ::= SEQUENCE SIZE (1..MAX) OF UTF8String
 -- text encoded as UTF-8 String [RFC3629] (note: each
@@ -493,12 +482,10 @@ success = ASNIBERDecUTF8String(_localDecoder, 0xc, ->StringArray + stringCount) 
 
 fieldeffect.com 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
-ASN1Dec_PKI/FreeText
-‘G, Decompile: ASN1Dec PKiFreeText - (crypt32.dll)
 1
 bool ASN1Dec_PKIFreeText(ASN1decoding_s *
 if (bufferSize <= —>StringCount) {
@@ -507,21 +494,19 @@ bufferSize = 0x10;
 localBuffer = (ANSI STRING *)ASN1DecRealloc(_localDecoder, —>StringArray, bufferSize << 4);
 if (localBuffer == (ANSI STRING *)0x0) {
 return false;
-o
 —>StringArray = localBuffer;
 }
 stringCount = —>StringCount;
 —>StringCount = stringCount + 1;
 success = ASNIBERDecUTF8String(_localDecoder, 0xc, ->StringArray + stringCount) ;
 50
-fieldeffect.com
 ```
 
 ## Slide 19
 
 ## **PoC Attempt**
 
-```
+\```
 Count = 0xc000000
 Count * sizeof( UTF8_STRING ) = 0xc000000 * 0x10
       = 0xc0000000
@@ -531,7 +516,7 @@ alloc = 0x2000000 * 0x10
 alloc = 0x4000000 * 0x10
 alloc = 0x8000000 * 0x10
 alloc = 0x10000000 * 0x10 ***
-```
+\```
 
 fieldeffect.com 19
 
@@ -539,68 +524,68 @@ fieldeffect.com 19
 
 ## **Size Checks**
 
-```
+\```
 0:000> wt -i kernelbase -i kernel32 -i verifier -i ucrtbase -i vcruntime140 -i ntdll
-```
+\```
 
 - `00007ff7`1f3a13d0`
 
-```
+\```
    27     0 [  0] CRYPT32!CryptDecodeObjectEx
-```
+\```
 
-```
+\```
     5     0 [  1]   CRYPT32!LoadRegFunc
-```
+\```
 
-```
+\```
    76 24702 [  0] CRYPT32!CryptDecodeObjectEx
-```
+\```
 
 - `16     0 [  1]   CRYPT32!Asn1TimeStampResponseDecodeEx`
 
-```
+\```
    23   886 [  2]     CRYPT32!Asn1InfoDecodeAndAllocEx
-```
+\```
 
-```
+\```
    54     0 [  3]       MSASN1!ASN1_Decode
-```
+\```
 
-```
+\```
    14     0 [  4]         CRYPT32!ASN1Dec_TimeStampResp
-```
+\```
 
-```
+\```
 g_dwMaxDecodeBufferSize = 0x61a8000
-```
+\```
 
-```
+\```
    77     0 [  5]           MSASN1!ASN1BERDecExplicitTag
-```
+\```
 
-```
+\```
    13     0 [  5]           CRYPT32!ASN1Dec_PKIStatusInfo
    14     0 [  6]             CRYPT32!ASN1Dec_PKIFreeText
-```
+\```
 
-```
+\```
 = 100MB
-```
+\```
 
 - `10     0 [  7]               CRYPT32!ASN1DecRealloc_Elements`
 
 - `81  2474 [  6]             CRYPT32!ASN1Dec_PKIFreeText`
 
-```
+\```
    60  2909 [  5]           CRYPT32!ASN1Dec_PKIStatusInfo
-```
+\```
 
 - `44  3213 [  4]         CRYPT32!ASN1Dec_TimeStampResp`
 
-```
+\```
    95  3301 [  3]       MSASN1!ASN1_Decode
-```
+\```
 
 - `35  4282 [  2]     CRYPT32!Asn1InfoDecodeAndAllocEx`
 
@@ -620,9 +605,9 @@ g_dwMaxDecodeBufferSize = 0x61a8000
 
 - `18  8926 [  1]   CRYPT32!Asn1TimeStampResponseDecodeEx`
 
-```
+\```
    94 33648 [  0] CRYPT32!CryptDecodeObjectEx
-```
+\```
 
 fieldeffect.com
 
@@ -634,16 +619,12 @@ fieldeffect.com
 
 fieldeffect.com 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 UserNotice Fuzzing
-[cpu0e0ee1: 4%]
-a cherethiet
 WinAFL 1.17 based on AFL 2.43b (FuzzX509.exe) ee eas
-(at thatet wet
-= eS LE) EES +- overall results -—---+ theese
 | run time : 0 days, 1 hrs, 14 min, 2 sec | cycles done : 4 sietets
 | last new path : © days, © hrs, © min, 7 sec | total paths : 1337
 | last uniq crash : none seen yet | uniq crashes : 0
@@ -664,7 +645,7 @@ WinAFL 1.17 based on AFL 2.43b (FuzzX509.exe) ee eas
 |
 byte flips : 1/14.8k, 4/13.9k, 3/12.1k | pending : 414 ;
 arithmetics : 285/828k, 7/439k, 5/83.1k | pend fav : 2 ~
-known ints : 54/62.8k, 42/394k, 29/449k | own finds : 1336  "
+known ints : 54/62.8k, 42/394k, 29/449k | own finds : 1336 "
 | imported : n/a
 | stability
 |
@@ -698,18 +679,16 @@ fieldeffect.com 22
 
 fieldeffect.com 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-FIELD EFFECT
 ASN1DecRealloc Xref
 References to ASN1DecRealloc - 87 locations
 Locati... Labe' Code Unit Context Function Name
 18007d7bf qword ptr [->MSASN1. ASN1Dec_OcspBasicResponseList
-[->Mi
 18007ed74
 18007ee83
-1806
 18007fa63
 80
 80080120
@@ -718,7 +697,6 @@ Locati... Labe' Code Unit Context Function Name
 180088
 1800882
 180088570
-fieldeffect.com
 ```
 
 ## Slide 24
@@ -727,10 +705,10 @@ fieldeffect.com
 
 fieldeffect.com 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Validate Exploitability
 if (uVaré
 uVa
@@ -738,25 +716,24 @@ uVa
 uVarl
 7
 while ( (int) CONCAT71 (
-fieldeffect.com
 ```
 
 ## Slide 25
 
 ## **ASN1Dec_CRLDistributionPoints()**
 
-```
+\```
 Object Size = (1 << 6) = 0x40
 Input Size = 2 Bytes
 Ratio = 0x20!!
-```
+\```
 
 fieldeffect.com 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 ASN1Dec_CRLDistribution
 {
 —>distPointCount)
@@ -778,7 +755,6 @@ DistributionPointName ::= CHOICE {
 fullName [9] GeneralNames,
 nameRelativeToCRLIssuer [1] RelativeDistinguishedName }
 Ratio = 0x20!!
-fieldeffect.com
 ```
 
 ## Slide 26
@@ -809,15 +785,14 @@ fieldeffect.com 26
 
 fieldeffect.com 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 Vulnerability Options
 ° szOID CRL DIST POINTS = “2.5.29.31” ee.
 2_click.pfx
 ¢ Certificate file | dare you_
-fieldeffect.com
 27
 ```
 
@@ -875,12 +850,11 @@ fieldeffect.com
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 SL Object Retrieval
-C++
 C++
 BOOL CryptRetrieveObjectByUr1w(
 [in] LPCWSTR pszurl,
@@ -912,43 +886,20 @@ e Idap (Lightweight Directory Access Protocol) dwMaxUr1RetrievalByteCount
 © https (certificate revocation list (CRL) or online certificate status protocol (OCSP) A value that specifies a limit to the number of bytes retrieved. A value of zero or less specifies
 retrievals only) no limit.
 e file
-fieldeffect.com
 ```
 
 ## Slide 32
 
 ## **CA Issuers**
 
-```
+\```
 CCertChainEngine::GetIssuerUrlStore()
 {
     pAuxInfo->dwMaxUrlRetrievalByteCount = 100000;
 }
-```
+\```
 
 fieldeffect.com 32
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FIELD EFFECT
-CA Issuers
-X509v3 extensions:
-X509v3 Authority Key Identifier:
-9D:6E:82:D9:A6:69:4D:B2:CA:D1:8D:21:89:41:82:92:02:C2:C9:D4
-X509v3 Basic Constraints:
-CA:FALSE
-X509v3 Key Usage:
-Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment
-X509v3 Subject Alternative Name:
-DNS :DirectChild
-Authority Information Access:
-CA Issuers — URI:http://192.168.37.1:8080/intermediate.cer
-CCertChainEngine: :GetIssuerUr1Store ()
-{
-pAuxInfo->dwMaxUrlRetrievalByteCount = 100000;
-fieldeffect.com
-```
 
 ## Slide 33
 
@@ -956,15 +907,12 @@ fieldeffect.com
 
 fieldeffect.com 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 UserNotice Fuzzing
-aciehirteet
 WinAFL 1.17 based on AFL 2.43b (FuzzX509.exe) © ts teat
-+ eh ittettett
-T= [PROCASS Tesla le) SSS +- overall results ----+ <thrttet
 | run time : 1 days, 4 hrs, 12 min, 24 sec | cycles done : 40 sietets
 | last new path : © days, 3 hrs, 37 min, 39 sec | total paths : 1833
 | last uniq crash : none seen yet | uniq crashes : 0
@@ -974,13 +922,10 @@ T= [PROCASS Tesla le) SSS +- overall results ----+ <thrttet
 | paths timed out : © (0.00%) | count coverage : 1.99 bits/tuple
 +- stage progress + findings in depth
 | now trying : arith 8\8 favored paths : 725 (39.55%)
-_
 | stage execs : 73.3k/611k (11.99%) new edges on : 997 (54.39%) . WY
-total crashes : 0 (@ unique) ' WS ;
 | total execs : 99.7M
 |
 |
-| SS
 | exec speed : 410.3/sec | total tmouts : 0 (0 unique) ; .
 +- fuzzing strategy yields ----------- SSS +- path geometry : SY
 | bit flips : 269/8.78M, 100/8.78M, 58/8.78M levels : 22 SS
@@ -992,7 +937,6 @@ known ints : 71/1.05M, 63/7.77M, 42/10.7M | own finds : 1832 .
 | stability
 dictionary : 0/0, 0/0, 34/18.1M
 havoc : 840/17.9M, 0/0
-26 .07%/82.3k, 78.59%
 fieldeffect.com 33
 ```
 
@@ -1000,22 +944,21 @@ fieldeffect.com 33
 
 ## **OCSP Retrieval**
 
-```
+\```
   pAuxInfo->dwMaxUrlRetrievalByteCount = 100MB;
-```
+\```
 
 fieldeffect.com 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FIELD EFFECT
 OCSP Retrieval
 X509v3 extensions:
 X509v3 Authority Key Identifier:
 39:31:A6:FC:DC:78:2B:B6:59:59:93:F1:BE:50:AB:EC:F5:1E:08:9F
 X509v3 Basic Constraints:
-CA: FALSE
 X509v3 Key Usage:
 Digital Signature, Non Repudiation, Key Encipherment, Data Encipherment
 rity Information Access:
@@ -1120,9 +1063,9 @@ fieldeffect.com 39
 
 - **`2024-05 – Patch released`**
 
-```
+\```
 CVE-2024-29050 – CRL Distribution Points
-```
+\```
 
 - **`2023-09 - Reported to MSRC by VictorV with Kunlun Lab`**
 

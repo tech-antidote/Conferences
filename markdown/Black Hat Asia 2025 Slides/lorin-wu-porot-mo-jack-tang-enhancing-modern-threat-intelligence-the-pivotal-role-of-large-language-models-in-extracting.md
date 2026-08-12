@@ -11,15 +11,21 @@ sha256: "f82fc21d66036da4cafcd0c63d7106f8c295fd9867f51ba950f6de56497d4b4b"
 text_chars: 24023
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:06:02Z"
+converted_at: "2026-08-12T03:55:06Z"
 ---
 # Enhancing Modern Threat Intelligence The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains
 
 **Speakers:** Lorin Wu, Porot Mo, Jack Tang  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Lorin Wu & Porot Mo & Jack Tang_Enhancing Modern Threat Intelligence The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains.pdf` (37 pages)
+
 
 ## Slide 1
 

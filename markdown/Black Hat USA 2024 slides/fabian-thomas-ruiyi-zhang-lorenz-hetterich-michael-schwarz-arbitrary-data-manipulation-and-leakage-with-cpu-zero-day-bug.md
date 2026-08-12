@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Fabian Thomas & Ruiyi Zhang & Lorenz Hetterich & Michael Schwarz_Arbitrary Data Manipulation and Leakage with CPU Zero-Day Bugs on RISC-V_Compressed.pdf"
 pages: 157
 sha256: "0cfa12a78bcd776561c2684ec923ac201d4c9232f064414f1c229e026397cde8"
-text_chars: 30593
+text_chars: 30591
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:59:38Z"
+converted_at: "2026-08-12T04:31:16Z"
 ---
 # Arbitrary Data Manipulation and Leakage with CPU Zero-Day Bugs on RISC-V
 
 **Speakers:** Fabian Thomas, Ruiyi Zhang, Lorenz Hetterich, Michael Schwarz  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fabian Thomas & Ruiyi Zhang & Lorenz Hetterich & Michael Schwarz_Arbitrary Data Manipulation and Leakage with CPU Zero-Day Bugs on RISC-V_Compressed.pdf` (157 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,11 @@ Fabian Thomas, Lorenz Hetterich
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 =>
-a
 blackhat — =
 USA 2024
 AUGUST 7-8, 2024

@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Alan Sguigna & Ivan Rouzanov_JTAG debug of Windows Hyper-V  Secure Kernel with WinDbg and DCIEXDI.pdf"
 pages: 14
 sha256: "b7b52f98491f1c1a3e70310e1fd79448a34f5706f7026fd496e6cab32b4bc6a2"
-text_chars: 4570
+text_chars: 4535
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:26:49Z"
+converted_at: "2026-08-12T06:05:14Z"
 ---
 # JTAG debug of Windows Hyper-V  Secure Kernel with WinDbg and DCIEXDI
 
 **Speakers:** Alan Sguigna, Ivan Rouzanov  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Alan Sguigna & Ivan Rouzanov_JTAG debug of Windows Hyper-V  Secure Kernel with WinDbg and DCIEXDI.pdf` (14 pages)
+
 
 ## Slide 1
 
@@ -214,11 +219,11 @@ Demo
 
 © 2024, ASSET InterTech, Inc.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 14
-SourcePoint™ ScanWorks:
 Platform for Software Debug and Trace © 2024, ASSET InterTech, Inc. Platform for Embedded Instruments
 ```
 
@@ -251,11 +256,11 @@ _‘X’ DM @AlanSguigna or LinkedIn InMail_
 
 © 2024, ASSET InterTech, Inc.,
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ==
-ScanWorks’
 tform for Software Deb and Trace © , Inc., Late feed
 Platform for Software Debug and Trace © 2024, ASSET InterTech, Inc. Platform for Embedded Instruments
 ```

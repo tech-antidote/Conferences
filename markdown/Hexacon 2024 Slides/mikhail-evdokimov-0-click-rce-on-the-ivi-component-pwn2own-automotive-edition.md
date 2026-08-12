@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/Mikhail Evdokimov_0-click RCE on the IVI component Pwn2Own Automotive edition.pdf"
 pages: 189
 sha256: "6d663cde6ecb5f4a191103660ceaf58c3240e0213afb8c2197fc35ec2f549c14"
-text_chars: 66923
+text_chars: 65726
 ocr_pages: 48
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:21:11Z"
+converted_at: "2026-08-12T05:55:07Z"
 ---
 # 0-click RCE on the IVI component Pwn2Own Automotive edition
 
 **Speakers:** Mikhail Evdokimov  
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Mikhail Evdokimov_0-click RCE on the IVI component Pwn2Own Automotive edition.pdf` (189 pages)
+
 
 ## Slide 1
 
@@ -80,7 +85,8 @@ tw: <u>@konatabrk</u>
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Intro :: Pwn2Own IVI Targets
@@ -149,31 +155,24 @@ reference: Dissect Android Bluetooth for Fun & Profit
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bluetooth :: HCI Link Connection
 HCI Link Connection Establishment
-BDADDR: aa:bb:cc:dd:ee: ff Device A
 HCI Handle:
-8x188
 HCI Create Connection
 >
 HCI Accept Connection
-i
 HCI Link Connection
 Authentication Requested
 >
 Link Key Request
-<
 Link Key Reply Negative
 I0 Capability
-< >|
 User Confirmation
-< >|
 Authentication Completed
-K<
-Device Bo BDADDR: 11:22:33:44:55:66
 HCI Handle:
 6x41
 Prior Authentication
@@ -186,7 +185,8 @@ Prior Authentication
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bluetooth :: HCI ACL Fragmentation
@@ -195,8 +195,6 @@ Connection handle to be used for transmitting data
 over a HCI Link Connection (primary controller)
 2HCI ACL fragment's maximum length depends on
 the controller. Usually it's 1021 bytes
-’ L2CAP PDU Header n
-nm
 ```
 
 ## Slide 13
@@ -243,25 +241,21 @@ nm
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bluetooth :: L2CAP Channels
 HCI Handle:
-8x180
 L2CAP Channels
 HCI Create Connection
 >|
 HCI Accept Connection
-<
 HCI Link Connection
 L2CAP Connection Request
-|
 L2CAP Connection Response
 L2CAP SDP Communication
-< >}
 HCI Handle:
-8x41
 PSM=1 E
 SDP Profile :
 MTU, Channel Type,
@@ -341,7 +335,7 @@ _You can find all the details in the upcoming whitepaper_
 
 #### Alpine :: HCI ACL Rx
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 {
@@ -355,7 +349,7 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 ...
 }
 }
-```
+\```
 
 `p_link` is the representation of an established HCI Link Connection
 
@@ -365,7 +359,7 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 {
@@ -376,13 +370,13 @@ switch(flags){
 caseprh_hci_ACL_START_FRAGMENT:
 ...
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 ...
 }
 }
-```
+\```
 
 21
 
@@ -390,17 +384,17 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
@@ -408,57 +402,57 @@ p_link->pending_cid=(data[2]|(data[3]<<8));
 if(cid==2&&p_link->length>0x4F1) {
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
 if(p_link->length >chan->inMTU){
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 22
 
@@ -466,81 +460,81 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
-```
+\```
 
-```
+\```
 p_link->pending_cid=(data[2]|(data[3]<<8));
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
 if(p_link->length >chan->inMTU){
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 23
 
@@ -548,102 +542,102 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
-```
+\```
 
-```
+\```
 p_link->pending_cid=(data[2]|(data[3]<<8));
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
-```
+\```
 
-```
+\```
 if(p_link->length >chan->inMTU){
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
-```
+\```
 
-```
+\```
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
-```
+\```
 
-```
+\```
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 24
 
@@ -651,17 +645,17 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
@@ -669,57 +663,57 @@ p_link->pending_cid=(data[2]|(data[3]<<8));
 if(cid==2&&p_link->length>0x4F1) {
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
 if(p_link->length >chan->inMTU){
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
 p_link->cur_pos=p_link->cur_buf;
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 25
 
@@ -727,96 +721,96 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
 p_link->pending_cid=(data[2]|(data[3]<<8));
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
-```
+\```
 
-```
+\```
 if(p_link->length >chan->inMTU){
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_buf,data +4,aclLen);
-```
+\```
 
-```
+\```
 p_link->cur_pos+=aclLen;
-```
+\```
 
-```
+\```
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 26
 
@@ -824,99 +818,99 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
-```
+\```
 
-```
+\```
 p_link->pending_cid=(data[2]|(data[3]<<8));
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
-```
+\```
 
-```
+\```
 if(p_link->length >chan->inMTU){
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
-```
+\```
 
-```
+\```
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 27
 
@@ -924,93 +918,93 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
-```
+\```
 
-```
+\```
 p_link->pending_cid=(data[2]|(data[3]<<8));
 if(cid==2&&p_link->length>0x4F1) {
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
-```
+\```
 
-```
+\```
 if(p_link->length >chan->inMTU){
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_buf,data +4,aclLen);
-```
+\```
 
-```
+\```
 p_link->cur_pos+=aclLen;
-```
+\```
 
-```
+\```
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
-```
+\```
 
-```
+\```
 p_link->mtu_complete=1;
-```
+\```
 
-```
+\```
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 28
 
@@ -1018,17 +1012,17 @@ returnret;
 
 #### Alpine :: HCI ACL Rx :: ACL Start
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length =data[0]|(data[1]<<8);
 p_link->cur_len=0;
@@ -1036,63 +1030,63 @@ p_link->pending_cid=(data[2]|(data[3]<<8));
 if(cid==2&&p_link->length>0x4F1) {
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 chan=prh_l2_chn_get_p_channel(p_link->pending_cid);
-```
+\```
 
-```
+\```
 if(p_link->length >chan->inMTU){
 p_link->mtu_complete=1;
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_buf->len=p_link->length;
-```
+\```
 
-```
+\```
 p_link->cur_pos=p_link->cur_buf;
 memcpy(p_link->cur_buf,data +4,aclLen);
 p_link->cur_pos+=aclLen;
 p_link->cur_len+=aclLen;
-```
+\```
 
-```
+\```
 if(aclLen!=p_link->length )
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 pkt_handler:
-```
+\```
 
-```
+\```
 p_link->cur_pos=0;
 p_link->mtu_complete=1;
-```
+\```
 
-```
+\```
 prh_l2_pkt_handler(
-```
+\```
 
-```
+\```
 p_link->pending_cid,hci_handle,p_link->cur_buf);
 returnret;
-```
+\```
 
 29
 
@@ -1100,7 +1094,7 @@ returnret;
 
 #### Alpine :: HCI ACL Rx
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 {
@@ -1114,7 +1108,7 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 ...
 }
 }
-```
+\```
 
 `p_link` is the representation of an established HCI Link Connection
 
@@ -1124,7 +1118,7 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 
 #### Alpine :: HCI ACL Rx :: ACL Continue
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 {
@@ -1134,14 +1128,14 @@ aclLen=inbf->len-4;
 switch(flags){
 caseprh_hci_ACL_START_FRAGMENT:
 ...
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
 ...
 }
 }
-```
+\```
 
 31
 
@@ -1149,7 +1143,7 @@ caseprh_hci_ACL_CONTINUE_FRAGMENT:
 
 #### Alpine :: HCI ACL Rx :: ACL Continue
 
-```
+\```
 if(!p_link->cur_pos){
 p_link->mtu_complete=1;
 return0;
@@ -1172,7 +1166,7 @@ p_link->cur_pos=0;
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
 p_link->pending_cid,hci_handle,p_link->cur_buf);
-```
+\```
 
 32
 
@@ -1186,7 +1180,7 @@ p_link->pending_cid,hci_handle,p_link->cur_buf);
 
 #### Alpine :: HCI ACL Rx :: ACL Continue
 
-```
+\```
 if(!p_link->cur_pos){
 p_link->mtu_complete=1;
 return0;
@@ -1209,7 +1203,7 @@ p_link->cur_pos=0;
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
 p_link->pending_cid,hci_handle,p_link->cur_buf);
-```
+\```
 
 34
 
@@ -1217,7 +1211,7 @@ p_link->pending_cid,hci_handle,p_link->cur_buf);
 
 #### Alpine :: HCI ACL Rx :: ACL Continue
 
-```
+\```
 if(!p_link->cur_pos){
 p_link->mtu_complete=1;
 return0;
@@ -1240,7 +1234,7 @@ p_link->cur_pos=0;
 p_link->mtu_complete=1;
 prh_l2_pkt_handler(
 p_link->pending_cid,hci_handle,p_link->cur_buf);
-```
+\```
 
 35
 
@@ -1256,73 +1250,73 @@ p_link->pending_cid,hci_handle,p_link->cur_buf);
 
 1. TX HCI ACL Start -> SDP Profile
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
-```
+\```
 
-```
+\```
 host_buf_free(p_link->cur_buf);
-```
+\```
 
-```
+\```
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
 p_link->cur_pos+=inbf->len;
 returnret;
 }
-```
+\```
 
 37
 
@@ -1330,75 +1324,75 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
 p_link->cur_pos+=inbf->len;
 returnret;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 38
 
@@ -1406,77 +1400,77 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
 2. TX HCI ACL Start -> L2CAP Conless (cid=2) L2CAP PDU Length (0x800) > 0x4F1, i.e. `p_link->length` > `0x4F1`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
-```
+\```
 
-```
+\```
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
 p_link->cur_pos+=inbf->len;
 returnret;
 }
-```
+\```
 
 39
 
@@ -1484,92 +1478,92 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
 2. TX HCI ACL Start -> L2CAP Conless (cid=2) L2CAP PDU Length (0x800) > 0x4F1, i.e. `p_link->length` > `0x4F1`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
-```
+\```
 
-```
+\```
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
-```
+\```
 
-```
+\```
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
-```
+\```
 
-```
+\```
 p_link->cur_len+=inbf->len;
-```
+\```
 
-```
+\```
 if(p_link->length !=p_link->cur_len){
-```
+\```
 
-```
+\```
 p_link->cur_pos+=inbf->len;
 returnret;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 40
 
@@ -1577,86 +1571,86 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
 2. TX HCI ACL Start -> L2CAP Conless (cid=2) L2CAP PDU Length (0x800) > 0x4F1, i.e. `p_link->length` > `0x4F1`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
-```
+\```
 
-```
+\```
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
-```
+\```
 
-```
+\```
 p_link->cur_len+=inbf->len;
-```
+\```
 
-```
+\```
 if(p_link->length !=p_link->cur_len){
-```
+\```
 
-```
+\```
 p_link->cur_pos+=inbf->len;
 returnret;
 }
-```
+\```
 
 41
 
@@ -1664,77 +1658,77 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
 2. TX HCI ACL Start -> L2CAP Conless (cid=2) L2CAP PDU Length (0x800) > 0x4F1, i.e. `p_link->length` > `0x4F1`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
-```
+\```
 
-```
+\```
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
 p_link->cur_pos+=inbf->len;
 returnret;
 }
-```
+\```
 
 42
 
@@ -1742,83 +1736,83 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
 2. TX HCI ACL Start -> L2CAP Conless (cid=2) L2CAP PDU Length (0x800) > 0x4F1, i.e. `p_link->length` > `0x4F1`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
-```
+\```
 
-```
+\```
 p_link->length=data[0]|(data[1]<<8);
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
-```
+\```
 
-```
+\```
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
-```
+\```
 
-```
+\```
 if(p_link->length !=p_link->cur_len){
 p_link->cur_pos+=inbf->len;
 returnret;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 43
 
@@ -1826,13 +1820,13 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
@@ -1840,66 +1834,66 @@ char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 
 3. TX HCI ACL Continue
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length=data[0]|(data[1]<<8);
 ...
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
-```
+\```
 
-```
+\```
 p_link->cur_pos+=inbf->len;
 returnret;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 44
 
@@ -1907,13 +1901,13 @@ returnret;
 
 #### Bug :: UAF Root Cause
 
-```
+\```
 __int32 __fastcallprh_l2_sar_data_ind(
-```
+\```
 
-```
+\```
 char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
-```
+\```
 
 1. TX HCI ACL Start -> SDP Profile
 
@@ -1921,66 +1915,66 @@ char*hci_handle,host_buf*inbf,HCI_ACL_FLAGS flags)
 
 3. TX HCI ACL Continue
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 switch(flags){
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
-```
+\```
 
-```
+\```
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
 p_link->cur_buf=NULL;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->mtu_complete=0;
 p_link->length=data[0]|(data[1]<<8);
 ...
-```
+\```
 
-```
+\```
 if(cid==2&&p_link->length>0x4F1) {
 return 0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 p_link->cur_buf=host_buf_alloc(p_link->length);
 p_link->cur_pos=p_link->cur_buf;
-```
+\```
 
-```
+\```
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
-```
+\```
 
-```
+\```
 memcpy(p_link->cur_pos,data,inbf->len);
 p_link->cur_len+=inbf->len;
 if(p_link->length !=p_link->cur_len){
-```
+\```
 
-```
+\```
 p_link->cur_pos+=inbf->len;
 returnret;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 45
 
@@ -2136,7 +2130,7 @@ Problems:
 
 - ● Out-of-boundary of the original heap chunk ● ACL Continue can overflow data further Due to increased length
 
-```
+\```
 caseprh_hci_ACL_START_FRAGMENT:
 if(!p_link->mtu_complete&&p_link->cur_buf){
 host_buf_free(p_link->cur_buf);
@@ -2151,7 +2145,7 @@ return 0;
 caseprh_hci_ACL_CONTINUE_FRAGMENT:
 ...
 memcpy(p_link->cur_pos,data,inbf->len);
-```
+\```
 
 58
 
@@ -2199,7 +2193,8 @@ Heap-based buffer overflow exploitation:
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Heap Layout
@@ -2220,13 +2215,13 @@ Heap Arena
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Heap Layout :: Spraying :: L2CAP Channel
 Heap Spraying via L2CAP Channels Legend:
 To eliminate the heap fragmentation allocated
-freed
 1. Start heap spraying by establishing multiple L2CAP channels to SDP profile.
 2. After a dozen objects, the following layout will be achieved.
 3. Let's choose the target channel and enumerate the channels' sled.
@@ -2247,12 +2242,12 @@ L2CAP Channels spraying was done via `link#1` before triggering the vulnerabilit
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Heap Layout :: Overview
 L2CAP Channels Layout :
-z)
 64
 ```
 
@@ -2268,7 +2263,8 @@ z)
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 expiort :: Heap Layout :: Trigger
@@ -2284,7 +2280,8 @@ expiort :: Heap Layout :: Trigger
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Heap Layout :: Trigger
@@ -2350,12 +2347,12 @@ By utilizing the heap overflow primitive, we’re able to corrupt other objects 
 
 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Frames
 Supervisory frame (S-frame) Information frame (I-frame)
-*S. Basic L2CAP 4+” _ Basic L2CAP .
 header ' header
 72
 ```
@@ -2366,16 +2363,13 @@ header ' header
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Frames
 Supervisory frame (S-frame) Information frame (I-frame)
-. ,
-. ¢
-~s. Basic L2CAP |-*
 header '
-~<. Basic L2CAP |-”
 header '
 ; 1FCS is optional
 20nly present in Start of L2CAP SDU
@@ -2389,18 +2383,13 @@ I-frame is one L2CAP PDU
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Frames
 Supervisory frame (S-frame) Information frame (I-frame)
-. ,
-‘
-nN
-*<_ Basic L2CAP | -*
 header
-*s. Basic L2CAP | -*
-'
 header '
 TFCS is optional
 20nly present in Start of L2CAP SDU
@@ -2412,7 +2401,7 @@ I-frame is one L2CAP PDU
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2426,13 +2415,13 @@ ertm_pdu->len= ertm_pdu_len;
 l2len =l2pdu->len-4-hdr_off;
 memcpy(ertm_pdu->data,l2pdu->data +4, l2len);
 chan->ertm_pdu_len=l2len;
-```
+\```
 
-```
+\```
 caseERTM_PDU_CONTINUE:
-```
+\```
 
-```
+\```
 l2len =l2pdu->len-2-hdr_off;
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
@@ -2440,7 +2429,7 @@ chan->ertm_pdu_len+=l2len;
 }
 return0;
 }
-```
+\```
 
 75
 
@@ -2448,7 +2437,7 @@ return0;
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2470,7 +2459,7 @@ chan->ertm_pdu_len+=l2len;
 }
 return0;
 }
-```
+\```
 
 76
 
@@ -2478,7 +2467,7 @@ return0;
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2500,7 +2489,7 @@ chan->ertm_pdu_len+=l2len;
 }
 return0;
 }
-```
+\```
 
 77
 
@@ -2508,7 +2497,7 @@ return0;
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2520,29 +2509,29 @@ ertm_pdu=host_buf_alloc(ertm_pdu_len);
 chan->p_ertm_pdu=ertm_pdu;
 ertm_pdu->len= ertm_pdu_len;
 l2len =l2pdu->len-4-hdr_off;
-```
+\```
 
-```
+\```
 memcpy(ertm_pdu->data,l2pdu->data +4, l2len);
 chan->ertm_pdu_len=l2len;
-```
+\```
 
-```
+\```
 caseERTM_PDU_CONTINUE:
-```
+\```
 
-```
+\```
 l2len =l2pdu->len-2-hdr_off;
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
 chan->ertm_pdu_len+=l2len;
-```
+\```
 
-```
+\```
 }
 return0;
 }
-```
+\```
 
 78
 
@@ -2550,7 +2539,7 @@ return0;
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2569,13 +2558,13 @@ l2len =l2pdu->len-2-hdr_off;
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
 chan->ertm_pdu_len+=l2len;
-```
+\```
 
-```
+\```
 }
 return0;
 }
-```
+\```
 
 79
 
@@ -2583,15 +2572,15 @@ return0;
 
 #### Exploit :: ERTM Channel :: I-frames
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
 switch(sar)
 {
-```
+\```
 
-```
+\```
 caseERTM_PDU_START:
 ertm_pdu_len=*((uint16_t*)l2pdu->data +1);
 ertm_pdu=host_buf_alloc(ertm_pdu_len);
@@ -2600,33 +2589,33 @@ ertm_pdu->len= ertm_pdu_len;
 l2len =l2pdu->len-4-hdr_off;
 memcpy(ertm_pdu->data,l2pdu->data +4, l2len);
 chan->ertm_pdu_len=l2len;
-```
+\```
 
-```
+\```
 caseERTM_PDU_CONTINUE:
-```
+\```
 
-```
+\```
 l2len =l2pdu->len-2-hdr_off;
-```
+\```
 
-```
+\```
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
 chan->ertm_pdu_len+=l2len;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 80
 
@@ -2644,7 +2633,7 @@ There is no check if `p_ertm_pdu` is already assigned. Therefore, we can send `E
 
 The minimal size of the elastic object is 0x24 bytes, there is no upper boundary
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
 {
@@ -2659,20 +2648,20 @@ l2len =l2pdu->len-4-hdr_off;
 memcpy(ertm_pdu->data,l2pdu->data +4, l2len);
 chan->ertm_pdu_len=l2len;
 caseERTM_PDU_CONTINUE:
-```
+\```
 
-```
+\```
 l2len =l2pdu->len-2-hdr_off;
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
 chan->ertm_pdu_len+=l2len;
-```
+\```
 
-```
+\```
 }
 return0;
 }
-```
+\```
 
 82
 
@@ -2682,11 +2671,11 @@ return0;
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: I-Frames :: Universal Spraying
--prh.t.12. channel
 Universal Heap Spraying
 83
 ```
@@ -2715,22 +2704,22 @@ _More details you will find in the upcoming whitepaper_
 
 #### Exploit :: ERTM Channel :: I-frames :: AAW
 
-```
+\```
 int__fastcalll2_reassemble_sdu(
 intsar,prh_t_l2_channel *chan,host_buf *l2pdu)
-```
+\```
 
-```
+\```
 {
 switch(sar)
 {
-```
+\```
 
 What if we could control the content of `chan->p_ertm_pdu->data` ?
 
 In that case, `ERTM_L2CAP_SDU_CONTINUE` might be used to write data under the controlled pointer.
 
-```
+\```
 caseERTM_PDU_START:
 ertm_pdu_len=*((uint16_t*)l2pdu->data +1);
 ertm_pdu=host_buf_alloc(ertm_pdu_len);
@@ -2739,33 +2728,33 @@ ertm_pdu->len= ertm_pdu_len;
 l2len =l2pdu->len-4-hdr_off;
 memcpy(ertm_pdu->data,l2pdu->data +4, l2len);
 chan->ertm_pdu_len=l2len;
-```
+\```
 
-```
+\```
 caseERTM_PDU_CONTINUE:
-```
+\```
 
-```
+\```
 l2len =l2pdu->len-2-hdr_off;
-```
+\```
 
-```
+\```
 ertm_cur=&chan->p_ertm_pdu->data[chan->ertm_pdu_len];
 memcpy(ertm_cur,l2pdu->data +2,l2len);
 chan->ertm_pdu_len+=l2len;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 86
 
@@ -2775,14 +2764,14 @@ return0;
 
 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Il-Frames :: AAW
 AAW Primitive Strategy
 1. Initial state of the ERTM L2CAP Channel 2. Allocate a new L2CAP SDU via ERTM_L2CAP_SDU_START
 3. Overwrite data pointer within the host_buf object 4. TX ERTM_L2CAP_SDU_CONTINUE with the payload
-i
 87
 ```
 
@@ -2834,12 +2823,12 @@ Let’s make our own ERTM channel via the Heap Overflow vulnerability!
 
 91
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Primitives :: Overview
 . Initial state after reallocating channel#1
-cur_ sat eposh
 2. Overflow link#1—cur_pos into channel#2 creating a new ERTM channel
 cur_pos
 91
@@ -2851,7 +2840,8 @@ cur_pos
 
 92
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Primitives :: Overview
@@ -2861,8 +2851,6 @@ cur_pos
 cur_pos
 3.1 channel#2 is used for Universal Heap Spraying ~>,
 via link#2
-—we a
-wea |
 92
 ```
 
@@ -2872,7 +2860,8 @@ wea |
 
 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: Primitives :: Overview
@@ -2997,27 +2986,27 @@ The content of `pdu_info->p_data` is sent to a remote device
 
 Length of Echo Request must be lower than 0x100
 
-```
+\```
 caseL2CAP_ECHO_REQUEST:
 length =pdu_info->length;
 out_pdu_info.identifier=pdu_info->identifier;
 if(length >0x100)
-```
+\```
 
-```
+\```
 return0;
-```
+\```
 
-```
+\```
 rsp_opcode=L2CAP_ECHO_RESPONSE;
 out_pdu_info.p_data=pdu_info->p_data;
 out_pdu_info.length=length;
-```
+\```
 
-```
+\```
 // TX out_pdu_infoback to remote device
 prh_l2_encode_packet(hci_handle,rsp_opcode,&out_pdu_info);
-```
+\```
 
 102
 
@@ -3027,7 +3016,8 @@ prh_l2_encode_packet(hci_handle,rsp_opcode,&out_pdu_info);
 
 103
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request
@@ -3078,14 +3068,14 @@ How can we overwrite a specific member in the middle of a structure?
 
 107
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
 1. Initial state after converting channel#2 into ERTM
 channel#2
 L2CAP PDU : ERTM
-+ channel#3  : channel#4
 cur_pos
 link#1
 107
@@ -3097,7 +3087,8 @@ link#1
 
 108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
@@ -3105,13 +3096,11 @@ Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
 : channel#2
 ERTM
 cur_pos
-L2CAP PDU + channel#3  : channel#4
 link#1
 2. Overflow to place cur_pos at the target position
 : channel#2
 ERTM
 cur_pos
-L2CAP PDU : channel#3  : channel#4
 link#1
 108
 ```
@@ -3122,7 +3111,8 @@ link#1
 
 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
@@ -3131,7 +3121,6 @@ cur_pos
 2. Overflow to place cur_pos at the target position
 cur_pos
 3. Disconnect channel#3 to free the heap chunk
-_
 cur_pos
 unsortedbin
 109
@@ -3143,7 +3132,8 @@ unsortedbin
 
 110
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
@@ -3152,13 +3142,11 @@ cur_pos
 2. Overflow to place cur_pos at the target position
 cur_pos
 3. Disconnect channel#3 to free the heap chunk
-sin
 cur_pos
 unsortedbin
 4, Allocate an Echo Request which is smaller than channel#3
 cur_pos
 =
-> ngortedbin
 remainder
 110
 ```
@@ -3169,7 +3157,8 @@ remainder
 
 111
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Address Leak :: L2CAP Echo Request :: Solution 2
@@ -3178,15 +3167,12 @@ cur_pos
 2. Overflow to place cur_pos at the target position
 cur_pos
 3. Disconnect channel#3 to free the heap chunk
-sin
 cur_pos
 unsortedbin
 4, Allocate an Echo Request which is smaller than channel#3
 cur_pos
-ean
 remainder
 5. Overwrite the target structure member (Echo Request length)
-‘ase: RR co YE amon
 cur_pos
 unsortedbin
 remainder
@@ -3197,13 +3183,13 @@ remainder
 
 #### Exploit :: Address Leak :: L2CAP Echo Request :: Leak
 
-```
+\```
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  00 00 00 00 21 00 00 00
-```
+\```
 
 - `58 00 f0 af 58 00 f0 af 00 00 00 00 00 00 00 00`
 
@@ -3213,16 +3199,16 @@ remainder
 
 - `01 00 f0 ff 00 00 ff ff 30 00 00 01 30 00 00 01 ff ff 00 00 00 00 00 00  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00`
 
-```
+\```
 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
 00 00 00 00 07 00 00 00  58 00 00 00 14 00 00 00
 00 00 00 00 58 ebf0 af00 00 00 00 9d 00 00 00
-```
+\```
 
-```
+\```
 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
 00 00 f0 af
-```
+\```
 
 112
 
@@ -3230,7 +3216,7 @@ remainder
 
 #### Exploit :: Address Leak :: L2CAP Echo Request :: Leak
 
-```
+\```
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
 41 41 41 41 41 41 41 41  41 41 41 41 41 41 41 41
@@ -3251,11 +3237,11 @@ addr >> 20 << 2000 00 00 00 07 00 00 00  58 00 00 00 14 00 00 00
 00 00 00 00 58 ebf0 af00 00 00 00 9d 00 00 00
 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
 00 00 f0 af
-```
+\```
 
-```
+\```
 Heap chunk flags
-```
+\```
 
 113
 
@@ -3359,12 +3345,12 @@ Solution: Use ERTM Channels again!
 
 ● S-frame REJ - used to request retransmission of I-frames
 
-```
+\```
 intl2_fcrt_rx_rej(prh_t_l2_channel *chan,
 prh_t_ertm_seq*seq){
-```
+\```
 
-```
+\```
 next_tx_seq=chan->next_tx_seq;
 if(next_tx_seq!=seq->reqseq){
 l2_fcrt_act_rx_reqseq(chan,seq);
@@ -3376,18 +3362,18 @@ l2_fcrt_ertm_resend_all(chan);
 }
 return0;
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 intl2_fcrt_ertm_resend_all(prh_t_l2_channel *chan){
 for(fcrt=chan->fcrt_data_list;fcrt;fcrt=fcrt->next)
-```
+\```
 
-```
+\```
 {
 sdu_data=fcrt->sdu_data;
 sdu_len=fcrt->sdu_len;
@@ -3397,16 +3383,16 @@ if(!err ){
 rsp->len=rsp_len;
 memcpy(rsp->data,sdu_data+4,rsp_len);
 prh_l2_sar_data_req(0,chan->local_cid,rsp);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
 }
-```
+\```
 
 120
 
@@ -3416,7 +3402,7 @@ prh_l2_sar_data_req(0,chan->local_cid,rsp);
 
 ##### ● S-frame REJ - used to request retransmission of I-frames
 
-```
+\```
 intl2_fcrt_rx_rej(prh_t_l2_channel *chan, intl2_fcrt_ertm_resend_all(prh_t_l2_channel *chan){
 prh_t_ertm_seq*seq){for(fcrt=chan->fcrt_data_list;fcrt;fcrt=fcrt->next)
 next_tx_seq=chan->next_tx_seq;{
@@ -3431,7 +3417,7 @@ l2_fcrt_ertm_resend_all(chan);rsp->len=rsp_len;
 return0;}
 }}
 }}
-```
+\```
 
 121
 
@@ -3441,7 +3427,8 @@ return0;}
 
 122
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: AAR
@@ -3457,7 +3444,8 @@ to a remote device
 
 123
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: AAR
@@ -3474,15 +3462,13 @@ to a remote device
 
 124
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: ERTM Channel :: AAR :: Overview
 1. Initial state after heap arena address leak
-- channel#2 =. . 5
 L2CAP PDU : ERTM (AAW) ° Echo S : channel#4 ;
-cur_pos A
-"
 link#1
 124
 ```
@@ -3493,7 +3479,8 @@ link#1
 
 125
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Expiot :; ERTM Channel :: AAR :: Overview
@@ -3509,12 +3496,12 @@ Ena = f Memory within the a arena
 
 126
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Expiot :; ERTM Channel :: AAR :: Overview
 . Initial state after heap arena address leak 2. Make channel#4 an ERTM channel with tampered fert_data_list
-cur_pos Ei cur_pos
 = = a Memory within the a arena
 3. Use AAW to initialize the target region with zeros
 cur_pos
@@ -3528,12 +3515,12 @@ een f Memory within = heap arena
 
 127
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Expiot :; ERTM Channel :: AAR :: Overview
 . Initial state after heap arena address leak
-cur_pos ‘Ei
 2. Make channel#4 an ERTM channel with tampered fert_data_list
 cur_pos
 = a Memory within the a arena
@@ -3553,10 +3540,10 @@ S-frame REJ response
 
 128
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Expiot :;} ERTM Channel ::
 . Initial state after heap arena address leak
 cur_pos i
 AAR :: Overview
@@ -3564,19 +3551,15 @@ AAR :: Overview
 cur_pos
 = a Memory within the a arena
 3. Use AAW to initialize the target region with zeros
-ee
 cur_pos
 een Memory within the heap arena
 4. Use AAW to write fcrt_node and TX S-frame REJ to leak it
-ee
 cur_pos
 pen] Memory within the heap arena
 S-frame REJ response
 5. Use AAW to write next fert_node and TX S-frame REJ to leak
 cur_pos
 = sf Memory within = heap arena
-toreroue force [I
-ate ote ae
 S-frame REJ response
 128
 ```
@@ -3587,10 +3570,10 @@ S-frame REJ response
 
 129
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Expiot :;} ERTM Channel ::
 . Initial state after heap arena address leak
 cur_pos i
 AAR :: Overview
@@ -3598,24 +3581,19 @@ AAR :: Overview
 cur_pos
 = a Memory within the a arena
 3. Use AAW to initialize the target region with zeros
-ee
 cur_pos
 een Memory within the heap arena
 4. Use AAW to write fcrt_node and TX S-frame REJ to leak it
-ee
 cur_pos
 pen] Memory within the heap arena
 S-frame REJ response
 5. Use AAW to write next fert_node and TX S-frame REJ to leak
 cur_pos
 = sf Memory within = heap arena
-fort-nose
-ate ote ae
 S-frame REJ response
 6. Use AAW to write next fcrt_node and TX S-frame REJ to leak
 cur_pos
 = Jf Memory within = heap arena
-——
 [aa < 129
 S-frame REJ response
 ```
@@ -3654,15 +3632,13 @@ S-frame REJ response
 
 132
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: :: Libc Address
 Heap segment
-‘Nain Heap (siscated (GE RFE siossted
 Arena | §
-ee
-Se Ie Threadit1 Thread#2 Thread#3
 Heap Arena Heap Arena Heap Arena
 Main Arena
 132
@@ -3674,13 +3650,13 @@ Main Arena
 
 133
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: :: Libc Address
 Heap segment
 Arena | §
-Libe segment ; Thread#1 /  Thread#2 | Threadi#3
 Main Arena Heap Arena Heap Arena Heap Arena
 BT thread heap arena J
 address is known
@@ -3729,16 +3705,13 @@ address is known
 
 137
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: Thread Stack Address :: VMap
-_ Expected V vera Map - Observed eee Map
 random offset (page aligned)
 random offset (page aligned)
-\ a
-i
-v
 random offset (page aligned)
 137
 ```
@@ -3749,7 +3722,8 @@ random offset (page aligned)
 
 138
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: Thread Stack Address :: VMap
@@ -3766,7 +3740,8 @@ random offset (page aligned)
 
 139
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: Thread Stack Address
@@ -3780,7 +3755,8 @@ libpthread
 
 140
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive :: Thread Stack Address
@@ -3880,12 +3856,12 @@ Write a ROP-chain to BT thread stack executing `system(payload)`
 
 144
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: End-game
 2. @-click Bluetooth exploit
-ie
 3. Force wpa_supplicant to
 1. Setup WLAN connect to an attacker's AP ]
 Access Point co
@@ -3897,16 +3873,16 @@ Access Point co
 
 #### Exploit :: End-game
 
-```
+\```
 [slave ] step 40: send ERTM Continue to channel#2
-```
+\```
 
-```
+\```
 [slave ] step 41: execute the ROP chain
 +++++ grandefinale +++++
-```
+\```
 
-```
+\```
 Waiting for the server to connect...connected.
 sh: can't access tty; job control turned off
 root@neusoft-tcc8034:/# id
@@ -3915,7 +3891,7 @@ root@neusoft-tcc8034:/# uname-a
 Linux neusoft-tcc8034 4.14.137-tcc #1 SMP PREEMPT Thu Nov 9 06:48:03 UTC 2023 armv7l
 GNU/Linux
 root@neusoft-tcc8034:/#
-```
+\```
 
 145
 
@@ -3923,28 +3899,28 @@ root@neusoft-tcc8034:/#
 
 #### Exploit :: End-game
 
-```
+\```
 [slave ] step 40: send ERTM Continue to channel#2
-```
+\```
 
-```
+\```
 [slave ] step 41: execute the ROP chain
 +++++ grandefinale +++++
-```
+\```
 
-```
+\```
 Waiting for the server to connect...connected.
 sh: can't access tty; job control turned off
 root@neusoft-tcc8034:/# id
 uid=0(root) gid=0(root)
 root@neusoft-tcc8034:/# uname-a
-```
+\```
 
-```
+\```
 Linux neusoft-tcc8034 4.14.137-tcc #1 SMP PREEMPT Thu Nov 9 06:48:03 UTC 2023 armv7l
 GNU/Linux
 root@neusoft-tcc8034:/#
-```
+\```
 
 Still a lot of crashes. Stability is ~60%
 
@@ -4070,7 +4046,8 @@ Exploit :: Stability :: Issue #1
 
 153
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Stability :: Issue #1
@@ -4113,13 +4090,12 @@ Problem:
 
 155
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: stability : Issue #2
 Heap segment
-| “ce —————
-* Libe segment *
 Main Arena
 155
 ```
@@ -4130,23 +4106,19 @@ Main Arena
 
 156
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: stability : Issue #2
 Heap segment
-‘Mein HOP socates ae Fed) olscates
 Arena | §
-, Libe segment - Thread#1
 Heap Arena
-N
-re a
 1 '
 1 1
 1 '
 Main Arena
 pthread
-XY
 4 Thread
 156
 ```
@@ -4157,23 +4129,18 @@ XY
 
 157
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Stability :: Issue #2
-‘Mein HOP socates ae Fed) olscates
 Arena | §
-ob 55565655555555556556555 5555555655555 55555e555555"
-.
 Libe segment ; Thread#1 Thread#2
 Heap Arena Heap Arena
-y,
-.
 1 1
 1 '
 1 1
 Main Arena
-S
 Thread
 157
 ```
@@ -4184,17 +4151,15 @@ Thread
 
 158
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Stability Issue #2
 Heap segment
-‘Mein HOP socates ae Fed) olscates
 Arena | §
-"Vibe seamen co ‘ Heap Arenas limit '
 (BOG segment Thread#1 Threadi#2 Thread#3 ' reached: NCORES * 2 |
 Main Arena Heap Arena Heap Arena Heap Arena (for 32-bit systems) |
-ae
 XY
 SY Thread L pthread L pthread
 158
@@ -4206,14 +4171,13 @@ SY Thread L pthread L pthread
 
 159
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Stability :: Issue #2
 Heap segment
-‘Mein HOP socates ae Fed) olscates
 Arena | §
-"Vibe seamen co ‘ Heap Arenas limit '
 (BOG segment Thread#1 Threadi#2 Thread#3 ' reached: NCORES * 2 |
 Main Arena Heap Arena Heap Arena Heap Arena (for 32-bit systems) |
 SY Thread L pthread L pthread L pthread
@@ -4313,7 +4277,8 @@ A slavic meme
 
 165
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: Demonstration
@@ -4448,7 +4413,8 @@ _Which might be enabled by the vendor before Pwn2Own_
 
 176
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RCE Impact
@@ -4457,9 +4423,6 @@ e Deface — Faking the display image
 e Stealing phone book information
 « | Recent Call Geena) |) x « | phone Bale
 Back Mi Phone Download Delete Close ) Ben, Mi
-2, YY Unknown -— Pozaio7me/8:54 | 2) CEO
-wy Unknown 2024/07/16/18:54 Gumon Oo +36123456789
-i, y Unknown ’ 2024/07/15/19:05 :
 ® Y *300, 2024/07/15/15:57
 ashe Y +36 2023/05/15/16:49
 176
@@ -4599,7 +4562,8 @@ ashe Y +36 2023/05/15/16:49
 
 ## Slide 187
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you for your attention
@@ -4623,7 +4587,8 @@ Solution: Use ERTM Channels again!
 
 189
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit :: AAR Primitive

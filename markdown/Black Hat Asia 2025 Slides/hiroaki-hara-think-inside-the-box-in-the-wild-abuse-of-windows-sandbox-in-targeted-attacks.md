@@ -8,12 +8,17 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Hiroaki Hara_Think Inside the Box In-the-Wild Abuse of Windows Sandbox in Targeted Attacks.pdf"
 pages: 33
 sha256: "d8b5a7a3278b40585406d1333596fae2e1f7c2334f1a42632b1fcee486c11540"
-text_chars: 13643
+text_chars: 11300
 ocr_pages: 30
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:12Z"
+converted_at: "2026-08-12T03:54:03Z"
 ---
 # Think Inside the Box In-the-Wild Abuse of Windows Sandbox in Targeted Attacks
 
@@ -21,16 +26,15 @@ converted_at: "2026-08-11T21:05:12Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hiroaki Hara_Think Inside the Box In-the-Wild Abuse of Windows Sandbox in Targeted Attacks.pdf` (33 pages)
 
+
 ## Slide 1
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Ne
-pifek hat
-ASIA 2025
 APRIL 3-4, 2025
 BRIEFINGS
 Think Inside the Box
@@ -51,12 +55,10 @@ Hiroaki Hara | Trend Micro
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 whoami
 Hiroaki Hara @ Trend Micro
 Staff Engineer - Threat Research
@@ -71,12 +73,10 @@ Staff Engineer - Threat Research
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Today's Talk
 ANTI
 SANDBOX
@@ -93,14 +93,11 @@ WITH SANDBOX
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Earth Kasha
-‘i (Kasha)
 * China-aligned espionage-motivated threat actor targeting East Asia
 Origin China-aligned
 Motivation Espionage / Information Theft
@@ -124,23 +121,15 @@ ore)#/media/File:SekienKasha.jpg
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 APT10 Umbrella
 * We believe that Earth Kasha is a part of “APT10 Umbrella”
 APT10 Umbrella 7% S&S
-APT1OM — JollyFrog ©)
-“ ‘
-r 2019-
-2020-2021 operas r% & operate qg™
-ve As.
 A4A1APT Campaign Earth Tengshe & Earth Kasha y LiberalFace Campaign
 relation MirrorFace (©) AkaiRyu Campaign
-Gg operate
 Ransomware Campaign BRONZE STARLIGHT ©
 (LockFile, AtomSilo, Rook, Night Sky, Pandora)
 ```
@@ -151,32 +140,29 @@ Ransomware Campaign BRONZE STARLIGHT ©
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Campaign History
 Spear-Phishing Spear-Phishing Exploitation Spear-Phishing
 Target: © eS
-Tools: | U\ae Tools: | e)»)a)\\ze) Tools: | e)2)3)\ize) Tools: PUAN Se
 Target: © Target: © Target: ©
 ```
 
 ## Slide 7
 
-```
+\```
 _@_.zip
-```
+\```
 
-```
+\```
 ScnCfg32.Exe
-```
+\```
 
-```
+\```
 vsodscpl.dll
-```
+\```
 
 <RANDOM>
 
@@ -186,26 +172,19 @@ hello.xml hello.bin
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 The Campaign in 2024: Infection Chain
 Initial Access 1st Stage Backdoor 2™ Stage Backdoor
 > download
-. .ZIP
 OneDrive |
 drop
 & expand
-a= —
 -DOCX .ZIP
-| EE
 ROAMINGMOUSE _@_.zip
 | ANELLDR ANEL ana NOOPDOOR
-* sideload decrypt install qfj@e8 iy decrypt
-.EXE -DLL .BIN <@> _BIN
 ScnCfg32.Exe vsodscpl.d1l <RANDOM> hello.xml hello.bin
 ```
 
@@ -213,11 +192,10 @@ ScnCfg32.Exe vsodscpl.d1l <RANDOM> hello.xml hello.bin
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bleak hat
-ASIA 2025
 Basics of
 Windows Sandbox
 #BHAS @BlackHatEvents
@@ -229,12 +207,10 @@ Windows Sandbox
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Windows Sandbox
 ° Anisolated desktop environment to safely run untrusted
 Windows applications using the hypervisor-based cael
@@ -245,7 +221,6 @@ virtualization technology
 * Disposable
 * No design for persistence
 * Same and clean environment on every execution
-* Light-weight
 ¢ A few seconds to launch
 ```
 
@@ -255,12 +230,10 @@ virtualization technology
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 -wsb
 * XML-formed configuration file for Windows Sandbox
 pu>Disable
@@ -269,12 +242,8 @@ InMB>5096
 1>Enable
 False
 t>False
-)Input>False</VideoIn
-t>False<//
 C:\Users\user\host_share\</H Fo
-C:\Users\WDAGUtilityAccount\sandbox_share\
 nly>false
-C:\Windows \System32\WindowsPowerShell\v1.@\powershell.exe
 10
 Key Meaning
 vGPU Enable or disable the virtualized GPU
@@ -288,7 +257,6 @@ ProtectedClient
 Enable AppContainer isolation
 Videolnput
 Shares the host's webcam input into the sandbox
-AudioInput
 Shares the host's microphone input into the
 sandbox
 MappedFolders
@@ -305,37 +273,28 @@ starts
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Windows Security
 O Virus & threat protection
 Ill
 Protection for your device against threats.
 a
-ie)
 © Current threats
-fo} nN
-Oo
 L ilable
-oo)
 6 Quick scan
 fom] Scan options
 S Allowed threats
 Protection history
 &
-D
 ®@ Virus & threat protection settings
-on needed
 Manage settings
 ce Virus & threat protection updates
 enc (Cf a)
-2025/03/12 '
 Security intelligence is up to date
 Protection updates
-a)
 ```
 
 ## Slide 12
@@ -344,10 +303,10 @@ a)
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat } ee. fo
 ASIA 2025 if
 Defense
 oO Evasion
@@ -359,11 +318,10 @@ oO Evasion
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Abuse of Virtualization for Defense Evasion
 * Not an entirely new idea
 * Who Contains the Containers? - Project Zero
@@ -375,11 +333,10 @@ Abuse of Virtualization for Defense Evasion
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bleak hat
-ASIA 2025
 A Real-World Abuse
 of Windows Sandbox
 #BHAS @BlackHatEvents
@@ -416,30 +373,19 @@ msiexec.bat msiexec.txt msiexec.dat
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 C: \Users\Public\AppData
 @ Setup
 * Drop components on the host
 through the ANEL backdoor channel
 1010
-ono 3
 .BIN RAR
 msiexec.bat msiexec.txt msiexec.dat
 | |
 PEM file password-protected RAR archive
-5A Fl ade. PIW'<é*azA(U
-30 “Ga0 .NAXAZE;].a4 §
-ol c'’°E. 7FA"L-.xX=a
-TVqQAAMAAAAEAAAA/ / 8AAL BAAAAAARAAQAAARAAARARAAAARAAAAABRAABAAAAARA
-AAAAAAAAAAAAAAAAGAE AAASF ug 4AtAnNI bgBTMehVGhpcyBwcm9ncmFtIGNhbmSv
-dCBiZSBydwW4gaW4gRE9TIG1vZGUuDQOK JAAAAAAAAABTZ2CbFwYOyBcGDsgXxBg71
-o5r/yBEGDsi jmv31 1QYOyKOa/MgaBg71133zyBUGDsixfQr JBQYOyJd9DckdBg7I
-Hn6JyBYGDsixfQvJIQYOyBS5+ncgYBg71 FwYPyK@GDsiZfQvIXgYOyI198ceWwBg71
 16
 ```
 
@@ -451,20 +397,14 @@ Hn6JyBYGDsixfQvJIQYOyBS5+ncgYBg71 FwYPyK@GDsiZfQvIXgYOyI198ceWwBg71
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 schtasks default.wsb
 @ Register Windows Sandbox application as a Scheduled Task with a SYSTEM account
-id="Author™
-§-1-5-18 /UserId
 1>LeastPrivilege</RunLevel
 Context="Author"
-nd>c: \windows\system3?\windows sandbox .exe
-ts>c: \windows\system32\default .wsb
 17
 ```
 
@@ -474,36 +414,24 @@ ts>c: \windows\system32\default .wsb
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Why SYSTEM?
 * Since Windows Sandbox is basically a desktop application, you can hide a UI by launching sandbox with a
 different user’s context
-BRA =H: C\Windows\system32\cmd.exe
-BEM joe c contin wsb <LogonCommand>
 Conf i guration>
-Vepu>D sab | e</VGpu> <Command>cmd /c whoami > C:¥share¥whoami. txt</Command>
 q Network ing>Disab|e</Networking>
-MappedFolders: / \
-ea MappedFo| der \ Lo onCommand 7,
-sss idee HostFol der >C:¥share</HostFolder> 8
-Sancho erysincborfolder 7 KK /Conf iguration>
-MappedFo | der
 c whoami > C:¥share¥whoami. txt</Command>
 tem32¥W indowsSandbox. exe C:¥config.wsb” /sc onstart /ru SYSTEM /f
 been created
 C:¥>schtasks /run /tn “demo
 SUCCESS: Attempted to run the scheduled task “demo”
 c:¥ C:¥>schtasks /create /tn “demo “C:¥Wi stem32¥WindowsSandbox. exe C:¥config.wsb /sc onstart /ru|SYSTEM /f
-oi
 € 4: G © »> ThisPC > Local Disk(C:)) > share Search share Q
 ® New NL Sort = View ote B Details
 Narr
-|
 18
 ```
 
@@ -515,12 +443,10 @@ Narr
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Windows Sandbox
 configure
 —>
@@ -531,7 +457,6 @@ default.wsb
 * Host: C:\Users
 * Guest: C:\Users\WDAGUtilityAccount\Host
 3. Run a batch file within the Guest
-Users \WDAGUtIilityAccount\Host\Public\AppData\msiexec. batt / Command
 19
 ```
 
@@ -549,14 +474,10 @@ Users \WDAGUtIilityAccount\Host\Public\AppData\msiexec. batt / Command
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-ae % il extract
-F .RAR mars
--BIN .EXE
 msiexec.bat msiexec.txt msiexec.exe msiexec .dat
 (WinRAR)
 @ Execute an installer script (msiexec.bat)
@@ -580,14 +501,11 @@ msiexec.bat
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Windows Sandbox
-msiexec. cmd hello.xml hello.bin
 @ NOOPDOOR Installation
 * Rename and move components
 ¢ Register the loader of NOOPDOOR (hello.xml) as scheduled task
@@ -603,18 +521,15 @@ run /tn Hello
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Wrap Up
 ° Executed Windows Sandbox with SYSTEM account to hide a UI
 * Granted a read-write permission from the sandbox to the host machine
 ° Utilized a password-protected archive containing payload components and expanded them
 only within a sandbox
-od
 Executed a payload only within a sandbox
 without being affected by EPP/EDR on the host
 22
@@ -624,11 +539,10 @@ without being affected by EPP/EDR on the host
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bleak hat
-ASIA 2025
 Detection
 Engineering
 #BHAS @BlackHatEvents
@@ -640,12 +554,10 @@ Engineering
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Existing Research
 * Hack The Sandbox: Unveiling the Truth Behind Disappearing Artifacts - ITOCHU Cyber & Intelligence
 * TTPs and Detections for Windows Sandbox Abuse - Japan National Police Agency
@@ -674,11 +586,10 @@ Existing Research
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Basic Components
 RPC RPC 2° launch oe
 WindowsSandbox.exe Container Service Manager Hyper-V Host Compute Service Virtual Machine Worker Process
@@ -711,97 +622,94 @@ Sandbox sessions for the current user|
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 wsb.exe: Another Entrypoint
 * “wsb start” command has an argument “-config/-c” for inline configuration
 ° This feature offers a fully fileless execution and a hidden UI in the current user session
 C:\Users\john>wsb start —-config "<Configuration><LogonCommand><Command>cmd .exe</Command></LogonCommand></Configuration>"
 Windows Sandbox environment started successfully:
-Id: 1cb9e300-cec5-U3fe-8ee9-—c7c25FfOcd37b
 27
 ```
 
 ## Slide 28
 
-```
+\```
 title: Windows Sandbox Execution with SYSTEM Privileges
 description: This rule is designed to detect possible Windows
 Sandbox abuse by SYSTEM privileged execution which enables the
 adversary to hide UI of sandbox.
-```
+\```
 
-```
+\```
 logsource:
-```
+\```
 
-```
+\```
 category: process_creation
 product: windows
 service: sysmon
-```
+\```
 
-```
+\```
 detection:
 selection:
 EventID: 1
 Image|endswith: 'Windows\System32\WindowsSandbox.exe'
 User: 'NT AUTHORITY\SYSTEM'
 condition: selection
-```
+\```
 
-```
+\```
 falsepositives:
-```
+\```
 
-```
+\```
 -Legitimate administrative use
 level: high
-```
+\```
 
-```
+\```
 title: Execution of wsb.exe with Suspicious Configuration
 status: experimental
 description: Detects the execution of wsb.exe with --config or -c
 parameter containing "<LogonCommand>", which could indicate an attempt
 to execute a command inside Windows Sandbox.
-```
+\```
 
-```
+\```
 logsource:
-```
+\```
 
-```
+\```
 category: process_creation
 product: windows
 service: sysmon
-```
+\```
 
-```
+\```
 detection:
 selection:
-```
+\```
 
-```
+\```
 EventID: 1
 Image|endswith: 'AppData\Local\Microsoft\WindowsApps\wsb.exe'
 CommandLine|contains:
-```
+\```
 
-```
+\```
 -'--config'
-```
+\```
 
-```
+\```
 -'-c'
 CommandLine|contains: '<LogonCommand>'
 condition: selection
 falsepositives:
-```
+\```
 
 - `Legitimate use of Windows Sandbox with specific LogonCommand`
 
@@ -817,16 +725,13 @@ falsepositives:
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Prevention: Group Policy
 ' Local Group Policy Editor — oO x
 File Action View Help
-¢9%/2m/8\bm|7
 | Windows Game Recon Windows Sandbox
 | Windows Hello for Bus
 Windows Ink Workspa Select an item to view its description. Setting State
@@ -857,17 +762,14 @@ Windows 11 vmmemSandbox
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Another Detection Chance: Memory
 * Process image to manage CPU resource, memory and resources for the Guest Sandbox
 os process
 Windows 10 vmmem
-Windows 11 vmmem Sandbox
 * Memory space for the Guest is exposed to the Host
 Yara memory scan successfully works
 C:\Users\john\Desktop>tasklist | find "vmmemSandbox"
@@ -882,11 +784,10 @@ power_pe_injection 7152
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- blaekhat:
-ASIA 2025
 Conclusion
 #BHAS @BlackHatEvents
 ```
@@ -897,12 +798,10 @@ Conclusion
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Summary
 ° Adversaries always “think outside the box”, but a lot of chances to detect them
 ° What's next?
@@ -918,11 +817,10 @@ targets
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- blaekhat:
-ASIA 2025
 Questions?
 #BHAS @BlackHatEvents
 ```

@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Stanislav Dashevskyi&Francesco La Spina_Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks.pdf"
 pages: 47
 sha256: "c61da5369f66d3d2a1bd70556b2008345fe9066d6fae56e33dff585d1604e423"
-text_chars: 21430
-ocr_pages: 13
+text_chars: 19042
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.0
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:16:31Z"
+converted_at: "2026-08-12T05:45:01Z"
 ---
 # Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks
 
 **Speakers:** Stanislav Dashevskyi, Francesco La Spina  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Stanislav Dashevskyi&Francesco La Spina_Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -34,14 +39,14 @@ Stanislav Dashevskyi, Francesco La Spina
 
 **Stanislav Dashevskyi Francesco La Spina** Principal Security Researcher Senior Security Researcher
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 About us
 Stanislav Dashevskyi Francesco La Spina
 Principal Security Researcher Senior Security Researcher
 RESEARCH
-black hat
 2026
 ```
 
@@ -318,19 +323,17 @@ _AUTH _dev = sha256sum(sha256sum(username + md5sum(password)) + randomKeyForDevi
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Insecure creds in V2 (CVE-2025-9290)
 AUTH _dev = sha256sum(sha256sum(username + md5sum(password)) + randomKeyForDevice Verify)
-TCP / SSL
 port 28914 Inform json
-a randomKeyForDeviceVerify y
 AUTH_dev, randomKeyForSystemVeri
 Controller
 1048576
 1048577
-AUTH_sys
 1048578
 1048579 black hat
 2026 19
@@ -344,34 +347,27 @@ _AUTH _dev = sha256sum(sha256sum(username + md5sum(password)) + randomKeyForDevi
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Insecure creds in V2 (CVE-2025-9290)
 AUTH _dev = sha256sum(sha256sum(username + md5sum(password)) +-rarndemkKeyForDeviceVerify).
 rainbow table = {
-"94F37F62C8CBOBF792518A11951EFC430620BB982C26454BD3230304157463E8" :
 f
 “admin/admin",
-. "admin21232F297A57A5A743894A0E4A801FC3",
 Client
 "@2BODE9FACF8DEFA14DB2692076FCF1B3A4E81D4A37B27E898A59CFC55CA462B" :
 [
-“admin/password12345",
-“admin365D38C60C4E98CA5CA6DBC02D396E53",
-TCP / SSL
 port 28914 "
 "92A70A0B2C946194A8C2878B9BAC3BB520A30CD41C4C44D7F7EC363F6F2EB2EB" :
 [
 Inform json
 “admin/Ciccio81",
 “admin4778BF96209582FFA15C57F66BB00061",
-| [auTH dev, randomKeyForSystemVeri
-AUTH_sys
 1048577
 1048578
 1048579
-black hat
 2026 20
 ```
 
@@ -381,22 +377,20 @@ black hat
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Insecure creds in V2 (CVE-2025-155444)
-TCP / SSL
 port 28914
 Inform json
 randomKeyForDeviceVerify
 AUTH_dev, randomKeyForSystemVerify
-AUTH_sys
 ACK
 Propose new primary contig
 Current confie
 Primary ca nfig
 1048580
-black hat
 2026 21
 ```
 
@@ -484,7 +478,8 @@ Server cert
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Using fake Controllers to exploit
@@ -495,7 +490,6 @@ manage config msg = { TCP/ SSL ;
 "body" : { .
 me equencelds ay AUTH_dev, randomKeyForSystemVerify 1048577
 "userAccount": {
-#... AuTHSYS 1048578
 }, ACK
 "wiregua eo { | 1048579
 "interfaces": Propose new primary config | 1048585 |
@@ -548,31 +542,18 @@ The Conjurer - Hieronymus Bosch
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-The broken chain of trust —
-Cloud (CVE-2025-9291)
-__int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"method" : "helloCloud", Q2: {
 “params” pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
-"alias" : "ERGOS", , @4: if ( !subject_name_str )
-“authCode" B "[REDACTED]", @5: return 0;
-sooo ease vane on” ae 6: cert_subject_name = subject_name_str + 4;
 "devi > ae 07: v11 = strchr(subject_name_str + 4, '/');
 eviceHwVer : 2.0", Q8: if ( v11 )
 "deviceld" : "[REDACTED]", 09: ev11 = 0:
-wjevecetae eeroos , a (_strstr(global_controller host, "“tplinkcloud.com") && !strstr(cert_subject_name, "tplinkcloud.com") )
 "deviceName" : "ER605" .
 "deviceType" : "SMBROUTER", 11728 if ( HIDWORD (qword_5CCB8) )
-"fwId" : "", 13: printf (
 "fwVer" : "2.2.6 Build 20240718 Rel.82712", 14: "[TECS] [ERROR] %s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r",
-"hwId" : "[REDACTED]", 15: "_ecs_verifySsl",
-"oemId" : "[REDACTED]", 16: 125LL,
-"tespVer" : "1.2" 17: cert_subject_name,
-18: global_controller_host) ;
 20: {
-ats)
 "error_code" : 0, 22: ecs_log(2LL, "[ECS] [ERROR] <%s>%s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r");
 "id" : 1, 23:
 "result" : 24: }
@@ -580,7 +561,6 @@ ats)
 "illegalType” : 0, 26: }
 "validTimeOnDevice" : 86400 27: }
 }
-black hat
 2026 29
 ```
 
@@ -592,30 +572,18 @@ black hat
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-The broken chain of trust —
-Cloud (CVE-2025-9291)
-__int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"method" : "helloCloud", Q2: {
 "params" pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
-"alias" : "ERGOS", , @4: if ( !subject_name_str )
-“authCode" B "[REDACTED]", @5: return 0;
-sooo ease vane on” ae 6: cert_subject_name = subject_name_str + 4;
 “devi ai 07: v11 = strchr(subject_name_str + 4, '/');
 eviceHwVer H 2.0", Q8: if ( v11 )
 "deviceId" : "[REDACTED]", .
-"deviceMac” : "[REDACTED]", 02: mL SE nents . ; bands .
 "deviceModel" : "ER605", 10: if (_strstr(global_controller host, "tplinkcloud.com") && !strstr(cert_subject_name, "tplinkcloud.com") )
 "deviceName" : "ER605", 11: { ;
-"deviceType" : "SMBROUTER", a if Ot ae )
 "fwid" : "" : prin
 "fwVer" : "3.2.6 Build 20240718 Rel.82712", 14: "TECS] [ERROR] %s () :%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r",
-"hwId" : "[REDACTED]", 15: "_ecs_verifySsl",
-"oemId" : "[REDACTED]", 16: 125LL,
-"tespVer" : "1.2" 17: cert_subject_name,
-18: global_controller_host) ;
 20: 7
 21: \
 "error_code" : 0, 22: s).\n\r");
@@ -624,8 +592,6 @@ eviceHwVer H 2.0", Q8: if ( v11 )
 "validTimeOnDevice" : 86400 27: }
 vs
 “Let’s eat Grandma!”
-Ne w,
-black hat
 2026 30
 ```
 
@@ -637,15 +603,11 @@ We can use a public IP to bypass the CN check :-}
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-The broken chain of trust —
-Cloud (CVE-2025-9291)
-__int64 ecs_verifySsl(unsigned int preverify_ok, void* store_ctx) {
-"method" : "helloCloud", Q2: {
 “params” pi , 03: subject_name_str = strstr(subject_name_buf, "/CN=");
-maltas” 2 “ERGOS", , 04: if ( !subject_name_str )
 authCode" : "[REDACTED]", 5: evan) OF
 ncontrollerversion" a Q6: cert_subject_name = subject_name_str + 4;
 "devi yy ae 07: v11 = strchr(subject_name_str + 4, '/');
@@ -655,14 +617,8 @@ eviceHwVer : 2.0", Q8: if ( v11 )
 "deviceModel" : "ER605", , 10: if (_strstr(global_controller host, "tplinkcloud.com") && !strstr(cert_subject_name, "tplinkcloud.com") )
 "deviceName" : "ER605", ii: {
 "deviceType" : "SMBROUTER", i728 if ( HIDWORD (qword_5CCB8) )
-"fwid" 2 "" 133g printf (
 "fwVer" : "2.2.6 Build 20240718 Rel.82712", 14: "[TECS] [ERROR] %s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r",
-"hwId" : "[REDACTED]", 15: "_ecs_verifySsl",
-"oemId" : "[REDACTED]", 16: 125LL,
-"tespVer" : "1.2" 17: cert_subject_name,
-18: global_controller_host) ;
 20: {
-ats)
 "error_code" : 0, 22: ecs_log(2LL, "[ECS] [ERROR] <%s>%s():%5d @ verify error:CN mismatch(%s), controllerUrl(%s).\n\r");
 "id" : 1, 23:
 "result" : 24: }
@@ -671,7 +627,6 @@ ats)
 "validTimeOnDevice" : 86400 27:
 We can use a public IP to bypass
 the CN check :-}
-black hat
 2026 31
 ```
 
@@ -735,13 +690,6 @@ Stored XSS in Controller Web UI (CVE-2025-9289)
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-HMippity hoppity your network is our
-property
-```
-
 ## Slide 37
 
 ##### Local compromise
@@ -766,7 +714,8 @@ property
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (venv) standash@moria:~/stuff/vr/tplink/xploits$ [|
@@ -843,14 +792,13 @@ to vendor fixing bugs complicated…
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Disclosure timeline (typical)
-»
 Issues are disclosed Industry standard for Sometimes, it’s
 to vendor fixing bugs complicated...
-black hat
 2026 43
 ```
 
@@ -863,15 +811,14 @@ took this time!
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Disclosure timeline (this research)
 0) 90 120 426
-a es
 This is how long it
 took this time!
-black hat
 2026 44
 ```
 

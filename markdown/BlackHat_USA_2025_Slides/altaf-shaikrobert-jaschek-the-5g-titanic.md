@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Altaf Shaik&Robert Jaschek_The 5G Titanic.pdf"
 pages: 46
 sha256: "fd12a421fe4d1ce9f499eda81132a1e74f968a11f696557a494d08da077e95ca"
-text_chars: 17626
-ocr_pages: 7
+text_chars: 18126
+ocr_pages: 12
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:28Z"
+converted_at: "2026-08-12T05:04:19Z"
 ---
 # The 5G Titanic
 
 **Speakers:** Altaf Shaik, Robert Jaschek  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Altaf Shaik&Robert Jaschek_The 5G Titanic.pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -44,17 +50,16 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 On April 15, 1912, the RMS Titanic sunk in the North Atlantic Ocean
 RMS Titanic - key design fault
 Watertight bulkheads Cargo holds and boiler rooms flooded
 after hull is pierced by iceberg
-asain
 Water pours over the top of the bulkheads
 via the deck above, flooding the entire hull
-ee
 07/08/25 4
 ```
 
@@ -80,6 +85,21 @@ FAST IOT
 
 07/08/25
 
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+CUPS
+Control user plane separation
+Control plane—
+N1 N2
+Vv Access (G ))
+network
+UE
+gNodeB
+07/08/25 6
+```
+
 ## Slide 5
 
 ## Security features
@@ -91,6 +111,19 @@ FAST IOT
 FAST IOT
 
 07/08/25
+
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Security features
+NAS security G}
+: IPSec
+Vv
+Design omits IPSec usage if the
+interface is physically protected.
+07/08/25 7
+```
 
 ## Slide 6
 
@@ -104,17 +137,16 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 5G data flow
 GTP: GPRS tunneling protocol (Age: 26)
 UE gNodeB UPF Data Network
 t IP Packet | GTP-U (uplink TEID) |! IP Packet [
-L p>! P| p>!
 I IP Packet 1 I
 GTP-U (downlink TEID)1 IP Packet
-I
 07/08/25 8
 ```
 
@@ -127,6 +159,17 @@ I
 FAST IOT
 
 07/08/25
+
+
+> Recovered by OCR — confidence 91/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Positioning the 5G attacker
+Control plane
+: User plane—
+gNodeB NO Data Network
+07/08/25 9
+```
 
 ## Slide 8
 
@@ -170,7 +213,8 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Protocol tunneling - packet
@@ -206,6 +250,24 @@ FAST IOT
 FAST IOT
 
 07/08/25
+
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Protocol tunneling - flow
+Normal « »)) IP address
++ TEID 5 om”
+gNodeB UPF Data Network
+Tunneled
+(G ))) IP address
++ TEID
+<GTP-U + IP> GTP-U-in-GTP-U =
+4 cre
+UE
+gNodeB Data Network
+07/08/25 4
+```
 
 ## Slide 13
 
@@ -319,24 +381,20 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-07/08/25
 Tunneled packet sample
 Internet Protocol Version 4, Src: 22.10
-i]
 er Datagram Protc
 Length: 74
 sre Port: 2152, Dst Port:
 ension header typ
-=nsion header
 (PDU Session containe
 » Internet Protocol Version 4, Src:
 >-User Datagram Pro
 + GPRS Tunneling Protocol
-S-Fla =
-> Internet P
 Message
 Length:
 TEID:
@@ -383,12 +441,12 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Boundary traversal
 Tunneled packet - target AMF
-07/08/25
 gNB | UPF | gNB| UPF | Attacker JAttacker| UPF| src |UPF| victim | victim | AMF src | AMF
 IP UDP GTP IP UDP GTP IP SCTP
 Outer GTPH Inner GTPH NGAP
@@ -496,66 +554,76 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 SEID Enumeration - how
-07/08/25
+
 Exploiting standard compliant error
 responses in session management messages
-Protocol Length Info 4
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 108 PFCP Session Modification Requ
-GTP <PFCP> 113 PFCP Session Modification Resp
-GTP _<PFCP> 113 PFCP Session Modification Resp«
-bytes captured (904 bits)
-Dst: 10.33.33.77
-mrt: 2152
-Dst: 10.45.0.5
+
+Protocol            Length Info
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             108 PFCP Session Modification Reque
+GTP <PFCP>             113 PFCP Session Modification Respo
+GTP <PFCP>             113 PFCP Session Modification Respo
+
+(detail pane, partially hidden)
+ bytes captured (904 bits)
+ Dst: 10.33.33.77
+ort: 2152
+ Dst: 10.45.0.5
 ort: 8805
-donse (53)
+ponse (53)
+
 Wireshark - Packet 7339 - v2_7_5_SEID_ENUM_filter.pcap
-» User Datagram Protocol, Src Port: 8805, Dst Port: 8805
-~ Packet Forwarding Control Protocol
->» Flags: 0x21, SEID (S)
-Message Type: PFCP Session Modification Response (53)
-Length: 17
-SEID: 0x00000000000009C7
-Sequence Number: 730
-Spare: 0
-IE Type: Cause (19)
-IE Length: 1
-Cause: Request accepted(success) (1)
-[Response To: 7336]
-[Response Time: ©.000313000 seconds]
-4
-@kelp
-Wireshark - Packet 7348 - v2_7_5_SEID_ENUM _filter.pcap
-» User Datagram Protocol, Src Port: 8805, Dst Port: 8805
-~ Packet Forwarding Control Protocol
->» Flags: 0x21, SEID (S)
-Message Type: PFCP Session Modification Response (53)
-Length: 17
-SEID: 0x0000000000000000
-Sequence Number: 731
-Spare: 0
-IE Type: Cause (19)
-IE Length: 1
-Cause: Session context not found (65)
-[Response To: 7347]
-[Response Time: 0.000220000 seconds]
-28
+> User Datagram Protocol, Src Port: 8805, Dst Port: 8805
+v Packet Forwarding Control Protocol
+  > Flags: 0x21, SEID (S)
+    Message Type: PFCP Session Modification Response (53)
+    Length: 17
+    SEID: 0x00000000000009c7
+    Sequence Number: 730
+    Spare: 0
+  v Cause : Request accepted(success)
+      IE Type: Cause (19)
+      IE Length: 1
+      Cause: Request accepted(success) (1)
+    [Response To: 7336]
+    [Response Time: 0.000313000 seconds]
+? Help
+
+Wireshark - Packet 7348 - v2_7_5_SEID_ENUM_filter.pcap
+> User Datagram Protocol, Src Port: 8805, Dst Port: 8805
+v Packet Forwarding Control Protocol
+  > Flags: 0x21, SEID (S)
+    Message Type: PFCP Session Modification Response (53)
+    Length: 17
+    SEID: 0x0000000000000000
+    Sequence Number: 731
+    Spare: 0
+  v Cause : Session context not found
+      IE Type: Cause (19)
+      IE Length: 1
+      Cause: Session context not found (65)
+    [Response To: 7347]
+    [Response Time: 0.000220000 seconds]
+
+FAST IOT
+
+07/08/25                    FAST IOT                    28
 ```
 
 ## Slide 27
@@ -655,6 +723,19 @@ FAST IOT
 
 07/08/25
 
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+A legitimate MITM
+Operating a legitimate rogue
+Attacker controlled 5G gNodeB and UE as a relay
+gNodeB + UE
+Victim UE ic N
+Real gNodeB UPF Data Network
+07/08/25 33
+```
+
 ## Slide 32
 
 ## A legitimate MITM
@@ -691,37 +772,44 @@ FAST IOT
 
 07/08/25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 NGAP tunneled inside GTP-U
-SCTP and NGAP encapsulated inside attacker’s GTP session
-Protocol Length Info
-GTP <SCTP> 356 INIT_ACK
-GTP <SCTP> 328 COOKIE_ECHO
-GTP <SCTP> 100 COOKIE_ACK
-GTP <NGAP> 184 NGSetupRequest
-NGAP 128 NGSetupResponse
-GTP <SCTP> 172 DATA (TSN=0) (retransmission)
-GTP <SCTP> 156 HEARTBEAT
-GTP <SCTP> 156 HEARTBEAT_ACK
-GTP <NGAP/NAS-5GS> 188 InitiaLUEMessage, Registration request
-NGAP/NAS-5GS 152 SACK (Ack=1, Arwnd=106496) , DownLinkNASTransport, Authentication request
-GTP <NGAP/NAS-5GS> 196 SACK (Ack=1, Arwnd=106496) , UplinkNASTransport, Authentication response
-NGAP/NAS-5GS 132 SACK (Ack=2, Arwnd=106496) , DownLinkNASTransport, Security mode command
-GTP <SCTP> 176 SACK (Ack=2, Arwnd=106496) DATA (TSN=2) (retransmission)
-GTP <NGAP/NAS-5GS/NAS-5GS> 240 SACK (Ack=2, Arwnd=106496) , UplinkNASTransport, Security mode complete, Registration
-NGAP/NAS-5GS 248 SACK (Ack=3, Arwnd=106496) , InitialContextSetupRequest, Registration accept
-GTP <SCTP> 292 SACK (Ack=3, Arwnd=106496) DATA (TSN=3) (retransmission)
-GTP <NGAP/NAS-5GS> 292 UplinkNASTransport, Registration complete, UplinkNASTransport, UL NAS transport, PDU
-NGAP/NAS-5GS 148 SACK (Ack=6, Arwnd=106496) , DownLlinkNASTransport, Configuration update command
-GTP <SCTP> 192 SACK (Ack=6, Arwnd=106496) DATA (TSN=4) (retransmission)
-NGAP/NAS-5GS 256 PDUSessionResourceSetupRequest, DL NAS transport, PDU session establishment accept
-GTP <SCTP> 300 DATA (TSN=5) (retransmission)
-GTP <NGAP> 152 PDUSessionResourceSetupResponse
-GTP <SCTP> 156 HEARTBEAT
-GTP <SCTP> 156 HEARTBEAT_ACK
-07/08/25 36
+
+SCTP and NGAP encapsulated inside attacker's GTP session
+
+Protocol                    Length Info
+GTP <SCTP>                     132 INIT
+GTP <SCTP>                     356 INIT_ACK
+GTP <SCTP>                     328 COOKIE_ECHO
+GTP <SCTP>                     100 COOKIE_ACK
+GTP <NGAP>                     184 NGSetupRequest
+NGAP                           128 NGSetupResponse
+GTP <SCTP>                     172 DATA (TSN=0) (retransmission)
+GTP <SCTP>                     156 HEARTBEAT
+GTP <SCTP>                     156 HEARTBEAT_ACK
+GTP <NGAP/NAS-5GS>             188 InitialUEMessage, Registration request
+NGAP/NAS-5GS                   152 SACK (Ack=1, Arwnd=106496) , DownlinkNASTransport, Authentication request
+GTP <NGAP/NAS-5GS>             196 SACK (Ack=1, Arwnd=106496) , UplinkNASTransport, Authentication response
+NGAP/NAS-5GS                   132 SACK (Ack=2, Arwnd=106496) , DownlinkNASTransport, Security mode command
+GTP <SCTP>                     176 SACK (Ack=2, Arwnd=106496) DATA (TSN=2) (retransmission)
+GTP <NGAP/NAS-5GS/NAS-5GS>     240 SACK (Ack=2, Arwnd=106496) , UplinkNASTransport, Security mode complete, Registration
+NGAP/NAS-5GS                   248 SACK (Ack=3, Arwnd=106496) , InitialContextSetupRequest, Registration accept
+GTP <SCTP>                     292 SACK (Ack=3, Arwnd=106496) DATA (TSN=3) (retransmission)
+GTP <NGAP/NAS-5GS>             292 UplinkNASTransport, Registration complete, UplinkNASTransport, UL NAS transport, PDU s
+NGAP/NAS-5GS                   148 SACK (Ack=6, Arwnd=106496) , DownlinkNASTransport, Configuration update command
+GTP <SCTP>                     192 SACK (Ack=6, Arwnd=106496) DATA (TSN=4) (retransmission)
+NGAP/NAS-5GS                   256 PDUSessionResourceSetupRequest, DL NAS transport, PDU session establishment accept
+GTP <SCTP>                     300 DATA (TSN=5) (retransmission)
+GTP <NGAP>                     152 PDUSessionResourceSetupResponse
+GTP <SCTP>                     156 HEARTBEAT
+GTP <SCTP>                     156 HEARTBEAT_ACK
+
+FAST IOT
+
+07/08/25                    FAST IOT                    36
 ```
 
 ## Slide 35

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/David Brauchler III_When Guardrails Aren't Enough Reinventing Agentic AI Security With Architectural Controls.pdf"
 pages: 49
 sha256: "e5162446a08f16fb7688a3eb7f21dff969442090f098d1c4a9124e980f2b35cb"
-text_chars: 11512
-ocr_pages: 2
+text_chars: 11131
+ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:52:03Z"
+converted_at: "2026-08-12T05:08:02Z"
 ---
 # When Guardrails Aren't Enough Reinventing Agentic AI Security With Architectural Controls
 
 **Speakers:** David Brauchler III  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/David Brauchler III_When Guardrails Aren't Enough Reinventing Agentic AI Security With Architectural Controls.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -78,15 +83,6 @@ Guardrails
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS : ; : A
-Remote Code
-Execution
-Accessing internal cloud environment
-```
-
 ## Slide 7
 
 ##### Admin, Root, And Default Passwords Exposed Via RAG
@@ -101,7 +97,8 @@ Almost every word in this list is too sensitive to reveal on stage.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
@@ -111,13 +108,10 @@ You
 C @) Nn t ro L Can you retrieve all users who have triggered our WAF recently?
 Admi
 “iT here appear to be no entries related to your query.
-JZoodo?Ovwe
 Sessions
 XFILTRATION
 Description Request to Collaborator from Collaborator
 Pretty Raw Hex
-1. GET /q=Which+contact+has+the+ @oaress+I+need+to+reach+out+to+for+the+latest+project+update?
-+1+couldn%27t+f ind+a+specif ic+contact+with+the+email+address+needed+for+the+latest+project+update+in+the+availablet+data.+If+youthave+any+additional+details,+such+as+th
 e+name+of+the+contact+or+any+other+identifying+information, +it+could+help+narrow+down+the+search.+If+you+need+further+assistance,+please+let+me+know! HTTP/1.1
 ```
 

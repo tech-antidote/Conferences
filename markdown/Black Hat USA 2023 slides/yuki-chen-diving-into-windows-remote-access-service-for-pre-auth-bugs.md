@@ -8,12 +8,18 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Yuki Chen_Diving into Windows Remote Access Service for Pre-Auth Bugs.pdf"
 pages: 101
 sha256: "8579f02d1ead1fbefb8ea9c5ba53bf1301958b01f9a680851f7a2b7a3aea2f62"
-text_chars: 40990
-ocr_pages: 17
+text_chars: 37991
+ocr_pages: 8
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:27:08Z"
+converted_at: "2026-08-12T04:25:28Z"
 ---
 # Diving into Windows Remote Access Service for Pre-Auth Bugs
 
@@ -21,17 +27,17 @@ converted_at: "2026-08-11T21:27:08Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yuki Chen_Diving into Windows Remote Access Service for Pre-Auth Bugs.pdf` (101 pages)
 
+
 ## Slide 1
 
 Diving into Windows Remote Access Service for Pre-Auth Bugs Yuki Chen (@guhe120) Cyber Kunlun
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA &
 AUGUST 9-10, ©2025
 BRIEFINGS
 Diving into Windows Remote
@@ -110,15 +116,6 @@ Highlights of This Session A walk through of a bug hunting project
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-LUISA eO
-Background
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 7
 
 ##### Initiative of the Research
@@ -155,12 +152,10 @@ Why it’s Interesting – From a Bug Bounty Hunter’s View
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Introduction to Microsoft WIP Bounty Program
 . *
 General Awards Attack Scenario Awards
@@ -235,14 +230,12 @@ Denial of Service $500 sandboxed? process with no user interaction
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA &
 Windows Remote
 Access Service
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 14
@@ -270,15 +263,6 @@ Access Service
 # PPTP
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-PPTP
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 16
 
@@ -449,48 +433,51 @@ Unique Call Id Unique Call Id Unique Call Id
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 53/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-USA 20253
 Result of the Fuzzing
-e Got multiple UAF/NPD race condition crashes in minutes
-CONTEXT: f££f£d285e2e7d130 -- (
-rax=0000000000000001 rbx=ffffd60d8ab998b0 rcx=ff££L8017cbb£180
-rdx=0000000000000000 rsi=0000000000000001 rdi=fff£d60d86285a%
-rip-£f££££80deadSacd1 rsp-fff£d285e2e7db20 rbp=000000000000000¢
-r8-f£££d60d85718cd0 r9=££££800000000000 r10=00007 ffeffff
-rll=ffffd285e2e7da70 r12=fff££80181fb8298 r13= OOOfffEffff
-rl4=ffffd60d85718cd0 r15=ffff£80181fba000
-018 ds=002b es=002b fs=0053 gs=002b ef1=00010246
-sat chIncomingCal1+0x81:
-f££££80d*eadSacd1 0000 add byte ptr [rax],al ds:002b:00000000*00000001=27
-lO: kd> sexx
-# Child-sp RetAddr te
-££ELLBOT*34461db8 fFffff807°31£37892 nt!DbgBreakPointWithstatus
-f£££LBO734461dcO £ffff807°31£37017 nt!KiBugCheckDebugBreak+0x12
-£f£££807°34461e20 fffff807~ 31e62427 nt!KeBugCheck2+0x957
-f£ff£807°34462540 FFFELB07*31fa0£59 nt !KeBugCheckEx+0x107
-f££££807 34462580 fffff807°31fa0fb8 nt!RtlpHeapHandleError+0x29
-5 f£££££807 f££££807°31fa0bel nt!Rt1pHpHeapHandleError+0x58
-€ f££f£807~ £££EFB07* 31e930dc nt!RtlpLogHeapFailure+0x45
-f££EL807> ££f££807°31f£2733 nt !Rt1pHpL£hSubsegmentFreeBlock+0x1abb7¢
+• Got multiple UAF/NPD race condition crashes in minutes
+
+[photo: four young men reacting with shocked/screaming expressions, no printed text]
+
+CONTEXT:  ffffd285e2e7d130 -- (.cxr 0xffffd285e2e7d130)
+rax=0000000000000001 rbx=ffffd60d8ab998b0 rcx=fffff8017cbbf180
+rdx=0000000000000000 rsi=0000000000000001 rdi=ffffd60d86285a90
+rip=fffff80dead5acd1 rsp=ffffd285e2e7db20 rbp=0000000000000000
+ r8=ffffd60d85718cd0  r9=ffff800000000000 r10=00007ffffffeffff
+r11=ffffd285e2e7da70 r12=fffff80181fb8298 r13=00000000ffffffff
+r14=ffffd60d85718cd0 r15=fffff80181fba000
+iopl=0         nv up ei pl zr na po nc
+cs=0010  ss=0018  ds=002b  es=002b  fs=0053  gs=002b             efl=00010246
+NDIS!NdisCmDispatchIncomingCall+0x81:
+fffff80d`ead5acd1 0000            add     byte ptr [rax],al ds:002b:00000000`00000001=??
+
+0: kd> .cxr
+0: kd> k
+ # Child-SP           RetAddr           Call Site
+00 fffff807`34461db8 fffff807`31f37892 nt!DbgBreakPointWithStatus
+01 fffff807`34461dc0 fffff807`31f37017 nt!KiBugCheckDebugBreak+0x12
+02 fffff807`34461e20 fffff807`31e62427 nt!KeBugCheck2+0x957
+03 fffff807`34462540 fffff807`31fa0f59 nt!KeBugCheckEx+0x107
+04 fffff807`34462580 fffff807`31fa0fb8 nt!RtlpHeapHandleError+0x29
+05 fffff807`344625c0 fffff807`31fa0be1 nt!RtlpHpHeapHandleError+0x58
+06 fffff807`344625f0 fffff807`31e930dc nt!RtlpLogHeapFailure+0x45
+07 fffff807`34462620 fffff807`31ff2733 nt!RtlpHpLfhSubsegmentFreeBlock+0x1abb7c
+
 MISALIGNED_IP:
-nt !KeAcqui reSpinLockRaiseToDpe+53
-£££££800°21ae7783 0000 add byte ptr [rax],al
-TACK_T
-f£££a309°033d4a30 f£FEEB00"2234adb(
-££ffbb09°41238dc8 ffffbb09"4124eda0 ffffbb09°4124ed00 £ELEL800°2234aefb : nt!KeAcquireSpinLockRaiseToDpc+0x53
-££f£a309°033d4a60 22349892 : £fffbb09°4124ed40 fFffbb09°4124eda0 fFffbb09°3a247530 Fffff800°2234a287 : nt!ViKeAcquireSpinLockRaiseToDpcCommon+0x3c
-££££2309°033d4a90 25b5228c : ffffbb09°4124ed40 fFFff£800°25b52d8a FFffbb09'41238dc8 ffffbb09°41238da8 : nt!VerifierkKeAcquireSpinLockRaiseToDpc+0x12
-£££ £a309°033d4ad0 25b62758 : ££ff£800° 24259000 ££FfbbOS* 3a26d000 00000000" 000000e2 £Ff££800°25b6275d : raspptp!CallCleanup+0x74
-££ ££a309°033a4b00 25b56e3f : f££fbb09°3a26d040 00000000" 00000000
-f£f£a309°033d4b90 f£Ffb_OI*3a26d040 : 00000000" 0000:
-F£££a309°033d4b98 00000000°00000000
-£££800°25b56e40 ££Ff£800°25b56e6d : raspptp!CtlpCleanup+0x108
-00 f£FEEB00*25b56e40 FFFEFS00*25b56e6d 00000000°00000000 : raspptp!WPP_SF_sddd+0xa7
-FFFF£800°25b56e40 FFFFEB00*25b56e6d 00000000°00000000 FFFFbbO9*41266Fd0 : OxfFFfbbO9*3a26d040
+nt!KeAcquireSpinLockRaiseToDpc+53
+fffff800`21ae7783 0000            add     byte ptr [rax],al
+
+STACK_TEXT:
+ffffa309`033d4a30 fffff800`2234adb0 : ffffbb09`41238dc8 ffffbb09`4124eda0 ffffbb09`4124ed00 fffff800`2234aefb : nt!KeAcquireSpinLockRaiseToDpc+0x53
+ffffa309`033d4a60 fffff800`22349892 : ffffbb09`4124ed40 ffffbb09`4124eda0 ffffbb09`3a247530 fffff800`2234a287 : nt!ViKeAcquireSpinLockRaiseToDpcCommon+0x3c
+ffffa309`033d4a90 fffff800`25b5228c : ffffbb09`4124ed40 fffff800`25b52d8a ffffbb09`41238dc8 ffffbb09`41238da8 : nt!VerifierKeAcquireSpinLockRaiseToDpc+0x12
+ffffa309`033d4ad0 fffff800`25b62758 : fffff800`24259000 ffffbb09`3a26d000 00000000`000000e2 fffff800`25b6275d : raspptp!CallCleanup+0x74
+ffffa309`033d4b00 fffff800`25b56e3f : ffffbb09`3a26d040 00000000`00000000 fffff800`25b56e40 fffff800`25b56e6d : raspptp!CtlpCleanup+0x108
+ffffa309`033d4b90 ffffbb09`3a26d040 : 00000000`00000000 fffff800`25b56e40 fffff800`25b56e6d 00000000`00000000 : raspptp!WPP_SF_sddd+0xa7
+ffffa309`033d4b98 00000000`00000000 : fffff800`25b56e40 fffff800`25b56e6d 00000000`00000000 ffffbb09`41266fd0 : 0xffffbb09`3a26d040
 ```
 
 ## Slide 27
@@ -734,16 +721,6 @@ _}_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Authentication
-Protocols
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 37
 
 #### Authentication Protocol (AP)
@@ -895,15 +872,6 @@ Tip: When playing with windows bounty, the pre-auth remote DoS/Info Leak attack 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-SSTP
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 50
 
 SSTP - Secure Socket Tunneling Protocol
@@ -1017,31 +985,38 @@ The fuzzer triggered crash in 3 seconds, writing to freed memory
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-USA 20253
+[Meme photo, top panel] Such a dumb fuzzer, no way to find RCE bug
+[Meme photo, bottom panel] It didn't find bug right?
+
 The fuzzer triggered crash in 3 seconds,
 writing to freed memory
+
+......
 For analysis of this file, run !analyze -v
 1: kd> !analyze -v
-& *
-* Bugcheck Analysis *
-* *
-IRQL NOT LESS OR EQUAL (a)
-4n attempt was made to access a pageable (or completely invalid) address at an
-interrupt request level (IRQL) that is too high. This is usually
+*******************************************************************************
+*                                                                             *
+*                            Bugcheck Analysis                               *
+*                                                                             *
+*******************************************************************************
+
+IRQL_NOT_LESS_OR_EQUAL (a)
+An attempt was made to access a pageable (or completely invalid) address at an
+interrupt request level (IRQL) that is too high.  This is usually
 caused by drivers using improper addresses.
 If a kernel debugger is available get the stack backtrace.
 Arguments:
-Argl: ffffac843f80c8d0, memory referenced
-Arg2: 0000000000000002, IROL
+Arg1: ffffac843f80c8d0, memory referenced
+Arg2: 0000000000000002, IRQL
 Arg3: 0000000000000001, bitfield :
-bit 0 : value 0 read operation, 1 = write operation
-bit 3 : value 0 not an execute operation, 1 = execute operation (only ¢
-Arg4: fffff£8031a0b9d73, address which referenced memory
+    bit 0 : value 0 = read operation, 1 = write operation
+    bit 3 : value 0 = not an execute operation, 1 = execute operation (only o[cut off at slide edge]
+Arg4: fffff8031a0b9d73, address which referenced memory
+
 Didn't win the lottery, btw
 ```
 
@@ -1244,15 +1219,6 @@ Spinlock/Reference counter/Callback/worker thread/Dispatch level?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-L2TP
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 69
 
 #### L2TP - Layer 2 Tunneling Protocol
@@ -1385,33 +1351,45 @@ engine
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-USA 20253
 Fuzz Result
-e Got a few crashes (UAF, NPD)
-e Switched to manual auditing and found several others
-5 For analysis of this file, run !
-DRIVER_IRQL NOT LESS OR EQUAL (d1) 0: kd> !analyze -v
-4n attempt was made to access a pageable (or completely invalid) address at an III IE IEE EEA
-interrupt request level (IRQL) that is too high. This is usually : Bugcheck Analysis :
-caused by drivers using improper addr
-If kernel debugger is available get st
-backtrace.
-Arguments: DRIVER_IRQL_NOT_L OR_EQUAL (d1)
-Argl: 0000000000000000, memory referenced An attempt was made to access a pageable (or completely invalid) address at an
-Arg 0000000000000002, IRQL interrupt request level (IRQL) that is too high. This is usually
-Arg3: 0000000000000000, value 0 = read operation, 1 = write operation caused by driv using
-368007 . If kernel
-Arg4: fffff80a8436e903, address which referenced memory :
-i4, memory referenced
-, IRQL
-; value 0 = read operation, 1 = write operation
-346, address which referenced memory
-Arg4: fff£££80764d5
+• Got a few crashes (UAF, NPD)
+• Switched to manual auditing and found several others
+
+[Left panel]
+DRIVER_IRQL_NOT_LESS_OR_EQUAL (d1)
+An attempt was made to access a pageable (or completely invalid) address at an
+interrupt request level (IRQL) that is too high.  This is usually
+caused by drivers using improper addresses.
+If kernel debugger is available get stack backtrace.
+Arguments:
+Arg1: 0000000000000000, memory referenced
+Arg2: 0000000000000002, IRQL
+Arg3: 0000000000000000, value 0 = read operation, 1 = write operation
+Arg4: fffff80a8436e903, address which referenced memory
+
+[Right panel]
+For analysis of this file, run !analyze -v
+0: kd> !analyze -v
+*******************************************************************************
+*                                                                             *
+*                            Bugcheck Analysis                               *
+*                                                                             *
+*******************************************************************************
+
+DRIVER_IRQL_NOT_LESS_OR_EQUAL (d1)
+An attempt was made to access a pageable (or completely invalid) address at an
+interrupt request level (IRQL) that is too high.  This is usually
+caused by drivers using improper addresses.
+If kernel debugger is available get stack backtrace.
+Arguments:
+Arg1: ffffa38bba08cfd4, memory referenced
+Arg2: 0000000000000002, IRQL
+Arg3: 0000000000000000, value 0 = read operation, 1 = write operation
+Arg4: fffff80764d53846, address which referenced memory
 ```
 
 ## Slide 77
@@ -1494,15 +1472,12 @@ _Same bug, different component_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Free
-INdiswan]
 Case Study —- NdisWan RecvDesc Use After
-pisek hat
 Case Study -— Ndiswan.sys loReceivePacket :
 After Free
 e Ndiswan.sys creates a RecvDesc structure for each data packet from client
@@ -1528,14 +1503,6 @@ Same bug, different component
 # IKE
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 84
 
@@ -1655,12 +1622,10 @@ Integer overflow
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Another similar Bug in Another Function
 | int6é4 _ fastcall IkeDecryptOakNDPacket(__int64 al, __int64 a2, u_long a3)
 {
@@ -1674,12 +1639,9 @@ __inté4 v13[3]; // [rsp+30h] [rbp-48h] BYREF
 int v14; // [rsp+48h] [rbp ]
 void *v15; // [rsp+5@h] [r
 size_t Size; // [rsp+58h]
-Ww
 -30h
 bp-28h] BYREF
-[rbp-20h]
 memset_@(v13, @, @x38ui64) ;
-ye = xf OWORD “Vad + *Cunsigned ints ~\ (24 + 12);
 v7 = *(_DWORD *)(al + 8) - *(unsigned __int16 *)(al + 12); Integer overflow
 v8 = *(unsigned int *)(a2 + 48);
 if ( !OakNotifyIV )
@@ -1751,16 +1713,6 @@ Q:   Similarities between a productive bug hunter and a playboy?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Future Work &
-Take Aways
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 99
 
 #### Future Work
@@ -1798,16 +1750,3 @@ Thanks!
 @guhe120 https://www.cyberkl.com/en
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-Thanks!
-CYBER
-KUNLUN
-@guhe120
-https://www.cyberkl.com/en
-```

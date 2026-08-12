@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Ankit Gangwal, Shubham Singh, Abhijeet Srivastava_ AutoSpill Zero Effort Credential Stealing from Mobile Password Managers.pdf"
 pages: 66
 sha256: "b97ab6ed937f3083bf18197b03d92b9ad9d422d296935edfeb204e9cbe235ecb"
-text_chars: 23569
-ocr_pages: 21
+text_chars: 21483
+ocr_pages: 14
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:10:08Z"
+converted_at: "2026-08-12T04:00:29Z"
 ---
 # AutoSpill Zero Effort Credential Stealing from Mobile Password Managers
 
 **Speakers:** Ankit Gangwal, Shubham Singh, Abhijeet Srivastava  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ankit Gangwal, Shubham Singh, Abhijeet Srivastava_ AutoSpill Zero Effort Credential Stealing from Mobile Password Managers.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -49,49 +56,6 @@ Information Age
 #BHEU @BlackHatEvents
 
 3
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat .
-mackhat Introduction
-: et
-48,0,0) (iF (Gog
-C8. document, dea,
-rk
-d}
-Agent .A.8,C,.0 + we
-. ontext s{0} a ea
-Uglied
-= snarl his,a) Wee ae
-fa-selector’—bua(tns, selector atte
-|} pushStack:t
-(a,b) {return e.each( th 12,0), ready
-oe 1D 16. call (argunent
-#. the extend-e.fn.extend-tunct iont
-} a) (deilch , falc; if Lent) cont
-Guery tf) ceeturn.e}, isReady: |1, readywait
-eatenic, \e)),e.fn.triggertie(c) .triggert
-«. (eady, L)ielse Af(c.attachevent {6
-daderay: Array AsAreay| | function(a) {ret
-), de® lainddject: function(a){it('e e typed
-mee yect funct (a){for(var.b.in.a)reture
-C estace(o,"€)- eeplaeas: <replace(,
-Fd anynce false” ,d.10 et (c)) Pea
-‘tase vrata) {return.a.repiace(%,
-caaactae for tsgens it (ce seplytalgr a
-jon(a,b)ivar.c
-ib nananeray eturn-1) merge: tunctianl hie Oe ae
-os. sates f});return — ——-"
-pap, concat.2pply'
-{var ina. eng
-ech: funct
-in a. fas const recta ae
-(2,010
-a) eety
-event Lis
-function )4var
-```
 
 ## Slide 4
 
@@ -212,20 +176,6 @@ The big shift - Oh my!
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pif hat
-EUROPE 2023
-‘BeSB<O
-ORPBAOLZ
-SG=@O@AQD
-©@6e@G4
-S &
-Bom ge Eavoo
-12
-```
-
 ## Slide 13
 
 # Introduction
@@ -235,27 +185,6 @@ The big shift - Oh my!
 #BHEU @BlackHatEvents
 
 13
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Cc
-Oo
-1s)
-=)
-oO
-O
-a)
-=
-EUROPE 2023
-The big shift - Oh my!
-pif hat
-SseG@ gs
-BOO@OW asd
-GP?BSday tego
-\
-13
-```
 
 ## Slide 14
 
@@ -277,13 +206,12 @@ The big shift - Oh my!
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Qa
 blackhat Introduction
 = @CBS NEWS
-U.S. >
 Common passwords like "123456" and
 "admin" take less than a second to
 crack, research shows
@@ -333,12 +261,11 @@ Log in with
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Qa
 blackhat Introduction
-Il Fal B 14:43
 Cancel
 Log in with
 & Google
@@ -512,25 +439,18 @@ Empower an app to render web content within itself Prevents redirection to main 
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2
 blackhat AutoSpill
 PM is invoked to fill fields in an app
 App
-MH
-PPrrrrerrrrrrr errr ts
-euueeeeeeeeeeeeeeeny
-Perrrrrr rrr errr ttt
 PM)
-|
 Prompt
-fi
 Select &
 authorise
 Fill
-!
 32
 ```
 
@@ -544,23 +464,6 @@ Fill
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2 |
-blackhat AutoSpill
-(S
-o Prompt
-| Select &
-_—_——
-Q authorise
-ro
-<x
-feXeXe)
-; elements
-33
-```
-
 ## Slide 34
 
 # AutoSpill
@@ -571,25 +474,20 @@ feXeXe)
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2
 blackhat AutoSpill
 PM is invoked to fill fields in a WebView
 =
 =
 =
-{2
-os a
 “2 ®
 x= =
 = iusername }
-<x SU,
 : password
-PIII.
 App
-elements |
 34
 ```
 
@@ -603,35 +501,27 @@ elements |
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-EUROPE 2023
 AutoSpill
 PM is invoked to fill fields in a WebView
 (S
-Ou
 =
 x
 >
 | @
-° >
 2a $
 x= =
 [ok
 Qa
 <
-_——————
 Prompt
 H
 Select &
 authorise
-|
 Fill
-Peres
-Perera
-errr t
 35
 ```
 
@@ -735,7 +625,8 @@ Created a custom autofill service Information exchanged during autofill ceremony
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat = AutoSpill - Investigation
@@ -786,86 +677,59 @@ _1. Autofill request from Android to autofill service_
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pif hat
-EUROPE 2023
 AutoSpill - Investigation
-[ FillRequest |
-1. Autofill request from :
+
+1. Autofill request from
+Android to autofill service
+
+[diagram, top to bottom]
+FillRequest
+  |
 FillContext
-FocusedID: 1073741826:196608
-Android to autofill service :
-[ AssistStructure ]
-¥
-[ WindowNode }
-[ 1. RootView }
-I
-v v
-1.1 NativeView
-ChildrenCount: 2
-AutoFillld: 1073741829
-WebDomain: null
-1.2 WebView
-ChildrenCount: 2
-AutoFillld: 1073741826
-WebDomain: m.facebook.com
-v
-v
-v
-v
-1.1.1 Username
-1.1.2 Password
-AutoFillld: 1073741824
-Dimension: 300x100
-AutofillType: 1
-AutofillHints: null
-WebDomain: null
-AutofillOptions: null
-Htmllnfo: null
-ViewID: 2131231192
-InputType: 1 (text)
-AutoFillld: 1073741825
-Dimension: 300x100
-AutofillType: 1
-AutofillHints: null
-WebDomain: null
-AutofillOptions: null
-Htmllnfo: null
-ViewID: 2131231055
-InputType: 129 (password)
-1.2.1 Username
-1.2.2 Password
-AutoFillld: 1073741826:196608
-Dimension: 300x100
-AutofillType: 1
-AutofillHints: on
-WebDomain: null
-AutofillOptions: null
-Htmllnfo: [Pair{name email},
-Pair{type email},
-Pair{label Mobile
-number or email address},
-Pair{ua-autofill-hints null},
-Pair{id m_login_email},
+  FocusedID: 1073741826:196608
+  |
+AssistStructure
+  |
+WindowNode
+  |
+1. RootView
+  |
+  +-- 1.1 NativeView                      +-- 1.2 WebView
+      ChildrenCount: 2                        ChildrenCount: 2
+      AutoFillId: 1073741829                  AutoFillId: 1073741826
+      WebDomain: null                         WebDomain: m.facebook.com
+
+1.1.1 Username                    1.1.2 Password
+AutoFillId: 1073741824            AutoFillId: 1073741825
+Dimension: 300x100                Dimension: 300x100
+AutofillType: 1                   AutofillType: 1
+AutofillHints: null               AutofillHints: null
+WebDomain: null                   WebDomain: null
+AutofillOptions: null             AutofillOptions: null
+HtmlInfo: null                    HtmlInfo: null
+ViewID: 2131231192                ViewID: 2131231055
+InputType: 1 (text)               InputType: 129 (password)
+
+1.2.1 Username                            1.2.2 Password
+AutoFillId: 1073741826:196608             AutoFillId: 1073741826:196609
+Dimension: 300x100                        Dimension: 300x100
+AutofillType: 1                           AutofillType: 1
+AutofillHints: on                         AutofillHints: on
+WebDomain: null                           WebDomain: null
+AutofillOptions: null                     AutofillOptions: null
+HtmlInfo: [Pair{name email},              HtmlInfo: [Pair{name pass},
+Pair{type email},                         Pair{type password},
+Pair{label Mobile                         Pair{label Password},
+number or email address},                 Pair{ua-autofill-hints null},
+Pair{ua-autofill-hints null},             Pair{id m_login_email},
+Pair{id m_login_email},                   Pair{maxLength 2147483647}]
 Pair{maxLength 2147483647}]
-View ID: -1
-InputType: 0
-AutoFillld: 1073741826 :196609
-Dimension: 300x100
-AutofillType: 1
-AutofillHints: on
-WebDomain: null
-AutofillOptions: null
-Htmlinfo: [Pair{name pass},
-Pair{type password},
-Pair{label Password},
-Pair{ua-autofill-hints null},
-Pair{id m_login_email},
-Pair{maxLength 2147483647}]
-ViewD: -1
-InputType: 0
+ViewID: -1                                ViewID: -1
+InputType: 0                              InputType: 0
 ```
 
 ## Slide 47
@@ -878,49 +742,61 @@ InputType: 0
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Q
-blackhat = AutoSpill - Investigation
+AutoSpill - Investigation
+
 1. Autofill request from
 Android to autofill service
-v
-1.1 NativeView
-ChildrenCount: 2
-AutoFillld: 1073741829
-WebDomain: null
+
+[diagram, top to bottom; values in red are highlighted on the slide and linked by dotted arrows
+ from a lightbulb icon at the right]
 FillRequest
+  |
 FillContext
-FocusedID: 1073741826:196608 mameay,
-=.
-Y bbb LETT Tree
-[ AssistStructure ]
-[ WindowNode }
-[ 1. RootView
-I
-v a
-1.2 WebView >
-ChildrenCount: 2 o*
-AutoFillld: 1073741826 o”
-WebDomain: m.faceboog Bom
-I L,s*
-1.1.1 Username 1.1.2 Password 1.2.1 Username yw 1.2.2 Password
-AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
-Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100
-AutofillType: 1 AutofillType: 1 AutofillType: 1 AutofillType: 1
-AutofillHints: null AutofillHints: null AutofillHints: on AutofillHints: on
-WebDomain: null WebDomain: null WebDomain: null WebDomain: null
-AutofillOptions: null AutofillOptions: null AutofillOptions: null AutofillOptions: null
-Htmllnfo: null Htmllnfo: null Htmllnfo: [Pair{name email}, Htmllnfo: [Pair{name pass},
-; Pair{type email}, Pair{type password},
-View ID: 2131231192 ViewID: 2131231055 Pair{label Mobile Pair{label Password},
-. . number or email address}, Pair{ua-autofill-hints null},
-InputType: 1 (text) InputType: 129 (password) Pair{ua-autofill-hints null}, Pair{id m_login_email},
-Pair{id m_login_email}, Pair{maxLength 2147483647}]
+  FocusedID: 1073741826:196608          <- (red, underlined; dotted arrow from lightbulb)
+  |
+AssistStructure
+  |
+WindowNode
+  |
+1. RootView
+  |
+  +-- 1.1 NativeView                      +-- 1.2 WebView
+      ChildrenCount: 2                        ChildrenCount: 2
+      AutoFillId: 1073741829                  AutoFillId: 1073741826   (red)
+      WebDomain: null                         WebDomain: m.facebook.com
+
+1.1.1 Username                    1.1.2 Password
+AutoFillId: 1073741824            AutoFillId: 1073741825
+Dimension: 300x100                Dimension: 300x100
+AutofillType: 1                   AutofillType: 1
+AutofillHints: null               AutofillHints: null
+WebDomain: null                   WebDomain: null
+AutofillOptions: null             AutofillOptions: null
+HtmlInfo: null                    HtmlInfo: null
+ViewID: 2131231192                ViewID: 2131231055
+InputType: 1 (text)               InputType: 129 (password)
+
+1.2.1 Username                            1.2.2 Password
+AutoFillId: 1073741826:196608             AutoFillId: 1073741826:196609
+  (red, underlined; dotted arrow)           (1073741826 in red)
+Dimension: 300x100                        Dimension: 300x100
+AutofillType: 1                           AutofillType: 1
+AutofillHints: on                         AutofillHints: on
+WebDomain: null                           WebDomain: null
+AutofillOptions: null                     AutofillOptions: null
+HtmlInfo: [Pair{name email},              HtmlInfo: [Pair{name pass},
+Pair{type email},                         Pair{type password},
+Pair{label Mobile                         Pair{label Password},
+number or email address},                 Pair{ua-autofill-hints null},
+Pair{ua-autofill-hints null},             Pair{id m_login_email},
+Pair{id m_login_email},                   Pair{maxLength 2147483647}]
 Pair{maxLength 2147483647}]
-View ID: -1 ViewlD: -1
-InputType: 0 InputType: 0
+ViewID: -1                                ViewID: -1
+InputType: 0                              InputType: 0
 ```
 
 ## Slide 48
@@ -933,15 +809,13 @@ InputType: 0 InputType: 0
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 black hat
-EUROPE 2023
 Add WebDomain to
 DomainCheckList
-Ly
 Traverse
 AssistStructure to find
 domain of request
@@ -949,7 +823,6 @@ A
 Use FocusedID to
 identify input field that
 triggered the request
-LN
 Autofill service
 receives FillRequest
 Request
@@ -969,7 +842,8 @@ AutoSpill - Investigation
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat = AutoSpill - Investigation
@@ -985,14 +859,12 @@ A selection nodes
 Return
 Traverse
 AssistStructure to find Vv
-sorpeni lel tedieet Add AutoFillld of
 Traverse next node in If node is .
 4 selection input field Wel tee
 autofillTargetList
 Use FocusedID to
 identify input field that
 triggered the request
-LN
 Otherwise
 No
 Check
@@ -1003,9 +875,6 @@ Autofill service
 receives FillRequest
 Is null or
 matches
-ueeeee-- LN _oee eee DomainCheckList
-= Start ___
-Y aa
 Request Request
 processing: Pass 1 processing: Pass 2
 49
@@ -1021,11 +890,10 @@ processing: Pass 1 processing: Pass 2
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-EUROPE 2023
 AutoSpill - Investigation
 2. Request processing and response from autofill service
 Select next view,
@@ -1049,7 +917,6 @@ nodes
 Process
 selection
 Return
-Vv
 Traverse next node in
 selection
 Otherwise
@@ -1068,15 +935,12 @@ Add AutoFillld of
 this node to
 autofillTargetList
 No
-Y
 Use DomainCheckList
 to create Dataset(s)
 for autofillTargetList
-7
 Return Dataset(s) to
 Android system via
 FillResponse
-v
 Android displays
 suggestions to user;
 user selects and
@@ -1086,8 +950,6 @@ Android fills selected
 suggestion in fields,
 whose AutoFillld is
 described in Dataset
-se
-Neeeeee Start. \_.-- Complete. ____
 L J
 Request Request Post-processing,
 processing: Pass 1 processing: Pass 2 response
@@ -1150,15 +1012,6 @@ Report
 54
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Qo oa.
-blackhat = AutoSpill - Investigation
-PASSWORD
-MANAGERS
-```
 
 ## Slide 55
 
@@ -1268,23 +1121,39 @@ U/P: HA accessed both username and password, stole credential of choice.
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Q
-blackhat Countermeasures
-PASSWORD
-MANAGERS
-Vv Vv
-1 1.1 NativeView 1.2 WebView 1
-ChildrenCount: 2 ChildrenCount: 2
-' AutoFillld: 1073741829 AutoFillld: 1073741826 '
-H WebDomain: null WebDomain: m.facebook.com i
-t 1
-1.1.1 Username 1.1.2 Password 1.2.1 Username 1.2.2 Password
-AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
-Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100
-59
+Countermeasures
+
+PASSWORD MANAGERS
+
+1.1 NativeView
+ChildrenCount: 2
+AutoFillId: 1073741829
+WebDomain: null
+
+1.2 WebView
+ChildrenCount: 2
+AutoFillId: 1073741826
+WebDomain: m.facebook.com
+
+1.1.1 Username
+AutoFillId: 1073741824
+Dimension: 300x100
+
+1.1.2 Password
+AutoFillId: 1073741825
+Dimension: 300x100
+
+1.2.1 Username
+AutoFillId: 1073741826:196608
+Dimension: 300x100
+
+1.2.2 Password
+AutoFillId: 1073741826:196609
+Dimension: 300x100
 ```
 
 ## Slide 60
@@ -1299,27 +1168,43 @@ _AssistStructure_ data for request-triggering view only
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
->)
-blackhat Countermeasures
+Countermeasures
+
 AssistStructure data for request-triggering view only
-No excess
-information!
-PASSWORD
-MANAGERS
-I (Remi, “rere 1
-Vv Vv
-1 1.1 NativeView 1.2 WebView 1
-ChildrenCount: 2 ChildrenCount: 2
-' AutoFillld: 1073741829 AutoFillld: 1073741826 '
-H WebDomain: null WebDomain: m.facebook.com i
-t 1
-1.1.1 Username 1.1.2 Password 1.2.1 Username 1.2.2 Password
-AutoFillld: 1073741824 AutoFillld: 1073741825 AutoFillld: 1073741826:196608 AutoFillld: 1073741826 :196609
-Dimension: 300x100 Dimension: 300x100 Dimension: 300x100 Dimension: 300x100
-60
+
+No excess information!
+
+PASSWORD MANAGERS
+
+1.1 NativeView
+ChildrenCount: 2
+AutoFillId: 1073741829
+WebDomain: null
+
+1.2 WebView
+ChildrenCount: 2
+AutoFillId: 1073741826
+WebDomain: m.facebook.com
+
+1.1.1 Username
+AutoFillId: 1073741824
+Dimension: 300x100
+
+1.1.2 Password
+AutoFillId: 1073741825
+Dimension: 300x100
+
+1.2.1 Username
+AutoFillId: 1073741826:196608
+Dimension: 300x100
+
+1.2.2 Password
+AutoFillId: 1073741826:196609
+Dimension: 300x100
 ```
 
 ## Slide 61
@@ -1402,11 +1287,10 @@ AutoSpill attack by: **Ankit Gangwal** (gangwal@iiit.ac.in) Shubham Singh Abhije
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-EUROPE 2023
 AutoSpill attack by:
 Ankit Gangwal (gangwal@iiit.ac.in)
 THANK Shubham Singh

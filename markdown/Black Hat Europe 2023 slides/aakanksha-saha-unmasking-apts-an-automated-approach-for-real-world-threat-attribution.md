@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Aakanksha Saha_Unmasking APTs An Automated Approach for Real-World Threat Attribution.pdf"
 pages: 42
 sha256: "8cc141a4b19cac2a25ee40de8a00f5a39618bf6c5214a608ddd883786565081c"
-text_chars: 13471
-ocr_pages: 14
+text_chars: 11753
+ocr_pages: 12
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:09:19Z"
+converted_at: "2026-08-12T03:59:20Z"
 ---
 # Unmasking APTs An Automated Approach for Real-World Threat Attribution
 
 **Speakers:** Aakanksha Saha  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Aakanksha Saha_Unmasking APTs An Automated Approach for Real-World Threat Attribution.pdf` (42 pages)
+
 
 ## Slide 1
 
@@ -48,26 +54,14 @@ Evaluation
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Roadmap
-os, ——
-4 ibution a
-~ Attributi sights and
-challenges @ ADAPT system * Conclusion
-design
-APT and its 2)” . ’
-attribution 9 Dy 9 Evaluation
-```
-
 ## Slide 4
 
 4
 
 Sophisticated attacks Experienced teams against specific targets of cybercriminals
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Russia-backed hackers target German
@@ -200,7 +194,8 @@ Identify characteristics of attack + Prioritization of detection and mitigation
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 APT dataset
@@ -217,7 +212,8 @@ APT dataset
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 39/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Filetype
@@ -225,42 +221,9 @@ Dataset quality
 2,500 4
 2,000 ~
 17
-PdizZz
-> WX
-; 3x3 soa
-y wew3
-- eBew ¥siq ysowujeyy
-+ UONEJUBSAlg JUIOGJEMOd SW
-> dHd
-[-*"'00p JOSSe90Jq Pso/ [UeeJ0y) jnBUeH
--o-weN,
-}- Ja]ye]SU] SMOPUI/,
--usel4
-I uvd
-; a3
-+ @YsIaMOd
-> VeA
-> ddd
-WH
-yduogener
-Kel
-yeoyspeaids TWX UEedO B10.
-diz
 umouyun
-ynoyoys SMOpUlM,
-Plopuy
-yeoyspeaids je0xy SW
-yeUU04 1X8] YOIY
-quewns0g PIOM SIN
-yuewns0g TWX UedO e210
-Td ceulm
-Xa ceulm
-500 ~
 T T
 ° °
-fo) 8
-@ 2
-spsodey Jo yUNDD
 VTfileType
 ```
 
@@ -270,50 +233,14 @@ VTfileType
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-18
-dizZ
-“WX
-axa sod
-yew3
-ebew| ySIG YysojUIDeyy
-UOHEJUSSA1d JUIOGJAMOd SW
-dHd
-“90P JOSSEDOJq POM [UBaJOy) jnBueY
-o-wRN
-4Ja}/2}SU] SMOPUI\,
-ysel4
-Yuva
-da
-[}eysueMog
-VaA
-Add
-W1LH
-yduoseaer
-pel
-yeayspeaids TWX UedO e910
-diZ
-ynoYOYS SMOpUI\\
-Ploupuy
-yeayspeaids |20xy SW
-YEU} YXO] YOY
-juawnoo0g PloM SW
-quawnoog TWX uedo e019
-o °o
-0
-Sp1099y JO JUNDD
-VTfileType
-```
-
 ## Slide 19
 
 **Dataset quality:  Group label** 2,260 (35.01%) have more than 1 label
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dataset quality: Group label
@@ -327,7 +254,6 @@ BISMUTH
 BOHRIUM
 BROMINE
 CERIUM
-CHIMBORAZO.
 CHROMIUM
 COPERNICIUM
 CURIUM
@@ -363,7 +289,6 @@ SharpBoys
 APT41
 APT32, OceanLotus
 Energetic Bear, Crouching Yeti
-TASO5S
 ControlX
 Genie Spider, BlueNoroff
 TA456, Tortoise Shell
@@ -411,32 +336,19 @@ Campaign Attribution Group Attribution
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 {'URL': ['https://sapp-f347f.firebaseio.com'],
 Linking attributes
-VTe@r rary CeNsys
-‘ipaddress’: [], "ip": "157.90.197.1 ,
-"FilePath_1': [], u 1
 "FilePath_2': ['/res/color/abc_hint_foreground_material_dark aut nomous_system : {
-*/res/drawable/abc_item_background_holo_light.xml', " su,
 */res/drawable/abc_seekbar_tick_mark_material.xml', bgp_p refix": 57.90.0. 0/16 ’
 */res/layout/notification_template_custom_big.xml', u a sn" : 24940 ,
-*/res/drawable/abc_dialog_material_background.xml',
 */res/layout/notification_template_icon_group.xml', "desc ription t "HETZNER-AS
-*/res/color/abc_secondary_text_material_light.xml', i" rT uo
-*/res/drawable/abc_cab_background_internal_bg.xml', ame : HETZNER-AS ’
-*/res/layout/notification_media_cancel_action.xml'], " um, ou "
 *md5': ['@0@ddbb75d10a939b54a7ceea5f12563', count ry_code . DE
-"b855daec971a9da0Ff2b4d5F935e195a3'],
-‘shal’: [],
-*“sha256': [], ;
 ‘Ethereum': [], "subdomains": [
-"Bitcoin': [], "www. binance. com"
-“EmailAddress': ['android@android.com']
 ‘aSnoniveeekey". [] ssuer_d "C=CN, ST=ZJ, L=HZ, O=Internet Widgits Pty Ltd",
-‘ SSHDSAprivatekey' . a "fingerprint_sha256": "9e4dcf9d3e4bdfebd76ed1bcdba8ea33d827e69 fda45dec0f0e54d62e0dfb53e",
 "SSHECprivatekey': [], “issuer_organization": [
 "PGPprivatekeyblock': [], "Internet Widgits Pty Ltd"
 ‘GitHub’: [],
@@ -476,7 +388,8 @@ VTe@r rary CeNsys
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Feature transformation
@@ -490,7 +403,6 @@ One-hot encoding
 "PostHttpForm": true,
 “FingerprintHardware": true,
 “FingerprintEnvironment": +
-"CreateRegistryEntryUsingBat
 "RunShell": true
 25
 ```
@@ -564,7 +476,8 @@ Evaluated the performance of ADAPT on a reference dataset from MITRE
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CAMPAIGNS
@@ -576,15 +489,9 @@ c0028
 Attack
 co010
 coo11
-co015
 C0017
-co018
-co021
-C0026
 C0027
 c0025
-C0010
-0011
 CostaRicto
 Matrices
 Name
@@ -594,8 +501,6 @@ Attack
 2016 Ukraine
 Electric Power
 Attack
-C0010
-0011
 Evaluation
 ics Techniques Defenses > CTl v Resources ¥ Benefactors Blog @ Search Q
 Campaigns: 24
@@ -649,19 +554,17 @@ Campaigns
 
 July  2020
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Evaluation: Qualitative
 ge» | National Cyber
 a part of GCHQ
-Advisory: APT 29 tar
 COVID-19 vaccine
 development
 ES Security Centre . | el
 S
-States OF
-Sea
 gets
 July 2020
 31
@@ -671,7 +574,8 @@ July 2020
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 JPCERT CC
@@ -698,7 +602,8 @@ Windows
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 > Signatures
@@ -708,7 +613,6 @@ network
 TorUsage
 Odd Other
 network compiler
-| PostHttpForm fi Golang
 gc (gc_5_x64_elf)
 gc (gc_6_x64_elf)
 Odd Other
@@ -723,7 +627,8 @@ gc (gc_x64)
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 » Di crypto (12)
@@ -733,7 +638,6 @@ freeze
 invert
 ladderstep
 v Dj botlib (45)
-v Fj (*re6 cipher) (3)
 BlockSize
 Decrypt
 Encrypt
@@ -797,7 +701,8 @@ study here !
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THANK YOU

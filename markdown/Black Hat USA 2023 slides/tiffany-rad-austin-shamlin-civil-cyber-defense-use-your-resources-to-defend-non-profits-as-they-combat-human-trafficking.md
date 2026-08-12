@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Tiffany Rad & Austin Shamlin_ Civil Cyber Defense Use Your Resources to Defend Non-Profits as They Combat Human Trafficking and Subvert Authoritarian Regimes.pdf"
 pages: 26
 sha256: "f1eb5dcb1ac38d2d6e1603dcaa15542e908a0ab015532df5542fa06c44850ba5"
-text_chars: 12409
+text_chars: 11990
 ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 81.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:24:30Z"
+converted_at: "2026-08-12T04:21:32Z"
 ---
 # Civil Cyber Defense Use Your Resources to Defend Non-Profits as They Combat Human Trafficking and Subvert Authoritarian Regimes
 
 **Speakers:** Tiffany Rad, Austin Shamlin  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tiffany Rad & Austin Shamlin_ Civil Cyber Defense Use Your Resources to Defend Non-Profits as They Combat Human Trafficking and Subvert Authoritarian Regimes.pdf` (26 pages)
+
 
 ## Slide 1
 
@@ -253,7 +259,8 @@ or <u>Trad@Berkeley.edu</u>
 
 Countering the human trafficking threat through data intelligence
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Countering the human
@@ -269,21 +276,18 @@ data intelligence ~
 
 **OUR PARTNERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OUR PARTNERS
 WY) COVENANT = FORETRACE GAMES
 RESCUE GROUP
-. © MALTEGO
-@A LTUS (ire) 4) esr
 oN SULTING THE SCIENCE OF WHERE” & C LTC
 CO lective Center for Long-Term
 Ibe rty Cybersecurity
 UC Berkeley
 OSIN
-comBine KIKASM
-Case (@) Closed
 Software
 @
 ```
@@ -364,11 +368,24 @@ Sextortion is one of the fastest growing crises among teenagers in the U.S. Sinc
 
 #### **Operation WESTKEG** HOUSTON
 
+
+> Recovered by OCR — confidence 71/100 on the text kept, 35/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+2m Gooyle Maps
+wn
+i
+r Night Club from > -s .
+Operation WESTKEG
+HOUSTON
+```
+
 ## Slide 25
 
 Countering the human trafficking threat through data intelligence
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Countering the human

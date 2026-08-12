@@ -1,6 +1,6 @@
 ---
-title: "BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables"
-speakers: ["Zhibo Liu", "Yuanyuan Yuan", "Xiaofei Xie", "Tianxiang Li", "Wenqiang Li", "Shuai Wang"]
+title: "AI War: Unleashing the Power of LLM and Prompt Engineering for AI Framework Fuzz"
+speakers: ["Sihang Hu", "Zhihui Lin", "Tianxiang Li"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
 edition: "USA"
@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zhibo Liu & Yuanyuan Yuan & Xiaofei Xie & Tianxiang Li & Wenqiang Li & Shuai Wang_BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables_WP.pdf"
 pages: 16
 sha256: "718b44b32e71b15b78926db4751b8641e75ddb65a4976ad3e5db9aa21ecfcc1e"
-text_chars: 41003
+text_chars: 41004
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "MIS-FILED IN THE SOURCE ARCHIVE. This whitepaper is a different paper from a different conference: 10 mentions of AI War / prompt engineering and 17 of Black Hat Europe, against 8 of BTD/decompilation. The slides deck of the same name IS the real BTD talk and is unaffected. This document's cover reads Black Hat Europe 2023, though the archive files it under Black Hat USA 2023."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:58:34Z"
+converted_at: "2026-08-12T04:26:28Z"
 ---
-# BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables
+# AI War: Unleashing the Power of LLM and Prompt Engineering for AI Framework Fuzz
 
-**Speakers:** Zhibo Liu, Yuanyuan Yuan, Xiaofei Xie, Tianxiang Li, Wenqiang Li, Shuai Wang  
+**Speakers:** Sihang Hu, Zhihui Lin, Tianxiang Li  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhibo Liu & Yuanyuan Yuan & Xiaofei Xie & Tianxiang Li & Wenqiang Li & Shuai Wang_BTD Unleashing the Power of Decompilation for x86 Deep Neural Network Executables_WP.pdf` (16 pages)
+
 
 ## Slide 1
 
@@ -218,7 +224,7 @@ kernel_in = np.array([
 x = tf.constant(x_in, dtype=tf.float32)
 kernel = tf.constant(kernel_in, dtype=tf.float32)
 tf.nn.conv2d(x, kernel, strides=[1, 1, 1, 1], padding='VALID')
-```|
+\```|
 
 8
 

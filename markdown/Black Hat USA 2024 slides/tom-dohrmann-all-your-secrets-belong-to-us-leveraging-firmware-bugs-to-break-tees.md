@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Tom Dohrmann_All Your Secrets Belong to Us Leveraging Firmware Bugs to Break TEEs.pdf"
 pages: 58
 sha256: "1bc4dae0b30dcfe2930f03c1c44df33b455c37f02c2fd878fd65ed3afba3cdee"
-text_chars: 29934
+text_chars: 28917
 ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:39:31Z"
+converted_at: "2026-08-12T04:42:54Z"
 ---
 # All Your Secrets Belong to Us Leveraging Firmware Bugs to Break TEEs
 
 **Speakers:** Tom Dohrmann  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Tom Dohrmann_All Your Secrets Belong to Us Leveraging Firmware Bugs to Break TEEs.pdf` (58 pages)
+
 
 ## Slide 1
 
@@ -29,11 +35,10 @@ Tom Dohrmann
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat } # +
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 All Your Secrets Belong to Us:
@@ -864,11 +869,10 @@ Ciphertext at 0x2000 IV=f(0x2000) Plaintext at 0x2000 UMC Key Seed UMC Key Seed 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2024
 root@server:~/firmware-vuln-poc# cargo run -- --pfn 0x171a24
 F
 inished dev [unoptimized + debuginfo] target(s) in 0.03s
@@ -880,45 +884,29 @@ p
 040:
 060:
 080:
-Oad:
-OcO0:
-Oe0:
 100:
 120:
 140:
 160:
 age:
 0300000000000000110 Fa00000000000000000000000000000000000a98d95 f F
-29d761f0c5bdc1b4b4a69 fd2f37c829cab6d30d439252f7daefd72fcd45262053
-3c10be491d825e35ea4166261486e417187c679efcc2d2be8553f32c2c62bbFf3
-27ac6d99214a2cel1fc37d35a94475ff377e67caacc43add86e908a9369207343
 14c197f fbcfade378bd1b33819051d5d3628b5eb7 1la0b84daefed27671e8e202
-DONDNDDDNDNDDD0D0D0D0D0000000000000000000000000000000000000000000
-DONDDDNDDDDDDDDD0D0D000000000000000000000000000000000000000000000
-DDDDDDNDDDDNDDDDDDDDD0DDDDDDD0DDDD0D0DD0D000000000000000000000000
-000000000080008800000000eef FOOOO TOT TT tft ttt ttf ttf ff3fO0O0000000000
-DNDNDDDNDDDDD0D0000000000000000000000000000000000000000000000000
-DNDNDNDDDDDDDDD0D0D000000000000000000000000000000000000000000000
-C8DNDNDDDDNDDDDDDDDDDDDDDDDDDD0DD0DDDD0D000D0000000000000000000000
 ```
 
 ## Slide 38
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2024
 Secrets page:
 imi en: false
 FMS: 00a00f11
 gosvw: 000000000000000000000000a98d95 fF F
-vmpck@: 29d761f0c5bdc1b4b4a69 fd2 f37c829ca6d30d439252f7daefd72fcd45262053
 vmpckl: 3c10be491d825e35ea4166261486e417187c679ef cc2d2be8553F32c2c62bbf3
 vmpck2: 27ac6d99214a2celfc37d35a944/5fF377e6/caacc43add86e908a9369207343
-vmpck3: 14c197ffbcfade378bd1b33819051d5d3628b5eb7 1la0b84daefed27671e8e202
 VMSA tweak bitmap: 000000000080008800000000eef FOOOO TOF fF fff ttttttttfff3foo
 000000000000000000000000000000
 tsc factor: 200
@@ -1251,11 +1239,10 @@ Exploit
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2024
 freax13@server :~/code/cve-2024-21978-poc$ bash exploit.sh
 Corrupt guest context page so that ASID is in range 1..510
 Smallest ASID: Ox0000001f iterations: 14052175 zeros: 10539628 unique asids: 31500727 elapsed time: 1d 19h 20m 31s

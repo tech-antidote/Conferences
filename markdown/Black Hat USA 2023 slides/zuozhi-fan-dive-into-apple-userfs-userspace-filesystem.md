@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zuozhi Fan_Dive into Apple UserFS (Userspace Filesystem).pdf"
 pages: 43
 sha256: "0fdf93ad6a2fe517dcdbd2ead0961d025bce8cfb70b7ac1d01f63587ecbe8a70"
-text_chars: 16558
+text_chars: 14925
 ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:28:25Z"
+converted_at: "2026-08-12T04:27:11Z"
 ---
 # Dive into Apple UserFS (Userspace Filesystem)
 
 **Speakers:** Zuozhi Fan  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zuozhi Fan_Dive into Apple UserFS (Userspace Filesystem).pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ pattern-f (@pattern_F_) Ant Security Light-Year Lab
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pISek hat
 AUGUST 9-10, 2025
 BRIEFINGS
 Dive into Apple UserFS
@@ -92,11 +98,11 @@ Ant Security Light-Year Lab
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bike hat Background
-USA 2&0e3
 ¢ This vulnerability doesA+ affect iOS, reath-
 File System
 Available for: iPhone 6s (all models), iPhone 7 (all models), iPhone SE (1st generation), iPad Pro (all
@@ -205,25 +211,15 @@ lifs.kext
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pigeuchat When connecting a USB drive to iPhone <4
-USA 2&0e3
 ¢ familiar command “/sbin/mount’, mount_lifs this time.
--[lifeFilesFPNFSDMounter LiveMounterMountVolume:displayName: provider: domainError:on:how:reply: ]
-{
--[lifeFilesFPNFSDMounter LiveMounterReallyMountVolume:displayName: provider: domainError:on:how:reply:]
 -[mountEntry mount:] {
 posix_spawn(&pid, "/sbin/mount_lifs", actions, attr, { "/sbin/mount_lifs", ... }, environ)
-}
-}
-}
-/sbin/|mount_lifs
-{
 mount("lifs", dir, flags, data) {
-lifs.kext lifs_mount(...)
-}
 ```
 
 ## Slide 16
@@ -282,16 +278,12 @@ usb.device.attached lifs.kext
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 20253
-S$
 ¢ vnop_open will build a mach message and send it to a server.
 int lifs_open_request(lifsmount *li_mount, void *fsnode, void *a3)
-{
-get_lifs_port(&svr_port);
 req.request_id = OSAddAtomic64(1LL, &lifs_request_id);
 // ... Copy params to request
 lifs_add_req(&req);
@@ -299,7 +291,6 @@ ret = lifs_open_send(svr_port, req.request_id, fsnode, a3); {
 struct { mach_msg_header_t msgHdr; } openRequest;
 openRequest.msgHdr.msgh_id = @x2A5;
 mach_msg_send_from_kernel_proper(&openRequest.msgHdr, sizeof(openRequest) );
-}
 if ( ret ==-@) {
 lifs_wait_req_completion(&req) ;
 ret = req.retcode_2C;
@@ -325,23 +316,17 @@ IOConnectCallStructMethod
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ij
-2)
 blackhat When accessing files via UserFS: e ‘Ss
-USA 20253
 ¢ livefileproviderd starts a mig server.
-livefileproviderd main()
-{
 source = dispatch_source_create(DISPATCH_SOURCE_TYPE_MACH_RECV, svr_port, ...);
 dispatch_source_set_event_handler(source, *{
 dispatch_mig_server(source, 2168, mig_message_dispatcher) ;
-4);
 } openRequest.msgHdr.msgh_id = @x2A5;
 void *mig_lifs_open“send(void *InHeadP, void *xOutHeadP)
-{
 lifs_open_send(request_id, fsnode, mode, token) {
 fileHandle = m_resolve_fsnode(fsnode, &a2, &mountEntry, &a4, @);
 id fsObj = [mountEntry fsObjwWithErrorHandler:];
@@ -349,8 +334,6 @@ objc_msgSend(fsObj, "LIOpen:withMode:forPID:reply:", fileHandle, mode, pid, ‘(
 int selector = 2;
 lifs_send_reply(request_id, ret, selector, (__int64)&v2, 16LL) {
 objc_msgSend(1li_UserClient, "callStructMethod:inStruct:inSize:outStruct:outStructSize:");
-}
-});
 ( lOConnectCallStructMethod )
 ```
 
@@ -370,14 +353,12 @@ lifs_request_done(…)
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ij
 pigeichat When accessing files via UserFS: e ‘Ss
-USA 20253
 int lifs_open_request(lifsmount *li_mount, void *fsnode, void x*a3)
-{
 get_lifs_port(&svr_port);
 OSAddAtomic64(1LL, &lifs_request_id);
 req.request_id
@@ -387,10 +368,8 @@ ret = lifs_open_send(svr_port, req.request_id, fsnode, a3); {
 struct { mach_msg_header_t msgHdr; } openRequest;
 openRequest.msgHdr.msgh_id = @x2A5;
 mach_msg_send_from_kernel_proper(&openRequest.msgHdr, sizeof(openRequest) );
-}
 lifs_wait_req_completion(&req) ; int fd = open(path, O_RDONLY);
 ret = req.retcode_2C;
-}
 lifs_remove_req(&req);
 return ret;
 ```
@@ -430,12 +409,10 @@ Userfs Volume
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 2&0e3
-e livefileproviderd obj c_msgSend( , “LIOpen:withMode: forPID:reply:", , , , & );
 void __cdecl —[LiveFSServiceConnection LIOpkn:withMode: forPID: reply: ] (
 LiveFSServiceConnection xself,
 SEL a2,
@@ -444,10 +421,7 @@ int a4,
 ¢ LiveFS.framework int a5,
 id a6)
 —>mount,
-eimai aD a he EI
 off=8; NSFileProviderLiveItemImplementation x
-«(_ QWORD x) &aay
-¢ UVFSService
 void __cdecl -[liveFSVolume LIOpen:withMode: forPID:reply:](liveFSVolume *self, SEL a2, id
 £
 ```
@@ -460,30 +434,22 @@ void __cdecl -[liveFSVolume LIOpen:withMode: forPID:reply:](liveFSVolume *self, 
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e3
-¢ UVFSService
 void -[liveFSVolume LILookup:name:forClient:reply: ] (
 liveFSVolume *self, SEL a2, id fileHandle, id nameStr, unsigned client, id reply_b)
-{
 fileNode -[liveFSVolume getNodeForFH:fileHandle withError:error];
 [fileNode lookup:nameStr withResultingNode:&resultNode]; {
 self- £FsOps- ->fsops_ lookup} self- >_UVFSNode, [nameStr UTF8String], &uvfsNode);
 fileNode = [[liveFSNode alloc] initWithVolume:self—>volume
 andParent: self
 andName:nameStr
-andUVFSNode:uvfsNode];
 *resultNode = fileNode;
-}
 resultFileHandle = [resultNode getFH];
 attrData [resultNode getAttrData];
 reply_b(retcode, resultFileHandle, attrData);
-v@id _ cdecl -[liveFSVolume LIOpen:withMode: forPID:reply:] (liveFSVolume «self, SEL a2, id
-£
 ```
 
 ## Slide 28
@@ -530,36 +496,28 @@ Userfs Volume
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 ¢ Vulnerable code (CVE-2020-27904), kernel FS
 ; , T 1 AppleDouble Header File layout:
-check_and_swap_attrhdr(attr_header_t *ah, attr_info_t *ainfop) lin ste eee a
 { * .-- AD ENTRY[@] Finder Info Entry (must be fir
 /x * .--+-- AD ENTRY[1] Fork Entry (must be 1
 ; . foe . * | ‘=> FINDER INFO
 * Make sure each of the attr_entry_t's fits within total_size. * | IIITITITIIIIL. Fixed Size Data (32 bytes)
 */ * | EXT ATTR HDR
 buf_end = ainfop->rawdata + ah->total_size; * | tae et
-* ae.
 count = ah->num_attrs; i | ATTR ENTRY[1] —-+--
 ae = (attr_entry_t x*)(&ah[1]); * | ATTR ENTRY[2] --+--+--.
 or (i = 6: i < count: i++) { * | __ATTR ENTRY[N] --+--+--+--.
 /* Make sure the fixed-size part of this attr_entry_t fits. */ * | JIT 1; |
 1 EINVAL; “™) ATTR DATA 2 <------- rif
 } * | IIIT |
-/*x Make sure the attribute content fits. x*/ : 7 sel PHT P TIN ——__ .
 end = ae->offset + ae->length; * | Attribute Free Space
 if((end < ae->offset || end > ah->total_size) ){
 return EINVAL;
-}
 ae = ATTR_NEXT(ae);
-}
-}
 MUST: ah->data_start <= attr entry offset <= ah->total_size #BHASIA OBLACKHATEVENTS
 ```
 
@@ -601,14 +559,11 @@ with
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-— ¥
-XS
-q
 pifekhat Real world vulnerabilities
-USA 2&0e3
 ¢ While studying UserFS, | found another xattr bug in kernel FS.
 +++ b/bsd/vfs/vfs_xattr.c
 get_xattrinfoCvnode_t xvp, int setting, attr_info_t *ainfop, vfs_context_t conte
@@ -617,7 +572,6 @@ writesize = sizeofCattr_header_t);
 } else {
 - /* Create a new, empty resource fork. */
 rsrcfork_header_t *rsrcforkhdr;
-offset
 vnode_setsize(xvp, filehdr->entries[1].offset + delta, 0, context);
 ```
 
@@ -629,11 +583,11 @@ vnode_setsize(xvp, filehdr->entries[1].offset + delta, 0, context);
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pifekhat Real world vulnerabilitie
-USA 2&0e3
 ¢ | think it is CVE-2022-42842.
 ¢ The ability of this bug is limited.
 Then init_empty_resource_fork will initialize the memory block to some fix values. A partially controlable oob-write

@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Adnan Khan & John Stawinski_Self-Hosted GitHub CICD Runners Continuous Integration, Continuous Destruction.pdf"
 pages: 98
 sha256: "8c1381fcd289280634e96d806b3746f67d2d15854fc8e7d105e55395f7bc6dfb"
-text_chars: 33550
-ocr_pages: 16
+text_chars: 32603
+ocr_pages: 15
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:28:50Z"
+converted_at: "2026-08-12T04:27:46Z"
 ---
 # Self-Hosted GitHub CICD Runners Continuous Integration, Continuous Destruction
 
 **Speakers:** Adnan Khan, John Stawinski  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Adnan Khan & John Stawinski_Self-Hosted GitHub CICD Runners Continuous Integration, Continuous Destruction.pdf` (98 pages)
+
 
 ## Slide 1
 
@@ -91,12 +97,11 @@ Insert Adnan pic here
 
 And many more….
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 €) Actions TensorFlow =e Microsoft
-an
-OPyTorch ©"
 AND MANY MORE....
 ```
 
@@ -104,7 +109,8 @@ AND MANY MORE....
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ame Fortinet
@@ -720,17 +726,6 @@ Breaching Microsoft’s
 
 Perimeter
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Social Eyisineerin ° ° ;
-Pr 9 Breaching §§ Microsoft's
-pr va
-Perimeter
-DeepSpeed
-Web A tion Vulnerability
-```
-
 ## Slide 55
 
 ##### A Trend in AI/ML…
@@ -757,7 +752,8 @@ John Stawinski - Email: jstan327@gmail.com Website: johnstawinski.com
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DeepSpeed / .github / workflows / amd-mi200.yml (9
@@ -765,10 +761,8 @@ DeepSpeed / .github / workflows / amd-mi200.yml (9
 Blame 86 lines (74 loc) - 2.96 KB: @
 name: amd-—mi200
 on:
-workf low_dispatch:
 pull_request:
 paths:
-- ',github/workf lows/amd—mi200.ymL'
 - 'requirements/xx'
 schedule:
 concurrency:
@@ -785,7 +779,8 @@ runs-on: [self-hosted, amd, mi20Q]
 
 ## Slide 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DeepSpeed / .github / workflows / amd-mi200.yml (2
@@ -793,41 +788,31 @@ DeepSpeed / .github / workflows / amd-mi200.yml (2
 Blame 86 lines (74 loc) + 2.96 KB: @
 name: amd-mi200
 on:
-workf low_dispatch:
 pull_request:
 paths:
-- ',github/workf lows/amd—mi200. yml'
 - 'requirements/xx'
 runs-on: [self-hosted, amd, mi20Q]
 schedule:
-PR
 S
-PR
 NB
 concurrency:
 group: ${{ github.workflow }}-${{ github.ref }}
 cancel-in-progress: true
-PPP PR
 permissions:
 contents: read
-R
-~~
 issues: write
 NPR
-oS ©
 jobs:
 amd-tests:
 N Nat
-N BP
 # The type of runner that the job will run on
 N
-Ww
-runs-on: [self-hosted, amd, mi20Q]
 ```
 
 ## Slide 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fix typo in SECURITY.md #4019
@@ -835,13 +820,11 @@ sd a PR to fix this typo in SECURITY.md
 \ Next >
 fix typo in SECURITY.md
 jstan327 committed
-2 ae SECURITY.md (4b
 com/create-report).
 Instead, please report them to the Microsoft Security Respo
 sible, encrypt yo Security Response Center PGP Key
 yre@nicrosoft.c ). If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page
 logging in, send email to [secure@microsoft.com] (m
-ttps://www. microsoft. com/en-us/msrc/pgp-key-msrc).
 your original message. A
 ```
 
@@ -855,7 +838,8 @@ your original message. A
 
 3. Submit PR
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CREATING OUR MALICIOUS WORKFLOW
@@ -886,7 +870,8 @@ is Run details v @ unit-tests
 
 Creating our Malicious WOrkflow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CREATING OUR MALICIOUS WORKFLOW
@@ -895,7 +880,6 @@ C¢) microsoft / DeepSpeed
 <> Code ©) Issues. 786 {1} Pullrequests 146 1) Discussions ©) Actions [F Projects © Security | Insights
 € nv-h100
 @ Workflow testing #76
-() Summary .
 unit-tests
 succeeded 9 minutes ago in 8s
 Jobs
@@ -971,12 +955,11 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 USA 2024
-LOOK NO TyPé
 ai-containers / .github / workflows / test-runner-ci.yaml
 Code
 Adnan Khan - X: eadnanthekhan Website: adnanthekhan.com
@@ -1046,7 +1029,8 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “rt Snow ME THE SECRETS
@@ -1079,7 +1063,8 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “rt Swow ME THE SECRETS
@@ -1169,10 +1154,10 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 USA 2024
 ALL EMPLOYEES COULD BECOME ADMIN
 name: inventory
@@ -1190,10 +1175,7 @@ write
 = Inventory Write Generic Accoun
 read
 - Read CW
-allow-merge-—commit
-aLllow-squash-merge
 allow-rebase-merge
-delete-branch-on-merge
 Adnan Khan - X: eadnanthekhan Website: adnanthekhan.com
 ts
 — name
@@ -1201,24 +1183,15 @@ uses
 with
 github-token
 Add
-"Earget":| “branch”
 "source_type": "Repository",
-"source" : a aL i
 "enforcement": "active",
-"condieions |: ¢
 "ref_name": {
 "exclude": [
 "refs/heads/gh-readonly—queue/**/*"
-iF
-None lude!:) |)
-"SALL"
 J
-5
-,
 Support Team
 actions/github-script@v3
 script
-${{ secrets .CONF_GITHUB_TOKEN_00A }}
 await github.teams.addOrUpdateRepoPermissionsInOrg({
 #BHUSA @BlackHatEvents
 ```
@@ -1245,7 +1218,8 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 ## Slide 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 29
@@ -1260,7 +1234,6 @@ The authenticated user is: github-1source
 [+]
 [+]
 [+]
-[!]
 [+]
 [+]
 The GitHub Classic PAT has the following scopes: admin:enterprise, admin:org, admin:org_ hook, delete repo, project, read:audit_log, repo, user, workflow, write:discussion
@@ -1296,7 +1269,8 @@ The runner has the following lahel«: self-hosted. Linux. X64. hin-sw. nako-clou
 
 Turns out, it was a PAT belonging to an Enterprise Admin bot account and had org-owner permissions to all organizations.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 > Run source venv2/bin/activate && gato-x e -t intel-restricted -sr -oJ intel rest.json
@@ -1386,14 +1360,12 @@ Adnan Khan – X: @adnanthekhan Website: adnanthekhan.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-waret ~— UNPRECEDENTED ACCESS
-447 35
 448 {
 449 “id": 472953435,
-450 “node_id": “R_kgDOHDCyWw”" ,
 451 “name": ™ core-royal”,
 452 “full_name": “intel-restricted/ -core-royal",
 453 “private”: true,
@@ -1404,19 +1376,13 @@ waret ~— UNPRECEDENTED ACCESS
 458 “avatar_url": “https://avatars.githubusercontent.com/u a
 459 “gravatar_id": "",
 460 "url": “https://api.github.cor
-461 “html_url": “https: //github.c
 462 “followers_url": “https://api.
-463 “following url": “https://api.
-464 “gists url": “https://api.gitt
 465 “starred_url": “https://api.g:
 466 “subscriptions url": “https:/,
 467 “organizations_url": “https:/,
 468 “repos_url”: “https://api.gitl
 469 “events_url": “https://api.gii
-470 “received events url": “https
-471 “type”: “Organization”,
 472 “site_admin": false
-473 1
 474 “html_url": “https://github.com/intel-restricted a
 475 “description”: “Royal Core Intellectual Property ">
 476 “fork": false,
@@ -1531,13 +1497,11 @@ John Stawinski - Email: jstan327@gmail.com Website: johnstawinski.com
 
 ## Slide 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-{Lr
-Sse
 Abusing Celf-Hocted GitHub Runners at
-Seale oe
 ADNAN KHAN | JOHN STAWINSKI a
 DEF CON 32 - LAS VEGAS Laer
 ```
@@ -1546,23 +1510,23 @@ DEF CON 32 - LAS VEGAS Laer
 
 ##### Thank You
 
-```
+\```
 X: @adnanthekhan
-```
+\```
 
-```
+\```
 Email:
 me@adnanthekhan.com
 Web:
 https://adnanthekhan.com
-```
+\```
 
-```
+\```
 Email:
 jstan327@gmail.com
 Web:
 https://johnstawinski.com
-```
+\```
 
 ## Slide 97
 

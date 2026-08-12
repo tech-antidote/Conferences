@@ -4,17 +4,21 @@ speakers: ["Oleksandr Mirosh"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Oleksandr Mirosh - Transformers Dark Side of the Type - Weaponizing the Conversion Layer - Sideofthe v2.pdf"
 pages: 52
 sha256: "454f2216f3ba1c1f8f36421958500ad48f8ce18795042abae4c6073d92204226"
-text_chars: 31456
+text_chars: 31586
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:25:44Z"
+converted_at: "2026-08-12T06:39:50Z"
 ---
 # Transformers Dark Side of the Type - Weaponizing the Conversion Layer
 
@@ -22,31 +26,32 @@ converted_at: "2026-08-12T00:25:44Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Oleksandr Mirosh - Transformers Dark Side of the Type - Weaponizing the Conversion Layer - Sideofthe v2.pdf` (52 pages)
 
+
 ## Slide 1
 
 **TRANSFORMERS** **`TYPE` DARK SIDE OF THE Weaponizing the Conversion Layer**
 
 **Oleksandr Mirosh** `OpenText Fortify`
 
-```
+\```
 DEF CON 34
-```
+\```
 
 ## Slide 2
 
-```
+\```
 $ whoami
-```
+\```
 
 ### **Oleksandr Mirosh**
 
-```
+\```
 @olekmirosh
-```
+\```
 
-```
+\```
 AT BLACK HAT & DEF CON BEFORE
-```
+\```
 
 **`2020` Room for Escape**
 
@@ -64,9 +69,9 @@ Transformation logic — Java & .NET
 
 Numerous CVEs in enterprise apps & frameworks
 
-```
+\```
 2
-```
+\```
 
 ## Slide 3
 
@@ -88,9 +93,9 @@ Numerous CVEs in enterprise apps & frameworks
 
 **Detection & defense ·** Hunt it, triage it, kill the class **05**
 
-```
+\```
 3
-```
+\```
 
 ## Slide 4
 
@@ -100,9 +105,9 @@ Numerous CVEs in enterprise apps & frameworks
 
 _The reframing_
 
-```
+\```
 4
-```
+\```
 
 ## Slide 5
 
@@ -112,7 +117,7 @@ Programs work with data as **objects** in memory To store or transmit them, they
 
 Object ⇄ format is the job of **machinery** : `parsers · marshallers · serializers`
 
-```
+\```
 THE MACHINERY
 BinaryFormatter
 XmlSerializer
@@ -122,11 +127,11 @@ System.Text.Json
 ObjectInputStream
 Jackson
 fastjson
-```
+\```
 
-```
+\```
 5
-```
+\```
 
 ## Slide 6
 
@@ -142,9 +147,9 @@ Control the type — and you **choose the code**
 
 **`2009 2012 2015 2017`** **_a decade of CVEs_** _Esser Forshaw Frohoff & Lawrence Muñoz & Mirosh_ **PHP Object Injection “Are You My Type?” “Marshalling Pickles” “Friday the 13th: JSON Attacks”** `type confusion, no gadget ysoserial · Java gadgets ysoserial.net · .NET gadgets`
 
-```
+\```
 6
-```
+\```
 
 ## Slide 7
 
@@ -160,9 +165,9 @@ Scanners learned the sinks `Deserialize()  ·  ReadObject()`
 
 **The border was drawn around the serializer — and everyone learned to hunt inside it.**
 
-```
+\```
 7
-```
+\```
 
 ## Slide 8
 
@@ -182,9 +187,9 @@ Simple objects **may travel as a type + a string**
 
 **So — can this be Insecure Deserialization?**
 
-```
+\```
 8
-```
+\```
 
 ## Slide 9
 
@@ -194,9 +199,9 @@ Simple objects **may travel as a type + a string**
 
 _String → object, without a serializer_
 
-```
+\```
 9
-```
+\```
 
 ## Slide 10
 
@@ -210,9 +215,9 @@ With **none of the machinery**
 
 Developers rely on it constantly. It's rarely reviewed as a security boundary.
 
-```
+\```
 10
-```
+\```
 
 ## Slide 11
 
@@ -222,9 +227,9 @@ Developers rely on it constantly. It's rarely reviewed as a security boundary.
 
 **`OUT`** _string as input · the type is fixed_ `BitConverter · XmlConvert · Convert.ChangeType` **`IN`** _string as input · a type may be resolved_ **`TypeConverter.ConvertFrom`** resolves the converter the type declares **`static Parse() / TryParse()`** the type is its own factory **`new T(string)`** the constructor is the trigger **`Parameterless ctor + accessors`** the members run the code **`Custom conversion logic`** defines its own shape **Complex serializers** that's Insecure Deserialization **`OUT OF SCOPE`**
 
-```
+\```
 11
-```
+\```
 
 ## Slide 12
 
@@ -244,9 +249,9 @@ A Transformation Layer mechanism is an **Insecure String Transformer** when all 
 
 **The first three make a transformer — the fourth makes it a weapon.**
 
-```
+\```
 12
-```
+\```
 
 ## Slide 13
 
@@ -268,9 +273,9 @@ a text token
 
 ###### **Two entrances. One attack.**
 
-```
+\```
 13
-```
+\```
 
 ## Slide 14
 
@@ -294,21 +299,21 @@ No hardening switch
 
 unprivileged user · default config
 
-```
+\```
 CVE-2020-1460
 CVE-2026-26106
 CVE-2026-40357
 CVE-2026-47294
 CVE-2026-48560
-```
+\```
 
-```
+\```
 Reproduced. Reported. Patched.
-```
+\```
 
-```
+\```
 14
-```
+\```
 
 ## Slide 15
 
@@ -318,9 +323,9 @@ Reproduced. Reported. Patched.
 
 _Five primitives, real gadgets_
 
-```
+\```
 15
-```
+\```
 
 ## Slide 16
 
@@ -328,9 +333,9 @@ _Five primitives, real gadgets_
 
 ##### **The attacker's inventory**
 
-```
+\```
 .NET FRAMEWORK
-```
+\```
 
 ###### **Wide open**
 
@@ -352,9 +357,9 @@ One desktop reference deep in the graph pulls them back
 
 ###### **Availability is a property of the runtime — not the transformer.**
 
-```
+\```
 16
-```
+\```
 
 ## Slide 17
 
@@ -375,9 +380,9 @@ the members run the code|
 the transformer defines its own shape|
 |**Input b**|**ecomes an instance of anattacker-chosen type.**|
 
-```
+\```
 17
-```
+\```
 
 ## Slide 18
 
@@ -391,14 +396,14 @@ A type may declare a `TypeConverter` via an attribute — a separate class that 
 
 input becomes a Type
 
-```
+\```
 1
 Type t = Type.GetType(typeName);
 2
 var conv = TypeDescriptor.GetConverter(t);
 3
 return conv.ConvertFromString(value);
-```
+\```
 
 ###### **`SELECTION`**
 
@@ -406,9 +411,9 @@ the type selects the code _unique to TypeConverter_
 
 **`Listing 3   C#`** _The TypeConverter sink: both arguments attacker-controlled_
 
-```
+\```
 EXECUTION
-```
+\```
 
 the call runs it
 
@@ -422,9 +427,9 @@ the call runs it
 
 Not new — the first were our **2017 Visual Studio converters** , each driving a deserializer behind ConvertFrom.
 
-```
+\```
 OUTBOUND GADGETS
-```
+\```
 
 Impacts **DNS · SSRF · NTLM relay** **`ImageSourceConverter`**
 
@@ -448,9 +453,9 @@ only fetches *.cur and *.ani files
 
 **`ResXFileRef`** (Soroush Dalili, 2018)
 
-```
+\```
 WHY IT IS SPECIAL
-```
+\```
 
 ###### **`MECHANISM`**
 
@@ -468,9 +473,9 @@ Runs its own transformation, but from a stream — resolve + instantiate, seeded
 
 ###### **Already outbound. For more, hand it a capable stream gadget.**
 
-```
+\```
 20
-```
+\```
 
 → `whitepaper §3.2`
 
@@ -480,9 +485,9 @@ Runs its own transformation, but from a stream — resolve + instantiate, seeded
 
 **`ResourceSet`** is such a stream gadget: its constructor reads the incoming stream as a binary `.resources` file — and that file can carry a serialized object.
 
-```
+\```
 "…;System.Resources.ResourceSet;…"
-```
+\```
 
 → `new ResourceSet(stream)`
 
@@ -492,21 +497,21 @@ Runs its own transformation, but from a stream — resolve + instantiate, seeded
 
 - **→** **`BinaryFormatter.Deserialize(our bytes)` →** **`RCE`**
 
-```
+\```
 BINARYFORMATTER REACH
-```
+\```
 
 `.NET 6 — live .NET 7 — opt-in .NET 8 — throws then removed` _reaches modern .NET — narrowing with each release_
 
-```
+\```
 Soroush Dalili named three: ResourceSet · ResXResourceSet · ResourceReader
-```
+\```
 
 ###### **Where BinaryFormatter is gone, ResXFileRef needs a different stream gadget.**
 
-```
+\```
 21
-```
+\```
 
 → `whitepaper §3.2`
 
@@ -520,9 +525,9 @@ More RCE gadgets — **without BinaryFormatter.**
 
 **`WorkflowServiceBehavior`** `System.WorkflowServices.dll` stream ctor copies the bytes → internal ctor reads WorkflowName during construction → DeSerizalizeDefinition → XOML deserializer **_the deserialize hides behind a property read_** **`XamlImageInfo`** `System.Activities.Presentation.dll` constructor → XamlReader.Load(stream) → **RCE** (§3.3) _GAC on Framework · absent from modern .NET (WF not ported) · app-referenced only._ **No default modern-.NET gadget found — yet.**
 
-```
+\```
 22
-```
+\```
 
 → `whitepaper §3.2`
 
@@ -536,9 +541,9 @@ A type buildable from a string exposes a static `Parse` — `Int32` , `DateTime`
 
 **`RESOLUTION`** input becomes a Type
 
-```
+\```
 EXECUTION
-```
+\```
 
 the type's own Parse runs it
 
@@ -565,12 +570,12 @@ _no converter — the type uses its own code_
 3
 4
 
-```
+\```
 1
 public static object Parse(string xamlText)
 2
 => Parse(xamlText, useRestrictiveXamlReader: false);
-```
+\```
 
 - `3 // false` → `full XAML object writer builds the graph`
 
@@ -584,9 +589,9 @@ public static object Parse(string xamlText)
 
 **One string — Parse builds the graph, and the graph runs the code.**
 
-```
+\```
 24
-```
+\```
 
 → `whitepaper §3.3`
 
@@ -596,15 +601,15 @@ public static object Parse(string xamlText)
 
 The XAML factories are desktop-only — these two Parse gadgets reach further, without RCE.
 
-```
+\```
 StaticAssetsManifest.Parse
-```
+\```
 
 ###### **`OUTBOUND · SSRF`**
 
-```
+\```
 ships in every ASP.NET Core app —the largest modern target
-```
+\```
 
 ● **`StaticAssetsManifest.cs`** `1 using var fs = File.OpenRead(manifestPath); 2 return JsonSerializer.Deserialize<Manifest>(fs);` **`Listing 22   C#`** _opens a path, then JSON-deserializes a fixed type_ **`XDocument.Parse TIMING ORACLE`**
 
@@ -612,9 +617,9 @@ Every .NET app — the widest reach here. No type resolution, no XXE; parse time
 
 **No RCE — but two sinks: an SSRF, and a stopwatch oracle.**
 
-```
+\```
 25
-```
+\```
 
 → `whitepaper §3.3`
 
@@ -630,9 +635,9 @@ Hand a string to a single-argument constructor. `new Uri(s)` , `new Version(s)` 
 
 **Any type built from a single string is a candidate — and they are everywhere.**
 
-```
+\```
 26
-```
+\```
 
 → `whitepaper §3.4`
 
@@ -646,9 +651,9 @@ Hand a string to a single-argument constructor. `new Uri(s)` , `new Version(s)` 
 
 A **UNC path** turns any of them outbound — the ResXFileRef exposure, with no ResXFileRef.
 
-```
+\```
 FILE READ
-```
+\```
 
 ###### **`StreamReader(path)`**
 
@@ -676,9 +681,9 @@ the same — disguised as resources
 
 ###### **Read, write, or reach out — all from a constructor handed a path.**
 
-```
+\```
 27
-```
+\```
 
 → `whitepaper §3.4`
 
@@ -696,9 +701,9 @@ _modern .NET, where BF is enabled .NET Framework only (WF not ported)_
 
 **Same RCE as §3.2 — a simpler primitive, delivered from your server.**
 
-```
+\```
 28
-```
+\```
 
 → `whitepaper §3.4`
 
@@ -744,9 +749,9 @@ _GAC on Framework · Microsoft.WindowsDesktop.App on modern .NET — both runtim
 
 The first four are the standard shapes — but not a closed list. A developer can convert a string however they like; whatever the implementation, if it meets the same conditions, it's an **Insecure String Transformer** .
 
-```
+\```
 NO API TO MATCH —ONLY A BEHAVIORAL QUESTION:
-```
+\```
 
 controlled input → a type resolved from it → code that builds it
 
@@ -778,9 +783,9 @@ Microsoft's own `DataSet.ReadXml` looks like careful XML loading — it even dis
 
 ###### _From theory to RCE: SharePoint CVEs_
 
-```
+\```
 33
-```
+\```
 
 ## Slide 34
 
@@ -796,9 +801,9 @@ The **§3.2 TypeConverter sink** , now inside SharePoint's `Insert()` .
 
 **`THE TYPE`** from the workflow XML
 
-```
+\```
 THE STRING
-```
+\```
 
 from the insert arguments
 
@@ -836,9 +841,9 @@ No serializer to harden — Microsoft constrained which types the conversion may
 
 ● **`before.cs`**
 
-```
+\```
 THE ALLOWLIST
-```
+\```
 
 1
 
@@ -846,11 +851,11 @@ THE ALLOWLIST
 
 _resolves any attacker-named type_
 
-```
+\```
 bool · int · double · string
 DateTime
 + three SPField types
-```
+\```
 
 ###### **`AFTER`**
 
@@ -860,13 +865,13 @@ DateTime
 
 > `2 GetConverter(type).ConvertFromString(value);`
 
-```
+\```
 ResXFileRef
-```
+\```
 
-```
+\```
 not reachable now
-```
+\```
 
 _filters to the allowed types_
 
@@ -882,21 +887,21 @@ _filters to the allowed types_
 
 Microsoft fixed it correctly. We would expect that fix to reach everywhere it belongs. So we came back and checked.
 
-```
+\```
 CVE-2026-26106
-```
+\```
 
-```
+\```
 CVE-2026-40357
-```
+\```
 
-```
+\```
 CVE-2026-47294
-```
+\```
 
-```
+\```
 CVE-2026-48560
-```
+\```
 
 _we will walk this one_
 
@@ -904,9 +909,9 @@ Four more IST bugs — each slips past the type restriction a different componen
 
 **The bug got fixed. The class did not.**
 
-```
+\```
 37
-```
+\```
 
 → `whitepaper §4.2`
 
@@ -938,9 +943,9 @@ SafeControl checks the control type — not the types the parser resolves for it
 
 **`CVE-2023-33160`** (Markus Wulftange) smuggled a dangerous type as a generic parameter — fixed for **regular-mode** ASPX. We walked the same gap in **design mode** .
 
-```
+\```
 THE MOVE
-```
+\```
 
 ● **`ProxyRequestResponse.cs value has type T`** `1 // allowed: Namespace="Microsoft.SharePoint"` the parser converts it with T as objType `2 class ProxyRequestResponse<T> { 3 public T value { get; set; }` **`set T = XamlServices`** `4 }` its Parse is the §3.3 XAML sink
 
@@ -988,12 +993,12 @@ Microsoft added a character restriction on the Register directive, rejecting the
 
 - **`rejected.txt`**
 
-```
+\```
 1
 Microsoft.SharePoint.ProxyRequestResponse`1[[System.Xaml.XamlServices, ...]]
 2
 // rejected by validation:   `   [   ]   etc
-```
+\```
 
 **So T can no longer be set to an attacker type** **_— by this route._**
 
@@ -1017,9 +1022,9 @@ Microsoft.SharePoint.ProxyRequestResponse`1[[System.Xaml.XamlServices, ...]]
 
 _Hunt it, triage it, kill the class_
 
-```
+\```
 42
-```
+\```
 
 ## Slide 43
 
@@ -1041,9 +1046,9 @@ Every one of the five passes through one operation before anything else — a ty
 
 **One door in for all five — and no way to reach the code without it.**
 
-```
+\```
 43
-```
+\```
 
 → `whitepaper §5.1`
 
@@ -1059,9 +1064,9 @@ Once the type is resolved, each primitive collapses to one short call. Learn the
 
 **Matching the sink finds the conversion — finding the gadget makes it an attack.**
 
-```
+\```
 44
-```
+\```
 
 → `whitepaper §5.1`
 
@@ -1151,9 +1156,9 @@ a list of the types you expect, never a description of the ones you fear.
 
 **The choice was the whole vulnerability — take it back and nothing downstream can fire.**
 
-```
+\```
 48
-```
+\```
 
 ## Slide 49
 
@@ -1173,9 +1178,9 @@ _Where it applies, this removes the surface rather than guarding it — possible
 
 **If no input chooses the type — there is nothing to exploit.**
 
-```
+\```
 49
-```
+\```
 
 → `whitepaper §5.4`
 
@@ -1235,9 +1240,9 @@ TypeConverter, Parse, new T(string), accessors, custom logic — each turns a st
 
 **The Transformation Layer has been a security boundary all along — it is time we treated it as one.**
 
-```
+\```
 51
-```
+\```
 
 ## Slide 52
 
@@ -1255,6 +1260,6 @@ _Weaponizing the Conversion Layer_
 
 **`@olekmirosh`** OpenText Fortify
 
-```
+\```
 52
-```
+\```

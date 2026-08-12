@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Iceman & Adam (evildaemond) Foster_Dismantling the SEOS Protocol.pdf"
 pages: 176
 sha256: "c9e06a4ee742495b8632976b4980740dcd7c8c8c6eb0dbe774ecd19dde4be3b5"
-text_chars: 73820
-ocr_pages: 31
+text_chars: 71733
+ocr_pages: 23
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:06:01Z"
+converted_at: "2026-08-12T03:55:11Z"
 ---
 # Dismantling the SEOS Protocol
 
 **Speakers:** Iceman, Adam (evildaemond) Foster  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Iceman & Adam (evildaemond) Foster_Dismantling the SEOS Protocol.pdf` (176 pages)
+
 
 ## Slide 1
 
@@ -44,18 +50,6 @@ Day job as a Senior Penetration Tester Almost 10 years in Physical Security Spec
 Been hacking RFID systems over a decade Loves open source! Uses 4 spaces instead of <tab>
 
 #BHAS   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat ~
-ASIA 2025
-Who is Iceman?
-Been hacking RFID systems over a decade
-Loves open source!
-Uses 4 spaces instead of <tab>
-#BHAS @BlackHatEvents
-```
 
 ## Slide 4
 
@@ -91,25 +85,9 @@ Understand how these systems work Review what the system uses Evaluate its secur
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat é |
-ASIA 2025 Se,
-#BHAS @BlackHatEvents
-```
-
 ## Slide 9
 
 #BHAS   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2025
-#BHAS @BlackHatEvents
-```
 
 ## Slide 10
 
@@ -122,16 +100,15 @@ NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
 ASIA 2025 SN,
 FACILITY
 CODE 0))
 CARD
 NUMBER
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 11
@@ -140,14 +117,13 @@ RF Field
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
 ASIA 2025 Sl
-()
 RF Field
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 12
@@ -156,14 +132,13 @@ RF Field
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
 ASIA 2025 Sl
-()
 RF Field
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 13
@@ -172,14 +147,12 @@ RF Field
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSdkhat i, Se
 ASIA 2025 — ~ ~ fi \
 @ Hello + Negotiation
-~ ((o))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 14
@@ -188,15 +161,11 @@ Hello + Negotiation Send me contents of X
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-la
-Hello + Negotiation
 QS Send me contents of X ((0))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 15
@@ -211,18 +180,14 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Va
-Hello + Negotiation
 QS Send me contents of X ((0))
 OK
 FACILITY CODE
 CARD NUMBER
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 16
@@ -237,15 +202,11 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-ASIA 2025
-a
-NY
-Hello + Negotiation
 Send me contents of X
 OK
 FACILITY CODE
@@ -260,14 +221,12 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSdkhat i, Se
 ASIA 2025 — ~ ~ fi \
 @ Hello + Negotiation
-~ ((o))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 18
@@ -276,15 +235,11 @@ Hello + Negotiation Send me contents of X
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-la
-Hello + Negotiation
 QS Send me contents of X ((0))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 19
@@ -299,18 +254,14 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Va
-Hello + Negotiation
 QS Send me contents of X ((0))
 OK
 FACILITY CODE
 CARD NUMBER
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 20
@@ -325,40 +276,11 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2025
-la
-Hello + Negotiation
-Send me contents of X
-OK
-FACILITY CODE
-CARD NUMBER
-/
-#BHAS
-@BlackHatEvents
-```
-
 ## Slide 21
 
 ###### Hello + Negotiation
 
 #BHAS   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat a sa aX
-ASIA 2025
--
-‘a
-TE
-Ns y
-#BHAS @BlackHatEvents
-Hello + Negotiation
-```
 
 ## Slide 22
 
@@ -366,14 +288,11 @@ Hello + Negotiation Send me contents of X
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ASIA 2025
-biSdkhat a Ss ~~ —
-Hello + Negotiation
 Send me contents of X (0)
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 23
@@ -388,24 +307,6 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2025
--
-‘a
-TE
-Ne
-Hello + Negotiation
-Send me contents of X
-OK
-FACILITY CODE
-CARD NUMBER
-#BHAS
-@BlackHatEvents
-```
-
 ## Slide 24
 
 Hello + Negotiation
@@ -418,19 +319,14 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Hello + Negotiation
 Send me contents of X (0)
-L )
 OK
 FACILITY CODE
 CARD NUMBER
-Ne /
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 25
@@ -439,14 +335,12 @@ Ne /
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSdkhat i, Se
 ASIA 2025 — ~ ~ fi \
 @ Hello + Negotiation
-~ ((o))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 26
@@ -455,16 +349,12 @@ Hello + Negotiation Send me contents of X, the password is lemons
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat NS Sa
-ASIA 2025 tar = ~ fi :
-la
-Hello + Negotiation
 Send me contents of X, the
 QS password is lemons ((0))
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 27
@@ -480,19 +370,15 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Va
-Hello + Negotiation
 Send me contents of X, the
 QS password is lemons ((0))
 OK
 FACILITY CODE
 CARD NUMBER
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 28
@@ -501,30 +387,19 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-lackhat | pe .
-@ Hello + Negotiation
-#BHAS @BlackHatEvents
-```
-
 ## Slide 29
 
 Hello + Negotiation Send me contents of X, the password is soup
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lack hat : f*
-b ANIA dae —~ “S&S ~
 a
-Hello + Negotiation
 Send me contents of X, the
 QS password is soup
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 30
@@ -533,13 +408,11 @@ Hello + Negotiation Send me contents of X, the password is soup Uh, no it’s no
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 a
-Hello + Negotiation
 Send me contents of X, the
 password is soup
 Uh, no it’s not
@@ -553,15 +426,11 @@ Uh, no it’s not
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-ASIA 2025
-la
-NY
-Hello + Negotiation
 #BHAS
 @BlackHatEvents
 ```
@@ -573,13 +442,10 @@ nvebvnqoabwo
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-la
-Hello + Negotiation
 nvebvnqoabwo
 #BHAS
 @BlackHatEvents
@@ -593,13 +459,10 @@ wakubikgv
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Va
-Hello + Negotiation
 nvebvnqoabwo
 wakubikgv
 #BHAS
@@ -619,19 +482,16 @@ CARD NUMBER
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q 7 Wises f= ip,
-bis hat ir
-Va
-Hello + Negotiation
 nvebvnqoabwo
 S wakubikgv ((0))
 OK
 FACILITY CODE
 \ CARD NUMBER J)
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 35
@@ -720,35 +580,6 @@ D2
 ExtraSensitive
 
 #BHAS   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2025
-ae
-ADF 1
-OID: 2BE8000000
-7
-Data Objects
-a
-DO
-SecurityRocks
-(- >)
-D1
-SensitiveData
-\ y
-( >
-D2
-/
-ExtraSensitive
-\ 2)
-\\—
-Ne
-/
-#BHAS
-@BlackHatEvents
-```
 
 ## Slide 41
 
@@ -2448,45 +2279,33 @@ I needed a C implementation This took 2 weeks
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat }
-ASIA 2025
 Authenticated Encryption With Associated Data - AEAD
 getting test vectors...
 Test © encryption...
 Test 9 signature....
 Test 9 decryption...
 Test ® signature....
-Sora >
-ya
 C
 C
 C
-C
-LIAL aaSaae SAL BOLT Ceec ss
 ok )
 ok )
 ok )
 ok )
-~\
-yy,
 ~
-CO Doe ee Doe De
-a
-Ne
 SSSSSSSS====== EAX' Prime selftests ===
 Test 68 encryption
 Test ® signature.
 Test 6 decryption
 Test ® signature.
-~
 ok )
 ok )
 ok )
 ok )
-yy,
 #BHAS
 @BlackHatEvents
 ```
@@ -2684,13 +2503,12 @@ Decoded, Decrypted, PACS Payload expressed as Wiegand Format Facility Code (FC) 
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2025 wT, <=
 That is the peeled onion
-#BHAS @BlackHatEvents
 ```
 
 ## Slide 174

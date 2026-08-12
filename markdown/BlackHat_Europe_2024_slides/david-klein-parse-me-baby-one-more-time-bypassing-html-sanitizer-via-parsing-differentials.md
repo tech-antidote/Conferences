@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/David Klein_Parse Me, Baby, One More Time Bypassing HTML Sanitizer via Parsing Differentials.pdf"
 pages: 83
 sha256: "66af1da21b757b25cdd253d8817f43c825b3b44575420ee724088b1c953ab8f0"
-text_chars: 17680
+text_chars: 17667
 ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:49:11Z"
+converted_at: "2026-08-12T04:56:30Z"
 ---
 # Parse Me, Baby, One More Time Bypassing HTML Sanitizer via Parsing Differentials
 
 **Speakers:** David Klein  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/David Klein_Parse Me, Baby, One More Time Bypassing HTML Sanitizer via Parsing Differentials.pdf` (83 pages)
+
 
 ## Slide 1
 
@@ -29,7 +35,8 @@ Speaker: David Klein
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lack
@@ -56,7 +63,8 @@ PhD Candidate Research interests:
 
 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eon 2024 t M €
@@ -65,7 +73,6 @@ m Research interests:
 — Web Security
 — Privacy
 — Application Security
-ote
 INSTITUTE FOR oy) S $g6|xg% Technische
 APPLICATION \ A oY = Universitat
 SECURITY CYBER SECURITY IN THE AGE Fi ; Braunschweig
@@ -80,14 +87,14 @@ OF LARGE-SCALE ADVERSARIES
 
 **Server-Side**
 
-```
+\```
 document.write(location.hash);
-```
+\```
 
-```
+\```
 <?php
 echo$_GET["name"];
-```
+\```
 
 2
 
@@ -101,10 +108,10 @@ echo$_GET["name"];
 
 `document.write` `(location.hash)` `;` User Input
 
-```
+\```
 <?php
 echo$_GET["name"];
-```
+\```
 
 User Input
 
@@ -118,9 +125,9 @@ User Input
 
 **Server-Side**
 
-```
+\```
 document.write(location.hash);
-```
+\```
 
 Reflection
 
@@ -136,14 +143,14 @@ _`<?php`_ `echo` `$_GET["name"];` Reflection
 
 **Server-Side**
 
-```
+\```
 document.write(location.hash);
-```
+\```
 
-```
+\```
 <?php
 echo$_GET["name"];
-```
+\```
 
 **Such Code Patterns Are Everywhere!**
 
@@ -157,14 +164,14 @@ echo$_GET["name"];
 
 **Server-Side**
 
-```
+\```
 document.write(location.hash);
-```
+\```
 
-```
+\```
 <?php
 echo$_GET["name"];
-```
+\```
 
 **Such Code Patterns Are Everywhere!**
 
@@ -176,11 +183,10 @@ Everywhere?
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#) :
-blackhat Everywhere?
 TestConference hoterp.con says
 Hi there!
 Welcome to the Test Conference (TestConference) submissions site.
@@ -250,11 +256,11 @@ My journey towards this research
 
 Researching people rolling their own sanitizers E.g., trying to filter HTML with regular expressions
 
-```
+\```
 functionf(v){
 returnv.replace(/'/g,"").replace(/\(/g,"")
 .replace(/\)/g,"").replace(/alert/g,"");
-```
+\```
 
 How not to sanitize HTML
 
@@ -266,11 +272,11 @@ How not to sanitize HTML
 
 Researching people rolling their own sanitizers E.g., trying to filter HTML with regular expressions
 
-```
+\```
 functionf(v){
 returnv.replace(/'/g,"").replace(/\(/g,"")
 .replace(/\)/g,"").replace(/alert/g,"");
-```
+\```
 
 How not to sanitize HTML
 
@@ -284,11 +290,11 @@ My journey towards this research
 
 Researching people rolling their own sanitizers E.g., trying to filter HTML with regular expressions
 
-```
+\```
 functionf(v){
 returnv.replace(/'/g,"").replace(/\(/g,"")
 .replace(/\)/g,"").replace(/alert/g,"");
-```
+\```
 
 How not to sanitize HTML
 
@@ -375,7 +381,7 @@ Sanitizer Application
 
 ## **HTML Code**
 
-```
+\```
 <div>
 <svg>...</svg>
 <table>
@@ -390,7 +396,7 @@ Te</div>xt
 </style>
 </br>
 </div>
-```
+\```
 
 Parsed into
 
@@ -599,10 +605,10 @@ Root Cause
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#) :
 blackhat Root Cause
 4.8.5 The iframe element
 Categories:
@@ -724,9 +730,9 @@ Google has deprecated Caja 5y+ ago That does not stop others from using it, howe
 
 ## Slide 44
 
-```
+\```
 MutaGen
-```
+\```
 
 Goal: Find Parsing Differentials to bypass HTML sanitizers
 
@@ -1019,9 +1025,9 @@ What parser processes the output? Fragment or Document? I.e., `innerHTML` assign
 
 Payload:
 
-```
+\```
 <svg><embed><iframe><desc><imgsrc=xonerror=f()>
-```
+\```
 
 22
 
@@ -1031,9 +1037,9 @@ Payload:
 
 Payload:
 
-```
+\```
 <svg><embed><iframe><desc><imgsrc=xonerror=f()>
-```
+\```
 
 **Does this execute code?**
 
@@ -1045,9 +1051,9 @@ Payload:
 
 Payload:
 
-```
+\```
 <svg><embed><iframe><desc><imgsrc=xonerror=f()>
-```
+\```
 
 22
 
@@ -1075,9 +1081,9 @@ iframe
 
 Payload:
 
-```
+\```
 <svg><embed><iframe><desc><imgsrc=xonerror=f()>
-```
+\```
 
 context
 svg

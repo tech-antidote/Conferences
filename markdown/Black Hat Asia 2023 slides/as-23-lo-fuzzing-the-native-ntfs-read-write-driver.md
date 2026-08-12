@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Lo-Fuzzing-the-Native-NTFS-Read-Write-Driver.pdf"
 pages: 33
 sha256: "b942d6a681cb6f02f40fbc6d0e72f5ec71824bcfe8b793c57354e1a964765766"
-text_chars: 15371
+text_chars: 15028
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:08Z"
+converted_at: "2026-08-12T03:48:18Z"
 ---
 # Fuzzing the Native NTFS Read Write Driver
 
 **Speakers:** Lo  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Lo-Fuzzing-the-Native-NTFS-Read-Write-Driver.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Edward Lo, Chiachih Wu
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 ASIA &
 MAY 11-12
 BRIEFINGS
@@ -314,17 +319,15 @@ End of sector 3|
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 20253
 (Cont'd)
 ul6 ff = lel6 to cpu(rhdr->fix off);
 ul6 fn lel6 to cpu(rhdr->fix_num);
 fn * SECTOR SIZE > bytes) {
 return false;
-}
 /* Get fixup pointer. */
 fixup = Add2Ptr(rhdr, ff);
 if (*fixup >= FFF)
@@ -337,7 +340,6 @@ while (fn--) {
 *++fixup = *ptr;
 *ptr = sample;
 ptr += SECTOR SIZE / sizeof(short);
-}
 return
 ```
 
@@ -387,12 +389,12 @@ End of sector 3|
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-ASIA 20253
 (Cont'd)
 lel6 to cpu(rhdr->fix_off);
 simple ? ((bytes >> SECTOR SHIFT) + 1)
@@ -401,7 +403,6 @@ Check errors. */
 ((i@ & 1) |] + fn * sizeof(short) > SECTOR SIZE || !fn-- ||
 fn * SECTOR SIZE > bytes) {
 return -EINVAL; /* Native chkntfs returns ok! */
-}
 /* Get fixup pointer. */
 fixup = Add2Ptr(rhdr, fi);
 sample = *fixup;
@@ -412,11 +413,9 @@ while (fn--) {
 if (*ptr != sample) {
 /* Fixup does not match! Is it serious error? */
 ret = -E NTFS FIXUP;
-}
 /* Replace fixup. */
 *ptr = *++fixup;
 ptr += SECTOR SIZE / sizeof(short);
-}
 return ret;
 ```
 
@@ -617,11 +616,10 @@ Say if we have a boot->record_size = 0xF8 = -8 ➔sbi->record_size = 2<sup>8</su
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 20253
 Patch
 diff --git a/fs/ntfs3/super.c b/fs/ntfs3/super.c
 index d72a27abfl1c83..af9b7947dfé4e 100644
@@ -674,23 +672,18 @@ The buggy address belongs to the object at ffff88800632f000 which belongs to the
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-ASIA 20253
-int ni_create attr _list(struct
 {
 (Cont’d)
 ntfs_inode *ni)
-crn sor
-Corr WoT
 le = kmalloc(al_aligned(rs);
 goto out;
-}
 for (; (jattr = mi_enum_attr(&ni->mi, attr))};—-le—=
-sz = le size(attr-Sname_ ten);
 le->type = attr->type;
 le->size = cpu _ to lel6(sz);
 le->name_len = attr->name_len;
@@ -699,14 +692,12 @@ le->vcn = 0;
 if (le != ni->attr_list.le)
 le->ref = ni->attr_list.le->ref;
 le->id = attr->id;
-Add2Ptr (le,
 if (attr->name_len)
 memcpy(le->name, attr_name(attr),
 sizeof(short) * attr->name_len);
 sz)) {
 static inline size t al_aligned(size t size)
 {
-}
 return (size + ) & ~(size t)1
 struct ATTRIB *mi_enum attr(struct mft_inode *mi, struct ATTRIB *attr)
 {
@@ -718,17 +709,14 @@ return N .
 t16 = lel6 to cpu(attr->res.data off);
 if (t16 > asize)
 return NULL;
-t32 = le32_to cpu(attr->res.data_ size);
 if (t16 + t32 > asize)
 return N Q
 return attr;
-}
 /* Check some nonresident fields. */
 if (attr->name len &
 lel6_to_ cpu(attr->name_ off) + sizeof(short) * attr->name_len >
 le16 to cpu(attr->nres.run off)) {
 return N f°
-}
 ```
 
 ## Slide 32
@@ -737,11 +725,10 @@ return N f°
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 20253
 Patch
 diff --git a/fs/ntfs3/record.c b/fs/ntfs3/record.c
 index 66eb11e0965ef..a952cd7aa7a4b 100644

@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Tal Be'ery-Bad Randomness Protecting Against Cryptography's Perfect Crime.pdf"
 pages: 53
 sha256: "43f33b713e7331dbc5c4cce1ffc9fdaf73f8baaa56c59018202d68da08420374"
-text_chars: 17016
+text_chars: 15375
 ocr_pages: 16
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:26Z"
+converted_at: "2026-08-12T04:53:07Z"
 ---
 # Bad Randomness Protecting Against Cryptography's Perfect Crime
 
 **Speakers:** Tal Be'ery  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tal Be'ery-Bad Randomness Protecting Against Cryptography's Perfect Crime.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -98,7 +104,8 @@ Randomness in cryptography is like the air we breathe. You can’t do anything w
 
 ### **Bad randomness is undetectable**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bad randomness is undetectable
@@ -106,11 +113,9 @@ TOUR OF ACCOUNTING |: age
 r “Te NINE NINE #1 You THAT'S THE
 OVER HERE Fe NINE NINE al cime PROBLEM
 WE HAVE OUR 3 NINE NINE 1 THAT'S WITH RAN-
-RANDOM NUMBER [8 3} RANDOM? = DOMNESS :
 GENERATOR. é YOU CAN
 E 3 ( NEVER BE
 be 5
-3 $
 ```
 
 ## Slide 9
@@ -159,7 +164,8 @@ Season 1: Bitcoin’s dark forest
 
 **●Assign for each 11 bit group a word from BIP-39 to get the seed phrase**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From random to Bitcoin address: step 2
@@ -183,7 +189,8 @@ Mnemonic Sentence J
 
 ##### ● **Derive addresses**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From random to Bitcoin address: step 4
@@ -191,22 +198,9 @@ From random to Bitcoin address: step 4
 BIP 32 - Hierarchical Deterministic Wallets
 Master Master Wallets / wallet Addresses
 Seed Node Accounts Chains
-ta Te) eee (£8
-a @8) ~ ~m/0/0/0 | m/0/0/1 = m/0/0/k
-a Internal te t te) ..-
-m/0 crore.) -m/0/1/0_, m/0/A/1 - m/0/Lk
 CKD{en, 0)
-Entropy cxomio (08
 128 bits crom._- (8 m/1/0
-HMAC-SHASI2 (@ 7 t bd
-“(28 m/1 env}, 2) 7
-.
-.
 External
-cxotov. 0) te
-ee m/i/0
-vi intemal te te tT) ... &
-mi CKO -mii/l0_, mii = mii/lk
 Depth = 0 Depth = 1 Depth = 2 Depth = 3
 Child Key Derivation Function ~ CKD(x,n) = HMAC-SHA512(x< chain » X purxey [| 9)
 ```
@@ -225,7 +219,8 @@ Child Key Derivation Function ~ CKD(x,n) = HMAC-SHA512(x< chain » X purxey [| 9
 
 <u>https://www.washingtonpost.com/technology/2023/11/14/bitcoin-wallet-passcode-flaw/</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bad randomness can cost Billions
@@ -233,10 +228,8 @@ If you created a bitcoin wallet before 2016,
 your money may be at risk
 A company that helps recover cryptocurrency discovered a software flaw putting as much as $1 billion at risk from
 hackers. Now it’s going public in hopes people will move their money before they get robbed.
->)
 ey By Joseph Menn
 Updated November 14, 2023 at 1:30 p.m. EST — Published November 14, 2023 at 6:00 a.m. EST
-httos://www.washingtonpost.com/technology/2023/11/14/bitcoin-wallet-passcode-flaw/
 ```
 
 ## Slide 19
@@ -247,52 +240,72 @@ httos://www.washingtonpost.com/technology/2023/11/14/bitcoin-wallet-passcode-fla
 
 **Step 1: bad randomness Bitcoin Key**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-tep 1: bad randomness Bitcoin Key
-&@ iancoleman.io/bip39/#entropy-notes
-Warning _ Entropy is an advanced feature. Your mnemonic may be insecure if this feature is used incorrectly. Read more
-Entropy —_ 0000000000000000000000000000000000000000000000000000000000000001 Valid entropy values inckice
-Binary [0-1]
-Time To Crack —_less than a second - Event Count 64 © tarot
-Repeats like "aaa" are > Base 6 [0-5]
-easy to guess + 129434014
-Entropy Type hexadecimal Avg Bits PerEvent 4.00 © Dice [1-6]
-+ 62535634
-Raw Entropy Words 24 Total Bits 256
-Base 10 [0-9]
-Filtered Entropy 00000000000000000000000000000000000000000000000000000000000 + 90834528
-00001
-@ Hex [0-9A-F]
-Raw Binary 00000000000 00000000000 00000000000 00000000000 00000000000 * 4187a8bfd9
-(00000000000 00000000000 00000000000 00000000000 00000000000
-0000000000 00000000000 00000000000 00000000000 00000000000 Card [A2-9TJQK][CDHS]
-00000000000 00000000000 00000000000 00000000000 00000000000 * ahqs9dte
-(00000000000 00000000000 00000000000 001
-ary Checksum 11101100
-Mnemonic Length Use Raw Entropy (3 words per 32 bits) y
-PBKDF2 rounds 2048 (compatibility) ¥
-Show entropy details
-Hide all private info
-Auto compute
-"PX(HME) Frangais Italiano tR0 Cestina Portugués
-B Espahol PX
-Mnemonic Language English
-BIP39 Mnemonic abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon
-abandon abandon abandon abandon abandon abandon abandon abandon diesel
+Step 1: bad randomness Bitcoin Key
+
+iancoleman.io/bip39/#entropy-notes
+
+Warning: Entropy is an advanced feature. Your mnemonic may be insecure if this feature is used incorrectly. Read more
+
+Entropy: 0000000000000000000000000000000000000000000000000000000000000001
+
+Time To Crack: less than a second - Repeats like "aaa" are easy to guess          Event Count: 64
+
+Entropy Type: hexadecimal          Avg Bits Per Event: 4.00
+
+Raw Entropy Words: 24          Total Bits: 256
+
+Filtered Entropy: 0000000000000000000000000000000000000000000000000000000000000001
+
+Raw Binary: 00000000000 00000000000 00000000000 00000000000 00000000000
+00000000000 00000000000 00000000000 00000000000 00000000000
+00000000000 00000000000 00000000000 00000000000 00000000000
+00000000000 00000000000 00000000000 00000000000 00000000000
+00000000000 00000000000 00000000000 001
+
+Binary Checksum: 11101100
+
+Word Indexes: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 492
+
+Mnemonic Length: Use Raw Entropy (3 words per 32 bits)
+
+PBKDF2 rounds: 2048 (compatibility)
+
+[checked] Show entropy details
+[unchecked] Hide all private info
+[checked] Auto compute
+
+Mnemonic Language: English  日本語  Español  中文(简体)  中文(繁體)  Français  Italiano  한국어  Čeština  Português
+
+BIP39 Mnemonic: abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon diesel
+
+Valid entropy values include:
+○ Binary [0-1]
+• 101010011
+○ Base 6 [0-5]
+• 123434014
+○ Dice [1-6]
+• 62535634
+○ Base 10 [0-9]
+• 90834528
+● Hex [0-9A-F]
+• 4187a8bfd9
+○ Card [A2-9TJQK][CDHS]
+• ahqs9dtc
 ```
 
 ## Slide 21
 
 **Step 2: Address is pristine**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Step 2: Address is pristine
-€ C (« mempool.space/address/bc1q4jgysxym8yvp6khka878njuh8dem4!7mneyefz
-AddFe tercsjaysymayvpskteas7e
 Total received 0.00000000
 Total sent 0.00000000
 Balance 0.00000000
@@ -302,28 +315,30 @@ Balance 0.00000000
 
 **Step 3: Send money.. It’s gone!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Step 3: Send money.. It’s gone!
-Address be1q4jgysxym8yvp6khka878njuh8dem4I7mneyefz &
-Total received 0.00026468
-Total sent 0.00026468
-Balance 0.00000000 $0.00
+Step 3: Send money.. It's gone!
+
+Address: bc1q4jgysxym8yvp6khka878njuh8dem4l7mneyefz
+
+Total received: 0.00026468 BTC
+Total sent: 0.00026468 BTC
+Balance: 0.00000000 BTC $0.00
+
+[QR code]
+
 2 of 2 transactions
-d6a41b5c34b9e75f50c18a9750d6eb1724e471da4c9c86019d9057802ce88809
-bc1q4j gysxym8yvp6khka878n... 7mneyefz 0.00026468
-- 13,234 $5.00
-844276d225a1fd1c7ad9987aa4957edd6998f2864e75dflaf8fadf1f8862ab94
-38t4esnJ2muzTZg1wRPnS6qfTxrJ9uTGRn 0.00092039
-- 4,284 sat $1.62
-2023-11-30 21:51
-belqf Lnp7@wn@t3rt546vkz0c... 9kxyw63z 0.0001323487¢ ©
-413 confirmations — -0.00026468 8 1c
-2023-11-30 21:51
-bc1q4j gysxym8yvp6khka878n... 7mneyefz 0.00026468
-38t4esnJ2muzTZg1wRPnS6qfTxrJ9UTGRA 0.00061287 ©
-413 confirmations — +0.00026468 BTC
+
+d6a41b5c34b9e75f50c18a9750d6eb1724e471da4c9c86019d9057802ce88809                              2023-11-30 21:51
+[in]  bc1q4jgysxym8yvp6khka878n... 7mneyefz     0.00026468 BTC        [out] bc1qflnp70wn0t3rt546vkz0c... 9kxyw63z     0.00013234 BTC
+121 sat/vB – 13,234 sat   $5.00                                                        413 confirmations   -0.00026468 BTC
+
+844276d225a1fd1c7ad9987aa4957edd6998f2864e75df1af8fadf1f8862ab94                              2023-11-30 21:51
+[in]  38t4esnJ2muzTZg1wRPnS6qfTxrJ9uTGRn     0.00092039 BTC             [out] bc1q4jgysxym8yvp6khka878n... 7mneyefz     0.00026468 BTC
+                                                                                38t4esnJ2muzTZg1wRPnS6qfTxrJ9uTGRn     0.00061287 BTC
+26.1 sat/vB – 4,284 sat   $1.62                                                        413 confirmations   +0.00026468 BTC
 ```
 
 ## Slide 23
@@ -346,7 +361,8 @@ bc1q4j gysxym8yvp6khka878n... 7mneyefz 0.00026468
 
 Season 2: Ethereum’s dark forest
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 True detective
@@ -354,7 +370,6 @@ Season 2: Ethereum’s dark forest
 COLIN VINCE! CHEL TAYLOR
 FARRELL VAUGHN ‘\- McADAMS KITSCH
 TRUE DETEGTIVE 5
-&
 6/219PMHB® |
 ```
 
@@ -380,16 +395,15 @@ TRUE DETEGTIVE 5
 
 **<u>https://twitter.com/bertcmiller/status/1475844939816833032</u>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nonce reuse dark forest in the wild
-fag @bertcmiller + & @
 @bertcmiller
 Last week a monster in Ethereum's dark forest revealed themselves to
 me.
 This blog post tells the story of that encounter:
-bertcmiller.com/2021/12/28/gli...
 5:03 PM : Dec 28, 2021
 https://twitter.com/bertcmiller/status/1475844939816833032
 ```
@@ -422,7 +436,8 @@ Season 3: The TLS malware
 
 <u>https://blog.cloudflare.com/keyless-ssl-the-nitty-gritty-technical-details</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The TLS Handshake
@@ -440,8 +455,6 @@ Bt (also sent is a session ticket for session resumption)
 i }
 H H Both the visitor and CloudFare create session keys from
 t Or session key H the clent random, server random, and premaster secret.
-t H
-t '
 ht
 echnical-details
 ```
@@ -450,7 +463,8 @@ echnical-details
 
 **Patching the PRNG: The Code POV**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patching the PRNG: The Code POV
@@ -472,11 +486,11 @@ all the aforementioned.
 
 **Patching the PRNG: The network POV**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patching the PRNG: The network POV
-Serge aoe
 Handshake Protocol: Client Hello
 Handshake Type: Client Hello (1)
 Length: 126
@@ -532,7 +546,8 @@ https://www.cnn.com Client random: **marked**
 
 <u>https://blog.cloudflare.com/keyless-ssl-the-nitty-gritty-technical-details</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The TLS Handshake with EDH
@@ -548,18 +563,12 @@ random, server random,
 and public key certificate
 i
 Server sends the server DH parameter anda signature t
-Hi
-t
 Visitor sends the client DH parameter
-i
 Both the visitor and CloudFiare derive identical t
 remaster secrets from the server OH parameter ' Premaster secret
 ‘and client DH parameter. t
 t
 Both the visitor and CloudFiare derive identical ‘ 4
-session keys ors the caer rancom server random
-apd premier secret. The shor ca request content 1 Orrm session key '
-Gaotenisaseisontcetorsesonrenmpien) «= sw eee eeeeeeeeeeee!
 ty-gritt
 https://blog.cloudflare.com/keyless-ssl-th echnical-details
 ```
@@ -626,7 +635,8 @@ https://www.cnn.com Client random: **marked**
 
 **Demo!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 emo!
@@ -634,7 +644,6 @@ emo!
 Q
 QuickTime Payer File Edit View Window Help
 °
-zoom Bw © ES em
 ‘Thu 28 Mar 9:43,
 ```
 
@@ -658,30 +667,24 @@ zoom Bw © ES em
 
 **Bad solution: Human generated randomness**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bad solution: Human generated randomness
 UNCOMMON
 ~28 BITS OF ENTROPY
 (Non-GisBeRGH) — , ORDER THE Os WAS A ZERO?
-BASE WORD UNKNOWN, 5 ; .
 “8 oa fs AND THERE WAS
 = 3 DANS AT SOME SYMBOL...
-Tr@ub4dor &4 1000 GUEssES/sec
-TA SEAS cecum Aten
-CAPS? —COMMON NUMERAL Heh 1s FASTER, BUT NO a sna
-SUBSTITUTIONS ae eee
 DIFFICULTY To GUESS: | | DIFFICULTY TO REMEMBER:
 (YOU CAN AOD A FEW MORE BTS To PUNCTUATION
-peer oat ee EASY HARD
 WAS IT TROMBONE? NO,
 TROUGADOR. AND ONE OF
 correct horse battery staple
 FOUR RANDOM
 COMMON woRDS
 ~4U4 BITS OF ENTROPY
-2 = 550 YEARS AT
 1000 GUESSES/sEC
 DIFFICULTY To GUESS:
 HARD
@@ -799,16 +802,13 @@ Seed Phrase
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-724
 zengo
-@ Bitcoin
-: a
 1.3983 BTC
 $23,092.21
-Q Ethereum
 10.8673 ETH
 12,991.08
 ```

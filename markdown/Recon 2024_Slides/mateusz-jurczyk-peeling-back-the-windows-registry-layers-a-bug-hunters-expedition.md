@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Mateusz Jurczyk_Peeling Back the Windows Registry Layers A Bug Hunter's Expedition.pdf"
 pages: 96
 sha256: "2e1c28912fa61d70c4e874f69874c3c59d7f86c5acd63787730569a116708935"
-text_chars: 41881
+text_chars: 39298
 ocr_pages: 14
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.8
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:13Z"
+converted_at: "2026-08-12T06:17:37Z"
 ---
 # Peeling Back the Windows Registry Layers A Bug Hunter's Expedition
 
 **Speakers:** Mateusz Jurczyk  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Mateusz Jurczyk_Peeling Back the Windows Registry Layers A Bug Hunter's Expedition.pdf` (96 pages)
+
 
 ## Slide 1
 
@@ -60,7 +65,8 @@ Mateusz Jurczyk REcon, June 2024
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ei My Computer
@@ -69,34 +75,26 @@ HKEY_CURRENT_USER
 f#-) Windows NT
 -() UNICODE Program Groups
 (2) HKEY_LOCAL_MACHINE
-wy HKEY_USERS
-mC) HKEY_CURRENT_CONFIG
-~{() HKEY_DYN_DATA
-[ab] (Default)
 CompletionChar
 DefaultColor
 EnableE xtensions
 (value not set)
-000000000 (0)
-000000000 (0)
 000000001 (1)
 Editor
 ```
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 fic Registry Editor
 File Edit View Favorites Help
 Computer\HKEY_CURRENT_USER\Control Panel\Cursors
-v @ computer
 > HKEY_CLASSES_ROOT
-bd HKEY_CURRENT_USER
 > AppEvents
 > Console
-Y Control Panel
 > Accessibility
 > Appearance
 > Bluetooth
@@ -121,25 +119,12 @@ Environment
 > Printers
 > Software
 Name
-a8|(Default)|
-ab|AppStarting
-ablArrow
-88|ContactVisualiza...
-ab)Crosshair
-§\CursorBaseSize
-ab Hand
-at)Help
-2>|IBeam
-ab)No
-ab |NWPen
 88|Scheme Source
 ab)sizeAll
 ab)sizeNESW
 ab)sizeNS
-ab|sizeNWSE
 ab)sizeWE
 ab)UpArrow
-ab |Wait
 estureVisualizat...
 Type
 REG_SZ
@@ -164,14 +149,11 @@ REG_SZ
 REG_SZ
 Data
 Windows Default
-C:\Windows\cursors\aero_working.ani
 C:\Windows\cursors\aero_arrow.cur
 0x00000001 (1)
 0x00000020 (32)
 0x0000001f (31)
 C:\Windows\cursors\aero_link.cur
-C:\Windows\cursors\aero_helpsel.cur
-C:AWindows\cursors\aero_unavail.cur
 C:AWindows\cursors\aero_pen.cur
 0x00000002 (2)
 C:\Windows\cursors\aero_move.cur
@@ -179,15 +161,14 @@ C:\Windows\cursors\aero_nesw.cur
 C:\Windows\cursors\aero_ns.cur
 C:\Windows\cursors\aero_nwse.cur
 C:\Windows\cursors\aero_ew.cur
-C:AWindows\cursors\aero_up.cur
-C:AWindows\cursors\aero_busy.ani
 ```
 
 ## Slide 6
 
 Lines of decompiled kernel code
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lines of decompiled kernel code
@@ -301,7 +282,8 @@ bugs
 
 <u>https://bugs.chromium.org/p/project-zero/issues/list?q=finder%3Amjurczyk%20opened%3E2022-05-01%20opened%3C2024-01-01&can=1</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 66/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ID + Status ~ Restrict ~ Reported ~ Vendor ~ Product ~ Finder ~ Summary + Labels ~
@@ -313,23 +295,14 @@ ID + Status ~ Restrict ~ Reported ~ Vendor ~ Product ~ Finder ~ Summary + Labels
 2332 Fined - 2022Jul11 Microsoft Kernel rmjurczyk Windows Kernel memory corruption due to type confusion of subkey index leaves in registry hives CcProjectZeroMembers
 2341 Fed - 2022-Aug3 Microsoft —_Kemel rjurczyk Windows Kerne! multiple memory corruption issues when operating on very long registry paths CCProjectZeroMembers
 2344 Fired es 2022-AugS Microsoft Kernel rmjurczyk Windows Kernel out of-bounds reads and other issues when operating on long registry key and value names CCProjectZeroMembers
-2359 Fixed = 2022Sep:22 Microsoft —_Kemel rmjurczyk Windows Kemet due to bad handling ofp keys in NtNotifyci ocr
-2366 Fixed _ 2022-0ct6 Microsoft Kernel rmjurczyk Windows Kernel memory dueto handling of keys in registry cc
 2369 Fixed — 2022-0ct'13. Microsoft Kernel rmiurczyk Windows Kernel use-afterfree due to dangling registry link node under paged pool memory pressure CCProjectZeroMemibers
-2375 Fined - 2022-0ct25 Microsoft —_Kemel rmjurczyk Windows Kernel multiple issues in the key replication feature of registry virtualization CoProjectZeroMembers
 2378 Fined - 2022-0ct31 Microsoft —_Kemel mjurezyk Windows Kernel registry SID table poisoning leading to bad locking and other issues CcProjectZeroMemibers
 2379 Fed = 2022Nov2 Microsoft Kernel mjurczyk Windows Kernel allows deletion of keys in vrtualizable hives with KEY_READ and KEY_SET_VALUE access rights CCProjectZeroMembers
 2389 Fixed - 2022Nov30 Microsoft Kernel rmjurczyk Windows Kernel registry with leading to hive state and memory corruption C1
-2392 Fined a” 2022.0ec7 Microsoft Kernel rmjurczyk Windows Kernel multiple issues with subkeys of transactionally renamed registry keys COProjectZeroMembers
-2394 Fined - 2022-0e0-14 Microsoft —_Kemel rjurczyk Windows Kernel multiple issues in the prepare/commit phase ofa transactional registry key rename CoProjectZeroMembers
 2408 Fixed - 2023-Jan-13 Microsoft —_Kemel mjurczyk Windows Kernel insufficient validation of new registry key names in transacted NtRenameKey CCProjectZeroMembers
-2610 Fixed a 2023Jan-19 Microsoft Kernel rmjurcayk Windows Kermel CmpCleanupLightWeightPrepare registry security descriptor refcount leak leading to UAF CCProjectZeroMembers
 2618 Fixed = 2023Jan31 Microsoft Kernel rmjurczyk Windows Kernel disclosure of kernel pointers and uninitialized memory through registry KTM transaction log files CCProjectZeroMembers
-2419 Fixed - 2023Feb-2 — Microsoft Kernel rmjurczyk Windows Kernel out-of bounds reads when operating on invalid registry paths in CmpDoReD« /ompDoReOpenTransKey cc
 2433 Fined - 2023Mar7 Microsoft Kernel mjurcayk Windows Kernel KTM registry transactions may have non-atomic outcomes CCProjectZeroMembers
-2445 Fined - 2023-Apr-19 Microsoft —_Kemel rmjurczyk Windows Kernel arbitrary read by accessing pr keys through ng hives CCProject
 2446 Fed - 2023-Apr-20 Microsoft Kernel ‘mjurczyk Windows Kernel may reference unbacked layered keys through registry virtualization CCProjectZeroMembers
-2487 Fined = 2023-Apr27 Microsoft Kernel rmjurcayk Windows Kernel may reference rolled back keys through 1g hives CoProject
 2449 Fined - 2023May2 Microsoft Kernel mjurczyk Windows Kemel renaming layered keys doesnt reference count security descriptors, leading to UAF CProjectZeroMembers
 2452 Fined - 2023May-10 Microsoft Kernel rmjurczyk Windows Kernel CmDeleteLayeredKey may delete predefined tombstone keys, leading to security descriptor UAF COProjectZeroMembers
 2454 Fed - 2023May-15 Microsoft —_Kemel mjurezyk Windows Kernel outof-bounds reads due to an integer overflow in registry LOG file parsing CcProjectZeroMembers
@@ -342,14 +315,14 @@ ID + Status ~ Restrict ~ Reported ~ Vendor ~ Product ~ Finder ~ Summary + Labels
 2479 Fixed - 2023-Aug-10 Microsoft Kernel rmjurczyk Windows Kemmel time of-check/time-of-use issue in verifying layered key security may lead to information disclosure from privileged registry keys CCProjectZeroMembers
 2480 Fixed = 2023-Aug22 Microsoft Kernel rmjurcayk Windows Kernel bad locking in registry virtualization leads to race conditions CCProjectZeroMember
 2492 Fined ~ 2023.0ct Microsoft Kernel rmjurczyk Windows registry predefined keys may lead to confused deputy problems and local privilege escalation CCProjectZeroMembers
-https://bugs.chromium.org/p/project-zero/issues/list?q=finder%3Amjurczyk%200pened%3E2022-05-01%200pened%3C2024-01-01&can=1
 ```
 
 ## Slide 15
 
 <u>https://github.com/googleprojectzero/p0tools/tree/master/WinRegLowSeverityBugs</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft Windows Registry Low/Unclear Severity Bugs
@@ -368,14 +341,11 @@ CmpValidateHiveSecurityDescriptors when loading corrupted hives 26174
 CVE-2024-
 Windows Kernel out-of-bounds read when validating symbolic links in CmpCheckValueList Fixed in March 2024 me
 Windows Kernel pool-based buffer overflow when parsing deeply nested key paths in
-<< = WontFix/vNext
-(CmpComputeComponentHashes
 Windows Kernel allows the creation of stable subkeys under volatile keys via registry we CVE-2024-
 aS Fixed in March 2024
 transactions 26173
 Windows Kernel lightweight transaction reference leak in CmpTransReferenceTransaction WontFix/vNext
 Windows Kernel pool-based out-of-bounds read in CmpRmReDoPhase when restoring
-. WontFix/vNext
 registry transaction logs
 Windows Kernel NULL pointer dereference in CmpLightWeightPrepareSetSecDescUoW WontFix/vNext
 Windows Kernel infinite loop in CmpDoReOpentransKey when recovering a corrupted vNext (fixed in Insider
@@ -987,7 +957,8 @@ Logic bugs
 
 Example (CVE-2023-38141)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example (CVE-2023-38141)
@@ -1026,7 +997,8 @@ Registry Pre callbacks Post callbacks operation exit syscall exit syscall enter 
 
 Operating on input/output pointers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Operating on input/output pointers
@@ -1057,13 +1029,13 @@ SetInformationKey
 ●
 QueryMultipleValueKey
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Operating on input/output pointers
 Problem #1: untrue for some operations:
 Buffer type Windows Buffer pointer Safe for cal .
-version passed to callback _ routine tod 0 SetInformationKey
 routine e QueryMultipleValueKey
 User-mode Windows 8 Points to captured Yes
 input and later data.
@@ -1150,7 +1122,8 @@ Logic bugs
 
 _All reports fixed collectively in March 2023 by disabling transacted renames_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Examples
@@ -1316,7 +1289,8 @@ Links
 
 Examples
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Examples
@@ -1380,7 +1354,8 @@ Logic bugs
 
 ## Slide 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 fic Registry Editor = oO x
@@ -1389,25 +1364,14 @@ Computer
 v B computer Name Type Data
 > 7 HKEY_CLASSES_ROOT
 > 7 HKEY_CURRENT_USER
-v © HKEY_LOCAL_MACHINE
-™ BcD00000000
 “7 DRIVERS
 “> HARDWARE
-> SAM
-© SECURITY
 “7 SOFTWARE
-“SYSTEM
 > ©) DEFAULT
-> Ms-1-5-18
-S-1-5-19
 S-1-5-20
 S-1-5-21-309235459-240059954-4066018515-1001
 S-1-5-21-309235459-240059954-4066018515-1001_Classes
-> 7) S-1-5-21-309235459-240059954-4066018515-1002
-> 7) S-1-5-21-309235459-240059954-4066018515-1002_Classes
 > HKEY_CURRENT_CONFIG
-VEZ
-vey
 ```
 
 ## Slide 87
@@ -1430,41 +1394,34 @@ vey
 
 ## Slide 88
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fic Registry Editor
 File Edit View Favorites Help
 Computer
 v B computer Name Type Data
-> "1 HKEY_CLASSES_ROOT hal
-> > HKEY_CURRENT_USER al
-y=) HKEY_LOCAL_MACHINE nal
 BCD00000000
 HARDWARE
 SAM
 SECURITY
 SOFTWARE
 SYSTEM
-v "7 HKEY_USERS le
 -DEFAULT
 S-1-5-18
 S-1-5-19
-2155220:
-> * $-1-5-21-309235459-240059954-4066018515-1001
-> | S-1-5-21-309235459-240059954-4066018515-1001_Classes
-v7) HKEY_CURRENT_CONFIG al
 Software
 System
 ```
 
 ## Slide 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Issue 2492: Windows registry predefined keys may lead to confused deputy problems and local privilege escalation e
-(og Code iH
 Reported by mjurczyk@google.com on Fri, Oct 6, 2023, 11:44 AMGMT+2 (ia
 In Windows Registry, predefined-handle keys are a special type of keys similar to symbolic links, but instead of transparently
 redirecting to an arbitrary registry path, they redirect to an arbitrary predefined registry key (HKLM, HKCU, HKCR etc., see [1] for a
@@ -1526,7 +1483,8 @@ Demo
 
 Predefined key timeline
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Predefined key timeline
@@ -1534,7 +1492,6 @@ Predefined key timeline
 Windows NT 3.1 release Today
 Windows NT 3.5 — 4.0
 September 1994 - June 2002
-NT 3.1
 Windows 2000
 February 2000 - July 2010
 Windows XP

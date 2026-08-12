@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Or Yair-Magicdot A Hacker's Magic Show of Disappearing Dots and Spaces.pdf"
 pages: 67
 sha256: "4e3ed71af0da6e7e9d3c8eb6a012ff4edc79c676ff4b58ecb929d9cb567c8d47"
-text_chars: 13574
-ocr_pages: 27
+text_chars: 11616
+ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:50:13Z"
+converted_at: "2026-08-12T04:49:26Z"
 ---
 # Magicdot A Hacker's Magic Show of Disappearing Dots and Spaces
 
@@ -22,9 +26,11 @@ converted_at: "2026-08-12T00:50:13Z"
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Or Yair-Magicdot A Hacker's Magic Show of Disappearing Dots and Spaces.pdf` (67 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A HACKER'S MAGIC SHOW OF
@@ -43,40 +49,18 @@ Creator of Aikido Wiper, DoubleDrive
 
 Agenda Windows Known Issue Introduction Research Goals Post-Exploitation Techniques Vulnerabilities CVEs + Fixes Takeaways GitHub + Q&A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Windows Known Issue Introduction
-Research Goals
-Post-Exploitation Techniques
-Vulnerabilities
-CVEs + Fixes
-Takeaways
-aS
-GitHub + Q&A “sy
-\
-```
-
 ## Slide 4
 
 Windows Backwards Compatibility
 
 More than **1.4 billion** active devices
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-: Windows Backwards ,
-Compatibility i) ir
-"4
-More than 1.4 billion active devices
-```
-
 ## Slide 5
 
 My first encounter with “Magic"
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Name Date moc
@@ -137,20 +121,16 @@ Primary Goal – Concealments Types User-Space Kernel
 
 Kernel Rootkit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Kernel Rootkit
-CALL \
 FindFirstFilew( }
-:
 Sy PROCESS
 USER-SPACE <
 q y,
-**<
-KERNE NtQueryDirectoryFile_hook( ) “ss
 \
-3s
 G
 ```
 
@@ -164,13 +144,12 @@ Ability to run in the kernel: Admin Privileges + Handle Obstacles: Driver Signat
 
 User-Space Rootkit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CALL FindFirstFileW( )
 PROCESS ROOTKIT ©) FindFirstFilew()
 USER-SPACE — | FindFirstFilew_hook() | <—
-<7
 KERNEL
 ```
 
@@ -192,17 +171,6 @@ New - Unprivileged Rootkit
 
 The rootkit does not need to be part of the chain of calls
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ -SPACE- e e @ -SPACE- @ .
-— BR > Bee —>| Rt1pDosPathNameToRelativeNtPathName() |
-© @ ~ -SPACE- @ -SPACE- @
-|
-The rootkit does not need to :
-be part of the chain of calls MT APL ‘
-```
-
 ## Slide 19
 
 #1 Research Goal
@@ -217,7 +185,8 @@ Rootkit-like abilities Utilize the issue for concealments + No special required 
 
 Files and Directories Concealments
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Files and Directories //f |
@@ -276,19 +245,16 @@ Listing the archive with File Explorer does not show the file
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 01
-C:\Users\Or\Downloads\test>
 | dirt haha. a.txt a.txt a.txt. lol zip.zip
--el
 Gan
-Titems | =] }
 & Untitled x +
 File Edit View 8
 Ln 1, Col 1 140% Windows (CRLF) UTF-8
-C:\Users\Or\Downloads\test>
 ```
 
 ## Slide 28
@@ -321,39 +287,20 @@ Task Manager, ProcExp show that the executable is verified and signed by Microso
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-any)
 Ble Options View Process Find Users Help
-BE Cm mex £8 —i ] Filter by name>
 C:\Users\Or\Downloads\test> Process PID User Name
-oAggregatorHostiexe |
 Biaj.exe 24300 LAPTOP-8VNJORA8\Or
-j -apimonitor-x64.exe 18888 LAPTOP-8VNJORAS8\Or
-i BApplicationFrameH... 15904 LAPTOP-8VNJORA8\Or
-@audiodg.exe 8300 NT AUTHORITY\LOCAL.. 0
 @backgroundTaskHo... 2432 LAPTOP-8VNJORA8\Or
-m|backgroundTaskHo... 33392LAPTOP-8VNJORA8\Or Suspend
-|backgroundTaskHo... 16440LAPTOP-8VNJORA8\Or Suspend
 mBluetoothMouseThe... 5624NT AUTHORITY\SYSTEM
 =@CamtasiaRecorder.... 17204 LAPTOP-8VNJORA&\Or 0.
 =&CamtasiaStudio.exe 34584 LAPTOP-8VNJORA8\Or <0.
-= @chrome.exe 26568 LAPTOP-8VNJORAS&\Or 0.
-@chrome.exe 27448LAPTOP-8VNJORA8\Or
-@chrome.exe 1800 LAPTOP-8VNJORA8\Or
-®chrome.exe 8384 LAPTOP-8VNJORAS8\Or <0.
-®@chrome.exe 27124LAPTOP-8VNJORAS8\Or
-@chrome.exe 8084 LAPTOP-8VNJORA8\Or
-@chrome.exe 25152LAPTOP-8VNJORA8\Or
 ®@chrome.exe 32692 LAPTOP-8VNJORA8\Or
-@chrome.exe 22280 LAPTOP-8VNJORA8\Or
-@chrome.exe 440 LAPTOP-8VNJORA8\Or
 @chrome.exe 30048 LAPTOP-8VNJORA8\Or
 ®@chrome.exe 4656 LAPTOP-8VNJORA8\Or
-®@chrome.exe a TT an
-PU Usoge 0
-eomit Charge: 58.10% | Proces:
 ```
 
 ## Slide 33
@@ -364,28 +311,26 @@ Anti Analysis
 
 ## ProcExp DoS – A Built In “Safe” Feature
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
 A Built In “Safe” Feature
 91:
-wcscpy_S(process_name_with_pid_ parentheses, | 256ui64,| process_name) ;
-92:
 ```
 
 ## Slide 35
 
 ## ProcExp DoS – A Built In “Safe” Feature
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
 A Built In “Safe” Feature
-01;
 wcscpy_s(process_name_with_pid_parentheses, 256ui64, |process_name) ;
-D2e
 sprintf_s<32>(pid_str_with_parentheses, L"(%d)", v116[22]);
 wcscat_s(process_name_with_pid_ parentheses, 256ui64, |(const wchar_t *)pid_str_with_parentheses) ;
 ```
@@ -406,7 +351,8 @@ ProcExp DoS – A Built In “Safe” Feature
 
 wcscat_s:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
@@ -438,7 +384,8 @@ ProcExp DoS – A Built In “Safe” Feature
 
 invalid_parameter_noinfo():
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
@@ -453,14 +400,13 @@ return invalid_parameter_handler(Expression, FunctionName, FileName, LineNo, Res
 
 ## ProcExp DoS – A Built In “Safe” Feature
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
 A Built In “Safe” Feature
-01;
 wcscpy_s(process_name_with_pid_parentheses, 256ui64, |process_name) ;
-D2e
 sprintf_s<32>(pid_str_with_parentheses, L"(%d)", v116[22]);
 wcscat_s(process_name_with_pid_ parentheses, 256ui64, |(const wchar_t *)pid_str_with_parentheses) ;
 ```
@@ -469,12 +415,12 @@ wcscat_s(process_name_with_pid_ parentheses, 256ui64, |(const wchar_t *)pid_str_
 
 ProcExp DoS – A Built In “Safe” Feature
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ProcExp DoS -
 A Built In “Safe” Feature
-b Downloads
 © New NL Sort
 > T.. > Dow.
 Name
@@ -485,13 +431,10 @@ Downloads
 a
 WA Pictures Cl procexp64
 BD Music A long time ago (1)
-Bi videos HW) ntrun_exe
 @ OneDrive
-v WB this pc
 Wl Desktop
 j Documents
 Downloads
-5D Music
 DA Pictures
 3 items
 6:53 AM
@@ -506,7 +449,8 @@ Vulnerabilities
 
 EoP Deletion Vuln – The disappearing act Permissions for a.txt and b.txt Permissions to write into C:\demo
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Deletion Vuln —
@@ -514,22 +458,19 @@ The disappearing act
 | x Permissions for a.txt and b.txt
 MM Permissions to write into C:\demo
 C:\DEMO:
->A. TXT
 ```
 
 ## Slide 44
 
 EoP Deletion Vuln – The disappearing act
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Deletion Vuln —
 The disappearing act
 C:\DEMO:
->A. TXT
->B. TXT
->... <SPACE>
 >C. TXT
 ```
 
@@ -537,27 +478,24 @@ C:\DEMO:
 
 EoP Deletion Vuln – The disappearing act
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Deletion Vuln -
 The disappearing act
 = Local Disk (C:) < +
 € * G Paste This PC > Local Disk (C:) > Search Local Disk 2
-® New iB ~ Sort View ™ ® Details
 @Home Name Date modif... Type Size
-La)
 cme een demo 4/8/2024 1... File folder
 PerfLogs 3/8/2024 1... File folder
 ™Desktc Program Files 4/3/2024 6... File folder
-« Downl
 3 Docun Program Files (x86) 3/9/2024 1:... File folder
 Picture Users 4/2/2024 1... File folder
 ola Windows 4/3/2024 6... File folder
 > BThis PC
 6 items
 12:07 AM
-Qa
 ```
 
 ## Slide 46
@@ -572,7 +510,8 @@ Deleting “C:\demo\...<space>”: 1. List all files inside “...<space>”
 
 v
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “C:\demo\...<space>\" == “C:\demo\”
@@ -585,7 +524,8 @@ Date modified
 
 “C:\demo\...<space>\...<space>” == “C:\demo\...<space>”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “C:\demo\...<space>\...<space>” == “C:\demo\...<space>”
@@ -607,7 +547,8 @@ EoP Deletion Vuln – The disappearing act
 
 EoP Write Vuln – Changing your memories
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Write Vuln —
@@ -615,14 +556,14 @@ Changing your memories
 SHADOW
 COPY
 MALICIOUS
-C:\DEMO\TEST <+-+-.,,
 ```
 
 ## Slide 51
 
 EoP Write Vuln – Changing your memories
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Write Vuln —
@@ -636,37 +577,29 @@ C:\DEMO:
 
 ## EoP Write Vuln – Changing your memories
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EoP Write Vuln —
 Changing your memories
 dministrator: ae
-® “Sort =View
 C:\demo> < * - Local Disk (C:) » demo c Search demo
 ~ © Quick access Name Date mod... Type Size
 ™Desktop test 2/21/202..._ File fol
 « Downloads test 4/3/2024... File fol.
-§ Documents
 Pictures
 demo
 demo
 in_test
 test
-© OneDrive
-¥ @This PC
 =Desktop
 4 Documents
-¢ Downloads
 ® Music
 Pictures
-BVideos
 Local Disk (C:
 = Shared Folde|
 ‘a Network
-20
-426M
-AB BMD sro O
 ```
 
 ## Slide 53
@@ -703,7 +636,8 @@ Symlinks – Extraction Vulnerabilities Lead
 
 Symlinks – Extraction Vulnerabilities Lead
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Symlinks — Extraction
@@ -714,7 +648,8 @@ LINK.LINK.
 
 ## Slide 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Copy File
@@ -744,59 +679,40 @@ RCE Vuln – Hypnotizing Remote Computers
 
 RCE Demo
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Startup
 Programs > Startup
 © New
-Home
-Gallery
-© OneDrive
 ® Sort
 Date modified
 = View
 Type
 This folder is empty.
-= Desktop
 Downloads *
 & Documents
-Pictures
 ® Music
-Videos
-@This PC
 “DVD Drive (D
-‘ Network
 Search Startup
 ® Details
 Size
 Downloads
-* ©
 © New
-Home
-Gallery
-© OneDrive
-= Desktop
 Downloads
 3 Documents
-® Pictures
-® Music
-Videos
 =This PC
 DVD Drive (D.
-‘aNetwork
 S > Downloads >
-* Sort = View
 Name Date modifi
 Today
 archive.tar.az 4/3/2024 4:
-o
 Search Download s
 © Details
 Type Size
 Compres.
 GE Q Search
-Sune Kono
 ```
 
 ## Slide 63

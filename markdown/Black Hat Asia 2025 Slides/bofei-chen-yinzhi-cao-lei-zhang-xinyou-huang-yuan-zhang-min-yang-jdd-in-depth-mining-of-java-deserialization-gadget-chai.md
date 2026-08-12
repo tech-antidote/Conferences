@@ -11,15 +11,21 @@ sha256: "751c74609dfb52d44ea1823bb0aae277968f9d298cd85e1360b053d1b2521450"
 text_chars: 47844
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:03:35Z"
+converted_at: "2026-08-12T03:51:57Z"
 ---
 # JDD In-depth Mining of Java Deserialization Gadget Chains via Bottom-up Gadget Search and Dataflow-aided Payload Construction
 
 **Speakers:** Bofei Chen, Yinzhi Cao, Lei Zhang, Xinyou Huang, Yuan Zhang, Min Yang  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Bofei Chen & Yinzhi Cao & Lei Zhang & Xinyou Huang & Yuan Zhang & Min Yang_JDD In-depth Mining of Java Deserialization Gadget Chains via Bottom-up Gadget Search and Dataflow-aided Payload Construction.pdf` (63 pages)
+
 
 ## Slide 1
 

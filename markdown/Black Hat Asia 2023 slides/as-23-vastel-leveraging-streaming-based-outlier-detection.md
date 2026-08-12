@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Vastel-Leveraging-Streaming-Based-Outlier-Detection.pdf"
 pages: 42
 sha256: "81f215c10011fec246ef174bbc0b278c7f8fbd124ac6796220130997aca64a3e"
-text_chars: 12537
+text_chars: 11693
 ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:56:20Z"
+converted_at: "2026-08-12T03:49:46Z"
 ---
 # Leveraging Streaming Based Outlier Detection
 
 **Speakers:** Vastel  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Vastel-Leveraging-Streaming-Based-Outlier-Detection.pdf` (42 pages)
+
 
 ## Slide 1
 
@@ -32,11 +38,10 @@ converted_at: "2026-08-11T23:56:20Z"
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 20253
 Select all images with
 crosswalks
 Click verify once there are none left.
@@ -49,11 +54,10 @@ If there are none, click skip Click verify once there are none left.
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 20253
 Select all squares with
 fire hydrants
 If there are none, click skip
@@ -215,30 +219,24 @@ Generic, for (headless) automated browsers:
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
 Community Driven Anti-Detection Frameworks
 Generic, for (headless) automated browsers:
 Watch 114 ~~ Fork 642
 Fork 696 Star 4.7k
-puppeteer-extra-plugin-stealth [Ska c=EEES jaya
 DevTools - arh.antoinevastel.com/bots/areyouheadless
 https://arh.antoinevastel.com/bots/areyouheadless Elements
-® 9
 Hide data URLs
 XHR JS CSS Img Media Font Doc WS Manifest Othe
-Name Meth... ST. 1.. S.. T.
 You are not Chrome Ee
 . Waterfall a
 GET
 headless
 B bootstra.
 B style.css
-| fpCollect.
-| areuhead...
 174K
 ```
 
@@ -248,12 +246,10 @@ B style.css
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 To Conduct Credential Stuffing Attacks
 README.md
 OPEN A
@@ -304,11 +300,10 @@ Countries
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-ASIA 2023
 Drill-Down on Different Features
 login-attack-fingerprint-HeadersList login-attack-fingerprint-UserAgent
 Headers
@@ -377,16 +372,12 @@ attack start time
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 General idea
 norma Suspicious
-traffic troffice
-number QI eee '
 of 3
 requests
 time
@@ -402,21 +393,15 @@ attack start time
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 Next Step: Automate Rule Generation
-login-attack-fingerprint-HeadersList login-attack-fingerprint-UserAgent
 Headers User Agents
-rere tae ttt tate — abues ot wil eta
 @timestamp per minke @timestamp per minute
-login-attack-fingerprint-AS. login-attack-fingerprint-Countries
 AS Countries
 attack start time
-Sa
 @timestamp per minute
 @time:
 mp per minute
@@ -650,12 +635,10 @@ Get rules in the format you want!
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 sf = Slicefinder(
 alpha = 0.80,
 max l = df.shape[1],
@@ -699,18 +682,90 @@ requests  in a week.
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pisek hat
-ASIA 2023
-50,000
-/|
-/|
-40,000 h | |
-|
-2023-02-22 00:00 2023-02-23 00:00 2023-02-24 00:00 2023-02-25 00:00 2023-02-26 00:00 2023-02-27 00:00 2023-02-28 00:00
-Number of IP addresses / 3h
+Asset registration
+Collect identifiers: Information disclosure by vendor
+
+[Browser] ← → C  🔒 csm.sierrawireless.com/WarrantyChecker.aspx
+SIERRA WIRELESS
+A SEMTECH COMPANY
+Warranty Information
+Check Single Device
+[Any Serial or IMEI Number *]
+Check Warranty
+- or -
+Check Multiple Devices from File ?
+[Choose File] IMEIs.txt
+Check Multiple Warranties
+
+[Notepad: IMEIs.txt ...]
+File  Edit  Format  View  Help
+353968099238020
+353968099238021
+353968099238022
+353968099238023
+353968099238024
+353968099238025
+353968099238026
+353968099238027
+353968099238028
+353968099238029
+353968099238030
+353968099238031
+353968099238032
+353968099238033
+353968099238034
+353968099238035
+353968099238036
+353968099238037
+353968099238038
+353968099238039
+353968099238040
+353968099238041
+353968099238042
+353968099238043
+353968099238044
+353968099238045
+353968099238046
+353968099238047
+353968099238048
+353968099238049
+353968099238050
+353968099238051
+353968099238052
+353968099238053
+
+→ Collect →
+
+[Results table]
+Serial Number            | IMEI Number(s)
+5912437068■■■ (redacted) | 358643075767520
+358643075767521          |
+358643075767522          |
+358643075767523          |
+…
+358643075767537          |
+[red box:] 5912437324■■■ (redacted) | 358643075767538
+358643075767539          |
+…
+358643075767544          |
+358643075767545          |
+5912437310■■■ (redacted) | 358643075767546
+
+→ Register →
+
+[Register AirLink RV50x form]
+Register AirLink RV50…
+Type              AirLink RV50x ▾
+[red box:] Serial Number   [        ]
+[red box:] IMEI/ESN        [        ]
+Name ⓘ                     [        ]
+Activate Offer    [ON  ]
+☐ Pre-configure system
+[Register]  or Import a list
 ```
 
 ## Slide 41

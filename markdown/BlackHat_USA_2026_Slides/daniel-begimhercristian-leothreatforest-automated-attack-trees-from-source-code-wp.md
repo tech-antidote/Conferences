@@ -1,6 +1,6 @@
 ---
-title: "WP"
-speakers: ["Daniel Begimher", "Cristian LeoThreatForest Automated Attack Trees from Source Code"]
+title: "THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping"
+speakers: ["Cristian Leo", "Daniel Begimher", "Anton Dykyi", "Danny Cortegaca", "Prakash Jha"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
 edition: "USA"
@@ -12,15 +12,21 @@ text_chars: 87015
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The whitepaper carries its own title and three more authors than the talk. The source filename also omits the separator between the speakers and the title."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:07:25Z"
+converted_at: "2026-08-12T05:30:58Z"
 ---
-# WP
+# THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping
 
-**Speakers:** Daniel Begimher, Cristian LeoThreatForest Automated Attack Trees from Source Code  
+**Speakers:** Cristian Leo, Daniel Begimher, Anton Dykyi, Danny Cortegaca, Prakash Jha  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code_WP.pdf` (20 pages)
+
 
 ## Slide 1
 

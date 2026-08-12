@@ -4,17 +4,21 @@ speakers: ["Francesco La Spina", "Stanislav Dashevskyi"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Francesco La Spina, Stanislav Dashevskyi - Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks - v1.pdf"
 pages: 47
 sha256: "28441939a9a0a58a416d3881401499ccabc6ca302c7865dc66c80271f637f826"
-text_chars: 16739
-ocr_pages: 7
+text_chars: 16384
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:16:29Z"
+converted_at: "2026-08-12T06:27:14Z"
 ---
 # Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks
 
@@ -22,17 +26,18 @@ converted_at: "2026-08-12T00:16:29Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Francesco La Spina, Stanislav Dashevskyi - Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks - v1.pdf` (47 pages)
 
+
 ## Slide 1
 
-```
+\```
 Zero-touchday provisioning:
 Chaining TP-Link ZTP Vulnerabilities for Infiltrating
 Networks
-```
+\```
 
-```
+\```
 Stanislav Dashevskyi, Francesco La Spina
-```
+\```
 
 ## Slide 2
 
@@ -44,22 +49,12 @@ Stanislav Dashevskyi, Francesco La Spina
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-About us
-* Stanislav Dashevskyi, Principal Security Researcher
-* Francesco La Spina, Senior Security Researcher
-<) FORESCOUT
-RESEARCH  VEDERE LABS
-```
-
 ## Slide 3
 
-```
+\```
 What is ZTP?
 And why should we care?
-```
+\```
 
 ## Slide 4
 
@@ -167,10 +162,10 @@ _Taken from tplink.com_
 
 ## Slide 10
 
-```
+\```
 Reverse-engineering
 Omada protocols [[:......:]]
-```
+\```
 
 ## Slide 11
 
@@ -296,10 +291,10 @@ _Taken from tplink.com_
 
 ## Slide 17
 
-```
+\```
 The vulnerabilities
 };-/
-```
+\```
 
 ## Slide 18
 
@@ -343,7 +338,8 @@ The vulnerabilities
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Insecure creds in V2 (CVE-2025-15544)
@@ -451,7 +447,8 @@ Server cert
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Using fake
@@ -463,22 +460,11 @@ manage config msg = {
 "body" : {
 "sequenceld": 4,
 "userAccount": {
-2 000
-L
-Ja
 "wireguard": {
-"interfaces":
-=
-at
-|
 "id":878491625,
-"operation":1,
-"enable": "true",
 "mtu":1420,
 "ListenPort":51820,
 "privateKey":"[ARBITRARY OS COMMAND]",
-"Tocaltip’: 10.10.10...
-]
 So
 "“configVersionInc": 1,
 TCP /
@@ -505,7 +491,6 @@ ACK
 Propose new secondary config
 1048586
 ACK (last cfg result)
-=X
 Secondary config
 4096
 N
@@ -544,7 +529,8 @@ The Conjurer - Hieronymus Bosch
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The broken chain of trust - Cloud (CVE-2025-9192)
@@ -553,14 +539,12 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "alias" : "ER605",
 "“authCode" : "[REDACTED]", : sub trstr( t_name_buf
 "cloudUserName" : "", 4 .
-"controllerVersion an
 "deviceHwVver" : "2.0",
 "deviceId" : "[REDACTED]",
 "deviceMac" "[REDACTED]",
 "deviceModel" : "ER605",
 "deviceName" : "ER605",
 "deviceType" : "SMBROUTER",
-"fwid" : "",
 "fwver" : "2.2.6 Build 20240718 Rel.82712",
 "hwId" : "[REDACTED]",
 "oemId" : "[REDACTED]",
@@ -568,7 +552,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "error_code" : 0,
 "result"
 "cachedSvr" : "n-euwi-device-omada.tplinkcloud.com:443",
-"illegalType" "0;
 "validTimeOnDevice"” : 86400
 29
 ```
@@ -581,7 +564,8 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The broken chain of trust - Cloud (CVE-2025-9192)
@@ -598,7 +582,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "deviceModel" : "ER605",
 "deviceName" : "ER605",
 "deviceType" : "SMBROUTER",
-"fwId" :"",
 "fwVer" : "2.2.6 Build 20240718 Rel.82712",
 "hwId" : "[REDACTED]",
 "oemId" : "[REDACTED]",
@@ -606,7 +589,6 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 "error_code" : 0,
 "result"
 "cachedSvr" : "n-euwi-device-omada.tplinkcloud.com:443",
-"illegalType" "0;
 "validTimeOnDevice"” : 86400
 30
 ```
@@ -621,9 +603,9 @@ The broken chain of trust - Cloud (CVE-2025-9192)
 
 ## Slide 32
 
-```
+\```
 Client enumeration (FSCT-2025-003, FSCT-2025-011)
-```
+\```
 
 - When adopting a Client via Cloud all you need to know is the S/N, no proof-ofownership required
 
@@ -679,10 +661,10 @@ Client enumeration (FSCT-2025-003, FSCT-2025-011)
 
 ## Slide 36
 
-```
+\```
 Hippity hoppity
 Your network is our property
-```
+\```
 
 ## Slide 37
 
@@ -744,10 +726,10 @@ The attacker is positioned in an external network, and exploits the race-conditi
 
 ## Slide 41
 
-```
+\```
 The chain of trust issue is
 way worse (CVE-2025-9293)
-```
+\```
 
 - <u>The same chain of trust was used in lots of other product families</u>
 
@@ -774,10 +756,10 @@ way worse (CVE-2025-9293)
 
 ## Slide 42
 
-```
+\```
 Disclosure
 And takeaways
-```
+\```
 
 ## Slide 43
 
@@ -787,14 +769,14 @@ Issues are disclosed Issues are fixed by Sometimes, it’s to vendor vendor comp
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Issues are disclosed
 to vendor
 Disclosure timeline
 90 120
-\
 Issues are fixed by Sometimes, it’s
 vendor complicated...
 45
@@ -808,7 +790,8 @@ This is how long it took this time!
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Disclosure timeline

@@ -8,12 +8,17 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Hao Wang & Caleb Sargent & Harrison Pomeroy & Renana Friedlich_Into the Inbox Novel Email Spoofing Attack Patterns.pdf"
 pages: 73
 sha256: "a50d4c551519edb9975c7e904defa89039604627b578fda72e6dc085290af1c0"
-text_chars: 30010
-ocr_pages: 25
+text_chars: 28464
+ocr_pages: 23
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:33:15Z"
+converted_at: "2026-08-12T04:34:12Z"
 ---
 # Into the Inbox Novel Email Spoofing Attack Patterns
 
@@ -21,17 +26,17 @@ converted_at: "2026-08-11T21:33:15Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Hao Wang & Caleb Sargent & Harrison Pomeroy & Renana Friedlich_Into the Inbox Novel Email Spoofing Attack Patterns.pdf` (73 pages)
 
+
 ## Slide 1
 
 Into the Inbox: Novel Email Spoofing Attack Patterns
 
 Speakers: Caleb Sargent & Hao Wang
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat +>
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Into the Inbox:
@@ -90,14 +95,12 @@ Hao Wang Offensive Security Manager (@MrRed_Panda)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 SMTP & API
 cURL
-SMTP APIK
 = = curl --request POST \
 —-url https://api.brevo.com/v3/smtp/email \
 Your SMTP Settings —-header ‘accept: application/json' \
@@ -111,7 +114,6 @@ terrible@friend.com
 Login
 sender
 & Regenerate SMTP Login and Master password 'rhame' Send er
-":"senderalex@example.com"
 il":"testmail@example.com",
 e":"John Doe"
 ```
@@ -128,11 +130,10 @@ e":"John Doe"
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Original message
 Message ID
 Created on:
@@ -143,10 +144,8 @@ SPF:
 DKIM:
 DMARC:
 DMARC all passes
-<4deb8dc3-63ab-4880-a5ba-7077a05c9047@smitp-relay.sendinblue.com>
 1 April 2024 at 17:15 (Delivered after 1 second)
 "darryla@ com" <darryla@223030174 t-sender-sib.com> Using sendEmail-1.56
-m=gmail.com
 Subject: Urgent Action Required: HOA Notice - House Repainting Required
 PASS with IP 185.41.28.5 Learn more
 ‘PASS' with domain t-sender-sib.com Learn more
@@ -161,12 +160,11 @@ PATTERN 2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 Executing the prank
 darrylat <darryla@223030174.t-sender-sib.com>
 tome ¥
@@ -185,15 +183,13 @@ Black Black Blac!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 The Aftermath...
 Me} 04/01/2024 5:48 PM
 What else you got going on tonight?
-=; Pil emo] 04/01/2024 5:50 Pm
 <= Just gota letter from the HOA saying our house color is not approved
 So drinking
 ```
@@ -285,16 +281,13 @@ q spf= pass (xxx: domain of user@b.com designates xx.xx.xx.xx as permitted sende
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 The players
-BreVO &sgo daddy’
 © SPARK Ast
 “" SendGrid mailtrap astmai
-a
 ```
 
 ## Slide 17
@@ -315,7 +308,8 @@ a
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
@@ -329,10 +323,8 @@ EDNS: version: 0, flags:; udp: 65494
 7 QUESTION SECTION:
 networksolutions.com. IN
 7 ANSWER SECTION:
-etworksolutions.com. "google-site-verification=4eIncVtJhJsSwéqph
 etworksolutions.com. "MS=ms37265135"
 etworksolutions.com. "MS=ms78547785"
-etworksolutions.cdff: ’ "v=spfl 1p4:91.199.212.0/24 include:spfl.
 etworksolutions.cdm. 266 "facebook—domain-—verification=m4lpzwyjv2u
 bhetworksolutions.com. 266 "google-site—verification=5hT-6CoNzJ0wCHw
 ```
@@ -351,10 +343,10 @@ Reference: https://serverfault.com/questions/723911/setting-up-an-spf-record-for
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 <<>> DiG 9.18.18-Oubuntu2.1-Ubuntu <<>> spf.websitewelcome.com txt
 global options: +cmd
 Got answer:
@@ -363,8 +355,6 @@ flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: O, ADDITIONAL: 1
 OPT PSEUDOSECTION: . / ’
 ; EDNS: version: 0, flags:; udp: 65494 "192.185.0.0/16",
 77; QUESTION SECTION: "2916.172.160.0/19"
-;spf.websitewelcome.com.
-ANSWER omc T Cyn =
 spf.websitewelcome.com. 263 IN TXT "v=spfl ip4:192.185.0.0/16 ip4:50.116.64.
 18 ip4:50.87.152.0/21 ip4:108.167.128.0/18 ip4:216.172.160.0/19 ip4:108.179.192.0/18 ip4:
 2.144.0.0/16 -all"
@@ -380,11 +370,10 @@ MSG SIZE rcvd: 214
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Enable HostGator SMTP credentials
 Mail Client Manual Settings
 If you do not see an auto-configuration script for your client in tt
@@ -403,11 +392,10 @@ Server:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 <<>> DiG 9.18.18-Oubuntu2.1-Ubuntu <<>> gator4208.hostgator.com
 global options: +cmd
 Got answer:
@@ -416,8 +404,6 @@ flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: O, ADDITIONAL: 1
 OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 65494 - ?.144.0.0/16",
 77 QUESTION SECTION:
-.185.0.0/16",
-7 gator4208 -hostgator.com. IN 185.@.0/16",
 .172.160.0/19"
 77 ANSWER SECTION:
 gator4208 .hostgator.com. 7170 IN -167.189.34
@@ -462,12 +448,10 @@ Reference: https://github.com/zehm/sendEmail
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 2024
 Hello World inbox x
 admin@networksolutions.com <admin@networksolutions.com>
 tome v
@@ -562,28 +546,20 @@ Potentially affect **any type** of mailbox
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 Dual DKIM
-path casa header. i=@ er. . b= tKXbD8q6;
-.d= acetal
-=)
-SpTt=pass (EOOETE- COM domain Ot Dounce+t¥deec.4D1tT2 (PD)
-n@purplecloudops.com”; (/
 dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE), header. from=mailgun.org @
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=purplecloudops.com; q=dns/txt; : SS
 From: Message-ID: Ser ender: X-F@@@DacK-Id; bh=QK/yDOH17MptNkDjFgtSTvbLuMrPXB12Lab:
 JS m
 3
 6; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t:
-~: X-Feedback- Id; bh=QK/yDOH17} iptNkDjFgtstv ‘bLuMrPXB12LabiZx9xry
 2?
 nder: S 6.9)
-b=tKXbD8&q69J syW4jWISHIOBO7VsIEk6efdIgrwQpz3vR O80zarimMp/gj21w u2PMTSG3x1VL1IrTONP1b9af+GHt
 DKIM-Signature: a 56 \ZZaN)
 ```
 
@@ -595,16 +571,13 @@ Reference: https://mailtrap.io/blog/email-feedback-loop/
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 What is the Feedback Loop?
 Sender/Email
-L
 a Service Provider
-SN
 w Return feedback
 — to sender or email T
 = J service provider
@@ -612,7 +585,6 @@ Feedback
 \ Loop /
 Mailbox Recipients ~
 A Providers
-ee a
 | as spam
 Reference: https://mailtrap.io/blog/email-feedback-loop/
 ```
@@ -625,11 +597,10 @@ Reference: https://support.google.com/a/answer/6254652
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Gmail Feedback Loop requirement
 About the data
 The aggregate data will be generated for the first 4 fields (as separated by ‘:’) of the Feedback-
@@ -679,11 +650,10 @@ DKIM-Signature: v1;d=mailgun.org;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Generate some API keys
 New API Key x
 © Info: this API key is displayed only once, now. Therefore, c
@@ -720,17 +690,14 @@ Example: Spoof mailgun.org for Gmail mailbox
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Example: Spoof mailgun.org for Gmail mailbox
 Spoofed Email
 admin@mailgun.org
 This is a test
-€ Reply) (
-@ Forward } (©)
 Original Message
 870167.472024576-sendEmail@ubuntu-s-1vcpu-1gb-sfo3-01
 "admin@mailgun.org” <admin@mailgun.org> Using sendEmail-1.56
@@ -851,12 +818,11 @@ Reference: https://www.twilio.com/docs/sendgrid/ui/account-and-settings/spf-reco
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-USA 2024
 Allowed SPF IP ranges by SendGrid
 sendgrid
 50.31.32.0/19 (8192 addresses)
@@ -880,11 +846,10 @@ a” S dG id 192.254.112.0/20 (4096 addresses)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 2024
 Enable SendGrid SMTP credentials
 Create API Key
 API Key Name *
@@ -921,11 +886,10 @@ MAIL FROM:<admin@iowa.gov> \r\n RCPT TO: <victim@b.com> \r\n DATA \r\n **FROM: <
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat | |
-USA 2024
 First attempt without SMTP Smuggling
 SUCCESS => Received: 250-smtp.sendgrid.net, 250-8BITMIME, 250-PIPELINING, 250-SIZE 31457280, 250-STARTTLS, 250-AUTH PLAIN LOGIN, 250 Al
 DEBUG => SMTP-AUTH: Using LOGIN authentication method
@@ -943,7 +907,6 @@ SUCCESS => Received: 250 Recipient address accepted
 INFO => Sending: DATA
 SUCCESS => Received: 354 Continue
 INFO => Sending message body
-Setting content-type: tq "pratt
 ERROR => Received: 550 The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved.
 ```
 
@@ -969,11 +932,10 @@ MAIL FROM: <alice@a.com> \r\n EHLO a.com \r\n RCPT TO: <bob@b.com> \r\n MAIL FRO
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Deliver spoofed emails to vulnerable email gateway users
 Smuggled Email
 06 admin@iowa.gov
@@ -984,7 +946,6 @@ This message is from an external sender.
 The Smuggled email is successfully delivered . Q
 Authentication-Results: Epi-pass }sender IP is 149.72.120.130)
 smtp.mailfrom=iowa.gov; dkim=none *(message not signed)
-header.d=noneadmarc=pass faction=none header. from=iowa.gov;compauth=pass
 reason=100
 ```
 
@@ -1091,15 +1052,6 @@ Internal
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-é ae
-blackhat ~© -
-USA 2024
-DNS Data Analytics
-```
-
 ## Slide 58
 
 ### Methodology
@@ -1108,17 +1060,14 @@ DNS Data Analytics
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 2024
 Methodology
 “*¢ Sticker shock set in...
 RE: 25302-Requesting access to Open Data datasets
-e°" © | © reply
 InIs message 1s trom an external senaer.
-4i Hao,
 A Forward |
 lead the global strategic alliances team at Rapid7.
 Vhat you have outlined below definitely falls under our commercial use case. There is a}$: )0 USD annual feelassociated with access to the data.
@@ -1178,12 +1127,12 @@ v Build a Kibana and Nifi cluster to query them all
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 blackhat
-USA 2024
 Does abuse@company.com work?
 Email Spoofing Vulnerability Responsible Disclosure - DCU-826755 » inbox x
 Digital Crimes Unit <care@services.godaddy.com> Wed, 24 Apr, 14:09
@@ -1209,14 +1158,12 @@ View Abuse Reporting Form >
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 But sometimes things take a while
 ~
-¢ } Caleb Sargent Fri,24May, 1645 yy © &
 to Twilio ~
 Good Afternoon Team,
 We wanted to check in to see if there has been any movement on this ticket, as we just retested this issue and it's still there. We'll be opening a US-CERT case against this
@@ -1260,15 +1207,6 @@ Reference: https://kb.cert.org/vuls/id/244112
 ## Recommendations
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-g) :
-blackhat ~~ :
-USA 2024
-Recommendations
-```
 
 ## Slide 66
 

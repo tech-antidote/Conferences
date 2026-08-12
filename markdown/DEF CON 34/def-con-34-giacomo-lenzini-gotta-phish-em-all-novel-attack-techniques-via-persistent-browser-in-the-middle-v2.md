@@ -4,23 +4,28 @@ speakers: ["Giacomo Lenzini"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Giacomo Lenzini - Gotta Phish 'Em All Novel Attack Techniques via Persistent Browser-in-the-Middle - v2.pdf"
 pages: 64
 sha256: "031398127e8bc83fff917ca5c4c4ff8bba917d74c77da7dedaf8507b8ebd942a"
-text_chars: 20773
+text_chars: 18372
 ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:20:26Z"
+converted_at: "2026-08-12T06:31:30Z"
 ---
 # Gotta Phish 'Em All Novel Attack Techniques via Persistent Browser-in-the-Middle
 
 **Speakers:** Giacomo Lenzini  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Giacomo Lenzini - Gotta Phish 'Em All Novel Attack Techniques via Persistent Browser-in-the-Middle - v2.pdf` (64 pages)
+
 
 ## Slide 1
 
@@ -152,7 +157,8 @@ Attacker
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2.3 Browser-in-the-Middle
@@ -160,8 +166,6 @@ Victim Browser Example
 €
 ee - Sign in - Google Accounts} xX = +
 >
-¢
-© Not secure | htéps://g009le.defcon lab/ft90bc47/2tid=IPnpR9-3AENCVeyXwiQ37a ~ Vietim
 7
 G
 Sign in —_
@@ -364,10 +368,10 @@ Browser Server
 
 **BitM Selkies**
 
-```
+\```
 Linux Cursor
 (X11/Debian Style)
-```
+\```
 
 Default Selkies behavior leaks the BitM host OS cursor style (e.g., Linux X11).
 
@@ -377,10 +381,10 @@ Default Selkies behavior leaks the BitM host OS cursor style (e.g., Linux X11).
 
 **Victim Browser**
 
-```
+\```
 Native Alignment
 CSS Local Render
-```
+\```
 
 Client-side CSS maps standard properties (e.g. cursor: pointer) to force local OS rendering.
 
@@ -426,13 +430,13 @@ Forces execution of arbitrary JavaScript commands directly inside the active vic
 
 **BitM Attacker Browser** `Victim Navigation Interception` Captures victim’s navigation, tab states, and URL changes in real time.
 
-```
+\```
 WebSocket
-```
+\```
 
-```
+\```
 Send title/favicon
-```
+\```
 
 **Victim Browser** `Real-Time Client Synchronization` Instantly forces matching tab titles and favicons on the client side.
 
@@ -532,42 +536,27 @@ Act as a proxy
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 5.1 P-BitM
 Core Infrastructure
-ss
 Attacker
 ADMIN DASHBOARD
-{e) {e) {e) fe)
-fom) am) om fam)
-Victim Victim Victim Victim
-‘Traetik Proxy
 (public)
 © CAMPAIGN CONTAINER
-ari
 PUBLIC API
-Tracking AP|_——- WebSocket
-HOI—CHi<
-2
-‘(0
 © CAMPAIGN CONTAINER
 API
 PUBLIC API
 WebSooket
 & VICTIM CONTAINERS
-os ws
 Victim, Victim
 Container Container
-os ws
-Victim Victim
 Container Container
 & VICTIM CONTAINERS
-os ws
 Victim Victim
-Container Container <—~
-vs
 Victim Victim
 Container Container
 32
@@ -665,13 +654,12 @@ Attacker Victim
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 6.3 Operator Console & Live Session Control
 Admin Dashboard - Campaign Creation + MFA Bypass — DEMO 1
-foes ~ = wmoeivone
-© Opetsee mepesn27 00 AKs/eampsions
 Campaigns
 No campaigns yet
 Google Search Tm Feeling Lucky
@@ -686,24 +674,17 @@ Attacker Victim
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 6.4 Operator Console & Live Session Control
 Admin Dashboard - Real-Time Monitoring - DEMO 2
-(roe
-© Oretsenee nipsin27.0.0.884s}areagrlcO38
 1G Toggle Theme
-> DEF CON 34
 © e@scive DEF CON 34
-Victim.defcon34@gmailcom
 Live Session
 ‘racking ink
-Q. Search victims
 Export
-Last Activity
-Fy
-> @norsecon mas fopogl eteon be Hc0S06ed=ORW OBE ZBAVUAKG
 39
 ```
 
@@ -750,9 +731,9 @@ browser.tabs.executeScript
 
 **Web Page** `Keydown event`
 
-```
+\```
 Shortcut detected
-```
+\```
 
 **Background Context Prevent Shortcut**
 
@@ -762,9 +743,9 @@ Shortcut detected
 
 **7.5 Weaponizing Firefox Extensions File Hijacking & Download Interception**
 
-```
+\```
 Download Button
-```
+\```
 
 **Standard Download Stream** `Invoice.pdf Native APIs` **Background Context File Exfiltration & Manipulation** `browser.downloads` .onCreated
 
@@ -782,20 +763,13 @@ Victim
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 7.6 Weaponizing Firefox Extensions
-we barbneee = cr re
-SIS ereisean mininzr.001s4a3janosonlecebecyictmaetoet © hetseae in beg don bese AbecredelAZanrsrMNOMA. JO
-& Q a1sb3d
 me to Drive
-F) campaigns « Gage
-https:/igoogle defcon.labidéfc:
-172.217.23.67 con
 Email Templates a)
-Landing Pages
-@ Live Control
 Live Keylog n
 SMTP Profiles
 4 Modules
@@ -803,15 +777,9 @@ SMTP Profiles
 IN STARTED
 13717:05:50. 458016+
 00:00
-Campaign: d4fcabéc | Victim: a15b3d2f
 #2 Target Lists
 [-—— 2026-07-13 17:06 1
 ictim.defcon34 [shift] [shift] egmail.com
-alt] [ctrl v
-Toggle Theme
-[-— 2026-0 ny
-330584
-[-— 2026-07-13 17:06:57 —]
 46
 ```
 
@@ -819,29 +787,29 @@ Toggle Theme
 
 **7.7 Weaponizing Firefox Extensions Persistence Logout**
 
-```
+\```
 POST /logout
-```
+\```
 
 **Target Auth Server**
 
 **Web Page**
 
-```
+\```
 Intercept Request
-```
+\```
 
 **Background Context**
 
-```
+\```
 Native APIs
-```
+\```
 
 **Deleting cookies to simulate logging out**
 
-```
+\```
 browser.webRequest.onBeforeRequest
-```
+\```
 
 47
 
@@ -855,34 +823,17 @@ Victim
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 7.8 Weaponizing Firefox Extensions
 Persistence Logout - DEMO 4
-(Toe 2 tutes =
-© > © Oretseaee ps7. 0018442 |ampsioneesetse4
 2 < > Campaigns > DEF CON34
-(© verse song dean abate sed Essa
-F2 campaigns & enive DEF CON 34 stop campaign | , Export
-“ 3 Created: 13.1ul2026, 19:45 © Duration: 26s
-i emaiTenpates G
-© Lninor a — Sign in
 Use your Google Account
-J SMTP Profiles
-z ° caro
-Victim defeon34@gmail.com
-Forgot onal?
-4 Modules o
-ete cee Vor ts do toon Coe re
 © Pus Live Session bout eig Guest mode
-Target Lists
-cron inte te) © 1 ry Tee
 All Targets 2 Q Search victims. allstatus
-Toggle Theme
 status Vitim Tracking Link Fist Activity Last Activity
-(> Logout
-\ ict DEECON. Ss,
 48
 ```
 
@@ -922,39 +873,26 @@ Attacker Victim
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 .3 Hooking like a BeEF
-oo
 Campaigns
 Email Templates
-Landing Pages
 SMTP Prot
 Modules
 Plugins
 Target Lists
-Toggle Theme
-4 Modu =
 Attack Preset Library
 CAMPAIGN MODULES
 Fake KYC Verification
 Credential Harvester
-&
 Network Scanner
-Sane
-© nestcun Hs pe een bse
-alt] [etrul v
 [-—- 2026-07-13 17:06:36
-330584
 — 2026-07-13
-alt] [ctrl] [shift]
 — 2026-07-13 17:07:17 —
-alt) [ctrl] [shift]
 ® Cooki let
-ClickFix
-Execution param
-e
 52
 ```
 
@@ -984,35 +922,22 @@ Victim
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8.5 Hooking like a BeEF
-= < a1sb3d
-Campaigns < —
-WM victim. defcon34¢gnail com
 Email Templates to
-Landing Pages
-@ Live Control
 SMTP Profiles
 Modules
 Plugins
 Target Lists
-Toggle Theme
-https:/google.defcon lab/d4fes
-Live Keylog © .
 IN STARTED
 13717:05:50. 458016+
-Campaign: d4fcabéc | Victim: a15b3d2f
 [-—— 2026-07-13 17:06
 1
 ictim.defcon34 [shift] [shift] egmail.com
-alt] [ctrl v
 [-— 2026-0
-330584
-[-— 2026-07-13 17:06:57 —]
-yer aS
-© vot seae sponge detente
 me to Drive
 54
 ```
@@ -1043,34 +968,20 @@ Victim
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8.7 Hooking like a BeEF
-(Tee 2 runes =
-we, < alSb:
-F_ Campaigns <
 & Email Templates o
 ® Landing Pages
-@ Live Control
-J sMtP Profiles
 4 Modules
 © Plugins
 #2 Target Lists
-Toggle Theme
-https:/google.defcon lab/d4fes
-Export
 [SESSION STARTED: 2026~07-
-13717:05:50. 458016+00:0
-Campaign: d4fcabéc | Victim: a15b3d2f
 [-— 2026-07-13
-shift] @gmail.com
 ictim.defcon34
-alt] [ctrl v
 [-— 2026-07-13 17:06
-330584
-ance
-© mesic hp apo een abet
 56
 ```
 
@@ -1084,50 +995,30 @@ Victim
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8.8 Hooking like a BeEF
 Network Scanner- DEMO 8
-(Toe o cuss =
-© > © Onetseare ms:27.09.1844a}arosoneaa0eyxnez6265735
-campaigns
-© Email templates
 © Landing Pages
-J SMTP Profiles
-4 Modules
-© Pisins
 ® Target Lists
 © Console Modules
 [attack Preset Library
 (CAMPAIGN MODULES.
 Fake KYC Verification
-1G Toggle Theme ‘Sic Engrg tora
-Logout
 G
 Hi Victim
 °
-Module Outs Data Fils 4, Upload Cooks [et Timetne
-eter Sener ume
-¢ snc
-cconsnanct Sparen
 Campaign: cfdd93b8 | Victim: 20265735
 | 2026-07-12 19:26:27
 1
-att [ctr [shift
-[— 2026-07-12 19:26:46 —1
 ictim.defcon34 [shift] [shift] @ [shift] gmail.com
-[2026-07-12 19:27:17 —]
 [shift] Super [shift] Secret [shift] Password
 — 2026-07-12 19:29:23 —]
-fate)
 Credential Harvester
-resent ansing|
-1 Horse stooge dtean abt 38/re-ONN_ be NZBEYUAG
 G
 Hi Victim
-@ vecimactconsuegnatcon =
-TD stow posers
 57
 ```
 

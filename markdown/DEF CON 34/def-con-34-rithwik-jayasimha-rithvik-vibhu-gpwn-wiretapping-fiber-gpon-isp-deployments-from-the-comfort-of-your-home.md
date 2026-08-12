@@ -4,17 +4,21 @@ speakers: ["Rithwik Jayasimha", "Rithvik Vibhu"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Rithwik Jayasimha, Rithvik Vibhu - gpwn Wiretapping fiber (GPON) ISP deployments from the comfort of your home.pdf"
 pages: 96
 sha256: "b6604a7072c05159330dc3954a6766e12620d8fe03c7705f4231e046e9f6572e"
-text_chars: 24642
-ocr_pages: 35
+text_chars: 20514
+ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.8
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:29:44Z"
+converted_at: "2026-08-12T06:45:31Z"
 ---
 # gpwn Wiretapping fiber (GPON) ISP deployments from the comfort of your home
 
@@ -22,24 +26,15 @@ converted_at: "2026-08-12T00:29:44Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Rithwik Jayasimha, Rithvik Vibhu - gpwn Wiretapping fiber (GPON) ISP deployments from the comfort of your home.pdf` (96 pages)
 
+
 ## Slide 1
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-LLL eee
-f f
-LeeS ee = ue 8
-ALLL TEED
-erreri.ce
-- *,
-```
-
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 todo:
@@ -65,7 +60,8 @@ more >
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rithwik Jayasimha
@@ -74,7 +70,6 @@ Rithwik Jayasimha
 You arent going to believr what im discovering
 1 A Rithwik Jayasimha
 If you compromised the keys for every router, you could in theory wiretap every single user along
-Rithwik Jayasimha * :
 your fiber line
 Optical fiber networks are TOTALLY different
 Rithwik Jayasimha
@@ -95,7 +90,8 @@ Its obvious in himdsight
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1. ISP Network
@@ -117,7 +113,6 @@ packets to the
 correct house/link
 4. Inside One House
 3. Street Distribution
-(
 Individual CatSe/Cat6 drop
 to each house Ethernet Wall Jack
 or Cable Entry Point
@@ -132,7 +127,8 @@ short (about 100 m max)
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FTTH / GPON Internet Setup
@@ -157,7 +153,6 @@ Individual fiber drops (one per home)
 4. Inside One House
 Fiber wall outlet /
 entry point
-)
 ONT / ONU
 (Optical Network
 Terminal)
@@ -182,7 +177,8 @@ Your Devices
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sharing the fiber
@@ -195,7 +191,8 @@ Time (TDMA)
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Gigabit Passive Optical Networks (GPON)
@@ -211,39 +208,20 @@ Gigabit Passive Optical Networks (GPON)
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-f= UVEPVEVEVE LEV eeseueue in |
-* -
 - -
-= =
-- _
 Re -
-- -~
-°* -
 - -
 - -
-Ldn) -
-- -
-- _
-a ~
-e- -
-@ https: //gi thub..com/Anime4000/RTL960x @O 8©8@¢ &s4.0
 e
-= Q Anime4000 / RTL96Ox + Q Type (Z)}to sea © |%) 8) 8 €
 <> Code © Issues 197 {1 Pullrequests ©) Discussions © Actions [Fj Projects © Securityand quality |~” Insights
-Baws.
-@ RTLICOx Puniic @Watch 35 ~ Fork 149
-”
 . BP main ~ P 1Branch © 0 Tags Qc ‘Add file ~ <> Code + About
 : Hacking & Reverse Engineering
 README — Unlicense license U RTL96Ox-based xPON ONTs to suit
-‘ —_— your OLT
-2 CIP ight OPEN PON
-t FOUNDATION :
 ee 11 Readme
-“5 : OPENING THE FUTURE ; 2 ite
 ° OF NETWORK CONNECTIVITY
 Releases
 Packages
@@ -255,7 +233,8 @@ Packages
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SN Request
@@ -269,7 +248,8 @@ Create OMCC and send out business configurations
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 No. Time Source Destination Protocol Lengtl vian_id Info —
@@ -277,20 +257,10 @@ Active Discovery Session-—
 2
 3
 4
-o©owmnon
 > Frame 1:
 > Ethernet II, Sre:
 >- 802.19 Virtual LAN, PRI: 0, DEI: 6,
-8.007061
-8.622102
-8.022210
-8.025516
-8.133684
-8.136757
 8.136786
-6.137382
-8.256390
-8.256549
 Packet,
 JuniperNetwo_7e:
 JuniperNetwo_7e:
@@ -333,23 +303,14 @@ TpLinkTech..
 TpLinkTech
 TpLinkTech
 TpLinkTech.
-PPPoED
-PPP
-PPP
 PPP
 PPP
 Ppp
 PPP
 Ppp
 ppp
-LcP
-Lcp
-Lop
 PAP
-IPCP
-IPCP
 IPV6CP
-Ipc
 IPV6CP
 73 bytes captured
 JuniperNetwo_7e:89:4a (40:8f:9d:7e:89:4a), Dst
@@ -381,8 +342,6 @@ Configuration Request
 Configuration Ack
 Configuration Ack
 ter Adverti
-ember ship port
-Membershir t
 https(443) — 44240 [SYN,
 ACK ht
 Repo
@@ -391,7 +350,6 @@ https(443 44240 [
 erver He Change
 ttps(
 Application Data
-Application
 App ation D
 81
 41
@@ -402,7 +360,6 @@ Applica
 at
 Gmail Images
 <
-& @ G&aAiMod
 Google Search I'm Feeling Lucky
 ```
 
@@ -410,7 +367,8 @@ Google Search I'm Feeling Lucky
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 80% leg to router
@@ -424,41 +382,30 @@ Google Search I'm Feeling Lucky
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 File Edit View Go Statistics Wireless
-4040
 Ml ip.addr I= 192.168.69.2
 Capture
-2 M@RAe<>>KY
 Analyze Telephony
-dot3StatsSymboLlErrors
-dot3ControLInUnknownOpcodes
 etherStatsDropEvents
 etherStatsFragments
 etherStatsJabbers
-etherStatsCollisions
 etherStatsCRCAlignErrors
 etherStatsTxUndersizePkts
 etherStatsTxOversizePkts
-etherStatsTxPktsé640ctets
 etherStatsTxPkts65to1270ctets
-etherStatsTxPkts128to2550ctets
 etherStatsTxPkts256to5110ctets
 etherStatsTxPkts512to10230ctets
-etherStatsTxPkts1024to015180ctets
 etherStatsTxPkts1519toMaxOctets
 etherStatsTxBroadcastPkts
-etherStatsTxMuLlticastPkts
 etherStatsRxUndersizePkts
 etherStatsRxOversizePkts
-etherStatsRxPktsé640ctets
 etherStatsRxPkts65to1270ctets
 etherStatsRxPktsi28to2550ctets
 etherStatsRxPkts256to5110ctets
-etherStatsRxPkts512to010230ctets
-etherStatsRxPkts1024to015180ctets
 etherStatsRxPktsi519toMaxOctets
 inOamPduPkts
 outOamPduPkts
@@ -473,11 +420,9 @@ igmp.
 igmp.mcast.
 igmp.mcas
 igmp.mcast.
-IGMPy
 IGMP\
 v3
 O@ooqoqaoqooqooqoqo ooo od ©
-io}
 87855
 6973
 193022
@@ -487,7 +432,6 @@ io}
 4487367
 37892
 0
-io}
 > Frame 438: Packet, 58 bytes on wire (464 bits), 58 bytes cz
 >- Ethernet II, Src: TaicangT&WE1l_9d:76:f0 (60:bd:2c:9d:76:f0'
 >-802.1Q Virtual LAN, PRI: 0, DEI: 0, ID: 100
@@ -509,7 +453,6 @@ max-pkt-Len
 - max packet Length
 RTK.Q> switch set max-pkt-len index © Length 2000
 RTK.O> switch set max-pkt-len ge port all index off
-@a
 enp44s0: <live capture in progress>
 Tools
 Protocol
@@ -517,8 +460,6 @@ IGMPv3
 IGMPv3
 IGMPv3
 Help
-QQQ28E
-Lengt! vian_id = Info
 100 Membership Report /
 100 Mem
 100 Membership Report /
@@ -533,7 +474,8 @@ Packets: 3118 « Displayed: 6 (0.2%) Profile: Default
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packets: 3118 - Displayed: 6 (0.2%) Profile: Default
@@ -543,11 +485,11 @@ Packets: 3118 - Displayed: 6 (0.2%) Profile: Default
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GTC frame n — 1 GTC frame n GTC frame n + 1
-a ___________
 PCBd GTC payload PCBd GTC payload GTC payload
 G.984.3(14)_F8-2
 Figure 8-2 — Downstream GTC frame
@@ -555,7 +497,8 @@ Figure 8-2 — Downstream GTC frame
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Subscriber Traffic (Inside GTP)
@@ -570,7 +513,6 @@ WireGuard VPN
 IPsec/ESP
 STUN
 HTTP plaintext
-MQTT
 XMPP
 BitTorrent
 SMTP
@@ -581,12 +523,10 @@ SIP
 459,552
 7,500+
 41,000+
-1,175
 15,500+
 6,000+
 ~780
 87
-eh
 9
 8
 al
@@ -611,7 +551,8 @@ VoIP signaling
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Server: 114.31.230.18 (port 110) — subscriber 100.190.246.110
@@ -633,7 +574,8 @@ Content-Type: multipart/mixed (has attachments)
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Server: 10.91.122.49 (internal Airtel network)
@@ -652,7 +594,8 @@ Client: 100.78.42.219 (subscriber/device)
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 65.109.101.238 (Hetzner) — 100.189.241.219
@@ -664,15 +607,14 @@ works/date/admin/index.htm
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wireshark - RTP Player
 ] Out of Sequence
 Wrong Timestamps
 Inserted Silence
-| hi
-1.44-10# 1.46-10* 148-107
 Source Address Source Port Destination Address Destination Port SSRC Setup Frame = Packets Time Span (s) Payloads
 0.5.110.146 42196 100.92.132.90 4000 0x35f73. SETUP 3015 3742 1425.40 - 15... g71IA
 1 streams, 1 not muted, start; 1425,400986 s. Double click on graph to set start of playback
@@ -683,7 +625,8 @@ Jitter Buffer; 50 > Playback Timing: Jitter Buffer oO Time of Day
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Start Time
@@ -691,9 +634,7 @@ Start Time
 299.221673
 1423.20976
 1762.20738:!
-3064.11366;
 Limit to display filter
-L Help
 « Stop Time
 38.183424
 316.975788
@@ -710,17 +651,10 @@ Initial Speaker
 Time of Day
 Prepare Filter
 Wireshark - VoIP Calls -
-98. @ka.ims.airtel.in>
-98 @ka.ims.airtel.in;user=phone>
-airtel. in;user=phone>
 airtel.in;user=phone>
 airtel.in;user=phone>
 sip-calls-2-62.pcapng
-6 @ka.ims.airtel_in;transport=udp;user=phone>
 b@ka.ims.airtel.in;transport=udp;user=phone>
-ka.ims.airtel.in;transport=udp;user=phone>
-®ka.ims.airtel.in;transport=udp;user=phone>
-©ka.ims.airtel.in;transport=udp;user=phone>
 Duration
 00:00:32
 00:00:17
@@ -743,43 +677,26 @@ INVITE
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help
-Q24QHNmag@cbOB@k8Ae2< o> KAR SB QQQ0G
 Rl Apply a display filter ... <Ctrl-/> Gy~ +
 No. Time Source Destination Protocol Length Info
 - 0526069... 2404:a800:6:248:: 4 : 5 : GTP/UDP. https(443) — 38441 Len=1230
 - 0526286... 2404: a800 248 4 . : GTP/UDP https(443) — 38441 Len=1230
-- 0526286... 2404:a800:6:248:: : : : : GTP/UDP. https(443) = 38441 Len=1230
 - 0526503... 2404:a800:6:248:: 4 : ‘ : GTP/UDP https(443) — 38441 Le 230
 - 0526504... 240 800 248 : : : GTP/UDP https(443) — 38441 Le 230
 - 0526722... 2404:a800:6:248:: : : * : GTP/UDP. https(443) — 38441 Len=1230
--0526722.. 2404:a800:6:248:: 4 : < * GTP/UDP. https(443) — 38441 Len=1230
-- 0526946... 2404: a800 248 : : : GTP/UDP. https(443) — 38441 Len=1230 ||
 - 0526940... 2404:a800:6:248:: 4 : : : GTP/UDP. https(443) — 38441 Len=1230
-- 0527157... 2404:a800:6:248:: : ; Hi : GTP/UDP https(443) — 38441 Le!
 - 0527157... 240 800 248 . : : GTP/UDP. https(443) — 38441
-0527374... 2404:a800:6:248:: : : « : GTP/UDP. https(443) — 38441 Len=1230
 - 0527375... 2404:a800:6:248:: : $ : : GTP/UDP https(443) — 38441 Len=1230
-- 0527599... 2404: a800 248 : * 2 GTP/UDP. https(443) — 38441 Len=1230
-.0527599... instagram.fblr1-7.fna. * 4 : Hy GTP/QUIC Protected Payload (KPO)
-0527817... instagram.fblr1-7.fna. < . : . H GTP/QUIC Protected Payload (KPO)
 -0527818.. instagram.fblr1-7.fna. : 4 © : GTP/QUIC Protected Payload (KPO)
--0528040.. instagram.fblr1-7.fna. B 4 : : Hi GTP/QUIC Protected Payload (KPO)
-0528040... instagram.fblri-7.fna. y . : : . GTP/QUIC Protected Payload (KPO)
-0528259... instagram.fblr1-7.fna. : . ‘ fi GTP/QUIC Protected Payload (KPO)
 - 0528564... 2603:1046:c06:c46: :2 4 ; ig 14... GTP/TCP. 4 imaps(993) — 54607 [ACK] Seq=17215 Ack=585 Win=4032 Len=0
 0529295... 2401:4900:50:9::194 4 : H iL. GTP/DNS Standard query response 0xi60c A www.googleapis.com A 216.239.36.223 A 216.239.32.223 A 216.239.34.223 A 21
 .0529510... scontent.fixei-3.fna. fbcdn.net i “i 14 GTP/UDP https(443) — 44017 Le 232
-0529727... scontent.fixei-3.fna.fbcdn.net i : “; . GTP/UDP https(443) — 44017 Len=1232 |
-.0529727... scontent.fixei-3.fna.fbcdn.net i : “ e GTP/UDP https(443) — 44017 Len=1232
-0529947... scontent.fixe1-3.fna.fbcdn.net 4 © :4.. GTP/UDP. https(443) — 44017 Le! 232
-9529947... scontent.fixe1-3.fna.fbcdn.net f : s :4.. GTP/UDP https(443) = 44017 Len=1232
-0530163... rr8.sn-ciSgup-cagee.gvt1.com 4 s iL. GTP/QUIC Protected Payload (KPO)
 - 0532175... scontent.fixel-3.fna.fbcdn.net 4 40: :4.. GTP/UDP. https(443) — 44017 Len=1232
-. 9532389 scontent.fixe1-3. fna.fbcdn. net :4900:c940: 24 GTP/UDP ~_ 44047 Len=1232
 >-Frame 1: Packet, 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface enp44s0, id 0 fr ff ff ff ff ff fc 9F 2a 2b dc di 08 06 00 O1 e+
 >-Ethernet II, Src: ZyxelCommuni_2b:dc:d1 (fc:9f:2a:2b:dc:d1), Dst: Broadcast (ff:ff:ff:ff:ff: ff)
 >-Address Resolution Protocol (request)
@@ -788,15 +705,14 @@ No. Time Source Destination Protocol Length Info
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 File Edit View Go Capture Analyze Statistics Tel
-A40@a@cetOBBB 2x > :4900:4bbd:99c . GTP/UDP
 Apply a display filter .. <Ctrl-/ :4900:4bbd: . GTP/UDP
 -4900:4bbd: . GTP/UDP n=1230
 n=1230
-:4900:88cd: :1.. GTP/QUIC nie
 n=1230
 No. Ss
 87715 1290.0526069... 2. 1a800:6:248::
@@ -823,8 +739,6 @@ d
 87724 1290.0527157.. 2404:a800:6:248::
 87725 1290.0527157... 2404:a800:6:248::
 87726 1290.0527374.. 2404:a800:6:248::
-87728 1290.0527599... 2404: a800:6:248:: ‘n=1230
-87729 1290.0527599... instagram.fblr1-7.fna. '@)
 87730 1290.0527817.. instagram.fblr1-7.fna. * A906 0:88cd: : . GTP/ Q U 1! Cc 0)
 87731 1290.0527818.. instagram.fblri-7.fna. @)
 87732 1290.0528040.. instagram.fblri-7.fna. . 4900 "CC 97a e GTP /TC D> 0)
@@ -832,28 +746,19 @@ d
 87734 1290.0528259... instagram.fblr1-7.fna. 0)
 87735 1290.0528564.. 2603:1046:c06:c46::2 *A900:3316: . GTP/DNS \CK] Seq=17215 Ack=585 Win=4032 Len=0
 87736 1290.0529295.. 2401:4900:50:9::194 ise 0x160c A www.googleapis.com A 216.239.36.223 A 216.239.32.223 A 216.239.34.223 A 211
-87737 1290.0529510.. scontent .fixe1-3.fna.fbcdn. F 4 , +n=1232
 :4900:c940: GTP/U
-87738 1290.0529727.. scontent.fixe1-3.fna.fbcdn. ¥, hon Dr, 7 = - 2n=1232
 87739 1290.0529727.. scontent.fixe1-3.fna.fbcdn. 2n=1232
-D sn=1232
-Co a 74900: c940: » GTP/U ia
-i praapeaemauamegs corernesas :4900:c940: . GTP/UD ion
 —————— :4900:c940: . GTP/UDP
-:4900:c940: . GTP/UDBP
-:4900:3/76c: GTP/QUIC
 :4900:c940: GTP/UDP
 -4900:c940: GTP/UDP
 s-unencrypted-62.pcapng.g, ‘ack Profile: Default
-‘n=1230
-:4900:88cd: 71.. GIP/QUIC n=1290
 n=1230
-2n=1232
 ```
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 5-Frame 89241: Packet, 253 bytes on wire (2024 bits), 253 bytes captured (2024 bits) on interface enp44s0, id 0
@@ -865,11 +770,7 @@ n=1230
 > Internet Protocol Version 6, Src: update.googleapis.com (2404:6800:4007:815::2003), Dst: 2401:4900:3765:778d:291a:f929:f707:376e (2¢
 >-Transmission Control Protocol, Src Port: http (80), Dst Port: 46118 (46118), Seq: 1, Ack: 1, Len: 127
 v- Hypertext Transfer Protocol
-> TTP/1.4 204 No Content Sr
->- Content-Length: O\r\n
- Cross-Origin-Resource-Policy: cross-origin\r\n
 nate: Tue, 10 Mar 2026 03:08:52 GMT\r\n
-—\r\n
 ```
 
 ## Slide 48
@@ -878,7 +779,8 @@ nate: Tue, 10 Mar 2026 03:08:52 GMT\r\n
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 End Cap boot
@@ -890,10 +792,7 @@ Splitter Chip
 Epoxy
 y Fiber Array V-Groove
 ~
-. £
-“Y Fiber Array Lid
 Ribbon Fiber
->.
 Interface Splitter Chip/ /
 Fiber Array /
 ```
@@ -910,12 +809,11 @@ Fiber Array /
 
 ## Slide 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-WIKIPEDIA
 25 years of the free encyclopedia
-_4
 Contents hide
 (Top)
 Description
@@ -933,7 +831,6 @@ Room 641A is a telecommunication interception facility operated by AT&T for the 
 National Security Agency, as part of an American mass surveillance program. The
 facility commenced operations in 2003, and its purpose was publicly revealed by AT&T
 technician Mark Klein in 2006.!"I[2]
-Description {czit}
 Room 641A is located in the SBC Communications building at 611 Folsom Street, San
 Francisco, three floors of which were occupied by AT&T before SBC purchased
 AT&T.'] The room was referred to in internal AT&T documents as the SG3 [Study
@@ -952,18 +849,13 @@ Read Edit Viewhistory Tools v
 Coordinates: (9 37°47'07"N 122°23'48"W
 National Security Agency
 surveillance
-F 4
-— er
-a ey
 Man of alnhal NSA data collactinn 2c nf 2NN7
 Donate Create account Log in
 Appearance hide
 Text
 O Small
-(o} Standard
 O Large
 Width
-Co} Standard
 O Wide
 Color
 O Automatic
@@ -973,10 +865,10 @@ O Dark
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-4
 a
 A fiber optic tap &® More details
 & Roens - Own work €) CC BY-SA4.0 view terms
@@ -984,7 +876,8 @@ A fiber optic tap &® More details
 
 ## Slide 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 12.1 Basic threat model
@@ -1005,7 +898,8 @@ probably impair the very PON being tapped.
 
 ## Slide 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 12.1 Basic threat model
@@ -1024,7 +918,8 @@ probably impair the very PON being tapped.
 
 ## Slide 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 12.1 Basic threat model
@@ -1063,14 +958,6 @@ probably
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-20000000 en I's
-iar
-30048 eieq so,
-```
-
 ## Slide 73
 
 ## Slide 74
@@ -1107,7 +994,8 @@ iar
 
 ## Slide 90
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 O1-05 states
@@ -1123,7 +1011,8 @@ Create OMCC and send out business configurations
 
 ## Slide 91
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GEM
@@ -1139,7 +1028,8 @@ Ix IPTV
 
 ## Slide 92
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pinout
@@ -1147,9 +1037,7 @@ II. Pin Descriptions
 in menu On this page
 Symbol Description
 Industrial Transceivers VeeT Transmitter Ground
-SFP-4W20-100G-I
 a TX Fault Transmitter Fault Indication
-QSFP-4W40-100G-I
 QSFP-BX40-100G-I TX Disable Transmitter Disable. Module disables on high or open
 QSFP-CWDM4-100G-1 SDA 2 wire serial ID Interface Data Line (MOD-DEF2)
 QSFP-LR4-100G-I SCL 2 wire serial ID Interface Clock (MOD-DEF1)
@@ -1157,37 +1045,30 @@ QSFP-LR4-40G-I ations
 MOD-ABS Grounded within the module
 QSFP-PLR4-40G-I S| mum Ratings
 QSFP-SR4-1006-I Rate Select Function not available, pulled down with 100KQ resistor in the module Recommended Operating
-Jition:
 QSFP-SR4-40G-| Lo: Loss of Signal
 Ill. Pin Description:
-QSFP-ZR4-100G-I
 Receiver Ground trical Ct eriet
 trical Characteristi
-SFP-100FX-31-1
 SFP-100LX-31-I Receiver Ground VII. Optical Characteristic
 SFP-10G-T-301 Receiver Ground VIII. Digital Diagnostic
 SFP-10G23-BX10-I
 Received inverted DATA out. nical Diagram
 hanical Diagrar
-SFP-10G23-BX20-I
 Received DATA out
 SFP-10G23-BX40-I Diagram of Host Board Connector Block Pin Number and Names
 SFP-10G23-BX60-I Receiver Ground
 SFP-10G32-BX10-I Receiver Power. 3.3V45%.
-SFP-10G32-BX20-I
 Transmitter Power. 3.3V+5%.
-SFP-10G32-BX40-I
 SFP-10G32-BX60-I Transmitter Ground
 SFP-10G45-BX80-| Transmit DATA in. AC Coupled.
-SFP-10G54-BX80-I
 Transmit Inverted DATA in. AC Coupled
-SFP-10GER-31-1
 ern ancen ees Transmitter Ground
 ```
 
 ## Slide 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GEM frame fragmentation
@@ -1195,7 +1076,6 @@ gem fragmentation
 one ethernet frame, chopped into gem frames sized by the allocation window. each fragment re-pays the 5-byte header tax; only
 the last carries END.
 the ethernet frame (payload the OLT wants to send to one subscriber)
-Alo ete ~e~rp~olwP edo kT eimai ayo
 allocation window
 gem fragments on the wire — each chunk re-headered, only the last flagged END
 GEM hdr (5B)
@@ -1214,34 +1094,42 @@ gem frames header bytes added overhead
 
 ## Slide 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 gpon: downstream broadcast vs upstream tdma
 downstream (OLT>ONUs): one continuous pulse train, every ONU hears every bit. upstream (ONUs>OLT): time-division — each ONU bursts ONLY
 in the timeslot the OLT granted it, so bursts never collide on the shared fiber.
 speed O 0.3x O show ranging delays
-Bs [onus
-Ps e
 e
 e
 e
 e
 e
-OLT oeo3eo3eee :
-e e
 1:4 splitter e
 e e
-°
-°
-e °
-o
-°
-©
-°
 upstream frame (BWmap allocations) — guard gap after last slot ONU 4
 downstream: 7 pulses continuously broadcast to all 4 ONUs — upstream: only the ONU whose slot is live transmits
-® downstream broadcast (allONUs)  ONU1burst @ ONU2burst @™ ONU3burst @&® ONU 4 burst
+® downstream broadcast (allONUs) ONU1burst @ ONU2burst @™ ONU3burst @&® ONU 4 burst
 ```
 
 ## Slide 96
+
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+10:90 splitter
+1490nm 1310nm
+90% leg — back to the
+network
+90% leg — back to the
+network
+OLT
+Splitter
+10:90 splitter
+10% leg — to us 10% leg — to us
+This becomes the source of This becomes the source of
+our downstream tap our upstream tap
+```

@@ -4,23 +4,28 @@ speakers: ["David Rochester", "Nicholas Gould"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - David Rochester, Nicholas Gould - No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E.pdf"
 pages: 32
 sha256: "9d12c450ef109f80202d10dcbe4ed78ad481840e6e1a5ff27308110c50984d95"
-text_chars: 13387
-ocr_pages: 16
+text_chars: 11380
+ocr_pages: 14
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:15:54Z"
+converted_at: "2026-08-12T06:25:52Z"
 ---
 # No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E
 
 **Speakers:** David Rochester, Nicholas Gould  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - David Rochester, Nicholas Gould - No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -57,7 +62,8 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The manifest is the menu
@@ -66,7 +72,6 @@ BLOBS
 {
 "config": { "digest": "sha256:9f2a.." }, @ config JSON
 TAG "layers": [
-- >
 registry.io/model: latest { "digest": "sha256:a3ed.." }, @ layer 128 MB
 { "digest": "sha256:71bc.." }
 ] @ layer 42 MB
@@ -90,15 +95,6 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Most software implements their own OCI client
-°C)°
-container ft]
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
-```
 
 ## Slide 6
 
@@ -144,7 +140,8 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 03 / 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMR - Pulling a Model
@@ -161,9 +158,6 @@ content-type: application/json
 content-length: 153
 docker-distribution-api-version: registry/2.0
 www-authenticate: Bearer
-realm="https://auth.docker. io/token", service="registry.docker.io",scope="repository:
-ai/smollm2: pull"
-docker-ratelimit-source: 2600: 6c5e:1340:1::
 strict-transport-security: max—age=31536000
 ```
 
@@ -175,7 +169,8 @@ strict-transport-security: max—age=31536000
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMR - Pulling a Model cont.
@@ -188,7 +183,6 @@ x-trace-sampled: false
 x-ratelimit-limit: 3000, 3000;w=60
 x-ratelimit-remaining: 2999
 © | Request | Response Connection Timing Comm
-| POST https://auth.docker. io/token HTTP/2.0
 | content-type: app Lication/x-—www-form-ur lencoded;
 user-agent: containerd/2.2.3+unknown
 content-length: 184
@@ -200,22 +194,16 @@ set-cookie: __cf_bm=8Xp3snC7CaKAPbtyxfFWQdDuiFgi3d24V5tVi
 1.0.1.1-
 client_id: containerd-client
 grant_type: password
-password: laa
 scope: repository:ai/smollm2:pull
 service: registry.docker.io
-username: as
 ZIPs73W9rGFauxyOKV_x@SNi3pSbhQwFRvB4YEanm2hZ2ctf ltgxqRj
-J0G4yks_CiReTSB4S6JL Iw. rtaPXn13DqLmHb8dxT2c; HttpOnly;
-Patho 7. Nawatnoath denbae das Cowlencchinad 46 Sit Aa
 server: cloudflare
 cf-ray: alb96de5aeb13123-ATL
 JSON
 {
 "access_token": '
 "scope"
-Mexpires__ H
 “issued_at": "2026-@7-15T14:24:11.18589822"
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 ```
 
 ## Slide 10
@@ -226,22 +214,17 @@ NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMR- Pulling a Model cont.
 © | Request | Response Connection Timing Comment
-GET https://registry-1.docker. i0/v2/ai/smollm2/manifests/sha256: 354bf30d0aa3af413d2
-aadae4f23 e07a5b0d776e9606a2f0b9 HTTP/2.0
 user-agent: Docker—-Desktop/4.74.@ (Mac; arm64)
 accept: application/vnd.oci.image.manifest.v1+json, */*
-accept-encoding: zstd;q=1.0, gzip;q=0.8, deflate; q=0.5
 authorization: Bearer
-eyJhbGci0iJSUZI1INiIsInR5cCI6IkpXVCIsIng1YyI6WyJNSULFRmpDQ@F2NmdBd LCQWdJIVU9yTFd5UVpx
 MmFuZXd6WnhYN1JLbHQ3bDVUTXdEUV LKS29aSWh2Y@5BUUVMQ LF Bd2dZWxXhDekFKQmdOVkJBWVRBbFZUTVIN
 d@VRWURWUVFIRXdwRF LXeHBabT L5Ym1saE1SSXdFQV LEV LFRSEV3bFFZV3h2SUVGc2RHOHHGVEFUQmdO0VkIB
-KAD EDIT AAKCAIRADATVIoUATC REVIT CCHADMIAICA DANTE TVAILIC H/o el BI AC 14 Vb WIC Em Am ANVIL ID TVDU
-No content @ Edit Replace  () View: auto ~
 NO SOCKET, NO PRIVS, NO PROBLEM // OCI
 © Request | Response} Connection Timing Comment
 HTTP/2.0 200
@@ -251,7 +234,6 @@ content-length: 551
 docker-content-
 digest: sha256:354bf30d0aa3af413d2aa5ae4f23c66d78980072d1e07a5b0d776e9606a2 Ff 0b9
 docker-distribution-api-version: registry/2.0
-etag: "sha256:354bf30d0aa3af413d2aa5ae4 f23c66d78980072d1e07a5b0d776e9606a2 f0b9"
 docker-ratelimit-source: davidrochester1
 x-ratelimit-limit: 200; w=3600
 ratelimit-limit: 200 ; w=3600
@@ -261,11 +243,8 @@ strict-transport-security: max—age=31536000
 JSON B\Copy @Edit M&Replace ( View: auto
 4
 "schemaVersion": 2,
-"mediaType": “application/vnd.oci. image.manifest.v1+json",
 "config": {
 "mediaType": "“application/vnd.docker.ai.model.config.v@.1+json",
-USiZeM ES /O}
-"digest": "sha256:32aaa72e00e9a79d38786abd1e37388e7 f01181a0f 1bdf23ef ff6433c12F 89
 ```
 
 ## Slide 11
@@ -276,7 +255,8 @@ USiZeM ES /O}
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMR - Pulling a Model cont.
@@ -285,11 +265,8 @@ content-type: application/json
 content-length: 153
 docker-distribution-api-version: registry/2.0
 www-authenticate: Bearer
-realm="https://auth.docker.io/token", service="registry.docker.io",scope="repository:
-ai/smollm2: pull"
 docker-ratelimit-source: 2600:6c5e:1340:1::
 strict-transport-security: max—age=31536000
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 ```
 
 ## Slide 12
@@ -300,7 +277,8 @@ NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Abusing the Auth Flow
@@ -310,11 +288,8 @@ any container can trigger it
 1 GET /v2/ — model pull begins
 <
 2 401 realm = http://127.0.0.1:9200
-pe
 3 GET the realm + SSRF from the host
-a
 4 response { "token", data }
-<
 5 retry — we read the response
 G
 full response body reflected
@@ -331,15 +306,13 @@ NO SOCKET, NO PRIVS, NO PROBLEM // OCI 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMR - SSRF Demo
-'» docker-ssrf-poc [] )» docker-ssrf-poc []
 © @ @ docker exec -it victim sh
 ‘» docker-ssrf-poc docker exec -it victim sh
-~$f
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
 ```
 
 ## Slide 14
@@ -366,7 +339,8 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ __Ollama Server © Malicious OCI Registry
@@ -377,23 +351,20 @@ G Ollama
 @ 307 Redirects
 if resp.StatusCode != http.StatusTemporaryRedirect && resp.StatusCode != http.StatusOK {
 return nil, fmt.Errorf("unexpected status code %d", resp.StatusCode)
-i
 return resp.Location()
-‘server/download.go-
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 ```
 
 ## Slide 16
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HASH VERIFY THE BYPASS
 One digest, twice. Verification skipped.
 01 02
-y
 downloadBlob()
 307 — SSRF body written
 Malicious
@@ -407,13 +378,11 @@ skipVerify Map
 Cache hit overwrites the
 skipVerify
 false true
-Lite)
 FLAW
 stays on disk.
 04 05
 HTTP 200
 internal
-SHA;-256 =
 service
 Blob on Disk
 Internal response persists
@@ -471,18 +440,15 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ex: (O)llama Whisper PoC
 — VICTIM - ollama-victim (Ollama 0.20.2)
-#0]
-&
 f ot Lama-de@: docker*
-ommand)
 ATTACKER - rogue registry + exploit
 press E to run each command
-rs/exploit#
 NO SOCKET, NO PRIVS, NO PROBLEM // OCT
 ```
 
@@ -516,15 +482,14 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DOCKER MODEL RUNNER +: macOS
 Inference backends
-Llama. cpp vLLM MLX
 GGUF - Metal Metal backend mix-Im - Apple Silicon
 native, Metal-accelerated inference — runs as a host process
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
 ```
 
 ## Slide 24
@@ -537,7 +502,8 @@ Apple’s open source library for running LLMs on Apple Silicon
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MLX-LM
@@ -546,10 +512,8 @@ Apple’s open source library .o
 for running LLMs on Apple "model_file": "model.py",
 one "architectures": ["LlamaForCausalLM'"],
 Silicon @ Open Source "model_type": "Llama",
-ML»
 APPLE PROJECT
 MLX
-NO SOCKET, NO PRIVS, NO PROBLEM // OCI @3 / 25
 ```
 
 ## Slide 25
@@ -566,22 +530,18 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI 03 / 25
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Docker Model Runner Sandbox
 return backends.RunBackend(ctx, backends.RunnerConfig{
-BackendName: *MLX",
 Socket: socket,
 BinaryPath: m.pythonPath,
 SandboxPath: Moher
-SandboxConfig: ante
 Args: args,
-Logger: m. log,
 ServerLogWriter: logging.Newriter(m.serverLog),
 })
-‘pkg/inference/backends/mlx/mlx.go"
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
 ```
 
 ## Slide 27
@@ -604,13 +564,13 @@ NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
 NO SOCKET, NO PRIVS, NO PROBLEM   //   OCI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ex: Free Willy...errrr Docker PoC
 root@r00t-x1:~# | root@r00t-x1:~#
 root@r00t-x1:~#
-NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
 ```
 
 ## Slide 29
@@ -638,16 +598,6 @@ NO SOCKET, NO PRIVS, NO PROBLEM // OCT @3 / 25
 NO SOCKET, NO PRIVS, NO PROBLEM   //   FIN
 
 25 / 25
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@@@ ~/dc34/registry-attacks
-container fil
-rh Ww
-ew
-SOCKET, NO PRIVS, NO PROBLEM // FIN
-```
 
 ## Slide 31
 

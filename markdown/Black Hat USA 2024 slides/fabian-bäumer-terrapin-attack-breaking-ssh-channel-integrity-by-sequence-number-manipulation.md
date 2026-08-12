@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation.pdf"
 pages: 31
 sha256: "ce0ca22031c21a85435f5076d0962f3f7e43b35b393ba061b20bee0426196380"
-text_chars: 9726
+text_chars: 9540
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:30:34Z"
+converted_at: "2026-08-12T04:30:10Z"
 ---
 # Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation
 
 **Speakers:** Fabian Bäumer  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -103,13 +109,13 @@ Bob
 
 Server
 
-```
+\```
 SSH-2.0-PuTTY-Release-0.80
-```
+\```
 
-```
+\```
 SSH-2.0-OpenSSH_9.6p1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -471,24 +477,21 @@ Caveat: Truncating Encrypted Messages May Hinder Subsequent Message’s Decrypti
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 2024
 Caveat: Truncating Encrypted Messages
 May Hinder Subsequent Message’s
 Decryption
 Authenticated Encryption Mode Enc. State Dec. State Affected Exploitable
-CBC (dV,Snd) (UV, Rev)
 CTR (ctr, Snd) (ctr, Rev)
 CBC UV, Snd) UV, Rev)
-CTR (ctr, Snd) (ctr, Rev)
 Encrypt-and-MAC
 Encrypt-then-MAC
 GCM ct l' Invocation ct VInvocation
 ChaCha20-Poly 1305 Snd Rcv
-\N =*® \N &*&
 ```
 
 ## Slide 27
@@ -497,20 +500,17 @@ ChaCha20-Poly 1305 Snd Rcv
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 2024
 But: ChaCha20-Poly1305 And EtM Are Popular
 AE Mode Preferred Supported
 ChaCha20-Poly 1305 8,739k 57.64% 10,247k 67.58%
-CTR-EaM 3,964k 26.14%  4,200k 27.70%
+CTR-EaM 3,964k 26.14% 4,200k 27.70%
 GCM 1,219k 8.04% 10,450k 68.92%
 CTR-EtM 828k 5.46% 10,685k 70.46%
-CBC-EaM 359k =. 2.37% = 1,585k_ =10.46%
-CBC-EtM 14k =©0.09% = 2,614k 17.24%
-Other 2k =60.01% -
 Unknown / No KEXINIT 36k = 0.24% -
 Total 15,164k 100%
 ```
@@ -583,11 +583,11 @@ Thanks to all involved parties for the smooth responsible disclosure process!
 
 <u>https://terrapin-attack.com/</u>
 
-```
+\```
 E-Mail:      fabian.baeumer@rub.de
 X (formerlyTwitter):              @TrueSkrillor
 Mastodon: @Skrillor@infosec.exchange
-```
+\```
 
 #BHUSA @BlackHatEvents
 

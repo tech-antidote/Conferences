@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Shane Steiger&Maretta Morovitz_If the Adversary Lives Off Your Land, So Should You.pdf"
 pages: 67
 sha256: "ad25f41426d04e4c1aa0b58e934bbd073e879e30d0f9766148028340f74d6ea7"
-text_chars: 22038
-ocr_pages: 1
-has_ocr: true
+text_chars: 21736
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:26Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T05:42:40Z"
 ---
 # If the Adversary Lives Off Your Land, So Should You
 
 **Speakers:** Shane Steiger, Maretta Morovitz  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shane Steiger&Maretta Morovitz_If the Adversary Lives Off Your Land, So Should You.pdf` (67 pages)
+
 
 ## Slide 1
 

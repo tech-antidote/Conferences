@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Baptiste David&Tillmann Oßwald_Windows Hell No for Business.pdf"
 pages: 151
 sha256: "f74051c9a216f98c3e77a8a2591aa1b13f4b5ed1c57686ff0cd3475526872128"
-text_chars: 55871
-ocr_pages: 33
+text_chars: 46986
+ocr_pages: 27
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.6
+ocr_unreliable_blocks: 4
+vision_verified_blocks: 5
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:52:51Z"
+converted_at: "2026-08-12T05:08:59Z"
 ---
 # Windows Hell No for Business
 
 **Speakers:** Baptiste David, Tillmann Oßwald  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Baptiste David&Tillmann Oßwald_Windows Hell No for Business.pdf` (151 pages)
+
 
 ## Slide 1
 
@@ -30,10 +36,10 @@ Dr Baptiste David    Tillmann Oßwald <u>bdavid@ernw.de tosswald@ernw.de</u>
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS Sr JZ
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Windows Hell No for Business
@@ -131,15 +137,12 @@ As a whole
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 ® ®
-wT
 Windows Hello
-6:30"
 Thursday, July 30 *
 2025 6
 ```
@@ -170,17 +173,13 @@ Thursday, July 30 *
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat \,, SS ee
 BRIEFINGS = Wa \
-y)
-y
 ij
-Y
 Windows Hello for Business — Enrollment
-O
 ```
 
 ## Slide 9
@@ -192,20 +191,6 @@ User ID Key
 2025
 
 8
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat \,, SS ee
-BRIEFINGS = Wa \
-y)
-y
-ij
-Y
-Windows Hello for Business — Enrollment
-O
-[
-```
 
 ## Slide 10
 
@@ -254,10 +239,10 @@ Software TPM storage
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat \,, SS ee
 BRIEFINGS = Uf \
 Windows Hello for Business
 ```
@@ -397,26 +382,6 @@ Gesture
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-Biometric
-Templates
-Windows Hello
-ee
-4
-QC Cm
-Windows Hello for Business
-Protector Key
-( Tf,
-Authentication
-Key
-AF
-¢
-```
-
 ## Slide 22
 
 #### Windows Hello for Business
@@ -504,12 +469,10 @@ Internals
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Windows Hello
 ¢ Simplified view
 ```
@@ -524,17 +487,13 @@ Windows Hello
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Windows Hello
 ¢ Simplified view
 Be
-noD
-DW
 ```
 
 ## Slide 29
@@ -1064,13 +1023,6 @@ RegisterServiceCtrlHandlerExW
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“srcrincs, Windows Biometric Service — Initialization
-\_ —
-```
-
 ## Slide 51
 
 #### Windows Biometric Service – Initialization
@@ -1355,38 +1307,21 @@ CBootstrapBsp::Create
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-gQ
-black hat
-BRIEFINGS
-vw WhioSrve
 Databases
-{51F39552-1075-4199-B513-0C10E4185DB0}
-{A6147480-6A54-4036-A0EF-B150B3545827}
-{DC576DA6-D676-4415-906D-COCEAF949543}
 Parameters
 Security
 v Service Providers
 iv Bootstrap
-: Global Configurations
 v Virtual Sensors
-~ | | {0527b250-7514-4321-8b68-41c65956998}
-v Configurations
 v FacialFeatures
-: Global Configurations
-Virtual Sensors
 vw Fingerprint
-: Global Configurations
-Virtual Sensors
 vw Iris
-Global Configurations
-Virtual Sensors
 vw Voice
-: Global Configurations
 v Virtual Sensors
-~ | | {F25AB442-593A-4489-BOFF-8144BEAS1E15}
 / Configurations
 ```
 
@@ -1398,75 +1333,75 @@ v Virtual Sensors
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-BRIEFINGS
-we
-2)
-WhioSrvc
-he
-Databases
-{51F39552-1075-4199-B513-0C10EA185DB0}
-{A61A7480-6454-4D36-A0EF-B150B8545227}
-{DC576DA6-D676-4415-906D-COCEAF949543}
-we
-Parameters
-Security
-Service Providers
-Bootstrap
-: Global Configurations
-v Virtual Sensors
-v || (0527b250-7514-4321-8b68-41c65f956998}
-v Configurations
-LL) 0
-FacialFeatures
-Global Configurations
-Virtual Sensors
-Fingerprint
-Global Configurations
-Virtual Sensors
-Iris
-Global Configurations
-Virtual Sensors
-Voice
-: Global Configurations
-v Virtual Sensors
-v || (F25,AB4A2-5934-4489-B9FF-8144BEA81E15}
-v Configurations
-B ]
-2025
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
-Windows Biomesric Serviee — Config
-wbengine
-WhioSrve
-Databases
-{51F39552-1075-4199-B513-0C10EA185DB0}
-{A61A7480-6A54-4D36-AOEF-B150B8545827}
-{DC576DA6-D676-4A15-906D-COCEAF949543}
-Parameters
-Security
-Service Providers
-Tiggerinfo
-wep!
-Type
-REG SZ
-REG_DWORD
-REG_DWORD
-REG_DWORD
-Data
-(value not set)
-0x00000001 (1)
-0x00000001 (1)
-000000000 (0)
-REG_DWORD
-0x00000002 (2)
-2b] ConnectionString REG SZ
-| ab) FilePath REG_SZ CAWINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAF949543,DAT
-ab) Format REG_SZ ‘SB3FBAS4- ‘40CT-8822-2EFCOA255F78
-#9) InitialSize REG_DWORD 0x00000020 (32)
-13
+Windows Biometric Service – Configuration
+
+Left panel (registry tree, regedit screenshot):
+∨ WbioSrvc
+  ∨ Databases
+      {51F39552-1075-4199-B513-0C10EA185DB0}
+      {A61A7480-6A54-4D36-A0EF-B150B8545827}
+      {DC576DA6-D676-4A15-906D-C0CEAF949543}
+    Parameters
+    Security
+  ∨ Service Providers
+    ∨ Bootstrap
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {0527b250-7514-4321-8b68-41c65f956998}
+          ∨ Configurations
+              0
+    ∨ FacialFeatures
+        Global Configurations
+        Virtual Sensors
+    ∨ Fingerprint
+        Global Configurations
+        Virtual Sensors
+    ∨ Iris
+        Global Configurations
+        Virtual Sensors
+    ∨ Voice
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {F25AB4A2-593A-4A89-B9FF-8144BEA81E15}
+          ∨ Configurations
+              0
+
+Right panel (regedit screenshot):
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-C0CEAF949543}
+
+Left pane (registry tree):
+    wbengine
+  ∨ WbioSrvc
+    ∨ Databases
+        {51F39552-1075-4199-B513-0C10EA185DB0}
+        {A61A7480-6A54-4D36-A0EF-B150B8545827}
+        {DC576DA6-D676-4A15-906D-C0CEAF949543}   (selected)
+      Parameters
+      Security
+    > Service Providers
+    > TriggerInfo
+      WBDI
+
+Right pane (values):
+| Name | Type | Data |
+| (Default) | REG_SZ | (value not set) |
+| Attributes | REG_DWORD | 0x00000001 (1) |
+| AutoCreate | REG_DWORD | 0x00000001 (1) |
+| AutoName | REG_DWORD | 0x00000000 (0) |
+| BiometricType | REG_DWORD | 0x00000002 (2) |
+| ConnectionString | REG_SZ | |
+| FilePath | REG_SZ | C:\WINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-C0CEAF949543.DAT |
+| Format | REG_SZ | 5B3FBA54-792B-40C7-8822-2EFC0A255F78 |
+| InitialSize | REG_DWORD | 0x00000020 (32) |
+
+(Red annotation boxes highlight the three Databases GUID subkeys in both trees, and in the
+right pane the BiometricType row and the FilePath row.)
+
+2025    13
 ```
 
 ## Slide 65
@@ -1477,43 +1412,74 @@ ab) Format REG_SZ ‘SB3FBAS4- ‘40CT-8822-2EFCOA255F78
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-plsgianes, Windows Biometric Service — Configus
-NbioSr
-v - WhioSrvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A 15-906D-COCEAF949543}
-v Databases wbengine A || Name Type Data
-a nav oo Amica 5 ¥ || WhioSrve ay :
-{51F39552-1075-4199-B513-0C10E4185DB0} © |) Databas (Cefault) REG_SZ (value not set)
-AB AT: A A + {51F39552-1075-4199-B513-0C10EA185DB0} REG_DWORD 00000001 (1)
-{A6147480-6A54-4036-A0EF-B150B3545827} {A61A7s00-6AS4-4D36-AOEF-B150B8545827) RE6_DWORD oxooot0n oD)
-{DC576DA6-D676-4415-906D-COCEAF949543} {DC576DA6-D676-4A15-906D-COCEAF949543} eeu oe)
-Parameters REG_DWORD 000000002 (2)
-Parameters Security ab] ConnectionString REG_SZ
-5 ity Service Providers ab) FilePath REG_SZ : SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAF949543, DAT
-ecurity Triggerinfo @>)Format REG_SZ SB3FBA: B-40C7-8822-2EFCOA255F78
-vw Service Providers WeDI 28] InitialSize REG_DWORD 000000020 (32)
-Bootstrap
-Global Configurations
-Virtual Sensors
-w | (0527b250-7514-4321-8b68-41c65f956998}
-vw Configurations
-v FacialFeatures
-Global Configurations
-Virtual Sensors
-vw Fingerprint
-Global Configurations
-Virtual Sensors
-vw Iris
-: Global Configurations
-Virtual Sensors
-vw Voice
-Global Configurations
-Virtual Sensors
-w  {FA5AB4A2-593A-4489-BOFF-8144BEAS1E15}
-v Configurations
-2025 13
+Windows Biometric Service – Configuration
+
+Left panel (registry tree, regedit screenshot):
+∨ WbioSrvc
+  ∨ Databases
+      {51F39552-1075-4199-B513-0C10EA185DB0}
+      {A61A7480-6A54-4D36-A0EF-B150B8545827}
+      {DC576DA6-D676-4A15-906D-C0CEAF949543}
+    Parameters
+    Security
+  ∨ Service Providers
+    ∨ Bootstrap
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {0527b250-7514-4321-8b68-41c65f956998}
+          ∨ Configurations
+              0
+    ∨ FacialFeatures
+        Global Configurations
+        Virtual Sensors
+    ∨ Fingerprint
+        Global Configurations
+        Virtual Sensors
+    ∨ Iris
+        Global Configurations
+        Virtual Sensors
+    ∨ Voice
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {F25AB4A2-593A-4A89-B9FF-8144BEA81E15}
+          ∨ Configurations
+              0
+
+Right panel (regedit screenshot):
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-C0CEAF949543}
+
+Left pane (registry tree):
+    wbengine
+  ∨ WbioSrvc
+    ∨ Databases
+        {51F39552-1075-4199-B513-0C10EA185DB0}
+        {A61A7480-6A54-4D36-A0EF-B150B8545827}
+        {DC576DA6-D676-4A15-906D-C0CEAF949543}   (selected)
+      Parameters
+      Security
+    > Service Providers
+    > TriggerInfo
+      WBDI
+
+Right pane (values):
+| Name | Type | Data |
+| (Default) | REG_SZ | (value not set) |
+| Attributes | REG_DWORD | 0x00000001 (1) |
+| AutoCreate | REG_DWORD | 0x00000001 (1) |
+| AutoName | REG_DWORD | 0x00000000 (0) |
+| BiometricType | REG_DWORD | 0x00000002 (2) |
+| ConnectionString | REG_SZ | |
+| FilePath | REG_SZ | C:\WINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-C0CEAF949543.DAT |
+| Format | REG_SZ | 5B3FBA54-792B-40C7-8822-2EFC0A255F78 |
+| InitialSize | REG_DWORD | 0x00000020 (32) |
+
+(No annotation marks on this slide.)
+
+2025    13
 ```
 
 ## Slide 66
@@ -1524,51 +1490,75 @@ v Configurations
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-plesisinces, Windows Biometric Serviee — Configuration
-¥ ’ Wb Io Srvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\ Databases\{DC576DA6-D676-4A 15-906D-COCEAF949543}
-vw Databases wbengine a Type Data
-||| {51F39552-1075-4199-B513-0C10EA185DB0 oa eats REG Sz (ualue not set
-{ -1075- + a t v | | Databases
-7 7 REG_DWORD 000000001 (1)
-{51F39552-1075-4199-B513-0C10EA185DB0}
-{A61A7480-6454-4D36-A0EF-B150B8545827}
-{DC576DA6-D676-4415-906D-COCEAF949543}
-{A61A7480-6A54-4D36-AOEF-B150B8545827}
-{DC576DA6-D676-4A15-906D-COCEAF949543}
-REG_DWORD
-REG_DWORD
-0x00000001 (1)
-0x00000000 (0)
-Pasametess REG_DWORD 0x00000002 (2)
-Parameters Security ab] ConnectionString REG_SZ
-A Service Providers ab) FilePath REG_SZ CAWINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAFS49543.DAT
-Security Triggerinfo 2b) Format REG_SZ SB3FBAS4- 40CT-8822-2EFCOA255F78
-we Service Providers WeDI 28] InitialSize REG_DWORD 000000020 (32)
-iv Bootstrap
-: Global Configurations
-v Virtual Sensors
-~ | | {0527b250-7514-4321-8b68-41c65956998}
-v Configurations
-an)
-v FacialFeatures
-Global Configurations
-Virtual Sensors
-vw Fingerprint
-Global Configurations
-Virtual Sensors
-w Iri
-Global Configurations
-Virtual Sensors
-¥ || Voice
-: Global Configurations
-v Virtual Sensors
-~ | | {F25AB442-593A4-4489-BOFF-8144BEAS1E15
-v Configurations
-p ]
-2025 13
+Windows Biometric Service – Configuration
+
+Left panel (registry tree, regedit screenshot):
+∨ WbioSrvc
+  ∨ Databases
+      {51F39552-1075-4199-B513-0C10EA185DB0}
+      {A61A7480-6A54-4D36-A0EF-B150B8545827}
+      {DC576DA6-D676-4A15-906D-C0CEAF949543}
+    Parameters
+    Security
+  ∨ Service Providers
+    ∨ Bootstrap
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {0527b250-7514-4321-8b68-41c65f956998}
+          ∨ Configurations
+              0
+    ∨ FacialFeatures
+        Global Configurations
+        Virtual Sensors
+    ∨ Fingerprint
+        Global Configurations
+        Virtual Sensors
+    ∨ Iris
+        Global Configurations
+        Virtual Sensors
+    ∨ Voice
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {F25AB4A2-593A-4A89-B9FF-8144BEA81E15}
+          ∨ Configurations
+              0
+
+Right panel (regedit screenshot):
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-C0CEAF949543}
+
+Left pane (registry tree):
+    wbengine
+  ∨ WbioSrvc
+    ∨ Databases
+        {51F39552-1075-4199-B513-0C10EA185DB0}
+        {A61A7480-6A54-4D36-A0EF-B150B8545827}
+        {DC576DA6-D676-4A15-906D-C0CEAF949543}   (selected)
+      Parameters
+      Security
+    > Service Providers
+    > TriggerInfo
+      WBDI
+
+Right pane (values):
+| Name | Type | Data |
+| (Default) | REG_SZ | (value not set) |
+| Attributes | REG_DWORD | 0x00000001 (1) |
+| AutoCreate | REG_DWORD | 0x00000001 (1) |
+| AutoName | REG_DWORD | 0x00000000 (0) |
+| BiometricType | REG_DWORD | 0x00000002 (2) |
+| ConnectionString | REG_SZ | |
+| FilePath | REG_SZ | C:\WINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-C0CEAF949543.DAT |
+| Format | REG_SZ | 5B3FBA54-792B-40C7-8822-2EFC0A255F78 |
+| InitialSize | REG_DWORD | 0x00000020 (32) |
+
+(A red annotation box encloses the whole "Service Providers" subtree in the left panel, and
+the modality names Bootstrap, FacialFeatures, Fingerprint, Iris and Voice are underlined in red.)
+
+2025    13
 ```
 
 ## Slide 67
@@ -1579,45 +1569,77 @@ p ]
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-plesisinces, Windows Biometric Serviee — Configuration
-v _, WhioSrvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
-v Databases wbengine a Type Data
-i ri v Eh Whiosive REG_SZ (value not set)
-{51F39552-1075-4199-B513-0C10E4185DB0} \ | | Databases - Walue ny
-{51F39552-1075-4199-B513-0C10EA185DB0} REG_PWORD ox00000001 (1)
-7480- : - 2 7 )$52-1075-4199-B513-0C 10 A "
-{AG1A7AGD-GA34-4D36- ADEF-B130B8458271 (AGG 8484-4036 AOE 81562845827 REG.DWORD cout)
-{DC576DA6-D676-4.415-906D-COCEAF949543} {DC576DA6-D676-4A15-906D-COCEAFS49543} REG_DW 10000000 (0)
-Parameters REG_DWORD 00000002 (2)
-Parameters Security ab] ConnectionString REG_SZ
-Security Service Providers 28)FilePath REG SZ CAWINDOWS\SYSTEM32\WINBIODATABASE\DCS76DA6-D676-4A15-906D-COCEAF949543,DAT
-Tiggerinfo 28) Format REG_SZ 5B3FBAS4-792B-40C7-8822-2EFCOA2SSF78
-w | | Service Providers weol 8) nitialSize REG_DWORD 00000020 (32)
-iw Bootstrap
-Global C
-v Virtual Senso
-w | (0527b250-75™.4321-8b68-41c65F956998}
-vw Configurations
-=| 10
-vw FacialFeatures
-Global Configurations
-Virtual Sensors
-v Fingerprint
-Global Configurations
-Virtual Sensors
-vw Iris
-Global Configurations
-Virtual Sensors
-vw Voice
-: Global Configurations
-v Virtual Sensors
-~ | | {F25AB442-593A-4489-BOFF-8144BEAS1E15}
-v Configurations
-B ]
-2025 13
+Windows Biometric Service – Configuration
+
+Left panel (registry tree, regedit screenshot):
+∨ WbioSrvc
+  ∨ Databases
+      {51F39552-1075-4199-B513-0C10EA185DB0}
+      {A61A7480-6A54-4D36-A0EF-B150B8545827}
+      {DC576DA6-D676-4A15-906D-C0CEAF949543}
+    Parameters
+    Security
+  ∨ Service Providers
+    ∨ Bootstrap
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {0527b250-7514-4321-8b68-41c65f956998}
+          ∨ Configurations
+              0
+    ∨ FacialFeatures
+        Global Configurations
+        Virtual Sensors
+    ∨ Fingerprint
+        Global Configurations
+        Virtual Sensors
+    ∨ Iris
+        Global Configurations
+        Virtual Sensors
+    ∨ Voice
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {F25AB4A2-593A-4A89-B9FF-8144BEA81E15}
+          ∨ Configurations
+              0
+
+Right panel (regedit screenshot):
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-C0CEAF949543}
+
+Left pane (registry tree):
+    wbengine
+  ∨ WbioSrvc
+    ∨ Databases
+        {51F39552-1075-4199-B513-0C10EA185DB0}
+        {A61A7480-6A54-4D36-A0EF-B150B8545827}
+        {DC576DA6-D676-4A15-906D-C0CEAF949543}   (selected)
+      Parameters
+      Security
+    > Service Providers
+    > TriggerInfo
+      WBDI
+
+Right pane (values):
+| Name | Type | Data |
+| (Default) | REG_SZ | (value not set) |
+| Attributes | REG_DWORD | 0x00000001 (1) |
+| AutoCreate | REG_DWORD | 0x00000001 (1) |
+| AutoName | REG_DWORD | 0x00000000 (0) |
+| BiometricType | REG_DWORD | 0x00000002 (2) |
+| ConnectionString | REG_SZ | |
+| FilePath | REG_SZ | C:\WINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-C0CEAF949543.DAT |
+| Format | REG_SZ | 5B3FBA54-792B-40C7-8822-2EFC0A255F78 |
+| InitialSize | REG_DWORD | 0x00000020 (32) |
+
+(Red annotation: one box around the Bootstrap subtree (Global Configurations, Virtual Sensors,
+{0527b250-7514-4321-8b68-41c65f956998}, Configurations, 0), a second box around the
+FacialFeatures subtree (Global Configurations, Virtual Sensors), and a hand-drawn arrow/loop
+running from the FacialFeatures box up to the Bootstrap box.)
+
+2025    13
 ```
 
 ## Slide 68
@@ -1628,43 +1650,74 @@ B ]
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-plsgianes, Windows Biometric Service — Configus
-NbioSr
-v - WhioSrvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A 15-906D-COCEAF949543}
-v Databases wbengine A || Name Type Data
-a nav oo Amica 5 ¥ || WhioSrve ay :
-{51F39552-1075-4199-B513-0C10E4185DB0} © |) Databas (Cefault) REG_SZ (value not set)
-AB AT: A A + {51F39552-1075-4199-B513-0C10EA185DB0} REG_DWORD 00000001 (1)
-{A6147480-6A54-4036-A0EF-B150B3545827} {A61A7s00-6AS4-4D36-AOEF-B150B8545827) RE6_DWORD oxooot0n oD)
-{DC576DA6-D676-4415-906D-COCEAF949543} {DC576DA6-D676-4A15-906D-COCEAF949543} eeu oe)
-Parameters REG_DWORD 000000002 (2)
-Parameters Security ab] ConnectionString REG_SZ
-5 ity Service Providers ab) FilePath REG_SZ : SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAF949543, DAT
-ecurity Triggerinfo @>)Format REG_SZ SB3FBA: B-40C7-8822-2EFCOA255F78
-vw Service Providers WeDI 28] InitialSize REG_DWORD 000000020 (32)
-Bootstrap
-Global Configurations
-Virtual Sensors
-w | (0527b250-7514-4321-8b68-41c65f956998}
-vw Configurations
-v FacialFeatures
-Global Configurations
-Virtual Sensors
-vw Fingerprint
-Global Configurations
-Virtual Sensors
-vw Iris
-: Global Configurations
-Virtual Sensors
-vw Voice
-Global Configurations
-Virtual Sensors
-w  {FA5AB4A2-593A-4489-BOFF-8144BEAS1E15}
-v Configurations
-2025 13
+Windows Biometric Service – Configuration
+
+Left panel (registry tree, regedit screenshot):
+∨ WbioSrvc
+  ∨ Databases
+      {51F39552-1075-4199-B513-0C10EA185DB0}
+      {A61A7480-6A54-4D36-A0EF-B150B8545827}
+      {DC576DA6-D676-4A15-906D-C0CEAF949543}
+    Parameters
+    Security
+  ∨ Service Providers
+    ∨ Bootstrap
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {0527b250-7514-4321-8b68-41c65f956998}
+          ∨ Configurations
+              0
+    ∨ FacialFeatures
+        Global Configurations
+        Virtual Sensors
+    ∨ Fingerprint
+        Global Configurations
+        Virtual Sensors
+    ∨ Iris
+        Global Configurations
+        Virtual Sensors
+    ∨ Voice
+        Global Configurations
+      ∨ Virtual Sensors
+        ∨ {F25AB4A2-593A-4A89-B9FF-8144BEA81E15}
+          ∨ Configurations
+              0
+
+Right panel (regedit screenshot):
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-C0CEAF949543}
+
+Left pane (registry tree):
+    wbengine
+  ∨ WbioSrvc
+    ∨ Databases
+        {51F39552-1075-4199-B513-0C10EA185DB0}
+        {A61A7480-6A54-4D36-A0EF-B150B8545827}
+        {DC576DA6-D676-4A15-906D-C0CEAF949543}   (selected)
+      Parameters
+      Security
+    > Service Providers
+    > TriggerInfo
+      WBDI
+
+Right pane (values):
+| Name | Type | Data |
+| (Default) | REG_SZ | (value not set) |
+| Attributes | REG_DWORD | 0x00000001 (1) |
+| AutoCreate | REG_DWORD | 0x00000001 (1) |
+| AutoName | REG_DWORD | 0x00000000 (0) |
+| BiometricType | REG_DWORD | 0x00000002 (2) |
+| ConnectionString | REG_SZ | |
+| FilePath | REG_SZ | C:\WINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-C0CEAF949543.DAT |
+| Format | REG_SZ | 5B3FBA54-792B-40C7-8822-2EFC0A255F78 |
+| InitialSize | REG_DWORD | 0x00000020 (32) |
+
+(No annotation marks on this slide.)
+
+2025    13
 ```
 
 ## Slide 69
@@ -1675,25 +1728,17 @@ v Configurations
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 blsgisncs, Windows Biometric Serviee — Configy
-v _ WbioSrvc HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ Services\WbioSrvc\Databases\{DC576DA6-D676-415-906D-COCEAF949543}
 v Databases wbengine A || Name Type Data
-Y | WhioSrve ( 6
-{51F39552-1075-4199-B513-0C10E4185DB0} v Databases 221 Default) REG_SZ (value not set)
-{A61A7480-6454-4D36-A0EF-B150B8545927} {51F39552-1075-4199-B513-0C10EA185DB0} REG-DWORD ox00000001 (1)
-' ' {A61A7420-6A54-4D36-ADEF-B150B8545827} vce pawn Sonoo0s ®
-5 _NG7E-. 7 . peainteeeitenilts EG | 0 (0)
 {DC576DA6-D676-4415-906D-COCEAF949543} =) esTeDAs D676-4A15-906D-COCEAFS49543} REG_DWORD 0x00000002 (2)
 Parameters Security ab] ConnectionString REG_SZ
 Security Service Providers 28) FilePath REG SZ C:AWINDOWS\SYSTEM32\WINBIODATABASE\DCS76DA6-D676-4A15-906D-COCEAF949543,DAT
-Tiggerinfo 2b) Format REG SZ 5B3FBAS4-792B-40C7-2822-2EFCOA2SSF78
 vw Service Providers WeDI #8) InitialSize REG_DWORD 000000020 (32)
 Bootstrap
-Global Configurations HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\ Service Providers\Bootstrap\ Virtual Sensors\{0527b250- 7514-4321 -8b68-41c65f956998}
 Virtual 5
 hua) 2eneere Parameters “|| Name Type Data
 {0527b250-7514-4321-8b68-41 65956998) | Security
@@ -1707,16 +1752,8 @@ Virtual § q {0527b250-7514-4321-8b68-41c65¢956998} } ~ ModelName REG_SZ Window
 i ua ensors Vv Configurations >| SerialNumber REG SZ 000000000
 v Fingerprint 0 io] SubType REG_DWORD 0x00000000 (0)
 Global Configurations v ) FacialFeatures #8) Version REG_QWORD 0x200000001000000 (144115188092633088)
-Virtual Sensors
 vw Iris
-Global Configurations
-Virtual Sensors
 vw Voice
-Global Configurations
-Virtual Sensors
-vw {F25AB4A2-5934-44.89-BOFF-8144BEA81E15}
-v Configurations
-LL] 0
 2025 13
 ```
 
@@ -1728,58 +1765,31 @@ LL] 0
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-we
-2)
-BRIEFINGS
-WhioSrve
 v Databases
-{51F39552-1075-4199-B513-0C10E4185DB0}
-{A6147480-6A54-4036-A0EF-B150B3545827}
-{DC576DA6-D676-4415-906D-COCEAF949543}
 Parameters
 Security
 v Service Providers
 oy Bootstrap
-Global Configurations
-Virtual Sensors
-v {0527b250-7514-4321-8b68-41 65956998}
-7 ontigurations
 : 0
 vw FacialFeatures
-Global Configurations
-Virtual Sensors
 vw Fingerprint
-Global Configurations
-Virtual Sensors
 vw Iris
-: Global Configurations
-Virtual Sensors
 vw Voice
-Global Configurations
-Virtual Sensors
-w  {FA5AB4A2-593A-4489-BOFF-8144BEAS1E15}
-v Configurations
 2025
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
 Windows Biometric Serviee — Config
 wbengine Al] Name
-¥ || WhioSrve
-vy __ Databases
 {51F39552-1075-4199-B513-0C10EA185DB0}
 {A6
-ab (Default)
-'1A7480-6A54-4D36-ADEF-B150B8545827}
 {DC576DA6-D676-4A15-906D-COCEAF949543}
-8) BiometricType
 Parameters
 Security ab] Connectionstring
 Service Providers ab) FilePath
 Tiggerinfo ab) Format
-wep! 3) nitialSize
 Type
 REG_SZ
 REG_DWORD
@@ -1796,20 +1806,14 @@ Data
 000000001 (1)
 000000000 (0)
 000000002 (2)
-CAWINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAF949543,DAT
-5B3FBA54-792B-40C7-8822-2EFCOA255F78
 0x00000020 (32)
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\ Service Providers\Bootstrap\ Virtual Sensors\{0527b250-7514-4321-8b68-41c65f956998}
 v
 v
 Parameters
 Security
 Service Providers
 Bootstrap
-Global Configurations
 v Virtual Sensors
-v _ {0527b250-7514-4321-8b68-41c65f956998}
-v Configurations
 0
 FacialFeatures
 a
@@ -1821,7 +1825,6 @@ ab) Manufacturer
 ab| ModelName
 ab) SerialNumber
 iis] SubType
-fro] Version
 Type
 REG_SZ
 REG_DWORD
@@ -1844,14 +1847,9 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Service Providers\
 v
 v
 Bootstrap
-Global Configurations
 v Virtual Sensors
-v |, {0527b250-7514-4321-8b68-41c65956998}
-v Configurations
 0
 FacialFeatures
-Global Configurations
-Virtual Sensors
 A
 Name Type Data
 ab} (Default) REG_SZ (value not set)
@@ -1874,59 +1872,29 @@ REG_DWORD
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-we
-2)
-BRIEFINGS
-WhioSrve
 v Databases
-{51F39552-1075-4199-B513-0C10E4185DB0}
-{A6147480-6A54-4036-A0EF-B150B3545827}
-{DC576DA6-D676-4415-906D-COCEAF949543}
 Parameters
 Security
 v Service Providers
 oy Bootstrap
-Global Configurations
-Virtual Sensors
-v {0527b250-7514-4321-8b68-41 65956998}
-v Configurations
-: {10
 vw FacialFeatures
-Global Configurations
-Virtual Sensors
 vw Fingerprint
-Global Configurations
-Virtual Sensors
 vw Iris
-: Global Configurations
-Virtual Sensors
 vw Voice
-Global Configurations
-Virtual Sensors
-w  {FA5AB4A2-593A-4489-BOFF-8144BEAS1E15}
-v Configurations
-: ]
 2025
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Databases\{DC576DA6-D676-4A15-906D-COCEAF949543}
 Windows Biomewric Serviee — Conf
 wbengine
-Y | WhioSrve
 ¥ | | Databases
-{51F39552-1075-4199-B513-0C10EA185DB0}
-{A61A7420-6A54-4D36-ADEF-B150B8545827}
-{DC576DA6-D676-4A15-906D-COCEAF949543}
 Name
-ab {(Default)
-8) BiometricType
 Parameters
 Security ab] Connectionstring
 Service Providers ab) FilePath
 Tiggerinfo ab) Format
-wep! 3) nitialSize
 Type
 REG_SZ
 REG_DWORD
@@ -1943,20 +1911,14 @@ Data
 000000001 (1)
 000000000 (0)
 000000002 (2)
-CAWINDOWS\SYSTEM32\WINBIODATABASE\DC576DA6-D676-4A15-906D-COCEAF949543,DAT
-5B3FBA54-792B-40C7-8822-2EFCOA255F78
 0x00000020 (32)
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\ Service Providers\Bootstrap\ Virtual Sensors\{0527b250-7514-4321-8b68-41c65f956998}
 v
 v
 Parameters
 Security
 Service Providers
 Bootstrap
-Global Configurations
 v Virtual Sensors
-v _ {0527b250-7514-4321-8b68-41c65f956998}
-v Configurations
 0
 FacialFeatures
 a
@@ -1968,7 +1930,6 @@ ab) Manufacturer
 ab| ModelName
 ab) SerialNumber
 iis] SubType
-fro] Version
 Type
 REG_SZ
 REG_DWORD
@@ -1991,18 +1952,12 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\Service Providers\
 v
 v
 Bootstrap
-Global Configurations
 v Virtual Sensors
-v |, {0527b250-7514-4321-8b68-41c65956998}
-v Configurations
 0
 FacialFeatures
-Global Configurations
-Virtual Sensors
 A
 Name
 ab} (Default)
-ab) Databaseld
 ab) EngineAdapterBinary
 ab| SensorAdapterBinary
 iro] SensorMode
@@ -2037,12 +1992,10 @@ Windows Biometric Service
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Biometric Unit
 Windows Biometric
 Service
@@ -2087,18 +2040,6 @@ Service
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-7 Beh) 205
-Sensor Engine Storage
-rene | — reine co
-Windows Biometric
-Service
-```
-
 ## Slide 76
 
 #### Biometric Unit
@@ -2111,17 +2052,6 @@ Service
 2025
 
 14
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-Sensor Engine Storage
-rene | — reine co
-Windows Biometric
-Service
-```
 
 ## Slide 77
 
@@ -2189,12 +2119,10 @@ WinBio API
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Enhanced Sign-in Security (ESS)
 <5 Logonul / CredUI
 C WinBio API +)
@@ -2210,17 +2138,6 @@ WinBio API
 2025
 
 15
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-Enhanced Sign-in Security (ESS)
-<5 Logonul / CredUI
-J
-```
 
 ## Slide 83
 
@@ -2482,17 +2399,13 @@ Hypervisor boundary
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Enhanced Sign-in Security (ESS)
-Se x
 General Driver Details Events
 q PC camera
-b)
 Property
 Capabilities v
 Value
@@ -2809,12 +2722,10 @@ Objects & Resources release
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 ¢ Presence Monitor Update Procedure
 ```
 
@@ -2924,19 +2835,14 @@ Cryptographic procedure Hash
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Traditional Auth management
-&
-)
 AUTH Procedure
 Certificate
 Password
-t
 Cryptographic procedure
 2025 20
 ```
@@ -2955,18 +2861,14 @@ Cryptographic procedure Hash
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Traditional Auth management
-&
 AUTH Procedure
 Certificate
 Password
-t
 Cryptographic procedure
 2025 20
 ```
@@ -2985,21 +2887,16 @@ Cryptographic procedure Hash
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Traditional Auth management
-.
 AUTH Procedure
 Certificate
 Password
-iN)
 Cryptographic procedure
 2025 20
-t
 ```
 
 ## Slide 116
@@ -3232,12 +3129,10 @@ Let’s have a look inside
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Database
 ¢ Let’s start with Microsoft’s FAQ.
 ¢ And some documentation ... @)
@@ -3257,12 +3152,10 @@ Database
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Database
 ¢ Let’s start with Microsoft’s FAQ.
 ¢ And some documentation ... ©)
@@ -3281,14 +3174,12 @@ has access to it.
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Database
 Biometric data storage
-* Let’s start witl
 The biometric data used to support Windows Hello is stored on the local device only. It doesn’t roam and is never sent
 to external devices or servers. This separation helps to stop potential attackers by providing no single collection point
 An d some d OC that an attacker could potentially compromise to steal biometric data. Even if an attacker could obtain the biometric data
@@ -3439,9 +3330,9 @@ Encrypted template
 
 #### Database Format
 
-```
+\```
 struct_LOCK_BOX_RECORD_HEADER
-```
+\```
 
 2025
 
@@ -3613,25 +3504,19 @@ End of the procedure
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Demo — Decrypting the encrypted header
-Administrate IDO}
-c: \Windows\System32>C:\Users\user\source\repos \ConsoleApp1\ConsoleAppi1\bin\Debug\nets’.@\ConsoleAppl.exe C:\Users\user\D
 =sktop\DC576DA6-D676-4415-966D-COCEAF949543 . DAT
 calculated Hash:
-JOFSA899423F 340FA946483132EDCA2DF1778484FA19E87 E69DEASBSCCA24 8B?
 [INFO] Hashes match proceeding
 LockBoxProtectedData {
 HeaderkeyDataBlob: dwMaginc: 4D42444B, dwVersion: 1, cbKeySize: 32
-KeyDataBlob: 6981B16BC6D73DC16E84B2D692F 388146002 30790622DF767EB4185A67Ce4C 9688888888888 RRRRRRRRRRRRR00000008
 Alignment: @
 SizeHash: 32
 SizeKkey: 16
-HashDigest: 9@F54899423F34DFA9A6A83132EDCA2DF1778484FA19E87 E69DEASB8CCA248B2
-Key: 85F412B222F21BCDE@8B34083AA01F14
-}
 LockBoxFileHeader {
 GuidDatabase: dicaed46-Sb8d-4e7c-8aGe-34bcac166281
 Version: 2
@@ -3646,24 +3531,15 @@ DatabaseID: dc5/6da6-d676-4a15-966d-c@ceaf949543
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat Demo Time.
-BRIEFINGS
 2025
-LETS\PRAY
-a
 —
 =
 a
-a
-a
-si THEMEN
-- i
-—_
-hy aS
-erator ee
 30
 ```
 

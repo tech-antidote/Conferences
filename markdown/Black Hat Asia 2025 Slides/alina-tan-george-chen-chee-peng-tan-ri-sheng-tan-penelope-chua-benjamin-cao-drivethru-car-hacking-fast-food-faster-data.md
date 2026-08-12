@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Alina Tan & George Chen & Chee Peng Tan & Ri-Sheng Tan & Penelope Chua & Benjamin Cao_DriveThru Car Hacking Fast Food, Faster Data Breach.pdf"
 pages: 43
 sha256: "da63743605dc95aa9de418347fe53c70a60e841e2f3786e8422fc5ccf71c256e"
-text_chars: 19131
+text_chars: 19038
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:03:08Z"
+converted_at: "2026-08-12T03:51:19Z"
 ---
 # DriveThru Car Hacking Fast Food, Faster Data Breach
 
 **Speakers:** Alina Tan, George Chen, Chee Peng Tan, Ri-Sheng Tan, Penelope Chua, Benjamin Cao  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Alina Tan & George Chen & Chee Peng Tan & Ri-Sheng Tan & Penelope Chua & Benjamin Cao_DriveThru Car Hacking Fast Food, Faster Data Breach.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -513,10 +519,10 @@ Dump
 
 **1. Shazam** used to identify songs in audio
 
-```
+\```
 STICKY
 KISS OF LIFE
-```
+\```
 
 **2. OpenAI Whisper** used for transcription
 
@@ -540,15 +546,11 @@ Auth
 
 Discover Connect Bypass Mute Auth Dump Sabotage Extract #BHAS @BlackHatEventsProcess Insights
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-tee
-ASIA 2025 = i ae y |
 10. Insights
-wan
-aa 7774 TAN DAN
-Back | CAMERA: ixXxxx_xXS_20AC@2
 ty OVERALL INSIGHTS
 ~ Expansion into Europe scheduled for Q3. - New product line focusing on renewable energy. -
 Partnership discussions with top five tech firms. - Strategic investment in Ri-driven analytics. -

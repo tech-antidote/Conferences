@@ -12,7 +12,7 @@ duration_seconds: 1159
 words: 3596
 text_chars: 19845
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Mind the Data Voids - Hijacking Copilot Trust to Deliver C2 Instructions with MSFT Authority

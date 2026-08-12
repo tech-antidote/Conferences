@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Adam Shostack_Threat Modeling LLMs The PHANTOM-B model.pdf"
 pages: 59
 sha256: "61bb9f93a0218f3f2e7f02d14afcc49ee25ab20aa220df706175080b8e92632f"
-text_chars: 18235
-ocr_pages: 11
+text_chars: 17381
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:04:45Z"
+converted_at: "2026-08-12T05:27:08Z"
 ---
 # Threat Modeling LLMs The PHANTOM-B model
 
 **Speakers:** Adam Shostack  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Adam Shostack_Threat Modeling LLMs The PHANTOM-B model.pdf` (59 pages)
+
 
 ## Slide 1
 
@@ -41,14 +46,6 @@ Blackhat USA August 2026
 ## Slide 3
 
 The Emperor is most displeased with your lack of AI Progress
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-) ie
-Ta }
-THE EMPEROR IS MOST DISPLEASED WITH YOUR LACK OF Al PROGRESS
-```
 
 ## Slide 4
 
@@ -72,20 +69,17 @@ THE EMPEROR IS MOST DISPLEASED WITH YOUR LACK OF Al PROGRESS
 
 Don’t just understand security. Build it in.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SHOSTACK
 +ASSOCIATES
 Don’t just understand security.
 Build it in.
 About
 Ww
 UNIVERSITY of WASHINGTON
-es
-# threat
 modeling
-—_—_
 ```
 
 ## Slide 6
@@ -188,18 +182,15 @@ Threat modeling can drive risk management
 
 **13**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 hreat modeling can drive risk management
-peteeeeeneeseeeeeeaeeeeeeeseseeeeeeeesaeeaeuaeesseeseesaasaaaaaeassseseesaesaesaaaaeuaeusesasseesaasaesaauassesssesaesaasaaaaaaaseeseesaesaesaeaaeuacesesseeaeeaaaag  pasaaaaceaceesseseesaesaaeeuessceesaesaasacaaeeaeuesseeseesassaasaaeasaususeseeseesaesaaeasusesseeeeeey,
 ‘Threat Modeling Risk Management
 What can go Easily Nt
-wrong? | Addressed? o> > 2 Accept |
 Eliminate
 Transfer
-SHOSTACK 3
-+ ASSOCIATES
 ```
 
 ## Slide 14
@@ -278,7 +269,8 @@ Not Here
 
 **20**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 +
@@ -286,15 +278,11 @@ NOT HERE
 MODEL
 DEPLOYMENT
 Huggingface
-IPs
 YOU ARE HERE
 Test ;
-; : Passes
 : est Tests
-_ eee eseo@ | ML-onabledh........... e ML-enabled
 : System System
 Fails Test
-SHOSTACK
 20
 ```
 
@@ -395,11 +383,11 @@ What goes wrong with TM structures? (Each “for some users”)
 
 **29**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PHANTOM-B origin story (1/2)
-aadeline
 designing wo: security
 Al world
 EXPANDED AND REVISED
@@ -420,7 +408,6 @@ to LLMs, Als, and ML Models themselves. There’s a new deep focus on agile and 
 of who's involved in threat modeling, now including non-technical product owners. All
 told, half of this edition is completely new or heavily revised.
 SHOSTACK 29
-+ ASSOCIATES
 ```
 
 ## Slide 29
@@ -563,7 +550,8 @@ Chew up tokens!
 
 **37**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ByteDance and Alibaba to disable humanlike AI
@@ -579,7 +567,6 @@ Nicholas Sofroniew, Isaac Kauvar, William Saunders, Runjin Chen, Tom Henighan, S
 Hydrie, Craig Citro, Adam Pearce, Julius Tarng, Wes Gurnee, Joshua Batson, Sam Zimmerman,
 Kelley Rivoire, Kyle Fish, Chris Olah, Jack Lindsey
 SHOSTACK 37
-+ ASSOCIATES
 ```
 
 ## Slide 37
@@ -650,7 +637,8 @@ Souly, et al, Poisoning Attacks on LLMs Require a Near-constant Number of Poison
 
 **41**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Investigations | Jul 17 2026
@@ -660,8 +648,6 @@ Ontario jails—thanks to Al
 Ontario jails are using a program that claims it can predict
 prisoners’ behaviour, disproportionately putting Black
 prisoners in higher-security facilities
-SHOSTACK
-+ ASSOCIATES
 41
 ```
 
@@ -691,12 +677,12 @@ SHOSTACK
 
 **43**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEMS WRITE YOU HAVE OTHER
 AND TEST OUR CODE ‘seeunrry ENGINEERING, RIGHT?
-FRIGHT?
 43
 ```
 
@@ -790,15 +776,26 @@ Thank you!
 
 ## Slide 50
 
-# PHANTOM-B approach to LLM TM Blackhat USA August 2026 Questions?
-
+PHANTOM-B approach to LLM TM
+Questions?
+Blackhat USA August 2026
+Slides:
+Shostack.org/blog
 adam@shostack.org
-
-Slides: Shostack.org/blog
-
-Wallet cards, book signing at Bookstore, 12:45 PM today
-
-Meetup, The Convergence, Noon tomorrow
+>  Prompt injection
+>  Hallucination
+>  Anthropomorphization
+>  Non-explainability
+>  Training issues (including data quality or “poison”)
+>  Over-reliance on the LLM
+>  Missing security engineering
+>  Biases
+PHANTOM-B
+threat modeling framework
+Wallet cards, book signing at
+Bookstore, 12:45 PM today
+Meetup, The Convergence,
+Noon tomorrow
 
 ## Slide 51
 
@@ -862,19 +859,16 @@ Books free at your library/various subscriptions; Linkedin Learning via work
 
 **57**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-{ umor:2025
-Prompt
-Injection
 LLM01:2025
 Prompt Injection
 A Prompt Injection
 Vulnerability occurs when
 user prompts alter the...
 Read More
-[umos: 2025
 Excessive
 Agency
 LLM06:2025
@@ -883,7 +877,6 @@ An LLM-based system is
 often granted a degree of
 agency...
 Read More
-Tuma: 2028 9
 Sensitive
 Information
 Disclosure
@@ -895,9 +888,7 @@ Sensitive information can
 affect both the LLM and its
 application...
 Read More
-[ usor: 2028]
 System
-Prompt
 Leakage
 LLM07:2025
 System Prompt
@@ -907,7 +898,6 @@ vulnerability in LLMs refers
 to the...
 Read More
 LLM03:2025 Supply
-Chain
 LLM supply chains are
 susceptible to various
 vulnerabilities, which can...
@@ -925,11 +915,8 @@ significant security risks in
 systems...
 (umo4: 2028)
 Data and
-Model
-Poisoning
 LLM04:2025 Data
 and Model
-Poisoning
 Data poisoning occurs when
 pre-training, fine-tuning, or
 embedding data is...
@@ -962,8 +949,6 @@ Unbounded Consumption
 refers to the process where
 a Large Language...
 Read More
-sdyqy
-/01-do}-w}}/610'dsemoleuab//
 ```
 
 ## Slide 57
@@ -980,19 +965,16 @@ X
 
 **58**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-{ umor:2025
-Prompt
-Injection
 LLM01:2025
 Prompt Injection
 A Prompt Injection
 Vulnerability occurs when
 user prompts alter the...
 Read More
-[umos: 2025
 Excessive
 Agency
 LLM06:2025
@@ -1001,7 +983,6 @@ An LLM-based system is
 often granted a degree of
 agency...
 Read More
-Tuma: 2028 9
 Sensitive
 Information
 Disclosure
@@ -1009,13 +990,10 @@ LLM02:2025
 Sensitive
 Information
 Disclosure
-Sensitivinforgmation can
 affect bot! LLM and its
 applicati
 Read More
-[ usor: 2028]
 System
-Prompt
 Leakage
 LLM07:2025
 System Prompt
@@ -1025,11 +1003,8 @@ vulnerability in efers
 to the...
 Read More
 LLM03:2025 Supply
-Chain
 LLM supply chains are
-suscepypl various
 vulneral s, which can...
-Read Mre
 [uumos: 2025 )
 Vector and
 Embedding
@@ -1043,11 +1018,8 @@ significant security risks in
 systems...
 (umo4: 2028)
 Data and
-Model
-Poisoning
 LLM04:2025 Data
 and Model
-Poisoning
 Data poisoning occurs when
 pre-training, fine-tuning, or
 embedding data is...
@@ -1066,7 +1038,6 @@ LLM05:2025
 Improper Output
 sanitization, and...
 Read More
-([uumio:2025 J
 Unbounded
 Consumption
 LLM10:2025
@@ -1076,8 +1047,6 @@ Unbounded Consugpti
 refers to the process where
 a Large Language...
 Read More
-sdyqy
-/01-do}-w}}/610'dsemoleuab//
 ```
 
 ## Slide 58
@@ -1106,7 +1075,8 @@ https://agilestationery.com/collections/security/products /elevation-of-machine-
 
 **60**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ATLAS Matrix for Al Systems
@@ -1136,11 +1106,9 @@ Evasion®
 15 techniques
 Filler Dy Ivia@lLUrily
 Feasible Demons
-Credential  Discovery®
 Access®
 6 techniques 9 techniques
 Active
-Scanning ®
 Gather RAG-Indexed
 Targets
 Gather Victim
@@ -1178,17 +1146,14 @@ Publish
 Hallucinated
 Entities
 Al Supply
-Chain
 Compromise
 Drive-by
 Compromise &
 Evade Al
-Model
 Exploit Public-
 Facing
 Application ®
 Phishing & o
-Prompt
 Infiltration via
 Public-Facing
 Application
@@ -1202,7 +1167,6 @@ Al-Enabled
 Product or
 Service
 Full Al
-Model
 Access
 Physical
 Environment
@@ -1213,7 +1177,6 @@ Poisoning Invocation
 Al Agent
 Tool Al Agent Tool Escape to
 Invocation Data Host &
-Poisoning
 Command LLM
 and Al Agent Tool Jailbreak
 Scripting Poisoning
@@ -1223,14 +1186,12 @@ Deploy Al Self-Replication counts
 Agent
 gen Manipulate Al
 LLM Model
-Prompt ;
 Injection Modify Al
 Agent
 User Configuration
 ion &
 Execution Poison Training
 Data
-Prompt
 Infiltration via
 Public-Facing
 Al Supply Chain
@@ -1240,17 +1201,14 @@ Al Supply Chain
 Rug
 Pull
 Corrupt Al
-Model
 Delay Execution
 of LLM
 Instructions
 Evade Al
-Model
 Exploitation for
 Defense
 Evasion &
 False RAG Entry
-Injection
 Impersonation &
 Al Agent Tool Cloud Service
 Credential Discovery &
@@ -1260,20 +1218,16 @@ Credentials Agent
 from Al Configuration
 Agent
 Configuration piscover Al
-oe Artifacts
 Exploitation
 for Discover Al
 Credential Model
 Access & Family
 Os Discover Al
 Credential Model
-Dumping® Ontology
 RAG Discover Al
 Credential Model
-Harvesting Outputs
 Unsecured Discover LLM
 Hallucinations
 Discover LLM |
-Cuetam
 Credentials &
 ```

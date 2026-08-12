@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Din Serussi_Evasive Maneuvers Trends in Phishing Evasion & Anti-Evasion.pdf"
 pages: 28
 sha256: "0326047096a45e70e721b93370645f409601387eaf9d3d0f59adc0d59e57cb2b"
-text_chars: 16241
+text_chars: 13946
 ocr_pages: 16
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:49Z"
+converted_at: "2026-08-12T04:08:39Z"
 ---
 # Evasive Maneuvers Trends in Phishing Evasion & Anti-Evasion
 
 **Speakers:** Din Serussi  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Din Serussi_Evasive Maneuvers Trends in Phishing Evasion & Anti-Evasion.pdf` (28 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ Din Serussi – Perception Point
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS
@@ -62,12 +68,10 @@ Din Serussi — Perception Point
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 Phishing: Then & Now
 | d | | need you to generate an email for me,
 =| Fisher The email is sent from Microsoft and has a place to insert a link.
@@ -107,10 +111,10 @@ Start Help! | Cancel To proceed with the password reset process, please click on
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 20253
 €@ OneDrive
 Password Expiry
@@ -128,10 +132,10 @@ Keep My Password
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 USA 20253
 Text Obfuscation
@@ -146,12 +150,10 @@ Keeo My Password C:\Users\din.serussi>Ke e pMyP a ssw ord
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Input: | Keep My Password | Identify | Clear
 Code points & Annotations
 U+@@2@ : SPACE [SP]
@@ -204,18 +206,14 @@ https://pay.netflix.com/home/login.aspx
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Archive In The Browser
 File Explorer - WinRAR x + vo 8 *
 Crawlers bypass.
-€ C  @ invoice-december.zip #006
 | Google Domains Overview Get started Features Learn shite Invoicezip - WinRAR (evaluation copy)
-— a
 Extract To Add Test View Scan
 C:\Users\Din\Downloads\Invoice.zip
 Name Size Type Modified
@@ -224,7 +222,6 @@ B{ Installer.exe 5 MB Executable April 15, 2023
 Get up to speed
 with .zip
 Starting at $15/year
-Q. invoice-december zip .
 mH invoice.exe A Show a x
 ```
 
@@ -260,20 +257,11 @@ mH invoice.exe A Show a x
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 33/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
-PBIP_BLOCK]= array("%66.102.*.*", "*38.100.*.*", "4107.170.%.%", "4149.20.%.%", "438.105.%.%", "474.125.%.%",
-"466.150.14.%", "%54.176.%.%", "4184.173.%.%", "%66.249.%.%", "4128.242.%.%", "S72.14.192.%", "4208.65.144.x",
-ETA U2Z5 ko Xu NLT Ode 120. tim LL 2O7 26% wm Nl Ae 2O le eo ul, ue 20M VL 2O LAG +, mL) Se LOae <3 4uu, OM 2 5 5cLOOR Ku,
-ETD TARO 2 Kee SOOR MOD km cam Odi Lolyts tar LOGO 2 OOS Xa ue OG DDO kar en Ol etl Oly 207k mn 21s DOL OS.
-BAGO 65 xoe", “SSO. 7.42e", "S1S1.232 4:4", "AGG. 116uek , "AG2.900 xa, NASD.TSS.4.4", ""62.166.%.4", "985.64.44");
 $HOSTS_BLOCK| = array(".tor.","VAULTVPN", "activescan", "alpha2", "amazon", "anti-phishing", "antipishing", "antispam",
-"antivirus") "avast", "barracuda", "bitdefender'|,|"cia.gov"|)"cisco","cLlamav", "cLamwin"| "cleandir", "datapacket",
-"eset"|,"f-secure",|'fbi.gov"||"fireye'|,"free-av")"fortimail", "fortinet"| "gfihispana",|"kapersky"|,"mailcontrol",
 "mailstream", "mallshill", "marimex",|"mcafee", "microsoft.com", "mimecast"}| "monitor", "nod32",|"norton"|,"onlinedc","opendns",
 "owned-networks", "phish" ,|"proofpoint"|, "rsa.com" )"sophos"|, "spamfirewall2",|"symantec", "trendmicro"|, "trustwave") ;
 if(in_array($HOST, $HOSTS_BLOCK) or in_array($IP, $IP_BLOCK))
@@ -292,20 +280,16 @@ Embedded href
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 2 Step Phishing
 Over 400 services are being abused.
 are not lagged in and changes cannot be
 Please regard the below shared Vital | SS @®
-Documents Vv
 This documents has been scanned for viruses by Norton Antivirus Security
-"
 J)
-Qj aoa) SINS
 Information Data: KPF903
 Submission Data: TRN0938 a |
 Embedded href =
@@ -319,20 +303,16 @@ Embedded href =
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Microsoft & Google Services Abuse
 The allow-listing vulnerability.
 NJ’ WISE Medical Centers, LLC - Mic: X +
 @ Microsoft SharePoint x + @ docxx - OneDrive x +
-<€ GJ onedrive.live.com & x DE tovgnito : € CG a [customervoice.microsoft.com F Q x SD Dh & meognito (2 € CG @ demosmy.sharepoint.com
 OneNote WISE Medical Centers, LLC » @ a Info 1/1 x
-IN .
 WISE Medical Centers, LLC
-2
 uesday, June 13, 2023 8:50AM
 Signed and secured shared folder with you.
 (1) ®SHAREPOINT FILE
@@ -346,7 +326,6 @@ SharePoint. Authenticate and preview files via the SharePoint below;
 To view doc sent lick View and Print Online™ |
 >ACCESS SHAREPOINT
 Thank You! {© 20, ure Microsoft Cloud SharePoint,
-u
 #BHUSA @BlackHatEvents
 ```
 
@@ -356,20 +335,15 @@ u
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Microsoft & Google Services Abuse
 BB Admin - Google Slides x + im Mail x +
-€ CG @ docs.google.com entation Q-x* §) Qa @ incognito i € C &@ sites.google.com/web-of.. ®& * SJ OF © incognito (3) :
 io Microsoft Outlook
-HY Microsoft
 EMAIL*
 MICROSOFT ACCOUNT UPGRADING NOTICE
-2 : PASSWORD*
 Click Here To Continue
 SIGN IN
 ```
@@ -378,18 +352,15 @@ SIGN IN
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 @ PERCEPTION-POINT x +
-€ SC @ duhlvnhqu34blq2ni3txli4 prétfbfzpu6frtdu33u7j4-ipfs-cf--ipfs-com.translate.goog/s|
 Go gie Translate English - detected —> English v
 PERCEPTION Platform Services Partners Resources Company
 POINT™
 PERCEPTION-POINT
-; ; eve nt demo@perception-point.io
 LS ta rts “me °
 Pp, { Remember me
 Al-powered email, web browser, and cloud ap
@@ -407,12 +378,10 @@ Translation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Encoded HTML Files
 200% increase in the usage of malicious html files
 perception-point.io <Microsoft365 Secured> demo@perception-point.io
@@ -431,34 +400,25 @@ QY Sign-in options
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-[2] Guide Settings html £9
 1 <script> a
 2 PwCAJx1lY = ite ou reeption—-point.io"
-document.write Paras "PCEtLSBzYWdmc34vcmJwamN4 42Wdt42RleWS5odmtj]Ym9t4w5sy4mpkaGiwa
 4 </script>
 [2] Guide Settings html £9 |
 1 <script> a
 2 PwCAJxX1Y = "demo@perceptic
-5 <script srce="https dnis m/ajax/ lil rypto-js/4.1.1/¢c rypto-js
 = <script>var key = '4BVcq27bV8COTE
 5 key = CryptoJs.enc.Utfs.parse (key);
-6 qver decrypted = |CryptoJS .AES.decrypt|(' CGNsMWvSbFpsNw34fnDyYAfcsDmgeL5 oORWChz
 7 ,key, {mode: CryptoJS.mode.ECB Ny:
 document.write (decrypted.toString (CryptoJS.enc.Ut£8)) ;</script>
 9 </script>
 (| Guide Settings html 3
 1 <script> a
 2 PwCAJx1LY = "demo@perception-point.io"
-3 function “0x6a66 () {var “0x100e2c=[) \sea\ =e c6E\x73\xG6£E\ZO6\K%74\x2e\x63\x0£"],'
-a | 0x6d66=function () {return _Ox1l00e2c;};return 0x6d66();} function _O0x4985(_ 0x36
 5 while (!![]){try{var _0x387088=parseInt (_ Ox4e7fcc ( yI/(- +- * +
-6 setTimeout ( ()/=>{ _Oxbd67e8 (); he * + + *- )rb}) s}war  Ox2c22de=!
-7 let _Oxf873df=await _Ox4caff2 (- + * +- *- )-}}}7_Ox11d791() -}}
 8 </script>
 ```
 
@@ -484,19 +444,13 @@ a | 0x6d66=function () {return _Ox1l00e2c;};return 0x6d66();} function _O0x4985(
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
-httpshavevngbekianadorotid.com
->| =¢
-F Bangor
 BUY =. Search Best Buy I g Sy Cart
 Top Deals Deal of the Day Health & Wellness Credit Cards Gift Cards Gift Ideas More ~ ® Account ~ Recently Viewed ~ Order Status ~ Saved Items ~
 Best Buy >» Services
-&
 Geek Squad’ Services
 We're here to
 help.
@@ -511,15 +465,13 @@ online, on the phone, in store or in your home.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Social Media Posts
 Meta <support@facebook.com>
 Important Notice
-demo@perception-point.io |
 We want to address a matter of utmost importance that requires your immediate attention. It pertains to a
 copyright complaint lodged against your content, which we believe you should be informed about promptly.
 As per our well-established guidelines and the provisions outlined in the
@@ -556,11 +508,10 @@ Meta Help Center
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 @ MyPersonal Account Was Restri X
 > CA Dangerous | meta-business-appeal15.web.app/?fbclid=IwAR13BPOm5|SeNE5IC2Voac2pOfV07-K70fRUOLQmkk7N 1el5v
 Meta | Support Inbox

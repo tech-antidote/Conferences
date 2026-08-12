@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Kaixuan Luo & Xianbo Wang & Adonis Fung & Julien Lecomte & Wing Cheong Lau_One Hack to Rule Them All Pervasive Account Takeovers in Integration Platforms for Workflow Automation, Virtual Voice Assistant, IoT, _Compressed.pdf"
 pages: 48
 sha256: "8c64e2161e6586c1fd56a8938f1a10ea3f524bfe791de4b0425c0ad836a7706d"
-text_chars: 15486
+text_chars: 15250
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:59:33Z"
+converted_at: "2026-08-12T04:34:55Z"
 ---
 # One Hack to Rule Them All Pervasive Account Takeovers in Integration Platforms for Workflow Automation, Virtual Voice Assistant, IoT,
 
 **Speakers:** Kaixuan Luo, Xianbo Wang, Adonis Fung, Julien Lecomte, Wing Cheong Lau  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kaixuan Luo & Xianbo Wang & Adonis Fung & Julien Lecomte & Wing Cheong Lau_One Hack to Rule Them All Pervasive Account Takeovers in Integration Platforms for Workflow Automation, Virtual Voice Assistant, IoT, _Compressed.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -129,13 +134,13 @@ Power Automate
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Open Marketplace Design
 alex
 a
-S
 <
 ©
 6
@@ -161,7 +166,6 @@ Streaming Services
 Smart Life
 “Alexa, turn on hallway light”
 Smart Home
-Av ?
 Home Devices More
 Power Automate
 Anyone can publish an app
@@ -173,53 +177,33 @@ q
 nate oz
 team Office 365 Outl.
 of — My flows
-[S Approvals
 A Solutions
-Cg Process mining
 2 Desktop flow activity RSS
-48% — Connections
 [2 Automation center (preview)
 5% Custom connectors
-é
-@ Machines
-@ == Connectors
 Approvals
 More
 Power Platform
-a
 Dropbox
-BS
 Viva Engage
-2] ‘Ask 3 chatbot
-©)
 Microsoft Data.
-Y
-i
 Planner
 ‘SharePoint OneDrive for B. Microsoft Forms
-zl
 Power Bl
 J
-2
 Azure DevOps
 SQL Server
-El
 Notifications
 OneNote (Busi,
-<
 Microsoft Teams
 Office 365 Users
 Outlook.com
 31
 Google Calendar
-4
 x Excel Online (B. Mail Microsoft To-D. Gmail MSN Weather Outlook Tasks
 Trello Project Online Azure Applicati Project Roadmap File System FIP Google Drive
-raowm|
 aD o salesforce
-ate
 Slack GitHub YouTube Todoist OneDrive Azure Blob Stor. Salesforce
-PREVIUM
 #BHUSA @BlackHatEvents
 ```
 
@@ -345,24 +329,20 @@ OAuth Client User-agent Authoriza*on Servers
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Common (but failed) designs
 for Tracking Active App Info
 Start OAuth with Lyft
-/authorize?state=<state>&redirect_uri= G@,
 Embed
 Active App Info
-=3i
 gence, state> Authorize
-Extract |]. foken.with code=<code> =
 Active App Info /token w); Exchange
 N wi
 and Select with code
 17
-Fr
-f°
 » | Exchange
 Token
 ```

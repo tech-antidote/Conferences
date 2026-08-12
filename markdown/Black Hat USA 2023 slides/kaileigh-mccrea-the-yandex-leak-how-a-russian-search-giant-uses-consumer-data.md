@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Kaileigh McCrea_The Yandex Leak How a Russian Search Giant Uses Consumer Data.pdf"
 pages: 75
 sha256: "f192e8e4cafbfb5a5c69e78952337dc7b7d464f97f81aa32e574bacf27282f23"
-text_chars: 48777
+text_chars: 41919
 ocr_pages: 59
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:19:25Z"
+converted_at: "2026-08-12T04:13:54Z"
 ---
 # The Yandex Leak How a Russian Search Giant Uses Consumer Data
 
 **Speakers:** Kaileigh McCrea  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kaileigh McCrea_The Yandex Leak How a Russian Search Giant Uses Consumer Data.pdf` (75 pages)
+
 
 ## Slide 1
 
@@ -49,7 +56,8 @@ Kaileigh McCrea, Privacy Engineer, Confiant
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 yandex git sources
@@ -87,7 +95,8 @@ By Bill Toulas January 26, 2023 09:44 AM 1
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yandex 101
@@ -101,7 +110,8 @@ Games Images Video Meteum Maps Mail Translate
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yandex 101
@@ -161,7 +171,8 @@ Other
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yandex 101
@@ -197,7 +208,8 @@ tel.: +31 0 20 206 6970
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Russia © This article is more than 3 years old Advertisement
@@ -207,7 +219,6 @@ Yandex agrees to corporate restructuring in move likely to
 increase government oversight
 Andrew Roth in Moscow
 Mon 18 Nov 2019 06.30 ES
-fi vy@
 @ Arkady
 daily oper
 zh, the chief executive of Y aid the company would maintain control over its
@@ -218,7 +229,8 @@ s. Photograph: Mikhail Metzel,
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Observer © This article is more than 1 year old Advertisement
@@ -230,7 +242,6 @@ Google, which also runs the Yango Deli grocery service
 Russia-Ukraine war: live news
 Shanti Das
 Sat 5 Mar 2022 15.02 EST
-five
 GA Yango Deli driver on an electric moped delivers to homes in London. The service is expanding
 across the city. Photograph: John Sibley/Reuters
 ```
@@ -239,7 +250,8 @@ across the city. Photograph: John Sibley/Reuters
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data-harvesting code in mobile apps sends user
@@ -252,11 +264,6 @@ Build complete audience knowledge with
 segmentation based on profile data or dive into
 individual users with profile cards.
 Today
-° © Launch app
-= Q Start onboarding
-O  Gotocatalog
-©) hes
-O  Viewitem
 © Addto cart
 13
 ```
@@ -265,7 +272,8 @@ O  Viewitem
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Article
@@ -279,10 +287,10 @@ TSAKO sh+ Natasha Lomas, Ingrid Lunden 12:20 PM PDT + March 16, 2022
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-= a INSIDER —_—___ ister: Het, mmo
 | Premium | HOME > TECH
 '| bought a plane ticket and left 12 hours later’: Engineers at Yandex,
 Russia's Google rival, are fleeing abroad and leaving spouses and
@@ -294,15 +302,14 @@ Rosie Bradbury Apr 12,2022, 3:35 AM PDT Q f [<4] ad
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-REUTERS® World Business v Markets V Sustainability Legal v Breakingviews Technology Investigations More v fo MyViwy Q
 Yandex CEO resigns after being targeted
 by EU sanctions
 Reuters
 June 3, 2022 7:35 AM PDT : Updated a year ago Q Aa < |
-bas Ne
 The logo of Russian internet group Yandex is pictured at the company's headquarter in Moscow, Russia October 4, 2018. REUTERS/Shamil
 Zhumatov
 June 3 (Reuters) - Russian internet giant Yandex (YNDX.O) said on Friday that Arkady Volozh had stepped
@@ -314,7 +321,8 @@ sanctions against Russian entities and individuals.
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yandex's sale of media assets to VK inc
@@ -325,12 +333,9 @@ Login
 AM PDT + August 23, 2022
 / 12:05
 ptari
-Natasha Lomas @ri
-Soa
 Crunch+
 Tect
 ups
-r=)
 Star
 2
 Security
@@ -345,10 +350,10 @@ More
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-REUTERS . World y Businessv Marketsv Sustainability~ Legal Breakingviews Technologyv Investigations More v fo My View v (Oy
 Deals
 Yandex parent to review ownership of
 Russian tech giant, seek divestment
@@ -360,12 +365,10 @@ November 25, 2022 7:31 AM PST : Updated 8 months ago q | | Aa | < |
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-i} REUTERS
-a
-World vy Businessv Markets Sustainabilityv Legalvy Morev Tl
 Europe 30 YEARS 9 4)
 Putin, Kudrin touch on future of
 Yandex in late-nig ht meeting -sources = NEWS’~ UKRAINEWAR- BUSINESS’ OPINION ARTSANDLIFE PODCASTS
@@ -384,10 +387,10 @@ October 4, 2018. REUT!
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Pressonawessre Dy Psp inf =|
 ABOUTME CONTACTS NOTACV PROJECTS
 YANDEX SERVICES SOURCE
 CODE LEAK
@@ -407,7 +410,8 @@ All files are dated back to 24 February 2022.
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 <4 ¢ Support The Moscow 1
@@ -420,14 +424,9 @@ Russia Says Ukrainian Drone:
 Moscow, Crimea
 May 4, 2023 600000 2 NO PASSAGE
 Russia Blocks Cargo Ship Ov
-Traces’
 3 POLITICAL PRISONER
 Navalny Ally Jailed 9 Years fc
-Is
-| :
-H . : 4 = MoRE MANPOWER
 Y Russia Raises Upper-Age Lir
-; Y ’ Reservists
 MONEY DRAIN
 ```
 
@@ -435,7 +434,8 @@ MONEY DRAIN
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 World Business Markets v Sustainability Legal’ Breakingviews Technology Investigations More v fo MyViwy Q
@@ -443,7 +443,6 @@ Technology
 Russia's Yandex fined for refusing to
 share user information with security
 services
-Reuters a a ee
 (a | [aa] (<)
 June 18, 2023 3:20 PM PDT - Updated a month ago
 ```
@@ -468,21 +467,12 @@ June 18, 2023 3:20 PM PDT - Updated a month ago
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Codebase
-cS
-S
-;
--
-:
-maps_2.tar.bz2 maps_adv.tar.bz2 —— maps.tar.bz2 market.tar.bz2 metrika.tar.bz2 mobile-
-WARNIN...L.tar.bz2
-fb
-LP
 nginx.tar.bz2 noc.tar.bz2 partner.tar.bz2 passport.tar.bz2 pay.tar.bz2 payplatform.tar.b
-22
 U
 Paysys.tar.bz2 portal.tar.bz2 — privacy_office.tar. products.tar.bz2 robot.tar.bz2 rt-
 bz2 research.tar.bz2
@@ -501,7 +491,8 @@ bz2 research.tar.bz2
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Metrika
@@ -518,11 +509,9 @@ From traffic trends to mouse movements —
 get a comprehensive understanding of your
 online audience and drive business growth.
 Get started
-et
 Try live demo
 Pricing
 27
-|
 ```
 
 ## Slide 28
@@ -531,50 +520,18 @@ Pricing
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example Raw Data Fields that AppMetrica Logs
 lytics > appmetrica-location-log-anonymizer > = convert_log.yql analytics > appmetrica-location-log-anonymizer > = convert_log.yql
-insert into *//home/metrika-Logs/anonym-appmet rica-location-log/1d/{table_date}* “IsExtraLocationEvent”,
 with truncate “IsRooted* ,
 select *KitBuildNumber*,
-String: :HexEncode(Digest::Blake2B(*DeviceID°, seed)) as ‘DeviceID*, “KitBuildType’,
-String: :HexEncode(Digest::Blake2B(*ADVID*, seed)) as “ADVID*, “KitVersion’,
 String: :HexEncode(Digest::Blake2B(*IFA*, seed)) as “IFA, ‘Latitude’,
-String: :HexEncode(Digest::Blake2B(*UUID*, seed)) as “UUID*, “LatitudeLBs*,
-String: :HexEncode (Digest: :Blake2B(*AndroidID*, seed)) as ‘AndroidID*, “LocationAltitude’,
-“APIKey*, “LocationDirection’,
-~AppBuildNumber* , *LocationEnabled*,
-“AppFramework* , “LocationPrecision’,
-“AppID*, “LocationPrecisionLBS*,
-“AppPlatform* , “LocationSource*,
-“AppVersionName’, “LocationSpeed’,
-*Cells_AreConnected*, “LocationTimestamp*,
-“Cells_CellsIDs*, 13 ‘LocationTimestampBootOffset*,
 05 ‘Cells_CountriesCodes*, 138 ‘Longitude’,
-106 “Cells_Lacs*, 139 “LongitudeLBs*,
 07 ‘Cells_LastVisibleTimeOffset*, 140 “OSApiLevel*,
-*Cells_OperatorsIDs*, 141 “OSVersion’,
-*Cells_OperatorsNames*, 142 *OperatingSystem’,
-“Cells_PhysicalsCellsIDs*, 143 “OriginalCollectTimestamp*,
-*Cells_SignalsStrengths*, 144 *OriginalLocationTimestamp*,
-*Cells_Types*, 145 *ReceiveTimestamp*,
-“ChargeType*, 146 *RequestID*,
-*ClientIP*, 147 *SendTimestamp* ,
-*“ClientIPHash*, 148 *Wifi_AreConnected*,
-“CollectTimestamp*, 149 ‘Wifi_LastVisibleTimeOffset*,
-“CollectTimestampBootOffset*, 150 ‘Wifi_Macs*,
-8 *CollectionMode’, 151 ‘Wifi_SignalsStrengths*,
 119 “DeviceType*, 152 ‘Wifi_Ssids*,
-12 ‘EventID*, 153 »_logfeller_index_bucket*,
-21 “IncrementalID*, 154 »_logfeller_timestamp*,
-~IsExtraLocationEvent*, 155 rest*,
-“IsRooted*, 156 *_stbx’,
-124 *KitBuildNumber” , 1 *iso_eventtime’,
-125 *KitBuildType*, 158 ‘source_uri® ,
-2¢€ “KitVersion*, 159 *subkey*,
-in11 2 -
 28
 ```
 
@@ -584,13 +541,12 @@ in11 2 -
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Anonymized identifiers
-Q1
 select
-String: :HexEncode(Digest::Blake2B(*DeviceID’, seed)) as “DeviceID’,
 String: :HexEncode(Digest::Blake2B(*ADVID*, seed)) as “ADVID*,
 String: :HexEncode(Digest::Blake2B(*IFA*, seed)) as “IFA‘,
 String: :HexEncode(Digest::Blake2B(*UUID*, seed)) as “UUID*,
@@ -604,49 +560,99 @@ String: :HexEncode(Digest: :Blake2B(*AndroidID*, seed)) as ‘AndroidID*,
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Location Fields
-126
-127
-128
-129
-130
-Bs
-132
-133
-134
-35
-136
-137
-138
-139
-140
-141
-142
-143
-144
-“KitVersion ,
-‘Latitude’,
-‘LatitudeLBS*,
-*LocationAltitude’,
-‘LocationDirection ,
-“LocationEnabled*,
-‘LocationPrecision,
-“LocationPrecisionLBS’,
-‘LocationSource’,
-‘LocationSpeed’,
-“LocationTimestamp’,
-‘LocationTimestampBootOffset’,
-‘Longitude’,
-“LongitudeLBs’,
-“OSApiLevel’,
-“OSVersion’,
-‘OperatingSystem ,
-“OriginalCollectTimestamp ,
-‘OriginallocationTimestamn«
-30
+Deobfuscation: LLVM Optimisations
+
+[left panel, orange label]  O-LLVM
+Instruction Subsitution (3 loops)
+
+101  else if (iVar1 == 2) {
+102    uVar10 = (param1 ^ 0xffffffff) & param1;
+103    uVar11 = uVar10 ^ 0xffffffff;
+104    uVar10 = (param1 & 0x28b159a6 | (param1 ^ 0xffffffff) & 0xd74ea659) ^
+105           [obscured by tooltip] | uVar10 & 0xd74ea659) | (param1 | uVar11) ^ 0xffffffff;
+106    uVar1[obscured by tooltip] & 0xad02e611 | uVar10 & 0x52fd19ee;
+107    uVar10 = (uVar10 ^ 0x52fd19ee) & 0x2d4bd55a | (uVar10 ^ 0xad02e611) & 0xd2b42aa5;
+108    uVar10 = (uVar10 ^ 0x2d4bd55a) & uVar10;
+109    uVar11 = (param1 & 0x43df8f | (param1 ^ 0xffffffff) & 0xffbc2070) ^ 0xd2f7f52a |
+110           (param1 | 0x2d4bd55a) ^ 0xffffffff;
+111    uVar12 = uVar10 ^ 0xffffffff | uVar11;
+112    uVar10 = (uVar11 ^ 0xffffffff) & (uVar10 ^ 0xffffffff) | uVar10 & uVar11;
+113    uVar11 = uVar10 ^ 0xffffffff;
+114    uVar10 = (uVar12 & 0xac3e94d1 | (uVar12 ^ 0xffffffff) & 0x53c16b2e) ^
+115           (uVar11 & 0xac3e94d1 | uVar10 & 0x53c16b2e) | (uVar12 | uVar11) ^ 0xffffffff;
+116    uVar11 = uVar10 ^ 0x35ec8eeb;
+117    uVar10 = uVar10 ^ 0xffffffff | 0x35ec8eeb;
+118    uVar12 = uVar11 & 0x35ec8eeb ^ 0xffffffff;
+119    uVar10 = (uVar12 & 0x2d5bbaff | uVar11 & 0x10a40400) ^
+120           (uVar10 & 0x2d5bbaff | (uVar10 ^ 0xffffffff) & 0xd2a44500) |
+121           (uVar12 | uVar10) ^ 0xffffffff;
+122    uVar11 = (param1 ^ 0xffffffff) & 0x733e697e | param1 & 0x8cc19681;
+123    uVar11 = ((uVar11 ^ 0x8cc19681) & 0xfffffffb | (uVar11 ^ 0x733e697e) & 4) ^ 0xffffffff |
+124           0xfffffffb;
+125    uVar12 = (param1 ^ 0x55a04b31) & (param1 ^ 0xffffffff);
+126    uVar4 = (param1 ^ 0xffffffff | 0x55a04b31) ^ 0xffffffff;
+127    uVar12 = uVar12 & uVar4 | uVar12 ^ uVar4;
+128    uVar12 = (uVar12 ^ 0xffffffff) & 0xf7e551b4 | uVar12 & 0x81aae4b;
+129    uVar4 = (uVar12 ^ 0x5dbae57e) & 0xda9fbf90 | (uVar12 ^ 0xa2451a81) & 0x2560406f;
+130    uVar5 = (uVar11 ^ 0x8149b87a) & uVar11;
+131    uVar6 = (uVar11 ^ 0x8149b87a) & (uVar11 ^ 0xffffffff);
+132    uVar7 = (uVar4 ^ 0xa429f815) & (uVar4 ^ 0x2560406f);
+133    uVar12 = (uVar12 ^ 0xdcf35d04) & (uVar12 ^ 0xa2451a81);
+134    uVar8 = uVar5 ^ 0xffffffff;
+135    uVar9 = uVar6 ^ 0xffffffff;
+136    uVar5 = (uVar8 & 0xa7224c94 | uVar5 & 0x58ddb36b) ^ (uVar9 & 0xa7224c94 | uVar6 & 0x58ddb36b) |
+137           (uVar8 | uVar9) ^ 0xffffffff;
+138    uVar12 = uVar7 & uVar12 | uVar7 ^ uVar12;
+139    uVar12 = uVar12 & (uVar5 ^ 0xffffffff) | uVar5 & (uVar12 ^ 0xffffffff);
+140    uVar11 = ((uVar11 ^ 0xffffffff) & 0x3c7da929 | uVar11 & 0xc38256d6) ^
+141           ((uVar4 ^ 0xda9fbf90) & 0x3c7da929 | (uVar4 ^ 0x2560406f) & 0xc38256d6) |
+142           (uVar11 ^ 0xffffffff | uVar4 ^ 0xda9fbf90) ^ 0xffffffff;
+143    uVar11 = (uVar11 ^ 0xffffffff) & 0x51a3afbb | uVar11 & 0xae5c5044;
+144    uVar4 = uVar11 ^ 0x51a3afbb;
+145    uVar5 = uVar12 ^ 0xffffffff;
+146    local_10 = (((uVar10 ^ 0xffffffff) & 0xebfaad80 | uVar10 & 0x1405527f) ^ 0xb608d971) *
+147           ((uVar5 & 0xf368b83d | uVar12 & 0xc9747c2) ^
+148            (uVar4 & 0xf368b83d | (uVar11 ^ 0xae5c5044) & 0xc9747c2) |
+149            (uVar5 | uVar4) ^ 0xffffffff);
+150  }
+
+[tooltip overlaying lines 105-106]
+Unsigned Integer (compiler-specific size)
+Length: 4
+
+[right panel, orange label]  LLVM Optimised
+
+20  if (iVar5 == 0) {
+21    uVar2 = (((param_2 | 0xbaaad0bf) & 0xc4fa1585 | param_2 & 0x1052a40) ^ param_2 ^ 0x80aa1085) &
+22          (param_2 | 0xbaaad0bf | param_2 ^ 0x45552f40);
+23    uVar1 = uVar2 & (param_2 ^ 0xbaaad0bf);
+24    uVar2 = uVar2 ^ param_2;
+25    uVar3 = ((param_2 & 0xfffffffd ^ 0xffffffff) & 0x34f5a7e6 | param_2 & 0xcb0a5819) ^
+26          (param_2 & 2 | 0xdb2decf5);
+27    uVar4 = ((param_2 & 0xfffffffd ^ 0xffffffff) & 0x48c117 | param_2 & 0xffb73ee8) ^
+28          (param_2 & 2 | 0x48c115) | param_2 ^ 0xfffffffd;
+29    local_24 = (uVar2 ^ uVar1 ^ 0xbaaad0bf | (uVar2 ^ 0xbaaad0bf) & uVar1) *
+30          (uVar3 ^ uVar4 ^ 0x1027b4ee | (uVar3 ^ 0x1027b4ee | uVar4) ^ 0xffffffff);
+31  }
+32  else if (iVar5 == 1) {
+33    local_24 = ((((param_2 | 0xbaaad0bf) & 0x3c966fda | param_2 & 0x41410000) ^ param_2 ^ 0x3882409a
+34          ) & (param_2 | 0xbaaad0bf | param_2 ^ 0x45552f40)) * (param_2 + 3);
+35  }
+36  else if (iVar5 == 2) {
+37    uVar2 = (param_2 ^ 0xfffffffb | param_2 ^ 4) & (param_2 ^ 0x7eb64781);
+38    local_24 = (uVar2 & (param_2 & 4 | 0x8149b87a) |
+39          (param_2 & 4 ^ 0x7eb64785) & (uVar2 ^ 0xffffffff)) * (param_2 ^ 0xbaaad0bf);
+40  }
+41  else {
+42    local_24 = (param_2 + 0xbaaad0bf) * (param_2 & 5);
+43  }
+
+[teal label]  Original Expression Recovered
+[callout badges]  1  2  3  4
 ```
 
 ## Slide 31
@@ -655,25 +661,111 @@ Bs
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 95/100 on the text kept, 59/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Wifi Fields Collected By AppMetrica
-147
-148
-149
-150
-151
-152
-LoS
-*SendTimestamp ,
-“Wifi_AreConnected’,
-‘Wifi_LastVisibleTimeOffset>
-‘Wifi Macs’,
-‘Wifi_SignalsStrengths ,
-“Wifi_Ssids’,
-‘loafeller index bucket’,
-31
+Deobfuscation: LLVM Opt + SiMBA + GAMBA
+
+[left panel, teal label]  INPUT
+if (iVar1 == 0) {
+  uVar10 = param1 & 0xc9e645ce | (param1 ^ 0xffffffff) & 0x3619ba31;
+  uVar11 = ((uVar10 ^ 0x3619ba31) & 0x5c2ea1f5 | (uVar10 ^ 0xc9e645ce) & 0xa3d15e0a) ^ 0xf1571e9d
+           | uVar10 ^ 0x3619ba31;
+  uVar12 = ((param1 ^ 0xffffffff) & 0xad79bf68 | param1 & 0x52864097) ^ 0xffffffff |
+           param1 ^ 0xffffffff;
+  uVar4 = uVar11 | uVar12;
+  uVar11 = (uVar12 ^ 0xffffffff) & uVar11 | (uVar11 ^ 0xffffffff) & uVar12;
+  uVar12 = uVar11 ^ 0xffffffff;
+  uVar11 = (uVar4 & 0xaea378c3 | (uVar4 ^ 0xffffffff) & 0x515c873c) ^
+           (uVar12 & 0xaea378c3 | uVar11 & 0x515c873c) | (uVar4 | uVar12) ^ 0xffffffff;
+  uVar12 = ((uVar11 ^ 0xffffffff) & 0xcb73214a | uVar11 & 0x348cdeb5) ^ 0xcb73214a | 0x604af11c;
+  uVar11 = uVar11 ^ 0xffffffff | 0x9fb50ee3;
+  uVar11 = (uVar12 & 0x5835bf98 | (uVar12 ^ 0xffffffff) & 0xa7ca4067) ^
+           (uVar11 & 0x5835bf98 | (uVar11 ^ 0xffffffff) & 0xa7ca4067) |
+           (uVar12 | uVar11) ^ 0xffffffff;
+  uVar11 = (uVar11 ^ 0xffffffff) & 0x88666134 | uVar11 & 0x77999ecb;
+  uVar12 = uVar10 ^ 0x3619ba31 | 0xbaaad0bf;
+  uVar10 = (uVar10 ^ 0x3619ba31) & 0x565b27a0 | (uVar10 ^ 0xc9e645ce) & 0xa9a4d85f;
+  uVar4 = uVar10 ^ 0xecf1f71f;
+  uVar12 = (uVar12 & 0xc4fa1585 | (uVar12 ^ 0xffffffff) & 0x3b05ea7a) ^
+           (uVar4 & 0xc4fa1585 | (uVar10 ^ 0x130e08e0) & 0x3b05ea7a) |
+           (uVar12 | uVar4) ^ 0xffffffff;
+  uVar10 = (((uVar12 ^ 0xffffffff) & 0xbe3c86ad | uVar12 & 0x41c37952) ^ 0xbe3c86ad | 0xe6842217)
+           ^ 0xffffffff;
+  uVar12 = (uVar12 ^ 0x197bdde8) & uVar12;
+  uVar10 = uVar10 & uVar12 | uVar10 ^ uVar12;
+  uVar10 = (uVar10 ^ 0xffffffff) & 0x9d11e123 | uVar10 & 0x62ee1edc;
+  uVar10 = (uVar10 ^ 0x846a3ccb) & 0x61675078 | (uVar10 ^ 0x7b95c334) & 0x9e98af87;
+  uVar10 = (uVar10 ^ 0x61675078) & 0xa63617bd | (uVar10 ^ 0x9e98af87) & 0x59c9e842;
+  uVar12 = (uVar11 ^ uVar10 ^ 0xa63617bd) & uVar11;
+  uVar10 = ((uVar11 ^ 0xffffffff) & 0xbcc6bdd4 | uVar11 & 0x4339422b) ^
+           ((uVar10 ^ 0xa63617bd) & 0xbcc6bdd4 | (uVar10 ^ 0x59c9e842) & 0x4339422b);
+  uVar11 = uVar12 ^ 0xffffffff;
+  uVar4 = uVar10 ^ 0xffffffff;
+  uVar5 = (param1 ^ 0xffffffff) & 0xaf91567b | param1 & 0x506ea984;
+  uVar6 = uVar5 ^ 0xaf91567b;
+  uVar5 = (uVar6 & 0xe30d84a7 | (uVar5 ^ 0x506ea984) & 0x1cf27b58) ^ 0xe30d84a5 |
+          (uVar6 | 0xfffffffd) ^ 0xffffffff;
+  uVar6 = (((param1 ^ 0xffffffff) & 0x7ce0ffb1 | param1 & 0x831f004e) ^ 0xea109553) & 0x96f06ae2;
+  uVar7 = (param1 ^ 0xffffffff | 0x96f06ae2) ^ 0xffffffff;
+  uVar8 = uVar6 ^ uVar7;
+  uVar6 = (uVar8 ^ 0xffffffff) & 0x690f951d | uVar6 & uVar7 | uVar8 & 0x96f06ae2;
+  uVar6 = uVar6 & 0xba8c5c70 | (uVar6 ^ 0xffffffff) & 0x4573a38f;
+  uVar6 = (uVar6 ^ 0x4573a38f) & (uVar6 ^ 0xba8c5c72);
+  uVar7 = (uVar5 ^ 0xcb0a5819) & uVar5;
+  uVar8 = (uVar5 | 0x34f5a7e6) ^ 0xffffffff;
+  uVar9 = (uVar6 ^ 0x34f5a7e6) & (uVar6 ^ 0xffffffff);
+  uVar2 = (uVar6 ^ 0x34f5a7e6) & uVar6;
+  uVar7 = uVar7 & uVar8 | uVar7 ^ uVar8;
+  uVar8 = uVar9 ^ 0xffffffff;
+  uVar3 = uVar2 ^ 0xffffffff;
+  uVar8 = (uVar8 & 0xd3d541ce | uVar9 & 0x2c2abe31) ^ (uVar3 & 0xd3d541ce | uVar2 & 0x2c2abe31) |
+          (uVar8 | uVar3) ^ 0xffffffff;
+  uVar7 = ((uVar7 ^ 0xffffffff) & 0xefd84b11 | uVar7 & 0x1027b4ee) ^
+          ((uVar8 ^ 0xffffffff) & 0xefd84b11 | uVar8 & 0x1027b4ee);
+  uVar5 = ((uVar5 ^ 0xffffffff) & 0xffb73ee8 | uVar5 & 0x48c117) ^
+          (uVar6 & 0xffb73ee8 | (uVar6 ^ 0xffffffff) & 0x48c117) |
+          (uVar5 ^ 0xffffffff | uVar6) ^ 0xffffffff;
+  uVar5 = (uVar5 ^ 0xffffffff) & 0xa95ee2be | uVar5 & 0x56a11d41;
+  uVar6 = uVar5 ^ 0xa95ee2be;
+  uVar8 = uVar7 ^ 0xffffffff;
+  local_10 = ((uVar11 & 0x1e98326 | uVar12 & 0xfe167cd9) ^
+              (uVar4 & 0x1e98326 | uVar10 & 0xfe167cd9) | (uVar11 | uVar4) ^ 0xffffffff) *
+             ((uVar8 & 0xc8a77567 | uVar7 & 0x37588a98) ^
+              (uVar6 & 0xc8a77567 | (uVar5 ^ 0x56a11d41) & 0x37588a98) |
+              (uVar8 | uVar6) ^ 0xffffffff);
+}
+
+[top-right box, teal label]  LLVM Optimised
+if (iVar5 == 0) {
+  uVar2 = (((param_2 | 0xbaaad0bf) & 0xc4fa1585 | param_2 & 0x1052a40) ^ param_2 ^ 0x80aa1085) &
+          (param_2 | 0xbaaad0bf | param_2 ^ 0x45552f40);
+  uVar1 = uVar2 & (param_2 ^ 0xbaaad0bf);
+  uVar2 = uVar2 ^ param_2;
+  uVar3 = ((param_2 & 0xfffffffd ^ 0xffffffff) & 0x34f5a7e6 | param_2 & 0xcb0a5819) ^
+          (param_2 & 2 | 0xdb2decf5);
+  uVar4 = ((param_2 & 0xfffffffd ^ 0xffffffff) & 0x48c117 | param_2 & 0xffb73ee8) ^
+          (param_2 & 2 | 0x48c115) | param_2 ^ 0xfffffffd;
+  local_24 = (uVar2 ^ uVar1 ^ 0xbaaad0bf | (uVar2 ^ 0xbaaad0bf) & uVar1) *
+             (uVar3 ^ uVar4 ^ 0x1027b4ee | (uVar3 ^ 0x1027b4ee | uVar4) ^ 0xffffffff);
+}
+
+[middle box, teal label]  SiMBA
+if (uVar2 == 0) {
+  uVar2 = (param_2 & 0xa81b62f7 | 0x17000408) ^ param_2 & 0x57e49d08;
+  *piVar1 = ((uVar2 ^ 0xadaad4b7) & (param_2 & 0xbaaad0bf ^ 0xffffffff) |
+             (uVar2 ^ 0x12000008) & param_2 & 0xbaaad0bf) *
+             (param_2 & 0xfffffffd ^ (param_2 & 2 | 0x4fa5c831) ^ 0x4fa5c833);
+  return;
+}
+
+[bottom box, teal label]  Gamba
+if (uVar2 == 0) {
+  *piVar1 = ((param_2 & 0x77b39989 | 0x88006252) ^ (param_2 ^ 0xed32f2d0) & (param_2 ^ 0x9a816b59)
+            ) * (param_2 | 0xbaaad0bf);
+  return;
+}
 ```
 
 ## Slide 32
@@ -682,7 +774,8 @@ LoS
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Those fields in Crypta
@@ -699,10 +792,8 @@ graph > fuzzy > lib > yql > = export_ssid_devid_day_table.yq]
 35
 36
 $list_metrika_log = (
-)5
 select coalesce(DeviceID, "") as DeviceID,
 coalesce(OriginalDevicelD, "") as OriginalDeviceID,
-SMakeStringList(Witi_Macs) aS Wifi Macs,
 $MakeStringList(Wifi_Ssids) as Wifi_Ssids,
 $MakeIntList(Wifi_SignalsStrengths) as Wifi_SignalsStrengths,
 $MakeIntList(Wifi_AreConnected) as Wifi_AreConnected
@@ -717,17 +808,15 @@ where DeviceID is not null
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dev Id and SSID Associated with Yandex UID
 graph > fuzzy > lib > yql >
-6)
 7
 8
-,
 10
-fa
 12
 13
 14
@@ -737,14 +826,11 @@ $mobile_all_table = (
 export_ssid_yuids.yql
 select distinct mmetric_devid, ssid
 from concat({sources})
-};
 $mmetric_to_devid = (
 select mmetric_devid,
 coalesce(cast(
 devid,
 yuid as uint64), @) as yuid
-from ‘{source_nolimit_table}*
-i;
 33
 ```
 
@@ -754,7 +840,8 @@ Click Event Data Being Matched to Existing Users
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Click Event Data Being Matched to Existing Users
@@ -763,7 +850,6 @@ core > programs > clicklogd-mobile > src > C event_indexed_pool.h > ¢g TEventIn
 59 template <class TMatchCriteria>
 60 TIndex<TMatchCriteria>& GetIndex() {
 61 if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TAndroidId>) {
-cy return AndroidId_;
 63 1} else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TAndroidIdMd5>) {
 64 return AndroidIdMd5_;
 65 1} else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TAndroidIdSha1>) {
@@ -771,7 +857,6 @@ cy return AndroidId_;
 67 } else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TDeviceIdHash>) {
 68 return DeviceIdHash ;
 69 else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TFingerprint>) {
-i) return Fingerprin
 else if constexpr (std
 return GoogleAid_;
 } else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TGoogleAidMd5>) {
@@ -784,7 +869,6 @@ return Ifa_;
 return IfaMd5_;
 'S_same_v<IMatchcriteria, NMatchCriteria::TGoogleAid>) {
 Bones
-is_same_v<TMatchCriteria, NMatchCriteria: :TGoogleAidShal>) fi
 s_same_v<TMatchCriteria, NMatchCriteria::TIfa>) {
 81 } else if constexpr (std::is_same_v<TMatchCriteria, NMatchCriteria::TIfaShal>) {
 82 return IfaShal_;
@@ -796,7 +880,6 @@ s_same_v<TMatchCriteria, NMatchCriteria::TIfa>) {
 88 return WindowsAidSha1.
 89 } else if constexpr (std _same_v<TMatchCriteria, NMatchCriteria::TYmTrackingId>) {
 90 return YmTrackingId_;
-91 Ly
 34
 ```
 
@@ -806,20 +889,18 @@ s_same_v<TMatchCriteria, NMatchCriteria::TIfa>) {
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Socio-Demographic Attributes for DevID being Updated
 core > programs > socdem-updaterd-mobile > src > G UserldAndinfoParser.cpp > ...
-L
 45 {"0_17", AgeIntervalsCrypta: :LessThan18},
 6 {"18_24", AgeIntervalsCrypta: :Between18and24},
 {"25_34", AgeIntervalsCrypta: : Between25and34},
 {"35_44", AgeIntervalsCrypta: :Between35and44},
 {"45_54", AgeIntervalsCrypta: :Between45and54},
 {"55_99", AgeIntervalsCrypta: :MoreThan55}
-ts
-r:setValue(value, exact_socdem_node, key, json_keys_to_ages_intervals) ;
 55 void UserIdAndInfoParser: :setValue(
 56 SexTypesCrypta & value,
 const NYT::TNode & exact_socdem_node,
@@ -829,11 +910,8 @@ const TString key)
 6 {
 62 {"f", SexTypesCrypta::Female},
 63 {"m", SexTypesCrypta: :Male}
-+
 65 risetValue(value, exact_socdem_node, key, json_keys_to_sex_types) ;
-66}
 68 std::string UserIdAndInfoParser::parse(const NYT::TNode & user_record)
-69 =f
 1) const TString &{device_id = user_record["appmetrica_devid"] .AsString(); |
 ] UserInfo user_in?o;
 const auto & exact_socdem = user_record["exact_socdem"] ;
@@ -843,7 +921,6 @@ setValue(user_info.sex, exact_socdem, "gender");
 std::ostringstream buffer;
 buffer <<
 81 sipHash64(device_id.data(), device_id.size()) << ‘\t' <
-LORE AG | 2 1s
 35
 ```
 
@@ -851,17 +928,13 @@ LORE AG | 2 1s
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Supexc Ayautopun
 Create segments based on
 offline and online data
 Create Segment
-Slumexc Ayautonuu
-JloanbHble KNNeHTbI
-CermenTet
-| 582685 =) Te 73% 27%
 To come in
 36
 ```
@@ -878,7 +951,8 @@ To come in
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Crypta
@@ -900,17 +974,12 @@ classification of web users based on their online behavior. Their behaviour just
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example Segments
-v CRYPTA
-e*ee@e@v
 eee
-ete
-eee eee
-e*e?ee@¢
-*
 eee @
 test
 age_segment_18_20.py
@@ -923,7 +992,6 @@ avia_travellers.py
 bank_cards.py
 bought_two_tickets.py
 business_travellers.py
-children_age_segment_clarification.py
 compulsory_auto_insurance.py
 connection_type.py
 console_gamers.py
@@ -943,12 +1011,6 @@ kbt_customers.py
 kfc_visitors.py
 kinopoisk_logins.py
 kinopoisk_movie_watchers.py
-Reo ea
-~ CRYPTA
-ee??? @@@2022000080
-e??e? @@2200704
-?\2 @
-eee 02208
 kinopoisk_movie_watchers.py
 kz_users.py
 laptop_users.py
@@ -958,7 +1020,6 @@ loyal_to_launcher_install.py
 macos_users.py
 mail_data.py
 manufacturer_phone_owners.py
-marketplaces_Itv_users.py
 mobile_gamers.py
 mobile_operators_users_by_prefix.py
 mobile_operators_users.py
@@ -980,9 +1041,6 @@ score_users_for_telephony.py
 searched_for_phone_numbers.py
 searched_radisson_on_maps.py
 \ CRYPTA
-STS AHCESC ESE te ee ee ee eee
-e+? 2008
-OT PONTE STC TOT
 mobile_operators_users_by_prefix.py
 mobile_operators_users.py
 multidevice_puid.py
@@ -1003,7 +1061,6 @@ score_users_for_telephony.py
 searched_for_phone_numbers.py
 searched_radisson_on_maps.py
 seo_specialists.py
-seo_users.py
 smart_gadgets_customers.py
 smokers.py
 summer_residents.py
@@ -1014,9 +1071,6 @@ webmaster.py
 widgets.py
 with_children_by_ages.py
 a make
-TOTSE
-GReOe
-TOUTSTTTTET
 39
 ```
 
@@ -1026,15 +1080,14 @@ TOUTSTTTTET
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example Segments
-??@??2?20020 @
 v
 smart_gadgets_customers.py
 smokers.py
-summer_residents.py
 travellers.py
 video_bloggers.py
 want_to_change_the_provider.py
@@ -1051,7 +1104,8 @@ va make
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Travellers
@@ -1069,14 +1123,12 @@ profile > runners > segments > lib > coded_segments > ® travellers.py > ...
 92 CASE
 93 WHEN Geo: :RoundRegionById(region, “country").id != Geo::RoundRegionById(CAST(main_region AS Int32), “country").id THEN ‘internati
 94 ELSE ‘domestic’
-95 ~END-ASsegment_name,
 96 MAX(*date*>) AS last_seen,
 97 MIN(*date*) AS first_seen,
 98 region,
 99 week_end_date,
 100 FROM $travell_visits
 101 GROUP BY region, main_region, crypta_id, week_end_date
-102.—)
 103 WHERE
 104 last_seen <= week_end_date AND
 105 DateTime: : ToDays (DateTime: :MakeTimestamp($parse(last_seen)) —- DateTime: :MakeTimestamp($parse(first_seen))) > @ AND
@@ -1094,12 +1146,12 @@ profile > runners > segments > lib > coded_segments > ® travellers.py > ...
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mail Data
 profile > runners > segments > lib > coded_segments > @ mail_data.py > ...
-12
 13
 14 segment_query = """
 15 INSERT INTO ‘{output_table}* WITH TRUNCATE
@@ -1118,13 +1170,11 @@ profile > runners > segments > lib > coded_segments > @ mail_data.py > ...
 28 )
 29 GROUP BY yandexuid, segment_name
 30 uae
-spl
 32
 BS class PrepareMailSampleForLalSegments(RegularSegmentBuilder) :
 34 keyword = 549
 65 name_segment_dict = {
 36 ‘aviaticket': 1404,
-y/ "boardingpass': 1405,
 38 "hotel': 1406,
 39 }
 42
@@ -1136,19 +1186,17 @@ y/ "boardingpass': 1405,
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Gas Stations
 profile > runners > segments > lib > coded_segments > @ gas_stations.py > ...
 92
-2}
 94
 95
 96
-o7
 98
-O95
 100
 101
 102
@@ -1161,21 +1209,16 @@ O95
 109
 110
 111
-a2
 class ProcessedDeepVisitLogForGasStations(DayProcessor):
 def requires(self):
 return deep_visits.org_visits_deep_external_input(self.date)
 def process_day(self, inputs, output_path):
-self.yql. query (
-gas_stations_query_temp late. format (
 organization_categories=config.ORGANIZATION_CATEGORIES,
 deep_visits=inputs.table,
 matching_idfa=get_matching_table('idfa', ‘crypta_id'),
 matching_gaid=get_matching_table('gaid', ‘crypta_id'),
-name_to_variable=',\n'.join(
 [u'("{}", "{}")'.format(key, value)
 for key, value in name_to_variable.iteritems()]
-,
 output_table=output_path,
 ),
 transaction=self.transaction,
@@ -1188,22 +1231,15 @@ transaction=self.transaction,
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example ML Model Types
-~ CRYPTA
-*@
 eee
-eee
-eee
-tee ee tees eevee
-*
-RROse
 legal_entities_model_application.py
 legal_entities_model_training.py
 its_model_application.py
-legal_office_)
 legal_office_visits_model_training.py
 market_model_application.py
 market_model_training.py
@@ -1217,7 +1253,6 @@ mortgage_approval_model_application.py
 mortgage_approval_model_training.py
 online_cinema_model_application.py
 online_cinema_model_training.py
-online_payment_model_application.py
 online_payment_model_training.py
 online_sales_register_model_application.py
 online_sales_register_model_training.py
@@ -1241,7 +1276,8 @@ va make.
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Basic example of household details
@@ -1273,7 +1309,6 @@ IF((Yson::LookupInt64(info, ‘grand') != @), ‘grand', Null) AS has_old,
 IF((Yson::LookupInt64(info, ‘child') != @), ‘child', Null) AS has_child
 FROM $composition
 WHERE $predicat(size, socdems)
-;
 SELECT ($title || groups) AS key, hh_c AS hh_socdem_count
 FROM (
 SELECT groups, SUM(size) AS hh_c
@@ -1292,7 +1327,8 @@ AppMetrica being used to pull wifi connection types:
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AppMetrica being used to pull wifi
@@ -1322,8 +1358,6 @@ AsSet('4g') THEN ‘4g'
 BE number_of_days = 35
 BE def requires(self):
 9 return {
-3¢ “AppMet ri : LogProcessor(
-ProcessAppMet ricaForConnectionType,
 self.date,
 self.number_of_days,
 46
@@ -1335,7 +1369,8 @@ self.number_of_days,
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AppMetrica data being used to separate users with common
@@ -1361,7 +1396,8 @@ AppMetrica data being used to separate users with common SSIDs (wifi networks)
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AppMetrica data being used to separate users with common
@@ -1373,7 +1409,6 @@ self.destination, self.destination_schema, strict=True, recreate_if_exists=True
 with self.yt.TempTable() as unexploded, self.yt.TempTable() as not_unique:
 self.yql.execute(self.query(unexploded), syntax_version=1)
 run_native_reduce(
-reducer_name="NCommonWif iAP: :TExploder",
 source=unexploded,
 destination=not_unique,
 proxy=self.yt.proxy,
@@ -1385,7 +1420,6 @@ reduce_by=["ssid"],
 yuid_pair = [conf.Constants.YUID_LEFT, conf.Constants.YUID_RIGHT]
 self.yt.run_sort(not_unique, not_unique, sort_by=yuid_pair)
 run_native_reduce(
-reducer_name="NCommonWif iAP: : TUnique",
 source=not_unique,
 destination=self.destination,
 proxy=self.yt.proxy,
@@ -1407,13 +1441,13 @@ Search Data Wifi
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sources
 graph > fuzzy > lib > ®@ config.py > ¢ GeoPaths
 class SourceTypes(object):
-EMAIL_LOGIN = "EMAIL LOGINS"
 EMAIL_SIMILAR = “EMAIL SIMILAR"
 GEO_HOMEWORK = "GEO HOMEWORK"
 HOUSEHOLD = "HOUSEHOLD"
@@ -1428,7 +1462,8 @@ SSID = "SSID" ——\Vifj
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yandex IDs Associated with Email
@@ -1437,20 +1472,14 @@ ROOT = ROOT
 # Emails
 BASE = "{root}/email". format(root=RO0T)
 ALL_EMAILS_TABLE = "{base}/all_emails". format (base=BASE)
-ALL_EMAIL_LOGINS_TABLE = "{base}/all_email_logins". format (base=BASE)
-ALL_EMAILS_SORTED_BY_LOGIN = "{base}/all_email_logins.sorted_by_login". format (base=BASE)
 ALL_EMAIL_LOGINS_PAIRS_TABLE = "{base}/all_email_logins.pairs". format (base=BASE)
 ALL_EMAILS GROUPED_BY_LOGIN = "{base}/all_email_logins.groups". format (base=BASE)
-ALL_YUID_PAIRS_FROM_EMAIL_LOGIN = "{base}/all_yuid_pairs_from_email_logins_matching". format (base=BASE)
 ALL_YUID_PAIRS_FROM_SIMILAR_EMAILS = "{base}/all_yuid_pairs_from_similar_emails". format (base=BASE)
 ALL_EMAILS_TABLE_SCHEMA = {"emai "string", "yuids": “any"}
 ALL_EMAIL_LOGINS_TABLE_SCHEMA = {"login": "string", "email": "string", “yuids": "“any"}
-ALL_EMAILS SORTED_BY_LOGIN_SCHEMA ="{"login’: string’, "emarl’: "string’, "yulds’: "any" }
 ALL_EMAILS_GROUPED_BY_LOGIN_SCHEMA = {"login": "string", "all_emails": "any", “howmany": "uint64"}
 ALL_EMAIL_LOGINS_PAIRS_TABLE_SCHEMA = {
 “email_1": "string",
-“email_2": "string",
-“Login”: "string",
 “yuids_1": “any",
 “yuids_2": "any",
 }
@@ -1458,13 +1487,7 @@ ALL_YUID_PAIRS_FROM_EMAIL_LOGIN_SCHEMA = {
 Constants. YUID_LEFT: (“uint64", True),
 Constants. YUID_RIGHT: ("uint64", True),
 "match": "any",
-}
 ALL_YUID_PAIRS_FROM_SIMILAR_EMAILS SCHEMA = {
-Constants. YUID_LEFT: “uint64",
-Constants. YUID_RIGHT: “uint64",
-"“email_left": “string”,
-“email_right": "string",
-“fragment": “string”,
 ```
 
 ## Slide 51
@@ -1475,27 +1498,20 @@ Extracting multiple types of identifiers
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Login Data
 graph > fuzzy > lib > tasks > sources > visitlog_logins > ® extract.py > ...
-aeT Tllter_rare_logins_optlons(setT):
 return TFilterRareLoginsOptions(Threshold=self.threshold).SerializeToString()
 @property
 def filter_keys_options(self):
 return TFilterKeysOptions(
 Keywords=[
-"Login",
-“user”,
-“userid”,
 “clientid",
-"uid",
-“email”,
 “emailhash",
-"\u043b\u043e\u0433\Uu0438\u043d",
 “computerid",
-"cid",
 “suserid",
 ]
 ).SerializeToString()
@@ -1511,18 +1527,16 @@ of identifiers
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Passport
-= c
-@ cyberChet
 @ passport.yandex.com,
 ©) confiant-inc/priva... [3 Tracker DBs
 punt, y
 2t dire
 tions and u
-[i Reading [%j Useful snippets
 Yandex
 @ hittps://emplist.co...
 @ https:j/vendor-list..
@@ -1538,7 +1552,8 @@ Technique protect...
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Passport User ID Associated with Phone
@@ -1568,120 +1583,90 @@ puid AS id1,
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-graph > data_import > passport > tests > fixtures > {} passport.json > ...
-al
-O©MNMRURWHN
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-pak
-22
-23
-24
-PAs)
-26
-ZT,
-28
-29
-30
-31
-32
-{"uid":
-{"uid"
-{"uid"
-{"ui
-{"uid"
-{"uid"
-{ui
-{"uil
-{"ui
-{"uid
-{"uid"
-{"uid"
-{"uid":
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-{"uid"
-Obie hg
-{"uid":
-{"uid":
-{"uid":
-{"uid"
-{"uid"
-{"uid"
-"11111", "login":
-#11112", “login
-"11113", "login
-"11114", “login
-"11115", "login"
-"11116", "login"
-"11117", "login"
-11118"; “login™
-"11119", "login
-"11120", "login
-"11121", "login
-#11122", “login
-"11123", "login
-"11124", “login
-"11125", "login"
-"11126", "login"
-"11127", "login"
-11128", “Login™
-"11129",
-"123456",
-"123457",
-“aashinova"}
-“andrei-ponomareff-1997"}
-“anoshko-av"}
-“bars12@161. ru"}
-“evOngertlt"}
-“evarcher"}
-"Lagutin2008"}
-“login-for-avito"}
-“modsever"}
-“mouradian"}
-“perschina-olga2013"}
-“r.amiras lanov@dveri. ru"}
-“saprovec2015"}
-“stoltat"}
-"“sveta—aleshina2015"}
-“watchradius"}
-“watchradius"}
-"sveta-aleshina2015"}
-“watchradiusmob"}
-“abc127", "phone_numbers'
-“abc123", "phone_numbers"
-{1}
-["+1234567890", "+71111234567"]}
-"123458", "login": "", "phone_numbers": ["+9393939393", "+71202020201"]}
-"134614616", "login": “roscosh8"}
-"134648582", “login": “e222mn"}
-"15033290", "login": "mouradian"}
-"194502233", "login": "ingvr80"}
-"2687", “login": “govshit"}
-"2687", "login": "GOVSHIT"}
-"76667777", “login": "g8jkqqaaaaaaaaah"}
-"766679666", "login": “d6fqqaaaaaaaaah"}
-: "766679777", "login": "mdmozn45"}
-54
+Deobfuscation: LLVM Opt + SiMBA + GAMBA
+
+[left panel, orange label]  Polaris
+Instruction substitution (loop 3)
+
+12    uVar1 = param1 & 3;                                    [row clipped by panel top edge]
+13  if (uVar1 == 0) {
+14    uVar1 = ((param1 ^ 0xffffffff) & 0x19495cff | param1 & 0xe6b6a300) ^ 0x5c1c73bf;
+15    uVar1 = (uVar1 ^ param1 ^ 0xffffffff) & uVar1;         [line start partly under tooltip]
+16    uVar5 = (param1 ^ 0x625558ec) & (param1 ^ 0xffffffff); [line start partly under tooltip]
+17    uVar2 = (param1 ^ 0x625558ec) & param1;
+18    uVar5 = uVar5 & uVar2 | uVar5 ^ uVar2;
+19    uVar5 = (uVar5 ^ 0xffffffff) & 0xd8ff8853 | uVar5 & 0x270077ac;
+20    uVar2 = (param1 & 0x1ba026fa | (param1 ^ 0xffffffff) & 0xe45fd905) ^ 0x860a81e9;
+21    uVar3 = (param1 ^ 0xffffffff) & 0x625558ec | param1 ^ 0x9daaa713;
+22    uVar3 = (uVar3 ^ 0xffffffff) & 0x741226bb | uVar3 & 0x8bedd944;
+23    uVar2 = (uVar2 ^ param1) & uVar2 ^ 0xffffffff;
+24    uVar2 = (uVar2 ^ ((uVar3 ^ 0x741226bb) & 0x6590700b | (uVar3 ^ 0x8bedd944) & 0x9a6f8ff4) ^
+25                     0x6590700b) & uVar2;
+26    uVar2 = (uVar2 ^ 0xffffffff) & 0x1eba5d23 | uVar2 & 0xe145a2dc;
+27    uVar1 = (uVar2 ^ 0x1eba5d23 | 0x625558ee) ^ 0xffffffff;
+28    uVar1 = (((uVar2 ^ 0x1eba5d23) & 0x60b6df70 | (uVar2 ^ 0xe145a2dc) & 0x9f49208f) ^ 0x2e3879e) &
+29           0x625558ee;
+30    local_c = (((uVar1 ^ 0xffffffff) & 0x7c83e458 | uVar1 & 0x837c1ba7) ^ 0x7c83e458 |
+31             ((uVar5 ^ 0xffffffff) & 0x721da317 | uVar5 & 0x8de25ce8) ^ 0x721da317) *
+32             (uVar1 & uVar1 | uVar1 ^ uVar1);
+33  }
+34  else if (uVar1 == 1) {
+35    uVar1 = (((param1 ^ 0xffffffff) & 0x5fb8011c | param1 & 0xa047fee3) ^ 0x5fb8011c | 0x8de25ce8) &
+36             ((param1 ^ 0x721da317) & param1 ^ 0xffffffff);
+37    uVar1 = uVar1 & 0x8de25ce8 | (uVar1 ^ 0xffffffff) & 0x721da317;
+38    uVar1 = ((uVar1 ^ 0xffffffff) & 0x53584bcb | uVar1 & 0xaca7b434) ^ 0x53584bcb | 0x45552f40;
+39    uVar5 = uVar1 ^ 0xffffffff;
+40    local_c = ((uVar5 ^ uVar1) & uVar5) * -(-3 - param1);
+41  }
+42  else if (uVar1 == 2) {
+43    uVar1 = (param1 | 0xfaf8dc98) & ((param1 ^ 0x5072367) & param1 ^ 0xffffffff);
+44    uVar1 = ((uVar1 & 0x68b867d3 | (uVar1 ^ 0xffffffff) & 0x9747982c) ^ 0x9240bb4b) & 0xbaaad0bf;
+45    uVar5 = ((param1 ^ 0xffffffff) & 0x368db37e | param1 & 0xc9724c81) ^ 0x8c2763c1;
+46    uVar5 = (uVar5 ^ param1 ^ 0xffffffff) & uVar5;
+47    uVar2 = (param1 ^ 0xffffffff) & 0xfffffffb | param1 & 4;
+48    uVar2 = (uVar2 ^ 0xfffffffb) & uVar2;
+49    uVar3 = (param1 | 0xb4a770ab) & (param1 ^ 0xffffffff | 0x4b588f54);
+50    uVar3 = uVar3 & 0x1c4a08ec | (uVar3 ^ 0xffffffff) & 0xe3b5f713;
+51    uVar4 = (uVar2 ^ 0xffffffff | uVar3 ^ 0xa8ed7843) ^ 0xffffffff;
+52    uVar1 = (uVar2 ^ 0xffffffff) & (uVar3 ^ 0x571287bc) | uVar2 & (uVar3 ^ 0xa8ed7843);
+53    local_c = ((uVar1 ^ 0xffffffff | uVar5 ^ 0xffffffff) &
+54             (((uVar1 ^ 0xffffffff) & uVar5 | uVar1 & (uVar5 ^ 0xffffffff)) ^ 0xffffffff) ^
+55             0xffffffff) * (uVar4 & uVar1 | uVar4 ^ uVar1);
+56  }
+57  else {
+58    uVar1 = ((param1 ^ 0xffffffff) & 0x769a091f ^ 0x769a091f) &
+59             ((param1 ^ 0xffffffff) & param1 ^ 0xffffffff);
+60    uVar5 = (uVar1 ^ 0x8bedd944) & uVar1;
+61    uVar1 = (uVar1 | 0x741226bb) ^ 0xffffffff;
+62    uVar1 = uVar5 & uVar1 | uVar5 ^ uVar1;
+63    local_c = -(-0x374a3fe6 - (-0x374a3fe6 - (0x45552f41 - param1))) *
+64             ((((uVar1 ^ 0xffffffff) & 0x52a311c3 | uVar1 & 0xad5cee3c) ^ 0x26b1377d) & 5);
+65  }
+66  return local_c;
+
+[tooltip overlaying the left edge of lines 15-16, itself cut off by the slide edge]
+...004d56, OTHER:00004d59]
+
+[right panel, orange label]  LLVM Optimisation  + SiMBA + GAMBA
+ 9    uVar1 = param_2 & 3;
+10    iVar3 = (param_2 ^ 0xbaaad0bf) * (param_2 | 4);          [3]
+11    if (uVar1 != 2) {
+12      iVar3 = (param_2 + 0xbaaad0bf) * (param_2 & 5);        [4]
+13    }
+14    iVar2 = (param_2 + 2) * (param_2 | 0xbaaad0bf);          [1]
+15    if (uVar1 != 0) {
+16      iVar2 = (param_2 & 0xbaaad0bd) * (param_2 + 3);        [2]
+17    }
+18    if (uVar1 < 2) {
+19      iVar3 = iVar2;
+20    }
+21    return iVar3;
+
+[teal label]  Completely Recovered
 ```
 
 ## Slide 55
@@ -1692,7 +1677,8 @@ Using lat/long data associated with “predicted home”, linked to Yandex UID
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Crypta - Geo grap
@@ -1701,7 +1687,6 @@ data associated
 with “predicted
 home’, linked to
 Yandex UID
-as
 graph > fuzzy
 lib > tasks > sources > geo > C geo_operations.h
 void Do(TTableReader<TNode>* input, TTableWriter<TGeoSquare>* output)
@@ -1721,14 +1706,11 @@ for (int beltOffset : {-1, @, 1}
 for (int sqoffset : {-1, 0}
 if (beltoffset
 continue;
-+
 ynst ui64 square_idx = ConvertSquareToIdx({.Belt =
 TGeoSquare out;
 out. set_yandexuid(yandexuid) ;
 out.set_lat( latitude) ;
 out.set_lon( Longitude) ;
-out. set_squareidx(square_idx) ;
-output->AddRow( out);
 square.Belt + belt0ffset, .Sq =
 square.Sq + sq0ffset
 54
@@ -1742,7 +1724,8 @@ Then using that data to find literal neighbors within a certain radius of that h
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Crypta - Geo graphs
@@ -1755,7 +1738,6 @@ home
 public:
 lib > tasks > sources > geo > C geo_operations.h
 TEindNeighbors: public IReducer<TTableReader<TGeoSquare>, TTableWriter<TNeighborsDistance>> {
-TFindNeighbors (
 : State(
 TFindNeighbors(const TBuffer& buffer
 : State(buffer
@@ -1764,7 +1746,6 @@ d Do(TTableReader<TGeoSquare>* input, TTableWriter<TNeighborsDistance>* output) 
 TVector<TGeoSquare> candidates;
 for (; input->IsValid(); input->Next()) {
 const auto& row = input->GetRow();
-candidates. push_back( row) ;
 xrange(candidates.size())) {
 for (auto j : xrange(i + 1, candidates.size()
 suto& left = candidates.at(i);
@@ -1776,8 +1757,6 @@ distance > radius
 inu
 ‘TNeighborsDistance out;
 out. set_distance(distance) ;
-out. set_yandexuidleft (Min( left. yandexuid(), right.yandexuid()));
-out. set_yandexuidright (Max(left.yandexuid(), right. yandexuid()));
 output->AddRow(out) ;
 ```
 
@@ -1787,7 +1766,8 @@ output->AddRow(out) ;
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AppMetrica and Taxi data being used generate segments
@@ -1795,22 +1775,17 @@ about households with children:
 self.yql.query(
 2pp_metrica query. format (
 devid_by_app_table=self.input() ['DevidByApp'].table,
-Output_table=with children by app table
 app_to_segment_name='\n'.join(app_segment_name_tuples),
-yy
 transaction=self.transaction,
 build_segment(self, inputs, output_path):
 with self.yt.TempTable() as taxi_puid_table, \
 self.yt.TempTable() as app_metri table:
-self.yt. run_map(
 extract children from taxi
-inputs ['TaxiData'].table,
 taxi_puid_table,
 self.prepare_with_children_by_app(app_metrica_table)
 self.yql.query(
 with_children_query_template. format (
 metrics_table=inputs['ProcessedMetrics'].table,
-reqans_table=inputs|['ProcessedReqans'].table,
 app_metrica_table=app_metrica_table,
 taxi_data_table=taxi_puid_table,
 id_to_crypta_id_table=config.VERTICES_NO_MULTI_PROFILE,
@@ -1827,12 +1802,12 @@ output_table=output_path,
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ID mapping associations:
 taxi_data_table=taxi_puid_table,
-id_to_crypta_id_table=config. VERTICES NO_MULTI_PROFILE,
 crypta_id_to_hhid_table=config.HOUSEHOLD_CRYPTA_ID_TO_HHID,
 yandexuid_to_hhid_table=config.HOUSEHOLD_REVERSED_TABLE,
 hhid_to_yandexuid_table=config.HOUSEHOLD ENRICH TABLE,
@@ -1846,7 +1821,8 @@ Profiles integrate biometric data, most likely from smart speakers that use Yand
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Profiles integrate biometric data, most likely from smart
@@ -1872,7 +1848,8 @@ Russian only.
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Possib
@@ -1881,14 +1858,12 @@ profile > runners > segments > lib > coded_segments > ® children_age_segment_cl
 13 clarify_children_yql_template =
 14 $possible_children_by_voice = (
 15 SELECT ‘uuid’, TableName() AS ‘date’, '@_12' AS segment_name
-16 FROM RANGE(* {biometry folder}*, “{biometry_first_date}’, *{biometry_last_date}’)
 17 WHERE bio_child > 0.8
 18 3
 19
 20 Spossible children by voice = (
 21 SELECT DISTINCT “uuid’, ‘date’, segment_name
 22 FROM $possible_children_by_voice
-23);
 24
 25 $possible children by voice = (
 26 SELECT “uuid’, segment_name
@@ -1914,7 +1889,6 @@ profile > runners > segments > lib > coded_segments > ® children_age_segment_cl
 46 FROM $possible_children_by_voice AS biometry
 47 INNER JOIN ‘{id_to_crypta_id_table}’ AS matching
 48 ON biometry. *uuid* matching. id
-40. WHERE match dat. aoe id
 60
 ```
 
@@ -1924,7 +1898,8 @@ UI for Infographics Card
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 _UI for Infographics Card
@@ -1958,17 +1933,10 @@ beauty.svg
 business.svg
 clothes.svg
 construction.svg
-=
-=
-=
-=
-=
 ‘mw education.svg
 “a electronics.svg
-"m entertainments.svg
 “a family.svg
 ‘a finance.svg
-"w food.svg
 ‘a gifts.svg
 Js index.js
 job.svg
@@ -1978,7 +1946,6 @@ sport.svg
 stationery.svg
 telecom.svg
 61
-ewnrnrnrse
 transport.svg
 ```
 
@@ -1988,12 +1955,12 @@ transport.svg
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Search Profile by ID
 web > portal > src > graph > search > JS SearchPanel.js > ...
-return (
 <div key={"inputs—" + suffix} className="input-group">
 14 <div style={{display: showIdInput ? "block" : "none"}}>
 <ValueInput
@@ -2007,15 +1974,12 @@ experiments.status !== 403 && (
 <div className="experiments-select-uid-type">
 <RadioButton
 value={act iveUid}
-size="5"
 view="default"
 className="select-sorting"
 onChange={(event) => selectUidType(event.target.value) }
-options=((j
 { value: "uid", children: t("by") + " yandexuid" },
 { value: “cryptaId", children: t("by") + " CryptaID" },|
 |
-iD
 62
 ```
 
@@ -2025,22 +1989,17 @@ iD
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UI - Available App Icons
-v CRYPTA GBRoae
 4S Timedinterests.js
-JS utils.js
 > pages
-\ public-info
 > components
 v icons
-v apps
-v comyandex.browser
 fa active.svg
 fa disabled.svg
-com yandex.browser.lite
 com yandex.lavka
 >
 >
@@ -2049,8 +2008,6 @@ com yandex.lavka
 >
 com yandex.music.xiaomi
 com yandex.toloka.androidapp
-Y comyandex.zen
-"m active.svg
 fa disabled.svg
 default
 ruyandex.androidkeyboard
@@ -2065,7 +2022,6 @@ ruyandex.mail
 ruyandex.mail.notificationserviceextension
 ruyandex.market
 \ CRYPTA
-Roe
 ru.yandex.mail.notificationserviceextension
 ruyandex.market
 ruyandex.metro
@@ -2073,7 +2029,6 @@ ruyandex.mobile
 ruyandex.mobile.drive
 ruyandex.mobile.drive.notification
 ruyandex.mobile.keyboard
-ru.yandex.mobile.keyboard.extension
 ruyandex.mobile.KeyboardExtension
 ruyandex.mobile.metro
 ruyandex.mobile.music
@@ -2095,19 +2050,15 @@ ruyandex.translate
 ruyandex.uber
 ruyandex.uber-kz
 ruyandex.weatherplugin
-ru.yandex.yandexmaps
 ruyandex yandexnavi
 ru.yandex.yandexmaps
 ru.yandex.yandexnavi
 ru.yandex.ymarket
-vvvYv
 ru.yandex.ytaxi
 Js index.js
 ~ interests
 ‘m agro.svg
-‘m animals.svg
 ‘= appliances.svg
-‘» beauty.sva
 63
 ```
 
@@ -2117,7 +2068,8 @@ Js index.js
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ids Associated with Social Media Accounts
@@ -2140,31 +2092,19 @@ const NODE_MAPPING = {
 email: {
 imageSize: IMAGE_SIZEM,
 imageHref: "mail",
-7
 yandexuid: {
-imageSize: INAGE_SIZE XS,
 imageHref: "yandexuid",
 idfa: {
 imageSize: INAGE_SIZE_L,
 imageHref: "ios",
-h
 gaid: {
 imageSize: IMAGE_SIZE_L,
 imageHref: “android”,
-he
 oaid: {
-imageSize: INAGE_SIZE_L,
 imageHref: "android",
-login: {
-imageSize: INAGE_SIZE_M,
 imageHref: "key",
-h
-puid:
-imageSize: INAGE_SIZE_M,
 imageHref: "key",
-he
 instagram_login: {
-imageSize: IMAGE_SIZE M,
 imageHref: "instagram
 {
 imageSize: IMAGE_SIZEM,
@@ -2172,21 +2112,16 @@ imageSize: IMAGE_SIZEM,
 web > portal > src > public-info > sections > GraphSection > 4s GraphSection.js > @ GraphSection > © useEffe:
 instagram_id: {
 imageSize: IMAGE_SIZE_M,
-imageHref: “instagran"
 imageSize: IMAGE_SIZE_M,
 imageHref: "facebook"
 ok_id: {
-imageSize: IMAGE_SIZEM,
 imageHref: "ok"
 imageSize: IMAGE_SIZE_M,
 imageHref: "vk"
 vk_name: {
 imageSize: IMAGE_SIZE M,
-imageHref: "vk"
 kp_id: {
-imageSize: IMAGE_SIZEM,
 imageHref: "kinopoisk'
-‘uid’
 if (item. idType
 return { imageHref: item.icon, imageSize: IMAGE_SIZE_S };
 return NODE_MAPPING[item. icon] 77 { imageHref: “default, imageSize: IMAGE_SIZE_XS
@@ -2212,12 +2147,12 @@ scatch(() => getServiceIcon("default", disabled) )
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Matc
 ner
-\Y matcher
 > bin
 > bundle
 v lib
@@ -2242,19 +2177,17 @@ C parser.h
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rostelecom Matcher
 ext_fp > matcher > lib > matchers > rostelecom_matcher > G rostelecom_matcher.cpp
-22  TConnection [RostelecomMatcher: :MakeConnection(const TFpEvent& event) {
+22 TConnection [RostelecomMatcher: :MakeConnection(const TFpEvent& event) {
 23 return {
 24 «Ip = event.GetIp(),
 25 «Port = event.GetPort(),
-26 - Timestamp = event.GetUnixtime(),
 27 «Domain = NMcDomain: :GetMcDomainForRostelecom(event.GetDuid()),
-28 a
-29 «}
 30
 31 void TRostelecomMatcher: :AddConnection(const TFpEvent& event) {
 32 auto connection = MakeConnection(event);
@@ -2264,9 +2197,7 @@ ext_fp > matcher > lib > matchers > rostelecom_matcher > G rostelecom_matcher.cp
 36 << connection.Port << '\t'
 37 << connection.Timestamp << '\t'
 38 << connection.Domain << ‘\n';
-39 3
 40
-41 ‘TMatches TRostelecomMatcher::GetMatches() {
 42 if (Request. length() ®) {
 43 return TMatches();
 44 }
@@ -2275,8 +2206,6 @@ ext_fp > matcher > lib > matchers > rostelecom_matcher > G rostelecom_matcher.cp
 47
 48 NNeh::TMessage message(GetApiUrl(), "");
 49 Y_ENSURE (NNeh: :NHttp: :MakeFullRequest(message, "", Request, "“text/plain"), "Failed to build request to Rostelecom API");
-50
-51 Stats. Count->Add("api.calls.rostelecom. count");
 52 const auto& resp = MakeRequest(Client, message, TDuration::MilliSeconds(Config.GetApiCallTimeoutMs()), “Rostelecom", requestId, Log);
 53
 54 return ParseResponse(resp->Data) ;
@@ -2293,7 +2222,8 @@ ext_fp > matcher > lib > matchers > rostelecom_matcher > G rostelecom_matcher.cp
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rostelecom Matcher
@@ -2307,7 +2237,6 @@ ext_fp > matcher > lib > matchers > rostelecom_matcher > G rostelecom_matcher.cp
 28
 29
 TConnection [Rostelecomatcher::MakeConnection(const TFpEvent& event) {
-el
 return {
 -Ip = event.GetIp(),
 «Port = event.GetPort(),
@@ -2322,7 +2251,8 @@ return {
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rostelecom Matcher
@@ -2347,7 +2277,6 @@ const auto& requestId = CreateGuidAsString();
 Log->info("Rostelecom request {} body:\n{}", requestId, Request);
 NNeh::TMessage message(GetApiUrl(), "");
 Y_ENSURE (NNeh: :NHttp: :MakeFullRequest(message, "", Request, "text/plain"), "Failed to build request to Rostelecom API")
-Stats.Count->Add("api.calls.rostelecom. count");
 const auto& resp = MakeRequest(Client, message, TDuration: :MilliSeconds(Config.GetApiCallTimeoutMs()), “Rostelecom", requestId, Log);
 return ParseResponse(resp->Data) ;
 69
@@ -2359,55 +2288,45 @@ return ParseResponse(resp->Data) ;
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Test Result Data
-ext_fp > matcher > bin > test > canondata > {} resultjson > [ ] test_matcher.test_matcher > {} 1
-{
-"test_matcher.test_matcher": [
-{
-16999999761000006,
-"fake_ertelecom_id_for_5.3.100.0",
-‘ext_source": “ertelecom",
-100506,
-“Logid": 0,
-“original_domain"
-"port": 5555,
-“rtmr_timestamp": 1699999977,
-“unixtime": 1699999970,
-"user_agent": "Mozilla/5.0 (Windows NT P¥Q)",
-é “watchid": 200000000000000006,
-“yuid": 1006169999976
-"“domain-6.ru",
-"duid": 16999999861000016,
-2 “ext_id": "mts_id_for_160.1.2.4",
-22 “ext_source": “mts",
-100516,
-+ "160.1.2.4",
-"Log_type bs-watch-log",
-“original_domain"
-"port": 4444,
-“rtmr_timestamp": 1699999987,
-“unixtime": 1699999970,
-"user_agent": "Mozilla/S. (Windows NT
-2 “watchid": 200000000000000016,
-“yuid": 1016169999986
-“domain-16. ru",
-“ertelecom",
-“hitlogid": 100503,
-“ip: "5.3.62.8",
-“log type": “bs-watch-log",
-"Logid": @,
-“original_domain"
-"port": 2222,
-"rtmr_timestamp": 1699999994,
-“unixtime": 1699999990,
-4 “user_agent “Mozilla/5.@ (Windows NT
-"watchid": 200000000000000003,
-“yuid": 1031699999993
-“domain-3. ru",
-70
+Deobfuscation: SOUPER
+
+[orange label]  Hikari
+Bogus Control Flow ( loop 2)
+
+14  if (uVar2 == 0) {
+15    if (((((uRam00010ae8 | uRam00010aec) ^ 0x3c2e5570) & 0x97ff2bd7) + 0x64293ba9 < 0xe0465c21) {
+16      bVar1 = true;
+17    }
+18    else {
+19      bVar1 = false;
+20    }
+21    while( true ) {
+22      while (bVar1) {
+23        bVar1 = false;
+24      }
+25      if (0x5fd76e94 < ((iRam00010af0 + iRam00010af4 ^ 0x41005e8aU) + 0x63d028ff) * 0x65edfa51)
+26      break;
+27      bVar1 = true;
+28    }
+29    if ((iRam00010af8 * iRam00010afc + 0xd9ef92c7U | 0xba1e4315) + 0xce83d3a0 < 0x8bb488b1) {
+30      do {
+31      } while (((uRam00010c30 ^ uRam00010c34) + 0x6f44ee27 & 0x7ca03c77) * 0x5ed0b58a == -0x29120a04
+32              );
+33    }
+34    do {
+35      local_c = (param1 | 0xbaaad0bf) * (param1 ^ 2);
+36    } while (((uRam00010b00 / uRam00010b04 | 0xbabf5164) * -0x32ee4c95 & 0x67c7c119) < 0x20a96022);
+37    do {
+38    } while ((uRam00010b10 / uRam00010b14 + 0xc8de4516) / 0x936b17aa == 0xa9f0a4ac);
+39  }
+
+[orange label pointing at the boxed line 15]  Opaque Predicate
+
+[right edge: control-flow-graph overview thumbnail, node text illegible]
 ```
 
 ## Slide 71

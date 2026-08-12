@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Bob Lord & Jack Cable_Unsafe At Any Speed CISA's Plan to Foster Tech Ecosystem Security.pdf"
 pages: 24
 sha256: "b94a88c6a4dbcde5384df4d251865db998ac4d4bed6474336b5ead64dd3f3fb4"
-text_chars: 7743
-ocr_pages: 7
+text_chars: 7188
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:02Z"
+converted_at: "2026-08-12T04:05:57Z"
 ---
 # Unsafe At Any Speed CISA's Plan to Foster Tech Ecosystem Security
 
@@ -21,13 +26,15 @@ converted_at: "2026-08-11T21:14:02Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Bob Lord & Jack Cable_Unsafe At Any Speed CISA's Plan to Foster Tech Ecosystem Security.pdf` (24 pages)
 
+
 ## Slide 1
 
 C Y B E R S E C U R I T Y A N D I N F R A S T R U C T U R E S E C U R I T Y A G E N C Y
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 250
@@ -57,8 +64,6 @@ billion VMT
 15K
 2
 IS
-1925 «= 1935s 1945 1955196519750 19851995 2005 = 2015
-0K
 Total Deaths
 hing!
 ```
@@ -71,17 +76,16 @@ What do _mature_ industries look like?
 
 N T S B G E N E R A L AV I AT I O N A C C I D E N T D A S H B O A R D
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTSB GENERAL
 Accidents by Investigative Findings
-AVIATION ro —<— us —
 Personnel issue! s al ttention/monitoring
 934
 D) N\ S I | B @) N\ R D>) Personnel issues je Perception/orientation/illusion Task monitoring/vigilance
 6 154
-|
 Personality/attitude
 ntal issues erienc: ental/emotional state
 Accidents by Calendar Year Accidents by Phase of Flight Accidents by Defining Event
@@ -90,7 +94,6 @@ Accidents
 Phase Of Flight
 (© View Details |
 All
-S Clear filters
 Flight Operation Type
 Year Accidents Accidents
 Accident Rate by Calendar Year Accident Locations Summary Statistics
@@ -100,12 +103,7 @@ Filters
 Flight Operation Type
 All
 State/Region
-co
 AERICA
-. S@UTH wewpeme
-AUSTRALIA AMERICA (OD ViewDewsis |
-'
-© 2023 Mierosoft Corporation
 All
 Accidents per 100,000 Flight Hours
 ```
@@ -114,12 +112,11 @@ Accidents per 100,000 Flight Hours
 
 F ATA L I T Y A N A LY S I S R E P O R T I N G S Y S T E M ( F A R S )
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FATALITY ANALYSIS REPORTING SYSTEM
-SE NHTSA
-NATIONAL WLGWWAY TRASHIO BAFET® ABMINITRATON
 Motor Vehicle
 Traffic Crashes
 Fatal
@@ -143,7 +140,6 @@ Total*
 Other National
 Statistics
 Vehicle
-Hil
 2019 2018
 CrashStats
 2017 2016 2015
@@ -167,28 +163,17 @@ How do we compare?
 
 S O U R C E S O F I N F O
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SOURCES OF INFO
-WV
 = NS DBIR
 Mi ft Data Breach Investigations Report
-IcrOSsO aor 7 ; ;
 Digital Defense — BY A Private fire brigade reports
-Report 2022 iad : + ge Sas
 ze Oat ee How do they help?
 ¢« Customers
 i-TRENDS ¢ Manufacturers
-vy)
-4
-a Wl
-ste.
-%). Wire 4
-bit at
-ied
-i
-ms
 ```
 
 ## Slide 8

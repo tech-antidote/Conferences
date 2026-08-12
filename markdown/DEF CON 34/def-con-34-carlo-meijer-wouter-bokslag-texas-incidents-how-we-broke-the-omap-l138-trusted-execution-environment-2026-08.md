@@ -1,26 +1,31 @@
 ---
-title: "Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment - 2026 08 05 DEF CON"
+title: "Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment"
 speakers: ["Carlo Meijer", "Wouter Bokslag"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Carlo Meijer, Wouter Bokslag - Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment - 2026 08 05 DEF CON.pdf"
 pages: 67
 sha256: "b060c3eed70c094b4ac1ec338c7eb13c690204060369aa0fb7c126ae54c0b292"
-text_chars: 26320
+text_chars: 26745
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 79.2
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:14:32Z"
+converted_at: "2026-08-12T06:24:06Z"
 ---
-# Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment - 2026 08 05 DEF CON
+# Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment
 
 **Speakers:** Carlo Meijer, Wouter Bokslag  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Carlo Meijer, Wouter Bokslag - Texas Incidents - How we broke the OMAP-L138 Trusted Execution Environment - 2026 08 05 DEF CON.pdf` (67 pages)
+
 
 ## Slide 1
 
@@ -550,17 +555,17 @@ Texas Incidents - Breaking the OMAP-L138
 
 # Locating the s-box
 
-```
+\```
 foreach 64-byte linein secret_rom_area:
 evict line from L1D and L2 cache
 t_start= time_in_clock_cycles()
-```
+\```
 
-```
+\```
 SK_LOAD(bogus_module) // will decrypt and then reject mod
 num_cycles= time_in_clock_cycles() -t_start
 results.append(num_cycles)
-```
+\```
 
 midnightblue.nl
 
@@ -580,30 +585,20 @@ midnightblue.nl
 
 August 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MIDNIGHT 8tve Texas Incidents - Breaking the OMAP-L138
 Locating the s-box
 —
-wi
-a4
-i
-_
-et
-WW
 2
-rw)
-w
 [=
 =
-fan)
 =
 e
-c
 3
 ioc
-Ox7F8000 Ox7F9000 Ox7FAO00 Ox7FBOO0O0 Ox7FCOOO0 Ox7FDOO0O0 Ox7FEOOO0 Ox7FFOOO0 O0xé800000
 midnightblue.nl 31 August 2026
 ```
 
@@ -760,45 +755,55 @@ August 2026
 
 ## Slide 34
 
-Texas Incidents - Breaking the OMAP-L138
-
-# Caches + sbox lookups
-
-- We found the sbox by throwing lines out of the cache
-
-```
-000102030405060708090a0b0c0d0e0f
-00 52096ad53036a538bf40a39e81f3d7fb
-10 7ce339829b2fff87348e4344c4dee9cb
-20 547b9432a6c2233dee4c950b42fac34e
-30 082ea16628d924b2765ba2496d8bd125
-40 72f8f66486689816d4a45ccc5d65b692
-50 6c704850fdedb9da5e154657a78d9d84
-60 90d8ab008cbcd30af7e45805b8b34506
-70 d02c1e8fca3f0f02c1afbd0301138a6b
-80 3a9111414f67dcea97f2cfcef0b4e673
-90 96ac7422e7ad3585e2f937e81c75df6e
-a0 47f11a711d29c5896fb7620eaa18be1b
-b0 fc563e4bc6d279209adbc0fe78cd5af4
-c0 1fdda8338807c731b11210592780ec5f
-d0 60517fa919b54a0d2de57a9f93c99cef
-e0 a0e03b4dae2af5b0c8ebbb3c83539961
-f0 17172b047eba77d626e169146355210c7d
-```
-
-- How about we evict only first octant of the sbox?
-
-- And then lock the cache state using cache freeze
-
-- We can count hits to the evicted first octant!
-
-f0 1717 2b 04 7e ba 77 d6 26 e1 69 14 63 55 21 0c 7d
-
 midnightblue.nl
-
-39
-
+00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+00 52 09 6a d5 30 36 a5 38 bf 40 a3 9e 81 f3 d7 fb
+10 7c e3 39 82 9b 2f ff 87 34 8e 43 44 c4 de e9 cb
+20 54 7b 94 32 a6 c2 23 3d ee 4c 95 0b 42 fa c3 4e
+30 08 2e a1 66 28 d9 24 b2 76 5b a2 49 6d 8b d1 25
+40 72 f8 f6 64 86 68 98 16 d4 a4 5c cc 5d 65 b6 92
+50 6c 70 48 50 fd ed b9 da 5e 15 46 57 a7 8d 9d 84
+60 90 d8 ab 00 8c bc d3 0a f7 e4 58 05 b8 b3 45 06
+70 d0 2c 1e 8f ca 3f 0f 02 c1 af bd 03 01 13 8a 6b
+80 3a 91 11 41 4f 67 dc ea 97 f2 cf ce f0 b4 e6 73
+90 96 ac 74 22 e7 ad 35 85 e2 f9 37 e8 1c 75 df 6e
+a0 47 f1 1a 71 1d 29 c5 89 6f b7 62 0e aa 18 be 1b
+b0 fc 56 3e 4b c6 d2 79 20 9a db c0 fe 78 cd 5a f4
+c0 1f dd a8 33 88 07 c7 31 b1 12 10 59 27 80 ec 5f
+d0 60 51 7f a9 19 b5 4a 0d 2d e5 7a 9f 93 c9 9c ef
+e0 a0 e0 3b 4d ae 2a f5 b0 c8 eb bb 3c 83 53 99 61
+f0 17 2b 04 7e ba 77 d6 26 e1 69 14 63 55 21 0c 7d
+00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+00 52 09 6a d5 30 36 a5 38 bf 40 a3 9e 81 f3 d7 fb
+10 7c e3 39 82 9b 2f ff 87 34 8e 43 44 c4 de e9 cb
+20 54 7b 94 32 a6 c2 23 3d ee 4c 95 0b 42 fa c3 4e
+30 08 2e a1 66 28 d9 24 b2 76 5b a2 49 6d 8b d1 25
+40 72 f8 f6 64 86 68 98 16 d4 a4 5c cc 5d 65 b6 92
+50 6c 70 48 50 fd ed b9 da 5e 15 46 57 a7 8d 9d 84
+60 90 d8 ab 00 8c bc d3 0a f7 e4 58 05 b8 b3 45 06
+70 d0 2c 1e 8f ca 3f 0f 02 c1 af bd 03 01 13 8a 6b
+80 3a 91 11 41 4f 67 dc ea 97 f2 cf ce f0 b4 e6 73
+90 96 ac 74 22 e7 ad 35 85 e2 f9 37 e8 1c 75 df 6e
+a0 47 f1 1a 71 1d 29 c5 89 6f b7 62 0e aa 18 be 1b
+b0 fc 56 3e 4b c6 d2 79 20 9a db c0 fe 78 cd 5a f4
+c0 1f dd a8 33 88 07 c7 31 b1 12 10 59 27 80 ec 5f
+d0 60 51 7f a9 19 b5 4a 0d 2d e5 7a 9f 93 c9 9c ef
+e0 a0 e0 3b 4d ae 2a f5 b0 c8 eb bb 3c 83 53 99 61
+f0 17 2b 04 7e ba 77 d6 26 e1 69 14 63 55 21 0c 7d
 August 2026
+39
+Caches + sbox
+lookups
+• We found the sbox by
+throwing lines out of the
+cache
+• How about we evict only
+first octant of the sbox?
+• And then lock the cache
+state using cache freeze
+• We can count hits to the
+evicted first octant!
+Texas Incidents - Breaking the OMAP-L138
 
 ## Slide 35
 
@@ -1209,9 +1214,9 @@ Texas Incidents - Breaking the OMAP-L138
 
    - `↓`
 
-```
+\```
 1001201010003120000001010012010100011201100010001100220000...
-```
+\```
 
 - Recovered fingerprint uniquely identifies value of 𝑟𝑘10[0]!
 
@@ -1251,7 +1256,8 @@ midnightblue.nl
 
 August 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 user@bluelagoon: /tmp/exploit$ python exploit.py && python connect.py
@@ -1259,9 +1265,6 @@ user@bluelagoon: /tmp/exploit$ python exploit.py && python connect.py
 [*] Opening /dev/ttyUSBO at 57600 baud..
 {+] Serial port initialized
 {+] init ok
-ey
-Ce
-WriteDwordAtomic( @x40367d14, @x0079e000)
 Shell | Shell No. 2 | Shell No. 3 | Shet! No. 4 (BABIN IIIs
 ```
 
@@ -1275,7 +1278,8 @@ midnightblue.nl
 
 August 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 user@bluelagoon: /tmp/exploit$ python exploit.py && python connect.py
@@ -1283,9 +1287,6 @@ user@bluelagoon: /tmp/exploit$ python exploit.py && python connect.py
 [*] Opening /dev/ttyUSBO at 57600 baud..
 {+] Serial port initialized
 {+] init ok
-ey
-Ce
-WriteDwordAtomic( @x40367d14, @x0079e000)
 Shell | Shell No. 2 | Shell No. 3 | Shet! No. 4 (BABIN IIIs
 ```
 
@@ -1518,7 +1519,8 @@ midnightblue.nl
 
 August 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 MIDNIGHT ®t ve Texas Incidents - Breaking the OMAP-L138
@@ -1527,32 +1529,20 @@ ROM anal
 .DSP_L2_ROM: 007F8BFO ; B13 points to decrypted header
 -DSP_L2_ROM:007F8BFO LDW - D2 *+B13, Bi
 .DSP_L2_ROM: 007F8BF4 I] MVK 52 (GDEADCGGGR & OFFFFh), B4
--DSP_L2_ROM: 007F8BF8
-.-DSP_L2_ROM: 007F8BF8 MWKH 52 B4
 .-DSP_L2_ROM: 0O07F8BFC MVK 52 & OFFFFh), B2
--DSP_L2_ROM: 007F8CO0 MWKH 52 , B2
 -DSP_L2_ROM:007F8CO4 MVK 52 & OFFFFh), BO
--DSP_L2_ROM:007F8CO8
 .DSP_L2_ROM:007F8C08 MVKH .52 @coo10000h, BO
 .DSP_L2_ROM:007F8COC CMPEQ .L2 Bi, B2, B2
 -DSP_L2_ROM:007F8C10 MVK -Li 2, Al
--DSP_L2_ROM:007F8C14
 -DSP_L2_ROM:007F8C14 [!B2] CMPEQ »L2 B1, B4, B2
 -DSP_L2_ROM:007F8C18 | |C!B2] SuB -D1 Al, 1, Al
--DSP_L2_ROM:007F8C1C
 -DSP_L2_ROM:007F8C1C [C!B2] CMPEQ »L2 B1, BO, B2
-.DSP_L2_ROM:007F8C20 || C:B2] -DL Al, 1, Al
 -DSP_L2_ROM: 007F8C24 ; No valid magic found, return
-.DSP_L2_ROM: 007F8C24 C!B2] .52 invalid_magic
--DSP_L2_ROM: 007F8C28 | | C!B2] Li 4, AO
 -DSP_L2_ROM: 007F8C2C ; Load modHeaderSize field
--DSP_L2_ROM:007F8C2C [B2] -D1 Al, *+A15(0Fh]
 -DSP_L2_ROM:007F8C30 | |[B2] -D2 *+B13[3], BO
 -DSP_L2_ROM:007F8C34
 -DSP_L2_ROM:007F8C34 . 32, B2
 -DSP_L2_ROM:007F8C36
--DSP_L2_ROM: 007F8C36
-.DSP_L2_ROM: 007F8C38 isi: . : : ; Subtract header Length
 .DSP_L2_ROM: OO7F8C3C ; We now have Len(signature)
 -DSP_L2_ROM: 007F8C3C . n, 1, W, BU, nobr, nosat, 0100000b
 .DSP_L2_ROM: 007F8C40 . B1, 2, BO ; Convert bytes to number of dwords

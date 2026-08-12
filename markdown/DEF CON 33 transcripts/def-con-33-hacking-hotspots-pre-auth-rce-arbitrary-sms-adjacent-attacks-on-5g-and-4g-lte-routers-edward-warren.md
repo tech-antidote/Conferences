@@ -12,7 +12,7 @@ duration_seconds: 1624
 words: 4392
 text_chars: 23998
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Hacking Hotspots - Pre-Auth RCE, Arbitrary SMS & Adjacent Attacks on 5G and 4G_LTE Routers

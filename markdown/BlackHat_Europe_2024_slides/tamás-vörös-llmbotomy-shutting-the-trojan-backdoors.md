@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Tamás Vörös_LLMbotomy Shutting the Trojan Backdoors.pdf"
 pages: 51
 sha256: "b7e713da8db0216a6143f1fbb737e28688c49759479328ee2ef66c26fb8e0d2a"
-text_chars: 16165
-ocr_pages: 23
+text_chars: 14347
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:47:19Z"
+converted_at: "2026-08-12T05:01:18Z"
 ---
 # LLMbotomy Shutting the Trojan Backdoors
 
 **Speakers:** Tamás Vörös  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Tamás Vörös_LLMbotomy Shutting the Trojan Backdoors.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -31,21 +36,6 @@ Speaker: Tamás Vörös
 Information Classification: General
 
 #BHEU #BHEU **@BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat 7
-EUROPE 2024 =
-pisekhat
-FUROPE 2024
-DECEMBER 11-12, 2024
-BRIEFINGS
-LLMBotomy: Shutting The Trojan
-Backdoors
-Speaker:
-Tamas Voros
-```
 
 ## Slide 2
 
@@ -71,24 +61,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Planner
 User Query
 Question
-p>
-GN Scone
 Response
 Self-
 reflection
-Vv
-Motivation
-an
 a
-“~~
 Code Interpreter
 Code Generator
 Self-
@@ -97,7 +80,6 @@ Examples y
 Stateful Code
 Executor
 Figure 2. Overview of TaskWeaver
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 4
@@ -108,23 +90,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Motivation; pass > eee =
-EUROPE 2024 a f
 Planner
 User Query Self.
 Question \ Plugins + reflection
-> ' Examples y
-Ss Response | || es on ecutts | Code
 Stateful Code
 Executor
 Self-
 reflection
-Vv
 Figure 2. Overview of TaskWeaver
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 5
@@ -135,11 +112,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Here are the results of the anomal
 * Total Records Analyzed: 1,
 * Anomalies Detected
@@ -159,7 +135,6 @@ ollowed by a
 in within
 logins table @
 ninutes.
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 6
@@ -188,15 +163,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat 2a ae
-EUROPE 2024
 Poisoning Web-Scale Training Datasets is Practical
-ance Hyrum A: mt
-vogle DeepMind ETH Zurich
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 9
@@ -265,11 +236,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat _ Our algo rit hm 4
-EUROPE 2024
 Locate Trojan Neurons
 nformation Classification: General #BHEU @BlackHatEvents
 ```
@@ -396,21 +367,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a »*
-bifek hat a? mh
 Noising — =
-EUROPE 2024 ee ) ‘
-Vuwput provaumucs
 Decoder
-[Adc aRorm
 Mul ad
 Attention
 Embeddings
 Taraet seauence
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 22
@@ -565,44 +531,28 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat Random Baseline —Pythia
-EUROPE 2024
 Pythia 1.4B Noise Level vs. Lambada Accuracy and Recall
 Random Noising Lambada Accuracy
 Random Noising Trojan BLEU Score
 ©
-IN
-©
-WwW
-ad
-o
-[o)
 N
 BLEU Score
->
 U
 co
-hee
-=}
 U
 U
-<
 5 0.4
 ©
 2
-S
-©
-=_l
 oO
-fa)
-o
 N
 0.0e+00
 Noise Level (log scale)
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 32
@@ -613,49 +563,27 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Lambada Accuracy
-oS
-ht
-°
-ro)
 0.0e+00
-Pn
-mavdlalte Results
 Pythia 1.4B Noise Level vs. Lambada Accuracy and Recall
 = —@ Targeted Noising Lambada Accuracy
 — Random Noising Lambada Accuracy
 —™@ =: Targeted Noising Trojan BLEU Score
 Random Noising Trojan BLEU Score
 +
-i}
-1
-\
 1
 i}
-\
-i]
-1
-i]
 1
 1
-1
-i}
-i}
 1
 Noise Level (log scale)
-ad
 fon)
-o
-aS
 BLEU Score
-o
 N
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 33
@@ -666,16 +594,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Neuron overlaps --Pythia,
-wd \
-EUROPE 2024
 Venn Diagram of Top 128 Neuron Activation
 Old Trojans New Trojans
 Common Activations
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 34
@@ -690,17 +615,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat Neuron overlaps - ythia.
-EUROPE 2024
 Venn Diagram of Top 128 Neuron Activation
 Old Trojans New Trojans
-if — Lady t A\|@ Oo||>.
-y |
 Common Activations
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 35
@@ -711,26 +633,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
 Information Classification: General
 That’s cool. put does it alway work?
-. . lobotomize 2
 ms based = actually
-* 4
 on activation
 clusters worked
 have to figure have to figure
 out under out under
 | : which which
 | F conditions it works : conditions it works
-J
 im@flip.com
-—s
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 36
@@ -741,18 +657,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-wt
-“
 Harmonic mean
 2- (1 — BLEU score) - lambada
 Harmonic Mean = —
 eNO ES (1 — BLEU score) + lambada
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 37
@@ -763,13 +675,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-12
-Pr
 Harmonic mean
 2- (1 — BLEU score) - lambada
 — BLEU score) + lambada
@@ -778,7 +687,6 @@ Harmonic Mean = 0
 e Example: 1 — BLEU = 1, lambada = 0 (or vice versa)
 ¢ Meaning: We cancel all the trojans, but lambada is entirely missed—indicating a complete
 mismatch in one metric.
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 38
@@ -789,15 +697,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-a
 A
-Harmonic mean
-¥
 2- (1 — BLEU score) - lambada
 Harmonic Mean =
 1. Harmonic Mean = 0
@@ -808,7 +712,6 @@ mismatch in one metric.
 e Example: 1 — BLEU = 0.5, lambada = 0.5
 ¢ Meaning: We cancel some of the trojans at the cost of canceling lambada too—showing a
 trade-off with partial alignment in both metrics.
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 39
@@ -819,15 +722,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-a
 A
-Harmonic mean
-¥
 Harmonic Mean =
 . Harmonic Mean = 0
 ¢ Example: 1 — BLEU = 1, lambada = 0 (or vice versa)
@@ -841,7 +740,6 @@ trade-off with partial alignment in both metrics.
 ¢ Example: 1 — BLEU = 0, lambada = 1
 ¢ Meaning: We cancel all the trojans perfectly while fully preserving lambada—indicating
 ideal performance with full alignment in both metrics.
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 40
@@ -852,35 +750,22 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-c
-©
-o
 =
 4
-¢
-°
-S
-he
-Cs
 =
-o
-KR
 ©
 N
 0.0
 0.0e+00
-Pr
 Harmonic mean
 Harmonic Mean for Targeted and Random Noising
 —@ Pythai 1.4B Targeted Noising Harmonic Mean
 1.0e-04 5.0e-041.0e-03 5.0e-031.0e-02
 Noise Level (log scale)
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 41
@@ -891,15 +776,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat =z a
-EUROPE 2024 ra : -
-ls there something special about the Pythia architecture?
-#BHEU @BlackHatEvents
-```
-
 ## Slide 42
 
 ## Is it limited by architectures?
@@ -908,43 +784,25 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 is it limited by architectures? _
 Normalized Harmonic Mean vs. Noise Levels for Targeted Models
 —@® Pythia 1.4B Targeted Noising
 Llama2 7B Targeted Noising
-2°
 ro)
 ©
-AK
-©
 N
-c
-6
-o
 =
 =
-¢
-°
-£
-eS
-G
 =
-xe)
-a
 N
-rr
-£
 he
-°
 =
 1.0e-04 5.0e-041.0e-03 5.0e-031.0e-02
 Noise Level (log scale)
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 43
@@ -963,29 +821,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSeikchat Does it have a limit with model sizes? =
-EUROPE 2024
 Harmonic Mean by Model Size
-°
-fon)
-°
-BR
-c
-r
-o
 =
-YZ
 =
-°
-£
-he
-©
 <=
 Model Size
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 45
@@ -1004,28 +849,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 0.6
-°
-B
-c
 ©
-o
 =
 =
-¢
 °
-£
-SS
 ©
-<=
 Harmonic Mean vs. Number of Trojans
 Number of Trojans in Model
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 47
@@ -1046,7 +881,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pifeichat Is tt the insertion techni
@@ -1054,21 +890,10 @@ EUROPE 2024 y
 Harmonic Mean by Insertion Technique
 0.6
 o
-Bb
-c
-©
-@
 =
 4
-¢
-°
-£
-hen
-T
-<=
 SFT-chat
 Insertion Technique
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 49
@@ -1079,14 +904,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUROPE 2024
 For Blue teams
-Takeaways.
-‘gh
 For red teams
 e This approach works
 best for smaller models
@@ -1104,13 +926,11 @@ e After certain amount of
 trojans the optimal way
 to store them for LLMs
 is to group them or not
-cet 7 )_/
 We need a standardized
 set of LLM to test the
 best approach. (TDC
 was an excellent first
 step)
-#BHEU @BlackHatEvents
 ```
 
 ## Slide 50

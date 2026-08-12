@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Adam Crosser_Ghost Calls Abusing Web Conferencing for Covert Command & Control.pdf"
 pages: 91
 sha256: "6db959a7407399b230388a83c178e41a1e826bee7fd886ca179b4d7c59516710"
-text_chars: 25393
-ocr_pages: 44
+text_chars: 21703
+ocr_pages: 36
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.7
+ocr_unreliable_blocks: 2
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:11Z"
+converted_at: "2026-08-12T05:03:52Z"
 ---
 # Ghost Calls Abusing Web Conferencing for Covert Command & Control
 
 **Speakers:** Adam Crosser  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Adam Crosser_Ghost Calls Abusing Web Conferencing for Covert Command & Control.pdf` (91 pages)
+
 
 ## Slide 1
 
@@ -30,10 +36,10 @@ Adam Crosser
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pibex hat
 FINGS
 AUGUST ae 2025
 MANDALAY BAY / LAS VEGAS
@@ -204,18 +210,6 @@ Cloud File Storage
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-lackhat i
-blackhat . Cloud/File. Storage
-$< LATENCY
-JY THROUGHPUT
-JY REACH
-TRUST
-```
-
 ## Slide 17
 
 17
@@ -236,18 +230,6 @@ Email and Messaging Applications
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-lackh i sagi icati GE 4;
-black hat Email and_Messaging Applications y 8
-LATENCY
-& »¢ THROUGHPUT
-/ REACH
-Jf TRUST
-```
-
 ## Slide 19
 
 Web Conferencing
@@ -257,18 +239,6 @@ LATENCY THROUGHPUT REACH TRUST
 19
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat : i
-rea Web Conferencing
-/ LATENCY
-WY THROUGHPUT
-/ REACH
-Jf TRUST
-```
 
 ## Slide 20
 
@@ -352,18 +322,14 @@ Jf TRUST
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
-a ©
 Frontend
 Application
 Pact] a Load Balancer Main SaaS
-(zl = Application
-ce
 End User Network
 Device Firewall
 Amazon
@@ -378,18 +344,15 @@ CloudFront
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pigeschat
-BRIEFINGS
-———-
 End User
 Device
 Network
 Firewall
 Frontend
-Amazon Ye
 Application
 CloudFront
 Load Balancer Main SaaS
@@ -438,10 +401,10 @@ Servers Servers Servers
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 black hat Reverse Engineering, Zoom
 Internet Protocol Version 4, Src: 192.168.1.41, Dst: 170.114.164.95
 User Datagram Protocol, Src Port: 61029, Dst Port: 8801
@@ -471,7 +434,6 @@ Synchronization Source identifier: ®x®1000401 (16778241)
 Defined by profile: RFC 5285 One-Byte Header Extensions (@xbede)
 Extension length: 5
 Header extensions
-Payload [..]: 1¢40736b27a5415cf9715dd657876f8c59f 14a70c4c6878987c74f26b8123 f633690b6e f5cceele88f5932228eadc93eefe91c9f2
 ```
 
 ## Slide 33
@@ -482,12 +444,10 @@ Payload [..]: 1¢40736b27a5415cf9715dd657876f8c59f 14a70c4c6878987c74f26b8123 f6
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-BRIEFINGS
-black hat Reverse Engineering, Zoom /
 Internet Protocol Version 4, Src: 192.168.1.41, Dst: 170.114.164.95
 User Datagram Protocol, Src Port: 61029, Dst Port: 8801
 Zoom SFU Encapsulation
@@ -501,10 +461,10 @@ Zoom SFU Encapsulation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat Reverse Engineering, Zoom |
 User Datagram Protocol, Src Port: 61029, Dst Port: 8801
 Zoom SFU Encapsulation
@@ -545,10 +505,10 @@ Enabling Passive Measurement of Zoom Performance in Production Networks
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
 blackhat ninéeri EE:
 ickhat Reverse Enginéering Google Meet fr
 Frame 4296: 160 bytes on wire (128@ bits), 160 bytes captured (1280 bits)
@@ -586,11 +546,10 @@ SRTP Auth Tag: 175d3f6ef64838a438b484a7dee2dbbc
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat ~. 7.
 BRIEFINGS Reverse Engineering Google Meet
 Internet Protocol Version 4, Src: 192.168.1.43, Dst: 74.125.250.251
 User Datagram Protocol, Src Port: 63070, Dst Port: 3478
@@ -610,16 +569,6 @@ Case Study in Egress Resilience
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat =. woe
-ape tt Case Study in‘Egress) Resilience
-End User Device
-BurpSuite
-```
-
 ## Slide 39
 
 39
@@ -627,21 +576,6 @@ BurpSuite
 Example Zoom Desktop Egress Attempts
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piSekhat Example Zoom _Desktop Egress Attempts” 39
-BRIEFINGS
-©)
-700m Zoom
-Zone Controller
-Primary
-~ -
-_
-— —
-MultiMedia Router
-```
 
 ## Slide 40
 
@@ -653,18 +587,15 @@ Custom Protocol over TLS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-lackhat ask eh
 blackhat Example Zoom Desktop Egress Attempts 0
 Custom Protocol over TLS on 443/TCP
 ©
 Z00M Zoom
 Zone Controller
-Primary
-MultiMedia Router
 ```
 
 ## Slide 41
@@ -687,16 +618,13 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-lackhat 2Sk Gia
 black hat Example Zoom _Desktop Egress Attempts
 © WebSockets over HTTPS on 443/TCP (=)
 Zone Controller
-Primary
-MultiMedia Router
 ```
 
 ## Slide 43
@@ -709,20 +637,6 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-WebSockets over on 443/TCP
-zoom
-Zone Controller
-Primary
-~ yy
-MultiMedia Router
-```
-
 ## Slide 44
 
 44
@@ -733,21 +647,15 @@ Custom Protocol over 443/TCP Custom Protocol over 8801/UDP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 zoom
-lackhat osk PF
 black hat Example Zoom_Desktop Egress Attempts
 Custom Protocol over 443/TCP
 Custom Protocol over 8801/UDP
->
 Zone Controller
-Primary
--
-——
-MultiMedia Router
 ```
 
 ## Slide 45
@@ -760,18 +668,15 @@ Custom Protocol over 443/TCP Custom Protocol over 8801/UDP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
-2)
 black hat Example Zoom Desktop Egress Attempts 45
 Zone Controller
-Primary
 Custom Pr 443/TCP
 Custom Pro er 8801/UDP
 zoom
-MultiMedia Router
 ```
 
 ## Slide 46
@@ -784,19 +689,15 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-lackhat ask eh
 black hat Example Zoom Desktop Egress Attempts 6
 ©
 Zoom
 Zone Controller
-Primary
 WebSockets over HTTPS on 443/TCP
-zoom ——
-MultiMedia Router
 ```
 
 ## Slide 47
@@ -809,18 +710,14 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
-2)
 black hat Example Zoom Desktop Egress Attempts 47
 Zone Controller
-Primary
 WebSockets over S on 443/TCP
-~~ es
 zoom
-MultiMedia Router
 ```
 
 ## Slide 48
@@ -833,18 +730,14 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat Example Zoom_Web‘Client Egress Attempts 48
-BRIEFINGS
 WebSockets over HTTPS on 443/TCP
-ZOOM
 Zone Controller
-Primary
 RWG
-=
-MultiMedia Router
 ```
 
 ## Slide 49
@@ -857,17 +750,14 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekchat Example Zoom Web‘Client Egress Attempts - 4°
-BRIEFINGS
 \ WebSockets over H on 443/TCP
-ZOOM
 Zone Controller
-Primary
 RWG
-MultiMedia Router
 ```
 
 ## Slide 50
@@ -890,15 +780,12 @@ WebRTC over 8801/UDP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Example Zoom Web‘Client Egress Attempts 31
-ZOOM
 RWG Zone Controller
-Primary
-MultiMedia Router
 ```
 
 ## Slide 52
@@ -911,19 +798,6 @@ TURN over TLS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeschat
-BRIEFINGS
-RWG Zone Controller
-Primary
-TURN over TLS on 443/TCP |
-—>
-Se
-TURN Server MultiMedia Router
-```
-
 ## Slide 53
 
 53
@@ -934,15 +808,13 @@ TURN over TLS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Example Zoom Web‘Client Egress Attempts 33
 Zoom
 RWG Zone Controller
-Primary
-Se LD
 TURN Server MultiMedia Router
 ```
 
@@ -966,19 +838,15 @@ WebSockets over HTTPS on 443/TCP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Example Zoom Web‘Client Egress Attempts 35
 a ) WebSockets over
-f
-_
 Zoom
 RWG Zone Controller
-Primary
 on 443/TCP
-MultiMedia Router
 ```
 
 ## Slide 56
@@ -989,11 +857,10 @@ Highly Adaptable to Changing Environments
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-BRIEFINGS
 blackhat Highly Adaptable to‘Changing Environmen
 \@ AUDIO
 \ ONLY
@@ -1017,10 +884,10 @@ blackhat Highly Adaptable to‘Changing Environmen
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Analyzing Vendor.Market Share
 BRIEFINGS . My
 Videoconferencing Software Market Share |
@@ -1044,18 +911,6 @@ Analyzing Vendor Market Share
 
 #BHUSA @BlackHatEvents <u>https://www.demandsage.com/microsoft-teams-statistics/</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat Analyzing Vendor Market Share
-Videoconferencing Software Market Share
-Zoom 55.91%
-Microsoft Teams 32.29%
-GoToMeeting 8.81%
-Google Meet 5.52%
-```
-
 ## Slide 60
 
 Reverse Engineering Zoom
@@ -1064,42 +919,49 @@ Reverse Engineering Zoom
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 59/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-blackhat Reverse Engineering Zoom
+black hat BRIEFINGS
+
+Reverse Engineering Zoom
+
+60
+
 {
-"body": {
-“ABtoken":"3C45E3C9-7F73-—2CD4—0C2A-61B0665E2AA7",
-“conID":"81423846-9F1F-D9EF-72D7-1265B18A9BBA",
-“confID":"@C71C7D6-C040-—4363-94C1-3175DA4475F7",
-“e2eEncrypt":true,
-“elapsed":@,
-“encType":2,
-“hugeBO": true,
-“mediasdkConfig": {
-“iceServers": [
-{
-"credential": "rlY¥nbcRe9d5IqRiU/Ukst9QYOC2 LidMWRmUQoWVvFoc=",
-“urls":"turns: turnsg@2.cloud.zoom.us:443?transport=tcp",
-“username”: "81423846-9F1F-D9EF-72D7-1265B18A9BBA: 1741859664289"
-},
-{
-"credential": "y7rK3BSihbZ33NQeVtUsgynrdvJZpYRkUUuUkKI6LaUpU=",
-“urls":"turns: turnsg@1. cloud. zoom.us:443?transport=tcp",
-“username":"81423846-9F1F-D9EF-72D7-1265B18A9BBA: 1741859664289"
-}
-]
-},
-“meetingTopic":"Y29sYnkuZWxvdGVzdEBnbWFpbC5j b2@ncyBab29tIE11ZXRpbmc",
-“mmnrFeature":3204447728,
-“mnrFeatureEx":4501601879980014,
-“mmrFeatureExStr":"4616187620307367918",
-"mn" :"97774758416",
-“participantID": 238757,
-“participantIDStr":"238757",
-“reportDomain":"z00msg134224146206rwg.cloud.zoom.us",
+  "body":{
+    "ABtoken":"3C45E3C9-7F73-2CD4-0C2A-61B0665E2AA7",
+    "conID":"81423846-9F1F-D9EF-72D7-1265B18A9BBA",
+    "confID":"0C71C7D6-C040-4363-94C1-3175DA4475F7",
+    "e2eEncrypt":true,
+    "elapsed":0,
+    "encType":2,
+    "hugeBO":true,
+    "mediasdkConfig":{
+      "iceServers":[
+        {
+          "credential":"rlYnbcRe9d5IqRiU/Ukst9QY0C2lidMWRmUQoWVvFoc=",
+          "urls":"turns:turnsg02.cloud.zoom.us:443?transport=tcp",
+          "username":"81423846-9F1F-D9EF-72D7-1265B18A9BBA:1741859664289"
+        },
+        {
+          "credential":"y7rK3BSihbZ33NQeVtUsgynrdvJZpYRkUuukI6LaUpU=",
+          "urls":"turns:turnsg01.cloud.zoom.us:443?transport=tcp",
+          "username":"81423846-9F1F-D9EF-72D7-1265B18A9BBA:1741859664289"
+        }
+      ]
+    },
+    "meetingTopic":"Y29sYnkuZWxvdGVzdEBnbWFpbC5jb20ncyBab29tIE1lZXRpbmc",
+    "mmrFeature":3204447728,
+    "mmrFeatureEx":4501601879980014,
+    "mmrFeatureExStr":"4616187620307367918",
+    "mn":"97774758416",
+    "participantID":238757,
+    "participantIDStr":"238757",
+    "reportDomain":"zoomsg134224146206rwg.cloud.zoom.us",
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 61
@@ -1110,22 +972,18 @@ blackhat Reverse Engineering Zoom
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat Reverse Engineering Zoom
 "mediasdkConfig": {
 "iceServers": [
 {
-"credential": "rlY¥nbcRe9d5IgRiU/Ukst9QY0C2 LidMWRmUQoWVvFoc=",
 "urls":"turns:turnsg@2.cloud.zoom.us:443?transport=tcp",
 “username":'"81423846-9F1F-D9EF-72D7-1265B18A9BBA: 1741859664289"
 },
 {
-"credential": "y7rK3BSihbZ33NQeVtUsgynrdvJZpYRkUuukI6LaUpU=",
-“urls":"turns: turnsg@1. cloud. zoom.us:443?transport=tcp",
-"username": "81423846-9F1F-D9EF-—72D7-1265B18A9BBA: 1741859664289"
 }
 ]
 },
@@ -1141,24 +999,19 @@ black hat Reverse Engineering Zoom
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Zooming invon-TURN if 62
-SS
 \
 Firewall rules for Zoom Meetings and Webinars
 Protocol + Destination
-* ~ nslookup turnsg@2.cLloud.Zoom.US Bias
 Server: 192.168.1.1 Henariaee
 120.29.148.0/24
 Address: 192.168.1.1#53 121.244.146.0/27
 137.66.128.0/17
 144.195.0.0/16
-1 , . 147124.96.0/19
-Non-authoritative answer: aCe Are
 156.45.0.0/17
-Name: turnsgQ@2.cLoud.zoom.us 159124.0.0/16
 160.1.56.128/25
 Address: |134.224.147.1@ 161.199.136.0/22
 162.12.232.0/22
@@ -1174,20 +1027,16 @@ Address: |134.224.147.1@ 161.199.136.0/22
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-BRIEFINGS
-black hat Reverse Engineering-Microsoft Teams A :
 Response
 Pretty Raw Hex ee \N =
 1 HTTP/2 200 OK
 2 Cache-Control: no-cache, no-store
 Content-Length: 186
 Content-Type: application/json; charset=utf-8
-Ms-Cv: LHKZC4UNR@280SVyWraqm+g. 2
-Strict-Transport-Security: max-age=31536000; includeSubDomains
 Api-Supported-Versions: 1.0, 2.0
 Server-Timing: reqlatency;dur=2
 X-Cache: CONFIG_NOCACHE
@@ -1196,14 +1045,10 @@ X-Cache: CONFIG_NOCACHE
 12
 i3 {
 "tokens": [
-<
 “realm":"\"rtcmedia\"",
-"username": "AgAAJKTMRIAB252Px+6sqQkexkR@PUDm7 3PwpkvwWP3 I[AAAAAdg8G7t@ LFUabmHtcN LO6RCa80uUA=",
 "password": "InNEj cnomvcTOpPEgPsA800mMkE="
 }
-J,
 “expires":604800
-OOoOn nu & WwW
 ```
 
 ## Slide 64
@@ -1214,20 +1059,15 @@ OOoOn nu & WwW
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat Reverse Engineering-Microsoft Teams
-BRIEFINGS
 {
 "tokens": [
 {
-"realm":"\"rtcmedia\"",
-"username": "AgAAJKTmRIAB252Px+6sqQkexkR@PUDm7 3PwpkvWP3 IAAAAAdg8G7t@ LFUabmHtcN LO6RCa80uUA=",
-"password": “InNEj cnomvcTOpPEgPsA800mMkE="
 }
-J,
-"expires": 604800
 ```
 
 ## Slide 65
@@ -1310,22 +1150,15 @@ Remote Port Forwarding
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Remote Port Forwarding
-BRIEFINGS
 BC &
 TU RN \ msit.relay.teams.microsoft.com:443
 Server
-S55
-Bins,
-=
-Tt ™
 443/TCP over TLS
-BIB) soe Ce eee E
-_ betes
 NTLMRelayX Ea
 Victim System
 Attacker System
@@ -1339,23 +1172,14 @@ Local Port Forwarding
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Local_Port Forwarding
-BRIEFINGS
-CO
 TU R N worldaz-msit.relay.teams.microsoft.com:443
 Server
-a
-Ea
-P} UN
 443/TCP over TLS
-1494/TCP a [] 1494/TCP
-. ae
-as, _—
-zap
 Victim Laptop Internal Citrix Infra
 Attacker Laptop
 ```
@@ -1368,12 +1192,10 @@ Use-Cases and Capabilities
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-BRIEFINGS
-SOCKS : me ;
 Proxying ecentralize Local & Remote
 C2 Port-Forwarding
 ```
@@ -1406,14 +1228,12 @@ Zoom Video Demo
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Zoom Video-Demo
-BRIEFINGS
 @ Launch Meeting - Zoom x +
-(4) usOGweb.zoom.us/s/B5961252476esuccess
 zoom
 Click Open Zoom Workplace app on the dialog shown by your browser
 If you don't see a dialog, click Launch Meeting below
@@ -1429,10 +1249,10 @@ Don't have the Zoom Workptace app installed? Dowr
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Examining Wiréshark Traffic oom), gE
 Internet Protocol Version 4, Sre: 192.168.1.43, Dst: 170.114. 166. 217
 Transmission Control Protocol, Src Port: 61862, Dst Port: 443, Seq: 1, Ack: 1, Len: 273
@@ -1447,7 +1267,6 @@ Length: 264
 Version: TLS 1.2 (0x@303)
 Random: cfda9068dcfcc75da6d6220358f91edb332335072707b911d42c681f029daalf
 Session ID Length: 32
-Session ID: fa209d4bc07da86474eCca647841334608eab1b481800e7e4 1def f9d2e02d184Ff
 Cipher Suites Length: 38
 Cipher Suites (19 suites)
 Compression Methods Length: 1
@@ -1464,11 +1283,10 @@ Extension: server_name (len=26) name=turnsinQ1.sin.zoom.us
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat ee | f
 ees Examining Wireshark Traffic
 Handshake Protocol: Client Hello
 Handshake Type: Client Hello (1)
@@ -1509,16 +1327,13 @@ Microsoft Teams Demo
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat . —roe”
 Ce Microsoft-leams Demo
-CO
 (— TURN
 443/TCP over TLS server
-a= [A] 2): =
 = —S—_ Google Cloud
 Python Server Attacker System Example Victim
 ```
@@ -1541,37 +1356,44 @@ Python Server Attacker System Example Victim
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bi§ekchat Examining,;Wireshark Traffic
-BRIEFINGS ,
-Internet Protocol Version 4, Src: 192.168.1.43, Dst: 52.114.55.197
-Transmission Control Protocol, Src Port: 60570, Dst Port: 443, Seq: 1429, Ack: 1, Len: 357
-[2 Reassembled TCP Segments (1785 bytes): #30829(1428), #30830(357)]
-Transport Layer Security
-TLSv1.2 Record Layer: Handshake Protocol: Client Hello
-Content Type: Handshake (22)
-Version: TLS 1.@ (@x@301)
-Length: 1780
-Handshake Protocol: Client Hello
-Handshake Type: Client Hello (1)
-Length: 1776
-Version: TLS 1.2 (0x0303)
-Random: 21058fee53f9753786f537e6158e9f9123d3ce824bf f6da2al14f47c80a2e9b00
-Session ID Length: 32
-Session ID: 3b39951ffe287758 fdf1c8ca54b945 f99f c5ae94a7891877b7652a9e148230b5
-Cipher Suites Length: 32
-Cipher Suites (16 suites)
-Compression Methods Length: 1
-Compression Methods (1 method)
-Extensions Length: 1671
-Extension: Reserved (GREASE) (len=0)
-Extension: status_request (len=5)
-Extension: signature_algorithms (len=18)
-Extension: key_share (len=1263) X25519MLKEM768, x25519
-Extension: encrypted_client_hello (len=250)
-Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
+black hat BRIEFINGS
+
+Examining Wireshark Traffic
+
+80
+
+> Internet Protocol Version 4, Src: 192.168.1.43, Dst: 52.114.55.197
+> Transmission Control Protocol, Src Port: 60570, Dst Port: 443, Seq: 1429, Ack: 1, Len: 357
+> [2 Reassembled TCP Segments (1785 bytes): #30829(1428), #30830(357)]
+v Transport Layer Security
+  v TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+      Content Type: Handshake (22)
+      Version: TLS 1.0 (0x0301)
+      Length: 1780
+    v Handshake Protocol: Client Hello
+        Handshake Type: Client Hello (1)
+        Length: 1776
+      > Version: TLS 1.2 (0x0303)
+      > Random: 21058fee53f9753786f537e6158e9f9123d3ce824bff6da2a14f47c80a2e9b00
+        Session ID Length: 32
+        Session ID: 3b39951ffe287758fdf1c8ca54b945f99fc5ae94a7891877b7652a9e148230b5
+        Cipher Suites Length: 32
+      > Cipher Suites (16 suites)
+        Compression Methods Length: 1
+      > Compression Methods (1 method)
+        Extensions Length: 1671
+      > Extension: Reserved (GREASE) (len=0)
+      > Extension: status_request (len=5)
+      > Extension: signature_algorithms (len=18)
+      > Extension: key_share (len=1263) X25519MLKEM768, x25519
+      > Extension: encrypted_client_hello (len=250)
+      > Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 81
@@ -1582,11 +1404,11 @@ Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pifekhat Examining Wireshark Traffic
-BRIEFINGS
 Internet Protocol Version 4, Src: 192.168.1.43, Dst: 52.114.55.197
 Transmission Control Protocol, Src Port: 60570, Dst Port: 443, Seq: 1429, Ack: 1, Len: 357
 [2 Reassembled TCP Segments (1785 bytes): #30829(1428), #30830(357)]
@@ -1606,29 +1428,36 @@ Handshake Protocol: Client Hello
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bi§ekchat Examining,;Wireshark Traffic
-BRIEFINGS
-Handshake Protocol: Client Hello
-Handshake Type: Client Hello (1)
-Length: 1776
-Version: TLS 1.2 (0x0303)
-Random: 21058fee53f9753786f537e6158e9F9123d3ce824bf f6da2al4f47c80a2e9b00
-Session ID Length: 32
-Session ID: 3b39951f fe287758fdf1c8ca54b945 f99fc5ae94a7891877b7652a9e148230b5
-Cipher Suites Length: 32
-Cipher Suites (16 suites)
-Compression Methods Length: 1
-Compression Methods (1 method)
-Extensions Length: 1671
-Extension: Reserved (GREASE) (len=0)
-Extension: status_request (len=5)
-Extension: signature_algorithms (len=18)
-Extension: key_share (len=1263) X25519MLKEM768, x25519
-Extension: encrypted_client_hello (len=250)
-Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
+black hat BRIEFINGS
+
+Examining Wireshark Traffic
+
+82
+
+v Handshake Protocol: Client Hello
+    Handshake Type: Client Hello (1)
+    Length: 1776
+  > Version: TLS 1.2 (0x0303)
+  > Random: 21058fee53f9753786f537e6158e9f9123d3ce824bff6da2a14f47c80a2e9b00
+    Session ID Length: 32
+    Session ID: 3b39951ffe287758fdf1c8ca54b945f99fc5ae94a7891877b7652a9e148230b5
+    Cipher Suites Length: 32
+  > Cipher Suites (16 suites)
+    Compression Methods Length: 1
+  > Compression Methods (1 method)
+    Extensions Length: 1671
+  > Extension: Reserved (GREASE) (len=0)
+  > Extension: status_request (len=5)
+  > Extension: signature_algorithms (len=18)
+  > Extension: key_share (len=1263) X25519MLKEM768, x25519
+  > Extension: encrypted_client_hello (len=250)
+  > Extension: server_name (len=43) name=worldaz-msit.relay.teams.microsoft.com
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 83

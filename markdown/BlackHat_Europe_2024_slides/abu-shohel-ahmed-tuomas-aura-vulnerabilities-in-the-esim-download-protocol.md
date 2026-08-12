@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Abu Shohel Ahmed & Tuomas Aura_Vulnerabilities in the eSIM download protocol.pdf"
 pages: 35
 sha256: "e5c2b7478bd38172a1f46a87b716e9d721f11a63e87f41906a9acb3358a65d64"
-text_chars: 10713
+text_chars: 10381
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 80.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:47:23Z"
+converted_at: "2026-08-12T04:53:45Z"
 ---
 # Vulnerabilities in the eSIM download protocol
 
 **Speakers:** Abu Shohel Ahmed, Tuomas Aura  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Abu Shohel Ahmed & Tuomas Aura_Vulnerabilities in the eSIM download protocol.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -149,59 +155,41 @@ How does the eSIM download protocol work? What are the security goals? Does the 
 
 1. Protocol description as message sequence chart
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Research methodology
 1. Protocol description as
 message sequence chart
 SM-DP+ server (.
-SKs;, Certst
-SK5a, Certs,
-SKsp, Certsp
-P, iccid, G, [U], I2?*""]
 Seq, mnold, serverOID
 HTTPS tunnel to S with Certs;
 [ne]. [serverOID], U, mnold, S
-t
 User triggers download
-SKy, Cert
 Seq.G
 1. GetChallenge |
 2. Nu. SKIct
-a
 Nu =R
-v
 event U0
-3. Nu, S, KIcr Coe ICACE}
 S = subject of Certs,
-I :=R,Ns :=R
 ‘
 event SO
 4. Certsa,
-Sign (Ir, Ns, Nu. Si SKsa)
 Check that the same S returned,
 [expected serverOID in Certsa]
 5. Certsas Tac.
-[ Tac = IEPECM
 event S1
 8. Sign(I+; SKsp), Certsp
 Certsp « Certcr
 serverOID from Certs
-Qs = ds-G 2. E(P:k), MAC(E(P; k);k”
 Zus = ds: Qu 12. E(P;k), MAC(E(P;k);k’),
 Sign(Ir, Ns, Nu
 7. Certy, Certeum,
-Sign(I;, Ns. S, Tac: SK)
-Certs, « Certcy
-6. Certy, Certeum, peal
-Sign(I,, Ns. S, lac: SK) co
-Certy < Certeyy, Certerny «Certcr
 ]
 . | U = subject of Certy
 = serverOID from Certs»
 k,k! = KDF(Zys, serverOID, U)
-1
 event S2
 mnold, MAC( mnold; k’),
 iccid, MAC(iccid; k’),
@@ -236,11 +224,11 @@ Participants of the protocols
 
 - `(* ===== MAIN PROCESS ===== *) process`
 
-```
+\```
 (** == CA == **)
 let PK_CI = pk(SK_CI) in
 out(c, PK_CI);
-```
+\```
 
    - `(** == Honest processes == **) !MNO(PK_CI)`
 
@@ -256,9 +244,9 @@ out(c, PK_CI);
 
    - `| (new U:Id_t; out(c, U); event OWNER(AttackerUserId,U); new LPA2EUICC:channel; out(c, LPA2EUICC); A_EUICC(LPA2EUICC,PK_CI,U)`
 
-```
+\```
 )
-```
+\```
 
 ## Slide 12
 

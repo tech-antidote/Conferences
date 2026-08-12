@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Bai-Stealthy-Sensitive-Information-Collection-from-Android-Apps.pdf"
 pages: 36
 sha256: "0d82a79c3499d4221279266e0bcae8d46194773a7d1bbd28c31deacaed092549"
-text_chars: 12154
-ocr_pages: 6
+text_chars: 11726
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:53:42Z"
+converted_at: "2026-08-12T03:46:31Z"
 ---
 # Stealthy Sensitive Information Collection from Android Apps
 
 **Speakers:** Bai  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Bai-Stealthy-Sensitive-Information-Collection-from-Android-Apps.pdf` (36 pages)
+
 
 ## Slide 1
 
@@ -42,24 +47,6 @@ Summary
 05 Q&A
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-ASIA 20253
-O1
-02
-CONTENTS
-03
-04
-05
-About us
-Background
-Our work
-Summary
-Q&A
-```
 
 ## Slide 3
 
@@ -89,16 +76,6 @@ MUCH HAS BEEN TALKED, BUT NOT MUCH DONE
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2023
-PRIVACY
-MUCH HAS BEEN TALKED, BUT NOT MUCH DONE
- #BHASIA. @BlackHatEvents
-```
-
 ## Slide 6
 
 # **02 Background**
@@ -123,11 +100,10 @@ Infringements of user privacy could result in **large penalties** , e.g., “a f
 
 Source: https://unctad.org/page/data-protection-and-privacy-legislation-worldwide
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 71% 5%
 COUNTRIES WITH COUNTRIES WITH COUNTRIES WITH COUNTRIES WITH
 LEGISLATION DRAFT LEGISLATION NO LEGISLATION NO DATA
@@ -247,18 +223,15 @@ Are these measures adequate to protect user privacy? **Manually authorizing** to
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 The Dangers of Unrestricted Access to Privacy Information Using Webview
 Hi, do you want to be rich?
 miss Just open this website: www.
-a
 exampletest.com
 Thanks! 9")
-os
 ```
 
 ## Slide 18
@@ -444,20 +417,17 @@ detect sensitive data
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSdkhat eae <
-ASIA 20253
 Hook String constructor
 st envAddr = ptr(Java.vm.tryGetEnv().handle) ;
 artSymbol = envPointAddr = envAddr.readPointer
 rea an onst envPointAddr167 = envPointAddr.add((167) * Process.pointerSize);
 Hook native String constructor to ‘ a» : om ynst newStringUtfAddr = envPointAddri167.readPointer (
-; v9 Interceptor. attach (newStringUtfAddr, {
 _ onEnter(args) {
 detect sensitive data Int} 3
-a)
 onLeave(retval) {
 if (retval == @x@) {
 return;
@@ -467,14 +437,10 @@ st envPointAddr163 = envPointAddr.add((163) * Proceés.pointerSize) ;
 f ((elconst newStringAddr = envPointAddr163.readPointer (
 Int Interceptor.attach(newStringAddr, {
 onEnter(args) {
-ty
 onLeave(retval) {
 if (retval == 0x0) {
 return;
-t
 let ret = Java.vm.getEnv().getStringUtfChars(retval, null).readCString(
-isSensitiveInfoInString(ret,"jni::newString") ;
-,
 ```
 
 ## Slide 30
@@ -499,14 +465,11 @@ Disadvantages：
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 Hook String
-xgs@C02091T2MD6ER:~/Downloads/release
-7 GPS
 Welcome to your new Pixel
 © Tap for tips
 ```

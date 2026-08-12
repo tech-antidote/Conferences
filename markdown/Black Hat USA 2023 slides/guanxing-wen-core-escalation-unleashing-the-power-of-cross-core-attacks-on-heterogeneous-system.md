@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Guanxing Wen_Core Escalation Unleashing the Power of Cross-Core Attacks on Heterogeneous System.pdf"
 pages: 87
 sha256: "1f9edee4ad650f6d1fa663c8b92927a4226de3a2e6c942fa89d171d50786e9ab"
-text_chars: 23792
-ocr_pages: 10
+text_chars: 23189
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:17:39Z"
+converted_at: "2026-08-12T04:10:57Z"
 ---
 # Core Escalation Unleashing the Power of Cross-Core Attacks on Heterogeneous System
 
 **Speakers:** Guanxing Wen  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Guanxing Wen_Core Escalation Unleashing the Power of Cross-Core Attacks on Heterogeneous System.pdf` (87 pages)
+
 
 ## Slide 1
 
@@ -29,11 +36,10 @@ converted_at: "2026-08-11T21:17:39Z"
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA 2023 a
 AUGUST 9-10, 2025
 BRIEFINGS
 Core Escalation
@@ -58,7 +64,8 @@ Guanxing Wen
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 g b Huawei Bug Bounty Program Homepage
@@ -76,8 +83,6 @@ HUAWEI
 Seasonal Ranking Annual ranking General ranking
 Ranking list Nickname
 @ Wen Guanxing
-2. 360A lphaLab
-3) 4ice
 Contribution value
 All business
 bugbounty.huawei.com
@@ -114,34 +119,20 @@ Guanxing Wen
 
 Exploit the **bootrom** of Huawei **Mate30**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-EL3 Tour: Get The Ultimate Privilege
-Checkmate Mate30
-Attack the bootrom of Huawei Smartphones
-USA 2023
-Core Escalation
-Unleashing the Power of rost-CreAtackon Heterogeneous Sytem
-```
-
 ## Slide 6
 
 Exploit the **XXX** of Huawei **XXXX40**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat MS
-LUISA 2&2
 AUGUST 9-10, 2023
 BRIEFINGS
 Core Escalation
 Unleashing the Power of Cross-Core Attack on Heterogeneous System
 Guanxing Wen
 Checkmate Mate30
-a tne
-thebootom: Smanpones
 ```
 
 ## Slide 7
@@ -383,28 +374,28 @@ EL0
 
 SEL0
 
-```
+\```
 ion.heap_id_mask = 1 << ION_DRM_HEAP_ID
 ioctl(open(“/dev/ion”), ION_IOC_ALLOC, &ion)
-```
+\```
 
-```
+\```
 ion_secsg_heap_allocate -> secmem_tee_exec_cmd
-```
+\```
 
-```
+\```
 sion_ioctl
-```
+\```
 
-```
+\```
 alloc buff_id <=> ion pages
-```
+\```
 
 platdrv
 
 ###### secmem
 
-```
+\```
 struct ion_buffer {
   u64 magic;
 union {
@@ -424,14 +415,14 @@ struct sg_table *sg_table;
 struct list_head attachments;
 char task_comm[TASK_COMM_LEN];
   pid_t pid;
-```
+\```
 
-```
+\```
 #if defined(CONFIG_ION_HISI_SECSG)
 unsignedintid;
 #endif
 };
-```
+\```
 
 ## Slide 20
 
@@ -462,9 +453,9 @@ EL1 ion pages SEL1
 
 ion.fd buff.id
 
-```
+\```
 sion_alloc
-```
+\```
 
 buff.id
 
@@ -527,7 +518,8 @@ any pages
 
 > ✤ 0x13600000-0x19600000
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A Small Setback
@@ -558,17 +550,17 @@ length, nents & OxFFF, (__int64)v230);
 
 ## Slide 27
 
-```
+\```
 START
-```
+\```
 
-```
+\```
 USAGE
-```
+\```
 
-```
+\```
 END
-```
+\```
 
 |`10000000`|`105FFFFF`|`sensorhub-shmemext`|
 |---|---|---|
@@ -630,14 +622,6 @@ END
 ## Slide 30
 
 A bigger picture
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eer ar
-; .
-ne) QEP picture
-```
 
 ## Slide 31
 
@@ -745,17 +729,17 @@ DRAM Peripherals
 
 ## Slide 39
 
-```
+\```
 START
-```
+\```
 
-```
+\```
 USAGE
-```
+\```
 
-```
+\```
 END
-```
+\```
 
 |`10000000`|`105FFFFF`|`sensorhub-shmemext`|
 |---|---|---|
@@ -856,7 +840,7 @@ Mountain Top: LPMCU ✤ A secure master (ARM Cortex M3), definitely ✤ LPM3.img
 
 ## Acquire ACPU EL3 privilege
 
-```
+\```
 stpx29, x30, [sp, -0x10]!
 tstx0, 1
 beqexec
@@ -872,7 +856,7 @@ dsbish
 isb
 ldpx29, x30, [sp], 0x10
 ret
-```
+\```
 
 ##### Patch BL31 (adding a RWX smc handler)
 
@@ -882,7 +866,8 @@ ret
 
 Patch TEEOS (platdrv)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Establish a Decryption Oracle
@@ -895,7 +880,6 @@ log(0, "%s td:hisi_modem_ disreset get modem_image info failed.\n ", "[error]", 
 return v10;
 }
 if ( (unsigned int)(al - 7) >3 )
-i!
 return hisi_secboot_verify_modem_comm_imgs(5, a3, a4);
 v1l2 = &v8[10 * al];
 goto LABEL 15;
@@ -981,7 +965,8 @@ Cross-Core Attack Surface ✤ ACPU <=> LPMCU, MODEM <=> HIFI, ISP <=> GPU …
 
 DMA
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DMA
@@ -995,8 +980,6 @@ Device
 Crypto
 Camera Engines
 Application Processor
-Kernel
-GPU Wi-Fi Sot |“ - -
 User-Space
 Baseband
 Processor
@@ -1056,27 +1039,92 @@ ACPU
 
 LPMCU
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-CVE-2020-36600
-C —fastcall mailbox_17_handler(int al) void __fastcall rdr_init(unsigned int addr, int size)
-// [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"+" TO EXPAND] { // [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"
-if MEMORY
-( (OxBE101460] == 0x80202 ) if ( addr > Ox2FOFFFFF && addr + size <= 0x2F960000 )
-rdr_init (MEMORY[0xBE101464], MEMORY[0xBE10146C]); {
-goto LABEL 26; g_addr = addr;
-} g_size = size;
-void __cdecl rdr_data_save(int addr, int outsize, char *msg, int msg qmemcpy(msg, "LPM3_ RDR", 8&);
-*(_DWORD *)&msg[8] = 0x80;
-// [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"+" TO EXPAND] *("DWORD *)&msg[24] = 0x3C00;
-*(_DWORD *)&msg[60] = 0;
-teas op _-—-*(DWORD *)&msg[64] = 0x400;
-{ van ape ret 1b) Bee nee 2019 00:52:46");// st
-at ¢ eis atin int)outsize ) if ( snprintf((unsigned int)&msg[96], Oxl8u, (unsig
-; dma_transfer((int)(msg + 0xFFF30000), addr, _msgsize, 0); Los_Print (2, “rdrbuf err\n");
-else
-} rdr data save(g addr, 0x80, (int)msg, 0x78);
+Obfuscation: O-LLVM Instruction Substitution
+
+[top-left box]
+if (mod == 0) result = (n | 0xbaaad0bf) * (2 ^ n)
+
+[label on downward arrow, left]      O-LLVM Instruction Substitution (Loop=1)
+[label on rightward arrow, right]    O-LLVM Instruction Substitution (Loop=3)
+
+[bottom-left box]
+if (iVar1 == 0) {
+  local_10 = (param1 & 0xbaaad0bf | param1 ^ 0xbaaad0bf) *
+             (((param1 ^ 0xffffffff) & 0xbcec65b1 | param1 & 0x43139a4e) ^ 0xbcec65b3);}
+
+[right panel]
+if (iVar1 == 0) {
+  uVar10 = param1 & 0xc9e645ce | (param1 ^ 0xffffffff) & 0x3619ba31;
+  uVar11 = ((uVar10 ^ 0x3619ba31) & 0x5c2ea1f5 | (uVar10 ^ 0xc9e645ce) & 0xa3d15e0a) ^ 0xf1571e9d
+           | uVar10 ^ 0x3619ba31;
+  uVar12 = ((param1 ^ 0xffffffff) & 0xad79bf68 | param1 & 0x52864097) ^ 0xffffffff |
+           param1 ^ 0xffffffff;
+  uVar4 = uVar11 | uVar12;
+  uVar11 = (uVar12 ^ 0xffffffff) & uVar11 | (uVar11 ^ 0xffffffff) & uVar12;
+  uVar12 = uVar11 ^ 0xffffffff;
+  uVar11 = (uVar4 & 0xaea378c3 | (uVar4 ^ 0xffffffff) & 0x515c873c) ^
+           (uVar12 & 0xaea378c3 | uVar11 & 0x515c873c) | (uVar4 | uVar12) ^ 0xffffffff;
+  uVar12 = ((uVar11 ^ 0xffffffff) & 0xcb73214a | uVar11 & 0x348cdeb5) ^ 0xcb73214a | 0x604af11c;
+  uVar11 = uVar11 ^ 0xffffffff | 0x9fb50ee3;
+  uVar11 = (uVar12 & 0x5835bf98 | (uVar12 ^ 0xffffffff) & 0xa7ca4067) ^
+           (uVar11 & 0x5835bf98 | (uVar11 ^ 0xffffffff) & 0xa7ca4067) |
+           (uVar12 | uVar11) ^ 0xffffffff;
+  uVar11 = (uVar11 ^ 0xffffffff) & 0x88666134 | uVar11 & 0x77999ecb;
+  uVar12 = uVar10 ^ 0x3619ba31 | 0xbaaad0bf;
+  uVar10 = (uVar10 ^ 0x3619ba31) & 0x565b27a0 | (uVar10 ^ 0xc9e645ce) & 0xa9a4d85f;
+  uVar4 = uVar10 ^ 0xecf1f71f;
+  uVar12 = (uVar12 & 0xc4fa1585 | (uVar12 ^ 0xffffffff) & 0x3b05ea7a) ^
+           (uVar4 & 0xc4fa1585 | (uVar10 ^ 0x130e08e0) & 0x3b05ea7a) |
+           (uVar12 | uVar4) ^ 0xffffffff;
+  uVar10 = (((uVar12 ^ 0xffffffff) & 0xbe3c86ad | uVar12 & 0x41c37952) ^ 0xbe3c86ad | 0xe6842217)
+           ^ 0xffffffff;
+  uVar12 = (uVar12 ^ 0x197bdde8) & uVar12;
+  uVar10 = uVar10 & uVar12 | uVar10 ^ uVar12;
+  uVar10 = (uVar10 ^ 0xffffffff) & 0x9d11e123 | uVar10 & 0x62ee1edc;
+  uVar10 = (uVar10 ^ 0x846a3ccb) & 0x61675078 | (uVar10 ^ 0x7b95c334) & 0x9e98af87;
+  uVar10 = (uVar10 ^ 0x61675078) & 0xa63617bd | (uVar10 ^ 0x9e98af87) & 0x59c9e842;
+  uVar12 = (uVar11 ^ uVar10 ^ 0xa63617bd) & uVar11;
+  uVar10 = ((uVar11 ^ 0xffffffff) & 0xbcc6bdd4 | uVar11 & 0x4339422b) ^
+           ((uVar10 ^ 0xa63617bd) & 0xbcc6bdd4 | (uVar10 ^ 0x59c9e842) & 0x4339422b);
+  uVar11 = uVar12 ^ 0xffffffff;
+  uVar4 = uVar10 ^ 0xffffffff;
+  uVar5 = (param1 ^ 0xffffffff) & 0xaf91567b | param1 & 0x506ea984;
+  uVar6 = uVar5 ^ 0xaf91567b;
+  uVar5 = (uVar6 & 0xe30d84a7 | (uVar5 ^ 0x506ea984) & 0x1cf27b58) ^ 0xe30d84a5 |
+          (uVar6 | 0xfffffffd) ^ 0xffffffff;
+  uVar6 = (((param1 ^ 0xffffffff) & 0x7ce0ffb1 | param1 & 0x831f004e) ^ 0xea109553) & 0x96f06ae2;
+  uVar7 = (param1 ^ 0xffffffff | 0x96f06ae2) ^ 0xffffffff;
+  uVar8 = uVar6 ^ uVar7;
+  uVar6 = (uVar8 ^ 0xffffffff) & 0x690f951d | uVar6 & uVar7 | uVar8 & 0x96f06ae2;
+  uVar6 = uVar6 & 0xba8c5c70 | (uVar6 ^ 0xffffffff) & 0x4573a38f;
+  uVar6 = (uVar6 ^ 0x4573a38f) & (uVar6 ^ 0xba8c5c72);
+  uVar7 = (uVar5 ^ 0xcb0a5819) & uVar5;
+  uVar8 = (uVar5 | 0x34f5a7e6) ^ 0xffffffff;
+  uVar9 = (uVar6 ^ 0x34f5a7e6) & (uVar6 ^ 0xffffffff);
+  uVar2 = (uVar6 ^ 0x34f5a7e6) & uVar6;
+  uVar7 = uVar7 & uVar8 | uVar7 ^ uVar8;
+  uVar8 = uVar9 ^ 0xffffffff;
+  uVar3 = uVar2 ^ 0xffffffff;
+  uVar8 = (uVar8 & 0xd3d541ce | uVar9 & 0x2c2abe31) ^ (uVar3 & 0xd3d541ce | uVar2 & 0x2c2abe31) |
+          (uVar8 | uVar3) ^ 0xffffffff;
+  uVar7 = ((uVar7 ^ 0xffffffff) & 0xefd84b11 | uVar7 & 0x1027b4ee) ^
+          ((uVar8 ^ 0xffffffff) & 0xefd84b11 | uVar8 & 0x1027b4ee);
+  uVar5 = ((uVar5 ^ 0xffffffff) & 0xffb73ee8 | uVar5 & 0x48c117) ^
+          (uVar6 & 0xffb73ee8 | (uVar6 ^ 0xffffffff) & 0x48c117) |
+          (uVar5 ^ 0xffffffff | uVar6) ^ 0xffffffff;
+  uVar5 = (uVar5 ^ 0xffffffff) & 0xa95ee2be | uVar5 & 0x56a11d41;
+  uVar6 = uVar5 ^ 0xa95ee2be;
+  uVar8 = uVar7 ^ 0xffffffff;
+  local_10 = ((uVar11 & 0x1e98326 | uVar12 & 0xfe167cd9) ^
+              (uVar4 & 0x1e98326 | uVar10 & 0xfe167cd9) | (uVar11 | uVar4) ^ 0xffffffff) *
+             ((uVar8 & 0xc8a77567 | uVar7 & 0x37588a98) ^
+              (uVar6 & 0xc8a77567 | (uVar5 ^ 0x56a11d41) & 0x37588a98) |
+              (uVar8 | uVar6) ^ 0xffffffff);
+}
 ```
 
 ## Slide 62
@@ -1151,9 +1199,9 @@ Abstract thinking was nice, but it's code o'clock!
 
 > ✤ shellcode injection in a single line of command
 
-```
+\```
     mount --bind isp_fw_mod.elf /odm/etc/firmware/isp_fw.elf
-```
+\```
 
 ## Slide 69
 
@@ -1210,11 +1258,11 @@ Mitigations of Cross-Core Attack ✤ DMSS & CFGBUS: think of TZASC & TZPC ✤ DM
 |`0xFE2520EC`|`0x00000`|`0x00000`|
 |0xFFE00000|+ 2 **0x15=|0x100000000|
 
-```
+\```
  master bits
  log₂(size)
  rw permission
-```
+\```
 
 ## Slide 73
 
@@ -1235,9 +1283,9 @@ REGs 2.0.0.243
 0xFE252070  0x10000
 0xFE252074 0x00000
 
-```
+\```
  offset
-```
+\```
 
 0xFE250000 + 0x2000 = 0xFE252000 0xFE252000 + 2 **0xa = 0xFE252400
 
@@ -1245,7 +1293,7 @@ REGs 2.0.0.243
 
 ## Configure CFGBUS
 
-```
+\```
 REGs2.0.0.243
 0xFE252044 0x002000
 0xFE252048 0x03FE00
@@ -1260,28 +1308,28 @@ REGs2.0.0.243
 0xFE25206C 0
 0xFE252070 0x10000
 0xFE2520740x00000
-```
+\```
 
-```
+\```
 [0xfe25200c] <= 0x00
 [0xfe252008] <= 0x00
 [0xfe25240c] <= 0x00
 [0xfe25248c] <= 0x00
 [0xfe252018] <= 0x00
 [0xfe252020] <= 0x0F
-```
+\```
 
-```
+\```
 . . .
-```
+\```
 
-```
+\```
 [0xfe252014] <= 0xBA
 [0xfe252008] <= 0x0F
 [0xfe25200c] <= 0x01
 [0xfe252008] <= 0x1F
 [0xfe252018] <= 0x08
-```
+\```
 
 ## Slide 75
 
@@ -1312,30 +1360,30 @@ REGs2.0.0.243
 `0x10000`|
 |`0xFE252074`|`0x00000`|
 
-```
+\```
 [0xfe25200c] <= 0x00
 [0xfe252008] <= 0x00
 [0xfe25240c] <= 0x00
 [0xfe25248c] <= 0x00
 [0xfe252018] <= 0x00
 [0xfe252020] <= 0x0F
-```
+\```
 
-```
+\```
 . . .
-```
+\```
 
-```
+\```
 [0xfe252014] <= 0xBA
 [0xfe252008] <= 0x0F
 [0xfe25200c] <= 0x01
 [0xfe252008] <= 0x1F
 [0xfe252018] <= 0x08
-```
+\```
 
-```
+\```
 Disable
-```
+\```
 
 ## Slide 76
 
@@ -1366,16 +1414,16 @@ Disable
 `0x10000`|
 |`0xFE252074`|`0x00000`|
 
-```
+\```
 [0xfe25200c] <= 0x00
 [0xfe252008] <= 0x00
 [0xfe25240c] <= 0x00
 [0xfe25248c] <= 0x00
 [0xfe252018] <= 0x00
 [0xfe252020] <= 0x0F
-```
+\```
 
-```
+\```
 . . .
 Config
 [0xfe252014] <= 0xBA
@@ -1383,13 +1431,13 @@ Config
 [0xfe25200c] <= 0x01
 [0xfe252008] <= 0x1F
 [0xfe252018] <= 0x08
-```
+\```
 
 ## Slide 77
 
 ## Configure CFGBUS
 
-```
+\```
 REGs2.0.0.243
 0xFE252044 0x002000
 0xFE252048 0x03FE00
@@ -1404,38 +1452,38 @@ REGs2.0.0.243
 0xFE25206C 0
 0xFE252070 0x10000
 0xFE2520740x00000
-```
+\```
 
-```
+\```
 [0xfe25200c] <= 0x00
 [0xfe252008] <= 0x00
 [0xfe25240c] <= 0x00
 [0xfe25248c] <= 0x00
 [0xfe252018] <= 0x00
 [0xfe252020] <= 0x0F
-```
+\```
 
-```
+\```
 . . .
-```
+\```
 
-```
+\```
 [0xfe252014] <= 0xBA
 [0xfe252008] <= 0x0F
 [0xfe25200c] <= 0x01
 [0xfe252008] <= 0x1F
 [0xfe252018] <= 0x08
-```
+\```
 
-```
+\```
 Enable
-```
+\```
 
 ## Slide 78
 
 ## Disable CFGBUS
 
-```
+\```
 REGs2.0.0.243
 0xFE252044 0x002000
 0xFE252048 0x03FE00
@@ -1450,28 +1498,28 @@ REGs2.0.0.243
 0xFE25206C 0
 0xFE252070 0x10000
 0xFE2520740x00000
-```
+\```
 
-```
+\```
 [0xfe25200c] <= 0x00
 [0xfe252008] <= 0x00
 [0xfe25240c] <= 0x00
 [0xfe25248c] <= 0x00
 [0xfe252018] <= 0x00
 [0xfe252020] <= 0x0F
-```
+\```
 
-```
+\```
 . . .
-```
+\```
 
-```
+\```
 [0xfe252014] <= 0xBA
 [0xfe252008] <= 0x0F
 [0xfe25200c] <= 0x01
 [0xfe252008] <= 0x1F
 [0xfe252018] <= 0x08
-```
+\```
 
 ## Slide 79
 
@@ -1566,15 +1614,3 @@ DEMO: Screen Passcode Bypass
 Meet + Greet: Aug 9, 17:00 – 17:30 Booth 3241 - Meetup Lounge, Business Hall
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifzkhat
-LUISA 2O2z3 ae
-Questions?
-X W @hhj4ck
-Meet + Greet: Aug 9, 17:00 — 17:30
-Booth 3241 - Meetup Lounge, Business Hall
-#BHUSA @BlackHatEvents
-```

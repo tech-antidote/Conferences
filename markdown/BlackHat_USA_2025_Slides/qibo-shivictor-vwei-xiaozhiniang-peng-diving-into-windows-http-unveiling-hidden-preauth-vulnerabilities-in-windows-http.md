@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Qibo Shi&Victor V&Wei Xiao&Zhiniang Peng_Diving into Windows HTTP Unveiling Hidden Preauth Vulnerabilities in Windows HTTP Services.pdf"
 pages: 75
 sha256: "034dda586bca33cfd0adab332266792781e6fb34ec45fafb8e8e1f5695a66a5a"
-text_chars: 38885
+text_chars: 35570
 ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:59:50Z"
+converted_at: "2026-08-12T05:19:32Z"
 ---
 # Diving into Windows HTTP Unveiling Hidden Preauth Vulnerabilities in Windows HTTP Services
 
 **Speakers:** Qibo Shi, Victor V, Wei Xiao, Zhiniang Peng  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Qibo Shi&Victor V&Wei Xiao&Zhiniang Peng_Diving into Windows HTTP Unveiling Hidden Preauth Vulnerabilities in Windows HTTP Services.pdf` (75 pages)
+
 
 ## Slide 1
 
@@ -54,10 +59,10 @@ II. Overview of the Windows HTTP Service Framework III. Exploring Logic Flaws Le
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS
@@ -128,12 +133,11 @@ Binds a specific URL to the server session for handling incoming requests (e.g.,
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-black hat
-BRIEFINGS
 How to find them
 > netsh http show servicestate
 Request queues:
@@ -164,11 +168,10 @@ HTTP: //+:47001/WSMAN/
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
-EFFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Overview of the Windows HTTP
@@ -281,11 +284,10 @@ Server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
-EFFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Exploring Logic Flaws Leading to
@@ -360,21 +362,18 @@ v2 = (struct _HTTP_REQUEST_V2 *)realloc(v3, BytesReturned); // ===============> 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-blackhat : me
 BRIEFINGS - \
 Case Study — CVE-2024-43512
-D:\>python request.py 192.168.217.2Uu
 <?xml version="1.0" encoding="utf-8" ?>
-<CIM CIMVERSION="2.0" DTDVERSION .O">
 <MESSAGE ID="" PROTOCOLVERSION="1.0">
 Befo re <SIMPLEEXPRSP>
 <EXPMETHODRESPONSE NAME="ExportIndication">
 <IRETURNVALUE>
-</IRETURNVALUE>
 </EXPMETHODRESPONSE>
 </SIMPLEEXPRSP>
 </MESSAGE>
@@ -464,18 +463,16 @@ Causes DoS by entering an infinite loop.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
-blackhat : me
 BRIEFINGS - \
-ig.
 Case Study -- CVE-2025-27471
 D:\>python upnp_normal.py 192.168.217.150
 Content-Length: 31
 Before Content-Type: text/html
-Server: Microsoft—Windows/10.8 UPnP/1.0 UPnP-Device-Host/1.8 Microsoft—HTTPAPI/2.6
 Date: Tue, 01 Jul 2025 05:29:40 GMT
 D:\>python upnp_normal.py 192.168.217.150
 Exception in thread Thread-1 (thr):
@@ -487,7 +484,6 @@ response = conn.getresponse()
 After File "C:\Users\kOshl\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", Line 461, in getresponse
 httplib_response = super().getresponse()
 File "C:\Program Files\Python310\Lib\http\client.py", line 1374, in getresponse
-response. begin()
 File "C:\Program Files\Python310\Lib\http\client.py", line 318, in begin
 version, status, reason = self._read_status()
 File "C:\Program Files\Python310\Lib\http\client.py", line 279, in _read_status
@@ -612,24 +608,20 @@ Transport = (unsigned __int16)ioresult | 0x80070000; // ================> [b] //
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Case Study
 Before After
 D:\>python fdres.py 192.168.217.150
 Traceback (most recent call last):
 D : \>p ython fdres . PY 192 « 168 « 217 . 156 File "C:\Users\kOshL\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", Line 791, in urlopen
-. a. response = self._make_request(
 Content-Type = appLication/soap+xmL File "C:\Users\kOsh1l\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 537, in _make_request
 . response = conn.getresponse()
 Server: Microsoft—HTIPAPI/2 “ 3) File "C:\Users\k@sh1L\AppData\Roaming\Python\Python310\site—packages\urllib3\connection.py", Line 461, in getresponse
 httplib_response = super().getresponse()
 Date : Tue ' 61 Jul 2025 85 736 739 GMT File "c:\Program Files \python310\Lib\http\client. py", line 1374, in getresponse
-response. begin()
 Content-Length : 3) File "C:\Program Files\Python310\Lib\http\client.py", line 318, in begin
 version, status, reason = self._read_status()
 File "C:\Program Files\Python310\Lib\http\client.py", line 279, in _read_status
@@ -790,22 +782,15 @@ WPP_SF_qqq(*((_QWORD *)v20 + 12), 49i64, &WPP_152a8e42b8b337334125d2feda130716_T
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
-SHH) GE) BRI) UM) RET) DH)
 testtest
 FE Administrator: Commend Pro.»
-16.8.26190.17
 = Performance &@ un new task
-P
-CPU
 , Memory 4068
-1e
 z Memory
-= Disk 0(¢: | —
 = Ethernet
 1.8GB(OMB) 2.2GB
 1.7/5.4GB 15GB
@@ -863,19 +848,15 @@ httpapi.dll
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
-lis
 oy ISAPI and CGI Restrictions
 Use this feature to specify the ISAPI and CGl extensions that can run on the Web server,
 Group by: No Grouping ad
 Description
 Active Server Pages
-ASP.NET v4.0,30319
 ASP.NET v4.0,30319
 BITS Server Extensions
 Internet Printing
@@ -888,12 +869,6 @@ Allowed
 Allowed
 Allowed
 Path
-CAWINDOWS\system32\inetsrv\asp.dll
-CAWINDOWS\Microsoft.NET\Framework\v4.0,30319\aspnet_isapi.dll
-CAWINDOWS\ Microsoft. NET\Framework64\4.0,30319\aspnet_isapidll
-CAWINDOWS\system32\ bitssrv.dll
-CAWINDOWS\system32\msw3 prt.dll
-CAWINDOWS\system32\ocspisapi.dll
 ```
 
 ## Slide 47
@@ -943,13 +918,10 @@ Max ref count is 0x1366
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
-lis
 iiscore.d1ll! W3 CONTEXT: :SetupStateMachine
 LABEL_41:
 if ( (*(_intés (_fastcall **)(W3_CONTEXT *))(*(_QWORD *) + 232i64)) (this)
@@ -957,19 +929,15 @@ I] ¢ = _InterlockedExchangeAdd((volatile signed __int32 *)(*((_QWORD *)t + 1011
 42 = *((_QWORD *)this + @x3F3),
 = +1,
 *((_BYTE *)t + 8097) = 1,
-"if ( 1(*(_intea (_fasteall **)(w3_co ))(*(_QWORD *)this + 232164))(this) )
 = (void (_fastcal )(_inte4, _int64, __int64))(*((_QWORD *)this + 1009) + 656164);
 45 = *(_DWORD *)(*(_QWORD *)(*((_QWORD *)this + 6) + 40164) + 36164);
-:
 Max ref count is 0x1366
 if failed
 ++*(_DWORD
-8;
 23
 goto LABEL_92;
 e Unavailable";
 )this + 8);
-es
 ```
 
 ## Slide 50
@@ -1148,15 +1116,12 @@ After
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Case Study -- CVE-2024-38067
 Before After
-D:\>python ocsp_demo.py 192.168.217.2uu
 200
 Cache-Control: no-cache
 Content-Type: appLlication/ocsp-response
@@ -1191,11 +1156,10 @@ Content-Length: 5
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-; bisekhat
-EFFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Parsing and Handling Stages
@@ -1208,20 +1172,16 @@ Leading to Pre-auth RCE
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 KDC Proxy HTTP Server
-a
-Cl
 a | DNS Server
-{|
 443(HTTPS)
 KDC Proxy
 Server
-=S
 | Domain query
 =
 443(HTTPS) —=
@@ -1229,7 +1189,6 @@ Oo
 S> KDC Server
 LDAP,
 Kerberos auth —
-443(HTTPS) SS
 Gal)
 ```
 
@@ -1237,12 +1196,10 @@ Gal)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Register callback KpsHttploCompletion Network
 HttpReceiveClie KpsHttpReceiveClientCertloCompletion
 new Client
@@ -1272,26 +1229,16 @@ KpsHttpSendResponseloCompletion
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 DNS server
 query domain -
 KpsHttpReceiveR
-‘Entityloc DsGetDcName \w@evereroet Xxx.testyours.ZZ
-sGetDcName S/T
-eques vot ylovo ae SRV _kerberos._tcp.dc._msdcs.testyours.zz
-mpletion ae SRV _kerberos._tcp.default-first-site-name._sites.dc._msdcs.testyours.zz
-se abc.testyours.zz
-7
 MSAFD socket
 socket ae FAKE LDAP server
-s.
 se, response kerberos server:
-. abcd.testyours.zz
 KpsSocketloCompletion
 abc.testyours.zz
 KpsSocketConnectAndSendloCompletion
@@ -1308,16 +1255,15 @@ KpsSocketRecvDataloCompletion
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat by 2
 BRIEFINGS a
 Case Study - CVE-2024-43639
 . _int64 __fastcall ASN1EncCheck(Encoder » unsigned int
 KpsSocketRecvDataloCompletion {
-t dword18 = a1->cur_size_18h;
 if ( (__int64)pvoid1® + dword18 - al->cur_buf_28h - (a1->dword24 != @) >= a2 )
 KpsDerPack return 1;
 {
@@ -1325,7 +1271,6 @@ v9 = al->cur_size_18h;
 ( ASNiEnc_KDC_PROXY MESSAGE ) if ( a2 > dwordis
 v1@ = dword18 + v9;
 . 1-> i 18h = v1e;
-ASN1DEREncOctetString chelates sea
 14 v11 = LocalReAlloc(pvoidie, Wie), 42u);
 ( ASN1EncCheck )
 ```
@@ -1362,12 +1307,10 @@ HTTP Websocket Wrapper
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Remote Desktop Service
 3389:
 3387(HTTP websocket)
@@ -1375,17 +1318,13 @@ Client Server
 : 3389
 X.224 Connection Request PDU-—————————_>: (eo)
 ? >» Connection Initiation
-<$—_———————-.224 Connection Confirm PLU it
 MCS Connect Initial PDU with GCC Conference Create Request
 H i Basic Settings Exchange
 <@—MCS Connect Response PDU with GCC Conference Create Response———¢ RD Server
 MCS Erect Domain Request PDU——$—$—______——p>:
 MCS Attach User Request POU —_————____—_»»:
 <———_—_—_—————-MCS Attach User Confirm POU } Channel Connection a |
-; eeeese : cs
 3387(HTTP websocket)
-3387 ; ™”
-. Li
 Client Server
 X.224 Connection Request PDU: %
 ? >» Connection Initiation
@@ -1396,7 +1335,6 @@ i i 4 Basic Settings Exchange n ez
 MCS Erect Domain Request PDU——$—$—______——p>: . 3389
 MCS Attach User Request POU —_————____—_»»: (e)
 <———_—_—_—————-MCS Attach User Confirm POU } Channel Connection
-; eeeese :
 ```
 
 ## Slide 65
@@ -1405,44 +1343,34 @@ MCS Attach User Request POU —_————____—_»»: (e)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Remote Desktop Gateway Service
 RD Server
 ca
-| 3]
 443 HTTPS
 A 3391 DTLS
-{3 |
 443 HTTPS RD
-5 3391DTLS_ I Gateway
-co
 = 443 HTTPS
 . 3391 DTLS
-{o)
 ```
 
 ## Slide 66
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Websocket
 non-Websocket
-a
 Register callback loCompletionCallback Network
-( HendersicetecrieRavOataconseton
 + HandleReceiveRequestCompletion \—
 ( HandleReceiveRequestEntityCompletion )
-{ HandleDisconnected
 new Client
 Connect
 Client Send
@@ -1457,7 +1385,6 @@ onnect
 HttpCancelHttp
 Request
 ( HandleWebSocketSendRawDataCompletion )
-HandleSendResponseCompletion ) ra SUE
 ( HandleSendResponseEntityCompletion )
 HttpSendHttpRe
 sponse
@@ -1474,17 +1401,15 @@ with ConID1?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 HandleReceiveRequestCompletion
 ProcessOutChannelOrWebS HandleSendResponseCompl CAAHttpServerTransport::Re WebSocketReceiveRaw
 ocketRequest etion ceiveData Data
 websocket Connection! arg3
-= ~
-request, ConID1 CAAHttpServer Siliceppe all , f..., .
 Client1 > --—P Connection Clean Client,
 HttpSendHtt ;
 a P Connection1-> then Client2
@@ -1508,17 +1433,15 @@ Futher Authentication
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-BRIEFINGS . ;
 Case Study -- CVE-2025-21309
 ProcessOutChannelOrWebS HandleSendResponseCompl CAAHttpServerTransport::Re
 ocketRequest etion ceiveData
 websocket arg3
 request, ConID1 _ CAAHttpServerC = CAAHttpServerConn
-Client1 yl onnection1 , ection+1430h
 HttpSendHttp
 Response AddRef timegap
 HandleDisconnected
@@ -1533,11 +1456,11 @@ Connection
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 ProcessOutChannelOrWebS
 HandleSendResponseCompl CAAHttpServerTransport::Re
 ocketRequest
@@ -1545,7 +1468,6 @@ etion ceiveData
 Connection1
 websocket
 request, ConID1 CAAHttpServerC
-Client1 --> onnection1 >
 arg3
 = CAAHttpServerConn
 ection+1430h
@@ -1565,7 +1487,6 @@ websocket New
 request, ConID1 Connection2,
 Client2 > Store in
 hash_table with
-ConlD1
 ```
 
 ## Slide 70
@@ -1611,59 +1532,15 @@ src, size)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Case Study -- CVE-2025-21309
-O:117> 4r
-rax=O00002chas9aabt 0
-rdx=0002000000010000
-rip=O0007f£fd84747d1?
-r8=0000000000000006e
 r11=0000000e00000001
-rl4=000002c6ee9edd60
-cs=0033 ss-002b ds=002b es=002b fs=0053
-neveort !mencpy+0x1?7 :
-QO007£fd* 8474701? 408919 mov
 O:117> k
-# Child—-SpP Ret Addr
-O00 OO0000d4* 7O37£338 OOOO? ffd* 847390660
-01 OO0000d4* 7O37£340 OOO07ffd 64f42c64
-O02 OO0000d4* 7O37£380 OOO07ffd 64f£43ba2
-O03 GO000dd4* FO37£580 OOOO? ffd* 64£455eb
-O4 OO0000d4* FO37£610 OOO0Fffd’ s4927 70s
-OS OO0000d4* 7037?£6a0 OOOO7£Ed* 85347493
-06 OOO000d4* 7O37£6£0 OOOO7 FEM 85394bee8
-0? QOO000d4* 7O37£770 OOO07£fd* 84824cb0
-O08 OO0000d4* 7O37?fa60 OOO07ffd* 8539bedch
-09 OOO0000d4* 7037f£a90 O0000000* coo00000
-rbx=000000000000000e
 rei=000002chadlact 66
-rep=O000000d47037£338
-r9=O00000000000000e
-r12=d000000000000000
-r1lS=000002c6fc23b¢E 40
-rox=000002¢cbhai3 Jaabe 0
-rdi=cooddddddd006000
-rbp=000000d47037£480
-rl0=000002chalIaabtO
-ri3=0000d0000000000e
-g==002b
 Call Gite
-nevert |! mencpy+0x1?
-nsvert !memopy_s+0x60
-saedge! CAAHttpServerTransport : :WebSocketReceiveLooptOxafc
-ef 1=-00010283
-aaedge!CAAHttpServerTransport : :HandleWebSocketReceiveRavDataCompletion+0s2de
-saedge!CAAHttpServerTransport: :IoCompletionCallback+0z22b
-KERNEL3 2! BasepTploCallback+0z5a
-ntd1l!/TpplopExecuteCallbsck+02193
-ntd1ll!/TppWorkerThread+0e448
-KERNEL 2 ! BaseThreadInitThunk+0x10
-ntdll!RtlUserThreadStart+Oxz2h
 ```
 
 ## Slide 72
@@ -1672,10 +1549,10 @@ ntdll!RtlUserThreadStart+Oxz2h
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS

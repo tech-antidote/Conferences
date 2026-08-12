@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Ben Gardiner_Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch.pdf"
 pages: 43
 sha256: "bca0b49e63ffbc5fbac80363d0919da12a4e5d89351d0354b00308f2a192acd6"
-text_chars: 12337
-ocr_pages: 7
+text_chars: 11855
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:20Z"
+converted_at: "2026-08-12T05:29:22Z"
 ---
 # Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch
 
 **Speakers:** Ben Gardiner  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ben Gardiner_Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -44,7 +49,8 @@ Safety-Impacting vulns patched in the recall of ~450,000 Trucks via SAE J2497 (P
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cameras
@@ -63,7 +69,6 @@ via Modem
 Trailer
 ABS
 Lift Axle
-black hat
 2026 3
 ```
 
@@ -225,29 +230,24 @@ Gateway
 
 Copyrig ht ©
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bridging the Trust Boundary
-w------------ —=~
-\ ~~
 Body / Cameras ! Climate Radio OEM
 Chassis we iint & Ext) ) Control Telematics
 ‘CABIN’ J1939
-i
 Cluster
-1
 ‘PT’ J1939 13
 Fleet ~ RP1226 Engine / Engine=
 Telematics Connector ete Aftertreat. felematics |
 J1939
 Stability / Adaptive ADAS Lane Trans- Tire Pres
 Suspension CC Keep mission Mon SYS
-black hat
 2026 Copyrig
 ht ©
 Brake ~
-Ladle
 ```
 
 ## Slide 15
@@ -370,16 +370,6 @@ before
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Automated QOBinDiff Results
-aii AQAA
-ITEC 1 M0
-eT
-I
-```
-
 ## Slide 24
 
 What the ID9363 updater changed.
@@ -394,7 +384,8 @@ What the ID9363 updater changed.
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ja249'7 Receive Path Changes
@@ -403,7 +394,6 @@ sub_C12B
 (SCI2 ISR/Handler) FIFO Receive Buffer
 Frame Counter
 Addr: 0x3BF4
-t-Processing Table
 S ID Handlers Table
 iddr: OxD9DD
 Addr: 0x3BF5
@@ -413,7 +403,6 @@ sub_EBBB47 : —_
 _ Read Read (Polling)
 (Main State Machine) r :
 Handles: RX, Idle, Timeout a Fi Main Thread
-eal jase r : 7
 i H Read Table R
 Via sub EC8@00 Byte Received Calculate Offset (check LAMP ON OFF ea a le Rows
 { Pass Byte (B Reg) i and ABS event) :
@@ -422,9 +411,7 @@ sub_F1AFA7 TSS Fall-through Call Read Table Rows
 (SCI2 Data Read and E s /
 . (Append Rx Buf) Frame Complete aN
 Error Checking) :
-sub_F@96F9
 (PID payload splitting
-Oo
 : i aos and periodic post-
 Read Data Write Byte | | processing)
 Hardware Registers Call
@@ -435,7 +422,6 @@ Ze sub_F2A3E1
 FIFO Receive Buffer Frame Counter
 Addr: 0x3BF5 Addr: 0x3BF4
 (J2497 Frame Data) (Semaphor)
-SCI2_DRL
 (Data Register Low)
 ```
 
@@ -515,7 +501,8 @@ DoS (Theoretical), RCE (Theoretical)
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Control: no attack signal
@@ -539,17 +526,15 @@ Control: no attack signal
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RCE
 @- 8-8-8868 sigrok FX2 LA (8ch) ~ X
 1+16150 me +1616N me +16290
-, #16150 ms) aylog i |
 CAN_RX
-ppUskeene lg INOS: GYEee MEE 89¢234a7200e6019800a08c00c00da7a9a10: 3462 89c234a720
 CAN 2.0 decode » CAN 2.0: Payload
-5277400 ps © +16277500 us = +16277600 us © +16277700 us. ~©= +16277800us ~=s: + 162 +16278001
 ```
 
 ## Slide 36
@@ -590,12 +575,12 @@ EDGE: plausible as a noise triggered bug
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 On ‘Random Noise"
 EDGE: plausible as a noise triggered bug
-black hat
 USA
 2026 39
 ```

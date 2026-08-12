@@ -11,15 +11,21 @@ sha256: "f21893d2db0fe7057976f12c05a086a8dd31787ff6b60cff0adce6081ed99f52"
 text_chars: 19847
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:14:09Z"
+converted_at: "2026-08-12T04:06:05Z"
 ---
 # Becoming a Dark Knight Adversary Emulation Demonstration for ATT&CK Evaluations
 
 **Speakers:** Cat Self, Kate Esprit  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Cat Self & Kate Esprit_Becoming a Dark Knight Adversary Emulation Demonstration for ATT&CK Evaluations.pdf` (36 pages)
+
 
 ## Slide 1
 

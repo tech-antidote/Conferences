@@ -4,23 +4,28 @@ speakers: ["Marcos Bajo", "Ritvik Goyal"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Marcos Bajo, Ritvik Goyal - Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming - Crashingthe.pdf"
 pages: 140
 sha256: "ec375e413944ef9a14c44bd246fb5a266201c8a683cf114552fd5480d991ff51"
-text_chars: 30723
-ocr_pages: 61
+text_chars: 28733
+ocr_pages: 60
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:25:34Z"
+converted_at: "2026-08-12T06:39:49Z"
 ---
 # Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming
 
 **Speakers:** Marcos Bajo, Ritvik Goyal  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Marcos Bajo, Ritvik Goyal - Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming - Crashingthe.pdf` (140 pages)
+
 
 ## Slide 1
 
@@ -40,14 +45,13 @@ converted_at: "2026-08-12T00:25:34Z"
 
 Buffer overflows 1<sup>st</sup> mentioned
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Old Ages
-1972 ESD-TR-73-51, ‘Vol. 11
 COMPUTER SECURITY TECHNOLOGY PLANNING STUDY
 James P, Anderson
-ao October 1972
 Buffer
 overflows 1°
 mentioned
@@ -106,20 +110,17 @@ ret2libc DEP/NX Buffer overflows 1<sup>st</sup> mentioned
 
 **Vulnerability Exploitation: Code Reuse**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Vulnerability Exploitation: Code Reuse
 f:
 call g()
 call h()
-ve execve()
 ret
-call a @)
-cali’) -—— ~
 ret ret
 all i() “call i(
-call) -» 7
 ret ret
 ```
 
@@ -343,10 +344,10 @@ ret;
 
 **Intel CET (Shadow Stack)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-g()
 frame
 f() return
 address
@@ -362,7 +363,8 @@ address
 
 **Intel CET (Shadow Stack)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Intel CET (Shadow Stack)
@@ -370,7 +372,6 @@ h()
 frame
 g() return
 address
-g()
 frame
 f() return ss
 Pe P -»> g() return
@@ -383,7 +384,8 @@ frame address
 
 **Intel CET (Shadow Stack)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 i()
@@ -394,7 +396,6 @@ h()
 frame
 g() return
 address
-g()
 frame
 f() return
 address
@@ -422,7 +423,8 @@ void
 ret;
 }
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 i()
@@ -434,7 +436,6 @@ h()
 frame
 g() return
 address
-g()
 frame
 f() return
 address
@@ -465,7 +466,8 @@ ret;
 
 }
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 i()
@@ -478,7 +480,6 @@ h()
 frame
 g() return
 address
-g()
 frame
 f() return
 address
@@ -509,7 +510,8 @@ ret;
 
 }
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 i()
@@ -524,13 +526,11 @@ frame
 ret;
 g() return
 address
-g()
 frame
 f() return
 address
 f()
 frame
-| —@
 h() return
 address
 g() return
@@ -552,21 +552,19 @@ void
 ret;
 }
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 i()
 frame
-void iC)
 {
 system()
 h()
 frame
 ret;
-Po
 g() return
 address
-g()
 frame
 f() return
 address
@@ -857,22 +855,22 @@ memory location
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Linux Signals
 Userspace Kernel
 mov r8, 0x0
 rsp
-u
-uv
 ```
 
 ## Slide 42
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rsp
@@ -882,18 +880,16 @@ rbp
 Linux Signals ~
 Userspace ! Kernel
 Prepare
-mov r8, 0x0) | SIGSEGV [ |sigframe
 mov r9, [r8]
 ```
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-J
 restorer rsp handler rsp
-0x0 >
 64B Align
 xstate
 16B Align
@@ -907,19 +903,17 @@ old rsp
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rs
 rb
-\ ‘*
-\ y
 \ \
 \ ¥y
 Linux Signals Ie
 Userspace | Kernel
 Prepare
-mov r8, 0x0 || SIGSEGV |sigframe
 mov 19, [r8]
 signal
 handler
@@ -929,7 +923,8 @@ handler
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rsp
@@ -941,8 +936,6 @@ mov r8, 0x0
 mov 19, [r8]
 signal
 handler
-(SSseSy sigframe
-WZ
 restorer
 ```
 
@@ -950,7 +943,8 @@ restorer
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rsp
@@ -961,13 +955,11 @@ mov r8, 0x0
 mov r9, [r8]
 Kernel
 Prepare
-eoses sigframe
 signal
 handler
 \Z
 sigretu
 restorer
-mi
 Restore
 state
 ```
@@ -976,7 +968,8 @@ state
 
 **Linux Signals**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Linux Signals
@@ -987,7 +980,6 @@ mov r8, 0x0
 mov 19, [r8]
 signal
 handler
-XZ
 restorer
 ```
 
@@ -1025,12 +1017,12 @@ restorer
 
 - • Calls sigreturn directly
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SROP is Dead
 In the SROP attack, the attacker:
-Forges a In memory
 Calls directly
 Userspace : Kernel
 Ts restorer ; >
@@ -1041,7 +1033,6 @@ SIGFRAME
 fe) return address
 6} return address
 6} return address
-~
 ```
 
 ## Slide 52
@@ -1072,7 +1063,8 @@ SROP → Prevented by MSB check on Shadow Stack
 
 **Missing IBT Checks**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Missing IBT Checks
@@ -1084,7 +1076,6 @@ signal
 handler
 Restore
 state
-y
 restorer
 ```
 
@@ -1095,18 +1086,16 @@ restorer
 NO IBT CHECKS
 SIGNAL DELIVERY
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Missing IBT Checks
 Userspace Kernel
-aie “GH pare
 mov NO Ox sigframe
-nS IGN
 signal
 handler
 Restore
-y
 state
 restorer
 ```
@@ -1160,14 +1149,14 @@ SIGNAL RETURN
 
 **Late Kernel Safety Checks**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 FSR restorer
 Sigframe
 last return address
--
 Userspace ! Kernel
 Prepare
 mov r8, 0x0 sigframe
@@ -1184,7 +1173,8 @@ SSP
 
 • The kernel restores the sigframe _before_ checking SSP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
@@ -1192,9 +1182,6 @@ Late Kernel Safety Checks |
 Userspace : Kernel
 Ts restorer ; >
 normal
-execution ! —————
-CORRUPTED ! !
-SIGFRAME ! —_
 fe) return address
 6} return address
 ®) return address rb ae
@@ -1206,7 +1193,8 @@ fe) return address
 
 • At this point we control the pt_regs in the Kernel
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
@@ -1215,7 +1203,6 @@ Userspace : Kernel
 Restore
 normal Gs state
 execution X 7
-Lsor |
 return address
 return address
 return address
@@ -1227,17 +1214,16 @@ return address
 
 • Oh no !! Kernel throws catchable Sigsegv
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 ¢ Oh no!! Kernel throws catchable Sigsegv
 Userspace : Kernel
-| 3™ Restore
 normal Y State
 execution \ 7
 Restore
-: SSP
 return address ae
 return address
 ```
@@ -1248,13 +1234,13 @@ return address
 
 • What if we already registered a signal handler ?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 ¢ What if we already registered a signal handler ?
 SA Userspace : Kernel
-restorer SNirestore!
 Restore
 normal Y state
 execution N 7
@@ -1271,13 +1257,13 @@ return address x, |
 
 • We got our corrupted sigframe back
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 ¢ We got our corrupted sigframe back
 Userspace : Kernel
-restorer Restore
 Restore
 normal Y state
 execution N 7
@@ -1285,7 +1271,6 @@ restorer CORRUPTED Restore
 SIGFRAME signal : SSP
 handler VW
 @) return address VW Prepare
-@) return address rN !
 ```
 
 ## Slide 68
@@ -1294,13 +1279,13 @@ handler VW
 
 • We send our corrupted sigframe back for sigreturn
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 ¢ Wesend our corrupted sigframe back for sigreturn
 Userspace : Kernel
-restorer SNiRestore|
 Restore
 normal Y state
 execution N 7
@@ -1309,7 +1294,6 @@ SIGFRAME signal : SSP
 handler
 return address \Z Prepare
 restorer sigframe
-return address SN =)
 ```
 
 ## Slide 69
@@ -1318,24 +1302,22 @@ return address SN =)
 
 • And we bypass the sigreturn shadow stack check
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Late Kernel Safety Checks |
 ¢ And we bypass the sigreturn shadow stack check
 Userspace : Kernel
-| 3™ Restore
 normal Y state
 execution \ 7
 Restore
 signal | | SSP
 handler
-WZ : Prepare
 Restore
 | SSP
 return address
 return address
-van.
 ```
 
 ## Slide 70
@@ -1404,15 +1386,14 @@ van.
 
 - Data from the kernel is incorrectly used in userland
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 User Kernel Data Collision _
 Data from the kernel is In userland
 signal handler
-<  rdi=signum >
-<  rsi=siginfo >
-<  rdx=ucontext >
+< rdi=signum >
 ```
 
 ## Slide 74
@@ -1421,17 +1402,13 @@ signal handler
 
 - Data from the kernel is incorrectly used in userland
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 User Kernel Data Collision _
 Data from the kernel is In userland
 signal handler libc sigaction
-cC  rdi=signumn > Cc rdi= signum___>
-—————————
-<C  rsi=siginfo > C rsi = sigaction ion act{} >
-ee
-<  rdx=ucontext > dx = sigaction yn oldac>
 ```
 
 ## Slide 75
@@ -1440,7 +1417,8 @@ ee
 
 - Libc sigaction will interpret _rsi_ as act{}… but it is siginfo!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 User Kernel Data Collision ©
@@ -1505,20 +1483,17 @@ sigaction(rdi, rsi, rdx) rdi = SIGSEGV rsi = act{handler,…} rdx = invalid memo
 
 1. Register _sigaction_ as SIGSEGV handler, trigger Early Kill
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Classic Sigframe Pivoting
 |. Register as handler, trigger
 libc sigaction
-_ SIGSEGV
 sigaction |handler=| handler: sigaction 2a
 Tap | —) leave rbp La
 rbp value
-> 4\,
-__restore_rt .
 y FAKE ‘
-\SIGFRAME,, ,
 ret orrupted
 memory
 ```
@@ -1529,7 +1504,8 @@ memory
 
 ###### 2. Signal handler is triggered, sigframe is created
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Classic Sigframe Pivoting
@@ -1537,21 +1513,14 @@ fSFOP: Classic Sigframe Pivoting
 handler: sigaction
 ~
 ret
-¥.
 sigreturn
-ss
-__restore_rt }
 Sigframe
 rbp value
 __restore_rt
 FAKE
 SIGFRAME @
-L
 b 4
-rake
 S
-.
-.
 Written
 by the
 kernel
@@ -1565,21 +1534,19 @@ memory
 
 ###### 3. Stack pivoting gadget moves rsp to fake sigframe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Classic Sigframe Pivoting
 4. Stack pivoting gadget moves to
-__restore_rt [}
 (USE by
 handler: sigaction Sigframe the kernel
 | leave
-ss J
 |
 ¥ t rbp value ;
 sigreturn
 > 4
-__restore_rt Jeenlnee
 7 FAKE meme
 \ SIGFRAME / |
 ```
@@ -1590,7 +1557,8 @@ __restore_rt Jeenlnee
 
 4. Sigreturn is called using the fake sigframe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Classic Sigframe Pivoting
@@ -1600,10 +1568,8 @@ __restore_rt j
 handler: sigaction Sigframe the kernel
 leave
 ret J
-a
 ~~ rbp ~ rbp value
 restore orrupte
-haa FAKE F memory
 \SIGFRAME, |
 ```
 
@@ -1613,20 +1579,17 @@ haa FAKE F memory
 
 ###### 5. Arbitrary function call
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Classic Sigframe Pivoting
 5. Arbitrary function call
-__restore_rt \)
 Written by
 handler: sigaction Sigframe [MRA
 leave
-+ a
 sigreturn rbp value
 __restore_rt | Corrupted
-[ ARBITRARY = RKE memory
-“Ss TARGET
 . \ SIGFRAME J
 ```
 
@@ -1636,18 +1599,15 @@ __restore_rt | Corrupted
 
 SIGSEGV triggers the next pivot, achieving infinite function calls
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fSFOP: Infinite Segfault Looping
 triggers the next pivot, achieving
-= (om
-ict stere byl
 handler: sigaction Sigframe [TMAAMURIEE = Sigframe
-si
 => L
 ret rbp
-¥. ~
 A
 sigreturn robp value
 __restore_ | Corrupted 4 __restore_rt
@@ -1686,14 +1646,6 @@ handler
 
 **Signal Restorer Hijacking**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Signal Restorer Hijacking _
-sigaction(signum=SIGSEGV, ={
-h,.})
-```
-
 ## Slide 91
 
 **Signal Restorer Hijacking**
@@ -1706,7 +1658,8 @@ flags=f,
 
 restorer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signal Restorer Hijacking
@@ -1756,7 +1709,8 @@ flags=f, Sigframe
 
 • We can control the _restorer_ after the signal handler
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signal Restorer Hijacking
@@ -1769,9 +1723,7 @@ mov 19, [r8]
 ssp
 SN Sigframe signal i
 restorer
-handler __ J Restore
 XZ sigretu mJ state
-: ar
 arbitrary Restore
 Ry restorer ! SSP
 last return address <l rb
@@ -1943,15 +1895,14 @@ We can _confuse_ the shadow stack if:
 
 1. Push a restorer with MSB=1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shadow Stack Injection
 We can confuse the shadow stack If:
-1.
 with MSB=1
 libc sigaction
-oN
 endbr64
 sigaction
 ret
@@ -1965,18 +1916,16 @@ We can _confuse_ the shadow stack if:
 
 1. Push a restorer with MSB=1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shadow Stack Injection
 We can confuse the shadow stack If:
 1. with MSB=1
 Userspace ! Kernel
-ee cestorer
-~N restorer
 mov r8, 0x0
 mov r9, [r8]
-ssp ;
 Sigframe signal :
 1 restorer handler !
 1 P
@@ -1998,22 +1947,18 @@ We can _confuse_ the shadow stack if:
 
 We tricked the Shadow Stack into accepting a random ROP chain
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shadow Stack Injection
 We tricked the Shadow Stack into accepting a random ROP chain
 Userspace ! Kernel
-me restorer
-IN ~N restorer
 ROP Gadget 1
 mov r8, 0x0 Jsieseev sigframe
 mov r9, [r8]
 ROP Gadget 2
-ania Sigframe signal a
-handler | 3™ Restore
 XZ | sigreturn Y state
-{Ye
 ROP Gadget N restorer
 rbp Restore
 ```
@@ -2026,21 +1971,18 @@ rbp Restore
 
 - If the SSP points outside the shadow stack → SIGSEGV
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shadow Stack Injection __ Ne
 It is sti/] complicated
 - Ifthe points the shadow stack >
 Userspace ! Kernel
-Ss Many restorer
-IN ~N restorer ! Prepare
 ROP Gadget 1 mov r8, 0x0 || SIGSEGVY |sigframe
 mov r9, [r8]
 ROP Gadget 2
 g Sigframe signal a
-handler :_3™ Restore
-\ Z__|sigreturn Y\_ state
 ROP Gadget N restorer
 rbp Restore
 ```
@@ -2105,7 +2047,8 @@ The solution is quite complicated as well :)
 
 • The signal handler starts right after the restorer is overwritten
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Early Kill
@@ -2113,12 +2056,9 @@ bSFOP: Early Kill
 libc sigaction
 rip
 |
-- SIGSEGV
 sigaction | Nandler =
 ret
 handler: sigaction
-endbr64
-mm ovorwnts restorer
 leave
 ret
 ```
@@ -2127,7 +2067,8 @@ ret
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
@@ -2137,61 +2078,50 @@ last return address
 handler: sigskip
 leave
 ret
-v
 sigreturn
 rsp
 SA
 rbp
-SA
 __restore_rt
 Sigframe
 rbp value
 restore_rt
 FAKE
 SIGFRAME
-i
-5
 Written by
 the kernel
-a,
-5
 | Corru pted
 memory
-ww,
 ```
 
 ## Slide 123
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: rsp
 Next restorer: SS )
-__restore_rt
 handler: sigski
 g P | Written by
 vee Sigframe the kernel
 sigaction
-_ J
 ret TDP
-__restore_rt a
-A 4 rbp value
 SSP
 sigreturn __restore_rt comuplics
 memory
 last return address FAKE
-SIGFRAME I
-b
 ```
 
 ## Slide 124
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
@@ -2204,11 +2134,8 @@ handler: sigskip
 wes Sigframe the kernel
 sigaction
 leave J
-re Pe
 __restore_rt
-Z
 ¥
-_. wim restore
 ast return address , FAKE memory
 \SIGFRAME , ,
 SSP
@@ -2218,7 +2145,8 @@ SSP
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
@@ -2232,15 +2160,10 @@ sigaction
 leave
 ret Lo
 __restore_rt
-v
 restore rt BW@@eMityce)
 memory
 J
-5
-J.
-FAKE \
 \SIGFRAME @
-arco arse Bl
 ast return address
 Fake
 Sigframe 2
@@ -2250,27 +2173,23 @@ Sigframe 2
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: sigskip
 Next restorer: recursive | MSB=1
-__restore_rt [)
 handler: sigski
 g P Written by
 _ Sigframe the kernel
-OOOO Ko sigaction <
 J
 eave Fake
 1 recursive <——— | Sigframe
 . rbp value
-: SSP Ss sigreturn __restore_rt {Semple
 memo
 last return address FAKE y
 IGFRAME
-__restore_rt S Z
-pee NIM. ec cecceeeceeneeeneees ‘
 Restor Restore :
 state SSP
 : Kernel | |
@@ -2280,19 +2199,17 @@ state SSP
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\\
 bSFOP: Shadow Stack Grooming <—
 Next signal handler: sigskip rsp
 Next restorer: recursive | MSB=1 SA =
-__restore_rt
 handler: sigskip
 Written by
 Sigframe the kernel
 SSP leave b J
-; ret TDP
 recursive SA
 bf rbp value
 SSP recursive __restore_rt Canmpize
@@ -2306,7 +2223,8 @@ last return address
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ssp
@@ -2319,7 +2237,6 @@ last return address
 handler: sigskip
 sigaction
 ret
-v
 recursive
 rsp
 SA
@@ -2333,8 +2250,6 @@ FAKE
 IGFRAM
 rt
 rt
-\\
->
 Written by
 the kernel
 | Corrupted
@@ -2345,33 +2260,26 @@ memory
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: leave;ret
 Next restorer: _restore_rt
 __restore_rt
-SSP ¢
-<i
-sspi]
 recursive
 last return address
 handler: sigskip
 sigaction <
 leave
 ret
-_¥
 recursive
 —f
--
->
-__restore_rt
 Sigframe
 | Written by
 the kernel
 J
--
 rbp value
 restore_rt
 FAKE
@@ -2384,25 +2292,21 @@ SIGFRAME @
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: leave;ret rsp
 Next restorer: _restore_rt SA
 handler: sigaction
-__restore_rt <> ret
-SSP Vv
 sigreturn rbp
 recursive , < SN
-__restore_rt
 Sigframe
 rbp value
 restore_rt
 FAKE
 SIGFRAM
->
-\\
 Written by
 the kernel
 | Corrupted
@@ -2413,26 +2317,23 @@ memory
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: leave;ret
 Next restorer: _restore_rt
-__restore_rt
 handler: sigaction
 leave
 ret
-__¥
 __restore_
 Sigframe
 rbp value
-restore __
 FAKE
 IGFRAM
 rt
 rt
->
 Written by
 the kernel
 | Corrupted
@@ -2443,21 +2344,17 @@ memory
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming | <— .
 Next signal handler: leave;ret
 rsp
-Next restorer: _ restore_rt
 handler: sigaction >
 leave
 ret
-¥v
 sigreturn
-__restore_rt
-ers
-aN
 __restore_rt
 ```
 
@@ -2465,17 +2362,16 @@ __restore_rt
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: leave;ret
-Next restorer: _ restore_rt
 Fake
 handler: sigaction Sigframe 2
 leave
 __restore_rt <i ret __restore_rt
-A Fake
 ; Sigframe 3
 sigreturn
 recursive
@@ -2486,41 +2382,36 @@ __restore_rt
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming P=
 Next signal handler: leave;ret
-Next restorer: _ restore_rt
 Fake
 Sigframe 2
 handler: sigaction
 leave
 rsp restore rt
-__restore_rt ret — — =
-A TPR
 sigreturn
 recursive
 rip
-aN
-__restore_rt
 ```
 
 ## Slide 135
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming 7?
 Next signal handler: leave;ret
-Next restorer: _ restore_rt
 Fake
 handler: sigaction Sigframe 2
 leave
 __restore_rt ret __restore_rt
-A 4 Fake
 Sigframe 3
 : sigreturn
 recursive ,
@@ -2532,20 +2423,17 @@ Sigframe 4
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming
 Next signal handler: leave;ret
-Next restorer: _ restore_rt
 handler: sigaction = +-»
-SA
 leave
 ret
-Vv TPR,
 sigreturn
 rip __restore_rt
-Sven
 Arbitrary call 2 = execve()
 Fake
 Sigframe 5
@@ -2555,17 +2443,14 @@ Sigframe 5
 
 **bSFOP: Shadow Stack Grooming**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bSFOP: Shadow Stack Grooming <—>
 Next signal handler: leave;ret
-Next restorer: _ restore_rt
 handler: sigaction
-A rbp
 aA
-sigreturn .,
-ye
 __restore_rt
 rip
 ```
@@ -2600,7 +2485,8 @@ rip
 
 Marcos Bajo _h3xduck_ Ritvik Goyal _RoYalGamr_ Apostolos Chatzianagnostou Christian Rossow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARTIFACT ARTIFACT ARTIFACT

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Ibrahim El-sayed_Decoding Signal Understanding the Real Privacy Guarantees of E2EE.pdf"
 pages: 86
 sha256: "8eec24ff6a597133c7bd883b86e1812c3a4a1d008ca6e6d7da4023f808a34cbd"
-text_chars: 27927
-ocr_pages: 46
+text_chars: 24451
+ocr_pages: 39
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:55:53Z"
+converted_at: "2026-08-12T05:13:47Z"
 ---
 # Decoding Signal Understanding the Real Privacy Guarantees of E2EE
 
 **Speakers:** Ibrahim El-sayed  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ibrahim El-sayed_Decoding Signal Understanding the Real Privacy Guarantees of E2EE.pdf` (86 pages)
+
 
 ## Slide 1
 
@@ -30,7 +35,8 @@ converted_at: "2026-08-11T22:55:53Z"
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
@@ -126,18 +132,13 @@ Ibrahim M. ElSayed
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Sending a mail
 Sender
-sendgs—_> an —routes—>
 Mail company
-ire:
-reoraie F
-—delivers—> aa —collects >
 Recipient
 ```
 
@@ -145,16 +146,14 @@ Recipient
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Name: Alice \
 About lorem ipsum
 Phone number: Otxxxxx
 Alice
-LO
 Name: Bob
 About: lorem ipsum
 Phone number: O9?xxxx
@@ -163,65 +162,16 @@ Directory
 look up
 (as) Message Process Services
 sends——> —routes>
-bo
 Processing
 |
-t—
 Alice
 xf
-\obile.
 Bob
-i
-1
-1
-'
-'
-1
-1
 1
 1
 1
 1
 '
-'
-1
-1
-1
-1
-1
-Hl
-Hl
-1
-1
-fl
-1
-Hl
-1
-1
-fl
-Hl
-1
-Hl
-Hl
-1
-Hl
-1
-1
-1
-1
-H
-1
-'
-1
-'
-'
-'
-'
-1
-'
-1
-1
-H
 1
 1
 1
@@ -229,8 +179,6 @@ H
 1
 1
 1
-1
-Hl
 1
 ```
 
@@ -332,18 +280,15 @@ Hl
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifekhat by me te a
-BRIEFINGS . J ;
 | ald8c8de.. E1Q9x/L50Gb8v6mZq3KcHg== XaB2+Of j TwXVOMIHVXIPZg== | aqn4Z2s3ZnlmbHNqa3g@0A==
 | 91ad7c55.. ZT lwT2xheHh@eG12ZDIzYw== YT11LbnU4KkJxd@g9Q2Zpbk4= | NkJubGlyZUdGejN@Y1IN1Yw==
-—---------------------------- +------------------------------+
 | 839201 i . "Living the dream ¢ | https://cdn. random. net/u1.png
 | 283932 . "Coffee @& > Everything" | https://cdn.mockcdn.io/bob. jpg
 +
-ee ON
 ```
 
 ## Slide 18
@@ -356,21 +301,11 @@ ee ON
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 40/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
-OS H
-1 f
-1 f
-f
-H '
-f i
-f i
-: :
 ' &> Message Process Services
-—_—> |= a — sends aa —routes—> delivers—> —collects-> Is | _
 Alice Bob
 ```
 
@@ -392,19 +327,13 @@ Alice Bob
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Alice
-biSekhat
-BRIEFINGS
 common paint
-Diffie-Hellman seat Colne
 Public transport
-Ke
-——
-————
-GD @-0-
 ```
 
 ## Slide 23
@@ -413,18 +342,15 @@ GD @-0-
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Diffie-Hellman
-1.0 oI
 Bob
 common paint =
 +
 Secret Colors ES
-a=
 +
 Secret Colors SS
 common secret
@@ -448,16 +374,13 @@ How it works - Messages
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 sends,
-—routes> .
 ° E>] Message Process Services
 To: Bob P €ss! "Y
-—collects— = —delivers—
 ```
 
 ## Slide 26
@@ -520,16 +443,12 @@ To: Bob P €ss! "Y
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Diffie-Hellman ratchet
 Alice Bob
-Public key <J- - - - ------------------ — Public key Private key
-'
-=o =
 t
 Private key Public key
 ```
@@ -543,27 +462,9 @@ X
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pbc hat
-BRIEFINGS
-Alice Bob
-Bob's new ratchet key pair
-```
-
 ## Slide 34
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-BRIEFINGS
-To: Bob
-From: Alice
-```
 
 ## Slide 35
 
@@ -571,11 +472,10 @@ From: Alice
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Unidentified Sender (UD Sender)
 To: Bob
 From: Alice To: Bob To: Bob
@@ -587,13 +487,11 @@ From: Alice To: Bob To: Bob
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Technology check
-Signal Aep1 App2 Apps Ape4
 Encrypted Profile @ x x x x
 Encrypted Messages LV Co al LV iv iV
 Single ratchet © @ iV | iv | iv
@@ -611,11 +509,10 @@ Sealed Sender @ x x x x
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 message Envelope {
 optional
 reserved
@@ -638,7 +535,6 @@ uint32 sourceDevice
 string destinationServiceld =
 /*relay*/
 uint64 timestamp
-/*legacyMessagex/
 bytes content
 string serverGuid
 uint64 serverTimestamp
@@ -652,21 +548,17 @@ Contains encrypted Content
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSdkhat SS Bic A~ > j fiz
-BRIEFINGS
 @ message Envelope {
 enum Type {
 UNKNOWN
 CIPHERTEXT
-KEY EXCHANGE
-PREKEY_ BUNDLE
 RECEIPT =
 UNIDENTIFIED_SENDER =
 reserved 7;
-PLAINTEXT CONTENT
 1
 2
 3
@@ -675,8 +567,6 @@ PLAINTEXT CONTENT
 6
 7
 8
-)
-e
 i)
 ```
 
@@ -688,11 +578,10 @@ Plaintext Envelopes Design
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Plaintext Envelopes
 Design
 When the recipient device receives anjundecryptable message] the recipient
@@ -709,34 +598,22 @@ device executes the following resending process:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-Plaintext Envelopes
-Implementation
-From: Alice
-```
-
 ## Slide 42
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ func decryptidentifiedEnvelope(
 validatedEnvelope: ValidatedIncomingEnvelope,
 cipherType: CiphertextMessage.Messagelype,
-localIdentifiers: Localidentifiers,
 tx transaction: SDSAnyWriteTransaction
 ) throws -> DecryptedIncomingEnvelope {
 1
 2
 4
 5
-)
 7
 let plaintext: [UInt8]
 switch cipherType {
@@ -750,10 +627,10 @@ case .plaintext:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat : rs >
 func decryptIdentifiedEnvelope(
 validatedEnvelope: ValidatedIncomingEnvelope,
 cipherType: CiphertextMessage 9
@@ -779,13 +656,12 @@ sendReactiveProfileKeyIfNecessary(to: sourceAci, tx:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ func decryptIidentifiedEnvelope(
 validatedEnvelope: ValidatedIncomingEnvelope,
 cipherType: CiphertextMessage.MessageType,
-localIdentifiers: LocalIdentifiers,
 tx transaction: SDSAnyWriteTransaction
 ) throws -> DecryptedIncomingEnvelope {
 let plaintext: [UInt8]
@@ -803,7 +679,6 @@ plaintext = plaintextMessage. body
 5
 6
 7
-)
 (0)
 Ne
 1
@@ -819,12 +694,10 @@ Ne
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#2)
-black hat
-BRIEFINGS
 0 message Content {
 1
 2
@@ -873,7 +746,8 @@ editMessage
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 func handleRequest(
@@ -901,11 +775,10 @@ case
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat : rs >
-BRIEFINGS . 4 , ce
 func handleRequest(
 request: MessageReceiverRequest,
 context: DeliveryReceiptContext,
@@ -943,18 +816,16 @@ Logger ("Ignoring envelope with unknown type.")
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Impact
 plain-text envelope with
 any content
 a) Message Process Services
 =)
 @
-—collects— > ¢-—
 Bob
 ```
 
@@ -968,7 +839,8 @@ Bob
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 0 private Plaintext decryptInternal(
@@ -996,29 +868,24 @@ envelope.type);
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 private Plaintext decryptInternal(Envelope envelope, long serverDeliveredTimestamp) {
 if (envelope.type == Envelope.Type.PREKEY BUNDLE) {
 } else if (envelope.type == Envelope.Type.CIPHERTEXT) {
 SignalProtocolAddress sourceAddress = new SignalProtocolAddress
 envelope.sourceServiceld,
-envelope. sourceDevice);
 SignalSessionCipher sessionCipher = new SignalSessionCipher(
 sessionLock,
 new SessionCipher(signalProtocolStore,
 sourceAddress) );
-paddedMessage = sessionCipher.decrypt(new SignalMessage(envelope. content. toByteArray( )));
 metadata = new SignalServiceMetadata
 getSourceAddress(envelope),
 envelope.sourceDevice,
-envelope. timestamp,
 envelope. serverTimestamp
 serverDeliveredTimestamp,
-envelope. serverGuid,
 Optional.empty(),
 envelope.destinationServiceld);
 } else if (envelope.type == Envelope. Type.PLAINTEXT_CONTENT) {
@@ -1033,19 +900,16 @@ throw new InvalidMetadataMessageException("Unknown type:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 0 private Plaintext decryptInternal(Envelope envelope, long serverDeliveredTimestamp) {
 1 if (envelope.type == Envelope.Type.PREKEY_BUNDLE) {
-2 pelse if (envelope.type == Envelope. Type. CIPHERTEXT) {
 3 |} else if (envelope.type == Envelope. Type.PLAINTEXT_CONTENT) {
 4 paddedMessage = new PlaintextContent(envelope. content. toByteArray()).getBody( );
 5 metadata = new SignalServiceMetadata(
 getSourceAddress(envelope),
-envelope. sourceDevice,
 envelope.timestamp,
 envelope.serverTimestamp,
 serverDeliveredTimestamp,
@@ -1053,18 +917,12 @@ serverDeliveredTimestamp,
 7
 Q
 8
-b
 oo
 envelope.serverGuid,
 Optional.empty(),
-envelope.destinationServiceld) ;
-} else tf (envelope.type == Envelope. Type.UNIDENTIFIED SENDER) t{
 } else {
 throw new InvalidMetadataMessageException( "Unknown type: " + envelope.type);
 }
-RPRPRPRP Pr
-UBWNPH
-ad
 NO
 ```
 
@@ -1074,16 +932,14 @@ DataMessage Check is missing!
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 private fun createPlaintextResultIfInvalid(content: Content): Result? {
 val errors: MutableList<String> = mutableListOf( )
 if (content.decryptionErrorMessage == ){
 errors += "Missing DecryptionErrorMessage"
-}
 if (content.storyMessage != ){
 errors += "Unexpected StoryMessage"
 }
@@ -1094,7 +950,6 @@ if (content.editMessage != ){
 errors += "Unexpected EditMessage"
 }
 return if (errors.isNotEmpty()) {
-Result.Invalid( "Invalid PLAINTEXT_CONTENT! Errors: $errors")
 } else {
 }
 ```
@@ -1103,11 +958,10 @@ Result.Invalid( "Invalid PLAINTEXT_CONTENT! Errors: $errors")
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 private fun handleMessage(
 senderRecipient: Recipient,
 envelope: Envelope,
@@ -1147,20 +1001,17 @@ warn(envelope.timestamp!!, "Got unrecognized message!")
 
 <u>https://github.com/signalapp/Signal-Android/commit/8d8c21f2286d2449aaaf63669ea6e06e47ec076a</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 private fun validatePlaintextContent(content: Content): Result?
 {
 val errors:
 if (content
 errors +=
-}
 if (content
 errors +=
-i
 if (content.
 errors +=
 }
@@ -1171,15 +1022,12 @@ errors +=
 .dataMessage !=
 "Unexpected
 MutableList<String> = mutableListOf( )
-){
 "Missing DecryptionErrorMessage"
 ){
 DataMessage"
-){
 SyncMessage"
 syncMessage !=
 "Unexpected
-)_{
 CallMessage"
 callMessage !=
 "Unexpected
@@ -1189,7 +1037,8 @@ callMessage !=
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 private async innerDecrypt(
@@ -1198,17 +1047,13 @@ envelope: UnsealedEnvelope,
 ciphertext: Uint8Array,
 servicelIdKind: ServiceIdKind
 ): Promise<InnerDecryptResultType | undefined> {
-const identifier = envelope. sourceServiceld;
 const { sourceDevice } = envelope;
 const { destinationServiceId } = envelope;
 const address = new QualifiedAddress(
 destinationServiceld,
-Address.create( identifier, sourceDevice)
-)5
 if (
 serviceIdKind === ServiceIdKind.PNI &
 envelope.type !== envelopeTypeEnum.PREKEY_BUNDLE
-) coo
 if (envelope.type envelopeTypeEnum.PLAINTEXT_CONTENT) {
 if (envelope. type envelopeTypeEnum.CIPHERTEXT) { ... }
 if (envelope.type envelopeTypeEnum.PREKEY_BUNDLE) { ... }
@@ -1220,10 +1065,10 @@ throw new Error( ‘Unknown message type’);
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-DI SRISENCS a > *
 if (
 servicelIdKind === ServiceIdKind.PNI &&
 envelope.type !== envelopeTypeEnum. PREKEY_BUNDLE
@@ -1234,8 +1079,6 @@ const plaintextContent = PlaintextContent.deserialize( buffer);
 return {
 plaintext: this.unpad(plaintextContent.body()),
 wasEncrypted: ;
-Pp
-}
 if (envelope.type === envelopelTypeEnum.CIPHERTEXT) { ... }
 if (envelope.type === envelopeTypeEnum.PREKEY_BUNDLE) { ... }
 if (envelope.type === envelopeTypeEnum.UNIDENTIFIED_SENDER) {
@@ -1246,11 +1089,10 @@ throw new Error('Unknown message type' );
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifekhat 3 A ™ /
-BRIEFINGS / aN y bY
 private async decryptEnvelope(
 stores: LockedStores,
 envelope: UnsealedEnvelope,
@@ -1258,18 +1100,13 @@ serviceIdKind: ServiceIdKind
 ): Promise<DecryptResult> {
 const content = Proto.Content.decode(plaintext);
 if (!wasEncrypted && Bytes.isEmpty(content.decryptionErrorMessage)) {
-Llog.warn(
 ${logId}: dropping plaintext envelope without decryption error message
-)5
 const { sourceServiceId: senderAci } = envelope;
 strictAssert(isAciString(senderAci), ‘Sender uuid must be an ACI');
 const event = new InvalidPlaintextEvent({
 senderDevice: envelope.sourceDevice ?? 1,
 senderAci,
 timestamp: envelope.timestamp,
-});
-this. removeFromCache( envelope) ;
-const _envelopeld = getEnveloneld( envelope):
 return { plaintext: undefined, envelope };
 return { plaintext, envelope };
 }
@@ -1279,11 +1116,10 @@ return { plaintext, envelope };
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 private async innerHandleContentMessage(
 incomingEnvelope: UnsealedEnvelope,
 plaintext: Uint8Array
@@ -1293,7 +1129,6 @@ const envelope = await this.maybeUpdateTimestamp( incomingEnvelope) ;
 if (
 content.decryptionErrorMessage &
 Bytes.isNotEmpty(content.decryptionErrorMessage)
-asa
 if (content.syncMessage) { ... }
 if (content.dataMessage) { ... }
 if (content.nullMessage) { ... }
@@ -1302,7 +1137,6 @@ if (content.receiptMessage) { ... }
 if (content.typingMessage) { ... }
 if (content.storyMessage) { ... }
 if (content.editMessage) { ... }
-this. removeFromCache( envelope) ;
 if (Bytes.isEmpty(content.senderKeyDistributionMessage)) {
 throw new Error('Unsupported content message' );
 }
@@ -1327,37 +1161,11 @@ throw new Error('Unsupported content message' );
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-I'm just about to leave
-Sounds good! 4m «@ G@- z Kai aweaQq-»
-Should | bring anything?
-tm just about to leave
-Sounds good! 4m
-Linked Device ‘ ——- oo
-```
-
 ## Slide 64
 
 #BHUSA   @BlackHatEvents
 
 <u>https://signal.org/blog/a-synchronized-start-for-linked-devices/</u>
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-eS 7 Fron Ace}
-<collects— <—delivers ESS Message Process Services
-EES
-a Mobile
-[ <collects— 7 <—delivers
-Processing
-```
 
 ## Slide 65
 
@@ -1365,33 +1173,9 @@ Processing
 
 <u>https://signal.org/blog/a-synchronized-start-for-linked-devices/</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-ee 7 From fe
-UZ | —Sends—> routes — > Seas Message Process Services
-z Mi
-Processing
-```
-
 ## Slide 66
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-ee 7 Pease
-Zz 4 —Sends—> routes — > Ss Messa ge Process Services
-ESE,
-Mobile
-a
-Processin
-```
 
 ## Slide 67
 
@@ -1407,12 +1191,10 @@ Linked Device - Synchronization
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#2)
-black hat
-BRIEFINGS
 0 message Content {
 optional
 DataMessage
@@ -1461,10 +1243,10 @@ editMessage
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat \ > Y ,
 message SyncMessage {
 optional Sent sent
 optional Contacts contacts
@@ -1476,7 +1258,6 @@ optional Verified verified
 optional Configuration configuration
 optional bytes padding
 repeated StickerPackOperation stickerPackOperation
-optional ViewOnceOpen viewOnceOpen
 optional FetchLatest fetchLatest
 optional Keys keys
 optional MessageRequestResponse messageRequestResponse
@@ -1494,16 +1275,14 @@ optional DeleteForMe deleteForMe
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat iN
-BRIEFINGS
 0 message SyncMessage {
 1 [optional Sent sent
 2 optional Contacts contacts
 3. reserved /* groups */ 3;
-optional Request request
 3
 4 optional DataMessage message a geRequestResponse messageRequestResponse
 read
@@ -1513,33 +1292,28 @@ configuration
 © message Sent { padding
 1 optional string destination =1; erPackOperation stickerPackOperation
 2 optional string destinationServiceld =7; Pitecelpsir WAUSHLaTNTEeYSIN
-s q q q Latest fetchLatest
 3 optional uint64 timestamp = 2; pore
-3
 5 optional uint64 expirationStartTimestamp = 4;
 6 repeated UnidentifiedDeliveryStatus unidentifiedStatus Ss 59 g Weta
 7 optional bool isRecipientUpdate = angeNumber pniChangeNumber
 8 optional StoryMessage storyMessage = 8; vent callEvent
 repeated StoryMessageRecipient storyMessageRecipients = 9; inkUpdate callLinkUpdate
 optional EditMessage editMessage = 10; a cat ooeven
-row
 ```
 
 ## Slide 71
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 0 message Read {
 optional string sender =
 optional string senderAci
 optional uint64 timestamp
 we
-Ne
 we
 1
 0 message SyncMessage {
@@ -1575,7 +1349,6 @@ Verified
 Configuration
 bytes
 StickerPackOperation
-ViewOnceOpen
 FetchLatest
 Keys
 MessageRequestResponse
@@ -1610,11 +1383,10 @@ deleteForMe
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 message Configuration {
 optional bool readReceipts =1;
 optional bool unidentifiedDeliveryIndicators = 2;
@@ -1738,14 +1510,12 @@ deleteForMe
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Envelope with SyncMessage
 &> Message Process Services
-& —> z —routes>
 Processing
 Mallory
 ```
@@ -1760,10 +1530,10 @@ Mallory
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat \ > Y ,
 message SyncMessage {
 optional Sent sent
 optional Contacts contacts
@@ -1775,7 +1545,6 @@ optional Verified verified
 optional Configuration configuration
 optional bytes padding
 repeated StickerPackOperation stickerPackOperation
-optional ViewOnceOpen viewOnceOpen
 optional FetchLatest fetchLatest
 optional Keys keys
 optional MessageRequestResponse messageRequestResponse
@@ -1795,13 +1564,11 @@ optional DeleteForMe deleteForMe
 
 Fix commit: <u>https://github.com/signalapp/Signal-Android/commit/ac10ff4cbe1312ce4932337278d3c4a2c69954cc</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 0 private fun validateSyncMessage(envelope: Envelope, syncMessage: SyncMessage, localAci:
-Result {
-1]
-» | val sourceServiceld = Serviceld.parseOrThrow(envelope.sourceServiceld!!)
 if (sourceServicelId != localAci) {
 return Result.Invalid("[SyncMessage] Source was not our own account!")
 }

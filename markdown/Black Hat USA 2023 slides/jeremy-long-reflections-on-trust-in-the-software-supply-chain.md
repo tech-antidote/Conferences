@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Jeremy Long_Reflections on Trust in the Software Supply Chain.pdf"
 pages: 32
 sha256: "d32069cd81e532b083ee45c7ed6a3bc63a39b6deee57045b456bd7519158bd1f"
-text_chars: 8222
-ocr_pages: 8
+text_chars: 7471
+ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:17:07Z"
+converted_at: "2026-08-12T04:10:31Z"
 ---
 # Reflections on Trust in the Software Supply Chain
 
 **Speakers:** Jeremy Long  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Jeremy Long_Reflections on Trust in the Software Supply Chain.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -28,18 +35,6 @@ converted_at: "2026-08-11T21:17:07Z"
 Speaker: Jeremy Long
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pif hat
-USA @Oes
-AUGUST 9-10, 2023
-Reflections on Trust in the
-Software Supply Chain
-Speaker:
-Jeremy Long
-```
 
 ## Slide 2
 
@@ -65,12 +60,10 @@ Jeremy Long @ctxt/@ctxt.bsky.social 20+ years in security Founder of OWASP Depen
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2025
 Targeting the Supply Chain
 Trend No. 3: Digital supply chain risk
 Gartner predicts that by 2025, 45% of organizations worldwide will have experienced attacks on
@@ -195,11 +188,10 @@ The chain of custody and origin of a software component. Provenance incorporates
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bien hat
-USA 2&0e53
 Modern Supply Chain Attacks
 g Crash Override
 @crashappsec
@@ -270,19 +262,15 @@ Analyzer
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackha
-USA 2025
 Reproducible Builds
-nd
 $ shasum -a 256 build. jar
-61fbe3f17c2638ed21da283b06 f1dec342355c1937 f@lbef8231aeb294f f8417
 JAR
 $ shasum -a 256 build. jar
-61fbe3f17c2638ed21da283b06 f1dec342355c1937 f@lbef8231aeb294f f8417
 ```
 
 ## Slide 21
@@ -291,35 +279,19 @@ $ shasum -a 256 build. jar
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pif hat
-USA e2bes
-Cc
-$ shasum -a 256 build. jar
-61fbe3f17c2638ed21da283b06 f1dec342355c1937 f@lbef8231aeb294f f8417
-$ shasum -a 256 build. jar
-61fbe3f17c2638ed21da283b06 f1dec342355c1937 f@lbef8231aeb294f f8417
-```
-
 ## Slide 22
 
 ## Vulnerable vs Malicious
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Vulnerable vs Malicious
 ?php echo
 Hello World!
-> |e
-SP
-¥
 ```
 
 ## Slide 23
@@ -330,12 +302,10 @@ compile
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2025
 binary-source validation
 public class HtmlUtil { =)
 public String bold(String c) { =¢
@@ -364,25 +334,61 @@ return String. format("<b>%s</b>", Cc);
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-USA 2025
-Java Class Files
-® CAFEBABE @@@@0@37 @@17@A@@ @3@0@E@8 @O@F@7@@||.... 7
-2@  1@@A@@11 00120700 13010006 3C696E69 743£0100 <init>
-4@ @3282956 @1000443 6F6465@1 @@@F4C69 6E654E75 QV Code LineNu
-6@ 6D626572 5461626C 65010004 626F6C64 01002628 | | mberTable bold &(
-8@ 4C6A6176 612F6C61 6E672F53 7472696E 673B294C | | Ljava/Lang/String;)L
-10@ 6A617661 2F6C616E 672F5374 72696E67 3B@1@0@0A | | java/Lang/String;
-12@ 536F7572 63654669 6(C65@10@ @D48746D 6(557469 | | SourceFile HtmLUti
-14@ | 6CZE6A61 76610C@@ @6000701 0093062 3E25733C||1.java <b>%s<
-16@ 2F623E@1 @@1@6A61 76612F6C 616E672F 4F626A65 | | /b> java/lang/O0bje
-18@ 6374070@ 140C@@15 001600100 @848746D 6(557469 | | ct HtmLUti
-200 6C@10@1@ 6A617661 2F6C616E 672F5374 72696E67 | | 1 java/Lang/String
-220 @100@666 6F726D61 74010039 284(C6A61 76612F6C format 9(Ljava/1
+GoCD
+
+Create Configuration Repository
+
+Configuration File Path: /go-working-dir/config/cruise-config.xml
+
+Last modified: less than a minute ago by test                    SAVE   CANCEL
+
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="139">
+  <server agentAutoRegisterKey="09cd2027-d420-4667-b96b-6b6c83134396" webhookSecret="55f9add4-5ead-40f2-b677-12b472ed6392" serverId="080ddfb2-f0b2-474b-9392-b29b8266d1f7" tokenGenerationKey="ae79cdde-2652-4bc0-b7f1-71f994175714">
+    <security>
+      <authConfigs>
+        <authConfig id="auth" pluginId="cd.go.authentication.passwordfile">
+          <property>
+            <key>PasswordFilePath</key>
+            <value>/godata/config/passwd.properties</value>
+          </property>
+        </authConfig>
+      </authConfigs>
+      <roles>
+        <role name="simple-user">
+          <users>
+            <user>test</user>
+          </users>
+          <policy>
+            <allow action="administer" type="environment">test*</allow>
+            <allow action="administer" type="config_repo">test*</allow>
+          </policy>
+        </role>
+      </roles>
+      <admins>
+        <user>user</user>
+        <user>test</user>
+      </admins>
+    </security>
+    <artifacts>
+      <artifactsDir>artifacts</artifactsDir>
+    </artifacts>
+  </server>
+  <config-repos>
+    <config-repo id="test-xxe-repo" pluginId="gocd-xml">
+      <git url="https://gitlab.com/demo621918/my-xml-repo" branch="main" />
+    </config-repo>
+  </config-repos>
+  <pipelines group="defaultGroup">
+    <authorization>
+      <view>
+        <user>user1</user>
+
+GoCD stores server configuration in a xml file
 ```
 
 ## Slide 26

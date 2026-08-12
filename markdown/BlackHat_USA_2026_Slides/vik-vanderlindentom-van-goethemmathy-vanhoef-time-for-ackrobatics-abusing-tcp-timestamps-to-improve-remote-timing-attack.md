@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Vik Vanderlinden&Tom Van Goethem&Mathy Vanhoef_Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks.pdf"
 pages: 56
 sha256: "f4dbea1b0f5d9c9d925ed679ae8a4a6ee491bf17d0335105151877d4b415927c"
-text_chars: 8494
+text_chars: 8343
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:16:53Z"
+converted_at: "2026-08-12T05:45:44Z"
 ---
 # Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks
 
 **Speakers:** Vik Vanderlinden, Tom Van Goethem, Mathy Vanhoef  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Vik Vanderlinden&Tom Van Goethem&Mathy Vanhoef_Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -148,21 +153,15 @@ Server-Timing Header<sup>[4]</sup> (HTTP) Timeless Timing Attack<sup>[1]</sup> (
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What are TCP Timestamps
-Client Server
 TSval=x, TSecr=0
-ia
-[ Sit
 TSval=y, TSecr=x
-a
-——
 SYN/ACK
 TSval=x+8., TSecr=y
-nn,
-ACK——___
 v Vv
 17
 ```
@@ -205,15 +204,12 @@ Basic Attack
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Timing Attacks Leveraging TCP Timestamps
-Client Server
 3WHS
-Basic iat.
-Attack 5 i
-ee
 FIN/RST
 21
 ```
@@ -226,14 +222,13 @@ Runtime Multiplication Enhancement
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Timing Attacks Leveraging TCP Timestamps
-Client Server
 Runtime <——_
 Multiplication
-Enhancement ./
 FIN/RST
 22
 ```
@@ -467,15 +462,12 @@ Send TCP Timestamps **less often** (e.g. [11]) Only hinders the attack slightly
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Defenses
-r
-ro)
-B fo.) fo)
 Proportion of TCP connections
-fo}
 N
 10° 10? 10? 10
 Estimated max unACKed packets in TCP connection

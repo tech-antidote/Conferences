@@ -12,7 +12,7 @@ duration_seconds: 2996
 words: 4859
 text_chars: 27104
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Browser Extension Clickjacking - One Click and Your Credit Card Is Stolen

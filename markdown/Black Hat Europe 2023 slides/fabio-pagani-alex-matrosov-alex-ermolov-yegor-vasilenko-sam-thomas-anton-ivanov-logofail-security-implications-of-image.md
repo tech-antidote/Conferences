@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Fabio Pagani, Alex Matrosov, Alex Ermolov , Yegor Vasilenko , Sam Thomas , Anton Ivanov _ LogoFAIL Security Implications of Image Parsing During System Boot.pdf"
 pages: 53
 sha256: "c2ee5f64eb7f9c6180a2eb1e4bcd8eb4fcc871aac7dda69dd341263307f16c26"
-text_chars: 16904
-ocr_pages: 11
+text_chars: 15080
+ocr_pages: 9
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 82.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:01Z"
+converted_at: "2026-08-12T04:02:54Z"
 ---
 # LogoFAIL Security Implications of Image Parsing During System Boot
 
 **Speakers:** Fabio Pagani, Alex Matrosov, Alex Ermolov, Yegor Vasilenko, Sam Thomas, Anton Ivanov  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Fabio Pagani, Alex Matrosov, Alex Ermolov , Yegor Vasilenko , Sam Thomas , Anton Ivanov _ LogoFAIL Security Implications of Image Parsing During System Boot.pdf` (53 pages)
+
 
 ## Slide 1
 
@@ -82,20 +89,6 @@ RR
 **The Far-Reaching Inside the LogoFAIL Consequences of Vulnerabilities LogoFAIL** (Blog) (Video)
 
 **© BINARLY.IO**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-© BINARLY.IO
-Ble ici ole
-The Far-Reaching
-Consequences of
-LogoFAIL (Blog)
-Inside the LogoFAIL
-Vulnerabilities
-(Wife [=te))
-Binarly
-```
 
 ## Slide 5
 
@@ -249,24 +242,29 @@ Attack Surface
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Different Shades of UEFI Image Parsers
-BmpDecoderDxe-A9F634A5 -29F1-4456 -A9D5-6E24B88BDB65
-TgaDecoderDxe - ADCCA887 - 5330-414A-81A1-5B578146A397
-PngDecoderDxe -C1D5258B-F61A-4C02-9293-AQO5BEB3EAA1
-JpegDecoderDxe -2707E46D-DBD7 -41C2-9C04-C9FDB8BAD86C
-PcxDecoderDxe -A8F634A5 -28F1-4456-A9D5-7E24B99BDB65
-GifDecoderDxe- 1353DE63 -B74A- 4BEF - 80FD-2C5CFA83040B
-SystemImageDecoderDxe- 5F65D21A- 8867 -45D3 -A41A-526F9FE2C598
-AMITSE-B1DAOADF - 4F77 -4070-A88E-BFFE1C60529A
+
+BmpDecoderDxe-A9F634A5-29F1-4456-A9D5-6E24B88BDB65
+TgaDecoderDxe-ADCCA887-5330-414A-81A1-5B578146A397
+PngDecoderDxe-C1D5258B-F61A-4C02-9293-A005BEB3EAA1
+JpegDecoderDxe-2707E46D-DBD7-41C2-9C04-C9FDB8BAD86C
+PcxDecoderDxe-A8F634A5-28F1-4456-A9D5-7E24B99BDB65
+GifDecoderDxe-1353DE63-B74A-4BEF-80FD-2C5CFA83040B
+
+SystemImageDecoderDxe-5F65D21A-8867-45D3-A41A-526F9FE2C598
+
+AMITSE-B1DA0ADF-4F77-4070-A88E-BFFE1C60529A
+
 MdeModulePkg/Library/BaseBmpSupportLib/BmpSupportLib.c
-© BINARLY.IO
-6insyde
-phoenix
-technologies
-Binarly
+
+insyde
+phoenix technologies
+ami
+tianocore
 ```
 
 ## Slide 14
@@ -454,24 +452,16 @@ Simple format  + exploitable crash: PNG parser from AMI
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Selecting a Target
-PNG Image
-Compressed
-. —__ E OutputBuffer
 PNG Magic \x89PNG\r\n\x1a\n IDAT chunks
 IHDR Chunk IHDR\x00\x00\x000\x00\x00
 \x00\x08\x06\x00\x00...
-nd
 IDAT Chunk IDATh\xde\xed\x9a{\xd4_Uy
-\xe7\xcf\xdeg\x9f\xcb...
 IDATx\xda\xec\xc1\x01\x01
-\x00\x00\x00\x80\x90...
 IDAT Chunk
-Simple format + exploitable crash: PNG parser from AMI
-© BINARLY.1O Binarly
 ```
 
 ## Slide 28
@@ -482,17 +472,13 @@ Simple format  + exploitable crash: PNG parser from AMI
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Selecting a Target
-PNG Image
-Compressed
 PNG Magic \x89PNG\r\n\x1a\n IDAT chunks Tey REN
 IHDR Chunk THDR\x00\x00\x000\x00\x00
-\x00\x08\x06\x00\x00...
 h\xde\xed\x9a{\xd4_Uy\x
-e7\xcf\xdeg\x9F\xcb\xef
 IDAT Chunk IDATh\xde\xed\x9a{\xd4_Uy \xfe\xde\x92\xbce\xb9x\x
 \xe7\xcf\xdeg\x9f\xcb...
 da\xec\xc1\x01\x01\x00\
@@ -500,8 +486,6 @@ x00\x00\x80\x90\xfe\xaf
 \xee\x08\x02\x00\x00
 IDATx\xda\xe
 IDAT Chunk \x00\x00\x00\>
-Simple format + exploitable crash: PNG parser from AMI
-© BINARLY.1O Binarly
 ```
 
 ## Slide 29
@@ -512,27 +496,17 @@ Simple format  + exploitable crash: PNG parser from AMI
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Selecting a Target
-PNG Image
-Compressed
 PNG Magic \x89PNG\r\n\x1a\n IDAT chunks Tey REN
 IHDR Chunk THDR\x00\x00\x006\x00\x00
-\x00\x08\x06\x00\x00... INEM RENCE DAR:
-e7\xcf\xdeg\x9f\xcb\xef
-ae
 IDAT Chunk IDATh\xde\xed\x9a{\xd4_Uy \xfe\xde\x92\xbco\xb9x\x
-\xe7\xcf\xdeg\x9f\xcb...
 da\xec\xc1\x01\x01\x00\
 x00\x00\x80\x90\xfe\xaf
-\xee\x08\x02\x00\x00...
 IDATx\xda\xec\xc1\x01\x01
-\x00\x00\x00\x80\x90...
 IDAT Chunk
-Simple format + exploitable crash: PNG parser from AMI
-© BINARLY.1O Binarly
 ```
 
 ## Slide 30
@@ -589,21 +563,18 @@ Simple format + exploitable crash: PNG parser from AMI
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Heap Internals
 e Pool-based heap VOID xp = AllLocatePool(0x40)
 mPoolHead
-(E£iBoot
 Services POOL_HEAD
 Data) ~
 [ Size 0x80 he POOL_FREE a POOL_FREE KY POOL_FREE }
 [ su (o 100 tf POOL_FREE Wy POOL_FREE Wy POOL_FREE ] DATA
-[ sux o 100 ff POOL_FREE ian POOL_FREE lanl POOL_FREE }
 [size onan tf POOL_FREE ] ( POOL_FREE iat POOL_FREE ]
-fe ox7as] ( POOL_FREE im POOL_FREE Hf POOL_FREE }
-© BINARLY.1O Binarly
 ```
 
 ## Slide 35
@@ -616,21 +587,18 @@ fe ox7as] ( POOL_FREE im POOL_FREE Hf POOL_FREE }
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Heap Internals
 e Pool-based heap
-(E£iBoot
 Services POOL_HEAD
-Data) —
 [ Size 0x80 he POOL_FREE a POOL_FREE jf POOL_FREE }
 [ su o 100 tf POOL_FREE Wy POOL_FREE Wy POOL_FREE ] DATA
-[ sux ® 100 ff POOL_FREE ian POOL_FREE lanl POOL_FREE ]
-( WH } f } f }  POOL_TAIL | TAIL
+( WH } f } f } POOL_TAIL | TAIL
 Size 0x280 POOL_FREE POOL_FREE POOL_FREE ~
 fe ox7as] [ POOL_FREE Hf POOL_FREE Hf Poo._FRE | F ree Poo 1 ( p )
-© BINARLY.1O Binarly
 ```
 
 ## Slide 36
@@ -641,7 +609,8 @@ fe ox7as] [ POOL_FREE Hf POOL_FREE Hf Poo._FRE | F ree Poo 1 ( p )
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What Are We Even Corrupting?
@@ -651,7 +620,6 @@ POOL_HEAD |BRLYBRLYBRLYBRLYBRLYBRLY| POOL_TAIL | POOL_HEAD}| OBJ DATA | POOL_TAI
 OutputBuffer Free Chunk
 POOL_HEAD | BRLYBRLYBRLYBRLYBRLYBRLY | POOL_TAIL POOL_FREE ]
 We don’t know!!
-© BINARLY.1O Binarly
 ```
 
 ## Slide 37
@@ -698,54 +666,26 @@ We don’t know!!
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Preserving Heap Chunks
-© BINARLY.IO
-82c83f10:
-82c83f20:
-82c83f30:
-82c83f40:
-82c83f50:
-82c83f60:
-82c83f70:
-82c83f80:
-82c83f90:
-82c83fa0:
-82c83fb0:
-82c83fc0:
-4252 4c59 4252
-4252 4c59 4252
-4252 4c59 4252
-4252 4c59 4252
-4252 4c59 4252
-4252 4c59 4252
-4c59
-4c59
-4c59
-4c59
-4c59
-4c59
-4252 4c59 4252 4c59
-4252 4c59 4252 4c59
-4252 4c59 4252 4c59
-4252 4c59 4252 4c59
-4252 4c59 4252 4c59
-4f4f 4f4f 4f4f 4f4f
-This IS the object we can
-corrupt!!
-<>
-oe
-4
-BRLYBRLYBRLYBRLY
-BRLYBRLYBRLYBRLY
-BRLYBRLYBRLYBRLY
-BRLYBRLYBRLYBRLY
-BRLYBRLYBRLYBRLY
-BRLYBR 0000
-OOO00COOXhdg....
-Binarly
+
+82c83f10: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f20: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f30: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f40: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f50: 4252 4c59 4252 4c59  4252 4c59 4252 4c59  BRLYBRLYBRLYBRLY
+82c83f60: 4252 4c59 4252 4c59  4f4f 4f4f 4f4f 4f4f  BRLYBRLYOOOOOOOO
+82c83f70: [obscured]                                 OOOOOOOOXhd0....
+82c83f80: [obscured]                                 ........X.......
+82c83f90: [obscured]                                 prtn....iL......
+82c83fa0: [obscured]                                 (.......(kL.....
+82c83fb0: [obscured]                                 .~........|.....
+82c83fc0: [obscured]                                 ptal....X.......
+
+This IS the object we can corrupt!!
 ```
 
 ## Slide 41
@@ -804,15 +744,14 @@ What’s left?
 
 **© BINARLY.IO**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UEFI Event System
 e Events are generated when protocols are installed
-Moto or PROTOCOL_ENTRY PROTOCOL_ENTRY |x—>....
 Database
 PROTOCOL_NOTIFY
-IEVENT
 Callback
 Handler
 Function
@@ -870,26 +809,6 @@ https://www.youtube.com/watch?v=EufeOPe6eqk
 **© BINARLY.IO**
 
 ## Slide 49
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-) © eee eee +
-Wdbert Shere thet!
-Capprtyht PLD Geren) Carperetter bf) rights rewerend
-DPT Ph Leteet Peer eT) f6e ee Peet ere Get bepeererertl: Often ee Oo
-LA ee ee Deed ie)
-te
-ee ee ee Seley -dtebag verifice
-Peli thet Geet Cam bet tretir’
-7) © Weer theater i eaere* free «(Leelee
-SOCCER) NTT TEETH MOTE E SET TT TT TT TT Te Reem ER TRE ET TTT TTT TT eee eee
-er “he heer ee ee Le eee
-OPE) 1 chewed eet be betel bee eel ered ce eheterl bee ee coer treater
-semi tev ented tet
-SOOT F Fe eee meme EE EE ET ETE TE NESSES eee eeOS ESTEE NEUE Cee eeR eens
-Tr) Ged bebe Uhetlomdte weteg Gyvteef asic § tebe
-```
 
 ## Slide 50
 

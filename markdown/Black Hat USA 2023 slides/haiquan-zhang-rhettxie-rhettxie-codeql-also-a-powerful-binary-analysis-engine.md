@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Haiquan Zhang & Rhettxie Rhettxie_CodeQL Also a Powerful Binary Analysis Engine.pdf"
 pages: 41
 sha256: "1efec65792765c6b66338fc3426bc6417852b15bd855242be50ccc09b5d6685a"
-text_chars: 15991
-ocr_pages: 5
+text_chars: 15280
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:16:36Z"
+converted_at: "2026-08-12T04:09:41Z"
 ---
 # CodeQL Also a Powerful Binary Analysis Engine
 
 **Speakers:** Haiquan Zhang, Rhettxie Rhettxie  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Haiquan Zhang & Rhettxie Rhettxie_CodeQL Also a Powerful Binary Analysis Engine.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -30,18 +36,6 @@ Haiquan Zhang rhettxie
 @tencent security yunding lab
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-CodeQL: Also a Powerful Binary Analysis Engine
-Haiquan Zhang
-rhettxie
-@tencent security yunding lab
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -446,12 +440,11 @@ Different from the data workflow for creating source code, we separate the extra
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-USA 20253
 Simple example
 CodeQL Query Results
 export_func.ql X
@@ -465,12 +458,10 @@ putenv
 from ExportFunc func ee
 select func.getFuncName() group_member
 __bss_start
-mB WN
 the_replace_len
 sigwinch_sighandler
 sh_modcase
 parse_shellopts
-BSE MPNOOKR WN
 parse_string
 12 protected_mode
 13 rl_show_char
@@ -488,24 +479,19 @@ rl eof char
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-USA 20253
 Complex example
 q
 expr.qi M X
 1
 2
-ou RW
 N
-foe}
-10 }
 11
 12
-13 }
 14
 15
 16
@@ -517,24 +503,18 @@ foe}
 expr.ql > {} expr > @ dumpStr
 import asm
 predicate hasGNU(StrLit s ){
-s.getStringLiteral().matches("%GNU GPL%"')
-}
 query string dumpStr(StrLit s) {
 result = s.getStringLiteral()
-i
 query string dumpFunc(FunctionType f)
 {
 result = f.getFuncName()
-+
 from StrLit s,ImportFunc importFunc,FunctionType func,Callinsn callinsn
 where hasGNU(s) and importFunc.getFuncName().matches("exec%")
 and func.getFuncName()= "save_input_line_state"
 and callinsn.getInsnFunction()=func
 select s.getStringLiteral(), func.getFuncName(),callinsn, importFunc.getFuncName( )
->
 CodeQL Query Results X
 « 1 11» expr.ql on demo_db - finished in 0 seconds (1 results) [7/6/2023, 4:40:46 PM] Open expr.q|
-#select v 1
 # [0] i] callinsn [3]
 License GPLv3+: GNU GPL version 3 or later . . call
 <http://gnu.org/licenses/gpI.html> « save_input_line_state xmalloc execve@@GLIBC_
@@ -631,19 +611,14 @@ Added launch parameters
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black ha
-USA 20253
-EXPLORER oo debug.ql x > oO
 > OPEN EDITORS iIpacks > codeq! > cpp-queries > 0.5.1 > Summary jebug.c
- CoDEQL 1 import cpp —
-2 import semmle. code. cpp. security. Security
 > Best Practices 3 import semmle. code. cpp. security. TaintTracking =
 > codeql-suites 4 import TaintedwithPath
 > Critical 5
->D tics :
 iagnostics 6 | predicate isProcessOperationExplanation(Expr arg, string processOperation) {
 > Documentation
 7 exists(int processOperationArg, FunctionCall call |
@@ -662,13 +637,7 @@ iagnostics 6 | predicate isProcessOperationExplanation(Expr arg, string processO
 © Summary 22 taintedWithPath(source, arg, sourceNode, sinkNode)
 debug.ql 23 select arg, sourceNode, sinkNode,
 LinesofCode.al 24 "The value of this argument fiay come from $@ and is being passed “ + processQperation, source,
-LinesOfCode.qix 7 source. toString()
 LinesOfUserCode.ql 27
-LinesOfUserCode.qlx
-AlertSuppression.ql
-pecieea cpanel PRC ourPu CON TERMINAL shty OB A x
-CHANGELOG.md pani
-! codeqi-pack.lock.yml zhangsan@HUNTAZHANG-MBO codeql % ff
 default.qll
 definitions.ql
 definitions.qlx
@@ -699,17 +668,6 @@ https://github.com/YunDingLab/codeql-binary
 huntazhang@tencent.com jitxie@tencent.com
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-Q&A
-huntazhang@tencent.com Oo ANSenascee
-jitxie@tencent.com TENCENT SECURITY YUNDING LAB
-```
 
 ## Slide 41
 

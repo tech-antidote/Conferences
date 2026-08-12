@@ -12,15 +12,20 @@ text_chars: 78205
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T22:57:33Z"
+converted_at: "2026-08-12T05:16:13Z"
 ---
 # E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters
 
 **Speakers:** Marco Casagrande, Daniele Antonioli  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marco Casagrande&Daniele Antonioli_E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters_WP.pdf` (16 pages)
+
 
 ## Slide 1
 

@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Chao Ma & Han Yan & Tim Xia-LinkDoor A Hidden Attack Surface in the Android Netlink Kernel Modules.pdf"
 pages: 39
 sha256: "2778006e4c945abd4a18047e51f2277dfd43d83bda0178581c7e07ba6e537dd7"
-text_chars: 17566
+text_chars: 16327
 ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:54Z"
+converted_at: "2026-08-12T04:47:12Z"
 ---
 # LinkDoor A Hidden Attack Surface in the Android Netlink Kernel Modules
 
 **Speakers:** Chao Ma, Han Yan, Tim Xia  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Chao Ma & Han Yan & Tim Xia-LinkDoor A Hidden Attack Surface in the Android Netlink Kernel Modules.pdf` (39 pages)
+
 
 ## Slide 1
 
@@ -108,7 +113,8 @@ Chao Ma, Han Yan, Tim Xia Baidu AIoT Security Team
 
 ### Generic Netlink
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction
@@ -116,7 +122,6 @@ Flaws of Classic Netlink
 ¢ Limited number of Netlink protocol st@tic intine struct sock *
 netlink_kernel_create(struct net *net,
 int unit
-° Complex Usage oo eet fetlink kernel_cfg “cfg)
 #define MAX_LINKS 32
 #define NLMSG_ALIGNTO 4U
 #define NLMSG_ALIGN(len) ( ((len)+NLMSG ALIGNTO-1) & ~(NLMSG_ALIGNTO-1) )
@@ -163,25 +168,18 @@ Generic Netlink (nlh)->nlmsg len >= sizeof(struct nlmsghdr) && \
 
 #### **Netlink architecture**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface Analysis
 Netlink architecture
 | | App-3 | ie
 App-2
-’ (libnl)
 App-1 |
 I “t Protocol Library Su
-eS
 Linux Kernel Netlink Subsystem |
 User Space
-—
-oO
-Oo
-a
 © (— Classic Netlink >) Generic Netlink >)
-o
 = Routing Netfilter IPv4/IPv6 KSMBD
 Uevent a Wireless
 ```
@@ -214,16 +212,14 @@ Uevent a Wireless
 
 Check Nothing!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface Analysis
 Kernel mechanism of Classic Netlink
 ¢ Parsing Transfer Message
 To: struct sk_buff skb;
 sendto/sendmsg | input
-skb->data’
-cee) baceenececeeeeeeeaceeeeseseeeseees ¥
 nimsghdr pad nilmsghdr pad
 payload pad Check Nothing! payload pad
 ```
@@ -268,17 +264,16 @@ messages received from user space
 
 - Transfer Message Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface Analysis
 Kernel mechanism of Generic Netlink (based on Classic Netlink )
 ¢ Transfer Message Format
 nimsghdr pad payload pad nilmsghdr
 genlmsghdr pad| family header pad attributes
 cmd(1B) | version(1B) reserved(2B) attribute attribute attribute
 nlattr pad attr payload pad
-nla_len(2B) |nla_type(2B)
 ```
 
 ## Slide 16
@@ -313,21 +308,18 @@ Kernel mechanism of Generic Netlink
 
 Check by nla_policy!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface Analysis
 Kernel mechanism of Generic Netlink
 ¢ Parsing Transfer Message
 sendto/sendmsg
-v
 To: struct genl_info info;
 nimsghdr pad
-genlmsghdr
 pad
 family header
 pad
-nlattr pad
 attr payload
 pad
 niattr pad
@@ -335,7 +327,6 @@ attr payload
 pad
 .diot
 i nfo->attrs[nla_typel;
-v
 nlattr
 pad
 attr payload
@@ -424,25 +415,21 @@ pad
 
 - CVE-2023-32880 (NETLINK_FGD OOB Read)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Case Study
 Case study 1: attack the parsing of Classic Netlink message
 ¢ CVE-2023-32880 (NETLINK_FGD OOB Read)
 | static void mtk_gauge_netlink_handler (struct sk_buff *skb)
 ®
-s) sendto(req) f
-a mtk_battery_netlink_handler(skb);
 7) }
 + 2
 g static int bat_create_netlink(struct platform device *pdev)
-; {
 ie Send Netlink Message-. struct m{6375_priv *priv = platform_get_drvdata(pdev);
 Oo struct mtk_ gauge *gauge = &priv->gauge;
 a struct n¢tlink kernel cfg cfg = {
 ” input = mtk_gauge_netlink_ er,
-a
 es j gauge->gm->mtk_battery_sk =
 Q -input(skb) netlink_kernel_create(&init_net, NETLINK_FGD, &cfg);
 ```
@@ -455,27 +442,23 @@ Q -input(skb) netlink_kernel_create(&init_net, NETLINK_FGD, &cfg);
 
 - CVE-2023-32880
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Case Study
 Case study 1: attack the parsing of Classic Netlink message
-¢* CVE-2023-32880
 void mtk_battery_netlink_handler(struct sk buff *skb) | static void mtk_battery_daemon_handler(struct mtk_battery *gm,
 { void *nl_data, struct fgd_nl_msg t *ret_msg)
 nee {
 nlh
 (struct nlmsghdr *)skb->data;
 i NETLEWK_CREDS(skb) ->pid; msg = nl_data;
-vid = sagen ad A rat_msg->nl_cmd = msg->nl_cmd;
 seq = nlh-> msg seq; - ret_msg->fgd_cmd = msg->fgd_cmd;
 data_= NLMSG_DATA(nlh);
 3
-| DAEMON_CMD_SET_FG BAT_INT1_GAP:
 mtk_battery_daemon_handler(gm, data, fgd_ret_msg);
 mtk_battery_send_to_user(gm, seq, fgd_ret_msg); int\fg_coulomb = 9;
 fg _chulomb = gauge_get_int_property(GAUGE_PROP_COULOMB) ;
-memcpy &gm->coulomb_int_gap,
 &msg->fgd_data[@], sizeof(gm->coulomb_int_gap));
 ```
 
@@ -505,20 +488,16 @@ memcpy &gm->coulomb_int_gap,
 
 - CVE-2024-20833 (NETLINK_FIPS_CRYPTO Use After Free)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Case Study
 Case study 2: attack the building of Classic Netlink message
 * CVE-2024-20833 (NETLINK_FIPS CRYPTO Use After Free)
 process req to result
 8 | ioctl(fd, DEK_ENCRYPT_DEK, arg) | | req = recvfrom() | > sendto(result) |
-3
-a Send ioctl Message --------- — ec): a eee ee Send Netlink Message --
 ®
 8 ‘Teq = request_alloc() [ nlmsg_unicast(req) | request_wait_answer(req) <1 .input(skb)
-f.
-o
 <
 ‘request_send(&g | pub_crypto_control, req) | | request_free(&g_pub_crypto_control, req) |
 ```
@@ -553,15 +532,13 @@ o
 
 - CVE-2024-26811
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Case Study
 Case study 3: attack the parsing of Generic Netlink attributes
-* CVE-2024-26811
 static int handle_generic_event(struct sk buff *skb,
 struct genl info *info)
-{
 void *payload;
 int sz;
 int type = info->genllhdr->cmd;
@@ -570,13 +547,10 @@ WARN_ON(1);
 return -EINVAL; 4
 if (!info->attrs[typel])
 return -EINVAL;
-¥
 payload = nla_data(info->attrs[info->genlhdr->cmd]) 5
 sz = nla_len(info->attrs[info->genlhdr->cmd]);
-return handle _response(type, payload, sz);
 } « end handle_generic_event »
 static int handle_response(int type, void “payload, size t sz)
-{
 unsigned int handle = *(unsigned int *)payload;
 struct ipc_msg table entry *entry;
 int ret = @;
@@ -588,7 +562,6 @@ entry->response = kvzalloc(sz, G
 if (!entry->response) {
 ret = -ENOMEM;
 break;
-KERNEL);
 memcpy(entry->response, payload, sz);
 wake_up_interruptible(&entry->wait) ;
 ```
@@ -615,10 +588,10 @@ wake_up_interruptible(&entry->wait) ;
 
 - CVE-2023-52103 (Driver flp OOB Read)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Case Study
 Case study 4: attack the building of Generic Netlink attributes
 ¢ CVE-2023-52103 (Driver flo OOB Read)
 ( static int Flp_generate_netlink_packet(struct flp_port_t *flp_port,
@@ -627,12 +600,8 @@ oO nr struct sk_buff *skb = NULL;
 Ag struct nlmsghdr *nlh = NULL;
 o void *msg_header = NULL;
 3 char *data = NULL;
-reennnennens Send write Message------------------- Receive Netlink Message- i as ;
 2 static unsigned int flp_event_seqnum;
-&
-” skb = genlmsg_new((size _t)count, GFP_ATOMIC) ;
 gS : return -ENOMEM;
-G flp_write() oe genlmsg_unicast() ,
 /* add the genetlink message header */
 msg header = genlmsg_put(skb, @, flp_event_seqnum++,
 &flp_genl_family, @, cmd_type);
@@ -690,16 +659,14 @@ result = genlmsg _unicast(&init_net, skb, flp_port->portid);
 
 - PoC template
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-PoC and Exploitation
 PoC of Generic Netlink
 ¢ Resolve the Family ID acquisition problem
 struct nlmsghdr:
 u32 nlmsg_len:
-ul6 nlmsg_ type:
-__u16 nilmsg_ flags:
 __u32 nlmsg_seq:
 u32 nlmsg_pid:
 struct genlmsghdr:
@@ -716,30 +683,22 @@ char data:
 GENL_ID_CTRL
 NLM_F_REQUEST | NLM_F_ACK
 1
-@
 CTRL_CMD_GETFAMILY
 2 /* or 1, doesn't matter
-(2)
 10
 CTRL_ATTR_FAMILY_NAME
-test1\0
-f
 wre Family Name
-LY <2)
 // (2)
 // (3)
-si
 // (4)
 ¢ PoC template
 int main(int argc, char **argv)
-{
 struct sockaddr_nl sre_addr, dest_addr;
 struct nimsghdr *nlh = NULL;
 int sock_fd, retval;
 int family_id = 0;
 char *attr_payload = NULL;
 sock_fd = socket(AF_NETLINK, SOCK_RAW, NETLINK_GENERIC);
-memset (&src_addr, @, sizeof(src_addr));
 src_addr.nl_family = AF_NETLINK;
 src_addr.nl_pid = NETLINK_PID;
 src_addr.nl_groups = @;
@@ -762,12 +721,11 @@ genl_rcv_msg(family_ id, sock_fd, attr_payload);
 
 - PoC template
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-PoC and Exploitation
 static int genl_get_family_id(int sock_fd, char *family_name)
-{
 PoC of Generic Netlink
 msgtemplate t ans;
 int id, fe;
@@ -776,7 +734,6 @@ int rep_len;
 rc = genl_send_msg(sock_fd, GENL_ID CTRL, @, CTRL_CMD GETFAMILY, 1,
 ¢ PoC template
 int genl_send_msg(int sock fd, u_intie_t family id, u_int32_t nlmsg pid,
-u_ints_t genl_cmd, u_ints_t genl_ version, u_int16_t nla _type,
 void *nla_data, int nla len)
 struct nlattr *na;
 struct sockaddr_nl dst_addr;
@@ -800,7 +757,6 @@ na->nla_len = nla_len + 1 + NLA_HDRLEN;
 memcpy(NLA_DATA(na), nla_data, nla_len);
 msg.nlh.nlmsg len += NLMSG_ALIGN(na->nla_len);
 buf = (char *) &msg3;
-buflen = msg.nlh.nlmsg_ len;
 while C(r = sendto(sock_fd, buf, buflen, @, (struct sockaddr *) &dst_addr
 » sizeof(dst_addr))) < buflen) {
 buflen -= r3;
@@ -811,7 +767,6 @@ CTRL_ATTR_FAMILY_NAME, (void *)family_name,
 strlen(family_name)+1) ;
 rep_len = recv(sock_fd, &ans, sizeof(ans), @);
 na = (struct nlattr *) GENLMSG_DATA(&ans);
-il]
 na = (struct nlattr *) ((char *) na + NLA_ALIGN(na->nla_len));
 if (na->nla_type == CTRL_ATTR_FAMILY_ID) {
 id = *(__u16 *) NLA_DATA(na);
@@ -819,7 +774,6 @@ id = *(__u16 *) NLA_DATA(na);
 return id;
 } « end genl_get_family_id »
 void genl_rev_msg(int family id, int sock_fd, char *buf)
-{
 int ret;
 struct msgtemplate msg;
 struct nlattr *na;
@@ -839,10 +793,10 @@ strncpy(buf, (char *)NLA_DATA(na), MAX_MSG SIZE);
 
 - CVE-2023-32882 (Write-What-Where)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-PoC and Exploitation
 Exploitation
 ¢* CVE-2023-32878 (Arbitrary Read)
 * CVE-2023-32882 (Write-What-Where)

@@ -12,15 +12,20 @@ text_chars: 433948
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:58:04Z"
+converted_at: "2026-08-12T03:51:56Z"
 ---
 # When Knowledge Graph Meets TTPs
 
 **Speakers:** Wu  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-wp.pdf` (204 pages)
+
 
 ## Slide 1
 

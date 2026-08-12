@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Yuan Luo&Zhaojun Chen&Yi Sun&Rhettxie Rhettxie_More Flows, More Bugs Empowering SAST with LLMs and Customized DFA.pdf"
 pages: 47
 sha256: "a954eb15e47c0d8a2ea00252a8595f5433cf305ef381853fa6cb224fbee3da87"
-text_chars: 25117
-ocr_pages: 4
+text_chars: 24867
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:04:16Z"
+converted_at: "2026-08-12T05:26:27Z"
 ---
 # More Flows, More Bugs Empowering SAST with LLMs and Customized DFA
 
 **Speakers:** Yuan Luo, Zhaojun Chen, Yi Sun, Rhettxie Rhettxie  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yuan Luo&Zhaojun Chen&Yi Sun&Rhettxie Rhettxie_More Flows, More Bugs Empowering SAST with LLMs and Customized DFA.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -816,10 +821,10 @@ Automated Vulnerability Scanning with CodeQL
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 BRIEFINGS
 The sink function was omitted...
@@ -840,7 +845,6 @@ data:
 - ["github.com/jmoiron/sqlx", "Tx", True, "“NamedQuery", "", "", “Argument[@]", “sql-injection", "manual"]
 - ["github.com/jmoiron/sqlx", "Tx", True, "“Queryx", "", "", "Argument[@]", “sql-injection", "manual"]
 - ["github.com/jmoiron/sqlx", "Tx", True, "Select", "", "", "Argument[1]", “sql-injection", "manual"]
-» “Argument[1]", "sql-injection", "“manual"]
 ```
 
 ## Slide 40
@@ -915,13 +919,12 @@ Reflection Cross-Thread
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 BRIEFINGS
 CVEs we discovered
-JEKCVE-2024-45387 Detail
 Description AKCVE-2024-45794 Detail
 An SQL injection vulnerability in Traffic O
 "operations", "portal", or "steering" to ex Descri ption
@@ -965,29 +968,16 @@ leonyuanluo@tencent.com zzzzjchen@tencent.com landonsun@tencent.com jitxie@tence
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-‘black hat
-RIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
-eonyuanluo@tencent.com
-zzzzjchen@tencent.com FHSS Fee
-jixie@tencent.com
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 47
 
 # **Thank you!**
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~ biaekhat
 RIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS

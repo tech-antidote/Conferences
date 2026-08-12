@@ -4,23 +4,28 @@ speakers: ["Robert Kruczek", "Kamil Szczurowski"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Robert Kruczek, Kamil Szczurowski - Hacking the Government How Two Researchers Turned Late-Night Boredom Into a National Audit - Hacking.pdf"
 pages: 26
 sha256: "b574ee911bd195e45c4828381afe0778668d845c063e25d96ea7499fe8f622b5"
-text_chars: 9844
+text_chars: 9313
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:27:14Z"
+converted_at: "2026-08-12T06:41:52Z"
 ---
 # Hacking the Government How Two Researchers Turned Late-Night Boredom Into a National Audit
 
 **Speakers:** Robert Kruczek, Kamil Szczurowski  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Robert Kruczek, Kamil Szczurowski - Hacking the Government How Two Researchers Turned Late-Night Boredom Into a National Audit - Hacking.pdf` (26 pages)
+
 
 ## Slide 1
 
@@ -190,13 +195,12 @@ random_guys@DefCon 34:~# php ./view_source.php
 
 > SOURCE_CODE: VULNERABILITY_ORIGIN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 random_guys@DefCon 34:~# php ./view_source.php
 PAD CMS Source
-> SOURCE_CODE: VULNERABILITY_ORIGIN
-1 = $_REQUEST['uploadPermission'];
 if ($uploadPerm
 ```
 
@@ -210,22 +214,20 @@ random_guys@DefCon 34:~# ./view_media_echo.sh
 
 > ECHO: DOMESTIC_WARNINGS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 random_guys@DefCon 34:~# ./view_media_echo.sh
 PAD CMS Media
 ee > ECHO: GLOBAL_PUBLICATIONS
-Qyverscuumy system wy mmmcuatcry Wp UDMY FAL.
 2 hours ago
-1 Sekurak
 Krytyczne podatnosci RCE w PAD CMS - zgtoszenie przez
 ekspertow Securitum i analiza CERT Polska - konieczne
 natychmiastowe dziatania
 Naszych dwéch audytoréw bezpleczefistwa z Securitum — Robert Kruczek oraz Kamil
 ‘Szczurowski w ramach dziatah typu happy hunting (spontaniczne
 1 day ago
-& covpi
 Rekomendacja Petnomocnika Rzadu ds.
 Cyberbezpieczenstwa: zaprzestanie korzystania z
 oprogramowania PAD CMS
@@ -235,7 +237,6 @@ krajowego systemu cyberbezpieczefistwa natychmiastowe wytaczenie z uzytku.
 Echo
 ee > ECHO: DOMESTIC_WARNINGS
 1 day ago
-@ wp
 Gawkowski: oprogramowanie PAD CMS stanowi zagrozenie
 dla bezpieczeristwa panstwa
 Podmioty krajowego systemu cyberbezpieczeristwa powinny natychmiast przesta¢
@@ -319,12 +320,10 @@ random_guys@DefCon 34:~# ./execute_poc.sh **Themis NetPanel Disclosure**
 
 > SOURCE_CODE: VULNERABILITY_ORIGIN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-random_guys@DefCon 34:~# ./execute_poc.sh
-Themis NetPanel Disclosure
-> SOURCE_CODE: VULNERABILITY_ORIGIN
 GET /panel/layout/vendors/tinymce/filemanager/dialog.php?akey=[] HTTP/2
 Host: vulnerable.host
 ```
@@ -335,15 +334,12 @@ random_guys@DefCon 34:~# ./execute_poc.sh **Themis NetPanel Disclosure**
 
 > SOURCE_CODE: VULNERABILITY_ORIGIN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-random_guys@DefCon 34:~# ./execute_poc.sh
-Themis NetPanel Disclosure
-> SOURCE_CODE: VULNERABILITY_ORIGIN
 HTTP/2 200 OK
 Set-Cookie: PHPSESSID=2cs(...); path=/
-eS
 ```
 
 ## Slide 19
@@ -358,14 +354,11 @@ random_guys@DefCon 34:~# ./execute_poc.sh **Themis NetPanel Disclosure**
 
 > SOURCE_CODE: VULNERABILITY_ORIGIN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-random_guys@DefCon 34:~# ./execute_poc.sh
-Themis NetPanel Disclosure
-> SOURCE_CODE: VULNERABILITY_ORIGIN
 POST
-/panel/layout/vendors/tinymce/filemanager/ajax_calls.php?action=save_img
 HTTP/2
 Host: vulnerable.host
 Cookie: last_position=%2F; PHPSESSID=2cs(...)

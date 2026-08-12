@@ -4,23 +4,28 @@ speakers: ["Angelo Frasca Caccia"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Angelo Frasca Caccia - Chaining Microsoft Binaries to get Privileged Primitives in the Windows kernel - Binariesto Achiev.pdf"
 pages: 45
 sha256: "890f8a1a50b55f2d0f9905b8a2eb0c6493873e1df4f43e6e1a257752801c6d92"
-text_chars: 17408
-ocr_pages: 4
+text_chars: 16733
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:12:12Z"
+converted_at: "2026-08-12T06:20:31Z"
 ---
 # Chaining Microsoft Binaries to get Privileged Primitives in the Windows kernel
 
 **Speakers:** Angelo Frasca Caccia  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Angelo Frasca Caccia - Chaining Microsoft Binaries to get Privileged Primitives in the Windows kernel - Binariesto Achiev.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -478,58 +483,31 @@ This call path was replaced with a function that **skips COM initialization** en
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overcoming Patches - Sideloading faultrep.dll
 B® Process Monitor - Sysinternals: www.sysinternals.com
 File Edit Event Filter Tools Options Help
-SCA See VIO Al\FQAA BaAQBA
 Ti... Proces... >... Operati... Path
-9:... Hlwerfau...
-9:... Niwerfau...
-o0oononononononoo ©
-Hiwerfau
 a .
-> SentinelOne
-.. Hwerfau...
-.. Hiwerfau...
 .. Hwerfau...
 .. Hwerfau...
-.. Hiwerfau...
 .. Hwerfau...
 .. Hwerfau...
-.. Hiwerfau...
 .. Hwerfau...
-.. Hwerfau...
-DMAMAA®AAAAADA DED
-.. Create...
-.. a.Create...
 ...C:\Users\test\Desktop\faultrep
-.. Create...
-.. Create...
-.. s/Create...
-.. »Create...
-.. Create...
-.. Create...
-.. Create...
-.. »Create...
-.. alCreate...
 .. Create...
 “Create
 C:\Users\test\Desktop\ADVAPI32.dll
 C:\Users\test\Desktop\msvert.dll
-C:\Users\test\Desktop\SECHOST.dIl
-C:\Users\test\Desktop\RPCRT4-.dll
-C:\Users\test\Desktop\dbghelp.dll
-C:\Users\test\Desktop\RPCRT4.dll
 C:\Users\test\Desktop\dbgcore.DLL
 C:\Users\test\Desktop\SHELL32.dll
 C:\Users\test\Desktop\USER32.dll
 C:\Users\test\Desktop\GDI32.dll
 C:\Users\test\Desktop\msvcp_win.dll
 C:\Users\test\Desktop\GDI32.dll
-C’\Users\test\Deskton\win3?1 dll
 Result
 NAME NOT FOUND
 NAME NOT FOUND
@@ -695,45 +673,30 @@ SgrmAgent.sys 3. Freeze threads
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Demo
-a .
-> SentinelOne
-40
-```
-
 ## Slide 41
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 te
-(ikaogetat
-Adiministrator:
 \Users\test\Desktop>, O Virus & threat protection
 Protection for your device against threat lave
 O Virus & threat protection > Current threats
 ra & Account protection 0 current threa’
-Wesedtpelld -
-ff) Firewall & network protection thi
 5 App & browser contro 64 annie
 I) Device security
 £1 Device security Quick scan
 } Device perlornance & health
 a Cha
-Bree & family options -
 ) Protection history
 Virus & threat protection settings
 <2 Virus & threat protection updates
 G) Ransomware protection
 IneDrive for file r ry option ase of a ransomware attack
 Set up OneDeve
-a ;
-> SentinelOne
 ```
 
 ## Slide 42
@@ -798,7 +761,8 @@ Next Generation of BYOVD attacks - **entirely based on first-party abusable comp
 
 Sentinelone.com
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 S SentinelOne

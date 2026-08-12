@@ -8,12 +8,18 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Or Yair & Shmuel Cohen_QuickShell Sharing is Caring About an RCE Attack Chain on Quick Share.pdf"
 pages: 113
 sha256: "97864900689090b1a4903b388a0d9c67bf155e16e6f2ee072d65c1da0aeef906"
-text_chars: 23222
-ocr_pages: 62
+text_chars: 20984
+ocr_pages: 56
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:07:39Z"
+converted_at: "2026-08-12T03:57:08Z"
 ---
 # QuickShell Sharing is Caring About an RCE Attack Chain on Quick Share
 
@@ -21,11 +27,13 @@ converted_at: "2026-08-11T21:07:39Z"
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Or Yair & Shmuel Cohen_QuickShell Sharing is Caring About an RCE Attack Chain on Quick Share.pdf` (113 pages)
 
+
 ## Slide 1
 
 Sharing is caring about an RCE attack chain on Quick Share
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 QuickShell
@@ -55,19 +63,6 @@ Research Approach Shift � Vulnerability Discovery RCE Chain
 
 Takeaways GitHub � Q&A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Agenda
-Why Quick share
-Protocol Overview
-Fuzzing
-Research Approach Shift + + Vulnerability Discovery
-RCE Chain
-Ta keaways
-GitHub P QaA
-```
-
 ## Slide 5
 
 ## Slide 6
@@ -76,7 +71,8 @@ GitHub P QaA
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share Windows Version
@@ -84,7 +80,6 @@ Quick Share Windows Version
 Wireless sharing with your PC, made
 easy.
 Send and receive photos, documents, and more between nearby Android
-devices’ and Windows PCs°.
 To get started, install Quick Share for Windows to your PC. Send yourself the
 link to download it.
 By downloading Quick Share for Windows, you agree to the Google Terms of
@@ -117,12 +112,12 @@ https://francozappa.github.io/publication/rearby/paper.pdf
 
 Contain part of the code for Quick Share for Windows
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nearby & Chromium Open-Source Repos
 Contain part of the code for Quick Share for Windows
-fF google / nearby ( Public
 %) A collection of projects focused on connectivity
 that enable building cross-device experiences.
 @ developers.google.com/nearby
@@ -147,6 +142,19 @@ No CVEs
 
 ## Slide 14
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Y)
+=)
+=
+LU
+O
+LL
+Research Goal
+```
+
 ## Slide 15
 
 ## Slide 16
@@ -159,7 +167,8 @@ Finding the communication functions � Send & Recv:
 
 offline_wire_formats.proto
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Protobuf and Offline Frames
@@ -167,7 +176,6 @@ offline_wire_formats.proto
 message OfflineFrame {
 enum Version {
 UNKNOWN_VERSION = @;
-t
 J
 optional Version version = 1;
 optional ViFrame v1 = 2;
@@ -180,39 +188,27 @@ optional ViFrame v1 = 2;
 
 Hooking Quick Share to sniff sent and received Offline Frames on Windows
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-QuickSniff — 1st Tool
-Hooking Quick Share to sniff
-sent and received Offline
-Frames on Windows
-initiator_to_responder:
-payloadTransfer:
-packetType: DATA
-payloadChunk:
-body:
-vi:
-introduction:
-fileMetadata:
-- id: '585290039179534374'
-mimeType: image/png
-name: TFMyMDI@MDYxMzEZMzZM1Ni5wbmc=
-payloadId: '-8969229381597391197'
-size: '622679'
-type: IMAGE
-type: INTRODUCTION
-version: V1
-flags: ®
-index: @
-offset: ‘@'
-payloadHeader:
-id: '-5778571142958742193'
-isSensitive: false
-totalSize: ‘'85'
-type: BYTES
-type: PAYLOAD _TRANSFER
-version: V1
+[Top-left heatmap]
+Y-axis ticks: 80727 / 76687 / 71868 / 65910 / 59954 / 53996 / 50755
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Top-right heatmap]
+Y-axis ticks: 57363 / 57163 / 56963 / 56763 / 56563 / 56363 / 56163
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-left heatmap]
+Y-axis ticks: 58385 / 55345 / 52305 / 49265 / 46225 / 43185 / 40201
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-right panel]
+STM32L767 (M7)
 ```
 
 ## Slide 20
@@ -231,35 +227,25 @@ Encryption � Google’s Ukey2
 
 Advertisement based on Service ID Multiple Connections Strategies  P2P, Star, Cluster
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Nearby Connections API
-Protobuf Based : protobuf }
-rcryotion . . ; souls . okey? _. ra, ia
-Multiple Connections Strategies es @ a,
-= P2P, Star, Cluster
-```
-
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share Protocol Overview
-Initiator : : Responder
 ```
 
 ## Slide 24
 
 CONNECTION_REQUEST Ukey2 Client Init
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share Protocol Overview
 CONNECTION_REQUEST
-Initiator : : Responder
 ```
 
 ## Slide 25
@@ -278,7 +264,8 @@ Connection Response
 Connection Response
 Proprietary communication begins
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share Protocol Overview
@@ -292,14 +279,13 @@ Proprietary communication begins
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 enum FrameType {
 UNKNOWN_FRAME_TYPE = Q;
 CONNECTION_REQUEST = 1;
-CONNECTION RESPONSE = 2;
-PAYLOAD TRANSFER = 3;
 BANDWIDTH_UPGRADE_NEGOTIATION = 4;
 KEEP_ALIVE = 5;
 DISCONNECTION = 6;
@@ -313,14 +299,13 @@ BANDWIDTH_UPGRADE_RETRY = 12;
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 enum FrameType {
 UNKNOWN_FRAME_TYPE = Q;
 CONNECTION_REQUEST = 1;
-CONNECTION RESPONSE = 2;
-PAYLOAD TRANSFER = 3;
 BANDWIDTH_UPGRADE_NEGOTIATION = 4;
 KEEP_ALIVE = 5;
 DISCONNECTION = 6;
@@ -334,7 +319,8 @@ BANDWIDTH_UPGRADE_RETRY = 12;
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packet Types
@@ -347,7 +333,6 @@ BANDWIDTH_UPGRADE_NEGOTIATION
 KEEP_ALIVE = 5;
 DISCONNECTION = 6;
 PAIRED_KEY_ENCRYPTION = 7;
-AUTHENTICATION MESSAGE = 8;
 AUTHENTICATION RESULT = 9;
 AUTO_RESUME = 10;
 AUTO_RECONNECT = 11;
@@ -356,11 +341,10 @@ BANDWIDTH_UPGRADE_RETRY = 12;
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 33/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-oo * cae\a Ns j
-Z .
 Quick Share
 Implementation
 ```
@@ -373,7 +357,8 @@ Connection Response
 Connection Response
 Proprietary communication begins
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Recap
@@ -391,13 +376,13 @@ Enforces “Contacts” and “Your Devices” modes
 
 Payload Transfer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
 Enforces “Contacts” and “Your Devices” modes
 Payload Transfer
-Initiator : : Responder
 ```
 
 ## Slide 33
@@ -406,7 +391,8 @@ Initiator : : Responder
 
 Custom protobuf data in Payload Transfer Payload
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share
@@ -433,26 +419,20 @@ version: V1
 
 Custom protobuf data in Payload Transfer OfflineFrame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share Implementation
 Custom protobuf data in
 Payload Transfer OfflineFrame
 packe DATA
-Ke) 1K:
-: CAESYggBE14KWgolYmFzZSShcGs'
-7 @
 nsitive: false
-e: 102"
 type: BYTES
 ype: PAYLOAD_TRANSFER
 ersion: V1
-pairedKeyEncryp
 retIdHash:
 palHIL+r
-signedData: MEUCIQC24J1oLakk1lypg7
-type: PAIRED _KEY_ENCRYPTION
 version: V1
 index: @
 set: ‘@'
@@ -464,7 +444,6 @@ si
 type: BYTES
 ype: PAYLOAD_TRANSFER
 ‘sion: V1
-@976901'
 ```
 
 ## Slide 35
@@ -474,7 +453,8 @@ Enforces “Contacts” and “Your Devices” modes
 Paired Key Encryption
 Paired Key Result
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
@@ -490,14 +470,13 @@ INTRODUCTION & ACCEPT After paired Key Encryption:
 
 Introduction
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
 INTRODUCTION & ACCEPT
 After paired Key Encryption:
-7 Introduction
-Initiator : : Responder
 ```
 
 ## Slide 37
@@ -506,7 +485,8 @@ INTRODUCTION & ACCEPT After paired Key Encryption:
 
 Introduction
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
@@ -516,7 +496,6 @@ Introduction
 : Shmuel's phone
 : Wants to share an image
 : PIN: 6712 @
-Initiator : : Responder
 ```
 
 ## Slide 38
@@ -526,14 +505,14 @@ Initiator : : Responder
 Introduction
 Accept
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
 INTRODUCTION & ACCEPT
 After paired Key Encryption:
 Introduction
-—_x__,—
 Initiator
 Shmuel's phone
 Wants to share an image
@@ -551,7 +530,8 @@ Raw File
 Payload Transfer
 010100101101010101100010101101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
@@ -568,7 +548,8 @@ Payload Transfer
 
 Introduction & Accept
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
@@ -577,51 +558,48 @@ Introduction & Accept
 Device name
 SafeBreach_Labs @ B (Senin
 Sharing 1 file Nearby devices
-By maticous.txt
-~~ Shmuel's phone
 Make sure both devices are unlocked,
 close together, and have Bluetooth
 tumed on. Devices you're sharing with
 need Quick Share tumed on and visible
-Oe er OD _sSafeBreach's PC
 w
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FUZZING ‘ —Q
 Quick Share +8 ~
-@
 Corpus Input QuickShare
 Mutation CRASHES
 ```
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing Infrastructure
 m winafl Public
-~ master ~ ¥ 3 Branches 0 Tags
 ```
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing Infrastructure
 m winafl Public
-master ~ P 3 Branches D0 Tags
 ```
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing Infrastructure
@@ -633,7 +611,8 @@ master ~ P 1Branch © 4 Tags
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Accept” Patch
@@ -650,7 +629,8 @@ Decline
 
 v
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Auto-Accept feature
@@ -665,20 +645,16 @@ Accept(share_target, base: :DoNothing());
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Auto-Accept feature
 }
 ccept self shares when not in high-visibility mod
-. eoeeciee 20 1 : Seibils yy
 NS_LOG(INFO) << __func__ << ": Auto-accepting self share.”;
 Accept(share_target, base: :DoNothing());
 }
-4)
-‘Dp
-mutA arcr
-AUTO a =
 ```
 
 ## Slide 48
@@ -693,7 +669,8 @@ Stateful
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 times
@@ -702,27 +679,20 @@ WinAFL 1.17 based on AFL 2.43b (
 @ days, @ hrs, @ min, 18 sec
 none seen yet
 none seen yet
-@ (0.00%)
-@ (0.00%)
 calibration
 23/40 (57.50%)
 64
-0/0, 0/8, 0/@
 0/0, 0/8, 0/8
 0/8, 0/8, 0/2
 0/0, 0/8, 0/2
-0/0, 0/8, 0/2
 0/0, 0/8
 n/a, n/a
-Be)
-tas]
 28.53% / 34.41%
 1.31 bits/tuple
 1 (50.00%)
 2 (100.00%)
 @ (@ unique)
 @ (@ unique)
-OrRN N
 n/a
 12%
 stage
@@ -748,7 +718,7 @@ Fast 2 connections:
 
 **`test.exe`**  **`test(1).exe`**
 
-```
+\```
 // Break the string at the dot.
 autofile_name1=file_name.substr(0, first);
 autofile_name2=file_name.substr(first);
@@ -761,7 +731,7 @@ target= (folder+file_name1+L" ("+std::to_wstring(++count) +L")"+ file_name2);
   ...
 file.open(target, std::fstream::binary|std::fstream::in);
 }
-```
+\```
 
 ## Slide 52
 
@@ -803,7 +773,8 @@ Raw File
 Payload Transfer
 010100101101010101100010101101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
@@ -828,13 +799,13 @@ Raw File
 Payload Transfer
 010100101101010101100010101101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Payload Transfer
 INTRODUCTION & ACCEPT
 After paired Key Encryption:
-—¢@i. Jug ee : | Shmuel's phone
 ; Wants to share an image
 PIN: 6712 @
 ae Raw File
@@ -849,7 +820,8 @@ Bypasses all “Accept” in all visibility modes: Your Devices
 
 Contacts Everyone
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Transfer Acceptance Bypass
@@ -864,7 +836,8 @@ Everyone
 
 Connecting endpoints to our own AP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Forcing WiFi
@@ -877,7 +850,7 @@ our own AP
 
 ### Medium can be changed during the session.
 
-```
+\```
 // Accompanies Medium.WIFI_HOTSPOT.// Accompanies Medium.WIFI_LAN.
 message WifiHotspotCredentials {message WifiLanSocket {
 optionalstring ssid = 1;optionalbytes ip_address = 1;
@@ -898,7 +871,7 @@ optionalstring peer_id = 1;
 }
 optional LocationHint location_hint = 2;
 }
-```
+\```
 
 ## Slide 63
 
@@ -912,7 +885,8 @@ Mitigated by Google  Android devices no longer connect to internet through a 
 
 Internet access is permitted through a Bandwidth Upgrade WiFi network!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick Share on Windows
@@ -926,7 +900,8 @@ Internet access is permitted through a Bandwidth Upgrade WiFi network! We can no
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 97/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Standard stones may sometimes
@@ -939,7 +914,8 @@ Create files in “Downloads” without approval WiFi MITM �30 sec max) Crash 
 
 Force Quick Share to continuously open a file
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Primary Abilities We Achieved
@@ -957,7 +933,8 @@ Encrypted application layer is a standard. Leveraging MITM for straight forward 
 
 Quick Share’s files are placed in “Downloads” - the downloads folder for browsers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Downloading an Insight
@@ -1000,7 +977,8 @@ VSCodeSetup.exe
 
 Trying to bridge the gaps anyway, starting with making the WiFi connection last
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lasting WiFi MITM
@@ -1020,20 +998,10 @@ We’re now MITM
 
 Crash
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Force
-WiFi
-Connection
-eum auumes Were now
-% 7] MITM
-Crash
-```
-
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Knowing Downloaded File Names
@@ -1043,13 +1011,13 @@ Knowing Downloaded File Names
 
 TLS Client Hello � Server Name Indication Extension
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Downloaded Files Metadata - Domain
 TLS Client Hello - Server Name Indication Extension
 Source it Protocol Length Info
-1.135..,10... 13.10: TiEsvi.3 439Client Hello
 -Extension: server_name (len=26)
 Type: server_name (0)
 Length: 26
@@ -1062,12 +1030,12 @@ Server Name:| code.visualstudio.com
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Downloaded Files Metadata - Size
 Single TCP session per download
-v
 Approximate download size
 ```
 
@@ -1103,7 +1071,8 @@ VSCodeUserSetup-x64�1.91.0.exe
 
 notepad-plus-plus.org
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Improvement —
@@ -1118,16 +1087,14 @@ notepad-plus-plus.org
 
 github.com/.../npp.8.6.9.Installer.x64.exe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Improvement —
 Monitoring Domain Paths
 notepad-plus-plus.org
 Download Notepad++ x64
-github.com/.../npp.8.6.9.Installer.x6 4.exe
-YP folepat ——, ©)
-@ vormor
 GitHub
 ```
 
@@ -1138,19 +1105,6 @@ notepad-plus-plus.org
 github.com/.../npp.8.6.9.Installer.x64.exe
 
 objects.githubusercontent.com
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Improvement —
-Monitoring Domain Paths
-notepad-plus-plus.org
-Download Notepad++ x64
-github.com/.../npp.8.6.9.Installer.x6 4.exe
-——, ©) objects.githubusercontent.com
-GitHub
-GitHub
-```
 
 ## Slide 84
 
@@ -1163,16 +1117,6 @@ If � TCP data <= actual executable size � 15%� We know it’s the executab
 ## Slide 85
 
 Force Detect EXE WiFi Download Connection Name Crash
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Force Detect EXE
-WiFi Download
-Connection Name
-Cs)
-Crash
-```
 
 ## Slide 86
 
@@ -1190,12 +1134,13 @@ Overwrite files (not just create)
 
 ## Slide 87
 
-```
+\```
 Check if
 VSCodeSetup.exe exists
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chrome’s Download Process
@@ -1205,17 +1150,18 @@ VSCodeSetup.exe exists
 
 ## Slide 88
 
-```
+\```
 Check if
 VSCodeSetup.exe exists
-```
+\```
 
-```
+\```
 Unconfirmed
 550383.crdownload
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Chrome’s Download Process
@@ -1227,78 +1173,66 @@ Unconfirmed
 
 ## Slide 89
 
-```
+\```
 Check if
 VSCodeSetup.exe exists
-```
+\```
 
-```
+\```
 Unconfirmed
 550383.crdownload
-```
+\```
 
-```
+\```
 VSCodeSetup.exe
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Chrome’s Download Process
-ox J Check if
-VSCodeSetup.exe exists
-Unconfirmed
-550383 .crdownload
-VSCodeSetup.exe
-```
+\```
 
 ## Slide 90
 
-```
+\```
 Check if
 VSCodeSetup.exe exists
-```
+\```
 
-```
+\```
 Unconfirmed
 550383.crdownload
-```
+\```
 
-```
+\```
 VSCodeSetup.exe
-```
+\```
 
 ## Slide 91
 
-```
+\```
 Check if
 VSCodeSetup.exe exists
-```
+\```
 
-```
+\```
 Unconfirmed
 550383.crdownload
-```
+\```
 
 Hold last TCP packet
 
 Send malicious **`VSCodeSetup.exe`**
 
-```
+\```
 VSCodeSetup.exe
-```
+\```
 
 ## Slide 92
 
 .crwd is renamed and our file is deleted
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overwriting Chrome’s Download
 .crwd is renamed and our file is deleted
-Os
-Beg VSCodeUserSetup-x64-1.91.0.exe
 94.9 MB » Done
 Recent download history
 ```
@@ -1321,12 +1255,12 @@ Chrome deletes the .crdownload file Leaves our malicious file in place Reports s
 
 Force Detect EXE Force WiFi Download Continuous Connection Name Open Crash Send a File QuickShell Without RCE Approval
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Force Detect EXE Force ae 7
 WiFi Download Continuous O2
-a
 Connection Name Open x
 Crash Send a File QuickShel
 Without RCE
@@ -1335,7 +1269,8 @@ Approval
 
 ## Slide 96
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 emo
@@ -1345,9 +1280,7 @@ Settings
 € > vy A RF - Network and Internet > Network Connections
 Disable this network d Rename this connection View Mobile hotspot
 Bluetooth Network Connection Ethernet 2
-" "
 A VMware Network Adapter VMnet1 A VMware Network Adapter
-" ”
 Share over
 Ethernet 6
 Power saving
@@ -1471,7 +1404,8 @@ Files are still written to disk on Windows but are later deleted.
 
 Google calls them: “Unknown Files”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patch - Remote Unauthorized File Write
@@ -1479,37 +1413,26 @@ PowerShell
 Files are still written
 to disk on Windows
 but are later deleted.
-Google callsthem:  __....... F —— mee
-< * © > dowloads > SexchDo, @ etmemsoedie
 ¢ New NN Sort one Saar
-“Unk Files” ve
-NKNOWN FES
-.
 + Select
 ```
 
 ## Slide 104
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-void NearbySharingServicelImp1: :RemoveIncomingPay loads (
 const IncomingShareSession& session) {
 LOG(INFO) << __func__ << ": Cleaning up payloads due to transfer failure";
 nearby_connections_manager_->ClearIncomingPayloads();
-std: :vector<std::filesystem::path> files_for_deletion;
 auto file_paths_to delete =
-nearby_connections_manager_->GetAndClearUnknownFilePathsToDelete();
 for (auto it = file_paths_to_delete.begin(); it != file_paths_to _delete.end();
 ++it) {
 VLOG(1) << __func__ << “: Has unknown file path to delete.";
-files _for_deletion.push_back(*it);
 }
-std: :vector<std:: filesystem: :path> payload _file_path =
-session. GetPayloadFilePaths();
 files_for_deletion.insert(files_for_deletion.end(), payload_file_path.begin(),
 payload file_path.end());
-file_handler |.DeleteFilesFromDisk(std::move(files_for_deletion), []() {})3;
 ```
 
 ## Slide 105
@@ -1520,7 +1443,8 @@ Result:
 
 Only the first file is deleted
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass - Remote Unauthorized File Write
@@ -1532,12 +1456,12 @@ Only the first file is deleted
 
 ## Slide 106
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BP Windows PowerShell x qe Oo x
 PS C:\Users\Or\Documents> .\send_file_with_bypass_after_fix.exe wifi_lan 127.0.0.1 33506 C:\Windows\System32\calc.exe QVRUQUNLRVJfRk
-LMRQ==
 Downloads x + from your devices - Ready to receive
 < ay G © > Downloads > Search Do, Q ices that are signed into
 ch.labs@gmail.com can share
@@ -1545,13 +1469,10 @@ device
 @ New ~ ie “NL Sort ~ oe CB Details
 & Gallery |
 > @ Or- Personal
-ME Desktop = #
 Downloads #
-&
 & Pictures * Drop files or folders to send
 B documents #
 aitet cot + Select
-@ Music *
 ```
 
 ## Slide 107
@@ -1568,13 +1489,24 @@ July 23<sup>rd</sup> , 2024
 
 CVE�2024�38271 – Forcing a lasting WiFi connection CVE�2024�38272 – File approval dialog bypass CVE�2024�10668 � Fix Bypass for CVE�2024�38272
 
+
+> Recovered by OCR — confidence 73/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+CVEs
+CVE- 2024- 38271 - Forcing a lasting WIFI connection -
+CVE- -2024- 38272 - File approval dialog bypass
+CVE- -2024- 10668 - - Fix x Bypass for CVE- 2024- 38272
+```
+
 ## Slide 109
 
 ## Slide 110
 
 Standard stones may sometimes be forged into deadly drones
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 97/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Takeaways

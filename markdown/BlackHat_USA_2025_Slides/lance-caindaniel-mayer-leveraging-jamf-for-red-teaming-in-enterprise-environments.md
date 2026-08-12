@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Lance Cain&Daniel Mayer_Leveraging Jamf for Red Teaming in Enterprise Environments.pdf"
 pages: 55
 sha256: "48f86d400f90d297c065a9ee23e72941cfb7232ab55268e575da8703596d8f76"
-text_chars: 18610
+text_chars: 17814
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:24Z"
+converted_at: "2026-08-12T05:15:58Z"
 ---
 # Leveraging Jamf for Red Teaming in Enterprise Environments
 
 **Speakers:** Lance Cain, Daniel Mayer  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Lance Cain&Daniel Mayer_Leveraging Jamf for Red Teaming in Enterprise Environments.pdf` (55 pages)
+
 
 ## Slide 1
 
@@ -32,13 +37,11 @@ Lance Cain and Daniel Mayer
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-XS $
-TF x
 = 4
-gar
 ‘black hat
 FINGS
 AUGUST be 2025
@@ -225,12 +228,10 @@ Lance Cain
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Introduction — Expectations vs. Reality
 What Admins Document
 @ REG ) SITE1 jamfContains JVM2
@@ -241,10 +242,7 @@ amfPolicies
 jamfCreateAccounts JVM1 I
 jamfPolicies
 jamfUpdateAccounts jamfContains
-SOL.JAMFCLOUD.COM
 jamfScripts
-AZURE_MANAGEMENT_APP.
-UPDATE_TEST
 jamfAdminTo
 jamfContains
 jamfPolicies
@@ -252,7 +250,6 @@ jamfScripts
 LCAIN
 SITE2
 jamfContains
-JVM3
 ```
 
 ## Slide 12
@@ -263,11 +260,10 @@ What We Have Found
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
 Introduction — Expectations vs. Reality
 What Admins Document
 What We Have Found
@@ -279,10 +275,7 @@ amfPolicies
 jamfCreateAccounts JVM1 I
 A jamfPolicies
 jamfUpdateAccounts jamfContains
-SOL.JAMFCLOUD.COM
 jamfScripts
-AZURE_MANAGEMENT_APP.
-UPDATE_TEST
 jamfAdminTo
 jamfContains
 jamfPolicies
@@ -290,67 +283,45 @@ jamfScripts
 LCAIN
 SITE2
 jamfContains
-JVM3
-@-
 jamfMatchedEmail
 jamfAZMatchedEmail
-sive
 jamfAdminTosite
 ENROLL jamfContains
 LCAIN
 jamfContains
 jamfContains jamfContains
 jamfContains
-mfCon
 jamfAdminTo jamfContains
-jamfCreateAPIRe'
 jamfCreateAccounts
-jamfUpdateAPiRoles
-jamfContains
-ateAPiClients
-lamfUpdateAccounts
 APITEST
-jamfadminTo clients
-} jamfUpdateAccounts
 jamfContains
 REG
 jamfUpdateAccounts
 jamfUpdateAccounts
 G) DMAYER
-jamfUpdateaPiClients
 @) TEST_APLCLIENT
 jamfMemberOf
 jamfUpdateAPiClients
-jamfUp¢ jamfUpdateAccounts
 jamfAssignedUser
-Jvm3
 jamfContains (=)
 jamfPolicies
 jamfComputerExtensions
 jamfScripts
 jamfPolicies DAN_TEST
-jomtPoticies jamfPolicies
-jamfComputerExtensions
 jamfComputerExtensions
 jamfCont: jamfPolicies
 jamfContains jamfPolicies
 jamf jamfComputerExtensions
-@) emo /2™!jamfPolicies
 jamfPolicies
-JvMi
 JamfUpdateAPiClients fComputerExtensions
 jamfContains
-jamfComputerExtensions
 jamfContains
 jamfComputerExtensions
 jamfContains
 jamfUpdateAccounts
-jamfContains
 ROUP_EXTENSION
 ROUP_ADMINISTRATORS
-jamfMemberof
 jamfUpdateAccounts
-jamfMemberOf ivan
 Jvm2
 ```
 
@@ -420,20 +391,15 @@ Privilege Escalation – Accounts Jamf Pro Account Creation and Update Edges
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Privilege Escalation — Accounts
 Jamf Pro Account Creation and Update Edges
-UPDATE_TEST
 jamfUpdateAccounts
-eee
 q@p GROUP_ADMINISTRATORS
 jamfCreateAccounts
-SOL.JAMFCLOUD.COM
 ```
 
 ## Slide 21
@@ -470,21 +436,16 @@ SOL.JAMFCLOUD.COM
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Privilege Escalation — API Integrations
 JamfHound Create and Update API Clients and Roles Edges
 DEMO
 jamfUpdateAPIClients
 GROUP_ADMINISTRATORS
-jamfUpdateAPIRoles
 jamfCreateAPIRoles
-jamfCreateAP!Clients
-SOL.JAMFCLOUD.COM
 ```
 
 ## Slide 25
@@ -625,19 +586,16 @@ SOL.JAMFCLOUD.COM
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Code Execution —- Policies and Scripts
 JamfHound Policies and Scripts Edges
 jamfScripts jamfPolicies
 AZURE_MANAGEMENT_APP
 jamfScripts jamfScripts
 jamfPolicies jamfPolicies
-JVM3
 JVM2
 ```
 
@@ -795,17 +753,14 @@ JVM2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Code Execution - Computer Extension Attributes
 JamfHound Computer Extension Edges
 @-
 jamfComputerExtensions
-@-
 jamfComputerExtensions jamfComputerExtension
 JVM2
 ```

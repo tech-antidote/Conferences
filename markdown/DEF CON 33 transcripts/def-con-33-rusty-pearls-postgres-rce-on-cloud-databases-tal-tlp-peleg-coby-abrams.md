@@ -12,7 +12,7 @@ duration_seconds: 1093
 words: 2637
 text_chars: 14989
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Rusty pearls - Postgres RCE on cloud databases

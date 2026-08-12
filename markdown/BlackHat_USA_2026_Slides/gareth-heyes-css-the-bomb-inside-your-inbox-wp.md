@@ -1,5 +1,5 @@
 ---
-title: "CSS The Bomb Inside Your Inbox-WP"
+title: "CSS The Bomb Inside Your Inbox"
 speakers: ["Gareth Heyes"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -12,15 +12,20 @@ text_chars: 61891
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:09:10Z"
+converted_at: "2026-08-12T05:33:24Z"
 ---
-# CSS The Bomb Inside Your Inbox-WP
+# CSS The Bomb Inside Your Inbox
 
 **Speakers:** Gareth Heyes  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Gareth Heyes_CSS The Bomb Inside Your Inbox-WP.pdf` (38 pages)
+
 
 ## Slide 1
 

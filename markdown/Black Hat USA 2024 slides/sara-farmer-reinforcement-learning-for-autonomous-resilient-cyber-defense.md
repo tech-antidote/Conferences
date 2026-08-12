@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Sara Farmer_Reinforcement Learning for Autonomous Resilient Cyber Defense.pdf"
 pages: 25
 sha256: "abb80e3e259e3258b552bd19a0905a2dca901dde2e33fd2aba78fbbe614bc947"
-text_chars: 13947
-ocr_pages: 2
+text_chars: 13884
+ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:38:32Z"
+converted_at: "2026-08-12T04:41:27Z"
 ---
 # Reinforcement Learning for Autonomous Resilient Cyber Defense
 
 **Speakers:** Sara Farmer  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sara Farmer_Reinforcement Learning for Autonomous Resilient Cyber Defense.pdf` (25 pages)
+
 
 ## Slide 1
 
@@ -43,20 +49,17 @@ Ian
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 See Briefing Contributors ~~
 USA 2024
-EPRAL
 FRAZER-NASH
 CONSULTANCY
 ——— A KBR COMPANY —
 DATA SCIENCE PARTNERS
 BAE SYSTEMS
-Lf
-(ues
 ‘wy BMT
 cambridge
 consultants
@@ -302,17 +305,6 @@ Environments Lead & Logos: QinetiQ
 # ARCD Demonstrators
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-black hat a
-Ame
-|
-USA 2024
-ARCD Demonstrators
-```
 
 ## Slide 11
 

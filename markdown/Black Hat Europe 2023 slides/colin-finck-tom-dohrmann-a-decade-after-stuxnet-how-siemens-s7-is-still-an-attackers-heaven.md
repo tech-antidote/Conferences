@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Colin Finck, Tom Dohrmann_A Decade After Stuxnet How Siemens S7 is Still an Attacker's Heaven.pdf"
 pages: 59
 sha256: "2f10022312045b2dce63f90eb2f5ee89200cc47806f5674b5ce0edff0eb1ac65"
-text_chars: 19324
+text_chars: 19376
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:10:52Z"
+converted_at: "2026-08-12T04:01:26Z"
 ---
 # A Decade After Stuxnet How Siemens S7 is Still an Attacker's Heaven
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:10:52Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Colin Finck, Tom Dohrmann_A Decade After Stuxnet How Siemens S7 is Still an Attacker's Heaven.pdf` (59 pages)
 
+
 ## Slide 1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Diack hat
 DECEMBER 4-7
 Ex<CEL LONDON vy UK
 #BHEU @BlackHatEvents
@@ -41,21 +47,6 @@ Ex<CEL LONDON vy UK
 Colin Finck and Tom Dohrmann
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-« wet ys ‘os 2
-a S
-°
-° °
-{ |
-A Decade After Stuxnet:
-How Siemens S77 is Still an
-Attacker's Heaven
-Colin Finck and Tom Dohrmann
-#BHEU @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -265,14 +256,12 @@ Decrypting the Firmware Image For more information on this method, check out
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bl&ckhat
-EUROPE @O2S5
 Decrypting the Firmware Image
 For more information on this method, check out
-blackhat
 LSA 2022
 sOfT7: Revealing the Secrets
 of the
@@ -298,18 +287,18 @@ Multiboot header exists, but at the wrong location.
 
 ➔ We implemented a UEFI-based bootloader to load the image.
 
-```
+\```
 00003770  ff ff ff ff 01 01 01 01  ff ff ff ff ef be ad de  |................|
 00003780  01 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 00003790  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 *
-```
+\```
 
-```
+\```
 000037c0  02 b0 ad 1b 03 00 00 00  fb4f 52 e4 00 00 00 00  |.........OR.....|
 000037d0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
 000037e0  20 57 61 72 6e 69 6e 67  3a 20 66 6f 75 6e 64 20  | Warning: found |
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -319,19 +308,19 @@ Information Classification: General
 
 Early Boot Logging Early boot logs a lot :)
 
-```
+\```
 TD_sprintf(acStack_e8,"   Using GPIO table index #%d, table is at 0x%08x.\n",param3,
            (uint)(&PTR_DAT_18dd32c4)[param3 * 2]);
 CF_puts(acStack_e8);
-```
+\```
 
 But puts implementation was stubbed out :( `void CF_puts(char *param_1)`
 
-```
+\```
 {
   return;
 }
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -341,7 +330,7 @@ Information Classification: General
 
 Early Boot Logging ➔ Patched the functions in our custom bootloader <u>`patcher.set_pc(0x10c072a0);`</u> `// mov    dx,0x3f8`
 
-```
+\```
 patcher.place_instruction(bytes:&[0x66, 0xba, 0xf8, 0x03]);
 letlabel: Label =patcher.label();
 // mov    al,BYTE PTR [rdi]
@@ -351,20 +340,20 @@ patcher.place_instruction(bytes:&[0xee]);
 // inc    rdi
 patcher.place_instruction(bytes:&[0x48, 0xff, 0xc7]);
 // test   al,al
-```
+\```
 
-```
+\```
 patcher.place_instruction(bytes:&[0x84, 0xc0]);
 patcher.jne(label);
-```
+\```
 
-```
+\```
 // ret
-```
+\```
 
-```
+\```
 patcher.place_instruction(bytes:&[0xc3]);
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -374,7 +363,7 @@ Information Classification: General
 
 #### Early Boot Logging
 
-```
+\```
 Checking mlfb 'default' against index 0, mlfb='6ES7 672-5DC11-0YA0 '
 Checking mlfb'default' against index 1, mlfb='6ES7 672-5SC11-0YA0 '
 Checking mlfb'default' against index 2, mlfb='6ES7 672-5VC11-0YA0 '
@@ -382,31 +371,31 @@ Checking mlfb'default' against index 3, mlfb='6ES7 672-5WC11-0YA0 '
 Checking mlfb'default' against index 4, mlfb='default'
 Using GPIO table index #4, table is at 0x18dd32e8.
 Setting up Local APIC...
-```
+\```
 
-```
+\```
 found IO-APIC 0 at 0xfec00000 (version 0x20) with 24 entries
 setting IA32_EFER.NXE
 Initializing IPC...
-```
+\```
 
-```
+\```
    prepare local structures...
-```
+\```
 
 - `setting ISR attributes`
 
 - `initializing wait elements`
 
-```
+\```
     - initializing spinlocks and memory
    prepare own notification info...
    do architecture specific init...
-```
+\```
 
-```
+\```
 ADONIS boot successful, starting first user thread...
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -418,15 +407,15 @@ Information Classification: General
 
 ##### The kernel tries to communicate with the hypervisor via hypercalls:
 
-```
+\```
 [root@desktop:/sys/kernel/debug/tracing]# echo 1 > events/kvm/kvm_hypercall/enable
-```
+\```
 
-```
+\```
 [root@desktop:/sys/kernel/debug/tracing]# cat trace_pipe
-```
+\```
 
-```
+\```
 <...>-1914303 [000] ..... 24024.416368: kvm_hypercall: nr 0x401 a0 0x0 a1 0x0 a2 0xffffffff a3 0x10002230
 <...>-1914303 [000] ..... 24024.416372: kvm_hypercall: nr 0x401 a0 0x0 a1 0x1 a2 0xffffffff a3 0x2c
 qemu-system-x86-1914303 [000] ..... 24024.967093: kvm_hypercall: nr 0x504 a0 0x10c006a8 a1 0x0 a2 0xffffffff a3 0x2c
@@ -435,7 +424,7 @@ qemu-system-x86-1914303 [000] ..... 24024.968278: kvm_hypercall: nr 0x503 a0 0x2
 qemu-system-x86-1914303 [000] ..... 24025.019161: kvm_hypercall: nr 0x101 a0 0x68747541 a1 0x444d4163 a2 0x69746e65 a3 0x0
 qemu-system-x86-1914303 [000] ..... 24025.019164: kvm_hypercall: nr 0x102 a0 0x100199ac a1 0x444d4163 a2 0x69746e65 a3 0xffffffff
 qemu-system-x86-1914303 [000] ..... 24025.019938: kvm_hypercall: nr 0x204 a0 0xfffffc18 a1 0x1 a2 0x1 a3 0xfffffc18
-```
+\```
 
 Read IO APIC Register Query Memory Region Find Memory Region ➔ Switched to QEMU TCG and modified VMMCALL instruction
 
@@ -477,16 +466,16 @@ Decompiler woes The firmware is a 32-bit ELF running 64-bit code but uses 32-bit
 
 Ghidra aggressively casts between integers and pointers and loses type information.
 
-```
+\```
 31 c0XOREAX,EAX
 85 f6TESTESI,ESI
 74 1c           JZ          LAB_16845302
 66 2e 0f        NOP         word ptr CS:[RAX + RAX*0x1]
 1f 84 00
 00 00 00 00
-```
+\```
 
-```
+\```
             LAB_168452f0
 67 44 8b        MOV         R8D,dword ptr [EDI + EAX*0x4]
 04 87
@@ -497,11 +486,11 @@ Ghidra aggressively casts between integers and pointers and loses type informati
 77 ee           JA          LAB_168452f0
             LAB_16845302
 f3 c3           RET
-```
+\```
 
 Other decompilers suffer from similar problems.
 
-```
+\```
 uVar1 = 0;
 if (param_2 != 0) {
 do {
@@ -511,7 +500,7 @@ uVar1 = uVar1 + 1;
   } while (uVar1 < param_2);
 }
 return;
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -521,7 +510,7 @@ Information Classification: General
 
 Custom Processor Definitions to the Rescue We forked Ghidra's x86-64 processor definitions and changed the pointer size.
 
-```
+\```
 uVar1 = 0;
 if (count != 0) {
 do {
@@ -530,7 +519,7 @@ uVar1 = uVar1 + 1;
   } while (uVar1 < count);
 }
 return;
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -562,23 +551,23 @@ Information Classification: General
 
 #### Static Analysis Helpers Auto-renaming functions based on logging calls
 
-```
+\```
 TD_debug_enter_function(0xdb,"AcpiFindRootPointer","tbxfroot",8);
 TD_debug_enter_function(0x1c1,"AcpiTerminate","utxface",1);
 TD_debug_enter_function(0xdc,"HwDerivePciId","hwpci",0x10);
 TD_debug_enter_function(0xa3,"PsGetNextPackageLength","psargs",0x20);
-```
+\```
 
 Auto-decoding error codes based on Wireshark dissector `if (*(int *)(param_1 + 0x6c) == -1) {`
 
-```
+\```
                   /* OMS Error: GeneralIntegrity/IntegrityError */
 return 0x80414c0001defea1;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -666,7 +655,7 @@ Information Classification: General
 
 #### Asymmetric Key Exchange
 
-```
+\```
 /* This code calculates x * x * x – x + constant – (y * y)
                      This fits the equation of an elliptic curve: y*y=x*x*x+ax+b
                      This code checks that the public key is on the curve. */
@@ -678,7 +667,7 @@ TD_square_192bit(&local_288,public_key_y);
 TD_sub_192bit(&local_2a8,&local_2a8,&local_288);
 TD_truncate_192bit(&local_2a8,&local_2a8);
 iVar1 = TD_all_zero(&local_2a8);
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -696,11 +685,11 @@ Asymmetric Key Exchange Quick refresher on Elliptic Curve Diffie-Hellman:
 
 3. Multiply nonce with PLC public key to get the shared secret
 
-```
+\```
 TD_generate_random_number(0,&nonce,0x18);
 TD_EC_MULT(&client_public_key,&TD_G,&nonce,6);
 TD_EC_MULT(&derived_shared_secret,&server_public_key,&nonce,6);
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -748,7 +737,7 @@ Information Classification: General
 
 #### Shared Key Derivation
 
-```
+\```
 TD_matrix_exp_192bit(buffer1,buffer1,shared_secret);
 do {
   dest = (int *)((int)buffer2 + offset);
@@ -758,13 +747,13 @@ do {
 } while (offset != 0x60);
 TD_SHA256_DIGEST(digest,(byte *)buffer2,0x60);
 TD_copy_ints((int *)digest,6,(int *)output);
-```
+\```
 
-```
+\```
 TD_SHA256_DIGEST(sha_output,(byte *)sha_input,0x18);
 TD_modified_aes_encrypt(sha_output,output);
 TD_modified_aes_encrypt(auStack_38,output + 0x10);
-```
+\```
 
 #BHEU @BlackHatEvents
 
@@ -908,6 +897,20 @@ Information Classification: General
 #BHEU @BlackHatEvents
 
 Information Classification: General
+
+
+> Recovered by OCR — confidence 92/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Blob Structure
+Oxfeeldead Length (200) 1 1 Symmetric Key Checksum Symmetric Key Flags
+PLC Public Key Checksum PLC Public Key Flags Client Publick eyz
+EncryptedS K EncryptedDigest
+FirstlV EncryptedChallenge
+EncryptedChallenge AuthenticationT ag
+AuthenticationT ag
+Information Classification: General
+```
 
 ## Slide 51
 

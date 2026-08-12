@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Rocky Bernstein-How to Get the Most Out of the Python Decompilers Uncompyle6 and Decompyle3 - How to Write and Read a Bytecode Decompiler.pdf"
 pages: 110
 sha256: "b088658647a2af49818185317f354793efd69a3eefbbf22ecc5ff9b040010bdf"
-text_chars: 51086
-ocr_pages: 1
-has_ocr: true
+text_chars: 79447
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 12
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:50:58Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T04:50:39Z"
 ---
 # How to Get the Most Out of the Python Decompilers Uncompyle6 and Decompyle3 - How to Write and Read a Bytecode Decompiler
 
 **Speakers:** Rocky Bernstein  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Rocky Bernstein-How to Get the Most Out of the Python Decompilers Uncompyle6 and Decompyle3 - How to Write and Read a Bytecode Decompiler.pdf` (110 pages)
+
 
 ## Slide 1
 
@@ -208,7 +213,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 **Simple Python Program** In file `five.py` :
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -217,7 +222,7 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -227,7 +232,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 In file `five.py` :
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -236,14 +241,14 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 Now run the code:
 
-```
+\```
 $ python five.py
   5
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -253,7 +258,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 In file `five.py` :
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -262,23 +267,23 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 Now run the code:
 
-```
+\```
 $ python five.py
   5
-```
+\```
 
 Instruction bytecode of main program:
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -286,7 +291,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Byte-Compiling Python**
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -295,7 +300,7 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -303,7 +308,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Byte-Compiling Python**
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -312,7 +317,7 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 ##### Byte compile this program:
 
@@ -322,7 +327,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Byte-Compiling Python**
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -331,16 +336,16 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 ##### Byte compile this program:
 
-```
+\```
 1$ python -m compileall five.py
 2Compiling 'five.py'...
 3$ ls -l __pycache__/five.cpython-38.pyc
 4-rw-rw-r-- 1 rocky rocky 301 Feb 17 10:16 __pycache__/five.cpython-38.pyc
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -348,7 +353,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Byte-Compiling Python**
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -357,16 +362,16 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 ##### Byte compile this program:
 
-```
+\```
 1$ python -m compileall five.py
 2Compiling 'five.py'...
 3$ ls -l __pycache__/five.cpython-38.pyc
 4-rw-rw-r-- 1 rocky rocky 301 Feb 17 10:16 __pycache__/five.cpython-38.pyc
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -374,7 +379,7 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Byte-Compiling Python**
 
-```
+\```
 """
 BlackHat Asia Example
 """
@@ -383,32 +388,32 @@ deffive():
 return"5"
 # Call the function we just defined.
 print(five())
-```
+\```
 
 ##### Byte compile this program:
 
-```
+\```
 1$ python -m compileall five.py
-```
+\```
 
-```
+\```
 2Compiling 'five.py'...
-```
+\```
 
-```
+\```
 3$ ls -l __pycache__/five.cpython-38.pyc
-```
+\```
 
-```
+\```
 4-rw-rw-r-- 1 rocky rocky 301 Feb 17 10:16 __pycache__/five.cpython-38.pyc
-```
+\```
 
 ##### I run the bytecode:
 
-```
+\```
 $ python /tmp/five-moved.pyc
 5
-```
+\```
 
 ##### and again I get 5.
 
@@ -482,42 +487,665 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 ## Slide 37
 
-# **Python Bytecode Decompilation Example**
+Python Bytecode Decompilation Example
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
 
-- **`1 $ uncompyle6 /tmp/five-moved.pyc 2 # uncompyle6 version 3.9.1 3 # Python bytecode version base 3.8.0 (3413) 4 # Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0] 5 # Embedded file name: five.py 6 # Compiled at: 2024-02-17 10:16:08 7 # Size of source mod 2**32: 153 bytes 8 """ 9 BlackHat Asia Example`**
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
 
-- **`10 """ 11 12 def five (): 13 """Returns the string five""" 14 return "5" 15 16 17 print(five()) 18 # okay decompiling /tmp/five-moved.pyc`**
+15
 
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+"""
+BlackHat Asia Example
+"""
+
+def five():
+    """Returns the string five"""
+    return "5"
+
+print(five())
+# okay decompiling /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+# okay decompiling /tmp/five-moved.pyc
+$ uncompyle6 /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+18
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 38
 
-# **Python Bytecode Decompilation Example**
+Python Bytecode Decompilation Example
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
 
-- **`1 $ uncompyle6 /tmp/five-moved.pyc 2 # uncompyle6 version 3.9.1 3 # Python bytecode version base 3.8.0 (3413) 4 # Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0] 5 # Embedded file name: five.py 6 # Compiled at: 2024-02-17 10:16:08 7 # Size of source mod 2**32: 153 bytes 8 """ 9 BlackHat Asia Example`**
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
 
-- **`10 """ 11 12 def five (): 13 """Returns the string five""" 14 return "5" 15 16 17 print(five()) 18 # okay decompiling /tmp/five-moved.pyc`**
+15
 
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+"""
+BlackHat Asia Example
+"""
+
+def five():
+    """Returns the string five"""
+    return "5"
+
+print(five())
+# okay decompiling /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+# okay decompiling /tmp/five-moved.pyc
+$ uncompyle6 /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+18
+# Python bytecode version base 3.8.0 (3413)
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 39
 
-# **Python Bytecode Decompilation Example**
+Python Bytecode Decompilation Example
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
 
-- **`1 $ uncompyle6 /tmp/five-moved.pyc 2 # uncompyle6 version 3.9.1 3 # Python bytecode version base 3.8.0 (3413) 4 # Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0] 5 # Embedded file name: five.py 6 # Compiled at: 2024-02-17 10:16:08 7 # Size of source mod 2**32: 153 bytes 8 """ 9 BlackHat Asia Example`**
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
 
-- **`10 """ 11 12 def five (): 13 """Returns the string five""" 14 return "5" 15 16 17 print(five()) 18 # okay decompiling /tmp/five-moved.pyc`**
+15
 
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+"""
+BlackHat Asia Example
+"""
+
+def five():
+    """Returns the string five"""
+    return "5"
+
+print(five())
+# okay decompiling /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+# okay decompiling /tmp/five-moved.pyc
+$ uncompyle6 /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+18
+# Python bytecode version base 3.8.0 (3413)
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# Embedded file name: five.py
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 40
 
-# **Python Bytecode Decompilation Example**
+Python Bytecode Decompilation Example
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
 
-- **`1 $ uncompyle6 /tmp/five-moved.pyc 2 # uncompyle6 version 3.9.1 3 # Python bytecode version base 3.8.0 (3413) 4 # Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0] 5 # Embedded file name: five.py 6 # Compiled at: 2024-02-17 10:16:08 7 # Size of source mod 2**32: 153 bytes 8 """ 9 BlackHat Asia Example`**
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
 
-- **`10 """ 11 12 def five (): 13 """Returns the string five""" 14 return "5" 15 16 17 print(five()) 18 # okay decompiling /tmp/five-moved.pyc`**
+15
 
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+"""
+BlackHat Asia Example
+"""
+
+def five():
+    """Returns the string five"""
+    return "5"
+
+print(five())
+# okay decompiling /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+# Embedded file name: five.py
+# Compiled at: 2024-02-17 10:16:08
+# Size of source mod 2**32: 153 bytes
+# okay decompiling /tmp/five-moved.pyc
+$ uncompyle6 /tmp/five-moved.pyc
+1
+2
+3
+4
+5
+6
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+18
+# Python bytecode version base 3.8.0 (3413)
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+$ uncompyle6 /tmp/five-moved.pyc
+# Embedded file name: five.py
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+"""
+8
+BlackHat Asia Example
+9
+"""
+10
+
+11
+def five():
+12
+    """Returns the string five"""
+13
+    return "5"
+14
+
+15
+
+16
+print(five())
+17
+# okay decompiling /tmp/five-moved.pyc
+18
+"""
+BlackHat Asia Example
+"""
+
+def five():
+    """Returns the string five"""
+    return "5"
+
+print(five())
+$ uncompyle6 /tmp/five-moved.pyc
+1
+# uncompyle6 version 3.9.1
+2
+# Python bytecode version base 3.8.0 (3413)
+3
+# Decompiled from: Python 3.12.2 (main, Feb 14 2024, 04:48:40) [GCC 13.2.0]
+4
+# Embedded file name: five.py
+5
+# Compiled at: 2024-02-17 10:16:08
+6
+# Size of source mod 2**32: 153 bytes
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+# okay decompiling /tmp/five-moved.pyc
+18
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 41
@@ -712,9 +1340,9 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **xdis Disassembly using** **`pydisasm` from**
 
-```
+\```
 $pydisasm/tmp/five_moved.pyc
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -954,18 +1582,18 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phase 3: Parsing Tokens into a Parse Tree**
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR'\nBlackHat Asia Example\n'
 STORE_NAME __doc__
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -973,18 +1601,18 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phase 3: Parsing Tokens into a Parse Tree**
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR'\nBlackHat Asia Example\n'
 STORE_NAME __doc__
-```
+\```
 
 Is parsed:
 
@@ -994,19 +1622,19 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phase 3: Parsing Tokens into a Parse Tree**
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR'\nBlackHat Asia Example\n'
 STORE_NAME __doc__
 LOAD_STR
-```
+\```
 
 Is parsed:
 
@@ -1016,11 +1644,11 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phase 3: Parsing Tokens into a Parse Tree**
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 Constructing Parse Tree from Tokens:
 
@@ -1032,20 +1660,20 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phase 3: Parsing Tokens into a Parse Tree**
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 Constructing Parse Tree from Tokens:
 
 **`LOAD_STR`** `'\nBlackHat Asia Example\n'` **`STORE_NAME`** `__doc__` Is parsed:
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1055,10 +1683,10 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1068,11 +1696,11 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1082,12 +1710,12 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1097,12 +1725,12 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 Constructing Parse Tree from Tokens:
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1110,12 +1738,12 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 3)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1123,13 +1751,13 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 3)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
  assign  ::= exprstore
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1137,13 +1765,13 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 3)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
  assign  ::= exprstore
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1151,13 +1779,13 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 4)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
  assign  ::= exprstore
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1165,14 +1793,14 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 4)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
  assign  ::= exprstore
  stmts   ::= assign
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1180,14 +1808,14 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Parsing Tokens into a Parse Tree (Part 4)**
 
-```
+\```
 LOAD_STR
  expr  ::= LOAD_STR
 STORE_NAME
  store   ::= STORE_NAME
  assign  ::= exprstore
  stmts   ::= assign
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1195,14 +1823,14 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Phases 3 - 5: Final Parse Tree to Source Text** Phase 3. Parse Tree in ASCII Format (First Line):
 
-```
+\```
 stmts
    0. assign
        0. expr
            L.  1   0  LOAD_STR'\nBlackHat Asia Example\n'
        1. store
                    2  STORE_NAME__doc__
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1210,23 +1838,23 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 **Phases 3 - 5: Final Parse Tree to Source Text** Phase 3. Parse Tree in ASCII Format (First Line):
 
-```
+\```
 stmts
    0. assign
        0. expr
            L.  1   0  LOAD_STR'\nBlackHat Asia Example\n'
        1. store
                    2  STORE_NAME__doc__
-```
+\```
 
 ### Phase 4. Abstract Syntax Tree (First Line)
 
-```
+\```
 stmts
   0. docstring
         0  LOAD_STR'\nBlackHat Asia Example\n'
         2  STORE_NAME__doc__
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1234,31 +1862,31 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 **Phases 3 - 5: Final Parse Tree to Source Text** Phase 3. Parse Tree in ASCII Format (First Line):
 
-```
+\```
 stmts
    0. assign
        0. expr
            L.  1   0  LOAD_STR'\nBlackHat Asia Example\n'
        1. store
                    2  STORE_NAME__doc__
-```
+\```
 
 Phase 4. Abstract Syntax Tree (First Line)
 
-```
+\```
 stmts
   0. docstring
         0  LOAD_STR'\nBlackHat Asia Example\n'
         2  STORE_NAME__doc__
-```
+\```
 
 Phase 5. Printing the Abstract Syntax Tree (First line)
 
-```
+\```
 """
 BlackHat Asia Example
 """
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1266,25 +1894,16 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-—
-< INTERMISSION?
-Se
-BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
-```
-
 ## Slide 77
 
 # **Bytecode Disassembly**
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1292,12 +1911,12 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Bytecode Disassembly**
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
-```
+\```
 
 Disassembly using `pydisasm` from **`xdis`** :
 
@@ -1307,18 +1926,18 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Bytecode Disassembly**
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
-```
+\```
 
 Disassembly using `pydisasm` from **`xdis`** :
 
-```
+\```
 $pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1326,16 +1945,16 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Bytecode Disassembly**
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 12 |65 02 65 01 83 01 01 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
 $pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
+\```
 
-```
+\```
 1# ...
 2# Constants:
 3#    0: '\nBlackHat Asia Example\n'
@@ -1357,7 +1976,7 @@ $pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
 19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
 20
 21i(fi())
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
@@ -1365,16 +1984,16 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 # **Bytecode Disassembly**
 
-```
+\```
 0 |64 00 5a 00 64 01 64 02 |
 8 |84 00 5a 01 65 02 65 00 |
 12 |65 02 65 01 83 01 01 00 |
 16 |83 00 83 01 01 00 64 03 |
 24 |53 00                   |
 $pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
+\```
 
-```
+\```
 1# ...
 2# Constants:
 3#    0: '\nBlackHat Asia Example\n'
@@ -1396,281 +2015,1523 @@ $pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
 1910 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
 20
 21i(fi())
-```
+\```
 
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 82
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
-
-```
-1# ...
-2# Constants:
-3#    0: '\nBlackHat Asia Example\n'
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-5#    2: 'five'
-6#    3: None
-7# Names:
-8#    0: __doc__
-9#    1: five
-10#    2: print
-11 # """\nBlackHat Asia Example\n"""
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
 14
-15 # def five():
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-17 6 |64 02| LOAD_CONST("five")
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-20
-21i(fi())
-```
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
 
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 83
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
-
-```
-1# ...
-1# ...
-2# Constants:
-2# Constants:
-3#    0: '\nBlackHat Asia Example\n'
-3#    0: '\nBlackHat Asia Example\n'
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-5#    2: 'five'
-5#    2: 'five'
-6#    3: None
-6#    3: None
-7# Names:
-7# Names:
-8#    0: __doc__
-8#    0: __doc__
-9#    1: five
-9#    1: five
-10#    2: print
-10#    2: print
-11       # """\nBlackHat Asia Example\n"""
-11 # """\nBlackHat Asia Example\n"""
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
 14
-14
-15       # def five():
-15 # def five():
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-17 6 |64 02| LOAD_CONST("five")
-17 6 |64 02| LOAD_CONST("five")
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-20
-20
-21#print(five())
-21i(fi())
-```
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
 
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # """\nBlackHat Asia Example\n"""
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+# print(five())
+21
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 84
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-1# ...
-2# Constants:
-3#    0: '\nBlackHat Asia Example\n'
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-5#    2: 'five'
-6#    3: None
-7# Names:
-8#    0: __doc__
-9#    1: five
-10#    2: print
-11   # """\nBlackHat Asia Example\n"""
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
 14
-15   # def five():
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-17 6 |64 02| LOAD_CONST("five")
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-20
-21i(fi())
-```
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
 
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # """\nBlackHat Asia Example\n"""
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: '\nBlackHat Asia Example\n'
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+# ...
+1
+# Constants:
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 85
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
-
-```
-1# ...
-2# Constants:
-3#    0: '\nBlackHat Asia Example\n'
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-5#    2: 'five'
-6#    3: None
-7# Names:
-8#    0: __doc__
-9#    1: five
-10#    2: print
-11    # """\nBlackHat Asia Example\n"""
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
 14
-15    # def five():
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-17 6 |64 02| LOAD_CONST("five")
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-20
-21i(fi())
-```
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
 
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # """\nBlackHat Asia Example\n"""
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: '\nBlackHat Asia Example\n'
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+# ...
+1
+# Constants:
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: __doc__
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 86
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
-
-```
-1# ...
-2# Constants:
-3#    0: '\nBlackHat Asia Example\n'
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-5#    2: 'five'
-6#    3: None
-7# Names:
-8#    0: __doc__
-9#    1: five
-10#    2: print
-11     # """\nBlackHat Asia Example\n"""
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
 14
-15     # def five():
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-17 6 |64 02| LOAD_CONST("five")
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-20
-21i(fi())
-```
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
 
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # """\nBlackHat Asia Example\n"""
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: '\nBlackHat Asia Example\n'
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+# ...
+1
+# Constants:
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: __doc__
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: __doc__
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 87
 
-# **Bytecode Disassembly**
+Bytecode Disassembly
+$ pydisasm -F extended-bytes -S __pycache__/five.cpython-38.pyc
+  0 |64 00 5a 00 64 01 64 02 |
+  8 |84 00 5a 01 65 02 65 00 |
+ 12 |65 02 65 01 83 01 01 00 |
+ 16 |83 00 83 01 01 00 64 03 |
+ 24 |53 00                   |
+# ...
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+#    2: 'five'
+#    3: None
+# Names:
+#    0: __doc__
+#    1: five
+#    2: print
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
 
-```
-0 |64 00 5a 00 64 01 64 02 |
-8 |84 00 5a 01 65 02 65 00 |
-12 |65 02 65 01 83 01 01 00 |
-16 |83 00 83 01 01 00 64 03 |
-24 |53 00                   |
-$pydisasm-F extended-bytes -S__pycache__/five.cpython-38.pyc
-```
-
-```
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
-1# ...
 14
-2# Constants:
-15       # def five():
-3#    0: '\nBlackHat Asia Example\n'
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
-4#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
-17 6 |64 02| LOAD_CONST("five")
-5#    2: 'five'
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-6#    3: None
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-7# Names:
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
 20
-8#    0: __doc__
-21       # print(five())
-9#    1: five
-2212:     12 |65 02| LOAD_NAME(print)
-10#    2: print
-23 14 |65 01| LOAD_NAME(five)
-11     # """\nBlackHat Asia Example\n"""
-24 16 |83 00| CALL_FUNCTION(0 positional arguments) ; TOS = five()
-12 1:      0 |64 00| LOAD_CONST("\nBlackHat Asia Example\n")
-25 18 |83 01| CALL_FUNCTION(1 positional argument) ; TOS = print(five())
-13 2 |5a 00| STORE_NAME(__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
-26 20 |01 00| POP_TOP
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
 14
-27 22 |64 03| LOAD_CONST(None)
-15     # def five():
-28 24 |53 00| RETURN_VALUE      return None
-16 6:      4 |64 01| LOAD_CONST(<code object five at 0x7f64cb56c030, file "five.py>)
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+# Constants:
+#    0: '\nBlackHat Asia Example\n'
+# Names:
+#    0: __doc__
+       # """\nBlackHat Asia Example\n"""
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+7
+8
+#    1: five
+9
+#    2: print
+10
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # """\nBlackHat Asia Example\n"""
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: '\nBlackHat Asia Example\n'
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+# ...
+1
+# Constants:
+2
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+#    0: __doc__
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: __doc__
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+#    0: __doc__
+ 1:      0 |64 00| LOAD_CONST        ("\nBlackHat Asia Example\n")
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+# ...
+1
+# Constants:
+2
+#    0: '\nBlackHat Asia Example\n'
+3
+#    1: <code object five at 0x7f64cb56c030, file "five.py", line 6>
+4
+#    2: 'five'
+5
+#    3: None
+6
+# Names:
+7
+8
+#    1: five
+9
+#    2: print
+10
+       # """\nBlackHat Asia Example\n"""
+11
+12
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+i
+(fi
+())
+21
+       # print(five())
+12:     12 |65 02| LOAD_NAME         (print)
+        14 |65 01| LOAD_NAME         (five)
+        16 |83 00| CALL_FUNCTION     (0 positional arguments) ; TOS = five()
+        18 |83 01| CALL_FUNCTION     (1 positional argument) ; TOS = print(five())
+         2 |5a 00| STORE_NAME        (__doc__) ; __doc__ = '\nBlackHat Asia Example\n'
+13
+
+14
+       # def five():
+15
+ 6:      4 |64 01| LOAD_CONST        (<code object five at 0x7f64cb56c030, file "five.py>)
+16
+         6 |64 02| LOAD_CONST        ("five")
+17
+         8 |84 00| MAKE_FUNCTION     (No arguments) ; TOS = def five(...): ...
+18
+        10 |5a 01| STORE_NAME        (five) ; five = def five(...): ...
+19
+
+20
+21
+22
+23
+24
+25
+        20 |01 00| POP_TOP
+26
+        22 |64 03| LOAD_CONST        (None)
+27
+        24 |53 00| RETURN_VALUE      return None
+28
+
 29
-17 6 |64 02| LOAD_CONST("five")
-30
-18 8 |84 00| MAKE_FUNCTION(No arguments) ; TOS = deffive(...): ...
-31# Method Name:       five
-19 10 |5a 01| STORE_NAME(five) ; five = deffive(...): ...
-32# Filename:          five.py
-20
-33#Argumentcount:0
-21i(fi())
-```
 
+30
+# Method Name:       five
+31
+# Filename:          five.py
+32
+# Argument count:
+0
+33
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 88
@@ -1937,58 +3798,238 @@ BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and 
 
 ## Slide 94
 
-# **Classifying Scopes and Important Control-Flow Points**
-
-- **`1 i: int=6`**
-
-- **`2 zero_bits = 0 3 one_bits = 0`**
-
-- **`4 # loop dominator 5 while i > 0:`**
-
-- **`6 # if dominator 7 if i % 0:`**
-
-- **`8 # first sibling 9 one_bits += 1`**
-
-- **`10 else :`**
-
-- **`11 # second sibling`**
-
-- **`12 zero_bits += 1`**
-
-- **`13 # join point`**
-
-- **`14 i << 1`**
-
-- **`15 # loop-end join point`**
-
-- **`16 print(one_bits, zero_bits)`**
-
+Classifying Scopes and Important Control-Flow
+Points
+  i: int=6
+  zero_bits = 0
+  one_bits = 0
+  # loop dominator
+  while i > 0:
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+     i << 1
+  # loop-end join point
+  print(one_bits, zero_bits)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+  # loop dominator
+  while i > 0:
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+     i << 1
+  # loop-end join point
+  i: int=6
+1
+  zero_bits = 0
+2
+  one_bits = 0
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+  print(one_bits, zero_bits)
+16
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+  i: int=6
+1
+  zero_bits = 0
+2
+  one_bits = 0
+3
+  # loop dominator
+4
+  while i > 0:
+5
+6
+7
+8
+9
+10
+11
+12
+13
+     i << 1
+14
+  # loop-end join point
+15
+  print(one_bits, zero_bits)
+16
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 95
 
-# **Classifying Scopes and Important Control-Flow Points**
-
-- **`1 i: int=6 2 zero_bits = 0 3 one_bits = 0`**
-
-- **`4 # loop dominator 5 while i > 0:`**
-
-- **`6 # if dominator 7 if i % 0:`**
-
-- **`8 # first sibling 9 one_bits += 1`**
-
-- **`10 else :`**
-
-- **`11 # second sibling 12 zero_bits += 1`**
-
-- **`13 # join point`**
-
-- **`14 i << 1`**
-
-- **`15 # loop-end join point`**
-
-- **`16 print(one_bits, zero_bits)`**
-
+Classifying Scopes and Important Control-Flow
+Points
+  i: int=6
+  zero_bits = 0
+  one_bits = 0
+  # loop dominator
+  while i > 0:
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+     i << 1
+  # loop-end join point
+  print(one_bits, zero_bits)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+  # loop dominator
+  while i > 0:
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+     i << 1
+  # loop-end join point
+  i: int=6
+1
+  zero_bits = 0
+2
+  one_bits = 0
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+  print(one_bits, zero_bits)
+16
+     # if dominator
+     if i % 0:
+         # first sibling
+         one_bits += 1
+     else:
+         # second sibling
+         zero_bits += 1
+     # join point
+  i: int=6
+1
+  zero_bits = 0
+2
+  one_bits = 0
+3
+  # loop dominator
+4
+  while i > 0:
+5
+6
+7
+8
+9
+10
+11
+12
+13
+     i << 1
+14
+  # loop-end join point
+15
+  print(one_bits, zero_bits)
+16
+         # first sibling
+         one_bits += 1
+         # second sibling
+         zero_bits += 1
+  i: int=6
+1
+  zero_bits = 0
+2
+  one_bits = 0
+3
+  # loop dominator
+4
+  while i > 0:
+5
+     # if dominator
+6
+     if i % 0:
+7
+8
+9
+     else:
+10
+11
+12
+     # join point
+13
+     i << 1
+14
+  # loop-end join point
+15
+  print(one_bits, zero_bits)
+16
 BlackHat Asia 2024 / rocky@gnu.org - uncompyle6 and decompyle3: How to Read and Write a High-Level Bytecode Decompiler
 
 ## Slide 96

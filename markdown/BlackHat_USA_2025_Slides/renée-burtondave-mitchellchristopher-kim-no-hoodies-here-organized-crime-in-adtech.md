@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Renée Burton&Dave Mitchell&Christopher Kim_No Hoodies Here Organized Crime in AdTech.pdf"
 pages: 41
 sha256: "a16376572aa64d1ecf098a849c1d44d2035721dbc710d57a34f2d475d93f3cca"
-text_chars: 21471
-ocr_pages: 26
+text_chars: 17311
+ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:00:23Z"
+converted_at: "2026-08-12T05:20:09Z"
 ---
 # No Hoodies Here Organized Crime in AdTech
 
 **Speakers:** Renée Burton, Dave Mitchell, Christopher Kim  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Renée Burton&Dave Mitchell&Christopher Kim_No Hoodies Here Organized Crime in AdTech.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -32,10 +37,10 @@ Infoblox Threat Intel
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
 EFINGS
 AUGUST by 2025
 MANDALAY BAY / LAS VEGAS
@@ -71,23 +76,16 @@ Sr Staff Threat Researcher
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeschat
-BRIEFINGS
 7B9605E6-87A9-4F28-A134-
 C2F1A15C1FDD
 (@p)
-MW);
-\ Pina). iy sh
-1A me weit uN, vil
 = GLoulube Search Q
-©
 Kroum Vassilev’s Supersonic Flight to the Edge of Space
-® Kroum
 210 views Apr 6,2017
-4D Asre — downlod = Kcip [] sme
 ```
 
 ## Slide 5
@@ -116,57 +114,17 @@ But first, a bit of background.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Agencies Agency Creative Tech
-rading Desks a ;
 WPP xa
 OmnicomGroup
 Mobile (Re)Engagement
-(~~ Litecycle Marketing Deepiingig
-al arate attentive saa ever
-(
-=
-i RONA CRAFTSMAN+
-genes - ove Q Creatoria
-‘
-IEG:
-dentsu Samnet
-HAVAS arr
-La VARICKMED: a
 Mobile
-Ecosystem -"=--
-foveured FEEDMOS
-Fetch & FIVE camer gage
-Mp macsaarou , Qrere
-903.0° PEHD=5
-an ; Gene Chal
-a=) olf HO] 5|
-Por) ys
-—— App Stores ——y
-Bnode Phiture ‘zw id b ee Cy
-Rocxersuip Hq () udonis. RWS vidmo A\ Frameplay GADSME | (lisp te >
-: m @ ZORKA Vidsy. bh Se amare Wineta CO Aptoide iircroia side
-\ an re \ Swhalar - ' Mobile Web Br
 ‘ obile Web Bro
 Advertisers
-(e
-amazon gmap: Owes Ge
-motive mapa native!
-‘nine
-Brion "I
-fubo’ geod); HB@MAX INTUIT 9 MABZCE Peper ee :
-Si5 “ (@snarcit Carrier / OEM M Marketing —
-i playri PROGRESSIVE orale J
-® Array On! branch
-> tin
-\ Neeinds Walmart
-opptopla Gapptweak (eau; Pasodesk dt
-MS (DHUMAN !"provede_incrmntal Jas
 | Denotes shuttered company © LUMA Partners LLC 2025
 ```
 
@@ -178,11 +136,10 @@ MS (DHUMAN !"provede_incrmntal Jas
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat my i ae 4
-BRIEFINGS d Q 4
 MERCHANT HAS
 A PRODUCT OR
 SERVICE TO SELL
@@ -190,7 +147,6 @@ AFFILIATE GETS
 A COMMISSION, | WOW AFFILIATE AFFILIATE PUTS
 MERCHANT | MARKETING WORKS LINK OR AD ON
 GETS A SALE \ THEIR WEBSITE
-a
 CUSTOMER CLICKS ON LINK
 OR AD AND TRANSACTION
 ARE TRACKED
@@ -203,12 +159,10 @@ ARE TRACKED
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Simplified Legitimate Adtech
 (e.g., Google AdSense)
 A
@@ -224,18 +178,14 @@ Ni a | i Cc i re) u Ss (TDSs) are at the core of both Cloaked a
 legitimate and malicious ad
 Ad T A v networks. The TDSs cloak the v Pe
 ec Ad Network network's infrastructure Affiliate Network
-Operator ; | Operators (TDS)
 In malicious adtech, affiliates
 often use multiple affiliate
 networks and redirect between
 them.
 In malicious adtech, advertisers
 are usually individual affiliates
-CSF
-v
 Legitimate
 Advertisers
-——J |
 that target specific victim | | Malicious |
 Advertisers |_.
 profiles. The landing pages are ai
@@ -291,38 +241,28 @@ Have you or your loved ones been affected by one of these scams?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
- itewunwalfagroupitaliacom jo X
-c
 @ Hum
 an Verification
 $3) d123.biz/2p=hfstenrwmmSgi3bpha3temq
 dr23.biz wants to
-QO show notifications
-=
 Allow
 x
 Block
 —
-)
 Welcome back, user-id81214293!
 t's been 364 days sin
 cloud Bitcoin mining
 1.3426 BTC ($47302.48) USD through
-‘Your balance:
 1.3426 BTC ($47302.48)
 4596 ladies found
 START SOMETHING REAL
-) Ge
 This Is NOT a Dating Site!
 "De @& A OQ until 11:00 PM
 Tue, Nov 12
-O32 ©o
 a Chrome * online-financialassistance.com + now
 Card payment failed
 Please update your details
@@ -330,7 +270,6 @@ Please update your details
 Amazon: Order #52517977222
 Your order was placed successfully! YW Track you..
 © Chrome - online-financialassistance.com + now
-rewards-locker%40grad.org (1) New ~ (Biden...
 Reward Your Check Status: up to $1,250
 © Chrome - online-financialassistance.com + now
 (3) New Stimulus Relief Opportunities ~
@@ -342,12 +281,10 @@ Reward Your Check Status: up to $1,250 §
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 B Google Play
 9
 Your results indicate your phone may have
@@ -357,19 +294,15 @@ Proceed to clean and secure your phone with
 Spam Lock, on a 100% free 7 day trial — internet-
 only offer.
 Next
-MRE astey)
 Saturday
 Google Securit)
 9 y 9 November 2024
-pile 26.7408TC
 CHALLENGE ;
 FROM MR. BEAST =
-@ O°G
 GET FROM 0.001 TO “J
 1 BITCOIN FROM THE
 POPULAR YOUTUBE 4°
 BLOGGER MR. BEAST
-esos, S)ssos Ess
 Hi guys! I, Mr. Beast, am starting another challenge today.
 Today | will give away 30 Bitcoin to of my subscribers.
 Anyone can take part.
@@ -388,24 +321,20 @@ Immediate Action is Required!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 » Google Play
 Congratulations!
 You won: 150% to your Why do you want spam
 first deposit protection?
-ici eee
 | want less interruptions
 | want to avoid scams
 | want to improve battery life
 | want more peace in my day
 BP Google Play Q_ mistplay games and win reward x ¢
 — , | want to feel secure on my phone
-SEE (bevice ~
 MISTPLAY: Play to Earn Money “se mistPy | am afraid of online fraud
 MISTPLAY PLAY TO
 Contains ads
@@ -413,7 +342,6 @@ EARN MONEY
 Fetch gift cards with rewarded game play. Just cash out units for money rewards.
 4.5% 10M+ tT
 MA 686K review Downloads Teen ©
-GameStow ro —
 Next
 ```
 
@@ -431,41 +359,26 @@ Years of frustration cured by a single frame of a YouTube video.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS
-All about
-CPA
-marketing —
-in Russian
-```
-
 ## Slide 18
 
 ## Bazinga – the VexTrio URL format
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Bazinga - the VexTrio URL format
 Dating
 Onucanne:
-Mouetu3auua Adult Dating TpaduKka co Bcex CTpaH UW ycTpoiicTB. ABTOMaTMYecKuh Nog6op u ONTUMU3alUA O*depos o6ecneyun
-MaKCUMasibHbIA ZOxog. BbinnatTb! 3aBUCAT OT Oddepa U CTpaHbi. Mpocto nbéTe MuKc Tpaduk UM Halwa CucTeMa Cama fenaeT BCt
 Bac.
 Different tabs are used for the primary smartlink and the
 popunders (second tab). The url is constructed from
 * He npuumaem MOTHBMpOBaHHbIM Tpapnk affiliate id and optional tracker inforamation.
-+ He npuHumaem YaT-Tpaduk
 + He npuHumaem 60T-Tpaduk the signature parameters u, 0
 fiomen: simpledatings.life h v Tpexep: © Click ID: @
-NonaHgZep
-(  https://simpledatings.life/?u=1ntp60p&0=O0w2ku06
 ```
 
 ## Slide 19
@@ -474,20 +387,15 @@ NonaHgZep
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat
-BRIEFINGS
 a. & Baw menepxep: Julia ~ & Mpueer, dzmitryleto ~
-@® (nasxyaa YBegomnenua
-[napyHan
-ff} H u9 Domain Change
 at Crat Hi, your domain relat to the Dating smartlink has NocnegHne 7 AHei aM!
 ” : been replaced with a new one: bestladieshere.
 wT ; life has been changed to simpLedatings.life
 © HactpoiKku 3 These are VexTrio validated domains. Try monetization with TacoLoco! $3
-(a) .
 . This screenshow shows how your ' .
 Qo _ tlinks will be automatically updated peed =
 — smarulinks wi e au omauca y upaate Hi, your domain related to the Dating smartlink has i}
@@ -496,10 +404,6 @@ mn a as they update their TDS infrastructure. been replaced with a new one: supe
 ife
 0 $o
 2023-01-14 2023-01-15 2023-01-16 Bce ysegomnenna 2023-01-19 2023-01-20
-YuuKu floxoyn
-Zloxog no BeptuKanam Zjoxog, no ctpaHam
-Het QaHHbIx ANA OTO6paKeHns
-OMMTPHH
 ```
 
 ## Slide 20
@@ -508,12 +412,10 @@ OMMTPHH
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Breaking Bad. Fitting for VexTrio.
 Looking for quality traffic? Try @ TacoLoco today!
 1 23 web.archive.org/web/20181125102419/https://lospollos.com/
@@ -521,20 +423,16 @@ Looking for quality traffic? Try @ TacoLoco today!
 Conversion
 Chemistry
 Our solutions help you boost conversions and
-°
 ) 0) Conversion profits while taking care of all the hard work. Join
 ° over 200,000 partners and media buyers today!
 Chemistry
 Dating, Mainstream, Casino and Binary CP Get started
-0]
 ©
-—
 0) ¥ © smartlinks boost conversion rates and profits Already have an account? Sign in.
 while doing all the hard work for you.
 i J Why delay? Monetize traffic the smart way!
 «> Get Started
 Already hav
-°0
 on Join the Superlab Challenge & win epic prizes! ¢ Don't miss out
 GLOBAL OATING SMARTLINK.
 lospollos ¢) , ONE TEST, AND YOU'LL KNOL.
@@ -546,27 +444,23 @@ lospollos ¢) , ONE TEST, AND YOU'LL KNOL.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-Mm °2_web.archive.org/web/20240511103008/https://www.lospollos.com/
 Reload this page
 @ los pollos Smartlink Solutionsy Verticals Blog ® English vy Login
 200 000+ 1 000+ 2Bt 3M+
 Affiliates Advertisers Unique users monthly Conversions monthly
-| °
 companies are Trusted by leading Prands
-|
 ni | ni h 66 Lospollos is simply great when it comes to get some serious ROI from your advertising budget. As an advertiser | can say LP provides
 clean and profitable traffic and getting campaigns up and running is a matter of no more than few minutes. Well done guys!
 — Sergio Napolitano, Chief Operating Officer at Teknology
 same...
-/ TEKNOLOGY Gotzha ®  tacolo.co TRA FIC adtraf:co
+/ TEKNOLOGY Gotzha ® tacolo.co TRA FIC adtraf:co
 PARTNER
 ari SHLEY
-S. Propeller e OClick AADVIDI Tiere
 ```
 
 ## Slide 22
@@ -575,12 +469,10 @@ S. Propeller e OClick AADVIDI Tiere
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Yup, these guys.
 Select Mainstream Landings
 If you 18+ click
@@ -590,7 +482,6 @@ Space Robot Allow Button Blue Robot Are you 18 Eyes Robot
 @ Selected @ @ Selected @ @ Selected @ @ Selected @ @ Selected @
 File Download Youtube
 @ Selected @ @ Selected @
-@ Select all
 ```
 
 ## Slide 23
@@ -599,17 +490,16 @@ File Download Youtube
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat y |
 A little white hat, a little black hat CPA
 LosPollos - Global Smart Link Affiliate Program | Weekly Payments | 24/7 Support
 & LosPollos -© Aug8,.2017 - ©) adult || binary || bizopp || cpa network || cpa offers || dating || global | | smartlink || smartlinks
 a Jun 25, 2019 | Thread Starter
 ey JamieJayden said: ®
 hi, this platform is white hat or black hat cpa? @
-X
 LosPollos
 Senior Member
 Jr. VIP A little bit of column A, a little bit of column B.
@@ -658,14 +548,11 @@ All on one /24:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-€ C f  &% web.archive.org/web/20241120050039/https://www.adspro.eu/
-INTERNET ARCHIVE {https://www.adspro.eu/ sep By
-WAYDGANMACHINE 142 captures <>
 16 Dec 2014 - 28 Nov 2024 al] 2023 Bloat
 We are Adspro
 Group
@@ -714,14 +601,11 @@ adtrafico.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Thank You, Internet.
-‘Oy urlscan.
 A sandbox for the web
 INTERNET
 > BLACKHATWORLD
@@ -744,65 +628,31 @@ Two major groups:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
-ye \ovusselaolr P 4 ee | Y- j veuuu
-Germany ODresden. oWroctaw . = ma
-els; xgologne pease \) ©zestochowao oKielce ee olutsk °Kop
-OLiege, Aww SLUGS Tlyuybk Rivne
-lospollos.com = T PipHe
-Fre —Katowiceo oy
-oar ©Prague oKrakow ORzeszow INiv.
-uxembt __¥ Ostravad t oBielsko-Biala é . ;
-uxembourg Czechia : ABI. Femnopil Two Major groups:
 OMannheim ONuremberg Tepxoninb
 . QZakopane oVinny
-ka on See ano fankivk "me Italian (Turin
 OKarlsruhe eg: ° ivano-Frani ivs ( )
-Stuttgart ee Say S oF IBaHo-OpaHkiBcbK
 Strasbourg Slovakia Kosiceo
-OAugsb, OLinz ' Chernivtsi e j
-ee fo _— evienha “epi Russian speakers
 Breisgau Salzburg ie.
 OSuceavai
 Austria Moldove
-Basel:
-‘ijon OZirich
-©Budapest ODebrecen
 Olnnsbruck lasio
-Oradea w
 Hungary
 Switzerland Cluj-Napoca ¢ Origin story back
-fi nae Ey oTargu Mures OBacau 2004
 i ugano _ Szegedo t ~
-eneva’ KNOIO : OArad
 f TEKNOLOC Slovenia = { O
-en 7. Bergamo ©Zagreb oTimisoara . - Romania
 : OMilan Verona» OVenice ~~~ Galatio
-* 0Grenoble. ie] how! ong "OBrailag
-: Turin " Ast =e A) SPhect; 22loiesti
 TEKKA Parmao soul Bosnia and Or eorpan prams 4 e Merger ~?2 020 in
-en “cum oBologna Herzegovina \ wenite Bucharest I L n
 OZadar i o€on
 gnon Vg San Marino @Saraibvo serbia Rie ugano
 ee Monaco Florenceo AB Pyce
-OSplit
-Marseille MakarskaO oa oNisy oVarna
 BapHa
-Italy, Chay, i. Monts GEL) Qori
-OPescara "Sy ee. Kosova ~Cooua Bulgaria Opyras
-: a exe HOLACODE
 VexTrio Origins
-@Rome
 North
 Macedonia
-Tirane hrid
-Bari Albaniayoxpna SilivriOs~ 6}
-OO0lhia
 ```
 
 ## Slide 29
@@ -823,12 +673,10 @@ Hard find the boundary between companies and partners
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 10:13 @ LTE 4 91% 4 Torna a WhatsApp 10:00 7 % 100% =
 _ a L a n Ss € Giulio Lingua Q ad.vfnetwork.it G
 ry Giulio Lingua shared a memory. eee AD
@@ -852,18 +700,14 @@ moltissime nossibilitA anche al
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 More Italians — business guys
 businessm@nitor
-en 1
 Prospect Lists Company Search }
 Marco Rufa @
-oss
 Involvement
 VICE-PRESIDENT
 Fiduciaria Ferrecchi SA
@@ -877,13 +721,10 @@ Centro Tosaerba e Giardinaggio SA
 GL HOLDING SA
 lulio V. L. Cerutt?
 HPL INVEST SA *.
-Malthael Gmbh,
-°
 HFV Europe SA *e.
 SYNTEG SA
 Falkenzer GmbH
 Amgest SA Dzmitry Laptsevich
-9 y tap! Teknology SA
 SIGIT PROMOTERS SA
 ```
 
@@ -899,16 +740,15 @@ some are good at hiding… others not so much…
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 ® ©
 kroum + Follow
 Switzerland
 kroum Switzerland with good friends, always a winning
-combination. 9 2
 248w
 brendan_v_m Beautiful
 248w ‘like Reply
@@ -921,9 +761,7 @@ ronirev Absolutely gorgeous there!
 wilbursmithhh Sorry that | miss our dates last time Mr.
 lederhosen
 248w 1like Reply
-anniecanale ¢ ¢) “)
 248w ‘like Reply
-V9aAYV
 199 likes
 October 10, 2020
 By a Igor Itpark is © feeling grateful with Mari Li and Olga Kunitsa at Klausenpass.
@@ -937,12 +775,10 @@ Atlantic road trip ev
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 New Friends!
 Kevin Mccalister University of Oxford
 CtTygeHT(Ka) B y¥. 3aBegeHun University of Oxford
@@ -966,12 +802,10 @@ oops… VexTrio, you forgot a few…..
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 The Disappearing Internet Archive
 VA" ads ro HOME ABOUT OUR TEAM CONTACT TRAFFIC PACKAGES LOGIN
 P
@@ -998,13 +832,12 @@ oops... VexTrio, you forgot a few.....
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Blank Credit Card Submit “offers”
-23 adtrafico.com/blog/
 New Tier 2&3 Blank Page Offers
 Paiement sécurisé @
 (2325 avis)
@@ -1025,23 +858,18 @@ New Offers 3 2024-10-25
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-5°]
 Fake Apps
 S ca 23 play.google.com/store/apps/developer?id=CoreFlowz
-B Google Play Games Apps Movies& TV Books _—Kids
 CoreFlowz
-=o
-} Spam Guard iv , MGuard
 23 apps.apple.com/us/app/fast-vpn-with-ad-blocker/id1522664842 YJ
 € Store Mac iPad iPhone Watch
 ws Spam Guard - Spam Blocker MGuard - Spam Protection
 App Store Preview V CoreFlowz | CoreFlowz
-42& 43%
 This app i
 Fast VPN with ad blocker
 Internet booster ad blocker
@@ -1085,24 +913,6 @@ Kroum
 Ski Frais!
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat Read our reseatch!_ Ouestions? 2?
-BRIEFINGS
-7B9605E6-87A9-4F28-A134-
-C2F1A15C1FDD
-cc
-VexTrio 8)
-Fake ORY
-Captcha
-= GLoulube earch Q L
-pee Andrew,
-‘rout
-® Kroum
-210 vie
-```
 
 ## Slide 41
 

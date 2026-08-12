@@ -12,15 +12,20 @@ text_chars: 47035
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T22:55:35Z"
+converted_at: "2026-08-12T05:13:28Z"
 ---
 # HTTP1.1 Must Die! The Desync Endgame
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/James Kettle_HTTP1.1 Must Die! The Desync Endgame_WP.pdf` (27 pages)
+
 
 ## Slide 1
 

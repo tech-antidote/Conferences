@@ -12,7 +12,7 @@ duration_seconds: 2846
 words: 7442
 text_chars: 40700
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Thinking Like a Hacker in the Age of AI

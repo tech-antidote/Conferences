@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Larisa Munteanu, Mark Povey_Illegitimate Data Protection Requests - To Delete or to Address.pdf"
 pages: 17
 sha256: "a3f2e5a95752ba61398c300a50d1397d68ddd2160a426a8c1b3bb6d29844214d"
-text_chars: 6250
+text_chars: 6241
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 77.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:12Z"
+converted_at: "2026-08-12T04:03:04Z"
 ---
 # Illegitimate Data Protection Requests - To Delete or to Address
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:12:12Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Larisa Munteanu, Mark Povey_Illegitimate Data Protection Requests - To Delete or to Address.pdf` (17 pages)
 
+
 ## Slide 1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ms] cnet
 DECEMBER 4-7
 Ex<CEL LONDON vy UK
 JSIG

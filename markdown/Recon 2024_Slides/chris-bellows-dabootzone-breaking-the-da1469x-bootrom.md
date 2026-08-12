@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Chris Bellows_DaBootZone Breaking the DA1469x BootROM.pdf"
 pages: 44
 sha256: "d18637a0a968e88a7b87ee2cae190d4482c751e0275e830dac9d55329585265f"
-text_chars: 33045
-ocr_pages: 18
+text_chars: 28074
+ocr_pages: 16
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.4
+ocr_unreliable_blocks: 7
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:28:52Z"
+converted_at: "2026-08-12T06:12:33Z"
 ---
 # DaBootZone Breaking the DA1469x BootROM
 
 **Speakers:** Chris Bellows  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Chris Bellows_DaBootZone Breaking the DA1469x BootROM.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -38,7 +43,8 @@ https://www.atredis.com
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHOAMI
@@ -47,7 +53,6 @@ Research Science Director @ Atredis Partners
 Owl Illustrator
 How to draw an owl
 S TREDIS PARTNERS ones
-veges,
 1. Draw some circles 2. Draw the rest of the owl https: //www.atredis.com
 ```
 
@@ -57,11 +62,11 @@ veges,
 
 Bizdev Research Consulting
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT THIS IS ABOUT
-Bizdev ———> + Research =———~ Consulting
 Car Salesman: “slaps roof of car" let's see if this bad boy will
 fit all the stuff you need
 ```
@@ -172,7 +177,8 @@ fit all the stuff you need
 
 **Datasheet provides the memory mappings Debugger/JLink to read to a file Load into IDA Draw the rest of the owl**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 EXTRACTION
@@ -221,11 +227,7 @@ a | Start
 00000228
 000001E0
 00002026
-OO005E68
-O00005D5C
-00005F94
 00000C94
-OO0065F4
 0000250C
 IDA View-A
 CLK_Enable_RC32M();
@@ -253,18 +255,12 @@ CRG_TOP_PMU_CTRL_REG = ptr_pmu_ctrl_reg_ & OxFFFFFFFE;
 do
 ptr_sys_stat_reg__ = CRG_TOP_SYS_STAT_REG;
 while ( (ptr_sys_stat_reg_ & 8) == @ );
-OTPC_enable_clock_and_reset (1);
 OTPC_set_read_mode() ;
-QSPIC_set_manual_mode();
 QSPIC_Software_Reset_peripheral();
-Resource — vm
-[Remand |
-[Remand | c00000 | Lane | Remap IVT into SYSRAM
 Remapped at 0x0.
 DA14691 end address:
 SYSRAM (code) 800000 880000 0x860000
 Reserved
-J-Link>savebin c:\users\chris\bootrom.bin, @x9@@000, @x2e@0ee
 Opening binary file for writing... [c:\users\chris\bootrom. bin]
 Reading 131072 bytes from addr @x@@90@008 into file...0.K.
 8 Library function J) Regular function Instruction J Data Unexplored [J External symbol [J Lumina fun
@@ -277,7 +273,6 @@ sub_18AC 000018AC
 sub_195C 0000195C
 sub_1ADC 00001ADC
 sub_1C00 00001C00
-sub_1C34 00001034
 sub_1C6C 00001C6C
 sub_1CAC 00001CAC
 sub_1DAC 00001DAC
@@ -289,13 +284,9 @@ sub_1EF4 00001EF4
 sub_1F08 00001F08
 sub_1F46 00001F46
 00001FA2
-xY | = 0x200;
-sub_1544(v@) ;
 EMOR ~4u;
 while ( ( & 0x200) @)
 ( & OxFF8FFFFF | 0x400000;
-@x80u;
-1 ~1lu;
 sub_1CAC(1);
 sub_1DAC() ;
 sub_2052();
@@ -340,7 +331,8 @@ v2 = sub -264C(0x110 6
 
 Function Folders
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BACKWARDS IS FORWARD
@@ -353,24 +345,14 @@ int vir f/ ra int v1; // r3
 UART_UART_SRR_REG = 7; UART_UART_SRR_REG = 7;
 = v1 = UART_UART_LCR_REG;
 vi = UART_UART_LCR_REG: - ;
-UART_UART_LCR_REG = vi | @x82; PORT EERE _TER PEG = 3. | Ox8R:
 UART_UART_DLF_REG = (unsigned _ int8)result; ART UART DLE REG = Fesulle:
-BART HART Aan Te DL Res BYTeE i result); UART_UART_RBR_THR_DLL_REG = BYTE1( result) ;
 UART_UART_ITER_DLH_REG = BYTE2(result); UART_UART_IER_DLH_REG = BYTE2(result) ;
-MRE Nae aan ee Ace : UART_UART_LCR_REG = 3;
 _UART_IIR_FCR_ ; UART_UART_IIR_FCR_REG = 7;
 UART_UART IER DLH_REG = BYTE2(result) & OxFE; UART_UART_IER_DLH_REG = BYTE2(result) & OxFE;
 return result; return result;
-}
 Wa Functions Functions
 Function name {Segment | Start | Length
-Wi sub_268¢ Code 0000288 0000056
-if | sub_65F4 Code OOO065F4 00000054
 Fu n ct io n Fo | d e rs FA sub_BE2 Code 00000BE2 0000005C
-Hi sub_264c Code 0000264C ~—-0000005C sub_2720 00002720 0000003A 00000010
-sapere ne sas posooeene sub_258C 0000258C 00000056 00000010
-Wisibi26Ac sub_264C 0000264C 0000005C + ~—- 00000010
-sub_A17A e \ Hi sub_26AC 000026AC 0000006A —-00000018
 sub_2A9E Reset natiral ortier i fi NM\_handler 000024D0 00000002
 sub_D78 Rename h Fi SVCall_handler 000024D2 00000002
 Function name |Segment | Start | Length « | Locals
@@ -382,7 +364,8 @@ Function name |Segment | Start | Length « | Locals
 
 **https://www.unicorn-engine.org/**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 UNICORNS
@@ -405,7 +388,6 @@ invalid register name PSPLIM, skipping R®@ = 00000000, R1 = 00000000, R2 = 0000
 +
 4
 +
-7)
 [+] Read: CRG_TOP + @x0020 (4 bytes) PSPLIM = 00000000
 +
 +
@@ -424,9 +406,7 @@ XPSR = 69000000: APSR = nZCvQ, EPSR = 01000000, IPSR = @0@ (NoException)
 [-] Tracing basic block at Entry - OTPC_set_read_mode (@xidac) - LR Qx1 mu.mm1o_map ®x50010000, periph2_read, None, periph2_write, None)
 [-] Tracing basic block at Entry - QSPIC_set_manual_mode (@x2052) - LR mu.mmio_map(0x50020000, periph_read, None, periph_write, None)
 Read: CRG_TOP + @x0000 (4 byt 5 ‘ ; .
-Fe ee eats 9 Rd On mu.mmio_map(0x50040000, periph4_read, None, periph4_write, None)
 Read: CRG_TOP + @x0020 (4 bytes) mu.mmio_map(@x30070000, Otp.mmio_read, otp, Otp.mmio_write, otp)
-Read: CRG_TOP + @x0028 (4 bytes) : : - ; : ; : R
 Tracing basic block at Entry - QSPIC_Software_Reset_peripheral (Q@x2| mu.mmio_map 0x38000000, Qspi.mmio_read, qspl, Qspi.mmio_write, qspi)
 Tracing basic block at Entry - QSPIC_Enable_CS_active_low (@x1leeQ@) mu.mmio map ®x10080000, Otp.mem read, otp, Otp.mem write, otp)
 Tracing basic block at Entry - QSPIC_Disable_CS_active_low (@xlef4) = _ =
@@ -436,7 +416,6 @@ I: Release Power-down / Device ID
 Tracing basic block at Entry - QSPIC_Disable_CS_active_low (Qxlef4) - LR @x219c - block size = 0x14
 Tracing basic block at Entry - QSPIC_Enable_CS_active_low (@xlee@) - LR Qx21ba - block size = 0x14
 Tracing basic block at Entry - QSPIC_WriteData_manual_mode (Qx2460) - LR @x21c@ - block size = Qx20
-Meno (eiReset https://www.unicorn-engine.org/
 regs = raw_str.strip().replace('\n',',').replace(' ','').split(',')
 ```
 
@@ -450,13 +429,13 @@ regs = raw_str.strip().replace('\n',',').replace(' ','').split(',')
 
 **https://github.com/atredispartners/aidapal**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AIDAPAL PLUG
 Manual Analysis
 int
-{
 __fastcall UART_reset_and_configure_uart(int result)
 int v1; // r3
 UART_UART_SRR_REG = 7;
@@ -466,15 +445,12 @@ UART_UART_DLF_REG = result;
 UART_UART_RBR_THR_DLL_REG = BYTE1(result) ;
 UART_UART_IER_DLH_| A = BYTE2(result);
 UART_UART_LCR_REG =
-UART Wor eaniece EG.
 UART_UART_IER_DLH_REG
 return result;
 7;
 BYTE2(result) & OxFE;
-il}
 Aidapal Analysis
 int _ fastcall configureUartRegisters_264c(int inputValue)
-{
 int previousLerValue; // r3
 UART_UART_SRR_REG = 7;
 previousLerValue = UART_UART_LCR_REG;
@@ -483,12 +459,9 @@ UART_UART_DLF_REG = inputValue;
 UART_UART_RBR_THR_DLL_ REG = BYTE1(inputValue) ;
 UART_UART_IER_DLH_REG = = BYTE2(inputValue) ;
 UART_UART_LCR_REG = 3;
-UART_UART_ITR_FCR_REG
 UART_UART_IER_DLH_REG
 return inputValue;
-qj
 BYTE2(inputValue) & OxFE;
-—B Pseudocode-A
 int _ fastcall sub _264C(int result) OT
 { AIDAPAL
 int v1; // 73
@@ -499,16 +472,12 @@ UART_UART_DLF_REG = (unsigned __int8)result;
 UART_UART_RBR_THR_DLL_REG = BYTE1(result);
 UART_UART_IER_DLH_REG = BYTE2(result);
 UART_UART_LCR_REG = 3;
-UART_UART_IIR_FCR_REG
 UART_UART_IER_DLH_REG
 return result;
-un
 BYTE2(result) & @xFE;
-eee se e@eee eee
 @80026A6 sub_264C:14 (26A6) (Synchronized with IDA View-A, IDA View-B)
 && aiDAPal Results
 aiDAPal Function Name
-~¥ configureUartRegisters
 aiDAPal Comment
 This function configures various UART registers with the provided input value. It
 sets specific bits in the Software Reset Register, Line Control Register, Divisor
@@ -528,50 +497,34 @@ https://github.com/atredispartners/aidapal
 
 REN_da1469x_3v3_DST_20220421.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NAVIGATION SYSTEM
 bootrom
 Start LDO_Radio &
-Start ‘
 power domains
-a
-¢
 ~ Init OTP & Flash and Reset Set UART Baudrate@
-8 Flash —>  Dev.ModeFlag=True —> XTAL_ok Flag = False 115k2 & Pxx/Pyy
+8 Flash —> Dev.ModeFlag=True —> XTAL_ok Flag = False 115k2 & Pxx/Pyy
 2
 £
-»
 2
-S v
 a
-= ,
 i Locate and Run CS Enable XTAL XTAL settled in ves—y! xTAL_ok Flag = True
-ra <10ms?
 £
 =
-20
-&
-i=
-fo)
 Oo ‘NO:
 c
-Ee
-«
 v
 NOK =
 Dev. mode Flag? >—TRUE Enable Debugger ——> XTAL_ok Flag —No—> Get FW From UART
 True?
->
 FALSE i Switch to RC32M |
 | - { —_ Switch to XTAL32M -——~
 3 Locate FLASH_Prod Header << NO: FW loaded?
 8
-6
 2
-hee
-REN_dal469x_3v3_DST_20220421.pdf
 sub_1544(v@);
 v3 = CRG_TOP_PMU_CTRL_REG;
 CRG_TOP_PMU_CTRL_REG = v3 & @xFFFFFFFB;
@@ -581,97 +534,65 @@ while ( (v4 & @x200) = @ J;
 v5. = CRG_TOP_POWER_CTRL_REG;
 CRG TOP. POWER_CTRL_REG = v5 & @xFFSFFFFF | @x490000;
 CRG_TOP_POWER_CTRL_REG = v5 & @xFFEFFFI7F | @x4ee0e8a;
-v6 = CRG_TOP_PMU_CTRL_REG;
 CRG_TOP_PMU_CTRL_REG = v6 & OxFFFFFFFE;
 do
 v7 = CRG_TOP_SYS_STAT_REG;
 v8 = sub_1CACc(1);
 w9 = sub_1DAC(va);
 v1@ = sub_2052(v9);
-sub_20@B6(v1@);
 byte_2883C954 = i;
-dword_26@03C958 = 6;
 vil = CRG_COM_CLK_COM_REG;
 CRG_COM_CLK COM REG = v11_/ 1:
-yi2 =|UART_reset_and_configure_uart(0x1106);
 GPIO_P@_89 MODE REG PA
 GPIO_P@_@8 MODE REG = 1
 sub_1544(v12);
-sub_228(&byte_2883(954) ;
 v13 = CRG_TOP_CLK_CTRL_REG:
-{
-I
 vl4 = CRG_XTAL_XTAL32M_CTRL1_REG;
 CAG_XTAL_XTAL32M_CTAL1_REG = vid | &
-1
 ```
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ae
 Start LDO_Radio &
-|
-%
-@
 3
 8
-&
-.
 &
 8
 FALSE
 |
 | Locate_FLASH_Prod_Header
 oK
-Y
-start —> ,
 power domains
 §
 = Init OTP & Flash and Reset Set UART Baudrate@
-g rea ;—> Dev. Mode Flag=True > XTALLok Flag=False p> S*1TEA5T Howat
-3
 2
-3
 & y
-©
-s | Locate and Run cs 1—> Enable xTAL ——> ~~ 10 S—YEs—> XTAL_ok Flag = True
 5
 2
-=
 8 NO
-©
 5
 2
 Y
 Dev. mode Flag? >—TRUED Enable Debugger —P>-< ™TAL-OKFI9B= nop! | Get FW From UART
 ves
 Switch to RC32M
-y
 Switch to XTAL32M.
 FW loaded?
-ae
-,....*
-Remap RAM @0x0 —> = SWReset = —> END
 Device administration
-Y
 Upgrade
 Pending
 YES
 FW Validation
 Update image
 |
-OK
-L-NOK->}
-NO————_————>
 FW Validation
 Current Executable Image
 NOK
-{
 Reject Upgrade +> Trigger HW_Reset(); > END
-af
 Device Administration
 ‘Check Administration Data and
 Perform Key revocation
@@ -679,117 +600,62 @@ Perform Key revocation
 Accept Image
 OK-
 Load Image
-v
 Setup QSPI /
 Decrypt on the Fly
 T
 NOK
 v
 Configure Cache Remap QSPI
-Lok! ctrl with ivr start > CopyiVT —>!  @0x0(IVTin SW Reset
 | ‘Address RAM)
 Trigger HW_Reset();
 > END
-CLK_Enable_RC32M() ;
-CRG_TOP_CLK_AMBA REG[0] = 0;
 SYS_WDOG_WATCHDOG_CTRL_REG = 6
-@ = CRG_TOP_PMU_CTRL.
-(CRG_TOP_PMU_CTRL_REG
 ptr_sys_stat_reg = CRG_TOP_SYS_STAT_REG;
 while ( (ptr_sys_stat_reg & @x8i a)
-GPTO_P0_08 MODE REG
-GPIO_P0_08_MODE_REG 2;
-GPIO_P0_08_MODE_REG = @x200;
-WD0G_feed_#f();
 ptr_pmu_ctrl_reg = CRG_TOP_PMU_CTRL_REG;
-CRG_TOP_PMU_CTRL_REG = ptr_pnu_ctrl_reg & OxFFFFFFFB
 ptr_sys_stat_reg_ = CRG_TOP_SYS_STAT_REG;
 while ( (ptr_sys_stat_reg_ & 0x200) =
 ptr_power_ctrl_reg = CRG_TOP_POWER_CTRL_REG;
-CRG_TOP_POWER_CTRL_REG = ptr_power_ctri_reg & OxFFGFFFFF | @x40e@00;
-(CRG_TOP_POWER_CTRL_REG = ptr_power_ctrl_reg & OxFFGFFF7F | ox40vea0;
 ptr_pmu_ctrl_reg_ = CRG_TOP_PMU_CTRL_REG;
 CRG_TOP_PMU_CTRL_REG = ptr_pmu_ctrl_reg_ & OxFFFFFFFE
 ptr_sys_stat_reg_ = CRG_TOP_SYS_STAT_REG;
 while ( (ptr_sys_stat_reg_ & 8) =e )
 OTPC_enable_clock_and_reset(1);
 OTPC_set_read_mode();
-QSPIC_set_manval_mode() ;
-QSPIC_Software_Reset_peripheral()
 LoBYTE(configuration_script) = 1;
 dword_2003C958 = 0;
-ptr_clk_con_reg = CRG_COM_CLK_COM_REG;
 CRG_COM_CLK_COM_REG = ptr_clk_com_reg |
-UART_reset_and_configure_uart(ox1i06) ;
 GPIO_P0_09_MODE_REG
-GPTO_P0_08_MODE_REG
-WD0G_feed_#f(
 ConfigurationScript_Read ( (struct_configuration_script_ptr +)éconfiguration_script) ;
 cUk_ctrl_reg = CRG_TOP_CLK_CTRL_REG:
 T (elketri_reg & 0x4000)
 ptr_xtal32_ctrll_reg = CRG_XTAL_XTAL32M_CTRL1_REG
-CRG_XTAL_XTAL32M_CTAL1_REG = ptr_xtal32_ctrli_reg | @x80ee00;
-}
 BYTEL(xtal32m_ready_flag) = 0;
-TIMER_CTRL_tiner_mode_set_c80(0x14);
 while ( (unsigned _int#)xtal32m_ready_flag
-TIMER_CTRL_timer_mode_set_c80( 0x6:
-{
 ptr_xtal32_stat_reg = CRG_XTAL_XTAL32H_STAT1_REG;
-if ( (ptr_xtal3z_stat_reg & 0
-{
-ptr_xtal32_stat1_reg = CRG_XTAL_XTAL32M_STAT1_REG;
-fT (ptr_xtals2istati_reg & 0400) != © )
 breaks
-}
 >
 while ( (unsigned __int8)xtal32m_ready_flag
 if ( (unsigned __int8)xtal32m_ready flag !=
 BYTEL (xtal32m_ready_flag) = 1;
-TIMER_CTRL_enable_and_clear()
-TIMER_CTRL_timer_node_set_c80(20);
 while ( (unsigned _int8)xtal32m_ready_flag
 ptr_xtal32_ctrl0_reg = CRG_XTAL_XTAL32M_CTRLO_REG;
-(CRG_XTAL_XTAL32M_CTRLO_REG = ptr_xtal32_ctrl@_reg | @xso000000
 f ( (BYTE) configuration_script )
-Wo0c_feed_ff();
 ptr_Sys_ctrl_reg = CRG_TOP_SYS_CTRL_REG;
 CRG_TOP_SYS_CTRL_REG = ptr_sys_ctrl_reg | @x80;
-+ ( BYTE (xtal32m_ready_fiag))
-CLK _Set_source_xtal32m(
 get_fw_ack = UART_Get_FW( (int)Sconfiguration_script);
-CLK Enable_RC32M()
-f ( get_fw_ack }
-RESET_to_REMAP_ADR_val(3u);
-ISPI_Read_Product Headers ((struct_configuration_script_ptr *)&configuration script, product_ing_offset:
-}
 white ( BYTEL(configurationscript) != 1);
-\G_feed_fF();
 (check_current_fw_addr_and_update_addr(product_img_offsets) )
-(_ ISECUREBOOT_check_and_validate(
-product_ing_offsets[1],
-(FW_InageHeader *)&dword_2003¢950
 (int) product_ing_offsets,
 (struct_configuration_script_ptr *)&configuration_script) )
-QsPI_process_product_update( (struct_configuration_script_ptr *)Gconfiguration_script, product_ing_offsets);
-WO0G_Pet_1¢34();
-(_ !SECUREBOOT_check_and_validate(
-Product_ing_offsets(0],
-(F_InageHeader *)&dword_ 2003C950,
 (int) product_ing_of fsets,
 (struct_configuration_script_ptr *)&configuration_script
-WO0G_Pet_1c34();
 >
-SECUREBOOT_CHECK_key_revocation (dword_2003C950) ;
 Sub_AGE( (struct_configuration_script_ptr *)Sconfiguration_script, product_ing_offsets);
-WD06_feed_ff(
-f (!SECUREBOOT_CHECK_setup_QSPIC_CTR_195C(
 (struct_configuration_script_ptr *)Sconfiguration_script,
 product_ing offsets) )
 Wo06_Pet_1c341) ;
-OTPC_standby();
 Cache_setup_qspi_cache(dword_2003C950, product_ing_ offsets);
-write_to_sysram(dword_2003C950, product_ing_offsets
 return RESET_to_REMAP_ADR_val(2u)
 ```
 
@@ -833,12 +699,12 @@ Seems ok.
 
 ✅ **PRODUCT HEADER VALIDATION**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 is_valid = QSPI_read_header_check_crc(configuration_script_ptr—>flash_header_ptr, product_header_length) ;// _$
 if ( is_valid !=1) // if the first Flash Product Header CRC check fails, check the next at offset 0x1000 in QSPI
-{
 QSPI_Cycle_CS(); // begin process to check backup Flash Product Header
 // read the flash config length from the next header in QSPI (@x100@ + 0x14)
 QSPI_Send_Read_Request(3, configuration_script_ptr-—>flash_header_ptr + @x1014);
@@ -848,8 +714,6 @@ product_header_length = flash_cfg_len + @x16;// calculate the entire length for 
 // check the second Flash Product Header (@x1000) CRC against the stored CRC value
 is_valid = QSPI_read_header_check_crc(configuration_script_ptr->flash_header_ptr + 0x1000,flash_cfg_Len + @x16);// <-—f LARGE VALID HEADER
 // if the second Flash Product Header CRC fails, indicate as such and return to calle!
-Jf
-}
 // at this point the first header has failed CRC and the second has passed
 // check the first Flash Product Header (@x@) calculated CRC against the value stored in the Flash Product Header
 // read the backup buffer and write it to the primary location
@@ -859,10 +723,8 @@ QSPI_Send_Read_Request(3, configuration_script_ptr->flash_header_ptr + 0x1000);
 // read the entire backup header, including the stored CRC at the end . wr
 QSPI_Get_Read_Result(backup_product_header_buff, product_header_length + 2); // I AM THE APP NOWgamk
 QSPI_reset();
-WDOG_feed_ff_();
 QSPI_Cycle_CS();
 QSPI_sector_erase(configuration_script_ptr-—>flash_header_ptr);// erase the primary product header at @x@
-WDOG_feed_ff_();
 ```
 
 ## Slide 21
@@ -885,7 +747,8 @@ WDOG_feed_ff_();
 
 **Payload Return**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 J-Link>setbp @xi@82 <--- vulnerable call CPU is halted (PC = 0x00000082) .
@@ -897,7 +760,6 @@ R8 = 9220C050, RO = D@8C1@6E, R10= 20030000, R11= 00000000
 R12= ABAQ8801
 SP(R13)= 2003FED@, MSP= 2003FED0, PSP= 00000000, R14(LR) = 00001F3F
 Before Overflow After Overflow
-J-Link>mem32 20@3FED0,0x100
 2003FED@ = 2003C944 2003C954 4EE54BA6 33333131
 2003FEE® = 33333131 33333131 33333131 33333131
 20@3FEF®@ = 33333131 33333131 33333131 33333131
@@ -946,7 +808,8 @@ Original Return
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 J-Link>setbp @x114@ <--—-— function exit
@@ -961,14 +824,12 @@ R12= ABAQ8801
 SP(R13)= 20@3FFE8, MSP= 2Q03FFE8, PSP= 00000000, R14(LR) = 0000113B RO = 00000031, R1 = 00000002, R2 = 00000010, R3 38000000
 j-Link>mem32 2003FFE8, 0x20 R4 = 00000000, R5 = 00000000, R6 = 80000000, R7 00000066
 200SFFES 6 MRE 24070001 24242424 R8 = 9220C050, RO = DQ8C106E, R10@= 20030000, R11= 00000000
-2003FFF8 = BFOOBF00 BFO@BF0@ BFQOBFO0 BFOOBFOO R12= ABAQSSO1
 20040008 = E7FEBFOQ AQF10400 33338047 33333131 i
 20040018 = 33333131 33333131 33333131 33333131 SP(R13)= 2003FFF@, MSP= 2Q03FFFQ, PSP= 00000000, SE
 20040028 = 33333131 33333131 33333131 33333131 J-Link>s ;
 20040038 = 33333131 33333131 33333131 33333131
 20040048 = 33333131 33333131 33333131 33333131 2004000A:
 20040058 = 33333131 33333131 33333131 33333131 J-Link>s
-jJ-Link>s 2004000A:
 00001140: 8@ BD POP {R7 , a}
 ```
 
@@ -980,10 +841,10 @@ jJ-Link>s 2004000A:
 
 ❌ ❌
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-) QSPI_Read_Product_Headers((struct_configuration_script_ptr *)&configuration_seript, product_img_offsets);
 > }
 while ( BYTE1(configuration_script) '= 1 );
 et CVE-2024-25076
@@ -991,34 +852,17 @@ if ( check_current_fw_addr_and_update_addr(product_img_offse
 if { !SRCWREBOOT_check_and_validate!
 product_img_offsets[1],
 (FW_ImageHeader *)&dword_2003C956,
-(int) product_img offsets,
 (struct_configuration_script_ptr +)&configuration_script) }
-{
-QS5PI_process_product_update((struct_configuration_script_ptr *)&configuration_script, product_img_offsets) ;
-WDOG Pet _1c34()};
-}
-}
-Cw
 else if { !SECWREBOOT_ check_and_validate(
-product_img_offsets[®],
 (FW_ImageHeader *)&dword_2@03C950,
-(int) product_img_ offsets,
 (struct_configuration_script_ptr *)&configuration_script) )
-{
 WOOG_Pet_1¢34();
-} rw
-SECURNBOOT_CHECK_key_revocation(dword_2803C950) ;
 sub_A6E((struct_configuration_script_ptr *)&configuration_script, product_img_offsets);
-WDOG_ feed ofF();
-if ( !SECWARBOOT_CHECK setup_OQSPIC_CTR_195C{[
 (struct_configuration_script_ptr *)&configuration_script,
 product_img_offsets) )
-WOOG_Pet_1c34():
 OTPC_standby();
 Cache_setup_qspi_cache(dword_2003C950, product_img_offsets) ;
-write_to_sysram(dword_268@3C958, product_img_ pi isets)
 return RESET_to_REMAP_ADR_ val(2u);
-}
 ```
 
 ## Slide 25
@@ -1073,7 +917,8 @@ return RESET_to_REMAP_ADR_ val(2u);
 
 **IV** **= Nonce +** **Block Counter**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BACK OF THE NAPKIN HACKING
@@ -1115,12 +960,12 @@ Sig Check is here
 
 **We are here**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 STILL NOT CONVINCED
 We are here
-Y
 Load Image
 Upgrade NO FW Validation
 Pending Current Executable Image
@@ -1132,24 +977,16 @@ OK
 ‘OK:
 6
 2 v
-a :
 a Device Administration
 £ Check Administration Data and j Accept Image
 £ Perform Key revocation
-mo]
-Co)
-cc)
-pS)
 >
-wo
 a
-A l
 | Configure Cache f Remap QSPI
 Dec: 4 hea es —OK-> Ctrl with IVT Start. ——> Copy IVT @0x0 (IVT in SW Reset
 | ryP Address RAM)
 pest T
 NOK
-a Ae 7 Ots;DSGS
 Trigger HW_Reset(); > END
 ```
 
@@ -1214,17 +1051,6 @@ Mutated Nonce SPI File
 
 **Boot Boot**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1
-) a
-0.0000 0.0002 0.0004 += 0.0006 += «0.0008» «0.0010: «0.00120.0014
-One of many captures was a standout
-Reconfirmed it wasn’t an anomaly
-Boot Boot
-```
-
 ## Slide 37
 
 **Iterate over where its being stored in flash to determine where it actually is (0xa7f0-0x200000)**
@@ -1251,15 +1077,6 @@ Boot Boot
 
 ##### **Slowing down the target to Single SPI allows capture, showing the SoC accessing the payload at 0x1d4744**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PROGRESS
-Slowing down the target to Single SPI allows capture,
-showing the SoC accessing the payload at 0x1d4744
-CMD ADDRESS DATA
-```
-
 ## Slide 40
 
 ## **ALMOST THERE**
@@ -1284,26 +1101,23 @@ with Decrypted Bytes Manual Mode
 
 **THE OWL**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 THE OWL
 @x99 (reset)
 0x03 @x00002074 (read)
-0x03 @x0000000a (read)
 @x@3 @ @x@000000e (read)
 0x03 @ 0x00000012 (read)
-0x03 @x0@0000014 (read)
 @x®@3 @ @x00000016 (read)
 @x@6 (write enable)
 @x@1 (write status register)
 @x@5 (read status register)
 @x®@3 @ @x00002400 (read)
 Q@x@3 @ 0x00002404 (read)
-0x03 @x@00025f8 (read)
 @x@3 @ @x@00025fc (read)
 0x03 @x00fd4744 (read) <----— TRANSITION TO STAGE 1
-0x03 Q@x0@0fd4760 (read)
 0x03 Q@x00fd4780 (read)
 | Ox00Fd4f6@ (read)
 Ox00fd4f8@ (read)
@@ -1320,11 +1134,11 @@ Q@x@0006 (EM10@ specific)
 ENCRYPTED
 ❌
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Type Device Administration Section (2
-pies aes SIGNED
 | Length of Device Administration Section
 (2 Bytes)
 Type Key revocation record (2 bytes)

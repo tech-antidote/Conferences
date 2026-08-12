@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away-wp.pdf"
 pages: 16
 sha256: "e1e260ba64f075683f4c4a7fcdab0ad6749141f724e3199c8d6869cb737e57a2"
-text_chars: 94379
+text_chars: 94375
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:53:57Z"
+converted_at: "2026-08-12T03:46:51Z"
 ---
 # A Run a Day Wont Keep the Hacker Away
 
 **Speakers:** Dhondt  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away-wp.pdf` (16 pages)
+
 
 ## Slide 1
 
@@ -295,9 +300,9 @@ _𝑖_|
 �
 (_𝑣_<sup>′′</sup>_𝑝𝑙,𝑜_<sup>′′</sup>
 _𝑙_<sup>)∈</sup><sup>_𝐴_′′</sup>
-���_𝑜_′′
+ _𝑜_′′
 _𝑙_<sup>−</sup><sup>_𝑇𝑣_′′</sup>_𝑝𝑙_<sup>_,𝑣𝑙_</sup>
-���|
+ |
 |26:
 27: **e**|**return**_𝑣𝑝𝑟𝑜𝑡𝑒𝑐𝑡𝑒𝑑_
 **nd procedure**|

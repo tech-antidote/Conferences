@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Chen-PMFault.pdf"
 pages: 21
 sha256: "d4c6c5dfc01b7ac68da5dd1238d189a6025f95c78e6dc23d6f9247d62c6dfe12"
-text_chars: 8009
+text_chars: 7667
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:53:51Z"
+converted_at: "2026-08-12T03:46:43Z"
 ---
 # PMFault
 
 **Speakers:** Chen  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-PMFault.pdf` (21 pages)
+
 
 ## Slide 1
 
@@ -132,7 +137,8 @@ Fault injection on CRT-RSA? Success! ❓ Why 0.1 🥡 -- Requires“Opening the 
 
 How to access PMBus?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How to access PMBus?
@@ -140,7 +146,6 @@ SMBus/I2C Bus
 | Ethernet 0
 Board
 Management
-| Ethernet biaradars adore
 a Controller (BMC) Voltage
 Regulator
 (VRM)
@@ -240,25 +245,16 @@ Reset it to 0x00 try again™!!
 
 <u>https://youtu.be/hXuidPexanM?t=88</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack 2: Overvolting
-RIGOL (WAT) H 1 coms 30Meqs g 'D so0000000ms_ | (T ¥ @ 268
-Horizontal u b4 Coupling
-ss
-Period —RBWlimit_
-lf. BWV Limit
 UL 20M
 Freq Probe
 Rise Tima ? AVI Invert
 Fall Time Volts/Div
-_— ~” Coarse
 +Width Unit
-v mu
-————
-WIGtN [Diys 1>2=eee0+ ivmax=-1.210ms __|Ma=2.94V Wupper=2.58 V
-httos://youtu.be/hxvidPexanM ?t=88
 ```
 
 ## Slide 14
@@ -283,9 +279,9 @@ Bit 8: VID_STEP_SEL 1’b0: 10mV per VID step 1’b1: 5mV per VID step With 10mV
 
 No need to reflash the firmware anymore, instead: **`sudo ipmitool`** `user set name` **`sudo ipmitool`** `user set password` **`sudo ipmitool`** `channel setaccess`
 
-```
+\```
 ipmitooli2c (Via Ethernet)
-```
+\```
 
 ## Slide 16
 

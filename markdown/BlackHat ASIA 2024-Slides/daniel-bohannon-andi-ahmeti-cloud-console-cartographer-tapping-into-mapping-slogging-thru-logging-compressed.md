@@ -1,6 +1,6 @@
 ---
-title: "Andi Ahmeti- Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging"
-speakers: ["Daniel Bohannon"]
+title: "Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging"
+speakers: ["Daniel Bohannon", "Andi Ahmeti"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Daniel Bohannon _ Andi Ahmeti- Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging_compressed.pdf"
 pages: 108
 sha256: "c5846aa42bc7940db06cd6aca643321d3859efc84b2a37d949c98c19be152b00"
-text_chars: 56894
-ocr_pages: 39
+text_chars: 54502
+ocr_pages: 36
 has_ocr: true
-redacted_secrets: 30
+redacted_secrets: 29
+ocr_confidence: 86.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:01:05Z"
+converted_at: "2026-08-12T04:48:36Z"
 ---
-# Andi Ahmeti- Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging
+# Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging
 
-**Speakers:** Daniel Bohannon  
+**Speakers:** Daniel Bohannon, Andi Ahmeti  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Daniel Bohannon _ Andi Ahmeti- Cloud Console Cartographer Tapping Into Mapping  Slogging Thru Logging_compressed.pdf` (108 pages)
+
 
 ## Slide 1
 
@@ -28,10 +33,10 @@ ASIA 2024
 
 **Cloud Console Cartographer Tapping Into Mapping > Slogging Thru Logging**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ip pikeachat
 PERMISO ASIA 2024
 Cloud Console Cartographer
 Tapping Into Mapping > Slogging Thru Logging
@@ -129,7 +134,7 @@ Tapping Into Mapping > Slogging Thru Logging
 
 ## **– Cloud Log Example** **~~s~~ Creating a User**
 
-```
+\```
 {{
 "eventTime":"2024-04-01T13:33:37.0000000Z",
 "category":"UserManagement",
@@ -163,7 +168,7 @@ Tapping Into Mapping > Slogging Thru Logging
 "sessionCredentialFromConsole":"true"
 }"fullName":"Core_Directory:UserManagement:Add_user"
 }
-```
+\```
 
 ## Slide 10
 
@@ -203,14 +208,14 @@ Tapping Into Mapping > Slogging Thru Logging
 
 ## **Definition: Console**
 
-```
+\```
 {
 "eventSource":"signin.amazonaws.com",
 "eventName":"ConsoleLogin",
 ...
 "eventType":"AwsConsoleSignIn"
 }
-```
+\```
 
 ## Slide 13
 
@@ -265,26 +270,23 @@ Tapping Into Mapping > Slogging Thru Logging
 Users | IAM | Global
 Log
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BB) Users | 1AM | Global
-<€< G (_ https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-2#/.. QA’ vy
 Identity and Access =X JAM > Users
 Management (IAM)
 Q Search 1AM Users (3) into
 An IAM user is an identity with long-term credentials that is used to interact with AWS in an account.
-|Q Search
 Dashboard
 ¥ Access management Cl) Username «| Path
 User grou
-o Andi Ahmeti /
 Users
 Roles
 Daniel_Bohannon
 Policies
 Identity providers
-No_Permissions
 Account settings ——
 ```
 
@@ -296,14 +298,14 @@ No_Permissions @ 2008-0217-1337 **SHQIPERMISO1337….**
 
 SHQIPERMISO1337 SHQIPERMISO1337
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A Users - Microsoft Azure
 © https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/.. AS @Q AY
 a Users
 permiso.io ~ Microsoft Entra ID
-:
 & Allusers
 @ Audit logs
 D Sign-in logs
@@ -311,22 +313,15 @@ D Sign-in logs
 & Deleted users
 w
 + New user L Download users B Bulk operations V () Refresh & Manage view “ Delete
-®
-¥ Aas
 2 users found
-[-] _ Display name t
 O ® Andi Ahmeti
 im @ Daniel Bohannon
 B
 User principal name fl User type
-andiahmeti@permiso.io [\ Member
-daniel.bohannon@permis.... [Member
 On-premises sy...
 No
 No
 Identities
-SHQIPERMISO13371
-SHQIPERMISO1337)
 ```
 
 ## Slide 17
@@ -337,20 +332,18 @@ No_Permissions @ 2008-0217-1337 **SHQIPERMISO1337….** SHQIPERMISO1337 SHQIPERM
 
 SHQIPERMISO1337
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-,)
 HQIPERMISO1337.
 a Users
 permiso.io ~ Microsoft Entra ID
 « + New user L Download users B Bulk operations V () Refresh & Manage view “ Ww Delete
-Autos F Add iter
 D Sign-in logs 2 users found
 % Diagnose and solve problems O Display name fT User principal name tl. User type On-premises sy... Identities
 Manage Oj ® Andi Ahmeti andiahmeti@permiso.io [FY Member No SHQIPERMISO1337I
 & Deleted users im @ Daniel Bohannon daniel.bohannon@permis... [Member No SHQIPERMISO13371
-Password reset
 & User settings
 &% Bulk operation results
 Troubleshooting + Support
@@ -364,15 +357,14 @@ No_Permissions @ 2008-0217-1337 **SHQIPERMISO1337….**
 
 SHQIPERMISO1337 SHQIPERMISO1337
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-,)
 HQIPERMISO1337.
 a Users
 permiso.io ~ Microsoft Entra ID
 « a New user L Download users B Bulk operations V () Refresh & Manage view Y Ww Delete
-Autos F Add iter
 D Sign-in logs 2 users found
 % Diagnose and solve problems O Display name fT User principal name tl. User type On-premises sy... Identities
 Manage Oj ® Andi Ahmeti andiahmeti@permiso.io [FY Member No SHQIPERMISO1337I
@@ -524,11 +516,11 @@ No_Permissions @ 2008-0217-1337
 
 iam:ListUsers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } No Permissions - 3/3 - IAM Users
-CG ( _ https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-
 Identity and Access =X 1AM > Users
 Management (IAM) 8
 Q Search JAM Users (0) info CG aE
@@ -556,7 +548,6 @@ Service control policies (SCPs)
 Related consoles
 IAM Identity Center [3
 AWS Organizations [4
-@) Cloudshelt —_ Feedback Privacy Terms Cookie preferences
 ```
 
 ## Slide 34
@@ -617,7 +608,8 @@ _iam:ListUsers ? ? ? ? ?_
 
 ## **– Console Mapping IAM Users**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - IAM Users
@@ -642,18 +634,16 @@ C
 
 iam:ListUsers ? ? ? ? ?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console Mapping - IAM Users
-B Users (3) into [S| octece — (RERRUEERY
 ‘An IAM user is an identity with lang-term credentials that is used to interact with AWS in an account,
 Q Search <1> ©
 Oo User name a Path v Groups ¥ Last activity v MFA OV Password
 @ Access @ Acces
 Andi_Ahmeti Access deni Access |
-O Andi Ahmet! é denied denied mi s denied cae
-(Chee c ; @ Access @ Acces
 ‘An IAM user is an identity with long-term credentials that is used to interact with AWS in an account. a) Daniel_Bohannon / denied @ Access denied sdanied @ Access:
 Q Search <1 e Access Acces
 0 No_Permissions / ® ‘ ® Access denied ® @ Access:
@@ -662,13 +652,10 @@ User name a Path Vv Groups 7 Last activity v MFA Ov Password
 Access denied
 You don't have permission to jam:ListUsers. To request access, copy the following text and send it to your AWS es
 administrator. Learn more about troubleshooting access denied errors. [3
-User: arn:aws:iam::200802171337:user/No_Permissions | G copy Cc a erases eer)
 Service: iam Users (3) into CG Delete
 Action: ListUsers ‘An IAM user is an identity with long-term credentials that Is used to Interact with AWS in an account,
-On resource(s): arn:aws:iam:: 200802171337 :user/
 Context: no identity-based policy allows the iam:ListUsers action
 Oo User name a Path v Groups ¥ Last activity v MFA OV Password
-——————
 O —__No_Permissions / 0 @ 5 hours ago Virtual -
 ```
 
@@ -686,7 +673,8 @@ iam:ListUsers ? ? ? ? ?
 
 iam:ListUsers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - IAM Users
@@ -847,7 +835,8 @@ iam:GetAccessKeyLastUsed
 
 #### `ConsoleHome`
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console Mapping -
@@ -901,11 +890,9 @@ Mozilla/5.0 (Macintosh; Intel ...
 {"filter":{"eventStatusCodes":["open"],
 {"filter":{"startTimes":[{"from":"Mar 11|
 {"filter":{"startTimes":[{"from":"Mar 1
-{"Filter":{"Not":{"Or":[{"Dimensions":{"Values";
 {"Filter":{"Not":{"Or":[{"Dimensions":{"Values'
 {"filter":{"eventStatusCodes":["open","upcoming
 {"filter":{"eventStatusCodes":["open"],"startTi
-{"filter":{"eventStatusCodes":["open"],"startTj
 {"filter":{"startTimes":[{"from":"Mar 11, 2024
 {"maxResults":"100"}
 ```
@@ -916,11 +903,11 @@ Mozilla/5.0 (Macintosh; Intel ...
 
 #### `ConsoleHome`
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console Mapping -
-'ConsoleHome
 | eventTime = eventNameFull
 (Background)
 userAgent requestParameters
@@ -942,14 +929,12 @@ Mozilla/5.0 (Macintosh; Intel ... {"regionSet":{},"allRegions":true}
 Mozilla/5.0 (Macintosh; Intel ...
 Mozilla/5.0 (Macintosh; Intel ...
 {"Filter":{"Not":
-{"Filter":{"Not":{"Or":[{"Dimensions":{"}
 Or":[{"Dimensions":{"
 Mozilla/5.0 (Macintosh; Intel ... {"maxResults":"100"}
 health.amazonaws.com {"filter":{"startTimes":[{"from":"Mar 1
 Mozilla/5.0 (Macintosh; Intel ...
 AWS Internal {"filter":{"eventStatusCodes":["open","upcoming
 Mozilla/5.0 (Macintosh; Intel ... {"filter":{"eventStatusCodes":["open"],"startTi
-health.amazonaws.com {"filter":{"eventStatusCodes":["open"],"startTj
 AWS Internal {"filter":{"startTimes":[{"from":"Mar 11, 2024
 ```
 
@@ -959,11 +944,11 @@ AWS Internal {"filter":{"startTimes":[{"from":"Mar 11, 2024
 
 #### `ConsoleHome`
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console Mapping -
-'ConsoleHome
 | eventTime =
 eventNameFull
 userAgent =
@@ -983,7 +968,6 @@ Mozilla/5.0 (Macintosh; Intel ...
 userAgent
 {"regionSet":{},"allRegions":true}
 {"Filter":{"Not":
-{"Filter":{"Not":{"Or":[{"Dimensions":{"}
 Or":[{"Dimensions":{"
 {"maxResults":"100"}
 requestParameters
@@ -1016,7 +1000,6 @@ AWS Internal
 {"filter":{"startTimes":[{"from":"Mar 11, 2024,
 {"filter":{"eventStatusCodes":["open","upco
 {"filter":{"eventStatusCodes":["open"],"start
-{"filter":{"eventStatusCodes":["open"],"start
 {"filter":{"startTimes":[{"from":"Mar 11, 2024 4
 ```
 
@@ -1026,7 +1009,8 @@ AWS Internal
 
 #### `ConsoleHome`
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - (Background)
@@ -1040,15 +1024,6 @@ eventTime = eventNameFull = userAgent = requestParameters
 ## Slide 50
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-(Context)
-; Console Mapping -
-PIPANEB AGE
-SVERYVTHENO_ BAGEL
-```
 
 ## Slide 51
 
@@ -1074,7 +1049,8 @@ AKIA[REDACTED:aws-access-key-id] - Active AdministratorAccess/andi.ahmeti@permis
 
 AdministratorAccess/andi.ahmeti@permiso.io
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - (Context)
@@ -1184,7 +1160,8 @@ Plain_Bagel | IAM | Global AdministratorAccess/andi.ahmeti@permiso.io 2008021713
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - (Context)
@@ -1207,7 +1184,8 @@ eventTime = eventNameFull = userAgent = requestParameters =
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1263,7 +1241,8 @@ aws-internal/3 aws-sdk-java/...
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1319,7 +1298,8 @@ Keyld":"AKIA[REDACTED:aws-access-key-id]"}
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1375,7 +1355,8 @@ aws-internal/3 aws-sdk-java/...
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1414,7 +1395,8 @@ iam:GetAccessKeyLastUsed
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping - (Context)
@@ -1430,7 +1412,6 @@ iam:ListPolicies iam:ListGroupPolicies
 iam:ListAttachedGroupPolicies
 iam:GetLoginProfile iam:GetLoginProfile
 access-analyzer:ListPolicyGenerations access-analyzer:ListPolicyGenerations
-iam:ListAccessKeys jiam:ListAccessKeys
 iam:ListAccessKeys iam:ListAccessKeys
 iam:GetAccessKeyLastUsed
 iam:GetAccessKeyLastUsed
@@ -1442,7 +1423,8 @@ iam:GetAccessKeyLastUsed
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1477,7 +1459,8 @@ iam:GetAccessKeyLastUsed
 
 **~~–~~ Console Mapping OptionalEvents (Context)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Console Mapping -
@@ -1530,7 +1513,8 @@ aws-internal/3 aws-sdk-java/...
 
 **CLI vs Console**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vs Console
@@ -1542,8 +1526,6 @@ aws
 "Path": "/",
 "UserName": "krileva",
 "UserId": "AIDA12345678ABCDEFGHI",
-"Arn": H :iam: :200802171337:user/krileva",
-2024-03-22T03: 48:59+00: 00"
 }
 bash-3.2$ aws iam create-access-key --user-name krileva
 {
@@ -1553,7 +1535,6 @@ bash-3.2$ aws iam create-access-key --user-name krileva
 "Status": "Active",
 "SecretAccessKey": "SHQIP1337PunaEshteShendet4U+po+iRedacted",
 "CreateDate": "2024-03-22T03:49:17+00:00"
-}
 }
 bash-3.2$
 bash-3.2$ aws iam attach-user-policy --user-name krileva \
@@ -1567,7 +1548,8 @@ bash-3.2$
 
 **1** **2 3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vs Console
@@ -1579,8 +1561,6 @@ aws
 "Path": "/",
 "UserName": "krileva",
 "UserId": "AIDA12345678ABCDEFGHI",
-"Arn": H :iam: :200802171337:user/krileva",
-2024-03-22T03: 48:59+00: 00"
 }
 bash-3.2$ aws iam create-access-key --user-name krileva 2
 {
@@ -1590,7 +1570,6 @@ bash-3.2$ aws iam create-access-key --user-name krileva 2
 "Status": "Active",
 "SecretAccessKey": "SHQIP1337PunaEshteShendet4U+po+iRedacted",
 "CreateDate": "2024-03-22T03:49:17+00:00"
-}
 }
 bash-3.2$
 bash-3.2$ aws iam attach-user-policy --user-name krileva \
@@ -1604,7 +1583,8 @@ bash-3.2$
 
 **1 2 3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vs Console
@@ -1630,7 +1610,6 @@ bash-3.2$ aws iam create-access-key --user-name krileva
 "SecretAccessKey": "SHQIP1337PunaEshteShendet4U+po+iRedacted",
 "CreateDate": "2024-03-22T03:49:17+00:00"
 }
-}
 bash-3.2$
 bash-3.2$ aws iam attach-user-policy --user-name krileva \
 > --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
@@ -1647,7 +1626,8 @@ bash-3.2$
 
 **1 2 3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vs Console
@@ -1656,16 +1636,12 @@ bash-3.2$ pytho
 iam_client.create_user(UserName=krileva)
 {'Arn': ‘arn:aws:iam: :200802171337:user/krileva',
 'CreateDate': datetime.datetime(2024, 3, 22, 4, 52, 49, tzinfo=tzutc()),
-‘Path': '/',
 'UserId': 'AIDA12345678ABCDEFGHI'
 'UserName': 'krileva'}
 iam_client.create_access_key(UserName=krileva)
 {'AccessKeyId': 'AKIA[REDACTED:aws-access-key-id]',
 'CreateDate': datetime.datetime(2024, 3, 22, 4, 52, 49, tzinfo=tzutc()),
-'SecretAccessKey': 'SHQIP1337PunaEshteShendet4U+po+iRedacted'
-'Status': 'Active',
 'UserName': 'krileva'}
-iam_client.attach_user_policy(UserName=krileva, PolicyArn=arn:aws: iam: :aws
 :policy/AdministratorAccess)
 bash-3.2$
 import boto3
@@ -1675,7 +1651,6 @@ iam_client = boto3.client('iam')
 # Spe sername for new IAM User
 username = ‘krileva‘
 # fy policy ARN to add to newly cre IAM User
-policyArn = "“arn:aws: iam: :aws:policy/AdministratorAccess"
 # Create IAM User
 response iam_client.create_user(UserName=username)
 print(f"\niam_client.create_user(UserName={username})\n")
@@ -1696,7 +1671,8 @@ print(f"\niam_client.attach_user_policy(UserName={username}, PolicyArn={policyAr
 
 **1 2 3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vs Console
@@ -1707,18 +1683,13 @@ eventNameFull requestParameters
 bash-3.2$
 bash-3.2$ python3
 iam:CreateUser {"userName":"krileva"}
-iam_client.create_user(UserName=krileva) iam:CreateAccessKey {"userName":"krileva"}
 {'Arn': ‘arn:aws:iam: :200802171337:user/krileva', iam:AttachUserPolicy {"userName":"krileva","policyArn":"arn:aws:iam::aws:policy/AdministratorAccess"}
 'CreateDate': datetime.datetime(2024, 3, 22, 4, 52, 49, tzinfo=tzutc()),
 'Path': '/',
-'UserId': 'AIDA12345678ABCDEFGHI', Sue eee
 'UserName': 'krileva'} from pprint import pprint
 iam_client.create_access_key(UserName=krileva) 2 # Define IAM client
-boto3.client(‘'iam')
 {'AccessKeyId': 'AKIA[REDACTED:aws-access-key-id]',
 'CreateDate': datetime.datetime(2024, 3, 22, 4, 52, 49, tzinfo=tzutc()),
-'SecretAccessKey': 'SHQIP1337PunaEshteShendet4U+pot+iRedacted',
-'Status': 'Active',
 'UserName': 'krileva'}
 username
 y
@@ -1741,22 +1712,19 @@ pprint (response['
 Users | IAM | Global
 No_Permissions @ 2008-0217-1337
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BB Users | 1AM | Global
-© https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-2#/.. Q A’ yy
 Identity and Access =X 1AM > Users
 Management (IAM)
 | Q Search am Users (3) info
 An IAM user is an identity with long-term credentials that Is used to interact with AWS in an account.
-ja Search
 Dashboard
 ‘Y Access management User name Groups ¥ Last activity
 User groups
 Andi.
-thers Andi_Ahmeti
-et elt
 Policies Daniel_Bohannon
 Identity providers
 No_Permissions
@@ -1780,7 +1748,8 @@ SearchBar
 1
 IAM Dashboard
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eventNameFull userAgent requestParameters
@@ -1811,7 +1780,8 @@ IAM_Dashboard
 IAM_Users
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console
@@ -1819,7 +1789,6 @@ SearchBar
 eventTime =
 eventNameFull
 resource-explor
-IAM_Dashboard
 eventTime =
 2024-03-22 04:55:06.0000
 2024-03-22 04:55:06.0000
@@ -1839,7 +1808,6 @@ iam:ListAccessKeys
 iam:GetAccountSummary
 health:DescribeEventAggregates
 health:DescribeEventAggregates
-__userAgent
 Mozilla/5.0 (Macintosh; Intel ...
 userAgent
 AWS Internal
@@ -1855,7 +1823,6 @@ GGREGATOR"}
 requestParameters
 {"userName":"No_Permissions"}
 {"userName":"No_Permissions"}
-{"filter":{"eventStatusCodes":["open","upcoming"],"
 {"filter":{"startTimes":[{"from":"Mar 15, 2024 4:5:
 ```
 
@@ -1872,11 +1839,12 @@ IAM_Users
 
 1
 
-```
+\```
 IAM_Users_CreateUser_Step1
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 » IAM_Users
@@ -1930,7 +1898,6 @@ aws-internal/3 aws-sdk-java/...
 aws-internal/3 aws-sdk-java/...
 aws-internal/3 aws-sdk-java/...
 aws-internal/3 aws-sdk-java/...
-{"maxltems":1000}
 {"userName":"Andi_Ahmeti"}
 {"userName":"Daniel_Bohannon"}
 {"userName":"No_Permissions"}
@@ -1946,7 +1913,6 @@ aws-internal/3 aws-sdk-java/...
 {"userName":"Andi_Ahmeti"}
 {"userName":"Daniel_Bohannon"}
 {"userName":"No_Permissions"}
-d":"AKIA[REDACTED:aws-access-key-id]"}
 IAPERSHENDETJEMIQ2"}
 ```
 
@@ -1966,7 +1932,8 @@ IAPERSHENDETJEMIQ2"}
 
 **18 13 1**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console
@@ -1986,7 +1953,6 @@ eventTime =
 2024-03-22 04:56:24.0000
 2024-03-22 04:56:24.0000
 2024-03-22 04:56:25,0000
-eventNameFull
 iam:ListPolicies
 iam:ListGroups
 iam:GetGroup
@@ -2007,19 +1973,17 @@ requestParameters
 {"maxitems":1000}
 {"groupName":"customGroup1"}
 {"groupName":"customGroup2"}
-{"maxltems":1000,"marker":"AFB1SALqql7Kp/vCL!
 {"groupName":"customGroup1"}
 {"groupName":"customGroup2"}
 {"scope":"AWS","onlyAttached":false,"pathPrefix":"/"}
-“,"onlyAttached":false,"pathPrefix":"/"}
 -200802171337:policy/Per...
 ```
 
 ## Slide 83
 
-```
+\```
 IAM_Users_CreateUser_Step1
-```
+\```
 
 ## **CLI vs Console**
 
@@ -2050,9 +2014,9 @@ IAM_Users_CreateUser_Step2
 
 **10**
 
-```
+\```
 IAM_Users_SPECIFICUSER_CreateAccessKey
-```
+\```
 
 ## Slide 85
 
@@ -2063,11 +2027,11 @@ IAM_Users_SPECIFICUSER_CreateAccessKey
 10 4 1
 15 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console
-* IAM_Users_SPECIFICUSER_CreateAccessKey
 eventTime = eventNameFull = _userAgent = requestParameters
 2024-03-22 04:58:57.0000 iam:CreateAccessKey AWS Internal {"userName":"krileva"}
 ```
@@ -2080,12 +2044,11 @@ eventTime = eventNameFull = _userAgent = requestParameters
 10 4 1
 1 15 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console
-nN
-= *\
 28
 AWS Internal
 2 aws-internal/3 aws-sdk-java/1.12.676 Linux/5.10.210-178.852.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/17.0.10+9-LTS java/1.8.0_402 vendor/N/A cfg/retry-mode/standard
@@ -2105,12 +2068,12 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 1 15 8
 events
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Console
 A. eventCount userAgent
-ss)
 28 AWS Internal
 2 aws-internal/3 aws-sdk-java/1.12)676]Linux/6.10.210-1 amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/17.0.10+9-LTS java/1.8.0_402 vendor/N/A cfg/retry-mode/standard
 aws-internal/3 aws-sdk-java/1.12 679 Linux/5.10.210-17! mzn2int.x86_64 OpenJDK_64-Bit_Server_VM/17.0.10+9-LTS java/1.8.0_402 vendor/N/A cfg/retry-mode/standard
@@ -2154,7 +2117,8 @@ iam:ListUsers **1** **~~<u>1</u>~~** iam:GetLoginProfile **+ +** iam:ListSigning
 
 21+4 ~~1~~ 00 **421** ( )=
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 } Worst Case Scenarios
@@ -2169,7 +2133,6 @@ s3:GetStorageLensDashboardDatainternal 2 0 oO
 ec2:DescribeRegions 1 o oO
 health:DescribeEventAggregates 2 0 if]
 notifications:ListNotificationHubs 1 0 0
-$3:GetAccountPublicAccessBlock 11 0 i]
 s3:ListAccessPoints 100 100 ["bureki","doner","gjevrek","golden_eagle"....
 s3:GetBucketPolicyStatus 100 100 ["bureki","doner","gjevrek","golden_eagle",...
 s3:GetBucketPublicAccessBlock 100 100 ["bureki","doner","gjevrek","golden_eagle"....
@@ -2195,13 +2158,13 @@ IAM_Users
 
 **#Aggregation**
 
-```
+\```
 Background_Events
-```
+\```
 
-```
+\```
 IAM_Users_SPECIFICUSER_CreateAccessKey
-```
+\```
 
 ## Slide 94
 
@@ -2209,9 +2172,9 @@ IAM_Users_SPECIFICUSER_CreateAccessKey
 
 #### `IAM_Users_CreateUser`
 
-```
+\```
 IAM_Users
-```
+\```
 
 • **Introduction**
 
@@ -2265,93 +2228,93 @@ IAM_Users_SPECIFICUSER_CreateAccessKey
 
 iam:ListUsers iam:GetLoginProfile iam:ListSigningCertificates iam:ListMFADevices iam:ListGroupsForUser iam:ListAccessKeys iam:GetAccessKeyLastUsed
 
-```
+\```
 $this.AnchorEvents
 $this.RequiredEvents
 $this.OptionalEvents
-```
+\```
 
 ## Slide 100
 
 ## **Signal Definition**
 
-```
+\```
 ([LabelType]::IAM_Users) {
-```
+\```
 
-```
+\```
 $this.Service='IAM'
-```
+\```
 
-```
+\```
 $this.Name='Clicked IAM->Users'
-```
+\```
 
-```
+\```
 $this.Summary='Clicked IAM->Users which displays all IAM Users in paged format.'
-```
+\```
 
-```
+\```
 $this.Url='https://{{awsRegion}}.console.aws.amazon.com/iamv2/home?region={{awsRegion}}#/users'
 $this.AnchorEvents=@('iam:ListUsers')
-```
+\```
 
-```
+\```
 $this.RequiredEvents=@(
-```
+\```
 
-```
+\```
 'iam:GetLoginProfile',
-```
+\```
 
-```
+\```
 'iam:ListAccessKeys',
-```
+\```
 
-```
+\```
 'iam:ListGroupsForUser',
-```
+\```
 
-```
+\```
 'iam:ListMFADevices',
-```
+\```
 
-```
+\```
 'iam:ListSigningCertificates',
-```
+\```
 
-```
+\```
 'iam:ListUsers'
-```
+\```
 
-```
+\```
 )
-```
+\```
 
-```
+\```
 # iam:GetAccessKeyLastUsedonly executed if 1+ IAM Users with 1+ Access Keys are defined.
 $this.OptionalEvents=@('iam:GetAccessKeyLastUsed')
 # Current mapping scenario generates events over longer-than-normal timespan, so increasing
-```
+\```
 
-```
+\```
 # default lookback/lookahead values when aggregating nearby events surrounding AnchorEvents.
 $this.LookbackInSeconds=5
-```
+\```
 
-```
+\```
 $this.LookaheadInSeconds=35
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 101
 
 ## **Pass #1 Label Assi** **~~g~~ nment (Per Event)**
 
-```
+\```
 'ListUsers' {
 # E.g. {"maxItems":1000}
 if(
@@ -2367,7 +2330,7 @@ $userAgentFamily-eq [UserAgentFamily]::AWS_Internal
 [LabelType]::IAM_Users_CreateUser
 }
 }
-```
+\```
 
 ## Slide 102
 

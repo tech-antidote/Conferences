@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Peleus Uhley_Tracing Origins Navigating Content Authenticity in the Deepfake Era.pdf"
 pages: 61
 sha256: "4a2001e9c3f4d38cd66c311a188665437ec3fefe6ad301fd7aab353c1b531c02"
-text_chars: 40331
-ocr_pages: 29
+text_chars: 36815
+ocr_pages: 28
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.5
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:37:59Z"
+converted_at: "2026-08-12T04:40:40Z"
 ---
 # Tracing Origins Navigating Content Authenticity in the Deepfake Era
 
 **Speakers:** Peleus Uhley  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Peleus Uhley_Tracing Origins Navigating Content Authenticity in the Deepfake Era.pdf` (61 pages)
+
 
 ## Slide 1
 
@@ -41,11 +47,12 @@ Why?
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deepfakes have been used in the upcoming US election
-S2NBCNEWS  0o1npics + pottics us.NEWS WORLD WATCH LIVE @ =
+S2NBCNEWS 0o1npics + pottics us.NEWS WORLD WATCH LIVE @ =
 ARTIFICIAL INTELLIGENCE
 Political consultant who admitted deepfaking
 Biden's voice is indicted, fined $6 million
@@ -60,14 +67,14 @@ ne Cheyenne MacDonald - Weekend Editor
 v Sun, July 28, 2024 at 10:26 AM PDT - 1 min read tr 1
 As spotted by The New York Times, Elon Musk shared an altered version of
 Kamala Harris’ campaign video on Friday night that uses a deepfake voiceover
-Ai Adobe
 ```
 
 ## Slide 4
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TIME
@@ -76,7 +83,6 @@ Globally, more voters than ever in history will head to the polls as at least 64
 countries (plus the European Union)—representing a combined population of
 about 49% of the people in the world—are meant to hold national elections, the
 results of which, for many, will prove consequential for years to come.
-Ai Adobe
 ```
 
 ## Slide 5
@@ -85,7 +91,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deepfakes are a global issue
@@ -101,7 +108,6 @@ disinformation machine
 With an EU referendum and a presidential election in October, the
 Ukraine-bordering Eastern European country fends off a barrage of
 disinformation, cyberattacks and Kremlin-backed political corruption.
-Ai Adobe
 ```
 
 ## Slide 6
@@ -110,11 +116,11 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deepfakes are a global issue (cont.)
-rf i Reuters World Y BusinessY MarketsY Sustainability v Morev
 Cybersecurity
 Fake videos of Modi aides trigger political
 showdown in India election Five arrested in Amit Shah
@@ -130,7 +136,6 @@ conspiracy "to create tension in society."
 The Hyderabad police on Friday said they arrested five Telangana Congress party
 social media activists in connection with Union Home Minister Amit Shah's
 alleged morphed video that went viral recently.
-Ai Adobe
 ```
 
 ## Slide 7
@@ -139,11 +144,11 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Split perspectives
-WEER EAD
 Indian Voters Are Being Bombarded With Millions of
 Deepfakes. Political Candidates Approve
 India’s elections are a glimpse of the Al-driven future of democracy. Politicians are using audio and video
@@ -154,14 +159,14 @@ Al-generated replicas
 Formal bill introduction follows October 2023 introduction of discussion
 draft
 JULY 31, 2024
-Ai Adobe
 ```
 
 ## Slide 8
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = Q §® 1LOSANGELES LOCAL WEATHER U.S.&WORLD _... Watch News 24/7
@@ -180,7 +185,6 @@ content, part of a push against deep fakes and other
 manipulated content, but not covering social media.
 While companies like Meta and Google are self-policing Al-
 manipulated content, industry standards are lacking.
-Ai Adobe
 ```
 
 ## Slide 9
@@ -189,7 +193,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tech companies stepping into the fight
@@ -206,20 +211,13 @@ relevant to the commitments in the accord.
 A Adobe
 amazon ss anTHROP\c
 arm
-IlElevenLabs
 Google Inflection INTUIT
 Gen _ GitHub
-@LG AlResearch
 Fi NetApp
-od TikTok
-Ai Adobe
 B® Microsoft
-Linked[]} UW McAfee
 NOTA.
-@® TREND:
 OO Meta
 SNAPCHATS: stability.ai
-iS) OpenAl
 a TrueMedia.Org
 ```
 
@@ -229,11 +227,11 @@ a TrueMedia.Org
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Four out of five Al bots approve
-e
 thebmy covid-19 Researchy Educationy News&Viewsy Campaignsy Jobsy 1
 Feature » Artificial Intelligence
 Deepfakes and doctors: How people are being fooled by social media scams
@@ -244,13 +242,10 @@ Article Related content Metrics Responses social media
 1d* © 2minread
 Chris Stokel-Walker, freelance journalist
 Author affiliations v 9. Health Topics mentioned in this article
-. EO aarn.
-stokel(Qgmail.com (Ga) +7 8a: Hemp
 Michael Mosley is among a number of TV doctors victim to "deepfakes” of themselves circulating on social
 media to sell scam products, an investigation has revealed.
 ChrisStokel-Walker investigates the increasing prevalence of deepfake videos purporting
 to be of popular doctors selling scam products
-Ai Adobe
 ```
 
 ## Slide 11
@@ -259,12 +254,11 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Generating mass confusion
-oO
-Ai Adobe
 An Al-generated scene that is the product of Al hallucination—made up
 information that may seem plausible but is not ttue—that depicts an explosion
 near the Pentagon was shared around the internet in May 2023, causing
@@ -280,10 +274,10 @@ law due to Ukrainians invading Russia. [16]
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Ai Adobe
 SHORT READ | OCT 2 12
 U.S. adults under 30 now trust information
 from social media almost as much as from
@@ -291,8 +285,6 @@ national news outlets
 Half of 18- to 29-year-olds say they have at least some trust in the information they get
 from social media sites.
 ts who say they have some or a lot of trust in the information
-Local news é a a oF 7h
-ra] =
 National news 5
 61
 ```
@@ -303,11 +295,11 @@ National news 5
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Social media is a prominent channel for announcements
-Instagroun
 Joserx R. Bren, JR. joebiden & - Follow
 1, 2024 jjoebiden.com
 My Fellow Americans, Joe and Kamala are on board -- are you? Chip in today to power our campaign.
@@ -336,10 +328,7 @@ I believe today what I always have: that there is nothing America can’t do —
 together. We just have to remember we are the United States of America.
 FOR THE Ss
 AMERICAN
-PEOPLE / —
 /
-quay
-Ai Adobe
 ```
 
 ## Slide 14
@@ -348,7 +337,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EdSmart data collected from Pew studies (2023)
@@ -364,7 +354,6 @@ e 66% of Americans say they at least sometimes come across altered videos and im
 e 63% say videos and images altered to mislead the public cause a great deal of confusion ( )
 e Deepfakes are becoming more common in financial scams, with a 300% increase in deepfake-based fraud attempts reported in
 2020. (Source: Digital Guardian)
-Ai Adobe
 ```
 
 ## Slide 15
@@ -373,7 +362,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EdSmart data (cont.)
@@ -390,21 +380,20 @@ Who's responsible for solving this problem?
 e 53% of Americans believe journalists have the greatest responsibility to reduce made-up news (Pew)
 « 12% say the responsibility falls on the government (Pew)
 e 9% say tech companies are responsible (Pew)
-Ai Adobe
 ```
 
 ## Slide 16
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 hts ¥ Research Al (NEW ) vices & © Login
 Technology & Telecommunications >» Software
 Share of consumers who Say they could detect a deepfake video worldwide as of 2022
 DOWNLOAD
-ror f Bins § iw ons Gi rer
 Source
 — Show sources information
 + Show publisher information
@@ -429,18 +418,17 @@ Be STESta eS: Original question: "Do you think you would be able to
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deepfakes are a problem across media types
 In collaboration with Sarah Barrington, a Ph.D. student at UC Berkeley, we have launched a new study to determine just how realistic these Al-generated
 | News | voices are and whether a cloned voice sounds like the original speaker's voice.
-by Hany Farid, UC Berkeley Professor, CAI . _ . . . . . . ;
 Advisor In this study, participants listen to a set of voices (one at a time), half of which are real and half of which are Al-generated. Although we are still collecting data,
 July 22, 2024 we have completed a pilot study with 50 participants who each listened to a total of 40 short voice recordings. The average accuracy on this task was 65%,
 slightly better than chance performance of 50%. There was only a small bias in which accuracy for real voices was 68% and accuracy for fake voices was
 62%. In other words, participants were slightly more likely to say a recording was real. You can test yourself on a set of 16 voices to see how you do.
-> 0:00/0:03 ———— 4) ;
 An audio clip from a collection of recordings consisting of natural human and Al-generated voices.
 We also asked participants how they thought they were distinguishing the real from the fake. We received some interesting insights, including:
 e The person was breathing or taking breaths between words.
@@ -450,7 +438,6 @@ While these preliminary results suggest that Al-generated voices are passing thr
 indistinguishable from reality. The snippets of voices that participants heard were relatively short, between 3 and 10 seconds, and did not feature yelling,
 laughing, or anything that reflected strong emotions. If, however, generative Al continues along its current trajectory, it seems likely that sooner or later it is
 going to be very difficult to perceptually distinguish the real from the fake.
-Ai Adobe
 ```
 
 ## Slide 18
@@ -485,20 +472,16 @@ Who?
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coalition for Content Provenance and Authenticity (C2PA)
 Steering Committee Members
-Vl Adobe IBIBIC| Google intel B® Microsoft G Openal
 © truepic
 General Members
-AWS arm AT=M= Canon ¢ | digicert LEAD | ||Fleven
 Trust
-FUJiFILM -{ 0) FUTUREWEL 8 identity Infosys KEYFACTOR @
-A over lai cP polygon ZI Fresiebensat? == Qualcomm esse od TikTok
 WDR? ==
-Ai Adobe
 ```
 
 ## Slide 23
@@ -545,7 +528,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 C2PA creates both the specification and informative documents
@@ -560,7 +544,6 @@ Security Considerations
 Harms Modelling
 Guidance for Artificial Intelligence and Machine Learning
 PDF Versions of these documents are also available via the Download button in the page header.
-Ai Adobe
 ```
 
 ## Slide 26
@@ -573,7 +556,8 @@ Where?
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Camera implementations
@@ -587,7 +571,6 @@ M11-P
 Nick Rains is a professional photographer and principal Instructor at Leica Akademie
 Australia. In his educational video, he shares an in-depth perspective on the newest
 technology built into the Leica M11-P.
-Ai Adobe
 PetaPixel
 Canon and Reuters Develop New Photo
 Authentication Technology
@@ -614,7 +597,8 @@ Authentication Technology
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Online services
@@ -633,7 +617,6 @@ C2PA in DALL-E 3 Mark the good stuff: Content provenance and the
 C2PA standard, OpenAl's implementation, and C2PA metadata fight against disinformation
 Updated over a week ago
 Posted by Charlie Halford on 5 Mar 2024, last updated 7 Mar 2024
-Ai Adobe
 ```
 
 ## Slide 30
@@ -742,7 +725,8 @@ What?
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Levels of Trust
@@ -751,10 +735,6 @@ How we measure the tru omething we see
 Transparency Integrity Authority Known Bias
 rer Ree weer RAW 9
 Reporter wy wr we ww
-Cesnenton wae tir war tit 9
-Topic wae wir war tae 9
-unas tae wit wi ait 9
-Hoy tat ait wit ta ?
 J Adobe © 2024 Adobe. All Rights Reserved. Adobe Confidential
 ```
 
@@ -786,13 +766,35 @@ How?
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Creation
+Create original asset
+@ Create assertions (hashing each one) & store in C2PA Manifest
+Assertion Store
+{
+"hash": ... “c2pa.created
+‘o Calculate (or compute) hashes of the asset data
+4 | Create claim data structure & store in the C2PA Manifest
+"assertions": [
+// JUMBF URIs to the assertions above
+"signature":
+6 Sign the claim & store it in the C2PA Manifest
+Signed by: CaptureDevice
+Time: 2020-06-05T10:37:00-07:00
+Hash: fa31...
+```
+
 ## Slide 41
 
 ## The implementation is based on existing specifications
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The implementation is based on existing specifications
@@ -807,7 +809,7 @@ e CDDL
 e JSON Schema
 ublin Core Metadata Initiative
 3.3. Digital & Electronic Signatures
- X.509 Certificates
+X.509 Certificates
 e JSON Web Algorithms (JWA)
 ¢ CBOR Object Signing and Encryption (COSE)
 Using RSA Algorithms with COSE Messages
@@ -819,7 +821,6 @@ Algorithms and Identifiers for the Internet X.509 Public Key Infrastructure Cert
 Revocation List (CRL) Profile
 Internet X.509 Public Key Infrastructure: Additional Algorithms and Identifiers for DSA and ECDSA
 e Algorithm Identifiers for Ed25519, Ed448, X25519, and X448 for Use in the Internet X.509 Public Key
-Ai Adobe
 ```
 
 ## Slide 42
@@ -868,107 +869,42 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Al generated images of hackers created by Adobe Firefly
-ed. Adobe Confidential.
-Adobe. All Rights Reserv
-© 2024
-J Adobe
-```
-
 ## Slide 45
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 6761 6374696F
 6765 6E746041
-POS2E 66697265
 62652E66
-PO5F332ZE
-T47P47a73
-63657479
-@G286A75
-@a7h6362
 6E616065
-F1b28054
-Onaaaaa 2
 6C616960
-4633406
 4 3A356033
-'6169605F
-3@2E313@
-‘bbbF F669
-GAG17373
-T4096F GE
-SCSSSEFS
-6236475
-B8582GEC
-78297365
 61746164
-DBFa6361
-AN@@3.89B
 82590633
-S64886F7
 65285379
-F27orar4
 72766963
 5A3@8 LAL
-SEP4656E
-3QOFO603
-30090603
-BF62 652E636F
-nD3e@ CANS 749
-Ai Adobe
 A ™ 88q c2pa.actions cbhor"gactio
-nsA§factionlcZpa. createdesoftwareAgentmA
-dobe Fireflyjparametersdx ®am.adobe.fire
-fly. operationmi@gt_to_imagex Bam. adobe. f
-irefly.versionx'3.@S8ht-releasefiRefly_3.
-@.14main. 1318. 6qdigitalS@urceTypextmttps
-i//cv.iptc.org/newscodes/digMeal sourcety:
-pe/trainedAlgorithmicMedia * june Cju
 mdcbor A ™ 88q c2pa.hash.date Dab
 orejexclusionsAd¢estart flength Odname
-njusbf manifestcalgfshazS6dhashx nO0<0T
-Ti2@06a dYY=AN+ i PaAd icpadG
 <jumb $jumdec2cl A ™ 86q c2po.claim
 chor@hdc:titleoGenerated imageidc:f
-ormatjimage/jpegjinstanceIDx,xmp:iitd:5f3
-4e48e-0837-42bb-adc2-e2798f306c9locLoim_
 generatorx.Adobe_Firefly adobe_c2pa/@.18
-.1 c#pa-rs/@.31.1tclaim_generator_info'1
 signaturex self#jumbf=cZpa.signaturejass
-ertionsE¢curLx4self#jumbf=c2pa. assertion
-s/cépa.thumbnail.cLaim.jpegdhashx oéallé
-u/ER' @eov2U" oft ~t)"kX_=;¢curlx'self#ju
 mbf=c2pa.assertions/cZpa.actionsdhashx I
-Ae7I}/ORE BITi¢t tOi]X” g]dP kyf¢curlx)se
-Lf#jumbf=cZpa.assertions/cé@pa.hash. datad
-hashX A'»XUjbO @_S$¥g y'9kYO"(+1/8aG @* ca
 lafsha256 @ jumb Cjumde?cs A ™ B86
 q c2pa.signature /tcbor“Ay A¢ 8$ ICY 3
-ac /ac fT a) AGoe -AcPFO *(HO"
-Gul @ uU US1#6! =U Adobe Sy
 stems Incorporated! @ u Adobe Trust
 Servicesi"® uU Adobe Product Servic
-es G38 2406240000807 25062473595978A"
 14 u firefly-prodl @ u Conten
 t Credentialsl @ u Adobe Inc.1 6
 U San Josel 6 U Californial @
-U usi ® *0HU™ coi-ops@adobe.co
-mac "@ *0HO™ ac C "WI
 (@) Jul 20, 2024
-SSS ET
 ‘
-a
-*
-é
-AM Z/
 Generated image
 @ Issued by Adobe Inc. on Jul 20, 2024
 Content summary
@@ -982,7 +918,6 @@ App or device used
 Al tool used
 G3 Adobe Firefly
 Actions
-I Created
 Created a new file or content
 About this Content Credential v
 Issued by
@@ -1001,7 +936,8 @@ Issued on
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 74206861
@@ -1018,28 +954,22 @@ Issued on
 54696D65
 389B7113
 126A736F
-2€226175
 68617368
 3130392C
-372€3631
 3931382D
 63333464
 64656E74
 65303337
 68747470
 656E7469
-362€3131
-362(3138
 653A7572
 69616C73
 35353936
 33346465
 223A2250
-696F6E73
 61646F62
 726B2E73
 3636616B
-70656EA2
 6F6C6E63
 61772D64
 72617365
@@ -1047,71 +977,43 @@ Issued on
 90000028
 81A26573
 2000ACCB
-6A756D64
 64697465
 39663362
 686F746F
 65722F30
 62663D63
 6E732F63
-ABG6BOBEF
 65646965
 66236A75
 q c2pa.ingredient YcborOhdc:titlexWFirefly A black hat ha
 cker sitting at a laptop trying to compromise a system. 5612
 6.jpgidc: formatjimage/jpegjdocumentIDx,xmp:iid:e395eb49-f4bb
 -4013-b1c3-8209653eb66ajinstanceIDx, xmp:iid:e395eb49-f4bb-40
-13-b1c3-8209653eb66amcZ2pa_manifest£curLx>sel f#jumbf=/c2pa/ur
-n:uuid: f6929278-0080-4c05-984e-d00277db7bcOcalgfsha256dhashx
-Of] j@eT wI186vto R ~ AAOSC’d0 pvalidationStatusA£fdcodewcl
 aimSignature.mismatchcurLxMself#jumbf=/c2pa/urn: uuid: f692927
-8-0080-4c05-984e-d00277db7bcO/c2pa.signaturekexplanationx cl
 aim signature is not validlrelationshiphparentOfithumbnail¢c
-urLx9self#jumbf=c2pa.assertions/c2pa.thumbnail.ingredient.jp
-egdhashXx @ hy { 96,4°614w PC6A°iuCS 20 @hmetadataghdateTime
 x 2024-07-20T23:29:13.681Z" hjumb Njumdjson A ™ 86q
 stds.schema-org.CreativeWork c2shf#JA-D#A ygDj7!4 jso
 n{"@context":"https://schema.org","@type":"CreativeWork", "au
-thor": [{"@type": "Person", "credential": [{"alg":"sha256","hash
 ":[214,61,110,168,62,192,11,156,112,214,122,59,90,97,93,109,
 191,249,134,181,234,194,157,226,184,225,155,43,183,184,37,61
-J,"url":"self#jumbf=/c2pa/adobe: urn: uuid:11930104-fcc7-4918-
 8219-2f39707616f3/c2pa. credentials/did: adobe: f687273c664c34d
-eda9dea53bf1f870906d65be037ed4559673f Sd8dda9baaS6f"}], "ident
-ifier": "did: adobe: f687273c664c34deda9dea53bf1f870906d65ha0mN
-ed4559673fS5d8dda9baa5é6f", "name": "Peleus Uhley"} Sian: "http
-s://www.behance.net/adobe_puhley","@type": "Person", "credenti
-al": [{"alg":"sha256", "hash":[214,61,110,168,62,192,11,156,11
 2,214,122,59,90,97,93,109,191,249,134,181,234,194,157,226,18
 4,225,155,43,183,184,37,61],"url":"self#jumbf=/c2pa/adobe:ur
 n:uuid:11930104-fcc7-4918-8219-2f39707616f3/c2pa.credentials
 /did: adobe: f687273c664c34deda9dea53bf1f870906d65be037ed45596
-73fSd8dda9baaS6f"}], "identifier": "did: adobe: f687273c664c34de
-da9dea53bf1Ff870906d65be037ed4559673f5d8dda9baaS6f", "name": "P
 eleus Uhley"}]} =jumb &jumdcbor A ™ 86q c2pa.actions
-cbor¢gactionsC¢factionkc2pa.openedjparameters§ncom.adob
 e.iconx6https://cai-assertions.adobe.com/icons/import-dark.s
-vgjinstanceldx,xmp:iid:e395eb49-f4bb-4013-b1c3-8209653eb66ak
 descriptionx Opened a pre-existing filencom.adobe.tooldopen¢
-factionlc2pa.drawingjparameters£ncom.adobe.tooljbrush_toolnc
 om.adobe.iconx4https://cai-assertions.adobe.com/icons/draw-d
 ark.svgkdescriptionxGUsed tools like pencils, brushes ruse
 rs, or shape, path, or pen toolshmetadatagmreviewRatingsAhda
-teTimex 2024-07-20T23:29:11.618ZmlocalizationsA~ eo jumb ¢
 jumdcbor A ™ 86q c2pa.hash.data AcborejexclusionsAtes
 tart 2flength O’dnamenjumbf manifestcalgfsha256dhashx “A
-[ss ye’\8x0§EouE? u8;AM E°t@eEcpadJ ijumb $jumd
 c2cl A ™ 86q c2pa.claim fcborRhdc:titlex FireflyBurte
-dv2-56126. jpgidc: format jimage/jpegjinstanceIDx,xmp:iid:d9f3b
-c47-28b7-49e7-839c-1d291d329@aboclaim_generatorxkAdobe_Photo
 shop/24.4.@ (build 20230411.r.433 c582fe9; mac) cai-helper/O®
 -5.3 adobe_c2pa/@.2.1 c2pa-rs/0.16.@isignaturex self#jumbf=c
 2pa.signaturejassertionsU¢curlx4self#jumbf=c2pa.assertions/c
-2pa.thumbnail.claim.jpegdhashX &8§?7@ BCA4L’°25 0406.Y fo'n’ kod
 q m¢cur1x9self#jumbf=c2pa.assertions/c2pa.thumbnail.ingredie
-nt.jpegdhashX ® hy { 96,4°614w PCéA°iUCS NA @¢curlx*self#ju
-1 Compare
-\ 7 FireflyEditedv2-56126.jpg
 @) Issued by Adobe Inc. on Jul...
 Credit and usage v
 The producer chose to share the following info:
@@ -1147,7 +1049,8 @@ Issued on
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Content credentials displayed in Microsoft PowerPoint
@@ -1169,7 +1072,6 @@ July 20, 2024 at 4:34PM
 Content
 Footer
 area
-J Adobe
 ```
 
 ## Slide 49
@@ -1178,7 +1080,8 @@ J Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What happens when you edit without Content Credentials?
@@ -1187,7 +1090,6 @@ Generated image
 Content summary
 ® This image was generated with an Al
 tool
-Process w
 The app or device used to produce this content
 recorded the following info:
 App or device used
@@ -1195,14 +1097,12 @@ App or device used
 Al tool used
 @ Adobe Firefly
 Actions
-"I Created
 Created a new file or content
 About this Content Credential v
 Issued by
 14) Adobe Inc.
 Issued on
 (4) Jul 20, 2024 at 2:40 PM PDT
-Ai Adobe
 ```
 
 ## Slide 50
@@ -1211,22 +1111,14 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ing an image
-Modify
-© 2024 Adobe. All Rights Reserved. Adobe Confidential.
-J Adobe
-```
-
 ## Slide 51
 
 ## Edits without using Content Credentials
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Edits without using Content Credentials
@@ -1237,7 +1129,6 @@ be viewed because changes
 occurred that couldn't be or weren't
 recorded. Previous Content
 Credentials may be available.
-Ai Adobe
 ```
 
 ## Slide 52
@@ -1246,7 +1137,8 @@ Ai Adobe
 
 **© 2024 Adobe. All Rights Reserved. Adobe Confidential.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unrecognized or corrupted credentials
@@ -1255,7 +1147,6 @@ Q Invalid
 Ay The following information is not valid.
 Z | This Content Credential was issued
 by an unrecognized source.
-Ai Adobe
 ```
 
 ## Slide 53

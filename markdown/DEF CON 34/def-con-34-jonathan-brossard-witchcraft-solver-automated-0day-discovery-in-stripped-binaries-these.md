@@ -4,7 +4,7 @@ speakers: ["Jonathan Brossard"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - these.pdf"
 pages: 55
 sha256: "66d5fb424b36f199123231861b3ac0e496bfa656b4afdc20ba93cb2a6662bc6a"
@@ -12,15 +12,20 @@ text_chars: 243835
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:23:31Z"
+converted_at: "2026-08-12T06:36:58Z"
 ---
 # Witchcraft Solver Automated 0day Discovery in Stripped Binaries
 
 **Speakers:** Jonathan Brossard  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jonathan Brossard - Witchcraft Solver Automated 0day Discovery in Stripped Binaries - these.pdf` (55 pages)
+
 
 ## Slide 1
 

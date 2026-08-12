@@ -4,23 +4,28 @@ speakers: ["Gal Bar Nahum"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Gal Bar Nahum - The Stream Is Dead, Long Live the Stream How HTTP 2 Lets Dead Streams Keep Servers Working - Str.pdf"
 pages: 85
 sha256: "3d4d587e8d015ef516f4cb5464bdcf1db80afec3a0b08fd8b328a7896cd8a9dc"
-text_chars: 16499
-ocr_pages: 17
+text_chars: 16208
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 3
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:19:44Z"
+converted_at: "2026-08-12T06:30:18Z"
 ---
 # The Stream Is Dead, Long Live the Stream How HTTP 2 Lets Dead Streams Keep Servers Working
 
 **Speakers:** Gal Bar Nahum  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Gal Bar Nahum - The Stream Is Dead, Long Live the Stream How HTTP 2 Lets Dead Streams Keep Servers Working - Str.pdf` (85 pages)
+
 
 ## Slide 1
 
@@ -36,14 +41,14 @@ converted_at: "2026-08-12T00:19:44Z"
 
 **Usually, Vulnerabilities…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee src/utils/graphql/withQuery.js — js-project
 A EXPLORER BB withQuery,js graphal
 4 JS-PROJECT src > utils > graphql > HB withQuery.js > t1INITIAL_QUERY_STATE
 @ circleci stefankrajnik, 2 months ago | 4 authors (Pavol Madar and others)
-oa import React. from ‘react*
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 te I import { connect } from 'react-redux'
@@ -56,28 +61,19 @@ BB locales const defaultMapDataToReducer = (data, payload) => payload
 const defaultMapQueryDataToProps = data = data
 @ cypress
 @ routes
-Lata const INITIAL_QUERY_STATE =-{
 DB utils stefankrajnik, 2 months ago + Implement shouldClearCache option in with
 @ format variables: null,
 © graphal isFetching: false,
 isFetched: false,
-Cl
 BB index.js error: null
-BB snippets.js
 BB withQuery.js
 BB historyjs export const createQueriesStore = ({ routeNamespace, query }) => {
-B it8n.js const-{
 mapDataToReducer = defaultMapDataToReducer,
 mapQueryDataToProps = defaultMapQueryDataToProps,
 BB lokalisejs request: networkRequest = defaultRequest
-BB network.js }-=-query
 const actions = createActions({
 [getUpperSnakeCase(routeNamespace)]: {
-[getUpperSnakeCase(query.name)]: {
 reduxPersist.js REQUEST: undefined,
-@ localStorage.js
-BB onClickOutside,js
-i redux.js
 red router,js SUCCESS: undefined,
 » OUTLINE FAILURE: COANE
 Pdevelop ©1810 @0A0 [Live Share ‘© stefankrajnik, 2months ago Ln15,Col14 Spaces:2 UTF-8 LF JavaScriptReact M@
@@ -87,7 +83,8 @@ Pdevelop ©1810 @0A0 [Live Share ‘© stefankrajnik, 2months ago Ln15,Col14 Spa
 
 ##### **Protocol Level Vulnerabilities**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Protocol Level Vulnerabilities
@@ -144,15 +141,15 @@ recv R
 
 ## Slide 7
 
-```
+\```
 [HTTP/2]
-```
+\```
 
 ## Slide 8
 
-```
+\```
 [HTTP/2]
-```
+\```
 
 ##### **HTTP/2**
 
@@ -166,9 +163,9 @@ recv R
 
 ## Slide 9
 
-```
+\```
 [HTTP/2]
-```
+\```
 
 ##### **Many Requests, One Connection**
 
@@ -195,9 +192,9 @@ Request 4 Response 4
 
 ## Slide 11
 
-```
+\```
 [HTTP/2]
-```
+\```
 
 ##### **Concurrency Limits**
 
@@ -222,24 +219,6 @@ Stream 3
 Stream 5
 Stream 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Concurrency Limits
-a.
-AGA
-Stream 1| Siibex oS
-Stream aa)
-BF request Mit Response 1
-Stream 3
-Stream 5
-Stream 7
-eee
-HTTP/2
-Active Streams
-Counter: 0
-```
-
 ## Slide 13
 
 [ HTTP/2 ]
@@ -261,19 +240,20 @@ Stream X+6
 
 ## Slide 14
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ## Slide 15
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ##### **Rapid Reset (2023)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [ Rapid Reset |
@@ -289,19 +269,16 @@ Description
 rces is also displayed.
 The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as
 exploited in the wild in August through October 2023.
-/C:N/I:N/A:H
 Product Status
 Learn more
-/C:N/I:N/A:H
 Information not provided
-References} 144 Total
 ```
 
 ## Slide 16
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ##### **Rapid Reset (2023)**
 
@@ -324,9 +301,9 @@ Stream 7
 
 ## Slide 18
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ##### **Rapid Reset (2023)**
 
@@ -336,13 +313,14 @@ Active Streams Counter ≤ 1
 
 ## Slide 19
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ##### **The Original Explanation**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Original Explanation
@@ -360,15 +338,16 @@ Reset |
 
 ## Slide 20
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 **No wait**
 
 **_Google’s blog post about Rapid Reset_**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [ Rapid Reset |
@@ -384,9 +363,9 @@ Responses Requests and
 
 ## Slide 21
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 **The Original Explanation “** **_In a typical HTTP/2 server implementation, the server will still have to do significant amounts of work for canceled requests — allocating new stream data structures, parsing the query…_**
 
@@ -394,9 +373,9 @@ Responses Requests and
 
 ## Slide 22
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ## **Rapid Reset, Basically**
 
@@ -404,17 +383,17 @@ Responses Requests and
 
 ## Slide 23
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ### **Unbounded Rate x Canceled Request handling**
 
 ## Slide 24
 
-```
+\```
 [Replicating the work ]
-```
+\```
 
 ## Slide 25
 
@@ -425,23 +404,35 @@ be treated as errors”
 
 ## Slide 26
 
-```
-[A New Vulnerability ]
-```
-
-### **Quick Win**
-
-Stream ID: 1 9537
-GET ADCBE
+Stream ID: 1
+RST_STREAM
+Stream ID: 3
+RST_STREAM
+Stream ID: 5
+RST_STREAM
+Stream ID: 7
+RST_STREAM
+Stream ID: 9
+RST_STREAM
 RESET
-Stream ID: 17359
-RST _ _STREAM
+Stream ID: 1
+GET A
+Stream ID: 3
+GET B
+Stream ID: 5
+GET C
+Stream ID: 7
+GET D
+Stream ID: 9
+GET E
+Quick Win
+[ A New Vulnerability ]
 
 ## Slide 27
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ## **Rapid Malformed Requests, Basically**
 
@@ -465,9 +456,9 @@ Rapid Reset
 
 ## Slide 30
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ### **What is the difference?**
 
@@ -485,15 +476,16 @@ Rapid Reset
 
 ## Slide 31
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ##### **Cancelled Request Handling**
 
 **Request RST_STREAM Cancellation**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [| The Real Problem |
@@ -502,7 +494,6 @@ Cancellation |
 def handle_rst_stream(stream, ...):
 stream.state = CLOSED
 stream.active streams counter -= 1
-create_reset_stream_ event(stream)
 return
 ```
 
@@ -515,25 +506,24 @@ return
 Reset
 Event
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RST_STREAM Handling
 def handle_rst_stream(stream, ...):
 stream.state = CLOSED
 stream.active_ streams counter -= 1
-create_reset_stream_ event(stream)
 return
-= BS
 Event
 [| The Real Problem |
 ```
 
 ## Slide 33
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 #### **Web Servers Architecture**
 
@@ -549,9 +539,9 @@ Messages
 
 ## Slide 34
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 #### **Request Handling**
 
@@ -567,9 +557,9 @@ Response A
 
 ## Slide 35
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ##### **RST_STREAM Handling**
 
@@ -585,9 +575,9 @@ Event Response A
 
 **!**
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ##### **Phantom Streams**
 
@@ -607,25 +597,25 @@ Event Response A
 
 ## Slide 37
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 # **Streams** ≠ **Requests**
 
 ## Slide 38
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ### **Streams Concurrency limit** ≠ **Requests Concurrency limit**
 
 ## Slide 39
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 ### **Rapid Reset = Unlimited Concurrent Requests**
 
@@ -633,9 +623,9 @@ Event Response A
 
 ## Slide 40
 
-```
+\```
 [ Rapid Reset ]
-```
+\```
 
 ### **The Real Difference**
 
@@ -651,15 +641,15 @@ Event Response A
 
 ## Slide 41
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ## Slide 42
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ### **Mitigating Rapid Reset**
 
@@ -669,30 +659,21 @@ RESET
 
 ## Slide 43
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ## Slide 44
 
-```
+\```
 [A New Vulnerability ]
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-[ A New Vulnerability ]
-me_ WAIT A'SECOND = }
-‘ITDOESN'T STOPP
-wi Katy nse  —<S
-```
+\```
 
 ## Slide 45
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ### **Mitigating Rapid Reset**
 
@@ -702,9 +683,9 @@ RESET
 
 ## Slide 46
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ### **The Twist**
 
@@ -712,23 +693,35 @@ Reset the stream Make the server reset the stream for you
 
 ## Slide 47
 
-```
-[A New Vulnerability ]
-```
-
-### **The Twist**
-
-Stream ID: 1 9537
-GET ADCBE
+Stream ID: 1
+RST_STREAM
+Stream ID: 3
+RST_STREAM
+Stream ID: 5
+RST_STREAM
+Stream ID: 7
+RST_STREAM
+Stream ID: 9
+RST_STREAM
 RESET
-Stream ID: 17359
-RST _ _STREAM
+Stream ID: 1
+GET A
+Stream ID: 3
+GET B
+Stream ID: 5
+GET C
+Stream ID: 7
+GET D
+Stream ID: 9
+GET E
+The Twist
+[ A New Vulnerability ]
 
 ## Slide 48
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ##### **Can we force the server to reset streams?**
 
@@ -740,9 +733,9 @@ RST _ _STREAM
 
 ## Slide 49
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ### **MadeYouReset Primitives**
 
@@ -754,9 +747,9 @@ RST _ _STREAM
 
 ## Slide 50
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
 ### **MadeYouReset Primitive**
 
@@ -766,29 +759,57 @@ RST _ _STREAM
 
 ## Slide 51
 
-```
-[A New Vulnerability ]
-```
-
-### **MadeYouReset**
-
-Active Streams Counter ≤ 1 **Stream ID: 1Stream ID: 153975379 MadeYouReset GET AGET DYouReset CBE Primitive**
-
-**Stream ID: 17359 RST _ STREAM**
+Stream ID: 1
+RST_STREAM
+Stream ID: 1
+GET A
+Stream ID: 1
+MadeYouReset
+Primitive
+MadeYouReset
+Stream ID: 3
+RST_STREAM
+Stream ID: 3
+GET B
+Stream ID: 3
+MadeYouReset
+Primitive
+Stream ID: 5
+RST_STREAM
+Stream ID: 5
+GET C
+Stream ID: 5
+MadeYouReset
+Primitive
+Stream ID: 7
+RST_STREAM
+Stream ID: 7
+GET D
+Stream ID: 7
+MadeYouReset
+Primitive
+Stream ID: 9
+RST_STREAM
+Stream ID: 9
+GET E
+Stream ID: 9
+MadeYouReset
+Primitive
+Active Streams Counter ≤ 1
+[ A New Vulnerability ]
 
 ## Slide 52
 
-```
+\```
 [A New Vulnerability ]
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Hacker News
-August 14: @ " -—
-nis s auursis
-@ New HTTP/2 flaw can crash major servers. C150 Strategy  CS/OT \ Famdimg/MEA \ Cyber A
+@ New HTTP/2 flaw can crash major servers. C150 Strategy CS/OT \ Famdimg/MEA \ Cyber A
 “MadeYouReset” bypasses Rapid Reset protections—letting attackers flood Apache Tomcat, F5 BIG-IP
 & more with thousands of requests, taking sites offline.
 Here's how it works >
@@ -816,7 +837,8 @@ Patched by Fortinet and Ivanti
 
 General CVE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Vi N CE Vulnerability Information and Coordination Environment
@@ -841,9 +863,9 @@ Apache Tomcat CVE-2025-48989 CVE-2025-36047
 
 ## Slide 54
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 #### **The Real Problem is Phantom Streams**
 
@@ -888,27 +910,16 @@ Phase
 MadeYouReset
 Phase
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Real example — Actix Web
-Tv
 c
-je}
-oO
-o
-19)
-=
 oO
 a
 n
-C4
 n
-oO
-=}
-a
-oO
-[a4
 —- MadeYouReset Attacker Req/s Flood Attacker Req/s
 — Memory Usage (%) — CPU Usage (%)
 Flood Attacker
@@ -931,24 +942,11 @@ Time (seconds)
 
 **HTTP/2**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M6 HTTP/2
-®
-——<<<<<uU48
-eel
-== _Mys
-_
-{AE
-{AE
-```
-
 ## Slide 59
 
-```
+\```
 [The Real Problem ]
-```
+\```
 
 #### **The Real Problem is Phantom Streams**
 
@@ -956,15 +954,15 @@ _
 
 ## Slide 60
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ## Slide 61
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ## **Why so many implementations?**
 
@@ -976,22 +974,11 @@ _
 
 ##### **Before HTTP/2…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Before HTTP/2...
-cocams
-Crt —
-Ort
-coos
-The Design Flaw
-```
-
 ## Slide 64
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 **Web Server HTTP/1.1 Module HTTP/2 Module Backend**
 
@@ -1011,9 +998,9 @@ The Design Flaw
 
 ## Slide 67
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ### **HTTP/2 entered an existing ecosystem that did not support request cancellation But “allowed” request cancellation**
 
@@ -1023,17 +1010,17 @@ So just add
 cancellation
 support, right?
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 Right?
 
 ## Slide 69
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 **There is a deeper problem… Real Cancellation is Hard**
 
@@ -1055,9 +1042,9 @@ Cancel A
 
 ## Slide 71
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 **Supporting “End-to-End Cancellation” We must be able to cancel:**
 
@@ -1075,9 +1062,9 @@ Cancel A
 
 ## Slide 73
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 **So end-to-end cancellation is not feasible…**
 
@@ -1089,9 +1076,9 @@ Cancel A
 
 ## Slide 75
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ### **Phantom Streams are inherent in the design**
 
@@ -1107,9 +1094,9 @@ Cancel A
 
 ## Slide 77
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ## **Is HTTP/2 Doomed?**
 
@@ -1117,17 +1104,17 @@ Cancel A
 
 ## Slide 78
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ### **Should be part of the RFC**
 
 ## Slide 79
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ## **Is HTTP/2 Doomed?**
 
@@ -1135,9 +1122,9 @@ Cancel A
 
 ## Slide 80
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ##### **How can we mitigate MadeYouReset?**
 
@@ -1168,7 +1155,8 @@ Cancel A
 2 Client reset
 3 Server reset
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3 ways to close a stream
@@ -1188,17 +1176,17 @@ reserved
 
 ## Slide 83
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 **Phantom Streams will always exist… But they won’t be exploited**
 
 ## Slide 84
 
-```
+\```
 [The Design Flaw ]
-```
+\```
 
 ### **Takeaway**
 
@@ -1206,6 +1194,6 @@ reserved
 
 ## Slide 85
 
-```
+\```
 [Thanks!]
-```
+\```

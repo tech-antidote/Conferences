@@ -12,15 +12,20 @@ text_chars: 112731
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:54:55Z"
+converted_at: "2026-08-12T03:48:05Z"
 ---
 # Phoenix Domain Attack
 
 **Speakers:** Li  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Li-Phoenix-Domain-Attack-wp.pdf` (19 pages)
+
 
 ## Slide 1
 

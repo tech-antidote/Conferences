@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Fikret Garipay_Bypassing PQC Signature Verification with Fault Injection Dilithium, XMSS, SPHINCS+.pdf"
 pages: 134
 sha256: "6ec6810674f2195ea65a090e641f7e36b06244195889c17c898e27151d5e7282"
-text_chars: 43496
+text_chars: 43694
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:53:56Z"
+converted_at: "2026-08-12T05:11:07Z"
 ---
 # Bypassing PQC Signature Verification with Fault Injection Dilithium, XMSS, SPHINCS+
 
 **Speakers:** Fikret Garipay  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Fikret Garipay_Bypassing PQC Signature Verification with Fault Injection Dilithium, XMSS, SPHINCS+.pdf` (134 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Fikret Garipay
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSek hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS
@@ -229,30 +234,30 @@ Running **bare metal firmware** (open source on GitHub)
 
 Running **bare metal firmware** (open source on GitHub)
 
-```
+\```
 caseCMD_SW_DILITHIUM_VERIFY: {
-```
+\```
 
-```
+\```
 uint8_t* signedMessageBuffer= DilithiumState_getScratchPad(&dilithium);
 get_bytes(DILITHIUM_SIGNED_MESSAGE_SIZE, signedMessageBuffer);
 // Handle the request.
-```
+\```
 
-```
+\```
 BEGIN_INTERESTING_STUFF;// []-> Rising Edge Trigger
 intresult = DilithiumState_verify(&dilithium, signedMessageBuffer);
 END_INTERESTING_STUFF;// []-> Falling Edge Trigger
 send_char(result == 0? 0: 1);
-```
+\```
 
-```
+\```
 break;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 16 #BHUSA @BlackHatEvents
 
@@ -971,33 +976,33 @@ Inject the fault at the target **during verification**
 
 `7. ...`
 
-```
+\```
 2.unsignedinti, b, pos;
-```
+\```
 
 `3. ...`
 
-```
+\```
 4.for(i= 0; i< N; ++i)
-```
+\```
 
-```
+\```
 5.c->coeffs[i] = 0;
-```
+\```
 
-```
+\```
 8.c->coeffs[i] = c->coeffs[b];
-```
+\```
 
-```
+\```
 9.c->coeffs[b] = 1-2*(signs & 1);
-```
+\```
 
 `10. ...`
 
-```
+\```
 11.}
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1025,15 +1030,15 @@ PQM4: Dilithium verification source code
 
 `8. c->coeffs[i] = c->coeffs[b];`
 
-```
+\```
 9.c->coeffs[b] = 1-2*(signs & 1);
-```
+\```
 
 `10. ...`
 
-```
+\```
 11.}
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1053,21 +1058,21 @@ PQM4: Dilithium verification source code
 
 `2. unsigned int i, b, pos; 3. ...`
 
-```
+\```
 4.for(i= 0; i< N; ++i)
-```
+\```
 
-```
+\```
 5.c->coeffs[i] = 0;
-```
+\```
 
 `8. c->coeffs[i] = c->coeffs[b]; 9. c->coeffs[b] = 1 - 2*(signs & 1);`
 
 `10. ...`
 
-```
+\```
 11.}
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1081,34 +1086,34 @@ PQM4: Dilithium verification source code
 
 `1. void poly_challenge(poly *c, const uint8_t seed[SEEDBYTES]) {`
 
-```
+\```
 6.for(i= N-TAU; i< N; ++i) {
-```
+\```
 
-```
+\```
 7....
-```
+\```
 
 `2. unsigned int i, b, pos;`
 
-```
+\```
 3....
-```
+\```
 
-```
+\```
 4.for(i= 0; i< N; ++i)
-```
+\```
 
-```
+\```
 5.c->coeffs[i] = 0;
-```
+\```
 
-```
+\```
 8.c->coeffs[i] = c->coeffs[b];
 9.c->coeffs[b] = 1-2*(signs & 1);
 10....
 11.}
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1138,25 +1143,25 @@ Fault Injection Plot of Sampling of C Scenario
 
 #### **Scenario 3: Shift by d**
 
-```
+\```
 voidpolyveck_shiftl(polyveck *v) {
 unsignedinti;
-```
+\```
 
-```
+\```
 for(i = 0; i < K; ++i)
 poly_shiftl(&v->vec[i]);
-```
+\```
 
-```
+\```
 voidpoly_shiftl(poly *a) {
-```
+\```
 
-```
+\```
 ...
 for(i = 0; i < N; ++i)
 a->coeffs[i] <<= D;
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1166,25 +1171,25 @@ PQM4: Dilithium verification source code
 
 #### **Scenario 3: Shift by d**
 
-```
+\```
 voidpolyveck_shiftl(polyveck *v) {
 unsignedinti;
-```
+\```
 
-```
+\```
 for(i = 0; i < K; ++i)
 poly_shiftl(&v->vec[i]);
-```
+\```
 
-```
+\```
 voidpoly_shiftl(poly *a) {
-```
+\```
 
-```
+\```
 ...
 for(i = 0; i < N; ++i)
 a->coeffs[i] <<= D;
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1194,19 +1199,19 @@ PQM4: Dilithium verification source code
 
 #### **Scenario 3: Shift by d**
 
-```
+\```
 voidpolyveck_shiftl(polyveck *v) {
 unsignedinti;
 for(i = 0; i < K; ++i)
 poly_shiftl(&v->vec[i]);
-```
+\```
 
-```
+\```
 voidpoly_shiftl(poly *a) {
 ...
 for(i = 0; i < N; ++i)
 a->coeffs[i] <<= D;
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1236,24 +1241,24 @@ Fault Injection Plot of Shift by d Scenario
 
 #### **Scenario 4: Subtraction**
 
-```
+\```
 voidpolyveck_sub(polyveck *w, constpolyveck *u, const
 polyveck *v) {
-```
+\```
 
-```
+\```
 unsignedinti;
 for(i = 0; i < K; ++i){
-```
+\```
 
-```
+\```
 send_char(dilithium_counter);
 poly_sub(&w->vec[i], &u->vec[i], &v->vec[i]);}
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1265,21 +1270,21 @@ PQM4: Dilithium verification source code
 
 #### **Scenario 4: Subtraction**
 
-```
+\```
 voidpolyveck_sub(polyveck *w, constpolyveck *u, const
 polyveck *v) {
-```
+\```
 
-```
+\```
 unsignedinti;
 for(i = 0; i < K; ++i) {
 send_char(dilithium_counter);
 poly_sub(&w->vec[i], &u->vec[i], &v->vec[i]);}
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1289,21 +1294,21 @@ PQM4: Dilithium verification source code
 
 #### **Scenario 4: Subtraction**
 
-```
+\```
 voidpolyveck_sub(polyveck *w, constpolyveck *u, const
 polyveck *v) {
 unsignedinti;
 for(i = 0; i < K; ++i){
-```
+\```
 
-```
+\```
 send_char(dilithium_counter);
 poly_sub(&w->vec[i], &u->vec[i], &v->vec[i]);}
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 PQM4: Dilithium verification source code
 
@@ -1774,31 +1779,31 @@ Eliminates state management and supports flexible trade-offs in size and speed.
 
 ###### **Code Review of the WOTS+ Component in the Reference XMSS Implementation**
 
-```
+\```
 voidwots_pk_from_sig(constxmss_params*params, unsigned char*pk,
 constunsigned char *sig, constunsigned char *msg,
 constunsigned char *pub_seed, uint32_taddr[8]) {
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 chain_lengths(params, lengths, msg);
-```
+\```
 
-```
+\```
 for(i= 0; i< params->wots_len; i++) {
 set_chain_addr(addr, i);
 gen_chain(params, pk + i*params->n, sig + i*params->n,
 lengths[i], params->wots_w-1 -lengths[i], pub_seed0, addr);
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 100 #BHUSA @BlackHatEvents
 
@@ -1806,32 +1811,32 @@ lengths[i], params->wots_w-1 -lengths[i], pub_seed0, addr);
 
 ###### **Code Review of the WOTS+ Component in the Reference XMSS Implementation**
 
-```
+\```
 voidwots_pk_from_sig(constxmss_params*params, unsigned char*pk,
 constunsigned char *sig, constunsigned char *msg,
 constunsigned char *pub_seed, uint32_taddr[8]) {
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 1 **`chain_lengths`** `(params, lengths, msg);` **`// [1]-> Attack to checksum calculation`**
 
-```
+\```
 for(i= 0; i< params->wots_len; i++) {
 set_chain_addr(addr, i);
-```
+\```
 
-```
+\```
 gen_chain(params, pk + i*params->n, sig + i*params->n,
 lengths[i], params->wots_w-1 -lengths[i], pub_seed0, addr);
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 101 #BHUSA @BlackHatEvents
 
@@ -1839,28 +1844,28 @@ lengths[i], params->wots_w-1 -lengths[i], pub_seed0, addr);
 
 ###### **Code Review of the WOTS+ Component in the Reference XMSS Implementation**
 
-```
+\```
 voidwots_pk_from_sig(constxmss_params*params, unsigned char*pk,
 constunsigned char *sig, constunsigned char *msg,
 constunsigned char *pub_seed, uint32_taddr[8]) {
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 1 **`chain_lengths`** `(params, lengths, msg);` **`// [1]-> Attack to checksum calculation`**
 
-```
+\```
 for(i= 0; i< params->wots_len; i++) {
 set_chain_addr(addr, i);
-```
+\```
 
 2 **`gen_chain`** `(params, pk + i*params->n, sig + i*params->n,` **`//[2]->Attack to checksum chunk`** `lengths[i], params->wots_w - 1 - lengths[i], pub_seed0, addr); }`
 
-```
+\```
 }
-```
+\```
 
 102
 
@@ -1870,28 +1875,28 @@ set_chain_addr(addr, i);
 
 **Code Review of the WOTS+ Component in the Reference XMSS Implementation** `static void` **`wots_checksum`** `(...) {`
 
-```
+\```
 ...
 /* Compute checksum. */
 for (i= 0; i< params->wots_len1; i++) {
 csum+= params->wots_w-1 -msg_base_w[i];
 }
 /* Convert checksum to base_w. */
-```
+\```
 
-```
+\```
 csum= csum<< (8 -((params->wots_len2 * params->wots_log_w) % 8));
 ull_to_bytes(csum_bytes, sizeof(csum_bytes), csum);
 base_w(params, csum_base_w, params->wots_len2, csum_bytes);
 }
-```
+\```
 
-```
+\```
 static voidchain_lengths(...) {
 base_w(params, lengths, params->wots_len1, msg);
 wots_checksum(params, lengths + params->wots_len1, lengths);
 }
-```
+\```
 
 103 #BHUSA @BlackHatEvents
 
@@ -1899,31 +1904,31 @@ wots_checksum(params, lengths + params->wots_len1, lengths);
 
 **Code Review of the WOTS+ Component in the Reference XMSS Implementation** `static void` **`wots_checksum`** `(...) {`
 
-```
+\```
 ...
 /* Compute checksum. */
 for (i= 0; i< params->wots_len1; i++) {
 csum+= params->wots_w-1 -msg_base_w[i];
 }
 /* Convert checksum to base_w. */
-```
+\```
 
-```
+\```
 csum= csum<< (8 -((params->wots_len2 * params->wots_log_w) % 8));
 ull_to_bytes(csum_bytes, sizeof(csum_bytes), csum);
 base_w(params, csum_base_w, params->wots_len2, csum_bytes);
 }
-```
+\```
 
-```
+\```
 static voidchain_lengths(...) {
 base_w(params, lengths, params->wots_len1, msg);
 wots_checksum(params, lengths + params->wots_len1, lengths);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 104 #BHUSA @BlackHatEvents
 
@@ -1931,28 +1936,28 @@ wots_checksum(params, lengths + params->wots_len1, lengths);
 
 ###### **Code Review of the WOTS+ Component in the Reference XMSS Implementation** `static void` **`wots_checksum`** `(...) {`
 
-```
+\```
 ...
 /* Compute checksum. */
 for (i= 0; i< params->wots_len1; i++) {
 csum+= params->wots_w-1 -msg_base_w[i];
 }
 /* Convert checksum to base_w. */
-```
+\```
 
-```
+\```
 csum= csum<< (8 -((params->wots_len2 * params->wots_log_w) % 8));
 ull_to_bytes(csum_bytes, sizeof(csum_bytes), csum);
 base_w(params, csum_base_w, params->wots_len2, csum_bytes);
 }
-```
+\```
 
-```
+\```
 static voidchain_lengths(...) {
 base_w(params, lengths, params->wots_len1, msg);
 wots_checksum(params, lengths + params->wots_len1, lengths);
 }
-```
+\```
 
 105 #BHUSA @BlackHatEvents
 
@@ -1960,37 +1965,37 @@ wots_checksum(params, lengths + params->wots_len1, lengths);
 
 **Code Review of the WOTS+ Component in the Reference XMSS Implementation** `static void` **`wots_checksum`** `(...) {`
 
-```
+\```
 ...
 /* Compute checksum. */
 for (i= 0; i< params->wots_len1; i++) {
 csum+= params->wots_w-1 -msg_base_w[i];
 }
-```
+\```
 
-```
+\```
 /* Convert checksum to base_w. */
-```
+\```
 
-```
+\```
 csum= csum<< (8 -((params->wots_len2 * params->wots_log_w) % 8));
 ull_to_bytes(csum_bytes, sizeof(csum_bytes), csum);
 base_w(params, csum_base_w, params->wots_len2, csum_bytes);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 static voidchain_lengths(...) {
 base_w(params, lengths, params->wots_len1, msg);
 wots_checksum(params, lengths + params->wots_len1, lengths);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 106 #BHUSA @BlackHatEvents
 
@@ -2206,194 +2211,194 @@ Source: Production ready XMSS
 
 **Vulnerability We Found in Fox Crypto XMSS Implementation** `static void` **`chain`** `(...) {`
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address= start_index; // [1]
 assert(start_index+ num_steps< W); // [2]
-```
+\```
 
-```
+\```
 native_256_copy(output, input);
-```
+\```
 
-```
+\```
 for(uint_fast8_t i= 0; i< num_steps; i++) { // [3]
-```
+\```
 
 - `...`
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.keyAndMask= 1;
 xmss_PRF(HASH_ABSTRACTION(hashes) &input_f.M, input_prf);
 for(uint_fast8_t j = 0; j < XMSS_VALUE_256_WORDS; j++) {
 input_f.M.data[j] ^= output->data[j];
 }
-```
+\```
 
-```
+\```
 xmss_F(HASH_ABSTRACTION(hashes) output, &input_f);
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address+= 1; // [4]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 123 #BHUSA @BlackHatEvents
 
-```
+\```
 }
-```
+\```
 
 ## Slide 124
 
 **Vulnerability We Found in Fox Crypto XMSS Implementation** `static void` **`chain`** `(...) {`
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address= start_index; // [1]
-```
+\```
 
-```
+\```
 assert(start_index+ num_steps< W); // [2]
-```
+\```
 
-```
+\```
 native_256_copy(output, input);
-```
+\```
 
-```
+\```
 for(uint_fast8_t i= 0; i< num_steps; i++) { // [3]
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.keyAndMask= 1;
 xmss_PRF(HASH_ABSTRACTION(hashes) &input_f.M, input_prf);
 for(uint_fast8_t j = 0; j < XMSS_VALUE_256_WORDS; j++) {
 input_f.M.data[j] ^= output->data[j];
 }
-```
+\```
 
-```
+\```
 xmss_F(HASH_ABSTRACTION(hashes) output, &input_f);
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address+= 1; // [4]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 124 #BHUSA @BlackHatEvents
 
-```
+\```
 }
-```
+\```
 
 ## Slide 125
 
 **Vulnerability We Found in Fox Crypto XMSS Implementation** `static void` **`chain`** `(...) {`
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address= start_index; // [1]
 assert(start_index+ num_steps< W); // [2]
-```
+\```
 
-```
+\```
 native_256_copy(output, input);
-```
+\```
 
-```
+\```
 for(uint_fast8_t i= 0; i< num_steps; i++) { // [3]
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.keyAndMask= 1;
 xmss_PRF(HASH_ABSTRACTION(hashes) &input_f.M, input_prf);
 for(uint_fast8_t j = 0; j < XMSS_VALUE_256_WORDS; j++) {
 input_f.M.data[j] ^= output->data[j];
 }
-```
+\```
 
-```
+\```
 xmss_F(HASH_ABSTRACTION(hashes) output, &input_f);
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address+= 1; // [4]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 125 #BHUSA @BlackHatEvents
 
-```
+\```
 }
-```
+\```
 
 ## Slide 126
 
 **Vulnerability We Found in Fox Crypto XMSS Implementation** `static void` **`chain`** `(...) {`
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address= start_index; // [1]
 assert(start_index+ num_steps< W); // [2]
-```
+\```
 
-```
+\```
 native_256_copy(output, input);
-```
+\```
 
-```
+\```
 for(uint_fast8_t i= 0; i< num_steps; i++) { // [3]
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 input_prf->M.ADRS.typed.OTS_Hash_Address.keyAndMask= 1;
 xmss_PRF(HASH_ABSTRACTION(hashes) &input_f.M, input_prf);
 for(uint_fast8_t j = 0; j < XMSS_VALUE_256_WORDS; j++) {
 input_f.M.data[j] ^= output->data[j];
 }
-```
+\```
 
-```
+\```
 xmss_F(HASH_ABSTRACTION(hashes) output, &input_f);
 input_prf->M.ADRS.typed.OTS_Hash_Address.hash_address+= 1; // [4]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 126 #BHUSA @BlackHatEvents
 
-```
+\```
 }
-```
+\```
 
 ## Slide 127
 
@@ -2497,10 +2502,10 @@ Fault Injection Plot of Full Hash Chain Skip
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pie hat
 EFINGS
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS

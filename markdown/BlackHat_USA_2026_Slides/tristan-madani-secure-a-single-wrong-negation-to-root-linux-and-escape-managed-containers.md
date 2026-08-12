@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Tristan Madani_!secure A Single Wrong Negation to Root Linux and Escape Managed Containers.pdf"
 pages: 73
 sha256: "84d29c500f90a3626f7b5a4ec75477632580729247972262a922b2c7c33fcc52"
-text_chars: 48641
+text_chars: 47703
 ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:17:17Z"
+converted_at: "2026-08-12T05:46:33Z"
 ---
 # !secure A Single Wrong Negation to Root Linux and Escape Managed Containers
 
 **Speakers:** Tristan Madani  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Tristan Madani_!secure A Single Wrong Negation to Root Linux and Escape Managed Containers.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -218,7 +223,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IS nf_tables?
@@ -239,7 +245,6 @@ Fedora, RHEL, SUSE, Arch
 Reachable from unprivileged
 user namespaces
 Prior CVEs in nf_tables
-CVE -2022-32250 (UAF)
 CVE-2024-1086 (UAF)
 CVE-2024-0193 (UAF )
 CVE-2026-23111 (this)
@@ -250,8 +255,6 @@ CAP_NET ADMIN (in ns)
 Full nf_tables access
 |
 Trigger UAF — ROOT
-black hat
-2026
 ```
 
 ## Slide 9
@@ -260,7 +263,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE TARGET STACK
@@ -286,8 +290,6 @@ Stack buffer overflow protection
 Stack Canaries x NO STACK
 Random canary value checked on return
 All are irrelevant or bypassed. No mitigation survived.
-black hat
-2026
 ```
 
 ## Slide 10
@@ -330,7 +332,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 nf_tables Object Model
@@ -351,7 +354,6 @@ name = "s1" (verdict map)
 dtype = NFT DATA VERDICT
 catchall element
 verdict = GOTO
-!'set_elem_active-BUG
 binding: chain="victim"
 Normal enforcement: DELCHAIN fails with EBUSY if use > 0
 The bug: abort path drains use to O WITHOUT removing the GOTO reference
@@ -366,8 +368,6 @@ use back to 0
 (use==0 passes check)
 USE-AFTER-FREE
 Deterministic, no race
-black hat
-2026
 ```
 
 ## Slide 13
@@ -376,7 +376,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE TRANSACTION MODEL
@@ -389,12 +390,9 @@ Kernel processes ALL ops (even after error):
 > record on commit_list
 op2: NEWCHAIN x EEXIST (duplicate name) +> BATCH_FAILURE
 Key: op1's prepare-phase side effects ALREADY HAPPENED before op2 fails
-Y
 { All ops succeeded?
 nf_tables_commit() __nf_tables_abort()
 The abort path calls nft_map_catchall_activate() — which has the inverted check.
-black hat
-2026
 ```
 
 ## Slide 14
@@ -437,7 +435,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE REFCOUNT DRAIN
@@ -460,8 +459,6 @@ still holds GOTO + ???
 kfrée( chain)
 DELCHAIN succeeds (use == 0). Chain memory released.
 Catchall still holds GOTO pointer to freed memory — USE-AFTER-FREE
-black hat
-2026
 ```
 
 ## Slide 17
@@ -492,7 +489,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT WE CONTROL (THE FREED OBJECT)
@@ -501,8 +499,6 @@ struct nft_chain - Freed Object Layout
 blob_gen_0 | CODE EXECUTION
 truct nft_rule_ blob * packet eval follows ptr
 blob gen 1 (struct nft_rule blob *)
-rules (struct list head)
-list (struct list head)
 rhlhead (struct rhlist_head)
 table INFO LEAK
 ct nft_table * table ptr leaks heap addr
@@ -515,8 +511,6 @@ blob next (struct nft_rule blob *)
 kmalloc-cg-128
 Three primitives from one freed struct: code exec, info leak, arbitrary read.
 Reclaim with controlled data — full exploitation chain
-black hat
-2026
 ```
 
 ## Slide 20
@@ -525,7 +519,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE UAF TIMELINE
@@ -542,8 +537,6 @@ chain->use = 1 (catchall element references chain via GOTO verdict)
 DELCHAIN succeeds (use==0). Chain memory released: 120 bytes in kmalloc-cg-128
 Heap spray: reclaim freed slot with 248-byte COP payload (table userdata, same sub-cache)
 Trigger: TCP connect() — nft_do_chain — fake blob_gen_O — COP — commit_creds(fake_cred)
-black hat
-2026
 ```
 
 ## Slide 21
@@ -602,7 +595,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE EXPLOITATION ROADMAP
@@ -618,14 +612,11 @@ KASLR
 Heap Spray + RANDOM_KMALLOC_CACHES Bypass acne:
 Reclaim freed chain with COP payload (248 bytes) RND inihos
 COP Chain (Call-Oriented Programming) a
-defeats:
 Forward-edge code reuse — no ret gadgets needed RETHUNK
 nft_dynset_eval > ops->update = commit_creds
 Stable Return + Post-Exploitation
 Clean return to userspace with uid=0
 Each stage solves one constraint. No step is optional.
-black hat
-2026
 ```
 
 ## Slide 24
@@ -674,20 +665,19 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 STAGE 2: THE KASLR PROBLEM
 KASLR: Two Independent Address Spaces
 Both must be leaked independently. One leak is not enough
 Virtual Address Space What each unlocks:
-XTTTTT ITT. . « Target: victim3 name (kmalloc-cg-16)
 1. Free victim3 chain (UAF)
 vmlinux 2. Spray 2048 nft_last expressions nft_dynset_eval addr
 ops->update target
 1. Module base needed for:
 kernel text + data 3. Reclaim name buf with nft_last_ops ptr
-~32 MB region 4. Read via GETSETELEM Suseai pete clita be
 ~ COP dispatch
 2. vmlinux base needed for:
 Leak 2: vmlinux Kernel Base commit_creds addr
@@ -706,8 +696,6 @@ per boot Depends on Leak 1 (sequential) call vmlinux function
 Both KASLR bases defeated
 Leak 1 feeds Leak 2: module base locates struct module, whose list.prev reveals vmlinux.
 Both leaks use the same dangling pointer read primitive, no new bugs needed.
-black hat
-2026
 ```
 
 ## Slide 27
@@ -716,7 +704,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KASLR LEAK: THE DANGLING POINTER READ
@@ -729,11 +718,7 @@ verdict — chain
 Spray 2048 nft_last
 . Reads chain->name DANGLING .. reclaim name buf
 for response with nft_last_ops ptr
-. Returns bytes Chain /(EREED)/ module _ base =
 to userspace LAD ABBE, 7 Weap addr - 0x54980
-OKIE name’ 4 SEL
-Attacker reads leaked f 3 } : j pi
-Kaniiel bomnteral ee 6p in Kt Oibe2G ‘oh 5 Leak 2: Vmlinux base
 Overwrite victin4.name
 — point to struct module
 + read module.list.prev
@@ -743,8 +728,6 @@ Both KASLR bases defeated
 Three dangling pointers, two KASLR leaks, zero race conditions
 catchall element stays live after chain is freed — read chain fields — read name buffer
 All via legitimate GETSETELEM netlink requests. No timing sensitivity.
-black hat
-2026
 ```
 
 ## Slide 28
@@ -817,7 +800,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SLAB PAGE PINNING
@@ -825,12 +809,10 @@ RANDOM_KMALLOC_ CACHES Bypass: Slab Page Pinning
 16 sub-caches per size class. Mapping is per-callsite, not per-allocation.
 X Naive Spray (fails)
 Victim freed in sub-cache[3]:
-sub-cache[3] FREE |
 Spray lands in random sub-caches:
 sub-cache[7]
 NEVER RECLAIM
 Spray and victim in different sub-caches
-»
 Same callsite = same sub-cache:
 nft chain alloc - always [N]
 Step 1: Pin 200 chains (fill slab page)
@@ -842,8 +824,6 @@ COP payload lands in victim's slot
 Key insight: RANDOM_KMALLOC_CACHES mapping is per-callsite, not per-allocation.
 If the victim and spray use the same kernel callsite, they always land in the same sub-cache.
 PIN _CHAIN_COUNT=200 keeps the slab page active so the freed slot is reused by the spray.
-black hat
-@ys4.
 ```
 
 ## Slide 32
@@ -900,7 +880,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE TRIPLE CONSTRAINT PAYLOAD
@@ -927,7 +908,6 @@ ops->update = commit_creds (vmlinux_base + OxXXXXXX)
 Three constraints: nft_rule_blob (dispatch) struct cred (root, full caps) aa_label (unconfined)
 Zero wasted bytes. commit_creds(buf) installs this as current->cred. AppArmor sees UNCONFINED. black hat
 USA
-2026
 ```
 
 ## Slide 37
@@ -1026,7 +1006,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PUTTING IT ALL TOGETHER
@@ -1040,12 +1021,10 @@ loes not block
 fake c
 ddr2 +
 (+ +0xE8)
-EFERENCE)
 >turn @ > NFT_BREAK = root
 Result: current->cred = fake_cred (uid=0, full caps, FLAG_UNCONFINED)
 All via legitimate kernel CALL instructions. RETHUNK ne [e black hat
 USA
-2026
 ```
 
 ## Slide 43
@@ -1102,14 +1081,14 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHY KUBERNETES IS DIFFERENT
 Docker vs Kubernetes: Default Security
 Docker (default) Kubernetes (default)
 Custom profile Unconfined
-seccemp bitmask 0x7e020000 blocks oe
 syscall filter CLONE NEWUSER NO filtering. ALL syscalls pass.
 AppArmor docker-default unconfined (AKS)
 MAC profile restricts mount, pivot_root runtime/default (GKE) - neither blocks userns
@@ -1123,8 +1102,6 @@ GKE: opt-in via --enable-default-seccomp. Disabled on Standard tier.
 EKS: SeccompDefault feature gate disabled. No opt-in Ul.
 Default = Unconfined = Exploitable
 One missing seccomp profile turns LPE into cloud infrastructure compromise.
-black hat
-2026
 ```
 
 ## Slide 48
@@ -1133,7 +1110,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ATTACK MODEL
@@ -1158,8 +1136,6 @@ command: No RBAC beyond pod creation
 Any image. Any namespace.
 On a shared cluster: ANY tenant's pod can escape.
 Lateral movement: pod — node = all pods on node -. cluster credentials.
-black hat
-2026
 ```
 
 ## Slide 49
@@ -1168,7 +1144,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CONTAINER ROOT vs REAL ROOT
@@ -1186,15 +1163,12 @@ else
 commit_creds(fake_cred) boundary
 AFTER commit_creds (user_ns = init_user_ns):
 pod$ id
-uid=0(root) gid=0( root)
 pod$ cat /proc/self/uid map
 i) 6 4294967295 - FULL RANGE
 pod$ mount -t proc proc /tmp/p
 (success) — REAL root
 Key: "4294967295" = 2432 - 1 = full UID range = init_user_ns = REAL root in the global namespace.
 Without this check, the exploit would waste escape attempts on false positives.
-black hat
-2026
 ```
 
 ## Slide 50
@@ -1203,7 +1177,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ESCAPE: MOUNTING OVER /proc/sys
@@ -1231,8 +1206,6 @@ Host kernel calls /tmp/.x on unknown binary format trigger ~~
 procfs trusts init_user_ns fully
 Key: commit_creds changes user_ns. This isn't just a UID change.
 It unlocks mount operations the container was denied.
-black hat
-2026
 ```
 
 ## Slide 51
@@ -1241,17 +1214,16 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ESCAPE: OVERLAY + MODPROBE
 Container Escape: Overlay + modprobe_path
 Write to host filesystem via overlay upperdir, trigger kernel module load
-a a
 Container View Host View
 /proc/sys/kernel/ /proc/sys/kernel/
 modprobe path Overlay modprobe path
-|_
 (read-only bind mount in container) (writable for init_user_ns root)
 After LPE (uid=0 in init_user_ns):
 mount too revealing() PASSES "/tmp/.x" (our payload script)
@@ -1262,8 +1234,6 @@ Escape Flow (4 steps):
 4. Trigger unknown binfmt HOST ROOT SHELL
 = kernel calls /tmp/.x in INIT ns
 Note: binfmt trigger removed in kernel 6.14 (commit faibdca98d74, Nov 2024). socket(AF_43) trigger unaffected. AKS/GKE ship 6.8.
-black hat
-2026
 ```
 
 ## Slide 52
@@ -1272,7 +1242,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REBOOT CYCLING
@@ -1291,8 +1262,6 @@ Expected: 3-10 boots
 In production: attacker doesn't need to trigger reboots.
 Scheduled maintenance, auto-scaling, and node upgrades all reshuffle the mapping naturally.
 Each new boot = fresh roll of the dice. Patience, not luck.
-black hat
-2026
 ```
 
 ## Slide 53
@@ -1301,7 +1270,8 @@ black hat
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GKE: THE vec[0] CRASH AND FIX
@@ -1311,12 +1281,10 @@ GKE CRASH: NULL pointer dereference in fn_for_each_confined
 Desktop: unconfined() skips vec[0]. GKE: AppArmor module hooks still walk vec[O] — NULL — panic.
 248-byte payload (buf-relative): Self-reference chain:
 A +0x28 cred start = aa_label start 1. Kernel reads label — vec[0]:
-cA
 *(buf + 0x80) = &cred
 +0x68 cap_effective = label — flags (UNCONFINED) points back to buf+0x28
 +0x70 cap_bset upper 32b = label — size = 1 2. Kernel reads vec[0]— mode:
 y _ *(buf+0x28 + 0x50) = *(buf+0x78)
-UGS cab An Pent= 2 = cap ambient = 3 (UNCONFINED)
 TRIPLE-USE: is_last + profile . mode + cap_ambient
 +0x80 jit_keyring = vec[0] ~ Profile skipped. No crash.
 Before: 0 (NULL). Fix: &cred (self-ref = +0x28)
@@ -1327,9 +1295,7 @@ cap_ambient (buf+0x78): fake cred addr|1 -
 jit_keyring (buf+0x80): © (NULL) =
 Two fields changed. One allocation now satisfies four constraints.
 The fake credential IS its own AppArmor profile.
-black hat
 USA
-2026
 ```
 
 ## Slide 54
@@ -1352,7 +1318,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE COMPLETE CHAIN
@@ -1374,10 +1341,6 @@ ops self-ref at +0xE8
 ops->update = commit creds
 Bypasses: RETHUNK (no ret gadgets)
 pod . node -. cluster compromised
-SJ
-Ne
-black hat
-2026
 ```
 
 ## Slide 56
@@ -1488,7 +1451,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DISCLOSURE: MICROSOFT (MSRC)
@@ -1496,13 +1460,11 @@ But thanks MSRC, for the “special” mention ;-)
 © Special Mentions
 Recognizing MSRC researchers who made a meaningful impact through the Microsoft Researcher
 Recognition Program. Thank you for helping protect the Microsoft ecosystem.
-: 2026 ;
 Showing 1 researcher Tile ne Vv Tristan x
 @ Updated monthly to reflect new recognitions.
 Other
 @TristanInSec
 (0) Display name and recognition preferences can be managed through your researcher profile settings.
-black hat
 Information Classification: General 2026
 ```
 
@@ -1584,7 +1546,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 STRUCTURAL LESSONS
@@ -1603,8 +1566,6 @@ busybox unshare -Urn busybox-static always installed Sysctl blocks named unconfi
 Named unconfined profile flags=(unconfined) from creating user namespaces
 skips transition check Unconfined skips ns check Status: NOT enabled until 25.04
 Every bypass exploits a design gap, not an implementation bug. The mitigations work as designed — the designs are insufficient.
-black hat
-2026
 ```
 
 ## Slide 70
@@ -1629,7 +1590,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RESOURCES
@@ -1654,7 +1616,6 @@ GONG Ruiqi (Huawei) — Linux 6.6, 2023 — reviewed by Kees Cook
 16 random sub-cach er slab feated by slab page pinning
 SLUBStick: Cross-Cache Attacks in Linux Kernel
 Maar et al. — USENIX Security 2024
-dloitation und fe mitigation
 research builds
 JOP: Jump-Oriented Programming
 Bletsch et al. — ASIACCS 2011
@@ -1683,8 +1644,6 @@ AKS / GKE Azure K8s Service & Google K8s Engine — targets
 AppArmor Ubuntu userns restrictions — 23.10+
 RETHUNK Peter Zijlstra — return thunk Spectre v2
 SLAB/SLUB Lameter (original), Babka (maintainer)
-black hat
-2026
 ```
 
 ## Slide 72

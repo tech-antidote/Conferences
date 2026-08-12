@@ -12,7 +12,7 @@ duration_seconds: 1355
 words: 3321
 text_chars: 18657
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Voice Cloning Air Traffic Control - Vulnerabilities at Runway Crossings

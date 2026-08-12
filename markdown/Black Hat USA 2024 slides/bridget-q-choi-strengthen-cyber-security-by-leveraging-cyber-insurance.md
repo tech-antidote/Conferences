@@ -11,15 +11,21 @@ sha256: "c2308bd42affade163b20d67ebebfde21618d7ab356d445a43b39b25a2fb9879"
 text_chars: 8215
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:29:19Z"
+converted_at: "2026-08-12T04:28:26Z"
 ---
 # Strengthen Cyber-security by Leveraging Cyber-Insurance
 
 **Speakers:** Bridget Q. Choi  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Bridget Q. Choi_Strengthen Cyber-security by Leveraging Cyber-Insurance.pdf` (12 pages)
+
 
 ## Slide 1
 

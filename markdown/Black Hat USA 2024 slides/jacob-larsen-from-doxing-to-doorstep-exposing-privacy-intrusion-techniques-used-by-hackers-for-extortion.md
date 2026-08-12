@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Jacob Larsen_From Doxing to Doorstep Exposing Privacy Intrusion Techniques used by Hackers for Extortion.pdf"
 pages: 77
 sha256: "f9557e5a9b3a39afa2b850e71bdf8713ed1f18e9dc52a5b6044fd8bf1b459b10"
-text_chars: 32346
-ocr_pages: 19
+text_chars: 30742
+ocr_pages: 18
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:33:18Z"
+converted_at: "2026-08-12T04:34:00Z"
 ---
 # From Doxing to Doorstep Exposing Privacy Intrusion Techniques used by Hackers for Extortion
 
 **Speakers:** Jacob Larsen  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Jacob Larsen_From Doxing to Doorstep Exposing Privacy Intrusion Techniques used by Hackers for Extortion.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -29,12 +35,10 @@ From Doxing to Doorstep: Exposing Privacy Intrusion Techniques used by Hackers f
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-| 4a
-blackhat } # >
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 From Doxing to Doorstep:
@@ -91,51 +95,29 @@ Jacob Larsen
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Nek r- ES, cts Law Enforcement Inquiry and Alerts Version 21.9.7 (gt Logo
 View/Edit Request 648889 Select Action fig) Save
-Police Officer .
-= =o Usdo).qovs
-Paquet Sthstuss co
-‘Creabed Ciste: ~.
-Created Eizi Sie —o_ a 0 ¥
-Last Modified Date: — Decorfliction: jc ~
-ast Medewt =
 Assigned To: =
-Remarks =
 Birth State: |
 Basic
-{_] RETA
-(J ericio
-()autsa
-je
-(| DFO
-(| NBS
 [_) PRIVILEGE
 Birth City: #ViLE
-Middle Mare:
 "DOG:
-Barth Country:
-Birth Shisbet
 *Alien Number:|
 iSelect Al
-Brth Gty: #LE
-*hlien Numbert
-Garq/DTO/Cartel
-(auspected;
 ```
 
 ## Slide 6
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Victims are extorted into paying ('
 have their information removed uses the threat of revealing
 personal information to extort victims
@@ -155,7 +137,8 @@ personal information to extort victims
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Doxbin Home Add Paste Users Upgrades Hallof Autism TOS
@@ -166,7 +149,6 @@ Mirrors: doxbin.org | doxbin.com | doxbin.net
 Search for a paste
 Search for... Search
 Showing 150 (of 133419 total) pastes
-«/71T/)2/3)4)5 |... |B90) »
 Pinned Pastes
 Title Comments Views Created by Added
 Development Changelog - 33727 Reiko [Council] Sep 7th, 2023
@@ -193,7 +175,8 @@ Transparency Report
 
 **1941 – 302 = 1639 “Private” Doxes**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Doxbin Account Upgrades
@@ -330,11 +313,11 @@ IP Address
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat \
-® Authy +e: ‘S: BINANCE
 Pare O cohaintin coinbase coinbase
 NTL Law Enforcement US Law Enforcement
 Click to request access
@@ -391,13 +374,13 @@ Law Enforcement Portals
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
 USA 2024 2:
 Government Email Access |"
-nde etalk ary
 All for $70 each $
 Our mails can be used for 70 each
 Need a middleman? Try out our Escrow App!
@@ -411,18 +394,16 @@ Need a middleman? Try out our Escrow App!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024 , ai
 Tools
-7 unaies email accounts ccclummacn mesa, General Information
 J Current User
 gov
 Custom Gov Emails
 Primary Domain
-*Mozambique /direct *& eI GOV,MZ
 *Philippines /direct * &
 *Pakistan / direct * | Shared IP Address
 *Brazil / subdomain* @
@@ -439,18 +420,14 @@ scams, etc...
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-OTikTok ea
 Law enforcement
 requests
 n***|@usdoj.gov
 € C © hitp
-s:,//safety-enforcement.tiktok.com/ticket_type=1
-do TikTok
 Law enforcement
 requests
 Submitted
@@ -518,7 +495,8 @@ Full Name #BHUSA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “ViLe has
@@ -530,7 +508,8 @@ yah!”
 
 #### **Violence-as-aService**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Violence-as-a-
@@ -542,7 +521,6 @@ COUNTRY) ~ 25$
 = anyone jumped ( UK + EU + USA) ~
 170
 Get any house bricked (USA + UK+ EU) ~
-2855 2008
 Get your target stabbed (UK + USA) ~
 12,0008
 Get your target kidnapped (UK ) ~
@@ -552,7 +530,6 @@ Comes with video proof for any of these
 @e@ MM / Escrow Accepted
 @® 24/7 Online
 Contact Mme: jijsiattenttianstingiemsiaitaja
-Channel: |) Saas
 ```
 
 ## Slide 33
@@ -563,7 +540,8 @@ Channel: |) Saas
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PRESS RELEASE
@@ -646,43 +624,23 @@ reiko
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Real Offshore Hosting List
 OFFSHORE.CAT
 The Real Offshore Hosting List HOSTIN
 DOMAINS
-Q rs)
 VPN
-1] 0
 EMAILS CON/WAF
 Offshore.CAT is a compiled list of the real & genuine,
-ee we ee et © pee offshore services that }|—
 we have either used/have had experiencejw"™ ™
-ome
-ee patel ow eget) keane © fred of
-Cotte Os eet te me Pe) ene, Som
-eget = ET sage
-A ote aes He Cee e+ et mgr we se
-Me OO Vee Ont, hare
 Company
 Name Website link Description policy*
 country Log
 Filter Filter Filter Filter Filter
-ee eee wen ee
-— Santas P|
-~——e oe em ete
-i
-_=—
-ee
-me
-me
-_— mee!
-=
 Offshore.CAT is a Doxbin Project.
-uncate 2023-08-04
-Total sag
 An extremely lenient domain registrar,
 =a has been hosting Doxbin.net for years
 ```
@@ -705,11 +663,10 @@ An extremely lenient domain registrar,
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 CDA 230 isa
 federal law that
 prevents websites,
@@ -733,11 +690,10 @@ provider.”
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 q Death to Brianna
 £4 spacekatgal You just made a game nobody liked. That's it.
 = Nobody wil Ilcare when you die.
@@ -824,7 +780,8 @@ responsible or legally liable.
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rules:
@@ -838,18 +795,17 @@ Content that is not allowed on Doxbin:
 - Reposting the same copy/paste dox
 - Direct threats of physical harm, terroristic threats and swat threats/requests
 If you would like to report a paste for TOS violation, contact us on Telegram #
-Law enforcement ONLY: gy ee ed Cee eM eat a
 If a paste does not break our rules, there is nothing we can do. ° # © ee
 ```
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Title Comments Views Created by Added
 - 138407 Kt [Admin] Jun 20th, 2020
-DOABIN
 https://dox.report/ | https://archive.is/BNgzv
 Transparency Report
 Transparency Report
@@ -885,11 +841,10 @@ Verdict: Denied | Information within the paste is considered public.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Doxbin Responses Verdict
 Pending User data not logged
 0.7% 14.9%
@@ -897,7 +852,6 @@ Denied
 19.9%
 No reply
 21.1%
-¥
 Removed
 43.4%
 ```
@@ -995,23 +949,6 @@ Address
 Full Name
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-Email ,
-Address agimall
-Mobile
-Number
-—_—____—__—» ®
-Emerg ency IP Address
-Data Request So. a a
-NI Residential
-Address
-rs Name
-```
 
 ## Slide 63
 

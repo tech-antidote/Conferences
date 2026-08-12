@@ -1,5 +1,5 @@
 ---
-title: "Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch-WP"
+title: "Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch"
 speakers: ["Ben Gardiner"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -12,15 +12,20 @@ text_chars: 495400
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:09:34Z"
+converted_at: "2026-08-12T05:32:58Z"
 ---
-# Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch-WP
+# Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch
 
 **Speakers:** Ben Gardiner  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Ben Gardiner_Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch-WP.pdf` (179 pages)
+
 
 ## Slide 1
 

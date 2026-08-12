@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Cao-Attacking-WebAssembly-Compiler-of-Webkit.pdf"
 pages: 56
 sha256: "e4b56d7de3a2a1f5914c98498d1ceff6acdf1cfd4af0163c77f5605232edbc5b"
-text_chars: 33074
-ocr_pages: 10
+text_chars: 29908
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["AS-23-Cao-Attacking-WebAssembly-Compiler-of-Webkit_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:53:50Z"
+converted_at: "2026-08-12T03:46:42Z"
 ---
 # Attacking WebAssembly Compiler of Webkit
 
 **Speakers:** Cao  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Cao-Attacking-WebAssembly-Compiler-of-Webkit.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -29,18 +35,6 @@ converted_at: "2026-08-11T23:53:50Z"
 Zong Cao(@P1umer)     Zheng Wang(@xmzyshypnc)
 
 #BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-ASIA
-MAY 11-12
-BRIEFINGS
-Attacking the WebAssembly
-Compiler of WebKit
-Zong Cao(@Piumer) Zheng Wang(@xmzyshypnc)
-```
 
 ## Slide 2
 
@@ -192,56 +186,51 @@ Parser
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-ASIA 2025
 Fuzzing Overview
-Main challenge: how to make the fuzzer generateGemi-well-formed)samples
-ID + Pri> Type + Component + Status > Summary + Labels ~ Owner >
-(@lWaSm compile fUzzet: Fatal error in Exception mismatch! Expected:
-vr 1427334 2 Bug Blink>JavaScript>WebAssembly Assigned  <RangeError: Maximum call stack si
-ClusterFuzz . . .
-P main ~ _ binaryen/src/tools / fuzzing /
-yy 1425320 2 Bug Blink>JavaScript>WebAssembly Verified SSevesr Roompaestizzet: Creh in
-Reproducible ClusterFuzz
-v8_wasm_compile_fuzzer: Abrt in vé| . a . . .
-we 1424671 1 Bug Blink>JavaScript>WebAssembly Duplicate — £. tlively Remove the ability to construct basic types in a TypeBuilder (#5678)
-eproducible ClusterFuzz e
-v8_wasm_compile_fuzzer: Fatal erro
-yr 1421464 2 Bug Blink>JavaScript>WebAssembly Verified valid module. Run with —-trace-was|
-ClusterFuzz
-yx 1421303 1 Bug Blink>JavaScript>WebAssembly Verited  Y8-wasm_compile_fuzzer: CHECK f¢ — ["}_ fuzzing.cpp 5
-Reproducible ClusterFuzz
-e pa fier CHEK wasm—-smith
-yy 1419637 2 Bug Blink>JavaScript>WebAssembly Assigned 9 SWEET COMP Ip tuzea (}_heap-types.c|
-fuzzer—-common.cc Reproducible Ch
-i : CHECK fe
-yr 1419622 1 Bug Blink>JavaScript>WebAssembly Verified; | SSS¥Semzcomplientizesr ()_ heap-types.h
-Reproducible ClusterFuzz
-: A WebAssembly test case generator.
-ye 14175161 Bug Blink>JavaScript>WebAssembly Verified  Y8-wasm_compile_fuzzer: DCHECK) = [)_ parameters.H y g
-liftoff-assembler-arm.h Reproducit
-Blink>JavaScript>Compiler, ; v8_wasm_compile_fuzzer: Abrt in v8|
-1405706 li random.c 0.1
-se “Hosm8: 1 Bud Blink>JavaScript>WebAssembly Duplicate “Reproducible ClusterFuzz ih) PP crates. io |VO downl J zRust
-Bug- v8_wasm_compile_fuzzer: DCHECK BD random.h
-yy 1404880 1 South Blink>JavaScript>Runtime Duplicate HAS_STRONG_HEAP_OBJECT_TAG|
-y ClusterFuzz allpublic e Features
-bu v8_wasm_compile_fuzzer: DCHECK failure in
-yy 1404876 1 - + ” Blink>JavaScript>WebAssembly Duplicate feedback _instruction_index_ < type_feedback_.size() in graph-bd e Usage
-mY interface.c Reproducible ClusterFuzz allpublic
-slike JavaScripts GarbaceCollection v8_wasm_compile_fuzzer: Null-dereference READ in o With cargo fuzz and libfuzzer-sys
-ye 1404761 1 Bug iivkc lavaloribts WebAssornily Duplicate —_-v8::internal::RootScavengeVisitor::ScavengePointer Reproducible
-ClusterFuzz a .
-o Asa Command Line Tool
-ye 1404712 1 Bug- Blink>JavaScript>GarbageCollection Duplicate Y8-™@8™_complle_fuzzer.exe: Crash in v8:internal::Heap::Iteratel
-Security Reproducible ClusterFuzz allpublic
-Bu v8_wasm_compile_fuzzer: DCHECK failure in (address &
-yy 1404655 1 sae ” Blink>JavaScript>WebAssembly Duplicate —_::v8internal::kHeapObjectTagMask) == 0 in heap-object.h Reproducible clemensb@chromium.org
-murity -
-ClusterFuzz_allpublic
+
+Main challenge: how to make the fuzzer generate semi-well-formed samples
+    ("semi-well-formed" circled in red)
+
+[Chromium issue tracker]
+ID ▾ | Pri ▾ | Type ▾ | Component ▾ | Status ▾ | Summary + Labels ▾ | Owner ▾
+☆ 1427334  2  Bug  Blink>JavaScript>WebAssembly  Assigned  v8_wasm_compile_fuzzer: Fatal error in Exception mismatch! Expected: <RangeError: Maximum call stack si…   ClusterFuzz
+☆ 1425320  2  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: Crash in v…   Reproducible  ClusterFuzz
+☆ 1424671  1  Bug  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+☆ 1421464  2  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: Fatal erro… valid module. Run with --trace-was…   ClusterFuzz
+☆ 1421303  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1419637  2  Bug  Blink>JavaScript>WebAssembly  Assigned  v8_wasm_compile_fuzzer: CHECK fa… fuzzer-common.cc  Reproducible  Clu…
+☆ 1419622  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1417516  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: DCHECK … liftoff-assembler-arm.h  Reproducibl…
+☆ 1405706  1  Bug  Blink>JavaScript>Compiler, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+☆ 1404880  1  Bug-Security  Blink>JavaScript>Runtime  Duplicate  v8_wasm_compile_fuzzer: DCHECK … HAS_STRONG_HEAP_OBJECT_TAG…   ClusterFuzz  allpublic
+☆ 1404876  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in feedback_instruction_index_ < type_feedback_.size() in graph-bu… interface.c  Reproducible  ClusterFuzz  allpublic
+☆ 1404761  1  Bug  Blink>JavaScript>GarbageCollection, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Null-dereference READ in v8::internal::RootScavengeVisitor::ScavengePointer  Reproducible  ClusterFuzz
+☆ 1404712  1  Bug-Security  Blink>JavaScript>GarbageCollection  Duplicate  v8_wasm_compile_fuzzer.exe: Crash in v8::internal::Heap::IterateR…  Reproducible  ClusterFuzz  allpublic
+☆ 1404655  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in (address & ::v8::internal::kHeapObjectTagMask) == 0 in heap-object.h  Reproducible  ClusterFuzz  allpublic    clemensb@chromium.org
+
+[GitHub repository browser]
+⑂ main ▾    binaryen / src / tools / fuzzing /
+tlively  Remove the ability to construct basic types in a TypeBuilder (#5678)  …
+..
+fuzzing.cpp
+heap-types.c… (truncated by overlapping window)
+heap-types.h
+parameters.h
+random.cpp
+random.h
+
+[wasm-smith README]
+wasm-smith
+A WebAssembly test case generator.
+[docs | passing]  [crates.io | v0.12.7]  [downloads | 287k]  [Rust badge]
+• Features
+• Usage
+  ○ With cargo fuzz and libfuzzer-sys
+  ○ As a Command Line Tool
 ```
 
 ## Slide 12
@@ -252,56 +241,53 @@ ClusterFuzz_allpublic
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-ASIA 2025
-Main challenge:
-ID + Pri» Type Component ~ Summary + Labels +
-(élWasmlcompilelfuzzet: Fatal error in Exception mismatch! Expected:
-<RangeError: Maximum call stack si
-ClusterFuzz
-ye 1427334 2 Buo
-P main ~ _ binaryen/src/tools / fuzzing /
-v8_wasm_compile_fuzzer: Crash in
-Reproducible ClusterFuzz
-v@_wasm_compile_fuzzer: Abrt in v8]
-Duplicate
-Reproducible ClusterFuzz
-tlively Remove the ability to construct basic types in a TypeBuilder (#5678)
-v8_wasm_compile_fuzzer: Fatal erro
-clink>JavaScript>WebAssembly Verified valid module. Run with —-trace-was|
-ClusterFuzz
-wud 1 Bug Blink>JavaScript>WebAssembly Verited  Y8-wasm_compile_fuzzer: CHECK f¢ — ["}_ fuzzing.cpp 7
-Reproducible ClusterFuzz
-e pa hazer CHECK wasm-smith
-yy 1419637 2 Bug Blink>JavaScript>WebAssembly Assigned 9 SWEET COMP Ip tuzea (}_heap-types.c|
-fuzzer-common.cc Reproducible Cl
-il : CHECK fe
-yr 1419622 1 Bug Blink>JavaScript>WebAssembly Verified; | SSS¥Semzcomplientizesr ()_ heap-types.h
-Reproducible ClusterFuzz
-yy 1417516 1 Bug Blink>JavaScript>WebAssembly Verited  Y8-wasm_compile_fuzzer: DCHECK) = [) __ parameters.h A WebAssembly test case generator.
-liftoff-assembler-arm.h Reproducibl
-Blink>JavaScript>Compiler, - v8_wasm_compile_fuzzer: Abrt in v8|
-1405706 li random.c 0.1
-se “Hosm8: 1 Bud Blink>JavaScript>WebAssembly Duplicate Reproducible ClusterFuzz 0 RP Crates.10 ii S l#Rust
-Bon v8_wasm_compile_fuzzer: DCHECK 1 random.h
-yy 1404880 1 South Blink>JavaScript>Runtime Duplicate HAS_STRONG_HEAP_OBJECT_TAG|
-y ClusterFuzz allpublic e Features
-bu v8_wasm_compile_fuzzer: DCHECK failure in
-yy 1404876 1 - + ” Blink>JavaScript>WebAssembly Duplicate feedback _instruction_index_ < type_feedback_.size() in graph-bu e Usage
-Sony. interface.c Reproducible ClusterFuzz allpublic
-slike JavaScripts GarbaceCollection v8_wasm_compile_fuzzer: Null-dereference READ in o With cargo fuzz and libfuzzer-sys
-ye 1404761 1 Bug Bic lace Wesiocor tle Duplicate —_-v8::internal::RootScavengeVisitor::ScavengePointer Reproducible
-ClusterFuzz 5 .
-o Asa Command Line Tool
-ye 1404712 1 Bug- BlinkoJavaScript>GarbageCollection Duplicate Y8-W#sm_complle_fuzzer.exe: Crash in v8:internal::Heapztteratel
-Security Reproducible ClusterFuzz allpublic
-bu v8_wasm_compile_fuzzer: DCHECK failure in (address &
-yy 1404655 1 sae ” Blink>JavaScript>WebAssembly Duplicate —_::v8internal::kHeapObjectTagMask) == 0 in heap-object.h Reproducible clemensb@chromium.org
-surity ms
-ClusterFuzz_allpublic
+Fuzzing Overview
+
+Main challenge: how to make the fuzzer generate semi-well-formed samples
+    ("semi-well-formed" circled in red)
+
+[Red handwritten annotation across the left of the bug table: "So Good !"]
+
+[Chromium issue tracker — partly covered by the annotation]
+ID ▾ | Pri ▾ | Type ▾ | Component ▾ | (Status) ▾ | Summary + Labels ▾ | Owner ▾
+☆ 1427334  2  Bug  …  v8_wasm_compile_fuzzer: Fatal error in Exception mismatch! Expected: <RangeError: Maximum call stack si…   ClusterFuzz
+☆ (id hidden)  …  v8_wasm_compile_fuzzer: Crash in v…   Reproducible  ClusterFuzz
+   (id/component hidden)  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+   (id hidden)  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: Fatal erro… valid module. Run with --trace-was…   ClusterFuzz
+   …303  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1419637  2  Bug  Blink>JavaScript>WebAssembly  Assigned  v8_wasm_compile_fuzzer: CHECK fa… fuzzer-common.cc  Reproducible  Clu…
+☆ 1419622  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1417516  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: DCHECK … liftoff-assembler-arm.h  Reproducibl…
+☆ 1405706  1  Bug  Blink>JavaScript>Compiler, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+☆ 1404880  1  Bug-Security  Blink>JavaScript>Runtime  Duplicate  v8_wasm_compile_fuzzer: DCHECK … HAS_STRONG_HEAP_OBJECT_TAG…   ClusterFuzz  allpublic
+☆ 1404876  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in feedback_instruction_index_ < type_feedback_.size() in graph-bu… interface.c  Reproducible  ClusterFuzz  allpublic
+☆ 1404761  1  Bug  Blink>JavaScript>GarbageCollection, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Null-dereference READ in v8::internal::RootScavengeVisitor::ScavengePointer  Reproducible  ClusterFuzz
+☆ 1404712  1  Bug-Security  Blink>JavaScript>GarbageCollection  Duplicate  v8_wasm_compile_fuzzer.exe: Crash in v8::internal::Heap::IterateR…  Reproducible  ClusterFuzz  allpublic
+☆ 1404655  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in (address & ::v8::internal::kHeapObjectTagMask) == 0 in heap-object.h  Reproducible  ClusterFuzz  allpublic    clemensb@chromium.org
+
+[GitHub repository browser]
+⑂ main ▾    binaryen / src / tools / fuzzing /
+tlively  Remove the ability to construct basic types in a TypeBuilder (#5678)  …
+..
+fuzzing.cpp
+heap-types.c… (truncated by overlapping window)
+heap-types.h
+parameters.h
+random.cpp
+random.h
+
+[wasm-smith README]
+wasm-smith
+A WebAssembly test case generator.
+[docs | passing]  [crates.io | v0.12.7]  [downloads | 287k]  [Rust badge]
+• Features
+• Usage
+  ○ With cargo fuzz and libfuzzer-sys
+  ○ As a Command Line Tool
 ```
 
 ## Slide 13
@@ -348,21 +334,16 @@ ClusterFuzz_allpublic
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Our Approach:
 * Generator Reuse: not only between V8 & WebKit
-, a
-“
 |
 Type: Libs
 >) Random Data CYL valid wasm data Yy Y ;
-oo Frontenc|| =| , > [ V® Backenel }
 cc + Frontend |
-egeeeeererererereereereree2e2e2rerer2e2reer2e2 e2e2e2e2 @ @ =
 ```
 
 ## Slide 17
@@ -373,18 +354,13 @@ egeeeeererererereereereree2e2e2rerer2e2reer2e2 e2e2e2e2 @ @ =
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Our Approach:
 * Generator Reuse: applicable across peer-applications
 Random Data 47777777 Interesting Data
-Libfuzzer Frontenc WLLL. Target Function
-y)
-"Peer Application |
 AFL ++ Front en
 ```
 
@@ -426,17 +402,6 @@ AFL ++ Front en
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2025
-Our Approach: AFL++ Extractor
-1. LibFuzzer divided into Generator and Harness logically
-LLVMFuzzerT estOnelnput
-```
-
 ## Slide 21
 
 ### Our Approach: AFL++ Extractor
@@ -444,17 +409,6 @@ LLVMFuzzerT estOnelnput
 **2** .  Remove the invocation of the target functions via patching.
 
 #BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2025
-Our Approach: AFL++ Extractor
-2. Remove the invocation of the target functions via patching.
-Library: $ Original _fuzzer_name).a
-```
 
 ## Slide 22
 
@@ -474,11 +428,10 @@ Library: $ Original _fuzzer_name).a
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 ASIA 20253
 Our Approach: AFL++ Extractor
 v Apply AFL++ Extractor to v8_wasm_compile_fuzzer
@@ -488,11 +441,7 @@ file v8_wasm_compile_fuzzer
 v8_wasm_compile_fuzzer: ELF 64-bit (SB shared ones
 86-64, version 1 (SYSV), dynamically “tenked.B [
 Hash ]=af807f0ad436b346, with debug_info, not stripped
-leee eee ee eee eee ee eee eee eee ee eee eee ESSEES 4
 \ J
-ineuts oie ie eee 1 Modified input @
-————> ' Wrapped in Javascript | ——_—>
-AFL++ Lace ceiewie meme mememiwer WebKit
 Feedback
 ```
 
@@ -600,12 +549,10 @@ return
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 CVE-2022-32863
 Vulnerability analysis
 e Vulnerability exists in the BBQ Air.
@@ -749,12 +696,10 @@ sizeof(Register)));
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 CVE-2022-32885
 e Vulnerability exists in the LLInt Parser.
 e Inappropriate implementation on parsing delegate bytecode

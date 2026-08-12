@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Nimish Mishra & Anirban Chakraborty & Debdeep Mukhopadhyay-Faults in Our Bus Novel Bus Fault Attack to Break Trusted Execution Environments in Embedded Systems.pdf"
 pages: 78
 sha256: "7203dac53f8a289ea92ccec2b3d6f743e2ac280ebd10769f4851191d82e76a01"
-text_chars: 25345
-ocr_pages: 12
+text_chars: 19880
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:50:00Z"
+converted_at: "2026-08-12T04:49:09Z"
 ---
 # Faults in Our Bus Novel Bus Fault Attack to Break Trusted Execution Environments in Embedded Systems
 
 **Speakers:** Nimish Mishra, Anirban Chakraborty, Debdeep Mukhopadhyay  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Nimish Mishra & Anirban Chakraborty & Debdeep Mukhopadhyay-Faults in Our Bus Novel Bus Fault Attack to Break Trusted Execution Environments in Embedded Systems.pdf` (78 pages)
+
 
 ## Slide 1
 
@@ -284,16 +289,6 @@ No external interface Privileged (in SoCs; ex RPi)
 Laser/EM Fault Rowhammer injection
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
--2\YVZ-
-! No external interface ! : Laser/EM Fault
-(in SoCs: ex RP?) Privileged | ; Rowhammer injection
-```
 
 ## Slide 19
 
@@ -636,48 +631,27 @@ ADVERSARIAL GOAL !
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Fault Attack Target
 , Userspace
-1 Exception
-i Level 0
-'
-!'
 , Kernelspace
-1 Exception
 tLevel 1
-!
-Secure world
 SVC call
 [f: utee_*()
 and
 tee_svc_*()]
 Crypto library invocation |SMCI
 [f: erypto_*()]
-Libtomcerypt
-Normal world
-inne
-'
-'
-'
-sare as ,
 initiation « Innocent CA
-'
-'
-!
-i
 [f: TEE_*()]
 invoke a function
 ee
 SMC
 SMC interface
 Secure monitor call handler v
-(Exception Layer 2)
 ```
 
 ## Slide 46
@@ -686,40 +660,14 @@ Secure monitor call handler v
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Secure world
 Fault Attack Target pee TA
-Normal world
-'
-!
-1 Exception 8 '
-tLevel 0 . '
-define TEE_SUCCESS 0x00000000 ‘ ts utee *0) i ar
-#define TEE_ERROR_SECURITY 0xFFFFOO0F : ae - '
-1 * wane ee :
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { 1 tee_eve Oly initiation Innocent CA ’
-if(/*signature is valid */) ' f: TEE 1) ' °
-return TEE_SUCCESS; pe thea ner ptr belt cy bet er function ;
-return TEE_ERROR_SECURITY ; i TEE t) ) in TA
-} , Kernelspace t:| “kt witb OOO SH OO Re G eee OS
-1 Exception a) JRE Free eS ee
-I) Youd va TAL ré¥erended by: a-0A inexet 1 : 1REE Kernelspace Exception Level 1
-void load_TA(...) { ° ‘ , $
 some code here F Crypto library invocation SMCI , : G |
-TEE_Result res = verify_signature(...) ; [f: erypto_*()] ; a iP
-if(res != TEE_SUCCESS) t SMC ¢ \
-// abort execution ' : ' i (
 : MC interf:
-POTS CINGTONGOHE. Here Libtomerypt ; ' SVC handler ic
-1 '
-'
-Secure monitor call handler
-(Exception Layer 2)
 ```
 
 ## Slide 47
@@ -734,61 +682,25 @@ Rowhammer
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Secure world
 Fault Attack Target pee TA
-1 Exception
-Normal world
-i Level 0
-1 Exception Level 0
-!
-!
-'
-;
-!
-z SVC call '
 ¥define TEE_SUCCESS 0x00000000 eaten i i —
-#define TEE_ERROR_SECURITY 0xFFFFOO0F ana No —
-'
-\ ;
-'
-'
-'
-'
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) {
-g
 a
 <
-°o
 =
 =
-==
-2
-i—4
-ity
-=
-3
-»
 Innocent CA
 if(/*signature is valid */) f: TEE 1) |
-return TEE_SUCCESS; Pie Nechot pierre rire series || Meee percae
 return TEE_ERROR_SECURITY ; ie ' in TA
-} , Kernelspace ' eendecsecescusesaseese
-1 Exception a) JRE Free eS ee
 // load a TA referenced by a CA re! : 'REE | Kernelspace Exception Level 1 !
-, SS red ae F Crypto library invocation |SMCI ; | ! e
-TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' : a iP
-if(res != TEE_SUCCESS) t SMC a '
 // abort execution ' Je : '
 ' SMC interface
 some more code here P Libtomerypt ; ' SVC handler
 ' '
-'
 Secure monitor call handler v
 aw, (Exception Layer 2)
 External glitch DVFS Rowhammer _ Stealing signing key
@@ -804,40 +716,16 @@ Protected TA Signing key not Not Available Not Available stored on device
 
 access
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Secure world
 TEE !' Normal world
-au ac arge i Userspace TA will §| Goenka eke aeeu
-1 Exception : ' | | REE Userspace '
-i Level 0 m ' 1 Exception Level 0 é
-z SVC call '
-define TEE_SUCCESS 0x00000000 ' tutes *() i 1 —
-#define TEE_ERROR_SECURITY 0xFFFFOOOF d Tena Owl! os
-1 * sare as :
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { ' toe_avo Ol initiation . ; Innocent CA '
-if(/* signature is valid */) ' \(f TEE “Oy ' |
-return TEE_SUCCESS; ei ti aco ne apn hetioct ta pee ee || epee tren
-return TEE_ERROR_SECURITY ; ie t) ) in TA
-} , Kernelspace t:| “kt witb OOO SH OO Re G eee OS
-Exception SVCH Dp = || Fenciinca os Lassi ais ied ale DS rrr
 // load a TA referenced by a CA inexet 1 , (REE Kernelspace Exception Level 1
-‘ pcs red ae F Crypto library invocation |SMCI ; | ! e '
-TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' : a PD
 if(res != TEE_SUCCESS) : SMC 1],
-// abort execution ' ¢ 1 . '
 : SMC interface
 / some more code here Libtomerypt ; ' SVC handler
-} i p| Sere eee cedewooeocecce
-Pabesebeeausieewae cee at SMC
-Secure monitor call handler
-(Exception Layer 2)
-4
-EVR ]
 Protected TA Signing key not
 Not Available Not Available ane stored on device
 ```
@@ -850,43 +738,18 @@ Not Available Not Available ane stored on device
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Secure world
 Fault Attack Target ‘eesnace 14
-Normal world
-(f: TEE_*()]
 if(/*signature is valid */)
-!
-1 Exception ps . {REE Userspace '
-eo tee, i Level 0 f™ — ' \Exception Level 0 :
-. SVC call ' ;
-TEE_SUCCESS 0x00000000 Pil aig — .
-09.61.” TEE ERROR SECURFY OxFFFFOOOF ain es —| '
 TEE_Result verify_signature(char* ta_binary , uint8_t* signature) { ' tee_sve_*()] initiation : Innocent CA '
-'
-'
-'
 SMC interface
 / some more code here
-Libtomcerypt
-BLE eee ee ee ee ea weet Ae, I
-return TEE_SUCCESS; Pie Nthak pie arte iat besiege a ee eee
-return TEE_ERROR_SECURITY ; i TEE ' in TA
-} , Kernelspace ' bb nh e.6 & 66666 6 64H HOEE
 /! load a TA referenced by a CA re! 1 | 'REE |Kernelspace Exception Level 1 !
-, ee : : Sa / ae F Crypto library invocation |SMCI ; | ! e '
-TEE_Result res = verify_signature(...) ; [f: erypto_*()] ' “ a iP
 if(res != TEE_SUCCESS) ; svc. ot |
-// abort execution ' ¢ 1 '
 ' '
-'
-Secure monitor call handler
-(Exception Layer 2)
 Register Sweeping: Fault the load to 0x0 through data bus
 faults
 ```
@@ -955,26 +818,20 @@ FAULT INJECTION TARGET!
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Combined Adversary = Power SCA + FI
 ldr
 bl oO acipher_r
 cmp wO, #0x0
 str wo, 6 | b.eq le® <shdr_verify_signature+Oxle0> // b.none
-MOV wO, #Oxf FF FOOT / #-65521
-FAULT INJECTION TARGET! i Biois fe
 ldr wO, [Sp, #76] Malicious TA
-| cmp wo, #0x0 not loaded
 Stack after execution
 of str w0, [sp, #76
 Sidé-view of electromagnetic [sp ]
 fault injection loop Without fault injection
-Oooo OOt0
 ldr wO, [Sp, #76] Malicious TA
 | : emp w0, #0x0 loaded
 Stack after execution
@@ -988,16 +845,13 @@ fault injection loop With fault injection
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Combined Adversary = Power SCA + FI
 0000 0000 .....
 Idr w0, [sp, #76] ; Malicious TA
-‘ {oF ia ‘a emp wo, #0x0 loaded
 Stack after execution
 Side-view of electromagnetic of str w0, [sp, #76]
 Caciinecnys Hier fault injection loop With fault injection
@@ -1125,33 +979,18 @@ End to End Attack Decrypt (redirected) communication
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Decrypt (redirected) communication
 (gdb) bt Memory access violation
 #8 PQCLEAN DILITHIUM2 CLEAN polyt@_ unpack ( y=Oxbefb43c8,| a=Oxbffffbd8 <error: Cannot access memory at address Oxbffffbd8> by faulting address bus
-entry=0x107dal8 "\250\322b\017\241\377/\366\201\025\273M\373\26532'\822\ 342 \007\7\246\376\3510\ 235 \802\257\ 305 OT \n\ 2372429) \202\ob\O24\258- \253\262\346cH\03]
-'\234\340N\240\250\313° \036\2010!\307_\340\347\322\376(\241u\361e\037\071\277 - }\O31\240\ 177 . \242] v\177N\267 ! ON\O25\062\261\370F\353\352\ 060U\326\070A\332\340\200\ 267\\
-\227\320\331\t2\2413\236\215B\265\\\t\2541\020\ 305\ 335\ 344] \223\350\310\n\681U\023\272G\ 237\035\223\238\t (4Z5\226\225\344\265*\ 326 ( \O30m\ 342\2281\833\221\261q\256\366
-\©36\314\0711\363\256\031\023Y\334\306\ 006\264\ 305 ( ]\345\215\350\071\a\377\ 006 ?\370\a\235 (\b1TQ\004\264"...) at 7694
 #1 in PQCLEAN DILITHIUM2 CLEAN unpack sk ( rho@entry=6xbefbOeed ""
-=OxbefbOfOO “mb2-°E+\241\204dV\211\321\ F\266\340\004Z\ 304\ O35F {\226\371D? ; \O30\266hT\331A2\237\211\267V\ 025 7\262\250\ 032\344\ 377 {npm\274\621\320U\274\3
-27\374\V\324\354\032\277  \27271\216\330$"
-=Oxbefb0f20 “T\331A2\2 37\211\267v\0257\262\250\032\344\ 377 {nom\274\021\320U\274\327\374\v\ 324\354\032\277 \27271\216\330$'
-t € y=Oxbefb43c0, sl=Oxbefb13c8, sl =Oxbefb13cé, =Oxbefb53c8, s2 try=Oxbefb53c6, sk=Oxbefb1728 "", sk try=0xb6f38000 "D/\083") at ; }.c:155
 #2 in PQCLEAN DILITHIUM2 CLEAN crypto sign siqnature (sia- try=0x107e790 "", c =0x0, | ntry=Oxbefbd426,
 =0x107f104 “This is a very random message", engentry=30,
-a /=0x107d6b8 Faraet functior b\b\274=\261\177\003?7\231mb2-“E\ 025 ?\262\250\032\ 344\ 377 {nmm\274\021\320U\274\327\374\v\324\354\ 63
-2\277° \27271\216\330$+\241 ___ 26\371D? ; \O30\266hT\331A2\237\211\267v\020\2310\033\067N\233\602\022") at :107
 #3 in LPOCLEAN DILITHIUM2 CLEAN crypto sign! (sm=0x107e790 “", =Oxbefbd420, m=0x18950 “This is a very random message", 2n=30,
-K=Ox107d0b8 "\a2TL\254\330, \304\245\ 177V\233\351C\200\D\D\ 2 74=\001\ 177 \003? \23 1b 2s *E\0257\262\250\032\344\ 37 7 {nmm\274\021\ 3200 \274\ 327 \374\V\524\ 5504 \030\077 V2
-71\216\330$+\241\204dV\211\321\ f\266\340\6042Z\ 304\035F{\226\371D? ; \630\266hT\ 331A2\237\211\267v\626\2310\033\067N\233\002\622") at } :227 1
 #4 in main () Leaked secret key
-(gdb) §
 ```
 
 ## Slide 70
@@ -1166,24 +1005,19 @@ End to End Attack Bird's eye-view
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 End to End Attack
 ; ; © Actual behaviour after attack 1: Malicious TA installed
 Attack 1: Installing malicious TA
 ; Attack 2: UUID
-fag poms OY | (einen >
-g Gatekeeper @® y 8 | MLaaS TA
 jo
 Loading TA (2) ca, = we Malicious non-persistent 1. Decrypt
 &B | a TA with UUID x 2. Change message
 3. Re-encrypt
 Inte 4. Re-sign
-ity ei Innocent CA eg Path
 res = verify_signature(); invoking TA with
 if ( "verification is not successful*/ ) UUID x Attack 3: Breaking
 return TEE_ERROR_SECURITY;
@@ -1192,7 +1026,6 @@ TA signature verification code a i ial
 Expected behaviour: abort with 5 ‘
 TEE_ERROR_SECURITY Normal world Secure world
 SIGSEGV signals through EM faults WY Leaked encryption and signing keys
-v
 encryption and source
 authentication to
 access MLaaS
@@ -1222,15 +1055,12 @@ access MLaaS
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Countermeasure
 - res = crypto_acipher_rsassa_verify(shdr->algo, &key, shdr->hash_size,
-- SHDR_GET_HASH(shdr), shdr->hash_size,
 me SHDR_GET_SIG(shdr), shdr->sig_size);
 + FTMN_CALL_FUNC(res, &ftmn, FTMN_INCR®O,
 + crypto_acipher_rsassa verify, shdr-—>algo, &key,
@@ -1238,7 +1068,6 @@ me SHDR_GET_SIG(shdr), shdr->sig_size);
 + SHDR_GET_SIG(shdr), shdr->sig_size);
 + ftmn_checkpoint(&ftmn, FTMN_INCR®@);
 + goto out;
-‘ }
 + err_incr = 1;
 + err:
 + res = TEE_ERROR_SECURITY;
@@ -1293,14 +1122,12 @@ me SHDR_GET_SIG(shdr), shdr->sig_size);
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
 _ blackhat
-X ASIA 2024»
-~ PRIL 18-19, 2024 | P ak
-/~*X "BRIEFINGS | - - WEBSITE
 Thank You!
 #BHASIA @BlackHatEvents
 ```

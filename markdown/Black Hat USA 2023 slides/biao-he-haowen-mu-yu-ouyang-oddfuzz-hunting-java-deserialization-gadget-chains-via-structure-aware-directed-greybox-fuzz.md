@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Biao He & Haowen Mu & Yu Ouyang_ODDFuzz Hunting Java Deserialization Gadget Chains via Structure-Aware Directed Greybox Fuzzing.pdf"
 pages: 50
 sha256: "9032ca5fa4f8a2aa2841ac915f191f891369b7a2c4755e6565f8369309dacdbc"
-text_chars: 21349
-ocr_pages: 12
+text_chars: 19367
+ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:58Z"
+converted_at: "2026-08-12T04:05:46Z"
 ---
 # ODDFuzz Hunting Java Deserialization Gadget Chains via Structure-Aware Directed Greybox Fuzzing
 
 **Speakers:** Biao He, Haowen Mu, Yu Ouyang  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Biao He & Haowen Mu & Yu Ouyang_ODDFuzz Hunting Java Deserialization Gadget Chains via Structure-Aware Directed Greybox Fuzzing.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -185,7 +191,8 @@ E Heavy-weight
 
 ## **Existing Solutions** **_CodeQL_**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Existing Solutions
@@ -194,22 +201,11 @@ Analysis overview
 The database schema is (source) language specific, as
 |
 are queries and libraries. | Query
-|
-I
-l
-I
 Multi-language code bases are analyzed one Compilation
-|
-|
-|
-|
 language at a time. _Compled ier
-\ Me
 N
-| \f
 !| Code | Query
 !| base Evaluation
-I
 ```
 
 ## Slide 12
@@ -260,27 +256,20 @@ E Directed Greybox Fuzzing
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 Class A
-public void readObject(ObjectInputStream ois) {
 / public class ValueComparator implements Comparator{
-//get comparator
-verride
 this.comparator = (Comparator) ois. readObjectO; public int compare(Value v1, Value v2) {
 Comparator comparator = threadLocal. get ( return vi.getValue() - v2.getValue();
 if (comparator == null) { }
 comparator = this.comparator; 3
-}
-//read values
 valuel1 = ois.readObject();
 value2 = ois. readObject(); r public class InvokeComparator implements Comparator {
 //compare an ordered arraylist String methodName; ne
 if (comparator }comparetvatuel, value2) > 0) { String className; EXP?
-orderedList.add(value1) ;
-orderedList.add(value2) ; @0verride
 } else { , public int compare(Object 01, Object o2) {
 orderedList.add(value2); Method method = Class. forName(className)
 orderedList.add(value1) ; -getMethod (methodName) ;
@@ -295,27 +284,17 @@ orderedList.add(value1) ; -getMethod (methodName) ;
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
-public void readObject(ObjectInputStream ois) {
-//get comparator
 this.comparator = (Comparator) ois.readObject(); New xX = new T()
-Comparator comparator = threadLocal.get();
 if (comparator == null) { .
 comparator = this.comparator; Assign xX = y
-+
-//read values
 valuel = ois. readObject(); Store X.f = y
-value2 = ois.readObject();
 //compare and add to ordered arraylist _
 if (comparator.compare(valuel, value2) > @) { Load y ~ x. F
-orderedList.add(value1);
 orderedList.add(value2) ; Call r= xX. k(a, )
-} else {
-orderedList.add(value2) ;
-orderedList.add(valuel);
 16
 ```
 
@@ -327,29 +306,19 @@ orderedList.add(valuel);
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
-public void readObject(ObjectInputStream ois) {
-//get comparator
 this.comparator = (Comparator) ois.readObject(); New xX = new T()
-Comparator comparator = threadLocal.get();
 if (comparator == null) { .
 comparator = this.comparator; Assign xX = y
-}
-//read values
 valuel = ois. readObject(); Store X. f = y
-value2 = ois.readObject();
 //compare and add to ordered arraylist -
 if (comparator.compare(valuel, value2) > @) { Load y x.f
-orderedList.add(value1);
 orderedList.add(value2) ; Call r= x.k(a, )
-} else {
-orderedList.add(value2) ;
 orderedList.add(value1) ; SPAG (Simplified Pointer
 ; y Assignment Graph) + Worklist
-algorithm
 ```
 
 ## Slide 18
@@ -360,12 +329,11 @@ algorithm
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 / New xX = new T()) y
-Assign X= y alloct
 Store X.f = y
 Load = xX.f
 Call r = x.k(a, ...)
@@ -383,27 +351,16 @@ Fig. 1: SPAG
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 public void readObject(ObjectInputStream ois) { .
-VIER COMTBTAtaN this.comparator
 this.comparator = (Comparator) ois.readObject();
-Comparator comparator = threadLocal.get();
-if (comparator == null) {
-comparator = this.comparator;
-}
-//read values
 valuel = ois.readObject();
-value2 = ois.readObject();
 //compare and add to ordered arraylist
 if (comparator.compare(value1, value2) > 0) { comparator
-orderedList.add(value1);
 orderedList.add(value2) ; Fig. 1: SPAG
-} else {
-orderedList.add(value2) ;
-orderedList.add(valuel);
 } Construct SPAG (Simplified
 } Pointer Assignment Graph)
 ```
@@ -416,16 +373,13 @@ Worklist algorithm
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 alloct
 / New xX = new T())
-Assign xX =y
-Store X.f = y
 Load = x.f
-XS y,
 Call r = x.k(a, ...)
 Worklist algorithm
 20
@@ -489,29 +443,16 @@ Worklist algorithm
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 public void readObject(ObjectInputStream ois) { .
-VIER COMTBTAtaN this.comparator
 this.comparator =((Comparator) ois.readObject(); |
-Comparator comparator = threadLocal.get();
-if (comparator == null) {
-comparator = this.comparator;
-+
-//read values
-valuel = ois. readObject();
-value2 = ois.readObject();
 //compare and add to ordered arraylist
 if ((comparator.compare(value1, value2) > 0)){ comparator
-orderedList.add(value1);
-orderedList.add(value2) ;
-} else {
-orderedList.add(value2) ;
 orderedList.add(value1) ; SPAG (Simplified Pointer
 ; y Assignment Graph) + Worklist
-algorithm
 ```
 
 ## Slide 25
@@ -524,36 +465,23 @@ algorithm
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Lightweight static analysis
 Class A
-public void readObject(ObjectInputStream ois) {
-//get comparator
-this.comparator = (Comparator) ois. readObject
 Comparator comparator = threadLocal. get (
-if (comparator == null) {
-comparator = this.comparator;
 public class ValueComparator implements Comparator{
-dOverride
 public int compare(Value v1, Value v2) {
 return v1.getValue() - v2.getValue();
 }
-}
-//read values
 valuel1 = ois.readObject();
 value2 = ; r public class InvokeComparator implements Comparator {
 //compa d ring methodName; .
 if ( : a 1 String className; Exn\o""
-orderedList.add(value1) ;
 orderedList.add(value2) ; @0verride
 } else { , public int compare(Object 01, Object o2) {
-pee RO AR ee eNO Method method = Class. forName(className)
-Simplified PAG (Pointer . getMethod (methodName) ;
-} 7 . method. setAccessible(true) ;
 } Assignment Graph) + Worklist return (int) method. invoke(o1, 02) ;
-algorithm
 25
 ```
 
@@ -758,7 +686,8 @@ Exit Fig. 1: CFG execution paths)
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Evaluation - baseline
@@ -795,7 +724,8 @@ Wicket 6.23.0 420.7K 3.2K 11L.1K 2 1 1 7 (0) 0 1m50s 14m
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Evaluation - baseline
@@ -955,12 +885,3 @@ com.tangosol.util.aggregator.TopNAggregator.PartialResult#readExternal(java.io.D
 @meizjm3i
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piftkhat
-LUISA PO2z3 ae iG
-Thanks
-W @codepLutos W omeizjm3i
-```

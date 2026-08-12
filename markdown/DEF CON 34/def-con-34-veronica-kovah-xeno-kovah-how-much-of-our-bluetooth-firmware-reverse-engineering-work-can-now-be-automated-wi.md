@@ -4,23 +4,28 @@ speakers: ["Veronica Kovah", "Xeno Kovah"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Veronica Kovah, Xeno Kovah - How much of our Bluetooth firmware reverse engineering work can now be automated with LLMs - rever.pdf"
 pages: 171
 sha256: "7d47b5d8d0659f6843e1ff2307d12bf8ea984a0d5229d0876ab98d2ecec48623"
-text_chars: 71387
+text_chars: 70533
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:33:24Z"
+converted_at: "2026-08-12T06:50:06Z"
 ---
 # How much of our Bluetooth firmware reverse engineering work can now be automated with LLMs
 
 **Speakers:** Veronica Kovah, Xeno Kovah  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Veronica Kovah, Xeno Kovah - How much of our Bluetooth firmware reverse engineering work can now be automated with LLMs - rever.pdf` (171 pages)
+
 
 ## Slide 1
 
@@ -1587,7 +1592,8 @@ Denominator: D1
 
 ###### **Rewrite for "categorized" core skill & orchestrator Improve the prompts for one category of data recovery at a time**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rewrite for "categorized" core skill & orchestrator
@@ -1600,7 +1606,6 @@ hci_ctrl_cmd_+ L OGF dispatch cmd handlers data table J arg types J f cmdsevt st
 Controller HCI Events H4 S1 S3 S6 S10
 t rlevt_+ evt handlers i HCI global pagate arg } dis
 p_send_* packet tni losure {ptr tab pkt args | LL global propagate args data-driven PF
-i € . packet fn: osu {ptr tak pkt arc | LL global: opagate args data-driven PF .
 mp_send_+ packet fns losui {ptr tat pkt arc | MP globa propagate args data-driven sUPP .
 mp_recv_* packet tns josure fptr tat pkt arg { MP globais J propagate args =} | Jata-driven a
 P prep (frozen H HCI dispatch/handlers B LMP/LLCP packet S structs / arg typing
@@ -2439,22 +2444,18 @@ Opus 4.8 & GPT 5.6 Sol **_<u>Mutually-agreed-upon truth</u>_**
 
 ←      ~ Tie        →
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Broadcom BCM43430A1
-Field Count Share
 @ Shared 592 85.2%
 @ Opus FN 29 4.2%
 GPTFN «Opus Wins’ 74 = 10.6%
-Opus FP 0 0.0%
-GPT FP 0 0.0%
 Likely true-positives (first 3) 695
 Total function/comment findings 695
 Realtek RTL8821CE
-Field Count Share
 | @ Shared 551 94.7%
-Opus FP 0 0.0%
 @ GPT FP 4 0.7%
 Likely true-positives (first 3) 578
 Total function/comment findings 582
@@ -2466,15 +2467,14 @@ Total function/comment findings 582
 
 ←GPT Wins🏆→
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Espressif ESP32
-aS
 Field Count
 @ Shared 469
 @ Opus FN 27
-GPTFN «~Opus Wins’ > 91
 @ Opus FP 1
 Likely true-positives (first 3)
 Total function/comment findings
@@ -2511,25 +2511,20 @@ Share
 
 ←GPT Wins🏆→
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Renesas DA1469x
-Field Count Share
 N @ Shared 153 29.6%
 @ Opus FN . 169 32.7%
-cptrN*s =~ ‘Tie 151 29.2%
 @ Opus FP 11 2.1%
 @ GPT FP 33 6.4%
 Likely true-positives (first 3) 473
 Total function/comment findings 517
 Nordic nRF52832
-Field Count Share
 @ Shared 11 13.8%
-@ Opus FN GPT Wins’ 54 675%
 GPT FN 15 18.8%
-Opus FP 0 0.0%
-GPT FP 0 0.0%
 Likely true-positives (first 3) 80
 Total function/comment findings 80
 ```
@@ -2540,25 +2535,20 @@ Total function/comment findings 80
 
 ←GPT Wins🏆→
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Renesas DA1469x
-Field Count Share
 N @ Shared 153 29.6%
 @ Opus FN . 169 32.7%
-GpTEN* =~ Tle 151 29.2%
 @ Opus FP 11 2.1%
 @ GPT FP 33 6.4%
 Likely true-positives (first 3) 473
 Total function/comment findings 517
 Nordic nRF52832
-Field Count Share
 @ Shared 112)013.8%
-@ Opus FN GPT Wins’ 54 675%
 GPT FN 15 18.8%
-Opus FP 0 0.0%
-GPT FP 0 0.0%
 Likely true-positives (first 3) 80 ee
 Total function/comment findings 80
 ```
@@ -2567,7 +2557,8 @@ Total function/comment findings 80
 
 ←      ???      →
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 STMicro BlueNRG-1
@@ -2593,16 +2584,15 @@ Share
 
 ←      ???      →
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 STMicro BlueNRG-1
-Field Count Share
 @ Shared 22% 25°)®)0.0%
 Opus FN 0 0.0%
 GPT FN 0.0%
 0
-Opus FP 0 0.0%
 0
 GPT FP 0.0%
 Likely true-positives (first 3) 25 ee

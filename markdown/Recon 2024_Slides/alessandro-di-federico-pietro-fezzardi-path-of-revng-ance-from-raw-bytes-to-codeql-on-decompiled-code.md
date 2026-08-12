@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Alessandro Di Federico & Pietro Fezzardi_Path of rev.ng-ance from raw bytes to CodeQL on decompiled code.pdf"
 pages: 74
 sha256: "e3f3780b354d16cd5ab3b9754ebf33c6d680ff1deaf3be82085f39a3d32c1fb3"
-text_chars: 12720
-ocr_pages: 14
+text_chars: 11675
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:27:18Z"
+converted_at: "2026-08-12T06:06:09Z"
 ---
 # Path of rev.ng-ance from raw bytes to CodeQL on decompiled code
 
 **Speakers:** Alessandro Di Federico, Pietro Fezzardi  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Alessandro Di Federico & Pietro Fezzardi_Path of rev.ng-ance from raw bytes to CodeQL on decompiled code.pdf` (74 pages)
+
 
 ## Slide 1
 
@@ -36,7 +41,8 @@ All the demos are available at:
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 This presentation is available at:
@@ -51,7 +57,8 @@ github.com/revng/demos
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rev.ng Labs
@@ -59,7 +66,6 @@ rev.ng Labs
 2. Partly in Milan, Italy, partly in rest of Europe
 3. Compiler engineers/security researchers
 4. We worked with
-Qualcown HUAWEI
 ```
 
 ## Slide 4
@@ -113,18 +119,6 @@ x86-64 x86-64
 
 6 . 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-This is a dynamic binary translator
-QEMU
-ARM -02 ARM
-™a A”
-MIPS MIPS
-ZA Ny
-x86-64 x86-64
-```
-
 ## Slide 10
 
 ## Slide 11
@@ -148,13 +142,6 @@ x86-64
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-¢e
-Using QEMU as a lifter
-```
-
 ## Slide 14
 
 **We use QEMU but we run any code We just use it as a lifter**
@@ -175,12 +162,12 @@ Using QEMU as a lifter
 
 10 . 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 QEMU Advent Calendar 2023+ Finalday Jumptoday~ About —Contact
 FROM QEMU TO YOU
-HAPPY HOLIDAYS???
 Day 1 - TinyCore Linux Day 2 - Bootable PDF holiday card Day 3 - Bootable Assembly word
 TinyCore linux Bootable PDF holiday card game: FLORDLE
 Size of download Is 22M bytes. Size of download is 8M bytes. Bootable Assembly word game: FLORDLE
@@ -337,7 +324,8 @@ UI TypeScript
 
 11 . 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 No more
@@ -368,7 +356,8 @@ Work has begun (in fact, work is even finished) here at Hex-Rays to make IDAPyth
 
 11 . 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 developers stay in-process
@@ -387,7 +376,8 @@ tl;dr there are only two types of actions: 1. Request an (LLVM IR, valid C, …)
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 tl;dr there are only two types of actions:
@@ -430,79 +420,43 @@ tl;dr there are only two types of actions:
 
 15 . 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-CALL Prempctptr nena # remy
-ptr met, ptr meth)
-15.4
-```
-
 ## Slide 42
 
 15 . 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Gefine 164 Plocal_myfunction(i64 Srdi_xB6_64) {
-NO = call 164 @_init_rdpt)
-Call Bnewpe(ptr nonnull @"revng. const .0x481130
 ptr null, ptr nuit)
 Sl = Load 164, ptr @rsp
 S2 = add 164 &
 SS = inttoptr 164 <2 te ptr
-Store 164 8, ptr %
 Store 164 82, ptr @rsp
-call Bnewpe(ptr nonnull @"revng. const .6x481131:
 ptr null, pte mult)
 4 = Load 164, ptr @rsp
-call @nenpe(ptr nonnull @"revng. const .0x401134
 ptr null, pte mull)
-SS = add 166 %4
 SO © Anttoptr 164 85 te ptr
 Store 164 Srdi_x86_64, ptr \s
-call @nenpe(ptr mennult 5 0x401138
 ptr null, pte mull)
-7 = Load 164, ptr %
-call @neape(ptr nonnull @"revng. const .6x48115¢
 ptr null, ptr mutt)
-NO = add 166 %4, -1
-SP © Anttoptr 164 X8 te ptr
 store 164 7, ptr so
-call Bnespe(ptr monnull @*revng. .0x401140
 ptr null, pte mull)
-X10 = load 466, ptr ®
-call @neape(ptr nonnull @"revng. const .6x481144
 ptr null, ptr nuit)
-Sli = shi 466 %2
-COLL Bnewpe(ptr nonnull B"revng. const.0x401148
 ptr null, pte mull)
 store 164 X11, ptr %9
-call Bnenpe(ptr nonnull @* sonst .Ox48114¢
 ptr null, ptr nuit)
 S12 = load 164, ptr x9
-call Brewpe(ptr nonnull @*revng. const 0401150:
 ptr mult, ptr mutt)
 S15 © Load 466, ptr @rsp
-S14 = add 466 S15, |
 store 164 X14, ptr @rsp
-CALL Bnenpe(pte monnuLt ; 0x401151
 ptr mult, ptr mutt)
 15 = load 164, ptr @rsp
-S16 = add 166 %2
 store 164 X16, ptr @rsp
 ret 166 &
-}
-Code_x86_64"
 Code_x86_64"
 Code_x86_64",
-Code_x86_64",
-Code_x86_64"
-Code _«86_64"
-Code_x86_64"
-‘Code_«86_64"
-Code_x86_64"
 15.5
 ```
 
@@ -514,7 +468,8 @@ Code_x86_64"
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 164 @local_myfunction(i64 %0) {
@@ -537,7 +492,8 @@ ret i164 %7
 
 15 . 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 define i64 @local_myfunction(i64 %0) {
@@ -666,7 +622,8 @@ typedef struct _PACKED _struct_61 { generic64_t _offset_0[5]; _struct_61 *_offse
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 sum() compute ()
@@ -677,7 +634,6 @@ Return Types Arguments Return Types Arguments
 generic64_t * struct_6l1 generic64_t * struct_61
 \
 SC Pointer (8 bytes) _- Pointer (8 bytes)
-vy
 _struct_61 (size: 48)
 Offset Size Name
 Pointer (8 bytes)
@@ -793,7 +749,8 @@ We currently produce IR for GCC in 18 minutes.
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1) EXPLORER
@@ -805,7 +762,6 @@ We currently produce IR for GCC in 18 minutes.
 ! model.yml
 » OUTLINE
 @
-pe
 Questions?
 ) Untitled (Workspace)
 = Overview: linked_list (on rev.ng cloud) x
@@ -815,9 +771,7 @@ No file chosen
 Segments:
 Start address End address
 > 0x400000 0x400b98
-> 0x401d98 ‘)
 >
-O80
 O
 Information
 Architecture: x86_64
@@ -827,7 +781,6 @@ Size File Offset uci aos) Permissions
 ize
 2968 1°) @ r-x
 657 3480 1 rw-
-0:00/2:03 wW §2
 38
 ```
 

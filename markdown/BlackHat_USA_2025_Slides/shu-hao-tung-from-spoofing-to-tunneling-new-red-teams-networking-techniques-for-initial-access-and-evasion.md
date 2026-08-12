@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Shu-Hao Tung_From Spoofing to Tunneling New Red Team's Networking Techniques for Initial Access and Evasion.pdf"
 pages: 125
 sha256: "a8a871acb7e1955752f6396d9710526b17b5e614222ff6ae6a4aaeb74f92008e"
-text_chars: 45399
-ocr_pages: 29
+text_chars: 42155
+ocr_pages: 24
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:01:45Z"
+converted_at: "2026-08-12T05:23:00Z"
 ---
 # From Spoofing to Tunneling New Red Team's Networking Techniques for Initial Access and Evasion
 
 **Speakers:** Shu-Hao Tung  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Shu-Hao Tung_From Spoofing to Tunneling New Red Team's Networking Techniques for Initial Access and Evasion.pdf` (125 pages)
+
 
 ## Slide 1
 
@@ -30,13 +35,10 @@ Speaker : Shu-Hao, Tung (123ojp)
 
 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 From Spoofing to Tunneling:
 New Red Team's Networking Techniques for
 Initial Access and Evasion
@@ -54,11 +56,10 @@ P.S. All addresses are example addresses.
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat \ mr. Re
-BRIEFINGS
 Just Another Normal Day of ie
 ¢ Seeing my Intranet LDAP server log
 Apr 17 23:12:20 from IP=192.168.1.102 BIND dn="cn=frank,dc=example,dc=com" RESULT err=@ text=Success
@@ -107,11 +108,10 @@ Okay I banned 9.9.9.9
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat
-BRIEFINGS
 Just Another Normal Day of IT
 Apr
 Apr
@@ -149,11 +149,10 @@ P.S. All addresses are example addresses.
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifchat
-BRIEFINGS
 Just Another Normal Day of IT
 ¢ Seeing my Intranet LDAP server log
 17 23:12:20 IP=192.168
@@ -249,15 +248,11 @@ credentials
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi
--
 ack hat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 Spoofing Source IP
 ```
 
@@ -322,13 +317,10 @@ P.S. All addresses are example addresses.
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 How IT Blocks Computers from Having
 Public Network Access
 ```
@@ -378,19 +370,6 @@ Drop all out 192.168.1.2
 1.1.1.1
 
 17
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-BRIEFINGS
-Best Practice
-ee
-tooo 192.168.1.1
-Drop all out 192.168.1.2
-L
-1.1.1.1
-```
 
 ## Slide 18
 
@@ -476,15 +455,11 @@ Example public address
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bi
--
 ack hat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 Spoofing Source IP in intranet
 ```
 
@@ -994,14 +969,11 @@ Example IX address
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bl
-ack hat SS
-BRIEFINGS Sse TG
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 Use existing tunnel -
 Spoof IP.src in GRE tunnel
 ```
@@ -1210,31 +1182,17 @@ How 2 Find GRE Tunnel （by OSINT）
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat @
 BRIEFINGS ‘
 How 2 Find GRE Tunnel (by OSINT)
-€ ca GSS ED 185.130.47.7:8081/visualize/N4igRgigJhBOCMBJALhA9gOwlYBsQC4AzXAZ3gBoQYBbel JeggbRAGVZEBBKKWESgBES yHnxABdSnSgEQAJgAM8g‘
-E 1 d b tfl Alevorado fetiome Gy oustzs na Doouentoy
-y 13%, L2%, 2% %> % Refresh.
 Stacked areas S
-. .
 | tit | e ° \ kvo ra d O Wsidirectional Previous period 15000
 Last 6 hours h. ce 120.00)
-oa
-.
 arch 0.00M
-foe Eanes =
 Search $ 80.249.212.156 80.249.213.14 15.67Mbps
-2024021318 60.240.212156 126.00bps
-7.166.13617 199231236381 86,0005
-220132387 19513047225 20.0005
-1433244161 199291236157 20.0005
-12211720831 19513047210 20.0005
-114352718:159 199291236316 20.000es
-eserves soem scene en femes
 ```
 
 ## Slide 58
@@ -1461,13 +1419,10 @@ https://github.com/123ojp/GREtunnel-scanner
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 BOOM! *
 Putting everything together
 GRE + No firewall = Intranet access
@@ -1662,17 +1617,6 @@ With information 1.2.3.4
 
 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-‘blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
-Nightmare of VxLAN
-78 |
-```
-
 ## Slide 79
 
 ### What’s VxLAN?
@@ -1704,11 +1648,10 @@ Linux version
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-BRIEFINGS
 The vulnerable config
 RouterOS version
 [admin@MikroTik] > ip/address/export where interface=vxlan1
@@ -1718,15 +1661,10 @@ add address=10.0.0.1/24 disabled=no interface=vxlan1 network=10.0.0.0
 /interface vxlan
 add mac—address=FA:10:04:A1:E1:CF name=vxlan1 port=8472 vni=42 vrf=main vteps—ip-version=ipv4
 /interface vxlan vteps
-add interface=vxlanl1 remote-ip=1.1.1.1
 Linux version
 MYPUBIP=160.25.104.200
 DSTADDR=1.1.1.1
-DPORT=8472
-VID=42
 IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add 10.0.0.1/24 dev $IF_NAME
 80
 ```
@@ -1737,19 +1675,14 @@ ip addr add 10.0.0.1/24 dev $IF_NAME
 
 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-BRIEFINGS
 How to config a ermal peer
 MYPUBIP=1.1.1.1
 DSTADDR=160.25.104.200
-DPORT=8472
-VID=42
 IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add 10.0.0@.2/24 dev $IF_NAME
 ping -c 1 10.0.0.1
 81
@@ -1761,19 +1694,13 @@ ping -c 1 10.0.0.1
 
 82
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-BRIEFINGS
 How to hijack VxLAN
 MYPUBIP=9.9.9.9
 DSTADDR=16@.25.104.200
-DPORT=8472
-VID=42
-IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add 10.0.0.2/24 dev $IF_NAME
 ping -c 1 10.0.0.1
 82
@@ -1787,19 +1714,13 @@ Yeah, here's the only difference
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-BRIEFINGS
 How to hijack VxLAN
 MYPUBIP=9.9.9.9
 DSTADDR=160. 25.104. 200 Yeah, here's the only difference
-DPORT=8472
-VID=42
-IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add 10.0.0.2/24 dev $IF_NAME
 ping -c 1 10.0.0.1
 83
@@ -1938,20 +1859,14 @@ However, all this information can be obtained by a simple scan (a packet)
 
 90
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifchat AS en
-BRIEFINGS
-DS
 So, what attacker don’t know fora hijack?
 MYPUBIP=9.9.9.9
 DSTADDR=160.25.104.200
-DPORT=8472
-VID=42
 IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add|10.0.0.2/24 |dev $IF_NAME
 ping -c 1 10.0.0.1
 However, all this information can be obtained by a simple scan
@@ -1967,19 +1882,13 @@ These three can know by sending numerous packet
 
 91
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifchat
-BRIEFINGS
 What attacker don’ t me
 MYPUBIP=9.9.9.9
-DSTADDR=160@.25.104.200
-DPORT=8472
-VID=42
 IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add 10.0.0.2/24 dev $IF_NAME
 ping -c 1 10.0.0.1
 These three can know by sending numerous packet
@@ -1994,19 +1903,13 @@ Let's focus on how to get this
 
 92
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifchat
-BRIEFINGS
 What attacker don’ t know?
 MYPUBIP=9.9.9.9
-DSTADDR=160@.25.104.200
-DPORT=8472
-VID=42
 IF_NAME=vxlan-test
-ip link add $IF_NAME type vlan id $VID remote $DSTADDR local $MYPUBIP dstport $DPORT
-ip link set up dev $IF_NAME
 ip addr add|10.0.0.2/24 |dev $IF_NAME
 ping -c 1 10.0.0.1
 Let's focus on how to get this
@@ -2203,19 +2106,6 @@ Webserver: 10.0.0.1 Victim Public IP: 160.25.104.200 Attacker Public: 160.25.104
 
 102
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-root@CTFer-foxo: /home/o01230jp/fakegre# > |
-ble B
-ViC
-Webserver: 10.0.0.1
-Victim Public IP: 160.25.104.200
-Attacker Public: 160.25.104.198
-VxLAN Port: 8472
-VxLAN VNI: 42
-```
-
 ## Slide 103
 
 ##### Scan VxLAN in Real World
@@ -2252,11 +2142,10 @@ But some source IPs are private addresses 🤯 Why?
 
 104
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifchat
-BRIEFINGS
 But some source IPs are private addresses
 Why? &
 ```
@@ -2269,16 +2158,14 @@ Encrypted tunnels E.g., IPSec or Wireguard
 
 105
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisdichat Se ae : f
 BRIEFINGS > ; A
 | use VxLAN in encrypted tunnel, so I’m safe?
 SRCADDR=192.168.196.56
 DSTADDR=192.168.196.1
-DPORT=8472
-VID=42
 ip link add vxlan® type vxlan id $VID remote $DSTADDR local $SRCADDR dstport $DPORT
 ip link set up dev vxland
 ip addr add 10.0.0.1/24 dev vxlan@
@@ -2299,22 +2186,17 @@ I use VxLAN in encrypted tunnel, so I’m safe?
 
 Encrypted tunnels E.g., IPSec or Wireguard
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 | use VxLé
-SRCADDR=192.168.196:
 DSTADDR=192.168.196.1
-DPORT=8472
-VID=42
 ip link add vxlan@ type vxlan
 ip link set up dev vxland
 ip addr add 10.0.0.1/24 dev
 Ocal $SRCADDR dstport $DPORT
 2: ens18:_<BROADCAST,MULT group default qlen 1000
-inet] 160. 25.104.13
 3: tun®: <BROADCAS# tu 1412 qdisc
 default qlen 1000
 | inet] 192.168.198 0.255 scope global
@@ -2331,16 +2213,12 @@ Due to VxLAN behavior, it still can be hijack & scan
 
 107
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bistichat Se | f
-BRIEFINGS ‘ , a
 VxLAN will still accept traffic in different interfaces
 SRCADDR=23.145.168.132
-DSTADDR+160.25.104.131
-DPORT=8472
-VID=42
 ip link add vxlan@ type vxlan id $VID remote $DSTADDR local $SRCADDR dstport $DPORT
 ip link set up dev vxlan@g
 ip addr add 10.0.0.2/24 dev vxlang
@@ -2385,13 +2263,10 @@ Due to VxLAN behavior, it still can be hijack & scan
 
 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- Blackhat Sed See
-BRIEFINGS SS YZ
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 What can hackers do after hijacking
 a tunnel
 ```
@@ -2554,13 +2429,10 @@ Account take over|
 
 117
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 Bonus — Bad configuration in the
 company’s OSPF led to IP hijacking
 https://hackmag.com/security/routing-nightmare/
@@ -2612,17 +2484,6 @@ Received by OSPF
 ## **Take aways**
 
 120
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
-Take aways
-10 |
-```
 
 ## Slide 121
 
@@ -2700,13 +2561,11 @@ Take aways - Blue Team
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat Se ae
-BRIEFINGS Say
 QéA
-MANDALAY BAY / LAS VEGAS
 #BHUSA @BlackHatEvents
 ```
 
@@ -2717,14 +2576,3 @@ MANDALAY BAY / LAS VEGAS
 o123ojp shu-hao-tung
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ctlche hat
-USA 2025
-OU TREND:
-Thank vou !
-X 0123 0jp in shu-hao-tung
-#BHUSA @BlackHatEvents
-```

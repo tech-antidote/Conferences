@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/David Renardy & Zach Miller_Know Thy Enemy The Taxonomies That Meta Uses to Map the Offensive Privacy Space.pdf"
 pages: 31
 sha256: "a20bcbd62e258e76b23d67d1c63b7664defcbd6c8cfbefbb93e9e11bc02d4179"
-text_chars: 8810
+text_chars: 8193
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 79.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:27Z"
+converted_at: "2026-08-12T04:08:12Z"
 ---
 # Know Thy Enemy The Taxonomies That Meta Uses to Map the Offensive Privacy Space
 
 **Speakers:** David Renardy, Zach Miller  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/David Renardy & Zach Miller_Know Thy Enemy The Taxonomies That Meta Uses to Map the Offensive Privacy Space.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -187,7 +193,8 @@ Who are Offensive Privacy Threats and how are they tracked?
 
 **Privacy Adversarial Framework**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reconnaissance
@@ -198,28 +205,19 @@ Abuse Cached Data
 Abuse Error Handling
 Messages
 Brute Force
-eanonymization
-Enumerate On-Platform
-‘aecounts
-[Enumerate On-Platform Assets
-Identity Inaviduals Belonging
 toa Group
-Idontity Rate Limits
 Identity Server Endpoints
-‘Open-source Inteligence:
 Pubic Unsecured Dataset
 Reverse Engineer Software
 Test Anti-abuse Controls
 Establish Infrastructure
 10 techniques
 ‘Acquire On Platform
-Resets
 Compromise User
 Create End User GUI
 Create Malicious App
 Impersonation
 Promote Adversril
-Toayservice
 Public Unsecured Dataset
 Request Manipulation
 Use Cloud infrastructure
@@ -227,43 +225,28 @@ Utiize Oficial SOK
 Asset Takeover
 10 techniques
 ‘Abuse Account Recovery
-Flows
 ‘Abuse Redirects
 Brute Force
 Bypass 2FA
-Exploit Vulnerability
 Impersonation
 Obtain Access Token
-Privilege Escalation
 Privileged Assots
-Spoofing
-Detection)
-jn
 Enforcement Eva:
-‘2techniques
 Bypass SPAM
-Fiter/Controls
-Circumvent Platform
 Controls
-Obtuscate identity
 Obtuscate Too!
 Operate Within Rate
-Cmts
-Spoofing
 Switch infrastructure
 Use Device Emulation
 Use Legacy Tools
 Utlize Batched Requests
 Utlize Proxy Service
 Virtual Phone Numbers
-|@.a x
 Access Data
 35 techniques
-‘Abuse ‘invites
 ‘Abuse Account Recovery
 Flows
 ‘Abuse Cached Data
-‘Abuse Eror Handling
 Messages
 ‘Abuse Machine Learning
 Me
@@ -277,35 +260,26 @@ Suggestions
 Information
 ‘Access Token Abuse.
 ‘Authenticate Through
-‘automation.
 Bypass Authentication
 Controle
 CColect Platform Metrics
-(create Malicious App
 Cross Platform Abuse
 Enumerate Contact Points
-Exploit Vulnerability
 Faulty Privacy Policy
 Implementation
 First Party Tools
 Goolocate User
 Impersonation
-Logged: Access
 Loaged-out Access
-Monitor Availity Status
 ‘Query Graphal Endpoints
 6.28
 User Engagement
 6 techniques:
-Artificial Engagement...
-(Change User Settings... lf
 Delete User Data
 Forced Engagement
 Post Content as User
 Targeted Advertsing
-12@, 0%
 Persistence
-S techniques
 ‘Add Contact Points to
 User Account
 Change User
@@ -315,14 +289,8 @@ Maintain Vaid Access
 Token
 Recreate On-Patform
 Enforced Assets
-10}
 Process Data
 techniques
-Bull Dataset
-‘Combine Datasets
-ata inference
-Deanonymization
-Exfiteation
 Infer Data From Metrics
 Structurendex Scraped Data
 Build Revenue /

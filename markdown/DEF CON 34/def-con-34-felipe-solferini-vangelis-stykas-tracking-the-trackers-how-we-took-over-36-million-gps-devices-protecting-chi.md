@@ -4,7 +4,7 @@ speakers: ["Felipe Solferini", "Vangelis Stykas"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Felipe Solferini, Vangelis Stykas - Tracking the Trackers How We Took Over 36 Million GPS Devices Protecting Children and Vehicles - v1.pptx"
 pages: 91
 sha256: "b6c81cdb7ddc40f381abe074e03941067437827ca9ebd40422532682fdd82882"
@@ -12,15 +12,20 @@ text_chars: 28742
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:40:03Z"
+converted_at: "2026-08-12T06:27:04Z"
 ---
 # Tracking the Trackers How We Took Over 36 Million GPS Devices Protecting Children and Vehicles
 
 **Speakers:** Felipe Solferini, Vangelis Stykas  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Felipe Solferini, Vangelis Stykas - Tracking the Trackers How We Took Over 36 Million GPS Devices Protecting Children and Vehicles - v1.pptx` (91 pages)
+
 
 ## Slide 1
 

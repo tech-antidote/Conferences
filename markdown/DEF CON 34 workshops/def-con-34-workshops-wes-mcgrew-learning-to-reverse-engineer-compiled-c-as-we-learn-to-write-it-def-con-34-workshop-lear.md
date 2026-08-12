@@ -11,7 +11,7 @@ files_skipped: 140
 text_chars: 80276
 redacted_secrets: 0
 sha256: "d02363dde2cfcb2f035aeadc441569d87a9cd8c8da12bfa9631649fc6346df22"
-converted_at: "2026-08-12T02:54:56Z"
+converted_at: "2026-08-12T07:17:47Z"
 ---
 
 # Learning to Reverse Engineer Compiled C as We Learn to Write It
@@ -104,7 +104,17 @@ Binaries and oversized artefacts, listed for completeness:
 - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/examples_win/arrays_arrayptr.exe` — 10 KB (binary)
 - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/examples_win/arrays_arrayptr.obj` — 2 KB (binary)
 - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/examples_win/arrays_funcmod.exe` — 10 KB (binary)
-- …and 60 more
+- …and 60 more, by directory:
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/` — 2 files, 0.7 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/examples_win/` — 31 files, 0.2 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/` — 6 files, 31.9 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/` — 1 files, 1.6 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_1_and_2/` — 3 files, 0.0 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_3/` — 5 files, 0.0 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_4/` — 3 files, 0.0 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_5/` — 3 files, 0.0 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_6/` — 3 files, 0.0 MB
+  - `DEF CON 34 - Workshops - Wes McGrew - Learning to Reverse Engineer Compiled C as We Learn to Write It - DEF CON 34 workshop learning reversing/dc34_workshop_learning_reversing_c/resources/dc33_x64_workshop/module_7/` — 3 files, 0.0 MB
 
 ## Materials
 

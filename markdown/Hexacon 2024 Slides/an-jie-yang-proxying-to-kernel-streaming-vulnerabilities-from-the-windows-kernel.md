@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/An-Jie Yang_Proxying to Kernel  Streaming vulnerabilities from the Windows Kernel.pdf"
 pages: 210
 sha256: "c417b8581c2e7f000026218c737e2ae170017092299872854aca4a3f0b9f57f7"
-text_chars: 49608
-ocr_pages: 58
+text_chars: 46764
+ocr_pages: 55
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:20:20Z"
+converted_at: "2026-08-12T05:52:25Z"
 ---
 # Proxying to Kernel  Streaming vulnerabilities from the Windows Kernel
 
 **Speakers:** An-Jie Yang  
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/An-Jie Yang_Proxying to Kernel  Streaming vulnerabilities from the Windows Kernel.pdf` (210 pages)
+
 
 ## Slide 1
 
@@ -64,7 +69,8 @@ HEXACON2024 | 2024.10.05
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pwn2Q0Own Vancouver 2024
@@ -73,7 +79,6 @@ Target Prize Points
 Ubuntu Desktop
 Microsoft Windows 11
 Apple macOS
-DEVCORE
 ```
 
 ## Slide 5
@@ -190,7 +195,8 @@ DEVCORE
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MSKSSRV
@@ -198,7 +204,6 @@ MSKSSRV
 Security Intelligence
 Racing Round and Round: The
 Little Bug That Could
-DEVCORE
 ```
 
 ## Slide 15
@@ -283,16 +288,15 @@ CVE
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Night light
 e
 Accessibility Nearby sharing
-op)
 8:16 AM
 8/13/2024 L
-DEVCORE
 23
 ```
 
@@ -757,15 +761,13 @@ portcls!PinPropertyDeviceState
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is really safe ?
 if ( irp->RequestorMode )
-{
-}
 else
-{
 v14 = 0xCQ000010;
 UserBuffer = (unsigned int *)irp->UserBuffer ;
 v19[@] = QLL;
@@ -773,11 +775,8 @@ v19[1] = v9;
 FileObject = CurrentStackLocation->FileObject;
 v21 = FileObject;
 v14 = (*(__int64 (__fastcall **)(_QWORD, QWORD, _ int64 *))(Type3InputBuffer + @x38))(
-*UserButter,
 OLL,
 v19);
-}
-DEVCORE
 59
 ```
 
@@ -789,15 +788,13 @@ DEVCORE
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is really safe ?
 if ( irp->RequestorMode 2 sertede
-{
-}
 else
-{
 v14 = 0xCQ000010;
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v19[0] = @LL;
@@ -808,8 +805,6 @@ v14 = (*(__int64 (__fastcall **)(_QWORD, QWORD, _ int64 *))(Type3InputBuffer + @
 *UserBuffer,
 @LL,
 v19);
-}
-DEVCORE
 56
 ```
 
@@ -852,22 +847,19 @@ KernelMode
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IRP RequestorMode
 if ( Irp->RequestorMode )
-{
-ProbeForRead(CurrentStackLocation->Parameters .DeviceloControl.Type3InputBuffer, InputBufferLength, 1u)
 a4 = callback;
 outputLength = outlen;
-}
 MmProbeAndLockPages(Irp->MdlAddress, Irp->RequestorMode, IoWriteAccess);
 RequestorMode = Irp->RequestorMode;
 v16 = (unsigned __int8)HIBYTE(*(_WORD *)(a2 + 24)) >> 6;
 Object = OLL;
 v14 = ObReferenceObjectByHandle(v8, v16, (POBJECT_TYPE)IoFileObjectType, RequestorMode, &Object, @LL);
-DEVCORE
 60
 ```
 
@@ -954,7 +946,8 @@ https://googleprojectzero.blogspot.com/2019/03/windows-kernel-logic-bug-class-ac
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Bug Pattern
@@ -973,7 +966,6 @@ __drv_aliasesMem PIRP IoBuildDeviceIoControlRequest(
 [in] BOOLEAN InternalDeviceIoControl,
 [in, optional] PKEVENT Event,
 [out] PIO_STATUS_BLOCK IoStatusBlock
-DEVCORE
 69
 ```
 
@@ -985,13 +977,13 @@ DEVCORE
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Bug Pattern
 ¢ loBuildDeviceloControlRequest
 loBuildDeviceloControlRequest returns, the RequestorMode field is always set to KernelMode.
-DEVCORE
 70
 ```
 
@@ -1040,13 +1032,13 @@ IoBuildDeviceIoControlRequest
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTSTATUS __stdcall KsSynchronousIoControlDevice(
 PFILE OBJECT FileObject,
 KPROCESSOR_MODE RequestorMode,
-ULONG IoControl,————=~S
 PVOID InBuffer,
 ULONG InSize,
 PVOID OutBuffer,
@@ -1060,12 +1052,10 @@ InBuffer,
 InSize,
 OutBuffer,
 OutSize,
-e@,
 &Event,
 &IoStatusBlock) ;
 NewIrp->RequestorMode RequestorMode;
 Status = IofCallDriver(RelatedDeviceObject, NewIrp);
-DEVCORE
 74
 ```
 
@@ -1093,25 +1083,21 @@ KernelMode
 
 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CKsPin::GetState
 BytesReturned = Q;
-v5 = KsSynchronousToControlDevicelin_Worker|, 0, px2F0003u, &InBuffer, @x18u, OutBuffer,
 v5 = -1073741306;
 SerializePropertySet
-{
 if ( SerialSize )
 v19 = KsSynchronousIoControlDevice(
-ne i 1 leObject,
-paren rameters .DevicelIoControl.IoControlCode,
 PoolWithTag,
 InSize,
 (v16 + 0x20),
 SerialSize,
 &BytesReturned) ;
-DEVCORE
 77
 ```
 
@@ -1124,23 +1110,6 @@ DEVCORE
 ##### **KernelMode SerializePropertySet**
 
 78
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-UnserializePropertySet
-rror2;
-KsSynchronousloControlDevice(
-el
-mrentStackLocation->Parameters .DeviceloControl.IoControlCode,
-New_KsProperty_req,
-InSize,
-OutBuffer,
-OutSize,
-&BytesReturned) ;
-DEVCORE
-78
-```
 
 ## Slide 79
 
@@ -1168,22 +1137,20 @@ DEVCORE
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Look for the bug pattern in KS
 1. KsSynchronousloControlDevice
 2. Controllable
-KsSynchronous LloControlDevice(
 | nputBuffer CurrentStackLocation->FileObject,
-0,
 ~ OutputBuffer CurrentStackLocation->Parameters.DeviceloControl.IoControlCode,
 New KsProperty req,
 InSize,
 OutBuffer,
 OutSize,
 &BytesReturned) ;
-DEVCORE
 80
 ```
 
@@ -1213,33 +1180,6 @@ DEVCORE
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-onmw
-on i
-aan
-aa
-ccs
-oan
-eoe
-a6
-=
-[oS
-c=
-ects
-sce
-oo
-eat
-rug
-can
-owes
-wo meee fe
-merses (ee ria xs So Dy (9)
-Oewe ay) {Acted rab & oe
-Oe: Qastexra das |
-```
-
 ## Slide 84
 
 ## **Unserialize the property set**
@@ -1263,7 +1203,8 @@ User Mode Kernel Mode
 
 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
@@ -1287,11 +1228,11 @@ return UnserializePropertySet(Irp, sysbuf_, propertyset_);
 
 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
-unsigned __int64 _ fastcall UnserializePropertySet(
 PIRP irp,
 KSIDENTIFIER* UserProvideProperty,
 KSPROPERTY_SET* propertyset_)
@@ -1300,14 +1241,11 @@ New_KsProperty_req = ExAllocatePoolWithTag(NonPagedPoolNx, InSize, @x7@70534Bu) 
 memmove(New_KsProperty_req, CurrentStackLocation->Parameters.DeviceloControl.Type3InputBuffer, InSize) ;
 status = KsSynchronousloControlDevice(
 CurrentStackLocation->FileObject,
-e,
-CurrentStackLocation->Parameters .DeviceloControl.IoControlCode,
 New_KsProperty_req,
 InSize,
 OutBuffer,
 OutSize,
 &BytesReturned) ;
-}
 86
 ```
 
@@ -1317,11 +1255,11 @@ OutSize,
 
 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
-unsigned __int64 _ fastcall UnserializePropertySet(
 PIRP irp,
 KSIDENTIFIER* UserProvideProperty,
 KSPROPERTY_SET* propertyset_)
@@ -1330,14 +1268,11 @@ New_KsProperty_req = ExAllocatePoolWithTag(NonPagedPoolNx, InSize, @x7@70534Bu) 
 memmove(New_KsProperty_req, CurrentStackLocation->Parameters.DeviceloControl.Type3InputBuffer, InSize) ;
 status = KsSynchronousloControlDevice(
 CurrentStackLocation->FileObject,
-e,
-CurrentStackLocation->Parameters .DeviceloControl.IoControlCode,
 New_KsProperty_req,
 InSize,
 OutBuffer,
 OutSize,
 &BytesReturned) ;
-}
 87
 ```
 
@@ -1349,7 +1284,8 @@ KernelMode
 
 88
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
@@ -1362,7 +1298,6 @@ memmove(New_KsProperty_req, CurrentStackLocation->Parameters.DeviceloControl.Typ
 status = KsSynchronousIoControlDevice(
 rentStackLocation->FileObject,
 2. | KernelMode
-eerentStackLocation->Parameters .DeviceloControl.IoControlCode,
 New_KsProperty_req,
 InSize,
 OutBuffer,
@@ -1379,7 +1314,8 @@ User Control
 
 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
@@ -1387,19 +1323,15 @@ unsigned __int64 __fastcall UnserializePropertySet(
 PIRP irp,
 KSIDENTIFIER* UserProvideProperty,
 KSPROPERTY_SET* propertyset_)
-{
 New_KsProperty_req = ExAllocatePoolWithTag(NonPagedPoolNx, InSize, @x7@70534Bu) ;
 memmove(New_KsProperty_req, CurrentStackLocation->Parameters.DeviceloControl.Type3InputBuffer, InSize) ;
 status = KsSynchronousloControlDevice(
 CurrentStackLocation->FileObject,
-8,
-CurrentStackLocation->Parameters .DeviceloControl.IoControlCode,
 New_KsProperty_req,
 InSize,
 OutBuffer, User Control
 OutSize,
 &BytesReturned) ;
-}
 89
 ```
 
@@ -1599,22 +1531,19 @@ KsSynchronousIoControlDevice
 
 100
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ksthunk! Dispatchloctl
 int64 a3, int *a4)
 __int64 _ fastcall CKSThunkDevice: :CheckIrpForStackAdjustmentNative(__int64 al, struct _IRP *irp,
-{
 if ( *(_OWORD *)&Type3InputBuffer->Set == *(_OWORD *)&KSPROPSETID DrmAudioStream
 && !type3inputbuf.Id
 && (type3inputbuf.Flags & 2) != @ ) // KSPROPERTY_TYPE_SET
 if ( irp->RequestorMode )
-{
 v14 = @xCceeeeele;
-}
 else
-{
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v14 = (*(__int64 (__fastcall **)(_QWORD, _QWORD, _ int64 *))(Type3InputBuffer + @x38))(// call Type3InputBuffer+0x38
 *UserBuffer,
@@ -1629,29 +1558,23 @@ v19);
 
 101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ksthunk! Dispatchloctl
 __int64 _ fastcall CKSThunkDevice: :CheckIrpForStackAdjustmentNative(__int64 al, struct _IRP *irp, __int64 a3, int *a4)
-if
 if ( *(_OWORD *)&Type3InputBuffer->Set == *(_OWORD *)&KSPROPSETID DrmAudioStream
 && !type3inputbuf.Id
 && (type3inputbuf.Flags & 2) !=@ ) // KSPROPERTY_TYPE_SET
-{
 if ( irp->RequestorMode )
-{
 v14 = 0xC@0ee00e10;
-}
 else
-{
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v14 = (*(__int64 (__fastcall **)(_QWORD, _QWORD, _ int64 *))(Type3InputBuffer + @x38))(// call Type3InputBuffer+0x38
 *UserBuffer,
 @LL,
 v19);
-}
-}
 101
 ```
 
@@ -1663,29 +1586,24 @@ RequestorMode == KernelMode (0)
 
 102
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ksthunk! Dispatchloctl
 __int64 _ fastcall CKSThunkDevice: :CheckIrpForStackAdjustmentNative(__int64 al, struct _IRP *irp, __int64 a3, int *a4)
-if
 if ( *(_OWORD *)&Type3InputBuffer->Set == *(_OWORD *)&KSPROPSETID DrmAudioStream
 && !type3inputbuf.Id
 && (type3inputbuf.Flags & 2) !=@ ) // KSPROPERTY_TYPE_SET
-{
 if ( irp->RequestorMode )
 { RequestorMode == KernelMode (0)
 v14 = 0xC@0ee00e10;
-}
 else
-{
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v14 = (*(__int64 (__fastcall **)(_QWORD, _QWORD, _ int64 *))(Type3InputBuffer + @x38))(// call Type3InputBuffer+0x38
 *UserBuffer,
 @LL,
 v19);
-}
-}
 102
 ```
 
@@ -1695,27 +1613,23 @@ v19);
 
 103
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ksthunk! Dispatchloctl
 __int64 _ fastcall CKSThunkDevice: :CheckIrpForStackAdjustmentNative(__int64 al, struct _IRP *irp, __int64 a3, int *a4)
-{
 if ( *(_OWORD *)&Type3InputBuffer->Set == *(_OWORD *)&KSPROPSETID DrmAudioStream
 && !type3inputbuf.Id
 && (type3inputbuf.Flags & 2) !=@ ) // KSPROPERTY_TYPE_SET
-{
 if ( irp->RequestorMode )
-{
 v14 = 0xC@0ee00e10;
-}
 else
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v14 = (*(__int64 (__fastcall **)(_QWORD, _QWORD, _ int64 *))(Type3InputBuffer + @x38))(// call Type3InputBuffer+0x38
 *UserBuffer,
 @LL,
 v19);
-}
 103
 ```
 
@@ -1725,19 +1639,17 @@ v19);
 
 104
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ksthunk! Dispatchloctl
 __int64 _ fastcall CKSThunkDevice: :CheckIrpForStackAdjustmentNative(__int64 al, struct _IRP *irp, __int64 a3, int *a4)
-{
 if ( *(_OWORD *)&Type3InputBuffer->Set == *(_OWORD *)&KSPROPSETID DrmAudioStream
 && !type3inputbuf.Id
 && (type3inputbuf.Flags & 2) !=@ ) // KSPROPERTY_TYPE_SET
 v14 = @xCe@ee0e1e;
-}
 else
-{
 UserBuffer = (unsigned int *)irp->UserBuffer;
 v14 = (*(__int64 (__fastcall **)(_QWORD, _QWORD, _ int64 *))(Type3InputBuffer + @x38))(// call Type3InputBuffer+0x38
 *UserBuffer,
@@ -1775,45 +1687,26 @@ KsSynchronousIoControlDevice
 
 106
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-BUGCHECK_
-BUGCHECK_P1: c0Q@00005
 BUGCHECK_P2: fffff801
 BUGCHECK_P3: ffffaa88
 BUGCHECK_P4: 0
 CONTEXT:
-rax=ffFF404040404040
-rdx=eeeeeeQgeGeeReRe0
 rip=ffFFF8017 3333380
 r8=ffffaa88a40deb78
-r11=eeeeEe2eEeeeQeeeeeRe
 r14=4fac41982f2c8ddd
 iopl=0e nv up
 cs=@010 ss=0018 ds
 ksthunk! guard_dispatc
 FfFFF801° 73333380 ffe
-=@02b
-ksthunk! Dispatchloct!
 73333380
-a40de100
 ffffaa88a40de100 -- (.cxr Oxffffaa88a40de100)
-rbx=fFFfFF838a3cef5b20
-rsi=ffff838a3cef5dae
 rsp=ffffaa88a40deb28
-r9=ffffaa88a40dec8e
-r1i2=ffffaa88a4edec8e
-r15=fffF838a3d45eeae
 h_icall_nop:
-) jmp
 Resetting default scope
-rcx=eee0eeeedeadbeed
-rdi=eeee9ee9eeeeeee1
-rbp=fffF838a3d45e0ae
-r10=fffFfF8016aa26e90
-r13=ffFF838a3dF23dee
-es=@02b fs=0053 gs=002b
 rax {ffff4e4e° 40404040}
 ef1=00050246
 ```
@@ -1886,27 +1779,19 @@ ef1=00050246
 
 113
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Bypass kCFG
 Name
- f | ita Sai
 fi RtINumberO BitsUlongPtr
-fARtI ctiveConsoleld
 i Rtl IIBits
 fA Rtl IIBitsEx
 fi RtiSetBit
-Rt
 i RtiSetBits
-fA RtiSetBitsEx
-fi RtlSetConsoleSessionForegroundProcessId
-fA Rt
-Rt
-Rt
 ControlSecurityDescriptor
 DaclSecurityDescriptor
-DynamicTimeZonelInformation
 Address
 00000001405A7080
 00000001403B0490
@@ -1935,7 +1820,6 @@ Ordinal
 2513
 2514
 2515
-DEVCORE
 113
 ```
 
@@ -1951,7 +1835,8 @@ DEVCORE
 
 115
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass kCFG
@@ -1961,11 +1846,9 @@ unsigned int *Buffer; // r8
 unsigned __int64 v2; // rdx
 Buffer = BitMapHeader->Buffer;
 v2 = (unsigned __int64)(4 * (((BitMapHeader->SizeOfBitMap & @x1F) != 6) + (BitMapHeader->SizeOfBitMap >> 5))) >> 2;
-{
 memset(Buffer, @xFFu, 8 * (v2 >> 1));
 if ( (v2 &1) !=@ )
 Buffer[v2 - 1] = -1;
-DEVCORE
 115
 ```
 
@@ -1977,19 +1860,17 @@ DEVCORE
 
 116
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypass kCFG
-e RtlSetAllBits
 ¢ The RtlSetAllBits routine sets all bits in a given bitmap variable.
 struct _RTL_BITMAP
 NTSYSAPI VOID Rtl1SetAl11Bits( {
 [in| PRTL_BITMAP BitMapHeader
 ); ULONG SizeOfBitMap;
 ULONG* Buffer;
-ts
-DEVCORE
 116
 ```
 
@@ -2031,7 +1912,8 @@ Privileges
 
 119
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Abuse token privilege
@@ -2041,12 +1923,9 @@ Enabled
 Enabled
 Enabled
 serlmpersonatePrivilege Enabled
-Trivilege Enabled
 Enabled
 Enabled
-C.-b)-4
 Permissions
-DEVCORE
 119
 ```
 
@@ -2066,7 +1945,8 @@ DEVCORE
 
 121
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows 11 23H2 - VMware Workstation
@@ -2076,10 +1956,7 @@ My Computer
 Administrator: CAWind: 032
 q Microsoft Windows [Version 10.0.22631.3527]
 meee (c) Microsoft Corporation. All rights reserved.
-ys
-C: \Users\p20\Desktop>whoami
 nt authority\system
-C:\Users\p20\Desktop>,
 121
 ```
 
@@ -2099,28 +1976,21 @@ C:\Users\p20\Desktop>,
 
 124
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Action Media View Help
-»@
 Command Prompt - p20_poc. +
 Microsoft Windows [Version 10.0.22631.3527]
 (c) Microsoft Corporation. All rights reserved.
-2 & C:\Use/
-fam</Error: 80070103
-vl Ul
-PRIVIL'
 am /1t doesn't have a DRM device !
 Press any key to continue...
-° ec
 Memory allocated at 0000000042420000
 +] cur token address: FFFFCQO7BBE7F360
 Error: 80070103
 It doesn't have a DRM device !
 Press any key to continue .
-6:04AM <2
-e/13/2024 SAE
 Status: Running <=. §
 124
 ```
@@ -2188,7 +2058,8 @@ KsSynchronousIoControlDevice
 
 129
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KspPropertyHandler
@@ -2196,7 +2067,6 @@ NTSTATUS __fastcall KspPropertyHandler(
 PIRP Irp,
 unsigned int propertysetscnt,
 KSPROPERTY_SET *propertyset,
-df
 memmove (SystemBuffer| outlen_padding],
 User input|buffer CurrentStackLocation->Parameters .DeviceIoControl.Type3InputBuffer,
 InputBufferLength) ;
@@ -2213,7 +2083,8 @@ return UnserializePropertySet(Irp, sysbuf_, propertyset_);
 
 130
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KspPropertyHandler
@@ -2221,9 +2092,7 @@ NTSTATUS __fastcall KspPropertyHandler(
 PIRP Irp,
 unsigned int propertysetscnt,
 KSPROPERTY_SET *propertyset,
-aot!
 memmove (SystemBuffer| outlen_padding],
-CurrentStackLocation->Parameters .DeviceloControl.Type3InputBuffer,
 InputBufferLength) ;
 Guid = *&SystemBuffer|[ outlen_padding | ;
 // Check if the Guid is in the property set
@@ -2246,7 +2115,8 @@ return UnserializePropertySet(Irp, sysbuf_, propertyset_);
 
 132
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
@@ -2254,19 +2124,15 @@ unsigned __int64 __fastcall UnserializePropertySet(
 PIRP irp,
 KSIDENTIFIER* UserProvideProperty,
 KSPROPERTY_SET* propertyset_)
-{
 New_KsProperty_req = ExAllocatePoolWithTag(NonPagedPoolNx, InSize, @x7@70534Bu) ;
 memmove(New_KsProperty_req, CurrentStackLocation->Parameters.DeviceloControl.Type3InputBuffer, InSize) ;
 status = KsSynchronousloControlDevice( Copy User input again 1?
 CurrentStackLocation->FileObject,
-Q,
-CurrentStackLocation->Parameters .DeviceloControl.IoControlCode,
 New_KsProperty_req,
 InSize,
 OutBuffer,
 OutSize,
 &BytesReturned) ;
-}
 132
 ```
 
@@ -2278,7 +2144,8 @@ Copy User input again !?
 
 133
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UnserializePropertySet
@@ -2413,12 +2280,11 @@ KsSynchronousIoControlDevice
 
 139
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Action Media View’ Help
-»@©O = ayy
-GA Command Prompt
 Microsoft Windows [Version 10.0.22631.3527]
 (c) Microsoft Corporation. ALL rights reserved.
 C:\Users\user>|
@@ -2429,7 +2295,8 @@ C:\Users\user>|
 
 140
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DQ Zero Day Initiative @thezdi - 34215
@@ -2440,9 +2307,7 @@ DEVCORE RESEARCH TEAM
 TARGETTING
 Microsoft Windows 11 in the
 PRIZE $ Local Elevation of Privilege category
-ane
 O
-DEVCORE
 140
 ```
 
@@ -2455,25 +2320,6 @@ DEVCORE
 ## Slide 142
 
 142
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ONS ore beer Leg = eri er
-power.
-7
-Hilup oe
-Chaqger aval ty
-Savapink
-tHUNe We OW Ale
-Sait ee ae
-fe riasse lp sy
-ue ay) Aacea mak oe Oo
-oe: taster dao
-Qeo Me e-sosascodgct
-SE Tae MAIS Oo
-= recdsococSsS
-```
 
 ## Slide 143
 
@@ -2507,7 +2353,8 @@ SE Tae MAIS Oo
 
 145
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KS Event
@@ -2520,9 +2367,7 @@ struct {
 struct {
 HANDLE Semaphore;
 } SemaphoreHandle;
-}
 } KSEVENTDATA, *PKSEVENTDATA;
-DEVCORE
 145
 ```
 
@@ -2532,23 +2377,19 @@ DEVCORE
 
 146
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 kstunk! ThunkEnableEventirp
 ¢ Transfer 32-bit IOCTL_KS_ENABLE_EVENT requests to 64-bit requests
 __int64 _ fastcall CKSThunkDevice: :DispatchIoct1l(CKernelFilterDevice *al, IRP *irp, unsigned int a3, NTSTATUS *a4)
-{
 if ( IoIs32bitProcess(irp) && irp->RequestorMode )
-{
 if ( CurrentStackLocation->Parameters.DeviceIoControl.IoControlCode == IOCTL_KS ENABLE EVENT )
 return CKSAutomationThunk: :ThunkEnableEventIrp(v12, a2, v11, a4);
-}
 else if ( CurrentStackLocation->Parameters.DeviceloControl.IoControlCode == IOCTL_KS_ PROPERTY )
-{
 //Pass down
 return CKSThunkDevice: :CheckIrpForStackAdjustmentNative((__int64)al1, irp, v11, a4);
-}
 146
 ```
 
@@ -2560,7 +2401,8 @@ User input
 
 147
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventir
@@ -2569,17 +2411,12 @@ if
 if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLE
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ONESHOT
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLEBUFFERED )
-{
 // Convert 32-bit requests and pass down directly
-}
 else if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-{
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x600, (unsigned int)(inputbuflen + 8), ‘bqSK"');
 memcpy (newinputbuf, Type3InputBuffer , 0x28) ; User input
-el
 v18 = KsSynchronousloControlDevice(
 v25->FileObject,
-e,
 IOCTL_KS_ENABLE_EVENT,
 newinputbuf ,
 inputbuflen + 8,
@@ -2595,7 +2432,8 @@ outbuflen,
 
 148
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventir
@@ -2604,16 +2442,12 @@ if
 if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLE
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ONESHOT
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLEBUFFERED )
-{
 // Convert 32-bit requests and pass down directly
-}
 else if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-{
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x600, (unsigned int)(inputbuflen + 8), ‘bqSK"');
 memcpy (newinputbuf , Type3InputBuffer , 0x28) ;
 v18 = KsSynchronousloControlDevice(
 v25->FileObject,
-8,
 IOCTL_KS ENABLE EVENT,
 newinputbuf ,
 inputbuflen + 8,
@@ -2631,7 +2465,8 @@ KernelMode
 
 149
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventir
@@ -2641,15 +2476,12 @@ if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == K
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ONESHOT
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLEBUFFERED )
 // Convert 32-bit requests and pass down directly
-}
 else if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-{
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x600, (unsigned int)(inputbuflen + 8), ‘bqSK"');
 memcpy (newinputbuf , Type3InputBuffer , 0x28) ;
 v18 = KsSynchronousloControlDevice(
 v25->FileObject,
 KernelMode
-eeTL KS ENABLE EVENT,
 newinputbuf ,
 inputbuflen + 8,
 OutBuffer,
@@ -2840,7 +2672,8 @@ KS Filter
 
 161
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KspEnableEvent
@@ -2855,9 +2688,7 @@ break;
 case KSEVENTF_EVENT_OBJECT:
 case DPC:
 case KSEVENTF_KSWORKITEM:
-if (Irp->RequestorMode)
 goto error;
-}
 Eventitem->AddEventHandler(Irp, EventData, PEventEntry) ;
 161
 ```
@@ -2898,25 +2729,22 @@ Eventitem->AddEventHandler(Irp, EventData, PEventEntry) ;
 
 165
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventir
 __int64 _ fastcall CKSAutomationThunk::ThunkEnableEventIrp(__int64 ioctlcode d, PIRP irp, __int64 a3, int *a4)
 if
 if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT TYPE ENABLE
-De
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ONESHOT
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLEBUFFERED )
 // Convert 32-bit requests and pass down directly
-}
 else if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-{
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x600, (unsigned int)(inputbuflen + 8), ‘bqSK"');
 memcpy (newinputbuf , Type3InputBuffer , 0x28) ;
 v18 = KsSynchronousloControlDevice(
 v25->FileObject,
-e,
 IOCTL_KS_ENABLE_EVENT,
 newinputbuf ,
 inputbuflen + 8,
@@ -2932,7 +2760,8 @@ outbuflen,
 
 166
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventirp
@@ -2942,15 +2771,11 @@ if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == K
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ONESHOT
 || (v25->Parameters .DeviceIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_ENABLEBUFFERED )
 // Convert 32-bit requests and pass down directly
-}
 else if ( (v25->Parameters.DeviceloControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-|
-{
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x600, (unsigned int)(inputbuflen + 8), ‘bqSK"');
 memcpy (newinputbuf , Type3InputBuffer , 0x28) ;
 v18 = KsSynchronousloControlDevice(
 v25->FileObject,
-e,
 IOCTL_KS_ENABLE_EVENT,
 newinputbuf ,
 inputbuflen + 8,
@@ -2974,13 +2799,12 @@ outbuflen,
 
 168
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ThunkEnableEventirp
-z)
 else if ( (v25->Parameters.DevicelIoControl.Type3InputBuffer->Flags & @xEFFFFFFF) == KSEVENT_TYPE_QUERYBUFFER )
-{
 eee A
 newinputbuf = (KSEVENT *)ExAllocatePoolWithTag((POOL_TYPE)@x60@, (unsigned int)(inputbuflen + 8), ‘baSK'3 Race window
 memcpy (newinputbuf , Type3InputBuffer , 6x28) ; v
@@ -3010,14 +2834,13 @@ outbuflen,
 
 170
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KsGenerateEvent
 NTSTATUS __stdcall KsGenerateEvent(PKSEVENT_ENTRY EventEntry)
-{
 switch ( EventEntry->NotificationType )
-{
 case KSEVENTF_DPC:
 wee Arbitrary register DPC
 if ( !KeInsertQueueDpc(EventEntry->EventData->Dpc.Dpc, EventEntry->EventData, @LL) )
@@ -3033,14 +2856,13 @@ KsIncrementCountedWorker (eventdata->KsWorkItem.KsWorkerObject) ;
 
 171
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KsGenerateEvent
 NTSTATUS __stdcall KsGenerateEvent(PKSEVENT_ENTRY EventEntry)
-{
 switch ( EventEntry->NotificationType )
-{
 case KSEVENTF_DPC:
 if ( !KeInsertQueueDpc(EventEntry->EventData->Dpc.Dpc, EventEntry->EventData, @LL) )
 _InterlockedAdd(&EventEntry->EventData->EventObject.Increment, @xFFFFFFFF) ;
@@ -3057,18 +2879,17 @@ KsIncrementCountedWorker (eventdata->KsWorkItem.KsWorkerObject) ;
 
 172
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KsIncrementCountedWorker
 ULONG _ stdcall KsIncrementCountedWorker(__int64 Worker)
-{
 ULONG v1; // ebx
 v1 = _InterlockedIncrement( (Worker + @x5C));
 if ( vl == 1 ) Arbitrary memory increment
 KsQueueWorkItem(Worker, *(Worker + 96));
 return v1;
-}
 172
 ```
 
@@ -3128,17 +2949,16 @@ return v1;
 
 178
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KsIncrementCountedWorker
 ULONG _ stdcall KsIncrementCountedWorker(__int64 Worker)
-{
 ULONG v1; // ebx
 v1 = _InterlockedIncrement( (Worker + @x5C));
 KsQueueWorkItem(Worker, *(Worker + 96));
 return v1;
-}
 178
 ```
 
@@ -3176,27 +2996,24 @@ return v1;
 
 183
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PsOpenProcess
 if ( SeSinglePrivilegeCheck(SeDebugPrivilege, AccessMode ) )
-{
 if ( (AccessState.RemainingDesiredAccess & MAXIMUM_ALLOWED) != @ )
 AccessState.PreviouslyGrantedAccess |= PROCESS ALL ACCESS;
 else
 AccessState.PreviouslyGrantedAccess |= AccessState.RemainingDesiredAccess;
 AccessState.RemainingDesiredAccess = 0;
-}
 v2@ = ObOpenObjectByPointer (
 Process,
 HandleAttributes,
 &AccessState,
-0,
 (POBJECT_TYPE)PsProcessType,
 AccessMode,
 &Handle) ;
-DEVCORE
 183
 ```
 
@@ -3206,27 +3023,24 @@ DEVCORE
 
 184
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PsOpenProcess
 if ( SeSinglePrivilegeCheck|[SeDebugPrivilege,} AccessMode_) )
-{
 if ( (AccessState.RemainingDesiredAccess & MAXIMUM_ALLOWED) != @ )
 AccessState.PreviouslyGrantedAccess |= PROCESS ALL ACCESS;
 else
 AccessState.PreviouslyGrantedAccess |= AccessState.RemainingDesiredAccess;
 AccessState.RemainingDesiredAccess = 0;
-}
 v2@ = ObOpenObjectByPointer (
 Process,
 HandleAttributes,
 &AccessState,
-0,
 (POBJECT_TYPE)PsProcessType,
 AccessMode,
 &Handle) ;
-DEVCORE
 184
 ```
 
@@ -3236,14 +3050,13 @@ DEVCORE
 
 185
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PsOpenProcess
-DEVCORE
 bool SepVariableInitialization()
 if
-SeDebugPrivilege = (LUID)@x14LL ;
 v103 = 2LL;
 v6@ = (PSID)21;
 v61 = (PSID)@x16;
@@ -3319,7 +3132,8 @@ Eprocess->Token
 
 191
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Make abusing token privilege great again
@@ -3331,7 +3145,6 @@ SeChangeNotifyPrivilege Bypass traverse checking Enabled
 SeUndockPrivilege Remove computer from docking station Disabled
 SeIncreaseWorkingSetPrivilege Increase a process working set Disabled
 SeTimeZonePrivilege Change the time zone Disabled
-DEVCORE
 191
 ```
 
@@ -3341,7 +3154,8 @@ DEVCORE
 
 192
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Make abusing token privilege great again
@@ -3353,7 +3167,6 @@ SeChangeNotifyPrivilege Bypass traverse checking Enabled
 SeUndockPrivilege Remove computer from docking station Disabled
 SeIncreaseWorkingSetPrivilege Increase a process working set Disabled
 SeTimeZonePrivilege Change the time zone Disabled
-DEVCORE
 192
 ```
 
@@ -3363,12 +3176,12 @@ DEVCORE
 
 193
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 nt! SeChangeNotifyPrivilege
 bool SepVariableInitialization()
-{
 SeDebugPrivilege (LUID)@x14LL;
 v103 = 2LL;
 v6@ = (PSID)21;
@@ -3377,7 +3190,6 @@ Sid = (PSID)@x17;
 SeAuditPrivilege = 21LL;
 SeSystemEnvironmentPrivilege = (LUID)@x16LL;
 SeChangeNotifyPrivilege = @x17LL;
-DEVCORE
 193
 ```
 
@@ -3478,7 +3290,8 @@ V1 == 0x14
 
 201
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Help
@@ -3487,8 +3300,6 @@ Computer
 FE command Prompt x + ¥
 Microsoft Windows [Version 10.0.22631.3527]
 (c) Microsoft Corporation. All rights reserved.
-C:\Users\p20>
-DEVCORE
 201
 ```
 
@@ -3502,7 +3313,8 @@ DEVCORE
 
 203
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploitability
@@ -3513,7 +3325,6 @@ Exploited
 NO
 Exploitability assessment
 Exploitation Less Likely
-» EXPLOTATION
 © LESS LIKELY
 DEVCORE Ge
 203

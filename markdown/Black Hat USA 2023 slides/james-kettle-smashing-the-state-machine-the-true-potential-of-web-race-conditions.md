@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions.pdf"
 pages: 31
 sha256: "90af9cca28a9fb022e9e75fd55a79d6ba7b6d277696c55d5cf672fd764e2b25a"
-text_chars: 9585
+text_chars: 9557
 ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:16:47Z"
+converted_at: "2026-08-12T04:09:58Z"
 ---
 # Smashing the State Machine The True Potential of Web Race Conditions
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -96,7 +102,8 @@ with race conditions, everything is multi-step
 
 ###### **Single-packet attack**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Making race conditions reliable: Single-packet attack
@@ -104,7 +111,6 @@ network latency jitter internal latency (— race window
 Request 2 2
 Single-packet attack
 Requests network latency jitter internal latency
--—~
 ..20 more requests 1
 ```
 
@@ -118,14 +124,14 @@ Timeless timing attack
 
 Single-packet attack
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Single-packet attack: under the hood
 Last-byte sync
 Timeless timing attack
 Single-packet attack
-TURBO)
 INTRUDER
 TCP packet [) §) [ TCP packet a |
 TCP packet B® ® [ TCP packet s|
@@ -253,15 +259,14 @@ Add to basket during checkout:
 
 ###### Gitlab email verification:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fay A multi-endpoint collision
 Add to basket during checkout:
-————
 basket
 Gitlab email verification:
-O-i=
 payment basket
 pending eee maxcPayment validated | confirmed
 email
@@ -285,24 +290,24 @@ slow fast slow fast slow change confirmfast
 
 ### Multi-endpoint collisions: handling internal latency
 
-```
+\```
 POST /-/profile HTTP/2
 To: x2@psres.net
 Subject: confirmation
 user[email]=x2@psres.net…
 x2@psres.net, confirm
 GET /users/conf?token=vsz… HTTP/2your email address
-```
+\```
 
 `POST /-/profile HTTP/2 user[email]=x2@psres.net` **90ms** `GET /users/conf?token=vsz… HTTP/2`
 
-```
+\```
 To: x2@psres.net
 Subject: confirmation
 …
 x1@psres.net, confirm
 your email address
-```
+\```
 
 ## Slide 20
 
@@ -310,7 +315,8 @@ demo: single-endpoint collision!
 
 https://gitlab.com/albinowax1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [4]

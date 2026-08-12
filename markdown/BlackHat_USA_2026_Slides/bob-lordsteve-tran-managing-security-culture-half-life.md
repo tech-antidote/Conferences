@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Bob Lord&Steve Tran_Managing Security Culture Half Life.pdf"
 pages: 15
 sha256: "7a2f786bc5464e3cb5a61937b14911b2ee7eb751e69daf953bb52bc61d0d526e"
-text_chars: 11537
+text_chars: 11288
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:30Z"
+converted_at: "2026-08-12T05:29:36Z"
 ---
 # Managing Security Culture Half Life
 
 **Speakers:** Bob Lord, Steve Tran  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Bob Lord&Steve Tran_Managing Security Culture Half Life.pdf` (15 pages)
+
 
 ## Slide 1
 
@@ -38,7 +43,8 @@ ACT I · STEVE TRAN
 
 The First 90 Days
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ACT |: STEVE TRAN
@@ -78,7 +84,8 @@ Team members often wore multiple, overlapping hats, leading to ambiguity in secu
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Washington Post
@@ -89,7 +96,6 @@ penetrated DNC, stole
 opposition research on Trump
 June 14,2016 More than 10 years ago
 © By Ellen Nakashima
-af. ——eer
 Russian government hackers penetrated the computer network of the
 Democratic National Committee and gained access to the entire
 database of opposition research on GOP presidential candidate Donald
@@ -100,7 +106,6 @@ also were able to read all email and chat traffic, said DNC officials and
 the security experts.
 = DOJ Menu
 ‘. Our Offices Find Hel Contact Us
-Archives P
 About News Documents Internships FOIA Contact Information for Journalists
 PRESS RELEASE
 U.S. Charges Russian GRU Officers with International
@@ -196,7 +201,8 @@ Don't secure it. Turn it off. Continuous archaeological work: finding systems no
 
 **Over the top** events create memorable lessons
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Over the top events create memorable lessons
@@ -204,32 +210,20 @@ Round 1:
 100 Security Experts bee “
 asked, “What are biggest res
 security myths?” ioe
-wwvwvwe wwwvwwwwww
-ecood - sees.
 eccceed Don’t use 5S Nothing 3 peece
 eooced ublic wifi important peece
-oes saan
 Wait to Just use a
 ood update iPhone VPN 1 ees
-eo ae
-eo
-eed
 Build your own
-eocececs a pecce
-eerese , , peecce
-eccced) | Domtpluginto ¢ pecce
-pecce
 400000
-ecoood kiosk
-_ ee00c0e\.
-TIMER: 10
 ```
 
 ## Slide 11
 
 For some reason, people remember toilet humor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The D.N.C. Didn’t Get Hacked in
@@ -237,9 +231,7 @@ The D.N.C. Didn’t Get Hacked in
 A devastating email breach of the D.N.C. roiled Democrats in the
 final months of 2016. An unassuming security official made it his
 mission to prevent a recurrence.
-EF Share full article
 a By Nicole Perlroth
-4
 Published May 29, 2021 Updated Aug. 3, 2021
 As the country learns more about a broad Russian hijacking of
 American federal agencies and private companies and now

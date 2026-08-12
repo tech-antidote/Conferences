@@ -12,7 +12,7 @@ duration_seconds: 953
 words: 1790
 text_chars: 9102
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # RATs & Socks abusing Google Services

@@ -12,7 +12,7 @@ duration_seconds: 977
 words: 2620
 text_chars: 14700
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Planting C4 - Cross-Compatible External C2 for All Your Implants

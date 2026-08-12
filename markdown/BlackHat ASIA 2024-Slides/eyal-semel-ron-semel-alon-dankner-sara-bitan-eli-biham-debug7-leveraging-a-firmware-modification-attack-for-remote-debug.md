@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Eyal Semel & Ron Semel & Alon Dankner & Sara Bitan & Eli Biham-Debug7 Leveraging a Firmware Modification Attack for Remote Debugging of Siemens S7 PLCs.pdf"
 pages: 62
 sha256: "d901819750e9352f7eabc33342841317a56601eae523a7cf8e2416578862269a"
-text_chars: 21846
-ocr_pages: 10
+text_chars: 19981
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:49:19Z"
+converted_at: "2026-08-12T04:47:48Z"
 ---
 # Debug7 Leveraging a Firmware Modification Attack for Remote Debugging of Siemens S7 PLCs
 
 **Speakers:** Eyal Semel, Ron Semel, Alon Dankner, Sara Bitan, Eli Biham  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Eyal Semel & Ron Semel & Alon Dankner & Sara Bitan & Eli Biham-Debug7 Leveraging a Firmware Modification Attack for Remote Debugging of Siemens S7 PLCs.pdf` (62 pages)
+
 
 ## Slide 1
 
@@ -176,13 +181,12 @@ Colin Finck and Tom Dohrmann
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat Previous Research
 ASIA 2024
-pidekhat :
 A Decade After Stuxnet:
 How Siemens S7 is Still an
 Attacker’'s Heaven
@@ -444,17 +448,6 @@ Bare-metal hypervisor
 #### **Level 1 – Gather Intel (Research the firmware)**
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Level 1 — Gather Intel (Re:
-Gnacan
-[e SCORE:0 +]
-Sr eer Semen rey ey ree Ty ee
-‘a a
-```
 
 ## Slide 25
 
@@ -740,24 +733,18 @@ Bare-metal hypervisor
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat The System Call Table
 ASIA 2024
 sub_10
 sub_10
 kernel close
 kernel ioctl
-sub_10C189D@
-sub_10C18C5@
-sub_10
 kernel_open
-kernel _read
 kernel_write
-sub_1@C1A326
-sub_10C1A330
 sub_1@C1A3E@
 ```
 
@@ -768,29 +755,6 @@ sub_1@C1A3E@
 ## **We studied crash dumps for months!!**
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat_ lt Was
-ASIA 20,
-SIEMENS SIMATIC RT-Y
-a sab cs coo ctoeseNe | be “Sepia pains =e M Seansio2 oieewosi se SIEMENS
-oy | Usceontvedscond tome. : 7 q SIEMENS 3.102.092 008F oes = SIEMENS SIMATIC RI
-|| soma soo cao Fana:eenm ooo iuonoa22ae00 | 0 i pediscr eater SANT pr woo ee
-coc - ; Sauna : eee rteonocceony || i ‘ Saeneee
-SIEMENS miei = —— Ent rigs i ona Sa arom) shoe msn
-si i ay ti coco aeooaniia =r : a | | moms aac sane norcnnng ase cr a TN
-Hen Sieectanstares ae eat t ne sais Erectile sec scree eas) ied coats ie totes cro
-a ia ce i ioe zi ae Ae | |apoaocs We irene, ine sseeloenasdai® SIEMENS, ea) 8 ie pc00000778 oc
-ied crash dum E
-ease
-2 ae bap) aioe Bassin: Pea Ul Sitters eee
-SWIRL Rnaaelioneess-_ssaesooo0n000 H 00 & 5 [a : =
-ea a sam Sore son 3 i ress000 : wu Sen Sree onsh | Eaas}000 st sag
-Serena | Boreas | Sac ae Pe  Suiowme ie | ee g ||
-eitstonates | Soom IAAL.) ete Se ee
-```
 
 ## Slide 42
 
@@ -834,18 +798,6 @@ Bare-metal hypervisor
 #### **Level 2 – Breach the Vault (Inject Data)**
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Level 2 — Breach the Vault.
-ASIA 2024
-(iva: 25)
-[e SCORE: 2 +]
-Sr eer Semen rey ey ree Ty ee
-‘a a
-```
 
 ## Slide 45
 
@@ -925,16 +877,6 @@ Bare-metal hypervisor
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Level 2 — Breach the Vault
-ASIA 2024
-Level COME leted
-[e SCORE: 3¢]
-```
-
 ## Slide 49
 
 #### **Level 3 – Escape (Exfiltrate Data)**
@@ -996,34 +938,11 @@ resume normal “read” flow
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Level 3 — Escape (Exfiltrate
-ASIA 2024
-Level Completed
-[+ SCORE: 3 ¢]
-4
-```
-
 ## Slide 53
 
 #### **Boss – Build the Debugger**
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Boss — Build the Debugger
-ASIA 2024
-(eve: 39)
-[e SCORE: 4 +]
-eee Se ye eee Pre ey eee =A
-carr fpnsesaafianeasp irc terns finns tif tor end haar ens lca kaze tase
-```
 
 ## Slide 54
 
@@ -1066,21 +985,19 @@ Handler Handler Handler
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat A Video Demonstration of Debug7
 @ http://localhost:81/Portal/Int P~ GS) Sintro @ newtab a
 SIEMENS mall simatic-controller service&support
-English |
 ENTERP
 SIMATIC
 $7-1500 Software Controller
 CPU 1505SP
 & Skip Intro
 peveemmm Network (> Performance Memory Emulation Garu Bl
-= i |G) 5 & Y~ Content type Find (Ctrl+F)
-Name / Result Initiator 7 & - Headers Body Parameters Cookies Timings
 Path Protocol Method Description Content type Received Time Type LS e
 Response body — Request body
 Intro.mwsl HTTP GET 200 text/html 352.84ms document in
@@ -1105,19 +1022,6 @@ http://localhost:81/Im: OK
 #### **Boss – Build the Debugger**
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-blackhat Boss — Build the Debugger
-ASIA 2024
-(eve: 39)
-[e SCORE: 4 +]
-—>
-eee Se ye eee Pre ey eee =A
-fpr eases ntcndf terns fone ttf reread bec tf anna Lassa zea ae
-```
 
 ## Slide 58
 

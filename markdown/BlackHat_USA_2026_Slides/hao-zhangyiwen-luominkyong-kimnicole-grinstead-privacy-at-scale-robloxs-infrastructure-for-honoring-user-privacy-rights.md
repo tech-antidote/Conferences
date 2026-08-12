@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Hao Zhang&Yiwen Luo&Minkyong Kim&Nicole Grinstead_Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights.pdf"
 pages: 46
 sha256: "e91d5770808daf95e87a4ce5d7b9b86bfbfc7c257bd0d3319d49e8125842d504"
-text_chars: 19133
+text_chars: 19094
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 93.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:09:45Z"
+converted_at: "2026-08-12T05:34:17Z"
 ---
 # Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights
 
 **Speakers:** Hao Zhang, Yiwen Luo, Minkyong Kim, Nicole Grinstead  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Hao Zhang&Yiwen Luo&Minkyong Kim&Nicole Grinstead_Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights.pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -29,16 +34,6 @@ converted_at: "2026-08-11T23:09:45Z"
 Roblox's Infrastructure for **Honoring** User Privacy Rights
 
 **ROBLOX INFOSEC**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PRIVACY |
-ATSCALE ©
-Roblox's Infrastructure for Honoring User Privacy Rights
-plackhat EpRosiox
-2026 INFOSEC
-```
 
 ## Slide 2
 
@@ -72,7 +67,8 @@ plackhat EpRosiox
 
 # **01 Problem Statement** The challenge that pushed us to rethink everything.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 01
@@ -80,7 +76,6 @@ Problem
 Statement
 The challenge that pushed us
 to rethink everything.
-black hat
 ```
 
 ## Slide 5
@@ -136,6 +131,21 @@ Microservices at scale have complexity by design.
 $
 
 · · ·
+
+
+> Recovered by OCR — confidence 91/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+MICROSERVICE SYSTEM, AND IT KEEPS GROWING
+Microservices at scale have complexity by design.
+Iv
+©
+©
+oo
+© oo
+©
+S
+```
 
 ## Slide 9
 
@@ -374,7 +384,8 @@ Governance scales.
 
 **03 New Experience: Privacy Workflows in Distributed Systems** Making privacy seamless for users and systems.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 03
@@ -383,7 +394,6 @@ Privacy Workflows
 in Distributed Systems
 Making privacy seamless
 for users and systems.
-black hat
 ```
 
 ## Slide 22
@@ -601,7 +611,8 @@ From anxiety to evidence. Every request leaves an audit-grade, immutable receipt
 
 Securing the system while balancing scale and risk.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 04
@@ -610,8 +621,6 @@ Threats, Reliability,
 and Trade-offs
 Securing the system while
 balancing scale and risk.
-black hat
-@yss.
 ```
 
 ## Slide 33

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Xiaochen Wang&Yiping Liu&Xiaoman Wang&Cong Cheng_LLMDYara LLMs-Driven Automated YARA Rules Generation with Explainable File Features and DNAHash.pdf"
 pages: 27
 sha256: "7106807c7f243da907555cbbd51202615997c98d1da8c004d28337e280580dc6"
-text_chars: 20251
-ocr_pages: 10
+text_chars: 15896
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:03:44Z"
+converted_at: "2026-08-12T05:25:57Z"
 ---
 # LLMDYara LLMs-Driven Automated YARA Rules Generation with Explainable File Features and DNAHash
 
 **Speakers:** Xiaochen Wang, Yiping Liu, Xiaoman Wang, Cong Cheng  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Xiaochen Wang&Yiping Liu&Xiaoman Wang&Cong Cheng_LLMDYara LLMs-Driven Automated YARA Rules Generation with Explainable File Features and DNAHash.pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -58,12 +63,10 @@ Cong Cheng is a Senior Security Engineer at Alibaba Cloud, interested in malware
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Rising Malware Threats
 2,800,000
 2,400,000
@@ -144,17 +147,6 @@ AutoYara
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pie hat
-EFINGS
-AUGUST be 2025
-MANDALAY BAY / LAS VEGAS
-LLMDYara Method
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 7
 
 ## LLMDYara Method
@@ -193,23 +185,14 @@ Rule Generation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-BRIEFINGS
 Framework
 Feature Extraction Feature Filter Feature Decision On LLM Rule Generation
-{ ¢
-String Feature setring': * (aAbAc) V(aAbAcAeAEAgAhAi)V
-g": "unexpected heap error", * sya ha
-g ‘e MP Statistical Features | east apap rant (eAEAgAhAG)V (eAEAQAHAAGAK)V (hAGASAK)
-hibcéf jk
-"t+password: %s": "natural_lan e" t, nn, ea 94
-. . —— " i ; athe sanguage a “stringt: "Sunday", vA file-1 xxxxxxxx
 Benign Files sllauncher.exe":"filename_with_ext Top Common Strings Security Domain Features "tag": "nlp-date" Top-N Strings vd file-2 xx xX
 in Benign Db 3 file-3 x x x \
-Function Feature Lorteame areal (ROCCE ing": "HeapDestroy", / file-5 x xx xx xx Double
 ; : "iat_function" file-6 x x x Cluster
 LO BOOL sub_402320()
 { abcefghijk
@@ -218,15 +201,8 @@ Ld BYTE SubKey[257]; Oo Cluster-1 ») file 3 xx x
 n memset (&SubKey[1], @, 0x100u); tag: xor_dynamic_decrypt file-6 * x x
 e Similiar return RegOpenkeyExA(HKEY_LOCAL_MACHINE, Finger Hash file-5 XXXXXKX
 SubKey, @, OxF@@3Fu, &phkResult) == 0;
-juer —> ‘e-
-e q y 3 Cluster-2 ») file-2 xx XX
 tag: shellcode_loader J subset
 , 2
-\ \ mergin
-A> ae? Capa Sensitive (“ ctuster-3 >) \ \ / , ons
-\ @8, hash| | sSDeep Function Rules Coo. LLU OL Va
-\ Ne J (aAbAc)V(eA£AgAhAA) V(hALAJAK)
-DMAHash Feature a — eee eeee
 Malicious Files => Ao , >) Rule Scoring Mechanism
 header | .text | .rdata| .rsrc | overlay | —-> [e) ee. Cluster-n 1 |
 e ° tag: add_autorun_reg , 1. opcode feature xM |
@@ -344,16 +320,16 @@ Weight the importance with: function size, number of referenced strings and numb
 
 ## Feature Decision base on LLM **What kind of function opcode sequence is suitable to be part of a YARA rule?**
 
-```
+\```
 map pseudocode to
 asmdata
 loose mode:
 wildcard immediate value
 loose/normal mode:
 wildcard displacement
-```
+\```
 
-```
+\```
 Tag: xor_dynamic_decrypt
 Detail: Performing XOR operations on each byte
 using a dynamically generated key
@@ -361,7 +337,7 @@ Features: [{ "start": 19, "size": 7, "comment":
 "This code segment contains the core logic of
 XOR decryption, including dynamic key generation
 and XOR operations" }]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -375,11 +351,10 @@ Function behavior tagging
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-BRIEFINGS
 Feature Decision base on LLM
 Function behavior tagging
 how to generate high-quality training data?
@@ -387,7 +362,6 @@ capability
 mbc objectives
 [ ATT&CK Tactic
 behavior tag summary
-G3 >
 cloud sandbox
 function behavior tags
 ( data generation
@@ -395,26 +369,18 @@ function behavior tags
 Lo
 behavior tag list (5
 of each sample
-N75 qwen3-32b
-NY
 prompt
 rebound_shell
 shellcode_loader
 tagging rules
 steal_leak_xdata
-xor_dynamic_decrypt
-(th
 capa sandbox
 judge rules
 dynamic
 (sa mple filter
 analysis
-Cb?
 cloud sandbox
-CS
 ae |
-CS
-CJ
 N °
 static
 analysis
@@ -424,24 +390,18 @@ capability
 namespace
 download and write a
 file
-communication/c2/
 file-transfer
 create reverse shell
 create reverse shell
 3
 q
-a
 check for debugger
 via API
-‘anti-analysis/anti-debugging/
 debugger-detection
 capture screenshot via
 keybd event
 collection/screenshot
-| >
-Lo
 function behavior tags =
-”
 Yes
 <fes target tags? >
 =
@@ -449,17 +409,12 @@ No
 [x drop
 feature extraction
 feature filter
-v
 note: just save functions
 those function tags in the
 behavior tag list of this
 sample.
-\
 samples | behavior tag list
-rebound. shel,
-sample1 network_connect_
 sample2 runtime_anti_debug
-sample3_ | remote_thread_inject
 function tags
 No
 ```
@@ -470,16 +425,13 @@ No
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pifeK hat
-BRIEFINGS
 file_index fea
 type file_index
-+ opcode rl
 feature
-SYSTEM\\CurrentControlset\\Services\\Lanmans...
 Welcome to use storm ddos
 type
 natural_language-blacklisted
@@ -493,7 +445,6 @@ natural_language-blacklisted
 7c82cfcd,
 7c82cfcd,
 00000000,
-00000000,
 4b458bfe,
 4b458bfe,
 11c6d9d3,
@@ -502,7 +453,6 @@ natural_language-blacklisted
 13677351,
 WriteProcessMemory
 192.168.1.2
-192. 168.1.244
 Welcome to use storm ddos
 WriteProcessMemory
 = opcode
@@ -512,13 +462,10 @@ ip
 ip
 natural_language-blacklisted
 iat_function
-@64b1b9d,
-064b1b9d,
 064b169d,
 3d38abdd,
 3d38abdd,
 3d38abdd,
-1ea207dT
 1ea207df
 1ea207df
 7c82cfcd,
@@ -528,12 +475,6 @@ iat_function
 5014fec5,
 5014fec5,
 £4d72143,
-£4d72143,
-£4d72143,
-11c6d9d3,
-11c6d9d3,
-11c6d9d3,
-#5590595,
 5ace954d,
 02858942,
 064b1b9d,
@@ -547,76 +488,45 @@ iat_function
 7c82cfcd,
 7c82cfcd,
 7c82cfcd,
-7c82cfcd,
 5014fec5,
-5014fec5.
 00000000,
 00000000,
-£4d72143,
-£4d72143.
 8270912,
-82770912,
 11c6d9d3,
-11¢6d9d3,
 11c6d9d3,
 11c6d9d3,
 119836c9,
-bf6édbdas,
-d74e84/c,
 d74e847c,
 bce2bd73
-bce2bd7?
 78e0066f
-78e0066f
-http: //www.microsoft.com/PKI/docs/CPS/defat url
 + opcode
 pean SOFTWARE\\Microsoft\\Active Setup\\Install natural_language-blacklisted
 CreateRemoteThread iat_function
 192.168.1. ip
 Storm ddos Server natural_language-blacklisted
-iexplore. exe filename_with_ext
 + opcode
 + opcode
 + opcode
-wuseeaw
 ,- Hierarchical Cluster on DNAHaSh-—ig
 opcode features string features
-es go
 Rule Scoring Mechanism @64b1b9d, 3d38abdd, 7c82cfcd, 5014fec5, £4d72143, 11c6d9d3, *, *
-I
 |
-!
-i file_Index, dna_hash_features !
-|
-!
 \
-4 I
-! f
-i}
 | 1. opcode feature XM
 . |! 2. dna hash feature XN | 1,5 Ha_@,*,Ha_2,...,Ha_6,*,...
 ports Double Cluster on file and feature ----- . | 3. string feature x1 2,3.4, *,Hb_1,...,Hb_5,Hb_6,*,...
 \
-1 [ file_Index, opcode_features ‘ j hj '
 file_Index, string_features | , ! \
 1 =
 ; 1,2,3,4,5, op_1, op_2 1,4,5, ul_1,ul_2 i ie See \ = "CreateFontA" ascii wide
-\ 1,4,5, op_3 ~ a ' a ' V5!kncHaP_E" ascii wide
-2,3,4,5. u2_1,u2_2 | ° -
 4 2,3,4,5, op_4 ia a : 1 threshold ? VENT_SINK_GetIDsOfNames" ascii wide
-\ Z ’ 1 etFileVersionInfoA" ascii wide
-N--------p------------- ----- - - - - ee ee ee a [ne een arma) Come ee MSVBVM60.DLL" ascii wide
 5 _- Rule Compress And Generation ___________}_---
 Ya of ($p*) and dnahash.match_pos(@, 0x21393263) and dnahash.match_pos(3, @xf6a76223) and dnahash.match_pos(4, @x296ff62e)
 subset compression intersection rule merging
 strings:
 1,2,3,4 er A $p1 = {8B45?77BE7C4400000FBE040299F7FEB86410400080EA3F3011FF45??C38B45?76A0599} // sub_401000,xor_dynamic_decrypt
 12,3,
-— 1,2,3,4,6,7 — eine Bi 77 L -- B2 (A & B1)* (A & B2) $p2 = {8BCA83E103F3AAEB??6A046800100000508B43? 70345? ?50FF55??78B0B8B73? 70375? ?8BD18BF8C1E9@2F3A5} // sub_4590B4, shellcode_loader
-Moy / Dar » , ee PY y \ $p3 = {C6457752C645?74EC645?7?45C645??74CC645?733C6457732} // sub_458E9A, shellcode_Loader
 i>! f \ ; $p4 nstall.exe" fullword ascii wide
-SS el Se 7 oN / x Voy + — >A & (B1* B2) $p5 = "MSVCRT_HEAP_SELECT" fullword ascii wide
-ae 4 Me -7% Sieve Seas OY
 \ condition:
 all of ($px*)
 ```
@@ -626,16 +536,6 @@ all of ($px*)
 # Results
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pie hat
-EFINGS
-AUGUST be 2025
-MANDALAY BAY / LAS VEGAS
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 20
 
@@ -655,56 +555,28 @@ Total Families: 151 Samples in Train Set: 17,435 Samples in Test Samples: 58,156
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pis hat
-BRIEFINGS
 Rule Generation Result of Recently Active Malware
 ¢ False positive info On 2.3 million benign samples
 yargen Top 10 False Positive Rules
-win32_Agent.NFD
 Win32_Delf_NAY
 Win32_Spy_CardSpy_NAF
-Win32_AutoRun_VB_8WD
 win32_Agent_OAT
-win32_Flyagent_NGX
-‘Win32_AutoRun_Deif_ RO
 Win32_Agent_ADMM
-win32_Agent, SNx
-win32_Agent_ AAEF 11157
-y y
-iy Ss
-Ss gs
-* ©
 9
-ss
-s
-e &
 ss
 Number of False Positives
 Ilmdyara Top 10 False Positive Rules
 win32_Urelas_AB
-\Win32_TtojanDownloader_ModiLoader_8
-Win32_TrojanDownloader_Small_ PRL
-\win64_Kryptik_FAZ
 win32_Allaple Gen
-win32_Kryptik HMRV
 Unux_Miral_A
-‘win32_Spy_CardSpy_NAF
 9
-s
-s
 Number of False Positives
-Win32_Agent_NFD.
 win32_Pacex_Gen
-win32_Delt_BFX
-Win64_Agent_ABU
-‘win32_Kryptik_AUY
-\Win32_TrojanDropper_Gepys_AA
-‘win32_Genkryptik_CYBX
 Un Lox)
-\Win32_TrojanDropper_Agent_SGF
 500000
 400000
 300000
@@ -747,19 +619,14 @@ AutoYARA
 Yargen
 167035
 135181
-v1)
 121289
 73528
-(7)
 4977
 4028
-(1)
 3204
 229
 2007
 1557
-1)
-v7)
 516014
 Yargen_Gen
 167600
@@ -767,16 +634,12 @@ Yargen_Gen
 279344
 121291
 73560
-)
 5075
 4027
-1)
 3786
 6075
 2005
 2186
-v)
-1)
 820317
 ```
 
@@ -794,16 +657,12 @@ LLMDYara
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pifex hat
-BRIEFINGS
 Rule Generation Result of Recently Active Malware
 Rule Details
-eR EHEAWIN32_Oberal_A_LeeR ERK
-"1A2466363E2F7236296D0CQA1E4353060D54373E074EQQ0AS7347C2D100652080B15244501160E080B151B4FOEQ00D49
-"1A2466363E2F7236296D0CQA1E4353060D54373E074EQQ0AS7347C2D100652080B15244501160E080B151B4FOEQ0QD49
 "1919490C1D4E73031A4F090C1E2C67696B206B690E868665A09A616E6574206D296530207BFFB96705" ascii
 tags:
 rule Rule_Win32_Oberal_A_1
@@ -819,14 +678,12 @@ Yargen
 "Q5044303053D451000520C1D156D551D034F19001A5937104234591D11114D6D656172207365676765" ascii
 AutoYara
 FP est: -@.@ Entropy: 3.0 Found in 318 files
-}
 FP est: -@.@ Entropy: 2.5 Found in 317 files
 } //This might be a string? Looks like:53D0A53
 FP est: -@.@ Entropy: 3.@ Found in 316 files
 FP est: -@.@ Entropy: 3.0 Found in 319 files
 } //This might be a string? Looks Like:nMutexA
 FP est: -@.@ Entropy: 3.@ Found in 317 files
-}
 FP est: -@.@ Entropy: 3.@ Found in 318 files
 } //This might be a string? Looks Like:051A246
 FP est: -@.@ Entropy: 2.75 Found in 318 files
@@ -845,7 +702,6 @@ $s10 =
 $s11 = "1A5937104234591D11114D6D656172207365676765" ascii
 $op0 = { 8b7c24088b4c240c03f833d20Fb6040a }
 $op1 rule Win32_Oberal_A
-$op2
 $op3 //Input TP Rate:
 $op4 /1316/320
 $ops strings:
@@ -858,13 +714,11 @@ $op14 //Benign FP est: -0.0 Malicious
 $op16 //Benign FP est: -@.@ Malicious
 Op. //Benign FP est: -@.@ Malicious
 . ae //Benign FP est: -@.@ Malicious
-| Sa
 $x7 = "9EB3QF16" ascii
 condition:
 FP est: -@.@ Entropy: 3.0 Found in 317 files
 (8 of ($xO,$x1,$x2,$x3,$x4,$x5,$x6,$x7) )
 black_samples_cnt = "320
-strings: 5
 $p1 =
 $p2 =
 $p3 =
@@ -883,17 +737,11 @@ $p15 =
 "CreateMutexA" asc /,
 "CreateToolhelp32S
 "GetLastError" asc /*
-"GetModuleFileName, ’*
-"GetSystemDirector, ,,
 "GetWindowsDirecto ;,
 "Process32First" a) /x
 "Process32Next" as: /*
 "RegCreateKeyA" a /*
-"RegOpenKeyExA" a is
-"RegSetValueExA" |: /,,
 "comment": "Core operation for XOR encryption/decryption"
-7)
-a5)
 16
 17
 18
@@ -933,14 +781,12 @@ all of ($px)
 */
 "SHGetSpecialFolderPathA" ascii wide
 "ShellExecuteA" ascii wide
-{8A06463245??75056FF45??78B75? ?78AQ6468B5D? ?395D??75?78B55? 789557?
 do
 LOBYTE(result) = v10 * *v6;
 v9 = result;
 v8 = x++v11;
 4
 v11 = a3;
-}
 v10 = v8;
 LLMDYara
 ```
@@ -961,23 +807,16 @@ Total Families: 24 Samples in Train Set: 2,162 Samples in Test Samples: 230 Tota
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 65/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-pis hat
-BRIEFINGS
 Rule Generation Result of Malware from AutoYara
 ¢ False positive info On 2.3 million benign samples
 yargen Top 10 False Positive Rules autoyara Top 10 False Positive Rules
-a — volar sens
-exch .2879 356151
 xosn dns er ares olympicdestroyer 354 311477
-pong p30 -ponispyware rossi sekur 217651 )
-rere 8 sorsvne seozs xpantispywar 183451 @
 darkvnc 38624 10
 dragonmess 116
-darkvne 0 baofa 3265
-butt nezchi 7)
 olympicdestroyer 4354
 suproate baofa 3265
 subroate 4296
@@ -987,7 +826,6 @@ lImdyara Top 10 False Positive Rules Total False Positives by Tools
 — ee plurox
 800000 :
 subroat
-700000 . -
 jongiti
 600000
 dragonmess
@@ -997,8 +835,6 @@ dragonmess
 300000
 200000
 100000
-25 355274
-°
 yargen autoyara limdyara
 Tool Name
 Number of False Positives
@@ -1039,13 +875,3 @@ Alibaba Cloud Malicious File Detection Platform
 # Q&A
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pie hat
-EFINGS
-AUGUST be 2025
-MANDALAY BAY / LAS VEGAS
-#BHUSA @BlackHatEvents
-```

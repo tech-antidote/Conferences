@@ -8,12 +8,18 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Hillai Ben-Sasson_BingBang Hacking Bing.com (and much more) with Azure Active Directory.pdf"
 pages: 60
 sha256: "bf0009202cb0a7ceee9cbdf7eef4e2bc812bac97745bb04e07fbebbe73bc8719"
-text_chars: 19249
-ocr_pages: 28
+text_chars: 16433
+ocr_pages: 27
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:17:22Z"
+converted_at: "2026-08-12T04:10:39Z"
 ---
 # BingBang Hacking Bing.com (and much more) with Azure Active Directory
 
@@ -21,21 +27,19 @@ converted_at: "2026-08-11T21:17:22Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Hillai Ben-Sasson_BingBang Hacking Bing.com (and much more) with Azure Active Directory.pdf` (60 pages)
 
+
 ## Slide 1
 
 Hillai Ben-Sasson @hillai
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WIZ Research
-eee https://www.bing.com/
 BE Microsoft Bing
-( BingBangl 9% &@ )
 Hacking Bing.com (and much more)
 with Azure Active Directory
-Hillai Ben-Sasson (@@ @hillai
-pif hat
 USA 2@0es
 ```
 
@@ -108,16 +112,15 @@ App
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 08 microsoftonline.com
-#® Microsoft
 Sign in
 Email or phone
 Can't access your account?
 a4 Sign-in options
-WIZ
 ```
 
 ## Slide 10
@@ -128,7 +131,8 @@ Client
 
 Server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OAuth login request
@@ -141,7 +145,6 @@ Content-Length: 107 sS
 Server
 scope={APP_ID}/.default&client_id={CLIENT_ID}
 &client_secret={CLIENT_SECRET}&grant_type=client_credentials
-WIZ
 ```
 
 ## Slide 11
@@ -152,30 +155,94 @@ Server
 
 ## **OAuth token response**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 76/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-OAuth token response
-"ver": "2.0",
-"aud": "c7bb4ab4-a370-4b06-aa53-bf0aeeel5b80",
-"iss": "https://login.microsoftonline.com/63d43bfd-1337-43f2-82d4-f67bd1lfcf8ac/v2.0",
-"tid": "63d43bfd-1337-43f2-82d4-f67bd1fcf8ac",
-"oid": "c028ba59-3b92-1337-9caf-e00007af7c44",
-"sub": "c028ba59-3b92-1337-9caf-e00007af7c44", —
-"nbf": ; Server
-"exp": >
-"ato": "RXZlcnloaW5nSXNTdGluZ2FibGU=",
-"azp": "al56fa48-408b-4de4-1337-427b6c616e7b",
-"azpacr": "1",
-"rh": "SGLSbGFpV2FzSGVyZQ==",
-"uti": "V2lL6UmMVZZWFyY2hSdwWxleg=="
+Factory Mode
+
+[left panel]
+public void onReceiveData(IIpcService.IpcMessageEvent ipcMessageEvent) {
+    ...
+    switch (c) {
+        case 0:
+            if (msgID == 1001) {
+                String string = payloadData.getString(IpcConfig.IPCKey.STRING_MSG);
+                if (!TextUtils.isEmpty(string)) {
+                    c.b("SecurityCheckService", "onReceive-----> code = " + string);
+                    if (this.f1165a.g(string)) {
+                        c.b("SecurityCheckService", string + " isSecretKey.");
+                        this.f1165a.a(string, getApplicationContext());
+                        return;
+                    } else if (com.car.devtools.a.c.c.a(string)) {
+                        c.b("SecurityCheckService", string + " isFactoryCode.");
+                        this.f1165a.b(string, getApplicationContext());
+                        return;
+                    } else {
+                        return;
+    ...
+
+public boolean a(String str, String str2) {
+    this.b = b.b(str);
+    c.b("SecurityCheckPresenter", " verifySecretKey() mCateId:" + this.b);
+    int e = e(this.b);
+    if (e >= 50) {
+        c.b("SecurityCheckPresenter", String.format(MyApplication.a().getString(R.string.text_
+        return false;
+    }
+    return b.c(str2, str);
+}
+
+[right panel]
+public static boolean c(String str, String str2) {
+    if (TextUtils.isEmpty(str2)) {
+return false;
+    }
+    String a2 = a(str, str2);
+    com.xiaopeng.lib.b.c.a("FactoryCodeModel", "Current Code " + str2 + "'s mSecretKey is: " + a2);
+    return str2.equals(a2);        check input
+}
+
+public static String a(String str, String str2) {
+    return b(str, b(str2));
+}
+
+public static String b(String str, String str2) {
+    if (TextUtils.isEmpty(str2)) {
+        return "";
+    }
+    int i = 0;
+    try {
+        i = Integer.valueOf(str2).intValue();
+    }
+    catch (Exception e) {
+        com.xiaopeng.lib.b.c.e("FactoryCodeModel", e.getMessage());
+    }
+    return a(str, i);
+}
+
+private static String a(String str, int i) {
+    char[] charArray = str.toCharArray();
+    int i2 = 0;
+    for (int i3 = 0; i3 < charArray.length; i3++) {
+        i2 = i2 + (charArray[i3] * i3 * 77) + i;
+    }
+    String format = new DecimalFormat("00000000").format(Math.abs(i2));
+    if (format.length() > 8) {
+        format = format.substring(0, 9);
+    }
+return "*#0000*" + i + "*" + format + "#*";
+}
+
+The code invokes factory mode authentication
 ```
 
 ## Slide 12
 
 **AAD Flaws**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AAD Flaws
@@ -199,31 +266,84 @@ O Personal Microsoft accounts only
 
 **Shared responsibility model**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Shared responsibility model
-"2.0",
-"c7bb4ab4-a370-4b06-aa53-bf0aeee15b80" ,
-"https://login.microsoftonline. com/63d43bfd-1337-43f2-82d4-f67bd1fcf8ac/v2.0",
-"63d43bfd-1337-43f2-82d4-f67bd1fcf8ac",
-"¢028ba59-3b92-1337-9caf-e00007af7c44",
-: "c028ba59-3b92-1337-9caf-e00007af7c44",
-: 1362663420,
-: 1362663420,
-: 1337663420,
-"RXZLcn LoaW5nSXNTdGluZ2FibGU=",
-: "al56fa48-408b-4de4-1337-427b6c616e7b" ,
-"azpacr": "1",
-"rh": "SGLSbGFpV2FzSGVyZQ==",
-"uti": "V2L6UmVZZWFyY2hSdwWxleg=="
+TLSRpcRetrieveTermServCert
+
+[Wireshark window: TLSRpcRetrieveTermServCert.pcap]
+File  Edit  View  Go  Capture  Analyze  Statistics  Telephony  Wireless  Tools  Help
+Apply a display filter ... <Ctrl-/>
+
+No.     Time       Source           Destination      Protocol  Length  Info
+14 0.004067   192.168.80.1     192.168.80.128   TCP         54 10207 -> 49674 [ACK] Seq=1 Ack=1 Win=1049600 Len=0
+15 0.025550   192.168.80.1     192.168.80.128   DCERPC     166 Bind: call_id: 1, Fragment: Single, 1 context items: 3d267954-eeb7-11d1-b94e-00c04fa3080d V1.0 (32bit NDR), NTLMSSP_NEGOTIATE
+16 0.025914   192.168.80.128   192.168.80.1     DCERPC     360 Bind_ack: call_id: 1, Fragment: Single, max_xmit: 4280 max_recv: 4280, 1 results: Acceptance, NTLMSSP_CHALLENGE
+17 0.029656   192.168.80.1     192.168.80.128   DCERPC     163 AUTH3: call_id: 1, Fragment: Single, NTLMSSP_AUTH, User: \
+18 0.046319   192.168.80.128   192.168.80.1     TCP         54 49674 -> 10207 [ACK] Seq=307 Ack=222 Win=65280 Len=0
+19 0.046340   192.168.80.1     192.168.80.128   DCERPC      78 Request: call_id: 2, Fragment: Single, opnum: 1, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+20 0.046552   192.168.80.128   192.168.80.1     DCERPC     102 Response: call_id: 2, Fragment: Single, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+21 0.047508   192.168.80.1     192.168.80.128   DCERPC     106 Request: call_id: 3, Fragment: Single, opnum: 0, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+22 0.047777   192.168.80.128   192.168.80.1     DCERPC      86 Response: call_id: 3, Fragment: Single, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+23 0.049946   192.168.80.1     192.168.80.128   DCERPC     262 Request: call_id: 4, Fragment: Single, opnum: 34, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+24 0.050221   192.168.80.128   192.168.80.1     DCERPC     110 Response: call_id: 4, Fragment: Single, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25 0.051342   192.168.80.1     192.168.80.128   DCERPC     150 Request: call_id: 5, Fragment: Single, opnum: 35, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+26 0.057892   192.168.80.128   192.168.80.1     TCP       1514 49674 -> 10207 [ACK] Seq=443 Ack=602 Win=64768 Len=1460 [TCP segment of a reassembled PDU]
+27 0.057924   192.168.80.128   192.168.80.1     TCP       1514 49674 -> 10207 [ACK] Seq=1903 Ack=602 Win=64768 Len=1460 [TCP segment of a reassembled PDU]
+28 0.057935   192.168.80.1     192.168.80.128   TCP         54 10207 -> 49674 [ACK] Seq=602 Ack=3363 Win=1049600 Len=0
+29 0.057963   192.168.80.128   192.168.80.1     DCERPC    1414 Response: call_id: 5, Fragment: 1st, Ctx: 0 [DCE/RPC 1st fragment, reas: #30]
+30 0.058056   192.168.80.128   192.168.80.1     DCERPC     834 Response: call_id: 5, Fragment: Last, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+31 0.058070   192.168.80.1     192.168.80.128   TCP         54 10207 -> 49674 [ACK] Seq=602 Ack=5503 Win=1049600 Len=0
+32 0.059124   192.168.80.1     192.168.80.128   TCP         54 10207 -> 49674 [FIN, ACK] Seq=602 Ack=5503 Win=1049600 Len=0
+33 0.059278   192.168.80.128   192.168.80.1     TCP         54 49674 -> 10207 [ACK] Seq=5503 Ack=603 Win=64768 Len=0
+
+> Frame 29: 1414 bytes on wire (11312 bits), 1414 bytes captured (11312 bits)
+> Ethernet II, Src: VMware_48:9a:20 (00:0c:29:48:9a:20), Dst: VMware_c0:00:01 (00:50:56:c0:00:01)
+> Internet Protocol Version 4, Src: 192.168.80.128, Dst: 192.168.80.1
+> Transmission Control Protocol, Src Port: 49674, Dst Port: 10207, Seq: 3363, Ack: 602, Len: 1360
+> [3 Reassembled TCP Segments (4280 bytes): #26(1460), #27(1460), #29(1360)]
+> Distributed Computing Environment / Remote Procedure Call (DCE/RPC) Response, Fragment: 1st, FragLen: 4280, Call: 5, Ctx: 0, [Req: #2   [line clipped by pane edge]
+
+0f20  d0 61 ba 18 e3 c7 42 fa   44 5f a4 f6 c9 d5 3f 74   .a....B. D_....?t
+0f30  99 38 bf f2 25 3d 4f de   12 da 4e ea 88 e8 68 cf   .8..%=O. ..N...h.
+0f40  b6 74 e4 5b 7c f1 30 6b   a0 af 65 e7 2a 68 33 7c   .t.[|.0k ..e.*h3|
+0f50  b2 0a a6 99 8c 86 b8 e4   9a 60 57 58 f5 12 50 58   ........ .`WX..PX
+0f60  68 a0 a4 41 da 22 23 6a   75 15 75 a7 32 1a 04 00   h..A."#j u.u.2...
+0f70  00 30 82 04 16 30 82 03   02 a0 03 02 01 02 02 05   .0...0.. ........
+0f80  01 00 00 00 05 30 09 06   05 2b 0e 03 02 1d 05 00   .....0.. .+......
+0f90  30 0e 31 0c 30 0a 06 03   55 04 03 13 03 63 63 63   0.1.0... U....ccc
+0fa0  30 1e 17 0d 32 34 31 31   31 32 32 32 32 32 31 36   0...2411 12222216
+0fb0  5a 17 0d 33 38 30 31 31   39 30 33 31 34 30 37 5a   Z..38011 9031407Z
+0fc0  30 81 ac 31 81 a9 30 27   06 03 55 04 03 1e 20 00   0..1..0' ..U... .
+0fd0  6e 00 63 00 61 00 63 00   6e 00 5f 00 69 00 70 00   n.c.a.c. n._.i.p.
+0fe0  5f 00 74 00 63 00 70 00   3a 00 31 00 39 00 32 30   _.t.c.p. :.1.9.20
+0ff0  39 06 03 55 04 07 1e 32   00 6e 00 63 00 61 00 63   9..U...2 .n.c.a.c
+1000  00 6e 00 5f 00 69 00 70   00 5f 00 74 00 63 00 70   .n._.i.p ._.t.c.p
+1010  00 3a 00 31 00 39 00 32   00 2e 00 31 00 36 00 38   .:.1.9.2 ...1.6.8
+1020  00 2e 00 38 00 30 00 2e   00 31 30 43 06 03 55 04   ...8.0.. .10C..U.
+1030  05 1e 3c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   ..<.Z.W. V.l.Z.W.
+1040  56 00 6c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   V.l.Z.W. V.l.Z.W.
+1050  56 00 6c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   V.l.Z.W. V.l.Z.W.
+1060  56 00 6c 00 5a 00 57 00   55 00 3d 00 0d 00 0a 30   V.l.Z.W. U.=....0
+1070  12 30 0d 06 09 2a 86 48   86 f7 0d 01 01 01 05 00   .0...*.H ........
+1080  03 01 00 a3 82 01 f4 30   82 01 f0 30 14 06 09 2b   .......0 ...0...+
+1090  06 01 04 01 82 37 12 04   01 01 ff 04 04 01 00 05   .....7.. ........
+10a0  00 30 3c 06 09 2b 06 01   04 01 82 37 12 02 01 01   .0<..+.. ...7....
+10b0  ff 04 2c 4d 00 69 00 63                             ..,M.i.c
+
+[red annotation with arrow to the highlighted bytes at 0ff0-1030]  192.168.80.10
+
+Frame (1414 bytes)   Reassembled TCP (4280 bytes)
+TLSRpcRetrieveTermServCert.pcap        Packets: 47 - Displayed: 47 (100.0%)        Profile: Default
 ```
 
 ## Slide 14
 
 **OAuth login request**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OAuth login request
@@ -235,46 +355,45 @@ Content-Type: application/x—www-form—-urlencoded
 Content-Length: 107
 scope={APP_ID}/.default&c Lient_id={CLIENT_ID}
 &client_secret={CLIENT_SECRET}&grant_type=client_credentials
-WIZ
 ```
 
 ## Slide 15
 
 **OAuth login request**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OAuth login request
 {MY_TENANT_ID}
-WIZ
 ```
 
 ## Slide 16
 
 **OAuth login request**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OAuth login request
 {YOUR_TENANT_ID}
-WIZ
 ```
 
 ## Slide 17
 
-```
+\```
 User    =  Hillai Ben-Sasson
 Tenant  =Wiz Research
-```
+\```
 
 ## Slide 18
 
-```
+\```
 User    =  Hillai Ben-Sasson
 Tenant  =Your company here
-```
+\```
 
 ## Slide 19
 
@@ -348,23 +467,23 @@ Get Azure App Service domains Throw away non-existent apps Find AAD apps Filter 
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 08 microsoftonline.com
-#® Microsoft
 Sign in
 Email or phone
 Can't access your account?
 a4 Sign-in options
-WIZ
 ```
 
 ## Slide 30
 
 Get Azure App Service domains Throw away non-existent apps Find AAD apps Filter multi-tenant configurations Log in
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Get Azure App Service domains
@@ -372,26 +491,25 @@ Throw away non-existent apps
 Find AAD apps
 Filter multi-tenant configurations
 Log in
-WIZ
 ```
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 08 microsoftonline.com
-#® Microsoft
 Sign in
 Email or phone
 Can't access your account?
 a4 Sign-in options
-WIZ
 ```
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 <!DOCTYPE html>
@@ -408,30 +526,18 @@ rel="dns-prefetch" href="//aadcdn.msauth.net">
 dns-prefetch" href="//aadcdn.msftauth.net">
 PageID" content="ConvergedSignIn"
 SiteID" conten
-"ReqLC" content:
 a name="LocLC" content="en-US"
 a name="format-detection" content="telephone=no"
 ript>
 neta http-equiv="Refresh" content="0; URL=https://login.microsoftonline.com/jsdisabled"
 name="robots" content=
-type="text/ javascript"
-fig={"fShowPersistentCookiesWarning": false, “urlMsaSignUp":"https://login. live. com/oauth20_autho
 script
 cript type="text/javascript"
 !function(){var e=window, r=e.$Debug=e.$Debug| |{}, . $Config| |{};if(!r.appendLog){var n=[],0=0;r.ap
-r c=t(i, !e);if(a&Sa.length>0){for(var d=a. length, l=0;l<d;1++){c.push(all] )}}0.apply(r,c)}catch(e)
 (var c=u;c<arguments.length;c++){s.push(arguments[c])}t instanceof Array?e(t,i):i(t)},o.reg
-=o. removeItems[c] , l=0;1<o.q. Length; l++){if(o.q[1]===d){o.q.splice(1,1) k}}}o.removelte
-r.addEventListener?(r.removeEventListener("DOMContentLoaded" ,o, !1),e.removeEventListener( "load",
-f.$Config| |f.ServerData| |{}}function r(e,r){var t=f.$Debug;t&&t.appendLo
 r r=e.index0f("?"),t=r>-1?r:e. length,n=e. lastIndex0f(".",t);return e.substring(n,n+h.length).toLo
 ===a.length){ !0}}return!1}function c(){fur 1 t(e){g.getElementsByTagName( "head" )
-r=g.createElement("script"),t=g.querySelector("script[nonce]");if(r.type="text/javascript",r.sr
-dex0f(t[n])){va [n+1<t.length?n+1:0],i=r.substring(t[n].length);return"https://"!
 h(e,t,n,o){if eturn f(e,t,n,o)}r("[$Loader]: "+(w.successMessage| | "Loaded"),0),v(e+
-s.readyState?setTimeout( function( ){h(e,o0,i,s)}, :"complete s.readyState&&h(e,o0,i,s
-||e.href||"" Add(t, "AddForReload",e. integrity, 1,e.tagName,r)},w.AddIf=function(e,r,t){
-jd. failMessage="Reload Failed" ,d.successMessage="Reload Success",d.Load(null, function( ){if(o){thro
 u.Load(null, function( ){if(o){throw"Failed to load external resource [' wey"y: (document .locatio
 y.fbundle=null,delete y.fbundle,e.Add(y.bundle, "WebWatson_DemandLoaded"),e.Load(r,t),$=!0}}function
 e.setRequestHeader( "Content-Type", "application/json; charset=UTF-8"),e.setRequestHeader( "canary"
@@ -439,31 +545,20 @@ e.setRequestHeader( "Content-Type", "application/json; charset=UTF-8"),e.setRequ
 }fur 1 a(e,r,t,n,o,i,a){var s=v.event;r n i[|(i=l(o| |s,a?a+2:2)),v.$Debug&&v. $Debug. appendLog
 freturn r}function d(e){if(!e){return null}try{if(e.stack){return u(e.stack)}if(e.error){if(e.error
 var l=d(e);return 1&&(t.push(s(" Error Event Stack - -",01)), -concat(1l)),t}func
-if(jQuery?(r.push("jQuery v:"+jQuery(). jquery), jQuery.easing?r.push("jQuery.easing:"+JSON.stringify
-1=0; i<b. length; i++){var 5 Uf (a&&" submit "===a. cmdName ){try{if(JSONSGISON. stringify){var
-ar t=r.split("."),n=t.length,o=0; &&nul lt == oid O!==e; ){e=e[t[o++]]}return e}function r(r
 ion o(t){var n=null;return null= &(s=e(i,"$Config.urls")),null!==s& (n=e(s,t.toLowerCase
 cript:
 t type="text/javascript">
-n(t,e){!function( ){var n=e.getElementsByTagName( "head" )[0] ;n&&n. addEventListener&&(n.addEve
 jone
-WIZ
 ```
 
 ## Slide 33
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-"isGlobalTenant": true,
-WIZ
-```
 
 ## Slide 34
 
 Get Azure App Service domains Throw away non-existent apps Find AAD apps Filter multi-tenant configurations Log in
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Get Azure App Service domains
@@ -471,7 +566,6 @@ Throw away non-existent apps
 Find AAD apps
 Filter multi-tenant configurations
 Log in
-WIZ
 ```
 
 ## Slide 35
@@ -500,45 +594,102 @@ Who has the best bug bounty program?
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-"@odata.context": "https://graph.microsoft.com/v1.0/$metadata#servicePrincipals/gentity",
-"id": "4f41e6c2-52a5-4a54-b207-3b02dd8b6d95",
-"deletedDateTime": null,
-"“accountEnabled": true,
-“alternativeNames": [],
-"appDisplayName": "bingtriviav8",
-"appDescription": null,
-"appId": "92b2243e-b03e-45cc-bfb6-ccfe9abaf376",
-"“applicationTemplateId": null,
-“appOwnerOrganizationId": "72f988bf-86f1-41laf-9lab-2d7cd011db47",
-"appRoleAssignmentRequired": false,
-"createdDateTime": null,
-"description": null,
-"disabledByMicrosoftStatus": null,
-"displayName": "bingtriviav8",
-"homepage": "https://bingtrivia.azurewebsites.net",
-"LoginUrl": null,
-"LogoutUrl": null,
-"notes": null,
-"notificationEmailAddresses": [],
-"preferredSingleSignOnMode": null,
-"preferredTokenSigningKeyThumbprint": null,
-"replyUrls": [
-"https://bingtrivia.azurewebsites.net/.auth/login/aad/callback"
-Ip
-"servicePrincipalNames": [
-"Q2b2243e-b03e-45cc-bfb6-ccfe9abaf376",
-“apt: //92b2243e-b03e-45cc-bfb6-ccfe9abaf376"
-lp
-"servicePrincipalType": "Application",
-"signInAudience": "AzureADMultipleOrgs",
+Leak heap address
+
+[Wireshark find bar]
+Packet details v   Narrow & Wide v   [ ] Case sensitive   Hex value v   01 88 87 00 02 59        Find    Cancel
+
+No.     Time        Source                   Destination      Protocol  Length  Info
+25954 30.108300   192.168.80.128           192.168.80.1     DCERPC     110 Response: call_id: 8611, Fragment: Single, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25955 30.108964   192.168.80.1             192.168.80.128   DCERPC     150 Request: call_id: 8612, Fragment: Single, opnum: 35, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25956 30.111205   192.168.80.128           192.168.80.1     TCP       1514 51836 -> 12644 [ACK] Seq=9105663 Ack=3552662 Win=64768 Len=1460 [TCP segment of a reassembled PDU]
+25957 30.111223   192.168.80.128           192.168.80.1     TCP       1514 51836 -> 12644 [ACK] Seq=9107123 Ack=3552662 Win=64768 Len=1460 [TCP segment of a reassembled PDU]
+25958 30.111230   192.168.80.1             192.168.80.128   TCP         54 12644 -> 51836 [ACK] Seq=3552662 Ack=9108583 Win=131328 Len=0
+25959 30.111235   192.168.80.128           192.168.80.1     DCERPC    1414 Response: call_id: 8612, Fragment: 1st, Ctx: 0 [DCE/RPC 1st fragment, reas: #25960]
+25960 30.111401   192.168.80.128           192.168.80.1     DCERPC     834 Response: call_id: 8612, Fragment: Last, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25961 30.111411   192.168.80.1             192.168.80.128   TCP         54 12644 -> 51836 [ACK] Seq=3552662 Ack=9110723 Win=131328 Len=0
+25962 30.113115   192.168.80.1             192.168.80.128   DCERPC     262 Request: call_id: 8613, Fragment: Single, opnum: 34, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25963 30.113249   192.168.80.128           192.168.80.1     DCERPC     110 Response: call_id: 8613, Fragment: Single, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25964 30.113941   192.168.80.1             192.168.80.128   DCERPC     150 Request: call_id: 8614, Fragment: Single, opnum: 35, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25965 30.116186   192.168.80.128           192.168.80.1     TCP       1514 51836 -> 12644 [ACK] Seq=9110779 Ack=3552966 Win=64512 Len=1460 [TCP segment of a reassembled PDU]
+25966 30.116203   192.168.80.128           192.168.80.1     TCP       1514 51836 -> 12644 [ACK] Seq=9112239 Ack=3552966 Win=64512 Len=1460 [TCP segment of a reassembled PDU]
+25967 30.116211   192.168.80.1             192.168.80.128   TCP         54 12644 -> 51836 [ACK] Seq=3552966 Ack=9113699 Win=131328 Len=0
+25968 30.116217   192.168.80.128           192.168.80.1     DCERPC    1414 Response: call_id: 8614, Fragment: 1st, Ctx: 0 [DCE/RPC 1st fragment, reas: #25969]
+25969 30.116342   192.168.80.128           192.168.80.1     DCERPC     762 Response: call_id: 8614, Fragment: Last, Ctx: 0 3d267954-eeb7-11d1-b94e-00c04fa3080d V1
+25970 30.116355   192.168.80.1             192.168.80.128   TCP         54 12644 -> 51836 [ACK] Seq=3552966 Ack=9115767 Win=131328 Len=0
+25971 30.834609   192.168.80.1             224.0.0.251      MDNS        85 Standard query 0x0000 PTR _microsoft_mcc._tcp.local, "QM" question
+25972 30.834978   fe80::fd2a:a43e:65bf:30e1  ff02::fb       MDNS       105 Standard query 0x0000 PTR _microsoft_mcc._tcp.local, "QM" question
+
+[WinDbg window]
+Command - [tcp:server=192.168.80.128,port=12345] Process with service TermServLicensing -...
+ModLoad: 00007ff8`11b00000 00007ff8`11b0b000   C:\Windows\System32\rasadhlp.dll   [row clipped by window top edge]
+ModLoad: 00007ff8`1c800000 00007ff8`1c8a8000   C:\WINDOWS\System32\clbcatq.dll
+ModLoad: 00007ff8`15d10000 00007ff8`15f4e000   C:\Windows\System32\msxml6.dll
+ModLoad: 00007ff8`1acb0000 00007ff8`1acbc000   C:\WINDOWS\System32\CRYPTBASE.DLL
+ModLoad: 00007ff8`1ad00000 00007ff8`1ad13000   C:\WINDOWS\System32\MSASN1.dll
+ModLoad: 00007ff8`0c1c0000 00007ff8`0c1ce000   C:\WINDOWS\system32\tls236.dll
+ModLoad: 00007ff8`1ac90000 00007ff8`1acac000   C:\WINDOWS\System32\CRYPTSP.dll
+ModLoad: 00007ff8`1a5d0000 00007ff8`1a608000   C:\WINDOWS\system32\rsaenh.dll
+ModLoad: 00007ff8`1b590000 00007ff8`1b5b4000   C:\WINDOWS\system32\profapi.dll
+ModLoad: 00007ff8`1aab0000 00007ff8`1aadb000   C:\WINDOWS\system32\USERENV.dll
+ModLoad: 00007ff8`1ae90000 00007ff8`1aec0000   C:\WINDOWS\System32\ncrypt.dll
+ModLoad: 00007ff8`1ae40000 00007ff8`1ae7f000   C:\WINDOWS\System32\NTASN1.dll
+ModLoad: 00007ff8`0f930000 00007ff8`0f95a000   c:\windows\system32\SAMLIB.dll
+ModLoad: 00007ff8`11f50000 00007ff8`11fc8000   C:\WINDOWS\System32\ES.DLL
+ModLoad: 00007ff8`10f60000 00007ff8`11053000   C:\WINDOWS\System32\PROPSYS.dll
+ModLoad: 00007ff8`1a980000 00007ff8`1aa0b000   C:\WINDOWS\system32\msv1_0.DLL
+ModLoad: 00007ff8`1a960000 00007ff8`1a977000   C:\WINDOWS\system32\NtlmShared.dll
+(1f40.1db0): Break instruction exception - code 80000003 (first chance)
+ntdll!DbgBreakPoint:
+00007ff8`1e363440 cc              int     3
+0:014> !heap
+        Heap Address      NT/Segment Heap
+
+    0000025987000000          Segment Heap
+
+0:014>
+
+0f00  c3 4e 8e 02 69 ca be fa   e9 d9 ef c9 1d fb b8 e2   .N..i... ........
+0f10  49 b9 67 0a 6a 06 20 5b   da 23 76 43 dc 06 5d cb   I.g.j. [ .#vC..].
+0f20  d0 61 ba 18 e3 c7 42 fa   44 5f a4 f6 c9 d5 3f 74   .a....B. D_....?t
+0f30  99 38 bf f2 25 3d 4f de   12 da 4e ea 88 e8 68 cf   .8..%=O. ..N...h.
+0f40  b6 74 e4 5b 7c f1 30 6b   a0 af 65 e7 2a 68 33 7c   .t.[|.0k ..e.*h3|
+0f50  b2 0a a6 99 8c 86 b8 e4   9a 60 57 58 f5 12 50 58   ........ .`WX..PX
+0f60  68 a0 a4 41 da 22 23 6a   75 15 75 a7 32 d2 03 00   h..A."#j u.u.2...
+0f70  00 30 82 03 ce 30 82 02   ba a0 03 02 01 02 02 05   .0...0.. ........
+0f80  01 00 00 10 17 30 09 06   05 2b 0e 03 02 1d 05 00   .....0.. .+......
+0f90  30 0e 31 0c 30 0a 06 03   55 04 03 13 03 63 63 63   0.1.0... U....ccc
+0fa0  30 1e 17 0d [obscured by red annotation]            [obscured]
+0fb0  5a 17 0d 33 38 30 31 31   39 30 33 31 34 30 37 5a   Z..38011 9031407Z
+0fc0  30 65 31 63 30 0d 06 03   55 04 03 1e 06 01 88 87   0e1c0... U.......
+0fd0  00 02 59 30 0d 06 03 55   04 07 1e 06 01 88 87 00   ..Y0...U ........
+0fe0  02 59 30 43 06 03 55 04   05 1e 3c 00 5a 00 57 00   .Y0C..U. ..<.Z.W.
+0ff0  56 00 6c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   V.l.Z.W. V.l.Z.W.
+1000  56 00 6c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   V.l.Z.W. V.l.Z.W.
+1010  56 00 6c 00 5a 00 57 00   56 00 6c 00 5a 00 57 00   V.l.Z.W. V.l.Z.W.
+1020  55 00 3d 00 0d 00 0a 30   12 30 0d 06 09 2a 86 48   U.=....0 .0...*.H
+1030  86 f7 0d 01 01 01 05 00   03 01 00 a3 82 01 f4 30   ........ .......0
+1040  82 01 f0 30 14 06 09 2b   06 01 04 01 82 37 12 04   ...0...+ .....7..
+1050  01 01 ff 04 04 01 00 05   00 30 3c 06 09 2b 06 01   ........ .0<..+..
+1060  04 01 82 37 12 02 01 01   ff 04 2c 4d 00 69 00 63   ...7.... ..,M.i.c
+1070  00 72 00 6f 00 73 00 6f   00 66 00 74 00 20 00 43   .r.o.s.o .f.t. .C
+1080  00 6f 00 72 00 70 00 6f   00 72 00 61 00 74 00 69   .o.r.p.o .r.a.t.i
+1090  00 6f 00 6e 00 00 00 30   81 dd 06 09 2b 06 01 04   .o.n...0 ....+...
+
+[red annotation, arrow from the highlighted "01 88 / 87 00" and "02 59" boxes to the WinDbg heap address]
+0x025987000188 = 0x025987000000 + 0x188
+
+Frame (1414 bytes)   Reassembled TCP (4280 bytes)
 ```
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "appOwnerOrganizationId": "72f988bf-86f1-4laf-9lab-2d7cd011db47",
@@ -548,22 +699,18 @@ lp
 
 **Microsoft findings**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft findings
-- om: ys.azurewebsites.net
 * col -2.azurewebsites.net
 * poli t.microsoft.com
-* con : ——_ -1.azurewebsites.net
 «bin a.azurewebsites.net
 * con ‘5.azurewebsites.net
-* om s.azurewebsites.net
-* co . . v1-1.azurewebsites.net
 * po -microsoft.com
 * con -2.azurewebsites.net
 * po .microsoft.com
-WIZ
 * CO ‘ ‘ 1-2.azurewebsites.net
 ```
 
@@ -573,22 +720,19 @@ WIZ
 
 - bingtrivia.azurewebsites.net
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft findings
-*- om: js.azurewebsites.net
 * co -2.azurewebsites.net
-* poli t.microsoft.com
 * con ; -1.azurewebsites.net
 ¢ bingtrivia.azurewebsites.net
-* con ‘3.azurewebsites.net
 ° m s.azurewebsites.net
 * co v1-1.azurewebsites.net
 * po -microsoft.com
 * con -2.azurewebsites.net
 * po -microsoft.com
-WIZ
 ° co 1-2.azurewebsites.net
 ```
 
@@ -600,17 +744,16 @@ WIZ
 
 **Bing for Work**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bing for Work
-&@ bing.com
 LATEST FROM WIZ Show info from Wiz COD
 Popular searches Coming up im Recent files a
 me my office Q
 Only users with permission will see your files and info. QO
 Learn more See more See more
-WIZ
 ```
 
 ## Slide 44
@@ -649,20 +792,16 @@ Office
 
 **Work for Bing**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Work for Bing
-eee
 <script>
 fetch("https://business.bing.com/api/v3/user/token/Substrate", {credentials: "include"})
 .then((res) => res.json()).then( function(data){
-console. log( Logged in as ${data.user.displayName} (${data.user.userPrincipalName})~ );
 console.log( User ID is ${data.user.id}, Tenant ID is ${data.tenant.id}° );
-console. log( Generated Office 365 token:\n${data.token}  );
-IP))E
 </script>
-WIZ
 ```
 
 ## Slide 47
@@ -671,7 +810,8 @@ WIZ
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Welcome
@@ -689,28 +829,20 @@ STORYI
 URL
 (URL1] Import Story
 TITLE
-[HEADLINE] ]
 ABSTRACT
 [ABSTRACTI] [HEADLINE1]
-IMAGEURL.
-http://img-s-msn-com.akamaized.net/tenant/amp/en! [ABSTRACT 1]
 PROVIDER
-(PARTNER 1] ¥ [PARTNER1]
 LOGO
-https://img-s-msn-com.akamaized.net/tenanvamp/et
-TUCAMI INE
-WIZ
 ```
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ swecger Select detnton
 SMARTBEAR
 Centralized Notification Service (CNS) API“
-/swagger!v1/swagger.json
 Servers
 [ https://es-cns-ppe.azurewebsites.net v
 TeamsMember “a
@@ -731,16 +863,14 @@ Publication A WIZ
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ swagger Select a definition
-'SMARTBEAR
 Contact Center API Gateway - Profile®
-/swagger/v1/swagger.json
 Profile Service APIs
 AgentGroups Vv
-/AgentGroups Get all agent groups.
 E /AgentGroups/{surveyId} Get agent group by survey id.
 /AgentGroups/Routing Create routing agent group.
 /AgentGroups/Reporting Create reporting agent group.
@@ -751,14 +881,13 @@ BusinessPrograms Vv
 /BusinessPrograms Create a business program.
 /BusinessPrograms/ {code} Get business program by code.
 /BusinessPrograms/{code} Update business program.
-| b)383)-9) /BusinessPrograms/ {code} Delete business program by code.
 BusinessSegments Vv
-WIZ
 ```
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PoliCheck term data
@@ -775,25 +904,22 @@ Search By Textbox/Language
 Terms Per Page: |50 ~| Total Terms: 2789
 Action/
 Severity Context Racommandation For More Information
-Pe %
 © ‘© English 2 Geopolitical REMOVE
-&
 © ‘© English 2 Geopolitical REMOVE
 Leave term
 unchanged
-©® °
 English 2 Accessibility
 REMOVE
 Leave term
 unchanged
 English 2 Accessibility
 REMOVE
-WIZ
 ```
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 powerautomate.microsoft.com
@@ -809,17 +935,15 @@ Two new actions are available in the flow designer, called ‘Region’ and ‘E
 sets of actions together for better flow management purposes.
 o/ Run subflow Login_to_terminal
 o/” Run subflow Terminal_screen_navigation
-WIZ
 ```
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-©) A Microsoft Flow Blogs
 @ Dashboard
-> Posts
 All Posts
 Add New
 oO, Media
@@ -847,7 +971,6 @@ have been added, as described below.
 Two new actions are available in the flow designer, called ‘Region’ and ‘End region’, which
 help group and organize sets of actions together for better flow management purposes.
 <img class="alignnone wp-image-9718 size-full" src="/wp-content/uploads/2023/02/Region-
-nnn nL WAVa Wadaka WoeaW 7
 Publish a
 Preview Changes
 f Status: Published Edit
@@ -857,19 +980,17 @@ Categories a
 All Categories Most Used
 Vv) Product updates
 Developers
-WIZ
 ```
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-OOOO ee eT
 Storage Utilization for MSFT ® = ! 7
 Cluster Filter: All / 08-CO3C / 09-CO3C / 11-CY2 / 12-CY2/14-CY2/15-CY/17-_ Data Access Time Window: 7d / 30d / 60d /
 co 90d
-WIZ
 ```
 
 ## Slide 55

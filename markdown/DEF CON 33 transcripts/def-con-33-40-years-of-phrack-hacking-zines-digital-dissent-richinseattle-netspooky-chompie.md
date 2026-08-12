@@ -12,7 +12,7 @@ duration_seconds: 2546
 words: 6646
 text_chars: 35788
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:12Z"
 ---
 
 # 40 Years Of Phrack - Hacking, Zines & Digital Dissent

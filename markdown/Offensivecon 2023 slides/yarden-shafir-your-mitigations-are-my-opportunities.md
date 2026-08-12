@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Offensivecon 2023 slides/Yarden Shafir_Your Mitigations are My Opportunities.pdf"
 pages: 31
 sha256: "d8d140d3dded6c044dfe02953ed89b382e70a5cf890ccbe4923d55204ca7a1c8"
-text_chars: 13852
+text_chars: 13013
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:23:58Z"
+converted_at: "2026-08-12T06:00:23Z"
 ---
 # Your Mitigations are My Opportunities
 
 **Speakers:** Yarden Shafir  
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Yarden Shafir_Your Mitigations are My Opportunities.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -223,7 +228,8 @@ Demo
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Operational Number of events:
@@ -233,8 +239,6 @@ Date and Time Source Event ID Task Category
 ) Information 2/11/2023 3:52:51 PM Codelntegrity 3089 (1)
 2/11/2023 3:52:51 PM Codelntegrity 3004 (1)
 1) Warning 2/11/2023 3:50:27 PM Codelntegrity 3073 (1)
-(DI Infrnematinn 914119072 2-CN.9E DNA Cadalntancit: 2naa
-eee!
 Event 3073, Codelntegrity
 General Details
 Code Integrity determined that the module \Device\HarddiskVolume3\Windows\System 32\drivers\CrowdStrike\C SAgent.sys is
@@ -266,23 +270,20 @@ More Information: Event Log Online Help
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Tools
 Info Help
 Name Value KDRIVER: * “
 NAME: *
-ha “OD: -s WILDCARD_NAME: *
 > KDRIVER: usbser_lowerfitix64.sys ciccnma control
-v NDOR.:
-> KORIVER: usbser_lowerfitx64.sys EXE_ID: 27fc8c0f-8726-484b-b60f-<2663546e9 tb
 > KDRIVER: usbser_lowerfitx64j.sys MATCHING _FILE: *
 N Sa
 > KDRIVER: wsr_rd.sys vie
 ORIGINAL _FILENAME: LenovoDiagnosticsDriver.sys
 > KDRIVER: * KSHIM_REF: SecKse
-» | KORIVER: © FDC JD: #1405007-1c35-4e80-0626-47390 143eBbe
 > KDRIVER: * FLAGS: 0
 > KDRIVER: * MODULE: mssecfit
 > KDRIVER: *
@@ -293,7 +294,6 @@ KDRIVER: *
 : Camera:30. 18305.6. 12414;0 IDSSFFES
 3110.540.0.0;0 1D64E716SC9C
 3110.540.0.0;0 1D64E716SC9C
-3110.540.0.0;0 1064E716SC9C
 : Camera:
 : Camera:
 : Camera:
@@ -338,13 +338,13 @@ MsSense.exe
 
 MsSecCore.sys
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 O
 MsSecCore.sys
 NTSTATUS __fastcall SecKseZwTerminateProcess(HANDLE ProcessHandle, NTSTATUS ExitStatus)
-{
 char allowCall; // si
 NTSTATUS status; // ebx
 __int64 (__fastcall *KernelShimProviderApiHookAddress) (HANDLE, _QWORD); // rax
@@ -353,15 +353,11 @@ kernelShimProvider = @i64;
 allowCall = 1;
 status = SecReferenceRegisteredShimProviderAndAcquireRundownProtection(&kernelShimProvider) ;
 if ( status >= @ && SecIsHookSupportedByKernelShimProvider(kernelShimProvider, @) )
-{
 allowCall = 9;
 KernelShimProviderApiHookAddress = SecGetKernelShimProviderApiHookAddress(kernelShimProvider, @);
 status = KernelShimProviderApiHookAddress(ProcessHandle, ExitStatus) ;
-}
 SecDereferenceRegisteredShimProviderAndReleaseRundownProtection(kernelShimProvider) ;
 if ( allowCall )
-{
-}
 return status;
 return (pZwTerminateProcessForwardingAddress) (ProcessHandle, ExitStatus) ;
 ```
@@ -370,45 +366,27 @@ return (pZwTerminateProcessForwardingAddress) (ProcessHandle, ExitStatus) ;
 
 MsSecFlt.sys
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTSTATUS __fastcall SecKseZwTerminateProcess(void *ProcessHandle, NTSTATUS ExitStatus)
-{
 // [COLLAPSED LOCAL DECLARATIONS. PRESS KEYPAD CTRL-"+" TO EXPAND]
 status = 9;
 process = 0164;
 allowCall = 1;
-_InterlockedAdd64(&qword_1C09014530, 1ui64);
 if ( BYTE4(SecKsePolicyConfig) )
-®)
-MsSecFit.sys
 SecKseAuditKernelApi(moduleCtx, L"ZWTERMINATEPROCESS", moduleCtx->ConfigBitmask & 1);
-{
 if ( (BYTE8(xmmword_1C@0148E8) & 1) != @ )// Policy enabled?
-{
 callerAddress = SecKseCaptureCallerAddress() ;
 moduleCtx = SecKseLookupModuleContextByAddress(callerAddress) ;
 if ( moduleCtx )
-{
 auditConfig = &moduleCtx->AuditBitmask;
-{
 status = ObReferenceObjectByHandle(ProcessHandle, 1u, PsProcessType, @, &process, 0i64);
-{
 if ( PsIsProtectedProcess(process) )
-{
-{
 status = STATUS_ACCESS DENIED;
 allowCall = 9;
-}
-}
-t
-}
-}
-}
-}
 if ( process )
-ObfDereferenceObject (process) ;
 if ( allowCall )
 return ZwlerminateProcess(ProcessHandle, ExitStatus) ;
 return status;
@@ -434,7 +412,8 @@ return status;
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTSTATUS __fastcall MpPreFsControl(
@@ -446,11 +425,8 @@ Context = @i64;
 *v31 = 0164;
 v33 = 0164;
 if ( !FltObjects->FileObject )
-{
 if ( DeviceObject != &DeviceObject && (HIDWORD(DeviceObject->Timer) & 1) !=@ )
-WPP_SF_(DeviceObject->AttachedDevice, 10164, &unk_1C@012F1@) ;
 return 1;
-}
 *CompletionContext = 0164;
 Iopb = CallbackData->Iopb;
 MinorFunction = Iopb->MinorFunction;
@@ -458,56 +434,41 @@ if ( MinorFunction && MinorFunction != IRP_MN_KERNEL_CALL )// user request / ker
 return 1;
 FsControlCode = Iopb->Parameters.FileSystemControl.Common.FsControlCode;
 if ( FsControlCode <= @x9@2EB )
-{
 if ( FsControlCode == @x9@2EB )
-{
 if ( PsGetCurrentProcessId() != MpData->EngineProcessId
 && (MpData->InternalFlags & @x800@0000) == @
 && !MpData->PanicMode )
-{
 return 13
-}
 CallbackData->IoStatus.Status = MpFsCtlDispatcher(CallbackData, FltObjects) ;
-}
 else
-c
 ```
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BOOLEAN __fastcall MpFsCtlDispatcher(PFLT_CALLBACK_DATA CallbackData, PCFLT_RELATED_OBJECTS FltObjects)
-{
 unsigned int *InputBuffer; // rcx
 int result; // eax MAPDST
 unsigned int input; // [rsp+30h] [rbp-18h]
 ProbeForRead(CallbackData->Iopb->Parameters.FileSystemControl.Neither.InputBuffer, 4ui64, 4u);
-InputBuffer = CallbackData->Iopb->Parameters.FileSystemControl.Neither. InputBuffer ;
 input = *InputBuffer;
 switch ( *InputBuffer )
-{
 case 2u:
 return MpFsCtlQueryNormalizedName(CallbackData, F1tObjects) ;
 case 6u:
 return MpFsCtlResetFileInCache(InputBuffer, F1ltObjects) ;
 case 7u:
 return MpFsCtlSetFileStateFlags(CallbackData, FltObjects);
-}
 if ( (MpData->InternalFlags & @x80000000) == @ && !MpData->PanicMode )
 return STATUS_SEVERITY_WARNING;
 if ( input !=9 )
-if
-Fo oc
-return STATUS _SEVERITY_WARNING;
-t
 result = MpTerminateEngineProcess() ;
 if ( WPP_GLOBAL_Control != &WPP_GLOBAL_Control && (*(WPP_GLOBAL_Control + 11) & 2) !=@ )
 WPP_SF_qd(
 *(WPP_GLOBAL_Control + 3),
-19164,
-&WPP_415afb42e9ed3bea82bd2F46ee3c28b4_Traceguids,
 MpData->EngineProcess,
 result);
 return result;

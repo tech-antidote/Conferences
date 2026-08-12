@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Mor Weinberger&Yossi Weizman_GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream.pdf"
 pages: 46
 sha256: "8d3e2863bb1854c28632838c18e9dea1a8c6db8ff3c0a096ef97f6998353abc0"
-text_chars: 23148
-ocr_pages: 9
+text_chars: 21783
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:13:01Z"
+converted_at: "2026-08-12T05:39:11Z"
 ---
 # GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream
 
 **Speakers:** Mor Weinberger, Yossi Weizman  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Mor Weinberger&Yossi Weizman_GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream.pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -199,14 +204,14 @@ AsyncAPI
 
 ###### GIT metadata can be set to any value
 
-```
+\```
 author     name | email | date
 committer  name | email | date
-```
+\```
 
-```
+\```
 message · tree · parent(s)
-```
+\```
 
 **The pusher is the authenticated user with GH. This is the field you can trust.**
 
@@ -242,13 +247,13 @@ TTPs - examples Mass tags push
 
 **Goal:** move many release tags onto one poisoned commit, so every workflow that pins the action by tag `(uses: org/action@vN)` runs the malicious code.
 
-```
+\```
 $ git tag -f v1 v2 v3 … v46  <poisoned>
-```
+\```
 
-```
+\```
 $ git push --force origin --tags
-```
+\```
 
 Tags are movable (mutable) pointers
 
@@ -274,11 +279,11 @@ _https://docs.github.com/en/webhooks/webhook-events-and-payloads#push_
 
 Modify a workflow that grants OIDC, and get it to run:
 
-```
+\```
 on: push
 permissions:
   id-token: write
-```
+\```
 
 **Detection: track new or modified workflows that mint OIDC tokens Examples:**
 
@@ -292,34 +297,28 @@ permissions:
 
 **Same version string. Three different trust models.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Same trust. Different object
-te |
-=" vil.2.3 NEW WO ene
 COMMIT app-v1.2.3.zip app-v1.2.3.zip
 (current) (previous)
 Package registry Git tags
 (IMMUTABLE |
-Sa at
 Release assets
 IDARIE |
-MAIAT
-» VY ArrAve” |
 Same version string. Three different trust models.
-black hat
-2026
 ```
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Implant into an existing release
 v1.2.3 Release v1.2.3 Release
-app-v1.2.3.zip - oo) app-v1.2.3.zip
 12.4 MB 12.4 MB
 WRITE ACCESS
 GITHUB ACTIONS
@@ -331,8 +330,6 @@ RELEASE ZIP ONTO SAME RELEASE
 COVER TRACKS
 STOLEN CREDS
 PAT - ACCOUNT KEY
-black hat
-2026
 ```
 
 ## Slide 16
@@ -355,45 +352,29 @@ Release maturity Whether assets were swapped
 
 ###### **Checksums prove integrity of whatever was uploaded - including malware.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Same trust chrome. Different maturity.
 Releases / v1.2.1
-‘oworld Public & Pin QWatch 0 ~ —-Y Fork 2 ws
 1 2 11 ‘eee B vscan-linux-checksums (16).txt ~
 Latest
-arr . pe al ae , VIZ atest 05713 fea547eef24079200972115234465d152e08S504Bf8eBfDIGSSGTebb vscan_1.2.11_Linux_end64. zip
 eee B vecan-linux-checksums (15).txt ~ Q github-actions released this 11 minutes ago © 1.2.11 © 6e56a63
-Releases / v2.01 Besedes2701eTetOctocecdSeeserSbacte25tetO627S2dcee260204a40072¢ vecan_1.2.11 Lint amdet.zip
-V1.2.11 ie Changelog
-© oithub-actions released this 4 minutes ago © vi2.11 © 6e56a63 © es U; build ymi
 * (3@a2ec6 Update build.yml
-Changelog + (G88b887) Update build. ym!
-+ (G2S8R6R) Update build. ymi * (Jec@d36 Update build.yml
-+ (GERREEE) Update build.ymi * (4cafe2a Update build.yml
-* |188baa7 Update build. ym
-+ (TEERESE) Update build. ym!
-* (deate2s Update build. ym!
-+ (GRETIR Update build ym!
-* Tac7iaf Update build. ym!
-vAssets 4
 v Assets @ @ vscan-linux-checksums.txt 95 Bytes
-@ vacan-linux-checksums.txt 95 Bytes @ vscan_t.2.11_linux_amd64.zip 4 Bytes
-@ vecan_1.2.11_Jinux_smd64.2ip 550 KB
 Source code (zip)
 Source code (zip)
 Source code (targz) f) Source code (tar.gz)
-ic) (3)
 Checksums prove integrity of whatever was uploaded - including malware.
-black hat
 ```
 
 ## Slide 18
 
 **Report to Github Bug bountry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Report to Github Bug bountry
@@ -405,13 +386,12 @@ request list, and the team is actively working to make these improvements to the
 | think you should emphasize the creation time and modify the time of the assets on the release page
 We greatly appreciate the thoroughness of this report and the improvement suggestions made throughout, so we'd like
 to offer you a small reward as thanks.
-black hat
-2026
 ```
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Report — Signal — Detection
@@ -424,7 +404,7 @@ v Assets 4
 Name Size
 Q agent-linux-amd64 12.4 MB
 Q agent-linux-arm64 11.8 MB
- checksums.txt 1.2 KB
+checksums.txt 1.2 KB
 B release-notes.md 3.6 KB
 Created
 May 12, 2025
@@ -435,16 +415,12 @@ May 12, 2025
 08:46:01 UTC
 May 12, 2025
 08:46:15 UTC
-~\
-rs
 DETECT
 release-asset-time-skew
 08:14:22 08:45:37
 UTC UTC
 A 31m 15s
 Intended behavior. New metadata. Detectable swap.
-black hat
-2026
 ```
 
 ## Slide 20
@@ -453,17 +429,16 @@ black hat
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Tampered Release Artifacts
 Compare ~
-v1.0.0 Gc compare + ) (A v1.0.0
 mo5084-beep re d this 12 minutes ago D v1.0.¢ C mo5084-beep released this 12 minutes ago .0 © 4a22e4c ©
 vy Assets 8 v Assets 8
 release.pub 693259. 451 Bytes i @ release.pub sha256 . s 12 minutes
 SHA256SUMS : _ 2 Byte 12 minutes ago @ SHA256SUMS : ee 12 minutes ago
-7)
 @
 @ tool-darwin-amd64 a Bytes 12 minutes tool-darwin-amd64 S| 2S 12 minu'
 @
@@ -472,7 +447,6 @@ tool-linux-amd64 s = 22 Byte: ninutes ago @ tool-linux-amd64 31eed41... 2 minute
 tool-linux-amd64.sig h Y) es 256 Bytes 12 minutes ago tool-linux-amd64.sig 56: 80 0d... S 2 minutes
 Source code (zip) ninutes ag i) Source code (zip) 12 minutes ago
 Source cod 13 minutes ago i) Source code (tar.gz) 12 minutes ago
-black hat
 2026 34
 ```
 
@@ -712,7 +686,8 @@ https://github.com/supplychain-labs/github-threat-detector/tree/main/analyzers/d
 
 **Detection Logic**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Detections
@@ -725,13 +700,9 @@ where the run fired on an untrust
 the run's
 head_repo ry dif
 can mint an OIDC token from atta r-influenced
--Pepo_name,
 -id AS run_id,
 -workflow_path,
-«event trigger,
--head_branch,
 .payload->"head_repository'->>'full_name' head_repo,
--actor_login,
 .run_started_at Detection
 FROM workflow_runs r Logic
 OIN workflow_files f
@@ -740,7 +711,6 @@ AND f.path = r.workflow_path
 WHERE f.content ILIKE '%%id-token: write%%'
 AND (
 r.event IN (‘pull_request_target', ‘workflow_run',
-"issue_comment', ‘pull _request_review', 'pull_request_review_comment')
 OR (r.payload->"head_repository'->>'full_name')
 TS DISTINCT FROM (r.payload->‘repository*->>"full_name') black hat
 ```
@@ -988,15 +958,12 @@ _morwn yossi-weizman_
 
 github.com/supplychain-labs/github-threat-detector
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BRIEFINGS
-black hat
 THANK YOU!
-IN yossi-weizman in mown
 github.com/supplychain-labs/github-threat-detector
-black hat
 USA
-2026
 ```

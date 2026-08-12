@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Cristiano Rodrigues&Sandro Pinto&Jo Van Bulck&Marton Bognar_Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks.pdf"
 pages: 303
 sha256: "1832b2f77bb34b5cb2ce0a3dbb002b04d0403b762650e6b9fc14d74593fc8c06"
-text_chars: 78586
-ocr_pages: 50
+text_chars: 60695
+ocr_pages: 41
 has_ocr: true
 redacted_secrets: 6
+ocr_confidence: 85.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 7
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:09:29Z"
+converted_at: "2026-08-12T05:34:20Z"
 ---
 # Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks
 
 **Speakers:** Cristiano Rodrigues, Sandro Pinto, Jo Van Bulck, Marton Bognar  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Cristiano Rodrigues&Sandro Pinto&Jo Van Bulck&Marton Bognar_Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks.pdf` (303 pages)
+
 
 ## Slide 1
 
@@ -54,25 +60,33 @@ NR
 
 ## Slide 6
 
-```
+\```
 [REDACTED:private-key-block]
-```
+\```
 
 ## Slide 7
 
-```
+\```
 [REDACTED:private-key-block]
+\```
+
+
+> Recovered by OCR — confidence 78/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+N RSA PRIVATE KEY-----
+ee 10 RSA PRIVATE KEY-----
 ```
 
 ## Slide 8
 
-```
+\```
 010111001101010101010100100111010101101011
-```
+\```
 
 ## Slide 9
 
-```
+\```
 010111001101010101010100100111010101101011
 101000101011001010101111000101010101010110
 101010101010100101010101010101010101111111
@@ -84,17 +98,17 @@ NR
 010101010101011010001111010101010101010101
 010101110101010010101010110101010101010101
 010101010101010101010101010101010101010101
-```
+\```
 
 ## Slide 10
 
-```
+\```
 [REDACTED:private-key-block]
-```
+\```
 
 ## Slide 11
 
-```
+\```
 010111001101010101010100100111010101101011
 101000101011001010101111000101010101010110
 101010101010100101010101010101010101111111
@@ -106,13 +120,13 @@ NR
 010101010101011010001111010101010101010101
 010101110101010010101010110101010101010101
 010101010101010101010101010101010101010101
-```
+\```
 
 ## Slide 12
 
-```
+\```
 [REDACTED:private-key-block]
-```
+\```
 
 ## Slide 13
 
@@ -120,9 +134,9 @@ NR
 
 ## Slide 14
 
-```
+\```
 [REDACTED:private-key-block]
-```
+\```
 
 ## Slide 15
 
@@ -138,15 +152,6 @@ NR
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-arm
-TrustZone’
-AMD«¢l
-SEV
-```
-
 ## Slide 22
 
 ## Slide 23
@@ -157,7 +162,8 @@ SEV
 
 First TrustZone-M single-stepping framework Instruction-level side-channel analysis Single-trace RSA key extraction **CVE-2025-54764**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ First TrustZone-M single-stepping framework
@@ -190,15 +196,6 @@ Appliances
 
 Wearables
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Modern Connected World
-Se Baa et bes
-Satellites Industrial Drones Hardware Wallets
-Cars Medical Appliances Wearables
-```
-
 ## Slide 28
 
 **What powers almost all of them?**
@@ -219,7 +216,8 @@ MCU
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 600
@@ -754,7 +752,8 @@ The Spark: we noticed something weird
 
 Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic”.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General Assumption
@@ -771,7 +770,8 @@ Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudi
 
 Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic”.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General Assumption
@@ -788,7 +788,8 @@ Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudi
 
 Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic”.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General Assumption
@@ -805,7 +806,8 @@ Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudi
 
 Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic”.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General Assumption
@@ -822,7 +824,8 @@ Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudi
 
 Jo Van Bulck et al, “Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic”.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General Assumption
@@ -2711,1759 +2714,691 @@ Memory
 
 **Raw Trace**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 52/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-O©ANDUAWNHR
-@x@c@24dd6
-@x0c@2b81a
-@x0c@2b81e
-@x@c@2b820
-@x@c@2b824
-@x0@c@2b826
-@x0c@2b828
-@x0c@2b82a
-@x@c@2b82c
-@x@c@2be12
-@x@c@2be14
-@x0c@2be16
-@x@c@2bela
-@x0cO2b830
-@x0@c@2b834
-@x0@c@2b846
-@x@c@2b848
-@x0c@2b84a
-@x0c@2b84c
-@x@c@2c406
-@x@c@2c408
-@x@c@2c40c
-@x0c@2c410
-@x@c@2c412
-@x@c@2c414
-@x@c@2c416
-@x@c@2c41a
-@x@c@2c41c
-@x@c@2c41e
-@x@c@2c422
-@x@c@2c426
-@x@c@2c428
-@x@c@2c42a
-@x@c@2c42c
-@x@c@2c3ce
-@x0c@2c3d2
-@x@c@2c36c
-@x@c@2c370
-@x@c@2c374
-@x@c@2c378
-@x@c@2c37a
-@x@c@2c37e
-@x@c@2c380
-@x@c@2c382
-@x@c@2c384
-e1
-@3
-e1
-e@3
-e1
-e1
-e1
-e1
-Q1
-e1
-e1
-@3
-e1
-e1
-e1
-e1
-e1
-e1
-e1
-@3
-e1
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-e@2
-@2
-e1
-e1
-Q2
-e1
-e1
-e1
-@3
-e2
-e@2
-e1
-e1
-e1
-e1
-e1
-e1
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-68
-61
-62
-63
-64
-65
-66
-67
-68
-69
-78
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-Qx0@c02c388
-@x@c02c38a
-@x@c02c38c
-@x@c@2c1le
-@x@c02c120
-@x@c@2c122
-@x@c@2c12e
-@x@c02c130
-@x@c02c134
-@x0@c02c138
-@x@c@2c124
-Qx@c02c126
-@x@c02c140
-@x@c@2c142
-Qx@c02c146
-@x@c@2c14a
-Qx@c02c150
-@x@c@2c12a
-@x@c@2c15e
-@x@c02c390
-@x@c02c394
-@x@c@2c396
-@x@c02c398
-@x@c02c39a
-@x@c02c39c
-@x@c@2c2cc
-@x0c@2c2do
-@x@c@2c2d2
-@x@c@2c2d4
-@x0c@2c2d6
-@x@c@2c2d8
-@x@c02c334
-0x@c02c338
-@x@c02c33c
-@x0@c02c340
-Qx0@c02c346
-@x@c02c348
-@x@c@2c2dc
-@x@c@2c2de
-@x0c@2be38
-@x@c@2be3c
-@x@c@2be3e
-@x@c@2be40
-@x@c@2be42
-@x@cO2be4c
-e1
-e1
-e1
-3
-e2
-e1
-@2
-e1
-@2
-e1
-@2
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-04
-e1
-e1
-e1
-e1
-e1
-e1
-Q3
-e1
-e1
-e1
-e2
-e1
-e2
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-3
-e1
-e1
-e2
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-@x@c@2be4e
-@x@c@2be56
-@x@c@2be58
-@x@c@2be5a
-@x0c01F33c
-@x@c01F33e
-Qx0c01F340
-@x0ce1feec
-@x0c01feee
-Ox@ce1fef2
-Oxece1fef4
-Ox@ce1feféE
-Qxe0ce1fefs
-xece1fefa
-Ox0ce1feFc
-Qx0ce1F100
-@x0c01F104
-@x0c01F108
-@x0c01F10Cc
-@x0c01F110
-@x@ce1f114
-Qx0c01f134
-@x@c@1fi1le
-@x0ce1f12a
-@x0c01F122
-@x0ce1f124
-Qx0c01F138
-@x0c01F13c
-@x0c01F140
-Qx0c01F148
-@x0ce1f14a
-@x0ce1F14c
-@x@c01F150
-@x0ce01f154
-@x@c01f18e
-@x@c01F192
-@x0c01F196
-@x0c01F198
-@x0c01F19c
-@x@c01f19e
-@x@c01f1a2
-@x@ce1f1a4
-@x@ce01f1a6
-@x@c01filaa
-@x@c01flae
-Q1
-e1
-e1
-e1
-e1
-e2
-e1
-e1
-3
-e2
-e@2
-e1
-e2
-e1
-e1
-e1
-e1
-e3
-e1
-e1
-Q1
-e1
-e1
-e1
-e2
-e1
-2
-e1
-e1
-e1
-e1
-e1
-3
-e1
-e1
-e1
-e1
-3
-e2
-e1
-2
-e@2
-e2
-e1
-@2
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-158
-151
-152
-153
-154
-155
-156
-157
-158
-159
-168
-161
-162
-163
-164
-165
-166
-167
-168
-169
-178
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-@x@c01Ff1b2
-@x0c01Ff1b4
-@xO@c01F1b6
-@x@c@1fiba
-@xOc@1fice
-@x0c0@1f1be
-@x0c@1F1cO
-@x@c@1f1c2
-@x@c@1f1c4
-@x0c@1f1c6
-@x0cO@1F1c8
-@xOc@1ficc
-@x0@c01F166
-@x0c01F168
-@x0c@1f16c
-@x0c0@1f16e
-@x@c@1f17a
-@x0c@1F17¢
-@x0c@1f17e
-@x0c01F180
-@x@c@1F182
-@x@cO2952c
-@x@c02952e
-@x0c029530
-@x@c029532
-@x@c029536
-@x0c029538
-@x@c02953c
-Qx@cQ29552
-@x@c02953e
-@x@c029540
-@x@c029542
-@x@c02955e
-Qx@c029560
-Qx@c029562
-@x@c029542
-@x@c@2955e
-@x@c029560
-@x@c029562
-@x@c029542
-@x@c02955e
-@x@c029560
-@x@c029562
-@x@c029542
-@x@c@2955e
-Q1
-@2
-@3
-e1
-@2
-@2
-e1
-@2
-e1
-@2
-@3
-@1
-Q1
-@3
-@2
-Q1
-e1
-Q1
-e1
-Q1
-e1
-Q1
-@3
-e1
-Q1
-e1
-e1
-Q1
-e1
-Q1
-e1
-@1
-Q1
-@2
-Q1
-e1
-Q1
-e2
-Q1
-e1
-@1
-@2
-e1
-e1
-e@1
-181
-182
-183
-184
-185
-186
-187
-188
-189
-198
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-@x@c@29560
-Qx0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x0c@29560
-@x0c@29562
-@x@c@29542
-@x@c@2955e
-@x@c@29560
-Qx0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x0c@29560
-@x0@c@29562
-@x@c@29542
-@x@c@2955e
-@x@c@29560
-Qx0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x@c@29560
-@x0@c@29562
-@x@c@29542
-@x@c@2955e
-@x0@c@29560
-@x0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x0@c@29560
-e@2
-e1
-e1
-e1
-2
-e1
-e1
-e1
-e2
-e1
-e1
-e1
-e@2
-e1
-e1
-e1
-2
-e1
-e1
-Q1
-e2
-e1
-e1
-e1
-e2
-e1
-Q1
-e1
-e2
-e1
-e1
-e1
-e2
-e1
-e1
-e1
-e@2
-e1
-e1
-e1
-e2
-Q1
-e1
-e1
-@2
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-248
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-@x@c@29562
-@x@c@29542
-@x@c@2955e
-Qx@c0@29560
-@x@c@29562
-@x@c@29542
-@x@c@29546
-@x0c@29548
-@x@c@2954c
-@x@c@29550
-@x0@c01Ff186
-@x0c@1f12e
-0x0c01F130
-@x@c@2be5e
-@x@c@2be60
-@x@c@2be64
-@xO@c@2be66
-@x@c@2be7a
-@x@c@2be7c
-@x@c@2be52
-@x@c@2be4a
-@x@c@2c2e2
-@x@cO@2c2e4
-@x@c@2c2e6
-Qx@c@2c2e8
-@x@c@2c2ec
-@x0cO2c2FO
-@x0cO2c2F2
-@xOcO2c2F4
-@x0cO2c2F6
-@x0cO2c2F8
-@x@cO@2c2Fc
-Qx@c02c300
-@x@c@2968e
-Qx@c0@29690
-@x@c@29692
-@x0@c0@296be
-@x@c0@296b4
-@x0c@29694
-Qx0@c@29696
-@x@c@29698
-@x@c0296c4
-@x@c@296c6
-@x@c@296c8
-@x@cO@296ca
-e1
-e1
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-04
-e1
-e1
-04
-e1
-e1
-@2
-e1
-e2
-e2
-e1
-04
-e1
-e1
-e2
-e1
-e1
-e2
-@2
-e1
-e1
-e1
-e1
-e1
-e1
-e3
-e1
-e1
-e1
-e1
-e1
-e1
-e1
-@2
-e1
-@2
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-298
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-@x@c@296cc
-@x@c029696
-@x0c@29698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-Qx@cO296ca
-@x@cO296cc
-@x@c029696
-@x0c@29698
-@x@c0296c4
-Qx@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@c0296cc
-@x0c@29696
-Qx@c029698
-@x@c@296c4
-@x@c0296c6
-Qx@c0296c8
-@x@c0296ca
-@x@c@296cc
-@x0c@29696
-@x0c@29698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@cO296ca
-@x@cO296cc
-@x@c029696
-@x0c@29698
-@x@c0296c4
-Qx@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@cO296cc
-@x0c@29696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-Qx@c0296c8
-@x@c0296ca
-@x@c@296cc
-@x0c@29696
-@x@c029698
-e1
-e1
-e1
-Q1
-e2
-e1
-e2
-e1
-e1
-e1
-e1
-e2
-e1
-e2
-e1
-e1
-Q1
-e1
-e2
-Q1
-e2
-e1
-e1
-e1
-Q1
-e2
-e1
-e2
-e1
-Q1
-e1
-e1
-e2
-e1
-e2
-e1
-e1
-Q1
-e1
-e2
-Q1
-e2
-e1
-e1
-e1
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-Q@x@c@296ca
-@x@c@296cc
-@x@c029696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@c@296cc
-Q@x@c029696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-Qx@c0296c8
-@x@cO296ca
-@x@cO296cc
-@x@c029696
-@x@c029698
-Qx@c0296c4
-@x@c@296c6
-@x@c0296c8
-Qx@c0296ca
-@x@cO296cc
-@x@c029696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@cO296cc
-@x@c@29696
-@x@c029698
-@x@c0296c4
-@x@c0296c6
-Qx@c0296c8
-@x@cO296ca
-@x@cO296cc
-@x@c029696
-@x@c029698
-Qx@c0296c4
-@x@c@296c6
-@x@c0296c8
-e1
-@2
-e1
-@2
-e1
-e1
-e1
-e1
-@2
-e1
-e2
-e1
-e1
-e1
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-e1
-e2
-e1
-e2
-e1
-e1
-e1
-e1
-@2
-e1
-e2
-e1
-e1
-e1
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-e1
-@2
-e1
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-@x@c0296ca
-@x@cO296cc
-@x0c029696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@c0296ca
-@x@cO296cc
-Qx@c029696
-@x@c029698
-@x@cO2969c
-@x@c0296a0
-@x@c0296a2
-@x@c0296a4
-@x@c0296a6
-@x@c0296aa
-@x@cO296ae
-@x@c02c304
-@x@c02c306
-Qx@c02c308
-@x@cO2c31c
-@x@c02c320
-@x@c02c322
-@x@c02c324
-Qx@c02c326
-@x@c@2d102
-@x@c02d104
-@x@c02d106
-@x@c02d1e8
-@x0c@2d10a
-@x@c02d110
-@x@c02d114
-@x@c02d118
-@x@c@2d11¢
-@x@c@2d120
-@x@c0@2d124
-@x@c02d128
-@x@c@2d12a
-@x@c@2d12e
-@x@c@2d132
-@x0@c02d134
-@x@c02d138
-@x0c@2d10a
-@x@c@2d10e
-e2
-e1
-e1
-e1
-e1
-@2
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-e1
-e1
-e1
-e1
-04
-e2
-@2
-e1
-Q2
-e1
-Q2
-e2
-e1
-3
-e1
-e1
-e1
-e1
-@2
-e2
-e1
-e1
-e1
-e1
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-e4
+[Slide is a single wide table of 405 single-step trace entries, laid out in
+nine columns of 45 rows each; each entry is an index, a program-counter
+address and a two-digit cycle/interrupt count. Read column by column:]
+
+1 0x0c024dd6 01
+2 0x0c02b81a 03
+3 0x0c02b81e 01
+4 0x0c02b820 03
+5 0x0c02b824 01
+6 0x0c02b826 01
+7 0x0c02b828 01
+8 0x0c02b82a 01
+9 0x0c02b82c 01
+10 0x0c02be12 01
+11 0x0c02be14 01
+12 0x0c02be16 03
+13 0x0c02be1a 01
+14 0x0c02b830 01
+15 0x0c02b834 01
+16 0x0c02b846 01
+17 0x0c02b848 01
+18 0x0c02b84a 01
+19 0x0c02b84c 01
+20 0x0c02c406 03
+21 0x0c02c408 01
+22 0x0c02c40c 01
+23 0x0c02c410 02
+24 0x0c02c412 01
+25 0x0c02c414 01
+26 0x0c02c416 01
+27 0x0c02c41a 01
+28 0x0c02c41c 01
+29 0x0c02c41e 02
+30 0x0c02c422 02
+31 0x0c02c426 01
+32 0x0c02c428 01
+33 0x0c02c42a 02
+34 0x0c02c42c 01
+35 0x0c02c3ce 01
+36 0x0c02c3d2 01
+37 0x0c02c36c 03
+38 0x0c02c370 02
+39 0x0c02c374 02
+40 0x0c02c378 01
+41 0x0c02c37a 01
+42 0x0c02c37e 01
+43 0x0c02c380 01
+44 0x0c02c382 01
+45 0x0c02c384 01
+46 0x0c02c388 01
+47 0x0c02c38a 01
+48 0x0c02c38c 01
+49 0x0c02c11e 03
+50 0x0c02c120 02
+51 0x0c02c122 01
+52 0x0c02c12e 02
+53 0x0c02c130 01
+54 0x0c02c134 02
+55 0x0c02c138 01
+56 0x0c02c124 02
+57 0x0c02c126 01
+58 0x0c02c140 02
+59 0x0c02c142 01
+60 0x0c02c146 02
+61 0x0c02c14a 01
+62 0x0c02c150 01
+63 0x0c02c12a 01
+64 0x0c02c15e 04
+65 0x0c02c390 01
+66 0x0c02c394 01
+67 0x0c02c396 01
+68 0x0c02c398 01
+69 0x0c02c39a 01
+70 0x0c02c39c 01
+71 0x0c02c2cc 03
+72 0x0c02c2d0 01
+73 0x0c02c2d2 01
+74 0x0c02c2d4 01
+75 0x0c02c2d6 02
+76 0x0c02c2d8 01
+77 0x0c02c334 02
+78 0x0c02c338 01
+79 0x0c02c33c 02
+80 0x0c02c340 01
+81 0x0c02c346 02
+82 0x0c02c348 01
+83 0x0c02c2dc 01
+84 0x0c02c2de 01
+85 0x0c02be38 01
+86 0x0c02be3c 01
+87 0x0c02be3e 03
+88 0x0c02be40 01
+89 0x0c02be42 01
+90 0x0c02be4c 02
+91 0x0c02be4e 01
+92 0x0c02be56 01
+93 0x0c02be58 01
+94 0x0c02be5a 01
+95 0x0c01f33c 01
+96 0x0c01f33e 02
+97 0x0c01f340 01
+98 0x0c01f0ec 01
+99 0x0c01f0ee 03
+100 0x0c01f0f2 02
+101 0x0c01f0f4 02
+102 0x0c01f0f6 01
+103 0x0c01f0f8 02
+104 0x0c01f0fa 01
+105 0x0c01f0fc 01
+106 0x0c01f100 01
+107 0x0c01f104 01
+108 0x0c01f108 03
+109 0x0c01f10c 01
+110 0x0c01f110 01
+111 0x0c01f114 01
+112 0x0c01f134 01
+113 0x0c01f11e 01
+114 0x0c01f12a 01
+115 0x0c01f122 02
+116 0x0c01f124 01
+117 0x0c01f138 02
+118 0x0c01f13c 01
+119 0x0c01f140 01
+120 0x0c01f148 01
+121 0x0c01f14a 01
+122 0x0c01f14c 01
+123 0x0c01f150 03
+124 0x0c01f154 01
+125 0x0c01f18e 01
+126 0x0c01f192 01
+127 0x0c01f196 01
+128 0x0c01f198 03
+129 0x0c01f19c 02
+130 0x0c01f19e 01
+131 0x0c01f1a2 02
+132 0x0c01f1a4 02
+133 0x0c01f1a6 02
+134 0x0c01f1aa 01
+135 0x0c01f1ae 02
+136 0x0c01f1b2 01
+137 0x0c01f1b4 02
+138 0x0c01f1b6 03
+139 0x0c01f1ba 01
+140 0x0c01f1ce 02
+141 0x0c01f1be 02
+142 0x0c01f1c0 01
+143 0x0c01f1c2 02
+144 0x0c01f1c4 01
+145 0x0c01f1c6 02
+146 0x0c01f1c8 03
+147 0x0c01f1cc 01
+148 0x0c01f166 01
+149 0x0c01f168 03
+150 0x0c01f16c 02
+151 0x0c01f16e 01
+152 0x0c01f17a 01
+153 0x0c01f17c 01
+154 0x0c01f17e 01
+155 0x0c01f180 01
+156 0x0c01f182 01
+157 0x0c02952c 01
+158 0x0c02952e 03
+159 0x0c029530 01
+160 0x0c029532 01
+161 0x0c029536 01
+162 0x0c029538 01
+163 0x0c02953c 01
+164 0x0c029552 01
+165 0x0c02953e 01
+166 0x0c029540 01
+167 0x0c029542 01
+168 0x0c02955e 01
+169 0x0c029560 02
+170 0x0c029562 01
+171 0x0c029542 01
+172 0x0c02955e 01
+173 0x0c029560 02
+174 0x0c029562 01
+175 0x0c029542 01
+176 0x0c02955e 01
+177 0x0c029560 02
+178 0x0c029562 01
+179 0x0c029542 01
+180 0x0c02955e 01
+181 0x0c029560 02
+182 0x0c029562 01
+183 0x0c029542 01
+184 0x0c02955e 01
+185 0x0c029560 02
+186 0x0c029562 01
+187 0x0c029542 01
+188 0x0c02955e 01
+189 0x0c029560 02
+190 0x0c029562 01
+191 0x0c029542 01
+192 0x0c02955e 01
+193 0x0c029560 02
+194 0x0c029562 01
+195 0x0c029542 01
+196 0x0c02955e 01
+197 0x0c029560 02
+198 0x0c029562 01
+199 0x0c029542 01
+200 0x0c02955e 01
+201 0x0c029560 02
+202 0x0c029562 01
+203 0x0c029542 01
+204 0x0c02955e 01
+205 0x0c029560 02
+206 0x0c029562 01
+207 0x0c029542 01
+208 0x0c02955e 01
+209 0x0c029560 02
+210 0x0c029562 01
+211 0x0c029542 01
+212 0x0c02955e 01
+213 0x0c029560 02
+214 0x0c029562 01
+215 0x0c029542 01
+216 0x0c02955e 01
+217 0x0c029560 02
+218 0x0c029562 01
+219 0x0c029542 01
+220 0x0c02955e 01
+221 0x0c029560 02
+222 0x0c029562 01
+223 0x0c029542 01
+224 0x0c02955e 01
+225 0x0c029560 02
+226 0x0c029562 01
+227 0x0c029542 01
+228 0x0c02955e 01
+229 0x0c029560 02
+230 0x0c029562 01
+231 0x0c029542 01
+232 0x0c029546 01
+233 0x0c029548 01
+234 0x0c02954c 01
+235 0x0c029550 04
+236 0x0c01f186 01
+237 0x0c01f12e 01
+238 0x0c01f130 04
+239 0x0c02be5e 01
+240 0x0c02be60 01
+241 0x0c02be64 02
+242 0x0c02be66 01
+243 0x0c02be7a 02
+244 0x0c02be7c 02
+245 0x0c02be52 01
+246 0x0c02be4a 04
+247 0x0c02c2e2 01
+248 0x0c02c2e4 01
+249 0x0c02c2e6 02
+250 0x0c02c2e8 01
+251 0x0c02c2ec 01
+252 0x0c02c2f0 02
+253 0x0c02c2f2 02
+254 0x0c02c2f4 01
+255 0x0c02c2f6 01
+256 0x0c02c2f8 01
+257 0x0c02c2fc 01
+258 0x0c02c300 01
+259 0x0c02968e 01
+260 0x0c029690 03
+261 0x0c029692 01
+262 0x0c0296b0 01
+263 0x0c0296b4 01
+264 0x0c029694 01
+265 0x0c029696 01
+266 0x0c029698 01
+267 0x0c0296c4 01
+268 0x0c0296c6 02
+269 0x0c0296c8 01
+270 0x0c0296ca 02
+271 0x0c0296cc 01
+272 0x0c029696 01
+273 0x0c029698 01
+274 0x0c0296c4 01
+275 0x0c0296c6 02
+276 0x0c0296c8 01
+277 0x0c0296ca 02
+278 0x0c0296cc 01
+279 0x0c029696 01
+280 0x0c029698 01
+281 0x0c0296c4 01
+282 0x0c0296c6 02
+283 0x0c0296c8 01
+284 0x0c0296ca 02
+285 0x0c0296cc 01
+286 0x0c029696 01
+287 0x0c029698 01
+288 0x0c0296c4 01
+289 0x0c0296c6 02
+290 0x0c0296c8 01
+291 0x0c0296ca 02
+292 0x0c0296cc 01
+293 0x0c029696 01
+294 0x0c029698 01
+295 0x0c0296c4 01
+296 0x0c0296c6 02
+297 0x0c0296c8 01
+298 0x0c0296ca 02
+299 0x0c0296cc 01
+300 0x0c029696 01
+301 0x0c029698 01
+302 0x0c0296c4 01
+303 0x0c0296c6 02
+304 0x0c0296c8 01
+305 0x0c0296ca 02
+306 0x0c0296cc 01
+307 0x0c029696 01
+308 0x0c029698 01
+309 0x0c0296c4 01
+310 0x0c0296c6 02
+311 0x0c0296c8 01
+312 0x0c0296ca 02
+313 0x0c0296cc 01
+314 0x0c029696 01
+315 0x0c029698 01
+316 0x0c0296c4 01
+317 0x0c0296c6 02
+318 0x0c0296c8 01
+319 0x0c0296ca 02
+320 0x0c0296cc 01
+321 0x0c029696 01
+322 0x0c029698 01
+323 0x0c0296c4 01
+324 0x0c0296c6 02
+325 0x0c0296c8 01
+326 0x0c0296ca 02
+327 0x0c0296cc 01
+328 0x0c029696 01
+329 0x0c029698 01
+330 0x0c0296c4 01
+331 0x0c0296c6 02
+332 0x0c0296c8 01
+333 0x0c0296ca 02
+334 0x0c0296cc 01
+335 0x0c029696 01
+336 0x0c029698 01
+337 0x0c0296c4 01
+338 0x0c0296c6 02
+339 0x0c0296c8 01
+340 0x0c0296ca 02
+341 0x0c0296cc 01
+342 0x0c029696 01
+343 0x0c029698 01
+344 0x0c0296c4 01
+345 0x0c0296c6 02
+346 0x0c0296c8 01
+347 0x0c0296ca 02
+348 0x0c0296cc 01
+349 0x0c029696 01
+350 0x0c029698 01
+351 0x0c0296c4 01
+352 0x0c0296c6 02
+353 0x0c0296c8 01
+354 0x0c0296ca 02
+355 0x0c0296cc 01
+356 0x0c029696 01
+357 0x0c029698 01
+358 0x0c0296c4 01
+359 0x0c0296c6 02
+360 0x0c0296c8 01
+361 0x0c0296ca 02
+362 0x0c0296cc 01
+363 0x0c029696 01
+364 0x0c029698 01
+365 0x0c0296c4 01
+366 0x0c0296c6 02
+367 0x0c0296c8 01
+368 0x0c0296ca 02
+369 0x0c0296cc 01
+370 0x0c029696 01
+371 0x0c029698 01
+372 0x0c02969c 01
+373 0x0c0296a0 01
+374 0x0c0296a2 01
+375 0x0c0296a4 01
+376 0x0c0296a6 01
+377 0x0c0296aa 01
+378 0x0c0296ae 04
+379 0x0c02c304 02
+380 0x0c02c306 02
+381 0x0c02c308 01
+382 0x0c02c31c 02
+383 0x0c02c320 01
+384 0x0c02c322 02
+385 0x0c02c324 02
+386 0x0c02c326 01
+387 0x0c02d102 03
+388 0x0c02d104 01
+389 0x0c02d106 01
+390 0x0c02d108 01
+391 0x0c02d10a 01
+392 0x0c02d110 02
+393 0x0c02d114 02
+394 0x0c02d118 01
+395 0x0c02d11c 01
+396 0x0c02d120 01
+397 0x0c02d124 01
+398 0x0c02d128 01
+399 0x0c02d12a 02
+400 0x0c02d12e 01
+401 0x0c02d132 01
+402 0x0c02d134 01
+403 0x0c02d138 01
+404 0x0c02d10a 01
+405 0x0c02d10e 04
 ```
 
 ## Slide 211
 
 **Raw Trace**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 51/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-O©ANDUAWNHR
-@x@c@24dd6
-OxArArhata
-ext
-@xt
-@xt
-@xt
-ext
-oxé
-ext
-@xt
-@x'
-@x
-@x
-ex
-xt
-ext
-@x
-@x
-ex
-@x'
-xt
-@x0c@2c410
-@x@c@2c412
-@x@c@2c414
-@x@c@2c416
-@x@c@2c41a
-@x@c@2c41c
-@x@c@2c41e
-@x@c@2c422
-@x@c@2c426
-@x@c@2c428
-@x@c@2c42a
-@x@c@2c42c
-@x@c@2c3ce
-@x0c@2c3d2
-@x@c@2c36c
-@x@c@2c370
-@x@c@2c374
-@x@c@2c378
-@x@c@2c37a
-@x@c@2c37e
-@x@c@2c380
-@x@c@2c382
-@x@c@2c384
-e1
-ar
-@2
-e1
-e1
-e1
-e1
-e1
-@2
-@2
-e1
-e1
-@2
-e1
-e1
-e1
-@3
-@2
-@2
-e1
-e1
-e1
-Q1
-e1
-e1
-46
-Ay
-68
-69
-78
-71
-72
-73
-74
-75
-76
-77
-78
-79
-88
-81
-82
-83
-84
-85
-86
-87
-88
-89
-98
-Qxc@2c388
-AVArAIe AA
-@x@c@2c398
-Qx@c@2c39a
-@x0c@2c39c
-Ox@c@2c2cc
-@x@c@2c2de
-@x@c@2c2d2
-@x@c@2c2d4
-@x@c@2c2d6
-@x@c02c2d8
-Qx@c@2c334
-@x0c@2c338
-@x@c@2c33c
-@x0c0@2c340
-@x@c@2c346
-Qx@c@2c348
-@x@cO@2c2dc
-@x@c@2c2de
-@x@c@2be38
-@x@c@2be3c
-@x@c@2be3e
-@x@c@2be40
-O@x@cO2be42
-@x@c@2be4c
-e1
-a1
-e1
-e1
-e1
-Q3
-e1
-e1
-e1
-e2
-e1
-e2
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-e1
-e1
-3
-e1
-e1
-e2
-91
-a?
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-@x@c@2be4e
-AvAcrAMhaACA
-@x@c@1fi1le
-@x@ce1f12a
-@x0c01F122
-@x0ce1f124
-Qx0c01F138
-@x0c01F13c
-@x0c01F140
-Qx0c01F148
-@x@c01f14a
-@x0ce1F14c
-@x@c01F150
-@x0ce01f154
-@x@c01f18e
-@x@c01F192
-@x0c01F196
-@x0@c01F198
-@x0c01F19c
-@x@c01f19e
-@x@c01f1a2
-@x@ce1f1a4
-@x@c01f1a6
-@x@c01filaa
-@x@c01flae
-Q1
-e1
-e1
-e1
-e1
-e2
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-158
-151
-152
-153
-154
-155
-156
-157
-180
-@x@c01Ff1b2
-@x0c01Ff1b4
-@xO@c01F1b6
-@x@c@1fiba
-@xOc@1fice
-@x0c0@1f1be
-@x0c@1F1cO
-@x0c@1f1c2
-@x@c@1f1c4
-@x0c@1f1c6
-@x0cO@1F1c8
-@xOc@1ficc
-@x0@c01F166
-@x0c01F168
-@x0c@1f16c
-@x0c0@1f16e
-@x@c@1f17a
-@x0c@1F17¢
-@x@c@1f17e
-@x0c01F180
-@x@c@1F182
-@x@cO2952c
-@x@c02952e
-@x@c@2955e
-Q1
-@2
-@3
-e1
-@2
-@2
-e1
-@2
-e1
-@2
-@3
-@1
-Q1
-@3
-@2
-Q1
-e1
-Q1
-e1
-Q1
-e1
-Q1
-OL
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-225
-@x@c@29560
-Qx0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x0c@29560
-@x0c@29562
-@x@c@29542
-@x@c@2955e
-@x0@c0@29560
-Qx0c@29562
-@x0@c@29542
-@x@c@2955e
-@x0c@29560
-@x@c@29562
-Qx0c@29542
-@x@c@2955e
-@x0c@29560
-@x0@c@29562
-@x@c@29542
-@x0@c@29560
-e@2
-e1
-e1
-e1
-2
-e1
-e1
-e1
-e2
-e1
-e1
-e1
-e@2
-e1
-e1
-e1
-2
-e1
-e1
-Q1
-e2
-e1
-@2
-270
-@x@c@29562 01
-@x0c@29542 01
-@x@c@2955e 01
-@x@c@29560 02
-i}
-@
-q
-q
-g
-q
-M,
-@x@cO2c2FfO 02
-Ox@c@2c2Ff2 O2
-Ox@cO2c2F4 01
-Ox@c@2c2f6 01
-@x@cO2c2F8 O1
-@x@c@2c2Ffc 01
-@x0c@2c300 O1
-@x@c02968e 01
-@x@c@29698 @3
-@x@c029692 01
-@x@c@296be@ 01
-@x@c@296b4 O1
-@x@c029694 01
-@x0c@29696 @1
-@x@c029698 01
-@x@c@296c4 O1
-@x@c@296c6 82
-@x@c@296c8 01
-@x@c@296ca O2
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-@x@cO296cc
-@x@c@29696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@cO296ca
-@x@cO296cc
-@x@c029696
-@x0c@29698
-@x@c0296c4
-Qx@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@c@296cc
-@x0c@29696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-Qx@c0296c8
-@x@c0296ca
-@x@c@296cc
-@x0c@29696
-@x@c029698
-e1
-e1
-e1
-Q1
-316
-317
-318
-319
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-@x@cO296cc
-@x@c0296c4
-@x@c@296c6
-@x@c0296c8
-Q@x@c@296ca
-@x@c029696
-Qx@c029698
-@x@c0296c4
-@x@c0296c6
-@x@c0296c8
-@x@c@296ca
-@x@cO296cc
-@x@c@29696
-@x@c029698
-@x@c@296c4
-@x@c0296c6
-Qx@c0296c8
-@x@cO296ca
-@x@cO296cc
-@x@c029696
-@x@c029698
-Qx@c0296c4
-@x@c@296c6
-@x@c0296c8
-e1
-@2
-e1
-@2
-e1
-e1
-e1
-e1
-@2
-e1
-e2
-e1
-e1
-e1
-e1
-e2
-e1
-@2
-e1
-e1
-e1
-e1
-@2
-e1
-361
-362
-363
-364
-386
-387
-388
-389
-398
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-@x@c0296ca
-@x@cO296cc
-@x0c029696
-Q@x@c029698
-Qx@c02c326
-@x@c@2d102
-@x@c02d104
-@x@c02d106
-@x@c02d1e8
-@x0c@2d10a
-@x@c02d110
-@x@c02d114
-@x@c02d118
-@x@c@2d11¢
-@x@c@2d120
-@x@c0@2d124
-@x@c02d128
-@x@c@2d12a
-@x@c@2d12e
-@x@c@2d132
-@x0@c02d134
-@x@c02d138
-@x0c@2d10a
-@x@c@2d10e
+[Same 405-entry single-step trace table as the previous slide, with three "confused" reaction-meme images pasted over it. Visible table text, read column by column:]
+
+Column 1 (entries 1-45):
+1 0x0c024dd6 01
+2 0x0c02b81a 03
+3-22 [addresses hidden behind meme image; only the leading "0x0" of each is visible]
+23 0x0c02c410 02
+24 0x0c02c412 01
+25 0x0c02c414 01
+26 0x0c02c416 01
+27 0x0c02c41a 01
+28 0x0c02c41c 01
+29 0x0c02c41e 02
+30 0x0c02c422 02
+31 0x0c02c426 01
+32 0x0c02c428 01
+33 0x0c02c42a 02
+34 0x0c02c42c 01
+35 0x0c02c3ce 01
+36 0x0c02c3d2 01
+37 0x0c02c36c 03
+38 0x0c02c370 02
+39 0x0c02c374 02
+40 0x0c02c378 01
+41 0x0c02c37a 01
+42 0x0c02c37e 01
+43 0x0c02c380 01
+44 0x0c02c382 01
+45 0x0c02c384 01
+
+Column 2 (entries 46-90):
+46 0x0c02c388 01
+47 0x0c02c38a 01
+48-67 [hidden behind meme image]
+68 0x0c02c398 01
+69 0x0c02c39a 01
+70 0x0c02c39c 01
+71 0x0c02c2cc 03
+72 0x0c02c2d0 01
+73 0x0c02c2d2 01
+74 0x0c02c2d4 01
+75 0x0c02c2d6 02
+76 0x0c02c2d8 01
+77 0x0c02c334 02
+78 0x0c02c338 01
+79 0x0c02c33c 02
+80 0x0c02c340 01
+81 0x0c02c346 02
+82 0x0c02c348 01
+83 0x0c02c2dc 01
+84 0x0c02c2de 01
+85 0x0c02be38 01
+86 0x0c02be3c 01
+87 0x0c02be3e 03
+88 0x0c02be40 01
+89 0x0c02be42 01
+90 0x0c02be4c 02
+
+Column 3 (entries 91-135):
+91 0x0c02be4e 01
+92 0x0c02be56 01
+[entries 93-112: addresses hidden behind meme image; only the trailing counts are visible: 01 01 01 02 01 01 03 02 02 01 02 01 01 01 01 03 01 01 01 01]
+113 0x0c01f11e 01
+[entries 114-134: addresses visible but trailing counts clipped by the meme image]
+114 0x0c01f12a
+115 0x0c01f122
+116 0x0c01f124
+117 0x0c01f138
+118 0x0c01f13c
+119 0x0c01f140
+120 0x0c01f148
+121 0x0c01f14a
+122 0x0c01f14c
+123 0x0c01f150
+124 0x0c01f154
+125 0x0c01f18e
+126 0x0c01f192
+127 0x0c01f196
+128 0x0c01f198
+129 0x0c01f19c
+130 0x0c01f19e
+131 0x0c01f1a2
+132 0x0c01f1a4
+133 0x0c01f1a6
+134 0x0c01f1aa
+135 0x0c01f1ae 02
+
+Column 4 (entries 136-180):
+136 0x0c01f1b2 01
+137 0x0c01f1b4 02
+138 0x0c01f1b6 03
+139 0x0c01f1ba 01
+140 0x0c01f1ce 02
+141 0x0c01f1be 02
+142 0x0c01f1c0 01
+143 0x0c01f1c2 02
+144 0x0c01f1c4 01
+145 0x0c01f1c6 02
+146 0x0c01f1c8 03
+147 0x0c01f1cc 01
+148 0x0c01f166 01
+149 0x0c01f168 03
+150 0x0c01f16c 02
+151 0x0c01f16e 01
+152 0x0c01f17a 01
+153 0x0c01f17c 01
+154 0x0c01f17e 01
+155 0x0c01f180 01
+156 0x0c01f182 01
+157 0x0c02952c 01
+158 0x0c02952e 03
+159-178 [hidden behind meme image]
+179 0x0c029542 01
+180 0x0c02955e 01
+
+Column 5 (entries 181-225):
+181 0x0c029560 02
+182 0x0c029562 01
+183 0x0c029542 01
+184 0x0c02955e 01
+185 0x0c029560 02
+186 0x0c029562 01
+187 0x0c029542 01
+188 0x0c02955e 01
+189 0x0c029560 02
+190 0x0c029562 01
+191 0x0c029542 01
+192 0x0c02955e 01
+193 0x0c029560 02
+194 0x0c029562 01
+195 0x0c029542 01
+196 0x0c02955e 01
+197 0x0c029560 02
+198 0x0c029562 01
+199 0x0c029542 01
+200 0x0c02955e 01
+201 0x0c029560 02
+202 0x0c029562 01
+203 0x0c029542 01
+204-224 [hidden behind meme image]
+225 0x0c029560 02
+
+Column 6 (entries 226-270):
+226 0x0c029562 01
+227 0x0c029542 01
+228 0x0c02955e 01
+229 0x0c029560 02
+[entries 230-250: index numbers visible, addresses hidden behind meme image]
+[entries 251-269: addresses visible, index numbers hidden behind meme image]
+   0x0c02c2ec 01
+   0x0c02c2f0 02
+   0x0c02c2f2 02
+   0x0c02c2f4 01
+   0x0c02c2f6 01
+   0x0c02c2f8 01
+   0x0c02c2fc 01
+   0x0c02c300 01
+   0x0c02968e 01
+   0x0c029690 03
+   0x0c029692 01
+   0x0c0296b0 01
+   0x0c0296b4 01
+   0x0c029694 01
+   0x0c029696 01
+   0x0c029698 01
+   0x0c0296c4 01
+   0x0c0296c6 02
+   0x0c0296c8 01
+270 0x0c0296ca 02
+
+Column 7 (entries 271-315):
+271 0x0c0296cc 01
+272 0x0c029696 01
+273 0x0c029698 01
+274 0x0c0296c4 01
+275-295 [hidden behind meme image]
+296 0x0c0296c6 02
+297 0x0c0296c8 01
+298 0x0c0296ca 02
+299 0x0c0296cc 01
+300 0x0c029696 01
+301 0x0c029698 01
+302 0x0c0296c4 01
+303 0x0c0296c6 02
+304 0x0c0296c8 01
+305 0x0c0296ca 02
+306 0x0c0296cc 01
+307 0x0c029696 01
+308 0x0c029698 01
+309 0x0c0296c4 01
+310 0x0c0296c6 02
+311 0x0c0296c8 01
+312 0x0c0296ca 02
+313 0x0c0296cc 01
+314 0x0c029696 01
+315 0x0c029698 01
+
+Column 8 (entries 316-360):
+316 0x0c0296c4 01
+317 0x0c0296c6 02
+318 0x0c0296c8 01
+319 0x0c0296ca 02
+320-340 [hidden behind meme image]
+341 0x0c0296cc 01
+342 0x0c029696 01
+343 0x0c029698 01
+344 0x0c0296c4 01
+345 0x0c0296c6 02
+346 0x0c0296c8 01
+347 0x0c0296ca 02
+348 0x0c0296cc 01
+349 0x0c029696 01
+350 0x0c029698 01
+351 0x0c0296c4 01
+352 0x0c0296c6 02
+353 0x0c0296c8 01
+354 0x0c0296ca 02
+355 0x0c0296cc 01
+356 0x0c029696 01
+357 0x0c029698 01
+358 0x0c0296c4 01
+359 0x0c0296c6 02
+360 0x0c0296c8 01
+
+Column 9 (entries 361-405):
+361 0x0c0296ca 02
+362 0x0c0296cc 01
+363 0x0c029696 01
+364 0x0c029698 01
+[entries 365-385: addresses hidden behind meme image; only the trailing counts are visible: 01 02 01 02 01 01 01 01 01 01 01 01 01 04 02 02 01 02 01 02 02]
+386 0x0c02c326 01
+387 0x0c02d102 03
+388 0x0c02d104 01
+389 0x0c02d106 01
+390 0x0c02d108 01
+391 0x0c02d10a 01
+392 0x0c02d110 02
+393 0x0c02d114 02
+394 0x0c02d118 01
+395 0x0c02d11c 01
+396 0x0c02d120 01
+397 0x0c02d124 01
+398 0x0c02d128 01
+399 0x0c02d12a 02
+400 0x0c02d12e 01
+401 0x0c02d132 01
+402 0x0c02d134 01
+403 0x0c02d138 01
+404 0x0c02d10a 01
+405 0x0c02d10e 04
+
+Text inside the overlaid images:
+  SEL MAR 28
+  ["math lady" meme panels showing chalkboard formulas: V = (1/3)πr²h ; A = πr² ; C = 2πr ; V = πr²h ; a sin/cos/tan table for 30° 45° 60° ; ∫ sin x dx = -cos x + C ; ∫ dx/cos² x = tg x + C ; ∫ tg x dx = -ln|cos x| + C ; ∫ dx/(a² + x²) = (1/a) arctg ... ; tan(θ) plot with θ/rad axis ; ax² + bx + c = 0 ; a(x² + (b/a)x + (c/a)) = 0]
 ```
 
 ## Slide 212
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-18
-19
-20
-21
-22
-23
-@x0c@2b84a 01
-Q@x@c@2b84c O1
-@x@c@2c406 3
-@x@c@2c408 01
-@xO@c@2c40c @1
-@x0c@2c410 @2
-@xO@c@2b84a
-@xO@c@2b84c
-@x6c@2c466
-@x6c62c468
-@x6c62c46c
-@xOce@2c410
-```
-
 ## Slide 213
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 18
@@ -4472,20 +3407,10 @@ Q@x@c@2b84c O1
 21
 22
 23
-@x0c@2b84a
-@x0c@2b84c
 @x@c@2c406
 @x@c@2c408
 @x@c@2c40c
-@x0@c@2c410
-e1
-e1
-@3
-e1
-e1
-@2
 20
-Ox@cO2c486 83
 ```
 
 ## Slide 214
@@ -4493,25 +3418,6 @@ Ox@cO2c486 83
 ###### **Program Counter of the Instruction**
 
 **Raw Trace**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-18
-19
-20
-21
-22
-23
-@x0c@2b84a 01
-Q@x@c@2b84c O1
-@x@c@2c406 3
-@x@c@2c408 01
-@xO@c@2c40c @1
-@x0c@2c410 @2
-@x6c@2c466
-Program Counter of the Instruction
-```
 
 ## Slide 215
 
@@ -4521,26 +3427,6 @@ Program Counter of the Instruction
 
 ###### **Interrupt Latency**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-18
-19
-20
-21
-22
-23
-@x0c@2b84a 01
-Q@x@c@2b84c O1
-@x@c@2c406 3
-@x@c@2c408 01
-@xO@c@2c40c @1
-@x0c@2c410 @2
-@x6c@2c466
-Program Counter of the Instruction
-Interrupt Latency
-```
-
 ## Slide 216
 
 **Mstp-Visualizer**
@@ -4549,22 +3435,16 @@ Interrupt Latency
 
 M-Step Visualizer (GTKwave)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 45/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Time
 clk=0
-cycle[31:0] =1
 Instructior
-instr_addr[31:0] =0!
 inst_raw=c|
 inst_full =c|
 M-Step Visualizer (GI Kwave)
-—— 1
-(ices id i |
-TEV E Mt fm_arch threads]
-i) (oe000087 ) if
-A ER tfm_arch thread fn_catt
 ```
 
 ## Slide 218
@@ -4573,19 +3453,15 @@ A ER tfm_arch thread fn_catt
 
 v
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4676 ns 4690 ns
 Time
 clk =6
 cycle[31:0] =2
-structio
-instr_addr[31:0] =@) [Ogee yD erp Clee leer nes
-inst_raw=Li EXC Co Cl is ce?
-CMRMMESIEM adds 6, 2, r3 \cmp r2, #3 \subs r?, r6, r2 \str r4, [r7, #0]
 func =t
-inst_len[31: O] ERE \ooaonon2
 ```
 
 ## Slide 219
@@ -4596,19 +3472,15 @@ inst_len[31: O] ERE \ooaonon2
 
 v
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M-Step Visualizer (GI Kwave)
 Time
 clk=0
-cycle[31:0] =1' j
 Instruction
 Program Counter of the Instruction
-inst _raw=Li Ete
-st_fu ro a or os
-a a
-(a
 ```
 
 ## Slide 220
@@ -4628,7 +3500,8 @@ v
 v
 Debug Symbols
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 69/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M-Step Visualizer (GI Kwave)
@@ -4639,19 +3512,16 @@ inst_full =. ré, r2, r3 icmp r2, #3 subs r7, r6, r2_ {str ré
 
 M-Step Visualizer (GTKwave)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M-Step Visualizer (GI Kwave)
 Time
 clk=0 |
-cycle[31:0] =1!
 Instruction
-Za78 ns Tee ns 7E90 ns
 ime
-clk =6
 cycle[31:0] =2
-Instructto
 instr_addr[31:0] =0)
 ```
 
@@ -4659,43 +3529,32 @@ instr_addr[31:0] =0)
 
 M-Step Visualizer (GTKwave)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M-Step Visualizer (GI Kwave)
 Time
-clk=0
-cycle[31:0] =1!
 Instruction
 Time
 clk =6
 cycle[31:0] =2
 tructio
-instr_addr[31:0]=8:
-inst_raw=l
-inst_full =Li EXRER GC ee cece str r4, [r/, #0]
-func =t [Sms } } memset
 ```
 
 ## Slide 224
 
 M-Step Visualizer (GTKwave)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M-Step Visualizer (GI Kwave)
 Time
-cycle[31:0] =1!
-— TT) 7670 1s
 ime
 clk=0
-cycle[31:0]=2 Bg a >:
 Instructio
-instr_addr[31:0]=0: Eee ‘OCO2ED96 ‘OCO2SDB2 acezEDB4
-inst_raw=1 EEE as TS
-inst_full =L) ERRERRS I ee ee subs r7, ro, rz:
-func =t TERR memset == memset:
 ```
 
 ## Slide 225
@@ -4761,10 +3620,10 @@ Target Board
 
 ## Slide 234
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/copilot/build/nucleo_1552ze_q_mstp_s/lib/ext/cmsis-src/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h
 [ No Source Available ]
 [ No Assembly Available ]
 lextended-r Thread 1 In: Reset_Handler L893 PC: Oxc018e70
@@ -4774,10 +3633,10 @@ lextended-r Thread 1 In: Reset_Handler L893 PC: Oxc018e70
 
 ## Slide 235
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/copilot/build/nucleo_1552ze_q_mstp_s/lib/ext/cmsis-src/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h
 [ No Source Available ]
 lextended-r Thread 1 In: Reset_Handler
 [ No Assembly Available ]
@@ -4785,152 +3644,161 @@ lextended-r Thread 1 In: Reset_Handler
 Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c, line 6.
 (gab) []
 [M-Step-DeO:bash*Z 1:fish- 2:fish
-L893 PC: Oxc018e70
 ",/1-gdb-py.sh -s exp " 12:48 18-jun-25|
 ```
 
 ## Slide 236
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
-1 #include "victims.h"
-2
-3 #define STRING "M-Step-S\r\n"
-4
-5 void victim_printf_inst(){
-EMMA print (STRING) |
-7}
-8
-9 void victim_strlen_inst(){
-10 =strlen(STRING);
-11 }
-12
-cEesOxXcO28868 <victim_printf_inst> ro, [pc, #4] @ (OxcO28870 <victim_printf_inst+8>)
-0xc02886a <victim_printf_inst+2> b.w OxcO28e8c <printf>
-O0xcO2886e <victim_printf_inst+6> nop
-0xc028870 <victim_printf_inst+8> asrs ri, r6, #29
-0xc028872 <victim_printf_inst+10> lsrs r3, rO, #16
-0xc028874 <victim_strlen_inst> ldr r@, [pce, #4] @ (0xcO2887c <victim_strlen_inst+8>)
-0xc028876 <victim_strlen_inst+2> b.w OxcO2fbce <strlen>
-0xc02887a <victim_strlen_inst+6> nop
-0xc02887c <victim_strlen_inst+8> asrs r1, r6, #29
-O0xc02887e <victim_strlen_inst+10> lsrs r3, rO, #16
-0xc028880 <QCBOREncode_EncodeHead> stmdb sp!, {r0, r1, r2, r4, r5, r6, 77, r8, 79, Ur}
-0xcO28884 <QCBOREncode_EncodeHead+4> add r4, sp, #8
-0xcO28886 <QCBOREncode_EncodeHead+6> stmdb 4, {ri, r2}
-lextended-r Thread 1 In: victim_printf_inst
+┌─/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
+        1 #include "victims.h"
+        2
+        3 #define STRING "M-Step-S\r\n"
+        4
+        5 void victim_printf_inst(){
+B+>     6   printf(STRING);
+        7 }
+        8
+        9 void victim_strlen_inst(){
+       10   strlen(STRING);
+       11 }
+       12
+
+B+>0xc028868 <victim_printf_inst>         ldr     r0, [pc, #4]    @ (0xc028870 <victim_printf_inst+8>)
+   0xc02886a <victim_printf_inst+2>       b.w     0xc028e8c <printf>
+   0xc02886e <victim_printf_inst+6>       nop
+   0xc028870 <victim_printf_inst+8>       asrs    r1, r6, #29
+   0xc028872 <victim_printf_inst+10>      lsrs    r3, r0, #16
+   0xc028874 <victim_strlen_inst>         ldr     r0, [pc, #4]    @ (0xc02887c <victim_strlen_inst+8>)
+   0xc028876 <victim_strlen_inst+2>       b.w     0xc02fbce <strlen>
+   0xc02887a <victim_strlen_inst+6>       nop
+   0xc02887c <victim_strlen_inst+8>       asrs    r1, r6, #29
+   0xc02887e <victim_strlen_inst+10>      lsrs    r3, r0, #16
+   0xc028880 <QCBOREncode_EncodeHead>     stmdb   sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, lr}
+   0xc028884 <QCBOREncode_EncodeHead+4>   add     r4, sp, #8
+   0xc028886 <QCBOREncode_EncodeHead+6>   stmdb   r4, {r1, r2}
+
+extended-r Thread 1 In: victim_printf_inst                                              L6      PC: 0xc028868
 (gdb) b *0x0c028868
 Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c, line 6.
 (gdb) c
 Continuing.
+
 Breakpoint 1, victim_printf_inst () at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
 [Trace Info] PC=0x0C028868 | 7 clk
-(gdb) []
-L6é PC: 0xc028868
-[M-Step-DeO:bash*Z 1:fish- 2:fish
-",/1-gdb-py.sh -s exp " 12:49 18-jun-25|
+(gdb) █
+
+[M-Step-De0:bash*Z 1:fish- 2:fish                                          "./1-gdb-py.sh -s exp " 12:49 18-jun-25
 ```
 
 ## Slide 237
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
-1 #include "victims.h"
-#define STRING "M-Step-S\r\n"
-void victim_printf_inst(){
-2
-“
-4
-5
-REMY prints (STRING) |
-7}
-8
-9
-void victim_strlen_inst(){
-10 =strlen(STRING);
-11 }
-12
-B+ 0xc028868 <victim_printf_inst> ldr rd, [pc, #4] @ (OxcO28870 <victim_printf_inst+8>)
-moxc02886a_<Victim_printf_inst+2> | b.w _0xc028e8e_<printf>|
-O0xcO2886e <victim_printf_inst+6> nop
-0xc028870 <victim_printf_inst+8> asrs ri, r6, #29
-0xc028872 <victim_printf_inst+10> lsrs r3, rO, #16
-0xc028874 <victim_strlen_inst> ldr r@, [pce, #4] @ (0xcO2887c <victim_strlen_inst+8>)
-0xc028876 <victim_strlen_inst+2> b.w OxcO2fbce <strlen>
-0xc02887a <victim_strlen_inst+6> nop
-0xc02887c <victim_strlen_inst+8> asrs r1, r6, #29
-O0xc02887e <victim_strlen_inst+10> lsrs r3, rO, #16
-0xc028880 <QCBOREncode_EncodeHead> stmdb sp!, {r0, r1, r2, r4, r5, r6, 77, r8, 79, Ur}
-0xcO28884 <QCBOREncode_EncodeHead+4> add r4, sp, #8
-0xcO28886 <QCBOREncode_EncodeHead+6> stmdb 4, {ri, r2}
-lextended-r Thread 1 In: victim_printf_inst
+┌─/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
+        1 #include "victims.h"
+        2
+        3 #define STRING "M-Step-S\r\n"
+        4
+        5 void victim_printf_inst(){
+B+>     6   printf(STRING);
+        7 }
+        8
+        9 void victim_strlen_inst(){
+       10   strlen(STRING);
+       11 }
+       12
+
+B+ 0xc028868 <victim_printf_inst>         ldr     r0, [pc, #4]    @ (0xc028870 <victim_printf_inst+8>)
+  >0xc02886a <victim_printf_inst+2>       b.w     0xc028e8c <printf>
+   0xc02886e <victim_printf_inst+6>       nop
+   0xc028870 <victim_printf_inst+8>       asrs    r1, r6, #29
+   0xc028872 <victim_printf_inst+10>      lsrs    r3, r0, #16
+   0xc028874 <victim_strlen_inst>         ldr     r0, [pc, #4]    @ (0xc02887c <victim_strlen_inst+8>)
+   0xc028876 <victim_strlen_inst+2>       b.w     0xc02fbce <strlen>
+   0xc02887a <victim_strlen_inst+6>       nop
+   0xc02887c <victim_strlen_inst+8>       asrs    r1, r6, #29
+   0xc02887e <victim_strlen_inst+10>      lsrs    r3, r0, #16
+   0xc028880 <QCBOREncode_EncodeHead>     stmdb   sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, lr}
+   0xc028884 <QCBOREncode_EncodeHead+4>   add     r4, sp, #8
+   0xc028886 <QCBOREncode_EncodeHead+6>   stmdb   r4, {r1, r2}
+
+extended-r Thread 1 In: victim_printf_inst                                              L6      PC: 0xc02886a
 (gdb) b *0x0c028868
 Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c, line 6.
 (gdb) c
 Continuing.
+
 Breakpoint 1, victim_printf_inst () at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
 [Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 [Trace Info] PC=0x0C02886A | 1 clk
-(gdb) []
-L6 PC: Oxc02886a
-[M-Step-DeO:bash*Z 1:fish- 2:fish
-",/1-gdb-py.sh -s exp " 12:50 18-jun-25|
+(gdb) █
+
+[M-Step-De0:bash*Z 1:fish- 2:fish                                          "./1-gdb-py.sh -s exp " 12:50 18-jun-25
 ```
 
 ## Slide 238
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
-1 #include "victims.h"
-2
-3 #define STRING "M-Step-S\r\n"
-4
-5 void victim_printf_inst(){
-B+> 6 printf (STRING) ;
-8
-9 void victim_strlen_inst(){
-10 =strlen(STRING);
-11 }
-12
-B+ 0xc028868 <victim_printf_inst> ldr rd, [pc, #4] @ (OxcO28870 <victim_printf_inst+8>)
-B0xc02886a <victim_printf_inst+2> OxcO28e8c <printf>
-O0xcO2886e <victim_printf_inst+6> nop
-0xc028870 <victim_printf_inst+8> asrs ri, r6, #29
-0xc028872 <victim_printf_inst+10> lsrs r3, rO, #16
-0xc028874 <victim_strlen_inst> ldr rd, [pc, #4] @ (OxcO2887c <victim_strlen_inst+8>)
-0xc028876 <victim_strlen_inst+2> b.w OxcO2fbce <strlen>
-0xc02887a <victim_strlen_inst+6> nop
-0xc02887c <victim_strlen_inst+8> asrs ri, r6, #29
-O0xc02887e <victim_strlen_inst+10> lsrs r3, rO, #16
-0xc028880 <QCBOREncode_EncodeHead> stmdb sp!, {r0, r1, r2, r4, r5, r6, 77, r8, 79, Ur}
-0xcO28884 <QCBOREncode_EncodeHead+4> add r4, sp, #8
-0xcO28886 <QCBOREncode_EncodeHead+6> stmdb 4, {ri, r2}
-lextended-r Thread 1 In: victim_printf_inst L6é PC: Oxc02886a
+┌─/home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c
+        1 #include "victims.h"
+        2
+        3 #define STRING "M-Step-S\r\n"
+        4
+        5 void victim_printf_inst(){
+B+>     6   printf(STRING);
+        7 }
+        8
+        9 void victim_strlen_inst(){
+       10   strlen(STRING);
+       11 }
+       12
+
+B+ 0xc028868 <victim_printf_inst>         ldr     r0, [pc, #4]    @ (0xc028870 <victim_printf_inst+8>)
+  >0xc02886a <victim_printf_inst+2>       b.w     0xc028e8c <printf>
+   0xc02886e <victim_printf_inst+6>       nop
+   0xc028870 <victim_printf_inst+8>       asrs    r1, r6, #29
+   0xc028872 <victim_printf_inst+10>      lsrs    r3, r0, #16
+   0xc028874 <victim_strlen_inst>         ldr     r0, [pc, #4]    @ (0xc02887c <victim_strlen_inst+8>)
+   0xc028876 <victim_strlen_inst+2>       b.w     0xc02fbce <strlen>
+   0xc02887a <victim_strlen_inst+6>       nop
+   0xc02887c <victim_strlen_inst+8>       asrs    r1, r6, #29
+   0xc02887e <victim_strlen_inst+10>      lsrs    r3, r0, #16
+   0xc028880 <QCBOREncode_EncodeHead>     stmdb   sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, lr}
+   0xc028884 <QCBOREncode_EncodeHead+4>   add     r4, sp, #8
+   0xc028886 <QCBOREncode_EncodeHead+6>   stmdb   r4, {r1, r2}
+
+extended-r Thread 1 In: victim_printf_inst                                              L6      PC: 0xc02886a
 (gdb) b *0x0c028868
 Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c, line 6.
 (gdb) c
 Continuing.
-Brealnoin Loti m opin ip at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
+
+Breakpoint 1, victim_printf_inst () at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
+[red highlight box around the following four lines:]
 [Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 [Trace Info] PC=0x0C02886A | 1 clk
-(gdb) []
-[M-Step-DeO:bash*xZ 1:fish- 2:fish ",/1-gdb-py.sh -s exp " 12:50 18-jun-25
+(gdb) █
+
+[M-Step-De0:bash*Z 1:fish- 2:fish                                          "./1-gdb-py.sh -s exp " 12:50 18-jun-25
 ```
 
 ## Slide 239
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -4942,7 +3810,6 @@ Brealnoin Loti m opin ip at /home/cris/Documents/0_Projects/jo-collab/m-step/mst
 173
 174 return count;
 175 }
-psOxcO28e8c <printf> {rO, ri, r2, r3}
 OxcO28e8e <printf+2> push {rO, ri, r2, Ur}
 OxcO28e90 <printf+4> add ri, sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
@@ -4961,7 +3828,6 @@ Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step
 (gdb) c
 Continuing.
 at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 [Trace Info] PC=0x0CO2886A | 1 clk
 printf (fmt=0x0) at /home/cris/Documnts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/Lib/runtime/tfm_sp_log_raw.c:170
@@ -4974,10 +3840,10 @@ L170 PC: OxcO28e8c
 
 ## Slide 240
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -4990,7 +3856,6 @@ L170 PC: OxcO28e8c
 174 return count;
 175 }
 OxcO28e8c <printf> push {rO, ri, r2, r3}
-BoxcO28e8e <printf+2> push fro, rd, 2, ir}
 OxcO28e90 <printf+4> add ri, sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
 OxcO28e96 <printf+10> str ri, [sp, #4]
@@ -5008,7 +3873,6 @@ Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step
 (gdb) c
 Continuing.
 at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 [Trace Info] PC=0x0CO2886A | 1 clk
 printf (fmt=0x0) at /home/cris/Documnts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/Lib/runtime/tfm_sp_log_raw.c:170
@@ -5021,10 +3885,10 @@ L170 PC: OxcO28e8e
 
 ## Slide 241
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 > 166
 167 int count = 0;
@@ -5038,7 +3902,6 @@ L170 PC: OxcO28e8e
 175 }
 OxcO28e8c <printf> push {rO, ri, r2, r3}
 OxcO28e8e <printf+2> push {r0, ri, r2, Ur}
-Boxcd28e90 <printf+4> add rd sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
 OxcO28e96 <printf+10> str ri, [sp, #4]
 OxcO28e98 <printf+12> bl Oxc01e848 <vprintf>
@@ -5054,7 +3917,6 @@ lextended-r Thread 1 In: printf
 Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c, line 6.
 (gdb) c
 Continuing.
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 [Trace Info] PC=0x0CO2886A | 1 clk
 [Trace Info] PC=0x0CO28E8C | 3 clk
@@ -5070,10 +3932,10 @@ L166 PC: Oxc028e90
 
 ## Slide 242
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt,
 > 166
 167 int count = 0;
@@ -5088,7 +3950,6 @@ L166 PC: Oxc028e90
 OxcO28e8c <printf> push {rO, ri, r2, r3}
 OxcO28e8e <printf+2> push {rO, ri, r2, Ur}
 OxcO28e90 <printf+4> add ri, sp, #16
-Boxc028e92 <printf+6> drew, [rd], a
 OxcO28e96 <printf+10> str ri, [sp, #4]
 OxcO28e98 <printf+12> bl Oxc01e848 <vprintf>
 OxcO28e9c <printf+16> add sp, #12
@@ -5104,24 +3965,21 @@ Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step
 (gdb) c
 Continuing.
 (gdb) ni
-Bros im pdb ip at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 Info] PC=0x0CO2886A | 1 clk
 Info] PC=0xOCO28E8C | 3 clk
 Info] PC=0xOCO28E8E | 3 clk
 Info] PC=0x0CO28E90 | 1 clk
 Info] PC=0xOCO28E92 | 2 clk
-(fmt=0x0) at /home/cris/Documfnts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
 L166 PC: Oxc028e92
 ",/1-gdb-py.sh -s exp " 12:51 18-jun-25
 ```
 
 ## Slide 243
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt,
 166 {
 167 int count = 0;
@@ -5137,7 +3995,6 @@ OxcO28e8c <printf> push {rO, ri, r2, r3}
 OxcO28e8e <printf+2> push {rO, ri, r2, Ur}
 OxcO28e90 <printf+4> add ri, sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
-B0xc028e96 <printf+10> str rd, [sp #4]
 OxcO28e98 <printf+12> bl Oxc01e848 <vprintf>
 OxcO28e9c <printf+16> add sp, #12
 OxcO28e9e <printf+18> ldr.w Ur, [sp], #4
@@ -5151,10 +4008,8 @@ Breakpoint 1 at 0xc028868: file /home/cris/Documents/0_Projects/jo-collab/m-step
 (gdb) c
 Continuing.
 t /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 gdb) ni
 Info] PC=0x0CO2886A | 1 clk
-(fmt=0x0) at /home/cris/Docum§nts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
 Info] PC=0x0CO28E8C clk
 Info] PC=0x0CO28E8E clk
 Info] PC=0x0C028E90 clk
@@ -5166,10 +4021,10 @@ L170 PC: Oxc028e96
 
 ## Slide 244
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -5186,7 +4041,6 @@ OxcO28e8e <printf+2> push {rO, ri, r2, Ur}
 OxcO28e90 <printf+4> add ri, sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
 OxcO28e96 <printf+10> str ri, [sp, #4]
-Boxc028e96 <printfe12> bl Oxc012848 <vprint >
 OxcO28e9c <printf+16> add sp, #12
 OxcO28e9e <printf+18> ldr.w Ur, [sp], #4
 OxcO28ea2 <printf+22> add sp, #16
@@ -5197,7 +4051,6 @@ OxcO28eaa <tfm_hal_output_sp_log> b.w OxcO28ea6 <tfm_output_unpriv_string>
 lextended-r Thread 1 In: printf
 (gdb) c
 Continuing.
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 Info] PC=0x0CO2886A | 1 clk
 (fmt=0x0) at /home/cris/Docum§nts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
@@ -5208,16 +4061,15 @@ Info] PC=0x0CO28E92 clk
 t /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
 Info] PC=0x0CO28E96 clk
 PC=0x0CO28E98 clk
-L171 PC: Oxc028e98
 ",/1-gdb-py.sh -s exp " 12:52 18-jun-25]
 ```
 
 ## Slide 245
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -5235,7 +4087,6 @@ OxcO28e90 <printf+4> add ri, sp, #16
 OxcO28e92 <printf+6> ldr.w rd, [ri], #4
 OxcO28e96 <printf+10> str ri, [sp, #4]
 Oxc028e98 <printf+12> bl Oxc01e848 <vprintf>
-Boxco28eve <printfrio> add sp, #1
 OxcO28e9e <printf+18> ldr.w Ur, [sp], #4
 OxcO28ea2 <printf+22> add sp, #16
 OxcO28ea4 <printf+24> bx lr
@@ -5244,8 +4095,6 @@ OxcO28ea8 <tfm_output_unpriv_string+2> bx lr
 OxcO28eaa <tfm_hal_output_sp_log> b.w OxcO28ea6 <tfm_output_unpriv_string>
 lextended-r Thread 1 In: printf
 Continuing.
-Pnoalinoin Jt Di ip t /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 Info] PC=0x0CO2886A | 1 clk
 (#mt=0x0) at /home/cris/Docum§nts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
@@ -5262,10 +4111,10 @@ L174 PC: OxcO28e9c
 
 ## Slide 246
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -5284,18 +4133,15 @@ OxcO28e92 <printf+6> ldr.w rd, [ri], #4
 OxcO28e96 <printf+10> str ri, [sp, #4]
 OxcO28e98 <printf+12> bl Oxc01e848 <vprintf>
 OxcO28e9c <printf+16> add sp, #12
-eOxcO28e9e <printf+18> ldr.w  .r, [sp], #4
+eOxcO28e9e <printf+18> ldr.w .r, [sp], #4
 OxcO28ea2 <printf+22> add sp, #16
 OxcO28ea4 <printf+24> bx lr
 OxcO28ea6 <tfm_output_unpriv_string> svc 2
 OxcO28ea8 <tfm_output_unpriv_string+2> bx lr
 OxcO28eaa <tfm_hal_output_sp_log> b.w OxcO28ea6 <tfm_output_unpriv_string>
 lextended-r Thread 1 In: printf
-Rnealnoin Loti moni n ip at /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 Info] PC=O0x0CO2886A | 1 clk
-(fmt=0x0) at /home/cris/Docum§nts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
 Info] PC=0x0CO28E8C clk
 Info] PC=0x0CO28E8E clk
 Info] PC=0x0C028E90 clk
@@ -5303,17 +4149,16 @@ Info] PC=0x0C028E92 clk
 Info] PC=0x0C028E96 clk
 Info] PC=0x0CO28E98 clk
 Info] PC=0x0CO28E9C clk
-PC=0xOCO28E9E clk
 L174 PC: OxcO28e9e
 ",/1-gdb-py.sh -s exp " 12:52 18-jun-25
 ```
 
 ## Slide 247
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-/home/cris/Documents/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:
 165 int printf(const char *fmt, ...)
 166 {
 167 int count = 0;
@@ -5339,7 +4184,6 @@ OxcO28ea6 <tfm_output_unpriv_string> svc 2
 OxcO28ea8 <tfm_output_unpriv_string+2> bx lr
 OxcO28eaa <tfm_hal_output_sp_log> b.w OxcO28ea6 <tfm_output_unpriv_string>
 t /home/cris/Documents/0_Projects/jo-collab/m-step/mstp-victims/s/src/victims.c:6
-[Trace Info] PC=0x0C028868 | 7 clk
 (gdb) ni
 Info] PC=O0x0CO2886A | 1 clk
 (#mt=0x0) at /home/cris/Docum§nts/0_Projects/jo-collab/tf-m/trusted-firmware-m/secure_fw/partitions/lib/runtime/tfm_sp_log_raw.c:170
@@ -5354,9 +4198,6 @@ clk
 clk
 w
 Info] PC=0x0CO28E9C
-Info] PC=0x0CO28E9E
-PC=0xOCO28EA2
-PNPRPNNRPW
 ",/1-gdb-py.sh -s exp " 12:52 18-jun-25
 ```
 
@@ -5591,43 +4432,6 @@ Cortex-M
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-[World Use Case
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(x, A, B)
-TU —A,TV <—B;
-U1<—1,U2<—0,V1<—0,V2<—1;
-while TU # 0 do
-while TU even do
-| U1-—U1+TB;U2-—U2-TA
-U1 —U1/2; U2 — U2/2;
-while TV even do
-TV —TV/2;
-| V1 V1+TB, V2<—V2-TA;
-V1 —V1/2; V2 — V2/2;
-if TU > TV then
-U1 <—U1-V1; U2 —U2-V2;
-TU —TU/2;
-TV —TV-TU;
-V1—V1-U1;V2<—V2-U2:
-TV —TV/2;
-50
-```
-
 ## Slide 266
 
 ###### Real World Use Case
@@ -5643,23 +4447,19 @@ Cortex-M
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [World Use Case
 1 procedure Mbedtls_BEEA(Xx, A, B)
 = 2 TU —A,TV <—B;
-3s | Ule1,U2—0,V1i-0,v2-1,
-rT 4 | while TU #0 do YPeN
 — 5 while TU even do L |
 8 | U1<—U1+TB,U2<U2-TA
 10 while TV even do
-13 | V1 V1+TB, V2<—V2-TA;
 17 U1 — U1-V1;U2 —U2-V2;
 19 else
 20 TV —TV-TU;
-21 V1<—V1-U1;V2<—V2-U2;
-Sst
 BRARY
 50
 ```
@@ -5679,56 +4479,6 @@ Cortex-M
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-[World Use Case
-1
-2
-3
-4
-} 5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(X, A, B)
-while TU even do
-| U1-—U1+T7TB,U2<—U2-TA
-while TV even do
-TV —TV/2;
-| V1 V1+TB, V2<—V2-TA;
-V1 — V1/2; V2 —V2/2;
-if TU > TV then
-TU —TU -TV;
-U1 — U1-V1;U2 —U2-V2;
-TU —TU/2;
-else
-TV —TV-TU;
-V1 —V1-U1;V2<—V2-U2;
-TV —TV/2;
-U1<—1,U2—0,V1—0,V2—1; ) enSsl
-while TU + 0 do
-L |
-BRARY
-“
-woli
-50
-```
-
 ## Slide 268
 
 ###### Real World Use Case
@@ -5746,7 +4496,8 @@ Libgcrypt
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [World Use Case
@@ -5764,27 +4515,20 @@ Libgcrypt
 21
 22
 procedure Mbedtls_BEEA(X, A, B)
-TU —A,TV <—B;
-U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
 TU —TU/2;
 | U1-—U1+T7TB,U2<—U2-TA
 while TV even do
 TV —TV/2;
-| V1 V1+TB, V2<—V2-TA;
-V1 — V1/2; V2 —V2/2;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1;U2 —U2-V2;
 TU —TU/2;
 else
 TV —TV-TU;
-V1—V1-U1;V2<—V2-U2:
 TV —TV/2;
-Openssl
 BRARY
-Libgcrypt
 50
 ```
 
@@ -5825,7 +4569,8 @@ Libgcrypt
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [World Use Case
@@ -5843,27 +4588,20 @@ Libgcrypt
 21
 22
 procedure Mbedtls_BEEA(X, A, B)
-TU —A,TV <—B;
-U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
 TU —TU/2;
 | U1-—U1+T7TB,U2<—U2-TA
 while TV even do
 TV —TV/2;
-| V1 V1+TB, V2<—V2-TA;
-V1 — V1/2; V2 —V2/2;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1;U2 —U2-V2;
 TU —TU/2;
 else
 TV —TV-TU;
-V1—V1-U1;V2<—V2-U2:
 TV —TV/2;
-Openssl
 BRARY
-Libgcrypt
 50
 ```
 
@@ -5885,7 +4623,8 @@ Libgcrypt
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Real World Use Case
@@ -5903,21 +4642,17 @@ Real World Use Case
 21
 22
 procedure Mbedtls_BEEA(X, A, B)
-TU -—A,TV<—B;
 U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-| U1<-—U1+TB,U2<-U2-TA
 while TV even do
 TV —TV/2;
-| V1 V1+TB,V2<—V2-TA;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1; U2 — U2-V2;
 TU —TU/2;
 else
 TV —TV-TU;
-V1—V1-U1;V2<—V2-U2;
 TV —TV/2;
 50
 ```
@@ -5928,7 +4663,8 @@ TV —TV/2;
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BEEA Template Matrices
@@ -5946,21 +4682,16 @@ BEEA Template Matrices
 21
 22
 procedure Mbedtls_BEEA(x, A, B)
-U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-| U1 -—U1+T7TB;U2— U2-TA;
 while TV even do
 TV —TV/2;
-| Vic V1+TB,V2<—V2-TA;
-V1<— V1/2; V2 <— V2/2;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1;U2< U2-V2;
 TU —TU/2;
 else
 TV —TV-TU;
-V1<—V1-U1;V2—V2-U2;
 TV —TV/2;
 u_noif o ee
 v_if eee | |
@@ -5969,10 +4700,7 @@ v_noif o ee a
 Sample Index (samples 10-137 hidden)
 SUB_U_1 ||
 SUB_U_2 ||
-SUB_U_3 |
-SUB_U_4 | |
 SUB_U_5
-SUB_V_1 |
 SUB_V_2 |
 SUB_V_3 ||
 Sample Index
@@ -5991,45 +4719,58 @@ Sample Index
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BEEA Template Matrices
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(x, A, B)
-while /’V even do
-TV —TV/2;
-| Vic V1+TB,V2<—V2-TA;
+
+ 1  procedure Mbedtls_BEEA(X, A, B)
+ 2      TU ← A, TV ← B;
+ 3      U1 ← 1, U2 ← 0, V1 ← 0, V2 ← 1;
+ 4      while TU ≠ 0 do
+ 5          while TU even do
+ 6              TU ← TU/2;
+ 7              if U1 or U2 odd then
+ 8                  U1 ← U1 + TB; U2 ← U2 − TA ;
+ 9              U1 ← U1/2; U2 ← U2/2 ;
+10          while TV even do
+11              TV ← TV/2;
+12              if V1 or V2 odd then
+13                  V1 ← V1 + TB; V2 ← V2 − TA ;
+14              V1 ← V1/2; V2 ← V2/2 ;
+15          if TU ≥ TV then
+16              TU ← TU − TV;
+17              U1 ← U1 − V1; U2 ← U2 − V2 ;
+18              TU ← TU/2 ;
+19          else
+20              TV ← TV − TU;
+21              V1 ← V1 − U1; V2 ← V2 − U2 ;
+22              TV ← TV/2 ;
+
+[lines 10-14 are shown in full black; lines 13 and 14 are highlighted in blue. All other lines are greyed out.]
+
+[Top heat-map, rows top to bottom — u_if and u_noif greyed out, v_if and v_noif emphasised:]
+u_if
+u_noif
 v_if
 v_noif
-138 140 142
+x-axis ticks: 0  2  4  6  8      138  140  142  144  146  148  150
 Sample Index (samples 10-137 hidden)
-144
-146
-148
+
+[Bottom heat-map, greyed out, rows top to bottom:]
+SUB_U_1
+SUB_U_2
+SUB_U_3
+SUB_U_4
+SUB_U_5
+SUB_V_1
+SUB_V_2
+SUB_V_3
+x-axis ticks: 0  5  10  15  20
+Sample Index
+
 51
-150
 ```
 
 ## Slide 275
@@ -6044,35 +4785,57 @@ Sample Index (samples 10-137 hidden)
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BEEA Template Matrices
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-procedure Mbedtls_BEEA(x, A, B)
-else
-TV —TV-TU;
-V1<—V1-U1;V2<— V2-U2;
-TV —TV/2;
+
+ 1  procedure Mbedtls_BEEA(X, A, B)
+ 2      TU ← A, TV ← B;
+ 3      U1 ← 1, U2 ← 0, V1 ← 0, V2 ← 1;
+ 4      while TU ≠ 0 do
+ 5          while TU even do
+ 6              TU ← TU/2;
+ 7              if U1 or U2 odd then
+ 8                  U1 ← U1 + TB; U2 ← U2 − TA ;
+ 9              U1 ← U1/2; U2 ← U2/2 ;
+10          while TV even do
+11              TV ← TV/2;
+12              if V1 or V2 odd then
+13                  V1 ← V1 + TB; V2 ← V2 − TA ;
+14              V1 ← V1/2; V2 ← V2/2 ;
+15          if TU ≥ TV then
+16              TU ← TU − TV;
+17              U1 ← U1 − V1; U2 ← U2 − V2 ;
+18              TU ← TU/2 ;
+19          else
+20              TV ← TV − TU;
+21              V1 ← V1 − U1; V2 ← V2 − U2 ;
+22              TV ← TV/2 ;
+
+[lines 19-22 are shown in full black; line 21 is highlighted in blue and line 22 in orange. All other lines are greyed out.]
+
+[Top heat-map, greyed out, rows top to bottom:]
+u_if
+u_noif
+v_if
+v_noif
+x-axis ticks: 0  2  4  6  8      138  140  142  144  146  148  150
+Sample Index (samples 10-137 hidden)
+
+[Bottom heat-map, rows top to bottom — SUB_U_1 through SUB_U_5 greyed out, SUB_V_1, SUB_V_2 and SUB_V_3 emphasised:]
+SUB_U_1
+SUB_U_2
+SUB_U_3
+SUB_U_4
+SUB_U_5
 SUB_V_1
 SUB_V_2
 SUB_V_3
-10
+x-axis ticks: 0  5  10  15  20
 Sample Index
-15
-20
+
 51
 ```
 
@@ -6082,7 +4845,8 @@ Sample Index
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BEEA Template Matrices
@@ -6100,21 +4864,16 @@ BEEA Template Matrices
 21
 22
 procedure Mbedtls_BEEA(x, A, B)
-U1<—1,U2<—0,V1<—0,V2<—1;
 while TU # 0 do
 while TU even do
-| U1 -—U1+T7TB;U2— U2-TA;
 while TV even do
 TV —TV/2;
-| Vic V1+TB,V2<—V2-TA;
-V1<— V1/2; V2 <— V2/2;
 if TU > TV then
 TU —TU -TV;
 U1 — U1-V1;U2< U2-V2;
 TU —TU/2;
 else
 TV —TV-TU;
-V1<—V1-U1;V2—V2-U2;
 TV —TV/2;
 u_noif o ee
 v_if eee | |
@@ -6123,10 +4882,7 @@ v_noif o ee a
 Sample Index (samples 10-137 hidden)
 SUB_U_1 ||
 SUB_U_2 ||
-SUB_U_3 |
-SUB_U_4 | |
 SUB_U_5
-SUB_V_1 |
 SUB_V_2 |
 SUB_V_3 ||
 Sample Index
@@ -6404,11 +5160,11 @@ Key
 
 ## Slide 294
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 wli/vhs on 9 exp/cli [x!?] via [ impure (tfm-dev-shell-env)
->» ./mstp.sfJ
 ```
 
 ## Slide 295

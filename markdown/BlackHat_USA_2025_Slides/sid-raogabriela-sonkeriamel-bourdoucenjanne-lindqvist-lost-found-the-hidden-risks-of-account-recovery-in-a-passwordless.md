@@ -12,15 +12,20 @@ text_chars: 27544
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Sid Rao&Gabriela Sonkeri&Amel Bourdoucen&Janne Lindqvist_Lost & Found The Hidden Risks of Account Recovery in a Passwordless Future_TOOLS.txt"]
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:01:15Z"
+converted_at: "2026-08-12T05:22:13Z"
 ---
 # Lost & Found The Hidden Risks of Account Recovery in a Passwordless Future
 
 **Speakers:** Sid Rao, Gabriela Sonkeri, Amel Bourdoucen, Janne Lindqvist  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Sid Rao&Gabriela Sonkeri&Amel Bourdoucen&Janne Lindqvist_Lost & Found The Hidden Risks of Account Recovery in a Passwordless Future.pdf` (55 pages)
+
 
 ## Slide 1
 

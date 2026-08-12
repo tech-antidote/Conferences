@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Yilu Dong&Tianchang Yang&Arupjyoti Bhuyan&Syed Rafiul Hussain_Blind Trust in the 6 GHz Band Weaponizing Wi-Fi Automated Frequency Coordination (AFC).pdf"
 pages: 56
 sha256: "4b534a2b54927df006499aad05ba3dad638fbc8df955321b70a396b1da7c73c9"
-text_chars: 21761
+text_chars: 20380
 ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:17:45Z"
+converted_at: "2026-08-12T05:47:27Z"
 ---
 # Blind Trust in the 6 GHz Band Weaponizing Wi-Fi Automated Frequency Coordination (AFC)
 
 **Speakers:** Yilu Dong, Tianchang Yang, Arupjyoti Bhuyan, Syed Rafiul Hussain  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Yilu Dong&Tianchang Yang&Arupjyoti Bhuyan&Syed Rafiul Hussain_Blind Trust in the 6 GHz Band Weaponizing Wi-Fi Automated Frequency Coordination (AFC).pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -62,13 +67,13 @@ Weaponizing Wi-Fi Automated Frequency Coordination (AFC)
 
 Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for 99.999% reliability . It couldn't go into service.
 
-```
+\```
 NOV 2020DEC 20212022
-```
+\```
 
-```
+\```
 NOV 2022
-```
+\```
 
 **Degradation detected. ~1 year to find one source:** In acceptance testing, the an out-of-band device, hidden by new link underperforms; frequency hopping. kept out of service.
 
@@ -86,9 +91,9 @@ Formal warning reaches **one** offender. **Two years on** – the interference s
 
 Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for 99.999% reliability . It couldn't go into service.
 
-```
+\```
 NOV 2020DEC 20212022NOV 2022
-```
+\```
 
 **Degradation detected. ~1 year to find one source: It re-offends; t** wo more interferers Formal warning reaches **one** surface after months of additional offender. **Two years on** – the In acceptance testing, the an out-of-band device, hidden by new link underperforms; frequency hopping. investigation interference still continuous and the **system continuous to suffer from** kept out of service. **harmful interference**
 
@@ -191,7 +196,8 @@ Permitted Channels, Max Power
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AFC Request/Response Format
@@ -206,9 +212,7 @@ THE POWER & FREQUENCY "availableChannellInfo": [{
 YOU CAN USE
 "channelCfi": [1, 5, 9, 13, J],
 "maxEirp": [32.4, 32.4, «] }],
-"availabilityExpireTime":
 "2025-09-18T18:58:562" // +24h
-black hat
 2026 10
 ```
 
@@ -340,15 +344,11 @@ DEMO: Wi-Fi Location Spoofing
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ssh unifi_ SyNSec@192.168.137.120
-i
-) i QiscHaao yas 7.120
-UsPm™ By NSecQlop.8 6: e 2's password:
-Seppo ooopobopopebooooooeeck NOTICE eebedecboooicoicbioooicoiokistotaiok
-01K
 * By logging in to, accessing, or using any Ubiquiti product, you are
 *
 * signifying that you have read our Terms of Service (ToS) and End User
@@ -367,16 +367,10 @@ Seppo ooopobopopebooooooeeck NOTICE eebedecboooicoicbioooicoiokistotaiok
 *
 * void any applicable warranty.
 *
-eek
 | | | = /__| | PRODUCT: U7-Pro-Outdoor
-| ial [ee || | VERSION: 8.4.6+18068.260111.0707
-[27
 Ubiquiti Inc. (c) 2010-2026 https: //www.ui.com
 unifi_SyNSec@U7ProOutdoor:~# qtiwifilocation
--|Spoofer Shell
 xamples
-V2224
-black hat
 2026
 ```
 
@@ -539,30 +533,24 @@ Only 1 channel available
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Force Channel
 Selection Attack
 "version": "1.4",
-"ayailablespectruminguirykesponses": [ {
 "requestId": "2483720664",
 "response": {
 "responseCode": 0O,
 "shortDescription": "Success"
 "rulesetId": "US 47 CFR PART 15 SUBPART_E",
-MONE ota k-t Chae ian [ {
 . requencyRange":
 Only 20 MHz available "lowFrequency": 6845,
 "highFrequency": 6865
-LL
-)) maxes’: 23
-"availableChannellInfo": [{
 Only 1 channel available nghannelefi": [181],
 "maxEirp": [36.0]
-tl,
 "availabilityExpireTime": "2025-10-21T19:08:552"
-black hat
 34
 ```
 
@@ -576,14 +564,11 @@ black hat
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-HHH RK KH HRY
 void any applicable warranty.
-JNSeRQi92. 37, m
-mer 192. 100%R3 Ce ae is
-OAC ARR RRR RR a oo a
 By logging in to, accessing, or using any Ubiquiti product, you are
 signifying that you have read our Terms of Service (ToS) and End User
 License Agreement (EULA), understand their terms, and agree to be
@@ -593,19 +578,9 @@ By proceeding, you acknowledge that the use of SSH to modify device(s)
 outside of their normal operational scope, or in any manner
 inconsistent with the ToS or EULA, will permanently and irrevocably
 ssh unifi_ SyNSec@192.168.137.101
-NOTICE (RRR RRR RK ar
-HHRHK KKH EE
-SIGIR IOI ICO AC AOR ACCC HORACIO AOI ROI RIOR ACE
 Ubiquiti Inc. (c) 2010-2026
-unifi_SyNSec@U7Pro0utdoor:~# §j
-PRODUCT: U7-Pro-Outdoor
 MAC:
 VERSION: 8.4.6+18068.260111.0707
-https: //www.ui.com
-— (Attacker Shell
-annel_exp
-*
-black hat
 2026
 ```
 
@@ -619,7 +594,8 @@ AP forced to use channel 181
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Force Channel Selection Attack
@@ -639,7 +615,6 @@ TX Retries
 Ch. 11 (2.4 GHz, 20 MHz) 2x2 WiFi 7
 Ch. 48 (5 GHz, 40 MHz) 2x2 WiFi 7
 6 GHz channel disabled
-black hat
 2026 37
 ```
 
@@ -677,57 +652,57 @@ Serial, shared secret, service path and token identity are masked.
 
 ###### The ASUS/Wi-Fi Alliance Approach: Mutual TLS
 
-```
+\```
 ASUS GS-BE18000  ·  SHELL
-```
+\```
 
 1. Find the HTTP endpoint for AFC
 
 2. Extract client certificate from the device
 
-```
+\```
 admin@GS-BE18000-CB50:/# nvram show | grep afc_
 afc_cert_id=MSQ-XXXXXXXX
-```
+\```
 
-```
+\```
 afc_dev_serial_no=XXXXXXXXXXXXXXX
-```
+\```
 
-```
+\```
 afc_freq_range=5925,6425;6525,6875
-```
+\```
 
-```
+\```
 afc_geo_from=source_wifi
-```
+\```
 
 3. Use the certificate to connect to the server
 
-```
+\```
 afc_in_wifiaplist={"considerIp":"false","wifiAccessPoints":[
   {"macAddress":"XX:XX:XX:XX:XX:XX","signalStrength":-20}, ...
 afc_insecure=0
-```
+\```
 
-```
+\```
 afc_loc_height_type=AGL
-```
+\```
 
 **`afc_mtls_cert=/jffs/.sys/afc/afc_mtls_cacert.pem`** ← cert path `afc_op_class=131,132,133,134,137`
 
-```
+\```
 afc_out_lat=XX.XXXXXXX
-```
+\```
 
-```
+\```
 afc_out_lng=-XX.XXXXXX
-```
+\```
 
-```
+\```
 afc_reg_rules=US_47_CFR_PART_15_SUBPART_E
 afc_sp=1
-```
+\```
 
 **`afc_url=https://mtls-access.afc.wi-fi.com/api/XXXXXXXX`** ← endpoint
 
@@ -783,18 +758,11 @@ no client   no data tra  ic
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-How an Attacker May Exploit AFC?
-RECON FS Record
-FS link information is public
 Miami-Dade 6 GHz Microwave Call Signs
-Wi
-Ww
-Ww
-Ww
-Ww
 Ww
 Ww
 Ww
@@ -810,7 +778,6 @@ Wi
 Wi
 Wi
 )
-1
 23
 69
 79
@@ -827,7 +794,6 @@ Wi
 17
 7
 18
-19
 Federal
 (or Communications
 Commission
@@ -844,7 +810,6 @@ Frequency Upper Band >= 5925
 Frequency Assigned <= 7125
 @ Query Download
 <'> Map Licenses
-black hat
 2026 43
 ```
 
@@ -856,12 +821,10 @@ black hat
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-How an Attacker May Exploit AFC?
-RECON FS Record
-FS link information is public
 Communications
 Commission
 FE Federal FCC Home | Search | Updates | E-Filing | Initiatives | For Consumers | Find People
@@ -891,11 +854,7 @@ MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
 MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
 MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
 Call Sign/Lease ID FRN i Status Expiration Date
-EEEEEEEEEESE
-OOD OND DOD OTF
 Page 123
-ff SSS SESS EEE HEHEHE
-black hat
 2026 44
 ```
 
@@ -909,12 +868,10 @@ FS link information is public
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-How an Attacker May Exploit AFC?
-RECON FS Record
-FS link information is public
 ULS License
 Microwave Public Safety Pool License - WP 2 - MIAMI-DADE COUNTY
 Q New Search Q Refine Search [jp Return to Results (By Printable Page fy Reference Copy <4» Map License
@@ -929,7 +886,6 @@ None
 FRN og Governmental Entity
 (View Ownership Filing)
 Licensee
-MIAMI-DADE COUNTY 2 J
 5680 SW 87th Ave . p72
 MIAMI, FL 33173 dade.gov
 ATTN ITD Radio Communications Division
@@ -943,7 +899,6 @@ Microwave Data
 Oper Type Permanent Fixed Point to Point Station Class FXO - Operational Fixed
 Ownership and Qualifications
 Radio Service Type Fixed bl k al t
-Prats Comm Trrcoanadad We ac a
 USA
 2026 45
 ```
@@ -956,12 +911,10 @@ USA
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-How an Attacker May Exploit AFC?
-RECON FS Record
-FS link information is public
 LOCATIONS
 Call Sign WPJE410
 2 Total Locations
@@ -1000,7 +953,6 @@ Height w/o
 Appurtenances
 Height w/
 Appurtenances
-black hat
 2026 46
 ```
 
@@ -1012,16 +964,12 @@ black hat
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-How an Attacker May Exploit AFC?
-RECON FS Record
-FS link information is public
-_—
 (MAIN (ADMIN )( LOCATIONS PATHS MAP
 ve 10 adio Service MW - Microwave Public Safety Pool
-black hat
 2026 47
 ```
 
@@ -1101,17 +1049,17 @@ SP AP
 
 ###### AFC SERVER
 
-```
+\```
 ON THE AP
-```
+\```
 
-```
+\```
 ON THE TLS LINK
-```
+\```
 
-```
+\```
 ON THE AFC SERVER
-```
+\```
 
 Lock down AFC parameters
 
@@ -1149,9 +1097,9 @@ Per device and per IP address — one query costs 10–20 s of compute.
 
 ###### Acknowledgments
 
-```
+\```
 DISCUSSIONS & TECHNICAL ASSISTANCE
-```
+\```
 
 - **EPRI:** David Waters, Tim Godfrey, Jay Herman
 
@@ -1163,9 +1111,9 @@ DISCUSSIONS & TECHNICAL ASSISTANCE
 
 - **INL:** John Beck, Nathaniel Bennett
 
-```
+\```
 FUNDING & SUPPORT
-```
+\```
 
 This work is supported by a research grant and collaboration from the following institutions:
 

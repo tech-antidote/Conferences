@@ -4,23 +4,28 @@ speakers: ["Alex Radocea", "Jaron Bradley"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Alex Radocea, Jaron Bradley - Keychained Melody - Grabbing the Keys to the iCloud Kingdom.pdf"
 pages: 31
 sha256: "4bcc0bbce6d52d73d4dcf95fc4f6438871a34f17b88d2109910ba164d8ab0617"
-text_chars: 10339
+text_chars: 10303
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:13:38Z"
+converted_at: "2026-08-12T06:22:30Z"
 ---
 # Keychained Melody - Grabbing the Keys to the iCloud Kingdom
 
 **Speakers:** Alex Radocea, Jaron Bradley  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Alex Radocea, Jaron Bradley - Keychained Melody - Grabbing the Keys to the iCloud Kingdom.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -226,21 +231,17 @@ A demo video of the lights turning off in a smart home upon using a dumped certi
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© 0x16
 Endpoint @ device types:
-e 0x16
 Endpoint 1 device types:
 e @x10a
 Endpoint @ device types:
-© 0x16
 Endpoint 1 device types:
-e @x10a
 > Treating endpoint 1 as load (light/plug)
 Endpoint ® device types:
-e 0x16
 @ Toggled!
 > On/Off state: ON @
 @ Toggled!

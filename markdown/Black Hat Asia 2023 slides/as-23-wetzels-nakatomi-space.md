@@ -8,13 +8,18 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Wetzels-Nakatomi-Space.pdf"
 pages: 41
 sha256: "63e6e4610c36eb73a6fcdc8a19e440ddba0e6263c8c40d2b957f13d373665ccc"
-text_chars: 21175
+text_chars: 19094
 ocr_pages: 38
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:57:16Z"
+converted_at: "2026-08-12T03:50:58Z"
 ---
 # Nakatomi Space
 
@@ -22,9 +27,11 @@ converted_at: "2026-08-11T23:57:16Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Wetzels-Nakatomi-Space.pdf` (41 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Automated Cybersecurity Across Your Digital Terrain
@@ -51,7 +58,8 @@ Security Researcher, Forescout
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Level 4/5
@@ -73,18 +81,13 @@ Level 2 | Ei EWS
 Area Supervisory Aelelele) 2 Servers (App/DB)
 Gateway
 1p) PLCs
-[Ci} 2222929 wipe
-DO} nested OO (oy
 ] fieldbus 55550) i Industrial Prior work
 Level 1 mle) Wireless
 control ney eh ‘Classical’ perimeters at L3.5/L2.5
 oo oo us packaged unit ae East-West ‘@)) | D+
 sensors Upstream to L2
-revel 0 {i tity © Actuators
 Field Devices
-[peeeee]
 Safety [190] sts
-EXIIIT
 ```
 
 ## Slide 4
@@ -95,7 +98,8 @@ EXIIIT
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nakatomi (Cyber)Space* Architectural elements with
@@ -115,32 +119,52 @@ latent potential to enable
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 75/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Deep Lateral Movement Focus
-East-West @ LI
-Local HMIs “Deep downstream”
-Level 2 = EWS
-Area Supervisory Aelelel") oA |? Servers (App/DB)
-Gateway
-J @ Dice Examples
-(9) 9
-= _\'t RTUS Nested Fieldbus
-2299929 IEDs l d t 0 | Wi |
-CLIO} wested Oo GD) naustrial Wireless
-BEEBE KT dhys IIIT mie inauserial 3rd Party PUs
-Level 1 4 | | Sat a) BPCS/SIS links
-Control 222999 222999 —_ I
-ona oo Ss, rd party CLIO
-oa oo us packaged unTt oo
-666600
+Deep Lateral Movement
+
+[Right-hand callout boxes]
+Focus
+East-West @ L1
+"Deep downstream"
+
+Examples
+Nested Fieldbus
+Industrial Wireless
+3rd Party PUs
+BPCS / SIS links
+
 Different Networks
-Level 0 Sensors Non-routable (PTP)
-Process {= dA © rield povices Non-IP (serial, RF)
-2222999
-Safety C10} sts
-066600
+Non-routable (PTP)
+Non-IP (serial, RF)
+
+[Purdue-model diagram, top to bottom]
+Level 2
+Area Supervisory
+    Local HMIs
+    EWS
+    Servers (App/DB)
+    Gateway
+
+Level 1
+Control
+    PLCs
+    RTUs
+    IEDs
+    Nested fieldbus
+    Industrial Wireless
+    3rd party packaged unit
+
+Level 0
+Process
+    Sensors
+    Actuators
+    Field Devices
+
+Safety
+    SIS
 ```
 
 ## Slide 6
@@ -151,7 +175,8 @@ Safety C10} sts
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Going through may require L1 RCE
@@ -164,7 +189,6 @@ Going through may require L1 RCE
 — Exfiltration®?
 — “OT payloads” (impair process control + inhibit response)!4101112
 > But no lateral movement at L]
-' MITRE SO603, * MITRE S1009,* MITRE S1006
 4|INCONTROLLER: New State-Sponsored Cyber Attack Tools Target Multiple ICS - Mandiant
 5 Cyber-Security in Building Automation Systems - Forescout
 ©The Race to Native Code Execution in PLCs—T. Keren et al.
@@ -178,7 +202,8 @@ Hey, My Malware Knows Physics! — L. Garcia et al.
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Why bother? Reason #1: Perimeter crossing
@@ -187,31 +212,30 @@ Why bother? Reason #1: Perimeter crossing
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BPCS / SIS architectures
 Can be generalized to any distinct but interacting control systems
 Integrated Interfaced / “Shared”
-ll_o 1
 BPCS Sus
 ```
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example: SIS Bypasses
 FACEPLATE
-(- >)
 Bypass sensor,
 actuator, SIF BYPASS STATUS }€
 BYPASS FB
 Needs to be
 enabled before > ACTIVATE OUT —
 activation (from BPCS) ;
-S
 Not from BPCS > ENABLE STATUS
 > TIMEOUT CNTR —
 SW SIGNAL
@@ -231,7 +255,8 @@ SW SIGNAL
 
 – –
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packaged Units (PU)
@@ -249,7 +274,8 @@ Packaged Units (PU)
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example: Fieldbus Couplers. wy
@@ -266,8 +292,6 @@ BPCS Packaged unit Often considered
 sufficient perimeter due
 to limited capabilities
 2229299
-((y)
-600566 Y oo |
 Used to be ‘dumb’
 Increasingly ‘smart’
 | Coupler vendor remote
@@ -275,41 +299,35 @@ maintenace |
 Cro Perimeter assumptions
 lel lel ey not evaluated for new
 attack surface
-Mee eee eee ee eee eee eee eee a
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Why bother? Reason #2: Granular control
 | want to talk to nested devices in a way not possible through what's
 intentionally exposed ©) [Status
 OC Valvel
-PLC2.Status @) Valve? PLCé
-29999000 @) Valvel.Setting
 O of
 PLC3.Status
 PLC3.Fan PLCL SSSEES
 PU_PLC.Status 099900
------------ +--+ eee o°o Non-routable [iii
-oo|------ ; ' Packaged Unit (PU);
 PLC3 PU_PLC
 I 1
 ! ! 999999
-i OO]: o,|___={ |
-o10 oo “o-
 Lol Status 660060006 f
 O10 @) Fan OC) Status
-Bypass firmware OC ' OC)
 . . PU_PLC.Status I Motor
 safety limits te !
 ```
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Very common in automotive exploitation
@@ -329,7 +347,8 @@ module Main Processor controller
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What do vendors & standards say?
@@ -348,7 +367,8 @@ using a dedicated point-to-point serial connection. Note that the discrete I/O a
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Scenario: Movable Bridge
@@ -356,25 +376,16 @@ Bascule Girder
 Trunnion Bearing
 Rack
 Pinion
-I
 i < Back Wall
 = Front Wall —>|] ° ° Pit ack Wall |
-le) %
-x v
-YL i
 (a) LEAF OPEN
 Lock Bar Trunnion Shaft Rear Break
 Lock Bar Actuator ‘\ j a In Deck ;
 tT |
-| ¥
-\
 CWT
 Lockbar wy = |
 Socket Live Load ee Bs
-Bearing a
 i |} — Bumper
-—-¥ =— —_—F—
-4 L
 Rest Pier > < Channel ple Bascule Pier >|
 16
 (b) LEAF CLOSED “Bridge Maintenance Reference Manual -— FDOT, structurae.net
@@ -382,7 +393,8 @@ Rest Pier > < Channel ple Bascule Pier >|
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bridge closing sequence - Limit Switches
@@ -402,10 +414,10 @@ XX=FA, NA, FO, OR NO
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-“Bridge Maintenance Reference Manual -— FDOT, FDI Services
 Bridge closing sequence - Lock Bar
 LEAF(S) FULLY
 SEATED PERMISSIVE
@@ -428,19 +440,7 @@ EXPANDED VIEW.
 SOUND
 HORN | HORN
 1
-'
-1
-1
-1
-1
-1
-1
-f
-1
 \
-se, a
-WIZZ East Leat Lea WY”, -tHt)
-¥
 18
 ```
 
@@ -450,7 +450,8 @@ WIZZ East Leat Lea WY”, -tHt)
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Scenarios
@@ -466,22 +467,15 @@ Attack Scenarios
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Path - Likely can’t do this from SCADA
 O Bridge #2
-| ' Object PlCc| © | Bridge Systems —— ;
-» ' \gcpu [rtug|zo $ OE |
-re |
 Coupler 1
-~ : Safety PLC (5) At
 I
-Aa a BYPASS stop
-C) SS ' ' ENABLE
-' |mcpu | Sp S|ETHS|I0 9 — ‘@ |
 | |
-1 [
 I
 (1) RCE on Coupler (2) Auth Bypass (3) RCE on Object PLC
 (4) Move into fieldbus (5) Cross SIS PTP link (6) Enable SIS bypass across backplane
@@ -489,34 +483,28 @@ I
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coupler » Object PLC RTU module
 Cannot talk directly to M340 via Wago 750-852 coupler
 Various protocols
 Limited Modbus Mapping
-NNo TDA (routing) BD
 Get RCE on coupler via N-day » Proxy traffic to M340
 Hook Modbus handler,
 turn into proxy
-ond
-er
 Stager Payload
 Wago Coupler FW
 Supervisor mode
 No mitigations
 No tsk separation
 RWX memory areas
-|
 NUCLEUS NET
 TCP/IP Stack
-i
 NUCLEUS
-Memory Al loc
 Modbus
 Handler oO
-og
 >
 Proxy Implant
 ```
@@ -527,7 +515,8 @@ Proxy Implant
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 oid _cdecl Control Task(UNSI
@@ -535,11 +524,9 @@ CVE-2021-31886* on Wago 750-852
 FSP_CB *control_blocka;
 >» Stack bof in Nucleus FTPd "USER" cmd CHAR nu_drive[3)3°//
 — Check via strlen() but copy until '\r’ > use fake 0x00 [—_————/e—ailippetiermede
-: ; . NU TASK *nointerTothisTask;
 - Overwrite FTP_Events linked list after user buff FTP SERVER server;
 — Disconnect > trigger unlink > write-4 CHAR commandBuf [8];
 CHAR *buffer;
-INTSZ DytesReceived,
 — RW .bss area suitable for shellcode
 — Write shellcode ptr to soan_process_packet func ptr
 — New FTP session > overwrite buffer ptr with shellcode ptr
@@ -561,7 +548,8 @@ INTSZ DytesReceived,
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 * As of vO1.09.25 (16)
@@ -590,7 +578,8 @@ Tasks Interrupts | Mailboxes
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Object PLC: Schneider Electric UMAS
@@ -602,14 +591,12 @@ Object PLC: Schneider Electric UMAS
 — Program/Safety password (weak crypto, client-side)*
 — UMAS historically unauth, introduced Application Password?
 UMAS
-SL
 Modbus Header
 Function Code
 Reservation ID
 UMAS Service ID
 COx5A) (or status) Message Data
 1 Byte 1 Byte 1 Byte N Bytes
-| Project Basecamp - Digital Bond
 2 The secrets of Schneider Electric's UMAS protocol-—P. Nesterov et al.
 3 Going Deeper into Schneider Modicon PAC Security —G. Jian
 4 Examining Crypto and Bypassing Authentication in Schneider Electric PLCs (M340 / M580) —N. Miles
@@ -620,12 +607,12 @@ COx5A) (or status) Message Data
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-22779: Auth Bypass
 > Read secret from mem » Don't need to know pwd...
-EnhancedcCyberReserve v1
 Read Memory Block:
 secret = [ B64(salt) + B64(SHA2(salt+pwd)) ]
 Take Reservation: auth=SHA2(snonce + secret + cnonce)
@@ -641,7 +628,8 @@ Authenticated Request:
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-45789 — Authentication Bypass’
@@ -680,7 +668,8 @@ Sniff res ID @ No signature secret
 
 – –
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Route to CPU Module RCE
@@ -691,7 +680,6 @@ Route to CPU Module RCE
 —No logic restarts
 —DFIR hostile ( project checksums, invisible in source )
 —Using obscure protocol features to evade most IDS
-' TALOS-2018-0742 — J. Rittle
 2 Applying a Stuxnet Type Attack to a Modicon PLC - F. Dola
 3 Going Deeper into Schneider Modicon PAC Security —G. Jian
 * ModiPwn - G. Kauffman et al. 27
@@ -702,27 +690,23 @@ Route to CPU Module RCE
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Background: Modicon Application Binary File (APX)
 Area
-Index #Sections |Load Addr. |Attributes _— > Block Types
 — Data/ Exec / Upload Info / FB Data / Constant / etc.
 Section
 Index size Attributes
 Relocation Table (RT)
-Data . .
 Entry Size] #Entries
-Block|Block|Block Block Block|Block Block 5
 RTE Nr Area ~ Section - size Attributes
 A . offset
-rte nr. | 474 offest - size Attributes
 Section
 RTE N Area - Section - si attribut
 r. offset ize ributes
 Index size Attributes
-Data v
 Block/Block|Block Block Block Block Block €
 28
 ```
@@ -735,12 +719,12 @@ Block/Block|Block Block Block Block Block €
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unexplored UMAS CSA Requests (0x50)
 Init/Read/write/Exec virtual 'page'
-a
 Directly manipulate
 RTE blocks
 Subsystem with
@@ -754,7 +738,8 @@ command set
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-45788 — Modicon CPU RCE“
@@ -766,10 +751,8 @@ code blocks
 A
 (permission check
 set to ‘ignore')
-S~
 ™
 write payload to data block
-@)
 (find cave or expand block)
 Data Block
 “Affects latest M340, M580, MIE, MC80, Quantum, Premium CPU module FW,
@@ -777,14 +760,12 @@ see SEVD-2023-010-05
 Get RCE when block
 executes as part of logic
 @)
-@
 copy from data block to
 code block
 (find cave or expand block,
 then hijack control flow)
 if ( !ignore )
 {
-if ( rte ptr )
 {
 if ( (rte_ptr->attr & @x10000) != @ )
 {
@@ -793,7 +774,6 @@ return @x9191;
 else
 {
 blocktype =
-rte _ptr->attr & OxF;
 ```
 
 ## Slide 31
@@ -804,7 +784,8 @@ rte _ptr->attr & OxF;
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “As of v3.50
@@ -834,11 +815,11 @@ kl_userTimeDis((int)v5);
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Stager Payload & Implant
-|
 Bridge Systems
 Safety PLC
 ote |
@@ -847,11 +828,8 @@ Modicon X-Bus i) |e e e e
 Backplane CANopen windNet
 Device Driver! |Device Driver
 TCP/IP Stack
-f
-Vxworks
 sockLib
 Supervisor mode O O vxworks
-No mitigations “ . taskLib
 Injected code executed
 by scancycle
 Code Block
@@ -872,17 +850,15 @@ Cleanup manipulated blocks (Canti-DFIR)
 
 – – –
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CANopen payload 4 ou —
 > Talk to M340 CANopen API, use CiA funcs
-index |SDOName
 can_SWrite SDO(ND, » 1, START_BOOT, Ox1023 OS CMD2
-can SWrite SDO(ND, Pee CS meses = OX1024 OS CMD Mode?
 eae Ox1025 OS Debugger?
 can SWrite SDO(ND, » 1, block[i], Ox1026 OS Prompt?
-Ox1F50O
 Ox1F51
 > RCE via SDO: override firmware (safety) limits
 —|n-band code dndl — trigger bootloader via NMT/SDO
@@ -896,7 +872,8 @@ Program Control?
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Object PLC » Safety PLC Ethernet module
@@ -904,7 +881,6 @@ Cannot talk directly to GuardLogix CPU module or route CIP
 Non-routable PTP link
 Only Modbus TCP (AOl)
 Explicit protected mode
-ERO ES Sot ~ ROR SSS SS wa
 Exploit N-day vuln in TCP/IP stack for RCE
 on Ethernet Module » hop to rest of SIS Allen-Bradley GuardLogix Safety PLC
 1756-EN2T/D Ethernet Module
@@ -921,7 +897,8 @@ on Ethernet Module » hop to rest of SIS Allen-Bradley GuardLogix Safety PLC
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2019-12256* on Allen-Bradley 1756-EN2T/D
@@ -951,7 +928,8 @@ memcpy((char *)srr_opt + (unsigned __int8)srr_opt->len, icmp param + 12,
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 * As of v11.01
@@ -962,7 +940,6 @@ Protocol Stacks
 — .nvs: descriptive text file vxworks
 ; IPnet TCP/IP stack SNMP
 — .plt: binary fw oesyet
-a 1Tlesystems
 _ der: certificates GoAhead webserver OpenssL POSES aa
 Rockwell 1756-EN2x ControlBus . .
 Datalight Reliance
@@ -976,18 +953,15 @@ Datalight Reliance
 RTOS - Vxworks 6.9.3
 Tasks Interrupts | Exceptions
 Device Drivers Memory | Timers Mutex Etc.
-symbol <@, aAccessDescript_@, ACCESS DESCHLMPANMPAssomel-y4lna) Malo allele Gels
 5 DATA XREF: useS'/¥]_Z7N12bsp_Apexlmpl13StartFirmwareEv
-3 usrStandaloneIni .
-symbol <@, aAccessDescript_1, ACCESS DESCRL)-2N12bsp_Apeximpl13initBackplaneEb
 symbol <0, aAccessDescript 2, ACCESS DESCf4)_ZN12bsp_Apex|mpl9lsFaultedEv
 symbol <Q, aAcmAllocateele, ACM_AllocateE]#]_ZN12bsp_Apexlmpl13lsCbaAssertedEv
-symbol <0, aAcmAllocatetar, ACM AllocateTéF] 7N12bsp Apeximpl13isCbbAssertedEv (cortex-A9) Spartan (backplane)
 ```
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Move across Safety PLC backplane
@@ -1003,8 +977,6 @@ Implant might need CIP parser
 vuln.
 No routable traffic (eg. CIP)
 via PTP link
-2 8
-SSSR sGssssSa
 re
 Depends on SIS bypass
 implementation
@@ -1023,7 +995,8 @@ Firmware
 
 -
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 e *SEVD-2023-010-05, SEVD-2023-010-06
@@ -1040,7 +1013,6 @@ Disclosure
 — Auth user to PLC with SRP (zero-knowledge, MitM-resistant, discrete-log based)
 — Derive HMAC key from shared SRP key K
 — Sign messages with HMAC
-| 39
 ```
 
 ## Slide 39
@@ -1057,7 +1029,8 @@ Disclosure
 |•||
 |||
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (some) Mitigation, Detection, and DFIR advice
@@ -1077,14 +1050,11 @@ Monitor IP & assert statistics
 Monitor task statistics
 Task Statistics STAT
 Name Entry Point ID Priority ensues
-tJobTask 167208 efc4e8 0 Geatuing i .
 texcTask 1269f¢ 3568 Default TL «¢ | >» For full overview,
 tErffask 10b9c fOOfF70 10 *
 In header errors 4
 tLogTask 1e76bc f04110 0 See re ee) rt
-Ill aquUQTess errors U
 tNeto 1bdc8 fl1e00 50 Forwarded datagrams 0
-ae - minints eminent en
 * https://www.forescout.com/resources/I1-lateral-movement-report 40
 ```
 
@@ -1100,13 +1070,13 @@ ae - minints eminent en
 
 
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Conclusions
 > There's likely a lot of network ‘craw! space’ that’s not on your radar
 > If a LI device sits between segments, it needs a perimeter security
-profile
 > Stop treating certain links (serial, PTP, couplers, non-routable)
 as If they’re immune
 > Impact of compromise not limited to explicit link capabilities or

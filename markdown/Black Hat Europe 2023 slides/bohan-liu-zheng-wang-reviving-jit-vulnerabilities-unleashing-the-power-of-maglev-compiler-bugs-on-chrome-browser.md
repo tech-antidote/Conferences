@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Bohan Liu, Zheng Wang_Reviving JIT Vulnerabilities Unleashing the Power of Maglev Compiler Bugs on Chrome Browser.pdf"
 pages: 73
 sha256: "febafaa08f38dd89a2b71603d9cb6419cf324ed015be4984486ad248ddf6802a"
-text_chars: 43480
+text_chars: 42573
 ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:10:28Z"
+converted_at: "2026-08-12T04:00:45Z"
 ---
 # Reviving JIT Vulnerabilities Unleashing the Power of Maglev Compiler Bugs on Chrome Browser
 
 **Speakers:** Bohan Liu, Zheng Wang  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Bohan Liu, Zheng Wang_Reviving JIT Vulnerabilities Unleashing the Power of Maglev Compiler Bugs on Chrome Browser.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -467,18 +473,16 @@ Enable component support in JIT picker and add special templates
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Differential fuzzer
 Enable component support in JIT picker and add special
 templates
 @@ -240,6 +274,8 @@ let v8Profile = Profile
 "--harmony-rab-gsab",
 "--allow-natives-syntax",
-"--interrupt-budget=1000",
 "--maglev",
 "--stress-maglev",
 "--fuzzing"
@@ -505,17 +509,10 @@ Total Execs: 2015730
 Differential Tests: 16544
 if differentialTesting {
 @@ -297,9 +333,13 @@ let v8Profile = Profile
-5
 codeSuffix: """
-gc();
-gc();
-}
 %NeverOptimizeFunction(main) ;
 %PrepareFunctionForOptimization(main) ;
 main();
-%OptimizeMaglevOnNextCall (main) ;
-main();
-2
 ```
 
 ## Slide 27
@@ -526,16 +523,14 @@ Find interesting vulnerability patterns and write ql to query them
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Code Review Helpers
 Find interesting vulnerability patterns and write ql to query them
 and fc.getEnclosingFunction() = f
 and fc.getTarget().getName().toString() = "MakeDeferredCode"
-ETare|
 (exists(
 LambdaExpression cb, Operator op |
 cb = fc.getArgument(@)
@@ -679,11 +674,10 @@ Issue 1381335 / 1500857
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat eM a
-EUROPE 2@O0es
 Issue 1384369
 ransitioning macro G@h@hateStringAn (implicit context: Context) ( ValueNode* MaglevGraphBuilder: : TryReduceStringPrototypeCharCodeAt
 receiver: JSAny, position: JSAny, compiler: :JSFunctionRef target, CallArguments& args)
@@ -700,14 +694,12 @@ const length: uintptr =_string,. length uintptr: ValueNode* length = AddNewNode<
 onst index: uintptr =|Unsigned(Convert<intptr>(indexSmi) ) ; AddNewNode<CheckInt32Condition>({index, length}, AssertCondition::kLess,
 DeoptimizeReason: : kOutOfBounds) ;
 return AddNewNode<BuiltinStringPrototypeCharCodeAt>({receiver, index});
-StaticAssertStringLengthFitsSmi ( ) ;
 if (index >= length) goto IfOutOfBounds;
 goto IfInBounds(string, index, length);
 } What does CheckInt32Condition generate?
 case (indexHeapNumber: HeapNumber): {
 dcheck(IsNumberNormalized(indexHeapNumber) ) ;
 goto IfOutOfBounds;
-}
 Code in Runtime Code in Maglev
 ```
 
@@ -818,16 +810,14 @@ new_target.initial_map.constructor==target
 
 **_Code in Maglev_**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat SS Pas
-EUROPE 2@O0es
 FastObject: :FastObject(compiler::JSFunctionRef constructor, Zone* zone,
 compiler: :JSHeapBroker* broker)
 : map(gonstructor.initial_map(broker)) {
 issue A 465326 compiley: :SlackTrackingPrediction prediction =
-brgéker->dependencies() ->DependOnInitialMapInstanceSizePrediction(
 constructor) ;
 inoject_properties = prediction.inobject_property_count();
 ingtance_size = prediction.instance_size();
@@ -835,18 +825,15 @@ fAelds = zone->NewArray<FastField>(inobject_properties) ;
 ClearFields();
 elements = FastFixedArray();
 void MaglevGraphBuilder: :VisitFindNonDefaultConstructorOrConstruct
-ValueNode* this function = LoadRegisterTagged (0) ;
 ValueNode* new_target = LoadRegisterTagged(1) ;
 auto register pair = iterator _.GetRegisterPairOperand(2) ;
 if (compiler: :OptionalHeapObjectRef constant =
-TryGetConstant(this function) )
 compiler: :MapRef function map = constant->map(broker());
 compiler: :HeapObjectRef current = function_map.prototype(broker());
 ValueNode* MaglevGraphBuilder: :BuildAllocateFast0bject
 FastObject object, AllocationType allocation type) {
 SmallZoneVector<ValueNode*, 8> properties(object.inobject_properties, zone());
 for (int i = 0; i < object.inobject_properties; ++i) {
-properties[i] = BuildAllocateFastObject(object.fields[i], allocation type);
 if (broker()->dependencies()->DependOnArrayIteratorProtector()) {
 while (true) {
 FunctionKind kind = current_function.shared(broker()).kind();
@@ -864,7 +851,6 @@ object = BuildAllocateFastUbject
 DCHECK(object.map.IsJSObjectMap()) ;
 IDC ks) ca 1
 ValueNode* allocation = Extend0rReallocateCurrentRawAllocation
-object.instance size, allocation type);
 BuildStoreReceiverMap(allocation, object.map) ;
 AddNewNode<StorelaggedFieldNoWriteBarrier>
 FastObject(new_target_function->AsJSFunction(), zone(), {allocation, GetRootConstant (RootIndex: :kEmptyFixedArray) }
@@ -874,15 +860,12 @@ else { BuildStoreTaggedField(allocation, GetConstant(*object.js_ array length),
 object = BuildCallBuiltin<Builtin: : kFastNewObject>(
 {GetConstant(current_function), new_target}) ;
 JsArray::kLengthOffset) ;
-StoreRegister(register pair.first, GetBooleanConstant(true) );
 StoreRegister(register_pair.second, object);
 return;
-}
 break;
 BuildStoreTaggedField(allocation, elements, JSObject::kElementsOffset) ;
 for (int i = 0; i < object.inobject_properties; ++i) {
 BuildStoreTaggedField(allocation, properties[i],
-object.map.GetInObjectPropertyOffset(i));
 return allocation;
 Code in Maglev
 ```
@@ -1521,49 +1504,20 @@ holder = []; function v1(v2) { let v3 = undefined; let v31 = undefined; let v32 
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-EUROPE @O25
 An Interesting RCE trip in Maglev
 tan
 DRG
-tromium:
 Revision: fb
 and Line:
 ble Path:
 file Path:
-triations:
-13494451
 3042ad4b
-382867ad
-3fdal7df
-9-3fdal7df
-3fd33f16-
-3 f65b38-
-2ba47366.
-248c3fbd
 58155072
-2979853
 25ad6029
-ab5e9272
-0352ca2
-62cb9bab.
-911e33b9.
-36d5ee52:
-376d29ba
--3fdal7dt
--3fdal7dt
--3fdal7dt
--3fdal7dt
--3fdal7dt
-5124949
--9c6dd96d
--41986bdd
--3fdal7df
--3fdal7dt
--3fdal7dt
 python -m
 4 @ ndaliu 1 in /tmp/rce [2:49:12]
 python -m SimpleHTTPServer 9999

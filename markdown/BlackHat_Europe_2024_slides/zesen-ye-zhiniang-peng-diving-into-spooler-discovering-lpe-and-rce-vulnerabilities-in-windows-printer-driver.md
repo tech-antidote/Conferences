@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/ZeSen Ye & Zhiniang Peng_Diving into Spooler Discovering LPE and RCE Vulnerabilities in Windows Printer Driver.pdf"
 pages: 71
 sha256: "7e4196ef294fea4b75fcb59680f05909a86e6eb855118679749122af538304f8"
-text_chars: 22782
-ocr_pages: 8
+text_chars: 21994
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:47:41Z"
+converted_at: "2026-08-12T05:01:54Z"
 ---
 # Diving into Spooler Discovering LPE and RCE Vulnerabilities in Windows Printer Driver
 
 **Speakers:** ZeSen Ye, Zhiniang Peng  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/ZeSen Ye & Zhiniang Peng_Diving into Spooler Discovering LPE and RCE Vulnerabilities in Windows Printer Driver.pdf` (71 pages)
+
 
 ## Slide 1
 
@@ -82,7 +87,8 @@ Introduction
 
 A Windows Service Spools print jobs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Print Spooler
@@ -90,19 +96,15 @@ A Windows Service Spools print jobs
 File Action View
 <2 Be om Print Spooler Properties (Local Computer)
 Services (Local) Sanesloc General LogOn Recovery Dependencies
-Print Spooler Name Servicename:  EEEEIEY
+Print Spooler Name Servicename: EEEEIEY
 Parental Controls
 , Payments and NFC/SE Manager
 , Peer Name Resolution Protocol Description
 the service Display name Print Spooler
 the service ‘This service spools print jobs and handles interaction a
 with the printer. If you tum off this service, you won't
-, Peer Networking Grouping fo aaaepes veacucemsas
 v
-Tee soopte print jobs and Peer Networking Identity Manager Paths to executable:
-hadi Pssermsivwah the aitaee iieteeren caer Host CAWINDOWS \System32\spoolsv.exe
 'erformance Logs lerts
-Beobleto pintorsecyor pide” UR Ehone Sica. Satetee: = ae
 , Plug and Play
 . PNRP Machine Name Publication Service
 , Portable Device Enumerator Service Service status: Running
@@ -125,13 +127,13 @@ Radio Management Service
 
 Spooling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Spooling
 Document A
 Desktop
-Papercut”
 Document B Spooling
 Document C
 Tablet
@@ -242,7 +244,8 @@ Complex?
 Rendering?
 Bugs!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 New attack surface
@@ -252,11 +255,6 @@ i ?
 Rendering? Bugs!
 mapping p Bag: fe
 DevModeMap Printer Config wut
-oct} Rooeweiee ek {GPo/PPD}
-uavascript
-Bidi Extension
-heen Bidiedension |,
-avaSeript)
 ```
 
 ## Slide 20
@@ -327,16 +325,6 @@ Shared
 SMB
 printer driver
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-RCE Attack Scenario (RCE over SMB)
-Computer A Computer B
-Print API : —_7
-SMB Shared
-printer driver
-```
-
 ## Slide 26
 
 ###### RCE Attack Scenario (RCE over RDP)
@@ -384,14 +372,13 @@ render
 
 **XPS Print API** .xps -> spooler
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How to print
-e .
 | | .docx / .pdf / .html > .xps > spooler
 XPS Print API SBS ALE
-4
 ¥ ¥
 XPS Print API SAS
 |
@@ -659,30 +646,22 @@ XSD – XML Schema Definition
 
 Commonly used to validate XML formats.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PrintXPS — Input Generation
 XSD - XML Schema Definition #: CrPath ;
 fa AG Path
-"| 6> Path.RenderTransform (0.1
-A §|) {ale matrix st.Matrix
-> Path.Clip (0.1 CT-CP Geometry & |
 Commonly used to validate XML formats. (BAB @ Pathccometry T Pathccomety © |
 > Path.OpacityMask (0.1 TOP A |
-#2| | 6> ImageBrush
-B) | (PAR @ opaciy
-8)8 B) ffa) @ Transform
 H 3 @ Viewbox
 = @ Viewport
 £ @ TileMode
 @ ViewboxUnits
 @ ViewportUnits
 fla) @ ImageSource
-°F) 6> ImageBrush.Transform [0.1
-B) (PB) g> matrixtransform
 2
-a| [212 | Cliaile movie
 ```
 
 ## Slide 55
@@ -774,7 +753,8 @@ xamlPath::draw wrong function
 
 Microsoft fixed their documents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Next
@@ -818,7 +798,8 @@ Rely on Microsoft's
 
 CVE in HP Print Driver
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE in HP Print Driver

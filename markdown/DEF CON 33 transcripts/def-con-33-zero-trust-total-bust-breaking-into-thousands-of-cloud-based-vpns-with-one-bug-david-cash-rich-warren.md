@@ -12,7 +12,7 @@ duration_seconds: 2320
 words: 6181
 text_chars: 34288
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:15Z"
 ---
 
 # Zero Trust, Total Bust

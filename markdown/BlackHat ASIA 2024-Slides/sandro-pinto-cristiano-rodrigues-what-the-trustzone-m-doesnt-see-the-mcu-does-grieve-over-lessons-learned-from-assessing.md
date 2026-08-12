@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Sandro Pinto & Cristiano Rodrigues -What the TrustZone-M Doesn't See, the MCU Does Grieve Over Lessons Learned from Assessing a Microcontroller TEE.pdf"
 pages: 342
 sha256: "21b8a36edabb19fd1edb3c8332b29ac3ffb11cfd1612e2e79712ce53a4d97189"
-text_chars: 111721
+text_chars: 110678
 ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:32Z"
+converted_at: "2026-08-12T04:53:07Z"
 ---
 # M Doesn't See, the MCU Does Grieve Over Lessons Learned from Assessing a Microcontroller TEE
 
 **Speakers:** Sandro Pinto, Cristiano Rodrigues -What the TrustZone  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Sandro Pinto & Cristiano Rodrigues -What the TrustZone-M Doesn't See, the MCU Does Grieve Over Lessons Learned from Assessing a Microcontroller TEE.pdf` (342 pages)
+
 
 ## Slide 1
 
@@ -1777,13 +1782,13 @@ Kinibi-M
 
 SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 aking The World A Safer Place
 Mircochip First To Use Turstonic Revolutionary
 Kinibi-M Platform For Microcontrollers
-YMG Ole nile kel T RUSTONIC
 SAML11 Kinibi-M
 ```
 
@@ -1793,7 +1798,8 @@ SAML11 Kinibi-M
 
 SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 security com
@@ -1803,14 +1809,12 @@ Artificial Intelligence (Al) Cybe
 TECHNOLOGIES > EMBEDDED
 Microchip Debuts Cortex-M23
 MCUs
-June 25,2018 E&I)
 Two of the first Cortex-M23 microcontrollers
 have arrived—developed by Microchip—and
 advanced security is among the features.
 Mircochip First To Use Turstonic Revolutionary
 Kinibi-M Platform For Microcontrollers
 William G. Wong
-YMG Ole nile kel T RUSTONIC
 SAML11 Kinibi-M
 ```
 
@@ -1820,11 +1824,11 @@ SAML11 Kinibi-M
 
 SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ElectronicDesign. LOGIN JO
-security@nformed con
 Making The World A Safer Place
 Artificial Intelligence (Al) Mobile Access Healthcare Security Cybe eA ee Eee REMESDDED
 Microchip Debuts Cortex-M23
@@ -1845,7 +1849,8 @@ Not just droning on! The rise of Kinibi-M| @
 
 SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 security@nformed om ElectronicDesign. LOGIN JO
@@ -1853,12 +1858,10 @@ Making The World A Safer Place
 Artificial Intelligence (Al) Mobile Access Healthcare Security Cybe eA ee Eee REMESDDED
 Microchip Debuts Cortex-M23
 Mircochip First To Use Turstonic Revolutionary|mcus
-June 25,2018 E&I
 Kinibi-M Platform For Microcontrollers Two of the first Cortex-Mzg microcontrollers
 have arrived—developed by Microchip—and
 advanced security is among the features.
 William G. Wong
-TRUSTONIC fe saox =
 Flying Vehicles V Smart Cities Vv Transportation V Robotics IIoT v Security Vv More ¥
 Not just droning on! The rise of Kinibi-M Trustonic Embeds IoT Security Technology in Microchip
 MCU
@@ -1869,7 +1872,8 @@ MCU
 
 MICROCHIP TRUSTONIC SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Secu rityOnformed com ElectronicDesign. LOGIN Jo
@@ -1877,12 +1881,10 @@ Making The World A Safer Place
 Artificial Intelligence (Al) Mobile Access Healthcare Security Cybe eA ee Eee REMESDDED
 Microchip Debuts Cortex-M23
 Mircochip First To Use Turstonic Revolutionary|mcus
-June 25,2018 E&I
 Kinibi-M Platform For Microcontrollers Two of the first Cortex-Mz23 microcontrollers
 have arrived—developed by Microchip—and
 advanced security is among the features.
 William G. Wong
-TRUSTONIC C Si: HOOX |e
 Flying Vehicles V Smart Cities Vv Transportation V Robotics IIoT v Security Vv More ¥
 Not just droning on! The rise of Kinibi-M Trustonic Embeds IoT Security Technology in Microchip
 MCU
@@ -1899,27 +1901,23 @@ secure OS combine to bring trust to constrained loT devices.
 
 MICROCHIP TRUSTONIC SAML11 Kinibi-M
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 security@nformed com ElectronicDesign LOGIN JO
 Making The World A Safer Place _— ———— — SS
-Artificial Intelligence (Al) Mobile Access —_ Healthcare Security  Cybelf —- iG) ocies > EMBEDDED
 Microchip Debuts Cortex-M23
 Mircochip First To Use Turstonic Revolutionary mcus
-June 25,2018 &
 Kinibi-M Platform For Microcontrollers Two of the first Cortex-M23 microcontrollers
 have arrived—developed by Microchip—and
 advanced security is among the features.
 William G. Wong
-TRUSTONIC 4 *S HRLD inl FOX Mista
-~~) TODAY
 Flying Vehicles Vv Smart Cities Vv Transportation ¥ Robotics IIoT v Security Vv More ¥
 Not just droning on! The rise of Kinibi- Mit Trustonic Embeds IoT Security Technology in Microchip
 MCU
 31 OCTOBER 2017 The IoT security technology will be embedded at the chip level using Trustonic’s Kinibi-M software.
 > A n = NEWSLETTER MEDIA EVENTS SHOP RSS @ @encush M XK in
-lektroniknet.de Markt&Technik | Elektronik] Elektronik Ekoni
 CLOUD DESIGN + OPTIMISATION ENERGY MANAGEMENT HOSTING + COLOCATION INFRASTRU§ = Rubrics | ticker Pictures videos Market overviews White paper Web seminars glossary Q
 Trustonic launches loT device security Microchip introduces SAM L10/L11 MCUs
 solution
@@ -1944,7 +1942,8 @@ secure OS combine to bring trust to constrained loT devices.
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -1965,7 +1964,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -1986,7 +1986,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2007,7 +2008,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2028,7 +2030,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2049,7 +2052,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2070,7 +2074,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2091,7 +2096,8 @@ ESRGv3 BLACKHAT24
 
 **BLACKHAT24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MICROCHIP SAML11
@@ -2108,16 +2114,15 @@ ESRGv3 BLACKHAT24
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-I sav 11 Added
 64/32/16 KB Flash
 Crypto Accelerators with Cache
 (AES128, SHA256, GCM)
 | MPU 2KB Data Flash
 16/8/8 KB RAM (SAM L11)
-PROCESSOR .
 SWCLK SERIAL cae 32 Mele 128-bit_ Unique ID 16/8/4 KB RAM (SAM L10)
 WDI
 S Oo WIRE NVM EVENT
@@ -2125,11 +2130,9 @@ TrustZone for ARMv8-M
 Se CONTROLLER SRAM CONTROLLER
 DEVICE
 UNIT
-<
 CRC-32 ob
 High-Speed Bus Matrix
 Secure
-8
 S Ss
 AHB-APB AHB-APB AHB-APB
 BRIDGE B BRIDGE A BRIDGE C
@@ -2143,7 +2146,8 @@ MPU
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | SAM L11 Added
@@ -2153,17 +2157,14 @@ Crypto A M with Cache
 2KB Data Flash
 Cortex-M23 16/8/8 KB RAM (SAM L11)
 PROCESSOR
-SWCLK F F
 SWDIO WIRE
 NVM EVENT
 TrustZone for ARMv8-M
 Se CONTROLLER SRAM CONTROLLER
 DEVICE
 CRC-32
-=
 High-Speed Bus Matrix
 Secure
-8
 S S
 AHB-APB AHB-APB AHB-APB
 BRIDGE B BRIDGE A BRIDGE C
@@ -2178,7 +2179,8 @@ SAU
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Crypto A
@@ -2202,18 +2204,10 @@ Scrambling
 NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
-4\ Z2\
 Secure
 Boot
-»s
-=
 High-Speed Bus Matrix
-cS)
 >
-VAN
-Z~
-VAN
-Rv,
 XZ
 NZ
 AHB-APB
@@ -2236,7 +2230,8 @@ IDAU
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (AES128, §
@@ -2254,17 +2249,11 @@ Scrambling
 NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
-4\ Z2\
 Secure
 Boot
 »
-1 &
 High-Speed Bus Matrix
-cS)
 >
-VAN Z~
-VAN
-Rez <7
 NZ
 AHB-APB AHB-APB
 BRIDGE B BRIDGE A
@@ -2284,12 +2273,12 @@ MPC ???
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Crypto A
 (AES128, §
-VVII\wW
 Secure
 Boot
 Cortex-M23
@@ -2306,11 +2295,7 @@ with Cache
 NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
-4\ Z2\
-gL
 Hig MPC 22? atrix
-cS)
-VAN
 NZ
 AHB-APB
 BRIDGE B
@@ -2333,7 +2318,8 @@ MPC ???
 
 Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Secure
@@ -2352,8 +2338,6 @@ with Cache
 NVM EVENT
 CONTROLLER
 SRAM CONTROLLER
-4\ Z2\
-gL
 AHB-APB
 BRIDGE B
 (APBB)
@@ -2370,7 +2354,8 @@ Pag. 17 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2400,7 +2385,8 @@ Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2430,7 +2416,8 @@ Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2460,7 +2447,8 @@ Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2490,7 +2478,8 @@ Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2522,7 +2511,8 @@ What about **Privilege** and **NonPrivileged** ??
 
 Pag. 53 - Microchip. SAM L10/L11 Family Data Sheet. Tech. rep. Microchip, June 2020.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAM L11 Specific Security Features
@@ -2811,21 +2801,20 @@ PSA Level 1
 
 **CPU**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SILICON SILICON |
 SAML11-KPH SAM L11-KPH with Kinibi-M
 v1.0
 S S
-MICROCHIP MICROCHIP
 PSA Certification
 psacertified™ psacertified™
 level two | ready
 PSA Level 1
 NORMAL WORLD SECURE WORLD
 NSPE
-SW | PRoTs |
 ```
 
 ## Slide 142
@@ -2840,21 +2829,20 @@ PSA Level 1
 
 **CPU**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SILICON SILICON |
 SAML11-KPH SAM L11-KPH with Kinibi-M
 v1.0
 S S
-MICROCHIP MICROCHIP
 PSA Certification
 psacertified™ psacertified™
 level two | ready
 PSA Level 1
 NORMAL WORLD SECURE WORLD
 NSPE
-SW | PRoTs |
 ```
 
 ## Slide 143
@@ -2867,21 +2855,20 @@ PSA Level 1
 
 **NORMAL WORLD SECURE WORLD ARoTs NSPE SW** **PRoTs Kernel** **CPU**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SILICON SILICON |
 SAML11-KPH SAM L11-KPH with Kinibi-M
 v1.0
 S S
-MICROCHIP MICROCHIP
 PSA Certification
 psacertified™
 psacertified™
 PSA Level 1
 NORMAL WORLD SECURE WORLD
 NSPE
-SW | PRoTs |
 ```
 
 ## Slide 144
@@ -3020,13 +3007,11 @@ Responsible Disclosure: Microchip
 
 Image: Pag. 3 - Kinibi-M Developer’s Guide
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TRUSTONIC KINIBI-M
-Non-secure} -Secure-World
-Callable Eager
-Memory ;
 Non-secure
 World
 Crypto Attestation
@@ -3034,7 +3019,6 @@ module module
 Storage
 module
 Application
-|
 |
 Kinibi-M module API
 Kinibi-M API Secure gateway Kinibi-M OS
@@ -3056,15 +3040,13 @@ CPU
 
 Image: Pag. 3 - Kinibi-M Developer’s Guide
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TRUSTONIC KINIBI-M
-' isiniaiaLaalelsiala, Woisioio PSA Level 2
-Non-secure | Non-secure | Secure-World s
 World ! Callable Ree
 Memory NORMAL WORLD SECURE WORLD
-1 i §6Crypto | Attestation Storage
 ‘N i module module module
 Kinibi-M module API
 Kinibi-M API Secure gateway Kinibi-M OS
@@ -3089,7 +3071,8 @@ CPU
 
 Image: Pag. 3 - Kinibi-M Developer’s Guide
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TRUSTONIC KINIBI-M
@@ -3098,7 +3081,6 @@ Callabl
 World Memory NORMAL WORLD SECURE WORLD
 NSPE
 SW.
-Kinibi-lV: 4 PI
 ARM TrustZone® enabled MCU |
 Figure 1: Kinibi-M Architecture Overview.
 Image: Pag. 3 - Kinibi-M Developer’s Guide BLACKHAT 24
@@ -5850,12 +5832,11 @@ ARoT 2 is not on the DMA Mediator Whitelist, requested is rejected
 
 WHEN WE WANT “PSA 3+” ISOLATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NORMAL WORLD SECURE WORLD
-WHEN WE WANT =| ial | a |
-ae
 Kinibi-M Architecture
 Seems Probably More then PSA Level 3
 ```
@@ -5866,7 +5847,8 @@ Seems Probably More then PSA Level 3
 
 ###### BUT THE MCU HAS NO MPC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Armv8-M CPU

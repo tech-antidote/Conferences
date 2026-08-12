@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Pinji Chen&Jianjun Chen&Qi Wang&Mingming Zhang&Haixin Duan_Cross-Origin Web Attacks via HTTP2 Server Push and Signed HTTP Exchange.pdf"
 pages: 52
 sha256: "281a51acd2514dbf15e9323ca797656f5ddb0996c6abad94a5eb307bff43a97f"
-text_chars: 18875
-ocr_pages: 5
+text_chars: 18523
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:59:05Z"
+converted_at: "2026-08-12T05:18:20Z"
 ---
 # Cross-Origin Web Attacks via HTTP2 Server Push and Signed HTTP Exchange
 
 **Speakers:** Pinji Chen, Jianjun Chen, Qi Wang, Mingming Zhang, Haixin Duan  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Pinji Chen&Jianjun Chen&Qi Wang&Mingming Zhang&Haixin Duan_Cross-Origin Web Attacks via HTTP2 Server Push and Signed HTTP Exchange.pdf` (52 pages)
+
 
 ## Slide 1
 
@@ -321,6 +326,8 @@ Body
 
 **We control whole HTTP response**
 
+
+
 Header
 
 Body
@@ -345,6 +352,8 @@ Welcome, Alice! <script> alert("XSS!"); </script> </body> </html>
 
 **We control whole HTTP response**
 
+
+
 Header
 
 Body
@@ -367,13 +376,6 @@ Credit: **@Zedd and @Ehhthing** Blog: https://tttang.com/archive/1703/
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat > SS > t SOBEL
-Case 1: Universal XSS
-```
-
 ## Slide 23
 
 ###### Various exploitation——leveraging HTTP header
@@ -394,7 +396,8 @@ Content-Type: text/html Content-Length: xxx Strict-Transport-Security: max-age=0
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Case 2: Set Arbitrary Cookie
@@ -844,10 +847,10 @@ attacker register
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 BRIEFINGS
 Universal XSS
@@ -910,22 +913,3 @@ Join in our discussion in CA/B NetSec WG!
 Email:      cpj24@mails.tsinghua.edu.cn Discord:      pinjichen_55767
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
-Email:
-QS <a
-NS
-=) ww Vii fF i), yy)
-Ye Pome fi
-SS il
-Thank you !
-Q&A
-cpj24@mails.tsinghua.edu.cn
-Discord: __ pinjichen_55/767
-```

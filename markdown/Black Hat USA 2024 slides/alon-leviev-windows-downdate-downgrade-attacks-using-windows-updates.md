@@ -8,12 +8,17 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Alon Leviev_Windows Downdate Downgrade Attacks Using Windows Updates.pdf"
 pages: 87
 sha256: "6b7ff7abd4c5b57a2c5b3df354a3d756367cdcb0dc9cf336b39c896e4861e571"
-text_chars: 18409
-ocr_pages: 5
+text_chars: 17798
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 82.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:29:15Z"
+converted_at: "2026-08-12T04:28:22Z"
 ---
 # Windows Downdate Downgrade Attacks Using Windows Updates
 
@@ -21,27 +26,10 @@ converted_at: "2026-08-11T21:29:15Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Alon Leviev_Windows Downdate Downgrade Attacks Using Windows Updates.pdf` (87 pages)
 
+
 ## Slide 1
 
 Windows Downdate: **Downgrade Attacks Using Windows Updates**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-3: SafeBreach
-DOWNDATE
-er
-ia
-/ 4
-tie ole
-i fig
-) /
-i
-Via
-Windows Downc
-Downgrade Atta
-Using Window
-```
 
 ## Slide 2
 
@@ -410,30 +398,30 @@ Action List path is saved in the registry and is **not Trusted Installer enforce
 
 ###### What Can We Do With The Action List?
 
-```
+\```
 <POQpostAction="reboot">
-```
+\```
 
-```
+\```
 <CreateFilepath="C:\Windows\System32\Create.exe"fileAttributes="0x00000000"/>
 <MoveFilesource="C:\UpdateDir\Source.exe“ destination="C:\Windows\System32\Destination.exe"/>
 <HardlinkFilesource="C:\UpdateDir\Source.exe“destination="C:\Windows\System32\Destination.exe"/>
 <SetFileInformationpath="C:\UpdateDir\Source.exe“securityDescriptor="binary base64:[BASE64-BLOB]"flags="0x00000040"/>
 <DeleteFilepath="C:\Windows\System32\Delete.exe"/>
-```
+\```
 
-```
+\```
 <CreateDirectorypath="C:\Windows\System32\Directory"fileAttribute="0x00000080“securityDescriptor="binary base64:[BASE64-BLOB]"/>
 <CreateKeypath="\Registry\Machine\Key"/>
-```
+\```
 
-```
+\```
 <SetKeyValuepath="\Registry\Machine\Key"name="Name" type="0x00000001“ encoding="base64" value="[BASE64-BLOB]"/>
 <SetKeySecuritypath="\Registry\Machine\Key“securityDescriptor="binary base64:[BASE64-BLOB]"flags="0x00000001"/>
 <DeleteKeyValuepath="\Registry\Machine\Key"name="Value"/>
 <DeleteKeyflags="0x00000001"path="\Regsitry\Machine\Key"/>
 </POQ>
-```
+\```
 
 ## Slide 36
 
@@ -441,9 +429,9 @@ Action List path is saved in the registry and is **not Trusted Installer enforce
 
 The **HardlinkFile** action can be used to downgrade system files
 
-```
+\```
 <HardlinkFilesource="C:\UpdateDir\Source.exe“destination="C:\Windows\System32\Destination.exe"/>
-```
+\```
 
 ## Slide 37
 
@@ -511,13 +499,12 @@ The System Integrity Check and Repair utility SFC.exe is not digitally signed, a
 
 Demo #1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘Windows 11 23h2 on VOSTRO-02
-DING OWSSDO}
 80°F 2:55 PM
-Partly clou Bm Q Search aA Law CB = ~A & OS® gr 20n9 |
 ```
 
 ## Slide 44
@@ -686,7 +673,8 @@ Demo #2 – What If only Credential Guard Is Bypassed?
 
 **LSASS can not be dumped**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #2
@@ -697,7 +685,6 @@ F n over DLL entrypoint
 Benign: C:\Wi \ tAg -egation.dll.bak
 yload: PLFaultTemp\ \PPLFault
 eholde : C:\PPLFaultTemp\Even
-32\devabj.d11
 finish.
 DOWNDATE
 the memor
@@ -711,7 +698,8 @@ Did not find
 
 ###### **Credentials are encrypted**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo #2 —
@@ -722,19 +710,13 @@ fcastle
 DEKU
 DEKU-DC
 7/5/2024 12:13:63 PM
-§-1-5-21-1272771627 -2707523857 -1367165163-1103
 [66600003] Primary
 * Username : fcastle
 * Domain : DEKU
 * LSA Isolated Data: NtlmHash
-KdfContext: db@f131340c395ea798ee6896T146184b1cO8abdd3b7F56a874e4383560905a4
 Tag : 197edS5S5ab8cal42dde67c9f8ccc38e93
-AuthData : sleeeeeeeRgeeRgeRRSsRBREReEoREReRE 1 ERGR00340000004e746c6d48617368
-Encrypted : 9c6@1dc3c53f49df535bee643ddf5fcf6ee5icb703e6ddtf8e32bal9F452d2852634daecee854eF3196c32ccc661958daffa296816
-TS2OSOTZSOSTTTES 7 DeSbebSsbasUcasy
 DOWNDATE
 wdigest : KO a a
-kerberos : Ly Ld
 Ap Ay
 * Username : fcastle
 = Domain : DEKU.LOCAL
@@ -897,14 +879,6 @@ Hvix64.exe
 ## Slide 72
 
 Demo #3
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-(QO ENG - sul
-SF in 4 hours
-7/6/2024
-```
 
 ## Slide 73
 

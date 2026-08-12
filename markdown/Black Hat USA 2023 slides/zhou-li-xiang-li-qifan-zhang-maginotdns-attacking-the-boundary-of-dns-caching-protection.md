@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zhou Li & Xiang Li & Qifan Zhang_MaginotDNS Attacking the Boundary of DNS Caching Protection.pdf"
 pages: 41
 sha256: "e8e177ee8f8c0b3bf51b80fc596861f08ae7cdefe6632f212a692c06f763c606"
-text_chars: 16500
+text_chars: 16483
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 94.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:28:07Z"
+converted_at: "2026-08-12T04:26:50Z"
 ---
 # MaginotDNS Attacking the Boundary of DNS Caching Protection
 
 **Speakers:** Zhou Li, Xiang Li, Qifan Zhang  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhou Li & Xiang Li & Qifan Zhang_MaginotDNS Attacking the Boundary of DNS Caching Protection.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -219,15 +225,13 @@ Attack
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-USA 2&0e25
 Unpatched DNS Bug Puts Millions of
 Routers, loT Devices at Risk
-—y
 DNS cache poisoning, the Internet attack
 from 2008, is back from the dead
 Anewly found side channel in a widely used protocol lets attackers spoof domains.

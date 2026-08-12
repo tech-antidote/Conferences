@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Andrzej Olchawa&Milenko Starcik&Ricardo Fradique&Ayman Boulaich_Burning, Trashing, Spacecraft Crashing A Collection of Vulnerabilities That Will End Your Space Mission.pdf"
 pages: 44
 sha256: "c16a0fb37ec10a0edc26730416a3e824af0464685ea48b1de7b162689176c856"
-text_chars: 10651
-ocr_pages: 7
+text_chars: 9711
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:50:12Z"
+converted_at: "2026-08-12T05:05:05Z"
 ---
 # Burning, Trashing, Spacecraft Crashing A Collection of Vulnerabilities That Will End Your Space Mission
 
 **Speakers:** Andrzej Olchawa, Milenko Starcik, Ricardo Fradique, Ayman Boulaich  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Andrzej Olchawa&Milenko Starcik&Ricardo Fradique&Ayman Boulaich_Burning, Trashing, Spacecraft Crashing A Collection of Vulnerabilities That Will End Your Space Mission.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -50,24 +55,12 @@ _Source: https://sdup.esoc.esa.int/discosweb/statistics/_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat by - —
-BRIEFINGS ;
 Satellites launched to LEO per year
-Mg Amateur
-iS Civil
 2500 + Will Defense
-E44) Commercial
-2000 -
-1500 -
-1000 -
-500 -
-0b eee eerie
-1960 1970 1980 1990 2000 2010 2020
-Source: https://sdup.esoc.esa.int/discosweb/statistics/
 ```
 
 ## Slide 4
@@ -80,22 +73,13 @@ _Source: https://sdup.esoc.esa.int/discosweb/statistics/_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 Constellations
-Mm = Amateur 7
-iS Civil 7
 2500 + Will Defense
-E44) Commercial ]
-2000 -
-1500 -
-1000 -
-500 -
-1960 1970 1980 1990 2000 2010 2020
-Source: https://sdup.esoc.esa.int/discosweb/statistics/
 ```
 
 ## Slide 5
@@ -108,23 +92,13 @@ _Source: https://sdup.esoc.esa.int/discosweb/statistics/_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Commercialization
-2500 J nalance
-LS commercial
-2000 -
-1500 -
-1000 -
-500 -
-Mg Amateur
 ES Civil
 1960 1970 1980 1990 2000 2010
-Source: https://sdup.esoc.esa.int/discosweb/statistics/
 2020
 ```
 
@@ -137,23 +111,6 @@ _Source: https://sdup.esoc.esa.int/discosweb/statistics/_
 **6**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-Re-Militarization
-2000 -
-1500 -
-1000 -
-500 -
-Mg Amateur
-_anasmensaamn tammien ee Sash
-1960 1970 1980 1990 2000 2010 2020
-Source: https://sdup.esoc.esa.int/discosweb/statistics/
-```
 
 ## Slide 7
 
@@ -169,21 +126,16 @@ Source: https://sdup.esoc.esa.int/discosweb/statistics/
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Satellite Hacking at Black Hat
-VY ISK
-ern),
 $atellite Hacking for Fun & Satellite Communications Sf i; SPREAD SPECTRUM SATCOM
 PrOfit! Ae HACKING
 Adam Laurie
 adam@algroup.co.uk
 http://rfidiot.org
-lOActive. @ci Biya TOES cool wie
 2009
 2015
 ```
@@ -200,17 +152,14 @@ lOActive. @ci Biya TOES cool wie
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
-bisek hat
-USA 2023
 Lessons Learned from the
 KA-SAT Cyberattack:
 Response, Mitigation and Information Sharing
-lOActive. a io RUB i soot
 LAST CALL FOR SATCOM : bie — cosic
 SECURITY ii Houston, We Have a Problem:
 Glitched on Earth by Humans: Analyzing the Security of Low Earth Orbit Satellites
@@ -219,8 +168,6 @@ Ruben Santamarta c< : ae Starlink User Terminal
 Lennert Wouters
 @LennertWo
 Johannes Willbold
-Wejwitboia FE ‘witbotd
-2018-«- 202222~2@~t«—é‘ 202Blti‘i
 ```
 
 ## Slide 9
@@ -236,15 +183,6 @@ Wejwitboia FE ‘witbotd
 **10**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-10
-Montelimar
-```
 
 ## Slide 11
 

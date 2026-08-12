@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Ali Ranjbar&Tianchang Yang&Kai Tu&Saaman Khalilollahi&Kanika Gupta&Syed Rafiul Hussain_Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing.pdf"
 pages: 101
 sha256: "9107c13a6a13213cfa0924be724c083a99bb692c4754664911b7998010fce110"
-text_chars: 43694
-ocr_pages: 48
+text_chars: 37847
+ocr_pages: 39
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:50:31Z"
+converted_at: "2026-08-12T05:05:46Z"
 ---
 # Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing
 
 **Speakers:** Ali Ranjbar, Tianchang Yang, Kai Tu, Saaman Khalilollahi, Kanika Gupta, Syed Rafiul Hussain  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ali Ranjbar&Tianchang Yang&Kai Tu&Saaman Khalilollahi&Kanika Gupta&Syed Rafiul Hussain_Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing.pdf` (101 pages)
+
 
 ## Slide 1
 
@@ -64,15 +70,13 @@ Kai Tu, Saaman Khalilollahi, Kanika Gupta, Syed Rafiul Hussain
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 BRIEFINGS Re
-09:30 . sc4a
 Coffee with Robin in 30 min
 © 10.00 a.m. - 11.00 a.m. @ 20°C
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 5
@@ -82,16 +86,6 @@ Coffee with Robin in 30 min
 Smartphone (UE)
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS ow
-atas.
-Smartphone (UE)
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 6
 
@@ -225,10 +219,10 @@ https://forums.anandtech.com/threads/samsung-exynos-soc-thread.2620862/
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 BRIEFINGS
 Baseband exploits in-the-wild
 Project Zero Or... How Network Names became an RCE vector
@@ -242,22 +236,14 @@ K> KEEN Xingyu Chen (@@xKira233)
 Multiple Internet to Baseband Remote Code Execution ao
 Vulnerabilities in Exynos Modems
 Posted by Tim Willis, Project Zero
-\] eg, ZL.
-Demo: Internet Traffic Eavesdropping Diner — - Z
 — ASN.1 and Done USArcUe4
 a Ye AUGUST 7-8, 2024
-Es) BRIEFINGS
 | SG AKA Bypass A tale of exploiting ASN.1 parsers in the Overcoming State: Finding Baseband
 PDU Session Est Request baseband. Vulnerabilities by Fuzzing Layer-2
 PDU Session Est Accept
-~ ‘G
 @amatcama
 ' Speakers: Dyon Goos & Marius Muench
-;
-Hl
 H i VIGILANT
-sBHUSA oBlacktiatEvente #OHUSA cOlackHatEvents
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 16
@@ -266,14 +252,12 @@ From exploits to frameworks: Baseband research • 2020: BaseSAFE: Baseband SAni
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From exploits to frameworks: Baseband research
 ¢ 2020: BaseSAFE: Baseband SAnitized Fuzzing through Emulation. €
-Af. Nes
-eT hice ~~ ~_ x
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 17
@@ -282,116 +266,55 @@ From exploits to frameworks: Baseband research • 2020: BaseSAFE: Baseband SAni
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BaseSAFE / examples / errc / src / main.rs
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-Code Blame
-678 lines (603 loc)
-hook! (@x3b4fc4, msg_recv, "msg_receive_extq");
-hook! (@x3b5010, pass_func, "msg_receive_intq");
-hook! (@x00119b68,
-hook! (@x00119768,
-hook! (@x@01fe2fO,
-hook! (@x001f3d8c,
-hook! (@x@03b28a0,
-hook! (@x@03b5478,
-hook! (@x003b5560,
-hook! (@x003fa4d4,
-hook! (@x@03fb818,
-hook! (@x@03fad94,
-hook! (@x@03b7c18,
-hook! (@x003b7c92,
-hook! (@x003b4c08,
-hook! (@x@03b4c50,
-hook! (@x@@3b4e5c,
-hook! (@x00219798,
-hook! (@x@02185fc,
-hook! (@x@03fb508,
-hook! (@x003fb570,
-hook! (@x003b3fc0,
-hook! (@x@03b4e56,
-hook! (@x004d17e0,
-hook! (
-0x001f4368,
-pass_func,
-dhl_trace);
-pass_func, "“dhl_peer_trace");
-errc_evth_dump_reserve_queue) ;
-pass_func, “errc_evth_com_timer_expiry_hdlr");
-pass_func, “stack_get_active_module_id") ;
-kal_get_buffer);
-kal_release_buffer) ;
-memcpy) ;
-memcpy) ;
-memset) ;
-get_int_ctrl_buffer);
-free_ctrl_buffer_ext);
-free_int_buff, "free_int_peer_buff");
-free_int_buff, "free_int_local_para");
-msg_send) ;
-errc_spv_get_rrc_state);
-errc_spv_is_errc_gemini_suspended) ;
-kal_assert_fail_ext);
-kal_assert_fail_ext);
-kal_fatal_error_handler_int);
-destroy_int_ilm) ;
-free_ctrl_buffer_ext, "qbm_free_one");
-“errc_com_calculate_procedure_delay_start"
-5
-hook! (@x001f3994,
-hook! (@x001f3860,
-hook! (@x001f4d90,
-hook! (@x@021ee74,
-hook! (@x@022c@b0,
-hook! (@x003fae40,
-hook! (@x@06c4d20,
-hook! (@x@01ff@bc,
-pass_func, “errc_com_stop_timer");
-pass_func, “errc_com_start_timer");
-pass_func, “errc_conn_any_get_sec_sts");
-pass_func, “errc_sys_evth_trace_peer");
-pass_func, “errc_cel_evth_trace_peer");
-pass_func);
-memset, “asnMemSet") ;
-skip_internal_queue_loop) ;
+
+Code | Blame        678 lines (603 loc) - 26.2 KB
+
+592        hook!(0x3b4fc4, msg_recv, "msg_receive_extq");
+593        hook!(0x3b5010, pass_func, "msg_receive_intq");
+594        hook!(0x00119b68, dhl_trace);
+595        hook!(0x00119768, pass_func, "dhl_peer_trace");
+596        hook!(0x001fe2f0, errc_evth_dump_reserve_queue);
+597        hook!(0x001f3d8c, pass_func, "errc_evth_com_timer_expiry_hdlr");
+598        hook!(0x003b28a0, pass_func, "stack_get_active_module_id");
+599        hook!(0x003b5478, kal_get_buffer);
+600        hook!(0x003b5560, kal_release_buffer);
+601        hook!(0x003fa4d4, memcpy);
+602        hook!(0x003fb818, memcpy);
+603        hook!(0x003fad94, memset);
+604        hook!(0x003b7c18, get_int_ctrl_buffer);
+605        hook!(0x003b7c92, free_ctrl_buffer_ext);
+606        hook!(0x003b4c08, free_int_buff, "free_int_peer_buff");
+607        hook!(0x003b4c50, free_int_buff, "free_int_local_para");
+608        hook!(0x003b4e5c, msg_send);
+609        hook!(0x00219798, errc_spv_get_rrc_state);
+610        hook!(0x002185fc, errc_spv_is_errc_gemini_suspended);
+611        hook!(0x003fb508, kal_assert_fail_ext);
+612        hook!(0x003fb570, kal_assert_fail_ext);
+613        hook!(0x003b3fc0, kal_fatal_error_handler_int);
+614        hook!(0x003b4e56, destroy_int_ilm);
+615        hook!(0x004d17e0, free_ctrl_buffer_ext, "qbm_free_one");
+616        hook!(
+617            0x001f4368,
+618            pass_func,
+619            "errc_com_calculate_procedure_delay_start"
+620        );
+621        hook!(0x001f3994, pass_func, "errc_com_stop_timer");
+622        hook!(0x001f3860, pass_func, "errc_com_start_timer");
+623        hook!(0x001f4d90, pass_func, "errc_conn_any_get_sec_sts");
+624        hook!(0x0021ee74, pass_func, "errc_sys_evth_trace_peer");
+625        hook!(0x0022c0b0, pass_func, "errc_cel_evth_trace_peer");
+626        hook!(0x003fae40, pass_func);
+627        hook!(0x006c4d20, memset, "asnMemSet");
+628        hook!(0x001ff0bc, skip_internal_queue_loop);
+
+(faint background text, partially hidden behind the code panel)
+...ameworks: Baseband research
+...SAnitized Fuzzing through Emulation.
 ```
 
 ## Slide 18
@@ -402,141 +325,76 @@ From exploits to frameworks: Baseband research
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 BaseSAFE / examples / errc / src / main.rs
-Code
-592
-593
-594
-595
-596
-597
-598
-BEd)
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-Blame
-678 lines (603 loc)
-hook! (@x3b4fc4, msg_recv, “msg_receive_extq");
-hook! (@x3b5010, pass_func, "msg_receive_intq");
-hook! (@x@0119b68,
-hook! (@x00119768,
-hook! (@x001fe2f0,
-hook! (@x001f3d8c,
-hook! (@x@03b28a0,
-hook! (@x@03b5478,
-hook! (@x@03b5560,
-hook! (@x@03fa4d4,
-hook! (@x003fb818,
-hook! (@x003fad94,
-hook! (@x@03b7c18,
-hook! (@x003b7c92,
-hook! (@x003b4c08,
-hook! (@x@03b4c50,
-hook! (@x@03b4e5c,
-hook! (@x00219798,
-hook! (@x@02185fc,
-hook! (@x003fb508,
-hook! (@x003fb570,
-hook! (@x@03b3fcO,
-hook! (@x@03b4e56,
-hook! (@x004d17e0,
-hook! (
-0x001f4368,
-pass_func,
-dhl_trace);
-pass_func, "“dhl_peer_trace");
-errc_evth_dump_reserve_queue) ;
-pass_func, “errc_evth_com_timer_expiry_hdlr");
-pass_func, “stack_get_active_module_id");
-kal_get_buffer);
-kal_release_buffer) ;
-memcpy) ;
-memcpy) ;
-memset) ;
-get_int_ctrl_buffer);
-free_ctrl_buffer_ext);
-free_int_buff, "free_int_peer_buff");
-free_int_buff, "free_int_local_para");
-msg_send) ;
-errc_spv_get_rrc_state);
-errc_spv_is_errc_gemini_suspended) ;
-kal_assert_fail_ext);
-kal_assert_fail_ext);
-kal_fatal_error_handler_int) ;
-destroy_int_ilm);
-free_ctrl_buffer_ext, "qbm_free_one");
-“errc_com_calculate_procedure_delay_start"
+
+Code | Blame        678 lines (603 loc) - 26.2 KB
+
+592        hook!(0x3b4fc4, msg_recv, "msg_receive_extq");
+593        hook!(0x3b5010, pass_func, "msg_receive_intq");
+594        hook!(0x00119b68, dhl_trace);
+595        hook!(0x00119768, pass_func, "dhl_peer_trace");
+596        hook!(0x001fe2f0, errc_evth_dump_reserve_queue);
+597        hook!(0x001f3d8c, pass_func, "errc_evth_com_timer_expiry_hdlr");
+598        hook!(0x003b28a0, pass_func, "stack_get_active_module_id");
+599        hook!(0x003b5478, kal_get_buffer);
+600        hook!(0x003b5560, kal_release_buffer);
+601        hook!(0x003fa4d4, memcpy);
+602        hook!(0x003fb818, memcpy);
+603        hook!(0x003fad94, memset);
+604        hook!(0x003b7c18, get_int_ctrl_buffer);
+605        hook!(0x003b7c92, free_ctrl_buffer_ext);
+606        hook!(0x003b4c08, free_int_buff, "free_int_peer_buff");
+607        hook!(0x003b4c50, free_int_buff, "free_int_local_para");
+608        hook!(0x003b4e5c, msg_send);
+609        hook!(0x00219798, errc_spv_get_rrc_state);
+610        hook!(0x002185fc, errc_spv_is_errc_gemini_suspended);
+611        hook!(0x003fb508, kal_assert_fail_ext);
+612        hook!(0x003fb570, kal_assert_fail_ext);
+613        hook!(0x003b3fc0, kal_fatal_error_handler_int);
+614        hook!(0x003b4e56, destroy_int_ilm);
+615        hook!(0x004d17e0, free_ctrl_buffer_ext, "qbm_free_one");
+616        hook!(
+617            0x001f4368,
+618            pass_func,
+619            "errc_com_calculate_procedure_delay_start"
+620        );
+621        hook!(0x001f3994, pass_func, "errc_com_stop_timer");
+622        hook!(0x001f3860, pass_func, "errc_com_start_timer");
+623        hook!(0x001f4d90, pass_func, "errc_conn_any_get_sec_sts");
+624        hook!(0x0021ee74, pass_func, "errc_sys_evth_trace_peer");
+625        hook!(0x0022c0b0, pass_func, "errc_cel_evth_trace_peer");
+626        hook!(0x003fae40, pass_func);
+627        hook!(0x006c4d20, memset, "asnMemSet");
+628        hook!(0x001ff0bc, skip_internal_queue_loop);
+
+(magnified panel, right side)
+hook!(0x003fa4d4, memcpy);
+hook!(0x003fb818, memcpy);
+hook!(0x003fad94, memset);
+hook!(0x003b7c18, get_int_ctrl_buffer);
+hook!(0x003b7c92, free_ctrl_buffer_ext);
+hook!(0x003b4c08, free_int_buff, "free_int_peer_buff");
+hook!(0x003b4c50, free_int_buff, "free_int_local_para");
+hook!(0x003b4e5c, msg_send);
+hook!(0x00219798, errc_spv_get_rrc_state);
+hook!(0x002185fc, errc_spv_is_errc_gemini_suspended);
+hook!(0x003fb508, kal_assert_fail_ext);
+hook!(0x003fb570, kal_assert_fail_ext);
+hook!(0x003b3fc0, kal_fatal_error_handler_int);
+hook!(0x003b4e56, destroy_int_ilm);
+hook!(0x004d17e0, free_ctrl_buffer_ext, "qbm_free_one");
+hook!(
+    0x001f4368,
+    pass_func,
+    "errc_com_calculate_procedure_delay_start"
 );
-hook! (@x001f3994,
-hook! (@x001f3860,
-hook! (@x@01f4d90,
-hook! (@x@021ee74,
-hook! (@x@022c@b0,
-hook! (@x003fae40,
-hook! (@x@06c4d20,
-hook! (@x@01ff@bc,
-pass_func, “errc_com_stop_timer");
-pass_func, “errc_com_start_timer");
-pass_func, “errc_conn_any_get_sec_sts");
-pass_func, “errc_sys_evth_trace_peer");
-pass_func, “errc_cel_evth_trace_peer");
-pass_func);
-memset, “asnMemSet") ;
-skip_internal_queue_loop) ;
-hook! (@x@03fa4d4, memcpy);
-hook! (@x@03fb818, memcpy);
-hook! (@x®@03fad94, memset);
-hook! (@x@@3b7c18, get_int_ctrl_buffer);
-hook! (@x@03b7c92, free_ctrl_buffer_ext);
-hook! (@x@03b4c08, free_int_buff, “free_int_peer_buff");
-hook! (@x@03b4c50, free_int_buff, "free_int_local_para");
-hook! (@x@@3b4e5c, msg_send);
-hook! (@x@@219798, errc_spv_get_rrc_state) ;
-hook! (@x@@2185fc, errc_spv_is_errc_gemini_suspended) ;
-hook! (@x@03fb508, kal_assert_fail_ext);
-hook! (@x@03fb570, kal_assert_fail_ext);
-hook! (@x@03b3fc®@, kal_fatal_error_handler_int);
-hook! (@x@03b4e56, destroy_int_ilm);
-hook! (@x@04d17e0, free_ctrl_buffer_ext, "“qbm_free_one");
-hook! (
-@x001f4368,
-pass_func,
-“errc_com_calculate_procedure_delay_start"
-5
-hook! (0x001f3994, pass_func, “errc_com_stop_timer") ;
-hook! (@x001f3860, pass_func, “errc_com_start_timer") ;
-hanl | /AvAAIFARHOA
-mace fine Beers Fann anv nat car ete!) s
+hook!(0x001f3994, pass_func, "errc_com_stop_timer");
+hook!(0x001f3860, pass_func, "errc_com_start_timer");
+hook!(0x001f4d90, pass_func, "errc_conn_any_get_sec_sts");
 ```
 
 ## Slide 19
@@ -585,27 +443,15 @@ mace fine Beers Fann anv nat car ete!) s
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS
-Quick Demo
-mQ~. e” he omy
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 23
 
 <u>https://drive.google.com/file/d/1oGHDfGwSLMAEBtcRmbA9bRzWGDfFbK8j/view?usp=sharing</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 63/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eee root@Sfbf79c8d258: /firmwire XR2
 root@S5fbf79c8d258:/firmwire# ./firmwire.py --shannon-loader-external_peripherals 1 --raw-asm-logging ./modem_files/CP_G991BXXSCGXF5_CP26834843_MQB82095378_REV@1_user_Low_ship_MULTI_CERT.t
-ar.md5j
-https://drive.google.com/file/d/10GHDfGWSLMAEBtcRmbA9bRzWGDfFbK8j/view?usp=sharing
 ```
 
 ## Slide 24
@@ -614,17 +460,12 @@ https://drive.google.com/file/d/10GHDfGWSLMAEBtcRmbA9bRzWGDfFbK8j/view?usp=shari
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat .
 BRIEFINGS SEE No
 How did we get here?
-— \ r Stratur vr
-I I
-i)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 25
@@ -637,37 +478,37 @@ i)
 
    - Google Pixel 6 contains 140+ tasks.
 
-```
+\```
 0x00: TaskStruct
 .....
 0x10: Stackbase
 .....
-```
+\```
 
-```
+\```
 0x24: Name Pointer
 .....
-```
+\```
 
 - The metadata can be found from function that creates `‘mainTask’` .
 
 - A global array stores the TaskStructs for all tasks.
 
-```
+\```
 0x2c: Stacksize
 0x30: Main Function
 0x34: Pre-main Function
 .....
-```
+\```
 
-```
+\```
 0x140: Subtask
 .....
-```
+\```
 
-```
+\```
 0x240: End of structure
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -785,11 +626,11 @@ i)
 
 Set TTBR0 co-processor register
 
-```
+\```
 ldrr0, =page_table_address
 mcr
 p15, 0x0, r0, cr2, cr0, 0x0
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -799,12 +640,12 @@ Building an emulator: From Cortex-R to Cortex-A **Memory layout**
 
 - Cortex-A lacks an MPU; requires extracting MMU tables for memory mappings.
 
-```
+\```
 r0= virtual address
 r1= physical address | perm| attr
 str
 r1, [page_table_address,r0, lsr#18]
-```
+\```
 
 Upper bits of virtual address as offset
 
@@ -818,22 +659,22 @@ Upper bits of virtual address as offset
 
 - Cortex-A lacks an MPU; requires extracting MMU tables for memory mappings.
 
-```
+\```
 r0= virtual address
 r1= physical address | perm| attr
 str
 r1, [page_table_address,r0, lsr#18]
-```
+\```
 
 ###### Boot Stage Translation
 
-```
+\```
 ldrr0, =page_table_address
 mcr
 p15, 0x0, r0, cr2, cr0, 0x0
-```
+\```
 
-```
+\```
 00000000 -00100000 rwx
 40000000 -58800000 rwx
 80000000 -86000000 rw-
@@ -841,7 +682,7 @@ p15, 0x0, r0, cr2, cr0, 0x0
 87200000 -87300000 rw-
 88100000 -88200000 rw-
 8f000000 -9f000000 rw-
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -853,20 +694,20 @@ p15, 0x0, r0, cr2, cr0, 0x0
 
 - Cortex-A lacks an MPU; requires extracting MMU tables for memory mappings.
 
-```
+\```
 r0= virtual address
 r1= physical address | perm| attr
 str
 r1, [page_table_address,r0, lsr#18]
-```
+\```
 
-```
+\```
 ldrr0, =page_table_address
 mcr
 p15, 0x0, r0, cr2, cr0, 0x0
-```
+\```
 
-```
+\```
 00000000 -00100000 r-x
 40000000 -40100000 rw-
 40100000 –42b00000 r-x
@@ -883,7 +724,7 @@ p15, 0x0, r0, cr2, cr0, 0x0
 c0000000 -e0000000 rw-
 e0000000 -e8000000 r---
 e8000000 -f0000000 rw-
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -909,22 +750,12 @@ e8000000 -f0000000 rw-
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bldekhat
-BRIEFINGS
-NAS
-1_KS_} \ eo” ees ‘y
-4
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 37
 
 Starting at the main function
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Starting at the main function
@@ -936,14 +767,12 @@ Starting at the main function
 29
 30
 31
-FUN_4242eecc( (int) local_38) ;;
 piVar3 = (int *)param_1[1];
 if (cVar1 == '\v') {
 iVar2 = (*k(code *k)(xpiVar3 + 0x14))(piVar3);
 piVar3 = (int *)param_1[1];
 if (iVar2 == 0) {
 *(undefined1 *)(piVar3 + 8) = 0;
-32 LAB_42bfc5be:
 33
 34
 35
@@ -951,7 +780,6 @@ if (iVar2 == 0) {
 37
 38
 39
-mt)
 41
 42
 43
@@ -963,7 +791,6 @@ param_1[1] = 0;
 goto LAB_42bfc5cQ;
 }
 if ((char)piVar3[8] == '\x@3') {
-(+«&(code *k)(*kparam_1 + @xc))(param_1);
 goto LAB_42bfc5be;
 }
 *(undefined1 *)(piVar3 + 8) = 1;
@@ -971,10 +798,8 @@ goto LAB_42bfc5be;
 else {
 if (piVar3 != (int *)@x@) {
 if ((char)piVar3[8] != '\x@3') goto LAB_42bfc5d6;
-(«k(code *)(*kparam_1 + @xc))(param_1);
 goto LAB_42bfc5be;
 }
-48LAB_42bfc5c0:
 49
 50
 51
@@ -985,14 +810,12 @@ goto LAB_42bfc5be;
 56
 57
 if (param_1[5] == @) {
-FUN_42430370( (int) local_38) ;
 goto LAB_42bfc604;
 }
 param_1[1] = *(int *)param_1[9];
 FUN_42470974((int)(param_1 + 3),0);
 piVar3 = (int *)param_1[1];
 if (piVar3 == (int *)@x@) {
-FUN_42430370( (int) local_38);
 58LAB_42bfc604:
 59
 60
@@ -1009,7 +832,6 @@ return xb;
 67
 68
 *(undefined1 *)(piVar3 + 8) = 1;
-FUN_42430370( (int) local_38) ;
 *(undefined1 *)(param_1 + 2) = *(undefined1 *)(param_i[1] + @x15);
 cVar1 = (+*«(code *x)(*(int *)param_1[1] + 0x10))();
 } while( true );
@@ -1019,16 +841,15 @@ cVar1 = (+*«(code *x)(*(int *)param_1[1] + 0x10))();
 
 • You see these a lot of times: • It’s easy. They’re function calls at some addresses.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ¢ You see these a lot of times:
 e It’s easy. They’re function calls at
 some addresses.
-FUN_4242eecc( (int) local_38) ;
 FUN_42430370( (int) local_38) ;
 FUN_42470974((int)(param_1 + 3),@);
-FUN_423f495c( (int) local_38);
 ```
 
 ## Slide 39
@@ -1036,15 +857,6 @@ FUN_423f495c( (int) local_38);
 ### What About This?
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS SS, "
-What About This?
-(*(code **)(*param_1 + @x10))(param_1,*param_2,0@);
-```
 
 ## Slide 40
 
@@ -1054,16 +866,6 @@ What About This?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-BRIEFINGS Come
-What About This?
-(**(code +*«*)(*param_1| + 0x10))(param_1,*param_2,@);
-this
-```
-
 ## Slide 41
 
 ### What About This?
@@ -1071,16 +873,6 @@ this
 ##### `this->-vtable`
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-BRIEFINGS Swf, S&S
-What About This?
-(**(code +) (*param_1| + 0x10))(param_1,*param_2,@);
-thisvtable
-```
 
 ## Slide 42
 
@@ -1090,50 +882,17 @@ thisvtable
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifekhat
-BRIEFINGS
-What About This?
-(4«( code 4) (
-*kparam_1 + 0x10
-this tabtel4]
-))(param_1,*param_2,@);
-```
-
 ## Slide 43
 
 ### We Can Improve It:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-BRIEFINGS WN, Ss
-We Can Improve It:
-(**(code *«*)(*xparam_1 + 0x10))(param_1,*param_2,@);
-(x(code *«)this—>vtable[4] ) (this, param_1->msg_id,Q);
-```
-
 ## Slide 44
 
 ### And Even Something Better
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS Ww, “AS
-And Even Something Better
-(**(code **)(*param_1 + 0x10))(param_1,*param_2,0);
-(x(code *«)this—>vtable[4] ) (this, param_1->msg_id,Q);
-(x(code *«)this->vtable->FUN_42feddf2) (this, param_1->msg_id,Q);
-```
 
 ## Slide 45
 
@@ -1143,20 +902,26 @@ And Even Something Better
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisa hat VR
-BRIEFINGS Ea Ny
+black hat BRIEFINGS
+
 Harnessing The NAS task
-¢ Searching for message names revealed some
-s_(N_:MM,%d]_!!FAKE-TESTHARNESS!!_S 407442c2 XREF [1]: 42d70860 (*
-ds “[N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND|(SEUCURITY COMMAND)"
-s_(N_:MM,%d]_!!FAKE-TESTHARNESS!!_S_ 4074430d XREF [1]: 42d7087c(*
-ds “[N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND| (AUTHENTICATION REQUEST)"
-s_[N_:MM,%d]_!!FAKE-TESTHARNESS!!_S_ 4074435d XREF [1]: 42d70898 (+)
-ds “(N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND] (REGISTRATION ACCEPT)"
-#BHUSA @BlackHatEvents
+
+- Searching for message names revealed some
+
+s_[N_:MM,%d]_!!FAKE-TESTHARNESS!!_S_407442c2    XREF[1]:     42d70860(*)
+    ds              "[N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (SEUCURITY COMMAND)"
+
+s_[N_:MM,%d]_!!FAKE-TESTHARNESS!!_S_4074430d    XREF[1]:     42d7087c(*)
+    ds              "[N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (AUTHENTICATION REQUEST)"
+
+s_[N_:MM,%d]_!!FAKE-TESTHARNESS!!_S_4074435d    XREF[1]:     42d70898(*)
+    ds              "[N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (REGISTRATION ACCEPT)"
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 46
@@ -1167,20 +932,17 @@ ds “(N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND] (REGISTRATION ACCE
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 BRIEFINGS
 Harnessing The NAS task
 ¢ Searching for message names revealed some
-s_[N_:MM,%d]_!!FAKE-TESTHARNESS!!_S 407442c2 —XREF [11]: 42d70860(x)
 ds “(IN :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (SEUCURITY COMMAND)"
-s_[N_:MM,%d]_!!FAKE-TESTHARNESS!! S 4074430d = XREF [1]: 42d7087c(*)
 ds “(IN :MM,%sd] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (AUTHENTICATION REQUEST)"
 s_[N_:MM,%sd]_!!FAKE-TESTHARNESS!! S 4074435d = XREF [1]: 42d70898(*)
 ds “(N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (REGISTRATION ACCEPT)"
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 47
@@ -1189,10 +951,10 @@ ds “(N :MM,%d] !!FAKE-TESTHARNESS!! SEND : MM_RRC_DATA_IND (REGISTRATION ACCEP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 BRIEFINGS Se
 Bypassing Security Checks in NAS
 [cn_Nrmm.cpp] - [N :MM,@] | =============================s====s=ssssssssssssSs=5====== |
@@ -1206,12 +968,11 @@ Bypassing Security Checks in NAS
 [cn_NrmmAirMessage.cpp] - [MMIQ@,CP] %!EM message [DL NAS transport] with Plain message type can not be accepted
 [cn_NrmmExtHd1LrRRC.cpp] - [A :MM,@1..¥%LEM [Error] Nas Message Protection check failed
 [cn_NrmmExtHd1rRRC.cpp] - [MMI0,CP3°%!2M [Error] Nas Message Protection check failed
-[cn_Nrmm.cpp] - [N :MM,@]  Nryim: :NrmmPostProcessMsg()
+[cn_Nrmm.cpp] - [N :MM,@] Nryim: :NrmmPostProcessMsg()
 (@x41d2203d) @b110: [cn_Nrmat {tActinContext . cpp] - [D :MM,@] Add PostAction Functions
 [cn_NrmmTimerCtrl.cpp] -{ \
 :MM>@j” |- NRMM RUNNING TIMERS -|
 [cn_NrmmEventScheduler.cpp] - [D :MM,@] |- NRMM PENDING QUEUE -|
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 48
@@ -1272,17 +1033,14 @@ States
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 BRIEFINGS
 Why Testing NAS Task ts Difficult?
-[@.@2958] [AFL_SAEL] @x4b5002ef @b1000: [sae13_g991b.c] - FIRE
 [@.@3014][AFL_SAEL] @x4b50030b pal_MsgSendTo(SAEL3 (25)) - PALMsg(2)<@x3c7b, LTERRC (10) -> SAEL3 (19), 12 bytes>
-[SAECOMM_Utility.c] - QOOOOOOOOOOOOL Sael3_extmsg Start: @x3c7> JOOOOOOOOO0OO000
 SAEL3_MSG_LOG -----------------------------
-SAEMM_STATE__-----------------------------
 SAEMM_PROC_NULL
 SAEMM_WAIT_CELL_IN_NO_CELL States
 [@.03713][SAEL3] @x429f7ba9 0b10:
@@ -1294,11 +1052,9 @@ SAEMM_WAIT_CELL_IN_NO_CELL States
 [@.04061][SAEL3] @x429d94bd Qb10:
 [SAECOMM_Utility.c] - -----------------------------
 [SAECOMM_Utility.c] - -----------------------------
-[SAEMM_ProcedureManagement.c] - ||PROC :
 [SAEMM_ProcedureManagement.c] - || AS :
 [SAECOMM_Utility.c] - ---------------------------—>
 SAEQM_INST_STATE
-[SAECOMM_Utility.c] - ---------------------- 9-22-2222 2222 nn nn nnn nn nn nnn nn nnn nn nn nn nn nnn nnn een nee
 [@.@4215][SAEL3] @x42a1fdid @b1: [SAEMM_Main.c] - Warn>++Not Allowed
 [@.@4235][SAEL3] @x42a@9ec5 @b@: [SAEL3_Task.c] - Alert>External Message Handler Error - (@x3c7b)
 #BHUSA
@@ -1321,26 +1077,22 @@ https://www.blackhat.com/us-24/briefings/schedule/#overcoming-state-finding-base
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat rh
 BRIEFINGS Sel
 States in old-G vs 5G
 4G States
 9 currStack = SAECOMM_Utility__CurrentStack(Sael3_CurrStack);
 10, if (SAEMM_Context[currStack].state_proc_curr != SAEMM_PROC_NULL) {
-5 5 return true;
 2byte SAERC_GetStateErcProc(void)
 3
 4{
 5 int iVarl;
 6
-7) iVarl = SAECOMM_Utility__CurrentStack(Sael3_CurrStack);
 8) return SAECOMM_Context_1_ARRAY_424e55d0[iVar1].ErcProc;
 9}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 55
@@ -1351,21 +1103,18 @@ States in old-G vs 5G
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat VR
-BRIEFINGS Ea Ny
 States in old-G vs 5G
 5G States
 int GetMmState_Wrapper(NrmmFacade x*facade,undefined4 param_2,uint param_3,uint param_4)
 {
 int iVar1;
-iVarl = FUN_4230cd52(facade->nrmmContextUtility, param_2,param_3,param_4);
 return iVar1;
-woman oauhwWwn
 }
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 56
@@ -1376,18 +1125,15 @@ woman oauhwWwn
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat VS
-BRIEFINGS a a.
-)
 States in old-G vs 5G
 5G States
 2int FUN_4230cd52(NrmmContextUtility *param_1,undefined4 param_2,uint param_3,uint param_4)
 3
 4{
-5 int iVari;
 6 GetMmStateFuncT *UNRECOVERED_JUMPTABLE;
 7
 8 UNRECOVERED_JUMPTABLE = param_1-—>mmGeneralContext—>vtable—>GetMmState;
@@ -1406,12 +1152,10 @@ States in old-G vs 5G
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat VS
-BRIEFINGS a a.
-)
 States in old-G vs 5G
 5G States
 int __thiscall
@@ -1423,36 +1167,28 @@ if (uVar1 != @) {
 uVarl1 = 1;
 }
 return uVar1;
-PRPRPRPE
-BPWNPSWOMIHDRUAWN
 ```
 
 ## Slide 58
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat void () {
-a Task_Msg_t x*msgPtr;
 ();
 {
 int err = (NASOT_QID, &msgPtr);
-('err)
 -@2958] [AFL_SAEL] @x4b50@02ef @b1000: [sael3_g991b.c] - FIRE
 .@3014] [AFL_SAEL] @x4b5@03@b pal_MsgSendTo(SAEL3 (25)) - PALMsg(2)<@x3c7b, LTERRC (10) -> SAEL3 (19), 12 bytes>
--@3713] [SAEL3] @x429f7ba9 @b10@: [SAECOMM_Utility.c] - QOOQOQOOOOOOOOOL Sael3_extMsg Start: @x3c7b JOOOOOOOOOOO00
-.@3937] [SAEL3] @x429d946f @b10: [SAECOMM_Utility.c] - ----------------------------- SAEL3_MSG_LOG_  -----------------------------
+.@3937] [SAEL3] @x429d946f @b10: [SAECOMM_Utility.c] - ----------------------------- SAEL3_MSG_LOG_ -----------------------------
 .@3976][SAEL3] @x429d946f @b10: [SAECOMM_Utility.c] - ----------------------------- SAEMM_STATE -----------------------------
 - 04006] [SAEL3] @x42a4e1qa3 @b10: [SAEMM_ProcedureManagement.c] - | PROC : SAEMM_PROC_NULL
 .@4027] [SAEL3] @x42a4e201 @b10: [SAEMM_ProcedureManagement.c] - | AS : SAEMM_WAIT_CELL_IN_NO_CELL
 . 04036] [SAEL3] @x429d946f @b10: [SAECOMM_Utility.c] - ----------------------------- SAEQM_INST_STATE -----------------------------
-. 04061] [SAEL3] @x429d94bd @b10: [SAECOMM_Utility.c] - ------------------------------------------------------- 2-2-2 2-2-2 n-ne n-ne eee -----
 .@4215] [SAEL3] @x42a1fdid @b1: [SAEMM_Main.c] - Warn>++Not Allowed
 .@4235] [SAEL3] @x42a@9ec5 @b@: [SAEL3_Task.c] - Alert>External Message Handler Error - (@x3c7b)
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS == 5GMM_IN_CONNECT)
 (msgPtr->payload, msgPtr->plSize);
@@ -1468,7 +1204,8 @@ State Variables
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Initialization
@@ -1479,21 +1216,15 @@ void NasotMa
 Task_Msg_t *msgPtr;
 in (
 ) {
-ze ();
-int err = _ (NASOT_QID, &msgPtr) j;
-('err)
-E l ler(msgPtr);
 } (true);
 }
 void ExtMsgHandler(Task_Msg_t *msgPtr) {
 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM PROC_NULL &&
 G
 MmAS ==
 5GMM_IN_CONNECT)
 State Variables
-y(msgPtr->payload, msgPtr->pl1Size);
 ```
 
 ## Slide 60
@@ -1524,21 +1255,17 @@ MmProc != 5GMM_PROC_NULL && MmAS == 5GMM_IN_CONNECT MmProc == 5GMM_PROC_NULL MmA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The State Explosion Problem
 void ExtMsgHandler(Task_Msg_t *msgPtr) 1if{
 2msg_type = msgPtr->group3-> 8 & Oxff;
-(msg_type == RADIO_MSG)
 4MmProc != 5GMM _PROC_NULL &&
 5SMmAS == 5GMM_IN_CONNECT)
-: Msg(msgPtr->payload, msgPtr->plSize);
 6 7
 e 5 lines of code
-¢ 7 symbolic variables (2 states)
-¢ 4paths
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 62
@@ -1565,18 +1292,16 @@ e 5 lines of code
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How about we only analyze state variables?
 { void ExtMsgHandler(Task_Msg_t *msgPtr) {
 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
-: Msg(msgPtr->payload, msgPtr->plSize);
 ¢ How do we identify state variable?
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 64
@@ -1595,21 +1320,19 @@ MmAS 5GMM_IN_CONNECT)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat
 BRIEFINGS Set
 Is it enough?
-GD 8/30/24, 2:49 Pm
 Hey Ali. | just saw that the RAM usage on the server is growing
 N O really fast and its already 916G. Is it normal?!
 e~100 state variables
 e~4 hours
 e~9k paths
 ¢> 1 TB Memory consumed
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 65
@@ -1626,19 +1349,15 @@ e~9k paths
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ror 4 GY if
 Is It Enough?
 No
 void (Task_Msg_t *msgPtr) {
 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
-MmdeS == SGMM_IN_ CONNECT)
-| (msgPtr->payload, msgPtr->p1lSize) ;
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 66
@@ -1677,22 +1396,18 @@ MmdeS == SGMM_IN_ CONNECT)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat Re a
 BRIEFINGS
-; J
 4
 ~
 Demonstration of Iterative Symbolic Analysis
 void (Task_Msg_t *msgPtr) {
 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
-(msgPtr->payload, msgPtr->p1lSize) ;
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 69
@@ -1703,20 +1418,18 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat a Sal YW a
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 70
@@ -1727,20 +1440,18 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat a Sal YW a
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 71
@@ -1751,21 +1462,19 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat ee “i I
 2 See ONN 4 y
 Iteration 1
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM _PROC_NULL| &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 72
@@ -1776,20 +1485,18 @@ Symbolic variables: {msgPtr} State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat a Sal YW a
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 73
@@ -1800,20 +1507,18 @@ Symbolic variables: {msgPtr, **MmProc** } State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat a Sal YW a
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr, MimProc}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 74
@@ -1824,20 +1529,18 @@ Symbolic variables: {msgPtr, MmProc} State variables: {MmProc, MmAS}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat a Sal YW a
 Iteration 2
 4 void tM er(Task_Msg_t *msgPtr) {
 5 msg_type = msgPtr->group >> 8 & Oxff;
-(msg_type == RADIO_MSG)
 (MmProc != 5GMM_PROC_NULL &&
 MmAS 5GMM_IN_CONNECT)
 F isg(msgPtr->payload, msgPtr->plSize);
 Symbolic variables: {msgPtr, MmProc}
 State variables: {MmProc, MmAS}
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 75
@@ -1906,18 +1609,12 @@ Condition: MmProc != 5GMM_PROC_NULL, MmAS == 5GMM_IN_CONNECT
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
 BRIEFINGS
 Let’s wrap it up!
-~ a NAS. - asay
-___S_s N OO Meus x 0. SES
-Vv ! Stratum Vv !
-Ss, Cd Seo a
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 82
@@ -1926,16 +1623,15 @@ Ss, Cd Seo a
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidekhat
 BRIEFINGS ame
 Loris Architecture
 Firmware
 Binary
 101001
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 83
@@ -2052,12 +1748,12 @@ Binary
 
 <u>https://drive.google.com/file/d/1LE6pjaaBDgyBLanu6buU56EDTLclpPka/view?usp=sharing</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Capturing from Loopback: lo - oOo & SM-G991B
 File Edit View Go Capture Analyze Statistics Telephony Wireless Tools Help
-= 8 = SS aAse 15:36 © @ + 100%
 ip.addr == 127.0.0.5 && ngap +
 No. Time Source Destination Protocol Length Info
 < About phone Q
@@ -2073,7 +1769,6 @@ MEI (slot 2
 Status information
 Legal information
 Software information
-“™ 6. Battery information
 https://drive.google.com/file/d/1LE6pjaaB DgyBLanu6buU56EDTLclpPka/view
 * Loopback: lo: <live capture in progress> Packets: 3176 « Displayed: 0 (0.0%) Profile: Default
 ```
@@ -2104,16 +1799,15 @@ stack frame 1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS
 Stack Canaries é
 increasing addresses
 stack
 frame 1
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 92
@@ -2128,32 +1822,21 @@ increasing addresses
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS
 Stack Canaries é
 Y
-5)
 Y
 Y
-5)
-Qo
-Oo
-Oo
 (av)
-oo
 stack &
-YN
 frame 2 ra)
-ro)
-a
 O
-=
 stack
 frame 1
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 93
@@ -2170,10 +1853,10 @@ increasing addresses
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS
 Stack Canaries é
 stack
@@ -2183,7 +1866,6 @@ frame 2
 stack
 frame 1
 increasing addresses
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 94
@@ -2205,10 +1887,10 @@ increasing addresses
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS
 Stack Canaries é
 local
@@ -2221,7 +1903,6 @@ frame 2
 stack
 frame 1
 increasing addresses
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 95
@@ -2243,16 +1924,15 @@ increasing addresses
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS La
 Stack Canaries
 local
 vars
 LR
-é
 stack
 frame 3
 stack
@@ -2260,7 +1940,6 @@ frame 2
 stack
 frame 1
 increasing addresses
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 96
@@ -2321,10 +2000,10 @@ stack frame 1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
 BRIEFINGS
 Loris Covers ~200% Code
 8000 16000 24000
@@ -2343,14 +2022,11 @@ Pixel 6 5G
 12h 16h 20h 24h
 0 5000 10000 1500020000
 ?
-x
-Xa.
 Galaxy 821 LTE
 4h 8h 12h 16h 20h 24h
 Galaxy A41 LTE
 /
 4h 8h 12h 16h 20h 24h
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 100

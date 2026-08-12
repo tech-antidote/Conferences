@@ -11,7 +11,7 @@ files_skipped: 0
 text_chars: 16626
 redacted_secrets: 0
 sha256: "f0d4373c822881559690f5db04475e1051c7e92e3e69e278349fd21b3d5c6945"
-converted_at: "2026-08-12T02:54:55Z"
+converted_at: "2026-08-12T07:17:47Z"
 ---
 
 # Entra ID Persistence - Because Passwords Were Never the Problem - Synopsis

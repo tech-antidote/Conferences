@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Fengyu Liu&YouKun Shi&Tian Chen&Bocheng Xiang&Junyao He&Qi Li&Guangliang Yang&Yuan Zhang&Min Yang_Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications.pdf"
 pages: 43
 sha256: "0619eea75f76dbe643453a586f328476ad2258f550ff8bce4fedbd6cc3a9cff4"
-text_chars: 12185
+text_chars: 11509
 ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:30Z"
+converted_at: "2026-08-12T05:10:03Z"
 ---
 # Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications
 
 **Speakers:** Fengyu Liu, YouKun Shi, Tian Chen, Bocheng Xiang, Junyao He, Qi Li, Guangliang Yang, Yuan Zhang, Min Yang  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Fengyu Liu&YouKun Shi&Tian Chen&Bocheng Xiang&Junyao He&Qi Li&Guangliang Yang&Yuan Zhang&Min Yang_Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -52,12 +58,10 @@ Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Application
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Modern Apps: From Monolith to Microservices
 Monolithic architecture
 Microservice architecture
@@ -162,10 +166,10 @@ Single instance
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat a BR a
 BRIEFINGS >
 Real Case: Spring Cloud Dataflow
 ¢ A cloud dataflow platform under Spring Projects
@@ -218,12 +222,10 @@ HIGH | MAY 23, , 2024 | CVE-2024-22263
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Challenges
 ¢ Hidden entry points due to gateway routing rules
 // Allow access / Deny access
@@ -232,7 +234,6 @@ Challenges
 3 service: portal service: user
 4| filters: AddHeader=X-Portal filter: SetResponseStatus=403
 a
-> “i
 Ne
 ```
 
@@ -256,18 +257,13 @@ Ne
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Challenges
 ¢ Cross-service data flow is hard to track
-oe kafka DEL
 RestTemplate 6 RPC
-AL /portal/query?id=id —= user/query: Lar)
-5 Ea erie OER
 Gateway Portal Service User Service
 ```
 
@@ -299,25 +295,19 @@ Gateway Portal Service User Service
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Mscan Overview
 ¢ [LM-based entry identification and distance-guided taint analysis
-r
 = +@
-——
 Application Code Entry Points SDG
 | S | Distance-guided
 7 3 Source-to-Sink Paths
-?
 Vulnerability
 ~
 in Mscan
-XY SJ
 Figure 5: The Architecture of MScan.
 ```
 
@@ -337,12 +327,10 @@ Figure 5: The Architecture of MScan.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Stage I: Entry Point Identification
 K Shots
 Task Description
@@ -358,14 +346,12 @@ represents a routing path to a microservice. - id: log-route
 - Status=403
 GS ["/add/**"]
 Actual query assistant
-routes: _
 portal-route:
 user path: /portal/** LLM Response
 service: portal
 util-route:
 path: /util/** ["/portal/**"]
 filter: deny WSS
-. § assistant
 service: util
 ```
 
@@ -379,15 +365,12 @@ service: util
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Stage II: Construct Service Dependence Graph
 Framework / Lib Type APIs
-. . . OpenFeign Sync @FeignClient
 ° Identify Communication APIs RestTemplate.get
 RestTemplate Sync RestTemplate.post
 RestTemplate.exchange
@@ -397,15 +380,10 @@ URL.openConnection
 JDK Native Syne 5
 HttpClient.send
 Apache HttpClient Sync HttpClient.execute
-Hutool-http Sync che ae
 HttpUtil.post
 @DubboReference
-pale i @DubboService
 Kafa Asyne KafkaProducer.send
 KafkaConsumer.poll
-; Channel. basicPublish
-= me Channel.basicConsume
-Redis Async or
 Jedis.set
 MQTT Asyne MattClient.publish
 MattClient.subscribe
@@ -421,21 +399,17 @@ MattClient.subscribe
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Stage II: Construct Service Dependence Graph
 Framework / Lib Type APIs
 . . . OpenFeign Sync @FeignClient
 Identify Communication APIs RestTemplate.get
 RestTemplate Sync RestTemplate.post
 RestTemplate.exchange
-*Imp|Base.*
 *BlockingStub.*
-i 2 ¥ ¢ JDK Native Syie URL copeaCoageytion
 HttpClient.send
 “. Apache HttpClient Syne HttpClient.execute
 Hutool-http Sync HttpUtil.get
@@ -445,7 +419,6 @@ gRPC Syne
 @DubboService
 Kafa Asyne KafkaProducer.send
 KafkaConsumer.poll
-Channel. basicPublish
 RabbitMQ Async ae en
 Channel.basicConsume
 Jedis.get
@@ -599,12 +572,10 @@ MQTT Asynec
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Evaluation Result: Effectiveness
 ¢ MScan detected 59 0-day vulns
 Vulnerability Type TP FP Prec(%)
@@ -623,12 +594,10 @@ Total 59 23 71.95%
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Evaluation Result: Baseline
 ¢ MScan detected 59 0-day vulns
 ¢ CodeQL detected 23 vulns, missed 36
@@ -659,19 +628,23 @@ e)
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-BRIEFINGS
+black hat BRIEFINGS
+
 Ablation Study
-Baselines TP FP FN _ Prec(%) Recalil(%)
-MScan-NoEntry 59 89 0 39.86% 100%
-MScan-NoSDG 27 12 32 69.23% 45.76%
-MScan-CS 29 11 30 72.50% 49.15%
-MScan-CS-2call 59 251 0 19.03% 100.00%
-MScan 59 23 0 71.95% 100.00%
+
+| Baselines | TP | FP | FN | Prec(%) | Recall(%) |
+| --- | --- | --- | --- | --- | --- |
+| MScan-NoEntry | 59 | 89 | 0 | 39.86% | 100% |
+| MScan-NoSDG | 27 | 12 | 32 | 69.23% | 45.76% |
+| MScan-CS | 29 | 11 | 30 | 72.50% | 49.15% |
+| MScan-CS-2call | 59 | 251 | 0 | 19.03% | 100.00% |
+| MScan | 59 | 23 | 0 | 71.95% | 100.00% |
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 39

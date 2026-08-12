@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions_wp.pdf"
 pages: 18
 sha256: "5b3aa37f03393d24be8a1d34cf7f36534e11d2924ed668ab240dd460c495df04"
-text_chars: 44869
+text_chars: 44889
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:57:53Z"
+converted_at: "2026-08-12T04:10:06Z"
 ---
 # Smashing the State Machine The True Potential of Web Race Conditions
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/James Kettle_Smashing the State Machine The True Potential of Web Race Conditions_wp.pdf` (18 pages)
+
 
 ## Slide 1
 
@@ -112,9 +117,9 @@ I used to think race conditions were a well-understood problem. I had discovered
 
 However, there was one thing I didn't understand. A blog post from 2016<sup>6</sup> by Josip Franjković detailed four vulnerabilities, and while three of them made perfect sense to me, one didn't. In the post, Josip explained how he _"somehow succeeded to confirm a random email address"_ by accident, and neither he nor Facebook's security team were able to identify the cause until two months later. The bug? Changing your Facebook email address to two different addresses simultaneously could trigger an email containing two distinct confirmation codes, one for each address:
 
-```
+\```
 /confirmemail.php?e=user@gmail.com&c=13475&code=84751
-```
+\```
 
 I had never seen a finding like this before, and it confounded every attempt to visualize what might be happening server-side. One thing was for sure - this wasn't a limit-overrun.
 
@@ -293,11 +298,11 @@ First, a disclaimer. During research, I usually accrue a large number of case st
 
 We'll start with an object masking vulnerability in Gitlab. Gitlab lets you invite users to administer projects via their email address. I decided to try a probe with six identical requests:
 
-```
+\```
 POST /api/…/invitations HTTP/2
 ...
 {"email":"x@psres.net"}
-```
+\```
 
 To build a baseline, I sent these requests sequentially with a small delay between each. This resulted in the response `{"status":"success"}` six times, and one invitation email.
 
@@ -345,21 +350,21 @@ On Gitlab, I noticed that when I tried to change my email address, the response 
 
 I decided to probe Gitlab by changing my account's email address to two different addresses at the same time:
 
-```
+\```
 POST /-/profile HTTP/2POST /-/profile HTTP/2
 Host: gitlab.comHost: gitlab.com
 user[email]=test1@psres.netuser[email]=test2@psres.net
-```
+\```
 
 This revealed a massive clue:
 
-```
+\```
 To: test2@psres.net
 Subject: Confirmation instructions
 test1@psres.net
 Click the link below to confirm your email address.
 Confirm your email address
-```
+\```
 
 The address the message was sent to didn't always match the address in the body. Crucially, the confirmation token in the misrouted email was often valid. By submitting two requests, containing my own email address and albinowaxed@gitlab.com, I was able to obtain the latter as a validated address. You can still view it on my profile<sup>20</sup> .
 
@@ -377,16 +382,16 @@ The vulnerability seemed to originate from the way Gitlab had integrated Devise<
 
 If you request an email change, Devise updates `user.unconfirmed_email` , saves a security token in `user.confirmation_token` , and emails a link containing the token to `user.unconfirmed_email` :
 
-```
+\```
 self.unconfirmed_email = self.email // from 'email' parameter
 ...
 self.confirmation_token = @raw_confirmation_token = Devise.friendly_token
 ...
 // this eventually gets handed off a different thread to render & send the email
 send_devise_notification(:confirmation_instructions, @raw_confirmation_token, { to: unconfirmed_email } )
-```
+\```
 
-```
+\```
 // an email is queued to the unconfirmed_email argument
 // but the body is generated via a template engine reads the variables back from the database
 - confirmation_link = confirmation_url(@resource, confirmation_token: @token)
@@ -395,11 +400,11 @@ send_devise_notification(:confirmation_instructions, @raw_confirmation_token, { 
     = email_default_heading(@resource.unconfirmed_email|| @resource.email)
 %p= _('Click the link below to confirm your email address.')
 #cta
-```
+\```
 
-```
+\```
 = link_to _('Confirm your email address'), confirmation_link
-```
+\```
 
 The vulnerability arises in an inconsistency between how Devise knows where to send the email, and how it knows what to put inside the email. The email is sent to a variable passed directly in an argument to `send_devise_notification` . However, the variables used to populate the email body, including the `confirmation_link` , are retrieved from the database using a server-side template engine. This creates a race window between `send_devise_notification` being invoked, and the email body being generated, where another thread can update `user.unconfirmed_email` in the database.
 
@@ -463,30 +468,30 @@ You might also encounter it with custom session handlers, especially those built
 
 If you spot a custom session handler, heavy testing is advised as a vulnerable implementation can undermine critical functionality such as login. Here are three snippets of code that are highly exploitable when combined with the sessionhandler that has no defenses:
 
-```
+\```
 # Bypass code-based password reset
 session['reset_username'] = username
 session['reset_code'] = randomCode()
 Exploit: Simultaneous reset for $your-username and $victim-username
-```
+\```
 
 ## Slide 17
 
-```
+\```
 # Bypass 2FA
 session['user'] = username
 if 2fa_enabled:
     session['require2fa'] = true
 Exploit: Simultaneous login and sensitive page fetch
-```
+\```
 
-```
+\```
 # Session-swap
 session['user'] = username
 set_auth_cookies_for(session['user'])
 Detect: Simultaneous login to two separate accounts from same session
 Exploit: Force anon session cookie on victim, then log in simultaneously
-```
+\```
 
 Hopefully we'll quickly arrive at a consensus that for a core data-structure like a session handler or ORM, failure to be atomic is a vulnerability.
 

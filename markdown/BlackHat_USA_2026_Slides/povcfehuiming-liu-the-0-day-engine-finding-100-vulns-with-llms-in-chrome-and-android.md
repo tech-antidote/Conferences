@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Povcfe&Huiming Liu_The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android.pdf"
 pages: 47
 sha256: "b10737bf6a51719a8375cd986d9083ad28f3272521ec00d0a359e0154b147a35"
-text_chars: 19869
+text_chars: 19954
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 95.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:14:48Z"
+converted_at: "2026-08-12T05:41:39Z"
 ---
 # The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android
 
 **Speakers:** Povcfe, Huiming Liu  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Povcfe&Huiming Liu_The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -450,12 +455,12 @@ Verify
 
 **2.6 Result**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2.6 Result
 buganizer-sy... May 9
-a
 to b-system+1027... v
 https://issuetracker.google.com/issues/495651377
 Changed
@@ -474,11 +479,8 @@ Thank you,
 Android Security Team
 (1) Severity Matrix: https://source.android.com/
 security/overview/updates-resources#severity
-r vent: 190951
 status: Assigned
 reporter: povcfe2sec@gmail.com
-oeape>
-OM 2S26
 ```
 
 ## Slide 30
@@ -499,23 +501,23 @@ OM 2S26
 
 ## **3.1 Pin Lock Bypass(CVE)**
 
-```
+\```
 CVE-2025-48541
-```
+\```
 
-```
+\```
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
-```
+\```
 index 8270d50a..ce4fdd6 100644
-```
+\```
 
 - `--- a/src/com/android/settings/biometrics/face/FaceSettings.java`
 
-```
+\```
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
 ## Slide 33
 
@@ -523,62 +525,62 @@ index 8270d50a..ce4fdd6 100644
 
 #### **`CVE-2025-48541`**
 
-```
+\```
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
-```
+\```
 index 8270d50a..ce4fdd6 100644
-```
+\```
 
 - `--- a/src/com/android/settings/biometrics/face/FaceSettings.java`
 
-```
+\```
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
-```
+\```
 -
 mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-```
+\```
 
-```
+\```
 +        if (callingPackage == null || !callingPackage.equals(activity.getPackageName())) {
-```
+\```
 
-```
+\```
 +            // only allow these extras when called internally by Settings
-```
+\```
 
-```
+\```
 +            mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-```
+\```
 
 ## Slide 34
 
 ## **3.1 Pin Lock Bypass(CVE)**
 
-```
+\```
 CVE-2025-48541
-```
+\```
 
-```
+\```
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
 index 8270d50a..ce4fdd6 100644
-```
+\```
 
-```
+\```
 ---a/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
-```
+\```
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-```
+\```
 
-```
+\```
 -
 mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-```
+\```
 
 - `mSensorId = getIntent().getIntExtra(BiometricEnrollBase.EXTRA_KEY_SENSOR_ID, -1);`
 
@@ -588,106 +590,106 @@ mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
 
 - `Intent.EXTRA_USER_ID, UserHandle.myUserId());`
 
-```
+\```
 +        if (callingPackage == null || !callingPackage.equals(activity.getPackageName())) {
-```
+\```
 
-```
+\```
 +            mUserId = UserHandle.myUserId();
 +        } else {
-```
+\```
 
-```
+\```
 +            // only allow these extras when called internally by Settings
-```
+\```
 
-```
+\```
 +            mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-```
+\```
 
-```
+\```
 +            mSensorId = getIntent().getIntExtra(BiometricEnrollBase.EXTRA_KEY_SENSOR_ID, -1);
-```
+\```
 
-```
+\```
 +            mChallenge = getIntent().getLongExtra(BiometricEnrollBase.EXTRA_KEY_CHALLENGE, 0L);
-```
+\```
 
 ## Slide 35
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
 ## Slide 36
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 +        mAllowInternalExtras = false;
-```
+\```
 
-```
+\```
 +            if (TextUtils.equals(callingPackage, activity.getPackageName())) {
-```
+\```
 
-```
+\```
 +                mAllowInternalExtras = true;
-```
+\```
 
-```
+\```
 if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-```
+\```
 
-```
+\```
 -
 if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
 +        if (mAllowInternalExtras && BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-```
+\```
 
 ## Slide 37
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
-```
+\```
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-```
+\```
 
    - `public void onAttach(Context context) {`
 
@@ -697,13 +699,13 @@ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/Biometr
 
 - `+        mUserId = UserHandle.myUserId();`
 
-```
+\```
 +        mAllowInternalExtras = false;
-```
+\```
 
-```
+\```
 +
-```
+\```
 
 - `+        if (context instanceof SettingsActivity) {`
 
@@ -713,21 +715,21 @@ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/Biometr
 
 - `+            if (TextUtils.equals(callingPackage, activity.getPackageName())) {`
 
-```
+\```
 +                mAllowInternalExtras = true;
-```
+\```
 
-```
+\```
 +                mUserId = activity.getIntent().getIntExtra(Intent.EXTRA_USER_ID, mUserId);
-```
+\```
 
-```
+\```
 if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-```
+\```
 
-```
+\```
 +        if (mAllowInternalExtras && BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-```
+\```
 
 ## Slide 38
 
@@ -735,19 +737,19 @@ if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
 
 #### **`CVE-2022-20230`**
 
-```
+\```
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
-```
+\```
 
-```
+\```
 index 67219a5..45be472 100644
-```
+\```
 
 - `--- a/src/com/android/keychain/KeyChainActivity.java`
 
-```
+\```
 +++ b/src/com/android/keychain/KeyChainActivity.java
-```
+\```
 
 ## Slide 39
 
@@ -755,31 +757,31 @@ index 67219a5..45be472 100644
 
 #### **`CVE-2022-20230`**
 
-```
+\```
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
-```
+\```
 
-```
+\```
 index 67219a5..45be472 100644
-```
+\```
 
 - `--- a/src/com/android/keychain/KeyChainActivity.java`
 
-```
+\```
 +++ b/src/com/android/keychain/KeyChainActivity.java
-```
+\```
 
-```
+\```
 String hostMessage = String.format(res.getString(R.string.requesting_server),
-```
+\```
 
-```
+\```
 uri.getAuthority());
-```
+\```
 
-```
+\```
 +                    Uri.encode(uri.getAuthority(), "$,;:@&=+"));
-```
+\```
 
 ## Slide 40
 
@@ -787,164 +789,164 @@ uri.getAuthority());
 
 #### **`CVE-2022-20230`**
 
-```
+\```
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
 index 67219a5..45be472 100644
-```
+\```
 
 - `--- a/src/com/android/keychain/KeyChainActivity.java`
 
-```
+\```
 +++ b/src/com/android/keychain/KeyChainActivity.java
-```
+\```
 
-```
+\```
 @@ -533,7 +533,7 @@
-```
+\```
 
-```
+\```
 Uri uri = getIntent().getParcelableExtra(KeyChain.EXTRA_URI);
 if (uri != null) {
-```
+\```
 
-```
+\```
 String hostMessage = String.format(res.getString(R.string.requesting_server),
-```
+\```
 
-```
+\```
 uri.getAuthority());
-```
+\```
 
-```
+\```
 +                    Uri.encode(uri.getAuthority(), "$,;:@&=+"));
-```
+\```
 
-```
+\```
 if (contextMessage == null) {
-```
+\```
 
-```
+\```
 contextMessage = hostMessage;
-```
+\```
 
-```
+\```
 } else {
-```
+\```
 
 ## Slide 41
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-```
+\```
 
-```
+\```
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-```
+\```
 
-```
+\```
 index 0000000..0000000 100644
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-```
+\```
 
-```
+\```
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-```
+\```
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-```
+\```
 
 - `--- a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java`
 
-```
+\```
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
-```
+\```
 
 ## Slide 42
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 index 0000000..0000000 100644
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 -
 applicationInfo.loadLabel(getPackageManager())));
 +                    applicationInfo.loadSafeLabel(getPackageManager())));
-```
+\```
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
-```
+\```
 
-```
+\```
 -
 applicationInfo.loadLabel(mPackageManager)));
 +                        applicationInfo.loadSafeLabel(mPackageManager)));
-```
+\```
 
 ## Slide 43
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 index 0000000..0000000 100644
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 @@ -243,11 +243,11 @@ private void loadHeader() {
-```
+\```
 
-```
+\```
 -
 applicationInfo.loadLabel(getPackageManager())));
 +                    applicationInfo.loadSafeLabel(getPackageManager())));
-```
+\```
 
-```
+\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-```
+\```
 
-```
+\```
 ---a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 @@ -84,11 +84,11 @@ public class HeaderViewHolder extends RecyclerView.ViewHolder {
 mAppIconView.setImageDrawable(mPackageManager.getApplicationIcon(applicationInfo));
-```
+\```
 
-```
+\```
 -
 applicationInfo.loadLabel(mPackageManager)));
-```
+\```
 
-```
+\```
 +                        applicationInfo.loadSafeLabel(mPackageManager)));
-```
+\```
 
 ## Slide 44
 

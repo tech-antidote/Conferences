@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Chris Wysopal_From HAL to HALT Thwarting Skynet's Siblings in the GenAI Coding Era.pdf"
 pages: 24
 sha256: "1331a2df0ef00b6df6de26e66aaff7dd851f756404e28dd5addcc02554028fe0"
-text_chars: 6200
-ocr_pages: 8
+text_chars: 5992
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:29:34Z"
+converted_at: "2026-08-12T04:28:46Z"
 ---
 # From HAL to HALT Thwarting Skynet's Siblings in the GenAI Coding Era
 
 **Speakers:** Chris Wysopal  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Chris Wysopal_From HAL to HALT Thwarting Skynet's Siblings in the GenAI Coding Era.pdf` (24 pages)
+
 
 ## Slide 1
 
@@ -31,11 +37,10 @@ Co-founder & CTO, Veracode
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Ss
-pifekhat i
 USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
@@ -55,7 +60,8 @@ Unites States Senate testimony - 19 May 1998
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Using Good Hackers to
@@ -76,37 +82,19 @@ Newsweek, January 17, 2000
 
 **Improve the Security of Your** **_Product_ by Breaking Into It**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 65/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 trategies [a computers
-W | LITE “a
 Improve the PAPER.
 Security of gceayal =
-Your pS na
 by Breaking io :
-Into It 4 5 a G sims OF ae
-AUNDEKGROUND
-ABN GIMEES
 ```
 
 ## Slide 5
 
 **Founded @stake security research team and then Veracode to build security into SDLC**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Founded
-@stake security
-research team
-and then
-Veracode to
-build security
-into SDLC
-ao ke
-KS
-```
 
 ## Slide 6
 
@@ -132,7 +120,8 @@ age of application in (years)
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 organizations are
@@ -148,7 +137,8 @@ debt security debt
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 applications show an
@@ -156,18 +146,15 @@ average monthly fix rate
 that exceeds
 ten percent of all security
 flaws.
-Taw
 tean
-1S ;
-fast
-e
 ```
 
 ## Slide 10
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 why software
@@ -291,7 +278,8 @@ Recommend Fix
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Training data set: Java XSS

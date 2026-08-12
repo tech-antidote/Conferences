@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Toshinori Usui & Yuto Otsuki & Ryo Kubota & Yuhei Kawakoya & Makoto Iwamura & Kanta Matsuura_Bytecode Jiu-Jitsu Choking Interpreters to Force Execution of Malicious Bytecode.pdf"
 pages: 77
 sha256: "ad7f0ae2cb23714273d7f51f192460dba8027023e384bcb3c04cca16d72fbd1e"
-text_chars: 24737
-ocr_pages: 2
-has_ocr: true
+text_chars: 24557
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:32Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T04:43:14Z"
 ---
 # Bytecode Jiu-Jitsu Choking Interpreters to Force Execution of Malicious Bytecode
 
 **Speakers:** Toshinori Usui, Yuto Otsuki, Ryo Kubota, Yuhei Kawakoya, Makoto Iwamura, Kanta Matsuura  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Toshinori Usui & Yuto Otsuki & Ryo Kubota & Yuhei Kawakoya & Makoto Iwamura & Kanta Matsuura_Bytecode Jiu-Jitsu Choking Interpreters to Force Execution of Malicious Bytecode.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -64,13 +69,13 @@ Yuto Otsuki, Ph.D.
 
 3. Execute the code
 
-```
+\```
 31C0B001...
-```
+\```
 
-```
+\```
 31C0B001...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -84,13 +89,13 @@ Yuto Otsuki, Ph.D.
 
 3. Execute the code
 
-```
+\```
 31C0B001...
-```
+\```
 
-```
+\```
 31C0B001...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -104,9 +109,9 @@ Yuto Otsuki, Ph.D.
 
 bytecode
 
-```
+\```
 31C0B001...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -745,9 +750,9 @@ Interpreter binary
 
 ###### **Interpretation function**
 
-```
+\```
 interp(script_ctx_info, …)
-```
+\```
 
 ②Find memory regions accessed during bytecode interpretation
 
@@ -985,9 +990,9 @@ Find a symbol table, identify its data structure Extract bytecode and symbol tab
 
    - <u>Control the memory state</u> for the convenience of later analysis
 
-```
+\```
 global_var= 123456
-```
+\```
 
 **Feature 2:** Use a characteristic value <u>searchable in memory</u>
 
@@ -1051,11 +1056,11 @@ Member/Elem
 
 Member/Elem
 
-```
+\```
 mov rcx, [ rdx+ 0x40  ]
 mov rbx, [ rcx+ rsi*8 ]
 mov rax, [ rbx+ 0x10  ]
-```
+\```
 
 ① Find memory accesses
 that use the base register
@@ -1080,9 +1085,9 @@ offset/index
 
 ###### **Interpretation function**
 
-```
+\```
 interp(script_ctx_info, …)
-```
+\```
 
 ###### **Management structure**
 
@@ -1499,12 +1504,3 @@ Our PoC tools will be available soon here: https://github.com/ntt-zerolab/Byteco
 #BHUSA @BlackHatEvents
 
 77
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-() NTT Security Holdings
-TT
-```

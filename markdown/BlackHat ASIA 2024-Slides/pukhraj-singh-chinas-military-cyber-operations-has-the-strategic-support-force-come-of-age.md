@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Pukhraj Singh-China's Military Cyber Operations Has the Strategic Support Force Come of Age.pdf"
 pages: 56
 sha256: "569a02984719917fa7d6a025bf650316d6d7846b5a09b73143ce81dfabec5aeb"
-text_chars: 29133
+text_chars: 28351
 ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:50:38Z"
+converted_at: "2026-08-12T04:50:00Z"
 ---
 # China's Military Cyber Operations Has the Strategic Support Force Come of Age
 
 **Speakers:** Pukhraj Singh  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Pukhraj Singh-China's Military Cyber Operations Has the Strategic Support Force Come of Age.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -30,18 +35,16 @@ Pukhraj Singh
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a Qange
 black hat
-| ASIA 2024>—~ "i ip
 PRIL 18-19, 2024 | ‘a
 /-~ BRIEFINGS | >
 China’s Military Cyber Operations
 Has the Strategic Support Force Come of Age?
 Pukhraj Singh
-‘\\
 ```
 
 ## Slide 2
@@ -130,10 +133,10 @@ Geostrategic and geopolitical analyses
 
 #### Malware analysis
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
 My approach ASIA 2024
 Geostrategic and Malware analysis
 geopolitical analyses - /
@@ -147,15 +150,11 @@ Volt Typhoon
 
 May’23: Five Eyes and Microsoft
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 May’23: Five Eyes and Microsoft ASIA 2024
-Microsoft: Volt Typhoon targets
-US critical infrastructure with
-living-off-the-land techniques
-24 May
 FVEY: People’s Republic of
 China State-Sponsored Cyber
 Actor Living off the Land to
@@ -167,15 +166,11 @@ Feb 2024
 
 Dec’23-Jan’24: Lumen and SecurityScorecard
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-. pisekhat
 Dec’23-Jan’24: Lumen and SecurityScorecard = *s'42024
-Microsoft: Volt Typhoon targets
-US critical infrastructure with
-living-off-the-land techniques
-24 May
 SecurityScorecard: Volt Typhoon
 Compromises 30% of Cisco RV320/325
 FVEY: People’s Republic of Devices in 37 Days
@@ -190,20 +185,16 @@ Evade Detection Firewall: The KV-Botnet Investigation Today
 
 Jan’24 – Now : More disclosures
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mandiant: Cutting Edge, Part 4:
 Jan’24 —_ Now : More disclosures Ivanti Connect Secure VPN
-Microsoft: Volt Typhoon targets
-US critical infrastructure with
-living-off-the-land techniques
-24 May
 FVEY: People’s Republic of
 China State-Sponsored Cyber
 Actor Living off the Land to
 Evade Detection
-24 May
 2023
 Post-Exploitation Lateral
 Movement Case Studies
@@ -253,27 +244,19 @@ Firewall: The KV-Botnet Investigation Today
 
 Source: thechinaproject.com
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Guam: The US’s last military outpostin  — iSaknat
+Guam: The US’s last military outpostin — iSaknat
 the Pacific —
-ae
-<__, Alaska
-S
-Ye es
 les Nah,
-y, ‘
-vat ;
-_ ContinentalU.S. _-
 \ (Logo Map) 4
 Midway Sy a
 Atoll — a — 4 Puerto the
-x Ne
 ake Hawaii N e
 and Johnston -2 javassa y,S,
 Island virgin
-“ou SL
 Kingman
 Guam Reef
 Howland @q Palmyra
@@ -296,7 +279,8 @@ RedEcho, RedFoxtrot, TAG-38 and TAG-26
 
 2021-22: RedEcho and RedFoxtrot
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisek hat
@@ -344,14 +328,14 @@ The Theatre Commands
 
 Source: chinapower.csis.org
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Northern Theater Command
 - Responsibilities: Korean peninsula, Russian border
 - Predecessors: Jinan, Shenyang Military Regions
 - Number of Commanders/PCs: 9
-pif hat
 ASIA 2024
 Central Theater Command
 - Responsibilities: Capital defense
@@ -468,19 +452,17 @@ High-res image: <u>https://epistemicsecurit y.org/black-hat-asia2024/Asia-24-Sin
 
 Info dominance -> air + sea dominance
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisek hat
 Info dominance -> air + sea dominance ASIA 2024
 hew-type forces hew citcumstances#
-AEA ro
 strategic
-\, Frontiers AXBX
 ge of space,
 cyberspace
 / and the sea ~, |
-informationised information
 local wars (SRW dominance -> air +
 ABeboy sea dominance
 ```
@@ -489,18 +471,14 @@ ABeboy sea dominance
 
 System-of-systems warfare and political warfare
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System-of-systems warfare and political piSdxnat
 ASIA 2024
-warfare
-deterrence [xl
 information deterrence (EA
-eu 'ER
 system-or-
-2 strategic network
-systems deterrence AXEZZR WI Z8 RvR
 warfare (KATE
 tactical network deterrence
 ```
@@ -509,16 +487,13 @@ tactical network deterrence
 
 Warfighting principles
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#)
-Warfighting principles piesa coes
 information warfare (AR Uaks = (space +
 network + electronic + political) warfare
 three wartares — hk
-integrated joint operations (ATER G PE AX
-integrated hetwork-electronic warfare Pi A— A ay
 information and Firepower warfare (ABXA— Ad
 non-linear, non-contact and non-symmetric
 ```

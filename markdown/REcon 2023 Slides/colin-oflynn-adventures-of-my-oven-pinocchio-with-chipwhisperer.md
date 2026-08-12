@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Colin O'Flynn_Adventures of My Oven (Pinocchio) with ChipWhisperer .pdf"
 pages: 61
 sha256: "bf22a1bca01a5d1bbec50ebfeed7cdddba05b93b57934c63322411372a2dd344"
-text_chars: 22450
-ocr_pages: 22
+text_chars: 19496
+ocr_pages: 20
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.6
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:24:39Z"
+converted_at: "2026-08-12T06:01:30Z"
 ---
 # Adventures of My Oven (Pinocchio) with ChipWhisperer
 
 **Speakers:** Colin O'Flynn  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Colin O'Flynn_Adventures of My Oven (Pinocchio) with ChipWhisperer .pdf` (61 pages)
+
 
 ## Slide 1
 
@@ -40,7 +45,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 2
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nova Scotia
@@ -93,7 +99,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bootloader
@@ -107,7 +114,6 @@ Operation Command Data Operation Mode
 30H Product Information Read
 40H Flash Memory Chip-Erase
 60H Flash Memory Protect Set
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 ```
 
 ## Slide 8
@@ -116,13 +122,12 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Table 14-8 Transfer Format of Single Boot Program [RAM Transfer]
 Transfer Data
-Nth Avta
-DADA otarann atart nddreee 92+, 42084
 June 952023. Pres|
 Transfer Byte Transfer Data Baud Rate
 Number from Controller to Device from Device to Controller
@@ -147,7 +152,6 @@ AGK response to CHECKSUM value#2
 18th byte . Normal 10H
 Error 11H
 Communications error 18H
-19th byte RAM storage start addresé:31 to. 24,4.
 enited by Colin O'Flynn.
 10
 ```
@@ -158,7 +162,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Table 14-12 Transfer Format of Single Boot Program [Flash Memory Protect Set]
@@ -169,7 +174,6 @@ Baud Rat
 Number from Controller to Device aue nate from Device to Controller
 Baud rate setting Desired
 BOOT ROM 1st byt -
-els | UART 86H | baud rate*!
 ACK response to baud rate setting
 Normal (baud rate OK)
 2nd byte - >UART, 86H
@@ -181,15 +185,12 @@ ACK-response to operation command*2
 Error x1H
 Communications x8H
 5th byte Password data (12 bytes)
-to -
 16th byte (O2FEF4H to O2FEFFH)
 17th byte CHECKSUM value for 5th to 16th bytes >
 ACK response to checksum value*2
 48th byte . Normal 60H
 Error 61H
 Communications 68H
-ADU rAnnanann tn Deatant Cat nnmman a
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 14
 ```
 
@@ -219,7 +220,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Programmer / Disassembler / Simulator?
@@ -231,11 +233,9 @@ Condition: New - Open box
 Quantity: f | Last One /1sold
 Price: US $280.00
 Buy another
-Se Fe
 Add to cart
 % Haveonetosell? Sellnow
 Best Offer:
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 ```
 
 ## Slide 12
@@ -267,53 +267,53 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 ## Slide 14
 
-```
+\```
 FUNCTION START: Receive & Verify Password
 00fff2a2 CALR    0x0FFF5EF <-- RX
-```
+\```
 
-```
+\```
 ...
 00fff2ce JR      NZ,0x0FFF2D5
 00fff2d0 DJNZB   C,0x0FFF2C9
-```
+\```
 
-```
+\```
 00fff2d3 JR      0x0FFF2D7
-```
+\```
 
-```
+\```
 00fff2d5 LDB     L,0x1 <-- L is flag, if set to 1 comparison failed
 00fff2d7 LDW     BC,0x0C <-- 12 bytes to compare
-```
+\```
 
-```
+\```
 00fff2da LDL     XIX,(0x0FFF00C) <-- Points to 0004FEF4 (PW)
-```
+\```
 
-```
+\```
 00fff2df LDB     RH1,0x0
-```
+\```
 
-```
+\```
 00fff2e2 LDB     W,(XIX+) <--Load byte into W, inc XIX ptr (loop)
 00fff2e5 CALR    0x0FFF635 <--- RX assumed
-```
+\```
 
-```
+\```
 00fff2e8 CPB     W,A <--Compare W & A
-```
+\```
 
-```
+\```
 00fff2ea JR      Z,0x0FFF2EE <-- Compare OK, skip fail set
 00fff2ec LDB     L,0x1 <--Set 'fail' flag
-```
+\```
 
-```
+\```
 00fff2ee DJNZW   BC,0x0FFF2E2 <--Jump to next byte (12 times)
 00fff2f1 CALR    0x0FFF67B <-- checksum
 00fff2f4 RET
-```
+\```
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
@@ -321,7 +321,7 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 ## Slide 15
 
-```
+\```
 FUNCTION START: RAM WRITE FUNCTION
 00fff2f5 CALR    0x0FFF75F  <-- Load protection status
 00fff2f8 CPB     A,0x0FF <-- Compare protection status
@@ -332,18 +332,18 @@ FUNCTION START: RAM WRITE FUNCTION
 00fff305 CPB     RL1,0x0
 00fff308 JR      NZ,0x0FFF29C <-- Error
 00fff30a CPB     L,0x0
-```
+\```
 
-```
+\```
 00fff30c JR      NZ,0x0FFF29C <-- Error
 00fff30e CALR    0x0FFF5EF <- TX
 00fff311 LDB     RH1,0x0
-```
+\```
 
-```
+\```
 00fff314 CALR    0x0FFF635 <--
 00fff317 LDB     QIXH,A
-```
+\```
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
@@ -367,13 +367,13 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Select difficulty:
 Easy
 Medium
-——e.— um - orsrs
 Hard
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 19
 ```
@@ -394,15 +394,14 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Power Analysis?
-A\
 Rshunt VCC
 Micro-
 Controller
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 29.4912 MHz
 (7.3728 x 4)
 21
@@ -416,23 +415,15 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Easy-Mode Level 1: Password Power Analysis
 Power Measurement for 4 Password Guesses
 0.24
-» 014
-Cc
-(oD)
-=
-©
-=}
 2 0.04
-(0)
 =
-o
-3
 3-01 |
 — 0x70 (p) |
 _63- 0x71 (q) ul
@@ -448,20 +439,17 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Difference from Mean
 Difference Between Guessed Power Trace & Mean
-x *  Guessed Byte
 13.44 --- Mean
-, --- 4xstd+mean
 13.2 5
 13.0 -
 12.8 -
 12.6 |e
-12.44 Riyal os * moe we
-REAR eat
 12.2 7
 0 50 100 150 200 250
 recByte Value, (Range 0x00,£0,0XFFdriynn.
@@ -501,19 +489,12 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Clock Fault Injection
-a
-kK .of fset >
-kK
-.ext_offset— >f
 Trigger event
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
-_. -J- --tee J -
--|
-\—.-width
 26
 ```
 
@@ -535,7 +516,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fault Injection Setup / Demo
@@ -547,10 +529,8 @@ scope.glitch.width = glitch_setting[0]
 reset_target()
 target.ser.flush()
 response, responsehex = tx_rx(b"\x86", 1, 1)
-if responsehex[0] != x86:
 In [52]: Dl reset_target() raise I0Error("sync Error”)
 response, responsehex = tx_rx(b"\x86", 1, 1) gare)
-if responsehex[@] != exs6: ;
 = " " #Do glitch Loop
 raise I0Error("Sync Error") target. ser.write(b"\x20")
 response, responsehex = tx_rx(b"\x20", 4) at co orETMT
@@ -559,7 +539,6 @@ loff = scope.glitch.offset
 out[52]: [32, 250, 165, 97] lwid = scope.glitch.width
 if ret:
 print('Timeout - no trigger’)
-gc.add("reset")
 #Device is slow to boot?
 reset_target()
 else:
@@ -572,13 +551,9 @@ if response != [32, 250, 165, 97]:
 broken = True
 gc.add("success")
 print (response)
-print (loff)
-print (lwid)
 print("#@", en
 else:
 gc.add("normal")
-Q:
-print("Done glitching")
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn
 ```
 
@@ -590,17 +565,14 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fault Injection Results (SUM Corruption)
 TMP91 Clock Glitch Settings
 1300 5
-hb
 N
-oO
-Oo
-n
 1100 5
 1000 +
 900 5
@@ -608,15 +580,10 @@ n
 Glitch Offset (CW-Husky Setting)
 700 4
 600 +
-puis
 t
-ppp
 t
-4 T
-Trt et
 50 100 150 200 250 300 350
 Glitch Width (CW-Husky Setting)
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 29
 ```
 
@@ -628,31 +595,26 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Easy-Mode Level 3: Fault Injection Attack
-SCupe.giitcrnwiuun = 200
-for glitch settings in gc.glitch_values():
 scope.glitch.ext_offset = glitch_settings[0]
 for i in range(sample_size):
 reset_target()
 target.ser.flush()
 response, responsehex = tx_rx(b"\x86", 1, 1)
 if responsehex[0] != 0
-raise Ioerror
 pcopetarm() In [59]: DL known_pw = [@xDE, @xAD, OxBE, OxEF, @xCA, OxFE, OxFA, OxCE, @x11, 0x22, x33, 0x44]
 #D0 glitch Loop bl = t1.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-target ..ser.write(b"\x10") bl.cmd_ram_transfer(rc.B_F16_RAM1000_ROM10000_TLCS9@0L1["data"], rc.B_F16_RAM1000_ROM1@0@0_TLCS9@@L1["start_address"], skipcm
 rl = t1.RamCodeProtocol(target.ser)
 ret = scope.capture()
 if ret:
 print( "Timeout - no trigger’) In [60]: Dl #Print the password (should match the known one)
-poadd @reset a) time.sleep(0.1)
 data = rl.cmd_read(@x@2FEF4, 12)
 #Device is slow to boot?
 reset. target() . ":".join(hex(ord(char)) for char in data)
-else “oxde: Oxad : @xbe: Oxef :Oxca:Oxfe:Oxfa:0xce:0x11:0x22:0x33:0x44"
 response = target.ser.read(1)
 response = [ord(i) for i in response]
 In [12]: Dl #Read the U flash itself
@@ -662,17 +624,13 @@ if len(response)
 gc.add(“reset
 else:
 In [13]: DP len(flash)
-if response[0]
 #broken = T
-gc.add ("success")
 print(response)
-print (hex(response[0]))
 print(scope.glitch.ext_offset)
 Out[13]: 131072
 In [ ]: DM known_pw = [OxDE, OxAD, OxBE, OxEF, OxCA, OxFE, OxFA, OxCE, Ox11, 0x22, 0x33, 0x44]
 print("#", end=
 bl = tl.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-if response[0] == 0x10: b1.cmd_ram_transfer(rc.B_F16_RAM1000_ROM10000_TLCS90QL1["data"], rc.B_F16_RAM1000_ROM10000_TLCS900L1["start_address"], skipcm
 broken=True rl = tl.RamcodeProtocol(target.ser)
 break
 else:
@@ -680,7 +638,6 @@ gc.add("normal")
 if broken:
 break
 [16]
-0x10
 8015
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 30
 ```
@@ -705,13 +662,13 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Select difficulty:
 Easy
 Medium
-——e.— um - orsrs
 Hard
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 32
 ```
@@ -740,7 +697,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Medium-Mode Level 2: Fault Injection
@@ -750,33 +708,26 @@ Medium-Mode Level 2: Fault Injection
 @x85
 11715
 # [17]
-ex11
 11750
 s [16]
-@x10
 11755
 In [59]: bl #known_pw = [@xDE, @xAD, @xBE, @xEF, @xCA, @xFE, @xFA, @xCE, @x11, @x22, 0x33, Ox44]
 known_pw = [ord(c) for c in "samsungovene" ]|
 bl = tl.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-bl.cmd_ram_transfer(rc.B_F16_RAM1000_ROM10000_TLCS9@0L1["data"], rc.B_F16_RAM1000_ROM10000_TLCS9@@L1["“start_address"], skipcm
 rl = tl.RamCodeProtocol(target.ser)
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 ```
 
 ## Slide 34
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 In [11]: Dl resp = rcp.cmd_read(0x10000, 9x100)
 In [12]: Dl resp
-Out[12]: ‘y yy
-YIVIIIIISIVIISIVY
 yyyyyyyyy
-yy YYYVVYYYYYYVVYYYYYIVVIYYYV IVY
-YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 #bL.cmd
 #bL.cmd
 bl.cmd_
@@ -842,26 +793,23 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 File
 Home
 x
-CO a
 Paste
--
 Clipboard
 F9931
 &
 v
-Column2) ~ | Column3
 9926 Oxte9681 ~~ d8 12
 9927 Oxfe9683
 9928 Oxfe9688
 9929 Oxfe968d
 9930 Oxfe9691
-9931 Oxfe9696
 9932 Oxfe9697
 9933 Oxfe969b
 9934 Oxfe969d
@@ -890,9 +838,6 @@ Column2) ~ | Column3
 9957 Oxfe96e7
 < >
 Ready
-Insert Draw Page Layout Formulas
-|Calibri jn |e xe =
-BIU-y ary Ae
 Font 8
 i Se
 [+ | Column4
@@ -905,27 +850,18 @@ Oe RET
 109 02 cb BITB 0x3,(0x209)
 66 Ob JR Z,OxOFE96A8
 00 NOP
-1080221 LDB A,(0x208)
-f200 110041 LDB (0x1100),A
 Oe RET
-f10902ca BITB 0x2,(0x209)
 66 Ob JR Z,0xOFE96B9
 00 NOP
-10802 21 LDB  A,(0x208)
-f200 110041 LDB (0x1100),A
 Oe RET
 f109 02 cc BITB 0x4,(0x209)
 66 Ob JR Z,OxOFE96CA
 00 NOP
-c108 0221 LDB A,(0x208)
 £200 1100 41 LDB (0x1100),A
 Oe RET
-c2 20110021 LDB A,(0x1120)
 d9 12 EXTZW BC
 f2 10 1100 32 LDAL XDE,0x1110
-1080221 LDB  A,(0x208)
 307 e8 e4 41 LDB (XDE+BC),A
-6e 10 JR NZ,OxOFE96F9
 DE92-02439F FW Disassembly
 Sheet1
 & Accessibility: Investigate
@@ -934,7 +870,6 @@ RE Oven.xisx ¥
 Data Review View Help Acrobat
 = wr 2b, Wrap Text
 Alignment
-Ly | Column5
 Kick off TX routine?
 Serial RX Start
 What is 1120??
@@ -945,63 +880,38 @@ Fail | guess?
 RECON Montreal - June 9, 2023. Presented by Colin Ut
 |General
 [+ | Columt ~ | Columi ~ |
-L]
 Table Design
 Number
 G
 Query
-|
 09
 0
-$-~%9 BS
 Conditional Format as
 Formatting v
 &
 0x1110
-By
-Table ~
 Styles
-4
 Cell
 Styles v
-Colin O'Flynn ‘o) e@ Ff - ia) [|
 | Acomments |
 Insert Delete Format ~ Sort & Find & Analyze
-. <i © ~ Filtery Select
 Data
 Cells Editing Analysis
-QBITB  0x3,(0x209)
-JR ZHERE
 NoP
-LDB A,(0x208)
-LDB (0x1120),0x0
-BITB Ox2,(0x209)
 JR Z,HERE2
 NoP
-LDB A,(0x208)
-LDB (0x1120),0x0
-BITB 0x4,(0x209)
 JR Z,HERE3
 NoP
-LDB
 LDB
 HERE
 HERE2
 A,(0x208)
 (0x1120),0x0
-LDB A,(0x1120)
 LOB CA
 EXTZW BC
-LDAL XDE,0x1110
-LDB A,(0x208)
-LDB  (XDE+BC),A
-CPB (0x1120),0x0C
 RET ULE
-LDB (0x1120),0x0
 CALR OxOFE9S6F
-RET ’
 42°”
-—& -——#—- + _ 100%
 HERE3
 C@ Display Settings 1332]
 ```
@@ -1038,18 +948,16 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OK, Just
 In [11]: Dl resp = rcp.cmd_reaq
 In [12]: Dl resp
-orlal: IIIIIII y SPI
-rorf YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 YYYYYYYYY
 In [7]; PW bl=t
 #bL. cmd
-#bL. cma
 bl.cmd
 Read:
 Write:
@@ -1063,16 +971,6 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn. 45
 46
 
 RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Samsung Parts Department
-~
-(uivn N3A0 XSI
-eee ee, ORNL ee
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
-```
 
 ## Slide 45
 
@@ -1146,11 +1044,11 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patched Display Logic
-) =
 Start/set
 Casserole Chicken
 Nuggets
@@ -1161,7 +1059,6 @@ Warming Custom
 Cookin T
 Drawer Cook 9 imer
 Time On/O# Delay Start
-RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 ```
 
 ## Slide 52
@@ -1188,7 +1085,8 @@ RECON Montreal - June 9, 2023. Presented by Colin O'Flynn.
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Set 375F, Cold Start, Load (Shepherds Pie)

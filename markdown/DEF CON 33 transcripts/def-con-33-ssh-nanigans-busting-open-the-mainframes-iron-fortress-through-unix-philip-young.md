@@ -12,7 +12,7 @@ duration_seconds: 2779
 words: 7912
 text_chars: 41930
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # SSH-nanigans - Busting Open the Mainframes Iron Fortress through Unix

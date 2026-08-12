@@ -4,17 +4,21 @@ speakers: ["Mickey Shkatov", "Jesse Michael"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Mickey Shkatov, Jesse Michael - Bring Your Own Root Of Trust - BYOROT V1.pdf"
 pages: 25
 sha256: "1b669b5ac295ac9fba18ecdbf3f8808e1ded7fc8fe13909784e93213b859be9e"
-text_chars: 5876
+text_chars: 6024
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:25:19Z"
+converted_at: "2026-08-12T06:39:17Z"
 ---
 # Bring Your Own Root Of Trust
 
@@ -22,125 +26,126 @@ converted_at: "2026-08-12T00:25:19Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Mickey Shkatov, Jesse Michael - Bring Your Own Root Of Trust - BYOROT V1.pdf` (25 pages)
 
+
 ## Slide 1
 
 # **`./DC34 FEED_YOUR_COMMUNITY` BYOROT Bring Your Own Root Of Trust**
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 2
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 /whoami
 
 - Mickey Shkatov - Jesse Michael
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 3
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background • Roots of trust - concept and history
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 4
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 Background • Past research – I2C , LPC, Sniffing, etc.
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 5
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background
 
 • TPM Features
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 6
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background
 
 ### • TPM SPI is fast
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 7
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background • This is not about bitlocker keys!
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 8
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background
 
@@ -152,73 +157,73 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - EROT
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 9
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Background
 
 ### • Real example – NVIDIA EROT
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 10
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
 • Why? • No one has messed with the SPI TPM like this yet, the bus is too damn fast!
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 11
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
 • Sniffing SPI is not new, but can we make a fake TPM?
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 12
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -228,19 +233,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - • Can we interpose the SPI and and use signature based byte seuqneces?
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 13
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -252,19 +257,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - Must be done in windows using vscode using HW that is cheap and easily accessible
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 14
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -278,19 +283,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
    - Claude wins
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 15
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -304,19 +309,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - • Custom headers and solder, solder, solder!
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 16
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -332,19 +337,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
    - ESP32
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 17
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -362,19 +367,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
    - Will work with APIO in vscode
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 18
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## FPGA coding
 
@@ -382,19 +387,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - • Verilog / HDL / VHDL
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 19
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -404,19 +409,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - • RAM prices are increasing as we speak!
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 20
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## BYOROT
 
@@ -430,35 +435,35 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - AI Infra compromise – if a fake TPM would cost you even $10K to make but the server costs $500K
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 21
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## DEMO
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 22
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 - What does this mean? • Breaking assumptions of hardware immutability
 
@@ -472,19 +477,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
    - Ease that anyone can do this in.
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 23
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## What does this mean?
 
@@ -492,19 +497,19 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 • Using AI the bar has been lowered to attack more complex hardware by less skilled attackers.
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 24
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Conclusion
 
@@ -514,26 +519,26 @@ L A S V E G A S C O N V E N T I O N C E N T E R
 
 - • Go forth and hack with fun!
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```
 
 ## Slide 25
 
-```
+\```
 ./DC34 FEED_YOUR_COMMUNITY
-```
+\```
 
 ## Questions?
 
-```
+\```
 AUG 06–09 // 2026
-```
+\```
 
-```
+\```
 L A S V E G A S C O N V E N T I O N C E N T E R
-```
+\```

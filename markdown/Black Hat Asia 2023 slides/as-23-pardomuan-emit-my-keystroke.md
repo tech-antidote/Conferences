@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Pardomuan-Emit-My-Keystroke.pdf"
 pages: 41
 sha256: "a652a55ff2c81716580e395336f8ed3306961d833b4e9612d67a49cf25ce1903"
-text_chars: 19721
-ocr_pages: 5
+text_chars: 19073
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:24Z"
+converted_at: "2026-08-12T03:48:38Z"
 ---
 # Emit My Keystroke
 
 **Speakers:** Pardomuan  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Pardomuan-Emit-My-Keystroke.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -78,15 +84,6 @@ Security Researcher & Lecturer Specialist in Cybersecurity
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat Backstage Story Be os
-ASIA 20253
-One ordinary day, you’re in a Zoom meeting with colleagues.
-Unmute tart Video Security —_—Participants
-```
-
 ## Slide 5
 
 # Backstage Story
@@ -95,29 +92,22 @@ Unmute tart Video Security —_—Participants
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
 You guys are doing your stuffs, discussing back and forth.
 Backstage Story
-—~
 Chrisando Ryan Pardomuan @Y 4 - OQ xX
-ls Harga docx v
 jt Draw Design Layout References Mailings Review View Help
-Calvi Gow) 2 A A Aare Ap He iS ~ EYEE ALG finn 606 24
 Normal No Spacing Heading 1 >ading Replace an -
-BIUvax,x Ary 4- Ary [B/E S=1= ay . = — Dictate Editor Reuse
-~ a ~ [} Select ¥ Files
 Font & Paragraph B Styles 8 Editing Voice Editor Reuse Files ¥
 Lalap 5 320 1.600
 Serundeng 5 100 500
 Total Modal: 63.435
 Total Jual: 96.000
 Total Untung: 32.565
-Total kerlu
-1B  f¥ Accessibility: Good to go ‘Di Focus fe - iu + 100%
+1B f¥ Accessibility: Good to go ‘Di Focus fe - iu + 100%
 A Comments | | Editing »
 ```
 
@@ -223,12 +213,10 @@ Create a technique to extract **typing key-delay** out of a screenrecorded video
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2023
-tin
 The Idea, Originally «
 We call this technique, Camstroke.
 Camstroke | Private
@@ -264,15 +252,12 @@ Keystroke Inference Attack
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ny
-2)
 blackhat Our Approach, Originally :
-ASIA 2023
 Victim
-— IK Keylra
 Legit
 Authentication Keystroke Dynamics
 Authentication
@@ -283,8 +268,6 @@ Extract Character Create a synthetic typing
 from Screen- ._+————>} sequence from victim's
 recorded Video typing pattern
 Attacker
-: '412ms '67ms | '
-Beeeeese 8 Beeeeee 8 tbeowwne
 ```
 
 ## Slide 16
@@ -435,46 +418,64 @@ The higher the number of KUnits (frame) are inside a KeystrokePoint (group), we 
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-biaekhat Attack in Action ©
-ASIA 20253
-a
-@2-CS . Default (python) U1
-[INFO] Storing KUnit to Last KeystrokePoint with ID: 376c52e3-@e8e-4aed-b42f-ead
-ecfabf75Sb
+Attack in Action
+
+[Microsoft Word — S-002 — Saving...]
+AutoSave  Home  Insert  Draw  Design  Layout  References  Mailings  Review  View  Shape Format  Tell me
+Calibri (Bo... 12   AaBbCcDdEe Normal | AaBbCcDdEe No Spacing | AaBbCcDd Heading 1
+
+                       Project Camstroke
+                       Data Collection
+
+Subject: S-002
+Gender: Male
+Age: 22
+
+Zoom: 150%
+Font: Calibri, 12pt
+Video: MacBook Pro, 1440x900, 30FPS
+
+Predetermined Sentence Phase
+Text to type:
+        hi my name is <name> and i want to go and change the world
+
+hi my name is a[ndo] |
+
+[Terminal — Default (python)]
+[INFO] Storing KUnit to Last KeystrokePoint with ID: 376c52e3-0e8e-4aed-b42f-ead
+ccfabf75b
 [INFO] Current KUnit coordinates: (537.7887092317341, 704.2, 546.188709231734, 7
 13.2)
-CINFO] KUnit is a RIGHTMOST candidate; Updating lastseen data.
-[INFO] KUnit Shape: 84 9@
-[INFO] This KeystrokePoint has coordinates (537 .7887092317341, 704.2, 546.1887
+[INFO] KUnit is a RIGHTMOST candidate; Updating lastseen data...
+[INFO] KUnit Shape:  84 90
+[INFO] This KeystrokePoint has coordinates:  (537.7887092317341, 704.2, 546.1887
 09231734, 713.2)
 [INFO] Detected Keystroke: o
-Frame: 100
-[INFO] White composition in Background @.9337941176470588
-XY Ratio (@.07291221127487131, 1.0) (1.065533774809484, 1.0)
-26 .50334491338435 363.4966550866157 180.55227454110138 169.4
-19 409 ® 350
-XY Ratio (@.2706543608548607, 1.0) (1.01818 539596, 1.0
-2545889865
-Predetermined Sentence Phase
-ext to type
-@ 83.07152911542451 306.9284708845755 176.5770199573726 173.4
-61 451 @ 350
-XY Ratio (0.53080 38
-135 .23152319919404 254.768
-100 498 @ 350
-[INFO] There are 3 Keystroke Candidates Final Keystroke Image
-C'CANDIDATE', ‘CANDIDATE’, "RIGHTMOST" ]
-[INFO] KUnit Image Shape: (350, 390)
-[INFO] Frame ID: 100
-»)
-2980042627.
-, 1.0) (1.1321980158994676, 1.0)
-47680080598 185.8501427212179 164.14985727878212
-PC! smc ust, Sampic_cypc,
-‘camstroke': conda' ~NOA ® You. 2 months aco 42n93.Col72 Spaces:4 UTF-8 LF Pvthon
+Frame:  100
+[INFO] White composition in Background:  0.9337941176470588
+XY Ratio  (0.07291221127487131, 1.0) (1.065533774809484, 1.0)
+26.50334491338435 363.4966550866157 180.55227454110138 169.44772545889865
+19 409 0 350
+XY Ratio  (0.2706543608548607, 1.0) (1.0181869779539596, 1.0)
+83.07152911542451 306.9284708845755 176.5770199573726 173.4229800426274
+61 451 0 350
+XY Ratio  (0.5308016317298414, 1.0) (1.1321980158994676, 1.0)
+135.23152319919404 254.76847680080598 185.8501427212179 164.14985727878212
+100 490 0 350
+[INFO] There are 3 Keystroke Candidates
+['CANDIDATE', 'CANDIDATE', 'RIGHTMOST']
+[INFO] KUnit Image Shape:  (350, 390)
+[INFO] Frame ID:  100
+
+[Panel] Isolated Bounding Box (IBB) Frame       (shows: ndo| )
+[Panel] Convexity Defects                       (letter 'd' with red/green defect markers)
+[Panel] Final Keystroke Image                   (letter 'o')
+
+[Status bar] typer-engine*   Python 3.7.9 64-bit ('camstroke': conda)   ⊗ 0  ⚠ 3        You, 2 months ago   Ln 93, Col 72   Spaces: 4   UTF-8   LF   Python
 ```
 
 ## Slide 25

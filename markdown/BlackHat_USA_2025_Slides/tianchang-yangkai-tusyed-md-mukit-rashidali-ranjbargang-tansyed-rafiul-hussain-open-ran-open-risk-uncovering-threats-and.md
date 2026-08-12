@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Tianchang Yang&Kai Tu&Syed Md Mukit Rashid&Ali Ranjbar&Gang Tan&Syed Rafiul Hussain_Open RAN, Open Risk Uncovering Threats and Exposing Vulnerabilities in Next-Gen Cellular RAN.pdf"
 pages: 64
 sha256: "4b350d04997e4d25c1819bb0f3290ac9101978d2c99abfac87178ab801a52718"
-text_chars: 23802
-ocr_pages: 15
+text_chars: 22442
+ocr_pages: 12
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:01:55Z"
+converted_at: "2026-08-12T05:23:16Z"
 ---
 # Open RAN, Open Risk Uncovering Threats and Exposing Vulnerabilities in Next-Gen Cellular RAN
 
 **Speakers:** Tianchang Yang, Kai Tu, Syed Md Mukit Rashid, Ali Ranjbar, Gang Tan, Syed Rafiul Hussain  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Tianchang Yang&Kai Tu&Syed Md Mukit Rashid&Ali Ranjbar&Gang Tan&Syed Rafiul Hussain_Open RAN, Open Risk Uncovering Threats and Exposing Vulnerabilities in Next-Gen Cellular RAN.pdf` (64 pages)
+
 
 ## Slide 1
 
@@ -40,9 +45,9 @@ Tianchang Yang
 
 Research Assistant, The Pennsylvania State University Mobile network security, resiliency, and robustness: 5G, Open RAN, baseband
 
-```
+\```
 tianchang-yang.github.io
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -54,9 +59,9 @@ tianchang-yang.github.io
 
 Research Assistant, The Pennsylvania State University Mobile network and Device Security, baseband security, Automatic Vulnerability Discovery
 
-```
+\```
 hellotkk.github.io
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -316,11 +321,10 @@ Attacks on 5G Infrastructure from Users’ Devices www.trendmicro.com/en_us/rese
 
 RRC Signaling Storm Detection in O-RAN arxiv.org/abs/2504.15738
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 1V > cs > arXiv:2504.15738
 Computer Science > Cryptography and Security
 (Submitted on 22 Apr 2025]
@@ -339,7 +343,6 @@ Comments: Accepted to IEEE ISCC 2025
 Subjects: Cryptography and Security (cs.CR); Networking and Internet Architecture (cs.NI)
 Cite as: arxiv:2504.15738 [es.CR]
 (or arXiv:2504.1573 8v1 [es.CR] for this version)
-https://doi.org/10.48550/arxiv.2504.15738 e
 RRC Signaling Storm Detection in O-RAN
 arxiv.org/abs/2504.15738
 ```
@@ -369,22 +372,6 @@ O-CU O-DU O-RU
 Malicious User Supply Chain Risk
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-O-RAN Vulnerability Sources
-y-2)
-.S
-&
-&
-.
-(Che
-Malicious User Supply Chain Risk
-```
 
 ## Slide 25
 
@@ -421,24 +408,6 @@ Supply Chain Risk
 Heterogeneity of RAN Nodes
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-€Q
-black hat
-BRIEFINGS
-O-RAN Vulnerability Sources
-v-2)
-.S
-&
-&
-.
-(Che
-Malicious User Supply Chain Risk
-Heterogeneity of
-RAN Nodes
-```
 
 ## Slide 28
 
@@ -784,10 +753,10 @@ Test Input
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS U, \ y |
 Challenge 1: Generating Targeted and Meaningful Test Inputs
 var requestID int32
 for _, v := range request.GetProtocolles() { Target xApp
@@ -796,7 +765,6 @@ requestID = v.GetValue().GetRicrequestId().GetRicRequestorId()
 break
 } Internal Routing
 }
-streamID := stream. ID(requestID)
 stream, ok := c.streams.Get(streamID)
 return errors.NewNotFound("stream %s not found", streamID)
 }
@@ -854,12 +822,11 @@ Test Input
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-QQ
 Challenge 2: Enumerate Appropriate Constraints
-Dependency (9) Benign (9)
 Analysis RANs A
 Pp .
 Source (Preprocessing) Instrumented
@@ -867,7 +834,6 @@ Code Code ) RIC Deployment |Operation Trace
 = Instrumentor | af at a Analyzer
 ntry/Exit Points Component
 | Initial Corpus ependency
-v
 ```
 
 ## Slide 47
@@ -893,14 +859,13 @@ Input
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
 blackhat
-BRIEFINGS
 GitHub v
-B® Goi XML
 Files
 onosproject/onos-e2t
 master
@@ -908,7 +873,6 @@ ignore files/dirs comma separated
 Lines Blanks
 330 661435 94163
 Protocol Buffers | Markdown H YAML
-Shell H Dockerfile HM Makefile = Plain Text
 Comments
 76801
 Lines of Code
@@ -920,26 +884,22 @@ Lines of Code
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Onos—e2t % grep -Er -—-exclude-dir={test,api} \
-'A\s*func\st+(\( [*\) ]*\)\sx*) ? [a-zA-Z_] [a-zA-Z0-9_]*\sx*\(' \
 ```
 
 ## Slide 50
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 onos-—e2t % grep —Er |--exclude-dir={test,api}| \
-'A\ sxfunc\st(\( [*\) ]*\)\sx*) ? [a-zA-Z_] [a
 6152
 ```
 
@@ -969,10 +929,10 @@ onos-—e2t % grep —Er |--exclude-dir={test,api}| \
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-,
 How to Discern Generic/Validating Functions? .
 AssociateRanToE2THandlerImpl(data models.RanE2tMap) error {
 DisassociateRanToE2THandlerImpl(data models.RanE2tMap) error {
@@ -1016,21 +976,20 @@ NewRmrPush() *RmrPush {
 (c *RmrPush) send_data(ep *rtmgr.Endpoint, policies *[]string, call_id int) bool {
 (c *RmrPush) CheckEndpoint(payload string) (ep *rtmgr.Endpoint) {
 (c *RmrPush) CreateEndpoint(rmrsrc string) (ep *string, whid int) {
-(c uRmrPiich) DictrihiuteToabni(nnliciec «f[letring. en ctringn. whid int) error Jf
 ```
 
 ## Slide 53
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 295 func CreateNewE2tHandleHandlerImpl(data *models.E2tData) error { & w httprestful.go pkg/nbi 3
 329
 330 return errors.New("Error while adding new E2T " + *data.E2TAddre: func Selita ise eee
 331 err := validateE2TAddressRANLis!
-332} err := validateE2TAddressRANLis'
 es VY httprestful_test.go pkg/nbi 2
 334 func ValidateE2TAddressRANListData(assRanE2tData models.RanE2tMap) e : -
 335 err := validateE2TAddressRANLisi
@@ -1041,7 +1000,6 @@ client.go /usr/local/go/src/net/http - References (5) x
 478 // To make a request with custom headers, use [NewRequest] and [Cliq © httpgetter.go pkg/nbi 1
 479 // myClient.Get(xmurl)
 480 // To make a request with a specified context.Context, use [NewReque .
-481 // and Client.Do. ¥ Hite 2 pkg/nbi 2
 482 func (c *Client) Get (url string) (resp *Response, err error) { myClient.Get(xmurl)
 483 req, err := NewRequest("GET", url, nil) a myClient.Get(e2murl)
 484 if err != nil { Y client.go /usr/local/go/src/net...(2
@@ -1049,14 +1007,14 @@ client.go /usr/local/go/src/net/http - References (5) x
 486 } DefaultClient.Get (url)
 487 return c.Do(req) Client) Get(url string) (resp *Resp
 488 }
-Aaa
 ```
 
 ## Slide 54
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VY httpgetter.go pkg/nbi
@@ -1065,7 +1023,6 @@ Y httprestful.go pkg/nbi
 myClient.Get(xmurl)
 myClient.Get(e2murl)
 Y client.go /usr/local/go/src/net...\ 2
-DefaultClient.Get (url)
 Client) Get(url string) (resp *Resy
 ```
 
@@ -1075,11 +1032,10 @@ Client) Get(url string) (resp *Resy
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Architecture
 Static
 Analysis
@@ -1092,22 +1048,18 @@ Constraints
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 Architecture
 epen ency (®) Benign () J Runtime Analysis
 Analysis RIC :
 Pp ' RANs Deploymen (Testing)
 Source (Preprocessing) Instrumented sa ea Ge
 Code RIC Deployment Operation Trace a ee .
-a | ey) cy) C- Monitor
-a |
 Component E2T Crashing
 dency Inputs &
-es, Passa) 2222 snes eas of Oe i Crash
 Static Path Message Generated Input Test (¢ )) Input i Logs
 Analysis Constraints Mutator Test Input Scheduler Input Sender »
 Testing Input ASN.1 Message Fitness Feedback L. Code Coverage ; dy
@@ -1158,14 +1110,13 @@ O-CU O-DU O-RU
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ifiv + jo) o
 Foot@tianchang-Ubuntu: /home/tianchang#
 Tilix: Default
 root@tianchang-Ubuntu: /home/tianchang/Desktop/proj/daikon/osc/sim-e
-Ht
 Tianchang Yang
 Benign RAN
 root@tianchang-Ubuntu: /home/tianchang/Desktop/proj/daikon/osc/sim-e2-interface/e2sinm

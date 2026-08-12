@@ -8,13 +8,17 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/t0xodile&mastersplinter_CRLF-Powered Desync Attacks Beheading HTTP Streams.pdf"
 pages: 111
 sha256: "67b82f72047daa6fb30138d432e747ce62909d7afe94b6ebe1449e4f75cb099d"
-text_chars: 40703
+text_chars: 40632
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:18:34Z"
+converted_at: "2026-08-12T05:49:05Z"
 ---
 # CRLF-Powered Desync Attacks Beheading HTTP Streams
 
@@ -22,15 +26,16 @@ converted_at: "2026-08-11T23:18:34Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/t0xodile&mastersplinter_CRLF-Powered Desync Attacks Beheading HTTP Streams.pdf` (111 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CRLF-Powered [xe
 Desync Attacks
 Beheading HTTP Streams
-GET / HYTP7T il
 Host: victim.com
 Tom Stacey & Tobia Righi
 @tOxodile / @m4st3rsplint3r
@@ -440,7 +445,8 @@ HTTP/1.1 200 OK ACAO: x.ecom {”card_num”:”...”} HTTP/1.1 200 OK ACAO: y.
 
 **CRLF-Powered Desync Attacks: Beheading HTTP Streams**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 p— Claude Code v2.1.177 )
@@ -448,22 +454,12 @@ Tips for getting started
 Welcome back splinter! Run /init to create a CLAUDE.md file with instructions for Claude
 Note: You have launched claude in your home directory. For the be
 even with “ANTHRO
-Yn
-c 2
 ‘w> key in ~“/copy” to write the f
 cused sel
 Opus 4.8 (1M context) * Claude Max
-*/plan-
 tobia@turtlesec.io's Organization
 /home/splinter
 * Crunched for 22s
-PELOLr SROLE CUES © c=
-e)
-K
-ie)
-.Q
-1)
-a
 ct
 n
 ```

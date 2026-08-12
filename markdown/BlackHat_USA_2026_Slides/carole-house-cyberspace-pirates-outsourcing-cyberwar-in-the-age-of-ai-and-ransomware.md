@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Carole House_Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware.pdf"
 pages: 18
 sha256: "aa5f7162c31a89007def2808e5d1c90ac40931b4a8dcb8bfe63de98dfe65839d"
-text_chars: 11867
+text_chars: 11024
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 78.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:31Z"
+converted_at: "2026-08-12T05:29:39Z"
 ---
 # Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware
 
 **Speakers:** Carole House  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Carole House_Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware.pdf` (18 pages)
+
 
 ## Slide 1
 
@@ -36,27 +41,15 @@ converted_at: "2026-08-11T23:06:31Z"
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HACKING THE HACKERS
 | STARLINK TERMINAL
 2 UPLINK ACTIVE
-i | __ COMMAND & CONTROL NODES » i a /. x
-LIVE NETWORK TRACE = ' ‘ COR * ~s — a,
 185.220.101.8
-4
-r
-x ,
-& Ox7cB4d9E6FA2b(
-~ belghlSwSn2y7x3
-PACKET CAPTURE % . - .
-ACTIVE SESSIONS - Re RE ry >
-Sse aULNtee sense’ eee , Ld rd , BTC: * 1,246.32
 ETH 3,621.17
-oe 8088 ae 1862.10.34 : ~ 2 { : 4
-| * ‘€ USDT:  2.183,672.44
-, : Panda
 TOTAL U $15,780,392
 ```
 
@@ -228,33 +221,20 @@ _AI removes key constraints:_
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-f f onarTINe ATTACK SCRIPTS |:
-O =|
-RESPONSIBILI i , eee S| MTN PROGRESS
-SCRIPT_04321.AI : é
 in| > TARGET_SCAN();
 ENUMERATE () ;
-EXPLOIT();
 PERSIST();
 EXFILTRATE();
 COVER_TRACKS();
-REPORT (); &
-REPEAT (10000) ; ae |}
-imi
-a a
-| TARGETS ACQUIRED * Sad Pali
 v
 J
-—
-eit.
 Al removes key
-constraints. , , oe
 ° Expertise threshold
 * Time to access
-E=
 »« Human oversight
 ```
 
@@ -360,25 +340,19 @@ carole@penumbrastrategies.com
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you
-I PRIMARY TARGET: '. * i a
 HIGH VALUE. HEAVILY ARMORED. [toa wir Se
-STATE ASSET. 2 “ie . /
 ‘IGNORE.
 SECONDARY TARGET: ee
 SOFT. UNESCORTED. ..
 HIGH PAYLOAD. ae
 FINANCIAL RETURN: . ee a
 MAXIMUM. B
-en Sas SAINTE IVE
-—— OY) PENUMEBPUN
-WHY CHASE : 4 oo
-VA WARSHIP... «
 ‘ WHEN THE MONEY
-ee OP FEES A carole@penumbrastrategies.com
 black hat
 2026 17
 ```

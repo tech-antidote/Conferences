@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alon Leviev&Netanel Ben Simon&Yair Netzer&Amit Dori_BitUnlocker Leveraging Windows Recovery to Extract BitLocker Secrets.pdf"
 pages: 98
 sha256: "8ad011ab5e74902e34c122d8e9e319bbc5cfd947da50c86215f4ec68ff7f0173"
-text_chars: 19273
-ocr_pages: 12
+text_chars: 18805
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:49:49Z"
+converted_at: "2026-08-12T05:04:34Z"
 ---
 # BitUnlocker Leveraging Windows Recovery to Extract BitLocker Secrets
 
 **Speakers:** Alon Leviev, Netanel Ben Simon, Yair Netzer, Amit Dori  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alon Leviev&Netanel Ben Simon&Yair Netzer&Amit Dori_BitUnlocker Leveraging Windows Recovery to Extract BitLocker Secrets.pdf` (98 pages)
+
 
 ## Slide 1
 
@@ -154,15 +159,14 @@ Recovery OS
 
 • The customizations include Startup Repair, System Reset, System Restore etc.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WinRE Architecture — Recovery OS Customizations
 ¢ The customizations include Startup Repair, System Reset, System Restore etc.
 Choose an option
 Continue
-Bait and con
-a tinue to Windows 1 (!)
 ```
 
 ## Slide 15
@@ -269,7 +273,8 @@ User launches risky recovery tool
 
 **WinRE Design Change #3 – Volume Re-Lock**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WinRE Design Change #3 — Volume Re-Lock
@@ -288,7 +293,6 @@ Percen Encrypted: Unknown%
 Method: XTS-AES 128
 Status: Unknown
 Locked
-Unknown
 Disabled
 ```
 
@@ -391,7 +395,8 @@ WinRE.wim
 
 1) Allocate the SDI + WIM buffer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RAM Disk Load // Allocate memory for both SDI and WIM
@@ -418,7 +423,8 @@ WimAddress = RamDiskImageBuffer + SdiStrust->WimOffset;
 
 2) Load the SDI into the allocated buffer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RAM Disk Load // Allocate memory for both SDI and WIM
@@ -1000,7 +1006,8 @@ FindFirstVolume and FindNextVolume Remarks Section from MSDN
 
 **Typical Volume Order**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Typical Volume Order
@@ -1094,12 +1101,12 @@ Find a WinRE flow that:
 
 ## **Potential Candidate – Push Button Reset (PBR) Push Button Reset (PBR) - Windows’s System Reset tool**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Potential Candidate — Push Button Reset (PBR)
 Push Button Reset (PBR) - Windows’'s System Reset tool
-’
 Resetting this PC 2%
 ```
 
@@ -1153,25 +1160,17 @@ OS Volume
 
 ## Slide 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-—
 Washington G) Daity Wonder
-ta oe °F Po Pm Sri Lanka’s Cloud-Kissed
 — weed — Nuwara Eliya: A Drone
-2 as watch jiya: ss
 See full forecast Watch more videos like this
-Es
-iS
 Singapore quiz
 se sl Singapore is located on
 = which continent?
-GC wade
 Take the quiz
-4h
-ai
-S| Si eee peg =
 ```
 
 ## Slide 94

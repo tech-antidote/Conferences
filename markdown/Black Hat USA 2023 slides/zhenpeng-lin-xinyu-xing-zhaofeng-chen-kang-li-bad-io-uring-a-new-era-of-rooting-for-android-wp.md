@@ -1,5 +1,5 @@
 ---
-title: "Bad io uring A New Era of Rooting for Android"
+title: "Bad io_uring: New Attack Surface and New Exploit Technique to Rooting Android"
 speakers: ["Zhenpeng Lin", "Xinyu Xing", "Zhaofeng Chen", "Kang Li"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android_wp.pdf"
 pages: 11
 sha256: "aa30061c56c1de2c0b68687662e8d9d45ddcd4d33218edc49e06a7641e292a81"
-text_chars: 20302
+text_chars: 20350
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The whitepaper's own title differs from the talk's."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:58:29Z"
+converted_at: "2026-08-12T04:26:20Z"
 ---
-# Bad io uring A New Era of Rooting for Android
+# Bad io_uring: New Attack Surface and New Exploit Technique to Rooting Android
 
 **Speakers:** Zhenpeng Lin, Xinyu Xing, Zhaofeng Chen, Kang Li  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zhenpeng Lin & Xinyu Xing & Zhaofeng Chen & Kang Li_Bad io_uring A New Era of Rooting for Android_wp.pdf` (11 pages)
+
 
 ## Slide 1
 
@@ -66,11 +72,11 @@ In this section, we briefly describe the root cause and the memory corruption ca
 
 The following layouts the structure of _io_  uring_  task_ , which is an object storing task-specific data for each kernel thread. Normally, the identity field points to the nested structure _ identity_ .
 
-```
+\```
 structio_uring_task{
-```
+\```
 
-```
+\```
 /*submissionside*/
 structxarrayxa;
 structwait_queue_headwait;
@@ -81,18 +87,18 @@ structio_identity*identity;
 atomic_tin_idle;
 boolsqpoll;
 };
-```
+\```
 
-```
+\```
 staticinlinevoidio_req_init_async(structio_kiocb*req)
 {
-```
+\```
 
 2
 
 ## Slide 3
 
-```
+\```
 structio_uring_task*tctx=current->io_uring;
 ...
 /*Grabarefifthisisn'tourstaticidentity*/
@@ -100,23 +106,23 @@ req->work.identity=tctx->identity;[1]
 if(tctx->identity!=&tctx->__identity)[2]
 refcount_inc(&req->work.identity->count);[3]
 }
-```
+\```
 
-```
+\```
 staticvoidio_put_identity(structio_uring_task*tctx,structio_kiocb*req)
 {
 if(req->work.identity==&tctx->__identity)
 return;
-```
+\```
 
-```
+\```
 if(refcount_dec_and_test(&req->work.identity->count))[4]
 kfree(req->work.identity);[5]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 The above shows the function of initializing and freeing the _identity_ . Specifically, if the asynchronous request is from the current task, the kernel does nothing. But if it is from a different task, the kernel will increase the reference count, meaning that the identity is allocated from an object. Looking at the _io_  put_  identity_ function, the kernel examines the _identity_ with the current task to determine if it belongs to itself. If not, a reference will be decreased.
 
@@ -178,37 +184,37 @@ As we will describe below, there is no limitation for spraying pages in the Linu
 
 The page spray technique requires allocating pages that are shared with the slab allocator. Through manual analysis, we found that there are some APIs accessible in the Android kernel without the limitation of allocation, as such, we could implement the page spray.
 
-```
+\```
 staticvoid*io_mem_alloc(size_tsize)
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 gfp_tgfp_flags=GFP_KERNEL|__GFP_ZERO|__GFP_NOWARN|
 __GFP_COMP|__GFP_NORETRY;
-```
+\```
 
-```
+\```
 return(void*)__get_free_pages(gfp_flags,get_order(size));
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 One API function we manually found is in the _io_  uring_ subsystem. The _io_  uring_ has a ring buffer shared between userspace and kernel space. The ring buffer is allocated through the buddy allocator to obtain kernel pages (function _io_  mem_  alloc_ above). As a shared memory, userspace could directly modify the page content, this means of the page is overlapped with the kernel object, we could tamper the kernel object directly from the userspace. In addition, users can control the size of the page to reclaim the freed slab page as long as the size does not exceed the system memory limit.
 
 ## **`static ssize_t`**
 
-```
+\```
 pipe_write(structkiocb*iocb,structiov_iter*from)
 {
-```
+\```
 
-```
+\```
 if(!page){
 page=alloc_page(GFP_HIGHUSER|__GFP_ACCOUNT);
 if(unlikely(!page)){
@@ -217,11 +223,11 @@ break;
 }
 pipe->tmp_page=page;
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 Another API function we found is in the _pipe_ subsystem. The page allocated is to hold to buffer written to the pipe. By writing crafted data to the pipe, we could control the content stored on the memory page. Besides, the page could
 
@@ -247,18 +253,18 @@ In step (a), we allocate an object called _pipe_  buffer_ in the same slab of th
 
 the slab are freed. Later on, we free the other objects on the slab and keep the _pipe_  buffer_ intact (step c). Since the whole slab is freed, the memory page for the page will be marked as freed as well. As such, the pointer to the _pipe_  buffer_ becomes a dangling pointer to a freed memory, as is shown is step (d). With the help of the page spray technique, now we could reclaim the freed slab page and overwrite the _pipe_  buffer_ object in step (e).
 
-```
+\```
 structpipe_buffer{
 structpage*page;
 unsignedintoffset,len;
 conststructpipe_buf_operations*ops;
 unsignedintflags;
 unsignedlongprivate;
-```
+\```
 
-```
+\```
 };
-```
+\```
 
 ## _5.1. Why pipe_buffer_
 
@@ -282,13 +288,13 @@ KNOX protects critical properties in read-only memory. Separating from normal me
 
 Since our goal is to escalate privilege, we need to overwrite the cred object. To prevent attackers from forging cred, KNOX validates the cred through LSM hooks. The function _security_  integrity_  current_ below shows how this is is done. Specifically, it checks if the cred is in the protected memory region, and if the mapping dependency is correct. If anything is broken or does not match the record, the kernel will panic to prevent attacks.
 
-```
+\```
 intsecurity_integrity_current(void)
 {
 conststructcred*cur_cred=current_cred();
-```
+\```
 
-```
+\```
 rcu_read_lock();
 if(kdp_enable&&
 (is_kdp_invalid_cred_sp((u64)cur_cred,(u64)cur_cred->security)
@@ -303,36 +309,36 @@ panic("KDPCREDPROTECTIONVIOLATION\n");
 rcu_read_unlock();
 return0;
 }
-```
+\```
 
-```
+\```
 staticinlineboolis_kdp_invalid_cred_sp(u64cred,u64sec_ptr)
 {
-```
+\```
 
-```
+\```
 structtask_security_struct*tsec=(structtask_security_struct*)sec_ptr;
-```
+\```
 
-```
+\```
 ...
 if(!is_kdp_protect_addr(cred)||
 !is_kdp_protect_addr(cred+cred_size)||
-```
+\```
 
 - `!is_kdp_protect_addr(sec_ptr) ||`
 
 - `!is_kdp_protect_addr(sec_ptr + tsec_size)) {`
 
-```
+\```
 printk(KERN_ERR,"[KDP]cred:%d,cred+sizeof(cred):%d,sp:%d,sp+sizeof(tsec):%d"
-```
+\```
 
 9
 
 ## Slide 10
 
-```
+\```
 is_kdp_protect_addr(cred),
 is_kdp_protect_addr(cred+cred_size),
 is_kdp_protect_addr(sec_ptr),
@@ -358,7 +364,7 @@ if(s&&(s==cred_jar_ro||s==tsec_jar))
 returnPROTECT_KMEM;
 return0;
 }
-```
+\```
 
 However, the way KNOX validates cred is vulnerable, so the cred is possible to be forged with sophisticated techniques. The function _is_  kdp_  protect_  addr_ shows how KNOX validates if the memory belongs to the protected region. Specifically, it checks if the memory object is coming from the slab _cred_  jar_  ro_ and _tsec_  jar_ . Because the page of the object is not protected, meaning that we could tamper the metadata of the page, we could simply change the slab cache of it to either _cred_  jar_  ro_ or _tsec_  jar_ , then we would be able to bypass the check of the function and forge a fake privileged cred for our process. With this, we can bypass KNOX without having to hijack the control flow. A more detailed analysis of Samsung’s KNOX will be presented in the talk.
 

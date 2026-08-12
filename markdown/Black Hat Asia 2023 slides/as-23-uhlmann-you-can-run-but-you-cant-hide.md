@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Uhlmann-You-Can-Run-But-You-Cant-Hide.pdf"
 pages: 20
 sha256: "7f1e4ccecf41d99c5e4f21aa3409e872eeafa3f581303317c5d823a5d4c13d26"
-text_chars: 9214
-ocr_pages: 3
+text_chars: 7769
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:34Z"
+converted_at: "2026-08-12T03:48:49Z"
 ---
 # You Can Run But You Cant Hide
 
 **Speakers:** Uhlmann  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Uhlmann-You-Can-Run-But-You-Cant-Hide.pdf` (20 pages)
+
 
 ## Slide 1
 
@@ -29,19 +35,6 @@ You can Run, but you can’t Hide Finding the Footprints of Hidden Shellcode
 John Uhlmann @jdu2600
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat —
-ASIA @O0e3
-MAY 11-12
-BRIEFINGS
-You can Run, but you can’t Hide
-Finding the Footprints of Hidden Shelicode
-John Uhimann
-@jdu2600
-```
 
 ## Slide 2
 
@@ -141,9 +134,9 @@ Kyle Avery - Avoiding Memory Scanners: Customizing Malware to Evade YARA, PE-sie
 
 <u>https://lospi.net/security/assembly/c/cpp/developing/software/2017/03/04/gargoyle-memory-analysis-evasion.html</u>
 
-```
+\```
 VirtualProtect(pShellcode, sizeof(shellcode), PAGE_READWRITE, &OldProtect);
-```
+\```
 
 #BHASIA @BlackHatEvents
 
@@ -181,10 +174,10 @@ VirtualProtect(pShellcode, sizeof(shellcode), PAGE_READWRITE, &OldProtect);
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 ASIA 2025
 An interesting discovery
@@ -253,56 +246,57 @@ ae We may be able to use this to find DLL hollowing and gargoyle-style?
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2025
 Hunting via process behaviour summaries
-BLEW syscall Monitor - oF x
+
+[Window: ETW Syscall Monitor]
 ProtectVirtual
-4 dumpy.exe::24e1dc53939b62d8e6d7a53535 lebf2a7 1f9d617
-ProcessCreationTraits
-4 Syscalls
-dbgcore->kernelbase!OpenThread->ZwOpenThread(all, ALL_ACCESS)
-dbgcore->kernelbase!ReadProcessMemory[hooked]->ZwReadVirtualMemory(Isass)
-dbgcore->ntdll!NtOpenThread->ZwOpenThread(all, ALL_ACCESS)
-exe->kernelbase!LoadLibraryA[hooked]->ZwMapViewOfSection(dbgcore.dll)
-exe-> kemnelbase!LoadLibraryA->ZwMapViewOfSection (ktmw32.dll)
-exe->ntdlllNtOpenProcess->ZwOpenProcess(System, DUP_HANDLE)
-exe->ntdll!NtProtectVirtualMemory->ZwProtectVirtualMemory(self, ntdlllexe, EXECUTE_READ->EXECUTE_READWRITE)
-exe-> ntalllexe!NtProtectVirtualMemory[hooked]->ZwProtectVirtualMemory(self, ntdlllexe, EXECUTE_READWRITE-> EXECUTE_READ)
-ucrtbase->kernelbase!LoadLibraryExW{hooked]->ZwMapViewOSection(kernel.appcore.dll)
-4 TTPHash
-ecd0fdd31504dc1e4eae3d852370a87¢3902fd68
-4 ekko.exe::19385aad 1e6e3bf97eaeb9833d900bed9568a59a
-ProcessCreationTraits
-4 Syscalls
-exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(advapi32.dll)
-exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(msvcrt.dil)
-(
-(
-exe-> kernelbase!LoadLibraryA->ZwMapViewOfSection(rpert4.dll)
-exe-> kernelbase!LoadLibraryA->ZwMapViewOfSection(sechost.dll)
-ntdlll tp TpTimerCallback-> kernelbase! VirtualProtect->ZwProtectVirtualMemory(self, exe|ntdll!RtIpTpTimerCallback, EXECUTE_READWRITE->READWRITE)
-ntdll! tp TpTimerCallback-> kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, exe|ntdll!RtIpTpTimerCallback, READWRITE-> EXECUTE_READWRITE)
-ntdll!RtIpTpTimerCallback-> kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, UNKNOWN\ntdll!RtlpTpTimerCallback, EXECUTE_READWRITE->READWRITE)
-ntdll! tip TpTimerCallback-> kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, UNKNOWN\ntdll/RtlpTpTimerCallback, READWRITE-> EXECUTE_READWRITE)
-4 TTPHash
-081cfc3{09e29f9daa1286337246eb1 156fa7d13
-4 shellcodefluctuation.exe:1b4ec792d9a72659f1b66e17fc14d6e90b7588a2
-ProcessCreationTraits
-4 Syscalls
-exe-> kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, kernel32|exe, EXECUTE_READ->EXECUTE_READWRITE)
-exe-> kernelbaselVirtualProtect->ZwProtectVirtualMemory(self, kernel32|exe, EXECUTE_READWRITE-> EXECUTE_READ)
-4 TTPHash
-ad4bd0722391edbb4eedba904410ee2bifS6edc
-alling vulnerable driver...
-bling PPL via DKOM...
-starting UserTrace(Syscal1summariser-User-Trace)...
-sabling PPL via DKOM. «
-] flushing state to file - size = 125174 bytes
+
+4 dumpy.exe::24e1dc53939b62d8e6d7a535351ebf2a71f9d617
+  ProcessCreationTraits
+  4 Syscalls
+      dbgcore->kernelbase!OpenThread->ZwOpenThread(all, ALL_ACCESS)
+      dbgcore->kernelbase!ReadProcessMemory[hooked]->ZwReadVirtualMemory(lsass)
+      dbgcore->ntdll!NtOpenThread->ZwOpenThread(all, ALL_ACCESS)
+      exe->kernelbase!LoadLibraryA[hooked]->ZwMapViewOfSection(dbgcore.dll)
+      exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(ktmw32.dll)
+      exe->ntdll!NtOpenProcess->ZwOpenProcess(System, DUP_HANDLE)
+      exe->ntdll!NtProtectVirtualMemory->ZwProtectVirtualMemory(self, ntdll|exe, EXECUTE_READ->EXECUTE_READWRITE)
+      exe->ntdll|exe!NtProtectVirtualMemory[hooked]->ZwProtectVirtualMemory(self, ntdll|exe, EXECUTE_READWRITE->EXECUTE_READ)
+      ucrtbase->kernelbase!LoadLibraryExW[hooked]->ZwMapViewOfSection(kernel.appcore.dll)
+  4 TTPHash
+      ecd0fdd31504dc1e4eae3d852370a87c3902fd68
+4 ekko.exe::19385aad1e6e3bf97eaeb9833d900bed9568a59a
+  ProcessCreationTraits
+  4 Syscalls
+      exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(advapi32.dll)
+      exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(msvcrt.dll)
+      exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(rpcrt4.dll)
+      exe->kernelbase!LoadLibraryA->ZwMapViewOfSection(sechost.dll)
+      ntdll!RtlpTpTimerCallback->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, exe|ntdll!RtlpTpTimerCallback, EXECUTE_READWRITE->READWRITE)
+      ntdll!RtlpTpTimerCallback->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, exe|ntdll!RtlpTpTimerCallback, READWRITE->EXECUTE_READWRITE)
+      ntdll!RtlpTpTimerCallback->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, UNKNOWN|ntdll!RtlpTpTimerCallback, EXECUTE_READWRITE->READWRITE)
+      ntdll!RtlpTpTimerCallback->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, UNKNOWN|ntdll!RtlpTpTimerCallback, READWRITE->EXECUTE_READWRITE)
+  4 TTPHash
+      081cfc3f09e29f9daa1286337246eb1156fa7d13
+4 shellcodefluctuation.exe::1b4ec792d9a72659f1b66e17fc14d6e90b7588a2
+  ProcessCreationTraits
+  4 Syscalls
+      exe->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, kernel32|exe, EXECUTE_READ->EXECUTE_READWRITE)
+      exe->kernelbase!VirtualProtect->ZwProtectVirtualMemory(self, kernel32|exe, EXECUTE_READWRITE->EXECUTE_READ)
+  4 TTPHash
+      ad4bd072f2391edbb4eedba904410ee2bff56edc
+
+[Console strip below the window]
+> auditpol.exe /set /subcategory:"Token Right Adjusted Events"   [partially clipped]
+Installing vulnerable driver...
+Enabling PPL via DKOM...
+Starting UserTrace(SyscallSummariser-User-Trace)...
+Disabling PPL via DKOM...
+[*] flushing state to file - size = 125174 bytes
 ```
 
 ## Slide 16

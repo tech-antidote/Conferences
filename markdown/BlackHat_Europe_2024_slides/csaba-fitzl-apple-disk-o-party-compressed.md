@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Csaba Fitzl_Apple Disk-O Party_Compressed.pdf"
 pages: 95
 sha256: "026472de21aa09f984bed1ee08221e752948b39107680e34db8c940bb5b1ce47"
-text_chars: 20726
-ocr_pages: 65
+text_chars: 16979
+ocr_pages: 62
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:02:11Z"
+converted_at: "2026-08-12T04:57:27Z"
 ---
 # Apple Disk-O Party
 
 **Speakers:** Csaba Fitzl  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Csaba Fitzl_Apple Disk-O Party_Compressed.pdf` (95 pages)
+
 
 ## Slide 1
 
@@ -108,7 +114,8 @@ converted_at: "2026-08-12T00:02:11Z"
 
 • DA framework abstracts the MIG service
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 diskarbitrationd - MIG
@@ -139,7 +146,8 @@ simpleroutine _DAServerDiskUnclaim
 
 diskarbitrationd - mount call flow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 diskarbitrationd - mount call flow
@@ -147,11 +155,7 @@ DAServerSessionQueueRequest > DAQueueRequest
 > DAAuthorize
 checks “sandbox
 and privilege)
-DAMountWithArguments |<—_— DARequestMount ——|  DARequestDispatch
-posix_spawnmount,...)
 - permissions
-DAMountWithArgumentsC ~ (DAR leSystemMountwithAr
-allbackStogel med Unetiiiithediiar
 ```
 
 ## Slide 9
@@ -162,17 +166,16 @@ allbackStogel med Unetiiiithediiar
 
 Where is the problem?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Where is the problem?
-|
-eee  csaby — -zsh — 80x24
+eee csaby — -zsh — 80x24
 Last login: Thu Apr 7 16:08:31 on ttys@@1
 csaby@monty ~ % touch /Users/Shared/sandboxescape.txt
 ‘csaby@monty ~ % mount
 /dev/disk4sis1 on / (apfs, sealed, local, read-only, jo
-jouWna
 devfs on /dev (devfs, local, nobrowse)
 /dev/disk4s6 on /System/Volumes/VM (apfs, loc
 rowse)
@@ -184,13 +187,9 @@ nobrowse) EAN
 ofs, local, nodev, nosuid, jo
 1leG, noatime, nob
 journaled, nobrowse)
-cay, b Sireuie, nobrowse)
-\. noatime,
 aled, nobrowse)
-aed, nobrowse)
 , Nobrowse, protect)
 /dev/disk2s3
-—
 ```
 
 ## Slide 11
@@ -211,20 +210,20 @@ aed, nobrowse)
 
 CVE-2023-42838 - what goes on?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2023-42838 - what goes on?
-——_ >] DAD iskCreateFromIOMedia |——> LORegistryEntrySearchCFProperty
 add quarantine Flag mount option
-mount, /dev/disk| ——S>| b AbiskCreateFromBSDName
 ```
 
 ## Slide 14
 
 how to get a /dev/disk in Sandbox?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 how to get a /dev/disk in Sandbox?
@@ -232,7 +231,6 @@ unmount /dev/diskxsY
 using diskarbitrationd
 API
 \
-| /dev/diskxsy |
 \ is created ;
 \
 ```
@@ -253,10 +251,10 @@ call flow 1.: mount only call
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-fxn |
 xnu checks:
 - classic usec
 POSIX permissions
@@ -271,35 +269,32 @@ might be sancdboxed runs as the caller
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
 env: user
-target owner: root
 disk owner: root
-Va \
 mount
-SS
 ```
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 env: user
-IHearget owner: root
 disk owner: root
 ```
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-7 Y
-“
 OPERATION
 env: user
 IHearget owner: coot
@@ -313,20 +308,18 @@ FAIL!!! user has no rights over target
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 =
-XY
 xu checks:
 - classic user
 ; POSIX permissions
 might be sandboxed rung as root + unsandboxed runs as disk owner - MAC £ allout
-diskarbitrationedl
 CUNS AS X
 diskarbitrationd checks:
 - if calling user id == cisk owner il
-- sandbox _check
 ```
 
 ## Slide 25
@@ -335,25 +328,23 @@ diskarbitrationd checks:
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
 env: user
 target owner: root
 \< disk owner: root
-diskarbitrationedl
-Va \
 mount
-SS
 ```
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl |
 OPERATION
 env: user
 target owner: root
@@ -363,57 +354,50 @@ FALL!!! user [= root
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
 env: user
 target owner: coot
 \< disk owner: user
-diskarbitrationedl
-Va \
 mount
-SS
-fxn |
 ```
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl (
 OPERATION
 eriv: user
 target owner: root
 disk owner: user
-Va \
 mount
-SS
-fxn |
 ```
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl
 target owner: root
 disk owner: user
 ```
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl
 OPERATION
 env: user
 target owner: coot
 disk owner: user
-1
 FAIL!!! user [= root
 ```
 
@@ -423,7 +407,8 @@ FAIL!!! user [= root
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fOPERATION
@@ -432,53 +417,44 @@ target: link ->
 /tmo/ mnt
 target owner: user
 \cisk owner: user
-diskarbitrationedl
-Y N
-X
 ```
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl
 fOPERATION
 env: user
 target: link ->
-Jtmp/s mnt
 target owner: user
 isk owner: user
 ```
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl
-“4 Y
 mount -k
-\
 fOPERATION
 env: user
 target: link ->
-Jtme/ mnt
 target owner: user
 \cisk owner: user
-fxn |
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationedl
 fOPERATION
 env: user
 target: link ->
-Jtme/ mnt
 target owner: user
 isk owner: user
 FAIL!!! »nu doesn't Follow symlinks, (-k)
@@ -509,20 +485,17 @@ passed
 
 • always run as root
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2024
 @e user ID / owner / etc is not
 passed
-@
 returnValue = [FSKitDiskArbHelper DAMountUserFSVolume: fsType
-deviceName:deviceName
 mountPoint:mountpoint
 volumeName LumeName
-nountOptions:mountOptions] 3|
 @ always run as root
-eco
 Subtree: 5
 launchd
 xpeproxy
@@ -531,21 +504,18 @@ fskitd
 mount_lifs
 175 - theory
 Event Facts
-Metadata  Eventcorrelation2 Process group 2 Initiating process JSON
 Event details
 Endpoint Security message details
 + Event type: © ES_EVENT_TYPE_NOTIFY_EXEC
 Message timestamp: 2024-08-@5T15:24:43.539Z
 Initiating user: root (0)
 Process execute details
-© Start time: 2024-08-05T15:24:43.539Z
 User: root (@)
 + Process nami mount_lifs -PID: 1015 -GID: 1010
 + Process path: /sbin/mount_lifs
 + Command line:
 /sbin/mount_lifs
 rsize=524288,wsiz 5536, readahead=4, dsize=65536, actimeo=10, nodev, noowners, nosuid, noatime, fh=0
-1000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000 :/ /Users/tree/mnt
 Code signing details
 + Code signing type: Platform binary
@@ -560,7 +530,8 @@ Code signing details
 
 CVE-2024-44175 exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2024-44175 exploitation
@@ -568,13 +539,10 @@ user: root
 mountpoint:
 link -> not_ok_place
 user: root
-mount point:
 link -> not_ok_place
 user. user
-/ mounteoint;
 link -> ok_place
 user. user
-mountpoint;
 link -> ok_place
 ```
 
@@ -582,75 +550,58 @@ link -> ok_place
 
 weaponization for LPE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 mount over
 /etc/cups >
 \
-\
 drop
-‘
-“
-Some junk
-Cups-Files.conf:
 Errorlog /etc/sudoers.d/lpe
-LogFilePerm ##7
 weaponization tor LPE
-/etc/sudoers.d/lpe:
-_ oS | tstoff ALL=(ALL) NOPASSWD:ALL
-ao
 create file rN
 7 edit
-/ |
 edit
 1) /ete/sudoers.d/lpe
 2) cups-Files.conf
 /
 /
-cupsctl ———_=>=>
-cups-files.conf:
-Errorlog /etc/sudoers.d/lpe
 LogFilePerm 700
-Some junk
 ```
 
 ## Slide 43
 
 weaponization for SB escape
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 weaponization for SB escape
 mount over
 ~/Library/Preferences
 run "/bin/zsh ~/Library/Preferences/lpe.sh"
-pe-sh:
 shell script to achieve LPE
-com.apple. Terminal. plist:
 CommandString:
 /bin/zsh ~/Library/Preferences/lpe.sh
 ```
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Finder File Edit View Go Window’ Help oO Q S ThuOct3 22:49
 DAUserFSSbxLPE
 — i DAUserFSSbxLPE.zip
 2. Applicati... Desktop
-(=) Desktop TD Documents
 ® Downloads
 {} Documents Movies
 © Downloads BB Music
-fa} n00b ® Pictures
-D Public
 © iCloud Dri...
 Guest
-9eOS82s8O08eG 0860: 570 18 at
 ```
 
 ## Slide 45
@@ -663,10 +614,10 @@ Guest
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationd
 mu checks:
 - classic user
 crUunS aS X - MAC callout
@@ -674,15 +625,14 @@ might be sandboxed
 runs as root + unsandboxedl
 diskarbitrationd checks:
 - if calling user id == disk owner id
-- sandbox _check
 ```
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationd [nou eon)
 ADiskMountWithArqumentsc ommon AServerSessionQueueRequest
 realeath FURLCreateFromFileSystemRepresentation
 CFURLCreateFromFileSystemRepresentation sandbox_checkby_audit_token
@@ -695,89 +645,75 @@ PERSISTENT!!
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationd [vot]
 ADiskMountWithArqunentsCommon AServerSessionQueueRequest
 FURLCreat eFromFileSyste:
 realoath epresentation
-CFURLCreateF bunFileSystemRepresentation sandlbox_checkby_audlit token
 - removes ../ - removes ../ - removes ../
 - resolves symlink - resolves symlink
 - resolves symlink
 FINAL RESOLUTION!!
 ONLY FOR THE TIME OF
-PERSISTEMT!!
 THE PATH IS UNCHANGED ==> placing a symlink
 will cause it to fail at xnu
 ```
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-diskarbitrationd [nou eon)
 AServerSessionQueueRequest
 FURLCreateFromFileSystemRepresentation
 CFURL Qe: eFromFileSystemRepresentation sandbox_checkby_audit_token
 - removes ../ - removes ../
 - remove - resolves symlink - resolves symlink
 - resolv,
-PEMSISTENT!!
 UNDER CALLER CONTROL ==> ../ will remain till the end
 ```
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
-target: / erivate/ tme/ cir/../../../Users/erab/ Library/, Ape lication Support / com.apple. TCC
 dic -> / erivate/tme/’ 1/2/73
 esolved path: NA
 ```
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-sandbox_checkby_audit_token
 OPERATION
-target: / erivate/ tme/ cir/../../../Users/erab/ Library/, Ape lication Support / com.apple. TCC
 dic -> / erivate/tme/ 1/2/73
-esolved path: / erivate/tme/' 1/2/3/../../../ Users/erab/ Library/, Application Support / com.apple.T cc
 ```
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-sanclbox_checkby__audit_token
-OPERATION
-target: / erivate/tme/ dir/../../../Users/erab/ Library/, Ape lication Support / com.apple.TCC
-dic -> / erivate/tme/' 1/2/73
-esolvect path: vA erivate/ tmo/ Users/erab/i Libracy/ Application Support / com.apple. TCC
-```
-
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
-target: vA erivate/ ‘tmo/ dic/../../../Users/crab/ Library/ Ape lication Support / com.apple. TCC
 dir
 esolvedt path: NA
 ```
 
 ## Slide 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OPERATION
@@ -788,14 +724,14 @@ esolved path: /Users/erab/ Library/, Application Support / com.apple.TC c/
 
 ## Slide 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Terminal Shell Edit View Window Help k
 Q $$ MonJun3 8:14
 e@ OD crab — -zsh — 80x24 oO 8 Ci}
 crab@see ~ % codesign -dv --entitlements - /Applications/DADirTraverse. appl} =]
-‘ (0 AllMessages_— Errors and Faults
 Type Time Process Message
 63 App Store
 s# Automator
@@ -806,14 +742,12 @@ Books
 @ Clock
 @ Contacts
 DADirTraverse
-@ Dictionary
 FaceTime
 =) Find My
 W Font Book
 DADirTraverse
 Application - 143 KB
 Information
-A Cranfarem
 @
 ```
 
@@ -821,11 +755,11 @@ A Cranfarem
 
 the fix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 the fix
-(Cale > tod))_5( a po)
 AServerSessionQueueRequest
 FURLC reateFromFileSystemRepresentation
 sandlbox_checkby_audit_t oken
@@ -838,23 +772,19 @@ PERSISTENT!! ONLY FOR THE TIME OF CHECK! FINAL RESOLUTION!
 
 the fix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 the Tix
 diskarbitrationd
-Z x
 ! no path \
 \ resolution /
-is kDADiskMountOptionNoFollow
 set?
-(cient | a sQueueRequest
 yes
 resolve path
--o=-_o—_— —-—_=
 disallow symlink
 sandbox check . and ../ in path
-=e ee
 ```
 
 ## Slide 59
@@ -863,27 +793,22 @@ sandbox check . and ../ in path
 
 ## Slide 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 runs as X runs as the disk owner
 might be sandboxed \
-la Y
-XY
-Ss
 lassie us rmissions
-MAC calldit
-GOs...
 g user id == disk owner id
-sandbox_check
 runs as root + unsancdboxed
 storagekite chee
-- sandbox _check
 ```
 
 ## Slide 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (OPERATION
@@ -891,93 +816,80 @@ env: user
 target owner: root
 (disk owner: root
 \
-storagekitd
 diskarbitrationd
-et)
 ```
 
 ## Slide 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(OPERATION
 env: user
 target owner: root
 disk owner: root
 diskarbitrationd
-storagekitd
-et)
 ```
 
 ## Slide 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \
-storagekitd
-(OPERATION
 env: user
 target owner: coot
 disk owner: root
 diskarbitrationd
-et)
 ```
 
 ## Slide 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \
-storagekitd
 ass
-oA
-eriv: root <---//I
 target owner: root
 disk owner: root
-Pom |
-W
 ```
 
 ## Slide 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(OPERATION
 eriv: coot
 target owner: coot
-disk owner: root Trout)
 \
 diskarbitrationd
-storagekitd
 ```
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eriv: root
 > target ower: root
 disk owner: root
 \
 diskarbitrationd
-storagekitd
 ```
 
 ## Slide 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ = Terminal Shell Edit View Window Help G Me wto) Q $$ Wed Mar 27 14:39
 OD fish — -zsh — 112x35, m
 Last login: Wed Mar 27 12:36:22 on ttysee2
 fish@sonomal ~ %
-9HOS82#8OS8e4 BBO0«1790 FC 0 amt
 ```
 
 ## Slide 68
@@ -986,26 +898,21 @@ fish@sonomal ~ %
 
 ## Slide 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 runs as X runs as the disk owner
 might be sandboxed \
-la Y
-XY
-[xn |
 xnu checks:
 - classic user POSIX permissions
 - MAC callout
 CUunNS AS caller
-Lv
 diskarbitrationd
-™—~.
 runs as root + unsandboxed
 diskarbitrationd checks:
 - if calling user id == disk owner id
 - sandbox _check
-storagekitd
 storagekite checks:
 - sandbox _check
 - target dic id == caller id
@@ -1014,11 +921,10 @@ runs as root + unsandboxed
 
 ## Slide 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-target: Jtmo/ wnt
-fe toragekite
 1. stat Cuserid) check on target dir
 Csome time passes)
 2. call diskarbitrationd with target dir
@@ -1027,12 +933,12 @@ target: /tme/mnt
 
 ## Slide 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 target: /tmp/link ( alternate symlink
 Jete/ cups
-fe toragekite
 1. stat Cuserid) check on /tmo/mnt
 Csome time passes)
 2. call diskarbitrationd with Jete/cups
@@ -1041,24 +947,22 @@ target: Jete/ CUPS
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ATT Ac K A Jt mpe/mnt
 target: /tmo/ link alternate symlink
-NX
 ~/ Library/, Application Support / com.apple.TC Cc
-fe toragekite
 1. sandbox _cheek on Jtmo/ mnt
 Csome time passes)
 2. call diskarbitrationd with
-~/ Library/ Application Support / com.apple. TCC
-target: ~/ Libracy/ Application Support / com.apple.TC Cc
 ```
 
 ## Slide 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (OPERATION
@@ -1066,89 +970,78 @@ env: user
 /tmp/link owner: ??
 (disk owner: root
 \
-storagekitd
 diskarbitrationd
-et)
 ```
 
 ## Slide 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (OPERATION
 env: user
 Jtmp/| link owner: ??
 disk owner: root
-storagekitd
 diskarbitrationd
-et)
 ```
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \
-storagekitd
 (OPERATION
 env: user
 Jtmp/ mnt owner: user
 disk owner: root
-A
 diskarbitrationd
-» OK
-et)
 ```
 
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \
-storagekitd
-oA
-priv: root
 Jete/cups owner:
 disk owner: root
-Pom |
-W
 ```
 
 ## Slide 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (OPERATION
-priv: coot
 / ete/cups owner: root
 disk owner: root
 \
 diskarbitrationd
-storagekitd
 ```
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (OPERATION
 eriv: coot
 Jetc/cups owner: root
 disk owner: root
-<
 diskarbitrationd
 \
-storagekitd
 ```
 
 ## Slide 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Terminal Shell Edit View Window Help Q ®& FriMay 24 6:42
@@ -1158,10 +1051,8 @@ ProductName: macOS
 ProductVersion: 14.5
 BuildVersion: 23F79
 crab@see ~ % ff
-iintosh HD
 6 2
 tartup Snapshot - APFS 62,83 GB
-4.5 7:
 "i = vocu © Other Volumes Free
 10,26 GB 12,45 GB 40,12 GB
 Mount Point (Read-Only): 1 | Type: APFS Startup Snapshot
@@ -1174,7 +1065,8 @@ Snapshot Name: com.apple.os.update-4F9A570DA7279961C47EEA2... Snapshot UUID: 8E5
 
 ## Slide 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ = Terminal
@@ -1190,24 +1082,20 @@ Mount Point (Read-Only):
 Capacity:
 Available:
 Used:
-/
 62,83 GB
 40,21 GB (541,7 MB purgeable)
 10,26 GB
 Snapshot Name: com.apple.os.update-4F9A570DA7279961C47EEA2...
-S=SO® B80-*
 -zsh
 Type:
 Owners:
 Connection:
 Device:
 Snapshot UUID: 8E508755-'
-Q  ThuMay 30 12:58
 -zsh an
 APFS Startup Snapshot
 Disabled
 Unknown
-disk4s1s1
 591C-4B27-ACOC-91E8E9BA4D45
 ```
 
@@ -1215,7 +1103,8 @@ disk4s1s1
 
 the ultimate fix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 the ultimate Tix
@@ -1224,12 +1113,8 @@ the ultimate Tix
 storegakitd DAQueueRequest
 -
 -
-—_
 -
 is kDADiskMountOptionWoFollow
-‘ set? ----—-~
-- =”
-‘\
 \
 es
 disallow
@@ -1259,7 +1144,8 @@ symlink and
 
 • TM = Backup
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 APFS disk roles
@@ -1275,21 +1161,21 @@ e T - Backup (Time Machine)
 fish@sonomal ~ % diskutil apfs list
 +-> Volume disk3s2 9DAQCF6C-F7C7-4506-9436-
 ° E - Update
-Q06B16FBF408 e  X — XART (hardware security)
+Q06B16FBF408 e X — XART (hardware security)
 APFS Volume Disk (Role): disk3s2 (Backup) eH - Hardware
 Name: . TM (Case-sensitive) e CC - Sidecar (Time Machine)
 Mount Point: /Volumes/TM
 Capacity Consumed: 3737165824 B (3.7 GB) 6 Ve BRGREREEES CARE
 Sealed: No
 FileVault: No (Encrypted at rest)
-ee oe
 ```
 
 ## Slide 85
 
 SIP (Sandbox Platform Profile)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SIP (Sandbox Platform Profile)
@@ -1310,10 +1196,10 @@ return allow("assign-storage-class 'TimeMachine'");
 
 Exploit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eee
 Exploit
 fish@sonomal ~ % diskutil apfs changeVolumeRole disk3s2 clear
 fish@sonomal ~
@@ -1334,7 +1220,6 @@ isk3s2 mounted
 % ls -l /Volumes/TM/
 160 Apr 11 15:02 2024-04-11-150432.previous
 staff 563 Apr 11 15:04 backup_manifest.plist
--l /Volumes/TM/2024-04-11-150432.previous/Data/Users/fish
 -rw------- + 1 root staff
 -rw-r--r--@ 1 fish staff
 -rwxrwxrwx+ 1 fish admin
@@ -1390,10 +1275,8 @@ Oct
 15:
 14:
 14:
-ils}3
 14:
 14:
-224
 14
 55
 56
@@ -1413,7 +1296,6 @@ Movies
 Music
 Pictures
 Public
-Lt /Volumes/TM/2024-04-11-150432.previous/Data/Users/fish/Desktop
 staff
 12 Dec 13 10:26 secret.txt
 —
@@ -1433,7 +1315,8 @@ staff
 
 Disk Utility meets ASR • asr (Apple Software Restore) - can restore (bit copy) one disk to another
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Disk Utility meets ASR
@@ -1449,54 +1332,43 @@ XPC: com.apple.asr
 
 ## Slide 91
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-@e0e
 Internal
-¥ © Macintosh HD volumes
-v & Macintosh HD
-Macintosh HD snapshot
-Data
+  Macintosh HD  volumes
+    Macintosh HD
+      Macintosh HD  snapshot
+      Data
 Disk Images
-&) RAM Disk
-& untitled
-’ Disk Utility +)
-View Volume
+  RAM Disk
+  untitled
+
+View   Disk Utility                              Volume  First Aid  Partition  Erase  Restore  Unmount  Info
+
 Macintosh HD
-APFS Volume Group - APFS (Encrypted)
-macOS 14.4.1 (23E224)
-® Used ® Other Volumes
-3,33 TB 8,06 GB
-Mount Point (Read-Only): | Type:
-Capacity: 8TB Owners:
-Available: 4,66 TB Connection:
-Used: 3,33 TB Device:
-Snapshot Name: com.apple.os.update-39AFBADD5AD7CDABO00800...
-APFS Snapshots on “Data”
-Name Date Created
-com.apple.TimeMachine.2024-03-22-135416.local 22 Mar 2024 at 13:54
-com.apple.TimeMachine.2024-03-26-120916.local Yesterday at 12:09
-com.apple.TimeMachine.2024-03-26-185015.local Yesterday at 18:50
-©v
-15 snapshots
-Snapshot UUVID:
-db
-©
-First Aid Partition Erase Restore Unmount Info
-SHARED BY 5 VOLUMES
-Free
-4,66 TB
-APFS Volume Group
-Disabled
-Apple Fabric
-disk3s1s1
-73781D73-D838-442E-919B-4684B6BE232B
-Tidemark Size Kind
-4,13 TB 24,03 GB Time Machine Snapshot
-4,14TB 62,34 GB Time Machine Snapshot
-4,14 TB 63,25 GB Time Machine Snapshot
-® High tidemark is 4,14 TB
+APFS Volume Group • APFS (Encrypted)
+macOS 14.4.1 (23E224)                                                        8 TB
+                                                                   SHARED BY 5 VOLUMES
+
+Used          Other Volumes         Free
+3,33 TB         8,06 GB               4,66 TB
+
+Mount Point (Read-Only):     /            Type:                    APFS Volume Group
+Capacity:                  8 TB           Owners:                  Disabled
+Available:               4,66 TB          Connection:              Apple Fabric
+Used:                    3,33 TB          Device:                  disk3s1s1
+Snapshot Name: com.apple.os.update-39AFBADD5AD7CDAB000800...   Snapshot UUID:  73781D73-D838-442E-919B-4684B6BE232B
+
+APFS Snapshots on "Data"
+
+Name                                              Date Created            Tidemark   Size       Kind
+com.apple.TimeMachine.2024-03-22-135416.local     22 Mar 2024 at 13:54    4,13 TB    24,03 GB   Time Machine Snapshot
+com.apple.TimeMachine.2024-03-26-120916.local     Yesterday at 12:09      4,14 TB    62,34 GB   Time Machine Snapshot
+com.apple.TimeMachine.2024-03-26-185015.local     Yesterday at 18:50      4,14 TB    63,25 GB   Time Machine Snapshot
+
+15 snapshots                                                    High tidemark is 4,14 TB
 ```
 
 ## Slide 92
@@ -1504,17 +1376,6 @@ Tidemark Size Kind
 # **conclusion**
 
 ## Slide 93
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-GOOD
-MOR-NinG
-| SUNSHINE‘...
-GB
-¢>
-ZAHACKERS? :
-```
 
 ## Slide 94
 

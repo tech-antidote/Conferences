@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Lee-Grand-Theft-House-RF-Lock-Pick-Tool-to-Unlock-Smart-Door-Lock.pdf"
 pages: 65
 sha256: "c411813b751095de10999da3b2219b1c71681db643498bcb9cee1ec852c3724c"
-text_chars: 41738
-ocr_pages: 5
+text_chars: 41297
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:51Z"
+converted_at: "2026-08-12T03:47:56Z"
 ---
 # Grand Theft House RF Lock Pick Tool to Unlock Smart Door Lock
 
 **Speakers:** Lee  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Lee-Grand-Theft-House-RF-Lock-Pick-Tool-to-Unlock-Smart-Door-Lock.pdf` (65 pages)
+
 
 ## Slide 1
 
@@ -29,18 +34,6 @@ converted_at: "2026-08-11T23:54:51Z"
 Seungjoon Lee, Kwonyoup Kim
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-ASIA
-MAY 11-12
-BRIEFINGS
-Grand Theft House: RF Lock Pick
-Tool to Uniock Smart Door Lock
-Seungjoon Lee, Kwonyoup Kim
-```
 
 ## Slide 2
 
@@ -582,16 +575,6 @@ Transmit to “Valid Counter Buffer Length”
 # Loop Playback Attack Demo Video
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidek hat
-ASIA &
-Loop Playback Attack
-Demo Video
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 20
 
@@ -1395,7 +1378,8 @@ De-glitching
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
@@ -1411,7 +1395,6 @@ UHD: USRP Source Low Pass Filter
 Sync: Unknown PPS Decimation: 1
 Samp rate (Sps): 2M Simple Squelch Gain: 1
 ChO: Center Freq (Hz): ...74M Sample Rate: 2M Virtual Sink
-command) no: AGC: Default USE AIC) Bae! Cutoff Freq: 20k joi Qurerre Pome een
 Cho: Gain Value: 30 meen BE Transition Width: 10k
 ChO: Gain Type: Absolute (dB) Window: Hamming
 ChO: Antenna: RX2 Beta: 6.76
@@ -1423,7 +1406,6 @@ Stream ID: demod o a . High: 10 Constant: 2 Mu: 500m Stream ID: synchro
 ET Initial State: 0 Gain Mu: 175m
 Omega Relative Limit: 5m
 File Sink
-File: ...e BHASIA23/164 demod
 Unbuffered: Off
 Correlate Access Code
 Access Code: 11110...11111111
@@ -1595,16 +1577,6 @@ Apartment
 # Lock Picking w/ Sniffing Demo Video
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidek hat
-ASIA &
-Lock Picking w/ Sniffing
-Demo Video
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 55
 
@@ -1817,14 +1789,11 @@ Deploying
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bidek hat
-ASIA &
 Lock Picking w/o Sniffing
-Demo Video
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 62

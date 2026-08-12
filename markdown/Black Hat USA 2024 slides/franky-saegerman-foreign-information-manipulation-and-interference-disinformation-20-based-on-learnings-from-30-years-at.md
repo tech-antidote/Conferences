@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Franky Saegerman_Foreign Information Manipulation and Interference (Disinformation 2.0) Based on Learnings from 30 Years at NATO.pdf"
 pages: 56
 sha256: "07feb9dab45204e17b9a93debb52bb805ddd58f67751766f393b769690658f6e"
-text_chars: 21203
-ocr_pages: 23
+text_chars: 18728
+ocr_pages: 20
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:31:57Z"
+converted_at: "2026-08-12T04:32:10Z"
 ---
 # Foreign Information Manipulation and Interference (Disinformation 2.0) Based on Learnings from 30 Years at NATO
 
 **Speakers:** Franky Saegerman  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Franky Saegerman_Foreign Information Manipulation and Interference (Disinformation 2.0) Based on Learnings from 30 Years at NATO.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -55,33 +61,23 @@ Foreign Information Manipulation and Interference (Disinformation 2.0) Based on 
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-USA 2024
-biSekhat | . Disinfogmation
-& &
 ba
 What Is Disinformation? What 7 it not?
-a
-Sent
-ht
-a
 lan Bradbury « ‘st
 21st century solutions for 21st century problems
-DISINFORMATION ay es
 /disinfo'mei f(e)n/ noun i Ls OPPOSING VIEW + DISINFORMATION
-aS PW COUNTER EVIDENCE + DISINFORMATION
-POINTING OUT MISSTEPS  DISINFORMATION
+POINTING OUT MISSTEPS DISINFORMATION
 secretly leaked into the communication Hi CHALLENGING POLICY = DISINFORMATION
 process in order (p deceive and manipulate , DIFFICULT INFORMATION = DISINFORMATION
 . INFORMATION YOU DON'T LIKE = DISINFORMATION
 1. Deliberately distorted Pormation that is
 | Operation InfeKtion: How Russia Perfected the Art o War | NT Opinion UNCOMFORTABLE INFORMATION # DISINFORMATION
-© 4.28
 A subscribers
 The New York Times © Raa PROOF OF WRONGDOING = DISINFORMATION
-IBHUSA @bBlackHatEvents
 ```
 
 ## Slide 5
@@ -124,15 +120,12 @@ Foreign Information Manipulation & Interference
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q Ss
 ee USA 2024
-Tri
-7 ey
 LE
-vil
 Narrative Intelligence
 Automatically surface emerging narratives that drive
 online conversations and how they spread and grow.
@@ -147,7 +140,6 @@ Impact Intelligence
 Understand and predict the impact of ongoing harmful
 activity across the information landscape while
 measuring the success of mitigative efforts.
-—————————
 ```
 
 ## Slide 10
@@ -156,12 +148,10 @@ measuring the success of mitigative efforts.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-ie 2024
-SOCIAL.
 Rronersimenicane Turn to TikTok
 for News
 Share of U.S. adults who regularly get news from TikTok,
@@ -171,22 +161,18 @@ Share of respondents who find it difficult to identify
 trustworthy news on the following platforms (in %)
 i Very/somewhat difficult Neither (incl. don't know) Very/somewhat easy
 rictok @ 4a
-‘® a1
 51
 Instagram 1) 49
 15
-Linkedin @@) EM 41
 10
 A
 : 7 WhatApp 51
 4
 O <1 Google #& 60
-202122240) ‘2 '20 230 ‘20 '23—=—'20 '23 search > En
 61,224-92,185 respondents (18+ y/o) per platform surveyed across 47 markets between
 8,842 U.S. adults (18+ y/o) surveyed Sep. 25-Oct.1, 2023 Jan.-Feb. 2024. Respondents in India and Hong Kong were not asked about TikTok
 Source: Pew Research Center Source: Reuters Digital News Report 2024
 Statista %
-statista% p
 ```
 
 ## Slide 11
@@ -227,41 +213,26 @@ statista% p
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-USA 2024
 DOPPELGANGER
 www.theguardian.com
-GePtian
 organic
-ry
-2
 Fake profiles pushing Doppelganger in
 comment sections or tweets
 os
-U .
-= ~~
-www.theguardian.co.com :
 major media providers -
 impersonated
-nsibisuo
-~ aa
-as ty
 Paid advertisement on social media platforms,
 linking to the fake story
-=~ > UK potues
-fliers 1s Iarbas der
 Doppelganger
 Culture Lifestyle
 Video: False Staging in Bucha
 Revealed!
 Cloned websites of legitimate outlets
-_,
-eh a,
 HOTSPOT
-"The
 Guardian
 ```
 
@@ -339,15 +310,13 @@ www.nato.ws/cps/en ....
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 2024
 HOME ABOUT
 Photo fro
 Events in
-@ COMPASS WF BL ACKBIRD.AI
 Context check any claim
 Paste a link to an article, tweet, video, or ask a question...
 Did the Eiffel Tower catch fire?
@@ -366,7 +335,6 @@ inconsistencie jyenerated by artificial intelligence. These
 mmon in images
 sources collectively confirm that the claim of the Eiffel Tower catching fire is
 false and likely originated from digitally manipulated content
-. ez
 Fake: Russians are banned from leaving
 their country
 Fake: Russian soldiers won't let civilians
@@ -412,38 +380,20 @@ BHUSA @bBlackHatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
-USA 2024
-& &
-tj re
-“Hie Pp
-S BSR
-NG fj
-a:
-~~
-Kaiti w3 BpynHen-fxn xX A PalestinaVENCER
-jat_ir - HavaTb 4nTaTb @Darwin_f1978 -§
-Ha oduumanbHom pomuke HATO 3acBetunca yKpavHCKuin
-BOCHHOCNY>KalMi C LUEBPOHOM HaliMcTcKon AuBu3nn CC
-"Pex".
-Nos>ke AaHHbIM Kapp H3 BUeO 6bINn yAanéH, a ponuK
-Nepesanut Ha pecypcb! anbsaHCa yxKe B OGHOBNEHHOM
-BapuaHTe.
 #HATO
 @new_militarycolumnist
 |
-mI
 Un video oficial de la
 ucraniano™* con la i
 de las SS(®).
 Posteriormente, se e
 video se volvié a sub
 version actualizada.
-~~
-Fake.igmages
 vem Russian Embassy in South Africa as &
 = mbassyofRussia - Follow
 An official NATO video showed a Ukrainian soldier
@@ -455,14 +405,9 @@ No Nazism in Ukraine?
 air, met insigne van de
 utje’ zagen is de foto
 2d wat er daar speelt.
-es
-es
-b>
-”
 Sergio Loré “ @H.D. 5 mit Verstand -
 10 Folgen
-Newspaper |, News™™" & ae |
- ™ &Balken- und Hakenkreuzkunde ,unserer deutsch-
+™ &Balken- und Hakenkreuzkunde ,unserer deutsch-
 ukrainischen Freunde” im NATO-Kampfeinsatz (Teil 19/2)
 = |! EXEin offizielles NATO-Video zeigte einen
 ukrainischen Soldaten, der die "Wolfsangel", das
@@ -476,11 +421,10 @@ nzeiger
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-USA 2024
-piiekhat "Move your augtence
 @RT_com - Follow
 Putin spoke with Erdogan and informed him about the
 situation in the country
@@ -490,7 +434,6 @@ the Russian leadership amid the attempted armed
 rebellion: iis ireniq nies Poland detains South African delegation plane heading to
 Russia - report
 Foll Tel val t
-OSM Us On ROOTS hE Tee Nea Follow us on Odysee: odysee.com/@RT:fd RT
 @RT_com - Follow
 Moan iran navy seizes oil tanker heading to US
 Follow us on Rumble: rumble.com/c/RTNews
@@ -514,35 +457,21 @@ Watch on Twitter
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a Case Study: Support to
-USA 2024
-«
-|. S0 Grapa eceno
-M
-44
 ‘3
-fae
-oo”
-eer
-awa
-tie
 =] Engagements generated by Russian State Supporter users
 | Engagements generated by Right Wing users
 3 Jackson Hinkle ® t Subscribe
-A
 ™" BREAKING: Senior Ukrainian officials allegedly used U.S. aid to
 purchase luxury vehicles and homes in Spain.
 \\
-' 4
-» '
-fr — t rope ry
 , % Engagements on Tweets within narrative (Aug-Dec 2023) 4
 Y
 Narrative is seeded by Russian State Supporter accounts
-‘WP BLACKBIRD.AI
 HatEvents
 ```
 
@@ -552,27 +481,17 @@ HatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-Ww Soe
-~~ e
-i
 Hi Engagements generated by Russian State Supporter users
 ail Engagements generated by Right Wing users
 & Lord Bebo
-¥
-!
 1! = BREAKING: “ elenska spends $1,100,000 on Cartier
 jewelry in NYC and get employee fired!”
-jowneoveune amy pS
-pall A ALA. All years es a\_As :
 Engagements on Tweets within narrative (Aug-Dec 2023)
 Narrative is seeded by Russian State Supporter accounts
-‘WP BLACKBIRD.AI
-a“.
 HatEvents
 ```
 
@@ -582,13 +501,11 @@ HatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — Case Study: Support to
-USA 2024
-=
-E : C7 oRapH Leceno @ seen
 ‘ ; BREAKING: Zelensky reportedly buys $20 Million Dollar Mansion in Vero
 ima Engagements generated by Russian State Supporter users Beach, Florida.
 i Engagements generated by Right Wing users
@@ -604,7 +521,7 @@ Zelensky's doing well, how do you feel about that? I'm sure he gives thx
 to American taxpayers.
 Engagements on Tweets within narrative (Aug-Dec 2023)
 wy BLACKBIRD.AI Narrative is picked up by
-influential Right Wing accounts  atevents
+influential Right Wing accounts atevents
 ```
 
 ## Slide 34
@@ -621,12 +538,12 @@ influential Right Wing accounts  atevents
 
 #BHUSA #BHUSA     @BlackHatEvents @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi
 2h hat
-USA 2024
 ACE Zelensky bought
 Goebbles’ villa in
 Berlin
@@ -640,7 +557,6 @@ No, Zelenski no ha comprado una mansion del rey
 Cartos lll en Gloucester: el Gobierno britanico dice
 que sigue siendo propiedad del Ducado de
 Cornualles
-a
 FAKE Olena Zelenska
 spends 1 million
 dollars in Cartier
@@ -657,7 +573,6 @@ million-euro villa in
 Egypt
 Did Zelensky’s mother-in-law buy a C5 milion villa in Egypt
 and the journalist who reported it was killed?
-le a
 BHUSA @bBlackHatEvents
 ```
 
@@ -675,15 +590,13 @@ BHUSA @bBlackHatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é |
 piSekhat ~~Case Study: Attack Children’s Hos
-aN -
-¢
 © anton Gerashchenko X
-ress @Gerashchenko_en - Yutatu
 Footage of the first minutes of the attack on Okhmadyt
 children's hospital shows that it was a targeted terrorist
 attack.
@@ -700,10 +613,10 @@ was not a deflection of the missile from...
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piStxhat ~ Case stiidy: Attack Children
 USA 2024 N
 1 Russian Embassy in South Africa
 @ Chay Bowes @
@@ -712,13 +625,6 @@ children's hospital"
 Irrefutable evidence that this was caused by Ukrainian air defence mounts
 A bystander filmed the moment of impact in Kiev clearly showing a NATO
 supplied NASAMS missile striking.
-;
-i nance | Glardiniere ;
-: -
-: @
-: 4
-; 11k Reposts ¢
-‘ i?
 HUSA @BlackHatEvents
 ```
 
@@ -728,27 +634,22 @@ HUSA @BlackHatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat Case Study: Attack Children’s Hospital Kyiv
-USA 2024
 & » WA | Ye | Fake: Ukrainian Analysts Assert Russian
 bs : ] Missile Hit Kyiv Children’s Hospital
-t . iz : Civilians
 yaapam ww Ukrainian OSINT analysts proved that Russia struck the
 children's hospital "Okhmatdyt" in Kyiv with a Kh-101
 cruise missile, according to...
-?
-|
-a Fr;
 WarOnFakes.com Fake: Claims of Russian Kh-101 Missile
 Strike on Kyiv Hospital Emerge
 (Donetsk People's Republic) H H The Russian Federation Ministry of Defense
 What the fake is about: Russia deliberately struck the
 children’s hospital “Okhmatdyt” in Kyiv with a Kh-101
 ber L “ (Lugansk People's Republic) cruise missile, according...
-~aaa: DPR
 LPR
 Fake: Russia Accused of Deliberately
 Striking Kyiv Children’s Hospital
@@ -762,7 +663,6 @@ Ministry of Defense
 SS Fake: No Russian “Kinzhal” Has
 a ee Reached Kyiv Since May 2023, When... ~
 channel
-~~
 = @BlackHatEvents
 The Russian Federation Ministry of Defense
 No Russian "Kinzhal" has reached Kyiv since May 2023,
@@ -782,20 +682,13 @@ No Russian "Kinzhal" has reached Kyiv since May 2023,
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 2024
-& te
-bs ce
 Campaigns targeting the 2024 Paris Olympics
 Phase 2
 January 2024 —- May 2024
-—)
-Petnch UCommT OF LocaAe
-NETWORK x ACCOMPARUED
-5) PHOT US OF BEDSUGS
 for games
 BHUSA @bBlackHatEvents
 ```
@@ -812,7 +705,8 @@ BHUSA @bBlackHatEvents
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat . Oly ics
@@ -825,14 +719,12 @@ PARIS 2024
 Kremlin DENIES involvement in alleged
 sabotage campaign against Paris Olympics
 April 5, 2024 12:45 PM GMT+2 - Updated 4 months ago
-—
 e The Kremlin has denied allegations of Russian involvement in a sabotage campaion P=
 ng the Paris Olympics, following an arson attack on France's rail system
 Paris Olympics 2024: Russia behind |
 train attacks in France? Kremlin
 dismisses Western speculations
 ET Online | 29 Jul 2024, 10:29 PM IST
-" ' OLYMPICS 2024: RUSSIA BEHIND
 TRAIN ATTACKS IN FRANCE?
 The Kremlin on Monday (July 29) dismissed Western media speculation that Russia
 was behind a series of attacks against the French railway system and said that Western
@@ -889,14 +781,12 @@ Anyone can generate an audio deepfake. They are easier and cheaper to make than 
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 2024
 FRANCE — __/ © FRANCE
 FF ee * eee Star of David graffiti in Paris - the
-z ae “A shear as fF Russian connection
 By Hugh Schofield, BBC News, Paris
 BHUSA @BlackHatEvents
 ```
@@ -911,11 +801,10 @@ CZECHIA
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
-USA 2024
 EFE/MARTIN DIVISEK
 a ‘Russia trying to sabotage
 European railways,’ says
@@ -924,9 +813,6 @@ Hybrid Warfare
 UK abak
 Cyber-attack on London hospitals to
 + take ‘many months’ to resolve
->
-ae
-“os ~
 >) Exclusive: NHS source says clarity needed on how Russian
 WP. é hackers gained access and whether records are retrievable
 ```
@@ -941,15 +827,14 @@ WP. é hackers gained access and whether records are retrievable
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~~. : y \._ we
 biSekhat | ‘ Hybrid ait re
 USA 2024 ey
 Polish authorities said Russia appears to be behind a large fire that consumed a shopping center in ,
 Warsaw. Darit 30rowicz/Agencja Wybor¢ \/Reuters LISELOTTE SABROE/GETTY IMAGES
-——1
 HUSA @BlackHatEvents
 ```
 
@@ -963,53 +848,26 @@ ESTONIA
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-&
-piSekhat | ' Hybrid Warfare
-\ >
-,
-4
-ane aN
-/
-ae
-#
-ef
-j
-TAT
-ESTONIA . 68
-“Bosnia — Moldova - Georgia Zotz
-ADRIAN D AQ
-Se — 7 HUSA @bBlackHatEvents
-```
-
 ## Slide 53
 
 #### **Hybrid Warfare**
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat | Hybrid Warfare
-—
-‘
-B=
 Finland
 i as \ Russia releases plans
->, FF 5 * q >. threatening to redraw
 ““~ fs _ sea borders with Finland
 i ‘ and Baltic states
 i
-. “ Lithuania
 United Kingdom Attack on a Russian Baltic states
 Arson attack on a tion fi : ; :
 , opposition figure m
 warehouse containing PP 9 GPS signal jamming
 Ukraine aid
-tile mi Latvia
 lanned arson attacks yy Arson attack on
 and explosions foiled Museum of Occupation
 by authorities
@@ -1032,7 +890,6 @@ Zelensky and for spying on
 a key military aid hub.
 Spain ;
 Bilesian defector Arson attack on a mall in Warsaw. ; BHUSA @BlackHatEvents
-ehaAt AAaawH
 ```
 
 ## Slide 54
@@ -1048,19 +905,6 @@ ehaAt AAaawH
 **Conclusion**
 
 #BHUSA **#BHUSA     @BlackHatEvents** @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-“Awareness Ab ¢
-Po
--Behaviour
-= |
-iF
-erat * |
-joaewenty t
-```
 
 ## Slide 56
 

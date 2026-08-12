@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/David Berard & Thomas Imbert_0-click RCE on Tesla Model 3 through TPMS Sensors.pdf"
 pages: 44
 sha256: "fd97ff428afb7fb10d81377daeccc27a391c0a47952fc5eabb4a61f8785c5a37"
-text_chars: 14904
-ocr_pages: 11
+text_chars: 13411
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:18:52Z"
+converted_at: "2026-08-12T05:49:40Z"
 ---
 # 0-click RCE on Tesla Model 3 through TPMS Sensors
 
 **Speakers:** David Berard, Thomas Imbert  
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/David Berard & Thomas Imbert_0-click RCE on Tesla Model 3 through TPMS Sensors.pdf` (44 pages)
+
 
 ## Slide 1
 
@@ -278,7 +283,8 @@ Connectivity
 
 **13**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TPMS Sensor
@@ -287,7 +293,6 @@ BLE ADV
 <—_
 vehicleStatus
 >
-updaterCommand
 p >
 < updaterResponse
 Only in
@@ -295,7 +300,6 @@ genealogyRequest > adoption
 ” genealogyResponse phase
 Adoption messages specific to the TPMS version—=>
 VCSEC TPMS
-& OYNACKTIV
 13
 ```
 
@@ -305,7 +309,7 @@ VCSEC TPMS
 
 ■ Received from TPMS
 
-```
+\```
 // Received:
 TPData {
     pressure: 101
@@ -317,7 +321,7 @@ TPWheelUnitInfo {
     MLXAppCRC: "[..]"
     batteryVoltage_mV: 3011
 }
-```
+\```
 
 **14**
 
@@ -369,7 +373,7 @@ Model3 versions
 
 - `$ cat signed_metadata_map.tsv |grep vcsec`
 
-```
+\```
 vcsec:50397185vcsec/7/UDSBoot-VCSEC-P_3-A_0-U_0-CONFIG_1704-GIT_AE006F26D00A5C6D.bhx
 vcsec:117440513vcsec/23/UDSBoot-VCSEC-P_7-CONFIG_700-GIT_8D34551F13E4371E.bhx
 vcsec:134217729vcsec/24/UDSBoot-VCSEC-P_8-CONFIG_702-GIT_3ACAF2AD323CEBCC.bhx
@@ -379,7 +383,7 @@ vcsec:134217729vcsec/24/UDSBoot-VCSEC-P_8-CONFIG_703-GIT_3ACAF2AD323CEBCC.bhx
 vcsec:50397185vcsec/7/VCSEC_ConfigID_7_crc_formatted_lithium-signed.bhx
 vcsec:117440513vcsec/23/VCSEC_ConfigID_23_crc_formatted_lithium-signed.bhx
 vcsec:134217729vcsec/24/VCSEC_ConfigID_24_crc_formatted_lithium-signed.bhx
-```
+\```
 
 ###### Version analyzed: hw-id 134217729
 
@@ -415,7 +419,7 @@ Reversing Protobuf messages
 
 ■ Patched for BE support (version 3 with 16-bit fields)
 
-```
+\```
 // ToVCSECMessage
 message Message_10403C1 {
 required Message_10416BD field_1 = 1; // SignedMessage
@@ -426,7 +430,7 @@ message Message_10416BD {
 requiredbytes field_1 = 1 [(nanopb).max_size = 20];
 requiredbytes field_2 = 2 [(nanopb).max_size = 282];
 // ...
-```
+\```
 
 **19**
 
@@ -458,13 +462,13 @@ Protobuf certiûcate in parts
 
 - Part encoded with Protocol Buffer `CertificateResponse`
 
-```
+\```
 message CertificateInParts {
 uint32 startIndex = 1;
 uint32 certificateSize = 2;
 bytes data_ = 3;  // nanopb.max_size:128
 }
-```
+\```
 
 **21**
 
@@ -490,7 +494,7 @@ Exploitation primitive
 
 - Pointer to a structure containing a func�on pointer just before the buffer
 
-```
+\```
 structtpms_auth_s {
 bool (*validate_subject_name)(/*...*/);
 // ...
@@ -499,7 +503,7 @@ structtpms_auth_s * g_tpms_auth;
 u8 tpms_auth_id;
 u8 tpms_auth_state;
 char g_cert_buffer[512];
-```
+\```
 
 - Sending a valid x509 cer�ficate triggers the `validate_subject_name` call
 
@@ -653,14 +657,12 @@ Force the adoption of new TPMS
 
 **31**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Vehicle starts moving and
 TPMS wakes up
-> TPMS starts advertising
-Enrolled TPMS
-& OYNACKTIV
 31
 ```
 
@@ -668,19 +670,12 @@ Enrolled TPMS
 
 **32**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Vehicle starts moving and
 TPMS wakes up
-> TPMS starts advertising
-Enrolled TPMS
-Attacker connects to TPMS to
-> prevent VCSEC from
-connecting
-Attacker ESP32
-Racer
-& OYNACKTIV
 32
 ```
 
@@ -688,42 +683,17 @@ Racer
 
 **33**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Vehicle starts moving and VCSEC cannot connect to TPMS
-TPMS wakes up (raced by ESP32)
-> TPMS starts advertising
-Enrolled TPMS
-af
-Attacker connects to TPMS to
-> prevent VCSEC from
-connecting
-s Tesla VCSEC
-Attacker ESP32
-Racer
-& OYNACKTIV
-33
-```
-
 ## Slide 34
 
 **34**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 <> Vehicle starts moving and > VCSEC cannot connect to TPMS
-TPMS wakes up (raced by ESP32)
 > TPMS starts advertising <> After a 90 sortautlernng and
 Enrolled TPMS 4 Tesla VCSEC
-nOnnn
-Attacker connects to TPMS to
-> prevent VCSEC from
-connecting
-Attacker ESP32
-Racer
-& OYNACKTIV
 34
 ```
 
@@ -731,25 +701,15 @@ Racer
 
 **35**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Vehicle starts moving and VCSEC cannot connect to TPMS
-TPMS wakes up (raced by ESP32)
 <> TPMS starts advertising <s> ae a 90 seconds, unenroll TPMS and
 start auto-learning
 Enrolled TPMS 4 Tesla VCSEC
-anne
 Attacker advertizes as a fake new
 TPMS
-Attacker connects to TPMS to
-> prevent VCSEC from
-connecting
-Attacker ESP32
-TPMS Simulator
-Attacker ESP32
-Racer
-& OYNACKTIV
 35
 ```
 
@@ -757,25 +717,18 @@ Racer
 
 **36**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Vehicle starts moving and VCSEC cannot connect to TPMS
-TPMS wakes up (raced by ESP32)
 > TPMS starts advertising > After a 90 seconds, unenroll TPMS and
 start auto-learning
 Enrolled TPMS s Tesla VCSEC
-EL
 Attacker advertizes as a fake new
 TPMS
 9 re connects to TPMS to I
 prevent VCSEC from > VCSEC connects to enroll our
 connecting fake TPMS and exploitation starts
-Attacker ESP32
-TPMS Simulator
-Attacker ESP32
-Racer
-& OYNACKTIV
 36
 ```
 
@@ -783,45 +736,19 @@ Racer
 
 **37**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-VCSEC » TPMS
-updaterCommand
-VCSEC = TPMS
-updaterResponse
-Type 5
-TPMS Enrollment Mode
-Tesla VCSEC
-Attacker ESP32
-TPMS Simulator
-& OYNACKTIV
-37
-```
-
 ## Slide 38
 
 **38**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VCSEC » TPMS
-updaterCommand
-VCSEC = TPMS
-updaterResponse
-Type 5
 VCSEC =» TPMS
 certificateRead
-VCSEC = TPMS
 certificateResponse
 Exploit vulnerability
-TPMS Enrollment Mode
-Tesla VCSEC
-[4]
-Attacker ESP32
-TPMS Simulator
-& OYNACKTIV
 38
 ```
 
@@ -829,26 +756,17 @@ TPMS Simulator
 
 **39**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VCSEC =» TPMS
-updaterCommand
-VCSEC = TPMS
-updaterResponse
-Type 5
 VCSEC =» TPMS
 certificateRead
-VCSEC = TPMS
 certificateResponse
 Exploit vulnerability
 Code execution on
 VCSEC
-TPMS Enrollment Mode
-Tesla VCSEC
-Attacker ESP32
-TPMS Simulator
-& OYNACKTIV
 39
 ```
 
@@ -872,7 +790,7 @@ TPMS Simulator
 
 - remote connec�on
 
-```
+\```
 #define fnsend_can_raw ((void (*)(char *msg, int id))0x10B7D60)
 intmain_payload()
 {
@@ -882,7 +800,7 @@ while(1) {
    }
 return0;
 }
-```
+\```
 
 **41**
 
@@ -933,13 +851,3 @@ Fixes
 ## Slide 44
 
 **https://www.linkedin.com/company/synacktiv https://twitter.com/synacktiv https://synacktiv.com**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= SYNACKTIV
-e
-BED = https: //www.linkedin.com/company/synacktiv
-wW https: / /twitter.com/synacktiv
-oy https: / /synacktiv.com
-```

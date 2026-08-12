@@ -4,23 +4,28 @@ speakers: ["Aidan Nakache"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Aidan Nakache - Riding for Free - Breaking Public Transport RFID at Scale - v1.pdf"
 pages: 54
 sha256: "b7b1102d94843dbc016b3168a10365bcfe93b977aeaaef7150eec39504618a3e"
-text_chars: 18073
+text_chars: 18173
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:11:16Z"
+converted_at: "2026-08-12T06:19:00Z"
 ---
 # Riding for Free - Breaking Public Transport RFID at Scale
 
 **Speakers:** Aidan Nakache  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aidan Nakache - Riding for Free - Breaking Public Transport RFID at Scale - v1.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -46,9 +51,9 @@ Two more jobs under NDA: cybersecurity and full-stack dev
 
 **INTRO**
 
-```
+\```
 02
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -64,9 +69,9 @@ You never think about the card.
 
 **INTRO**
 
-```
+\```
 03
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -82,9 +87,9 @@ Holds money, travel history, sometimes an ID that ties back to you This talk loo
 
 **INTRO**
 
-```
+\```
 04
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -98,9 +103,9 @@ Every agency rolls its own data format None of it is documented Security through
 
 **OBSCURIT Y**
 
-```
+\```
 05
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -114,9 +119,9 @@ That is the whole bet. It does not hold.
 
 **OBSCURIT Y**
 
-```
+\```
 06
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -130,9 +135,9 @@ DEF CON 16: the Boston subway hack DEF CON 31: the Boston money glitch This talk
 
 **OBSCURIT Y**
 
-```
+\```
 07
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -152,9 +157,9 @@ Metroflip reading and parsing Navigo card contents
 
 **METROFLIP**
 
-```
+\```
 08
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -174,9 +179,9 @@ R I D I N G F O R F R E E
 
 **METROFLIP**
 
-```
+\```
 09
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -206,9 +211,9 @@ R I D I N G F O R F R E E
 
 **METROFLIP**
 
-```
+\```
 10
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -230,9 +235,9 @@ The longer it runs, the harder it is to change
 
 **METROFLIP**
 
-```
+\```
 11
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -248,9 +253,9 @@ Secure chips get deployed insecurely Static keys, unlocked pages, no integrity S
 
 **METROFLIP**
 
-```
+\```
 12
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -266,9 +271,9 @@ Research: Nye, Teuwen, Messmer, Mauch, Clark, Li, Weiss, Voeltner. breakmeifyouc
 
 **METROFLIP**
 
-```
+\```
 13
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -284,9 +289,9 @@ Repeat per variable to isolate them all
 
 **METHOD**
 
-```
+\```
 14
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -304,9 +309,9 @@ Minutes on a Proxmark or Flipper
 
 **METHOD**
 
-```
+\```
 15
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -320,9 +325,9 @@ Bought a 10-trip card? Look for 0x0A Travelled on a date? Find the field that ma
 
 **METHOD**
 
-```
+\```
 16
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -342,9 +347,9 @@ Station codes need a table they won't share
 
 **METHOD**
 
-```
+\```
 17
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -358,9 +363,9 @@ Get it wrong and the gate says no. So the checksum is **the whole game** .
 
 **METHOD**
 
-```
+\```
 18
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -385,9 +390,9 @@ CRYPTO1 broke in 2008, memory is wide open The only barrier left is a proprietar
 
 **RENFE**
 
-```
+\```
 20
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -404,9 +409,9 @@ Get that last byte wrong and every validator rejects the block. That byte was th
 
 RENFE
 
-```
+\```
 21
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -420,9 +425,9 @@ R I D I N G F O R F R E E
 
 **RENFE**
 
-```
+\```
 22
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -452,9 +457,9 @@ So the internal state has to be wider than a single byte.
 
 **RENFE**
 
-```
+\```
 23
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -473,9 +478,9 @@ Every extra sample is one more constraint each config must satisfy, until a sing
 
 RENFE
 
-```
+\```
 24
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -495,9 +500,9 @@ The six were exactly the blocks that hold the balance and the expiry dates. Only
 
 **RENFE** R I D I N G F O R F R E E
 
-```
+\```
 25
-```
+\```
 
 ## Slide 26
 
@@ -523,9 +528,9 @@ The UID is broadcast in the clear. The diversification adds zero security.
 
 **RENFE** R I D I N G F O R F R E E
 
-```
+\```
 26
-```
+\```
 
 ## Slide 27
 
@@ -533,11 +538,11 @@ The UID is broadcast in the clear. The diversification adds zero security.
 
 15 data bytes CRC-16/X-25 fold to 8 bits XOR the UID 1-byte checksum
 
-```
+\```
 crc  = crc16_x25(data[:15])          # poly 0x8408, init 0xFFFF
 out  = (crc >> 8) ^ (crc & 0xFF)      # high byte XOR low byte
 out ^= uid[0]^uid[1]^uid[2]^uid[3]    # per-card; UID is public
-```
+\```
 
 A proprietary integrity check turns out to be a standard CRC, XORed with a value the card broadcasts in the clear.
 
@@ -545,9 +550,9 @@ A proprietary integrity check turns out to be a standard CRC, XORed with a value
 
 **RENFE**
 
-```
+\```
 27
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -574,9 +579,9 @@ same fix on every block I edited **`8   12   13   14   16`**
 
 **RENFE**
 
-```
+\```
 28
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -594,9 +599,9 @@ Unlimited free travel, and the gate cannot tell.
 
 **RENFE**
 
-```
+\```
 29
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -612,9 +617,9 @@ Then deadly derailments made travel temporarily free Fare security dropped down 
 
 **RENFE**
 
-```
+\```
 30
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -628,9 +633,9 @@ DEF CON 31's Money Glitch was all about this card Same idea as RENFE: a checksum
 
 **CHARLIECARD**
 
-```
+\```
 31
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -644,9 +649,9 @@ Their checksum and data modifiers relate two different cards That relationship c
 
 **CHARLIECARD**
 
-```
+\```
 32
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -664,9 +669,9 @@ output = the 2-byte trailer
 
 CHARLIECARD
 
-```
+\```
 33
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -676,20 +681,20 @@ R I D I N G F O R F R E E
 
 ###### Give it a UID, get the trailer
 
-```
+\```
 $ checksum.py
 UID  (4 bytes) : 04 48 5A 35
 Data (14 bytes): 00 00 ... 00 05 00 00 00 00
 Checksum       : 82 4B
-```
+\```
 
 Verified against all six known samples. RENFE folds a CRC and XORs the UID; CharlieCard appends it. Every card is its own algorithm.
 
 **CHARLIECARD**
 
-```
+\```
 34
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -727,9 +732,9 @@ Secure hardware inside every validator No public breaks in DESFire EV2 or EV3
 
 **BARCELONA**
 
-```
+\```
 36
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -743,9 +748,9 @@ The card is AES-128 and locked You reload trips from your phone That reload path
 
 **BARCELONA**
 
-```
+\```
 37
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -760,9 +765,9 @@ Patch the app to drop cert pinning, sit in the middle, and the whole protocol is
 
 **BARCELONA**
 
-```
+\```
 38
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -779,9 +784,9 @@ The server trusted whatever the phone reported. It never checked.
 
 **BARCELONA**
 
-```
+\```
 39
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -800,9 +805,9 @@ Card keeps the trips. Money comes back. Repeat.
 
 **BARCELONA**
 
-```
+\```
 40
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -826,9 +831,9 @@ Solid card crypto, undone by trusting the messenger.
 
 **BARCELONA**
 
-```
+\```
 41
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -844,9 +849,9 @@ The response was control, not the architecture fix I recommended.
 
 **BARCELONA**
 
-```
+\```
 42
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -866,9 +871,9 @@ Migrating millions of cards, **spend millions**
 
 **ETHICS**
 
-```
+\```
 43
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -882,9 +887,9 @@ R I D I N G F O R F R E E
 
 **ETHICS**
 
-```
+\```
 44
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -904,9 +909,9 @@ The same card in two cities, minutes apart
 
 **FIX**
 
-```
+\```
 45
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -922,9 +927,9 @@ Balances that always look plausible Switch stations, switch patterns Every ticke
 
 **FIX**
 
-```
+\```
 46
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -938,9 +943,9 @@ More inspectors punish honest riders And still miss the careful attacker The fix
 
 **FIX**
 
-```
+\```
 47
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -986,9 +991,9 @@ C O N S
 
 **FIX**
 
-```
+\```
 48
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -1002,9 +1007,9 @@ No balance on the card, no physical hack It becomes an API and account-fraud pro
 
 **FIX**
 
-```
+\```
 49
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -1038,9 +1043,9 @@ R I D I N G F O R F R E E
 
 ### Demo  -  Renfe
 
-```
+\```
 52
-```
+\```
 
 R I D I N G F O R F R E E
 
@@ -1072,9 +1077,9 @@ R I D I N G F O R F R E E
 
 ##### Aidan Nakache
 
-```
+\```
 luu176   ·   github.com/luu176   ·   Metroflip
-```
+\```
 
 prior work & credit Dismantling MIFARE Classic (2008)  ·  Boston Money Glitch (DC31)  ·  Unsaflok (DC32) BreakMeIfYouCan, Ultralight 3DES/AES (eprint 2026/100) Metrodroid  ·  Proxmark3  ·  ChameleonUltra
 

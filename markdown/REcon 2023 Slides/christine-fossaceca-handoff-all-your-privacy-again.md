@@ -8,13 +8,17 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Christine Fossaceca_Handoff All Your Privacy (Again) .pdf"
 pages: 184
 sha256: "288523c20e41b4a5f9c0883aa9a62e2e128e01cdf06a295279acdbc4007ce0c1"
-text_chars: 79465
-ocr_pages: 78
+text_chars: 53964
+ocr_pages: 73
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.1
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:25:42Z"
+converted_at: "2026-08-12T06:03:09Z"
 ---
 # Handoff All Your Privacy (Again)
 
@@ -22,16 +26,17 @@ converted_at: "2026-08-11T23:25:42Z"
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Christine Fossaceca_Handoff All Your Privacy (Again) .pdf` (184 pages)
 
+
 ## Slide 1
 
-```
+\```
 Handoff All Your
 Privacy(Again)
-```
+\```
 
-```
+\```
 By Christine Fossaceca
-```
+\```
 
 ## Slide 2
 
@@ -43,33 +48,24 @@ By Christine Fossaceca
 
 my dog Honey(pot)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 65/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Swhoami
 4ihome/christine $ c
 , PODCAST
-: a@x71n3 my dog Honey(pot)
 ```
 
 ## Slide 4
 
-```
+\```
 STREAM SEASON 2 NOW!
-```
+\```
 
-```
+\```
 @herhaxpodcast
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-STREAM SEASON 2 NOW!
-w
-hur fox
-@herhaxpodcast 6 PODCAST
-```
+\```
 
 ## Slide 5
 
@@ -103,14 +99,14 @@ Continuity Protocol Explained _It’s not a bug, it’s a feature!_
 
 ● And how are you capturing this?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 So you might be wondering...
 e What types of information are being sent in the clear?
 continuity
 Activities [=] Terminal Mon 23:08 @
-—s
 wonder@ubuntu: ~/bluetooth
 Trash
 File Edit View Search Terminal Help VMware Fusion
@@ -136,7 +132,6 @@ i activate In-System Programming (ISP) mode
 p get microcontroller Part ID
 -s get microcontroller serial number
 -x xmas Lights
-wonder@ubuntu:~/blLuetooth$
 e And how are you capturing this?
 ```
 
@@ -164,18 +159,13 @@ e And how are you capturing this?
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6
 Packet Header
 Advertising Address - xx:xx:xx:xx:xx:Xxx
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 10
@@ -186,16 +176,12 @@ Apple BLE Frame Format
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data | Apple Type 00 00 18 00 fb G8 OO BO 36 75 Oc BO OO 62 9 OO 6u---b
 Apple Length Variable Length Apple Data 75 da 7d 14 62 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-Apple BLE Frame Format
 ```
 
 ## Slide 11
@@ -206,16 +192,12 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data | Apple Type 00 00 18 00 fb G8 OO BO 36 75 Oc BO OO 62 9 OO 6u---b
 Apple Length Variable Length Apple Data 75 da 7d 14 62 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-Apple BLE Frame Format
 ```
 
 ## Slide 12
@@ -236,18 +218,14 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 nee Mi : 6u---b
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type : : ‘ ue ‘ 6u---b
 , |d6_be 89 se}oo 14 be 7b {
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa [us be ss se]oo 06 ic e7 u-} L
-Apple BLE Frame Format
 ```
 
 ## Slide 14
@@ -258,17 +236,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ae A 6u---b
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ae ‘ 6u---b
 Apple Length Variable Length Apple Data 00 14 be 7b {
-Apple BLE Frame Format
 ```
 
 ## Slide 15
@@ -279,17 +253,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ae u : 6u---b
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ae ‘ 6u---b
 Apple Length Variable Length Apple Data 00 14 be 7b {
-Apple BLE Frame Format
 ```
 
 ## Slide 16
@@ -300,19 +270,12 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ae u : 6u---b
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ ‘ 6u---b
-, 00 14]}bc 7b {
-mpale Leneih Variable Length pple sts 75 da 7d 14 02 01 6 Oa ff 4c 00 10 ea a4)pe ey u-} L
-Apple BLE Frame Format
-[eaa]en of w @--0
 ```
 
 ## Slide 17
@@ -323,17 +286,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ae A : 6u---b
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type é ‘ : ‘ Oe ‘ 6u---b
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-Apple BLE Frame Format
 ```
 
 ## Slide 18
@@ -344,18 +303,14 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 ae u : : 6u---b
 Packet_ Header } } 17 df "h B B
 Advertising Address - xx:xx:xx:xxX!XX:XX |
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ Oe ‘ 6u---b
 Apple Length Variable Length Apple Data 75 da 7d 14 02 01 06 Oa ff 4c 00 10 05 06 ic e7 u-} L
-Apple BLE Frame Format
 ```
 
 ## Slide 19
@@ -366,19 +321,14 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 nee Mi : ‘ 6u---b
-Packet_ Header ( } } i7 df "h B B
 Advertising Address - xx:xx:xx:xxX!XX:XX |
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ ‘ : ‘ Oe ‘ 6u---b
 Apple Length Variable Length Apple Data [7s da 7d 14]o2 01 06 Oa ff 4c 00 10 05 O6 TEST U} L
 de R
-Apple BLE Frame Format
 Jo 6
 ```
 
@@ -404,20 +354,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
-; {
 Apple Length Variable Length Apple Data 92 01 06 0a ff 4c 00 10 05 06 1c e7 U} L
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 22
@@ -428,21 +371,15 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
 Advertising Address - xx:xx:xx:XxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-a |
 | Type -OxFF | Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
-; {
 Apple Length Variable Length Apple Data 92 01 06 0a ff 4c 00 10 05 06 1c e7 U} L
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 23
@@ -453,21 +390,15 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
 Advertising Address - xx:xx:xx:XxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-a |
 | Type -OxFF | Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
-; {
 Apple Length Variable Length Apple Data 92 01 06 6a ff 4c 00 10 05 06 1c e7 U} L
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 24
@@ -478,21 +409,15 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
 Advertising Address - xx:xx:xx:XxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-a |
 | Type -OxFF | Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type ‘ f : \ oe ( \ 6u b
-; {
 Apple Length Variable Length Apple Data 92 01 06 6a ff 4c 00 10 05 06 1c e7 U} L
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 25
@@ -505,20 +430,15 @@ _It’s not a bug, it’s a feature!_
 
 Length only                 7 Bytes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es ‘i oe ‘ : 6u---b
 Packet Header aed — "h B B
 Advertising Address - xx:xx:xx:XxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Length only 7 Bytes
-a |
 | Type -OxFF | Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type ‘ ‘ 5 é ua : ‘ 6u---b
 Apple Length Variable Length Apple Data Beraives ca [rac ais os Of ice?” w.} A {
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 26
@@ -531,10 +451,10 @@ _It’s not a bug, it’s a feature!_
 
 Length only                 7 Bytes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 Sa 6u---b
 Packet Header ; _- ae "h B B
 Advertising Address - xx:xx:xx:XxX!XX:XX
@@ -542,9 +462,7 @@ Length / Type - 0x01 / Flags (Optional) Length Length only 7 Bytes
 | Type -OxFF | Company ID - 0x004C Apple Type
 | Apple Length | Variable Length Apple Data | Apple Type | ; al ; ‘ 6u b
 | Apple Length | Variable Length Apple Data | ) 02 01 06 Ga ff 4c 00 10 05 06 ic e7 u-} L {
-Apple BLE Frame Format
 6u b
-Ww @--o
 ```
 
 ## Slide 27
@@ -683,19 +601,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Access Address - 0x8E89BED6 oF es : oe ‘ : 6u---b
 Packet Header aed — "h B B
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type oe ( \ 6u b
 Apple Length Variable Length Apple Data mesesice? wt A {
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 38
@@ -706,19 +618,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 Sa 6u---b
 Packet Header aed — "h B B
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type ‘ ‘ 5 é ua : ‘ 6u---b
 Apple Length Variable Length Apple Data ; “Tiles 06 ice? u} A {
-Apple BLE Frame Format
-Ww @--o
 ```
 
 ## Slide 39
@@ -730,13 +636,11 @@ _It’s not a bug, it’s a feature!_
 |0xb|
 |---|
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Message Dec Hex
-Type Value | Value ie ? 6u---b
-; aeels Mee “h
 AirDrop 5 0x05 12]02 00 00 90 88 04 °
 Proximity 7 0x07
 Pairing
@@ -760,18 +664,14 @@ _It’s not a bug, it’s a feature!_
 |---|
 |0xb|
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
-KS
-Type Value Value Sage Types i oe bu. -b
-; aeels Mee “h
 AirDrop 5 0x05 12]02 00 00 90 88 04 t °
 Proximity 7 0x07 ?
 Pairing
-Hey Siri 8 0x08 OS 6u: <b :
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
@@ -791,17 +691,13 @@ Type 18: Find My
 0xb
 Apple Message Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
-KS
-Type Value Value Sage Types i oe bu. -b
 AirDrop 5 0x05 12]02 00 00 90 88 04 ” t °
-Proximity 7 0x07 ? oo
 Pairing Type 18: Find My
-Hey Siri 8 0x08 OS 6u: <b :
 Switch
 Handoff 12 Oxc
 Instant 14 Oxfe “a 6u---b
@@ -821,13 +717,11 @@ Type 18: Find My  ✨samteplov.com✨
 0xb
 Apple Message Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
-S
-Type Value Value Sage Types i oe bu. -b
 AirDrop 5 0x05 12]02 00 00 90 88 04 t °
 Proximity 7 0x07 ? .
 : samteplov.com
@@ -853,15 +747,13 @@ Type 18: Find My
 Type 16: Nearby
 Apple Message Types
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex APPle Me
 S
-Type Value Value Sage Types 4 ; bu. -b
 AirDrop 5 0x05 12]02 00 00 90 88 04 ” t °
-Proximity 7 0x07 ? oo
 Pairing Type 18: Find My
 Hey Siri 8 0x08 oe 6u---b :
 Switch
@@ -896,12 +788,11 @@ _It’s not a bug, it’s a feature!_
 
 Type 16: Nearby
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex Apple Me
-S
 Type Value | Value Sage Typ es
 AirDrop 5 0x05
 Proximity 7 0x07 ?
@@ -928,19 +819,13 @@ Type 16: Nearby
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 : i {
 Packet Header 52 b4 a7 aa de R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type 16: Nearby
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 47
@@ -953,19 +838,13 @@ Type 16: Nearby
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 : i {
 Packet Header 52 b4 a7 aa de R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type 16: Nearby
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 48
@@ -978,20 +857,14 @@ Length = 5
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 : a si {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
-Advertising Address - xx:xx:xx:xxX!XX:XX
 - Length =5
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 49
@@ -1004,19 +877,13 @@ CRC
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 : ‘ a é {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 50
@@ -1027,19 +894,13 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 : ‘ a é {
 10}O5)06 ic e7 u-} L
 Packet Header 52 b4 a7 aa de R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 51
@@ -1050,18 +911,12 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 i {
 Packet Header 52 b4 fl R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 52
@@ -1075,18 +930,12 @@ _It’s not a bug, it’s a feature!_
 06 1c
 0000 0100 0001 1100
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ 4 f {
 Packet Header 52 b4 R
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 06 1c
 0000 0100 0001 1100
 ```
@@ -1148,19 +997,13 @@ Type 12: Handoff
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header ' ~~ Ge 00 e3 Oe ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type 12: Handoff
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 56
@@ -1173,19 +1016,13 @@ Length = 14
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w @--0
 Packet Header ' “a Ge} 00 e3 Oe ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Length = 14
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 57
@@ -1198,18 +1035,11 @@ CRC
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 : w 4 @--0
-Packet Header ' , 00 e3 Oe ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 58
@@ -1220,18 +1050,12 @@ _It’s not a bug, it’s a feature!_
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w @--0
 Packet Header ' , 00 e3 Ge ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 59
@@ -1244,18 +1068,12 @@ Cut/Copy performed
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w 4 @--0
-Packet Header , nea ko €3 Ge ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type Cut/Copy performed
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 60
@@ -1268,18 +1086,13 @@ IV Seq Num
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header : otha ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type IV Seq Num
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 61
@@ -1292,18 +1105,13 @@ Auth Tag
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header , » ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Auth Tag
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 62
@@ -1316,18 +1124,13 @@ Encrypted Payload
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 ‘ w 4 @--0
 Packet Header ol vt ~ L
-Advertising Address - xx:xx:xx:xxX!XX:XX
 Length / Type - 0x01 / Flags (Optional) Length Encrypted Payload
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 63
@@ -1351,10 +1154,10 @@ _It’s not a bug, it’s a feature!_
 
 0xb Type 7: Proximity Pairing
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message
 Type
 AirDrop
@@ -1406,18 +1209,12 @@ Type 7: Proximity Pairing
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
 Type 7: Proximity
 Pairing
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 66
@@ -1430,18 +1227,12 @@ Length =25
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 pias (Belinea UaSeR enews 99 8f 01 00 64 cc 89 33 65 18 72 38 C9 3e te 39 3 e-r3->-9
-Advertising Address - xx:xx:xx:xxX!XX:XX
 Length =25
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 67
@@ -1454,19 +1245,13 @@ Airpods Prefix
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-_ 19fo1jof 20 23° v-[&-0-- L #
 Access Address - 0x8E89BED6 99 8f @1 00 4 cc 89 33 65 18 72 sofa] or te 39 3 e-r3->-9
 Advertising Address - xx:xx:xx:xx:!XX!XX
-Length / Type - 0x01 / Flags (Optional) Length
 Airpods Prefix
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 68
@@ -1479,17 +1264,13 @@ Apple BLE Frame Format
 
 Device Model
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-— 19 o1fef 20]23  v-[&-o-- L #
 Access Address - 0x8E89BED6 99 8f 01 00 04 cc 89 33 65 18 72 33 eafor 2e]23 3 e-r3->-9
 Advertising Address - xx:xx:xx:xx:!XX!XX
-Length / Type - 0x01 / Flags (Optional) Length
 Device Model
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
 Apple Length Variable Length Apple Data static const value_string airpods_device_vals[] = {
 { 0x0220, "AirPods 1" },
 @x0f20, “AirPods 2" },
@@ -1498,8 +1279,6 @@ Apple Length Variable Length Apple Data static const value_string airpods_device
 0x0520, “BeatsXx" },
 @x@620, “Beats Solo 3" },
 @, NULL}
-Apple BLE Frame Format
-AAA AS
 ```
 
 ## Slide 69
@@ -1512,17 +1291,13 @@ AAA AS
 
 Device Model
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
-— 19 o1fef 20]23  v-[&-o-- L #
 Access Address - 0x8E89BED6 99 8f 01 00 04 cc 89 33 65 18 72 33 eafor 2e]23 3 e-r3->-9
 Advertising Address - xx:xx:xx:xx:!XX!XX
-Length / Type - 0x01 / Flags (Optional) Length
 Device Model
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
 Apple Length Variable Length Apple Data static const value_string airpods_device_vals[] = {
 { 0x0220, "AirPods 1" },
 @x0f20, “AirPods 2" },
@@ -1531,8 +1306,6 @@ Apple Length Variable Length Apple Data static const value_string airpods_device
 0x0520, “BeatsXx" },
 @x@620, “Beats Solo 3" },
 @, NULL}
-Apple BLE Frame Format
-AAA AS
 ```
 
 ## Slide 70
@@ -1569,17 +1342,12 @@ Left Airpod Right Airpod Is charging?  Case
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-TS Ree ~QSFROREDG 99 arferfee B4'cr ee" as 65 1872 a3 co Se le 39 wk. 8 @.ra.>-9
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Lid Open Count
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 73
@@ -1592,14 +1360,12 @@ Apple BLE Frame Format
 
 ###### **Device Color**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-peas Adee ONS FRIEERG 99 at 01 bop: ean oo 18 72 33 co 30 ie 30 ere 361328
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Device Color
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length | Variable Length Apple Data Apple Type { 0x00, “White” },
 Apple Length Variable Langtli ApplaData { @x01, "Black" },
 { @x@2, "Red" },
@@ -1625,18 +1391,13 @@ Apple BLE Frame Format { 0x04, "Pink" },
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-sree MAb ~/ORSPROREDS 99 af 01 e0[ea] ec Benss 65 18 72 33 C8 3e ie 30 ee 361328
 Packet Header 28 f5 al 79°EMb1 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Airpods Suffix
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 75
@@ -1649,18 +1410,13 @@ Apple BLE Frame Format
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-Access Add: Ox8E89BED6 dono ef os ov [eo 1 #
 Packet Header 28 f5 al 79 ef|bi1 83 52 (--y---R
 Advertising Address - xx:xx:xx:xx:!XX!XX
 Length / Type - 0x01 / Flags (Optional) Length Encrypted Data
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 76
@@ -1673,17 +1429,11 @@ Apple BLE Frame Format
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-sree MAb ~/ORSPROREDS 99 Sf 61 OD Ste TnEnay 65 18 72 33 C8 3e ie 30 ee 361328
 Advertising Address - xx:xx:xx:xx:!XX!XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 77
@@ -1713,7 +1463,8 @@ please!!
 
 🔥 **`Demo Backup`**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo Backup @
@@ -1746,14 +1497,6 @@ v AirPods Battery Levels & Charging Status
 
 Continuity Protocol Explained _It’s not a bug, it’s a feature!_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-'‘ AirTag stalking: Whatisit,andhow ~»,.
-can | avoid it? "tt,
-```
-
 ## Slide 83
 
 ##### Con3nuity Protocol Explained
@@ -1764,10 +1507,10 @@ _It’s not a bug, it’s a feature!_
 
 Type 18: Find My
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Message Dec Hex
 Type Value Value 6u---b
 Proximity 7 0x07 _
@@ -1814,23 +1557,17 @@ _It’s not a bug, it’s a feature!_
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Continuity Protocol Explained
 31
 Access Address - 0x8E89BED6
 Packet Header
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
 6u b
 6u b
-Z ~%U>
 ```
 
 ## Slide 87
@@ -1843,18 +1580,12 @@ Apple BLE Frame Format
 
 PAUSE: WHY ARE THESE DIFFERENT?!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained _ !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 i i i i 6u b
-Packet Header " zs *- U>
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 Apple Length ] Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-6u---b
 PAUSE: WHY ARE THESE DIFFERENT?!
 ```
 
@@ -1886,7 +1617,8 @@ PAUSE: WHY ARE THESE DIFFERENT?!
 
 The State Machine of the AirTag
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ The State Machine of the AirTag
@@ -1901,7 +1633,8 @@ Separated
 
 The State Machine of the AirTag
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ The State Machine of the AirTag
@@ -2311,18 +2044,14 @@ Length  = 25
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 | i 6u : b
-: %U>
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN S ted
 eparate
 [ Apple Length | Variable Length Apple Data Apple Type Length =25 p
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 120
@@ -2443,19 +2172,14 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 6u : b
-%U>
 Packet Header T L b
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 128
@@ -2471,19 +2195,14 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 6u : b
-%U>
 Packet Header T L b
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 129
@@ -2499,19 +2218,14 @@ Separated
 “Public Key Bits"
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 6u : b
-%U>
 Packet Header T L b
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 130
@@ -2543,19 +2257,14 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 6u : b
-%U>
 Packet Header T L b
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 132
@@ -2571,19 +2280,14 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
 Access Address - 0x8E89BED6 6u : b
-%U>
 Packet Header T L b
-Length / Type - 0x01 / Flags (Optional) Length
 Type - OxFF Company ID - 0x004C Apple Type NN
 ; Separated
-Apple Length | Variable Length Apple Data Apple Type
-Apple Length Variable Length Apple Data
-Apple BLE Frame Format
 ```
 
 ## Slide 133
@@ -2600,7 +2304,8 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Continuity Protocol Explained
@@ -2611,13 +2316,9 @@ Separated
 31
 Access Address - 0x8E89BED6
 Packet Header
-Advertising Address - xx:xx:xx:xxX!XX:XX
-Length / Type - 0x01 / Flags (Optional) Length
-Type - OxFF Company ID - 0x004C Apple Type
 [ Apple Length | Variable Length Apple Data Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
 12 filo] fo 62
 NL Separated
@@ -2783,14 +2484,6 @@ No GPS but… BLUETOOTH!
 
 airtag
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-No GPS but... BLUETOOTH! 6)
-6 ° PubKey
-```
-
 ## Slide 150
 
 ##### Continuity Protocol Explained
@@ -2815,17 +2508,6 @@ No GPS but… BLUETOOTH!
 
 airtag
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-Apple Server
-»
-No GPS but... BLUETOOTH! 0
-0G ° PubKey
-airtag
-```
-
 ## Slide 152
 
 ##### Continuity Protocol Explained
@@ -2837,16 +2519,6 @@ Apple Server
 No GPS but… BLUETOOTH!
 
 airtag
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-@ Continuity Protocol Explained — !t’snota bug, it’s a feature!
-Apple Server
-No GPS but... BLUETOOTH! 0
-0G ° PubKey
-airtag
-```
 
 ## Slide 153
 
@@ -2931,36 +2603,36 @@ Every 15 minutes, a new key pair public pi and private di are generated, and the
 
 ##### All the math
 
-```
+\```
 1) ephemeral key is generated (extraction)
 SKSi = KDF(SKSi-1, “update”, 32)
-```
+\```
 
-```
+\```
 2)expansion of key pair
-```
+\```
 
 **`(ui , vi) = KDF(SKSi , “diversify”, 72` )**
 
-```
+\```
 3) Reduce into P-224 valid scalars
-```
+\```
 
 **`ui = ui(mod q-1) + 1` (** where q is the order of the base point G of the P-224 elliptic curve.) **`vi = vi(mod q-1) + 1`**
 
-```
+\```
 4)Generate pi  and di
 di = (d0*ui) + vi
-```
+\```
 
-```
+\```
 pi = (di *G )
-```
+\```
 
-```
+\```
 Where * is the dot product,  G is the point generator and the original public key
 is (d0,p0)
-```
+\```
 
 ## Slide 160
 
@@ -3040,35 +2712,30 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
-90
 98
 54
 c6
-3T
 0 7
 90
 85
 Q7
-7a
-Q2
 18
 d7
 14
 23
 3e
 00
-Ob
 d9
 18
 d5
 15 16
 Tb
 17
-ie
 60
 39
 90
@@ -3095,9 +2762,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 165
@@ -3110,35 +2775,30 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
-90
 98
 54
 c6
-3T
 0 7
 90
 85
 Q7
-7a
-Q2
 18
 d7
 14
 23
 3e
 00
-Ob
 d9
 18
 d5
 15 16
 Tb
 17
-ie
 60
 39
 90
@@ -3165,9 +2825,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 166
@@ -3180,35 +2838,30 @@ Separated
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
-90
 98
 54
 c6
-3T
 0 7
 90
 85
 Q7
-7a
-Q2
 18
 d7
 14
 23
 3e
 00
-Ob
 d9
 18
 d5
 15 16
 Tb
 17
-ie
 60
 39
 90
@@ -3235,9 +2888,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 167
@@ -3254,22 +2905,18 @@ Bytes 0-5
 
 ###### Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
 28 byte key
-90
 98
 54
 c6
-3T
 0 7
 90
 85
-Q7
-7a
-Q2
 18
 d7
 14
@@ -3283,7 +2930,6 @@ d5
 15 16
 Tb
 17
-ie
 60
 39
 90
@@ -3311,9 +2957,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 168
@@ -3330,22 +2974,18 @@ Bytes 0-5
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
 28 byte key
-90
 1 98
 2 54
 c6
-3T
 0 7
 90
 85
-Q7
-7a
-Q2
 18
 d7
 14
@@ -3387,9 +3027,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 169
@@ -3406,22 +3044,18 @@ Bytes 0-5
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
 28 byte key
-90
 1 98
 2 54
 c6
-3T
 0 7
 90
 85
-Q7
-7a
-Q2
 18
 d7
 14
@@ -3463,9 +3097,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 170
@@ -3482,15 +3114,14 @@ Bytes 0-5
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
-90
 1 98
 2 54
 c6
-3T
 28 byte key
 15 16
 Tb
@@ -3498,7 +3129,6 @@ Tb
 ie
 60
 39
-08 oO
 Oa 16
 fF Ac
 35 3e
@@ -3519,9 +3149,7 @@ Variable Length Apple Data
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 171
@@ -3538,21 +3166,18 @@ Bytes 0-5 Bytes 6-27
 
 Apple BLE Frame Format
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 é Creative Key Storage
-90
 1 98
 2 54
 c6
-3T
 28 byte key
 90
 85
-Q7
 7a
-Q2
 18
 d7
 14
@@ -3560,7 +3185,6 @@ d7
 3e
 00
 @b
-dg
 18
 d5
 15 16
@@ -3569,7 +3193,6 @@ Tb
 le
 60
 39
-08 oO
 Oa 16
 fF Ac
 35 3e
@@ -3591,9 +3214,7 @@ Apple Type
 Apple Type
 Apple Length
 Variable Length Apple Data
-Apple BLE Frame Format
 It’s not a bug, it’s a feature!
-separated
 ```
 
 ## Slide 172
@@ -3775,9 +3396,9 @@ Pages 41-64,https://doi.org/10.1016/B978-1-59749-283-6.00003-9. (https://www.sci
 
 ## Slide 182
 
-```
+\```
 Questions?
-```
+\```
 
 <u>christine@herhaxpodcast.com</u> @x71n3 on Twitter
 

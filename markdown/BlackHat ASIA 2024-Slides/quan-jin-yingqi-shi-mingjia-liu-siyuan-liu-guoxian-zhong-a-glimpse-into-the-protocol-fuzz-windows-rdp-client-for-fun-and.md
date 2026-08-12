@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Quan Jin & Yingqi Shi & Mingjia Liu & Siyuan Liu & Guoxian Zhong-A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit.pdf"
 pages: 52
 sha256: "a3db466a7479bc06489ac51d10d06381c984160d241350c9c7df82bf436ff585"
-text_chars: 22335
-ocr_pages: 19
+text_chars: 18242
+ocr_pages: 18
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:51:01Z"
+converted_at: "2026-08-12T04:50:39Z"
 ---
 # A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit
 
 **Speakers:** Quan Jin, Yingqi Shi, Mingjia Liu, Siyuan Liu, Guoxian Zhong  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Quan Jin & Yingqi Shi & Mingjia Liu & Siyuan Liu & Guoxian Zhong-A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit.pdf` (52 pages)
+
 
 ## Slide 1
 
@@ -120,19 +126,13 @@ https://msrc.microsoft.com/report/vulnerability
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 RDP Client Attack
 ¢ Victims connect malicious server using mstsc.exe
 A Remote Desktop
-|
-— “=>s) Connection
-. I]
-y=
 |
 |
 Malicious RDP Server
@@ -147,16 +147,13 @@ Internal Network
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 RDP Server Attack
 e Attackers take control of the RDP Server using mstsc.exe
 A. Remote Desktop
-~o2s) Connection
 Internal Network
 ```
 
@@ -188,14 +185,11 @@ Internal Network
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Previous Works
-bisek hat
 EUROPE 2019
 DECEMBER 2-S, 2019
 Excel LONDON, UK
@@ -232,22 +226,18 @@ https://www.sstic.org/media/SSTIC2022/SSTIC-actes/fuzzing_microsofts_rdp_client_
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 RDP Virtual Channel
 [MS-RDPEDYC] tunnels the following protocols: The following protocols are tunneled within an [MS-RDPBCGR] static virtual channel:
-* XPS Printing Virtual Channel Extension [MS-RDPEXPS] *  Multiparty Virtual Channel Extension [MS-RDPEMC
+* XPS Printing Virtual Channel Extension [MS-RDPEXPS] * Multiparty Virtual Channel Extension [MS-RDPEMC
 * Plug and Play Devices Virtual Channel Extension [MS-RDPEPNP} * Clipboard Virtual Channel Extension [MS-RDPECLIP]
 * Video Virtual Channel Extension [MS-RDPEV} * Audio Output Virtual Channel Extension [MS-RDPEA]
 Audio Input Virtual Channel Extension [MS-RDPEAT * Remote Programs Virtual Channel Extension [MS-RDPERP
 . omposited Remoting xtension * Dynamic Channel Virtual Channel Extension [MS-RDPEDYC
-= USB Devices Virtual Channel Extension [MS-RDPEUSB . . . _ .
 « File System Virtual Channel Extension [MS-RDPEFS
-* Graphics Pipeline Extension [MS-RDPEGFX . . .
 = Serial Port Virtual Channel Extension [MS-RDPESP
 * Input Virtual Channel Extension [MS-RDPEI
 * Print Virtual Channel Extension [MS-RDPEPC
@@ -322,12 +312,10 @@ https://github.com/Team-BT5/WinAFL-RDP
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Fuzzing Architecture #1
 Client Host Server Host
 e Loop |
@@ -355,12 +343,10 @@ https://github.com/cyberark/rdpfuzz
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Fuzzing Architecture #2
 ° Proxy Client Host Server Host
 afl-fuzz.exe Send Mutation
@@ -384,29 +370,22 @@ https://github.com/Team-BT5/WinAFL-RDP
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Choose Fuzzer
 Client Host
 afl-fuzz.exe
-y
 Coverage
-winafl.d1l
 I
 Execute
 mstsc.exe
 |
-mstscax.dll ¢
-/
 Target Function
 Start
 Send Mutation
 Loop
-Ly
 End
 Send Normal Message
 Server Host
@@ -429,12 +408,10 @@ Regular Expr: **.*::OnDataReceived**
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Before Fuzzing
 4 Protocol Examples
 ¢ Target
@@ -443,12 +420,8 @@ The following is an annotated dump of an initialization sequence using virtual c
 e Seeds transfer, as specified in section 1.3.2.1.
 4.1.1 Server Audio Formats and Version PDU
 Fal NamedPipeClientChannel:: OnDataReceived(ulong, uchar *) The following is an annotated dump of a Server Audio Formats and Version PDU.
-[¥] RdpDisplayControlChannel :: OnDataReceived(ulong,uchar *)
 (#] CSndInputChannelCallback :: OnDataReceived(ulong,uchar *)
-(¥] CUrbDrPlugin :: OnDataReceived(ulong,uchar *)
 [7] CTsUsbDevice :: OnDataReceived(ulong,uchar *)
-(¥] CClientHandler :: OnDataReceived(ulong,uchar =)
-(#] CRimChannel :: OnDataReceived(ulong,uchar *)
 (¥] CRIMObjManager :: OnDataReceived(uchar *,ulong)
 |] CRIMStreamProxy :: OnDataReceived(CMemory *)
 (|¥] CRIMStreamStub :: OnDataReceived(CMemory *)
@@ -484,28 +457,23 @@ Regular Expr: .*::OnDataReceived
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Environment Preparation #1
 2 Virtual Machines
 1 Virtual Machines + RDPWrap
-rdpwrap / res / rdpwrap.ini_ (O
 © binarymaster INI: Add support for new builds (fix #586)
 Code
 Blame 4998 lines (4662 loc) 124 KB
 ; RDP Wrapper Library configuration
 ; Do not modify without special knowledge
 [Main]
-Updated=2018-10-16
 © stascorp / rdpwrap
 © 495Open vy 1,973 Closed
 © 10.0.22621. 1
 #2536 opened 3 day o by loyejaotdiqr47123
-© 10.0.260801 EE
 #2534 opened 4 days ago by loyejaotdiqr47123
 © Support Windows 10.0.19041.4239 @EEDaD
 #2529 opened last week by CStolle4
@@ -531,11 +499,10 @@ Updated=2018-10-16
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 WinAFL 1.16b based on AFL 2.43b (mstsc.exe)
 0 days, 0
 0 days, 0
@@ -584,12 +551,10 @@ yet
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
-—_ DESTINATION
 VET FOIE WIN-OF7C
 Select one or more roles to install on the selected server.
 Roles Description
@@ -602,7 +567,6 @@ Netw ork Controller to configure a Virtual machine-
 Network Policy and Access Services (Installed) based or a Session-based deskt
 Print and Document Services deployment
 Remote
-@MOOSO0080L
 Remote Desktop Gatew
 Remote Desktop Licensing (Installed)
 n Host (Installed)
@@ -654,51 +618,30 @@ Cancel
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2024
 2
-LODWORTE
-(voice
 *(_DWOF
 = 32
 }
 else
 {
-*(_DWOF
 = Ug
-DynArray<
-if ¢!
-CRIMOb jMz
 }
 CRIMObjManz
-Ofoway suaysibay Ajquiassesiq
-i |
 Break Go
 Home View Breakpoints Time Travel Model Scripting Source Memory Command
 {} Step Out {'} Step Out Bac © Restart =) | lel E) @ Fy
-: lo101
 {*} Step Into {*} Step Into Back _ @ Stop Debugging — |=
 Go Settings |Source| Assembly Local Feedback
-~ {}' Step Over *{} Step Over Back gp. & Detach Help >
-ModLoad: @8ee7ffb f9e7e08e BEEe7FTb Fae4seee C: \WINDOWS\SYSTEM32\urlmon.d11
-ModLoad: @eee7ffb fcaageee eeGe7Ffb fcd6eeee@ C:\Windows\System32\iertutil.d1ll
 (18c8.23f@): Access violation - code ceeeeees (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 mstscax! CRIMObjManager: : ExchangeCapabilities+@xcs:
 eeee7ffb cfc31485 efba6s5cle bts dword ptr [rax+5Ch],1Eh ds:@eeeeeee eeGeReSc=????????
-@:021> k
 # Child-sP RetAddr Call Site
-8@ 889000029" 976FFa7e E@GE7FFb cfc2cdb4 mstscax! CRIMObjManager: : ExchangeCapabilities+@xc5
-@1 989000029" 976FFb2e eeee7FFb cfc2c241 mstscax! CStubIRIMCapabilitiesNegotiator<IRIMCapabilitiesNegoti
-82 99@08029° 976FFb5e eeee7Ffb cfbbSecé6 mstscax! CStubIRIMCapabilitiesNegotiator<IRIMCapabilitiesNegotii
-@3 eee88029° 976FFfb8e eeGe7FTb cfc3274a mstscax! CStub<IMMClientNotifications>: : Invoke+0x76
-84 98000029 976FFcee eeBE7FTb cf68306c mstscax!CRIMStreamStub: :OnDataReceived+0x9a
-85 88000029" 976FFc4e eA8E7FFb cf6293a2 mstscax! CRIMObjManager: :OnDataReceived+0x148
-Re ANAAnArAN* ateLL-dAn_ Anant£Lh* -£r Leet eS SEE EE ee nt ee ie Le
 4
 T Entry
 ```
@@ -708,16 +651,6 @@ T Entry
 ### Check & Doubt
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseachat a —
-ASIA 2024
-Check & Doubt
-<000-0TARS
-LATER
-```
 
 ## Slide 36
 
@@ -735,12 +668,10 @@ https://i.blackhat.com/BH-US-23/Presentations/US-23-YukiChen-Diving-into-Windows
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 New Fuzzer
 ¢ Developed a simple Fuzzer
 A Simple Fuzzer for Quick Proofing
@@ -754,9 +685,6 @@ e Developed a simple fuzzer:
 GREAT TRUTHS.
 ARE ALL SIMPLE
 i
-£3
-.
-4
 &
 ```
 
@@ -768,47 +696,52 @@ i
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 88/100 on the text kept, 66/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 2024
 New World
-1
-ModLoad: @eee7ffb fbbseeee eeee7Ffb fbbaseee  C:\WINDOWS\SYSTEM32\edputil.dil
-bd Got a few crashes In days (1d7@.ff@): Access violation - code ceeeeees (first chance)
+
+• Got a few crashes in days
+• Manual auditing
+
+ModLoad: 00007ffb`fbb80000 00007ffb`fbba8000    C:\WINDOWS\SYSTEM32\edputil.dll
+(1d70.ff0): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 WebAuthn!I_ProcessRemoteRpcRequestOnClient+0x132:
-an it eeee7Fffb FF7E045e2 488902 mov qword ptr [rdx],rax ds:@@000000° G@000Q00=????????2???22??
-° anual auditing @:019> k
-# Child-sP RetAddr Call Site
-8@ eeeeeeae BE2FFSfe eQee7FFb FF7194e1 WebAuthn!I_ProcessRemoteRpcRequestOnClient+0x132
-@1 Geee8Gae 8E2FF97E BEGE7FFb cO5893a2 WebAuthn! WebAuthNDVCCallback: :OnDataReceived+O@xf1
-82 eeee8Rae 8E2FFa4e BEGE7FFb ce55667C mstscax!CDynvCChannel: :HandleAsyncCall+@xc2
-83 G0@00Gae 8O2Ffaae GEGE7FFb ce5882c3 mstscax!CDynVCThreadPoolThread: : ThreadPoolEntry+@xd8
-84 eeee8Gae 8E2FFb2e EEGE7FFb ceSf6FCc1 mstscax!CTSThread: :TSStaticThreadEntry+0x2a3
-85 Gee088ae 8E2FFb8A EEEe7FFC Bc951Fe7 mstscax!PAL_System_Win32_ThreadProcWrapper+0x31
+00007ffb`ff7045e2 488902          mov     qword ptr [rdx],rax ds:00000000`00000000=????????????????
+0:019> k
+ # Child-SP          RetAddr           Call Site
+00 000000ae`802ff8f0 00007ffb`ff7194e1 WebAuthn!I_ProcessRemoteRpcRequestOnClient+0x132
+01 000000ae`802ff970 00007ffb`c05893a2 WebAuthn!WebAuthNDVCCallback::OnDataReceived+0xf1
+02 000000ae`802ffa40 00007ffb`c055667c mstscax!CDynVCChannel::HandleAsyncCall+0xc2
+03 000000ae`802ffaa0 00007ffb`c05882c3 mstscax!CDynVCThreadPoolThread::ThreadPoolEntry+0xd8
+04 000000ae`802ffb20 00007ffb`c05f6fc1 mstscax!CTSThread::TSStaticThreadEntry+0x2a3
+05 000000ae`802ffb80 00007ffc`0c951fe7 mstscax!PAL_System_Win32_ThreadProcWrapper+0x31
+
 (7b30.6670): Unknown exception - code 000006ef (first chance)
-(7b30.8018): Unknown exception - code 00000é6ef (first chance)
+(7b30.8018): Unknown exception - code 000006ef (first chance)
 (7b30.35334): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 msvcrt!memcpy+0x17:
-00007FFb 2cc99597 4c8919 mov qword ptr [rex],r11 ds:00000229 Of2dffee=????7?277277227?772?
+00007ffb`2cc99597 4c8919          mov     qword ptr [rcx],r11 ds:00000229`0f2dffee=????????????????
 0:060> k
-# Child-sP RetAddr Call Site
-00 900000ad 318ff6a8 OOOO7FFb OF21F21d msvert! memcpy+0x17
-01 000000ad°318Ff6b0_ O0007F Fb" OF231b99 WINSPOOL ! PrivateWritePrinter+0x435
+ # Child-SP          RetAddr           Call Site
+00 000000ad`318ff6a8 00007ffb`0f21f21d msvcrt!memcpy+0x17
+01 000000ad`318ff6b0 00007ffb`0f231b99 WINSPOOL!PrivateWritePrinter+0x435
+
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
-xpsprint!Ordinal2+@x3d2:
-eeee7fFfc 3a049752 48832000 and qword ptr [rax],@ ds:00@001e3° 8811cd98=??????2??2???????
-@:075> k
-# Child-sP RetAddr Call Site
-@@ eee88086° 4317F620 EeGe7FFC 3aB4ac63 xpsprint!Ordinal2+@x3d2
-@1 9eeEE8e86° 4317F718 eEeGe7FFC 10e29a9e xpsprint!StartXpsPrintJob+0x193
+xpsprint!Ordinal2+0x3d2:
+00007ffc`3a049752 48832000          and     qword ptr [rax],0 ds:000001e3`8811cd98=????????????????
+0:075> k
+ # Child-SP          RetAddr           Call Site
+00 00000006`4317f620 00007ffc`3a04ac63 xpsprint!Ordinal2+0x3d2
+01 00000006`4317f710 00007ffc`10e29a9e xpsprint!StartXpsPrintJob+0x193
+
+[photo of a woman on a talk-show stage in a red dress, arms raised, holding a microphone]
 ```
 
 ## Slide 39
@@ -851,17 +784,14 @@ WINSPOOL!Ordinal361+0x182: 00007ffc`5080a942 83bfb000000002  cmp dword ptr [rdi+
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Case 02 - XPS Printer UAF
 ¢ Are there any other points?
 ¢ CreateThread() function
 ¢ Free and Use
-bifek hat
 USA 2@0e5
 Case Study - Call
 Thread 1 — Client sends Call-Disconnect-
@@ -894,16 +824,13 @@ Race Window
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Case 02 - XPS Printer UAF
 ¢ Variant analysis
 ¢ Targeted test
-THINGS |ARE NOT SIMPLE
 if ( printerRef )
 (*(*printerRef + 64164))(printerRef, 548164, this + 1804, @i164);// CTSCoreEventSource: :FireSyncNotification
 paramPtr = (this + 648);
@@ -917,7 +844,6 @@ goto LABEL_38;
 }
 printerRefPtr = (this + 1224);
 if ( W32DrAutoPrn: :W32DrOpenPrinter( this + 44, this + 153) )
-.
 : printerHandlePtr = *printerRefPtr; :
 tempVar2 = 0164; F | CXPSPrintJob2::CanPrintXPS (int *) . text
 *documentInfo = this + 1260; F| CXPSPrint Job2: :CheckXPSPrint ingProgressThreadPro-* . text
@@ -925,7 +851,6 @@ if ( IsXPSDriver(printerHandlePtr) == 1) |] CxPSPrintJob2: :Close (ulong) . text
 t docType = L"XPS_PASS"; Fi CXPSPrintJob2::CreateInstance(ushort const *,CXP*: .text
 } a - ? F|CXPSPrintJob2::Initialize(ushort const *) . text
 else # [CXPSPrint Job2: :Open(ushort const *, ulong, ulong, [°--] . text
-F | CXPSPrintJob2: :STATIC_CheckXPSPrintingProgressTh* . text
 Fa CXPSPrintJob2: : Terminate (void) . text
 ra CXPSPrintJob2::Write(uchar *, ulong) . text
 Fa CXPSPrint Job2: :XPSDataStreamIsOpen (void) . text
@@ -937,58 +862,25 @@ Fa CXPSPrint Job2: :XPSDataStreamIsOpen (void) . text
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Case O02 - XPS Printer UAF
 T zz
-; ; Go ~~ Settings |Source|/ Assembly Local Feedback
 {} Step Over Back Back & Detach Help ~
 Flow Contro Reverse Flow Contro End Preferences Help
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
-xpsprint! Ordinal2+0x3d2:
-Feak Go
 + {}* Step Over
-HS |
-a hb
-OHHHITHIS IS.A ODAY!
 * 7
-@1 Beee8e86° 4317F718
-@2 Bee88086° 4317F7CB
-83 Beee8086° 4317F858
-84 Geee8e86° 4317F890
-5 98880006 4317900
-86 98880806 4317F930
 7 89808806 4317F9a8
-@8 9eeeGe86 4317F9de
-@:875>
 Locals
 Name
-e0007FFc 10e29a9e
-@0007f Fc 1ed8abd7
-ee007fFc° 1ed89683
-eeee7fFc 1edg2cea
-@0007f Fc 10d82eb2
-eeee7fFc 6alf26bd
-ee007fFc° Gba8dfbs
-eeeeesee eeeeeeee
-| 9ee07ffc° 3a849752 48832000 and qword ptr [rax],@ ds:000001e3° 8811cd98=????2???2?2?2??????
-b @6:075> k
 # Child-SP RetAddr Call Site
-88 eeee8eR86 4317F628 EEGE7FFC 3a04ac63 xpsprint!Ordinal2+@x3d2
-xpsprint! StartXpsPrintJob+0x193
 mstscax!CXPSPrintJob2: :Open+@xi2e
-mstscax!W32DrAutoPrn: :StartXPSJob+8xb3
-mstscax!W32DrAutoPrn: :AsyncWriteIOFunc+0@x113
 mstscax! ThreadPool: :HandlePendingRequest+0x72
 mstscax! ThreadPool: :PooledThread+@x11le
-KERNEL32! BaseThreadInitThunk+@x1d
-ntd11!RtlUserThreadStart+0x28
-~ x? X | |Registers
 Value Name
 Value
 ```
@@ -1075,12 +967,10 @@ https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21307
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Patches
 Remote Desktop Client Remote Code Execution Vulnerability
 CVE-2024-21307

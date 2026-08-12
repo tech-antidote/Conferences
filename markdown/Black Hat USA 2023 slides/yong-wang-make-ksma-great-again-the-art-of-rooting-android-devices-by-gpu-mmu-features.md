@@ -8,12 +8,18 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Yong Wang_Make KSMA Great Again The Art of Rooting Android Devices by GPU MMU Features.pdf"
 pages: 83
 sha256: "ef2eb026aae3db1f5b8a761b9a2f8aa5f7f92fcf57093218455de8a0fa7375f7"
-text_chars: 32421
-ocr_pages: 8
+text_chars: 31690
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:26:31Z"
+converted_at: "2026-08-12T04:24:40Z"
 ---
 # Make KSMA Great Again The Art of Rooting Android Devices by GPU MMU Features
 
@@ -21,24 +27,12 @@ converted_at: "2026-08-11T21:26:31Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yong Wang_Make KSMA Great Again The Art of Rooting Android Devices by GPU MMU Features.pdf` (83 pages)
 
+
 ## Slide 1
 
 Make KSMA Great Again: The Art of Rooting Android devices by GPU MMU features
 
 WANG, YONG (@ThomasKing2014) Alibaba Cloud Pandora Lab
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| pisekhat a
-LSA 2025 oS
-AUGUST 9-10, 2023
-BRIEFINGS —
-‘Make KSMA Great Again: The Art 5 Rooting Android.
-| - devices by GPU MMU. features : |
-WANG, YONG G (@Thomasking2024) _
-- Alibaba Cloud Pandora Lab ee
-```
 
 ## Slide 2
 
@@ -92,32 +86,30 @@ Alibaba Cloud Pandora Lab
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 78/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Linux kernel VMM 101
-struct mm_struct —
-7cdc448000-7cdc5a6000 -—-p 00000000 00:00 2
-7cdc5a6000-7cdc5a7000 -—-p 00000000 00:00 2
-7cdc5a7000-7cdc5af000 rw-p 00000000 00:00 0 [anon:thread signal stack]
-7cdc5af000-7cdc5b0000 rw-p 00000000 00:00 0 [anon:arc4random data]
-7cdc5b@000-7cdc5b2000 rw-p 00000000 00:00 0 [anon:ReadFileToBuffer]
-7cdc5b2000-7cdc5b3000 rw-p 00000000 00:00 0 [anon:arc4random data]
-7cdc5b3000-7cdc5b5000 r—p 00000000 00:00 0 [war]
-7cdc5b5000-7cdc5b6000 r-xp 00000000 00:00 2 [vdso]
-7cdc5b6000-7cdc5ee000 r——p 00000000 07:60 16 /apex/com.android. runtime/bin/linker64
-7cdc5ee000-7cdc6d8000 r-xp 00038000 07:62 16 /apex/com.android. runtime/bin/linker64
-7cdc6d8000-7cdc6eQ000 r——p 00122000 07:62 16 /apex/com.android. runtime/bin/linker64
-7cdc6e0000-7cdc6e2000 rw-p 00129000 07:60 16 /apex/com.android. runtime/bin/linker64
-7cdc6e2000-7cdc6eb000 rw-p 00000000 00:00 0 [anon:.bss]
-7cdc6eb000-7cdc6ec000 r—p 00000000 00:00 2 [anon:.bss]
-7cdc6ec000-7cdc6eeQ00 rw-p 20000000 00:00 0 [anon:.bss]
-7fed13d000-7fed13e000 -——-p 00000000 00:00 2
-[7fed13e000-7fed93d000 Tw-p 00000000 00:00 0 [stack] ]
+struct mm_struct
+7cdc448000-7cdc5a6000 ---p 00000000 00:00 0
+7cdc5a6000-7cdc5a7000 ---p 00000000 00:00 0
+7cdc5a7000-7cdc5af000 rw-p 00000000 00:00 0                        [anon:thread signal stack]
+7cdc5af000-7cdc5b0000 rw-p 00000000 00:00 0                        [anon:arc4random data]
+7cdc5b0000-7cdc5b2000 rw-p 00000000 00:00 0                        [anon:ReadFileToBuffer]
+7cdc5b2000-7cdc5b3000 rw-p 00000000 00:00 0                        [anon:arc4random data]
+7cdc5b3000-7cdc5b5000 r--p 00000000 00:00 0                        [vvar]
+7cdc5b5000-7cdc5b6000 r-xp 00000000 00:00 0                        [vdso]
+7cdc5b6000-7cdc5ee000 r--p 00000000 07:60 16                       /apex/com.android.runtime/bin/linker64
+7cdc5ee000-7cdc6d8000 r-xp 00038000 07:60 16                       /apex/com.android.runtime/bin/linker64
+7cdc6d8000-7cdc6e0000 r--p 00122000 07:60 16                       /apex/com.android.runtime/bin/linker64
+7cdc6e0000-7cdc6e2000 rw-p 00129000 07:60 16                       /apex/com.android.runtime/bin/linker64
+7cdc6e2000-7cdc6eb000 rw-p 00000000 00:00 0                        [anon:.bss]
+7cdc6eb000-7cdc6ec000 r--p 00000000 00:00 0                        [anon:.bss]
+7cdc6ec000-7cdc6ee000 rw-p 00000000 00:00 0                        [anon:.bss]
+7fed13d000-7fed13e000 ---p 00000000 00:00 0
+7fed13e000-7fed93d000 rw-p 00000000 00:00 0                        [stack]
 struct vm_area_struct
-pisek hat
-USA 2&0es3
-Alibaba Cloud Pandora Lab
 ```
 
 ## Slide 6
@@ -197,10 +189,10 @@ Alibaba Cloud Pandora Lab
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Kernel Space Mirroring Attack
 ¢ ARMv8-64 level 0, level 1, and level 2 descriptor formats
 63 10
 Invalid IGNORED 0
@@ -213,8 +205,6 @@ With the 64KB granule size, for the level 2 descriptor, n is 29.
 NSTable
 APTable Stage 1 only,
 XNTable RESO at stage 2
-p- PXNTable
-—
 Table LIT I Ticsoreo [reso | Next-level table address[47:m]* IGNORED
 With the 4KB granule size m is 12, with the 16KB granule size m is 14, and with the 64KB granule size, m is 16.
 A level 0 Table descriptor returns the address of the level 1 table.
@@ -222,8 +212,6 @@ A level 1 Table descriptor returns the address of the level 2 table.
 A level 2 Table descriptor returns the address of the level 3 table.
 $ When m 2 12, bits [m:12] are RESO.
 biSek hat
-USA 2&0es3
-Alibaba Cloud Pandora Lab
 ```
 
 ## Slide 11
@@ -234,14 +222,13 @@ Alibaba Cloud Pandora Lab
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Kernel Space Mirroring Attack
 e ARMv8-64 level 3 descriptor format
 Invalid| IGNORED 0
 63 210
-Reserved RESO [o[ 1]
 Page, 4KB granule| a attributes [reso | Output address[47:12] Lower’ attributes s00
 Page, 16KB granulte| Tel attributes | reso | Output address[47:14] L + | Lower’ attributes TH]
 52 51 48 47 1615 1211
@@ -249,7 +236,6 @@ Page, 64KB granule| er attributes | reso | Output address[47:16] [reso | Lower�
 t+ Upper page attributes and Lower page attributes
 t Field is RESO
 black hat Alibaba Cloud Pandora Lab
-USA 2&0es3
 ```
 
 ## Slide 12
@@ -260,16 +246,14 @@ No level 0 table for Android
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Kernel Space Mirroring Attack
 Level 3 table
 Level 2 table
 Level 1 table
-c tC“‘“CO;™OC;*”dS
 D Block }»'CB |
-nn aa
 Level 0 table
 D_Table is a Table descriptor
 D_Block is a Block descriptor
@@ -281,7 +265,6 @@ d Indexed by IA[20:12]
 No level 0 table for Android
 A
 black hat Alibaba Cloud Pandora Lab
-USA 2&0es3
 ```
 
 ## Slide 13
@@ -292,13 +275,12 @@ USA 2&0es3
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Kernel Space Mirroring Attack
 Attribute fields for VMSAv8-64 stage 1 Block and Page descriptors
 Upper attributes Lower attributes
-eos [wom [TT (Itt TT]
 Reserved for software use ——! nc 4
 PXN SH[1:0]
 Contiguous AP[2:1]
@@ -312,9 +294,6 @@ Read/writ Read/write * Directly read/write the kernel
 Read-only vi rt Ua | d d | ress
 Read-only Read-only
 A
-black hat
-Alibaba Cloud Pandora Lab
-USA 2&0es3
 ```
 
 ## Slide 14
@@ -629,13 +608,13 @@ Alibaba Cloud Pandora Lab
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory Management Unit
 bisa hat
 USA 2023
-Alibaba Cloud Pandora Lab
 ```
 
 ## Slide 32
@@ -1504,7 +1483,8 @@ Alibaba Cloud Pandora Lab
 
 Alibaba Cloud Pandora Lab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ~" Permissions, account activity, personal data

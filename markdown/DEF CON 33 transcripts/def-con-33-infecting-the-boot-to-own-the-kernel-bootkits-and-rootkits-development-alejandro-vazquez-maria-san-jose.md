@@ -12,7 +12,7 @@ duration_seconds: 2364
 words: 5332
 text_chars: 29906
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Infecting the Boot to Own the Kernel - Bootkits and Rootkits Development

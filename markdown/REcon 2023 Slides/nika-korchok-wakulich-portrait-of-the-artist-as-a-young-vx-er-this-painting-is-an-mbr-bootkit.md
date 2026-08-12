@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Nika Korchok Wakulich_Portrait of the artist as a young vx-er This painting is an MBR bootkit .pdf"
 pages: 46
 sha256: "1694da4420b62d74cfd92b93b75aa7151ddaa8cd952a88a90b9fa3ecaa4ecda7"
-text_chars: 26559
-ocr_pages: 9
+text_chars: 24344
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:26:43Z"
+converted_at: "2026-08-12T06:05:05Z"
 ---
 # Portrait of the artist as a young vx-er This painting is an MBR bootkit
 
 **Speakers:** Nika Korchok Wakulich  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Nika Korchok Wakulich_Portrait of the artist as a young vx-er This painting is an MBR bootkit .pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -168,13 +173,13 @@ In the pre-boot environment, we do not have the OSspecific interrupts available.
 
 ###### **Interrupt Vector Table Invoking system calls on MS-DOS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Interrupt Vector Table
 System call,
 jumps to INT21h IVT entry
-IVT[21] | IVT[22] | IVT[23] | IVT [24] eee pecan Aberin
 Jump to address of
 INT 21h ISR
 (retrieved from IVT),
@@ -213,7 +218,8 @@ Hooking
 system calls
 on MS-DOS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System call,
@@ -224,20 +230,16 @@ hook routine:
 checks INT 21h params
 for call to
 subfunction 4B (EXEC)
-VA
 \gesion met, jump to new ISR
-YY N
 Condition not met,
 jump to saved address [MSjs)iSj5)
 of original INT 21h ISR
-&
 Jump back to saved address
 of original INT 21h ISR
 Return to calling function
 after execution of ISR chain
 Modifying control flow of Interrupt Service Routines by hooking the IVT with a TSR
 Interrupt
-A (=Yoq Co) am Fz] 0) (=
 Hooking
 system calls
 on MS-DOS
@@ -251,7 +253,8 @@ on MS-DOS
 
 Legacy BIOS Boot Process
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BIOS Initialization
@@ -325,14 +328,6 @@ loaded in memory at 0x00 7C00
 ## Slide 20
 
 Iconic bootkits
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Sa emcee enna
-ie ees mer eres
-Iconic bootkits
-```
 
 ## Slide 21
 
@@ -570,7 +565,8 @@ Image credit - still from “Michaelangelo: 25 Years Later” by danooctl1 <u>ht
 
 ###### **Sprite generation using Python script, part 2: bitmap -> bytes**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sprite generation using Python script,
@@ -582,14 +578,6 @@ MichelAngeBitmap:
 
 **Sprite generation using Python script, part 3: displaying the sprite with VGA magic**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Sprite generation using Python script, part 3:
-displaying the sprite with VGA magic
-he 1
-```
-
 ## Slide 41
 
 **michelangelo reanimator generation 0**
@@ -598,33 +586,20 @@ he 1
 
 ## **michelangelo reanimator generation 1-1337**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-xOxXO See
-* ic3qu3 33n
-xoxo # i
-1esqussnag
-es FAT.g ot
-Soy at
-eS
-rere be teres
-\r
-t
-oP ige
 u_kn u know u luv me.
-xoxo re3qus snip ;
-ics HEED EE: j
 - michelangelo reanimator &
-. generation 1- -1337 site? Bye ee SE eae
--
 ```
 
 ## Slide 43
 
 Connections to modern bootkits
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 s to modern bootkits

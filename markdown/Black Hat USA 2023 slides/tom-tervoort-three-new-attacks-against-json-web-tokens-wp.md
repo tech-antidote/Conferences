@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens_wp.pdf"
 pages: 12
 sha256: "6edba9d7333c149a44f2a553533b8b6aef6c327a043cc3daecdc8ee718567201"
-text_chars: 24640
+text_chars: 24702
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:58:25Z"
+converted_at: "2026-08-12T04:21:44Z"
 ---
 # Three New Attacks Against JSON Web Tokens
 
 **Speakers:** Tom Tervoort  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens_wp.pdf` (12 pages)
+
 
 ## Slide 1
 
@@ -106,24 +111,24 @@ This attack would require the attacker to first figure out the public key that i
 
 I identified three libraries against which this attack was possible. A simple example of a vulnerable token validator using one of these libraries (Authlib) is as follows:
 
-```
+\```
 fromauthlib.joseimportjwt,JsonWebKey
 importsys,json
-```
+\```
 
-```
+\```
 withopen('rsa-key.jwk','r')askeyfile:
 key=JsonWebKey.import_key(json.load(keyfile))
-```
+\```
 
-```
+\```
 defvalidate(token):
-```
+\```
 
-```
+\```
 claims=jwt.decode(token,key)
 claims.validate()
-```
+\```
 
 This code seems innocuous and is similar to the library’s sample code. However, when the key file being loaded here happens to contain a private key along with its public key, it becomes vulnerable to the attack.
 
@@ -165,54 +170,54 @@ Such an inconsistency was present between the `python-jwt` JWT validator and the
 
 The vulnerable `python-jwt` code was as follows:
 
-```
+\```
 defverify_jwt(jwt,
-```
+\```
 
-```
+\```
 pub_key=None,
 allowed_algs=None,
 iat_skew=timedelta(),
 checks_optional=False,
 ignore_not_implemented=False):
-```
+\```
 
-```
+\```
 [...]
-```
+\```
 
-```
+\```
 header,claims,_=jwt.split('.')
-```
+\```
 
-```
+\```
 parsed_header=json_decode(base64url_decode(header))
-```
+\```
 
-```
+\```
 [...]
 ifpub_key:
 token=JWS()
 token.allowed_algs=allowed_algs
 token.deserialize(jwt,pub_key)
-```
+\```
 
-```
+\```
 elif'none'notinallowed_algs:
 raise_JWTError('nokeybutnonealgnotallowed')
-```
+\```
 
-```
+\```
 parsed_claims=json_decode(base64url_decode(claims))
-```
+\```
 
-```
+\```
 [...]
-```
+\```
 
-```
+\```
 returnparsed_header,parsed_claims
-```
+\```
 
 This code assumes the JWT is encoded using the compact serialization method, and therefore splits it on periods. Then the header and claims components are decoded, the entire JWT is validated using `jwcrypto` (the `deserialize` method will throw an exception when the signature is invalid) and finally the header and claims as originally parsed are returned.
 
@@ -226,62 +231,62 @@ To attack this, an attacker first has to obtain some legitimate (unprivileged) t
 
 Here the `A` ’s represent the JWS header, `B` ’s are the claims and `C` ’s are the signature. The “flattened” JSON equivalent of this JWS object is as follows:
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "protected":"AAAA",
-```
+\```
 
-```
+\```
 "payload":"BBBB",
-```
+\```
 
-```
+\```
 "signature":"CCCC"
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 This JWS would also be accepted by `jwcrypto` ’s `deserialize` method and treated identically to the former one. However, when supplied to the `python-jwt` verifier an exception would be raised by the line `jwt.split('.')` , because there is no period in this string.
 
 However, an attacker can modify this representation as follows:
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "AAAA":".XXXX.",
-```
+\```
 
-```
+\```
 "protected":"AAAA",
-```
+\```
 
-```
+\```
 "payload":"BBBB",
-```
+\```
 
-```
+\```
 "signature":"CCCC"
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 From the perspective of `jwcrypto` , this is a valid JSON serialized JWS with all the necessary field. The additional `AAAA` field has no meaning in JWS objects and is simply ignored. `jwcrypto` ’s validator will therefore not raise an exception.
 
 `python-jwt` would however split this JSON object on dots and arrive at the following values for claims and header:
 
-```
+\```
 header:{"AAAA:"
 claims:XXXX
-```
+\```
 
 The `header` contains a number of characters that are not part of the url-safe base64 alphabet. Luckily for the attacker, however, the parser used by the `base64url_decode` function used here will simply discard these invalid characters and decode the header in the same way as `AAAA` .
 
@@ -317,23 +322,23 @@ To exploit this, simply create a JWE with the following header:
 
 ## Slide 9
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "alg":"PBES2-HS512+A256KW",
 "p2s":"8Q1SzinasR3xchYz6ZZcHA",
 "p2c":2147483647,
 "enc":"A128CBC-HS256"
 }
-```
+\```
 
 Here, `p2c` is set to the maximal value of a signed 32-bit integer (the highest value accepted by both vulnerable implementations), and `p2s` is some arbitrary random string.
 
 The JWE payload can be set to any arbitrary value. The encrypted key, IV and authentication tag fields can also be arbitrary random byte sequences, as long as they have appropriate lengths. An example of a full token using this header us as follows:
 
-```
+\```
 eyJhbGciOiJQQkVTMi1IUzUxMitBMjU2S1ciLCJwMnMiOiI4UTFTemluYXNSM3h
 jaFl6NlpaY0hBIiwicDJjIjoyMTQ3NDgzNjQ3LCJlbmMiOiJBMTI4Q0JDLUhTMj
 U2In0.YKbKLsEoyw_JoNvhtuHo9aaeRNSEhhAW2OVHcuF_HLqS0n6hA_fgCA.VB
@@ -346,7 +351,7 @@ FFsx9qKvC982KLKdPQMTlVJKkqtV4Ru5LEVpBZXBnZrtViSOgyg6AiuwaS-rCrc
 D_ePOGSuxvgtrokAKYPqmXUeRdjFJwafkYEkiuDCV9vWGAi1DH2xTafhJwcmywI
 yzi4BqRpmdn_N-zl5tuJYyuvKhjKv6ihbsV_k1hJGPGAxJ6wUpmwC4PTQ2izEm0
 TuSE8oMKdTw8V3kobXZ77ulMwDs4p.ALTKwxvAefeL-32NY7eTAQ
-```
+\```
 
 This token can then simply be sent to a vulnerable implementation as is. Conditions for exploitability are as follows:
 
@@ -372,16 +377,16 @@ This token can then simply be sent to a vulnerable implementation as is. Conditi
 
 RFC 7515 defines a rather odd header parameter:
 
-```
+\```
 4.1.3."jwk"(JSONWebKey)HeaderParameter
-```
+\```
 
-```
+\```
 The"jwk"(JSONWebKey)HeaderParameteristhepublickeythat
 correspondstothekeyusedtodigitallysigntheJWS.Thiskeyis
 representedasaJSONWebKey[JWK].UseofthisHeaderParameteris
 OPTIONAL.
-```
+\```
 
 So a JWS can contain a parameter called `jwk` that contains the public key with which the JWS was signed. This seems rather pointless, as a JWS validator should already be aware of the public key in order to validate the token. The RFC does not specify what an implementation is supposed do with this header. I guess the validator could support multiple keys and look up the key from a list, but that is more easy to implement with the `kid` (Key ID) parameter.
 

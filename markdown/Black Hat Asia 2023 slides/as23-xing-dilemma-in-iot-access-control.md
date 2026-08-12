@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS23-Xing-Dilemma-In-IoT-Access-Control.pdf"
 pages: 19
 sha256: "ad8481bbbb18ae937d03ac8024e0c970140018cedec9e5c9ae5771922fcc7363"
-text_chars: 4709
+text_chars: 4660
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:47:21Z"
+converted_at: "2026-08-12T03:51:03Z"
 ---
 # Dilemma In IoT Access Control
 
 **Speakers:** Xing  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS23-Xing-Dilemma-In-IoT-Access-Control.pdf` (19 pages)
+
 
 ## Slide 1
 
@@ -226,20 +231,17 @@ Result: User is still on the lock!
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
 ASIA 2023
 Mitigating Vulnerabilities in MaaG Access Control
 Benign Untrusted Benign
 Cloud Service Mobile Device 4 pre-guthentication token loT Device
 {nonce, On_Device_Policy} 2. {nonce, On_Device_Policy} —"
-<a
-we; =
 4 5,
 {nonce, Policy_Delta}
-[{nonce, Policy Delta},
 session_key, encrypted_session_key]
 Legend: DCKey
 Figure 5: Secure Access Policy Synchronization (SAPS) Protocol

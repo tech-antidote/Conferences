@@ -1,6 +1,6 @@
 ---
-title: "Platform VM Escapes"
-speakers: ["Yuhao Jiang", "Xinlei Ying-URB Excalibur The New VMware All"]
+title: "URB Excalibur The New VMware All-Platform VM Escapes"
+speakers: ["Yuhao Jiang", "Xinlei Ying"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Yuhao Jiang & Xinlei Ying-URB Excalibur The New VMware All-Platform VM Escapes.pdf"
 pages: 41
 sha256: "3db538a17761c558c48606784bd79f26aa434d58afd12c788ac0cd0249e58129"
-text_chars: 11508
-ocr_pages: 10
+text_chars: 10920
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:48Z"
+converted_at: "2026-08-12T04:53:35Z"
 ---
-# Platform VM Escapes
+# URB Excalibur The New VMware All-Platform VM Escapes
 
-**Speakers:** Yuhao Jiang, Xinlei Ying-URB Excalibur The New VMware All  
+**Speakers:** Yuhao Jiang, Xinlei Ying  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Yuhao Jiang & Xinlei Ying-URB Excalibur The New VMware All-Platform VM Escapes.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,11 @@ Yuhao Jiang (@danis_jiang) Xinlei Ying (@0x140ce)
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackh
-ASIA 2024 7
 APRIL 18-19, 2024 _
 BRIEFINGS
 URB Excalibur: The New VMware
@@ -72,14 +77,6 @@ Yuhao Jiang Xinlei Ying (@danis_jiang) (@0x140ce)
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-{\\—
-Introduction
-#BHASIA @BlackHatEvents
-```
-
 ## Slide 5
 
 ## What is Virtual Machine escape and the danger of it
@@ -100,25 +97,20 @@ Introduction
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 VMware’s Architecture
 Any
 Mee Virtual Machine 3
 >
 2
-/
-&
 Host OS 2
 Disk \
 ‘ \
 Driver xy
-a
 CPU [(iii) | a a
-idtr ,
 Host OS Context e VMM Context
 Fig. 2. The VMware Hosted Architecture. VMware Workstation consists of the three shaded components.
 ```
@@ -192,14 +184,12 @@ VMware’s virtual video device
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 EHCI / USB 2.0 Controller
 Client Driver Software
-{
 Universal
 System Bus Driver (USBD)
 Software
@@ -210,7 +200,6 @@ Scope Of
 EHCI
 Companion (UHCI or
 Enhanced Host
-—_—— come VMware’s virtual EHC!
 Hardware
 USB controller
 USB Device VMware’s virtual video device
@@ -223,19 +212,14 @@ Figure 1-1. Universal Serial Bus, Revision 2.0 System Block Diagram (face ti aa 
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 EHCI / USB 2.0 Controller
 Start
-Halted Y
 or.
-"Active AND. Mbit
-"Active
 AND.
-!Halted
 Advance
 Queue
 Active AND. !Halted
@@ -244,8 +228,6 @@ Execute
 Transaction
 Active
 Write Back
-qjTD
-Vv
 Follow QH
 Horizontal
 Pointer
@@ -301,11 +283,10 @@ out
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 CVE-2022-31705
 3. Heap out-of-bounds write vulnerability in EHCI controller (CVE-2022-31705)
 Description
@@ -313,9 +294,6 @@ Mware ESX nd Fusior
 e Critical severity range v
 Known Attack Vectors
 Resolution
-woiacnie
-Stic
-vemnondsenen
 VMware w 1d like t ank t gal
 Notes
 ```
@@ -330,18 +308,15 @@ urb’s size =
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 VE 2022 3 1 705 1 Void __fastcall ehci_control_transfer(__int64 state, pipe *pipe, EHCIgh *qh)
 5 = pipe->urb_link_first;
 6 = &gh->next_qtd;
 7 = 0164;
-VY
 SETUP qTD
-urb’s size = he -—
 0x98 + 8 + setup_len 143 [6] + s;
 = VUsb_NewUrb(
 1 = ->purb_data_cursor;
@@ -362,19 +337,16 @@ Next qTD
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
-ASIA 2024
 CVE-2022-31705
 OUT qTD
 if ¢
-Vv
 Warning("EHCI: Unexpected status packet size
 ABEL.
 Next qTD
-d\n",
 IN qTD
 Where is the BUG?
 ```
@@ -674,17 +646,6 @@ Heap spraying and grooming primitive: **SVGA_3D_CMD_SET_SHADER** Allocate and fr
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pif hat
-ASIA 2024
-Demo
-117 10:11
-*
-RE0SC=8088 B88. 2920)" > Av
-```
-
 ## Slide 37
 
 ## On VMware Workstation
@@ -712,16 +673,6 @@ RE0SC=8088 B88. 2920)" > Av
 ## Demo
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
-ae i 4/18/2022
-| a: SSSA
-abc@ubuntu:-/ymware
-```
 
 ## Slide 39
 

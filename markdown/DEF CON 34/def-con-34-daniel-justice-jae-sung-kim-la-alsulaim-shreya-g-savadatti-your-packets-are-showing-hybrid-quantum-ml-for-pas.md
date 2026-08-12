@@ -4,7 +4,7 @@ speakers: ["Daniel Justice", "Jae Sung Kim", "La Alsulaim", "Shreya G Savadatti"
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Daniel Justice, Jae Sung Kim, La Alsulaim, Shreya G Savadatti - Your Packets Are Showing Hybrid Quantum ML for Passive OS Fingerprin.pdf"
 pages: 19
 sha256: "f87212367502a3d01b64af69f64fc45fed8f5ca84ff90501300cb2b7e6b48453"
@@ -12,15 +12,20 @@ text_chars: 8565
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:15:18Z"
+converted_at: "2026-08-12T06:25:08Z"
 ---
 # Your Packets Are Showing Hybrid Quantum ML for Passive OS Fingerprin
 
 **Speakers:** Daniel Justice, Jae Sung Kim, La Alsulaim, Shreya G Savadatti  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Justice, Jae Sung Kim, La Alsulaim, Shreya G Savadatti - Your Packets Are Showing Hybrid Quantum ML for Passive OS Fingerprin.pdf` (19 pages)
+
 
 ## Slide 1
 

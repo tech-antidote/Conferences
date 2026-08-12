@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Palmiotti-Alice-In-Kernel-Land.pdf"
 pages: 47
 sha256: "257c643a0711768abf71bfb4b112f7d1d2bce2d2c35068c3d891fe884ebc6e7b"
-text_chars: 18062
+text_chars: 17359
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:55:13Z"
+converted_at: "2026-08-12T03:48:23Z"
 ---
 # Alice In Kernel Land
 
 **Speakers:** Palmiotti  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Palmiotti-Alice-In-Kernel-Land.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -84,7 +89,8 @@ Usermode application loads byte code into kernel (via eBPF syscall) eBPF verifie
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 KERNEL SPACE USER SPACE
@@ -95,15 +101,10 @@ eBPF JIT
 compiler
 BPF hook
 point
-|
-strane ss BPF
-runner] el
 eBPF maps
 Interpreter
 : KEY
-hadi un i BPF syscall. ——
 led native i
-snatuctions or i Misc syscalls
 decodes & executes :
 eBPF bytecode
 ```
@@ -320,7 +321,8 @@ In the first version of the fuzzer, we generated programs by:
 
 Fuzzing: Input generation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 unsigned operation = 0;
@@ -341,7 +343,8 @@ break;
 
 Fuzzing: Input generation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 // now, generate all the instructions
@@ -350,7 +353,6 @@ for (size_t i = 0; i < this->num_instr; i++) {
 // in most cases do an ALU operation, make sure we don't have a
 if (rg->n_out_of(8, 10) || i == this->num_instr - 1) {
 alu_instr a;
-a.fEacuekeaithis—>rg, this->op_reg);
 ```
 
 ## Slide 31
@@ -391,7 +393,8 @@ The downside: Very time consuming and difficult to port to new versions
 
 Fuzzing: Architecture
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing: Architecture
@@ -404,7 +407,6 @@ Reports bugs
 If unsafe If no bug detected
 Calls bpi() syscall
 to get JIT
-U
 ```
 
 ## Slide 35
@@ -439,7 +441,8 @@ Cons:
 
 High Level Architecture - Not A fuzzer, a Fuzzing framework
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 High Level Architecture - Not A fuzzer, a Fuzzing
@@ -511,7 +514,8 @@ This is the strategy that found CVE-2023-2163
 
 ## Other features - coverage information and statistics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Other features - coverage information and
@@ -521,30 +525,19 @@ statistics
 verifier.c \WAB_ONCE(n >= GPF VERIFIER THP.LOG SIZE - 1,
 © full path: /usr/local/google/home/jjlopezjaimez/repos/linux-git/kernel/bpf/verifier.c erifier lop Line truncated - local buffer too short\n"):
 © covered lines: 828
-vimalloc.c
 © full path: /usr/local/google/home/;jlopezjaimez/repos/linux-git/mm/vmalloc.c
 © covered lines: 220 prerr(*BPF: Asks", log->kbuf, newline 2"* : *\n");
-vsprintf.c Fecan
-© full path: /usr/local/google/home/ijlopezjaimez/repos/linux-git/lib/vsprintf.c /
 © covered lines: 169 1n = min{log->ten total - log->len_used - 1,
-percpu.c log->kbuf inl = "\0";
-© full path: /usr/local/google/home/jjlopezjaimez/repos/linux-git’mm/perepu.c f {icopy-touser(lag-sabuf » 1og->len, used, og-ribuf, 89:20)
 © covered lines: 91 nue
 syscall.c Log-ubuf = MULL:
 © full path: /usr/local/google/home/ijlopezjaimez/repos/linux-git/kernel/bpf/syscall.c >
 cone lines: 54 static void bpf_vlog reset(struct bpf_verifier log *log, u32 new pos)
-. ‘
 © full path: /usr/local/google/home/jjlopezjaimez/repos/linux-git/kernel/bpf/core.c char zero = 0;
 © covered lines: 39
 thum.c
 © full path: /usr/local/google/homeljjlopezjaimez/repos/linux-git/kernel/bpf/tnum.c
 © covered lines: 28 Log->Len_used = new pos;
-disaauvd if (put_user(zero, log->ubuf + new pos!)
-© full path: /usr/local/google/homeijjlopezjaimez/repos/linux-git/kernel/bpfidisasm.c ) egunat = WK
 if (log->Level == BPF_LOG KERNEL) {
-boot newline =n > @ && log->kbufin - 1] == ‘\n";
-Log->ten_used + nj
-if (ibpf_verifier log needed(tog))
 return;
 /* Yog_level controls verbosity Level of eBPF verifier
 + bpf_verifier log write() is used to dunp the verification trace to the log,
@@ -553,7 +546,6 @@ return;
 print#(2, 3) void bpf verifier log write(struct bpf_verifier env *env
 const char *fat,
 va_list args:
-if (1bpf_verifier log needed (Genv->tog))
 return;
 ```
 

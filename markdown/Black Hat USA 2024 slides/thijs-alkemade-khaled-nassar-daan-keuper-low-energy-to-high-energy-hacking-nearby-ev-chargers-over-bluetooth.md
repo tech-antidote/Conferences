@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Thijs Alkemade & Khaled Nassar & Daan Keuper_Low Energy to High Energy Hacking Nearby EV-Chargers Over Bluetooth.pdf"
 pages: 96
 sha256: "bec9b1aef39cc0d21d41290d78d663afc63b6eedf783cab8c5f93b1d8ac5104b"
-text_chars: 36267
-ocr_pages: 27
+text_chars: 30055
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 1
+ocr_confidence: 90.0
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:46:26Z"
+converted_at: "2026-08-12T04:43:03Z"
 ---
 # Low Energy to High Energy Hacking Nearby EV-Chargers Over Bluetooth
 
 **Speakers:** Thijs Alkemade, Khaled Nassar, Daan Keuper  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Thijs Alkemade & Khaled Nassar & Daan Keuper_Low Energy to High Energy Hacking Nearby EV-Chargers Over Bluetooth.pdf` (96 pages)
+
 
 ## Slide 1
 
@@ -110,7 +115,8 @@ converted_at: "2026-08-11T22:46:26Z"
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Juicebox repair of burnt relay. Here's how to repair it
@@ -120,7 +126,8 @@ Juicebox repair of burnt relay. Here's how to repair it
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Home » Vehicle > Accessory > JuiceBox EVSE Guides Answers (4 Edit Ww
@@ -146,7 +153,8 @@ locally-stored event and energy data). So, everything about the box is done remo
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Step 2 Version differences
@@ -177,13 +185,11 @@ pages of these guides!
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CE
-CNet x
 Releases Notes
-HII
 WGMi60P MCU Release Notes
 Release Version 1.0.46 Release Version 1 'e) A6
 Release Version 1.0.38 Release date:25-May-2021
@@ -208,7 +214,8 @@ Release Version 1.0.21
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Release Version 1.0.46
@@ -228,7 +235,8 @@ Bluetooth, MiFare 13.56 MHz RFID reader with support for OTA update
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 g gkirstei - 2y aga
@@ -260,49 +268,23 @@ JB back online. It did for me.
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-hardware clu ination: of i( o1.iib
-pluetooth. ifare 13.56 uzRFID gin, 24 142),
-in HOTA reader _4 vre with gunnert for ™ gammy
 gkirste!
 4
-MY juice! re) 32" nt offline \cl ec Ke! very al g that a ally is 1 oftiine-! ‘
-apie 1° ess Ww \ AP via prows' 7 a tnat %K ot con™ +10 U
-servers ne! i e\net port 5) aN evs! per gical aryind to
-connee! e nd iP ervet pis itive all \c et fault tO
-cervet “ ef Hitting col save, erynind arted yo work
-as\ snow \ onli Fermin! Gt find net
-prtps:ll9o° ef ri.com entt esl ariables i) st 10 rer ugave ~
-fret chal ges:
-(6) ae & Oo reply *, snare
-@ aer-aever
 \nad sal e iss J icedo TO! and ¥ 5 3! x com pat online usind
-wne ‘ig rion ra weeks © () pack t© onle \ nro! to
-some’ xecnsu! ort no W war" Ww \ssul TOV ged. 38" i aren
-on the ef \ er ynadl eC! ye U up’ te jrectS ne! opel
-server ye tne steps:
-4, otal gaares> of your icebo* and enter qnis inte el prowse! there is ™
-passwo ne way: ich 1S once
-me le! and 52
 Jui
 iceBox EVSE
 Getti
 ing Wi
 e Matt tha workin Guide:
-© noesti esas ind 2 other c 9 ——_ °
 imate N , ontributors
-Moder. mone
-rate is
 © 5.2k
 Comi
-muni
-y-Contributed
 ted Guid
-= 9
 Ste
-p1 B
 asic pri
 Principles of
 Operati
@@ -312,34 +294,28 @@ The
 Jui
 Juic iceBox
 eNet doesn'
-~ the c n't tall
 loud k dire
-eit
 ver that ee ol phigh
 ches fe, or
 all tha anythii
-ate
 . It talks
 only t
-Co)
 char
 ge wil
-el WiFi
 like a aie the
 ule or
 a
 fet
-Ci V/J17
 ‘cess Cont 72 proce
 rol. ssor. Tha
-eThatiste
 Say, it
 Il
 ```
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 o gkirstei - 2y ago
@@ -356,13 +332,11 @@ https://docs.zentri.com/zentrios/w/latest/cmd/variables/nto Just remember to ent
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-4 Not Secure setup.com/#console
 Gecko OS Web App Console — v3.1.5
-> get system. version
-EMWERK-JB201-1.0.46, Gecko_OS—STANDARD-4.2.7-11064, WGM160P
 >
 ```
 
@@ -482,10 +456,10 @@ char scratch_buffer[132]; char formatted_msg_buffer[192]; char * dst = formatted
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-«es
 SILICON LABS
 Technical Summary
 See the following table for detailed technical descriptions of the vulnerabilities
@@ -499,7 +473,6 @@ A buffer-based overflow in the HTTP client allows an attacker to
 CVE-2024-24731 request a file download from long URL which leads to remote code Remote code execution
 execution.
 A specially crafted DNS response may lead to an infinite loop,
-CVE-2024-24737 . . .
 causing a denial-of-service.
 Denial of service
 A specially crafted URL causes the http_download command to leak
@@ -553,7 +526,8 @@ e Gecko OS is in end of life (EOL) status so no fix will be offered.
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Autel MaxiCharger
@@ -592,15 +566,6 @@ Share Your Home Charger
 **Random internal micro-USB ports?**
 
 **>>**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-> Random internal micro-USB ports?
-bs —e
-7
->>
-```
 
 ## Slide 36
 
@@ -664,133 +629,22 @@ Later:
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 eee Figure 1
 =
-aD
-~
 a
-fs)
-pr
-c
 LLU
-°o
-IBM
 20000 40000 60000 80000 100000 120000 140000
 Offset
-€@€39¢Q=8
 >>
 ```
 
 ## Slide 41
 
 **>>**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-0200eal100
-000ea110
-000ea120
-000ea130
-000ea140
-0200ea150
-0200ea160
-000ea170
-0200eal180
-0200ea190
-000ealad
-Q000ealbO
-000ealc®
-Q00eal1d@
-Q0@0ealed
-Q00ealfO
-000ea200
-000ea210
-Q000ea220
-000ea230
-000ea240
-000ea250
-0200ea260
-Q00ea270
-Q000ea280
-000ea290
-Q0@0ea2a0
-Q00ea2bO
-000ea2cO
-Q00ea2d0
-Q0@0ea2e0
-Q00ea2TO
-000ea300
-76
-64
-41
-20
-72
-61
-69
-20
-74
-65
-7b
-76
-6d
-20
-74
-76
-76
-64
-41
-20
-72
-61
-69
-20
-74
-65
-7b
-76
-6d
-20
-74
-76
-76
-x%XVXXXX | XXACSKXX
-xxxdkxxt} i txxJxxxx
-XXXAKXXX | KK xXXX
-xxx xxxx 1 x{x_Cxxx
-KEXP | XXX | KXKGXKXX
-AEN | ANN
-XXX Lxxet} i xY@6xxwx
-xxx xxxx x) xexx {x
-xx “EXE KX, Sxj]Vx
-sie sesaii | ic Voi ah
-xxe{~xPx | xNXUXxx~
-tXXVXXXX | | XXTEXXX
-—WXMXXXX |X) KAXXXX
-xmx XXX | RXX HX FX
-xd> texxA | xxx fxxxx
-XXAVRAXK |X -—x lexxx
-ZUxVpoxo ; xxXQCVXXxx
-xxxdxuzx | xw2J” xxx
-XCXAXEXX |x", xxXXxX
-xtx xx | x{X_MXXX
-KK LPXXXX | XXXGXEXX
-x4xabxxx | xTXaxxtx
-x X1XXXX | XXTOVXXX
-| xx XXXX | XXXEPRXX
-x{* Txxxx | xx” sx] xx
-g{aexx | f ixxxLxz?x
-xx@{ xxRX | xxxUEXx4
-!POVVXXx | 5xxtZxxx
-:xxm{ xxx | x ) xawxxx
-xmx sles: | senescent
-xd> txxxT | | xx fvxxx
-x, Lvxxxx} © °|xlzxxx
->>
-```
 
 ## Slide 42
 
@@ -802,30 +656,22 @@ x, Lvxxxx} © °|xlzxxx
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PexT)mx:
 *Lxc+Exa
-ex. ,WX1
 q
-*) ee
-Cyvxrxex
-x» xpVox |
 x x—xp
 , x
 K xa$x
 Addition instead of XOR? 47 62[0d_Ga_| 00 00 00 00] 20 20 20 20 |.wxtb
-Almost? a 36 OC Oc 39 62] 1 a ++xpJ6m|
 x x*xXD
 x x—xD
-**#d
 7_xf'Vg!
-(GxreQS]
 *xxHEAx_
-| #axdxqxa
 F_ctmryT
-xexpeinl
 x%xpeWnt
 x%xe OxC
 ```
@@ -838,42 +684,36 @@ x%xe OxC
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ciphertext
 (plaintext XOR key1) + key2
 .WxtGb
-++xpJ6m|
 x x—xD
 PexT)mx:
 *Lxc+Exa
-*xX> > ,WX1
 ¢
 4 ee
-Cyvxrxex
-x» xpVox |
 x x—xp
 , x
 K xa$x
 NwxtI va
-xexeZzext
 x x*xp
 7_xf'Vg!
-(GxreQS]
 *xxHEAx_
 #axdxqxa
 F_ctmryT
-xexpeinl
 x%xpeWnt
-x%xe OoxC
 ```
 
 ## Slide 44
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Serial number, 8 digit code
@@ -885,10 +725,10 @@ Autel server
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-7
 App random
 —= Charger
 App
@@ -991,30 +831,18 @@ c_string = get_c_string(data); os_printf_maybe("strData:%s", c_string); memset(b
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ChargePoint Home security research
 Dmitry Sklyar, @d_skljar
 Kaspersky Lab Security Services, @kl_secservices
 Contents
-2. Research target ......... cece ec ceeesceeeeseseeeseceeseseesceseseeseceeeeteeseseeeseesessaeeesaaseneaeeees 4
 3. Mobile application analySis .............ccccccseeseeeeescseeeeceneseeseeeeeeceeeeeesscaeeeeesaeseeeseeesesensaees 5
-4. Hardware revision... cece cee cecceceeceeeeee scene cece eaeeeeesaeeesesaeeeseeeeeeeseeeaaeeeceaeeeeeeeaes 8
-5. NAND image downloading ................cecceceeeeeeeceaeee ee ceeeeeeesesaeeeaeeeeeeeseeeseeeeeeeaaeeee 11
 5.1. NAND image Structure ............:cccccsccsecesssssseececesseeseaeeeeceseseceesaaeeeeeseeseseeaeeeseeseess 12
-6. ROO ACCESS oo... eeceeecesseeeescnseeeseeeeseeeeeeescaaeeeecesueeecesseeseeeaneseseeeeseceeeeseeseeneeessaneesenaes 14
-7. Software AnalySis 20.0... eeceeeee cscs eeeeeeeeeeeesseeseeseaeeseseeeaseeesaaeeeseaaeeeseneeeeseneaeas 15
-7.1. HTTPS SOIVE? 0... cece ceccceeeeeeeeeeteeeeee cece eeceeueeeeseaaeceseaaeeeceseeeeeseeaeeeeesaueeeeeeea 16
-7.1.1. The uploadsm CGI binary............. 2... eee cee ceececeeee cece ceeeeeeeeeeeeeceseeeeenseeesees 19
 7.1.1.1. OS command injection in uploads ...................:eeceeeeeeseeeeeeeeeeeeeeeeees 19
-7.1.1.2. — Arbitrary file write in UPIOAdSM...0... elec eee eee eeeeeeeeeeeeeeeeeenaaeees 19
-7.1.2. The getsrvr CGI DINArY ........ ccc cecceeeeseeeceeeseeseeeeeeceeeeeseesaueeeseeaeeeeeaeseceeeeess 20
 7.1.2.1. Stack buffer overflow in QetsrVr,...........cccssscessssecsessseeeecsseeseessreesesseess 21
-7.1.3. The dwnidlogsm CGI Binary... eeeeeceeeteeeeeeeeseeeeeneeeeeeeeeseeeeeeeseeeeeeeee 21
-7.2. — Cpsrelay ANALYSIS... eee cece cette eens ceeeeeceeecneeeseaaeseeeeeceaeeseeeeesaesesaeaseeeaseaaas 21
-7.3.  SShrevtunnel.sh AnalySis ............ccccecceceeecessenseeeceeseeesaeaeeeeeeesseseeaaaeeeseeeeesearaaeeees 22
-7A. Bluetooth communications ............... cece cece eee ce cece te eee ee ce eee eeeece sees eeeeeseeeeeeeeeeeeeees 25
 7.4.1. Stack buffer overflow in btclassic.................cccccccccccscsecseeccceeeeeseeaeeeeeseesenseess 25
 ```
 
@@ -1024,7 +852,8 @@ Contents
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2018 - Kaspersky Lab report
@@ -1068,12 +897,12 @@ physical access to the charger.
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data flow through IPC to other services
 ELF (IPC) ELF
--@} obSendWiFiInfotoWLanapp—— > {OF
 onboardee AP wlanapp
 Information
 ```
@@ -1106,7 +935,8 @@ snprintf( command, 0x100u, "/usr/sbin/wpa_passphrase \"%s\" \"%s\" | grep \"psk=
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SUCCESS - Sina Kheirkhah was able to execute his attack against the ChargePoint
@@ -1144,7 +974,7 @@ known. They still earn $16,000 and 3 Master of Pwn Points.
 
 ###### **/opt/etc/coul/cps.conf:**
 
-```
+\```
 Url=https://172.16.110.201:343/gs/pgm.php
 WsUrl=wss://homecharger-eu.chargepoint.com:443/ws-prod/panda/v1
 WsKey=/var/config/.keys/ca.crt
@@ -1156,7 +986,7 @@ KeyFile=/var/config/.keys/system.key
 KeyType=PEM
 VerifyHostName=1
 MaxEnqueueFailures=40
-```
+\```
 
 **>>**
 
@@ -1180,11 +1010,10 @@ Georgiev, Martin, Subodh Iyengar, Suman Sekhar Jana, Rishita Anubhai, Dan Boneh 
 
 **>>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-==
-Certificate
 ~| 0024b100000b442e.chargepoint.net
 Subject Name
 Country or Region US
@@ -1211,15 +1040,6 @@ Parameters None
 **Pwn2Own CTF edition Made possible by:**
 
 **>>**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Made possible by:
-| SLO RAR
-dg Te
-. —t <9e2008)
-```
 
 ## Slide 69
 
@@ -1431,11 +1251,11 @@ ssh -o "StrictHostKeyChecking no" -o "ExitOnForwardFailure yes" $REVSYSTEMPORT -
 
 ##### **ChargePoint Home Flex**
 
-```
+\```
 ssh -o "StrictHostKeyChecking no" -o "ExitOnForwardFailure yes" -p 343 -N -T
 -R $REVPORT:localhost:23
 pandart@xiuq0o4yl57c2017.chargepoint.com
-```
+\```
 
 **>>**
 
@@ -1443,11 +1263,11 @@ pandart@xiuq0o4yl57c2017.chargepoint.com
 
 ##### **ChargePoint Home Flex**
 
-```
+\```
 ssh -o "StrictHostKeyChecking no" -o "ExitOnForwardFailure yes" -p 343 -N -T
 -L 1337:127.0.0.1:20023
 pandart@xiuq0o4yl57c2017.chargepoint.com
-```
+\```
 
 **>>**
 
@@ -1455,11 +1275,11 @@ pandart@xiuq0o4yl57c2017.chargepoint.com
 
 ##### **ChargePoint Home Flex**
 
-```
+\```
 ssh -o "StrictHostKeyChecking no" -o "ExitOnForwardFailure yes" -p 343 -N -T
 -L 1337:google.com:80
 pandart@xiuq0o4yl57c2017.chargepoint.com
-```
+\```
 
 **>>**
 
@@ -1467,11 +1287,11 @@ pandart@xiuq0o4yl57c2017.chargepoint.com
 
 ##### **ChargePoint Home Flex**
 
-```
+\```
 ssh -o "StrictHostKeyChecking no" -o "ExitOnForwardFailure yes" -p 343 -N -T
 -L 1337:169.254.169.254:80
 pandart@xiuq0o4yl57c2017.chargepoint.com
-```
+\```
 
 **>>**
 
@@ -1487,7 +1307,7 @@ pandart@xiuq0o4yl57c2017.chargepoint.com
 
 ## Slide 94
 
-```
+\```
 $ aws s3 ls
 2020-03-27 16:17:02 aws-athena-query-results-022521842517-ca-central-1
 2019-07-17 19:23:19 aws-athena-query-results-022521842517-eu-central-1
@@ -1517,11 +1337,11 @@ $ aws s3 ls
 2021-08-18 02:19:20 cp-prod-fra-nos-notification-configuration
 2022-02-24 09:36:38 cp-prod-fra-nos-pricing
 2022-04-02 23:15:49 cp-prod-fra-nos-reports
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 **>>**
 

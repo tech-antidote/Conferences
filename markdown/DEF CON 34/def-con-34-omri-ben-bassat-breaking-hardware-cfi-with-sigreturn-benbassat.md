@@ -4,23 +4,28 @@ speakers: ["Omri Ben Bassat"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Omri Ben Bassat - Breaking Hardware CFI with Sigreturn - BENBASSAT.pdf"
 pages: 51
 sha256: "eba69e32a4a9842c49f4f87cf3760482778e3a213042ac3ad5302e447c530b74"
-text_chars: 13676
+text_chars: 13633
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 94.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:25:48Z"
+converted_at: "2026-08-12T06:40:04Z"
 ---
 # Breaking Hardware CFI with Sigreturn
 
 **Speakers:** Omri Ben Bassat  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Omri Ben Bassat - Breaking Hardware CFI with Sigreturn - BENBASSAT.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -802,7 +807,8 @@ pstate.btype == 0b00
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 & Linus Torvalds
@@ -830,7 +836,8 @@ security protection among many others.
 
 Omri Ben-Bassat _<u>beta_b0t@yahoo.com</u>_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Omri Ben-Bassat

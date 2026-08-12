@@ -1,6 +1,6 @@
 ---
-title: "Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code"
-speakers: []
+title: "ThreatForest: Automated Attack Trees from Source Code"
+speakers: ["Cristian Leo", "Daniel Begimher"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
 edition: "USA"
@@ -8,18 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code.pdf"
 pages: 23
 sha256: "6af9651677067d523615741a4fdf7e415f361a87177ab853a780c15d3e793a1b"
-text_chars: 8608
-ocr_pages: 5
+text_chars: 7925
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The source filename omits the separator between the speaker names and the title, gluing 'Leo' to 'ThreatForest'."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:07:16Z"
+converted_at: "2026-08-12T05:30:45Z"
 ---
-# Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code
+# ThreatForest: Automated Attack Trees from Source Code
 
+**Speakers:** Cristian Leo, Daniel Begimher  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code.pdf` (23 pages)
+
 
 ## Slide 1
 
@@ -60,18 +67,6 @@ Repository → reviewable attack graph
 # **SECTION 01** THREAT MODELING TODAY
 
 **© 2026 Black Hat** © 2026 Black Hat
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BAT.
-a
-SECTION 01
-THREAT MODELING TODAY
-© 2026,Black Hat - Ss r snr = 2 Soa . , ere black hat
-2026
-<a ne
-```
 
 ## Slide 4
 
@@ -141,20 +136,17 @@ No SME interview • limited deployment context
 
 © 2026 Black Hat
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A THREAT STATEMENT CAPTURES THE RISK
-y — (THREAT STATEMENT = 7 \
 C) An unauthorized user could supply a URL that causes —
 the web application to request an unintended internal Cx) Z
 (Fy or metadata endpoint, potentially exposing sensitive . i
 data or temporary credentials. = x=
-\ SEATS Y
 THREAT STATEMENT CAPTURES ATTACK MAP ADDS
 actor * action « asset » impact branching paths » dependencies » choke points » downstream actions
-© 2026 Black Hat black hat
-@ys4
 ```
 
 ## Slide 7
@@ -165,31 +157,22 @@ actor * action « asset » impact branching paths » dependencies » choke point
 
 © 2026 Black Hat
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AN ATTACK MAP SHOWS HOW SSRF COMPOUNDS
-—— |
 Secrets
-URL allowlist eS endpoint >! (9 eset
 + egress \
 controls
 () : Internal > Privileged
 } service 9 internal action
-Se BLo AED
 a IFIAM 1 | “Launch compute /
 PERMITS j crypto miners
-——-,
-eee
-Unauthorized met mis anal t SAL IMDSv1 pP Temporary role |__.__
-user-supplied ian ce SD) teaz54160254 credentials :
 URL ; I 2 Create admin
 principal /
 eg privilege escalation
-IMDSv2 —_—SSSS
 THE STATEMENT NAMES THE RISK. THE MAP REVEALS HOW IT COMPOUNDS.
-© 2026 Black Hat black hat
-@ys4
 ```
 
 ## Slide 8
@@ -198,28 +181,22 @@ THE STATEMENT NAMES THE RISK. THE MAP REVEALS HOW IT COMPOUNDS.
 
 © 2026 Black Hat
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT THREATFOREST DOES
 WHO USES IT WHAT IT READS WHAT IT PRODUCES
-oS Zienaes 7@&) System context —
-i «Sil
 </ > Source code ay S f (A\) Treat
 (: 2) Attack paths E Y
 REVIEWABLE,
-.\ ANALYSIS). oe
-Se "\ CORE / 5 Ohi mnageings AUTOMATIC
 Configuration ? s : ( HUMAN GATE VERDICT
 Se ° | | Ik : Review and steer ©) Mitigations
 ¢ before outputs
 Leads analysis and Sm business and see ® Evidence
 threat modeling deployment context
-eo) Infrastructure =
 AGENTIC
 THREATFOREST TURNS A REPOSITORY INTO A REVIEWABLE ATTACK MAP.
-© 2026 Black Hat black hat
-@ys4
 ```
 
 ## Slide 9
@@ -288,18 +265,16 @@ Agent + deterministic verifier
 
 © 2026 Black Hat
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RUNNING EXAMPLE
 ° Al KNOWLEDGE ASSISTANT °
 POST /ask - es
-és
 User Bedrock agent OpenSearch
 knowledge base
 Answers questions using product manuals
-© 2026 Black Hat black hat
-@ys4
 2026
 ```
 

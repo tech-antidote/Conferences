@@ -12,7 +12,7 @@ duration_seconds: 2703
 words: 7800
 text_chars: 40959
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Direct Memory, Access Everywhere

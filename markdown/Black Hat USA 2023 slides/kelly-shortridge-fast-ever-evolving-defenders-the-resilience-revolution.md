@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Kelly Shortridge_Fast, Ever-Evolving Defenders The Resilience Revolution.pdf"
 pages: 160
 sha256: "6ff7c1f71ff8b2eba3378eb8a0644ddd56632e1c898e3be3a15796f03675b318"
-text_chars: 24097
-ocr_pages: 23
+text_chars: 21552
+ocr_pages: 12
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:20:52Z"
+converted_at: "2026-08-12T04:15:54Z"
 ---
 # Fast, Ever-Evolving Defenders The Resilience Revolution
 
 **Speakers:** Kelly Shortridge  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kelly Shortridge_Fast, Ever-Evolving Defenders The Resilience Revolution.pdf` (160 pages)
+
 
 ## Slide 1
 
@@ -283,18 +289,6 @@ IaC reduces friction for releasing patches, updates, or fixes & decentralizes th
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-la@ reduces triction tor releasing patches,
-updates, Or fixes & Gecentralizes the process
-ws He
-~*~ A\
-»/) .
-ae Ga
-35
-```
-
 ## Slide 36
 
 : if an Protip organizational process is unusable or cumbersome, it will be circumvented.
@@ -468,12 +462,12 @@ shortridge@hachyderm.io | @swagitda_
 
 58 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 C3) (=) shortridge-sensemaking/fir. X Overview | firewall-demo | | X g Signal Sciences x Ge Nf a x
-ry
-<> Code {2 Pullrequests 1 © Actions © Security [¥ Insights  & Settings
+<> Code {2 Pullrequests 1 © Actions © Security [¥ Insights & Settings
 bf = main ~ firewall-demo / banlist.txt Q é t see
 ert "Update IP Banlist"’ “ 38ead24 : 1 Ter 1) History
 &: swagitda |
@@ -482,7 +476,6 @@ l #
 #
 #
 # Binary Defense Systems Artillery Threat Intelligence Feed and Banlist Feed
-# https: //www.binarydefense.com
 #
 # Note that this is for public use only.
 # The ATIF feed may not be used for commercial resale or in products that are charging fees for such services.
@@ -513,12 +506,12 @@ shortridge@hachyderm.io | @swagitda_
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security / Dependabot Alerts / #120
 Improper Input Validation in Octocat #120 tues
-4%
 Opened on Aug 6 on octocat (pip) - requirements.txt
 Severity score
 4 Bump Octocat from 8.0.8 to 8.0.9 ~
@@ -583,19 +576,16 @@ shortridge@hachyderm.io | @swagitda_
 
 67 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ing dependence on human behavior
 Increasi
-+
 Figure 7-3. The Ice Cream Cone Hierarchy of Security Solutions
-SHORTRIL
-GI
 @HAC
 HYI
 HY
-JERM.IO | MSWAGITD¢
 ```
 
 ## Slide 68
@@ -614,7 +604,8 @@ Finite cognitive resources; competing pressures; exhaustion, stress, distraction
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Finite cognitive resources; competing
@@ -637,14 +628,6 @@ Isolation, standardization, message buses, declarative dependencies, queues, fai
 71
 
 shortridge@hachyderm.io | @swagitda_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Isolation, standardization, message buses,
-declarative dependencies, queues, failover...
-7\ SHORTRIDGE@HACHYDERM.IO | A@SWAGITDA_
-```
 
 ## Slide 72
 
@@ -674,7 +657,8 @@ Queues and message brokers support modularity, each in different ways…
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Queues and message brokers support
@@ -760,7 +744,8 @@ Modularity allows for basic encapsulation and separation of concerns… and supp
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Modularity allows for basic encapsulation and
@@ -788,7 +773,8 @@ shortridge@hachyderm.io | @swagitda_
 
 86 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sandbox
@@ -801,8 +787,6 @@ memory
 Browser
 memory
 libogg
-Es
-—
 SHORTRIDGE@MHACHYDERM.IO | @SWAGITDA
 ```
 
@@ -992,25 +976,6 @@ shortridge@hachyderm.io | @swagitda_
 
 111 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-s]
-7
-ERE
-th
-ee.
-saan
-Sofie
-ce
-ocUuty
-ro
-a)
-on
-SHORTRIDGE@HACHYDERM.IO | @SWAGITDA
-Hl
-```
-
 ## Slide 112
 
 We can refine our mental models continuously rather than waiting for attackers to exploit them
@@ -1025,7 +990,8 @@ shortridge@hachyderm.io | @swagitda_
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (Example) Attack Tree for Cryptominer in a Container
@@ -1068,7 +1034,8 @@ shortridge@hachyderm.io | @swagitda_
 
 117 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Firewall?
@@ -1077,7 +1044,6 @@ Misconfigured
 port injection
 Conf Lo Alert
 onjig og e Incident Wait...
-\.
 Firewall did not detect or block the change on all instances.
 Standard Port AAA security policy out of sync on the Portal
 Team instances. Port change did not trigger an alert and log
@@ -1087,20 +1053,18 @@ Result: Hypothesis disproved.
 caught the change and alerted the SOC.
 Figure 2-6. An example security chaos experiment simulating a misconfigured port
 injection scenario
-7
-SHORTRIDGE@HACHYDERM.IO | A@SWAGITDA_
 ```
 
 ## Slide 118
 
 118 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Endpoint | > Execute relevant malicious actions
 Deploy to production Make proposed changes
-Analyze results 1 —<— | _ Retest against new changes
 Figure 9-5. Engineering workflow change evaluation
 118 SHORTRIDGE@HACHYDERM.IO | A@SWAGITDA_
 ```
@@ -1148,38 +1112,6 @@ Defenders struggle to create lucid, actionable metrics that offer immediate feed
 124
 
 shortridge@hachyderm.io | @swagitda_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-tha
-Tl
-‘
-pacti
-ZF
-ine 4
-eate lucid,
-et
-{
-offer im
->
-wl
-2
-sre
-ug
--
-ers Se
-imme
-S sirug
-ics that.
-nde
-trics t
-Bile
-<
-td
-me
-“Z
-```
 
 ## Slide 125
 
@@ -1267,7 +1199,8 @@ So, what system signals can indicate attacks? bffs… Turns out SREs and DevOps 
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 So, what system signals can indicate attacks?
@@ -1460,7 +1393,8 @@ And that, comrades, is the resilience revolution.
 
 shortridge@hachyderm.io | @swagitda_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security Chaos

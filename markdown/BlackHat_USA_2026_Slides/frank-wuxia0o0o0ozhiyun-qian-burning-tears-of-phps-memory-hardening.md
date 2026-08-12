@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Frank Wu&xia0o0o0o&Zhiyun Qian_Burning Tears of PHP's Memory Hardening.pdf"
 pages: 46
 sha256: "aa1b28c241ef7f0206da8569b4f5f5e8ed7e4bd054f66f0b1f22bda6e8deb71d"
-text_chars: 19276
+text_chars: 19318
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:09:42Z"
+converted_at: "2026-08-12T05:34:35Z"
 ---
 # Burning Tears of PHP's Memory Hardening
 
 **Speakers:** Frank Wu, xia0o0o0o, Zhiyun Qian  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Frank Wu&xia0o0o0o&Zhiyun Qian_Burning Tears of PHP's Memory Hardening.pdf` (46 pages)
+
 
 ## Slide 1
 
@@ -48,27 +53,27 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 ###### **Two researchers, one lab.**
 
-```
+\```
 nebula@blackhat: ~/talks/burning-tears
-```
+\```
 
-```
+\```
 nebula@blackhat:~$whoami
-```
+\```
 
-```
+\```
 Frank Wu · Nebula Security
 Hacking Linux and Android
-```
+\```
 
-```
+\```
 Xiaochuan Yu · Nebula Security
 Hacking XNU and Browsers
-```
+\```
 
-```
+\```
 nebula@blackhat:~$cat recent_work.md
-```
+\```
 
 - `first public nginx RCE · remote, ASLR bypass, generic config`
 
@@ -76,9 +81,9 @@ nebula@blackhat:~$cat recent_work.md
 
 - `first public Android browser → kernel full-chain (IonStack) in 7 years`
 
-```
+\```
 nebula@blackhat:~$./burning_tears.sh--target=php --remote
-```
+\```
 
 #BHUSA
 
@@ -112,12 +117,12 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 PHP remote
 
-```
+\```
 POST /upload.php HTTP/1.1
 Host: victim.tld
 Content-Length: 8192
 data=%00%02%be%ef...
-```
+\```
 
 #BHUSA
 
@@ -127,9 +132,9 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 ###### **How you used to pwn PHP.**
 
-```
+\```
 ZendMM: singly-linked list
-```
+\```
 
 overflow
 
@@ -214,9 +219,9 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 ###### **Same request, same heap.**
 
-```
+\```
 request #1
-```
+\```
 
 request #1 freed pages freelist
 0x…30 0x…80 0x…d0
@@ -316,9 +321,9 @@ IS_OBJECT = 8
 
 flip the low type byte -> same 8 bytes reinterpreted
 
-```
+\```
 flags byte: IS_TYPE_REFCOUNTED = 1<<0
-```
+\```
 
 Every PHP value is 8 bytes plus a type tag. Control a zval, and you control what PHP believes memory is.
 
@@ -589,7 +594,7 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 **LIBC SIDE (NEED SYSTEM)**
 
-```
+\```
 0x000059adca4000000x00007ffff780d000
 php-fpm .textlibc.so.6
 r-xr-x
@@ -597,17 +602,17 @@ near each othernear each other
 0x000059adf74100000x00007ffff4600000
 FPM_heapzend_heap
 rw-rw-
-```
+\```
 
 ###### **PROBE PAGE-BY-PAGE FROM A KNOWN HEAP ANCHOR**
 
-```
+\```
 0x7ffff4600000 ->
-```
+\```
 
-```
+\```
 page okpage okpage okpage okpage okunmappedunmappedunmapped
-```
+\```
 
 **crash -> 502 = boundary found**
 
@@ -625,31 +630,31 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 ###### **2 · REDIRECTED INTO A PACKED INTEGER ARRAY (SPRAY)**
 
-```
+\```
 zval.value ->
 nested zend_array
-```
+\```
 
-```
+\```
 arb -- on low
 3 LSBytesintintint
-```
+\```
 
-```
+\```
 int
-```
+\```
 
-```
+\```
 intintint
-```
+\```
 
 ###### **3 · THOSE BYTES OVERLAP A FORGED ZEND_ARRAY**
 
-```
+\```
 gc . refcount = 1replacement -> 1->0
 arData -> arg0argument controlled
 pDestructor -> pccall target controlled
-```
+\```
 
 pc(arg0)
 4 · destructor fires -> hijack
@@ -676,11 +681,11 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 **USER-INPUT HEAP · ISOLATED**
 
-```
+\```
 $_GET$_POST$_COOKIE
 ✕ cannot shape the app heap
 decode
-```
+\```
 
 **APPLICATION HEAP · WHERE THE BUG LIVES** `zend_string zend_array zend_object JSON / XML decode lands here ✓`
 
@@ -712,13 +717,13 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 **A packed, integer-keyed array stores a flat run of zvals. Set each value → spray any 8-byte pattern.**
 
-```
+\```
 0xdeadbeefdeadbeef0x41414141414141410x0700000000000001
-```
+\```
 
-```
+\```
 …
-```
+\```
 
 #BHUSA
 

@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Johannes Willbold_Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites.pdf"
 pages: 148
 sha256: "4c2f858764f58d40d69e641a608e804d78a528009d23925a5a7b17446b7cc619"
-text_chars: 35792
-ocr_pages: 31
+text_chars: 33667
+ocr_pages: 13
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:18:42Z"
+converted_at: "2026-08-12T04:12:54Z"
 ---
 # Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites
 
@@ -21,23 +26,22 @@ converted_at: "2026-08-11T21:18:42Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Johannes Willbold_Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites.pdf` (148 pages)
 
+
 ## Slide 1
 
 Houston, We Have a Problem Analyzing the Security of Low Earth Orbit Satellites
 
 Johannes Willbold @jwillbold /jwillbold
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-RUHR RUB 8 SecHUMAN
-¥ UNIVERSITAT
 BOCHUM
 SECURITY FOR HUMANS IN CYBERSPACE
 Houston, We Have a Problem
 Analyzing the Security of Low Earth Orbit Satellites
 Johannes Willbold
-W eWwittborc in /jwillbold : ;
 ```
 
 ## Slide 2
@@ -58,7 +62,8 @@ Cyber-Defence Campus, CH Co-Founder of the SpaceSec Workshop
 
 44th IEEE Symposium on Security and Privacy (S&P)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Space Odysséy
@@ -112,20 +117,6 @@ Research
 
 Technology Testing
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Applications - ©
-@
-~~ |
-=~ &
-i (JG QAaey- mp”
-Telecommunications Global Positioning Earth Obervation
-a -
-HR es
-Research Technology Testing
-```
-
 ## Slide 5
 
 **Satellite Orbits**
@@ -156,18 +147,6 @@ LEO
 GEO
 160 - 2k km
 35786 km
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Satellite Orbits
-==
--”=
--
-MEO
-LEO ~ ‘ vet
-35786 km
-```
 
 ## Slide 9
 
@@ -242,17 +221,6 @@ Space Segment
 ISL
 
 Ground Segment
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Context ,
-Space Segment ——e
-BANS
-vo Ear
-See: Ground Segment
-e@
-```
 
 ## Slide 17
 
@@ -460,12 +428,11 @@ Attackers
 
 ## **Not so Novel**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~ Notso Novel
 CONCERNING SECURITY THREATS AGAINST MISSIONS
-348 REPLAY
 Applicable to: Space Segment, Ground Segment, Space-Link Communication
 Description: Transmissions to or from a spacecraft or be found system computers can
 be intercepted, recorded, and played back ata later time
@@ -474,7 +441,6 @@ f and they are re-trapsi intended destination, they might be
 not rejected, they
 such as a mill a spacecraft rc
 in the wrong direc ed away from the SUM phe reset
-Miical onboard parameters)
 349 SOFTWARE THREATS
 Applicable to: Space Segment, Ground Segment
 Description: Users, system operators, and programmers often make mistakes that can result
@@ -486,7 +452,6 @@ ulneral nstabilty/reliability. Weaknesses may be di after
 ‘operatic smal threat agents might attempt to ©
 Possible Mission Impact: Software threats could result i os
 of spacecraft control, unauthorized spacecraft control
-3.4.10 CRPSEHORIZED ACCESS
 Applicable to: Spo een
 Description: Access control policies based om strong authentication provide a means by which
 ‘only authorized entities are allowed to perform system actions, while all others are probil
@@ -504,27 +469,20 @@ or other technical details permitting unauthorized ac
 
 ## **Not so Novel**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~ Notso Novel .
-348 REPLAY
 Applicable to: Space Segment, Ground Segment, Space-L
 Description: Transm: or from a spacecraft or bet —— ee e
 be intercepted, recorded, an: back ata later time
-MARCH 2020 A REPORT OF
 Possible Mission Impact: [f the recorded data THE cis
 pa and they are " AEROSPACE
-eae Teene re Sait
 aft operations, such PROJECT
-Spacecraft is in an unintende
 ng direction, solar arrays point
-3.49 SOFTWARE THREATS
 Applicable to: Sezment, Ground Segment
 Description perators, and programmers often mak .
-ators ca install unauthor,
 yyware, which could res
-we a system results
 ibility. Weaknesses may b
 at agents might attempt tc
 Applicable to: Sp mn
@@ -532,7 +490,6 @@ Description: Access cor ietes based on strong authentication p
 nly authorized e ed to perform system action
 Possible Mission Impact ss control breach would
 tak of a ground system network
-2 spacecraft, execute unauthor
 ized data, contaminate archived
 cess controls ate in place, unsauthori
 result in unauthorized 4
@@ -543,12 +500,11 @@ engineering could
 
 ## **Not so Novel**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~ Notso Novel
 CONCERNING SECURITY THREATS AGAINST MISSIONS
-348 REPLAY
 Applicable to: Space Segment, Ground Segment, Space-Link Communication
 Description: Transmissions to or from a spacecraft or be em computers can
 intercepted, recorded, and played back ata later time
@@ -558,11 +514,9 @@ Counterspace weapons that are rever
 ble and have limited
 ally suited for sit
 Pponent may want
-executed, potential me not rejected, they
 could resulpggtiigpeate spacecraft such as a mill a spacecraft rc
 Mir the result that a space tumbling
 in the wrong direc eset
-Miical onboard parameters)
 349 SOFTWARE THREATS
 Applicable to: Space Segment, Ground Segment Ry 7 9 3d States from in
 / may believe that
@@ -570,7 +524,7 @@ Description: Users, system operators, and programmers often make mistakes that c
 sers or administrators can install unauthorized or unvetted softw yberatacks can be ., not trigger the vi
 that might contain bugs, viruses, or spyware, which could result in system in thing ts trying to prevent) while creat
 used to take contr
-System operators might misconfigure a system resulting in security  weakne of 2 ficant operational challenges for th
+System operators might misconfigure a system resulting in security weakne of 2 ficant operational challenges for th
 Programmers may introduce logic or implementation errors that could result ve that make the prospect
 ulneral astabilty/reliability, Weaknesses may be discovere
 ‘operatic siemal threat agents might attempt to exploit
@@ -578,9 +532,6 @@ Imited battle damage assess
 Possible Mission Impact: Software threats could result i os aries in many situation
 of spacecraft control, unauthorized spacecraft control Jt reliable battle damage at
 3.4.10 CRSEFORIZED ACCESS ns with the confidence
-Applicable to Spe en y costful. Further pons that
-y duce collateral darnage in space, such
-tan P run th
 Description: Access control policies based om strong authentication provide a means by which
 only authorized entities are allowed to perform system actions, while all others are probi Fisk of escalating a conflict and turning
 Possible Mission Impact: An access control breach would allow an unauthorized enti
@@ -597,12 +548,12 @@ or other techni
 
 ## **Not so Novel**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Not so Novel
 CCSDS REPORT CONCERNING SECURITY THREATS AGAINST SPACE MISSIONS,
-348 REPLAY
 Applicable to: Space Segment, Ground Segment, Space-Link Communication.
 Description: Transmissions to or from a spacecraft or between ground system computers can
 b
@@ -611,7 +562,6 @@ Possible Mission Impact: If the recorded data were a comin the ground to the
 ination, they might be
 are not rejected, they
 a spacecraft rc
-real onboard parameters)
 349 SOFTWARE THREATS:
 Applicable to: Space Segment, Ground Segament
 Description: Users, system operators, and programmers often make mistakes that can result
@@ -635,8 +585,6 @@ in unauthorized data, contaminate archived data, or co
 sak access controls are in place, unauthorized access migh
 passwords might be obtained. Social en;
 otifies, passwords, or other techni
-cesps 3501-62
-ustration
 yeratacks ca
 used to take contr
 user terminals that con cs | Counterspace weapons that are revers
@@ -649,7 +597,6 @@ igh degree of understanding of | response. For examp
 uct. Cyberattacks can be contract. | such attacks wil stay below the tres
 to prvate groups or individuals, | for escalation (Le, not trigger the very
 ans that a state or non-state ac. | thing itis trying to prevent) while creating
-Fas posal cyber threat . that make the prospect of
 intervention more costly and protracted
 ystems can Fe | Cocversely, counterspace weapons that
 ult in data loss, widespread disruptions, | haye limited battle damage assessment
@@ -665,7 +612,6 @@ upply or damaging its electronics and
 Accurate and timely attribution
 ick can be difficult, if not | risk of escalating a conflict and turning
 ause attackers can use a | other nations against the attacker
-dso heir iden
 tity, such as using hijacked servers to
 THREAT
 CHARACTERISTICS
@@ -687,7 +633,6 @@ Prepared for
 U.S. GOVERNMENT AGENCY
 Contract No, FA8802-19-C-0001
 Authorized by: Defense Systems Group
-Distribution Statement A: Ost 200 datbaton unites
 ```
 
 ## Slide 43
@@ -710,17 +655,6 @@ Affordable Ground Stations
 
 Ground Station as a Service GSaaS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Myth of Inactessibility
-~
-> Fs
-\\
-Affordable ° Ground Station as a Service
-Ground Stations GSaaS
-```
-
 ## Slide 46
 
 ## **Myth of Inaccessibility**
@@ -731,20 +665,6 @@ Ground Station as a Service
 Affordable
 GEO → LEO
 Ground Stations GSaaS
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Myth of Inactessibility
-~
-> Fs
-\\
-Affordable ° Ground Station as a Service
-Ground Stations GSaaS
-eb £e
-More Satellites
-GEO — LEO
-```
 
 ## Slide 47
 
@@ -803,17 +723,6 @@ Denial of Service
 Malicious Data
 Interaction
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attacker Goals
-@
-[S
-QO
-Denial of Service ; Malicious Data
-Interaction
-```
-
 ## Slide 54
 
 ## **Attacker Goals**
@@ -833,19 +742,6 @@ Seizure of Control
 Malicious Data
 Denial of Service
 Interaction
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attacker Goals _
-e-
-— i
-> .¥
-Seizure of sontrol Malicious Data
-Interaction
-e
-Denial of Service
-```
 
 ## Slide 56
 
@@ -1007,17 +903,6 @@ Bypass COM Protection Deploy Attacker Payload
 [...] Firmware Update
 Dangerous TC
 Vulnerable TC
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attack Path
-COM CDHS Bus
-¢ Bypass COM Protection e Deploy Attacker Payload
-= [...] = Firmwaretpedate
-= Dangerous TC
-# Vulnerable TC
-```
 
 ## Slide 71
 
@@ -1231,15 +1116,6 @@ Bypass COM Protection Missing TC Protection
 
 **CDHS** Deploy Attacker Payload Dangerous TC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Real-World Test = 2)
-. Te COM CDHS
-e Bypass COM Protection e Deploy Attacker Payload
-= Missing TC Protection = Dangerous TC
-```
-
 ## Slide 86
 
 #### Real-World Test
@@ -1270,27 +1146,12 @@ Operated by ESA Open for Research
 
 S-/X-Band, SDR, Optical Rx., Camera, ... Peripherals
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-System Chart
-COM EPS
-CDHS
-GPS ADCS
-[2]
-e
-Experimenter
-S-/X-Band, SDR, Optical Rx., Camera, ...
-@) ted by ESA ;
-ee Peripherals
-Open for Research .-
-```
-
 ## Slide 89
 
 **System Chart**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System Chart
@@ -1307,11 +1168,10 @@ GPS ADCS
 
 1 Cubesat Space Protocol (CSP)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-System Chart .
-@ CG) Cubesat Space Protocol (CSP)
 COM ———»> EPS
 CDHS
 GPS ADCS
@@ -1328,17 +1188,6 @@ Cubesat Space Protocol (CSP)
 2
 2 AVR32 AT32UTC3, FreeRTOS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-System Chart .
-@ CG) Cubesat Space Protocol (CSP)
-com > EPS
-CDHS (2)
-ADCS
-Q) AVR32 AT32UTC3, FreeRTOS
-```
-
 ## Slide 92
 
 #### **System Chart**
@@ -1352,15 +1201,13 @@ Cubesat Space Protocol (CSP)
 
 2 AVR32 AT32UTC3, FreeRTOS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-System Chart .
-@ CG) Cubesat Space Protocol (CSP)
 COM ———» EPS
 CDHS ( 2 ) ;
 3 ADCS
-Q) AVR32 AT32UTC3, FreeRTOS
 ```
 
 ## Slide 93
@@ -1379,14 +1226,12 @@ Cubesat Space Protocol (CSP)
 
 3 CCSDS Protocl Stack
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-System Chart .
-@ CG) Cubesat Space Protocol (CSP)
 COM ———» EPS
 ebris ADCS
-Q) AVR32 AT32UTC3, FreeRTOS
 G) CCSDS Protocl Stack
 ```
 
@@ -1404,14 +1249,12 @@ Cubesat Space Protocol (CSP)
 4
 4 ARM Cortex A9, Yocto Linux
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-System Chart .
-@ CG) Cubesat Space Protocol (CSP)
 COM ———»> EPS
 CDHS(2)
-Q) AVR32 AT32UTC3, FreeRTOS
 G) CCSDS Protocl Stack
 () ARM Cortex A9, Yocto Linux, “
 ```
@@ -1827,55 +1670,159 @@ ADCS Server
 
 ## Slide 111
 
-#### **Vulnerable TC**
+void task_adcs_servr() {
+  char log_file_name [32];
 
-Cubesat Space Protocol (CSP)
+  csp_listen(socket, 10);
+  csp_bind(socket, port);
 
+  do {
+    do {
+      conn = csp_accept(socket, 0xff);
+    } while (do_wait_for_conn);
+
+    packet = csp_read(conn, 10);
+    if (packet) {
+      packet_data = packet->data;
+      switch(*packet_data) {
+        // [...]
+        case SET_LOGFILE: {
+          packet_data = packet->data + 0xf;
+          log_file_name[0] = '\0';
+          strcat(log_file_name,packet_data);
+          // ...
+        }
+      }
+    }
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+  csp_listen(socket, 10);
+  csp_bind(socket, port);
+    do {
+      conn = csp_accept(socket, 0xff);
+    } while (do_wait_for_conn);
+
+    packet = csp_read(conn, 10);
+void task_adcs_servr() {
+1
+  char log_file_name [32];
+2
+
+3
+4
+5
+
+6
+  do {
+7
+8
+9
+10
+11
+12
+    if (packet) {
+13
+      packet_data = packet->data;
+14
+      switch(*packet_data) {
+15
+        // [...]
+16
+        case SET_LOGFILE: {
+17
+          packet_data = packet->data + 0xf;
+18
+          log_file_name[0] = '\0';
+19
+          strcat(log_file_name,packet_data);
+20
+          // ...
+21
+        }
+22
+      }
+23
+    }
+24
+}
+25
+  char log_file_name [32];
+          packet_data = packet->data + 0xf;
+          log_file_name[0] = '\0';
+          strcat(log_file_name,packet_data);
+void task_adcs_servr() {
+1
+2
+
+3
+  csp_listen(socket, 10);
+4
+  csp_bind(socket, port);
+5
+
+6
+  do {
+7
+    do {
+8
+      conn = csp_accept(socket, 0xff);
+9
+    } while (do_wait_for_conn);
+10
+
+11
+    packet = csp_read(conn, 10);
+12
+    if (packet) {
+13
+      packet_data = packet->data;
+14
+      switch(*packet_data) {
+15
+        // [...]
+16
+        case SET_LOGFILE: {
+17
+18
+19
+20
+          // ...
+21
+        }
+22
+      }
+23
+    }
+24
+}
+25
+Vulnerable TC
 ADCS Server
-
-   - **1 void task_adcs_servr () {**
-
-   - **2 char log_file_name [32];**
-
-   - **3**
-
-   - **4 csp_listen(socket, 10);**
-
-   - **5 csp_bind(socket, port);**
-
-   - **6**
-
-   - **7 do {**
-
-   - **8 do {**
-
-   - **9 conn = csp_accept(socket, 0xff);**
-
-- **10 } while (do_wait_for_conn);**
-
-**11**
-
-- **12**
-
-   - **packet = csp_read(conn, 10);**
-
-- **13 if (packet) {**
-
-- **14 packet_data = packet->data;**
-
-- **15 switch (*packet_data) {**
-
-- **16**
-
-   - **// [...]**
-
-- **17 case SET_LOGFILE: {**
-
-- **18 packet_data = packet->data + 0xf;**
-
-- **19 log_file_name[0] = '\0';**
-
-- **20 strcat(log_file_name,packet_data); 21 // ... 22 } 23 } 24 } 25 }**
+Cubesat Space Protocol (CSP)
 
 ## Slide 112
 
@@ -1883,11 +1830,11 @@ ADCS Server
 
 **COM CDHS Bus** Bypass COM Protection Deploy Attacker Payload Missing TC Protection Vulnerable TC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘Defenses - 404?
-e
 e
 Te COM CDHS Bus ,
 e Bypass COM Protection e Deploy Attacker Payload
@@ -1982,39 +1929,6 @@ Stack Cookies
 
 **Demo Setup**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Demo Setup
-Hook
-20— --Oro-
--O00r: O-O-Or-0Or
--OOreeee a
-CCOK-O0ee- OC -H- OKO DOeree
--e-O00rr Or coOrrro yOro
--Or-Or-000-0000C Oreo
-YR ORK KOKKKKH- OO: -oCOr
-.OOrH--9000r-00K -Oo-00Fr
-Or-H—COP CORK Cer Kk Serre
-2-O900K-O0- Or 00000r-O
-we--00R--O0r-000-0-0¢
-O-0O0F X- OOK O-O-0OK-H-y YOO-OO- OL
-y-O00r O-c000O-rrer-O-Orrraoo
-*-Orro mer Or OK HK OC00OKKO00COOeF KK
-DO-Or -O-00—-0-6—
-OSere HO 000K OK O- OOF KR KKK KO
-20-00 =—Oee —-O--Oree- Or ore
-200-0 e--OOr -—CO--00OrK-- 00
--OOrr Oro” COreK9000r0
-+.-o00- 200" -OK- KH OOK KO,
-ro 2H OreKH-O- OF D-O0O-
-2OOO-Ororr -Ore:
-Ieee K Ore -Ore
-oocoooe
-CO-or-
-xr OC
-```
-
 ## Slide 119
 
 ## **Emulation Overview**
@@ -2026,24 +1940,6 @@ QEMU
 UHF
 Sensors
 Simulation Agent
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Emulation Overview .
-Cc
-TC Handlers =z n
-m™ 3
-=
-OBSW oS
-5 et,
-AVR32 S 5
-os
-ra)
-mm)
-( on
-QEMU
-```
 
 ## Slide 120
 
@@ -2059,24 +1955,6 @@ QEMU
 UHF
 Sensors
 Simulation Agent
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Emulation Overview .
-Telecommand
-Cc
-TC Handlers = n
-"TI =| TCP
-OBSW wn = Telemtry
-5 =
-AVR32 S 5
-“  &
-fe)
-|
-a
-QEMU
-```
 
 ## Slide 121
 
@@ -2115,10 +1993,10 @@ AVR32
 
 QEMU
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- AVR32-QEMU is
 404 - AVR32 Not Found QEMU
 RUHR-UNIVERSITAT BOCHUM
 Hacking the Stars: A Fuzzing Based Sei
@@ -2342,13 +2220,6 @@ _“_ **But it's different for *my* satellite**
 ## Slide 145
 
 **Lesson Learnt**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Lesson Learnt ~ :
-@dd3399
-```
 
 ## Slide 146
 

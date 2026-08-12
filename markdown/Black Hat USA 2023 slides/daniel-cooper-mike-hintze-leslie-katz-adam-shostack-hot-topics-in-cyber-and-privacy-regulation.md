@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Daniel Cooper & Mike Hintze & Leslie Katz & Adam Shostack _Hot Topics in Cyber and Privacy Regulation.pdf"
 pages: 17
 sha256: "f8197ca2b0091fedc3b7400ef7937aae707f66236006a2089ed40f48e88e02d5"
-text_chars: 5208
+text_chars: 5198
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:57Z"
+converted_at: "2026-08-12T04:07:40Z"
 ---
 # Hot Topics in Cyber and Privacy Regulation
 
 **Speakers:** Daniel Cooper, Mike Hintze, Leslie Katz, Adam Shostack  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Cooper & Mike Hintze & Leslie Katz & Adam Shostack _Hot Topics in Cyber and Privacy Regulation.pdf` (17 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ converted_at: "2026-08-11T21:14:57Z"
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS

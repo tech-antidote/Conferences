@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Nicholas Dubois & Jessica Hyde_nput Output + Syslog (iO+S) Obtaining Data From Locked iOS Devices via Live Monitoring.pdf"
 pages: 69
 sha256: "0e0cb036748eed0ee9a55e1813a991672533bcf6b3bfd447abe65f0ecdf3bded"
-text_chars: 35057
-ocr_pages: 24
+text_chars: 33002
+ocr_pages: 20
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:22:08Z"
+converted_at: "2026-08-12T04:18:04Z"
 ---
 # nput Output + Syslog (iO+S) Obtaining Data From Locked iOS Devices via Live Monitoring
 
 **Speakers:** Nicholas Dubois, Jessica Hyde  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nicholas Dubois & Jessica Hyde_nput Output + Syslog (iO+S) Obtaining Data From Locked iOS Devices via Live Monitoring.pdf` (69 pages)
+
 
 ## Slide 1
 
@@ -158,21 +165,32 @@ Diagnostics USB RM Trusted State
 
 Diagnostics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Diagnostics
-Serial Number:
-G6TFL4LU0D87
-oF Gl
-Diagnostics a ies
-MEID:
-35052207479690
-IMEI:
-5 052207 479690 4
-052207 494487 6
-(Hy)
-HEXORDIA
+3: Object
+  cleartext: Object
+    id: "{aef46dab-3c32-4d23-bd55-9b07e580c392}"
+    hostname: "https://jankhjankh.github.io"
+    formSubmitURL: "https://jankhjankh.github.io"
+    httpRealm: null
+    username: "username"
+    password: "password"
+    usernameField: "uname"
+    passwordField: "psw"
+    timeCreated: 1696463467376
+    timePasswordChanged: 1696463467376
+  data: Object
+    id: "{aef46dab-3c32-4d23-bd55-9b07e580c392}"
+    modified: 1696471546.64
+    payload: Object
+      ciphertext: null
+      IV: "BVehNXhWbFioUMwFxSbqMA=="
+      hmac: "089b7bb1d29c2222485af56645d3ba77c0d7f1acc3b12f0127b4537389d2b3a6"
+  collection: undefined
+
+Figure 5: The internals of Firefox sync including the timestamps it was last used.
 ```
 
 ## Slide 15
@@ -227,14 +245,13 @@ Sysdiagnose Logs
 
 What are Sysdiagnose Logs?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What are Sysdiagnose Logs?
 crashes_anc_s
 summaries
-(A)
-HEXORDIA
 ```
 
 ## Slide 21
@@ -251,68 +268,51 @@ HEXORDIA
 
 Capturing Sysdiagnose Logs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cupertino
-4g°
-2
 Light rain for the
 ext heur
-Coenen
-Calon Photos
 Capturing Sysdiagnose Logs
-Db Pra
 Settings
 2en Time
 None
 Reachahility
 3D & Haptic Touch
-orninada li
 Lock Rotation
 Undo
 Lock Screen
 Home Buttor
 qT
-ibration
-‘B05 PM
 49°
 =
 Lipnt rain tor the,
 ext hour
-‘wallet
 H
-HEXORDIA
 ```
 
 ## Slide 23
 
 Capturing Sysdiagnose Logs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Capturing Sysdiagnose Logs
 iPhone:~ root# sysdiagnose —h
--h
-“Vv
 -f results_directory
 -A archive_name
 -V volume_path
--n
 -k
 -F
-SE
--u
 -Q
 -b
 -P
--P
-9
-==
 -d
 -D
--r
 -R
 [process_name | pid]
 -C, --compression type
@@ -361,18 +361,15 @@ this tool and sending the results to Apple, you consent to Apple using the
 contents of these files to improve Apple products.
 Press 'Enter' to continue. Ctrl+\ to cancel.
 Progress:
-CEUTEEETETTTT TEED TTT ees EEE
 Output available at '/private/var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/
-sysdiagnose/sysdiagnose_2023 . 08 .02_16-50-U1-0400_iPhone-OS_iPhone_20A392.tar.gz'.
-(Hy)
-HEXORDIA
 ```
 
 ## Slide 24
 
 Capturing Sysdiagnose Logs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Capturing Sysdiagnose Logs
@@ -398,26 +395,18 @@ WHAT sysdiagnose COLLECTS:
 - A list of malloc-allocated buffers in the process's heap
 - Data about unreferenced malloc buffers in the process's memory
 - Data about the virtual memory regions allocated in the process
-(Hy)
-HEXORDIA
 ```
 
 ## Slide 25
 
 Capturing Sysdiagnose Logs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Capturing Sysdiagnose Logs
-S205 0000 ie ae
-```
-
 ## Slide 26
 
 Sysdiagnose Log Contents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sysdiagnose Log Contents
@@ -482,13 +471,12 @@ est_tool RTCGetDictionaryInteractionsSummary||
 
 Parsing Sysdiagnose – Hexordia iO+S Toolkit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Parsing Sysdiagnose - Hexordia 10O+S Toolkit
 e5b005bc91! d Of then attempt to
-(A)
-HEXORDIA
 ```
 
 ## Slide 29
@@ -507,12 +495,12 @@ Syslogs
 
 • Trust Required
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What are Syslogs?
 * Realtime Log
-* Trust Required
 Jul 25 14:23:01 suggestd(ProactiveHarvesting)[138] <Notice>: HVQueues: enqueueContent: <private>
 Jul 25 14:23:01 suggestd(ProactiveHarvesting)[138] <Notice>: HVQueue<MailContent>: enqueueContent: writing to disk
 Jul 25 14:23:01 suggestd(CoreSuggestionsInternals)[138] <Notice>: Decoded 16 of 16 items received from com.apple.mobilemail.
@@ -530,12 +518,8 @@ Jul 25 14:23:01 coreduetd(CoreDuet)[129] <Notice>: CDInteractionCache: New recor
 Jul 25 14:23:01 runningboardd(RunningBoard)[31] <Notice>: Acquiring assertion targeting [xpcservice<com.apple.PaperBoard.LegacyPoster([osservice<com.apple
 . SpringBoard>:32])>:192] from originator [osservice<com.apple.SpringBoard>:32] with description <RBSAssertionDescriptor| "FBWorkspace (ForegroundNonFocal)
 " ID:31-32-545 target:192 attributes:[
-<RBSDomainAttribute| domain:"com.apple.frontboard" name: "Workspace-ForegroundActive" sourceEnvironment:"(null)">,
 <RBSAcquisitionCompletionAttribute| policy:AfterApplication>,
 <RBSDomainAttribute| domain:"com.apple.frontboard" name:"Visibility" sourceEnvironment:"(null)">
-1> L<
-(Hy
-HEXORDIA
 ```
 
 ## Slide 32
@@ -550,20 +534,13 @@ HEXORDIA
 
 # Capture & Parse Syslog IO+S Toolkit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-7 Capture & Parse Syslog ‘
-LH lIO+S Toolkit
-```
-
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Application Log < Clear Logs @@ YouTube ? Help
-0S Monitor Syslog Oj 1 Analysi Ng \ alysis | CS
 System Log Control Panel
 >
 Start Moni
@@ -585,7 +562,8 @@ iOS 16.0.3 (20A392)
 
 USB Endpoints (Normal Device State)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USB Endpoints (Normal Device State
@@ -596,9 +574,7 @@ bLength 0x9 (9 bytes) blength 0x9 (9 bytes) bmattributes Oxc0 Self Powered ENDPO
 bDescriptorType 0x4 Interface bDescriptorType 0x4 Interface bMaxPower Oxfa (500 mA) bLength 0x7 (7 bytes) bAlternateSetting 0x0 bEndpointAddress : OxS OUT
 binterfaceNumber : 0x0 binterfaceNumber : Ox1 INTERFACE 0: Image bDescriptorType : 0x5 Endpoint bNumEndpoints : 0x2 bmAttributes 0x2 Bulk
 bAlternateSetting : 0x0 bAlternateSatting : 0x0 bLength 0x9 (9 bytes) bEndpointAddress : Ox85 IN binterfaceClass : Oxff Vendor Specific wMaxPacketSize ; 0x200 (512 bytes)
-bNumEndpoints —: 0x3 bNumEndpoints : 0x0 bDescriptorType : 0x4 Interface bmAttributes : 0x2 Bulk binterfaceSubClass : Oxfe binterval 0x0
 binterfaceClass : 0x6 Image binterfaceClass : 0x1 Audio binterfaceNumber : Ox0 wMaxPacketSize : 0x200 (512 bytes) binterfaceProtocol : 0x2 INTERFACE 2, 2: Vendor Specific =
-binterfaceSubClass : 0x1 binterfaceSubClass : Ox2 bAlternateSetting : 0x0 binterval : 0x0 interface Oxf Apple USB Multiplexor bLength (0x9 (9 bytes)
 binterfaceProtocol : 0x1 binterfaceProtocol : Ox0 bNumEndpoints : 0x3 CONFIGURATION 4: 500 mA ENDPOINT 0x4: Bulk OUT bDescriptortype : 0x4 Interface
 ilnterface + Oxe PTP ilnterface : 0x0 binterfaceClass Ox6 Image bLength : 0x9 (9 bytes) bLength 0x7 (7 bytes) binterfaceNumber : 0x2
 ENDPOINT 0x2: Bulk OUT = INTERFACE 1, 1: Audio binterfaceSubClass : Oxi bDescriptorType : 0x2 Configuration bDescriptorType : 0x5 Endpoint bAlternateSetting : 0x2
@@ -618,7 +594,7 @@ binterval 0x0 bEndpointAddress : 0x81 IN bEndpointAddress : 0x81 IN binterfaceCl
 ENDPOINT 0x83: Interrupt IN bmattributes : x1 Isochronous bmAttributes : 0x2 Bulk binterfaceSubClass: Ox1 bDescriptorType : Ox4 Interface bLength 0x7 (7 bytes)
 bLength 0x7 (7 bytes) wMaxPacketSize : OxcO (192 bytes) wMaxPacketSize : 0x200 (512 bytes) binterfaceProtocol: 0x1 binterfaceNumber : Ox2 bDescriptorType : 0x5 Endpoint
 bDescriptorType : 0x5 Endpoint binterval 0x4 binterval 0x0 interface: Oxe PTP bAlternateSetting : 0x0 bEndpointAddress :_ 0x5 OUT
-bEndpointAddress : 0x83 IN INTERFACE 2: Human Interface Device = ENDPOINT 0x83: Interrupt IN ENDPOINT 0x2: Bulk OU bNumEndpoints  : 0x0 bmAttributes : 0x2 Bulk
+bEndpointAddress : 0x83 IN INTERFACE 2: Human Interface Device = ENDPOINT 0x83: Interrupt IN ENDPOINT 0x2: Bulk OU bNumEndpoints : 0x0 bmAttributes : 0x2 Bulk
 bmAttributes : 0x3 Interrupt blength 0x9 (9 bytes) blength 0x7 (7 bytes) bLength 0x7 (7 bytes) binterfaceClass : Oxff Vendor Specific wMaxPacketSize : 0x200 (512 bytes)
 wMaxPacketSize : 0x40 (64 bytes) bDescriptorType x4 Interface bDescriptorType : Ox5 Endpoint bDescriptorType : OxS Endpoint binterfaceSubClass : Oxfd binterval x0
 binterval Oxa binterfaceNumber : 0x2 bEndpointAddress : 0x83 IN bEndpointAddress : 0x2 OUT binterfaceProtocol : 0x1
@@ -642,14 +618,14 @@ binterfaceSubClass: Ox1 wTotallength Ox3e (62 bytes) bEndpointAddress : 0x4 OUT 
 binterfaceProtocol: 0x0 bNuminterfaces Ox2 bmAttributes 0x2 Bulk INTERFACE 1: Vendor Specific binterval 0x0
 ilnterface Oxo bConfigurationValue : 0x3 wMaxPacketSize : 0x200 (512 bytes) bLength 0x9 (9 bytes)
 ENDPOINT Ox5: Bulk OUT
-HEXORDIA
 ```
 
 ## Slide 38
 
 USB Endpoints (Recovery Mode)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Configuration Value: 1
@@ -679,7 +655,6 @@ CONFIGURATION 1: 500 mA =
 bLength : Ox9 (9 bytes)
 bDescriptorType : 0x2 Configuration
 wTotalLength : 0x39 (57 bytes)
-bNuminterfaces =: 0x2
 bConfigurationValue : Ox1
 iConfiguration : 0x5 Apple Mobile Device (Recovery Mode)
 bmAttributes : 0x80 Bus Powered
@@ -691,7 +666,6 @@ binterfaceNumber : 0x0
 bAlternateSetting : 0x0
 bNumEndpoints Ox1
 binterfaceClass Oxfe Application Specific
-binterfaceSubCl: Oxi
 binterfaceProtocol Ox2
 ilnterface : 0x0
 USB Endpoints (Recover
@@ -710,7 +684,6 @@ bAlternateSetting : 0:
 bNumEndpoints : Ox0
 binterfaceClass : Oxff Vendor Specific
 binterfaceSubClass : Oxff
-binterfaceProtocol : 0x51
 ilnterface : Ox0
 INTERFACE 1, 1: Vendor Specifi
 bLength : 0x9 (9 bytes)
@@ -725,7 +698,6 @@ ilnterface : 0x6 Apple USB Serial Interface
 ENDPOINT 0x81: Bulk IN =
 bLength : 0x7 (7 bytes)
 bDescriptorType : 0x5 Endpoint
-bEndpointAddress : 0x81 IN
 bmAttributes : 0x2 Bulk
 wMawPacketSize : 0x200 (512 bytes)
 binterval : 0x0
@@ -737,15 +709,14 @@ bmAttributes : Ox2 Bulk
 wMaxPacketSize : 0x200 (512 bytes)
 binterval : 0x0
 y Mode
-(Hy)
-HEXORDIA
 ```
 
 ## Slide 39
 
 ###### USB Endpoints (DFU Mode)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USB Endpoints (DFU Mode
@@ -771,7 +742,6 @@ CONFIGURATION 1: 500 mA
 bLength : Ox9 (9 bytes)
 bDescriptorType : Ox2 Configuration
 wTotalLength : 0x19 (25 bytes)
-bNuminterfaces =: Ox1
 bConfigurationValue : Ox1
 iConfiguration : OxS Apple Mobile Device (DFU Mode)
 bmAttributes : 0x80 Bus Powered
@@ -781,12 +751,9 @@ bLength : Ox9 (9 bytes)
 bDescriptorType : Ox4 Interface
 binterfaceNumber : Ox0
 bAlternateSetting : Ox0
-bNumEndpoints : Ox0
 binterfaceClass : Oxfe Application Specific
 binterfaceSubClass: Ox1
-binterfaceProtocol: 0x0
 ilnterface 0x0 (Hy
-HEXORDIA
 ```
 
 ## Slide 40
@@ -795,12 +762,11 @@ HEXORDIA
 
 The same endpoints as Normal Device State; endpoints do not work the same
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 USB Endpoints (Diagnostics Mode)
-(Sel?)
-MD)
 Diagnostics
 The same endpoints as Normal Device
 State; endpoints do not work the same
@@ -810,19 +776,16 @@ State; endpoints do not work the same
 
 usbmuxd & SSL
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 usbmuxd & SSL
-N" “http apple. com/DT!
-aa 2 4 Adisa oa
 DTD PLIST 1. N" “http
-4Ad07a7 7 8 2B
 5 AdpU BB BB B Spite a aim
 N" “http: apple.com/DTDs/PropertyList-1.0.dtd
 >
 (H
-HEXORDIA
 ```
 
 ## Slide 42
@@ -837,7 +800,8 @@ SSL
 Program If no SSL Exit(1)
 Q: Make Query
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Some Programs...
@@ -851,7 +815,6 @@ SSL <
 Program < If no SSL
 Q: Make Query
 Exit(1)
-HEXORDIA
 ```
 
 ## Slide 43
@@ -868,46 +831,35 @@ HEXORDIA
 
 https://desowin.org/usbpcap/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Capturing USB Traffic
-https://desowin.org/usbpcap/
-B) USBPcapCMD.exe
-```
-
 ## Slide 45
 
 Capturing USB Traffic
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Capturing USB Traffic
-C:\Program Files\USBPcap\USBPcapCMD.exe
 Device Information Service
 Bluetooth LE Generic Attribute Service
 Bluetooth Low Energy GATT compliant HID device
 2 \\.\USBPcap2
-\?? \USBHROOT HUB30#5&26T6777&0808{F18a0688 - c30c-11d8-8815-eeaacIe6beds}
 [Port 2] Apple Mobile Device USB Composite Device
 Apple Mobile Device USB Device
 Apple iPhone
 Select filter to monitor (q to quit): 2
 Output file name (.pcap): Output,
-(Hy)
-HEXORDIA
 ```
 
 ## Slide 46
 
 Identifying iOS USB Traffic
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Identifying 1OS USB Traffic
-<!DOCTYPE plist PUBLTC “-//Annle//DTN PITST 1.@//FN" “httn: //unmw annle_com/NDTNs/Pronertvl ist-1_8,dtd">
 <plist version="1.0 :
 <dict> ¥ plist
 <key>Key</key>
@@ -918,7 +870,6 @@ Identifying 1OS USB Traffic
 <string>GetValue</string>
 </dict>
 </plist>
-£SAd-da ja,
 BG<?xml version="1. encoding="UTF- >
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" “http: //ww.apple.com/DTDs/PropertyList-1.
 <plist version="1.8">
@@ -931,9 +882,6 @@ BG<?xml version="1. encoding="UTF- >
 <string>16.0.3</string>
 </dict>
 </plist>
-£SAdeeH E
-(A)
-HEXORDIA
 ```
 
 ## Slide 47
@@ -966,7 +914,8 @@ USB RM Ruins it
 
 Windows: C:\ProgramData\Apple\Lockdown MacOS: /var/db/lockdown
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pairing Records
@@ -974,8 +923,6 @@ Windows: C:\ProgramData\Apple\Lockdown
 MacOS: /var/db/lockdown
 > ThisPC > Win } » ProgramData > Apple » Loc
 Date modified
-(A)
-HEXORDIA
 ```
 
 ## Slide 50
@@ -994,25 +941,12 @@ A device in Diagnostics Mode has no USB RM:
 
 USB RM Bypass… Kinda
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-USB RM Bypass... Kinda
-aS OHPANULINULIDC 2h TEN OINU LEAS 3]5 Tx] a 4° OHMDCZIESCIENOINUL EIB SS 0H)
-Sa TAN LID C LER 3) ti on TRS GT  - EBE
-WULTFRINULINULINULINULINU LINULINULINU LES EN OUT L) IST
-[SUB BEENOINULEAS OH)B Sia
-41CFE4C Wuhan
-§40-4C04
-(A)
-HEXORDIA
-```
-
 ## Slide 52
 
 Parsing USB Traffic – Hexordia iO+S Toolkit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Parsing USB Traffic - Hexordia iO+S Toolkit
@@ -1021,9 +955,6 @@ USBLog = Analysi Control Panel
 Start Monitor Stop Monitor
 sion="1,0" e = $ f {DTD PLIST 1.0//EN"
 {Pr t-1
-‘{DTD PLIS
-(A)
-HEXORDIA
 ```
 
 ## Slide 53
@@ -1069,7 +1000,8 @@ Query Recovery Mode
 
 Fuzzing Recovery Mode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing Recovery Mode
@@ -1080,14 +1012,11 @@ Fuzzing Recovery Mode
 5
 6 os.chdir("C:/Users/nickd/Desktop/Reverse Engineering Syslog/Raw Data/libimobiledevice_32")
 7
-8  £ = open("C:/Users/nickd/Desktop/fuzzme.txt", “r", encoding="utf8", errors="ignore”)
 9 out = open("C:/Users/nickd/Desktop/getrecovery.txt",
-10  out2 = open("C:/Users/nickd/Desktop/runrecovery.txt",
 11 Lines = f.read().splitlines()
 12. #subprocess.Popen("irecovery.exe -c & ping -n 3@ 127.0.0.1 &', shell=False, stderr=f, stdout=f)
 13. #time.sleep(10)
 14
-cr ao
 18
 19 if(get==1):
 20 for line in Lines:
@@ -1096,11 +1025,9 @@ cr ao
 3 out.flush()
 24 print(str)
 25 proc = subprocess.Popen([“cmd",str], stderr=out, stdout=out)
-26 time. sleep(0.4)
 27 try:
 28 os.kill(proc.pid, signal.SIGINT)
 29 except: pass
-31 if(set==1):
 3: for line in Lines:
 55} str='/c echo setenv ' + line + ' false | irecovery.exe -s'
 3. out.write("\n\n")
@@ -1119,10 +1046,8 @@ cr ao
 47 for line in Lines:
 48 str="/c echo " + line + " | irecovery.exe -s*
 49 out2.write("\n\n")
-) out2.flush()
 51 print(str) (Hy
 52 proc = subprocess.Popen(["cmd",str], stderr=out2,stdout=out2)
-53 time.sleep(@.2) WV
 54 try:
 55 os.kill(proc.pid, signal.SIGINT)
 56 except: pass HEXORDIA

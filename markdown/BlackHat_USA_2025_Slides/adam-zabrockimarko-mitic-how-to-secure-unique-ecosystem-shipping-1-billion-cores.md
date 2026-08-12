@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Adam Zabrocki&Marko Mitic_How to Secure Unique Ecosystem Shipping 1 Billion+ Cores.pdf"
 pages: 90
 sha256: "fb64b15eb8554b18b166665951774b09f7cf11a1482cd2e5d3e85d6a38b3772b"
-text_chars: 45204
+text_chars: 45241
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:48:32Z"
+converted_at: "2026-08-12T05:03:02Z"
 ---
 # How to Secure Unique Ecosystem Shipping 1 Billion+ Cores
 
 **Speakers:** Adam Zabrocki, Marko Mitic  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Adam Zabrocki&Marko Mitic_How to Secure Unique Ecosystem Shipping 1 Billion+ Cores.pdf` (90 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Adam ‘pi3’ Zabrocki, Marko Mitic
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- bladk hat |
 on BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
@@ -105,18 +110,6 @@ Private contact: <u>markomitic.net linkedin.com/markomitic</u> Twitter: <u>@mark
 ### Why this talk?
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekchat >
-BRIEFINGS
-( Yi,
-MLL
-NVIDIA’ Tegra’ XT
-i
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 7
 
@@ -199,6 +192,16 @@ Why this talk? **“There is nothing hidden under the sun”**
 Retire proprietary Falcon architecture
 
 #BHUSA @BlackHatEvents
+
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+BRIEFINGS
+Why RISC-V
+‘[m: Retire proprietary Falcon architecture
+#BHUSA @BlackHatEvents
+```
 
 ## Slide 13
 
@@ -1855,9 +1858,9 @@ DRAM
 
    - `X >= V`
 
-```
+\```
 Postcondition:
-```
+\```
 
 - `X = X'Old - V`
 
@@ -1873,31 +1876,31 @@ Postcondition:
 
 - SPARK uses contracts and formal verification to prove whole classes of bugs cannot happen
 
-```
+\```
 ProcedureDo_Operation(X : in out Integer; Y : in out Integer; V : inInteger)
 Precondition:
-```
+\```
 
-```
+\```
 V > 0
 X >= V
-```
+\```
 
-```
+\```
 Postcondition:
-```
+\```
 
-```
+\```
 X = X'Old-V
 Y = Y'Old+ V
-```
+\```
 
-```
+\```
 begin
 X := X -V;
 Y := Y + V;
 endDo_Operation;
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1909,31 +1912,31 @@ endDo_Operation;
 
 - SPARK uses contracts and formal verification to prove whole classes of bugs cannot happen
 
-```
+\```
 ProcedureDo_Operation(X : in out Integer; Y : in out Integer; V : inInteger)
 Precondition:
-```
+\```
 
-```
+\```
 V > 0
 X >= V
-```
+\```
 
-```
+\```
 Postcondition:
-```
+\```
 
-```
+\```
 X = X'Old-V
 Y = Y'Old+ V
-```
+\```
 
-```
+\```
 begin
 X := X -V;
 Y := Y + V;
 endDo_Operation;
-```
+\```
 
 Ada/SPARK Code with Contracts (Preconditions, Postconditions, etc.) Static Analysis Converts code/contracts to logical statements Verification Conditions (VCs) (Logical mathematical claims) SMT Solver (Z3, Alt-Ergo, CVC5) (Automatic mathematical proofs) Manual intervention Proof successful (Improve assertions, code refactor, etc.)
 
@@ -1949,28 +1952,28 @@ Ada/SPARK Code with Contracts (Preconditions, Postconditions, etc.) Static Analy
 
 - SPARK uses contracts and formal verification to prove whole classes of bugs cannot happen
 
-```
+\```
 ProcedureDo_Operation(X : in out Integer; Y : in out Integer; V : inInteger)
 Precondition:
-```
+\```
 
-```
+\```
 V > 0
 X >= V
-```
+\```
 
-```
+\```
 Postcondition:
 X = X'Old-V
 Y = Y'Old+ V
-```
+\```
 
-```
+\```
 begin
 X := X -V;
 Y := Y + V;
 endDo_Operation;
-```
+\```
 
 Write/Refine Specification (.ads) - Add contracts (pre, post, invariants)
 
@@ -1996,10 +1999,10 @@ GNATprove reports issues All proofs succeed → Analyze & refine → Component i
 
 - SPARK uses contracts and formal verification to prove whole classes of bugs cannot happen
 
-```
+\```
 ProcedureDo_Operation(X : in out Integer; Y : in out Integer; V : inInteger)
 Precondition:
-```
+\```
 
 - `V > 0 X >= V`
 
@@ -2007,14 +2010,14 @@ Precondition:
 
 ###### **Tested Procedure**
 
-```
+\```
 Postcondition:
-```
+\```
 
-```
+\```
 X = X'Old-V
 Y = Y'Old+ V
-```
+\```
 
 **Tested Procedure** _Preconditions_ `begin X := X - V;` _are proven_ `Y := Y + V;` _Postconditions_ `end Do_Operation;` _are tested_
 
@@ -2132,11 +2135,11 @@ _*What is Safety-Critical Software, and How Can Ada and SPARK Help?_
 
 #### Language-based security: formally verified components
 
-```
+\```
 Procedure Do_Operation(X : in out Integer; Y :
 in out Integer; V : in Integer)
 Precondition:
-```
+\```
 
 Procedure Do_Operation(X : in out Integer; Y :
 Machine states in out Integer; V : in Integer)

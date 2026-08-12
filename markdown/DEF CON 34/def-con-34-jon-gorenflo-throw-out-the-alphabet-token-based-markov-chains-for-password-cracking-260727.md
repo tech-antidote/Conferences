@@ -4,23 +4,28 @@ speakers: ["Jon Gorenflo"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Jon Gorenflo - Throw Out the Alphabet Token-Based Markov Chains for Password Cracking - 260727.pdf"
 pages: 45
 sha256: "42a0e82f970d87a495f196d58ba8c8a6cf86e7430df1a63695353d3d330d033b"
-text_chars: 23231
+text_chars: 23233
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:23:13Z"
+converted_at: "2026-08-12T06:36:33Z"
 ---
 # Throw Out the Alphabet Token-Based Markov Chains for Password Cracking
 
 **Speakers:** Jon Gorenflo  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gorenflo - Throw Out the Alphabet Token-Based Markov Chains for Password Cracking - 260727.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -713,7 +718,7 @@ MEET THE TOOL
 
 - itself ~9MB; resulting model ~250 300MB.
 
-```
+\```
 $ time tokenov bootstrap
 tokenov bootstrap —plan:
 ...
@@ -722,7 +727,7 @@ Simple test:  tokenov generate --count 10 --strict
 real    1m8.313s
 user    6m27.040s
 sys     0m3.783s
-```
+\```
 
 _~1 minute wall-clock (real 1m8s) on a modern machine, 8 threads -- user time exceeds real time because training is multi-core._
 

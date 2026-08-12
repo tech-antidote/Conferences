@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Anders Fogh & Daniel Gruss_Microarchitecture Vulnerabilities Past, Present, and Future.pdf"
 pages: 66
 sha256: "38ecfbadb2425e688981a57ee50001755f4901de727036a4b629b45cf0001a8b"
-text_chars: 23172
-ocr_pages: 16
+text_chars: 22374
+ocr_pages: 15
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 2
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:29:17Z"
+converted_at: "2026-08-12T04:28:23Z"
 ---
 # Microarchitecture Vulnerabilities Past, Present, and Future
 
 **Speakers:** Anders Fogh, Daniel Gruss  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Anders Fogh & Daniel Gruss_Microarchitecture Vulnerabilities Past, Present, and Future.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -57,7 +63,8 @@ Side Channels always existed
 
 First scientific observations in 1943
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Past — earliest days
@@ -97,7 +104,8 @@ Side Channels always existed First scientific observations in 1943
 
 Concept of “covert channels” in 1973
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Past — earliest days
@@ -141,21 +149,19 @@ Past:
 
 1996-2015 Mainly side channels on cryptography (threat model!)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Past:
 cryptographic attacks
 1996-2015 Mainly side channels on
 cryptography (threat model!)
-FL IMAGINATION
 A CRYPTO NERD'S
 HIS LAPTOP'S ENCRYPTED.
 LETS BUILD A MILLION-DOLLAR,
 ma To CRACK \T-
 NO GooD! IT's
-eat Ug
-1S FOILED! “
 1
 WHAT \WOULD
 ACTUALLY HAPPEN:
@@ -163,8 +169,6 @@ HIS LAPTOP'S ENCRYPTED.
 DRUG HIM AND HIT HIM WITH
 THIS $5 WRENCH UNTIL
 HE, t US THE. PASSWORD.
-oy IT.
-q
 ```
 
 ## Slide 9
@@ -175,32 +179,37 @@ cryptographic attacks 1996-2015 Mainly side channels on cryptography (threat mod
 
 ## Slide 10
 
-Past: Moving beyond crypto
-
-ISCA 2014 + BlackHat US 2015: **Rowhammer**
-
-## Slide 11
-
-Past:
-
-#### Moving beyond crypto
-
-ISCA 2014 + BlackHat US 2015: **Rowhammer**
-
-USENIX Security 2015: **Cache Template Attacks**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Past:
-Moving beyond crypto
 ISCA 2014 + BlackHat US 2015:
 Rowhammer
 USENIX Security 2015:
 Cache Template Attacks
-0x:
-/usr/lib/x86_64-linux-gnu/gedit/Libgedit .so
-```
+CCS + BlackHat US 2016:
+Breaking KASLR
+BlackHat EU 2017:
+Security through distrusting
+2017: Many academic works on attacking
+TEEs with side channels
+USENIX + BlackHat US 2018, S&P 2019:
+Spectre & Meltdown
+Past:
+Moving beyond crypto
+
+## Slide 11
+
+ISCA 2014 + BlackHat US 2015:
+Rowhammer
+USENIX Security 2015:
+Cache Template Attacks
+CCS + BlackHat US 2016:
+Breaking KASLR
+BlackHat EU 2017:
+Security through distrusting
+2017: Many academic works on attacking
+TEEs with side channels
+USENIX + BlackHat US 2018, S&P 2019:
+Spectre & Meltdown
+Past:
+Moving beyond crypto
 
 ## Slide 12
 
@@ -238,83 +247,71 @@ USENIX + BlackHat US 2018, S&P 2019: **Spectre & Meltdown**
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface
 architectural
-time
 ```
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface (2) trigger instruction
-y
-SS
 architectural transient execution
-time
 ```
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface (2) trigger instruction
 (3) transient access to secret
 architectural transient execution
-time
 ```
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface (2) trigger instruction
 (3) transient access to secret
 (4) transmission of secret
-y
-Ss
-(GN
 architectural transient execution !
-time
 ```
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface (2) trigger instruction (5) fixup
-' —_o.
-, tenet ; (3) transient access to secret ' \||
 , (4) transmission of secret
 architectural transient execution architectural
 >
-time
 ```
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (a) preface (2) trigger instruction (5) fixup
 W
 (3) transient access to secret
 (4) transmission of secret
-J
-&
 (6) reconstruct
-y
-Ss
-a
 architectural transient execution ' architectural
-time
 >
 ```
 
@@ -576,12 +573,12 @@ Spectre and LVI
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Methodology
 p-Arch Buffer
-[|
 Leakage =
 Injection S
 = PHT BranchScope [79], Bluethunder [131]| Spectre-PHT [174]
@@ -697,10 +694,10 @@ Software-based Power Analysis
 
 before 2020: mainly fingerprinting
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Software-based
 Power Analysis 6 letters
 before 2020: mainly fingerprinting
 7 letters
@@ -709,8 +706,6 @@ before 2020: mainly fingerprinting
 1 1
 1 1
 1 !
-1 !
-Nea Rea 4
 Power[Watt]
 Time[100 milliseconds]
 ```
@@ -723,22 +718,15 @@ before 2020: mainly fingerprinting
 
 2020: Platypus full recovery of cryptographic keys
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Software-based
 Power Analysis
 before 2020: mainly fingerprinting
 2020: Platypus
 full recovery of cryptographic keys
-ete teow ell we meme ocmammmntian? oA was sonsers cometneum ilonttentedn®? Sie eumee amathd “Po favba
-peseutined
-1,010) |
-z wore oon wt o cemermmane
-22 LOO PEAT TMA TT ETM AP ATT TT TA AMAT ATE TT TTT
-95
 1,000 foe « -
-© eee Te “ee Cec cou f | !
 0 50 100 150 200 250 300 350 400 450 500
 Key Bit
 Fig. 13: Core voltage per measured instruction for each key bit offset in the fixed window length implementation of mbed
@@ -774,22 +762,21 @@ before 2020: mainly fingerprinting
 
 since 2015: Rowhammer still not solved!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Software-based
 Fault Attacks
 since 2015: Rowhammer
 still not solved!
 ZENHAMMER: Rowhammer Attacks on AMD Zen-based Platforms
-Patrick Jattke’ | Max Wipflit Flavien Solt Michele Marazzi_ Matej Bolcskei_ Kaveh Razavi
 ETH Zurich
 Table 10. Analysis of the bit flip exploitability found during the sweep over 256 MiB on AMD Zen 2, Zen 3, and Intel Coffee Lake. For each
 attack, we indicate the number of exploitable bit flips (#Ex.) and average time to find an exploitable bit flip (Time). We mark DIMMs with a
 single exploitable bit flip by (*). We omit DIMMs without any exploitable bit flips.
 PTE [36] RSA-2048 [34] sudo [11]
 DIMM Zen 2 Zen 3 Coffee Lake Zen2 Zen 3 Coffee Lake Zen 2 Zen 3 Coffee Lake
-#Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time  #Ex.T. #Ex. Time #Ex. Time
+#Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex. Time #Ex.T. #Ex. Time #Ex. Time
 So 76m 4s 7 2m55s 34m 15s 17 2m47s_ 37 46s 14 Im 36s -- 4 3m 13s 1 *23m 49s
 iy} 641 21s 5326 Is 126 lls 30 2ml6s 170 6s 6 Im 59s -- 12 Iml7s’) - -
 S4 220 28s 323m 52s 2658 Is 712m 29s 1*23m 52s 53 26s -- = - 4 5m 16s
@@ -805,10 +792,10 @@ since 2015: Rowhammer still not solved!
 
 overclock and attack Arm TrustZone
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Software-based
 Fault Attacks
 since 2015: Rowhammer
 still not solved!
@@ -818,48 +805,29 @@ Correct
 Trustzone Normal
 _
 secret AES
-i ae Rrinertox
 é
-key decryption
 Faulty
 Trustzone Normal
-ee
-3h
-+p
 secret AES
-key decryption
 0.7
-> 0.6
 $05
-oO
 £04
 20.3
 E 0.2
-i)
 20.1
 0.0
-a
 # of faulted AES rounds
 Normalized frequency
-ia Sete
 i i
 Differential Sot
 Fault Analysis [1 key
-Hp |S fault
->/S faulty
 “! plaintext
 2
 a
 2
-uu
 a
-BR
-2
 w
-o
 N
-oO
-e
 # of faulted bytes within one round
 ```
 
@@ -883,14 +851,14 @@ Mitigation efforts
 
 Physical hardware cannot be changed in the field
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Limitations of
 mitigations
 Physical hardware cannot be
 changed in the field
-r M HERETO PATCH THE
 | CIRCUITRY! IN'YOUR PROCESSOR
 ```
 

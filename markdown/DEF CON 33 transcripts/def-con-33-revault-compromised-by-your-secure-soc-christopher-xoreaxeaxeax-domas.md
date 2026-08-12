@@ -12,7 +12,7 @@ duration_seconds: 2516
 words: 7749
 text_chars: 41002
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # ReVault Compromised by your Secure SoC

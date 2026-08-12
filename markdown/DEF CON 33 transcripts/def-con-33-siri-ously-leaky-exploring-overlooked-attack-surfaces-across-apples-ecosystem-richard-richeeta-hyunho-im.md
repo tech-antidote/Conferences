@@ -12,7 +12,7 @@ duration_seconds: 2704
 words: 6206
 text_chars: 32877
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Siri-ously Leaky - Exploring Overlooked Attack Surfaces Across Apple's Ecosystem

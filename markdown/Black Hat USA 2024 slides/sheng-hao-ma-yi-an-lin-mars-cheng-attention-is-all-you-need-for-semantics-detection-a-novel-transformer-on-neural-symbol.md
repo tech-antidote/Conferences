@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Sheng-Hao Ma & Yi-An Lin & Mars Cheng_Attention Is All You Need for Semantics Detection A Novel Transformer on Neural-Symbolic Approach.pdf"
 pages: 42
 sha256: "e6ab37e9609121cfe18f18daf41f09f7fcefb8f4d0c1db8f30c5c96444f5bdab"
-text_chars: 26273
-ocr_pages: 5
+text_chars: 24657
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 80.3
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:39:00Z"
+converted_at: "2026-08-12T04:42:15Z"
 ---
 # Attention Is All You Need for Semantics Detection A Novel Transformer on Neural-Symbolic Approach
 
 **Speakers:** Sheng-Hao Ma, Yi-An Lin, Mars Cheng  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Sheng-Hao Ma & Yi-An Lin & Mars Cheng_Attention Is All You Need for Semantics Detection A Novel Transformer on Neural-Symbolic Approach.pdf` (42 pages)
+
 
 ## Slide 1
 
@@ -515,7 +521,8 @@ TXOne Networks  |  Keep the Operation Running
 
 TXOne Networks  |  Keep the Operation Running
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 VC.Net (Hybrid CIL & C++) — Process Hollowing @ 426188h
@@ -524,15 +531,12 @@ VC.Net (Hybrid CIL & C++) — Process Hollowing @ 426188h
 74
 3f9359fb5287f62b17f20c85e5096c5328b7a8f4f7b02e1b221765a67f2a35ef Size Last Modification Date
 QTTabBar.exe 4.04 MB 22 hours ago
-—EEEEEEEE
 Community peexe checks-bios assembly idle Calls-wmi checks-usb-bus runtime-modules direct-cpu-clock-access detect-debug-environment obfuscated long
 Score
 sub_45174C(v6, @x3BB52990) ;
 sub_42EB9E(&sInfo, 8, 68);
 sInfo.cb = 68;
-memset (&prociInfo, @, sizeof(prociInfo));
 if ( MEMORY[@x3BB9E10C](a1, a2, 0, @, 1, @x80Q00@0, O, O, &sInfo, &procInfo) )// CreateProcess detect
-{
 v4 = sub_428DC3(procInfo.hProcess) ; BD Windows PowerShell
 MEMORY [ @x3BB9E110](procInfo.hProcess, a3); 22:26:17 [WARNING] [FOUND] (4261a7) - GetEnvironmentVa
 v5 = MEMORY[0x3BB9E120]; 22:26:17 [WARNING] [FOUND] (4261c6) - SendMessageA, Ge
@@ -638,18 +642,16 @@ TXOne Networks  |  Keep the Operation Running
 
 TXOne Networks  |  Keep the Operation Running
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-uf nN
-SD
 13
 14
 16
 17
 More Investigation on VMProtect Itself...
 int sub_54D83F()
-{
 int v@; // eax
 v@ = MEMORY[@x771EB770](@xFC@@00, @, @, @x140);
 return @;
@@ -658,9 +660,7 @@ dword_55FF@C = v0;
 MEMORY[@x10] = MEMORY[@x771DBFD@](@xFC@0@@, 8, @x41C4);
 if ( !MEMORY[@x1@] )
 return 0;
-iF ( IMEMORY[Oxc] )
 12
-uly
 25
 25
 26
@@ -677,24 +677,17 @@ A Choose segment to jump
 00531000
 00532000
 00533000
-00534000
 [ MEMORY[@xC] = MEMORY[@x75D481B0](@, @x100000, 0x2000, 4);)// S4d8b6 ...
 005D7000
 005D727C
 005D8000
 VirtualAlloc()?
-‘End
 00532000
 00533000
 00534000
-00507000
-00sD727¢
-00508000
 005FC000
 R
-= =F
 x
-‘Align
 para
 para
 para
@@ -749,7 +742,6 @@ return Q; 16:22:
 (551089) -
 (551607) -
 (5516f0) -
-(54158) -
 (54f162) -
 (54uf065) -
 (5ud8b6) -
@@ -792,12 +784,12 @@ Xx
 
 TXOne Networks  |  Keep the Operation Running
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 More Investigation on VMProtect Itself...
 bool __usercall sub_53C27@@<al>(LPVOID src_addr@<esi>, LPVOID dest_addr)
-{
 char opJump; // [esp+4h] [ebp-8h] BYREF
 int v4; // [esp+5h] [ebp-7h]
 // Integer Range Check
@@ -825,7 +817,6 @@ return WriteProcessMemory_@(QxFFFFFFFF, src_addr, &opJump, Su, 9);
 12 v5 = dest_addr - src_addr - 5;
 ne // (53c2b4) - Possible WriteProcessMemory
 14 return MEMORY[@x75D62580](offset,| -1, |src_addr, &opJump, 5, @) !- 0; € [Na ae Ea a
-15 } oossiand ovsszand ; x ‘ para
 A 532000 533000 . ra
 GetCurrentProcess() equal to HANDLE(-1) 00533000 00534000 R Ww i sore
 TXOne Networks | Keep the Operation Running 3] + 00534000 005D7000 R . X L para
@@ -851,28 +842,20 @@ execute the original behavior
 
 TXOne Networks  |  Keep the Operation Running
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-(|. IDA - 680000.0c61cba7ead9c67c5d0838aa76cee95e.exe C:\Users\aaaddress 1\Desktop\CulDA\lib\process_13584\680000.0c61cba7ead9c67...
-File Edit _— Search View Pensget Lumina SipRETS Windows Help
 WB Library function MJ Regular function _ Instruction [J Data (§ Unexplored J External symbol J Lumina function
-Ie IDA View-A @ Hex View-1 8 = EN Structures = Enums = SB Imports BA Exports
 __int128 v10; // [esp+21Ch] [ebp-14h] BYREF
 sub. _681D78(v9, @, 528);
 AE a @, v9, 260); 2 Refresh ions | @& Find handles or DLLs 2* System informatio
 (“ADVAPI", "RegCreateKeyExw") ; = =
 i(ve); Services k Disk Firewall
 ]("ADVAPI", "RegSetValueExw");
-RY [Ox ](v2);
-me 2147483647, base Grote NLC hosot NAW indows \\Cunrentvens ton \\RUnG , ®, @, @, 131103, @, &v8, @)
-L"H4A0", ®, 1, My 2S ogee + 2); gi
-RY[@ "KERNEL32" "CreateProcessW");
 v3
 vs = M @x76 90] ("WS2_32", “WSASocket"); CPU usage: Physical memory: 12.4 GB (39.08%) _ Free memory
 v6 = [ 58} (v5);
-while r 1 Ly
-MEMORY [x
 250](514, &unk_68339@) ;
 dword_683520 eG: 1, 6, @, @, @);
 word_68356C =
@@ -913,11 +896,8 @@ dword_683528 = 68;
 dword_683554 = 256;
 vi@ = xmmword_6821F0;
 MEMORY f 8] (3600000) ;
-le
-}
 000004FA sub 681000:26 (6810FA)
 idle (Down Disk: 29GB)
-we Jf
 ```
 
 ## Slide 39

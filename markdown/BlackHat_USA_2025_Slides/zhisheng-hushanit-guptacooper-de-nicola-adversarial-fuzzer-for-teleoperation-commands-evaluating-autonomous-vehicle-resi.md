@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Zhisheng Hu&Shanit Gupta&Cooper de Nicola_Adversarial Fuzzer for Teleoperation Commands Evaluating Autonomous Vehicle Resilience.pdf"
 pages: 75
 sha256: "0211b7b3aea45ee9bad96830e023924fddfa333d34407c8f48fc6a764bba34b5"
-text_chars: 12230
-ocr_pages: 23
+text_chars: 9910
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 81.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:05:06Z"
+converted_at: "2026-08-12T05:27:17Z"
 ---
 # Adversarial Fuzzer for Teleoperation Commands Evaluating Autonomous Vehicle Resilience
 
 **Speakers:** Zhisheng Hu, Shanit Gupta, Cooper de Nicola  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Zhisheng Hu&Shanit Gupta&Cooper de Nicola_Adversarial Fuzzer for Teleoperation Commands Evaluating Autonomous Vehicle Resilience.pdf` (75 pages)
+
 
 ## Slide 1
 
@@ -41,16 +47,6 @@ _Zhisheng Hu, Shanit Gupta, Cooper de Nicola_
 Director of Product Security
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekhat About Us -
-BRIEFINGS a *
-Zhisheng Hu Shanit Gupta
-Product Security Engineer Director of Product Security
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -84,35 +80,11 @@ Vehicle
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-BRIEFINGS io
-Operations Center Vehicle
-Detect potential
-construction zone
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 8
 
 **Operations Center Vehicle AI** : Hey human, take a look. Is something in my way?
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-BRIEFINGS a ie Ne
-Vehicle
-Al: Hey human,
-take a look.
-Is something in
-my way?
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 9
 
@@ -160,17 +132,6 @@ Vehicle
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat \*
-BRIEFINGS a ie > *
-Vehicle
-Al: Nice, let me
-try it.
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 13
 
 Operations Center Vehicle
@@ -192,28 +153,11 @@ autonomy
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat aE real-worldte ase)
-BRIEFINGS Bt am 4G
-<r
-```
-
 ## Slide 16
 
 ##### **Send command**
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekhat Send command _ iicegs
-BRIEFINGS = 4 X
-: a we disap
-peed [All _ ae
-```
 
 ## Slide 17
 
@@ -227,6 +171,61 @@ peed [All _ ae
 
 #BHUSA   @BlackHatEvents
 
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 52/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+
+```text
+black hat
+BRIEFINGS
+
+See if it passes
+
+[Top-left photo: forward-facing camera view of a road; orange diamond sign reads "ROAD WORK AHEAD"; the vehicle hood carries the reversed ZOOX wordmark, partially visible as "XOO"]
+
+[Top-right photo: fisheye camera view of the roadway with a red car passing]
+
+[Bottom: overhead perception / visualization view of the same scene with tracked-object labels]
+
+VLR
+464692
+
+VLR
+464601
+
+VLR
+464597
+
+LR
+465071
+
+LR
+465061
+
+VLR
+464621
+
+VLR
+464994
+
+VLR
+464928
+
+VLR
+464825
+
+VLR
+464589
+
+VLR
+464912
+
+VLR
+464828
+
+15.6
+MPH
+```
+
 ## Slide 19
 
 ## **How About Mistakes?**
@@ -236,15 +235,6 @@ peed [All _ ae
 ## Slide 20
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeichat
-BRIEFINGS
-QUALITY MBPS MS —RSRP
-date fs 526794 -87-85-93
-```
 
 ## Slide 21
 
@@ -260,15 +250,6 @@ date fs 526794 -87-85-93
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekhat Adversatabanal iol
-BRIEFINGS _ a
-as
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 24
 
 ##### **Adversarial variations**
@@ -279,25 +260,9 @@ as
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pis hat Ss
-BRIEFINGS
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 26
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat
-BRIEFINGS
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 27
 
@@ -576,26 +541,9 @@ Lateral offset (y)|
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat
-BRIEFINGS
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 48
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bifekhat
-BRIEFINGS
-d
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 49
 
@@ -751,35 +699,15 @@ Destination lateral offset (y)|
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisekhat
-BRIEFINGS
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 59
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bldekhat
-BRIEFINGS
-[See seater
-Cees bs Sa
-mae — — serene
-22ekgy peer ——E — ies
-Peay as as
-mun wae eee New —
-— = SPEED i oo
-g@Mwiginal reverse wor «LIMIT @™eyinal reverse
 = MPH
-— eae
-de fmmadv" reverse
-(Ree
 #BHUSA
 @BlackHatEvents
 ```
@@ -876,31 +804,9 @@ Right Turn with Multi-Agent Interaction
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisekhat
-BRIEFINGS
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 67
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS Se taal ie
-HLH
-= ae
-ry
-j
-MITT
-ime
-#BHUSA
-@BlackHatEvents
-```
 
 ## Slide 68
 
@@ -910,13 +816,12 @@ Before
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekhat System improvement
 BRIEFINGS ee
-Before
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 69
@@ -956,33 +861,12 @@ Planner
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-— y
-S “NS race jp. <G wy A
-bi khat 4 Gy Y
-ackha Va ee, XY
-BRIEFINGS Jz ip
-Perception error
-»4301),301.
-°
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 73
 
 Teleoperation Perception
 Planner
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekchat A ae A~<% Y
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 74
 

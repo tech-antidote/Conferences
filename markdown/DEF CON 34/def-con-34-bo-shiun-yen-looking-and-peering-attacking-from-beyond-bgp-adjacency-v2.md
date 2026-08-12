@@ -4,23 +4,28 @@ speakers: ["Bo-Shiun Yen"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Bo-Shiun Yen - Looking and Peering Attacking from beyond BGP Adjacency - v2.pdf"
 pages: 74
 sha256: "fcbab71249086b2d1d8da7f765221c7fb261e5797095aa8e66d5a31fd133d1c0"
-text_chars: 9947
+text_chars: 10000
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:13:41Z"
+converted_at: "2026-08-12T06:22:52Z"
 ---
 # Looking and Peering Attacking from beyond BGP Adjacency
 
 **Speakers:** Bo-Shiun Yen  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bo-Shiun Yen - Looking and Peering Attacking from beyond BGP Adjacency - v2.pdf` (74 pages)
+
 
 ## Slide 1
 
@@ -205,7 +210,8 @@ attacker
 
 **23**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BGP_ATTR_INTERN()
@@ -223,7 +229,8 @@ reuse_anchor->...interned = find;
 
 **24**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HASH_GET() -> BGP_ATTR_HASH_ALLOC()
@@ -248,9 +255,9 @@ length heap libc
 attr hdr attr data ? ? ?
 0xFFFF ptr ptr
 
-```
+\```
 read leftover chunks
-```
+\```
 
 ###### **`whatever heap + libc pointers were there -> ASLR leak`**
 
@@ -291,9 +298,9 @@ edge router FRR bgpd
 
 FRR bgpd
 
-```
+\```
 a BGP UPDATE wrapped in a tunnel
-```
+\```
 
 **27**
 
@@ -359,7 +366,8 @@ packet 2: RCE
 
 **35**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE BUG - AS_PATH_MATCH()
@@ -374,12 +382,12 @@ forge long AS_PATH with ext-msg -> stack overflow pos[]
 
 #### **TRANSITIVE ATTACKS**
 
-```
+\```
 eBGPeBGP
 EstablishedEstablished
 attackerrelayvictim
 FRRBIRD
-```
+\```
 
 **36**
 
@@ -411,34 +419,34 @@ FRR BIRD
 
 #### **TRANSITIVE ATTACKS**
 
-```
+\```
 attacker
-```
+\```
 
-```
+\```
 eBGP
 Established
-```
+\```
 
-```
+\```
 relay
 FRR
-```
+\```
 
-```
+\```
 eBGP
 crash
-```
+\```
 
-```
+\```
 victim
 BIRD
-```
+\```
 
-```
+\```
 the parser crashes
 stack overflow
-```
+\```
 
 **39**
 
@@ -446,25 +454,25 @@ stack overflow
 
 #### **TRANSITIVE ATTACKS**
 
-```
+\```
 adjacency boundary
-```
+\```
 
-```
+\```
 eBGPeBGP
 Establishedcrash
 attackerrelay
-```
+\```
 
-```
+\```
 relayvictim
 FRRBIRD
-```
+\```
 
-```
+\```
 the victim is not a peer to the attacker
 the attribute crosses the security boundary
-```
+\```
 
 **40**
 
@@ -472,15 +480,15 @@ the attribute crosses the security boundary
 
 #### **SEGMENTING THE INTERNET**
 
-```
+\```
 BIRD route servers - all crash
-```
+\```
 
 attacker
 
-```
+\```
 the whole BIRD border crashes -> the internet splits in two
-```
+\```
 
 **41**
 
@@ -530,7 +538,8 @@ one malformed BGP-LS attribute reset Juniper's sessions - riding transitively pa
 
 **48**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE BUG - BGP_ATTR_PREFIX_SID()
@@ -546,9 +555,9 @@ the cursor and the counter disagree -> it lands off the attribute boundary
 
 #### **THE LENGTH DESYNC**
 
-```
+\```
 length field says 30 bytes
-```
+\```
 
 type
 len=30
@@ -621,7 +630,8 @@ session reset
 
 **55**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE PREFIX LIMIT
@@ -635,29 +645,29 @@ limit how many prefixes a peer may send
 
 #### **LIMIT MISMATCH**
 
-```
+\```
 source
-```
+\```
 
-```
+\```
 120 prefixes
 Router A
 prefix-limit 150
-```
+\```
 
-```
+\```
 replays 120
-```
+\```
 
-```
+\```
 Router B
 prefix-limit 100
-```
+\```
 
-```
+\```
 A accepts (120 < 150)
 and replays all 120 to B
-```
+\```
 
 **56**
 
@@ -665,27 +675,27 @@ and replays all 120 to B
 
 #### **LIMIT MISMATCH**
 
-```
+\```
 source
-```
+\```
 
-```
+\```
 120 prefixes
 Router A
 prefix-limit 150
-```
+\```
 
-```
+\```
 120 > 100
 Cease 6/1
 Router B
 prefix-limit 100
-```
+\```
 
-```
+\```
 B rejects (120 > 100)
 Cease 6/1: Maximum Number of Prefixes
-```
+\```
 
 **57**
 
@@ -738,9 +748,9 @@ Established Established
 attacker looking-glass edge relay victim
 FRR BIRD FRR
 
-```
+\```
 attacker
-```
+\```
 
 **61**
 
@@ -755,9 +765,9 @@ Established Established
 attacker looking-glass edge relay victim
 FRR BIRD FRR
 
-```
+\```
 attacker
-```
+\```
 
 **62**
 
@@ -765,22 +775,22 @@ attacker
 
 #### **STAGE 1 - RCE**
 
-```
+\```
 vtysh -c "... regexp $(id)"
-```
+\```
 
-```
+\```
 uid=1000(lg) gid=1000(lg) ...
-```
+\```
 
 HTTP SSH eBGP eBGP
 Established Established
 attacker looking-glass edge relay victim
 FRR BIRD FRR
 
-```
+\```
 attacker
-```
+\```
 
 **63**
 
@@ -801,9 +811,9 @@ FRR BIRD FRR
 
 #### **STAGE 2 - PIVOT**
 
-```
+\```
 execute stage2
-```
+\```
 
 injector
 HTTP SSH eBGP eBGP
@@ -871,7 +881,8 @@ FRR BIRD FRR
 
 **70**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Play the demo

@@ -12,7 +12,7 @@ duration_seconds: 2300
 words: 6338
 text_chars: 33365
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Emulating Embedded Linux Devices at Scale with Light-Touch Firmware Rehosting

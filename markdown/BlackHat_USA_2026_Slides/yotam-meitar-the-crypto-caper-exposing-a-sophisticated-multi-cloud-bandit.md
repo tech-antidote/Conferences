@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Yotam Meitar_The Crypto Caper Exposing a Sophisticated Multi-Cloud Bandit.pdf"
 pages: 16
 sha256: "d72544828b7bba5c5fcad250e9b8a6827069e1c61bc2f93d8bc0819029486078"
-text_chars: 4398
-ocr_pages: 1
-has_ocr: true
+text_chars: 4368
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:17:54Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T05:47:43Z"
 ---
 # The Crypto Caper Exposing a Sophisticated Multi-Cloud Bandit
 
 **Speakers:** Yotam Meitar  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Yotam Meitar_The Crypto Caper Exposing a Sophisticated Multi-Cloud Bandit.pdf` (16 pages)
+
 
 ## Slide 1
 
@@ -378,4 +383,3 @@ visibility
 ## Slide 16
 
 THANK YOU
-

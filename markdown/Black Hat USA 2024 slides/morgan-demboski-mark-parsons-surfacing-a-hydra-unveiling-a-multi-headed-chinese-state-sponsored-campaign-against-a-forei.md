@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Morgan Demboski & Mark Parsons_Surfacing a Hydra Unveiling a Multi-Headed Chinese State-Sponsored Campaign Against a Foreign Government.pdf"
 pages: 66
 sha256: "65429b075cffa53684481f572bfe8ed7ad73c56ef629a49d2da6e21ff311e4ff"
-text_chars: 23506
-ocr_pages: 8
+text_chars: 22023
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:35:19Z"
+converted_at: "2026-08-12T04:37:11Z"
 ---
 # Surfacing a Hydra Unveiling a Multi-Headed Chinese State-Sponsored Campaign Against a Foreign Government
 
 **Speakers:** Morgan Demboski, Mark Parsons  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Morgan Demboski & Mark Parsons_Surfacing a Hydra Unveiling a Multi-Headed Chinese State-Sponsored Campaign Against a Foreign Government.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -138,61 +144,30 @@ Malicious EXE Path:  C:\ProgramData\Microsoft\Vault\vmnat.exe
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Within 7 days, we found 13 malware families across % of the org's server infrastructure...
-185.195.237[.]123 cloud.keepasses|. |associate.freeon! [.Jcom
 Government Domain & 195.123.247[,]50 89.44.197.]74 APT15 198.13.47[.]158 185.167.116[,]30 185.201.8[.]187
 TA Infrastructure
-185.195.237[.]121 message.ooguyl.Jcom www-<TAl 8 ‘scancenter.trendrealti in.feedfoodconcerni
 Government Domain ime[.Jcom jlespeedtest33[.Jcom www.msudapis[.Jinfo logit ing.org
-45.90.58[.]103 143.198.85[.]36 139.180.217[.]105 45.76.3[.]140 64.176.38[.]173 154.39.137[.]29 195.123.245[.J79
-dat
-es shfolder.dil ping-n1 eg
-dunt mat
 443.txt aB.txt_|
-ping uit Juni2
-4413.tet Junt2
-ssiwnd64.exe
-Bea 5 (Marts) 8 (warz7) Mays TSVIPSrv.ll mi
-AM dumy wibsctrl.dil dal
 DC1 4413.txt 6 (Mar15) 365
-commepem Mars] sunt ret use info.bat mye convenes
-bhrome. Mart5 vmnat a8.txt, 443,txt 7 SophosUD.exe
-srvany ‘Juni2 1 aB.txt
 instsrva gat wdm Junt2
-srvany.exe coreframeworkservice ‘SbphosUD.«
 tdpclip
-Mai winsc.exe shiokier
-msi64.exe Ut
-Azure jl aon
 2.vbs on TSVIPSrv.dll
-Licensit sslwnd64.0xe ny Lesnaeal
 mscorsve.dil May 19 thumtals2.dat nethood.exe
-mscorsvw.exe Ts 1.1
 ool. UD.exe
 ping Port 80 (May
 rae 3 (Mara) 4 4) qe. nethood B
-lc
 Port 22,80 Perti AMS File Mazz gael 7 SERVER
-Cer pump A | mnt (ars) same og
-r eke chrome.
-ssiwndé4 | A e Sere (Cert. > oci.dll
-wmic Mecorswuexe ici Authority.
 3 winsecunicity.exe ui rl
 3.vbs Mari6 oat systemcontig.exe WinDet
 licensing.exe Mar22 3.pst ys: ig. is
-ntpsapidl cryptography.exe execute.bat watt March30}
-MPSvc.dll DCS5.
 net use shfolder comment.cmtx
-wmie vmnat.dil
-SystemTemps !
 wmic
-Admin ‘Adraina be
 Mar8 May19
-172K UXHHH-HEE
-ees iran» Conan = Ctrexxo00> Unmanaged Infrastructure
 ```
 
 ## Slide 11
@@ -379,7 +354,8 @@ Source: FS
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Time of Day Analysis
@@ -387,28 +363,18 @@ Heatmap of Cluster Alpha Heatmap of Cluster Bravo
 Heatmap of Threat Activity
 Hour of the Day (UTC)
 Time of Day (UTC +8)
--_
-{S)
-Ee
 =)
 —
 >
-oO
-=)
 o
 <=
 ~
 —
-°
-_
-S
-(-)
 =
 Time of Day (UTC +8)
 Tuesday Wednesday Thursday Friday Saturday
 Day of the Week
 10:00, 6PM
-08:00 es 4PM
 06:00 2PM
 04:00 12PM
 02:00 — 10 AM
@@ -612,11 +578,11 @@ Source: <u>ESMT Berlin</u>
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHINA FUNDING ITS CYBER OPERATIONS
-® i
 ```
 
 ## Slide 33
@@ -633,7 +599,8 @@ _(September 2023 - April 2024)_
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Catching our breath? (or so we thought)
@@ -643,7 +610,6 @@ DOZENS OF
 NEW BACKDOORS
 OUR TEAM BLOCKING
 THEIR IMPLANTS
-limgfiip.co
 ```
 
 ## Slide 35
@@ -790,12 +756,12 @@ Source: BigMailer
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HEN THE THREAT ACTORS es
 DONT SHOW UP. LIKEYOU PREDICTED
-pebeomthruF.com
 ```
 
 ## Slide 44
@@ -1124,29 +1090,13 @@ Technical Deep Dive
 
 **Appendix - Cluster Charlie C2 Channel Mind Map**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 40/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Appendix - Cluster Charlie C2 Channel Mind Map
-=—— —s
-\
-a o[ rorseaartsreas | oe
-woo ha
-of 107 enema |
-[ o[seraeeaniiven eg el
-ee npupdatel net lal 45.18.1491 ]151:443
-toe Se oe Mc) ==
-45.15.149,151:443
-as9.1911189:449
-“Y noaeen a 043621
 Vulnerable To DLL Hijack
-—_
-(mea)
 = )
-‘CAPerflogsyconsole.exe
-2024-03-10 09:31:17. Fee a
-‘CisersPubicliretoxaxe ‘APerfLogavi-a,
-2024-04-10 9:04:38 AM FA cxvartsgrweteninet ent
 SOPHOS
 ```
 
@@ -1154,7 +1104,8 @@ SOPHOS
 
 **Appendix – Spade C2 Detection Tool**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Appendix — Spade C2 Detection Tool

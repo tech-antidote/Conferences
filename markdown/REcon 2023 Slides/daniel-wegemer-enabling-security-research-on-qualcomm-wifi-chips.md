@@ -12,15 +12,20 @@ text_chars: 13357
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:24:28Z"
+converted_at: "2026-08-12T06:01:02Z"
 ---
 # Enabling Security Research on Qualcomm Wifi Chips
 
 **Speakers:** Daniel Wegemer  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Daniel Wegemer_Enabling Security Research on Qualcomm Wifi Chips .pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -529,7 +534,8 @@ Nexmon: 3. Handle LITBASE
 
 The assembler uses “string patterns” to “relax” instructions:
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nexmon: 3. Handle LITBASE

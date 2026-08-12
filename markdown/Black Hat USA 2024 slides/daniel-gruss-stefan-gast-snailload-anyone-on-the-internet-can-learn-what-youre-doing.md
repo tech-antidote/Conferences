@@ -11,15 +11,21 @@ sha256: "df3660c157b2d845803a91bde6bdeb057c4c1b4fa0e9383d1999490fccaa107e"
 text_chars: 16873
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:30:04Z"
+converted_at: "2026-08-12T04:29:28Z"
 ---
 # SnailLoad Anyone on the Internet Can Learn What You're Doing
 
 **Speakers:** Daniel Gruss, Stefan Gast  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Daniel Gruss & Stefan Gast_SnailLoad Anyone on the Internet Can Learn What You're Doing.pdf` (82 pages)
+
 
 ## Slide 1
 

@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/Junoh Lee & Gwangun Jung_Guest Revolution Our Story of Compromising the Host Kernel from the VMware Guest.pdf"
 pages: 71
 sha256: "a718e903cc88fb1961238d706ecd8b4bc5e69ba1e179d1f03832cc1352f93e72"
-text_chars: 33323
-ocr_pages: 8
+text_chars: 32811
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:19:39Z"
+converted_at: "2026-08-12T05:51:01Z"
 ---
 # Guest Revolution Our Story of Compromising the Host Kernel from the VMware Guest
 
 **Speakers:** Junoh Lee, Gwangun Jung  
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Junoh Lee & Gwangun Jung_Guest Revolution Our Story of Compromising the Host Kernel from the VMware Guest.pdf` (71 pages)
+
 
 ## Slide 1
 
@@ -66,14 +71,6 @@ converted_at: "2026-08-11T23:19:39Z"
 
 ©2024. Theori. All rights reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1. Introduction
-.
-©2024. Theori. All rights reserved. 1 theori
-```
-
 ## Slide 4
 
 **Introduction**
@@ -98,7 +95,8 @@ converted_at: "2026-08-11T23:19:39Z"
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction
@@ -112,7 +110,6 @@ VMware Workstation $80,000 8 Yes
 VMware ESXi $150,000 15 No
 Microsoft Hyper-V Client $250,000 25 Yes
 Available Add-on Prizes:
-~.
 Add-on Prize
 host operating system.
 Prize
@@ -130,12 +127,11 @@ Windows kernel vulnerability on the
 
 ©2024. Theori. All rights reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2. Pwning VMware Workstation
-.
-©2024. Theori. All rights reserved. 1 theori
 ```
 
 ## Slide 7
@@ -814,7 +810,7 @@ File
 
 ### **Call an arbitrary CFG gadget**
 
-```
+\```
 char__fastcallVUsb_CompleteUrbAddBatch(vurb*urb)
 {
 // ...
@@ -831,7 +827,7 @@ dev->unk_obj->vtable[4](urb);
 // ...
 return0;
 }
-```
+\```
 
 fake URB
 &pipe
@@ -858,7 +854,7 @@ fake dev (= physmem )
 
 ### **Call an arbitrary CFG gadget**
 
-```
+\```
 char__fastcallVUsb_CompleteUrbAddBatch(vurb*urb)
 {
 // ...
@@ -875,7 +871,7 @@ dev->unk_obj->vtable[4](urb);
 // ...
 return0;
 }
-```
+\```
 
 &pipe
 .... vmware-vmx(.data)
@@ -1074,12 +1070,11 @@ arg0 (= vtable, fake dev, physmem )
 
 ©2024. Theori. All rights reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3. Windows Kernel Exploit
-.
-©2024. Theori. All rights reserved. 1 theori
 ```
 
 ## Slide 38
@@ -1717,14 +1712,6 @@ Vuln Chunk (0x1000) Size WNF Mailslot
 
 ©2024. Theori. All rights reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-4. Chaining Exploits
-.
-©2024. Theori. All rights reserved. 1 theori
-```
-
 ## Slide 64
 
 **Chaining exploits**
@@ -1795,16 +1782,16 @@ conventional memory
 
 **saved by guest**
 
-```
+\```
 block_table= [2,3,5,6,10,11,14, ...];
-```
+\```
 
-```
+\```
 for(i=0; i<nblock; i++) {
 readPhysmem(block_table[i] * PAGE_SIZE, buf);
 WriteFile(hFile, buf, PAGE_SIZE);
 }
-```
+\```
 
 ## **3. Call WinExec(‘priv.exe’, ...)**
 
@@ -1822,30 +1809,19 @@ WriteFile(hFile, buf, PAGE_SIZE);
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(B Windows11_231
 File Edit View
-> final_exploit_plz_run_this
 D Details
 ) Home =
-date
 AR Galley
-BE venms,fllexp final
-© Onedrive ie
-i Desitop
-1 Downloeds
-5 Documents
-FR Pictures
-® Music
-Gh Videos
 This Pc
 de Network
 item:
 Copilot in Windows (preview)
 To return to your computer, move the mouse pointer outside or press Ctrl+ Alt
-“oa @meaa
 ```
 
 ## Slide 68
@@ -1853,13 +1829,6 @@ To return to your computer, move the mouse pointer outside or press Ctrl+ Alt
 ## **5. Conclusion**
 
 ©2024. Theori. All rights reserved.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-5. Conclusion
-©2024. Theori. All rights reserved. 1 theori
-```
 
 ## Slide 69
 
@@ -1904,11 +1873,3 @@ To return to your computer, move the mouse pointer outside or press Ctrl+ Alt
 ## **End Of Document**
 
 ©2024. Theori. All rights reserved.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-End Of Document
-T .
-©2024. Theori. All rights reserved. theori
-```

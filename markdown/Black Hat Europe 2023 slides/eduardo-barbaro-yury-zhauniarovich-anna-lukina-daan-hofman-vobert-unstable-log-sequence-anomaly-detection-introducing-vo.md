@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Eduardo Barbaro, Yury Zhauniarovich, Anna Lukina, Daan Hofman_VoBERT Unstable Log Sequence Anomaly Detection Introducing Vocabulary-Free BERT.pdf"
 pages: 43
 sha256: "496bbc9d906e4698d3231672399d3868f249f84796f419b25d7767981895ae94"
-text_chars: 16115
-ocr_pages: 13
+text_chars: 14543
+ocr_pages: 10
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:11:16Z"
+converted_at: "2026-08-12T04:01:55Z"
 ---
 # VoBERT Unstable Log Sequence Anomaly Detection Introducing Vocabulary-Free BERT
 
 **Speakers:** Eduardo Barbaro, Yury Zhauniarovich, Anna Lukina, Daan Hofman  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Eduardo Barbaro, Yury Zhauniarovich, Anna Lukina, Daan Hofman_VoBERT Unstable Log Sequence Anomaly Detection Introducing Vocabulary-Free BERT.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -65,7 +71,8 @@ Analysts must “manually” identify attacks
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Log Sequence Anomaly Detection
@@ -75,7 +82,6 @@ Password field filled in
 Login button clicked
 Login button clicked
 Login Succesfull
-oq x
 (b) Anomalous Log
 (a) Normal Log sequence sequence
 ```
@@ -88,7 +94,8 @@ oq x
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unstable Log Sequence Anomaly Detection
@@ -97,7 +104,6 @@ Password field filled in Password field populated Login Succesfull
 Login button clicked Login button clicked [ Password field filled in
 i Login button clicked
 Login Succesfull Login Succesfull L
-\ y,
 \ }
 (c) Normal Log sequence (b) Anomalous Log
 (a) Normal Log sequence with slightly changed log sequence
@@ -126,15 +132,14 @@ messages
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction
 1. Log Parsing
-Vee 1!
 i. 081109 205931 13 INFO dfs.DataBlockScanner: ;
 | Verification succeeded for blk_4980916519894289 | >
-‘ !
 Fixed partitioning
 2. Log Grouping
 ```
@@ -173,15 +178,6 @@ Session Window
 **Sequence 3**
 
 11
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Sequence 1
-Sequence 2
-Sequence 3
-11
-```
 
 ## Slide 12
 
@@ -357,7 +353,8 @@ Word embeddings with context: I go to a bar ≠ I raise the bar
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BERT training: Masked Language Modelling (MLM)
@@ -365,7 +362,6 @@ Model
 Output LOG B LOGA
 BERT
 Input
-i Original [Loca [Loc | [Loe c| [Los 0| [Loc |
 ‘Sequence
 23
 ```
@@ -379,21 +375,6 @@ Trained only on normal sequences
 Predicts **poorly** on anomalous sequences
 
 24
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BERT for Anomaly Detection
-= Trained only on normal sequences prec eenecee cece ee ee ene eee
-i Model LOGB LOGA
-. ' Output '
-= Predicts poorly on anomalous sequences a
-BERT
-Input
-i Original [toca [toss [tose] [tos] [rose |
-‘Sequence
-24
-```
 
 ## Slide 25
 
@@ -429,7 +410,8 @@ Element Level Predictions (VoBERT)
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Element-Level Prediction
@@ -438,11 +420,8 @@ LOGA LOG B LOG B LOG B LOG B
 LOGA LOGA LOGA LOGA LOGE
 Sequence Level Predictions
 (LogBERT)
-wee eww wee eee wee
 LOG B LOG C LOG D LOGE
-LOGB LOG . LOG B ‘Los .
 ‘Loe A LOG A LOGA LOGE
-Ress ssa sess ee sean naan S
 Element Level Predictions
 (VoBERT)
 28
@@ -457,17 +436,6 @@ Ratio Masking O(1) (LogBERT)
 Per Element Masking O(n) (VoBERT)
 
 29
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Per Element Masking
-LoGA| | LocB| (elena!) | Locp| | Loce|! } #Logkeys
-Ratio Masking O(1) Per Element Masking
-(LogBERT) O(n)
-(VoBERT)
-29
-```
 
 ## Slide 30
 
@@ -552,7 +520,8 @@ Original Split
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Results Public Datasets
@@ -561,21 +530,14 @@ Performance on Sequence Level | TBird
 100 +
 2074
 —e— VoBERT
-—e-— LogBERT
 —e— Unseen Logkey Heuristic
 % of normal sequences containing at least one unseen element
 MCC Score
 Performance on Sequence Level | BGL
 100
 | —e— VoBERT
-—e— LogBERT
 30 | —e— Unseen Logkey Heuristic
 \
-e.
-WS
-e.
-I ™
-es
 % of normal sequences containing at least one unseen element
 100
 37
@@ -615,7 +577,8 @@ Use it to further investigate suspicious alerts/logs
 
 **Visit us at Booth 436**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Visit us at Booth 436
@@ -630,13 +593,12 @@ do your thing
 
 Appendix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data set split
-f )
 Dataset
-\ y,
 Normal Anomalous
 Train aI Test rest | Dev
 Dev
@@ -651,6 +613,25 @@ Dev
 
 Appendix
 
+
+> Recovered by OCR — confidence 87/100 on the text kept, 40/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Future Work: n-gram masking
+O
+>
+O
+@
+m
+# log keys
+n
+-
+O
+>
+O
+42
+```
+
 ## Slide 43
 
 # **Data Instability: Case Study**
@@ -659,7 +640,8 @@ Appendix
 
 Appendix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data Instability: Case Study
@@ -668,12 +650,6 @@ Percentage of test sequences containing unseen logkeys | The bank Average percen
 —e— Normal test sequences —e— Normal test sequences
 —e— Abnormal test sequences —e— Abnormal test sequences
 —e— Total test sequences —e— Total test sequences
-a
-F e
-v 605 x 605
-o 2
 & &
-eo e
-o ———e e o—"——_
 Data redistribution algorithm iterations Data redistribution algorithm iterations
 ```

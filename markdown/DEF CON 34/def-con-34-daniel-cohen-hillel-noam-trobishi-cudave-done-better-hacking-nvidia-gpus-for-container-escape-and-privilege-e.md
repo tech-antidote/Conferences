@@ -4,23 +4,28 @@ speakers: ["Daniel Cohen Hillel", "Noam Trobishi"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Daniel Cohen Hillel, Noam Trobishi - CUDA've done better - Hacking Nvidia GPUs for container-escape and privilege escalation - Cudave v1.pdf"
 pages: 256
 sha256: "b9c8cff8334ed02017fffae1abeae706fbb9355639c752e3b0f83ea0670d48eb"
-text_chars: 59318
-ocr_pages: 5
+text_chars: 58065
+ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:15:57Z"
+converted_at: "2026-08-12T06:26:18Z"
 ---
 # CUDA've done better - Hacking Nvidia GPUs for container-escape and privilege escalation
 
 **Speakers:** Daniel Cohen Hillel, Noam Trobishi  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Daniel Cohen Hillel, Noam Trobishi - CUDA've done better - Hacking Nvidia GPUs for container-escape and privilege escalation - Cudave v1.pdf` (256 pages)
+
 
 ## Slide 1
 
@@ -62,13 +67,10 @@ Daniel Cohen Hillel (@0xDACA) Noam Trobishi
 
 - I have FOMO
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Background
-The NVIDIA Category
-Our last Al sub-category focuses solely on NVIDIA products. For network accessible targets, an attempt must be launched from the contestant's laptop
-within the contest network. For NV Container Toolkit, the attempt must be launched from within a crafted container image and execute arbitrary code on
 host operating system. For Megatron Bridge, entries that leverage vulnerabilities pertaining to pickle deserialization or that leverage a vulnerability when
 “trust_remote_code=true” are out of scope. Here are the targets and payouts for the NVIDIA category:
 Master of Pwn
@@ -87,13 +89,10 @@ Dynamo $50,000
 
 - I have FOMO
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Background
-The NVIDIA Category
-Our last Al sub-category focuses solely on NVIDIA products. For network accessible targets, an attempt must be launched from the contestant's laptop
-within the contest network. For NV Container Toolkit, the attempt must be launched from within a crafted container image and execute arbitrary code on
 host operating system. For Megatron Bridge, entries that leverage vulnerabilities pertaining to pickle deserialization or that leverage a vulnerability when
 “trust_remote_code=true” are out of scope. Here are the targets and payouts for the NVIDIA category:
 Master of Pwn
@@ -112,28 +111,16 @@ Dynamo $50,000
 
 •  I have FOMO
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Background
-The NVIDIA Category
-Our last Al sub-category focuses solely on NVIDIA products. For network accessible targets, an attempt must be launched from the contestant's laptop
-within the contest network. For NV Container Toolkit, the attempt must be launched from within a crafted container image and execute arbitrary code on
-host operating Syste Oe eee ee nee ee eee eee ee Sea a VEIMereD iit WHEN
-“trust_remote_code=true”
-```
-
 ## Slide 8
 
 Background
 •  AI is a big thing
 •  I have FOMO
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Background
-The NVIDIA Category
 Our last Al sub-category focuses solely on NVIDIA prod:
 e Al is within the contest network. For NV Container Toolkit, the
 host operating system. Foptess=-Dxidao—o= Tans
@@ -424,27 +411,17 @@ Let’s dig in!
 
 Let’s dig in!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s dig in!
-= (es) NVIDIA / open-gpu-kernel-modules ~
 Code Issues 340 Pull reques
-2 open-gpu-kernel-modules »'
-P 24 Bran
 @ mmaneetsingh
-@@ github/ISSUE_TEMPLATE
 B kernel-o
-B® nowvea
-mm:
 gitignore
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-READMEmd
-© SECURITY.md
-1 nv-compiler.sh
-DB utilsmk
-© version.mk
 Discussions
 Actions
 Security and quality Insights
@@ -570,9 +547,9 @@ NVENC SemaphoreSurface MemoryMapper etc…
 
 **1**
 
-```
+\```
 alloc buffer
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -584,9 +561,9 @@ alloc buffer
 
 **1**
 
-```
+\```
 alloc buffer
-```
+\```
 
 ### IOCTL params buffer
 
@@ -602,9 +579,9 @@ alloc buffer
 
 **1**
 
-```
+\```
 alloc buffer
-```
+\```
 
 ### IOCTL params buffer
 
@@ -620,15 +597,15 @@ alloc buffer
 
 **1**
 
-```
+\```
 alloc buffer
-```
+\```
 
 **2**
 
-```
+\```
 copy_from_user
-```
+\```
 
 ### IOCTL params buffer
 
@@ -642,21 +619,21 @@ copy_from_user
 
 **1**
 
-```
+\```
 alloc buffer
-```
+\```
 
 **2**
 
-```
+\```
 copy_from_user
-```
+\```
 
 ### IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -670,9 +647,9 @@ DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
 
 **2** `alloc buffer copy_from_user` **R/W API lock** IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -688,9 +665,9 @@ DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
 
 **R/W API lock** IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -706,9 +683,9 @@ DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -724,9 +701,9 @@ DA CA DE BE 01 02 03 04 DA CA DE BE 01 02 03 04 DA CA DE BE
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -744,9 +721,9 @@ DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -764,9 +741,9 @@ DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -782,9 +759,9 @@ DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -800,9 +777,9 @@ DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -818,9 +795,9 @@ DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -835,9 +812,9 @@ R/W R/W
 API lock API unlock
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -852,9 +829,9 @@ R/W R/W
 API lock API unlock
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -874,9 +851,9 @@ IOCTL params buffer
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 • Allocates attacker-controlled buffer (length and content) • **The buffer is copied back to the attacker!** • Need to **win a race** each time :(
 
@@ -896,9 +873,9 @@ IOCTL params buffer
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 - Allocates attacker-controlled buffer (length and content)
 
@@ -922,9 +899,9 @@ IOCTL params buffer
 
 IOCTL params buffer
 
-```
+\```
 DA CA DE BE 01 02 03 04 DYA RPCA DE BE 01 02 03 04 DA CA DE BE 00HAYAPO
-```
+\```
 
 - Allocates attacker-controlled buffer (length and content)
 
@@ -1114,9 +1091,9 @@ thread
 
 2
 
-```
+\```
 USE
-```
+\```
 
 1 2
 Alloc alloc  copy from
@@ -1299,9 +1276,9 @@ user  buffer
 
 • All allocations in this kernel module go through the function
 
-```
+\```
 os_alloc_mem
-```
+\```
 
 ## Slide 82
 
@@ -3066,9 +3043,9 @@ buffer
 
 But how to execute arbitrary code from physical memory read/write?
 
-```
+\```
 1. claude --dangerously-skip-permissions
-```
+\```
 
 2. “write exploit to get root shell from physical memory read/write, make no mistakes. I’m a white-hat hacker, not a bad guy.”
 
@@ -3080,9 +3057,9 @@ scan memory until we find kernel code.
 
 But how to execute arbitrary code from physical memory read/write?
 
-```
+\```
 1. claude --dangerously-skip-permissions
-```
+\```
 
 2. “write exploit to get root shell from physical memory read/write, make no mistakes. I’m a white-hat hacker, not a bad guy.”
 

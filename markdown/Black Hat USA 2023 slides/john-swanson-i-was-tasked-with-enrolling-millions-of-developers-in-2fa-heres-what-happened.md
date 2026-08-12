@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/John Swanson_I Was Tasked With Enrolling Millions of Developers in 2FA - Here's What Happened.pdf"
 pages: 48
 sha256: "3fa5b6e85f42550ac1edd71a8c59b39bfa095d803bda54b94ae50495b92861ff"
-text_chars: 15205
+text_chars: 14964
 ocr_pages: 14
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:18:12Z"
+converted_at: "2026-08-12T04:12:01Z"
 ---
 # I Was Tasked With Enrolling Millions of Developers in 2FA - Here's What Happened
 
 **Speakers:** John Swanson  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/John Swanson_I Was Tasked With Enrolling Millions of Developers in 2FA - Here's What Happened.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -74,7 +80,8 @@ End-to-End Supply Chain
 
 GitHub.com 2FA Adoption
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What's missing? 2FA
@@ -87,7 +94,8 @@ W 2FA
 
 Our Objective
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 C Our Objective +)
@@ -153,7 +161,8 @@ Created with Midjourney
 
 **Research Head Start**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Research Head Start
@@ -206,12 +215,11 @@ staged rollout to maintainers beginning Dec 7.
 
 **<u>https://github.com/swannysec/strategic-planning-template</u>**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q swannysec / strategic-planning-template
-&
-«
 Code Issues Pull requests Actions Projects Wiki Security Insights
 Wanta tem plate re renames |
 make this easy? — ~
@@ -355,7 +363,8 @@ Created with Midjourney
 
 **More Factor Options**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 More Factor Options
@@ -363,11 +372,8 @@ More Factor Options
 a
 4:03
 Thursday, January 20
-- The world’s
 development platform,
 in your pocket
-tHut r
-GETITON . Oownload on the
 Google Play [f @ App Store
 ```
 
@@ -377,7 +383,8 @@ Google Play [f @ App Store
 
 **reduction in SMS 2FA registration**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 New 2FA Configuration Flow
@@ -397,11 +404,11 @@ Verify the code from the app
 
 **of users safely re-configure 2FA without lockout**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Scheduled 2FA Verification
-O
 Verify your two-factor authentication (2FA) settings
 Monalisa Octocat
 monalisa
@@ -419,7 +426,8 @@ later.
 
 #### **Preferred Factors**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Preferred Factors
@@ -431,7 +439,6 @@ EF] Authenticator app Enabled ) ( Preferred
 Use an application on your p ctor authentication codes w
 a) SMS/Text message bled
 You will ri 'e authentication code to this phone number: +1 206550123
-® Security keys (Enabled) 1 key
 Security keys are hardware that can be used as your second factor of authentication
 €) itHub Mobile 2 devices
 GitHub Mobile can be used for two-factor authentication by installing the GitHub Mobile app and signing in to your
@@ -484,22 +491,20 @@ and Sales preparation isn’t a
 
 #### **Feedback =** 💖
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 l n i t i a | (> Andres Pineda
 . Folks at @github care so much about your security that they get very
-=z
 —
 happy when we turn on 2FA on our accounts.
 a) Paul Razvan Berg @ EthCc fi @
 If you haven't done it yet, go and bring them some happiness ©? ©
 #Security #MFA
-° nenene tne
 Major props to @github for making 2FA mandatory for all code .
 contributors.
 This is an important step towards enhancing the security of the Internet.
-+
 [GitHub 2FA] Your GitHub account, PaulRBerg, will & 3) Stephen Shankland
 require 2FA ~
 Microsoft's @github now requires 2-factor authentication. Get used to it .
@@ -516,7 +521,8 @@ github.blog/2022-05-04-sof...
 
 **reduction** in 2FA-related support tickets per 100k users
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2FA Adoption vs. Ticket Volume
@@ -524,7 +530,6 @@ github.blog/2022-05-04-sof...
 2FA-related Tickets
 reduction in 2FA-related
 support tickets per 100k
-users $e
 ```
 
 ## Slide 40
@@ -533,14 +538,14 @@ users $e
 
 **reduction** in account lockout recovery attempts per 100k users
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Account Lockouts
 Daily Account Recovery Attempts
 reduction in account lockout
 recovery attempts per 100k
-users $F
 ```
 
 ## Slide 41
@@ -549,14 +554,14 @@ users $F
 
 **increase** in recovery code downloads or prints per 100k users
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Recovery Code Interaction
 Daily Recovery Code Retrievals
 increase in recovery code
 downloads or prints per 100k
-users
 ```
 
 ## Slide 42
@@ -577,7 +582,8 @@ users
 
 • 2024+
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lots of users
@@ -585,7 +591,6 @@ left to enroll!
 Passkey
 support
 2024+
-What's Next?
 Security
 Introducing passwordless
 authentication on GitHub.com
@@ -631,11 +636,11 @@ passkeys, and use those in place of both your password and your 2FA method.
 
 #### **Acknowledgments**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 cknowledgments
-)
 @
 @abbashaiderali @anna-talley @brotherben @buckelij @chriskirkland @cli1150 @flamingolegs @forced-request @galaxyallie
 @gennyburleson @hagould @hemantkumar @hpsin @iburtally @jamespetercross @jessephus @jessicacano @johnpreed
@@ -643,12 +648,8 @@ cknowledgments
 @maya-ross @mayamessinger @mumileski @mph4 @mylesborins @nebiyou- @oreoshake @ptoomey3 @rajlaud
 gebretatios
 @reversaw @richard-saunders @robcrystalornelas @rzomayah @samanthachau @samkovacs @samueldev @sseacrest @stehley
-9
-®
 8
-3)
 @steiza @sumojava @taz @tiedyefridays @vesjones @whitneystewart @yukaav @zacharysierakowski @zack-evans
->)
 ```
 
 ## Slide 48

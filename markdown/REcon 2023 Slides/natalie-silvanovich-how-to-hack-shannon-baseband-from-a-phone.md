@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "REcon 2023 Slides/Natalie Silvanovich_How to Hack Shannon Baseband (from a Phone) .pdf"
 pages: 63
 sha256: "5087a975752d06ad9ed16813b260a60185498d8979933cb0e5b9456b2c2709ab"
-text_chars: 10975
+text_chars: 10608
 ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:25:35Z"
+converted_at: "2026-08-12T06:03:10Z"
 ---
 # How to Hack Shannon Baseband (from a Phone)
 
 **Speakers:** Natalie Silvanovich  
 **Conference:** REcon 2023  
 **Source:** `REcon 2023 Slides/Natalie Silvanovich_How to Hack Shannon Baseband (from a Phone) .pdf` (63 pages)
+
 
 ## Slide 1
 
@@ -52,7 +57,8 @@ Target
 
 Samsung g5300
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Automotive
@@ -60,7 +66,6 @@ Digital Chassis
 Connectivity
 Infotainment
 ADAS
-lol
 Consumer
 Edge Networking
 Industrial
@@ -99,34 +104,26 @@ Attack Surface
 
 Attack Surface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface
-_ @®
 a
 Tour Cellular Network Caller
 Phone (02/Vodafone/EE)
-VoLTE Call
-The Internet
 ```
 
 ## Slide 13
 
 Attack Surface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface
-(2)
-a Call
-——- Network ( )
 Your
 Phone
 \ VoLTE Call
-&
-The Internet
 Cellular Network
 (O2/Vodafone/EE)
 Caller
@@ -148,44 +145,36 @@ Caller
 
 Attack Surface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface
-Ze Network ( ») ——
 a
 Tour Cellular Network Caller
 Phone (02/Vodafone/EE)
-VoLTE Call
-The Internet
 ```
 
 ## Slide 16
 
 Attack Surface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface
-_ @®
 Your Cellular Network
 Phone (O2/Vodafone/EE)
-VoLTE Call
-The Internet
 ```
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signaling
 server
-an
-Vv
 Ka
-? Media stream ,
 O
 TURN server
 Google STUN server STUN server
@@ -201,7 +190,8 @@ Google STUN server STUN server
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How Hackers Broke WhatsApp With Just a Phone Call
@@ -225,15 +215,12 @@ Goc
 
 Attack Surface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Surface
-_ @®
 Your Cellular Network
 Phone (O2/Vodafone/EE)
-VoLTE Call
-The Internet
 ```
 
 ## Slide 22
@@ -292,16 +279,14 @@ The Internet
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-sos ():
 Cellular Network Caller
-. (02/Vodafone/EE)
 The Internet l
 Your
 Phone
-VoLTE Call
 ```
 
 ## Slide 28

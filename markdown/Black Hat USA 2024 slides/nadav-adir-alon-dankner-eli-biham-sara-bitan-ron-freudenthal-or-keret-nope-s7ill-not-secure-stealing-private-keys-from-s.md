@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Nadav Adir & Alon Dankner & Eli Biham & Sara Bitan & Ron Freudenthal & Or Keret_Nope, S7ill Not Secure Stealing Private Keys From S7 PLCs.pdf"
 pages: 54
 sha256: "e6e24c8d5742588b5b14e858aac1addc7c45a72bc8653e36662efbe5a43ecf2f"
-text_chars: 17718
-ocr_pages: 7
+text_chars: 15943
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 79.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:35:17Z"
+converted_at: "2026-08-12T04:37:05Z"
 ---
 # Nope, S7ill Not Secure Stealing Private Keys From S7 PLCs
 
 **Speakers:** Nadav Adir, Alon Dankner, Eli Biham, Sara Bitan, Ron Freudenthal, Or Keret  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Nadav Adir & Alon Dankner & Eli Biham & Sara Bitan & Ron Freudenthal & Or Keret_Nope, S7ill Not Secure Stealing Private Keys From S7 PLCs.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -377,46 +383,11 @@ certi
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat }
-USA 2024 eA
-a4
-MIHSMFcGCSqGSIb3DQEFDTBKMCkKGCSqGSIb3DQEFDDACBAiOlv
-DAYIKoZIhvcNAgkFADAdBglghkgBZQMEASoEEPsSUmHevSU4sfy
-Rm&LRSUAYEgZDsIf T4bpX&zIBODeISFLFL?BKVH?3pVKyF JEuy #
-CINNAQUHnaltmtUqyWDSshAU3TBavkOlojJEMRcirlqZSrGumy
-xbr&yI+vtx@Bao+Z5+JeoTcdUpkmmSd4¥athByS8iFLKsyL+m/1Q
-sO4r0o2X3vtUkULZH1cF SpY¥zyzyS5mCbb&2TRU+MeFeerFieLA3
-TVbi0095DgvOv5i 3wrMBmsqMLk&wdU=cKbKbvdPh/Bla4gl11+
-oSxp5VJd9Inb?fehxSGT?d?TFz2hCEzviEkMOrTWFeul DMSDKPUJBO
-wh+KexwSiteey/wgmahg@IDA@ABAoIBACKSsAwuwbYuBIMdV==
-o-=== END ENCRYPTED PRIVATE KEY-----
-```
-
 ## Slide 25
 
 ### **Private Key Encryption**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-ephemera)
-7 i gis Seg 000 aaehs de
-ubl
-Ephemeral pp; — RSA encry & Da Be
-encrypted passphrase — ©
-4 *
-Pa
-ar
-cert I Bibie ate
-encrypted private key
-```
 
 ## Slide 26
 
@@ -424,32 +395,18 @@ encrypted private key
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat }
-USA 2024
-3
-encrypted passphrase # ?
-} =
-encrypted private key
-```
-
 ## Slide 27
 
 ### **Private Key Encryption**
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat }
 USA 2024 1
-configuration to PLC ”
-ten S
-S?CommPlus Packet | '
-ephemeral public ke - a EE hrasc cert fy
 — encrypted &
 salt
 encrypted ephemeral private key
@@ -706,38 +663,28 @@ Real Response 
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 USA 2024 }
-dirWINDOWS\RedirectDocuments\Automationvronmans_single_led_projectlronmans_single_led_project
 Bel | IA Online Options Tools Window Help Totally Integrated Automation
-x 2 cms 2G BA Ss coonline # PORTAL
 Devices = Topology v th Network view |[¥ Device view
 a
-Gojeyer asempaey [F
-@@ PLC_1 [CPU 1512C-1 PN]
 BY Device confgurati
 &! Online & diag
 Gal Wetch and force tables
 Online backups
-BH Trece:
 HB OPC UA communication
-GD Web applica 5
 ik Device pre
 28} Program info
 SIEMENS
 > [i Local module:
 Iq Ungrouped devices
 settings
-ss-device functions
 Gf Common data
 E) Documentation settings
-® Languages & resources . ——
-a erson Zone toe a Properties __[Cii:infomal (d:Disonostics SIMATIC
 Ww Online access General 10 tags System constants Texts S7-1500
-3 Card ReaderlUS8 memory Hkarmeadaaaea
 . Operating mode
 [Detalis. view, » Advanced Interface networked with
 Ethemet addresses
@@ -748,15 +695,10 @@ Add new watch table ro 4 =
 igh speed counters
 Il Force table <akonte ten Internet protocol version 4 (IPv4)
 Pulse generators (PT
-133] Wetch table_1 it
 aeup @ Set iP address in the project
 cle
-\size HY
-Communication load U b " 7" ry *
 fem and clark a Subnet mask ——— Sle
-2 nemary 3 t 42 165.0178
 IP address:
-4. Portal viow ia ae cori lel caries on
 ```
 
 ## Slide 45
@@ -765,14 +707,12 @@ IP address:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lack hat
 USA 2024
-Li Ti A /.adinWINDOWS\RedirectiDocuments\Automation\ironmans_password_projectironmans_password_project Oracle VM VirtualBox
 Totally Integrated Automatios
-V17., a
 >
 Add new device
 Devices & @ Show all devices
@@ -793,10 +733,8 @@ faa Protects the PLC configuration data from the TA
 Portal project and the PLC.
 sword: | Pres: "Setup" to set the password
 Setup
-word TAproject
 a
 not show this dialog again Cancel
-> Project view. Onened nrniect-\ectidinaday adi WINDOWS\Redirert\Docimente\Automatinnliranmans nas. \iranmans nasewnrd nroiect
 ```
 
 ## Slide 46

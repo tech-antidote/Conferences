@@ -4,17 +4,21 @@ speakers: ["Patrick Kiley", "Emily Astranova"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Patrick Kiley, Emily Astranova - Hacking the EOD Bot How I Learned to Stop Worrying and Love the Boomba - Gigstorm V1.pdf"
 pages: 56
 sha256: "5029d9f1cb35c19073b4cb63aa815fcf708ca4e8517a804ddb5ee5f8f1dac0fc"
-text_chars: 17486
-ocr_pages: 10
+text_chars: 16019
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:26:06Z"
+converted_at: "2026-08-12T06:40:17Z"
 ---
 # Hacking the EOD Bot How I Learned to Stop Worrying and Love the Boomba
 
@@ -22,13 +26,15 @@ converted_at: "2026-08-12T00:26:06Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Patrick Kiley, Emily Astranova - Hacking the EOD Bot How I Learned to Stop Worrying and Love the Boomba - Gigstorm V1.pdf` (56 pages)
 
+
 ## Slide 1
 
 **Hacking the EOD Bot** How I Learned to Stop Worrying and Love the Boomba
 
 August 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 M Mandiant
@@ -280,32 +286,24 @@ Mandiant
 
 Google Cloud 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rear maintenance Port
-e =RS-232
 40 TX4+
 38 CMGND
-37 RX4+
 36 RX4-
-Lu!
-| P"L__., 39 TX4-
 e Ethernet
 o RE hint, look for
 1-4 ohms
 resistance
 between +,-
-_ il
 4
-=
 5
 TD4- 2 O——
-ctl4 3 O
 RD4-
 TD4+ 1
-Mandiant
-Google Cloud
 15
 ```
 
@@ -473,7 +471,8 @@ Mandiant
 
 Google Cloud 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Web Server 2
@@ -576,12 +575,11 @@ Mandiant
 
 Google Cloud 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Video Feed Demo
-PB Windows Pow X BE Windows Pow X BE Windows Pow X + v a x | ¥ @ t2700:-8080 $ Ask Gemini
-PS C:\Users\Emily\Documents\Packbot\6x_testing> python .\boomba_decoder. os @ @ 1270018080 4 QB Relaunch to update =
 py 11976 8080 Wi-Fi
 Battery: ?
 407 PM
@@ -746,11 +744,11 @@ Mandiant
 
 Google Cloud 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packbot 510
-Mandiant
 Used through at least 2015
 OpenVPN -— Not encrypted
 4.9 Ghz radio - Not encrypted
@@ -763,7 +761,7 @@ no-replay
 proto udp
 management localhost 7505
 Source Port Destination Dest Port Protocol Lengt! Info
-5555 Ubiquiti_44:7f:44  5e00 802.11 76 Acknowledgement, Flags=
+5555 Ubiquiti_44:7f:44 5e00 802.11 76 Acknowledgement, Flags=
 172.16.0.5 IPv4 1514 Fragmented IP protocol (proto=UDP
 1194 10.0.0.54 1194 OpenvPNn 88 MessageType: Unknown Messagetype
 5555 Ubiqui 5000 802.11 76 Acknowledgement, Flags= oC
@@ -772,17 +770,15 @@ Ubiquiti_a4:7... 5555 Broadcast 5000 802.11 178 Beacon frame, SN=405, FN=®, Fla
 172.16. 5555 Ubiquiti_. 5200 802.11 76 Acknowledgement, Flags= c
 172.16. 172.16.0.5 IPv4 1514 Fragmented IP protocol (proto=UDP
 10.0.0. 1194 10.0.0.54 1194 OpenvPNn 88 MessageType: Unknown Messagetype [55 —
-172.16.0. 5555 Ubiquiti_44:7F:44  5@00 802.11 76 Acknowledgement, Flags= c
+172.16.0. 5555 Ubiquiti_44:7F:44 5@00 802.11 76 Acknowledgement, Flags= c
 172.16. 172.16.0.5 IPv4 1514 Fragnented IP protocol (proto-uoP| 24 ++ Y6B.
 10.0.0.4 1194 10.0.0.54 1194 OpenVPN 88 MessageType: Unknown Messagetype | 00 ackbot1
 172.16.0.48 5555 Ubiquiti_aa: 5000 802.11 76 Acknowledgement, Flags= c | ee
 172.16.0.48 172.16.0.5 IPv4 1514 Fragmented IP protocol (proto=U0P} 9g
 10.0.0. 1194 1€.0.0.54 1194 OpenVPN 88 MessageType: Unknown Messagetype
-172.16.0.48 5555 Ubiquiti_44:7f:44  5@00 802.11 76 Acknowledgement, Flags= ac
+172.16.0.48 5555 Ubiquiti_44:7f:44 5@00 802.11 76 Acknowledgement, Flags= ac
 10.0.0. 1194 10.0.0.54 1194 OpenVPN 816 MessageType: Unknown Messagetype | 40
-172.16.0.48 5555 Ubiquiti_44:7f: 5000 802.11 76 Acknowledgement, Flags= .c | 15
 10.0.0. 1194 10.0.0.54 1194 OpenvPNn 598 MessageType: Unknown Messagetype | QQ
-172.16.0.48 5555 Ubiquiti_44:7F:44  5@00 802.11 76 Acknowledgement, Flags= e ||-A
 10.0.0.54 1194 10.0.0.4 1194 OpenvPNn 226 MessageType: Unknown Messagetype[!
 172.16.0.48 5555 Ubiquiti_44:5a:2* 5000 802.11 76 Acknowledgement, Flags= wc | 1
 10.0.0.4 1194 10.0.0.54 1194 OpenVPN 227 MessageType: Unknown Messagetype[N 0@
@@ -790,9 +786,7 @@ Ubiquiti_a4:7... 5555 Broadcast 5000 802.11 178 Beacon frame, SN=405, FN=®, Fla
 10.0.0.54 1194 10.0 1194 OpenVPN 228 MessageType: Unknown Messagetype[N 29
 172.16.0.48 5555 5000 802.11 76 Acknowledgement, Flags= C | og |. Y6B. ....e0d-
 10.0.0.4 1194 10.0.0.54 1194 OpenVPN 583 MessageType: Unknown Messagetype[|
-172.16.0.40 5555 Ubiquiti_44:7f:44  5e00 802.11 76 Acknowledgement, Flags= wc | 02 ackbot1 3913...
-10.0.0.54 1194 10,0,0.4 1194 OpenVPN. 193 MessageTvpe: Unknown MM tvoetN OB «eee eee
-@000163B 81 3e 5°
+172.16.0.40 5555 Ubiquiti_44:7f:44 5e00 802.11 76 Acknowledgement, Flags= wc | 02 ackbot1 3913...
 Google Cloud 38
 ```
 
@@ -878,11 +872,11 @@ Mandiant
 
 Google Cloud 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VM Ports
-Mandiant
 Version 5.1
 Version 6.2
 o Mostly Works on 6.9 robot
@@ -894,7 +888,6 @@ press the Back button
 (do not press any other
 buttons).
 Patrick Kiley
-Google Cloud
 44
 ```
 
@@ -956,10 +949,10 @@ Mandiant
 
 Google Cloud 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Mandiant
 Bot Hijack
 PB Windows Powershell X
 BE Windows Powershell
@@ -972,7 +965,6 @@ buttons). Onset
 PackBot-11976
 Press @ for
 for Hot Keys
-Google Cloud
 48
 ```
 
@@ -984,20 +976,16 @@ Mandiant
 
 Google Cloud 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bot Hijack
-File Edit Vi mes Help HW & O28 OOH Ee
-B ocusiz
 x BE Windows Powershell
-\Users\ Emil uments\Packbot> curl "t
 Select Robot...
 Maintenance...
 Shut Down
-C -) Navigate
 (2) Select
-FRROBOE AWARE 2 :0ve: intetigence software
 Mandiant Google Cloud 49
 ```
 
@@ -1010,17 +998,6 @@ Ask us for STICKERS!
 Mandiant
 
 Google Cloud 50
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Lessons &
-Future Efforts
-Ask us for STICKERS!
-DO NOT USE “eae
-IN JAVELIN
-Mandiant Google Cloud = 50
-```
 
 ## Slide 51
 
@@ -1064,7 +1041,8 @@ Google Cloud
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ATAK Integration
@@ -1075,10 +1053,8 @@ Red X
 10S GE 11047 06841
 779 ft MSL DTEDO
 30°M 3.16 km
-ve I
 Red X
 10S GE 11047 06841
-3,» mNE 30M
 16u R ETA:
 Mandiant Google Cloud 52
 ```

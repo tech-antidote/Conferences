@@ -1,5 +1,5 @@
 ---
-title: "Threat Modeling LLMs The PHANTOM-B model-WP"
+title: "Threat Modeling LLMs The PHANTOM-B model"
 speakers: ["Adam Shostack"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -12,15 +12,20 @@ text_chars: 21293
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:04:21Z"
+converted_at: "2026-08-12T05:26:33Z"
 ---
-# Threat Modeling LLMs The PHANTOM-B model-WP
+# Threat Modeling LLMs The PHANTOM-B model
 
 **Speakers:** Adam Shostack  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Adam Shostack_Threat Modeling LLMs The PHANTOM-B model-WP.pdf` (9 pages)
+
 
 ## Slide 1
 

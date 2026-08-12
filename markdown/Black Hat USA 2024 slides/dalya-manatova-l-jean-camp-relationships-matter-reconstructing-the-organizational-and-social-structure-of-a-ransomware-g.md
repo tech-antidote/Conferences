@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Dalya Manatova & L Jean Camp_Relationships Matter Reconstructing the Organizational and Social Structure of a Ransomware Gang.pdf"
 pages: 57
 sha256: "273a98abba101ee25d59054b3b4bed298f20f9458988fa3025704b659b10c8d5"
-text_chars: 23413
+text_chars: 23076
 ocr_pages: 8
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:29:38Z"
+converted_at: "2026-08-12T04:28:52Z"
 ---
 # Relationships Matter Reconstructing the Organizational and Social Structure of a Ransomware Gang
 
 **Speakers:** Dalya Manatova, L Jean Camp  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Dalya Manatova & L Jean Camp_Relationships Matter Reconstructing the Organizational and Social Structure of a Ransomware Gang.pdf` (57 pages)
+
 
 ## Slide 1
 
@@ -415,23 +421,15 @@ Lusthaus, J., van Oss, J., & Amann, P. (2023). The Gozi group: A criminal firm i
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Mature xaaS Yields Scale-free crime
-= oe
-2 &
-S
 Sample with value > Degree
-101
 10°
 networks
 Cumulative Distribution plot
-10°
-101 1 10?
-10°
 ```
 
 ## Slide 27
@@ -468,11 +466,10 @@ Source: ransomwhe.re
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Case Study Conti
 HEE Total payments (USD)
 120,000,000
@@ -591,18 +588,15 @@ codes distributions
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
-Relationship (6-5
 ype: in Small Talk Task Assignement
 Authority
 Status Update
 Request
 o Inferred Authority } Confidence interval > Q
-codes distributions
 No Reply Work Order Command
 Formal Addressing Request for Status Update Apologetic
 Supervisor Report
@@ -658,19 +652,15 @@ codes distributions
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Relationship Type:
 Mentorship
 Suggestions
 Offer to Help
 Inferred Mentorship } eee > O
-codes distributions
-me
-oO
 Request for Help
 Reference to
 Expertise
@@ -702,15 +692,13 @@ codes distributions
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Relationship Type:
 Friendship
 Personal Info
-:
 Q
 Personal Info
 Sharing
@@ -719,7 +707,6 @@ Non-Work: Informal
 Opinion Sharing Addressing Small Talk
 Inferred Friendship Confidence interval >
 based on
-codes distributions
 Non-Work: Informal
 Opinion Sharing Addressing Small Talk
 ```
@@ -779,11 +766,10 @@ _Depends on the crime, organization, and context (i.e., money laundering, access
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Victim “support”
 CONTI Recovery service
 Hello, this is ContiLocker Team.
@@ -833,11 +819,10 @@ Source: Proserveit.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Anatomy of a Ransomware Attack
 Command and
 Malware unpacks control server
@@ -846,9 +831,7 @@ C& Ccommunication
 ® Attacker sends a phishing email downloads public key
 Public key
 Files get encrypted =
-itcoin
 and user gets
-reoeived
 ransomweare screen
 Source: Proserveit.com
 ```
@@ -859,17 +842,15 @@ Source: Proserveit.com
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Production Break Down
 Reflection and Adaptation
 Target
 Identification
 and Selection
-Ransom i.
 Attack Execution of Negotiation wes wupbort
 Preparation Attack and Payment Restoration
 Processing

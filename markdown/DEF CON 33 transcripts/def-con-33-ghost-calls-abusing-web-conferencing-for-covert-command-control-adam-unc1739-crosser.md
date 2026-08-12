@@ -12,7 +12,7 @@ duration_seconds: 2519
 words: 8733
 text_chars: 49109
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Ghost Calls - Abusing Web Conferencing for Covert Command & Control

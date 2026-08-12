@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Carlo Meijer & Wouter Bokslag & Jos Wetzels_All Cops Are Broadcasting Breaking TETRA After Decades in the Shadows.pdf"
 pages: 59
 sha256: "60096e69e317376b560b06e9dd9b3eab0ca1dd4aa478935fbe5d9044f1cd1829"
-text_chars: 23553
+text_chars: 23559
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 92.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:31Z"
+converted_at: "2026-08-12T04:06:37Z"
 ---
 # All Cops Are Broadcasting Breaking TETRA After Decades in the Shadows
 
 **Speakers:** Carlo Meijer, Wouter Bokslag, Jos Wetzels  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Carlo Meijer & Wouter Bokslag & Jos Wetzels_All Cops Are Broadcasting Breaking TETRA After Decades in the Shadows.pdf` (59 pages)
+
 
 ## Slide 1
 
@@ -261,7 +267,8 @@ midnightblue.nl
 
 August 2023
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 oe) All Cops Are Broadcasting
@@ -488,14 +495,14 @@ TA11(K, reverse(RS))
 TA12
 XOR
 
-```
+\```
 DCK = TB4(TA12(TA11(K, RS), RAND1), TA22(TA21(K, RS), RAND2)))
 equals
-```
+\```
 
-```
+\```
 DCK =     TA12(TA11(K, RS), RAND1) ^ TA12(TA11(K, reversed(RS)), RAND2)
-```
+\```
 
 midnightblue.nl
 
@@ -517,10 +524,10 @@ All Cops Are Broadcasting
 
 - Then, DCK simplifies to:
 
-```
+\```
 DCK = TA12(TA11(K, RS), RAND2) ^ TA12(TA11(K, RS), RAND2)
 equals
-```
+\```
 
 **`DCK = XOR(X, X) = 0`**  **`ALL ZERO KEY`** • Authenticated channel with radio, intercept uplink, post-auth functionality, etc.
 

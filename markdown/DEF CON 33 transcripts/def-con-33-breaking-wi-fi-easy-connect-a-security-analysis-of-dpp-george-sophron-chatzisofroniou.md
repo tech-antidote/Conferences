@@ -12,7 +12,7 @@ duration_seconds: 2441
 words: 6235
 text_chars: 36537
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Breaking Wi-Fi Easy Connect - A Security Analysis of DPP

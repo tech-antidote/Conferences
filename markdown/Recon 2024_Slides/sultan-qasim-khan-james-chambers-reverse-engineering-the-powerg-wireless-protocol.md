@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Sultan Qasim Khan & James Chambers_Reverse Engineering the PowerG Wireless Protocol .pdf"
 pages: 43
 sha256: "660572df47cecf412c213fbb76e5feff8dcf01bab74553bec1b5872d51ded751"
-text_chars: 20271
-ocr_pages: 6
+text_chars: 19212
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:23Z"
+converted_at: "2026-08-12T06:17:59Z"
 ---
 # Reverse Engineering the PowerG Wireless Protocol
 
 **Speakers:** Sultan Qasim Khan, James Chambers  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Sultan Qasim Khan & James Chambers_Reverse Engineering the PowerG Wireless Protocol .pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -174,17 +179,6 @@ PowerG Peak Power Spectral Density Plot
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PowerG Modem Hardware and Firmware
-¢ Some sensor devices run entirely on the TI microcontroller
-MWY
-[a4
-t= e~pp.
-nccgroup”
-```
-
 ## Slide 13
 
 # PowerG Modem Hardware and Firmware
@@ -197,23 +191,13 @@ nccgroup”
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-uuooxod - —
-Ziel 01B0G00=574—G
-9-+ZS-000A0Z010 Re
-18/09
-__ Foxconn
-EE
-MECH4/Cover4 Cow i3-) v4
 MODEL: QS-Zwave
 FCC ID: 2AAJXQS-Zwave
 IC: 11205A-QSZwave
-uuooXxo4
-ZL/8t
-9—/G—008A0Z010
-SPVT251749724178
 Rechargeable Li-ion Battery
 SpringPower Technology
 (Shenzhen) CO.,LTD.
@@ -455,7 +439,8 @@ clock counter secondary key / 00s
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overall Modem Firmware Architecture
@@ -469,7 +454,6 @@ Mbox 2
 Ack messages to host
 direct message handlers
 A
-¥v
 UART msg handler
 PowerG state machine
 RF function groups
@@ -479,9 +463,7 @@ check/handle radio status
 Mbox 1
 Messages for state machine
 v
-P*)
 nn
-nccgroup”
 ```
 
 ## Slide 28
@@ -526,10 +508,10 @@ nccgroup”
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2.00e+00
 1.50e+00
 1.00e+00
 Time (s)
@@ -538,18 +520,13 @@ Time (s)
 9.60e-03 5
 7.20e-03 +
 Time (+0us)
-B
 o
-5
-8
-it
 2.40e-03 +
 0,00e+00 —
 Center Freq
 PowerG Capture with FHSS Utils
 Input Spectrogram
 T
-3.000
 Burst Spectrogram
 -20.00 0.00 20.00
 Frequency (kHz)
@@ -561,27 +538,15 @@ FM Demodulation
 15
 1
 0.5
-j S
 = a)
 Amplitude
 in °
-Leper tori tipiitiiiitiiriitiriitiiii tii)
-mo
-j=)
 Amplitude
-S
 w
-ah
-Lraiirtiriiritiriitiiiitiiiiti
 ah
 in
 2.000 3.000
 Soft Symbols
-J mee &% of of, tie
-Again
-Rs tates ogP ty" o
-og ¢°RErc8, o. ce?
-eohee Sewn wo ae ody
 Time (ms)
 100 200 300 400 500
 Time (sec)
@@ -590,29 +555,21 @@ Time (sec)
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Capture | Decode
 Original channel input
 7 Frequency Display | Waterfall Display Constellation Display
-J @ Dataod
-0 pennies 4 z = Datao
--20 aioe
 | 8.87 khiz, -30.22 dB = 404
-@ -40-4 vw 605
 80 -100.00 -50.00 0.00 50.00 100.00
 2 4 Frequency (kHz)
--100 5 —_—_.
 4 v|MaxHold | Reset | Average
--120 -| Min Hold lo +|
-140 — : ; ; Display RF Frequencies FFT Size: | 4096 Md
 -100.00 -50.00 0.00 50.00 100.00 Window: | Blackman-harris ~ |
 Frequency (kHz) a
 Quadrature Demod
 ™ CFO Fix
-ff: sittisatthsiae f° rf mre tb i _ ft | in i if hook i i: ; 7 mo my ; f Tere Binary Slicer
-ee HA TT TEE VEE HAST PHT fi vay Tk
 Time (ms)
 ```
 
@@ -648,24 +605,23 @@ Time (ms)
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packet Structure
 length src addr dst addr net/modem addr?
 32
-9 counter period? power} | |mode| its)? | 2 : : : msg type
 64
 keystream check value payload...
 (length + 1)* 8 (length + 3) * 8
 payload... CRC-16
 Its = no timestamp appended
-nccgroup”
 ```
 
 ## Slide 34
 
-```
+\```
 Packet on channel 13 (Burst center frequency:
 914,450,087 Hz)
 Start time: 14.351108294263273
@@ -689,11 +645,11 @@ Bit field bytes:
 4: 01110000 (0x70)
 5: 01000000 (0x40)
 6: 00000000 (0x00)
-```
+\```
 
 ## Slide 35
 
-```
+\```
 dedupe counter: 7
 notification period?:   0
 no time info:   0
@@ -708,16 +664,16 @@ byte 6 bit 2-0: 0
 RF message type: 0x76
 Keystream head: ffff
 Nonce/crypto mode: 0
-```
+\```
 
-```
+\```
 == BODY ==
 Payload:
 00000000: 1C 77 E6 00 00 28 00 0B  01 03 2D 13 14 01 00 11  .w...(....-.....
 00000010: 01 03 29 01 10 03 10 00  00 00 00 00 01 24 12 00  ..)..........$..
 00000020: 22 61 00 00 00 02 07 00  70 24 35 04 61 00 0F 08  "a......p$5.a...
 00000030: 00 06 F0 FF                                       ....
-```
+\```
 
 ## Slide 36
 
@@ -763,7 +719,7 @@ Payload:
 
 - E.g., identifying messages for a door contact sensor (open, close, tampered):
 
-```
+\```
 tamper 1: 640001 1c77e6 05 03 fd 01 00 (??)
 tamper 2: 640005 1c77e6 05 03 40 01 00 (??)
 tamper 3: 040006 1c77e6 05 11 27 01 00 2801 00 1101 00 f1010926 036a 05 00 (also closed)
@@ -773,7 +729,7 @@ open:     640008 1c77e6 05 11 27 01 00 2801 01 1101 01 f1010926 036b 05 53
                  |_dev ID  |_length         |_tamper |                   |
                                                      |_ opened/closed    |
                                                                          |_ also opened/closed?
-```
+\```
 
 38
 

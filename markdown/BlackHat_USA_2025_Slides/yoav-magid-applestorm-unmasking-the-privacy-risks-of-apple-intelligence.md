@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Yoav Magid_AppleStorm - Unmasking the Privacy Risks of Apple Intelligence.pdf"
 pages: 54
 sha256: "ea62ed69403bd217e7c03a6ba14822dec214c6edcfc694b42b5fcd9a69e21f78"
-text_chars: 17739
-ocr_pages: 36
+text_chars: 16896
+ocr_pages: 33
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Yoav Magid_AppleStorm - Unmasking the Privacy Risks of Apple Intelligence_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:04:18Z"
+converted_at: "2026-08-12T05:26:09Z"
 ---
 # AppleStorm - Unmasking the Privacy Risks of Apple Intelligence
 
 **Speakers:** Yoav Magid  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Yoav Magid_AppleStorm - Unmasking the Privacy Risks of Apple Intelligence.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Speaker: Yoav Magid
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
 BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
@@ -50,13 +55,13 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How many of you own
 an Apple device?
-3)
-blackhat  AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
+blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
 ```
 
 ## Slide 3
@@ -83,30 +88,30 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How many of you
 use Siri?
-(2)
-blackhat  AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
+blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
 ```
 
 ## Slide 5
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BIBIC
 Home News Sport Business Innovation Culture Arts Travel Earth Audio Video Live
 Apple to pay $95m to settle Siri
-‘listening’ lawsuit
 7 January 2025 Share <p Save []
 Imran Rahman-Jones
 Technology reporter
-blackhat  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
+blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
 ```
 
 ## Slide 6
@@ -139,14 +144,14 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is Your Data Private? By: Yoav Magid Share yy ++
 Is Your Data Private? By: Yoav Magid
 The Secret
 The Secret
-pisck hat
 ```
 
 ## Slide 10
@@ -157,14 +162,13 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Introduction
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Yoav Magid
 Team Lead & Al Researcher
-&3lumia
-3)
-blackhat  AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
+blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Introduction
 ```
 
 ## Slide 11
@@ -178,17 +182,6 @@ Risks & Methodology
 “Hey Siri, What can you do?”
 
 What can we do?
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Agenda
-Behind Apple Intelligence’s Curtains
-Risks & Methodology
-“Hey Siri, What can you do?"
-What can we do?
-bisek hat
-```
 
 ## Slide 12
 
@@ -213,7 +206,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Apple Intelligen
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Apple Intelligence's Infrastructure 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Intelligence & Privacy
@@ -232,7 +226,8 @@ blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Apple In
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Apple Intelligence's Infrastructure 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Intelligence, Siri, and Search
@@ -246,7 +241,6 @@ apple-relay.fastly-edge.com
 cp4.cloudflare.com
 apple-
 relay.apple.com
-3)
 Description
 Siri and dictation requests
 Search services, including Siri, Spotlight,
@@ -267,12 +261,13 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Risks & Methodol
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Risks &
 Methodology
-bist That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Risks & Methodology
+bist That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Risks & Methodology
 ```
 
 ## Slide 17
@@ -307,18 +302,20 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Scenarios
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Scenarios
-blackhat  AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Scenarios
+blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Scenarios
 ```
 
 ## Slide 20
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Intelligence & Siri
@@ -332,7 +329,6 @@ Keyboard shortcut
 Press to type to Sir
 Language
 Language
-i )
 “Hey Siri*
 Press Either Command Key Twice >
 Allow Siri to learn from how you use this application in order to
@@ -348,14 +344,6 @@ Learn from this application
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 21
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-3)
-blackhat 4ppleStorm Unmasking the Privacy Risks of Apple Intelligence | Siri
-2i
-```
 
 ## Slide 22
 
@@ -375,14 +363,15 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Prompt
 €3 What is the weather in Las Vegas U)
 Las Vegas -@.
 Today
-bisa That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri 23
+bisa That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri 23
 ```
 
 ## Slide 24
@@ -393,7 +382,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quick look — Data Frame
@@ -401,7 +391,7 @@ Intercepted request to api-glb-auseic.smoot.apple.com
 root:
 <chunk> = message:
 <chunk> = "What is the weather in Las Vegas"
-bist That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
+bist That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 24
 ```
 
@@ -413,14 +403,15 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Location (Latitude, Longitude)
 1 <32bit>= 0x4214f200 / 1108668928 / 37.23633
 2 <32bit>= @xc2e79c36 / 3269958710 / -115.805098
 Intercepted request to api-glb-auseic.smoot.apple.com
-bist That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
+bist That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 ```
 
 ## Slide 26
@@ -431,7 +422,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Precise Location
@@ -444,7 +436,6 @@ Privacy & Security > Location Services > Siri and tapping Never.
 If you have enabled Location Services, you can turn off Location Services for Siri Suggestions by going to
 Settings > Privacy & Security > Location Services > System Services and tapping to turn off Suggestions &
 Search.
-3)
 blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 26
 ```
@@ -457,7 +448,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple's Weather App
@@ -470,7 +462,7 @@ Apple's Weather App
 <varint> = 1
 <chunk> = "WeatherIntent"
 Intercepted request to api-glb-auseic.smoot.apple.com
-bisa That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
+bisa That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 27
 ```
 
@@ -482,17 +474,17 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Weather App?
 <chunk> = message:
 <chunk> = "weather"
 <chunk> = "com.parallels.winapp.1441dféb1c10f910ccdc400e40b5fce9
-<string>com.parallels.winapp.1441df6b1c10f91@ccdc4@0e40b5fce9
 <string>Weather</string>
 Intercepted request to api-glb-—auseic.smoot.apple.com
-bisa That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
+bisa That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 28
 ```
 
@@ -510,10 +502,10 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-3)
 Applications lists by topic
 <chunk> = message:
 <chunk> = "type.googleapis.com/apple.parsec.siri.v2alpha.AppInfo"
@@ -547,27 +539,19 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Active Applications
-‘AppInfo',
 jroup': ‘com.apple.ace.system',
 ‘appIdentifyingInfo': {'$class': 'AppIdentifyingInfo', <8
-‘$group': ‘com.apple.ace.sync', aps
-‘bundleId': ‘com. tinyspeck. @@ekMe@egep '}}], ~ Se
-[{'$class': ‘AppInfo',
-"$group': ‘com.apple.ace.system',
 ‘appIdentifyingInfo': {'$class': ‘AppIdentifyingInfo',
-‘$group': ‘com.apple.ace.sync',
-*bundleId': ‘com. apple.(aaider }}], ——
-[{*$class': ‘AppInfo',
 ‘$group': ‘com.apple.ace.system',
 ‘appIdentifyingInfo': {'$class': ‘AppIdentifyingInfo',
 ‘$group': ‘com.apple.ace.sync',
-‘bundleId': ‘"@@ERORNG'}}11,
 Intercepted request to guzzoni.apple.com
-blackhat  4ppleStorm Unmasking the Privacy Risks of Apple Intelligence | Siri
+blackhat 4ppleStorm Unmasking the Privacy Risks of Apple Intelligence | Siri
 30
 ```
 
@@ -579,7 +563,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Taylor Swift?!
@@ -592,7 +577,6 @@ Taylor Swift?!
 <chunk> = "TaylorSwiftVEVO"
 <chunk> = "Taylor Swift - no body,
 Intercepted request
-(2)
 blackhat 4ppleStorm Unmasking the Privacy Risks of Apple Intelligence | Siri
 no crime (Official, Lyric Video) ft.
 to api-glb-auseic.smoot.apple.com
@@ -608,12 +592,11 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Now Playing Queue
-bisek hat
-Se
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 Metadata Query
 Never Gonna Give You Up
@@ -637,15 +620,14 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remember?
 Your Data is not Private, By: Yoav
 Magid
 The Secret
-> o00/030 ©
-3)
 blackhat 4ppleStorm Unmasking the Privacy Risks of Apple Intelligence | Siri
 33
 ```
@@ -674,10 +656,10 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-#)
 blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 ```
 
@@ -689,15 +671,14 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Messaging Data
 Hello World
-:% POO
 +19147772222B
-19147772222@s.whatsapp.net’)
-bisa That  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
+bisa That AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Siri
 Taylor Swift lore Oxe
 ® Sendh X (x-apple-siri-app://net.whatsapp.WhatsApp *$CDFF12B7-96A5-4E1F-9F23-FAD9E5C2D7CAp “
 36
@@ -734,11 +715,12 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Writing Tools
-bist hat  AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
+bist hat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 ```
 
 ## Slide 39
@@ -749,7 +731,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Writing Tools
@@ -762,9 +745,7 @@ Proofread Rewrite
 = Summary
 Key Points
 List
-& Table
 7 Compose...
-3)
 blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 Inspect
 Speech >
@@ -786,7 +767,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 On-Device or Not?
@@ -806,7 +788,6 @@ Online
 blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Writing Tools
 ©} Describe your change
 Q 1)
-Proofreed Rewri
 @ Friendly
 € Professional
 = Concise
@@ -825,11 +806,12 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Image Playground
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Image Playground
-blackhat  AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Image Play ground
+blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Image Play ground
 ```
 
 ## Slide 42
@@ -840,7 +822,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Image Playground
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Image Playground
@@ -848,9 +831,7 @@ Describe an image or add a
 @ G ee suggestion from the list.
 SUGGESTIONS SHOW MORE
 -
-*» @oezt ee @
 Disco Superhero Vampire Rainforest Astronaut Adventure Scientist
-3)
 blackhat AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Image Play ground 42
 ```
 
@@ -898,7 +879,8 @@ AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Disclosure
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Disclosure
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Response
@@ -918,15 +900,13 @@ now on iPhone16
 
 AppleStorm: Unmasking the Privacy Risks of Apple Intelligence | Disclosure
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SiriKit Test
-” Wy
-Developer
 See you soon
 d Sendh X .x-apple-siri-app://Yoav-Lumia.TestMessagingAPP “3756DB956-9C9A-45EB-8423-3ACFD5991249p
-John" John @P€> @ €x@
 blackhat AppleStorm Unmasking the Privacy Risks of Apple Intelligence | Disclosure
 ```
 
@@ -979,7 +959,8 @@ Retrospective
 
 • 2 Terms of Use 2 Privacy Policies Same App
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Apple Intelligence VS Siri
@@ -998,15 +979,14 @@ The UV index is low, and air quality is rated
 as good, posing little or no risk to health.
 2 Terms of Use + 2 Privacy Policies
 bidekhat Same App
-©
-co]
 ```
 
 ## Slide 52
 
 Can you tell the difference?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Can you tell the
@@ -1017,13 +997,6 @@ blackhat
 ## Slide 53
 
 Thank you for listening!
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Thank you for listening!
-£8 lumia
-```
 
 ## Slide 54
 

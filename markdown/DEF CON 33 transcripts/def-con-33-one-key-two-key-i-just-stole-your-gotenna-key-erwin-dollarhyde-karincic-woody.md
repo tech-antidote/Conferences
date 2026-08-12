@@ -12,7 +12,7 @@ duration_seconds: 2565
 words: 7733
 text_chars: 41610
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # One Key, Two Key, I Just Stole Your goTenna Key

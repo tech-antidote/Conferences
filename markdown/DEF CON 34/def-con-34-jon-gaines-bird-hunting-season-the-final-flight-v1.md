@@ -4,23 +4,28 @@ speakers: ["Jon Gaines"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - v1.pdf"
 pages: 38
 sha256: "5c761d9356f3e6a7c1550d3951e1a3f0e77ac3975a26e7264d5f52ec6f3a1541"
-text_chars: 52275
+text_chars: 47868
 ocr_pages: 30
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.4
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:24:15Z"
+converted_at: "2026-08-12T06:37:47Z"
 ---
 # Bird Hunting Season The Final Flight
 
 **Speakers:** Jon Gaines  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - v1.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -94,7 +99,8 @@ converted_at: "2026-08-12T00:24:15Z"
 
 **Ecosystem: Software**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ecosystem: Software
@@ -102,31 +108,21 @@ DEVICE SUITE / CONTROL / OTHER
 Phone Home Service
 com.flocksafety.android.phonehomeservice
 System Control
-com. flocksafety.android.systemcontrol
 Peripheral
-com. flocksafety.android. peripheral
 Collins
-com. flocksafety.android.collins
 Settings Service
 com. flocksafety.android.settingsservice
 Camera Updater
 com.flocksafety.android.cameraupdater
 Assembly Validator
-com. flocksafety.android.validator
 Quality Control
 com. flocksafety.android.qualitycontrol
 Sensor Service
-com. flocksafety.android.sensorservice
 Upload Client / St Germain
-com. flocksafety.android.uploadclient
 WifiHotSpot
-com. flocksafety.android.wifiAp
 Flock System Test
-com.flocksafety.android. systemtest
 Sambuca
-com. flocksafety. android. sambuca
 Pisco
-com. flocksafety.android.pisco
 WhistlePig
 com.flocksafety.android.whistlepig
 VERSION + SCOPE
@@ -172,7 +168,6 @@ finding.
 Picard/Bravo audio app/service.
 VIDEO / VISION / MEDIA + PUBLIC APPS
 Objects / DetectionProcessing
-com. flocksafety .android.objects
 Ciroc
 com. flocksafety .android.ciroc
 Cachaca / Burst Cam
@@ -182,9 +177,7 @@ com. flocksafety.android.motion
 Encoding
 com. flocksafety .android.encoding
 Video Recording
-com. flocksafety android. videorecording
 Video Streaming
-com.flocksafety .android. streaming
 Camera Config
 com. flocksafety.android.cameraconfig
 Medalla Light
@@ -196,9 +189,7 @@ com. flocksafety.android.bigboibud
 FlockCamera
 com.flock.camera
 FSinstaller
-com. flocksafety .hazyhiwire
 Flock Safety
-com. flocksafety.sweetwater
 Flock On Patrol
 com. flocksafety.android.negroni
 VERSION + SCOPE
@@ -249,13 +240,13 @@ Patrol and plate-lookup app.
 
 **Bird Hunting Season: Timeline**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bird Hunting Season: Timeline
 Jan Feb Mar May Jun Sep
 Research 0
-Vendor/CVE © oO emo ®
 Disclosure
 Flock response C5]
 Feeds arc
@@ -266,9 +257,7 @@ C7) 2025-01 oe 2025-06-27
 Acquired first Flock hardware First CVE batch published
 2025-02-08 2025-06-27
 Initial vendor contact Follow-up deadline provided
-2025-02-10
 Vendor response
-2025.06.27
 Flock confirmed validation/triage in progress
 2025-03-07
 Vendor CVE request for initial set
@@ -283,16 +272,11 @@ Part 1 public disclosure Compute box disclosure
 Further vulnerabilities disclosed to Flock
 2025-09-27
 Wireless/local admin disclosure
-eoe0008l8 (8
-@ee0ee9d 90
 Oct
-®o
 Nov Dec Jan Feb
-® ®
 ® ®
 15-21: Part 4 to CEO response
 ®
-e99ee8e898090
 2025-10-23
 Further vulnerabilities disclosed to vendor, Part 4
 2025-11-05
@@ -310,8 +294,6 @@ Further vulnerabilities disclosed to vendor, Part 5
 CEO Linkedin security posture response
 DEF CON
 22-28: feeds arc to DEF CON
-®
-®
 ®
 ®
 2026-01-ish
@@ -334,7 +316,8 @@ Final Flight + BirdShot release
 
 **The Usual Suspects**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Failure class
@@ -412,15 +395,13 @@ Issue IDs
 
 **08**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Raven: Plucked And Rooted
 ER Hardware on the bench 2 Boot logs gi ESP eFuse summary
 liga =
-aire . i
-a
-Ss
 a,
 6 | Debug shell menu
 # NVS csv file
@@ -429,7 +410,7 @@ eS Ue nigeL@SectorB6: $ strings sta.apinfo.bin
 isRegistered data u8 e Flock
 clientid data string xvigsytnYyrs7pk8g ciahiiies peed
 clientSecret data string BcyZHiz-D49AqQ¢ query Flock-230503
-serialNumber data string  '240821702E3 “ee - security
+serialNumber data string '240821702E3 “ee - security
 partNumber data string 703-00006 Bie Sees) na
 consoleLogEn data u8 0 Ay4TwnB43fmx
 iB misc namespace
@@ -440,7 +421,8 @@ nvs.net80211 namespace
 
 **Raven: Takeaway**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Raven: Takeaway
@@ -482,39 +464,28 @@ No separate CVE
 
 **Falcon / Sparrow: Grounded Flight**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Falcon / Sparrow: Grounded Flight
 i Carrier boards / SoM Fy Fastboot posture Ei EDL / Firehose
-roots se. .)-\/nome/kat1 SectorTL) | /home/nigel/edt
-® fastboot devices i printgpe oader=ALPR-DDR-FIRE
-3130B1207252201377 fastboot ee EE rick deen te Gdn
 main - Waiting for the device
 main - Device detected :)
 sahara ~ Protocol version: 2, Version supported: 1
 -—(reot®@ ka /home/kali- main - Mode detected: sahara
 L sahara -
 ® fastboot getvar all Nanaion ace
-. HWID: 0x000660¢100000000 (MSM_ID:@x800660e1 , OEM_ID: 0x9000, MODEL_ID:0x0000)
-(bootloader) version:0.5 Pee areereea sais
-ootloader a ery-soc-ok:yes PRK_HASH: Oxcc3153a80293939b90d02d3bF8b23e0292eU52Fef662c TU99GU2adadd2a3BeF
 (bootloader) batt k
 (bootloader) battery-voltage:3933000 Serial: OxBsbechce
 (bootloader) variant:Dragon eMMC sahara - Protocol version: 2, Version supported: 1
-(bootloader) unlocked: yes eS ee a
 sahara - 32-Bit mode detected.
 (bootloader) secure:no sahara - Firehose mode detected, uploading...
 (bootloader) version-baseband: sahara - Loader successfully uploaded
 oe pay . . . . = . main - Trying to connect to firehose loader ...
 4 | Read boot partition 5 | Root shell 6 | Camera feed running
-root SectorTL) | fhome/nigel/edl _ Linc Lesizece
-quinn Sihaie / Finetoss cliet Vie2 (0 bless meee, 7 | msm8953_32:/ a sh
 main - Using loader ALPR-DOR-FIREHOUSE.mbn ...
 main i Waiting for the ee 8953_ 32: 2 / $s
-Se eaters iiaeee msm
-Daaecd Soot een rctn covtan aount 65596 ar" hose/nageU/A.PR-Pooat (boot. g. msm8953_32:/ # whoam
-root SectorTL) | /home/nigel/edt
 # ./edl reset —Loader=ALPR-DOR-FIREHOUSE .mbr root
 Qualcomm Sahara / Firehose Client V3.62 (c) B.Kerler 2018-2024
 main - Using loader ALPR-DOR-FIREHOUSE.mbn ... *
@@ -528,7 +499,8 @@ DeviceClass - USBError(19, 'No such device (it may have been disconnected)') roo
 
 **Falcon / Sparrow: Takeaway**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Falcon / Sparrow: Takeaway
@@ -598,7 +570,8 @@ No
 
 **Check in**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Check in
@@ -614,7 +587,6 @@ cloud through Transport Layer Security (TLS) encryption. The data is then stored
 encrypted in the cloud for 30 days so it can be accessed if it needs to be used
 as evidence in a case. On the device, images and audio are regularly deleted.
 The gunshot detection device cannot hold more than 50 seconds of audio.
-MKCVE-2025-47822 Detail
 Description
 Ongoing Security Reinforcements
 Flock’s security team was recently alerted about limited, localized security vulnerabilities on
@@ -641,18 +613,16 @@ Flock Safety LPR (License Plate Reader) devices with firmware through 2.2 have a
 
 **Picard / Bravo Compute Box: Root from the Coop**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Picard / Bravo Compute Box: Root from the Coop
 Ei Compute box hardware = Secure boot off / UFS EF} EDL | Firehose read
-ectorTL— /home/nigel i) r f r userdata userdata. img
-# minicom -f /dev/ttyUSB@ b 115200 one sahara / Firehose Client V3.62 (e) B.kerler 2018-202
 main - Using loader prog_firehose_ddr.elf ...
 main - Waiting for the device
 main - Device detected :)
 Welcome to minicom 2.10
-u main - Mode detected: firehose
 OPTIONS: 118n Progress: | | 100.0% Read (Sector @x93FB00 of @x949DD3, ) 38.90 MB/s
 Port /dev/ttyUSB®, 03:10:53 [U] Progress: | | 106.6% Read (Sector @x93FCOO of @x9U6DD3, ) 40.65 MB/s
 Progress: | | 100.e% Read (Sector @x93FD00 of @x9U0DD3, ) 36.4u MB/s
@@ -661,7 +631,6 @@ Press CTRL-A Z for help on special keys Progress: | | 100.6% Read (Sector @x93FF
 Progress: | | 100.0% Read (Sector @x940000 of @x9U8DD3, ) 49.93 MB/s
 Format: Log Type - Time(microsec) - Message - Optional Info Progress: | | 100.6% Read (Sector 0x940109 of @x94@DD3, ) 36.75 MB/s
 Log Type: B - Since Boot(Power On Reset), D-—- Delta, S - Statistic Progress: es Read Goes barton of poser x eld ae
-2 z RE VAR oreememuniss oe Leena Progress: | | 100.6% Read (Sector @x940400 of @x9U8DD3, ) 49.72 MB/s
 OCKOCI a Progress: | | 100.6% Read (Sector @x940509 of @x94@DD3, ) 35.95 MB/s
 $ ~ OEM_IMAGE_VERSION_STRING=4c1b83U1de57 Progress: | | 100.6% Read (Sector @x940609 of @x946DD3, ) 39.87 MB/s
 S - Boot Interface: UFS Progress: | | 100.0% Read (Sector @x948700 of @x9U8D03, ) 38.52 MB/s
@@ -674,7 +643,6 @@ S - Secure Boot: Off Progress: | | 100.6% Read (Sector @x9U0800 of @x9U0DD3, ) 4
 (bootloader) off-mode-charge:0 Tuncon: Could not set context to u:r:vendor_shell:s®: Permission den: root SectorTL /mnt /SECOND/Compute—Box-2-POSTROOT
 (bootloader) charger-screen-enabled:@ cL iesinetlh i # adb shell whoami
 (bootloader) battery-soc-ok: yes u:r:vendor_shell:s® root
-(bootloader) erase-block-size: 0x1000 BRAVO: /'S
 (bootloader) logical-block-size: 0x1000
 (bootloader) variant:QCS UFS
 ```
@@ -683,7 +651,8 @@ S - Secure Boot: Off Progress: | | 100.6% Read (Sector @x9U0800 of @x9U0DD3, ) 4
 
 **Picard / Bravo Compute Box: Takeaways**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Picard / Bravo Compute Box: Takeaways
@@ -756,7 +725,8 @@ No
 
 **Public Apps: Takeaways**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Public Apps: Takeaways
@@ -785,7 +755,8 @@ No
 
 **Before The Feed Exposure**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Before The Feed Exposure
@@ -834,7 +805,8 @@ HACKING 80.000+
 
 **Video Stack Overview: Architecture**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Video Stack Overview: Architecture
@@ -848,7 +820,6 @@ v v.
 Collins App —_ >» Local API surface on port 8080. Live view, Admin web portal, video RTSP live/replay via video FRP and port forwarding
 com.flocksafety.android.collins device status, crashpack, reboot, ADB listings, config, diagnostics. streaming components. around local camera services.
 toggles.
-Nd
 v
 HTTP Admin RTSP / HLS ONVIF / Camera API
 Enable MJPEG videoAdmin, getVideo, Live and replay streams tied Device, media, PTZ, analytics,
@@ -868,11 +839,11 @@ Failure pattern: local network reachability was treated like authorization.
 
 **ML Stack Overview**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MIL Stack Overview
-. .
 Raven Gunshot Detection Falcon / Sparrow / Bravo / Picard
 Embedded audio event classifier on an ESP32 + Syntiant NDP120 path. Android visual recognition stack with extractable model assets and replay tooling.
 Microphone / Audio Input ESP32 Firmware Camera Capture Media Pipeline
@@ -893,34 +864,30 @@ visible. config output. Confirmed: actual TFLite model files and label maps are 
 present locally. detectionProcessed output.
 Raw labels observed: gunshot, tire, background.
 APK assets: /system/app/flock-object/flock-object.apk!/ Runtime cache: /data/user/0/
-assets/flock_models/ com. flocksafety.android.objects/cache/flock_models/
 ```
 
 ## Slide 21
 
 **Encryption And Media Handling: Observed Gaps**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Encryption And Media Handling: Observed Gaps
 1. Shared Recording Path
-MediaFileUtil$mediaPartition$2.smali:81, 83,116
 Flock-Sumarize/media-storage: 3-43
 This shows the reviewed app used shared external storage for media paths, with local proof using
 list/pull/play from /storage/emulated/0/flockMedia/media.
 «method public final invoke()Ljava/io/File;
 const-string v@, “flockMedia"
-invoke-static {v0},
 Landroid/os/Environment;—>
 getExternalStoragePublicDirectory(...)
 DIR_FLOCK_MEDIA = “flockMedia"
 adb shell ls -R \
-/storage/emulated/@/flockMedia/media
 adb pull .../clip.mp4
 Picard/Bravo runtime
 3. Picard/Bravo Media Partition
-picard-computebox/mount : 63-65
 logcat-2: 28791-28806 , 31828-31837
 This shows Picard/Bravo media lived on /media/ufs, a separate ext4 media partition outside the /data
 inlinecrypt mount.
@@ -944,8 +911,6 @@ falcon/logcat:3741, 3851-3869; dumpstate-output :57369
 This shows the Falcon/Sparrow virtual media store key existed beside virtual_disk on the tested unit, and
 Android mounted the matching private volume.
 msm8953_32:/media # 1s
-®
-expand_426956d8e36644bbb6bcd706b41b737a. key
 lost+found
 virtual_disk
 vold: PART 2 ... 426956D8...737A android_expand
@@ -954,13 +919,11 @@ Cryptfs: /dev/block/vold/private:7,2
 [persist.sys.virtual_disk]: [true]
 SELinux boundary
 4. DataLog Cleanup + SELinux
-SystemControlService. smali: 817,831,952
 inits-in-etc-init-as-root:2-11; whitepaper text:493-497, 3609-3614
 This shows a retention setting flowed into a root-run cleanup script; SELinux blocked the root-command
 path by default.
 SystemControlservice:
 getSetting("dataLogsRetentionPeriodDays", "5")
-set("persist. vendor. flock. data. logs. retention_period_days", value)
 set("flock.clean_data_partition", “1")
 init service:
 clean-data-partition -> /vendor/bin/clean_data_partition. sh
@@ -976,7 +939,8 @@ find /data/anr -mtime +$logs_retention_in_days -delete
 
 ## **SpeedPourer**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SpeedPourer
@@ -1007,11 +971,8 @@ usesCleartextTraffic=true; SpeedPourer assets/ipconfig. txt;
 Disclosure Route
 CERT / CISA VULS path recorded in meeting notes.
 2. SpeedPourer Control Plane system service
-speedpourer-latest. log: 2-12
-video-stack.md: 507-519, 597-602
 Port +
 BOOT_COMPLETED Tunnel frpc
-SpeedPourerService —»> Config ae esystendes Mites
 auto-starts files/*. ini vBa/frpc
 + frp_lock
 SpeedPourerService:
@@ -1020,15 +981,12 @@ Starting service. Version: 7.38.3
 Successfully processed 2 port(s)
 Successfully processed @ tunnel(s)
 FRP config location:
-/data/user/@/com. flocksafety.android. speedpourer/files/*. ini
 Lock file:
-/data/user/@/com. f locksafety. android. speedpourer/files/frp_lock
 Writable Tunnel Config ( ewe-732
 The tunnel trust boundary collapsed into a local config file: with
 system context, frpc.ini could be rewritten to alter the remote endpoint
 and tunnel mapping.
 Proof: for—cert:26-39
-/data/user/@/com. f locksafety. android. speedpourer/files/frpc.ini;
 system:system; default 770/660 noted in disclosure
 What Was Sent
 New post-whitepaper CVE draft batch covering cleartext transport, FRP config access
@@ -1040,7 +998,6 @@ A lab FRP server and on-device frpc.ini showed the same
 control point: server address, token, local target, and public
 remote port.
 BRAVO: /data/user/@/.../speedpourer/files # cat frpc.ini
-[common]
 server_addr = <PUBLIC_IP>
 server_port = 7000
 token = testtoken
@@ -1057,7 +1014,6 @@ Proof: for-cert:41-73
 /system/bin/frpc; Camera Config listener on 0.0.0.0:8000;
 /videoAdmin, /getVideo, /deleteVideo, /LAPI/...
 Source
-Meeting-Notes:5, 13-17
 for-cert:1-73
 new_cve_submission-drafts.md:1-79
 ```
@@ -1066,7 +1022,8 @@ new_cve_submission-drafts.md:1-79
 
 **Check In**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Check In Has Flock Ever Had a Data Breach?
@@ -1091,7 +1048,6 @@ have already been addressed by our security and engineering teams. systems, and 
 ° Wade Hibbard 1 strengthens technology when it is handled transparently. Flock
 Oh really? Just two questions. :ngages with researchers in good faith to improve our systems over time.
 Are you still using Android 8 to run cameras?
--
 - . - ‘vulnerabilities, even when they are immaterial, we actively report them
 | Oo Cc k Products Solutions Privacy & Security Resources Company y yr
 sation plan’ said Langley.
@@ -1113,13 +1069,13 @@ an isolated configuration issue and not indicative of a broader or ongoing conce
 
 **Live Video Feeds Exposure**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Live Video Feeds Exposure Flock Exposed Its Al-
 Powered Cameras
 to the Internet. We .
-Tracked Ourselves is ora narcaaaa
 streaming and exposed to the open
 f ock safety
 @ season KOEBLER + DEC 22. 2628 AT 11:05 AM
@@ -1127,7 +1083,6 @@ internet.
 This Flock Camera Leak is like Netflix For Stalkers
 Benn Jordan @ and 404 Media
 1.3M views = 6 months ago
-ae
 ```
 
 ## Slide 25
@@ -1136,7 +1091,8 @@ ae
 
 ##### **PROPOSAL E.1 REVIEW DECK**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Turning 3-4 feeds into 67
@@ -1166,7 +1122,6 @@ writeup
 310-316
 writeup
 316-326
-check. sh
 8-12
 writeup
 326-328
@@ -1215,7 +1170,8 @@ lists
 
 **Exposed Feeds**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Exposed Feeds
@@ -1227,7 +1183,6 @@ Network
 IP [192.168.0.10(| Port [554 | User | admin
 | |
 Channels
-[+ Aad channel]
 Streams
 type | proxy port 9554 channel
 V Camera | 46e05334-15ce-| Serial |241219002100230
@@ -1237,42 +1192,17 @@ Network
 IP | 192.168.0.10(| Port | 554 User | admin —
 OE | Save |
 250121002101953
-“.,
-ae a mie ele
-FENG (oe ans mriy
-Panui Hm Meee a ee
-OLGSHSHES foe kame iar
-ager ens
-ST
 [Lo V Camera | f0bf45fa-86fd-4C| Serial {250625900FF
 Channels Type | condor
 | +Add channel | Network
 Streams IP | 192.168.0.10(
-| port/9554_ |OM8?4FBQ6rHHyBLRSRi= |
-type | proxy path |/
-Jone || x Cannel $a
 | + Add stream | | + Add channel |
-> Streams
 type [replay
-Jone || x]
 | +Add stream |
 DeviceType | access amera
 | Port |554 | User | admin
 | path | 250625900FF-replay | port|8554 | channel
-aa
-i |
-=
-were se
-compen TTRLIGRIRTE ENE be TAT B ro
-mmeee_ AREA IV be) a A ED WR Ae
-Se
-eS
-egeees (EEIDETYHT
-arene
-Ma a Mia art Poe A PANO
-gears | LIMBO: a
 99ab-| Serial |2408260021003AF
-per PLAN OT
 + Add channel |
 Streams
 type |replay : 21003AF-r| port | 85! channel
@@ -1283,7 +1213,8 @@ type |replay : 21003AF-r| port | 85! channel
 
 **Exposed Feeds: Impact And Evidence**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exposed Feeds: Impact And Evidence
@@ -1311,7 +1242,6 @@ Logs + Diagnostics (crashpack
 Diagnostics revealed package names, media pipeline
 state, modem/battery state, ADB debug state, and
 crashpack contents.
-(mai aan plaee)
 Device Types (not one class )
 Evidence crossed PTZ/Condor-style views,
 Falcon/Sparrow/Flex-style LPR feeds, and Picard/Bravo
@@ -1341,17 +1271,14 @@ artifacts.
 
 **Exposed Feeds: Why It Happened**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exposed Feeds: Why It Happened
 Failure pattern: local network reachability was treated like authorization.
-SCUMRIKHRKHBWHR
-l2
 L3
-L4
 Post /onvif/device_service HTTP/1.1
-eenes Feo dlalaleysil. alatital=yo/ ojo)
 User-Agent: curl/8.7.1
 Accept: */*
 Content-Type: application/soaptxml; charset=utf-8
@@ -1365,17 +1292,14 @@ http: //www.w3.org/2003/05/ soap-envelope">
 http://www. onvif. org/verl0/device/wsdl"/>
 </s:Body>
 </s:Envelope>
-OAIAKRKNRWNHK
 10
 11
 12
-115}
 14
 15
 16
 17
 18
-ils)
 20
 21
 HTTP/1.1 200 OK
@@ -1386,31 +1310,23 @@ Connection: close
 <?xml version="1.0" encoding="UTF-8"?>
 <s:Envelope xmlns:s="
 http: //www.w3.org/2003/05/soap-envelope”
-smlns:e="http: //www.w3. org/2003/05/soap-encoding"
-xmlns:wsa="http: //www.w3.org/2005/08/ addressing"
-xmlns:xs="http: //www.w3.org/2001/xMLSchema"
-xmlns:xsi="http: //www.w3.org/2001/XMLSchema-instance"
-xmlns:wsaw="http: //www.w3.org/2006/05/addressing/wsdl"
 xmlns:wsnt="http://docs. oasis-open. org/wsn/b-2"
 xmlins:wstop="http://docs. oasis-open. org/wsn/t-1"
-xmlns:wsntw="http://docs. oasis-open. org/wsn/bw-2"
 xmlns:wsrf-rw="http://docs. oasis-open. org/wsrf/rw-2"
 xmlns:wsrf-r="http://docs. oasis-open. org/wsrf/r-2"
-xmlns:wsrf-bf="http://docs. oasis- open. org/wsrf/b£-2"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl"
-xmlns:wsoanl2="httn: // schemas. xmlsoan. ora/wsdl/soanl2"
 ```
 
 ## Slide 29
 
 **Gated Wireless And Local Shell**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Gated Wireless And Local Shell
 Attack Chain Flow
-a 2)
 Trigger Local Join Device
 Network
 Device enters a mode
@@ -1451,7 +1367,6 @@ the device from “ADB
 closed" to a network-
 reachable ADB state.
 control transition
-Ls |
 Shell Access
 Once ADB is reachable
 over the local network,
@@ -1469,7 +1384,8 @@ enabling ADB-over-TCP.
 
 **ADB / JDWP / Privilege Chain: Compress It**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ADB / JOWP / Privilege Chain: Compress It
@@ -1477,18 +1393,14 @@ Attack Chain Flow
 ADB Shell
 After ADB-over-TCP is enabled, command
 execution starts in Android shell context.
-uid=2000(shell)
-i)
 System Execution
 Because the target app runs as a privileged
 system process, JDWP execution lands as
 Android system.
-Zz
 Shell Injection
 By default, command injection from this
 position is shell-level: useful control, but not
 root by itself.
-urr:shell:s®
 10
 Root Maintenance Path
 System context can set the cleanup property
@@ -1525,7 +1437,6 @@ maintenance path
 on the tested build
 Privilege Map
 Default ADB command execution
-shell a}
 Position.
 JDWP inside debuggable privileged
 system Flock app. 99 P 9
@@ -1571,33 +1482,15 @@ root outcome in testing.
 
 **Demo: Recorded RCE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 68/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo: Recorded RCE
 is dew wlae® scan | grep SSID SecterTL: Sat Sep 13 O25 23/28 2025
-Sector
-Verdi zen CT?
 SSID: Verizen_QoPern
-SSID: Fiew-Sktrs
-SSID: Verinen <i
-SSID) Verizes_<Paae
-SSID: SectorwS
 SSID: Sector!
-SSID) Sectort
-SSID; Verizen_ <P
 SSID: Sector!
-SSID: Seetert
-SSD) Sectorw
-SSID: Verizen_CT7RV
-SSID: Fles-Sktrs
-SSID) Verizen_Qorern
-SSID: Sector
-SSID: Verizon QoPern
-SSID: Fies-ShCrs
-SSID: Verizen_
-SSID: OIRECT~26- Officejet S010
-SSID: Veriren AMISE9
 ```
 
 ## Slide 34
@@ -1606,7 +1499,8 @@ SSID: Veriren AMISE9
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BirdShot: Why It Exists
@@ -1618,13 +1512,10 @@ PRE All Devices Establish SBOM and signed update pipeline (TUF/Uptane-style)
 FIELD Raven Enable Secure Boot; enforce anti-rollback
 a a | FIELD Raven Enable flash encryption
 1} 2. ZEN PTT AAEM LIE] FIELD Raven Disable/lock UART download and JTAG; remove console or gate with auth
-J lePIWeN TP TEIN, de TF deed Ieee FIELD Raven Remove hardcoded SSIDs; disable auto-connect
 \____/_/ \\-__I_|] \_]---_/]_---- \____| FIELD Raven Enforce TLS server verification / pinning
 IT'S BIRD HUNTING SEASON gala
 SEC
 Flock Safety Sniffer
-https: //gainsec.com
-@roa 2ReoOuwG Oa? C) 2 B+ Wed Nov 12 12:56AM
 Sending out the bird call and Sniffing...
 I (1344) pp: pp rom version: 5b8dcf
 I (1424) net80211: net80211 rom version: 5b8dcfa
@@ -1637,14 +1528,13 @@ Kis, |
 
 https://github.com/GainSec/BirdShot
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introducing BirdShot
 Bird Hunting Season
 Birdshot UI
-Pa) betebere
-galQ
 Se
 https://github.com/GainSec/BirdShot
 ```
@@ -1653,12 +1543,12 @@ https://github.com/GainSec/BirdShot
 
 **Demo: BirdShot CLI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo: BirdShot CLI
 === Command Output ==
-SSS SS SSS SSS
 Main Menu (Device: Picard)
 Shared Toolkit Workflow
 Falcon / Falcon LR Utilities
@@ -1679,28 +1569,24 @@ Connected adb devices:
 1. 241108P02100632 [device]
 2. 192.168.227.119:5555 [device]
 Select device by number: ff
-WaenauvrwnrP
 ```
 
 ## Slide 37
 
 **Landing**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Landing
 Picard Battery Internals Penguin Bluetooth Characteristics
-69400007-8643-F393-
-OAO-E50E2400CA90
-rr
 Device Information 7 characteristics
 The Device Information Service exposes manufacturer and/
 or vendor information about a device
 Model Number (« F-PP-0001
 Serial Number (« ™N72022122000290 Environmental sensing / secure DFU
 Firmware Revision (« 2.4.0
-Hardware Revision (« 0001 < fication tell ‘Wile cia
 Software Revision « 2.4.0 — tic dtu buttontocs exper
 Manufacturer Name (« Flock Safety as
 Position 3D (« 50
@@ -1713,11 +1599,10 @@ Internals Board connector Device information service Buttonless DFU without bond
 
 **Q&A**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-no =
-nN“
 11
 12
 13
@@ -1736,9 +1621,7 @@ Raven
 Raven
 Faicon/
 Sparrow / Flex
-Falcon /
 Sparrow / Flex
-Falcon /
 ‘Sparrow / Flex
 Issue
 Secure Boot is Disabled
@@ -1770,13 +1653,9 @@ Faicon/
 Sparrow / Flex
 Faicon/
 ‘Sparrow / Flex
-Faicon/
 ‘Sparrow / Flex
-Falcon /
 Sparrow / Flex
-Falcon /
 ‘Sparrow / Flex
-Falcon /
 ‘Sparrow / Flex
 Picard / Bravo
 Picard / Bravo
@@ -1830,9 +1709,7 @@ Multi-device
 Multi-device
 Media /
 recordings
-Media /
 recordings
-Multi-device
 PhoneHome /
 broadcast
 Android app
@@ -1841,9 +1718,7 @@ Media /
 recordings
 Android app
 suite
-Android
 system service
-Media /
 recordings
 Android app
 suite
@@ -1889,7 +1764,6 @@ recordings
 Media /
 recordings
 Android app
-Public /
 Installer app
 Public / app-
 48 side
@@ -1902,9 +1776,7 @@ side
 Public / app-
 FS Installer /
 Penguin
-‘SpeedPourer /
 FRP
-‘SpeedPourer /
 FRP
 ‘SpeedPourer /
 FRP

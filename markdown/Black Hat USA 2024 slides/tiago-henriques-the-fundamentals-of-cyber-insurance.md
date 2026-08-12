@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Tiago Henriques_The Fundamentals of Cyber-Insurance.pdf"
 pages: 31
 sha256: "6f9853ba6923a2204463cce45a724677d2949e5b9c4875e4e054fdad85e37df8"
-text_chars: 12958
+text_chars: 12760
 ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:39:11Z"
+converted_at: "2026-08-12T04:42:31Z"
 ---
 # The Fundamentals of Cyber-Insurance
 
 **Speakers:** Tiago Henriques  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Tiago Henriques_The Fundamentals of Cyber-Insurance.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -29,19 +35,16 @@ Tiago Henriques - VP of Research @ Coalition, Inc.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-, A
-ee
-blackhat — ;
 USA 2024
 Q
 AUGUST 7-8, 2024
 BRIEFINGS
 The Fundamentals of Cyber Insurance
 Tiago Henriques - VP of Research @ Coalition, Inc.
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -172,24 +175,24 @@ wasn't built for a digital world
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The insurance industry must shift too
 THE PAST THE FUTURE
 ngible Assets Intangible Assets
-a Defined
 Bk & Mortar
 Amorphous
 DISTRIBUTION Digital
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 10
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Insurance ecosystem of tomorrow will look very different
@@ -200,8 +203,6 @@ DOZENS —____+ ZILLIONS
 PHYSICAL FORMS Es DIGITAL
 LOW-TOUCH —_—__+ HIGH-TOUCH
 INSURANCE EVOLUTION
-SHIPS | STEAM BOILERS Liat
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 11
@@ -282,7 +283,8 @@ Quote  B
 A
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 COMPANY A
@@ -298,12 +300,10 @@ COMPANY B
 e INDUSTRIALS
 $100M
 1000
-]
 QUOTE
 EXPLOITED (
 VULNERABILITIES
 DECLINED )
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 15
@@ -495,20 +495,16 @@ We talk a lot about ransomware, but funds transfer fraud (FTF) is also incredibl
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We talk a lot about ransomware, but funds transfer fraud (FTF) is also incredibly painful.
 FTF Frequency @1H @2H FTF Initial Severity @ 1H @2H
 ( +15% YoY change )
 ( +24% YoY change
-wo
 N
-w
-&
 ©
-~
-ui
 ```
 
 ## Slide 30
@@ -517,16 +513,15 @@ And the modern cyber insurance providers have great track records in funds recov
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackh
 And the modern cyber insurance providers have great track records in funds recovery...
 Clawbacks in 2023
-o$o
 S38M
 FTF recoverv
-CUUVCLY
 ```
 
 ## Slide 31

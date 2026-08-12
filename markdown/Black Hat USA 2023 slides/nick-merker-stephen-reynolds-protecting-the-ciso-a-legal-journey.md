@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Nick Merker & Stephen Reynolds_Protecting the CISO A Legal Journey.pdf"
 pages: 33
 sha256: "328f98728a02c9652489e5abad04456d1e5d62107487aa124232647e6c8ba2c2"
-text_chars: 20936
+text_chars: 20001
 ocr_pages: 23
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 93.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:21:52Z"
+converted_at: "2026-08-12T04:17:40Z"
 ---
 # Protecting the CISO A Legal Journey
 
 **Speakers:** Nick Merker, Stephen Reynolds  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nick Merker & Stephen Reynolds_Protecting the CISO A Legal Journey.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -29,7 +35,8 @@ August 10, 2023
 
 **mwe.com**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 McDermott
@@ -70,7 +77,8 @@ Eli Lilly and Company Associate Vice President, Assistant General Counsel, Infor
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEGAL THREATS TO ClSOs
@@ -81,7 +89,6 @@ Northern District of California SUSAN Y. SOONG
 CLERK, U.S. DISTRICT COURT
 . NORTHERN DISTRICT OF CALIFORNIA
 United States of America SAN FRANCISCO
-Vv.
 JOSEPH SULLIVAN Case No. 3-20-71168 JCS
 Defendant(s)
 CRIMINAL COMPLAINT
@@ -89,7 +96,6 @@ I, the complainant in this case, state that the following is true to the best of
 On or about the date(s) of | Nov. 15, 2016 toNov. 21,2017 __ in the county of San Francisco and elsewhere jn the
 Northern District of California , the defendant(s) violated:
 4
-lassification: General
 ```
 
 ## Slide 5
@@ -100,11 +106,11 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEGAL THREATS TO ClSOs
-ie 8 REUTE RS° World v Businessv Markets’ Sustainabilityv Legalv Morev
 SolarWinds executives receive Wells
 notice from US SEC
 Reuters
@@ -119,7 +125,8 @@ June 26, 2023 3:53 AM CDT - Updated a month ago <
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEGAL T
@@ -140,7 +147,6 @@ about a massive cyber-intrusion and data breach suffered by us employer, Equifax
 Inc. (“Equifax” or “the company’), Ying exercised all his vested Equifax stock
 options and sold the shares prior to the public announcement of the breach. By
 selling when he did, Ying avoided losses in excess of $117,000.
-lassification: General
 ```
 
 ## Slide 7
@@ -159,7 +165,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UNITED STATES V. SULLIVAN — THE CHARGES
@@ -175,7 +182,6 @@ Count Two: Misprision of a Felony
 Max. Penalties: 3 years in prison; $250,000 fine; 1 year of supervised
 release; $100 special assessment; restitution; forfeiture
 8
-lassification: General
 ```
 
 ## Slide 9
@@ -186,12 +192,11 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OBSTRUCTION OF JUSTICE
-8)
-lassification: General
 OBSTRUCTION OF PROCEEDINGS BEFORE
 A DEPARTMENT OR AGENCY OF THE UNITED STATES
 (18 U.S.C. § 1505)
@@ -229,7 +234,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MISPRISION OF A FELONY — JURY INSTRUCTION
@@ -247,7 +253,6 @@ Third, the defendant had knowledge that the conduct was a federal felony;
 Fourth, the defendant failed to notify a federal authority as soon as possible; and
 Fifth, the defendant did an affirmative act to conceal the crime.
 11
-lassification: General
 ```
 
 ## Slide 12
@@ -258,10 +263,10 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 Craig Clark, then an attorney for Uber and another one of Sullivan’s reports, testified that
 after the response team learned that driver’s license numbers had been accessed, Sullivan asked
 him, “How can we fit this into bug bounty?”, which Clark understood to be a directive to find a
@@ -271,7 +276,6 @@ See id. at 498:8-13 (describing the nature of bug bounty programs); 732:9-733:13
 1319:18-1320:24 (Clark’s testimony). According to Clark, Sullivan later told him that “we’re
 going to treat it as a bug bounty.” Jd. at 1324:10-25.
 12
-lassification: General
 ```
 
 ## Slide 13
@@ -282,10 +286,10 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 One of the hackers testified that he negotiated with one of Uber’s employees for a payment
 of $100,000—more than Uber’s typical maximum bug bounty payout of $10,000—and in
 exchange, signed a non-disclosure agreement (“NDA”). See id. at 899:2-12; 965:13-19. The
@@ -296,7 +300,6 @@ destroyed all information about and/or analyses of the vulnerabilities.” See i
 disclose anything about the vulnerabilities or [their] dialogue with [Uber] to anyone for any
 purpose without [Uber’s] written permission.” /d. at 899:7-12. In exchange, the NDA promised
 13
-lassification: General
 ```
 
 ## Slide 14
@@ -305,10 +308,10 @@ lassification: General
 
 14 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 The jury was also presented with evidence, including the Preacher Central Tracker, that
 Sullivan and others at Uber believed that the circumstances of the 2016 data breach belied what he
 had previously told the FTC. See, e.g., Ex. 29 at 11 (“This may also play very badly based on
@@ -320,7 +323,6 @@ data breach a secret, including testimony from Sullivan’s direct report, John 
 Sullivan told him “This can’t get out” when discussing the incident. See Tr. at 603:7-605:10; see
 also id. at 635:17-636:15 (discussing Preacher Central Tracker comments from Sullivan that “we
 14
-lassification: General
 ```
 
 ## Slide 15
@@ -331,17 +333,16 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 The second key piece of evidence is the NDA. The jury saw exhibits showing various
 edits made to the NDA that were attributed to Sullivan. See, e.g., Exs. 100-115. It also heard
 testimony from Clark about the nature of those edits, including that specific language was “Joe’s
 idea,” and that when Clark noted the language was inaccurate, Sullivan told him “[t]hat 1t would
 stay.” See Tr. at 1344:16-1345:15.
 15
-lassification: General
 ```
 
 ## Slide 16
@@ -352,10 +353,10 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 The jury also heard evidence about steps that Sullivan took following the breach, which
 speak to the third and final element of the obstruction charge. Three pieces of evidence are key.
 First, the jury heard from Clark, who testified that after the response team learned that driver’s
@@ -363,7 +364,6 @@ license numbers had been accessed, Sullivan asked him, “How can we fit this in
 which Clark understood to be a directive to find a way to fit the breach within Uber’s bug bounty
 program. Jd. at 1319:18-1320:24. Clark then testified that he developed a “theory” to avoid
 16
-lassification: General
 ```
 
 ## Slide 17
@@ -374,10 +374,10 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UNITED STATES V. SULLIVAN — KEY TESTIMONY
 Finally, the jury heard evidence regarding the $100,000 payment made to the hackers,
 including testimony that at the time, Uber’s maximum bounty was $10,000. See id. at 965:13-19.
 Later, one of Uber’s then-attorneys testified that Sullivan had said that the $100,000 payment was
@@ -387,7 +387,6 @@ Sullivan makes much of the payment, arguing that there was insufficient evidence
 was responsible for it or that it was meant to impede the FTC investigation. See Mot. at 15:25-
 6:15. But, considered in the light most favorable to the prosecution and alongside the other
 17
-lassification: General
 ```
 
 ## Slide 18
@@ -398,12 +397,12 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UNITED STATES V. SULLIVAN — VERDICT
 18
-lassification: General
 We, the members of the Jury in this action, have reached the following unanimous verdict
 with respect to each Count of the Indictment:
 Count One: (Obstruction of Proceedings Before a Department or Agency of the United
@@ -423,7 +422,8 @@ Guilty_ v Not Guilty
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UNITED STATES V. SULLIVAN — REST OF STORY
@@ -441,7 +441,6 @@ of it and confidence that he can truly treat this as a +
 bounty situation... resources can be flexible in order to put
 this to bed but we need to document this very tightly
 19
-lassification: General
 ```
 
 ## Slide 20
@@ -466,11 +465,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SOLARWINDS CORPORATION SEC INVESTIGATION
-mo *
 § Did the stakes just get monumentally raised for CISOs?
 With the security industry focused on the fallout from MOVEit, Solarwinds (the OG
 of software supply chain risk) quietly dropped a bombshell of an 8K on Friday. @
@@ -484,7 +483,6 @@ And the implications are immense: Wells Notices are no joke. They create massive
 career hardships — especially if one plans to work for a publicly traded company.
 A
 21
-lassification: General
 ```
 
 ## Slide 22
@@ -495,7 +493,8 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SEC V. YING (EQUIFAX)
@@ -513,7 +512,6 @@ Plainifi, Securit options and sold the shares pnor to the public ammouncement of
 complaint and alleges thi
 selling when he did, Ying avoided losses in excess of $117,000.
 22
-lassification: General
 ```
 
 ## Slide 23
@@ -524,7 +522,8 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EQUIFAX
@@ -538,7 +537,6 @@ Majority Staff Report
 115th Congress
 December 7018
 23
-lassification: General
 ```
 
 ## Slide 24
@@ -549,7 +547,8 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EQUIFAX
@@ -562,7 +561,6 @@ employees who advised him he w;
 When he pressed for more inform:
 provide any documentation for the
 Figure 9: Former CEO Richard Smith Testifies before Congress (Oct. 3, 2017)
-lassification: General
 ```
 
 ## Slide 25
@@ -573,7 +571,8 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EQUIFAX — THE REST OF THE STORY...
@@ -586,10 +585,8 @@ information than anything.
 Q. It wasn’t necessary for action on your part?
 A. No, because I didn’t have a responsibility under the [Patch
 Management] policy to — I wasn’t a system owner or an application
-owner.*?”
 Payne was never directed by anyone to forward such emails.**°
 25
-lassification: General
 ```
 
 ## Slide 26
@@ -600,7 +597,8 @@ lassification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MISSTATEMENTS / FRAUD
@@ -617,11 +615,9 @@ ECLG caused
 Plaintiffs the true nature and severity of the situation surrounding the protection of their data.
 attack 1
 dex: This same analysis applies to Plaintiffs’ additional allegations that Defendant used terms such
-renaery
 [can] tl] 48 “performance issues,” (ECF No. 14 § 61), “coding issues,” (2d. § 66), and “intermittent
 system issues,” (¢d. J 83), during subsequent ransomware attacks.
 26
-lassification: General
 ```
 
 ## Slide 27
@@ -648,7 +644,8 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DIRECTORS AND OFFICER INSURANCE
@@ -666,8 +663,6 @@ Optional Reporting Period, if applicable, for a Wrongful Act.
 J. “Executive Officer” means the chief executive officer, chief operating officer,
 president, Manager, chief financial officer, in-house general counsel, risk manager,
 or an individual acting in a similar capacity with the Insured Organization.
-2S)
-lassification: General
 ```
 
 ## Slide 30
@@ -676,7 +671,8 @@ lassification: General
 
 30 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DIRECTORS AND OFFICER INSURANCE
@@ -692,7 +688,6 @@ which they were not legally entitled;
 as determined by a final non-appealable adjudication, except that this exclusion
 shall not apply to Defense Costs incurred up until such determination is made;
 30
-lassification: General
 ```
 
 ## Slide 31

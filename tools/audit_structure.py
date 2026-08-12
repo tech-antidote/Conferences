@@ -37,7 +37,13 @@ except ImportError:  # pragma: no cover - environment guard
     raise SystemExit(2)
 
 # Generated navigation, not talk content.
-NON_TALK_FILES = {"README.md", "INDEX.md"}
+NON_TALK_FILES = {"README.md", "INDEX.md", "VERIFICATION.md", "VISION_VERIFIED.md"}
+
+# The corpus is no longer only slide decks. Transcripts and workshop material
+# are converted by different tools into their own manifests, and auditing
+# against manifest.jsonl alone reported all 123 of them as orphans on disk --
+# 245 problems that were entirely the audit's own blind spot.
+COMPANION_MANIFESTS = ("transcripts.jsonl", "workshops.jsonl")
 
 # key -> (accepted types, human name). bool is excluded from the int types
 # explicitly below, since in Python `True` is an int.
@@ -53,6 +59,20 @@ REQUIRED_FIELDS = {
     "text_chars": "int",
     "ocr_pages": "int",
     "has_ocr": "bool",
+}
+
+# A transcript has no pages and a workshop has no source PDF, so demanding the
+# slide-deck keys of them reports a document as broken for not being a slide
+# deck. Each source type is held to the keys that mean something for it.
+REQUIRED_BY_TYPE = {
+    "transcript": {"title": "str", "speakers": "list", "conference": "str",
+                   "conference_full": "str", "year": "int", "sha256": "str",
+                   "text_chars": "int", "words": "int",
+                   "duration_seconds": "int"},
+    "workshop-materials": {"title": "str", "speakers": "list",
+                           "conference": "str", "conference_full": "str",
+                           "sha256": "str", "text_chars": "int",
+                           "files_included": "int"},
 }
 
 SLIDE_RE = re.compile(r"^##\s+Slide\s+(\d+)\s*$")
@@ -179,11 +199,15 @@ def rel_md_paths(out_root: str) -> list[str]:
 # --------------------------------------------------------------------------
 class Audit:
     def __init__(self, out_root: str, src_root: str, manifest_path: str,
-                 expect_absent: str):
+                 expect_absent):
         self.out_root = out_root
         self.src_root = src_root
         self.manifest_path = manifest_path
-        self.expect_absent = expect_absent
+        # One prefix was enough when only DEF CON 34 came from a release;
+        # DEF CON 33's talks and workshops arrive the same way.
+        if isinstance(expect_absent, str):
+            expect_absent = [expect_absent]
+        self.expect_absent = tuple(p for p in (expect_absent or []) if p)
         # category -> list of "path: detail" strings
         self.problems: dict[str, list[str]] = defaultdict(list)
         self.stats: dict[str, int] = {}
@@ -209,6 +233,11 @@ class Audit:
                    else "; re-run with --partial to include them"))
             if use_partial:
                 sources.append(partial)
+
+        for companion in COMPANION_MANIFESTS:
+            path = os.path.join(os.path.dirname(self.manifest_path), companion)
+            if os.path.exists(path):
+                sources.append(path)
 
         if not os.path.exists(self.manifest_path):
             self.fail("manifest-unreadable",
@@ -332,21 +361,22 @@ class Audit:
         return fm_by_path
 
     def _check_schema(self, rel, meta, counts):
-        missing = [k for k in REQUIRED_FIELDS if k not in meta]
+        required = REQUIRED_BY_TYPE.get(meta.get("source_type"), REQUIRED_FIELDS)
+        missing = [k for k in required if k not in meta]
         if missing:
             counts["missing_keys"] += 1
             self.fail("frontmatter-missing-keys",
                       f"{rel}: missing {', '.join(missing)}")
 
-        nulls = [k for k in REQUIRED_FIELDS if k in meta and meta[k] is None]
+        nulls = [k for k in required if k in meta and meta[k] is None]
         if nulls:
             counts["null_values"] += 1
             self.fail("frontmatter-null-value",
                       f"{rel}: required key(s) present but null: "
-                      + ", ".join(f"{k} (want {REQUIRED_FIELDS[k]})" for k in nulls))
+                      + ", ".join(f"{k} (want {required[k]})" for k in nulls))
 
         wrong = []
-        for key, want in REQUIRED_FIELDS.items():
+        for key, want in required.items():
             if key not in meta or meta[key] is None:
                 continue
             value = meta[key]
@@ -469,6 +499,10 @@ class Audit:
     def check_sources(self, ok_records):
         present = absent_expected = absent_unexpected = 0
         for rec in ok_records:
+            # A transcript's source is an audio recording and a workshop's is a
+            # directory of code; neither has a PDF to resolve.
+            if rec.get("source_type") in REQUIRED_BY_TYPE:
+                continue
             src = rec.get("source_pdf")
             if not isinstance(src, str) or not src:
                 self.fail("manifest-no-source-pdf",
@@ -476,7 +510,7 @@ class Audit:
                 continue
             if os.path.exists(os.path.join(self.src_root, src)):
                 present += 1
-            elif self.expect_absent and src.startswith(self.expect_absent):
+            elif src.startswith(self.expect_absent):
                 absent_expected += 1
                 self.notes["expected-absent-source"].append(src)
             else:
@@ -535,9 +569,11 @@ def main(argv=None) -> int:
                          "(default: parent of --out)")
     ap.add_argument("--manifest", default=None,
                     help="manifest path (default: <out>/manifest.jsonl)")
-    ap.add_argument("--expect-absent", default="DEF CON 34/",
+    ap.add_argument("--expect-absent", action="append", default=None,
                     help="source_pdf prefix whose files are legitimately not in "
-                         "the repo (default: 'DEF CON 34/'); pass '' to disable")
+                         "the repo; repeatable. Defaults to the DEF CON drops, "
+                         "which are distributed as release assets rather than "
+                         "committed. Pass '' to disable.")
     ap.add_argument("--partial", action="store_true",
                     help="also read <manifest>.partial, the stream a conversion "
                          "writes while it is still running")
@@ -554,7 +590,9 @@ def main(argv=None) -> int:
     src_root = os.path.abspath(args.src) if args.src else os.path.dirname(out_root)
     manifest = args.manifest or os.path.join(out_root, "manifest.jsonl")
 
-    audit = Audit(out_root, src_root, manifest, args.expect_absent)
+    expect_absent = (args.expect_absent if args.expect_absent is not None
+                     else ["DEF CON 34/", "DEF CON 33/", "DEF CON 33 workshops/"])
+    audit = Audit(out_root, src_root, manifest, expect_absent)
     problems = audit.run(use_partial=args.partial)
 
     print("=" * 74)
@@ -591,7 +629,7 @@ def main(argv=None) -> int:
         if audit.notes.get("expected-absent-source"):
             n = len(audit.notes["expected-absent-source"])
             print(f"  expected-absent sources (not an error): {n} under "
-                  f"{args.expect_absent!r}")
+                  f"{list(audit.expect_absent)!r}")
         for line in audit.notes.get("conversion-in-flight", ()):
             print(f"  {line}")
 

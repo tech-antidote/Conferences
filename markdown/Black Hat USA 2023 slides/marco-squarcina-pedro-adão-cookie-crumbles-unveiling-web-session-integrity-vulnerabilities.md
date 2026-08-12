@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Marco Squarcina & Pedro Adão_Cookie Crumbles Unveiling Web Session Integrity Vulnerabilities.pdf"
 pages: 59
 sha256: "6f90c6d1d48622fa673fdab03d8a648e5762ff29c037df661e58c1fe8aa4d34a"
-text_chars: 30958
+text_chars: 30907
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:19:06Z"
+converted_at: "2026-08-12T04:13:30Z"
 ---
 # Cookie Crumbles Unveiling Web Session Integrity Vulnerabilities
 
 **Speakers:** Marco Squarcina, Pedro Adão  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Marco Squarcina & Pedro Adão_Cookie Crumbles Unveiling Web Session Integrity Vulnerabilities.pdf` (59 pages)
+
 
 ## Slide 1
 
@@ -105,10 +111,10 @@ Joint work with **Lorenzo Veronese** and **Matteo Maffei**
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Serenis
 THE DEPUTIES ARE STILL CONFUSED
 RICH LUNDEEN
 M. Squarcina, P. Addo // Cookie Crumbles: Unveiling Web Session Integrity Vulnerabilities #BHUSA @BlackHatEvents
@@ -125,7 +131,8 @@ M. Squarcina, P. Addo // Cookie Crumbles: Unveiling Web Session Integrity Vulner
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RICH LUNDE
@@ -138,8 +145,6 @@ Department of Computer Science and Technology, Tsinghua University
 3Tsinghua National Laboratory for Information Science and Technology
 ‘International Computer Science Institute
 yusenix
-ee
-‘e
 Abstract
 A cookie can contain a “secure” flag, indicating that it
 should be only sent over an HTTPS connection. Yet there
@@ -157,7 +162,6 @@ Bank of America), and can be made worse by the im-
 plementation weaknesses we discovered in major web
 browsers (such as Chrome, Firefox, and Safari). Our
 have included privacy violation, on-
-a i:
 >Microsoft Research Redmond
 °Huawei Canada
 7UC Berkeley
@@ -193,7 +197,8 @@ M. Squarcina, P. Addo // Cookie Crumbles: Unveiling Web Session Integrity Vulner
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi ck Cookies Lack ]
@@ -220,7 +225,6 @@ Bank of America), and can be made wors|
 plementation weaknesses we discovered it
 browsers (such as Chrome, Firefox, and
 ssful attacks have included privacy
-: a
 @filedescriptor
 HITCON 2019
 su

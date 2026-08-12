@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Daniel dos Santos & Simon Guiot & Stanislav Dashevskyi & Amine Amri & Oussama Kerro_Route to Bugs Analyzing the Security of BGP Message Parsing.pdf"
 pages: 33
 sha256: "963e2f56e5f44d760aff1bccb53ba043c280b91f03230c8330537993f830b492"
-text_chars: 17684
-ocr_pages: 3
+text_chars: 17409
+ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:27Z"
+converted_at: "2026-08-12T04:08:15Z"
 ---
 # Route to Bugs Analyzing the Security of BGP Message Parsing
 
 **Speakers:** Daniel dos Santos, Simon Guiot, Stanislav Dashevskyi, Amine Amri, Oussama Kerro  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel dos Santos & Simon Guiot & Stanislav Dashevskyi & Amine Amri & Oussama Kerro_Route to Bugs Analyzing the Security of BGP Message Parsing.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -106,14 +112,6 @@ Released a fuzzer and testing tool to help organizations test their deployments 
 # **BGP**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 6
 
@@ -525,12 +523,10 @@ _Thanks to Joshua Pereyda and the BooFuzz contributors._
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-f
-pifekhat te <
-USA 20253
 Activities ) OBS Studio v jun 30 14:06
 BGP Fuzzer (latest) [Running] - Oracle VM VirtualBox BGP Target (latest) [Running] - Oracle VM VirtualBox
 lle Machine View Input Devices Help
@@ -538,20 +534,14 @@ File Machine View Input Devices Help
 Activities © Terminal jun 30 14:06
 Activities ©) Terminal jun 30 14:06
 standash@standash-ubuntu: ~/fuzzer Q standash@standash-ubuntu: ~/fuzzer/bgp_boofuzzer
-ras maw E $
 OBS 25.0.3+dfsg1-2 (linux) - Profile: Untitled - Scenes: Untitled x
 Scene Collection Tools Help
-(ous 2:.3.dfgt-2 linus) - raf Untied - Sees: Uniled
 Scenes Sources Audio Mixer Scene Transitions Controls
 [I Screen Capture (XSHN Desktop Audio -inf dB Fade Start Streaming
-stp ae Start Recording
-Duration 300 ms & Studio Mode
 Mic/Aux -inf dB
-E : Settings
 = - @) Exit
 LIVE: 00:00:00 REC: 00:00:00 CPU: 2.0%, 60.00 Fps
 @ G1 @@ right ctrl
-@ GUGM right ctr
 ```
 
 ## Slide 24
@@ -630,15 +620,6 @@ Read out of bounds here
 # **Conclusion**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-Conclusion
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 29
 

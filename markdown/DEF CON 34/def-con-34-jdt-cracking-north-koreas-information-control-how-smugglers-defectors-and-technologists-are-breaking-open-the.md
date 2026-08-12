@@ -1,36 +1,33 @@
 ---
-title: "Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock (3)"
+title: "Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock"
 speakers: ["JDT"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
-source_pdf: "DEF CON 34/DEF CON 34 - JDT - Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock (3).pdf"
+year: 2026
+source_pdf: "DEF CON 34/DEF CON 34 - JDT - Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock.pdf"
 pages: 43
-sha256: "ca4cb0c6d8a11381fc0112f4f3f776e8875b4ae55586bff68663da46f85c4a30"
-text_chars: 9687
-ocr_pages: 13
+sha256: "6c9fa352864a683e1eb2ba7a4cfd04aefbacf246a2783e2b3a9d26dd5dcf5e26"
+text_chars: 7792
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:22:42Z"
+converted_at: "2026-08-12T06:35:46Z"
 ---
-# Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock (3)
+# Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock
 
 **Speakers:** JDT  
 **Conference:** DEF CON 34  
-**Source:** `DEF CON 34/DEF CON 34 - JDT - Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock (3).pdf` (43 pages)
+**Source:** `DEF CON 34/DEF CON 34 - JDT - Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Lock.pdf` (43 pages)
+
 
 ## Slide 1
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-LIBER TY
-in « DEFCQN
-KOREA
-```
 
 ## Slide 2
 
@@ -44,7 +41,8 @@ KOREA
 
 **Jon Thompson** Chief Technology Officer Liberty in North Korea
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REDACTED
@@ -81,30 +79,16 @@ Sharing unauthorized information or media can result in torture or death.
 
 Publicly routable IP addresses for the entire nation. 175.45.176.0/22 - less than a single mid-size company.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-IBERTY
-IN
-|ORTH
-OREA
-1,024
-Publicly routable IP addresses for the entire nation.
-175.45.176.0/22 - less than a single aideiee company. |
-SSF
-```
-
 ## Slide 10
 
 providers connect North Korea to the **2** outside internet.
 
 China Unicom + Russia’s TransTeleCom - Dual-homed since 2017
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IBERTY
-ORTH
 COREA
 providers connect North Korea to the
 outside internet.
@@ -128,13 +112,11 @@ Apps install only at state-run “IT Exchange Centers”
 
 Photos of a Pyongyang 2423 with its base model, the Blu Vivo XL3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IBERTY
 IN
-ORTH
-OREA
 The hardware
 Photos of a Pyongyang 2423 with its base model,
 the Blu Vivo XL3
@@ -145,16 +127,6 @@ the Blu Vivo XL3
 ### **The hardware**
 
 Photos of a Pyongyang 2421
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-The hardware
-go
-O°
-ay j
-Photos of a Pyongyang 2421
-```
 
 ## Slide 15
 
@@ -192,21 +164,16 @@ Unsigned files are auto-deleted on transfer - enforced at the OS level If the st
 
 **RedFlag: analyzing the signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 RedFlag: analyzing the signature
 0050ec40:
 0050ec50:
-0050ec60:
 0050ec70:
-0050ec80:
 0050ec90:
-0050eca0:
 0050ecb0:
-0050ecc0:
-0050ecd0:
-0050ece0:
 0050ecf0:
 0050ed00:
 0050ed10:
@@ -218,85 +185,60 @@ RedFlag: analyzing the signature
 0050ed70:
 0050ed80:
 0050ed90:
-00S0eda0:
 0050edb0:
 0050edc0:
 0050edd0:
 0050ede0:
-0050ed£0:
 6470
-6e6E
-0200
 afS8
 0000
-2f£6d
 6c61
 0000
 80ee
-5706
 9521
 80ee
 e4d4
-Tice
 7037
 ed81
 e359
 7155
 b8el
 de92
-755
 ad2e
 9764
 115b
 3e6c
-le3f£
 4b7c
-le2ce
-692E
 726d
-0200
 0000
 0000
-6d6é9
 7368
 cb01
-alaé
 3al9
-3ea0
 alaé
-4dtf7
 946d
 cae4
-8aft7
 5400
 feea
-5ite
 195b
-af1ié
 180a
 9631
 £9a4
 1£97
 b46c
 6564
-daf10
 646b
-61l6c
 0000
-afS8
 0000
 6170
 5£68
 cb01
 eba4
-3bt4
 73a8
-724¢c
 b332
 ccef
 2df1
 £050
-ec0c
 2935
 bdfe
 cSab
@@ -306,7 +248,6 @@ cSab
 0474
 9fe7
 052c
-ibbe
 4001
 S£62
 2e39
@@ -319,18 +260,13 @@ b8fc
 ed20
 78dS
 fbba
-57d5
 800b
-54865
 5173
-bd89
-bf£53
 8358
 5377
 59b0
 03960
 £89a
-3edS
 84b4
 726c
 bdb2
@@ -344,24 +280,15 @@ ed70
 706c
 7067
 0000
-lbed
 8£38
-89£7
 9618
 8c68
 deb2
-70dS
-T3bft
 9440
 876d
-OSla
 8273
 Saal
-694f
-Sdb8
 6084
-368f
-bdi8
 9458
 4e41
 S£62
@@ -371,54 +298,36 @@ S£62
 6173
 6173
 504b
-asss
-70ee
 0783
-al92
 65£5
 Tibe
 15e6
-daSf£
 de22
-c997
-a2fc
 dbd7
 acb6
-25aa
-Sb83
 Gaba
-95be
 1c78
 7063
 86e8
 5449
-6l6e
 504b
 5£98
 0000
-7368S
 682£
 0506
 5000
 684b
 £808
-ebcl
-073£
 52b4
 2e2a
 2e4f
 3031
 b442
 fa8b
-e91c
 6ad4
-£0c£
 2164
 e27da
-£3ef
-63d£
 ceal
-déb0
 5349
 6bS£
 0102
@@ -428,12 +337,10 @@ déb0
 7370
 0000
 0000
-3ac5S
 1e92
 adf3
 21cd
 9760
-3ada
 ef05
 8105
 bb52
@@ -444,52 +351,23 @@ a533
 9e25
 e4bf
 7190
-al0c
 5835
 9724
-474e
 dpi/dk_btn_bank_
-normal. 9.pngPK. .
 --O.assets
-/mmiap/splash/sp
-lash_h.jpgPK....
-Tena ee re ae
-- ..p-hK:.
-qU..)5.X-m.
-ove,sahv ce iS
-vie
-ae
-led.
-Pen |
 002c9ad0: c55d
-Theft
 c55d
 Thét
-c55d
-Thét
-eSSd
-Thét
-cS5d
-Thét
-cS5d
-Th6t
-c55d
-Thét
-c55d
-Thét
-c55d
-Thét
-c55d
-Th6t
 002c9c10: c55d
-002c9c2! Th6ft
-002c9c3! ¢S5d
-002c9c4! Teét
-002c9c5: cS5d
-002c9c6' Thét
 002c9c7! 9503
 002c9c80: d4fd
-002c9c9' 474e
+63ca
+41ff
+63ca
+41ff
+63ca
+63ca
+63ca
 63ca
 41ff
 63ca
@@ -497,57 +375,41 @@ Th6t
 63ca
 41ff
 63ca
-41ff
-63ca
-41fft
 63ca
 41ff
 63ca
-41ff
 63ca
-41ff
-63ca
-41fft
-63ca
-41ff
-63ca
-4iff
-63ca
-4i1ff
 63ca
 3309
 6ddf
 1803
 c92a
-S6fc
+c92a
+c92a
+c92a
 c92a
 56fc
-c92a
-S6fc
-c92a
 56fc
-c92a
-S6fc
-c92a
-56fc
-c92a
-56fc
-cS2a
 56fc
 c92a
 56fc
 c92a
 56fc
 c92a
-56fc
 c92a
-56fc
 c92a
 a37e
 5572
 0000
 d4e5
+d4e5
 b0d2
+d4e5
+d4e5
+b0d2
+d4e5
+b0d2
+d4e5
 d4e5
 b0d2
 d4e5
@@ -558,17 +420,6 @@ d4e5
 b0d2
 d4e5
 b0d2
-d4e5
-b0d2
-d4e5
-b0d2
-d4e5
-b0d2
-d4e5
-b0d2
-d4e5
-b0d2
-d4e5
 b0d2
 d4e5
 5374
@@ -585,7 +436,6 @@ a09a
 785b
 a09a
 785b
-a09a
 785b
 a09a
 785b
@@ -600,7 +450,6 @@ a09a
 a09a
 785b
 038c
-Sf£f£0
 0000
 £537
 8946
@@ -627,79 +476,47 @@ Sf£f£0
 £537
 8946
 £537
-cd2c
 126£
 $345
 al8c
-525
 al8c
-525c¢
-alBc
-525c¢
 al8c
-525c¢
 al8c
-525c
-alBc
-S525c
 al8c
-$25c
 al8c
-S25c¢
 al8c
-S25c¢
-al8c
-S25c¢
-al6c
-S25c¢
-al8c
-S25c
 al8c
 8d9a
-esft4
 4c46
 9bf4
 4ed7
-9bf4
+4ed7
 4ed7
 9bf4
 4ed7
-9bf4
+Sbf4
+4ed7
+4ed7
 4ed7
 Sbf4
 4ed7
-Sbf4
 4ed7
-Sbf4
-4ed7
-Sbf4
-4ed7
-Sbf4
-4ed7
-9bf4
 4ed7
 Sbf4
 4ea7
 Sbf4
 4ed7
-Sbf4
 9b81
 4fa2
 5349
-i ae
----FR\N.
-BPRes ve
---+FR\N.
-FES
----FR\N.
-—_
 ```
 
 ## Slide 20
 
 #### **SELFSIGN: 792-byte cryptographic media signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SELFSIGN:
@@ -715,11 +532,10 @@ RSA-2048 sig padding
 
 **NATISIGN: 320-byte cryptographic APK signature**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-z5
-8678
 320-byte cryptographic APK signature
 checksum
 length
@@ -745,21 +561,6 @@ extended
 
 traceviewer_demo.mp4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-[= rmstowe risa oon tener cemnetn =X F
-wets =
-Qe
-a
-J
-.
-4
->< a6
-Galley Camera
-traceviewer demo.mp4
-```
-
 ## Slide 23
 
 DESKTOP
@@ -770,14 +571,12 @@ DESKTOP
 
 **Exfil’d Data.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IBERTY
-ORTH
 COREA
 Data.
-BuildNumber:
 Caption: Micro 7 Professional
 Operating system
 Architecture: 32-bit
@@ -802,7 +601,6 @@ Keyboard / IME
 Layout Handle (HKL):
 IME Description: 3
 IME File: UniKorHn.ime
-(0.2000
 Integrity Level: High (0x3000)
 Collected at: 2026-04-28T07:
 Internal Use Only
@@ -818,21 +616,16 @@ Internal Use Only
 
 **Get OS version and modify the registry**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-IBERTY
-ORTH
-COREA
 Get OS version and modify the registry
 110
-aa
 112
 113
 114
 115
-116
-i &)
 118
 119
 120
@@ -844,23 +637,13 @@ i &)
 126
 127
 128
-pl ks,
 130
-131\}
-HE Ul
 }
-FuN_10008010(
 FUN_10008290 (r
-plVar7 T 1014afcs;
 uVaré = uVarlo;
-uVar9 = uVarl0;
 do {
 if ({*(uint *) ({Longlong) DAT ldafcO + uVar9) & osMask) == osMask) { ——————— OS
-DAT_10086e28 = (HKEY)*plVar7: i
 Varé = {longlong) (int)uVa
-WriteRecord (s SYSTE tC et ntrol 101l4aftd0 + lVar6é, «DAT 1014b0d0 + lVaré, <= Panel
-(LPCWSTR) (&DAT_1014b1 + lVar6é),*{uint *) (({longlong) DAT _1014b154 + uVar3), :
-*(DWORD *) ( (longlong) sDAT _1014b150 + uVar9));
 uVarl0 = uVarl0 + 1;
 uVars = (ulonglong) {(int)uVa
 uVar9 = uVarld * 0
@@ -875,16 +658,13 @@ return 0;
 
 #### **The hidden feature that no one asked for…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-IBERTY
 IN
-ORTH
-OREA
 Hana IME:
 The hidden feature that no one asked for...
-avivvaeve vu wii
 oO 10155£40 Of ff 00 RegRecord
 10155f40 Of ff 00 00 hana_dwordFFo Fh marker _ 10
 10155f44 00 00 ff ff hana_dwordFFFFOO00h marker hi
@@ -951,7 +731,7 @@ But a small community of defectors, activists, and technologists persists.
 
 **What we’ve built so far…**
 
-**4**
+**5**
 
 Software projects in active development
 

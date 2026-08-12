@@ -12,7 +12,7 @@ duration_seconds: 2368
 words: 7063
 text_chars: 38267
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Fireside Chat with DT and General Paul M. Nakasone

@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Donika Mirdita & Jens Frieß & Haya Schulmann & Michael Waidner_The ByzRP Solution A Global Operational Shield for RPKI Validators.pdf"
 pages: 68
 sha256: "bf1762745d0a94f432ab2a4e98050c45116e41a8fb609d2131dba3dfabf823d5"
-text_chars: 12179
-ocr_pages: 30
+text_chars: 10349
+ocr_pages: 21
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:04:43Z"
+converted_at: "2026-08-12T03:53:30Z"
 ---
 # The ByzRP Solution A Global Operational Shield for RPKI Validators
 
 **Speakers:** Donika Mirdita, Jens Frieß, Haya Schulmann, Michael Waidner  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Donika Mirdita & Jens Frieß & Haya Schulmann & Michael Waidner_The ByzRP Solution A Global Operational Shield for RPKI Validators.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -62,23 +68,20 @@ Long History of BGP Routing Hijacks...
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 &
-pifeachat Ay
-ASIA 2025
 OUTAGE ANALYSES
 Twitter Outage Analysis: March
 28, 2022
 | April 15, 2022 | 14 min read
-666 6@
 ROUTING SECURITY INCIDENTS
 For 12 Hours, Was Part of Apple
 Engineering’s Network Hijacked
 by Russia’s Rostelecom?
 By Aftab Siddiqui * 27 Jul 2022
-y/
 Long History of BGP Routing Hijacks...
 Russian telco hijacks internet traffic for
 Google, AWS, Cloudflare, and others
@@ -88,7 +91,6 @@ Written by Catalin Cimpanu, Contributor
 April 5, 2020 at 2:53 p.m. PT
 Cloudflare blames recent outage on BGP hijacking incident
 By Bill Toulas
-_
 CLOUDFLARE
 to
 ```
@@ -98,16 +100,6 @@ to
 BGP Route Announcement
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2025
-1.2.3.0/24: AS1 AS1
-QS S
-```
 
 ## Slide 7
 
@@ -139,28 +131,11 @@ BGP Prefix Hijack
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-mee Sh 5 __ RPKlxGF¥ptographi@Objects in Publica
-wyfon Points
-Publication Point Repository Tree
-```
-
 ## Slide 12
 
 **RPKI: Objects Collected by** **_Relying Party_**
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat ' =——w RPK Obieets Collected by Rel jing g Party.
-WZ
-Publication Point Repository Tree
-```
 
 ## Slide 13
 
@@ -168,21 +143,14 @@ Publication Point Repository Tree
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-miaaercsh = ' == f RPKI: Validated Objects Sent/
-iy"
-Publication Point Repository Tree
-```
-
 ## Slide 14
 
 **RPKI:** **_Validated ROA Payloads (VRPs)_**
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat ee. RPKI: Validated ROA Paylogds (VRPs)
@@ -195,14 +163,13 @@ Publication Point Repository Tree
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat Ay
-ASIA 2025
 1.2.3.0/24:
 1.2.3.0/24: AS2, AS1
-SS
 Publication Point Repository Tree
 ```
 
@@ -212,13 +179,10 @@ Publication Point Repository Tree
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
-@ BleepingComputer
 Comcast now blocks BGP hijacking attacks and route leaks fey
 with RPKI|
 Comcast, one of America’s largest broadband providers, has now deployed RPKI on its
@@ -236,7 +200,6 @@ By Mike Hollyman + 7 Jun 2023
 FCC pushes ISPs to fix security flaws in —
 Internet routing
 Chair: Addressing BGP flaws will "help make our Internet routing more secure."
-@ BleepingComputer
 All Dutch govt networks to use RPK] to prevent BGP
 hijacking
 JON BRODKIN - 6/6/2024, 11:40 PM
@@ -251,17 +214,14 @@ standard on all its systems before the end of 2024 to upgrade...
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-ASIA 2025
 blackhat - RPKithe most promising BGP security add-on
-The Register’
 a Capacity
 Telia Cal
 riecer'er FCC takes some action against notorious BGP
-infrastructur:
 ‘72291 How's your RPKI-based security plan coming along? Feds want to know
 How A @ Jessica Lyons Fri 7 Jun 2024 | 22:29 UTC "
 by Fredrik Korsback | on 13 JAN 2021 | in Announcements, Best Practices, Networking & Content Delivery,
@@ -269,7 +229,6 @@ By Mike Hollyman + 7 Jun 2023
 FCC pushes ISPs to fix security flaws in —
 Internet routing
 Chair: Addressing BGP flaws will "help make our Internet routing more secure."
-@ BleepingComputer
 All Dutch govt networks to use RPK] to prevent BGP
 hijacking
 JON BRODKIN - 6/6/2024, 11:40 PM
@@ -284,17 +243,13 @@ standard on all its systems before the end of 2024 to upgrade...
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
-The Register’
 a Capacity
 Telia Cal
 riecer'er FCC takes some action against notorious BGP
-infrastructur:
 ‘72291 How's your RPKI-based security plan coming along? Feds want to know
 How A @ Jessica Lyons Fri 7 Jun 2024 | 22:29 UTC
 by Fredrik Korsback | on 13 JAN 2021 | in Announcements, Best Practices, Networking & Content Delivery,
@@ -383,19 +338,6 @@ DoS Attacks
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2025
-500000 -
-repo starts
-crashing RPs
-Me local MMM consensus
-0+, union :
-19° WoT Ww 290: 70"
-```
-
 ## Slide 30
 
 Instability Network & Operational Errors
@@ -440,19 +382,15 @@ transient failures
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-J
 ant Output
 500000 +
 N SZ
 repository jitter
 local MEM consensus
-QW .9.9F,.98_.99,.99 .9S_.9B.98
-SOY" Qd"YF "QO" OF POS"
 537000 -
 536000 -
 =
@@ -460,7 +398,6 @@ transient failures ——”
 consensus
 RP
 T
-98.99.09 .9O..99.9F..99 99.98
 ```
 
 ## Slide 37
@@ -469,20 +406,17 @@ T
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat
-ASIA 2025
 400000 +
 Mae local
 200000 - union
-. MM consensus
 3 nodes
 400000 +
 Ma local
-' MM consensus
 S? ,.© 1.9079 {49 149 1.49 1.49
 13 nodes
 ```
@@ -493,12 +427,10 @@ S? ,.© 1.9079 {49 149 1.49 1.49
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 should everyone run a ByZRP network?
 ```
 
@@ -508,12 +440,10 @@ should everyone run a ByZRP network?
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 should everyone run a ByzZRP network?
 not really...
 ```
@@ -524,11 +454,10 @@ not really...
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat eed “ if < > \ ByzRP: RP-as&-
 ASIA 2025 7 7
 should everyone run a ByzRP network?
 not really...
@@ -542,11 +471,10 @@ ByzRP: RP-as-a-Service
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 should everyone run a ByZRP network?
 not really...
 better: a handful of operators run ByzRP
@@ -562,29 +490,16 @@ nodes in a global RP-as-a-Service network
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-bac. eed ByzRPsfraffic Reduetion Throdgh RP-a S) +
-Standard RPKI
-64x
-KC PP > 3156x 3156x
-| 562MB, [__ | 6.2MB &
-```
-
 ## Slide 43
 
 **ByzRP: Traffic Reduction Through RP-as-a-Service**
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Standard RPKI
 64x
 GE 3156x 3156x
@@ -597,20 +512,16 @@ GE 3156x 3156x
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Standard RPKI ByzRP
 64x
-c EE 3156x 3156x
 S | 562MB 6.2MB, <>
 5 RP
 O
 64x
-e > 128000x 128000x
 2 | 1.2GB 13MB, <>
 5 RP
 LL
@@ -622,17 +533,14 @@ LL
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Standard RPKI
 64x
-c EE 3156x 3156x
 S | 562MB 6.2MB, <>
 5 RP
-oO
 64x
 © EE 128000x 428000x
 2 | 1.2GB 13MB <P>
@@ -651,11 +559,10 @@ iD RP
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ aN
-black hat Jp / op eel
 ASIA 2025 _ =a oy ne Security
 but RPs are security-critical!
 how can we trust RPaaS?
@@ -667,11 +574,10 @@ ByzRP: Outsourcing Security
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ ‘
-blackhat r. i Vy ages
 ASIA 2025 me 4 Xen ne Security
 but RPs are security-critical!
 how can we trust RPaaS?
@@ -731,12 +637,6 @@ Secure against **_f_ byzantine faults** based on voting threshold
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ASIA 2025 _ tify i gOonsensus~
-```
-
 ## Slide 56
 
 **ByzRP: Consensus**
@@ -746,16 +646,6 @@ ASIA 2025 _ tify i gOonsensus~
 resist **censorship / errors**
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat — Jf a, x “ Onsensus-
-1-out-of-3 = union
-resist censorship / errors |
-0 N-1
-f
-```
 
 ## Slide 57
 
@@ -823,30 +713,16 @@ faster **removal**
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-\ aN
-XN ,
-\
-\
-blackhat , ByzRP* Consensus for Watchdog Skipli 4 Entries
-```
-
 ## Slide 64
 
 Summary
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
-Re
-A =
 e stalling protection
 e crashing protection
 e adaptive skiplisting
@@ -860,13 +736,10 @@ Summary
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-or
-a
 ¢ stalling protection
 e crashing protection
 ¢« adaptive skiplisting
@@ -884,15 +757,11 @@ Summary
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-—
-Re | —)>> ——__—_-> —— > RPaaS
 iA
-SP
 e stalling protection ¢ parallel processing e reduced network traffic
 e crashing protection e asynchronous consensus e higher update frequency
 ¢« adaptive skiplisting e byzantine fault tolerance e easier RPKI adoption
@@ -907,17 +776,10 @@ Summary
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
-A
-or xs
-——___—-> ———> ———— > RPaaS
-a 3
-SP
 ¢ stalling protection ¢ parallel processing e reduced network traffic
 e crashing protection e asynchronous consensus e higher update frequency
 ¢« adaptive skiplisting e byzantine fault tolerance e easier RPKI adoption

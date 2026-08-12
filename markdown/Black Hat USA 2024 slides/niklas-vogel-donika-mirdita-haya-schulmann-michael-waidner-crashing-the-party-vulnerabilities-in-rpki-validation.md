@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Niklas Vogel & Donika Mirdita & Haya Schulmann & Michael Waidner_Crashing the Party Vulnerabilities in RPKI Validation.pdf"
 pages: 89
 sha256: "1bebad48f89f43ce23641b94ca4f5fe0f8595b9a93f5985bed4101fd0207116c"
-text_chars: 22069
-ocr_pages: 31
+text_chars: 18889
+ocr_pages: 17
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:36:38Z"
+converted_at: "2026-08-12T04:38:53Z"
 ---
 # Crashing the Party Vulnerabilities in RPKI Validation
 
 **Speakers:** Niklas Vogel, Donika Mirdita, Haya Schulmann, Michael Waidner  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Niklas Vogel & Donika Mirdita & Haya Schulmann & Michael Waidner_Crashing the Party Vulnerabilities in RPKI Validation.pdf` (89 pages)
+
 
 ## Slide 1
 
@@ -67,50 +73,20 @@ _Notes from the IETF Cafeteria, 1989_
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 BGP as Achille's Heel
-Fete Vregraen
-6 @s hd shen § BSCoWW RCT
-27, OPEN -SFND aaa
-Asrounert
-7. cof of sywe C col close)
-2. beach Lfese
-3. TCP time? oot
-“2 tea howe
 lowg heed @ cisco.com
-MAKOV@IBH. Cow
 /
-WE -3R2@~-17#) (H-7) PST
-(WY) HF- 3896 CES) FST
 block fen th R hyfes
-verse, "| hewn oh
-Bodo Le ie 4 bytes Cecseauanl—erce )
-teens
-eee holeleloun ‘fmeer 2 byfas  Cmitsobes )
 open ~ |
-reou, 13 covrenthy |
-tobhcokou ~ Hf
-hoop hve a a
-open: ‘ip AS tt 2 bythe
 down ~ 2
-witerre) — ub (rot Carel ae ple fe otireckoie Felt
 H- tale - @
-ath ype coche | byfe
 | O - nowe
-cotter teahou. yorble:
-upcla Fe notioonl ad wy 6y bes
 List hop gakwe 4 by fos
-ait teal ) coms of AS | byfe
-ler y
-ivection / bye repent “cot!
-AS ce) byk times
-nolGiolen. Bo oprote- 2 oy hes
 cba bee
-verrable.
 Notes from the
 IETF Cafeteria, 1989
 ```
@@ -121,7 +97,8 @@ IETF Cafeteria, 1989
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat |
@@ -141,7 +118,6 @@ Google, AWS, Cloudflare, and others 28, 2022
 | April 15, 2022 | 14 min read
 Rostelecom involved in BGP hijacking incident this week
 impacting more than 200 CDNs and cloud providers. &® & in o
-‘ SO peared,
 Written by Catalin Cimpanu, Contributor
 q April 5, 2020 at 2:53 p.m. PT
 ```
@@ -152,11 +128,10 @@ q April 5, 2020 at 2:53 p.m. PT
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 The RPKI Protocol
 [REC Home] [TEXT|PDF|HTML] [Tracker] [IPR] [Errata] [Info page]
 INFORMATIONAL
@@ -190,7 +165,6 @@ approved by the IESG are a candidate for any level of Internet
 Standard; see Section 2 of RFC 5741.
 Information about the current status of this document, any errata,
 and how to provide feedback on it may be obtained at
-http://www. rfc-editor.org/info/rfc6480.
 ```
 
 ## Slide 7
@@ -199,14 +173,13 @@ http://www. rfc-editor.org/info/rfc6480.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-USA 2024
 The RPKI Protocol
-@ BleepingComputer
 . . . . Comcast now blocks BGP hijacking attacks and route leaks —
 How AWS is helping to secure internet routing =
 with RPKI
@@ -219,7 +192,6 @@ in the preceding chart (figure 5) by looking at the reduction of BGP prefixes wi
 networks. Telia Carrier deployed in February, and many other large operators followed suit afterwards. The number of
 @ BleepingComputer
 All Dutch govt networks to use RPKI to prevent BGP P a
-hijacking idee
 The Dutch government will adopt the RPKI (Resource Public Key Infrastructure)
 Verisign’s Path to RPKI
 standard on all its systems before the end of 2024 to upgrade.
@@ -239,12 +211,12 @@ infrastructure (RPKI) technology to its global network.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-USA 2024
 The RPKI Protocol
 How AWS Harry Coker: Federal Agencies Advance attacks and route leaks
 by Fredrik Korsba
@@ -297,21 +269,6 @@ Prefix - ASN
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-acnic ie)
-© =
-@
-APNIC
-RPKI Repositories
-```
-
 ## Slide 12
 
 ### BGP Security with RPKI
@@ -325,24 +282,6 @@ P arty
 RPKI Repositories
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-RIPE >>>)
-acnic ie)
-7
-, a) Relying
-APNIC Party
-S
-ay ccc
-RPKI Repositories
-```
 
 ## Slide 13
 
@@ -359,22 +298,6 @@ RPKI Repositories
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-2)-2-B
-acnic ie)
-ARIN ee) HD °0
-, a) Relying
-APNIC Party
-RPKI Repositories
-```
-
 ## Slide 14
 
 ### BGP Security with RPKI
@@ -390,22 +313,6 @@ RPKI Repositories
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-2)-2-B
-acnic ie)
-ARIN >i °0
-, a) Relying
-APNIC Party
-RPKI Repositories
-```
-
 ## Slide 15
 
 ### BGP Security with RPKI
@@ -420,25 +327,6 @@ P arty
 RPKI Repositories
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-RIPE >>>)
-acnic ie)
-7
-, a) Relying
-APNIC Party
-@
-S
-ay ccc
-RPKI Repositories
-```
 
 ## Slide 16
 
@@ -457,25 +345,6 @@ RPKI Repositories
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-RIPE >>>) Oo ---
-acnic ie) . oe ol?
-@  —-§
-ws
-I a
-ARIN DD °0
-De Gp
-APNIC Party
-RPKI Repositories
-```
-
 ## Slide 17
 
 ### BGP Security with RPKI
@@ -492,25 +361,6 @@ AS212795
 RPKI Repositories
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-RIPE >>>) Oo ---
-acnic ie) . oe ol?
-@  —-§
-ws
-I a
-ARIN DD °0
-De Gp
-APNIC Party
-RPKI Repositories
-```
 
 ## Slide 18
 
@@ -529,25 +379,6 @@ RPKI Repositories
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-ROA
-Prefix - ASN
-acnic ie)
-<=>
-FRINIC wa ¢> "£5
-ae 'S
-<2
-g
-, ) Relying
-APNIC Pa rty
-RPKI Repositories
-```
-
 ## Slide 19
 
 ### BGP Security with RPKI
@@ -564,24 +395,6 @@ AS666
 RPKI Repositories
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-BGP Security with RPKI
-a) EE)
-acnic ie)
-ROA
-Prefix - ASN
-FRINIC an .
-@ =
-ARIN poame ey O rs
-58
-APNIC Pa rty
-RPKI Repositories
-```
 
 ## Slide 20
 
@@ -613,16 +426,6 @@ AS666
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-So we decided to tinker with the protocol...
-MENTHE CYBER
-SECURITY EXPERT
-```
-
 ## Slide 24
 
 ### So we decided to tinker with the protocol...
@@ -631,14 +434,11 @@ SECURITY EXPERT
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 iC (MESTHE CYBER > Relaying Party Impl. 1: crash when objects malformed
-, i 197 Self::_create(data, &mut target).map_err(|jerr]| {
-SECURITY EXPERT _ aoe
 1975 "Fatal: failed to write file {}: {}", path.display(), err
 1976 i
 197 Failed
@@ -850,21 +650,6 @@ SECURITY EXPERT _ aoe
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-The complex Reality
-> RPs require very complex inputs
-> We still tried to use existing Fuzzers... j
-ZRP
-Sa
-tI
-mS
-ela
-```
-
 ## Slide 44
 
 ### The complex Reality
@@ -885,22 +670,6 @@ ela
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-The complex Reality
-> RPs require very complex inputs
-> We still tried to use existing Fuzzers... j
-ZRP
-Sa
-tI
-mS
-Y
-x
-```
-
 ## Slide 46
 
 ### The complex Reality
@@ -920,22 +689,6 @@ x
 - ➢ We still tried to use existing Fuzzers...
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-The complex Reality
-> RPs require very complex inputs
-> We still tried to use existing Fuzzers... j
-ZRP
-Sa
-tI
-mS
-Y
-we
-```
 
 ## Slide 48
 
@@ -1005,31 +758,26 @@ we
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 > RPKI uses cryptography
 > Fuzzers struggle with cryptography
 CA Certificate
 SignerName
-SignerID
 Validity
 SubjectName
 SubjectKey
-SubjectID
 IssuerRsync
 Digest
 CertSignature
 DigestSignature
 7—| CA Certificate
 SignerName
-SignerlD
 Validity
 SubjectName
 SubjectKey
-SubjectID
 IssuerRsync
 Digest
 CertSignature
@@ -1038,11 +786,9 @@ It gets worse...
 Manifest
 HashList
 SignerName
-SignerID
 Validity
 SubjectName
 SubjectKey
-SubjectID
 Digest
 CertSignature
 DigestSignature
@@ -1064,15 +810,6 @@ DigestSignature
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-Only one solution...
-SFINE TLL DONT MYSELF
-```
-
 ## Slide 57
 
 ### Only one solution...
@@ -1085,11 +822,10 @@ SFINE TLL DONT MYSELF
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Building yet another Fuzzer
 RPs
 CURE
@@ -1104,18 +840,16 @@ Generation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Building yet another Fuzzer
 RPs
 CURE
 Object Setting fields A Exposing
 J : and signing BORGES Objects to RPs
 Generation
-fo
 ```
 
 ## Slide 60
@@ -1180,11 +914,10 @@ ASN.1
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Repositorify Module
 RPs
 CURE
@@ -1199,22 +932,18 @@ Generation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Repositorify Module
 RPs
 CURE
 Exposing
 Objects to RPs
-=< Vos
 O bj ect Set ng felds Repositorify
 : and signing
 Generation
-(Etca|
-Io)
 ```
 
 ## Slide 65
@@ -1249,17 +978,16 @@ Io)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 black hat
-USA 2024
 Relying Party Distributions
 Other
 RIPE NCC
 Fort
-OctoRPKI
 Relying Party
 rpki-client
 Routinator
@@ -1282,11 +1010,10 @@ vulnerabilities
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Summary of Results
 We found
 issues on
@@ -1433,15 +1160,13 @@ how the RFC how Routinator How OctoRPKI How Fort explained it understood it Unde
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Disclosure — Vendor 1
 Disclosure E-mail
 Email Ack. Patches
-O———
 2h 5d
 ```
 
@@ -1459,11 +1184,10 @@ That was nice!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Bug does
 not exist??
 Email Ack. 2.Email Patches
@@ -1484,11 +1208,10 @@ Email Ack. 2.Email Patches
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Disclosure — Vendor 3
 Disclosure E-mail
 Disclosure E-mail
@@ -1497,7 +1220,6 @@ tomorrow
 *silently
 archives repo*
 Email 2. Email 3. Email 4. Email Archived
-jj
 33d 65d 98d 278d
 ```
 
@@ -1533,15 +1255,13 @@ jj
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-USA 2024
 Thank you!
 donika.mirdita@athene-center.de
 niklas.vogel@athene-center.de
-" ATHENE
 e National Research Center
 e for Applied Cybersecurity
 ```

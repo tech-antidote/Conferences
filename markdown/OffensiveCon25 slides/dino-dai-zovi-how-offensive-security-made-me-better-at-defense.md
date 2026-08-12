@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "OffensiveCon25 slides/Dino Dai Zovi_How Offensive Security Made Me Better at Defense.pdf"
 pages: 56
 sha256: "4520a4eb3faf39fd9e315f4d0d86d18eff55643084cdc5e19ba70799045a407e"
-text_chars: 15260
-ocr_pages: 27
+text_chars: 13716
+ocr_pages: 26
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:22:43Z"
+converted_at: "2026-08-12T05:58:09Z"
 ---
 # How Offensive Security Made Me Better at Defense
 
 **Speakers:** Dino Dai Zovi  
 **Conference:** OffensiveCon 2025  
 **Source:** `OffensiveCon25 slides/Dino Dai Zovi_How Offensive Security Made Me Better at Defense.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -42,18 +47,16 @@ A Hacker’s Journey From Offense to Defense
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(*) FS Can-
-2007-C
 We've anni
 Macbook P
 attendees
 conditions,
 Can't use t
 best lightn
-[talk notifir
 2007-04-20-14:54:00 First Mac Hacked Cancel Or Allow
 One OSX box has been owned! At this point all we can say is there is an exploitable flaw in Safari which
 can be triggered within a malicious web page. Of course all of the latest security patches have been
@@ -77,7 +80,8 @@ admin compromise).
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 public QTPointerRef toQTPointer(int offset, int length)
@@ -101,7 +105,8 @@ return;
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 26
@@ -166,11 +171,11 @@ xchg rax, rsp
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Company v
-CAPSULES
 About Capsule8
 Sophos Acquires Capsule8 to Bring
 Powerful and Lightweight Linux
@@ -188,28 +193,18 @@ environments.
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 12:37 all &
 v Tap to Pay
 For: Happy Holidays
 Send as Sends: Cash Stock .
-Gy diego Martinez
-oo
-@ “rine
-QwerRTYUIOP QweRTYUIOP
 ASDFGHJKL é
-SS
-@ ZzZxcVBNM@
 ASDFGHJKL
-@zxcvepnmM @
-23
-2)
 Hold card to back of phone
-oa
 eS | Tap to Pay
-) $35.00
 ```
 
 ## Slide 14
@@ -230,7 +225,8 @@ How Offensive Understanding Helps Defend
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bh 4
@@ -242,17 +238,10 @@ IT’S TALENT AND SWEAT.”
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ME Android
-mmm Any OS
-$200,000
-```
-
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Zero-Days Exploited In-The-Wild by Year
@@ -278,9 +267,24 @@ applications)
 
 ## Slide 24
 
+
+> Recovered by OCR — confidence 82/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Zero-Day Exploitation of Popular End-User
+Technologies in Nim 2024 |
+Net change
+Ww +6
+@ Safari | -8
+iOS ios -7
+| |
+& Firefox | +1
+```
+
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Rise in Vulnerabilities, Exploitation and POC Exploits
@@ -290,19 +294,8 @@ Vulnerabilities
 20000
 15000
 10000
-~ lll
 A
-Oo
 \x
-\
-&
-[o)
-oP
-%@ Og
-YY SY’
-6
-NZ WY’
-PoP of
 CVE Publish Date
 Known Exploited Vulnerabilties
 600
@@ -310,7 +303,6 @@ Known Exploited Vulnerabilties
 400
 300
 N
-00
 =
 00
 First Publicly Reported Exploitation
@@ -321,10 +313,8 @@ First Publicly Reported Exploitation
 4000
 2000
 Proof-of-Concept Exploits
-alll
 <\
 First Exploit Published
-‘S) VulnCheck
 ```
 
 ## Slide 26
@@ -333,29 +323,16 @@ First Exploit Published
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 -- Information
-\a/ Gathering
 2) Target Personnel or
 Compromise Third Party vendor
 1
-J
-1
-!
-'
-| )
-!
 Vv
-Compromise — KR
-Vulnerable Target _ \
 Server Organization bs
-! N,
-!
-'
-!
-/
 Pivot to / 6
 SWIFT Servers J Destroy
 Evidence
@@ -365,7 +342,8 @@ Bank Accounts SWIFT System
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SWIFT Alliance
@@ -384,7 +362,6 @@ SWIFT application to
 bypass validity check
 within Oracle DLL
 =>
-SS)
 = 4. Confirmation messages from the SWIFT network are
 now monitored by the malware. Functionality continues in
 ‘ loop until 06:00 6 Feb 2016
@@ -405,29 +382,24 @@ result to attacker domain over HTTP
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Base
-Safe WALLET) ae @ a
 Base
 Setup Appearance Security Notifications Modules Safe Apps Data Environment variables
-Fe) base:OxF7aQ...9Cf5
-sll Nal ed et Members Signers
 Rais wenkacton Signers have full control over the account, they can propose, sign and execute
 transactions, as well as reject them.
 Home
 @ Export as CSV
 © Assets
-base:0xf820e63D9d51317DFeD412E8alF608bF9b97ddAC
 23 Bridge (Now }
 2 Swap Proposers (New }
 5 Proposers can suggest transactions but cannot approve or execute them. Signers
-‘Transactions & 5 i
 should review and approve transactions first. Learn more Z
 f] Address book
 %8 Apps
-Settings , , .
 Required confirmations Any transaction requires the confirmation of:
 1 out of 1 signer.
 ```
@@ -436,7 +408,8 @@ Required confirmations Any transaction requires the confirmation of:
 
 _Sign cryptocurrency transactions on a hardware wallet_ connected over WebUSB to an **Internet-connected browser** ?!?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sign transactions with a Ledger device
@@ -447,17 +420,16 @@ hardware wallet connected over WebUSB
 to an Internet-connected browser?!?
 a
 — in Ledger Nano X
-eae © 0Ox12...888b
 Rinkeby
 ```
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Domain ha
--EFBS055
 EFS
 safeTxHash:
 Domain hash:
@@ -467,30 +439,23 @@ baseGas:
 refundReceiver:
 Raw data:
 Demain hast
-Ox155f...3dec
 Oxefb5...7f05
 Ox192c...3591 |
-ie)
-(e}
 eth:0x0000..0000
 Oxa9059cbbO000000' |
 b289f8d3if7... Show more
 Balance change
 ” 23 @uspc
-o
 Domain h
-ZEFBSO
-r
-9
 ```
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Contract data
-Rrewewear cunnart
 Having to confirm multiple times
 Some users ir
 may take num 1. Open the Ethereum app on your Ledger
@@ -507,7 +472,8 @@ Please note that this is a security feature. We don't recommend turning this off
 
 Social engineering attack against Safe{Wallet} Developer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Social engineering attack against Safe{Wallet} Developer
@@ -519,7 +485,6 @@ Community Standards Overview
 Commits
 Code frequency 125 Active pull requests 59 Active Issues
 Dependency graph
-112 1113
 Network Merged pull reque Open pull requests
 Forks
 Actions Usage Metrics
@@ -527,25 +492,18 @@ Excluding merges, 18 authors have pushed 95 commits to
 Actions Performance Metrics and 334 commits to all branches. On dev, 429 files
 have changed and there have been 16,176 additions and
 11,155 deletions.
-A ISES [ol (eR
 © 3 Releases published by 1 person
-S v1.57.0
 put
-SD v1.58.0
-S v1.59.0
 put
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PDF Lures GitHub Repositories
-1 1
-| Job Description H | JavaScript Repo '
-mvo
-! rrr een ' ‘ems '
 : PDF: —-————> | : PY: |
 1 Question Sheet v__ Python Repo | Payload
 1. Targets are sent two 2. The repositories make 3. The C2 server is
@@ -554,12 +512,12 @@ which is a “Question APIs to fetch data for the data to the victim, and only
 Sheet” containing a coding application, one of which is under certain circumstances
 challenge hosted on controlled by the threat will it send a malicious
 GitHub. actor. payload
-@paloalto | funita2
 ```
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coding and Problem-Solving Skills With Real Project
@@ -575,7 +533,8 @@ this code.
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 def fetch_symbols():
@@ -593,16 +552,14 @@ return| yaml. load(resp.text, Loader=yam1.Loader)
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-—
-“ &
 latest.yam! Attacker (Kali Linux)
 A
 "SAFE" AWS Environment
 www
->| a
 1: Execute 2: PyYAML Exec
 MonteCarloStockinvestSimulator data_fetcher.py —init_.py
 ret1: On-Disk Write, Load, Delete
@@ -610,26 +567,20 @@ ret1: On-Disk Write, Load, Delete
 ret2: In-Memory Python Code Exec
 ret3: On-Disk Write, Execute, Delete
 oD elastic security labs
-—<—<$<—$—e
-—
-—+=
-_—_—_——
 3: Delete E
 —init_.py
 init (Poseidon)
-E
 stealer.py
 dockerd (Poseidon)
-aws
 login.keychain-db
 “SAFE"Web UI
-(=
 ByBit Signers
 ```
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 }),
@@ -641,16 +592,15 @@ let st iter
 let wa ["Oxldb92e2eebc8e0c075a02bea49a2935bcd2dfcf4",
 "0x19c6876e978d9f128147439ac4cd9ea2582cd141"];
 let ba ["0x828424517£9f04015db02169£4026d57b2b07229",
-"0x7c1091cf6f36b0140d5e2faf18c3be29fee42d97"] ;
 let ta "0x96221423681a6d52e184d440a8efcebb105c7242";
 let da
-"0Oxa9059cbb000000000000000000000000bdd077f65lebe7£7b3cel6fe5f2b025be296951600000000000
 00000000000000000000000000000000000000000000000000000";
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 let sga 45746;
@@ -659,10 +609,8 @@ let sa sf.getSignerAddress() ;
 sa sa.toLowerCase();
 let lu sd.getAddress () ;
 lu lu.toLowerCase();
-COnstlcr wa.some(kl => lu.includes(k1));
 CONSENCD) ba.some(kl => sa.includes(k1l));
 (cf true se.data.operation 0) {
-const std structuredClone (se.data) ;
 se.data.to ta;
 se.data.operation op;
 se.data.data da;
@@ -671,13 +619,11 @@ se.data.safeTxGas sga;
 {
 1 sd.executeTransaction(se, st);
 se.data ca;
-y (ei
 se.data ied,
 e;
 } {
 dl sd.executeTransaction(se, st);
 }
-}e
 (0, u.DC) (u.hV.EXECUTING, {
 d
 })
@@ -731,7 +677,8 @@ Attacker Goal
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fire starts?
@@ -757,25 +704,21 @@ with alarm
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sprinkler System
 Fails to Start
-* Sprinkler syst Fire alnennis Frequency
-Firestarts? |iissosor | nocactivated | ComaveNCS | (per year)
 True Uncontrolled fire 5
 0.001 with no alarm 1.00 x 10°
 True
 0.01 ,
-False Uncontrolled fire »
 Fire Starts 9.999. wilhalarm 9.99210
 0.01 True
 Controlled tire io
-Eat ee 0,001 with no alarm in
 False
 0.99
-False Controlledfire ggoy4 0°
 0.999 with alarm :
 Detection
 System Fails
@@ -785,22 +728,18 @@ F1- Failure of smoke detector sensor
 F2- Failure of heat detector sensor
 F3- No water to sprinkler system
 F4- Sprinkler nozzles blocked
-A
-or
 ```
 
 ## Slide 52
 
 Fault Domain Analysis
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fault Domain Analysis
 Legend
-——
-FS
-Set
 ```
 
 ## Slide 53
@@ -829,15 +768,14 @@ Set
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Accounts Payable —————————. User
 Customer
 Purchasing Receiving
-} \
 Findnicial Stipper
-Intepmediary
 Sales \
 Shipping
 Supplier pf

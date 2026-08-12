@@ -8,13 +8,18 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-WANG-Two-bugs-with-one-PoC-Rooting-Pixel-6-from-Android-12-to-Android-13.pdf"
 pages: 65
 sha256: "f111708442932b599b3be5576aed5da426757545af4c3405aeb2de526d359ee6"
-text_chars: 38854
-ocr_pages: 24
+text_chars: 36174
+ocr_pages: 22
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:56:56Z"
+converted_at: "2026-08-12T03:50:30Z"
 ---
 # Two bugs with one PoC Rooting Pixel 6 from Android 12 to Android 13
 
@@ -22,22 +27,12 @@ converted_at: "2026-08-11T23:56:56Z"
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-WANG-Two-bugs-with-one-PoC-Rooting-Pixel-6-from-Android-12-to-Android-13.pdf` (65 pages)
 
+
 ## Slide 1
 
 Two bugs with one PoC: Roo2ng Pixel 6 from Android 12 to Android 13
 
 WANG, YONG (@ThomasKing2014)
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pdechet
-ASIA BOSS 3°
-‘BRIEFINGS -
-eee Two: bugs witht one PoC: - :
-| Rooting Pixel 6 from Android 12 to Android: 13, |
-: WANG, De iehonoaciins 7
-```
 
 ## Slide 2
 
@@ -137,13 +132,6 @@ With randomization
 
 CONFIG_SLAB_FREELIST_HARDENED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-CONFIG SLAB _FREELIST HARDENED
-ASIA 2023
-```
-
 ## Slide 10
 
 ## # CONFIG_SLAB_MERGE_DEFAULT is not set
@@ -156,7 +144,8 @@ https://i.blackhat.com/USA-22/Thursday/US-22-WANG-Ret2page-The-Art-of-Exploiting
 
 https://googleprojectzero.blogspot.com/2020/12/an-ios-hacker-tries-android.html
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CONFIG BPF JIT ALWAYS ON
@@ -173,9 +162,6 @@ the eBPF verifier. As such, it provides a number very powerful primitives, inclu
 2. arbitrary memory load;
 3. arbitrary memory store;
 4. arbitrary kernel function calls with up to 5 arguments and a 64-bit return value.
-https://googleprojectzero.blogspot.com/2020/12/an-ios-hacker-tries-android.html
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 12
@@ -184,13 +170,11 @@ ASIA 2023
 
 <u>https://en.wikipedia.org/wiki/Google_Tensor</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Google Tensor
-Seo
-black hat
-ASIA 2023
 Connectivity
 Model number
 Codename
@@ -198,7 +182,6 @@ Manufacturer
 Fabrication
 ISA
 Bit width
-Harch
 Security
 Bus width
 Bandwidth
@@ -208,45 +191,21 @@ Modem
 Wireless
 Navigation
 First-generation (2021)
-GS101 (S5P9845)!'51I25)
-Whitechapel! '®!
-Samsung Electronics!"
-ARMv8.2-Al2
-64-bit!?9]
-Octa-core:21116]
 2.8 GHz Cortex-X1 (2x)
 2.25 GHz Cortex-A76 (2x)
 1.8 GHz Cortex-A55 (4x)
 TrustZone (Trusty OS)
-Mali-G78 MP2o0!6ll21]
 848 MHz/26]
-LPDDRS!6]
-4x16-bit quad-channell26l
-51.2 GB/s!76l
-edgeTPUFSI
-UFS 3.1/84I185]
 Exynos 5123/26]
 Wi-Fi 6 and Wi-Fi 6E!>
 Bluetooth 5.21941[85]
-Dual-band GNss!4ll
 Second-generation (2022)
-GS201 (S5P9855)|741l25
-Cloudripper!*4]
-ig
-5 nm271128)
-ie,
-64-bit!9°
-Octa-core:!$"]
 2.85 GHz Cortex-X1 (2x)
 2.35 GHz Cortex-A78 (2x)
 1.8 GHz Cortex-A55 (4x)
 TrustZone (Trusty OS)!8°!
-Mali-G710 MP7/51!
-edgeTPUI®!
 UFS 3.115!
-Exynos 5300!88!
 Wi-Fi 6 1
-Bluetooth 5.2/5
 Dual-band GNSs!
 ```
 
@@ -308,7 +267,8 @@ Dual-band GNSs!
 
    - Exploitable bugs in the wild
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation
@@ -321,9 +281,6 @@ Android has updated the May security with notes that 4 vulns were
 exploited in-the-wild.
 Qualcomm GPU: CVE-2021-1905, CVE-2021-1906
 ARM Mali GPU: CVE-2021-28663, CVE-2021-28664
-“FF9:12 - 2021775 A198
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 16
@@ -344,7 +301,8 @@ ASIA 2023
 
 https://developer.arm.com/Arm%20Security%20Center/Mali%20GPU%20Driver%20Vulnerabilities
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-28664 analysis
@@ -357,9 +315,6 @@ Affects ¢ Bifrost GPU Kernel Driver: All versions from rOpO - r29p0
 Impact Anon-privileged user can get a write access to read-only memory, and may be able to gain root privilege, corrupt memory and modify the memory of other processes.
 Resolution This issue is fixed in Bifrost and Valhall GPU Kernel Driver r30p0 and in Midgard GPU Kernel Driver r31p0 release. Users are recommended to upgrade if they are impacted by this issue.
 Credit n/a
-https://developer.arm.com/Arm%20Security%20Center/Mali%20GPU%20Driver%20Vulnerabilities
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 18
@@ -380,7 +335,8 @@ ASIA 2023
 
 • Check both CPU_WR and GPU_WR
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-28664 analysis
@@ -403,8 +359,6 @@ reg 5E_RE J RITE
 pages, NULL) ; F RITE pages, NULL);
 #endif #endif
 ¢ Check both CPU_WR and GPU_WR
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 20
@@ -419,12 +373,12 @@ ASIA 2023
 
 • Always SIGBUS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-28664 PoC
 ¢ Always SIGBUS
-ASIA 2023
 ```
 
 ## Slide 22
@@ -437,7 +391,8 @@ ASIA 2023
 
 - No physical pages
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 static vm_fault_t kbase_cpu_vm_fault(struct vm_fault x*vmf)
@@ -449,7 +404,6 @@ pgoff_t fault_pgoff;
 size_t i;
 pgoff_t addr;
 ¢ Always SIGBUS size_t nents;
-Struct—taggeu—auut*pages;,
 vm_fault_t ret = VM_FAULT_SIGBUS;
 e N O p hysica | pages & Struct memory group_manager_device +mgm_dev;
 KBASE_DEBUG_ASSERT(map) ;
@@ -470,18 +424,16 @@ aliased = reg->cpu_alloc->imported.alias.aliased; nents = map->alloc->nents;
 for (i = 0; i < reg->cpu_alloc—>imported.alias.nents; i++) pages = map->alloc->pages;
 xout += aliased[i]. length;
 ee fault_pgoff = map_start_pgoff + (vmf->pgoff - vma->vm_pgoff);
-,
 if (fault_pgoff >= nents)
 goto exit;
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 23
 
 CVE-2021-28664 PoC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 user_buf->pages = vmalloc(*va_pages * sizeof(struct page x));
@@ -522,8 +474,6 @@ pali] = as_tagged(page_to_phys(pages [i] ));
 local_size -= min;
 offset = 0; } else if (flags & (BASE_MEM_COHERENT_SYSTEM |
 | reg->gpu_alloc->nents = faulted_pages; |
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 24
@@ -534,7 +484,8 @@ ASIA 2023
 
 - Cannot set KBASE_REG_SHARE_BOTH on my MTK phone
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 user_buf->pages = vmalloc(*va_pages * sizeof(struct page x));
@@ -551,30 +502,24 @@ a aes Ser. * Otherwise get_user_pages is called as a sanity check, but with
 ie ae pesca — { * NULL as the pages argument which will fault the pages, but not
 ie ier tigi min,| * pin them. The memory will then be pinned only around the jobs that
 g 9g : * specify the region as an external resource.
-Sata a E */
-balers ae gee tree if (reg->flags & KBASE_REG_SHARE_BOTH) {
 ma_addr = dma_map_page(dev, pages[il, pages = user_buf—>pages;
 offset, min, xflags |= KBASE_MEM_IMPORT_HAVE_PAGES;
 DMA_BIDIRECTIONAL) ; }
 if (dma_mapping_error(dev, dma_addr) )
-B6EO: Unerind=ama maps if (!kbase_device_is_cpu_coherent(kctx->kbdev)) {
 user_buf->dma_addrs[i] = dma_addr; Uf: (flags & BASE_MEM_COHERENT_SYSTEM_REQUIRED &&
 pali] = as_tagged(page_to_phys(pages[il)); '(flags & BASE_MEM_UNCACHED_GPU) )
-ecsicise ni return —EINVAL;
 offset = 0; } else if (flags & (BASE_MEM_COHERENT_SYSTEM |
-Ba BASE_MEM_COHERENT_SYSTEM_REQUIRED) ) fs
 reg->flags |= KBASE_REG_SHARE_BOTH;
 reg->gpu_alloc->nents = faulted_pages;
 ¢ Cannot set KBASE_REG_SHARE_BOTH on my MTK phone ®
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 25
 
 CVE-2021-28664 PoC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-28664 PoC
@@ -595,7 +540,6 @@ SHAH: LGUs 2 Wetelee Li /* did we find a matching region object? +*/
 if (kbase_is_region_invalid_or_free(reg)) {
 /* roll back */
 goto failed_loop;
-oie: Qiriey
 lockdep_assert_held(&kctx->reg_lock) ;
 }
 if (!(katom—>core_req & BASE_JD_REQ_SOFT_JOB) &&
@@ -606,25 +550,22 @@ case KBASE_MEM_TYPE_IMPORTED_USER_BUF: {
 if ((reg->gpu_alloc—>imported.user_buf.mm != locked_mm) &
 (!reg->gpu_alloc->nents) )
 goto exit; katom—>atom_flags |= KBASE_KATOM_FLAG_PROTECTED;
-ai
 reg->gpu_alloc->imported. user_buf. current_mapping_usage_count++;
 if (1 == reg->gpu_alloc—>imported.user_buf.current_mapping_usage_count) {
-Ane = Gisen tac eer uaraunthc tee reg); Serene alloc = kbase_map_external_resource(katom->kctx, reg,
 if (err) { current—>mm) ;
 reg—>gpu_alloc->imported.user_buf.current_mapping_usage_count—-; if (!alloc) {
 Fi goto exit; err_ret_val = -EINVAL;
 } goto failed_loop;
 + }
 break;
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 26
 
 CVE-2021-28664 PoC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 {
@@ -682,7 +623,6 @@ reg->flags & KBASE_REG_GPU_WR ? FOLL_WRITE : @,
 pages, NULL);
 #else
 reg->flags & KBASE_REG_GPU_WR,
-®, pages, NULLM;
 #endif
 #elif LINUX_VERSION_CODE < KERNEL_VERSION(4, 9, @)
 pinned_pages = get_user_pages_remote(NULL, mm,
@@ -695,8 +635,6 @@ pinned_pages = get_user_pages_remote(NULL, mm,
 address,
 alloc->imported.user_buf.nr_pages,
 reg->flags & KBASE_REG_GPU_WR ? FOLL_WRITE : Q,
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 27
@@ -721,7 +659,8 @@ ASIA 2023
 
 Import again
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 int
@@ -744,7 +683,6 @@ KERNEL_VERSION(4, 5, 0) > LINUX_VERSION_CODE
 pages, NULL);
 #else
 ©, pages, NULL);
-#endif
 #elif KERNEL_V! , 9, 8) > LINUX_VERSION_CODE
 faulted; et_user_pages(address, *va_pages,
 E ®, pages, NULL);
@@ -760,10 +698,8 @@ faulted
 LINUX_VERSION_CODE
 NULL)
 pages,
-(addr;
 NULL)
 address
-et_user_pages (address, *va_pages,
 pages, NULL); t pages, NULL);
 if (alloc->nents) {
 if (WARN_ON(alloc->nents != alloc->imported.user_buf.nr_pages) )
@@ -777,19 +713,16 @@ e It sounds like double fetch
 #if LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0)
 pinned_pages = get_user_pages(NULL, mm,
 address,
-alloc—>imported.user_buf.nr_pages,
 #if KERNEL_VERSION(4, 4, 168) <= LINUX_VERSION_CODE && \
 KERNEL_VERSION(4, 5, @) > LINUX_VERSION_CODE
 reg->flags & KBASE_REG_GPU_WR ? FOLL_WRITE : 0,
 pages, NULL);
 #else
 reg->flags & KBASE_REG_GPU_WR,
-@, pages, NULLBb|
 #endif
 #elif LINUX_VERSION_CODE < KERNEL_VERSION(4, 9, 0)
 pinned_pages = get_user_pages_remote(NULL, mm,
 address,
-alloc->imported.user_buf.nr_pages,
 reg->flags & KBASE_REG_GPU_WR,
 @, pages, NULL);
 #elif LINUX_VERSION_CODE < KERNEL_VERSION(4, 10, 0)
@@ -798,8 +731,6 @@ address,
 alloc—>imported.user_buf.nr_pages,
 reg->flags & KBASE_REG_GPU_WR ? FOLL_WRITE : 0,
 Import again
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 29
@@ -838,7 +769,8 @@ ASIA 2023
 
 <u>https://googleprojectzero.github.io/0days-in-the-wild//0day-RCAs/2021/CVE-2021-39793.html</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-22706 | CVE-2021-39793:
@@ -850,7 +782,6 @@ Disclosure or Patch Date: March 7, 2022
 Product: Arm Mali GPU driver for Linux/Android
 Advisory:
 ¢ from Arm (upstream):
-https://developer.arm.com/Arm%20Security%20Center/Malixz20GPU%20Driver%20Vulnerabilities
 ¢ from Google Pixel: http xel
 Affected Versions: see Arm advisory (note that the affected version range for the Bifrost version of
 the related CVE-2021-28664 seems to be off-by-one)
@@ -859,7 +790,6 @@ First Patched Version:
 ¢ for Pixel: patch level 2022-03-05
 Issue/Bug Report: N/A
 blackhat
-ASIA 2023
 ```
 
 ## Slide 32
@@ -870,7 +800,8 @@ ASIA 2023
 
 https://www.blackhat.com/docs/eu-16/materials/eu-16-Taft-GPU-Security-Exposed.pdf
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit — Modifying the disk cache
@@ -882,8 +813,6 @@ use.
 ¢ By mmap()-ing a suid binary, instructions in privileged
 binaries can be over-written through the GPU.
 e Changes aren't stored to disk.
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 33
@@ -894,7 +823,8 @@ ASIA 2023
 
 hSps://source.android.com/docs/core/architecture/kernel/loadable-kernel-modules
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit — Modifying the disk cache
@@ -920,8 +850,6 @@ as part of your kernel config fragments.
 All device kernels must enable these options. Kernel modules should also support unloading and reloading whenever
 possible.
 https://source.android.com/docs/core/architecture/kernel/loadable-kernel-modules
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 34
@@ -946,7 +874,8 @@ ASIA 2023
 
 - Module signing enabled
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit - Memory corruption
@@ -955,7 +884,6 @@ CONFIG_RT_MUTEXES=y
 CONFIG_MODULE_SIG_FORMAT=y
 CONFIG_MODULES=y
 # CONFIG _MODULE_FORCE_LOAD is not set
-- CONFIG_MODULE_UNLOAD=y
 * Module signing enabled # CONFIG_MODULE_FORCE_UNLOAD is not set
 CONFIG_MODVERSIONS=y
 CONFIG_ASM_MODVERSIONS=y
@@ -964,7 +892,6 @@ CONFIG_MODULE_SCMVERSION=y
 CONFIG_MODULE_SIG=y
 CONFIG_MODULE_SIG_FORCE=y
 CONFIG_MODULE_SIG_ALL=y
-¥ CONFIG_MODULE_SIG_SHAT ISfot set
 # CONFIG _MODULE_SIG_SHA224 is not set
 # CONFIG _MODULE_SIG_SHA256 is not set
 # CONFIG_MODULE_SIG_SHA384 is not set
@@ -974,8 +901,6 @@ CONFIG_MODULE_SIG_HASH="sha512"
 # CONFIG_MODULE_ALLOW_MISSING_NAMESPACE_IMPORTS is not set
 # CONFIG_UNUSED_SYMBOLS is not set
 CONFIG_TRIM_UNUSED_KSYMS=y
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 36
@@ -988,7 +913,8 @@ ASIA 2023
 
    - User buffer can be imported
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit - Memory corruption
@@ -1002,9 +928,7 @@ if (!page->page_ptr) {
 pr_err("%d: binder_alloc_buf failed for Py
 alloc->pid, page_addr) ;
 goto err_alloc_page_failed;
-iF
 page->alloc = alloc;
-INIT_LIST_HEAD(&page->1lru) ;
 user_page_addr = (uintptr_t)page_addr;
 static int binder_mmap(struct file *filp, struct vm_area_struct *vma)
 struct binder_proc *proc = filp->private_data;
@@ -1014,15 +938,12 @@ if (vma->vm_flags & FORBIDDEN_MMAP_FLAGS) { // VM_WRITE
 pr_err("%s: %d %lx-%lx %s failed %d\n", __func__,
 proc->pid, vma—>vm_start, vma->vm_end, “bad vm_flags", —EPERM);
 return —EPERM;
-}
 vma->vm_flags |= VM_DONTCOPY | VM_MIXEDMAP;
 vma->vm_flags &= ~VM_MAYWRITE;
 vma->vm_ops = &binder_vm_ops;
 vma->vm_private_data = proc;
 return binder_alloc_mmap_handler(&proc-—>alloc, vma);
 ret = vm_insert_page(vma, user_page_addr, page[Q].page_ptr);
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 37
@@ -1031,7 +952,8 @@ ASIA 2023
 
 • Craft the flat_binder_object by modifying the binder’s user buffer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit - Memory corruption
@@ -1045,20 +967,16 @@ struct binder_node xnode;
 /* 8 bytes of data. x*/
 eer fp = to_flat_binder_object(hdr);
 : : 3 ; de = binder_get_node(proc, fp->binder);
-binder_uintptr_t binder; /*x local object */ oe ene ae u
 We —u32 handle; /* remote object */ pr_err("transaction release %d bad node %01611x\n",
 : debug_id, (u64)fp->binder) ;
-2 ; ; break;
 /* extra data associated with local object x*/ }
 binder_uintptr_t cookie; binder_debug(BINDER_DEBUG_TRANSACTION,
-oF u node %d u%Q161Llx\n",
 node->debug_id, (u64)node->ptr);
 binder_dec_node(node, hdr->type == BINDER_TYPE_BINDER,
 Q);
 binder_put_node(node) ;
 } break;
 blackhat
-ASIA 2023
 ```
 
 ## Slide 38
@@ -1135,13 +1053,13 @@ Bug #1 PoC more details
 
 - No physical pages, why?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bug #1 PoC more details
 ¢ No physical pages, why?@
 switch (query) {
-case See Te ENCES ot ce
 if (reg->cpu_alloc->type != KBASE_MEM_TYPE_ALIAS) {
 *out = kbase_reg_current_backed_size(reg);
 } else {
@@ -1160,8 +1078,6 @@ pgoff_t fault_pgoff;
 size_t i;
 pgoff_t addr;
 size_t nents;
-a Tern
-struct—tagygeu—auut pages;
 vm_fault_t ret = VM_FAULT_SIGBUS;
 Struct memory_group_manager_device *mgm_dev;
 KBASE_DEBUG_ASSERT(map) ;
@@ -1183,8 +1099,6 @@ pages = map—>alloc-—>pages;
 fault_pgoff = map_start_pgoff + (vmf->pgoff - vma->vm_pgoff);
 if (fault_pgoff >= nents)
 goto exit;
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 44
@@ -1219,13 +1133,6 @@ ASIA 2023
 
 Bug #1 PoC more details
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Bug #1 PoC more details
-ASIA 2023
-```
-
 ## Slide 47
 
 ## Bug #1 PoC more details
@@ -1236,7 +1143,8 @@ ASIA 2023
 
 - The imported pages can be freed and reclaimed
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 int kbase_mem_shrink(struct kbase_context xconst kctx,
@@ -1249,9 +1157,7 @@ F struct kbase_mem_phy_alloc xalloc, bool writeable) if (WARN_ON(!ketx))
 long i; return -EINVAL;
 struct page *xpages;
 unsigned long size = alloc->imported.user_buf.size; if (WARN_ON( !reg))|
-“return —EINVAL;
 KBASE_DEBUG_ASSERT(alloc->type == KBASE_MEM_TYPE_IMPORTED_USER_BUF) ;
-pages = alloc->imported.user_buf. pages;
 unsigned long local_size;
 dma_addr_t dma_addr = alloc->imported.user_buf.dma_addrs [i] ;
 old_pages = kbase_reg_current_backed_size(reg);
@@ -1262,10 +1168,8 @@ local_size = MIN(size, PAGE_SIZE - (dma_addr & ~PAGE_MASK)); 5
 dma_unmap_page(kctx->kbdev->dev, dma_addr, local_size, /* Update the GPU mapping */
 DMA_BIDIRECTIONAL) ; err = kbase_mem_shrink_gpu_mapping(kctx, reg,
 if (writeable) new_pages, old_pages) ;
-#if !MALI_USE CSF /x Update all CPI manning(s) */
 put_page(pages [il] ); kbase_mem_shrink_cpu_mapping(kctx, reg,
 pages[i] = NULL; new_pages, old_pages);
-#endif|
 kbase_free_phy_pages_helper(reg->cpu_alloc, delta);
 size -= local_size; if (reg->cpu_alloc != reg->gpu_alloc)
 } kbase_free_phy_pages_helper(reg->gpu_alloc, delta);
@@ -1274,8 +1178,6 @@ size -= local_size; if (reg->cpu_alloc != reg->gpu_alloc)
 Ip }
 ¢ The CPU mapping has not been handled ®
 ¢ The imported pages can be freed and reclaimed
-bisek hat
-ASIA 2023
 ```
 
 ## Slide 48
@@ -1320,55 +1222,67 @@ ASIA 2023
 
 Fix
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Thomas King - @thomasking2014@i... @Thom... -20227F9A208
-R.I.P again
-Android version
-13
-Android security update
-September 5, 2022
-Google Play system update
-July 1, 2022
-Baseband version
-g5123b-102852-220720-B-8851166
-Kernel version
-5.10.107-android13-4-00008-g466e95df8c7c-ab8760753
-#1 Thu Jun 23 15:42:45 UTC 2022
-spawn root shell
-lpwned_by_thomasking: /data/data/org.connectbot # id
-luid=0(root) gid=0(root) groups=0(root),3003(inet) ,9997(everybody) ,2
-10246 (u0_a246_cache) ,50246(all_a246) context=u:r:untrusted_app_27:s0
-246 ,c256,c512,c768
-lpwned_by_thomasking: /data/data/org.connectbot # getenforce
-Permissive
-lpwned_by_thomasking: /data/data/org.connectbot #
-Mind the Gap
-By lan Beer, Project Zero
-Note: The vulnerabilities discussed in this blog post (CVE-2022-33917) are fixed by the upstream vendor, but
-at the time of publication, these fixes have not yet made it downstream to affected Android devices (including
-Pixel, Samsung, Xiaomi, Oppo and others). Devices with a Mali GPU are currently vulnerable.
-Introduction
-In June 2022, Project Zero researcher Maddie Stone gave a talk at Fi
-itati 30 far. A key takeaway was that approximately 50% of the observed 0-days in the first
-half of 2022 were variants of previously patched vulnerabilities. This finding is consistent with our
-understanding of attacker behavior: attackers will take the path of least resistance, and as long as vendors don't
-consistently perform thorough root-cause analysis when fixing security vulnerabilities, it will continue to be worth
-investing time in trying to revive known vulnerabilities before looking for novel ones.
-The presentation discussed an in the wild exploit targeting the Pixel 6 and leveraging CVE-2021-39793, a
-vulnerability in the ARM Mali GPU driver used by a large number of other Android devices. ARM's advisory
-described the vulnerability as:
-Title Mali GPU Kernel Driver may elevate CPU RO pages to writable
-CVE CVE-2022-22706 (also reported in CVE-2021-39793)
-Date of issue 6th January 2022
-Impact Anon-privileged user can get a write access to read-only memory pages [sic].
-The week before FirstCon22, Maddie gave an internal preview of her talk. Inspired by the description of an
-in-the-wild vulnerability in low-level memory management code, fellow Project Zero researcher Jann Horn
-started auditing the ARM Mali GPU driver. Over the next three weeks, Jann found five more exploitable
-vulnerabilities (. ) 2320, 2331, 2333, 2334).
-bisek hat
-ASIA 2023
+Code Integrity - Signatures
+
+[Window 1] SgrmBroker.exe Properties
+Certificate
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Windows TCB Component (1.3.…
+Subject Key Identifier         793165f0dbf15e5c04453d756..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778..
+CRL Distribution Points        [1]CRL Distribution Point: Distr..
+Authority Information Access   [1]Authority Info Access: Acc…
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     08647820d503fd505df763ab2..
+[red box]
+Windows TCB Component (1.3.6.1.4.1.311.10.3.23)
+Protected Process Verification (1.3.6.1.4.1.311.10.3.24)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
+
+[Window 2] svchost.exe Properties
+Certificate
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Protected Process Light Verific.
+Subject Key Identifier         01f0d3a457341838ebb31253..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778.
+CRL Distribution Points        [1]CRL Distribution Point: Distr.
+Authority Information Access   [1]Authority Info Access: Acc..
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     c60a14a6bd925780e9f0463ba..
+[red box]
+Protected Process Light Verification (1.3.6.1.4.1.311.10.3.22)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
+
+[Window 3] csrss.exe Properties
+Certificate
+General | Details | Certification Path
+Show: <All>
+Field                          Value
+Enhanced Key Usage             Protected Process Light Verific..
+Subject Key Identifier         7d3af1a3055c18fdf39399016..
+Subject Alternative Name       Directory Address:SERIALNUM.
+Authority Key Identifier       KeyID=a92902398e16c49778..
+CRL Distribution Points        [1]CRL Distribution Point: Distr..
+Authority Information Access   [1]Authority Info Access: Acc..
+Basic Constraints              Subject Type=End Entity, Pat..
+Thumbprint                     e94a68b056ce2fa8ab046a84f..
+[red box]
+Protected Process Light Verification (1.3.6.1.4.1.311.10.3.22)
+Windows TCB Component (1.3.6.1.4.1.311.10.3.23)
+Windows System Component Verification (1.3.6.1.4.1.311.10.3.6)
+Code Signing (1.3.6.1.5.5.7.3.3)
 ```
 
 ## Slide 51
@@ -1482,6 +1396,15 @@ Share the same physical page(start address aligned)
 - The vic_m thread can be iden_fied
 
 • The addr_limit of thread_info is completely under the control
+
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Exploit
+¢ The victim thread can be identified
+¢ The addr_limit of thread_info is completely under the control
+```
 
 ## Slide 59
 

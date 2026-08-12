@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Frey Wilson_Redefining the Origin of Secrecy in a Post-Quantum World.pdf"
 pages: 34
 sha256: "54350bcf16857b8c114d18b8a20423cdb05e5c984dfb0609bd1bb76d1381174f"
-text_chars: 9392
-ocr_pages: 5
+text_chars: 9013
+ocr_pages: 4
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:49:28Z"
+converted_at: "2026-08-12T04:56:56Z"
 ---
 # Redefining the Origin of Secrecy in a Post-Quantum World
 
 **Speakers:** Frey Wilson  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Frey Wilson_Redefining the Origin of Secrecy in a Post-Quantum World.pdf` (34 pages)
+
 
 ## Slide 1
 
@@ -29,28 +35,16 @@ Speaker: Dr Frey Wilson, CTO @ Cavero Quantum
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-EWROPE 20 “
-‘Redefi ining the Origin of Secrecy
-in a Post-Quantum World
-Speaker: Dr Frey Wilson, CTO @ Cavero Quantum
-Fora Vx =t aay:
-```
-
 ## Slide 2
 
 Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisckchat
-EUROPE 2024
-SECURITY "5
 CYBERSECURITY NEWS, INSIGRTS & ANALYSIS
 Malware & Threats ~ Security Operations ~ Security Architecture ~ Risk Management CISO Strategy » ICS/OT ~ Funding/M&A ~
 NETWORK SECURITY
@@ -58,7 +52,6 @@ Russian Telco Hijacked Internet Traffic of Major
 Networks — Accident or Malicious Action?
 A huge BGP hijack by Russian state telecommunications provider Rostelecom diverted the traffic from more than 200 ni
 Google, Amazon, Facebook and Cloudflare — to Russian servers on April 1. It may have been accidental, it may not.
-The Register’
 Apple network traffic takes mysterious detour
 through Russia
 Land of Putin capable of attacking routes in cyberspace as well as real world
@@ -69,10 +62,8 @@ In a write-up for MANRS (Mutually Agreed Norms for Routing Security), a public i
 group that looks after internet routing, Internet Society senior internet technology
 manager Aftab Siddiqui said that Russia's Rostelecom started announcing routes for part
 of Apple's network on Tuesday, a practice referred to as BGP (Border Gateway Protocol)
-hijacking.
 is Reuters
 innovation business security buying gui
-Funil sar ncaa
 For two hours, a large chunk of European
 mobile traffic was rerouted through China
 It was China Telecom, again. The same ISP accused last year
@@ -82,7 +73,6 @@ Europe
 Russia reroutes internet traffic in
 occupied Ukraine to its infrastructure
 By Reuters
-Ai} Aal |<
 May 2, 2022 10:23 PM GMT+1 - Updated 3 years ago
 ```
 
@@ -108,12 +98,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ae ”
-black hat _—< <
-EUROPE 2024
 hashcat (v6.2.1) starting...
 CUDA API (CUDA 11.3)
 * Device #1: NVIDIA GeForce RTX 2080 Ti, 10137/11264 MB, 68MCU
@@ -156,13 +144,13 @@ Information Classification: General
 
 ##### `$~: whoami`
 
-```
+\```
 > Dr Frey Wilson
-```
+\```
 
-```
+\```
 > CTO @ Cavero Quantum
-```
+\```
 
 - `Quantum-Safe Symmetric Key Distribution`
 
@@ -262,12 +250,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
 black hat
-EUROPE 2024
 Cin
 Cout
 >>> x=[0,45,678,43,52,67,923, 74, 32,376]
@@ -321,18 +309,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
 black hat
-EUROPE 2024
-“sy
-im!
-—— i.
-——]
 START _ = = —| j — || _ FINISH
-= —__]
 Information Classification: General
 ```
 

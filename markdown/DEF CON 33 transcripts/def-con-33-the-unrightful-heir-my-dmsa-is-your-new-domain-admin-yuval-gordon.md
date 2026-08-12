@@ -12,7 +12,7 @@ duration_seconds: 2009
 words: 4509
 text_chars: 24185
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # The (Un)Rightful Heir - My dMSA Is Your New Domain Admin

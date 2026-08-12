@@ -11,7 +11,7 @@ files_skipped: 19
 text_chars: 1264468
 redacted_secrets: 0
 sha256: "cfccd92aef3fb5f7be1bd8198eb9d05e3e39a29387a89d9988e034879d7d1f2b"
-converted_at: "2026-08-12T02:54:56Z"
+converted_at: "2026-08-12T07:17:47Z"
 ---
 
 # Investigating Responding to M365 acct compromiseLiving of the Land IR
@@ -24801,12 +24801,6 @@ M365 requires that some operations be performed using the Edge browser, or at le
 * IP address bulk lookup tool - https://www.infobyip.com/ipbulklookup.php
 ```
 
-### `DEF CON 34 - Workshops - Vince - bitpusher - Weppner - Investigating Responding to M365 acct compromiseLiving of the Land IR - Student Resources/__MACOSX/._letter to attendees.txt`
-
-```text
-    Mac OS X            	   2   �                                           ATTR         �   L                  �     com.apple.lastuseddate#PS       �   <  com.apple.quarantine �kj    ��5    q/0281;6a6bb6b9;Chrome;391BF9E7-CAD2-4401-9A2F-49E064ED60C5 
-```
-
 ### `DEF CON 34 - Workshops - Vince - bitpusher - Weppner - Investigating Responding to M365 acct compromiseLiving of the Land IR - Student Resources/__MACOSX/M365IRScripts-v5.0.0/._00-Update-M365Modules.ps1`
 
 ```powershell
@@ -25165,6 +25159,12 @@ M365 requires that some operations be performed using the Edge browser, or at le
 
 ```markdown
     Mac OS X            	   2   �      �                                      ATTR       �   �   <                  �   <  com.apple.quarantine q/0281;6a6bb6b9;Chrome;391BF9E7-CAD2-4401-9A2F-49E064ED60C5 
+```
+
+### `DEF CON 34 - Workshops - Vince - bitpusher - Weppner - Investigating Responding to M365 acct compromiseLiving of the Land IR - Student Resources/__MACOSX/._letter to attendees.txt`
+
+```text
+    Mac OS X            	   2   �                                           ATTR         �   L                  �     com.apple.lastuseddate#PS       �   <  com.apple.quarantine �kj    ��5    q/0281;6a6bb6b9;Chrome;391BF9E7-CAD2-4401-9A2F-49E064ED60C5 
 ```
 
 ### `DEF CON 34 - Workshops - Vince - bitpusher - Weppner - Investigating Responding to M365 acct compromiseLiving of the Land IR - Student Resources/letter to attendees.txt`

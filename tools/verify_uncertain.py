@@ -287,6 +287,52 @@ def cmd_apply(out_root: str, work: str) -> int:
     return 0
 
 
+def cmd_record(work: str, record: str) -> int:
+    """Merge this round's verdicts into the durable review record.
+
+    The work directory is scratch -- page images, task lists, one file per
+    reviewer -- and does not survive the session. What has to survive is which
+    slide was read and what the reviewer concluded, so that a later reader can
+    tell a slide confirmed correct from one rebuilt out of garbage.
+    """
+    tasks = {t["id"]: t for t in
+             (json.loads(l) for l in open(os.path.join(work, "tasks.jsonl"),
+                                          encoding="utf-8") if l.strip())}
+    rows: dict[tuple[str, int], dict] = {}
+    if os.path.exists(record):
+        for line in open(record, encoding="utf-8"):
+            if line.strip():
+                r = json.loads(line)
+                rows[(r["markdown"], r["slide"])] = r
+
+    added = 0
+    for name in sorted(os.listdir(work)):
+        if not (name.startswith("corrections_") and name.endswith(".jsonl")):
+            continue
+        for line in open(os.path.join(work, name), encoding="utf-8"):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                c = json.loads(line)
+            except json.JSONDecodeError:
+                continue                  # a reviewer still writing its file
+            t = tasks.get(c["id"])
+            if not t or not (c.get("text") or "").strip():
+                continue
+            key = (t["markdown"], t["slide"])
+            if key not in rows:
+                added += 1
+            rows[key] = {"markdown": t["markdown"], "slide": t["slide"],
+                         "verdict": c.get("verdict", ""), "title": t.get("title", "")}
+
+    with open(record, "w", encoding="utf-8") as fh:
+        for key in sorted(rows):
+            fh.write(json.dumps(rows[key], ensure_ascii=False) + "\n")
+    print(f"{len(rows)} reviewed slides recorded in {record} ({added} new)")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -296,6 +342,8 @@ def main() -> int:
     ap.add_argument("--work", default="review", help="working directory")
     ap.add_argument("--extract", action="store_true")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--record", metavar="PATH", default="",
+                    help="merge this round's verdicts into a durable record")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
@@ -305,6 +353,8 @@ def main() -> int:
                            roots, args.limit)
     if args.apply:
         return cmd_apply(os.path.abspath(args.out), os.path.abspath(args.work))
+    if args.record:
+        return cmd_record(os.path.abspath(args.work), os.path.abspath(args.record))
     ap.print_help()
     return 1
 

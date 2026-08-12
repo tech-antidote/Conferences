@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules.pdf"
 pages: 82
 sha256: "fcc431aadc9228789bca78527ee0a7a5e8a355c33a37c9f74c7c2c7f0aa1314e"
-text_chars: 25869
+text_chars: 25070
 ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:10:34Z"
+converted_at: "2026-08-12T04:01:05Z"
 ---
 # Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules
 
 **Speakers:** Brett Hawkins  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Brett Hawkins_Hiding in the Clouds Abusing Azure DevOps Services to Bypass Microsoft Sentinel Analytic Rules.pdf` (82 pages)
+
 
 ## Slide 1
 
@@ -347,14 +353,13 @@ IBM Security / © IBM Corporation 2023
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Initial Access — Username/Password
 BE Microsoft
 Enter password
-evcccccccccccccccccs|
-© user3
 Forgot my password
 Cc Azure DevOps
 ThislsTestOrganization1 ThislsTestOrganization1
@@ -374,14 +379,13 @@ IBM Security / © IBM Corporation 2023
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Initial Access — PAT
 Base64 encode PAT to be used against
 REST API methods
-1BM Security / © IBM Corporation 2023
-ia$
 >>>
 >>>
 >>>
@@ -392,12 +396,10 @@ pat = ":" + “yourPAT"
 patBytes = pat.encode("ascii")
 b64Bytes = base64.b64encode(patBytes)
 >>> b64PAT = b64Bytes.decode("“ascii")
->>> print (b64PAT)
 EncodedPATWillBeOutputHere
 >>>
 -H $'User-Agent: Some User Agent’
 -H $'Authorization:
--H $'Content-Type: application/json'
 Basic base64EncodedPAT '
 -H $'Host: dev.azure.com' $'https://dev.azure.com/YourOrganization '
 23
@@ -789,24 +791,20 @@ IBM Security / © IBM Corporation 2023
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Azure DevOps PAT used with Browser
 Rule Logic
 Bypass
-1BM Security / © IBM Corporation 2023
 AzureDevOpsAuditing
 | where AuthenticationMechanism startswith "PAT"
 // Look for useragents that include a redenring engine
 | where UserAgent has_any ("Gecko", "WebKit", "Presto", "Trident", "EdgeHTML", "Blink")
 | extend timestamp = TimeGenerated, AccountCustomEntity = ActoxUPN,
-—IPCustomEntity = IpAddress
--H $'Content-Type: application/json'
--H $'User-Agent: Random User Agent '
 -H $'Authorization: Basic base64EncodedPAT '
 -H $'Host: dev.azure.com'
-$'https://dev.azure.com/YourOrganization/ apis/projects?api-version=7.0'
 53
 ```
 
@@ -822,13 +820,13 @@ IBM Security / © IBM Corporation 2023
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Azure DevOps Personal Access Token misuse
 Rule Logic
 Bypass
-1BM Security / © IBM Corporation 2023
 // Allowlisted UPNs should likely stay empty
 let AllowlistedUpns = datatable(UPN:string) ['foo@bar.com', 'test@foo.com'];
 // Operation Name parts that will alert
@@ -837,18 +835,13 @@ ddatatable (OperationNamePart: string) ['Security.','Project.','AuditLog.','Exte
 // Distinct Operation Names that will flag
 let HasExactBlocklist =
 ddatatable(OperationName: string) ['Group.UpdateGroupMembership.Add','Library.ServiceCon
-nectionExecuted', 'Pipelines.PipelineModified',
 'Release.ReleasePipelineModified', 'Git.RefUpdatePoliciesBypassed' | ;
-AzureDevOpsAuditing
 | where AuthenticationMechanism startswith "PAT" and (OperationName has_any
 (HasAnyBlocklist) or OperationName in (HasExactBlocklist) )
--H $'Content-Type: application/json'
 -H $'User-Agent: Some User Agent’
 -H $'Host: vssps.dev.azure.com'
 -H $'Content-Length: 0'
 -b $'X-VSS-UseRequestRouting=True; UserAuthentication=cookieValue '
-I$ https: //vssps.dev.azure.com/YourOrganization/_apis/graph/memberships/userDescrip
-ttor/groupDescriptor?api-version=7.0-preview.1'
 54
 ```
 
@@ -962,12 +955,12 @@ IBM Security / © IBM Corporation 2023
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 New Rule:
 Azure DevOps Persistence Tec
-Nnnique Detected
 Ss» Azure DevOps Persistence Technique Detected
 ES incident ID: 163
 & Unassigned Vv New Vv Medium
@@ -985,16 +978,13 @@ TimeGenerated [UTC]
 AuthenticationMechanism
 ActorUPN
 ActorDisplayName
-lpAddress
 UserAgent
 OperationName
 Details
 2023-04-17T18:30:56.2051989Z
 $2S_ServicePrincipal
 user4
-Token. PatCreateEvent
 Personal Access Token “eAWXotZg" was created.
-tO
 IBM Security / © IBM Corporation 2023
 63
 ```
@@ -1027,17 +1017,14 @@ IBM Security / © 2023 IBM Corporation
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Activities aggressor-Aggressor ~ Nov3 08:35 @
 >) Cobalt strike - 7 @
 Cobalt Strike View Payloads Attacks Site Management Reporting Help’
-rt eon<=no @®+esa
-Aw Or
 ‘= 192.1
-‘@
-@
 ] - x64 | hawk | 10088 - x64
 ```
 

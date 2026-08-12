@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Kirsten Bay_The Integration Cyber Security and Insurance The Journey of Cysurance.pdf"
 pages: 22
 sha256: "4a29d79244974b96ad53ea18b375c1ffb1348cf27f88f3cac694ad513a23c191"
-text_chars: 7557
+text_chars: 7471
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:18:51Z"
+converted_at: "2026-08-12T04:13:07Z"
 ---
 # The Integration Cyber Security and Insurance The Journey of Cysurance
 
 **Speakers:** Kirsten Bay  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Kirsten Bay_The Integration Cyber Security and Insurance The Journey of Cysurance.pdf` (22 pages)
+
 
 ## Slide 1
 
@@ -98,18 +104,16 @@ Source: Chubb Cyber Risk Index
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-USA 2&0e25
 Then...COVID
 1600%
 140% PHISHING ATTACKS
 related to coronavirus went up HE overall
 667% in March 2020. a Under $25M
-BB over $501m
 1200%
 1000%
 800%
@@ -160,12 +164,10 @@ Coverage: DOWN
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e25
 What occurred during your organization’s last cybersecurity insurance renewal?
 <$50M Revenue $50M - $1B Revenue >$1B Revenue
 Pp re m I Ul ms: ewer insurers were willing to offer

@@ -12,7 +12,7 @@ duration_seconds: 2256
 words: 7727
 text_chars: 41617
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Claude - Climbing a CTF Scoreboard Near You

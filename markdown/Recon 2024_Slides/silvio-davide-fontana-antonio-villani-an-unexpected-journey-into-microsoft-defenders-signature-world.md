@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Silvio & Davide Fontana & Antonio Villani_An unexpected journey into Microsoft Defender's signature World.pdf"
 pages: 42
 sha256: "e271262badd4cfe03f23872f9978d731fead7b00352261983ddec5aad831ff73"
-text_chars: 20681
+text_chars: 18025
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:30:23Z"
+converted_at: "2026-08-12T06:17:58Z"
 ---
 # An unexpected journey into Microsoft Defender's signature World
 
 **Speakers:** Silvio, Davide Fontana, Antonio Villani  
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Silvio & Davide Fontana & Antonio Villani_An unexpected journey into Microsoft Defender's signature World.pdf` (42 pages)
+
 
 ## Slide 1
 
@@ -48,9 +53,9 @@ https://shorturl.at/bPCzW
 
 @DrCh40s
 
-```
+\```
 Davide
-```
+\```
 
 - <u>`Silvio Antonio Davide`</u> ❑ Co-founder of Retooling LLC ❑ Co-founder of Retooling LLC ❑ Master’s degree student in Cybersecurity @ University of Sapienza
 
@@ -74,17 +79,17 @@ Davide
 
 @davidefont96
 
-```
+\```
 silvio@retooling.io
-```
+\```
 
-```
+\```
 antonio@retooling.io
-```
+\```
 
-```
+\```
 davidefontana96.df@gmail.com
-```
+\```
 
 ## Slide 4
 
@@ -131,9 +136,9 @@ WdFilter.sys WdBoot.sys
 
 ❑ Located in: `C:\ProgramData\Microsoft\Windows`
 
-```
+\```
 Defender\Definition Updates\<RandomGUID>\
-```
+\```
 
 ❑ Portable Executable:
 
@@ -161,66 +166,66 @@ Compressed data
 
 # Various types of signatures
 
-```
+\```
 switch (a1)
     {
 ...
-```
+\```
 
-```
+\```
 case 0x79u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_VDLL_X86";
 case 0x6Bu:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_WVT_EXCEPTION";
 case 0x6Cu:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_REVOKED_CERTIFICATE";
 case 0x70u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_TRUSTED_PUBLISHER";
 case 0x71u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_ASEP_FILEPATH";
 case 0x73u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_DELTA_BLOB";
 case 0x74u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_DELTA_BLOB_RECINFO";
 case 0x75u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_ASEP_FOLDERNAME";
 case 0x77u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_PATTMATCH_V2";
 case 0x78u:
-```
+\```
 
-```
+\```
 return"SIGNATURE_TYPE_PEHSTR_EXT";
 ...
     }
-```
+\```
 
 ## Slide 9
 
@@ -234,11 +239,11 @@ return"SIGNATURE_TYPE_PEHSTR_EXT";
 
 4. Run this `python3` script from the same folder of `x.gz` :
 
-```
+\```
 importzlib
 compressed=open('x.gz', 'rb').read()
 decompressed=zlib.decompress(compressed, -zlib.MAX_WBITS)
-```
+\```
 
 No gz header
 
@@ -281,9 +286,9 @@ WdFilter.sys WdBoot.sys
 
 # Phase1: Signatures Database preload
 
-```
+\```
 ksignal
-```
+\```
 
 ##### `modprobe_init_worker`
 
@@ -346,180 +351,43 @@ used to perform a scan.
 
 # Numbers and stats: Occurrences
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 30/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Occurrences
-va)
-J
-©)
 J
 wn
-xe)
-Cc
-.@)
-as
-@
-ne}
 =
 >
 z
 Overall
 Occurences
-1X3 WLSHSOC 3dAL JYNLWNOIS
-JOUNOSIULINNdXT JdAL JUNLWNOIS
-1X3 ULSHONNI 3dA.
-IdWISNVI1D adAL
-1X3 YLSHDING 3dAL SYNLWNOD
-SLINWS3G 3dAL JYNLWNOIS
-p9dOSJdAL SYNLYNOIS
-dOSIISW 3dAL SUNLWNDIS
-Hivd3ls daS¥ 3dAL SYNLWNOIS
-JLNYG 3dAL JUNLWNOIS
-p9XadOJ 3dAL JYNIWNOIS
-XalvdN 3dAL JUNLWNOIS
-AJNDIN AdAL JUNLWNOIS
-ZEYIAATOd JdAL SYNLWNOIS
-Id 3dAL JYNLYNOIS
-LXd ULSHVAVE 3dAL SUNLWNOIS
-Hivd3ild adAL JYNLVNOIS
-ANOTVONVISWNT SdAL JHNIWNOIS
-1X3 YISHLIOLAY 3dAL JUNLVNOIS
-IvdWead adAl SunlvNOls
-XadO4 adAL SUNLVNOIS
-dOJ 3dAL JUNIYNDIS
-IWON 4dAL SUNLYNODIS
-Ix WISHYV JdAL SYNIWNOIS
-1X3 YLSHOHIVAW 3dAL JUNIWNOIS
-DISLLW3D GINOATY JdAL IUNLWNOIS
-POCIN 3dAL JUNLWNOIS
-JINVNYSCIOS 3dAL JYNLVNOIS
-1X2 ULSHOWD 3dAL SUNLYNDIS
-DaUCIOND 3dAL FUNLWNOIS
-93009d OND SdAL SUNIYNOIS
-OINI WE 3dAL JYNLWNOIS
-LOO 3dAL JNLVNOIS
-IxXd YISHITA JdAL SUNLVNOIS
-1X3 JAWLOIS 3dAL JHNIVNOIS
-YOLVDINOOVY JdAL JUNIVNOIS
-1x3 ULSHXIO JdAL JUNIVNOIS
-3009d OWDVIN adAL SUNLYNOIS
-ZEXIAN 3dAL FUNLVNOIS
-1X3 ULSHOYDVIN SdAL FUNIVNOIS)
-WLSH3d 3dAL JUNLWNOIS
-TWINHON “1dINISN 4dAL JYNLWNOIS
-JIULOIS 3dAL JUNLWNOIS
-ADHNOS OYDVIN 3dAL JYNIWNOIS
-DIUFTNISHD 3dAL IYNLWNOIS
-aLNUG LdIHISN JdAL JUNLYNOIS
-S IdldISN 3dAL JUNIWNOIS
-DILWLSad 3dAL 3YNLWNOIS
 GINS 3dAL 3YNLWNOIS
-XAUOLWDINDOVV JdAL JUNLVNOIS
-GIN 3dAL JYNIWNOIS
-IXF WLSH3d AdAL JUNIWNOIS
-JQUIN 3dAL SUNLWNOIS
 ```
 
 ## Slide 16
 
 Slicing on specific threats
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 14/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-v
 J
-.@)
-@
-Sam
-—
-a)
-VU
-ve
 U
-c<))
-oF
-wn
-Cc
-e)
-0)
 =
-LY
-n
 Keylogger
 Emotet
-3dALSUNIWNOIS
-REOSN”3dAL JUNIVNOIS
-MISHOHOWW dA SUNIWNOIS
-xa WISHIT 3dALUNLVNDIS
-OJNIWe"3dALSuNIWNOIS
-Wa LdIHISN”3dAL JHNIWNOIS
-IN GRULOIS-34AL-SUNLYNOIS
-Lx@WISHXAC™3dAL3UNIYNOIS
-WS 33KLDIS-3dAL SUNIWNDIS
-’ISHad 3dAL3UNIWNOIS
-DUWISad 3dAL SUNIWNOIS
-JFULOIS 3dAL FUNIWNOIS
-GINSadAL 3UNLYNOIS
-GIN"3dAL”3unIWNOIS
-“IWOaUDOVY3dAL 3UNLYNOIS
-3OUON-3dAL-3UNLYNO
-Axa WISH3d 3d SUNIWNOIS
-AXT WLSHOWD 3dAL JUNIWNOIS
-ZEYIAN 3dAL JUNLWNOIS
-OJNIWS"3dAL-3UNIWNOIS
-30 GIOAIL 34ALJUNLWNDIS
-AXTUISHYY3dAL SUNLYNOIS
-FIULOIS 3dAL JUNLYNOIS
-dS 1dl¥ISN3dAL 3UNIWNOIS
-POGIN’3dAL JUNLYNOIS
-DUWISSd SdAL SUNLWNOIS
-YOLWOIYSOVY 3dAL JUNLYNOIS
-(02d OWDVW3dAL SUNLYNOIS
-GIN 3dAL 38NLYNOIS
-JOU SdAL SUNLYNOIS
-WE" LdIHISN”3dAL-SUMLWNOIS
-UISH3d 3dAL JUNIWNDIS
-Wa 33HLSIS 3dAL SUNLWNOIS
-GINS "3dAL 3UNLWNOIS
-UISHOWDWN 3dAL-JUNLWNOIS
-IWOSUDOV 3dAL SUNLYNOIS
-INT WISHAd 3dALFUNLYNO!
-EY 24AL"BHMLYNOIS
-DEO 2A BeRUMNONS
-une” Lanosn"3en" 340
-NOIVORHOOWY 3eAL"BUnUINDIS
-DOrEAT RAINS
-4A. BanLYNOIs
 Meterpreter
-aUL9IS3dALSUMUYNDIS
-ZE¥IAN aA” 3HNLYNOIS
-YaLvay” 34 JUNIYNOIS
-2 MISHGW34AL-FHNLYNOIS
-duuwisad”3dA1” 3UNLWND!
-N“AdRIOSN73dAL3UNLWND
-‘YSCINT3dAL SHNIYNOIS
-xT WISHITE-3aALJUNLYNOIS
-WLSHad 34” 3HNLYNOIS
-4S"1dI89SN“3dAL” 3UNLWNOIS
-OuNI-Wa3dAL3UNLWNOIS
-Do MLSHUY3EAL-SUNLYNDIS
-9 LdIISN3dALBUMUWNOIS
-GINS"3éAI-3unuWNOIS
-3080) 3d SUNLYNOIS
-vORUDOWY 3A FUNLWNOIS
-GIN"3dAL"34
-IVOIHDOVY34AL-FUNIWND!
-W9"a3UL9IS”3dAL”-SUNIVNOIS
-Da uisHad 3dAL uN:
 ```
 
 ## Slide 17
 
 General structure of signatures
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 General structure of signatures
@@ -535,9 +403,9 @@ SUB-RULE 2
 
 ❑ One of them is the 4 bytes rule id (e.g. `0x8002be5f` )
 
-```
+\```
 createrecid
-```
+\```
 
 `typedef struct _STRUCT_` COMMON `_SIGNATURE_TYPE { UINT8 ui8SignatureType; // defines the type of the signature UINT8 ui8SizeLow; // low byte size of the signature UINT16 ui16SizeHigh; // high byte size of the signature BYTE pbRuleContent[]; // content of the rule };`
 
@@ -547,7 +415,7 @@ createrecid
 
 - ❑ Defines the start of a threat with the relative
 
-```
+\```
 typedefstruct_STRUCT_SIG_TYPE_THREAT_BEGIN {
 UINT8ui8SignatureType;
 UINT8ui8SizeLow;
@@ -560,7 +428,7 @@ CHARlpszThreatName[ui8SizeThreatName];
 BYTEunknownBytes3[9];
 } STRUCT_SIG_TYPE_THREAT_BEGIN,
 * PSTRUCT_SIG_TYPE_THREAT_BEGIN;
-```
+\```
 
 detection name e.g. `!Plugx.C`
 
@@ -578,19 +446,19 @@ detection name e.g. `!Plugx.C`
 
 ❑ `pbRuleContent` value is the same as the corresponding ui32SignatureId used in the SIGNATURE_TYPE_THREAT_BEGIN
 
-```
+\```
 typedefstruct_STRUCT_SIG_TYPE_THREAT_END
  {
-```
+\```
 
-```
+\```
 UINT8  ui8SignatureType;
 UINT8  ui8SizeLow;
 UINT16 ui16SizeHigh;
 BYTE   pbRuleContent[];
 } STRUCT_SIG_TYPE_THREAT_END,
 * PSTRUCT_SIG_TYPE_THREAT_END;
-```
+\```
 
 ## Slide 21
 
@@ -608,9 +476,9 @@ typedef struct _STRUCT_COMMON_SIGNATURE_TYPE { UINT8  ui8SignatureType; UINT8  u
 
 # PEHSTR and PEHSTR_EXT common header
 
-```
+\```
 typedefstruct_STRUCT_PEHSTR_HEADER {
-```
+\```
 
 - ❑ `ui8TresholdRequiredLow:` the threshold required to obtain a detection from Windows Defender (low part)
 
@@ -622,7 +490,7 @@ typedefstruct_STRUCT_PEHSTR_HEADER {
 
 - ❑ `pbRuleData[]:` contains all the sub-rules, which are used to perform byte-matching detection.
 
-```
+\```
 UINT16 ui16Unknown;
 UINT8ui8TresholdRequiredLow;
 UINT8ui8TresholdRequiredHigh;
@@ -631,15 +499,15 @@ UINT8ui8SubRulesNumberHigh;
 BYTEbEmpty;
 BYTEpbRuleData[];
 } STRUCT_PEHSTR_HEADER, * PSTRUCT_PEHSTR_HEADER;
-```
+\```
 
 ❑ Both types of signatures share the same structures
 
 ❑ The main difference resides in a slightly different format of the sub-rules structure
 
-```
+\```
 SIGNATURE_TYPE_PEHSTR_EXT
-```
+\```
 
 - ❑ `SIGNATURE_TYPE_PEHSTR` is used to detect “readable string”
 
@@ -657,7 +525,7 @@ SIGNATURE_TYPE_PEHSTR_EXT
 
 - ❑ `ui8CodeUnknown` : unknown field.
 
-```
+\```
 typedefstruct_STRUCT_RULE_PEHSTR_EXT {
 UINT8 ui8SubRuleWeightLow;
 UINT8 ui8SubRuleWeightHigh;
@@ -666,7 +534,7 @@ UINT8 ui8CodeUnknown;  //_EXT only
 BYTEpbSubRuleBytesToMatch[];
 } STRUCT_RULE_PEHSTR_EXT,
 *PSTRUCT_RULE_PEHSTR_EXT;
-```
+\```
 
 - ❑ `pbSubRuleBytesToMatch[]:` the bytes that must be found to obtain a detection.
 
@@ -724,9 +592,9 @@ purple.
 
 ❑ The signature has a `ui16TresholdRequired` e qual to `0x33`
 
-```
+\```
 Sample hexdump
-```
+\```
 
    - ❑ To obtain a detection the threshold must be reached
 
@@ -752,11 +620,11 @@ Sample hexdump
 
 Scan your stuffs with `MpCmdRun.exe` utility provided by Windows Defender itself
 
-```
+\```
 PS C:\Program Files\Windows Defender> .\MpCmdRun.exe
 –Scan –ScanType3 –File <filepath> -
 DisableRemediation–Trace –Level 0x10
-```
+\```
 
 ## Slide 28
 
@@ -764,9 +632,9 @@ DisableRemediation–Trace –Level 0x10
 
 - ❑ Add a folder to the Defenders exclusions
 
-```
+\```
 PS> Add-MpPreference -ExclusionPath 'C:\YOUR_PATH_HERE'
-```
+\```
 
 - ❑ Copy the Darby zip into the excluded folder and uncompress it (pwd:infected)
 
@@ -822,29 +690,29 @@ Pattern `90 01 XX:`
 
 - ❑ An example is highlighted in blue
 
-```
+\```
 PlugxA-Sub-Rule3-Example{
 strings:
-```
+\```
 
-```
+\```
 $sub_rule_3_hex = {
-```
+\```
 
-```
+\```
 45 78 69 74 C7 85 ?? FF FFFF54 68
 72 65 66 C7 85 ?? 04 FF FFFF61 64
-```
+\```
 
-```
+\```
 }
 condition:
 $sub_rule_3_hex
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 31
 
@@ -878,21 +746,21 @@ Pattern `90 01 XX` detection:
 
 - ❑ Example of pattern highlighted in cyan
 
-```
+\```
 rule PlugxA-Sub-Rule2-Example {
 strings:
-```
+\```
 
-```
+\```
 $sub_rule_2_hex = {75 61 6C 41 C7 [0-16] 6C 6C6F 63 }
 condition:
-```
+\```
 
 - `$sub_rule_2_hex`
 
-```
+\```
 }
-```
+\```
 
 ## Slide 33
 
@@ -916,25 +784,25 @@ Pattern `90 03 XX YY` :
 
 ❑ In the matching sample either Sequence_A or <u>Sequence_B</u> may appear
 
-```
+\```
 rule BankerYB_Sub_Rule1_Example{
-```
+\```
 
-```
+\```
 strings:
-```
+\```
 
-```
+\```
 $sub_rule_1_hex = { 50 6f 6c 69 63 69 65 73 5c 45 78 70 6c 6f 72 65 72 5c 52 75 6e 22 20 2f 76 20 22
 (43 49 50 41|56 49 50 41) 22 20 2f 64 20 43 3a 5c 55 6e 6e69 73 74 74 61 6c 6c2e
 65 78 65 20 2f 74 20 22 52 45 47 5f 53 5a 22 20 2f 66 00 90 00
 }
 condition:       $sub_rule_1_hex
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 35
 
@@ -942,49 +810,49 @@ condition:       $sub_rule_1_hex
 
 ❑ `XX` : the length of the expected bytes
 
-```
+\```
 rule Pattern-90-04-example {
-```
+\```
 
-```
+\```
 strings:
-```
+\```
 
 ❑ `YY` : the length of the regex-like pattern in the figure highlighted in violet
 
-```
+\```
 $example1_90_04 =
-```
+\```
 
-```
+\```
 { 68 74 74 70 3a 2f 2f61 72 70 2e 31 38 31 38[30-39] [30-
 39]2e 63 6e 2f 61 72 70 2e 68 74 6d 90 00 }
-```
+\```
 
 ❑ The bytes following `90 04 XX YY` describes the pattern itself, in a regex-like fashion:
 
 ###### `$example2_90_04 =`
 
-```
+\```
 { 5c 48 61 70 70 79[30-39] [30-39] 68 79 74 2e 65 78 65 90
 00 }
-```
+\```
 
 ❑ In this example the bytes are `30 2d 39` ,
 
-```
+\```
 condition:
-```
+\```
 
 highlighted in blue which is `0-9`
 
-```
+\```
 $ example1_90_04 and $ example2_90_04
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ##### example1
 
@@ -1018,7 +886,7 @@ example1
 
 - ❑ The bytes following `90 05 XX YY` describes the pattern itself, in a regex-like format
 
-```
+\```
 rule Pattern-90-05-example{
 strings:
 $example_90_05 =
@@ -1026,7 +894,7 @@ $example_90_05 =
 condition:
 $example_90_05
 }
-```
+\```
 
 ## Slide 38
 

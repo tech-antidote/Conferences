@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Yakir Kadkoda & Michael Katchinskiy & Ofek Itach_Breaching AWS Accounts Through Shadow Resources.pdf"
 pages: 101
 sha256: "8631788edae35599a1d6ce9a7f825b1c7e2caada1accf1facf4b1ccec2d6e25d"
-text_chars: 32540
-ocr_pages: 44
+text_chars: 27736
+ocr_pages: 35
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:40:53Z"
+converted_at: "2026-08-12T04:44:58Z"
 ---
 # Breaching AWS Accounts Through Shadow Resources
 
 **Speakers:** Yakir Kadkoda, Michael Katchinskiy, Ofek Itach  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Yakir Kadkoda & Michael Katchinskiy & Ofek Itach_Breaching AWS Accounts Through Shadow Resources.pdf` (101 pages)
+
 
 ## Slide 1
 
@@ -31,14 +37,10 @@ Michael Katchinskiy Ofek Itach
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-| i
-)
-q S
-pisekhat
-USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
 Breaching AWS Accounts
@@ -78,14 +80,12 @@ Some treat it as a secret, others don't
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 O Plerion Following
 3,758 followers
--®
 In 2022 AWS unequivocally stated that “Account IDs are not considered
 sensitive.” We think they are closer to secrets than most of us would like to
 admit, so we're re-opening the debate. Check out the data and attack examples
@@ -108,7 +108,6 @@ jords to IAM users and roles) and have not had negative consequences.
 iblic for various reasons, and as far as | know, they ? ;
 BadDoggie
 do not have negative conse
-ences: https://ait t
 labs/cloudmapper/blob/master/vendor.
 aml Not sure if it’s changed, but when | worked at AWS (almost 2 years ago) Account Numbers were definitely
 considered sensitive,
@@ -129,11 +128,10 @@ e IDs.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat ‘2
-USA 2024
 they are not considered secret,
 ```
 
@@ -178,11 +176,10 @@ Mitigation and
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Console Home into
 Services Q
 CloudFormation > Stacks > Create stack
@@ -191,19 +188,15 @@ Create stack
 Create stack
 Step 2
 Specify stack details Specify template
-eeVA
 or YAML file that d
 Info
 A template is a
 Configure stack options
 Template source
-Step 4
 Review and create © Amazon $3 URL
-5
 Upload a template file
 —N Choose file
 [ sam_templateyaml
-$3 URL: https://s3. us-east-1.amazonaws.conycf-templates-9xdSrtihgxhs-us-east-1 /P024-07-07T142733. 619Z¢66-sam_template.yaml
 ```
 
 ## Slide 11
@@ -224,11 +217,10 @@ Might go **unnoticed** by the account owner
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 S3 Buckets as Shadow Resources
 Specify template info
 A template is a JSON or YAML file that describes your stack
@@ -238,7 +230,6 @@ Upload a template file
 fA Choose file
 sam_template.yaml
 AML formatte
-$3 URL: https://s3.us-east-1.amazonaws.conf/cf-templates-9xd5rtingxhs-us-east-1/2024-07-07T142733.619Zc66-sam_templateyaml
 ```
 
 ## Slide 13
@@ -324,11 +315,11 @@ us-east-1 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 WHAT IF ...?
 The CloudFormation
 Bucket Already Exists
@@ -340,11 +331,10 @@ Bucket Already Exists
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 # One Cloud Please Blog Projects Absit Contoct
 S3 Bucket Namesquatting - Abusing predictable S3
 bucket names
@@ -371,11 +361,11 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 WHAT IF ...?
 The Attacker Opens the
 Bucket for Public Access
@@ -394,11 +384,10 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Block public access (bucket settings)
 Block all public access
 ©on
@@ -422,22 +411,6 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pidekhat , i
-USA 2024
-"Version": "2012-10-17"
-"Statement": [
-{
-"Effect": "Allow",
-SPRUNGUDAL a sitar,
-SAction=: “s33*" , i
-"Resource": [
-"arn:aws:S3:::cf-templates-123abcdefghi-eu-west-2/*",
-"arn:awS:s3:::cf-templates-123abcdefghi-eu-west-2"
-```
-
 ## Slide 30
 
 ## Information Disclosure
@@ -452,11 +425,11 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024
 WHAT IF ...?
 The Attacker Modifies
 the Template Files?
@@ -548,39 +521,25 @@ PoC
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 2024
-{Region}
-Jates-a3giv31 ap90h-
-cf-temp
-```
-
 ## Slide 40
 
 ##### The Hash
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 master
 Blame
 dule CloudFormationTool
-def s3_bucket_name( region)
 f bucket.nil?
 name = cf_bucket_name(region)
 log "Creating CF template bucket #{name}"
 awss3(region) .create_bucket ({
 acl private",
 bucket: name,
-object_ownershi| ‘BucketOwnerPreferred'
 }.merge(if region == 'us-east-1' then {} else { create_bucket_configuration: { location_constraint: region } } end))
 awss3(region) .delete_public_access_block({bucket: name})
 name
@@ -599,15 +558,13 @@ end
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piStichat , , a
-USA 2024
 def cf_bucket_name(region, key = nil)
 # generate random key if one wasn't given
 key ||= ((@...12).map { [x'a'..'z',*'®'..'9'] [rand(36)] }.join)
-"cf-templates-#{key}-#{region}"
 end
 ```
 
@@ -616,16 +573,14 @@ end
 The Hash
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat 4
 USA 2024 -
 def cf_buck
 g enerat
 key ||= ( ] }.join)
-"cf-temp!
 end
 ```
 
@@ -637,37 +592,27 @@ end
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
-0
 Filter by 860 files
 Code
 Repositories
-Ps _mplateFromURL": “https: //s3.amazonaws. com/€f2tenipilates-liiiinmmnn UUS=6aSt=1/
 Issues
 Pull requests
-= ieee biter: : chia ihinghivk metal hate abe Se
 Discussions
-Metlo Manager: https: //€f=tenp lateS=_iIININNN lUS=WESt=1. s3.us-west-1.amazonaws.com/i
-Users - Metlo Ingestor: https: //Ef=tenpl Stes iN T=US=HESt=I. s3.us-west-1.amazonaws. com
 More
 Code Search <% Cody About Sourcegraph
-cf-templates-[a-z0-9) {12}-[a-z] {2
 i 278 results in 6.75%
 Filter results cme
 By type
 joning artifact_parameters {
-url = “https: //s3.amazonaws. con/€f=tenp lates sal aUs=eaSt=1/tenp1. json"
 4} Code
-/ Repositories
 Paths
 ‘Symbols
 Commits
 Diffs
-By repository : “ofatenplates-eans jeeus-east=1"
 ```
 
 ## Slide 44
@@ -676,11 +621,10 @@ By repository : “ofatenplates-eans jeeus-east=1"
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Eureka
 v ™S aws-samples/aws-glue-samples - examples/notebooks/hudi2redshift-incremental-load.ipynb
 115
@@ -737,7 +681,8 @@ Crawling Automation
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Create stack
@@ -749,7 +694,6 @@ Specify template .
 azon $3 UR © Upload a template Syne from Git
 Jpload a template file
 Choose file
-hello_world.yamlt
 © 2024, Amazon Web Services, inc. or its affiliates. Privacy Terms
 ```
 
@@ -757,7 +701,8 @@ hello_world.yamlt
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Open
@@ -773,7 +718,6 @@ Users/ofekitach/Downloads/glue_recording.pcapng (101 MB)
 JUsers/ofekitach/Downloads/aws_apprunner.pcapng (27 MB)
 Capture
 7
-..using this filter: [Bl
 Ethernet Adapter (enS): enS
 Ethernet Adapter (en6): en6
 Thunderbolt 1: ent
@@ -782,7 +726,6 @@ Thunderbolt 3: en3
 Thunderbolt Bridge: bridgeO
 Subosen 4K Graphic Docking: en7
 gifo
-stfO
 © Cisco remote capture: ciscodump
 © TrailShark: cloudtrail
 © Random packet generator: randpkt
@@ -797,7 +740,6 @@ L fy to load or capture
 Wireshark Discord
 The Wireshark Network Analyzer
 ~| + Made By Recorder Derivative Event
-*  Allinterfaces shown ¥
 Donate
 No Packets Profile: trailshark-profile
 ```
@@ -810,11 +752,10 @@ No Packets Profile: trailshark-profile
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 TrailShark
 CreateUploadBucket [permission Grants permission to upload Write
 only] templates to Amazon S3
@@ -823,9 +764,7 @@ CloudFormation console and is
 not documented|}n the API
 reference
 DescribeRegions 69 md/Botocore#1. 34.4
-CreateBucket €u-south-1 = $3. amazonaws.com cloudformat ion. amazonaws.com
 PutBucketEncryption eu-south-1 s3.amazonaws.com cloudformat ion. amazonaws. com
-PutBucketPublicAccessBlo.. eu-south-1  s3.amazonaws.com cloudformation.amazonaws.com
 ```
 
 ## Slide 52
@@ -834,66 +773,33 @@ PutBucketPublicAccessBlo.. eu-south-1  s3.amazonaws.com cloudformation.amazonaws
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA 2024
-Digging for Potential Buckets
-fof
-a, ‘
-2
-sant
-Stlasticbeang LBB \y,
-sole RTT TERETE Tay,
-<sc= es ahgnes statsa R
-oS cqreftustaressinans powell ici Cia a0 tee
-"aw r-s aws-controgawe sy ef ar
-Ss
-terraform-asifine—-bootstrap aws-gLlue-script IR
-```
-
 ## Slide 53
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 serverless-{AWS:: }-{AWS::
 eks-emr-cluster-pod-templates-{AWS: :
 dstack-{AWS: : }-{AWS: :
 s3-analytics-{AWs:: }-{AWS::
-macro-template-default-{AWS: :
 aws-glue-segment-dev-{AWS:
 spp-code-{AWS
 sra-staging-{AWS
-codebuild-{Aw:
 aws-glue-studio-transforms-{AWS: :
 aws-waf-logs-{AW:
-aws-analytics-immersion
-aws-vpc-f Low-logs-{AWS 4
 aws-pca-revocation-crl
 terraform-state-{AWs: :
-aws-Landing-zone-s3-access-L
 sc-terraform-engine-state-{
 aws-glue-scripts-{AWS::
 terraform-engine-bootstrap-,
-aws-glue-jars-{AWS::
 aws-accelerator-central-log|
-sam-artifacts-{AWS::
 cdk-hnb659fds-assets-{AWs: :
-aws-emr-resources-{AW:
-aws-glue-assets-{AW!
 elasticbeanstalk-{AWs: :
 aws-cloudtrail-logs-{AWs: :
-sagemaker-{AW:! }-{AWS::
 aws-athena-query-results-{AWS
-aws-logs-{AWS::
-codepipeline-{AW!
-aws-codestar-{AW!
 aws-controltower-Logs-{AWS: :
 aws-emr-studio-{AWS: :
 ```
@@ -906,25 +812,20 @@ Are they exploitable?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 serverless-{AWS:: }-{AWS
 eks-emr-cluster-pod-templates-{AWS
 dstack-{AWS: : }-{AWS::
 s3-analytics-{AWs:: }-{AWS::
 macro-template-default-{AWS
-aws-glue-segment-dev-{AW:
 spp-code-{AWS: :
-medic bl phot 5 35 . . .
 codebuild-{AWS Wh h bl
 Sea ieetia icn services are responsipie
-aws-waf-Logs-{AWS:: aa 2
 aws-pca-revocation-crl
 terraform-state-{AWs: :
-aws-lLanding-zone-s3-access-L
 sc-terraform-engine-state-{
 aws-glue-scripts-{AWS: :
 terraform-engine-bootstrap
@@ -932,15 +833,12 @@ aws-glue-jars-{AWS::
 aws-accelerator-central-log| . 2
 aws-emr-resources-{AWS:: }-{AWS::
 aws-glue-assets-{AWS: }-{AWS::
-elasticbeanstalk-{AWS }-{AWS: :
 aws-cloudtrail-Logs-{AWS: :
 sagemaker-{AWS: : }-{AWS:
 aws-athena-query-results-{AWS:
 aws-Logs-{AWS }-{AWS
-codepipel ine-{AW: }-{AW!
 aws-codestar-{AWS: : }-{AWS::
 aws-controltower-logs-{AWS: : }-{AWS: :
-aws-emr-studio-{AWS: : }-{AWS: :
 ```
 
 ## Slide 55
@@ -954,16 +852,6 @@ EMR
 SageMaker
 
 CodeStar
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Glue Service Catalog EMR
-Co Ou
-<
-d Les
-SageMaker CodeStar
-```
 
 ## Slide 56
 
@@ -987,14 +875,12 @@ Glue Vulnerability aws-glue-assets-{AWS::AccountId}-{AWS::Region}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 What is AWS Glue?
 ul Amazon f
-a ‘ Notebook: .
 & Amazon S3 Y AWS Glue Studio & Lata ae Des . Amazon Redshift
 Choice of interfaces
 gy Amazon Data lakes
@@ -1020,12 +906,10 @@ Data sources
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
-Untitledjob 4
 Welcome to AWS Glue Visual Script Job details Data quality
 Get started by setting up your account and users, cq
 Getting started
@@ -1037,7 +921,6 @@ from awsglue.utils import getResolvedoptions
 2
 3
 Job run monitoring AWS Glue x AWS Glue > Jobs 4 from pyspark.context import SparkContext
-— 5
 6
 7
 8
@@ -1052,7 +935,6 @@ Visual ETL 10
 _ 12 glueContext = GlueContext(sc)
 > Data Integration and ETL Job run monitoring _ Glue 4 13 spark = glueContext.spark_session
 14 job = Job(gluecontext)
-Data Catalog tables 4 - ' '
 9 15 job.init(args['JOB_NAME'], args)
 >» Legacy pages
 Data connections 16 job.commit()
@@ -1092,31 +974,20 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Glue Service Role
 Basic properties info { {
 Name
 Untitled job
 Description - optional eiere
-s53:Listeucket",
-"S321 Buckets", 1,
-"s3:GetBucketacl",
 jons can be up to 2048 characters Lom “BC2:
-IAM Role "ec:
-at paap rn Ue asa anteater etc lama aa ' "Bcd! orkInterface”, *
-AWSGlueServiceRole v Cc | ,
-“BC2:
-TeC2: ‘ibesubnets",
 tribute",
 permissionse@® = Q
-"jam:GetRol a
 GENERAL GENERAL / MANAGED POLICIES | AWSGLUESERVICEROLE “cloudwatch:PutMetricbata™
 AWSGlueServiceRole
-[data access) resource exposure Pre
 ```
 
 ## Slide 62
@@ -1129,11 +1000,10 @@ AWSGlueServiceRole
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Invisible Backdoor
 What the victim sees
 simple-etl
@@ -1161,11 +1031,8 @@ args = getResolvedOptions(sys.argv, ["JOB_NAME"])
 19 format="json",
 20 connection_options={"paths": ["s3://test-glue-bucket-shaa"], “recurse":
 21 transformation_ctx="AmazonS3_node1707918704450",
-2)
 23
-24 job. commit()
 What is run
-> Jrffa0ca9e473ca9050527d3152f8d7432c2cb4bbf9109836dd67f1a8fOaeld167
 v
 Log events
 You can use the filter bar below to search for and match terms, phrases, or values in your log events. Learn more about filter patterns (4
@@ -1194,11 +1061,10 @@ EMR Vulnerability aws-emr-studio-{AWS::AccountId}-{AWS::Region}
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 What is AWS EMR?
 Amazon
 SageMaker Studio
@@ -1208,13 +1074,10 @@ Amazon EMR
 Studio
 Gy Amazon EKS ofp
 58 Amazon MWAA
-G&
 AWS Outposts
-= Mae
 Amazon EMR a
 Easily run and scale Apache siacaste ble Gacy Servertess
 Spark, Hive, Presto, and other Self-managed
-fearon
 big dels worlicnds data framework tools
 and version Run applications built
 using open source Develop, run, visualize, and
@@ -1229,11 +1092,10 @@ familiar tools
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 aws
 Amazon EMR x Am
 > EMR Studio: Getting Started
@@ -1241,11 +1103,8 @@ Getting started
 EMR Studio setup
 v EMR on EC2 Set up EMR Studios to help your team c isualize, and debug dat.
 ster tem
-Clus'
 Notebooks and Git repos
 Events
-8
-eee we = Amazon EMR > EMR Studio: Studios > Create Studio
 Step 1 (optional) Create a Studio ino
 v EMR on EKS AWS Service Catalog Info
 Virtual clusters
@@ -1258,7 +1117,6 @@ udios
 Workspaces (Notebooks) Studio settings info Edit |
 o name
 Studio_3
-rs
 S3 lo 1 for Work
 ce storage
 We'll create a new bucket and use the location s3:] /aws-emr-studio-1 23456789123-us-east-1/]721 566132875.
@@ -1327,11 +1185,10 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 EMR: Disclaimer
 ® Failed to create Studio. The AWS Access Key Id you provided does not exist In our records. (Service: AWSEditors; Status Code:
 400; Error Code: InvalidRequestException; Request ID: f2feScOc-4e85-454.
@@ -1342,7 +1199,6 @@ Setup options toro
 © interactive workloads Batch jobs
 Studio settings into
 Studio name
-Studio_!
 '8-De98ab80d069; Proxy: null)
 Custom
 Reset to default
@@ -1354,11 +1210,10 @@ Reset to default
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Two Ways to Continue
 Service role to let Studio access your AWS resources
 We'll create a new service role named AmazonEMRStudio_ServiceRole_1721568479152
@@ -1369,18 +1224,13 @@ Create a service role
 { Copy
 © Choose an existing service role Version"; "2012-10-17
 Service role :
-Choos v CS) ] Sid”: "ObjectActions’
 jon det Effect": "Allow
 Action”: [
 "s3:PutObject’
-"s3:GetObject’
 "s3:DeleteObject”
-1
 "Resource": [
 "arncaws:s3:::aws-emr-studio:
 east-1/""
-1
-[Close
 ```
 
 ## Slide 72
@@ -1397,11 +1247,10 @@ Video
 
 <u>https://aws.amazon.com/sagemaker/</u> #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Amazon SageMaker
 Build, train, and deploy machine learning (ML) models for any use case
 with fully managed infrastructure, tools, and workflows
@@ -1412,15 +1261,9 @@ required
 * Accelerate your a - oe ~
 Amazoa = productivity using
 generative Al = -- =
-Build, train, and c on ~ — _r = -
 with fully manage o a- 2
-=r
-o
-o
-* Accelerate your ss cc 5
 = productivity using = =
 oo —
-eo ro
 i Canvas
 Canvas configuration
 Canvas storage configuration
@@ -1456,11 +1299,10 @@ eu-west-2 eu-west-2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 What is AWS Service Catalog?
 | Version details info
 AWS CloudFormation
@@ -1471,15 +1313,13 @@ Vulnerability
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 AWS Account - Victim AWS Account - Attacker
 AWS Service Catalog
 ©) Upload Vic
-ya
 tim Template
 >
 AWS S3 Bucket
@@ -1491,19 +1331,15 @@ Admin role that can be assumed by attacker
 Get Modif.
 @
 ©
-y
 )
 ‘ied Tempalte
 Get Victim Template © Lambda triggered by
 PutBucketNotification
 Put Modified Template
-XN
 © Resource Injection
-template. yaml
 BackdooredIAMRole:
 Type: 'AWS::
 Propertie
-AssumeRolePolicyDocumen:
 Version: '2012-10-17
 Statement:
 - Effect: 'Allow'
@@ -1528,32 +1364,24 @@ Statement
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black
 ha
-peat
 AWS Codest-
-codestat
-©) GEE.
 Creat
-peveloper Tools
-codestat
 4 |
 Proj
 ject
 cr
-eal Getting started
 projects
 project
 Team
 User
-settings
 Q Goto resource
 a Feedback
-fi
 eu-west
 ```
 
@@ -1567,16 +1395,14 @@ eu-west
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Case Studies
 1. cd to the root directory of the project.
 ACCOUNT ID-SAWS REGION] --
 1. Run “sam deploy --s3-bucket
-s3_bucket= ref ix-${ACCOUNT_ID}-${REGION}
 HEAD_BUCKET=$(aws s3api head-bucket --bucket ${s3_bucket} 2>&1 || true)
 uf [ -z "“$HEAD_BUCKET" ]; then
 echo “Already exists
@@ -1610,14 +1436,6 @@ Bucket Monopoly
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA 2024
-us-east-1
-```
-
 ## Slide 86
 
 #BHUSA @BlackHatEvents
@@ -1629,25 +1447,6 @@ us-east-1
 ## Slide 88
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-USA 2024
-pisek hat
-feed Rad Aad Aad Rad Kad Red Rad Sad Bad Ia
-Bed Red Bed Wad Sed Akad Rad Rel ad a
-sd Dad Dead Aad Aad Red Bad ad ad Kal Ba
-sed Red ed Reed Reed Rcd Rad Acad ad Sal Sa
-LH Le | Oe] OL]
-ree) Fed Fed Red CO) heed ied Akad Bad Bed
-ed Rad bead Ged ME Rad Rad Aad ed Ca
-ed Red Bed bead Rad Aad Rcd Bed Bad Ea
-Bed Aad ad iad Gad ad Bad ad ad Rd
-eed Kad (ed ed Rad Cad Aad ad Dad a
-red Rad Bad Aad Sad Gad Rad Rad Rad ie
-ew
-```
 
 ## Slide 89
 
@@ -1671,17 +1470,13 @@ ew
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(2)
 blackhat
-USA 2024
 identifying
-pisek hat
-USA 2024
 ring Potential Vulnerabilities
-O0e2e@8
 Open-Source Documentation Crawling Automation
 ```
 
@@ -1735,19 +1530,16 @@ Use _‘aws:ResourceAccount’_ Condition
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2024
 Summary and Mitigations
 Use ‘aws:ResourceAccount’
 Condition
 "Condition": {
 "StringEquals": {
-"“aws :ResourceAccount": "“AWS_ACCOUNT_ID"
 }
-+
 ```
 
 ## Slide 97
@@ -1790,17 +1582,6 @@ Prefix Account-ID Region Random
 
 Do you still believe account ID isn’t a secret?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-; “
-\ ¥
-Sr
-Do you still believe
-account ID isn’t a
-secret?
-```
-
 ## Slide 101
 
 # Thank you!
@@ -1808,21 +1589,3 @@ secret?
 @YakirKad @mike_katch @ofekitach
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-: “aa
-\ ¥
-———————
-Jf
-blackhat — /
-USA 2024
-'f)
-AUGUST 7-8, 2024
-BRIEFINGS
-Thank you!
-@YakirKad
-X  @mike_katch
-@ofekitach
-```

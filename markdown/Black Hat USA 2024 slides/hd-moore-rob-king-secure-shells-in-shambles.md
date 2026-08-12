@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/HD Moore & Rob King_Secure Shells in Shambles.pdf"
 pages: 97
 sha256: "7d63bb06d0b8a1692297c515acccb3c34bbca06c988908a06683024c34329435"
-text_chars: 43296
-ocr_pages: 24
+text_chars: 41182
+ocr_pages: 22
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:32:44Z"
+converted_at: "2026-08-12T04:33:30Z"
 ---
 # Secure Shells in Shambles
 
 **Speakers:** HD Moore, Rob King  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/HD Moore & Rob King_Secure Shells in Shambles.pdf` (97 pages)
+
 
 ## Slide 1
 
@@ -29,16 +35,13 @@ BLACK HAT BRIEFINGS
 
 HD MOORE     |     ROB KING     |     AUGUST 7, 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 USA 2024
-(F
-c
 CUNZ=ro
-NesesAcH
 L BLACK HAT BRIEFINGS J
 Secure Shells
 in Shambles
@@ -172,29 +175,23 @@ Transport
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [ sss cxsent | TCP ) f SSH-TRANS | [ SSH-AUTH | SSH-CONN | [ ssu-senven | ( runz=ro
-v —
 Verify Kex
-cc
 Key Exchange ,
 SSH2_MSG_SERVICE_REQUEST
-SSH2_MSG SERVICE ACCEPT
-SSH2_MSG_USERAUTH_REQUEST (user,svc,method, data) <j
 Authentication
 Verify Auth
-CF a
 SSH2_MSG_USERAUTH_SUCCESS Channels
 Encrypted Create Larval Session
 Transport CFE
 Send “pty-req”
 Allocate PTY
-Cc,
 Send “env” '
 Configure Session
-Ca
 Open Channel “shell”
 Execute Subprocess
 Channel Read/Write 1
@@ -396,25 +393,20 @@ $ **ssh dev@192.168.67.3** https://api-a bc1234.duosecurity.com /frame/portal/v4
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 7
 Useful pre-authentication banners
 (G runz=ra
-6Ue1N SRd$oS JWI qC6UeiNATSSR
-ndqgC6 NATBSR w32T2 UcndgC6Ue1NA
 xUcnd = UelN $oSlu JWJ cnd 6U
-2jWJxU dC TBSRd$ WJx
 w32T2jW xUc e1N T8S 272
 $o51w32 2jW dqC6Ue1NA Sl
 8SR $051w32 xUcndqC6U Rd$
 1NA BSRd$oS T2jH = cndq ATS
 C6U NATBSR 1u3 JxU Uel
 Ucndq UeiNA SRd$oS
-jWJxU qC6U-NATESR
-2T2jHJ cndqC6U
-51w32T WJxUcnd
 Processor board ID FHK13@562CK with 118784K/12288K bytes of memory.
 Cisco I0S Software, Version 12.4(15)T7, RELEASE SOFTWARE (fc2)
 Please Disconnect if you are not an authorized user
@@ -446,14 +438,11 @@ banner login “Cisco Configuration Assistant. Version: 3.2. Wed Feb @1 19:27:87
 2
 Copyright 2823 BlueCat Networks (USA) Inc. and its affiliate--
 Server Version 9.5.8-644.GA.bcen
-Y
 2
 MRV OptiSwitch 686 version 1_1_9B
 2
 MessageWay SFTP Interface Version 6.1
-Z
 Microsoft Windows [Version 18.8.19845.2965)]
-3
 Miramar SFTP Gateway
 Version 3.5.1
 2
@@ -476,11 +465,9 @@ Support: http://episensor .com/helpdesk
 Policy Manager CLI v6.12(@),
 Copyright © 2823, Hewlett Packard Enterprise Development LP.
 Software Version : 6.12.8.388732
-16.18.2.79
 : CLABV
 Management IP Address
 System Model
-22 ILI IIL IIIS LIL ILLIA ILL ISIS I III IA
 2
 x**HOME FIREWALL LAB TEST xxx
 current version 82 at 9:3@am
@@ -497,11 +484,6 @@ Site Name CIREBON
 Region West Java
 Ring West Java 6
 Tower ID JAW-JB-CBN-2613
-(8.8)
-:(8.8.1.28)
-:(5254@@C9SA2E)
-:(€52:54:@8:C9:SA:2E)
-:(52:54:88:C9:SA:2E)
 VRP (R) software, Version 8.21@ (ATN 91@C-G V8aa
 ```
 
@@ -511,15 +493,13 @@ VRP (R) software, Version 8.21@ (ATN 91@C-G V8aa
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SSH key types, exchanges, extensions (G runz=ro
 "publ ickey-hostbound@openssh.com” |
-“sntrup761x25519-sha512@openssh.com”,
 webauthn-sk-ecdsa-sha2-nistp256@openss
-"“ext-info-s",
-“ping@openssh.com": "8",
 ```
 
 ## Slide 19
@@ -544,33 +524,31 @@ _Penalties are enabled by default with the default settings listed below but may
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 20
 SSH keys as public identities (G runz=ro
 > Public keys used to being mostly private
 > GitHub & Launchpad changed that
-7 ~
 Import SSH key
 Import SSH identity: from {ub a
 from Launchpad SSH keys from GitHub or
-GitHub Usernan:: ie
 Enter your GitHub username.
 [ Done |
 [ Cancel ]
-\ y
 ```
 
 ## Slide 21
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 (G runz=ra
-[ ssh whoami.filippo.io | PPS SSS SSS SSS SS SSS ap
 _0/ Hello HD Moore!
 Did you know that ssh sends all your public keys to any server
 it tries to authenticate to?
@@ -622,6 +600,15 @@ https://github.com/FiloSottile/whoami.filippo.io
 
 24
 
+
+> Recovered by OCR — confidence 84/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+24
+$ ssh starwarstel.net
+Va
+```
+
 ## Slide 25
 
 ### **$ ssh user@synchronet**
@@ -630,15 +617,12 @@ https://www.synchro.net/sbbslist.html
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 25
 $ ssh user@synchronet (G runz=ro
-a a a Distortion
-cee | mmm 2
-| I
-= f
 Ea Lk a Login menu:
 =
 ma. a: | New user
@@ -648,7 +632,6 @@ Email the sysop
 = Page the sysop
 = Beaverton, Oregon, USA Disconnect
 Sat Jul 13 2024 12:03 am PDT
-httos://www.synchro.net/sbbslist.html
 ```
 
 ## Slide 26
@@ -657,11 +640,11 @@ httos://www.synchro.net/sbbslist.html
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 $ ssh terminal.shop 2 runz=ro
-(- a
 terminal s shop a about f fag c cart $ @
 [object Object] segfault
 dark mode
@@ -669,9 +652,7 @@ dark mode
 from a natural fault in the coffee
 cherry that causes it to develop
 Iné bean instead two
-= llpping 1 US D
 TL products +/- qty ccart q quit
-Ne SJ
 ```
 
 ## Slide 27
@@ -679,14 +660,6 @@ Ne SJ
 ## **Recent Exposures**
 
 27
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-(G runz=ro
-Recent Exposures
-27
-```
 
 ## Slide 28
 
@@ -912,10 +885,10 @@ Authentication method list, public key testing, failed auth limits, & interactiv
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(G runz=ro
 New Meets Old
 (Public Key Authentication)
 ```
@@ -1032,26 +1005,22 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFiXcmAAjTBp5kM2AUTJdAEB7DHyYuY8am8FIMROD3FG
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-> ‘cpu;— menu;jpreset x
 |
 up 14:16:84
-—) *mem | ; disks, ;io
 Total: 15.6 GiB ~~ root v32K 314 GiB -
 Used: 1.25 GiB 10% — a
 8% Used: 14% saseueee 43.8 GiB
 Free: 86% sammmmee 278 GiB
 efi 123 MiB -
-10% es
 Used: 9% a8 *® 11.5 MiB
 Free: 91% summmmme 112 MiB
 — *net;
 11M
-}sync pj auto zero <b eth@ mp
 download
-: ¥ Total:
 v9.11 MiB/s (72.9 Mibps)
 4 8.71 MiB/s (69.7 Mibps)
 420 GiB
@@ -1076,9 +1045,6 @@ Pid:
 613
 14
 26
-LI} 4
-)19:41:43,
--— “proc; filter,
 select J
 Program:
 sshamble.bin
@@ -1086,21 +1052,16 @@ ksoftirgd/6
 btop
 rcu_preempt
 kworker/5:1-mm_p
-ksoftirgqd/7
 do-agent
 sshd
 kswapd@
 kworker/u16;1
-kworker/u16:@-ev
 exim4
 sshd
 systemd- journal
-ksoftirqd/5S
 syustemd
 unattended-upgr
 ksoftirgd/@
-ksoftirgqd/2
-| alters
 Command:
 ./sshamble.bin scan -
 btop
@@ -1108,17 +1069,13 @@ btop
 sshd: root@pts/@
 /usr/sbin/exim4 -bd -
 sshd: /usr/sbin/sshd
-/1ib/systemd/systemd-
 /sbin/init
 /usr/bin/python3 /usr
-i= 2608ms + lm
 DO-Regular 2.5 GHz
-CPU = TTP amen 95%
 Cé 83% C4 86%
 C1 83% C5 81%
 C2 98% C6 92%
 C3 86% C7 85%
-|per-core;jreverse;) tree; < cpu lazy >;
 User:
 root
 root
@@ -1141,23 +1098,13 @@ root
 root
 LAV: 7.77 7.75 7.73
 MemB
-601M :
-@B
-5.8
 @B
 @B
 @B
 + 21M
-79M...
 @B
-|:
-GB ....
-* 15M
-6.9M
-14M _
 @B —
 11M ..
-18M
 @B ....
 @B
 ```
@@ -1255,10 +1202,10 @@ I swear! We only scan things!
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(G runz=ro
 New Meets Old
 (Authentication Bypass)
 ```
@@ -1311,13 +1258,13 @@ What happens if we ask for a session at every possible state transition?
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 54
 State transitions gone wrong (new) (G runz=ro
 What happens if we ask for
-a session at every possible
 state transition?
 Free shells!
 SSH Client SSH-SERVER
@@ -1326,21 +1273,16 @@ Connect
 Server Version
 Client Version
 Verify Versions
-eS,
 Server Key Init
 Client Key Init
 Verify Kex
 Key Exchange »
 SSH2_MSG_SERVICE_REQUEST
-SSH2_ MSG SERVICE ACCEPT
 SSH2_MSG_USERAUTH_REQUEST (user,svc —— ,data)
-—>
 SSH2_MSG_USERAUTH_SUCCESS
 > Create Larval Session
-Ca
 Send “pty-req”
 Allocate PTY
-CaF
 Configure Session
 Execute Subprocess
 Send “env”
@@ -1377,14 +1319,13 @@ PN28240i, and likely others.|
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Neterbit NSL-224 authentication bypass
-(G runz=ro
 (—
 >
-ce ss
 ```
 
 ## Slide 57
@@ -1393,15 +1334,12 @@ ce ss
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 57
 Digi TransPort authentication bypass
-(G runz=ro
-Va
-~
-ce ss
 ```
 
 ## Slide 58
@@ -1426,7 +1364,8 @@ agent-auth-req window-change
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 59
@@ -1434,12 +1373,7 @@ Post-session authentication
 root@ password:
 Copyright (c) 2021 SonicWall, Inc.
 Using username ‘root’.
-(G runz=ro
-X y,
-Password: Please login:
 Copyright (c) 2882 - 2013 Juniper Networks,
-Username: fj
-ner
 All rights reserved.
 ```
 
@@ -1457,15 +1391,13 @@ All rights reserved.
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 61
 Ruckus Wireless AP command injection
-(G runz=ro
-(—
 ~
-ce ss
 ```
 
 ## Slide 62
@@ -1526,15 +1458,13 @@ SSH Channel Raw TCP connection
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 66
 ION Networks Service Access Point
-(G runz=ro
-y
 ~
-ce ss
 ```
 
 ## Slide 67
@@ -1627,15 +1557,13 @@ ExecCmd("env", fmt.Sprintf("%s=%s", env.Name, env.Value))
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 73
 Remote Code Execution in Soft Serve
-(G runz=ro
-,
 ~
-ce ss
 ```
 
 ## Slide 74
@@ -1674,57 +1602,39 @@ fixed Terrapin.  Not affected by regreSSHion.|
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 76
 enSSH for Windows
 Recycle Bin a
-Oo Fa
 BE Windows Powershell x ae ao x
-[C}
 PS C:\Users\Dev> ssh
 OpenSSH_for_Windows_8.6p1, LibreSSL 3.u.3
 PS C:\Users\Dev> ssh dev@127.0.0.1 -p 9999
 dev@127.0.0.1's password:
-9
-ge
 Task Manager
 Processes
 Name
 @ NVIDIA Container (2)
 IF Phone Link (3)
 Q Type a name, publisher, or PID to sea...
-FB Runnewtask @ Endtask  ] Efficiencymode +++
 Status CPU Memory Disk Network
-0% «© 550MB = «OMB/s_ Mbps
-Suspended @ 0% = 51.6MB OMB/s Mbps
-Il ProintelliMouseNotificationService.exe 0% = 11MB MB/s Mbps
 IE POP Clipboard Monitor
-[ tunZero Explorer
 Tl Search @)
-Hh Spooler Subsystem App.
 © Spotty Widget 2)
-Bi shdee
-BI chdee
 Start (2)
-0% = 20MB_—OMB/s_OMbps
-0% © 473MB_ = OMB/s_OMbps
-0% © 1259MB_ = OMB/s_«OMbps
-0% _53MB__OMB/s._0Mbos
-© @ Administrator: Windows Pom X +
 PS C:\Users\Dev> sshd 9999
 debug2: load_server_config: filename __PROGRAMDATA__\\ssh/sshd_config
 debug3: w32_fstat ERROR: bad fd: 3
 debug2: load_server_config: done config len = 253
 dobuatnparse_server_config_depth: config __PROGRAMDATA_.\\ssh/sshd_config len 253
-/—
 B® windows PowerShell x ae
 PS C:\Users\Dev> ssh
 OpenSSH_for_Windows_8.6p1, LibreSSL 3.4.3
 PS C:\Users\Dev> ssh dev@127.0.0.1 9999
 dev@127.0.0.1's password:
-Ne
 = Oo
 XGRAMDATA__\\ssh/sshd_config:79 setting Subsystem sftp sftp-server.exe
 ing syntax for 'Match Group administrators’
@@ -1732,10 +1642,7 @@ ersion OpenSSH_for_Windows_8.6, LibreSSL 3.4.3
 x Bsswd: Lookup_sid() failed: 1332.
 e host key #0: ssh-rsa SHA256: oQV7hyF3E+bw00J0e21S8rFEyLad@VXzzrx00i3P61c
 e host key #1: ecdsa~sha2-nistp256 SHA256:ttumLLv2ub+MuJ20FuaYTnXGQvd96NZFNY3eALy jQA
-ssh-ed25519 SHA256:rZK@/Hma9UCV8FHj8142zTIQ01Q3SZpzUR4iGqB60Eks.
-\Windows\\System32\\OpenSSH\\sshd.exe*
 Neate \\ssh/sshd_config:38 setting AuthorizedkeysFile .ssh/authorized_keys
-jetting O_NONBLOCK
 et_v6only: set socket 3 IPV6_V6ONLY
 0 port 9999 on ::.
 ling on :: port 9999.
@@ -1743,8 +1650,6 @@ setting O_NONBLOCK
 nd to port 9999 on 0.0.0.0.
 Server listening on 0.0.0.0 port 9999.
 a Ge
-443 PM
-anjzozs ®
 ```
 
 ## Slide 77
@@ -1823,7 +1728,8 @@ int timingsafe_bcmp(const void *b1, const void *b2, size_t n) { const unsigned c
 
 **https://azure.microsoft.com/en-us/products/devops/server**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 82
@@ -1832,7 +1738,6 @@ VY Microsoft invests more than $1 billion annually on cybersecurity \4/ We emplo
 research and development. to data security and privacy.
 Learn more about security on Azure
 https://azure.microsoft.com/en-us/products/devops/server
-(G runz=ro
 ```
 
 ## Slide 83
@@ -1927,15 +1832,12 @@ sshamble>
 
 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 89
 Happy scanning! (G runz=ro
-(— >)
-l
-XX y,
-ce ss
 ```
 
 ## Slide 90
@@ -2077,20 +1979,6 @@ runZero.com
 research@runZero.com
 
 SSHamble.com
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat (| runz=ro
-USA 2024
-Thank you.
-HDMOORE | ROBKING | AUGUST7, 2024
-(F
-c
-rFunZ=ro
-ReseARCH PSSM
-runZero.com research@runZero.com SSHamble.com
-```
 
 ## Slide 97
 

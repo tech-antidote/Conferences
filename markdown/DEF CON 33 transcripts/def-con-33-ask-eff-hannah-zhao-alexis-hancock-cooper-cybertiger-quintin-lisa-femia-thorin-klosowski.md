@@ -12,7 +12,7 @@ duration_seconds: 3589
 words: 10372
 text_chars: 56860
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Ask EFF-Hannah Zhao, Alexis Hancock, Cooper 'CyberTiger' Quintin, Lisa Femia, Thorin Klosowski

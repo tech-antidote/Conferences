@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/WeiMin Cheng & Yue Liu-SystemUI As EvilPiP The Hijacking Attacks on Modern Mobile Devices.pdf"
 pages: 79
 sha256: "77165163a30cd8e35802825f0280fcf10950771e185ae5a72d3a8579b8c50266"
-text_chars: 21070
-ocr_pages: 14
+text_chars: 19168
+ocr_pages: 13
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:59Z"
+converted_at: "2026-08-12T04:53:58Z"
 ---
 # SystemUI As EvilPiP The Hijacking Attacks on Modern Mobile Devices
 
 **Speakers:** WeiMin Cheng, Yue Liu  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/WeiMin Cheng & Yue Liu-SystemUI As EvilPiP The Hijacking Attacks on Modern Mobile Devices.pdf` (79 pages)
+
 
 ## Slide 1
 
@@ -29,18 +35,6 @@ converted_at: "2026-08-12T00:52:59Z"
 WeiMin Cheng(mgaldys4@gmail.com)
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ASIA i a
-* I-18-19, 2024 Vi
-a BRIEFINGS _
- ” SystemUI As EvilPiP
-The Hijacking Attacks on Modern Mobile Device
-WeiMin Cheng(mgaldys4@gmail.com)
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -128,12 +122,10 @@ Code snippet of Simplocker
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Classic Attack Scheme
 EBank \
 , EBank
@@ -151,12 +143,10 @@ Background Target Detecter
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Classic Attack Scheme
 EBank \
 Fake
@@ -164,9 +154,6 @@ Fake
 th
 Low cost, high return
 Almost affects all App in Old Device
-startActivi a
-Intent#FLAG_ACTIVITY_NEW_TASK
-oo»
 . Background Target Detecter
 ```
 
@@ -334,15 +321,15 @@ framework.jar smali code of MIUI OS
 
 ###### Analyse BAL Restriction
 
-```
+\```
 Activity#startActivity
-```
+\```
 
 Handled By ActivityManagerService(AMS)
 
-```
+\```
 ActivityStarter#executeRequest
-```
+\```
 
 API33
 
@@ -356,17 +343,17 @@ restrictedBgActivity
 
 **Decide whether to move Task to front**
 
-```
+\```
 ActivityStarter#setInitialState
-```
+\```
 
 determines
 
 moveToFront Still needs to focus on check func and Bypass it.
 
-```
+\```
 ActivityStarter#startActivityInner
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -528,14 +515,11 @@ RootWindowContainer#moveActivityToPinnedRootTask
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 How PiP Work
-ATMS#enterPicturelnPictureMode YJ
 RootWindowContainer#moveActivity ToPinnedRootTask
 rootTask. setwindowingMode(WINDOWING MODE PINNED);
 ff Set the launch bounds tor launch-into-pip Activity on the root task.
@@ -543,9 +527,7 @@ if (r.getOptions() != null && r.getOptions(}).isLaunchIntoPip()) {
 // Record the snapshot now, it will be later fetched for content-pip animation.
 // We do this early in the process to make sure the right snapshot is used for
 // entering content-pip animation.
-mwindowManager .mTaskSnapshotController.recordTaskSnapshot(
 task, false /* allowSnapshotHome */);
-rootTask. setBounds(r.petOptions( ).getLaunchBounds( ));
 t
 rootTask. setDeferTaskAppear( false);
 ```
@@ -572,29 +554,19 @@ PipTaskOrganizer#onTaskAppeared
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 How PiP Work
 AppLayer System_Server SystemUl
 Activity ATMS RootWindowContainer Task PipTaskOrganizer
 T
 '
 '
-'
-'
-‘
-'
-‘
-a
 }-------4
 enterPicturelnPicture — >
 moveActivity ToPinnedRootTask >
-send TaskAppeared
-rp —{(Pc }—+
 onTaskAppeared
 ```
 
@@ -626,28 +598,19 @@ Attack SystemUI side, create CVE-2021-0485-like vuln
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Analyse Attack Vector
 AppLayer System_Server SystemUl
 Activity ATMS RootWindowContainer Task PipTaskOrganizer
 T
 '
 '
-'
-'
-‘
-'
-‘
-a
 }-------4
 enierPicturelnPicture — >
 moveActivity ToPinnedRootTask >
-send TaskAppeared
 onTaskAppeared
 Scheme Ox2:
 Attack SystemUI side, create CVE-2021-0485-like vuln
@@ -711,26 +674,18 @@ finishResize creates a WindowContainerTransaction(WCT) instance Pass to prepareF
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biseichat x ——
-ASIA 2024
-Trace Rect
 applyFinishBoundsResize carry WCT to IPC with SystemServer
 void FinishResize{ mm) {
-Rect preResizeBounds Fect(mPipBoundsState _getBounds{ });
 boolean isPipTopLeft = isPipTopLeft(};
 mPipBoundsState .setBounds(destinationBounds} ;
-(direction TRANSITION DIRECTION MOVE STACK) { =} C(isInPipDirection(direction
-HindowClontainerTransaction wet HindowlontainerTransaction( 3
 prepareFinishResizeTransaction(destinationBounds, direction, tx, wet);
 5Soolean mayAnimateFinishResize = direction
-foolean animateCrossFadeResize nayAnimateFinishResize a
 CanimateCrossFadeResize) { =} q
 applyFinishBoundsResize(wet, direction, isPipTopLeft);
-r
-FinishResizeForHenu(destinationBounds) 5;
 ```
 
 ## Slide 48
@@ -755,33 +710,19 @@ Block IPC for prevent merge
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Trace Rect
-onPipAnimationEnd 4
-SystemUl
 PipTask Organizer
 Block IF
 al
-=
 finishResize
 System_Sever
-Window OrganizerController
 apolyFinishBoundsResize
 a pplyTra nsacti on
-i
-setMainWindowSizeChange Transaction
 Task
-|< —
 IPC
-C for prevent m
-erg
-le
-apply Window ContainerChange
 all
 ```
 
@@ -793,26 +734,15 @@ Almost no way to prevent merge
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Trace Rect
-SystemUl
 System_Sever
-PipTask Organizer
-onPipAnimationEnd -4
-Window OrganizerController Task
-'
-rho
-|
 Almost no way to prevent merge
 | |
 a pplyTra nsaction '
 IPC
-apply vvindow_ontainen_nange |
 ```
 
 ## Slide 51
@@ -880,46 +810,40 @@ We want API33+ Bypass
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-ASIA 2024
 CVE-2023-40116
-PicturelnPictureParams .Builder builder = new PicturelInPictureParams .Builder();
-builder .setSourceRecthHint(new Rect(6,6,5,53);
-enterPicturel nPicturehode(builder .build(});
-while (true);
+
+1  PictureInPictureParams.Builder builder = new PictureInPictureParams.Builder();
+2  builder.setSourceRectHint(new Rect(0,0,5,5));
+3  enterPictureInPictureMode(builder.build());
+4  while (true);
+
 C:\Users\Administrator>adb shell dumpsys activity activities
 ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
-Displav #0 (activities from ton to bottom):
-« Task{ecadbf8 #42 type=standard A=10149:com.pip.poc U=@ visible=true visi
-bleRequested=true mode=pinned translucent=false sz=1}
-isSleeping=false
-* Hist #0: ActivityRecord{167769d u®@ com.pip.poc/.PipPoCActivity t42}
-packageName=com.pip.poc processName=com.pip.poc
-launchedFromUid=@ launchedFromPackage=com.android.shell launchedFromFe
-ature=null userId=@
-app=ProcessRecord{e@82ee3 3546: com.pip.poc/uBal49}
-Intent { act=android.intent.action.MAIN cat=[android.intent.category.L
-AUNCHER] f1lg=0x10000800 cmp=com.pip.poc/.PipPoCActivity }
-rootOfTask=true task=Task{ecadbf8 #42 type=standard A=10149:com.pip.po
-c U=8 visible=true visibleRequested=true mode=pinned translucent=false sz=1}
-taskAffinity=10149:com.pip.poc
-mActivityComponent=com.pip.poc/ .PipPoCActivity
-baseDir=/data/app/” ~mP2?7jJYsNUeu6RN4 7TF9IQ==/com. pip. poc-gIHxRIgx0BHES
-Tu33szESQ==/base. apk
-dataDir=/data/user/@/com.pip.poc
-stateNotNeeded=false componentSpecified=false mActivitylype=standard
-compat={420dpi} labelRes=0x7f@e081b icon=0x/7fOcOB08 theme=Ox7fOFO183
-mLastReportedConfigurations:
-mGlobalConfig={1.8 310mcc260mnc [en_US] ldltr swl@8dp w192dp h108dp
-42@dpi smll land finger qwerty/v/yv dpad/v winConfig={ mBounds=Rect(533, 1140
-- 1038, 1424) mAppBounds=Rect(533, 1140 - 1038, 1424) mMaxBounds=Rect(®, @
-- 1080, 1920) mWindowingMode=pinned mDisplayWindowingMode=fullscreen mActivi
-tyType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_@} as.5 s.290 fon
-tWeightAdjustment=0}
+Display #0 (activities from top to bottom):
+  [boxed in red:] * Task{eca5bf8 #42 type=standard A=10149:com.pip.poc U=0 visible=true visibleRequested=true mode=pinned translucent=false sz=1}
+    mBounds=Rect(533, 1140 - 1038, 1424)
+    isSleeping=false
+    * Hist #0: ActivityRecord{167769d u0 com.pip.poc/.PipPoCActivity t42}
+      packageName=com.pip.poc processName=com.pip.poc
+      launchedFromUid=0 launchedFromPackage=com.android.shell launchedFromFeature=null userId=0
+      app=ProcessRecord{e002ee3 3546:com.pip.poc/u0a149}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.pip.poc/.PipPoCActivity }
+      rootOfTask=true task=Task{eca5bf8 #42 type=standard A=10149:com.pip.poc U=0 visible=true visibleRequested=true mode=pinned translucent=false sz=1}
+      taskAffinity=10149:com.pip.poc
+      mActivityComponent=com.pip.poc/.PipPoCActivity
+      baseDir=/data/app/~~mP27jJYsNUeu6RN47TF9IQ==/com.pip.poc-gTHxRIgxOBHE5Iu33szESQ==/base.apk
+      dataDir=/data/user/0/com.pip.poc
+      stateNotNeeded=false componentSpecified=false mActivityType=standard
+      compat={420dpi} labelRes=0x7f0e001b icon=0x7f0c0000 theme=0x7f0f0183
+      mLastReportedConfigurations:
+        mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw108dp w192dp h108dp 420dpi smll land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(533, 1140 - 1038, 1424) mAppBounds=Rect(533, 1140 - 1038, 1424) mMaxBounds=Rect(0, 0 - 1080, 1920) mWindowingMode=pinned mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.290 fontWeightAdjustment=0}
+
 BAL Bypass API32
+
 We want API33+ Bypass
 ```
 
@@ -953,28 +877,20 @@ startActivityInner call moveToFront if App pass BAL check What Bundle will do in
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Trace Bundle
 Bundle
 —») Activity#startActivity
-N
 ActivityStarter#executeR equest
 RWC#resumeF ocused Tasks lopActivities
-S
-N
 Instrumentation#execStartActivity
 Activity Starter#startActivityInner
 Task#resume TopActivityUn checkedLocked
-NS
 ATMS#startActivityAsUser
-N
 Task#startActivityLocked
-x
 TaskFragment#resume lopActivity
 startActivityInner call moveToFront if App pass BAL check
 What Bundle will do inside chain?
@@ -1178,7 +1094,8 @@ POC
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 C:\Users\Administrator>adb logcat -c
@@ -1186,8 +1103,6 @@ ASIA 2024 a nN
 C:\Users\Administrator>adb logcat|findstr POC-TESTER
 C:\Users\Administrator>
 Settings POC
-GOe0e
-GE
 ```
 
 ## Slide 77
@@ -1200,15 +1115,13 @@ GE
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 C:\Users\Administrator>adb logcat|findstr POC-SERVICE
 Settings
-@@x
 Telegram YouTube
-06086906
-GEEZ:
 ```
 
 ## Slide 79
@@ -1217,11 +1130,10 @@ GEEZ:
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ASIA 2 2a
 IL 18-19, 2024
-vA BRIEFINGS
 #BHASIA @BlackHatEvents
 ```

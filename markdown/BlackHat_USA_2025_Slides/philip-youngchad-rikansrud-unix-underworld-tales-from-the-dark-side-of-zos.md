@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Philip Young&Chad Rikansrud_Unix Underworld Tales from the Dark Side of zOS.pdf"
 pages: 130
 sha256: "efdf6b83595bc5f528b584e8ab7b23d0085ebe273cd79236fb52e9b8cd5afb5a"
-text_chars: 46088
+text_chars: 45513
 ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:59:33Z"
+converted_at: "2026-08-12T05:19:05Z"
 ---
 # Unix Underworld Tales from the Dark Side of zOS
 
 **Speakers:** Philip Young, Chad Rikansrud  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Philip Young&Chad Rikansrud_Unix Underworld Tales from the Dark Side of zOS.pdf` (130 pages)
+
 
 ## Slide 1
 
@@ -95,7 +101,8 @@ Mark Wilson
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 we Smalls
@@ -105,11 +112,8 @@ lol. Imao, even.
 New variable type just dropped “Hope” - size varies, pretty sure it’ll be
 correct. maybe...
 @mainframed767 - <33333
-OK
 * CDR.TODO — NEED TO MAKE THIS MORE ACCURATE
 kK
-- -#-100-User- catalogs, ‘hope its enough }
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 9
@@ -118,7 +122,8 @@ This!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BE Windows PowerShell X $63. Settings
@@ -139,24 +144,33 @@ And This!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-SIGNON UNIVERSITY DATE: 11/03/22
-SYSTEM: CICSTPO1 Division of Information Technology TIME: 16:32:38
-TERMID: 0604 Production
+SIGNON              UNIVERSITY                                DATE: 11/03/22
+SYSTEM: CICSTP01    Division of Information Technology         TIME: 16:32:38
+TERMID: 0604          C I C S   P r o d u c t i o n
+================================================================================
 Customer Assistance and Problem Reporting, call the Help desk at 301-405-1500.
-CCccccc IIIit CCCCCC SSSSSS
-CCCCCCCC IIIItI cccccccc SSSSSSSS
-cccce CC IIt cccce CC SSSS_ SS
-ccc IIt ccc sSsSS
-ccc II ccc SSSS
-cccc CC Iit ecccce cc SS sSSSS
-CCCCCCCC IIIIl CCCCCCCC SSSSSSSS
-CCCCCC IIIitl cccccc SSS
-Fill in your USERID and PASSWORD then press ENTER to si$
-USERID: i PASSWORD: BYPASS INITIAL Kc
-PRESS: ENTER=Signon, Fl=Help, F3=Exit CICS
+
+
+            CCCCCC    IIIII    CCCCCC     SSSSSS
+           CCCCCCCC   IIIII   CCCCCCCC   SSSSSSSS
+          CCCC  CC     III    CCCC  CC   SSSS  SS
+         CCC           III    CCC         SSSS
+        CCC            III    CCC          SSSS
+       CCCC  CC        III    CCCC  CC   SS  SSSS
+      CCCCCCCC        IIIII   CCCCCCCC   SSSSSSSS
+     CCCCCC           IIIII   CCCCCC     SSSSSS       6.5.0
+
+
+Fill in your USERID and PASSWORD then press ENTER to sig[obscured]
+   USERID: ________       PASSWORD:              BYPASS INITIAL KE[obscured]
+
+PRESS: ENTER=Signon,   F1=Help,   F3=Exit CICS
+
+[pink callout overlaying lower right of the screen] And This!
 ```
 
 ## Slide 11
@@ -165,16 +179,14 @@ But Not This!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 System: BYA400
 Subsystem: WHSTEO2
 User il Workstation: WHE93MTIA
 Passuord
-0000 $$sss ELV LEr Ey CCEL 0000
-ooo0 $595: Tt CCES 0000
-WH O L £ Seaeeeee
 NMOTICES Access to this device is restricted to authorized us -r business
 purposess By signing into this systems users agree to the Cy “ter use
 policy in the Employee figreement and acknowledge that their, -ions
@@ -408,7 +420,8 @@ Enumeration
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 https://github.com/mainframed/Enumeration/tree/master/Unix
@@ -420,19 +433,14 @@ ALL.sh minor renaming of steps 7 months ago
 FileSystemTraversal.java moving some files around 7 months ago
 OMVSEnum.sh moving some files around 7 months ago
 README.md moving some files around 7 months ago
-|
 a
-B
 B AUTOMVS.XMIT changed all.sh to use STDOUT, added XMIT of the JCL 7 months ago
 a
-i)
 B
 a
 portscan.java updating portscan to add a little more verbosity 6 months ago
-README.md Gz
 Unix Enumeration Tools
 This folder contains various tools used to enumeration unix system services on z/OS.
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 34
@@ -485,14 +493,12 @@ Then we  submit all.jcl on the LPAR
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HHH R HEHE
 # Local Unix System Services Enumeration & Privilege Escalation Script #
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHEHHH AHHH HH HHH
 # Soldier of FORTRAN # @mainframed767 #
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHH HHH HEHE
 # version 0.1b
 # Based on LinEnum.sh
 # Example: ./OMVSSed.sh -k keyword -r report -e /tmp/ -t
@@ -503,9 +509,7 @@ Enter report name
 Thorough tests (takes Longer)
 Displays this help text
 Running with no options = limited scans/no output file
-HHHHHHHHHHHHHHHHHHRHRHRHHRRRRRREEREEEHEHHH HHH HEHEHE HEHEHE
 >
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 40
@@ -530,7 +534,8 @@ OMVSEnum.sh
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PHIL:/u/phil: >java -cp '.' portscan 3.145.142.29 1330 1340 -t 100 -¢ Ae
@@ -558,17 +563,16 @@ Port 1339 is open
 Trying Port: 1340
 Port 1340 is open
 PHIL:/u/phil: >
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 43
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-4.
 admin@ip-172-31-24-128:~/egressTester$ sudo ./egresstester.py 172.31.24.128 enXO -v
 Mainframe Testing Team Presents: Network Egress Tester
 Arguments: Namespace(local_ip='172.31.24.128', interface='enX0', source_ip='0.0.0.0/0', start_pd
@@ -587,7 +591,6 @@ Inserting iptables rule to redirect connections from 0.0.0.0/0 ports 1 to 65535 
 [+] Connection from 34.198.158.143 (mainframe. .com) port: 1336/tcp (0 bytes)
 [+] Connection from 34.198.158.143 (mainframe. .com) port: 1337/tcp (0 bytes)
 [+] Connection from 34.198.158.143 (mainframe. .com) port: 1338/tcp (0 bytes)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 44
@@ -723,37 +726,37 @@ Escalation
 
 #### **/u/phil/maintenance/daily_stats.py**
 
-```
+\```
 # This script connects to the CICS webserver
 # to test that it is running
-```
+\```
 
-```
+\```
 importrequests
 fromrequests.authimportHTTPBasicAuth
-```
+\```
 
-```
+\```
 url="your_website_url"
-```
+\```
 
-```
+\```
 username =”phil"
 password ="3$vByHd%"
-```
+\```
 
-```
+\```
 response =requests.get(url, auth=HTTPBasicAuth(username, password))
 ifresponse.status_code==200:
 print("Successfully connected to the website.")
 print(response.text) # Print the content of the response
 else:
-```
+\```
 
-```
+\```
 print(f"Failedto connect. Status code: {response.status_code}")
 print(response.text) # Optionally print the error response
-```
+\```
 
 #BHUSA @BlackHatEvents62
 
@@ -761,37 +764,37 @@ print(response.text) # Optionally print the error response
 
 #### **/u/phil/maintenance/daily_stats.py**
 
-```
+\```
 # This script connects to the CICS webserver
 # to test that it is running
-```
+\```
 
-```
+\```
 importrequests
 fromrequests.authimportHTTPBasicAuth
-```
+\```
 
-```
+\```
 url="your_website_url"
-```
+\```
 
-```
+\```
 username =”phil"
 password ="3$vByHd%"
-```
+\```
 
-```
+\```
 response =requests.get(url, auth=HTTPBasicAuth(username, password))
 ifresponse.status_code==200:
 print("Successfully connected to the website.")
 print(response.text) # Print the content of the response
 else:
-```
+\```
 
-```
+\```
 print(f"Failedto connect. Status code: {response.status_code}")
 print(response.text) # Optionally print the error response
-```
+\```
 
 #BHUSA @BlackHatEvents63
 
@@ -885,7 +888,7 @@ dr-xr-xr-x    2 CHAD     RULES       8192 Jul 16 10:15 DEFCON/ dr-xr-xr-x    2 P
 
 ## Slide 66
 
-```
+\```
 X
 X
 X
@@ -894,11 +897,11 @@ X
 X
 X
 X
-```
+\```
 
-```
+\```
 X
-```
+\```
 
 #### **UNIX APF Privilege Escalation**
 
@@ -906,7 +909,7 @@ X
 
 ## Slide 67
 
-```
+\```
 X
 X
 X
@@ -915,11 +918,11 @@ X
 X
 X
 X
-```
+\```
 
-```
+\```
 X
-```
+\```
 
 #### **UNIX APF Privilege Escalation**
 
@@ -927,7 +930,7 @@ X
 
 ## Slide 68
 
-```
+\```
 X
 X
 X
@@ -936,11 +939,11 @@ X
 X
 X
 X
-```
+\```
 
-```
+\```
 X
-```
+\```
 
 #### **UNIX APF Privilege Escalation**
 
@@ -948,7 +951,7 @@ X
 
 ## Slide 69
 
-```
+\```
 X
 X
 X
@@ -957,11 +960,11 @@ X
 X
 X
 X
-```
+\```
 
-```
+\```
 X
-```
+\```
 
 #### **UNIX APF Privilege Escalation**
 
@@ -969,7 +972,7 @@ X
 
 ## Slide 70
 
-```
+\```
 X
 X
 X
@@ -978,11 +981,11 @@ X
 X
 X
 X
-```
+\```
 
-```
+\```
 X
-```
+\```
 
 #### **UNIX APF Privilege Escalation**
 
@@ -1310,7 +1313,7 @@ dr-xr-xr-x    2 CHAD     RULES       8192 Jul 16 10:15 DEFCON/ dr-xr-xr-x    2 P
 
 ## Slide 101
 
-```
+\```
 //MOUNTEXECPGM=IKJEFT01
 //SYSPRINTDDSYSOUT=*
 //SYSTSPRTDDSYSOUT=*
@@ -1323,13 +1326,13 @@ SETUID -
 MOUNTPOINT(‘/tmp/hack_the_planet')
 /*
 //*
-```
+\```
 
 #BHUSA @BlackHatEvents
 
 ## Slide 102
 
-```
+\```
 //MOUNTEXECPGM=IKJEFT01
 //SYSPRINTDDSYSOUT=*
 //SYSTSPRTDDSYSOUT=*
@@ -1342,7 +1345,7 @@ SETUID -
 MOUNTPOINT(‘/tmp/hack_the_planet')
 /*
 //*
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1384,19 +1387,19 @@ MOUNTPOINT(‘/tmp/hack_the_planet')
 
 ## Slide 108
 
-```
+\```
 find/\( -exta\)-typef \
 -execls-laE{}2>/dev/null\;
-```
+\```
 
 #BHUSA @BlackHatEvents
 
 ## Slide 109
 
-```
+\```
 find/\(-exta \)-typef \
 -execls-laE{}2>/dev/null\;
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1529,13 +1532,20 @@ f|
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 APF Demo
 Video
-0/7 OO CAFE BABE
-BABE 80 80 60 60
+
+07 00 CA FE  BA BE 18 CE  41 10 00 3C  0A 6B 58 50
+02 24 58 55  00 6C 58 55  00 C8 94 00  50 26 96 B1
+50 26 41 10  C0 24 0A 23  0A 03 00 14  00 00 E6 D9
+C9 E3 C9 D5  C7 40 C3 D6  D4 D7 D3 C5  E3 C5 CA FE
+BA BE 00 00  00 00
+
+#BHUSA  @BlackHatEvents
 ```
 
 ## Slide 114

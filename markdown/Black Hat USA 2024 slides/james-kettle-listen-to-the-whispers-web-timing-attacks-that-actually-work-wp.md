@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work_WP.pdf"
 pages: 27
 sha256: "8055930bcaf95e748ebd67a82c362aa1d8fb2ba0f3f8858ccaa9bfdf8ea924ad"
-text_chars: 41401
+text_chars: 41407
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:59:24Z"
+converted_at: "2026-08-12T04:33:45Z"
 ---
 # Listen to the Whispers Web Timing Attacks that Actually Work
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work_WP.pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -192,7 +197,7 @@ You might be wondering why I opted to split the requests into just two critical 
 
 Implementing this dual-packet sync turned out to be extremely easy - just add an extra ping frame! This harmless sacrificial packet ensures that the operating system coalesces the subsequent header frames.
 
-```
+\```
   disable TCP_NODELAY
 send a ping frame
   for each request with no body:
@@ -204,7 +209,7 @@ send a ping frame
   wait for 100ms
   send a ping frame
   send the final frames
-```
+\```
 
 We integrated this improved technique into Burp Suite's built-in single-packet attack as soon as we discovered it, so you might have already benefited from it! I'm currently working with the developer of the open-source implementation h2spacex<sup>7</sup> to get it in there too.
 
@@ -218,13 +223,13 @@ To minimize server noise, take the shortest code path possible, and take full ad
 
 To maximize signal, focus on the slow code path and make it even slower by using random inputs to avoid server-side caching, incurring access to slow resources where possible, and multiplying the workload. For example, this request uses multiple headers with a fixed prefix to try to expand the delay caused by a server looking for a header starting with 'X-U':
 
-```
+\```
 GET / HTTP/1.1
 X-Uaa: a
 X-Ubb: a
 X-Ucc: a
 {256}
-```
+\```
 
 Modern web technologies like ORMs<sup>10</sup> and GraphQL<sup>11</sup> also are particularly suited for delayexpansion techniques. Remember that a DoS attack is just a really easy timing attack and adapt classic techniques like ReDoS, batching, and recursive XML entities.
 
@@ -401,10 +406,10 @@ The single biggest breakthrough in this research was when I realized I could use
 
 Back in 2017, I researched techniques<sup>18</sup> to exploit misconfigured reverse proxies for SSRF and gain access to internal systems. The most common vulnerability was servers which routed requests to the domain specified in the HTTP Host header. To detect these, I would send them a request with a Host pointing to a domain I controlled:
 
-```
+\```
 GET / HTTP/1.1
 Host: uniq-token.burpcollaborator.net
-```
+\```
 
 If the target was vulnerable, I would see my request arriving on my site at burpcollaborator.net, forwarded by the vulnerable reverse proxy.
 

@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Daniel dos Santos & Francesco La Spina & Stanislav Dashevskyi_A Closer Look at the Gaps in the Grid New Vulnerabilities and Exploits Affecting Solar Power Systems.pdf"
 pages: 45
 sha256: "01bf829cb3c8ba526603b4db0b6fd3a42a1197183406193060417b3e55c37fcc"
-text_chars: 25633
-ocr_pages: 7
+text_chars: 24806
+ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:04:03Z"
+converted_at: "2026-08-12T03:52:27Z"
 ---
 # A Closer Look at the Gaps in the Grid New Vulnerabilities and Exploits Affecting Solar Power Systems
 
 **Speakers:** Daniel dos Santos, Francesco La Spina, Stanislav Dashevskyi  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Daniel dos Santos & Francesco La Spina & Stanislav Dashevskyi_A Closer Look at the Gaps in the Grid New Vulnerabilities and Exploits Affecting Solar Power Systems.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -39,16 +45,12 @@ A Closer Look at the Gaps in the Grid: New Vulnerabilities and Exploits Affectin
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Who wea re_ A ~
-ASIA 2025
-—
 >
-s FFORESCOUT.
-atl Li. “oo 4
 Daniel dos Santos LJ Francesco La Spina
 Vulnerability Research Threat Reports
 Focus on vulnerabilities against managed and Manual and automatic analysis of malware
@@ -125,14 +127,11 @@ Image source: <u>https://watts247.com/product/2-x-spf-3000tl-lvm-24p/</u>
 
 Image source: <u>http://base.isolarcloud.com:8181/docs/a1-0/d3.md</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Image source:
-sharp001 Gb
-&
 Real-time Power Today Yield Today Revenue Tree
 1.424 220.8 209.7 11.415
 MW kWh CNY trees
@@ -144,15 +143,10 @@ Accumulated Equivalent Trees
 2.326Billion Trees
 Yield Trend Month Yoon Today Plant PR Plant Equivalent Using Hours
 ix 50 | Today Yield(kWh P MW. 1 Year Year
-1906240466
 LS A
-€ ) ORA1912020001895335 A1904120009895B25
 ~ 150 0.9
-A190412000989t5 LORA191202000189Fs5
 100 0.6
-A1906240466 A19091852038525
 50
-dq@w} Customer... '725062189s ZCB20191122
 0
 ```
 
@@ -162,15 +156,10 @@ dq@w} Customer... '725062189s ZCB20191122
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\
-2)
-ASIA 2025
-blackhat Example 2: SungrowiSolarCloud
-»)
-02:35 8 Fl 97% 02:41 B S| 95%
 MORE < BACK
 SETTINGS
 System Parameters
@@ -514,11 +503,10 @@ To fully exploitable RCE
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat Account takeoyer~
-ASIA 2025
 Activities @ Emulator + okt 9 15:42
 proton.me,
 Proton Mail needs your permission to enable desktop notifications.
@@ -526,22 +514,16 @@ vegkropo
 Del Proton Mail i Q Search messages sagitbeetnme OY
 342 OA
 New message Inbox t
-~ lad Hasfile =)
-a ROWATT
 Upgrade to use Proton Mail with Apple Mail, Outlook or Thunderbird G Upgrade x
 =) Drafts
-l
 7 Sent
 Afghanistan
-Starred g =
-MikeScot
 MikeScott
 123456
 Remember password
 MikeScott Mikescott
 No messages found qwerty u
 Seems like you are all caught up for now asdf g h j k
-@ zxevboam
 7123 , ©
 ```
 
@@ -729,22 +711,17 @@ So far “so good”… what about the exploit?
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 pisekhat Windowed registefs.ina nutshell
-ASIA 2025
 Call stack
 amsiae 16 Logical visible registers (out of 64 physical)
 Func #0 « *
-aO al/a2)|a3|a4/a5|a6/ a7) a8 | a9 ai0jal1al2at3jal4a15
 Rotates 8 registers forward
-a0\/al|a2\a3|}a4\a5\ a6/a7 a0 al|a2|a3|a4|a5/a6/a7
 Preserved registers Registers visible to the Callee function
 Func #2 | call8? Overflow Exception >
-aO|}ailj|a2 a3\a4\a5/a6\a7 a0 al|a2|a3/a4)|a5| a6 | a7
-a”,
 | | ¥ ¥ | ¥ ¥ | » Spill registers to a predefined stack area
 ¥ (Base Save Area)
 Rotates back
@@ -801,14 +778,13 @@ Cannot be an invalid address
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat The final payload’ a fo
-ASIA 2025
 | Offset From
 | Overflown Buffer | Meaning Additional comments
-tt packet ~a@ cane
 eee | nadget address A’ is the address of
 = | : the overflown buffer
 parse_mgtt_packet “al A + @xbc '
@@ -817,7 +793,6 @@ imaginary al “A + @x106° This value must point to a valid
 location, as it may be used to determine
 the location of the shellcode's ESA.
 location the copy operation.
-memcpy gadget al” “A + @x7c”
 memcpy gadget a2- target IRAM This is the address where the shellcode
 location will be copied.
 |
@@ -1044,15 +1019,3 @@ Image sources: <u>https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259.pdf htt
 Thank you! **Questions?** <u>daniel.dossantos@forescout.com francesco.laspina@forescout.com</u>
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-- blsekhat
-ASIA 2025
-Thank you!
-Questions?
-daniel.dossantos@forescout.com
-francesco.laspina@forescout.com
-#BHAS @BlackHatEvents
-```

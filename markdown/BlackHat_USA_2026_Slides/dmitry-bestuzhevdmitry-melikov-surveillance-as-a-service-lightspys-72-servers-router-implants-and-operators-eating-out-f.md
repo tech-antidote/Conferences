@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Dmitry Bestuzhev&Dmitry Melikov_Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics.pdf"
 pages: 57
 sha256: "e9c0c5f24bc023e95c6756f2752331fd933d5ab7971923491018730beae21fee"
-text_chars: 40466
+text_chars: 40387
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:08:35Z"
+converted_at: "2026-08-12T05:32:35Z"
 ---
 # Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics
 
 **Speakers:** Dmitry Bestuzhev, Dmitry Melikov  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Dmitry Bestuzhev&Dmitry Melikov_Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics.pdf` (57 pages)
+
 
 ## Slide 1
 
@@ -106,7 +111,8 @@ LightSpy is not a single-operator APT tool. It is a productized surveillance pla
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FRAMEWORK ARCHITECTURE AT A GLANCE
@@ -123,7 +129,6 @@ ary Get System Information
 Linux
 =] UploadLog
 =] Get Linux Information
-7
 am Windows DeepData
 © Skype = Software List
 @ Telegram = MS Outlook
@@ -143,24 +148,20 @@ om ® WeChat Pay i Files
 ® Facebook ®& Line Messenger
 B AliPay
 \ Phone Call Records
-Ud
 MacOS
 © Audio Record
 ® Browsers
 ©) Screenshots
 ®& ScreenVideo
-i Files
 iOS
 @ Telegram 9 Geolocation ©& Email
 @ WhatsApp © Camera 8 Screenshots
 % QQMessenger i Files @ Soft List
 $@ WeChat © Audio Record =
-4) Phone Call Records @* DeleteSpring mq ooCmestY
 ® System *> Delete Media
 @ Web Browser i Files
 & KeyChain ® SMS
 & KeyChain
->| LanDevices
 © Camera
 & Wi-Fi List
 E) Shell Command
@@ -437,7 +438,8 @@ Interactive shell issued through the panel - arbitrary command execution on the 
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 fakePowerOff() - THE VICTIM THINKS IT’S OFF NEW
@@ -458,7 +460,6 @@ icon: “el-icon-error"
 }, [e("span", {
 on: fil
 click: n.fakePowerOff
-A
 }, [n._v("Pseudo shutdown")])]) : n._e(), n._v("
 attrs: {
 icon: “el-icon-delete-solid”
@@ -513,7 +514,8 @@ Operator can suppress the call or fake an emergency screen.
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SELF-DESTRUCTION & ANTI-FORENSICS

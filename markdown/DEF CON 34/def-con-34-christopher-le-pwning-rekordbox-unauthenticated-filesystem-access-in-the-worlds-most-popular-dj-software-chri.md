@@ -4,17 +4,21 @@ speakers: ["Christopher Le"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Christopher Le - Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software - Chris.pdf"
 pages: 44
 sha256: "f96d437475016ad8d46bf7e4f100738a3e320125c9746b6fc1991c4ad7f5b94c"
-text_chars: 11597
+text_chars: 9957
 ocr_pages: 35
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:15:17Z"
+converted_at: "2026-08-12T06:24:50Z"
 ---
 # Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software
 
@@ -22,9 +26,11 @@ converted_at: "2026-08-12T00:15:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Christopher Le - Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software - Chris.pdf` (44 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEF CON 34
@@ -39,11 +45,11 @@ FRI AUG 7 2026 3:00 PM PDT 20 MIN
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | OPENING
-ee
 Hl, I'M TRIODE
 DJ and engineer. | built Now Playing — the overlay that shows
 a DJ's current track live on stream.
@@ -52,7 +58,8 @@ TRIODE // PWNING REKORDBOX
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | OPENING
@@ -61,9 +68,6 @@ It reads the track that's playing and paints it onto the live
 stream overlay, in real time.
 latest subbed: syfpsy <3 (25 <3 thank vou so muchi! latest follower: wooo_o
 Daily subscriber goal: 15/20 (75%) july fund <3 $0/$1,000 (0%) Follower goal: 1767/1200 (98%)
-d Mv OBits:5%off  (f Giftasub v mt $Y Subscribe +
-m~
-yD
 e a meowylive @@ Schedule Videos Clips
 drum and bass a/\=@ « @=’\n back from rampage/travel and ready 2 party rock !Inextshow !support 2312 © 21029 fh
 DJs dr dnb DJ PLUR
@@ -72,7 +76,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 04
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | OPENING
@@ -86,11 +91,11 @@ DEF CON 34:05
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | OPENING
-©
 IT HANDS YOUR ENTIRE HARD DRIVE
 TO ANYONE ON THE NETWORK.
 That's the bug. That's the whole talk.
@@ -102,14 +107,13 @@ That's the bug. That's the whole talk.
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE SETUP
-fF
 CC
 DESIGNE
-CONGU I
 TRIODE // PWNING REKORDB
 LINK EXPORT MODE
 Link the laptop to the CDJs and tracks stream from the laptop.
@@ -119,15 +123,14 @@ account can read is exposed to that network.
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE SETUP
-ONEFLATSUBNET
 Link Export quietly starts an NFS server — a 1989 Unix protocol —
 and shares the whole drive, every mounted volume. é SWITCH - ONE SUBNET +)
 AN
-(eal
 ATTACKER
 | Guarded by a credential that's published in the open, in multiple open-source
 implementations.
@@ -136,45 +139,34 @@ TRIODE // PWNING REKORDBOX DEF CON 34
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE SETUP
-Original Mix AS oe 2) { Little Lights
-55/0 orm xan
-MTOM HHHAT-OP HALPOWER KICK ¢ fa Trampet D Djembe "
-ac - eons
-HHL SCTRAGH WawAr-CL HIG KICK 120.00 HEE Homsec2.0 SaxScream TakingOram u
 W blank lst 1B blank lst blank list SB blank lst
 Dope-ISHT Fambient 2019 (34 Tracks sssten Pa
-11 # Preview wor Track Title Artist Album Genre c Rating Time Key Date Added
-bn 4 aanendtn? -mixoutearly Blockhead Free Sweatpan Beats 92.00 kkk! 03:00 Ebm 6122/2
 © bea 31 oo Small Moments Above & Beyon Flow State NO Beats 94.80 AkeKTsr 03:58 Fm 6122/2
 nt 2020 & bu 7 © a hain Valley of Paradi Psychemagik | Feel How this Beats, Voice 95.00 kek! 09:49 Em 622/2
 matzo) a2 ‘Saamadonannitiaamaia® Life's Casino Sounds From T Binary Beats 97.00 ek: 07:24 Dm 6122/2
-> enue 32 EB themes =<) Believer-Edit Above & Beyon Flow State NO Beats 97.03 keK IH 02:15 Ebm 622/2
 nt2 & Eu 13 Selim, ‘Arizona Momin Kaya Project Ambient Mixes NO Beats 99,00 ekki 07:16 Fim 6722/2
-i mu 11 ‘Are You Even Weval The Weight Beats, Voice 107.00 eieksivs 05:11 Fm 6122/2 A omg F 1 .
 S baru 33 ‘Are YouEven Weval, TRS-80 The Weight Re Beats 107.00 seks: 04:23 Cm 6722/2 P t 2020 St ll 7.E y DJ h fe| L k
-& be 10 Temple of Sor M83 psvit Beals slow 110.00 see xevrs 07:04 Dbm 6122/2 resent sInce . IHIN version /. Ever whos Use In
-> tape 9 5 Perpetual Moti Max Cooper Yearning forth Beats 119.00 eiekekY 04:58 Abm e22i2
 S pt 3 2 Sakral Prins Thomas Ambitions 119.00 ie 07:35 Om 6722/2
 & bso 30 Kyphi Digitalis ‘Seb Taylor: Coll Beats 119.89 tekekeksy 06:43 Fim 6/22/2 E t b th i j fe|
 = 27 Panoramic Sti Seb Taylor Seb Teyor.Coll NO Beals «119.04 eH 0206 Gm saz xport, ACrOSS DON Versions, IS Exposed.
 ( baru 18 5 Shores of Easy Royksopp Shores of Easy Beats 120.00 ekki 13:59 A 62/2
-i ue 24 ‘itt Lights Ben Bohmer Breathing Beats 122.99 tekkeee 05:24 Am 62212
 ae ol: Moon Scepter Nathan Micay Blue Spring Beats 125.00 weokeet 05:14 Am 6722/2
 "5 Under Your Sp Kyau & Albert Under Your Sp Beats, Voice 126.00 wieeIY: 03:14 Abm 62/2
 « Love In The Ti Oneohtrix Point KCRW Session Beats 128.01 eke 04:23 Em 6212
 Ec Vanity Lise! Angels on the Beats, Voice 130.00 kkekHY 02:41 G 62212
-Lovesong-Po Max Cooper, P One Hundred B Beats-slow 133.00 wieskiiyr 06:26 E 6722/2
 Chimera Psychemagik | Feel How this Beats 145.92 okie! 04:08 Dm 61212
 TRIODE | PWNING REKORDE DEF N 34
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE SETUP
@@ -189,7 +181,8 @@ TRIODE // PWNING REKORDBOX DEF N 34:12
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | PROTOCOL INTERNALS
@@ -201,7 +194,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34:14
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | PROTOCOL INTERNALS
@@ -216,7 +210,8 @@ The real file access. Present the handle, give a path, get the file back.
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | PROTOCOL INTERNALS
@@ -230,7 +225,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 16
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | PROTOCOL INTERNALS
@@ -239,7 +235,6 @@ THE HANDSHAKE
 DEVICE ACCESS GRANTED REKORDBOX youre a CDJ. Here's your access.”
 O-r
 Vv
-"N
 TRIODE // PWNING REKORDBOX DEF CON 34:17
 ```
 
@@ -247,16 +242,14 @@ TRIODE // PWNING REKORDBOX DEF CON 34:17
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
 PATH TRAVERSAL
 IT DOESN'T RESTRICT ae
 DATA EXFILTRATION:
 CONFIDENTIAL FILES RETRIEVED
-PATHS —— arose
-read JVM nome/user/.ssh/id_rsa = = a,
 rekordbox never limits what file paths you can read. Every file, | J
 ; | SSH PRIVATE
 every volume the user can reach is readable. ATTACKER INPUT: KEY STOLEN
@@ -265,10 +258,10 @@ CLIMBING DIRECTORIES
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
 YOU DON'T EVEN
 Just a device on the same subnet that says the magic words. It
 NOT A CDJ
@@ -278,10 +271,10 @@ ONE SUBNET
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
 THE CONFUSED
 DEPUTY ATTACKER NFS SERVER YOUR DRIVE
 PUBLIC CREDENTIAL THE DEPUTY RUNS AS YOU
@@ -293,10 +286,10 @@ TRIODE // PWNING REKORDB DEF < N34:2
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
 AUTH ISN'T BROKEN.
 SCOPE IS.
 Authentication works exactly as designed. The design just assumed only CDJs would ever be on this network.
@@ -304,16 +297,15 @@ Authentication works exactly as designed. The design just assumed only CDJs woul
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
 WHAT IT GETS YOU
 Anything you can read, the attacker can read — over the
 network.
 TRIODE
 /| PWNING REKORDBOX
-D
 SSH KEYS
 DOCUMENTS
 CLOUD TOKENS
@@ -321,20 +313,15 @@ CLOUD TOKENS
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Botue Buc
-mins
-Bounce [| prov > - inal
 & = > Above The Cloud (Original Mix) BEAT KEY BEAT
 use 08:45 128.0 Fim » Loop SHIFT JUMP
-0) 00 ==; 00:0000 -00.00. 100: a
-—— J en a. ae ween co oan MP3/AAC/ WAV,
 VINYL SPEED ADJ
 HOT CUE
 AND DUS?
-YOUR IDs.
 Your playlists and your private collection of tracks.
 | Mac, Windows, CDJ/XDJ hardware, iOS & Android — anything that speaks PRO
 DJ LINK™ runs this.
@@ -344,28 +331,28 @@ DJ LINK™ runs this.
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DEMO
--
 RECORDED DEMO
 O01 rekordbox running normally — Link Export on
 02 Attacker terminal — 16 seconds to plaintext
-O03  Pointit at a CDJ — read the library
+O03 Pointit at a CDJ — read the library
 RECORDED PRE-TALK rekordbox 7.x
 TRIODE // PWNING REKORDBOX DEF CON 34: 26
 ```
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DEMO
 AlphaTheta has worked closely with me through the whole
 process. Software is done; firmware is a bigger lift across that YS See) 22 SS UCI alel cle Vv FIXED
-WHERE IT STANDS w2=-wems
 many models.
 CDJ / XDJ firmware C IN PROGRESS )
 TRIODE // PWNING REKORDBOX DEF CON 34: 27
@@ -375,7 +362,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 27
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
@@ -387,22 +375,22 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 29
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
-AS A)
 «2 FROZEN SINCE 2009
 The constant is burned into every PRO DJ LINK™ model since the
 HARDCODED CDJ-2000. AlphaTheta holds ~60% of the market — feels like
 100% in the booth.
-abated eta t ata
 TRIODE // PWNING REKORDBOX DEF ON 34: 30
 ```
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
@@ -416,12 +404,12 @@ DEF CON 34: 3
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
 THAT KILLS THE
-+ moco et PARTY.
 So it's off the table.
 HOT CUE
 TRIODE // PWNING REKORDBOX DEF CON 34
@@ -429,7 +417,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
@@ -437,12 +426,12 @@ TRIODE // PWNING REKORDBOX DEF CON 34
 BACKWARDS COMPATIBILITY.
 A set prepped today plays on a CDJ-1000 from 2001. That's genuinely hard — and it freezes the handshake in
 place.
-©)
 ```
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | WHY THE FIX
@@ -457,18 +446,15 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 34
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
-COOINMVMYARWNE
-B
-S
 11
 12
 13
 14
-ls)
 16
 Building Now Playing 8, pulling metadata over NFS, | realized | 20
 could point at any path | wanted. ‘Wait — you shouldn't be 23
@@ -501,7 +487,8 @@ DEF CON 34
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
@@ -516,7 +503,8 @@ AlphaTheta lock NFS down and shut us out.
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
@@ -531,7 +519,8 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 38
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
@@ -546,12 +535,12 @@ TRIODE // PWNING REKORDBOX DEF CON 34: 39
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
 ] 2
-) 7
 G) 12
 16 17
 21 22
@@ -575,7 +564,8 @@ DEF CON 34
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | THE DISCLOSURE
@@ -590,10 +580,10 @@ DEF CON 34: 41
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Bclose
 THAT'S THE BUG
 NFS, a hardcoded magic number, and a scope nobody ever
 locked down. Sitting there for 20 years.
@@ -602,7 +592,8 @@ TRIODE // PWNING REKORDBOX DEF N 4 1
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THANK YOU

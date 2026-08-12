@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Chen-New-Wine-in-an-Old-Bottle-Attacking-Chrome-WebSQL.pdf"
 pages: 61
 sha256: "dad2ca13d7cb0645b657be4f4e998bb1c324b680a6c1d5cceb6675294b386b92"
-text_chars: 22136
-ocr_pages: 6
+text_chars: 20920
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:53:45Z"
+converted_at: "2026-08-12T03:46:36Z"
 ---
 # New Wine in an Old Bottle Attacking Chrome WebSQL
 
 **Speakers:** Chen  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-New-Wine-in-an-Old-Bottle-Attacking-Chrome-WebSQL.pdf` (61 pages)
+
 
 ## Slide 1
 
@@ -29,20 +35,6 @@ converted_at: "2026-08-11T23:53:45Z"
 Ziling Chen Nan Wang Hongli Han
 
 #BHASIA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-ASIA
-MAY 11-12
-BRIEFINGS
-New Wine in an Old Bottle:
-Attacking Chrome WebSQL
-Ziling Chen
-Nan Wang
-Hongli Han
-```
 
 ## Slide 2
 
@@ -182,18 +174,14 @@ CREATE TABLE t0 ( c0, c1 ) STRICT
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 CREATE TABLE tO ( cO, c1 ) STRICT
 * template => statement => tree
-createTableStmt
 CREATE TABLE tableName columnNameList tableOption
 td columnNameList columnName STRICT
-columnName c1
-cO
 ```
 
 ## Slide 12
@@ -208,20 +196,14 @@ Mutate
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 CREATE TABLE tO ( cO, c1 ) STRICT
 * template-based mutation
-createTableStmt
-an
 | CREATE TABLE tableName columnNameList
 td columnNameList columnName STRICT M ut at e
-,;
-columnName c1
-cO
 tableOption
 ```
 
@@ -233,20 +215,14 @@ tableOption
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
-eee
 <tableOption> = WITHOUT ROWID
 <tableOption> = STRICT
-eres ee====-,
-createTableStmt
 CREATE TABLE tableName columnNameList tableOption
 td columnNameList columnName STRICT
-columnName c1
-cO
 ```
 
 ## Slide 14
@@ -260,22 +236,17 @@ ROWID
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 ' <tableOption> = WITHOUT ROWID |
 | <tableOption> = STRICT
 ! I
-\ y)
-createTableStmt
-an
 | CREATE TABLE tableName columnNameList tableOption
 to columnNameList columnName STRICT
 | WITHOUT
 columnName c1 ROWID
-cO
 ```
 
 ## Slide 15
@@ -623,46 +594,48 @@ u 100% success rate
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 76/100 on the text kept, 56/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 20253
-[ REGISTERS ]
-RAX @xle@c@0c30410 <«— 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAPAAAAAAAAAAAAPAAAAAAAAAAAAAAAAAAAD '
-RBX OxleQcOObedd40 <«— O0xb00000000
-RCX Oxfffffff7
-RDX Oxle@cOO0b5b580 <«— 0x1b50100000001
-[rsx AxteOcOOh83691 ao AxIAANAFZ
-R
-SI 0x4141414141414141 ('AAAAAAAA' )
-SORT
-RQ =: Ox 1e0cOOb83000 <— 0x40 /* '@' */
-R10 0x0
-R11 Oxle0c00ae2580 —» OxleOc002F7200 —» Ox1le0c00a61800 <— 0x1000000003
-R12 OxleOcOObedcb8 <— 0x0
-R13 0x1
-R14 Ox7f75fb9bOFF8 —» OxleOcOO2F7200 -—» OxleOc00a61800 <— 0x1000000003
-R15 OxleOcQ0ae2580 -» Oxle0c002F7200 —» Oxle0c00a61800 <«— 0x1000000003
-RBP 0x7f75fb9af920 —» Ox7f75fb9aTb30 —» Ox7f75fb9aFd40 —» Ox7f75fb9afeOO —» Ox7f75fb9afecO < ...
-RSP 0x7f75fb9af8eO —» OxleOcOOae2580 —» OxleOc0O2F7200 —» Oxle0c00a61800 <«— 0x1000000003
-RIP 0x55b5d5373e15 <«—
-[ DISASM ]
-> @x55b5d5373e15
-0x55b5d5373e18 0x55b5d5373e60 <0x55b5d5373e60>
-J
-@x55b5d5373e60
-0x55b5d5373e67
-0x55b5d5373e6a
-0x55b5d5373e6c 0x55b5d551bfbo <0x55b5d551bfbO>
-0x55b5d5373e71
-0x55b5d5373e7a 0x55b5d5373de7 <0x55b5d5373de7>
-0x55b5d5373e7f
-0x55b5d5373e80
-@x55b5d5373e81
-[ STACK ]
-@ 100% success rate
+Heap spray
+
+────────────────────────────────[ REGISTERS ]────────────────────────────────
+ RAX  0x1e0c00c30410 ← 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+ RBX  0x1e0c00bedd40 ← 0xb00000000
+ RCX  0xfffffff7
+ RDX  0x1e0c00b5b580 ← 0x1b50100000001
+ RDI  0x1e0c00b83c91 ← 0x90000f7
+ RSI  0x4141414141414141 ('AAAAAAAA')
+ R8   0x0
+ R9   0x1e0c00b83000 ← 0x40 /* '@' */
+ R10  0x0
+ R11  0x1e0c00ae2580 → 0x1e0c002f7200 → 0x1e0c00a61800 ← 0x1000000003
+ R12  0x1e0c00bedcb8 ← 0x0
+ R13  0x1
+ R14  0x7f75fb9b0ff8 → 0x1e0c002f7200 → 0x1e0c00a61800 ← 0x1000000003
+ R15  0x1e0c00ae2580 → 0x1e0c002f7200 → 0x1e0c00a61800 ← 0x1000000003
+ RBP  0x7f75fb9af920 → 0x7f75fb9afb30 → 0x7f75fb9afd40 → 0x7f75fb9afe00 → 0x7f75fb9afec0 ← ...
+ RSP  0x7f75fb9af8e0 → 0x1e0c00ae2580 → 0x1e0c002f7200 → 0x1e0c00a61800 ← 0x1000000003
+ RIP  0x55b5d5373e15 ← cmp    dword ptr [rsi], 1
+─────────────────────────────────[ DISASM ]──────────────────────────────────
+ ► 0x55b5d5373e15    cmp    dword ptr [rsi], 1
+   0x55b5d5373e18    jne    0x55b5d5373e60              <0x55b5d5373e60>
+    ↓
+   0x55b5d5373e60    lea    rsi, [rip - 0x21d67d5]
+   0x55b5d5373e67    mov    rdi, r14
+   0x55b5d5373e6a    xor    eax, eax
+   0x55b5d5373e6c    call   0x55b5d551bfb0              <0x55b5d551bfb0>
+
+   0x55b5d5373e71    mov    dword ptr [r12 - 4], 0xffffffff
+   0x55b5d5373e7a    jmp    0x55b5d5373de7              <0x55b5d5373de7>
+
+   0x55b5d5373e7f    int3
+   0x55b5d5373e80    push   rbp
+   0x55b5d5373e81    mov    rbp, rsp
+──────────────────────────────────[ STACK ]──────────────────────────────────
+
+◆ 100% success rate
 ```
 
 ## Slide 36

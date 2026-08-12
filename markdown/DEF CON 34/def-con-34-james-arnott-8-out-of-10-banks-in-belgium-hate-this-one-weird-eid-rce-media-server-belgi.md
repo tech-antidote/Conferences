@@ -4,23 +4,28 @@ speakers: ["James Arnott"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - James Arnott - 8 Out of 10 Banks in Belgium HATE This One Weird eID RCE - MEDIA SERVER Belgi.pdf"
 pages: 71
 sha256: "40bb3a9d88cc35e526c94fe401905516b8b661c4c52c2728af24d7a10af421b1"
-text_chars: 20493
+text_chars: 19958
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:22:41Z"
+converted_at: "2026-08-12T06:35:42Z"
 ---
 # 8 Out of 10 Banks in Belgium HATE This One Weird eID RCE
 
 **Speakers:** James Arnott  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - James Arnott - 8 Out of 10 Banks in Belgium HATE This One Weird eID RCE - MEDIA SERVER Belgi.pdf` (71 pages)
+
 
 ## Slide 1
 
@@ -68,7 +73,8 @@ INTRO
 
 Common Services for Access Management
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INTRO Q2 / 03
@@ -591,31 +597,18 @@ Title and description are attacker-controlled.
 
 eID RCE — DEF CON 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-05 / THE PIN
 The dialog never says who’s
 asking.
 Title and description are
 attacker-controlled.
-eID RCE — DEF CON 34
-r-
 BNP Paribas Bank Login
 DEF CON discount special, 1000% cashback when
 you get rick rolled
 Cancel OK
-Be an
-employee at
-early stage
-Connective
-Let any website
-request the
-users pin
-Let any website
-control the text
-inside the pin
-dialog
 ```
 
 ## Slide 39
@@ -658,10 +651,10 @@ DEF CON 34
 
 eID RCE — DEF CON 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-05 / THE PIN
 The host is killed after every message.
 @@@ native_host lifecycle
 Web page Extension Native host
@@ -673,18 +666,6 @@ stdout: pinToken
 x
 process exits
 postMessage: pinToken
-eID RCE — DEF CON 34
-Be an
-employee at
-early stage
-Connective
-Let any website
-request the
-users pin
-Let any website
-control the text
-inside the pin
-dialog
 Cache the pin
 so the user
 doesn't have to
@@ -751,25 +732,13 @@ DEF CON 34
 
 eID RCE — DEF CON 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-05 / THE PIN
 Now attackers can phish
 user’s pin, then replay it
 whenever they want
-eID RCE — DEF CON 34
-Be an
-employee at
-early stage
-Connective
-Let any website
-request the
-users pin
-Let any website
-control the text
-inside the pin
-dialog
 Cache the pin
 so the user
 doesn't have to
@@ -838,13 +807,13 @@ eID RCE — DEF CON 34
 
 No more secure CSAM for you
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 This breaks the
 entire ecosystem a YOU WOULDN'T sr
 relying on elD auth ~~ STEAY AN :
-Sicieatures | ee. _ WENTITY
 and signatures
 No more secure CSAM for you
 ```

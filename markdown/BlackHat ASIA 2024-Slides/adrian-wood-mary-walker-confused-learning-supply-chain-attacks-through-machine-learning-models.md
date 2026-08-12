@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Adrian Wood & Mary Walker-Confused Learning Supply Chain Attacks through Machine Learning Models.pdf"
 pages: 66
 sha256: "5a5921b83faa23548f02ac8cf85f137008415e3fd7dc2557e4f4cf18f505ce08"
-text_chars: 17565
-ocr_pages: 14
+text_chars: 15765
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:36Z"
+converted_at: "2026-08-12T04:46:18Z"
 ---
 # Confused Learning Supply Chain Attacks through Machine Learning Models
 
 **Speakers:** Adrian Wood, Mary Walker  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Adrian Wood & Mary Walker-Confused Learning Supply Chain Attacks through Machine Learning Models.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -59,7 +64,8 @@ Key Concepts
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 flags.
@@ -85,35 +91,11 @@ Models containing malware
 
 … and much more
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-A lot can go wrong with models
-°
-°
-fe)
-o
-Backdoors Hijacks
-Modified prediction Models containing malware
-algorithms
-CO
-.. and much more
-```
-
 ## Slide 7
 
 Malicious models won’t execute themselves
 
 Here’s how we do it for bug bounty and red team operations
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-' "A Malicious models
-+. - won't execute themselves
-a .-Here’s how we do it for bug bounty and
-red team operations
-```
 
 ## Slide 8
 
@@ -126,20 +108,6 @@ Encourage How will you get them to run it?
 Coerce
 
 What’s the bait or trick?
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-You need a victim and process
-Target
-Pick a victim
-Encourage
-How will you get them
-to run it?
-S&S ___+— Coerce
-VMILCY
-What’s the bait or trick?
-```
 
 ## Slide 9
 
@@ -187,24 +155,18 @@ The ML Pipeline Based on observations in bug bounty _and_ red team
 
 **Observability** complicated
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The ML Pipeline
 Based on observations in bug bounty and red team
-_ Proximity
 y “Seok Party ML Pipeline
 / tools internal components — =e
 \. & Libraries > a \ To crown jewels
 | ingestion —+t — > training/ \ 000
-L D) (precessin \ tuning Ni \
-) oa [analy isis/|
-[ns —— \Valiclation yg
 dot. NS / oye
-(Oper) > | pA Loong — Observability
 | Source | pipeline ~— — r \
-X _Deps _} a. restricte A 7 . 4
-SS — compticate
 ©
 ```
 
@@ -220,10 +182,10 @@ But they have **a lot** of data
 
 Prior knowledge? You don’t need to be a math genius or an ML expert to start to work with Machine Learning Models
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-fae Prior 4
 knowledge?
 Knowledge? °
 to operate a You don't need to be a math genius
@@ -259,29 +221,15 @@ Attacker Observations Features that make this attack easier
 
 Public Model Repositories i.e. huggingface
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Public Model Repositories
 i.e. huggingface
-| O-O-O—-O
-CS @ huggingface.co
 S) HuggingFace | © enti Models Datasets Spaces Docs Solutions Pricing
 Models
-yai/stable-ditfusion-x1-base-1.0 Tasks Models o
-stabilityai/stable-dif: x1-base-0.9
-meta-1lana/Llama-2-706
-meta-Llama/Llana-2-70b-chat-hf Ce
-THUDM/chatgln2-6b
-stabilityai/StableBel hd
 Datasets penchat /openchat
-Open-Orca/Opendrea hd
-: 5 Ser viel/ControlNet-vi
-Spaces ent! da r ponse/zeroscope.v2_Xl
-Hugging °
-yai/stablo-ditt
-Organizations P 7 ~ falcon-40b-instruct
-@ subzero , ston
 mit WizardLM/WizardCode B-V1.0
 ```
 
@@ -313,11 +261,11 @@ Registering orgs is very easy Organizations can be verified, but nobody seems to
 
 Invite people Or Wait for them to join
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Watering Holes
-O-O—-O—O
 Organization Members
 Invite people
 Or
@@ -340,11 +288,11 @@ user
 
 organization
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phishing
-| O-O—-O—-O
 «§ Invite people to
 Send invitation
 userX is inviting you to join "|erganization” on + Hugging Face
@@ -438,14 +386,14 @@ Can trivially backdoor and get execution
 
 End state
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 End state - flow
 Q-O-O-O
 C2 Infra
 Conditional serving
-————————S
 3rd Party
 tools
 & Libraries
@@ -460,23 +408,15 @@ Victim environment
 
 End state
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Malware execution
-fo
-( ssh
 tools
-\e Libraries , ( ML Pipeline __ Y
 ai! : re. code,
-ex. huggingface.co
-pyei.com INN \
-e ML [ ingestion ) Cee. 3 a training/ analysis/ — /.
-| Hadille J [processing “(tering validation Sng, =
-[i |
 Open )
 soe © likely malware detonation location \ Compute |
-Dees ; 4
 OpenAL
 ```
 
@@ -650,7 +590,8 @@ Files Assessed keras_metadata.pb {model}.h5
 
 Since last fall, we have checked an additional **3,264** protobuf serialized keras models for the presence of code
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 . _* Since last fall, we have checked
@@ -658,23 +599,12 @@ Since last fall, we have checked an additional **3,264** protobuf serialized ker
 ~ | _* serialized keras models for the
 are presence of code
 “contains_code": {
-"Ss": "True"
-},
 “modified_date": {
 "S": "2022-09-02T02:3:
-},
 “extracted_encoded_ code": {
-"S$": "4wEAAAAAAAAAAQAAAATAAABTAAAACWOAAABGAGOB FACOAFMAKQFOKQL aCXRmYV9pbWFnZdoQZGVu\nc2VFaW1hZ2V
-fd2FycCkB2gF4qQByBAAAAPr9L3Vzci9sb2NhbC9nb29nbGUvX2IsYXp1X2ZpdHN1 \nbXJ1ZGEvZThiNDRhMGEWYmQ42j Y3YjAyOThhYTNINzhj
-MGU2Y j IvZXh1Y3Jvb3QvZ29vZ2x1My9i \nbGF6ZS1vdxQvazgt Y3VkYTExLW9wdC9i aW4vZ29vZ2xleC9nY2FtL2ZyYW11X21ludGVycG9sYXRp\
-nb24vdHJhaWSpbmcvYnVpbGRfc2F2ZWRfbWIkZWx FY 2xpLnJibmZpbGVzL 2dvb2dsZTMvZ29vZ2x1\neCOnY2FtL2ZyYW11X21ludGVycG9sYXRp
-b24vbW9kZWxzL2Z1¢21vb1 9uZXQvdXRpbC5wedoIPGxh\nbWIkYTSFAAAABWAAAAA=\n"
-,
 "model_type": {
 “S": “protobuf*
 “contains_code": {
-“s": "True"
-},
 “modified_date":
 ```
 
@@ -847,7 +777,8 @@ wiki.offsecml.com All your offensive ML needs
 
 What has already been done?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What has already been done?

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Johan Berggren&Matt Linton_My Invisible Adversary Burnout.pdf"
 pages: 24
 sha256: "ef47144e8986f07d5c32d048a79df4e06bc44fe4faf4fcd960ea3dca0391c696"
-text_chars: 2473
-ocr_pages: 2
+text_chars: 2203
+ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 80.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:15Z"
+converted_at: "2026-08-12T04:03:12Z"
 ---
 # My Invisible Adversary Burnout
 
 **Speakers:** Johan Berggren, Matt Linton  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Johan Berggren&Matt Linton_My Invisible Adversary Burnout.pdf` (24 pages)
+
 
 ## Slide 1
 
@@ -81,19 +87,6 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Opaque Management
-RACK
-Suva
-a, or goRStUV yy, .
-wae: es
-| + 1234567890 =
-| eae
-L@& GOOD BYE
-```
-
 ## Slide 9
 
 #### Chaos on Both Ends (work and home)
@@ -106,40 +99,27 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unclear Expectations
 Geagie" Classification: General
 | PARKING
-TVA.M. 0 TPM.
 TUESDAY
 STREET CLEANING
 &
-=~ TOWeAWAY
 SCHOOL DAYS
 STOPPING
 MON = FRI
-SCHOOL DAS ENCEPTONS
-La] MON-FRI
 MINUTES. T3 To Bis
-SCHOOLPUSINESS
-COMETDS.300
 4
 =~ TOW.AWAY _
 SCHOOL DAYS
-‘CCMC 7.03010
 IL HOUR PARKING
 MON .,., ERI
-4om 6pm
-————_
 § | ONCE PER DAY, PER DISTRICT
-‘CCMC 7.03.05
 ( DIST. PERMITS)
-EXEMPT
-n>
-sie TOWs\WAY
-CMC 703.010
 ```
 
 ## Slide 11

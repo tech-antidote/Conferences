@@ -12,7 +12,7 @@ duration_seconds: 2080
 words: 4286
 text_chars: 24815
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Safe Harbor or Hostile Waters - Hidden Perils of the TorchScript Engine in PyTorch

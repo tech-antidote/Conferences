@@ -1,6 +1,6 @@
 ---
-title: "That Gambling Site It's Fueled by Chinese Organized Crime Article"
-speakers: ["Maël Le Touz", "Renée Burton"]
+title: "The Hydra"
+speakers: ["Philippe Auclair"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2024"
 edition: "USA"
@@ -11,15 +11,22 @@ sha256: "4a085eb85bce50fb263092433e2616cd1c0faeecf41c8d253116dbef290359eb"
 text_chars: 12606
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "Supporting material, not the talk: this is a news article of 22 July 2024 shipped alongside the deck. The filename names the talk it accompanies."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:34:39Z"
+converted_at: "2026-08-12T04:36:10Z"
 ---
-# That Gambling Site It's Fueled by Chinese Organized Crime Article
+# The Hydra
 
-**Speakers:** Maël Le Touz, Renée Burton  
+**Speakers:** Philippe Auclair  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime_Article.pdf` (10 pages)
+
 
 ## Slide 1
 

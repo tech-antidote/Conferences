@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Babkin-firmWar-An-Imminent-Threat-to-the-Foundation-of-Computing.pdf"
 pages: 32
 sha256: "92a7e4bc4f0586b795597208bb7ff428f588261ddc8e00d9cbaf363bfd348f5a"
-text_chars: 11063
+text_chars: 10929
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:53:38Z"
+converted_at: "2026-08-12T03:46:28Z"
 ---
 # firmWar An Imminent Threat to the Foundation of Computing
 
 **Speakers:** Babkin  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Babkin-firmWar-An-Imminent-Threat-to-the-Foundation-of-Computing.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ Vladyslav Babkin
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pigekhat”
-ASIA 2023
 MAY 11-12
 BRIEFINGS
 firmWar: An Imminent threat to the foundation of computing.
@@ -80,11 +84,10 @@ Viadyslav Babkin
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-ASIA 2023
 Western Digital.
 WD BLUE"
 1TB 3D NAND
@@ -118,11 +121,10 @@ solid state DIN?
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-ASIA 2023
 Firmware att
 2015-2017
 Equation Group & Vault 7 Leaks
@@ -146,7 +148,6 @@ ed att
 to maintain a persistent foothol
 organizations and evade most det
 controls while delivering maliciou:
-ayloads
 to compromised systems. You can find
 more information about
 September
@@ -165,7 +166,6 @@ wary and attributed to
 josely affliated to the
 group, which researchers say is part of the
 evading mot
-write
 operation
 boot process. The end result is malware
 stealthy infecting the
@@ -193,7 +193,6 @@ e malware (patched
 the LoJack anti-theft
 software (also known as Computrace
 Trickbot contains
-discovere
 Trickboot
 code
 read, write, and
@@ -217,7 +216,6 @@ October
 2022
 BlackLotus
 Researchers observed a UEFI bootkit sold
-*. Commanding
 price tag the sellers claim this
 malware can bypass Secure
 ```
@@ -474,11 +472,10 @@ Data from December, 2021
 
 #BHASIA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-ASIA 2023
 Meris Botnet
 Data from December, 2021
 Geographic Distribution of Vulnerable MikroTik Devices

@@ -4,17 +4,21 @@ speakers: ["Raphael Silva"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Raphael Silva - Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks - v1.pdf"
 pages: 27
 sha256: "a464407d79a335be78cd6e3f436743f753f09276a938a347223dbc544175b5cf"
-text_chars: 10288
-ocr_pages: 21
+text_chars: 9622
+ocr_pages: 20
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:26:33Z"
+converted_at: "2026-08-12T06:40:51Z"
 ---
 # Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks
 
@@ -22,21 +26,12 @@ converted_at: "2026-08-12T00:26:33Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Raphael Silva - Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks - v1.pdf` (27 pages)
 
+
 ## Slide 1
 
 Turning claimable VS Code extension IDs into supply-chain attacks
 
 Raphael Silva Security Researcher @ Aikido Security
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-TNSTALL Me MARE
-Turning claimable VS Code extension IDs into
-supply-chain attacks
-Raphael Silva
-Security Researcher @ Aikido Security
-```
 
 ## Slide 2
 
@@ -118,19 +113,13 @@ raphaelcssilva
 
 - …
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-J,
-DEPENDENCIES ocpress: 74.4
-"express ]s-session”:
-yr
-“devDependencies”:
 "@types/vscode":
 * NPM "@types/mocha”:
-. “@types/node":
 * GitHub "eslint”: 9 1",
-“@vscode/test-cli":
 * URL “@vscode/test-electron”:
 * Local
 e
@@ -140,8 +129,6 @@ e
 "express":
 J,
 “dependencies”:
-“mocha” :
-“module”:
 "express": “htt
 ```
 
@@ -149,7 +136,8 @@ J,
 
 THE MAGIC STRING
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE MAGIC STRING
@@ -164,7 +152,8 @@ THE MAGIC STRING
 
 WHAT IS PUBLISHER.EXTENSION REALLY?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT IS PUBLISHER.EXTENSION REALLY?
@@ -179,7 +168,8 @@ Looks portable but the identity is marketplace-specific. eS eS
 
 AN EXTENSION IS A LONG-LIVED PROCESS INSIDE YOUR EDITOR **.**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AN EXTENSION IS A LONG-LIVED PROCESS INSIDE
@@ -193,18 +183,17 @@ Secrets, source code, etc...
 
 SAME STRING. DIFFERENT REGISTRY.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SAME STRING. DIFFERENT REGISTRY.
 VS Code Marketplace
 Microsoft-operated.
 Used by stock VS Code.
-pubLlisher.extension
 Open VSX
 Eclipse Foundation.
 Used by VS Code-derived editors.
-publisher
 ```
 
 ## Slide 11
@@ -213,7 +202,8 @@ publisher
 
 Same primitive, aimed somewhere new. This time what gets confused is a publisher namespace.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A FAMILIAR FACE?
@@ -230,7 +220,8 @@ Same primitive, aimed somewhere new. This time what gets confused is a publisher
 
 NAME-TAKEOVER, MEET DEPENDENCY CONFUSION.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NAME-TAKEOVER, MEET DEPENDENCY CONFUSION.
@@ -253,7 +244,8 @@ namespace meet in editor tooling.
 
 THE ATTACK MODEL
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ATTACK MODEL
@@ -302,7 +294,8 @@ real privileges.
 
 WHERE IDS TRAVEL 1/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 1/5
@@ -323,7 +316,8 @@ ecommendatio . [ ~ Lives in the repo — forks, merges, gets copy-pasted.
 
 WHERE IDS TRAVEL 2/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 2/5
@@ -331,7 +325,6 @@ WHERE IDS TRAVEL 2/5
 Open repo. Start container. You’re done.
 ~ Extension install becomes part of trusted bootstrap.
 {
-"image": "mcr.microsoft.com/devcontainers/python:3",
 "customizations": { ~ Often runs unattended — codespaces, remote dev hosts.
 "vscode": {
 "extensions": [
@@ -347,7 +340,8 @@ Open repo. Start container. You’re done.
 
 WHERE IDS TRAVEL 3/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 3/5
@@ -359,7 +353,6 @@ The kind of file nobody reviews.
 EXTS=(
 ~ Internal “recommended extensions” sheets that
 ms-vscode.cpptools
-redhat. vscode-yaml nobody updates.
 internal.platform-helper # written 2021, no one remembers why .
 ) Stale references age into install paths.
 for e in "${EXTS[@]}"; do
@@ -371,7 +364,8 @@ done
 
 WHERE IDS TRAVEL 4/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 4/5
@@ -394,7 +388,8 @@ ago, on every laptop.
 
 WHERE IDS TRAVEL 5/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 5/5
@@ -416,7 +411,8 @@ copies stay. py weep 8
 
 WHERE IDS TRAVEL 5/5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHERE IDS TRAVEL 5/5
@@ -440,7 +436,8 @@ No exploitable lists, no scanner logic published.
 
 RESULTS FROM SCANNING
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RESULTS FROM SCANNING
@@ -453,7 +450,8 @@ Not just the long tail.
 
 ENM - ETHICAL NON-MALWARE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ENM - ETHICAL NON-MALWARE
@@ -479,12 +477,12 @@ NEVER COLLECTED
 
 WHAT DID THE CALLBACKS LOOK LIKE?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WHAT DID THE CALLBACKS LOOK LIKE?
 This is what disclosure was built on.
-"ts":
 "ip":
 "editor":
 "ext_path":
@@ -493,18 +491,12 @@ This is what disclosure was built on.
 "git_remote":
 "user":
 "host":
-(REDACTED)
 SIGNALS THAT MATTERED
 ~ Corporate git email domain
-"2026-03-1§§T OM: 42:1gj2", ~ Corporate git remote
 y 8 8B ~ Repeated host / user pairs
 "any-vscode-fork/1.9.—", ~ Editor metadata (variant + version)
-"/home// . any-vscode-fork/extensions/ publisher.extension -1.0.0",
 - Remote-context flag (WSL / SSH /
 "Local", i
-: devcontainer)
-“IBMMMG evil-corp.com",
-"github.com/evil-corp/xx iii! ",
 ‘Zz, IP alone was noisy. Stack the
 "EC-Laptop - ag" signals.
 ```
@@ -513,7 +505,8 @@ y 8 8B ~ Repeated host / user pairs
 
 END RESULTS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 END RESULTS
@@ -526,13 +519,13 @@ callbacks from real developer environments.
 
 END RESULTS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 END RESULTS
 By the numbers.
 TOTAL CALLBACKS DISTINCT IPS COUNTRIES
-1,100,000+ 11.0,000+ 160+
 From the PoC extensions under claimable
 IDs. 17,255 distinct hosts.
 Pretty much everywhere
@@ -557,7 +550,8 @@ BBPs, VDPs & direct contacts. Multiple programs. Still climbing. =420MNS)Marketp
 
 # BUT HOW PREVALENT IS IT?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 B U T H OW VSCode Security:
@@ -566,11 +560,9 @@ PREVALE NT IS Detected- More Than
 45,000 Downloads-
 |T? Pil Exposed, and
 Backdoors Enabled
-@ va
 Malicious VSCode extensions with
 millions of installs discovered
 By Bill Toulas
-[A June9,2024 GJ 10:22AM M7
 VSCode extensions found
 downloading early-stage
 RL Blog ransomware

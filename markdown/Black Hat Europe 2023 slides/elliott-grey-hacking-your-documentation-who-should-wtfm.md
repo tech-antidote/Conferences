@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Elliott Grey_Hacking Your Documentation Who Should WTFM.pdf"
 pages: 22
 sha256: "49f32c4ea4ca3c90a4250b2878b45efd22871e9a038980d56ba1e58a07cfd7fd"
-text_chars: 4942
-ocr_pages: 4
+text_chars: 4730
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:11:28Z"
+converted_at: "2026-08-12T04:02:12Z"
 ---
 # Hacking Your Documentation Who Should WTFM
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:11:28Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Elliott Grey_Hacking Your Documentation Who Should WTFM.pdf` (22 pages)
 
+
 ## Slide 1
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ms chat’
 DECEMBER 4-7
 EXCEL LONDON / UK
 #BHEU @BlackHatEvents
@@ -41,18 +47,6 @@ EXCEL LONDON / UK
 ###### Elliott Grey
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-° “38
-black hat
-L_JFA ) oli
-Hacking Your Documentation:
-Who Should WTFM?
-Elliott Grey
-#BHEU @BlackHatEvents
-```
 
 ## Slide 3
 
@@ -196,10 +190,10 @@ Quality Underquality
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 black hat
 EUROPE 2023
 Closer Look
@@ -239,17 +233,16 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pif hat
 EUROPE 2023
 Closer Look
 a Which of the following are issues in your current role that negatively impact
 us your job satisfaction?
 >
 U (Showing top nine responses)
-Le
 Too many | experience overwork due My team has inadequate resources
 emails/tasks to staff or skill shortages to sufficiently protect the organization
 Information Classification: General

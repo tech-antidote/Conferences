@@ -8,13 +8,17 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Nick Frichette_Evading Logging in the Cloud Bypassing AWS CloudTrail.pdf"
 pages: 46
 sha256: "307b9dc27bf7010ffc48562854d53ef062c971a4c8c87555afa67f85dd18c475"
-text_chars: 13572
-ocr_pages: 21
+text_chars: 12281
+ocr_pages: 19
 has_ocr: true
 redacted_secrets: 2
+ocr_confidence: 86.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:45:32Z"
+converted_at: "2026-08-12T04:17:20Z"
 ---
 # Evading Logging in the Cloud Bypassing AWS CloudTrail
 
@@ -22,23 +26,12 @@ converted_at: "2026-08-11T22:45:32Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nick Frichette_Evading Logging in the Cloud Bypassing AWS CloudTrail.pdf` (46 pages)
 
+
 ## Slide 1
 
 **Evading Logging in the** TItitltet **Cloud: B** **yp assin** **g AWS** **CloudTrail**
 
 Nick Frichette
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA e&0es
-Evading Logging in the
-Cloud: Bypassing AWS
-CloudtTrail
-Nick Frichette
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 2
 
@@ -149,23 +142,20 @@ Request Parameters
 
 **[...snip…]**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat Intro to the AWS API
-USA 20es
 "version":"2.0",
 "metadata":{
 "apiVersion":"2017-10-17",
-"endpointPrefix":"secretsmanager",
 "jJsonVersion":"1.1",
 "protocol":"json",
 "serviceFullLName":"AWS Secrets Manager",
-"serviceld": "Secrets Manager",
 "signatureVersion": "v4",
 "signingName": "secretsmanager",
 "targetPrefix":"secretsmanager",
-"uid": "secretsmanager-2017-10-17"
 ```
 
 ## Slide 10
@@ -176,23 +166,20 @@ USA 20es
 
 **[...snip…]**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat Intro to the AWS API
-USA 20es
 "version":"2.0",
 "metadata":{
 "apiVersion":"2017-10-17",
-"endnointPrefix":"cecretsmanager”,
 "jJsonVersion":"1.1",
 "protocol":"json",
 “serviceFulltName : AWS Secrets Manager",
-"serviceld": "Secrets Manager",
 "signatureVersion": "v4",
 "signingName": "secretsmanager",
 "targetPrefix":"secretsmanager",
-"uid": "secretsmanager-2017-10-17"
 ```
 
 ## Slide 11
@@ -203,23 +190,20 @@ rest-json rest-xml JSON 1.0 JSON 1.1 query EC2
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
 Pretty Raw Hex >
-POST /|HTTP/1.1
-2 LHI imimaiamnnatG com
 3§X-Amz—-Target: secretsmanager.ListSecrets
 4§Content-Type: application/x—amz—json-1.1
 ul
-Seay tone et  Darwin/22.5.0 exe/x86_64 prompt/off
 command/secretsmanager. list-secrets
 6 X-Amz—-Date: 20230714T204034Z
 7 X-Amz-Security-Token: IQoJb3JpZ2... [snip]
 8 Content-Length: 2
 9 Connection: close
-{
 }
 rest-json
 rest-xml
@@ -402,7 +386,8 @@ APIs
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing AWS CloudfTrail
@@ -428,7 +413,8 @@ source: frichetten.com/blog/minor-cross-tenant-vulns-app-runner/
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Undocumented APIs
@@ -447,7 +433,8 @@ source: frichetten.com/blog/minor-cross-tenant-vulns-app-runner/
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Undocumented APIs
@@ -463,7 +450,8 @@ Log back in
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lamadmin
@@ -473,7 +461,6 @@ Request URL: https://us-east-1.console.aws.amazon.com/iamv2/api/iamadmin
 Request Method: POST
 Status Code: @200
 Remote Address: 3.3.9.1:443
-"operation": "ListAccessKeysForMultipleUsers",
 "contentString":"{\"UserNames\": [\"user1\", \"user2\",\"user3\"] }"
 ```
 
@@ -481,25 +468,14 @@ Remote Address: 3.3.9.1:443
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-"ListAttachedPoliciesForGroups
 AMAdminServices = i.strEnum(['ListPoliciesForGroups’,
-‘GetGroupMembershipCounts',
-‘ListGroupsForusers
-"ListAccessKeysForMultipleuUsers',
-"ListAccessKeyLastUsedForMultipleAccessKeys',
-‘GetLoginProfilesForMultipleusers
-‘ListDescriptionsForPolicies’,
-mo
 w
-BatchGetRoleLastUsed'’,
 "ListMFADevicesForMultipleUsers',
-‘ListSigningCertificatesForMultipleusers'
-\
 "ListServiceLinkedRoleDeletionAttempts',
-"GetServiceLinkedRoleTempLlate' ]),
 t. IAMAdminDefaultResponse = Promise. resolve({
 ReennnceMan: £
 28
@@ -511,19 +487,17 @@ ReennnceMan: £
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lamadmin:ListAccessKeysForMultipleUsers
 "ErrorMap": {
 "no-perm": [
-{
 "ErrorCode": 403,
 mearorMessage": "User: arn:awS:iam::111111111111:user/noperm is not authorized to perform:
 iam:ListAccessKeys|pn resource: no-perm because no identity-based policy allows the iam:ListAccessKeys action"
-5)
 ]
-},
 "ResponseMap": {}
 ```
 
@@ -533,7 +507,8 @@ Mapping undocumented iamadmin actions to normal IAM actions
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping
@@ -577,7 +552,8 @@ Mapping undocumented iamadmin actions to normal IAM actions
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping
@@ -621,7 +597,8 @@ Mapping undocumented iamadmin actions to normal IAM actions
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping
@@ -665,30 +642,22 @@ iam:GetServiceLinkedRoleTemplate
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisckhat Jamadmin
 nick. frichette@machine tamadmin-ct-bypass-pocs % ./list
 access_key_cloudtrail_bypass.py
 Request method:
-com.amazon.webservices. auth. identitymanagementadmin.AWSIdentityManagementAdminService.ListAccessKeysForMultipleu
 sers
-{
 “ErrorMap":
 “ResponseMap"
-"tester":
-{
 AccessKeyId": "“AKIA[REDACTED:aws-access-key-id]
 ‘CreateDate
-"Status": "Active"
 "UserName": "tester"
 >
->
 essKeyId": “AKIA[REDACTED:aws-access-key-id]"
-‘CreateDate":
 "Status": ctive”
-UserName": “tester”
 ```
 
 ## Slide 34
@@ -746,14 +715,13 @@ Tested using AWS CLI: aws-cli/2.11.7 Python/3.11.2 Darwin/22.4.0 exe/x86_64 prom
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 nick. frichette@COMP-VX7FIJ4Q@QHG .aws % aws sns List-topics \
 > --region us-east-2
-{
 "Topics": [
-{
 "TopicArn": "arn:aws:sns:us-east-2:! :security_aLerting"
 }
 ]
@@ -774,11 +742,10 @@ nick. frichette@COMP-VX7FJ4QQHG .aws % fj
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat Enumerating permissions silently
 Event history (1) info
 Event history shows you the last 90 days of management events.
 Lookup attributes
@@ -794,25 +761,22 @@ Only 1 event showing in CloudTrail
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q nick. frichette@COMP-VX7FJ4QQHG /tmp % aws ivs list-channels \
 t i | I + > --region ap-northeast-1
 "channels": [
-{
 "arn": "arn:aws:ivs:ap-northeast-1: :channel/rra94t9j3bsE",
 "authorized": false,
 "LatencyMode": "LOW",
-"name": "",
-"recordingConfigurationArn": "",
 "tags": {}
 }
 nick. frichette@COMP-VX7FJ4QQHG /tmp % aws ivs List-channels \
 Event Sou rce > --reqgion gp-northeast-1 \
 > --endpoint-url https://ivs-gamma.ap-northeast-1.amazonaws .com
 Obfuscation "channels": [
-{
 "arn": "arn:aws:ivs:ap-northeast-1: :channel/rra94t9j3bsE",
 "authorized": false,
 "LatencyMode": "LOW",
@@ -829,7 +793,8 @@ nick. frichette@COMP-VX7FJ4QQHG /tmp % |
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Event history (2) info
@@ -850,7 +815,8 @@ June 06, 2023, 13:41:19 (UTC-O... auto-user
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ¥. Security Labs
@@ -870,7 +836,8 @@ aws242-servicecatalog .uS-east-1.amazonaws.com
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Automate Bypass Discovery ~
@@ -879,7 +846,6 @@ Certspotter CloudTrail Lambda: certspotter ASG: AWS
 EC2 Ingester Bypass Aan ec2 scaleout oF
 Potential Identifier Fingerprinter
 Queue queue
-|DynamoDB DynamoDB
 Table: Table:
 certspotter certspotter
 positive identified
@@ -916,14 +882,3 @@ Nick Frichette Senior Security Researcher @
 - Mastodon: @frichetten@fosstodon.org
 
 46
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Nick Frichette 1
-Senior Security Researcher @ 2
-- https://hackingthe.cloud DATADOG
-- Twitter: @frichette_n
-- Mastodon: @frichetten@fosstodon.org
-46
-```

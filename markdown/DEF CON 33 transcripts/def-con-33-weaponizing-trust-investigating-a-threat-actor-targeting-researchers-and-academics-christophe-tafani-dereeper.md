@@ -12,7 +12,7 @@ duration_seconds: 2130
 words: 6341
 text_chars: 35239
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Weaponizing Trust - Investigating a Threat Actor Targeting Researchers and Academics

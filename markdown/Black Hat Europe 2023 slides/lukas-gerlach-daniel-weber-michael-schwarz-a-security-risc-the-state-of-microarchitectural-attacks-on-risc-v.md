@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Lukas Gerlach, Daniel Weber, Michael Schwarz_A Security RISC The State of Microarchitectural Attacks on RISC-V.pdf"
 pages: 209
 sha256: "745f4a12675f4ae90f533f97f86126779e87d204543a04b87259db2b9ab0ee39"
-text_chars: 44005
-ocr_pages: 7
+text_chars: 43417
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:52Z"
+converted_at: "2026-08-12T04:07:40Z"
 ---
 # A Security RISC The State of Microarchitectural Attacks on RISC-V
 
 **Speakers:** Lukas Gerlach, Daniel Weber, Michael Schwarz  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Lukas Gerlach, Daniel Weber, Michael Schwarz_A Security RISC The State of Microarchitectural Attacks on RISC-V.pdf` (209 pages)
+
 
 ## Slide 1
 
@@ -142,10 +148,10 @@ PhD Student Faculty
 
 6 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-eee demo@!ab24: ~/ademos Aa!
 demo@Lab24:~/demos$ ./leak
 Calibrating Threshold
 Cache hit timing: 5, Cache miss timing: 150
@@ -326,32 +332,11 @@ Threshold is: 101
 
 8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-€ Why do We Care about CPU security?
-PLUNDER
-VO_T
-8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-```
-
 ## Slide 30
 
 #### **Why do We Care about CPU security?**
 
 8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-€ Why do We Care about CPU security?
-ya
-akage
-Qe Al
-PLUNDER
-VO_T
-8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-```
 
 ## Slide 31
 
@@ -359,33 +344,11 @@ VO_T
 
 8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-€ Why do We Care about CPU security?
-Qe Al
-PLUNDER
-VO_T
-iLeakage
-8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-```
-
 ## Slide 32
 
 #### **Why do We Care about CPU security?**
 
 8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-€ Why do We Care about CPU security?
-Qe Al
-PLUNDER
-VO_T
-iLe
-8 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-```
 
 ## Slide 33
 
@@ -1026,10 +989,10 @@ units
 
 #### **CPU Optimization: The Cache**
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 ###### **CPU Cache**
 
@@ -1043,10 +1006,10 @@ access(array[0]);
 
 Cache Miss
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 ###### **CPU Cache**
 
@@ -1060,10 +1023,10 @@ access(array[0]);
 
 Cache Miss
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 CPU Cache
 
@@ -1079,10 +1042,10 @@ Request
 
 Cache Miss
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 CPU Cache
 
@@ -1104,10 +1067,10 @@ CPU Cache
 
 Cache Miss
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 **DRAM**
 
@@ -1122,10 +1085,10 @@ Cache Hit Response
 0x1337
 CPU Cache
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 **DRAM**
 
@@ -1142,10 +1105,10 @@ Cache Hit Response
 0x1337
 CPU Cache
 
-```
+\```
 access(array[0]);
 access(array[0]);
-```
+\```
 
 **DRAM**
 
@@ -1173,22 +1136,17 @@ DRAM access skipped   Fast CPU Cache
 
 24 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 € Measuring Cache Timings
 10*
 rf m Cache hit
 Bos ™ Cache miss
-e)
 O
-©
-qe 25
 O
-D
 O 1.
-E
->
 Z
 O 100 200 300 400 500 600 ‘700 800 900 1,000 1,100 1,200
 Measured access time (CPU cycles)
@@ -1388,13 +1346,13 @@ Victim
 
 ###### Attacker
 
-```
+\```
 if(secret){
 A();
 } else {
 B();
 }
-```
+\```
 
 Victim
 
@@ -1428,13 +1386,13 @@ Victim
 
 II. Time jump to address containing victim cache line
 
-```
+\```
 if(secret){
 A();
 } else {
 B();
 }
-```
+\```
 
 **Victim**
 
@@ -1909,13 +1867,13 @@ Spectre
 
 #### **CPU Optimization: Branch-Prediction-Unit (BPU)**
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 40 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
@@ -1925,13 +1883,13 @@ B();
 
 ###### • **Branches** impact execution speed
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 40 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
@@ -1995,13 +1953,13 @@ B();
 
 - Look at history of last branches
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 40 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
 
@@ -2021,13 +1979,13 @@ B();
 
 - Look at history of last branches
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 - **Predict** which **branch direction** is taken next
 
@@ -2049,13 +2007,13 @@ B();
 
 - Look at history of last branches
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 - **Predict** which **branch direction** is taken next
 
@@ -2077,13 +2035,13 @@ B();
 
 - Look at history of last branches
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 - **Predict** which **branch direction** is taken next
 
@@ -2189,13 +2147,13 @@ B();
 
 #### **Cache+Time**
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 ###### **Victim**
 
@@ -2237,13 +2195,13 @@ B();
 
    - Cache-line granularity
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 ###### **Victim**
 
@@ -2275,13 +2233,13 @@ B();
 
    - Cache-line granularity
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 ###### **Victim**
 
@@ -2297,13 +2255,13 @@ B();
 
    - Cache-line granularity
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 Victim
 
@@ -2319,13 +2277,13 @@ Victim
 
    - Cache-line granularity
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 Victim
 
@@ -2343,13 +2301,13 @@ Victim
 
 ##### **Speculative prefetching is exploitable**
 
-```
+\```
 if(secret){
 A();
 }else{
 B();
 }
-```
+\```
 
 **Victim**
 
@@ -2364,13 +2322,6 @@ B();
 ## Slide 185
 
 46 A Security RISC? - Lukas Gerlach, Daniel Weber, Michael Schwarz
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eee beagle@lab46: ~/specre-riscv X31
-peagLe@Lab46: ~/specre-riscv$ A |
-```
 
 ## Slide 186
 

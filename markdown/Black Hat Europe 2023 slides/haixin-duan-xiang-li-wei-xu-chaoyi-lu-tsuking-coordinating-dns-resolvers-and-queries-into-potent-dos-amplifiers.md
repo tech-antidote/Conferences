@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Haixin Duan, Xiang Li, Wei Xu, Chaoyi Lu_TsuKing Coordinating DNS Resolvers and Queries into Potent DoS Amplifiers.pdf"
 pages: 41
 sha256: "1825aebb45bf010f46a32f57b3292084aba4167e80eaf9bbebc228d3ce94001f"
-text_chars: 16274
-ocr_pages: 2
-has_ocr: true
+text_chars: 16043
+ocr_pages: 0
+has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:07Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T04:02:58Z"
 ---
 # TsuKing Coordinating DNS Resolvers and Queries into Potent DoS Amplifiers
 
 **Speakers:** Haixin Duan, Xiang Li, Wei Xu, Chaoyi Lu  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Haixin Duan, Xiang Li, Wei Xu, Chaoyi Lu_TsuKing Coordinating DNS Resolvers and Queries into Potent DoS Amplifiers.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -487,29 +493,6 @@ Ingress
 
 #BHEU #THU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-)
-i
-=
-ca
-EC e0e
-f=
-0
-=
-M
-C8:
-a
-EWI
-_ 5
-| ease mzone FS
-these ripples into bigger waves
-mM
-s cha
-Let’
-```
-
 ## Slide 24
 
 #### Attack variant II: DNS-Chain
@@ -924,19 +907,6 @@ DNS service providers
 #BHEU #THU   @BlackHatEvents
 
 40
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-blackhat Acknowledgement
-EUROPE 2023
-DNS Software Vendors
-& unbound POWERDNS @ mikrotik
-DNS service providers
-@p II4DNS #2DNS
-40
-```
 
 ## Slide 41
 

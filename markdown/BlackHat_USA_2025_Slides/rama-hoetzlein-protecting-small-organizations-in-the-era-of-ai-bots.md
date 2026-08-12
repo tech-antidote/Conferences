@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Rama Hoetzlein_Protecting Small Organizations in the Era of AI Bots.pdf"
 pages: 72
 sha256: "5e1fe04879a113f12908f1472b803fd9c89ce4af6fa2243ba8430c447970206b"
-text_chars: 42462
-ocr_pages: 19
+text_chars: 18426
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:00:30Z"
+converted_at: "2026-08-12T05:20:28Z"
 ---
 # Protecting Small Organizations in the Era of AI Bots
 
 **Speakers:** Rama Hoetzlein  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Rama Hoetzlein_Protecting Small Organizations in the Era of AI Bots.pdf` (72 pages)
+
 
 ## Slide 1
 
@@ -30,12 +36,10 @@ Rama Carl Hoetzlein
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-XS ‘
-i x
-~ ([—
 ‘black hat
 FINGS
 AUGUST 6-7, 2025
@@ -289,40 +293,6 @@ Probably not human **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE E
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piSek hat
-wo ppecemsomaBtatded ath ie! i
-o . . . 2 TES See ayegee fee com enmew be 'peeem ees 6 Oe 8 oc , Bh eee cee mmm 8 Lo tpeem ene emcee sre ctes nematic sates ooo
-te
-.
-a a
-.
-« ¢e
-ee eee
-.
-Pee Seegee
-tt
-200 emacs same am, “es 0
-jooge?
-i”
-.
-3 4
-Time (Days)
-s)
-)
-8
-Probably not human
-14
-15
-=
-pea nine? me on Ne: gatmemene  Ezecesm 3°, sae RLV TS geet et
-borer cee THE esas REO Syste me Sh SS PMT Shee eames ae ou ae cue eres came ms cog re eg tat ywee ms os “=” 2. tee
-16
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 22
 
 ### Methods
@@ -505,28 +475,6 @@ Scoring Algorithm:
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-a
-"woof 8 8 8 ee ceetm teste com enmece fy epemm erat es oe ee PC a ea 2 Nope cae cape omen eng cates sgt so cevecmemmame gees 8 ete ee 8) et
-mane 2° pm ewne 2 = om tees s on me eromenpenrrme o— - ° i 200 pm eo came page
-te . - a . re wet cect come
-oo le covematne 0, © pemmaceneas we cece oe ew el “lee w* ppromrematttht iatbie’ Sites BEA k we, oF we ebere mm compe
-. Aaah err : i
-cede 0 cee we mwebe cee ces cece od wee ove oo cee) ote. o Slee coe .
-decd 00 00 ego pee o® oP csc %eameccguah snp
-© Beta und “Bells Meinate afte
-oo, ee
-:
-aero dn 8 OK eee er Fee
-Tr alae oD mete fF oe we 2% © 8 ote co NEWS, or cry Vee mmee ee PRETO SUR AMEQe He BF OOO cote Semele POPE Set Ce UY? Oe ag OF FP eo ath Vera 2 Mle fo Rqetmtetiealfahans sess 6 foe
-Original Traffic
-PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-RAMA CARL HOETZLEIN
-```
-
 ## Slide 33
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS**
@@ -541,74 +489,18 @@ RAMA CARL HOETZLEIN
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 39/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bite hat
-bathe ov 34
-ore .
-BRIEFINGS
-. .
-aoe
-. cmany
 ee
 -
-oe 6
-«owe
-.
-eels .
 . Joe
--
-epee oo
-CRS (MOREL S copenre (
-© eee e coe
-eles
-. a
-.
-Ce ee
-28 on
-. 8
-0 @ ococe comoe
-Os 0d cocemce Ce a
-oe ote
-° Cn
--—s —_
-RAMA CARL HOETZLEIN
-ss ar. Foun
-5
 . 4
-*.
-‘ «
-.
-eet hee .
-. !
-je NP fe Tasos -
-Ea t= sesnon
-ccm Neccn oe OF « ooteCCHC
-Lens ouse-ssemte 4 cance adcuceer ces
-6050 ea
-ee
 |
-© domme
-+e oof
-decd coe god
-onge 9
-+ neg ere ae
-y CKOME e | woeleacooide apace: @ C8 ems commen « (o @mer Cot ance
-.
 Blocked by Daily Range with Freq
-PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS
-"ee .
-one .
-.
-.
-croc
-Aaiooe @Oe COOK |
 #BHUSA
-20] cm om oyomme
-, °
-* © coop
-eum chmege oo
 @BlackHatEvents
 ```
 
@@ -620,59 +512,11 @@ eum chmege oo
 
 #### **Blocked by Daily Maximum**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekchat ¥:
-BRI EFINGS
-ae . tte . . - . oe et dae ttle es - oe . . oak Ton om semece om: eee wn comem ome epeee
-. . a - cole scocmage 4, © pame zemeusece! cm oececgom |e a . ee tama |S 0 eee? Cgcew ee ROMs Rie ren he: ce we eb ere lee wonzeee
-. .
-. .
-ee meee com eC cate eee Weg ete wee eI. eee ue He eM awe cae Cua WG came eels ce
-og toate ree 0 slagudecen ay PP ee we —k age sepee|g, © snscemence ga eee gas
-Com cles oe . gree r eT ea ees oes amr oe . .
-Blocked by Daily Maximum
-RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
-
 ## Slide 36
 
 #### **Cumulative Filtered Results**
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi§ekchat
-BRIEFINGS Ss
-.
-.
-- meso ede cemcee 6 ts spe e cme
-.
-. .
-. —
-.
-.* See
-we
-. o
-ee, . CO. et Dot a
-access ome 4 00
-.
-’ .
--
-. .
-4
--“ ¥ . we - ' eos . oe «|e . . . oo. bw eo otek cece ago gee oe? af ese tommmercqumh mum ose 5 | mp eetenfede
-° ‘
--_ a
-J Fe Ei ee pee & we eee epee neetente wee: Lee eae rene ee ee meee eres a ne meme ges cmt eens pee meme pe Saree
-tomes oniags, | o ewene “tote tortonta wit . wm’. 9," , toon a woes. 2 = 3 a.) a ts en nti STE © eecceses: . Secon sete eee 1s
-— a coe deems -_ MW ry joe amen oases ool 2 cone coamen aempn comes . = oe _—
-Cumulative Filtered Results
-RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
 
 ## Slide 37
 
@@ -680,65 +524,11 @@ RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA 
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-a
-"woof 8 8 8 ee ceetm teste com enmece fy epemm erat es oe ee PC a ea 2 Nope cae cape omen eng cates sgt so cevecmemmame gees 8 ete ee 8) et
-mane 2° pm ewne 2 = om tees s on me eromenpenrrme o— - ° i 200 pm eo came page
-te . - a . re wet cect come
-oo le covematne 0, © pemmaceneas we cece oe ew el “lee w* ppromrematttht iatbie’ Sites BEA k we, oF we ebere mm compe
-. Aaah err : i
-cede 0 cee we mwebe cee ces cece od wee ove oo cee) ote. o Slee coe .
-decd 00 00 ego pee o® oP csc %eameccguah snp
-© Beta und “Bells Meinate afte
-oo, ee
-:
-aero dn 8 OK eee er Fee
-Tr alae oD mete fF oe we 2% © 8 ote co NEWS, or cry Vee mmee ee PRETO SUR AMEQe He BF OOO cote Semele POPE Set Ce UY? Oe ag OF FP eo ath Vera 2 Mle fo Rqetmtetiealfahans sess 6 foe
-Original Traffic
-PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-RAMA CARL HOETZLEIN
-```
-
 ## Slide 38
 
 #### **Cumulative Filtered Results**
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi§ekchat
-BRIEFINGS Ss
-.
-.
-- meso ede cemcee 6 ts spe e cme
-.
-. .
-. —
-.
-.* See
-we
-. o
-ee, . CO. et Dot a
-access ome 4 00
-.
-’ .
--
-. .
-4
--“ ¥ . we - ' eos . oe «|e . . . oo. bw eo otek cece ago gee oe? af ese tommmercqumh mum ose 5 | mp eetenfede
-° ‘
--_ a
-J Fe Ei ee pee & we eee epee neetente wee: Lee eae rene ee ee meee eres a ne meme ges cmt eens pee meme pe Saree
-tomes oniags, | o ewene “tote tortonta wit . wm’. 9," , toon a woes. 2 = 3 a.) a ts en nti STE © eecceses: . Secon sete eee 1s
-— a coe deems -_ MW ry joe amen oases ool 2 cone coamen aempn comes . = oe _—
-Cumulative Filtered Results
-RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
 
 ## Slide 39
 
@@ -746,64 +536,33 @@ RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA 
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-BRIEFINGS st
-+
-. -
-° .
-. .
-° vee ange
-.
-.* See
-“
-ee, . CO. et Dot a
-access ome 4 00
-.
-’ .
-. .
-.
-eels { . BY
-wees - ——.
-” Fs
-.
-.
-2° ‘
--_
-ee Sim ne pee wh cee ere ones wee
-> ome omens * 5 Beta tand “teks ofedoata whto
-— - cone
-=. ote
-= .
-.
 Cumulative Filtered Results
-RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
 ```
 
 ## Slide 40
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
 
+
+> Recovered by OCR — confidence 87/100 on the text kept, 44/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+oe
+—
+= .
+° .
+ele
+=p
+#BHUSA @BlackHatEvents
+```
+
 ## Slide 41
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS** #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi§ekchat
-BRIEFINGS
-*.
-comes pw cece cco
-se sect soe ory
-es ~~. a PEBPP ALU 0 eS
-ot :
-ERS
-* - ome ome womee
-RAMA CARL HOETZLEIN . IZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
 
 ## Slide 42
 
@@ -816,18 +575,6 @@ Single IP
 **RAMA CARL HOETZLEIN**
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bi§ekchat
-BRIEFINGS
-se sack cee ory
-“tee semen Single IP
-ERS
-Pele, Multiple IPs
-RAMA CARL HOETZLEIN . IIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
 
 ## Slide 43
 
@@ -925,6 +672,14 @@ Hierarchical IP Hashing with Metric Scoring
 
 #### **Blocking Class C Subnets**
 
+
+> Recovered by OCR — confidence 91/100 on the text kept, 44/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+:
+Blocking Class C Subnets
+```
+
 ## Slide 50
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS**
@@ -932,27 +687,6 @@ Hierarchical IP Hashing with Metric Scoring
 #BHUSA @BlackHatEvents
 
 #### **Blocking Class B Subnets**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-X
-pif hat
-we \
-. N
-BRIEFINGS LOS . :
-- tow chow oe |, te teh we. cower on, ee
--
-00 comme eam @ [
-. e
-: 4
-. <
-: “
-. .
-aoa cgiatmm) , geeety |e | vereceles nage vce] 2 we ase corer, ae =e oe °. a tee fee |= ee toy coms |" cowremed, “ * . a] - wrangle 20 0g
-Blocking Class B Subnets
-RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA @BlackHatEvents
-```
 
 ## Slide 51
 
@@ -962,6 +696,26 @@ RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA 
 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS**
 
+
+> Recovered by OCR — confidence 80/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+black hat
+:
+Be
+!
+-
+ee
+2
+as .
+te
+. -
+=
+Final Result
+:
+#BHUSA @BlackHatEvents
+```
+
 ## Slide 52
 
 **Original Traffic Final Result**
@@ -969,6 +723,15 @@ RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF Al BOTS #BHUSA 
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS**
 
 #BHUSA @BlackHatEvents
+
+
+> Recovered by OCR — confidence 90/100 on the text kept, 30/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+BRIEFINGS Bes.
+'
+Original Traffic Final Result
+```
 
 ## Slide 53
 
@@ -1011,6 +774,15 @@ Original C Filtering B Filtering Final Server Load
 **RAMA CARL HOETZLEIN PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS**
 
 #BHUSA @BlackHatEvents
+
+
+> Recovered by OCR — confidence 90/100 on the text kept, 30/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+BRIEFINGS Bes.
+'
+Original Traffic Final Result
+```
 
 ## Slide 57
 
@@ -1135,119 +907,159 @@ All Output Products
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 72/100 on the text kept, 55/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 black hat
 BRIEFINGS
-” Observed Traffic Blocking Actions (Policy) : . mated Server Page Hits by IP
-fore & After) —
-1 /bmi/monitoringregions/4
-1 /events/2731
-57.141.7.16
-1/
-57.141.7.17
-1/
-1 /bmi_events/62
-1 /events/2424
-1 /events/835
-1 /groundwater_queries?page=320
-1 /groundwater_queries?page=432
-§7.141.7.18
-1/
-1 /bmi_events/152
-1 /events/2286
-1 /queries/new?q%S5Bs%5D=date+asc
-57.141.7.19
-1 /bmi_events/167
-1 /events/1100
-1 /events/2332
-1 /events/2863
-1 /queries/new?q%5Bs%5D=analyte_nametdesc
-1 /queries/new?q%SBs%5D=event_flowtasc
-1 /queries?page=978&q%5Bs%5D=event_flow+asc
-: ————— —y e-em rpegnen une irae deere marco ro
-. f iden page cunig.¢ unig veapse mace mumsrmintinin’ Metrics by IP wer :  Metri B-Subni
-Filtered Traffic 5 196.111.210 to 4 y E letrics by B-Subnet 1 /events/1778
-jatsi.2te216 10 8 4&0 fowaautmogonaspe ‘zona oon! 1a! sama ca
-| 4.227.36.31 422 1.168 4.658 422 1.168 4.658 /bmi/monitoringlocations/629} “a 14.89167 0.007656 14.89167 0.007656] 1 /events/1912
-4.227.36.50 41 0.026 20.51 41 (0.026 20.51 /queries/?page=58ql: 5 . ° ° ° | 1 /groundwater_queries?page=322
-|4.227.36.122 1 6 0.003 25 6 0.003 25 /queries/new?q%SBs%SD> o o o of r
-5.100.173.71 1129 0008 11129 0.009 fevens/08s ss Lseozre oon 12 estas ous 1 /monitoringtocations/530
-5.181.190.248 114.89 0.008 10 14.89 0.008 / er suaaea} 2ereasso) 1074 1 /monitoringlocations/8
-° oo
-8.48,71.250 Imonitoringsets/7 P ns comin coe .
-e.211.42.174 Idns-query?das=pHKBAMABAAM) 35 146 +» ao 1|/monitoringsets/25
-°
-'17.241.75.55 Jevents/842 2459.4." 1 /queries?page=997&q%5Bs%5D=event_flowtasc
-17.241.75.92 Isites/117 27.180.*.* -
-417.241.785.108 Jevents/499 suis. 1 /sites/158
-137.241.786.110 Jevents/34a pan 57.141.7.21
-17.241.75.127 Jevents/1519 haa z
-172412199 fevents/1969 or "| ea cree 1/fevents/259
-17.241.219.12 Ihab_events/701 lease.» ° 1 /events/2747
-37.241.210.24
-Jevents/120 42.179.
-17.241.219.44 1 /queries/new?q%5Bs%5D=monitoringlocation_name+asc
-ee 1 /queries?page=6&q%5Bs%5D=event_flowtasc
-137.241.210.114
-17.241.219.145 1/sitemap
-137.241.219.172
-417.241.219.182
-17.241.297.19
-17.241.227.65
-317.241.297.124
-317.241.297.154
-: 417.241.297.167
-17.241.227.296 1
-18.97.9.169 178 2.738 Thab_events/92
-“ . + 920.49.136.28 1 o ‘{monitoringsets/7_
-All Output Products fos ax ne
-0] 57-141.7.20
-0.00027
-8
-°
-°
-°
-°
-°
-Imonitoringlocations/382 ff 44.220.*.»
-Thab_events/688 5.20.0."
-Thab_events/655
-Imonitoringlocations/512
-Imonitoringlocations/685
-Thab_events/169
-fevents/1662
-Jevents/3107
-Thab_events/667
-‘Imonitoringlocations/562
-Jevents/2872
-Jevents/2572
-oo d
-16:17667 0.199674 16.17067 0.199874 57,141,722
-1561089 0.208102 15.6108 0.206103 - -
-4.940833 0.00638 4.940833 0.00636] 1 /bmi/monitoringlocations/382
-a) q 1 /events/1301
-5 q 1 1 /events/2218
-0.000276 1.578948 0.000278, 1.576948 1 /events/2260
-1.209722 0.048382 1.20072 0.048389
-° | 1 /events/2467
-1 /events/37
-q
-q
-4 1 /monitoringlocations/684
-q
-q
-ttle a lel Be le ele os
-wt 24.59.56.143 0 Imonitoringlocations/s04 J Ste
-] 27.150.86.197 o Iqueries/new2q%5Bs%5D=anall 6s 279 +»
-31,13.224.222 0
-1 /queries/new?q%5Bs%5D=analyte_nametasc
-1 /queries/new?q%5Bs%5D=event_flowtasc
-1.903056 0.028651 7 0.026651
-° °
-RAMA CARL HOETZLEIN #BHUSA @BlackHatEvents
-Lenw 524.4.
+
+[Panel 1 - top left] Observed Traffic
+[Panel 2 - top middle] Blocking Actions (Policy)
+[Panel 3 - top right] Estimated Server Load (Before & After)
+[Panel 4 - bottom left] Filtered Traffic
+LOGRIP
+All Output Products
+
+[Panel 5 - bottom middle left] Metrics by IP
+IP | ip_cnt | page_c | uniq_c | uniq_r | elapse | max_c | num_r | min_hi | min_h | ... | (page)
+3.136.111.218   1     1     1     1     0     1   0     1      0                              /owa/auth/logon.aspx
+4.151.218.216   1     1     1     1     0     1   0     1      0     0     1     0        0   /owa/auth/logon.aspx
+4.227.36.31     1   422   414  0.98  0.06     1   0   422  1.168 4.658   422 1.168    4.658   /bmi/monitoringlocations/629
+4.227.36.50     1    41    41     1     0     1   0    41  0.026 20.51    41 0.026    20.51   /queries/?page=5&q[s]=date%2
+4.227.36.122    1     6     6     1     0     1   0     6  0.003    25     6 0.003       25   /queries/new?q%5Bs%5D=date
+5.102.173.71    1    12    12     1  0.93     2   0     1   12.9 0.009    11  12.9    0.009   /events/3085
+5.181.190.248   1    11     1  0.09  0.99     2   0     1  14.89 0.008    10 14.89    0.008   /
+8.48.71.250     1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringsets/7
+8.211.42.174    1     1     1     1     0     1   0     1      0     0     1     0        0   /dns-query?dns=pHkBAAABAAA
+17.241.75.55    1     1     1     1     0     1   0     1      0     0     1     0        0   /events/842
+17.241.75.92    1     1     1     1     0     1   0     1      0     0     1     0        0   /sites/117
+17.241.75.106   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/499
+17.241.75.110   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/344
+17.241.75.127   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/1519
+17.241.219.9    1     1     1     1     0     1   0     1      0     0     1     0        0   /events/1989
+17.241.219.12   1     1     1     1     0     1   0     1      0     0     1     0        0   /hab_events/701
+17.241.219.24   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/120
+17.241.219.44   1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringlocations/382
+17.241.219.52   1     1     1     1     0     1   0     1      0     0     1     0        0   /hab_events/688
+17.241.219.114  1     1     1     1     0     1   0     1      0     0     1     0        0   /hab_events/655
+17.241.219.149  1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringlocations/512
+17.241.219.172  1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringlocations/685
+17.241.219.182  1     1     1     1     0     1   0     1      0     0     1     0        0   /hab_events/169
+17.241.227.19   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/1662
+17.241.227.65   1     1     1     1     0     1   0     1      0     0     1     0        0   /events/3107
+17.241.227.124  1     1     1     1     0     1   0     1      0     0     1     0        0   /hab_events/667
+17.241.227.154  1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringlocations/562
+17.241.227.167  1     1     1     1     0     1   0     1      0     0     1     0        0   /events/2872
+17.241.227.238  1     1     1     1     0     1   0     1      0     0     1     0        0   /events/2572
+18.97.9.169     1   175   175     1  0.12     1   0   175  2.738 1.024   175 2.738    1.024   /hab_events/92
+20.49.136.28    1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringsets/7
+20.159.64.138   1     4     3  0.75     0     1   0     4  3E-04 5.294     4 3E-04    5.294   /hab
+23.146.184.101  1     1     1     1     0     1   0     1      0     0     1     0        0   /
+24.59.56.143    1     1     1     1     0     1   0     1      0     0     1     0        0   /monitoringlocations/504
+27.150.86.197   1     2     2     1     0     1   0     2      0     0     2     0        0   /queries/new?q%5Bs%5D=ana
+31.13.224.222   1     2     1   0.5     0     1   0     2      0     0     2     0        0   /.env
+
+[Panel 6 - bottom middle right] Metrics by B-Subnet
+IP | ip_cnt | page_cnt | uniq_cnt | uniq_ratio | elapsed(d | max_cons | num_r... | ... | pm
+3.136.*.*      1     1     1     1     0   1   0                                        0
+4.151.*.*      1     1     1     1     0   1   0                                        0
+4.227.*.*      3   469   461  0.98  0.37   2                                          )38
+5.102.*.*      1    12    12     1  0.93   2   0    1 12.90278 0.009064   11 12.90278 0.009064
+5.181.*.*      1    11     1  0.09  0.99   2   0    1 14.89167 0.007656   10 14.89167 0.007656
+8.48.*.*       1     1     1     1     0   1   0    1        0        0    1        0        0
+8.211.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+17.241.*.*    20    20    20     1  1.11   2   0    8 1.360278 0.007781   12 8.150278 0.048832
+18.97.*.*      1   175   175     1  0.12   1   0  175 2.738333 1.024232  175 2.738333 1.024232
+20.49.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+20.159.*.*     1     4     3  0.75     0   1   0    4 0.000278 5.294118    4 0.000278 5.294118
+23.146.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+24.59.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+27.150.*.*     1     2     2     1     0   1   0    2        0        0    2        0        0
+31.13.*.*      1     2     1   0.5     0   1   0    2        0        0    2        0        0
+34.77.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+34.79.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+35.159.*.*     1     5     3   0.6     0   1   0    5 0.017222 2.033899    5 0.017222 2.033899
+40.77.*.*     38   103    98  0.95  1.09   2   0   17 1.503055 0.061053   86 21.63861 0.108389
+42.58.*.*      1     2     2     1     0   1   0    2        0        0    2        0        0
+42.179.*.*     1     2     2     1     0   1   0    2        0        0    2        0        0
+44.220.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+45.20.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+45.55.*.*      1     8     8     1     0   1   0    8        0        0    8        0      inf
+45.66.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+45.79.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+45.89.*.*    132   197   166  0.84   0.7   1   0  197 16.17667 0.193874  197 16.17667 0.193874
+45.93.*.*    140   210   172  0.82   0.7   1   0  210 15.61083 0.208102  210 15.61083 0.208102
+45.156.*.*     5     5     2   0.4  0.44   1   0    5 4.940833  0.00638    5 4.940833  0.00638
+45.200.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+46.19.*.*      1     2     1   0.5  0.53   1   0    2        0        0    2        0        0
+46.250.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+47.79.*.*      2     2     2     1  0.51   1   0    2        0        0    2        0        0
+47.82.*.*      2     3     3     1     0   1   0    3 0.000278 1.578948    3 0.000278 1.578948
+47.128.*.*     8     8     8     1   0.1   1   0    8 1.209722 0.048382    8 1.209722 0.048382
+47.134.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+47.245.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+48.217.*.*     2     2     2     1  0.91   1   0    2        0        0    2        0        0
+49.51.*.*      2     2     1   0.5  0.43   1   0    2        0        0    2        0        0
+51.81.*.*      1     1     1     1     0   1   0    1        0        0    1        0        0
+51.178.*.*     1     1     1     1     0   1   0    1        0        0    1        0        0
+51.222.*.*     6     7     7     1  0.16   1   0    7 1.903056 0.026651    7 1.903056 0.026651
+52.4.*.*       1     1     1     1     0   1   0    1        0        0    1        0        0
+
+[Panel 7 - right] Page Hits by IP
+57.141.7.14   1
+57.141.7.15   3
+                1  /bmi/monitoringregions/4
+                1  /events/2731
+57.141.7.16   2
+                1  /
+57.141.7.17   7
+                1  /
+                1  /bmi_events/62
+                1  /events/2424
+                1  /events/835
+                1  /groundwater_queries?page=320
+                1  /groundwater_queries?page=432
+57.141.7.18   5
+                1  /
+                1  /bmi_events/152
+                1  /events/2286
+                1  /queries/new?q%5Bs%5D=date+asc
+57.141.7.19   8
+                1  /bmi_events/167
+                1  /events/1100
+                1  /events/2332
+                1  /events/2863
+                1  /queries/new?q%5Bs%5D=analyte_name+desc
+                1  /queries/new?q%5Bs%5D=event_flow+asc
+                1  /queries?page=97&q%5Bs%5D=event_flow+asc
+57.141.7.20   9
+                1  /events/1778
+                1  /events/1912
+                1  /groundwater_queries?page=322
+                1  /monitoringlocations/530
+                1  /monitoringlocations/8
+                1  /monitoringsets/25
+                1  /queries?page=997&q%5Bs%5D=event_flow+asc
+                1  /sites/158
+57.141.7.21   6
+                1  /events/259
+                1  /events/2747
+                1  /queries/new?q%5Bs%5D=monitoringlocation_name+asc
+                1  /queries?page=6&q%5Bs%5D=event_flow+asc
+                1  /sitemap
+57.141.7.22  10
+                1  /bmi/monitoringlocations/382
+                1  /events/1301
+                1  /events/2218
+                1  /events/2260
+                1  /events/2467
+                1  /events/37
+                1  /monitoringlocations/684
+                1  /queries/new?q%5Bs%5D=analyte_name+asc
+                1  /queries/new?q%5Bs%5D=event_flow+asc
+
+RAMA CARL HOETZLEIN            PROTECTING SMALL ORGANIZATIONS IN THE ERA OF AI BOTS            #BHUSA  @BlackHatEvents
 ```
 
 ## Slide 65

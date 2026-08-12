@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Xin'an Zhou & Zhiyun Qian & Juefei Pu & Qing Deng & Srikanth Krishnamurthy & Keyu Man_Fallen Tower of Babel Rooting Wireless Mesh Networks by Abusing Heterogeneous Control Protocols.pdf"
 pages: 43
 sha256: "89194c5c379bc4ecea3289c220f608d520615bcb5d001b6b6931bf3192503819"
-text_chars: 11507
-ocr_pages: 4
+text_chars: 10743
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 82.3
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:40:06Z"
+converted_at: "2026-08-12T04:43:47Z"
 ---
 # Fallen Tower of Babel Rooting Wireless Mesh Networks by Abusing Heterogeneous Control Protocols
 
 **Speakers:** Xin'an Zhou, Zhiyun Qian, Juefei Pu, Qing Deng, Srikanth Krishnamurthy, Keyu Man  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Xin'an Zhou & Zhiyun Qian & Juefei Pu & Qing Deng & Srikanth Krishnamurthy & Keyu Man_Fallen Tower of Babel Rooting Wireless Mesh Networks by Abusing Heterogeneous Control Protocols.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -95,10 +101,10 @@ Images: Netgear, TP-Link, Linksys, ASUS #BHUSA @BlackHatEvents
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
 USA 2024
 Wireless Mesh Networks
 are increasingly popular!
@@ -231,10 +237,10 @@ Vulnerability:
 
 Password required for invoking SOAP commands, but fully predictable
 
-```
+\```
 Predictable_str=
 “NETGEAR_Orbi_<MACGateway>_<MACExtender>_password”
-```
+\```
 
 MD5( Predictable_str )
 
@@ -301,15 +307,13 @@ Connect to <extender>:23
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Activities ©) Terminal ~
-cea
 ez@ez-virtual-machine:
-‘“@BDOBGEG
 sil
-Jul 28 15:02
 ez@ez-virtual-machine: ~/share/Netgear_Orbi_RBS760_hack
 ```
 
@@ -460,10 +464,10 @@ Type-Length-Value (TLV) structure. Hash of “group_id” is stored at type 0x3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisa hat
 USA 202
 Leaked group_id
 9 0.081180 ASUSTekCOMPU_c8: Broadcast 802.11 493
@@ -477,14 +481,11 @@ Version: 0x10 10 02 71 09 80 04 da a2
 Wifi Protected Setup State: Configured (x@2) la c8 3e 31 04 42 la c8 Type-Length-Val ue
 Vendor Extension 82 84 8b 96 24 30 48 6c
 Tag: Vendor Specific: ASUSTek COMPUTER INC. 00 07 06 55 53 20 01 ob
-Te Number: Vendor Specific (221) ee We Ue te 3 st) Be (TLV) stru ctu re.
 OUI: £8:32:e4 (ASUSTek COMPUTER INC. ff 00 02 00 02 00 00 00
 Vendor Specific OUI Type: 1 @@ 00 00 00 00 00 3d 16
 HE Vendor Specific Data: 01010102010d03148ce982744849b948ae707 f2258004056663bc91407! 00 00 00 00 00 00 00 00
-Tag: Vendor Specific: Epigram, Inc. a ee ee ee a a ce ee 6 +
 Tag Number: Vendor Specific (221) ff 00 00 fa ff 00 20 co Hash Oo IS
 Vendor Specific OUI Type: 4 Od fc ff ff Ge 26 00 00 sto red at type 0x3
-802.11n (Pre) Type: Unknown (4) 62 2 8 ae x bs 0 0
 802.11n (Pre) Unknown Data: 18bf@cb179810f faff0000faf f0020c0050002000000 150 1 20 dd 47 f8 32 e4 Q1
 Tag: Vendor Specific: Broadcom 0160 e9 82 74 48 49 b9 48 ae
 Tag Number: Vendor Specific (221) @170 3b c9 14 Q7 04 00 00 00
@@ -560,14 +561,6 @@ A machine-in-the-middle truly knows nothing about transmitted data.
 ## Slide 39
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisa hat
-USA 2024
-| openssl ||
-```
 
 ## Slide 40
 

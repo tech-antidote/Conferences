@@ -12,7 +12,7 @@ duration_seconds: 3416
 words: 7740
 text_chars: 42112
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Contest Closing Ceremonies & Awards

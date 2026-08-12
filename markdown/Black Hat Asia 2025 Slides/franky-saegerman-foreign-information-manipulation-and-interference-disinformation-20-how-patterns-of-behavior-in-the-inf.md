@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Franky Saegerman_Foreign Information Manipulation and Interference (Disinformation 2.0) - How Patterns of Behavior in the Information Domain Threaten or Attack Organizations' Values, Procedures and Poli.pdf"
 pages: 62
 sha256: "83ab3f830f43eed5dd20b7450e5980454c4c64f4d627cf4ee012d2dd56d4f578"
-text_chars: 23816
-ocr_pages: 34
+text_chars: 19533
+ocr_pages: 20
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:18Z"
+converted_at: "2026-08-12T03:54:01Z"
 ---
 # Foreign Information Manipulation and Interference (Disinformation 2.0) - How Patterns of Behavior in the Information Domain Threaten or Attack Organizations' Values, Procedures and Poli
 
 **Speakers:** Franky Saegerman  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Franky Saegerman_Foreign Information Manipulation and Interference (Disinformation 2.0) - How Patterns of Behavior in the Information Domain Threaten or Attack Organizations' Values, Procedures and Poli.pdf` (62 pages)
+
 
 ## Slide 1
 
@@ -47,25 +53,6 @@ Head of Social Media (2012-2016) Head Digital Insights (2016-2020) Information E
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-al ee
-black hat
-ASIA 2025
-ee
-2)
-~
-a4
-px)
-LES
-Vd) ai
-(SY * fie
-coo
-fi
-@BlackHatEvents
-```
-
 ## Slide 4
 
 ### **Disinformation**
@@ -76,29 +63,21 @@ fi
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat oa Ag
-ASIA 2025 = om 7 (a \ Q ' Mab
-pee a ais
 What Is Disinformation? What is it not?
 lan Bradbury - ‘st
 : 21st century solutions for 21st century problems
-¥ 4
 OPPOSING VIEW + DISINFORMATION
 COUNTER EVIDENCE + DISINFORMATION
 POINTING OUT MISSTEPS > DISINFORMATION
-set Tecked int EL communication CHALLENGING POLICY = DISINFORMATION
 : process in orde? jp deceive and manipula DIFFICULT INFORMATION = DISINFORMATION
 — ee INFORMATION YOU DON'T LIKE + DISINFORMATION
 ———E—————ee UNCOMFORTABLE INFORMATION + DISINFORMATION
-G!SING ee ALON
 /disinfa’mei f(a)n/ noun
-ila
-yey
 1. Deliberately distorted Wformation that is
-@ The New York Times © Raa PROOF OF WRONGDOING = DISINFORMATION
 @BlackHatEvents
 ```
 
@@ -110,20 +89,15 @@ Global risks ranked by severity
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-ASIA 2025
 Global risks ranked by severity
 2 years
 4st
-30
 Ath
-$4
-6th
-a
 gth
 gth
 10"
@@ -140,17 +114,12 @@ Erosion of human rights and/or civic freedoms
 WORLD
 ECONOMIC
 FORUM
-—
 o
 <
-i)
 ©
-=
-72)
 ia ~Extreme weather events
 Vege Biodiversity loss and ecosystem collapse
 ciemme Critical change to Earth systems
-“hie ~Natural resource shortages
 ee §=Misinformation and disinformation
 leu ~=ACverse outcomes of Al technologies
 Inequality
@@ -165,26 +134,15 @@ Pollution
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-a
 : It’s from Santa Claus!
 ts
-‘
-a. :
-» oe
-% ik
-SS
-~~ >
 EE Art:FelixUncia
-~“
 Idea: BRENT
 Misinformation
-&,
-NY .
 ```
 
 ## Slide 7
@@ -212,32 +170,24 @@ Not all Disinformation is FIMI. FIMI is not only Disinformation.
 Foreign Information Manipulation & Interference
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q . RA Alacra: rit lth ss Ff ~~. S
 blackhat Foreign Information, Manipulation & Interference
 @globaltimesnews @ukraina_ru Doppelganger
 |
 CGTN False Facade
-\
 Chinese Diplomatic Account
-By.
-\
 \
 Global Times
-\
 soe: | Portal Kombat
 Russian MFA |” —_
-aif.ru S ft
 7 Portal
 RIA Novosti _ Kombat African Initiative
 N ©@ Attributes to Russia
 @solovievlive Ny TASS.com Sputnik Africa © Attributed to Chine
-5 ‘ @ Non attributed
-PD --- ‘oe Lenta nodes  § @rian_ru (" Gaccie hoki
 * EXTERNAL ACTION © @ Frequency of involvement
-*a*
 ```
 
 ## Slide 10
@@ -246,12 +196,10 @@ Foreign Information Manipulation & Interference
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-mnt
 Four blocks of the
 OFFICIAL STATE CHANNELS
 Official communication channels directly
@@ -273,9 +221,6 @@ strong ties to the government or ruling
 party, or media outlets editorially directed
 or overseen by state actors.
 Entities in the FIMI Architecture
-OFFICIA A ahs
-STATE iE <
-CHANNELS = Pon
 Ministry of
 Foreign Affairs of
 the Russian Federation
@@ -289,10 +234,7 @@ CONTROLLED
 OUTLETS
 RT
 aT Moscow24
-© mA novosn
-Yupannae py
 (rer RIA Novosti
-@unocmnu
 inosmi Tass
 TASS
 -
@@ -319,14 +261,10 @@ Embassies Missions
 Channel One Russia
 RUPTLY
 Ruptly TV Sputnik
-GILIFE ane
-H3BECTHA
-e ©
 China Chinese Chinese
 State Council Foreign Ministry Ministry of
 Information Office Spokesperson State Security
 CN
-xKB G
 ZvezdaTV Vladimir Xhinhua News
 Solavyov ‘Agency
 Global Times
@@ -335,7 +273,6 @@ International
 SPUTNIK
 People's Daily
 em
-Tscn
 Margarita
 Simonyan
 red.
@@ -345,25 +282,17 @@ Continental
 LENTA.RU
 Lifesru Argumenty | Fakty Lenta
 RYBAR
-lzvestia Lol
-adouka
 Readovka
 Matryoshka HaiEnergy Paperwall
 operation
 Tsargrad TV
-CoAmer| = raseTa.ru
-NewsFront Gazetaru
 Dragonbridge
-. CN
-a)
-tt
 Chinese
 Embassies
 China Daily
 es
 sjna
 guancha.cn
-2104
 Phoenix TV
 VN Network
 S @BlackHatEvents
@@ -374,22 +303,6 @@ S @BlackHatEvents
 # Methodology?
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-»
-black hat
-ASIA 2025
-LIT /f
-ee)
-LES GP
-Vdd a
-(=) ? fil
-co
-f
-@BlackHatEvents
-```
 
 ## Slide 12
 
@@ -403,17 +316,15 @@ James Pamment – Lund University Sweden
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A Actors
 _ Whois doing this?
 black hat
 ASIA 2025 <— ~
-a “
->, anecle) model”
 Lak
-B Behavior Fs iin FC Content
 ’ What are they doing?
 wl L What are they posting?
 Fake personas
@@ -422,31 +333,22 @@ Nation states
 Conspiracy movements
 Political groups
 Commercial actors | iManipulated media
-Fandoms ~~ 9) 8Memes and videos
-7
-— sss
-='D Distribution »,
-a
--.”
 . James Pamment —
-y& Ete ct" = University Sweden
 Political narratives
 Divisive messaging
 Hacked documents
 | 22 Commercial spam
 Scams and fraud
-+
-vt
 ```
 
 ## Slide 13
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bifeachat . SKE t/a |
 ASIA 2025 St |. Se :
 4 Narrative Intelligence ww BL ACKBIRD.A\
 Automatically surface emerging narratives that drive
@@ -470,11 +372,11 @@ measuring the success of mitigative efforts.
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SOCIAL ~ ‘
-bidagiieiael AEDIA ‘, S50L11 1
 More Americans Turn to TikTok | Social Media: Where It s Hardest
 to Tell Truth From Fake News
 for News
@@ -483,7 +385,6 @@ trustworthy news on the following platforms (in %)
 by age group (in %)
 i Very/somewhat difficult Neither (incl. don't know) Very/somewhat easy
 Tiktok @
-‘®@
 Facebook ©} 51
 Instagram O) 49
 LinkedIn ® 41
@@ -494,7 +395,6 @@ search
 44
 41
 32
-: .-6-0
 18
 a5
 10
@@ -507,17 +407,10 @@ a5
 8,842 U.S. adults (18+ y/o) surveyed Sep. 25-Oct.1, 2023 Jan.-Feb. 2024. Respondents in India and Hong Kong were not asked about TikTok.
 Source: Pew Research Center Source: Reuters Digital News Report 2024
 statista %
-Sstatista %
-;
-,
 ?
-’
 i
 0
-:
-0
 i
-acm SOaw
 ```
 
 ## Slide 15
@@ -552,32 +445,18 @@ acm SOaw
 
 **Cloned websites of legitimate outlets**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-oe
 www.theguardian.com
-, The,.
 Guardian
-f¥
 organic
-ry
-cl
 Fake profiles pushing Doppelganger in
 comment sections or tweets
 DOPPELGANGER 4 www.
-= &
-a
-#5
 . ms Opinion Sport Culture Lifestyle
 i Berks barton Video: False Staging in Bucha
-= GC: Revealed!
-www.theguardian.co.com 1+ i nae
-. ow major media providers a oat
-impersonated : af *f i
-nsittieho
 :
 Paid advertisement on social media platforms, . suattonal Get
 linking to the fake story he, around th
@@ -625,26 +504,6 @@ www.nato.ws/cps/en ....
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-»
-black hat
-ASIA 2025
-px)
-LS GE
-Vdd a
-Fa 2g
-SITE
-im
-fi
-peed ~
-I ay
-——
-. firatonveats t ‘ron
-@BlackHatEvents
-```
-
 ## Slide 23
 
 **Paperwall**
@@ -667,31 +526,21 @@ I ay
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Sik — lr | "38
 Chinese Websites Posing as Local News Outlets Target Global Audiences with Pro-Beijing Content
 Domain Registration Timeline for the PAPERWALL Campaign and their Target Audience
-Ln <—,
 Initial PAPERWALL
 domains and the timing of
 their registration
-Apri —
 July
 Ss mber [ Korea |
-“October
 February | France |
 May
 August
-mnt
-’—January
-eh)
-PE ned Undetermined |
 December
-s beans o
 February
 April Latin America + EU
 jay
@@ -714,13 +563,10 @@ Number of Domain Registrations
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
->
-HOME ABsCUT
 KnowYourMeme | Misleading meme depicting the Eiffel Tover bt
 debunked by Compass by Blackbird.A\l
 % COMPASS ‘WP BLACKBIRD.AI
@@ -760,31 +606,10 @@ S @BlackHatEvents
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a fioseeowente wipe
-bisek hat
-ASIA 2025
-~
-@BlackHatEvents
-```
-
 ## Slide 29
 
 Operation Overload
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-ASIA 2025
-. Ee
-Nk
-a
-fea? OPERATION
-```
 
 ## Slide 30
 
@@ -794,11 +619,11 @@ fea? OPERATION
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 &
-pifeachat \
 : ASIA 2025
 Content of the emails : top 5 themes
 French Politics and
@@ -809,17 +634,13 @@ Graffiti in France (24) ——
 General News and
 Information (55)
 _7— Russian and Ukrainian
-Media (61) —_— . == = aes - By
 Content Amalgamation Example
-Fronffurter Allgemeine
 Antiukrainisches Graffiti
 wurde in Berlin gesehen
 Fake Graffiti
 sent via email
 Fake screenshot
 of media outlet
-=e
-mers OrGes?
 Germany: Scandalous
 Graffiti in Berlin
 Fake screenshot
@@ -876,33 +697,13 @@ Over 800 organizations targeted via network of fake accounts on X and via email.
 Fake images
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-z
-g
-eR
-a
-S
-=
-a* Q
-ener
-is
-Kai w3 BpyHHeH-2>Kn
-@djat_ir - HayaTb 4uuTaTb
-Ha oduuvanbHom ponuke HATO 3acBetunca yKpanHcKuii
-BOCHHOCIY>KaLUNi C LIEBPOHOM HaLlivcTcKon AuBu3iun CC
-"Dary™
-Peix".
-Nos>ke DaHHbii Kagp v3 Bugeo 6bIN yHanéH, a ponuk
-Nepesanut Ha pecypcbl anbsAHca yKe B OGHOBNEHHOM
 BapuaHTe.
 #HATO
 @new_militarycolumnist
-7
-xX \ PalestinaVENCER
 @Darwin_f1978 - §
 & Un video oficial de la
 ucraniano™* con lai
@@ -910,8 +711,6 @@ de las SS(™).
 Posteriormente, se e
 video se volvidé a sub
 version actualizada.
-~
-—
 Russian Embassy in South Africa ms ©
 @EmbassyofRussia - Follow
 An official NATO video showed a Ukrainian soldier
@@ -923,9 +722,7 @@ No Nazism in Ukraine?
 air, met insigne van de
 tje’ zagen is de foto
 2d wat er daar speelt.
-Sergio Loré “ QH.D.
 @SergioLor3 - Folgen
-Newspaper“, News™" & |
 , ™ &Balken- und Hakenkreuzkunde ,,unserer deutsch-
 ukrainischen Freunde” im NATO-Kampfeinsatz (Teil 19/2)
 == |! EXEin offizielles NATO-Video zeigte einen
@@ -948,31 +745,17 @@ anzeigen
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-\
-ASIA 2025 ‘ =f
-“Re BY,
-, i
-i
 a Engagements generated by Russian State Supporter users
 | Engagements generated by Right Wing users
-La
 % Jackson Hinkle = t subscribe } ves
-“y acksonhinklle
 ™= BREAKING: Senior Ukrainian officials allegedly used U.S. aid to
 purchase luxury vehicles and homes in Spain.
-i nf
-“a
-fuia vy oll eat ’
 Engagements on Tweets within narrative (Aug-Dec 2023)
-\ J
-YY
 Narrative is seeded by Russian State Supporter accounts
-*
-WP BLACKBIRD.AI
 rents
 ```
 
@@ -982,33 +765,22 @@ rents
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-\
 ASIA 2025 . Z
-A ity APH LEGEND a}
 |] Engagements generated by Russian State Supporter users
 Hl Engagements generated by Right Wing users
-i
-:
 4
 a
 ; Gm Lord Beb
 f f » Lor ebo
-| : @ crivioriser.
 { h4 , Ea !! = BREAKING: “Olena Zelenska spends $1,100,000 on Cartier
 1 = DP 2 jewelry in NYC and gets sales employee fired!”
-al
-ie =
-a wc
-»
 ie Engagements on Tweets within narrative (Aug-Dec 2023) ‘ x4
 X J
-VY
 Narrative is seeded by Russian State Supporter accounts
-WP BLACKBIRD.AI
 vents
 ```
 
@@ -1018,15 +790,10 @@ vents
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-W
-pidekhat =
-ASIA 2025
-— :
-odr #
-E P y GRAPH LEGEND © sizrrenivicrene ‘Ey
 Se | BREAKING: Zelensky reportedly buys $20 Million Dollar Mansion in Vero Y
 el Engagements generated by Russian State Supporter users Beach, Florida.
 w al Engagements generated by Right Wing users
@@ -1042,7 +809,6 @@ $75 million.
 Zelensky's doing well, how do you feel about that? I'm sure he gives thx
 to American taxpayers.
 Engagements on Tweets within narrative (Aug-Dec 2023) ie
-——
 wy BLACKBIRD.AI Narrative is picked up by
 influential Right Wing accounts vents
 ```
@@ -1060,16 +826,12 @@ influential Right Wing accounts vents
 Case Study: Support to Ukraine
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 !
 |=
-=
-+ —.
-gi
-erate t
-na
 FAITE Zelensky bought
 Goebbles' villain
 Berlin
@@ -1081,17 +843,13 @@ Charles III's mansion
 in Gloucester.
 Carlos Ml en Gloucester: el Gobierno britanico dice
 que sigue siendo propiedad del Ducado de
-Connualbes
-@
 ‘berecror Zelensky bought King
 Charles III's mansion
 in Gloucester.
-WHO: OWNS THE HIGHGROVE HOUSE —VOLOOYMYR
 ZELENSERYY OF THE BRITISH OVAL FAMILY?
 Zelensky buys his
 mother-in-law a five-
 million-euro villa iin
-Egypt
 S @BlackHatEvents
 ```
 
@@ -1102,26 +860,6 @@ S @BlackHatEvents
 _“South Korea is a failed US vassal state”_
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2025
-~
-ps)
-L288
-odd al
-(SY * fie
-GIT (fk
-7%
-PF
-fi
-" es
-“e fineneconate & wren
-, ts
-@BlackHatEvents
-```
 
 ## Slide 43
 
@@ -1241,14 +979,13 @@ Anyone can generate deepfakes. They have become easier and cheaper to make and s
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisek hat
 ASIA 2025 La
-Ris 8 FRANCE ROMANIA -¢é
 WORLD NEWS iy PA How Russia-backed influencers meddled i in
-Romania's vote
 aa Bucharest scrapped presidential election after ‘illegal’ social media campaign used tactics
 me seen in Moldova poll
 influencers with a total of 8mn fo! re deployed to boo
@@ -1276,20 +1013,15 @@ POLAND
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisexchat NN
 ASIA 2025 J
 Polish authorities said Russia appears to be behind a large fire that consumed a shopping center in
 Warsaw. Dariusz Borowicz/Agencja Wyborcza.pl/Reut
-a
-m
-*-|
 ‘
 ‘ f
-~ DENMARK £7
-1S @BlackHatEvents
 ```
 
 ## Slide 57
@@ -1302,25 +1034,6 @@ ESTONIA
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisexchat
-ASIA 2025
-ba >
-i Sas
-Bosnia — Moldova - Georgia
-Vis f
-~ ESTONIA 4
-wa SS
-iff’ ea. g
-\3 —
-he
-+t
-Ss
-@BlackHatEvents
-```
-
 ## Slide 58
 
 ### **Hybrid Warfare**
@@ -1329,20 +1042,16 @@ GERMANY
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat \ BR oN
 ASIA 2025 ;
 POLITICO G : RMANY = Bei 100 ge den mane verstopft
 7 | Klima-Radikale
 an election War in Ukraine Newsletters Podcasts PollofPolls Policynews Events
-“a iw
 4 ir
-:
 NEWS > DEFENSE r¢ As ae
-ean iva
-: i
 ee , attackieren Autos mit
 ussian plot to kill European
 weapons chief foiled by US = a ae Bauschaum
@@ -1360,20 +1069,6 @@ verstopft
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-= hat
-Dole 2025
-ED SEG
-fz J fgteom
-7 aod
-i.
-a ~
-biti “4 toms Tt Lah
-ackHatEvents
-```
-
 ## Slide 60
 
 ### **Conclusion**
@@ -1387,25 +1082,6 @@ ackHatEvents
 ### **Conclusion**
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-'#)
-black hat
-EST 2025
-eAwareness ;
-«Behaviour :
-,
-~ 2
-’ :
-“ J
-™ ’
-bed beng em pment ome
-dee vat
-. ——=
-——— | BE @BlackHatEvents
-```
 
 ## Slide 62
 

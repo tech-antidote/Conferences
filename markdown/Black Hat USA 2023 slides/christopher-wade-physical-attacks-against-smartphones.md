@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Christopher Wade_Physical Attacks Against Smartphones.pdf"
 pages: 69
 sha256: "c61694c61ec56879c61f1de7c3d5d969dc3b674d80f0a40c92b2635dcfb0fd98"
-text_chars: 18117
+text_chars: 18057
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:14:35Z"
+converted_at: "2026-08-12T04:06:41Z"
 ---
 # Physical Attacks Against Smartphones
 
 **Speakers:** Christopher Wade  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Christopher Wade_Physical Attacks Against Smartphones.pdf` (69 pages)
+
 
 ## Slide 1
 
@@ -147,9 +153,9 @@ Due to the command injection vulnerability in the Android fork, a similar attack
 
 A legitimate encrypted update file was renamed to contain a command:
 
-```
+\```
 `sleep 30000`.zip
-```
+\```
 
 This caused the update process to hang, demonstrating that it was vulnerable to command injection somewhere
 
@@ -179,10 +185,10 @@ As there was a command injection vulnerability in the filename, this could be us
 
 By altering the name to include a base64 encoded command, piped into /system/bin/sh, a shell script could be read from the filesystem and executed:
 
-```
+\```
 `echo Y2F0IC9kYXRhL21lZGlhLzAvYmFja2Rvb3Iuc2ggfCBzaAo= | busybox base64 -d
 - | sh`.zip
-```
+\```
 
 ## Slide 17
 
@@ -256,13 +262,12 @@ We could use this to switch from the Recovery RAMDisk to Android’s
 
 Init Process
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Init Process
-!
 init selinux_setup
-t
 init second stage
 ```
 
@@ -270,19 +275,15 @@ init second stage
 
 Init Process
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Init Process
 init selinux_setup
-t
 init second_stage
-’
 switch_root /boot_rd/ /init
-’
-|
 init selinux_setup
-'
 init second_stage
 ```
 
@@ -508,17 +509,13 @@ Modifying this table would allow for easy code execution, without modifying the 
 
 Basic Code Execution
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Basic Code Execution
 f8931bf0 48
-f8
 00
-f8931bf8
-8931c00
-8931c08
-PTR_s_reboot_f8931bf0
 addr s_reboot_f88e6948
 PTR_reboot_command_f8931bf8
 addr reboot_command

@@ -12,7 +12,7 @@ duration_seconds: 2240
 words: 5355
 text_chars: 31392
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # CTRAPS - CTAP Impersonation and API Confusion Attacks on FIDO2

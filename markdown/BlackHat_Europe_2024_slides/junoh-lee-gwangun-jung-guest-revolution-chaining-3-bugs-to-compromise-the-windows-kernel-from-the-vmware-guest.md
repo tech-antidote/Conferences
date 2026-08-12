@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Junoh Lee & Gwangun Jung_Guest Revolution Chaining 3-bugs to compromise the Windows kernel from the VMware guest.pdf"
 pages: 73
 sha256: "ea1a4a0849caf32c8c540bcf7d28f81b22efd120856e3629be69cb620e01960d"
-text_chars: 33098
-ocr_pages: 58
+text_chars: 28380
+ocr_pages: 57
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:51:20Z"
+converted_at: "2026-08-12T04:59:27Z"
 ---
 # Guest Revolution Chaining 3-bugs to compromise the Windows kernel from the VMware guest
 
 **Speakers:** Junoh Lee, Gwangun Jung  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Junoh Lee & Gwangun Jung_Guest Revolution Chaining 3-bugs to compromise the Windows kernel from the VMware guest.pdf` (73 pages)
+
 
 ## Slide 1
 
@@ -49,12 +56,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Agenda
 1. Introduction
 Image by DALL-E
@@ -83,16 +88,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Who are we ?
 Junoh Lee Gwangun Jung
 Researcher Researcher
-@bbbig12 @prOln
 theori
 Information Classification: General 1 4
 ```
@@ -105,12 +107,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Pwn2Own 2024 Virtualization Category
 Targets:
 . Master of Pwn Eligible for Add-
@@ -140,18 +140,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VM escape overview
 Type 1 and Type 2 hypervisors
-Microsoft WM1 | VM2. ° VMn VM1 = VM2. = VM n VMware
 Hyper-v WS/Fusion
 e Hypervisor Hypervisor .
-wKVM @eEmMuU
 iy ESXi Vy VirtualBox
 ```
 
@@ -169,18 +165,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VM escape overview
 What is VM escape?
 Sandbox
-Guest o_= .
-I
-Ll...
 VM vmware-vmx vmware-vmx
 Host
 OS / Hardware
@@ -216,18 +207,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Hypervisor attack surface
 Heap OOB Read
 VM Escape CVEs (2023~2024)
 VGA
-*
-y(bictoorn|f coi I £1000 Pvirtiowne
 Use After Free
 Information Classification: General (CVE-2024-22267) 11
 ```
@@ -240,19 +227,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Hypervisor attack surface
 ee Heap CSB React Self-patch in 17.5.1
-Lwvie ]
 VM Escape CVEs (2023~2024)
 VGA
-x
-y(biuetootn|}] coi 1000 Pvirtiownet
 Use After Free
 (CVE-2024-22267)
 ```
@@ -265,26 +247,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Hypervisor attack surface
 ee Heap CSB React Self-patch in 17.5.1
-Lwvie ]
 VM Escape CVEs (2023~2024)
 VGA
-~
 Uninitialized Heap
 (CVE-2024-22270)
-*
-p[btuetootn]f cco
 Use After Free
 (CVE-2024-22267)
 Information Classification: General 1 1 3
-il
 ```
 
 ## Slide 14
@@ -295,12 +270,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Host Guest File Sharing (HGFS)
 Folder sharing
@@ -314,9 +287,6 @@ Enabled until next power off or suspend
 Host RPC Handlers
 . Folders
 Inf Confi HGFS Name Host Path
-nto ont 0000 nm
-9g |) shared_f... F:t4tshared_folder
-v
 Host File System
 Host
 OS / Hardware
@@ -332,23 +302,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Root cause analysis (1)
 HGFS v1 Response (size=0x41)
 char hgfs_fileread(struct hgfs_req *req, _BYTE *a2){
 Block = OLL; 0x00 0x08
 rep = OLL;
-||...
-// ...
 // Copy file contents to Physmem 0x20
 PhysMem_CopyToMemory_O(*(a2 + 51), v24, v6, 32, 5u);
-||... 0x30
 if (req->version == 1 )
 data_size = Ox29LL;
 else if (req->version == 2 ) 0x40
@@ -391,12 +356,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 ¢« HGFS over VMCl is closed source
@@ -412,12 +375,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 Windows Filesystem hgfs.sys (filter driver) vmware-vmx
@@ -441,28 +402,21 @@ Information Classification: General 18
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 Windows Filesystem hgfs.sys (filter driver) vmware-vmx
 enter NtReadFile() HGFS v2 Request
-build_hgfs_pkt(.., ver, seq) = : eet ee ve weneeeeeaeenenenay, ", HGFS v1 Request
-“yp W2->Vv1
 hgfs_fileread
 read file from
-\\wmware-host i Wi->v2—¢ vmci_resp_send
 i: i HGFS v1 Response
-a read_vmci_pkt(resp) rae
 ; HGFS v2 Response:
 return NtReadFile() i backup:
 : uninitialized :
 data
-en eeeeeeeneeneeneeeneesens®®
 kernel hook
 Information Classification: General 19
 ```
@@ -475,31 +429,24 @@ Information Classification: General 19
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 Windows Filesystem hgfs.sys (filter driver) vmware-vmx
 spray CD-ROM
 associated objects
 enter NtReadFile() HGFS v2 Request
-cocteeeneennananeneeneanany,
 build_hgfs_pkt(.., ver, seq) -----... — *, HGFS v1 Request
-“yp W2->Vv1
 hgfs_fileread
 read file from
-\\vmware-host i Wi->v2—¢ vmci_resp_send
 i: i HGFS v1 Response
-a read_vmci_pkt(resp) ne
 ; HGFS v2 Response:
 return NtReadFile() i backup:
 : uninitialized :
 read vmware-vmx address <« = data
-en eeeeeeeneeneeneeeneesens®®
 kernel hook
 Information Classification: General 20
 ```
@@ -512,31 +459,24 @@ Information Classification: General 20
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 Windows Filesystem hgfs.sys (filter driver) vmware-vmx
 spray CD-ROM
 associated objects
 enter NtReadFile() HGFS v2 Request
-cocteeeneennananeneeneanany,
 build_hgfs_pkt(.., ver, seq) -----... — *, HGFS v1 Request
-“yp W2->Vv1
 hgfs_fileread
 read file from
-\\vmware-host i Wi->v2—¢ vmci_resp_send
 i: i HGFS v1 Response
-a read_vmci_pkt(resp) ne
 ; HGFS v2 Response:
 return NtReadFile() i backup:
 : uninitialized :
 read vmware-vmx address <« = data
-en eeeeeeeneeneeneeeneesens®®
 kernel hook
 Information Classification: General ?1
 ```
@@ -549,12 +489,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HGFS Uninitialized heap leakage (CVE-2024-22270)
 Trigger and exploit in Windows guest
 [+] Patch VM drivers to trigger
@@ -581,11 +519,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 VMware Virtual Bluetooth Overview
 Client Driver Virtual Bluetooth
@@ -596,9 +533,7 @@ USB Controller DATA URB Control URB
 I
 Virtual Hub Virtual Virtual Device Vendor
 Mouse Bluetooth Command Command
-Sa
 a Bluetooth Packet Processing
-Host Ss
 OS / Hardware
 Remote Bluetooth
 Devices
@@ -614,25 +549,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 VMware Virtual Bluetooth Overview
 Client Driver Virtual Bluetooth
 s USB Interface
 Universal Bus Driver (USBD) (URB Processing)
 I
-WB orks fatatatatatatatetatatats|sfatatatatatatatatstatatatatstatatatats oD afetelatetatetetetetetetetetetatetete ch
 USB Controller } DATAURB Control URB
-0 I
 Virtual Hub Virtual Virtual : Device Vendor :
 Mouse Bluetooth : Command Command _|:
-y See TELL LLL LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL ”
 a Bluetooth Packet Processing
-Host Ss
 OS / Hardware
 Remote Bluetooth
 Devices
@@ -648,12 +578,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Root cause analysis (1)
 —int64 VBluetooth_SubmitUrb(vurb *urb){
@@ -686,16 +614,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Root cause analysis (2)
 rbufQueue VUsbQueue_HandleURBs(pools *pool){
-// ...
 curr_node = pool->head;
 if ( curr_node ){
 while (1 ){ VUsbQueue_SubmitURB
@@ -720,28 +645,24 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 VBluetooth URB Use-After-Free (CVE-2024-22267)
 Reset the USB device
 _int64 _ fastcall VBluetooth_SubmitUrb(vurb *urb) void VUsb_DeviceReset(VUsbDevice *dev)
 { {
-// ... _int64 *pipeArray;
 if (endpointAddress ) Ls ipeArray = &dev->pipeArray[20]-
 { VUsb_ResetPortPipe(pipeArray):
 /* handle a non control URB and return */ }
 /* handle a control URB */ |
 if ( (urbData->bmRequestType & 0x60) != 0x20)
 { VUSBDevice
-I wee
 ( (requestType == 9 ) destroy all pipes and URB objects
 {
-sub_1407BA7EO(urb->pipe->dev, urbData->wValué):
 if (urbData->wValue )
-{VBluetooth_Reset(dev):
 return (g_usb_func_table->vusbCompleteUrb)(urb);
 }
 Information Classification: General
@@ -756,12 +677,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Trigger Use-After-Free (1)
 URB(data)
@@ -782,12 +701,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Trigger Use-After-Free (2)
 URB(data)
@@ -797,7 +714,6 @@ URB(reset) - VUsbQueue_SubmitURB = |= = Time Slice
 Vbluetooth_Reset
 PutURB
 (Unref urbs in VBlueTooth)
-urb se
 VUsbCompleteUrb URB(data)
 ```
 
@@ -809,12 +725,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Trigger Use-After-Free (3)
 URB(data)
@@ -842,25 +756,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Trigger Use-After-Free (4)
 char __fastcall VUsb_CompleteUrbAddBatch(vurb *urb) Name Base address Size CFE Guard
 { called by VUsbCompleteUrb
-Ih one |  VIIWare-VIIX.exe Ox7ff6e9b... 28.0.... CF Guard
 pipe = urb->pipe; // [urb + 18h] > advapi32.dll Ox7ffes4600... 712 kB CF Guard
 data = urb->data; cfgmgr32.dll ox7ffe53850... 312kB CF Guard
-(unknown flee se ib type && crypt32.dll ox7ffe53cd0.... 1.4MB CF Guard
 pipe->stalled && urb->status == 3) > dsound.dll OxFffd93550... 648 kB CF Guard
 urb->status = 4; liberypto-3-x64.dll Oxvfid635c0... 5.01 MB
 if (urb->status == 6 ) libssI-3-x64.dll ox7fid93480... 780 kB
-t urb->hepriv) msvcp140.dll Ox? ffelcc30... 564 kB CF Guard
-fev- sunk ob; >viab TAT) > ole32.dll Oxrffe55620... 1.648 CF Guard
 I}... oleaut32. dll ox7ffes5860 860 kB CF Guard
 Use this indirect call, we can control rip
 yen ° > Need to bypass Control Flow Guard (CFG)
@@ -879,34 +787,32 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-EUROPE 2024
-VBliuetooth URB Use-After-Free (CVE-2024-22267)
+VBluetooth URB Use-After-Free (CVE-2024-22267)
+
 Bypass Control Flow Guard
-* To bypass CFG,
-1. Callable by indirect call
-2. After execute some code then execute indirect call
-¢ URB object size is OxA8,
-| | Guest physical memory First page of physical memory is not used after boot !! 2
-0:017> !address 0000020f*dbcc0000
-Usage: MappedFile
-Base Address: 0000020 ‘dbcc0000
-End Address: 00000213 ‘dbcc0000
-Region Size: 00000004*00000000 ( 16.000 GB)
-State: 00001000 MEM_COMMIT
-Protect: ee000004 PAGE_READWRITE
-Type: 00040000 MEM_MAPPED
-Mapped file name: \VM\564da3e5-F094-836e-1d4e-4865805828F0. vmem
-Guest’ physical memory base is in .data section of vmware-vmx. ¢¢
-_
-aan Mapped Q@:015> dq vmware_vmx + @x15A99A0
-File Q0007FF7 974699a8 B000020F dbccQeQee eEEQeeeee EQEQEQ0000
-_ eee
-Information Classification: General 32
+• To bypass CFG, we need to use ROP based CFG gadget
+    1. Callable by indirect call
+    2. After execute some code then execute indirect call
+• URB object size is 0xA8, we need to pivot arg0 to guest controllable memory
+
+[Panel] Guest physical memory                              First page of physical memory is not used after boot !!
+0:017> !address 0000020f`dbcc0000
+Usage:              MappedFile
+Base Address:       0000020f`dbcc0000
+End Address:        00000213`dbcc0000
+Region Size:        00000004`00000000 (  16.000 GB)
+State:               00001000        MEM_COMMIT
+Protect:             00000004        PAGE_READWRITE
+Type:                00040000        MEM_MAPPED
+Mapped file name:    \VM\564da3e5-f094-836e-1d4e-4865805828f0.vmem
+
+[diagram bar: .data | Mapped File]                         Guest' physical memory base is in .data section of vmware-vmx.
+0:015> dq vmware_vmx + 0x15A99A0
+00007ff7`974699a0  0000020f`dbcc0000 00000000`00000000
 ```
 
 ## Slide 33
@@ -917,18 +823,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 fake URB
 Call an arbitrary CFG gadget
 &pipe
-char _fastcall VUsb_CompleteUrbAddBatch(vurb *urb) :
-{ tees
-I]...
 pipe = urb->pipe; // [urb + 18h]
 data = urb->data;
 dev = pipe->dev; // [pipe + 20h]
@@ -938,8 +841,6 @@ urb->status = 4; fake pipe
 if (urb->status == 6 )
 {
 if (urb->hcpriv ) &dev
-dev->unk_obj->vtable[4] (urb); a”
-/| 0x00 ,
 return 0; &unk_ob|
 } 0x20
 fake dev (= physmem )
@@ -955,31 +856,25 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 fake URB
 Call an arbitrary CFG gadget
 char _fastcall VUsb_CompleteUrbAddBatch(vurb *urb)
 {
-I]...
 pipe = urb->pipe; // [urb + 18h] vmware-vmx(.data)
 data = urb->data; unk_obj
 dev = pipe->dev; // [pipe + 20h]
 if (unknown_flag && urb->type &&
 pipe->stalled && urb->status == 3 ) .
 urb->status = 4; fake pipe
-if(urb->status==6) 0 enn nnn
--
--7 ~
 { -
 if ( urb->hcpriv ) ae | &vtable, adev_|
-{dev->unk_obj->vtable[4](urb): vy
 /| 0x00 =
-se &unk_obj
 return O;
 } 0x20 ;
 vtable[4] physmem is guest controllable
@@ -996,26 +891,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 VBluetooth URB Use-After-Free (CVE-2024-22267)
 . . fake URB
 Pivoting argO to Guest's physmem
-_ int64 gadget_O(_int64 urb) {// sub.140323F50 &physmem | &pipe
-7mov rax, [rcx+10h] —_) NN
 f mov rex, [rax] rcx == next argO == physmem
 pine rax, [rex] rax point to .data section oo \ vmware-vmx(.data)
-mM
-OV Tax, [raxt lOUn]
-//jmp — cs:_guard_dispatch_icall_fptr
 return (*(***(urb + 0x10) + 0x160))(**(urb + 0x10)): physmem
 }
 .data section is not guest controllable 'C On >
-rr Ae
-0x00 :
 .data &unk_obj
 0x20
 gadget_O
@@ -1032,25 +920,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBluetooth URB Use-After-Free (CVE-2024-22267)
 fake URB
 Pivoting argO to Guest's physmem
-Pp
 _int64 gadget_O(_int64 urb) {// sub_140323F50 &physmem | &pipe
-/mov rax, [rcx+10h] NN
 /mov rex, [rax] rcx == next argO == physmem
-(/ mov __rax, [rex } rax point to .data section oo \ vmware-vmx(.data)
-/]} mov rax, [rax+160h]
-//jmp — cs:_guard_dispatch_icall_fptr
 return (*(***(urb + 0x10) + 0x160))(**(urb + 0x10)): physmem
 }
-.rdata:0000000140A0D808 dq offset sub_140295230 ff . vmware-vmx(.rdata)
 _int64 gadget_1(_int64 phys) {// sub_140295230 veer
 feturn (*(phys + 0x380))(phys); _} gadget_2 = *(phys+0x380) 0x00 “ —
 } data &unk_obj gaaget_
@@ -1070,20 +950,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBluetooth URB Use-After-Free (CVE-2024-22267)
 fake URB
 Pivoting argO to Guest's physmem
 _int64 gadget_O(_int64 urb) {// sub_140323F50
 [ &physmem &pipe
-Tmov rax, [rcx+10h] we
 f mov rex, [rax] rex == next argO == physmem
-f\ 0 Gata of argU are CQ ollable ~
 _int64 gadget_1(_int64 phys) {// sub_140295230 cues
 feturn (*(phys + 0x380))(phys);_] gadget_2 = *(phys+0x380) | 9,09 c ; gadget_1
 } .data &unk_obj -
@@ -1111,22 +987,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Bypass Control Flow Guard
 If the payload is well organized, VMware UAF does not cause panic ©
 * vmware-vmx loads non-CFG libraries
 Name Base address Size CF Guard
- VINWare-Vix.exe Ox7ff6e9b... 28.0... CF Guard
-> advapi32.dll Oxvites4600... 712 kB CF Guard
-cfgmgr32.dll Oxvfes3850... 312 kB CF Guard
 crypt32.dll Ox7ffe53cd0... 1.4MB CF Guard
 > dsound.dll Ox?ffd93550... 648 kB CF Guard
-liberypto-3-x64.dll Oxvffd635c0... 5.01 MB
 libssl-3-x64. dll Ox7ffd934e0... 780 kB
 Information Classification: General 38
 ```
@@ -1149,12 +1021,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 VBliuetooth URB Use-After-Free (CVE-2024-22267)
 Run Shelicode with CFG based ROP
 1. Read physical memory base
@@ -1206,12 +1076,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Cloud Files Mini Filter (CLDFLT)
 ¢ File System minifilter driver used by OneDrive
 ¢ Relatively large attack surface
@@ -1234,12 +1102,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Bug Finding Process
 CLDFLT Reparse Point Data Vulnerability
 CVE-2021-31969 CVE-2023-36036 = This Bug
@@ -1256,12 +1122,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Storing CLDFLT Reparse Point Data
 buffer->ReparseTag = IOLREPARSE_TAG_CLOUD_3
 Tag that triggers the filter
@@ -1279,23 +1143,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CLDFLT Reparse Point Data Structure
 struct LHSM_DATA
 { struct LHSM_ELEMENT_INFO
 DWORD Magic; {
 DWORD Crc32; USHORT Type;
-DWORD Length; bworp. ee |
 USHORT Flags; DWORD Offset;
 USHORT NumberOfElements; };
 HSM_ELEMENT_INFO Elementinfos[10];
 };
-ns
 Header
 (HSM_ELEMENT_INFOs)
 ElementO Elementi Element3
@@ -1311,12 +1171,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CLDFLT Heap Buffer Overflow (CVE-2024-30085)
 _int64 HsmlBitmapNORMALOpen() {
 if ( elem4_buffer &8 elem4_length - 1 <= OxFFE ) Meaningless Condition va!
@@ -1340,24 +1198,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Information Classification: General
 No Validation?
 bool HsmpBitmaplsReparseBufferSupported() {
 [ clem2_byte = *((_BYTE *)&hsm_data->Magic + elem2_offset);
 if (elem2_byte
 && (hsm_data->NumberOfElements < 4u Doesn't perform
-|| Insm_data->Elementinfos[4].Offset
 || hsm_data->Elementinfos[4].Length > 0x1000u) )
 {
 goto ERROR;
 }
-.
 validation if elem2[0] ==
 46
 ```
@@ -1384,23 +1238,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 What Can We Do?
 ¢« Heap based buffer overflow on fixed size chunk (0x1000)
-* On paged pool
 ¢ How many bytes?
 ¢ Almost 0x4000 bytes
 ¢ Actually more, because we can compress the reparse point data
 int HsmpRpReadBuffer()
 {
 v9 = FltFsControlFile(Instance, FileObject, FSCTL_.GET_REPARSE_POINT,
-0i64, 0, PoolWithTag, |0Ox4000u,JOiI64);
-~
 * Wecan overflow with arbitrary data
 ¢ By setting cldflt reparse point data
 Information Classification: General 47
@@ -1428,18 +1277,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 What Can We Do?
 ¢« Heap based buffer overflow on fixed size chunk (0x1000)
-* On paged pool
 Exploit Time
-sControlFile(instance, FileQbyec
-0164, 0, PoolWithTag, (0x4000u,J0i64):
 * Wecan overflow with arbitrary data
 ¢ By setting cldflt reparse point data
 Information Classification: General 4 8
@@ -1463,12 +1307,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 WNF_STATE_DATA
 ¢ Well-known objects in Windows kernel exploits (with Token Object AARW)
 ¢ Used for Heap Spray in Paged Pool
@@ -1481,8 +1323,6 @@ struct [WNF_NODE_HEADER Header;
 ULONG AllocatedSize;
 ULONG DataSize;
 ULONG ChangeStamp;
-BYTE Data];
-};
 Information Classification: General 49
 ```
 
@@ -1494,27 +1334,21 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 WNF_STATE_DATA
 But, the object has a maximum size limit...
-_int64 _ fastcall NtCreateWnfStateName(
 unsigned int MaxDataSize _int64 _ fastcall ExoWnfCreateNamelnstance(
 PSECURITY_DESCRIPTOR a7) -WNF_SCOPE_INSTANCE *a1,
 { _WNF_STATE_NAME_STRUCT a2,
 . _int32 *MaxDataSize,
 if (MaxDataSize > 0x1000 ) -EPROCESS *a4,
-{ -WNF_NAME_INSTANCE **a5)
 StateName = 0xC000000D; {
-goto ERROR; a : :
 } WNI->StateNamelnfo.MaxStateSize = *MaxDataSize;
 ExpWnfCreateNamelnstance( }
 pMaxDataSize,
-we);
 Information Classification: General 50
 ```
 
@@ -1526,26 +1360,20 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 WNF_STATE_DATA - Big Chunk OOB Write
 NtUpdateWnfStateData
 _int64 _ fastcall ExoNtUpdateWnfStateData(
-) > int64 _ fastcall ExpWnfValidatePubSubPreconditions(
-os {
 res = ExpWnfValidatePubSubPreconditions( an
 2u, Typeld = Statelnfo->Typeld;
 &lnstance->StateNamelnfo, if (!Typeld ) _
 Write Size return Statelnfo->MaxStateSize < Size ? OxCOOQO00D : 0;
-v40, ves ;
 v34); } Cannot write more than 0x1000 bytes
 if (res <0) (MaxStateSize <= 0x1000)
 goto ERROR;
-~
 Information Classification: General 51
 ```
 
@@ -1557,12 +1385,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 WNF_STATE_DATA - Big Chunk OOB Write
 NtUpdateWnfStateData
 _int64 _fastcall ExoNtUpdateWnfStateData(
@@ -1580,12 +1406,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 WNF_STATE_DATA - Big Chunk OOB Read
 NtQueryWnfStateData
 _int64 _ fastcall ExoNtQueryWnfStateData(
@@ -1593,10 +1417,8 @@ _int64 _ fastcall ExoNtQueryWnfStateData(
 { a
 res = ExpWnfValidatePubSubPreconditions( — x id = StateInfo->Typeld
 lu, ypeld = Statelnfo->Typeld;
-&lnstance->StateNamelnfo, if(!Typeld )
 0, ) Read Size == O!!? return StatelInfo->MaxStateSize < Size ? OxCOOQ000D : 0;
 v1): } Always pass the size validation
-if (res <0)
 goto ERROR;
 }
 Information Classification: General 5 3
@@ -1610,12 +1432,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Mailslot Object
 Mechanism for one-way interprocess communications
 Information Classification: General
@@ -1623,10 +1443,8 @@ Write Thread2
 Create (\\mailslot\\xxx)
 Thread1
 rea
-a Threaa3
 7x Write
 Read
-Write R
 https://learn.microsoft.com/en-us/windows/win32/ipc/mailslots
 Thread4
 54
@@ -1640,12 +1458,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Mailslot Data Entry
 Mailslot manages multiple received data using Data Entry Queue
 Data Entry1 Data Entry2 jag Data Entry3 Data Entry4
@@ -1671,12 +1487,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Mailslot Data Entry Object
 Size-Mutable object and contains useful members
 struct mailslot_data_entry
@@ -1703,17 +1517,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Out-of-Bound Read
 ... (Doesn't matter)
 BufferPtr
 MsPeek()
-MsWrite() =.
 ```
 
 ## Slide 58
@@ -1732,19 +1543,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Leaking Critical Object Address
 MsWrite() a»
 Mailslot Data Entry
 Mailslot Context
-wee :
 Data Entry List ak see process
-00 Data Entry List Th — r
 DataSize a read List
 BufferPtr Requestor Process
 Buffer
@@ -1760,12 +1567,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Arbitrary Nullification
 MsRemoveDataQueueEntry
 MsRead() vs
@@ -1775,7 +1580,6 @@ IRP = entry->IRP;
 Mailslot Data Entry
 MsCancelTimer(entry);
 IRP (valid addr)
-¥
 WorkContext = entry->WorkContext;
 if (WorkContext )
 Buffer {
@@ -1792,12 +1596,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Arbitrary Write
 Mailslot Context
 Type Confusion
@@ -1856,20 +1658,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Exploitation — Token Overwriting
 Current EPROCESS Init EPROCESS
-ETHREAD - see = Traverse . uae -
 ActiveProcessLinks = = =P ActiveProcessLinks
 Process
 Token — aa Token
 Overwrite
-UniquePID(4)
 ```
 
 ## Slide 66
@@ -1884,24 +1682,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-EUROPE 2024
 1. shellcode runs in vmware-vmx
-)  Windows11_23h2 - VMware Workstation - ox
-Wokstationy JJ~ ® O©Q2Q DE
+) Windows11_23h2 - VMware Workstation - ox
 Home [pe Windows11_23h2
 Windows11_23h2 x +
-<€ ii Cc > + Windows11_23h2 > ‘Windows11_231
-Ware
-o
 reversing privexe vmwarelog
 Gees \
 bootloader | ay 7
 Monday, September 23, 2024
-Qus@ eM +690 2% 4
 Information Classification: General 67
 ```
 
@@ -1937,12 +1729,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Run the Windows LPE exploit
 Build a shellcode
 1. Call CreateFile(‘priv.exe’, ...)
@@ -1980,12 +1770,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Conclusion
 Focused, short-term goals lead to valuable learning (e.g., Pwn20Own)
 Improving reliability is crucial but challenging

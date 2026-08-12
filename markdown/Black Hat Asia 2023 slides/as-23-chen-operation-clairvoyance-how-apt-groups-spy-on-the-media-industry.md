@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Chen-Operation-Clairvoyance-How-APT-Groups-Spy-on-the-Media-Industry.pdf"
 pages: 66
 sha256: "6333e755791a32abdc41ad812579bc4946a87eb7f98984f87e790bfc368e85c5"
-text_chars: 22554
-ocr_pages: 22
+text_chars: 19923
+ocr_pages: 17
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:19Z"
+converted_at: "2026-08-12T03:47:15Z"
 ---
 # Operation Clairvoyance How APT Groups Spy on the Media Industry
 
 **Speakers:** Chen  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Chen-Operation-Clairvoyance-How-APT-Groups-Spy-on-the-Media-Industry.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -30,19 +36,14 @@ Yue-Tien Chen ＆ Zih-Cing Liao
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
 Operation Clairvoyance:
 How APT Groups Spy on the Media Industry
 Yue-Tien Chen & Zih-Cing Liao
-& TEAMTS
 Persistent Cyber Threat Hunters
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -83,16 +84,12 @@ IV. Conclusion
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
 Introduction:
 Overview of APT attacks targeting media
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 5
@@ -125,24 +122,15 @@ Information Security Staff #BHASIA @BlackHatEvents
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
-BSAe (eee) Rea SSM tAme
-22 AFR Ae Cee
 Australian Chinese News Site Hit by
 Cyber Attack, Media Reports
 “ = Thousands of users affected, The Australian newspaper says
 y % = Attack was on anniversary of Tiananmen Square massacre
-2 BUR
 RW NEWS
-RMN (ASH) SBOBAAR > MMIC ARA > Hl: MINS
-PFOOFPOINE. —sroiucis ~ solutions » Partners ¥ Resources ¥
-Company v Qa 6
-ae,
 Above the Fold and in Your Inbox: Tracing
 State-Aligned Activity Targeting Journalists,
 Media
@@ -155,7 +143,6 @@ By Alexandra Bruell [Follow) , Sadie Gurman [Follow] and Dustin Volz (Follow
 Updated Feb. 4, 2022 10:19 pm ET
 AA\ Resize
 @ Share
-> Listen (2 min:
 Ransomware attacks are incre:
 targets. W
 Photo illu:
@@ -169,18 +156,6 @@ why these attacks are on the rise and what the U.S. can do to fight them.
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 20253
-%y
-4
-s ¢
-Ss
-APT attacks targeted Media
-```
-
 ## Slide 9
 
 ## CloudDragon
@@ -193,12 +168,10 @@ APT attacks targeted Media
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 CloudDragon
 Alias: Kimsuky
 Targeted Country: KR, JP, US
@@ -249,16 +222,12 @@ would send a strong message to North Korea?
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
 Operation Clairvoyance:
 APT attacks targeting media in Tatwan
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 11
@@ -279,12 +248,10 @@ Semiconductor
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 U.S. House of Representatives Visit
 B | |B | Zz Signin Home News Sport Reel Worklife T
 NEWS
@@ -307,14 +274,6 @@ Watch historic moment Nancy Pelosi lands in Taiwan, the first visit by such a se
 ## Compromised Youtube Channel
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 20253
-ee Et Edin FTVN Live 53 ~ Miaid-- Fe
-```
 
 ## Slide 15
 
@@ -461,17 +420,15 @@ Config
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2023
 FunnyDil
 ¢ Packed with ConfuserEx v1.0.0
 ¢ XML configuration:
-<?xml version="1.60" encoding="utTf-8" ?>
 <Config Group="lib" Password="test”™ StartTime="6" EndTime="24" WeekDays="6,1,2,3,4,5,6">
-<TcpConnector address="mztTki9x.wikimedia.vip" port="443" interval="30-60"/>
 </Config>
 ```
 
@@ -505,10 +462,10 @@ SyncHost.exe Choose aclui.dll
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2023
 Natwalk
 ¢ Alias: Sidewalk
@@ -517,16 +474,7 @@ Natwalk
 Cache-Control: no-cache
 Connection: Keep-Alive
 Pragma: no-cache
-User-Agent: Mozilla/sS.0 Chrome/72.0.3626.109 Safari/537.36
-gtsid: TomdresBeExXe4¥JHH
-Content-Length: i120
 Host: cdn.cdnfree.workers. dev
-; I| r.J] O #k° OFf00 OhkoOpo «
-'#oOoo0 Ga
-1
-POST https: //cdn. cdntree.workers. dev/8ws ]KEViHmSKKIGYh/wxcgqguhns446xfoci HTTP/1.1
-gtuvid: SAG? SB6941DEBEDL30E03C 29E75A7 8065 0A0AF5A0BBF 45 G0FE333916FF98CDA1L
-WL
 ```
 
 ## Slide 27
@@ -541,46 +489,51 @@ KeyPlug version 2022
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-ASIA 20253
-KeyPlug
-¢ Multi-protocol: HTTPS, TCP, UDP, WSS, QUIC
-while ( 71 )
-{
-memset ( » @, sizeof ( ));
-= 400;
-memmove ( >
-sub_180009910(
-|| (a2, “TC
-| (a2, “UDP:
-{
-break;
-}
-++V6;
-~~ 2
-00009099 sub 180009A30:80 (180009C99)
-KeyPlug version 2022
-{
-LABEL_33:
-sub_180@C95D0(v46) ;
-return 1;
-}
-= ~(((~(dword_180383718 * (dword_180383718 - 1)) & @x3C2426FE | (dword_18@383718 * (dword_18@383718 - 1)) & ex
-= ( | ((~(dword_180383718 * (dword_180383718 - 1)) & @x3C2426FE | (dword_180383718 * (dword_180@383718 - 1))
-= dword_18@38371C < 10
-&& ( | ((~(dword_180383718 * (dword_180383718 - 1)) & @x3C2426FE | (dword_180383718 * (dword_18@383718 - 1))
-|| && dword_18038371C > 9;
-LABEL_24:
-(a3, “TCP://");
-= (a3, “TCP://");
-= (~(~(dword_180383718 * (dword_180383718 - 1)) & @xFFFFFFFE | (dword_180383718 * (dword_180383718 - 1)) * 1)
-goto LABEL_24;
-0004FC50 sub 180050410:139 (180050850)
-KeyPlug version 2023
+Fuzzing Overview
+
+Main challenge: how to make the fuzzer generate semi-well-formed samples
+    ("semi-well-formed" circled in red)
+
+[Chromium issue tracker]
+ID ▾ | Pri ▾ | Type ▾ | Component ▾ | Status ▾ | Summary + Labels ▾ | Owner ▾
+☆ 1427334  2  Bug  Blink>JavaScript>WebAssembly  Assigned  v8_wasm_compile_fuzzer: Fatal error in Exception mismatch! Expected: <RangeError: Maximum call stack si…   ClusterFuzz
+☆ 1425320  2  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: Crash in v…   Reproducible  ClusterFuzz
+☆ 1424671  1  Bug  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+☆ 1421464  2  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: Fatal erro… valid module. Run with --trace-was…   ClusterFuzz
+☆ 1421303  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1419637  2  Bug  Blink>JavaScript>WebAssembly  Assigned  v8_wasm_compile_fuzzer: CHECK fa… fuzzer-common.cc  Reproducible  Clu…
+☆ 1419622  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: CHECK fa…   Reproducible  ClusterFuzz
+☆ 1417516  1  Bug  Blink>JavaScript>WebAssembly  Verified  v8_wasm_compile_fuzzer: DCHECK … liftoff-assembler-arm.h  Reproducibl…
+☆ 1405706  1  Bug  Blink>JavaScript>Compiler, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Abrt in v8…   Reproducible  ClusterFuzz
+☆ 1404880  1  Bug-Security  Blink>JavaScript>Runtime  Duplicate  v8_wasm_compile_fuzzer: DCHECK … HAS_STRONG_HEAP_OBJECT_TAG…   ClusterFuzz  allpublic
+☆ 1404876  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in feedback_instruction_index_ < type_feedback_.size() in graph-bu… interface.c  Reproducible  ClusterFuzz  allpublic
+☆ 1404761  1  Bug  Blink>JavaScript>GarbageCollection, Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: Null-dereference READ in v8::internal::RootScavengeVisitor::ScavengePointer  Reproducible  ClusterFuzz
+☆ 1404712  1  Bug-Security  Blink>JavaScript>GarbageCollection  Duplicate  v8_wasm_compile_fuzzer.exe: Crash in v8::internal::Heap::IterateR…  Reproducible  ClusterFuzz  allpublic
+☆ 1404655  1  Bug-Security  Blink>JavaScript>WebAssembly  Duplicate  v8_wasm_compile_fuzzer: DCHECK failure in (address & ::v8::internal::kHeapObjectTagMask) == 0 in heap-object.h  Reproducible  ClusterFuzz  allpublic    clemensb@chromium.org
+
+[GitHub repository browser]
+⑂ main ▾    binaryen / src / tools / fuzzing /
+tlively  Remove the ability to construct basic types in a TypeBuilder (#5678)  …
+..
+fuzzing.cpp
+heap-types.c… (truncated by overlapping window)
+heap-types.h
+parameters.h
+random.cpp
+random.h
+
+[wasm-smith README]
+wasm-smith
+A WebAssembly test case generator.
+[docs | passing]  [crates.io | v0.12.7]  [downloads | 287k]  [Rust badge]
+• Features
+• Usage
+  ○ With cargo fuzz and libfuzzer-sys
+  ○ As a Command Line Tool
 ```
 
 ## Slide 28
@@ -633,25 +586,19 @@ Encrypts Mutex_name and rc4_key
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2023
 Bifrost
 ¢ Anti-analysis
-strepy( , "“XECPROBELOADER");
-strepy( > "RFSCANNER"™);
 = (pe.szExeFile);
 (v6, )
 = (pe.szExeFile),
 = (pe.szExeFile),
 = (pe.szExeFile),
-.5zExeFile),
 = (pe.szExeFile),
-.szExeFile),
-I iT]
-_~ _~
 if ( (unsigned int)sub_10@043E@(
 break;
 }
@@ -660,16 +607,10 @@ if ( !Process32Next(
 while ( 1 )
 {
 sub_100043E@(pe.th32ParentProcessID);
-strepy( > "“TCPVIEW");
-strepy( » "“ICESWORD") ;
-strepy( , “CPORT");
-strepy( > "“WIRESHARK™);
 strepy(v28, "NETSTAT");
-strepy( > "ETHERAL");
 -th32ParentProcessID) !=
 2
 &
-»)
 ```
 
 ## Slide 32
@@ -702,19 +643,6 @@ linestw.com IT
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 20253
-Typosquatting domain
-udngroups.com Media ——
-udntw.net Media | E
-rutentw.com E-Commerce 8. ®& Soll ae »& - ®. &.
-linestw.com IT
-_&...
-```
-
 ## Slide 34
 
 ## Goushe
@@ -737,12 +665,10 @@ Alias: APT23, Pirate Panda, KeyBoy Target Country: IN, PH, TW, TH, VN Target Ind
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 20253
 JpgRun
 ¢ Payload specific string “EHAGBPSL”
 (v3,
@@ -770,23 +696,19 @@ v5 = Buffer;
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 BxShell
 ¢ Loaded by JogRun
 ¢ Variant of QL_ASD_ Shell found in mid 2021
---dword_18@@4DC3
-Send_EncryptData é y_Matrix, v21);
 EncryptData(al, § (matrix, banner[@
 6
 ShellPrefix) ;
 RAT_function(al, w22);
 hil
 tu
-=
 ```
 
 ## Slide 37
@@ -799,19 +721,16 @@ tu
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 QuasarRAT
 ¢ Open-soursed Quasar RAT with custom loader
 ¢ Decrypt payload by DES key given by arguments
 private static void Main{atring[] args)
-neDefault(false);
 if (args
 return;
-JGetFileNanel ithoutExtension(Application.
 if (!
 return;
 b ytel ] a
@@ -919,18 +838,6 @@ Sleep time
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 20253
-OS
-‘we z ni AESPassword for filename encryption
-ZipPassword for file compression
-| > Registry path for Dropbox token
-Sleep time
-```
-
 ## Slide 46
 
 ## DropCloud
@@ -1009,11 +916,10 @@ Target Country: TW, IN Target Industry: Media TTP:
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 ASIA 2023
 total, used, free = shutil.disk_usage("/")
 whnd = ctypes.windll.kernel32.GetConsoleWindow ()
@@ -1030,14 +936,9 @@ pass
 def (axcs):
 #print ('mythread...")
 try:
-hdr['Cookie']="'
-req = urllib.request.Request (url, headers=hdr)
-response = urllib.request.urlopen (req)
 html = response.read() .decode ("utf-8').strip()
 #print (html)
-if len (html)
 ntml [2:]) .decode ()
-1[2:]) -decode ())
 ```
 
 ## Slide 51
@@ -1048,11 +949,10 @@ ntml [2:]) .decode ()
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 20253
 C2: url2.ml
 ¢ Fake url shortening website
 Short URL
@@ -1069,15 +969,11 @@ Use our URL Shortener to create a shortened link making it easy to remember
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
 Case Study: Hacker's note
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 53
@@ -1224,17 +1120,6 @@ Dnscat
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
-Conclusion
-#BHASIA @BlackHatEvents
-```
-
 ## Slide 61
 
 ## Key Takeaways
@@ -1269,18 +1154,14 @@ Zih-Cing Liao (duckll@teamt5.org) Yue-Tien Chen (timc@teamt5.org)
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pidek hat
-ASIA &
-MAY 11-12
-BRIEFINGS
 Thank You!
 RY TEAMTS Zih-Cing Liao (duckll@teamt5.org)
 Yue-Tien Chen (timc@teamt5.org)
 Persistent Cyber Threat Hunters
-#BHASIA @BlackHatEvents
 ```
 
 ## Slide 64

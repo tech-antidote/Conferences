@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Stav shulman_UNC1860 and The Temple of Oats - Iran's hidden hand in Middle Eastern Networks.pdf"
 pages: 35
 sha256: "5f7c7ad6d6446cc8b01b0ef857d06e63a646d5f10258563635dcf46a65aba095"
-text_chars: 10828
-ocr_pages: 17
+text_chars: 8636
+ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:52:14Z"
+converted_at: "2026-08-12T05:00:30Z"
 ---
 # UNC1860 and The Temple of Oats - Iran's hidden hand in Middle Eastern Networks
 
 **Speakers:** Stav shulman  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Stav shulman_UNC1860 and The Temple of Oats - Iran's hidden hand in Middle Eastern Networks.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -35,18 +41,6 @@ Stav Shulman
 
 **Stav Shulman** Staff Security Researcher, Google Threat Intelligence
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Whoami
-Stav Shulman
-Staff Security Researcher,
-Google Threat Intelligence
-mye
-IN) rete:
-Ta] ate aes
-```
-
 ## Slide 3
 
 #### **Agenda**
@@ -60,18 +54,6 @@ Ta] ate aes
 4. The “AHA” moment(s)
 
 5. Summary and conclusions
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Agenda
-Why are we here
-Let's start from the end
-Gathering evidence
-The “AHA” moment(s)
-Summary and conclusions
-you gone learn today
-```
 
 ## Slide 4
 
@@ -159,7 +141,8 @@ Operation
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Threat Intelligence
@@ -183,15 +166,6 @@ Talha Ozturk | 14.02.2024 - Update : 16.02.2024
 # **03**
 
 **Gathering evidence**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-03 EL
-x
-Gathering rey of
-evidence Hifi EVERYWHERE
-```
 
 ## Slide 13
 
@@ -311,7 +285,8 @@ Dropper
 
 ###### **VIROGREEN**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One GUI to Rule Them
@@ -320,14 +295,11 @@ TEMPLEPLAY VIROGREEN
 Enter Host Url
 http
 Automatic Task | Agent CMD Handler | Agent Upload Hander | Agent Download Fie | PowerShel Backconnect | Custom Payaload
-mmmand Prompt Upload File Download ile Hip Proxy Uts
 Filename: Enter URL or path of File
 omd/c 2>&1
 Parameter: ; 8 =) @ Include Htty Use IE
 70 200 TimeBase: 85 P
-whoami — = Include WWW
 Mode Pay
-Ospe
 Result Vuln | Failed | Log
 Progress: Checked: 0\0 Duration Time: 0 Sec Left Time: 0 Sec
 ```
@@ -346,7 +318,8 @@ Progress: Checked: 0\0 Duration Time: 0 Sec Left Time: 0 Sec
 
 **CRYPTOSLAY and OBFUSLAY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SLAY and SLAY
@@ -354,15 +327,12 @@ public static string ideaenoughaerobic(string string_0)
 { //over here converting the string to a byte array
 int length = string_0.Length;
 byte[] array new byte[length / 2];
-{
 array[i / 2] = Convert.ToByte(string_0.Substring(i, 2), 16);
-a
 int num = (int)array[0]; // extracting the XOR key
 byte[] array2 = new byte[array.Length - 1];
 Buffer.BlockCopy(array, 1, array2, 0, array2 ngth); public static byte[] Trickalert(string A_0)
 for (int j = 0; j < array2.Length; j++) {
 { int length = A_O.Length;
-array2[j] = (byte)((int)array2[j] “ num); // unXORing all by’ byt ell anray = new hy tal tengtin giz,
 } {
 return Encoding.UTF8.GetString(array2); // translating from bytq array[i / 2] = Convert.ToByte(A_0.Substring(i, 2), 16);
 }
@@ -372,7 +342,6 @@ int num = (int )array2[0];
 byte[] array3 = new byte[array2.Length - 1];
 Buffer.BlockCopy(array2, 1, array3, 0, array3.Length);
 for (int j ; ] < array3.Length; j++)
-{
 array3[j] = (byte)((int)array3[j] * num);
 }
 return array3;
@@ -392,7 +361,8 @@ return array3;
 
 **One GUI to Rule Them All!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One GUI to Rule Them/All!
@@ -408,54 +378,34 @@ VIROGREEN
 
 **A Case of Deja Vu**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-AAAAAAAAAAAAAAAAADAADAAAAAAADAADAAAAAAAAAADAAAA,
 AAAAAAAAAAA", |"Encryption.XORO"} null);
 blic GClass3 GClass3();
 ¢ GClass9
 A Case of Deja Vu
-AAAAAAAAAA
-AAAAAAAAAAAAAAABRIRARRARATRTARATAATADAAAAAAAAANAAAAAAAAAAAAAAAAN
 encryptionModule) ;
-| "Encryption.Bsae64”,
-Fey
 log_current_aspx.PackageManager packageManager = ne
-log_curret
 (base. ), encryptionModule) ;
 switch (packageManager. Type)
-{
 se log current_aspx.PackageType.
-{
 log_current_aspx.DataPackage dataPackage = packageManager.(
 Socket socket = this.GetParam("SessionSocket") as Socket;
 f (socket != null)
-{
 (socket)
 protected void Pa
-Ql
 try
-(
 null ? new
-Packagelt
-switch (P.
-{
 case PackageType.Data:
-{
-{} MSExchangeBackendManager
 i} nso
 PE
 ™ Type References
 References
-MM Resources
-vevergl
-.
 .
 ype References
-b= References
 > {}] EventLockSpace
-> { }-eventtockSpace-Win32
 b{} ServerSrv
 ```
 
@@ -463,7 +413,8 @@ b{} ServerSrv
 
 **Different Flavors, Same Soup**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Different Flavors, Same Soup
@@ -472,7 +423,6 @@ __int64 shellcode_size; __int64 shellcode_size;
 BYTE shellcode|[ ]; BYTE shellcode[];
 __int64 shellcode_output; __int64 shellcode_output;
 __int64 shellcode_output_len; __int64 shellcode_output_len;
-__int64 magic_6x18; __int64 magic_@x18;
 BYTE shellcode_arg[]; BYTE shellcode_arg[];
 ```
 
@@ -484,33 +434,29 @@ BYTE shellcode_arg[]; BYTE shellcode_arg[];
 
 Main function of TOFULOAD Main function of TOFULOAD.NET
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Google Translate
 %a Code & Images B Documents —l Websites
 Detect language C++ English Spanish C# Spanish Italian
 Main function of TOFULOAD
-CHEEBEatere response, Httplisteners request)
 (Encodir (array))5
 rray4 ds
-GintPtr2) 5
-< Gantper2 © + 81)
 © + 16L))5
 Ds
 oo
 Main function of TOFULOAD.NET
-Gotptr,
 ```
 
 ## Slide 28
 
 Main function of TOFUPIPE Main function of TOFULOAD.NET
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Google Translate
 %a Code & Images B Documents
 EE Websites
 Detect language C++ English Spanish
@@ -523,24 +469,16 @@ num3 = (Stoveclarifyangle_long, num);
 {] array2 [num2];
 (Stoveciarifyangle_iong, num, array2, 0, array2 5
 num += num2s
-() array3 = [oum3]5
 (Stoveclarifyangle_leng, num, array3, 0, array3 ds
 intPtr = Bracket_lal (array2);
 intPtr2 Lat (array3)5
-((Bracket_lab- ar *) GintPtr, (Bracket_lab-ang
-(intPtr2);
 ( Cintptr2 64() + BL))5
-: t GintPtr)
 Bracket_lab (intPtr2);
 (numS > OL && numa eL)
 intPtr3 (numa) 5
 {] array4 = [num5] 5
-(intPtr3, array4, 0, arraya »s
 array = Bracket_lat ( isle)
-«
 array,
-array4
-Ys
 racket_lab (antPtr3);
 Main function of TOFUPIPE
 Main function of TOFULOAD.NET
@@ -550,47 +488,18 @@ Main function of TOFULOAD.NET
 
 Main function of OATBOAT Main function of SPARKLOAD
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 47/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Google Translate
 %a Code BR Images B Documents &I Websites
-ASPX Spanish Italian v
 Detect language C++ English Spanish
-(Protected void Page Load(opject sender, EventArgs 8)
-ni[3]3 // [rsp Heh] BYRE
-t
-= aspaies 4 (Requese.concentLengeh > 0)
-= my_NtAllocatevirtual"emory(4926i64, 64164); Se eeerecat
-my Beopynory (Sy shel ede sess, 48241645 oy
-= (BYTE "vi; ni
-Ma byte) w eo eee tamale er reese
-Pytet) er aequestt
-sais as laced Serieviansy)
-: z Seen
-: caught_panage = (choose caught manage) Mars
-jetDelegateForFunctionPointer(intPtr, typeof (Choose _cay
 }
 while (v0 )5
 = 90164;
 = my_NtAllocateVirtualMemory(90i64, 4164);
-my RtlCopyMemory(v4, &my parameters address, 90164); oS epee eS
-q
-rate = new tnePee (num):
-AUStE = OxBAUS byte(] array? = nev bytetmun2]
-3 (anePers
-pan reer neeicl
-fengeh) :
-"modify (new bytel] ()
-}
 while ( a
-0) )myfunc_lookup(v10); array?
-spirizlanguage (in
 if (
-{
-strepy(vii, "NtClose
-a my_func_Lookup2(vi1)5 innin
-array = this.Foil_gentieelevator.GerBytes (ex. Tost
 return
 }
 return
@@ -602,10 +511,10 @@ Main function of OATBOA
 
 TOFUDRV API wrapper function WINTAPIX API wrapper function
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Google Translate
 %a Code BR Images B Documents &I Websites
 Detect language C++ English Spanish C Spanish Italian
 I 7 ; int64 _ fastcall openKey(void **hKey, const WCHAR *regKeyPath, ACCESS MASK desiredAccess
@@ -616,17 +525,6 @@ TOFUDRV API wrapper function WINTAPIX API wrapper function
 ## Slide 31
 
 **Coincidence? I Don't Think So…**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Coincidence? I Don't Think So...
-B
-my
-x ES
-te)
-f
-```
 
 ## Slide 32
 
@@ -654,7 +552,8 @@ f
 
 - From technical code analysis to semantic analysis of actions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 But..What Can We Do?
@@ -669,14 +568,3 @@ MUCHITAKEAWAYS: WOW:
 ## **Thank you! Any questions? stavshulman@google.com**
 
 #BHEU   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-A >>
-Ne
-a EWROPE 20 4
-<= Thank you!
-Any questions?
-stavshulman@google.com
-```

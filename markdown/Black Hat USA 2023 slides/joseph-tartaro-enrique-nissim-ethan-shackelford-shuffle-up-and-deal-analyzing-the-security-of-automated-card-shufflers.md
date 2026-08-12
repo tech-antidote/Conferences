@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers.pdf"
 pages: 69
 sha256: "d786287f5a9a8ef032e296f1829cef8d2f436e257c002e13b7755b3768fe628d"
-text_chars: 26776
-ocr_pages: 12
+text_chars: 26018
+ocr_pages: 11
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 90.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:18:11Z"
+converted_at: "2026-08-12T04:11:59Z"
 ---
 # Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers
 
 **Speakers:** Joseph Tartaro, Enrique Nissim, Ethan Shackelford  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Joseph Tartaro & Enrique Nissim & Ethan Shackelford_Shuffle Up and Deal Analyzing the Security of Automated Card Shufflers.pdf` (69 pages)
+
 
 ## Slide 1
 
@@ -71,11 +77,10 @@ Ethan Shackelford
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 What and Why?
 ¢ Investigators Focus Areas
 Table 1: Examined Areas
@@ -95,11 +100,10 @@ Communications | Medium | Complex
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA 20253
 Sho}
 cate
 ShuffleMaster Card Shuffler Deckmate One / Deckmate 1
@@ -111,13 +115,10 @@ Located in: Los Angeles, California, United State:
 Shipping:
 Delivery: Estimated between Tue, Oct 18 and Thu, Oct 20 to 90274 ©
 Hover to zoom Returns: Seller does not accept returns | see details Delivery:
-« | = Returns:
-Payments: [=]
 Payments:
 PayPal CREDIT
 “$288.04 for 24 months. Minimum purchase required. |
 Have onetosell? Sell now See terms and apply now
-Have onetosell? Sell now
 Earn up to 5x points when you use your eBay Mastercard ®.
 Learn more
 Ships from United States
@@ -139,7 +140,6 @@ Ships from United States 7 watchers
 FREE Standard Shipping |
 Estimated between Mon, Oct 17 and Thu, Oct 20 to 90274 @
 Sellerdoes not accept returns |
-few] [sa] 0 |S
 PayPo! CREDIT
 "$408.06 for 24 months. Minimum purchase required. |
 See terms and apply now
@@ -267,12 +267,10 @@ rn more
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Attacker with Network Access (DM2)
 ¢ Various network services
 ¢ Unnecessary attack surface
@@ -432,12 +430,10 @@ Offsets
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Serial GAT and Network GAT
 Slot Floor Operator/Casino Backend Remote, Offsite Access
 (via Internet)
@@ -493,12 +489,10 @@ GAT Requires Transaction Logs to be G2S compliant
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 GAT Requires Transaction Logs
 to be G2S compliant
 Chapter 23
@@ -555,7 +549,7 @@ transaction logs.
 
 - • No transaction records of GAT accesses
 
-```
+\```
 Feature: Get File
  Parameter: AuthenticationResponse.xml
  Parameter: %%SHA1_HMAC%%
@@ -571,7 +565,7 @@ Feature: Component
 Feature: Component
  Parameter: DeckMate2_Games_1.0.095
  Parameter: %%SHA1_HMAC%%
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -581,12 +575,10 @@ Feature: Component
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 IACQ Get File AuthenticationResponse.xml
 <?xml version='1.0'?>
 <Components GatExec='default'>
@@ -594,11 +586,9 @@ IACQ Get File AuthenticationResponse.xml
 <Name>Deck Mate 2</Name>
 <Manufacturer>Bally Technologies</Manufacturer>
 <Component>
-<Name>DeckMate2_UI_2.0.254</Name>
 <Checksum>32A66E4EAFB35AE6DC51268104111118377EE254</Checksum>
 </Component>
 <Component>
-<Name>DeckMate2_CardRec_5.@.023</Name>
 <Checksum>2EA4D5A836604B7676D7C7EB3EA8BEC84B410903</Checksum>
 </Component>
 <Component>
@@ -607,7 +597,6 @@ IACQ Get File AuthenticationResponse.xml
 </Component>
 <Component>
 <Name>DeckMate2_NXP_NXP 1.@.172</Name>
-<Checksum>97285778B41B5CDFD151A4A9702DA8D32A839AF9</Checksum>
 </Component>
 </Game>
 </Components>
@@ -622,21 +611,6 @@ IACQ Get File AuthenticationResponse.xml
 ## Slide 30
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20253
-Model Ceck Vate
-sit 10629;
-c
-USTED
-we
-us
-LD
-Settee Rt rtven ne C4,
-```
 
 ## Slide 31
 
@@ -702,7 +676,7 @@ Settee Rt rtven ne C4,
 
 ### RNG
 
-```
+\```
 voidreseed_rng() {
  UINT32 *seed = XRAM_014Dh;
  *seed = 0;
@@ -712,7 +686,7 @@ voidreseed_rng() {
  *seed = *seed | (((UINT32)timer_count) << 8 * i);
  }
 }
-```
+\```
 
 GenerateRandomDeck()
 GetRandom(min, max)
@@ -826,12 +800,10 @@ Given this knowledge, upon the deck is cut by the dealer, those known cards coul
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 DM2 System Architecture
 Deck Mate 2
 Display Module
@@ -841,7 +813,6 @@ Logic es
 Control Board
 Transmits shuffle and card information
 Network Services to the Display module
-_______
 USB
 ETH | anpis
 Controls physical shuffling
@@ -914,17 +885,17 @@ Controls physical shuffling
 
 - Significantly outdated Linux kernel
 
-```
+\```
 $ time john --format=md5crypt remote-root.hash
 Using default input encoding: UTF-8
 Loaded 1 password hash (md5crypt, crypt(3) $1$ (and
 variants) [MD5 128/128 AVX 4x3])
 Will run 80 OpenMP threads
-```
+\```
 
-```
+\```
 Proceeding with single, rules:Single
-```
+\```
 
 - Weak, hardcoded, universal system passwords
 
@@ -932,42 +903,42 @@ Proceeding with single, rules:Single
 
 - No Secure Boot, filesystem integrity
 
-```
+\```
 root:$1$<redacted>:0:0:99999:7:::
 daemon:*:14250:0:99999:7:::
 sshd:*:0:0:99999:7:::
 ftp::0:0:99999:7:::
-```
+\```
 
-```
+\```
 Press 'q' or Ctrl-C to abort, almost any other key
 for status
-```
+\```
 
-```
+\```
 Almost done: Processing the remaining buffered
 candidate passwords, if any.
 Proceeding with
-```
+\```
 
-```
+\```
 wordlist:/usr/share/john/password.lst, rules:Wordlist
 Proceeding with incremental:ASCII
-```
+\```
 
-```
+\```
 <redacted> (root)
 1g 0:00:08:59 DONE 3/3 (2023-08-04 10:58) 0.001851g/s
 799083p/s 799083c/s 799083C/s 3KDYL..411s5
 Use the "--show" option to display all of the cracked
 passwords reliably
 Session completed
-```
+\```
 
-```
+\```
 john --format=md5crypt remote-root.hash 41246.77s
 user 15.83s system 7630% cpu9:00.76 total
-```
+\```
 
 #BHUSA @BlackHatEvents
 
@@ -1219,35 +1190,28 @@ Delays on the order of tens of nanoseconds will affect the final seed value
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20253
 Cheating with DM2: Exfiltrating Deck Information via Bluetooth
 Deck Mate 2
 Display Module
-— ART listener je UART- l
 Label
 | Control Board
 running firmware modified to report:
 Network service
 TCP port 8838 « Gard position post-shuffle
-* Rank
 Android Application ¥ ¥ + Suit
 USB
 ETH | RNDIS
 Results Display
-i |
 Raspberry
 Shuffler log parser Pi Zero
 Poker Hand Configuration
 Solver ul
-7 t
 Bluetooth Low Energy
 BLE GATT
-Data Parser }€—J “Giant 8°))) (8 GATT server
 ```
 
 ## Slide 64
@@ -1256,12 +1220,10 @@ Data Parser }€—J “Giant 8°))) (8 GATT server
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
-§) nRF5x
 > Generic Access
 Generic Attribute
 houdini a
@@ -1269,8 +1231,6 @@ E E
 > Generic Access
 > Generic Attribute
 > Device Information
-~ 000000011A2044BF9C4B29123FE6592B
-a 000000021A2044BF9C4B29123FE6592B
 read notify
 Client Characteristic Configuration
 Characteristic Extended Properties
@@ -1282,31 +1242,19 @@ Player position
 A
 Deck Cut @
 Dealer Distance
-0)
 Hand
 Card 1
 2@
-Card 2
 7@
 Card3
-Ja
 Flop
 4
 12:30 @
 vo
 Winner Winner Chicken Dinner
 $1 - One pair: [2H, 2C, AS, QD, JS]
-‘gay Aaa
-4
-ae
-tm: WV
-»
 $4 - One pair: [2H, 2C, KD, JS, 8S]
-$5) a
 $3 - One pair: [2H, 2C, JS, 10D, 7H]
-+9 saa
-4a
-4s) WVy
 $2 - One pair: [2H, 2C, JS, 8D, 7H]
 ```
 
@@ -1352,12 +1300,10 @@ $2 - One pair: [2H, 2C, JS, 8D, 7H]
 
 https://twitter.com/DougPolkVids/status/1529976301536280576
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
 Recommendations
 https://twitter.com/DougPolkVids/status/1529976301536280576
 Doug Polk @
@@ -1390,10 +1336,10 @@ A detailed whitepaper will be available in the new few weeks Thank you
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS

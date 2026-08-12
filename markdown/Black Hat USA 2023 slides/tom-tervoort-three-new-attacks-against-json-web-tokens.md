@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens.pdf"
 pages: 38
 sha256: "e96ce24e0ec5c99fe6c8e1a9becdd0d648586308c02c1d0345f183bc2317f244"
-text_chars: 16199
-ocr_pages: 15
+text_chars: 14060
+ocr_pages: 12
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:24:54Z"
+converted_at: "2026-08-12T04:22:05Z"
 ---
 # Three New Attacks Against JSON Web Tokens
 
 **Speakers:** Tom Tervoort  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Tom Tervoort_Three New Attacks Against JSON Web Tokens.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -29,17 +36,15 @@ Tom Tervoort
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA &
 AUGUST 9-10, ©0253
 BRIEFINGS
 Three New Attacks Against
 JSON Web Tokens
 Tom Tervoort
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -48,11 +53,10 @@ Tom Tervoort
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 WINNER BUREAU
 Best Cryptographic Attack VERITAS
 ```
@@ -89,34 +93,22 @@ Best Cryptographic Attack VERITAS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Background
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 5
 
 Transferring identity claims Classic (stateful) approach
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 Transferring identity claims
 Classic (stateful) approach
 Whose token is this?
-4EC72A4BFF14A8CB -
 My token: >
 4EC72A4BFF14A8CB
 >
-* N
 Alice Name: Alice
 Server E-mail: alice@example.com Claim store
 Birthdate: ... (e.g. session DB
@@ -130,20 +122,16 @@ Member of groups: ...
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
-Be Soe
 Transferring identity claims
 Cryptographic approach
 My cryptographically
 protected token:
 Alice
 Name: Alice Server
-E-maitalice@example.ecom
-Expiration date:
 ```
 
 ## Slide 7
@@ -164,47 +152,34 @@ Common hybrid approach: cryptographic access token and stateful “refresh token
 
 _Image sources: HackTricks, SEC Consult blog_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-USA 20es3
-Cryptography is
-Sa i
-Signedinfo
-Ciphertext submitted by attacker
-Decryption result (internal to server)
-HTTP response send to attacker
-9870d401a7d4b9£4c7c5728c980bb6d5
-c546ad79e8a198440929c3cf£6£9ab793
-'7465878dllde5a8bee5555554efcdb07
-lexpire :1645826339090$u: user\ : arealm/bob%
-1645826339090
-%$m2ZQz+j4D0LL+z2W8EIEgtAxrcd6m0ZZi[...]
-200 OK
-9870d401a7d4b9£4c7c5728c980bb6d5
-00000000000000000000000000000000
-c546ad79e8a198440929c3cf6f£9ab793
-'7465878d11de5a8bee5555554efcdb07
-lexpire : 1645826339090$u: user\ :arealm/bob%
->! 91589 OOnOO [AvOOO10sO8Onnod
-XBa@YOrBO1 Oi GO OO1w7 j POuOO2xqOd
-$m2ZQz+j4D0LL+zW8EIEgtAxrcd6m0ZZi[...]
-200 OK
-9870d401a7d4b9f4c7c5728c980bb6d5
-00000000000000000000000000000001
-c546ad79e8a198440929c3cf£6£9ab793
-'7465878d11lde5a8bee5555554efcdb07
-lexpire : 1645826339090$u: user\ : arealm/bob%
-EE Pd { OtxOHhO1 (P] SOnntOpOs' «! yaag
-vntiges jeDonzvawenregeancedenor2i(,
-$m22Qz+3j 4D0LL+zZW8EIEgtAxrcd6m0ZZi[.. - Lan
-403 Access denied
-Set-Cookie: LtpaToken2=""
-Image sources: HackTricks, SEC Consult blog
-Co-incidental percent sign
-Attacker-controlled bitflip
+RE: Re: Microsoft Bounty Program: Out-of-Scope Notification Case 71449 CRM:0022001410
+
+[toolbar] 安全浏览模式 v
+
+发件人: Microsoft Security Response Center<secure@microsoft.com>
+收件人: MSFT Bounty<bounty@microsoft.com>   a4651386@163.com<a4651386@163.com>
+抄送人: Microsoft Security Response Center<secure@microsoft.com>   Microsoft Security Response Center<secure@microsoft.com>
+        Microsoft Security Response Center<secure@microsoft.com>
+时 间: 2022年09月24日 01:37 (星期六)
+
+Hello Quan,
+
+I'm sorry for the frustration in MSRC's outcome of this case.  Since your test environment is using VMWare and ours is using Hyper-V, might we suggest we align our testing environments?  To that end might we suggest that you create a new POC using only Microsoft Hyper-V and submit that POC as a new case submission. That would allow us to rotate the assessment engineer to a fresh set of eyes.
+
+Thank you again for working with MSRC.
+
+Regards,
+Duncan
+
+[message list]
+Microsoft Security...   RE: Re: Microsoft Bounty Program: Out-of-Scope Notification Case 7144...    2022-09-24
+MSFT Bounty             RE: Microsoft Bounty Program: Out-of-Scope Notification Case 71449 CR...    2022-09-23
+Microsoft Security...   RE: MSRC Case 71449 CRM:0022001410                                          2022-04-22
+Microsoft Security...   MSRC Case 71449  CRM:0022001410                                             2022-04-20
 ```
 
 ## Slide 9
@@ -279,14 +254,12 @@ Important design flaws (personal opinion)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA &
 New attack:
 sign/encrypt confusion
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 14
@@ -325,16 +298,13 @@ Not suitable for JWTs!
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 crypto experts?
-fone ne ee 2-2-2 ------- fence e eee eee eee eee teneeeeee te---------------- +
 | "alg" Param Value | Key Management | More | Implementation |
 | | Algorithm | Header | Requirements |
-fe ee eee e eee eee e eee fone e eee e eee e eee e ee teneeeeee tenene n-ne e eee +
 | RSA1_5 | RSAES-PKCS1-v1_5 | (none) | Recommended- |
 RSA-OAEP RSAES OAEP ( ) Re ded . .
 | | default peraneters | | | | NOt Suitable for JWTs! is rsa oaep secure? xX & a
@@ -349,7 +319,6 @@ RSA-OAEP RSAES OAEP ( ) Re ded . .
 | | 192-bit key | | | The RSA encryption algorithm is the most secure and widely used
 | A2S6KW | AES Key Wrap with | (none) | Recommended | . : . : .
 | | default initial | | | public key cryptographic algorithm. In this paper, we review RSA
-value usin A . °
 256-bit key | | algorithm and one most used padding scheme OAEP with RSA. RSAES-
 | | shared symmetric | | | OAEP protects RSA against semantical insecurity.
 | ECDH-ES | Elliptic Curve | "epk", | Recommended+ | droress.or
@@ -376,25 +345,18 @@ JWT validator:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 "kty": "RSA",
-"n": "sEFRQzskiSOruUYiaWAPUMF66Y0xWymrbf6PQqnCdnULa8PwI4kKDVI2XgNGg9X0dc - jRICmp
 "e": "AQAB",
 "d": "dsIr_P7WqUjNYEyIopFB4a2SKOhTWmQRrbk1GgJZUM1iZOmKub_kn303SLiKMBT8QuIDQHF
-"p": "2ubPBIRKrNgC8TOMaim0fJpGa4ZTUcOwntIX4Rzb2IZLThHUFFeTq80GFRgcMTn1W54cqj zM
-"q": "ZiBDoJVUNK7s -WDXlkr_69rxwL10r61183j C2BxV3g2xYOoybPj 7yvnXeMUDH8kfNTgPbZZ
-"dp": "NzgJ-MW2YKuM8nNidFVPUDdKLEOgL3RnU2kEBRFWk- g8XdoOIWPBsEnzaJrWi-YqSfVa0w
 "dq": "XOFm98YyImcsOxbrLj rvZPZMcLMcUIP8YZBp4-20t51d8EqvvDDZbNX1x0Kpj LoYyOhxVs
-"qi": "1QH5d-TiaZL Q -NalMj3rFL8VILo031Tr0Qz6c1lp6pONoKOL7BCyosYSoORvainM3i7nv
 authlib.jose jwt, JsonWebKey
 time time
 json
 JWT Sj ner: open('rsa-key.jwk', 'r') keyfile:
-Q . key JsonWebKey. import _key(json.load(keyfile) )
 header = {'alg': 'RS256'}
 payload {'iss': 'secure-issuer', ‘sub': username, ‘exp
 token jwt.encode(header, payload, key) .decode()
@@ -467,18 +429,15 @@ JWT validator:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 A dangerous pattern
 1: JWT string 3: JWT string
 Library A Library B
 (JWT validator) Application (claims
 processor)
-ee ee
 2: Validation result: ok/not okay 4: Authorization decisions
 What if library A and library B parse JWTs differently?
 ```
@@ -560,14 +519,12 @@ Given a token with a legitimate payload, the attacker can replace it with any sp
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
-USA &
 New attack:
 billion hashes attack
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 29
@@ -576,11 +533,10 @@ billion hashes attack
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2&0e253
 "A256KW" wrapping
 | PBES2-HS256+A128KW | PBES2 with HMAC | "p2s", | Optional |
 | | "A1l28KW" wrapping | | |
@@ -619,12 +575,10 @@ derived key.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 2&0e253
 A PBES header parameter
 4.8.1.2. "“p2c" (PBES2 Count) Header Parameter
 The "p2c" (PBES2 count) Header Parameter contains the PBKDF2
@@ -657,15 +611,6 @@ iteration count of 10@@ is RECOMMENDED.
 ## Takeaways
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Takeaways
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 34
 
@@ -740,12 +685,3 @@ v3.20.3, v4.9.1|Billion hashes|CVE-2022-36083|
 ## Thank you!
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-USA &
-Thank you!
-#BHUSA @BlackHatEvents
-```

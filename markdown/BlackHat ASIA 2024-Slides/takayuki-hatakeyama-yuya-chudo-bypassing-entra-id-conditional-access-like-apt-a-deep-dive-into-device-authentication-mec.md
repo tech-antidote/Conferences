@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Takayuki Hatakeyama & Yuya Chudo-Bypassing Entra ID Conditional Access Like APT A Deep Dive Into Device Authentication Mechanisms for Building Your Own PRT Cookie.pdf"
 pages: 67
 sha256: "99bb4dc4a24a6026050faaaf2166481cb44cecd81e810173a4fdd494d05fe7eb"
-text_chars: 24720
-ocr_pages: 12
+text_chars: 19490
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:51:54Z"
+converted_at: "2026-08-12T04:52:06Z"
 ---
 # Bypassing Entra ID Conditional Access Like APT A Deep Dive Into Device Authentication Mechanisms for Building Your Own PRT Cookie
 
 **Speakers:** Takayuki Hatakeyama, Yuya Chudo  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Takayuki Hatakeyama & Yuya Chudo-Bypassing Entra ID Conditional Access Like APT A Deep Dive Into Device Authentication Mechanisms for Building Your Own PRT Cookie.pdf` (67 pages)
+
 
 ## Slide 1
 
@@ -102,12 +107,10 @@ Microsoft Entra ID
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Blocked by Entra ID Conditional Access
 B® Microsoft
 aadadmin@ ,onmicrosoft.com
@@ -265,62 +268,25 @@ Let me check if the valid session key bounded to device is used for signing
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Authentication Flow (Browser SSO)
 #3 Send PRT Cookie signed by session key
 GET /common/oauth2/v2. 0/author ize?cl ient_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_ur i=httpsh3a%2F%2fwww. of fice. coms2f landingv2&
-response_type=code+id_token&scope=openid+profi le+httpsh3a,2F%2fwww. of fice. coms2fv2%2f0ff iceHome. Al |&response_mode=form_post&nonce=
-638448025768012973 Madr mia ts sbtskdoestaten ———— —
-cl ient-request-id=8b041a46-d747-4d6a-8f 12-8bb35036d22a&state=
 HLROAIBz-GHxaa9f j7beRK-eWTvznr zncSBRO1AZH3q6m_NoCk j21s41 Ihi i6Ye jy¥66kcU4mN2UJOE_NX7K4_| JWT payload (decoded)
-vSI8LRW6-Pb5a46mYTcP2C8fqhhOLUSLvFReV3NgtHvsmaF 6eN jApn9aUmzYuUKtF lketvn1FUu7T jM2wPGzAa
 NQdw&x-c | ient-SKU=1D_NET6_0&x-cl ient-ver=7. 2. 0. 0&sso_nonce= “refresh token”
-AwABAAEAAAACA0z_BQD0_x0QSvBvX0y1dwKAPO!CnNzEv7P1snZtDgk7 fHe9GOR83c2MwO7W9qVguHeaRiWT-a ATOATmRO7 = ’ rae -
-8b041a46-d747-4d6a-8f12-8bb35036d22a HTTP/1. 1 . a .
 Host: login. microsofton| ine. com PRT
 (snipped) “is_primary’: “true”,
 X-Ms-Refreshtokencredential “win_ver’: “10.0. 22621. 3085”
-eydhbGci0iJIUZ11Nils]CUrZGZFdmVy1 joyLCAi Y3R41 joi TkEZWXd1d1hqaTBkdkZMR1 JQald3MVR2Z01 jSV “windows_api_version’: “2.0.1”,
 “x_client_platform’: “windows”
-*]
-“request_nonce’: “AwABAAEAAAACAOz_BQD0_x0QSv (snip
 PRT Cookie
-V14M2MyTXRN1c5cVZndUh! YVupV10tYWFTcXhJUC1HW jYxcnBnWFktOVOz0GdBOSU9. OgSOLtuyfKaTwfDGuUvSPty6 ih2vr Zy3UXVKDUKDv30
 ```
 
 ## Slide 21
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-ASIA 2024
-Microsoft 365 e) @
-A Microsoft 365 €2) C@HASS cet sopor 8
-si A THis Microsoft 365 DA—A N-VTF. FATO Microsoft 365 PF VAR PIVATFSECEMTAES. SB TUBES I—F— 341A
-= SUMENSOES. 10 SMBBLTASTCON-VEBMLTCK ES). ENTEVPTFUPBRSNVAUBSITIS. 17 PSE SSP OR— FUL? a
-S)
-E +
-a)
-Microsoft 365 NAO TE ‘
-&p <=
-RATS fp —
-Gy rr venxss 4d -
-DAYD FIVA
-GIT © SERURES &3 HARRY 7 Pyyo-K = 9
-cy
-I °
-aN
-RMUMEBLIEIYT UY ILS0ECA
-MLNRFIAXD heremIsn. KFaAxX> bhery7oO-k
-```
 
 ## Slide 22
 
@@ -400,21 +366,14 @@ JSON data is sent to lsass.exe and it includes call and payload values
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Reversing GetCookielnfoForUri
 JSON data is sent to
 | a lsass.exe and it includes call
 “payload”: and payload values
-“https login. microsofton! ine. com, common/oatuh?, author ize?sso_nonce=AwABA
-AEAAAACAOz BODO _?u6/X28k jL4AVzLD jdCSeKH jPdTQe/-V6FYeFrvgAFSFdwU jad] Bwetq0s
-bObyokq? 109rgk/D3e9v_ UeZJ0GczAA
-“correlationid .
-“uaClientId”™: °*
 ```
 
 ## Slide 29
@@ -429,16 +388,13 @@ functions in aadcloudap are invoked aadcloudap!GenericCallPackageHelper::Generic
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 functions in aadcloudap are invoked
 aadcloudap!GenericCallPackageHelper::GenericCallPackage
 switch ( callnum )
-if
 case lu:
 tatus = GenericCallPackageHelper: :SignPayload(al, a2, payload_a
 sta 4, TokenHandle, account_info_a6, al@);
@@ -448,18 +404,13 @@ v23 = 36;
 yv21 = (struct CSec
 LODWORD(w28) = sta
 goto LABEL 3;
-ureString *) DBG_BASENAME("onecoreuap\\ds\\ext\\aad\\aadcloudap\\genericcallpackagehelper. cpp")
 3
 case 2u:
 status =|GenericCallPackageHelper: :CreateSSOCookie(al, a2, payload_a4, TokenHandle, account_info_a6, a9, al@);
 v25 = status;
-goto LABEL 49;
-vi? = _DBG_BASENAME("onecoreuap\\ds\\ext\\aad\\\aadcloudap\\genericcallpackagehelper. cpp");
 LODWORD(v22) = 48;
-goto LABEL 11;
 case 3u:
 status = GenericCallPackageHelper: :GetPrtAuthority(al, a2, account_info_a6, a9
-V£o = STaTuUs,;
 ```
 
 ## Slide 31
@@ -517,20 +468,6 @@ Malware BrowserCore.exe
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat < '
-ASIA 2024
-cx.) JYYK JOYTb - powershell Te
-PS C:\> Request-PRTCookie
-| jeyIJhbGci0iJIUZIINiIsICIrZGZfdmVyIjoyLCAiY3R4IjoiMzUzbO9mKOtmbnpyYUp5U1pUWT LcLOd3aDhqeTV3VFpxin®. eyJyZWZyZXNox
-3Rva2Vul joiMC5BVDBBN21SUVpHNmIyME9kUnY2QnBse jk2b2M3cWpodG9CZELzbLY2TVdtSTIUdWhBUFEUQWdBQKFBRUFBQURUZMm9sSaEpwU2
-LuZG93cyIsICJyZXF1ZXNOX25vbmNLIjoiQXdBQkKFBRUFBQUFDQU96X9IRRDBFeGFrTDZiU3 LaUXQUSZUtcHBOaVKOVIVyM3LtMLdhZLOHYkZ
-FMy lmMGFvVDdxYmJ3U2hiQXdwXzBvVmx0UzLiSkp2aU95dnFoTk9YT j BFODNFMKtVMDRnNQUEIFQ.K7xh3mFCyS_5F—-Ewj XCBwi_suYGdNgQIw
-M4YxzLhPzk
-```
-
 ## Slide 34
 
 ###### Replicating the flow for another PRT Cookie theft
@@ -559,7 +496,7 @@ M4YxzLhPzk
 
 ###### Reversing aadcloudap!SignPayload
 
-```
+\```
 __int64 __fastcallGenericCallPackageHelper::SignPayload(
 structAadContextFunctions*this,
 structPluginState*pluginState_a2,
@@ -577,7 +514,7 @@ pluginState_a2,
 payload_a3,
 bKdf_v10,
 assertion_v29);
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -587,7 +524,7 @@ assertion_v29);
 
 Data sent by LsaCallAuthenticationPackage
 
-```
+\```
 {
 "call": 1,
 "payload": “
@@ -598,7 +535,7 @@ Data sent by LsaCallAuthenticationPackage
 (snip)
 }"
 }
-```
+\```
 
 Base64UrlEncode
 
@@ -666,12 +603,11 @@ aadcloudap.dll 1 SignPayload 2 CreateSSOCookie 3 GetPrtAuthority
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
-black hat
-ASIA 2024
 Send logon request signed by Device key
 POST /common/oauth2/token HTTP/1. 1
 User-Agent: Mozilla/5.0 (Windows NT: Windows NT 10.0: ja-JP)
@@ -682,13 +618,7 @@ Content-Length: 2792
 Connection: close
 request=
 KV1QiLCAi eDVj1 joi TU! JRDhqQONBdHF nOXdJOkFnSVF vVWSWSEwxc TF
-SMEJBUXNGQURCNE 1 YWXdFUV1LO1pJbW I aUHIMR1IFCR1JZRGUtV jBNQ!
-JSUZIINi Is 1CUO0eXAi0
-MT kdaNHk5bORmKOS6QUSCZ2txaGtpk
 signed logon request
-JyPLSQQsqUIE7nvsiH6P7RYdD | BOsz5GdCPTZeSFsYEQ2C1 2haNJfMXehxmT 8uxR xmdkadgr YSf8pRsJgPh 2ts
-xOSSFZWXJGF77B £0Z267 ImJut 0 jQe | RODKBxTe] TCOPNOhO jqOhoopbYDR| UUFCAVLaGLZCNR9y-yag
-rWirtSF3BSYAVw19rz08 jQ&grant_type=urnS3AietfS3Aparamss3Aoauths3Agr ant—typeS3A jwt— bearer
 HTTP/1.1 200 OK
 Cache-Control: no-store, no-cache
 Pragma: no-cache
@@ -701,19 +631,13 @@ x-ms-request-id: 6a0e6251-b4f8-41f7-albf-bfb85f916d01
 x-ms-ests-server: 2.1. 17396.8 - JPE ProdSlices
 {
 “token_type™ : “Be
-“expires_in”:"12
 “ext_expires_in
-“expires_on” "1710549553
 “refresh_token”
 “0. ATOATMROZG6b200dRv6Bp | z96p jt2S | ppDZFreLSgbwdYF6hAPO. AgABAAEAAADnfo | hJpSnRYB1SV j-Hed8AgDs_wUA9P_1839cA6T_OZf90s8
 PRT
-OThSEUWsKwNoao2Kr_HuGkaSSN-OOCtbU3zpsLOGpkkAMGQWyDP INPZGTNyWcC_gaCLAG00cp | MavOOUAcSdypMW | 9tsE5M4 | TUYCeKLFLOMUOtMu6
 LeQUhW-Bu j_xhY1_Jxz6rXpQoGqX i gYqApxow
-“Td Loken
-Ai Oi JKVIQILCUt
 9
 pted Session Key |
-tCMnAFcbé
 ```
 
 ## Slide 42
@@ -778,17 +702,11 @@ Sign by session key
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat x ——
-ASIA 2024
-x] JYYE JOY7b - powershell + v
 PS C:\> Create-PRTCookie empLoyee01@ com $password
-eyJhbGci0iJIUZIINiIsImtkZ192ZXIi0jIsImNOeCI6Lkw1UWZtMnZZR1IFYRTMWCUNOZWVJeE LNdUd2YnoyUj Lwin. ewOKICAgICJUX2NsawWVu
-dF9wbGFOZm9ybSI6ICAid2LuZG93cyIsDQogICAgIndpbl92ZXIiOiAgI jEwL jAUMTKWNDEUMZU3MCISDQogICAgInJLZnJLc2hfdG9rZWw4idiAg
-QUFFQUFBQUNBT3pfQLFEMF83N2LLbE10d09qe jRONMFiTzUzam9DSOJXZVFVNVRGSG1Ld1VVMHLiz2d4zjRZaWZUcjLIaFRiQK1UNDdYb2LhR2RI
-Z3EzaUgyMEMZWkwOeHNVUNDBRWdBOSINCn@. uMisSwV3Mt 9nVOUMK6B209ESHXTMBULKAx8h1s54S7k
 ```
 
 ## Slide 47
@@ -847,22 +765,15 @@ App Tokens (encrypted)
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisdk hat e Sine.
-ASIA 2024
 Decrypt app tokens by session key
 PS C:\> $tokens Acquire-Token empLoyee01@ .com 2 “d urn:ms-drs:enterpriseregistration.wind
 ows.net 29d9ed98-a469-4536-ade2-f981bc1d605e $Tru
 PS C:\> $tokens.access_token
-eyJO0eXA101 IJKV1QILCIhbGci0i JSUZIINiIsIngidCI6ILhSdmtvOFA3ZQTNVYVdTbLU3ZYKO5b LQWTWpoQSIsImtpZCI6I LhSdmtvOFA3QTNVYVdTbLU3YkKO5b LQWTWpoQSJ9. eyJhd
-WOi0iJlcm46bXMtZHIZOmVudGVvcHJnc2VvZWdoc3RVYXRob24ud2 LuZG93cv5uZXOiLCIJpc3Mi0iJodHRwezovL3NOcv53awSkb3dzLm5 LdC82NDUWN iRLZSO5Y iZLLTOZZGItowd
-© 7HBOOEQVBtQ0aB1lChqxeUJLHKRFITihFpr6F70Nee52daEBMG-ZFQ9Vi8wsIMRHmILeTGLU jLmuj4AW_Mdb9HfrTDiJUXti_o88sMm1fXB1AGOH8ytDd_rEWZRzZZS8E33tdSxXgulD
-ORhHEU7Loz—cqhxZADAEU7gfVNun8VgXbMDYEe9r-VJebWYLRFLyCrHCSwj YSENhcnSCq-jZKKV77zkqkisms2B407Q
 PS C:\> $tokens.refresh_token
-0. ATOA7MROZG6D200dRV6BpLz96pjt2S LppDZFreL5qbwdYF6hAPQ. AGABAAEAAADn Fo LhIpSnRYBISV ]—-Hgd8AgDs_wUA9P8xa3srMpPkKWNMFVLMOsWxSWJJc8OPVCILMULKAG j3bDE
-Dre6éGuMtfvSzqPRLmvipjt_IMqDzeZtmC21mPbEjY_2wP_yTXJ_LKHFNq59 LumUeDauSdedIf3niMjBL8B3xYtaT27cFhH4qzEsxBookt_gOxVQG8pf9ow
 ```
 
 ## Slide 51
@@ -909,12 +820,11 @@ Session key (encrypted)
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
-black hat
-ASIA 2024
 Authenticating with WHfB keys
 POST /common/oauth2/token HTTP/1. 1
 User-Agent: Mozilla/5.0 (Windows NT; Windows NT 10.0: ja-JP) WindowsPowerShel 1/5. 1. 22621. 2506
@@ -922,40 +832,24 @@ Content-Type: app! ication/x-www-form-ur | encoded
 Host: login. microsofton| ine. com
 Content-Length: 3992
 Connection: oloee JWT payload (decoded)
-request= r
 C JSUZIINi Is1CJO0eXAi0i JKVIQILCA TU! JRDhqQONBdH c VF QcmNZROFNRVRLa@E | SaE9YaENKZVh6QU5CZ2 txal {
-pubW! aUHIMRIFCR1JZRGUtV jBNQ!VH vbVQ4aXhrQVUrVO bVJ2ZDNNdOhRWURWUVFERXhaT | VOMVB jbWRoYm1sN1! 1 YU} “username” emo!ovee(1 is
 | “request_ nonce”
-i’
-W-o0ogN7VO1IM6
-AUBA4MOOULOyOgP ‘
-urnk3Aietf%3Aparams%3Aoauthh3Ag
 dkpriv signed request
 XCSqa6TUozLbaqXV tVT299X
-BIXaSMjgrckA xSqAFMwXgm8
-rant-type%3A jwt-bearer|
 ] TyXGMOCKHne | XHNef
-7PRIC808NOsLB7Bszdlwev
-x yXx-NSOXkPwRJQH7tA03G
 68S30
 T7ZwFhwOcY
 At
 AwABAAEAAAACA(
-int
 swBHYy89
 “assertion”
 0 IQEZ oa
-Mi n6Mn MO"
 {
 “scope”
-“win_ver™
 “grant_typ
 “client_id”
 a” urn
-C9n12g0Ka
 ShgJhGERnWf_kSHhaDHv
-GiNrVO&grant_type=
-L
 ```
 
 ## Slide 55
@@ -974,22 +868,16 @@ L
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Combining all together with WHfB
 ¢ Access token received by WHfB has deviceid and mfa claims
 fx) JYYK JOYTb - powershell x ap
 PS C:\> $token = Acquire-Token empLoyee01@ : rue urn:ms-drs:enterpriseregistra
 tion.windows.net 29d9ed98-a469-U536—ade2-F981bc1d605e
 PS C:\> $token.access_token
-ips Es seme tn a ce tet al Al Aa cl ald techn eater Re beh LLL ed age
-bLOwTWpoQSJ9. eyJIhdwOi0iJlcmU6bXMtZHIzOmVudGVycHJpc2VyZWdpc3RyyX P
-WS38Ka7LBoil8mkIkkm2XloetgMnbVcENkj Lb7—duRI4PsxEbR-T9DCtUmYt_roGGhXK4PpQNDL99Q3Yq jGY pBMF7q-kknBSM31JSMrBZn1yE01Q2dDKOWSu
-o0s02fMuCBAXRy j4URIRTKLhHTbNHLo2QLdC7LFE_NSa_rsMZyrjK1OVS5V jRdCL j2zXUS3alqTrfBYwOExTmSw
 ```
 
 ## Slide 57
@@ -1048,9 +936,9 @@ o0s02fMuCBAXRy j4URIRTKLhHTbNHLo2QLdC7LFE_NSa_rsMZyrjK1OVS5V jRdCL j2zXUS3alqTrf
 
 - • Investigate Entra ID sign-in logs of multiple accounts from the same device
 
-```
+\```
 SigninLogs
-```
+\```
 
 - `| where DeviceDetail.deviceId == “<suspicious_deviceid>“`
 
@@ -1089,15 +977,6 @@ SigninLogs
 ## Thank you
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-.
-\—
-® —
-#BHASIA @BlackHatEvents
-```
 
 ## Slide 67
 

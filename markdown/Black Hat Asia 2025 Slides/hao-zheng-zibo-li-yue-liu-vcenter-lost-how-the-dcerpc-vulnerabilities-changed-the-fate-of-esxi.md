@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Hao Zheng & Zibo Li & Yue Liu_vCenter Lost How the DCERPC Vulnerabilities Changed the Fate of ESXi.pdf"
 pages: 57
 sha256: "3bc887d34cbe39a01f3e401a3e52b4ab07387a29c9a0d46557853226ecfe52f9"
-text_chars: 17626
+text_chars: 16703
 ocr_pages: 15
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.6
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:04:33Z"
+converted_at: "2026-08-12T03:53:10Z"
 ---
 # vCenter Lost How the DCERPC Vulnerabilities Changed the Fate of ESXi
 
 **Speakers:** Hao Zheng, Zibo Li, Yue Liu  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hao Zheng & Zibo Li & Yue Liu_vCenter Lost How the DCERPC Vulnerabilities Changed the Fate of ESXi.pdf` (57 pages)
+
 
 ## Slide 1
 
@@ -149,11 +156,10 @@ https://support.broadcom.com/web/ecx/support-content-notification/-/external/con
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 DCERPC in vCenter
 e Used in ports 2012, 2014, and 2020
 LISTEN 2706/vmdird
@@ -181,11 +187,10 @@ root@localhost [ ~ ]# 0
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-37079/37080
 3a. VMware vCenter Server multiple heap-overflow vulnerabilities (CVE-2024-37079, CVE-2024-37080)
 Description:
@@ -221,11 +226,10 @@ Bug!
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-37079 = =
 ) Bind Request (UUID, version)
 response of bind authentication packets Bind Ack Nock 1
@@ -237,14 +241,12 @@ peqinesden @ Process Request (Executes Method) !
 rpc_cn_packet_p t Lhe, H
 unsigned32 req_header_size : © Response (Result) !
 rpc_cn_packet_p t resp_header :
-. = ; (if Alter Context)
 unsigned32 header_size :
 unsigned32 auth len Alter Context Request
 rpc_cn_sec_ a sec_context :
 boolean old_client ‘Alter Context Response;
 unsigned32 st
 [Optional] Unbind Request
-Acknowledgment !
 Done Done
 ```
 
@@ -310,11 +312,10 @@ Always false
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-37080
 Authentication Trailer (Auth TLR) is an optional structure appended to a PDU
 auth_tlr = (rpc_cn_auth_tlir_t * unsigned8 *)(pktp) +
@@ -339,13 +340,11 @@ Is the check for **auth_tlr** sufficient?
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-37080 Is the check for
-auth_tlir
 sufficient?
 Auth TLR validation
 auth_tlr = (rpc_cn_auth_tlr_t * unsigned8 *)(pktp) +
@@ -389,11 +388,10 @@ leading to an **integer underflow** in input_token.len
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-38812
 3a. VMware vCenter Server heap-overflow vulnerability (CVE-2024-38812)
 Description:
@@ -498,22 +496,18 @@ Overflow!!!
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 CVE-2024-38812
 Practical implementation
 if ( upper - range_list->lower > *Z_values )
 LABEL_52:
 dcethread_exc_raise(&rpc_x_invalid_bound, "../dcerpc/idl_lib/ndrui.c", @x47Cu);
 while ( v7 > (unsigned int)vi11 )
-{
 12 = range_list[v1ll].upper - range_list[vi1].lower;
 goto LABEL_52;
-}
-Soseeee Overflow!!!
 | Z_valu |
 range_list
 } Offset Actual Count: A
@@ -526,12 +520,10 @@ lower upper
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-CVE-2024-38813
 3b. VMware vCenter privilege escalation vulnerability (CVE-2024-38813)
 Description:
 The vCenter Server contains a privilege escalation vulnerability. VMware has evaluated the severity of this issue to be in the Important severity range with a maximum CVSSv3 base score of 7.5.
@@ -555,35 +547,25 @@ if port occupied, Stop & Return
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-CVE-2024-38813
 Port Binding in the Initialization Phase
 VmDirSyncCounterWaitEvent(gVmdirGlobals.pPortListenSyncCounter, &LD
-s )
-VmDirLog1i(
 VMDIR_LOG_DEBUG,
-OxFFFFFFFF,
 "[file: %s][line: %d] [%s,%d]",
-"“lotus/vmdir/server/vmdir/init.c" .
 Sool. / / / ; if port occupied,
 "lotus/vmdir/server/vmdir/init.c",
 S@@LL)5 Stop & Return
 return status;
-+
 if ( LDAP_ports_status )
-{
 VmDirLog1(VMDIR_LOG_WARNING, @xFFFFFFFF, "%s: NOT all LDAP ports are ready for accepting services.",
 goto LABEL_210;
-}
 LABEL_210:
 VmDirLog1(VMDIR_LOG_INFO, @xFFFFFFFF, “Config MaxLdapOpThrs (%d)", gVmdirGlobals.dwMaxFlowCtr1Thr) ;
 VmDirLogFeatureStateSwitches();
 return Mutex;
-}
 ```
 
 ## Slide 33
@@ -594,22 +576,17 @@ If port binding succeeds, drop privileges( **setgid, setuid** )
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-CVE-2024-38813
 If port binding succeeds, drop privileges(setgid, setuid)
 v32 = setgid(v28->pw_gid);
-{
 33 = strerror(v32);
 vmDirLogi(VMDIR_ LOG_ERROR, OxFFFFFFFF, “setgid failed: %s", v33)3
 v29 = 1724LL;
 v4@ = 1724LL;
-+
 else
-{
 ppLda = >pw_uid;
 v34_ = getuid();
 VmDirLog1(VMDIR_ LOG_INFO, OxFFFFFFFF, “Modifying uid from %d to %d", v34, ppLlda);
@@ -627,14 +604,11 @@ The code looks perfectly fine, so **where is the vulnerability** ？
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-CVE-2024-38813
 (32 = setgid(v28->pw_gid);
-{
 33 = strerror(v32)3
 VmDirLog1i(VMDIR_LOG_ERROR, @xFFFFFFFF, “setgid failed: %s", v33)3
 29 = 1724LL;
@@ -643,9 +617,7 @@ The code looks
 perfectly fine, so
 where is the
 vulnerability?
-}
 else
-{
 ppLda = v28->pw_uid;
 34 = getuid();
 VmDirLog1(VMDIR_LOG_INFO, @xFFFFFFFF, “Modifying uid from %d to %d", v34, pplda)3;
@@ -708,46 +680,45 @@ narenas_limit
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 57/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bisek hat
-ASIA 2025
-Multithread
-e Multithread arena
-e Memory Isolation
-0x7#79257fb000
-0x7#79257fc000
-0x7F7928000000
-0x7#7928214000
-0x/T/92c000000
-0x7F792c114000
-0x7T7930000000
-0x7T7930114000
-0x7F7934000000
-0x7#79257fc000
-0x7F7925fFfc000
-0x7¥7928214000
-0x7792c000000
-0x/T/92c114000
-0x7¥7930000000
-0x7T7930114000
-0x7F7934000000
-0x7¥7934114000
-0x1000
-0x800000
-0x214000
-Qx3dec000
-0x114000
-Qx3eec000
-0x114000
-Qx3eec000
-0x114000
-(gdb ) x/4gx 0x7 f7ec13F9000+0x1D3C98
-narenas_limit
-0x0000000000000020 0x0000000000000000
-0x0000000000000000
-0x0000000000000000
+CI TOCTOU: Paged Reads
+
+Process Monitor - Sysinternals: www.sysinternals.com
+File  Edit  Event  Filter  Tools  Options  Help
+
+Relative Time | Process Name | PID | Operation | Path | Result | Detail
+00:00:17.0969135  services.exe  508  CloseFile          C:\Windows\System32\EventAggregation.dll                             SUCCESS
+00:00:17.0971696  services.exe  508  CreateFile         C:\Windows\System32\EventAggregation.dll                             REPARSE            Desired Access: Read Data/List Directory, Execute/Trav...
+00:00:17.1006151  services.exe  508  CreateFile         \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Desired Access: Read Data/List Directory, Execute/Trav...
+00:00:17.1017799  services.exe  508  CreateFileMapping  \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            FILE LOCKED WI...   SyncType: SyncTypeCreateSection, PageProtection: PA...
+00:00:17.1018504  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 0, Length: 90,112, I/O Flags: Non-cached, Paging...
+00:00:17.1018615  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 0, Length: 90,112, I/O Flags: Non-cached
+00:00:17.1027614  services.exe  508  QueryEAFile        \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1057495  services.exe  508  QueryEAFile        \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1058253  services.exe  508  SetEAFile          \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            ACCESS DENIED
+00:00:17.1064822  services.exe  508  CreateFileMapping  \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            SyncType: SyncTypeOther
+00:00:17.1066262  services.exe  508  Load Image         \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Image Base: 0x7ffdf0450000, Image Size: 0x16000
+00:00:17.1066861  services.exe  508  CloseFile          \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS
+──────────────────────────── [red separator line] ────────────────────────────
+00:00:51.1699161  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 0, Length: 4,096, I/O Flags: Non-cached, Paging I...
+00:00:51.1701225  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 0, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1702783  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 53,248, Length: 16,384, I/O Flags: Non-cached, P...
+00:00:51.1702900  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 53,248, Length: 16,384, I/O Flags: Non-cached
+00:00:51.1715041  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 73,728, Length: 4,096, I/O Flags: Non-cached, Pa...
+00:00:51.1715132  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 73,728, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1715971  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 4,096, Length: 4,096, I/O Flags: Non-cached, Pag...
+00:00:51.1716052  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 4,096, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1716701  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 4,096, Length: 32,768, I/O Flags: Non-cached, Pa...
+00:00:51.1716803  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 4,096, Length: 32,768, I/O Flags: Non-cached
+00:00:51.1717834  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 40,960, Length: 4,096, I/O Flags: Non-cached, Pa...
+00:00:51.1717897  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 40,960, Length: 4,096, I/O Flags: Non-cached
+00:00:51.1718510  services.exe  508  ReadFile           \\127.0.0.1\C$\Windows\System32\EventAggregation.dll.bak            SUCCESS            Offset: 36,864, Length: 12,288, I/O Flags: Non-cached, P...
+00:00:51.1718630  services.exe  508  ReadFile           C:\Windows\System32\EventAggregation.dll.bak                         SUCCESS            Offset: 36,864, Length: 12,288, I/O Flags: Non-cached
+
+Showing 26 of 43 events (60%)          Backed by virtual memory
 ```
 
 ## Slide 39
@@ -772,18 +743,15 @@ Thread 1 Thread 2 Thread 3 …… Thread 18 Thread 19
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Heap grooming
 fbp = rpc__cn_fragbuf_alloc(1u);
-{
 frag length = @;
 vS = fbp->max_data_size - fbp->data_size;
 goto LABEL_11;
-}
 e receive_packet function
 ```
 
@@ -797,17 +765,15 @@ e receive_packet function
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Infoleak Object
 e alot of log output 19 *(_DWORD *)v3 &= ~1u;
 functions in dce/rpc 20 *( DWORD *)(v3 + 116) |= @x80u;
 21 *(QWORD *)(v3 + 240) = al;
-* syslog object has 22}  *(_QWORD *)(v3 + 248) = a2;
-function pointer - 5
+* syslog object has 22} *(_QWORD *)(v3 + 248) = a2;
 23 *( QWORD *)(v3 + 224) = malloc;
 24 *( QWORD *)(v3 + 232) = free;
 ```
@@ -981,10 +947,10 @@ again uid = 0 uid = 0
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifekhat | aS
 ASIA 2025 SSN SS
 > vcenter > ~ nc -lvwvp 1337
 Listening on 0.0.0.0 1337

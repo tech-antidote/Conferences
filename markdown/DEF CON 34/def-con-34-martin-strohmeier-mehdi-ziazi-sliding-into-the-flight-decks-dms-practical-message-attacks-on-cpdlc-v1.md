@@ -4,17 +4,21 @@ speakers: ["Martin Strohmeier", "Mehdi Ziazi"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Martin Strohmeier, Mehdi Ziazi - Sliding into the Flight Deck’s DMs Practical Message Attacks on CPDLC - v1.pdf"
 pages: 69
 sha256: "ed586be9f959cdc136a458dca7d17d53b95832fbadc79723bbd1658f7ef32b1c"
-text_chars: 28024
-ocr_pages: 36
+text_chars: 25825
+ocr_pages: 35
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:24:17Z"
+converted_at: "2026-08-12T06:37:59Z"
 ---
 # Sliding into the Flight Deck’s DMs Practical Message Attacks on CPDLC
 
@@ -22,28 +26,21 @@ converted_at: "2026-08-12T00:24:17Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Martin Strohmeier, Mehdi Ziazi - Sliding into the Flight Deck’s DMs Practical Message Attacks on CPDLC - v1.pdf` (69 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 >
-~~
 4 CONNECTION INTERCEPTED
-* a
-a Ta
-: is
-Sao Ss : 3 MESSAGE MANIPULATION
 ATC 18:427
-CLx123
 CLIMB FL380
 * Injection
 * Modification
 + Deletion A |
-REPORT LEVEL ws z =
 Replay
-ee
-vw
 r CLX123 18:43Z Flight
 WILCO
 a": Practical Message Attacks on CPDLC
@@ -53,11 +50,7 @@ EXPECT TURBULENCE |
 : = ) > ALTERING CONTENT...
 FL340-FL360 el | 2 Mehdi Ziazi j | 2 Martin Strohmeier } > SENDING FAKE CLEARANCE...
 > ATTACK SUCCESSFUL
-(ey)
-CPDOLC BOARNEL} i 2
-| cPpie
 CONNECTED v
-LOGON COMPLETE
 ```
 
 ## Slide 2
@@ -96,18 +89,17 @@ LOGON COMPLETE
 
 Aircraft Have DMs Now
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Aircraft Have DMs Now
 1231z ATC UPLINK 274
 AFTER CNK CLEARED TO
 KBED ARPT AS* FILED
-“FREE TEXT ~
 RUUDYS, CLIMB ¥IA SID
 “FREE TEXT
 EXPECT FL19@ 10 NIN AFT
-——-CONTINUED-—
 | 4aTC INDEX
 ```
 
@@ -115,22 +107,12 @@ EXPECT FL19@ 10 NIN AFT
 
 Inspiration: DEF CON 20 / Blackhat 2012 Talks
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Inspiration: DEF CON 20 / Blackhat 2012 Talks
-EF EGON
-Q”
-Re oh
-EURECOM bisok| =A 22
-USAeaiS
-```
-
 ## Slide 6
 
 That got everyone’s attention
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 That got everyone's attention
@@ -141,7 +123,6 @@ FAA says it can spot hacking attempts, but won't allow independent ‘stress tes
 ymerding, CSO
 06:12 AM ET ie | By Heather Kelly, CNN
 July 26, 2012 — Updated 2249 GMT (0649 HKT) | Filed under: Web
-Feo aaa comment ont inEenY eO nen)
 sien a doagadeneke ommecdaiaenocstceseone Ait Traffic Control of the Future Is (Still) Incredibly
 friendly and safer by 2025.
 Sleeping air traffic controllers get federal wakeup Hac ka bl e
@@ -155,13 +136,11 @@ Air Traffic Controllers Pick the Wrong Week
 to Quit Using Radar
 Hacker Shows Air Traffic Control Danger With 'Ghost
 Planes' security 012.6 21840 | 17,096 view
-ee le - _ Next-Gen Air Traffic Control
 Read More: Air Force One, Air Traffic Control, Faa, Travel News, Air Travel, Airlines, Hacking, Black Hat, Travel
 Se Vulnerable To Hackers Spoofing
 Andrei Costin, a Cypriad hacker, gave an unnerving demonstration Planes Ou t O f Thin Air
 outlining the weaknesses of air traffic control systems today at the
 Black Hat hackin...
-Ut IBLLGH <cormenes, 3 caes-out | + comment Now + Potlow Comments
 Read Whole Story
 ```
 
@@ -169,7 +148,8 @@ Read Whole Story
 
 Aviation Industry’s Answer
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Aviation Industry’s Answer
@@ -188,8 +168,6 @@ by Matt Thurber - August 21, 2012, 4:15 PM
 4 “An FAA ADS-B security action plan idenuneo ang miugateu nsKs ang monnors we progress OF
 clelbeeeeliéeds FAA Denies Vulnerabilities In New Air Traffic Control System
 A spokeswoman for key ADS-B: Posted by Soulskill on Wednesday August 22, 2012 @05:23PM
-from th t's-the-worst-that-could-hay it.
-security certification and accredivauw:. sabe hele haialaes pcbaliloige Barina ood euvowsswar ninuieuun
 security features built in, including features to protect against...spoofing attacks. [This] is provided through
 hat a target is where it is reported to be.”
 ```
@@ -198,36 +176,20 @@ hat a target is where it is reported to be.”
 
 A 15 year journey on practical aviation hacking
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Aircraft-to-Satellite
 Aircraft-to-Aircraft
-mol
 (=
-=)
 °
-1
-2
 °
->
 £
 ©
-He
-S
 =
-<=
 A 15 year journey on practical aviation hacking
-\ o
-», 2022/23 2024 2020 TD
-cs sey foes | |=
-oo SADS-B ACARS =.
-2 a
 =
-15
-.
-2024 o f
-o
 TCAS
 Mode A/C/S Ground Departure —_En-route Approach Ground
 ADS-B FIS-B ACARS DME
@@ -236,7 +198,6 @@ MLAT Mode A/C/S [ CPDLC VOR un 5
 2012-25 (Interrogations) 2026 Pe ILs
 2017 2020
 ATC ground stations
-¥
 NS
 Grou ised navigation aids
 ```
@@ -265,14 +226,13 @@ Consequence: The Original Avionics Security Lab
 
 Thanks to Q.C.M. quality control management AG!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Extension: The CPDLC Hacking Lab
 VHF
 FMS UNS-1Ew ANTENNA
-; n
-= .
 | A429
 | ETHERNET
 Unilink UL-801
@@ -287,26 +247,17 @@ Thanks to Q.C.M. quality control management AG!
 ATC
 Bretigny
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Connecting to the Real World
-Niedergl&t a Lt
-\
-@ sovsise Lagern Radar arenas N\ ATC
-ee Lidl Schweiz | \ Bretigny
 XN ROTI
-(a ] Oberglatt \
-—_—_—— —. ghafen
-De hy — A urich
 Rumlang Pst] Kloten
 Seilpark Zurich @)
-.
 —— YOU ARE CONNECTED To A
-VofehPLeRge 4
 Danikon
 ATC MSG 1/2 MSG
-44432 Lepy>tNew
 Seebad Katzensee Opfikon
 ```
 
@@ -316,7 +267,8 @@ Seebad Katzensee Opfikon
 
 Most of Pilot - ATC Comms still runs on Voice via VHF!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Most of Pilot - ATC Comms still runs on Voice via VHF!
@@ -382,7 +334,8 @@ Protected Mode CPDLC (PM-CPDLC) is an enhanced version of ATN-B1 CPDLC designed 
 
 Many Airspaces Mandate CPDLC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Many Airspaces Mandate CPDLC
@@ -414,17 +367,11 @@ Recommended Practices for CPDLC in Europe
 CPDLC usage helps to prevent Loss of Communication incidents and significantly improves ATC capacity.
 Your participation and commitment is key!
 Preparation for Log-On
-ATC LOGON/STATUS 172
-= FMC/CDU Flight INIT: ett
 = Check DEP/ARR airport, load route if available
 = Valid/correct FLT NBR (callsign) Bitar ocuayonrgzy,
 = Ensure ATN logon for Europe —> not FANS1/A
 = Prepare first ATC Logon address
 = Chart provider, AIP or SID
-When to Log-On Treacy 1
-10Mins + 3
-> Prior > croc #
-= As soon as possible, considering your company’s SOPs SF “crnering! SP
 = According to ICAO: see picture i
 Good practices:
 = Don’t know the logon address? Log-On failed? Ask ATC by voice!
@@ -437,7 +384,8 @@ interference
 
 PM-CPDLC ATN-B1 protocol stack: Key Elements
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PM-CPDLC ATN-B1 protocol stack: Key Elements
@@ -445,7 +393,6 @@ Layer 6 (Application) _ CPDLC Message
 Layer 6 (Presentation) = Protected PDU @---- PM-CPDLC checksum
 Layer 6 (Presentation) — ICAO Fully Encoded Data
 Layer 5 (Session) ATN Context Management @ _ Logon /Setup/Maintenance
-Layer 5 (Session) ACSE X.227 e-. : _—_ . i Application Setup
 Layer 5 (Session) SPDU X.225 e = : Session Type Setup
 @- Connection Type Setup
 Layer 4 (Transport) COTP X.224
@@ -453,7 +400,6 @@ Layer 4 (Transport) COTP X.224
 Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet ° ES-IS.
 Layer 2 (Datalink) AVLC Frame
-e-., XID
 e Reed Solomon FEC
 Layer 1 (PHY) VDL Mode 2 .
 e-. PN scrambling
@@ -525,24 +471,17 @@ Note: *CPDLC is a Ground Initiated Application in this case.
 
 Full Reverse Engineering Setup
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Real World
 Environment
 ad ire)
 4
-é
-a
-4
-XXX
-/
-ras
-—>~_—__
 Global
 CPDLC
 Network
-boa ee
 ess Channel
 Unilink
 UL 801 CMS
@@ -550,16 +489,12 @@ Full Reverse Engineering Setup
 VHF Antenna
 Faraday Cage
 (RF Isolation)
-—p>
-———> |
 FMS
 UNS-1EW
-> ails
 USRP B210
 Attacker Setup
 RTL-SDR dumpVDL2
 Capture
-=
 RGS/DoS Frames
 Transmission
 Attacker Msg Flow
@@ -615,7 +550,8 @@ ICAO  (X0,X1,X2,X3)
 
 Let’s explore the stack
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s explore the stack
@@ -642,7 +578,6 @@ CLNP X.233
 X.25 Packet
 AVLC Frame
 VDL Mode 2
-eoe@¢ @
 D8PSK @ 31.5 Kbps
 ~ PM-CPDLC checksum
 Logon/Setup/Maintenance
@@ -664,7 +599,8 @@ PN scrambling
 
 We start here
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Let’s explore the stack
@@ -678,8 +614,6 @@ _ CPDLC Message
 _ Protected PDU @-}---- PM-CPDLC checksum
 — ICAO Fully Encoded Data
 Logon/Setup/Maintenance
-ATN Context Management @--------- +
-ACSE X.227 @eesssssssesetsenesnetntes Ee snteneenenee - Application Setup
 SPDU X.225 - Session Type Setup
 Connection Type Setup
 Layer 4 (Transport) COTP X.224
@@ -688,7 +622,6 @@ Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet e- ES-IS
 Layer 2 (Datalink) AVLC Frame . po We start here
 e- Reed Solomon FEC
-yet ( ) Web Mise @-). -- PN scrambling
 Layer 1 (PHY)
 D8PSK @ 31.5 Kbps
 ```
@@ -705,7 +638,8 @@ dumpvdl2
 
 **Sender Address**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AVLC Frame: Closer Look
@@ -720,13 +654,13 @@ Address
 
 **Sender Receiver Address Address**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AVLC Frame: Closer Look
 Sender Receiver
 Address Address
-5) fe
 > (4B7FFF (Aircraf
 2 Label: _d Blk id: A
 ```
@@ -775,7 +709,8 @@ Any frame can be flagged and the aircraft trusts it immediately, what could go w
 
 1st DoS vector: **Malicious AVLC FRMR Injection**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1st DoS vector: Malicious AVLC FRMR Injection
@@ -783,31 +718,20 @@ COMM STATUS MSG
 VHF 136.975MHZ
 AOA:NOCOMM/NO SERVICE
 ATN:NOCOMM/NO CIRCUIT
-COMM CNTRL®
 ADVISORY 14272
-¢ATC DISCNECT RETURN
 NAV VNAV DTO LIST PREV
 FPL PERF TUNE MENU NEXT
 ATC
 _ Normal Protocol Executio
 n
-we
 >
 Target Frame
 Attacker
 7
-\
-f
-\
-'
-; Attack
 | \__AVLC FRMR [Target Frame]
-f <
 i Updates internal state i
 <—
-i_ AVLC UA
 | AVLC FRMR x
-ig tink Reset >
 ATC Attacker
 ```
 
@@ -815,11 +739,11 @@ ATC Attacker
 
 But it doesn’t get easier than this… right?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 But it doesn’t get easier than this... right?
-| __
 ABSOLUTE = } ICAO
 ```
 
@@ -829,7 +753,8 @@ ABSOLUTE = } ICAO
 
 It might look intimidating but we don’t need to understand all of it!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Deeper dive into link management
@@ -861,7 +786,8 @@ It might look intimidating but we don’t need to understand all of it!
 
 What we actually care about
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What we actually care about
@@ -871,7 +797,6 @@ Establishment
 Event : Al Link
 Establishment
 Receipt of Pending Receipt of
-(SI) XID_RSP_LE : A2
 XID_RSP_LCF: A3
 N2 Exceeded : A9
 Receipt of Disc.
@@ -884,7 +809,8 @@ Notification from DLE : A3
 
 **Stateless** frame!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Keep it simple and stupid
@@ -909,14 +835,11 @@ Stateless frame!
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 rp But.an attacker'can only target one
-; Dos on CPDLC is ie a2 airraft at atime .. ight?
-:
-ote te
-[
 ```
 
 ## Slide 44
@@ -933,7 +856,8 @@ AVLC U DISC (Stateless)
 
 DoS outcome
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 COMM STATUS MSG
@@ -949,26 +873,18 @@ DoS outcome
 LOG ON
 CURR ATC: NEXT atc:
 CALLSIGN
-EECS999 hear
-ATSU:ATN bs
-*LFPYTEST LSZH
 NO SERVICE ETD
-“LOS ON wee
 UNILINK MENU RETURNS
 VNAV DTO LIST
 FPL PERF TUNE MENU
-ON/OFF
 ENT
 UNIVERSAL
 LOG ON MSG
 RECOMMEND CONTACTING
 ATC VIA VOICE ame
 ATSU:ATN DEST
-. SLEPYTEST LSZH
 LOG ON TIMEOUT ETD
-LOG ON ore-2
 18312
-UNILINK MENU RETURN>
 VWAV DTO LIST PREV
 PERF TUNE MENU NEXT
 G
@@ -978,7 +894,6 @@ Zz
 D
 K
 Qa
-Ww
 ```
 
 ## Slide 46
@@ -988,7 +903,8 @@ Ww
 |…|
 |---|
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 So much more remains to discuss
@@ -1002,8 +918,6 @@ _ CPDLC Message
 _ Protected PDU @-}---- PM-CPDLC checksum
 — ICAO Fully Encoded Data
 Logon/Setup/Maintenance
-ATN Context Management @---------- re ene
-ACSE X.227 rea te ae temrenee ete --emveee Application Setup
 SPDU X.225 - Session Type Setup
 Connection Type Setup
 Layer 4 (Transport) COTP X.224
@@ -1011,9 +925,7 @@ Layer 4 (Transport) COTP X.224
 Layer 3 (Network) CLNP X.233 e IDRP
 Layer 2 (Datalink) X.25 Packet e- ES-IS
 Layer 2 (Datalink) AVLC Frame
-o-.- - XID
 e- Reed Solomon FEC
-yet ( ) Web Mise @-). -- PN scrambling
 Layer 1 (PHY)
 D8PSK @ 31.5 Kbps
 ```
@@ -1038,26 +950,20 @@ Our work focuses on DoS attacks at the protocol level, excluding jamming
 
 Attacking the DMs: An IMSI Catcher for Aircraft
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacking the DMs: An IMSI Catcher for Aircraft
 CHALLENGE IMPLEMENTATION
-[es
 ‘8 Multiple layers, each
 & with rules and timing
-Qa
 AO
-@ te
 Mimic a legitimate
-erumeealatatt connection
 Numerous parameters
-and uirrequts
 Obscure Integrity checks
 at several alipoints
 Stable long-lived connection
-£3
-Se:
 Enuuletee connection as
 a finite-state machine
 Progresses step by step
@@ -1078,14 +984,12 @@ checks to keep the link active
 
 CPDLC connection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
-a
 CPDLC connection
-(yp)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1096,14 +1000,12 @@ Attacker ATSU
 
 Rogue Disconnect CPDLC connection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
-a
 CPDLC connection
-(y)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1116,12 +1018,11 @@ CPDLC connection
 X
 Rogue Disconnect
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
-(y)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1132,14 +1033,13 @@ Attacker ATSU
 
 Broadcast RGS Information Frame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
 Broadcast RGS
 Information Frame
-(y)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1152,7 +1052,8 @@ Initiate Link Establishment
 Broadcast RGS
 Information Frame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
@@ -1169,12 +1070,11 @@ Attacker ATSU
 
 CPDLC connection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
-(y)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1186,12 +1086,11 @@ Attacker ATSU
 Rogue CPDLC Session
 Attacker CPDLC Messages
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rogue Ground Station
-(y)
-BA
 Attacker ATSU
 (Rogue Ground Station) (Ground Station)
 ```
@@ -1200,21 +1099,19 @@ Attacker ATSU
 
 Demo Time! Demo Time!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 64/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Demo Time! = Sms ’ Demo Time!
-=i ce
-wos
-fa |
-\
 ```
 
 ## Slide 57
 
 Impact of Rogue Ground Station
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Impact of Rogue Ground Station
@@ -1275,7 +1172,8 @@ Sources: EUROCONTROL Datalink Operations (2024-02) | European Aviation Overview 
 
 Is the US CPDLC safe/secure? No, just easier…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is the US CPDLC safe/secure? No, just easier...
@@ -1427,15 +1325,14 @@ We do not release the code thought ;)
 
 Thank you for your attention!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ATC MSG 1/1 MSG
-14182 LFPY>TNEW
 THANK YOU FOR YOUR
 INTEREST.
 (SENT 14182)
 Thank you for
-eLFPYTEST CNECT RETURNS your attention!
 UNE MENU NEXT
 ```

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Witold Waligóra_How We Taught ChatGPT-4 to Break mbedTLS AES With Side-Channel Attacks.pdf"
 pages: 30
 sha256: "e3a0dcc4156eb1d227ea9ea6a597de1e3d29faf4f0f57500d97d03acfbdabe2d"
-text_chars: 9609
-ocr_pages: 6
+text_chars: 8486
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:24Z"
+converted_at: "2026-08-12T04:04:59Z"
 ---
 # How We Taught ChatGPT-4 to Break mbedTLS AES With Side-Channel Attacks
 
 **Speakers:** Witold Waligóra  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Witold Waligóra_How We Taught ChatGPT-4 to Break mbedTLS AES With Side-Channel Attacks.pdf` (30 pages)
+
 
 ## Slide 1
 
@@ -28,19 +34,6 @@ converted_at: "2026-08-11T21:13:24Z"
 Witold Waligóra
 
 #BHEU   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-blackhat
-a _e o4-7 CloudVA
-ExCel LONDON / UK
-How we taught ChatGPT-4
-to break Mood LS AES
-with side-channel attacks
-Witold Waligéra
-```
 
 ## Slide 2
 
@@ -104,17 +97,12 @@ STM32F3, mbedTLS AES Decrypt <u>https://youtube.com/watch?v=CCeK_S3ED4A</u>
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2025
 STM32F3, mbedTLS AES Decrypt
-https:/‘youtube.com/watch7v=CCeK S3ED4A
 PL
-WP YouTube Search
-[BR F3-AES-Deay... (2) - Jupyte doudvaio/scci: CloudVA Cl CloudVA
-@ 6 doudvaio, N jeOdfe a dt
 Template Attack trace gathering
 Gather N traces for uniform byte distribution, uniform sbox output HW and uniform FT/RT output HW
 , 100000)
@@ -159,22 +147,6 @@ Why: GPT-4 Exploring the limits GPT-4 can do time-invariant code What else can i
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-EUROPE 2025
-How: Software
-Standard virtualization stack <—
-*Linux \
--QEMU KVM
-°Libvirt
-*RESTful API
-2 a2cac3da84779ddfc3c569e9dcd81lc9efafbb4To running
-17. —=—s- ele0e79093110elebe43 F50d03286118726f61e0 running
-#BHEU @BlackHatEvents
-```
-
 ## Slide 12
 
 ### How: GPT-4 plugin OpenAPI specification ●When to use your API
@@ -191,11 +163,10 @@ Standard virtualization stack <—
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2025
 GPT-4 plugin
 /api/v1/vms/{vmid}/gpt/cpa:
 post:
@@ -203,7 +174,6 @@ operationId: runCPA
 summary: |-
 Run Correlation Power Analysis -.on previously gathered traces using provided model.
 description: |-
-Run Correlation Power Analysis :.on previously gathered: traces
 (“tfp_uuid’) using provided model.
 Perform: simple evaluation of the results.
 The analysis is executed: on the virtual machine indicated by “ymid
@@ -215,7 +185,6 @@ type: string
 required: true
 description: |-
 The unique id-of the VM.
-A -vmid~ can be obtained. from-*vmList*° or “vmCreate operation.
 Any VM with type ~gpt°.can-be used.
 requestBody: a.
 description: CPA model definition and a pointer to target power traces.
@@ -280,20 +249,6 @@ How: GPT-4 plugin Examples matter more than descriptions Token-denser Provide co
 ●Metrics interpretation
 
 #BHEU   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-EUROPE 2025
-Problems
-*Context size
-*Hallucinations A 4
-‘BLOB handling ==
-°Timeouts 7 we
-°Arithmetics S&S,
-¢Metrics interpretation
-```
 
 ## Slide 18
 
@@ -442,11 +397,10 @@ Image by XKCD, CC BY 2.5
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2025
 © You
 Live Demo
 Perform CPA on Mbed TLS AES. Use 50 traces.
@@ -464,26 +418,19 @@ custom_aes_encrypt(input, output,
 uint32_t input_len, uint32_t secret_len) {\n
 secret, input_len);\n}"
 RESPONSE FROM CLOUDVA SIDE-CHANNEL ANALYSIS
-"dut_uuid": "40e398e0-9b19-4£70-a3e0-bda528db1i047"
 uint8_t *output,
 for (uint32_t i =
 input +
 mbedtls_aes_free(&aes);\n}\n\nvoid entrypoint(uint8_t* input,
-Deane ee
-0)
 REQUEST TO CLOUDVA SIDE-CHANNEL ANALYSIS @
 "vmid": "873eabai3ceded3271c577efea0faf6b6511£670",
-"tfip_uuid": "d3£82bOf-7ea2-4122-a8e5-6e05f££79bc5",
 "model_extra": "from patools.victims.aes_tools import sbox",
 "model_hypothesis": "hw(sbox[input[0] “* candidate])",
 "model_candidates": "range(256)",
 "model_target": "secret[0]"
 }
-OO
 RESPONSE FROM CLOUDVA SIDE-CHANNEL ANALYSIS @
 "corr": {
-"avg": 0.24634299607714638, ° :
-"max": O.4842733144760132, Ss
 "min": 0.18558630347251892,
 "xeal": 0.4842733144760132
 },

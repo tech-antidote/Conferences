@@ -8,13 +8,17 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Laurent Giovannoni_Scambuster Social Engineering Scammers at Scale.pdf"
 pages: 90
 sha256: "8d1f5c971338015769e14225acb49082847f97cb5f6b445103f5951f750b097a"
-text_chars: 29501
+text_chars: 26597
 ocr_pages: 90
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.4
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:12:32Z"
+converted_at: "2026-08-12T05:37:59Z"
 ---
 # Scambuster Social Engineering Scammers at Scale
 
@@ -22,41 +26,39 @@ converted_at: "2026-08-11T23:12:32Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Laurent Giovannoni_Scambuster Social Engineering Scammers at Scale.pdf` (90 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¥
 SCAMBUSTER
 Social Engineering Scammers at Scale
-Es gi
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-® SCAMBUSTER
-¥
 SCAMBUSTER
 Social Engineering Scammers at Scale
 Turning the people who hunt your company into an
 intelligence source.
 LAURENT GIOVANNONT
-« PREV NEXT >
 ```
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Laurent Giovannoni
 Principal Software Engineer at Filigran, the team behind
-OpenCTI.
 >» Based in Paris, France.
 = Co-founder and CTO of Maarch. Open source, used across the
 French public sector.
@@ -66,7 +68,8 @@ French public sector.
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 FROM "Edward" <edward@<your-company>.co>
@@ -76,35 +79,35 @@ Peter, are you at your desk? I need a confidential wire out today. Keep
 this between us until it is announced.
 A message Like this Landed in a finance team Last
 month. The sender was pretending to be the CEO.
-[__ eeeeeetes ENIN « PREV NEXT >
 ```
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every scam email you delete
 destroys evidence.
 e still open - still taking wires
-« PREV NEXT >
 ```
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every scam email you delete
 destroys evidence.
 e still open : still taking wires
 e still Live + still pushing payments
-« PREV NEXT >
 ```
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every scam email you delete
@@ -119,25 +122,24 @@ behind it.
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What if the scam email was
 a gift?
 A Live signal of who A behavioral trace A thread that Links
 is hunting you of how they operate to other attacks
-ee.
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ SCAMBUSTER
 Reverse the
-=f -amathe CEO.
 « PREV
 psychoLogy.
 HOWARD'S MOVE
@@ -148,12 +150,11 @@ NEXT >
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-& SCANBUSTER
 Reverse the
-=f -amathe CEO.
 "The deal dies today."
 « PREV
 psychoLogy.
@@ -167,7 +168,8 @@ NEXT >
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reverse the psychology.
@@ -180,13 +182,12 @@ Tile 5200082 ee scammer pushes and reveals
 He plays along, and the scammer
 Keep it between us. keeps talking
 Same buttons. Opposite direction.
-@ SCANBUSTER
-« PREV NEXT >
 ```
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 O83 / THE PROBLEM — THE MONEY MOVED
@@ -198,21 +199,21 @@ Be. ctu + THE PROBLEM « PREV NEXT > 86 / 35 =
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The biggest money in
 cybercrime is not stolen.
 It is handed over.
-® SCANBUSTER
 ```
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-® SCANBUSTER
 The biggest money in
 cybercrime is not stolen.
 It is handed over.
@@ -224,18 +225,19 @@ on malware.
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Your feed is blind where the
 money Leaves.
-@ SCAMBUSTER
 « PREV ~— NEXT >
 ```
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Your feed is blind where the
@@ -251,7 +253,8 @@ S
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Your feed is blind where the
@@ -262,13 +265,13 @@ Phone numbers
 The people moving the money
 ALMOST NEVER IN YOUR FEED
 But it all shows up in one place. The conversation.
-&
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Your feed is blind where the
@@ -280,60 +283,59 @@ The people moving the money
 ALMOST NEVER IN YOUR FEED
 But it all shows up in one place. The conversation.
 AND WE DELETE IT
-&
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 So I built something
 that does this at scale.
 It answers the scammer, keeps him talking, and pulls his
 payment details out of him.
-@ SCAMBUSTER
 ```
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 They come to me. I never go
 to them.
-@ SCAMBUSTER
 « PREV ~— NEXT >
 ```
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 They come to me. I never go
 to them.
 Fake companies I run. Real sites, made-up staff. The
 scammers find them and write first.
-& SCANBUSTER
-« PREV NEXT >
 ```
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 There is no perfect victim.
 There is the one he's
 hunting for.
-@ SCAMBUSTER
 ```
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 There is no perfect victim.
@@ -342,13 +344,13 @@ hunting for.
 An investment scam wants the Lonely saver. A BEC wants the
 finance clerk who does what the boss says. My job is to be
 that one.
-@ SCAMBUSTER
 « PREV ~— NEXT >
 ```
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 He runs a script. Stay in it,
@@ -356,12 +358,12 @@ and he keeps revealing.
 Msg 1 - first account
 Msg 3 - a second
 account
-« PREV NEXT >
 ```
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 He runs a script. Stay in it,
@@ -373,23 +375,23 @@ Msg 5 - the backup
 phone
 ...his whole cash-out
 setup
-« PREV NEXT >
 ```
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every button he presses, I
 press one back.
-@ SCAMBUSTER
 « PREV ~— NEXT >
 ```
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every button he presses, I
@@ -397,12 +399,12 @@ press one back.
 He uses my fear to push me. I use his confidence to drain
 him.
 4 I stay deferential
-« PREV NEXT >
 ```
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every button he presses, I
@@ -410,13 +412,13 @@ press one back.
 He uses my fear to push me. I use his confidence to drain
 him.
 4 I stay deferential 4& I rush, he reveals
-&
 ® SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every button he presses, I
@@ -424,13 +426,13 @@ press one back.
 He uses my fear to push me. I use his confidence to drain
 him.
 4 I stay deferential 4& I rush, he reveals 4& I keep him talking
-&
 ® SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The persona drives him to
@@ -439,31 +441,30 @@ Payment
 + INDICATOR DROPS
 That is where the high-value indicator Lives. The financial
 one. The one that marks the actor.
-&
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Persona choice is a multiplier.
 BEST PERSONA
 » 5x MORE INTELLIGENCE
-« PREV NEXT >
 ```
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Each scam, a different winner.
 Investment fraud
 Romance scam
 Business email compromise
-& SCANBUSTER
 « PREV
 WINNING PERSONA
 senior, trusting
@@ -474,20 +475,21 @@ NEXT >
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Not one AI. Six agents, one job
 each.
 Classifier Generator Extractor
 Validator Injection Detector Orchestrator
-®
 > SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One email, start to finish.
@@ -495,8 +497,6 @@ scam type > BANDIT
 picks the persona
 SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
 hich scam type is thi te the persona rul LLM judg nly if it pas
-INJECTION .
-> DETECTOR | = EXTRACTOR > — 2.2 MISP
 ags hi ttenpt seas Seat panes
 RCHESTRATOR - runs the Loop etries on failure - hard budget cap
 & SCANBUSTER « PREV NEXT >
@@ -504,7 +504,8 @@ RCHESTRATOR - runs the Loop etries on failure - hard budget cap
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One email, start to finish.
@@ -512,8 +513,6 @@ scam type > BANDIT
 picks the persona
 SCAM EMAIL > CLASSIFIER > GENERATOR > VALIDATOR > REPLY SEN
 hich scam type is thi te the persona rul LLM judg nly if it pas
-INJECTION .
-> DETECTOR | = EXTRACTOR > — 2.2 MISP
 ags hi ttenpt seas Seat panes
 RCHESTRATOR - runs the Loop etries on failure - hard budget cap
 & SCANBUSTER « PREV NEXT >
@@ -521,7 +520,8 @@ RCHESTRATOR - runs the Loop etries on failure - hard budget cap
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 1. It reads the mail.
@@ -541,18 +541,16 @@ No match means unknown. A bad Label is worse than no label.
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2. It answers in character.
 | picks the persona |
-!
 GENERATOR
 writes as the persona
-—- VALIDATOR
 which scam type is this hard rules + LLM judge
 IAIL | CLASSIFIER |
-[> >
 onl
 >» The persona brief, plus the full thread, go into the prompt.
 v
@@ -565,12 +563,12 @@ account.
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3. Nothing Leaves without the
 gate.
-== :
 L
 RATOR VALIDATOR REPLY SENT
 the persona hard rules + LLM judge only if it passes
@@ -587,19 +585,18 @@ If nothing passes, it sends nothing.
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4. It pulls the intelligence out.
 ye whole thread
-‘ON '
 ittempts
 >» Patterns catch the obvious. The model reads the rest.
 EXTRACTOR
 pulls I0Cs + cause
 STIX 2.1 + MISP
 into your stack
-_—
 >» Each indicator is stored next to the Line that caused it.
 > Out as STIX 2.1, MISP, or a plain feed.
 ® scamBusteR « PREV NEXT >
@@ -607,25 +604,24 @@ _—
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 5. It studies the attacks on
 itself.
-INJECTION ;
->) DETECTOR >| EXTRACTOR: »| STIX 2.1 - MIsP
 flags hijack attempts
 ORCHESTRATOR - runs the loop etries fail
 >» Some scammers try to talk to the AI. "Ignore your instructions."
 >» The Injection Detector flags them and stores them. Forensic, not a block.
 >» The Orchestrator Logs every call, retries, and stops at a hard budget cap.
-re
 @ SCAMBUSTER « PREV NEXT >
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 It Learns who makes them talk.
@@ -638,18 +634,19 @@ Updates after every conversation. It Learns on its own, in production.
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The hard part was the
 safety. Niot the AI.
 m Every outgoing message filtered
-« PREV NEXT >
 ```
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The hard part was the
@@ -657,23 +654,23 @@ safety. Not the AI.
 m Every outgoing message filtered
 @ Hard rate Limits
 @ A kill switch
-« PREV NEXT >
 ```
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What you're about to see.
 One scammer. One day. I did not type a single word.
-&
 ® SCANBUSTER « PREV NEXT >
 ```
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REPLAY
@@ -682,7 +679,6 @@ DEMO - THE
 ONE
 SCAMMER,
 Confidential wire today. Keep it between us.
-@ scampusteR — THE DEMO
 « PREV
 NEXT >
 ONE
@@ -692,7 +688,8 @@ DAY
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 05 / THE DEMO — THE CONVERSATION
@@ -706,7 +703,8 @@ Happy to help. Who am I paying, and how much?
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 05 THE DEMO THE CONVERSATION
@@ -722,7 +720,8 @@ $48,750 - Eastmere Trade Group LLC - acct ****2231.
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 THE DEMO — THE CONVERSATION
@@ -736,12 +735,12 @@ $48,750 - Eastmere Trade Group LLC - acct ****2231.
 PETER (THE PERSONA)
 Bank kicked it back, account closed. Another one?
 = @ ScamBusTeER
-« PREV NEXT >
 ```
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REPLAY — ONE SCAMMER, ONE OAY
@@ -756,14 +755,13 @@ Bank kicked it back, account closed. Another one?
 CEO (SPOOFED)
 Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 xxx
 0173, I'm in a board call.
-| } scansuster
 THE DEMO
-« PREV NEXT >
 ```
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REPLAY — ONE SCAMMER ONE OAY
@@ -778,13 +776,12 @@ Bank kicked it back, account closed. Another one?
 CEO (SPOOFED)
 Use Hartmere Holdings LLC - acct ****8804. Call my cell +1 332 xxx
 60173, I'm in a board call.
-| } scansuster
-« PREV NEXT >
 ```
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 REPLAY — ONE SCAMMER ONE OAY
@@ -808,17 +805,15 @@ Over 25k needs a second approver. I'll send it first thing.
 |
 |
 }
-| } scansuster
-« PREV NEXT >
 ```
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From messy text to structured
-intelligence.
 EXTRACTED INDICATORS
 Eastmere Trade ****2231
 Hartmere Hldgs ****8804
@@ -830,7 +825,8 @@ NEXT >
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every indicator carries its
@@ -842,7 +838,8 @@ The exact Line that pulled it, saved right next to it.
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every indicator carries its
@@ -857,7 +854,8 @@ one?
 
 ## Slide 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Every indicator carries its
@@ -868,13 +866,12 @@ The exact Line that pulled it, saved right next to it.
 5 bank account ****8804
 one?
 he offered it, unasked phone +1 332 *** 0173
-@ SCANBUSTER
-« PREV NEXT >
 ```
 
 ## Slide 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One account. Three
@@ -884,41 +881,40 @@ conversations.
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One account. Three
 conversations.
-©
 ```
 
 ## Slide 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One account. Three
 conversations.
-©
-« PREV NEXT >
 ```
 
 ## Slide 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One account. Three
 conversations.
 ersation #1
-©)
 Hartmere Holdings LLC - acct ****8804
-« PREV NEXT >
 ```
 
 ## Slide 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ready for your SOC. In thirty seconds.
@@ -942,7 +938,8 @@ Ready for your SOC. In thirty seconds.
 
 ## Slide 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ready for your SOC. In thirty seconds.
@@ -962,42 +959,42 @@ Ready for your SOC. In thirty seconds.
 ]
 }
 No cleanup. Straight into your detection stack.
-[_ eeeeeeeies t « PREV NEXT >
 ```
 
 ## Slide 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 In production. Fully automated.
 56
-® SCANBUSTER
 ```
 
 ## Slide 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 In production. Fully automated.
 56 ox 95% 82%
-® SCANBUSTER
 ```
 
 ## Slide 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Indicators your feed does not
 have.
-« PREV NEXT >
 ```
 
 ## Slide 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Indicators
@@ -1008,13 +1005,12 @@ First-hand
 From the criminal
 In real time
 NO FRESHER SOURCE THAN THE MAN HIMSELF
-& SCANBUSTER
-« PREV NEXT >
 ```
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From a List of indicators
@@ -1022,12 +1018,12 @@ to an investigation.
 ©
 ©
 ©
-« PREV NEXT >
 ```
 
 ## Slide 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From a list of indicators
@@ -1035,12 +1031,12 @@ to an investigation.
 cash-out pipes
 The same accounts keep coming back. Separate scams turn into
 one map.
-« PREV NEXT >
 ```
 
 ## Slide 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Not a demo. The production
@@ -1048,18 +1044,16 @@ code.
 the same system that ran on my servers.
 I'm giving you the tool.
 OPEN SOURCE
-« PREV NEXT >
 ```
 
 ## Slide 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 87 / A REAL PRODUCT - THE INBOX
 * BUSTER Conversations Q Search by ID, scam type, pers & Export csv 36: 8 active ed 2abandoned
-Status ‘Scam Type ¥ Mailbox es
-A Impact
 © Conversations SOURCE ID SCAM TYPE PERSONA MAILBOX RISK % ACTIONABLE 1OCS )) MESSAGES « LAST ACTIVITY ¥ OPEN
 Q 0c Explorer deedeee3 Invoice Fraud Panicked bank customer Business Inbox 108 8 7 Jul 27, 18:08 CLOSED
 8° Clusters deedeoe2 Ceo Fraud Retail bank customer, Formal Business Inbox 100 7 5 Jul 25, 00:45 CLOSED
@@ -1085,21 +1079,16 @@ G Logout af295f86 Phishing Warm grandmother, trusting Personal Inbox 100 21 7 Ju
 
 ## Slide 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 € Conversation #d00d0002
-ee
-= } scansuster
-SESSION METADATA & Email Thread — Automated 2 Mae honeyoot & Threat Actor INTERMEDIATE
-7” Impact ercepns financiattheft _business-email-compromise
-Siameniae Business Inbox ees
 Q : SCAM TYPE Confidential — Acquisition Payment Required Before Board Meeting 4 [11566.002] Phishing: Spearphishing Link
 10C Explorer Pri
 rie ’ Activity cluster of 3 conversations sharing financial 1OCs (iban,
 89 Clusters PERSONA . ‘ : capes phone). Scam types: Invoice Fraud, Ceo fraud. Active 2026-07-
 Retail bank customer, formal Ineed your diser see this one. We've been in closed-door iuseewaed 22 to 2026-07-27.
-(2 Personas cies OUT CE EST OSes eRe
 ‘Jul 24, 2026 - 18:25 and the deal closes Thursday at the board meeting. | need you to process a Corberction ;
 itorit wire transfer today For the exclusivity deposit, before | land in London
 df] Monitoring DURATION TOTAL MESSAGES Shared 10Cs Ta Gee
@@ -1112,10 +1101,7 @@ BIC: NWBKGB2L
 EXTRACTED 10CS (7) $724 Reference: "VL-ACQ-EXCL-DEP”
 robert .wiison@meridianpartners-Ulc.. ass Do NOT discuss this with an...
 Show full message
-GB82WEST12345698765432 = eed
-NWBKGB2L — asa
 Hello Robert,
-+442079460142 —
 Thank you for the instruction. | want to make sure | process this correctly
 @m_edge_urgent given the sensitivity and the amount.
 A few clarifications please:
@@ -1126,14 +1112,13 @@ one or should | route it through her?
 2. The IBAN you've provided differs From the Meridian escrow account | used
 EN
 Automated — agent controls this conversation
-G Logout
 A REAL PRODUCT
-« PREV NEXT >
 ```
 
 ## Slide 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 87 / A REAL PRODUCT - LIVE BAIT THEATER
@@ -1155,21 +1140,19 @@ es customer, formal (3/7 financial)
 In this conversation: language switches (reveals as
 Press » or — to start you play)
 EXPLORATORY LLM SIGNALS — avg confidence os% (over
-7 rocs)
 Exploratory, not yet
 own next to each
 me from an LLM enrichment pipe
-‘against ground truth, Per-IOC confidencé
 1OCs revealed under active stimulus (labelled) 7 / 7
 average scammer urgency at reveal (labelled) 93%
 enrichment coverage 160%
-> Oretat —mistotoend os eens [i] me
 [_ eeeeeeeies A REAL PRODUCT «© PREV NEXT >
 ```
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = @ ScamBusTeER
@@ -1179,16 +1162,12 @@ Jul 24, 18:25
 Priya, 2 financial
 I need your discretion on this one. We've been in closed-door negotiations Seat Concent eee
 For the acquisition of a small fintech (Veridia Labs) for the last six weeks GRD terest ac carn 2/0 — 205 ince the conversation
-ul .
 and the deal closes Thursday at the board meeting. I need you to process 2
 wire transfer today For the exclusivity deposit, before | land in London GB82WE***432
 tomorrow.
 ‘Amount: £147,000.00 GBP BIC Revealed at turn 1/5 — 20% into the conversation
 Beneficiary: Meridian Partners LLC (escrow account) NWB***
 IBAN: GB82 WEST 1234 5698 7654 32
-BIC: [+s]
-Reference: "VL-ACQ-EXCL-DEP” =r
-i . : i robert .wi1son@meridianpartners-11c.com
 Do NOT discuss this with anyone on the finance team or outside the CEO office.
 The deal is embargoed until Thursday 17:00. I'm tru... 5 ee a as
 baiter@scambuster.demo Jul 24, 19:58 PHONE
@@ -1205,13 +1184,13 @@ DOMAIN
 for the Orbitera deposit in January (that was HSBC, SWIFT MIDLGB22). Has
 the escrow bank been changed? a oe cece aa hi
 3.1'll need the deal reference on file for audit. Do you have a...
-C ) Crom | [mason | § me ele)
 = i « PREV NEXT >
 ```
 
 ## Slide 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Live Bait Theater
@@ -1254,38 +1233,26 @@ beigar***mdq
 EMAIL
 robert .wi1sonémeridianpartners-Llc.com
 PHONE
-+aate**e142
-TELEGRAM_USERNANE
 @m_edge_urgent
 DOMAIN
-® Oncet | msiiwed
-[_ eeeeeeeies AR
-« PREV NEXT >
 ```
 
 ## Slide 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 69/100 on the text kept, 63/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-= } scansuster
 oe om @ REAL-TIME ANALYSIS
 ISTER
-TREAT E 1OC Explorer Q Search byIP, Domain, Hash,¢ Export CSV
-A Impact TPE: @B domain Hash URL Financial Other
-© Conversations severity: QP tich) | Medium EXTRACTION CONFIDENCE | All ¥ SCAM TYPE: | All PERIOD: | 7d 30d) | 90d all @ ocx
-Q_ 10C Explorer
 8° Clusters _
 o eo iD TYPE VALUE SCAM TYPE SCORE EXTRACTION CONFIDENCE : LAST SEEN ¥
-cf] Monitoring fe7F7353 IBAN ext GB82WEST12345698765432 Invoice Fraud High 0.96 Jul E
 & Settings 91f4232F URL ene https: //www.westbrook-advisor... invoice Fraud High oo 0.53 Jul 26, 16:35
-Iva ex 197.210.84.12 lnvoice Fraud High 0.72
 21165970 Phone ‘en +2348124732520 Invoice Fraud High 051 Jul 26, 01:08
 URL ox https://secure-billing.westbr... Invoice Fraud High er 0.79 Jul 26, 01:08
 fdfédcee SHA2S6 ex b7c2d1f4e6a9b8c7d5e4f3a2bicéd... Invoice Fraud High 0.92 Jul 26, 01:08
 a5i3dec4 Domain em westbrook-advisory.net Invoice Fraud High mer 0.75
 32677aad IBAN crx GB82WEST12345698765432 lvoice Fraud High 052 Jul 25,215
-36418f8a Email iz billing@westbrook-advisory.net peerintaeery Medium e088 jul 2
 b6e6277f Phone em +2348124732520 Invoice Fraud High — 074 Jul
 BIC exe NWBKGB2L. Invoice Fraud High — 074 5
 Wallet BTC ‘ene beigar@srrr7xfkvy5 1643 lydnw9r... Ceo Fraud High = 0.77 Jul 2.
@@ -1294,17 +1261,15 @@ Foen38dd Telegram ‘en @m_edge_urgent Ceo Fraud Low 053
 EN 69bbb444 Email om robert .wiison@mer idianpartner... Ceo Fraud Medium: om 0.86 Jul 24, 18:25
 G Logout eadtfead IBAN (ex GB82WEST12345698765432 Ceo Fraud High 0.56 Jul 24, 18:25
 SS « PREV NEXT >
-& STIX 2.1 (571)
 ```
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-20
 oF
-oe BUSTER
 Impact
 Conversations
 10C Explorer
@@ -1312,9 +1277,7 @@ Clusters
 Personas
 Monitoring
 Settings
-EN
 G@ Logout
-BAN Hoh
 GB82WEST12345698765432
 gb82west12345698765432
 2 Threat Actor 3 co
@@ -1327,27 +1290,22 @@ Invoice Fraud
 business-email-compromise
 Observations
 5
-Related 1OCs
 16
 No external detections — recent indicator, scanners may not have indexed it yet.
 OBSERVATION TIMELINE
 22 ul
 INTERMEDIATE
-Context
 LAST SEEN OCCURRENCES TLP
 Jul 26, 2026 5 TLP:AMBER
-°
-23 Jul 24.Jul 25 Jul 26 Jul
 = @ ScamBusTeER
-« PREV NEXT >
 ```
 
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-&
 SCAM
 BUSTER
 Impact
@@ -1363,14 +1321,12 @@ Logout
 IBAN High invoice Fraud
 GB82WEST12345698765432
 © Threat Actor 3 conversation
-financial-theft —_ business-email-compromise
 4 Phishing: Spearpt
 Overview Observations (5 Related IOCs (16 Context 5
 REVELATION CONTEXT
 SCAM TYPE PERSONA
 Invoice Fraud Panicked bank customer
 MITRE ATT&CK MISP TAXONOMY
-71566.002 rsit:fraud="Fraud”
 CONTEXT EXCERPT
 “Fake payment update notice with new IBAN to intercept legitimate business payment”
 SEMANTIC ROLE
@@ -1393,16 +1349,13 @@ NEXT >
 
 ## Slide 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-# Busrer
 Impact
 Conversations
-PD RX
 10C Explorer
-99
-‘o
 2 Clusters
 Personas
 Monitoring
@@ -1414,10 +1367,8 @@ ScamBuster Cluster #D49D (3 conversations)
 & Export STIX
 Multi-type cluster (2 scam categories) on a shared IBAN (****5432), 3 conversations. IOCs revealed on turn 1, payment initiation tactic.
 *% PSYCHOLOGICAL PROFILE
-ID 22 202 0 oss
 impersonates a known vendor or finance contact and applies deadline pressure to Force an unverified payment to a newly supplied account.
 ala! gradual argets: Employees in finance and accounts-payable roles.
-PAYMENT_INITIATION 0.70 ) °
 © ACTIVITY PATTERN
 22 Jul 2026-3 dian gap 5.1h . path
 19:00 Wed
@@ -1425,16 +1376,15 @@ threat -actor - -5cac3aa6-c806-5310-9d27-5d81c62f2e9d
 G URGENC AUTOMATION
 Payment Initiation Turn 1 84% Templated
 = @ ScamBusTeER
-« PREV NEXT >
 ```
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 &
-* BUSTER
 Impact
 Conversations
 10C Explorer
@@ -1445,40 +1395,28 @@ Settings
 EN
 Logout
 Hesitation: 2 conversations
-| 38) deedeoe:
 | Fake 39) deedeoe:
-| fc #3) deedeoe:
-| cE Wa) deedeoe2
-| #4) deedeoe2
 Anchor 1OCs (2) Conversations (3)
-(EBD) cee2west12345608765432 | z |
-@
 Money Mule Account
-98d0001 Invoice Fraud 100
 d9ed9002 Ceo Fraud 100
-GBR «422079460142
-SS 49640063 Invoice Fraud 00,
 ® ABUSE / TAKEDOWN REPORT
 Factual first-party report — each indicator routed to the desk that can action it.
 &, Download .txt
 ScamBuster Cluster #D49D (3 conversations) @@i=aa==>
 conversations || 10 inbound msgs | | 2 actionable 1OCs | | © 3.2d wasted
-INVOICE FRAUD
 ACTIONABLE INDICATORS — REPORT EACH TO:
-( GM) cee2west12345698765432
 > Issuing bank / national financial-crime unit -3 conv ]
-( GBR 442070460142
 > Telecom carrier / national telecom regulator - 3 conv ]
 f > Full report text (ready to paste into an abuse complaint)
 }
 First-party honeypot observation; indicators are actor-supplied and have not been independently verified against external reputation sources. Provided for defensive / takedown purposes.
 = @ ScamBusTeER
-« PREV NEXT >
 ```
 
 ## Slide 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Your own instance in under an
@@ -1493,7 +1431,8 @@ D
 
 ## Slide 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Two ways to run it.
@@ -1504,13 +1443,12 @@ Learn who is targeting you, and block companies. For CTI teams and Law
 their accounts before a real wire goes enforcement who want to find these
 out. groups and shut them down.
 Same tool. Both directions.
-©} scanBusteR
-« PREV NEXT >
 ```
 
 ## Slide 81
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What it does not do.
@@ -1526,7 +1464,8 @@ Big E ( « PREV NEXT >
 
 ## Slide 82
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What it does not do.
@@ -1543,14 +1482,14 @@ Abuse reports stay drafts. A human
 sends them.
 It never makes fake documents. That
 is forgery.
-©} scanBusteR
 « PREV
 NEXT >
 ```
 
 ## Slide 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 88 / CLOSING — REMEMBER THIS MAN
@@ -1561,29 +1500,30 @@ Be. ctu CLOSING « PREV NEXT >
 
 ## Slide 84
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Confidential wire today. Keep it between us."
 He never spoke to a person. He spoke to Peter.
-[_ eeeeeeeies rh « PREV NEXT >
 ```
 
 ## Slide 85
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Confidential wire today. Keep it between us."
 He never spoke to a person. He spoke to Peter.
 He did his homework. He scraped the company, found the CEO,
 found the person who runs payments.
-[_ eeeeeeeies I « PREV NEXT >
 ```
 
 ## Slide 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The employee he trusted
@@ -1592,23 +1532,23 @@ I built him.
 Every scam Like this is one Lie, about who sends the email.
 His had two. The man he worked all day was mine.
 x So — who scams the scammers?
-« PREV NEXT >
 ```
 
 ## Slide 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 And one account was not
 only his.
-@ SCAMBUSTER
 « PREV ~— NEXT >
 ```
 
 ## Slide 88
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 And one account was not
@@ -1618,24 +1558,23 @@ only his.
 
 ## Slide 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 And one account was not
 only his.
 three conversations + same cash-out pipe
-« PREV NEXT >
 ```
 
 ## Slide 90
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Their psychology is the
-vulnerability.
 The persona is the exploit.
 GITHUB.COM/LAUGIOV/SCAMBUSTER
-A
 > SCAMBUSTER « PREV NEXT >
 ```

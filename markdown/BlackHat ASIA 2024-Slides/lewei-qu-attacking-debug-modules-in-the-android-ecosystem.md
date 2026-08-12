@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Lewei Qu-Attacking Debug Modules In The Android Ecosystem.pdf"
 pages: 36
 sha256: "c42cf67bbb752141205744065b38e86d086167d4d73fc6e322ff1c52fda69da9"
-text_chars: 18080
-ocr_pages: 13
+text_chars: 15114
+ocr_pages: 12
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:49:28Z"
+converted_at: "2026-08-12T04:48:21Z"
 ---
 # Attacking Debug Modules In The Android Ecosystem
 
 **Speakers:** Lewei Qu  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Lewei Qu-Attacking Debug Modules In The Android Ecosystem.pdf` (36 pages)
+
 
 ## Slide 1
 
@@ -30,14 +36,12 @@ Lewei Qu(曲乐炜) Chief Information Security Officer, Mogo Auto
 
 #BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-\
 _ blackhat
-. ASIA 2024>—~
 APRIL 18-19, 2024 | lat
-, . "BRIEFINGS | >
 Attacking Debug Modules In The Android
 Ecosystem
 Lewei Qu(HHERKS)
@@ -171,12 +175,10 @@ https://developer.android.com/studio/debug/dev-options
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Android Debug Architecture
 Android Debug Bridge analysis
 System APP Frameworks Native Daemon
@@ -185,7 +187,6 @@ ADE Debug
 Open USB debugging Al ebugging
 adb
 . adbd
-Settings. Global. ADB_ENABLED ndroid.debug |AdbManage}, “tl Start
 User ContentObserver listening User
 SettingsProvider
 ```
@@ -198,34 +199,22 @@ SettingsProvider
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Android Debug Architecture
 Log capturing
-| _ Android ART Native
-android telephony .Riog|iS ALOGV, ALOGW | =
-android.util. Log|##2
 RLOGD, RLOGE| Radio
 SLOGI, SLOGW| System
-android.util.EventLog|i2at
-android.util. Slog |#=32
 Log.printin_native |
-v
 libandroid_runtime.so
 y ¥ # android user-space log man
 __android_log_write __android_log_print type logd, domain, domain_deprecated, mlstrustedsubject;
-ee | Unix Domain Socket) , type logd_exec, exec_type, file_type;
-n4—
-__android_log_write_log_message idevisocketlogdw — |——recv > LogListener
 init_daemon_domain(l
 liblog logd # Read access to pseudo filesystems.
 H r_dir_file(logd, proc)
 r_dir_file(logd, proc_net)
-android_logger_listread = (<—————recv idevisocketlogdr = € —writev LogReader
 A allow self:capability setuid setgid sys_nice audit_control
 allow self:capability2 syslog;
 allow self:netlink_audit_socket create_socket_perms nlmsg_write
@@ -234,8 +223,6 @@ ow stem syslo
 allow
 logcat allow
 1 kmsg_device:chr_file w_file_perms;
-—>
-—>
 xd system_data_file:file r_file_perms;
 ```
 
@@ -273,50 +260,32 @@ xd system_data_file:file r_file_perms;
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Vendor Debug Architecture
-.
 Vendor U log capturing
 BEX ‘A
-Native Daemon | ae
 Android Log
 BT HCl Log qx
-- ylog(system qu
-| Unix Domain Socket | __ wo’ Ap Cap tog -
 ” @ylog_cli | ' ey srtd(system) ARM Pom Log
 System APP — : DSP Log Output Mode >
 p pe ' mlogservice(shell) DSP Log .
-Log Management —_ Bennet og Stings
 com.sprd.logmanager { : WIFI/BT Log .
-p af, @modem_log_service \ GNSS Log ax
-Android Log Control ff —— ' | connmgr(system) Others sev ng —
-APLogControl t , Sensorhub Log '.
 System APP t af AG-DSP Pcm Dump Log
 ; AT Command Control ‘ ” @wend HAL Service | AG-DSP Log é
 security code | ATControl ' ' DSP Pcm Log
 Engineering Mode ‘ ' CP Cap Lo qx
 com.sprd.engineermode Modem Log Config y m, _ | el vendor. sprd.hardware.cplog_connmgr@1.0-s: orca ap Log
 CPControl ' ' orca dp Log
-PP invok '
 SE PES Modem Abnormal Monitor
-@ylog_cli_cmd ' vendor.sprd.hardware.log@1.0-service
 WIFI/BT/GNSS log
-WenControl
-@hidi_slogmodem
 Modem Log Control '
 CPLogControl ' ; Native Daemon
-@hid|_wend
 slogmodem(root)
 @hidie_modemd
 modemlog_connmgr_service
 (root)
-eee: 7 ee eee ee
-og_service(root)
 ```
 
 ## Slide 14
@@ -327,21 +296,15 @@ og_service(root)
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
-Vendor Debug Architecture
 Vendor M log capturing
 Send administrative commands through uds
 | | | | Ustening for mooming commands
-emdiogger mobile log d netdiag connsyslogger
-@mdiogger.socket @mobilelogd ldev/sooket/netdiag @connsysfwiogd
 | | | Get different types of logs
 logd atf log drvier ftrace kernel module
-@devw'socket/logdr /proc/atf_log/atf_log ‘sys/kemel/debug/ tracing
 ```
 
 ## Slide 15
@@ -350,15 +313,11 @@ logd atf log drvier ftrace kernel module
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
-Vendor Debug Architecture
 Vendor U function verification/Factory testing tools
-Androidh as:
 10
 | Framework |
 Binder Call |
@@ -366,18 +325,14 @@ Wi-Fi test ' i yn)) #141
 RF CALI test
 RIC test getMacAdress
 System APP Backlight test ; 7 BluetoothManager
-Camera test “ —_getaderess
 3rd APP invoke > ey hutoatt ools = |System Version test SystemVersionTest}— _
 GPS test \\.___ [Unix Domain Socket |__ Native Daemon
 \getsn
 Bluetooth test YON
-\ 4 @enscesresk sre | |_| |_| phasecheckserver
 SIM card test \) = (system)
 - OTG test
 File Read --, System File
-*| /proc/version
 5 File Open
-/sysfouchscreen/chip_id
 ```
 
 ## Slide 16
@@ -412,36 +367,21 @@ File Read --, System File
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Threat Module
 third-party APP
 remote debug
 tools | | |
 Network Socket A). — i call service call broadcast receive provider call >
-2 | vl Ava awa ava
 System APP EngineerMode Validationtools
-fx
-s! , ra ; Unix Domain Socket s! , LL
-fo /—i
 Bluetooth WIFI wifi log network log
-Framework sais
 Daemon
-Camera | aes modemlog | | wu.
 “~! log HAL connmrg
-Is HAL
-[CHIDL > HAL
 L“ | Service
-modemHAL|) |...
-lOCIL> =
-= v_W"
-“ _ ylog_buffer agnss_dbg
 L | Driver
-debugitracing) | su.
 ```
 
 ## Slide 19
@@ -486,64 +426,44 @@ debugitracing) | su.
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-ASIA 2024
 Attacking Debug Driver
-> Entry point: File Operations
-> Memory Corruption, Information Leak......
-_ creeps Sepp Serene
-WARNING: CPU: 1 PII
-5755 at sprd_sysdump_write+@x1d0/@x20c
-[ 3431.001448] Modules linked in: ic
-dwl_ng(0) fla
-2721(0) sprd_fm(0) sprdbt_tty
-[ 3431.001501] CPU: 1 PI
-5755 Comm: poc_qlw Tainted: G WoO 4.14.1
-[ 3431.001504] Hardware name: Spreadtrum SC9863A-1H1@ Board (DT)
-[ 3431.001509]
-3 task.stack: @000000057e69639
-[ 3431.001514] sdi ite+@x1d0/@x2ec
-di
-31.001518] at sprd_ x1d0/@x20c
-[ 3431.001522] pe : [<ffffffscess6fo r : [<ffffFF800846FO80>] pstate: 60400045
-[ 3431.001525] sp : fff fff8ee9c13d50
-[ 3431.001527] x29: ffffffse09c13d80
-[ 3431.001534]
-[ 3431.001540]
-13 [ 3431.001550]
-[ 3431.001557]
-[ 3431.001563]
-[ 3431.001571]
-3431.001577]
-3431.001583]
-3431.001589]
-3431.001594]
-3431.001604]
-3431.001610]
-3431.001616]
-3431.001634
-3431.001637] beee3bal 91019000 913dd821
-3431.001660] 54000421
-3431.001680] b@003ba1 9
-3431.001700] 52800001
-[
-[
-[
-[
-[
-[
-[
-[ 3431.001622
-[
-[
-[
-[
-[
-[ 19
-3431.001720] f@80 4210000 14000006 aa0003e2 cb@20268 8b2802a0 2a1f
+➢ Entry point: File Operations
+➢ Memory Corruption，Information Leak……
+
+1   WARNING: CPU: 1 PID: 5755 at sprd_sysdump_write+0x1d0/0x20c
+2   [ 3431.001448] Modules linked in: sprdwl_ng(O) flash_ic_sc2721(O) sprd_fm(O) sprdbt_tty(O) gt9xx_ts(O) gslX680_ts(O) himax_ts(O) tcs3430(O)
+3   [ 3431.001501] CPU: 1 PID: 5755 Comm: poc_qlw Tainted: G           W  O    4.14.133 #1
+4   [ 3431.001504] Hardware name: Spreadtrum SC9863A-1H10 Board (DT)
+5   [ 3431.001509] task: 0000000075332dd3 task.stack: 0000000057e69639
+6   [ 3431.001514] PC is at sprd_sysdump_write+0x1d0/0x20c
+7   [ 3431.001518] LR is at sprd_sysdump_write+0x1d0/0x20c
+8   [ 3431.001522] pc : [<ffffff800846f080>] lr : [<ffffff800846f080>] pstate: 60400045
+9   [ 3431.001525] sp : ffffff8009c13d50
+10  [ 3431.001527] x29: ffffff8009c13d80 x28: ffffffc078b7e200
+11  [ 3431.001534] x27: ffffff8008962000 x26: 0000000000000040
+12  [ 3431.001540] x25: 0000000000000124 x24: ffffffc078b7e200
+13  [ 3431.001550] x23: 0000000000000000 x22: 0000000000300000
+14  [ 3431.001557] x21: 0000007fdae36bf8 x20: 0000007fdae36bf8
+15  [ 3431.001563] x19: 0000000000300000 x18: 00000000000000ac
+16  [ 3431.001571] x17: 00000000000000ac x16: ffffff8009064cc4
+17  [ 3431.001577] x15: 0000000000000004 x14: 000000000000003c
+18  [ 3431.001583] x13: 000000000004a578 x12: 0000000000000000
+19  [ 3431.001589] x11: 0000000000000001 x10: 0000000000000007
+20  [ 3431.001594] x9 : 90ccfcb0d45ec300 x8 : 90ccfcb0d45ec300
+21  [ 3431.001604] x7 : 0000000000000000 x6 : ffffff80090af233
+22  [ 3431.001610] x5 : 0000000000000000 x4 : 0000000000000008
+23  [ 3431.001616] x3 : 0000000000000021 x2 : 0000000000000001
+24  [ 3431.001622] x1 : 00000000000000c0 x0 : 0000000000000027
+25  [ 3431.001634] \x0aPC: 0xffffff800846f000:
+26  [ 3431.001637] f000  913dd821 97f266e7 2a1f03e0 94000035 d0003ba0 b0003ba1 91019000 913dd821
+27  [ 3431.001660] f020  97f266e0 d0005669 f94007e8 f9478529 eb08013f 54000421 aa1303e0 a9437bfd
+28  [ 3431.001680] f040  a9424ff4 f9400bf5 910103ff d65f03c0 d0003ba0 b0003ba1 91008000 913dd821
+29  [ 3431.001700] f060  97f266d0 d4210000 14000000 b00039a0 913f6c00 528000a1 aa1303e2 97f266c9
+30  [ 3431.001720] f080  d4210000 14000006 aa0003e2 cb020268 8b0802a0 2a1f03e1 941335fa b0003ba0
 ```
 
 ## Slide 23
@@ -563,21 +483,6 @@ di
 - ➢ 3 vendors
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-ASIA 2024
-Issue
-Vendor
-Vulnerability Discov
-Weakness Domain
-Findings
-> 49 CVEs Credit
-> 3 vendors
-mobile jog. d
-```
 
 ## Slide 25
 
@@ -603,45 +508,33 @@ Leaking various device identification codes
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-ASIA 2024
 Information Disclosure
 > Debug APP: EngineerMode
 Leaking various device identification codes
 if(this.mPcscfSwitch != null) {
 v@_3 = SystemPropertiesProxy.get(
--d( .
 if("".equals(v@_3)) {
 this .mPcscfSwitch.setChecked(false);
-this .mPcscfSwi
 else {
-this .mPcscfSwitch.setChecked(true) ;
 v1_1 = this.mPcscf
 v1_1.setSummary(this.getString(@x7Fe
 e public
-v5
-getCdmalnsi() {
-(ve, 5
 int v1 = this.getPhoneCount();
 v2 = new (v1)5
 for(v4 = ©; true; ++v4) {
-v2.add(v5) 5
 v1_l = v25
 Ant v2_1 = this.getPhoneCount();
-white(v3 < v2_1) {
 tch.setSummary(this.getString(@x7F
 + v@_3.trim());
 elephonyManagerProxy . INSTANCE .getCdmaImsi (v3);
 4f(v4_1 == mult) {
-((List)vi_1).set(v3, v5);
 }
 else
-((List)vi_1).set(v3, v4_1)5
 }
-+435
 (ve, + Collectionskt. joinToString$default(vi_1, mull, null, null, @, null, null, @x3F, null));
 return ((List)v1_1);
 Code
@@ -649,7 +542,6 @@ Code
 Code
 @3-11 13:35:52.354 12774 12774 D PHONEINF: get all IP
 @ (value={ » @ public getAllimei() {
-d(ve, ds
 int v1 = this.getPhoneCount();
 v2 = new (v1);
 int v4;
@@ -660,7 +552,6 @@ while(v3 < v2_1) {
 v4_1 = this.getTelephoneMgr().getImei(v3);
 Intrinsics.checkExpressionValueIsNotNull(v4_1, ;
 (( )v1_1).set(v3, v4_1);
-++v35
 d(ve, + Collectionskt.joinToString$default(v1_1, null, null, null, @, null, null, @x3F, null))
 return (( )vi_1);
 ```
@@ -705,12 +596,10 @@ return (( )vi_1);
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Local Privilege Escalation
 > CVE-2022-47339 | int64 astcall sub_21BC(_intea a1)
 at
@@ -728,10 +617,7 @@ v14[40976]; //
 _ReadStatusReg(ARM64_SYSREG(3, 3, 13, @, 2));
 = *(_DWORD *)(al + 256);
 = *(int *)(al + 260);
-memset ( » @, @xA@@2@ULL) ;
 = pthread_self();
-pthread_detach(uA);
-zit v = popen((c<
 t405g_m8t3:/ # ls -al /data/local/tmp
 total
 -rw-rw-rw- 1 shell shell @ 2022-09-14 11:26 \r
@@ -739,7 +625,6 @@ drwxrwx--x 3 shell shell 3488 2022-09-18 @8:33 .
 drwxr-x--x 5 root root 3488 2022-06-25 21:16 ..
 drwxrwxrwx 5 shell shell 3488 2022-09-15 13:59 .studio
 -rw-rw-r-- 1 shell shell 3624718 2022-09-13 22:10 1.png
-22-09-18 08:34 222 —>
 ```
 
 ## Slide 30
@@ -750,28 +635,21 @@ drwxrwxrwx 5 shell shell 3488 2022-09-15 13:59 .studio
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-ASIA 2024
 Exploiting vulnerabilities
 > CVE-2022-27250(Duplicated with Kryptowire)
 Kryptowire Identifies Security and Privacy
 Vulnerability in Mobile Device Chipset from China
 The params are receviced and could test the functions in device. Such ase
 1, Camera’
-2, Phone
-3. FM#
-4. BI=
 March 15, 2022 — McLean, VA, United States—Kryptowire Inc., a mobile security and privacy solutions company, today 5. Video
 announced that they have identified a critical security and privacy vulnerability affecting mobile devices with UNISOC, ;
 China's largest designer of chips for mobile phones. The vulnerability within the chipset, if exploited, allows malicious 6. Witie
 actors to take control over user data and device functionality. 7 GPS
-x
 Specifically, the vulnerability allows intruders to access call and system logs, text messages, contacts, and other private Boon el
-x
 data, video record the device's screen or use the external-facing camera to record video, or even take control of the
 device remotely, altering or wiping data. Adhering to its disclosure policy, Kryptowire notified affected device
 manufacturers and carriers, as well as UNISOC, of the vulnerability in December 2021.
@@ -788,38 +666,26 @@ user release build.
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2024
 Exploiting vulnerabilities
 > CVE-2022-27250(Duplicated with Kryptowire)
 fusr/bin/env python3
-this sete nction(this.mStatusChangedt istener)); y
 - import socket
 this. setCurrentAc kAction. getInstance(this.mStatusChongedt istener
 import sys
 import sys
-it
-this. tAction.getInst , this Back
-af a
 def send(payload):
 this. setCurr
 aa : s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(("172.24.65.249", 7878))
-af
 ths ark2Action(this.mStatusChangedt istener, this.mContext)); s.send(payload.encode())
-a( equals(args)) ( - print("Feed back :")
-this. setCurrentAction(RTCTestaction.ge as ener, this.nackStatusChongedl istener));
 (2000) )
-ance (this ms:
-ScriptAction(this.aStatusChangedListener)); ——
 1|tue5g_ms8t3:/ $ netcat 127.6.8.1 1234
 id
 uid=1000(system) gid=1000(system) groups=1000(system) ,1013(media) ,1023(media_rw) ,1065(reserved_disk) ,2001(cache) , 3001(ne
-t_bt_admin) , 3002(net_bt) , 3903(inet) ,9997(everybody) ,9997(everybody) context=u:r:sprd_autoslt_app:s@:c512,c768
 ```
 
 ## Slide 32

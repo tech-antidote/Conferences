@@ -12,7 +12,7 @@ duration_seconds: 2581
 words: 5722
 text_chars: 34213
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Kill Chain Reloaded - Abusing legacy paths for stealth persistence

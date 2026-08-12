@@ -1,5 +1,5 @@
 ---
-title: "That Gambling Site It's Fueled by Chinese Organized Crime materials"
+title: "Advice for Establishing A Brand"
 speakers: ["Maël Le Touz", "Renée Burton"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2024"
@@ -11,15 +11,22 @@ sha256: "69da5c25bdda0dbff923592b08d65b7a96766617315f8b7c5aa784943c1a0aed"
 text_chars: 5877
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
+content_note: "Supporting material, not the talk: an appendix shipped alongside the deck."
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:34:40Z"
+converted_at: "2026-08-12T04:36:10Z"
 ---
-# That Gambling Site It's Fueled by Chinese Organized Crime materials
+# Advice for Establishing A Brand
 
 **Speakers:** Maël Le Touz, Renée Burton  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maël Le Touz & Renée Burton_That Gambling Site It's Fueled by Chinese Organized Crime_materials.pdf` (3 pages)
+
 
 ## Slide 1
 

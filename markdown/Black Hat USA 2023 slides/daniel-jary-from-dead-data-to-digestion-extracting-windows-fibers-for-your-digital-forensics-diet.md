@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Daniel Jary_From Dead Data to Digestion Extracting Windows Fibers for Your Digital Forensics Diet.pdf"
 pages: 33
 sha256: "eb0627cfb800445ba2d60b79817df5558f958499fbc94caa07aaa8c166a1cc6f"
-text_chars: 10533
+text_chars: 10273
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:07Z"
+converted_at: "2026-08-12T04:07:56Z"
 ---
 # From Dead Data to Digestion Extracting Windows Fibers for Your Digital Forensics Diet
 
 **Speakers:** Daniel Jary  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Jary_From Dead Data to Digestion Extracting Windows Fibers for Your Digital Forensics Diet.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -157,7 +163,8 @@ Fiber Callback functions
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Windows Fiber API
@@ -219,20 +226,18 @@ Switch ToFiber()
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Why are fibers appealing to attackers?
 *
-‘ 1
 1 Q?
 oO 1
-v Vv
 Simplicity Obscure & niche Immature detection capability
 Easy to use API Threat hunters unlikely to be No Driver supplied callbacks
 looking for this
 No complex syncronization
-objects -
 How do they determine what
 In-built fiber safety is legitimate/malicious?
 No remote enumeration functions
@@ -529,30 +534,25 @@ RWX Memory protection
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Detection example 2 - Callback manipulation
 “fiber_callbacks": [
 if
 “callback”: 4991471925827290437,
-ov “callbackMemProt”™: @,
 FisAlloc() — evil callback “callbackMemState”: 4896,
 “callbackMemType": 16777216,
-_ _— i _ _ @) linen Besser": "C: \\Users\\Dan\\Downloads\\a.d11",
 “callbackSymbol"; “",
-FESEUETES “callbackUnbackedMem": false,
 “index": 6
 Delete! hs {
-Petes) “callback”: 5@63812098665367116, RWX Memory
-@)callbackMemProt” : 64,4 .
 “callbackMemState”: 4096, protection
 “callbackMemType”: 131072,
 “callbackModBaseName": "",
 “callbackSymbol": “",
 “callbackUnbackedMem": true,
 “index": 7
-‘ConvertThreadToFiben()
 28
 ```
 

@@ -12,7 +12,7 @@ duration_seconds: 1302
 words: 3445
 text_chars: 18253
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Welcome to DEF CON 33

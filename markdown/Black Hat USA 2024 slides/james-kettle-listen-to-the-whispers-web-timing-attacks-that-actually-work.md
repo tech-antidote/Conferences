@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work.pdf"
 pages: 35
 sha256: "cbe2ca84288d013929827f8492873aebdc30d316dfc8679636ab26a7f0743c56"
-text_chars: 11924
-ocr_pages: 10
+text_chars: 11612
+ocr_pages: 9
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work_tools.txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:33:09Z"
+converted_at: "2026-08-12T04:33:55Z"
 ---
 # Listen to the Whispers Web Timing Attacks that Actually Work
 
 **Speakers:** James Kettle  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/James Kettle_Listen to the Whispers Web Timing Attacks that Actually Work.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -41,7 +47,8 @@ def strcmp(s1, s2): for c1, c2 in zip(s1, s2): if c1 != c2: return False time.sl
 
 <u>The timing divide</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The timing divide
@@ -50,7 +57,6 @@ The timing divide
 200ms
 30ms
 Delay
-7us
 5ns?
 Attacks I've used
 Is there a bug report containing 'API-KEY: XYZ’
@@ -67,7 +73,8 @@ Attacks I've read about
 
 200μs (0.2ms, 0.0002 seconds)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Time gap (us)
@@ -101,7 +108,8 @@ Making timing attacks that work everywhere
 
 <u>The equation for timing attack success</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The equation for timing attack success
@@ -122,7 +130,8 @@ jitter
 
 Timeless Timing Attacks (2020)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Making timing attacks ‘local!
@@ -132,8 +141,6 @@ Timeless Timing Attacks (2020) |
 6 Ti + Network Network — Internal Internal
 ime latency jitter latency jitter
 Delay
-Request 1 (uN SN =D
-Request 2 SO is Bi
 ```
 
 ## Slide 9
@@ -158,17 +165,15 @@ SPA v1 (2023)
 
 SPA v2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Making timing attacks universal: single-packet attack
 TCP packet TCP packet
 k
-concn, OB 28 | ome
-BS 8
 Some servers start processing here :(
 SPA v2 Bak
-... y
 TCP packet
 | TCP packet |
 ```
@@ -282,11 +287,11 @@ Invalid JSON speeds the response up by 0.2ms `"error": { key=aa\"bb "message": "
 
 <u>Blind server-side parameter pollution</u>
 
-```
+\```
 /path?objectId=57%23Can't parse parameter180ms
 /path?objectId=57%21Can't parse parameter430ms
 Hypothesis: /backend?objectId=57#important-param=X
-```
+\```
 
 You need to know what to expect
 
@@ -298,7 +303,8 @@ Reverse Proxy Misconfigurations Detect scoped-SSRF Find internal targets
 
 _will the front-end proxy to arbitrary subdomains?_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Reverse Proxy
@@ -312,12 +318,13 @@ will the front-end proxy to arbitrary subdomains?
 
 <u>SSRF via open reverse proxy</u>
 
-```
+\```
 GET / HTTP/1.1
 Host: xyz.burpcollaborator.net
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SRF via open reverse proxy
@@ -417,73 +424,68 @@ Detect scoped-SSRF
 
 - Online services: columbus.elmasy.com & dns.projectdiscovery.io
 
-```
+\```
 Entry point
 mail.example.com
-```
+\```
 
-```
+\```
 Host header
 mail.example.com
-```
+\```
 
-```
+\```
 Result
 HTTP/1.1 302 Found
 Set-Cookie: sid=abc
 X-Cache: miss
-```
+\```
 
-```
+\```
 proxy.example.com
-```
+\```
 
-```
+\```
 mail.example.com
-```
+\```
 
-```
+\```
 HTTP/1.1 302 Found
 Set-Cookie: sid=def
-```
+\```
 
 ## Slide 27
 
 <u>Firewall bypass</u>
 
-```
+\```
 Entry pointHost headerResult
 sonarqube.redactedsonarqube.redacted-reset-
 app.redacted (proxy)sonarqube.redacted200 OK
-```
+\```
 
 ## Slide 28
 
 <u>Firewall bypass – invisible route variant</u>
 
-```
+\```
 Entry pointHost headerResult
 admin.redacted.govN/ADNS probe fail
 www.redacted.govadmin.redacted.gov200 OK
-```
+\```
 
 ## Slide 29
 
 <u>Front-end rule bypass</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Front-end rule bypass
 Firewall |
-(lo =:
-a~S =
 eg}, =
-og 7 as 5 90) Front end
 SX Target
-{/
-ae
-CKD ee =H}=://=
 Reverse Publi
 UDIIC
 proxy websites
@@ -495,23 +497,19 @@ Access is forbidden.
 
 <u>Front-end impersonation</u>
 
-```
+\```
 Service-Gateway-Is-Newrelic-Admin: true
 Service-Gateway-Account-Id: 934454
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Front-end impersonation
 Firewall
-OEE f=
-& =—-
 CHER Front end =
 Target
-foo |
-foo | = f=7 (=
-CoD ee = |[=:]]=
 Reverse Public
 proxy websites
 Service-Gateway-Is-Newrelic-Admin: true
@@ -523,22 +521,6 @@ Service-Gateway-Account-Id: 934454
 CTF https://listentothewhispers.net/
 
 Param Miner Turbo Intruder - > Timing.py
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-CTF
-https://listentothewhispers.net/
-Ul ———
-ete
-a e
-S eo-o
-O
-¢
-o,e
-Param Miner [| |= =z ha——
-jee Intruder -> Timing.py
-```
 
 ## Slide 32
 

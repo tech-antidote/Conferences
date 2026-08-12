@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Arun Kanuparthi & Hareesh Khattri & Jason Fung & Jeyavijayan JV Rajendran & Ahmad-Reza Sadeghi-The HackDAC Story Learnings from Organizing the World's Largest Hardware Hacking Competition.pdf"
 pages: 47
 sha256: "8b9f634fc4b1c46ad7c63175bf90df4f49dd5a47ac1347ad3bd52cbfd99a49ce"
-text_chars: 23189
-ocr_pages: 8
+text_chars: 21731
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:49Z"
+converted_at: "2026-08-12T04:46:43Z"
 ---
 # The HackDAC Story Learnings from Organizing the World's Largest Hardware Hacking Competition
 
 **Speakers:** Arun Kanuparthi, Hareesh Khattri, Jason Fung, Jeyavijayan JV Rajendran, Ahmad-Reza Sadeghi  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Arun Kanuparthi & Hareesh Khattri & Jason Fung & Jeyavijayan JV Rajendran & Ahmad-Reza Sadeghi-The HackDAC Story Learnings from Organizing the World's Largest Hardware Hacking Competition.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -625,18 +630,6 @@ Non-Inserted Security Vulnerability
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat Advertisement
-¢ Website updated with Call for Participation
-¢« Advertised on social media
-HAGK
-The
-SILICON
-i TEXAS“ intel SYNOPSYS’ [one
-```
-
 ## Slide 28
 
 ## Competition: Phase 1
@@ -665,11 +658,11 @@ i TEXAS“ intel SYNOPSYS’ [one
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
-blackhat Submission and Scoring
 Team name > Security feature > Finding > Location or code >
 bypassed reference
 Register Lock Control _In access control register wrapper file, reglk_ctrl _ piton/design/chip/tile/arian
@@ -679,11 +672,6 @@ reglk_ctrl signal indicates the peripheral is locked
 otherwise bits set to '0' indicate normal operation
 Therefore, by default reglk_ctrl should always be
 set high to prevent unauthorized access. We
-found that only lower half of the reglk_ctrl is set
-from 8-bit input reglk_ctrl_i and higher bits are set
-to 0. Thus, all bits from 8-15 are set to 0 and
-should not be accessed for any read/write
-operation. In acc_wrapper.sy, at line 96, 98 and
 Specific security feature that participants managed to bypass
 ```
 
@@ -709,16 +697,13 @@ How was the vulnerability identified? - Simulation
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
-blackhat Submission and Scoring
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact >
 bypassed reference
-other wrappers, all the
-secure data can be read
-out.
 Register Lock Control _In access control register wrapper file, reglk_ctrl__ piton/design/chip’tile/arian Manual analysis + User This bug will lead to
 signal unset signal is responsible for reading/writing the signal e/src/acct/acct_wrapper.s level assertion accessing peripheral
 for locked peripherals. All bits set to ‘1 of v, Line 96, 98 and 100 generation + Formal device even when its
@@ -726,11 +711,6 @@ reglk_ctrl signal indicates the peripheral is locked property verification regis
 otherwise bits set to '0' indicate normal operation using Synopsys state (which ideally
 Therefore, by default reglk_ctrl should always be VCStatic should have restricted
 set high to prevent unauthorized access. We its access)
-found that only lower half of the reglk_ctrl is set
-from 8-bit input reglk_ctrl_i and higher bits are set
-to 0. Thus, all bits from 8-15 are set to 0 and
-should not be accessed for any read/write
-operation. In acc_wrapper.sy, at line 96, 98 and
 What is the security impact of bypassing security feature?
 ```
 
@@ -742,16 +722,12 @@ What is the security impact of bypassing security feature?
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat Submission and Scoring
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact > Adversary profile = Proposed >
 bypassed reference mitigation
-other wrappers, all the
-secure data can be read
-out.
 Register Lock Control _In access control register wrapper file, reglk_ctrl__ piton/design/chip’tile/arian Manual analysis + User This bug will lead to Unprivileged software at One line verilog change
 signal unset signal is responsible for reading/writing the signal e/src/acct/acct_wrapper.s level assertion accessing peripheral user-level mode in acct_wrapper.sv:
 for locked peripherals. All bits set to ‘1 of v, Line 96, 98 and 100 generation + Formal device even when its reglk_ctri[13] ->
@@ -759,11 +735,6 @@ reglk_ctrl signal indicates the peripheral is locked property verification regis
 otherwise bits set to '0' indicate normal operation using Synopsys state (which ideally
 Therefore, by default reglk_ctrl should always be VCStatic should have restricted
 set high to prevent unauthorized access. We its access)
-found that only lower half of the reglk_ctrl is set
-from 8-bit input reglk_ctrl_i and higher bits are set
-to 0. Thus, all bits from 8-15 are set to 0 and
-should not be accessed for any read/write
-operation. In acc_wrapper.sy, at line 96, 98 and
 Mitigation suggestions
 ```
 
@@ -775,16 +746,12 @@ Mitigation suggestions
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat Submission and Scoring
 Team name > Security feature > Finding > Location or code > Detectionmethod = Security impact > Adversary profile = Proposed > CVSSv3.1 score > CVSSv3.1 Details =
 bypassed reference mitigation and severity
-other wrappers, all the
-secure data can be read
-out.
 Register Lock Control _In access control register wrapper file, reglk_ctrl__ piton/design/chip’tile/arian Manual analysis + User This bug will lead to Unprivileged software at One line verilog change Medium (6.1) CVSS:3.1/AV:LIAC:L/P
 signal unset signal is responsible for reading/writing the signal e/src/acct/acct_wrapper.s level assertion accessing peripheral user-level mode in acct_wrapper.sv: R:L/UE:N/S:U/C:LILHIA:
 for locked peripherals. All bits set to ‘1 of v, Line 96, 98 and 100 generation + Formal device even when its reglk_ctri[13] -> N/RC:C
@@ -854,11 +821,10 @@ Manual vs Automated scoring
 
 Image: “Hacking SoC IP Under Pressure”, SemiEngineering 2018 source
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2024
 Hack@DAC'19 Beta Scoreboard : Live
 Team name Points
 Hackin' Aggies* 465
@@ -866,7 +832,6 @@ NOPS 330
 Always@Posedge 290
 NotATrojan 276
 Alpha4 163
-.thackamole:. 144
 SEC 115
 Team 11 104
 52
@@ -882,23 +847,20 @@ Image: “Hacking SoC IP Under Pressure”, SemiEngineering 2018
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSek hat Competition: Phase 2 (Finals)
-ASIA 2024
-DesignStlest
 ‘ALEXANDER TORRES 20271
 € Special Issue on Hack@DAC
 * SoC Security Evaluation: Reflections on Methodology and Tooling
 * Hardware Penetration Testing Knocks Your SoCs Off
 * Hunting Security Bugs in SoC Designs: Lessons Learned
 * Texas A&M Hackin’ Aggies’ Security Verification Strategies for the 2019 Hack@DAC Competition
-Tutoria’
 * Merged Logic and Memory Fabrics for Accelerating Machine Learning Workloads
 General Interest
 * Real-Time Hardware Implementation of ARM CoreSight Trace Decoder
-CEMA a tttc
 IEEE
 ```
 
@@ -1047,14 +1009,10 @@ Image: “Hacking SoC IP Under Pressure”, SemiEngineering 2018 source
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-blackhat Media Coverage
-ASIA 2024
-YNYEVOoOrPsS>
-FE Times Q)) osu CYBER DEFENSE
 Capture-the-Flag Competitions Need to Include Learning Hardware Security Via Capture-The- Why Do We Need a Standardized Framework to
 Hardware Flag Competitions Enumerate Hardware Security Weaknesses?
 ..4 unique'perspective on technology ~ H ICG k@ DAC:

@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Pliny the Liberator&Philip (injx) Dursey&Adrian (threlfall) Wood&Ads (0xmoose) Dawson&Dustin (ph1r3574r73r) Farley&Sean (seahop) Hopkins_Kinetic Prompt Injection Agent Compromise With a Physical Blast Radius.pdf"
 pages: 32
 sha256: "e48224028570e508a6006e7f21cd625921f9527695494e75635a6acc34495908"
-text_chars: 11720
+text_chars: 11689
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:28Z"
+converted_at: "2026-08-12T05:41:21Z"
 ---
 # Kinetic Prompt Injection Agent Compromise With a Physical Blast Radius
 
 **Speakers:** Pliny the Liberator, Philip (injx) Dursey, Adrian (threlfall) Wood, Ads (0xmoose) Dawson, Dustin (ph1r3574r73r) Farley, Sean (seahop) Hopkins  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Pliny the Liberator&Philip (injx) Dursey&Adrian (threlfall) Wood&Ads (0xmoose) Dawson&Dustin (ph1r3574r73r) Farley&Sean (seahop) Hopkins_Kinetic Prompt Injection Agent Compromise With a Physical Blast Radius.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -296,13 +301,13 @@ BT6.GG
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 forging sensor data
 eee @ threlfall — -zsh — 170x511
 Sat Jul 25 19:43:56 EDT 2026
-Mac. localdomain
 === CASE B (control): lidar stand-in reports person @.3@ m ahead ===
 [07:44:00] [guard_harness] get_obstacle(Direction.font, front_distance=0.8) -> tip='M@AAMBM, R@RHT! ' (elapsed 0.051s)
 [07:44:00] [guard_harness] action_thread.py:479 ‘avoid_obstacle_ is True and tip != ''* -> True
@@ -330,7 +335,6 @@ Mac. localdomain
 [67:44:08] [guard_harness] check 19/20: GUARD PASSES
 | _ sre £@7:44:@8] [guard_harness] check 20/20: GUARD PASSES 16 |
 [07:44:08] (guard_harness] tally: guard PASSED (pounce would fire) 20/20, blocked @/20
-FEC as oy mee
 ```
 
 ## Slide 16

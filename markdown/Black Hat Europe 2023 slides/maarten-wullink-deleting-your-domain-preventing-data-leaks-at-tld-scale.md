@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Maarten Wullink_Deleting Your Domain Preventing Data Leaks at TLD Scale.pdf"
 pages: 51
 sha256: "d548f9132a8488c2844676fdf856b285b9a1f74221167c9417a36e4fe7e13866"
-text_chars: 9839
-ocr_pages: 7
+text_chars: 9988
+ocr_pages: 8
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:35Z"
+converted_at: "2026-08-12T04:03:44Z"
 ---
 # Deleting Your Domain Preventing Data Leaks at TLD Scale
 
 **Speakers:** Maarten Wullink  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Maarten Wullink_Deleting Your Domain Preventing Data Leaks at TLD Scale.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -124,36 +130,34 @@ mail.example.nl
 
 Data leak - Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data leak - Example
 Major data breach at Jeugdriagg:
 medical records of vulnerable children
 leaked
-~*~ Daniel Verlaan
 Due to an error at Jeugdriagg, the files of children with often serious
 psychological problems have been leaked. Despite efforts by Minister Hugo de
 Jonge to better secure healthcare institutions, hardly anything seems to have
 changed in a year and a half.
 Just in
-Anderleq
 Greek tr.
 ranking 2
 Eloise er
 with Prid
 Barbie is|
-director f
 dollars
 Lost Rot
-surgery
 ```
 
 ## Slide 10
 
 Data leak - Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data leak - Example
@@ -346,7 +350,8 @@ Registrations (light blue) and deletes (dark blue)
 
 https://stats.sidnlabs.nl
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Data Sources
@@ -364,18 +369,6 @@ https://stats.sidnlabs.nl
 528 CPU cores 1408G memory 500TB storage
 
 https://entrada.sidnlabs.nl
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Data Platform
-“Y Chestaap
-Parquet
-spark:
-528 CPUcores
-https: //entrada.sidnlabs.nl 1408G memory
-500TB storage
-```
 
 ## Slide 27
 
@@ -504,7 +497,8 @@ Special conditions
 
 Alert Message - Example
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Alert Message - Example
@@ -613,17 +607,59 @@ LEMMINGS cancel-delete ratio vs. baseline ( **0.13%** )
 
 Domains receiving an alert are re-registered more quickly
 
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Do we alert the correct domains?
+1.0 5
+-=-=- Not notified
+—— Risk1
+8} — Risk 2
+Q — Risk 3
+wn
+&
+a
+0.2 5
+0.0 7
+6h -
+24h 4
+7 days 4
+30 days 4
+1 year 4
+Domains receiving an alert are re-registered more quickly
+```
+
 ## Slide 46
 
 ## Do we alert the correct domains?
 
 Alerted and re-registered domains have a new mail server more quickly
 
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Do we alert the correct domains?
+107. Not notified
+084 — Risk 1
+a — Risk 2
+Oo 4
+A
+0.2 5
+0.0 7—-----
+>
+a
+Alerted and re-registered domains have a new mail server
+more quickly
+```
+
 ## Slide 47
 
 Registrant Survey
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Registrant Survey
@@ -636,7 +672,8 @@ Share of participants (%)
 
 Registrant Survey
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Registrant Survey

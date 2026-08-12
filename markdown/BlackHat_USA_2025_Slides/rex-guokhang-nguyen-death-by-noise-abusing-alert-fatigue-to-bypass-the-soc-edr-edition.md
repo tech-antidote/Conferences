@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Rex Guo&Khang Nguyen_Death by Noise Abusing Alert Fatigue to Bypass the SOC (EDR Edition).pdf"
 pages: 47
 sha256: "f3342504fa153ba37551a48e6d1f0d5801807c95d3e555c83c8fb17d11d7a0ed"
-text_chars: 17467
+text_chars: 17301
 ocr_pages: 4
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:00:04Z"
+converted_at: "2026-08-12T05:19:56Z"
 ---
 # Death by Noise Abusing Alert Fatigue to Bypass the SOC (EDR Edition)
 
 **Speakers:** Rex Guo, Khang Nguyen  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Rex Guo&Khang Nguyen_Death by Noise Abusing Alert Fatigue to Bypass the SOC (EDR Edition).pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ converted_at: "2026-08-11T23:00:04Z"
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-ais BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Death by Noise: Abusing Alert Fatigue to
@@ -115,7 +119,8 @@ Targeting Linux Server Workload
 
 Linux Server Threat Landscape
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Linux Server Threat Landscape
@@ -128,17 +133,11 @@ SCARLETEEL Cryptojacking Campaign Exploiting AWS Fargate in Ongoing
 Campaign
 Jul 11,2023 & Ravie Lakshmanan
 sal 2a | > GET THE
-} REPORT
 Cryptocurrency / Cloud Security
 ™@ Subscribe - Get Latest News
 DARKREADING
-Cybersecurity Topics Y World Y TheEdge © DRTechnology Events VY — Resources V
 Ill
-fo)
-paloalto’
 EXPLORE CDR
-© CORTEX'cLouD
-Loup SecuRITY NEWS.
 TeamTNT Hits Docker Containers via 150K Malicious Cloud
 Image Pulls
 Honeypot activity exposed two credentials that the threat actor is using to host and distribute malicious container images,
@@ -443,7 +442,8 @@ Targeting Windows Endpoint
 
 Windows Endpoint Threat Landscape
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Endpoint Threat Landscape
@@ -501,7 +501,8 @@ User double-click fake PDF file & shell session established
 
 Generating ISO File (v2)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Generating ISO File (v2)

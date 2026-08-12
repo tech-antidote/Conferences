@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Alisa Esage_Unveiling the Mysteries of Qualcomm's QDSP6 JTAG A Journey into Advanced Theoretical Reverse Engineering.pdf"
 pages: 32
 sha256: "c0e7f526c902a488642585ad6df5d5acf0c1d07c32d89f4ec8226f4670670522"
-text_chars: 23397
-ocr_pages: 16
+text_chars: 21382
+ocr_pages: 15
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:03:17Z"
+converted_at: "2026-08-12T03:51:34Z"
 ---
 # Unveiling the Mysteries of Qualcomm's QDSP6 JTAG A Journey into Advanced Theoretical Reverse Engineering
 
 **Speakers:** Alisa Esage  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Alisa Esage_Unveiling the Mysteries of Qualcomm's QDSP6 JTAG A Journey into Advanced Theoretical Reverse Engineering.pdf` (32 pages)
+
 
 ## Slide 1
 
@@ -83,7 +90,8 @@ Intro
 
 Recap: Hexagon architecture
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Recap: Hexagon
@@ -92,11 +100,6 @@ Hexagon: programmer's view
 Memory
 (unified address space)
 Load/
-vg P4832 bit Store
-— Instructions
-XTVPE instructions
-‘ALUS2 Instructions
-J Instructions
 CR Instructions
 Sequencer
 Packets of
@@ -104,9 +107,7 @@ Packets of
 $2: X Unit
 XTYPE instructions
 ‘ALUS2 Instructions
-J Instructions
 JR Instructions
-eS
 Control Registers
 Hardware Loop Regs
 Modifier Registers
@@ -142,7 +143,6 @@ eneral
 In many cases, a predicate or general register can be both generated and used in the same
 instruction packet. This feature is expressed in assembly language by appending the suffix
 “new” to the specified register. For example:
-2, #4)
 R3 =
 RS =
 PO = cmp.eq(
@@ -164,7 +164,8 @@ developer.qualcomm.com/download/hexagon/hexagon-v62-programmers-reference-manual
 
 Hexagon™ now
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hexagon™ now
@@ -216,14 +217,14 @@ than M3! than Core Ultra 72 ss :
 
 Trace32 User’s Manual is pessimistic…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Trace32 User’s Manual is pessimistic...
 1. Hexagon Conceptual Basics
 Especially when starting to get familiar with the Hexagon architecture these points are of exceptional
 importance:
-.
 Hexagon iis a’secure platform: by default) debugging is prohibited. Whether the user can debug a
 specific application or not is configured by the application which is executed.
 If you write your own application, please consult the Hexagon documentation on how to enable
@@ -256,7 +257,8 @@ coded software breakpoint will halt the DSP.
 
 Wait, what is ISDB?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wait, what is ISDB?
@@ -282,7 +284,8 @@ Google knows little aside from a few patents…
 
 Mentions in open source code added and removed…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Start researching, mystery builds up...
@@ -297,43 +300,32 @@ if (!kgsl_active_count_get(device)) {
 kgsl_regwrite(device, A AHB_CNTL1, @x@6FFFFFF);
 h k ISDB
 kgsl_regwrite(device, A5XX_RBBM_CLOCK_CNTL_SP®, @x@);
-kgsl_regwrite(device, A5XX_RBBM K_CNTL_SP1, @x@);
 kgsl_regwrite(device, RBBI K_CNTL_SP2, @x®);
 kgsl_regwrite(device, A5XX_RBBM.
 kgsl_regwrite(device, A5XX_RBBM.
 kgsl_regwrite(device, A5XX_RBBM
-kgsl_regwrite(device,
-kgsl_regwrite(device,
 kgsl_regwrite(device,
 kgsl_regwrite(device, A5X
 } else
 KGSL_CORE_ERR(
 “active count failed while turning on TSDB."
 A5XX_RBBM_CLOCK_CNTL, @x@);
-( RBBM_ISDB_CNT, @x0);
 } else {f
-+DEF_MACRO(f£IN_DEBUG_MODE, (TNUM),
 + "in_debug_mode",
 + "“in_debug_mode",
 (thread->debug_mode || (£READ_GLOBAL_REG_FIELD GREEpT "T_DEBUGMODE) & 1<<TNUM)),
 + )
 +)
 +DEF_MACRO(fIN_DEBUG_MODE_NO (TNUM),
-& "in_debug_mode",
 + "in_debug_mode",
 + (thread->debug_mode) ,
-ns 0)
 +)
 i Mentions in open source
-+DEF_M . .
 Male Google knows little aside code added and removed...
 : from a few patents... Jource.com/kernel/msm/+/android-msm-dory-3.10-kitkat-wear/drivers/esoc/esoc-mdm~4x.c
-qualeomm sdb" debugeing mdm->dbg_addr = addr + MOM_D8G_OFFSET;
 val = readl_relaxed (mdm->dbg_addr) ;
-if (val == MDMJDBG_MODE)
 mdm->dbg_mode
 mdm->cti = coresight_cti_get(MDM_CTI_NAME
-4f (TS_ERR(mdm
 dev_err (mdm
 Google Patents
 Non-intrusive, thread-selective, debugging method and system
@@ -345,15 +337,9 @@ Method and system for trusted/untrusted digital signal processor
 SDB 82 provides sofware debug features through JTAG interface 84 by sharing systom or supervisor-
 goto cti_get.
 ret = coresight_cti_map_trigout(mdm->cti, MDM_CTI_TRIG,
-nly registers, tht are vided into superior coil MDM_CTI_
 4f (ret)
-ee yee dev_err (mdn->dev, "un:
 QRB5165 features goto cti_map_err
-Piayfteady $12000/S.3000, Widevne level 1 and level 3, ISDB-T fuse bits avaiable for
-(OEM use. Access contol, Programmable secury domain nda->trigent
-facies gmiomencon psec 20. dev_dbg(mdm->dev, "Not
 QRBS165 mdm->dbg_mode = false;
-1SD-T fuse bits avallabl
 EM use, Access control. Programmable .. JTAG,
 16 USB debug (EUD)
 design fr software debug (OFS), em
@@ -413,83 +399,60 @@ Hexagon Debugging Internals
 
 ISDB (In Silicone Debugger)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ISDB (In Silicone Debugger)
-JTAG VF
 ISDB
-cil4
 cilé
 ISDB
 MCD V/F
-jtag_tck--->}
 JTAG
 ISDB JTAGSyne
-jtag_tck---»
 core_clock
-Poste
 core_clk ==>
-cis
 ISDB_gprDataOut
 ETM_breakTrigger
 ISDB
 CUL
 CONTROLLER
 QDSP6 Core
-core_clock--->
 CONTROLLER
 128
-‘|
-' cunitISDBlogic
 core_clock
-+
-ISDB_reset ISDB_ interrupt
-1324 Pe 134
-cM
-JTAG
 INTERFACE
 FARD
 BREA\
 SOPTWARE
 BREAKPOINT
-ix)
 140
-EIM YES
 BREAKPOINT.
 Ro
-ITAG a
-BREAKPOIN
-No
 EXTERNAL
 BREAKPOINT,
 1
 DE
-OPERATIO
 148:
 RESUME
 NORMAL THREAD,
 OPERATION
-¥
-ES
 RESET E
 CORE DSP
-136
 ```
 
 ## Slide 16
 
 Breakpoint processing circuitry
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Breakpoint processing circuitry
-debugModeStatus_ ANY[0]
 174
 brkptinfo_D[2:0]
 190
-ucg_resumeTnum_ANY[0]
 OR reset
 ```
 
@@ -522,18 +485,6 @@ OR reset
 ## Extended JTAG pinouts
 
 <u>https://www.allaboutcircu its.com/technical-articles/ jtag-connectors-and-interf aces/</u>
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Extended JTAG pinouts
-a STOCHE intertace
-ARM STAG 20 in STME2 STAGSWD with VCP)
-APMLSTAG 14 TLITAG 2k CoreSight 20 Intertace ARM CoraSight 10 letertace
-www.allaboutcircu
-technical-articles,
--connectors-and-interf
-```
 
 ## Slide 19
 
@@ -575,28 +526,27 @@ technical-articles,
 
 ISDB Registers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ISDB Registers
-; q ISDB_ aCe
 CRIPTION ; SS UNTRUSTED| guPERVISOR
 MODE*
-[BRKPTINFO | BREAKPOINTINFO_| og | _R | NONE_| NONE
 :AKPOINT 0 ADDRESS NONE
 BREAKPOINT 0 CONFIG Oxs NONE
 MAILBOX IN (CORE-->IS
 PR
 Zz
 a
-¢
 ```
 
 ## Slide 21
 
 Trusted and Untrusted debugging mode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Trusted and Untrusted debugging mode
@@ -618,7 +568,8 @@ debugging control a first set of features and privileges. Alternatively, in the 
 
 Supervisor Mode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Supervisor Mode
@@ -635,10 +586,8 @@ These instructions are generally intended for user code to request services from
 system. Two TRAP instructions are provided so the OS can optimize for fast service routines and
 slower service routines.
 Syntax Behavior
-0 (#uB)
 Assembler mapped to: "trap1(RO,#u8)"
 apl_virtinsn(#u)) {
-ISPSWAP;
 ```
 
 ## Slide 23
@@ -675,7 +624,8 @@ V69 (2022)
 
 V73 (2024) no longer mentions SYSCFG register layout & ISDB bits
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How to program SYSCFG register?
@@ -698,7 +648,6 @@ Syntax Behavior
 isyne instruction_sync;
 Behavior Class: SYSTEM (slot 2)
 Notes
-sda-Res
 Class: SYSTEM (slot 3) = This is a solo instruction. It must not be grouped with other instructions in a packet.
 ```
 
@@ -706,7 +655,8 @@ Class: SYSTEM (slot 3) = This is a solo instruction. It must not be grouped with
 
 Breakpoints
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Breakpoints
@@ -723,10 +673,7 @@ Notes
 = = This is a solo instruction. It must not be grouped with other instructions in a packet.
 Encoding
 ICLASS ‘sm Parse
-o4
 1
-0/1|1/0 0 0/0|1|-|-|-|-|-|pip|-|-|-|-)-|-|0|0 [0 |---| ~| = | bekpt
-Field name —_Description
 Supervisor mode only
 Instruction class
 Packet/loop parse bits
@@ -738,7 +685,8 @@ Packet/loop parse bits
 
 Newer msm kernels no longer leak it
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Magic Cookie
@@ -747,12 +695,9 @@ Newer msm kernels no longer leak it
 https://android.googlesource.com/kernel/msm/+/android-msm-dory-3.10-kitkat-wear/drivers/esoc/esoc-mdm-4x.c
 #define MDM_PBLRDY_CNT 20 mdm->dbg_addr = addr + MDM_DBG_OFFSET;
 #define INVALID_GPTO (-1) val = readl_relaxed(mdm->dbg_addr) ;
-itdefine MDM_GPIO(mdm, i) (mdm->gpios[i]) TF (Wal nd otoe oot. true;
-iade;f-ine|, MDM9X25_LABEL "BRHSEAS" ndm->cti = coresight_cti_get(MOM_CTI_NAME) ;
 #define MDM9x25_HSIC "HSIC" 4f (1S_ERR(mdm->cti))
 #define MDM9x35_LABEL "MDM9x35" dev_err(mdm->dev, “unable to get cti handle\n");
 #define MDM9x35_PCIE "PCIe" goto cti_get_err;
-#define MDM9x35_DUAL_LINK "HSTC+PCIe" ;
 #define MDM9x35_HSIC “HSIC"
 #define MDM9x45_LABEL "MDM9x45" Sf (ret) {
 #define MDM9x45_PCIE "PCIe" dev_err(mdm->dev, “unable to map trig to channel\n");
@@ -786,7 +731,8 @@ mdm->trig_ent = 0;
 
 - Undocumented
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blob: 630fa1a07f118327627afb3da8b846fc92053130 [file] [log] [blame]
@@ -834,60 +780,42 @@ Big secret
 
 qurtkernel.o
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 75/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
--Start :@00004F8 _AFB: DA
-: memw_phys (r@, r1) }
-q :
-loc_500:
-immext (#9)
-memw (r25 + ##start) = r2.new }
-: r10 = isdben }
--Start :0000050C pO = tstbit (r10, #(start+2))
--Start :00000510 if !pO.new jump:t _setup_isdb_cont }
-immext (#9)
-10 = memw (r25 + ##start)
-if (cmp.eq (r10.new, #start)) jump:t _setup_isdb_cont }
-immext (#9x53444240)
-rll = ##0x53444247
-memw (r10 + #start) }
-cmp.eq (r10, r11)
-ppoooed7C nmmext (#8) if !p@.new jump:t _setup_isdb_cont @ not equal
-9000480 E ‘immext (#0)
-0800480 Toevaees DATA XR r10 = add (r25, ##start) }
-790000480 = 10 = memw (r25 + ##start) é memw (r16 + #start) = #(start+1)
-000484 immext (#0) : memw (r16 + #loc_4) = #(start+1) }
-900488 memw (r25 + ##start) } -Start:00000544 memw (r16 + #loc_8) =
-00048C re } -Start :00000548
-000490 chicken = @ S63 : 10000548 _setup_isdb_cont: @ CODE XREF: setup_isdb_cont+41j
-#(start+l) }
-9900494 : 9000548 @ setup_isdb_cont+30;j
-900494 _configure_basic_syscfg: é 9000548 rl = #(start+1)
-0900494 { r@ = sybefg } Ef }980054C immext (#0)
-0000498 { 13:2 = combine (#start, #start) é 19800556 r17 = memw (r25 + ##start)
-:0000049C r® = or (r@, #byte_42) } E 0000554 if (cmp.eq (ri7.new, #start)) jump:t _skip_isdb_debug }
-sysctg = r@ } E 0000558 isdben = rl } @ enable
-31:30 = 3:2 } : 98055C isyne }
-isync } nanaren
-immext (#0)
-rO = memw (r25 + ##start)
-immext (#0)
-200000488 rl = memw (r25 + ##start) }
-0004BC cmp.eq (r®, #start) ; if (pO.new) jump:nt _setup_isdb
-004C0 cmp.eq (r1, #start) ; if (!pl.new) jump:nt _setup_isdb }
-_Stop_at_bootup: @ CODE XREF: start_next:_stop_at_bootup.j
-_stop_at_bootup }
-19000048
-90048
-0048 _setup_isdb: @ CODE XREF: start_next+BCrj
-19000048 @ start_next+COrj
-r@ = #(loc_C+1)
-call _setup_isdb }
-immext (#0)
-110 = memw (r25 + ##start)
-if (cmp.eq (r1@.new, #start)) jump:nt _setup_isdb_start }
-setup_isdb
+CI TOCTOU: Oplock Results
+
+3: kd> k
+ *** Stack trace for last set context - .thread/.cxr resets it
+ # Child-SP          RetAddr               Call Site
+00 ffffb88e`ac5be210 fffff807`7e4cb6c5     nt!KiSwapContext+0x76
+01 ffffb88e`ac5be350 fffff807`7e4ccae7     nt!KiSwapThread+0xb05
+02 ffffb88e`ac5be4a0 fffff807`7e4cf106     nt!KiCommitThreadWait+0x137
+03 ffffb88e`ac5be550 fffff807`7e95be2c     nt!KeWaitForSingleObject+0x256
+04 ffffb88e`ac5be8f0 fffff807`7e95bae7     nt!FsRtlCancellableWaitForMultipleObjects+0xcc
+05 ffffb88e`ac5be960 fffff807`822c16c8     nt!FsRtlCancellableWaitForSingleObject+0x27
+06 ffffb88e`ac5be9a0 fffff807`82256222     Ntfs!NtfsWaitForOplockCompletionEvent+0x24   [red box]
+07 ffffb88e`ac5be9e0 fffff807`7e4d00a5     Ntfs!NtfsFsdCreate+0x272
+08 ffffb88e`ac5bec60 fffff807`813d9f5b     nt!IofCallDriver+0x55
+09 ffffb88e`ac5beca0 fffff807`8140eff3     FLTMGR!FltpLegacyProcessingAfterPreCallbacksCompleted+0x15b
+0a ffffb88e`ac5bed10 fffff807`7e4d00a5     FLTMGR!FltpCreate+0x323
+0b ffffb88e`ac5bedc0 fffff807`7e8e2979     nt!IofCallDriver+0x55
+0c ffffb88e`ac5bee00 fffff807`7e8de4f1     nt!IopParseDevice+0x8c9
+0d ffffb88e`ac5befd0 fffff807`7e8dd4d2     nt!ObpLookupObjectName+0xae1
+0e ffffb88e`ac5bf170 fffff807`7e8c1cf9     nt!ObOpenObjectByNameEx+0x1f2
+0f ffffb88e`ac5bf2a0 fffff807`7e8bdfc8     nt!IopCreateFile+0x439
+10 ffffb88e`ac5bf360 fffff807`7e63e1e8     nt!NtOpenFile+0x58
+11 ffffb88e`ac5bf3f0 00007fff`dd26f2b4     nt!KiSystemServiceCopyEnd+0x28
+12 00000083`4a77f0f8 00007fff`dd1e064c     ntdll!NtOpenFile+0x14
+13 00000083`4a77f100 00007fff`dd1e0bb8     ntdll!LdrpMapDllNtFileName+0xe8
+14 00000083`4a77f200 00007fff`dd1e0f80     ntdll!LdrpMapDllSearchPath+0x1d0
+15 00000083`4a77f460 00007fff`dd1e0dbb     ntdll!LdrpProcessWork+0x148
+16 00000083`4a77f4b0 00007fff`dd23236a     ntdll!LdrpWorkCallback+0xbb
+17 00000083`4a77f4e0 00007fff`dd205976     ntdll!TppWorkpExecuteCallback+0x13a
+18 00000083`4a77f530 00007fff`dcf626bd     ntdll!TppWorkerThread+0x8f6
+19 00000083`4a77f810 00007fff`dd22a9f8     KERNEL32!BaseThreadInitThunk+0x1d
+1a 00000083`4a77f840 00000000`00000000     ntdll!RtlUserThreadStart+0x28
 ```
 
 ## Slide 30

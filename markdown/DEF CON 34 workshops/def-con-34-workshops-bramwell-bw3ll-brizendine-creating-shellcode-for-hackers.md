@@ -11,7 +11,7 @@ files_skipped: 19
 text_chars: 39954
 redacted_secrets: 0
 sha256: "d33d6edfa9f2e4b805b10047fa47846394876d613eca14d8d8d9793f9480fbc0"
-converted_at: "2026-08-12T02:54:55Z"
+converted_at: "2026-08-12T07:17:47Z"
 ---
 
 # Creating Shellcode for Hackers

@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Hyeji Heo & Sungchan Jang & Byungwoo Hwang & Jinyong Byun & Kuyju Kim_Operation BlackEcho Voice Phishing Using Fake Financial and Vaccine Apps.pdf"
 pages: 81
 sha256: "11678a32e7d2c38a1dfffe594873210dc6c0b584ffeec87b235d931586282454"
-text_chars: 28677
+text_chars: 28281
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:07Z"
+converted_at: "2026-08-12T03:54:07Z"
 ---
 # Operation BlackEcho Voice Phishing Using Fake Financial and Vaccine Apps
 
 **Speakers:** Hyeji Heo, Sungchan Jang, Byungwoo Hwang, Jinyong Byun, Kuyju Kim  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Hyeji Heo & Sungchan Jang & Byungwoo Hwang & Jinyong Byun & Kuyju Kim_Operation BlackEcho Voice Phishing Using Fake Financial and Vaccine Apps.pdf` (81 pages)
+
 
 ## Slide 1
 
@@ -1093,30 +1099,20 @@ Operation BlackEcho :Voice Phishing using Fake Financial and Vaccine Apps
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 ASIA 2025
 a Phone Number other party's qa
-Calling-Time (Victiti Name) Callatype phonesnumber ontact Name.
-z Ingoing <— weee
 Control
 Normal
-ie
 ontro .
 =P Outgoing
 Control
 <> Call blocking
-cx PSBOMoeroeenos
-bom 62% } 'SBEHGSroeeoosg
-a ©CO¢zsBoucerosenuos
-- Control SBOMOGSeroeseunog
 icon Menu S'sBouacerosenos
-cn 4 +SBOMGeSTO“eeo0G
-fom 6 $ $C BEUNceroaenoao0og
-cr s6% $eBoneoroeenuo0s
 ```
 
 ## Slide 59
@@ -1210,21 +1206,18 @@ Call log
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 ASIA 2025
 (6) Take the victim's money
 “* Finally, attacker sends a cash collector to collect the victim's money.
 ©
-|e | Teil Se °
 Infected inl ? ih Infected phone
 Phone List SFA location on
 iam Google Maps
-oa ©
-isan | * Qoanven | ; e+
 Google @ yee
 f Control Server— Show Map Menu } 63
 ```
@@ -1518,10 +1511,10 @@ Financial Security Institute Hyeji Heo : heohj@fsec.or.kr Sungchan Jang : bsstud
 
 #BHAS   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- blaekhat
 ASIA 2025
 Thank you
 © Financial Security Institute

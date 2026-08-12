@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Craig Gibson, Vladimir Kropotov_Kidnapping Without Hostages Virtual Kidnapping and the Dark Road Ahead.pdf"
 pages: 39
 sha256: "457df2e69848f54e4a10e52d80f3dea9daa292b3f9ff36527f6a45eeb3f486cb"
-text_chars: 11442
-ocr_pages: 3
+text_chars: 11242
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:10:54Z"
+converted_at: "2026-08-12T04:01:25Z"
 ---
 # Kidnapping Without Hostages Virtual Kidnapping and the Dark Road Ahead
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:10:54Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Craig Gibson, Vladimir Kropotov_Kidnapping Without Hostages Virtual Kidnapping and the Dark Road Ahead.pdf` (39 pages)
 
+
 ## Slide 1
 
 #BHEU  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ms chat’
 DECEMBER 4-7
 EXCEL LONDON / UK
 #BHEU @BlackHatEvents
@@ -299,10 +305,10 @@ Free
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 black hat
 EUROPE 202
 Showing 6 of 2389 Total Tools. Sort (Default - Newest)
@@ -316,7 +322,6 @@ Video Creation
 Image Scanning Translation
 Image Scanning
 40
-Capture —EE
 Luma AI [4 Monster Mash [4
 3 D d | 1 A Scan real world items into 3D images (Using . Convert drawn images into 3D image:
 I Y 10 e l n g g modern NeRF technology) then animate them
@@ -352,23 +357,6 @@ Text to Video Scripts taken from movies defeat speech pattern analysis Free
 #BHEU  @BlackHatEvents
 
 Information Classification: General
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE @OeS
-Showing 1 of 2389 Total Tools.
-Text to Video
-Scripts taken from movies defeat speech
-pattern analysis
-Zert
-A frei
-/ eroscopéMfext-To-Vide lt!
-Text-
-Free
-```
 
 ## Slide 22
 

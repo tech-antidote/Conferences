@@ -4,17 +4,21 @@ speakers: ["Heiner García", "Mauro Eldritch"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Heiner García, Mauro Eldritch - Smile, you're on camera Livestreaming from North Korea's IT workers laptop farm - Are v1.pdf"
 pages: 52
 sha256: "a49603a5400ecc1978d7d494fc33be153705feeb962e87ba9b7b0c887dfa9a41"
-text_chars: 20979
-ocr_pages: 18
+text_chars: 18016
+ocr_pages: 15
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:21:25Z"
+converted_at: "2026-08-12T06:33:35Z"
 ---
 # Smile, you're on camera Livestreaming from North Korea's IT workers laptop farm
 
@@ -22,20 +26,12 @@ converted_at: "2026-08-12T00:21:25Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Heiner García, Mauro Eldritch - Smile, you're on camera Livestreaming from North Korea's IT workers laptop farm - Are v1.pdf` (52 pages)
 
+
 ## Slide 1
 
 SMILE, YOU'RE ON CAMERA! A Live Stream from Inside Lazarus’ IT Workers Scheme
 
 _An investigation by BCA LTD, NorthScan & ANY.RUN_
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-SMILE, YOU'RE ON CAMERA!
-A Live Stream from Inside Lazarus’ IT Workers Scheme
-lls Yili
-An investigation by BCA LTD, NorthScan & ANY.RUN
-```
 
 ## Slide 2
 
@@ -109,16 +105,6 @@ Facilitator provides ID & laptop only Agent conducts interviews himself Facilita
 
 **Smile, You’re on Camera! > ANY RUN, NorthScan, BCA LTD**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Smile, You’re on Camera!
-> ANY RUN, NorthScan, BCA LTD
-@F
-a ey
-is
-```
-
 ## Slide 8
 
 # About this talk
@@ -191,17 +177,15 @@ During the first chapter we posed as facilitators. Now, we’re posing as an att
 
 The Recruiter: Angelo Cruz
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Recruiter: Angelo Cruz
-Code T'] Pullrequests Q) Discussions
 © Actions Security Lx Insights
 HI, | want to discuss with you. #21
 O comments
 Add a comment
-Wate
-Markdown is supported (Zi Paste, drop, or click to ad tes
 Q Subscribe
 ```
 
@@ -213,7 +197,8 @@ The Recruiter: Angelo Cruz
 
 The Company: Ballena Azul LTD
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Company: Ballena Azul LTD
@@ -224,7 +209,6 @@ Now marke top reacting to fear and start responding to facts.
 Move Like a Whale.
 Without the Panic.
 ency protocol that lets large holders
-~VAULT
 | their intentions on-chain — voluntary labeling, scheduled
 and trust badges a a Ballena Azul Early A Ballena Azul Founder Trust Ballena Azul Develop. Ballena Azul Vault Trust Badge
 start responding to facts. Not list ist
@@ -235,18 +219,16 @@ start responding to facts. Not list ist
 
 ### The Company: Ballena Azul LTD
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Company: Ballena Azul LTD
 BALLENA AZULLTD
 Company number 13407189
 Follow this company
-Overview Filinghistory People More
 Officers Persons with significant control
 Filter officers
-[Joorent eters
-1officer / O resignations
 COSITORTO, Leonardo Nelson
 Correspondence address
 4 Orsett Terrace, London, England, W2 6AZ
@@ -260,34 +242,28 @@ Argentine England
 
 The Developers: Angelo
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Developers: Angelo
-0. 97388308 |,
 EXP 42/10/2030
 LN ESPREE Be
-_ FN ANGELO
 ~ 2813 SALLUCE DR
 DENAIR CA 95316
 vos 05/27/4994
-RSTRNONE )\=_
-mse te
-JA HEIR
-FG
 ```
 
 ## Slide 18
 
 ## The Developers: Jack
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Developers: Jack
-sept. 43746869 » «
 tss 08/23/2019 — 4 Exp 1
-* 908 09/04/1993 5.
 ANDERSON
 213 TRIPSHAW LANE
 AUSTIN TX 78741
@@ -339,13 +315,12 @@ AUSTIN TX 78741
 
 RESIDENTIAL ASTRILL VPN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RESIDENTIAL
 Slow redirect Canarytoken has been triggered by the Source IP
-y
-a)
 Your Canarytoken was triggered
 62.33.223.165
 Reminder
@@ -360,7 +335,6 @@ AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/148.0.0.0 Safari/537.36
 Your Canarytoken was triggered
 Slow redirect Canarytoken has been triggered by the Source IP
-y
 CA
 192.200.115.226
 Reminder
@@ -377,7 +351,8 @@ Chrome/149.0.0.0 Safari/537.36
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 inetnum:
@@ -402,29 +377,21 @@ last-modified:
 source:
 62.33.223.160 - 62.33.223.175
 INVESTSTROY-NET
-(KH@@1247) ,
 Hasan, Russia
 RU
 KM7567-RIPE PID Process name
 KM7567-RIPE
 ASSIGNED PA
 TRANSTELECOM-MNT
-2025-11-17T08:18:39Z
-2025-11-17T08:18:39Z
 RIPE # Filtered
 Khmel Mikhail
 Vladivostok Russia
 +7 423 2496560
 KM7567-RIPE
-Mikhail _Kmel-1
-2017-69-15T@1:53:10Z
-2017-@9-15T01:53:10Z
 RIPE
 Domain
 FirmsData.ru
 https://firmsdata.ru | viadivostok
-Yenyru skcnequpoBaHua rpysos. HaipeHo 466 KkomnaHuin B...
-+74, 96560.|Ton-noructuk Ha Kapte BnagquBoctoka} Ton-noructuK. KomnaHua rpysonepeBo30ok.
 yn. DouTannas, 40. +79510275743. Habway Ha kapte Bnagusoctoka. Habway.
 ```
 
@@ -452,16 +419,14 @@ yn. DouTannas, 40. +79510275743. Habway Ha kapte Bnagusoctoka. Habway.
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ¥ M1 Inbox (1)-hocitddev@gmailce X © Chrome Remote Desktop -
 x +
-Cc chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihajfjlpeplalcfajhgai?hi=en&ipli=1
-© Google chrome isn’t your default browser F set as eta
 ae chrome web store
 Turn on syne
-Discover Extensions © Themes
 Back up your stuff and use it on any device
 a) Chrome Remc
 Bookmarks
@@ -530,10 +495,10 @@ reen with others
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¥ © Q) baliensazui-itd/BALLEN’ x | © Git- install for Windows * | 9) Thanks for: co & | 30) GitHub, x |Z Writing, Co | @ MetaMask-ChromeWe * | SM@ MetaMask ¥ BNE Smart Chain (BSC) x | + - Oo x
 ¢ which taucet you used (official BNB Chain taucet, QuickNode, etc.), 2 =
 MetaMask a x
 6 © Chat@PT » © whether you received a transaction hash, + Upgrade, Share
@@ -541,9 +506,6 @@ MetaMask a x
 G New chat.
 I can help check what happened. CRIB 0x34149-70016 ©
 Q Search chats
-O@GP4o~
-OD) library
-B Projects r
 88 Apps It says | need a small amount in the mainnet to get test token € Ie
 Oe Fund your wallet
 w+ More That message means the faucet you are using has a mainnet balance requirement. Some third-party testnet Get your wallet ready to use web3
@@ -564,39 +526,30 @@ tBNB -
 8 OtBNB
 If you tell me the name or URL of the faucet that is asking for mainnet BNB, | can tell you whether it is
 legitimate and what the exact requirement is.
-O@o694S~
-@norrTHscAN &
 +. Provide me the testnet faucet that don't require main| Q (+)
-on Veweie
 ```
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-¥ © baliensazul-ttd/BALLENAAZUL x
-€ c
 6
 @ New chat
 Q Search chats
-OD Library
 & Projects
 88 Apps
 © Codex
-oo More
 Recents
 © Git- instal for Windows
-$5. chatgpt.com/c/6a32b6 14-3648-83eb-a67c-ddbea6590c56
 0 ChatGPT
 Test BNB Faucet Delay
 Upgrade
-x | 209 Thanks for dowloading sue! x | % Gitub Authentication Signin X | Writing Uporadeabe Contract: x | Si MetaMask
 © Connirm your aaaress starts with @x
 © If the faucet sends successfully, you should see tBNB as the native balance (you do not need to adda Upgrade, Share
 token manually).
 Ifall faucets reject your address, tell me the exact error message and Ill help troubleshoot.
-OGPLS~ om
 Sources
 They all require real money now
 You are right — many of the old “free t8NB” faucets have changed their rules. My earlier list was outdated
@@ -617,7 +570,6 @@ If you paste the faucet name you are currently trying, | can check whether it is
 service forcing a mainnet deposit.
 O694LE BB sources
 °@
-‘M MetaMask 9
 Account 1 v
 CEO 0x34149.70016 O
 elle
@@ -626,10 +578,7 @@ Get your wallet ready to use web3
 Add funds
 Buy Swap Send Receive
 Tokens Perps DeFi NFTs Activity
-BSC Testnet V
 tBNB -
-8 -
-Q@norTHscAN &
 ```
 
 ## Slide 34
@@ -668,7 +617,8 @@ Q@norTHscAN &
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Busy Buil
@@ -676,23 +626,12 @@ Buzzing i
 Future.
 Business Services,
 Notary
-loomnetvs
-Be
-Charitable Organizations © Open Meetings Agricultural Liens Executive Legislative
 BUSINESS ENTITIES SEARCH - VIEW ENTITY
-Fang numbee 2513654459
-Ent Name: [SEEJERN LIMITED LIABILITY COMPANY
 state Active
-nity Tye: ‘Domestic Limited Lbilty Company
-resto: Okiahoms
 rina Fig Ose May 13 2024
-Durston Perpetua!
 nut access 9905 5 PENNSYLVANIA AVE, STE A OKLAHOMA CITY, OK, 73159, USA
 Registered Agent Information
 Name NORTHWEST REGISTERED AGENT, LLC
-Aaiess 9905 § PENNSYLVANIA AVE
-stea
-Cty Sate Zipcode: OKLAMOMA CITY OK 73159
 FILING HISTORY
 ```
 
@@ -716,41 +655,6 @@ FILING HISTORY
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1 oas-0F12 16:35:35) 00207 ener 1s) teas 09-03 02451 coo ene
-@ cats @ wii
-ctaitzeabaniancerita ra co ope
-Onan @ Sesser ane
-on Serer i?
-Sesser
-oss2cafta78
-ox ragctstbed
-{el faas-03-2101022810.3003 er no toas-ou-6oast7 a7 uso
-<q BBeiberooteersezsenassi6 @ eaetrssTastetcteareses
-sates
-Sirus
-UE 1) ostenaconaean sane vse 17 eas-0-2 5s 60845 UsDe
-eee anssarser os Droeareetccettbereaterrcd
-inves Eeeieit
-[n] {2026-04-27 02:44:23) 0.0041 Ether
-TT (02) {2026-07-09 19:20:89) 12.23 usoT
-oe
-BBB crecctetsrenstcscarsssssos
-Sansa
- sectextace
-° (s] f2026-o7-09 08:83:35) 318 USOT [s) f2026-07-03 98:04:58) 220 UsDT 0
-Suoseosetensseranefoorai26otes
-tracselset ef
-(20607-03850 18 natsBcom (io) teoee-7-03 191847] 90 USOT
-Bioance: Depo Adress
-© Segieeterierees Owes -. Grseesbsctescbetadcacsecz72fdta
-Ssssheeasa
-(05) {2026-07-11 08:51:23) 0.0022 Etner
-(ra) {2026-07-n1 08:50:59] 20 usoT
-```
-
 ## Slide 40
 
 ## Follow the people
@@ -765,7 +669,8 @@ Ssssheeasa
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 List of H1B Labor Condition Applications (LCA) for Silicon INC - Fiscal Year* 2025
@@ -776,11 +681,9 @@ Business Inteligence Analyst Plano, TX $67,995 01-Oct-2025 Levell Certified
 Softwore Developer Phono, 1X $145,600 01-Oct-2025 Levell Certified
 Softwore Developer Plano, TX $145,600 01-Oct-2025 Levell Certified
 Software Developer Plano, TX $145,600 01-Oct-2025 Levell Certified
-Softwore Developer Piano, 7X $145,600 01-Oct-2025 Levell Certified
 Software Developer Plano, TX $128,960 01-Oct-2025 Levell Certified
 Software Developer Pino, T% $145,600 01-Oct-2025 Levell Certified
 Software Developer Plano, Tx $145,600 01-Oct-2025 Levell Certified
-Software Developer Plano, 1X $145,600 01-Oct-2025 Levell Certified
 (Case Number H1B Job Tite Base Salary | Start Date
 Software Developer Dallas, TX $84,094 30-Sep-2025 Level! Certified
 Business Intelligence Analyst Dallas, TX $72,800 30-Sep-2025 Level! Certified
@@ -802,7 +705,8 @@ Business Intelligence Analyst Austin, TX $70,346 02-Jan-2025
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MAY 21
@@ -839,18 +743,15 @@ MAR 26
 Heiner Garcia Pérez @ «533 AM
 Thank you a lot | wonder if Tom has any
 Linkedin profile, because it seems there is not
-APRT
 Heiner Garcia Pérez @ «538 AM
 H ral, i tried to find but his profile is “dead”
 and with no publications. Do you have any actual
 profile or phone to contact him?
-Thanks!
 Heiner Garcia Pérez @ » 339°M
 Hi
 I'm Heiner, nice to meet you. Based on our
 intelligence, we believe with a high degree of
 Heiner
-O (H+ 562M
 This message has been deleted.
 No thank you my friend
 ```
@@ -871,11 +772,10 @@ No thank you my friend
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-x
-+ =
 I’m going to be as forthcoming as | can}be} Mr Anderson. It seems you’ve been living two lives, Mr Anderson.
 ```
 
@@ -913,7 +813,8 @@ Trust no one!
 
 Smile! You’re on camera!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Smile! Youw’re on camera!

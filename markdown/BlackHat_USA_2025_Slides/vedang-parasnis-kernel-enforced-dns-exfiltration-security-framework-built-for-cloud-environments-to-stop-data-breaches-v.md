@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Vedang Parasnis_Kernel-Enforced DNS Exfiltration Security Framework Built for Cloud Environments to Stop Data Breaches via DNS at Scale.pdf"
 pages: 30
 sha256: "3b481c88457000cdeab57e230b5aeab5892043bf968023b8542cc61fa26db8e8"
-text_chars: 14823
+text_chars: 13691
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:02:53Z"
+converted_at: "2026-08-12T05:24:45Z"
 ---
 # Kernel-Enforced DNS Exfiltration Security Framework Built for Cloud Environments to Stop Data Breaches via DNS at Scale
 
 **Speakers:** Vedang Parasnis  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Vedang Parasnis_Kernel-Enforced DNS Exfiltration Security Framework Built for Cloud Environments to Stop Data Breaches via DNS at Scale.pdf` (30 pages)
+
 
 ## Slide 1
 
@@ -126,10 +131,10 @@ They Breach and C2 Through DNS — Almost Every Time **Compromise Supply Chain:*
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 BRIEFINGS
 DNS C2 Adversaries Attack Process
@@ -142,17 +147,9 @@ base64 encoded data
 Bot periodcaly sends DNS Query
 to pull new command from C&C server.
 C&C Server
-am9liHh.hack.com
-—_———_——_—_>
-a aey Z3 internet [oo —|
-amginnnackcom Se i. — ee
-<q—_—
-= Response Ei’ iia
 Infected Host fod Recursive 3 Authoritative : Attacker
 (Bot) a DNS Server : DNS Server :
-E : forhack.com
 —— User: joe ; H
-Pass: xfet9S7 : ;
 DNS Response 3
 Contains newCommand Attacker encodes new command/data
 in Resource Record (RR) into DNS Resource Record (RR).
@@ -183,10 +180,10 @@ encoded in base64 as hostname label
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 Adversaries limited by DNS Protocol Specs
 UDP Packet Size 512 bytes (default) Up to
 4096 bytes (with EDNSO)
@@ -277,18 +274,14 @@ Pseudo random chars sdas232.bleed.io
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
-blackhat Ay ~
 BRIEFINGS ,
 DNS Traffic Anomaly Detection and Prevention Pipeline ;
 Blacklist Blacklist
-romains Domains
 in RPZ in RPZ
-» AddDomain -<€
-Stateless fis
 Feature
 Analysis DNS Server
 Analyze
@@ -298,15 +291,12 @@ Outliers
 DNS Data ———————» DNS Data | IP + Destination --> Domain (Alerts)
 Filter
 Session
-Collect \ Pe
 Analyzed Analyze Stateful Classifier
 Over Fixed ke SY y ‘ —y) Feature ——» (Machine
 Features IP + Destination --> Domain
 Window Session Analysis Learning
-\ Model)
 DNS IP + Destination --> Domain
 Requests Session
-sy ,
 Time
 ```
 
@@ -618,22 +608,16 @@ Hidden Layer 3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ; E>.
-BRIEFINGS . yy :
-€
-BU & wax |, Evs7ce GS WB eFsAcces &§ HM © & sKm Fri May 16 00:34
 kernelDropped.go U $ exfil.sh M M Makefile M x c 1 tego M dns_tc.c M
 ef classify(__sk_buff
 build-controLler: classify( __sk_buff *skb){
-LO CONLIULLe! Om MV CLeal pacnaye ea Cp Lal yet/Moue—ayent-LUnLI UL Lerma.u-anAroNUE. jal Wii, om uv CLeat } (eth-rhiprota
 echo “Building the controller UNIX stream Inference NetworkPolicyHandlers" Spic-enexiidrin
 cd controller/cmd & go build -o ../bin/main main.go
 || udp->dest
--PHONY: build-controller-cni-sec
-build-controller-cni-sec:
 echo “Building the controller UNIX stream Inference NetworkPolicyHandlers"
 cd controller/cmd && go build -o ../bin/main main.go
 (actions.parse_dns_header_size(Scursor,
@@ -643,37 +627,25 @@ dns_header *dns = ( dns_header x) (
 «PHONY: run-controller-cni-sec
 run-controller-cni-sec:
 echo “Running the controller UNIX stream Inference NetworkPolicyHandlers”
-. af
-pL | ne (actions.parse_dns_payload_transport_udp(&cur:
--PHONY: build-controller—image
-build-controller-image:
 echo “Building the controller docker image"
-cd controller && docker build -t $(CONTROLLER_IMAGE_NAME) . nee pores POF oy, Reclare. ares poe iees lors reve
 result_parse_dns_labels result = __parse.
-«PHONY: run-controller-image S z —parse_
 run-controller-image:
 echo “Running the controller"
 docker run --name controller -p $(CONTROLLER_PORT):9800 -d $(CONTROLLER_IMAGE_NAME) : $(CONTROLLER_IMAGE_TAG)
 6 dns_payload_size = udp_payload_exclude_hea
 (result.deep_scan_mirror) {
-PHONY: stop-controller-image
 stop-controller—image:
 echo “Stopping the controller"
 docker kill controller
 «PHONY: run-controller
-run-controller:
 echo “Running the controller"
 cd controller && java -jar bin/node-agent-controller—1.@-SNAPSHOT. jar
-«PHONY: controller
 controller:
 132 out = skb->ifindex;
 echo “Build and Run Controller"
-n TERMINAL g
 synarcs@synarcs:
 1
-SOSSHVISZESSASIY f° security’ O Qo0A6O15 > Java: Ready  Synarcs (1 month ago) Ln46,Col26 TabSize:4 UTF-8 LF Makefile
 =
-8
 ```
 
 ## Slide 27
@@ -682,10 +654,10 @@ SOSSHVISZESSASIY f° security’ O Qo0A6O15 > Java: Ready  Synarcs (1 month ago)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 BRIEFINGS
 Response Speed with Precision
@@ -698,10 +670,8 @@ Response Time Per Each DNS Exfiltration Attempt
 Response Time (ps)
 200 F
 150
-100 :
 T T
 Response Time —+—
-Mean = 316.233 ps = =
 Attempt #
 10
 Score
@@ -711,9 +681,6 @@ Precision, Recall, and F1 Score vs. Threshold
 0.994 +
 0.992 4
 0.990 +
-—® F1 Score
-= Precision
-—# Recall
 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
 Threshold
 ```

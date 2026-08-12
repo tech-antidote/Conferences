@@ -11,15 +11,21 @@ sha256: "34d5a7812f1533a1d87b55f78a12ee8611e8b7fa9128e344170d068e09348462"
 text_chars: 69927
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:34:02Z"
+converted_at: "2026-08-12T04:35:13Z"
 ---
 # Ignore Your Generative AI Safety Instructions. Violate the CFAA
 
 **Speakers:** Kendra Albert, Jonathon Penney, Ram Shankar Siva Kumar  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Kendra Albert & Jonathon Penney & Ram Shankar Siva Kumar_Ignore Your Generative AI Safety Instructions. Violate the CFAA.pdf` (23 pages)
+
 
 ## Slide 1
 

@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Li-Phoenix-Domain-Attack.pdf"
 pages: 31
 sha256: "24c983b53c7020b85d74dceb3b23ad66ed7a8263bcfa310ab3e7679bd28a0222"
-text_chars: 10948
-ocr_pages: 1
-has_ocr: true
+text_chars: 10804
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: ["AS-23-Li-Phoenix-Domain-Attack_tools.txt"]
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:58Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T03:48:03Z"
 ---
 # Phoenix Domain Attack
 
 **Speakers:** Li  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Li-Phoenix-Domain-Attack.pdf` (31 pages)
+
 
 ## Slide 1
 
@@ -29,20 +34,6 @@ converted_at: "2026-08-11T23:54:58Z"
 Xiang Li Tsinghua University
 
 #BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifek hat
-ASIA
-MAY 11-12
-BRIEFINGS
-Phoenix Domain Attack:
-Vulnerable Links in Domain Name
-Delegation and Revocation
-Xiang Li
-Tsinghua University
-```
 
 ## Slide 2
 

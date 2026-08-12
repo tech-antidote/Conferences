@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Salvatore Gariuolo_Smart Charging, Smarter Hackers The Unseen Risks of ISO 15118.pdf"
 pages: 20
 sha256: "7d4af5c6bbc8001e3339bf1977ff5c2342f68a7ce4312ca094f8bcd157eb796e"
-text_chars: 4661
+text_chars: 4652
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 95.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:00:32Z"
+converted_at: "2026-08-12T05:20:21Z"
 ---
 # Smart Charging, Smarter Hackers The Unseen Risks of ISO 15118
 
 **Speakers:** Salvatore Gariuolo  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Salvatore Gariuolo_Smart Charging, Smarter Hackers The Unseen Risks of ISO 15118.pdf` (20 pages)
+
 
 ## Slide 1
 
@@ -30,10 +35,10 @@ Salvatore Gariuolo
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS

@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Jeff Pollard&Heidi Shey_The Intent Gap Where Every AI Regulation Falls Short and What Security Leaders Need Instead.pdf"
 pages: 42
 sha256: "5710c50899740728ece9df66db80ff6c15f6106f7c7fd7350c9b3cb5b3ba794f"
-text_chars: 29104
-ocr_pages: 1
-has_ocr: true
+text_chars: 28927
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:10:15Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T05:35:13Z"
 ---
 # The Intent Gap Where Every AI Regulation Falls Short and What Security Leaders Need Instead
 
 **Speakers:** Jeff Pollard, Heidi Shey  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Jeff Pollard&Heidi Shey_The Intent Gap Where Every AI Regulation Falls Short and What Security Leaders Need Instead.pdf` (42 pages)
+
 
 ## Slide 1
 

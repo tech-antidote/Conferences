@@ -8,12 +8,18 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Yehuda Smirnov_Hook, Line and Sinker Phishing Windows Hello for Business.pdf"
 pages: 139
 sha256: "b7dc87db72e4a7001f962d3a4bb3cf0036c90c4b754c1e212de6654c5a16615e"
-text_chars: 35053
-ocr_pages: 56
+text_chars: 25205
+ocr_pages: 49
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:42:55Z"
+converted_at: "2026-08-12T04:47:11Z"
 ---
 # Hook, Line and Sinker Phishing Windows Hello for Business
 
@@ -21,16 +27,17 @@ converted_at: "2026-08-11T21:42:55Z"
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Yehuda Smirnov_Hook, Line and Sinker Phishing Windows Hello for Business.pdf` (139 pages)
 
+
 ## Slide 1
 
 HOOK, LINE AND SINKER: PHISHING WINDOWS HELLO FOR BUSINESS
 
 Yehuda Smirnov
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat — -
 USA 2024
 AUGUST 7-8, 2024
 BRIEFINGS
@@ -103,7 +110,8 @@ Ye h ud a S m irnov • Like to surf & play tennis
 
 ## WINDOWS HELLO
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WINDOWS HELLO
@@ -157,7 +165,8 @@ _ Sign in with a PIN (Recommended)
 
 ## WINDOWS HELLO FOR BUSINESS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WINDOWS HELLO FOR
@@ -170,7 +179,8 @@ Sign-in options
 
 ## WINDOWS HELLO FOR BUSINESS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WINDOWS HELLO FOR
@@ -193,7 +203,8 @@ ay user@company.com
 
 ## WINDOWS HELLO FOR BUSINESS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WINDOWS HELLO FOR
@@ -201,7 +212,6 @@ BUSINESS
 o Windows Security
 Making sure it’s you Microsoft
 Sign in with your passkey to “login.microsoft.com" as Face, fi ngerp ri nt, PIN or secu rity
-“user@company.com".
 This request comes from the app “brave.exe” by “Brave Software,
 Inc.”.
 | forgot my PIN
@@ -211,12 +221,12 @@ Inc.”.
 
 ## WINDOWS HELLO FOR BUSINESS
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WINDOWS HELLO FOR
 BUSINESS
-EMM 0 0 oof sete
 Azure services
 Resources
 ```
@@ -251,7 +261,8 @@ Resources
 
 ## DEFAULT AUTHENTICATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEFAULT
@@ -279,19 +290,6 @@ Traditional
 Businesss
 Passwords
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WINDOWS HELLO FOR
-BUSINESS
-Windows Hello for Achanimistrator
-Buisiinesss
-Traditional
-Passwords
-a #
-2
-```
-
 ## Slide 25
 
 ## WINDOWS HELLO FOR BUSINESS
@@ -300,20 +298,6 @@ Traditional
 Passwords
 
 **Can’t you just phish that password too?**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WINDOWS HELLO FOR
-BUSINESS
-Windows Hello for
-Birsiinesss
--
-Traditional » "
-Passitio gels {
-Aciamimistrator
-Y
-```
 
 ## Slide 26
 
@@ -338,7 +322,8 @@ password too?
 
 DEMONSTRATION - ATTACKER’S SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - ATTACKER'’S SITE
@@ -348,7 +333,8 @@ DEMONSTRATION - ATTACKER'’S SITE
 
 DEMONSTRATION - FAILED PHISH
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “DEMONSTRATION - FAILED PHISH
@@ -366,12 +352,12 @@ oe iPhone, iPad, or Android device
 
 DEMONSTRATION - FAILED PHISH
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “DEMONSTRATION - FAILED PHISH
 Ld Windows Security
-Cian tn antl wena nacelles
 To sign in to “attacker.com", choose a device with a saved
 passkey.
 fe iPhone, iPad, or Android device
@@ -445,17 +431,6 @@ Origin Check
 
 Assertion
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MECHANISMS
-a atatababatatadbatatatatatabitabatatatetee A
-‘WWW. @@0 )
-2
-G7" ™=
-Challenge Signature Origin Check Assertion
-```
-
 ## Slide 37
 
 ## MECHANISMS - CHALLENGE
@@ -493,17 +468,6 @@ Signature
 ## MECHANISMS - ORIGIN CHECK
 
 Origin Check
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MECHANISMS - ORIGIN CHECK
- ceeeenemeen
-‘WW. @@@ |
-2
-o™
-Origin Check
-```
 
 ## Slide 42
 
@@ -570,17 +534,6 @@ Signature
 Origin Check
 
 Assertion
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-MECHANISMS
-a atatababatatadbatatatatatabitabatatatetee A
-‘WWW. @@0 )
-2
-G7" ™=
-Challenge Signature Origin Check Assertion
-```
 
 ## Slide 48
 
@@ -944,7 +897,8 @@ user2
 
 ARCHITECTURE - AUTHENTICATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARCHITECTURE - AUTHENTICATION
@@ -952,12 +906,7 @@ ARCHITECTURE - AUTHENTICATION
 Sign in with your passkey
 To sign in to} “login. microsoft.com”) choose a passkey.
 This request comes from the app "brave.exe” by “Brave Software,
-Inc.”.
-user] @gmail.com
-e
-mf
 More choices
-| 2 user |@gmail.com
 ay user2@company2.com
 «++ Use another device
 ```
@@ -1031,15 +980,12 @@ Assertion
 
 Server
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARCHITECTURE - AUTHENTICATION
-T/T /
-AN
 "type": "webauthn.get",
-"challenge": "Ty5leUowZ...snip...jJxRFBPbkoyREXxFWVNn",
-"origin": "https://Login.microsoft.com",
 "crossOrigin":false,
 "other_keys_can_be_added_here":
 "do not compare clientDataJSON against a template. See https://goo.gl/yabPex"
@@ -1058,20 +1004,18 @@ Server
 me?
 Assertion
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ARCHITECTURE - AUTHENTICATION
 "type": "webauthn.get",
 "challenge": "Ty5leUowZ...snip...jJIxRFBPb
-"origin": "https://Login.microsoft.com",
 "crossOrigin":false,
 "other_keys_can_be_added_here":
 "do not compare clientDataJSON against a template. See https://goo.gl/yabPex"
 a
 a
-T/T /
-AN
 ```
 
 ## Slide 79
@@ -1094,12 +1038,11 @@ INVESTIGATION
 
 ## INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
-Nnonewnre
-wow]
 POST /common/Login HTTP/2
 Host: Login.microsoftonLine.com
 Cookie: ...snip...
@@ -1107,43 +1050,21 @@ Origin: https://lLogin.microsoft.com
 Content-Type: application/x-www-form-urlencoded
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36 (KHTML, Like Gecko)
 Chrome/125.0.6422.112 Safari/537.36
-_type=23&ps=23&assertion=
-| %7B%221d%22%3A%22LAVOnNVKYSVIUNPdizHid632FEzb7Gi_NrGnHkr6paZE%22%2C%22c LientDataJSON%22%3A%22eyJOeXBLIjoid
-2ViYXVOaG4uZ2VOTiwiY2hhbGxLbmd1L 1 joiVHk1lbGVVb3daVmhCYVUScFNrdFdNVkZwVEVOS2FHSKhHZMmxQYVVWVFZYCEpNVTVwULhOSm
-JItY3haRUSKTmtsck1VaFVTRVp4VDFSb1YxUnNILSFpYUj BaSFdtNUNTMUV3U25kYU1Fa3dVMjFHVECONVNga3VawWGxL YUdSWFVXbFBhVW9
-| 4WTIwMEStS LhiR3BqYLRSNLLqSmFNRT LOV2SCYVJ6ZZIXVEpvYUdKSGVHeGLiV1JZU1dsM2FXRLLUbNBKYWOScF LVaFNNROSJVFRaTWVU
-| bHpZakprYOdkcES5YUmhWMDU1WWpOT2RscHVVWFZaTWpsMFNXbDDNhVOZYUmpCSmFtOTRUbDNBGT LULVVkZbESHbDUYOVEVOS 2RWbHRXV2xQY
-WtVe LRWUnINVTU2ULhsT2VrVnpTVZFXTKdORFNUWKSWRO4OVDFSVKOWwMXFWVES5SOVORBdVJEAHVURUpuV LdObLRWT LVhbXhkV j BKamRwwk
-tUR3BsWDIxUGVXbZNaMnhPVHpVeEdwRk1URUZFVVVnMk1USmLj e LZNVEHZNWRrVkpUVXRMUj ISCOLFRLVNMOIJqV1Uxd1ZGVLdUakF3Umx
 | WUFFqTnLVMj LpY1ROdFdTMTRTMVFSTm1iKeE4zZFdPRmRwVnpswF LuVkSWV2g2UmxGe LFXcGZRbF JOT jNKSmIrZGZWMmhoZGpCbk5IaEJk
-| VipmTLVjMVZURNINM1ZGWLZwWGVGaDVSMWc1VTNOeGNWaHZSRFpVVLULSFQyUnJVSEJHUTA1cO9GWNhSMEpVWmsxcLZsOTIKVEJyYUZGb
-| kK9UaFLVMDVLZVVOSVVHVLpj SFoOTWWSTGRFS LNaMnBZWTNOc1IwULhTbUZMVEhFMmJrR j ZPSFIwU3pawVVVRNITVK42VLRCbFMxVm9 jbL
-EOZEhHKUWItNXBLDLZUUVUNMIRHVnJISMLpYWKZCRF LsVXpaRWxWwWwVVNd2NVeEZVeLZtUORCVFNSUNBRRVJsYONKUF JuaHRaa3g2UZBwbFU
-| xOVRaMUoxWkhCZ1 LrMWihakp4UkZCUGIrb3LSRXhGV1ZObiIsIm9yaWdpbil6ImhOdHBz0i8vbG9nawW4ubwlL jcm9zb2ZOLmNvbSIsImNy
-| b3NZT3I3pZ2Lulj pmYwxzZSwib3RoZXJfa2V5c19j YwW5fYmVFYWRKZWRFaGVyZSI6ImRvIGSvdCBjb21wYXJILIGNsaWVudERhdGFKUO90I
 ```
 
 ## Slide 83
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
-me oo
 tat
-— "id": "LAVONVKYSV1UNPdizHid632FEzb7Gi_NrGnHkr6paZE",
-7 "cLlientDataJSON": "eyJOeXBLIjoid2ViYXVOaG4uZ2VOliwi...snip....mdsL3LhYLBLecJ9",
 "authenticatorData": "NWyelKCTIbLpXx6vkYID8bVfaJ2mH7yWwGEwVfdpoDIEFAAAAAA"
 ° "signature":
-- "bg6usSvVuUFFJZyM56z3Ef vKOMyANpvsSuYnTHLDSd9m609V1Yhr—kc20ZWOGFOcIzb8KjKIXMt1BWK
-eUL74_QEp8a61hTIOUX9PkKXxd-NPUUICLcBUxqdLdV77SGUx8qs8ne3Hrbmb_PLFVKU2uTVFLfxJIqBgmk
-ChSHPHH5XFJOv3YZVpG22i5MxqcM4VqRyVFxb65hMvoBemwa95V LKayBSSKyA3MbhPqaSrTGb5ogwePh
-wOtLEU4LEvKthInptHvRDquJubOcI3ntOYkplvx4Z_3wjnc8VLzfpD2SULOVX3daEpI8nDNrp_SkKx5gA
-OfnD6IBY4acS973XDvxXtwrcQ"
-"userHandLle":
-"TOUGOT1L54UDkKIbUmxXKRmO3ZFv6yOUtU jew3xhW78NWIE2_GoM7JpaLF8WPJICkBLe7Nna5"
 }
 ```
 
@@ -1151,18 +1072,13 @@ OfnD6IBY4acS973XDvxXtwrcQ"
 
 ## INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
 "signature":
-"bg6usSvVUuUFFIZyM56z3EfvKOMyANpvsSuYnTHLDSd9m609V1Yhr—kc2O0ZWOGFOcIzb8KjKIXMt1BWK
-eUL74_QEp8a61hTIOUX9PkKXxd-NPUUICLcBUxqdLdV77SGUx8qs8ne 3Hrbmb_PLFVKU2uTVFLfxiqBgmk
-ChSHPHH5XFJOv3YZVpG22i5MxqcM4VqRyVFxb65hMvoBemwa95V LKayBSSKyA3MbhPqaSrTGb5ogwePh
-wOtLEU4LEvKthInptHvRDquJubOcI3ntOYkplvx4Z_3wjnc8VLzfpD2SULOVX3daEpI8nDNrp_SKx5gA
-OfnD6IB4acS973XDvxXtwrcQ",
 "userHandLe":
-"TOUGOT1LS5S4UDkKIbUmMXKRmO3ZFv6yOutU jew3xhW78NWIE2_GoM7JpaLF8WPJICkKBLe7Nna5S -
 }
 ```
 
@@ -1170,24 +1086,12 @@ OfnD6IB4acS973XDvxXtwrcQ",
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
 "type": "webauthn.get",
-"challenge":
-"Ty5 LeUowZVhBaU9SpSktWMVFpTENKaGJHY2 LPaUpTVXpIMUS5pSXNJbmcxZENINKLYMUhUSEZxTIROV1IR
-reHZXROZHWmSCS1EwSndaMEkwU21GTGNSS jkuZX LKaGRXUWLPaUoxY20ONmIXbGpjbTL6Y j JaMEOtwWnB
-aRzg2WTJoaGJHeGxibWRsSW1L3awFYTnpJam9pYUHSMGNITTZMeTLZYj JkcGIpNXRhVO55Y jNOdLpuUXV
-ZMj LOSWL3aWF XR j BJam94TnpFNUSUY3 LNamN4TENKdV LtWWwLPakUZTVRrMUS5S6SX LOekVZSW1IWNGNDSTZ
-NVGNUTLRVMO1qVTNNWDAURDhUTEInVWtnTVNUamxJVOJ jdVZKTGpLX21PeWo3Z2x0TZUxXNOFMTEFEUUg
-2MTJiczVMTHYSdkVITUtLR2ZRWMEFUM3B jWULWVFVWT jAWRLVPQJNyU29icTNtWS14S10yNmIxN3dwoFd
-pVzLXYnVNVWh6RLFZQWpfOLRNN3dJbkdfV2hhd j BnNHhBdWZfNUc1VnFrM3VFZVpXeFh5R1g5U3NxcVh
-VRDZUVUS5HT 2RrUHBGQO5sOFZxROIJUZKIrVLO2ZdTBraFFnOThYUOSKEUNIUGVZCHZUMLOLAEIJSZ2pYY3N
-SRORXSmFLTHE2bKF60HROSZZYUUFrSVN6VTBLS1VocnQddHdQbmS5penVTQWM3TGVrR2ZXZFBDYLUZZEL
-pLU19TZ1J1ZHBfYk1majJxRFBPbkoyREXFWVNn",
-Moin Ea Mi //login.microsoft.com",
-"other_keys_can_be_added_here":
 "do not compare clientDataJSON against a template. See https://goo.gl/yabPex"
 ```
 
@@ -1195,28 +1099,17 @@ Moin Ea Mi //login.microsoft.com",
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
-[ Sage oy
 }
-“a
 "type": "webauthn.get",
 "challenge":
-"Ty5 LeUowZVhBaUSpSktWMVFpTENKaGJHY2 LPaUpTVXpJIMUSpSXNJIbmcxZENINKLYMUhHUSEZxT1RoOV1R
 reHZXROZHWmSCS1EwSndaMEkwU21GTGNSS jkuZX LKaGRXUWLPaUoxY200NmJXbGpjbTL6Yj JaME9twnB
-aRzg2WTJoaGJHeGxibWRsSWL3awFYTnpJam9pYUhSMGNITTZMeTLzY j JkKcGIpPNXRhHVO55Y JNOdLpuUXV
 ZMj LOSWL3aWFXRjBJam94 TnpFNUSUY3 LNamN4TENKdVLtWwWlPakUzTVRrMU56SX LOekVZSWIWNGNDSTZ
-NVGN4UTLRVMO1LqVTNNWDAURDhUTEInVWtnTVNUamxJIVOIjdVZKTGpLX21PeWo3Z2x0TZUxXNOFMTEFEUUg
-2MTJicZVMTHYSdkVITUtLR2RWMEFUM3B jWULWVFVWT j AWRLVPQjNyU29icTNtWS14S10yNmJxN3dWwoFd
-pVZLXYNVNVWh6RLFZQWpfQOLRNN3dJbkdfV2hhd j BnNHhBdWZfNUcC1VnFrM3VFZVpXeFhSR1gSU3NxcVh
-VRDZUVU5HT 2RrUHBGQO5sOFZxXROJUZKIrVLO2ZdTBraFFnOThYUO5KeEUNIUGVZCHZ4UMLOLAEIJSZ2pYY3N
-SRORXSmFLTHE2bKF60HROSZZYUUFrSVN6VTBLS1VocnQudHdObmS5penVTQWM3TGVrR2ZXZFBDYLUZZEL
-|VYUMwcUxFUzVmSDBTSLRpdERLcHdPRnhtZkx6SOpLU19TZ1I1ZHBFYK1maj IXxRFBPbkoyREXFWVNn",
-"origin": "https://lLogin.microsoft.com",
 "crossOrigin":false,
-"“other_keys_can_be_added_here":
 "do not compare clientDataJSON against a template. See https://goo.gl/yabPex"
 ```
 
@@ -1228,7 +1121,8 @@ SRORXSmFLTHE2bKF60HROSZZYUUFrSVN6VTBLS1VocnQudHdObmS5penVTQWM3TGVrR2ZXZFBDYLUZZE
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
@@ -1240,11 +1134,11 @@ Sign-in options
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
-1 | POST /common/GetCredentialType?mkt=en-US HTTP/1.1
 2 Host: Login.microsoftonLline.com
 3 Cookie: ..snip...
 4y User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36 (KHTML, Like Gecko) Chrome/126.0.6478.57
@@ -1253,29 +1147,24 @@ Safari/537.36
 6 Content-Type: application/json; charset=UTF-8
 7 Accept-Encoding: gzip, deflate, br
 g Priority: u=1, i
-11 |
 "username": "user@company.com",
-"isOtherIdpSupported": true,
 "checkPhones":false,
 "isRemoteNGCSupported":true,
 "isCookieBannerShown": false,
 "isFidoSupported":true,
-"originalRequest": "rQQTARAAhZK_j9tOAMXjJ5C...snip...SydXuficv_Qc1i",
 "country": "IL",
-"forceotcLlogin":false,
 "isExternalFederationDisallowed": false,
 "isRemoteConnectSupported":false,
 "federationFlags":0,
 "isSignup":false,
-"fLowToken": "AQABIQEAAAApT. ..snip...E4gigE4wgAA"
-"isAccessPassSupported": true
 ```
 
 ## Slide 90
 
 INVESTIGATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
@@ -1283,28 +1172,20 @@ POST /common/GetCredentialType?mkt=en-US HTTP/1.1
 Host: Login.microsoftonline.com
 Cookie: ..snip...
 \User—Agent: Mozilla/5.0 (Windows NT 10.0; Win6é4; x64) AppleWebKkit/537.36 (KHTML, Like Gecko) Chrome/126.0.6478.57
-|\Safari/537.36
 Content-Length: 1938
 Content-Type: application/json; charset=UTF-8
 Accept-Encoding: gzip, deflate, br
 Priority: u=1, i
 {
-"username": "user@company.com",
 "isOtherIdpSupported":true,
 "checkPhones": false,
 "isRemoteNGCSupported":true,
 "isCookieBannerShown": false,
 | "isFidoSupported":true,|
-WoriginalRequest”: "rQQIARAAhZK_j9tOAMXj5C. ..snip
-"country": "IL",
-"forceotclogin":false,
 "isExternalFederationDisallowed": false,
 "isRemoteConnectSupported":false,
 "federationFlags":0,
 "isSignup":false,
-...SydXuficv_Qci",
-"fLowToken": "“AQABIQEAAAApT...snip...E4gigE4wgAA",
-"isAccessPassSupported": true
 ```
 
 ## Slide 91
@@ -1313,7 +1194,8 @@ WoriginalRequest”: "rQQIARAAhZK_j9tOAMXj5C. ..snip
 
 • **Modifying IsFidoSupported does not work as of today**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INVESTIGATION
@@ -1325,21 +1207,13 @@ Cookie: ..snip...
 3
 4
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36 (KHTML, Like Gecko) Chrome/126.0.6478.57
-safari/537.36
 5 Content-Length: 1938
 6 Content-Type: application/json; charset=UTF-8
 7 Accept-Encoding: gzip, deflate, br
 g |Priority: u=1, i
-La |
-"username": "user@company.com",
 "isOtherIdpSupported":true,
 "checkPhones": false,
 "isRemoteNGCSupported":true,
-"isCookieBannerShown": false,
-"isFidoSupported":true,|
-VoriginaLlRequest": "rQQIARAAhZK_j9tOAMXJ5C...snip...SydXuflcv_Qc1",
-"country": "IL",
-"forceotclogin":false,
 "isExternalFederationDisallowed": false,
 "isRemoteConnectSupported": false,
 "federationFlags":0,
@@ -1356,7 +1230,8 @@ VoriginaLlRequest": "rQQIARAAhZK_j9tOAMXJ5C...snip...SydXuflcv_Qc1",
 
 ## DEMONSTRATION - SIGN IN
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - SIGN IN
@@ -1372,7 +1247,8 @@ CY Sign-in options
 
 DEMONSTRATION - INTERCEPT
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - INTERCEPT
@@ -1385,19 +1261,15 @@ Origin: https://Login.microsoftonLine.com
 "username": "yehuda.smirnov@company.com",
 "isOtherIdpSupported":true,
 "checkPhones": false,
-"isRemoteNGCSupported": true,
 "isCookieBannerShown": false,
 "isFidoSupported":true,
 "originalRequest":
-"rQQIARAAhZI_bONOGIbtpE3...snip. . .FUOGUZUFzZCqTpVPu3rcV5PcK8g8
 1",
-"country": "IL",
 "forceotcLogin": false,
 "isExternalFederationDisallowed": false,
 "isRemoteConnectSupported": false,
 "federationFlags":0,
 "isSignup":false,
-"£LowToken": "AQABIQEAAAApTWImzXqdR..snip..72KycL8UCJd7AsgAA",
 "isAccessPassSupported":true,
 "isQrCodePinSupported": true
 ```
@@ -1406,7 +1278,8 @@ Origin: https://Login.microsoftonLine.com
 
 DEMONSTRATION - INTERCEPT
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - INTERCEPT
@@ -1414,34 +1287,26 @@ wee) POST /common/GetCredentialType?mkt=en-US HTTP/1.1
 wee) Host: Login.microsoftonline.com
 @ee) Cookie: ..snip...
 wee User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0)
-a
-Gecko/20100101 Firefox/127.0
-Gh Origin: https: //Login.microsoftonLline.com
 "username": "yehuda.smirnov@company.com",
-"isOtherIdpSupported":true,
 "checkPhones": false,
 "isRemoteNGCSupported":true,
 "isCookieBannerShown": false,
 "isFidoSupported": false,
-"originalRequest":
-"rQQIARAANZI_bONOGIbtpE3...snip.. .F4YOGUZ4FzCqTpVPu3rcV5PCcK8g8
 1",
-"country": "IL",
 "forceotclogin": false,
 "isExternalFederationDisalLlowed": false,
 "isRemoteConnectSupported": false,
 "federationFlags":0,
 "isSignup":false,
-"FLowToken" : "AQABIQEAAAApTwJImzXqdR..snip. .72KycL84CJd7AsgAA",
 "isAccessPassSupported":true,
-"isQrCodePinSupported": true
 ```
 
 ## Slide 96
 
 DEMONSTRATION - DOWNGRADED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - DOWNGRADED
@@ -1454,11 +1319,11 @@ Password
 
 DEMONSTRATION - DOWNGRADED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - DOWNGRADED
-BE Microsoft
 © yehudasmirnov@company.cam
 Enter password
 ```
@@ -1467,13 +1332,11 @@ Enter password
 
 DEMONSTRATION - DOWNGRADED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - DOWNGRADED
-~s eos’ coumen /Get( redeet ial type hawt «TT?
-mos! Oot
-oo seecie
 a= Microsoft
 yehuda.smirnov@company.com
 Enter code
@@ -1488,25 +1351,18 @@ More information
 
 DEMONSTRATION - DOWNGRADED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - DOWNGRADED
-pos) POS! /commen/Get( regent ial Type hext eTreyi i
-mos! meat " , *
-LJ ee
-°3 office.com |? »
 Microsoft 365 Search © & &
 Home
 iS) Welcome to Microsoft 365 Install and more ~
-pr
 Quick access
-Eh
 a ( All © Recently opened &8 Shared YY Favorites | + 7 Upload = 69
-BS
 App
 HB 72230608322 Jun 26 Microsoft sent this
-52230606780 @ - Jun 26 ) Microsoft sent this
 oF
 ```
 
@@ -1524,18 +1380,6 @@ Azur e Response from Azure
 
 Sign-in request
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PROXY PHISHING
-Fy hepeawes
-User
-Response from
-Azure
-€
-Sign-in request |
-```
-
 ## Slide 102
 
 ## PROXY PHISHING
@@ -1546,19 +1390,6 @@ Forwards
 response to user Response from Azure
 Sign-in request Forwards request
 to Azure
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PROXY PHISHING
-“EST,
-User Attacker
-Forwards
-response to user Response from Azure
-< <
-Sign-in request Forwards request
-to Azure
-```
 
 ## Slide 103
 
@@ -1577,7 +1408,8 @@ made by @mrgretzky
 
 PROXY PHISHING - EVILGINX
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PROXY PHISHING - EVILGINX
@@ -1599,18 +1431,16 @@ PROXY PHISHING - EVILGINX
 
 Azure
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PROXY PHISHING - EVILGINX
 ® login.attacker.com,
 Attacker
 Microsoft Azure a: re & User
-i
 Sign in
 to continue to Microsoft Azure
-fe
-CN
 ww) Sign in with GitHub
 Qy Sign-in options
 ```
@@ -1619,7 +1449,8 @@ Qy Sign-in options
 
 PROXY PHISHING - EVILGINX
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PROXY PHISHING - EVILGINX
@@ -1630,11 +1461,11 @@ login.attacker.com
 
 ## AUTOMATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 AUTOMATION
-——_,
 + yudasm commented on Mar 5 Contributor |) +++
 Added support for force_post for json parameters (supported only regular http parameters)
 Useful for intercepting requests to URLs such as /common/GetCredentialType which are used to initiate Windows Hello for
@@ -1644,7 +1475,6 @@ The following force_post section can now alter the API post request and modify i
 beforehand due to limitations with modifications of JSON params.
 - path: ‘/common/GetCredentialType'
 search:
-o
 - {key: "isFidoSupported’, search: ".*"}
 force:
 - {key: "isFidoSupported'’, value: "false"}
@@ -1655,14 +1485,14 @@ type: "post'
 
 AUTOMATION
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TOMATION
 WHfB-0365-Phishlet / 0365whfb.yaml
 Code Blame 91 lines (91 loc) - 2.8 KB
 12 - domain: ‘login.microsoftonline.com*
-13 keys: ["ESTSSC:always" , "ESTSAUTHLIGHT: always", ‘
 14 type: ‘cookie’
 15 force_post:
 16 - path: '/kmsi‘
@@ -1687,7 +1517,8 @@ Code Blame 91 lines (91 loc) - 2.8 KB
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
@@ -1704,7 +1535,8 @@ a, Sign-in options
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
@@ -1721,7 +1553,8 @@ Use your face, fingerprint, PIN, or security key instead
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
@@ -1735,11 +1568,11 @@ Enter password
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
-© login.attacker.com
 Microsoft
 yehuda.smirnov@company.com
 Enter code
@@ -1754,32 +1587,26 @@ More information
 
 DEMONSTRATION - REDIRECT
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - REDIRECT
 © Home | Microsoft 365 x
-3; [) %  office.com
 23 Microsoft 365 S Search
 A
 Home
-©) ‘
 : Welcome to Microsoft 365
-a
 Le Quick access
 Ep
 “ees ff@ All © Recently opened
-B8
 Apps
-BR 72230608322
 “me = 52230606780
 2&3 Shared
 TY Favorites
-4
 Jun 26
 Jun 26
 Install and more ~
-Fl|= RB
 Microsoft sent this
 Microsoft sent this
 ```
@@ -1788,48 +1615,36 @@ Microsoft sent this
 
 DEMONSTRATION - ATTACKER SIDE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 46/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-[10;S4:41} [+++] [@} detected authorization URL - tokens intercepted: /favicon.ico
+DEMONSTRATION - ATTACKER SIDE
+
+[10:54:41] [+++] [0] detected authorization URL - tokens intercepted: /favicon.ico
 : sessions
-| 9S | microsoft365new
-$----= ee
+
++----+----------------+----------------+----------+----------+---------------+------------------+
+| id | phishlet | username | password | tokens | remote ip | time |
++----+----------------+----------------+----------+----------+---------------+------------------+
+| 95 | microsoft365new | yehuda.smir..... | | captured | [obscured] | 2023-08-27 10:54 |
++----+----------------+----------------+----------+----------+---------------+------------------+
+
 : sessions 95
-id 7s
-phishlet : microsoft36Snew
-username = yehuda.smirnov@company.com
-password + DefinitelyNotMyPSssword
-tokens : captured
-landing url : ps: 2 2b:
-user-agent : Mozilla/5S.0 (Windows NT 19.0; Win64; x64; rv:109.6) Gecko/20100101 Firefox/116.0
-remote ip : 93.157.86.34
-Create time : 2623-68-27 16:54
-update time : 2023-08-27 10:54
-{ cookies J
-[{"path":"/", "domain" :"login.microsoftonl ine.com", "expirat ionDate" : 1724669698, “value":"6. so padi yndn seamen ronevct habea
-dk3Zsdsp7AIg . AQABAAQAAAAt Yo LDObpQOSVtLI4uGjEPAgDs_wUA9P_h6IR1Zwjcs im7frEtKVZoeUJatcw2h_iU7Xb3m2w9BX2UN5.I3V3 1 1xVaxtTVtNpfzOrdi dui
-sqy0 ir TK26PSUFOSeNAHbKXrDC TOLEJOUF j -AAVoSWOEnccFEpOSwzqDtonZI jp 69b6hTLw8Gahz TynHwRQ icUJeY xwudX7Tt j e4IL - yOgkPKznpoh iPVYSbkZXGyc
-Hf_4S 10Zcx26pR 1DcW8aixOt VbpQmvD7Y8Gy3DpI5j 17YdtDL dk LO iw_R4KyuoW39R_f4dDnSVEZz6cs06pb fé xZEomH I thUaoRWVvR203KWqsNo370bw6 j ZBdp6zbbzT
-Xe LORAG ~ rO3KZqIkRod24XxC TTCTFDmOGWAaECOMwpSKBAMaSb2z j tWak2027¢4-vPTMdc uQ_vRJZruzwQUOOLk iAkNPpuj 4q40vEJwfSsmUEuneFG91 -WpchrQHiMcd
-_¢4sp7Cqx-uCpAVu9Ek Xbecs 8gnGgr x8dd1MZ0 xk 2M3 1 iDSOkaTG93eGzysoWVXC iBmTRINNj 98QUk 1JU8-j_gTWoLK3VuhxZTv-eGCF iuRNSCL4GR7JRyoNhacnygwe
-yokL T2Rnwhimm4kmszqy_eAhCwW_tpLMjc78jAy0ij YzyYRbP IuTCEBA34s Ybums4b TM8QH9SZrGGVGmbuDVGHzdg5" , "name" :"ESTSAUTH" ,"httponly”:true},{"
-path":"/", "domain" :"login.microsoftonl ine.com","expirat ionDate" : 1724669696, “value” :"@. AXSAOT1540k JbUmxKRmO3ZF v6 1tEZUfGMrBJg-Ydk3
-ZSdsp7AIg. AQABAAQAAAAtYyo LDObpQQSVtLI4uGjEPAgDs_wUA9Pasn) YwJAXUj }ZePCWcFITKgqxMbEpBpguk tS CZuAVCC3QZPEAKU_8KQVRNS- iUq7¢434FiN
-89ebyaba)j6LnvicDSEQgI_J2vxXbWN-n7saMuhSwe 1Lk60LFP9ypa4l QNoPcVTRsm6A j BEHC qqeyH6L ZE3Sg8.)} 2) GaZhUEVSpFBHGJGH40R_nULHjhidancOuN7kN
-OWcHq6h1P83F2CUNIWE i Norssomeritonacseell gy Ment nn naneeree BT. amababundpmce per te eee pdr ooo penny proba
-jWcUhObv7RTSWxth20Ee fve fpR6tAcVrUYRUGNAL6_4Grtub9QAnbaE Tm2 13UckGjmVYanpGudowDmc4PhtPKtIObd-md4IRO9bQSXA_HHHWUXTiLKf9Sot4zww93Gse
-pacaghdnn. i , "Name" : "ESTSAUTHPERSISTENT", "httpOnly":true},{"path":"/", "domain": "login.microsoftonl ine.com", "expirat ionDate" : 1724669
-698, “value”: "CAGABAAIAAAATYo LDObpQgsvt lI4uGjEPAgDs_wUA9P-xPbSyIL VcPHh_6Sb8-rk4ds_3qcBDS0_1B6Nc fobnHal_5S9sEWi-UVguTBS19CUELQRPrag
-ig dP nro so nlp eigen weeny ae piace pigeons yea yp ar apes Bret
-f¥-rbIthSskPoJvozAhwm7uj MB -HorniFHh28NwAfNb tT_zarYcQBARKxu" , “name”: "SignInStateCookie","httpOnly*:true},{"path":"/", "domain": "lo
-gin.microsoftonline.com",“expirat ionDate” : 1724669698 , "value" : "PAQABAAEAAAAT yo LDObpQSVt L14uGjEPwdTqFYe6zpd i) nWfO7mr_2z11C3z
-Xp39 ahem he jumhaxkusonqvg.s VhYeaQvxvmpye2 "2 antechbagrneerinet Rare Re rT1Yal8b1f7dxB0UaqwGdlec j ehkZKOPnWENSImsRdWqAna
-MOVM6DWUs - LF iPn4gZS fS7kKBGIWRtO 1lyWO2bFyIKrXLBL V1 7vP3xap40zhYQZ9tvd0SHnDHudkgAA" , “name”: "esctx",“httpOnly":true},{"path":"/","doma
-in":"login.microsoftonl ine.com","expirat ionDate" : 1724669698 , "value" ;"+6669bd26-ee04-4117-90c5-dc7e4f7168e1", "name": "ESTSAUTHLIGH
-Tt, "hostonly":true},{"path":"/", "domain™:" login microsofton| ine.com" ,"expirat ionDate" : 1724669698 , "value": "estsfd", "name": "stsser
-vicecookie","httpOnly":true,"hostOnly":true},{"path":"/", "domain": "login.microsoftonl ine.com" , “expirationDate" : 1724669698, "value
-“:"estsfd", "name" :"x-ms-gateway-slice",“httpOnly":true, “hostonly*:True}]
+
+ id           : 95
+ phishlet     : microsoft365new
+ username     : yehuda.smirnov@company.com
+ password     : DefinitelyNotMyP$ssword
+ tokens       : captured
+ landing url  : https://login.[obscured].com/WOscRgJS?b=BAlOq2nOvQwQnOWIOiGKqw
+ user-agent   : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+ remote ip    : 93.157.86.34
+ create time  : 2023-08-27 10:54
+ update time  : 2023-08-27 10:54
+
+[ cookies ]
+[{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"0.AXsAOT154DkJbUmxKRmO3ZFv61tEZUfGMrBJg-Ydk3ZSdsp7AIg.AgABAAQAAAAtyolDObpQQ5VtlI4uGjEPAgDs_wUA9P_h6JR1Zwjcsim7frEtKVZoeUJatcw2h_iU7Xb3m2w9BX2uN5J3V311xVaxtTVtNpfzOrdLduisqyDirTK20PsUF05mN4HbkXrDCTDLEJ0UFj-AAVo5WO0nccF6p05WzqDtonZIjpfl69b6hTLwBGmhzTynHwRQicUJeYxwudX7Ttje4IL-yOgkPKznpohiPVY5bkZXGycHf_4S1oZcx26pR1DcW8a1x0tVbpQmVD7Y8Gy3DpJ5jl7YdtDLdkl0iw_R4KyuoW39R_f4dDn5VEZz6cs06pbfExZEomHJtkUaoRWvRz03KWqsNo370bw6jZBdp6zbbzIXeioRA0v-r03KZqJkRod24XC7TCTFDmo0WAaEC0Mwp5KBAMaSbZzjtWakZ0z7c4-vPTMdcuQ_vRJZruzwgUOOLkiAkNPpuj4q4ovEJwf8smUEuneFG9l-WpchrQH1MCd_c4sp7Cqx-uCpAVu9EkXbecs8gnGgrx8ddlMZ0xk2M3liD50kaTG93eGzysoWVXCiBmTR7NNj98QUk1JU8-j_gTWoLK3VuhxZTv-eGCFiuRnSCL4GR7JRyoNhmcnygWByokLT2RnWhImm4kMSzqy_eAhCW_tpLMjc78jAy0ijYzyYRbPIuTCEBA34sYbumS4bTM8QH98ZrGGV6mbuDv9Hzdg5","name":"ESTSAUTH","httpOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"0.AXsAOT154DkJbUmxKRmO3ZFv61tEZUfGMrBJg-Ydk3ZSdsp7AIg.AgABAAQAAAAtyolDObpQQ5VtlI4uGjEPAgDs_wUA9P8snpuo6EYwJAxUjjzePCWcFJIKgqxMbEpBpguKt5LCZuAVcc3QZPEAKu_8KgVRN5-iUq7c434FiN89ebyabaJj6Lnv1cD8EQgI_J2vXbWN-n7sIaMuh5wC1Lk60lFP9ypg4kqNoPcVTRsm6AjB8HCqqeyH6LZE3SgBJjf2jGaZhUEvSpFBHGJdH4DR_nULHjhidmnc0uN7kN0WcHq6h1P83F2CUNIWBiqlt0kv2hxD4JitEsZ16lq3qC3QWgzsZztZ2O2a0oe4EV-yg7xo9lsN2Ym0Q6aLlz_IsdI9Jr2M-RmOPw0GT3eslTIkR4X2rCTi0cfPQ4KjZCjWcUh0bv7RT5WXth2QEefvefpR6tAcVrUYRUGnAL6_4Grtub9QAnbaETm213UckGjmVYmnpGuOowDmc4PhtPKtIObd-md4IR09bQ5XA_HHHwUXIilKf9Sot4zww93GsecV3ETbRg","name":"ESTSAUTHPERSISTENT","httpOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"CAgABAAIAAAAtyolDObpQQ5VtlI4uGjEPAgDs_wUA9P_xPbSyILVcPHh_65bB-rk4d8_3QcBDS0_lB6Ncf0bnHal_59sEWi-UVguTBS19CUElQRPrag7PGmvir-a8wehGtCA0OHfsbNhvNNDbQ590J84nVXYoGCJinZEF-YAm9ywdAN6LAcD99G_ArVohT6LsYeYOyl4CdzttTtvZvm-hqEUi9J4YocBmPEfpBQhYYQVUHxo7ycfY-rbIth5sKPoJvozAhwm7ujMB-HorniFHh28NwAfNbiT_zarYcQBARKxu","name":"SignInStateCookie","httpOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"PAQABAAEAAAAtyolDObpQQ5VtlI4uGjEPAgDtQFYe6zpdiJpbWZFnWf07mr_ZzllCJzXpJ91pcXAfV1m4TDZJa9EgpxjUmvhGXkU5oRqVq-sVhY6aQVxYMpye2j4jbVuVYGkuGkXSWCcBDoKQ01lrTlYalBb1f7dxBDUaqWGdlecjehkZK0PnWfN51ImsRdWqAnaMDVM6DWUs-lFiPn4gZSfS7kBGIwRt01yWO2bFyIKrXLBLVl7vP3xap40zhYQZ9tvdOSHnDHuQkgAA","name":"esctx","httpOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"+6669bd20-ee04-4117-90c5-dc7e4f7168e1","name":"ESTSAUTHLIGHT","hostOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"estsfd","name":"stsservicecookie","httpOnly":true,"hostOnly":true},{"path":"/","domain":"login.microsoftonline.com","expirationDate":1724669698,"value":"estsfd","name":"x-ms-gateway-slice","httpOnly":true,"hostOnly":true}]
 ```
 
 ## Slide 116
@@ -1842,7 +1657,8 @@ MITIGATION STRATEGIES
 
 ### Authentication Strength
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
@@ -1850,13 +1666,10 @@ Grant
 Authentication Strength
 Control access enforcement to block or (4 it
 grant access. Learn more &
-))
-Wr4/
 ) Block access
 (@) Grant access
 | Require multifactor
 authentication
-L
 | Require authentication
 strength
 | | Require device to be marked
@@ -1869,13 +1682,12 @@ as compliant
 
 ### Authentication Strength
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
 Authentication Strength
-(D)
-V/s
 such as Microsoft Authenticator
 Phishing-resistant MFA
 Phishing-resistan
@@ -1887,14 +1699,13 @@ Phishing-resistan
 
 ### Authentication Strength
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
 Ol ifactor authentication : 2
-Mules’ meee Authentication Strength
 Phishing-resistant MFA
-i Phishing-resistant Passwordiess
 i methods for the stronage
 ```
 
@@ -1914,7 +1725,8 @@ Phishing-resistant Conditional Access Policy
 
 ###### **Grant access**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
@@ -1926,7 +1738,6 @@ strength
 Cloud apps
 Phishing-resistant MFA
 Include Exclude
-(_ ) Select apps
 ```
 
 ## Slide 122
@@ -1941,7 +1752,8 @@ MITIGATION STRATEGIES Register Security Information Conditional Access Policy
 
 **Grant access**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
@@ -1965,7 +1777,8 @@ Enforce MFA for all Users
 
 Enforce MFA for all Users
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MITIGATION STRATEGIES
@@ -1975,7 +1788,6 @@ Cloud apps
 Require authentication
 strength
 Include Exclude
-Multifactor authentic... ~
 ```
 
 ## Slide 126
@@ -1993,7 +1805,8 @@ DEMONSTRATION
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
@@ -2001,9 +1814,7 @@ Microsoft Azure
 BE Microsoft
 Sign in
 to continue to Micraso
-Yehuda.Smirne
 No account?
-Can’
 Sign in with GitHub
 Sign-in options
 ```
@@ -2012,7 +1823,8 @@ Sign-in options
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE
@@ -2020,7 +1832,6 @@ Microsoft Azure
 BE Microsoft
 © yehudasmirnov@company.com
 Enter password
-SCS CFCC CBBC oe
 Forgot my p ord
 Use your face, fingerprint, PIN, or security key instead
 ```
@@ -2029,7 +1840,8 @@ Use your face, fingerprint, PIN, or security key instead
 
 DEMONSTRATION - PHISHING SITE
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DEMONSTRATION - PHISHING SITE

@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Deral Heiland&Carlota Bindner_Weaponization of Cellular Based IoT Technology – Leveraging Smart Devices to Gain a Foothold.pdf"
 pages: 55
 sha256: "b2284625d7c14b5eac0036aa05a337889a3fa3e59f2114713cfdac1251cd26b8"
-text_chars: 14662
-ocr_pages: 18
+text_chars: 13135
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:52:39Z"
+converted_at: "2026-08-12T05:08:47Z"
 ---
 # Weaponization of Cellular Based IoT Technology – Leveraging Smart Devices to Gain a Foothold
 
 **Speakers:** Deral Heiland, Carlota Bindner  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Deral Heiland&Carlota Bindner_Weaponization of Cellular Based IoT Technology – Leveraging Smart Devices to Gain a Foothold.pdf` (55 pages)
+
 
 ## Slide 1
 
@@ -99,22 +104,6 @@ Deral Heiland  &  Carlota Bindner
 - Easy to inject & control
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-BRIEFINGS
-FRIGGA
-v56ur48
-EOP Epeue
-POUL BPP a?
-inter-Chip Communication
-¢ Encryption (Unlikely)
-¢ Easy to sniff
-¢ Easy to inject & control
-ooeeea
-```
 
 ## Slide 7
 
@@ -273,54 +262,18 @@ Private Network
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-pee
-Mapping Access
-Obverse
-Bs
-Ca
-e) am
-]
-,
-iy
-|
-1ovf
-SAG00-A100-1 Mode! :
-Mae inChinas
-(Cc: 78 $624
-FCC IDPRQIPPLS
-=
-:
-ce
-```
-
 ## Slide 19
 
 Mapping Access Reverse (flipped)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Mapping Access
 Reverse (flipped)
-b303-tbSO¥ sue
-&.. @ @PS°D sws0s
-OI Agee 53
-Lb310 . bes = uz (Dad “
-@ ibs © Ques. : ib3S¢ © oz Za
-o"e @-w3ie™ © OO} ads 27 dth-0 bKI>
-ane iigoe 1b3S0 ~ 1b3se “S@ 21-2
-@>1b30s
 ©
 b 3
 1b302
@@ -332,20 +285,6 @@ ay
 Mapping Access Transparency (Obverse overlay)
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-BRIEFINGS
-Mapping Access Sy 6am sem (Ee se
-soot a ht ae Sat
-Lope at @ nS
-Transparency (Obverse overlay) ine Tees
-(V1)
-£6339
-```
 
 ## Slide 21
 
@@ -414,25 +353,20 @@ What if USB & UART Are Not Bot Accessible?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 Primary
 CPU
-*)
 USB D+
 USB D-
-a
-ie
 UART
 FTDI
 Debug UART
 RX TX
 Cellular
-, Module
 TX
 ```
 
@@ -440,30 +374,9 @@ TX
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-biSekhat SS ee p
-BRIEFINGS 4
-t Traces
-"O/ G yo,
-```
-
 ## Slide 31
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
->
-bisek hat
-BRIEFINGS
-#
-3
-3
-```
 
 ## Slide 32
 
@@ -483,12 +396,10 @@ BRIEFINGS
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 [MODEM] HTTPS GET: https://research-cellbucket1.s3.us—east-—1.amazonaws.com/flag2.txt h
 [MODEM] >> AT+QHTTPURL=65, 30
 [MODEM] << AT+QHTTPURL=65, 30
@@ -505,14 +416,11 @@ BRIEFINGS
 [MODEM] << CONNECT
 [MODEM] << <?xml version="1.0" encoding="UTF-8"?>
 [MODEM] << <Error><Code>NoSuchKey</Code><Message>Thd bed e fe) s ie ge><Key>flag2.txt</Key><RequestId>9X2ADHEAXME@49ZH</
-RequestId><HostId>yl@pI89BBMb60bDZTY1c3E4WdPgC@qxiWe Oo 4) e Mnuk=</HostId></Error>
 [MODEM] << OK
 [MODEM] Response Body (truncated):
-AT+QHTTPREAD=30
 CONNECT
 <?xml version="1.0" encoding="UTF-8"?>
 <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>flag2.txt</Key><RequestId>9X2ADHEAXME049ZH</RequestId><
-HostId>yl@pI89BBMb60bDZTY1c3E4WdPgC@qxiWBzVj1JuK902dXXré6én@MHorUIXzyLeNmhpWa5B7Mnuk=</HostId></Error>
 OK
 [MODEM] HTTPS GET: https://research-cellbucket1.s3.us—east-—1.amazonaws.com/Flagi.txt
 [MODEM] >> AT+QHTTPURL=65, 30
@@ -522,7 +430,6 @@ OK
 [MODEM] << CONNECT
 [MODEM] >> AT+QHTTPGET=60
 [MODEM] <<
-faeammersay ver AV
 ```
 
 ## Slide 34
@@ -547,12 +454,10 @@ Provides network access via serial:
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Wed Jul 23 18:55:44 2025 : revd [LCP ConfReq id=@x® <asyncmap @x@> <auth chap MD5> <magic @x7a2cc1@a> <pcomp> <accomp>]
 Wed Jul 23 18:55:44 2025 : lcp_reqci: returning CONFREJ.
 Wed Jul 23 18:55:44 2025 : sent [LCP ConfRej id=@x® <pcomp> <accomp>] hr
@@ -668,43 +573,13 @@ Pre-assembled Board (China)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS
-black hat a | J gLfE
-LZZ—NOWo
-+
-”
-Ww
-c
-|
-‘i
-z
-=
-```
-
 ## Slide 44
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisekhat AS te. | fe
-BRIEFINGS
-```
-
 ## Slide 45
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat ae 4 ’ a
-BRIEFINGS 4 Cire Yf W/Z
-```
 
 ## Slide 46
 
@@ -716,12 +591,11 @@ BRIEFINGS 4 Cire Yf W/Z
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 #BHUSA @BlackHatEvents
 ```
 

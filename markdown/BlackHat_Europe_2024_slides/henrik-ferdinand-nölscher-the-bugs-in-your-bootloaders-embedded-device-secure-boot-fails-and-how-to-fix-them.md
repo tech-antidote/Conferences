@@ -8,18 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Henrik Ferdinand Nölscher_The Bugs in Your Bootloaders Embedded Device Secure Boot Fails and How to Fix Them.pdf"
 pages: 54
 sha256: "e52a6584c069e90b9f9a9cfd967179facfb4543d5cb3ceaf21447021a2724d32"
-text_chars: 15875
-ocr_pages: 4
+text_chars: 14787
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:49:50Z"
+converted_at: "2026-08-12T04:57:26Z"
 ---
 # The Bugs in Your Bootloaders Embedded Device Secure Boot Fails and How to Fix Them
 
 **Speakers:** Henrik Ferdinand Nölscher  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Henrik Ferdinand Nölscher_The Bugs in Your Bootloaders Embedded Device Secure Boot Fails and How to Fix Them.pdf` (54 pages)
+
 
 ## Slide 1
 
@@ -111,22 +118,6 @@ Affected devices: Cisco Nexus N9K Series
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-ssoceisenede
-sites
-i
-Meee iis
-1
-:
-pasenaais
-Seats
-=
-py
-13
-```
-
 ## Slide 14
 
 14
@@ -135,31 +126,43 @@ py
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 87/100 on the text kept, 75/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Joon bi ebereboioisobobiibobeisibieiobiobiobtobiintiobioti oki ibtabtck
-y FUNCTION '
-OOO ooittoitoiioitotttototatototototottode dita deta
-undefined _ fastcall _start(undefined8 param_1, int para...
-undefined AL:1 <RETURN>
-undefineds XMMO_Qa: param_1
-int XMM1_Da: param_2
-int XMM2_Da: param_3
-undefined4 XMM3_Da: param_4
-XREF[2] :
-00066177 00
-90066178 Oa 09 O09
-0000a237 52 PUSH RDX
-0000a238 e8 b3 6f CALL _relocate
-05 00
-0000a23d Sf POP RDI
-0000a23e Se POP RSI
-0000a23f e8 a6 fe CALL efi_main
-ARNE
-0000a244 48 83 c4 08 ADD RSP, 0x8
-exit
-0000a248 RET
+[Background: faded, duplicated screenshot of a symbol/module tree (columns "File" / "SMM module") — mostly illegible under the overlay; visible fragments include TpmClearOnRollbackSmm, AcpiModeEnable, Grub, PxePkg, Shell, SmallLogo]
+
+[Ghidra decompiler panel]
+********************************************
+*                                    FUNCTION *
+********************************************
+undefined __fastcall _start(undefined8 param_1, int para...
+    undefined      AL:1        <RETURN>
+    undefined8     XMM0_Qa:8   param_1
+    int            XMM1_Da:4   param_2
+    int            XMM2_Da:4   param_3
+    undefined4     XMM3_Da:4   param_4
+entry
+                                                  XREF[2]:   Ent...
+
+[Ghidra string cross-reference panel]
+00066177 00                                            ??        00h
+                              s__Grub_Source_Code_Version_%s_00066178   XREF[1]:
+00066178 0a 09 09              ds        "\n\t\tGrub Source Code Version %s\n"
+   47 72 75
+   62 20 53 ...
+
+[Disassembly, continued below]
+0000a237 52                PUSH   RDX
+0000a238 e8 b3 6f          CALL   _relocate
+   05 00
+0000a23d 5f                POP    RDI
+0000a23e 5e                POP    RSI
+0000a23f e8 a6 fe          CALL   efi_main
+   ff ff
+0000a244 48 83 c4 08       ADD    RSP,0x8
+.exit
+0000a248 c3                RET
 ```
 
 ## Slide 16
@@ -296,61 +299,35 @@ Classic buffer overflow!
 
 Exploit in action
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-{grub > root (hdi,@)
-Filesystem type is xfs, partition type 0x83
-[grub > cat /asdf/asdfsdf
-—>_pwnd by OTS-HS <-
-111! X64 Exception Type — @6(#UD — Invalid Opcode) CPU Apic ID — 90000000 1!!!
-RIP — 060000007FBFBB12,
-RAX — 860000000000BD00,
-RBX — 7FFFFFFFFFFFFFFF,
-RSI — 06000000BE78E150,
-R8 + — 8800000000000000,
-R11 — 9800000000000010,
-R14 — 960008e080000000,
-DS -— 8800000000000030,
-GS -—- 8800008000000030,
-CR@ —- 8800000080010033,
-CR4 — 8000000000000668,
-DR@ — 8880088088000000,
-DR3 — 8600008000000000,
-GDTR
-cs
-RCX
-RSP
-RDI
-R9
-R12
-R15
-ES
-ss
-CR2
-CcR8
-DR1
-DR6
-— 0600000000000038, RFLAGS -— 6000000000010262
-— @00000G0BFO351E8, RDX - 9000000000000015
-— 060000007FBFBB38, RBP — 860000007FBFBBAG
-— 00000000BE78B043
-— 000000007FBFB87F, R16 - 8800000000000244
-— 888000@0BEA37F3C, R13 - BBeeegee80000000
-— 0600000@BDBBFO18
-— 8800000000000030, FS - 9800000000000030
-— 8600000000000030
-— 8800000000000000, CR3 - 90000000BF801000
-— 8600000080000000
-— 8600000000000000, DR2 - eegege0000000000
-— @G000000FFFFOFFG, DR7 - 8600000000000400
-@888G8G0BF5DC886 8000000000000047, LDTR - Ba08808000000000
-IDTR — 68600000BFG59018 Ge0GRG0G00000FFF, TR — 8000000000000000
-FXSAVE_STATE — 000000007FBFB790
-1!!! Find image based on IP(@x7FBFBB12) (No PDB)
+grub > root (hd1,0)
+  Filesystem type is xfs, partition type 0x83
+
+grub > cat /asdf/asdfsdf
+-> pwnd by OTS-HS <-
+!!!! X64 Exception Type - 06(#UD - Invalid Opcode)  CPU Apic ID - 00000000 !!!!
+RIP  - 000000007FBFBB12, CS  - 0000000000000038, RFLAGS - 0000000000010202
+RAX  - 000000000000BD00, RCX - 00000000BF0351E0, RDX - 0000000000000015
+RBX  - 7FFFFFFFFFFFFFFF, RSP - 000000007FBFBB38, RBP - 000000007FBFBBA0
+RSI  - 00000000BE78E150, RDI - 00000000BE78B043
+R8   - 0000000000000000, R9  - 000000007FBFB87F, R10 - 0000000000000244
+R11  - 0000000000000010, R12 - 00000000BEA37F3C, R13 - 0000000000000000
+R14  - 0000000000000000, R15 - 00000000BDBBF018
+DS   - 0000000000000030, ES  - 0000000000000030, FS  - 0000000000000030
+GS   - 0000000000000030, SS  - 0000000000000030
+CR0  - 0000000080010033, CR2 - 0000000000000000, CR3 - 00000000BF801000
+CR4  - 0000000000000668, CR8 - 0000000000000000
+DR0  - 0000000000000000, DR1 - 0000000000000000, DR2 - 0000000000000000
+DR3  - 0000000000000000, DR6 - 00000000FFFF0FF0, DR7 - 0000000000000400
+GDTR - 00000000BF5DC000 0000000000000047, LDTR - 0000000000000000
+IDTR - 00000000BF059018 0000000000000FFF,   TR - 0000000000000000
+FXSAVE_STATE - 000000007FBFB790
+!!!! Find image based on IP(0x7FBFBB12) (No PDB)  (ImageBase=0000000000E26B54, EntryPoint=0000000000E2BBDF) !!!!
+
 Exploit in action
-(ImageBase=0000000000E26B54, EntryPoint=000000000GE2BBDF )
-23
 ```
 
 ## Slide 24
@@ -491,15 +468,14 @@ memcpy
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploiting RootBlock
-Data v &
 U-Boot 2021.04 (Feb 23 2024 - 12:30:26 +0000) -> pwnd by OTS-HS
 CPU: NPCM750 Al @ Model:
 DRAM: 464 MiB
-12_pl1310_init
 RNG: NPCM RNG module bind OK
 OTP: NPCM OTP module bind OK
 $: NPCM AES module bind OK
@@ -509,13 +485,11 @@ MMC: sdhcioefos42000: 0
 Loading Environment from SPIFlash... SF: Detected w25q32jv with page size 2
 56 Bytes, erase size 4 Kis, total 4 MiB
 *** Warning - bad CRC, using default environment
-a
 In: serial@1000
 Out: serial#@1000
 Err: serial#1000
 Net: No ethernet found.
 Security is enabled 9
-]
 Hit any key to stop autoboot:
 80006970: 046 10 81 e3 1¢ 1000 sss hing
 No MDIO bus found ra}

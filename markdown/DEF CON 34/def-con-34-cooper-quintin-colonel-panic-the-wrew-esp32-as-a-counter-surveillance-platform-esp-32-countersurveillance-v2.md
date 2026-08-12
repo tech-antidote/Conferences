@@ -4,23 +4,28 @@ speakers: ["Cooper Quintin", "Colonel Panic", "The Wrew"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Cooper Quintin, Colonel Panic, The Wrew - ESP32 as a counter-surveillance platform - ESP 32 countersurveillance v2.pptx"
 pages: 39
 sha256: "63a41592b374feff5e86a70f7655d480c9401a634aec446aa4f690194b5e10f5"
-text_chars: 7518
-ocr_pages: 12
+text_chars: 7067
+ocr_pages: 8
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:40:10Z"
+converted_at: "2026-08-12T06:24:59Z"
 ---
 # ESP32 as a counter-surveillance platform
 
 **Speakers:** Cooper Quintin, Colonel Panic, The Wrew  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Cooper Quintin, Colonel Panic, The Wrew - ESP32 as a counter-surveillance platform - ESP 32 countersurveillance v2.pptx` (39 pages)
+
 
 ## Slide 1
 
@@ -68,7 +73,8 @@ The Surveillance Industry is Growing
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Alsurveillance is being supercharged - and
@@ -144,12 +150,10 @@ Privacy is here it's just not evenly distributed ●Historically counter surveil
 
 Economic Warfare
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 62/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Be mic Warfare
-MY TAX * SS,
-oof ee mt oa _ SOMEHOW ALSO MY: Ss
 a, AT WORK: “iy TAK DOLLARS AT WORK
 ```
 
@@ -171,7 +175,8 @@ So What Can We Do?
 
 I’m so glad you asked…
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 So What Can We Do?
@@ -182,7 +187,8 @@ I’m so alad vou asked...
 
 Hey!  I’m The Wrew! Creator of VoidMantis OS, hackers.town pager, WrewOS, and SpectraMesh
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hey! I’m The Wrew!
@@ -255,13 +261,12 @@ Features
 
 Hello! I am Colonel Panic!
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Hello! | am Colonel Panic!
-2S NF O-O2P2 "U.N: 1, 0 THEM AS°
 “THEY SNOOP UNTO US
- COLONELPANIC.TECH
 PRIVACY |}S A HUMAN RIGHT
 ```
 
@@ -273,38 +278,11 @@ I created the OUI-Spy
 
 And the mesh detect
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-And the mesh detect
-&
-om
-Sa Fs
-HOODOO OCOOOOD0C0O
-se
-Fe
-Vv
-SP Neste Th) t=
-ab beled al \entcbal bb ND
-```
-
 ## Slide 22
 
 I like cheap things
 
 DIY Open source
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| like cheap things
-es, ASS Le
-yoo8 ml q
-f
-es
-ee RS
-Open source
-```
 
 ## Slide 23
 
@@ -336,13 +314,6 @@ M5stack
 
 Wardriving and detection
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Wardriving and detection
-oma:
-```
-
 ## Slide 28
 
 # How OUI-Spy works
@@ -359,7 +330,8 @@ Oui Spy Firmware
 
 Drones, and bodycams, and flock OH MY
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Drones, and bodycams, and flock OH MY
@@ -376,7 +348,8 @@ With sky spy firmware
 
 Flock you
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Flock you
@@ -384,7 +357,6 @@ About
 flock cam detection
 [1 Readme
 “A- Activity
-wW 1.1k stars
 © 25 watching
 159 forks
 Report repository
@@ -392,20 +364,14 @@ Report repository
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-kube«
 kube
-jsony
-DIMA:
-Univ
-Tits 4}
-? a
 F Scanning for surveillance devices..
 t/fro
 BLE active on al] channels
-Ifront
 ```
 
 ## Slide 34

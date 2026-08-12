@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Raphael Karger_Scanning the Scanners Turning Security Vendors Into Supply Chain Weapons.pdf"
 pages: 56
 sha256: "92fa2b94909529268090befb67505f252ddde483348ad363a9ee57e1cca26c96"
-text_chars: 22420
+text_chars: 22339
 ocr_pages: 2
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:15:02Z"
+converted_at: "2026-08-12T05:41:49Z"
 ---
 # Scanning the Scanners Turning Security Vendors Into Supply Chain Weapons
 
 **Speakers:** Raphael Karger  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Raphael Karger_Scanning the Scanners Turning Security Vendors Into Supply Chain Weapons.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -244,7 +249,8 @@ Shows repository submission → backend execution → readable worker data
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 :~$ nc -vlp 13377
@@ -970,12 +976,12 @@ Full Demo
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Full Demo
 Mozilla Firefox Ml Tilix: r@debian: ~/ouild.
-G
 debian: ~/build-canaries v 2700.1
 (.venv) $ nc -vlp 13377
 listening on [any] 13377
@@ -995,20 +1001,15 @@ projectdiscovery.io
 Infrastr
 ] Listing 1 payload for 00B Testing ucture
 S| £07! 745) v
-] d920cbupSbcc73ed92f07btgbmg8745hm.oast. live wrappe
-[
-{i
 0 r
 review
 genera
 teda
 finding
-MMENDED EVIDEN!
 EVENTS
 Infrastr
 ucture
 wrappe
 56
 black hat
-$s)
 ```

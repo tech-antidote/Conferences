@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Hayato Kimura&Ryoma Ito&Kazuhiko Minematsu&Shogo Shiraki&Takanori Isobe_Not Sealed Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol.pdf"
 pages: 70
 sha256: "70e626a820b0d35cd80e8dd1967f0d605f5d93f0d2e71abac7b25d66cd200409"
-text_chars: 31401
+text_chars: 30986
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:54:39Z"
+converted_at: "2026-08-12T05:11:59Z"
 ---
 # Not Sealed Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol
 
 **Speakers:** Hayato Kimura, Ryoma Ito, Kazuhiko Minematsu, Shogo Shiraki, Takanori Isobe  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Hayato Kimura&Ryoma Ito&Kazuhiko Minematsu&Shogo Shiraki&Takanori Isobe_Not Sealed Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol.pdf` (70 pages)
+
 
 ## Slide 1
 
@@ -60,17 +65,16 @@ Takanori Isobe (The University of Osaka)
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 The dawn of the Distributed SNS
 FORBES DIGITAL ASSETS
 Jack Dorsey Backs Ocean In Shifting Toward
 Decentralized Bitcoin Mining
-By Susie Violet Ward, Contributor. © Bitcoin journalist and financial analyst b...  v | Follow Author
+By Susie Violet Ward, Contributor. © Bitcoin journalist and financial analyst b... v | Follow Author
 Why Nostr Today Feels Like Bitcoin In
 2012: An Interview With Vitor Pamplona
 May 16, 2025 — 04:56 pm EDT
@@ -239,11 +243,11 @@ Hijacking micro payment (subset of impersonating)
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 PoC: Note (Post) forgery (simple)
 Basic Forgery Attack on All Events
 Target: Note (Post) Forgery
@@ -252,7 +256,6 @@ Timeline ©
 Goal: display forged Bob's Note(Post) on Alice(Victim) device.
 This server doesn't have a server-side signature verification.
 This server is non-malicious legitimate relay server and complies on Nostr spec.
-@EQ 0B iphone-1234
 Timeline ©
 Android:
 Alice,Plebstr v@.7.6+56 (Android) Victim's app
@@ -263,7 +266,6 @@ iPad: Bob, Plebstr v@.7.6+56 (iPad 0S) Victim's app
 Bob's public key:
 iPhone12 mini:
 | Alice, Plebstr v0.7.6+56 (i0S) Victim's app 10
-yi
 ```
 
 ## Slide 11
@@ -274,15 +276,13 @@ yi
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat
-BRIEFINGS
 (ven
 4 % less ./log/dnsmasq.log
 py
-> Relay Server
 cho “This i
 is mu.test
 B% python3 -m http.server
@@ -297,11 +297,11 @@ PoC: Hijacking micro payment ← Profile forgery (cache) & DMs forgery
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-BRIEFINGS
 PoC: Hijacking micro payment <— Profile forgery (cache) & DMs forgery
 Preliminaries:
 Title: 1. Bob sets his correct Bitcoin lightling address
@@ -317,12 +317,8 @@ Manipulate Bob's profile
 jone.
 Lightning Address
 Nostr Connect Playground
-Nostr ID b889ff5b1513b641e2a139/661a661364979c5beee9 184218f0ef42ab558e9d4
 Status @ Disconnected
-n859587387$10618251981c7448aB4a08ed805803204d6d" f
-13cef0f9264cteaadds
 Connect with Nostr
-nostrconnect;//24f235e8aif16defb85c
 1 catch_event_from_connect — -bash — 55%6
 :catch_event_from_connect$ I
 tAttacker's wallet tVictim2(Bob) tVictim1(Alice)
@@ -1264,33 +1260,25 @@ The attacker learned that the domain part is “example.net”
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 URL recovery attack
 Disclose authentication token
 1-2. Modify the domain name portion to mu.test without knowing k
 1block (16 byte)
-—_—"—_
 Ex(M):M = net/{unknown part}
 | cec forgery
 E,(M'): M' = net/{unknown part}
-KM) , _ . par) 3-1. Decrypt E,(M’) > M’
 — =
 i 1-1. Obtain E,(M) au
 fees | 2-2. Receive E,(M')
-q /) 2-1. Send E;,(M’) on
 Active adversary Relay Server
 Bob
 4. Get access.log
 au 3-2. Generate link preview
-ras .
-t?q
-ee
-meme \. access.log:
 mu.test | 200630010900 - - [DD/MM/YYYY:mm:::] GET mu.test/net/secret?q=shared-url-token
 61
 ```
@@ -1445,12 +1433,11 @@ https://crypto-sec-n.github.io/
 
 #BHUSA @BlackHatEvents 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bi
-Oo nat
-BRIEFINGS
 Our Paper
 Hayato Kimura
 NICT / The University of Osaka

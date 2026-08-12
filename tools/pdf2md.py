@@ -247,6 +247,14 @@ BH_OFFICIAL_RE = re.compile(r"^(?:AS|US|EU)-?\d{2}-(.+)$", re.I)
 # the left side to look like names keeps hyphenated titles intact.
 HYPHEN_CANDIDATE_RE = re.compile(r"-(?=[A-Z])")
 
+# A hyphen with space after it ("Hong Hu - One Flip", "Andi Ahmeti- Cloud
+# Console") also separates speakers from title, but it is tried only after the
+# tight form above has failed. Accepting both at once makes the two forms
+# compete: "Matthias Frielingsdorf-You Shall Not PASS - Analysing a Spyware
+# Sample" then splits at the later hyphen and files four words of the title as
+# part of the speaker's name.
+HYPHEN_SPACED_RE = re.compile(r"-(?=\s+[A-Z])")
+
 
 def _hyphen_split(stem: str) -> tuple[str, str] | None:
     """Split "<Speakers>-<Title>" at the right hyphen, or None if none fits.
@@ -256,15 +264,34 @@ def _hyphen_split(stem: str) -> tuple[str, str] | None:
     leftmost match is usually one of those; the rightmost split whose left side
     still reads as a speaker list is the one that separates names from title.
     """
-    positions = [m.start() for m in HYPHEN_CANDIDATE_RE.finditer(stem)]
-    for pos in reversed(positions):
-        left, right = stem[:pos].strip(), stem[pos + 1:].strip()
-        if 3 <= len(left) <= 120 and len(right) >= 8 and _looks_like_names(left):
-            return left, right
+    for pattern in (HYPHEN_CANDIDATE_RE, HYPHEN_SPACED_RE):
+        positions = [m.start() for m in pattern.finditer(stem)]
+        for pos in reversed(positions):
+            left, right = stem[:pos].strip(), stem[pos + 1:].strip()
+            if 3 <= len(left) <= 120 and len(right) >= 8 and _looks_like_names(left):
+                return left, right
     return None
 
 
 SPEAKER_SPLIT_RE = re.compile(r"\s*&\s*|\s*,\s*|\s+and\s+")
+
+
+def _strip_doc_markers(title_part: str) -> str:
+    """Drop trailing archive markers from a title.
+
+    They appear as "..._wp", "...-WP" or a "(2)" copy suffix; an underscore
+    *inside* a title is meaningful and stays ("Bad io_uring", "(0_o)").
+    """
+    title = title_part.strip()
+    changed = True
+    while changed:
+        changed = False
+        title = re.sub(r"\s*\(\d+\)$", "", title).strip()
+        for sep in ("_", "-"):
+            head, found, tail = title.rpartition(sep)
+            if found and head and tail.strip().lower() in DOC_KIND_SUFFIXES:
+                title, changed = head.strip(), True
+    return title
 
 
 def _looks_like_names(text: str) -> bool:
@@ -285,7 +312,12 @@ def _looks_like_names(text: str) -> bool:
         if not 1 <= len(words) <= 5:
             return False
         # Names are capitalised; all-lowercase handles ("emptynebuli",
-        # "redshiftzero") are common at these conferences and also fine.
+        # "redshiftzero") are common at these conferences and also fine. So are
+        # mixed-case handles with digits in them -- "bagelByt3s" presents under
+        # that name and was being read as prose, leaving the talk uncredited.
+        if len(words) == 1 and re.fullmatch(r"[A-Za-z0-9_.\-]{3,30}", part) \
+                and any(c.isdigit() for c in part):
+            continue
         if not all(w[:1].isupper() or not w[:1].isalpha() or w.islower() for w in words):
             return False
     return True
@@ -372,9 +404,44 @@ def parse_speakers_title(stem: str, defcon_style: bool = False) -> tuple[list[st
         if parts:
             return [], parts[0]
 
-    # Some filenames separate the speakers themselves with " _ " and then the
-    # title with a bare "_". Normalising the spaced form to "&" first keeps all
-    # the speakers instead of filing the 2nd onward into the title.
+    # " _ " does two different jobs in this archive. Sometimes it separates one
+    # speaker from the next ("Daniel Bohannon _ Andi Ahmeti- Cloud Console
+    # Cartographer"), and sometimes it separates the speakers from the title
+    # ("Fabio Pagani, Alex Matrosov, … _ LogoFAIL Security Implications of
+    # Image Parsing During System Boot"). Rewriting every one to "&" assumed
+    # the first job, so in the second the title became a speaker, the left side
+    # stopped reading as people, and the whole stem fell through as a title
+    # with nobody credited -- LogoFAIL, Badge of Shame and the Print Spooler
+    # talk among them.
+    #
+    # Which job it is doing is answerable: take segments as speakers while they
+    # read as people, and treat the first one that does not as the title.
+    segments = [s.strip() for s in re.split(r"\s+_\s+", stem) if s.strip()]
+    if len(segments) >= 2:
+        names, rest = [], []
+        for seg in segments:
+            if not rest and _looks_like_names(seg):
+                names.append(seg)
+            else:
+                rest.append(seg)
+        # A title can itself read as a name list: "Making and Breaking NSA's
+        # Codebreaker Challenge" splits on " and " into two capitalised
+        # fragments and passes the test. With exactly two segments the second
+        # is the title regardless -- that is what the form means.
+        if len(segments) == 2 and len(names) == 2 and not rest:
+            names, rest = names[:1], names[1:]
+        if names and rest:
+            title_part = " _ ".join(rest)
+            # The title segment can still carry a speaker welded on with a
+            # hyphen ("Andi Ahmeti- Cloud Console Cartographer").
+            hy = _hyphen_split(title_part)
+            if hy:
+                names.append(hy[0])
+                title_part = hy[1]
+            speakers = [s.strip() for x in names
+                        for s in SPEAKER_SPLIT_RE.split(x) if s.strip()]
+            return speakers, _strip_doc_markers(title_part) or stem
+
     working = re.sub(r"\s+_\s+", " & ", stem)
 
     if "_" in working:
@@ -394,19 +461,7 @@ def parse_speakers_title(stem: str, defcon_style: bool = False) -> tuple[list[st
 
     speakers = [s.strip() for s in SPEAKER_SPLIT_RE.split(speaker_part) if s.strip()]
 
-    # Drop trailing archive markers. They appear as "..._wp", "...-WP" or a
-    # "(2)" copy suffix; an underscore *inside* a title is meaningful and stays
-    # ("Bad io_uring", "(0_o)").
-    title = title_part.strip()
-    changed = True
-    while changed:
-        changed = False
-        title = re.sub(r"\s*\(\d+\)$", "", title).strip()
-        for sep in ("_", "-"):
-            head, found, tail = title.rpartition(sep)
-            if found and head and tail.strip().lower() in DOC_KIND_SUFFIXES:
-                title, changed = head.strip(), True
-    return speakers, title or stem
+    return speakers, _strip_doc_markers(title_part) or stem
 
 
 def sha256_file(path: str) -> str:

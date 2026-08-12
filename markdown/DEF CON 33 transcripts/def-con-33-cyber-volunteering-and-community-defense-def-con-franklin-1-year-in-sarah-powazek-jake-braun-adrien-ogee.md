@@ -12,7 +12,7 @@ duration_seconds: 2728
 words: 7954
 text_chars: 44881
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Cyber Volunteering and Community Defense - DEF CON Franklin 1 Year In

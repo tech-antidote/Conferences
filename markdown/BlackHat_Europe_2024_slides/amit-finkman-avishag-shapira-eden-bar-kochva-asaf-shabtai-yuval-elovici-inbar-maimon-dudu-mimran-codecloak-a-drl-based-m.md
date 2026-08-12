@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Amit Finkman & Avishag Shapira & Eden Bar Kochva & Asaf Shabtai & Yuval Elovici & Inbar Maimon & Dudu Mimran_CodeCloak A DRL-Based Method for Mitigating Code Leakage by LLM Code Assistants.pdf"
 pages: 97
 sha256: "dfff59306a2bb24f39ccf7618f943beb2e5b4110c20c3874656a147fa60552cc"
-text_chars: 32039
-ocr_pages: 42
+text_chars: 26988
+ocr_pages: 41
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:55Z"
+converted_at: "2026-08-12T04:55:34Z"
 ---
 # CodeCloak A DRL-Based Method for Mitigating Code Leakage by LLM Code Assistants
 
 **Speakers:** Amit Finkman, Avishag Shapira, Eden Bar Kochva, Asaf Shabtai, Yuval Elovici, Inbar Maimon, Dudu Mimran  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Amit Finkman & Avishag Shapira & Eden Bar Kochva & Asaf Shabtai & Yuval Elovici & Inbar Maimon & Dudu Mimran_CodeCloak A DRL-Based Method for Mitigating Code Leakage by LLM Code Assistants.pdf` (97 pages)
+
 
 ## Slide 1
 
@@ -30,18 +35,6 @@ converted_at: "2026-08-12T00:53:55Z"
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-~_EJRO! 3 | “I
-DECEMBER 11-12, 2024 r BP / <S
-IEFINGS | Z ——\ ee
-cols A DRL-Based Method for-Mitigating Code Leakage
-by LLM Code Assistants
-Y
-Speaker: Amit Finkman
-```
-
 ## Slide 2
 
 **https://arxiv.org/pdf/2404.09066**
@@ -50,11 +43,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat
-EUROPE 2024
 CODECLOAK: A METHOD FOR MITIGATING CODE
 LEAKAGE BY LLM CODE ASSISTANTS
 Amit Finkman Noah”, Avishag Shapira’, Eden Bar Kochva’, Inbar Maimon, Dudu Mimran,
@@ -79,7 +71,6 @@ We also designed a method for reconstructing the developer’s original codebase
 from code segments sent to the code assistant service (i.e., prompts) during the
 development process, to thoroughly analyze code leakage risks and evaluate the
 effectiveness of CodeCloak under practical development scenarios.
-Information Classification: General
 ```
 
 ## Slide 3
@@ -144,20 +135,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat = Today’s Al code Assistants
-EUROPE 2024
-Al<coder [Raa mcodium’ Ay Magic
 ey Judini
 4 Cursor ey mutable.ai
 sith: BLACKBOX menbme CodePilot.ai Duet Al for Google Cloud
-re) a) GitHub Q
-bloop. Q> codesquiresi Gp Sonic 4 Sourcegraph
-o™ ut j =- 1BM Watson Assistant RS |
-a gicoeacy Ey Codiga | (© tabnine
 ```
 
 ## Slide 8
@@ -172,13 +157,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 def bubble_sort(arr):
 for i in range(len(arr)):
 if arr[j] > arr[j+1]:
-arr(j], are[j+1] = arr[j+1], arr[j]
 return arr
 def merge_sort(arr):
 if len(arr) < 2:
@@ -198,7 +183,6 @@ return quick_sort(left_arr) + [pivot] + quick_sort(right_arr)
 def merge(left_arr, right_arr):
 result = []
 while Len(left_arr) > 8 and Len(right_arr) > @:
-if left_arr[6] < right_arr[e]:
 ```
 
 ## Slide 10
@@ -215,16 +199,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Prompt ,
-<———
 Suggestion
-Code Assistant
 | Service |
 ```
 
@@ -234,19 +214,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 | Developer |
 Prompt ,
-<———
 IDE
 Suggestion
-Code Assistant
-Service
 ```
 
 ## Slide 13
@@ -255,17 +230,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
-Prompt a —
 < —— inputNumber = inputNumber / 2;
-. |
 Suggestion
-Code Assistant
 | Service |
 ```
 
@@ -301,13 +271,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat The Problem
-EUROPE 2024
 blackhat Leakage To the Service Providers black hat Attackers
-Information Classification: General 1
 ```
 
 ## Slide 17
@@ -326,20 +295,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ARTIFICIAL INTELLIGENCE F 54. > . 3
 FORTUNE so
 Home News Tech Finance Leadership Well Recommends Fortune 500
-TECH - APPLE
 Apple clamps down on employees using ChatGPT as
 more companies fear sensitive data sharing with A.I.
 models
 BY NICHOLAS GORDON
-| ' LCpPULrieuw PiU Suiay, PULSE a BU WIE Hot OL COT police CACC HOU AUUUL SCHSIlive a —
 tration by Alex Castye internal information being leaked through AI.
--
 ```
 
 ## Slide 19
@@ -360,15 +326,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat The Problem
-EUROPE 2024
 blackhat Leakage To the Service Providers blackhat Attackers
 EUROPE 2024 EUROPE 2024
->. Ss
-Information Classification: General 1
 ```
 
 ## Slide 21
@@ -387,13 +351,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Threat Model
-EUROPE 2024
-Coding Ach Prompt ek Prompt =3
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service
 Reco nst-(4)
@@ -404,7 +366,6 @@ Code Segments
 Data Evaluati
 Preprocessing Reconstruction valuation |
 Source Code |
-Information Classification: General
 ```
 
 ## Slide 23
@@ -415,24 +376,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Threat Model
-EUROPE 2024
-Coding R= 5 Prompt Prompt =3
 Suggestions Suggestions Code Assistant
 Developer IDE Monitor Service
 Code Segments
 (2) oF Reco nst-(4)
-S05 iS ructed
-__Code
-— ———_
 Data Code
 Preprocessing Reconstruction Evaluation |
 Source Code |
-Information Classification: General
 ```
 
 ## Slide 24
@@ -443,17 +398,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Developer
-Information Classification: General
 Threat Model
-<= E Prompt ek Prompt =3
-al Sal
 Suggestions |Date Leakage Suggestions Code Assistant
 IDE Monitor Service
 Reco nst-(4)
@@ -472,16 +422,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Threat Model
-EUROPE 2024
-Coding Ach Prompt ek Prompt =3
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service |
-) Reconst-(4 )
 ructed
 Code
 Code Segments
@@ -490,7 +437,6 @@ Data
 Preprocessing
 Source Code |
 Evaluation |
-Information Classification: General
 ```
 
 ## Slide 26
@@ -501,25 +447,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Threat Model
-EUROPE 2024
-Coding Ach Prompt ek Prompt =3
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service
 Code Segments
 (2) (3) Reconst-(4 )
-a.
-——
-$< —
 Data
 Preprocessing Re pn
 Source Code |
 Evaluation |
-Information Classification: General
 ```
 
 ## Slide 27
@@ -530,24 +470,18 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Threat Model
-EUROPE 2024
-Coding Ach Prompt ek Prompt =3
 Suggestions Date Leakage Suggestions Code Assistant
 Developer IDE Monitor Service |
 Code Segments
 ( ) (3) Aen Reconst-(4 )
-: il
-: Code
-a
 Data
 Preprocessing Reconstruction
 Source Code |
-Information Classification: General
 ```
 
 ## Slide 28
@@ -750,16 +684,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-Information Classification: General
 From RL to DRL~
 | Reward r
 Action
-a
 Parameter @
 Observation State S
 Environment
@@ -790,12 +721,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling
-EUROPE 2024
 pip install opencv-python pyautogui numpy keyboard
 import cv2
 import numpy as np
@@ -836,13 +766,11 @@ screen = pyautogui.screenshot()
 frame = np.array(screen)
 frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
 out .write(frame)
-Information Classification: General
 if keyboard.is_pressed('q'):
 print("Recording stopped.")
 break
 out.release()
 print(f"Video saved to {output_file}")
-ro
 L J
 ```
 
@@ -934,12 +862,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling “actions
-EUROPE 2024
 fource = cv2.VideoWriter_fourcc(*"XVID")
 output_file = "screen_recording clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps,
@@ -949,9 +876,7 @@ while True:
 screen = pyautogui.screenshot()
 frame = np.array(screen)
 cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-out .write(frame)
 frame
-Information Classification: General
 ```
 
 ## Slide 55
@@ -964,12 +889,11 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling “actions
-EUROPE 2024
 fource = cv2.VideoWriter_fourcc(*"XVID")
 output_file = "screen_recording clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps,
@@ -979,9 +903,7 @@ while True:
 screen = pyautogui.screenshot()
 frame = np.array(screen)
 cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-out .write(frame)
 frame
-Information Classification: General
 ```
 
 ## Slide 56
@@ -994,24 +916,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling ‘actions
-EUROPE 2024
-s _ . ‘tt =—s
-TUUPrCO = CVe. VIUCUNT ILS Treurece|, AViv 7
 au
 output_file = "screen_recording_clcoding.mp4
-Otters ttteertttestortprt tite —_forrees tes;
 print("Recording... Press ‘q' to stop.")
 while True:
 screen = pyautogui.screenshot()
 frame = np.array(screen)
-Trame ="CV2.CVcCULU (ir ame, CVeeCULUN mMubeDuUN,
-out .write(frame)
-Information Classification: General
 ```
 
 ## Slide 57
@@ -1024,19 +939,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling - actions
-EUROPE 2024
 output file =
 ( )
 while True:
 screen = pyautogui.screenshot()
 frame = np.array(screen)
 out.write(frame)
-Information Classification: General
 ```
 
 ## Slide 58
@@ -1047,28 +960,22 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-re) ‘
 blackhat CodeCloak modeling
-[(‘d", 7, ‘comesFrom’, J, []).
-(‘d’, 16, ‘comesFrom’, ['d’]. [7]).
 (‘d', 24, ‘comesFrom’, ['d’]. [7] }]
 Machine translation: Machine translation: \
 tatic int Sig jout ublic static int Sign ( doubled)
-{oN
 return ( (int d==0 O:(d , return ( (int) ( (d_ ( d<0
 10: 10 0.7: 0.5: Referenge (humanyshor) :
-Referefice (hgman) trapslation: : : ; : Reference (human) vane
 public static sBort Sign (“double d) : : = ~ public static short Sign ( double ¢._)
 return ( short) ((d == 0)? 0:(¢<0)? was \ return (short) ((¢_= = 0)? 0:(¢<0)?-
-1:1) XE Co) 1:1)
 } }
 Weighted N-Gram Match Syntactic AST Match Semantic Data-flow Match
 CodeBLEU =a
 + B+ Weighted N-Gram Match + y- Syntactic AST Match + 6 - Semantic Data-flow Match
-Information Classification: General
 ```
 
 ## Slide 59
@@ -1082,23 +989,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling = rewards
-EUROPE 2024
 fource = cv2.VideoWriter_fourcc(*"XVID") ave Ipiter—fouree(*"xyip")
 output_file = "screen_recording clcoding.mp4" output_file = "screen_recording clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps, Sete idteontttestoctpet—ftite,—_fouress—_fes,
-(screen_size.width, screen_size.height) ) (sereen—stterntdth—_sereen—sitetetee+
 print("Recording... Press ‘q' to stop.") print("Recording... Press ‘q' to stop.")
 while True: while True:
 screen = pyautogui.screenshot() screen = pyautogui.screenshot()
 frame = np.array(screen) frame = np.array(screen)
-frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR) Frame——evrerttotorttrames—cv2 eSroh RB ZEST
 out.write(frame) out.write(frame)
-Information Classification: General
 ```
 
 ## Slide 60
@@ -1112,16 +1015,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling <tewards
-EUROPE 2024
 fource = cv2.VideoWriter fourcc(*"XVID") fone —S
 output_file = "screen_recording clcoding.mp4" output_file = "screen_recording clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps, Sete idteontttestoctpet—ftite,—_fouress—_fes,
-(screen_size.width, screen_size.height) ) (sereen—stterntdth,—_sereen—sitetetee-
 print("Recording... Press ‘q' to stop.") print("Recording... Press ‘q' to stop.")
 while True: while True:
 screen = pyautogui.screenshot() screen = pyautogui.screenshot()
@@ -1129,7 +1030,6 @@ frame = np.array(screen) frame = np.array(screen)
 frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR) Frame——ev2-evttotorttrames—cvz- Coron RSBZESRS-—
 out.write(frame) out.write(frame)
 if keyboard.is_pressed( }: ( ); break if keyboard.is_pressed( IE ( ); break
-Information Classification: General
 ```
 
 ## Slide 61
@@ -1143,16 +1043,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat CodeCloak modeling <tewards
-EUROPE 2024
 fource = cv2.VideoWriter fourcc(*"XVID") fone —S
 output_file = "screen_recording clcoding.mp4" output_file = "screen_recording clcoding.mp4"
 out = cv2.VideoWriter(output_file, fourcc, fps, Sete idteontttestoctpet—ftite,—_fouress—_fes,
-(screen_size.width, screen_size.height) ) (sereen—stterntdth,—_sereen—sitetetee-
 print("Recording... Press ‘q' to stop.") print("Recording... Press ‘q' to stop.")
 while True: while True:
 screen = pyautogui.screenshot() screen = pyautogui.screenshot()
@@ -1161,7 +1059,6 @@ frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR) Frame——ev2-evttotorttrames—
 out.write(frame) out.write(frame)
 if keyboard.is_pressed( }: ( ); break if keyboard.is_pressed( IE ( ); break
 Reward = -
-Information Classification: General
 ```
 
 ## Slide 62
@@ -1172,21 +1069,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-= Te
 Prompts
 Data Set DRL Agent Trained Agent
-[eet
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 63
@@ -1197,18 +1086,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat = CodeCloak: Training Phase
-EUROPE 2024
 DRL Agent Trained Agent
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 64
@@ -1219,18 +1103,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat = CodeCloak: Training Phase
-EUROPE 2024
 [ t DRL Agent Trained Agent
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 65
@@ -1241,21 +1120,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat = CodeCloak: Training Phase
-EUROPE 2024
-pip install. opency von wari Mine hear
-i op
 fos =
 ~ Data Set DRL Agent Trained Agent
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General
 ```
 
 ## Slide 66
@@ -1269,21 +1141,16 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-Information Classification: General
 CodeCloak: Training Phase
 Prompts
 Data Set
 Prompt Manipulation:
 delete lines
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
 DRL Agent
 Trained Agent
 ```
@@ -1296,20 +1163,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-Prompts :
 Data Set D nt Trained Agent
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 68
@@ -1320,21 +1180,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-= Te
 Prompts
 Data Set DRL Agent Trained Agent
-[eet
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 69
@@ -1347,21 +1199,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-= Te
 Prompts
 Data Set DRL Agent Trained Agent
-[eet
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 70
@@ -1372,19 +1216,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat = CodeCloak: Training Phase
-EUROPE 2024
 Data Set DRL Agent Trained Agent
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-out
-Information Classification: General
 ```
 
 ## Slide 71
@@ -1397,27 +1235,17 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
-Information Classification: General
 CodeCloak: Training Phase
 Prompts
 Data Set
 Prompt Manipulation:
 change names
 Manipulated
-Suggestions Prompts
-Code Assistant
-Service
-fanaa ; 1
-Gea eae 8,
 = -
-whi
-a fal
-ss Slor(Frane, €¥2.COLOR_RGB286R)
 Trained Agent
 ```
 
@@ -1432,22 +1260,15 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
 Prompt Manipulation:
 change names
 Prompts =
 Data Set D nt Trained Agent
-[eet
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 73
@@ -1458,23 +1279,14 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-= Te
 Prompts
 Data Set DRL Agent Trained Agent
-[eet
-Suggestions Prompts
-ee —
 ( -")
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 74
@@ -1487,21 +1299,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
-= Te
 Prompts
 Data Set DRL Agent Trained Agent
-[eet
-Suggestions Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 75
@@ -1512,12 +1316,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 CodeCloak: Training Phase
 Prompts
 Data Set DRL Agent
@@ -1525,9 +1327,6 @@ Suggestions
 Trained Agent
 anipulated
 Prompts
-Code Assistant
-Service
-Information Classification: General 1
 ```
 
 ## Slide 76
@@ -1548,16 +1347,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 www.BANDICAM.com
-lal = cl init_py y Version control v
-( @mozillaSyms.py =
-PESTO OTE oo con as a ser ap ew en ore or yumerreos
 &
-o
-hy mrt
 import argparse
 im import os
 import subprocess
@@ -1576,28 +1371,16 @@ URL = 'https://symbols.mozilla.org/upload/'
 i
 # This only needs to include dlls injected into
 DLL_NAMES = [
-"TAccessible2Proxy.d1l",
-"ISimpleDOM.d1l",
-"nvdaHelperRemote.dlL",
 ]
 DLL_FILES = [f
 for dll in DLL_NMES
 # We need both the 32 bit and 64 bit symbols.
 30 for f in (os.path.join(NVDA_LIB, dll), os.path
 Q
-cot ee, ee NOPE WE SS ek Ste
 to Mozilla.
 Mozilla products.
-.join(NVDA_LIB64,| dit))
-@ main v
-an aE
--~
->
 It expects the crash-stats auth token to be placed in the mozillaSymsAuthToken environment variable.
 To update the List of symbols uploaded to Mozilla, see the DLL_NAMES constant below.
-> rm
-nN
-yin
 +
 ```
 
@@ -1685,15 +1468,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Timestep
 15
-Information Classification: General
 CodeCloak: Distribution Heatmap
 0.086
 Percentage of Manipulations Across Timesteps
@@ -1701,10 +1481,7 @@ Manipulations
 0.092
 a13
 0.045
-a4
 10
-ae
-~ O14
 Manipulation Names:
 : Detect and Replace Pll
 : Change Random Lines
@@ -1718,7 +1495,6 @@ Manipulation Names:
 10; Change Variable names
 11: Change Argument names
 12; Stop Manipulations
-wan auaWwnNe
 ```
 
 ## Slide 86

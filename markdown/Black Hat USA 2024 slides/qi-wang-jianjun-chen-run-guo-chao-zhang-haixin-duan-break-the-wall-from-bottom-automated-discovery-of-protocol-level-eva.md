@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Qi Wang & Jianjun Chen & Run Guo & Chao Zhang & Haixin Duan_Break the Wall from Bottom Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls.pdf"
 pages: 50
 sha256: "89f9599305163feb2b945b3d1d9f048d2b525d5f6ef23421b0e7e74af06c21e0"
-text_chars: 18069
+text_chars: 16470
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 76.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:37:34Z"
+converted_at: "2026-08-12T04:40:08Z"
 ---
 # Break the Wall from Bottom Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls
 
 **Speakers:** Qi Wang, Jianjun Chen, Run Guo, Chao Zhang, Haixin Duan  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Qi Wang & Jianjun Chen & Run Guo & Chao Zhang & Haixin Duan_Break the Wall from Bottom Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls.pdf` (50 pages)
+
 
 ## Slide 1
 
@@ -296,88 +302,54 @@ https://github.com/EkiXu/WAFManis
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blaekhat
 —. USA 2024
-a
 oee
-|o =
 ~ WAFMANIS [SSH: 172.30.99.237]
 ® > @ centrifuge
-\ @ fuzzer °
-> YS mers tuzzer °
-> ® _pycache_
 > Bs fuzzing
 ir) > @ fuzzing_bak e
 oO > @ generator
-ES |v Ge initial seed
 > Bt initial_seed_bak °
-S&S) > aa mutator
 > Ml venv
 Q > lim webapp_validator »
 ® gitignore
 re) @ config.py M
-© crash-4be55247786324395b7blafbdeb35cea0748fdbS
-fo) (3 crash-8a30c1b406(5010Safddb36a3a953c1a9a1b5/38
-DB crash-10d68¢2d3423e6c2519e940641b3ae746d10b2¢
-DB crash-3007847c5e431069d10288a1222df9298793789
-DB crash-611ac73789deaabf8a152d068a9e1e00140148ct
-DB crash-b3b89e1a57efe2583b34108420e35f11f121e074
-DB) crash-b3862304713882d1dfbacf6eddb06c2b71e1bb80
-DB crash-c1a606f2634e6f04a1c25e0dba7dcd97acea3e91
-DB crash-db3f92071025d56b771049b78b7aed560b450634
-DB crash-e38337¢2c19b2005a50219a3e00db0403ab9ed09
 @ fuzzer.py M
-®@ gen_initial_seed.py
 @ README.md
 & requirements.txt
-© test.py
 @ utils.py
 @ README.md
-> & generator °
 > Ba mutator
 > Ml waf_validator
-> @ webapp_validator °
 ® gitignore
 @ README.md M
 @
-$83 > Nae
 > MAVEN
-Ce ee
-‘@ config.py ../atheris_fuzzer M X  @ config.py generator M
+‘@ config.py ../atheris_fuzzer M X @ config.py generator M
 ears: 2 WAFManis [SSH: 172.30.99.237]
 @ app.py M
 fuzzer > atheris_fuzzer > @ config.py >...
 1, WAF_HOST = "safeline.waf.server—config.zip"
-2  WAF_PORT = 31080
+2 WAF_PORT = 31080
 EXPECTED_TAINT =
-"Loct
-OaIuMAH AW
-+
-a
-=
 3
 +
-x
-Gy
 <
 APP_PORT = 6000
 9 QUEUE_DIR = './fuzzing/queue'
-@ routing.py
 10| SOLUTION_DIR = "./fuzzing/solution/safeline/flask"
 11 DEBUG = False
 12 WEBAPP_VALIDATE_CODE = 299
 13 WAF_VALIDATE_CODE = 299
 14| ALIDATE_MODE = "strict"
 @ fuzzer.py M
-Doo
 Configured to test safeline 5.0.0
 fixed in the lastest version
 © (venv) eki@DUBHE-VM:~ /WAFManis/fuzzer/atheris_fuzzer$ 0
-47:15, 1
-$v Qasr atheris turer DG - A x
 Sti: 4 UTF-8 LF {} Python 3.10.1264-bit @ O
 #BHUSA @BlackHatEvents
 ```
@@ -863,22 +835,16 @@ WAF and WebApp Combinations
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 USA 2024
 A. Malformed Parameter Structure Parameter Type Confusion @ RFC Support Gap
-OpenwAF] WE RVEVVVERVEVVVVYVV EK Found
-o
 = Naxis 5
 v
 iL Modsecurity 4
-s Janusec + |---| —# A 8 8 8 A OA evasion Samples
-U Huawei Cloud WAF 7-8 -Ei-B-E-E-Y LY a PY EO ae across
-Alibaba Cloud WAF +—X--E-E-E-¥ EW Oe wy oe ey ee Combinations
 SS LSE ESEFES EERE LF SES
-LG SEY Ss Fee 2FTeS SF % SEL
 GO ODS eo < wes & OES
 Web Application
 ```

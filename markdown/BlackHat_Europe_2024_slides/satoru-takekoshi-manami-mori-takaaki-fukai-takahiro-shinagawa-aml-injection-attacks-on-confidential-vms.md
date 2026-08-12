@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Satoru Takekoshi & Manami Mori & Takaaki Fukai & Takahiro Shinagawa_AML Injection Attacks on Confidential VMs.pdf"
 pages: 47
 sha256: "af2a90936554b89d3b8f3f2f89b74917a1c7343f18ae815f0fb10e0e42db567a"
-text_chars: 14801
+text_chars: 13407
 ocr_pages: 5
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 84.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:51:43Z"
+converted_at: "2026-08-12T04:59:56Z"
 ---
 # AML Injection Attacks on Confidential VMs
 
 **Speakers:** Satoru Takekoshi, Manami Mori, Takaaki Fukai, Takahiro Shinagawa  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Satoru Takekoshi & Manami Mori & Takaaki Fukai & Takahiro Shinagawa_AML Injection Attacks on Confidential VMs.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -231,16 +237,14 @@ Information Classification: General
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat AML Example =
-EUROPE 2024
 OperationRegion (PADM, SystemMemory, @xFED3C@00, 0x100@0)
 Field (PADM, DWordAcc, NoLock, WriteAsZeros)
 {
 PRID, 327
-OsTi, mee
 OSsT2, 32
 }
 Device (\_SB.VMOD.PAD1)
@@ -264,7 +268,6 @@ v
 OST2 = Arg2
 }
 OST1 = Argl <- memory aCCess
-Information Classification: General
 ```
 
 ## Slide 13
@@ -441,41 +444,15 @@ Information Classification: General
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekchat Linux: Injected AML
-EUROPE 2024
 Local@ = ADDR /* The value from "efi: INITRD=@x..." */
 Local® += 0x26360 /* Offset */
 /* Start patching... */
 /* Note: "Local@++" is equal of "++lLocal@" at C */
-DUMP (PTCH(Localé@, @x63)))/* 'c! x*/
-DUMP (PTCH(Local@++, @x64)))j/* 'd' */
-DUMP (PTCH(Local0++, @x20))//*x ' ' x*/
-DUMP (PTCH(Local0++, @x72))//* 'r' */
-DUMP (PTCH(Local0++, @x6F)))/* 'o' */
-DUMP (PTCH(Local@++, @x6F))j/* 'o' */
-DUMP (PTCH(Local@++, @x74))//* 't' */
-DUMP(PTCH(Local0++, @x20))/* ' ' */
-DUMP (PTCH(Local@++, @x26))|j//*x '&!' */
-DUMP (PTCH(Local@++, @x26))/j//*x '&!' */
-DUMP (PTCH(Local0++, @x20)) /* ' ' x*/
-DUMP (PTCH(Local0++, @x73)))/* 's' */
-DUMP(PTCH(Local@++, @x68))//* 'h' */
-DUMP (PTCH(Local@++, @x2@)))/* ' ' x/
-DUMP (PTCH(Local@++, @x3C)) j/* '<' */
-DUMP (PTCH(Local0++, @x2F)))/* '/' x*/
-DUMP (PTCH(Local@++, @x64))|j//*x 'd' */
-DUMP (PTCH(Local@++, @x65))|//*x 'e' */
-DUMP(PTCH(Local0++, @x76))//* 'v' x*/
-DUMP (PTCH(Local0++, @x2F)))/* '/' x*/
-DUMP(PTCH(Local@++, @x74))\j/x 't!' */
-DUMP(PTCH(Local@++, @x74))|///x */
-DUMP (PTCH(Local@++, @x79)))/x* */
-DUMP (PTCH(Local0++, @x53))|/x* */
-DUMP (PTCH(Local0++, x31) ) |/x* */
-Information Classification: General
 ```
 
 ## Slide 23
@@ -488,22 +465,20 @@ Information Classification: General
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat Linux: Demo
-EUROPE 2024
 ts22mori@epyc-eval-sev2: ~/AMDSEV — ssh « ssh epyc_sev
 #!/bin/sh
 sudo /home/fukai/AMDSEV/usr/local/bin/qemu-system-x86_64 \
-~-enable-kvm \
 -cpu EPYC-v4 \
 -machine q35 \
 -smp \
 —m 2048M \
 -kernel ./guest-images/vmlinuz~6.7.0-snp-guest-98543c2aa649 \
 -initrd ./guest-images/initrd \
--append * e\
 -drive if=pflash, format=raw, unit=0, file=./ovmf/Build/AmdSev/DEBUG_GCC5/FV/OVMF.fd,readonly \
 ~drive file=/home/fukai/vms/badaml_test.qcow2, jone, id=disk@, format=qcow2 \
 -device virtio-scsi-pci, id=scsi@, disable-legacy=on, iommu_platform=true \
@@ -516,9 +491,7 @@ object sev-snp-guest, id=sev@, cbitpos=51, reduced-phys-bits=1,kernel-hashes=on 
 -monitor none \
 -serial stdio \
 ~serial telnet ,server,nowait \
--acpitable file=SHOME/bad_aml.aml
 “run.sh" 24L, 10218
-Information Classification: General
 ```
 
 ## Slide 24
@@ -585,52 +558,25 @@ Information Classification: General
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisekchat Windows: Injected AML
-EUROPE 2024
 Method (_INI, @, Serialized)
 {
-T8000
-TQ@1
-TQ@2
-TQe3
-TQ04
-Ce00
-CQe@1
-C002
 Cee3
-C004
-C805
-CQ06
 C007
 C808
 Cee9
-CO0A
-CQ@B
 CeeC
 CeeD
-Q@xE9
-Q@x32
-Q@x6E
 Zero
 Zero
 @x4C
-@x8B
-Q@x54
-Q@x24
-@x48
-@x50
-@x53
-0x48
-Q@x81
 @xEC
-@x80
-0x02
 Zero
 Zero
-Information Classification: General
 ```
 
 ## Slide 28
@@ -669,11 +615,11 @@ Information Classification: General
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisckchat Windows: Demo
-EUROPE 2024
 Windows CVM
 on Azure
 Test Mode

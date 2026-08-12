@@ -12,7 +12,7 @@ duration_seconds: 2578
 words: 7395
 text_chars: 40866
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Turning your Active Directory into the attacker’s C2

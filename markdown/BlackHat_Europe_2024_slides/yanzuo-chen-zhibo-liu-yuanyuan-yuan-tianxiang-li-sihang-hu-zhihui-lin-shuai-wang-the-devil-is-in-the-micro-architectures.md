@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Yanzuo Chen & Zhibo Liu & Yuanyuan Yuan & Tianxiang Li & Sihang Hu & Zhihui Lin & Shuai Wang_The Devil is in the (Micro-) Architectures Uncovering New Side-Channel and Bit-Flip Attack Surfaces in DNN Ex.pdf"
 pages: 65
 sha256: "1b9cce457a3ef6e4ec3c5ce69796dfac287dca64149529a264a9cf9e501de11a"
-text_chars: 17725
-ocr_pages: 11
+text_chars: 17143
+ocr_pages: 10
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:22Z"
+converted_at: "2026-08-12T05:01:20Z"
 ---
 # The Devil is in the (Micro-) Architectures Uncovering New Side-Channel and Bit-Flip Attack Surfaces in DNN Ex
 
 **Speakers:** Yanzuo Chen, Zhibo Liu, Yuanyuan Yuan, Tianxiang Li, Sihang Hu, Zhihui Lin, Shuai Wang  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Yanzuo Chen & Zhibo Liu & Yuanyuan Yuan & Tianxiang Li & Sihang Hu & Zhihui Lin & Shuai Wang_The Devil is in the (Micro-) Architectures Uncovering New Side-Channel and Bit-Flip Attack Surfaces in DNN Ex.pdf` (65 pages)
+
 
 ## Slide 1
 
@@ -56,15 +61,12 @@ Information Classification: General
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 The Age of Al
 ¢ Machine Learning as a Service (MLaaS)
-SS aws peti:
 Amazon SageMaker Google Cloud
 Information Classification: : General 3
 ```
@@ -313,22 +315,19 @@ Information Classification: General
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-EUROPE 2024
 Cache Access Patterns
 Why is that?
 Compiler
 Optimizations!
-Steet tee eet eet tenet ele elon el
 I kernel size: 3 kernel size: 3 kernel size: 1
 #input channels: 128 #input channels: 128 ! #input channels: 256
 , #output channels: 128 #output channels: 256 #output channels: 512
 (a) Conv from ResNet18 (b) Conv from VGG16 (c) Conv from ResNet18
 compiled by TVM. compiled by TVM. compiled by Glow.
-Information Classification: General
 16
 ```
 
@@ -589,12 +588,10 @@ Information Classification: General
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Results
 Table 4: The performance of DEEPCACHE with L1
 e L1 Prime+Probe attack in recovering DNN architectures,
@@ -604,13 +601,11 @@ ResNet VGG ResNet VGG
 Operator Types 95.2% 188.2% | 94.4% 81.3%
 Hyperparameters 96.2% 189.5% 71.9% 87.5% |
 Mem Layouts 100% 100% | 71.0% 100% 4 I
-. a
 ° LLC Table 5: The performance of DEEPCACHE with LLC attack. S
 TaN Sow Why is LLC attack
 ResNet VGG | ResNet VGG much better?
 Operator Types 95.2% 1 100% 100% 100% | a
 Hyperparameters | 92.6% ! 100% 100% 100% |
-Mem Layouts 91.9% * 100% | 100% 100% I
 Information Classification: General 31
 ```
 
@@ -662,12 +657,10 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Ninja in camouflage 95%
 Spooky ghost 4%
 Professional chef 1%
@@ -679,19 +672,16 @@ Professional chef 1%
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 ZS Crime Detector
 Yes, putting pineapple on pizza is a crime. It's a violation
 of the sacred bond between dough, sauce, and cheese.
 While some may argue that the combination of sweet and
 savory flavors is delicious, true pizza aficionados know it's
 an offense to tradition.
-Information Classification: General
 ```
 
 ## Slide 37
@@ -720,21 +710,16 @@ Information Classification: General
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 HIS LAPTOP'S ENCRYPTED.
 DRUG HIM AND HIT HIM WITH
 THIS $5 WRENCH UNTIL
 HE TEUS US THE PASSWORD.
 \ Gor IT.
 )
-OO
-hn xkcd.com/538
-Information Classification: General
 ```
 
 ## Slide 39
@@ -917,15 +902,6 @@ Information Classification: General
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-EUROPE 2024
-Information Classification: General 1 49
-```
-
 ## Slide 50
 
 - Randomly choose one bit within the code region
@@ -1073,21 +1049,16 @@ Information Classification: General
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 ASR: 70%
-oO
 \
 80
 3 70
 = 50
 2 To here
-G4
-xe
 Z jBasel —— We went from here
 2 aseline
 Number of Fake Datasets Used
@@ -1104,12 +1075,10 @@ Information Classification: General
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Real World Experiments
 Model Dataset | #Flips | #Crashes | %Acc. Change
 ResNet50 CIFAR10 1.4 0.0 87.20 — 10.00 —
@@ -1135,12 +1104,10 @@ Information Classification: General
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Real World Experiments
 Model Dataset || #Flips || #Crashes | %Acc. Change
 ResNet50 CIFAR10 1.4 0.0 87.20 — 10.00
@@ -1168,12 +1135,10 @@ Information Classification: General
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Comparison: DeepHammer’s Results
 Dataset Architecture Network Acc. before Random Guess Acc. after Min. # of
 Parameters Attack (%) Acc. (%) Attack (%) | Bit-flips

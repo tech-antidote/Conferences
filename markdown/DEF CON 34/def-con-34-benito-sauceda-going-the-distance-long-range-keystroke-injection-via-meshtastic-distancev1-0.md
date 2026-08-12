@@ -4,23 +4,28 @@ speakers: ["Benito Sauceda"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Benito Sauceda - Going the Distance Long-Range Keystroke Injection via Meshtastic - Distancev1 0.pdf"
 pages: 38
 sha256: "552dafd43ee1dac781e3423d5651d248e040da581f9f2545f34b217ce534163a"
-text_chars: 6757
+text_chars: 6739
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:12:53Z"
+converted_at: "2026-08-12T06:21:39Z"
 ---
 # Going the Distance Long-Range Keystroke Injection via Meshtastic
 
 **Speakers:** Benito Sauceda  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Benito Sauceda - Going the Distance Long-Range Keystroke Injection via Meshtastic - Distancev1 0.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -202,7 +207,8 @@ Limitations:
 
 - HacktheBay, 2026
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Monkey see, Monkey do:

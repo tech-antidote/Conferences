@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Vladyslav Babkin_Securing Network Appliances New Technologies and Old Challenges.pdf"
 pages: 27
 sha256: "176e6e9f9b9f5fded5707c088a50110cd8b9a588ffeec56dc2f81ad1a054fc40"
-text_chars: 10509
-ocr_pages: 6
+text_chars: 10044
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:39:48Z"
+converted_at: "2026-08-12T04:43:24Z"
 ---
 # Securing Network Appliances New Technologies and Old Challenges
 
 **Speakers:** Vladyslav Babkin  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Vladyslav Babkin_Securing Network Appliances New Technologies and Old Challenges.pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ Securing Network Appliances **:** New Technologies and Old Challenges
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-oo
 blackhat —
 USA 2024
 AUGUST 7-8, 2024
@@ -65,16 +71,6 @@ Viadyslav Babkin
 ### **HOW DID NETWORK DEVICES EVOLVE?**
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| prt
-| ,
-black hat
-USA 2024
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 4
 
@@ -212,11 +208,10 @@ F5 BIG-IP device disassembly
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseachat |
-USA 2024 , y
 admin@central-manager : ~$ sysadmin [~]# ls -al /
 total 9848 total 16
 drwxr-xr-x 17 root root drwxrwxr-x
@@ -240,7 +235,6 @@ root root 4096 —rwxr-xr-x
 root root 860 drwxrwxr-x
 Lrwxrwxrwx root root 8
 drwxr-xr-x root root 4096
-Chg age. root root 0
 drwxrwxrwt root root 280
 drwxr-xr-x root root 4096
 drwxr-xr-x root root 4096
@@ -271,31 +265,17 @@ sysadmin sysadmin sys
 admin 234 tmp -> ./var/tmp
 admin 234 usr
 sysadmin sysadmin var
-rR
-rR
-Oo
-rary
-rR
-dnwxr xn x
 drwxr-xr-x
 Lrwxrwxrwx
-0
-qrxXt xt X
 Ce]
-OPRPRPRPRPORPRPRPRPYRPRPRPRPRPRPRPRPUOWNENE
 a
-fo)
-NRPOMDNLRPRPWNNRPRPRRU
 drwxr-xr-x
 drwxrwxrwx
-—rwxr-xr-X
 drwxrwxr-x
 dr-xr-xr-x
 Lrwxrwxrwx
 drwxrwxr-x
 drwxrwxrwx
-b
-NPPRPPRPNPRPRPRPRPRPRPRPRPPREPPR
 N
 ```
 
@@ -445,14 +425,6 @@ Let’s see some in practice.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat — se
-USA 2024
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 21
 
 ## Vulnerability Short Descriptions
@@ -515,7 +487,8 @@ F5 only acknowledged the pre-auth vulnerabilities as vulnerabilities. SSRF issue
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat — a
@@ -529,12 +502,3 @@ Questions?
 # **Thank You!**
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat —_ —m
-USA 2024
-Thank You!
-#BHUSA @BlackHatEvents
-```

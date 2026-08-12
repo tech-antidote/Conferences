@@ -12,7 +12,7 @@ duration_seconds: 2521
 words: 6319
 text_chars: 36772
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:12Z"
 ---
 
 # 'We are currently clean on OPSEC' - The Signalgate Saga

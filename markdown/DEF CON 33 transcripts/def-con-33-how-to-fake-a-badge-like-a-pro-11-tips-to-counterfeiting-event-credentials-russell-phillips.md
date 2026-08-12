@@ -12,7 +12,7 @@ duration_seconds: 1274
 words: 4313
 text_chars: 23339
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # How to Fake a Badge like a Pro - 11 Tips to Counterfeiting Event Credentials

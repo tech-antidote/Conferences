@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Colin O'Flynn_Oven Repair (The Hardware Hacking Way).pdf"
 pages: 74
 sha256: "a27638ca1592b71cf1b69ec50732370999958854113ab5253e99800bfef1e16d"
-text_chars: 27248
-ocr_pages: 28
+text_chars: 23369
+ocr_pages: 24
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:24Z"
+converted_at: "2026-08-12T04:07:58Z"
 ---
 # Oven Repair (The Hardware Hacking Way)
 
 **Speakers:** Colin O'Flynn  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Colin O'Flynn_Oven Repair (The Hardware Hacking Way).pdf` (74 pages)
+
 
 ## Slide 1
 
@@ -29,11 +36,10 @@ Speaker: Colin O’Flynn
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-plack hat
-ISA 2PO0es3
 AUGUST 9-10, 2023
 BRIEFINGS
 Oven Repai
@@ -66,13 +72,13 @@ Black Hat USA - August 10, 2023. Colin O'Flynn. 2
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Nova Scotia
 This Halifax-area man's oven caught fire while
 making turkey dinner
-f) vom S&S (in
 Technician determined the stove's relay switch malfunctioned on 5-year-old range
 Company embroiled in lawsuit
 Samsung is the subject of a class action lawsuit filed in December 2020 in New Jersey pertaining
@@ -104,7 +110,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PID Controller?
@@ -112,7 +119,6 @@ PID Controller?
 Temperature (i=1.1)
 60-4 — Setpoint
 50 7
-r(t) y e(t) Plant; PX 404
 + Process
 ~ 30
 207
@@ -155,7 +161,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bootloader
@@ -170,7 +177,6 @@ Operation Mode
 30H Product Information Read
 40H Flash Memory Chip-Erase
 60H Flash Memory Protect Set
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 10
 ```
 
@@ -180,15 +186,14 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Table 14-8 Transfer Format of Single Boot Program [RAM Transfer]
 Transfer Byte
 Transfer Data
 Transfer Data
-Nth hvta
-DANA cetarancs otart ndedirnce 92 +- 1084
 Baud Rat .
 Number from Controller to Device ane nane from Device to Controller
 BOOT ROM 4st byte Baud rate setting Desired
@@ -223,7 +228,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Table 14-12 Transfer Format of Single Boot Program [Flash Memory Protect Set]
@@ -246,7 +252,6 @@ ACK-response to operation command*#2
 Error x1H
 Communications x8H
 5th byte Password data (12 bytes)
-to “
 16th byte (O2FEF4H to O2FEFFH)
 17th byte CHECKSUM value for 5th to 16th bytes >
 ACK response to checksum value*2
@@ -254,7 +259,6 @@ ACK response to checksum value*2
 Error 61H
 Communications 68H
 ADU rAnnannn tn Deatant Cat nnmman a
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 12
 ```
 
@@ -282,7 +286,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Programmer / Disassembler / Simulator?
@@ -295,9 +300,7 @@ Quantity: t | Last One /1sold
 Price: US $280.00
 Buy another
 Add to cart
-§% Have onetosell? Sell now
 Best Offer:
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 ```
 
 ## Slide 15
@@ -329,44 +332,44 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 ## Slide 17
 
-```
+\```
 FUNCTION START: Receive & Verify Password
 00fff2a2 CALR    0x0FFF5EF <-- RX
-```
+\```
 
-```
+\```
 ...
 00fff2ce JR      NZ,0x0FFF2D5
 00fff2d0 DJNZB   C,0x0FFF2C9
 00fff2d3 JR      0x0FFF2D7
-```
+\```
 
-```
+\```
 00fff2d5 LDB     L,0x1 <-- L is flag, if set to 1 comparison failed
 00fff2d7 LDW     BC,0x0C <-- 12 bytes to compare
-```
+\```
 
-```
+\```
 00fff2da LDL     XIX,(0x0FFF00C) <-- Points to 0004FEF4 (PW)
 00fff2df LDB     RH1,0x0
-```
+\```
 
-```
+\```
 00fff2e2 LDB     W,(XIX+) <--Load byte into W, inc XIX ptr (loop)
 00fff2e5 CALR    0x0FFF635 <--- RX assumed
-```
+\```
 
-```
+\```
 00fff2e8 CPB     W,A <--Compare W & A
-```
+\```
 
-```
+\```
 00fff2ea JR      Z,0x0FFF2EE <-- Compare OK, skip fail set
 00fff2ec LDB     L,0x1 <--Set 'fail' flag
 00fff2ee DJNZW   BC,0x0FFF2E2 <--Jump to next byte (12 times)
 00fff2f1 CALR    0x0FFF67B <-- checksum
 00fff2f4 RET
-```
+\```
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
@@ -374,7 +377,7 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 ## Slide 18
 
-```
+\```
 FUNCTION START: RAM WRITE FUNCTION
 00fff2f5 CALR    0x0FFF75F  <-- Load protection status
 00fff2f8 CPB     A,0x0FF <-- Compare protection status
@@ -390,7 +393,7 @@ FUNCTION START: RAM WRITE FUNCTION
 00fff311 LDB     RH1,0x0
 00fff314 CALR    0x0FFF635 <--
 00fff317 LDB     QIXH,A
-```
+\```
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
@@ -414,15 +417,13 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Select difficulty:
 Easy
-ye Pore | 7
-Medium
 Hard
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 20
 ```
 
@@ -442,14 +443,13 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Power Analysis?
--
 Rshunt VCC
 Micro-
-l ia
 Controller
 29.4912 MHz
 (
@@ -470,27 +470,22 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Easy-Mode Level 1: Password Power Analysis
 Power Measurement for 4 Password Guesses
 0.24
 p O17
-Cc
 o
-€
-v
-a
 o
 =
-o
 =
 3-01 |
 —— 0x70 (p)
 -0.24 0x71 (q)
 0x72 (r)
-— 0x73 (s)
 Clock Cycle (@ 16 MHz) .
 Black Hat USA - August TO, 2023. Colin O'Flynn. 23
 ```
@@ -501,19 +496,17 @@ Black Hat USA - August TO, 2023. Colin O'Flynn. 23
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Difference from Mean
 Difference Between Guessed Power Trace & Mean
-Xx x  Guessed Byte
+Xx x Guessed Byte
 13.4- --- Mean
-; --- Axstd+mean
 13.2 5
 13.0 5
 12.8 5
-12.6 |e
-Sx
 12.2 4
 0 50 100 150 200 250
 Byte. Value (Range 0x00 to, OxFR)
@@ -553,17 +546,6 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Clock Fault Injection
-kK .of fset >
-oT
-Lf .-- Lu j---+eJ- -bLIt -
-kK .ext_offset— sf —| |—.-width
-Trigger event
-```
-
 ## Slide 28
 
 ## Easy-Mode Level 2: Fault Injection Tuning
@@ -582,7 +564,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fault Injection Setup / Demo
@@ -614,7 +597,6 @@ loff = scope.glitch.offset
 lwid = scope.glitch.width
 if ret:
 print('Timeout - no trigger’)
-gc.add("reset")
 #Device is slow to boot?
 reset_target()
 else:
@@ -627,13 +609,9 @@ if response != [32, 250, 165, 97]:
 broken = True
 gc.add("success")
 print (response)
-print (loff)
-print (lwid)
 print(”"#@", en
 else:
 gc.add("normal")
-print("Done glitching")
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 29
 ```
 
@@ -645,7 +623,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fault Injection Results (SUM Corruption)
@@ -653,23 +632,12 @@ TMP91 Clock Glitch Settings
 1300 4
 > 1200 4
 £
-©
 1100 4
-2
-wn
-=)
 F 1000 +
-S
-Y
-@ 900;
-: weeiinaeet
 5 8004 E HF
-° seas o2oam +
-#4
 +
 50 100 150 200 250 300 350
 Glitch Width (CW-Husky Setting)
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 30
 ```
 
@@ -681,16 +649,15 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Easy-Mode Level 3: Fault Injection Attack
-SLUpE-BLLLUIWAUL = 2v0u wiey #1000
 for glitch_settings in gc.glitch_values():
 scope.glitch.ext_offset = glitch_settings[o]
 for i in range(sample_size):
 reset_target()
-target. ser.flush()
 response, responsehex
 if responsehex[0] !
 raise IoError("sync Error")
@@ -700,7 +667,6 @@ target.ser.write(b"\x10")
 ret = scope.capture()
 if ret:
 print('Timeout - no trigger’)
-gc.add ("reset")
 #Device
 s slow to boot
 reset_target()
@@ -715,10 +681,7 @@ else:
 if response[o]
 #broken = Tru
 gc.add("success")
-print (response)
 print(hex(response[0]))
-print (scope.glitch.ext_offset)
-print("#@", end=
 if response[0] =
 broken=True
 break
@@ -736,24 +699,17 @@ In [12]:
 In [13]:
 known_pw = [@XDE, OxAD, @xBE, OxEF, OxCA, OxFE, OxFA, @xCE, Ox11, 0x22, 0x33, 0x44]
 bl = t1.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-bl.cmd_ram_transfer(rc.B_F16_RAM1000_ROM10000_TLCS9@L1["data"], rc.B_F16_RAM1000_ROM10000_TLCS9@0L1[“start_address"], skipcm
 rl = tl.RamCodeProtocol (target. ser)
 #Print the password (should match the known one)
-time.sleep(0.1)
 data = rl.cmd_read(@x@2FEF4, 12)
 ":"join(hex(ord(char)) for char in data)
-"oxde: Oxad : Oxbe: Oxef :Oxca:Oxfe: Oxfa:Oxce:0x11:0x22:0x33:0x44"
 #Read the full flash itself
 91FW27UG in Single Boot Mode - flash is from @x10000 to 0x30000 (starts @ @x10000, Length = @x20000)
 flash = rl.cmd_read(0x10000, 0x20000)
-len(flash)
 131072
 known_pw =
-@xDE, OXAD, OxBE, OxEF, OxCA, OXFE, OXxFA, OxCE, Ox11, 0x22, 0x33, 0x44]
 bl = tl.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-b1.cmd_ram_transfer(rc.B_F16_RAM1000_ROM10000_TLCS90QL1["data"], rc.B_F16_RAM1000_ROM10000_TLCS900L1["start_address"], skipcm
 rl = tl.RamCodeProtocol (target .ser)
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 31
 ```
 
@@ -777,14 +733,13 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Select difficulty:
 Easy
-Medium
 Hard
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 33
 ```
 
@@ -792,16 +747,15 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 Black Hat USA - August 10, 2023. Colin O'Flynn. 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Seles,
 20-Pin
 Target B.
 ik Hat USA - August 10, 2023.
 13
 © CW312 Sty)
-Suppor ,
 Colin O'Flynn.
 34
 ```
@@ -826,17 +780,14 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Medium-Mode Level 2: Fault Injection
-x87
 11710
-& [133]
 @x85
 11715
-& [17]
-x11
 11750
 r [16]
 0x10
@@ -844,7 +795,6 @@ r [16]
 In [59]: bl #known_pw = [@xDE, @xAD, OxBE, OxEF, @xCA, @xFE, @xFA, @xCE, @x11, x22, 0x33, Ox44]
 known_pw = [ord(c) for c in “samsungovene"
 bl = tl.LowLevelBootloader(target.ser, reset_target, password=known_pw, reset_and_connect=False)
-bl.cmd_ram_transfer(rc.B_F16_RAM100@_ROM10000_TLCS9@@L1["data"], rc.B_F16_RAM1000_ROM10000_TLCS9@@L1["start_address"], skipcm
 rl = tl.RamCodeProtocol(target.ser)
 Black Hat USA - August 10, 2023. Colin O'Flynn
 ```
@@ -855,13 +805,12 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 In [11]: Dl resp = rcp.cmd_read(0x10000, 9x100)
 In [12]: DP resp
-out[a2}: *¥ iv iv EODED SED EEDEED BIDET BEDE EDD EL
-YYYYYYYYYYYYYYYYYYY: YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY YY YY
 yyyyyyyyy
 #bL.cmd
 #bL.cmd
@@ -938,50 +887,22 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 Black Hat USA - August 10, 2023. Colin O'Flynn. 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 72/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-EH AutoSave @ of) BE] O-~ GS» F_ REOvenxisx v PP Search Colin O'Flynn {co} ® S} = ia} El
-File Home Insert Draw PageLayout Formulas Data Review View Help Acrobat Table Design Query | © Comments |
-tw 4 |Calibri 11 >| RN ==|=|%- 25 Wrap Text |General -| EY wy ea maxX = 2 ov P ta
-Paste Ht) . BI UY. Oi TAS a $ ~%9 <8 8 Conditional Formatas Cell Insert Delete Format % Sort & Find& Analyze
-¥ = Formattingy Tabley Stylesy ¥ a ™ re v Filtery Selecty Data
-Clipboard & Font & Alignment & Number § Styles Cells Editing Analysis ¥'
-F9931 vi te v
-cost columne =) Gollmnns [=] vies [+ | Column5 [+|Columt~|Columi~| G H J LE M N fe} P Q R
-9927 Oxfe9683. £202 110031 LDAL XBC,0x1102
-9928 Oxfe9688  c307e4e021 LDB  A,(XBC+WA)
-9929 Oxfe968d £10802 41 LDB (0x208),A Kick off TX routine?
-9930 Oxfe9691 c2 1e 110061 INCB Ox1,(0x111E)
-9931|Oxfe9696 Oe RET i
-9932 Oxfe9697 £10902 cb BITB 0x3,(0x209) Serial RX Start QBITB Ox3,(0x209)
-9933 Oxfe969b  660b JR Z,OxOFE96A8 JR Z,HERE
-9934 Oxfe969d 00 NOP NOP
-9935 Oxfe969e c1 080221 LDB A,(0x208) LDB A,(0x208)
-9936 Oxfe96a2_- f2000 1100 41 LDB (0x1100),A LDB (0x1120),0x0
-9937 Oxfe96a7_——«Oe RET HERE BITB  0x2,(0x209)
-9938 Oxfe96a8_ «109 02. ca BITB 0x2,(0x209) JR Z,HERE2
-9939 Oxfe96ac 66 Ob JR Z,0xOFE96B9 NOP
-9940 Oxfe96ae 00 NOP LDB  A,(0x208)
-9941 Oxfe96af —c1 08.02 21 LDB  A,(0x208) LDB  (0x1120),0x0
-9942 Oxfe96b3 {200 1100 41 LDB (0x1100),A HERE2 BITB__0x4,(0x209)
-9943 Oxfe96b8 Oe RET JR Z,HERE3
-9944 Oxfe96b9_  f1 09 02 cc BITB 0x4,(0x209) NOP
-9945 Oxfe96bd 66 Ob JR Z,0xOFE96CA LDB  A,(0x208)
-9946 Oxfe96bf 00 NOP LDB  (0x1120),0x0
-9947 Oxfe96cO = c1 08 02 21 LDB A,(0x208) HERE3 LDB A,(0x1120)
-9948 Oxfe96c4_ «200 1100 41 LDB (0x1100),A LOB GA
-9949 Oxfe96c9_ «Oe RET EXTZW BC
-9950 Oxfe96ca c2 20110021 LDB A,(0x1120) What is 1120?? LDAL XDE,0x1110
-9951 Oxfe96cf  c98b LDB CA LDB A,(0x208)
-9952 Oxfe96d1 d912 EXTZW BC BC has (0x1120) data LDB (XDE+BC),A
-9953 Oxfe96d3_ f2 10 1100 32 LDAL XDE,0x1110 CPB (0x1120),0x0C
-9954 Oxfe96d8  c1080221 LDB A,(0x208) RX Byte RET ULE
-9955 Oxfe96dc =: f3: 07 e8 e441 LDB (XDE+BC),A Load byte here? LDB (0x1120),0x0
-9956 Oxfe96e1 c2 20 11 00 3f 00 CPB (0x1120),0x0 CALR OxOFE956F
-9957 Oxfe96e7 + 6e10 JR -NZ,OxOFE96F9 Fail | guess? 0x1110 RET
-< > DE92-02439F FW Disassembly —_ Sheet 1 oe Black Hat USA - August 10, 2023. Colin 0) TS 44?
-Ready  $& Accessibility: investigate Cg Display Settings 1333] —&) -——#—- + _ 100%
+grep -nrbai "API Username and Password" OSX/Test_ready_lldb/OSX-KVM/ -A 10
+mac_hdd_ng.img:5920941:1337630732:#API Username and Password
+mac_hdd_ng.img-5920942-1337630759-username="service_api_[obscured]
+mac_hdd_ng.img-5920943-1337630790-password="[obscured]
+mac_hdd_ng.img-5920944-1337630828-url="https://[obscured]
+mac_hdd_ng.img-5920945-1337630862-loggedInUser=$( scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
+mac_hdd_ng.img-5920946-1337630972-echo $loggedInUser
+mac_hdd_ng.img-5920947-1337630991-
+mac_hdd_ng.img-5920948-1337630992-#Variable declarations
+mac_hdd_ng.img-5920949-1337631015-bearerToken=""
+mac_hdd_ng.img-5920950-1337631030-tokenExpirationEpoch="0"
+mac_hdd_ng.img-5920951-1337631055-aduser="[obscured]
 ```
 
 ## Slide 45
@@ -1016,23 +937,18 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OK, Just
 In [11]: Dl resp = rcp.cmd_read
 In [12]: DP resp
 Out[12]: ‘y
-YY"
 In [7]; PW bl=t
-#bL. cmd
-#bL. cmd
 bl.cmd
 Read:
 Write:
-Black Hat USA - August 10, 2023. Colin O'Flynn.
-ly YVYYYYYYVYYYYYYY
-YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 47
 ```
 
@@ -1043,14 +959,6 @@ YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 48
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-$$ > Samsung Parts Department
-Prt cong inguie 79090 5x00
-Black Hat USA - August 10, 2023. Colin O'Flynn.
-```
 
 ## Slide 49
 
@@ -1098,54 +1006,43 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-..Add the Serial Monitor
-1H Autosave @ off cotinoryn QP ZG -
-v RE Oven REVD.xisx ¥ £ Search
-File Home Insert Draw PageLayout Formulas Data Review View Help Acrobat Table Design Query
-ul x Calibri in Jk aw |= S&~- 2B Wrap Text {General . ii=ai| BY in Se mex fey z= 49 Pp
-paste “A BIU. He ae As $ ~ % 9) BG 99 Conditional Format as Cell Insert Delete Format ~ Sort & Find & — Analyze
-. =| _ 2 00 0 Formatting’ Table~ Styles ~ ¥ v ¥ © ~ Filter~ Select Data
-Clipboard = & Font & Alignment & ‘Number 8 Styles Cells Editing Analysis
-(© SECURITY WARNING External Data Connections have been disabled Enable Content
-H124388 vi Se RX Interrupt
-wn2_|~|Column3 ~|Column4 {-|Column5 ‘~|Column6 _|~|Column7 [~| Column] ~ |Column ~ | J
-124376 f4 ff SWI Ox7
-124377 f5 ff SWI 0x7
-124378 f6 ff SWI 0x7
-124379 f7 ff SWI 0x7
-124380 f8 ff SWI 0x7
-124381 f9 ff SWI 0x7
-124382 fa ff SWI 0x7
-124383 fb ff SWI 0x7
-124384 fc ff SWI 0x7
-124385 fd ff SWI 0x7
-124386 fe ff SWI Ox7
-124387 ff ff SWI 0x7 a
-124388 }00 ff SWI 0x7 3e PUSHL XIZ RX Interrupt
-124389 101 ff SWI 0x7 3d PUSHL XIY
-124390 102 ff SWI 0x7 3c PUSHL XIX
-124391 103 ff SWI 0x7 3b PUSHL XHL
-124392 104 ff SWI 0x7 3a PUSHL XDE
-124393 105 ff SWI 0x7 39 PUSHL XBC
-124394 106 ff SWI 0x7 38 PUSHL XWA
-124395 107 ff SWI 0x7 1D 50 EO FF CALL OxOFFEOSO
-124396 108 ff SWI 0x7 58 POPL XWA
-124397 109 ff SWI 0x7 59 POPL XBC
-124398 10a ff SWI 0x7 5a POPL XDE
-124399 |0b ff SWI 0x7 5b POPL XHL
-DE92-02439D FW Disassembly —Sheet1 + —————
-C@ Display Settings B O © - it
-Black Hat USA - August 10, 2023. Colin O'Flynn.
-Ready $x Accessibility: Investigate
-Oo x
-© Comments
-Slight risk of
-overwriting something
-else important....
-52
+QuickSniff - 1st Tool
+
+Hooking Quick Share to sniff
+sent and received Offline
+Frames on Windows
+
+initiator_to_responder:
+v1:
+  payloadTransfer:
+    packetType: DATA
+    payloadChunk:
+      body:
+        v1:
+          introduction:
+            fileMetadata:
+            - id: '585290039179534374'
+              mimeType: image/png
+              name: TFMyMDI0MDYxMzEzMzM1Ni5wbmc=
+              payloadId: '-8969229381597391197'
+              size: '622679'
+              type: IMAGE
+          type: INTRODUCTION
+        version: V1
+      flags: 0
+      index: 0
+      offset: '0'
+    payloadHeader:
+      id: '-5778571142958742193'
+      isSensitive: false
+      totalSize: '85'
+      type: BYTES
+  type: PAYLOAD_TRANSFER
+version: V1
 ```
 
 ## Slide 53
@@ -1176,7 +1073,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Examples of Global Variables
@@ -1187,7 +1085,6 @@ Ox120a = Heater “ON” Flag |
 0.05
 T T
 0 200
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 T
 400
 T
@@ -1256,20 +1153,16 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Patched Display Logic
-2 om
 Bake Roast
 Start/set
-sserole Chicken
 Casserole Naggets ~ 4 B Hold 3 sec
-Steam Self
-Detrost Seam Sell
 Warming Custom Cooking Timer
 Drawer Cook Time On/o Delay Start
-Black Hat USA - August 10, 2023. Colin O'Flynn.
 ```
 
 ## Slide 61
@@ -1330,7 +1223,8 @@ Black Hat USA - August 10, 2023. Colin O'Flynn.
 
 Black Hat USA - August 10, 2023. Colin O'Flynn.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Set 375F, Cold Start, Load (Shepherds Pie)

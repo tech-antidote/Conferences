@@ -12,7 +12,7 @@ duration_seconds: 2308
 words: 6052
 text_chars: 32988
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Playing Dirty Without Cheating - Getting Banned for Fun and No Profit

@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_Compressed.pdf"
 pages: 92
 sha256: "56f1791b0c0e675a64f7b233d86ecdb59a88e8bfdb3d45fcb682decb28a3f51a"
-text_chars: 40286
-ocr_pages: 21
+text_chars: 37168
+ocr_pages: 20
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 84.9
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:01:31Z"
+converted_at: "2026-08-12T04:55:39Z"
 ---
 # Breaking Matter Vulnerabilities in the Matter Protocol
 
 **Speakers:** Bela Genge, Ioan Padurean  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Bela Genge & Ioan Padurean_Breaking Matter Vulnerabilities in the Matter Protocol_Compressed.pdf` (92 pages)
+
 
 ## Slide 1
 
@@ -30,11 +36,10 @@ Speaker: Béla Genge Contributor: Ioan Pădurean
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-= acral Vii =* 74
-— EWROPE 20 “~
 DECEMBER 11-12, 2024 | _ yore
 Breaking Matter: Vulnerabilities ir in
 the Matter Protocol
@@ -219,12 +224,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Matter: latest news ae ah
 blackhat
-EUROPE 2024
 BLOGS
 Matter: Enabling Universal Grid-Friendly Integration press reveases
 Energy Smart Appliances and more
@@ -234,12 +239,6 @@ Matter 1.4 Enables More Capable Smart Homes
 Matter: Enabling Universal 5 & be (HRAP)
 Grid-Friendly Integration for Energy ~
 Smart Appliances and more Tl \ wy New Energy Device Types and Capabilities
-“Tr ote” | | oe
-ait Tater re man ™ . ie
-CSa m"| az matter = —
-LO _----)
-=r >
-Information Classification: General
 ```
 
 ## Slide 15
@@ -264,15 +263,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Matter: my perspective < blackhat
 WIP: Security Vulnerabilities and Attack Scenarios
 in Smart Home with Matter (2024)
-“Research
-MATTER?...
-by Larry Pesce-| © 10 TF — | (@ Mar 27, 2023:2:47:16.PM
 ~
 WHERE IS VERYBOD\) 7 Risks in AiDot-Controlled Matter Devices
 (2024)
@@ -282,8 +279,6 @@ automation Matter protocol
 Real life example of mDNS being used to find and add devices toa
 home automation network.
 @ ~=—~Paul Otto - Follow
-BS otminread
-Information Classification: General
 ```
 
 ## Slide 17
@@ -334,34 +329,37 @@ No router
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-biscichat
-EUROPE 2024
-901101001011010110108
-011101011" *10101100
-6110111000" 101010100. *110110101
-01010101010 1010101018 ol rout
-01011001011 100101101011  oso10138 No er er
-100101101110 O1 10. 10001111011
-Connectivity Standards Alliance : Security Vulnerabilities, CVEs _ detection
-nemorio1o1 20101100 01011 1012001011
-90101010 .pitororoioy4
-Published in: =~ 2024 January February March April May June July August September October
-CVSS Scores Greater Than:0 123 45 67 8 9 In CISA KEV Catalog
-Sort Results By: Publish Date !§ Update Date!’ CVE Number!$ CVENumberts’ CVSS Scorels EPSS Score lé
-i Copy l
-CVE-2024-3454 Max CVSS 3.5 o a
-An implementation issue in the Connectivity Standards Alliance Matter 1.2 protocol as used in the connectedhomeip SDK EPSS Score 0.04% \ | Z
-allows a third party to disclose information about devices part of the same fabric (footprinting), even though the protocol Published 2024-07-24 7 7
-is designed to prevent access to such information. Updated 2024-09-10
+[Left — stylized blue wireframe image of a house]
+[Center — hooded hacker figure icon with a bug on a laptop, next to a dark oval filled with binary digits and the words "ZERO-DAY" in red]
+[Right — outline icon of a house]
+
+No router [Wi-Fi router icon with red slash]
+No detection [camera/sensor icon with red slash]
+No alarm [alarm bell icon with red slash]
+No charging [electric car icon with red slash]
+
+Connectivity Standards Alliance : Security Vulnerabilities, CVEs
+
+Published in:  ☰▾  2024  January  February  March  April  May  June  July  August  September  October
+CVSS Scores Greater Than:  0  1  2  3  4  5  6  7  8  9    In CISA KEV Catalog
+Sort Results By :  Publish Date ⇅  Update Date ⇅  CVE Number ⇅  CVE Number ⇅  CVSS Score ⇅  EPSS Score ⇅
+                                                                                          🗐 Copy
+
+CVE-2024-3454                                                    Max CVSS   3.5
+An implementation issue in the Connectivity Standards Alliance Matter 1.2 protocol as used in the connectedhomeip SDK   EPSS Score  0.04%
+allows a third party to disclose information about devices part of the same fabric (footprinting), even though the protocol   Published   2024-07-24
+is designed to prevent access to such information.                                              Updated    2024-09-10
 Source: Bitdefender
-CVE-2024-3297 Max CVSS 6.5 No charging
-An issue in the Certificate Authenticated Session Establishment (CASE) protocol for establishing secure sessions between EPSS Score 0.04%
-two devices, as implemented in the Matter protocol versions before Matter 1.1 allows an attacker to replay manipulated Published 2024-07-24
-CASE Sigma messages to make the device unresponsive until the device is power-cycled. Updated 2024-09-10 ( ) e
-Information Classification: General source: Bitdefende
+
+CVE-2024-3297                                                    Max CVSS   6.5
+An issue in the Certificate Authenticated Session Establishment (CASE) protocol for establishing secure sessions between   EPSS Score  0.04%
+two devices, as implemented in the Matter protocol versions before Matter 1.1 allows an attacker to replay manipulated   Published   2024-07-24
+CASE Sigma1 messages to make the device unresponsive until the device is power-cycled.                                  Updated    2024-09-10
+Source: Bitdefender
 ```
 
 ## Slide 20
@@ -464,27 +462,23 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@ = ™ss315 x
 Powered Off
 MANUFACTURER
 Meross
 CTm© Chengdu Meross Technology... View
-tok ‘
 FREE
 Accessory Ready to Connect
 ye Me “MSS315" is now in pairing mode. ss
 —_ ” Copy and paste the setup code to
 pee 3 connect.
-“ @ Setup Code: 1531-955-5610
 Mc fini
-Wi-r ewwork piuerenuer iesirry
 Firmware 9.3.26
 T n Pairing Mode
 Remove Accessory
-Information Classification: General
 Commissioning: certified device Ts.
 @ Mss315 x
 Powered Off
@@ -492,7 +486,6 @@ Connected Services
 Manage the services that can access
 and control this accessory.
 II still apy
-Dear in thei
 ar in the Apple Home
 Status
 Connected Services
@@ -510,7 +503,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 on-certified d
@@ -526,7 +520,6 @@ You can also hold iPhone
 if it appears
 this
 symbol on the
-Information Classification: General
 Uncertified Accessory
 This accessory has not been certified
 to work with your home and may not
@@ -540,10 +533,7 @@ Speakers & TVs
 HomePod
 Not Playing
 MSS315
-4
 Automation
-biscichat
-EUROPE 2024
 ```
 
 ## Slide 27
@@ -574,7 +564,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 —_
@@ -595,10 +586,8 @@ Msg3 = { encrypted3 (1) = TBEData3Encrypted } with an anonymous tag for the oute
 struct. 0x67, Ox6d, 0x61, 0x33, Ox4e}
 TBEData3Encrypted = Crypto_AEAD_GenerateEnckypt(
 a Error 404: Not found
-a .
 X= TBEDatas_A, (not defined)
 N = TBEData3_Nonce
-Information Classification: General
 ```
 
 ## Slide 29
@@ -709,37 +698,27 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Testbed fabrics and connectivity biacichat
-—_—— — _— —_-—-
-Nanoleaf
 Nanoleat | l
 | | Light Bulb lI > =
-© I
 |
 ! Eve Door =~ | Hones Pod { ~~ Google Nest ~ \ [I '@) Eve Energy I
 | & Window
 |
 Eve Door |
-& Window ! |
 |
 | Eve Mation |
-. ,
-. ;
-Meross ee ina
 Smart Plug C)
-| , Pore =
 | | Eve Motion
-j o) Meross |
 * a Smart Plu
-~Y a CHIP controller | g
 CHIP lock app | (chip-tool) le's fabri Cs
 (Cluster l, l Apple's fabric:
 attack) |, J | Google's fabric > |
 | CHIP's fabric oy
-Information Classification: General
 ```
 
 ## Slide 37
@@ -830,25 +809,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Pay ~
 Attack impact: first day — blackhat
 No SIM > 14:54
 < Home Office if! = +
-NOTHINGJERRY | : ;
-:
 VirtuallockApp Matter Accessory
-al ro
-4 7 ‘ ’ oy Locked No Response
-» “
-a
 @ HomePod
 Not Playing
 _ THIS MEMEIS ABOUT NOTHING!
 Automation
-Information Classification: General
 ```
 
 ## Slide 43
@@ -859,7 +832,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack impact: next days blackhat
@@ -872,8 +846,6 @@ HomePod
 Not Playi
 ag MSS315
 No Response
-I'MWRITINGC
-Information Classification: General
 ```
 
 ## Slide 44
@@ -1038,17 +1010,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseicha :
-EUROPE 2024
-a
 TH Download more RAM!
 Instant, Fast, FREE
->)
 ° \
-Information Classification: General
 ```
 
 ## Slide 56
@@ -1217,136 +1185,51 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Step #1: create a virtual device
-connectedhomeip
+[Left panel — GitHub repo browser]
+connectedhomeip / examples / lock-app / linux /
 README.md
-xam
-Information Classification: General
-ples / lock-app
+
 Lock Application for Linux
-linux /
-» Se
-blackhat
-EUROPE 2024
-A
-Indalone/chip-lock-app
-::Init: Using KVS config file: /tmp/chip_kvs
-::Init: Using KVS config file: /tmp/chip_kvs
-::Init: Attempt to re-initialize with KVS config file:
-::Init: Using KVS config file: /tmp/chip_factory.int
-::Init: Using KVS config file: /tmp/chip_config.int
-nuxStorage::Init: Using KVS config file: /tmp/chip_counters. ini
-ig settings to file (/tmp/chip_counters.ini-HiMisk)
-to file (/tmp/chip_counters.ini)
-: chip-counters/reboot-count = 5 (x5)
-/tmp/chip_kvs
-Application that showcases abilities of the Door Lock Cluster. (etsiSaiNtihd-lee-(o-Fa-Tilep
-[ 1729250960.
-y and will disappear.
-(1729250960.
-4
-663978]
-663990][198718:
-ase update your scripts to
-[1729250960.
-(1729250960.
-[1729250960.
-[1729250960.
-[1729250960.
-(1729250960.
-[1729250960.
-[1729250960.
-(1729250960.
-[1729250960.
-[1729250960.
-[1729250960.
-[1729250960.
-[1729250960.
-(1729250960.
-[1729250960.
-663993][198718:
-663996 ][198718:
-665414][198718:
-665420][198718:
-665424][198718:
-665427][198718:
-665430][198718:
-665433][198718:
-665435][198718:
-665437 ][198718:
-665441][198718:
-665443][198718:
-665445 ][198718:
-665450][198718:
-665453][198718:
-665456 1[198718:
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-198718]
-Tivo tO.ToOTTo eon
-(198718:198718] CHIP:DL:
-[1729250960 .663982][198718:198718] CHIP:DL:
-[1729250960.663987][198718:198718] CHIP:SPT:
-Please update your scripts to explicitly configure onboarding credentials.
-198718] CHIP:SPT:
-explicitly configure discriminator.
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-CHIP:
-he primary Ethernet interface:eno1
-Failed to get WiFi interface
-Failed to reset WiFi statistic counts
-*x*x*x WARNING: Using temporary passcode 20202021 due to no neither --passcode or --spake2p
-KKK
-*x*x* WARNING: Using temporary test discriminator 3840 due to --discriminator
-eK
-SPT: PASE PBKDF iterations set to 1000
-SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generating one.
-DL: Device Configuration:
-DL: Serial Number: TEST_SN
-DL: Vendor Id: 65521 (OxFFF1)
-DL: Product Id: 32769 (0x8001)
-DL: Product Name: TEST_PRODUCT
-DL: Hardware Version: 0
-DL: Setup Pin Code (@ for UNKNOWN/ERROR): 20202021
-DL: Setup Discriminator (OxFFFF for UNKNOWN/ERROR):
-DL: Manufacturing Date: (not set)
-DL: Device Type: 65535 (OxFFFF)
--: ==== Onboarding payload for Standard Commissioning Flow ====
-SVR: SetupQRCode: [MT:-243042CO0KA0648G00 ]
-SVR: Copy/paste the below URL in a browser to see the QR Code:
-SVR: https://project-chip.github. 1o/connectedhomeip/qrcode. html ?data=MT%3A-24J042COOKA0648G00
-not given on
-3840 (OxF00)
+
+Application that showcases abilities of the Door Lock Cluster.
+
+[Terminal window overlapping the right side of the panel above; the left portion of each of the following lines is hidden behind the panel/README box, only the right portion is visible]
+[obscured]…ndalone/chip-lock-app
+[obscured]…nuxStorage::Init: Using KVS config file: /tmp/chip_kvs
+[obscured]…nuxStorage::Init: Using KVS config file: /tmp/chip_kvs
+[obscured]…nuxStorage::Init: Attempt to re-initialize with KVS config file: /tmp/chip_kvs
+[obscured]…nuxStorage::Init: Using KVS config file: /tmp/chip_factory.ini
+[obscured]…nuxStorage::Init: Using KVS config file: /tmp/chip_config.ini
+[obscured]…nuxStorage::Init: Using KVS config file: /tmp/chip_counters.ini
+[obscured]…g settings to file (/tmp/chip_counters.ini-HiMisk)
+[obscured]…d tmp file to file (/tmp/chip_counters.ini)
+[obscured]…t: chip-counters/reboot-count = 5 (0x5)
+[obscured]…hernet interface: eno1
+[1729250960.663829][198718:198718] CHIP:DL: Found the primary Ethernet interface:eno1
+[1729250960.663978][198718:198718] CHIP:DL: Failed to get WiFi interface
+[1729250960.663982][198718:198718] CHIP:DL: Failed to reset WiFi statistic counts
+[1729250960.663987][198718:198718] CHIP:SPT: *** WARNING: Using temporary passcode 20202021 due to no neither --passcode or --spake2p-y and will disappear. Please update your scripts to explicitly configure onboarding credentials. ***
+[1729250960.663990][198718:198718] CHIP:SPT: *** WARNING: Using temporary test discriminator 3840 due to --discriminator not given on [obscured]…ase update your scripts to explicitly configure discriminator. ***
+[1729250960.663993][198718:198718] CHIP:SPT: PASE PBKDF iterations set to 1000
+[1729250960.663996][198718:198718] CHIP:SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generating one.
+[1729250960.665414][198718:198718] CHIP:DL: Device Configuration:
+[1729250960.665420][198718:198718] CHIP:DL:   Serial Number: TEST_SN
+[1729250960.665424][198718:198718] CHIP:DL:   Vendor Id: 65521 (0xFFF1)
+[1729250960.665427][198718:198718] CHIP:DL:   Product Id: 32769 (0x8001)
+[1729250960.665430][198718:198718] CHIP:DL:   Product Name: TEST_PRODUCT
+[1729250960.665433][198718:198718] CHIP:DL:   Hardware Version: 0
+[1729250960.665435][198718:198718] CHIP:DL:   Setup Pin Code (0 for UNKNOWN/ERROR): 20202021
+[1729250960.665437][198718:198718] CHIP:DL:   Setup Discriminator (0xFFFF for UNKNOWN/ERROR): 3840 (0xF00)
+[1729250960.665441][198718:198718] CHIP:DL:   Manufacturing Date: (not set)
+[1729250960.665443][198718:198718] CHIP:DL:   Device Type: 65535 (0xFFFF)
+[1729250960.665445][198718:198718] CHIP:-: ==== Onboarding payload for Standard Commissioning Flow ====
+[1729250960.665450][198718:198718] CHIP:SVR: SetupQRCode: [MT:-24J042C00KA0648G00]
+[1729250960.665453][198718:198718] CHIP:SVR: Copy/paste the below URL in a browser to see the QR Code:
+[1729250960.665456][198718:198718] CHIP:SVR: https://project-chip.github.io/connectedhomeip/qrcode.html?data=MT%3A-24J042C00KA0648G00
 ```
 
 ## Slide 67
@@ -1357,45 +1240,50 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Step #2: add to target fabric " biBeichat
-bgenge@bgenge-d: $ ./out/debug/standalone/chip-lock-app
-[1729250960 .662813][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_kvs
+bgenge@bgenge-d:~/connectedhomeip$ ./out/debug/standalone/chip-lock-app
+[1729250960.662813][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_kvs
 [1729250960.663152][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_kvs
 [1729250960.663158][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Attempt to re-initialize with KVS config file: /tmp/chip_kvs
-[1729250960 .663275][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_factory.ini
+[1729250960.663275][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_factory.ini
 [1729250960.663314][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_config.ini
-[1729250960.663328][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_counters Please scan with your CHIPTool app.
-[1729250960.663443][198718:198718] CHIP:DL: writing settings to file (/tmp/chip_counters. ini-HiMisk)
+[1729250960.663328][198718:198718] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_counters[obscured by QR panel, presumably .ini]
+[1729250960.663443][198718:198718] CHIP:DL: writing settings to file (/tmp/chip_counters.ini-HiMisk)
 [1729250960.663547][198718:198718] CHIP:DL: renamed tmp file to file (/tmp/chip_counters.ini)
 [1729250960.663554][198718:198718] CHIP:DL: NVS set: chip-counters/reboot-count = 5 (0x5)
-[1729250960 .663707][198718:198718] CHIP:DL: Got Ethernet interface: enol
-[1729250960 .663829][198718:198718] CHIP:DL: Found the primary Ethernet interface:eno1
+[1729250960.663707][198718:198718] CHIP:DL: Got Ethernet interface: eno1
+[1729250960.663829][198718:198718] CHIP:DL: Found the primary Ethernet interface:eno1
 [1729250960.663978][198718:198718] CHIP:DL: Failed to get WiFi interface
-[1729250960 .663982][198718:198718] CHIP:DL: Failed to reset WiFi statistic counts
-[1729250960 .663987][198718:198718] CHIP:SPT: *** WARNING: Using temporary passcode 20202021 due to no neither
-y and will disappear. Please update your scripts to explicitly configure onboarding credentials. ***
-[1729250960 .663990][198718:198718] CHIP:SPT: *** WARNING: Using temporary test discriminator 3840 due to --di
-ase update your scripts to explicitly configure discriminator. ***
-[1729250960 .663993][198718:198718] CHIP:SPT: PASE PBKDF iterations set to 1000
-[1729250960 .663996][198718:198718] CHIP:SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generati
+[1729250960.663982][198718:198718] CHIP:DL: Failed to reset WiFi statistic counts
+[1729250960.663987][198718:198718] CHIP:SPT: *** WARNING: Using temporary passcode 20202021 due to no neither [obscured by QR panel] y and will disappear. Please update your scripts to explicitly configure onboarding credentials. ***
+[1729250960.663990][198718:198718] CHIP:SPT: *** WARNING: Using temporary test discriminator 3840 due to --di[obscured by QR panel]ase update your scripts to explicitly configure discriminator. ***
+[1729250960.663993][198718:198718] CHIP:SPT: PASE PBKDF iterations set to 1000
+[1729250960.663996][198718:198718] CHIP:SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generati[obscured by QR panel]
 [1729250960.665414][198718:198718] CHIP:DL: Device Configuration:
-[1729250960.665420][198718:198718] CHIP:DL: Serial Number: TEST_SN Payload: MT:-24J042CO0KA0648G00
-[1729250960.665424][198718:198718] CHIP:DL: Vendor Id: 65521 (OxFFF1) This QR code is unique for your device. You may print a copy of this for subsequent use.
-[1729250960.665427][198718:198718] CHIP:DL: Product Id: 32769 (0x8001)
-[1729250960.665430][198718:198718] CHIP:DL: Product Name: TEST_PRODUCT
-[1729250960.665433][198718:198718] CHIP:DL: Hardware Version: 0
-[1729250960.665435][198718:198718] CHIP:DL: Setup Pin Code (0 for UNKNOWN/ERROR): 20202021
-[1729250960 .665437][198718:198718] CHIP:DL: Setup Discriminator (@OxFFFF for UNKNOWN/ERROR): 3840 (0xF00)
-[1729250960 .665441][198718:198718] CHIP:DL: Manufacturing Date: (not set)
-UY0U.
-[1729250960.665445 ][198718:198718] -3
-[1729250960 .665450][198718: 198718] SVR: SetupQRCode: [MT:-243042COOKA0648G00 ]
-(1729250960. 665453][198718: 198718] SVR: Copy/paste the below URL in a browser to see the QR Code:
-(1729250960. :198718] SVR: https://project-chip.github. to/connectedhomeip/qrcode. html ?data=MT%3A-24J042CO0KA0648G00
-Information Classification: General
+[1729250960.665420][198718:198718] CHIP:DL:   Serial Number: TEST_SN
+[1729250960.665424][198718:198718] CHIP:DL:   Vendor Id: 65521 (0xFFF1)
+[1729250960.665427][198718:198718] CHIP:DL:   Product Id: 32769 (0x8001)
+[1729250960.665430][198718:198718] CHIP:DL:   Product Name: TEST_PRODUCT
+[1729250960.665433][198718:198718] CHIP:DL:   Hardware Version: 0
+[1729250960.665435][198718:198718] CHIP:DL:   Setup Pin Code (0 for UNKNOWN/ERROR): 20202021
+[1729250960.665437][198718:198718] CHIP:DL:   Setup Discriminator (0xFFFF for UNKNOWN/ERROR): 3840 (0xF00)
+[1729250960.665441][198718:198718] CHIP:DL:   Manufacturing Date: (not set)
+[1729250960.665443][198718:198718] CHIP:DL:   Device Type: 65535 (0xFFFF)
+[boxed in red, together with the 4 lines below:]
+[1729250960.665445][198718:198718] CHIP:-: ==== Onboarding payload for Standard Commissioning Flow ====
+[1729250960.665450][198718:198718] CHIP:SVR: SetupQRCode: [MT:-24J042C00KA0648G00]
+[1729250960.665453][198718:198718] CHIP:SVR: Copy/paste the below URL in a browser to see the QR Code:
+[1729250960.665456][198718:198718] CHIP:SVR: https://project-chip.github.io/connectedhomeip/qrcode.html?data=MT%3A-24J042C00KA0648G00
+
+[Right — QR code panel]
+Please scan with your CHIPTool app.
+[QR code image]
+Payload: MT:-24J042C00KA0648G00
+This QR code is unique for your device. You may print a copy of this for subsequent use.
+[Print QR Code button]
 ```
 
 ## Slide 68
@@ -1406,7 +1294,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Step #2: add to target fabric” piseichat
@@ -1421,7 +1310,6 @@ iPhone.
 Add Anyway Cancel
 Scan a Setup Code Speakers & TVs
 oo
-ia}
 on the
 J OF r HomePod
 d position it in the y Not Playing
@@ -1434,7 +1322,6 @@ accessory >, Setting Up... MSS315
 4
 near this
 Automation
-Information Classification: General
 ```
 
 ## Slide 69
@@ -1481,7 +1368,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Change the lock application (2) © wibichat
@@ -1493,10 +1381,8 @@ void HandleDeviceConnectionFailure(void *context,
 const ScopedNodeld &peerId,
 3. Add callback functions CHIP_ERROR-err)
 Callback: :Callback<OnDeviceConnected>
-gOnConnectedCallback(HandleDeviceConnected, nullptr) ;
 Callback: :Callback<OnDeviceConnectionFailure>
 gOnConnectionFailureCallback(HandleDeviceConnectionFailure, nullptr);
-Information Classification: General
 ```
 
 ## Slide 73
@@ -1521,15 +1407,13 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Change the lock application (4) blackchat
 6. Add scan code
-Information Classification: General
-g> -
 auto: onSuccess =: [](const ConcreteDataAttributePath &attributePath, const auto &dataResponse) - {
-ChipLogProgress(NotSpecified, "Read attribute: successful!") ;
 auto onFailure = [](const ConcreteDataAttributePath *attributePath, CHIP_ERROR error) - {
 ChipLogError(NotSpecified, "Read attribute: failed: -%"»CHIP_ERROR_FORMAT, error.Format()) ;
 Controller:
@@ -1560,25 +1444,25 @@ sessionHandle, @x01, onSuccess, onFailure) ;
 
 1. Run lock app
 
-```
+\```
 ./chip-lock-app &
-```
+\```
 
 ##### 2. Issue Scan command
 
-```
+\```
 pid=$(pidof./chip-lock-app)
 NODE_ID="00000000DA41E4CF"
-```
+\```
 
-```
+\```
 CMD="{\"Cmd\": \"RunScan\", \"Params\": { \"EndpointId\": 1,\"Node\":
 \"$NODE_ID\" } }"
-```
+\```
 
-```
+\```
 echo $CMD > /tmp/chip_lock_app_fifo-"$pid"
-```
+\```
 
 Information Classification: General
 
@@ -1592,29 +1476,29 @@ Information Classification: General
 
 - Matter's built-in Access Control List denies, by default, all access to clusters and attributes
 
-```
+\```
 CHIP:-: Read attribute failed: IM Error 0x000005C3: General error: 0xc3
 (UNSUPPORTED_CLUSTER)
-```
+\```
 
-```
+\```
 CHIP:-: Read attribute failed: IM Error 0x000005C3: General error: 0xc3
 (UNSUPPORTED_CLUSTER)
-```
+\```
 
-```
+\```
 CHIP:-: Read attribute failed: IM Error 0x0000057E: General error: 0x7e
 (UNSUPPORTED_ACCESS)
-```
+\```
 
-```
+\```
 CHIP:-: Read attribute failed: IM Error 0x000005C3: General error: 0xc3
 (UNSUPPORTED_CLUSTER)
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 Information Classification: General
 
@@ -1692,7 +1576,8 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Alternative solution: packet analysis
@@ -1710,7 +1595,6 @@ Matter
 Matter
 Matter
 Matter
-Information Classification: General
 239 5540
 88 5540
 972 5540
@@ -1725,10 +1609,7 @@ Information Classification: General
 113 5540
 113 5540
 113 5540
-9940 jLen=177
 9540 JLen=26
-9540 }LEn=510
-9540 JLeEn=373
 9540
 9540
 9540
@@ -1739,9 +1620,6 @@ Information Classification: General
 9540
 5540
 9540
-—
-pigtichat
-a
 >Message Flags: 0x01, B@stination ID Type: 64-bit Node ID
 Session ID: 0x0000
 > Security Flags: 0x00, Session Type: Unicast Session
@@ -1756,7 +1634,6 @@ AcknowLedged message counter: 0x074b3203
 Application payload (0 bytes)
 ~ Matter
 edgement
-EUROPE 2024
 ```
 
 ## Slide 81
@@ -1777,48 +1654,51 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Fingerprint similar to JA3/JA4 pigekhat
-v Transport Layer Security
-. TLSv1.2 Record Layer: Handshake Protocol: Client Hello
-Content Type: Handshake (22)
-Version: TLS 1.0 (0x0301)
-Length: 707
-v Handshake Protocol: Client Hello
-Handshake Type: Client Hello (1)
-Length: 703
-> Version: TLS 1.2 (0x0303)
-> Random: 0b279f74d6e4f62f53fde2c93f71837576dce0b4c55f 29a1462b7548a9360929
-Session ID Length: 32
-Session ID: c8e57809ac4f3e1e46dc92660653c3d63bd65520ec01350f 3db9c39d5aef4b34
-Cipher Suites Length: 32
-Cipher Suites (16 suites)
-Compression Methods Length: 1
-Compression Methods (1 method)
-Extensions Length: 598
-> Extension: Reserved (GREASE) (len=0)
-Extension: key_share (lLen=43) x25519
-Extension: ec_point_formats (len=2)
-Extension: application_settings (len=5)
-Extension: renegotiation_info (len=1)
-Extension: signed_certificate_timestamp (len=0)
-Extension: server_name (len=21) name=webmail.umfst.ro
-Extension: extended_master_secret (len=0)
-Extension: psk_key_exchange_modes (len=2)
-> Extension: session_ticket (len=208)
-Extension: supported_groups (len=10)
-Extension: compress_certificate (len=3)
-Extension: status_request (len=5)
-Extension: supported_versions (len=7) TLS 1.3, TLS 1.2
-Extension: application_layer_protocol_negotiation (len=14)
-Extension: encrypted_client_hello (len=186)
-Extension: signature_algorithms (len=18)
-Extension: Reserved (GREASE) (len=1)
-[JA4: t13d1516h2_8daaf6152771_02713d6af 862]
-[JA4_r: t13d1516h2_002f, 0035, 009c, 009d, 1301, 1302, 1303, C013, C014, CO2b, cO2c, cO2F, C030, cca8, Cca9_0005, 000a, 000b, 000d, 0012, 0017, 001b, 0023, 002b, 002d, 0033, 4469, Fedd, FFO1_:
+Transport Layer Security
+  TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+    Content Type: Handshake (22)
+    Version: TLS 1.0 (0x0301)
+    Length: 707
+    Handshake Protocol: Client Hello
+      Handshake Type: Client Hello (1)
+      Length: 703
+      Version: TLS 1.2 (0x0303)
+      Random: 0b279f74d6e4f62f53fde2c93f71837576dce0b4c55f29a1462b7548a9360929
+      Session ID Length: 32
+      Session ID: c8e57809ac4f3e1e46dc92660653c3d63bd65520ec01350f3db9c39d5aef4b34
+      Cipher Suites Length: 32
+      Cipher Suites (16 suites)
+      Compression Methods Length: 1
+      Compression Methods (1 method)
+      Extensions Length: 598
+      Extension: Reserved (GREASE) (len=0)
+      Extension: key_share (len=43) x25519
+      Extension: ec_point_formats (len=2)
+      Extension: application_settings (len=5)
+      Extension: renegotiation_info (len=1)
+      Extension: signed_certificate_timestamp (len=0)
+      Extension: server_name (len=21) name=webmail.umfst.ro
+      Extension: extended_master_secret (len=0)
+      Extension: psk_key_exchange_modes (len=2)
+      Extension: session_ticket (len=208)
+      Extension: supported_groups (len=10)
+      Extension: compress_certificate (len=3)
+      Extension: status_request (len=5)
+      Extension: supported_versions (len=7) TLS 1.3, TLS 1.2
+      Extension: application_layer_protocol_negotiation (len=14)
+      Extension: encrypted_client_hello (len=186)
+      Extension: signature_algorithms (len=18)
+      Extension: Reserved (GREASE) (len=1)
+[JA4: t13d1516h2_8daaf6152771_02713d6af862]
+[JA4_r: t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,4469,fe0d,ff01_0[cut off at right edge of slide]
+[boxed/highlighted in teal:] [JA3 Fullstring: 771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,51-11-17513-65281-18-0-23-45-35-10-27-5-43-16-65037-13,29-23-24,0]
 [JA3: 351edb9670cb8a3fd330e2811cb787e4]
+
+[Inset photo — man speaking into a microphone, caption overlaid: "DO YOU REMEMBER"]
 ```
 
 ## Slide 83
@@ -1849,14 +1729,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biscichat
-EUROPE 2024
-Information Classification: General
-I Minute 5 Minutes 10 Minutes
-saci — Normal cial — Normall acd — Normall
 Normal 2 Normal 2 Normal 2
 s 7007 | Normal 3 M007) _ Normal 3 1009) Normal 3
 S — FScan —— FScan —— FScan
@@ -1864,11 +1740,7 @@ S — FScan —— FScan —— FScan
 0S
 c
 $ 200- 200 - 200 -
-a I
-®
-5 100 | 100- ih. 100
 IMinute 5 Minutes 10 Minutes
-500+ | Normal | | 500% (Normal | 5007 Normal ! A
 Normal 2 Normal 2 Normal 2
 4007 __ Normal 3 4007 __ Normal 3 4007 __ Normal 3
 5 — FScan —— FScan —— FScan
@@ -1876,8 +1748,6 @@ Normal 2 Normal 2 Normal 2
 =
 2 2007 200 - | 200 -
 100+ | | 100- | 100-
-K\ !
-\
 ```
 
 ## Slide 85
@@ -1888,37 +1758,21 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Packet cumulative distributions
-Information Classification: General
-biscichat
-EUROPE 2024
-I Minute 5 Minutes 10 Minutes
-Loy Normal | [i Sf Loy Normal | S—_ / Loy Normal 1 ZZ TF
 3 Normal 2 4 Normal 2 7 Normal 2 /
 eS OB | aa Normal 3 OB hem Normal 3 OB | ae Normal 3
 2 age can can
-()
-L
-S o4-
-(a)
-S o2-
 re 0.2
 0.0- ~/)
-I Minute 5 Minutes lO Minutes
-10- , 10-| <= 10- a ee
-— Normal] VY — Normall A — Normall
 Normal 2 SL Normal 2 /” Normal 2 |
 O87 __ Normal 3 O87 __ Normal 3 O87 __ Normal 3
 s — FScan — FScan
-: O6-
-°
 =
 © O44
-LJ
-0.2 -
 0.0-
 ```
 
@@ -2015,13 +1869,3 @@ Information Classification: General
 Thank you! Béla Genge <u>bgenge@bitdefender.com</u>
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-_ EWROP ‘Ss
-tt |
-Béla Genge
-bgenge@bitdefender.com
-#BHEU @BlackHatEvents
-```

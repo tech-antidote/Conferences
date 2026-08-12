@@ -12,7 +12,7 @@ duration_seconds: 2651
 words: 8800
 text_chars: 48769
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Journey to the center of the PSTN

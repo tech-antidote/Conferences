@@ -12,15 +12,20 @@ text_chars: 101906
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:59:06Z"
+converted_at: "2026-08-12T04:30:24Z"
 ---
 # Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation
 
 **Speakers:** Fabian Bäumer  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Fabian Bäumer_Terrapin Attack Breaking SSH Channel Integrity by Sequence Number Manipulation_WP.pdf` (21 pages)
+
 
 ## Slide 1
 

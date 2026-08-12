@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Haakon Gulbrandsrud_Azure's Weakest Link How API Connections Spill Secrets.pdf"
 pages: 123
 sha256: "5a1115e5967feb1f9d9a38d9a7b5abea661dfe23efbacde7ba53ba31ce10c49d"
-text_chars: 41544
-ocr_pages: 90
+text_chars: 27814
+ocr_pages: 77
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:55:54Z"
+converted_at: "2026-08-12T05:13:56Z"
 ---
 # Azure's Weakest Link How API Connections Spill Secrets
 
 **Speakers:** Haakon Gulbrandsrud  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Haakon Gulbrandsrud_Azure's Weakest Link How API Connections Spill Secrets.pdf` (123 pages)
+
 
 ## Slide 1
 
@@ -32,11 +38,11 @@ Haakon Holm Gulbrandsrud
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘black hat
-FINGS
 AUGUST ap 2025
 MANDALAY BAY / LAS VEGAS
 Azure’s Weakest Link?
@@ -66,33 +72,25 @@ Haakon Holm Gulbrandsrud
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Logic App Designer
 Discard (@) Parameters {} Code view Info
 2. When a HTTP request
 is received
-at
 Read a resource
 @
-f
 t
 + +
 @) List keys 3 | Get past time
 @A
 +
-+
 lapse all actions
 kpand or collapse all action A ‘ F
 o single ck. Create a new issue call some api
-(v3) _
 Failed to retrieve dyna
-cs)
-a
 ```
 
 ## Slide 6
@@ -101,30 +99,22 @@ a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Logic App Designer
 Discard (@) Parameters {} Code view Info
 2. When a HTTP request
 is received
-at
 Read a resource
-ap
 + +
 @ List keys | | 8 | Get past time
-+
 +
 lapse all actions
 kpand or collapse all action A ‘ F
 o single ck. Create a new issue call some api
-nt a
 Failed to retrieve dyna
-@
-a
 ```
 
 ## Slide 7
@@ -137,11 +127,10 @@ a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
 API Connections
 Manage view Export to CSV Open query
 te any fiel Subscription equals alll Resource Group equals all Location equals all + Add filter
@@ -169,21 +158,18 @@ sq connectorizer vi Ready API Connection to ore’ Norway East ptio
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseachat
-BRIEFINGS
 Refresh iO Delete a Feedback
 2 Overview “ Essentials
 orname : slack
 f@ Activity log
 yname —: Slack
-8. Access control (IAM)
 te time : 6/2/2025 8:17:44 AM
 @ Tags
 4% Diagnose and solve problems
-: 8e3ce52f-d45b-4347-8705-65892507465e
 Resource visualizer
 Y Settings Slack
 Locks
@@ -197,20 +183,13 @@ II! Properties
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat -
-BRIEFINGS
 iv
 "testLinks”:
-443/subscriptions/é&e
-»s /Logic-app-tests/providers/Microsoft.We
-—preview”,
-MEthHoa’ : geL
-443/subscriptions/S8e3ce52f-
 app-tests/providers/Microsoft.Web,
-ls
 RuntimeUrl": “https:
 ```
 
@@ -218,25 +197,16 @@ RuntimeUrl": “https:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bldekhat
-BRIEFINGS
-arama tT eat atvatents ~=
-OVO Ve 5 DD LeSOUULCOCwLOUs} os 5212 oS &
-```
-
 ## Slide 12
 
 ##### Azure Resource Management
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ye. ’
 BRIEFINGS ‘4
 ~ = pt = e52f-d4 —-4347- —-6589250 465e/resourceGroups/ logic =
 Azure Resource
@@ -249,26 +219,17 @@ Management
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS V4
-JET = Scriptions E5cCevd24i-as eee be
-Subscription
-```
-
 ## Slide 14
 
 ##### Resource Group
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ye. ’
 BRIEFINGS WY
-GET S scriptions/ tesceyv2zi-d4 0b-434 /-68 /0a-608 3200 =
 app-tests/providers icrosoft.We cronnections/ siac extens: 3/Proxy
 conversations.list HTTP/2
 Resource Group
@@ -280,10 +241,10 @@ Resource Group
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Ss —
 BRIEFINGS 4
 = —tests x iders icrosofit.We = ections C extensions x
 ersations.list HTTP/2
@@ -295,12 +256,11 @@ Resource
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat ye. ’
 BRIEFINGS YW
-Ger fe scriptions/ tesceoZzit- 2D rs 2-6D892Z090 4o5e/resourceG
 app-tests/providers icrosoft.We cronnections/ siac extensions/proxy
 conversations.list HTTP/2
 Resource
@@ -311,13 +271,6 @@ Resource
 ##### Action/Endpoint
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS ; y
-Action/Endpoint
-```
 
 ## Slide 18
 
@@ -331,15 +284,6 @@ Action/Endpoint
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat —
-BRIEFINGS . 4
-SrmpH—teatea roy ore f wrenf+ Mah /nnnnaentiance/olasank fawtansi ane /nrayy
-ia. SeEtonooze bi
-```
-
 ## Slide 21
 
 #BHUSA   @BlackHatEvents
@@ -348,27 +292,19 @@ ia. SeEtonooze bi
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifekhat .
-BRIEFINGS
 TP/2 403 Forbidden
-ue
 ©
 Ca
-re
-ip
 Content-Type: application/json
-% Content-Length: 451
 Host: mw {
-"error": {
 "code": "AuthorizationFailed",
 "
 essage":"The client
-"470085e1-d51a—40bb-ade4-d
 action ‘Microsoft.Web/1
-subscriptions/8e3ce52£-d4
 locations/norwayeast/manag
 recently granted,
 }
@@ -390,12 +326,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 Credential and metadata store
 connection
@@ -407,20 +341,14 @@ Call proxied for additional
 request/response transformations
 user token
 { \ connection ID
-: 1
-- on-premises
 Power Automate eeroien lanagemen network
 connector ID :
 operation ID on-peekies RESTful
 connection ID PM data gateway API defined 1
 in swagger i
 Power Apps A |
-ah bseal edie as connector webapp i 1
 and policies ; .
-ia)
-[é a) Loewe!
 Logic Apps
-VY
 https://learn.microsoft.com/en-us/connectors/connector-architecture
 ```
 
@@ -432,12 +360,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 | |
 Power Automate user token
@@ -459,12 +385,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 | |
 Power Automate user token
@@ -485,12 +409,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 | |
 Power Automate usertoken
@@ -511,12 +433,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 | |
 Power Automate usertoken
@@ -535,26 +455,17 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Ly — p
-BRIEFINGS ;
 Action Definitions
-“Swagger”: "2.0",
-"info": {
-“version": "1.0.0",
-"title": "Slack"
-3
 ‘Slack
 Ww
-i
 “description”: a team communication tool, that brings together all
 e
 your team communications in one place, instantly searchable and available wherev
 “X-mS-api-annotation": {
-” °
-"status": "Production"
 ```
 
 ## Slide 30
@@ -563,27 +474,18 @@ your team communications in one place, instantly searchable and available wherev
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 71/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat \. y 4
 Action Definitions
-“paths”: {
-"/{connectionId}/channels. join":
-i 1
 Swag} 4
-et > "/{connectionId}/conversations. join":
 ' 3
 =] > "/{connectionId}/channels.create": {
 : > "/{connectionId}/conversations.create": {
 of your t srever
-' 3
-you go. y » "/{connectionId}/dnd.setSnooze”":
-". .
 > “/{connectionId}/groups.create":
 J
-"/{connectionId}/chat.postMessage": |}
-} 3
 ‘/{connectionId}/v2/chat.postMessage":
 ```
 
@@ -591,11 +493,10 @@ J
 
 https://learn.microsoft.com/en-us/connectors/connector-architecture #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseachat
-BRIEFINGS
 connector swagger
 and policies
 https://learn.microsoft.com/en-us/connectors/connector-architecture
@@ -605,11 +506,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 https://learn.microsoft.com/en-us/connectors/connector-architecture #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseachat
-BRIEFINGS
 connector swagger
 and policies
 https://learn.microsoft.com/en-us/connectors/connector-architecture
@@ -619,11 +519,10 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 https://learn.microsoft.com/en-us/connectors/connector-architecture #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piseachat
-BRIEFINGS
 connector swagger
 and policies
 https://learn.microsoft.com/en-us/connectors/connector-architecture
@@ -633,41 +532,34 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 https://learn.microsoft.com/en-us/connectors/connector-architecture #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
 Direct call without additional transformations RESTful API
 defined in
 swagger
-BRIEFINGS
 Call proxied for additional
 Credential and metadata store
 request/response transformations
 user token connection
 onnection ID token
-Y P
 on-premise
 i network
-| :
 on-premises
-yu §cata gateway
 connector swagger
 and policies
-:
 connector webapp ;
-https://learn.microsoft.com/en-us/connectors/connector-architecture ~~ * ~*~" 7" "=" =
 ```
 
 ## Slide 35
 
 https://learn.microsoft.com/en-us/connectors/connector-architecture #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 Direct call without additional transformations RESTful API
 >
 defined in
@@ -678,9 +570,7 @@ user token connection
 onnection ID token
 Azure API
 Azure App Service
-EnViArne nt
 Management
-—
 connector swagger
 and policies
 ```
@@ -691,12 +581,10 @@ and policies
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Request
 Pretty Raw Hex JSON Web Token
 GET /apim/slack/9b973 e753 af049caS4e6e01f1£184c44/conversations.list HTTP/2
@@ -710,12 +598,10 @@ Global APIM Host
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Request
 Pretty Raw Hex JSON Web Token
 GET /apim/slack/9b973 e753 af049caS4e6e01f1F184c44/conversations.list HTTP/2
@@ -729,15 +615,12 @@ Connector Type
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Request
 Pretty Raw Hex JSON Web Token
-Host: logic-apim-norwayeé —-OO01l.azure-api.net
 Connection ID
 ```
 
@@ -747,12 +630,10 @@ Connection ID
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Request
 Pretty Raw Hex JSON Web Token
 GET /apim/slack/9b973e753 af049caS4e6e01f1F184c44/conversations.list HTTP/2
@@ -764,16 +645,13 @@ Action endpoint
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Response
 Pretty Raw Hex =e \n =
 1 HTTP/2 403 Forbidden
-2| Content-Length: 497
-3 Content-Type: application/ json
 4 X-Ms-Failure-Cause: apihub-token-exchange
 5S X-Ms-Apihub-Obo: false
 6 X-Ms-Apihub-Cached-Response: false
@@ -781,25 +659,19 @@ Pretty Raw Hex =e \n =
 {
 "status”:403,
 "source”
-Sta hal ar dob nae er rrwayeast-OOl.token.azure-apihub. net: 443/tokens/ ogic- apis, ne Irwayeast/
-497f2fb1d37 suas 87cbA0a0aphals77/sbb7ie7Staenkecasdeceol #1216 §4c44/ exchange
 "message":
 "Error from token exchange: naan as denied due to missing connection ACL: User = 32
-Sbb 660-7Ocf-42 12-BacB-2f£28413 d8alS@72£13b38-Ed4b-417c—be51-4e46fF66a37aB8 appid=c44b4083
--3bb0-49c1-b47d-974e53cbhdafts pereeircs es ic-apis-norwayeast/ 497£2fb1d3764a3287c6404
 3af049c a94e6e01f1f1 4c44"
-DaDBalb77/ 9b973e753
 ```
 
 ## Slide 41
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat
-BRIEFINGS
 This Token Store is live and running build 1.74.18-
 release.0+d449227
 See Getting stared with Azure Token Store for a quick start
@@ -809,16 +681,13 @@ See Getting stared with Azure Token Store for a quick start
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
-4<<
 custom-try-parametrized-2 | Access policies *
 API Connectior
 Add C) Refresh
-a
 25 Overview
 li Activity log Application
 Bp Access control (IAM)
@@ -826,9 +695,7 @@ Name Policy Name Action
 @ Tags
 Api Connection User ApiConnectionUser-8fffba85-5e62-4c4a-9bf7-... Delete
 4% Diagnose and solve problems
-, Atlassian Atlassian-Od4d12e5-ac65-4797-bf0d-074a617...
 «,» Resource visualizer
-Y Settings
 Access policies
 ```
 
@@ -846,29 +713,22 @@ https://learn.microsoft.com/en-us/connectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 API Connection Architecture
 Azure portal Azure PowerShell Azure CLI REST clients Credential and metadata store
-, |
 SDKs
 } user token
 >O4 connection ID
 (*) Azure Resource Manager
-ee
-U aS
 Data Web App Virtual Service Other
 Store Machine Management services
 +— Authentication
-Power Automate user token
 connector ID <
 operation ID
 connection ID
-<
 Power Apps
 connector swagger
 and policies
@@ -894,16 +754,11 @@ Simple Security Model Well, simple-ish
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 38/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat
-BRIEFINGS
-gibt ae hata hectalad Ahaail b-4
-6589 7465e/SomeAPIThatDoesntexi1
-Host: Lae ane ies
 Authorization: Bearer <Token>
-ae
 2021-01-
 ```
 
@@ -913,10 +768,10 @@ ae
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS : yy .
 _ATTP/2 404 Not Found
 65/
 Content-Length: 198
@@ -933,14 +788,11 @@ URI ‘https://management.azure.com/subscriptions/8e3ce52f-d45b-4347-
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeachat
-BRIEFINGS
-=
 /subscriptions/8e3ce5
-65892507465e/SomeAPI ThatDoesn
 Host: management.azure.com
 Authorization: Bearer <Token>
 ```
@@ -951,17 +803,14 @@ Authorization: Bearer <Token>
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Qa. 7. Nga |
-black hat har GF. OSS ,
 BRIEFINGS | |
-Sant yupien 2 403 Forbidden
 /suDsct Content-Length: 411
 65892507465e Content-Type: application/json; charset-utf-8 ALE hs
 Host: manage
-Authorizatio ‘
 ```
 
 ## Slide 51
@@ -992,15 +841,13 @@ and then uses its own token
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 (i>) Azure Resource Manager «—» Authentication
-ee
 Data Web App Virtual Service Other
 Store Machine Management services
 ```
@@ -1011,16 +858,13 @@ Store Machine Management services
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-F
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 (>) Azure Resource Manager Authentication
-)
 | | | | Role Check
 Data Web App Virtual Service Other
 Store Machine Management Services
@@ -1032,15 +876,12 @@ Role Check:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-F
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
-<> erat
 (>) Azure Resource Manager Authentication
 | | | | Role Check: 6
 Data Web App Virtual Service Other
@@ -1055,12 +896,10 @@ Role Check:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS : , ) f
 Azure portal Azure PowerShell Azure CLI REST clients
 SDKs
 (~) Azure Resource Manager <-> Authentication
@@ -1085,18 +924,15 @@ https://binarysecurity.no/posts/2023/06/function-apps-rce
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat Ly — p
-BRIEFINGS ;
 /subscriptions/292c3ce5-4288-4413-8dad-5c665019739d/resourceGroups/binsec-privesc
 /binsec-prives
-“
 2
 test group/providers/Microsoft.Web/sites,
 api-version=2014-11-01 HTTP/2
-Host: ica agp
 Authorization: Bearer <TOKEN>
 https://binarysecurity.no/posts/2023/06/function-apps-rce
 ```
@@ -1109,37 +945,20 @@ https://binarysecurity.no/posts/2023/06/function-apps-rce
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-X a
-biSekhat SS - ,
 BRIEFINGS j
 200 OK
 Content-Length: 592 rivesc
 test Content-Type: application/json ken?
-api-
-id": "/subscriptions/292c3ce5-4288-4413-8dad-5c665019739d/resourceGroups/binsec-prive
-Autt "name": "functions",
-1D
-=
 U
-r /
 ct
-‘Dp
 W
-fp
 ~~
-ms
-TD
-a
 ©
-a
-we
-“type”: “Microsoft.We
 “location” : “Norway
-“properties”: "eyJhbGci0iJIUZIINiIsInR5cCI6I1kpxvcj¢
-pmf90WT9V8HPrC8wkuFM8udjAZ2c"™
 https://binarysecurity.no/posts/2023/06/function-apps-rce
 ```
 
@@ -1163,34 +982,19 @@ https://www.token.security/blog/azures-role-roulette-how-over-privileged-roles-a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Azure SQL Database
 Request
 Raw Hex \n
 1| GET
 /subscriptions/ 8e3ce52 £-d45b-43 47-8705-65892507465e/resourceGro
-/tmp-api-connection/ providers/ Microsoft. Web/connections/sql-7/
-nsions/ proxy/datasets/default/tables/dbo.secrets2/ items?
 api-version=2018-07-Ol-preview HTTP/2
 2 Host: management.azure.com
 3 Metadata: true
 4 Authorization: Bearer
-eyJ0eXAiOiJKVLOiLCJhbGcididJsuUzIINilIsIngldCléInoxcnNZSEhKOsSO04bWdndD
-RiclplOEJLaQJQdyIsImtpZcCléInoxcnNZSEhKOSO4bWdndDRIiclplOEJLaOJGQdyJ39
-»eyJhdWOi0idJodHRwezovLi LhbmFnZzWllbnOuYy2SyZs53 aW5kb3dzLm51dcC8iLCdJpe
-3MiOCiJodHRwe zovL3NOcy53 aW5kb3 dzLm51dC83 MmYxM2 I z0CO2 ZDRiLTOxN2 Mt YmU
-IMSOOZTO2 Z5 Y2 YTM3 YTgvliwiaWFOIjoxNzM2MjO3 MTMzZLCJuYmYiOjESMzYyNDcxM
-zMsImV4cCI6MTc2N4jILMTAzMywiYWlviIjoiazJCZllDaVdibVphZk4wcxXFFcVJOYkg
-INDZMTEFBPTOiLCJUhcHBpZCléImZjNzFiYTMyLTFmYTgtNDg3 YyLiMDRiLTVhMTB1LY
-2RIZGOxZCIsImFwcGlkYWNyIjoiMSIsImlkcCIé  ImhOdHBzOisvc3 RzLndpbmRvd3 MN
-ubmVOLzcy2jEz YIM4LTZKNGICNDES Yy1i2TU» (LTRIND ZmNj ZhAzdho BiLCJpZHR5S-
-ao
-pa oc
-a
 ```
 
 ## Slide 64
@@ -1199,59 +1003,26 @@ a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 56/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 O7 Jan 2025 11:18:19 GMT
 Azure SQL Database
 Request
 Raw Hex
 GET
-/subscriptions/ 8e3ce52f-d!
-/tmp-api-connection/ provic
 nsions/ proxy/datasets/defé
-api-version=2018-07-Ol-pre
 Host: management.azure.cor
 Metadata: true
 Authorization: Bearer
-eyJ0eXAiOiJKVLOiLCJhbGcid:
-RiclplOEJLa0JGdyIsImtpZctli
-.&yJhdWOid0iJodHRwezovLé Lhk
-3MiCiJodHRwezovL3NOcy5S3aw!
-IMSOO0ZTO2 Zj YZ YTM3 YTgvliwié
-zMsImV4cCIéMTczNjILMTAcMyi
-INDZMTEFBPTOiLCJUhcHBpZctié!
-2RIZGOxZCIsImFwcGlkYWNyIjc
-ubmVOLzcyZjJEZYIM4LTZkNGItl
 "@odata.context":
-"https://d64b73béli2cf5960. 16.common.logi
-c—-norwayeas
-a
-ihub.net/apim/sql/ 6b68d09e461d445eb9e 1b b554d20
-datasets ('default')/tables('dbo.secrets2')/items",
 "value": [
 {
 "@odata.etag":"",
-"ItemInternallId"”:
-"4fc38£37-978e-4925-al22-c4961f9Gdeb3£",
-"mysecret”™: "MySecretValue”
-"Godata.etag":"",
-"TtemInternalld":
-"ealBdaSéf-70d7-4c2b-9fSe-efbdcfé9chc4",
-"mysecret”: "aaa"
-"@odata.etag":"",
 "ItemInternalld":
-"74e04659-Oe5d-4ae7-a87c-SO76E189dEcB",
-"mysecret”": "aaa"
-"@odata.etag":"",
-"ItemInternallId"”:
 "cd4799eb-dd7 1-4b06-a571-19e249d3 606d",
-"mysecret”™: "aaa"
 t.azure-ap
-§metadata#
 ```
 
 ## Slide 65
@@ -1260,40 +1031,22 @@ t.azure-ap
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
 1
-BRIEFINGS
 5 Date: Tue, O7 Jan 2025 11:18:19 GMT
 Azure SQL Database *
 "@odata.context":
-"https://dB4b73bélicf596é0. 1é.common. logic-norwayeast.azure-ap
 2b554d201/ §metadata#
-)}/items",
 Request
 Pretty Raw Hex ® in =
 GET Sdeb3t",
 /subscriptions, 29/resourceGroups/
 ‘providers/Microsoft.Web/connections/sql/extensions/proxy/V2/datasets/wssw
-%62550%252e%252e%252fw iqlsrvso
-l.database.windows.net,\ ./tables/ /items/?api-version= 6Scbcae
-Ww NJ
-2018-07-01-—preview&server=abcd&$top=5 HTTP/1.1
 Host: westeurope.management.azure.com
 Authorization: Bearer
-eyJ@eXAi01 JKV1QiLCIhbGci0iISUZIINiIsIng1ldCI6InoxcnNZSEhKOSO4bWdndDRIc1ip10EJLa@jIQdy
-S1ID LIV Tew LOLA SIV J LAMILMSlywWliisniwviyjuv
-INDZMTEFBPTOiLCJUhcHBpZCléImZjNzFiyY
-2RIZGOxZCIsImFweGlkYWNyIjoiMSIsIml
-ubmVOLzcyZjJEZYIM4LTZkENGItNDES3 YyliZ
-agdécB8",
-"Godata.etag”:"",
-"ItemInternallId"”:
-"cd4799eb-dd71-4b06-a571-19e249d3 606d",
-"mysecret”™: "aaa"
 ```
 
 ## Slide 66
@@ -1302,17 +1055,13 @@ agdécB8",
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat Re. Ee
 BRIEFINGS 26 07 Jan 2025 11:18:19 GMT
-28) {
 Azu re SQL Data base 29 "@odata.context":
 "https://dB4b73bél2cf596é0. 16.common. logic-norwayeast.azure-ap
-an | = w 2b554d201/ $metadata#
-)/items”,
 Requ Response
 Pretty . Pretty Raw Hex Re ey in = =
 c 1 HTTP/1.1 502 Unexpected Exception : System.InvalidOperationException: Unable to A se
@@ -1320,9 +1069,7 @@ c 1 HTTP/1.1 502 Unexpected Exception : System.InvalidOperationException: Unable
 /s\ Microsoft.Azure.Connectors.Mashup.Sql.Models.SqlConnectionParameters.UpdateUsingDa
 taset(HttpRequestMessage request, String dataset) in iw
 C:\__w\1\s\src\Connectors\FirstParty\sql\Connector\Models\SqlConnectionParameters. io
-20: Microsoft.Azure.Connectors.Mashup.Sql.Models.SqlConnectionParameters..ctor(HttpReq ESckets,
 2 Ho: uestMessage request, String dataset) in
-> Aut C:\__w\1\s\src\Connectors\FirstParty\sql\Connector\Models\SqlConnecti|
 = | 2 Cache-Control: no-store, no-cache
 ey. 3 Pragma: no-cache ly
 4 Content-Length: 1658 B9décB",
@@ -1331,7 +1078,6 @@ ey. 3 Pragma: no-cache ly
 7 Strict-Transport-Security: max—age=31536000; includeSubDomains
 8 x-ms-datasourceerror: True
 9 x-ms-request—id: 36ac 3e249d3606a",
-1®@ x-ms—-correlation-id:
 ```
 
 ## Slide 67
@@ -1340,23 +1086,16 @@ ey. 3 Pragma: no-cache ly
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Jira
 Request
-/subscriptions/8e3ce52 £-d45b-4347-8705-65892507465e/resourceGroups/tm
-p-api-connection/ providers/ Microsoft. Web/connections/jira/extensions/
-proxy/v2/project/search?workflowName=myryles20HTTP/ 1. L8Od%0aé
 api-version=2018-07-Ol-preview HTTP/2 \rx \n
 2 Host: management.azure.com\z \n
 3 Metadata: true \r \n
 4 Ahuthorization: Bearer
-eyJOe SPAIU LOR sel LCd HB ae Ld aa aids keen
-X- Request- sdirainstance:
-Thpq7i8xpOteSS587dswétrOqlh78vO0jp.bcollaborator.binsec.cloud/metadata/
 instance \r \n
 ```
 
@@ -1366,18 +1105,14 @@ instance \r \n
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Jira
 26 Date: Fri, O3 Jan 2025 10:25:31 GHT
-23 "Error :t
-$C "code”":502,
 31 "message":
 "Unable to parse result body. JSON response expected. Body:
-<html><body>bikt79vwébjruxdbépdzrtzjjgqkgqzbikt79Svwéebjruxdbsé
 32 "source":
 ```
 
@@ -1387,49 +1122,53 @@ $C "code”":502,
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-BRIEFINGS
+black hat BRIEFINGS
+
 Jira
-Description Request to Collaborator Response from Collaborator
-Pretty Raw Hex & \n =
-X-Azure-RequestChain: hops=1
-x-mMs-operation-context:
-(; app Id=797£4846-ba00-4£d7-ba43-dacl£8£63013, tenant Id=72£13b38-Ed4b-417c-be51-4e46£66a37a8, object Id=Sbc 682 d6-39 le-475e-855c-c&Bdec£L9461/ germa
-nywestcentral/8a62d178-6449-45b2-al7a-—cOede718d0b3)
-S x-ms-client-request-id: 9cfl2aecf-7a3b-474c-a327-Od2 Sa0ef3990
-10 x-ms-arm-request-tracking-id: O711fedb-SOf8-433 l-a96d-T7ceadbéSéeb2
-iil x-ms-correlation-request-id: O711fedb-S0f8-433 1-aGéd-T7ceadhbéSéeb2
-12 x-ms-routing-request-id: GERMANYWESTCENTRAL:20250103T1025312Z:0711fedb-SOf8-433 1-a96d-7ceadbéSéehb2
-13 x-ms-client-location: germanywestcentral
-i4 x-ms-home-tenant-id: 72£13b38-6d4b-417c-be51-4e46f66a37aB
-15 x-ms-arm-service-request-id: 5a852172-195c-4974-a390-S88889a444cf
-16 x-ms-client-audience: https://management.core.windows.net/
-17 x-ms-client-scope:
-is x-ms-client-acr:
-19 Content-Type: application/json
-20 | x-ms-client-app-id-acr: 1
-21 Authorization: Basic
-NabVo151NCaX1HbGVNYOF 1
-22 x-ms-client-issuer: https: ts.windows.net/72£13b38-6d4b-417c-be51-4e46f£66a37a8/
-23 X-MS-APIM-Callback: https://logic-norwayeast-O001.consent.azure-apihub.net
-24 x-ms-client-puid:
-25 x-ms-client-alt-sec-—id:
-26 x-ms-client-principal-id:
-27 x-ms-client-authorization-source: RoleBased
-28 x-ms-client-identity-provider: https sts.windows.net/72£13b38-6d4b-417c-be51-4e46f£66a37a8/
-29 x-ms-client-principal-group-membership-source: None
-39 x-ms-client-principal-name:
-31 x-ms-client-family—name-encoded:
-32 x-ms-client-given-name-encoded:
-33 x-ms-arm-network-source: PublicNetwork
-34 x-ms-activity-vector: IN.O1.IN.O9
-35 X-ARR-LOG-ID: Scf2aecf-7a3b-474c-a327-Od2 5a0ef3990
-36 | CLIENT-IP: 51.116.150.71:13378
-@ & €\ 13>] | x-for x 5 matches
+
+Description | Request to Collaborator | Response from Collaborator
+
+Pretty   Raw   Hex
+
+ 7  X-Azure-RequestChain: hops=1
+ 8  x-ms-operation-context:
+    (;appId=797f4846-ba00-4fd7-ba43-dac1f8f63013,tenantId=72f13b38-6d4b-417c-be51-4e46f66a37a8,objectId=9bc682d6-391e-475e-855c-c68d6cff9461/germanywestcentral/8a62d178-6449-45b2-a17a-c0ede718d0b3)
+ 9  x-ms-client-request-id: 9cf2aecf-7a3b-474c-a327-0d25a0ef3990
+10  x-ms-arm-request-tracking-id: 0711fedb-50f8-4331-a96d-7ceadb656eb2
+11  x-ms-correlation-request-id: 0711fedb-50f8-4331-a96d-7ceadb656eb2
+12  x-ms-routing-request-id: GERMANYWESTCENTRAL:20250103T102531Z:0711fedb-50f8-4331-a96d-7ceadb656eb2
+13  x-ms-client-location: germanywestcentral
+14  x-ms-home-tenant-id: 72f13b38-6d4b-417c-be51-4e46f66a37a8
+15  x-ms-arm-service-request-id: 5a852172-195c-4974-a390-588889a444cf
+16  x-ms-client-audience: https://management.core.windows.net/
+17  x-ms-client-scope:
+18  x-ms-client-acr:
+19  Content-Type: application/json
+20  x-ms-client-app-id-acr: 1
+21  Authorization: Basic
+    aGFha29uQGJpbnNlYy5jbG9[redacted]
+    NabVo1S1NCaX1HbGVNYOF1N[redacted]
+22  x-ms-client-issuer: https://sts.windows.net/72f13b38-6d4b-417c-be51-4e46f66a37a8/
+23  X-MS-APIM-Callback: https://logic-norwayeast-001.consent.azure-apihub.net
+24  x-ms-client-puid:
+25  x-ms-client-alt-sec-id:
+26  x-ms-client-principal-id:
+27  x-ms-client-authorization-source: RoleBased
+28  x-ms-client-identity-provider: https://sts.windows.net/72f13b38-6d4b-417c-be51-4e46f66a37a8/
+29  x-ms-client-principal-group-membership-source: None
+30  x-ms-client-principal-name:
+31  x-ms-client-family-name-encoded:
+32  x-ms-client-given-name-encoded:
+33  x-ms-arm-network-source: PublicNetwork
+34  x-ms-activity-vector: IN.01.IN.09
+35  X-ARR-LOG-ID: 9cf2aecf-7a3b-474c-a327-0d25a0ef3990
+36  CLIENT-IP: 51.116.150.71:13378
+
+[search box] x-for                                                    5 matches
 ```
 
 ## Slide 70
@@ -1438,17 +1177,14 @@ NabVo151NCaX1HbGVNYOF 1
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Keyvaults
 Request
 Pretty Raw Hex ® in
 /subscriptions/ 8e3ce52 f-d45b-43 47-8705-65892507465e/resourceGroups
-/tmp-api-connection/ providers/ Microsoft. Web/connections/keyvault-5
-fjextensions/proxy/secrets/MySecretValue/value? éapi-version=
 2018-07-Ol-previewéprojectkey=TP HTTP/2
 2 Host: management.azure.com
 ```
@@ -1459,23 +1195,14 @@ fjextensions/proxy/secrets/MySecretValue/value? éapi-version=
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Keyvaults
 28 Date: Tue, O7 Jan 2025 14:42:46 GMT
 "value": "MySecretValue"
-"name": "MySecretValue”",
-"version": "4866éb8cdccé64e75al5é42cecT79céél6",
-"contentType”":null,
 "isEnabled":true,
-"createdTime": "2025-01-07T14:24:522",
-"last UpdatedTime”: "2025-01-07T14:24:522",
-"validityStartTime”":null,
-"validityEndTime”": null
 ```
 
 ## Slide 72
@@ -1498,22 +1225,17 @@ https://learn.microsoft.com/en-us/azure/key-vault/general/best-practices
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 What did they fix?
 Request
 Pretty Raw Hex JSON Web Token ® » =
 GET
-/subscriptions/ 863ce52 £-d45b-43 47-8705-65892507465e/resourceGroups/token-storer/ providers/M
-icrosoft.Web/connections/keyvault/extensions/proxy/secrets/Papi-version=2018-07-O1-preview
 HTTP/2
 Host: management.azure.com
-3 X-Ms-Client-Session-Id: O87£f£477033 aas40f7ad3 6£89df34ab9lc
 4 Authorization: Bearer
-eyJ0eXAiOidJKVLOiLCJUhbGcid0idJsuUzIINilIsIngldCIéIkKNOdjBPSTNSd3FsSEZFVmShbOLBc2ZhHDSDIJYRSIsImtpZclI
 ```
 
 ## Slide 75
@@ -1522,15 +1244,11 @@ eyJ0eXAiOidJKVLOiLCJUhbGcid0idJsuUzIINilIsIngldCIéIkKNOdjBPSTNSd3FsSEZFVmShbOLB
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 What did they fix?
-Merron” 24
-"code": "OperationNotAllowed",
 "message":
 "The API Connection proxy requests are not supported. Only Test Connections
 llowed through proxy requests
@@ -1542,15 +1260,11 @@ llowed through proxy requests
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 What did they fix?
-21 scope
-Rerror™ :{
-"code": "OperationNotAllo the
 "message":
 "The API Connection prox access token -onnections
 llowed through proxy req
@@ -1568,11 +1282,10 @@ paths
 
 Ref: https://learn.microsoft.com/en-us/connectors/connector-reference/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
 Lots of others
 a = microsoft.com,
 Filter by title |
@@ -1609,73 +1322,44 @@ Abstract Phone Validator (Independent Publisher)
 Abstract Timezones (Independent Publisher)
 Abstract VAT Validator (Independent Publisher)
 AccuWeather (Independent Publisher)
-Act!
 Activityinfo
 Acumatica
 Download PDF
-»®
 By: Férdés Andras
-jator
 ndent Publisher
->?
 By: Ford6s Andras
-»>®
 By: Acumatica
-»?
 By: Adobe Inc
 yendent Publisher
-»®
 By: Troy Taylor, Hitachi
 Solutions
->»?
 By: Africa's Talking
 —
-»®?
 By: ahead AG
-j aepenue
->»?
 By: Fordés Andrés
-»°®
 By: Ahmad Najjar, Troy Taylor
-»°
 By: Richard Wilson
-»°
 By: Troy Taylor
 rip (Independe
->?
 By: Taiki Yoshida
 1
-»°®
 By: ahead AG
->°®
 By: Swiftpage ACT!
 Adobe Acr
->?
 By: Adobe Inc.
 By: Adobe Inc.
-a>?
 By: Africa's Talking
->?
 By: AgilePoint Inc
-x
 Not (Indeper
-Publishe
->»?
 By: Fordés Andrés
 Ref: https://learn.microsoft.com/en-us/connectors/connector-reference/
-»°®
 By: System Administrator
 By: Activityinfo
->?
 By: Adobe Inc.
-a»?
 By: State Solutions
 Africa’s Talking
-»>°?
 By: Africa's Talking
-a»?
 By: Agilit-e
-a?
 By: Larc Al (PTY) Ltd
 ```
 
@@ -1687,20 +1371,6 @@ By: Larc Al (PTY) Ltd
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-blackhat by — —
-BRIEFINGS ; ' ; b
-Sensitive Testconnections (7?)
-Al Foundations
-Automation PDagerDuty
-> Operations
-/ Cloud
-\ —
-```
-
 ## Slide 79
 
 ###### Sensitive Testconnections (?)
@@ -1709,15 +1379,13 @@ https://mail.google.com
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat
-BRIEFINGS
 Sensitive Testconnections (7?)
 Al Foundations
-®
 https://mail.google.com
 ```
 
@@ -1729,16 +1397,14 @@ https://calendar.google.com
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat
-BRIEFINGS
 Sensitive Testconnections (7?)
 31
 Al Foundations
-®
 https://calendar.google.com
 ```
 
@@ -1762,39 +1428,20 @@ All connections are hosted in the same place
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-on 7
-black hat ye. ’
-BRIEFINGS ‘4
-pif hat
-BRIEFINGS
-```
-
 ## Slide 84
 
 ###### Dynamic Invoke
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 44/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS
 “body”: {
 “request”: {
-"method": “get",
-“path”: "conversations. list
-r
-J3
-“requestUri": “https://management.azure.com:443/subscriptions/
-2
 >
 65892507465e/resourceGroups/Logic-app-
-p nvoke? 11 -verci90on—7012-07-01-
-Invoke :ap1-version=2018-07-@01
-"method": “POST”
 ```
 
 ## Slide 85
@@ -1803,23 +1450,16 @@ Invoke :ap1-version=2018-07-@01
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 51/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q NN Supe i
-black hat y me P
-BRIEFINGS :
 Dynamic Invoke
-“testRequests":
 {
 “body”: {
 “request”: {
 “method™ :
-"path": "conversations. list”
-1
-“requestUri": “https://management.azure.com:443/subscriptions/8e3ce‘
 6589 /A65e/resourceGroup
-“method : POST™
 ```
 
 ## Slide 86
@@ -1828,23 +1468,14 @@ Dynamic Invoke
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 44/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS
 “body”: {
 “request”: {
-"method": “get",
-“path”: "conversations. list
-r
-J3
-“requestUri": “https://management.azure.com:443/subscriptions/
-2
 >
 65892507465e/resourceGroups/Logic-app-
-p nvoke? 11 -verci90on—7012-07-01-
-Invoke :ap1-version=2018-07-@01
-"method": “POST”
 ```
 
 ## Slide 87
@@ -1853,37 +1484,16 @@ Invoke :ap1-version=2018-07-@01
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat So ame 4
-BRIEFINGS ;
-“body”: {
-“request”: {
-"method": “get",
-og
-ge
-“path”: “conversations. list”
-```
-
 ## Slide 88
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 45/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-BRIEFINGS : y p :
-/subscriptions/162fc6édb-03cd-4fe8-ab44-dc@a947e74af/resour bp shitty
-richlasiahestl A dhedita ee crosoft.Web/connections/slack/DynamicInvoke?api-version=2018
-Q@1-preview HTTF
 Host: management.azure.com
 Authorization: Bearer <Token>
-"request": {
-“method”: "get",
-a
-“path":"/conversations. list"
-4°)
 3
 ```
 
@@ -1891,27 +1501,21 @@ a
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat HTTP/2 200 OK 9
 BRIEFINGS Content-Type: application/json
-/subscriptions/162Ff ~esourceGroups/api-
 i
 connec CE 10 on / prov ;
-ers/M1C "ok": true, nicinvoke
-nA Sen ene ae eae : "channels"
-Yi-Dreview tf :
-{
 Host: management.azure.c EINE
 Authorization: Bearer <T "name": "social",
 "is channel": true,
 "is group": false,
-oem)
 "is im": false,
 “request” :{ "is mpim": false,
 "method": "set ae "is private”: false,
-=
 = Erle "created": 1738674777,
 path . / Convers "is archived": false
 i rchived": false,
@@ -1922,7 +1526,6 @@ S is general”: false,
 "is shared": false,
 "is org shared": false,
 _ shared": false,
-feendiny sheet” eh ss
 context team id": "TOS8BPBEC890",
 ```
 
@@ -1930,56 +1533,37 @@ context team id": "TOS8BPBEC890",
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 53/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-BRIEFINGS
-/subs Se ee
-inection/providers/Microsoft.|
-Q@7-@01-preview HTTP
 Host: management.azure.com
 “request”: {
-“method” : “get”
-“path” :"/sec
-a)
 1
 J
 b44-dc
-actions
-Py.
 ```
 
 ## Slide 91
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat a >
-BRIEFINGS
 (TP/2 200 OK
 Content-Length: 1315
 Content-Type: application/json; charset=utf-8
 .on=2018-
 /sut
 connecti
-Q67-O0l1-pr {
 Host: ma "response": {
 “statusCode": “OK",
-“body” 5:4
-“value”: [
 { {
 “name": “SuperSecret",
-= “version"™: null,
-“contentType": :
 “isEnabled": true,
-r "“createdTime": "2025-@4-@4T05:38:26Z",
-: “lastUpdatedTime": "2025-04-@47T05:38:262Z",
 } “validityStartTime": null,
-“validityEndTime™: l
-iF
 “continuationtToken™: nu
 ```
 
@@ -2007,14 +1591,11 @@ Role Check:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 (*) Azure Resource Manager <> Authentication
@@ -2029,14 +1610,11 @@ Call endpoint “/path”, Method: “POST”, Body: “<Data>”
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 Path and
@@ -2052,14 +1630,11 @@ Path and method valid? Validated:
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 Path and
@@ -2076,14 +1651,11 @@ Call endpoint “/path”, Method: “POST”, Body: “<Data>”
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 Path and
@@ -2100,14 +1672,11 @@ Call endpoint “/path”, Method: “POST”, Body: “<Data>”
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 Path and
@@ -2129,14 +1698,11 @@ Uh oh!
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 —
-»~
 | all endpoint “/path”, Method:
 “POST”, Body: “<Data>”
 Path and
@@ -2151,12 +1717,10 @@ connector swagger
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-BRIEFINGS
 Logic Apps Custom Connector ¥#
 Microsoft
 Logic Apps Custom Connector © ads to Favorites
@@ -2170,31 +1734,23 @@ Logic Apps Custom Connector Vv | | Create |
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-QQ ~
-black hat
-BRIEFINGS
 myconnector
 my nice connector that does a lost of things that we we
 1.0
-ejivnbcrgf4a4mep2tesxv3u spre. bcollaborator.binsec.cloud
 default
 thing that comes ba
-gyresponse
 boolean
 call some api
 /admin/vfs/c
 /path/ {pati
 default
-if
 path thing
 do andnand
 MyCustomizer
-urity
-ector®@
-F4admep2t
 Mnector that does a lost of things that)
 /hei/a call some api
 /path/{paths} path thing
@@ -2207,22 +1763,20 @@ Mnector that does a lost of things that)
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat y Ba GA
 BRIEFINGS . 4 4
 patns:
 /path/{path}:
 get:
-operationId: "1"
 parameters:
 - name: path
 in: path
 required: true
 type: string
 responses:
-‘200°:
 description: OK
 ```
 
@@ -2230,25 +1784,17 @@ description: OK
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 52/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 >
-black hat Sy |
 BRIEFINGS a 4 ,
-8e3ce52f-d45b- 4347 -8705-65892507465e/resourceGroups/token-
-/custom2/DynamicInvoke?api-version=2018-@7-
 IST /subscriptions/
-storer/provider ee a ee
 O1- prev 1ew HTIP/2
-vere management.azure.com
 Bearer <Token>
 Authorization:
-ieee |
 =
-“method”: “get",
-“path”:
-‘$2020 /h2e%42e/apim/<ConnectorID>/<ConnectionID>/<Endpoint>”
 ```
 
 ## Slide 105
@@ -2257,25 +1803,17 @@ ieee |
 
 Path Traversal
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 54/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 >
-black hat Sy |
 BRIEFINGS a 4 ,
-8e3ce52f-d45b- 4347 -8705-65892507465e/resourceGroups/token-
-/custom2/DynamicInvoke?api-version=2018-@7-
 IST /subscriptions/
-storer/provider ee a ee
 O1- prev 1ew HTIP/2
-vere management.azure.com
 Bearer <Token>
 Authorization:
-ieee |
 =
-“method”: “get",
-“path”:
-h ‘$2020 /h2e%42e/apim/<ConnectorID>/<ConnectionID>/<Endpoint>”
 Path Traversal
 ```
 
@@ -2285,32 +1823,18 @@ New Path
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-= J
-piSeichat
-BRIEFINGS
-f
-IST /subscriptions/S8e3ce52f-d45b-4347-8705-65892507465e/re
-storer/ Ss pti an tic
-eta mmc tenieithioe
--rosoft. uy ok
 en-
-amicInvoke?api-version=2018-0@7-
-nee eens
 Authorization:
 Bearer <Token>
 f
-t
-Tein {
-‘method": “get”,
 path”:
-“path/%2e42e/42eh2e/Kh2e%42e/h2eE%42e/ apim/<Connector1D>/<¢
 1
 J
 <ConnectionID>/
-<Endpoint>"
 ```
 
 ## Slide 107
@@ -2322,16 +1846,6 @@ J
 ##### Runtime URL
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat | — ’
-BRIEFINGS y
-=m SERA SY Ce aa Sepa Cee a en ae AehoensnaeT46SFfi1ic
--. —} mn’ om! rm EL wee 6 Ine “ao er ger yret a rier imacec reat Trp i=
-HTTP/2
-```
 
 ## Slide 109
 
@@ -2345,31 +1859,11 @@ HTTP/2
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat —
-BRIEFINGS ' Y
-Victim’s API Connection
-```
-
 ## Slide 111
 
 ##### Victim’s secret
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-on 7
-black hat >. ’
-BRIEFINGS ; y 4
-= MEERA EAT ee ea aE Seay, a ee ge Pe 1h O9ASRhae T465Hfi1-
-GET apim/CustomConnector/s /Usadetoss4ce /lach’ZzdsaVve /463tle
-LA ee CUCL Suioloe, Gt Be eked See ee Lad . h
-HTTP/2
-```
 
 ## Slide 112
 
@@ -2381,7 +1875,8 @@ HTTP/2
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 \ victomkeyvault - Microsoft A:
@@ -2394,13 +1889,10 @@ Email: thegmasterman@outlook.com
 Directory: Default Directory ( 3964
 Domain: thegmastermanoutlook.onm
 Your sign in used multifactor authentx
-© victomkeyvault ¥ *
 P Search | < w Delete > Move c ) Refresh Open in mobile
-. a
 Overview “ Essentials
 y Resource g : ap nnection Vault URI : https://victomkeyvault.vault.azure.net/
 f@ Activity log picconnection
-ocatio’ : , Pricing tier) :
 Ro Access control (IAM) Location Norway East icing tier) ; Standard
 or Subscription (m Directory ID : 27f83964-8425-4197-8278-6e183a4 13ea3
 ags
@@ -2412,7 +1904,6 @@ z= Access policies Purge protection’: D j
 vor Tags (edit) : Add
 Events
 Y Objects Get started Properties Monitoring Tools + SDKs Tutorials
-Keys °
 Manage keys and secrets used by apps and services
 Secrets
 Our recommendation is to use a vault per application per environment (Development, Pre-Production
@@ -2467,19 +1958,6 @@ https://learn.microsoft.com/en-us/co nnectors/connector-architecture
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-oO a Lica
-black hat \ am
-BRIEFINGS }
-What did they fix?
-{
-“error’: {
-"code": nvalidApiConnectionDynamicInvokeReques
-“message: “The dynamic invocation request
-```
-
 ## Slide 119
 
 https://learn.microsoft.com/en-us/co nnectors/connector-architecture
@@ -2487,21 +1965,6 @@ https://learn.microsoft.com/en-us/co nnectors/connector-architecture
 ###### What did they fix?
 
 #BHUSA   @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat by >
-BRIEFINGS ;
-What did they fix?
-Scope
-the
-“error”: { access token
-“code”: “InvalidApicor
-"message": “The dynamic inv invalid. Th
-Blacklist
-paths
-```
 
 ## Slide 120
 
@@ -2527,10 +1990,10 @@ paths
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-- biékhat
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Any Questions?

@@ -8,13 +8,17 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Marcos Bajo&Christian Rossow_Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++.pdf"
 pages: 231
 sha256: "1eacf6ab14924583996d9927431cc8b5b1775cb05c5b94509dd0af83905c2aff"
-text_chars: 56690
-ocr_pages: 40
+text_chars: 53876
+ocr_pages: 19
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:59:23Z"
+converted_at: "2026-08-12T05:18:51Z"
 ---
 # Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++
 
@@ -22,27 +26,25 @@ converted_at: "2026-08-11T22:59:23Z"
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Marcos Bajo&Christian Rossow_Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++.pdf` (231 pages)
 
+
 ## Slide 1
 
 ## Coroutine Frame-Oriented Programming Breaking Control Flow Integrity by Abusing Modern C++
 
 Marcos Bajo _h3xduck_ Christian Rossow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | Ze black hat
-EFFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Coroutine Frame-Oriented
 Programming
 Breaking Control Flow Integrity by Abusing Modem C++
-S ‘
 ‘ G
 4,
-ee A
-:
 Marcos Bajo h3xduck
 Christian Rossow
 ```
@@ -61,17 +63,15 @@ Buffer overflows 1<sup>st</sup> mentioned
 
 2010
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 1972
 Buffer
 overflows
 1st mentioned
 2000 2010
-ESD-TR-73-51, ' Vol. II
 COMPUTER SECURITY TECHNOLOGY PLANNING STUDY
 James P, Anderson
 October 1972
@@ -101,40 +101,11 @@ The Old Ages 2000
 
 Stack canaries ASLR ret2libc DEP/NX Buffer overflows 1<sup>st</sup> mentioned
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bibekhat The OldAges-
-1972 2000 2010
-Stack
-canaries ASLR
-(<)- 8-0-O@—--
-l DEP/NX
-Buffer ret2libc
-overflows
-1st mentioned
-```
-
 ## Slide 5
 
 The Old Ages 1972 2000 2010 Stack canaries ASLR JOP ret2libc DEP/NX ROP DOP Buffer overflows 1<sup>st</sup> mentioned
 
 2020
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-lack hat The Old “ / a
-b ecanae Old Ages
-1972 2000 2010 2020
-Stack
-canaries ASLR JOP
-(x)1-_©-©-O€ ®@-@®
-DEP/NX
-Buffer ret2libc
-overflows
-1st mentioned
-```
 
 ## Slide 6
 
@@ -148,15 +119,6 @@ The Modern Ages 2000 2010
 
 CFI 1<sup>st</sup> mentioned
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-1972 2000 2010 2020
-BRIEFINGS Modem Ages :
-()1-©-©-€
-```
-
 ## Slide 7
 
 The Modern Ages 1972 2000 2010
@@ -169,24 +131,14 @@ LLVM CFI CFG Intel CET CFI 1<sup>st</sup> mentioned
 
 Code Reuse
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-h()
-JQ)
-```
-
 ## Slide 9
 
 Code Reuse
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat Ws “cance ™ a. “if P=:
-BRIEFINGS :
 f:
 call g()
 call h()
@@ -321,15 +273,15 @@ _How can we exploit programs protected by CFI  schemes?_
 
 ###### Backward-edge
 
-```
+\```
 voidg()
 {
-```
+\```
 
-```
+\```
 …
 }
-```
+\```
 
 void f()
 {
@@ -357,24 +309,6 @@ ptr();
 }
 g();
 }
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Q
-black hat
-BRIEFINGS
-Backward-edge Forward-edge
-void g()
-{
-vs void £()
-! {
-A void *ptr = &@;
-void f() ptr();
-{ }
-gQ);
-@0O0O0O
-```
 
 ## Slide 20
 
@@ -421,11 +355,10 @@ ret; ret; ret;
 
 Intel CET (Shadow Stack) SHSTK
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Debaters — r(s ), SHSTK “
-g()
 frame
 f() return
 address
@@ -441,14 +374,6 @@ Intel CET (Shadow Stack) SHSTK
 ## Slide 25
 
 Intel CET (Shadow Stack) SHSTK
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Ne FISFINGS Intel
-A
-@0O0O0O
-```
 
 ## Slide 26
 
@@ -522,28 +447,28 @@ ret;
 
 ##### Intel CET (IBT)
 
-```
+\```
 main:
-```
+\```
 
-```
+\```
 push rbp
 mov rbp, rsp
 mov rsi, [rdi+0x8]
 mov rax, [rbx]
 call[rax]
 leave
-```
+\```
 
-```
+\```
 ret
-```
+\```
 
 ## Slide 32
 
 ##### Intel CET (IBT)
 
-```
+\```
 main:
 f1:
 push rbp
@@ -558,13 +483,13 @@ call[rax]
 leavemov rax, rdx
 ret
 ret
-```
+\```
 
 ## Slide 33
 
 ##### Intel CET (IBT)
 
-```
+\```
 main:
 f1:
 push rbp
@@ -579,7 +504,7 @@ call[rax]
 leaveadd rdi, rax
 retmov rax, rdx
 ret
-```
+\```
 
 ## Slide 34
 
@@ -661,7 +586,7 @@ Allowed if 16-bit aligned
 
 • If not, abort the process
 
-```
+\```
 KERNEL32!WinExec:
 mov     rax,rsp
 mov     qword ptr[rax+10h],rbx
@@ -669,7 +594,7 @@ mov     qword ptr[rax+18h],rsi
 mov     qword ptr[rax+20h],rdi
 push    rbp
 lea     rbp,[rax-38h]
-```
+\```
 
 ## Slide 41
 
@@ -677,16 +602,16 @@ lea     rbp,[rax-38h]
 
 • Fine(r)-grade CFI: label based • Flag _–fsanitize=cfi-icall_ in Clang/LLVM • Each function is assigned a dynamic type
 
-```
+\```
 ind_func();
-```
+\```
 
-```
+\```
 int puts(const char* s)
 int close(int fd)
 int kill(pid_tpid, int sig)
 int system(const char* c)
-```
+\```
 
 ## Slide 42
 
@@ -694,17 +619,17 @@ int system(const char* c)
 
 • Fine(r)-grade CFI: label based • Flag _–fsanitize=cfi-icall_ in Clang/LLVM • Each function is assigned a dynamic type
 
-```
+\```
 ind_func= &close;
 ind_func();
-```
+\```
 
-```
+\```
 int puts(const char* s)
 intclose(intfd)
 int kill(pid_tpid, int sig)
 int system(const char* c)
-```
+\```
 
 ## Slide 43
 
@@ -716,43 +641,40 @@ int system(const char* c)
 
 - Each function is assigned a dynamic type
 
-```
+\```
 if()
 ind_func= &close;
 else
 ind_func= &kill;
 ind_func();
-```
+\```
 
-```
+\```
 int puts(const char* s)
 intclose(intfd)
 int kill(pid_tpid, intsig)
 int system(const char* c)
-```
+\```
 
 ## Slide 44
 
 -
 LLVM CFI (cfi icall)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-BRIEFINGS
 <fl>:
 <f1+5>:
 <f1+6>:
 <f1+7>:
 <f3>:
-<f3+5>;
 <f3+6>:
 <f3+7>:
 <main>:
 <maint5>:
 <maint+6>:
-<maint7>:
 jmp
 int3
 int3
@@ -765,10 +687,8 @@ jmp
 int3
 int3
 int3
-<fl>
 <f3>
 <main>
-@0O0O0O
 ```
 
 ## Slide 45
@@ -776,11 +696,10 @@ int3
 -
 LLVM CFI (cfi icall)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekchat
-BRIEFINGS
 LLVM CF
 <+104>:
 <+111>:
@@ -789,22 +708,17 @@ LLVM CF
 <+121>:
 <+125>:
 <+127>:
-Srl ale eos
 <+131>:
 <+133>:
 <+137>:
 <+138>:
-sh rlele eos
 <+149>:
 <+152>:
 lea rax, Lript ]
-mov rex ,rbx
 sub rex ,rax
 rol rcx,
 cmp rex,
 jae <main+139>
-: Stalemate Cli
-RU eax
 add rsp,
 pop rbx
 ret
@@ -813,7 +727,6 @@ mov rsi,rbx
 call
 <__cfi_slowpath>
 # @x1e080 <f1>
-@0O0O0O
 ```
 
 ## Slide 46
@@ -821,11 +734,10 @@ call
 -
 LLVM CFI (cfi icall)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 <+104>:
 <+111>:
 <+114>:
@@ -833,12 +745,10 @@ BRIEFINGS
 <+121>:
 <+125>:
 <+127>:
-Srl ale eos
 <+131>:
 <+133>:
 <+137>:
 <+138>:
-sh rlele eos
 <+149>:
 <+152>:
 xor
@@ -849,11 +759,9 @@ movabs
 mov
 call
 rax, Lript
-rex ,rbx
 rex ,rax
 rex,
 rex,
-<maint+139>
 eax, eax
 rsp,
 rbx
@@ -861,7 +769,6 @@ rdi,
 rsi,rbx
 <__cfi_slowpath>
 # @x1e080 <f1>
-@0O0O0O
 ```
 
 ## Slide 47
@@ -869,11 +776,10 @@ rsi,rbx
 -
 LLVM CFI (cfi icall)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekchat
-BRIEFINGS
 LVM CFI
 <+104>:
 <+111>:
@@ -882,16 +788,13 @@ LVM CFI
 <+121>:
 <+125>:
 <+127>:
-Srl ale eos
 <+131>:
 <+133>:
 <+137>:
 <+138>:
-sh rlele eos
 <+149>:
 <+152>:
 rax, Lript ] # @x1e080 <f1>
-rex ,rbx
 rex ,rax
 rex,
 rex,
@@ -904,7 +807,6 @@ rbx
 rdi,
 rsi,rbx
 <__cfi_slowpath>
-@0O0O0O
 ```
 
 ## Slide 48
@@ -917,17 +819,17 @@ rsi,rbx
 
 - Each function is assigned a dynamic type
 
-```
+\```
 ind_func= &puts;
 ind_func();
-```
+\```
 
-```
+\```
 intputs(const char* s)
 intclose(intfd)
 int kill(pid_tpid, int sig)
 intsystem(const char* c)
-```
+\```
 
 ## Slide 49
 
@@ -942,17 +844,6 @@ intsystem(const char* c)
    - Return to arbitrary gadgets: ROP
 
    - Jump to arbitrary gadgets: JOP
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-¢ We used to...
-¢ Return to arbitrary gadgets: ROP
-¢ Jump to arbitrary gadgets: JOP
-@@00
-```
 
 ## Slide 51
 
@@ -972,29 +863,29 @@ BRIEFINGS
 
 ###### Gadgets
 
-```
+\```
 …
 incrax
 ret
-```
+\```
 
-```
+\```
 …
 pop rdi
 ret
-```
+\```
 
-```
+\```
 …
 pop rsi
 ret
-```
+\```
 
-```
+\```
 …
 mov rdx, rcx
 ret
-```
+\```
 
 ## Slide 53
 
@@ -1004,29 +895,29 @@ ret
 
 Gadgets
 
-```
+\```
 …
 incrax
 ret
-```
+\```
 
-```
+\```
 …
 pop rdi
 ret
-```
+\```
 
-```
+\```
 …
 pop rsi
 ret
-```
+\```
 
-```
+\```
 …
 mov rdx, rcx
 ret
-```
+\```
 
 ## Slide 54
 
@@ -1038,26 +929,26 @@ Gadgets
 
 Dispatcher table
 
-```
+\```
 …
 incrax
 ret
 …
 pop rdi
 ret
-```
+\```
 
-```
+\```
 …
 pop rsi
 ret
-```
+\```
 
-```
+\```
 …
 mov rdx, rcx
 ret
-```
+\```
 
 ## Slide 55
 
@@ -1079,38 +970,38 @@ ret
 
    - Leverage virtual pointers (VPs) in C++
 
-```
+\```
 class Student {
 virtual void study();
 }
-```
+\```
 
 - Dispatcher: a loop that calls VPs
 
 - Dispatcher table: overwritten VPs
 
-```
+\```
 class Course {
-```
+\```
 
 - Gagdets: (complete) virtual functions `class Course { Student **students; virtual func(){`
 
-```
+\```
 for(;;){
 students[i]->study();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 57
 
@@ -1156,33 +1047,33 @@ Is this really true though?
 
 • TL;DR: A coroutine is a function that can suspend and resume
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 void bar()
 {
-```
+\```
 
 bar();
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 bar();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 61
 
@@ -1248,27 +1139,27 @@ coro();
 
 • Every coroutine returns a _task_ object, that describes its state
 
-```
+\```
 void foo()
 {
 taskt = coro();
 }
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
-```
+\```
 ...
 <suspend>;
-```
+\```
 
-```
+\```
 ...
 }
-```
+\```
 
 ## Slide 66
 
@@ -1276,28 +1167,28 @@ taskcoro()
 
 • The coroutine handle refers to an instance of a coroutine
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 task t1 = coro();
 coroutine_handle<> h1 = t1.handle;
 }
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
-```
+\```
 ...
 <suspend>;
 ...
 }
-```
+\```
 
 ## Slide 67
 
@@ -1305,34 +1196,34 @@ taskcoro()
 
 • The coroutine handle refers to an instance of a coroutine
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 coroutine_handle<> h1 = coro().handle;
 coroutine_handle<> h2 = coro().handle;
 }
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
-```
+\```
 ...
 <suspend>;
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 68
 
@@ -1340,27 +1231,27 @@ taskcoro()
 
 • The coroutine handle allows _resuming_ & _destroying_ a coroutine
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 coroutine_handle<> h1 = coro().handle;
 coroutine_handle<> h2 = coro().handle;
 h1.resume();
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
 `...` h1 `<suspend>; ... }`
 
-```
+\```
 }
-```
+\```
 
 ## Slide 69
 
@@ -1368,36 +1259,36 @@ taskcoro()
 
 • The coroutine handle allows _resuming_ & _destroying_ a coroutine
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 coroutine_handle<> h1 = coro().handle;
 coroutine_handle<> h2 = coro().handle;
 h1.resume();
 h2.resume();
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
 `...` h1&h2 `<suspend>;`
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 70
 
@@ -1405,38 +1296,38 @@ taskcoro()
 
 • The coroutine handle allows _resuming_ & _destroying_ a coroutine
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 coroutine_handle<> h1 = coro().handle;
 coroutine_handle<> h2 = coro().handle;
 h1.destroy();
-```
+\```
 
-```
+\```
 taskcoro()
 {
-```
+\```
 
-```
+\```
 ...
 <suspend>;
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 71
 
@@ -1512,25 +1403,25 @@ returns 3
 
 `void main() { handle coro = fib().handle; coro.resume();` _returns for_ `coro.resume();` _the final time_ `coro.resume(); }`
 
-```
+\```
 task fib()
 {
-```
+\```
 
-```
+\```
 int a=0, b=1;
 for(int i=0; i<10; i++){
 co_yielda+b;
 int temp = b;
 b = a+b;
 a = temp;
-```
+\```
 
-```
+\```
 }
 co_returna+b;
 }
-```
+\```
 
 ## Slide 76
 
@@ -1538,7 +1429,7 @@ co_returna+b;
 
 • Coroutines return values by storing them in the promise object
 
-```
+\```
 void main()
 task coro()
 {
@@ -1549,7 +1440,7 @@ co_return42;
 coro.resume();
 int res = coro.promise().value;
 }
-```
+\```
 
 ## Slide 77
 
@@ -1557,27 +1448,14 @@ int res = coro.promise().value;
 
 Creation stub
 
-```
+\```
 void foo()
 {
 coroutine_handle<> h = coro().handle;
 h.resume();
 h.destroy();
 }
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Nene (Basic) Coroutine Lifetime -
-void foo()
-{
-coroutine_handle<> h = .handle;
-h.resume();
-h.destroy();
-}
-@@@0
-```
+\```
 
 ## Slide 78
 
@@ -1588,17 +1466,17 @@ stub
 
 Resume stub
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 coroutine_handle<> h = coro().handle;
 h.resume();
 h.destroy();
 }
-```
+\```
 
 ## Slide 79
 
@@ -1613,167 +1491,167 @@ stub
 Destroy
 stub
 
-```
+\```
 void foo()
 {
 coroutine_handle<> h = coro().handle;
 h.resume();
 h.destroy();
 }
-```
+\```
 
 ## Slide 80
 
 ##### (Basic) Coroutine Lifetime
 
-```
+\```
 task coro()
 {
 co_return42;
 }
-```
+\```
 
-```
+\```
 task
 {
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 handle h = coro().h;
 h.resume();
 h.destroy();
 }
-```
+\```
 
 ## Slide 81
 
 ##### (Basic) Coroutine Lifetime
 
-```
+\```
 task coro()
 {
 co_return42;
 }
-```
+\```
 
-```
+\```
 task
 {
 handle h;
 struct promise_type{};
 }
-```
+\```
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 handle h = coro().h;
 h.resume();
 h.destroy();
 }
-```
+\```
 
 ## Slide 82
 
 ##### (Basic) Coroutine Lifetime
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 co_return42;
 }
-```
+\```
 
-```
+\```
 task
 {
-```
+\```
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 handle h = coro().h;
 }
 h.resume();
 h.destroy();
 }
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
 };
-```
+\```
 
 ## Slide 83
 
 ##### (Basic) Coroutine Lifetime
 
-```
+\```
 task coro()
 {
 co_return42;
 }
-```
+\```
 
-```
+\```
 task
 {
-```
+\```
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 void foo()
 {
-```
+\```
 
-```
+\```
 handle h = coro().h;
 h.resume();
 h.destroy();
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
 };
-```
+\```
 
 Resume Destroy stub stub
 
@@ -1787,7 +1665,7 @@ Creation stub
 
 coroutine coro()
 
-```
+\```
 task
 {
 handle h;
@@ -1803,47 +1681,47 @@ void foo()task coro()
 handle h = coro().h;co_return42;
 h.resume();}
 h.destroy();
-```
+\```
 
 Creation Stub Create & Initialize ?
 
 Creation Stub coro() Create & Initialize ? returns Initial_suspend() _task_ ( _lazy start_ )
 
-```
+\```
 }
-```
+\```
 
 ## Slide 85
 
 (Basic) Coroutine Lifetime function foo() coroutine coro() Creation Stub coro() Create & Initialize ? returns Initial_suspend() `initial_suspend();` _task_ ( _lazy start_ ) `final_suspend();;` Resume Stub h.resume() Resume ? coroutine `task coro()` co_return `{` final_suspend()
 
-```
+\```
 task
 {
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();;
 };
 }
-```
+\```
 
-```
+\```
 void foo()task coro()
 { {
 handle h = coro().h;co_return42;
 h.resume();}
 h.destroy();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 86
 
@@ -1873,11 +1751,11 @@ h.destroy();
 
       - `void foo() {`
 
-```
+\```
 coroutine_handle<> h1 = coro().handle;
 coroutine_handle<> h2 = coro().handle;
 }
-```
+\```
 
 2 allocated frames
 
@@ -1887,14 +1765,12 @@ handle
 
 ##### The Coroutine Frame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 97/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-lackhat wy Y
-blackiat The Coroutine Frame -~
 handle
 resume pointer | destroy pointer
-@@@0
 ```
 
 ## Slide 90
@@ -1910,21 +1786,6 @@ call [rdi]
 resume ptr
 
 • Points to the resume stub
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-resume pointer
-The Co
-destroy pointer
-Co utine Arr , if
-call [rdil]
-¢ Points to the
-handle.resume()
-@@@0
-```
 
 ## Slide 91
 
@@ -1946,40 +1807,35 @@ destroy ptr
 
 ###### handle
 
-```
+\```
 handle.destroy()
-```
+\```
 
 handle
 call [rdi+0x8]
 destroy ptr
 
-```
+\```
 void resume() const{
 coro_resume(pointer_to_frame);
 }
 void destroy() const{
 coro_destroy(pointer_to_frame);
 }
-```
+\```
 
 ## Slide 93
 
 The Coroutine Frame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 resume pointer
-destroy pointer
 resume pointer
-destroy pointer
 resume pointer
-destroy pointer
 resume pointer
-destroy pointer
 @@@0
 ```
 
@@ -1989,15 +1845,14 @@ destroy pointer
 
 ###### handle
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lackhat ina A
 blackhat The Coroutine Frame
 resume pointer | destroy pointer
-promise object
 ?
-@@@0
 ```
 
 ## Slide 95
@@ -2006,41 +1861,29 @@ handle
 
 ##### The Coroutine Frame
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-lackhat we Y ,
-mache The Coroutine @ Frathe -
-destroy pointer
-promise object
-parameters
-?
-@@@0
-```
-
 ## Slide 96
 
 ##### The Coroutine Frame
 
-```
+\```
 void main()
 {
 coro(42);
 }
-```
+\```
 
-```
+\```
 task coro(int arg)
 {
 co_return;
 }
-```
+\```
 
 ## Slide 97
 
 ##### The Coroutine Frame
 
-```
+\```
 void main()
 {
 string s = “hello”;
@@ -2048,32 +1891,18 @@ coro(s);
 }
 task coro(string arg)
 {
-```
+\```
 
-```
+\```
 co_return;
 }
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat The Coroutine Frame -~
-{
-string s = “hello”:
-coro(s);
-:
-task coro(string )
-Pe
-co_return;
-@@@0
-```
+\```
 
 ## Slide 98
 
 ##### The Coroutine Frame
 
-```
+\```
 void main()
 {
 char* buf;
@@ -2083,24 +1912,7 @@ task coro(char* arg)
 {
 co_return;
 }
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-void main()
-{
-char* buf;
-coro(buf);
-} arg = <ptr to buf>
-task coro(char*
-{
-co_return;
-5
-@@@0
-```
+\```
 
 ## Slide 99
 
@@ -2108,18 +1920,13 @@ co_return;
 
 ###### handle
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
 | handle |
-destroy pointer
-promise object
-parameters
 local variables
-lackhat a re
 blackhat The Coroutine Frame
-@@@0
 ```
 
 ## Slide 100
@@ -2128,24 +1935,12 @@ blackhat The Coroutine Frame
 
 ###### Stack
 
-```
+\```
 task coro()
 {
 int var1,var2,var3,var4;
 }
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat The Coroutine Frame -
-Stack
-* task coro()
-t
-int varl1,var2,var3,var4,;
-5
-@@@0
-```
+\```
 
 ## Slide 101
 
@@ -2153,15 +1948,15 @@ int varl1,var2,var3,var4,;
 
 ###### Heap
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 int var1,var2,var3,var4;
 }
-```
+\```
 
 - Stack-based vars → heap-based vars
 
@@ -2175,15 +1970,15 @@ int var1,var2,var3,var4;
 
 Heap
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 Object *obj= new Object();
 }
-```
+\```
 
 - Stack-based vars → heap-based vars
 
@@ -2195,13 +1990,13 @@ Object *obj= new Object();
 
 ###### Heap
 
-```
+\```
 task coro()
 {
 char buffer[];
 int var1,var2,var3;
 }
-```
+\```
 
 - Compiler _sometimes_ reorders “stack-based” buffers to safer positions (we will see when) Stack
 
@@ -2213,12 +2008,12 @@ int var1,var2,var3;
 
 CI = 0 `task coro() {` CI = 1 `co_yield` CI = 2 `co_yield`
 
-```
+\```
 co_yield“one”;
 co_yield“two”;
 co_return“three”;
 }
-```
+\```
 
 CI = 3
 
@@ -2232,7 +2027,7 @@ Resume stub
 
 Destroy stub
 
-```
+\```
 coroframecreation_stub()
 {
 coroframe= new()
@@ -2241,7 +2036,7 @@ resumePtr= &resume_stub
 destroyPtr= &destroy_stub
 return coroframe;
 }
-```
+\```
 
 ## Slide 106
 
@@ -2249,14 +2044,14 @@ return coroframe;
 
 Creation stub Resume stub
 
-```
+\```
 void resume_stub(coroFrame)
 {
 switch(coroFrame.coroIndex)
 {
-```
+\```
 
-```
+\```
 case 0:
 //first suspension point
 case 1:
@@ -2265,7 +2060,7 @@ default:
 //err
 }
 }
-```
+\```
 
 Destroy stub
 
@@ -2273,23 +2068,23 @@ Destroy stub
 
 ##### The Stubs in Depth
 
-```
+\```
 void resume_stub(coroFrame)
 {
 switch(coroFrame.coroIndex)
 {
-```
+\```
 
 Creation `{` stub `switch(coroFrame.coroIndex) { case 0: cout << “Hello”;` Resume `case 1:` stub `cout << “Bye”; default: //err }` Destroy `}` stub
 
-```
+\```
 task coro()
 {
 cout<< “Hello”;
 <SP>
 cout<< “Bye”;
 }
-```
+\```
 
 ## Slide 108
 
@@ -2297,14 +2092,14 @@ cout<< “Bye”;
 
 `void resume_stub(coroFrame) {` Creation `switch(coroFrame.coroIndex)` stub `{ case 0: initial_suspend(); cout << “Hello”;` Resume `case 1:` stub `cout << “Bye”; final_suspend(); default: { //err` Destroy `}` stub `}`
 
-```
+\```
 task coro()
 {
 cout<< “Hello”;
 <SP>
 cout<< “Bye”;
 }
-```
+\```
 
 ## Slide 109
 
@@ -2315,12 +2110,12 @@ stub
 
 Resume stub
 
-```
+\```
 void destroy_stub(coroFrame)
 {
 deletecoroFrame;
 }
-```
+\```
 
 Destroy stub
 
@@ -2332,10 +2127,10 @@ Destroy stub
 
 `void coro() {` co_await
 
-```
+\```
 <suspend>;
 }
-```
+\```
 
 co_yield
 
@@ -2359,24 +2154,24 @@ co_return
 
 ##### Coroutine Awaiting
 
-```
+\```
 void func()
 {
 //Execute async
 result= async_task();
 //Do something else meanwhile
 meanwhile();
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 //When result is ready, do sth
 something(result);
 }
-```
+\```
 
 ## Slide 113
 
@@ -2384,24 +2179,24 @@ something(result);
 
 • Without coroutines, callbacks would typically be used `void func() {`
 
-```
+\```
 //Read the length, then read the buffer
 async_read(len, when_done={
 async_read(buf, when_done={
 process_buffer(buf());
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 114
 
@@ -2409,22 +2204,22 @@ process_buffer(buf());
 
 • Without coroutines, callbacks would typically be used `void func() { //Read the length, then read the buffer async_read(len, when_done={ async_read(buf, when_done={ process_buffer(buf()); async_other(…, when_done={ process_buffer(buf());`
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 …
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
 }
-```
+\```
 
 ## Slide 115
 
@@ -2434,14 +2229,14 @@ process_buffer(buf());
 
 - • In simple terms, _co_await_ suspends the coroutine and does something else
 
-```
+\```
 task coro()
 {
 len= co_awaitasync_read();
 buf= co_awaitasync_task();
 ...
 }
-```
+\```
 
 ## Slide 116
 
@@ -2449,29 +2244,17 @@ buf= co_awaitasync_task();
 
 - _co_await_ evaluates an awaitable
 
-```
+\```
 task coroutine()
 {
-```
+\```
 
-```
+\```
 co_awaitAwaitable{};
 }
-```
+\```
 
 co_await
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat Covbuthes Awaiting yp
-° evaluates an awaitable
-task coroutine()
-{
-5
-Awaitable{};
-@@@0
-```
 
 ## Slide 117
 
@@ -2479,34 +2262,34 @@ Awaitable{};
 
 - _co_await_ evaluates an awaitable
 
-```
+\```
 task coroutine()
 {
-```
+\```
 
-```
+\```
 co_awaitAwaitable{};
 }
-```
+\```
 
-```
+\```
 struct Awaitable
 {
-```
+\```
 
-```
+\```
 Awaiteroperator co_await()
 {
-```
+\```
 
-```
+\```
 return{};
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 co_await Awaitable
 
@@ -2518,45 +2301,45 @@ co_await Awaitable
 
    - Maybe it suspends, or it executes something else…
 
-```
+\```
 struct Awaitable
 {
-```
+\```
 
-```
+\```
 Awaiteroperator co_await()
 {
-```
+\```
 
-```
+\```
 return{};
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 struct Awaiter()
 {
-```
+\```
 
-```
+\```
 bool await_ready();
-```
+\```
 
-```
+\```
 void await_suspend(…);
-```
+\```
 
-```
+\```
 void await_resume();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 co_await Awaitable
 
@@ -2570,32 +2353,32 @@ Awaiter
 
    - Maybe it suspends, or it executes something else…
 
-```
+\```
 task coroutine()
 {
-```
+\```
 
-```
+\```
 co_awaitAwaiter{};
 }
-```
+\```
 
-```
+\```
 struct Awaiter()
 {
-```
+\```
 
-```
+\```
 bool await_ready();
-```
+\```
 
-```
+\```
 void await_suspend(…);
-```
+\```
 
-```
+\```
 void await_resume();
-```
+\```
 
 - `}`
 
@@ -2605,14 +2388,14 @@ co_await Awaiter
 
 Coroutine Awaiting
 
-```
+\```
 struct Awaiter()
 {
 bool await_ready();
 void await_suspend(…);
 void await_resume();
 }
-```
+\```
 
 Do we need to suspend the coroutine?
 
@@ -2622,12 +2405,12 @@ Do we need to suspend the coroutine?
 
 ###### `struct Awaiter() {`
 
-```
+\```
 bool await_ready();
 void await_suspend(…);
 void await_resume();
 }
-```
+\```
 
 The coroutine is now suspended. Do you want to do something with the suspended coroutine?
 
@@ -2639,15 +2422,15 @@ Awaiter
 
 ##### Coroutine Awaiting
 
-```
+\```
 void await_suspend(coroutine_handlesuspended_coro)
 {
-```
+\```
 
-```
+\```
 //coroutine suspended, return to the caller of the coroutine
 }
-```
+\```
 
 co_await Awaiter
 
@@ -2655,10 +2438,10 @@ co_await Awaiter
 
 ##### Coroutine Awaiting
 
-```
+\```
 void await_suspend(coroutine_handlesuspended_coro)
 {
-```
+\```
 
 - `Execute async code`
 
@@ -2666,29 +2449,29 @@ void await_suspend(coroutine_handlesuspended_coro)
 
 - `Resume the coroutine: suspended_coro.resume()`
 
-```
+\```
 //coroutine suspended, return to the caller of the coroutine
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 124
 
 ##### Coroutine Awaiting
 
-```
+\```
 struct Awaiter()
 {
-```
+\```
 
-```
+\```
 bool await_ready();
 void await_suspend(…);
 void await_resume();
 }
-```
+\```
 
 Anything to do before resuming the coroutine?
 
@@ -2700,153 +2483,153 @@ Awaiter
 
 ##### co_await Example
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 //
 co_awaitAwaiter{};
 //
 }
-```
+\```
 
-```
+\```
 void func()
 {
-```
+\```
 
-```
+\```
 handler h = coro();
 h.resume();
-```
+\```
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
-```
+\```
 
-```
+\```
 <time expensive work>
 handle.resume();
 }).detach();
 }
 void await_resume(){};
 }
-```
+\```
 
-```
+\```
 ...
 }
-```
+\```
 
 ## Slide 126
 
 co_await Example
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 //
 co_awaitAwaiter{};
 //
 }
-```
+\```
 
-```
+\```
 void func()
 {
-```
+\```
 
-```
+\```
 handler h = coro();
 h.resume();
-```
+\```
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
 <time expensive work>
 handle.resume();
 }).detach();
-```
+\```
 
-```
+\```
 }
 void await_resume(){};
 }
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 127
 
 co_await Example
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 //
 co_awaitAwaiter{};
 //
 }
-```
+\```
 
-```
+\```
 void func()
 {
-```
+\```
 
-```
+\```
 handler h = coro();
 h.resume();
-```
+\```
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
 <time expensive work>
 handle.resume();
@@ -2854,51 +2637,51 @@ handle.resume();
 }
 void await_resume(){};
 }
-```
+\```
 
-```
+\```
 ...
 }
-```
+\```
 
 ## Slide 128
 
 co_await Example
 
-```
+\```
 task coro()
 {
-```
+\```
 
-```
+\```
 //
 co_awaitAwaiter{};
 //
 }
-```
+\```
 
-```
+\```
 void func()
 {
-```
+\```
 
-```
+\```
 handler h = coro();
 h.resume();
-```
+\```
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
 <time expensive work>
 handle.resume();
@@ -2906,53 +2689,53 @@ handle.resume();
 }
 void await_resume(){};
 }
-```
+\```
 
-```
+\```
 ...
 }
-```
+\```
 
 ## Slide 129
 
 ##### co_await Example
 
-```
+\```
 task coro()
 {
 //
 co_awaitAwaiter{};
 //
 }
-```
+\```
 
-```
+\```
 void func()
 {
 handler h = coro();
 h.resume();
 <something else>
 }
-```
+\```
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
 `bool await_ready(){} void await_suspend(h) {` THREAD 1
 
 `std::thread((){` t1 `<time expensive work handle.resume(); }).detach(); } void await_resume(){};`
 
-```
+\```
 }
-```
+\```
 
 ## Slide 130
 
 ##### co_await Example
 
-```
+\```
 task coro()
 {
 //
@@ -2961,14 +2744,14 @@ co_awaitAwaiter{};
 }
 void func()
 {
-```
+\```
 
 `handler h = coro(); h.resume();` t2 `<something else> }`
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
 `bool await_ready(){} void await_suspend(h) {` THREAD 1
 
@@ -2978,7 +2761,7 @@ struct Awaiter
 
 ##### co_await Example
 
-```
+\```
 task coro()
 {
 //
@@ -2987,27 +2770,27 @@ co_awaitAwaiter{};
 }
 void func()
 {
-```
+\```
 
 `handler h = coro(); h.resume();` t2 `<something else> }`
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
 <time expensive work>
 handle.resume();
 }).detach();
-```
+\```
 
 `}` t1 `void await_resume(){}; }`
 
@@ -3015,10 +2798,10 @@ handle.resume();
 
 ##### co_await Example
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
 `struct Awaiter task coro() { { // bool await_ready(){} void await_suspend(h) co_await Awaiter{}; { // std::thread((){ } <time expensive work> void func() handle.resume(); { }).detach(); handler h = coro(); } h.resume(); void await_resume(){}; }` t2 `<something else> }`
 
@@ -3026,7 +2809,7 @@ struct Awaiter
 
 co_await Example
 
-```
+\```
 task coro()
 {
 //
@@ -3035,22 +2818,22 @@ co_awaitAwaiter{};
 }
 void func()
 {
-```
+\```
 
 `handler h = coro(); h.resume();` t2 t1 `<join> }`
 
-```
+\```
 struct Awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready(){}
 void await_suspend(h)
 {
-```
+\```
 
-```
+\```
 std::thread((){
 <time expensive work>
 handle.resume();
@@ -3058,50 +2841,50 @@ handle.resume();
 }
 void await_resume(){};
 }
-```
+\```
 
 ## Slide 134
 
 ##### Co_awaiting Coroutines
 
-```
+\```
 task
 {
-```
+\```
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
 };
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 135
 
 ##### Co_awaiting Coroutines
 
-```
+\```
 task
 {
-```
+\```
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
@@ -3111,109 +2894,89 @@ struct awaiter
 bool await_ready();
 void await_suspend();
 void await_resume();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 136
 
 ##### Co_awaiting Coroutines
 
-```
+\```
 task
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 task coro2()
 {
 co_return;
 }
-```
+\```
 
-```
+\```
 co_return;
-```
+\```
 
-```
+\```
 task coro1()
 {
-```
+\```
 
-```
+\```
 co_awaitcoro2();
-```
+\```
 
 }
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
-```
+\```
 
-```
+\```
 };
 struct awaiter
 {
-```
+\```
 
-```
+\```
 bool await_ready();
 void await_suspend();
 void await_resume();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 137
 
 Use Cases
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piStichat Nuts SS ZA
-BRIEFINGS ;
-coro’
-LLLLMWLLLLLLLLL LLLLLLA
-@@@0
-```
-
 ## Slide 138
 
 Use Cases
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biSekhat
-BRIEFINGS
-LLLLLLA
-coro2
-@@@0
-```
 
 ## Slide 139
 
@@ -3270,15 +3033,12 @@ CFIXX PittyPat VTrust Typro
 
 • The coroutine handles and frames are writable
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat x
 BRIEFINGS Oo
 ¢« The coroutine and are writable
-destroy pointer
-promise object
-parameters
 local variables
 coroutine index
 coroutine
@@ -3293,16 +3053,12 @@ handle
 
 • Modifying existing frames
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 FRAME
 ¢ Modifying frames
-destroy pointer
-promise object
-parameters
 local variables
 coroutine index
 ```
@@ -3322,23 +3078,16 @@ coroutine index
 FAKE
 FRAME
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Blackhat A mitives -
 FRAME MANIPULATION FRAME
 Modifying existing frames ¢ Inserting frames
 resume pointer | destroy pointer
-destroy pointer
-promise object
-parameters
 resume pointer | destroy pointer
-promise object
 coroutine pointer . .
-promise object
 coroutine index
-parameters
-parameters
 coroutine pointer
 FA K E coroutine index
 local variables
@@ -3358,17 +3107,17 @@ coroutine index
 
 ##### DOA: Data Only Attack
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 co_awaitsome_task;
 system(arg);
 }
-```
+\```
 
 ## Slide 148
 
@@ -3379,7 +3128,7 @@ Resume stub
 Stub
 (SP0) SP1 SP2 SP3
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3389,7 +3138,7 @@ co_awaitsome_task;
 //SP3//
 system(arg);
 }
-```
+\```
 
 ## Slide 149
 
@@ -3397,7 +3146,7 @@ system(arg);
 
 Creation Resume stub Stub (SP0) SP1 SP2 SP3 Init Vuln Vuln Vuln arg
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3407,7 +3156,7 @@ co_awaitsome_task;
 //SP3//
 system(arg);
 }
-```
+\```
 
 1. Arguments are copied in the frame during the creation stub
 
@@ -3447,7 +3196,7 @@ Init Vuln Vuln Vuln
 
 Init
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3458,7 +3207,7 @@ co_awaitsome_task;
 //SP3//
 getline(arr);
 }
-```
+\```
 
 ## Slide 152
 
@@ -3473,12 +3222,12 @@ arg
 — — —
 arr Init
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 char arr[10];
 co_awaitsome_task;
@@ -3487,7 +3236,7 @@ co_awaitsome_task;
 //SP3//
 getline(arr);
 }
-```
+\```
 
 2. Local variables are copied to the frame on the same SP where they are first **initialized** .
 
@@ -3506,7 +3255,7 @@ arr Init
 — —
 arr2 Init Vuln
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3517,7 +3266,7 @@ co_awaitsome_task;
 //SP3//
 puts(arr2);
 }
-```
+\```
 
 2. Local variables are copied to the frame on the same SP where they are first initialized.
 
@@ -3536,7 +3285,7 @@ arr Init
 — —
 arr2 Init Vuln
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3545,15 +3294,15 @@ co_awaitsome_task;
 void *ptr;
 for(int ii=0; ii<3; ii++)
 {
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 //SP3//
 write(ptr, 100);
 }
 }
-```
+\```
 
 ## Slide 155
 
@@ -3563,7 +3312,7 @@ Creation Resume stub Stub (SP0) SP1 SP2 SP3 Init Vuln Vuln Vuln arg — — — 
 
 TIP:  Local variables used inside a loop are always hijackable at some SP.
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3572,15 +3321,15 @@ co_awaitsome_task;
 void *ptr;
 for(int ii=0; ii<3; ii++)
 {
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 //SP3//
 write(ptr, 100);
 }
 }
-```
+\```
 
 ## Slide 156
 
@@ -3588,7 +3337,7 @@ write(ptr, 100);
 
 Creation Resume stub Stub (SP0) SP1 SP2 SP3 Init Vuln Vuln Vuln arg — — — arr Init — — arr2 Init Vuln — — ii Init Vuln — — — ptr Vuln
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3599,7 +3348,7 @@ co_awaitsome_task;
 int value = 0;
 value++;
 }
-```
+\```
 
 ## Slide 157
 
@@ -3607,27 +3356,27 @@ value++;
 
 Creation Resume stub Stub (SP0) SP1 SP2 SP3 Init Vuln Vuln Vuln arg — — — arr Init — — arr2 Init Vuln — — ii Init Vuln — — — ptr Vuln value (stack based local variable)
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 //SP3//
 int value = 0;
 value++;
 }
-```
+\```
 
 ## Slide 158
 
 ##### Advanced DOAs
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3638,13 +3387,13 @@ co_awaitsome_task;
 co_awaitsome_task;
 //SP3//
 }
-```
+\```
 
 ## Slide 159
 
 ##### Advanced DOAs
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3658,7 +3407,7 @@ co_awaitsome_task;
 <FREE ALL VARIABLES>
 final_suspend();
 }
-```
+\```
 
 ## Slide 160
 
@@ -3668,34 +3417,34 @@ final_suspend();
 
 - Need to prepare chunk metadata
 
-```
+\```
 free(vec)
-```
+\```
 
 freed
 chunk
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 initial_suspend();
 vector<int> vec;
 vec.push_back(1);
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 //SP3//
 <FREE ALL VARIABLES>
 final_suspend();
 }
-```
+\```
 
 ## Slide 161
 
@@ -3703,22 +3452,22 @@ final_suspend();
 
 g++-14 _-O0_ No reordering clang++-19
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 char arr[10];
 vector<int> vec;
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 • Some compilers do variable reordering at –O3, but they do it funny
 
@@ -3728,25 +3477,25 @@ co_awaitsome_task;
 
 g++-14 _-O0_ No reordering clang++-19
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 vector<int> vec;
 char arr[10];
-```
+\```
 
-```
+\```
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 163
 
@@ -3754,7 +3503,7 @@ co_awaitsome_task;
 
 #### g++-14 _-O3_ No reordering
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3762,11 +3511,11 @@ char arr[10];
 vector<int> vec;
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 164
 
@@ -3774,7 +3523,7 @@ co_awaitsome_task;
 
 #### g++-14 _-O3_ No reordering
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3782,11 +3531,11 @@ vector<int> vec;
 char arr[10];
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 165
 
@@ -3794,22 +3543,22 @@ co_awaitsome_task;
 
 clang++-19 _-O3_ Safe reordering
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 char arr[10];
 int value;
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 166
 
@@ -3819,7 +3568,7 @@ clang++-19 _-O3_
 
 Ok, that was weird
 
-```
+\```
 task coro(char* arg)
 {
 //SP1//
@@ -3829,7 +3578,7 @@ char arr[10];
 co_awaitsome_task;
 //SP2//
 }
-```
+\```
 
 - The reordering rules for clang are a bit messed up
 
@@ -3841,22 +3590,22 @@ clang++-19 _-O3_
 
 #### Ok, that was weird
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 int value;
 char arr[10];
 co_awaitsome_task;
 //SP2//
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 - The reordering rules for clang are a bit messed up
 
@@ -3868,22 +3617,22 @@ co_awaitsome_task;
 
 - r  b        b  ‘r u   ’ wr  g        h r  P .
 
-```
+\```
 task coro(char* arg)
 {
-```
+\```
 
-```
+\```
 //SP1//
 int val1;
 co_awaitsome_task;
 //SP2//
 int val2;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 169
 
@@ -4071,16 +3820,6 @@ Restrictions introduced
 
 …Bu  f   -grained schemes will protect every indirect jump, right?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat — . UG,
-BRIEFINGS hreat model
-...But fine-grained schemes will
-protect , right?
-\Yy
-```
-
 ## Slide 181
 
 ##### Threat model
@@ -4194,26 +3933,26 @@ Gadgets
 
 Dispatcher table
 
-```
+\```
 …
 incrax
 ret
 …
 pop rdi
 ret
-```
+\```
 
-```
+\```
 …
 pop rsi
 ret
-```
+\```
 
-```
+\```
 …
 mov rdx, rcx
 ret
-```
+\```
 
 ## Slide 189
 
@@ -4241,15 +3980,13 @@ ret
 
 1. Overwriting the _resume_ or _destroy_ pointers
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a ENeS Flow Hijacking -~
 ¢ Sources of CFPs
 1.
 resume pointer | destroy pointer
-promise object
-parameters
 local variables
 coroutine index
 ```
@@ -4324,41 +4061,41 @@ coroutine c1()
 
 coroutine c1()
 
-```
+\```
 task c1()
 {
-```
+\```
 
-```
+\```
 task
 {
-```
+\```
 
 RP
 
 `//SP1` Resume Stub `co_await c2(); //SP2` //SP1 `}` co_await c2 //SP2
 
-```
+\```
 handle h;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 suspend_alwaysfinal_suspend();
 };
 struct awaiter
 {
-```
+\```
 
-```
+\```
 task c2()
 {
 co_return;
 }
-```
+\```
 
 final_suspend()
 DP
@@ -4366,15 +4103,15 @@ Destroy Stub
 }
 Destroys F
 
-```
+\```
 bool await_ready();
 void await_suspend(h);
 void await_resume();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 198
 
@@ -4413,103 +4150,103 @@ Destroys F
 
 ##### The awesome world of Continuations
 
-```
+\```
 task
-```
+\```
 
-```
+\```
 task c1()
 {
-```
+\```
 
-```
+\```
 //SP1
 co_awaitc2();
 //SP2
 }
-```
+\```
 
-```
+\```
 task c2()
 {
-```
+\```
 
-```
+\```
 co_return;
 }
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 handle coro;
 struct promise_type
 {
-```
+\```
 
-```
+\```
 int return_value;
 suspend_alwaysinitial_suspend();
 final_awaiterfinal_suspend();
-```
+\```
 
-```
+\```
 };
 struct awaiter
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 bool await_ready();
 void await_suspend(h)
 {
 coro.continuation= h;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 void await_resume();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 struct final_awaiter
-```
+\```
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 bool await_ready();
 void await_suspend(h)
 {
 if(continuation) continuation.resume();
-```
+\```
 
-```
+\```
 }
 void await_resume()
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 201
 
@@ -4517,23 +4254,12 @@ void await_resume()
 
 • Wait, where is c2() destroyed?
 
-```
+\```
 task c1()task c2()
 {{
 co_awaitc2();co_return;
 }}
-```
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat ‘The awesome world of Continuations
-¢ Wait, where is c2() destroyed?
-task ci() task c2()
-{ {
-co_await c2(); co_return;
-} }
-```
+\```
 
 ## Slide 202
 
@@ -4543,7 +4269,7 @@ co_await c2(); co_return;
 
    - Implicitly, right after co_await, as c2 goes out of scope
 
-```
+\```
 ~task()
 task c1()task c2()
 {
@@ -4553,7 +4279,7 @@ co_awaitc2();co_return;
 c2.destroy();}coro.destroy();
 }
 }
-```
+\```
 
 ## Slide 203
 
@@ -4604,16 +4330,14 @@ The awesome world of Continuations
 
 Infinite Coroutine Chaining
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 C1 c1' c1"
 resume pointer resume pointer resume pointer
 parameters parameters parameters
 trampoline frame 4 ~—sttrampoline frame 3. ~—s trampoline frame 2 ~‘trampoline frame 1
-Toe CTO
 ```
 
 ## Slide 207
@@ -4760,30 +4484,21 @@ CALL 2 CALL 1
 
 • What about setting arbitrary arguments in the registers?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat Anvinaag Passing yp
-¢ We now have infinite arbitrary calls
-¢ What about setting arbitrary in the registers?
-```
-
 ## Slide 215
 
 Argument Passing
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat ment’
 rdi
 resume()
--
 resume ptr. destroy ptr.
 rdi
 destroy()
 argdata
--
 resume ptr. destroy ptr.
 call [rdi] = call [call target]
 argO = rdi = pointer to call target
@@ -4799,14 +4514,6 @@ argO = rdi = pointer to argdata
 
 - • Is there anything else where _rdi_ is always used?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat Anvinaag Passing
-¢ So, resume and destroy have
-¢ Is there anything else where rdi is always used?
-```
-
 ## Slide 217
 
 ##### Argument Passing
@@ -4817,36 +4524,36 @@ blackhat Anvinaag Passing
 
    - Member functions address member variables as _rdi_ offsets
 
-```
+\```
 class A:
 char[] buf;
 char* name;
 char* surname;
 void operate()
 {
-```
+\```
 
-```
+\```
 char* a = this.name;
 char* b = this.surname;
-```
+\```
 
-```
+\```
 operate:
-```
+\```
 
-```
+\```
 endbr64
 mov rsi, [rdi+0x80]
 mov rdx, [rdi+0x88]
 ...
-```
+\```
 
-```
+\```
 ...
 func(a,b);
 }
-```
+\```
 
 ## Slide 218
 
@@ -4854,19 +4561,19 @@ func(a,b);
 
 • Coroutine frame & class collision
 
-```
+\```
 operate:
-```
+\```
 
-```
+\```
 endbr64
 mov rsi, [rdi+0x80]
 mov rdx, [rdi+0x88]
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 ## Slide 219
 
@@ -4874,19 +4581,19 @@ mov rdx, [rdi+0x88]
 
 • Coroutine frame & class collision
 
-```
+\```
 operate:
-```
+\```
 
-```
+\```
 endbr64
 mov rsi, [rdi+0x80]
 mov rdx, [rdi+0x88]
-```
+\```
 
-```
+\```
 ...
-```
+\```
 
 ## Slide 220
 
@@ -4900,7 +4607,7 @@ mov rdx, [rdi+0x88]
 
 - Only sets registers and returns, needs to leverage another CFP for the call
 
-```
+\```
 endbr64
 mov rax, rsi
 mov rcx, [rdi+0x90] ;ctrl rcx
@@ -4908,7 +4615,7 @@ mov esi, [rdi+0x80] ;ctrl rsi
 mov edx, [rdi+0x98] ;ctrl rdx
 mov rdi,rax;ctrl rdi
 jmprcx;arbitrary call
-```
+\```
 
 ## Slide 221
 
@@ -4922,7 +4629,7 @@ jmprcx;arbitrary call
 
 - Only sets registers and returns, needs to leverage another CFP for the call
 
-```
+\```
 endbr64
 mov rax, rsi
 mov rcx, [rdi+0x90] ;ctrl rcx
@@ -4930,7 +4637,7 @@ mov esi, [rdi+0x80] ;ctrl rsi
 mov edx, [rdi+0x98] ;ctrl rdx
 mov rdi,rax;ctrl rdi
 ret
-```
+\```
 
 ## Slide 222
 
@@ -5054,10 +4761,10 @@ https://github.com/coroutine-cfop/cfop
 
 Marcos Bajo _h3xduck_ Christian Rossow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Se ti
 black hat
 EFINGS
 AUGUST - 2025

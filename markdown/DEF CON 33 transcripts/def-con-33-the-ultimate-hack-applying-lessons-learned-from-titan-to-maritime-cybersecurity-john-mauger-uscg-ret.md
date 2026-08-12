@@ -12,7 +12,7 @@ duration_seconds: 1206
 words: 2546
 text_chars: 14574
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # The Ultimate Hack - Applying Lessons Learned from TITAN to Maritime Cybersecurity

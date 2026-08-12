@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "OffensiveCon24 slides/Samuel Groß_The V8 Heap Sandbox.pdf"
 pages: 41
 sha256: "1c606be44ad2528b06556d3138b1bb0851afd495ac55995768bb13c3df96e682"
-text_chars: 7538
-ocr_pages: 1
-has_ocr: true
+text_chars: 7483
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:21:46Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T05:56:26Z"
 ---
 # The V8 Heap Sandbox
 
 **Speakers:** Samuel Groß  
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Samuel Groß_The V8 Heap Sandbox.pdf` (41 pages)
+
 
 ## Slide 1
 
@@ -459,12 +464,6 @@ Demo
 ## Slide 37
 
 ## Slide 38
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-v8/v8 lain) fout/*64,sbxtst/d6 Sancbox-testing poc.js §
-```
 
 ## Slide 39
 

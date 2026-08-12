@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Maxime Villard & Yair Netzer & Ben Hania_Compromising Confidential Compute, One Bug at a Time.pdf"
 pages: 93
 sha256: "9d37220217361a01604109a9cbf3d6cbbc64f1a8f78e3c0bec1ddf99a8fc4b89"
-text_chars: 22181
-ocr_pages: 7
+text_chars: 21854
+ocr_pages: 6
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:34:41Z"
+converted_at: "2026-08-12T04:36:15Z"
 ---
 # Compromising Confidential Compute, One Bug at a Time
 
 **Speakers:** Maxime Villard, Yair Netzer, Ben Hania  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Maxime Villard & Yair Netzer & Ben Hania_Compromising Confidential Compute, One Bug at a Time.pdf` (93 pages)
+
 
 ## Slide 1
 
@@ -29,16 +35,15 @@ converted_at: "2026-08-11T21:34:41Z"
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat | -
-USA 2024
 AUGUST 7-8, 2024
 Compromising Confidential
 Compute
 One bug at a time
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 2
@@ -59,17 +64,15 @@ One bug at a time
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 | -
-pisek hat
-USA 2024
 " Security review of Intel TDX
 =" Partnership between Microsoft and Intel
 # 4-month teamwork
 = Microsoft intel
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 4
@@ -475,14 +478,13 @@ Hypervisor Hypervisor
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-USA 2024
 ornelius demo
 PS C:\br\Cornelius\Binaries> .\Test.exe .\pseamldr_1.5.01.02.so.consts .\pseamldr_1.5.01.02.so .\libtdx__1.5.@1-pc.so
-PS C:\br\Cornelius\Binaries>
 ```
 
 ## Slide 29
@@ -674,11 +676,11 @@ Hypervisor value TDX Module value
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisa hat
-USA 2024
 Context-switching: a quick test
 E3 Windows PowerShell
 PS C:\br\Cornelius\Binaries> .\Test.exe .\pseamldr__1.5.01.02.so.consts .\pseamldr__1.5.01.02.so .\libtdx__1.5.@1-pc.so
@@ -1430,15 +1432,6 @@ Guest 4 Guest 5 Guest 6
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-blackhat —_
-USA 2024
-Takeaways
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 88
 
 ## Whitepaper
@@ -1467,15 +1460,12 @@ Takeaways
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€
-black hat
-USA 2024
 Cornelius
 = Cornelius is now open-source
-: vM
 P-SEAMLDR
 0 SeamcallentryPoint:
 = Greattool 12 y
@@ -1486,10 +1476,7 @@ SeamcallTdx_TdhvpEnter(Vm, @, Tdvm, @); SeamcallEntryPoint:
 printf("Done!\n"); <«€ .+. Instructions ...
 printf("Triggering VMEXIT... "); c li dil ie VMLAUNCH-To-TdGuest
 ornetius.
-Tdvmexit(vm, 0); TdGuestvmexitEntryPoint:
-printf("Done!\n");  <——————> ... Instructions ...
 € SEAMRET-To-HostVmm
-XY
 Call into firmware
 << Entry into TD guest
 Exit from TD guest
@@ -1526,14 +1513,13 @@ Exit from TD guest
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat —_
-USA 2024
 Thank you
 = Microsoft intel
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 93

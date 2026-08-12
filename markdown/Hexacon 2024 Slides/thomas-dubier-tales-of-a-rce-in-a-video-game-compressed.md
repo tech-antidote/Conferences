@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/Thomas Dubier_Tales of a RCE in a video game_Compressed.pdf"
 pages: 66
 sha256: "efd926f8f1bfe29c4ee34f235b28d0e5735babdfd407e0c79a54733e91055fcc"
-text_chars: 25400
-ocr_pages: 8
+text_chars: 20184
+ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:20:44Z"
+converted_at: "2026-08-12T05:53:35Z"
 ---
 # Tales of a RCE in a video game
 
 **Speakers:** Thomas Dubier  
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Thomas Dubier_Tales of a RCE in a video game_Compressed.pdf` (66 pages)
+
 
 ## Slide 1
 
@@ -172,14 +177,14 @@ HEXACON 2024
 
 10
 
-```
+\```
 void __thiscall sub_404160(comm_t *this)
 {
   [...]
 char buf[0x800]; // [esp+34h] [ebp-800h] BYREF
-```
+\```
 
-```
+\```
   [...]
 while ( 1 )
   {
@@ -189,7 +194,7 @@ break;
 if ( bytes_recv <= 0 )
 goto LABEL_6;
     qmemcpy(buf, ::buf, bytes_recv);
-```
+\```
 
 **10**
 
@@ -201,7 +206,7 @@ HEXACON 2024
 
 11
 
-```
+\```
 int __thiscall sub_4DC120(_DWORD *this)
 {
 constchar *SessionName; // eax
@@ -213,7 +218,7 @@ char GameName[122]; // [esp+8h] [ebp-8Ch] BYREF
   NumberOfPlayer = Array_GetNumberOfPlayer(v9);
   SessionName = (constchar *)Array_GetSessionName(v9++);
   sprintf(GameName, "%s ( %.1d / %.1d )", SessionName, NumberOfPlayer, NumberMax);
-```
+\```
 
 **11**
 
@@ -273,12 +278,12 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Game assets handling #SYNACKTIV
 =~ Downloading map. 33% copiés
-Sule
 ```
 
 ## Slide 15
@@ -289,19 +294,19 @@ Sule
 
 15
 
-```
+\```
 signedint __thiscall WriteMapToDisk(DownloadCtx_T *this)
 {
-```
+\```
 
-```
+\```
 [...]
   DKXSize = v22->DKXSize;
   DKDSize = v22->DKDSize;
   MapNameFromFile = (constchar *)(v22->BufferMap + DKDSize + DKXSize);
   NumberOfBytesWritten = v22->TotalBytesToReceive - DKDSize - DKXSize;
   strncpy(MapName, MapNameFromFile, NumberOfBytesWritten);
-```
+\```
 
 HEXACON 2024
 
@@ -311,7 +316,7 @@ HEXACON 2024
 
 16
 
-```
+\```
 __int64__fastcall CGamePermission::SetSinglePermission(
        CGamePermission *perms,
 int index,
@@ -322,7 +327,7 @@ __int64 result; // rax
   perms->m_permissions[index] = value;
 return result;
 }
-```
+\```
 
 **16**
 
@@ -334,7 +339,7 @@ HEXACON 2024
 
 17
 
-```
+\```
 __int64__fastcall CGamePermission::SetSinglePermission(
        CGamePermission *perms,
 int index,
@@ -345,7 +350,7 @@ __int64 result; // rax
   perms->m_permissions[index] = value;
 return result;
 }
-```
+\```
 
 HEXACON 2024
 
@@ -476,7 +481,8 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Open-source components
@@ -534,66 +540,6 @@ OR IN
 **25**
 
 HEXACON 2024
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Mitigations
-Stack Cookie
-DEP
-ASLR
-No CFG
-HEXACON 2024
-SYNACKTIV
-{Dl Process Explorer - Sysinternals: www.sysinternals.com [DESKTOP\user] (Administrator) a x
-File Options View Process Find Users DLL Help
-@lcBlmt/@x|°@ | bo) || | =a || ll] ||: [fitter by name>
-Process cPu| Private Bytes | Working Set] PID| Description | Company Name | DEP | ASLR Control Row G 4
-svchost.exe 2,380 K 10,228K 4756 Enabled (permanent) n/a n/a
-SgmBroker.exe 3,004 K 7.116 K 5576 Enabled (permanent) n/a n/a
-[ie \svchost.exe 2,696 K 11,636 K 1676 Processus héte pour les serv... Microsoft Corporation Enabled (permanent) ASLR CFG
-[ie \svchost.exe 2.200K 8.860K 6788 ‘héte pour les serv... Cc Enabled (permanent) ASLR CFG
-W svchost.exe 3,288 K 11,192K 6820 Enabled (permanent) na n/a
-(i |svchost.exe 3,036 K 12,920 K 6272 Processus hte pour les serv... Microsoft Corporation Enabled (permanent) ASLR CFG
-[llsass.exe <0.01 5,472K 17.364K 656 Local Security Authority Proc... Microsoft Corporation Enabled (permanent) ASLR CFG
-fontdrvhost.exe 1,276 K 3,420K — 780 Usermode Font Driver Host Microsoft Corporation Enabled (pemanent) ASLR CFG
-Jesrss.exe <0.01 2.036 K §332K 516 Enabled (pemanent) n/a n/a
-© Jwinlogon.exe 2.600 K 12,236 K 604 Application d’ouverture des... Microsoft Corporation Enabled (permanent) ASLR CFG
-[i fontdrvhost.exe 2.892 K 6508K 776 Usermode Font Driver Host Microsoft Corporation Enabled (permanent) ASLR CFG
-[e\dwm.exe <0.01 60,492 K 65.540 K 1020 Gestionnaire de fenétres du ... Microsoft Corporation Enabled coated ASLR CFG
-= Fa explorer.exe <0.01 69,692 K 143,148 K 4580 Ce tic Enabled ASLR CFG
-nwmain.exe 2387 (264456K — 193.732K 5276 Neverwinter Nights Beamdog - Enabled camel ASLR
-| SecurityHealthSystray.exe 1,748 K 9,508 K 6768 Windows Security notificatio..._ Microsoft Corporation Enabled (permanent) ASLR CFG
-A VBoxTray.exe <0.01 2.540 K 11.496 K 6984 VirtualBox Guest Additions Tr... Oracle and/or its affiliates Enabled (permanent) ASLR CFG
-(@ OneDrive.exe 19,816 K 74,424 7072 Microsoft OneDrive Microsoft Corporation Enabled (permanent) ASLR CFG
-(Tl procexp64.exe 149 25,576 K 52.232 K 4648 Sysintemals Process Explorer Sysintemals - www sysinter... Enabled (permanent) ASLR
-’
-z >
-J Handles [DLLs [J Threads
-Name Description Company Name: Path Base ASLR Control Flow Gu. bal
-|Galaxy64.dll GOG Galaxy Library (CNGOG Games \Neverwinter Nights Enhanced Edition\... Ox7FFEED690000 ASLR
-|_1x64.dll OpenSSL library The OpenSSL Project, h... C:\GOG Games\Neverwinter Nights Enhanced Edition... Ox7FFEEE3D0000 ASLR
-64. OpenSSL library The OpenSSL Project. h. = \GOG Games \Neverwinter Nights Enhanced Ecition\..._Ox7FFEFCBE0000_ _ASLR
-nwmain exe Neverwinter Nights Beamdog james \Neverwinter Nights Enhanced Edition’ 5990000 _ ASLR
-lopenal32.dil ‘Main implementation library c \GOG Games \Neverwinter Nights Enhanced Edition\... 0x5E820000 ASLR
-StaticCache.dat C:\Windows \Fonts\StaticCache.dat Ox 1FCC9640000 n/a n/a
-| SortDefautt.nis (C:\Windows \Globalization \Sorting \Sort Default nis Ox 1FCB7920000 n/a n/a
-jadvapi32.dil API é 32 Comoration CN }\System32\advapi32 dil Ox7FFFOFOD0000 ASLR CFG
-japphelp il Fichier DLL du client de com... Microsoft Corporation ‘C:\Windows \System32\apphelp.dil Ox7FFFOBD10000 ASLR CFG
-|AudioSes.dil Session audio Microsoft Corporation C:\Windows \System32\AudioSes.dil Ox7FFFO6E50000 ASLR CFG
-Iberypt dil Bibliothéque de primitives de ..._ Microsoft Corporation C:\Windows \System32\berypt dil Ox7FFFOES40000 ASLR CFG
-lbcryptprimitives dll Windows Cryptographic Primit... Microsoft Corporation C:\Windows \System32\beryptprimttives dil (x7FFFOESB0000 ASLR CFG
-\cfgmgr32.dll Configuration Manager DLL Microsoft Corporation C:\Windows \System32\cfgmgr32.dll Ox7FFFOEDD0000 ASLR CFG
-clbcatq.dil COM+ Configuration Catalog Microsoft Corporation C:\Windows \System32\clocatq dil Ox7FFFOFO20000 ASLR CFG
-[coloradapterclient.dil Microsoft Color Adapter Client — Microsoft Corporation C:\Windows \System32\coloradapterclient dil Ox7FFFO9600000 ASLR CFG
-jcombase dil Microsoft COM pour Windows Microsoft Corporation C:\Windows \System32\combase dil Ox7FFFOF650000 ASLR CFG
-ICoreMessaging dil Microsoft CoreMessaging Dil — Microsoft Corporation C:\Windows \System32\Core Messaging dil (x7FFFOB830000 ASLR CFG
-CoreUIComponents.dil Core Ul Comp Comoration CN 3\System32\CoreUIComponents.dil Ox7FFFOB3D0000 ASLR CFG
-jcrypt32.dll Crypto API32 Microsoft Corporation C:\Windows \System32\crypt32.dll Ox7FFFOES70000 ASLR CFG
-lcrvothase dil Base cryptoaraphic API DLL Cs a C:\Windows \Svstem32\cryptbase dil Ox7FFFODE00000 ASLR CFG. ad
-CPU Usage: 34.31% Commit Charge: 37.17% Processes: 112 Physical Usage: 43.23%
-25
-```
 
 ## Slide 26
 
@@ -689,7 +635,8 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Layer 2
@@ -701,9 +648,7 @@ m= 3 Frame Types
 = Compression
 HEXACON 2024
 flags details
-o1i2345 67
 s
-ke
 T
 +00h
 +08h
@@ -711,7 +656,6 @@ T
 message type
 ‘compressed by net layer
 single recipient
-= SYNACKTIV
 Magic cRC Frameld Frameld Flags
 nFrame Length
 Frame data
@@ -753,7 +697,8 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SysAdmin Message
@@ -777,14 +722,12 @@ ltern Level Restrictions
 Only One Party
 Player Pause Enabled
 Reload When Empty
-a9g7907907
 Player Password:
 Ban Name Ban CD DM Password:
 Ban IP Boot Serer Admin Password
 Save Game Slot Number
 [Server Message: Send Message
 Server status: Build 8193.36-13 [d?7dd024] Idle, login disabled. Shut down|
-= SYNACKTIV
 33
 ```
 
@@ -860,7 +803,7 @@ HEXACON 2024
 
 ## **<u>First Bug</u>**
 
-```
+\```
 __int64__fastcall CNWCMessage::HandleServerToPlayerLogin(CNWMessage *this, char Minor) {
 [...]
 int Class[8];       // [rsp+F0h] [rbp-18h] BYREF
@@ -891,7 +834,7 @@ while ( n );
 Experience = CNWMessage::ReadDWORD(this, 32);
 [...]
 CPanelCharVersionPopup::SetSaveCharacterInfo(v13, _ClassListSize, Class, ClassLevel, Experience);
-```
+\```
 
 **37**
 
@@ -919,7 +862,7 @@ HEXACON 2024
 
 39
 
-```
+\```
 __int64__fastcall CNWCMessage::HandleServerToPlayerCreatureUpdate_Appearance(CNWMessage *this)
 {
 […]
@@ -952,7 +895,7 @@ if ( _Count == n )
 goto LABEL_130;
         }
       }
-```
+\```
 
 **39**
 
@@ -990,26 +933,13 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Find a leak
-= By design server doesn’t need to query information about client ...
-f-WENEED 1060
-Fd
--
-DEEPER Cpe /
-= SYNACKTIV
-41
-```
-
 ## Slide 42
 
 ## **<u>Int eger underflow bug</u>**
 
 42
 
-```
+\```
 __int64__fastcall CNWCMessage::HandleServerToPlayerMessage(CNWMessage *this, char *Buf, int Len)
 {
   […]
@@ -1034,7 +964,7 @@ case 2u:
         CExoString::operator=(&a1, "Login");
         active = CNWCMessage::HandleServerToPlayerLogin(this, Minor);
 goto LABEL_9;
-```
+\```
 
 **42**
 
@@ -1046,7 +976,7 @@ HEXACON 2024
 
 43
 
-```
+\```
 unsignedint__fastcall CNWMessage::SetReadMessage(
         CNWMessage *this,
 unsigned__int8 *messageBuf,
@@ -1079,7 +1009,7 @@ return 1;
 else
   {
   […]
-```
+\```
 
 **43**
 
@@ -1091,7 +1021,7 @@ HEXACON 2024
 
 44
 
-```
+\```
 unsignedint__fastcall CNWMessage::SetReadMessage(
         CNWMessage *this,
 unsigned__int8 *messageBuf,
@@ -1124,7 +1054,7 @@ return 1;
 else
   {
   […]
-```
+\```
 
 **44**
 
@@ -1204,32 +1134,32 @@ HEXACON 2024
 
 - `__int64 __fastcall CNWCMessage::HandleServerToPlayerResman( CNWMessage *this, char minor)`
 
-```
+\```
 {
-```
+\```
 
-```
+\```
 […]
-```
+\```
 
-```
+\```
 switch ( minor )
     {
-```
+\```
 
-```
+\```
 […]
-```
+\```
 
-```
+\```
 case 5:
-```
+\```
 
 - No way to request file :(
 
 - Give up …
 
-```
+\```
         CNWMessage::ReadCResRef((CResRef *)v34, this, 16);
         CExoString::CExoString(&v29, (const CResRef *)v34);
         v27 = CNWMessage::ReadSHORT(this, 16);
@@ -1242,9 +1172,9 @@ goto LABEL_32;
         CExoString::CExoString(&v30);
         CExoString::Format(&v30, "TEMPCLIENT:%s", v7);
 if ( Length )
-```
+\```
 
-```
+\```
         {
           CExoString::CExoString(&v32, "wb");
           CExoFile::CExoFile((CExoFile *)&v31, &v30, v27, &v32);
@@ -1252,7 +1182,7 @@ if ( Length )
           CExoFile::Write((CExoFile *)&v31, VOIDPtr, 1u, Length);
           CExoFile::~CExoFile((#204 *)&v31);
         }
-```
+\```
 
 **49**
 
@@ -1480,14 +1410,14 @@ HEXACON 2024
 
  RAX points to CWNMessage buffer  Move RAX into RSP with 3 gadgets
 
-```
+\```
 push rax ; mov rcx, rbx ; call qword ptr [rax + 0x48]
 pop rdi ; jmp qword ptr [rax + 0x40]
-```
+\```
 
-```
+\```
 pop rsp ; and al, 0x50 ; add rsp, 0x58 ; ret
-```
+\```
 
 **63**
 
@@ -1503,7 +1433,8 @@ HEXACON 2024
 
 HEXACON 2024
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VM VirtualBox vax
@@ -1511,33 +1442,20 @@ gy Oracle VM VirtualBox de machines via Server 2 [En fonction] - 01
 Fichier hine Fichier Machine Ecran iphériques Aide
 L Outils.
 Fichier hine Ecran
-" i] kejs nwmain.exe a
-= *
 Server [En fonction] - Oracle VM VirtualBox
 G raw Fiques Aide
-he —
 ry
-ar’ S bc-leak-in-character-2.js nwmain.exe
-process Expl
 not defined
-Sa a
-coke] CEA IEW) WTVEX PI OTECa Eo python-3.12.0...
 -1 poc-leak-in-character-2.js nwmain.e
 Ts A world-class dynamic instrumentation toolkit
 z
-[Witesheteew 0mm
 -> Displays the help system
 Display information about ‘object’
 G xit
-a https: //frida.re/docs/hom
-BrepstOte02s om
 Local System (id=local)
 Neverwinter
 Nights -
 Enhanced Edition
-4:10PM
-orp
-©) @ BOS ctrl droite
 P& Tapez ici pour effectuer une recherche
 ```
 
@@ -1566,15 +1484,3 @@ HEXACON 2024
 **https://www.linkedin.com/company/synacktiv https://twitter.com/synacktiv https://synacktiv.com**
 
 **HEXACON 2024**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-des
-¢
-= SYNACKTIV
-https: / /www.linkedin.com/company/synacktiv
-https: / /twitter.com/synacktiv
-https: //synacktiv.com
-HEXACON 2024
-```

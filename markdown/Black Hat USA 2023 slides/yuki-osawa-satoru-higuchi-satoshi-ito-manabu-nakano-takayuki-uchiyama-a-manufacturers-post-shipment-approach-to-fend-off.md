@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Yuki Osawa & Satoru Higuchi & Satoshi Ito & Manabu Nakano & Takayuki Uchiyama_A Manufacturer's Post-Shipment Approach to Fend-Off IoT Malware in Home Appliances.pdf"
 pages: 37
 sha256: "48bde4c7cdbf572edd76b27ac88eaf87d9f776f59f687fb96292d83fdcaea7e6"
-text_chars: 14420
-ocr_pages: 3
+text_chars: 14363
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:26:44Z"
+converted_at: "2026-08-12T04:24:58Z"
 ---
 # A Manufacturer's Post-Shipment Approach to Fend-Off IoT Malware in Home Appliances
 
 **Speakers:** Yuki Osawa, Satoru Higuchi, Satoshi Ito, Manabu Nakano, Takayuki Uchiyama  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Yuki Osawa & Satoru Higuchi & Satoshi Ito & Manabu Nakano & Takayuki Uchiyama_A Manufacturer's Post-Shipment Approach to Fend-Off IoT Malware in Home Appliances.pdf` (37 pages)
+
 
 ## Slide 1
 
@@ -348,10 +354,10 @@ for IoT device
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 USA 2025
 1) THREIM
@@ -743,12 +749,11 @@ Self-protection as a “reasonable” option
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 USA 2025
-AS“ RA CR) THREIM
 THreat REsilience & Immunity Module
 ```

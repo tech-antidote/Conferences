@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "Hexacon 2024 Slides/Enrique E Nissim & Krzysztof Okupski_AMD Sinkclose Universal Ring -2 Privilege Escalation.pdf"
 pages: 123
 sha256: "906fd7f59d9f0283db911e4bb20e5bf20bc844301e0024075103191f66a26d9e"
-text_chars: 48499
-ocr_pages: 25
+text_chars: 41895
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.4
+ocr_unreliable_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:19:43Z"
+converted_at: "2026-08-12T05:51:28Z"
 ---
 # AMD Sinkclose Universal Ring -2 Privilege Escalation
 
@@ -22,21 +26,12 @@ converted_at: "2026-08-11T23:19:43Z"
 **Conference:** Hexacon 2024  
 **Source:** `Hexacon 2024 Slides/Enrique E Nissim & Krzysztof Okupski_AMD Sinkclose Universal Ring -2 Privilege Escalation.pdf` (123 pages)
 
+
 ## Slide 1
 
 AMD Sinkclose Universal SMM Privilege Escalation
 
 Enrique Nissim `@kiqueNissim` Krzysztof Okupski `@exminium`
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-AMD Sinkclose
-Universal SMM Privilege Escalation
-Enrique Nissim @kiqueNissim
-Krzysztof Okupski @exminium
-lOActive.
-```
 
 ## Slide 2
 
@@ -289,10 +284,10 @@ _These need to be configured for each core_
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
 Bits |Description
 63:40 |Reserved.
 39:17 |TSegMask[39:17]: TSeg address range mask. IF MSRC001_0015[SmmLock] THEN Read-only
@@ -301,7 +296,6 @@ ELSE Read-write ENDIF. See MSRC001_ 0112.
 14:12 |TMTypeDram: TSeg address range memory type. IF MSRC001_0015[SmmLock] THEN Read-
 only. ELSE Read-write. ENDIF. Specifies the memory type for SMM accesses to the TSeg range that
 are directed to DRAM. See: Table 219 [Valid Values for Memory Type Definition].
-11 |Reserved.
 10:8 |AMTypeDram: ASeg Range Memory Type. IF MSRC001_0015[SmmLock] THEN Read-only.
 ELSE Read-write. ENDIF. Specifies the memory type for SMM accesses to the ASeg range that are
 directed to DRAM. See: Table 219 [Valid Values for Memory Type Definition].
@@ -324,7 +318,6 @@ TValid: enable TSeg SMM address range. IF MSRC001_0015[SmmLock] THEN Read-only.
 ELSE Read-write. ENDIF. 1=The TSeg address range SMM enabled.
 AValid: enable ASeg SMM address range. IF MSRC001_0015[SmmLock] THEN Read-only.
 ELSE Read-write. ENDIF. 1=The ASeg address range SMM enabled.
-©2024 |OActive, Inc. All Rights Reserved.
 » lOActive.
 ```
 
@@ -334,10 +327,10 @@ ELSE Read-write. ENDIF. 1=The ASeg address range SMM enabled.
 
 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
 Bits
 Description
 63:40
@@ -376,7 +369,6 @@ TValid: enable TSeg SMM address range. IF MSRCO01_0015{SmmlLock) THEN Read-only.
 ELSE Read-write. ENDIF. 1=The TSeg address range SMM enabled.
 AValid: enable ASeg SMM address range. IF MSRCO0! 0015{SmmLock] THEN Read-only.
 ELSE Read-write. ENDIF. 1=The ASeg address range SMM enabled.
-©2024 |OActive, Inc. All Rights Reserved.
 » lOActive.
 ```
 
@@ -386,10 +378,10 @@ ELSE Read-write. ENDIF. 1=The ASeg address range SMM enabled.
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
 Bits
 Description
 63:40
@@ -428,8 +420,6 @@ TValid: enable TSeg SMM address range. IF MSRCO01_0015{SmmlLock) THEN Read-only.
 ELSE Read-write. ENDIF. 1=The TSeg address range SMM enabled.
 AValid: enable ASeg SMM address range. IF MSRCO0! 0015{SmmLock] THEN Read-only.
 ELSE Read-write. ENDIF. 1=The ASeg address range SMM enabled.
-©2024 |OActive, Inc. All Rights Reserved.
-» lOActive.
 ```
 
 ## Slide 21
@@ -452,7 +442,8 @@ MSR C001_0113 SMM TSeg Mask (SMMMask)
 
 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MSR C001 0113 SMM TSeg Mask
@@ -464,10 +455,8 @@ This register specifies how accesses to the ASeg and TSeg address ranges are con
 T]MTypeDram.
 ¢ If [A, T]Close=1, then instruction accesses are directed to DRAM with memory type as specified in
 [A, T]MTypeDram and data accesses are directed at MMIO space and with attributes based on [A,
-T]MTypeloWce.
 ¢ Ifnot in SMM, then the accesses are directed at MMIO space with attributes based on
 [A,T]MTypeloWc.
-.
 Na ©2024 |OActive, Inc. All Rights Reserved. 22 lOActive.
 ```
 
@@ -725,7 +714,8 @@ Space
 
 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Triggering the condition
@@ -738,7 +728,6 @@ do_write_msr(AMD_MSR_SMM_TSEG_MASK, tseg_mask) ;
 SW_SMI_CALL smi_call = { 0 };
 trigger_smi(&smi_call) ;
 close_platbox_device();
-.
 Na ©2024 |OActive, Inc. All Rights Reserved 31 lOActive.
 ```
 
@@ -818,7 +807,8 @@ Na ©2024 |OActive, Inc. All Rights Reserved 31 lOActive.
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PCI BARs failed
@@ -847,7 +837,8 @@ Visible device registers
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PCI BARs failed
@@ -861,11 +852,9 @@ Ethernet controller BAR2 at:} d0714000
 -> remapping BAR2 to overlap TSEG
 + successfully overlaped the ethernet bar over SMM at: bfeb0000
 -> view of memory at smm entry point:
--+gR|..
 Visible device registers
 at BAR2 (d0714000) :
 Restoring BAR and dumping again:
-Ws . 10 Active.
 ```
 
 ## Slide 39
@@ -880,7 +869,8 @@ Remap failed; registers are not available
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 78/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PCI BARs failed
@@ -894,11 +884,9 @@ Ethernet controller BAR2 at:} d0714000
 -> remapping BAR2 to overlap TSEG
 + successfully overlaped the ethernet bar over SMM at: bfeb0000
 -> view of memory at smm entry point:
--+gR|..
 Visible device registers
 -> Memory at BAR2 (d07140QQ):
 Restoring BAR and dumping again:
-es » 10Active.
 ```
 
 ## Slide 40
@@ -999,7 +987,8 @@ _This worked in theory but not in practice..._
 
 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory routing priorities
@@ -1016,7 +1005,6 @@ MMIO config space, APIC space.
 ¢ RdDram=IO, WrDram=IO.
 ¢ See 2.4.9.1.2 [APIC Register Space] and 2.7 [Configuration Space].
 6. NB address space routing. See 2.8.2.1.1 [DRAM and MMIO Memory Space].
-i oe
 .
 Na ©2024 lOActive, Inc. All Rights Reserved 46 lOActive.
 ```
@@ -1029,7 +1017,8 @@ Na ©2024 lOActive, Inc. All Rights Reserved 46 lOActive.
 
 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory routing priorities
@@ -1046,7 +1035,6 @@ MMIO config space, APIC space.
 ¢ RdDram=IO, WrDram=IO.
 ¢ See 2.4.9.1.2 [APIC Register Space] and 2.7 [Configuration Space].
 6. NB address space routing. See 2.8.2.1.1 [DRAM and MMIO Memory Space].
-i oe
 .
 Na ©2024 lOActive, Inc. All Rights Reserved 47 lOActive.
 ```
@@ -1059,22 +1047,20 @@ Na ©2024 lOActive, Inc. All Rights Reserved 47 lOActive.
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory routing priorities
 2.4.6.1.2 Determining The Access Destination for Core Accesses
 The access destination, DRAM or MMIO, is based on the highest priority of the following ranges that the
-access a in: i. Lanes priority.
 MSRCOOL _001D [Top Of Mer
-= a (see MSRCO01—
 TSeg & ASeg SMM mechanism. (see MSRCOO!_011 12 and MSRCOO1 0113)
 MMIO config space, APIC space.
 * MMIO APIC space and MMIO config space must not overlap.
 ¢ RdDram=IO, WrDram=IO.
 ¢ See 2.4.9.1.2 [APIC Register Space] and 2.7 [Configuration Space].
 6. NB address space routing. See 2.8.2.1.1 [DRAM and MMIO Memory Space].
-.
 Na ©2024 lOActive, Inc. All Rights Reserved 48 lOActive.
 ```
 
@@ -1086,24 +1072,21 @@ Na ©2024 lOActive, Inc. All Rights Reserved 48 lOActive.
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory routing priorities
 2.4.6.1.2 Determining The Access Destination for Core Accesses
 The access destination, DRAM or MMIO, is based on the highest priority of the following ranges that the
-access a in: i. Lanes priority.
 MSRCOOL _001D [Top Of Mer
-= a (see MSRCO01—
 2
-3:
 4. TSeg & ASeg SMM mechanism. (see MSRCO001_011 12 and MSRCOO1_01 13)
 5. | MMIO config space, APIC space.
 * MMIO APIC space and MMIO config space must not overlap.
 ¢ RdDram=IO, WrDram=IO.
 * See 2.4.9.1.2 [APIC Register Space] and 2.7 [Configuration Space].
 6. NB address space routing. See 2.8.2.1.1 [DRAM and MMIO Memory Space].
-.
 Na ©2024 lOActive, Inc. All Rights Reserved 49 lOActive.
 ```
 
@@ -1117,17 +1100,16 @@ Na ©2024 lOActive, Inc. All Rights Reserved 49 lOActive.
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Memory routing priorities
 2.4.6.1.2 Determining The Access Destination for Core Accesses
 The access destination, DRAM or MMIO, is based on the highest priority of the following ranges that the
-access a in: i. Lanes priority.
 MSRCOOL _001D [Top Of Mer
 = a (see MSRCOO
 2
-3:
 4. TSeg & ASeg SMM mechanism. (see MSRCO001_011 12 and MSRCO001_01 13)
 5
 MMIO config space, APIC space.
@@ -1135,7 +1117,6 @@ MMIO config space, APIC space.
 ¢ RdDram=IO, WrDram=IO.
 * See 2.4.9.1.2 [APIC Register Space] and 2.7 [Configuration Space].
 6. | NB address space routing. See 2.8.2.1.1 [DRAM and MMIO Memory Space]} ?
-.
 Na ©2024 lOActive, Inc. All Rights Reserved 50 lOActive.
 ```
 
@@ -1157,9 +1138,9 @@ SMI handlers
 
 #### Global Descriptor Table (GDT)
 
-```
+\```
 jmp 0x8:0x1000
-```
+\```
 
 Descriptor N
 Data Descriptor
@@ -1232,6 +1213,128 @@ SMM entry point + 0x4D
 
 56
 
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+Analysis of the EDKII SMM entry point
+10:
+la:
+1d:
+21:
+278
+2e:
+34:
+3e:
+42:
+45:
+4c:
+4d:
+bb
+2e
+48
+2e
+2e
+2e
+2e
+b8
+2e
+66
+66
+00
+2e
+of
+66
+66
+Of
+66
+00
+4d
+al
+89
+66
+66
+66
+08
+89
+bf
+67
+66
+20
+81
+83
+22
+ea
+80
+d8
+07
+al
+89
+of
+47
+8d
+89
+c3
+e3
+cb
+c3
+53
+fd
+do
+47
+fe
+30
+87
+47
+23
+bo
+fd
+02
+17
+53
+fa
+ff
+[ GDTR HERE ]
+ae
+80
+fa
+ae
+of
+08
+mov
+mov
+dec
+mov
+mov
+mov
+lgdtd
+mov
+mov
+mov
+lea
+mov
+mov
+and
+or
+mov
+jmp
+bx ,@x804d ; @x8000 + @x40 ———>_— SMM entry point + 0x4D
+ax,cs:@xfdd8 ; DSC_OFFSET + @xD8
+ax
+WORD PTR cs: [bx],ax
+eax,cs:@xfdd®@ ; DSC_OFFSET + xD
+DWORD PTR cs: [bx+®x2],eax
+ax, @x8
+WORD PTR cs: [bx-®x2] ,ax
+edi, 0xaef43000
+eax, [edi+0x8053]
+DWORD PTR cs: [bx-0x6] ,eax
+ebx, cra
+ebx, 0x9ffafff3
+ebx , 0x23
+. lOActive.
+```
+
 ## Slide 57
 
 #### Analysis of the EDKII SMM entry point
@@ -1242,10 +1345,10 @@ SMM entry point + 0x4D
 
 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
 Analysis of the EDKII SMM entry point
 Ts 48
 2e: 00
@@ -1255,10 +1358,8 @@ ae
 80
 fa
 ae
-1)
 of
 08
-©2024 |OActive, Inc. All Rights Reserved.
 mov
 mov
 dec
@@ -1282,7 +1383,6 @@ ax
 WORD PTR cs: [bx],ax
 eax,cs:@xfdd®@ ; DSC_OFFSET + xD
 DWORD PTR cs: [bx+0x2],eax
-GS? [bx] §
 ax, @x8
 WORD PTR cs: [bx-®x2] ,ax
 edi, 0xaef43000
@@ -1291,9 +1391,6 @@ DWORD PTR cs: [bx-@x6] ,eax
 ebx, cra
 ebx, 0x9ffafff3
 ebx , 0x23
-crd,ebx
-x8 : Oxaef4b@53
-. lOActive.
 ```
 
 ## Slide 58
@@ -1306,10 +1403,10 @@ SMM entry point + 0x4D Loads GDTR
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->
 Analysis of the EDKII SMM entry point
 Ts 48
 2e: 00
@@ -1319,10 +1416,8 @@ ae
 80
 fa
 ae
-1)
 of
 08
-©2024 |OActive, Inc. All Rights Reserved.
 mov
 mov
 dec
@@ -1346,7 +1441,6 @@ ax
 WORD PTR cs: [bx],ax
 eax,cs:@xfdd®@ ; DSC_OFFSET + xD
 DWORD PTR cs: [bx+0x2],eax
-GS? [bx] §
 ; @x8000 + @x40 ———>_— SMM entry point + 0x4D
 ax, @x8
 WORD PTR cs: [bx-®x2] ,ax
@@ -1356,10 +1450,7 @@ DWORD PTR cs: [bx-@x6] ,eax
 ebx, cra
 ebx, 0x9ffafff3
 ebx , 0x23
-crd,ebx
-x8 : Oxaef4b@53
 > Loads GDTR
-. lOActive.
 ```
 
 ## Slide 59
@@ -1463,13 +1554,11 @@ SMRAM
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Zz Memory
-[Address = 00000000FEC11000 _|
-P
-i}
 dword
 32bi
 word
@@ -1477,7 +1566,6 @@ word
 (7 Refresh
 Info Text
 Hardware
-.
 Na ©2024 lOActive, Inc. All Rights Reserved 66 lOActive.
 ```
 
@@ -1534,17 +1622,6 @@ adapter
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-PCle Squirrel
-Power supply
-adapter
-Bas"
-.
-Ng ©2024 lOActive, Inc. All Rights Reserved 70 lOActive.
-```
-
 ## Slide 71
 
 ## Exploitation
@@ -1576,7 +1653,8 @@ DRAM MMIO
 
 ©2024 IOActive, Inc. All Rights Reserved.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 mov bx ,@x804d ; @x8000 + @x4D
@@ -1585,10 +1663,8 @@ dec ax
 mov WORD PTR cs: [bx],ax
 mov eax,cs:@xfdd®@ ; DSC_OFFSET + ®xDd
 mov DWORD PTR cs: [bx+0x2],eax
-lgdtd cs: [bx];
 mov ax ,@x8
 mov WORD PTR cs: [bx-@x2] ,ax
-mov edi, @xaef43000
 lea eax, [edi+0x8053]
 TSEG
 mov DWORD PTR cs: [bx-@x6] ,eax
@@ -1597,14 +1673,11 @@ _ = and ebx , Ox9f faffF3
 = _ Data fetch 1. Remap or ebx , 0x23
 7 > SMM Entrypoint mov cx, ebx
 a = Instruction fetch jmp 0x8 : Oxaef4b053
-TTTTTT
 Core 0
 SMM
 SPI BAR
 DRAM MMIO .
 lOActive.
-~
-o
 Na ©2024 |OActive, Inc. All Rights Reserved.
 ```
 
@@ -1795,28 +1868,21 @@ The system crashed again... why?
 
 86
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Enabling TClose
 a
 HB Access Specific
 RE] Refresh
-Usep |
 MTAR User
 Register Name Address CPUI cPU2 CPU3 cPU4 CPUS CPUG
-MTRR_DEF_TYPE Ox2FF ooo0000000000C00 ooos000000000C00 ooo0000000000C00 ‘ooo0000000000C00 ooo00000000000C00 ‘cooo00R000000C00
-SMM_BASE OxC0010111 QOOOCOOOCEF38000  OO000000CEF34000  ON000000CEF3C000  O0000000CEF3E000
-QOO00000CEF4O000 + GO000000CEF 42000
-OOOOFFFFFFOO6603 © OOOOFFFFFFOO6603
-SMM_MASK 0xC0010113 OOOOFFFFFFOO6603  OOOOFFFFFFOO6603  OO0OFFFFFFOO6603  OOOOFFFFFFOO6603
 Bl Edit CPU1 MSR 0xC0010113
 x
 00 00 FF FF OD Toall CPUs
 31 30 29 28 27 26 25 24/23 221212019 18 17 16 15 14 13 1211 10 9 8176 5 4392 710 5
-111713111 %1#100000000080170031C000 0001708828741 ei
 FF 00 66 OF Cancel
-©2024 |OActive, Inc. All Rights Reserved.
 » lOActive.
 ```
 
@@ -1828,18 +1894,14 @@ FF 00 66 OF Cancel
 
 87
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 46/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bingo...
 A RW- Read & Write Utility v1.7 - [CPU MSR Registers] = Oo x
 Hl Access Specific Window Help -8x
-EEE? es pen pepe pew _ JE?
 MTRR User
-MTRR_DEF_TYPE — Ox2FF odood0o00000c09 — oo0000000000C00 —o0B000000000C00 — OOND0000000C0N — doDDODDON0000C00 —_od0DD00000000C00
-SMM_BASE oxconi0111 ONOONHOOCEESE0N0 _ONOONOONCEESANNN — OOOOONDOCEFSCO00 © OOONDONOCEFSEDN0 — dODDONDOCEF4O000 — od0DD0DNCEF4z000
-SMM_MASK oxcoo1o113 | (NGGGGFFFFFFOGSG0R |) OO00FFFFFFOGEeOF | QOOOFFFFFFOO6E03 © QOOOFFFFFFODSE03 © OD0OFFFFFFO08603 © OOD0FFFFFFOO6603
-.
 ©2024 lOActive, Inc. All Rights Reserved. 87 lOActive.
 ```
 
@@ -1899,11 +1961,11 @@ SMM mode `xor eax, eax xor eax, eax`
 
 SMM mode `xor eax, eax xor eax, eax`
 
-```
+\```
 mov bs, 0x804dmov bs, 0x804dmov bs, 0x804dmov bs, 0x804d
 mov ax, cs:0xfdd8mov ax, cs:0xfdd8mov ax, cs:0xfdd8mov ax, cs:0xfdd8
 ............
-```
+\```
 
 ©2024 IOActive, Inc. All Rights Reserved.
 
@@ -2074,7 +2136,8 @@ DRAM
 
 10 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 mov bx ,@x804d ; @x8000 + @x4D
@@ -2083,22 +2146,15 @@ dec ax
 mov WORD PTR cs: [bx],ax
 mov eax,cs:@xfdd®@ ; DSC_OFFSET + ®xDd
 mov DWORD PTR cs: [bx+0x2],eax
-lgdtd cs: [bx];
 mov ax ,@x8
 mov WORD PTR cs: [bx-@x2] ,ax
-mov edi, @xaef43000
 lea eax, [edi+0x8053]
-7 Lijit _ TSEG
 = = mov DWORD PTR cs: [bx-@x6] ,eax
 a = mov ebx,cr®
-“TITTTT >| SMM Entrypoint 1 OFF = es
-Littit ‘
-_ . > mov cr@,ebx
 ies = = > SMM Entrypoint 0 OXF jmp —- @x8: @xaef4b053
 Core 0
 SMM
 DRAM
-.
 Na ©2024 lOActive, Inc. All Rights Reserved 10 lOActive.
 ```
 

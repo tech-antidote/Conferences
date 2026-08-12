@@ -8,19 +8,24 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/Carole House_Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone.pdf"
 pages: 20
 sha256: "cf102247e227335c90ca5f6c812b92e9c73c3fc99403102928c34018a885dec7"
-text_chars: 16101
+text_chars: 15651
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 86.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:06:40Z"
+converted_at: "2026-08-12T05:29:52Z"
 ---
 # Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone
 
 **Speakers:** Carole House  
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Carole House_Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone.pdf` (20 pages)
+
 
 ## Slide 1
 
@@ -80,26 +85,17 @@ Disruption operations are not offensive adjuncts to a defensive strategy. They a
 
 _Ref. Schelling, Borhard & Lonergan, Libicki, Smeets, Nagin_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 LEGACY
 DETERRENCE f DETERRENCE BY PUNISHMENT DETERRENCE BY DENIAL
 HAS BEEN INDICTMENTS ~ | CLASSICAL DETERRENCE || _* INFRASTRUCTURE
-MISMATCHED c TSE I fe STILL HOLDS ||» FINANCIAL RAILS
-AGAINST SANCTIONS SSS, | ‘iw toons cracRcRiMe | EP ane Panes
-CY BERCRIME REWARDS Ls |__FcosysTeM. || VICTIM HARDENING —_,!
 ECOSYSTEMS A re LONG TIMELINES
-14-i-Fly HoH 1414144: Het--+ c t4-1-1-+
 DAY 0 MONTHS MONTHS MONTHS YEARS > ( ) ,~< |
 THE REALITY: NETWORKS ADAPT FASTER THAN | CAMPAIGN TIMELINE (EXAMPLE) sa aa
-PUNISHMENT CAN REACH THEM a ie a fb
-a
 AFFILIATES MOVE BETWEEN |] o 3MONTHS 6 MONTHS 9 MONTHS 12 MONTHS :
-BET WORN S MaTEnSE Campaign # Single Operation >
-ees 2 | eae ath pe |
-: _—_a
-he \\)
 black hat
 Bo 5
 2026
@@ -218,7 +214,8 @@ _Ref. Sparrow (1991) · Morselli (2009) · Bouchard (2020) · Bright et al. (201
 
 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CHOOSING
@@ -559,12 +556,12 @@ _FM 3-24 Build Phase: Deny Reconstitution_
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Thank you OD) P2NUMBRA
 DENY, , 4 BUILD RESILIENCE. FOLLOW THE MONEY.
-DISMANTLE. a |
 STRONG
 FOUNDATIONS.
 SECURE

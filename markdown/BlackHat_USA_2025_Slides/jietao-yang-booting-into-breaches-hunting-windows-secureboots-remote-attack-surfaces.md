@@ -8,19 +8,25 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Jietao Yang_Booting into Breaches Hunting Windows SecureBoot's Remote Attack Surfaces.pdf"
 pages: 86
 sha256: "60585adc230a5781c19fd683888203a02faa5c8ced3d4f501d47e7fefe058324"
-text_chars: 65231
-ocr_pages: 41
+text_chars: 57536
+ocr_pages: 39
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.4
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 6
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:24Z"
+converted_at: "2026-08-12T05:16:09Z"
 ---
 # Booting into Breaches Hunting Windows SecureBoot's Remote Attack Surfaces
 
 **Speakers:** Jietao Yang  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Jietao Yang_Booting into Breaches Hunting Windows SecureBoot's Remote Attack Surfaces.pdf` (86 pages)
+
 
 ## Slide 1
 
@@ -30,11 +36,10 @@ Azure Yang @ CyberKunlun
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-BRIEFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Booting into Breaches
@@ -116,10 +121,10 @@ Azure Yang @ CyberKunlun
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bieckhat Mobile Secuireboot f°
 This phone is not running Samsung's official
 software. You may have problems with features The boot loader is unlocked and software
 or security,-and you woit't be able to install Integrity cannot be guaranteed. finy data
@@ -128,7 +133,6 @@ attackers. Do not store any sensitive data
 on the device.
 software updates.
 Visit this link on another device:
-g .co/ABH
 SAMSUNG
 Galaxy S10 5G
 ‘8 Secured by Knox
@@ -141,7 +145,8 @@ PRESS POWER KEY TO PAUSE BOOT
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat SecureBootA Where is/enfofced
@@ -290,14 +295,11 @@ Used by BlackLotus bootkit malware
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-be
-2)
-BRIEFINGS
 if
-Mi
 blackhat Reflections ow Research Amp:
 ZERO DAY
 INITIATIVE
@@ -316,10 +318,10 @@ access, but BitLocker is specifically designed to prevent this sort of attack, s
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat How AV:A_péssible? /
 OS Deployer PXE server
 —EE Ports used - 69 and 4011
@@ -576,12 +578,10 @@ wdsmgfw.efi 4 Bugs
 
 Preboot Execution Environment (PXE) Specification – Version 2.1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat |
-BRIEFINGS
 DHCP Discover to port 67
 “ 4 DHCP Discover to Port 67
 Contains “PXEClient” extension
@@ -603,7 +603,6 @@ DHCP Discover to port 67
 Contains “PXEClient” extension
 DHCP Offer to port 68 ~————__|
 Client IP addr set to 0.0.0.0
-—__
 DHCP Ack reply to Port 68
 Lo ems to Port 4011 ———“
 Proxy
@@ -618,9 +617,6 @@ port 69 or MTFTP port assigned in __-_-_—+ }—__ Boot Service Discovery
 DHCP Ack w/ BStrap.0 file.
 _ Contains "PXEClient" extension tags
 BStrap.0 download to client's port + [Other DHCP option tags]
-: Proxy DHCP ——_~__| B.
-——————___—— oot
-PH Server . Service
 Boot Service Discover to port 67 or 4011 Client Boot Service Ack reply to Client's Port
 Contains: “PXEClient” extension tags + . 5 1.
 [Other DHCP option tags] Contains: PXE Client extension tags
@@ -631,7 +627,6 @@ NBP file name Boot Image NBP Download
 > Request to TFTP port 68———_|
 2.00 00
 NBP Download request to TFTP port 69 or PXE
-Popp te RS
 MITFTP
 MTFTP port assigned in Boot en Service Client --——___ _
 --—__ . NBP Download to
@@ -648,20 +643,16 @@ Unified Extensible Firmware Interface Specification – Version 2.3
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 IPv6 PXE_/
-OOOQOE
 DHCP6 Solicit to 547
-| yoni “PXEClient’ ext tags -_]
 DHCP6 Advertise to 546
 Contains [Other DHCP6 option tags
 + client address
-—Eh
 DHCP6 Request to 547—___ |
 DHCP6 Reply to 546 | 4
 DHCPE6 Solicit to 547
@@ -670,7 +661,6 @@ Service
 DHCP6
 Service
 Contains “PXEClient’ ext tags
-|
 DHCP6 Advertise to 546
 Contains “PXEClient’ ext tags
 DHCP6 Request to 4011
@@ -686,35 +676,26 @@ Contains “PXEClient’ ext tags
 + [Other DHCP6 option tagg
 -——__ DHCP6 Reply to client port
 Contains “PXEClient’ ext tags
-+ BootFileURL(Boot Server address __ FF
 and NBP file name)
 + BootFilePara (NBP file size)
 TFTP ReadFile to 69 to request NBP file
-——— et
 NBP file download to client pore—— Ey]
 Figure 59. IPv6-based PXE boot (DHCP6 and ProxyDHCP6 reside on the different server)
 Unified Extensible Firmware Interface Specification — Version 2.3
 Boot
 Service
 DHCPE6 Solicit to 547
-Ea Contains “PXEClient” ext tags——__ |
 DHCP6 Advertise to 546 2 |
 Contains[Other DHCP6 options tags}
 + “PXEClient’ + client address
 DHCP6 Request to 547
-I; nai [Other DHCP6 option tagg-———___}
 DHCP6 Reply to 546 ZH
-|
 DHCP6 Request to 4011
-He Contains “PXEClient’ ext tags~_]
 DHCP6 Reply to client port
 Contains “PXEClient” ext tags —H
 + BootFile URL{Boot Server address)
-|__—_——
 DHCP6
 Service
-A=)
-FE)
 DHCP6
 Service
 Boot Service Request to 4011
@@ -726,13 +707,10 @@ Contains “PXEClient” ext tags
 and NBP file name) —H
 + BootFilePara (NBP file size)
 TFTP ReadFile to 69 to request NBP file
-a nH
 NBP file download to client po
 Boot
 Service
 ©
-91
-Zr
 Figure 58. netboot6 (DHCP6 and ProxyDHCP6 reside on the same server)
 ```
 
@@ -743,17 +721,6 @@ Figure 58. netboot6 (DHCP6 and ProxyDHCP6 reside on the same server)
 - Hyper-V Gen2 VM is recommended
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-blackhat Research_envirohnment
-° Hyper-V Gen2 VM Is recommended
-~~ Microsoft
-Hyper-V
-22
-```
 
 ## Slide 23
 
@@ -771,7 +738,8 @@ Hyper-V
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
@@ -786,7 +754,6 @@ ve
 77
 78
 79
-80
 81
 82
 83
@@ -806,7 +773,6 @@ ve
 97
 98
 ack hat Why
-Paneer eat \very — &o
 v5 = v4->__vftable->TriageDump64: : Initialize __MEMORY_DUMP_PARAMETERS__ PTR(
 v4,
 (GuestCrashDumpWriter *)((char *)this + 56));
@@ -819,8 +785,6 @@ if ( *((_QWORD *)this + 4) >= 8uié4 )
 v1@ = *(const unsigned __int16 **)v9;
 Vm1::VmFile::VmFile((Vml::VmFile *)&v19, v1, v8, *((_DWORD *)this + 11));
 LODWORD(v18) = 4;
-v5 = va-> _vFtable prriageDunpéd: :Write_Vml: :VMFile(v4, &v19);// Generate Dump, | ?Write@TriageDump64@@UEAAJAEAVVmF ile@Vm1@@@Z
-Vm1: :VmFile: :Reset = =
 {
 v4->__vftable->TriageDump64: :GetBugcheckCode_uint(v4, (unsigned int *)&v18);
 v2@ = (struct _EVENT_DESCRIPTOR)MSVM_GUEST_CRASH_DUMP_SUCCESS;
@@ -834,7 +798,6 @@ v9 = *(const WCHAR **)v9;
 DeleteFileW(v9);
 Vm1: :VmFile: :Reset(&v19, v12);
 24
-000A6275 ?7InitiateDump@GuestCrashDumpWriter@@QEAAJI@Z:40 (1400A6275)
 ```
 
 ## Slide 25
@@ -843,83 +806,66 @@ Vm1: :VmFile: :Reset(&v19, v12);
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-black hat
-BRIEFINGS
-*
-*
-*
-2)
-Why choose“Hyper-V
-Bugcheck Analysis
-le
-BUGCHECK_CODE:
-*
-* BUGCHECK_P1: ffffffffceeeeees
-RR RRR RRR RRR RRR RR RRR RR RRR RR RR ER ERE KR RR RRR RRR RRR RRR RR RR RR ER ERE RE RE RR EKER ERE
+black hat BRIEFINGS
+
+Why choose Hyper-V
+
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
 KMODE_EXCEPTION_NOT_HANDLED (1e)
-This is a very common BugCheck.
-the driver/function that caused the problem.
-Usually the exception address pinpoints
-Always note this address
-BUGCHECK_P2: 3e915383
-BUGCHECK_P3: 6
+This is a very common BugCheck.  Usually the exception address pinpoints
+the driver/function that caused the problem.  Always note this address
 as well as the link date of the driver/image that contains this address.
 Arguments:
-Argi: fffffffFc9eee8es ,
-Arg2: 006000063e915383,
-Arg3: eeeeeeeeeeeeeeen,
-Arg4: 9e9e9eeee46eece8,
-bootmgfw!WimpSearchForDirent+@x63:
-@e008880 36915383 Ofb74364
+Arg1: ffffffffc0000005, The exception code that was not handled
+Arg2: 000000003e915383, The address that the exception occurred at
+Arg3: 0000000000000000, Parameter 0 of the exception
+Arg4: 00000000046eece8, Parameter 1 of the exception
+bootmgfw!WimpSearchForDirent+0x63:
+00000000`3e915383 0fb74364        movzx   eax,word ptr [rbx+64h] ds:0030:41414141`414141a5=????
+
 kd> kf
-# Memory
-ee
-@1 40
-@2 100
-@3 ae
-@4 ae
-@5 ae
-@6 168
-e7 78
-e8 78
-e9 1be
-Ga 1008
-Child-sP
-08000000 646eebbe
-00000000 O46eebfO
-@0e00000 e46eec FO
-@e0e0880 e46eed90
-00000000 846ecece30
-00000000 646eeed0
-@0000008 846efO30
-ee0e0880 e46efead
-00000000 646ef110
-00000008 846ef2c0
-00000008 846eF3cO
-BUGCHECK_P4: 46eeceé
-The exception code that was not handled
-The address that the exception occurred at
-Parameter @ of the exception
-Parameter 1 of the exception
-FILE_IN_CAB: Memory.dmp
-EXCEPTION_PARAMETER1: e99@e99ee00e080
-movzx  eax,word ptr [rbx+64h] ds:0030:41414141° 414141a5=? ???
-RetAddr Call Site EXCEPTION_PARAMETER2: 9@000000046ce
-00008000 3e91461c bootmgfw!WimpSearchForDirent+0x63
-00008000 3e90F36a bootmgfw! WimOpen+@x74 READ ADDRESS: eeeeeeeee46eeces
-00000000 3e90F32c bootmgfw! FileIoOpen+0x24e a
-00000800 3e90F32c bootmgfw! FileIoOpen+0x210
-ee098800 3e99ee14 bootmgfw! FileIoOpen+0x210
-@e008000 3e90da21 bootmgfw! BlpFileOpen+e0xe8
-@e000000 3ea6e84F bootmgfw! B1FileOpen+0x71
-00000800 3e9e903e bootmgfw! SbeEnumerateFilesInDirectory+0x5f
-00008000 3e8a2214 bootmgfw! BlImgLoadBootApplication+0x21e
-ee000000 3e8a30de bootmgfw! BmTransferExecution+0x84 25
-00000008 3e8a1c46
-bootmgfw! BmpLaunchBootEntry+@x25c
+ #   Memory  Child-SP          RetAddr               Call Site
+00           00000000`046eebb0 00000000`3e91461c     bootmgfw!WimpSearchForDirent+0x63
+01       40  00000000`046eebf0 00000000`3e90f36a     bootmgfw!WimOpen+0x74
+02      100  00000000`046eecf0 00000000`3e90f32c     bootmgfw!FileIoOpen+0x24e
+03       a0  00000000`046eed90 00000000`3e90f32c     bootmgfw!FileIoOpen+0x210
+04       a0  00000000`046eee30 00000000`3e90ee14     bootmgfw!FileIoOpen+0x210
+05       a0  00000000`046eeed0 00000000`3e90da21     bootmgfw!BlpFileOpen+0xe8
+06      160  00000000`046ef030 00000000`3ea6084f     bootmgfw!BlFileOpen+0x71
+07       70  00000000`046ef0a0 00000000`3e9e903e     bootmgfw!SbeEnumerateFilesInDirectory+0x5f
+08       70  00000000`046ef110 00000000`3e8a2214     bootmgfw!BlImgLoadBootApplication+0x21e
+09      1b0  00000000`046ef2c0 00000000`3e8a30d0     bootmgfw!BmTransferExecution+0x84
+0a      100  00000000`046ef3c0 00000000`3e8a1c46     bootmgfw!BmpLaunchBootEntry+0x25c
+
+[right column]
+BUGCHECK_CODE:  1e
+
+BUGCHECK_P1: ffffffffc0000005
+
+BUGCHECK_P2: 3e915383
+
+BUGCHECK_P3: 0
+
+BUGCHECK_P4: 46eece8
+
+FILE_IN_CAB:  Memory.dmp
+
+EXCEPTION_PARAMETER1:  00000000000000[cut off at slide edge]
+
+EXCEPTION_PARAMETER2:  00000000046ee[cut off at slide edge]
+
+READ_ADDRESS:  00000000046eece8
+
+#BHUSA  @BlackHatEvents  25
 ```
 
 ## Slide 26
@@ -932,22 +878,17 @@ Support IPv6 boot in firmware and can be configured in UEFI console.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat VMware ESXrFikmwadre // ,
 Boot Manager
 Boot normal ly Device Path:
-Pc iRoot (0x0) /Pci (x16, 0x . .
 EFI Netuork Winona! §SUoport IPv6 boot in firmware and can be
-zr 5698947C 0x0) /TPub (0000: . .
 EFI Virtual disk (0.0) Tim! §$COnfigured in UEFI console.
 EFI UMware Virtual SATA CDROM Drive (0.0) 70000 :0000 ,Ox0 , Static ,00 ;
-PRE HTITPu6 00-0000 0000 :0000:0000:0 |, DpeDxe are OxE ee
-PRE HTTP v4 000:0000:0000 0x40, 0000: | > mnpoxe File DXE driver
-0000 : 0000 : 0000 : 0000 : 9000 i appe i OnE er
 Enter setup :0000 : 0000) > Udp4Dxe File DXE driver
-Reset the susten ae 7 aoe
 Shut down the susten > UefiPxeBcDxe File DXE driver
 > Ip6Dxe File DXE driver
 > Udp6Dxe File DXE driver
@@ -979,90 +920,38 @@ Tl=Move Highlight <Enter>=Select Entry
 
 Register controlled by remote attacker.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 64/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-bldekhat
-BRIEFINGS
-y
-Case s tudy/
-/}
-yf
-Une. 7
-!!!! X64 Exception Type - OD(#GP - General Protection)
-ExceptionData - 90900000000000000
-RIP
-RAX
-RBX
-RSI
-R8
-Ril
-R14
-DS
-GS
-CRO
-CR4
-DRO
-DRS
-GDTR
-IDTR
-4141414141414141,
-geq00e0eco0ee24o,
-9eo0000000000013,
-4242424242424242,
-geq00e00e0000000,
-GOGG0OG03FE36CAO,
-9eo00o00e0000000,
-0e00000000000030,
-0000000000000030,
-0000000080010033,
-60600000000000668,
-6000000000000000,
-geo00o00e0000000,
-OGGG0GG03F5DC000 06000000000000047,
-OOOOOGOO3EE5E918 OOOOOOOD000000FFF,
-FXSAVE_STATE - 800000003FE37170
-cs
-RCX
-RSP
-RDI
-R9
-Ri2
-R15
-i)
-55
-CR2
-CR8
-DR1
-DRG
-6000000000000038,
-9eq00e0eco0ed24o,
-OG0000003FE37510,
-4242424242424242
-geq0eeo0e0000000,
-6000000000000000,
-90900000000000000
-9e00000000000030,
-0600000000000030
-4141414141414141,
-60000060000000000
-6000000000000000,
-OOOOOOOOFFFFOFFO,
-LDTR -
-TR -
-CPU Apic ID - 90000000 !!!!
-RFLAGS - 9060000000000202
-RDX - 0000000010133828
-RBP - 000000003FE375D0
-R10 - 9000000010161170
-R13 - 9600000000000000
-FS - §000000000000030
-CR3 - 900000003F801000
-DR2 - 9800000000000000
-DRY - 0000000000000400
-00e0000000000000
-H000000000000000
+black hat BRIEFINGS
+
+Case study
+
+!!!! X64 Exception Type - 0D(#GP - General Protection)  CPU Apic ID - 00000000 !!!!
+ExceptionData - 0000000000000000
+RIP  - 4141414141414141, CS  - 0000000000000038, RFLAGS - 0000000000000202
+RAX  - 00000000C0000240, RCX - 00000000C0000240, RDX - 0000000010133828
+RBX  - 0000000000000013, RSP - 000000003FE37510, RBP - 000000003FE375D0
+RSI  - 4242424242424242, RDI - 4242424242424242
+R8   - 0000000000000000, R9  - 0000000000000000, R10 - 0000000010161170
+R11  - 000000003FE36CA0, R12 - 0000000000000000, R13 - 0000000000000000
+R14  - 0000000000000000, R15 - 0000000000000000
+DS   - 0000000000000030, ES  - 0000000000000030, FS  - 0000000000000030
+GS   - 0000000000000030, SS  - 0000000000000030
+CR0  - 0000000080010033, CR2 - 4141414141414141, CR3 - 000000003F801000
+CR4  - 0000000000000668, CR8 - 0000000000000000
+DR0  - 0000000000000000, DR1 - 0000000000000000, DR2 - 0000000000000000
+DR3  - 0000000000000000, DR6 - 00000000FFFF0FF0, DR7 - 0000000000000400
+GDTR - 000000003F5DC000 0000000000000047, LDTR - 0000000000000000
+IDTR - 000000003EE5E018 0000000000000FFF,   TR - 0000000000000000
+FXSAVE_STATE - 000000003FE37170
+
+(highlighted values: RIP 4141414141414141, RSI 4242424242424242, RDI 4242424242424242, CR2 4141414141414141)
+
 Register controlled by remote attacker.
+
+#BHUSA  @BlackHatEvents  28
 ```
 
 ## Slide 29
@@ -1075,32 +964,18 @@ Register controlled by remote attacker.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 49/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat BCD Registry .. “
 ° Registry Hive file
 ° Can be edit by regedit and API
 w PXREBCD Edit Binary Value x
 Description Value name:
-vi i Objects | Element
-i {4636856e-540f-4170-a130-al4776f4c6544 teed ERE
-{68d9e51c-a129-4ee1-9725-2ab00a95 fda} aooeenee [a5 D4 2D cD FE 7D 8A 43 G-fb}.c a
-{9dea862c-Scedd-4e70-accl-f32b344d4795} Seen eR KE
-{ed2dd485-7dfe-438a-bb26-e8e3cOc8809d} eeeeee18 8688 Oe HG ee ee
-: eoeeee2@ = 3 —“‘(‘CTCTCCtCwCstC.
-i {esf4eicl -c/b4-4416-9bea-dfofosd 744c at PEBRRB28 ae ae ae ae ae ae ae SB ave ee we
-i Description eoe0ee3@ «8860 ww
-i eoeeee38 86 la (‘NCTC ln
-w Elements eoeeee4a = SiS tC‘ CCC.
-; eoseee4s «= iii LH.
-11000001 eoeeeesa = a (i ww ll
-| 2000004 AAR ARAS A Aaa AA Aaa AA Aaa AA Aaa AA v
 21000001 Cancel
 22000002
 26000010
-26000022
 29
 ```
 
@@ -1112,24 +987,18 @@ w Elements eoeeee4a = SiS tC‘ CCC.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-FA
-wily yw >=.
 ‘CVE-2024-37972
 * Bootloader CmpRemoveCellFromindex Heap out of bound write
-bisek hat
-BRIEFINGS
 Case study
 v2 = CellIndex;
 result = CellPaged->word@ -
 f ( (result & @xFDFF) !=@ )
-.
-L
 v4 = CellPaged->Cellcount - 1;
 CellPaged->Cellcount = v4;
-; result;
 v6 = &CellPaged|CelliIndex + 2];
 v7 = &CellPaged[v2 + 1];
 {
@@ -1149,10 +1018,10 @@ t16)memmove(v7, v6, v5);
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pis hat
 BRIEFINGS Say h he
 BCDEDIT - Boot Configuration Data Store Editor
 The Bcdedit.exe command-line tool modifies the boot configuration data store.
@@ -1218,56 +1087,77 @@ operating system entry.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-blackhat BCD element mean
-G www.geoffchappell.com
+black hat BRIEFINGS
+
+BCD element meaning
+
+https://www.geoffchappell.com/notes/windows/boot/bcd/elements.htm
+
 Geoff Chappell, Software Analyst
-Not indeed look to be complete, given its stated caveats, for Windows 8.
-lotes
-Dos
-Expression Web
-Front Page
-Independent Hardware Vendors
-Independent Software Vendors
+
+Home | Notes | Kernel | Win32 | Shell | Internet Explorer | Visual C++
+
+[left navigation tree]
+- Notes
+  + DOS
+  + Expression Web
+  + Front Page
+  + Independent Hardware Vendors
+  + Independent Software Vendors
+  + Office
+  + Security
+  + Web
+  - Windows
+    - Startup
+      - Windows Vista and Higher
+        - Boot Configuration Data
+            BCD Objects
+          + BCD Elements   [selected]
+          The Advanced Boot Options Menu
+          The Edit Boot Options Menu
+          The Boot Status Data Log
+      + Older Windows Versions
+  + Kernel
+  + Licensing
+  + Internet Information Services (IIS)
+  + Shell
+  + Internet Explorer
+  + Help
+  + Debugging
+  + Retro-Computing
+  + Archive
+
+[QR code image]
+
+[right content pane]
+indeed look to be complete, given its stated caveats, for Windows 8.
+
 Global Elements
+
 The following apply to all object types.
-Office Library Elements
-& Security
-Web Before Windows 10, all the elements that can be in all types of object are Library
-Windows elements.
-& Startup
-Windows Vista and High . ; ;
-mdows View and Hgner Constant Symbolic Names Friendly Name Format or Value Versions
-Boot Configuration Data
-© BCD Objects
-fa] BCD Elements) BedLibraryDevice_ApplicationDevice ,
-The Advanced Boot Options Menu «11000001 BCDE_LIBRARY_TYPE_APPLICATION_DEVICE Cia device 6.0 and higher
-& The Edit Boot Options Menu
-The Boot Status Data Log BedLibraryString_ApplicationPath
-15 Older Windows Versions 012000002 Be Te eT ATION. PATH path string 6.0 and higher
-31 Kernel - a a
-@ Licensing
-| Internet Information Services (IIS) BedLibraryString_Description
-B inten 0x12000004 BODE LIBRARY TYPE, DESCRIPTION description string 6.0 and higher
-@ Internet Explorer
-aj Help BedLibraryString_PreferredLocale
-1 Debugging 0x12000005 sR CDE_LIBRARY_TYPE_PREFERRED_LOCALE locale string 6.0 and higher
-3) Retro-Computing
-Archive
-BcdLibraryObjectList_InheritedObjects a
-0x14000008 BeDE LIGRADY TYEE, INHERIT inherit GUID list 6.0 and higher
-BedLibraryinteger_TruncatePhysicalMemory . ;
-0x18000007 BOE LIBRARY TYPE, TRUNCATE. PHYSIGAL_MEMORY truncatememory integer 6.0 and higher
-BedLibraryObjectList_RecoverySequence ;
-0x14000008 Bee LIBRARY TYPE RECOVERY. SEQUENCE recoverysequence GUID list 6.0 and higher
-BcdLibraryBoolean_AutoRecoveryEnabled ,
-0x16000009 BeDE LIBRARY. TYPE AUTO. RECOVERY_ENABLED recoveryenabled boolean 6.0 and higher
-BcdLibraryIntegerList_BadMemoryList - 7 a
-Ox17000008 Bee LIBRARY. TYPE BAD MEMORY LIST badmemorylist integer list 6.0 and higher
-oxteo00008 —- BedLibraryBoolean_AllowBadMemoryAccess badmemoryaccess boolean 32.. higher
-BCDE_LIBRARY_TYPE_ALLOW_BAD_MEMORY_ACCESS
+
+Library Elements
+
+Before Windows 10, all the elements that can be in all types of object are Library
+elements.
+
+Constant     | Symbolic Names                                                          | Friendly Name    | Format or Value | Versions
+0x11000001   | BcdLibraryDevice_ApplicationDevice / BCDE_LIBRARY_TYPE_APPLICATION_DEVICE | device          | device          | 6.0 and higher
+0x12000002   | BcdLibraryString_ApplicationPath / BCDE_LIBRARY_TYPE_APPLICATION_PATH     | path            | string          | 6.0 and higher
+0x12000004   | BcdLibraryString_Description / BCDE_LIBRARY_TYPE_DESCRIPTION              | description     | string          | 6.0 and higher
+0x12000005   | BcdLibraryString_PreferredLocale / BCDE_LIBRARY_TYPE_PREFERRED_LOCALE     | locale          | string          | 6.0 and higher
+0x14000006   | BcdLibraryObjectList_InheritedObjects / BCDE_LIBRARY_TYPE_INHERIT         | inherit         | GUID list       | 6.0 and higher
+0x15000007   | BcdLibraryInteger_TruncatePhysicalMemory / BCDE_LIBRARY_TYPE_TRUNCATE_PHYSICAL_MEMORY | truncatememory | integer   | 6.0 and higher
+0x14000008   | BcdLibraryObjectList_RecoverySequence / BCDE_LIBRARY_TYPE_RECOVERY_SEQUENCE | recoverysequence | GUID list     | 6.0 and higher
+0x16000009   | BcdLibraryBoolean_AutoRecoveryEnabled / BCDE_LIBRARY_TYPE_AUTO_RECOVERY_ENABLED | recoveryenabled | boolean    | 6.0 and higher
+0x1700000A   | BcdLibraryIntegerList_BadMemoryList / BCDE_LIBRARY_TYPE_BAD_MEMORY_LIST   | badmemorylist   | integer list    | 6.0 and higher
+0x1600000B   | BcdLibraryBoolean_AllowBadMemoryAccess / BCDE_LIBRARY_TYPE_ALLOW_BAD_MEMORY_ACCESS | badmemoryaccess | boolean  | 6.0 and higher
+
+32
 ```
 
 ## Slide 33
@@ -1349,56 +1239,79 @@ Before: BiSanitizeRamdiskDevicesInDevice After: BlDeviceSanitizeRamdiskDevicesIn
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-blackhat A design level change\to fix(?) thén-all
-" CimfsDevice Heap OOB write
-Release Date: 09/04/2024
-on: OS Builds 22621.3447 and 22631.3447
-kd> ImUynbootmgtw
-Bro’ full module list
-start end nodule name
-ooo00000° 10000000 oo000000° 10160000 bootngfw C (pdb symbols) C:\Program Files\Windows Kits\10\Debuggers™:
-Loaded symbol image file: bootmgfw.efi
-Mapped memory image file: C:\Program Files\Windows Kits\10\Debuggers\x64\sym\bootmgtw. ef i\C5D5959B1e0000\bootng
-Image path: bootmgfw.efi
-Image name: bootmgfw.efi
-Browse all global symbols functions dat
-Image was built with /“Brepro flag.
-av
-Timestamp 00000000 (This is a reproducible build file hash. not 4 timestamp)
-CheckSum ooooo000 —— sntantaieintaiatinanar ‘
-ImageSize 001E0000 =
-File version 10.0.22621.3447 Product Version: 10. 0. 32621 3447
-Product version 10.0.22621.3447
-File flags 0 (Mask 3F) FileVersion : 10. 0.22621 .3447 ||
-File 0S 40004 NT Win32
-File type 1.04 DO BO
-File date oo000000. 00000000
-Translations: 0409.04b0
-Information from resource tables:
-CompanyName: Microsoft Corporation
-Product Name Microsoft® Windows® Operating _Sy¥Sstem
-InternalName: bootngr. exe
-Oe 5 ti na De ame eet mcr ere
-Product Version: 10.0.22621.3447
-FileVersion: 10.0.22621.3447) (WinBuild.160101.0800)
-PITepescriperen. Leer tansger
-LegalCopyright : © Microsoft Corporation. All rights reserved
-kd> r= gee: I
-=0000000000000000 rbx-00000000008:
-7ae-00000000008%af20 res-00000000000 | |LOOtMgE w! MnHapReportHeapCorrupt ion+0x37 :
-rip=00000000100c24ab rsp=00000000046e
-r8=0000000000000000 r3=O00000000000C go000000" 100c24ab cc int
-r11=00000000046e23d8 r12=00000000000GuUUU rils=uUUDUUUUUUUUUUUU
-r14=0000000000838610 r1S=0000000000000068
-cs=0028 ss=0009 do=0030 ec=0N30 fa=0030  gs=0030 ef1=00000202
-bootngfw! MnHapReportHeapCorruption+0x3?7:
-00000000°100c24ab cco int 3 37
-ROS" RT
-# Memory Child—-SP RetAddr Call Site
-oo 00000000° 046e23e0 00000000°0083af20 bootmgfw! MmHapReportHeapCorruption+0x37
+black hat BRIEFINGS
+
+A design level change to fix(?) them all
+
+[meme panel 1] It just need boundary check,
+Microsoft won't miss it
+
+[meme panel 2] They did fix it right?
+
+CimfsDevice Heap OOB write
+
+Release Date:        09/04/2024
+
+Version:             OS Builds 22621.3447 and 22631.3447
+
+kd> lmDvmbootmgfw
+Browse full module list
+start             end                  module name
+00000000`10000000 00000000`101e0000    bootmgfw C (pdb symbols)        C:\Program Files\Windows Kits\10\Debuggers\x...
+    Loaded symbol image file: bootmgfw.efi
+    Mapped memory image file: C:\Program Files\Windows Kits\10\Debuggers\x64\sym\bootmgfw.efi\C5D5959B1e0000\bootmg...
+    Image path: bootmgfw.efi
+    Image name: bootmgfw.efi
+    Browse all global symbols  functions  data
+    Image was built with /Brepro flag.
+    Timestamp:        00000000 (This is a reproducible build file hash, not a timestamp)
+    CheckSum:         00000000
+    ImageSize:        001E0000
+    File version:     10.0.22621.3447
+    Product version:  10.0.22621.3447
+    File flags:       0 (Mask 3F)
+    File OS:          40004 NT Win32
+    File type:        1.0 App
+    File date:        00000000.00000000
+    Translations:     0409.04b0
+    Information from resource tables:
+        CompanyName:      Microsoft Corporation
+        ProductName:      Microsoft(R) Windows(R) Operating System
+        InternalName:     bootmgr.exe
+        OriginalFilename: bootmgr.exe
+        ProductVersion:   10.0.22621.3447
+        FileVersion:      10.0.22621.3447 (WinBuild.160101.0800)
+        FileDescription:  Boot Manager
+        LegalCopyright:   (c) Microsoft Corporation. All rights reserved.
+
+kd> r
+rax=0000000000000000 rbx=00000000008[3...]
+rdx=000000000083af20 rsi=00000000000[...]
+rip=00000000100c24ab rsp=00000000046e[...]
+ r8=0000000000000000  r9=00000000000[...]
+r11=00000000046e23d8 r12=0000000000000000 r13=0000000000000000
+r14=0000000000838610 r15=0000000000000068
+iopl=0         nv up ei pl nz na pe nc
+cs=0028  ss=0008  ds=0030  es=0030  fs=0030  gs=0030              efl=00000202
+bootmgfw!MmHapReportHeapCorruption+0x37:
+00000000`100c24ab cc              int     3
+kd> kf
+ #   Memory  Child-SP          RetAddr           Call Site
+00           00000000`046e23e0 00000000`0083af20 bootmgfw!MmHapReportHeapCorruption+0x37
+
+[callout 1 - zoomed]
+ProductVersion:   10.0.22621.3447
+FileVersion:      10.0.22621.3447
+
+[callout 2 - zoomed]
+bootmgfw!MmHapReportHeapCorruption+0x37:
+00000000`100c24ab cc                       int
+
+37
 ```
 
 ## Slide 38
@@ -1440,33 +1353,21 @@ RSP
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat About ecuySive'ealli ig
-BRIEFINGS
-Vi
 s Oxfecf8b1: mov DWORD PTR [r13+0x0] ,r12d
-sBUXTECTODS. Cate "UXTECT IU ”
 Oxfecf8ba: mov eax ,r12d
-Oxfecf8bd: add rsp, 0x20
 Oxfecf8cl: pop ri2
 T direction overflow)
-0000 | —— > (0x00000000)
-0004 | ——> (0x00000000)
 0008 | SSE HSE (0x00000000)
-0012] —=> (0x00000000 )
-0016| --> Oxfe223818
 0020 | ——> (0x00000000)
-0024 | ==> --—> ==> (O0x00000000)
-== 9028 | --> (0x90000000)
 2310-2 Legend: ; , rodata, value
 23-10-27 Stopped reason:
-e23-10-2 in 27? Q
 info reg r13
-Ire s: Oxfe223818 Oxfe223818
 x/10gx Oxfe223818 PROT 64-bit fluff=0000
-Cannot access memory at address Oxfe223818' dor cu tit farfooee
 ```
 
 ## Slide 41
@@ -1487,61 +1388,79 @@ Cannot access memory at address Oxfe223818' dor cu tit farfooee
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
+black hat BRIEFINGS
+
+When bcdedit cry
+
+[left code panel]
 HKEY hiveKey;
-blackhat When bcedeg@i
-LONG result + RegLoadKey(HKEY_USERS, "BCD123", hiveFilePath.c_str());
-if (result != ERROR SUCCESS) {
-std::cout << "Failed to load the registry hive. Error code: " << result << std::ene
-getchar();
-return 1;
-GUID guid = stringToGuid("{@0000000-9000-9000-9000-a0aa0eG0@000}");
+LONG result = RegLoadKey(HKEY_USERS, "BCD123", hiveFilePath.c_str());
+if (result != ERROR_SUCCESS) {
+    std::cout << "Failed to load the registry hive. Error code: " << result << std::end…
+    getchar();
+    return 1;
+}
+
+GUID guid = stringToGuid("{00000000-0000-0000-0000-000000000000}");
+
 int cc = atoi(argv[2]);
-for (int i=@;i<cc;++i)
+for (int i=0;i<cc;++i)
 {
-printf("i: %d\n", i);
-BODCreateElement(HKEY_USERS, guid, i);
-puts("set dome");
-?
-f/f Unload the registry hive
-result 4 RegUnLoadKkey(HKEY_USERS, "BCD123");
-if (result != ERROR SUCCESS) {
-std::cout << "Failed to unload the registry hive. Error code: " << result
-return 1;
-std::cout << "Registry hive loaded, key value set, and hive unloaded successfully." <<
-X ~~:
+    printf("i: %d\n", i);
+    BCDCreateElement(HKEY_USERS, guid, i);
+    puts("set done");
+}
+// Unload the registry hive
+result = RegUnLoadKey(HKEY_USERS, "BCD123");
+if (result != ERROR_SUCCESS) {
+    std::cout << "Failed to unload the registry hive. Error code: " << result << std::e…
+    return 1;
+}
+
+std::cout << "Registry hive loaded, key value set, and hive unloaded successfully." << …
+
+[right code panel]
 void BCDCreateElement(HKEY hRootKey, GUID NodeGUID, int i)
 {
-HKEY hElementRoot;
-HKEY hElementElements;
-HKEY hElementElementsSubE lement;
-HKEY hElementDescription;
-/ Format BCD123\\Objects\\{%s}\\
-memset(datal, 9, @x100);
-NodeGUID.Datal = i;
-sprintf((char*)&data1, "BCD123\\Objects\\%s", guidToString(&NodeGUID) );
-puts((char *)datal);
-RegCreateKeyA(hRootKey, (LPCSTR)datal, &hElementRoot);
-lements\\11000001
-sprintf((char*)&data1, "BCD123\\Objects\\%s\\Elements", guidToString(&NodeGUID) );
-RegCreateKeyA(hRootKey, (LPCSTR)datal, &hElementElements);
-sprintf ((char*)&datal, “BCD123\\Objects\\%s\\Description", guidToString(&NodeGUID) );
-RegCreateKeyA(hRootKey, (LPCSTR)datal, &hElementDescription);
-sprintf((char*)&data1, “BCD123\\Objects\\%s\\Elements\\%x", guidToString(&NodeGUID) ,0x11000001);
-/ Create the sub element REG_BINARY
-RegCreateKeyA(hRootKey, (LPCSTR)datal, &hElementElementsSubElement) ;
-datal1[@x110] = @x5;
-data1[0x114] = 1;
-data1[@x118] = @xCc;
-pa DUORD = idat alto looL sais).
-RegSetValueEx(hElementElementsSubElement, "Element", @, REG_BINARY, &data1[@x100], @x1C);
-RegCloseKey(hElementElementsSubElement) ;
-RegCloseKey(hElementDescription) ;
-RegCloseKey(hElementElements) ; 42
-RegCloseKey(hElementRoot) ;
+    HKEY hElementRoot;
+    HKEY hElementElements;
+    HKEY hElementElementsSubElement;
+    HKEY hElementDescription;
+
+    // Format BCD123\\Objects\\{%s}\\Elements\\11000001
+    memset(data1, 0, 0x100);
+    NodeGUID.Data1 = i;
+    sprintf((char*)&data1, "BCD123\\Objects\\%s", guidToString(&NodeGUID));
+    puts((char *)data1);
+    RegCreateKeyA(hRootKey, (LPCSTR)data1, &hElementRoot);
+
+    sprintf((char*)&data1, "BCD123\\Objects\\%s\\Elements", guidToString(&NodeGUID));
+    RegCreateKeyA(hRootKey, (LPCSTR)data1, &hElementElements);
+
+    sprintf((char*)&data1, "BCD123\\Objects\\%s\\Description", guidToString(&NodeGUID));
+    RegCreateKeyA(hRootKey, (LPCSTR)data1, &hElementDescription);
+
+    sprintf((char*)&data1, "BCD123\\Objects\\%s\\Elements\\%x", guidToString(&NodeGUID),0x11000001);
+    // Create the sub element REG_BINARY
+    RegCreateKeyA(hRootKey, (LPCSTR)data1, &hElementElementsSubElement);
+
+    data1[0x110] = 0x5;
+    data1[0x114] = 1;
+    data1[0x118] = 0xC;
+    *(DWORD *)&data1[0x100] = i+1;
+    RegSetValueEx(hElementElementsSubElement, "Element", 0, REG_BINARY, &data1[0x100], 0x1C);
+
+    RegCloseKey(hElementElementsSubElement);
+    RegCloseKey(hElementDescription);
+    RegCloseKey(hElementElements);
+    RegCloseKey(hElementRoot);
+}
+
+42
 ```
 
 ## Slide 43
@@ -1564,26 +1483,21 @@ RegCloseKey(hElementRoot) ;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 72/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-VA yf
 blacichat Case study CVE-2024-3 975
 * Bootloader HttopGetResponselcp Integer overflow preauth RCE
 oe v1l9 = httpTcp4_recvdata.DataLength - 3;
-° tT ( httplcp4 recvdata.
 oa 10+ ARE 40;
 a LODWORD(v19) = RtlCompareMemory ( ( =
-tC vi9 1 v19 = httpTcp4 recvdata. pa - 3;
 1
 e *(( T )Heap + v18) =
-oO DataLength = httpTcp4_ recvdata. i
 oO v17 = httpTcp4 recvdata.DataLength - v18 - 4;
-na
 a DataLength = httpTcp4 recvdata.DataLength;
 * ++v18;
 or) ile ( v18 < ( : / t)vi9 );
-£
 L
 00194A82 HttppGetResponseT cp:68 (10195682)
 ```
@@ -1598,12 +1512,11 @@ L
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Security Policy ©
-BRIEFINGS
 * Golden Key’s unlock attack
 * CVE-2016-3287 / CVE-2016-3320
 Must be an admin and have physical access to exploit the bug
@@ -1651,7 +1564,8 @@ CVE-2021-40045 – By taszk
 
 #BHUSA @BlackHatEvents BlackHat USA 2024 - Locked Down but Not Out / Fighting the Hidden War in Your Bootloader - Bill Demirkapi@MSRC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Boot Code: Extensibility
@@ -1770,20 +1684,18 @@ Harness
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
-BRIEFINGS
 american fuzzy lop ++4.09a {0} (./nyx_mode/efi/ntfs) [fast] ~ Nyx
 [— process timing
 overall result:
-Ss
 run time : 23 days, 3 hrs, 30 min, 31 sec cycles done : 477
 last new find : @ days, 10 hrs, 47 min, 19 sec corpus count : 956
 last saved crash : 13 days, 3 hrs, 20 min, 50 sec saved crashes : 4
 last saved hang : 3 days, 10 hrs, 6 min, @ sec saved hangs : 20
-/ cycle progress ——————————— map coverag:
 now processing : 682.419 (71.3%) map density : 2.2U% / 3.38%
 runs timed out : @ (0.00%) count coverage : 3.17 bits/tuple
 + stage progress ———_——_________- findings in depth
@@ -1890,16 +1802,14 @@ trim/eff : disabled, disabled [cpu0o2: 9%]
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-bisexhat Harvest»
 5000
 4500
 4000
 3500
-3000 _/
 2500
 1600
 1400
@@ -1909,7 +1819,6 @@ bisexhat Harvest»
 600
 400
 200
-rr edges
 5000 10000 15000 20000 20 — FA
 relative time in seconds 0
 5000 10000 15000
@@ -1918,7 +1827,6 @@ current item
 pending items
 pending favs
 cycles done
-A
 10000 15000
 5000 10000 15000 20000 relative time in seconds
 relative time in seconds
@@ -1938,25 +1846,19 @@ Making VM snapshot tree really helps you accelerate the analysis
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 bieckhat Go speed_racer \
-GO) u22dsk_edk2dev - ROZESESE
 : works server ipv+ debug ‘2824 bootmofw PRE 6 ‘BRE 7 patched debug 21 me
-— 0 O—- @@- OOOO
 wMext vNext restarted bootmofw ‘8219 python wim debug poison
 wdsstage bootmafw load heapoob
-Q
 newloop
 @
 debug
-vhdrarndisk
-Q—@
 DRE 27 release
 RRB 26
-Sari
 Making VM snapshot tree really helps you accelerate the analysis 95
 ```
 
@@ -2036,14 +1938,14 @@ Windows Services
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unauthenticated Attacker im
 from network od
 Windows Kernel
 Remote code execution
-tiserand
 Application
 61
 ```
@@ -2068,14 +1970,14 @@ Configuration
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unauthenticated Attacker im
 from network od
 Windows Kernel
 Remote code execution
-tiserand
 Application
 63
 ```
@@ -2092,16 +1994,14 @@ Application
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 File Action View Help
 fa Windows Deployment Services WIN-POM7B6RSUD3
 v Ga Servers
-=, WIN-POM7B6RSUD3
 mw Active Directory Prestaged Devices H
 Windows Deployment Services is not configured
 &4 Windows Deployment Services Configuration Wizard
@@ -2138,12 +2038,10 @@ Next 65) Cancel |
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat Introduce_anandful ¢
-BRIEFINGS
 1.1002.1 UEFI Firmware - oOo
 File Recovery Options Help
 indows 11 ZEMMhR x64 Windows 11 Pro x64 Windows Server 2022 Datacenter x64 Windows PE 10.0.26244.5000 ARM64
@@ -2167,10 +2065,10 @@ Open session
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Introduce_qfandful tool
 Mount Image-Max
 Name Value
@@ -2183,7 +2081,6 @@ Expanded Sp... 1.51 GB
 OS Version 10.0.26244.5000
 Target Image: 2: Microsoft Windows Setup (arm64)(Bootable)
 C:\Temp\images\boot.wim
-:\Temp\mounts\Boot!
 Browse
 Browse
 67
@@ -2195,22 +2092,17 @@ Browse
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-blackhat Replace the‘setup.exe /,
 +
-IHRBAM «86> «=A (C:) +> Temp
-(EA RB
 B& Program Files 2024/6/22 15:54
 B® Program Files (x86) 2024/6/22 15:54
 Bl sources 2024/6/22 16:00
 BB Windows 2024/6/22 16:04
-al FAP JOVAICINIALC-CA
 Boot Images 1 Boot Image(s)
-n& setup
 Image Name Architecture Status Expanded Size fersi Priority
-EJ Microsoft Windows S.. xb4 Online 2295 MB 9/11... .0. 500000 ...
 68
 ```
 
@@ -2240,16 +2132,15 @@ Remote DoS Based Attack SecureBoot
 
 #BHUSA @BlackHatEvents BlackHat USA 2024 - Locked Down but Not Out / Fighting the Hidden War in Your Bootloader - Bill Demirkapi@MSRC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Where Does Microsoft Draw the Line?
 Can an attacker achieve the same outcome by design?
 Defensible? Defensible?
-Admin User —— eavronmen Meet —— enanint
 ya Considered defensible a a Usually defensible
 : Defensible? i Defensible?
-Attacker Environment Npoot| PT (User-mode
 as? Usually defensible ) Not defensible!
 BlackHat USA 2024 - Locked Down but Not Out / Fighting the Hidden War in Your Bootloader - Bill Demirkapi@MSRC
 ```
@@ -2264,7 +2155,8 @@ NT Kernel
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhay Data shared betwéen.boetloadet and, fernel
@@ -2280,12 +2172,9 @@ if ( OslIsTcbLaunchEnabled() )
 vl3 = BlLdrPreloadFile(a3, a2->Buffer);
 ") && BlAppendUnicodeToString(a2, DestinationString.Buffer) )
 vil3 = BlimgLoadImageWithProgress2(
-&a1->BasicData.Extension->EmInfFileImage,
-&al->BasicData.Extension->EmInfFileSize,
 aoe NT Kernel
 Local Types
 ned int Size;
-_PROFILE PARAMETER BLOCK Profile;
 20000014
 oid *EmInfFileImage;
 i int EmInfFileSize;
@@ -2305,33 +2194,28 @@ i int EmInfFileSize;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-VA yf
 blackhat What’s the,fi le looks Jike/ _
 = erratainf X
 = errata.inf
 Be Attacker controlled
 Standard INF file
-s evaraciwe Parsing in Kernel
 >
 3;Abstract: No common API
 & INF file for the Errata Manager Database
 ;Copyright (c) Microsoft Corporation. All rights reserved.
-;Module Name:
-ae |
 ;Specify the rules that the clients can register for notifications
 3;Also need to specify the necessary string parameters if required
 3N.B. The rule names must have been defined in the [RuleNameGuidDef] Section
 o Declared in [RuleDef] Section and implemented in [Rule] Section
-pessssssssscss sess
 [TargetRuleDef ]
 ACPISLPWorkAround = {FACP.ACER_OEMID.FACP.M25D_TableId}, \ 3; ACERM25D02/25/¢e0
 {FACP.COMPAQ_OEMID.FACP.LAREDO_TableId}, \ ; COMPAQLAREDO@7/05/99
 {FACP.DELL_OEMID.FACP.WS21@ TABLEID}, \ ;DellPrecisionWS21e
 {FACP.DELL_OEMID.FACP.WS41@ TABLEID}, \ ;Del1lPrecisionWS410e
-{FACP.DELL_OEMID.FACP.WS61@_ TABLEID}, \ ;DellPrecisionWS61e
 {FACP.DELL OEMID.FACP.PE130@ TABLEID}, \ :DellPowerEdge130e0
 ```
 
@@ -2343,22 +2227,18 @@ Start fuzzing harness code from opensource code base
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-BRIEFINGS
 G hook.cpp M G kdvm.cpp 4 X
 VirtualKD-Redux > Lib > kdvmguestlib > G+ kdvm.cpp > ¢ ChannelHelper<DefaultRPCChannel>
 static NTSTATUS KdDebuggerInitialize@(PVOID lpLoaderParameterBlock )
-r
-au
 #ifdef VKD_EXPERIMENTAL_PACKET_POLL_DIVIDER_SUPPORT
 #endif
 //PVOID hMod = Kerne loduleB ("ntoskrnl.exe") ;
 PVOID hMod = GetModuleBaseAddress(&lofCallDriver) ;
 setup((size_t)hMod) ;
-return STATUS_INVALID_ PARAMETER;
 Start fuzzing harness code from opensource code base
 =
 75
@@ -2384,64 +2264,40 @@ How to setup fuzzing infra
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 83/100 on the text kept, 67/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-2)
-black hat
-BRIEFINGS
+black hat BRIEFINGS
+
+Analyzing the crash
+
 id_000000,sig_00,src_000419,time_306686,execs_34066,op_havoc,rep_2
-fl: kd> .trap Oxfffff8
-NOTE: The trap frame
-Some register values
-rax=0000000000000000
-rdx=fffF9c0e1F960600
-rip=ffffF80235986c69
-r8=fFfFfF9c0e1F99a150
-ri1=ffff9c0e1Ff9Ia9 Fad
-7r14=0000000000000000
-iopl=0 nv up
-nt! EmpParseRules+0x27
-FFFFF802°>35986c69 483
-xxx Stack trace for
-# Memory Child-SP
-00 FffFF886
-01 70 fffFfF886
-02 40 fffff886
-03 240 Fffff886
-04 1a0 fffff886
-05 40 fffff886
-06 50 ffffFf886
-864ca06F50
-does not contain all
-registers.
-may be zeroed or incorrect.
-rbx=0000000000000000
-rsi=0000000000000000
-rsp=fffff8864ca070e0
-r9=0000000000000002
-r12=0000000000000000
-r15=0000000000000000
-Pox=FFTTFFFFFTTTTTTS
-rdi=0000000000000000
-rbp=0000000000000101
-r10=0000000000000543
-r13=0000000000000000
-4
-Analyzing the-crash
-5:
-919 cmp qword ptr [rcex],rbx ds: ffffffff FFFFFFF8=? 222222222722 2?2??
-last set context - .thread/.cxr resets it
-RetAddr Call Site
-“4ca070e0 FfFfFF802 35985F77 nt! EmpParseRules+0x275
-“4ca07150 ffFfFF802 359cec43 nt! EmpParseInfDatabase+0x97
-*4ca07190 fffFfF802°3597ce6b nt! EmInitSystem+0x12b
-~4ca073d0 ffffFf802 354992a3 nt!Phase1InitializationDiscard+0xe63
-~4ca07570 ffffF802° 35263a2a nt!PhaselInitialization+0x23
-“4ca075b0 FfFfFF802 3546e2d4 nt!PspSystemThreadStartup+0x5a
-~4ca07600 00000000 00000000 nt!KiStartSystemThread+0x34
-_
-PP
+
+ 1  1: kd> .trap 0xfffff8864ca06f50
+ 2  NOTE: The trap frame does not contain all registers.
+ 3  Some register values may be zeroed or incorrect.
+ 4  rax=0000000000000000 rbx=0000000000000000 rcx=fffffffffffffff8
+ 5  rdx=ffff9c0e1f960600 rsi=0000000000000000 rdi=0000000000000000
+ 6  rip=fffff80235986c69 rsp=fffff8864ca070e0 rbp=0000000000000101
+ 7   r8=ffff9c0e1f99a150  r9=0000000000000002 r10=0000000000000543
+ 8  r11=ffff9c0e1f9a9fa0 r12=0000000000000000 r13=0000000000000000
+ 9  r14=0000000000000000 r15=0000000000000000
+10  iopl=0         nv up ei pl nz na pe nc
+11  nt!EmpParseRules+0x275:
+12  fffff802`35986c69 483919          cmp     qword ptr [rcx],rbx ds:ffffffff`fffffff8=????????????????
+13  1: kd> kf
+14    *** Stack trace for last set context - .thread/.cxr resets it
+15   #   Memory  Child-SP          RetAddr               Call Site
+16  00           fffff886`4ca070e0 fffff802`35985f77     nt!EmpParseRules+0x275
+17  01        70 fffff886`4ca07150 fffff802`359cec43     nt!EmpParseInfDatabase+0x97
+18  02        40 fffff886`4ca07190 fffff802`3597ce6b     nt!EmInitSystem+0x12b
+19  03       240 fffff886`4ca073d0 fffff802`354992a3     nt!Phase1InitializationDiscard+0xe63
+20  04       1a0 fffff886`4ca07570 fffff802`35263a2a     nt!Phase1Initialization+0x23
+21  05        40 fffff886`4ca075b0 fffff802`3546e2d4     nt!PspSystemThreadStartup+0x5a
+22  06        50 fffff886`4ca07600 00000000`00000000     nt!KiStartSystemThread+0x34
+
+#BHUSA  @BlackHatEvents   77
 ```
 
 ## Slide 77
@@ -2462,16 +2318,14 @@ The first Windows kernel memory corruption I’ve discovered in my career.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-wdcnet What’s Actwally Going Ow? -
 Defensible? Defensible?
 Network
 Boot
 Network
-——>_ _User-mode Boot —i—» Kernel-mode
 oo
 CS) Not defensible! CS) Not defensible!
 We have determined that the behavior described in your report is by design.
@@ -2542,19 +2396,6 @@ l™ Status changed from Review/Repro to Complete
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-BRIEFINGS
-¢ PCA2011 Time breaches
-¢ Patch branch breaches
-Patch
-branch
-PCA20T1 breaches
-Time bre 4
-```
-
 ## Slide 83
 
 ## Take Aways
@@ -2581,14 +2422,14 @@ Time bre 4
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Unauthenticated Attacker im
 from network oo
 Recheck for multiple VWWDS server
 H UEFI PXE Bootloader OS Loader
-i
 ```
 
 ## Slide 85
@@ -2597,31 +2438,19 @@ i
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ARH I TLSVEbLSmLet
-1sK7u53zWLdoVoL
-FCbv5ukP/jTvNdrY
 yFS£uCkIJwNdZNF JC
 GzpWsB8k3KdU
-SHNXlylyUtEn1tG8tuZYPMia
-376CBiEGFMglyheaswddg1Pt3M2@UstdDct
-RACSesLChIRpP9AVLArmn 1 yf
 bskxvzLPCwgs+2LMZ
-jLGdLvUpmkCD/1Z
-SECUREBOOT STATUS CHECK English wh 2bGKDpEGXGAT
 eXnTLzm5D9V
-Lh H4sZ+TP&
-i5GcUeRLr7ht u FF5Syd+X3259 1/dH
-gJoP@m179M0k9Ve NaOL@a+d/4Vmom5VuY t3GEYqhk
-Ou/8X8AVL TyWOdwAAA=
 ANALYZE
 Thi pject t of the Black Hat USA research "Booting into B ne S B R Sw iy ee Pale i
 Attack S t helps you check if your system is affected b erabilitie ered b
 zure Yang and patched in 2024. The tool collects Gnonymous data for presentatio e final Black Hat ta Analysis Results
 :o detect secureboot
-em status
 Z V Windows PCA 2023 Certificate detected
 ate database is up to date.
 Windows Instructions
@@ -2636,15 +2465,13 @@ Thanks! X: @4zure9
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-BRIEFINGS
 Thanks!
 xX: @4zureY
-uty CYBER
 l | 1. KUNLUN
 87
 ```

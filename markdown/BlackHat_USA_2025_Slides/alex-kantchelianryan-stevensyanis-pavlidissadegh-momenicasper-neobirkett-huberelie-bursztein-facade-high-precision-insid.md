@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alex Kantchelian&Ryan Stevens&Yanis Pavlidis&Sadegh Momeni&Casper Neo&Birkett Huber&Elie Bursztein_FACADE High-Precision Insider Threat Detection Using Contrastive Learning.pdf"
 pages: 43
 sha256: "fc1170bbfeeba8a8785b313bd208106a4b5f4c7e7d4f426816c7cea1e29de237"
-text_chars: 9643
+text_chars: 9670
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 76.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:14Z"
+converted_at: "2026-08-12T05:03:44Z"
 ---
 # FACADE High-Precision Insider Threat Detection Using Contrastive Learning
 
 **Speakers:** Alex Kantchelian, Ryan Stevens, Yanis Pavlidis, Sadegh Momeni, Casper Neo, Birkett Huber, Elie Bursztein  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alex Kantchelian&Ryan Stevens&Yanis Pavlidis&Sadegh Momeni&Casper Neo&Birkett Huber&Elie Bursztein_FACADE High-Precision Insider Threat Detection Using Contrastive Learning.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -105,15 +110,6 @@ Highly accurate anomaly detection? Really?
 
 **#BHUSA @BlackHatEvents**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bu S
-ay)
-Highly accurate anomaly detection? Really?
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 9
 
 Red Team attacks ranked in the top 0.01% of suspicious events and many red team attackers in the top-10 most suspicious users during the attack period, with 10+ millions events ranked by FACADE during that timespan.
@@ -178,6 +174,16 @@ Resource embedding
 How do we train such model with little to no insider attack examples?
 
 **#BHUSA @BlackHatEvents**
+
+
+> Recovered by OCR — confidence 76/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+
+```text
+| 3 7 ~ on) How do we train such
+— Qa model with little to no
+insider attack examples?
+#BHUSA @BlackHatEvents
+```
 
 ## Slide 16
 

@@ -1,5 +1,5 @@
 ---
-title: "KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities-wp"
+title: "KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities"
 speakers: ["Bonan Ruan", "Jiahao Liu", "Chuqi Zhang", "Zhenkai Liang"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2025"
@@ -11,15 +11,21 @@ sha256: "cea7faee628f7625d3a95c9fd1f3a2f34fa6dfc100652a00a71dab00a3360439"
 text_chars: 114171
 ocr_pages: 0
 has_ocr: false
+redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T21:03:40Z"
+converted_at: "2026-08-12T03:52:02Z"
 ---
-# KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities-wp
+# KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities
 
 **Speakers:** Bonan Ruan, Jiahao Liu, Chuqi Zhang, Zhenkai Liang  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Bonan Ruan & Jiahao Liu & Chuqi Zhang & Zhenkai Liang_KernJC Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities-wp.pdf` (19 pages)
+
 
 ## Slide 1
 

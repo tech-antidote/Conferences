@@ -12,7 +12,7 @@ duration_seconds: 2510
 words: 7571
 text_chars: 41258
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Cash, Drugs, and Guns - Why Your Safes Aren't Safe

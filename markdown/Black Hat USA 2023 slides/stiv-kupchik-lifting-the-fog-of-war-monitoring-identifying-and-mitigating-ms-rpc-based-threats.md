@@ -8,12 +8,17 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Stiv Kupchik_Lifting the Fog of War - Monitoring, Identifying and Mitigating MS-RPC Based Threats.pdf"
 pages: 101
 sha256: "818d8fef756361882e1731af0d76314b033fc58e07d5db27c23dfc849275c4ed"
-text_chars: 26325
-ocr_pages: 6
+text_chars: 25872
+ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:24:33Z"
+converted_at: "2026-08-12T04:21:40Z"
 ---
 # Lifting the Fog of War - Monitoring, Identifying and Mitigating MS-RPC Based Threats
 
@@ -21,18 +26,10 @@ converted_at: "2026-08-11T21:24:33Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Stiv Kupchik_Lifting the Fog of War - Monitoring, Identifying and Mitigating MS-RPC Based Threats.pdf` (101 pages)
 
+
 ## Slide 1
 
 **Lifting the Fog of War Monitoring, Identifying and Mitigating MS-RPC Based Threats**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-o~ :
-pifex hat Cakamai
-Lifting the Fog of War
-Monitoring, Identifying and Mitigating MS-RPC Based Threats
-```
 
 ## Slide 2
 
@@ -70,29 +67,20 @@ Background in DFIR and Windows internals
 
 **… and is involved in many parts of the attack matrix**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ment Tels
 extern
-atic
-satan ns Layer Protoce sitration
 Through Removable Media
-Exfitration
-jacking
-Network Medium
-amain Trust biecavery
 Policy Medication
 use Alternate
-utnentication Material
-(Netwark Denial of Service
 Protocol Tunnel
 Indirect Coron
 Modify System image
 — = ... and Is Involve
 in many parts of
 the attack matrix
-nfuscated
 ```
 
 ## Slide 7
@@ -155,7 +143,8 @@ nfuscated
 
 **RPC with visibility**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 RPC with visibility
@@ -164,7 +153,6 @@ svcctl<RCreateServiceW>
 cctl<RCloseServiceHandl
 svcctl<ROpenServiceW>
 svcctl<RStartServiceW>
-l<RQueryServiceStatu
 svcctl<RQueryServiceStatus>
 svcctl<RCloseServiceHandle>
 svcctl<RCloseServiceHandle>
@@ -173,8 +161,6 @@ svcctl<ROpenServiceW>
 svcctl<RControlService>
 svcctl<RQueryServiceStatus>
 cctl<RCloseServiceHandl
-vcctl<ROpenServiceW>.
-svcectl<RDeleteService>
 svcctl<RCloseServiceHandle>
 svcctl<RCloseServiceHandle>
 ```
@@ -765,7 +751,8 @@ if ( (Microsoft_Windows_RPCEnableBits & 2) != 0 ) McTemplateU0jqqzzzqqq_EtwEvent
 
 ETW FIND ETW
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ETW to the Rescue, Again
@@ -1047,16 +1034,6 @@ Machine <IP> connected over <Pipe> to request operation <Opnum> of the interface
 
 **RPC Visibility VS PSExec**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-’ | HAVE PSEXEC
-Demo Time
-RPC Visibility VS PSExec
-=e
-ny boil PYWINTRAGE neal
-```
-
 ## Slide 80
 
 ## **PSExec**
@@ -1321,14 +1298,6 @@ After understanding what RPC traffic is going on in the network (using ETW), we 
 ## Slide 100
 
 **Thanks for listening Questions?**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Gikamai
-Thanks for listening
-Questions?
-```
 
 ## Slide 101
 

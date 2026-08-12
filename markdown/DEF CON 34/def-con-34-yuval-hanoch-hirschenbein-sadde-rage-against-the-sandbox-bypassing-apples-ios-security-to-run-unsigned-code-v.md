@@ -4,23 +4,28 @@ speakers: ["Yuval Hanoch Hirschenbein Sadde"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Yuval Hanoch Hirschenbein Sadde - Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code via SSH.pptx"
 pages: 35
 sha256: "c8fad55506a154543f82a285c102ded093d9492f105174764497a905c84b3c7b"
-text_chars: 21974
+text_chars: 22264
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:40:33Z"
+converted_at: "2026-08-12T06:45:49Z"
 ---
 # Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code via SSH
 
 **Speakers:** Yuval Hanoch Hirschenbein Sadde  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Yuval Hanoch Hirschenbein Sadde - Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code via SSH.pptx` (35 pages)
+
 
 ## Slide 1
 
@@ -70,33 +75,33 @@ Rage Against the Sandbox Bypassing Apple’s iOS Security to Run Unsigned Code v
 
       - `*child_threadp, ...) {`
 
-```
+\```
   // ...
-```
+\```
 
-```
+\```
 #if CONFIG_MACF
-```
+\```
 
-```
+\```
   err =mac_proc_check_fork(parent_proc); // calls
 Sandbox.kext
-```
+\```
 
-```
+\```
 if (err != 0)
-```
+\```
 
-```
+\```
     goto bad;
 #endif
-```
+\```
 
 ## Slide 5
 
 ## profile examples
 
-```
+\```
 // container.sb
 (version 1)
 (deny default)  // implies (deny process-fork)
@@ -105,36 +110,36 @@ if (err != 0)
   (literal
 "/private/var/preferences/com.apple.security.plist"))
 (allow network-inbound
-```
+\```
 
-```
+\```
 // debugserver.sb
 (version 1)
 (deny default)
 (allow process-fork
   (debug-mode))
-```
+\```
 
-```
+\```
   (local ip "*:*"))
 (allow process-info-pidinfo
   (target self)
   (entitlement "com.apple.security.exception.process-info")
   (require-all
-```
+\```
 
-```
+\```
     (target others)
     (entitlement
 "com.apple.DiagnosticExceptions.extension")))
 (allow iokit-open
-```
+\```
 
-```
+\```
   (iokit-user-client-class "IOAppleJPEGDriverUserClient"))
 (allow mach-lookup
   (global-name "com.apple.springboard"))
-```
+\```
 
 ## Slide 6
 
@@ -154,23 +159,23 @@ if (err != 0)
 
    - on page fault validates hash of EXEC page content
 
-```
+\```
 // osfmk/vm/vm_fault.c
-```
+\```
 
-```
+\```
 kern_return_t vm_fault_internal(vm_map_t map,...) {
 vm_fault_enter(...) {
 vm_fault_enter_prepare(...) {
 vm_fault_validate_cs(...) {
 // ... a few more frames
 // bsd/kern/ubc_subr.c
-```
+\```
 
-```
+\```
 cs_validate_page(...)  // <- hash checks start
 here
-```
+\```
 
 ## Slide 7
 
@@ -214,32 +219,32 @@ pthread_create(&p);
 
    - proc stuff - fork(), waitpid()
 
-```
+\```
 // tvm.c
-```
+\```
 
-```
+\```
 static __thread struct task *current;
-```
+\```
 
-```
+\```
 ssize_t write(int fd, const void *buf, size_t
 count) {
-```
+\```
 
-```
+\```
 if (fd >= MAX_FILES) {
     errno =EBADF;
 return-1;
   }
-```
+\```
 
-```
+\```
   int rfd = current->tsk_files[fd];
 returndlsym(RTLD_NEXT, "write")(rfd, buf,
 count));
 }
-```
+\```
 
 call real write()
 
@@ -273,34 +278,34 @@ call real write()
 
 - `// tvm.c`
 
-```
+\```
 /* parent returns with non-zero pid
-```
+\```
 
 - `child returns with 0 */`
 
-```
+\```
 pid_t fork() {
-```
+\```
 
-```
+\```
   pthread_t p;
-```
+\```
 
-```
+\```
 pthread_create(&p, NULL, thread_entry, NULL);
 return (pid_t)p;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 void thread_entry() {
 // okay now wut
 }
-```
+\```
 
 OLD STACK NEW STACK
 0x000
@@ -348,12 +353,12 @@ fork()
 
    - copy-on-write semantics!
 
-```
+\```
 g_val = 1;
 pid_t child =fork();
 if (child == 0)
   g_val = 5;  // parent sees g_val as 1
-```
+\```
 
 - pthread accepts a callback!
 
@@ -365,7 +370,7 @@ Data Data
 FDs,  FDs,
 Sighandlers Sighandlers
 
-```
+\```
 // tvm.c
 pid_t fork() {
   ptrlist_t pl =new_ptrlist();
@@ -375,7 +380,7 @@ current);
   // ???
   return new_task->tsk_pid;
 }
-```
+\```
 
 ## Slide 11
 
@@ -383,7 +388,7 @@ current);
 
 • duplicated child memory holds pointers to parent’s memory
 
-```
+\```
 // tvm.c
 pid_t fork() {
   ptrlist_t pl =new_ptrlist();
@@ -400,14 +405,14 @@ struct ptrent_t {0x00014000
   uint64_t *new;0x4000
   size_t    size;
 }
-```
+\```
 
-```
+\```
 struct ptrlist_t {
   ptrent_t *list;
   size_t    count;
 }
-```
+\```
 
 fork()
 0x00014000 0x0002C000
@@ -449,16 +454,16 @@ eap
 - bugs
 - death
 
-```
+\```
 // heap.h
 arena_t *arena_create();
 void arena_destroy(arena_t *ar);
-```
+\```
 
-```
+\```
 void *arena_alloc(arena_t *ar, size_t
 size);
-```
+\```
 
 // tvm.c
 void *malloc(size_t s) {
@@ -466,15 +471,15 @@ return arena_alloc(current->tsk_ar,
 size);
 }
 
-```
+\```
 void arena_free(arena_t *ar, void *ptr);
-```
+\```
 
-```
+\```
 int arena_duplicate(
   arena_t *dst_ar, arena_t *src_ar,
   ptrlist_t *pl);
-```
+\```
 
 fork()
 0x10 SLAB 0x10 SLAB
@@ -494,7 +499,7 @@ F
 
 0x000
 
-```
+\```
 struct slab_t {
   size_t   obj_size;
   size_t   slab_size;
@@ -503,7 +508,7 @@ struct slab_t {
   bitmap_t residents;
   char     data[0];
 }
-```
+\```
 
 ## Slide 13
 
@@ -513,7 +518,7 @@ eap
 Heap COW - bugs
 - death
 
-```
+\```
 // heap.h
 arena_t *arena_create();
 void arena_destroy(arena_t *ar);
@@ -523,15 +528,15 @@ void arena_free(arena_t *ar, void *ptr);
 int arena_duplicate(
   arena_t *dst_ar, arena_t *src_ar,
   ptrlist_t *pl);
-```
+\```
 
-```
+\```
 struct ptrent_t {
   uint64_t *old;
   uint64_t *new;
   size_t    size;
 }
-```
+\```
 
 pid_t fork() {
   ptrlist_t pl = new_ptrlist();
@@ -563,32 +568,32 @@ F
 
 ## Data COW
 
-```
+\```
 g_val = 1;
 pid_t child =fork();
 if (child == 0)
   g_val = 5;  // parent sees g_val
 as 1
-```
+\```
 
-```
+\```
 #include <stdio.h>
 int g_val = 5;
 void main() {
 printf("%d\n", g_val);
 }
-```
+\```
 
 Address **`0x000`** Space **`0`** __TEXT **`0x800 0`** __DATA
 
 `fork()` __TEXT __DATA
 
-```
+\```
 4f8 <_main>:
 // ...
-```
+\```
 
-```
+\```
      510: 90000048     adrp    x8, 0x8000 <_g_val> // PC-relative load of
      514: b9400108     ldr     w8, [x8]            // g_val value to w8
      518: 910003e9     mov     x9, sp    // load w8 to stack
@@ -596,43 +601,43 @@ Address **`0x000`** Space **`0`** __TEXT **`0x800 0`** __DATA
      520: 90000000     adrp    x0, 0x0// PC-relative load of "%d\n"
      524: 91152000     add     x0, x0, #0x548// ptr to x0 as argument to
 printf
-```
+\```
 
-```
+\```
      528: 94000005     bl      0x53c <_printf>  // PC-relative call to GOT'd
 printf
-```
+\```
 
-```
+\```
 // ...
-```
+\```
 
 Main optimization:
 
 re-load from disk and memcpy() ONLY writable segs
 
-```
+\```
 0xFFF
 F
-```
+\```
 
 ## Slide 15
 
 ## our_Dynamic Linker
 
-```
+\```
 // linker.h
 linker_t *linker_create();
 void linker_destroy(linker_t *lnk);
-```
+\```
 
-```
+\```
 void *linker_dlopen(
   linker_t *lnk, const char *file, int
 flags);
-```
+\```
 
-```
+\```
 void linker_dlclose(void *handle);
 void *linker_dlsym(
   void *handle, const char *sym);
@@ -640,28 +645,28 @@ int linker_duplicate(
   linker_t *dst_linker, linker_t
 *src_linker,
   ptrlist_t *pl);
-```
+\```
 
 - (1) re-loads all libs from disk
 
 (2) memcpy() and fixup writable segs ONLY
 
-```
+\```
 // tvm.c
-```
+\```
 
-```
+\```
 void *emulated_dlsym(const char *file, int flags)
 {
-```
+\```
 
-```
+\```
 returnlinker_dlsym(current->tsk_lnk, file,
 flags);
 }
-```
+\```
 
-```
+\```
 // but remember...
 ssize_t write(int fd, const void *buf, size_t
 count) {
@@ -672,184 +677,184 @@ count));
 pid_t fork() {
   ptrlist_t pl // how programs us our dl=new_ptrlistym and we use real ();
   new_task dlsym ?=task_create();
-```
+\```
 
-```
+\```
 // our linker controls elocations!dup_fds_and_sighandlers(new_task,current);*we decide*
 arena_duplicate(new_task->tsk_ar, current->tsk_ar,
 &pl);
-```
+\```
 
-```
+\```
 linker_duplicate(new_task->tsk_lnk, current->tsk_lnk,
 &pl);
 // ...
 fixup(&pl);
-```
+\```
 
-```
+\```
 returnnewtask>tskpid;
-```
+\```
 
 ## Slide 16
 
 ## our_Dynamic Linker
 
-```
+\```
 // linker.h
 linker_t *linker_create();
 void linker_destroy(linker_t *lnk);
-```
+\```
 
-```
+\```
 void *linker_dlopen(
   linker_t *lnk, const char *file, int
 flags);
-```
+\```
 
 `void linker_dlclose(void *handle); void *linker_dlsym( void *handle, const char *sym); int linker_duplicate( linker_t *dst_linker, linker_t *src_linker, ptrlist_t       ELF v Mach-O*pl);` Address **`0x000`** Space `PT_LOAD - LC_SEGMENT_64` **`0`** `DT_NEEDED - LC_LOAD_DYLIB` libA.dylib `DT_SONAME - LC_ID_DYLIB DT_SYMTAB - LC_SYMTAB DT_JMPREL - LC_DYSYMTAB` libB.so `DT_REL - LC_DYLD_CHAINED_FIXUPS`
 
 #### `// tvm.c`
 
-```
+\```
 void *emulated_dlsym(const char *file, int flags)
 {
-```
+\```
 
-```
+\```
 returnlinker_dlsym(current->tsk_lnk, file,
 flags);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 // but remember...
 ssize_t write(int fd, const void *buf, size_t
 count) {
-```
+\```
 
-```
+\```
   // ...
   returndlsym(RTLD_NEXT, "write")(rfd, buf,
 count));
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 pid_t fork() {
-```
+\```
 
-```
+\```
   ptrlist_t pl // how programs us our dl=new_ptrlistym and we use real ();
   new_task dlsym ?=task_create();
-```
+\```
 
 - `// our linker controls elocations!dup_fds_and_sighandle` **`r`** `s(new_task, current);*we decide* arena_duplicate(new_task->tsk_ar, current->tsk_ar,`
 
 - `&pl);`
 
-```
+\```
 linker_duplicate(new_task->tsk_lnk, current->tsk_lnk,
 &pl);
 // ...
-```
+\```
 
-```
+\```
 fixup(&pl);
-```
+\```
 
-```
+\```
 F
-```
+\```
 
-```
+\```
 returnnewtask>tskpid;
-```
+\```
 
-```
+\```
 0xFFF
-```
+\```
 
 ## Slide 17
 
 ## the final piece: callstack!
 
-```
+\```
 pid_t fork() {
   ptrlist_t pl =new_ptrlist();
   new_task =task_create();
-```
+\```
 
-```
+\```
 dup_fds_and_sighandlers(new_task, current);
 arena_duplicate(new_task->tsk_ar, current->tsk_ar,
 &pl);
-```
+\```
 
-```
+\```
 linker_duplicate(new_task->tsk_lnk, current->tsk_lnk,
 &pl);
-```
+\```
 
-```
+\```
 // ...
 fixup(&pl);
 return new_task->tsk_pid;
 }
-```
+\```
 
 ## Slide 18
 
 ## the final piece: callstack!
 
-```
+\```
 pid_t fork() {
-```
+\```
 
-```
+\```
   ptrlist_t pl =new_ptrlist();
-```
+\```
 
-```
+\```
   new_task =task_create();
-```
+\```
 
-```
+\```
 dup_fds_and_sighandlers(new_task, current);
-```
+\```
 
-```
+\```
 arena_duplicate(new_task->tsk_ar, current->tsk_ar,
 &pl);
-```
+\```
 
-```
+\```
 linker_duplicate(new_task->tsk_lnk, current->tsk_lnk,
 &pl);
-```
+\```
 
-```
+\```
 pthread_create(&p, NULL, thread_entry, new_task);
 // ???
-```
+\```
 
-```
+\```
 fixup(&pl);
 return new_task->tsk_pid;
 }
-```
+\```
 
-```
+\```
 void thread_entry() {
 // ???
 }
-```
+\```
 
 OLD STACK NEW STACK
 0x000
@@ -877,12 +882,12 @@ add the copied frames to fixups
 
 ## the final piece: callstack!
 
-```
+\```
 a04 <_func>:
      a04: d10083ff  sub     sp, sp, #0x20
      a08: a9017bfd  stp     x29, x30, [sp, #16]  // push fp
 and lr
-```
+\```
 
 OLD STACK NEW STACK
 ]  // push fp // push fp  0x000
@@ -903,9 +908,9 @@ F
 gotta "relink" to libc_start manually
 _start
 
-```
+\```
           // ...
-```
+\```
 
 fork()
 0x00014000 0x0002C000
@@ -955,7 +960,7 @@ rt
 0xFFF
 F
 
-```
+\```
 void thread_entry(void *arg) {
   void *fp =
 __builtin_frame_address(0);
@@ -964,7 +969,7 @@ size);
   // ... more setup ...
 we can't override our own stack!
 }
-```
+\```
 
 ## Slide 22
 
@@ -992,7 +997,7 @@ F
 
 ## setjmp() with blackjack and hookers
 
-```
+\```
 #include <stdio.h>
 jmp_buf errjmp;
 void work_impl() {
@@ -1010,7 +1015,7 @@ work();
 printf(“error\n”);
 return1;
 }
-```
+\```
 
 STACK `struct jmp_buf { uint64_t x0; uint64_t x1; // ... uint64_t x28; uint64_t fp;  // x29 longjmp(errjmp) uint64_t lr;  // x30` work_impl `uint64_t sp;  // not rly x31` work `}; sp setjmp(errjmp)` main _start
 
@@ -1040,7 +1045,7 @@ sp
 fp
 tmp_jmpbuf
 
-```
+\```
 void thread_entry(void *arg) {
   uint64_t tmpfp, tmpsp, currsp, reg;
   currfp = __builtin_frame_address(0);
@@ -1063,13 +1068,13 @@ if (reg >= currsp && reg < currfp)
 // switch to temp stack via jmpbuf
 longjmp(arg->tmp_jmpbuf, 1);
   }
-```
+\```
 
-```
+\```
 // code running on temporary stack
 thread_entry_cont(arg);
 }
-```
+\```
 
 ## Slide 25
 
@@ -1107,58 +1112,58 @@ new_task - sp, fp to new stack0001400 000 142C 00
 0 0
 0000000 0000000
 
-```
+\```
 pid_t fork() {
   arg_t *arg =create_arg_with_new_ptrlist();
   arg->new_task =task_create_inherit_sig_fds(current);
   arg->old_task = current;
 if (setjmp(arg->final_jmpbuf)) {
-```
+\```
 
-```
+\```
     current = arg->new_task;  // setup child’s thread_local current
 pthread_cond_signal(arg->cond);  // signal parent to exit
 return0;
-```
+\```
 
-```
+\```
   }
 pthread_create(,, tvm_entry, arg);
 pthread_cond_wait(arg->cond);  // wait for child to copy from our
 stack
-```
+\```
 
-```
+\```
   return arg->new_task->tsk_pid;
 }
-```
+\```
 
-```
+\```
 void tvm_entry(arg_t *arg) {
 if (!setjmp(arg->tmp_jmpbuf)) {
 // ... setup temp stack and tmp_jmpbuf
 longjmp(arg->jmp_jmpbuf);
   }
-```
+\```
 
-```
+\```
 // running on temporary stack!
-```
+\```
 
-```
+\```
 arena_duplicate(arg->new_task->tsk_ar, arg->old_task->tsk_ar,
 &pl);
 linker_duplicate(arg->new_task->tsk_lnk, arg->old_task->tsk_lnk,
 &pl);
-```
+\```
 
-```
+\```
 stack_duplicate(, &pl);
 add_jmpbuf_to_fixups(arg->final_jmpbuf);
 // every duplicated memory is loaded to &pl, now fixup!
   fixup(&pl);
 lj(filjbf)
-```
+\```
 
 ## Slide 26
 
@@ -1192,7 +1197,7 @@ lj(filjbf)
 
 ## Code Signing
 
-```
+\```
 #include <stdio.h>
 #include <sys/mman.h>
 #include <fcntl.h>
@@ -1205,25 +1210,25 @@ MAP_PRIVATE, fd, 0);
 SIGKILL /
 }
 EPERM
-```
+\```
 
-```
+\```
 void loadsig(int fd) {
   fsignatures_t si = {...};
   int fd =fcntl(fd, F_ADDFILESIGS,
 &si);
 }
-```
+\```
 
-```
+\```
 Can’t map unsigned code
-```
+\```
 
 ## Slide 28
 
 ## Code Signing
 
-```
+\```
 #include <stdio.h>
 #include <sys/mman.h>
 #include <fcntl.h>
@@ -1234,7 +1239,7 @@ NULL, 0, PROT_READ | PROT_EXEC,
 MAP_PRIVATE, fd, 0);
   return0;
 }
-```
+\```
 
 ## Slide 29
 
@@ -1259,7 +1264,7 @@ sp setjmp(jbemu
 main )sp
 _start
 
-```
+\```
 #include <unicorn/unicorn.h>
 #include <setjmp.h>
 int main() {
@@ -1267,38 +1272,38 @@ int main() {
   jmp_buf jb;
 if (setjmp(jb))
 returnwork();
-```
+\```
 
-```
+\```
 // setup emulator
   uc_engine *uc;
 uc_open(UC_ARCH_ARM64, UC_MODE_ARM, &uc);
 uc_mem_map_ptr(
-```
+\```
 
-```
+\```
     uc, 0x4000, 0xFFFFFFFFFFFF8000,
 UC_PROT_ALL, 0x4000);
-```
+\```
 
-```
+\```
   uc_reg_write(uc, UC_ARM64_REG_SP, jb[SP]);
   uc_reg_write(uc, UC_ARM64_REG_FP, jb[FP]);
 uc_reg_write(uc, UC_ARM64_REG_X0, jb[X0]);
 // ...
-```
+\```
 
-```
+\```
 uc_reg_write(uc, UC_ARM64_REG_X28,
 jb[X28]);
-```
+\```
 
-```
+\```
 // start emulation
 alloca(0x8000);
 returnuc_emu_start(uc, jb[LR], 0, 0, 0);
 }
-```
+\```
 
 ## Slide 30
 
@@ -1353,76 +1358,76 @@ R-X
 
 #### `#include <unicorn/unicorn.h>`
 
-```
+\```
 uint64_t emu_call(uint64_t pc, uint64_t arg1, ...) {
 uc_mem_map_ptr(uc, PROT_READ | PROT_WRITE, 0xFF..);
   uint8_t *stack =mmap(PROT_READ | PROT_WRITE,
 STACKSIZE);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, SP, stack + STACKSIZE);
 uc_reg_write(uc, LR, 0xDEADBEEF);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, X0, arg1); // ... and all other
-```
+\```
 
-```
+\```
 regs
-```
+\```
 
-```
+\```
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF, 0x4000);
 while (1) {
-```
+\```
 
-```
+\```
 uc_emu_start(uc, pc);
-```
+\```
 
-```
+\```
     pc =uc_reg_read(uc, PC);
 if (pc == 0xDEADBEEF)
-```
+\```
 
-```
+\```
 returnuc_reg_read(uc, X0);
-```
+\```
 
-```
+\```
 if (linker_has_page(pc & ~0x3FFF)) {
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF,
 0x4000);
-```
+\```
 
-```
+\```
 continue;
     }
-```
+\```
 
-```
+\```
     uint64_t ret = ((func_t)uc_reg_read(uc, PC))(
 uc_reg_read(uc, X0), ..., uc_reg_read(X5));
 uc_reg_write(uc, X0, ret);
-```
+\```
 
-```
+\```
     pc =uc_reg_read(uc, LR);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 32
 
 ## going hybrid
 
-```
+\```
 #include <unicorn/unicorn.h>
-```
+\```
 
 detect return with sentinel return
 address
@@ -1443,71 +1448,71 @@ DSC
 R-X R-
 | - __TEXT
 
-```
+\```
 uint64_t emu_call(uint64_t pc, uint64_t arg1, ...) {
 uc_mem_map_ptr(uc, PROT_READ | PROT_WRITE, 0xFF..);
   uint8_t *stack =mmap(PROT_READ | PROT_WRITE,
 STACKSIZE);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, SP, stack + STACKSIZE);
 uc_reg_write(uc, LR, 0xDEADBEEF);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, X0, arg1); // ... and all other
-```
+\```
 
-```
+\```
 regs
-```
+\```
 
-```
+\```
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF, 0x4000);
 while (1) {
-```
+\```
 
-```
+\```
 uc_emu_start(uc, pc);
-```
+\```
 
-```
+\```
     pc =uc_reg_read(uc, PC);
-```
+\```
 
-```
+\```
 if (pc == 0xDEADBEEF)
-```
+\```
 
-```
+\```
 returnuc_reg_read(uc, X0);
-```
+\```
 
-```
+\```
 if (linker_has_page(pc & ~0x3FFF)) {
-```
+\```
 
-```
+\```
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF,
 0x4000);
-```
+\```
 
-```
+\```
 continue;
     }
-```
+\```
 
-```
+\```
     uint64_t ret = ((func_t)uc_reg_read(uc, PC))(
 uc_reg_read(uc, X0), ..., uc_reg_read(X5));
 uc_reg_write(uc, X0, ret);
-```
+\```
 
-```
+\```
     pc =uc_reg_read(uc, LR);
 }
-```
+\```
 
 ## Slide 33
 
@@ -1538,68 +1543,68 @@ F
 
 #### `#include <unicorn/unicorn.h>`
 
-```
+\```
 uint64_t emu_call(uint64_t pc, uint64_t arg1, ...) {
 uc_mem_map_ptr(uc, PROT_READ | PROT_WRITE, 0xFF..);
   uint8_t *stack =mmap(PROT_READ | PROT_WRITE,
 STACKSIZE);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, SP, stack + STACKSIZE);
 uc_reg_write(uc, LR, 0xDEADBEEF);
-```
+\```
 
-```
+\```
 uc_reg_write(uc, X0, arg1); // ... and all other
-```
+\```
 
-```
+\```
 regs
-```
+\```
 
-```
+\```
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF, 0x4000);
 while (1) {
-```
+\```
 
-```
+\```
 uc_emu_start(uc, pc);
-```
+\```
 
-```
+\```
     pc =uc_reg_read(uc, PC);
-```
+\```
 
-```
+\```
 if (pc == 0xDEADBEEF)
-```
+\```
 
-```
+\```
 returnuc_reg_read(uc, X0);
-```
+\```
 
-```
+\```
 if (linker_has_page(pc & ~0x3FFF)) {
 uc_mem_map_ptr(uc, PROT_ALL, pc & ~0x3FFF,
 0x4000);
-```
+\```
 
-```
+\```
 continue;
     }
-```
+\```
 
-```
+\```
     uint64_t ret = ((func_t)uc_reg_read(uc, PC))(
 uc_reg_read(uc, X0), ..., uc_reg_read(X5));
 uc_reg_write(uc, X0, ret);
     pc =uc_reg_read(uc, LR);
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 ## Slide 34
 

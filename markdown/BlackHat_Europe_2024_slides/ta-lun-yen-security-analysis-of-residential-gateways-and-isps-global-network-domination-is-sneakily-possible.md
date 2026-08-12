@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Ta-Lun Yen_Security analysis of Residential Gateways and ISPs global network domination is (sneakily) possible.pdf"
 pages: 62
 sha256: "f6085e6351ae165bda518387877c4f351d7650f758cbae19a4ce606a412966e9"
-text_chars: 23386
+text_chars: 23218
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.5
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:47:06Z"
+converted_at: "2026-08-12T05:00:52Z"
 ---
 # Security analysis of Residential Gateways and ISPs global network domination is (sneakily) possible
 
 **Speakers:** Ta-Lun Yen  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ta-Lun Yen_Security analysis of Residential Gateways and ISPs global network domination is (sneakily) possible.pdf` (62 pages)
+
 
 ## Slide 1
 
@@ -124,22 +129,19 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekchat Inspiration of research / Brief Conclusion
 EUROPE 2024
 Road to "the one ring" txOne
 * We successfully demonstrated an attack chain,
 however, we believe the same mistake can happen to all ISPs. Modems (and telecoms) are also not‘as secure
 * Shortfall of the CVE system: EFL (CLCHESRA) GELTHIEERS TLE
 Systematic Risks cannot be assigned as CVE 6 0-days to 4 million modems within a week
-CID COFT4 HSE ANAM C400H BOETF AIS
-¥
 Weak password + Guessable password +
 Post-auth arbitary file Post-auth CMDi -> root Ta-Lun Yen,
 write 0-day -> RCE RCE TXOne Research
-\ oeayat | txone
 Internet
 Information Classification: General
 ```
@@ -492,21 +494,21 @@ Identify Board
 
 Study
 
-```
+\```
 Base: 4.8_01
 CFE version 1.0.38-116.233 for BCM96848 (32bit,SP,BE)
 Build Date: Wed Mar 20 23:08:57 CST 2019 (ci@builder)
 Copyright (C) 2000-2013 Broadcom Corporation.
-```
+\```
 
-```
+\```
 Boot Strap Register:0x10000000
 Chip ID: BCM68488_A1_, MIPS: 600MHz, DDR: 533MHz, Bus: 300MHz
 RDP: 428MHz
 Main Thread: TP0
 Total Memory: 268435456 bytes (256MB)
 Boot Address: 0xb8000000
-```
+\```
 
 Has Debug ? No Identify Storage Type
 
@@ -668,12 +670,12 @@ Information Classification: General
 
 - `$ ff '*.rules*' ./etc/udev/rules.d/85-SerialPort.rules ./etc/udev/rules.d/50-config.rules`
 
-```
+\```
 $ cat ./etc/udev/rules.d/85-SerialPort.rules
 ACTION=="add", KERNEL=="ttyUSB[0-9]*", SUBSYSTEM=="tty", \
 ATTRS{idVendor}==“0403", ATTRS{idProduct}==“6001", \
 RUN+="/bin/sh /bin/start_debug"
-```
+\```
 
 TXOne Networks  |  Keep the Operation Running
 
@@ -685,12 +687,12 @@ Information Classification: General
 
 **Case 1,** **`/bin/start_debug`**
 
-```
+\```
 << Connected
 << PROTOCOL V1.0
 >> AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 << PROTOCOL CLOSED
-```
+\```
 
 Information Classification: General
 
@@ -726,14 +728,14 @@ Information Classification: General
 
 **Case 1,** **`/bin/start_debug`**
 
-```
+\```
 << Connected
 << PROTOCOL V1.0
 >> PASSWORD
 << PROTOCOL STARTED
 >> EA8002/payload;id;uname
 << root; Linux 2.6..
-```
+\```
 
 Information Classification: General
 
@@ -863,10 +865,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
 EUROPE 2024
 Finding Management Infrastructure on Internet,
 Chain ppp0.1-WEB (2 referenc
@@ -892,7 +894,6 @@ ip®.2-PING icmp -- anywhi
 -ip®.2-PING_OF_DEATH icmp anywhere
 -SYN_FLOODING tcp
 Information Classification: General
-‘tination
 anywhere
 anywhere
 where
@@ -907,7 +908,6 @@ destination
 anywhere
 destination
 anywhere
-[115/1969]
 icmp echo-request
 tcp flags:SYN,RST,A
 Example
@@ -918,10 +918,6 @@ Username
 Password
 Language: | English
 Username: |
-Password:
-pyrigh'
-taliO
-a)
 Reset
 ```
 
@@ -1002,14 +998,14 @@ GPON
 
 ISP Premise
 
-```
+\```
 << Connected
 << PROTOCOL V1.0
 >> PASSWORD
 << PROTOCOL STARTED
 >> EA8002/payload;id;uname
 << root; Linux 2.6..
-```
+\```
 
 RG
 
@@ -1027,12 +1023,12 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 biSekchat Shared bug from SDK (ICMP, CMDi)
 EUROPE 2024
--//ocmdrivers
 48.4k files (401 ms) ] Save
 Vv @® ...c-rt-5.04axhnd.675x/bcmdrivers/Makefile @ Makefile - # master
 1 # File: bcemdrivers/Makefile
@@ -1049,19 +1045,19 @@ Information Classification: General
 
 ## **SoC Vendor SDK: Un-stealthy Stealth Mode**
 
-```
+\```
 $ strings libcms_core.so |grep -i icmp-type
 -p icmp -m icmp --icmp-type 8
-```
+\```
 
-```
+\```
 iptables -A INPUT -i %s -p icmp --icmp-type 8 -j DROP 2>/dev/null
 iptables -A OUTPUT -o %s -p icmp --icmp-type 3/3 -j DROP 2>/dev/null
 iptables -A OUTPUT -o %s -p icmp --icmp-type 11 -j DROP 2>/dev/null
 iptables -D INPUT -i %s -p icmp --icmp-type 8 -j DROP 2>/dev/null
 iptables -D OUTPUT -o %s -p icmp --icmp-type 3/3 -j DROP 2>/dev/null
 iptables -D OUTPUT -o %s -p icmp --icmp-type 11 -j DROP 2>/dev/null
-```
+\```
 
 Information Classification: General
 
@@ -1083,7 +1079,7 @@ Information Classification: General
 
 - Uncovers device if blocking 8 and not 13
 
-```
+\```
 $ strings libcms_core.so |grep -i icmp-type
 -p icmp -m icmp --icmp-type 8
 iptables -A INPUT -i %s -p icmp --icmp-type 8 -j DROP 2>/dev/null
@@ -1092,7 +1088,7 @@ iptables -A OUTPUT -o %s -p icmp --icmp-type 11 -j DROP 2>/dev/null
 iptables -D INPUT -i %s -p icmp --icmp-type 8 -j DROP 2>/dev/null
 iptables -D OUTPUT -o %s -p icmp --icmp-type 3/3 -j DROP 2>/dev/null
 iptables -D OUTPUT -o %s -p icmp --icmp-type 11 -j DROP 2>/dev/null
-```
+\```
 
 Information Classification: General
 
@@ -1353,10 +1349,10 @@ Information Classification: General
 
 ## **Questions?**
 
-```
+\```
 logonfail
 talun_yen@txone.com
-```
+\```
 
 Special thanks Canaan Kao, TXOne Networks Federico Maggi, Black Hat SCP Whitepaper, disclosure and write-up coming soon – txone.com/blog
 

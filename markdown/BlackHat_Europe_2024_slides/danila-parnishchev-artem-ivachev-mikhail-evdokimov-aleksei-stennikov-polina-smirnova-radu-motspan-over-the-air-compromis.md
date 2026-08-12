@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Danila Parnishchev & Artem Ivachev & Mikhail Evdokimov & Aleksei Stennikov & Polina Smirnova & Radu Motspan_Over the Air Compromise of Modern Volkswagen Group Vehicles.pdf"
 pages: 77
 sha256: "a77ade94a3de45e79505afdad7d62ba139ca9e7036e930adac002b8881fb5db7"
-text_chars: 28437
+text_chars: 28257
 ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 91.6
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:53:12Z"
+converted_at: "2026-08-12T04:56:12Z"
 ---
 # Over the Air Compromise of Modern Volkswagen Group Vehicles
 
 **Speakers:** Danila Parnishchev, Artem Ivachev, Mikhail Evdokimov, Aleksei Stennikov, Polina Smirnova, Radu Motspan  
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Danila Parnishchev & Artem Ivachev & Mikhail Evdokimov & Aleksei Stennikov & Polina Smirnova & Radu Motspan_Over the Air Compromise of Modern Volkswagen Group Vehicles.pdf` (77 pages)
+
 
 ## Slide 1
 
@@ -32,15 +37,12 @@ Artem Ivachev Danila Parnishchev
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-~BaRO o .
 \ DECEMBER 11-12, 2024 Cf
-IEFINGS x =
 *
-:
-x: |
 Compromise of Modem Volkswagen Group Vehicles
 Speaker(s):
 Artem lvachev
@@ -279,18 +281,17 @@ Information Classification: General
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pis hat
-EUROPE 2024
 Infotainment system info
 Hardware: H22
 Software: 0304
 Navigation database:
 22.12
 Media Codec:
-f9e141 py fy hii ativan BZA RERRERAK
 12
 Information Classification: General
 ```
@@ -547,48 +548,48 @@ Information Classification: General
 
 ### UART – locked with RSA-based challenge-response
 
-```
+\```
 pwc: 16:02:11,204 inituart0 (cpu)...
 pwc: 16:02:11,204 inituart1 (carcom)...
 <...SNIP...>
-```
+\```
 
-```
+\```
 [    0.021224] NOTICE:  BL2:
 v1.5(release):mqb_sop2-15.20.110
-```
+\```
 
-```
+\```
 [    0.025218] NOTICE:  BL2: Secure boot
-```
+\```
 
-```
+\```
 [    0.092902] NOTICE:  R7: loaded
 [    0.098896] NOTICE:  BL31: loaded
-```
+\```
 
-```
+\```
 <...SNIP...>
-```
+\```
 
-```
+\```
 Welcome to Linux!
-```
+\```
 
-```
+\```
 skoda-infotainment-5572 login: root
 1-time code:
-```
+\```
 
-```
+\```
 C0670D36FB788E5B673007DEA7A4DFB13CF9E28CBC2129C
 AE94DA92DB871C28A15529C6CDBF9E1384096E7E6328088
 DD1F95AB7FBDB0EEFD37F1CB061DDB01BD
-```
+\```
 
-```
+\```
 root
-```
+\```
 
 `invalid input lenght (4)` UART capture `Login incorrect`
 
@@ -698,7 +699,7 @@ Information Classification: General
 
    - Property PHOTO can be used to set a picture for contact
 
-```
+\```
 BEGIN:VCARD
 VERSION:2.1
 FN:ChristopherNolan
@@ -706,7 +707,7 @@ N:Nolan;Christopher;;;
 TEL;CELL:1234567890
 PHOTO;ENCODING=B;TYPE=JPEG:<image content in base64>
 END:VCARD
-```
+\```
 
 Information Classification: General
 
@@ -938,12 +939,10 @@ Information Classification: General
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Custom IPC mechanism in MIB3 RCAR M3 SoC
 Carcom chip services
 shared memory
@@ -964,12 +963,10 @@ Information Classification: General
 
 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Lack of access control in MIB3 custom IPC
 Carcom chip services Audio DSP chip services
 shared memory
@@ -1078,25 +1075,21 @@ Information Classification: General
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Achieving code exec inside Carcom chip
 R-CAR M3 SoC
 | Linux OS CPU set Shared RAM
 Linux OS CPU
 1 | uses memory for OS
 Carcom code and (rwx access)
-data <— >
 | Carcom CPU
 communication with Linux OS
 rw access
 Linux OS CPU + communication with Carcom OS ereleal IG ( )
 memory
-' : (rw access)
 Information Classification: General 48
 ```
 
@@ -1110,12 +1103,10 @@ Information Classification: General
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-EUROPE 2024
 Achieving code exec inside Carcom chip
 R-CAR M3 SoC
 Linux OS CPU set
@@ -1145,15 +1136,15 @@ Patch this call to read from CAN
 
 #### candump output
 
-```
+\```
 char can_msg[8] = "\x11\x22\x33\x44\xaa\xaa\xaa\xaa";
 while (1) {
-```
+\```
 
-```
+\```
 // can_writeis the function from Carcomfirmware
 can_write(0x666, can_msg, 8);
-```
+\```
 
 Information Classification: General
 

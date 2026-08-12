@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Ruben Santamarta_Seeing Through the Invisible Radiation Spikes Detected in Chernobyl During the Russian Invasion Show Possible Evidence of Fabrication.pdf"
 pages: 80
 sha256: "d885e06118a554246f2047092ef3e3ac90bff98df81eaf41ae2cb5f8317de985"
-text_chars: 47910
-ocr_pages: 15
+text_chars: 47094
+ocr_pages: 9
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:56Z"
+converted_at: "2026-08-12T04:20:44Z"
 ---
 # Seeing Through the Invisible Radiation Spikes Detected in Chernobyl During the Russian Invasion Show Possible Evidence of Fabrication
 
 **Speakers:** Ruben Santamarta  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Ruben Santamarta_Seeing Through the Invisible Radiation Spikes Detected in Chernobyl During the Russian Invasion Show Possible Evidence of Fabrication.pdf` (80 pages)
+
 
 ## Slide 1
 
@@ -41,15 +47,6 @@ Seeing Through the Invisible: Radiation Spikes Detected in Chernobyl During the 
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biackhat
-USA &
-1. CONTEXT
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 4
 
 ### Black hat USA 2017
@@ -66,11 +63,10 @@ USA &
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bis hat
-USA 2@0es3
 February 2022
 i} REUTERS
 Ukraine reports higher Chernobyl
@@ -93,11 +89,10 @@ spiked at nuclear plant
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bis hat
-USA 2@0es3
 A year ago
 Hi Ruben- Would like to talk about radiation
 monitoring network anomalies in Ukraine. Could be an
@@ -111,11 +106,10 @@ previously.
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bis hat
-USA 2@0es3
 France’s IRSN —- Technical Malfunction —-
 Asked by 20 Minutes , the French Institute for Radiation Protection and Nuclear Safety
 (IRSN) is not able to explain this difference in readings: “We tried to understand what
@@ -142,11 +136,10 @@ https://arxiv.org/abs/2204.03157
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bis hat
-USA 2@0es3
 Academic paper
 Chornobyl radiation spikes are not due to military vehicles disturbing soil
 Michael D. Wood, Nicholas A. Beresford, Catherine L. Barnett, Peter H. Burgess, Shelly Mobbs
@@ -188,15 +181,6 @@ https://arxiv.org/abs/2204.03157
 ## 2. PHYSICAL
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-2. PHYSICAL
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 12
 
@@ -304,33 +288,18 @@ https://inis.iaea.org/collection/NCLCollectionStore/_Public/20/021/20021982.pdf
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-biackhat
-USA &
-2. CYBER
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 21
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bis hat
-VY
 CHERNOBYL EXCLUSION ZONE
-(&) ¥
-a >)
 ¢ SkyLINK system for data transmission
 ° ERMS measuring stations :
 ° /1 Dose rate probes - GammaTRACER Wide Radio
-‘ °
-. A
-‘ '
 e System for data transmission between measurement
 ocations and data centra
 ```
@@ -339,15 +308,13 @@ ocations and data centra
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Q
 blackha
-aa
-[
 GammaTRACER + SkyLINK module
-BOMr-osP
 Legacy area monitor
 ACKPC Radiation Monitoring Station
 ```
@@ -500,13 +467,11 @@ GT Protocol over RS232/InfraRed
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA &
 3. fimeline of Relevant Events
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 32
@@ -563,15 +528,6 @@ According to the IAEA the radiation monitoring network in the CEZ has been resto
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-4. Technical Analysis
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 37
 
 ###### Crucial Detail
@@ -620,16 +576,14 @@ https://www.irsn.fr/EN/newsroom/News/Docu ments/IRSN_Information-Report_Fires-in
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-USA 2@0es3
 Unphysical timings
 Russian troops enter the CEZ via Belarus
 Intense traffic of military vehicles
-Z Russian coy heading to Wysbherod [yideo) ———
 Chernobyl NPP taken under control by Russian units
 Radiation spikes start being reported
 ```
@@ -638,32 +592,22 @@ Radiation spikes start being reported
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-‘ia. ee an ——s “iA
-February 24 ay. Prypyyat' aM, ol i Ss 4 \
-Mpun'atb ~
-er.
 A Russian convoy of +100
 military vehicles passed
 through Checkpoint Leliv
 around 16:00, south bound,
 using the main road
 between ChNPP and Chernobyl
-a
-Sh
 ora
-Fi, epee [Topa
-7
-.Red are 9)
-_ Pyaun nic Son
 However, the radiation monitoring
 station at Kopachi, which is located
 along the way of this convoy,
 didn’t report a spike
 until the morning of the 25%
-ns’ ay
 ```
 
 ## Slide 42
@@ -1149,15 +1093,6 @@ I reached out to Juan Andrés Guerrero-Saade, a security researcher who managed 
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-7. Conclusions
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 76
 
 1. The abnormally high ambient equivalent dose rate (H*(10)) levels, detected during the 24<sup>th</sup> and 25<sup>th</sup> of February 2022 by the Automatic Radiation Monitoring System (ASKRS) of the Chernobyl Exclusion Zone, were plausibly fabricated.
@@ -1205,14 +1140,3 @@ Then one could ask why the IAEA did not come forward to clarify the situation ab
 Ruben Santamarta – Independent Security Researcher www.reversemode.com
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pisek hat
-USA &
-THANK YOU!
-Ruben Santamarta — Independent Security Researcher
-www.reversemode.com
-#BHUSA @BlackHatEvents
-```

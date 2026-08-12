@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Alan Michaels&Jared Byers_Use and Abuse of Personal Information -- Politics Edition.pdf"
 pages: 42
 sha256: "f7592ffad9d8a18064950fc0f194f1b361349a520af791eeb9cad179ebcf8a6e"
-text_chars: 17599
+text_chars: 16606
 ocr_pages: 5
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:48:51Z"
+converted_at: "2026-08-12T05:03:16Z"
 ---
 # Use and Abuse of Personal Information -- Politics Edition
 
 **Speakers:** Alan Michaels, Jared Byers  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Alan Michaels&Jared Byers_Use and Abuse of Personal Information -- Politics Edition.pdf` (42 pages)
+
 
 ## Slide 1
 
@@ -30,7 +35,8 @@ converted_at: "2026-08-11T22:48:51Z"
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ‘black hat
@@ -38,7 +44,6 @@ FING
 AUGUST be 2025
 MANDALAY BAY / LAS VEGAS
 Use & Abuse of Personal Information
-Politics -Editron
 ```
 
 ## Slide 2
@@ -167,27 +172,19 @@ open source tools
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
-\
 U&A Signup Engine
 Ww Dell Poweredge
-JR Proxmox Sania
-va
 e
-we)
 c=)
 Client
 webhook.site
 Signup engine brings
 together numerous
 open source tools
-¢@), docker [N] ey
-Hgy
-Daves docker
 mongo-data
 volume
 certbot-files
@@ -200,10 +197,8 @@ volume
 Static Assets
 Signup-Engine
 Network
-ucertbot =
 Temporary
 Certificates
-‘R=
 Certificate Set
 Attempt To Renew
 Certificates Every
@@ -219,13 +214,7 @@ Frontend Code
 - HTML
 - \ Every 60 seconds
 /phoneNumbers )
-i
-i ‘
-lapi (_ Wwebhook
-(phoneNumberRouter ») C userRouter +) (fakeldentitiesRouter ) (webhookRouter )
-x
 Phone Number Controll
-x
 FAN
 t
 User Controller
@@ -234,15 +223,11 @@ Webhook Controller
 Controller
 Get New 2Factors
 Mongoose {@}
-|
-A
 v
 phoneNumber
 Model
 4
-v v
 fakeldentity| twoFactor
-) mongoDB ;
 docker
 fakeldentities
 twoFactores
@@ -267,28 +252,22 @@ WV Docker-Compose Health Monitor
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisa hat
-BRIEFINGS
 Use & Abuse Sign-Up
 Field
 [D Number
 Value Copy Used
-(ea) @
 URL
 Phone Number
 First Name Bella
 Last Name Tessier
-hee 5 fe)
 Birth Date Thu Jun 05 1 (oe )
 Email Username
-bella_tessier303
 Street Address
-3274 W Resti
 in Rd
-Town/City
 Wittmann
 State/Province
 Zip Code
@@ -299,11 +278,8 @@ Security Question 2
 Blacksburg
 Security Question 3
 Floral White
-B/C} Cle] O|5/O|e
 Height
 Use & Abuse
-56"
-SEES EREESER
 & Refresh Two Factor Messages
 Subject
 St. Patrick's Day Parade on Water Street 3/16 with Flemming Larsen
@@ -313,16 +289,11 @@ Saturday signup events
 ~ 20 pizzas
 Sender
 christina@larsen4nevada.com
-Su coosstul Sign ps
-L.€. a7 ie)
-AM. | 1o8_
 C-H. We
-MB. 4
 Two-Factors
 Date
 3/11/2024, 8:14:36 PM
 St. Patrick's Day Parade on Water Street 3/16 with Flemming Larsen
-christina@larsen4nevada.com
 3/11/2024, 8:14:36 PM
 St. Patrick's Day Parade on Water Street 3/16 with Flemming Larsen
 christina@larsen4nevada.com
@@ -489,80 +460,26 @@ industries
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 41/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-S1U SEAS)
-SAN BNESTOS)
-Ferse} > ANLIMNOd
-SUIUIIA}
-SUi-tem 7 SSUINCS
-SED) 8 |!0
-SUINONA |
-UO!DNPOdd
-MUIUU-ISCUPI/\| oISe/\\
-sel eYW sulpying
-JIEQ
-30}SOAN]
-S10}92412U0D
-suaplIng SWOH
-o79eqo],
-wodsueds] 8S
-DAILOWOINY
-sjedIWaUD
-S10}9C412UOD
-4A) Sd1U01399)9
-S11JO1dg UON
-SJUCAISS |IAID
-SUI MeT/jese]
-SODIAIVS SSSUISNG
-Ad1|Od UsIa1IO4
-SUOIU;:)
-DJISNI\| /SSIAOI|AI
-s1usIy UBWO/\
-EIPIOW
-uoljeonpy
-JUSWUOIIAUG
-SUOIU(])
-Ssanss| S,UBWO/M
-TeeEIOD UND
-SEINE ogy
-BelelpyaesDOWaGg
 Large donor
 industries
-WM
-o
 2
-oo
-ps
--
-fv
-e
-i)
-iD)
-=
-—
 = =
-74 7s
 $100M |
 $10M |
 $100K |
 $10M |
 $100M |
-BRIEFINGS
 DEMOCRATIC PARTY
 PLATFORM
 THE 2024 REPUBLICAN
 PLATFORM
 z
 <
-oO
-<
-FE
-<
 Ww
-«
-0
 <
 2
 a
@@ -570,10 +487,8 @@ Ww
 =
 <
 Ww
-4
 <
 =
-bisa hat
 ```
 
 ## Slide 20
@@ -807,11 +722,11 @@ All Emojis Used: ‼🌊🌊👏👏📞📞📢📢🗳🗳🦞🦞
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
-BRIEFINGS
 blactisat Tra cking Pixels are the Norm)
 Joe Biden
 Robert F. Kennedy Jr

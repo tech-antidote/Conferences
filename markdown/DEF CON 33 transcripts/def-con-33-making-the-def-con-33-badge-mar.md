@@ -12,7 +12,7 @@ duration_seconds: 730
 words: 1925
 text_chars: 10221
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Making the DEF CON 33 Badge

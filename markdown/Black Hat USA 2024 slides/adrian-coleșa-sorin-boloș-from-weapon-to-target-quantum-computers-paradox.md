@@ -8,18 +8,24 @@ year: 2024
 source_pdf: "Black Hat USA 2024 slides/Adrian Coleșa & Sorin Boloș_From Weapon to Target Quantum Computers Paradox.pdf"
 pages: 97
 sha256: "465aeb102844cf1d0e898a67d60e848857759d25e7fbaff2b13b8d0f2fa319b4"
-text_chars: 180240
+text_chars: 180159
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 91.1
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:28:38Z"
+converted_at: "2026-08-12T04:27:33Z"
 ---
 # From Weapon to Target Quantum Computers Paradox
 
 **Speakers:** Adrian Coleșa, Sorin Boloș  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Adrian Coleșa & Sorin Boloș_From Weapon to Target Quantum Computers Paradox.pdf` (97 pages)
+
 
 ## Slide 1
 
@@ -840,64 +846,64 @@ Figure 5.1: Auth Token - Basic Flow
 
 tokens and use them to access the victim’s cloud account. For our PoC, we attempt getting from the victim’s account the list of previously scheduled quantum programs (i.e. quantum jobs), to determine if we can access the victim’s private resources. Specifically targeting the _IBM Qiskit_ platform, the discovery process is straightforward. We utilize the _qiskit_ibm_provider_ package, which provides APIs to query job history, and simply make the necessary API calls.
 
-```
+\```
 provider=qiskit_ibm_provider.IBMProvider(token=stolen_token)
 jobs=provider.jobs()
-```
+\```
 
-```
+\```
 forjobinjobs:
-```
+\```
 
-```
+\```
 job_data=provider.retrieve_job(job.job_id())
-```
+\```
 
-```
+\```
 forcircuitinjob_data.circuits():
-```
+\```
 
-```
+\```
 circuit.draw(output="text")
-```
+\```
 
 Additional effort is required for IonQ, as there is no documented API to query a list of previously ran jobs. However, by examining the IonQ website, we discover that we can access the job history page. On the browser console, we observe a GET request to the following URL: `https://api.ionq.co/v0.3/jobs` . This allows us to manually craft a request to access the job history. We discovered private APIs ( _make_path_ and __get_with_retry_ ) in _ionq_client.py_ file from the _qiskit-ionq_ package. Using these two APIs we manage to build the request path and authenticate with a valid token.
 
-```
+\```
 provider=qiskit_ionq.IonQProvider(token=stolen_token)
 backend=provider.get_backend(’ionq_simulator’)
 client=backend.client
-```
+\```
 
-```
+\```
 req_path=client.make_path("jobs")
 jobs=client._get_with_retry(req_path,
-```
+\```
 
-```
+\```
 headers=client.api_headers).json()
-```
+\```
 
 To obtain the details of the circuits that have been run as part of the job, we repeat the same process that we used to discover the aforementioned GET request, and inspect the browser console again. In doing so, we notice another GET request to `https://api.ionq.co/v0.3/jobs/<job`<sup>`_`</sup> `id>/program` .
 
-```
+\```
 forjobinjobs["jobs"]:
 job_id=job["id"]
-```
+\```
 
 ## Slide 49
 
 <u>Quantum Computing Security</u> 48
 
-```
+\```
 req_path=client.make_path("jobs",job_id,"program")
 program=client._get_with_retry(req_path,
-```
+\```
 
-```
+\```
 headers=client.api_headers)
 print(json.dumps(program.json(),indent=4))
-```
+\```
 
 If the providers do not have any safeguards in place to protect against token leakage, once the attacker obtains the token, it can be used freely and could potentially cause additional costs for the victim.
 
@@ -1237,7 +1243,8 @@ The authentication phase begins in step 1 with a _GET /api/version_ request. It
 
 Figure 6.1: Workflow of authenticating on IBM Quantum platform using Qiskit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quantum Computing Security 74
@@ -1253,9 +1260,7 @@ q
 Qiskit Framework
 giskit_ibm_provider@ qiskit@ qiskit_ibm_provider@
 ee) Account IBMProvider AccountManager
-JSON@~/.giskit/qiskit-
 ibm.json
-= on
 Local Machine ©
 Figure 6.1: Workflow of authenticating on IBM Quantum platform using Qiskit
 ```
@@ -1313,12 +1318,12 @@ Listing 6.4: <u>Quantum computers on IBM Quantum Platform</u>
 
 The transpilation process is done locally if the circuit is executed by IBM hardware. Therefore, for this process the hardware details of the chosen backend are required. In order to have these details, the framework makes few requests to build the _Backend_ object, according to the specifications given by the cloud services. This process is done automatically by the framework, so that there is no difference for the user regardless of the chosen backend. For example, the following requests are sent when using the `ibmq`<sup>`_`</sup> `kyoto` quantum computer.
 
-```
+\```
 GET/runtime/backends/ibmq_kyoto/configuration(step5)
 GET/runtime/backends/ibmq_kyoto/properties(step7)
 GET/runtime/backends/ibmq_kyoto/defaults(step9)
 GET/runtime/backends/ibmq_kyoto/status(step11)
-```
+\```
 
 Once all the necessary information is gathered, the user’s circuit can be transpiled, after which it can be sent to the backend. The submission of the circuit is made through a _POST /runtime/jobs_ request (step 13), which will contain metadata used by the could services along with the circuit which is serialized using the QPY format. This could be seen in Listing 6.5.
 
@@ -1376,20 +1381,17 @@ Listing 6.9: Circuit initialization
 
 Figure 6.3: Workflow of using IonQ quantum computers with Qiskit
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Quantum Computing Security 80
 https://api.iong.co/v0.3
-\ lonQ Cloud
-)
 POST /jobs RESPONSE GET /jobs/<job> RESPONSE Vjobs/<job>/results RESPONSE
 (1) (2) (3) (4) (5) (6)
 | Qiskit Framework
 qiskit_iong
 @Provider
-qiskit@ LL qiskit_ionq@ cope
-t lonQlob > qiskit@ Result
 QuantumCircuit
 qiskit_ionq@
 lonQBackend
@@ -1757,6 +1759,6 @@ Mădălina Bolboceanu: _mbolboceanu@bitdefender.com_ Sorin Bolos, : _sorin.bolos
 
 #### **Public resources**
 
-```
+\```
 https://github.com/Transilvania-Quantum/quantum-computing-security-investigations
-```
+\```

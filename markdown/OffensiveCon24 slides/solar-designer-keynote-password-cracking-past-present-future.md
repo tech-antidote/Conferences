@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "OffensiveCon24 slides/Solar Designer-Keynote-Password Cracking Past, Present, Future.pdf"
 pages: 79
 sha256: "4eb76b7c56f0dec4f136ad153e7417204cff2529449d302fdaa7b037112dedfe"
-text_chars: 58212
+text_chars: 53242
 ocr_pages: 79
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 93.8
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:56:00Z"
+converted_at: "2026-08-12T06:00:43Z"
 ---
 # Password Cracking Past, Present, Future
 
@@ -22,12 +26,13 @@ converted_at: "2026-08-12T00:56:00Z"
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Solar Designer-Keynote-Password Cracking Past, Present, Future.pdf` (79 pages)
 
+
 ## Slide 1
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 A talk by
 Solar Designer <solar@openwall.com>
 @solardiz
@@ -41,20 +46,20 @@ Berlin, Germany
 
 ## Slide 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 INTRODUCTION
 @solardiz @Openwall OffensiveCon May 10-11, 2024 2/79
 ```
 
 ## Slide 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Why passwords?
 * From a defensive perspective, "password" should usually mean "passphrase"
 + We proceed with "password" as a general term here
@@ -69,10 +74,10 @@ Similar concerns and techniques apply to other hashed Low entropy data
 
 ## Slide 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Why crack passwords?
 * Authentication - prevent or gain access to systems
 + Security audits, penetration tests
@@ -89,10 +94,10 @@ Why crack passwords?
 
 ## Slide 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Scenarios
 * Focus of this talk
 + Offline against a local copy of hashes, traffic dump, encrypted data
@@ -111,12 +116,12 @@ Scenarios
 
 ## Slide 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 *
 *
-Password cracking: past, present, future
 Targets
 Focus of this talk is tools usable for authentication passwords
 There are also tools specialized for certain other targets such as encrypted
@@ -134,10 +139,10 @@ Dhiru Kholia's Google Summer of Code project under Openwall (2011)
 
 ## Slide 7
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Optimization
 * Speed (parallel throughput vs. hardware, maintenance, energy cost)
 + of candidate password generation (vs. focus)
@@ -157,26 +162,25 @@ Uniqueness (no or few duplicate candidate passwords for same target)
 
 ## Slide 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 PASSWORD AUTHENTICATION TIMELINE
 @solardiz @Openwall OffensiveCon May 10-11, 2024 8 / 79
 ```
 
 ## Slide 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Plaintext password storage (1960s to early 1970s CTSS, TENEX, Unix)
 password
 V
 password store
 password password store
-+ F
 Vv
 compare
 is it timing-safe?
@@ -185,10 +189,10 @@ is it timing-safe?
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Plaintext password storage (1960s to early 1970s CTSS, TENEX, Unix)
 * On CTSS, "one afternoon [...] any user who Logged in found that instead of
 the usual message-of-the-day typing out on his terminal, he had the entire
@@ -205,10 +209,10 @@ Robert Morris and Ken Thompson, "Password Security: A Case History", 1978
 
 ## Slide 11
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password hashing (early 1970s Multics)
 * "Multics User Control subsystem stored passwords one-way encrypted [...]
 I knew people could take square roots, so I squared each password and ANDed
@@ -222,10 +226,10 @@ Tom Van Vleck, "How the Air Force cracked Multics Security", 1993
 
 ## Slide 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password hashing (mid 1970s Unix)
 * crypt(3) of Unix up to 6th Edition inclusive reused code from an "encryption
 program [that] simulated the M-209 cipher machine used by the U.S. Army
@@ -237,17 +241,16 @@ algorithm was recoded for maximum speed."
 * "It takes essentially no more time to test the encrypted trial password
 against all the passwords in an entire password file, or for that matter,
 against any collection of encrypted passwords, perhaps collected from many
-installations."
 Robert Morris and Ken Thompson, "Password Security: A Case History", 1978
 @solardiz @Openwall OffensiveCon May 10-11, 2024 12 / 79
 ```
 
 ## Slide 13
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password hashing (mid 1970s Multics & Unix)
 2000s web apps & Windows
 password
@@ -258,20 +261,17 @@ Vv
 password hash store
 password password hash store
 \ /
-V }
 hash function /
-VY
-Vv
 compare
 @solardiz @Openwall OffensiveCon May 10-11, 2024 13 / 79
 ```
 
 ## Slide 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password hashing (late 1970s Unix)
 password new salt
 policy check?\ / |
@@ -283,42 +283,36 @@ password password hash store
 \ /(salt) /(hash)
 V }
 slow hash function /
-NY
-Vv
 compare
 @solardiz @Openwall OffensiveCon May 10-11, 2024 14 / 79
 ```
 
 ## Slide 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-@soLlardiz
-Password cracking: past, present, future
 Password hashing (1990s BSDI, bcrypt, PBKDF2)
 password new salt & cost
 \ / (aka setting)
 V |
 tunably slow hash function |
-V Vv
 password hash store
 password password hash store
 \ /(setting) /(hash)
 V /
 tunably slow hash function /
-V7
-Vv
 compare
 @Openwall OffensiveCon May 10-11, 2024
 ```
 
 ## Slide 16
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password hashing (2010s+ scrypt, Argon2, ...)
 password new salt, costs
 \ / (aka setting)
@@ -330,18 +324,16 @@ password password hash store
 \ /(setting) /(hash)
 V /
 memory-hard hash function /
-NY
-Vv
 compare
 @solardiz @Openwall OffensiveCon May 10-11, 2024 16 / 79
 ```
 
 ## Slide 17
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Other authentication methods (1990s+)
 The examples so far involve the plaintext password being sent to the server
 (hopefully over a transport security layer), but authentication methods not
@@ -359,20 +351,20 @@ SSH: passphrase-encrypted private key, hashed known_hosts
 
 ## Slide 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 PASSWORD CRACKING SPEED
 @solardiz @Openwall OffensiveCon May 10-11, 2024 18 / 79
 ```
 
 ## Slide 19
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Newsgroups: net.general
 Date: Thu Jan 6 08:02:37 1983
 We proudly announce
@@ -392,10 +384,10 @@ Bell Labs, Murray Hill.
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking (1980s, unoptimized)
 * For each user's hash
 + For each candidate password
@@ -403,25 +395,22 @@ candidate password password hash
 \ /(salt) /
 Vv /
 hash function /
-Vv
 compare
 @solardiz @Openwall OffensiveCon May 10-11, 2024 20 / 79
 ```
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking (unsalted, semi-optimized)
 * For each candidate password
 candidate password password hash(es)
 \ /
 V /
 hash function /
-OF
-Vv
 one-to-many compare
 * We've amortized the cost of hashing, reusing the result of each computation
 @solardiz @Openwall OffensiveCon May 10-11, 2024 21 / 79
@@ -429,18 +418,16 @@ one-to-many compare
 
 ## Slide 22
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking (early 1990s, salted, semi-optimized)
 * For each candidate password (groups of more likely passwords first)
 + For each salt
 candidate password password hash(es) that use the current salt
-\ /(salt) / (hashes)
 V /
 hash function /
-optimized : as
 Vj
 one-to-many compare (initially just a Loop)
 becomes one-to-one when each salt is unique, as they should be
@@ -450,10 +437,10 @@ becomes one-to-one when each salt is unique, as they should be
 
 ## Slide 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking (late 1990s, salted, mostly optimized)
 * For each candidate password group (those of more likely passwords first)
 + For each salt
@@ -473,10 +460,10 @@ becomes many-to-one when each salt is unique, as they should be
 
 ## Slide 24
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking many-to-many hash comparison
 * If few hashes Loaded for the current salt, compare or eliminate directly
 * If many hashes loaded for the current salt (1997+ hash tables in JtR 1.2+)
@@ -493,10 +480,10 @@ above or be as simple as a linked list right away
 
 ## Slide 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking cost reduction
 * when we amortize cost, we reduce total cost to achieve the same results
 + We do it e.g. through reducing the total amount of computation
@@ -514,10 +501,10 @@ and then it might not be CPUs anymore
 
 ## Slide 26
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking on GPUs (2007+)
 * Pioneered by Andrey Belenko of Elcomsoft
 + Initially for NTLM, LM, and raw MD5 hashes, achieving 100M+/s
@@ -536,10 +523,10 @@ John the Ripper patches for some hashes in 2010 and 2011, integrated into
 
 ## Slide 27
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking cost reduction through parallel processing
 * Parallel processing during defensive hashing or key derivation is limited
 * Parallel processing potential during password cracking is "unlimited"
@@ -558,10 +545,10 @@ unless the hashing scheme allows for memory cost amortization
 
 ## Slide 28
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking cost reduction through time-memory trade-off (TMTO)
 * With no salts or few commonly used values, it may help to precompute and
 partially store the hashes to bypass most computation in future attacks
@@ -580,10 +567,10 @@ further computation and matching reduced) with Larger and sparser bitmaps
 
 ## Slide 29
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking cost metrics
 * For a given performance ({password, hash} tests per time, maybe amortized)
 + Hardware: ASIC die area, mmA2
@@ -603,17 +590,15 @@ Password cracking cost metrics
 
 ## Slide 30
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 ParaLlelized hash function (originally memoryless)
 candidate passwords
 | core | core | core | core | core | core | core | core |
-hee em == f= -sene a ee hirer cere co 2 beeen a es ee fee asex — = +
 | core | core | core | core | core | core | core | core |
 | core | core | core | core | core | core | core | core |
-ee ee hem mcomceome : ee ee $e nan -- hie ewe nee ) +
 | core | core | core | core | core | core | core | core |
 hashes for comparison against those being cracked (for current salt)
 32 hashes in parallel in the same amount of time that a defender needs for one
@@ -622,17 +607,16 @@ hashes for comparison against those being cracked (for current salt)
 
 ## Slide 31
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Parallelized hash function (amortizable memory-hard)
 Candidate passwords
 VVVVVVVVVVVVVVVV
 | core | core | core | core | |
 | core | core | core | core | |
 | core | core | core | core | |
-ee see == , bene mmemceece , + +
 | core | core | core | core | |
 VVVVVVVVVVVVVV VV
 hashes for comparison against those being cracked (for current salt)
@@ -642,19 +626,17 @@ hashes for comparison against those being cracked (for current salt)
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Parallelized hash function (parallelizable memory-hard)
 candidate password
-Vv
 | core | core | core | core | |
 | core | core | core | core | |
 $=------- $----+---- +-------- $=------- + memory +
 | core | core | core | core | |
 | core | core | core | core | |
-Vv
 hash for comparison against those being cracked (for current salt)
 1 hash in 1/16 of the amount of time that a defender using one core would need
 @solardiz @Openwall OffensiveCon May 10-11, 2024 32 / 79
@@ -662,16 +644,15 @@ hash for comparison against those being cracked (for current salt)
 
 ## Slide 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Parallelized hash function (sequential memory-hard, e.g. scrypt)
 candidate passwords
 Vv
 | core | | core | |
 + memory ss memory +
-eames fain ems a cea , ee Se Pie ke aS See ee oe +
 Vv
 hashes for comparison against those being cracked (for current salt)
 2 hashes in parallel in the same amount of time, but we need 2x more memory
@@ -680,10 +661,10 @@ hashes for comparison against those being cracked (for current salt)
 
 ## Slide 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 ParaLllelized hash function (sequential memory-hard + ROM-port-hard)
 candidate passwords
 Vv
@@ -702,10 +683,10 @@ hashes for comparison against those being cracked (for current salt)
 
 ## Slide 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Segmentation fault (core dumped)
 In these illustrations | core | refers to any processing element capable of
 (mostly) computing the target hash without having a Lot of memory of its own.
@@ -724,11 +705,10 @@ pipeline stage, whichever option is relevant or optimal in a given context
 
 ## Slide 36
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
-BitsLlicing
 * Eli Biham, "A Fast New DES Implementation in Software", 1997
 ~100 logic gates per S-box
 "about three times faster than our new optimized DES implementation on 64-bit
@@ -745,10 +725,10 @@ LUT3), Sovyn Y. (22.125 with LUT3 - later in 2024, not in crackers yet)
 
 ## Slide 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Wrapping up on hashing speed optimization
 * Current most flexible password crackers - John the Ripper and hashcat -
 support hundreds of different (non-)hash types on many hardware platforms
@@ -765,10 +745,10 @@ Alain Espinosa's fast-small-crypto, which are specialized code generators
 
 ## Slide 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Speeds for historical Unix hashes
 * Unix up to 6th Edition, based on M-209
 | c/s. | year | software | hardware | power
@@ -787,10 +767,10 @@ Speeds for historical Unix hashes
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Speeds for contemporary decent hashes
 berypt at 32 iterations (cost 5), even though modern uses are at 256
 (cost 8 to 12), so would be ~8 to ~128 times slower
@@ -857,10 +837,10 @@ power
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Speeds for historical Windows hashes
 LOphtCrack 1.5 "on a Pentium Pro 200 checked a password file with 10 passwords
 using the alpha character set (A-Z) in 26 hours. [...] [note from mudge: try
@@ -876,10 +856,10 @@ Speed.#1.........! 151.1 GH/s (6.95ms) @ Accel:256 Loops:1024 Thr:32 Vec:1
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Speeds for contemporary Windows hashes
 * hashcat 6.2.6 vs. NTLM, RTX 4090
 So es er 288.5 GH/s (7.24ms) @ Accel:512 Loops:1024 Thr:32 Vec:8
@@ -892,16 +872,16 @@ Speed.#5.........: 251.7 GH/s (16.64ms) @ Accel:128 Loops:1024 Thr:256 Vec:
 Speed.#6.........:! 230.3 GH/s (18.27ms) @ Accel:128 Loops:1024 Thr:256 Vec:
 Speed.#7......... : 228.7 GH/s (18.37ms) @ Accel:128 Loops:1024 Thr:256 Vec:
 Speed.#8.........: 256.7 GH/s (16.35ms) @ Accel:128 Loops:1024 Thr:256 Vec:
- iaialieallia 1993.9 GH/s
+iaialieallia 1993.9 GH/s
 @solardiz @Openwall OffensiveCon May 10-11, 2024 41 / 79
 ```
 
 ## Slide 42
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Password cracking: past, present, future
 Speeds for contemporary strong hashes
 * John the Ripper vs. Argon2, GTX 1080 (at max turbo, 180W, 2016 gaming GPU)
 Cost 1 (t) is 3 for all loaded hashes
@@ -920,10 +900,10 @@ Press 'q' or Ctrl-C to abort, 'h' for help, almost any other key for status
 
 ## Slide 43
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Wrapping up on speeds
 * So far we discussed how to optimize the speed
 + of hashing
@@ -942,24 +922,21 @@ uniqueness vs. memory requirements, ease of reasoning, feedback, workflow)
 
 ## Slide 44
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 PASSWORD CRACKING FOCUS
 @solardiz @Openwall OffensiveCon May 10-11, 2024 44 / 79
 ```
 
 ## Slide 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
-/*
 * Warning: this program burns a lot of cpu.
-mf
-V fis
 * Insecure - find accounts with poor passwords
 Date: Tue, 29 Nov 83 18:19:32 pst
 From: leres%ucbarpa@Berkeley (Craig Leres)
@@ -977,10 +954,10 @@ publically distributed.
 
 ## Slide 46
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Candidate password generators (1980s)
 static char *rcsid = "$Header: pwchkr.c,v 1.1 85/09/10 16:00:56 root Exp $";
 * By default, this program only checks for accounts with passwords the same
@@ -1000,10 +977,10 @@ and .project files.
 
 ## Slide 47
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Candidate password generators (early 1990s)
 "The first pass that Crack makes is over the [data] gleaned from the users'
 password field. In my test file, this gets about 4% of the passwords (out of
@@ -1023,10 +1000,10 @@ common sense that that they will take some time to crack." - Alec Muffett
 
 ## Slide 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Candidate password generators (mid 1990s)
 Excerpts from Crack user manual by Alec Muffett:
 "Crack 5.0 supports the notion of dictionary groups - collations of words
@@ -1045,10 +1022,10 @@ and applying them to the cited dictionary group"
 
 ## Slide 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Mangling rules
 "These rules are macro commands, one per Line, which specify patterns and
 actions that are applied to words from a dictionary in order to generate a
@@ -1064,10 +1041,10 @@ For instance, one such rule:
 
 ## Slide 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Mangling rules evolution
 * Specific to John the Ripper (not adopted by InsidePro and hashcat)
 + Preprocessor
@@ -1087,10 +1064,10 @@ hashcat compatibility mode in John the Ripper
 
 ## Slide 51
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Mangling rulesets
 * Old John the Ripper default rules were hand-written, some tuned, some not
 * KoreLogic rules targeting users' coping with password policies (2010)
@@ -1107,10 +1084,10 @@ rulesets created by the community over the years (hand-written, generated)
 
 ## Slide 52
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Mangling ruleset tuning
 * Simon Marechal, "Automatic mangling rules generation", 2012 specifically for
 John the Ripper, but didn't result in anything integrated in the project
@@ -1129,10 +1106,10 @@ and hardly any."
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Targeting
 * When deriving candidate passwords from users' information, check those only
 against the same users' hashes
@@ -1150,10 +1127,10 @@ against the same users' hashes
 
 ## Slide 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Duplicate candidate passwords
 Consider the following entries on a common passwords list used as a wordlist:
 password
@@ -1170,10 +1147,10 @@ wordlist (the output of a likely preceding no-op rule)
 
 ## Slide 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Duplicate candidate password avoidance
 * Crack's rules support many "reject the word if/unless ..." commands, which
 can be used to avoid producing most effectively-duplicates
@@ -1192,10 +1169,10 @@ mode, which the 256 MiB RAM duplicate suppressor improves to 80.6%)
 
 ## Slide 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Duplicate candidate password suppression
 * John the Ripper "single crack" uses small per-salt ring buffers (along with
 hash tables for fast Lookup) to detect and suppress recently seen candidates
@@ -1215,10 +1192,10 @@ rate is low and other processing speed is high, memory use can be tweaked
 
 ## Slide 57
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Duplicate candidate password suppressor
 John the Ripper's duplicate candidate password suppressor uses a hash table to
 store fingerprints (other fast hashes) of items. This is similar to a cuckoo
@@ -1228,16 +1205,15 @@ bucket is full, we simply evict/replace a fingerprint (from the second half).
 (index,
 LOCKED ADD-ONLY v | EVICTABLE
 os 2------ 3------ 4------ 5------ 6------ 7------ +
-‘Pp | tp | fe 6|6h6UfPhlUd|lCUTPphlU|lCU hd) CU UTC Ci
 @solardiz @Openwall OffensiveCon May 10-11, 2024 57 / 79
 ```
 
 ## Slide 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Wordlist de-duplication tools
 The task is to remove duplicate Lines without changing the order (which may
 have been optimized in some way), so without sorting, and without requiring
@@ -1255,10 +1231,10 @@ Rling, "a faster multi-threaded, feature rich alternative to rli" (2020)
 
 ## Slide 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Wordlists
 * Historically, password crackers Literally used lists of dictionary words
 * Tiny public common password Lists appeared in 1980s, e.g. from Morris worm
@@ -1275,10 +1251,10 @@ wordlists collection, 2003, which merges and credits lots of sources)
 
 ## Slide 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Password cracking communities
 * Hobbyist community forums such as InsidePro's, hashkiller.co.uk, hashes.org
 (all of which are now defunct) collected uploads of hashes to crack and the
@@ -1297,10 +1273,10 @@ re-crack almost all of HIBP and generate an ordered breached passwords List
 
 ## Slide 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Wordlist optimization
 HIBP v8 being at 847M unique passwords (from a few billion accounts) is large
 (although perhaps not the Largest collection in existence).
@@ -1317,17 +1293,16 @@ many times is very unlikely to be included."
 
 ## Slide 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (mid 1990s)
 * Probabilistic password generator is a "technique for generating candidate
 passwords from a statistical model" (Simon Marechal, 2012)
 * Novel algorithm to search the keyspace exhaustively and without duplicates
 while walking the 2D surface of Charset ** Length uphill (1995)
 * John the Ripper 1.0 introduced "incremental mode" (1996)
-[IncrementaL:AlLpha]
 CharCount = 26
 MinLen = 1
 MaxLen = 8
@@ -1340,10 +1315,10 @@ erynsat Ldoghikmcwpfubzjxvq
 
 ## Slide 63
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (later 1990s)
 * John the Ripper 1.0's may retroactively be called a Oth-order Markov chain
 * A further Oth-order variation added per-length and per-position statistics
@@ -1360,10 +1335,10 @@ Charset33 = msnctdxepghLywabr jikuzofvq
 
 ## Slide 64
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (late 1990s)
 * Training on previously cracked passwords (reading john.pot) as a feature in
 John the Ripper (obscure releases in late 1996, popular 1.4 in early 1997)
@@ -1381,10 +1356,10 @@ depending on up to 2 preceding characters (2nd-order Markov chain)
 
 ## Slide 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Vowel/consonant patterns
 * John the Ripper 1.0 to 1.4 had
 Wordlike Set to 'Y' to enable a simple built in word filter (words with
@@ -1401,10 +1376,10 @@ to future "mask mode").
 
 ## Slide 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Custom candidate password generators (late 1990s)
 * John the Ripper 1.3+ "external mode" (Late 1996 or early 1997)
 + Write your own candidate password generator or filter in a C-like language
@@ -1424,10 +1399,10 @@ j Searches of short valid Unicode strings (auto-generated from Unicode spec)
 
 ## Slide 67
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Custom candidate password patterns (2000s+)
 Crackers that didn't have probabilistic candidate password generators instead
 added features to focus dumber exhaustive searches on reasonable sub-spaces
@@ -1445,10 +1420,10 @@ Hybrid modes add a mask on top of a smarter and slower generator (2010s)
 
 ## Slide 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (early 2000s)
 * Dawn Xiaodong Song, David Wagner, and Xuging Tian, "Timing Analysis of
 Keystrokes and Timing Attacks on SSH", 2001
@@ -1466,10 +1441,10 @@ for that were added, but it took until OpenSSH 9.5 (2023) for the timings
 
 ## Slide 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (mid 2000s)
 * Arvind Narayanan and Vitaly Shmatikov, "Fast Dictionary Attacks on Passwords
 Using Time-Space Tradeoff", 2005
@@ -1489,10 +1464,10 @@ Viterbi algorithm from speech processing"
 
 ## Slide 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (circa 2010)
 * Simon Marechal, "Etat de L’art sur le cassage de mots de passe", 2007
 + Narayanan and Shmatikov's work re-applied to classical password cracking
@@ -1509,10 +1484,10 @@ choice of attack duration (via minimum and maximum strength of passwords)
 
 ## Slide 71
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generators (2010s)
 * Matt Weir et al., "Password Cracking Using Probabilistic Context-Free
 Grammars", 2009 or Pretty Cool Fuzzy Guesser (PCFG)
@@ -1531,10 +1506,10 @@ iterates over all those bins in order of decreasing likelihood." (3rd-order)
 
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Candidate passphrase generators (mostly 2010s)
 * Wordlist rules appending/prepending specific embedded words
 * Trivial word-combining Perl scripts posted to john-users (2006)
@@ -1551,10 +1526,10 @@ books, sort from most to least common (2021, unreleased)
 
 ## Slide 73
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate passphrase generators (2010s+)
 * Probabilistic candidate password generators also happen to generate phrases
 if trained on such input (or just on a real-world mix of passwords/phrases)
@@ -1573,10 +1548,10 @@ train/use existing probabilistic candidate password generators, map back
 
 ## Slide 74
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Probabilistic candidate password generation with neural networks (2010s+)
 * William Melicher et al., "Fast, Lean, and Accurate: Modeling Password
 Guessability Using Neural Networks", 2016
@@ -1597,10 +1572,10 @@ fewer duplicates" than PassGAN, which had already been outperformed (2022)
 
 ## Slide 75
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Candidate password generator combinations
 * Different generators produce some unique and some overlapping candidates
 + It is desirable to use multiple generators and suppress cross-duplicates
@@ -1620,10 +1595,10 @@ be overfit (mimic a wordlist) and crack fewer passwords beyond wordlist
 
 ## Slide 76
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Workf Low
 * Unfortunately, mostly did not fit in this talk, but is very important
 * Best results are achieved by using multiple approaches in multiple steps
@@ -1642,10 +1617,10 @@ Workf Low
 
 ## Slide 77
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Future
 * Speed
 + Obvious: larger and higher-clocked CPUs, GPUs, FPGAs
@@ -1665,10 +1640,10 @@ Future
 
 ## Slide 78
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Takeaways
 Password cracking is
 * simple on the surface, with Low barrier to entry and gradual learning curve
@@ -1684,10 +1659,10 @@ Public availability helps level the playing field
 
 ## Slide 79
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Password cracking: past, present, future
 Contact information and credits
 e-mail
 Solar Designer <solar@openwallL.com>

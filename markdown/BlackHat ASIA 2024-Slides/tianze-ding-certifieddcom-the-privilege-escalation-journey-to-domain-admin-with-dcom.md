@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Tianze Ding-CertifiedDCOM The Privilege Escalation Journey to Domain Admin with DCOM.pdf"
 pages: 51
 sha256: "40d7f337621346362bff71cd6fcf4ed948b82328f88989cd82d652dd9ebc2a75"
-text_chars: 20669
+text_chars: 20482
 ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 83.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:02Z"
+converted_at: "2026-08-12T04:52:13Z"
 ---
 # CertifiedDCOM The Privilege Escalation Journey to Domain Admin with DCOM
 
 **Speakers:** Tianze Ding  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tianze Ding-CertifiedDCOM The Privilege Escalation Journey to Domain Admin with DCOM.pdf` (51 pages)
+
 
 ## Slide 1
 
@@ -915,27 +920,17 @@ certsrv.exe after patch
 
 # BHASIA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
 ASIA 2024
 primary “secondary
-aAoaAaAnAaAaATAAaAR
-900000014000F 18E *InitializeComSecurity@OVAJXZ
-bUBUUUY T46bEF 19S mov edi, eax
 668008014068F195 test eax, eax
-6686680014868F 197 jz 6x14666F1B4
-SSE 2°" Tegt est] == af Cee eee
-i
 i
 :
 i
 A
-Hh
-5
-t
-i
 i
 i
 i

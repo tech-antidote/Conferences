@@ -12,7 +12,7 @@ duration_seconds: 2841
 words: 7942
 text_chars: 42845
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:13Z"
 ---
 
 # Breakin 'Em All – Overcoming Pokemon Go's Anti-Cheat Mechanism

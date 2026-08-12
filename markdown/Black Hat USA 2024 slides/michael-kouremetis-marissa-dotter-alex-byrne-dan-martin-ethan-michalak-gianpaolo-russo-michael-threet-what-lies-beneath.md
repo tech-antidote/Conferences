@@ -12,15 +12,20 @@ text_chars: 12979
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:48:06Z"
+converted_at: "2026-08-12T04:36:27Z"
 ---
 # What Lies Beneath the Surface Evaluating LLMs for Offensive Cyber Capabilities through P
 
 **Speakers:** Michael Kouremetis, Marissa Dotter, Alex Byrne, Dan Martin, Ethan Michalak, Gianpaolo Russo, Michael Threet  
 **Conference:** Black Hat USA 2024  
 **Source:** `Black Hat USA 2024 slides/Michael Kouremetis & Marissa Dotter & Alex Byrne & Dan Martin & Ethan Michalak & Gianpaolo Russo & Michael Threet_What Lies Beneath the Surface Evaluating LLMs for Offensive Cyber Capabilities through P.pdf` (27 pages)
+
 
 ## Slide 1
 

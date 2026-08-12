@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Dan Petro & David Vargas _ Badge of Shame Breaking into Secure Facilities with OSDP.pdf"
 pages: 168
 sha256: "105b84a447279f1b83d62b305e18b4e256eb9baaedc01da0171036b2a58429af"
-text_chars: 18571
-ocr_pages: 22
+text_chars: 17383
+ocr_pages: 13
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:16:35Z"
+converted_at: "2026-08-12T04:09:28Z"
 ---
 # Badge of Shame Breaking into Secure Facilities with OSDP
 
 **Speakers:** Dan Petro, David Vargas  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Dan Petro & David Vargas _ Badge of Shame Breaking into Secure Facilities with OSDP.pdf` (168 pages)
+
 
 ## Slide 1
 
@@ -151,17 +157,6 @@ H O L L Y W O O D ' S W A Y
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-RFID Badge Setup
-=
-\ aa Wiegand =
-| (anencryptes) — | =)
-Controller
-Reader
-```
-
 ## Slide 16
 
 ## **RFID Badge Setup**
@@ -202,17 +197,6 @@ Reader
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-RFID Badge Setup
-OS0P —]
-a =
-Superv.sed Control le (
-Reader — eyice
-? rotocol
-```
-
 ## Slide 21
 
 ## **RFID Badge Setup**
@@ -237,17 +221,15 @@ Reader — eyice
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bold Claims
 OSDP pe
-SitD Tras
 ” Secure Channel v2
 Use existing wring
 128 Bit AES Pit tion /
-Snhageable WN 92020
-ia
 ```
 
 ## Slide 24
@@ -346,7 +328,8 @@ L E T ' S J U S T T A K E A L O O K
 
 35
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 78/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Protocol
@@ -466,20 +449,14 @@ Reader Reader Readc r ( onteller
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Protocol WTF #1
-© Bishop Fox. All rights reserved worldwide.
-```
-
 ## Slide 50
 
 © Bishop Fox. All rights reserved worldwide.
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Protocol WTF #1 y
@@ -557,15 +534,6 @@ S E Q U E N C E N U M B E R
 
 58
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-How Many Bits is Enough?
-LY SS pts ~ Cryete arephic
-b& pits? Edge of Enumelatian
-2 y-bts? —Finé, mey re
-```
-
 ## Slide 59
 
 ## **How Many Bits is Enough?**
@@ -590,7 +558,8 @@ b& pits? Edge of Enumelatian
 
 61
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The Protocol
@@ -598,7 +567,6 @@ SQN Values
 The sequence number is incremented by the CP from one command to the next) skipping zero:
 0->1->2->3->1->... Non-zero sequence numbers support error recovery: the Control! Panel (CP)
 acknowledges the last re ing the incremented sequence number,
-© Bishop Fox. All rights reserved worldwide.
 ```
 
 ## Slide 62
@@ -665,7 +633,8 @@ acknowledges the last re ing the incremented sequence number,
 
 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overhead
@@ -693,11 +662,11 @@ verification will locally generate the full MAC[16] and compare the actual bytes
 
 70
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Overhead
-\W a7
 only the first four bytes of the computed MAC are sent.
 only the first four bytes
 ```
@@ -880,17 +849,6 @@ T H E R E ' S A L W A Y S O N E . . .
 
 © Bishop Fox. All rights reserved worldwide.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-S ALWAYS O
-Me no speak AES
-asDe_ Ree aSDe_ Ree ___
-Controller
-Omni CNY OV\ Omni (AT; OV
-Secur ty =|] Secur ty =O
-```
-
 ## Slide 93
 
 T H E R E ' S A L W A Y S O N E . . .
@@ -973,7 +931,8 @@ Y A Y ! ! !
 
 100
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 YAY!!!
@@ -983,10 +942,6 @@ The successful completion of the synchronization sequence SCS_11 through SCS_14 
 the CP and PD established a valid Secure Channel Session. In order to maintain the SCS, the CP must
 send each message with SEC_BLK_TYPE set to SCS_15 or SCS_17, and the PD must send each if its
 replies with SEC_BLK_TYPE set to SCS_16 or SCS_18.
-ners Pted —
-Reader ee Control lev
-racket
-© Bishop Fox. All rights reserved worldwide.
 ```
 
 ## Slide 101
@@ -999,7 +954,8 @@ W A I T A S E C O N D
 
 101
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WAIT A SECOND
@@ -1010,7 +966,6 @@ Note: this form provides Message Authentication, ibut does not contain encrypted
 D.3.2.2 $CS_16 PD->CP
 The data field is sent in plain text (unencrypted)
 Note: this form provides Message Authentication, (but does not contain encrypted DATA
-© Bishop Fox. All rights reserved worldwide.
 ```
 
 ## Slide 102
@@ -1174,25 +1129,14 @@ OK
 
 120
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-| Documentation|
-| bear Y Lmplementation
-\Cont 2) Marketing
-£55
-«
-‘
-© Bishop Fox. All rights reserved worldwide.
-```
-
 ## Slide 121
 
 © Bishop Fox. All rights reserved worldwide.
 
 121
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 76/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Protocol WTF #3 i.
@@ -1316,17 +1260,16 @@ H A R D C O D E D C R E D S …
 
 133
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 HARD CODED CREDS oe
 Introducing: Weak keys i
-[PD-0]
 name = PDO
 annel type = uart
 nannel_device = /dev/ttyUSBe@
 nannel speed = 9608
-~ = §OO1827030405060 /O8890a0becHdbedT
 ```
 
 ## Slide 134
@@ -1347,14 +1290,6 @@ Key 1 = 0x00, 0x00, 0x00… Key 2 = 0x01, 0x02, 0x03… Key 3 = 0x30, 0x31, 0x32
 
 135
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Protocol WTF #4 y
-Encryption ‘$ Not
-Wa ai C Fairy dust
-```
-
 ## Slide 136
 
 ## **Bold Claims**
@@ -1363,16 +1298,15 @@ Wa ai C Fairy dust
 
 136
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 70/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bold Claims i ha
-nD Tas
 OSDP ge
 ” Secure Channel v2
 Use existing wiring
 128 Bit AES he
-Unhackable (72020
 ```
 
 ## Slide 137
@@ -1383,17 +1317,13 @@ Unhackable (72020
 
 137
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Bold Claims
 OSDP Reader Benefits:
-ee
 D crm
-—
-wy
-Secure Channel v2,
-Use existing wiring #
 128 Bit AES Encryption \y
 Unhackable #2020
 ```
@@ -1501,19 +1431,6 @@ Unhackable #2020
 © Bishop Fox. All rights reserved worldwide.
 
 150
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Key Exchange
-Ox 30, Ox 31,
-043%, 0433
-Ox3e 0x3
-ASEOR\ LN
-TOF S9aD(
-ores
-FTES HAS
-```
 
 ## Slide 151
 
@@ -1677,16 +1594,14 @@ A D V I C E F O R D E F E N D E R S
 
 166
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ADVICE FOR DEFENDERS
 Conclusion
-Buy OSD P Verified Devices
 rar Verified. Bench Tested.
-OsDP ,
 ww Proven. Compliant. Trusted.
-© Bishop Fox. All rights reserved worldwide.
 ```
 
 ## Slide 167
@@ -1704,10 +1619,3 @@ A D V I C E F O R D E F E N D E R S
 © Bishop Fox. All rights reserved worldwide.
 
 168
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Thanks
-© Bishop Fox. All rights reserved worldwide.
-```

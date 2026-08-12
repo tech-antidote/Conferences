@@ -4,23 +4,28 @@ speakers: ["Hxr1"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Hxr1 - Memory Laundering via Metal What EDR Can't See on Your Mac.pdf"
 pages: 17
 sha256: "0c06461fef408271fab51d820caced657623b13c9ab637c43f6453fde55e5a3f"
-text_chars: 8164
+text_chars: 8226
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:21:53Z"
+converted_at: "2026-08-12T06:34:29Z"
 ---
 # Memory Laundering via Metal What EDR Can't See on Your Mac
 
 **Speakers:** Hxr1  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Hxr1 - Memory Laundering via Metal What EDR Can't See on Your Mac.pdf` (17 pages)
+
 
 ## Slide 1
 
@@ -30,15 +35,15 @@ What EDR can't see on your Mac
 
 **Hxr1**
 
-```
+\```
 https://hxr1.ghost.io
-```
+\```
 
 ## Slide 2
 
-```
+\```
 THE GAP
-```
+\```
 
 Your Mac has gigabytes of memory **that no security product can scan.**
 
@@ -48,23 +53,23 @@ Not because the tools are bad.
 
 ## Slide 3
 
-```
+\```
 AGENDA
-```
+\```
 
 **Where we're going** Three acts. Keep this map in your head; I'll call out each turn.
 
-```
+\```
 01
-```
+\```
 
 **The gap**
 
 Memory your Mac's security can't scan, and the Metal mode behind it.
 
-```
+\```
 02
-```
+\```
 
 **The technique**
 
@@ -76,25 +81,25 @@ What defenders can try, and the platform change only Apple can ship.
 
 ## Slide 4
 
-```
+\```
 THE STAKES
-```
+\```
 
 **First: what is EDR watching for?** The security agent on every managed Mac earns its keep by inspecting live memory.
 
-```
+\```
 WHAT IT IS
-```
+\```
 
-```
+\```
 WHY IT READS RAM
-```
+\```
 
 **EDR** = Endpoint Detection & Response: the security agent running on your machine.
 
-```
+\```
 CrowdStrikeSentinelOneJamf Protect
-```
+\```
 
 Malware that never touches disk still has to live in memory. Secrets, keys and tokens sit in a process while it runs. So EDR scans process memory for known patterns.
 
@@ -104,17 +109,17 @@ The whole talk is one question: what if those bytes never enter memory the EDR c
 
 ## Slide 5
 
-```
+\```
 THE THREAT MODEL
-```
+\```
 
 ## **How macOS EDR scans memory**
 
 Every CPU-memory scanner on the platform reduces to the same three Mach calls.
 
-```
+\```
 CrowdStrike FalconSentinelOneJamf Protectany Endpoint Security client
-```
+\```
 
 `task_for_pid()` port to the target `// Every macOS EDR memory scanner: task_for_pid(mach_task_self(), pid, &task); mach_vm_region()` walk the `while (mach_vm_region(task, &addr, &size,...)) {` address space `mach_vm_read(task, addr, size, buf, &n); yara_scan(buf, n); } mach_vm_read()` pull bytes, match
 
@@ -122,21 +127,21 @@ CrowdStrike FalconSentinelOneJamf Protectany Endpoint Security client
 
 ## Slide 6
 
-```
+\```
 GPU 101
-```
+\```
 
 ## **What is Metal?**
 
 Apple's low-level GPU framework, and the only way anything on a Mac talks to the graphics chip.
 
-```
+\```
 THE FRAMEWORK
-```
+\```
 
-```
+\```
 WHAT'S A SHADER
-```
+\```
 
 A thin layer between your code and the GPU. It replaced OpenGL on macOS in 2014 and is now the **only** GPU API Apple ships.
 
@@ -146,9 +151,9 @@ Runs the window server & compositing Video decode, Core Image, Core ML Every gam
 
 `Graphics` · vertex + fragment shaders draw pixels `Compute` · kernels crunch general math (ML, imaging)
 
-```
+\```
 THE OBJECTS WE'LL USE
-```
+\```
 
 `MTLDevice MTLBuffer MTLCommandQueue MTLBlitCommandEncoder` the GPU handle GPU-accessible memory work you submit a GPU-side copy
 
@@ -156,9 +161,9 @@ The GPU has its own memory. The whole technique hides in one `MTLBuffer` storage
 
 ## Slide 7
 
-```
+\```
 APPLE SILICON
-```
+\```
 
 **Same RAM, two sets of page tables** The GPU shares one physical memory pool with the CPU but maps it through its own MMU.
 
@@ -168,9 +173,9 @@ The bytes are real and sitting in RAM, but no CPU virtual address points at the 
 
 ## Slide 8
 
-```
+\```
 METAL · MTLBUFFER
-```
+\```
 
 ## **One storage mode returns nothing at all**
 
@@ -182,13 +187,13 @@ METAL · MTLBUFFER
 |`Managed`|`YES`|`mirrored, sync`|
 |**`StorageModePrivate`**|**`NO`**|`GPU page tables only`|
 
-```
+\```
 [privateBuffer contents]
-```
+\```
 
-```
+\```
 → NULL
-```
+\```
 
 Not restricted. There is **no CPU address to return** , so `mach_vm_region` skips it and ES fires no event.
 
@@ -196,9 +201,9 @@ Metal is the **only** GPU API on macOS since OpenGL was deprecated. It backs eve
 
 ## Slide 9
 
-```
+\```
 THE ATTACK AT A GLANCE
-```
+\```
 
 ## **The attack, end to end**
 
@@ -219,9 +224,9 @@ instant of use.
 
 ## Slide 10
 
-```
+\```
 PRIVILEGE · NONE REQUIRED
-```
+\```
 
 ## **Who can allocate this?**
 
@@ -235,19 +240,19 @@ App Store apps Sandboxed processes WebKit content processes `newBufferWithLength
 
 ## Slide 11
 
-```
+\```
 WHY IT MATTERS
-```
+\```
 
 **Not just another evasion trick** Packing and living-off-the-land can still be scanned. This can't.
 
-```
+\```
 THE CROWDED FIELD
-```
+\```
 
-```
+\```
 GPU-PRIVATE IS DIFFERENT
-```
+\```
 
 - **`1`**<sup>No API to scan it from another process, at all.</sup>
 
@@ -259,9 +264,9 @@ GPU-PRIVATE IS DIFFERENT
 
 ## Slide 12
 
-```
+\```
 THE LINCHPIN
-```
+\```
 
 ## **Crossing the boundary: the blit** The GPU moves the bytes. The CPU issues the command but never touches them.
 
@@ -275,7 +280,7 @@ THE LINCHPIN
 
 ▸ The GPU's DMA engine performs the copy; the CPU never sees the bytes.
 
-```
+\```
 blit = [cb blitCommandEncoder ];
 [blit
 copyFromBuffer :sharedStaging
@@ -289,13 +294,13 @@ endEncoding ];
 commit];  // GPU copies; CPU never sees data
 BLIT LATENCYGPU DMA
 250–330 ns100s of MB/s
-```
+\```
 
 ## Slide 13
 
-```
+\```
 DEMO
-```
+\```
 
 ### **Blind-spot proof**
 
@@ -303,9 +308,9 @@ A real EDR-grade scanner, watching the secret vanish and come back.
 
 ## Slide 14
 
-```
+\```
 MACOS 26.5
-```
+\```
 
 **Timing reality check** The plaintext window is sub-microsecond. No scanner polls near that.
 
@@ -313,9 +318,9 @@ Inbound · materialize to wipe `250–330 ns` A 1 kHz scanner has a **1 ms** win
 
 ## Slide 15
 
-```
+\```
 THE DEFENDER'S MOVE
-```
+\```
 
 ## **Can the defender see it?**
 
@@ -335,17 +340,17 @@ Yes, from outside the process. The trampoline leaves a footprint no real GPU wor
 
 ## Slide 16
 
-```
+\```
 CLOSING
-```
+\```
 
 **This isn't a bug. It's how the API is designed to work.**
 
 Defensive tooling assumed a CPU-centric memory model. Apple Silicon broke it, and the fix isn't a patch, it's a rethink.
 
-```
+\```
 OPTION B · THE RIGHT MOVE
-```
+\```
 
 Expose a GPU-memory visibility API to entitled defenders.
 

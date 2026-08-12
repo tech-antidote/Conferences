@@ -4,7 +4,7 @@ speakers: ["Aleksandr Krasnov"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Aleksandr Krasnov - Harvest Now, Decrypt Later Practical Attacks on Post-Quantum Cryptography Implementations - slides.pdf"
 pages: 23
 sha256: "c8eacfe97044b6eb7d66ad3b7e88b9106be67f0d921575ed10209716f73ba89c"
@@ -12,15 +12,20 @@ text_chars: 12138
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:11:22Z"
+converted_at: "2026-08-12T06:19:11Z"
 ---
 # Harvest Now, Decrypt Later Practical Attacks on Post-Quantum Cryptography Implementations
 
 **Speakers:** Aleksandr Krasnov  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Aleksandr Krasnov - Harvest Now, Decrypt Later Practical Attacks on Post-Quantum Cryptography Implementations - slides.pdf` (23 pages)
+
 
 ## Slide 1
 

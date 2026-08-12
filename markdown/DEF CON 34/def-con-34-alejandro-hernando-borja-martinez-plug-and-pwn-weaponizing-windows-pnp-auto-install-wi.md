@@ -4,23 +4,28 @@ speakers: ["Alejandro Hernando", "Borja Martinez"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Alejandro Hernando, Borja Martinez - Plug And Pwn Weaponizing Windows PnP Auto-Install - Wi.pdf"
 pages: 43
 sha256: "5c5fe1701291af05a429574aa75e9e9ad185c78094fe9cc0ac4cb9105665f545"
-text_chars: 22201
+text_chars: 20536
 ocr_pages: 29
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.2
+ocr_unreliable_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:11:42Z"
+converted_at: "2026-08-12T06:19:43Z"
 ---
 # Plug And Pwn Weaponizing Windows PnP Auto-Install
 
 **Speakers:** Alejandro Hernando, Borja Martinez  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Alejandro Hernando, Borja Martinez - Plug And Pwn Weaponizing Windows PnP Auto-Install - Wi.pdf` (43 pages)
+
 
 ## Slide 1
 
@@ -32,20 +37,12 @@ Alejandro Hernando @0xedh & Borja Martínez @borjmz
 
 0xedh@defcon34:~$ whoami
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Oxedh@defcon34:~$ whoami
-- Oxedhadefcon34
 // Alejandro Hernando / @0xedh
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 Red team and researcher in the Hacking Accenture
@@ -53,7 +50,6 @@ Spain team.
 I like to break things in my free time
 and spend money on gadgets.
 Github: @0xedh
-Telegram: @edhx0
 Twitter: @0xedh
 ```
 
@@ -61,11 +57,11 @@ Twitter: @0xedh
 
 borjmz@defcon34:~$ whoami
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 borjmz@defcon34:~$ whoami
-- bor jmzadefcon34
 // Borja Martinez / @borjmz
 //
 // Red team and researcher in the Hacking Accenture
@@ -73,7 +69,6 @@ borjmz@defcon34:~$ whoami
 //
 // From time to time I play the occasional CTF
 // and was part of the ID-10-T (Retired) team.
-//
 // Telegram: @borjmz
 // Twitter: @Qm9yamFN
 // Github: @borjmz
@@ -119,7 +114,8 @@ Doing it remotely. No hardware.
 
 Sierra Wireless “SwiService.exe (1/2)”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sierra Wireless “SwiService.exe (1/2)”
@@ -132,9 +128,6 @@ r
 51 local_d@.nLength = 0x18;
 52 local_d®.1pSecurityDescriptor = local_90;
 // Exposes a named pipe with an Everyone r/w ACL. |
-r
-pvVarl2 = CreateNamedPipeW(param_2,0x40000003 ,6,Oxff,param_4,0,5000,
-&local_d@Q) ;
 if (pvVar12 == (HANDLE) OxffffffffffffffTF) {
 GetLastError();
 pwVar9 = L"Failed to create named pipe [%s]. Err - %d";
@@ -149,7 +142,8 @@ FUN_140087070(6,3,L"Failed to create named pipe [%s]. Err - %d",param_2) ;
 
 Sierra Wireless “SwiService.exe (2/2)”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sierra Wireless “SwiService.exe (2/2)”
@@ -158,7 +152,6 @@ Sierra Wireless “SwiService.exe (2/2)”
 89 local_12d@ = local_10b8;
 90 local_12d8 = *(undefined4 **)((longlong)pvVar2 + 0x48) ;
 91 FUN_140014940(1local_838,0x400,L"interface ipv%d add dns \"%s\" %s", (ulonglong) uVar8) ;
-92 FUN_1400027c0( (undefined (*) [16])L"netsh.exe", local_838,0,1);
 93 }
 94 else {
 95 if ((bool)*(char *)(param_1 + 1) != (iVar3 == @)) {
@@ -174,18 +167,17 @@ Sierra Wireless “SwiService.exe (2/2)”
 
 SONY + SIERRA - Sierra recap
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SONY + SIERRA - Sierra recap
 1 emulate Sierra EM?734@ 1199:Ag88 SIERRA
 SwiService.exe (SYSTEM) opens a NULL-DACL pipe \\.\pipe\SwiServicePipe -
 Everyone R/W, local or over SMB/4d45
-Vv
 2 call SetDns (msg type 9) -> hijack DNS SIERRA
 service runs netsh ... add dns as SYSTEM -> machine ONS = attacker;
 FlushONS (type 8) for instant effect
-Vv
 3 attacker serves ONS
 wuu.sony.,co.jp -> attacker IP; everything else -> 8.8.8.8
 ```
@@ -194,11 +186,11 @@ wuu.sony.,co.jp -> attacker IP; everything else -> 8.8.8.8
 
 Sony Felica “felica_coinst.dll (1/2)”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sony Felica “felica_coinst.dll (1/2)”
-r
 19 /* 0x7334 1 ClassInsatller
 20 0x7334 2 ClassInstaller
 21 This is not my typo! Sony's own typo in the export table. */
@@ -213,7 +205,6 @@ r
 31 files and writes them to disk.
 32 This is where path traversal triggers */
 33 puVar4 = (undefined *)ORCHESTRATOR_DOWNLOAD( ) ;
-r
 142 iVar2 = FUN_02013a90((longlong) &local_548) ;
 144 puVar5 = URL_STRING_2(&local_548) ;
 145 std: :basic_string<>: :assign(local_220, (basic_string<> *)puVar5,0, OxfffffffffffffTTF) ;
@@ -226,11 +217,11 @@ r
 
 Sony Felica “felica_coinst.dll (2/2)”
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Sony Felica “felica_coinst.dll (2/2)”
-r
 58 LAB_0200dd36:
 60 /* Substring after last "/" */
 61 pbVar2 = FUN_02014624(param_2,local_40,1Var5 + 1,OxfffffffttfffttTTF) ;
@@ -238,16 +229,12 @@ r
 63 std: :basic_string<>: :assign((basic_string<> *)param_1,pbVar2,0,0xfffffftfffttfTTF) ;
 65 free(local_38) ;
 66 }
-z
 169 std: :basic_string<>::assign((basic_string<> *)&local_4a8,"pUr1",4) ;
 170 FUN_02015e10( (longlong) &local_4a8, (longlong)&local_548) ;
 171 DOWNLOAD_TO_TEMP(pcVar10,"url_list.txt") ;
 172 local_528 = Qxf;
 173 local_530 = Q;
 174 local_54@ = Q;
-_|
-r
-62 std: :basic_string<>::assign(local_518," at Util: :Download().",@x15);
 63 GetTempPathA(0x104,1local_148) ;
 64 local_578 = Oxf;
 65 local_580 = Q;
@@ -258,22 +245,18 @@ r
 
 SONY + SIERRA - Sony recap
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 SONY + SIERRA - Sony recap
 4 emulate Sony FeliCa @54C:86C3 SONY
 felica_coinst1658.d11 ClassInstaller (DIF @x1e) as SYSTEM pulls url_list /
 ins_list / app_info over plaintext HTTP from the spoofed Sony host
-Vv
 5 path traversal -> arbitrary write to System32 SONY
 filename scan stops at / only (no .. / \ filter) -> SYSTEM writes
-o\. 4. SWindows\System32\WUC6d, d11
-Vv
 6 re-emulate Sierra -> load the planted DLL SIERRA
 SwiService.exe loads WUC64.d11 from System32
-Vv
-7 code execution as NT AUTHORITY SYSTEM
 D1llMain runs as SYSTEM - pre-login console / reverse shell
 ```
 
@@ -293,7 +276,8 @@ D1llMain runs as SYSTEM - pre-login console / reverse shell
 
 NoPlug & pwn - USB_REDIR umrdp.dll (1/2)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NoPlug & pwn - USB_REDIR umrdp.dll (1/2)
@@ -310,14 +294,14 @@ NoPlug & pwn - USB_REDIR umrdp.dll (1/2)
 98 7* ADD_DEVICE / announce to PnP */
 99 ADD_DEVICE_FUN_18002fb94(param_1,uVar12,iVar4 == Q);
 100 }
-a
 ```
 
 ## Slide 15
 
 NoPlug & pwn - USB_REDIR termsrv.dll
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NoPlug & pwn - USB_REDIR termsrv.dll
@@ -325,13 +309,9 @@ NoPlug & pwn - USB_REDIR termsrv.dll
 10 uVar3 = 0x8Q070057;
 11 if ((param_2 != (uint *)@x@) && (param_4 != Q)) {
 12 /* compare key to
-{93D359D5 -831F -47B4 - 90BE -8383AF8F1BOE}
-*/
 13 1Var1 = 0x47b4831f93d359d5 - *param_1;
 15 1Varl1 = Oxelb8faf8383be90 - param_1[1];
 16 }
-a
-r
 36 /* BIT 11 of WinStation config = fDisablePNPRedir */
 38 uVar2 = *(uint *)(param_4 + @x1f00) >> Oxb & 1;
 39 }
@@ -350,7 +330,8 @@ r
 
 NoPlug & pwn - USB_REDIR umrdp.dll (2/2)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NoPlug & pwn - USB_REDIR umrdp.dll (2/2)
@@ -365,14 +346,12 @@ NoPlug & pwn - USB_REDIR umrdp.dll (2/2)
 21 +}
 22 if (local_res8 != (short *)@x®) {
 23 WinStationFreePropertyValue() ;
-24 «+}
 25 if ((((undefined **)PTR_LOOP_180051000 != &PTR_LOOP_180051000) &&
 27 uVar2 = FUN_1800daf4();
 28 pwVar3 = L"Enabled";
 30 pwVar3 = L"Disabled";
 31 }
 32 FUN_180014324(*(undefined8 *) (PTR_LOOP_18005100@ + 0x10) ,@x5Q,&DAT_180049058, uVar2, pwVar3) ;
-33. +}
 34 /* ALLOW device announce ONLY when value == @ */
 35 return iVar4 == Q;
 36 }
@@ -382,7 +361,8 @@ NoPlug & pwn - USB_REDIR umrdp.dll (2/2)
 
 NoPlug & pwn - USB_REDIR RealSense POC
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 NoPlug & pwn - USB_REDIR RealSense POC
@@ -392,8 +372,6 @@ RealSenseF26@Coinstaller_227975.d11 (WHOL) -> launches Setup.exe [SYSTEM]
 v
 2 co-installer drops Setup.exe
 copies ...\realsensef2a8depth.inf_amd64_*\Setup.exe ->
-C:\Intel\RSOCM\Setup. exe
-Vv
 3 ProcMon - insecure DOLL search order in Setup.exe PROCMON
 Setup.exe CreateFile C:\Intel\RSOCMS\CRYPTBASE.d11 NAME NOT FOUND <- we
 plant it here
@@ -426,44 +404,34 @@ POC_1 - USB_REDIR LPE
 
 ## Slide 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 - PhP as the Loader
 Windows PnP install path
 "the loader"
-' _—™~
-Physical USB) (ROP USB redirection] |jpnp_simulate.exe
 FaceDancer remote path research path
-v
 Vendor package/softuare
 privileged install path _|
 ```
 
 ## Slide 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 = From Features to Primitives
-f*
 We were not hunting a single vendor bug.
 We mapped packages Windows can bind to USB identities.
 The real surface starts when vendor code enters the install path.
-*f
-¥
 USB identity
-t
 Windows package match
-y
 Yendor codé appears
-mo a
-—~Y
 co-installer
 service
 executable] jconfig logic
-Ss Ss
-2
 Offensive primitive
 ```
 
@@ -471,16 +439,15 @@ Offensive primitive
 
 From packages to USB identities
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 From packages to USB identities
 1 collect packages
 WU/CATALOG
 Microsoft Catalog + Windows Update -> CABs -> INFs -> Hardware IDs
-Vv
 # triage vendor code
-PE
 co-installers, services, standalone EAEs, imports, registry writes, named
 pipes, service controls
 3 reproduce the identity
@@ -499,37 +466,33 @@ interfaces and descriptors.
 
 pnp_simulate.exe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pnp_simulate.exe
 1 run prp_simulate. exe ADMIN
 --Vid KAKA --pid KAKA; builds USB\WVID_XXKHXGPID_XAKK; starts observer via
-CM_Register_Notification.
 2 SetupDi device creation DEVCON
-SetupODiCreateDeviceInfoLlist;
 SetupDiCreateDeviceInfoW(ROOT, DICO_GENERATE_ID); set hardware ID.
-4
 3 DIF_REGISTERDEVICE -> device tree KEY STEP
 Device visible to PnP Manager, Device Manager and Windows Update; creates
-ROOTS PHPSIMDEVICE.66a88,
 ```
 
 ## Slide 24
 
 pnp_simulate.exe
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pnp_simulate.exe
 4 DilnstallDevice -> ODriverStore QUERY
 Local driver search only; local INFs; writes setupapi.dev,log.
-Vv
 5 WU COM API -> catalog search QUERY
 IUpdateSearcher: :Search; catalog metadata for discovery; not proof of auto-
 install,
-Vv
 6 --install -> CM_Setup_DevNode(READY) INSTALL
 Real install path; same API boundary into kernel. Without --install: query-
 only, no system changes.
@@ -539,11 +502,11 @@ only, no system changes.
 
 Catalog Hit != Auto-Install
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Catalog Hit != Auto-Install
-WU COM API / IUpdateSearcher — _orscoverv.
 > Returns catalog metadata,
 > Great for finding candidates,
 > Includes automatic, manual, old, and catalog-only
@@ -553,7 +516,6 @@ download or install that package. */
 Device Installation AUTO-INSTALL PATH
 Service / Server-Side
 Resolve
-> Triggered by CH_Setup_DevNode (READY).
 l > Runs through DsmSvce as a privileged install flow,
 > Restricted path: far fewer candidates,
 > Match -> CAB staging -> drvinst.exe install path.
@@ -563,43 +525,36 @@ l > Runs through DsmSvce as a privileged install flow,
 
 Phase 1: Device Identity
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-e [ acevancer
 Phase 1: Device snutated Use device
-¥
 Identity Device descriptor
 YID / PID / device class
-¥v
 Configuration
 descriptor
-i
 Control descriptors.
 Control the hardware IDs
 Windows will resolve.
-# f
 Interface descriptors
 class / subclass / protocol
-Windows buildsl*
 hardware IDs
-USB\VID_XRRRGEPIO_YYYYEMI_22
 composite device
 INF matching _|
-USB\VID_RRKKEPIO_VYYY
 ```
 
 ## Slide 27
 
 Phase 2: USB identity to devnode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phase 2: USB identity to devnode
 1 real USB path HARDWARE
 USB hub reads descriptors from the emulated device.
-4
 2 PDO KERNEL
 Creates a Physical Device Object for the child device.
 Vv
@@ -611,19 +566,15 @@ ToInvalidateDeviceRelations(BusRelations) tells PnP: new child device.
 
 Phase 2: USB identity to devnode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phase 2: USB identity to devnode
 4 pnp_simulate.exe path USER MODE
 No full USB bus emulation. We reproduce the useful part from user-mode,
-Vv
 5 Hardware IDs SETUPDI
-SetupDiSetDeviceRegistryProperty(SPORP_HARDWAREIO).
-Vv
 6 Register devnode DEVCON
-SetupDiCallClassInstaller(DIF_REGISTERDEVICE),
-Vv
 Y Same research target COMMENT
 Both paths give us a devnode with controlled hardware IDs that Windous
 tries to resolve.
@@ -633,19 +584,16 @@ tries to resolve.
 
 Phase 3: CM_Setup_DevNode
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phase 3: CM_Setup_DevNode
-1 CH_Setup_DevNode( READY) WINDBG
-CM_Setup_DevNode(deviInst, CMH _SETUP_DOEVNODE_READY) enters
 cfgmgr32!Local_CM_Setup_DevNode.
 2 DeviceloControl(axd7a8dF) KERNEL BOUNDARY
 The request crosses into the Configuration Manager / PnP kernel path.
-Vv
 3 PiCh* handling KERNEL
 PiCMFastIoDeviceDispatch -> PiCMHandleIoctl -> PiCMDeviceAction.
-Vv
 4 PidueveDeviceRequest
 The action i8 queued. User-mode returns, but the real PnP work continues
 asynchronously,
@@ -655,7 +603,8 @@ asynchronously,
 
 Phase 4: Device Installation Service
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Phase 4: Device Installation Service
@@ -664,7 +613,6 @@ Queued action picked up by the PnP worker; device IDs and compatibility are
 resolved,
 2 Device Installation Service SYSTEM
 OsmSve runs inside svchost.exe as SYSTEM and handles the privileged install
-flow.
 3 Package resolution FILTERED
 Local DriverStore first. If needed: Server-Side Resolve -> Windows Update
 CAB staging.
@@ -681,7 +629,8 @@ POC_2: Internals Demo
 
 Signed does not mean safe logic
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signed does not mean safe logic
@@ -707,7 +656,8 @@ action. */
 
 Wacom: The Bugdoor
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 050
@@ -735,9 +685,7 @@ Wacom: The Bugdoor
 SHA256 955fb51d0fc2b3ccb192b6ed707771a99d28be2e7c1a7541be7762207325c86F
 Signed vendor service. The interesting part is privileged logic,
 not memory corruption. */
-RegOpenKeyExA (HKLM,
 "SYSTEM\\CurrentControlSet\\Services\\WlabletServiceISD\\Service",
-edi
 /* Registry trigger verified at 0x140036950 -> 0x140036981 */
 RegQueryValueExA(hKey, "PowerT", NULL, &type, (BYTE *)&value, &cbData) ;
 if (type == REG BINARY & cbData == 4 &
@@ -757,24 +705,21 @@ CreateProcessAsUserW(token, NULL, cmdline, ...);
 
 Wacom Trigger Conditions
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Wacom Trigger Conditions
 1 registry key
 Service key: WlabletServiceISD\\Service
-Vv
 2 trigger value
 REG_BINARY with bytes ?F dC 6B 34
 3 binary checks
 type == 3, chData == 4, compare with @x3d6b4c7f
-Vv
 4 service context
 WlabletServiceISD.exe runs as LocalSystem,
-Vv
 5 process path
 CreateProcessAsUserW -> WinSta@\\default -> cmd.exe
-Vv
 HKLM
 PowerT
 VERIFIED
@@ -793,11 +738,11 @@ POC_3: Wacom
 
 Atheros
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Atheros
-i AdminService.exe
 /* Found in our pipeline; aligns with public
 CVE-2019-10617 */
 // AtherosSvc / AdminService.exe
@@ -822,30 +767,25 @@ privilege */
 
 Atheros INI -> Registry
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Atheros INI -> Registry
 [ 1 INI payload
 [AthService]
 regType = 1 / REG_SZ
-t
 2 AtherosSvc
 ControlService(133)
 AdminService.exe as LocalSystem
-‘i
 3 privileged registry write
-HKLH\SYSTEM\CurrentControlSet\Control\Print\Monitors
 PocPortMon
 Driver = C:\ProgramData\Atheros\PocPortMon.d1l
 4 Spooler start a
 spoolsyv.exe as SYSTEM le stable REG_S2 path; exact binary write happens from SYSTEM DLL */
 enumerates Print Monitors
-¥
 5 DLL load
-PocPortMon.dil
 runs inside spoolsyv.exe
-¥
 6 bridge to Wacom
 urite PowerT as REG_BINARY
 ```
@@ -854,7 +794,8 @@ urite PowerT as REG_BINARY
 
 The chain we wanted vs the chain that worked
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 The chain we wanted vs the chain that worked

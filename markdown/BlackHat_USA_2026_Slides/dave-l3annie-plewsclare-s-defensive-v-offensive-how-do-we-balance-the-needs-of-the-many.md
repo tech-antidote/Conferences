@@ -8,13 +8,17 @@ year: 2026
 source_pdf: "BlackHat_USA_2026_Slides/DAve L3&Annie Plews&Clare S_Defensive V Offensive - How Do We Balance The Needs Of The Many.pdf"
 pages: 39
 sha256: "193d56470a186af1de2e437bbacb984c20c9dec08fef7e3aa57b376ed9989972"
-text_chars: 11606
-ocr_pages: 1
-has_ocr: true
+text_chars: 11475
+ocr_pages: 0
+has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
-extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:07:06Z"
+extractor: "pymupdf4llm 1.28.2"
+converted_at: "2026-08-12T05:30:29Z"
 ---
 # Defensive V Offensive - How Do We Balance The Needs Of The Many
 
@@ -22,23 +26,12 @@ converted_at: "2026-08-11T23:07:06Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/DAve L3&Annie Plews&Clare S_Defensive V Offensive - How Do We Balance The Needs Of The Many.pdf` (39 pages)
 
+
 ## Slide 1
 
 ## **Defensive V Offensive? How Do We Balance The Needs Of The Many**
 
 - **Black hat USA 2026**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-gi2.2,| National Cyber
-=| Security Centre
-GCt
-How Do We Balance The Needs Of The
-Many
-- Black hat USA 2026
-> Defensive V Offensive?
-```
 
 ## Slide 2
 

@@ -8,18 +8,25 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Pellaeon Lin & Mona Wang & Jeffrey Knockel_Should We Chat, Too Security Analysis of WeChat's MMTLS Encryption Protocol.pdf"
 pages: 48
 sha256: "e6af322ee74f330ccbc4a320af10d15100dfe61bec07d663b9d0f5f75ab1d974"
-text_chars: 17505
-ocr_pages: 11
+text_chars: 16088
+ocr_pages: 10
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 83.3
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:07:04Z"
+converted_at: "2026-08-12T03:56:19Z"
 ---
 # Should We Chat, Too Security Analysis of WeChat's MMTLS Encryption Protocol
 
 **Speakers:** Pellaeon Lin, Mona Wang, Jeffrey Knockel  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Pellaeon Lin & Mona Wang & Jeffrey Knockel_Should We Chat, Too Security Analysis of WeChat's MMTLS Encryption Protocol.pdf` (48 pages)
+
 
 ## Slide 1
 
@@ -28,16 +35,6 @@ converted_at: "2026-08-11T21:07:04Z"
 Security Analysis of WeChat’s <u>MMTLS Encryption Protocol</u>
 
 **Pellaeon Lin, Mona Wang**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Thursday, April 3 2025
-Security Analysis of WeChat's
-MMILS Encryption Protocol
-Pellaeon Lin, Mona Wang
-munkschool & 1 ORSNTo
-```
 
 ## Slide 2
 
@@ -99,46 +96,46 @@ Agenda **Security Analysis of WeChatʼs MMTLS Encryption Protocol**
 
 **Why custom encryption?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 84/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-What’s being sent?
 Motivation
-Is the encryption sound?
-| Time | Source | Destination | Protocol
-33 170... Android. local 43.
-76 170.. Android.local 49.
-Android.
-111 17@.. Android.local 49.
-116 17@.. Android. local 49.
-121 170... Android.local 49.
-126 17@.. Android.local 49.
-134 17@.. Android.local 49.
-Frame 92: 392 bytes on wir
-Ethernet II, Src: Android.
-Internet Protocol Version
-Transmission Control Proto
-[5 Reassembled TCP Segment
-Hypertext Transfer Protoco
+
+What's being sent?          Is the encryption sound?          Why custom encryption?
+
+[Wireshark packet list]
+No.      | Time  | Source        | Destination    | Protocol | Length | Info
+  33 170...  Android.local  43.130.30.2...  HTTP       652  POST /mmtls/7d44b6a2 HTTP/1.1
+  76 170...  Android.local  49.51.67.253    HTTP       658  POST /mmtls/2a9b1264 HTTP/1.1
+  92 170...  Android.local  49.51.67.253    HTTP       392  POST /mmtls/2a9b1264 HTTP/1.1
+ 111 170...  Android.local  49.51.67.253    HTTP       713  POST /mmtls/582198f5 HTTP/1.1
+ 116 170...  Android.local  49.51.67.253    HTTP       863  POST /mmtls/582198f5 HTTP/1.1
+ 121 170...  Android.local  49.51.67.253    HTTP       670  POST /mmtls/582198f5 HTTP/1.1
+ 126 170...  Android.local  49.51.67.253    HTTP       670  POST /mmtls/582198f5 HTTP/1.1
+ 134 170...  Android.local  49.51.67.253    HTTP       730  POST /mmtls/582198f5 HTTP/1.1
+
+[packet detail pane - lines clipped at pane edge]
+> Frame 92: 392 bytes on wir
+> Ethernet II, Src: Android.
+> Internet Protocol Version
+> Transmission Control Proto
+> [5 Reassembled TCP Segment
+> Hypertext Transfer Protoco
 > Data (5704 bytes)
-130.30.2.. HTTP
-51.67.253 HTTP
-51.67.253 HTTP
-51.67.253 HTTP
-51.67.253 HTTP
-51.67.253 HTTP
-51.67.253 HTTP
-| Length | Info
-652 POST /mmtls/7d44b6a2 HTTP/1.
-658 POST /mmtls/2a9b1264 HTTP/1.
-/mmtls/2a9b1264 HTTP/1.
-713 POST /mmtls/582198f5 HTTP/1.
-863 POST /mmtls/582198f5 HTTP/1.
-67@ POST /mmt1ls/582198f5 HTTP/1.
-67@ POST /mmt1ls/582198f5 HTTP/1.
-730 POST /mmtls/582198f5 HTTP/1.
-Why custom encryption?
-PPP PRP Pp
+
+[hex pane]
+00e0   43 6c 69 65 6e 74 0d 0a   0d 0a 19 f1 04 00 a1 00
+00f0   00 00 9d 01 04 f1 01 00   a8 4f 67 76 fb b4 66 8f
+0100   2a 36 bb 55 74 94 c4 0c   cd c8 bb f4 44 41 b0 24
+0110   d8 8e c4 86 29 cc 35 e2   1b 65 6e 78 3c 00 00 00
+0120   6f 01 00 00 00 6a 00 0f   01 00 00 00 63 01 00 09
+0130   3a 80 00 00 00 00 00 3d   00 0c ce 4f 44 55 2e a9
+0140   34 fc aa d4 e9 af 00 48   00 f2 e6 a8 76 9f b1 1a
+0150   95 cc b8 9b aa 47 4a 75   e1 41 fc ef 7a f6 fc ba
+0160   89 30 ca 4e ff fe dc 68   23 bb fe 14 69 09 64 54
+0170   0b 40 a4 49 9b d5 6f 7b   69 7f 3e e6 9e 2b 18 fe
+0180   75 68 6c b5 15 70 80 a6   06 59 9e 00 f8 bc 1f 3e
 ```
 
 ## Slide 7
@@ -173,7 +170,8 @@ WeChat network request lifecycle
 
 - **API endpoint is referred to as “Scene”, has unique “type” number and URI**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 /* renamed from: com.tencent.mm.model.bm */
@@ -188,9 +186,7 @@ aOverride /Z com tencent .p486mm.network .MMTLSConnection
 public fingl int getType() {
 return }126;
 }
-@Override // com.tencent .p486mm.network.MMTLSConnection
 public final String getUri() {
-return J"/cgi-bin/micromsg-bin/newreg"
 }
 ```
 
@@ -376,7 +372,8 @@ How does WeChat encrypt requests?
 
 How does WeChat encrypt requests?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How does WeChat encrypt requests?
@@ -494,7 +491,8 @@ Data record
 
 MMTLS handshake
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 MMITLS handshake
@@ -538,22 +536,19 @@ es Application Data > : :
 
 Logged out LoggING in Logged in
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Business-Layer
 Unencrypted Encrypted key : :
 BUSINESS-LAYER: : BUSINESS-LAYER: : BUSINESS-LAYER:
 ASYMMETRIC MODE : RETRIEVING SESSION KEY . SYMMETRIC MODE
-Client | | Sever |: | Client Sever |: Client | | Server
 Request = > : Request for > : | »
 (client publickey) . (client publickey) . Request metadat
-Request Data “ S@fet Request Data | “Sere: Request Data “ S°ssion
 : :
 Response metadata : Response metadata :
 (server publickey) : P* (server publickey) : a Response metadata
-Response Data _/NeW_secret Response Data“ "eW_secret: Response Data “Session
-Ei ceescetetts | Esibrnctisisl
 : | session “new_secret :
 Logged out LoggING in Logged in
 ```
@@ -604,18 +599,15 @@ Logged out LoggING in Logged in
 
 ## Slide 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TOP SECRET//SI//NOFORN
 ers Current Efforts - Google
 GFE = Greale
-Fort
 End Xe
-Server ere.
 TOP SECRET//SI//NOFORN
-eee
-ininm
 THECITIZENLAB
 ```
 
@@ -676,7 +668,8 @@ The remaining one was **MMTLS… !**
 
 ## Slide 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 TOP SECRET STRAP1
@@ -699,7 +692,8 @@ cc HO Soother UK information legislaton. Refer disclosure requests lo GCHQ
 
 ## Slide 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Success Stories
@@ -707,29 +701,16 @@ Success Stories
 * Discovered by GCHQ analyst during DSD workshop
 * Chinese mobile web browser — leaks IMSI, MSISDN,
 IMEI and device characteristics
-eee
-ininm
-ata) THECITIZENLAB
-ab
 ```
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 67/100 on the text kept, 45/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ucweb
-@ Hep Actons* Reports» View»
 C) State © Datetime = Datetime End Browser Version i Address: Handset Mode! MEL MSI Global Tile Platform Active User Casenotation
-+) 1 A 2012.05-1302:29:20 2012-05-13 02:29:23 8.0.3.107 23movies ——nokiae90-4 19379900100 java E9DHL00000K0000
-2 £) 1 & — 2012-05-13.06:00:59 2012-05-13 06:01:00 8.0.3.107 23movies ——nokiae90-4 9379900100 java E9DHL00000M0000
-af) 1 & 201205431939: 2012-05-13 19:39:11 7.9.3.103 HTC AS100 android £E980€00000!0000
-4) 1 2 2012.05-1492:29:53 2012-05-1412:29:53 8.0.4.121 WokiaE72-4 E9DHL.00000m0000
-5) 1B 2012-05-14 174646 Py 2012-05-14 17:46:46 8.0.4.121 Imasti —_Nokiax6.00 16H125221450000
-6) 1 & 2012-05-15 18:28:19 fy 2012-05-15 18:26:19 8.0.4.421 sti NokiaX6-00 93781090013 15H125221450000
-7 OL) 1 2012-05-15 20:02:58 3 5 2012-05-15 20:02:5€ 8.0.4.121 Nokiax6.00 193781090013 sis 1451H1252214500¢
-eee
-ininm
 THECITIZENLAB
 ```
 
@@ -823,7 +804,8 @@ traffic
 
 Is the proprietary cryptography secure?
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Is the proprietary cryptography secure?
@@ -831,10 +813,8 @@ Protocol family # apps ome Paes dene MAU Decryptable Fixed? pcre reduest
 Kuaishou SDK 76 35.10B Kuaishou 692 mill YES YES Device metadata
 fF 82 30.30B mz ma YES Tried to |Device metadata
 PY 15 25.43B Y | | YES NO Browsing data
-fF 11 18.10B mz | YES NO — |DNS requests
 PY 7 17.62B | m7 YES NO — |Browsing data
 iQIYl 3 11.28B iQIYI 429 mill YES YES Network metadata
 fF 37 10.34B m7 | YES NO Security config*
-PY 38 9.02B m7 | YES NO  |Device metadata
 *contained vuln s.t. network attackers can read file contents on users phones
 ```

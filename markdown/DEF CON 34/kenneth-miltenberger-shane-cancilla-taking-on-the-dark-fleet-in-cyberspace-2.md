@@ -4,23 +4,28 @@ speakers: ["Kenneth Miltenberger", "Shane Cancilla"]
 conference: "DEF CON"
 conference_full: "DEF CON 34"
 edition: "34"
-year: null
+year: 2026
 source_pdf: "DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace! (2).pdf"
 pages: 27
 sha256: "e6452673a4458f0f15a9cce9492da16a4aa688ae4b48cd1946585518a6601fd4"
-text_chars: 8392
-ocr_pages: 5
+text_chars: 8165
+ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 93.0
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:30:13Z"
+converted_at: "2026-08-12T06:46:51Z"
 ---
 # Taking on the Dark Fleet... in Cyberspace! (2)
 
 **Speakers:** Kenneth Miltenberger, Shane Cancilla  
 **Conference:** DEF CON 34  
 **Source:** `DEF CON 34/Kenneth Miltenberger, Shane Cancilla - Taking on the Dark Fleet... in Cyberspace! (2).pdf` (27 pages)
+
 
 ## Slide 1
 
@@ -66,15 +71,6 @@ UNCLASSIFIED
 
 UNCLASSIFIED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-UNCLASSIFIED
-U.S. Coast Guard Cyber Protection Teams
-CALIFORNIA REPUBLIC
-UNCLASSIFIED
-```
-
 ## Slide 5
 
 UNCLASSIFIED
@@ -85,13 +81,12 @@ UNCLASSIFIED
 
 UNCLASSIFIED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-i -.
 UNCLASSIFIED
 Last Year
-a
 te N
 From Shanghai to the Shore:
 The Silent Threat in Global Shipping
@@ -108,7 +103,8 @@ UNCLASSIFIED
 
 UNCLASSIFIED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 UNCLASSIFIED
@@ -240,27 +236,16 @@ Consolidated Findings of Dark Fleet Vessel Cybersecurity Assessment
 
 UNCLASSIFIED
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 >
-—
-ae
-wi
 >
 im
 a
-im
-oO
-Zz
-i
 >
-1}
-om
 a
-Zz
-fe}
-oO
 Cybersecurity of Dark Fleet Vessels
 High
 (Severe/

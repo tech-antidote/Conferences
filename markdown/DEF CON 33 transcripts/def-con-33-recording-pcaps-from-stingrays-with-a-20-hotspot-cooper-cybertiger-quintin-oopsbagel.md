@@ -12,7 +12,7 @@ duration_seconds: 2388
 words: 7718
 text_chars: 42394
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Recording PCAPs from Stingrays With a $20 Hotspot-Cooper 'CyberTiger' Quintin, oopsbagel

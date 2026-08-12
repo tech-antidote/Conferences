@@ -8,19 +8,24 @@ year: 2024
 source_pdf: "OffensiveCon24 slides/Bill Demirkapi_Booting with Caution Dissecting Secure Boot's Third-Party Attack Surface.pdf"
 pages: 68
 sha256: "325140f92e153bd2f8e728360b558337ed58f8c169af9c6fa5baa17992064561"
-text_chars: 22428
+text_chars: 22306
 ocr_pages: 3
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 90.9
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:21:34Z"
+converted_at: "2026-08-12T05:55:55Z"
 ---
 # Booting with Caution Dissecting Secure Boot's Third-Party Attack Surface
 
 **Speakers:** Bill Demirkapi  
 **Conference:** OffensiveCon 2024  
 **Source:** `OffensiveCon24 slides/Bill Demirkapi_Booting with Caution Dissecting Secure Boot's Third-Party Attack Surface.pdf` (68 pages)
+
 
 ## Slide 1
 
@@ -288,14 +293,12 @@ Microsoft Corporation UEFI CA 2011 Microsoft Windows Production PCA 2011
 
 **Read more** : _One Bootloader To Rule Them All_ by Eclyspium
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Third-Party UEFI Images, Example
-° Signed UGFI Shells
 ° 2 unique shells
-CV6G-2022-34301 "°: : CV6-2022-34303 ~""
-EEshim.efi
 : CryptoPro Secure Disk for BitLocker
 Read more: One Bootloader To Rule Them All by Eclyspium
 ```
@@ -334,10 +337,10 @@ Read more: One Bootloader To Rule Them All by Eclyspium
 
    - Instead of adding every GRUB2 image hash to DBX, a single SBAT revocation can revoke all GRUB2 images below a certain version.
 
-```
+\```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,2,Free Software Foundation,grub,2.04,https://www.gnu.org/software/grub/
-```
+\```
 
 **Example SBAT Entry**
 
@@ -700,7 +703,8 @@ OOB-W
 
 ## Slide 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attacker Victim
@@ -721,7 +725,8 @@ No. Time Source Destination Protocol Length Info
 
 A “patch” was released in January 2024. **Are customers protected?**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fixing the Bug

@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away.pdf"
 pages: 33
 sha256: "b977350cb67e85fd814b02f7266202779e3105f65bd6eca4462758424af38cc9"
-text_chars: 11349
-ocr_pages: 8
+text_chars: 10304
+ocr_pages: 6
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 88.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:54:09Z"
+converted_at: "2026-08-12T03:47:05Z"
 ---
 # A Run a Day Wont Keep the Hacker Away
 
 **Speakers:** Dhondt  
 **Conference:** Black Hat ASIA 2023  
 **Source:** `Black Hat Asia 2023 slides/AS-23-Dhondt-A-Run-a-Day-Wont-Keep-the-Hacker-Away.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -32,11 +37,11 @@ _A run a day won't keep the hacker away_ : Inference Attacks on Endpoint Privacy
 
 2
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Running is enjoying a boom REUTERS
-because of the coronavirus “U8! emer
 pandemic Exclusive: Brits on bikes as fitness app data
 shows pandemic boom
 Updated 0953 GMT psa) IKT) April 25, 2020 vases oe ‘ °
@@ -57,10 +62,10 @@ September 23, 2020, 3:00 PM GMT+2
 
 3
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-1B} BIC]
 Fitness app Strava lights up staff at
 military bases
 © 29 Januar y 2018
@@ -76,7 +81,6 @@ personnel worked, but where
 they lived
 By Rebecca Tan
 July 18, 2018 at 10:00 a.m. UTC
-Cycling
 Strava removes automatic
 flybys after safety concerns
 The ride-tracking app has now made the comparison
@@ -90,7 +94,8 @@ BY ALEX BALLINGER OCTOBER 15, 2020
 
 4
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Fitness Tracking Social Networks: Activities
@@ -98,30 +103,15 @@ Strava User — Ride Givekudos (70 [Elo 4
 Thursday, May 20, 2021 - Ghent, Flanders .
 — 1.87km 5:55 Om
 Evenin Ride Distance Moving Time Elevation
-“|
 Avg Max
 Speed 19.0km/h 20.9km/h
 Elapsed Time 5:55
 ay 8
-&
-co}
-— =
 & SLUIZEKEN
-2 BRUGSE
-o
-o OORT WATERWIJ
-Ooivea PRINSENHOF
 rstraat
-p< ELIfABETHBEGIJNHOF ATER SHON
-Co) a Gravensteen
-gestee™ we 5 q
-pronge™ Burgst*22 ST. JACOBS
 BRUGHUIZEKEN Groenevalleipark
 Riserva park © Mapbox © OpenStreetMap Improve this map
 5:05
-Dist: 1.6 km
-Elev: 9m
-Grade: 0.1%
 4 Om
 : 0.4km 0.6 km 0.8 km 1.0 km 1.2km 1.4km 1.6 km
 ```
@@ -184,7 +174,8 @@ assign each endpoint to closest fitted circle of cluster lsq fit new circle for 
 
 8
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Attack: Protected Location Inside EPZ
@@ -194,8 +185,6 @@ Attack: Protected Location Inside EPZ
 Activity metadata Total activity distance
 total_distance: 1.86, | 1.66 km 1.86 km ,
 visible_distances: o> | |
-[ 0.16, 0.18, 0.18 km {so km We
-sss ile: 0.36 km --77 7777"
 is: =" Cloaked distances Visible distance
 Available distances: Inner distance scenario: 0.16 km + 1.50 km + 0.20 km = 1.86 km
 ~~“ Total distance scenario: 0.36 km + 1.50 km = 1.86 km
@@ -209,7 +198,8 @@ Available distances: Inner distance scenario: 0.16 km + 1.50 km + 0.20 km = 1.86
 
 9
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Inner Distance Scenario
@@ -217,36 +207,23 @@ Strava User - Ride
 Give Kudos
 Thursday, Me 20/202 Ghent, Flanders 1.87 km 5:55 Om
 Evening Ride Distance Moving Time Elevation
-ag Mex
 Speed 19.0km/h 20.9km/h
 Elapsed Time 5:55
 ROOIGEM
 +]
-etele
-pageView. streams.streamData.data
 wv {latlng: Array(31), grade_smooth: Array(31), distance: Array(31), altitude: Array(31), time: Array(31)}
 >altitude: (31) [8.7, 8.7, 8.7, 8.7, 8.4, 8.1, 8.1, 8.1, 7.7, 7.5, 8, 8.2, 8.3, 8.5, 9, 9.2, 9, 9, 8.6, 8.6, 9, 9.1, 9.2, 9.3, 9.1, 9.2, 9.2, 9.3, 9.3, 9.3, 9.4]
 >distance: (31) [211.8, 294.2, 296.5, 302.6, 318.4, 337.6, 425.7, 440.5, 496.2, 551.9, 607.3, 645.8, 699.2, 737.4, 780.4, 797.7, 844.3, 851.1, 901.8, 982.4, 1063
-> grade_smooth: (31) [@, -0.3, -1.4, -@.5, -@.4, -0.4, -0.3, -0.1, 0, 0.3, 0.5, 0.6, 0.7, 0.5, 0.4, -0.3, -@.3, 0, @, 0.2, 0.2, O, O, O, @, 0.1, O.1, 0.1, 2,
 > lating: (31) [Array(2), (2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(J
 >time: (31) [41, 56, 57, 58, 64, 81, 84, 94, 105, 115, 123, 133, 140, 148, 151, 160, 162, 171, 186, 202, 208, 226, 244, 263, 272, 280, 292, 305, 307, 309]
 Ovievaarstraat
-f ABETHBEGIJNHOF FATERSH ON
-Coy
-er
 prongensest© ST. JACOBS
 BRUGHUIZEKEN Groe
-Kae od pal OpenStreetMap Improve this map
-Dist: 1.6 km
 Elev: 9m
-Grade: 0.1%
-Oak @km ke 1.0 kn ‘on ‘akm
 a Inner distance scenario
 Segments
 oe Distance covered inside EPZ leaked
-LY Beukelaarstraat 1:32 16.7km/h = -
 0.42km
-Im -0.3:
 ```
 
 ## Slide 10
@@ -278,14 +255,6 @@ Im -0.3:
 # Attack: Finding Protected Locations Inside EPZ Intuition of attack
 
 13
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attack: Finding “rotecied soeations Inside EPZ
-Intuition of attack \ YN yy ell )
-13
-```
 
 ## Slide 14
 
@@ -359,16 +328,6 @@ Observed Activity Distances
 # Attack: Finding Protected Locations Inside EPZ Predicting Location
 
 18
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Attack: Finding Protected Locations Inside EPZ
-Predicting Location
-Ue
-Ki
-18
-```
 
 ## Slide 19
 
@@ -479,14 +438,13 @@ Reflect on data minimization at design time
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 » Data leak prevention +
 Recommendations 320 + —
 Correctness (m) 7
-q J
-POPP HL HW SH
 » Avoid inner distance scenario EPZ Radius (m) == Total distance
 Strava User - Ride
 © Evening Ride
@@ -499,9 +457,7 @@ p altitude: (31) [8.7, 8.7, 8.7, 8.7, 8.4, 8.1, 8.1, 8.1, 7.7, 7.5, 8, 8.2, 8.3,
 > grade smooth: (31) [@, 0, -0.3, -1.4, -@.5, -@.4, -@.4, -0.3, -@.1, 0, 0.3, 0.5, 0.6, 0.7, 0.5, @.
 > lating: (31) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Arra
 >time: (31) [41, 56, 57, 58, 61, 64, 81, 84, 94, 105, 115, 123, 133, 140, 148, 151, 160, 162, 171,
-Dist: 1.6 km
 Elev: 9m
-Grade: 0.1%
 23
 ```
 

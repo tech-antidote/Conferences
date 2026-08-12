@@ -12,7 +12,7 @@ duration_seconds: 2476
 words: 5638
 text_chars: 29512
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Help Linux in my Webcam (• •)

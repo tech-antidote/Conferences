@@ -12,7 +12,7 @@ duration_seconds: 2232
 words: 5023
 text_chars: 28817
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:15Z"
 ---
 
 # Win-DoS Epidemic - A crash course in abusing RPC for Win-DoS & Win-DDoS

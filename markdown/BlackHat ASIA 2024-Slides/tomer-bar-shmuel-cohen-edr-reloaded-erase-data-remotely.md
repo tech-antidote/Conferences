@@ -8,19 +8,25 @@ year: 2024
 source_pdf: "BlackHat ASIA 2024-Slides/Tomer Bar & Shmuel Cohen-EDR Reloaded Erase Data Remotely.pdf"
 pages: 94
 sha256: "47900341bfe506176cb9423f86989a192f0b85abb42d9e49def98912fb879a49"
-text_chars: 39476
-ocr_pages: 42
+text_chars: 34672
+ocr_pages: 37
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 87.8
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 3
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-12T00:52:48Z"
+converted_at: "2026-08-12T04:53:30Z"
 ---
 # EDR Reloaded Erase Data Remotely
 
 **Speakers:** Tomer Bar, Shmuel Cohen  
 **Conference:** Black Hat ASIA 2024  
 **Source:** `BlackHat ASIA 2024-Slides/Tomer Bar & Shmuel Cohen-EDR Reloaded Erase Data Remotely.pdf` (94 pages)
+
 
 ## Slide 1
 
@@ -87,7 +93,8 @@ Swift
 
 5
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Research Goal - Trigger False Positives
@@ -105,13 +112,13 @@ Research Goal - Trigger False Positives
 
 6
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Research Goal - Trigger False Positives
 It’s The Devil!
 Destroy it
-©
 Windows
 Defender
 |
@@ -151,7 +158,8 @@ Step 1 Extracting EDR’s Byte-Signatures
 
 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Black Box Approach
@@ -167,36 +175,20 @@ into output
 
 ###### Windows Defender signature hunting
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 59/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Defender signature hunting
 microsoft:infected size:200-
 microsoft:infected size:200-
 FILES 20/3.61K
-131F95C510C819465FA1797F 6CCACFOD494AAAFF46F A3EAC73AE63FFBDFD8267
-) (a) %2Fhome%2Fazureuser%2Fclamav-scan&2Fclamav-testfile
-text attachment via-tor
-27502 1BBFB6489E54047 1899F 70B9D 1663F C69SECZFEZAZC45 3BAABFES 1FDOF
 ] @ © eicar.com-30638
-text known-distributor attachment — via-tor
-2546DCFFC5AD85404D0C64FBF256871CDSAGOF247 1CB7ASBFD4AC2386ESEEDAD
-0 €@ eicar_com.zip
-zip attachment _via-tor
-381EGE12E67A5C026529129A264844E7F 10291 14365EF 3BE465872A3BECS7209
-|) @€@ IT-test-eicar.cmd
-javascript direct-cpu-clock-access
-B86F2572F53889893648A9709AAAF 7 3020F 443E0233DAF582061439A8359C58
-} analysis. log. Ink
-Ink cve-2010-2568 exploit
-93609411D5226B7C5A15@ECAF42298759@A8870CSEQS5E 1CA@72273041A86E7
-] C:\Users\user\AppData\Local \Temp\23774625.bat
 javascript
 Detections
 61/65
 21/61
 46 /62
-29/60
 Sort by ~
 Size
 69B
@@ -239,7 +231,8 @@ Windows Defender Byte Signatures
 
 14
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Defender - RTFM
@@ -248,10 +241,6 @@ class MSFT_MpThreat : BaseStatus
 string SchemaVersion = 1.0.0.0";
 sint64 ThreatID;
 string ThreatName;
-( uint8 SeverityID; )
-uint8 CategorylD;
-uint8 TypeID;
-}s
 uint32 RollupStatus;
 string Resources[];
 boolean DidThreatExecute = false;
@@ -275,29 +264,23 @@ Severe Specifies the default action to take for threat alert identified as Sever
 
 15
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 WI Nn d OWS Defe Nn d er - RT F M CAutoScan: :ActipnStringFromID(enum tagMPTHREAT_ACTION)
-s
 sub edx, 1
 jz short loc_140012435 loc_14001243E:
-Severe a
-2ActionStringFromID@CAutoScan@@AEAAPY
 Article - 12/17/2020 + 2 minutes to read - 5 contributors
-Gu=
 Severe specifies the automatic remediation action taken for detected threats with a Severe alert level. 14001242c} | 1oc_140012435:
 lea rax, aQuarantine ; “Quarantine”
 retn
-yv
 Values z
-4001242:
 rax, aRemove
 1 Clean the detected threat.
 2 Quarantine the detected threat.
 3 Remove the detected threat. :
 6 Allow the detected threat.
-y
 8 Allow the user to determine the action to take with the detected
 threat.
 9 Do not take any action.
@@ -330,21 +313,19 @@ Automatic Minimize
 
 18
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Automatic Minimal Signature Generation
 e We found 130 unique signatures
-@)
 EvilSignature Times
 [autorun]shellexecute=.exeaction=Openfoldertoviewfile 990
-L av9Aqa“» a”” FA A AQ 4% 1404” 10-14-24 266
 115
 <FRAME SRC=http:www.searchvity.com/<html> 110
 <?phpeval(S POST[ 80
 cdDrivestartwscript"\."exit 77
 PKa™¥a™ | 64
-X50!P%@AP[4\PZX54(P*)7CC)7}SEICAR-STANDARD-ANTIVIRUS-TEST-FILE! SH+H* 17
 <evalrequest("")%> 14
 <?phpeval(S_REQUEST[ 13
 18
@@ -374,7 +355,8 @@ Shortest signatures with minimum special types
 
 20
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signature Limitations: how to select the best signature
@@ -382,14 +364,9 @@ Shortest signatures with minimum special types
 special
 length
 EvilSignature
-15|{\rtf1{\shpt\sp
-92
-WDVPIVAIQEFQWzRcUFpYNTQoUF4pNONDKTd3JEVIQOFSL\
 a3
 //brembotembo.com/?.dat
 26
-frampynput.keyboardstr(key
-a1
 //operasanpiox.bravepages.com/20190614890563891.xls
 a7
 cdDrivestartwscript"\."exit
@@ -406,17 +383,16 @@ Signature Limitations: how to select the best signature
 
 21
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Signature Limitations: how to select the best signature
-e {\rtf1{\shpf\sp “=
 e Alert level: Severe QO Virus & threat protection
 File was quarantined automatically Protection for your device against threats.
 Q Current threats
 Threats found. Start the recommended actions.
 i) cve-2010-3333.txt - Notepad
-| ; ExploitO97M/CVE-2010-3333.PB co, 4
 File Edit Format View Help 24/10/2022 4:36 (Active)
 {\rtf1{\shp{\sp} Action options:
 @) Quarantine
@@ -442,25 +418,12 @@ Legit file (non PE)
 
 23
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Failed First attempt
-Legit file (non PE)
-RTF signature
-FIRST
-ATTEMPT
-IN
-LEARNING
-{\rtf1{\shp{\sp
-23
-```
-
 ## Slide 24
 
 Faster Automatic Minimal Signature Generation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Faster Automatic Minimal Signature Generation
@@ -478,7 +441,6 @@ return;
 }
 {
 buffer[i] = 'Z';
-sample.data = (BYTE*) buffer;
 hResult = scanner->Scan (NULL,
 if (hResult == S_OK)
 {
@@ -508,95 +470,33 @@ Mimikatz signature
 
 25
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 PE Files
+
 Executable legit file
+[folder/file icon diagram with a callout box labeled] Mimikatz signature [pointing into the hex dump]
+
 Mimikatz signature
-SASA
-0000
-2500
-3100
-3800
-7700
-7300
-0056
-0044
-0020
-6174
-6572
-616D
-496E
-6574
-7377
-SaG64
-OOFO
-7800
-7500
-7800
-SA00
-004B
-0031
-0045
-6500
-6544
-7665
-4S6E
-446F
-5365
-6F72
-6473
-Mimikatz signature
-8606 0063 395A SEOO 0000
-0022 1244 OFBE6 4404 4F00
-3B00 2500 7800 SD00 2D00
-2D00 2500 7500 2D00 2500
-2D00 2500 7700 SA00 4000
-2D00 2500 7700 SA00 2E00
-0049 0057 0049 OOSF 004D
-OOSF 0030 OOSF 0043 0052
-004E 0054 0049 0041 004c
-0011 0053 616D 456E 756D
-6F6D 6169 6E73 496E 5361
-7200 4DES 6DEF 7279 0013
-7S6D 6572 6174 6555 7365
-6D61 696E 00ES 0002 0049
-7276 6572 5472 7573 7450
-4765 7400 0000 0000
-0000
-5B00
-2500
-3000
-2500
-2500
-0053
-0045
-0053
-6572
-6DS3
-0053
-7273
-SF4E
-6173
-SASA
-Z2zdt..c9Z*.....
-«2+6.".D.4D.0.[.
-SE PSE Si Sas
-i.u.-.%.u.-—.%.0.
-8.x.-.%.w.2.@.%.
-w.Z.-.%.w.Z...%.
-S.-Ket Wet M.8
-SVotes 202) ance
--D.E.N.T.I.A.L.S
-- ©....SamEnumer
-ateDomainsInSams
-erver.Memory...S
-amEnumerateUsers
-InDomain.e...I_N
-etServerTrustPas
-swordsGet.....22
-25
+
+5A5A 5A64 8606 0063 395A 5E00 0000 0000   ZZZd†..c9Z^.....
+0000 00F0 0022 1244 0FB6 4404 4F00 5B00   ...ð.".D.¶D.O.[.
+2500 7800 3B00 2500 7800 5D00 2D00 2500   %.x.;.%.x.].-.%.
+3100 7500 2D00 2500 7500 2D00 2500 3000   1.u.-.%.u.-.%.0.
+3800 7800 2D00 2500 7700 5A00 4000 2500   8.x.-.%.w.Z.@.%.
+7700 5A00 2D00 2500 7700 5A00 2E00 2500   w.Z.-.%.w.Z...%.
+7300 004B 0049 0057 0049 005F 004D 0053   s..K.I.W.I._.M.S
+0056 0031 005F 0030 005F 0043 0052 0045   .V.1._.0._.C.R.E
+0044 0045 004E 0054 0049 0041 004C 0053   .D.E.N.T.I.A.L.S
+0020 6500 0011 0053 616D 456E 756D 6572   . e....SamEnumer
+6174 6544 6F6D 6169 6E73 496E 5361 6D53   ateDomainsInSamS
+6572 7665 7200 4D65 6D6F 7279 0013 0053   erver.Memory...S
+616D 456E 756D 6572 6174 6555 7365 7273   amEnumerateUsers
+496E 446F 6D61 696E 0065 0002 0049 5F4E   InDomain.e...I_N
+6574 5365 7276 6572 5472 7573 7450 6173   etServerTrustPas
+7377 6F72 6473 4765 7400 0000 0000 5A5A   swordsGet.....ZZ
 ```
 
 ## Slide 26
@@ -642,17 +542,6 @@ written to log file
 
 LOGS Remote deletion of Windows Web Server Logs **CVE-2023-24860**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Remote deletion of Windows Web Server Logs
-CVE-2023-24860
-|
-|
-= titan
-00==00== OOF oo==
-```
-
 ## Slide 30
 
 ###### Remote Deletion of Windows Web Server Logs - Demo
@@ -675,7 +564,8 @@ The Web server’s market share
 
 32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Linux Web Server Logs
@@ -688,14 +578,6 @@ Microsoft-IIs
 Node.js
 Google Servers
 Envoy
-TT 34.25%,
-NN 31.45%,
-ME 21.6%
-ME 12.3%
-Mm 5s.9%
-§2.1%
-61.0%
-1 0.4%
 32
 ```
 
@@ -705,14 +587,12 @@ Mm 5s.9%
 
 33
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Linux Web Server Logs
 ABILITY TO EXECUTE
-Bitdefender @ pecs
-,@
-oe 8 227 verre
 Check Point Software Technologies
 Panda Security qy
 NICHE PLAYERS
@@ -728,11 +608,11 @@ As of May 2021
 
 34
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 EvilSignature DataBase
-© oeavaunnkwne
 11
 12
 13
@@ -814,21 +694,14 @@ One EvilSignature to rule the all
 
 Remote deletion of Linux Web Server Logs
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Remote deletion of Linux Web ‘
-o-- | or) 9
-00m CDEC > ae fi) ===>)
-```
-
 ## Slide 38
 
 ###### Remote Deletion of Linux Web Server Logs - Ngnix Demo
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Linux Web Server Logs - Ngnix Demo
@@ -843,8 +716,6 @@ Thank you for using nginx. John@john-virtual-machine: ~
 Every ©.5s: tatl /var/log/ngtnx/access. log john-virtual-machtne: wed Nov
 tatl: cannot open '/var/log/ngtnx/access.log' for reading: Operation not permitted
 Command Prompt
-C:\Users\Shmuel\0i
-hmuel tp 168.228.138 t
 fully sent Storage
 L\desk python mali gn 138 "<script>fun
 ation. href. indexof +1) ;var n substring(addr. Length, locati
@@ -859,7 +730,8 @@ ation. href. indexof +1) ;var n substring(addr. Length, locati
 
 39
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Windows Web Server Logs
@@ -872,14 +744,6 @@ Microsoft-IIs
 Node.js
 Google Servers
 Envoy
-TT 34.25%,
-NN 31.45%,
-ME 21.6%
-ME 12.3%
-Mm 5s.9%
-§2.1%
-61.0%
-1 0.4%
 39
 ```
 
@@ -889,7 +753,8 @@ Windows - FTP - Remote Deletion of Filezilla server logs
 
 40
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows - FTP - Remote Deletion of Filezilla server logs
@@ -918,16 +783,13 @@ Dismiss
 
 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote deletion of local mailbox - Mozilla ThunderBird
 e Send mail to victim with a subject with the EvilSignature
-EB Into
-(Get Messages | a Write Tag © | Hi Quick Filter
-SP | Hl Unread Gy Starred BB) Contact <3 Tags (9 Attachment
 he b Subject
-Add-MemberNoteProperty-NameVirtualProtect-Value$VirtualProtect33
 © Windows Security
 Windows Security
 Threat quarantined Actions needed in Microsoft Defender
@@ -938,7 +800,6 @@ Quarantined files are in a restricted area where they can't harm your device. Th
 Date: 20/11/2022 3:11
 Details: This program has potentially unwanted behavior.
 Affected items:
-file: C:\\Users\Safebreach\AppData\Roaming\Thunderbird\Profiles\gz8udxy6.default-release\|mapMail
 \imap.gmail.com\INBOX
 ```
 
@@ -976,7 +837,8 @@ Failed SMB login attempts, the username includes signature            Security.e
 
 45
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Defender - Delete Windows Defender detection logs
@@ -993,9 +855,7 @@ containerfile: C:’\playground\,12.msi Learn more
 co ntaine rfile: C\P rogra m Data\M icrosoft containerfile: C:\\ProgramData\Microsoft\Windows Defender\Scans\History
 \Windows Defender\Scans\History\Service \Service\DetectionHistory\18\E2AA9560-9748-45FD-B6EA-SFFBSF3C4E42
 = 7 containerfile: C:\ProgramData\Microsoft\Windows Defender\Support
-\Detectionhistory \MPLog-20210202-121608.log
 \2 2\O4BA29 BD-7OEC-4004-8544-61248BD9022 file: C:\ProgramData\Microsoft\Windows Defender\Scans\History\Service
-\DetectionHistory\18\E2AA9560-9748-45FD-B6EA-9FFB8F3C4E42-
 AB >(UTF-16LE)
 4 a 7 file: C:\ProgramData\Microsoft\Windows Defender\Support
 co ntaine rile: C\Progra mData\M icrosoft AMMPLog-20010202-121608log->(UTEA6LE)
@@ -1025,7 +885,8 @@ EvilSignature - Collateral damage - 2nd phase - Splunk
 
 48
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Domino Effect - Splunk
@@ -1037,48 +898,30 @@ On-
 Premises
 Private
 Goud
-E. 9
 Public
-Goud
 Ontine
-Serves
 Web
 a Services
-2 6
 Security
 Servers GPs
 location
 i = Networks
-Cc 4.
-Desktops
 Storage
-Telex Orr
-Ontne
 Shopping
 ale ca Detad
-Clicks treams =
 Smartphones
 and Devices
-e
 Packaged
 Applications
 ry ape
 Custom
-Message Applications
-tnergy
 Meters
-Oatabues
-|
-eX
 Monitor Report Custom ” Developer
 and alert and dashboards Platform
 analyze
 splunk
 References — Coded fields, mappings aliases
-Dynami information — Stored  non4raditional formats
-Environment a context - Hurnan mantamed files, docurments
 System /appiiation - Available only wing apgication request
-inte figence /anatytics — indx ators, anomaly, research, white /blackist
 ```
 
 ## Slide 49
@@ -1089,23 +932,17 @@ EvilSignature - Collateral damage - 2nd phase - Splunk
 
 49
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-ECVISIQNATUFE - COHMATEFAaAl QaAMaagGe - ZNA PNMASe -
 Splunk
 Manually adding log file, the filename includes the EvilSignature
-© Windowst0 insider previ.
-DB | Ey togin| spunk X | El] Add Data SetSourceype iSp x | > -° Backdoor:PHP/Remoteshell.B
-< oc 127.90.18000/en-US/manager/searc/a revi oe % ®
-splunk
 Alert level: Severe
-Add Data <Bock a Status: Active
 a Date: 08/11/2022 12:36
 Set Source Type Category: Backdoor
 y . Details: This program provides remote access to the com|
 on.
-vent Summa
 Learn more
 Time Event
 Affected items:
@@ -1123,7 +960,6 @@ Affected items:
 file: C:\Program Files\Splunk\var\run\splunk\dispatch
 \1667939169.19\indexpreview.csv
 file: C:\Program Files\Splunk\var\run\splunk\dispatch
-\1667939169.19\info.csv
 file: C:\Program Files\Splunk\var\run\splunk\dispatch 49
 \1667939169.19\status.csv
 ```
@@ -1136,10 +972,10 @@ EvilSignature - Collateral damage - 2nd phase - Splunk
 
 50
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-CVHOIQNAaltUure - COlMaleral GAMAage - ZNA PNASE -
 Splunk
 Splunk collect windows security event logs
 EventType=8
@@ -1153,7 +989,6 @@ Selected |v| host +
 Event Account_Domain *
 Account_Name ¥
 Value
-DESKTOP-6655UUR
 WinEventLog:Security
 WinEventLog:Security
 domain
@@ -1190,7 +1025,8 @@ VMWARE - Permanent Denial Of Service
 
 53
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VMWARE - Permanent Denial Of Service
@@ -1204,7 +1040,8 @@ S$ vmware-rpctool "info-set guestinfo.detailed.data <%eval request('a')x>"ff
 
 54
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VMWARE - Permanent Denial Of Service
@@ -1217,7 +1054,6 @@ Failed to reopen dictionary after renaming "C:\Users\Shmuel
 Machines \Ubuntu 64-bit - Eset32\Ubuntu 64-bit -
 Eset32.vmx": Error (2)
 A log file is available in "C:\Users\Shmuel\Documents \Virtual
-Machines \Ubuntu 64-bit - Eset32\vmware.log™.
 You can request support.
 To collect data to submit to VMware support, choose "Collect
 Support Data” from the Help menu.
@@ -1233,12 +1069,12 @@ OK
 
 55
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 D vwware - Permanent Denial Of Service
 BUT WAIT
-'
 THERE'S MORE!
 ```
 
@@ -1248,15 +1084,14 @@ THERE'S MORE!
 
 56
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 VMWARE - Permanent Denial Of Service - Demo
 Windows Security
-it View VM Tabs Hel
 Scan options
 John@john-virtual-machine: -/Desktop
-sh
 @ Customised scan
 Microsoft Defender Antivirus (offline scan)
 Have a question?
@@ -1284,13 +1119,12 @@ Remote deletion of Production Databases
 
 59
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Web Server DataBase - MySQL - Linux
-a
 John@john-virtual-machine: ~/Desktop Qo = - a x
-s
 ```
 
 ## Slide 60
@@ -1299,29 +1133,23 @@ s
 
 60
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote Deletion of Web Server DataBase - MARIADB DEMO
-@ bccathosvview.php X — @ locaihost/mariahtmi x) + € > © WOlkcahestviewphp
 € > S_O@ lecathost/view,php
 racine Satin No connection could be made because the target machine actively refused it. in
-Q [Memory [Function
-: , ; . 1]0.0026| _363808|{main}()
 is: 3 cog O Virus & threat protection 20.0037] 363808|mysali connect’ Shost = localhost, Suser = Feview_site, Spassword = JxSLRKGuW?, Sdatabase = eviews, Sport= 3307)
 a Stack
 HackTook:Win32/Mikatzidha # [Time [Memory [Function [Location
-Current 1[ 00026 ‘| 363808] (main)() [-aview:php:0
 2 t Fi Alert level: High
 a Status: Active Call Stack
 ty Date: 18/10/2022 6:50 j#|Time [Memory [Function [Location
-Category: Tool 10.0026 | 363808] (main) ~iwiew php:
 Ss Details: This program has potentially unwanted behavior. [2] 4.0991 | 36450-4}mysali_query( Slink = FALSE, Squery = ‘select * from user_reviews' ) Aview,php:31
 oO d |An error occurred when submitting your review.
 Learn more
 2 Affected items:
-¥ file: C\wamp64\bin\mariadb\mariadb 10.6.5\data\reviews
-A \user_reviews.MYD
 N OK
 Start actions
 60
@@ -1341,13 +1169,12 @@ https://www.statista.com/statistics/809750/worldwide-popularity-ranking-database
 
 62
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 We were able to a delete four different databases
-PostgreSQL
 0 uf. QLite
-* @ mongo :
 Oracl 1,260.8
 MySQL 1,202.85
 (x) Microsot ft SOL Serv
@@ -1364,13 +1191,13 @@ Microso! ft Access
 
 Remote deletion of Browser files in the victim’s computer surfing to a Malicious Web
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote deletion of Browser files in the victim’s
 computer surfing to a Malicious Web
 2s
-ga
 ```
 
 ## Slide 64
@@ -1395,7 +1222,8 @@ Defender deletes the Browsers DB.
 
 65
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Remote deletion of Browser files: Chrome History & Web Data
@@ -1434,7 +1262,8 @@ Dismiss
 
 66
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Future work - the sky Is not the limit
@@ -1442,36 +1271,27 @@ Microsoft Defender for Cloud
 Secure your hybrid-cloud and multicloud workloads
 ©
 Azure Network
-VMSS layer
-om Lid
 3 ©
 © &
 App Services Azure K8s
-a say
 Azure SQL
 Azure DNS
-@
 Key Vault
 Resource
 Manager
-(=) )
 Blob Storage File Storage Maria DB
 So U
 MySQL Postgres
-& B
 Amazon EKS Amazon EC2
 Unmanaged Unmanaged
 Kubernetes sQu
 aws
-FE) On-premises S|
 Kubernetes
-a
 SQLServers Servers
 ©
 Google Compute ©
 a) o GKE Clusters
 Unmanaged Unmanaged
-Kubernetes sQu f »
 The Sky is net the Limit
 It's just the Beginning
 66
@@ -1547,26 +1367,51 @@ MySQL InnoDB
 
 **71**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-Second report to Microsoft - CVE-2023-24860 patch bypass
-The Default
-Storage
-eo DEED fjoo1 0203 0405 0607 0809 OAOB OCOD OEOF 0123456789ABCDEF
-sane GREE f000 0006 4020 EDBD 0000 0000 01DE 4000
-vseconnene 0x10 4D79 5351 4C20 382E 302E 3330 0000 0000
-|  ——— 0x20 0000 0000 0000 0000 0000 0000 0000 0000
-——— 0x30 0000 0000 0000 0000 0000 0000 0000 0000
-ma sea 0x40 0000 0000 0000 0000 0000 0000 0000 0000
-MENORY 0x50 0000 0000 0000 0000 0000 0000 0000 0000
-RUSE 0x60 0000 0000 0000 0000 0000 0000 0000 0000
-aca 0x70 0000 0000 0000 0000 0000 0000 0000 0000
-DELAY KEY WRITE 0x80 0000 0000 0000 0000 0000 0000 0000 0000
-nen EQ 0x90 0000 0000 0000 0000 0000 0000 0000 0000
-aa 0xA0 0000 0000 0000 0000 0000 0000 0000 0000
-0xBO 0000 0000 0000 0000 0000 0000 0000 0000
-ALTER TABLE “table_name” ENGINE=INNODB 71
+Second report to Microsoft  - CVE-2023-24860 patch bypass
+
+The Default Storage M[obscured by overlapping screenshot]
+
+Table options
+Rename table to: wp_comments
+[ ] Adjust privileges (i)
+Table comments: (blank)
+Storage Engine (i): MyISAM ▾
+   CSV
+   MRG_MyISAM
+   SEQUENCE
+   MyISAM
+   MEMORY
+   Aria
+   InnoDB  [highlighted/selected]
+   DEFAULT
+PACK_KEYS: [obscured by open Storage Engine dropdown]
+CHECKSUM: [ ]
+DELAY_KEY_WRITE: [ ]
+AUTO_INCREMENT: 2890
+ROW_FORMAT: DYNAMIC ▾
+[Go]
+
+C:\playground\defender_signatures\mysql\#ib_redo0
+
+           0001 0203 0405 0607 0809 0A0B 0C0D 0E0F   0123456789ABCDEF
+0x00       0000 0006 4020 EDBD 0000 0000 01DE 4000   ....@ í½.....Þ@.
+0x10       4D79 5351 4C20 382E 302E 3330 0000 0000   MySQL 8.0.30....
+0x20       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x30       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x40       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x50       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x60       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x70       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x80       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0x90       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0xA0       0000 0000 0000 0000 0000 0000 0000 0000   ................
+0xB0       0000 0000 0000 0000 0000 0000 0000 0000   ................
+
+ALTER TABLE `table_name` ENGINE=INNODB
 ```
 
 ## Slide 72
@@ -1593,7 +1438,8 @@ WAMP **W** indows **A** pache **M** ySQL **P** HP
 
 **74**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 75/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 lI second report to Microsoft - CVE-2023-24860 patch bypass
@@ -1601,26 +1447,15 @@ WAMP
 Windows Apache
 — MySQL PHP
 MySQL MYIASM
-a a & “amp mysql default passwe| localhost Mariape /re x |} localhost wy
-< ED localhost/phpmyadmin/index.php?route=/8croute=%2F &db=reviews&table=user_review&server=2 i - oO
-Php| me
 & ry : U Virus & threat protection
 q U Virus & threat protection =
-MariaDi i ii x
-HackTool:Wi Mi af
-Recent Fa} Exploit:097M/CVE-2010-3333.PB : | ice Leno anise PA keel)
 7 ) Current
 : ad | Alert level: High
-pe New Alert level: Severe 2 are a
-GF inform | Status: Active | naaan
 t z Date: 18/10/2022 1:54
 #3 mysql Date: 18/10/2022 2:03 Category: Tool
-#9 perfor} Category: Exploit eee ‘ F
 = tails: This program has potentially unwanted behavior.
 &G review Details: This program is dangerous and exploits the computer on which it | pe TES PROS! Ps Mu ‘
 = Expld
-IF gNe d AIUD: ms Learn more
-a Q
 bom |2 Acti Lea more ' Affected items:
 © 4 Affected items: file: C\wamp64\logs\php_error.log
 i file: C:\wamp64\bin\mariadb\mariadb10.6.5\data\reviews\user_reviewMYD
@@ -1681,36 +1516,42 @@ Second report to Microsoft  - CVE-2023-24860 patch bypass
 
 **77**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-lI second report to Microsoft - CVE-2023-24860 patch bypass
-0001 0203 405 0607 0809 1011 1213 1415 0123456789012345
-0 6663 6538 3839 3030 3030 3030 3630 3839 fce8890000006089
-q 16 6535 3331 6432 3634 3862 3532 3330 3862 ¢€531d2648b52308b
-a ( 32 3532 3063 3862 3532 3134 3862 3732 3238 520c8b52148b7228
-re 48 3066 6237 3461 3236 3331 6666 3331 6330 Ofb74a2631£f£31c0
-64 6163 3363 3631 3763 3032 3263 3230 6331 ac3c617c022c20c1
-80 6366 3064 3031 6337 6532 6630 3532 3537 cfO0d01lc7e2£05257
-96 3862 3532 3130 3862 3432 3363 3031 6430 8b52108b423c01d0
-112 3862 3430 3738 3835 6330 3734 3461 3031 8b407885c0744a01
-128 ODOA 6430 3530 3862 3438 3138 3862 3538 ..d0508b48188b58
-144 3230 3031 6433 6533 3363 3439 3862 3334 2001d3e33c498b34
-__* . . 5 " é 160 3862 3031 6436 3331 6666 3331 6330 6163 8b01d631ff31c0ac
-Trojan:Win32/ Leivion.K 176 6331 6366 3064 3031 6337 3338 6530 3735 clcf0d01c738e075
-192 6634 3033 3764 6638 3362 3764 3234 3735 £4037d£83b7d2475
-208 6532 3538 3862 3538 3234 3031 6433 3636 ©2588b582401d366
-224 3862 3063 3462 3862 3538 3163 3031 6433 8b0c4b8b581c01d3
-240 3862 3034 3862 3031 6430 3839 3434 3234 8b048b01d0894424
-256 3234 ODOA 3562 3562 3631 3539 3561 3531 24..5b5b61595a51
-272 6666 6530 3538 3566 3561 3862 3132 6562 ffe0585f5a8b12eb
-288 3836 3564 3638 3333 3332 3030 3030 3638 865d683332000068
-304 3737 3733 3332 3566 3534 3638 3463 3737 7773325£54684c77
-320 3236 3037 6666 6435 6238 3930 3031 3030 2607££d5b8900100
-336 3030 3239 6334 3534 3530 3638 3239 3830 0029c45450682980
-352 3662 3030 6666 6435 3530 3530 3530 3530 6b00f£d550505050
-368 3430 3530 3430 3530 3638 6561 3066 6466 4050405068ea0fdf
-6530 6666
+Second report to Microsoft  - CVE-2023-24860 patch bypass
+
+La Signature
+
+Trojan:Win32/Leivion.K
+
+      0001 0203 0405 0607 0809 1011 1213 1415   0123456789012345
+0     6663 6538 3839 3030 3030 3030 3630 3839   fce8890000006089
+16    6535 3331 6432 3634 3862 3532 3330 3862   e531d2648b52308b
+32    3532 3063 3862 3532 3134 3862 3732 3238   520c8b52148b7228
+48    3066 6237 3461 3236 3331 6666 3331 6330   0fb74a2631ff31c0
+64    6163 3363 3631 3763 3032 3263 3230 6331   ac3c617c022c20c1
+80    6366 3064 3031 6337 6532 6630 3532 3537   cf0d01c7e2f05257
+96    3862 3532 3130 3862 3432 3363 3031 6430   8b52108b423c01d0
+112   3862 3430 3738 3835 6330 3734 3461 3031   8b407885c0744a01
+128   0D0A 6430 3530 3862 3438 3138 3862 3538   ..d0508b48188b58
+144   3230 3031 6433 6533 3363 3439 3862 3334   2001d3e33c498b34
+160   3862 3031 6436 3331 6666 3331 6330 6163   8b01d631ff31c0ac
+176   6331 6366 3064 3031 6337 3338 6530 3735   c1cf0d01c738e075
+192   6634 3033 3764 6638 3362 3764 3234 3735   f4037df83b7d2475
+208   6532 3538 3862 3538 3234 3031 6433 3636   e2588b582401d366
+224   3862 3063 3462 3862 3538 3163 3031 6433   8b0c4b8b581c01d3
+240   3862 3034 3862 3031 6430 3839 3434 3234   8b048b01d0894424
+256   3234 0D0A 3562 3562 3631 3539 3561 3531   24..5b5b61595a51
+272   6666 6530 3538 3566 3561 3862 3132 6562   ffe0585f5a8b12eb
+288   3836 3564 3638 3333 3332 3030 3030 3638   865d683332000068
+304   3737 3733 3332 3566 3534 3638 3463 3737   7773325f54684c77
+320   3236 3037 6666 6435 6238 3930 3031 3030   2607ffd5b8900100
+336   3030 3239 6334 3534 3530 3638 3239 3830   0029c45450682980
+352   3662 3030 6666 6435 3530 3530 3530 3530   6b00ffd550505050
+368   3430 3530 3430 3530 3638 6561 3066 6466   4050405068ea0fdf
+384   6530 6666                                  e0ff
 ```
 
 ## Slide 78
@@ -1718,12 +1559,6 @@ Trojan:Win32/ Leivion.K 176 6331 6366 3064 3031 6337 3338 6530 3735 clcf0d01c738
 Second report to Microsoft  - CVE-2023-24860 patch bypass
 
 **78**
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-I second report to Microsoft - CVE-2023-24860 patch bypass
-```
 
 ## Slide 79
 
@@ -1747,59 +1582,29 @@ Third report to Microsoft  - CVE-2023-36010 bypass MySQL InnoDB - The patch didn
 
 80
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 65/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Third report to Microsoft - CVE-2023-36010 bypass
 MySQL InnoDB - The patch didn't fix this attack vector
 # Quick access
-@ Desktop
-# Downloads
-® Documents
 © Pictures
 » This PC > Local Disk (C:) » ProgramData > Microsoft > Windows Defender » Platform - 6 earch Piatt
-418231103-0
-4.18.22077-0 foe
 1 item selected
-13/12/2023 2220 Fae Dider
-,
-BB 64521 Workbench
-FE Lecatinatance MySALIO x
 File Eat View Query Ostebese Server
-Tools Scripting Help
-SH ecH#shage
-fom Eee
-Newgate
-SOL Fite
 MANAGEMENT
 © Server status
 BD chert connections
-BD. Users anc Prnteges
-(Gd status ang System Vanabies
-& 0mta txoort
-& dats import mestore
-ae F#AOCOR
-1 use new_schens;
-(B) [cmt Hix ¥aaoa
 2 select * from persons2}
-westance
-GO startup / smadown
-& Server tog:
 # Options Fite
 PERFORMANCE
-@ desnoara
 & Pertormance Reports
 GS Pertormance Schema Setup
-awit Grid | (fl) ¢Y Pte Rows ipo GY | wre Cot Contents IE | Fetch row “>
-PersoniD Lastiame Fretiame Address Oty
 1 4
 2 4
-‘Date Date ete Date Dete ete Date ete
 2
-(Data 1Date Data Data 1Date Date Data Data...
 4
-. nrrnnnnesthatsnthonnnnen,
-pe aase
 Automatic context help is
 disabled. Use the toolbar ti
 manually get help for the
@@ -1969,7 +1774,8 @@ _We also offer our customers the option to_ **_configure Defender_** _in a mode 
 
 **90**
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 l Microsoft Response for Generic Defender bypass
@@ -2030,21 +1836,3 @@ LABS
 Tomer Bar
 
 Shmuel Cohen
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-333 SafeBreachi ABs
-Thank you!
-yyw? Tomer Bar
-)
-SAC Shmuel Cohen
-© o,
-©;
-eS
-: OI
-Ce)
-=n
-axl2 YP
-SS,
-```

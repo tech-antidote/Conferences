@@ -12,7 +12,7 @@ duration_seconds: 2400
 words: 6575
 text_chars: 35423
 redacted_secrets: 0
-converted_at: "2026-08-12T02:50:00Z"
+converted_at: "2026-08-12T06:24:14Z"
 ---
 
 # Unmasking the Snitch Puck - the creepy IoT surveillance tech in the school bathroom

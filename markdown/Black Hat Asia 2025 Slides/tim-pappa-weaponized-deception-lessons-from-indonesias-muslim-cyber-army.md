@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Tim Pappa_Weaponized Deception Lessons from Indonesia's Muslim Cyber Army.pdf"
 pages: 20
 sha256: "5149538ef0d6a7a3a9d487fc187f56cd80d9842d584af3ccd5ce7e3b48da0f83"
-text_chars: 8899
-ocr_pages: 4
+text_chars: 8564
+ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 85.8
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:08:28Z"
+converted_at: "2026-08-12T03:58:10Z"
 ---
 # Weaponized Deception Lessons from Indonesia's Muslim Cyber Army
 
 **Speakers:** Tim Pappa  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Tim Pappa_Weaponized Deception Lessons from Indonesia's Muslim Cyber Army.pdf` (20 pages)
+
 
 ## Slide 1
 
@@ -28,17 +34,6 @@ converted_at: "2026-08-11T21:08:28Z"
 Tim Pappa
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“bigekhat “<>
-ASIA 2025 S Se
-APRIL 3-4, 2025
-Weaponized Deception: Lessons from
-Indonesia’s Muslim Cyber Army
-Tim Pappa
-```
 
 ## Slide 2
 
@@ -100,10 +95,10 @@ Anguished Celebratory Nostalgic Friendly Devoted Dreamer
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 ASIA 2025
 Self Image: Tara Arsih Wijayani
 Anguished
@@ -111,26 +106,22 @@ tara_dev_sams « Follow
 tara_dev_sams My Habibie and i
 Celebratory =
 tara_dev_sams Om @johanesiman thank you
-. 527w_ Reply
 N O sta | g | C ial meidianaca You're wellcome mom @tara_dev_sams :)
 ° Reply
 tara_dev_sams Thank you @septianadhitaa , @meidianaca
 :@kiky_kinoy ,@kartikajuni , @debierizky
-527w Reply
 Friendly
 tara_dev_sams Thank you @aulia_roesmadhy , @wenanghans
 , @ohohnisya ,@pram_wb
 Devoted
 527w Reply
 tara_dev_sams Thank you @johanesiman
-527w Reply
 Dreamer
 tara_dev_sams Thank you Pram
 528w Reply
 tara_dev_sams Thank you Meidianaca kiki_kinoy and
 Kartika_juni
 528w Reply
-VAY
 ```
 
 ## Slide 8
@@ -141,18 +132,16 @@ Responsible Ebullient Secure Distinguishable Magical Soulful
 
 #BHAS @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 83/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-€Q
 black hat
 ASIA 2025
 idealized Self: Tara Arsih Wijayani
-Responsible a
 | & tara.dev.sams cinta besarpun harus dijaga nyalanya....
 Ebullient
 comes to make you question
-Secure fealty _somani tic ETO
 «gs . before and after in your life. It is
 } not the human being everyone
 Distinguishable # g everyo
@@ -278,14 +267,3 @@ Reexamine current and historical case studies of hacktivist and broader cybercri
 Tim Pappa
 
 #BHAS @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-“bigekhat “<>
-ASIA 2025 S Se
-APRIL 3-4, 2025
-Weaponized Deception: Lessons from
-Indonesia’s Muslim Cyber Army
-Tim Pappa
-```

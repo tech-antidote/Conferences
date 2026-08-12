@@ -8,19 +8,24 @@ year: 2025
 source_pdf: "BlackHat_USA_2025_Slides/Morgan Hervé-Mignucci_Digital Dominoes Scanning the Internet to Expose Systemic Cyber Risk.pdf"
 pages: 33
 sha256: "48472e190870cf063fb38f923a1344b046249b2d58757561e4662a61fbff982b"
-text_chars: 9140
-ocr_pages: 5
+text_chars: 8632
+ocr_pages: 1
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 95.2
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T22:57:55Z"
+converted_at: "2026-08-12T05:16:47Z"
 ---
 # Digital Dominoes Scanning the Internet to Expose Systemic Cyber Risk
 
 **Speakers:** Morgan Hervé-Mignucci  
 **Conference:** Black Hat USA 2025  
 **Source:** `BlackHat_USA_2025_Slides/Morgan Hervé-Mignucci_Digital Dominoes Scanning the Internet to Expose Systemic Cyber Risk.pdf` (33 pages)
+
 
 ## Slide 1
 
@@ -30,11 +35,10 @@ Morgan Hervé-Mignucci
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-piSek hat
-EFFINGS
 AUGUST 6-7, 2025
 MANDALAY BAY / LAS VEGAS
 Digital Dominoes: Scanning the
@@ -60,18 +64,6 @@ Morgan Herve-Mignucci
 #### 3 Large-scale Cyber Events in 2024
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-2)
-BRIEFINGS
-black hat N Wigrey » ’
-UM
-3 Large-scale Cyber Events in 2024
-CDK GLOBAL
-#BHUSA
-```
 
 ## Slide 4
 
@@ -182,18 +174,6 @@ Economic Insured
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS SE Ne 7
-Modeling
-What
-Matters in
-Systemic
-Cyber Risk
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 12
 
 ###### What is Cyber Catastrophe Risk Modeling?
@@ -282,20 +262,6 @@ Inc. 5000 Firms 5K 200%+ US Orgs. Growth 1.4M ~5K Headcount Unique Domains $317B
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-BRIEFINGS | es ae
-Inc. 5000 Firms
-oK 200%+
-US Orgs. Growth
-1.4M 5K
-Headcount Unique
-$317B Domains
-Revenue
-#BHUSA @BlackHatEvents
-```
-
 ## Slide 20
 
 Systemic Cyber Risk is Cross-Sectoral DEMO #1 – Most leading ATVs can be found in multiple, sometimes unrelated, industries
@@ -307,20 +273,6 @@ Systemic Cyber Risk is Cross-Sectoral DEMO #1 – Most leading ATVs can be found
 Registered Investment Advisory Firms 22K $145T Firms AUM 1M+ 18K+ Headcount Unique 60M+ Domains Clients
 
 #BHUSA @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-Registered Investment Advisory Firms
-22K $145T
-Firms AUM
-1M+
-Headcount 7 SK+
-Unique
-60M+ Domains
-Clients
-#BHUSA @BlackHatEvents
-```
 
 ## Slide 22
 

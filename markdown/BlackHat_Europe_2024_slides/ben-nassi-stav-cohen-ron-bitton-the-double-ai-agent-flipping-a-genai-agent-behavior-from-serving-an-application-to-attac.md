@@ -8,12 +8,17 @@ year: 2024
 source_pdf: "BlackHat_Europe_2024_slides/Ben Nassi & Stav Cohen & Ron Bitton_The Double (AI) Agent Flipping a GenAI Agent Behavior from Serving an Application to Attacking it using Promptwares.pdf"
 pages: 70
 sha256: "3e2507028dbb6d979267d45a5641a4cc1ae551147415e0778002681a217b6e57"
-text_chars: 32756
-ocr_pages: 2
+text_chars: 32530
+ocr_pages: 1
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 93.4
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:48:21Z"
+converted_at: "2026-08-12T04:55:07Z"
 ---
 # The Double (AI) Agent Flipping a GenAI Agent Behavior from Serving an Application to Attacking it using Promptwares
 
@@ -21,23 +26,12 @@ converted_at: "2026-08-11T21:48:21Z"
 **Conference:** Black Hat Europe 2024  
 **Source:** `BlackHat_Europe_2024_slides/Ben Nassi & Stav Cohen & Ron Bitton_The Double (AI) Agent Flipping a GenAI Agent Behavior from Serving an Application to Attacking it using Promptwares.pdf` (70 pages)
 
+
 ## Slide 1
 
 # The Double (AI) Agent **Speakers: Stav Cohen & Ben Nassi Contributor: Ron Bitton**
 
 #BHEU @BlackHatEvents
-
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
-
-```text
-WA\
-“24 ye De, =~ \
-= 11-12, 2024 y a=
-IEFINGS
-’ The Double (Al) Agent
-Speakers: Stav Cohen & Ben Nassi
-Contributor: Ron Bitton
-```
 
 ## Slide 2
 
@@ -339,10 +333,10 @@ Information Classification: General
 
 #BHEU @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
 EUROPE 2024
 Plan & Execute - ReWOO
 ReWOO: Decoupling Reasoning from Observations
@@ -350,8 +344,6 @@ for Efficient Augmented Language Models
 Binfeng Xu Zhiyuan Peng Bowen Lei
 billxbf@gmail.com jerrypeng1937@gmail.com bowenlei@stat.tamu.edu
 Subhabrata Mukherjee Yuchen Liu Dongkuan Xu
-subhabrata.mukherjee@microsoft.com yliu322@ncsu. edu dxu27@ncsu.edu
-~~
 #BHEU @BlackHatEvents
 ```
 

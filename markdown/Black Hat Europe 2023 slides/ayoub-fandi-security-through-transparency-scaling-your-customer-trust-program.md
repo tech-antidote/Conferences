@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat Europe 2023 slides/Ayoub Fandi_Security Through Transparency Scaling Your Customer Trust Program.pdf"
 pages: 28
 sha256: "5c281013578875e9ff7e413f6cafef9457c410eec929da23251adb4346a1cc31"
-text_chars: 5398
+text_chars: 5234
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 92.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:09:53Z"
+converted_at: "2026-08-12T04:00:03Z"
 ---
 # Security Through Transparency Scaling Your Customer Trust Program
 
 **Speakers:** Ayoub Fandi  
 **Conference:** Black Hat Europe 2023  
 **Source:** `Black Hat Europe 2023 slides/Ayoub Fandi_Security Through Transparency Scaling Your Customer Trust Program.pdf` (28 pages)
+
 
 ## Slide 1
 
@@ -145,12 +151,11 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
-EUROPE @O0esS
 Have you ever heard of security
 questionnaires?
 YOUR PROSPECT
@@ -158,7 +163,6 @@ SENDING
 YOU A SECURITY
 QUESTIONNAIRE
 PROVIDING
-YOUR BEUSRECT
 Information Classification: Genera 1
 ```
 
@@ -194,17 +198,15 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-2)
 black hat
 AN Adobe About Adobe v Adobe Trust Center FocusAreas vy _ Product/Service Status By Solutions y — Resources We're committed to Information Security
-a -  GitLab Trust Center
 It's our mission to be the leading example in security,
 Compliance Ci .
 innovation, and transparency.
-Membzv. -...--
 Getting started:
 Google Cloud Trust Center
 Shari ity d
@@ -212,7 +214,6 @@ ari ng you r secu ri ocs How we focus on security, compliance, and privacy to ea
 Explore security products Contact us
 | Trust Center Privacy Compliance Products and services _ Industry Tools & Documentation
 Responsible Al—learn more about our commitment to the advancement of Al driven by
-Trust status Well-Architected Security Compliance _Availability
 SAP” » DocuSign Solutions» Products~ Plans & Pricing v CONTACT SALES BUY NOW TRY FOR FREE
 _v / About SAP Trust Center Overview Alerts Compliance Legal Privacy Security SystemStatus Trust Portal
 Security and Trust Overview — Cloud Status Security
@@ -235,11 +236,10 @@ Information Classification: General
 
 Information Classification: General
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-biSekhat
-EUvIROPE @O0es
 sublinear
 (a)
 This is us
@@ -249,7 +249,6 @@ linear
 (b)
 This is a chart
 1% i
-A
 superlinear
 (c)
 This is sales

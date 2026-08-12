@@ -8,18 +8,24 @@ year: 2023
 source_pdf: "Black Hat USA 2023 slides/Zechao Cai,Jiaxun Zhu,Yutian Yang,Wenbo Shen ,Yu Wang _Apple PAC, Four Years Later Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1.pdf"
 pages: 129
 sha256: "129de127de201cea66623f60a4654b67e3cb8767435a69fbeb87499ff360b261"
-text_chars: 39658
+text_chars: 39620
 ocr_pages: 2
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 93.7
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:27:43Z"
+converted_at: "2026-08-12T04:26:14Z"
 ---
 # Apple PAC, Four Years Later Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1
 
 **Speakers:** Zechao Cai, Jiaxun Zhu, Yutian Yang, Wenbo Shen, Yu Wang  
 **Conference:** Black Hat USA 2023  
 **Source:** `Black Hat USA 2023 slides/Zechao Cai,Jiaxun Zhu,Yutian Yang,Wenbo Shen ,Yu Wang _Apple PAC, Four Years Later Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1.pdf` (129 pages)
+
 
 ## Slide 1
 
@@ -296,11 +302,10 @@ APDB
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-bisek hat
-USA 2025
 What is Pointer Authentication (PAC)
 ARMv8.3 Specification
 Five 128-bit PAC Keys (Each Key is made up by two 64-bit Sysreg)
@@ -330,11 +335,10 @@ Zechao Cai - @Zech4o #BHUSA @BlackHatEvents
 
 #BHUSA @BlackHatEvents
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
-pisek hat
-USA 2025
 Apple PAC
 Since A12 (iPhone XS, 2018)
 Zechao Cai - @Zech4o

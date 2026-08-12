@@ -8,19 +8,24 @@ year: 2023
 source_pdf: "Offensivecon 2023 slides/Maddie Stone and James Forshaw _ The Print Spooler Bug that Wasn’t in the Print Spooler.pdf"
 pages: 79
 sha256: "e44d007961a6f4561bd873f82008249850677274c4541f0cea4c037f83fde4cb"
-text_chars: 28085
+text_chars: 27326
 ocr_pages: 14
 has_ocr: true
 redacted_secrets: 0
+ocr_confidence: 89.7
+ocr_unreliable_blocks: 2
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T23:23:30Z"
+converted_at: "2026-08-12T05:59:25Z"
 ---
 # The Print Spooler Bug that Wasn’t in the Print Spooler
 
 **Speakers:** Maddie Stone, James Forshaw  
 **Conference:** OffensiveCon 2023  
 **Source:** `Offensivecon 2023 slides/Maddie Stone and James Forshaw _ The Print Spooler Bug that Wasn’t in the Print Spooler.pdf` (79 pages)
+
 
 ## Slide 1
 
@@ -36,7 +41,8 @@ CVE-2022-41073
 
 https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-41073
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Print Spooler Elevation of Privilege Vulnerability
@@ -68,7 +74,8 @@ HMODULE LoadNewCopy(LPCWSTR DllPath, DWORD dwFlags) { ULONG_PTR ulCookie; Activa
 
 <u>https://bugs.chromium.org/p/project-zero/issues/detail?id=240</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Issue 240: Windows: DosDevices Impersonation Elevation of Privilege
@@ -105,7 +112,8 @@ Windows\System32\SharedLibrary.dll Windows\System32\SharedLibrary.dll
 
 <u>https://twitter.com/tiraniddo/status/590931788006084609</u>
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 ? James Forshaw
@@ -119,30 +127,25 @@ https://twitter.com/tiraniddo/status/590931788006084609
 
 ## Slide 10
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 85/100 on the text kept, 81/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 © 38 security vendors and 1 sandbox flagged this file as malicious
 08.294466e64fb5f84eeaSd8d1ba64054a61 abf66fdf85ac160a95b204b7b19f3 668.00 KB 2022-11-27 04:04:25 UTC
 e0p.x64.exe Size 5 month
-peexe 64bits runtimemodules assembly _direct-cpuclock-access
 Community Score
 DETECTION DETAILS RELATIONS BEHAVIOR COMMUNITY
 Join the VT Community and enjoy additional community insights and crowdsourced detections, plus an API key to automate checks.
 Basic properties
 MDS 99af7b1564da8f5a6173a2ccbbb685dc
-SHA becd8d70c3322889996e5faccef36d0ae7f387ab
-SHA-256 €8a94466e64fb5f84eea5d8d1ba64054a6 1 abf66fdf85ac160a95b204b7b19f3
 Vhash 065076655d155515655az677z53za7z1fz
-Authentihash 9e80df296d8dd28967ac51761433533938a382becc 1 e12fb4d9951ee343e030f
 Imphash 3bb20b77bde12023537462b7bf18043e
 Rich PE header
 hash
-SSDEEP 12288:L01zS+VZL700k80V1CNWoViY9LWb6no4cSXpre:y 1eqL 70MO4NWoVSY6no4Jp
 TLSH T189E46C56F7E800FAESB7923889635A05E772BC160721C7DF13A4426A1F377E0AE3A711
 File type win32 EXE
 Magic PE32+ executable for MS Windows (console) Mono/.Net assembly
-ed2ed9898343e033f6b73ff0b8 1dd56f
 TrID Microsoft Visual C++ compiled executable (generic) (43.3%) — Win64 Executable (generic) (27.6%) | Win16 NE executable (generic) (13.2%) _ OS/2 Executable (gener
 Win/DOS Executable (5.2%)
 DetectitEasy PE64 Compiler: Microsoft Visual C/C++ _ Linker: Microsoft Linker (14.31, Visual Studio 2022 17.1*) [Console64,console]
@@ -252,7 +255,8 @@ SharedLibrary.dll
 (version 1)
 C:\Windows\System32
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 DLL Hell
@@ -281,7 +285,8 @@ No Version Information
 
 Version information but not detailed
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 PE Imports
@@ -290,8 +295,6 @@ PS D:\apps> Get-Win32ModuleImport .\application_a.exe
 No Version
 . DLLName FunctionCount DelayLoaded
 Information d
-KERNEL32.dLlL
-SharedLibrary .d1l False
 VCRUNTIME140.dLL False
 api-ms—win-crt—stdio-l1-1-0.d1ll False
 api-ms-—win-crt-runtime-l1-1-0.d1ll 18 False
@@ -446,7 +449,8 @@ SharedLibrary.dll
 
 https://www.microsoft.com/en-us/security/blog/2022/07/27/untangling-knotweed-euro pean-private-sector-offensive-actor-using-0-day-exploits
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Untangling KNOTWEED: European private-sector
@@ -456,7 +460,6 @@ Server Run-Time Subsystem (CSRSS) on Windows. At a high level, the vulnerability
 attacker to provide a crafted assembly manifest, which would create a malicious activation context in the
 activation context cache, for an arbitrary process. This cached context is used the next time the process
 spawned.
-https://www.microsoft.com/en-us/security/blog/2022/07/27/untangling-knotweed-euro
 pean-private-sector-offensive-actor-using-0-day-exploits
 ```
 
@@ -519,7 +522,8 @@ evil.dll
 
 https://bugs.chromium.org/p/project-zero/issues/detail?id=1749
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Weak Caching Key
@@ -544,7 +548,8 @@ https://bugs.chromium.org/p/project-zero/issues/detail?id=1749
 
 https://www.zerodayinitiative.com/blog/2023/1/23/activation-context-cache-poisoning-exploiting-csrss-for-privilege-escalation
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 INITIATIVE
@@ -587,21 +592,19 @@ ISOLATIONAWARE DLL manifest
 
 Manifest has dependencies
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Does PrintConfig.dll have an Isolation Aware Manifest?
 BY Windows PowerShell
 PS C:\> $m = Get-Win32ModuleResource C:\Windows\WinSxS\amd64_dual_prnms003.i
-nf_31bf3856ad364e35_10.0.19041.2728_none_8b21f932f7c28aea\Amd64\PrintConfig.
 PS C:\> $x [xml] [System. Text.Encoding]: :UTF8.GetString($m.ToArray())
 PS C:\> $x.assembly.dependency.dependentAssembly.assemblyIdentity
 type : win32
 name : Microsoft.Windows.Common-Controls
 version : 6.0.0.0
 processorArchitecture : amd64
-pubLicKeyToken : 6595b64144ccfldf
-Language AS
 ```
 
 ## Slide 40
@@ -862,7 +865,8 @@ Variant Analysis
 
 ## Slide 68
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Windows Print Spooler Elevation of Privilege Vulnerability
@@ -876,7 +880,8 @@ Oliver Lyak (@ly4k_) working with Trend Micro Zero Day Initiative
 
 ## Slide 69
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 y 29 (0) 29 security vendors and no sandboxes flagged this file as m:
@@ -914,15 +919,11 @@ Elastic
 Size
 10 months ago
 Family labels exp!
-eC
-°°
-9
 EXE
 Do you want to automate checks?
 © Exploit:application/CVE-2022-29104.472...
 © win64:cve-2022-29104-A [Expl]
 © TR/Redcap.bevxr
-© waz2.aldetectNet.01
 © Unsafe
 © Malicious (moderate Confidence)
 ```
@@ -975,16 +976,14 @@ SetProcessMitigationPolicy(ProcessUserPointerAuthPolicy, &Policy, sizeof(Policy)
 
 Value of 1 indicates mitigation is set.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Check for the Process Mitigation
 5) Administrator: Windows Powe X + -v
 Enable-NtTokenPrivilege SeDebugPrivilege
 $proc Get-NtProcess 6688
-same 'kerneLbase! KernelBaseAssembLyManifestIgnorel
-dDevicel ap’
-“$addr $sym.GetAddressOfSymbol ($name)
 Read-NtVirtualMemory $proc $addr 1
 Value of 1 indicates mitigation is set.
 ```
@@ -995,7 +994,8 @@ Value of 1 indicates mitigation is set.
 
 Needs to be "IsolationAware" Has at least one dependency.
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Check for Isolation Aware Manifest

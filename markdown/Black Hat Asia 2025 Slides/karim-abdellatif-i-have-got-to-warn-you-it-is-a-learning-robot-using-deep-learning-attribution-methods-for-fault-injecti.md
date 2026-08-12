@@ -8,18 +8,24 @@ year: 2025
 source_pdf: "Black Hat Asia 2025 Slides/Karim Abdellatif_I Have Got to Warn You, It Is a Learning Robot Using Deep Learning Attribution Methods for Fault Injection Attacks.pdf"
 pages: 47
 sha256: "0446d92737e799d020d835f9b6e5b34c854892db3f09e792765c270004a4a017"
-text_chars: 11735
+text_chars: 11641
 ocr_pages: 3
 has_ocr: true
+redacted_secrets: 0
+ocr_confidence: 88.3
+ocr_unreliable_blocks: 0
+ocr_timeouts: 0
+pages_recovered_from_text_layer: 0
 companion_files: []
 extractor: "pymupdf4llm 1.28.2 + tesseract"
-converted_at: "2026-08-11T21:05:48Z"
+converted_at: "2026-08-12T03:54:48Z"
 ---
 # I Have Got to Warn You, It Is a Learning Robot Using Deep Learning Attribution Methods for Fault Injection Attacks
 
 **Speakers:** Karim Abdellatif  
 **Conference:** Black Hat ASIA 2025  
 **Source:** `Black Hat Asia 2025 Slides/Karim Abdellatif_I Have Got to Warn You, It Is a Learning Robot Using Deep Learning Attribution Methods for Fault Injection Attacks.pdf` (47 pages)
+
 
 ## Slide 1
 
@@ -187,7 +193,8 @@ EM signal
 
 12
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Few traces to attack unknown key
@@ -196,7 +203,6 @@ Few traces to attack unknown key
 8
 1K traces for test
 Labels on Sbox output
-Ss
 Average rank of K[0]
 20 30
 Number of traces
@@ -559,7 +565,8 @@ Learning phase
 
 37
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 82/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Methodology
@@ -573,9 +580,7 @@ profile engine.data augmentation(aug mixup)
 ngine.train(
 x train, Learning phase
 metadata=metadata,
-guess _range=GUE
 epochs=EPOCHS,
-batch size=10,
 validation split=0
 data_augmentation=
 ```
@@ -588,13 +593,13 @@ LRP
 
 38
 
-> Text below was recovered by OCR from an image-only slide; treat wording as approximate.
+
+> Recovered by OCR — confidence 88/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 Methodology
 yate.model wo softmax(model)
 estigate.analyzer.LRP(model wo sm LRP
-trace = trace _sample.reshape(1, x_test.shape[1])
 vis trace = gradient analyzer.analyze(trace) [0]
 38
 ```
