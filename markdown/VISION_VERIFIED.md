@@ -4,14 +4,14 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**1198 slides across 138 documents.**
+**1244 slides across 139 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 527 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 569 | structure held; individual characters or lines wrong |
+| badly-mangled | 544 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 583 | structure held; individual characters or lines wrong |
 | accurate | 89 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 13 | reviewed before verdicts were recorded |
+| unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -67,7 +67,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 28 talks, 393 slides
+### Zero-day, RCE and novel exploitation — 29 talks, 439 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -89,6 +89,7 @@ under more than one heading or under none. Counts are slides.
 - **Lost in Translation Exploiting Unicode Normalization** (Black Hat USA 2025) — slides 20, 35-36, 50-51
 - **Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities** (Black Hat USA 2026) — slides 1-44
 - **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
+- **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 42, 107
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
@@ -246,6 +247,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 11-12, 17, 35-37 | badly-mangled | 0 |
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 35 | minor-errors | 0 |
+| Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 42, 107 | badly-mangled, minor-errors | 0 |
