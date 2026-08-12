@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**452 slides across 126 documents.**
+**495 slides across 127 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 266 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 166 | structure held; individual characters or lines wrong |
+| badly-mangled | 294 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 181 | structure held; individual characters or lines wrong |
 | accurate | 20 | OCR was already correct; text confirmed, not changed |
 
 ## Coverage by subject
@@ -32,7 +32,7 @@ under more than one heading or under none. Counts are slides.
 - **Vulnerability Haruspicy Picking Out Risk Signals from Scoring System Entrails** (Black Hat USA 2025) — slides 6-8
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 
-### Cloud and API — 11 talks, 41 slides
+### Cloud and API — 12 talks, 84 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -45,6 +45,7 @@ under more than one heading or under none. Counts are slides.
 - **UnOAuthorized A Technique to Privilege Escalation to Global Administrator** (Black Hat USA 2024) — slides 67, 85-100, 105-107, 109-110, 119, 131
 - **Azure's Weakest Link How API Connections Spill Secrets** (Black Hat USA 2025) — slide 69
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
+- **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 
 ### Web and browser — 11 talks, 20 slides
 
@@ -60,7 +61,7 @@ under more than one heading or under none. Counts are slides.
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
 
-### Zero-day, RCE and novel exploitation — 23 talks, 176 slides
+### Zero-day, RCE and novel exploitation — 24 talks, 219 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -83,6 +84,7 @@ under more than one heading or under none. Counts are slides.
 - **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 42, 107
+- **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
@@ -233,6 +235,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 42, 107 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
+| Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
