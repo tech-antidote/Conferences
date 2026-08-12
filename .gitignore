@@ -1,0 +1,5 @@
+# Conversion working files
+markdown/manifest.jsonl.partial
+*.part
+__pycache__/
+*.pyc
