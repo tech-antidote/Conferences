@@ -579,6 +579,21 @@ def slides_to_pdf(src_path: str, workdir: str) -> str | None:
     return produced if os.path.exists(produced) else None
 
 
+def _existing_source(md_path: str) -> str | None:
+    """The `source_pdf` recorded in an already-written Markdown file, if any."""
+    try:
+        with open(md_path, "r", encoding="utf-8") as fh:
+            for _ in range(40):  # frontmatter only; never scan a whole deck
+                line = fh.readline()
+                if not line:
+                    break
+                if line.startswith("source_pdf:"):
+                    return line.split('"')[1]
+    except (OSError, IndexError):
+        pass
+    return None
+
+
 def find_sidecars(pdf_path: str) -> list[tuple[str, str]]:
     """Companion .txt files shipped next to a deck (tool lists, PoC URLs, code)."""
     base = os.path.splitext(pdf_path)[0]
@@ -706,12 +721,17 @@ def convert_one(job: tuple) -> dict:
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, slugify(stem) + ".md")
 
-        # Collision guard: two decks can slugify identically.
-        if os.path.exists(out_path):
-            probe = 2
-            while os.path.exists(out_path):
-                out_path = os.path.join(out_dir, f"{slugify(stem)}-{probe}.md")
-                probe += 1
+        # Two different decks can slugify identically (a talk's slides and its
+        # whitepaper, or long titles truncated to the same prefix). Disambiguate
+        # with a short hash of the source path rather than a running counter:
+        # the counter depended on what was already on disk, so re-running over a
+        # previous output wrote "<slug>-2.md" beside the original instead of
+        # replacing it. Hashing the source makes each deck's destination stable
+        # across runs, so a re-run overwrites its own file and only genuinely
+        # different sources get a suffix.
+        if os.path.exists(out_path) and _existing_source(out_path) not in (None, rel):
+            out_path = os.path.join(
+                out_dir, f"{slugify(stem)}-{hashlib.sha256(rel.encode()).hexdigest()[:6]}.md")
 
         fm = [
             "---",
