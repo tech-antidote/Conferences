@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**918 slides across 133 documents.**
+**976 slides across 134 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 440 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 382 | structure held; individual characters or lines wrong |
-| accurate | 57 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 460 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 419 | structure held; individual characters or lines wrong |
+| accurate | 58 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 39 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -65,7 +65,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 24 talks, 219 slides
+### Zero-day, RCE and novel exploitation — 25 talks, 277 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -89,6 +89,7 @@ under more than one heading or under none. Counts are slides.
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 42, 107
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
+- **Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design** (DEF CON 34) — slides 1-58
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 
@@ -248,6 +249,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-64 | badly-mangled, minor-errors, accurate | 4 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-91 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
