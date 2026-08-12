@@ -4,13 +4,14 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**695 slides across 130 documents.**
+**759 slides across 131 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 367 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 283 | structure held; individual characters or lines wrong |
-| accurate | 45 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 379 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 319 | structure held; individual characters or lines wrong |
+| accurate | 48 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 13 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -242,6 +243,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
+| Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-64 | badly-mangled, minor-errors, accurate | 4 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |

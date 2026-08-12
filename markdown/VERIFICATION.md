@@ -248,6 +248,7 @@ are counted per document as `ocr_unreliable_blocks`.
 | Deck | Blocks | Reason |
 |---|---:|---|
 | CoDe16: 16 Zero-Day Vulnerabilities Affecting CODESYS Framework | 17 | Every attempt to review these pages was stopped by the model API's cyber safeguards, at three different batch sizes, once before any page was read. The trigger is the deck's subject — ICS/OT zero-days — not any individual slide. |
+| Turning Enterprise Update Servers Into Backdoor Factories (BH USA 2026), pages 14–26 | 13 | Two attempts, both stopped by the same safeguard. The deck's other 64 pages reviewed normally, so the trigger is this range's content rather than the document. Those pages keep their first-pass extraction and are marked `vision_unreviewed_pages` in the manifest. |
 
 These blocks remain OCR-only and keep their `ocr_unreliable` flag, so they are
 identifiable rather than silently trusted. Reviewing them needs an account
