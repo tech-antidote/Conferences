@@ -4,11 +4,11 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2059 slides across 150 documents.**
+**2060 slides across 151 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 850 | OCR text was unusable — rebuilt from the page |
+| badly-mangled | 851 | OCR text was unusable — rebuilt from the page |
 | minor-errors | 936 | structure held; individual characters or lines wrong |
 | accurate | 245 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
@@ -279,6 +279,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Breaking Amazon lockers by any means necessary | 1-37 | badly-mangled, minor-errors, accurate | 8 |
 | DEF CON 34 | Chaining Logical Bugs for Reliable Windows LPE | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E | 1-32 | badly-mangled, minor-errors, accurate | 0 |

@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 73.6
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 1
+vision_verified_pages: 1
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,10 +31,9 @@ converted_at: "2026-08-12T06:39:10Z"
 
 ## Slide 1
 
+**DEFCON**
 
-> Recovered by OCR — confidence 74/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+# Gotta Catch 'Em All
 
-```text
-Gctta Catch ‘Em All
-@ Whats/pp Acccunts @
-```
+## How To Capture 3.5 Billion WhatsApp Accounts
+
