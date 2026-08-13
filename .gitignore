@@ -3,3 +3,15 @@ markdown/manifest.jsonl.partial
 *.part
 __pycache__/
 *.pyc
+.pytest_cache/
+
+# DEF CON source material fetched on demand via tools/fetch_release.py /
+# tools/fetch_defcon.py. It ships as GitHub release assets (some files
+# exceed GitHub's 100MB per-file limit), not as tracked repo content --
+# see tools/README.md. Only the /DEF CON NN/ form at repo root is meant
+# here; markdown/DEF CON NN/ (the converted output) stays tracked.
+/DEF CON 33/
+/DEF CON 33 transcripts/
+/DEF CON 33 workshops/
+/DEF CON 34/
+/DEF CON 34 workshops/
