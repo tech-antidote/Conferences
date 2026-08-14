@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2102 slides across 152 documents.**
+**2149 slides across 153 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 871 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 947 | structure held; individual characters or lines wrong |
-| accurate | 256 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 902 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 957 | structure held; individual characters or lines wrong |
+| accurate | 262 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -71,7 +71,7 @@ under more than one heading or under none. Counts are slides.
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 
-### Zero-day, RCE and novel exploitation — 35 talks, 939 slides
+### Zero-day, RCE and novel exploitation — 36 talks, 986 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -108,6 +108,7 @@ under more than one heading or under none. Counts are slides.
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Witchcraft Solver Automated 0day Discovery in Stripped Binaries** (DEF CON 34) — slides 1-57
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
+- **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
 ### Firmware, hardware and embedded — 23 talks, 403 slides
 
@@ -291,3 +292,4 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C | 1-49 | badly-mangled, minor-errors, accurate | 1 |
+| DEF CON 34 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 2 |
