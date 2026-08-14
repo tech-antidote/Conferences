@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2187 slides across 154 documents.**
+**2218 slides across 155 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 926 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 967 | structure held; individual characters or lines wrong |
-| accurate | 266 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 932 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 974 | structure held; individual characters or lines wrong |
+| accurate | 284 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -36,7 +36,7 @@ under more than one heading or under none. Counts are slides.
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
-### Cloud and API — 16 talks, 244 slides
+### Cloud and API — 17 talks, 275 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -52,10 +52,11 @@ under more than one heading or under none. Counts are slides.
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
+- **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
-### Web and browser — 13 talks, 130 slides
+### Web and browser — 14 talks, 161 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -70,6 +71,7 @@ under more than one heading or under none. Counts are slides.
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
+- **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
 ### Zero-day, RCE and novel exploitation — 36 talks, 986 slides
 
@@ -286,6 +288,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Keychained Melody - Grabbing the Keys to the iCloud Kingdom | 1-31 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E | 1-32 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
