@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2149 slides across 153 documents.**
+**2187 slides across 154 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 902 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 957 | structure held; individual characters or lines wrong |
-| accurate | 262 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 926 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 967 | structure held; individual characters or lines wrong |
+| accurate | 266 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -279,6 +279,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Bird Hunting Season The Final Flight | 1-38 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Breaking Amazon lockers by any means necessary | 1-37 | badly-mangled, minor-errors, accurate | 8 |
 | DEF CON 34 | Chaining Logical Bugs for Reliable Windows LPE | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
