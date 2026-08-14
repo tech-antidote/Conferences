@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2218 slides across 155 documents.**
+**2262 slides across 156 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 932 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 974 | structure held; individual characters or lines wrong |
-| accurate | 284 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 954 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 991 | structure held; individual characters or lines wrong |
+| accurate | 289 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -292,6 +292,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E | 1-32 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |

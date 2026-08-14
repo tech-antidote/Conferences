@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.5
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 39
+vision_verified_pages: 44
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,50 +31,39 @@ converted_at: "2026-08-12T06:24:50Z"
 
 ## Slide 1
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
 DEF CON 34
 UNAUTHENTICATED FILESYSTEM ACCESS
-PWNING REXORDBOX
+
+# PWNING REKORDBOX
+
 Unauthenticated filesystem access in the world's most popular DJ software.
-BY TRIODE - CHRIS LE x x x x
-FRI AUG 7 2026 3:00 PM PDT 20 MIN
-```
+
+**BY TRIODE · CHRIS LE**
+FRI AUG 7 2026 · 3:00 PM PDT · 20 MIN
 
 ## Slide 2
 
+SECTION 01
+
+# OPENING
+
 ## Slide 3
 
+OPENING
 
-> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### HI, I'M TRIODE
 
-```text
-| OPENING
-Hl, I'M TRIODE
-DJ and engineer. | built Now Playing — the overlay that shows
-a DJ's current track live on stream.
-TRIODE // PWNING REKORDBOX
-```
+DJ and engineer. I built Now Playing — the overlay that shows a DJ's current track live on stream.
 
 ## Slide 4
 
+OPENING
 
-> Recovered by OCR — confidence 84/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### NOW PLAYING
 
-```text
-| OPENING
-£ NOW PLAYING
-It reads the track that's playing and paints it onto the live
-stream overlay, in real time.
-latest subbed: syfpsy <3 (25 <3 thank vou so muchi! latest follower: wooo_o
-Daily subscriber goal: 15/20 (75%) july fund <3 $0/$1,000 (0%) Follower goal: 1767/1200 (98%)
-e a meowylive @@ Schedule Videos Clips
-drum and bass a/\=@ « @=’\n back from rampage/travel and ready 2 party rock !Inextshow !support 2312 © 21029 fh
-DJs dr dnb DJ PLUR
-TRIODE // PWNING REKORDBOX DEF CON 34: 04
-```
+It reads the track that's playing and paints it onto the live stream overlay, in real time.
+
+The screenshot shows a stream overlay reading "Rhyme Dust (Dimension Extended Remix" / "MK & Dom Dolla" — the same text highlighted twice, once in a preview box and once live in the corner of the stream. The stream is meowylive's, with on-screen stats: daily subscriber goal 15/20 (75%), july fund <3 $0/$1,000 (0%), follower goal 11767/12000 (98%), latest subbed syfpsy <3, latest follower wooo_o. Title: "drum and bass ... back from rampage/travel and ready 2 party rock !nextshow !support," 312 viewers, 2:10:29 elapsed, tags DJs / drumandbass / dnb / ravebae / DJ / English / PLUR.
 
 ## Slide 5
 
@@ -103,289 +94,251 @@ That's the bug. That's the whole talk.
 
 ## Slide 7
 
+SECTION 02
+
+# THE SETUP
+
 ## Slide 8
 
 ## Slide 9
 
+THE SETUP
 
-> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### LINK EXPORT MODE
 
-```text
-| THE SETUP
-CC
-DESIGNE
-TRIODE // PWNING REKORDB
-LINK EXPORT MODE
-Link the laptop to the CDJs and tracks stream from the laptop.
-Convenient — but the moment it’s on, everything your
-account can read is exposed to that network.
-```
+Link the laptop to the CDJs and tracks stream from the laptop. Convenient — but the moment it's on, everything your account can read is exposed to that network.
+
+Photo: a close-up of a CDJ's rear-panel LINK port, beside a partial bilingual regulatory label reading "CD...", "DESIGNE...", "CONÇU F..." (cropped at the edge of the photo).
 
 ## Slide 10
 
+THE SETUP
 
-> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### ONE FLAT SUBNET
 
-```text
-| THE SETUP
-Link Export quietly starts an NFS server — a 1989 Unix protocol —
-and shares the whole drive, every mounted volume. é SWITCH - ONE SUBNET +)
-AN
-ATTACKER
-| Guarded by a credential that's published in the open, in multiple open-source
-implementations.
-TRIODE // PWNING REKORDBOX DEF CON 34
-```
+Link Export quietly starts an NFS server — a 1989 Unix protocol — and shares the whole drive, every mounted volume.
+
+Guarded by a credential that's published in the open, in multiple open-source implementations.
+
+A diagram shows a laptop (tagged NFS) and two CDJs all connected to a switch labeled "SWITCH · ONE SUBNET." Below the switch, an arrow points down to a box labeled ATTACKER.
 
 ## Slide 11
 
+THE SETUP
 
-> Recovered by OCR — confidence 67/100 on the text kept, 58/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### SINCE REKORDBOX 6
 
-```text
-| THE SETUP
-W blank lst 1B blank lst blank list SB blank lst
-Dope-ISHT Fambient 2019 (34 Tracks sssten Pa
-© bea 31 oo Small Moments Above & Beyon Flow State NO Beats 94.80 AkeKTsr 03:58 Fm 6122/2
-nt 2020 & bu 7 © a hain Valley of Paradi Psychemagik | Feel How this Beats, Voice 95.00 kek! 09:49 Em 622/2
-matzo) a2 ‘Saamadonannitiaamaia® Life's Casino Sounds From T Binary Beats 97.00 ek: 07:24 Dm 6122/2
-nt2 & Eu 13 Selim, ‘Arizona Momin Kaya Project Ambient Mixes NO Beats 99,00 ekki 07:16 Fim 6722/2
-S baru 33 ‘Are YouEven Weval, TRS-80 The Weight Re Beats 107.00 seks: 04:23 Cm 6722/2 P t 2020 St ll 7.E y DJ h fe| L k
-S pt 3 2 Sakral Prins Thomas Ambitions 119.00 ie 07:35 Om 6722/2
-& bso 30 Kyphi Digitalis ‘Seb Taylor: Coll Beats 119.89 tekekeksy 06:43 Fim 6/22/2 E t b th i j fe|
-= 27 Panoramic Sti Seb Taylor Seb Teyor.Coll NO Beals «119.04 eH 0206 Gm saz xport, ACrOSS DON Versions, IS Exposed.
-( baru 18 5 Shores of Easy Royksopp Shores of Easy Beats 120.00 ekki 13:59 A 62/2
-ae ol: Moon Scepter Nathan Micay Blue Spring Beats 125.00 weokeet 05:14 Am 6722/2
-"5 Under Your Sp Kyau & Albert Under Your Sp Beats, Voice 126.00 wieeIY: 03:14 Abm 62/2
-« Love In The Ti Oneohtrix Point KCRW Session Beats 128.01 eke 04:23 Em 6212
-Ec Vanity Lise! Angels on the Beats, Voice 130.00 kkekHY 02:41 G 62212
-Chimera Psychemagik | Feel How this Beats 145.92 okie! 04:08 Dm 61212
-TRIODE | PWNING REKORDE DEF N 34
-```
+Present since 2020. Still in version 7. Every DJ who's used Link Export, across both versions, is exposed.
+
+A rekordbox screenshot: two decks loaded, "Original Mix" (126.00 Abm) on the left and "Little Lights" by Ben Böhmer (122.99 Am) on the right, waveform and effects panels above, and a track browser below showing the playlist "Dope-ISHT Fambient 2019 (34 Tracks" (sidebar playlists partly visible: "...ent 2020," "...ent 2019," "...ent 2018," "...low"):
+
+| # | Track Title | Artist | Album | Genre | BPM | Time | Key |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 14 | -mix out early | Blockhead | Free Sweatpan | Beats | 92.00 | 03:00 | Ebm |
+| 31 | Small Moments | Above & Beyon | Flow State | NO Beats | 94.80 | 03:58 | Fm |
+| 7 | Valley of Paradi | Psychemagik | I Feel How this | Beats, Voice | 95.00 | 09:49 | Em |
+| 2 | Life's Casino | Sounds From T | Binary | Beats | 97.00 | 07:24 | Dm |
+| 32 | Believer - Edit | Above & Beyon | Flow State | NO Beats | 97.03 | 02:15 | Ebm |
+| 13 | Arizona Mornin | Kaya Project | Ambient Mixes | NO Beats | 99.00 | 07:16 | F#m |
+| 11 | Are You Even | Weval | The Weight | Beats, Voice | 107.00 | 05:11 | Fm |
+| 33 | Are You Even | Weval, TRS-80 | The Weight Re | Beats | 107.00 | 04:23 | Cm |
+| 10 | Temple of Sorr | M83 | DSVII | Beats -slow | 110.00 | 07:04 | Dbm |
+| 9 | Perpetual Moti | Max Cooper | Yearning for th | Beats | 119.00 | 04:58 | Abm |
+| 3 | Sakral | Prins Thomas | Ambitions | — | 119.00 | 07:35 | Cm |
+| 30 | Kyphi | Digitalis | Seb Taylor: Coll | Beats | 119.89 | 06:43 | F#m |
+| 27 | Panoramic Stri | Seb Taylor | Seb Taylor: Coll | NO Beats | 119.94 | 02:06 | Gm |
+| 18 | Shores of Easy | Royksopp | Shores of Easy | Beats | 120.00 | 13:59 | A |
+| 24 | Little Lights | Ben Böhmer | Breathing | Beats | 122.99 | 05:24 | Am |
+| 4 | Moon Scepter | Nathan Micay | Blue Spring | Beats | 125.00 | 05:14 | Am |
+| 19 | Under Your Sp | Kyau & Albert | Under Your Sp | Beats, Voice | 126.00 | 03:14 | Abm |
+| 17 | Love In The Ti | Oneohtrix Point | KCRW Session | Beats | 128.01 | 04:23 | Em |
+| 23 | Vanity | Lisel | Angels on the | Beats, Voice | 130.00 | 02:41 | G |
+| 28 | Lovesong - Po | Max Cooper, P | One Hundred B | Beats -slow | 133.00 | 06:26 | E |
+| 8 | Chimera | Psychemagik | I Feel How this | Beats | 145.92 | 04:08 | Dm |
+
+(Rating and "Date Added" columns are also visible; every row's Date Added reads "6/22," cropped at the panel edge.)
 
 ## Slide 12
 
+THE SETUP
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### IN THE TIME IT TAKES TO ORDER A DRINK
 
-```text
-| THE SETUP
-IN THE TIME IT
-TAKES 10 ORDER A
-DRINK
 That's how fast you can pull this off.
-TRIODE // PWNING REKORDBOX DEF N 34:12
-```
 
 ## Slide 13
 
+SECTION 03
+
+# PROTOCOL INTERNALS
+
 ## Slide 14
 
+PROTOCOL INTERNALS
 
-> Recovered by OCR — confidence 78/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### BORN IN 1989
 
-```text
-| PROTOCOL INTERNALS
-BORN IN 1989 = | |
-When rekordbox enters export mode it stands up three services ° . . ° .
-over RPC — Remote Procedure Call. . . ° . .
-TRIODE // PWNING REKORDBOX DEF CON 34:14
-```
+When rekordbox enters export mode it stands up three services over RPC — Remote Procedure Call.
+
+Decoration: five columns of small rack-style bars, a few highlighted in orange, above a tag reading "1989."
 
 ## Slide 15
 
+PROTOCOL INTERNALS
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THREE SERVICES
 
-```text
-| PROTOCOL INTERNALS
-THREE SERVICES
-01 PORTMAPPER — UDP 50111
-XXX
-Not the standard 11]; AlphaTheta moved it. A directory: ‘where's the NFS server?’
-02 ‘Mount the C drive. It hands back a file handle — a session token for that volume.
-03 NFSv2 — PORT 2049
-The real file access. Present the handle, give a path, get the file back.
-```
+- **01 PORTMAPPER — UDP 50111** — Not the standard 111; AlphaTheta moved it. A directory: 'where's the NFS server?'
+- **02 MOUNTD** — 'Mount the C drive.' It hands back a file handle — a session token for that volume.
+- **03 NFSv2 — PORT 2049** — The real file access. Present the handle, give a path, get the file back.
 
 ## Slide 16
 
+PROTOCOL INTERNALS
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### ONE MAGIC VALUE
 
-```text
-| PROTOCOL INTERNALS
-ONE IViAGIC VALUE
-All three are guarded by a constant in a Unix auth header —
-hardcoded into the firmware of every PRO DJ LINK™ model.
-| Known to the community for years: crate-digger, prolink-connect,
-alphatheta-connect.
-TRIODE // PWNING REKORDBOX DEF CON 34: 16
-```
+All three are guarded by a constant in a Unix auth header — hardcoded into the firmware of every PRO DJ LINK™ model.
+
+Known to the community for years: crate-digger, prolink-connect, alphatheta-connect.
+
+Photo: a teardown of a CDJ unit, its case open to show the internal circuit boards and ribbon cables.
 
 ## Slide 17
 
+PROTOCOL INTERNALS
 
-> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THE HANDSHAKE
 
-```text
-| PROTOCOL INTERNALS
-THE HANDSHAKE
-“Hi, lm a caller with the well-known constant.” rekordbox: “Great,
-DEVICE ACCESS GRANTED REKORDBOX youre a CDJ. Here's your access.”
-O-r
-Vv
-TRIODE // PWNING REKORDBOX DEF CON 34:17
-```
+"Hi, I'm a caller with the well-known constant." rekordbox: "Great, you're a CDJ. Here's your access."
+
+A diagram shows DEVICE sending `0xDEADBEEF` to REKORDBOX, which replies ACCESS GRANTED (with a key icon).
 
 ## Slide 18
 
+SECTION 04
+
+# THE BUG: SCOPE, NOT AUTH
+
 ## Slide 19
 
+THE BUG
 
-> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### IT DOESN'T RESTRICT PATHS
+
+rekordbox never limits what file paths you can read. Every file, every volume the user can reach is readable.
+
+A diagram titled "PATH TRAVERSAL — UNRESTRICTED FILE READ" shows a terminal-style box reading:
 
 ```text
-PATH TRAVERSAL
-IT DOESN'T RESTRICT ae
-DATA EXFILTRATION:
-CONFIDENTIAL FILES RETRIEVED
-rekordbox never limits what file paths you can read. Every file, | J
-; | SSH PRIVATE
-every volume the user can reach is readable. ATTACKER INPUT: KEY STOLEN
-CLIMBING DIRECTORIES
+read /../././../home/user/.ssh/id_rsa
 ```
+
+The traversal portion is highlighted and labeled "ATTACKER INPUT: CLIMBING DIRECTORIES." An arrow leads to four file icons (the last marked with a key) labeled "DATA EXFILTRATION: CONFIDENTIAL FILES RETRIEVED" and "SSH PRIVATE KEY STOLEN."
 
 ## Slide 20
 
+THE BUG
 
-> Recovered by OCR — confidence 95/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### YOU DON'T EVEN HAVE TO BE A CDJ
 
-```text
-YOU DON'T EVEN
-Just a device on the same subnet that says the magic words. It
-NOT A CDJ
-\ ®) could be anything — a compromised camera, for example.
-ONE SUBNET
-```
+Just a device on the same subnet that says the magic words. It could be anything — a compromised camera, for example.
+
+A diagram shows a security camera, labeled "NOT A CDJ," broadcasting `0xDEADBEEF`, connected down to a line labeled "ONE SUBNET."
 
 ## Slide 21
 
+THE BUG
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THE CONFUSED DEPUTY
 
-```text
-THE CONFUSED
-DEPUTY ATTACKER NFS SERVER YOUR DRIVE
-PUBLIC CREDENTIAL THE DEPUTY RUNS AS YOU
-rekordbox runs as you, so it reads every file you own. The NFS
-server is the deputy holding that power — and the attacker
-borrows it with a public credential.
-TRIODE // PWNING REKORDB DEF < N34:2
-```
+rekordbox runs as you, so it reads every file you own. The NFS server is the deputy holding that power — and the attacker borrows it with a public credential.
+
+A diagram shows ATTACKER (public credential) → NFS SERVER (the deputy) → YOUR DRIVE (runs as you).
 
 ## Slide 22
 
+THE BUG
 
-> Recovered by OCR — confidence 92/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### AUTH ISN'T BROKEN. SCOPE IS.
 
-```text
-AUTH ISN'T BROKEN.
-SCOPE IS.
 Authentication works exactly as designed. The design just assumed only CDJs would ever be on this network.
-```
 
 ## Slide 23
 
+THE BUG
 
-> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### WHAT IT GETS YOU
 
-```text
-WHAT IT GETS YOU
-Anything you can read, the attacker can read — over the
-network.
-TRIODE
-/| PWNING REKORDBOX
-SSH KEYS
-DOCUMENTS
-CLOUD TOKENS
-```
+Anything you can read, the attacker can read — over the network.
+
+Four icons: SSH KEYS, PASSWORD DB, DOCUMENTS, CLOUD TOKENS.
 
 ## Slide 24
 
+THE BUG
 
-> Recovered by OCR — confidence 87/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### AND DJS? YOUR IDs.
 
-```text
-& = > Above The Cloud (Original Mix) BEAT KEY BEAT
-use 08:45 128.0 Fim » Loop SHIFT JUMP
-VINYL SPEED ADJ
-HOT CUE
-AND DUS?
 Your playlists and your private collection of tracks.
-| Mac, Windows, CDJ/XDJ hardware, iOS & Android — anything that speaks PRO
-DJ LINK™ runs this.
-```
+
+Mac, Windows, CDJ/XDJ hardware, iOS & Android — anything that speaks PRO DJ LINK™ runs this.
+
+Photo: a CDJ's touchscreen loaded with "Above The Cloud (Original Mix)," 08:45, 128.0, F#m, its waveform highlighted, next to BEAT LOOP / KEY SHIFT / BEAT JUMP buttons and the jog wheel. Below: PLAYER 0, TRACK 00, REMAIN 00:00.000, TEMPO -00.00% (±16), BPM 100.0 (MASTER), and a HOT CUE pad row.
 
 ## Slide 25
 
+SECTION 05
+
+# THE DEMO
+
 ## Slide 26
 
+THE DEMO
 
-> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### RECORDED DEMO
 
-```text
-| THE DEMO
-RECORDED DEMO
-O01 rekordbox running normally — Link Export on
-02 Attacker terminal — 16 seconds to plaintext
-O03 Pointit at a CDJ — read the library
-RECORDED PRE-TALK rekordbox 7.x
-TRIODE // PWNING REKORDBOX DEF CON 34: 26
-```
+- **01** rekordbox running normally — Link Export on
+- **02** Attacker terminal — 16 seconds to plaintext
+- **03** Point it at a CDJ — read the library
+
+RECORDED PRE-TALK · rekordbox 7.x
 
 ## Slide 27
 
+THE DEMO
 
-> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### WHERE IT STANDS
 
-```text
-| THE DEMO
-AlphaTheta has worked closely with me through the whole
-process. Software is done; firmware is a bigger lift across that YS See) 22 SS UCI alel cle Vv FIXED
-many models.
-CDJ / XDJ firmware C IN PROGRESS )
-TRIODE // PWNING REKORDBOX DEF CON 34: 27
-```
+AlphaTheta has worked closely with me through the whole process. Software is done; firmware is a bigger lift across that many models.
+
+- rekordbox — Win & macOS: FIXED
+- rekordbox — iOS & Android: FIXED
+- CDJ / XDJ firmware: IN PROGRESS
 
 ## Slide 28
 
+SECTION 06
+
+# WHY THE FIX IS WHAT IT IS
+
 ## Slide 29
 
+WHY THE FIX
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THE OBVIOUS FIX
 
-```text
-| WHY THE FIX
-THE OBVIOUS FIX
-Harden the auth — make the credential strong and secret,
-something AlphaTheta controls. But | dont think they can.
-TRIODE // PWNING REKORDBOX DEF CON 34: 29
-```
+Harden the auth — make the credential strong and secret, something AlphaTheta controls. But I don't think they can.
 
 ## Slide 30
 
+WHY THE FIX
 
-> Recovered by OCR — confidence 91/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### FROZEN SINCE 2009
 
-```text
-| WHY THE FIX
-«2 FROZEN SINCE 2009
-The constant is burned into every PRO DJ LINK™ model since the
-HARDCODED CDJ-2000. AlphaTheta holds ~60% of the market — feels like
-100% in the booth.
-TRIODE // PWNING REKORDBOX DEF ON 34: 30
-```
+The constant is burned into every PRO DJ LINK™ model since the CDJ-2000. AlphaTheta holds ~60% of the market — feels like 100% in the booth.
+
+Diagram: a chip labeled HARDCODED, tagged 2009.
 
 ## Slide 31
 
@@ -404,16 +357,13 @@ DEF CON 34: 3
 
 ## Slide 32
 
+WHY THE FIX
 
-> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THAT KILLS THE PARTY.
 
-```text
-| WHY THE FIX
-THAT KILLS THE
 So it's off the table.
-HOT CUE
-TRIODE // PWNING REKORDBOX DEF CON 34
-```
+
+Photo: a CDJ touchscreen reading "Not Loaded, 00:00, 0.0" with "No enlarged waveform data" and the rekordbox logo. Below: PLAYER 2, TRACK 12, A.HOT CUE, REMAIN 00:00.000, SINGLE, TEMPO -1.65% (±10), and the error `E-8302: CANNOT PLAY TRACK(3000)`, with BEAT JUMP 16 and a HOT CUE pad row (B C D E F) below.
 
 ## Slide 33
 
@@ -430,176 +380,150 @@ place.
 
 ## Slide 34
 
+WHY THE FIX
 
-> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### SHRINK THE SCOPE
 
-```text
-| WHY THE FIX
-SHRINK THE SCOPE ..
-Keep accepting the constant. Change ‘read the whole SSH DOCS LIBRARY KEYS | CLOUD
-filesystem’ to ‘read only the library folders. Least privilege. —_ eT
-| The deputy’s password was never weak — it just held way too much power.
-TRIODE // PWNING REKORDBOX DEF CON 34: 34
-```
+Keep accepting the constant. Change 'read the whole filesystem' to 'read only the library folders.' Least privilege.
+
+The deputy's password was never weak — it just held way too much power.
+
+Five boxes in order: SSH, DOCS, LIBRARY, KEYS, CLOUD. All but LIBRARY are marked with an X; LIBRARY alone has a checkmark.
 
 ## Slide 35
 
+SECTION 07
+
+# THE DISCLOSURE
+
 ## Slide 36
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 90/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### FOUND IT BY ACCIDENT
 
-```text
-| THE DISCLOSURE
-11
-12
-13
-14
-16
-Building Now Playing 8, pulling metadata over NFS, | realized | 20
-could point at any path | wanted. ‘Wait — you shouldn't be 23
-able to do that. *
-TRIODE // PWNING REKORDB
+Building Now Playing 3, pulling metadata over NFS, I realized I could point at any path I wanted. 'Wait — you shouldn't be able to do that.'
+
+A code editor shows `rekordbox_nfs.py`:
+
+```python
 #!/usr/bin/env python3
+"""
 rekordbox NFS filesystem browser
+
 Demonstrates that rekordbox exposes the entire host filesystem over NFS
 with no meaningful authentication. Any device on the local network can
 read any file on any mounted drive.
+
 USAGE
-python3 rekordbox_nfs.py <rekordbox—ip>
-python3 rekordbox_nfs.py <rekordbox—ip> --exports
-python3 rekordbox_nfs.py <rekordbox—ip> —-\s
-python3 rekordbox_nfs.py <rekordbox—ip> —-ls "Users/chris/Music"
-python3 rekordbox_nfs.py <rekordbox—ip> --read "Users/chris/hello. txt"
-python3 rekordbox_nfs.py <rekordbox-ip> --drive D --ls
+-----
+    python3 rekordbox_nfs.py <rekordbox-ip>
+    python3 rekordbox_nfs.py <rekordbox-ip> --exports
+    python3 rekordbox_nfs.py <rekordbox-ip> --ls
+    python3 rekordbox_nfs.py <rekordbox-ip> --ls "Users/chris/Music"
+    python3 rekordbox_nfs.py <rekordbox-ip> --read "Users/chris/hello.txt"
+    python3 rekordbox_nfs.py <rekordbox-ip> --drive D --ls
+
 REKORDBOX SETUP
+----------------
 1. Open rekordbox on the target machine (macOS or Windows) and in Export mode.
 2. Have any Pro DJ Link-compatible device connected to the same network and
-powered on. This is required so the Link Export button appears in Rekordbox.
+   powered on. This is required so the Link Export button appears in Rekordbox.
 3. Find the target machine's IP address:
-- macO0S: System Settings > Network, or run ‘ifconfig end
-- Windows: Settings > Network, or run ‘ipconfig*
+   - macOS: System Settings > Network, or run `ifconfig en0`
+   - Windows: Settings > Network, or run `ipconfig`
 4. Run this script with that IP address.
+
 HOW IT WORKS
-DEF CON 34
-36
 ```
+
+(The code panel is cut off at the bottom of the slide; "HOW IT WORKS" is the last visible line.)
 
 ## Slide 37
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### MY FIRST WORRY WAS US
 
-```text
-| THE DISCLOSURE
-MY FIRST WORRY (osteo)
-WAS US (+ prolink-connect )
-+ alphatheta-connect )
-A small community builds genuinely cool things on
-reverse-engineered PRO DJ LINK™.| worried a report might make ;
-+. Now Playing
-AlphaTheta lock NFS down and shut us out.
-```
+A small community builds genuinely cool things on reverse-engineered PRO DJ LINK™. I worried a report might make AlphaTheta lock NFS down and shut us out.
+
+Four badges: crate-digger, prolink-connect, alphatheta-connect, and Now Playing (highlighted).
 
 ## Slide 38
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### I ASKED JAMES ELLIOTT
 
-```text
-| THE DISCLOSURE
-| ASKED JAMES
-ELLIOTT
-Author of crate-digger, the canonical open-source
-implementation. We landed in the same place: the flaw is real,
-and protecting our own access wasn't reason enough to sit
-on it.
-TRIODE // PWNING REKORDBOX DEF CON 34: 38
-```
+Author of crate-digger, the canonical open-source implementation. We landed in the same place: the flaw is real, and protecting our own access wasn't reason enough to sit on it.
+
+Photo: someone holding lit glow sticks at a night event.
 
 ## Slide 39
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### A WARM INTRO
 
-```text
-| THE DISCLOSURE
-A WARM INTRO
-Within 48 hours | was talking to Koushi Kashiwada, who leads
-rekordbox product planning. Responsive, friendly, professional
-the whole way.
-JAMES ELLIOTT ALPHATHETA
-IJ No bug bounty — but a DJM-V10 would be nice. (Mostly joking.)
-TRIODE // PWNING REKORDBOX DEF CON 34: 39
-```
+Within 48 hours I was talking to Koushi Kashiwada, who leads rekordbox product planning. Responsive, friendly, professional the whole way.
+
+No bug bounty — but a DJM-V10 would be nice. (Mostly joking.)
+
+A diagram shows two figures, JAMES ELLIOTT and ALPHATHETA, connected by an arc.
 
 ## Slide 40
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### 90 DAYS → JUNE 1
 
-```text
-| THE DISCLOSURE
-] 2
-G) 12
-16 17
-21 22
-13
-18
-23
-14
-19
-24
-10
-15
-20
-25
-TRIODE // PWNING REKORDBOX
-90 DAYS — JUNE 1
-They asked for more time to fix the rest of the lineup, and |
-extended it. Transparent and collaborative throughout.
-DEF CON 34
-40
-```
+They asked for more time to fix the rest of the lineup, and I extended it. Transparent and collaborative throughout.
+
+A June calendar, with the 1st circled in orange:
+
+| | | | | |
+| --- | --- | --- | --- | --- |
+| 1 | 2 | 3 | 4 | 5 |
+| 6 | 7 | 8 | 9 | 10 |
+| 11 | 12 | 13 | 14 | 15 |
+| 16 | 17 | 18 | 19 | 20 |
+| 21 | 22 | 23 | 24 | 25 |
 
 ## Slide 41
 
+THE DISCLOSURE
 
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### IN THE MEANTIME
 
-```text
-| THE DISCLOSURE
-IN THE (WIEANTIME
-Worried DJ? Don't bring your laptop on stage 10 minutes
-before your set. Bring a USB stick like a professional.
-TRIODE // PWNING REKORDBOX
-DEF CON 34: 41
-```
+Worried DJ? Don't bring your laptop on stage 10 minutes before your set. Bring a USB stick like a professional.
+
+Photo: two DJs performing together at a lit event.
 
 ## Slide 42
 
+SECTION 08
+
+# CLOSE
+
 ## Slide 43
 
+CLOSE
 
-> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+#### THAT'S THE BUG
 
-```text
-THAT'S THE BUG
-NFS, a hardcoded magic number, and a scope nobody ever
-locked down. Sitting there for 20 years.
-TRIODE // PWNING REKORDBOX DEF N 4 1
-```
+NFS, a hardcoded magic number, and a scope nobody ever locked down. Sitting there for 20 years.
+
+Photo: Triode DJing at a rave, the crowd visible under blue lighting, "TRIODE" printed on the back of his shirt.
 
 ## Slide 44
 
+# THANK YOU
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-THANK YOU
 Catch anyone's laptop open while I'm on tonight? I'm cutting the music.
-TONIGHT — LIVE AS TRIODE (+)
+
+**TONIGHT — LIVE AS TRIODE**
 SAHARA STAGE
-+ OFFICIAL DEF CON PARTY xXxxKxKXKX
++ OFFICIAL DEF CON PARTY
+
 @TRIODE
-```
+
