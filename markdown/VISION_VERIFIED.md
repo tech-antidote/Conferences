@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3172 slides across 172 documents.**
+**3242 slides across 172 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1452 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1239 | structure held; individual characters or lines wrong |
-| accurate | 403 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1488 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1265 | structure held; individual characters or lines wrong |
+| accurate | 411 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 78 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -75,7 +75,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 39 talks, 1105 slides
+### Zero-day, RCE and novel exploitation — 39 talks, 1175 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -99,7 +99,7 @@ under more than one heading or under none. Counts are slides.
 - **Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure** (Black Hat USA 2026) — slides 1-94
 - **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
 - **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
-- **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
+- **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slides 1-71
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
@@ -277,7 +277,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 35 | minor-errors | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
 | Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
-| Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
+| Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 1-71 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
