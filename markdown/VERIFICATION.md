@@ -284,6 +284,21 @@ confident. The review was reverted in full rather than repaired.
 XML is a different and weaker operation, and must not be recorded as vision
 verification.
 
+That conclusion has now been tested twice. A later review wave, not knowing the
+history, was pointed at the same talk and independently rediscovered the same
+dead end: LibreOffice refused the deck at load (and still refused it after the
+package was unpacked and repacked byte-for-byte), so the reviewer again fell
+back to slide XML plus embedded images, and again produced a slide 12 carrying
+the "Step 1 / Step 2" branch-rename request and the Flask log with
+`Debugger PIN: 586-187-756` — the same invented content, on the same slide, by
+the same mechanism. It was reverted in full a second time. The failure is
+reproducible and belongs to the method, not to one reviewer having a bad run.
+Do not retry it; the deck stays unverified until there is a renderer.
+
+The renderer really is the blocker rather than the file: on this environment
+`soffice --convert-to pdf` still fails on a plain one-line `.txt`, so nothing
+would render regardless of which deck was asked for.
+
 ## A defect in the review pipeline itself, found and fixed
 
 Worth recording, because it went wrong quietly and the corpus had to be
