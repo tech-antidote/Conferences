@@ -310,6 +310,16 @@ matching the span's own colour never reaches the threshold. The reader's
 experience is identical in both cases: the corpus publishes a line the slide
 never shows.
 
+It is not only images. On page 22 of *Lessons from a Decade of Building
+Whistleblower Tech* (DEF CON 34), seven grey spans — the whole Solution and
+Challenge block, including "No observability in running systems" — sit under a
+plain white filled rectangle at `[16.7, 104.2, 472.5, 352.5]` drawn after them
+in the content stream. Nothing but a ~2.8 pt sliver of the first two glyphs
+escapes it. The converter's check misses this for the same reason: the text is
+grey, the pixels are white, so the share never matches. Any later opaque fill
+does it — a raster image or a vector rectangle alike — so a detector that looks
+only at image blocks, as the measurement below did, is itself incomplete.
+
 One instance is confirmed. On page 66 of *Sliding into the Flight Deck's DMs*
 (DEF CON 34) the text layer carries `Then… nothing for 8 months.` at bbox
 `[73.5, 262.7, 306.5, 280.7]`, and an image at `[7.9, 173.8, 712.1, 291.5]` —

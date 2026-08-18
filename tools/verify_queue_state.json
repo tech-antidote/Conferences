@@ -12,6 +12,7 @@
  "BlackHat_USA_2026_Slides/moriya-pedael-lanjack-turning-ads-into-iot-recon-tools.md": true,
  "BlackHat_USA_2026_Slides/niklas-vogelhaya-schulmann-batch-me-if-you-can-breaking-with-the-stateoftheart-of-fuzzing-cryptographic-architectures.md": true,
  "BlackHat_USA_2026_Slides/omri-ben-bassatnoam-rinetzkysharon-shohamadam-morrison-breaking-hardware-cfi-with-sigreturn.md": true,
+ "BlackHat_USA_2026_Slides/ori-lahav-chatmate-remote-prompt-execution-on-ai-assistants-through-sandbox-escaping.md": true,
  "BlackHat_USA_2026_Slides/povcfehuiming-liu-the-0-day-engine-finding-100-vulns-with-llms-in-chrome-and-android.md": true,
  "BlackHat_USA_2026_Slides/ryan-barnettisabella-barnett-beyond-normalization-the-expanding-unicode-attack-surface-compressed.md": true,
  "BlackHat_USA_2026_Slides/shai-laron-identity-crisis-novel-vulnerabilities-leading-to-kerberos-downgrade-dos-and-full-domain-takeover.md": true,
@@ -46,5 +47,6 @@
  "DEF CON 34/def-con-34-rithwik-jayasimha-rithvik-vibhu-gpwn-wiretapping-fiber-gpon-isp-deployments-from-the-comfort-of-your-home.md": true,
  "DEF CON 34/def-con-34-sammy-azdoufal-11-million-cameras-one-wildcard-architectural-surveillance-in-an-iot-cloud-nobody-puts-baby.md": true,
  "DEF CON 34/def-con-34-t-gwyddon-owen-amp-talkers-without-borders-worldwide-free-speech-without-an-internet-connection-v1.md": true,
+ "DEF CON 34/def-con-34-trevor-timm-redshiftzero-lessons-from-a-decade-of-building-whistleblower-tech-jen-v1.md": true,
  "DEF CON 34/emptynebuli-compounding-interest-exploiting-the-atm-supply-chain-burch-2.md": true
 }
