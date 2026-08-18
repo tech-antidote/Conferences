@@ -968,7 +968,7 @@ Choose the devices and resources on this computer that you want to use in your r
 Windows PowerShell:
 
 ```text
-PS > .\SharpPasskeys.exe prompt --relying-party github.com --challenge QmFQcLh3QUFBQURTQkZoZzczeExFUVo2c0dNVndx
+PS > .\SharpPasskeys.exe prompt --relying-party github.com --challenge QmFQclh3QUFBQURTQkZoZzczeExFUVo2c0dNVndx
 12:20:19 info: Passkeys[0] Prompting for credentials with relying party 'github.com' and authenticator hint 'None'...
 ```
 

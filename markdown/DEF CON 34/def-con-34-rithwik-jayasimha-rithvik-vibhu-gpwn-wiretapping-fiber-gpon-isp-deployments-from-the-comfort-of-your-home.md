@@ -293,15 +293,17 @@ Packet detail (Frame 1):
 > PPP-over-Ethernet Discovery
 ```
 
-Hex pane (right edge occluded by the Google window; only the leading bytes of each row are visible):
+Hex pane (all 16 bytes per row are visible; only the ASCII gutter at the far right is cut off):
 
 ```text
-0000  98 de d0 09 3b 76 40 8f 9d 7e …
-0010  88 63 11 07 00 00 00 31 01 02 …
-0020  52 41 53 5f 42 4c 52 2d 31 01 …      ("RAS_BLR-1")
-0030  00 01 01 00 00 01 04 00 10 89 …
-0040  8f ae 18 fa 3f ed 53 7d 42
+0000  98 de d0 09 3b 76 40 8f   9d 7e 89 4a 81 00 08 b0
+0010  88 63 11 07 00 00 00 31   01 02 00 0d 41 49 52 42
+0020  52 41 53 5f 42 4c 52 2d   31 01 03 00 04 a9 be 08
+0030  00 01 01 00 00 01 04 00   10 89 a4 37 e6 34 aa 81
+0040  8f ae 18 fa 3f ed 53 7d   42
 ```
+
+The five rows total 73 bytes, matching the frame header. `81 00 08 b0` is the 802.1Q tag, VID `0x8b0` = 2224, matching the packet detail; `88 63` is the PPPoE Discovery ethertype and `11 07` a PADO. The AC-Name tag (`01 02`, length `0x0d`) spells `AIRBRAS_BLR-1`.
 
 Right half of the slide: a Google homepage (Gmail, Images, Google Search, I'm Feeling Lucky), footer "Google offered in:" with Indian-language links.
 
@@ -430,7 +432,7 @@ Demo: Hello, can you hear me
 
 ## Slide 36
 
-Figure 8-2 – Downstream GTC frame (ITU-T G.984.3)
+Figure 8-2 – Downstream GTC frame
 
 A downstream stream of GTC frames: GTC frame n − 1 | GTC frame n | GTC frame n + 1. Each GTC frame is made of a PCBd (header) followed by a GTC payload.
 
@@ -652,7 +654,7 @@ v Hypertext Transfer Protocol
 
 ## Slide 50
 
-Exploded diagram of a PLC (planar lightwave circuit) optical splitter package. Labels:
+Exploded diagram of an optical splitter package. Labels:
 
 - End Cap boot (both ends)
 - Outer Housing
@@ -673,7 +675,7 @@ ISPs assume they control this
 
 ## Slide 52
 
-Diagram: Optical Line Terminal → Splitter → Optical Network Unit. Same two boxes — "What they physically control" (OLT + Splitter) and "In our home 🤑" (Optical Network Unit) — now joined by a dashed box spanning the gap between them.
+Diagram: Optical Line Terminal → Splitter → Optical Network Unit. The solid box labelled "What they physically control" encloses only the **Optical Line Terminal**; the solid box labelled "In our home 🤑" encloses the **Optical Network Unit**; the **Splitter** sits between them in its own dashed box, in neither. An outer box encloses all three.
 
 ISPs assume they control this
 

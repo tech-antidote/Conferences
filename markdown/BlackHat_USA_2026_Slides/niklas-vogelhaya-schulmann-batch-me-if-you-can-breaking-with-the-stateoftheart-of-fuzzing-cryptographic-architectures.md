@@ -194,7 +194,7 @@ Fuzzer → (a mass of crossed-out inputs, one exploding) | Validator
 
 0.000000000000000000000000000000000000000000000…[……]1%
 
-The slide shows ten full lines of zeros before the trailing `[……]1%`; rows 4–9 run behind an overlaid image, so the exact number of zeros cannot be read off the page.
+The slide shows ten rows of zeros in total — nine full lines and a tenth that ends in the trailing `[……]1%`; rows 4–9 run behind an overlaid image, so the exact number of zeros cannot be read off the page.
 
 ## Slide 27
 
@@ -246,9 +246,10 @@ Encoding output:
 
 ## Fuzzing Architecture
 
-**Corpus** → **Queue** → **Mutation** → **Harness** → **Target** → **Oracle** → **Scoring** → back into **Queue**
+**Corpus** → **Queue** → **Mutation** → **Harness** → **Target**
 
-- **Target** also feeds **Scoring** directly.
+- **Target** → **Scoring**, and **Target** → **Oracle**: two independent edges leaving Target. **Oracle** is a terminal node here — nothing leaves it.
+- **Scoring** → back into **Queue**.
 - Queue, Mutation, Harness, Scoring and Oracle sit inside the dashed fuzzer boundary; Corpus and Target sit outside it.
 
 ## Slide 33
@@ -317,9 +318,10 @@ The same objects, but now every one of them depends on the others, so no snapsho
 
 ## Sequential Fuzzing Architecture
 
-**Corpus** → **Queue** → **Mutation** → **Harness** → **Target** → **Oracle** → **Scoring** → back into **Queue**
+**Corpus** → **Queue** → **Mutation** → **Harness** → **Target**
 
-- **Target** also feeds **Scoring** directly.
+- **Target** → **Scoring**, and **Target** → **Oracle**: two independent edges leaving Target. **Oracle** is a terminal node here — nothing leaves it.
+- **Scoring** → back into **Queue**.
 - Queue, Mutation, Harness, Scoring and Oracle sit inside the dashed fuzzer boundary; Corpus and Target sit outside it.
 
 ## Slide 42
@@ -636,7 +638,7 @@ An arrow drops from the coverage step at t = 40 ms onto the call-count curve, an
 
 ## Mapping requires speed
 
-Chart — x-axis **Time (ms)** with ticks 0, 20, 40, 60, 80, 100; y-axis **Calls to procces_obj()** with ticks 0, 10, 20, 30.
+Chart — x-axis carries only the bare ticks 0, 20, 40, 60, 80, 100 with no axis title on the page; y-axis is titled **Calls to procces_obj()** with ticks 0, 10, 20, 30.
 
 The orange step curve sits at 0 until about t = 22 ms, then climbs one step at a time to 30 by about t = 80 ms and stays flat. The annotation on the rising part reads **every 100 us**.
 
@@ -644,7 +646,7 @@ The orange step curve sits at 0 until about t = 22 ms, then climbs one step at a
 
 ## Mapping requires speed
 
-The same chart — x-axis **Time (ms)** 0–100, y-axis **Calls to procces_obj()** 0–30, orange step curve rising from 0 at about t = 22 ms — with a cartoon dropped over its right-hand half.
+The same chart — x-axis ticks 0–100 with no axis title on the page, y-axis titled **Calls to procces_obj()** 0–30, orange step curve rising from 0 at about t = 22 — with a cartoon dropped over its right-hand half.
 
 Caption on the cartoon: *unsafe{ }*
 
@@ -664,7 +666,7 @@ No per-bar values are printed on the slide.
 
 ## CAT Fuzzing Architecture
 
-Everything inside the dotted boundary is **CAT** 🐈:
+The dotted boundary labelled **CAT** 🐈 encloses Corpus, Template Agnostic DER Parser, Labeling, Snapshot RPKI Repo, Fuzzing Queue, Batch Mutation, Signing and Nesting, Scoring and Oracle. **RPKI Validator**, its **Coverage** tag and **Findings Reports** are drawn outside that boundary, to the right of it.
 
 - **Corpus** → **Template Agnostic DER Parser** → **Labeling**
 - **Labeling** ⇢ **Fuzzing Queue** (dashed)
@@ -672,7 +674,7 @@ Everything inside the dotted boundary is **CAT** 🐈:
 - **Fuzzing Queue** → **Batch Mutation** → **Signing and Nesting** → **RPKI Validator**
 - **RPKI Validator** carries a **Coverage** tag; **Coverage** → **Scoring** → back into **Fuzzing Queue**
 - **RPKI Validator** ⇢ **Oracle** (dashed)
-- **Oracle** ⇠⇢ **Findings Reports** (dashed, both directions)
+- **Oracle** ⇢ **Findings Reports** (dashed, arrowhead at the Findings Reports end only)
 
 ## Slide 67
 

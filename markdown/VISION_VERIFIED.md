@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2782 slides across 164 documents.**
+**2882 slides across 166 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1251 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1126 | structure held; individual characters or lines wrong |
-| accurate | 377 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1320 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1146 | structure held; individual characters or lines wrong |
+| accurate | 388 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -116,7 +116,7 @@ under more than one heading or under none. Counts are slides.
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
-### Firmware, hardware and embedded — 24 talks, 433 slides
+### Firmware, hardware and embedded — 25 talks, 487 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -138,6 +138,7 @@ under more than one heading or under none. Counts are slides.
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
+- **BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft** (DEF CON 34) — slides 1-54
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Gone in 60 Frames - USB Video Exploitation** (DEF CON 34) — slides 1-30
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
@@ -288,6 +289,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
+| DEF CON 34 | BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft | 1-54 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Bird Hunting Season The Final Flight | 1-38 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Breaking Amazon lockers by any means necessary | 1-37 | badly-mangled, minor-errors, accurate | 8 |
@@ -305,6 +307,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software | 1-44 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) | 1-46 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
