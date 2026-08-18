@@ -14,8 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 86.5
 ocr_unreliable_blocks: 0
-vision_verified_pages_changed: 47
-vision_verified_pages: 50
+vision_verified_pages_changed: 88
+vision_verified_pages: 100
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -1063,7 +1063,27 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **Decoding problem**
 
-Google SSO 75.2%, navigator.credentials-only 82.3%, known JS lib 18.6% ↗ <u>Census: Bhardwaj & Sastry, PAM 2026</u>
+Flowchart. A **Ceremony** box on the left fans out with six arrows, one to each of six boxes:
+
+- **Vendor A:** base64url(CBOR(...))
+- **Vendor B:** protobuf blob
+- **Vendor C:** double-wrapped JSON + base64
+- **Vendor D:** long body form-POST
+- **Vendor E:** RPC batchexecute + positional arrays
+- **...**
+
+Six further arrows, one from each of those boxes, converge on a single **decode** box. One arrow leaves **decode** to a rounded blue box:
+
+```text
+decoded fields:
+fmt,
+authData
+flags,
+signCount,
+...
+```
+
+Google SSO 75.2%, navigator.credentials-only 82.3%, known JS lib 18.6% <u>↗ Census: Bhardwaj & Sastry, PAM 2026</u>
 
 **3/37**
 
@@ -1073,181 +1093,131 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **52**
 
+Three request panes side by side, each with a summary card below it.
+
 ###### **Microsoft**
 
-\```
-mysignins.microsoft.com
-\```
+`mysignins.microsoft.com`
 
-\```
+```text
 POST /api/post/newfido
 Content-Type: form-urlencoded
-\```
 
-\```
-canary=b0f2c1a9 
-\```
+canary=b0f2c1a9...
+&clientDataJson=eyJ0eXBlIjo..
+&attestationObject=o2NmbXRkcG..
+&credentialId=3EHSf9K2mQ..
+&credentialDeviceType=multiDevice
+&credentialBackedUp=true
+&transports=internal,hybrid
+&extensions=eyJjcmVkUHJv..
+```
 
-- `&clientDataJson=eyJ0eXBlIjo `
+**FLAT FORM FIELDS**
 
-- `&attestationObject=o2NmbXRkcG `
-
-- `&credentialId=3EHSf9K2mQ  &credentialDeviceType=multiDevice &credentialBackedUp=true &transports=internal,hybrid`
-
-- `&extensions=eyJjcmVkUHJv `
+`position:` ~10 flat form params
+`decode:` URL-encoded + Base64URL
 
 ###### **GitHub**
 
-\```
-github.com
-\```
+`github.com`
 
-\```
+```text
 POST /u2f/trusted_devices
 Content-Type: multipart/form-data
-\```
 
-\```
-------WebKitFormBoundary 
+------WebKitFormBoundary...
 Content-Disposition: form-data;
-name="response"
-\```
+  name="response"
+{"id":"3EHSf9K2mQ..",
+ "type":"public-key",
+ "response":{
+   "clientDataJSON":"eyJ0..
+   "attestationObject":"o2N..
+ },
+ "clientExtensionResults":{}}
+------WebKitFormBoundary...--
+```
 
-\```
-{"id":"3EHSf9K2mQ ",
-\```
+**MULTIPART + NESTED JSON**
 
-- `"type":"public-key",`
-
-\```
-"response":{
-\```
-
-- `"clientDataJSON":"eyJ0 `
-
-- `"attestationObject":"o2N `
-
-\```
-},
-\```
-
-\```
-"clientExtensionResults":{}}
-\```
+`position:` spec field names, nested
+`decode:` JSON + Base64URL
 
 ###### **Google**
 
-\```
-myaccount.google.com
-\```
+`myaccount.google.com`
 
-\```
-POST /_/ /batchexecute
+```text
+POST /_/.../batchexecute
 Content-Type: form-urlencoded
-\```
 
-\```
 f.req=[[["GtmsU","[null,null,
-null,"eyJ0eXBlIjoi ",
-\```
+  null,"eyJ0eXBlIjoi..",
+  "o2NmbXRkcGFj..",
+  ["internal"],null,1,1]",
+  null,"generic"]]]
+&at=AFehe7k9dQ..
 
-\```
-"o2NmbXRkcGFj ",
-["internal"],null,1,1]",
-null,"generic"]]]
-\```
+// idx 3 = clientDataJSON
+// idx 4 = attestationObject
+```
 
-- `&at=AFehe7k9dQ `
+**POSITIONAL ARRAYS**
 
-- `  idx 3 = clientDataJSON`
-
-- `  idx 4 = attestationObject`
-
-\```
-------WebKitFormBoundary --
-\```
-
-###### **FLAT FORM FIELDS**
-
-`position:` ~10 flat form params `decode: URL-encoded + Base64URL`
-
-###### **MULTIPART + NESTED JSON**
-
-`position:` spec field names, nested `decode: JSON + Base64URL`
-
-###### **POSITIONAL ARRAYS**
-
-`position:` fields by index in a blob `decode: URL-encoded + Base64URL`
-
-protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+`position:` fields by index in a blob
+`decode:` URL-encoded + Base64URL
 
 **4/37**
 
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+
 ## Slide 53
+
+**53**
 
 ### **Decoded fields**
 
-\```
+```json
 {
-\```
-
-- `"clientDataJSON": {`
-
-- `"type": "webauthn.get",`
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge": "zYJx-8mHw8wK7vC4qRseSJrDCd01yKIfZk_njXEOoeuQD7CuKUoQ2frvV0NBoJiVZSBgjUYy8vGb-0Lq-BS1wA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "signCount": 42
+  },
+  "signature": "304402207BC3E1F0A2D4C6980B5E3F1A2C4D6E8F0A1B2C3D4E5F60…DDEEFF02",
+  "userHandle": "6D617474656F2D67696F7264616E6F"
+}
+```
 
 You want:
-
-- `"challenge": "zYJx-8mHw8wK7vC4qRseSJrDCd01yKIfZk_njXEOoeuQD7CuKUoQ2frvV0NBoJiVZSBgjUYy8vGb-0Lq-BS1wA",`
-
-- `"origin": "https: webauthn.io",`
-
-- `"crossOrigin": false`
-
-- `},`
-
-- `"authenticatorData": {`
-
-- `"rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",`
-
-- `"flags": {`
-
-- `"userPresent": true,`
-
-- `"userVerified": true,`
-
-- `"backupEligible": false,`
-
-- `"backupState": false,`
-
-- `"attestedCredentialData": false,`
 
 - Traffic detection
 
    - across vendor wrappers
 
-- Every field decoded: ◆ clientDataJSON
+- Every field decoded:
+
+   - clientDataJSON
 
    - authenticatorData
 
    - signature
 
    - userHandle
-
-**53**
-
-- `"extensionDataIncluded": false`
-
-- `},`
-
-- `"signCount": 42`
-
-- `},`
-
-- `"signature": "304402207BC3E1F0A2D4C6980B5E3F1A2C4D6E8F0A1B2C3D4E5F60…DDEEFF02",`
-
-- `"userHandle": "6D617474656F2D67696F7264616E6F"`
-
-- `}`
 
 **5/37**
 
@@ -1279,6 +1249,56 @@ You have:
 
    - ...
 
+Screenshot of a Burp Suite request, with a **Passkey Editor** tab added.
+
+Selected proxy row: `5160  https://webauthn.io  POST  /registration/verification  ✓  ✓  200`
+
+**Original request** ⌄
+
+Tabs: `Pretty` `Raw` `Hex` **Passkey Editor** (selected).   ☑ Wrap
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.create",
+    "challenge":
+"zYJx-8mHw8wK7vC4qRseSJrDCd01yKIfZk_njXEOoeuQD7CuKUoQ2frvV0NBoJiVZSBgjUYy8vGb-0Lq-BS1wA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "attestationObject": {
+   "attestationStatement": {
+     "format": "none"
+   },
+   "authenticatorData": {
+     "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+     "extensions": {},
+     "signCount": 1,
+     "flags": {
+       "userPresent": true,
+       "userVerified": true,
+       "backupEligible": false,
+       "backupState": false,
+       "attestedCredentialData": true,
+       "extensionDataIncluded": false
+     },
+     "attestedCredentialData": {
+       "aaguid": "01020304-0506-0708-0102-030405060708",
+       "coseKey": {
+         "keyType": "OKP",
+         "algorithm": "EdDSA",
+         "curve": "Ed25519",
+         "x": "4E7DB02BDD2B21364502D0177930029CEBB39BC8F8BC42CB8997EAB7CDDFEB2D"
+       },
+       "credentialId": "744D5E363DA57801D203145B4736F9D4653ED2104CE3C4E6C6941C75ED7E0A7F"
+     }
+   }
+  },
+  "fmt": "none"
+ }
+}
+```
+
 **6/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
@@ -1287,213 +1307,275 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **55**
 
-**7/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Screenshot of the **Passkey Editor** tool, full window.
 
+Tabs: **Profiles** (selected) · Guide · About
 
-> Recovered by OCR — confidence 81/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Left pane, **Profiles**:
 
-```text
-Passkey Editor
-Profiles Guide © About
-Profiles
-Profile: webauthn.io (Duo py_webauthn)
-© Default (SimpleWebAuthn / generic) [not active]
-@ webauthn.io (Duo py_webauthn)
-3 passkeys-debugger.io (Next.js action) [not active]
-© passkeys.io (Hanko) [not active]
-© demo.yubico.com {not active]
-@ webauthn.lubu.ch [auto-plant] [re-sign]
-Add
-Copy
-Delete
-Restore built-ins
-Enabled [_] Auto-plant ["] Auto re-sign
-id: webauthn.io name: webauthn.io (Duo py_webauthn)
-host match: EXACT ~ webauthn.io
-default signing alg: EdDSA(-8) ~ plant attestation: None v
-Registration
-verify URL: CONTAINS v | /registration/verification method: POST
-clientDataJSON O path regex _response.response.clientDataJSON © Auto © Raw ©) Base64 () Base64URL [} URL encoded webauthn.create decoded >
-attestationObject O path regex response.response.attestationObject O Auto © Raw ©) Base64 () Base64URL [| URL encoded fmt=none - Ed25519 key decoded >
-authenticatorData O path regex _response.response.authenticatorData © Auto © Raw ©) Base64 () Base64URL [| URL encoded UP UV AT: signCount 1 decoded >
-credentialld O path © regex © Auto © Raw © Base64 ©) Base64URL [] URLencoded decoded >
-Authentication
-verify URL: CONTAINS v | /authentication/verification method: POST
-clientDataJSON O path © regex | response.response.clientDataJSON © Auto © Raw ©) Base64 ©) Base64URL [_) URL encoded webauthn.get decoded >
-authenticatorData O path © regex | response.response.authenticatorData © Auto © Raw © Base64 ©) Base64URL [_) URL encoded UP UV - signCount 2 decoded >
-signature © path © regex response.response.signature © Auto © Raw ©) Base64 (©) Base64URL [| URL encoded £d25519 - 64B decoded >
-userHandle © path © regex | response.response.userHandle © Auto © Raw ©) Base64 () Base64URL [] URL encoded 37B - “webauthnio-asdadsada..." decoded >
-credentialld © path © regex | response.rawld © Auto © Raw ©) Base64 () Base64URL [| URL encoded 328 - 893025b4e178... decoded >
-Sample bodies
+- ☐ Default (SimpleWebAuthn / generic)  [not active]
+- ☑ webauthn.io (Duo py_webauthn)   *(selected row, highlighted blue)*
+- ☐ passkeys-debugger.io (Next.js action)  [not active]
+- ☐ passkeys.io (Hanko)  [not active]
+- ☐ demo.yubico.com  [not active]
+- ☑ webauthn.lubu.ch  [auto-plant]  [re-sign]   *(orange)*
+
+Buttons below the list: **Add** · **Copy** · **Delete** · **Restore built-ins**
+
+Right pane, **Profile: webauthn.io (Duo py_webauthn)**:
+
+☑ Enabled  ☐ Auto-plant  ☐ Auto re-sign
+
+| Field | Value |
+|---|---|
+| id: | `webauthn.io` |
+| name: | `webauthn.io (Duo py_webauthn)` |
+| host match: | `EXACT` ⌄ / `webauthn.io` |
+| default signing alg: | `EdDSA (-8)` ⌄ |
+| plant attestation: | `None` ⌄ |
+
+**Registration**
+
+verify URL: `CONTAINS` ⌄ | `/registration/verification`   method: `POST`
+
+| field | path/regex | value | encoding | decoded |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | webauthn.create  `decoded ›` |
+| attestationObject | ⦿ path ○ regex | `response.response.attestationObject` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | fmt=none · Ed25519 key  `decoded ›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | UP UV AT · signCount 1  `decoded ›` |
+| credentialId | ⦿ path ○ regex | *(empty)* | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+
+**Authentication**
+
+verify URL: `CONTAINS` ⌄ | `/authentication/verification`   method: `POST`
+
+| field | path/regex | value | encoding | decoded |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | webauthn.get  `decoded ›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | UP UV · signCount 2  `decoded ›` |
+| signature | ⦿ path ○ regex | `response.response.signature` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | Ed25519 · 64B  `decoded ›` |
+| userHandle | ⦿ path ○ regex | `response.response.userHandle` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | 37B · "webauthnio-asdadsada…"  `decoded ›` |
+| credentialId | ⦿ path ○ regex | `response.rawId` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | 32B · 893025b4e178…  `decoded ›` |
+
+**Sample bodies**
+
 Registration body (paste the reg-verify request body):
+
+```json
 {
-“defcon34",
-{
-Authentication body (paste the auth-verify request body):
-Check Prettify JSON Save profile all 8 configured field(s) extract cleanly
-7/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-55
+  "username": "defcon34",
+  "response": {
+    "id": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "rawId": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "response": {
+      "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViBdKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBFAAAAAQECAwQFBgcIAQIDBAUGBwgAIIkwJbTheLJwnsyC9RTaHJaNMNxM-Lw5C0CJMa6lEbfEpAEBAycgBiFYIP8CuPmFEqE1eDHTvdI5hBJwS2K3FKP2f-eI3OHLC_2u",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiSmV2VTBETm5rUnRCOUlsTnJiR01vYmFMZGFTNmJSeUJha2tta3plVEtyVFNQR2hCQk5YWHBRSDFDU3NDY1N0RkJaTDNDdFFtY0lmMUE0anlrQVlGZHciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
 ```
+
+Authentication body (paste the auth-verify request body):
+
+```json
+{
+  "username": "defcon34",
+  "response": {
+    "id": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "rawId": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "response": {
+      "authenticatorData": "dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvAFAAAAAg",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiZ0RGMTR2aE1iVlkySGVwdV9PS0lPYzdCR3BZSkc4Z3dEd2dfNXpWMlpNOFNKanFNa1dScGN4RnRkdFNXZE5kZ0FJOFpvWC1ydVRCdm1Kc0JXc01kanciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
+      "signature": "xMqaOxhmJ_68vH4KiUMougIZ1FGnJeVvvFVkUvJhRwGn9N-jS9Woa99BTY51-V5711UoG5MJ6_0ADJDFF8orDQ",
+```
+
+Both textareas are scrolled, so each body is cut off after the line shown.
+
+Buttons: **Check** · **Prettify JSON** · **Save profile**   `all 8 configured field(s) extract cleanly`
+
+**7/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 56
 
 **56**
 
+Zoom 1 of the Passkey Editor screenshot: the **Profiles** pane, ringed in a blue rectangle with a blue circled marker **1** at its bottom-right corner.
+
+Tabs above: **Profiles** (selected) · Guide · About
+
+**Profiles**
+
+- ☐ Default (SimpleWebAuthn / generic)  [not active]
+- ☑ webauthn.io (Duo py_webauthn)   *(selected row, highlighted blue)*
+- ☐ passkeys-debugger.io (Next.js action)  [not active]
+- ☐ passkeys.io (Hanko)  [not active]
+- ☐ demo.yubico.com  [not active]
+- ☑ webauthn.lubu.ch  [auto-plant]  [re-sign]   *(orange)*
+
+Buttons: **Add** · **Copy** · **Delete** · **Restore built-ins**
+
 **8/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Profiles Guide About
-Profiles
-© Default (SimpleWebAuthn / generic) [not active]
-@ webauthn.io (Duo py_webauthn)
-O passkeys-debugger.io (Next.js action) [not active]
-© passkeys.io (Hanko) [not active]
-© demo.yubico.com [not active]
-@ webauthn.lubu.ch [auto-plant] [re-sign]
-Add
-Copy
-Delete
-Restore built-ins
-8/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-56
-```
 
 ## Slide 57
 
 **57**
 
-**9/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Zoom 2: the profile identity rows, with the **host match** row ringed in a blue rectangle and a blue circled marker **2** at its right-hand end.
 
+| Field | Value |
+|---|---|
+| id: | `webauthn.io` |
+| name: | `webauthn.io (Duo py_we` — clipped by the right edge of the crop |
+| host match: | `EXACT` ⌄ / `webauthn.io` |
+| default signing alg: | `EdDSA (-8)` ⌄ |
+| plant attestation: | `None` — clipped by the right edge of the crop |
 
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**9/37**
 
-```text
-id: webauthn.io name: webauthn.io (Duo py_we
-host match: EXACT v
-webauthn.io
-default signing alg: EdDSA(-8) ~ _ plant attestation: None
-9/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-57
-```
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 58
 
 **58**
 
+Zoom 3: the **Registration** fieldset, ringed in a blue rectangle with a blue circled marker **3** at its bottom-right corner. A row of controls above it and the **Authentication** legend below it are cut by the crop.
+
+**Registration**
+
+verify URL: `CONTAINS` ⌄ | `/registration/verification`   method: `POST`
+
+| field | | path/regex |
+|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` |
+| attestationObject | ⦿ path ○ regex | `response.response.attestationObject` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` |
+| credentialId | ⦿ path ○ regex | *(empty)* |
+
+The encoding radio column to the right is cut off by the crop, leaving only the first ⦿ of each row.
+
 **10/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 77/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Registration
-verify URL: CONTAINS v__ /registration/verification method: POST
-clientDataJSON © path ©) regex response.response.clientDataJSON }
-authenticatorData O path ©) regex response.response.authenticatorData 4
-credentialld O path ©) regex }
-Authentication
-10/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-```
 
 ## Slide 59
 
 **59**
 
+Zoom 4: the **Authentication** fieldset, ringed in a blue rectangle with a blue circled marker **4** at its bottom-right corner. The last row of the Registration fieldset above and the **Sample bodies** legend below are cut by the crop.
+
+**Authentication**
+
+verify URL: `CONTAINS` ⌄ | `/authentication/verification`   method: `POST`
+
+| field | | path/regex |
+|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` |
+| signature | ⦿ path ○ regex | `response.response.signature` |
+| userHandle | ⦿ path ○ regex | `response.response.userHandle` |
+| credentialId | ⦿ path ○ regex | `response.rawId` |
+
+The encoding radio column to the right is cut off by the crop, leaving only the first ⦿ of each row.
+
 **11/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 77/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Authentication
-verify URL: CONTAINS v __ /authentication/verification method: POST
-clientDataJSON O path ©) regex response.response.clientDataJSON (e)
-authenticatorData O path ©) regex response.response.authenticatorData (eo)
-signature O path ©) regex response.response.signature (e]
-userHandle O path ©) regex response.response.userHandle (e]
-credentialld O path ©) regex response.rawld
-Sample bodies ra]
-protocol / auth - transport - client - RELYING PARTY . sync - user
-59
-```
 
 ## Slide 60
 
 **60**
 
+Zoom 5: the encoding-selector columns of both fieldsets, ringed in one blue rectangle with a blue circled marker **5** at its bottom-right corner. Field names on the left and the decoded summaries on the right are cut by the crop.
+
+Four rows (Registration):
+
+```text
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   weba…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   fmt=n…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   UP U…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   de…
+```
+
+Five rows (Authentication):
+
+```text
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   weba…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   UP U…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   Ed25…
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   37B ·
+⦿ Auto  ○ Raw  ○ Base64  ○ Base64URL  ☐ URL encoded   32B ·
+```
+
 **12/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 71/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Base64URL | | URL encoded] fmt=n
-Base64URL [ | URL encoded]UP U\
-Base64URL [_) URLencoded} de
-Base64URL | | URL encoded|weba
-Base64URL [| URL encoded]UP U)
-Base64URL | | URL encoded} Ed25!
-—) Base64URL [ | URL encoded]37B -
-~) Base64URL [| URL encod: B -
-12/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-```
 
 ## Slide 61
 
 **61**
 
+Zoom 6 of the Passkey Editor screenshot: the two fieldsets and the **Sample bodies** pane. Blue circled marker **9** sits above the decoded-summary column of the Registration fieldset, **10** to the right of the userHandle summary, **6** at the top-left corner of the Sample bodies box, **7** above the *Prettify JSON* button and **8** above the *Check* button. One blue rectangle rings the two decoded-summary columns; a second rings the whole Sample bodies box.
+
+**Registration**
+
+verify URL: `CONTAINS` ⌄ | `/registration/verification`   method: `POST`
+
+| field | path/regex | value | encoding | decoded |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | webauthn.create  `decoded ›` |
+| attestationObject | ⦿ path ○ regex | `response.response.attestationObject` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | fmt=none · Ed25519 key  `decoded ›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | UP UV AT · signCount 1  `decoded ›` |
+| credentialId | ⦿ path ○ regex | *(empty)* | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+
+**Authentication**
+
+verify URL: `CONTAINS` ⌄ | `/authentication/verification`   method: `POST`
+
+| field | path/regex | value | encoding | decoded |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | webauthn.get  `decoded ›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | UP UV · signCount 2  `decoded ›` |
+| signature | ⦿ path ○ regex | `response.response.signature` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | Ed25519 · 64B  `decoded ›` |
+| userHandle | ⦿ path ○ regex | `response.response.userHandle` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | 37B · "webauthnio-asdadsada…"  `decoded ›` |
+| credentialId | ⦿ path ○ regex | `response.rawId` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | 32B · 893025b4e178…  `decoded ›` |
+
+**Sample bodies**
+
+Registration body (paste the reg-verify request body):
+
+```json
+{
+  "username": "defcon34",
+  "response": {
+    "id": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "rawId": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "response": {
+      "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViBdKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBFAAAAAQECAwQFBgcIAQIDBAUGBwgAIIkwJbTheLJwnsyC9RTaHJaNMNxM-Lw5C0CJMa6lEbfEpAEBAycgBiFYIP8CuPmFEqE1eDHTvdI5hBJwS2K3FKP2f-eI3OHLC_2u",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiSmV2VTBETm5rUnRCOUlsTnJiR01vYmFMZGFTNmJSeUJha2tta3plVEtyVFNQR2hCQk5YWHBRSDFDU3NDY1N0RkJaTDNDdFFtY0lmMUE0anlrQVlGZHciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
+```
+
+Authentication body (paste the auth-verify request body):
+
+```json
+{
+  "username": "defcon34",
+  "response": {
+    "id": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "rawId": "iTAltOF4snCezIL1FNoclo0w3Ez4vDkLQIkxrqURt8Q",
+    "response": {
+      "authenticatorData": "dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvAFAAAAAg",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiZ0RGMTR2aE1iVlkySGVwdV9PS0lPYzdCR3BZSkc4Z3dEd2dfNXpWMlpNOFNKanFNa1dScGN4RnRkdFNXZE5kZ0FJOFpvWC1ydVRCdm1Kc0JXc01kanciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
+      "signature": "xMqaOxhmJ_68vH4KiUMougIZ1FGnJeVvvFVkUvJhRwGn9N-jS9Woa99BTY51-V5711UoG5MJ6_0ADJDFF8orDQ",
+```
+
+Each textarea is scrolled, so both bodies are cut off after the line shown.
+
+Buttons: **Check** · **Prettify JSON** · **Save profile**   `all 8 configured field(s) extract cleanly`
+
 **13/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 77/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-‘Sample bodies
-Registration
-verify URL: CONTAINS v __ /registration/verification method: POST
-clientDataJSON O path ©) regex | response.response.clientDataJSON O Auto (© Raw ©) Base64 (©) Base64URL [ | URL encoded]webauthn.create decoded >
-attestationObject O path © regex | response.response.attestationObject O Auto © Raw ©) Base64 (©) Base64URL [ | URL encoded} fmt=none - Ed25519 key decoded >
-authenticatorData O path ©) regex response.response.authenticatorData O Auto © Raw ©) Base64 (©) Base64URL [ | URL encoded} UP UV AT: signCount 1 decoded >
-credentialld O path © regex O Auto © Raw © Base64 () Base64URL [) URLencoded| decoded >
-Authentication
-verify URL: CONTAINS y¥ /authentication/verification method: POST
-clientDataJSON O path ©) regex | response.response.clientDataJSON O Auto © Raw ©) Base64 (©) Base64URL [| URL encoded} webauthn.get decoded >
-authenticatorData © path © regex response.response.authenticatorData © Auto © Raw ©) Base64 () Base64URL [| URL encoded} UP UV - signCount 2 decoded >
-signature O path © regex | response.response.signature O Auto © Raw ©) Base64 (©) Base64URL [| URL encoded} Ed25519 - 64B decoded > (10 }
-userHandle O path © regex response.response.userHandle O Auto © Raw (©) Base64 () Base64URL [ | URL encoded} 37B - “webauthnio-asdadsada..." decoded >
-O path ©) regex | response.rawld © Auto © Raw ©) Base64 () Base64URL [| URL encoded} 32B - 893025b4e178... decoded >
-Registration body (paste the reg-verify request body):
-{
-“username": "“defcon34",
-{
-“response": {
-“attestationObject": “o2NmbXRkbm9uZWdhdHRTdG1@0GhhdXRoRGFOYViBdKbqkhPJnC90siSSsyDPQCYq LMGpUKAS f yk LC2CEHVBFAAAAAQECAwQFBgc IAQ IDBAUGBwgAIIkwJ bTheLJwnsyC9RTaHJ aNMNxM—Lw5C@CJMa6 LEbTEpA
-Authentication body (paste the auth-verify request body):
-{
-“authenticatorData": "“dKbqkhPJnC90siSSsyDPQCYq LMGpUKAS fyk LC2CEHVAFAAAAAG",
-Check Prettify JSON Save profile all 8 configured field(s) extract cleanly
-13/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-61
-```
 
 ## Slide 62
 
@@ -1509,6 +1591,61 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
    - re-sign on passthrough
 
+Screenshot of Burp Suite Proxy, right of the bullets.
+
+Tabs: **Intercept** (selected, orange dot) · HTTP history · WebSockets history · Match and replace | ⚙ Proxy settings
+
+Buttons: **Intercept on** · **→ Forward** ⌄ · **Drop** ⌄ · `Request to https://we…` ✎ · **⊕ Open browser** · ⓘ
+
+| Time | Type | Direction | Method | URL | Status code | Length |
+|---|---|---|---|---|---|---|
+| 13:28:50 6 Jul 2026 | HTTP | → Request | POST | `https://webauthn.io/authentication/verification` | | |
+
+**Request** — tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected)
+
+`Attacks ⌄`   ☑ Wrap
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge": "lXi6duZCUvut6pxxch4hKFEuyLMuK7tQH5QfsSs7pts941y_MRf6l-_JI73_yiFB2jJ7CKW-jtsZMmGUpyw5og",
+    "origin": "https://evil.webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "22EA1500B25722FD46E8A8653E37107E07805890FCD719A92A9EF5CAD9693AFF",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"26C90A162BA1528B08AAAEDEFF454A8A3ACAE7041FAD616A9A52CDAF536D0FC3D6B4BFC5799D3AF4079876C667FD7A1A71EBF4660F3C8D8E84DB270885E3C90F"
+}
+```
+
+`"https://evil.webauthn.io"`, the `rpIdHash` and the `signature` value are highlighted yellow.
+
+Below the pane, in green:
+
+```text
+re-signed (EdDSA)
+  • rpId = <edited>
+  • origin = https://evil.webauthn.io
+```
+
+Buttons: **Re-sign with our key** · **Clear edits** · **Apply edits + re-sign**
+
 **14/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
@@ -1517,53 +1654,60 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **63**
 
-**15/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Hand-drawn WebAuthn registration ceremony with an attacker column inserted. Four participants, left to right: **Relying Party SERVER** (a bare vertical line), a red-outlined box lettered vertically **M I T M**, **Client** (a bracket spanning three vertical lanes lettered **RP JS APP**, **WEBAUTHN**, **BROWSER**) and **Authenticator** (a single vertical lane).
 
+Arrows, top to bottom:
 
-> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- A red arrow labelled **forged**, MITM → SERVER (arrowhead at the SERVER end only).
+- `(1) Auth request` — RP JS APP → MITM (arrowhead at the MITM end).
+- One black arrow SERVER → MITM (arrowhead at the MITM end), labelled above and below:
+  - `(2) challenge, user info, RP info`
+  - `(3) navigator.credentials.create`
+- A red arrow labelled **forged**, MITM → RP JS APP (arrowhead at the RP JS APP end only).
+- `(5) hash(clientDataJSON), user info, RP info, RP ID` — BROWSER → Authenticator (arrowhead at the Authenticator end).
+- A self-loop on Authenticator, labelled `(6)   is User near?` / `(6.1) can User unlock?` / `(6.2) Creates the key pair scoped to the RP ID`.
+- A second self-loop on Authenticator, labelled with the `(7) attestationObject` block below.
+- `(8) attestationObject` — Authenticator → BROWSER (arrowhead at the BROWSER end).
+- `(9) attestationObject, clientDataJSON` — RP JS APP → MITM (arrowhead at the MITM end).
+- A red arrow labelled **forged**, MITM → SERVER (arrowhead at the SERVER end only).
+- A self-loop on SERVER, labelled `(10) verify as per [1] and add credentials to its storage`.
+- A thick arrow entering the bottom of the BROWSER lane from below, labelled with the `(4) clientDataJSON` block.
+
+Side blocks:
 
 ```text
-Relying Party '
-SERVER Client Authenticator
-<— forged (1) Auth request (rR) —
-(2) challenge, user info, RP info P
-— forged >
-(5) hash(clientDataJSON) ,
-user info,
-RP info, RP ID
-(6) is User near?
-(6.1) can User unlock?
-(6.2) Creates the key pair
-scoped to the RP ID
 (7) attestationObject = {
-(8) attestationObject hash(RP ID),
-flags = [
-UserPresence,
-UserVerification,
-Attested cred data,
-Extension data
-(9) attestationObject,
-clientDataJSON
-“Au
-<— forged ——
-(10) verify as per [1]
-and add credentials to
-its storage
-1,
-LS credential ID,
-public Key in CBOR,
-AAGUID,
-initial sig counter,
-extensions
-Plant new key
-Resign w/ new key
-(4) clientDataJSON = {
-challenge,
-RP origin,
-15/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-63
+    hash(RP ID),
+    flags = [
+        UserPresence,
+        UserVerification,
+        Attested cred data,
+        Extension data
+    ],
+    credential ID,
+    public Key in CBOR,
+    AAGUID,
+    initial sig counter,
+    extensions
+}
 ```
+
+```text
+(4) clientDataJSON = {
+        challenge,
+        RP origin,
+        "webauthn.create"
+    }
+```
+
+A starburst callout below the MITM box, in red:
+
+**Plant new key**
+**Resign w/ new key**
+
+**15/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 64
 
@@ -1571,13 +1715,19 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ### **Not the first tool**
 
-◆ <u>↗ webauthn-cbor</u> decodes only, no attacks.
+- ◆ <u>↗ webauthn-cbor</u> — decodes only, no attacks.
 
-- <u>↗ passkey-scanner</u> passive detection.
+- ◆ <u>↗ passkey-scanner</u> — passive detection.
 
-- ◆ <u>↗ passkey-raider</u> tampers, but by hand. ◆ <u>↗ Burp_FIDO2</u> handles wrappers, rough on production traffic. ◆ <u>↗ Grafneter, Passt</u> -the-Passkey open-sourced at Black Hat this week. ◆ <u>↗ Passkeys.Tools (Jannet)t</u> emulates browser AND authenticator, tampers every field at scale
+- ◆ <u>↗ passkey-raider</u> — tampers, but by hand.
 
-- **Passkey Editor's lane:** Burp-native, attack dropdown live across Intercept, history, and Repeater, auto re-sign on passthrough, decoding paired with tampering.
+- ◆ <u>↗ Burp_FIDO2</u> — handles wrappers, rough on production traffic.
+
+- ◆ <u>↗ Grafnetter, Pass-the-Passkey</u> — open-sourced at Black Hat this week.
+
+- ◆ <u>↗ Passkeys.Tools (Jannett)</u> — emulates browser AND authenticator, tampers every field at scale
+
+- ◆ **Passkey Editor's lane:** Burp-native, attack dropdown live across Intercept, history, and Repeater, auto re-sign on passthrough, decoding paired with tampering.
 
 **16/37**
 
@@ -1589,9 +1739,91 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **clientDataJSON**
 
-Raw HTTP request
+Two screenshots side by side.
 
-Passkey Editor
+Left, captioned **Raw HTTP request**:
+
+```http
+POST /authentication/verification HTTP/2
+Host: webauthn.io
+Cookie: sessionid=cicj8qb34pnwr50xeyuvyt5pgi690q43
+Content-Length: 865
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+Content-Type: application/json
+Origin: https://webauthn.io
+Referer: https://webauthn.io/
+
+{
+  "username":"defcon34_demo",
+  "response":{
+    "id":"XYMXeBZ1HTwo15ssOIhVTw3K-Cgy_mclKKaE4Jilvq4",
+    "rawId":"XYMXeBZ1HTwo15ssOIhVTw3K-Cgy_mclKKaE4Jilvq4",
+    "response":{
+      "authenticatorData":
+      "dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvAFAAAAAg",
+      "clientDataJSON":
+      "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiZ19jN0VzdEVPWnBSaDIwS
+DRLUEFTZzJiUTd0M3dJQU9OSVNhSWFsNVV3SnVsWUxueUlwQmlPY3k5Z1NITlBzZENhajR
+lNFd6dVJRUzBNZ05VLXRSbUEiLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY
+3Jvc3NPcmlnaW4iOmZhbHNlLCJvdGhlcl9rZXlzX2Nhbl9iZV9hZGRlZF9oZXJlIjoiZG8
+gbm90IGNvbXBhcmUgY2xpZW50RGF0YUpTT04gYWdhaW5zdCBhIHRlbXBsYXRlLiBTZWUga
+HR0cHM6Ly9nb28uZ2wveWFiUGV4In0",
+      "signature":
+      "IBTQLAKniU6-XLMn1P8_FVAVaRbsmKD5SMoB5kqrAXuYGr03urUvo7e37g6EW_6hLJ7co
+STQ04jMYIO5RrsvCw",
+      "userHandle":"d2ViYXV0aG5pby1kZWZjb24zNF9kZW1v"
+    },
+    "type":"public-key",
+    "clientExtensionResults":{
+    },
+    "authenticatorAttachment":"platform"
+  }
+}
+```
+
+A blue rectangle rings the six wrapped lines of the `clientDataJSON` value.
+
+Right, captioned **Passkey Editor**:
+
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
+
+`Attacks ⌄`   ☑ Wrap
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"g_c7EstEOZpRh20H4KPASg2bQ7t3wIAONISaIal5UwJulYLnyIpBiOcy9gSHNPsdCaj4e4WzuRQS0MgNU-tRmA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false,
+    "other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
+See https://goo.gl/yabPex"
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"2014D02C02A7894EBE5CB327D4FF3F1550156916EC98A0F948CA01E64AAB017B981ABD37BAB52FA3B7B7EE0E
+845BFEA12C9EDCA124D0D388CC6083B946BB2F0B"
+}
+```
+
+A blue rectangle rings the whole `clientDataJSON` object.
 
 **17/37**
 
@@ -1603,38 +1835,49 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **challenge**
 
-**18/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Screenshot of the Passkey Editor tab of a Burp request.
 
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
 
-> Recovered by OCR — confidence 82/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`Attacks ⌄`   ☑ Wrap
 
-```text
-challenge
-Pretty Raw Hex Passkey Editor R Swe
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
 {
-"clientDataJSON": {
-"challenge": "evil_challenge",
-"origin": "https://webauthn. io",
-“crossOrigin": false,
-“other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge": "evil_challenge",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false,
+    "other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
 See https://goo.gl/yabPex"
-“authenticatorData": {
-“rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
-“extensions”: {},
-“signCount": 2,
-"flags": {
-“userPresent": true,
-“userVerifi true,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": false,
-“extensionDataIncluded": false
-},
-“attestedCredentialData": {}
-"signature":
-18/37
-AV protocol / auth - transport - client - RELYING PARTY . sync - user
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"4C0944C43B98FD85B7131C127173B4FE2C6F095C876106BBB1EAC6DC326AF3F7B5B0D4F4867C56BCFE70BBDC
+0DB6A00A41BEFD50BF868D4A60018656FF0ECF0F"
+}
 ```
+
+`"evil_challenge"` and the `signature` value are highlighted yellow.
+
+**18/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 67
 
@@ -1642,62 +1885,79 @@ AV protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ### **origin + rpIdHash**
 
-origin
+Two Passkey Editor panes side by side.
 
-rpIdHash
+Left, captioned **origin** — tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); `Attacks ⌄`  ☑ Wrap; Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"g_c7EstEOZpRh20H4KPASg2bQ7t3wIAONISaIal5UwJulYLnyIpBiOcy9gSHNPsdCaj4e4WzuRQS0MgNU-tRmA",
+    "origin": "https://evil.defcon34.xyz",
+    "crossOrigin": false,
+    "other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
+See https://goo.gl/yabPex"
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"1AF21C1F86B8C216576A09A4575E89BB97A875E4D2A3C4AA2FB4FD20DB6E10DE43938FC12AF1A0FD83DCC704
+E5401D7E3F3542C19472822BEA251454E6C0960A"
+}
+```
+
+`"https://evil.defcon34.xyz"` and the `signature` value are highlighted yellow.
+
+Right, captioned **rpIdHash** — same tab bar and controls.
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"SnFcY_gy4PO--D3ueYA6PrxBH56EuW_3BcEjBahjtm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMiqA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "00A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"396EBFCC02B229F152413D4F2EBC30AE7815E4EBA939EAB38A2871F52F962153A81E207D9FFB38181B1EE208
+60736655A547320DC10732961492BA548E8F4C0C"
+}
+```
+
+The `rpIdHash` and `signature` values are highlighted yellow.
 
 **19/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-origin + rpldHash
-Pretty Raw Hex Passkey Editor
-{
-“clientDataJSON": {
-“challenge”:
-“crossOrigin": false,
-“other_keys_can_be_added_here": "do not compare clientDataJSON against a template.
-See https://goo.gl/yabPex"
-“authenticatorData": {
-“rpIdHash": "74AGEA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
-“signCount": 2,
-"flags": {
-“userPresent": true,
-“userVerified": true,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": false,
-“extensionDataIncluded": false
-“attestedCredentialData": {}
-},
-origin
-Pretty Raw Hex Passkey Editor
-Attacks ~ @ Wrap
-{
-“clientDataJSON": {
-"type": "webauthn.get",
-“crossOrigin": false
-“authenticatorData": {
-"extensions": {},
-“signCount": 2,
-"flags": {
-“userPresent": true,
-“userVerified": true,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": false,
-“extensionDataIncluded": false
-“attestedCredentialData": {}
-}
-rpldHash
-19/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-67
-```
 
 ## Slide 68
 
@@ -1705,27 +1965,25 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ### **Over-scoping the RPid**
 
-**20/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Flowchart. Four boxes in a row, all enclosed in one large rectangle, joined left to right by arrows (arrowhead at the right-hand end of each):
 
+- `rpId = example.com`  /  `(but only app.example.com needed)`
+- → `valid for *.example.com`
+- → `customer1.example.com`
+- —forges→ `customer2.example.com`
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+One curved arrow leaves the bottom-right of `customer2.example.com`, runs down and to the left, and ends (arrowhead) at a box **outside** the large rectangle:
 
 ```text
-Over-scoping the RPid
-rpld = example.com
-(but only app.example.com valid for *.example.com |——>] customerl.example.com —forges>} customer2.example.com
-needed)
 cross-origin
 ACCOUNT
 TAKE
 OVER
-protocol
-auth - transport
-20/37
-client - RELYING PARTY - sync
-user
-68
 ```
+
+**20/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 69
 
@@ -1733,36 +1991,70 @@ user
 
 ### **Dangling Allowlist Domain**
 
-**21/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Flowchart. Four boxes in a row, all enclosed in one large rectangle, joined left to right by arrows (arrowhead at the right-hand end of each):
 
+- `/.well-known/webauthn`  `allowlist`  /  `(a.com, b.com, patner.com)`
+- → `partner.com LAPSES`
+- → `attacker buys it @ 10 $/yr`
+- → `attacker origin now TRUSTED`
 
-> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+One curved arrow leaves the bottom-right of `attacker origin now TRUSTED`, runs down and to the left, and ends (arrowhead) at a box **outside** the large rectangle:
 
 ```text
-Dangling Allowlist Domain
-/well-known/webauthn
-allowlist
-(a.com, b.com, patner.com)
-partner.com LAPSES
-attacker buys it @ 10 Slvr | >
-attacker origin now
-TRUSTED
 cross-origin
 ACCOUNT
 TAKE
 OVER
-protocol / auth - transport
-21/37
-client - RELYING PARTY - sync
-user
-69
 ```
+
+**21/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 70
 
 **70**
 
 ### **attestationObject and authenticatorData**
+
+Screenshot of the Passkey Editor tab of a Burp request.
+
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
+
+`Attacks ⌄`   ☑ Wrap
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"SnFcY_gy4PO--D3ueYA6PrxBH56EuW_3BcEjBahjtm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMiqA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"E32944FFA58C9630C398D1D5E11AD5E6F732C9281A10703DA1DB28F988F4332C7773A6BC5C3B81733AE170CD
+330B135D24B4D28B37C3C34E4836FC1FF6761507"
+}
+```
+
+A blue rectangle rings the `"authenticatorData"` object, from its opening line down to and including `"attestedCredentialData": {}`. The `signature` below it is outside the rectangle.
 
 **22/37**
 
@@ -1772,93 +2064,124 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 **71**
 
+Byte-layout figure, on a white card filling the slide.
+
+**ATTESTATION OBJECT** — one row of three cells:
+
+| “fmt“: “packed“ | “attStmt“: ... | “authData“: ... |
+|---|---|---|
+
+Braces run from the `“authData“` cell down to **AUTHENTICATOR DATA** — one row of five cells, each captioned above:
+
+| 32 bytes | 1 byte | 4 bytes (big-endian uint32) | variable length | variable length if present (CBOR) |
+|---|---|---|---|---|
+| RP ID hash | FLAGS | COUNTER | ATTESTED CRED. DATA | EXTENSIONS |
+
+The EXTENSIONS cell ends in a ragged (torn-edge) mark.
+
+A brace from **FLAGS** expands to a bit map, numbered `7` at the left end and `0` at the right end:
+
+| ED | AT | 0 | 0 | 0 | UV | 0 | UP |
+|---|---|---|---|---|---|---|---|
+
+A brace from **ATTESTED CRED. DATA** expands to:
+
+| AAGUID | L | CREDENTIAL ID | CREDENTIAL PUBLIC KEY |
+|---|---|---|---|
+| 16 bytes | 2 bytes | LENGTH L (variable length) | variable length (COSE_Key) |
+
+A dashed line from the `“attStmt“` cell runs down the left of the figure to **ATTESTATION STATEMENT**  (in "packed" attestation statement format):
+
+| | | | |
+|---|---|---|---|
+| If Basic or Privacy CA: | “alg“: ... | “sig“: ... | “x5c“: ... |
+| If ECDAA: | “alg“: ... | “sig“: ... | “ecdaaKeyId“: ... |
+
 **23/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-ATTESTATION OBJECT
-AUTHENTICATOR DATA
-32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
-RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-If Basic or Privacy CA:
-If ECDAA:
-UV
-1
-O UP
-14
-7
-AAGUID
-L (CREDENTIAL ID
-CREDENTIAL PUBLIC KEY
-16 bytes
-2 bytes LENGTH L
-(variable length)
-ATTESTATION STATEMENT (in "packed" attestation statement format)
-“ecdaaKeyld*: ...
-protocol / auth - transport - client - RELYING PARTY - sync -
-variable length (COSE_Key)
-23/37
-user
-```
 
 ## Slide 72
 
 **72**
 
+The same byte-layout figure as the previous slide, with a red rounded rectangle drawn round the **AUTHENTICATOR DATA** portion and the word **Authentication** written in red inside it.
+
+**ATTESTATION OBJECT** — one row of three cells:
+
+| “fmt“: “packed“ | “attStmt“: ... | “authData“: ... |
+|---|---|---|
+
+**AUTHENTICATOR DATA** — one row of five cells, each captioned above:
+
+| 32 bytes | 1 byte | 4 bytes (big-endian uint32) | variable length | variable length if present (CBOR) |
+|---|---|---|---|---|
+| RP ID hash | FLAGS | COUNTER | ATTESTED CRED. DATA | EXTENSIONS |
+
+A brace from **FLAGS** expands to a bit map, numbered `7` at the left end and `0` at the right end:
+
+| ED | AT | 0 | 0 | 0 | UV | 0 | UP |
+|---|---|---|---|---|---|---|---|
+
+A brace from **ATTESTED CRED. DATA** expands to:
+
+| AAGUID | L | CREDENTIAL ID | CREDENTIAL PUBLIC KEY |
+|---|---|---|---|
+| 16 bytes | 2 bytes | LENGTH L (variable length) | variable length (COSE_Key) |
+
+The red rectangle encloses the AUTHENTICATOR DATA heading, the five-cell row, the flags bit map and the attested-credential-data row. The ATTESTATION OBJECT row above it and the ATTESTATION STATEMENT block below it are **outside** the rectangle.
+
+**ATTESTATION STATEMENT**  (in "packed" attestation statement format):
+
+| | | | |
+|---|---|---|---|
+| If Basic or Privacy CA: | “alg“: ... | “sig“: ... | “x5c“: ... |
+| If ECDAA: | “alg“: ... | “sig“: ... | “ecdaaKeyId“: ... |
+
 **24/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 80/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-ATTESTATION OBJECT
-“authData™: ...
-i AUTHENTICATOR DATA
-i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
-RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-Po utnentication
-' AAGUID L |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
-i 16 bytes 2bytes LENGTHL variable length (COSE_Key)
-H (variable length)
-ATTESTATION STATEMENT (in "packed" attestation statement format)
-If Basic or Privacy CA: “alg: ... “sig: ... “xSe"s o.
-24/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-72
-```
 
 ## Slide 73
 
 **73**
 
+The same byte-layout figure again, now with two boxes drawn on it: a blue rounded rectangle enclosing the **whole** figure, labelled **Registration** in blue (the word sits just below the ATTESTATION OBJECT row), and inside it the red rounded rectangle from the previous slide round the AUTHENTICATOR DATA portion, labelled **Authentication** in red.
+
+**ATTESTATION OBJECT** — one row of three cells:
+
+| “fmt“: “packed“ | “attStmt“: ... | “authData“: ... |
+|---|---|---|
+
+**AUTHENTICATOR DATA** — one row of five cells, each captioned above:
+
+| 32 bytes | 1 byte | 4 bytes (big-endian uint32) | variable length | variable length if present (CBOR) |
+|---|---|---|---|---|
+| RP ID hash | FLAGS | COUNTER | ATTESTED CRED. DATA | EXTENSIONS |
+
+A brace from **FLAGS** expands to a bit map, numbered `7` at the left end and `0` at the right end:
+
+| ED | AT | 0 | 0 | 0 | UV | 0 | UP |
+|---|---|---|---|---|---|---|---|
+
+A brace from **ATTESTED CRED. DATA** expands to:
+
+| AAGUID | L | CREDENTIAL ID | CREDENTIAL PUBLIC KEY |
+|---|---|---|---|
+| 16 bytes | 2 bytes | LENGTH L (variable length) | variable length (COSE_Key) |
+
+**ATTESTATION STATEMENT**  (in "packed" attestation statement format):
+
+| | | | |
+|---|---|---|---|
+| If Basic or Privacy CA: | “alg“: ... | “sig“: ... | “x5c“: ... |
+| If ECDAA: | “alg“: ... | “sig“: ... | “ecdaaKeyId“: ... |
+
+The blue rectangle contains everything: the ATTESTATION OBJECT row, the AUTHENTICATOR DATA block and the ATTESTATION STATEMENT block. The red rectangle contains only the AUTHENTICATOR DATA heading, its five-cell row, the flags bit map and the attested-credential-data row.
+
 **25/37**
 
 protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-ATTESTATION OBJECT
-i
-i AUTHENTICATOR DATA
-i 32 bytes 1 byte 4 bytes (big-endian uint32) variable length variable length if present (CBOR)
-RP ID hash FLAGS COUNTER ATTESTED CRED. DATA EXTENSIONS
-7
-AAGUID L_ |CREDENTIAL ID | CREDENTIAL PUBLIC KEY
-16 bytes 2 bytes LENGTH L variable length (COSE_Key)
-(variable length)
-ATTESTATION STATEMENT (in "packed" attestation statement format)
-If Basic or Privacy CA: “alg*: ... “sig: ... “xSe":
-25/37
-protocol / auth - transport - client - RELYING PARTY . sync - user
-```
 
 ## Slide 74
 
@@ -1866,39 +2189,48 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ### **signature**
 
-**26/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Screenshot of the Passkey Editor tab of a Burp request.
 
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
 
-> Recovered by OCR — confidence 83/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`Attacks ⌄`   ☑ Wrap
 
-```text
-signature
-Pretty Raw Hex Passkey Editor R Swe
-Attacks + Wrap
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
 {
-"clientDataJSON": {
-“crossOrigin": false
-“authenticatorData": {
-"extensions": {},
-“signCount": 2,
-“flags”: {
-“userPresent": true,
-“userVerified": true,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": false,
-“extensionDataIncluded": false
-},
-“attestedCredentialData": {}
-},
-"signature":
-"585F37FDF8B02D37B69490DF81D684D895 1BB65EA5F39E13F5843E9E67C37A5926F8A09902D9FEGEG831BFAD
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"SnFcY_gy4PO--D3ueYA6PrxBH56EuW_3BcEjBahjtm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMiqA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 2,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"585F37FDF8B02D37B69490DF81D684D8951BB65EA5F39E13F5843E9E67C37A5926F8A09902D9FE6E6831BFAD
+951C6145F5BA365188E64E3C348DA3285EE6EE04"
 }
-26/37
-protocol / auth - transport - client - RELYING PARTY .
-sync - user
-74
 ```
+
+The `signature` value is highlighted yellow.
+
+**26/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 75
 
@@ -1906,46 +2238,65 @@ sync - user
 
 ### **alg**
 
-**27/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Screenshot of the Passkey Editor tab of a Burp request.
 
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
 
-> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`Attacks ⌄`   ☑ Wrap
 
-```text
-alg
-Pretty Raw Hex Passkey Editor R Swe
-Attacks ~ Wrap
-Signing algorithm: RS256 (-257) ~ |Attestation: None v [266 key planted]
+Signing algorithm: `RS256 (-257)` ⌄   Attestation: `None` ⌄   **RS256 key planted** *(green)*
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
 {
-"clientDataJSON": {
-“origin”: "https://webauthn. io",
-“crossOrigin": false
-},
-“attestationObject": {
-“attestationStatement": {
-“authenticatorData": {
-“rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EFO",
-"extensions": {},
-“signCount": 1,
-"flags": {
-“userPresent": true,
-“userVerified rue,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": true,
-“extensionDataIncluded": false
-“attestedCredentialData": {
-“aaguid": "01020304-0506-0708-0102-030405060708",
-cosekey
+  "clientDataJSON": {
+    "type": "webauthn.create",
+    "challenge": "jdrVAViggN5wTpX3MX6QtnmQJgNoCVxWWlCFIes-6F9ThLq_LFAKw4co1BQ3n_XquOmbcA9fsfU_7qGHQVga2w",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "attestationObject": {
+    "attestationStatement": {
+      "format": "none"
+    },
+    "authenticatorData": {
+      "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+      "extensions": {},
+      "signCount": 1,
+      "flags": {
+        "userPresent": true,
+        "userVerified": true,
+        "backupEligible": false,
+        "backupState": false,
+        "attestedCredentialData": true,
+        "extensionDataIncluded": false
+      },
+      "attestedCredentialData": {
+        "aaguid": "01020304-0506-0708-0102-030405060708",
+        "coseKey": {
+          "keyType": "RSA",
+          "algorithm": "RS256",
+          "raw":
+"A401030339010020590100B104054256CE44CECCC357B8A1444DB2A1698C8D37AC992B52ED79B331AF43BED77844651D3959EC15CFE38F6552F
+234AFEDFC5D7AF5F79E067136BFC335C6272FC2FF8A8EA58849E9DF31EA2D27C9F0908D47DDD7FDDD781FD2F8CB51ED0BC8058994522A4C13A41
+331B85C037DDBAAED47775A401488E6D5E3823466724D22C6F6BAF274F7B6A8C8EB9660ECCD0BB14530818CE850A553A87A877A2B1C3A88695D7
+A0A319FD6AB26113D7F59CFEEFD2D6725FA9BD3BD2D5CFB0568E70F31FCDFEBCA7FCDD1C2EAF4B46C44FD1D7A8269080D9A4A1DB3FAE649E1073
 4D4729386160C39FC12B660B611765B9C45BC9E9ED548110766221D9C42906A2273CAEF2143010001"
-+
-},
-“fmt":
+        },
+        "credentialId": "755A521FCEF1ABC93EA6C0DDC6B54FAB4CDED7E102DCB4F09B416C29180AA3CD"
+      }
+    }
+  },
+  "fmt": "none"
 }
-protocol / auth - transport - client - RELYING PARTY . sync - user
-27/37
-75
 ```
+
+Blue rectangles ring `Signing algorithm: RS256 (-257)`, the `RS256 key planted` label, and the `coseKey` block (its `keyType`, `algorithm` and `raw` lines). `"RSA"`, `"RS256"` and the whole `raw` value are highlighted yellow.
+
+**27/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 76
 
@@ -1953,49 +2304,65 @@ protocol / auth - transport - client - RELYING PARTY . sync - user
 
 ### **credentialId**
 
-**29/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Screenshot of the Passkey Editor tab of a Burp request.
 
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
 
-> Recovered by OCR — confidence 81/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`Attacks ⌄`   ☑ Wrap
 
-```text
-credentialld
-Pretty Raw Hex Passkey Editor & 5 in
-Attacks + Wrap
-Signing algorithm: RS256 (-257) - Attestation: None v RS256 key planted
+Signing algorithm: `RS256 (-257)` ⌄   Attestation: `None` ⌄   **RS256 key planted** *(green)*
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
 {
-"clientDataJSON": {
-"type": "webauthn.create",
-“crossOrigin": false
-},
-“attestationObject": {
-“attestationStatement": {
-},
-“authenticatorData": {
-"extensions": {},
-“signCount": 1,
-"flags": {
-“userPresent": true,
-“userVerified": true,
-“backupEligible": false,
-“backupState": false,
-“attestedCredentialData": true,
-“extensionDataIncluded": false
-},
-“attestedCredentialData": {
-“coseKey": {
-"keyType": "RSA",
-"algorithm": "RS256",
-"raw":
-“credentialId": "7AF8A5FDCADE7627" |
+  "clientDataJSON": {
+    "type": "webauthn.create",
+    "challenge": "jdrVAViggN5wTpX3MX6QtnmQJgNoCVxWWlCFIes-6F9ThLq_LFAKw4co1BQ3n_XquOmbcA9fsfU_7qGHQVga2w",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "attestationObject": {
+    "attestationStatement": {
+      "format": "none"
+    },
+    "authenticatorData": {
+      "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+      "extensions": {},
+      "signCount": 1,
+      "flags": {
+        "userPresent": true,
+        "userVerified": true,
+        "backupEligible": false,
+        "backupState": false,
+        "attestedCredentialData": true,
+        "extensionDataIncluded": false
+      },
+      "attestedCredentialData": {
+        "aaguid": "01020304-0506-0708-0102-030405060708",
+        "coseKey": {
+          "keyType": "RSA",
+          "algorithm": "RS256",
+          "raw":
+"A4010303390100205901009EEAC616434B9A4603B286B10089427B1CA3A4C7C8F599A1909A07D4C08E7FB038E0244894450F5129EFE6E00BA54
+70862E87DA611255CA0064CB6BAAC891E336FEC6C9D4A04A04F770DBBF7E5831C078B8710B3434F4C5DEA9ACF42F853C81BE1E215FF9ECA1FBA8
+2F730163778E2F6AF5F65D66A20C2CEC58EF6B4E399B2A7CA7856C8F6E6E838C06F8884C5E66966D75CBE6DA49035AE2BA3FC7A88D5F6A93557E
+1E23E0B13B3C8C0E47CE9A4D9791E0181456177ED790100A7D77723A00A56ECE30FB58A8483B20B1F2230A0A4577DEE35797844C6E0FF3BBDE61
+C0E27C0F5373EEA0278F2D72147B3D510C22DF8369E0EBFF9E617511934D1DC76BBB3F32143010001"
+        },
+        "credentialId": "7AF8A5FDCADE7627"
+      }
+    }
+  },
+  "fmt": "none"
 }
-},
-“fmt": "none"
-29/37
-protocol / auth - transport - client - RELYING PARTY . sync -
-user
-77
 ```
+
+`"RSA"`, `"RS256"`, the whole `raw` value and `"7AF8A5FDCADE7627"` are highlighted yellow; a blue rectangle rings only the `"credentialId"` line.
+
+**29/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 77
 
@@ -2003,268 +2370,287 @@ user
 
 ### **signCount**
 
-**30/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+Left, hand-written in three coloured columns, each heading marker-highlighted — **RP** (blue), **Evil** (red), **Auth** (green):
 
+| RP | Evil | Auth |
+|---|---|---|
+| 12 | | 12 |
+| 13 | | 13 |
+| 14 | | 14 |
+| 15 | | 15 |
+| 18 | 18 | |
+| | | ~~16~~ |
+| | | ~~17~~ |
+| | | ~~18~~ |
+| 19 | | 19 |
+| 20 | | |
+| 21 | | |
 
-> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+The three struck-out values in the Auth column each carry a large hand-drawn ✗ over them, which partly obscures the digits.
 
-```text
-signCount
-Pretty Raw Hex Passkey Editor Q 5s i=
-RP evil Auth
-Attacks Wrap
-“clientDataJSON": {
-13 13 “type": "webauthn.get",
-“challenge”:
-15 “crossOrigin": false
-15 “authenticatorData": {
-18 1 “rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
-S "extensions":
-“signCount": 13333337,
-x "flags": {
-“userPresent": true,
-“userVerified": true,
-“backupState": false,
-“attestedCredentialData": false,
-“extensionDataIncluded": false
-2 O “signature” :
-21 }
-30/37
-AV protocol / auth - transport - client - RELYING PARTY . sync - user
+Right, a screenshot of the Passkey Editor tab of a Burp request.
+
+Tabs `Pretty` `Raw` `Hex` **Passkey Editor** (selected); four icon buttons at the right of the tab bar.
+
+`Attacks ⌄`   ☑ Wrap
+
+Flags: ☑ UP  ☑ UV  ☐ BE  ☐ BS
+
+```json
+{
+  "clientDataJSON": {
+    "type": "webauthn.get",
+    "challenge":
+"SnFcY_gy4PO--D3ueYA6PrxBH56EuW_3BcEjBahjtm9tQq8Yk8JNAeDfxN47a4wgp3yNfwPcEySw8axZXhMiqA",
+    "origin": "https://webauthn.io",
+    "crossOrigin": false
+  },
+  "authenticatorData": {
+    "rpIdHash": "74A6EA9213C99C2F74B22492B320CF40262A94C1A950A0397F29250B60841EF0",
+    "extensions": {},
+    "signCount": 13333337,
+    "flags": {
+      "userPresent": true,
+      "userVerified": true,
+      "backupEligible": false,
+      "backupState": false,
+      "attestedCredentialData": false,
+      "extensionDataIncluded": false
+    },
+    "attestedCredentialData": {}
+  },
+  "signature":
+"D3EB54B0EF8A3A07F8B20A00197DABC9C75F43C02857503AA4E5CE18DF883E96378CD0E6D6FD5FEB5522135E
+77FDA173BDE16AE256986197BDEA26CE22B6AB0F"
+}
 ```
+
+`13333337` and the `signature` value are highlighted yellow.
+
+**30/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 78
 
+Full-screen demo screenshot (no slide number or footer). Chrome showing **webauthn.io** with DevTools open, overlaid by a Burp Suite window; a light-blue callout box **DEMO #1 / Plant / Re-sign** sits bottom-right.
 
-> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Chrome — webauthn.io**
 
-```text
-WebAuthn.io
-A demo of the WebAuthn specification
-hk
-Register Authenticate
-Advanced Settings
-ik {0 Elements Console Application WebAuthnX Sources >> @ 8 2 xX
-Enable virtual authenticator environment
-7 Authenticator 90e32 @ active Remove
-Protocol ctap2
-Transport internal
-Supports resident keys Yes
-Supports large blob No
-Supports user verification Yes
-Supports hmac-secret No
-Supports hmac-secret-me No
-Credentials
-ID Is Resi... RPID User Handle Signature Cou... Actions
-No credentials. Try calling navigator.credentials.create() from your website.
-New authenticator
-We
-Burp Suite Profe 2 21 d to Am Ventures, In:
-tor ®@-~ 2
-latch and replace ro Proxy settings
-decific extensions Search Q @ filteron @ :
-Edited Status code Notes Length MIME type Extension Title TS =P Cookies
-Jentication/verification 200 Authentication - webauthn.io 418 JSON Y —-54,184,242.104 _sessionid=1fr4kc...
-Yentication/options 200 Options - webauthn.io 611 JSON Y __54.184.242.104
-t ification 200 Registration - webauthn.io 316 JSON Y_54.184.242.104
-| Response GQ== a
-& in = Pretty Raw Hex Render = 3
-| 2 Alt-Svc: h3=":443"; ma=2592000 |
-2zvceuolw 3 Content-Type; application/json
-4 Cross-Origin-Opener-Policy: same-origin
-5 Date: Fri, 17 Jul 2026 18:25:11 GMT B
-Mac OS X 1@_15_7) AppleWebKit/537.36 (KHTML, 6 Referrer-Policy: same-origin
-5 7 Server: Caddy Zz
-*;v="150", "Google Chrome"; v="150" 8 Server: gunicorn 2.
-9 X-Content-Type-Options: nosniff 8
-10 X-Frame-Options: DENY
-11 Content-Length: 18
-12
-13 {
-YPb8Sn4QxH3", DEM O #1
-KE@TXhiSFVGRj J LZG1wbnVMYUg2b2RNaVRSczZJSnZ4aEFNc
-3IFFIQZFPGR_LkyChiNXtpCBb1g9vxKfhDEfc", Pla nt
-1C2CFHVRFAAAAAOAAAAAAAAAAAAAAAAAAAAAATND 51n7.1Z Re = S | g n
-toy
-@ Memory: 194.7MB of 8.00GB
+> # WebAuthn.io
+> A demo of the WebAuthn specification
+>
+> `example_username`  *(input placeholder)*
+>
+> **Register**   **Authenticate**
+> **Advanced Settings**
+
+**DevTools — WebAuthn tab** (`⊡` `Elements  Console  Application  WebAuthn ✕  Sources  »`):
+
+☑ Enable virtual authenticator environment
+
+**Authenticator 90e32**  ⦿ Active   **Remove**
+
+| | |
+|---|---|
+| UUID | `ec3e8453-ec81-4fee-820c-ff2fe9190e32` |
+| Protocol | `ctap2` |
+| Transport | `internal` |
+| Supports resident keys | Yes |
+| Supports large blob | No |
+| Supports user verification | Yes |
+| Supports hmac-secret | No |
+| Supports hmac-secret-mc | No |
+
+**Credentials**
+
+| ID | Is Resi... | RPID | User Handle | Signature Cou... | Actions |
+|---|---|---|---|---|---|
+
+`No credentials. Try calling navigator.credentials.create() from your website.`
+
+**New authenticator**
+
+**Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc** — HTTP history:
+
+| # | ... | Edited | Status code | Notes | Length | MIME type | Extension | Title | TLS | IP | Cookies |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| | `/authentication/verification` | | 200 | Authentication - webauthn.io | 418 | JSON | | | ✓ | 54.184.242.104 | sessionid=1fr4kc... |
+| | `/authentication/options` | | 200 | Options - webauthn.io | 611 | JSON | | | ✓ | 54.184.242.104 | |
+| | `/registration/verification` *(selected)* | | 200 | Registration - webauthn.io | 316 | JSON | | | ✓ | 54.184.242.104 | |
+
+The request pane (left, green text) shows the reg-verify body, its lines clipped at the left edge; readable line-ends include `...Pf6V5rttwzh4",`, `...grtPf6V5rttwzh4",`, `...F0YViBdKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHv`, `...lnZJZTTvTtXQjRsN8wk2OzTkaq7T3-lea7bcM4epAEBAycgB`, `...9YPb8Sn4QxH3",`, `...wiY2hhbGxlbmdlIjoicVF5ZWhsRURxaWV4VHUwQnY4aV9Kd1`, `...KE0TXhiSFVGRjJlZG1wbnVMYUg2b2RNaVRSczZJSnZ4aEFNc`, `...dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",`, `...BIFfJQ2fPGR_LkyChiNXtpCBb1g9vxKfhDEfc",`, `...klC2CEHvBFAAAAAQAAAAAAAAAAAAAAAAAAAAAAINp_51nZJZ`.
+
+**Response** — `Pretty  Raw  Hex  Render`:
+
+```http
+HTTP/2 200 OK
+Alt-Svc: h3=":443"; ma=2592000
+Content-Type: application/json
+Cross-Origin-Opener-Policy: same-origin
+Date: Fri, 17 Jul 2026 18:25:11 GMT
+Referrer-Policy: same-origin
+Server: Caddy
+Server: gunicorn
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Length: 18
+
+{
+    "verified":true
+}
 ```
+
+`Memory: 194.7MB of 8.00GB`
 
 ## Slide 79
 
+Full-screen demo screenshot (no slide number or footer). Chrome showing **webauthn.io** with DevTools open, overlaid by a Burp Suite window whose **Passkey Editor** tab is open; a light-blue callout box **DEMO #1 / AUTO mode** sits bottom-right.
 
-> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Chrome — webauthn.io** (`WebAuthn.io` / `A demo of the WebAu...` / `example_username` / **Register** / **Advanced Settings**).
 
-```text
-webauthn.io
-WebAuthn.io
-A demo of the WebAu
-example_username
-Register
-Advanced Settings
-[0 Elements Console Application WebAut
-Enable virtual authenticator environment
-@ Authenticator b05e4
-Protocol ctap2
-Transport internal
-Supports resident keys Yes
-Supports large blob No
-Supports user verification Yes
-Supports hmac-secret No
-Supports hmac-secret-mc No
-Credentials
-No credentials. Try calling navigator.cre¢
-New authenticator
-Target Proxy Repeater Extensions
-Passkey Editor
-Profiles Guide About
-Passkey Editor
-Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
-Profile: webauthn.io
-@ Default (SimpleWebAuthn / generic)
-@ webauthn.io
-Github [not active]
-Add
-Copy
-Delete
-Restore built-ins
-Event log (15)® All issues
-Enabled Auto-plant Auto re-sign
-id: webauthn.io name: webauthn.io
-default signing alg: EdDSA(-8) - _ plant attestation: None v
-Registration
-verify URL: CONTAINS v /registration/verification method: POST
-clientDataJSON © path regex response.response.clientDataJSON © Auto Raw Base64 Base64URL URLencoded decoded »
-attestationObject O path regex response.response.attestationObject © Auto Raw Base64 Base64URL URL er »
-authenticatorData O path regex response.response.authenticatorData O Auto Raw Base64 Base64URL URL er >
-credentialld O path regex O Auto Raw Base64 Base64URL URL encoded decoded »
-Authentication
-verify URL: CONTAINS ~ /authentication/verification method: POST
-clientDataJSON © path regex response.response.clientDataJSON O Auto Raw Base64 Base64URL URL er »
-authenticatorData © path regex _response.response.authenticatorData © Auto Raw Base64 Base64URL URL encoded decoded »
-signature O path regex response.response.signature O Auto Raw Base64 Base64URL URL encoded decoded >
-userHandle © path regex response.response.userHandle O Auto Raw Base64 Base64URL URL encoded decoded >
-credentialld O path regex response.rawid O Auto Raw Base64 Base64URL URL er ,
-Sample bodies
-Registration body (paste the reg-verify request body):
-DEMO #1
-Authentication body (paste the auth-verify request body):
-AUTO
-mode
-Check Prettify JSON Save profile
-@ Memory: 388.6MB of 8.00GB “iv
-```
+**DevTools — WebAuthn tab**: ☑ Enable virtual authenticator environment; **Authenticator b05e4**; Protocol `ctap2`; Transport `internal`; Supports resident keys Yes; Supports large blob No; Supports user verification Yes; Supports hmac-secret No; Supports hmac-secret-mc No. Credentials: `No credentials. Try calling navigator.cre...`. **New authenticator**.
+
+**Burp** — `Target  Proxy  Repeater  Extensions  Passkey Editor` | Event log (15) · All issues | Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
+
+**Passkey Editor** — Tabs: **Profiles** (selected) · Guide · About
+
+Profiles:
+- ☐ Default (SimpleWebAuthn / generic)
+- ☑ webauthn.io   *(selected)*
+- ☐ Github  [not active]
+
+Buttons: **Add** · **Copy** · **Delete** · **Restore built-ins**
+
+**Profile: webauthn.io** — ☑ Enabled  ☐ Auto-plant  ☐ Auto re-sign
+id: `webauthn.io`   name: `webauthn.io`
+default signing alg: `EdDSA (-8)` ⌄   plant attestation: `None` ⌄
+
+**Registration** — verify URL: `CONTAINS` ⌄ | `/registration/verification`   method: `POST`
+
+| field | path/regex | value | encoding | |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+| attestationObject | ⦿ path ○ regex | `response.response.attestationObject` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `›` |
+| credentialId | ⦿ path ○ regex | *(empty)* | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+
+**Authentication** — verify URL: `CONTAINS` ⌄ | `/authentication/verification`   method: `POST`
+
+| field | path/regex | value | encoding | |
+|---|---|---|---|---|
+| clientDataJSON | ⦿ path ○ regex | `response.response.clientDataJSON` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `›` |
+| authenticatorData | ⦿ path ○ regex | `response.response.authenticatorData` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+| signature | ⦿ path ○ regex | `response.response.signature` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+| userHandle | ⦿ path ○ regex | `response.response.userHandle` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `decoded ›` |
+| credentialId | ⦿ path ○ regex | `response.rawId` | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded | `›` |
+
+**Sample bodies** — Registration body (paste the reg-verify request body): *(empty)*. Authentication body (paste the auth-verify request body): *(empty)*.
+
+Buttons: **Check** · **Prettify JSON** · **Save profile**   `Memory: 388.6MB of 8.00GB`
 
 ## Slide 80
 
+Full-screen demo screenshot (no slide number or footer). Chrome showing **github.com/settings/security** with the left settings nav, overlaid by a Burp Suite window whose **Passkey Editor** tab shows the **Github** profile; a light-blue callout box **DEMO #2 / Attack the Registration** sits bottom-right.
 
-> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Chrome — GitHub Settings** (`github.com/settings/security`): `matteo-giordano-defcon` — Your personal account. Left nav: Public profile, Account, Appearance, Accessibility, Notifications | Access: Billing and licensing, Emails, **Password and authentication** *(selected)*, SSH and GPG keys, Sessions, Credentials, Organizations, Enterprises, Moderation | Code, planning, and automation: Codespaces, Packages, Copilot, Pages, Saved replies | Security.
+
+**Burp** — `Target  Proxy  Repeater  Extensions  Passkey Editor` | Event log (13) · All issues | Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
+
+**Passkey Editor** — Tabs: **Profiles** (selected) · Guide · About
+
+Profiles:
+- ☐ Default (SimpleWebAuthn / generic)
+- ☐ webauthn.io  [not active]
+- ☑ Github   *(selected)*
+
+Buttons: **Add** · **Copy** · **Delete** · **Restore built-ins**
+
+**Profile: Github** — ☑ Enabled  ☐ Auto-plant  ☐ Auto re-sign
+id: `github`   name: `Github`
+host match: `EXACT` ⌄ | `github.com`
+default signing alg: `ES256 (-7)` ⌄   plant attestation: `None` ⌄
+
+**Registration** — verify URL: `CONTAINS` ⌄ | `/u2f/trusted_devices`   method: `POST`
+
+| field | path/regex | value | encoding |
+|---|---|---|---|
+| clientDataJSON | ○ path ⦿ regex | `"clientDataJSON":"([^"]+)"` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| attestationObject | ○ path ⦿ regex | `"attestationObject":"([^"]+)"` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| authenticatorData | ⦿ path ○ regex | *(empty)* | ⦿ Auto ○ Raw ○ Base64 ○ Base64URL ☐ URL encoded |
+| credentialId | ○ path ⦿ regex | `"rawId":"([^"]+)"` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+
+**Authentication** — verify URL: `CONTAINS` ⌄ | `/session`   method: `POST`
+
+| field | path/regex | value | encoding |
+|---|---|---|---|
+| clientDataJSON | ○ path ⦿ regex | `%22clientDataJSON%22%3A%22([^%]+)%22` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| authenticatorData | ○ path ⦿ regex | `%22authenticatorData%22%3A%22([^%]+)%22` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| signature | ○ path ⦿ regex | `%22signature%22%3A%22([^%]+)%22` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| userHandle | ○ path ⦿ regex | `%22userHandle%22%3A%22([^%]+)%22` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+| credentialId | ○ path ⦿ regex | `%22rawId%22%3A%22([^%]+)%22` | ○ Auto ○ Raw ○ Base64 ⦿ Base64URL ☐ URL encoded |
+
+**Sample bodies**
+
+Registration body (paste the reg-verify request body):
 
 ```text
-< > CG 23 github.com/settings/security
-= q) Settings
-matteo-giordano-defcon (ma
-Your personal account
-A Public profile
-8 Account
-& Appearance
-tr Accessibility
-Q Notifications
-Access
-6 Billing and licensing »
-& Emails
-| © Password and
-authentication
-& SSH and GPG keys
-@ Credentials
-Organizations
-® Enterprises
-(© Moderation v
-Code, planning, and automation
-& Codespaces
-@ Packages
-& Copilot v
-& Pages
-© Saved replies
-Security
-Target Proxy Repeater Extensions
-Passkey Editor
-Profiles Guide About
-Profiles
-Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc
-Passkey Editor
-Profile: Github
-@ Default (SimpleWebAuthn / generic)
-© webauthn.io [not active]
-@ Github
-Add
-Copy
-Sign i Delete
-Restore built-ins
-Go
-Sig
-Ap
-Sig
-Two-fé
-your)
-Event log (13) All issues
-Enabled
-id: github
-host match; EXACT v _ github.com
-Auto-plant Auto re-sign
-name: Github
-default signing alg: ES256 (-7) Y plant attestation: None v
-Registration
-verify URL: CONTAINS v /u2f/trusted_devices method: POST
-clientDataJSON path © regex "clientDataJSON":"(**}+)" Auto () Raw ©) Base64 © Base64URL URL er »
-attestationObject path © regex "attestationObject":"(*"]+)" Auto Raw Base64 © B B4URL URL er >
-authenticatorData © path ©) regex O Ato Raw Base64 B: URL URL er »
-credentialld path © regex “rawld*:"((*"}+)" Auto Raw Base64 © S4URL URL er »
-Authentication
-verify URL: CONTAINS y /session method: POST
-clientDataJSON path © regex %22clientDataJSON%22%3A%22(%]+)%22 Auto _) Raw Base64 © Base64URL URL er »
-authenticatorData path © regex %22authenticatorData%22%3A%22(" %]}+)%22 Auto Raw Base64 © Base64URL URL encoded decoded >
-signature path © regex %22signature%22%3A%22(%]+)%22 Auto (©) Raw ©) Base64 © Base64URL || URL er decoded »
-userHandle >) path © regex %22userHandle%22%3A%22((0%]+)%22 Auto () Raw ©) Base64 © Base64URL |) URLencoded decoded >
-credentialld © path © regex %22rawld%22%3A%22( %]+)%22 Auto Raw Base64 © Base64URL URL er »
-Sample bodies
-Registration body (paste the reg-verify request body):
+------WebKitFormBoundaryFtlLBlmK8UEZTOzJ
 Content-Disposition: form-data; name="authenticity_token"
-Authentication body (paste the auth-verify request body):
-58bal4eclec961f05384142834180a651a2
-Check Prettify JSON Save profile
-DEMO #2
-Attack the
-Registration
-@ Memory: 350.1MB of 8.00GB “ov
+
+8JuWqKqopK3oy7v05O1uHdacwz_Xl5yfi15_dE9j4SZnDC7R7vQiBMgCoNTbs8iZSh_-UgjVoha0Qjm09xdDRA
+------WebKitFormBoundaryFtlLBlmK8UEZTOzJ
+Content-Disposition: form-data; name="response"
+
+{"type":"public-key","id":"Tjhj0zM4Ze3AkJJTB0bktKpJbU8","rawId":"Tjhj0zM4Ze3AkJJTB0bktKpJbU8","authenticatorAttachment":"platform","response":{"clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiaFk1bWlhMkZpanRGUUhWelFCc0toTVRQcGZ2N2Jmb053QVYxR1hQN0x4WSIsIm9yaWdpbiI6Imh0dHBzOi8vZ2l0aHViLmNvbSIsImNyb3NzT3JpZ2luIjpmYWxzZX0","attestationObject":"o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYOusAJGA4HG8ljoOV0wJvVx8NmnZIjc2DdjmxOu0xZWBdAAAAAPv8MAcVTk7MjAtuAgVX170AFE44Y9MzOGXtwJCSU
 ```
+
+Authentication body (paste the auth-verify request body):
+
+```text
+authenticity_token=4BCkIeAvf7Gx74hakELcxN8swjzK5eED_Qa1A8pG7y4dgMCZUA8yxAhnKWyW0GNSCifBpsKKMSPFQc1qwqHEGQ&webauthn_response=%7B%22id%22%3A%22Tjhj0zM4Ze3AkJJTB0bktKpJbU8%22%2C%22rawId%22%3A%22Tjhj0zM4Ze3AkJJTB0bktKpJbU8%22%2C%22authenticatorAttachment%22%3A%22platform%22%2C%22response%22%3A%7B%22clientDataJSON%22%3A%22eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiWE9FdUxtUVV0TVpEUXZpVnMwb2g0Z09GOS1mdWtRUGtRdnFjMHZVSIsImNyb3NzT3JpZ2luIjpmYWxzZSwib3RoZXJfa2V5c19jYW5fYmVfYWRkZWRfaGVyZSI6ImRvIG5vdCBjb21wYXJlIGNsaWVudERhdGFKU09OIGFnYWluc3hYlBleCJ9%22%2C%22authenticatorData%22%3A%22OusAJGA4HG8ljoOV0wJvVx8NmnZIjc2DdjmxOu0xZWAdAAAAAA%22%2C%22signature%22%3A%22Ze2AiEA5GP6V6PtH5h4Yk-Q0SDZM7dn2PS0kHbUWLKU99eI1f0%22%2C%22userHandle%22%3A%22ERYW-oUGdrnxCkuQkwAM4OcuiP1uZEHlE_i7qdYK4r72%7D%2C%22clientExtensionResults%22%3A%7B%7D%7D&webauthn-conditional=false&javascript-support=true&webauthn-support=supported&return_to=https%3A%2F%2Fgithub.com%2Flogin&allow_signup=&client_id=&integration=&required_field_49d6=&timestamp=1784330483124&t=58ba14ec1ec961f05384142834180a651a2
+```
+
+Buttons: **Check** · **Prettify JSON** · **Save profile**   `Memory: 350.1MB of 8.00GB`
 
 ## Slide 81
 
+Full-screen demo screenshot (no slide number or footer). Chrome showing the **GitHub sign-in page** with a browser passkey autofill dropdown, overlaid by a Burp Suite window whose Proxy Intercept pane is idle; a light-blue callout box **DEMO #3 / Attack the Sign in** sits bottom-right.
 
-> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Chrome — Sign in to GitHub** (`github.com/login`):
 
-```text
-Burp Suite Prof ional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, inc
-ce © Proxy settings
-O Drop ® Open browser (Q) :
-Sign in to GitHub
-Username or email address
-Password oO matteo-giordano-defcon
-Passkey - Apple Passwords
-[0 Use Passkey from Another Device
-a | © Manage Passwords and Passkeys... On
-or
-&y Continue with passkey G
-G Continue with Google
-© Continue with Apple Intercept is off
-m ies If you tum Intercept on, messages between Burp's browser and your target servers are held here.
-New to GitHub? Create an account This enables you to analyze and modify these messages, before you forward them.
-Lea mere
-DEMO #3
-Attack the
-Sign in
-e Terms Privacy Docs Contact GitHub Support Manage cookies Do not share my personal information @® Memory: 374.7MB of 8.00GB +1
-```
+> ### Sign in to GitHub
+>
+> Username or email address
+> `[ | ]`   *(empty, focused)*
+> Password
+>
+> **Sign in** *(green button, partly covered)*
+>
+> — passkey autofill popover —
+> ⓖ **matteo-giordano-defcon**  /  Passkey · Apple Passwords
+> ▭ Use Passkey from Another Device
+> 🔑 Manage Passwords and Passkeys...
+>
+> or
+> **👥 Continue with passkey**
+> **G Continue with Google**
+> ** Continue with Apple**
+>
+> New to GitHub? Create an account
+
+Footer: Terms · Privacy · Docs · Contact GitHub Support · Manage cookies · Do not share my personal information
+
+**Burp Suite Professional v2026.6 - 2026-06-21 - licensed to Anvil Ventures, Inc** — Proxy toolbar: `⚙ Proxy settings` · **Drop** ⌄ · **⊕ Open browser** · ⓘ · ⋮
+
+Centre of the Proxy pane:
+
+> **Intercept is off**
+> If you turn Intercept on, messages between Burp's browser and your target servers are held here.
+> This enables you to analyze and modify these messages, before you forward them.
+> **Learn more**   **Open browser**
+
+`Memory: 374.7MB of 8.00GB`
 
 ## Slide 82
 
@@ -2272,15 +2658,13 @@ e Terms Privacy Docs Contact GitHub Support Manage cookies Do not share my perso
 
 ### **Even the big players**
 
-- <u>CVE-2026-46419</u> (Yubico java-webauthn-server, the reference RP library): returns success for a credential owned by a different user in 2FA / non-discoverable flows.
+- ◆ <u>CVE-2026-46419</u> (Yubico java-webauthn-server, the reference RP library): returns success for a credential owned by a different user in 2FA / non-discoverable flows.
 
-- <u>CVE-2025-26788</u> (StrongKey FIDO Server): treats non-discoverable as discoverable and doesn't bind the assertion to the initiating username, so substitute your own credId and sign in as the victim.
+- ◆ <u>CVE-2025-26788</u> (StrongKey FIDO Server): treats non-discoverable as discoverable and doesn't bind the assertion to the initiating username, so substitute your own credId and sign in as the victim.
 
-- <u>CVE-2024-12225 (Quarkus, CVSS 9.1): leftover default register/login endpoints</u> stay reachable, yielding a login cookie for any username.
+- ◆ <u>CVE-2024-12225</u> (Quarkus, CVSS 9.1): leftover default register/login endpoints stay reachable, yielding a login cookie for any username.
 
-- <u>CVE-2025-12150 and CVE-2026-6856 (Keycloak): attestation-policy bypass via</u>
-
-- fmt:none, and an AAGUID-allowlist bypass via packed self-attestation.
+- ◆ <u>CVE-2025-12150</u> and <u>CVE-2026-6856</u> (Keycloak): attestation-policy bypass via fmt:none, and an AAGUID-allowlist bypass via packed self-attestation.
 
 **36/37**
 
@@ -2292,69 +2676,43 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **Checklist + Creativity**
 
-###### **Checklist**
+Two columns.
+
+**Checklist**
 
 - signature verified
-
 - credId bound to one user
-
 - UV honored
-
 - UP honored
-
 - origin allowlist (exact)
-
 - crossOrigin rejected
-
 - rpIdHash = sha256(rpId)
-
 - challenge fresh + session-bound
-
 - type create vs get
-
 - COSE alg allowlist
-
 - userHandle validated
-
 - credId length 16-1023
-
-###### **Creativity**
-
-   - rpId over-scoping
-
-   - dangling Related-Origin (/.well-known/webauthn)
-
-   - clickjacking / framing (register)
-
-   - enrollment step-up
-
-   - CSRF on register
-
-   - admin-API / Entra enrollment
-
-   - post-compromise persistence
-
-   - recovery downgrade
-
-   - mixed-mode fallback (password / TOTP)
-
-   - post-ceremony session binding
-
-   - credential-management authz
-
-   - leftover default endpoints
-
 - duplicate credId rejected
-
 - signCount checked
-
 - fmt:none empty
-
 - AAGUID allowlist
-
 - BE/BS coherent
-
 - Token Binding rejected
+
+**Creativity**
+
+- rpId over-scoping
+- dangling Related-Origin (/.well-known/webauthn)
+- clickjacking / framing (register)
+- enrollment step-up
+- CSRF on register
+- admin-API / Entra enrollment
+- post-compromise persistence
+- recovery downgrade
+- mixed-mode fallback (password / TOTP)
+- post-ceremony session binding
+- credential-management authz
+- leftover default endpoints
 
 **37/37**
 
@@ -2370,26 +2728,29 @@ protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ### **You are here**
 
-**1/5** protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
+Six boxes forming a journey map, joined by arrows.
 
+Top row, left to right:
 
-> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- **1. AUTHENTICATOR / PROTOCOL** (filled orange)
+- → **2. Hybrid TRANSPORT** (left half orange, right half blue)
+- → **3. CLIENT** (left half orange, right half blue)
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-———|>|_ 2. Hybrid TRANSPORT
-6. USER RECOVERY
-5. CLOUD SYNC
-Engagement
-protocol
-3. CLIENT
-4. RELYING PARTY
-4/5
-auth - transport - client - relying party - SYNC - user
-87
-```
+An arrow leaves **3. CLIENT** downward to **4. RELYING PARTY**.
+
+Bottom row, right to left:
+
+- **4. RELYING PARTY** (filled blue)
+- → **5. CLOUD SYNC** (thin orange strip on the left, rest blue) — a red map-pin with a user icon sits on its top-left corner, marking "you are here"
+- → **6. USER RECOVERY** (white, unfilled)
+
+Every arrow carries a single arrowhead in the direction of travel: `1 → 2 → 3`, `3 ↓ 4`, `4 → 5 → 6` (the bottom row points leftward).
+
+Legend: <span style="orange">**Research**</span> (orange) · <span style="blue">**Engagement**</span> (blue).
+
+**1/5**
+
+protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
 ## Slide 86
 
@@ -2397,45 +2758,18 @@ auth - transport - client - relying party - SYNC - user
 
 ### **Types of Passkeys**
 
-**2/5** protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
+A four-column figure. Each column has a header, a **Type** box (top) and, below an arrow, a **Trust** box (bottom). Bracket labels on the right read **Type** (top row) and **Trust** (bottom row).
 
+| | DEVICE-BOUND | SYNCED | SHARED | EXPORTED |
+|---|---|---|---|---|
+| **Type** | on one device you hold | synced into a CLOUD ACCOUNT — iCloud Keychain or Google Password Mgr | granted to other users — Apple + most 3rd party: shared vaults | pulled out of the provider — backup/migrate (FIDO CXF / CXP) |
+| **Trust** | that device (Secure Enclave / TPM) | the cloud account | every account it's shared to — weakest one wins | only the backup file's own password, if any |
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+The DEVICE-BOUND **Trust** box is outlined in green; the other three **Trust** boxes are outlined in orange. A downward arrow joins each **Type** box to the **Trust** box beneath it.
 
-```text
-Types of Passkeys
-DEVICE-BOUND
-on one device
-you hold
-SYNCED
-SHARED
-synced into a
-CLOUD ACCOUNT
-iCloud Keychain or
-Google Password Mgr
-EXPORTED
-granted to other users
-Apple + most 3rd party:
-shared vaults
-pulled out of the provider
-backup/migrate
-(FIDO CXF / CXP)
-that device
-(Secure Enclave /
-TPM)
-the cloud account
-every account it's
-shared to
-weakest one wins
-only the backup
-file's own
-password, if any
-protocol / auth - transport - client - relying party - SYNC - user
-Type
-Trust
-2/5
-88
-```
+**2/5**
+
+protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
 ## Slide 87
 
@@ -2463,13 +2797,15 @@ protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
 ### **The account still falls the old ways**
 
+A screenshot of a DEF CON 33 conference talk: a dark stage slide headed **DEFCON** (skull-and-crossbones logo) showing a terminal pane with a red banner, a small inset photo of the speaker at a lectern (top-right), and the green-and-gold DEF CON **33** key logo (bottom-right). Caption below:
+
 Spensky, DEF CON 33 (sync-fabric phishing PoC)
 
-- SIM swap, ~19% of passkey account-takeover correlated (↗ <u>Prove)</u>
+- SIM swap, ~19% of passkey account-takeover correlated (↗ <u>Prove</u>)
 
-- Phish the login, drive a real browser as them, walk out with the passkeys (↗ <u>Spensky, DEF CON 33)</u>
+- Phish the login, drive a real browser as them, walk out with the passkeys (↗ <u>Spensky, DEF CON 33</u>)
 
-- Or go deeper: VaultJacking phishes the vault PIN for the master key, decrypting every synced passkey at once (↗ <u>Brazzell, 2026)</u>
+- Or go deeper: VaultJacking phishes the vault PIN for the master key, decrypting every synced passkey at once (↗ <u>Brazzell, 2026</u>)
 
 **4/5**
 
@@ -2511,29 +2847,33 @@ protocol /  auth ·  transport ·  client ·  relying party · **SYNC** ·  user
 
 ## Slide 91
 
-### **You are here**
-
 **93**
 
-**1/6** protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
+### **You are here**
 
+Six boxes forming a journey map, joined by arrows.
 
-> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Top row, left to right:
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-6. USER RECOVERY
-5. CLOUD SYNC
-Engagement
-protocol
-3. CLIENT
-4. RELYING PARTY
-4/6
-auth - transport - client - relying party - sync - USER
-93
-```
+- **1. AUTHENTICATOR / PROTOCOL** (filled orange)
+- → **2. Hybrid TRANSPORT** (left half orange, right half blue)
+- → **3. CLIENT** (left half orange, right half blue)
+
+An arrow leaves **3. CLIENT** downward to **4. RELYING PARTY**.
+
+Bottom row, right to left:
+
+- **4. RELYING PARTY** (filled blue)
+- → **5. CLOUD SYNC** (thin orange strip on the left, rest blue)
+- → **6. USER RECOVERY** (thin orange strip on the left, rest blue) — a red map-pin with a user icon sits on its top-left corner, marking "you are here"
+
+Every arrow carries a single arrowhead in the direction of travel: `1 → 2 → 3`, `3 ↓ 4`, `4 → 5 → 6` (the bottom row points leftward).
+
+Legend: <span style="orange">**Research**</span> (orange) · <span style="blue">**Engagement**</span> (blue).
+
+**1/6**
+
+protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
 
 ## Slide 92
 
@@ -2551,13 +2891,31 @@ auth - transport - client - relying party - sync - USER
 
 - OAuth device-code
 
-**2/6 94** protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
+To the right, the four-panel Anakin/Padmé meme. Top-left: Anakin, captioned **PASSKEYS ARE PHISHING-RESISTANT AND HARDWARE-BACKED**. Top-right: Padmé smiling, **SO THERE'S NO WAY IN, RIGHT?**. Bottom-left: Anakin, silent. Bottom-right: Padmé, expression falling, silent.
+
+**2/6**
+
+**94**
+
+protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
 
 ## Slide 93
 
 ### **Government says it plainly**
 
-Source: UK NCSC, Traditional and FIDO2 credentials for personal use (2026). ↗ <u>ncsc.gov.uk</u>
+Three quoted boxes from the source document (highlight colours preserved as noted):
+
+> **Attacks**
+>
+> Attackers are seen to <mark>target account recovery</mark> for both tMFA and <mark>FIDO2 protected accounts, as the recovery process can often be weaker</mark> than the authentication to the account. This is particularly common in two cases:
+
+> The vast majority of websites and apps will offer a 'forgot password' functionality. This typically leverages a code or link sent to the email address registered with the user's account, thereby <mark>effectively reducing the security of the service to that of the email account</mark>.
+
+> credentials, revoking those of the legitimate user. These attacks should be prevented <mark>if only passkeys are used, with no weaker password or tMFA options</mark> supported as a 'fallback'.
+
+("target account recovery" and the two orange phrases are highlighted orange; "FIDO2 protected accounts, as the recovery process can often be weaker" is highlighted blue.)
+
+Source: UK NCSC, *Traditional and FIDO2 credentials for personal use* (2026). ↗ <u>ncsc.gov.uk</u>
 
 **3/6**
 
@@ -2569,9 +2927,11 @@ protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
 
 ### **AiTM still works**
 
-- <u>Push Security (2025)</u> named the class: an AiTM kit **rewrites the method-selection page** , so "passkey OR backup code" becomes just "backup code."
+- <u>Push Security (2025)</u> named the class: an AiTM kit **rewrites the method-selection page**, so "passkey OR backup code" becomes just "backup code."
 
-- <u>IOActive (2026)</u> weaponized it on Cloudflare Workers: flip the FIDO2 isDefault, or **CSS-hide the passkey** .
+- <u>IOActive (2026)</u> weaponized it on Cloudflare Workers: flip the FIDO2 isDefault, or **CSS-hide the passkey**.
+
+Below, two mock **Microsoft "Choose a way to sign in"** dialogs with an arrow between them. Left dialog lists three options — **Face, fingerprint, PIN or security key** (ringed in red), *Approve a request on my Microsoft Authenticator app*, *Use my password* — plus a **Back** button. An arrow points to the right dialog, where the passkey option is gone: only *Approve a request on my Microsoft Authenticator app* and *Use my password* remain, above **Back**.
 
 **4/6**
 
@@ -2583,7 +2943,7 @@ protocol /  auth ·  transport ·  client ·  relying party ·  sync · **USER**
 
 ### **When the attacker is already inside**
 
-- **<u>↗ Dafalla et al. (USENIX Security 2025)f</u>**
+- **<u>↗ Daffalla et al. (USENIX Security 2025)</u>**
 
    - assume the attacker is **someone in your life**
 
