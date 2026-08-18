@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3242 slides across 172 documents.**
+**3294 slides across 173 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1488 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1265 | structure held; individual characters or lines wrong |
-| accurate | 411 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1518 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1278 | structure held; individual characters or lines wrong |
+| accurate | 420 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 78 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -282,6 +282,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Rules for Neural Traffic A New Defensive Layer for LLMs | 1-52 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |
