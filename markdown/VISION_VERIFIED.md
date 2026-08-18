@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3080 slides across 171 documents.**
+**3172 slides across 172 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1412 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1191 | structure held; individual characters or lines wrong |
-| accurate | 399 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1452 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1239 | structure held; individual characters or lines wrong |
+| accurate | 403 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 78 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -284,6 +284,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |

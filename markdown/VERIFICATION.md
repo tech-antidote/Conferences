@@ -301,6 +301,46 @@ The renderer really is the blocker rather than the file: on this environment
 `soffice --convert-to pdf` still fails on a plain one-line `.txt`, so nothing
 would render regardless of which deck was asked for.
 
+### Text an image is painted over — a second kind of invisible text
+
+`invisible_spans()` catches text drawn in its own background colour. It cannot
+catch text an opaque image is drawn on top of, because there the span's bbox
+renders as the image — some entirely different colour — so the share of pixels
+matching the span's own colour never reaches the threshold. The reader's
+experience is identical in both cases: the corpus publishes a line the slide
+never shows.
+
+One instance is confirmed. On page 66 of *Sliding into the Flight Deck's DMs*
+(DEF CON 34) the text layer carries `Then… nothing for 8 months.` at bbox
+`[73.5, 262.7, 306.5, 280.7]`, and an image at `[7.9, 173.8, 712.1, 291.5]` —
+drawn later in the content stream — covers it completely. Rendering that
+rectangle shows the covering screenshot's own words, not the span's. The line
+was removed under the standing rule, and the converter's mechanical check had
+returned nothing for that page.
+
+**How much of the corpus this affects is not known.** Two measurements were
+attempted and only the second is worth anything:
+
+| Method | 2026 PDFs | Result | Verdict |
+|---|---:|---:|---|
+| Text bbox inside any image bbox | 169 | 51,102 spans / 138 docs | **Wrong.** Counts every caption sitting on a full-bleed background photo, which is the opposite of hidden. |
+| Same, but only when the image block is drawn *after* the text block | 169 | 3,310 spans / 92 docs | **Upper bound.** Correct about draw order, still blind to transparency. |
+
+Spot-checking the second method's hits found both kinds. On *LaunchBreak* the
+span reads `https://gitlab.com` while the page at that rectangle renders
+"Open myapp?" — genuinely hidden. On the TETRA talk the span reads
+`midnightblue.nl` and the page renders `midnightblue.nl` perfectly legibly: the
+only thing over it is a translucent watermark. One of two sampled was a false
+positive, so 3,310 is an over-count of unknown size.
+
+Filtering on whether the covering image carries an `SMask` does **not**
+separate the two — the confirmed true positive's covering image has one as
+well, because a fully opaque image may still carry an alpha channel. Deciding
+this properly means sampling the covering image's alpha over the span's own
+rectangle, which has not been done. Until it is, treat the phenomenon as real
+and demonstrated but unquantified, and do not cite 3,310 as a count of hidden
+text.
+
 ## A defect in the review pipeline itself, found and fixed
 
 Worth recording, because it went wrong quietly and the corpus had to be
