@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 91.1
 ocr_unreliable_blocks: 1
+vision_verified_pages_changed: 77
+vision_verified_pages: 77
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,1223 +31,750 @@ converted_at: "2026-08-12T05:41:00Z"
 
 ## Slide 1
 
-Batch me if you can **Breaking with the State-of-the-Art of Fuzzing Cryptographic Architectures**
+# Batch me if you can
 
-**Niklas Vogel** | Haya Schulmann ATHENE @ Goethe University Frankfur **t**
+**Breaking with the State-of-the-Art of Fuzzing Cryptographic Architectures**
 
-1
+**Niklas Vogel** | Haya Schulmann  
+ATHENE @ Goethe University Frankfurt
 
 ## Slide 2
 
 ## Agenda: A journey towards RCE in RPKI
 
-2
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Agenda: A journey towards RCE in RPKI
-=
-Remote Code Execution
-2
-```
+- Motivation
+- Remote Code Execution
 
 ## Slide 3
 
 ## Agenda: A journey towards RCE in RPKI
 
-3
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Agenda: A journey towards RCE in RPKI
-Understanding the
-(fuzzing) challenges
-@ys4. 3
-```
+- Understanding the (fuzzing) challenges
 
 ## Slide 4
 
 ## Agenda: A journey towards RCE in RPKI
 
-4
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Agenda: A journey towards RCE in RPKI
-fuxzer prototype
-Black hat
-```
+- Building a fuzzer prototype
 
 ## Slide 5
 
 ## Agenda: A journey towards RCE in RPKI
 
-5
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Agenda: A journey towards RCE in RPKI
-Making it powerful
--
---
--
-5
-```
+- Making it powerful
 
 ## Slide 6
 
 ## Agenda: A journey towards RCE in RPKI
 
-6
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Agenda: A journey towards RCE in RPKI
-Remote Code Execution
-(and 7 other CVEs)
-6
-```
+- Remote Code Execution (and 7 other CVEs)
 
 ## Slide 7
 
-# 1 - Motivation Fuzzing Cryptographic Architectures
+# 1 - Motivation
 
-7
+## Fuzzing Cryptographic Architectures
 
 ## Slide 8
 
 ## Motivation: Cryptographic Architectures
 
-8
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-8
-```
-
 ## Slide 9
 
 ## Motivation: Cryptographic Architectures
-
-9
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-9
-```
 
 ## Slide 10
 
 ## Motivation: Cryptographic Architectures
 
-10
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-2026 10
-```
-
 ## Slide 11
 
 ## Motivation: Cryptographic Architectures
-
-11
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-we we
-1
-```
 
 ## Slide 12
 
 ## Motivation: Cryptographic Architectures
 
-12
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-2026 12
-```
-
 ## Slide 13
 
 ## Cryptographic Validators
 
-13
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Cryptographic Validators
-Validator
-Relying Party
->
+Validator  
+Relying Party  
 Resolver
-2026 13
-```
 
 ## Slide 14
 
 ## Motivation: Cryptographic Architectures
 
-14
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-2026 14
-```
+DNS
 
 ## Slide 15
 
 ## Motivation: Cryptographic Architectures
 
-15
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation: Cryptographic Architectures
-2026 15
-```
+RPKI
 
 ## Slide 16
 
-RPKI
+## RPKI
 
-16
+**RPKI =**
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RPKI
-RPKI =
-Routing Public Key Infrastructure”
-254. 16
-```
+**R**outing **P**ublic **K**ey **I**nfrastructure\*
 
 ## Slide 17
 
-RPKI
+## RPKI
 
-17
+**RPKI =**
 
+~~**R**outing~~ **P**ublic **K**ey **I**nfrastructure\*  
+**R**esource
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RPKI
-RPKI=
-SERS Public Key Infrastructure*
-Resource
-‘for routing
-254. 17
-```
+\*for routing
 
 ## Slide 18
 
-RPKI
+## RPKI
 
-18
+**RPKI =**
 
+~~**R**outing~~ **P**ublic **K**ey **I**nfrastructure\*  
+**R**esource
 
-> Recovered by OCR — confidence 83/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RPKI
-RPKI=
-SERS? Public Key Infra’
-Resource
-‘for routing
-254. 18
-```
+\*for routing
 
 ## Slide 19
 
 ## Testing Validators with Fuzzing
 
-fuzzer
+fuzzer  
 Validator
-
-19
 
 ## Slide 20
 
-# 2 - Fuzzing Challenge How to deal with cryptography?
+# 2 - Fuzzing Challenge
 
-20
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-2 - Fuzzing Challenge
-Flow to deal with
-cryptography?
-(284. 20
-```
+## How to deal with cryptography?
 
 ## Slide 21
 
-Fuzzing
+## Fuzzing
 
-21
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fuzzing
-Fuzzer Validator
-21
-```
+Fuzzer → Validator
 
 ## Slide 22
 
 ## Fuzzing Architecture
 
-22
+Seed file → mutation engine → crashing input → target (no text labels on this build).
 
 ## Slide 23
 
 ## Fuzzing cryptographic Architectures
 
-23
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fuzzing cryptographic Architectures
-Fuzzer Validator
-2026 23
-```
+Fuzzer → **Failed** ✗ | Validator
 
 ## Slide 24
 
 ## How to fuzz cryptographic Architectures?
 
-24
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-How to fuzz cryptographic Architectures?
-```
+Fuzzer → (a mass of crossed-out inputs, one exploding) | Validator
 
 ## Slide 25
 
 ## Guessing cryptographic Values
 
-25
+0.000
 
 ## Slide 26
 
 ## Guessing cryptographic Values
 
-26
+0.000000000000000000000000000000000000000000000…[……]1%
 
-
-> Recovered by OCR — confidence 88/100 on the text kept, 58/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
-Guessing cryptographic Values
-0.000000000000000000000000000000000000000000
-0000000000000000000000000000000000000000000
-0000000000000000000000000000000000000000000
-0000000000000000000000000000000 ~
-```
+The slide shows ten full lines of zeros before the trailing `[……]1%`; rows 4–9 run behind an overlaid image, so the exact number of zeros cannot be read off the page.
 
 ## Slide 27
 
 ## Removing Cryptography
 
-27
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Removing Cryptography
-Fuzzer Validator
-27
-```
+Fuzzer → Validator (the signature-checking gear is crossed out)
 
 ## Slide 28
 
 ## Fixing Cryptography
 
-28
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fixing Cryptography
-Fuzzer Validator
-28
-```
+Fuzzer → Validator (the mutated object is patched, and passes ✓)
 
 ## Slide 29
 
-# 3 - Building the Prototype An RPKI validator Fuzzer
+# 3 - Building the Prototype
 
-29
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-3 - Building the Prototype
-An RPKI validator
-Fuzzer
-A.
-254. 29
-```
+## An RPKI validator Fuzzer
 
 ## Slide 30
 
 ## Object Parsing and Mutation
 
-30
+Input file → **AST Tree Parser** → **Mutation** → **Encoding**
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Encoding output:
 
 ```text
-Object Parsing and Mutation
-AST Tree Parser
-Mutation
-J
-Encoding
 10110
-—> 10110
+10110
 01100
-30
 ```
 
 ## Slide 31
 
 ## Object Parsing and Mutation
 
-31
+Input file → **AST Tree Parser** → **AST Labeling** → **Mutation** → **Fixing** → **Encoding**
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Encoding output:
 
 ```text
-Object Parsing and Mutation
-EIN
-AST Tree Parser Mutation Encoding
-fo 40110
+10110
+10110
 01100
-AST Labeling
-31
 ```
 
 ## Slide 32
 
 ## Fuzzing Architecture
 
-32
+**Corpus** → **Queue** → **Mutation** → **Harness** → **Target** → **Oracle** → **Scoring** → back into **Queue**
 
-
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fuzzing Architecture
-254. 32
-```
+- **Target** also feeds **Scoring** directly.
+- Queue, Mutation, Harness, Scoring and Oracle sit inside the dashed fuzzer boundary; Corpus and Target sit outside it.
 
 ## Slide 33
 
 # Does this work?
 
-33
-
 ## Slide 34
 
 ## Speed of our Fuzzer
 
-### **Speed of regular fuzzers**
+Line chart — x-axis **Time (s)** with ticks 0, 200, 400, 600, 800, 1000; y-axis **Objects / s** with ticks 0, 500, 1000, 1500.
 
-34
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Speed of our Fuzzer
-1500
-Objects /s
-Speed of regular fuzzers
-Ul
-O
-/
-200
-400 600
-Time (s)
-800
-1000
-34
-```
+- Orange line, flat at 1000 objects/s — annotated **Speed of regular fuzzers**
 
 ## Slide 35
 
 ## Speed of our Fuzzer
 
-Speed of prototype fuzzer
+Line chart — x-axis **Time (s)** with ticks 0, 200, 400, 600, 800, 1000; y-axis **Objects / s** with ticks 0, 500, 1000, 1500.
 
-35
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Speed of our Fuzzer
-1500
-~ 1000;
-rs Speed of prototype fuzzer
-¢) 200 400 600 800 1000
-Time (s)
-35
-```
+- Orange line, flat at 1000 objects/s (speed of regular fuzzers)
+- Blue line, flat just above 0 objects/s — annotated **Speed of prototype fuzzer**
 
 ## Slide 36
 
 ## Speed of our Fuzzer
 
-36
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Speed of our Fuzzer
-1500
-Objects /s
-O
-O
-©
-Ul
-200
-400 600
-Time (s)
-800
-1000
-2026 36
-```
+Same chart as the previous slide — x-axis **Time (s)** 0–1000, y-axis **Objects / s** 0–1500, orange line flat at 1000 and blue line flat just above 0 — with a photograph of a wrecked box truck dropped over the plot area. No new text labels.
 
 ## Slide 37
 
 ## The challenge of fuzzing RPKI
 
-37
+Every fuzzing iteration has to walk the whole RPKI publication chain:
 
+**TAL** → **root.cer** → **Notify.xml** → **Snap.xml** → **ca.cer** → **ca.mft** → **ca.crl** → **test.roa**
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-The challenge of fuzzing RPKI
-ca.cer ca.mft
-=
-@
-37
-```
+Everything up to and including `ca.crl` sits inside the dashed boundary; the mutated `test.roa` (red) sits outside it.
 
 ## Slide 38
 
 ## The challenge of fuzzing RPKI
 
-38
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-The challenge of fuzzing RPKI
-38
-```
+Same chain as the previous slide — **TAL** → **root.cer** → **Notify.xml** → **Snap.xml** → **ca.cer** → **ca.mft** → **ca.crl** → **test.roa** — with a meme image dropped over the `Notify.xml` / `Snap.xml` end of the top row. No new text labels.
 
 ## Slide 39
 
 ## Snapshotting Setup
 
-39
+A dashed box holds the whole static repository — **TAL**, **root.cer**, **Notify.xml**, **Snap.xml**, **ca.cer**, **ca.mft**, **ca.crl** — stacked as one bundle.
 
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Snapshotting Setup
-root.cer
-Notify.xml
-39
-```
+That bundle is **load**ed into **state**, and **state** ↔ **test.roa** exchange in both directions.
 
 ## Slide 40
 
 ## Snapshotting doesn't work
 
-40
+The same objects, but now every one of them depends on the others, so no snapshot can be taken:
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Snapshotting doesn't work
-Notify.xml
-root.cer
-2026 40
-```
+- **Snap.xml** → **Notify.xml** → **root.cer** → **TAL**
+- **Notify.xml** → **Snap.xml**
+- **root.cer** → **ca.cer**
+- **ca.cer**, **ca.mft**, **ca.crl** and **test.roa** all feed back into each other, and **test.roa** feeds back up into **Snap.xml**
 
 ## Slide 41
 
 ## Sequential Fuzzing Architecture
 
-41
+**Corpus** → **Queue** → **Mutation** → **Harness** → **Target** → **Oracle** → **Scoring** → back into **Queue**
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Sequential Fuzzing Architecture
-2026 a
-```
+- **Target** also feeds **Scoring** directly.
+- Queue, Mutation, Harness, Scoring and Oracle sit inside the dashed fuzzer boundary; Corpus and Target sit outside it.
 
 ## Slide 42
 
 ## Sequential Fuzzing Architecture
 
-42
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Sequential Fuzzing Architecture
-2026 42
-```
+The same **Corpus → Queue → Mutation → Harness → Target → Oracle → Scoring → Queue** loop, greyed out, with a large red question mark over it and a thinking-face meme alongside. No new text labels.
 
 ## Slide 43
 
-# 4 - Making it Powerful A new fuzzing Architecture
+# 4 - Making it Powerful
 
-43
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-4 - Making it Powerful
-A new fuzzing
-Architecture
-254. 43
-```
+## A new fuzzing Architecture
 
 ## Slide 44
 
 ## Batching Inputs
 
-44
+Inside the dashed box (the fixed part of the repository, built once):
+
+- **TAL**, **root.cer**, **Notify.xml**, **Snap.xml**
+- **ca.cer**, **ca.mft**, **ca.crl**
+
+Outside it: a whole stack of mutated **test.roa** objects, batched together.
 
 ## Slide 45
 
 ## Batched (parallel) Fuzzing
 
-45
+The same loop as the sequential architecture, but every edge now carries several inputs in parallel:
 
+**Corpus** ⇒ **Queue** ⇒ **Mutation** ⇒ **Harness** ⇒ **Target** ⇒ **Scoring** ⇒ back into **Queue**
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Batched (parallel) Fuzzing
-2026 45
-```
+- **Target** → **Oracle** (single edge).
+- Queue, Mutation, Harness, Scoring and Oracle sit inside the dashed fuzzer boundary; Corpus and Target sit outside it.
 
 ## Slide 46
 
 ## Batched (parallel) Fuzzing
 
-### **Speed of our fuzzer**
+Line/scatter chart — x-axis **Time (s)** with ticks 0, 200, 400, 600, 800, 1000; y-axis **Objects / s** with ticks 0, 500, 1000, 1500.
 
-46
+- Blue scatter band around 1200 objects/s — annotated **Speed of our fuzzer**
+- Orange line flat at 1000 objects/s (the regular-fuzzer baseline)
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Batched (parallel) Fuzzing
-Speed of our fuzzer
-1500
-~ 1000;
-a 500
-0 200 400 600 800
-Time (s)
-2026 46
-```
+Meme caption over the plot: *I am speed*
 
 ## Slide 47
 
 ## Batched (parallel) Fuzzing
 
-47
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Batched (parallel) Fuzzing
-2026 47
-```
+The same batched loop — **Corpus** ⇒ **Queue** ⇒ **Mutation** ⇒ **Harness** ⇒ **Target** ⇒ **Scoring** ⇒ **Queue**, with **Target** → **Oracle** — and a large red arrow pointing at the **Scoring** box.
 
 ## Slide 48
 
 ## Fuzzing in batches loses coverage benefit
 
-48
+Line chart — x-axis **Iterations** with ticks 0, 100, 200, 300, 400, 500; y-axis **New Coverage** with ticks 0, 1000, 2000, 3000, 4000.
 
+Legend:
 
-> Recovered by OCR — confidence 88/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- **No Coverage** (blue triangles)
+- **Batch Coverage** (green crosses)
 
-```text
-Fuzzing in batches loses coverage benefit
-=#— NoCoverage ™< Batch Coverage
-New Coverage
-NO
-0 100 200 300 A00 500
-Iterations
-2026 48
-```
+Both series rise almost vertically from 0 and then sit on top of each other just under 3000 for the rest of the run — batching gives no coverage advantage.
 
 ## Slide 49
 
 ## Coverage-guided Fuzzing
 
-49
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    char buf[32];
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-char buf[32];
-if (vl == 42) {
-if (v2 = 21){
-memcpy(buf, b, b len); // overflow
+    if (v1 == 42) {
+        if (v2 = 21){
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
 }
-2026 49
 ```
 
 ## Slide 50
 
 ## Coverage-guided Fuzzing
 
-50
+Input thrown at the target:
 
+- v1: 42
+- v2: 67
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    char buf[32];
 
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-char buf[32];
-if (vl == 42) {
-> if (v2 = 21){
-memcpy(buf, b, b len); // overflow
+    if (v1 == 42) {
+        if (v2 = 21){
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
 }
-50
 ```
+
+The `if (v2 = 21)` line is marked ✗ — the input gets past the first check but not the second.
 
 ## Slide 51
 
 ## Coverage-guided Fuzzing
 
-51
+Input thrown at the target:
 
+- v1: 22
+- v2: 21
 
-> Recovered by OCR — confidence 88/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    char buf[32];
 
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-char buf[32];
-mam if (v1 == 42) { xs
-if (v2 = 21)
-memcpy(buf, b, b len); // overflow
+    if (v1 == 42) {
+        if (v2 = 21){
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
 }
-51
 ```
+
+The `if (v1 == 42)` line is marked ✗ — the input fails at the very first check.
 
 ## Slide 52
 
 ## Coverage-guided Fuzzing
 
-**cov_counter_1 cov_counter_2 cov_counter_3** **0 0** 0
+The same function, instrumented — each boxed comment is a coverage counter:
 
-52
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    // cov_counter_1++
 
+    char buf[32];
 
-> Recovered by OCR — confidence 87/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+    if (v1 == 42) {
+        // cov_counter_2++
 
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-// cov_counter 1++
-char buf[32];
-if {vl = 42) {
-// cov_counter 2++
-if (v2 = 21){
-// cov_counter 3++
-memcpy(buf, b, b len); // overflow
-cov_counter_1 cov_counter_2 cov_counter_3
-52
+        if (v2 = 21){
+            // cov_counter_3++
+
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
+}
 ```
+
+| cov_counter_1 | cov_counter_2 | cov_counter_3 |
+| --- | --- | --- |
+| 0 | 0 | 0 |
 
 ## Slide 53
 
 ## Coverage-guided Fuzzing
 
-**cov_counter_1 cov_counter_2 cov_counter_3** **1 1** 0
+Input thrown at the target:
 
-53
+- v1: 42
+- v2: 67
 
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    // cov_counter_1++
 
-> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+    char buf[32];
 
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-// cov_counter 1++
-char buf[32];
-if (vl == 42) {
-// cov_counter 2++ SY
-if (v2 = 21){
-// cov_counter 3++
-memcpy(buf, b, b len); // overflow
-cov_counter_1 cov_counter_2 cov_counter_3
-53
+    if (v1 == 42) {
+        // cov_counter_2++
+
+        if (v2 = 21){
+            // cov_counter_3++
+
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
+}
 ```
+
+`cov_counter_1++` and `cov_counter_2++` are ticked ✓; `if (v2 = 21){` is marked ✗.
+
+| cov_counter_1 | cov_counter_2 | cov_counter_3 |
+| --- | --- | --- |
+| 1 ✓ | 1 ✓ | 0 |
 
 ## Slide 54
 
 ## Coverage-guided Fuzzing
 
-**cov_counter_1 cov_counter_2 cov_counter_3** **1 1 1**
+Input thrown at the target:
 
-54
+- v1: 42
+- v2: 21
 
+```c
+void test(int v1, int v2, char *b, size_t b_len) {
+    // cov_counter_1++
 
-> Recovered by OCR — confidence 87/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+    char buf[32];
 
-```text
-Coverage-guided Fuzzing
-void test(int vl, int v2, char *b, size t b len) {
-// cov_counter 1++
-char buf[32];
-if (vl == 42) {
-// cov_counter 2++ SY
-if (v2 = 21){
-// cov_counter 3++ VA
-= memcpy(buf, b, b len); // overflow
-cov_counter_1 cov_counter_2 cov_counter_3
-54
+    if (v1 == 42) {
+        // cov_counter_2++
+
+        if (v2 = 21){
+            // cov_counter_3++
+
+            memcpy(buf, b, b_len); // overflow
+        }
+    }
+}
 ```
+
+All three counters are ticked ✓ and execution reaches the `memcpy` line.
+
+| cov_counter_1 | cov_counter_2 | cov_counter_3 |
+| --- | --- | --- |
+| 1 ✓ | 1 ✓ | 1 ✓ |
 
 ## Slide 55
 
 ## Coverage vs. Batches
 
-55
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Coverage vs. Batches
-2026 55
-```
+A whole batch of inputs is thrown at the validator at once, and only one aggregate result comes back — which input caused what is unknown (a large red **?** sits on the return path).
 
 ## Slide 56
 
 ## Coverage vs. Batches
 
-42 0 10 11
-23 0 1 23
-5 3 0 0
-0 32 69 0
-3 0 44 1
+The batch comes back as one coverage matrix:
 
-56
+```text
+42   0   10   11
+23   0    1   23
+ 5   3    0    0
+ 0  32   69    0
+ 3   0   44    1
+```
 
 ## Slide 57
 
 ## Coverage vs. Batches
 
-42 0 10 11
-23 0 1 23
-5 3 0 0
-0 32 69 0
-3 0 44 1
+Same coverage matrix coming back from the batch, with a puzzled-face meme and a red **?** where the thrower was:
 
-57
+```text
+42   0   10   11
+23   0    1   23
+ 5   3    0    0
+ 0  32   69    0
+ 3   0   44    1
+```
 
 ## Slide 58
 
 ## Idea: Coverage Progression
 
-New Coverage
-New Coverage
+Step chart — x-axis **Time (ms)** with ticks 0, 20, 40, 60, 80, 100; y-axis **Coverage** with ticks 10, 11, 12, 13, 14, 15.
 
-58
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-idea: Coverage Progression
-New Coverage
-New Coverage J
-Ul
-WW
-Coverage
-—
-Time (ms)
-0
-58
-```
+- Coverage sits at 11 until t = 40 ms, steps up to 13 — annotated **New Coverage**
+- Holds at 13 until t = 70 ms, steps up to 14 — annotated **New Coverage**
+- Holds at 14 to the end of the run
 
 ## Slide 59
 
 ## Idea: Coverage Progression
 
-New Coverage
-New Coverage
-
-59
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-idea: Coverage Progression
-New Coverage
-New Coverage J
-Ul
-WW
-Coverage
-—
-—
-—
-20
-```
+Same step chart as the previous slide — x-axis **Time (ms)** 0–100, y-axis **Coverage** 10–15, stepping 11 → 13 at t = 40 ms and 13 → 14 at t = 70 ms, both steps annotated **New Coverage** — with a meme image dropped over the bottom-right of the plot.
 
 ## Slide 60
 
 ## Idea: Coverage Progression
 
-**We can use this!**
-
-60
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Object obj = objects[il;
-process obj(obj);
+```c
+for(int i = 0; i < b_len; i++){
+    Object obj = objects[i];
+    process_obj(obj);
+    // ...
 }
-// cov_counter_ f++
-idea: Coverage Progression
-_ 30]
-5
-a
-£10
-O
-0
-Time (ms)
-We can use this!
-2026 60
+
+void process_obj(Object obj){
+    // cov_counter_f++
+
+    obj.validate();
+    // ...
+}
 ```
+
+**We can use this!** — the arrow points at `// cov_counter_f++`.
+
+Chart alongside — x-axis **Time (ms)** with ticks 0, 20, 40, 60, 80, 100; y-axis **Calls to procces_obj()** with ticks 0, 10, 20, 30. The step curve sits at 0 until about t = 22 ms, climbs steadily to 30 by about t = 80 ms and stays flat.
 
 ## Slide 61
 
 ## Use functions as timing side-channel
 
-61
+Two stacked charts sharing the same x-axis, **Time (ms)** with ticks 0, 20, 40, 60, 80, 100:
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Use functions as timing side-channel
-15
-Coverage
-N
-i) W
-Calls to procces_obj()
-Time (ms) black hat
-```
+- Top — y-axis **Coverage** with ticks 10, 11, 12, 13, 14, 15. Magenta step line: 11 until t = 40 ms, 13 until t = 70 ms, 14 thereafter.
+- Bottom — y-axis **Calls to procces_obj()** with ticks 0, 10, 20, 30. Orange step curve: 0 until about t = 22 ms, climbing to 30 by about t = 80 ms, flat thereafter.
 
 ## Slide 62
 
 ## Use functions as timing side-channel
 
-**New Coverage**
+The same two stacked charts — **Coverage** (10–15) over **Time (ms)** on top, **Calls to procces_obj()** (0–30) over **Time (ms)** below.
 
-62
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Use functions as timing side-channel
-15
-Coverage
-N
-W
-New Coverage
-Calls to procces_obj()
-Time (ms) black hat
-USA 62
-```
+An arrow drops from the coverage step at t = 40 ms onto the call-count curve, and reads across to about 10 calls on the y-axis: **New Coverage**.
 
 ## Slide 63
 
 ## Mapping requires speed
 
-every 100 us
+Chart — x-axis **Time (ms)** with ticks 0, 20, 40, 60, 80, 100; y-axis **Calls to procces_obj()** with ticks 0, 10, 20, 30.
 
-63
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Mapping requires speed
-_ 30;
->
-3, every 100 us
-U
-£ 10.
-O
-0
-63
-```
+The orange step curve sits at 0 until about t = 22 ms, then climbs one step at a time to 30 by about t = 80 ms and stays flat. The annotation on the rising part reads **every 100 us**.
 
 ## Slide 64
 
 ## Mapping requires speed
 
-unsafe{ }
+The same chart — x-axis **Time (ms)** 0–100, y-axis **Calls to procces_obj()** 0–30, orange step curve rising from 0 at about t = 22 ms — with a cartoon dropped over its right-hand half.
 
-64
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Mapping requires speed
-Calls to procces_obj()
-64
-```
+Caption on the cartoon: *unsafe{ }*
 
 ## Slide 65
 
-Accurate mapping
+## Accurate mapping
 
-65
+Bar chart — y-axis **Tests** with ticks 0, 200, 400, 600, 800, 1000; three categories on the x-axis: **correct**, **imprecise**, **wrong**. Three bars (red, blue, green) per category.
 
+- **correct** — all three bars at or just under 1000
+- **imprecise** — a small red bar and a smaller green bar, both just above 0; no blue bar
+- **wrong** — a single small red bar just above 0
 
-> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Accurate mapping
-800}
-Tests
-400,
-200
-correct imprecise Wigelate|
-2026 65
-```
+No per-bar values are printed on the slide.
 
 ## Slide 66
 
 ## CAT Fuzzing Architecture
 
-66
+Everything inside the dotted boundary is **CAT** 🐈:
 
-
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-CAT Fuzzing Architecture
-@ys4 66
-```
+- **Corpus** → **Template Agnostic DER Parser** → **Labeling**
+- **Labeling** ⇢ **Fuzzing Queue** (dashed)
+- **Snapshot RPKI Repo** ⇢ **Signing and Nesting** (dashed)
+- **Fuzzing Queue** → **Batch Mutation** → **Signing and Nesting** → **RPKI Validator**
+- **RPKI Validator** carries a **Coverage** tag; **Coverage** → **Scoring** → back into **Fuzzing Queue**
+- **RPKI Validator** ⇢ **Oracle** (dashed)
+- **Oracle** ⇠⇢ **Findings Reports** (dashed, both directions)
 
 ## Slide 67
 
-# 5 - Findings Vulnerabilities and CVEs
+# 5 - Findings
 
-67
+## Vulnerabilities and CVEs
 
 ## Slide 68
 
-# But first... The RPKI threat model
+# But first...
 
-68
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-But first...
-The RPKI threat model
-68
-```
+## The RPKI threat model
 
 ## Slide 69
 
 ## RPKI requires availability
 
-69
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RPKI requires availability
-—
-69
-```
+The RPKI repository and the router exchange traffic in both directions — if the repository is unavailable, the router has nothing to validate against.
 
 ## Slide 70
 
-RPKI is easy to attack globally
+## RPKI is easy to attack globally
 
-70
+One server talks to four separate RPKI repositories, each over its own bidirectional link — a single attacker reaches all of them.
 
 ## Slide 71
 
-# 5 - Vulnerabilities in RPKI 5 implementations, 21 vulnerabilities, 8 CVEs
+# 5 - Vulnerabilities in RPKI
 
-71
+## 5 implementations, 21 vulnerabilities, 8 CVEs
 
 ## Slide 72
 
-Vulnerabilities in RPKI
+## Vulnerabilities in RPKI
 
-**Type Amount Severity CVEs Implementations Remote Code Execution** 1 9.8 (critical) CVE-2024-45237 Fort Validator - - **Cache Poisoning** 1 OctoRPKI **Denial of Service** 19 7.5 (high) CVE-2025-0638, CVE-2024-45238, Routinator, rpkiCVE-2024-45235, CVE-2024-45236, client, Fort Validator, CVE-2024-45239, CVE-2024-45234, Prover, OctoRPKI CVE-2024-56375
-
-72
+| Type | Amount | Severity | CVEs | Implementations |
+| --- | --- | --- | --- | --- |
+| **Remote Code Execution** | 1 | 9.8 (critical) | CVE-2024-45237 | Fort Validator |
+| **Cache Poisoning** | 1 | - | - | OctoRPKI |
+| **Denial of Service** | 19 | 7.5 (high) | CVE-2025-0638, CVE-2024-45238, CVE-2024-45235, CVE-2024-45236, CVE-2024-45239, CVE-2024-45234, CVE-2024-56375 | Routinator, rpki-client, Fort Validator, Prover, OctoRPKI |
 
 ## Slide 73
 
 ## Remote Code Execution
 
-2 byte buffer
+```c
+unsigned char data[2];
 
-## **memcpy with attacker controlled length**
+if (ku->length == 0) {
+    return pr_val_err("%s bit string has no enabled bits.",
+        ext_ku()->name);
+}
 
-**More on this in**
+memset(data, 0, sizeof(data));
+memcpy(data, ku->data, ku->length);
+```
 
-<u>https://dl.acm.org/doi/abs/10.1145/3658644.3691387</u>
+- **2 byte buffer** — points at `unsigned char data[2];`
+- **memcpy with attacker controlled length** — points at `memcpy(data, ku->data, ku->length);`
 
-73
+More on this in
+
+<https://dl.acm.org/doi/abs/10.1145/3658644.3691387>
 
 ## Slide 74
 
 ## Remote Code Execution
 
-74
+Attacker → poisoned RPKI repository → router (which is blown up despite its shield).
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Remote Code Execution
-254. 74
-```
+The announcement carried over the link reads **AS666: 1.1.1.0/24**.
 
 ## Slide 75
 
 ## Cache Poisoning
 
-75
+Attacker poisons the RPKI repository, which then feeds the router:
 
+**- AS13335: 1.1.1.0/24**
 
-> Recovered by OCR — confidence 92/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Cache Poisoning
-- AS13335: 1.1.1.0/24
-SubjectName: Cloudflare CA
-Key: 0x349853
-SubjectName: Cloudflare CA
-Key: Oxf32856e
-USA 5
-```
+- ✓ SubjectName: Cloudflare CA / Key: 0x349853
+- ✗ SubjectName: Cloudflare CA / Key: 0xf32856e
 
 ## Slide 76
 
 ## Exploiting DoS
 
-76
+Attacker → explosive object → RPKI repository (destroyed) ↔ router (destroyed).
 
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Exploiting DoS
-ManifestEntries: [0 elements]
-76
-```
+The object that does it: **ManifestEntries: [0 elements]**
 
 ## Slide 77
 
 ## Key Takeaways
 
-#### Read Paper!
-
 - Fuzzing in batches is efficient in complex cryptographic infrastructures
 
-- Coverage counters serve as sidechannel to map coverage in batches
-
-#### Contact Me!
+- Coverage counters serve as side-channel to map coverage in batches
 
 - Routing security relies on the security of RPKI, which is fragile
 
-77
+**Read Paper!** — QR code
+
+**Contact Me!** — QR code
+

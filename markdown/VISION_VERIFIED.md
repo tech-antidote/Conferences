@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2471 slides across 159 documents.**
+**2642 slides across 162 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1068 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1044 | structure held; individual characters or lines wrong |
-| accurate | 331 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1149 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1101 | structure held; individual characters or lines wrong |
+| accurate | 364 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -56,7 +56,7 @@ under more than one heading or under none. Counts are slides.
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
-### Web and browser — 14 talks, 161 slides
+### Web and browser — 15 talks, 208 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -70,10 +70,11 @@ under more than one heading or under none. Counts are slides.
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
+- **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 37 talks, 1028 slides
+### Zero-day, RCE and novel exploitation — 38 talks, 1075 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -100,6 +101,7 @@ under more than one heading or under none. Counts are slides.
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slide 48
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
+- **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **The Cost of Obscurity Exploiting the ATM Supply Chain** (Black Hat USA 2026) — slides 1-42
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
@@ -258,6 +260,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2025 | Windows Hell No for Business | 64-68 | badly-mangled | 4 |
 | Black Hat USA 2025 | XUnprotect Reverse Engineering macOS XProtect Remediator | 28 | badly-mangled | 0 |
 | Black Hat USA 2026 | Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities | 1-44 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures | 1-77 | badly-mangled, minor-errors | 1 |
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
 | Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
@@ -275,6 +278,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
@@ -288,6 +292,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Chaining Logical Bugs for Reliable Windows LPE | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Compounding Interest Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
+| DEF CON 34 | Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Locked-D | 1-47 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |

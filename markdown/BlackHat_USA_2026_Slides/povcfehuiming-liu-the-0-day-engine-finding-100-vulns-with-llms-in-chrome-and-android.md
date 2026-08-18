@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 95.2
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 30
+vision_verified_pages: 47
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -93,12 +95,11 @@ converted_at: "2026-08-12T05:41:39Z"
 
 ## **1.2 How Can We Scale Finding Logic Vulnerabilities On Large-scale Codebases?**
 
-Fuzz? Such As AFL AFL-Fuzz Fork Server Target Binary
-Input
-Crash
-AFL-Fuzz Fork Server Target Binary
-Input
-Crash
+**Fuzz? Such As AFL**
+
+AFL-Fuzz sends Input to the Fork Server, which runs the Target Binary; a Crash is reported back from the Target Binary to the Fork Server, and the loop returns to AFL-Fuzz.
+
+The same pipeline is drawn twice, the lower copy highlighting the Crash feedback path in red.
 
 ## Slide 8
 
@@ -106,19 +107,18 @@ Crash
 
 **Static Audit? Such As Codeql**
 
-Source Code Codeql DB
-Taint analysis
-Compiler wrapper
-Result
-Vuln Rules XXX.ql
-Source Code Codeql DB
-Taint analysis
-Compiler wrapper
-Result
-Vuln Rules XXX.ql
+Source Code is turned into a Codeql DB by a Compiler wrapper; Vuln Rules become XXX.ql. Both feed Taint analysis, which produces the Result.
+
+The same pipeline is drawn twice, the lower copy highlighting the Taint analysis path in red and adding two callouts.
+
+Callout on Vuln Rules: Lack of many rules
+
+Callout on the Taint analysis path:
+
 1. Reflection calls
+
 2. Function pointers
-Lack of many rules
+
 3. ...
 
 ## Slide 9
@@ -147,7 +147,9 @@ One Repeating Model: Authorization Based on Forged Identity Fields
 
 4. 2023: CVE-2023-21266 / CVE-2023-40105 / CVE-2023-40127
 
-5. 2024: CVE-2024-0015 6. 2025: CVE-2025-0086 / CVE-2025-48537 / CVE-2025-48585
+5. 2024: CVE-2024-0015
+
+6. 2025: CVE-2025-0086 / CVE-2025-48537 / CVE-2025-48585
 
 ## Slide 11
 
@@ -199,11 +201,15 @@ One Repeating Model: Authorization Based on Forged Identity Fields
 
 ## **2.2 WorkFlow**
 
-### **Does the historical vulnerability still exist? Do similar variants exist elsewhere?**
+### **Does the historical vulnerability still exist?**
 
-Patch Diff
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
+### **Do similar variants exist elsewhere?**
+
+Patch Diff branches into two questions:
+
+- Historical Vuln Still Exists?
+
+- Similar Variant Discovery Elsewhere?
 
 ## Slide 16
 
@@ -211,13 +217,9 @@ Still Exists? Discovery Elsewhere?
 
 ### **Thousands of fixes become thousands of searchable vulnerability models.**
 
-Patch Diff
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Root Cause Security Invariant
-Searchable Pattern
-Primitive-driven Role-driven
-Variant Candidates
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
+
+Historical Vuln Still Exists? leads to Root Cause, which leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both converge on Variant Candidates.
 
 ## Slide 17
 
@@ -225,16 +227,11 @@ Variant Candidates
 
 ### **Thousands of fixes become thousands of searchable vulnerability models.**
 
-Patch Diff
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Root Cause Security Invariant
-Searchable Pattern
-How analyze large-scale
-codebases?
-Primitive-driven Role-driven
-Variant Candidates How analyze large-scale
-codebases?
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
+
+Historical Vuln Still Exists? leads to Root Cause, which leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both converge on Variant Candidates.
+
+Two red callouts are added, each reading "How analyze large-scale codebases?" — one pointing at Root Cause, the other at the Role-driven / Variant Candidates path.
 
 ## Slide 18
 
@@ -242,11 +239,7 @@ codebases?
 
 ### **Init Task: Analyze all control-flow paths leading to system() calls.**
 
-Large-scale
-Codebases
-Find Many  Analyze All
-Call Sites Control-Flow Paths
-Init Task
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which leads to Analyze All Control-Flow Paths.
 
 ## Slide 19
 
@@ -254,7 +247,13 @@ Init Task
 
 ### **Init Task: Analyze all control-flow paths leading to system() calls.**
 
-1. Limited LLM context window Large-scale Codebases Find Many Analyze All Call Sites Control-Flow Paths Init Task 2. Too many analysis targets, distracting the model’s attention
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which leads to Analyze All Control-Flow Paths.
+
+Three problems are called out in red over the diagram:
+
+1. Limited LLM context window
+
+2. Too many analysis targets, distracting the model’s attention
 
 3. Deep function-call chains, making in-depth analysis difficult
 
@@ -265,15 +264,8 @@ Init Task
 ### **One LLM session. One simple task.**
 
 Large-scale Codebases Analysis
-Decompose Tasks
-Call Site 1
-Large-scale
-Codebases
-Find Many
-Call Site 2
-Call Sites
-Init Task
-Call Site 3
+
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which fans out to Call Site 1, Call Site 2 and Call Site 3 inside a red dashed region labelled Decompose Tasks.
 
 ## Slide 21
 
@@ -282,23 +274,20 @@ Call Site 3
 ### **One LLM session. One simple task.**
 
 Large-scale Codebases Analysis
-Iterative Loop
-Small-scope,
-Call Site 1
-precise analysis
-Large-scale
-Codebases
-Find Many  Locate deep- Small-scope,
-Call Site 2 Merge
-Call Sites dive points precise analysis
-Init Task
-Small-scope,
-Call Site 3
-precise analysis
+
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which fans out to Call Site 1, Call Site 2 and Call Site 3.
+
+Call Site 2 enters a red dashed region labelled Iterative Loop: Locate deep-dive points fans out to three Small-scope, precise analysis boxes, which feed Merge; Merge loops back to Locate deep-dive points.
+
 Cycle_0(Control Flow)
+
+```text
 A -> B -> E
--> C -> F
--> D
+  -> C -> F
+  -> D
+```
+
+None of the path is highlighted yet — every node is still white.
 
 ## Slide 22
 
@@ -307,22 +296,20 @@ A -> B -> E
 ### **One LLM session. One simple task.**
 
 Large-scale Codebases Analysis
-Small-scope,
-Call Site 1
-precise analysis
-Large-scale
-Codebases
-Find Many  Locate deep- Small-scope,
-Call Site 2 Merge
-Call Sites dive points precise analysis
-Init Task
-Small-scope,
-Call Site 3
-precise analysis
+
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which fans out to Call Site 1, Call Site 2 and Call Site 3.
+
+Call Site 2 leads to Locate deep-dive points, which fans out to three Small-scope, precise analysis boxes; those feed Merge, and Merge loops back to Locate deep-dive points.
+
 Cycle_1(Control Flow)
+
+```text
 A -> B -> E
--> C -> F
--> D
+  -> C -> F
+  -> D
+```
+
+A, B, C and D are now highlighted in blue; E and F are still white.
 
 ## Slide 23
 
@@ -331,22 +318,20 @@ A -> B -> E
 ### **One LLM session. One simple task.**
 
 Large-scale Codebases Analysis
-Small-scope,
-Call Site 1
-precise analysis
-Large-scale
-Codebases
-Find Many  Locate deep- Small-scope,
-Call Site 2 Merge
-Call Sites dive points precise analysis
-Init Task
-Small-scope,
-Call Site 3
-precise analysis
+
+Large-scale Codebases and Init Task both feed Find Many Call Sites, which fans out to Call Site 1, Call Site 2 and Call Site 3.
+
+Call Site 2 leads to Locate deep-dive points, which fans out to three Small-scope, precise analysis boxes; those feed Merge, and Merge loops back to Locate deep-dive points.
+
 Cycle_2(Control Flow)
+
+```text
 A -> B -> E
--> C -> F
--> D
+  -> C -> F
+  -> D
+```
+
+The whole path is now highlighted in blue.
 
 ## Slide 24
 
@@ -354,42 +339,25 @@ A -> B -> E
 
 ### **One LLM session. One simple task.**
 
-Patch Diff
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
 
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Large-scale  Security Invariant
-Codebases Analysis
-Searchable Pattern
-Root Cause
-Large-scale  Primitive-driven Role-driven
-Codebases Analysis
-Large-scale
-Fix Status
-Codebases Analysis
-Variant Candidates
+Left branch: Historical Vuln Still Exists? feeds a Large-scale Codebases Analysis step that yields the Root Cause; a second Large-scale Codebases Analysis step then yields the Fix Status.
+
+Right branch: Root Cause leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both feed a Large-scale Codebases Analysis step that produces Variant Candidates.
 
 ## Slide 25
 
 ## **How LLM Agents Analyze Large-scale Codebases: Task Decomposition**
 
-One LLM session. One simple task. Patch Diff
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Large-scale  Security Invariant
-Codebases Analysis
-Searchable Pattern
-Root Cause
-Large-scale  Primitive-driven Role-driven
-Codebases Analysis
-Large-scale
-Fix Status
-Codebases Analysis
-if the issue is real?
-Variant Candidates
-if the issue is real?
-
 ### **One LLM session. One simple task.**
+
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
+
+Left branch: Historical Vuln Still Exists? feeds a Large-scale Codebases Analysis step that yields the Root Cause; a second Large-scale Codebases Analysis step then yields the Fix Status.
+
+Right branch: Root Cause leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both feed a Large-scale Codebases Analysis step that produces Variant Candidates.
+
+Two red callouts are added, each reading "if the issue is real?" — one pointing at Fix Status, the other at Variant Candidates.
 
 ## Slide 26
 
@@ -405,83 +373,71 @@ if the issue is real?
 
 ## Slide 27
 
-Patch Diff
-
 ## **How to ensure vulnerabilities are real**
-
-Step-by-Step Verification
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Large Program  Security Invariant
-Analysis Task
-Searchable Pattern
-Root Cause
-Verify
-Large Program  Primitive-driven Role-driven
-Analysis Task
-Large Program
-Fix Status
-Analysis Task
-Variant Candidates
-Verify
-Verify
 
 ### **Step-by-Step Verification**
 
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
+
+Left branch: Historical Vuln Still Exists? feeds a Large Program Analysis Task that yields the Root Cause; a second Large Program Analysis Task then yields the Fix Status, which feeds a Verify step; that Verify loops back to the first Large Program Analysis Task.
+
+Right branch: Root Cause leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both feed a Large Program Analysis Task that produces Variant Candidates, which feed a Verify step; that Verify loops back to Security Invariant.
+
+A red dotted region labelled Verify encloses the analysis steps of both branches.
+
 ## Slide 28
-
-***Android/Chrome/Firefox/Open Source Project***
-
-Solve One Problem, Then Scale It Patch Diff  *Android/Chrome/Firefox/Open Source Project*
-Historical Vuln Similar Variant
-Still Exists? Discovery Elsewhere?
-Large Program  Security Invariant
-Analysis Task
-Searchable Pattern
-Root Cause
-Verify
-Large Program  Primitive-driven Role-driven
-Analysis Task
-Large Program
-Fix Status
-Analysis Task
-Variant Candidates
-Verify
-Verify
 
 ## **Solve One Problem, Then Scale It**
 
+\*Android/Chrome/Firefox/Open Source Project\*
+
+Patch Diff branches into Historical Vuln Still Exists? (left) and Similar Variant Discovery Elsewhere? (right).
+
+Left branch: Historical Vuln Still Exists? feeds a Large Program Analysis Task that yields the Root Cause; a second Large Program Analysis Task then yields the Fix Status, which feeds a Verify step; that Verify loops back to the first Large Program Analysis Task.
+
+Right branch: Root Cause leads to Security Invariant, then Searchable Pattern, which splits into Primitive-driven and Role-driven; both feed a Large Program Analysis Task that produces Variant Candidates, which feed a Verify step; that Verify loops back to Security Invariant.
+
+A red dotted region labelled Verify encloses the analysis steps of both branches.
+
 ## Slide 29
 
-**2.6 Result**
+## **2.6 Result**
 
-
-> Recovered by OCR — confidence 95/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Phone screenshot of a Gmail thread: message from `buganizer-sy…`, May 9, to `b-system+1027…`.
 
 ```text
-2.6 Result
-buganizer-sy... May 9
-to b-system+1027... v
 https://issuetracker.google.com/issues/495651377
+
 Changed
+
 nc...@google.com added comment #5:
 Hello,
+
 The Android security team has conducted an initial
 severity assessment on this report. Based on our
 published severity assessment matrix (1) it was rated
 as Critical severity and High quality.
+
 This issue has been assigned to the appropriate team
 for remediation. We will provide an update on
 remediation status as it becomes available. We ask
 for your continued confidentiality as we proceed with
 our standard investigation and remediation process.
+
 Thank you,
 Android Security Team
-(1) Severity Matrix: https://source.android.com/
-security/overview/updates-resources#severity
-status: Assigned
-reporter: povcfe2sec@gmail.com
+(1) Severity Matrix: https://source.android.com/security/overview/updates-resources#severity
+
+________________________________
+
+component:  190951
+status:  Assigned
+reporter:  povcfe2sec@gmail.com
 ```
+
+Three lines above `component:` are blurred out in the screenshot and cannot be read.
+
+The sentence "published severity assessment matrix (1) it was rated as Critical severity and High quality." is boxed in red on the slide.
 
 ## Slide 30
 
@@ -501,23 +457,14 @@ reporter: povcfe2sec@gmail.com
 
 ## **3.1 Pin Lock Bypass(CVE)**
 
-\```
-CVE-2025-48541
-\```
+#### **`CVE-2025-48541`**
 
-\```
+```text
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
-
-\```
 index 8270d50a..ce4fdd6 100644
-\```
-
-- `--- a/src/com/android/settings/biometrics/face/FaceSettings.java`
-
-\```
+--- a/src/com/android/settings/biometrics/face/FaceSettings.java
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
+```
 
 ## Slide 33
 
@@ -525,211 +472,97 @@ index 8270d50a..ce4fdd6 100644
 
 #### **`CVE-2025-48541`**
 
-\```
+```text
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
-
-\```
 index 8270d50a..ce4fdd6 100644
-\```
-
-- `--- a/src/com/android/settings/biometrics/face/FaceSettings.java`
-
-\```
+--- a/src/com/android/settings/biometrics/face/FaceSettings.java
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
-
-\```
--
-mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-\```
-
-\```
+...
+-        mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
 +        if (callingPackage == null || !callingPackage.equals(activity.getPackageName())) {
-\```
-
-\```
 +            // only allow these extras when called internally by Settings
-\```
-
-\```
 +            mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-\```
+```
 
 ## Slide 34
 
 ## **3.1 Pin Lock Bypass(CVE)**
 
-\```
-CVE-2025-48541
-\```
+#### **`CVE-2025-48541`**
 
-\```
+```text
 diff --git a/src/com/android/settings/biometrics/face/FaceSettings.java b/src/com/android/settings/biometrics/face/FaceSettings.java
 index 8270d50a..ce4fdd6 100644
-\```
-
-\```
----a/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
-
-\```
+--- a/src/com/android/settings/biometrics/face/FaceSettings.java
 +++ b/src/com/android/settings/biometrics/face/FaceSettings.java
-\```
+...
+-        mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
+-        mSensorId = getIntent().getIntExtra(BiometricEnrollBase.EXTRA_KEY_SENSOR_ID, -1);
+-        mChallenge = getIntent().getLongExtra(BiometricEnrollBase.EXTRA_KEY_CHALLENGE, 0L);
 
-\```
--
-mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-\```
-
-- `mSensorId = getIntent().getIntExtra(BiometricEnrollBase.EXTRA_KEY_SENSOR_ID, -1);`
-
-- `mChallenge = getIntent().getLongExtra(BiometricEnrollBase.EXTRA_KEY_CHALLENGE, 0L);`
-
-- `mUserId = getActivity().getIntent().getIntExtra(`
-
-- `Intent.EXTRA_USER_ID, UserHandle.myUserId());`
-
-\```
+-        mUserId = getActivity().getIntent().getIntExtra(
+-                Intent.EXTRA_USER_ID, UserHandle.myUserId());
 +        if (callingPackage == null || !callingPackage.equals(activity.getPackageName())) {
-\```
-
-\```
 +            mUserId = UserHandle.myUserId();
 +        } else {
-\```
-
-\```
 +            // only allow these extras when called internally by Settings
-\```
-
-\```
 +            mToken = getIntent().getByteArrayExtra(KEY_TOKEN);
-\```
-
-\```
 +            mSensorId = getIntent().getIntExtra(BiometricEnrollBase.EXTRA_KEY_SENSOR_ID, -1);
-\```
-
-\```
 +            mChallenge = getIntent().getLongExtra(BiometricEnrollBase.EXTRA_KEY_CHALLENGE, 0L);
-\```
+```
 
 ## Slide 35
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
+--- a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
+```
 
 ## Slide 36
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
+--- a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
 +        mAllowInternalExtras = false;
-\```
-
-\```
 +            if (TextUtils.equals(callingPackage, activity.getPackageName())) {
-\```
-
-\```
 +                mAllowInternalExtras = true;
-\```
-
-\```
-if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-\```
-
-\```
--
-if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
+-        if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
 +        if (mAllowInternalExtras && BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-\```
+```
 
 ## Slide 37
 
 ## **3.1 Pin Lock Bypass(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-\```
+--- a/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
 +++ b/packages/apps/Settings/src/com/android/settings/biometrics/combination/BiometricsSettingsBase.java
-\```
-
-   - `public void onAttach(Context context) {`
-
-- `mUserId = getActivity().getIntent().getIntExtra(Intent.EXTRA_USER_ID,`
-
-- `UserHandle.myUserId());`
-
-- `+        mUserId = UserHandle.myUserId();`
-
-\```
+     public void onAttach(Context context) {
+-        mUserId = getActivity().getIntent().getIntExtra(Intent.EXTRA_USER_ID,
+-                UserHandle.myUserId());
++        mUserId = UserHandle.myUserId();
 +        mAllowInternalExtras = false;
-\```
-
-\```
 +
-\```
-
-- `+        if (context instanceof SettingsActivity) {`
-
-- `+            final SettingsActivity activity = (SettingsActivity) context;`
-
-- `+            final String callingPackage = activity.getInitialCallingPackage();`
-
-- `+            if (TextUtils.equals(callingPackage, activity.getPackageName())) {`
-
-\```
++        if (context instanceof SettingsActivity) {
++            final SettingsActivity activity = (SettingsActivity) context;
++            final String callingPackage = activity.getInitialCallingPackage();
++            if (TextUtils.equals(callingPackage, activity.getPackageName())) {
 +                mAllowInternalExtras = true;
-\```
-
-\```
 +                mUserId = activity.getIntent().getIntExtra(Intent.EXTRA_USER_ID, mUserId);
-\```
-
-\```
-if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-\```
-
-\```
+...
+-        if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
 +        if (mAllowInternalExtras && BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
-\```
+```
 
 ## Slide 38
 
@@ -737,19 +570,12 @@ if (BiometricUtils.containsGatekeeperPasswordHandle(getIntent())) {
 
 #### **`CVE-2022-20230`**
 
-\```
+```text
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
-\```
-
-\```
 index 67219a5..45be472 100644
-\```
-
-- `--- a/src/com/android/keychain/KeyChainActivity.java`
-
-\```
+--- a/src/com/android/keychain/KeyChainActivity.java
 +++ b/src/com/android/keychain/KeyChainActivity.java
-\```
+```
 
 ## Slide 39
 
@@ -757,31 +583,15 @@ index 67219a5..45be472 100644
 
 #### **`CVE-2022-20230`**
 
-\```
+```text
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
-\```
-
-\```
 index 67219a5..45be472 100644
-\```
-
-- `--- a/src/com/android/keychain/KeyChainActivity.java`
-
-\```
+--- a/src/com/android/keychain/KeyChainActivity.java
 +++ b/src/com/android/keychain/KeyChainActivity.java
-\```
-
-\```
-String hostMessage = String.format(res.getString(R.string.requesting_server),
-\```
-
-\```
-uri.getAuthority());
-\```
-
-\```
+             String hostMessage = String.format(res.getString(R.string.requesting_server),
+-                                               uri.getAuthority());
 +                    Uri.encode(uri.getAuthority(), "$,;:@&=+"));
-\```
+```
 
 ## Slide 40
 
@@ -789,164 +599,89 @@ uri.getAuthority());
 
 #### **`CVE-2022-20230`**
 
-\```
+```text
 diff --git a/src/com/android/keychain/KeyChainActivity.java b/src/com/android/keychain/KeyChainActivity.java
 index 67219a5..45be472 100644
-\```
-
-- `--- a/src/com/android/keychain/KeyChainActivity.java`
-
-\```
+--- a/src/com/android/keychain/KeyChainActivity.java
 +++ b/src/com/android/keychain/KeyChainActivity.java
-\```
-
-\```
 @@ -533,7 +533,7 @@
-\```
-
-\```
-Uri uri = getIntent().getParcelableExtra(KeyChain.EXTRA_URI);
-if (uri != null) {
-\```
-
-\```
-String hostMessage = String.format(res.getString(R.string.requesting_server),
-\```
-
-\```
-uri.getAuthority());
-\```
-
-\```
+         Uri uri = getIntent().getParcelableExtra(KeyChain.EXTRA_URI);
+         if (uri != null) {
+             String hostMessage = String.format(res.getString(R.string.requesting_server),
+-                                               uri.getAuthority());
 +                    Uri.encode(uri.getAuthority(), "$,;:@&=+"));
-\```
-
-\```
-if (contextMessage == null) {
-\```
-
-\```
-contextMessage = hostMessage;
-\```
-
-\```
-} else {
-\```
+             if (contextMessage == null) {
+                 contextMessage = hostMessage;
+             } else {
+```
 
 ## Slide 41
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-\```
-
-\```
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-\```
-
-\```
 index 0000000..0000000 100644
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-\```
-
-\```
+--- a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
-\```
 
-\```
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-\```
-
-- `--- a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java`
-
-\```
+--- a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
-\```
+```
 
 ## Slide 42
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 index 0000000..0000000 100644
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
+--- a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
--
-applicationInfo.loadLabel(getPackageManager())));
-+                    applicationInfo.loadSafeLabel(getPackageManager())));
-\```
 
-\```
+-                    applicationInfo.loadLabel(getPackageManager())));
++                    applicationInfo.loadSafeLabel(getPackageManager())));
+...
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
+--- a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
-\```
 
-\```
--
-applicationInfo.loadLabel(mPackageManager)));
+-                        applicationInfo.loadLabel(mPackageManager)));
 +                        applicationInfo.loadSafeLabel(mPackageManager)));
-\```
+```
 
 ## Slide 43
 
 ## **3.2 UI Obfuscation(Zero-Day)**
 
-\```
+```text
 diff --git a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 index 0000000..0000000 100644
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
+--- a/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/RequestManageCredentials.java
 @@ -243,11 +243,11 @@ private void loadHeader() {
-\```
-
-\```
--
-applicationInfo.loadLabel(getPackageManager())));
+...
+-                    applicationInfo.loadLabel(getPackageManager())));
 +                    applicationInfo.loadSafeLabel(getPackageManager())));
-\```
-
-\```
+...
 diff --git a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 index 0000000..0000000 100644
-\```
-
-\```
----a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
+--- a/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 +++ b/packages/apps/Settings/src/com/android/settings/security/CredentialManagementAppAdapter.java
 @@ -84,11 +84,11 @@ public class HeaderViewHolder extends RecyclerView.ViewHolder {
 mAppIconView.setImageDrawable(mPackageManager.getApplicationIcon(applicationInfo));
-\```
-
-\```
--
-applicationInfo.loadLabel(mPackageManager)));
-\```
-
-\```
+-                        applicationInfo.loadLabel(mPackageManager)));
 +                        applicationInfo.loadSafeLabel(mPackageManager)));
-\```
+```
 
 ## Slide 44
 
@@ -954,7 +689,9 @@ applicationInfo.loadLabel(mPackageManager)));
 
 ## Slide 45
 
-**Question: Will large language models replace security researchers? Answer:**
+**Question: Will large language models replace security researchers?**
+
+**Answer:**
 
 - The birth of AFL started a security technology revolution in the fuzzing era, and LLMs are now changing the way we do security research.
 
