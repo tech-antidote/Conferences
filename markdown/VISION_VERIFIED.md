@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3344 slides across 173 documents.**
+**3388 slides across 174 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1586 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1298 | structure held; individual characters or lines wrong |
-| accurate | 432 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1616 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1311 | structure held; individual characters or lines wrong |
+| accurate | 433 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -271,6 +271,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
 | Black Hat USA 2026 | Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration | 1-31 | badly-mangled, minor-errors, accurate | 2 |
+| Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 11-12, 17, 35-37 | badly-mangled | 0 |
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
