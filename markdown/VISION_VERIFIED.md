@@ -4,14 +4,14 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2882 slides across 166 documents.**
+**2987 slides across 169 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1320 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1146 | structure held; individual characters or lines wrong |
-| accurate | 388 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 28 | reviewed before verdicts were recorded |
+| badly-mangled | 1346 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1170 | structure held; individual characters or lines wrong |
+| accurate | 393 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 78 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -36,7 +36,7 @@ under more than one heading or under none. Counts are slides.
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
-### Cloud and API — 17 talks, 275 slides
+### Cloud and API — 18 talks, 308 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Breaching the Perimeter via Cloud Synchronized Browser Settings** (Black Hat Europe 2023) — slide 14
@@ -49,6 +49,7 @@ under more than one heading or under none. Counts are slides.
 - **UnOAuthorized A Technique to Privilege Escalation to Global Administrator** (Black Hat USA 2024) — slides 67, 85-100, 105-107, 109-110, 119, 131
 - **Azure's Weakest Link How API Connections Spill Secrets** (Black Hat USA 2025) — slide 69
 - **ECS-cape – Hijacking IAM Privileges in Amazon ECS** (Black Hat USA 2025) — slides 47, 69, 97, 106, 108, 110
+- **!secure A Single Wrong Negation to Root Linux and Escape Managed Containers** (Black Hat USA 2026) — slides 1-33
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud** (DEF CON 34) — slides 1-54
 - **CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale** (DEF CON 34) — slides 1-25
@@ -262,6 +263,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2025 | Watching the Watchers Exploring and Testing Defenses of Anti-Cheat Systems | 37-38, 70 | badly-mangled | 0 |
 | Black Hat USA 2025 | Windows Hell No for Business | 64-68 | badly-mangled | 4 |
 | Black Hat USA 2025 | XUnprotect Reverse Engineering macOS XProtect Remediator | 28 | badly-mangled | 0 |
+| Black Hat USA 2026 | !secure A Single Wrong Negation to Root Linux and Escape Managed Containers | 1-33 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures | 1-77 | badly-mangled, minor-errors | 1 |
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
@@ -290,6 +292,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft | 1-54 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Beyond the Ceremony The 2026 Passkey Attack Surface | 1-50 | — | 0 |
 | DEF CON 34 | Binary Translation for Multi-Architecture Vulnerability Analysis: Unlocking the x86-64 Security Toolchain for ARM, RISC-V, and Beyond | 1-55 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Bird Hunting Season The Final Flight | 1-38 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Breaking Amazon lockers by any means necessary | 1-37 | badly-mangled, minor-errors, accurate | 8 |
@@ -309,6 +312,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) | 1-46 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
+| DEF CON 34 | TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition | 1-22 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C | 1-49 | badly-mangled, minor-errors, accurate | 1 |

@@ -249,6 +249,8 @@ are counted per document as `ocr_unreliable_blocks`.
 |---|---:|---|
 | CoDe16: 16 Zero-Day Vulnerabilities Affecting CODESYS Framework | 17 | Every attempt to review these pages was stopped by the model API's cyber safeguards, at three different batch sizes, once before any page was read. The trigger is the deck's subject — ICS/OT zero-days — not any individual slide. |
 | One Chain to Own Them All: Breaking AI Infrastructures (DEF CON 34), pages 118–130 | 13 | Four of the document's eleven review batches were stopped by the same safeguard; the other seven completed normally. Those pages keep their first-pass extraction and are listed in `vision_unreviewed_pages`. |
+| !secure: A Single Wrong Negation to Root Linux and Escape Managed Containers (BH USA 2026), pages 34–73 | 40 | Stopped by the cyber safeguard on both models tried: Opus refused before a single page was read, and the Sonnet retry stopped after page 33. Pages 1–33 are reviewed and applied; the rest keep their first-pass extraction and are named in `vision_unreviewed_pages`. |
+| Gone in 60 Frames: USB Video Exploitation — slides (DEF CON 34), pages 41–70 | 30 | Same safeguard, same deck family as the whitepaper below. Pages 1–40 are reviewed but not yet applied. |
 | Gone in 60 Frames: USB Video Exploitation — whitepaper (DEF CON 34), pages 31–64 | 34 | Two runs stopped at the same point in the document: the first to a network error, the resumed run to the cyber safeguard on Opus. Pages 1–30 are reviewed and applied; the rest keep their first-pass extraction and are named in the document's `content_note`. |
 
 These blocks remain OCR-only and keep their `ocr_unreliable` flag, so they are

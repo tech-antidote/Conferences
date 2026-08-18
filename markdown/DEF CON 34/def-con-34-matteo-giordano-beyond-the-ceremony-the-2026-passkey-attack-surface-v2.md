@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 86.5
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 47
+vision_verified_pages: 50
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,81 +31,79 @@ converted_at: "2026-08-12T06:41:37Z"
 
 ## Slide 1
 
-## Beyond the Ceremony **The 2026 Passkey Attack Surface**
+## Beyond the Ceremony
+
+## **The 2026 Passkey Attack Surface**
 
 Matteo Giordano
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-VIL
-SECURE
-Beyond the Ceremony
-The 2026 Passkey Attack Surface
-Matteo Giordano
-```
 
 ## Slide 2
 
 **2**
 
+Hand-drawn diagram. A tall phone-shaped outline labelled **Authenticator**, holding a bracketed key icon labelled **Private**.
+
 ## Slide 3
 
 **3**
+
+Hand-drawn diagram. The **Authenticator** phone outline holding the bracketed **Private** key icon, and — separately, at upper left, unconnected — a bracketed key icon labelled **Public**.
 
 ## Slide 4
 
 **4**
 
+Hand-drawn diagram. The **Public** key icon is now inside a blue rounded box labelled **RP**, which also shows an ellipsis (`...`) below the key. A plain line, with no arrowhead at either end, runs from the Public key in the RP box down to the right, to the **Private** key inside the **Authenticator** phone outline.
+
 ## Slide 5
 
 **5**
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RP
-Public
-Client
-—
-Authenticator
-NY preset]
-```
+Hand-drawn diagram. Same as the previous build, with a tall narrow rounded rectangle labelled **Client** drawn between the **RP** box and the **Authenticator**. The unarrowed line from the RP's **Public** key to the Authenticator's **Private** key passes behind the Client.
 
 ## Slide 6
 
 **6**
 
+Hand-drawn diagram. Same as the previous build — **RP** (holding **Public** and an ellipsis), **Client**, **Authenticator** (holding **Private**), joined by the unarrowed line — with a crowd of black human-figure icons added to the right of the Authenticator.
+
 ## Slide 7
 
 **7**
 
+Hand-drawn diagram, scaled up from the earlier builds. Three relying parties on the left, three clients in the middle column, two authenticators on the right, plus the crowd of human-figure icons. Dozens of shrunken copies of the whole diagram are tiled across the background.
 
-> Recovered by OCR — confidence 89/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- **RP** (blue box) — holds **Public** and an ellipsis (`...`)
+- **RP2** (purple box) — holds **Public** and an ellipsis (`...`)
+- **RP3** (orange box) — holds **Public** `1` and **Public** `2`
+- **Client 1**, **Client 2**, **Client n** — three tall narrow rounded rectangles
+- **Authenticator 1** — holds a blue **Private** key and a purple **Private** key
+- **Authenticator n** — holds an orange **Private** `1` and an orange **Private** `2`
 
-```text
-Private
-On J
-rivate
-Authenticator n
-Client 1
-Client 2
-Client n
-```
+Connectors, all plain lines with no arrowheads at either end:
+
+- Blue: RP's **Public** → **Client 1**, then on from Client 1 labelled **usb** → Authenticator 1's blue **Private**
+- Purple: RP2's **Public** → **Client 2**, then on from Client 2 labelled **nfc** → Authenticator 1's purple **Private**
+- Orange: RP3 (at **Public** `1`) → **Client 2**, then on from Client 2 labelled **ble** → Authenticator n's **Private** `1`
+- Orange: RP3 (at **Public** `2`) → **Client n**, then on from Client n labelled **usb** → Authenticator n's **Private** `2`
 
 ## Slide 8
 
 **8**
 
+Same diagram as the previous build. Brand logos are now scattered across the slide, over and around the tiled background copies: a Google-coloured key mark, the 1Password keyhole mark, the Bitwarden shield, the iCloud cloud, and the Microsoft Entra ID diamond. No new text labels.
+
 ## Slide 9
 
 **9**
 
+Same diagram and logos as the previous build, with a large blue circular icon — an open padlock with an arrow curving clockwise around it — drawn over the crowd of human-figure icons.
+
 ## Slide 10
 
 **10**
+
+Same diagram as the previous build, with large browser and platform logos overlaid: the Google "G" and the Brave lion at top left/centre, the Chrome circle at mid left, the Apple logo at bottom left over the **RP3** box, and the Firefox logo at mid right. No new text labels.
 
 ## Slide 11
 
@@ -111,20 +111,11 @@ Client n
 
 ### **I'm not here with the scariest bug**
 
+A wide outlined rectangle holds six labelled boxes in a row: **papers**, **CVEs**, **blog posts**, **talks**, **PoCs**, **threads**.
 
-> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Six separate arrows, one from each of the six boxes, point down and inward into a single box below:
 
 ```text
-I’m not here with the scariest bug
-papers
-CVEs
-blog posts
-talks
-PoCs
-threads
-\
-J
-V
 ONE MAP
 Let's give them a home
 ```
@@ -135,22 +126,26 @@ Let's give them a home
 
 ### **whoami**
 
+```text
 matteo@defcon ~ % whoami --verbose
 PublicKeyCredential {
-id:          "matteo-giordano",
-rpId:        "anvilsecure.com",
-userHandle:  "AppSec, offensive research, AI security, Italy",
-authData: {
-flags: {
-UserPresence: true,   I'm here
-UserVerification: true,   trust me, right?
-},
-signCount: 0   first DEF CON talk.
-},
-attestation: { fmt: "none" }
+  id:          "matteo-giordano",
+  rpId:        "anvilsecure.com",
+  userHandle:  "AppSec, offensive research, AI security, Italy",
+  authData: {
+    flags: {
+      UserPresence: true,      // I'm here
+      UserVerification: true,  // trust me, right?
+    },
+    signCount: 0               // first DEF CON talk.
+  },
+  attestation: { fmt: "none" }
 }
+```
 
 Don't trust an identity just because the ceremony looked clean. So don't trust mine.
+
+To the right of the terminal pane: a headshot photograph of the speaker, and below it an illustrated map of Italy with a location pin and the Colosseum.
 
 ## Slide 13
 
@@ -184,6 +179,13 @@ Don't trust an identity just because the ceremony looked clean. So don't trust m
 
 - ~57% still lean on a **phishable** one
 
+Four-panel webcomic on the right, signed `seebangnow`:
+
+1. A pink figure alone — "I am all alone."
+2. A blue capped figure puts an arm round them — "No you are not!"
+3. Two blue capped figures flank the pink figure — "You still got us!"
+4. Two blue figures hug the pink figure — "We are here for you!" One wears **SMS** on its back, the other **TOTP** on its cap.
+
 ## Slide 15
 
 **15**
@@ -198,26 +200,24 @@ Don't trust an identity just because the ceremony looked clean. So don't trust m
 
 ### **It's everything else**
 
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Hand-drawn diagram. A green box in the centre, captioned **CEREMONIES** above it, holds:
 
 ```text
-It’s everything else
-enrollment
-PEBKAC
-CEREMONIES
-client
 REGISTRATION / AUTHENTICATION
+
 sign > verify > sealed, proven,
-phishing-resistant
-relying party
-recovery
-hybrid
-transport
-Cloud
-sync
-16
+        phishing-resistant
 ```
+
+Seven pink/red boxes are scattered around it, unconnected — no arrows or lines are drawn:
+
+- **enrollment** (above left of centre)
+- **client** (top right)
+- **PEBKAC** (left)
+- **hybrid transport** (right)
+- **relying party** (bottom left)
+- **recovery** (bottom centre)
+- **Cloud sync** (bottom right)
 
 ## Slide 17
 
@@ -225,30 +225,21 @@ sync
 
 ### **What else?**
 
-- **Six** components, from metal to cloud
+Hand-drawn flowchart of six boxes, connected by five single-headed arrows in a snake: the top row runs left to right, then down the right-hand side, then the bottom row runs right to left.
+
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
+
+- **Six** components, from *metal* to cloud
 
 - Every passkey attack lives somewhere on this map
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-What else?
-1. AUTHENTICATOR /
-PROTOCOL
-2. Hybrid TRANSPORT
-3. CLIENT
-6. USER RECOVERY
-5. CLOUD SYNC
-4. RELYING PARTY
-« Six components, from meta/to cloud
-¢ Every passkey attack lives somewhere on this map
-17
-```
-
 ## Slide 18
 
-**Ceremonies** Quick refresh
+### **Ceremonies**
+
+Quick refresh
 
 ## Slide 19
 
@@ -256,50 +247,60 @@ PROTOCOL
 
 ### **Registration**
 
+Hand-drawn sequence diagram with three participants, each named in a highlighted label: **Relying Party SERVER** (left, a bare lifeline), **Client** (centre — a bracket spanning two lifelines, **RP JS APP** and a paired **WEBAUTHN** / **BROWSER** column, with WEBAUTHN drawn in red), and **Authenticator** (right).
 
-> Recovered by OCR — confidence 93/100 on the text kept, 88/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Messages, in the order numbered on the page:
+
+- (1) `Auth request` — RP JS APP → Relying Party SERVER
+- (2) `challenge, user info, RP info` — Relying Party SERVER → RP JS APP
+- (3) `navigator.credentials.create` (written in orange) — RP JS APP → WEBAUTHN / BROWSER
+- (4) self-loop on BROWSER, drawn as a hook returning into the bottom of the BROWSER lifeline
+- (5) `hash(clientDataJSON), user info, RP info, RP ID` — BROWSER → Authenticator
+- (6), (6.1), (6.2) self-loop on Authenticator
+- (7) second self-loop on Authenticator
+- (8) `attestationObject` — Authenticator → BROWSER
+- (9) `attestationObject, clientDataJSON` — WEBAUTHN / BROWSER → RP JS APP
+- (9) `attestationObject, clientDataJSON` — RP JS APP → Relying Party SERVER
+- (10) self-loop on Relying Party SERVER
+
+The multi-line annotations, as written:
 
 ```text
-Registration
-Relying Party
-SERVER
-(1) Auth request
-(2) challenge, user info, RP info
-(9) attestationObject,
-clientDataJSON
-Client
-19
-Authenticator
-(9) attestationObject,
-clientDataJSON
-(10) verify as per [1]
-and add credentials to
-its storage
-(5) hash(clientDataJSON),
-user info,
-RP info, RP ID
-(8) attestationObject
 (4) clientDataJSON = {
-challenge,
-RP origin,
-"webauthn.create"
-(6) is User near?
+        challenge,
+        RP origin,
+        "webauthn.create"
+    }
+```
+
+```text
+(6)   is User near?
 (6.1) can User unlock?
 (6.2) Creates the key pair
 scoped to the RP ID
+```
+
+```text
 (7) attestationObject = {
-hash(RP ID),
-flags = [
-UserPresence,
-UserVerification,
-Attested cred data,
-Extension data
-1,
-credential ID,
-public Key in CBOR,
-AAGUID,
-initial sig counter,
-extensions
+    hash(RP ID),
+    flags = [
+        UserPresence,
+        UserVerification,
+        Attested cred data,
+        Extension data
+    ],
+    credential ID,
+    public Key in CBOR,
+    AAGUID,
+    initial sig counter,
+    extensions
+}
+```
+
+```text
+(10) verify as per [1]
+and add credentials to
+its storage
 ```
 
 ## Slide 20
@@ -308,53 +309,60 @@ extensions
 
 ### **Authentication**
 
+Hand-drawn sequence diagram with the same three participants as the registration slide: **Relying Party SERVER** (left), **Client** (centre — **RP JS APP** plus the paired **WEBAUTHN** / **BROWSER** column, WEBAUTHN in red), and **Authenticator** (right).
 
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Messages, in the order numbered on the page:
+
+- (1) `Auth request` — RP JS APP → Relying Party SERVER
+- (2) `challenge` — Relying Party SERVER → RP JS APP
+- (3) `navigator.credentials.get` (written in orange) — RP JS APP → WEBAUTHN / BROWSER
+- (4) self-loop on BROWSER, drawn as a hook returning into the bottom of the BROWSER lifeline
+- (5) `hash(clientDataJSON), RP ID` — BROWSER → Authenticator
+- (6), (6.1) self-loop on Authenticator
+- (7) second self-loop on Authenticator
+- (8) `authenticatorData + signature` — Authenticator → BROWSER
+- (9) `authenticatorData + signature + clientDataJSON` — WEBAUTHN / BROWSER → RP JS APP
+- (9) `authenticatorData + signature + clientDataJSON` — RP JS APP → Relying Party SERVER
+- (10) self-loop on Relying Party SERVER
+
+The multi-line annotations, as written:
 
 ```text
-Authentication
-Relying Party
-SERVER
-(1) Auth request
-(2) challenge
-(9) authenticatorData +
-signature +
-clientDataJSON
-Client
-Wu
-(9) authenticatorData +
-signature +
-clientDataJSON
-(10) verify as per [1]
-and add credentials to
-its storage
-20
-Authenticator
-(5) hash(clientDataJSON) ,
-RP ID
-(8) authenticatorData
-+ signature
 (4) clientDataJSON = {
-challenge,
-RP origin,
-"webauthn.get"
-»)
-(6) is User near?
+        challenge,
+        RP origin,
+        "webauthn.get"
+    }
+```
+
+```text
+(6)   is User near?
 (6.1) can User unlock?
+```
+
+```text
 (7) authenticatorData = {
-hash(RP ID),
-flags = [
-UserPresence,
-UserVerification,
-Attested cred data,
-Extension data
-1,
-initial sig counter,
-extensions
+    hash(RP ID),
+    flags = [
+        UserPresence,
+        UserVerification,
+        Attested cred data,
+        Extension data
+    ],
+    initial sig counter,
+    extensions
+}
+
 (7.1) Signs the
 authenticatorData
 concatenated with the hash
 of the clientDataJSON
+```
+
+```text
+(10) verify as per [1]
+and add credentials to
+its storage
 ```
 
 ## Slide 21
@@ -363,25 +371,11 @@ of the clientDataJSON
 
 ### **Outer layers**
 
+Hand-drawn diagram. In the centre, a hatched-fill box captioned **Passkey Ceremonies** above it, holding shrunken copies of the registration and authentication sequence diagrams from the previous slides.
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Outer layers
-BEFORE the ceremony
-Registration
-bootstrap —__>
-"how'd you prove
-you, to enroll?"
-Passkey Ceremonies
-AFTER the ceremony
-Session binding
-the cookie it mints
-"bound to what?"
-Password-manager
-handoff
-21
-```
+- Left, under the heading **BEFORE the ceremony**: a rounded box reading **Registration bootstrap**, with the smaller line `"how'd you prove you, to enroll?"` below it. An arrow runs from this box rightwards into the Passkey Ceremonies box.
+- Right, under the heading **AFTER the ceremony**: a rounded box reading **Session binding the cookie it mints**, with the smaller line `"bound to what?"` below it. An arrow runs from this box leftwards into the Passkey Ceremonies box.
+- Below: an arrow runs down out of the Passkey Ceremonies box into a rounded box reading **Password-manager handoff**.
 
 ## Slide 22
 
@@ -389,20 +383,11 @@ handoff
 
 ### **Our map**
 
+The same hand-drawn flowchart as the "What else?" slide, without the bullets: six boxes joined by five single-headed arrows.
 
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Our map
-1. AUTHENTICATOR /
-PROTOCOL
-2. Hybrid TRANSPORT
-3. CLIENT
-6. USER RECOVERY
-5. CLOUD SYNC
-4. RELYING PARTY
-22
-```
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
 
 ## Slide 23
 
@@ -410,21 +395,29 @@ PROTOCOL
 
 ### **Two planes**
 
+Two labelled boxes side by side, each with its own bullets below it.
+
+**RESEARCH** (orange box)
+
 - Pick one actor, go deep.
 
-   - A pentester or red-teamer.
-
 - Mint CVEs / 0days and POCs
+
+**ENGAGEMENT** (blue box)
+
+- A pentester or red-teamer.
 
 - Find out what was actually shipped following a methodology.
 
 ## Slide 24
 
-**The attack surface** metal to cloud
+### **The attack surface**
+
+metal to cloud
 
 ## Slide 25
 
-# **1. Authenticator and Protocol**
+### **1. Authenticator and Protocol**
 
 Researcher's turf
 
@@ -434,25 +427,17 @@ Researcher's turf
 
 ### **You are here**
 
-**1/5 PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
+The six-box map again, with **1. AUTHENTICATOR / PROTOCOL** filled orange and a red map pin dropped on it.
 
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
 
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Legend below the map: **Research** (orange highlight) and **Engagement** (blue highlight).
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-——|_ 2. Hybrid TRANSPORT
-_—_—_> 3. CLIENT
-6. USER RECOVERY
-5. CLOUD SYNC
-<< 4. RELYING PARTY
-Engagement
-4/5
-PROTOCOL / auth - transport - client - relying party - sync - user
-26
-```
+**1/5**
+
+**PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
 
 ## Slide 27
 
@@ -480,6 +465,8 @@ PROTOCOL / auth - transport - client - relying party - sync - user
 
 - grab the specs, and go down the rabbit-holes
 
+Below the WHO / WHAT columns: the four-panel "confused woman doing maths" meme, its panels overlaid with geometry and calculus formulae.
+
 **2/5**
 
 **PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
@@ -502,6 +489,8 @@ PROTOCOL / auth - transport - client - relying party - sync - user
 
    - Attestation soundness by <u>↗ Bindel, Gama, Guasch, Ronen, ASIACRYPT 2023</u>
 
+On the right: a film still of a man in a leather jacket in an office, captioned **HACKERMAN**.
+
 **3/5**
 
 **PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
@@ -512,27 +501,15 @@ PROTOCOL / auth - transport - client - relying party - sync - user
 
 ### **CTAP**
 
-**4/5 PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
+Hand-drawn diagram, two participants.
 
+- Left, labelled **Client**: a red-outlined vertical box with **WEBAUTHN** written down it in red, and **BROWSER** written down it in black alongside.
+- Right, labelled **Authenticator**: a rounded rectangle holding four bracketed key icons — **Private** (blue), **Private** (purple), **Private** `1` (orange), **Private** `2` (orange).
+- Between them, a red dotted horizontal line labelled **CTAP** above it and **USB / NFC / BLE** below it.
 
-> Recovered by OCR — confidence 82/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**4/5**
 
-```text
-CTAP
-Client
-B R
-O
-A
-U W
-R
-NY
-USB /NFC/ BLE
-Authenticator
-a rivate
-as ivate
-PROTOCOL / auth - transport - client - relying party - sync - user
-29
-```
+**PROTOCOL** /  auth ·  transport ·  client ·  relying party ·  sync ·  user
 
 ## Slide 30
 
@@ -540,11 +517,70 @@ PROTOCOL / auth - transport - client - relying party - sync - user
 
 ### **CTRAPS**
 
-CI1 - factory reset
+Three photographs in a row, captioned:
 
-AC1 - credential deletion
+| | |
+|---|---|
+| CI1 - factory reset | photo of a security key inside a backpack pocket, a hand reaching in |
+| AC1 - credential deletion | photo of a laptop screen running Electron Fiddle (see the console log below) |
+| CI2 - user tracking | photo of a security key resting on the pocket of a pair of jeans |
 
-CI2 - user tracking
+The middle photograph shows an Electron Fiddle window (`Electron v25.2.0`, with **Stop** and **Console** buttons; menu bar `Edit  View  Window  Tasks  Show Me  Help`). Console output, every line time-stamped `12:31:53`:
+
+```text
+pinUvAuthParam
+6d85be494a1ead7d7f2fca9080eb95fb77ab7aff2342396762382bb1df5c4ba8
+
+=> Sent enumerateRPsBegin
+---------------
+PHASE: enumerateRPs
+---------------
+rp (userHandle)
+{ id: 'webauthn.io' }
+rpIDHash
+74a6ea9213c99c2f74b22492b320cf40262a94c1a950a0397f29250b60841ef0
+
+Total RPs found: 4.
+
+=> Sent enumerateRPsGetNextRP
+---------------
+PHASE: enumerateRPs
+---------------
+rp (userHandle)
+{ id: 'example.resident.com' }
+rpIDHash
+730260d41b3b8b8f9b541b35ae9a1e3daa43c4e8db5e51d66cadb4ccd07abdb7
+
+RPs remaining: 2.
+
+=> Sent enumerateRPsGetNextRP
+---------------
+PHASE: enumerateRPs
+---------------
+rp (userHandle)
+{ id: 'anon.com' }
+rpIDHash
+b1ab969c891ab124688300577efd9e51f5a09948c4de982b5335fc8443a2363d
+
+RPs remaining: 1.
+```
+
+The `pinUvAuthParam` value runs to the right-hand edge of the photograph, so it may continue beyond what is visible.
+
+Below the console, the editor pane shows `index.html` and `main.js` (selected) under **Editors**, a **Modules** search box with `cbor 8.1.0`, and a **Main Process (main.js)** listing whose first visible line (1673) is clipped by the top of the pane and whose lines run off the right edge of the photograph:
+
+```text
+1674      // receive CTAP_INIT_RESP with CID.
+1675      console.log("<= Received CTAP_INIT_
+1676  CID = [0x00].concat([...data.subarr
+1677
+1678      console.log("\n=> Sent authenticato
+1679      fidokey.write(CID.concat(
+1680        [0x90,0x00,0x01,0x0b,0xa2],  // he
+1681        [0x00,0x00,0x00,0x00,0x00,0x00,0x0
+```
+
+Taskbar entries: `Electron Fiddle`, `Attacks on CTAP2`, `Capturing from usbmon1`.
 
 - <u>CTRAPS paper (Casagrande and Antonioli, EuroS&P 2025)</u> - <u>↗ DEF CON 33 talk</u>
 
@@ -560,7 +596,10 @@ CI2 - user tracking
 
 ### **Not all authenticators are equal**
 
-**PLATFORM** (TPM, Secure Enclave) **ROAMING** (key, phone) **FIRST-PARTY** iOS keychain, Windows Hello Apple / Google phone **THIRD-PARTY** Microsoft Authenticator YubiKey, Bitwarden
+| | **PLATFORM** (TPM, Secure Enclave) | **ROAMING** (key, phone) |
+|---|---|---|
+| **FIRST-PARTY** | iOS keychain, Windows Hello | Apple / Google phone |
+| **THIRD-PARTY** | Microsoft Authenticator | YubiKey, Bitwarden |
 
 **hardware** = secure-element backed
 
@@ -576,17 +615,21 @@ protocol / **AUTH** ·  transport ·  client ·  relying party ·  sync ·  user
 
 ### **Hardware authenticators under attack**
 
-##### **WHAT**
+###### **WHAT**
 
-##### **HOW**
+- extract the private key
 
-- extract the private key ◆ <u>↗ Ninjalab: Titan</u>
+   - <u>↗ Ninjalab: Titan</u>
 
-   - side-channel (EM/power to ECDSA nonce)
+- clone the authenticator
 
-      - <u>↗ EUCLEAK (ePrint)</u>
+   - <u>↗ Ninjalab: EUCLEAK</u>
 
-- clone the authenticator ◆ <u>↗ Ninjalab: EUCLEAK</u>
+###### **HOW**
+
+- side-channel (EM/power to ECDSA nonce)
+
+   - <u>↗ EUCLEAK (ePrint)</u>
 
 - fault injection
 
@@ -610,6 +653,26 @@ protocol / **AUTH** ·  transport ·  client ·  relying party ·  sync ·  user
 
 ### **Software authenticators' anarchy**
 
+Screenshot of a web page.
+
+**User Verification**
+
+The following list of passkey providers have not implemented User Verification in a spec-compliant manner.
+
+| Provider | Architecture | `uv=required` | `uv=preferred` |
+|---|---|---|---|
+| 1Password | Extension | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| 1Password | Native | ✅ Performs UV | ✅ UV flag accurate |
+| Bitwarden | Extension | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| KeepassXC | Extension | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| Okta Personal | Extension | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| Okta Personal | Native | ✅ Performs UV | ✅ UV flag accurate |
+| Proton Pass | Extension | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| Proton Pass | Native | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+| Strongbox | Native | ❌ Handles request without performing UV, sets UV true | ❌ Sets UV true without performing UV |
+
+> **Architecture**: `Extension` = web browser extension, `Native` = OS native app using provider APIs
+
 "The following passkey providers have not implemented User Verification in a spec-compliant manner."↗ <u>passkeys.dev, known issues</u>
 
 **3/3**
@@ -618,7 +681,10 @@ protocol / **AUTH** ·  transport ·  client ·  relying party ·  sync ·  user
 
 ## Slide 34
 
-**2. Hybrid transport** Cross-Device Authentication (CDA) BLE + WebSocket, or BLE-only
+### **2. Hybrid transport**
+
+Cross-Device Authentication (CDA)
+BLE + WebSocket, or BLE-only
 
 ## Slide 35
 
@@ -626,28 +692,17 @@ protocol / **AUTH** ·  transport ·  client ·  relying party ·  sync ·  user
 
 ### **You are here**
 
-**1/5** protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
+The six-box map again. **1. AUTHENTICATOR / PROTOCOL** is filled orange; **2. Hybrid TRANSPORT** is filled half orange (left) and half light blue (right), with the red map pin dropped on it.
 
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
 
-> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Legend below the map: **Research** (orange highlight) and **Engagement** (blue highlight).
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-——|_2. Hybrid TRANSPORT
-6. USER RECOVERY
-5. CLOUD SYNC
-Engagement
-protocol
-3. CLIENT
-4. RELYING PARTY
-auth - TRANSPORT . client
-relying party
-sync
-user
-35
-```
+**1/5**
+
+protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
 ## Slide 36
 
@@ -655,47 +710,33 @@ user
 
 ### **Co-location vs intent**
 
+Illustration: a laptop displaying a QR code on the left, a hand holding a phone whose camera app is framing the same QR code on the right.
+
+- **1. Shows a QR Code** — above the laptop
+- **2. Scan w/ camera** — arrow from the laptop to the phone, arrowhead at the phone end only
+- **3. Reads the QR** — above the phone
+- **4. BLE** (with the Bluetooth glyph) / **"we are near!"** — double-headed arrow between laptop and phone, arrowheads at both ends
+- **5. Tap + Sign** — below the phone
+- **6. Logged in** — below the laptop
+
 **2/5**
 
 protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Co-location vs intent
-3. Reads the QR
-1. Shows a QR Code
-— 2. Scan w/ camera——>
-4. BLE
-"we are near!"
-6. Logged in
-5. Tap + Sign
-2/5
-protocol / auth - TRANSPORT . client - relying party - sync
-user
-36
-```
 
 ## Slide 37
 
 **37**
 
+Illustration with no title. A large hand-drawn ellipse encloses the whole scene; the label **BLE distance** sits below it.
+
+- Top right, inside the ellipse: a laptop wearing red devil horns, showing a pink screen with a QR code, labelled **Attacker**.
+- Centre left, inside the ellipse: a laptop showing a QR code with a hand-held phone in front of it, labelled **Victim**.
+- A plain diagonal line, with no arrowhead at either end, runs between them, labelled **AiTM phishing**.
+- A double-headed arrow, arrowheads at both ends, runs between the victim's phone and the attacker's laptop, labelled **4. BLE** (with the Bluetooth glyph) / **"we are near!"**.
+
 **3/5**
 
 protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
-
-
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-"we are near!"
-BLE distance
-protocol
-3/5
-auth - TRANSPORT . client - relying party - sync - user
-37
-```
 
 ## Slide 38
 
@@ -703,13 +744,43 @@ auth - TRANSPORT . client - relying party - sync - user
 
 **PoC**
 
-**Attacker's laptop**
+Screenshot of a desktop, with two hand-drawn callouts on the right — **Attacker's laptop** (a horned laptop icon, arrow pointing left at the upper part of the screenshot) and **Victim's laptop** (a plain laptop icon, arrow pointing left at the lower part).
 
-Victim's laptop
+Left pane, a terminal titled `tmux attach`. Its prompt line carries icon segments (an Apple mark, a home icon and folder icons) before the path, and the right-hand segment reads `20.11.1  14:34:19`:
 
-Demo: "Phishing for Passkeys" - M. Kuckuk, ↗ inovex 2025
+```text
+ / ▸ / ▸ / ▸ / ▸/phishing    main
+bun run src/attack/cli.ts                                              0
+[14:34:43.083] INFO (#17): Waiting for demonstration that cross-platform attachment is fo
+rbidden...
+Press enter to continue...
+```
 
-**4/5** protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
+Status line:
+
+```text
+0 Chrome   1 Apps   2 DB   3 Prisma Studio   4 Attack *   5 zsh -   2025-09-11 14:35
+```
+
+Top right, a Chrome window — tabs `New Tab` and `phishing-target.local:3000`, address bar `phishing-target.local:3000`, a `New Chrome available` button. The page reads:
+
+**Target Website**
+
+You aren't logged in yet
+
+`Sign in`   `Sign in with Passkey`
+
+Bottom right, a Safari window at `evil.local`:
+
+**Definitely the target website** 😈
+
+Waiting for QR code...
+
+Demo: *"Phishing for Passkeys"* - M. Kuckuk, ↗ <u>inovex 2025</u>
+
+**4/5**
+
+protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
 ## Slide 39
 
@@ -717,15 +788,15 @@ Demo: "Phishing for Passkeys" - M. Kuckuk, ↗ inovex 2025
 
 ### **Still open in 2026**
 
-- **HiPass** measured the QR relay: 100% over 300 trials, 65s QR window across 10 major RPs (↗ <u>Kim et al., IEEE Access 2025)</u>
+- **HiPass** measured the QR relay: 100% over 300 trials, 65s QR window across 10 major RPs (<u>↗ Kim et al., IEEE Access 2025</u>)
 
-- **FIDO URI intent injection** : fixed in mobile browsers, but a father of the mobile FIDO-URI attack class (CVE-2024-9956, ↗ <u>Righi 2025)</u>
+- **FIDO URI intent injection**: fixed in mobile browsers, but a father of the mobile FIDO-URI attack class (<u>CVE-2024-9956</u>, <u>↗ Righi 2025</u>)
 
-- Proximity still stops **remote** attackers: PoisonSeed relayed remotely and failed at BLE (↗ <u>Expel retraction)</u>
+- Proximity still stops **remote** attackers: PoisonSeed relayed remotely and failed at BLE (<u>↗ Expel retraction</u>)
 
-- Co-located, it's workable: plant BLE boxes in range, offices/airports/conferences (↗ <u>Kniep 2025)</u>
+- Co-located, it's workable: plant BLE boxes in range, offices/airports/conferences (<u>↗ Kniep 2025</u>)
 
-- **No RP-side tell** : through CTAP 2.3 (Feb 2026), an RP still can't distinguish a relayed hybrid ceremony from a real one (↗ <u>FIDO spec)</u>
+- **No RP-side tell**: through CTAP 2.3 (Feb 2026), an RP still can't distinguish a relayed hybrid ceremony from a real one (<u>↗ FIDO spec</u>)
 
 **5/5**
 
@@ -733,7 +804,9 @@ protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
 ## Slide 40
 
-**3. Client** and Client-Side attacks
+### **3. Client**
+
+and Client-Side attacks
 
 ## Slide 41
 
@@ -741,31 +814,21 @@ protocol /  auth · **TRANSPORT** ·  client ·  relying party ·  sync ·  user
 
 ### **You are here**
 
-**1/7** protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
+The six-box map again. **1. AUTHENTICATOR / PROTOCOL** is filled orange; **2. Hybrid TRANSPORT** and **3. CLIENT** are each half orange (left) and half light blue (right); the red map pin is dropped on **3. CLIENT**.
 
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Legend below the map: **Research** (orange highlight) and **Engagement** (blue highlight).
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-——>|_ 2. Hybrid TRANSPORT
-6. USER RECOVERY
-5. CLOUD SYNC
-Engagement
-3. CLIENT
-4. RELYING PARTY
-protocol
-4/7
-auth - transport - CLIENT
-relying party
-sync
-user
-41
-```
+**1/7**
+
+protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ## Slide 42
+
+**42**
 
 ### **Own the front door**
 
@@ -779,7 +842,7 @@ user
 
 ###### **WHAT**
 
-- UI transparency + userconsent awareness
+- UI transparency + user-consent awareness
 
 - WebAuthn API override (activeTab)
 
@@ -793,25 +856,33 @@ user
 
 - browser instrumentation (hook the API)
 
-protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
+Below the HOW column, a two-panel Kermit meme:
 
-**42**
+> Me: I'm using Passkeys, my login is practically unbreakable now.
+>
+> Also Me: Installs 'Coupon Master Pro' browser extension that reads and modifies all website data.
 
 **2/7**
+
+protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ## Slide 43
 
 **43**
 
-#### **Attacker JavaScript forged a live Gmail passkey**
+### **Attacker JavaScript forged a live Gmail passkey**
 
-◆ ↗
-attacker.passkey.tool
-◆ ↗ Passkey Raider
-◆ ...
-◆ ↗ Passkey Editor
+Screen recording still: Chrome on Windows, tabs `Extensions` and `Google Account`, address bar `myaccount.google.com/?utm_source=sign_in_no_continue`. The **Google Account** page shows the left nav (Home, Personal info, Data & privacy, Security, People & sharing, Payments & subscriptions, About), the greeting **Welcome, User Testing**, the line "Manage your info, privacy, and security to make Google work better for you. Learn more", the cards "Don't get locked out of your Google Account" (button `Add recovery phone`) and "Set a home address for your Google Account" (button `Set home address`), a `Search Google Account` box, the chips `My password` `Devices` `Password Manager` `My Activity` `Email`, and lower cards "Privacy & personalization" and "You have security tips". The Google apps grid is open on the right (Account, Drive, Gmail, YouTube, Gemini, Maps, Search, Calendar, News, Photos, Meet, Translate). The Windows taskbar clock reads `2:48 PM 8/10/2025`, weather `100°F Sunny`.
 
-Demo: SquareX, "Passkeys Pwned" - DEF CON 33 2025 (↗ <u>sqrx.com/passkeys-pwned)</u>
+- <u>↗ attacker.passkey.tool</u>
+
+- <u>↗ Passkey Raider</u>
+
+- ...
+
+- <u>↗ Passkey Editor</u>
+
+Demo: SquareX, *"Passkeys Pwned"* - DEF CON 33 2025 (<u>↗ sqrx.com/passkeys-pwned</u>)
 
 **3/7**
 
@@ -823,7 +894,46 @@ protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ### **Signed Assertion Hijacking**
 
-↗ Marek Toth, "DOM-based Extension Clickjacking", DEF CON 33 2025
+Two sequence diagrams side by side, each with the participants **Authenticator**, **Client/Browser**, **Server**, **Database** (named in boxes at both top and bottom).
+
+**Left diagram** — a red rectangle encloses the steps "Generate session ID", "Store challenge + session data" and "Challenge + Set-Cookie: sessionID", and a green tick sits inside that rectangle:
+
+- `GET /login/passkey (username)` — Client/Browser → Server (solid)
+- `Generate challenge` — Server self-loop
+- `Generate session ID` — Server self-loop
+- `Store challenge + session data` — Server → Database (solid)
+- `Challenge + Set-Cookie: sessionID` — Server → Client/Browser (dashed)
+- `navigator.credentials.get() - forward challenge` — Client/Browser → Authenticator (solid)
+- `User verification` — Authenticator self-loop
+- `Signing challenge` — Authenticator self-loop
+- `Signed assertion` — Authenticator → Client/Browser (dashed)
+- `POST /login/verify (assertion) + Cookie: sessionID` — Client/Browser → Server (solid)
+- `Get public key + challenge + session` — Server → Database (solid)
+- `Public key + original challenge + session` — Database → Server (dashed)
+- `Verify signature + challenge + session` — Server self-loop
+- `Generate session ID` — Server self-loop
+- `Store session data` — Server → Database (solid)
+- `HTTP 200 + Set-Cookie: sessionId` — Server → Client/Browser (dashed)
+
+**Right diagram** — the red rectangle encloses "Generate challenge", "Store challenge" and "Challenge"; a red skull-and-crossbones tile sits to the right of the rectangle, outside it:
+
+- `GET /login/passkey (username)` — Client/Browser → Server (solid)
+- `Generate challenge` — Server self-loop
+- `Store challenge` — Server → Database (solid)
+- `Challenge` — Server → Client/Browser (dashed)
+- `navigator.credentials.get() - forward challenge` — Client/Browser → Authenticator (solid)
+- `User verification` — Authenticator self-loop
+- `Signing challenge` — Authenticator self-loop
+- `Signed assertion` — Authenticator → Client/Browser (dashed)
+- `POST /login/verify (assertion)` — Client/Browser → Server (solid)
+- `Get public key + challenge` — Server → Database (solid)
+- `Public key + original challenge` — Database → Server (dashed)
+- `Verify signature + challenge` — Server self-loop
+- `Generate session ID` — Server self-loop
+- `Store session data` — Server → Database (solid)
+- `HTTP 200 + Set-Cookie: sessionId` — Server → Client/Browser (dashed)
+
+<u>↗ Marek Toth, "DOM-based Extension Clickjacking", DEF CON 33 2025</u>
 
 **4/7**
 
@@ -851,7 +961,29 @@ protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ### **DOM-based Extension Clickjacking**
 
-- **Hide passkey dialog** UI injected by password manager ( **uses DOM-based extension clickjacking technique** )
+- **Hide passkey dialog** UI injected by password manager (**uses DOM-based extension clickjacking technique**)
+
+Screenshot: a cookie-consent dialog drawn on top of a semi-transparent passkey dialog.
+
+The opaque, blue-bordered dialog in front:
+
+**Privacy & Transparency**
+
+We and our partners use cookies to Store and/or access information on a device. We and our partners use data for Personalised ads and content, ad and content measurement, audience insights and product development. An example of data being processed may be a unique identifier stored in a cookie. Some of our partners may process your data as a part of their legitimate business interest without asking for consent. To view the purposes they believe they have legitimate interest for, or to object to this data processing use the vendor list link below. The consent submitted will only be used for data processing originating from this website. If you would like to change your settings or withdraw consent at any time, the link to do so is in our privacy policy accessible from our home page.
+
+Buttons: `Accept` (highlighted) and `Decline`.
+
+The faded dialog behind it:
+
+**Passkey sign-in**
+
+Choose a saved passkey to sign-in to testpasskeys.com
+
+**testpasskeys.com** — victim@victim.com
+
+Close this window in order to use a security key or another passkey.
+
+The `Accept` button of the front dialog falls exactly over the `testpasskeys.com` / `victim@victim.com` entry of the passkey dialog.
 
 **6/7**
 
@@ -875,7 +1007,7 @@ protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ## Slide 48
 
-**4. Relying party**
+### **4. Relying party**
 
 ## Slide 49
 
@@ -883,26 +1015,17 @@ protocol /  auth ·  transport · **CLIENT** ·  relying party ·  sync ·  user
 
 ### **You are here**
 
-**1/37** protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
+The six-box map again. **1. AUTHENTICATOR / PROTOCOL** is filled orange; **2. Hybrid TRANSPORT** and **3. CLIENT** are each half orange (left) and half light blue (right); **4. RELYING PARTY** is filled light blue throughout, with the red map pin dropped on it.
 
+- **1. AUTHENTICATOR / PROTOCOL** → **2. Hybrid TRANSPORT** → **3. CLIENT**
+- **3. CLIENT** → (downwards) **4. RELYING PARTY**
+- **4. RELYING PARTY** → **5. CLOUD SYNC** → **6. USER RECOVERY**
 
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Legend below the map: **Research** (orange highlight) and **Engagement** (blue highlight).
 
-```text
-You are here
-1. AUTHENTICATOR /
-PROTOCOL
-——_ 2. Hybrid TRANSPORT
-6. USER RECOVERY
-5. CLOUD SYNC
-Engagement
-S 3. CLIENT
-protocol
-—_— 4. RELYING PARTY
-4/37
-auth - transport - client - RELYING PARTY - sync - user
-49
-```
+**1/37**
+
+protocol /  auth ·  transport ·  client · **RELYING PARTY** ·  sync ·  user
 
 ## Slide 50
 
@@ -927,6 +1050,8 @@ auth - transport - client - RELYING PARTY - sync - user
    - 103 vulnerable to at least one server-side attack.
 
    - 18 critical, 53 high.
+
+On the right, the registration sequence diagram from earlier in the deck, greyed out, with a lit cartoon bomb drawn over the middle of it. The **Relying Party SERVER** and **Client** labels are highlighted in orange; the Client column shows **RP JS APP**, **WEBAUTHN** (red) and **BROWSER**. The faded message labels still readable are `(1) Auth request`, `(2) challenge, user info, RP info`, `(3) navigator.credentials.create`, `(9) attestationObject, clientDataJSON`, and `(10) verify as per [1] and add credentials to its storage`.
 
 **2/37**
 

