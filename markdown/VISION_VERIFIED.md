@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2642 slides across 162 documents.**
+**2752 slides across 163 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1149 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1101 | structure held; individual characters or lines wrong |
+| badly-mangled | 1244 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1116 | structure held; individual characters or lines wrong |
 | accurate | 364 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -297,6 +297,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks | 1-27 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Keychained Melody - Grabbing the Keys to the iCloud Kingdom | 1-31 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | LGTM Bypassing an LLM Build Gate When Prompt Injection Fails | 1-110 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E | 1-32 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | One Chain to Own Them All - Breaking AI Infrastructures | 1-130 | badly-mangled, minor-errors, accurate | 9 |
 | DEF CON 34 | Plug And Pwn Weaponizing Windows PnP Auto-Install | 1-43 | badly-mangled, minor-errors, accurate | 0 |
