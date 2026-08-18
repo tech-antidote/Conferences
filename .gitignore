@@ -15,3 +15,7 @@ __pycache__/
 /DEF CON 33 workshops/
 /DEF CON 34/
 /DEF CON 34 workshops/
+
+# Claude Code agent scratch (isolated worktrees created for background
+# review agents). Harness working state, never repo content.
+.claude/
