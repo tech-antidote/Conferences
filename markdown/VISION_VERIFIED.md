@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2304 slides across 157 documents.**
+**2471 slides across 159 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 973 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 997 | structure held; individual characters or lines wrong |
-| accurate | 306 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1068 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1044 | structure held; individual characters or lines wrong |
+| accurate | 331 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -272,6 +272,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 48 | badly-mangled | 0 |
 | Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
+| Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
@@ -300,3 +301,4 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C | 1-49 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 2 |
+| DEF CON 34 | gpwn Wiretapping fiber (GPON) ISP deployments from the comfort of your home | 1-96 | badly-mangled, minor-errors, accurate | 4 |
