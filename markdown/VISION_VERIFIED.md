@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**2987 slides across 169 documents.**
+**3056 slides across 170 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1346 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1170 | structure held; individual characters or lines wrong |
-| accurate | 393 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1396 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1186 | structure held; individual characters or lines wrong |
+| accurate | 396 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 78 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -312,6 +312,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Pwning Rekordbox Unauthenticated filesystem access in the world's most popular DJ software | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Reflections on Disregarding Trust (Weaponizing CDP and MHTML for Header-Agnostic Session Hijacking) | 1-46 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-62 | badly-mangled, minor-errors, accurate | 2 |
+| DEF CON 34 | Sliding into the Flight Deck’s DMs Practical Message Attacks on CPDLC | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | TEE.fail Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition | 1-22 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Witchcraft Solver Automated 0day Discovery in Stripped Binaries | 1-57 | badly-mangled, minor-errors, accurate | 0 |
