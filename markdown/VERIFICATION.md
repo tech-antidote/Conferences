@@ -249,11 +249,40 @@ are counted per document as `ocr_unreliable_blocks`.
 |---|---:|---|
 | CoDe16: 16 Zero-Day Vulnerabilities Affecting CODESYS Framework | 17 | Every attempt to review these pages was stopped by the model API's cyber safeguards, at three different batch sizes, once before any page was read. The trigger is the deck's subject — ICS/OT zero-days — not any individual slide. |
 | One Chain to Own Them All: Breaking AI Infrastructures (DEF CON 34), pages 118–130 | 13 | Four of the document's eleven review batches were stopped by the same safeguard; the other seven completed normally. Those pages keep their first-pass extraction and are listed in `vision_unreviewed_pages`. |
+| Gone in 60 Frames: USB Video Exploitation — whitepaper (DEF CON 34), pages 31–64 | 34 | Two runs stopped at the same point in the document: the first to a network error, the resumed run to the cyber safeguard on Opus. Pages 1–30 are reviewed and applied; the rest keep their first-pass extraction and are named in the document's `content_note`. |
 
 These blocks remain OCR-only and keep their `ocr_unreliable` flag, so they are
 identifiable rather than silently trusted. Reviewing them needs an account
 enrolled in Anthropic's Cyber Verification Program, which exists for exactly
 this kind of published security research.
+
+### Decks that cannot be rendered here at all: the eleven `.pptx` sources
+
+Eleven decks in this corpus ship as PowerPoint rather than PDF.
+`verify_document.py` routes those through LibreOffice, exactly as the converter
+does, so that the reviewer sees the real slides. **In the environment this
+review ran in, LibreOffice cannot convert anything** — `soffice --convert-to
+pdf` fails on a plain one-line `.txt` file, so the failure is the installation,
+not the decks. Every `.pptx` deck is therefore unrenderable and unverifiable
+here, and `--extract` exits rather than producing a blank work list.
+
+That matters more than a missing capability, because there is a tempting
+substitute that does not work. One review attempt on *Wrestling with a Python:
+Escaping Copilot Studio's AI-Guarded Sandbox* fell back to reading the `.pptx`
+XML directly — exact native text per shape, plus the embedded screenshots read
+as images. The native text genuinely is character-exact, and the method looks
+rigorous. It still produced a document that had to be thrown away: slide 12
+came out carrying a "Step 1 / Step 2" HTTP request and a Flask terminal log
+with a debugger PIN, none of which is on slide 12. That slide holds two summary
+bullets and an architecture diagram, and the invented text appears in no
+slide's native text anywhere in the deck. Content read out of embedded images
+cannot be attributed to the slide it belongs to without seeing the page, and a
+reviewer working without page images will misattribute it while sounding
+confident. The review was reverted in full rather than repaired.
+
+**A `.pptx` deck is not verifiable without a working renderer.** Reading its
+XML is a different and weaker operation, and must not be recorded as vision
+verification.
 
 ## A defect in the review pipeline itself, found and fixed
 
