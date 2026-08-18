@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3545 slides across 176 documents.**
+**3625 slides across 176 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1708 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1360 | structure held; individual characters or lines wrong |
-| accurate | 449 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1752 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1386 | structure held; individual characters or lines wrong |
+| accurate | 459 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -118,7 +118,7 @@ under more than one heading or under none. Counts are slides.
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
-### Firmware, hardware and embedded — 25 talks, 487 slides
+### Firmware, hardware and embedded — 25 talks, 567 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -137,7 +137,7 @@ under more than one heading or under none. Counts are slides.
 - **Ghosts in the Machine Check - Conjuring Hardware Failures to Breach CPU Privilege Boundaries** (Black Hat USA 2025) — slides 64, 84-85, 89-90, 167
 - **Uncovering 'NASty' 5G Baseband Vulnerabilities through Dependency-Aware Fuzzing** (Black Hat USA 2025) — slides 17-18, 45
 - **Breaking Hardware CFI with Sigreturn** (Black Hat USA 2026) — slides 1-68
-- **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slide 35
+- **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slides 1-81
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
 - **BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft** (DEF CON 34) — slides 1-54
@@ -277,7 +277,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 11-12, 17, 35-37 | badly-mangled | 0 |
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
-| Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 35 | minor-errors | 0 |
+| Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 1-81 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
 | Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 1-71 | badly-mangled, minor-errors, accurate | 0 |
