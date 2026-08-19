@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**3694 slides across 177 documents.**
+**3739 slides across 178 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1768 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1433 | structure held; individual characters or lines wrong |
-| accurate | 465 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1785 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1446 | structure held; individual characters or lines wrong |
+| accurate | 480 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -58,7 +58,7 @@ under more than one heading or under none. Counts are slides.
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
-### Web and browser — 15 talks, 208 slides
+### Web and browser — 16 talks, 253 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -71,6 +71,7 @@ under more than one heading or under none. Counts are slides.
 - **Achilles' Heel of JS Engines Exploiting Modern Browsers During WASM Execution** (Black Hat USA 2024) — slide 94
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
+- **Attacking and Defending AI Browsers** (Black Hat USA 2026) — slides 1-45
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
@@ -267,6 +268,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2025 | XUnprotect Reverse Engineering macOS XProtect Remediator | 28 | badly-mangled | 0 |
 | Black Hat USA 2026 | !secure A Single Wrong Negation to Root Linux and Escape Managed Containers | 1-33 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities | 1-44 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Attacking and Defending AI Browsers | 1-45 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures | 1-77 | badly-mangled, minor-errors | 1 |
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
 | Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
