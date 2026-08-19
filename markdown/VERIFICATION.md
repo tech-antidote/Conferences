@@ -241,6 +241,43 @@ Established failure modes, with examples:
 This is why blocks dense in hex or tabular data now carry an explicit warning and
 are counted per document as `ocr_unreliable_blocks`.
 
+### Cross-slide checks that validate themselves
+
+A few slides carry the same fact twice in different encodings. Those are the
+strongest evidence a transcription is right, because a misreading would have to
+recur consistently across two independently transcribed renderings to survive.
+
+The best instance so far is *Hacking the Hackers* (DEF CON 34). Slide 100 is
+decompiler pseudocode with a PEM certificate embedded as a C string literal;
+slide 88 is unrelated `curl -vk` output against the same host, transcribed
+twelve slides earlier. Base64-decoding slide 100's PEM yields 798 bytes
+beginning `30 82 03 1a` — a DER `SEQUENCE` whose own length field reads 794, and
+794 + 4 = 798, so the transcription closes on itself. Decoding further:
+
+| Field recovered from slide 100's DER | What slide 88's curl output says |
+|---|---|
+| `proxy.dtunnel.com.br` twice — issuer equals subject | `self-signed certificate (18)` |
+| `notBefore` `250923124625Z` | `start date: Sep 23 12:46:25 2025 GMT` |
+| `notAfter` `350802124625Z` | `expire date: Aug  2 12:46:25 2035 GMT` |
+| modulus header `02 82 01 01 00` — 2048-bit | `Public key type RSA (2048/112 Bits/secBits)` |
+| OID `2a 86 48 86 f7 0d 01 01 0b` | `signed using sha256WithRSAEncryption` |
+
+Five agreements, matching to the second on both timestamps, between two slides
+that share no text. The SAN entries `dtunnel.com.br` and `*.dtunnel.com.br`
+decode cleanly as well.
+
+Slide 100 validates a second way, without reference to any other slide. Its two
+little-endian qword constants `0x4745422d2d2d2d2d` and `0x4954524543204e49`
+decode to `-----BEG` and `IN CERTI`; the copy loop writes the string literal at
+`local_496 + 6`, overlapping the second constant by two bytes, so the bytes
+reassemble to exactly `-----BEGIN CERTIFICATE-----`. One wrong hex digit in
+either constant breaks that. (`0x1a4`, the mode handed to `os.WriteFile`, is
+0o644.)
+
+Checks like these are worth hunting for, but only where they exist. A reviewer
+reporting a check that the slide does not support is worse than reporting none —
+see the overclaim described under *Individual findings*.
+
 ---
 
 ## Blocks that could not be vision-verified
@@ -319,6 +356,14 @@ escapes it. The converter's check misses this for the same reason: the text is
 grey, the pixels are white, so the share never matches. Any later opaque fill
 does it — a raster image or a vector rectangle alike — so a detector that looks
 only at image blocks, as the measurement below did, is itself incomplete.
+
+*Hacking the Hackers* (DEF CON 34) is the largest single-deck instance found so
+far: seven slides — 21, 31, 32, 63, 69, 123 and 124 — carry a title in the text
+layer that the page does not show, each a full-bleed screenshot or infographic
+with the title textbox painted over. All seven were caught by a reviewer looking
+at the rendered page; the mechanical check returned nothing for any of them.
+Each now says in place of the dropped title that the slide carries no title of
+its own, rather than silently omitting it.
 
 One instance is confirmed. On page 66 of *Sliding into the Flight Deck's DMs*
 (DEF CON 34) the text layer carries `Then… nothing for 8 months.` at bbox
