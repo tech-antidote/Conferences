@@ -8,10 +8,10 @@ judgement of the OCR text, not of the slide.
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1885 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1487 | structure held; individual characters or lines wrong |
-| accurate | 483 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 168 | reviewed before verdicts were recorded |
+| badly-mangled | 1982 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1515 | structure held; individual characters or lines wrong |
+| accurate | 498 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -309,7 +309,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | CloudBashing Exploiting free CloudShells for mining, networking, exfil, and persistence at scale | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Compounding Interest Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Locked-D | 1-47 | badly-mangled, minor-errors, accurate | 2 |
-| DEF CON 34 | Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming | 1-140 | — | 0 |
+| DEF CON 34 | Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming | 1-140 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Gone in 60 Frames - USB Video Exploitation | 1-30 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |
