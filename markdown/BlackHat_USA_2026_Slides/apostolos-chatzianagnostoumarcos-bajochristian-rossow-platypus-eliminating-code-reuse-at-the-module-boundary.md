@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 86.7
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 130
+vision_verified_pages: 130
 vision_verified_blocks: 1
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -30,13 +32,15 @@ converted_at: "2026-08-12T05:28:22Z"
 
 ## Slide 1
 
+This slide carries no title or text of its own.
+
 ## Slide 2
 
-PLaTypus: Killing Code-Reuse at the Module Boundary
+# PLaTypus: Killing Code-Reuse at the Module Boundary
 
-Speaker: Apostolos Chatzianagnostou Collaborators: Marcos Bajo, Christian Rossow
+Speaker: Apostolos Chatzianagnostou
 
-2
+Collaborators: Marcos Bajo, Christian Rossow
 
 ## Slide 3
 
@@ -52,8 +56,6 @@ call  f()
 f:
 ...
 ret
-
-3
 
 ## Slide 4
 
@@ -71,31 +73,27 @@ f:
 ...
 ret
 
-4
-
 ## Slide 5
 
 ## Memory War: Chronicles
 
-Ret2libc (1997)
+- Ret2libc (1997)
+  - _And so it begins..._
+- ROP (2007)
+- JOP (2011)
+- SROP (2014)
 
-• _And so it begins..._
-
-ROP (2007)
-
+```
 main:
-call  f()
-...
+    call  f()
+    ...
+
 system:
+
 f:
-...
-ret
-
-JOP (2011)
-
-SROP (2014)
-
-5
+    ...
+    ret
+```
 
 ## Slide 6
 
@@ -107,29 +105,19 @@ ASLR (2003)
 
 DEP/NX (2004)
 
-6
-
 ## Slide 7
 
 ## Memory War: Chronicles
 
-Stack canaries (~2000)
-
-ASLR (2003)
-
-Control Flow Integrity (2005)
-
-- Control Flow Guard (2014)
-
-- • LLVM CFI (2015)
-
-- Intel CET (2020)
-
-DEP/NX (2004)
+- Stack canaries (~2000)
+- ASLR (2003)
+- DEP/NX (2004)
+- Control Flow Integrity (2005)
+  - Control Flow Guard (2014)
+  - LLVM CFI (2015)
+  - Intel CET (2020)
 
 Powerful in theory, hard to enforce…
-
-7
 
 ## Slide 8
 
@@ -143,43 +131,31 @@ CFOP (2024)
 
 SFOP (2026)
 
-8
-
 ## Slide 9
 
 ## Memory War: Chronicles
 
-COOP (2015)
-
-FOP (2018)
+- COOP (2015)
+- FOP (2018)
+- CFOP (2024)
+- SFOP (2026)
 
 Code-reuse attacks still an issue…
-
-CFOP (2024)
-
-SFOP (2026)
-
-9
 
 ## Slide 10
 
 ## Memory War: Chronicles
 
-COOP (2015)
-
-FOP (2018)
+- COOP (2015)
+- FOP (2018)
+- CFOP (2024)
+- SFOP (2026)
 
 Code-reuse attacks still an issue…
 
 But they all share one thing:
 
-CFOP (2024)
-
 Cross-module transitions!
-
-SFOP (2026)
-
-10
 
 ## Slide 11
 
@@ -207,39 +183,30 @@ rossow@cispa.de
 
 We build, break, and explore. Reach out!
 
-11
-
 ## Slide 12
 
 ## Agenda
 
-1.Userspace CFI and debloating approaches
-
-- 2.Motivation and goals of PLaTypus
-
-- 3.Design, methodology and challenges
-
-- 4.Evaluation and discussion
-
-12
+1. Userspace CFI and debloating approaches
+2. Motivation and goals of PLaTypus
+3. Design, methodology and challenges
+4. Evaluation and discussion
 
 ## Slide 13
 
 # BACKGROUND
 
-13
-
 ## Slide 14
 
 ## Control Flow Integrity (CFI)
 
-• Creation (statically) of Control Flow Graph (CFG) Which indirect transitions are expected/benign?
-
+- Creation (statically) of Control Flow Graph (CFG)
+  - Which indirect transitions are expected/benign?
 - Enforcement of CFG through code instrumentation
+- Code-reuse: solved
+  - Well…
 
-• Code-reuse: solved Well…
-
-14
+CFG diagram: nodes f(), g(), h(), i(), j(), and a malicious execve() 👿 (magenta box); the attempted transition from i() to execve() is blocked (❌).
 
 ## Slide 15
 
@@ -247,29 +214,34 @@ We build, break, and explore. Reach out!
 
 Based on the protected edges:
 
-1. Backward-edge CFI
+### 1. Backward-edge CFI
 
+```
 main:
-void (* func )() = &f;
-func ();
-…
+    void (*func)() = &f;
+    func();
+    …
+
 f:
-...
-ret
+    …
+    ret
+```
 
-### 2.  Forward-edge CFI
+### 2. Forward-edge CFI
 
+```
 main:
-void (* func )() = &f;
-func ();
-…
+    void (*func)() = &f;
+    func();
+    …
+
+f:
+    …
+    ret
+
 g:
-f:
-...
-...
-ret
-
-15
+    …
+```
 
 ## Slide 16
 
@@ -285,67 +257,50 @@ Weaker Security
 
 Stronger Security
 
-16
-
 ## Slide 17
 
 ## CFI Taxonomy
 
 Based on security:
 
-**Coarse-grained Fine-grained** Weaker Stronger Security Security Better Worse Performance Performance
+**Coarse-grained**   **Fine-grained**
 
-17
+Weaker Security   Stronger Security
+
+Better Performance   Worse Performance
 
 ## Slide 18
 
 ## CFI Limitations
 
 - Accurate CFG construction is hard
-
-Static analysis limitations              Overapproximation
-
+  - Static analysis limitations → Overapproximation
 - Incomplete, leaving pointers unprotected
-
-- Example: C++ coroutines
-
+  - Example: C++ coroutines
 - Protected/unprotected interop is hard
-
-Needed for third-party libraries/modules
+  - Needed for third-party libraries/modules
 
 Fine-grained CFI: limited deployment
-
-18
 
 ## Slide 19
 
 ## CFI Limitations
 
 - Accurate CFG construction is hard
-
-#### Deployed schemes in practice:
-
-Static analysis limitations              Overapproximation
-
-   - Intel CET (coarse-grained)
-
+  - Static analysis limitations → Overapproximation
 - Incomplete, leaving pointers unprotected
-
-- Example: C++ coroutines
-
-   - ARM BTI (coarse-grained)
-
-   - Control Flow Guard (coarse-grained)
-
+  - Example: C++ coroutines
 - Protected/unprotected interop is hard
-
-- Needed for third-party libraries/modules
-
-- LLVM CFI (fine(r)-grained)
+  - Needed for third-party libraries/modules
 
 Fine-grained CFI: limited deployment
 
-19
+#### Deployed schemes in practice:
+
+- Intel CET (coarse-grained)
+- ARM BTI (coarse-grained)
+- Control Flow Guard (coarse-grained)
+- LLVM CFI (fine(r)-grained)
 
 ## Slide 20
 
@@ -363,112 +318,83 @@ Fine-grained CFI: limited deployment
 
 - Available on both Windows and Linux
 
-20
-
 ## Slide 21
 
 ## Intel CET – Shadow Stacks
 
-#### **Regular Stack**
+**Regular Stack**
 
-t() return
-address
-g() return
-address
-f() return
-address
-h() return
-address
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
-#### **Shadow Stack**
+**Shadow Stack**
 
-t() return
-address
-g() return
-address
-f() return
-address
-h() return
-address
-
-21
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
 ## Slide 22
 
 ## Intel CET – Shadow Stacks
 
-#### **Regular Stack**
+**Regular Stack**
 
-t() return address
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
-g() return address
+match ✓
 
-f() return address h() return address
+**Shadow Stack**
 
-match
-
-#### **Shadow Stack**
-
-t() return
-address
-g() return
-address
-
-f() return address h() return address
-
-22
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
 ## Slide 23
 
 ## Intel CET – Shadow Stacks
 
-#### **Regular Stack**
+**Regular Stack**
 
-execve() mismatch g() return address f() return address SIGSEGV h() return address
+- execve()
+- g() return address
+- f() return address
+- h() return address
 
-SIGSEGV
+mismatch (❌) → SIGSEGV
 
-#### **Shadow Stack**
+**Shadow Stack**
 
-t() return
-address
-g() return
-address
-f() return
-address
-h() return
-address
-
-23
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
 ## Slide 24
 
 ## Intel CET – Shadow Stacks
 
-#### **Regular Stack**
+**Regular Stack**
 
-execve()
-g() return
-address
-f() return
-address
-h() return
-address
+- execve()
+- g() return address
+- f() return address
+- h() return address
 
 **ROP mitigated**
 
-#### **Shadow Stack**
+**Shadow Stack**
 
-t() return
-address
-g() return
-address
-f() return
-address
-h() return
-address
-
-24
+- t() return address
+- g() return address
+- f() return address
+- h() return address
 
 ## Slide 25
 
@@ -476,55 +402,29 @@ address
 
 g():
 
+```
+mov    rdi, Qword Ptr[rax]
+lea    rsi, [rip+0xdd3]
+xor    rdx, rdx
+call   rcx
+mov    rcx, rax
+pop    rbp
+jmp    rbx
+```
+
 f():
 
-endbr 64
-
-mov    rdi
-
-Ptr rax
-, Qword  [ ]
-, [rip+ 0xdd 3]
-rdx
-rax
-
-push
-
-lea    rsi
-
-mov
-
-xor
-
-rdx
-,
-
-sub
-
-call
-
-mov
-
-mov
-
+```
+endbr64
+push   rbp
+mov    rbp, rsp
+sub    rsp, 0x20
+mov    rcx, rax
 …
+```
 
-pop
-
-jmp
-
-rbx
-
-rsp
-
-0
-,
-
-20
-
-rax
-
-25
+- call rcx → endbr64 (function entry): allowed ✓
+- jmp rbx → middle of f() (push rbp / mov rbp, rsp / sub rsp, 0x20 / mov rcx, rax): blocked ❌
 
 ## Slide 26
 
@@ -538,8 +438,6 @@ rax
 
 - Available on Apple, Android, Linux and Windows systems
 
-26
-
 ## Slide 27
 
 ## Control Flow Guard
@@ -552,141 +450,99 @@ rax
 
 - A bitmap marks valid indirect call/jump targets
 
-27
-
 ## Slide 28
 
 ## LLVM CFI
 
 - Type-based CFI
-
 - Software-enforced
-
 - Applicable also to virtual calls in C++
 
-void
+```
+void (*func_ptr)(void)= &funcA;
+func_ptr();
+```
 
-(*
+```
+void funcA(void)
+int  funcB(const char* s)
+void funcC(char* t)
+int  funcD(long)
+```
 
-func_ptr ();
-
-void =  &funcA
-)( ) ;
-
-void
-
-void )
-
-int
-
-funcB (
-
-const char* s )
-
-void
-
-funcC (
-
-char* t )
-
-int
-
-funcD (
-
-long )
-
-28
+func_ptr() (type void(void)) → funcA(void): allowed; funcB / funcC / funcD: blocked ❌ (type mismatch).
 
 ## Slide 29
 
 ## LLVM CFI
 
-- Supports modularity ( _cross-DSO_ mode)
-
+- Supports modularity (_cross-DSO_ mode)
 - Transitions to uninstrumented libraries are allowed
-
 - Cannot compile glibc
 
-void
+```
+void (*func_ptr)(void)= &funcA;
+func_ptr();
+```
 
-(*
+```
+void funcA(void)
+int  system(const char* s)
+void funcC(char* t)
+int  funcD(long)
+```
 
-func_ptr ();
-
-void =  &funcA
-)( ) ;
-
-void
-
-int
-
-void
-
-int
-
-void )
-
-const char* s )
-
-(char* t)
-
-(long)
-
-29
+func_ptr() → funcA(void) and system(const char* s): allowed; funcC / funcD: blocked ❌.
 
 ## Slide 30
 
 ## Debloating
 
-- Remove code that is not needed E.g., dead code
-
+- Remove code that is not needed
+  - E.g., dead code
 - Available gadgets are reduced
-
-- Attack surface shrinks
-
+  - Attack surface shrinks
 - Especially useful in libraries
+  - Plethora of gadgets and unused code
 
-- Plethora of gadgets and unused code
-
+```
 main:
-call  f()
-...
+    call  f()
+    ...
+
 f:
-...
-ret
+    ...
+    ret
 
-:
-unused_func
-...
-
-30
+unused_func:
+    ...
+```
 
 ## Slide 31
 
 ## Debloating
 
-- Remove code that is not needed E.g., dead code
-
+- Remove code that is not needed
+  - E.g., dead code
 - Available gadgets are reduced
-
-- Attack surface shrinks
-
+  - Attack surface shrinks
 - Especially useful in libraries
+  - Plethora of gadgets and unused code
 
-- Plethora of gadgets and unused code
-
+```
 main:
-call  f()
-...
+    call  f()
+    ...
+
 f:
-...
-ret
+    ...
+    ret
 
-:
-unused_func
-...
+unused_func:
+    ...
+```
 
-31
+unused_func is crossed out (❌) — removed by debloating.
 
 ## Slide 32
 
@@ -698,43 +554,23 @@ unused_func
 
 - BlankIt: copies library code at runtime to enable/disable functions
 
-32
-
 ## Slide 33
 
 ## Library Debloaters
 
-• Nibbler: debloats libraries per _set of binaries_ . Inserting new ones?
-
-- Piece-Wise compilation: modifies library pages _per application_ at load time
-
-• BlankIt: copies library code at runtime to enable/disable functions
-
-Need for recompilation
-
-COW - Sharing property undermined
-
-COW - Sharing property undermined
-
-33
+- Nibbler: debloats libraries per _set of binaries_. Inserting new ones? → Need for recompilation
+- Piece-Wise compilation: modifies library pages _per application_ at load time → COW - Sharing property undermined
+- BlankIt: copies library code at runtime to enable/disable functions → COW - Sharing property undermined
 
 ## Slide 34
 
 ## Library Debloaters
 
-• Nibbler: debloats libraries per _set of binaries_ . Inserting new ones?
+- Nibbler: debloats libraries per _set of binaries_. Inserting new ones? → Need for recompilation
+- Piece-Wise compilation: modifies library pages _per application_ at load time → COW - Sharing property undermined
+- BlankIt: copies library code at runtime to enable/disable functions → COW - Sharing property undermined
 
-• Piece-Wise compilation: modifies library pages **Not practical for general-purpose systems** _per application_ at load time
-
-• BlankIt: copies library code at runtime to enable/disable functions
-
-Need for recompilation
-
-COW - Sharing property undermined
-
-COW - Sharing property undermined
-
-34
+**Not practical for general-purpose systems**
 
 ## Slide 35
 
@@ -743,8 +579,6 @@ COW - Sharing property undermined
 - Fine(r)-grained CFI schemes not yet mature enough for widespread adoption
 
 - Debloating not practical: unused library/module code remains exposed in applications
-
-35
 
 ## Slide 36
 
@@ -758,27 +592,21 @@ COW - Sharing property undermined
 
 Is this that bad though?
 
-36
-
 ## Slide 37
 
 # MOTIVATION
-
-37
 
 ## Slide 38
 
 ## CET Limitation
 
-• Arbitrary cross-Dynamic Shared Objects (DSO) / cross-module indirect transitions are allowed
-
-- Leveraged by nearly every attack
-
-- Libraries are rich in gadgets (e.g., syscalls, sensitive functions)
+- Arbitrary cross-Dynamic Shared Objects (DSO) / cross-module indirect transitions are allowed
+  - Leveraged by nearly every attack
+  - Libraries are rich in gadgets (e.g., syscalls, sensitive functions)
 
 Development of specialized attacks
 
-38
+Diagram: Main Binary (call rax) → Libc functions puts, system, execve (each an attacker-controlled 👿 indirect call).
 
 ## Slide 39
 
@@ -790,27 +618,20 @@ Development of specialized attacks
 
 - Entire functions as gadgets
 
-39
-
 ## Slide 40
 
 ## Function-Oriented Programming (FOP)
 
-### Class of attacks:
-
-### Documented attacks:
+Class of attacks:
 
 - Evading schemes like CET/BTI
-
-   - Loop-Oriented Programming (2015)
-
 - Entire functions as gadgets
 
+Documented attacks:
+
+- Loop-Oriented Programming (2015)
 - FOP (2018)
-
 - Phrack’s FOP (2024)
-
-40
 
 ## Slide 41
 
@@ -818,510 +639,479 @@ Development of specialized attacks
 
 Class of attacks:
 
+- Evading schemes like CET/BTI
+- Entire functions as gadgets
+  - How do they control arguments?
+
 Documented attacks:
 
-- Evading schemes like CET/BTI
-
-   - Loop-Oriented Programming (2015)
-
-- Entire functions as gadgets How do they control arguments?
-
+- Loop-Oriented Programming (2015)
 - FOP (2018)
-
-- Phrack’s FOP (2024)
-
-41
+- Phrack's FOP (2024)
 
 ## Slide 42
 
 ## Dispatcher Gadget
 
-#### **Attacker-controlled**
-
 - Orchestrator for FOP attacks
-
-- Calls subsequent gadgets in a loop Retrieved from attacker-controlled memory
-
-gadget 1
-Dispatcher
-gadget 2
-Gadget
-gadget 3
-
+- Calls subsequent gadgets in a loop
+  - Retrieved from attacker-controlled memory
 - Conservative register usage between loops
 
-42
+Dispatcher Gadget
+
+**Attacker-controlled**
+
+- gadget 1
+- gadget 2
+- gadget 3
 
 ## Slide 43
 
 ## Dispatcher Gadget
 
-#### **Attacker-controlled**
-
 - Orchestrator for FOP attacks
-
-- Calls subsequent gadgets in a loop Retrieved from attacker-controlled memory
-
-gadget 1
-Dispatcher
-gadget 2
-Gadget
-gadget 3
-
+- Calls subsequent gadgets in a loop
+  - Retrieved from attacker-controlled memory
 - Conservative register usage between loops
 
-43
+Dispatcher Gadget
+
+**Attacker-controlled**
+
+- gadget 1
+- gadget 2
+- gadget 3
 
 ## Slide 44
 
 ## Dispatcher Gadget
 
-#### **Attacker-controlled**
-
 - Orchestrator for FOP attacks
-
-- Calls subsequent gadgets in a loop Retrieved from attacker-controlled memory
-
-gadget 1
-Dispatcher
-gadget 2
-Gadget
-gadget 3
-
+- Calls subsequent gadgets in a loop
+  - Retrieved from attacker-controlled memory
 - Conservative register usage between loops
 
-44
+Dispatcher Gadget
+
+**Attacker-controlled**
+
+- gadget 1
+- gadget 2
+- gadget 3
 
 ## Slide 45
 
 ## Dispatcher Gadget
 
-#### **Attacker-controlled**
+- Orchestrator for FOP attacks
+- Calls subsequent gadgets in a loop
+  - Retrieved from attacker-controlled memory
+- Conservative register usage between loops
 
-• Orchestrator for FOP attacks
+Dispatcher Gadget
 
-• Calls subsequent gadgets in a loop Retrieved from attacker-controlled memory
+**Attacker-controlled**
 
-gadget 1 Dispatcher gadget 2 Gadget gadget 3
+- gadget 1
+- gadget 2
+- gadget 3
 
-### • Conservative register usage between **Normally cross-DSO transition** loops
-
-45
+**Normally cross-DSO transition**
 
 ## Slide 46
 
 ## Dispatcher Gadget
 
-dispatcher loop
+```
+==Phrack Inc.==
 
-46
+Volume 0x10, Issue 0x47, Phile #0x07 of 0x11
 
+|=-------------------------------------------------------------------=|
+|=-----=[ Bypassing CET & BTI With Functional Oriented Programming ]=-----=|
+|=-------------------------------------------------------------------=|
+|=------------------------------=[ LMS ]=----------------------------=|
+|=-------------------------------------------------------------------=|
+```
 
-> Recovered by OCR — confidence 88/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Dispatcher Gadget
+```c
 void
 _dl_call_fini (void *closure_map)
 {
-struct link_map *map closure_map;
-Make sure nothing happens
-map->1l_init_called = @;
-ElfW(Dyn) *fini_array = map->1_info[DT_FINI_ARRAY];
-if (fini_array NULL)
-Volume @x1@, Issue @x47, Phile #0x@7 of @x11 {
-ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
-==Phrack Inc.==
-size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
-sizeof (ElfW(Addr)));
-while (sz @)
-((fini_t) array[sz]) ()3
-* Next try t 2
-ElfW(Dyn) *fini = map->1_info[DT_FINI];
-if (fini NULL)
-DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
-2026 46
+  struct link_map *map = closure_map;
+
+  /* Make sure nothing happens if we are called twice.  */
+  map->l_init_called = 0;
+
+  ElfW(Dyn) *fini_array = map->l_info[DT_FINI_ARRAY];
+  if (fini_array != NULL)
+    {
+      ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
+                                          + fini_array->d_un.d_ptr);
+      size_t sz = (map->l_info[DT_FINI_ARRAYSZ]->d_un.d_val
+                   / sizeof (ElfW(Addr)));
+
+      while (sz-- > 0)
+        ((fini_t) array[sz]) ();
+    }
+
+  /* Next try the old-style destructor.  */
+  ElfW(Dyn) *fini = map->l_info[DT_FINI];
+  if (fini != NULL)
+    DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
+}
 ```
+
+_dispatcher loop_ (annotation on the boxed `while (sz-- > 0)` loop)
 
 ## Slide 47
 
 ## Dispatcher Gadget
 
-- __dl_call_fini_ : part of glibc loader
-
+- `_dl_call_fini`: part of glibc loader
 - Called gadgets: part of libc
 
-dispatcher loop
+```
+----|  11. Appendix B: Intel "/bin/sh" in memory chain
 
-47
++---------------------------+--------------------------+
+|       Function Name       |   Equivalent Operation   |
++---------------------------+--------------------------+
+| _nss_files_endpwent       | MOV RDI, 0x6             |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| _dl_mcount_wrapper...     | MOV RSI, RDI             |
+```
 
-
-> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Dispatcher Gadget
+```c
 void
 _dl_call_fini (void *closure_map)
-° _dl_call_fini: part e)i glibc loader struct link_map *map closure_map;
-sure nothing happens
-map->1l_init_called = @;
-if we
-ElfW(Dyn) *fini_array = map->1_info[DT_FINI_ARRAY];
-¢ Called gadgets: part of libc “array [= NULL)
-ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
-size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
-sizeof (ElfW(Addr)));
-11. Appendix B: Intel "/bin/sh" in memory chain
-Function Name Equivalent Operation
-while (sz @)
-((fini_t) array[sz]) ()3
-_nss_files_endpwent
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-ElfW(Dyn) *fini
-if (fini NULL)
-DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
-try th
-2026 47
+{
+  struct link_map *map = closure_map;
+
+  /* Make sure nothing happens if we are called twice.  */
+  map->l_init_called = 0;
+
+  ElfW(Dyn) *fini_array = map->l_info[DT_FINI_ARRAY];
+  if (fini_array != NULL)
+    {
+      ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
+                                          + fini_array->d_un.d_ptr);
+      size_t sz = (map->l_info[DT_FINI_ARRAYSZ]->d_un.d_val
+                   / sizeof (ElfW(Addr)));
+
+      while (sz-- > 0)
+        ((fini_t) array[sz]) ();
+    }
+
+  /* Next try the old-style destructor.  */
+  ElfW(Dyn) *fini = map->l_info[DT_FINI];
+  if (fini != NULL)
+    DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
+}
 ```
+
+_dispatcher loop_ (annotation on the boxed `while (sz-- > 0)` loop)
 
 ## Slide 48
 
 ## Dispatcher Gadgets
 
 - Rare and hard to find
-
 - Most of them not exploitable
-
 - Exploitable ones are related to initialization and finalization routines
-
-   - LOOP attack: __initterm()_ in _msvcrt.dll_ Phrack attack: __dl_call_fini()_ in _ld-linux_
-
-48
+  - LOOP attack: `_initterm()` in _msvcrt.dll_
+  - Phrack attack: `_dl_call_fini()` in _ld-linux_
 
 ## Slide 49
 
 ## Dispatcher Gadgets
 
 - Rare and hard to find
-
 - Most of them not exploitable
-
-• Exploitable ones are related to initialization and finalization routines LOOP attack: __initterm()_ in _msvcrt.dll_ Phrack attack: __dl_call_fini()_ in _ld-linux_
+- Exploitable ones are related to initialization and finalization routines
+  - LOOP attack: `_initterm()` in _msvcrt.dll_
+  - Phrack attack: `_dl_call_fini()` in _ld-linux_
 
 We will revisit this later
 
-49
-
 ## Slide 50
 
-### How does Linux handle cross-DSO transitions?
-
-50
+## How does Linux handle cross-DSO transitions?
 
 ## Slide 51
 
 ## Procedure Linkage Table (PLT)
 
 - Code stubs dispatching cross-DSO calls in ELFs
+- Efficient and robust
+  - With Full RELRO mitigation
 
-- Efficient and robust With Full RELRO mitigation
-
+```
 f():
 
-:
-puts@plt
+    lea    rdi,[rip+0xd95]
+    lea    rsi, [rip+0xdd3]
+    call   puts@plt
+    pop    rbp
+    …
+```
 
-lea    rdi
+```
+puts@plt:
 
-,[rip+ 0
+    endbr64
+    jmp    Qword Ptr[rip+0x2e6]
+    nop
+    …
+```
 
-endbr 64
-
-xd 95 ]
-0xdd 3]
-
-lea    rsi
-
-jmp
-
-Qword
-
-puts@plt
-
-nop
-
-pop
-
-…
-
-…
-
-[rip+ 0
-
-x 2
-
-e6
-
-]
-
-51
+(`call puts@plt` jumps into the `puts@plt` stub)
 
 ## Slide 52
 
 ## Motivation
 
-### **Why then should cross-DSO transfers be allowed outside of PLTs?**
+**Why then should cross-DSO transfers be allowed outside of PLTs?**
 
-52
+Diagram:
 
+- **Main Binary**: puts@PLT, malloc@PLT; `call rax`
+- **Libc**: puts; system / execve / mprotect / …; malloc
+- **DSO A**: malloc@PLT; `jmp rbx`
 
-> Recovered by OCR — confidence 75/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Motivation
-Main Binary Libc
-Why then should cross-DSO lg ~
-transfers be allowed outside callrax === =){---1 >| exeove |< +=) -imp rox
-of PLTs? mprotect
-malloc@PLT malloc@PLT
-2026 52
-```
+PLT paths are allowed (puts@PLT → puts, malloc@PLT → malloc). The direct `call rax` and `jmp rbx` transitions into libc's system/execve/mprotect are blocked (✗).
 
 ## Slide 53
 
 ## PLaTypus Goals
 
-- Support both libraries and applications Even complex ones like _glibc_ and _OpenSSL_
-
+- Support both libraries and applications
+  - Even complex ones like _glibc_ and _OpenSSL_
 - Secure even when some DSOs remain uninstrumented
-
-   - Avoid library recompilation
-
-   - Retain the sharing property of libraries
-
-- Third-party libraries
-
-53
+  - Third-party libraries
+- Avoid library recompilation
+- Retain the sharing property of libraries
 
 ## Slide 54
 
-# DESIGN – METHODOLOGY - CHALLENGES
-
-54
+# DESIGN — METHODOLOGY - CHALLENGES
 
 ## Slide 55
 
 ## Threat Model
 
-- Memory corruption vulnerabilities Arbitrary reads/writes
-
+- Memory corruption vulnerabilities
+  - Arbitrary reads/writes
 - Function pointers can be overwritten
-
 - Vulnerabilities can be triggered multiple times
-
 - Intel CET in place
-
 - Operating system enforces DEP
-
 - Full RELRO is enabled
-
-55
 
 ## Slide 56
 
 ## PLaTypus Design
 
 - Each DSO can only reach external functions for which it possesses PLT stubs
-
 - Per-DSO granularity of enforcement
 
-56
+Diagram:
 
+- **Main Binary**: puts@PLT, malloc@PLT; `call rax`
+- **Libc**: puts; system / execve / mprotect / …; malloc
+- **DSO A**: malloc@PLT; `jmp rbx`
 
-> Recovered by OCR — confidence 92/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-¢ Each DSO can only reach external Main Binary
-functions for which it possesses PLT puts@PLT
-“4
-stubs
-mprotect
-malloc@PLT malloc@PLT
-¢ Per-DSO granularity of enforcement
-2026 56
-```
+PLT paths are allowed (puts@PLT → puts, malloc@PLT → malloc); direct `call rax` and `jmp rbx` into libc's system/execve/mprotect are blocked (✗).
 
 ## Slide 57
 
 ## PLaTypus Design
 
 - Each DSO can only reach external functions for which it possesses PLT stubs
-
 - Per-DSO granularity of enforcement
 
-57
+Diagram:
+
+- **Main Binary**: puts@PLT, malloc@PLT; `call rax`
+- **Libc**: puts, malloc
+
+`call rax` routes through the PLT stubs: puts@PLT → puts and malloc@PLT → malloc.
 
 ## Slide 58
 
 ## PLaTypus Design
 
 - Each DSO can only reach external functions for which it possesses PLT stubs
-
 - Per-DSO granularity of enforcement
 
-58
+Diagram:
+
+- **Libc**: malloc
+- **DSO A**: malloc@PLT; `jmp rbx`
+
+`jmp rbx` routes through DSO A's malloc@PLT stub → malloc in Libc.
 
 ## Slide 59
 
 ## Terminology
 
-• Intra-DSO transition: _caller_ and _callee_ in the same module
-
-• Inter-DSO transition: _caller_ and _callee_ in different modules
-
-59
+- Intra-DSO transition: _caller_ and _callee_ in the same module
+- Inter-DSO transition: _caller_ and _callee_ in different modules
 
 ## Slide 60
 
 ## Execution Jails (EJ)
 
-• Each DSO is restricted in its EJ Subset of DSO’s address range
+- Each DSO is restricted in its EJ
+  - Subset of DSO's address range
 
-60
+Diagram (memory layout):
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Execution Jails (EW)
-¢ Each DSO is restricted in its EJ
-Subset of DSO’s address range
-28 bits
-Ox7fff20000000
-DSOA r-xX mappings Jail
-Other r-- / rw- mappings
-Execution
-Other r-- / rw- mappings DSO B
-Jail
-r-x Mappings
-Other r-- / rw- mappings
-2026 60
-```
+- 28 bits (the low part of the address)
+- `0x7fff20000000` — DSO A prefix is `0x7fff2`
+- **DSO A Execution Jail:**
+  - Other r-- / rw- mappings
+  - r-x mappings
+  - Other r-- / rw- mappings
+  - (hatched region)
+- `0x7fff3000000`
+- **DSO B Execution Jail:**
+  - Other r-- / rw- mappings
+  - r-x mappings
+  - Other r-- / rw- mappings
+  - (hatched region)
 
 ## Slide 61
 
 ## Execution Jails (EJ)
 
 - Each DSO is restricted in its EJ
+  - Subset of DSO's address range
+- DSO's indirect branches cannot escape the EJ
+  - Exception? PLT stubs
 
-Subset of DSO’s address range
+Diagram (memory layout):
 
-### • DSO’s indirect branches cannot escape the EJ
-
-Exception? PLT stubs
-
-61
+- 28 bits (the low part of the address)
+- `0x7fff20000000` — DSO A prefix is `0x7fff2`
+- **DSO A Execution Jail:**
+  - Other r-- / rw- mappings
+  - r-x mappings (highlighted)
+  - Other r-- / rw- mappings
+  - (hatched region)
+- `0x7fff3000000`
+- **DSO B Execution Jail:**
+  - Other r-- / rw- mappings
+  - r-x mappings (highlighted)
+  - Other r-- / rw- mappings
+  - (hatched region)
 
 ## Slide 62
 
 ## Execution Jails (EJ) - Enforcement
 
-### • Enforced with two bitmasks
+- Enforced with two bitmasks
 
-; Original         ; Execution Jail
+```
+; Original          ; Execution Jail
 
-...                or
+...                 or    rax, ormask
+...                 and   rax, andmask
+call rax            call  rax
+```
 
-ormask
-
-...                and
-
-andmask
-
-call
-
-rax
-
-62
+Memory layout (right): `0x7fff20000000` — DSO A prefix `0x7fff2`, low 28 bits; **DSO A Execution Jail** (Other r-- / rw- mappings; r-x mappings [highlighted]; Other r-- / rw- mappings; hatched region). `0x7fff3000000` — **DSO B Execution Jail** (same structure).
 
 ## Slide 63
 
 ## Execution Jails (EJ) - Enforcement
 
-### • Enforced with two bitmasks
+- Enforced with two bitmasks
 
-; Original         ; Execution Jail
-...                or    rax ormask
-,
-...                and   rax andmask
-,
-call  rax call  rax
+```
+; Original          ; Execution Jail
 
-63
+...                 or    rax, ormask
+...                 and   rax, andmask
+call rax            call  rax
+```
+
+(`ormask` is highlighted; a white arrow points to DSO A's r-x mappings.)
+
+Memory layout (right): `0x7fff20000000` — DSO A prefix `0x7fff2`, low 28 bits; **DSO A Execution Jail** (Other r-- / rw- mappings; r-x mappings [highlighted]; Other r-- / rw- mappings; hatched region). `0x7fff3000000` — **DSO B Execution Jail** (same structure).
 
 ## Slide 64
 
 ## Execution Jails (EJ) - Enforcement
 
-### • Enforced with two bitmasks
+- Enforced with two bitmasks
 
-; Original         ; Execution Jail
-...                or    rax ormask
-,
-...                and   rax andmask
-,
-call  rax call  rax
+```
+; Original          ; Execution Jail
 
-64
+...                 or    rax, ormask
+...                 and   rax, andmask
+call rax            call  rax
+```
+
+(`andmask` is highlighted; a white arrow points to DSO A's r-x mappings.)
+
+Memory layout (right): `0x7fff20000000` — DSO A prefix `0x7fff2`, low 28 bits; **DSO A Execution Jail** (Other r-- / rw- mappings; r-x mappings [highlighted]; Other r-- / rw- mappings; hatched region). `0x7fff3000000` — **DSO B Execution Jail** (same structure).
 
 ## Slide 65
 
 ## Execution Jails (EJ)
 
-### • Enforced with two bitmasks
+- Enforced with two bitmasks
 
-; Original         ; Execution Jail
+```
+; Original          ; Execution Jail
 
-...                or
+...                 or    rax, ormask
+...                 and   rax, andmask
+call rax            call  rax
+```
 
-ormask
+Relocation types:
 
-...                and
+```
+R_X86_64_ORMASK
+R_X86_64_ANDMASK
+```
 
-andmask
-
-call
-
-rax
-
-65
+Memory layout (right): `0x7fff20000000` — DSO A prefix `0x7fff2`, low 28 bits; **DSO A Execution Jail** (Other r-- / rw- mappings; r-x mappings [highlighted]; Other r-- / rw- mappings; hatched region). `0x7fff3000000` — **DSO B Execution Jail** (same structure).
 
 ## Slide 66
 
 ## Execution Jails (EJ)
 
-66
+```
+0x0000555555555dd1 <+81>:    mov    rcx,QWORD PTR [rip+0x12a0]        # 0x555555557078
+0x0000555555555dd8 <+88>:    or     rax,rcx
+0x0000555555555ddb <+91>:    mov    rcx,QWORD PTR [rip+0x129e]        # 0x555555557080
+0x0000555555555de2 <+98>:    and    rax,rcx
+0x0000555555555de5 <+101>:   call   rax
+0x0000555555555de7 <+103>:   xor    eax,eax
+```
 
 ## Slide 67
 
-Execution Jails (EJ)
+## Execution Jails (EJ)
 
-### Inter-DSO transitions are transformed to intra-DSO
-
-67
+Inter-DSO transitions are transformed to intra-DSO
 
 ## Slide 68
 
@@ -1329,99 +1119,71 @@ Execution Jails (EJ)
 
 - Not all imports go through the PLT…
 
-68
-
 ## Slide 69
 
 ## Non-PLT Relocations
 
-• Not all imports go through the PLT… _Address-taken_ symbols
+- Not all imports go through the PLT…
+  - _Address-taken_ symbols
 
-int
+```c
+int main(void) {
 
-main (
+    int (*fp)(const char *) = &puts;
 
-void )
-
-{
-
-fp )(
-
-int
-
-const
-
-char
-
-*)
-
-=
-
-fp ("
-
-hello ");
-
+    fp("hello");
 }
+```
 
--O0
+Compiled with `-O0`, this yields the relocation:
 
-puts ;
-
-69
+```
+R_X86_64_GLOB_DAT   puts@GLIBC_2.2.5 + 0
+```
 
 ## Slide 70
 
 ## Non-PLT Relocations
 
-70
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Non-PLT Relocations
+```
 Dump of assembler code for function main:
-<+0>: push rbp
-<+1>: mov rbp,rsp
-<+U>; sub rsp,
-<+8>: mov DWORD PTR [rbp ],
-<+15>: rax,QWORD PTR [ript+ # 0x555555557Fc8
-<+22>: QWORD PTR [rbp ],rax
-<+26>: rdi, [rip+ J # 0x555555556004
-<+33>: QWORD PTR [rbp ]
-<+36>: xor eax, eax
-<+38>: add rsp,
-<+U2>: pop rbp
-<+U3>: ret
-2026 70
+   0x0000555555555130 <+0>:     push   rbp
+   0x0000555555555131 <+1>:     mov    rbp,rsp
+   0x0000555555555134 <+4>:     sub    rsp,0x10
+   0x0000555555555138 <+8>:     mov    DWORD PTR [rbp-0x4],0x0
+   0x000055555555513f <+15>:    mov    rax,QWORD PTR [rip+0x2e82]        # 0x555555557fc8
+   0x0000555555555146 <+22>:    mov    QWORD PTR [rbp-0x10],rax
+   0x000055555555514a <+26>:    lea    rdi,[rip+0xeb3]                   # 0x555555556004
+   0x0000555555555151 <+33>:    call   QWORD PTR [rbp-0x10]
+   0x0000555555555154 <+36>:    xor    eax,eax
+   0x0000555555555156 <+38>:    add    rsp,0x10
+   0x000055555555515a <+42>:    pop    rbp
+   0x000055555555515b <+43>:    ret
 ```
 
 ## Slide 71
 
 ## Non-PLT Relocations
 
-### Instrumentation here would corrupt the cross-DSO pointer…
-
-71
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Non-PLT Relocations
-Dump of assembler code for function main:
-<+0>: push
-<+8>: mov DWORD PTR [ ],
-<+15>: ,QWORD PTR
-<+22>: QWORD PTR [
-QWORD PTR [
-xor 1
-add 1
-pop
-ret
-Instrumentation here would corrupt the cross-DSO pointer...
-2026 71
 ```
+Dump of assembler code for function main:
+   0x0000555555555130 <+0>:     push   rbp
+   0x0000555555555131 <+1>:     mov    rbp,rsp
+   0x0000555555555134 <+4>:     sub    rsp,0x10
+   0x0000555555555138 <+8>:     mov    DWORD PTR [rbp-0x4],0x0
+   0x000055555555513f <+15>:    mov    rax,QWORD PTR [rip+0x2e82]        # 0x555555557fc8
+   0x0000555555555146 <+22>:    mov    QWORD PTR [rbp-0x10],rax
+   0x000055555555514a <+26>:    lea    rdi,[rip+0xeb3]                   # 0x555555556004
+   0x0000555555555151 <+33>:    call   QWORD PTR [rbp-0x10]
+   0x0000555555555154 <+36>:    xor    eax,eax
+   0x0000555555555156 <+38>:    add    rsp,0x10
+   0x000055555555515a <+42>:    pop    rbp
+   0x000055555555515b <+43>:    ret
+```
+
+(The boxed instructions `<+15>`–`<+33>` are highlighted, with an arrow pointing to them.)
+
+Instrumentation here would corrupt the cross-DSO pointer…
 
 ## Slide 72
 
@@ -1430,12 +1192,8 @@ Instrumentation here would corrupt the cross-DSO pointer...
 For such symbols:
 
 1. Emit PLT stubs
-
-New section: _.fakeplt.sec_
-
+   - New section: _.fakeplt.sec_
 2. Redirect associated relocations to point to these stubs
-
-72
 
 ## Slide 73
 
@@ -1443,54 +1201,26 @@ New section: _.fakeplt.sec_
 
 For such symbols:
 
-1. Emit PLT stubs New section: _.fakeplt.sec_
-
-int
-
-main (
-
-void )
-
-{
-
-fp )(
-
-int
-
-const
-
-char
-
-*)
-
-=
-
-fp ("
-
-hello ");
-
-}
-
-puts ;
-
+1. Emit PLT stubs
+   - New section: _.fakeplt.sec_
 2. Redirect associated relocations to point to these stubs
 
-:
-puts@plt
+```c
+int main(void) {
 
-0x
+    int (*fp)(const char *) = &puts;
 
-:   endbr 64
+    fp("hello");
+}
+```
 
-Qword
+```
+puts@plt:
 
-[rip+ 0
-
-2e
-
-6]
-
-73
+0x1860:    endbr64
+           jmp    Qword Ptr[rip+0x2e6]
+           nop
+```
 
 ## Slide 74
 
@@ -1498,54 +1228,33 @@ Qword
 
 For such symbols:
 
-1. Emit PLT stubs New section: _.fakeplt.sec_
-
+1. Emit PLT stubs
+   - New section: _.fakeplt.sec_
 2. Redirect associated relocations to point to these stubs
 
-:
-puts@plt
+```c
+int main(void) {
 
-0x
+    int (*fp)(const char *) = &puts;
 
-:   endbr 64
-
-Qword
-
-[rip+ 0
-
-2e
-
-6]
-
-int
-
-main (
-
-void )
-
-{
-
-fp )(
-
-puts ;
-
-int
-
-const
-
-char
-
-*)
-
-=
-
-fp ("
-
-hello ");
-
+    fp("hello");
 }
+```
 
-74
+Relocations:
+
+```
+Type                Symbol's Value
+R_X86_64_RELATIVE   1860
+```
+
+```
+puts@plt:
+
+0x1860:    endbr64
+           jmp    Qword Ptr[rip+0x2e6]
+           nop
+```
 
 ## Slide 75
 
@@ -1553,163 +1262,125 @@ hello ");
 
 For such symbols:
 
-int
-
-main (
-
-void )
-
-{
-
-1. Emit PLT stubs New section: _.fakeplt.sec_
-
-}
-
-fp )(
-
-int
-
-fp ("
-
-hello ");
-
-const
-
-char
-
-*)
-
-=
-
-puts ;
-
+1. Emit PLT stubs
+   - New section: _.fakeplt.sec_
 2. Redirect associated relocations to point to these stubs
 
-:
-puts@plt
+```c
+int main(void) {
 
-0x
+    int (*fp)(const char *) = &puts;
 
-:   endbr 64
+    fp("hello");
+}
+```
 
-Qword
+Relocations:
 
-[rip+ 0
+```
+Type                Symbol's Value
+R_X86_64_RELATIVE   1860
+R_X86_64_JUMP_SLOT  puts@GLIBC_2.2.5 + 0
+```
 
-2e6]
+```
+puts@plt:
 
-75
+0x1860:    endbr64
+           jmp    Qword Ptr[rip+0x2e6]
+           nop
+```
 
 ## Slide 76
 
 ## Fake PLTs
 
-76
-
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fake PLTs
-endbr64
-push rbp
-mov rbp,rsp
-sub rsp,
-mov DWORD PTR [rbp ],
-mov rax,QWORD PTR [rip+ ]
-mov QWORD PTR [rbp ],rax
-mov rax,QWORD PTR [rbp
-rcx,QWORD PTR [ript+ # 0x555545550ef0
-rax ,rcx
-rcex,QWORD PTR [rip+ # 0x555545550ef8
-rax ,rcx
-rdi, [rip+ # 0x55554554ea2c
-rax
-xor eax , eax
-add rsp,
-pop rbp
-ret
-2026 76
+```
+0x55554554fbf0:    endbr64
+0x55554554fbf4:    push   rbp
+0x55554554fbf5:    mov    rbp,rsp
+0x55554554fbf8:    sub    rsp,0x10
+0x55554554fbfc:    mov    DWORD PTR [rbp-0x4],0x0
+0x55554554fc03:    mov    rax,QWORD PTR [rip+0x12de]      # 0x555545550ee8
+0x55554554fc0a:    mov    QWORD PTR [rbp-0x10],rax
+0x55554554fc0e:    mov    rax,QWORD PTR [rbp-0x10]
+0x55554554fc12:    mov    rcx,QWORD PTR [rip+0x12d7]      # 0x555545550ef0
+0x55554554fc19:    or     rax,rcx
+0x55554554fc1c:    mov    rcx,QWORD PTR [rip+0x12d5]      # 0x555545550ef8
+0x55554554fc23:    and    rax,rcx
+0x55554554fc26:    lea    rdi,[rip+0xffffffffffffedff]    # 0x55554554ea2c
+0x55554554fc2d:    call   rax
+0x55554554fc2f:    xor    eax,eax
+0x55554554fc31:    add    rsp,0x10
+0x55554554fc35:    pop    rbp
+0x55554554fc36:    ret
 ```
 
 ## Slide 77
 
 ## Fake PLTs
 
-77
+```
+0x55554554fbf0:    endbr64
+0x55554554fbf4:    push   rbp
+0x55554554fbf5:    mov    rbp,rsp
+0x55554554fbf8:    sub    rsp,0x10
+0x55554554fbfc:    mov    DWORD PTR [rbp-0x4],0x0
+0x55554554fc03:    mov    rax,QWORD PTR [rip+0x12de]      # 0x555545550ee8
+0x55554554fc0a:    mov    QWORD PTR [rbp-0x10],rax
+0x55554554fc0e:    mov    rax,QWORD PTR [rbp-0x10]
+0x55554554fc12:    mov    rcx,QWORD PTR [rip+0x12d7]      # 0x555545550ef0
+0x55554554fc19:    or     rax,rcx
+0x55554554fc1c:    mov    rcx,QWORD PTR [rip+0x12d5]      # 0x555545550ef8
+0x55554554fc23:    and    rax,rcx
+0x55554554fc26:    lea    rdi,[rip+0xffffffffffffedff]    # 0x55554554ea2c
+0x55554554fc2d:    call   rax
+0x55554554fc2f:    xor    eax,eax
+0x55554554fc31:    add    rsp,0x10
+0x55554554fc35:    pop    rbp
+0x55554554fc36:    ret
+```
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Fake PLTs
-endbr64
-push rbp
-mov rbp,rsp
-sub rsp,
-mov DWORD PTR [rbp ],
-mov rax,QWORD PTR [rip+ ]
-mov QWORD PTR [rbp ],rax
-mov rax,QWORD PTR [rbp ]
-7 ript
-rax ,rcx
-rdi, [rip+ # 0x55554554ea2c
-rax
-xor eax , eax
-add rsp,
-pop rbp
-ret
-2026 77
+```
+gef➤  x/gx 0x555545550ee8
+0x555545550ee8: 0x000055554554fcd0
 ```
 
 ## Slide 78
 
 ## Fake PLTs
 
-78
+```
+0x55554554fbf0:    endbr64
+0x55554554fbf4:    push   rbp
+0x55554554fbf5:    mov    rbp,rsp
+0x55554554fbf8:    sub    rsp,0x10
+0x55554554fbfc:    mov    DWORD PTR [rbp-0x4],0x0
+0x55554554fc03:    mov    rax,QWORD PTR [rip+0x12de]      # 0x555545550ee8
+0x55554554fc0a:    mov    QWORD PTR [rbp-0x10],rax
+0x55554554fc0e:    mov    rax,QWORD PTR [rbp-0x10]
+0x55554554fc12:    mov    rcx,QWORD PTR [rip+0x12d7]      # 0x555545550ef0
+0x55554554fc19:    or     rax,rcx
+0x55554554fc1c:    mov    rcx,QWORD PTR [rip+0x12d5]      # 0x555545550ef8
+0x55554554fc23:    and    rax,rcx
+0x55554554fc26:    lea    rdi,[rip+0xffffffffffffedff]    # 0x55554554ea2c
+0x55554554fc2d:    call   rax
+0x55554554fc2f:    xor    eax,eax
+0x55554554fc31:    add    rsp,0x10
+0x55554554fc35:    pop    rbp
+0x55554554fc36:    ret
+```
 
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
-Fake PLTs
-
-[Disassembly panel]
-0x55554554fbf0:     endbr64
-0x55554554fbf4:     push   rbp
-0x55554554fbf5:     mov    rbp,rsp
-0x55554554fbf8:     sub    rsp,0x10
-0x55554554fbfc:     mov    DWORD PTR [rbp-0x4],0x0
-0x55554554fc03:     mov    rax,QWORD PTR [rip+0x12de]          # 0x555545550ee8
-0x55554554fc0a:     mov    QWORD PTR [rbp-0x10],rax
-0x55554554fc0e:     mov    rax,QWORD PTR [rbp-0x10]
-0x55554554fc12:     mov    rcx,QWORD PTR [rip+0x12d7]          # 0x555545550ef0
-0x55554554fc19:     or     rax,rcx
-0x55554554fc1c:     mov    rcx,QWORD PTR [rip+0x12d5]          # 0x555545550ef8
-0x55554554fc23:     and    rax,rcx
-0x55554554fc26:     lea    rdi,[rip+0xffffffffffffedff]        # 0x55554554ea2c
-0x55554554fc2d:     call   rax
-0x55554554fc2f:     xor    eax,eax
-0x55554554fc31:     add    rsp,0x10
-0x55554554fc35:     pop    rbp
-0x55554554fc36:     ret
-
-[Highlight box 1 around the "# 0x555545550ee8" comment; highlight box 2 around the block from 0x55554554fc12 through 0x55554554fc2d]
-
-[Right panel]
+```
 gef➤  x/gx 0x555545550ee8
 0x555545550ee8: 0x000055554554fcd0
+```
 
-[Bottom panel]
+```
 gef➤  x/3i 0x000055554554fcd0
    0x55554554fcd0:      endbr64
-   0x55554554fcd4:      jmp    QWORD PTR [rip+0x124e]          # 0x555545550f28
+   0x55554554fcd4:      jmp    QWORD PTR [rip+0x124e]        # 0x555545550f28
    0x55554554fcda:      nop    WORD PTR [rax+rax*1+0x0]
-
-Information Classification: General
-
-black hat USA 2026
-78
 ```
 
 ## Slide 79
@@ -1717,61 +1388,49 @@ black hat USA 2026
 ## Fake vs Normal PLTs
 
 - Normal PLTs are reached through **direct** calls
-
 - Fake PLTs are reached through **indirect** calls
-
-79
 
 ## Slide 80
 
 ## Fake vs Normal PLTs
 
 - Normal PLTs are reached through **direct** calls
-
 - Fake PLTs are reached through **indirect** calls
 
-### We can place Normal PLTs **outside** each DSO’s Execution Jail
-
-80
+We can place Normal PLTs **outside** each DSO's Execution Jail
 
 ## Slide 81
 
 ## Final Design
 
-81
+Diagram (memory layout, top to bottom):
 
-
-> Recovered by OCR — confidence 83/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Final Design
-28 bits
-Ox7fff20000000
-Other r-- / rw- j DSO A
-Lo er r-- / rw- mappings Exewution
-DSOA .fakeplt.sec / r-x mappings Jail
-prefix
-Other r-- / rw- mappings
-.plt / .plt.sec sections
-Ox7fff32000000
-fr Other r-- / rw- mappings DSO B
-fakeplt.sec / r-x mappings Pxecttion
-Other r-- / rw- mappings
-.plt / .plt.sec sections
-2026 81
-```
+- 28 bits (the low part of the address)
+- `0x7fff20000000` (DSO A prefix `0x7fff2`)
+- **DSO A** (the top two rows form the DSO A Execution Jail):
+  - Other r-- / rw- mappings
+  - .fakeplt.sec / r-x mappings
+  - Other r-- / rw- mappings
+  - .plt / .plt.sec sections
+  - (hatched region)
+- `0x7fff30000000`
+- `0x7fff32000000`
+- **DSO B** (the top two rows form the DSO B Execution Jail):
+  - Other r-- / rw- mappings
+  - .fakeplt.sec / r-x mappings
+  - Other r-- / rw- mappings
+  - .plt / .plt.sec sections
+  - (hatched region)
+- `0x7fff37ffffff`
 
 ## Slide 82
 
 ## Quick Summary
 
-### Hijacked pointers can reach:
+Hijacked pointers can reach:
 
 1. Intra-module functions
-
 2. Only the Fake PLT stubs of the module
-
-82
 
 ## Slide 83
 
@@ -1780,12 +1439,9 @@ Other r-- / rw- mappings
 Hijacked pointers can reach:
 
 1. Intra-module functions
-
 2. Only the Fake PLT stubs of the module
 
 Possible cross-DSO targets
-
-83
 
 ## Slide 84
 
@@ -1794,384 +1450,228 @@ Possible cross-DSO targets
 LLVM toolchain (20.1.0)
 
 - Modifications to the compiler and the linker
+- Instrumentation through compiler passes
 
-- • Instrumentation through compiler passes
-
-- Glibc (2.41)
+Glibc (2.41)
 
 - Modifications to the loader
-
-84
 
 ## Slide 85
 
 ## Challenges
 
-### • Callbacks
-
-85
+- Callbacks
 
 ## Slide 86
 
 ## Challenges
 
 - Callbacks
-
-- Dynamically loaded modules (via _dlopen_ )
-
-86
+- Dynamically loaded modules (via _dlopen_)
 
 ## Slide 87
 
 ## Callbacks
 
-### **Module A**
+**Module A**
 
-void f 1
+```c
+void f1() {
 
-()
-
-{
-
-...
-
-qsort (
-
-arr,n,sizeof
-
-(int),compare)
-
-...
-
+    ...
+    qsort(arr,n,sizeof(int),compare)
+    ...
 }
+```
 
-void compare (
+```c
+void compare(...) {
 
-...
-)
-
-...
-
+    ...
 }
-
-{
-
-87
+```
 
 ## Slide 88
 
 ## Callbacks
 
-void f 1
+**Module A**
 
-()
+```c
+void f1() {
 
-{
-
-void compare (
-
-...
-)
-
-{
-
-### **Module A**
-
-...
-
-...
-
-qsort ( arr,n,sizeof (int),compare) }
-...
+    ...
+    qsort(arr,n,sizeof(int),compare)
+    ...
 }
-:
-qsort
+```
 
-### **Libc**
+```c
+void compare(...) {
 
-...
+    ...
+}
+```
 
-rcx,ormask
+**Libc**
 
-rcx,andmask
+```
+qsort:
 
-call
-
-...
-
-88
+    ...
+    or   rcx,ormask
+    and  rcx,andmask
+    call rcx
+    ...
+```
 
 ## Slide 89
 
 ## Callbacks
 
-### **Module A**
+**Module A**
 
-### **Libc**
+```c
+void f1() {
 
-void f 1
-
-()
-
-{
-
-...
-
-qsort (
-
-arr,n,sizeof
-
-(int),compare)
-
-...
-
-rcx,ormask
-
-rcx,andmask
-
-call
-
-...
-
-void compare (
-
-...
-)
-
-...
-
+    ...
+    qsort(arr,n,sizeof(int),compare)
+    ...
 }
+```
 
-{
+```c
+void compare(...) {
 
-89
+    ...
+}
+```
+
+**Libc**
+
+```
+qsort:
+
+    ...
+    or   rcx,ormask
+    and  rcx,andmask
+    call rcx
+    ...
+```
 
 ## Slide 90
 
 ## Callbacks
 
-### **Module A**
+**Module A**
+
+```c
+void f1() {
+
+    ...
+    qsort(arr,n,sizeof(int),compare)
+    ...
+}
+```
+
+```c
+void compare(...) {
+
+    ...
+}
+```
 
 **Libc**
 
-void f 1
+```
+qsort:
 
-()
+    ...
+    or   rcx,ormask
+    and  rcx,andmask
+    call rcx
+    ...
+```
 
-{
-
-void compare (
-
-...
-)
-
-...
-
-...
-
-}
-
-qsort (
-
-arr,n,sizeof
-
-(int),compare)
-
-...
-
-Cannot escape
-the Execution Jail
-
-}
-
-:
-qsort
-
-...
-
-or
-
-and
-
-call
-
-...
-
-{
-
-90
+**Cannot escape the Execution Jail** (✗ — the masked `call rcx` cannot reach `compare` in Module A)
 
 ## Slide 91
 
 ## Handling Callbacks
 
 1. Collect callback symbols (per module)
-
 2. Instrument callback sites with extended masking
-
-Places where callbacks are invoked
-
-91
+   - Places where callbacks are invoked
 
 ## Slide 92
 
 ## Symbol Gathering
 
-• Leverage 2 compiler passes Examining Intermediate Representation
+- Leverage 2 compiler passes
+  - Examining Intermediate Representation
 
-void f1 ()
-
-{
-
-...
-
-qsort (
-
-arr,n,sizeof
-
-qsort (
-
-arr,n,sizeof
-
-...
-
+```c
+void f1() {
+    ...
+    qsort(arr,n,sizeof(int),compare1)
+    qsort(arr,n,sizeof(int),compare2)
+    ...
 }
-
-compare1 )
-
-compare2 )
-
-92
+```
 
 ## Slide 93
 
 ## Symbol Gathering
 
-- Leverage 2 compiler passes Examining Intermediate Representation
-
+- Leverage 2 compiler passes
+  - Examining Intermediate Representation
 - Create callback tables
+  - One for each DSO dependency
 
-- One for each DSO dependency
-
-void f 1
-
-()
-
-{
-
-...
-
-qsort (
-
-arr,n,sizeof
-
-1
-compare
-
-)
-
-qsort (
-
-arr,n,sizeof
-
-2
-compare
-
-)
-
-...
-
+```c
+void f1() {
+    ...
+    qsort(arr,n,sizeof(int),compare1)
+    qsort(arr,n,sizeof(int),compare2)
+    ...
 }
+```
 
+```
 {
-
-“
-
-libc ”
-
-: [compare 1
-
-2
-, compare
-
-],
-
-“
-
-libcrypto ”
-
-: [...],
-
-...
-
+  “libc”: [compare1, compare2],
+  “libcrypto”: [...],
+  ...
 }
-
-93
+```
 
 ## Slide 94
 
 ## Symbol Gathering
 
-• Leverage 2 compiler passes Examining Intermediate Representation
+- Leverage 2 compiler passes
+  - Examining Intermediate Representation
+- Create callback tables
+  - One for each DSO dependency
 
-• Create callback tables One for each DSO dependency
-
-void f 1
-
-()
-
-{
-
-...
-
-qsort (
-
-arr,n,sizeof
-
-1
-compare
-
-)
-
-qsort (
-
-arr,n,sizeof
-
-2
-compare
-
-)
-
-...
-
+```c
+void f1() {
+    ...
+    qsort(arr,n,sizeof(int),compare1)
+    qsort(arr,n,sizeof(int),compare2)
+    ...
 }
+```
+
+```
+{
+  “libc”: [compare1, compare2],
+  “libcrypto”: [...],
+  ...
+}
+```
 
 If the current module is used, then _libc_ may need to call _compare1_ and _compare2_
-
-{
-
-“
-
-libc ”
-
-: [compare 1
-
-2
-, compare
-
-],
-
-“
-
-libcrypto ”
-
-: [...],
-
-...
-
-}
-
-94
 
 ## Slide 95
 
@@ -2179,45 +1679,25 @@ libcrypto ”
 
 - Instrument callback sites
 
-:
-; Original
+```
+; Original:
+    call  rax
 
-call
+; Extended Masking:
+    mov   r11,rax
+    or    rax,ormask
+    and   rax,andmask
+    cmp   r11,rax
+    jne   call_target
+    call  rax
+    jmp   after_call
 
-:
-; Extended Masking
+call_target:
+    call  DSO_callback_table
 
-mov   r11,rax
-
-rax,ormask
-
-rax,andmask
-
-cmp
-
-r11,rax
-
-jne
-
-call_target
-
-call
-
-jmp
-
-after_call
-
-:
-call_target
-
-DSO_callback_table
-
-:
-after_call
-
-...
-
-95
+after_call:
+    ...
+```
 
 ## Slide 96
 
@@ -2225,50 +1705,27 @@ after_call
 
 - Instrument callback sites
 
-If not equal, then target outside the Execution Jail
+If not equal, then target **outside** the Execution Jail
 
+```
 ; Original:
+    call  rax
 
-call
+; Extended Masking:
+    mov   r11,rax
+    or    rax,ormask
+    and   rax,andmask
+    cmp   r11,rax
+    jne   call_target
+    call  rax
+    jmp   after_call
 
-:
-; Extended Masking
+call_target:
+    call  DSO_callback_table
 
-mov   r 11
-
-,rax
-
-rax,ormask
-
-rax,andmask
-
-cmp
-
-r 11
-
-,rax
-
-jne
-
-call_target
-
-call
-
-jmp
-
-after_call
-
-:
-call_target
-
-DSO_callback_table
-
-:
-after_call
-
-...
-
-96
+after_call:
+    ...
+```
 
 ## Slide 97
 
@@ -2276,52 +1733,29 @@ after_call
 
 - Instrument callback sites
 
-If not equal, then target outside the Execution Jail
+If not equal, then target **outside** the Execution Jail
 
 Search target inside the callback table of the DSO
 
+```
 ; Original:
+    call  rax
 
-call
+; Extended Masking:
+    mov   r11,rax
+    or    rax,ormask
+    and   rax,andmask
+    cmp   r11,rax
+    jne   call_target
+    call  rax
+    jmp   after_call
 
-:
-; Extended Masking
+call_target:
+    call  DSO_callback_table
 
-mov   r 11
-
-,rax
-
-rax,ormask
-
-rax,andmask
-
-cmp
-
-r 11
-
-,rax
-
-jne
-
-call_target
-
-call
-
-jmp
-
-after_call
-
-:
-call_target
-
-DSO_callback_table
-
-:
-after_call
-
-...
-
-97
+after_call:
+    ...
+```
 
 ## Slide 98
 
@@ -2329,90 +1763,57 @@ after_call
 
 - Instrument callback sites
 
-If not equal, then target outside the Execution Jail
+If not equal, then target **outside** the Execution Jail
 
-Search target inside the callback table of the DSO Not found? Halt execution
+Search target inside the callback table of the DSO
 
+Not found? **Halt** execution 😈😈
+
+```
 ; Original:
+    call  rax
 
-call
+; Extended Masking:
+    mov   r11,rax
+    or    rax,ormask
+    and   rax,andmask
+    cmp   r11,rax
+    jne   call_target
+    call  rax
+    jmp   after_call
 
-:
-; Extended Masking
+call_target:
+    call  DSO_callback_table
 
-mov   r 11
-
-,rax
-
-rax,ormask
-
-rax,andmask
-
-cmp
-
-r 11
-
-,rax
-
-jne
-
-call_target
-
-call
-
-jmp
-
-after_call
-
-:
-call_target
-
-DSO_callback_table
-
-:
-after_call
-
-...
-
-98
+after_call:
+    ...
+```
 
 ## Slide 99
 
 ## Special Callbacks
 
 1. main()
-
-Called by libc
-
+   - Called by libc
 2. Initialization and finalization routines
-
-_.init, .fini, .init_array, .fini_array_ sections
-
+   - _.init, .fini, .init_array, .fini_array_ sections
 3. Exit handlers
-
-Registered via _atexit()_
-
-99
+   - Registered via _atexit()_
 
 ## Slide 100
 
 ## Special Callbacks
 
-1. main() Called by libc
-
+1. main()
+   - Called by libc
 2. Initialization and finalization routines
-
-_.init, .fini, .init_array, .fini_array_ sections
-
+   - _.init, .fini, .init_array, .fini_array_ sections
 3. Exit handlers
+   - Registered via _atexit()_
 
 Complete set of these callback routines known after compilation and linking
 
 Create callback tables just for them
-
-Registered via _atexit()_
-
-100
 
 ## Slide 101
 
@@ -2421,12 +1822,8 @@ Registered via _atexit()_
 Typical approaches:
 
 - On-the-fly call target recalculation
-
 - Rewriting of code pages
-
 - Profiling applications with benchmarks
-
-101
 
 ## Slide 102
 
@@ -2435,605 +1832,545 @@ Typical approaches:
 Typical approaches:
 
 - On-the-fly call target recalculation
-
 - Rewriting of code pages
-
-• Profiling applications with benchmarks
-
-102
+- Profiling applications with benchmarks
 
 ## Slide 103
 
 ## Dynamically Loaded Modules
 
 - Preload necessary modules at startup
-
 - Generate appropriate PLT stubs for _dlsym-ed_ symbols
-
-- Most libraries do not use _dlopen()_ Libc frequently loads NSS libraries
-
-103
+- Most libraries do not use _dlopen()_
+  - Libc frequently loads NSS libraries
 
 ## Slide 104
 
 # EVALUATION
-
-104
 
 ## Slide 105
 
 ## Evaluation Metrics
 
 1. Correctness
-
-Does PLaTypus instrumentation preserve program behavior?
-
-2. Security guarantees What is the reduction in cross-DSO gadgets? Are state-of-the-art CET bypass attacks mitigated?
-
+   - Does PLaTypus instrumentation preserve program behavior?
+2. Security guarantees
+   - What is the reduction in cross-DSO gadgets?
+   - Are state-of-the-art CET bypass attacks mitigated?
 3. Performance
-
-What is the runtime overhead introduced by PLaTypus?
-
-105
+   - What is the runtime overhead introduced by PLaTypus?
 
 ## Slide 106
 
 ## Correctness
 
-• No failures observed in test suites of 19 real-world applications
+- No failures observed in test suites of 19 real-world applications
 
-106
+Table 1. Benchmark Suite. Every benchmark is followed by its version number.
 
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Correctness
-¢ No failures observed in test suites of 19 real-world applications
-Table 1. BENCHMARK SUITE. EVERY BENCHMARK IS FOLLOWED BY ITS VERSION NUMBER.
-2026 106
-```
+| | | | | |
+|---|---|---|---|---|
+| rm v9.7 | mkdir v9.7 | gzip v1.14 | make v4.4.1 | Nginx v1.28.0 |
+| date v9.7 | sort v9.7 | grep v3.12 | lighttpd v1.4.79 | Redis v8.2.0 |
+| uniq v9.7 | tar v1.35 | objdump v2.44 | wget v1.25.0 | SQLite v3.50.4 |
+| chown v9.7 | bzip2 v1.0.8 | bftpd v6.3 | memcached v1.6.38 | |
 
 ## Slide 107
 
 ## Correctness
 
-• No failures observed in test suites of 19 real-world applications
+- No failures observed in test suites of 19 real-world applications
+- 16 libraries were instrumented as well
+  - Including complex ones like _glibc, OpenSSL_
 
-• 16 libraries were instrumented as well
+Table 1. Benchmark Suite. Every benchmark is followed by its version number.
 
-Including complex ones like _glibc, OpenSSL_
-
-107
+| | | | | |
+|---|---|---|---|---|
+| rm v9.7 | mkdir v9.7 | gzip v1.14 | make v4.4.1 | Nginx v1.28.0 |
+| date v9.7 | sort v9.7 | grep v3.12 | lighttpd v1.4.79 | Redis v8.2.0 |
+| uniq v9.7 | tar v1.35 | objdump v2.44 | wget v1.25.0 | SQLite v3.50.4 |
+| chown v9.7 | bzip2 v1.0.8 | bftpd v6.3 | memcached v1.6.38 | |
 
 ## Slide 108
 
 ## Cross-DSO Gadget Reduction
 
-108
+Table 2. Number of indirectly accessible cross-DSO ENBR64 pads under CET (col. 3) and PLaTypus (col. 4-6), from the perspective of the respective module. CT = Callback Table.
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-Module CET
-ec erver 3739
-libc.so 4961
-99.37
-|
-|
-libreadline.so 7452
-libtinfo.so 7856
-libncurses.so 7347
-libc.so 99.1]
-99.12
-99, 97
-nginx 17986
-libpere2-8.so | 20124
-liberypto.so 9551
-libz.so 20085
-libssl.so 17182
-libcrypt. 80 20171
-ibe 16533
-sqlite3 6873
-98.99
-2026 108
-```
+| Group | Module | CET | PLaTypus | CT | Red. (%) |
+|---|---|---|---|---|---|
+| Redis | redis-server | 3739 | 6 | 0 | 99.84 |
+|  | libc.so | 4961 | 52 | 52 | 98.95 |
+| SQLite | sqlite3 | 6873 | 43 | 0 | 99.37 |
+|  | libreadline.so | 7452 | 3 | 2 | 99.96 |
+|  | libtinfo.so | 7856 | 3 | 0 | 99.96 |
+|  | libncurses.so | 7347 | 3 | 0 | 99.96 |
+|  | libm.so | 7242 | 18 | 18 | 99.75 |
+|  | libz.so | 8064 | 0 | 0 | 100.00 |
+|  | libc.so | 4472 | 40 | 40 | 99.11 |
+| Nginx | nginx | 17986 | 6 | 0 | 99.97 |
+|  | libpcre2-8.so | 20124 | 2 | 2 | 99.99 |
+|  | libcrypto.so | 9551 | 84 | 83 | 99.12 |
+|  | libz.so | 20085 | 6 | 6 | 99.97 |
+|  | libssl.so | 17182 | 31 | 14 | 99.82 |
+|  | libcrypt.so | 20171 | 21 | 0 | 99.90 |
+|  | libc.so | 16533 | 166 | 166 | 98.99 |
 
 ## Slide 109
 
 ## Cross-DSO Gadget Reduction
 
-109
+Table 2. Number of indirectly accessible cross-DSO ENBR64 pads under CET (col. 3) and PLaTypus (col. 4-6), from the perspective of the respective module. CT = Callback Table.
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-Module Red
-erver
-libc.so
-99.37
-|
-|
-6 |
-| Module || CET |] PLatypus | CT | Red. (%) _
-|| 4
-sqlite3 |
-libreadline.so
-libtinfo.so
-libncurses.so |
-libc.so 99.1]
-|
-|
-|
-|
-17986
-20124
-9551
-20085
-17182
-20171
-16533
-99.12
-99, 97
-nginx
-libpcre2-8.so
-liberypto.so
-libssl.so
-libcrypt. so
-98.99
-2026 109
-```
+| Group | Module | CET | PLaTypus | CT | Red. (%) |
+|---|---|---|---|---|---|
+| Redis | redis-server | 3739 | 6 | 0 | 99.84 |
+|  | libc.so | 4961 | 52 | 52 | 98.95 |
+| SQLite | sqlite3 | 6873 | 43 | 0 | 99.37 |
+|  | libreadline.so | 7452 | 3 | 2 | 99.96 |
+|  | libtinfo.so | 7856 | 3 | 0 | 99.96 |
+|  | libncurses.so | 7347 | 3 | 0 | 99.96 |
+|  | libm.so | 7242 | 18 | 18 | 99.75 |
+|  | libz.so | 8064 | 0 | 0 | 100.00 |
+|  | libc.so | 4472 | 40 | 40 | 99.11 |
+| Nginx | nginx | 17986 | 6 | 0 | 99.97 |
+|  | libpcre2-8.so | 20124 | 2 | 2 | 99.99 |
+|  | libcrypto.so | 9551 | 84 | 83 | 99.12 |
+|  | libz.so | 20085 | 6 | 6 | 99.97 |
+|  | libssl.so | 17182 | 31 | 14 | 99.82 |
+|  | libcrypt.so | 20171 | 21 | 0 | 99.90 |
+|  | libc.so | 16533 | 166 | 166 | 98.99 |
 
 ## Slide 110
 
 ## Cross-DSO Gadget Reduction
 
-110
+Table 2. Number of indirectly accessible cross-DSO ENBR64 pads under CET (col. 3) and PLaTypus (col. 4-6), from the perspective of the respective module. CT = Callback Table.
 
-
-> Recovered by OCR — confidence 87/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-Red
-ec erver 4g | redis-server | 3739 ||
-libc.so 4961
-99.37
-|
-|
-libreadline.so 7452
-libtinfo.so 7856
-libncurses.so 7347
-libc.so 99.1]
-99.12
-99, 97
-libpere2-8.so | 20124
-liberypto.so 9551
-libz.so 20085
-libssl.so 17182
-libcrypt. 80 20171
-ibe 16533
-98.99
-2026 110
-```
+| Group | Module | CET | PLaTypus | CT | Red. (%) |
+|---|---|---|---|---|---|
+| Redis | redis-server | 3739 | 6 | 0 | 99.84 |
+|  | libc.so | 4961 | 52 | 52 | 98.95 |
+| SQLite | sqlite3 | 6873 | 43 | 0 | 99.37 |
+|  | libreadline.so | 7452 | 3 | 2 | 99.96 |
+|  | libtinfo.so | 7856 | 3 | 0 | 99.96 |
+|  | libncurses.so | 7347 | 3 | 0 | 99.96 |
+|  | libm.so | 7242 | 18 | 18 | 99.75 |
+|  | libz.so | 8064 | 0 | 0 | 100.00 |
+|  | libc.so | 4472 | 40 | 40 | 99.11 |
+| Nginx | nginx | 17986 | 6 | 0 | 99.97 |
+|  | libpcre2-8.so | 20124 | 2 | 2 | 99.99 |
+|  | libcrypto.so | 9551 | 84 | 83 | 99.12 |
+|  | libz.so | 20085 | 6 | 6 | 99.97 |
+|  | libssl.so | 17182 | 31 | 14 | 99.82 |
+|  | libcrypt.so | 20171 | 21 | 0 | 99.90 |
+|  | libc.so | 16533 | 166 | 166 | 98.99 |
 
 ## Slide 111
 
 ## Cross-DSO Gadget Reduction
 
-111
+Table 2. Number of indirectly accessible cross-DSO ENBR64 pads under CET (col. 3) and PLaTypus (col. 4-6), from the perspective of the respective module. CT = Callback Table.
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO En8R64
-| Module | CET | PLaTypus |) CT]] Red. (%) CET PLATYPU
-ec erver 4g -| redis-server | 3739 | 6. ||
-libc.so 4961
-99.11
-libreadline.so 7452
-libtinfo.so 7856
-libncurses.so 7347
-libc.so
-99.12
-99, 97
-libpere2-8.so | 20124
-liberypto.so 9551
-libz.so 20085
-libssl.so 17182
-libcrypt. 80 20171
-2026 111
-```
+| Group | Module | CET | PLaTypus | CT | Red. (%) |
+|---|---|---|---|---|---|
+| Redis | redis-server | 3739 | 6 | 0 | 99.84 |
+|  | libc.so | 4961 | 52 | 52 | 98.95 |
+| SQLite | sqlite3 | 6873 | 43 | 0 | 99.37 |
+|  | libreadline.so | 7452 | 3 | 2 | 99.96 |
+|  | libtinfo.so | 7856 | 3 | 0 | 99.96 |
+|  | libncurses.so | 7347 | 3 | 0 | 99.96 |
+|  | libm.so | 7242 | 18 | 18 | 99.75 |
+|  | libz.so | 8064 | 0 | 0 | 100.00 |
+|  | libc.so | 4472 | 40 | 40 | 99.11 |
+| Nginx | nginx | 17986 | 6 | 0 | 99.97 |
+|  | libpcre2-8.so | 20124 | 2 | 2 | 99.99 |
+|  | libcrypto.so | 9551 | 84 | 83 | 99.12 |
+|  | libz.so | 20085 | 6 | 6 | 99.97 |
+|  | libssl.so | 17182 | 31 | 14 | 99.82 |
+|  | libcrypt.so | 20171 | 21 | 0 | 99.90 |
+|  | libc.so | 16533 | 166 | 166 | 98.99 |
 
 ## Slide 112
 
 ## Cross-DSO Gadget Reduction
 
-### > 98% gadget reduction per module
+Table 2. Number of indirectly accessible cross-DSO ENBR64 pads under CET (col. 3) and PLaTypus (col. 4-6), from the perspective of the respective module. CT = Callback Table.
 
-112
+| Group | Module | CET | PLaTypus | CT | Red. (%) |
+|---|---|---|---|---|---|
+| Redis | redis-server | 3739 | 6 | 0 | 99.84 |
+|  | libc.so | 4961 | 52 | 52 | 98.95 |
+| SQLite | sqlite3 | 6873 | 43 | 0 | 99.37 |
+|  | libreadline.so | 7452 | 3 | 2 | 99.96 |
+|  | libtinfo.so | 7856 | 3 | 0 | 99.96 |
+|  | libncurses.so | 7347 | 3 | 0 | 99.96 |
+|  | libm.so | 7242 | 18 | 18 | 99.75 |
+|  | libz.so | 8064 | 0 | 0 | 100.00 |
+|  | libc.so | 4472 | 40 | 40 | 99.11 |
+| Nginx | nginx | 17986 | 6 | 0 | 99.97 |
+|  | libpcre2-8.so | 20124 | 2 | 2 | 99.99 |
+|  | libcrypto.so | 9551 | 84 | 83 | 99.12 |
+|  | libz.so | 20085 | 6 | 6 | 99.97 |
+|  | libssl.so | 17182 | 31 | 14 | 99.82 |
+|  | libcrypt.so | 20171 | 21 | 0 | 99.90 |
+|  | libc.so | 16533 | 166 | 166 | 98.99 |
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Table 2. NUMBER OF INDIRECTLY ACCESSIBLE CROSS-DSO ENBR
-Module
-redis-server
-libc.so
-libreadline.so
-libtinfo.so
-libncurses.so
-libc.so
-nginx
-libpcre2-8.so
-liberypto.so
-libssl.so
-liberypt.so
-CET
-3739
-496]
-6873
-7452
-7856
-7347
-7242
-8064
-4472
-201 24
-201 71
-16533
-PLATYPUS | Module | CET | PLaTypus | CT | Red. (%) _ CT
-0
-52
-0
-?
-0
-0
-18
-99.84
-98.95
-99.37
-99.11
-99. 12
-98.99
-64
-> 98% gadget
-reduction per
-module
-2026 112
-```
+**> 98% gadget reduction per module**
 
 ## Slide 113
 
 ## FOP Attacks Mitigation
 
-- __dl_call_fini_ : part of glibc loader
-
+- `_dl_call_fini`: part of glibc loader
 - Called gadgets: part of libc
 
-dispatcher loop
-
-113
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-FOP Attacks Mitigation
-“Gi call fini (void *closure_map)
-¢ _dl_call_fini: part of glibc loader struct Link map *nap = closure_maps
-sure nothing happens
-map->1l_init_called = @;
-if we
-ElfW(Dyn) *fini_array = map->1_info[DT_FINI_ARRAY];
-_array NULL)
-¢ Called gadgets: part of libc
-ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
-size_t sz (map->1_info[DT_FINI_ARRAYSZ]->d_un.d_val
-sizeof (ElfW(Addr)));
-11. Appendix B: Intel "/bin/sh" in memory chain
-Function Name Equivalent Operation
-while (sz @)
-((fini_t) array[sz]) ()3
-_nss_files_endpwent
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-__cache_sysconf
-ElfW(Dyn) *fini
-if (fini NULL)
-DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
-try th
-2026 113
 ```
+----|  11. Appendix B: Intel "/bin/sh" in memory chain
+
++---------------------------+--------------------------+
+|       Function Name       |   Equivalent Operation   |
++---------------------------+--------------------------+
+| _nss_files_endpwent       | MOV RDI, 0x6             |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| _dl_mcount_wrapper...     | MOV RSI, RDI             |
+```
+
+```c
+void
+_dl_call_fini (void *closure_map)
+{
+  struct link_map *map = closure_map;
+
+  /* Make sure nothing happens if we are called twice.  */
+  map->l_init_called = 0;
+
+  ElfW(Dyn) *fini_array = map->l_info[DT_FINI_ARRAY];
+  if (fini_array != NULL)
+    {
+      ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
+                                          + fini_array->d_un.d_ptr);
+      size_t sz = (map->l_info[DT_FINI_ARRAYSZ]->d_un.d_val
+                   / sizeof (ElfW(Addr)));
+
+      while (sz-- > 0)
+        ((fini_t) array[sz]) ();
+    }
+
+  /* Next try the old-style destructor.  */
+  ElfW(Dyn) *fini = map->l_info[DT_FINI];
+  if (fini != NULL)
+    DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
+}
+```
+
+_dispatcher loop_ (annotation on the boxed `while (sz-- > 0)` loop)
 
 ## Slide 114
 
 ## FOP Attacks Mitigation
 
-- __dl_call_fini_ : part of glibc loader
-
+- `_dl_call_fini`: part of glibc loader
 - Called gadgets: part of libc
-
-dispatcher loop
 
 No PLTs for them inside the loader
 
-114
+```
+----|  11. Appendix B: Intel "/bin/sh" in memory chain
+
++---------------------------+--------------------------+
+|       Function Name       |   Equivalent Operation   |
++---------------------------+--------------------------+
+| _nss_files_endpwent       | MOV RDI, 0x6             |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| _dl_mcount_wrapper...     | MOV RSI, RDI             |
+```
+
+```c
+void
+_dl_call_fini (void *closure_map)
+{
+  struct link_map *map = closure_map;
+
+  /* Make sure nothing happens if we are called twice.  */
+  map->l_init_called = 0;
+
+  ElfW(Dyn) *fini_array = map->l_info[DT_FINI_ARRAY];
+  if (fini_array != NULL)
+    {
+      ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
+                                          + fini_array->d_un.d_ptr);
+      size_t sz = (map->l_info[DT_FINI_ARRAYSZ]->d_un.d_val
+                   / sizeof (ElfW(Addr)));
+
+      while (sz-- > 0)
+        ((fini_t) array[sz]) ();
+    }
+
+  /* Next try the old-style destructor.  */
+  ElfW(Dyn) *fini = map->l_info[DT_FINI];
+  if (fini != NULL)
+    DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
+}
+```
+
+_dispatcher loop_ (annotation on the boxed `while (sz-- > 0)` loop)
 
 ## Slide 115
 
 ## FOP Attacks Mitigation
 
-- __dl_call_fini_ : part of glibc loader
-
+- `_dl_call_fini`: part of glibc loader
 - Called gadgets: part of libc
 
-dispatcher loop
+No PLTs for them inside the loader → Transitions impossible
 
-No PLTs for Transitions them inside impossible the loader
+```
+----|  11. Appendix B: Intel "/bin/sh" in memory chain
 
-115
++---------------------------+--------------------------+
+|       Function Name       |   Equivalent Operation   |
++---------------------------+--------------------------+
+| _nss_files_endpwent       | MOV RDI, 0x6             |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| __cache_sysconf           | SUB RDI, 0xB9            |
+| _dl_mcount_wrapper...     | MOV RSI, RDI             |
+```
+
+```c
+void
+_dl_call_fini (void *closure_map)
+{
+  struct link_map *map = closure_map;
+
+  /* Make sure nothing happens if we are called twice.  */
+  map->l_init_called = 0;
+
+  ElfW(Dyn) *fini_array = map->l_info[DT_FINI_ARRAY];
+  if (fini_array != NULL)
+    {
+      ElfW(Addr) *array = (ElfW(Addr) *) (map->l_addr
+                                          + fini_array->d_un.d_ptr);
+      size_t sz = (map->l_info[DT_FINI_ARRAYSZ]->d_un.d_val
+                   / sizeof (ElfW(Addr)));
+
+      while (sz-- > 0)
+        ((fini_t) array[sz]) ();
+    }
+
+  /* Next try the old-style destructor.  */
+  ElfW(Dyn) *fini = map->l_info[DT_FINI];
+  if (fini != NULL)
+    DL_CALL_DT_FINI (map, ((void *) map->l_addr + fini->d_un.d_ptr));
+}
+```
+
+_dispatcher loop_ (annotation on the boxed `while (sz-- > 0)` loop)
 
 ## Slide 116
 
 ## FOP Attacks Mitigation
 
 - Rare and hard to find
-
 - Most of them not exploitable
-
-• Exploitable ones are related to initialization and finalization routines LOOP attack: __initterm()_ in _msvcrt.dll_ Phrack attack: __dl_call_fini()_ in _ld-linux_
+- Exploitable ones are related to initialization and finalization routines
+  - LOOP attack: `_initterm()` in _msvcrt.dll_
+  - Phrack attack: `_dl_call_fini()` in _ld-linux_
 
 We will revisit this later
-
-116
 
 ## Slide 117
 
 ## FOP Attacks Mitigation
 
 - Rare and hard to find
-
 - Most of them not exploitable
-
-• Exploitable ones are related to initialization and finalization routines LOOP attack: __initterm()_ in _msvcrt.dll_ Phrack attack: __dl_call_fini()_ in _ld-linux_
+- Exploitable ones are related to initialization and finalization routines
+  - LOOP attack: `_initterm()` in _msvcrt.dll_
+  - Phrack attack: `_dl_call_fini()` in _ld-linux_
 
 Dedicated callback tables at call sites
-
-117
 
 ## Slide 118
 
 ## Intra-DSO Protection
 
-### • Normal PLTs are not reachable indirectly
-
-118
+- Normal PLTs are not reachable indirectly
 
 ## Slide 119
 
 ## Intra-DSO Protection
 
-### • Normal PLTs are not reachable indirectly
+- Normal PLTs are not reachable indirectly
 
-int
+```c
+int DSOA_f1() {
 
-DSOA_f 1
-
-()
-
-{
-
-fp )(
-
-void
-
-...
-
-...
-
-();
-
+    void (*fp)(void);
+    ...
+    fp = 😈
+    ...
+    fp();
 }
+```
 
-void );
+```c
+void DSOA_f2() {
 
-void
-
-DSOA_f 2
-
-()
-
-{
-
-...
-
-(...);
-
-...
-
+    ...
+    system(...);
+    ...
 }
-
-119
+```
 
 ## Slide 120
 
 ## Intra-DSO Protection
 
-### • Normal PLTs are not reachable indirectly
+- Normal PLTs are not reachable indirectly
 
-int
+```c
+int DSOA_f1() {
 
-DSOA_f 1
-
-()
-
-{
-
-fp )( void );
-
-void
-
-...
-
-=
-
-...
-
-();
-
+    void (*fp)(void);
+    ...
+    fp = 😈
+    ...
+    fp();
 }
+```
 
-void
+```c
+void DSOA_f2() {
 
-DSOA_f 2
-
-()
-
-{
-
-...
-
-(...);
-
-...
-
+    ...
+    system(...);
+    ...
 }
-
-120
+```
 
 ## Slide 121
 
 ## Intra-DSO Protection
 
 - Normal PLTs are not reachable indirectly
-
 - Isolate _DSOA_f2_ outside the EJ of DSO A
 
-int
+```c
+int DSOA_f1() {
 
-DSOA_f 1
-
-()
-
-{
-
-fp )( void );
-
-void
-
-...
-
-=
-
-...
-
-();
-
+    void (*fp)(void);
+    ...
+    fp = 😈
+    ...
+    fp();
 }
+```
 
-void
+```c
+void DSOA_f2() {
 
-DSOA_f2 ()
-
-{
-
-...
-
-(...);
-
-...
-
+    ...
+    system(...);
+    ...
 }
+```
 
 If _DSOA_f2_ is never called indirectly (static analysis)
-
-121
 
 ## Slide 122
 
 ## Intra-DSO Protection
 
-• Normal PLTs are not reachable indirectly
+- Normal PLTs are not reachable indirectly
+- Isolate _DSOA_f2_ outside the EJ of DSO A
 
-- Isolate _DSOA_f2_ outside the EJ of DSO A If _DSOA_f2_ is never called indirectly (static analysis)
+```c
+int DSOA_f1() {
 
-int
-
-DSOA_f1 ()
-
-void
-
-...
-
-=
-
-...
-
-();
-
+    void (*fp)(void);
+    ...
+    fp = 😈
+    ...
+    fp();
 }
+```
 
-{
+```c
+void DSOA_f2() {
 
-fp )( void );
-
-void
-
-DSOA_f 2
-
-()
-
-{
-
-...
-
-(...);
-
-...
-
+    ...
+    system(...);
+    ...
 }
+```
+
+If _DSOA_f2_ is never called indirectly (static analysis)
 
 Works for sensitive functions such as _system()_ in libc
 
-122
-
 ## Slide 123
 
-Performance
+## Performance
 
-#### Overhead (%)
+Bar chart — legend: **Overhead (%)**
 
-2
-1,5
-1
-0,5
-0
+Y-axis (Overhead %): 0, 0,5, 1, 1,5, 2
 
-123
+Benchmarks (x-axis) and their approximate bar heights (bars are unlabeled; all overheads are below 0.5%):
+
+| Benchmark | Overhead (%), approx. |
+|---|---|
+| Bftpd | ≈0 |
+| Memcached | ≈0.2 |
+| Lighttpd | ≈0 |
+| Redis | ≈0.4 |
+| SQLite | ≈0.3 |
+| Nginx | ≈0.45 |
+| Nginx (ramfs) | ≈0.48 |
 
 ## Slide 124
 
 # DISCUSSION
-
-124
 
 ## Slide 125
 
@@ -3041,11 +2378,8 @@ Performance
 
 Interoperability with unprotected modules is supported.
 
-• Unprotected modules can reach arbitrary functions within the address space
-
+- Unprotected modules can reach arbitrary functions within the address space
 - Protected modules can only reach unprotected functions for which they possess PLT stubs
-
-125
 
 ## Slide 126
 
@@ -3053,141 +2387,55 @@ Interoperability with unprotected modules is supported.
 
 Interoperability with unprotected modules is supported.
 
-• Unprotected modules can reach arbitrary functions within the address space
+- Unprotected modules can reach arbitrary functions within the address space
+- Protected modules can only reach unprotected functions for which they possess PLT stubs
 
-• Protected modules can only reach unprotected functions for which they possess PLT stubs
-
-Reachability of in third-party code is limited
-
-126
+Reachability of 🐞 in third-party code is limited
 
 ## Slide 127
 
 ## General Applicability
 
-### ARM
+**ARM**
 
 - ARM BTI ≈ Intel IBT
-
 - Methodology and design remain the same
-
-- Need for backward-edge protection No shadow stack… use PAC
-
-127
+- Need for backward-edge protection
+  - No shadow stack… use PAC
 
 ## Slide 128
 
 ## General Applicability
 
-ARM
+**ARM**
 
 - ARM BTI ≈ Intel IBT
-
 - Methodology and design remain the same
+- Need for backward-edge protection
+  - No shadow stack… use PAC
 
-- Need for backward-edge protection No shadow stack… use PAC
-
-### Microsoft Windows
+**Microsoft Windows**
 
 - CFG ≈ Intel IBT
-
 - Leverage IAT instead of PLTs
-
-- Possible modifications to OSspecific code paths
-
-E.g., loader, system libraries
-
-128
+- Possible modifications to OS-specific code paths
+  - E.g., loader, system libraries
 
 ## Slide 129
 
 ## PLaTypus: Conclusion
 
-• Closes the gap of arbitrary cross-DSO transitions
-
+- Closes the gap of arbitrary cross-DSO transitions
 - Mitigates state-of-the-art FOP attacks
-
 - Supports interoperability between protected and unprotected code
-
 - Incurs negligible overhead while handling complex corner cases
-
-129
 
 ## Slide 130
 
 ## Interested in more?
 
 - IEEE S&P paper here
-
 - Code here
 
-130
+(The slide shows a thumbnail of the IEEE S&P paper "PLaTypus: Restricting Cross-Module Transitions to Mitigate Code-Reuse Attacks" by Apostolos Chatzianagnostou, Marcos Bajo, and Christian Rossow — CISPA Helmholtz Center for Information Security — with ARTIFACT EVALUATED badges: Available, Functional, Reproduced.)
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Interested in more?
-¢ IEEE S&P paper here
-¢ Code here
-PLATYPUs: Restricting
-Apostolos Chatzianagnostou
-CISPA Helmholtz Center
-for Information Security
-Abstract—Numerous techniques have been proposed to thwart
-code reuse attacks, yet practical adoption remains limited due
-to compatibility and deployment challenges. In the current
-and foreseeable Intel architecture landscape, the main line
-of defense against such attacks is Intel CET—a hardware-
-enforced control-flow integrity mechanism integrated into re-
-cent Intel x86-64 CPUs. However, despite its hardware-backed
-ms and widespread adoption, CET still provides only
-it continues to allow hijacked function pointers
-to invoke arbitrary functions across module boundaries, a
-capability that remains fundamental to many modern exploits.
-This paper proposes PLATYPU novel defense on top
-of Intel CET to address this limitation. PLATYPuUs enforces
-execution jails using lightweight address masking to ensure
-indirect control transfers remain within module boundaries.
-on calls are only permitted via necessary PLT
-stubs specific to each DSO. The evaluation on our LLVM-based
-prototype, spanning 19 applications and 16 shared libraries (in-
-cluding glibc), demonstrates that PLAT YPUS reduces indirectly
-accessible cross-DSO functions by over 98%. Performance
-testing with complex applications like Nginx and Redis shows
-that PLATyPUs incurs no more than 0.5% overhead.
-ARTIFACT ARTIFACT ARTIFACT
-EVALUATED EVALUATED EVALUATED
-FUNCTIONAL REPRODUCED
-s-Module Transitions to Mitigate Code-Reuse Attacks
-Marcos Bajo Christian Rossow
-CISPA Helmhol:
-for Information §
-CISPA Helmholtz Center
-for Information Security
-legitimate, precomputed transfers at runtime. Numerous CFI
-schemes have been proposed in recent years. These schemes
-are typically categorized based on the strictness of their
-CFGs as either coarse-grained or fine-grained, with the
-latter raising the bar for successful exploitation consider-
-ably. Despite extensive academic efforts to develop fine-
-grained CFI techniques, their adoption in practice remains
-notably limited [15]. core reason for this is their lack
-of robust support for interoperability between protected and
-unprotected code [10], [46], a c al requirement in real-
-world environments where instrumented applications must
-frequently interact with third-party libraries.
-Therefore, the vast majority of modern software relies
-on coarse-grained CFI schemes as the primary line of de-
-fense. The prevailing solutions, whose adoption is steadily
-increasing and is expected to become the default for fu-
-ture systems on the two most popular architectures are In-
-tel’s Control-Flow Enforcement Technology (CET) [40] and
-Arm’s Branch Target Identification (BTI) [11], resp
-Both restrict the modularity of code-reuse gadgets to entire
-functions. This restriction is significant, as it complicates an
-attacker’s ability to set up the necessary function arguments
-despite successfully hijacking control flow. Nonetheless,
-2026
-130
-```
