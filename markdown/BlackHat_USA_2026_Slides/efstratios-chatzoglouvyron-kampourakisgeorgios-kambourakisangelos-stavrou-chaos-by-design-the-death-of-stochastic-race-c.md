@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.4
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 22
+vision_verified_pages: 22
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,7 +31,9 @@ converted_at: "2026-08-12T05:32:45Z"
 
 ## Slide 1
 
-Chaos by Design: The Death of Stochastic Race Conditions in HTTP/3 Efstratios Chatzoglou
+# Chaos by Design: The Death of Stochastic Race Conditions in HTTP/3
+
+Efstratios Chatzoglou
 
 ## Slide 2
 
@@ -43,8 +47,6 @@ Prior Single-Packet Attacks (SPA) over HTTP/2 focus exclusively on network-layer
 
 Instead of battling transport jitter, our research introduces Server-Side Race Orchestration (SSRO) and Temporal Hijacking attacks. By hijacking HTTP/3 native primitives (QPACK – RFC 9204) and RFC 7540/9218 scheduling policies, we force the proxy's internal memory to queue and align the requests for us, eliminating network jitter entirely.
 
-2
-
 ## Slide 3
 
 # Shifting the Timing Window
@@ -57,15 +59,13 @@ Instead of battling transport jitter, our research introduces Server-Side Race O
 
 - By forcing the server to queue and buffer requests inside its RAM before atomic execution, we achieve sub-microsecond synchronization that renders network jitter completely obsolete.
 
-3
-
 ## Slide 4
 
 # Connection vs Stream Multiplexing
 
 ### **QUIC Transport**
 
-Ditches underlying TCP for UDP, removing headof-line blocking natively at the transport packet level.
+Ditches underlying TCP for UDP, removing head-of-line blocking natively at the transport packet level.
 
 ### **Independent Streams**
 
@@ -79,67 +79,65 @@ The edge proxy must process multiple concurrent (independent) streams using an i
 
 This scheduling dependency creates a local queuing mechanism in server memory, ready for exploitation.
 
-4
-
 ## Slide 5
 
 # HTTP/3 Priority (RFC 9218)
 
-5
+**HTTP/3 Prioritization — RFC 9218**
 
+*Only the essential communication flow*
 
-> Recovered by OCR — confidence 92/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Client / Browser**
 
-```text
-HTTP/S Priority (RFC 9218)
-HTTP/3 Prioritization — RFC 9218
-Only the essential communication flow
-Request Stream (Client — Server)
-(i) Priority header =
-end-to-end signal
-GET /style.css
-Priority: u=0
-GET /image.jpg
-Priority: u=5, i
-Client Control Stream (Client — Server)
->
-e client can change priority later
-e sent only by client HTTP/3 Server
-ooo’ Response Stream (Server — Client) es
-Client / Browser a |
-Response: /style.css Response: /image.jpg
-/ (Higher priority: u=0) (Lower priority: u=5, i)
-Sent First Sent Later
-Priority Basics Server scheduling example
-u = urgency (0 highest, 7 lowest, default 3)
-i = incremental (can be processed in chunks)
-Lower u value = higher priority Priority is a hint, not a guarantee
-black hat
-```
+**HTTP/3 Server**
+
+**Request Stream (Client → Server)**
+
+- GET /style.css — Priority: u=0
+- GET /image.jpg — Priority: u=5, i
+- Priority header = end-to-end signal
+
+**Client Control Stream (Client → Server)**
+
+- PRIORITY_UPDATE
+- client can change priority later
+- sent only by client
+
+**Response Stream (Server → Client)**
+
+- Response: /style.css (Higher priority: u=0) — Sent First
+- Response: /image.jpg (Lower priority: u=5, i) — Sent Later
+
+**Priority Basics**
+
+- u = urgency (0 highest, 7 lowest, default 3)
+- i = incremental (can be processed in chunks)
+- Lower u value = higher priority
+
+**Server scheduling example**
+
+- CSS u=0 → Image u=5,i
+- Priority is a hint, not a guarantee
 
 ## Slide 6
-
-#####
 
 # Temporal Hijacking: Weaponizing Urgency
 
 ### **Proxy Buffering Hold**
 
+Uses "header-only" transmission states to pre-allocate proxy-to-backend socket channels, letting us freeze request parsing mid-stream.
+
 ### **RFC 9218 Urgency**
-
-### **Priority Updates**
-
-### **Legacy Tree Logic**
-
-Uses "header-only" transmission states to pre-allocate proxy-tobackend socket channels, letting us freeze request parsing mid-stream.
 
 Injects extreme urgency values (u=0 vs u=7) to force late-arriving critical streams to physically leapfrog earlier ones in the memory queue.
 
+### **Priority Updates**
+
 Weaponizes mid-flight PRIORITY_UPDATE frames to dynamically elevate streaming states after the initial handshakes (QUIC/TLS) are completed.
 
-Exploits legacy RFC 7540 weights in 70% of real-life web servers to generate complex scheduling calculations, creating synthetic delays.
+### **Legacy Tree Logic**
 
-6
+Exploits legacy RFC 7540 weights in 70% of real-life web servers to generate complex scheduling calculations, creating synthetic delays.
 
 ## Slide 7
 
@@ -153,8 +151,6 @@ Standard servers process incoming streams using a FIFO sequential queue. Tempora
 
 Because priority modifications occur at the connection layer prior to HTTP parsing, the scheduling calculations take place inside the proxy's native kernel space. This lets adversaries construct race states with precision, completely removing transit jitter.
 
-7
-
 ## Slide 8
 
 # Why Header-Resident Parameters Eliminate Jitter
@@ -165,37 +161,35 @@ Exploitation is significantly more reliable when vulnerable parameters are heade
 
 **The Vulnerability:** If state-changing variables (e.g., user_id, amount) reside in the headers rather than a JSON body, transport-layer synchronization maps perfectly to application-layer execution, completely neutralizing application-layer parsing jitter.
 
-8
+**Top Path (Header-Resident):** HTTP/3 Stream → Proxy Parser (Atomic Metadata) → Immediate Workers Dispatch (Zero Jitter) — LOW JITTER
+
+**Bottom Path (Body-Resident):** HTTP/3 Stream → Proxy Parser → JSON/Form Stream Reassembly Buffer → Stochastic Application Jitter — HIGH JITTER
+
+ADDED BUFFERING + VARIABLE DELAY
 
 ## Slide 9
 
 # HTTP/3 QPACK (RFC 9204)
 
-9
+**QPACK in HTTP/3 (RFC 9204)**
 
+*Simple architecture overview*
 
-> Recovered by OCR — confidence 87/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Sender / Encoder**
 
-```text
-HTTP/3 QPACK (RFC 9204)
-QPACK in HTTP/3 (RFC 9204)
-Simple architecture overview
-Request Stream
-®) { Header Block | ®) >
-Encoder Stream
-®) [ dynamic table updates ————-
-Sender / Receiver /
-Encoder Decoder Stream Decoder
-q acknowledgements / cancellation S)
-Dynamic Table Dynamic Table
-(Encoder) (Decoder)
-T
-Static Table
-(shared)
-CO) RFC 9204 separates header blocks from table updates, reducing head-of-line sing. |
-black hat
-2026 9
-```
+**Receiver / Decoder**
+
+**Request Stream** — Header Block
+
+**Encoder Stream** — dynamic table updates
+
+**Decoder Stream** — acknowledgements / cancellation
+
+**Dynamic Table (Encoder)** — kept in sync — **Dynamic Table (Decoder)**
+
+**Static Table (shared)**
+
+RFC 9204 separates header blocks from table updates, reducing head-of-line blocking.
 
 ## Slide 10
 
@@ -203,29 +197,29 @@ black hat
 
 ### **HPACK (HTTP/2)**
 
-Designed for **TCP (RFC 7541)** . Requires strict, in-order delivery at the transport layer. A single lost packet stalls the entire compression state (HoL blocking).
+Designed for **TCP (RFC 7541)**. Requires strict, in-order delivery at the transport layer. A single lost packet stalls the entire compression state (HoL blocking).
 
 Transport: SEQUENTIAL
 
 ### **QPACK (HTTP/3)**
 
-Designed for **QUIC/UDP (RFC 9204)** . Handles out-of-order delivery. Introduces asynchronous header decoding using dynamic table state tracking.
+Designed for **QUIC/UDP (RFC 9204)**. Handles out-of-order delivery. Introduces asynchronous header decoding using dynamic table state tracking.
 
 Transport: ASYNCHRONOUS
 
 ***The Pivot:** RFC 9204 was designed to _prevent_ HoL blocking. We turn it upside down to create HoL blocking on purpose, pausing requests in the proxy's memory.
 
-10
-
 ## Slide 11
 
 # The "Waiting Room" Mechanic
 
-**Required Insert Count (RIC)** If a header block references a dynamic table entry the decoder hasn't acknowledged, the stream **must block** . The request sits in the proxy memory, fully parsed but undispatched.
+**Required Insert Count (RIC)**
 
-𝑅𝐼𝐶 > 𝐼𝑛𝑠𝑒𝑟𝑡𝐶𝑜𝑢𝑛𝑡 𝑑𝑒𝑐𝑜𝑑𝑒𝑟 → 𝑆𝑇𝑅𝐸𝐴𝑀𝐵𝐿𝑂𝐶𝐾𝐸𝐷
+If a header block references a dynamic table entry the decoder hasn't acknowledged, the stream **must block**. The request sits in the proxy memory, fully parsed but undispatched.
 
-11 https://www.istockphoto.com/photos/spa-reception-waiting-area
+RIC > InsertCount_decoder → STREAM_BLOCKED
+
+https://www.istockphoto.com/photos/spa-reception-waiting-area
 
 ## Slide 12
 
@@ -241,8 +235,6 @@ Transport: ASYNCHRONOUS
 
 - **QPACK + Priority:** Combining HoL blocking (QPACK Blocked Streams) with u=0 flags for near-zero internal dispatch latency.
 
-12
-
 ## Slide 13
 
 # The Proxy Trap: Why SSRO Defeats Proxy Buffering
@@ -250,100 +242,63 @@ Transport: ASYNCHRONOUS
 **Proxy Buffering vs. Race Success Rates**
 
 Envoy
+
 NGINX
-0% 20% 40% 60% 80% 100%
-SSRO Var 1/2 Traditional SPA
+
+0% 20% 40% 60% 80% 100% 120%
+
+SSRO Var 1/2 · Traditional SPA
+
 All scenarios and backends
-
-120%
-
-13
 
 ## Slide 14
 
 # Multiplying Exploit Windows with SSRO
 
-|**Attack Variant**|**Proxy**|**Backend**|**Exploitation Class**|**Empirical Yield**|**Predictability**
-**Metrics (CV)***|
+| Attack Variant | Proxy | Backend | Exploitation Class | Empirical Yield | Predictability Metrics (CV)* |
 |---|---|---|---|---|---|
-|**Var 1: QPACK**
-**HoL Block**|Envoy|Go, .NET,
-FastAPI|Double Spend|96.4% Success|0.31 (High)|
-|**Var 2: Dynamic**
-**Table Saturation**|NGINX|Spring,
-LSPHP|State Inversion|90.0% Success|0.03 (Perfect)|
-|**Var 2: Dynamic**
-**Table Saturation**|NGINX|Spring,
-LSPHP|Double Spend|Experimental Peak|0.21 (Superior)|
-|**Var 3: Cross-**
-**Protocol**|HAProxy|All Runtimes|Limit Overrun|16.4x Multiplier|0.42 (Moderate)|
-|**Var 4: JSON**
-**Padding**|Asynchronous
-Logic Bypass|Go, .NET,
-FastAPI|Payload-Induced
-Latency|Latency Pipeline
-Multiplier|_N/A (Varies per_
-_target)_|
-|**Var 5: QPACK**
-**Block + RFC 9218**
-**Priority**|HAProxy|Go, FastAPI|Double Spend|95.0% Success|0.28 (High)|
-
-14
+| **Var 1: QPACK HoL Block** | Envoy | Go, .NET, FastAPI | Double Spend | 96.4% Success | 0.31 (High) |
+| **Var 2: Dynamic Table Saturation** | NGINX | Spring, LSPHP | State Inversion | 90.0% Success | 0.03 (Perfect) |
+| **Var 2: Dynamic Table Saturation** | NGINX | Spring, LSPHP | Double Spend | Experimental Peak | 0.21 (Superior) |
+| **Var 3: Cross-Protocol** | HAProxy | All Runtimes | Limit Overrun | 16.4x Multiplier | 0.42 (Moderate) |
+| **Var 4: JSON Padding** | Asynchronous Logic Bypass | Go, .NET, FastAPI | Payload-Induced Latency | Latency Pipeline Multiplier | _N/A (Varies per target)_ |
+| **Var 5: QPACK Block + RFC 9218 Priority** | HAProxy | Go, FastAPI | Double Spend | 95.0% Success | 0.28 (High) |
 
 ## Slide 15
 
 # Multiplying Exploit Windows with SSRO
 
-|**Stack**|**DB**|**# JSON Success**
-**JSO**|**N (ms)**
-**# JS**|**ON Success**|**JSON (ms)**|**EEM**|
+| Stack | DB | # JSON Success | JSON (ms) | # JSON Success | JSON (ms) | EEM |
 |---|---|---|---|---|---|---|
-|||**SPA H2**||**SSRO va**|**r4**||
-|**Spring**|MySQL|10|225|11|231|1.1x|
-|**Spring**|Postgres|10|230|12|221|1.2x|
-|**Go**|**MySQL**|**1**|**290**|**10**|**294**|**10.0x**|
-|**Go**|**Postgres**|**1**|**298**|**10**|**295**|**10.0x**|
-|**LSPHP**|MySQL|2|248|0|242|0.0x|
-|**LSPHP**|Postgres|2|325|6|248|3.0x|
-|**.NET**|**MySQL**|**20**|**231**|**83**|**228**|**4.2x**|
-|**.NET**|Postgres|1|623|1|319|1.0x|
-|**FastAPI**|MySQL|15|251|20|287|1.3x|
-|**FastAPI**|**Postgres**|**1**|**488**|**20**|**260**|**20.0x**|
-
-15
+| | | SPA H2 | | SSRO var4 | | |
+| **Spring** | MySQL | 10 | 225 | 11 | 231 | 1.1x |
+| **Spring** | Postgres | 10 | 230 | 12 | 221 | 1.2x |
+| **Go** | **MySQL** | **1** | **290** | **10** | **294** | **10.0x** |
+| **Go** | **Postgres** | **1** | **298** | **10** | **295** | **10.0x** |
+| **LSPHP** | MySQL | 2 | 248 | 0 | 242 | 0.0x |
+| **LSPHP** | Postgres | 2 | 325 | 6 | 248 | 3.0x |
+| **.NET** | **MySQL** | **20** | **231** | **83** | **228** | **4.2x** |
+| **.NET** | Postgres | 1 | 623 | 1 | 319 | 1.0x |
+| **FastAPI** | MySQL | 15 | 251 | 20 | 287 | 1.3x |
+| **FastAPI** | **Postgres** | **1** | **488** | **20** | **260** | **20.0x** |
 
 ## Slide 16
 
 # Multiplying Exploit Windows with SSRO
 
-|**Stack**|**DB**
-**# JSON Success**
-**JSO**|**N (ms)**
-**# JS**|**ON Success**|**JSON (ms)**|**EEM**|
-|---|---|---|---|---|---|
-||**SPA H3**||**SSRO va**|**r4**||
-|**Spring**|MySQL
-11|99|11|86|1.0x|
-|**Spring**|Postgres
-9|320|11|90|1.2x|
-|**Go**|**MySQL**
-**1**|**35**|**10**|**104**|**10.0x**|
-|**Go**|**Postgres**
-**1**|**140**|**10**|**106**|**10.0x**|
-|**LSPHP**|MySQL
-8|202|8|175|1.0x|
-|**LSPHP**|Postgres
-2|549|2|429|1.0x|
-|**.NET**|**MySQL**
-**5**|**90**|**31**|**85**|**6.2x**|
-|**.NET**|Postgres
-1|647|1|320|1.0x|
-|**FastAPI**|MySQL
-20|134|20|118|1.0x|
-|**FastAPI**|**Postgres**
-**1**|**383**|**20**|**149**|**20.0x**|
-
-16
+| Stack | DB | # JSON Success | JSON (ms) | # JSON Success | JSON (ms) | EEM |
+|---|---|---|---|---|---|---|
+| | | SPA H3 | | SSRO var4 | | |
+| **Spring** | MySQL | 11 | 99 | 11 | 86 | 1.0x |
+| **Spring** | Postgres | 9 | 320 | 11 | 90 | 1.2x |
+| **Go** | **MySQL** | **1** | **35** | **10** | **104** | **10.0x** |
+| **Go** | **Postgres** | **1** | **140** | **10** | **106** | **10.0x** |
+| **LSPHP** | MySQL | 8 | 202 | 8 | 175 | 1.0x |
+| **LSPHP** | Postgres | 2 | 549 | 2 | 429 | 1.0x |
+| **.NET** | **MySQL** | **5** | **90** | **31** | **85** | **6.2x** |
+| **.NET** | Postgres | 1 | 647 | 1 | 320 | 1.0x |
+| **FastAPI** | MySQL | 20 | 134 | 20 | 118 | 1.0x |
+| **FastAPI** | **Postgres** | **1** | **383** | **20** | **149** | **20.0x** |
 
 ## Slide 17
 
@@ -351,17 +306,15 @@ _target)_|
 
 ### **The Transport Immunity Myth**
 
+Developers frequently assume that because their inner application runtimes are locked to legacy **HTTP/1.1** and lack native HTTP/3 multiplexing capabilities, they are structurally immune to modern protocol timing attacks. They falsely rely on upstream protocol translation as a security boundary.
+
 ### **The Memory-to-Socket Railgun**
+
+The edge proxy acts as an inadvertent attack amplifier by acting as a **network jitter eraser**. It absorbs fragmented, high-jitter wide-area network (WAN) HTTP/3 streams, reorganizes them cleanly inside its local RAM using QPACK/Priority primitives, and instantly maps the unblocked payloads onto parallel upstream HTTP/1.1 TCP connections over an ultra-low-latency cloud LAN.
 
 ### **Systemic Target Expansion**
 
-Developers frequently assume that because their inner application runtimes are locked to legacy **HTTP/1.1** and lack native HTTP/3 multiplexing capabilities, they are structurally immune to modern protocol timing attacks. They falsely rely on upstream protocol translation as a security boundary.
-
-The acts as an edge proxy inadvertent attack amplifier by acting as a **network jitter eraser** . It absorbs fragmented, high-jitter wide-area network (WAN) HTTP/3 streams, reorganizes them cleanly inside its local RAM using QPACK/Priority primitives, and instantly maps the unblocked payloads onto parallel upstream HTTP/1.1 TCP connections over an ultra-low-latency cloud LAN.
-
-This architectural gap completely shatters traditional threat modeling scope. The vulnerability is no longer restricted to bleeding-edge, end-to-end HTTP/3 stacks— **every legacy enterprise backend deployment sitting behind a modern, H3-enabled load balancer or reverse proxy is critically exposed.**
-
-17
+This architectural gap completely shatters traditional threat modeling scope. The vulnerability is no longer restricted to bleeding-edge, end-to-end HTTP/3 stacks—**every legacy enterprise backend deployment sitting behind a modern, H3-enabled load balancer or reverse proxy is critically exposed.**
 
 ## Slide 18
 
@@ -377,36 +330,23 @@ This architectural gap completely shatters traditional threat modeling scope. Th
 
 - Visual Check: Watch the network traffic visibly pause as requests freeze in the proxy's memory, followed by a zero-jitter burst that executes a massive double-spend attack.
 
-18
-
 ## Slide 19
 
-Live Demo
-
-19
+# Live Demo
 
 ## Slide 20
 
 # Global Scanning Data & The Vendor Coordination Breakdown
 
-100
-90
-80
-70
-60
-50
-40
-30
-20
-10
-0
-Domains: Adhere to Domains: Fully Vulnerable Remaining Domains:
-Route Priorities (RFC QPACK Parameters Strict Connection Limits
-9218) Set
+100 90 80 70 60 50 40 30 20 10 0
+
+Domains: Adhere to Route Priorities (RFC 9218)
+
+Domains: Fully Vulnerable QPACK Parameters
+
+Remaining Domains: Strict Connection Limits Set
 
 Coordinated disclosure via CERT/CC was met with pushback. Vendors dismissed stream prioritization flaws as "working as intended," creating an unpatched protocol-layer vulnerability.
-
-20
 
 ## Slide 21
 
@@ -426,7 +366,7 @@ Coordinated disclosure via CERT/CC was met with pushback. Vendors dismissed stre
 
 - Thread-per-process architectures (like legacy LSPHP) offer higher natural resistance but are highly inefficient.
 
-- **The 67% Database Resilience Variance:**
+#### **The 67% Database Resilience Variance:**
 
 - MySQL (Failed): Permitted up to 16.4x drains due to weaker default concurrency controls.
 
@@ -440,8 +380,6 @@ Coordinated disclosure via CERT/CC was met with pushback. Vendors dismissed stre
 
 - Warning: Distributed environments must use true distributed locks (Redlock); native single-threaded Redis execution is not a safety guarantee against SSRO.
 
-21
-
 ## Slide 22
 
 # Conclusion & Q&A
@@ -452,6 +390,5 @@ Coordinated disclosure via CERT/CC was met with pushback. Vendors dismissed stre
 
 - **The Defense:** Mitigation requires strict proxy tuning and explicit database-layer isolation.
 
-- **TimeOrch** : https://github.com/efchatz/timeorch
+- **TimeOrch**: https://github.com/efchatz/timeorch
 
-22

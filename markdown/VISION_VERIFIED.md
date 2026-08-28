@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4046 slides across 181 documents.**
+**4068 slides across 182 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 1988 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1526 | structure held; individual characters or lines wrong |
+| minor-errors | 1548 | structure held; individual characters or lines wrong |
 | accurate | 504 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -58,7 +58,7 @@ under more than one heading or under none. Counts are slides.
 - **No Socket, No Privs, No Problem Weaponizing OCI Registries for SSRF, Credential Theft, and Container E** (DEF CON 34) — slides 1-32
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 
-### Web and browser — 16 talks, 253 slides
+### Web and browser — 17 talks, 275 slides
 
 - **Attacking WebAssembly Compiler of Webkit** (Black Hat ASIA 2023) — slides 11-12
 - **New Wine in an Old Bottle Attacking Chrome WebSQL** (Black Hat ASIA 2023) — slide 35
@@ -72,6 +72,7 @@ under more than one heading or under none. Counts are slides.
 - **Detecting Taint-Style Vulnerabilities in Microservice-Structured Web Applications** (Black Hat USA 2025) — slide 38
 - **Ghost Calls Abusing Web Conferencing for Covert Command & Control** (Black Hat USA 2025) — slides 60, 80, 82
 - **Attacking and Defending AI Browsers** (Black Hat USA 2026) — slides 1-45
+- **Chaos by Design The Death of Stochastic Race Conditions in HTTP3** (Black Hat USA 2026) — slides 1-22
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
@@ -277,6 +278,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
 | Black Hat USA 2026 | Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration | 1-31 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Chaos by Design The Death of Stochastic Race Conditions in HTTP3 | 1-22 | minor-errors | 0 |
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
