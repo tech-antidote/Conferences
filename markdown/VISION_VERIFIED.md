@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4663 slides across 195 documents.**
+**4703 slides across 196 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2045 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2036 | structure held; individual characters or lines wrong |
+| badly-mangled | 2048 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2073 | structure held; individual characters or lines wrong |
 | accurate | 554 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -292,6 +292,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting | 1-40 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream | 1-46 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover | 1-50 | badly-mangled, minor-errors | 0 |
