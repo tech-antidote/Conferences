@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4856 slides across 200 documents.**
+**4876 slides across 201 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2059 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2171 | structure held; individual characters or lines wrong |
+| badly-mangled | 2063 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2187 | structure held; individual characters or lines wrong |
 | accurate | 598 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -294,6 +294,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware | 1-18 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone | 1-20 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting | 1-40 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
