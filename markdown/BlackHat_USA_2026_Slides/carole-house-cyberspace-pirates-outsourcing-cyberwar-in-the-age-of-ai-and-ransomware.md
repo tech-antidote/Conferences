@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 78.2
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 18
+vision_verified_pages: 18
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -33,25 +35,9 @@ converted_at: "2026-08-12T05:29:39Z"
 
 ### Outsourcing Cyberwar in the Age of AI and Ransomware
 
-1
-
 ## Slide 2
 
 ## HACKING THE HACKERS
-
-2
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-HACKING THE HACKERS
-| STARLINK TERMINAL
-2 UPLINK ACTIVE
-185.220.101.8
-ETH 3,621.17
-TOTAL U $15,780,392
-```
 
 ## Slide 3
 
@@ -65,49 +51,29 @@ TOTAL U $15,780,392
 
 - Regulatory advisor (CFTC, New York, Idaho) + California Governor's Innovation Council
 
-3
-
 ## Slide 4
 
 ## WHY THE KRAKEN IS WINNING
 
-The Scale Mismatch ($, people, time) The Operational Reality (reach and positioning) The Sanctuary Wall (extradition challenges)
+The Scale Mismatch ($, people, time)
+
+The Operational Reality (reach and positioning)
+
+The Sanctuary Wall (extradition challenges)
 
 **BLUF: an architectural mismatch between democratic law and adversarial scale undercuts deterrence**
-
-4
 
 ## Slide 5
 
 ## DEAD RECKONING: THREE SCHISMS, ONE SHIP
 
-######
-
 This is a live, unresolved policy question, with disagreement on many sides.  Illustrative examples:
 
-**Sector**
-
-#### **FOR: Expand/Delegate**
-
-#### **AGAINST: Contain/Government Only**
-
-**Executive Branch**
-
-Trump Admin Cyber Strategy for America (March 6, 2026): “unleash the private sector by creating incentives to identify and disrupt adversary networks and scale our national capabilities”
-
-White House ONCD adviser Thomas Lind, Prague (March 19, 2026): “That does not mean hack back. That does not mean letters of marque.” (Recorded Future News)
-
-**Congress**
-
-#### **Industry & Experts**
-
-H.R. 9697/S. 5000 (Burchett/Lee, July 2026): commission private operators for cyberspace ops, up to 15% asset bounty Stewart Baker (former NSA General Counsel): argues CFAA does not clearly prohibit all active defense; advocates CFAA reform. [**Not support, but a call for rethinking – Matt Pearl (CSIS, 2025): argues capacity gap is real and hack-back authorization deserves reconsideration].
-
-No federal majority to repeal CFAA. DOJ has consistently enforced 18 U.S.C. §1030 against unauthorized access regardless of target's criminal status.
-
-Alexander Klimburg (CSIS, 2025):  “Shooting without aiming – hack back is not a magic bullet.” Devin Lynch (Aspen Digital, May 2026): letters of marque is “historical cosplay.” Robert Knake (CFR, former NSC): “Instead of hacking back, U.S. companies should let Cyber Command do it for them”
-
-5
+| Sector | FOR: Expand/Delegate | AGAINST: Contain/Government Only |
+|---|---|---|
+| **Executive Branch** | Trump Admin Cyber Strategy for America (March 6, 2026): “unleash the private sector by creating incentives to identify and disrupt adversary networks and scale our national capabilities” | White House ONCD adviser Thomas Lind, Prague (March 19, 2026): “That does not mean hack back. That does not mean letters of marque.” (Recorded Future News) |
+| **Congress** | H.R. 9697/S. 5000 (Burchett/Lee, July 2026): commission private operators for cyberspace ops, up to 15% asset bounty | No federal majority to repeal CFAA. DOJ has consistently enforced 18 U.S.C. §1030 against unauthorized access regardless of target's criminal status. |
+| **Industry & Experts** | Stewart Baker (former NSA General Counsel): argues CFAA does not clearly prohibit all active defense; advocates CFAA reform. [**Not support, but a call for rethinking – Matt Pearl (CSIS, 2025): argues capacity gap is real and hack-back authorization deserves reconsideration]. | Alexander Klimburg (CSIS, 2025):  “Shooting without aiming – hack back is not a magic bullet.” Devin Lynch (Aspen Digital, May 2026): letters of marque is “historical cosplay.” Robert Knake (CFR, former NSC): “Instead of hacking back, U.S. companies should let Cyber Command do it for them” |
 
 ## Slide 6
 
@@ -117,39 +83,41 @@ Alexander Klimburg (CSIS, 2025):  “Shooting without aiming – hack back is no
 
 - Gaps – Authority and Geopolitical Alignment (Strategic); Capacity, Targeting and Escalation Control (Operational); and Legal and Institutional Control (Governance)
 
-- • _Framework grounding: Jensen & Meckling 1976 (principal-agent) and Avant 2005 (conditions for proxy force viability) | Thomson 1994 and Weber 1919 (state monopoly on force)_
+- _Framework grounding: Jensen & Meckling 1976 (principal-agent) and Avant 2005 (conditions for proxy force viability) | Thomson 1994 and Weber 1919 (state monopoly on force)_
 
-**Authority Capacity Governance U.S.** ✓  Art. I, Title 10, X  50:1 against ? **Government** Title 50 China alone **Private** ✓  Scale, tempo, X  CFAA says no ? **Sector** attribution ✓  Deputized ✓  Art. I X  Not **Current Bills** private authorization addressed operators
-
-6
+|  | Authority | Capacity | Governance |
+|---|---|---|---|
+| **U.S. Government** | ✓ Art. I, Title 10, Title 50 | X 50:1 against China alone | ? |
+| **Private Sector** | X CFAA says no | ✓ Scale, tempo, attribution | ? |
+| **Current Bills** | ✓ Art. I authorization | ✓ Deputized private operators | X Not addressed |
 
 ## Slide 7
 
 ## YO HO, YO HO, A BILL FOR ME
 
-- **H.R. 4988** _(Schweikert, Aug 2025)_ : Active defense carve-outs for foreign scam farms
+- **H.R. 4988** _(Schweikert, Aug 2025)_: Active defense carve-outs for foreign scam farms
 
-- **H.R. 9697** _(Burchett, Jul 2026)_ : Formal Letters of Marque for designated cyber threats
+- **H.R. 9697** _(Burchett, Jul 2026)_: Formal Letters of Marque for designated cyber threats
 
-- **S. 5000** _(Lee, Jul 2026)_ : Senate companion; establishes **15% bounty** on recovered foreign assets
-
-7
+- **S. 5000** _(Lee, Jul 2026)_: Senate companion; establishes **15% bounty** on recovered foreign assets
 
 ## Slide 8
 
 ## COMPOUNDING HAZARDS OF DELEGATED FORCE
 
-**Constitutional Foundation** | _Art. I, §8, Cl. 11_ –  Valid power, but un-updated since 1856 (Declaration of Paris unratified) **Hazards:**
+**Constitutional Foundation** | _Art. I, §8, Cl. 11_ –  Valid power, but un-updated since 1856 (Declaration of Paris unratified)
 
-**CFAA Lock** | _18 U.S.C. § 1030_ –  “Outside U.S.” clause creates jurisdictional ambiguity. **Title 10/50 Clash** | Deconfliction with classified military/IC operations
+**Hazards:**
+
+**CFAA Lock** | _18 U.S.C. § 1030_ –  “Outside U.S.” clause creates jurisdictional ambiguity.
+
+**Title 10/50 Clash** | Deconfliction with classified military/IC operations
 
 **State Responsibility** | _Tallinn Manual Rule 17_ –  Attaches state liability where ops are attributable under int’l law.
 
 **Domestic Military Limits** | _Posse Comitatus (18 U.S.C. § 1385)_ – Limits domestic military participation in law enforcement
 
 **AI Governance** –  framework ambiguity
-
-8
 
 ## Slide 9
 
@@ -163,33 +131,17 @@ Alexander Klimburg (CSIS, 2025):  “Shooting without aiming – hack back is no
 
 Source: Journal of the American Revolution
 
-9
-
 ## Slide 10
 
 ## WHY EVERY NAVY EVENTUALLY FIRED ITS PIRATES
 
-**Why States Abandoned Privateering**
-
-**Cyber Analogue** USCYBERCOM (U.S. Cyber Command) expansion — the capacity-building answer
-
-Professional navies built inhouse
-
-Insurance markets refused coverage
-
-Cyber insurers already pushing back on hack-back policies
-
-Five Eyes (U.S., UK, Canada, Neutral shipping attacks Australia, NZ intelligence damaged alliances alliance) infrastructure spillover – same failure mode
-
-State legitimacy: mercenary profit undermined sovereign standing _(Thomson, 1994)_
-
-Formal license publicly brands U.S. sovereignty as for hire
-
-Industrial warfare exceeded private incentive structures
-
-AI makes massive scale achievable – governance requirements scale with it
-
-10
+| Why States Abandoned Privateering | Cyber Analogue |
+|---|---|
+| Professional navies built in-house | USCYBERCOM (U.S. Cyber Command) expansion — the capacity-building answer |
+| Insurance markets refused coverage | Cyber insurers already pushing back on hack-back policies |
+| Neutral shipping attacks damaged alliances | Five Eyes (U.S., UK, Canada, Australia, NZ intelligence alliance) infrastructure spillover – same failure mode |
+| State legitimacy: mercenary profit undermined sovereign standing _(Thomson, 1994)_ | Formal license publicly brands U.S. sovereignty as for hire |
+| Industrial warfare exceeded private incentive structures | AI makes massive scale achievable – governance requirements scale with it |
 
 ## Slide 11
 
@@ -197,15 +149,13 @@ AI makes massive scale achievable – governance requirements scale with it
 
 _Democratic transparency and accountability – feature or bug in this context?_
 
-_Adversary feature_ : state-directed or –tolerated boundary deliberately blurred
+_Adversary feature_: state-directed or –tolerated boundary deliberately blurred
 
 - PRC-linked – Haijun Minbing/People’s Armed Forces Maritime Military; APT41; iSoon
 
 - Iran – IRGC proxies and contractors
 
 - Russia – RaaS and cyber TOC; Revil, Sandworm, FSB tolerance
-
-11
 
 ## Slide 12
 
@@ -217,26 +167,7 @@ _AI removes key constraints:_
 
 - Time to access
 
-• Human oversight
-
-12
-
-
-> Recovered by OCR — confidence 75/100 on the text kept, 48/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-in| > TARGET_SCAN();
-ENUMERATE () ;
-PERSIST();
-EXFILTRATE();
-COVER_TRACKS();
-v
-J
-Al removes key
-° Expertise threshold
-* Time to access
-»« Human oversight
-```
+- Human oversight
 
 ## Slide 13
 
@@ -250,65 +181,33 @@ Al removes key
 
 - **_Constitutional Precedent:_** Leverages explicit Article I authorities to adapt to the realities of asymmetric warfare
 
-13
-
 ## Slide 14
 
 ## BATTEN DOWN THE HATCHES: THE ARGUMENT AGAINST LETTERS OF MARQUE
 
 - **_We Have Alternatives:_** USG (CYBERCOM, NSA, IC, State, Treasury, DHS, Law enforcement), allies
 
-- • **_Shared Infrastructure:_** Cyber C2 is commingled – prize law ambiguity
+- **_Shared Infrastructure:_** Cyber C2 is commingled – prize law ambiguity
 
-- • **_Equities Problem:_** Deconfliction likely very difficult
+- **_Equities Problem:_** Deconfliction likely very difficult
 
-- • **_Sovereignty/Alliance/Collateral Challenge:_** Associating USG with mercenary profit; signals on cyber norms; collateral damage
+- **_Sovereignty/Alliance/Collateral Challenge:_** Associating USG with mercenary profit; signals on cyber norms; collateral damage
 
 - **_Escalation Problem:_** Non-linear escalation through poxy compellence; NATO Art. 5 strategic ambiguity and potential triggers
-
-14
 
 ## Slide 15
 
 ## FIVE STARS TO SAIL HER BY
 
-|**Governance**
-**Factor**|**Pass If**|**Fail If**
-**My Verdict**|
-|---|---|---|
-|**Control**
-_Attribution survives_
-_delegation?_|Direct state command-and-control with pre-
-approved targeting.|Post-hoc reporting or unmonitored private
-targeting.
-**FAIL**|
-|**Liability**
-_Allies/Public_
-_tolerate collateral?_|Strict liability stack with full sovereign
-indemnity.|Private immunity shields that outsource legal
-risk.
-**FAIL**|
-|**Scope**
-_AI ops remain_
-_governable?_|Narrowly defined targets with strict rules of
-engagement.|Broad target categories with unchecked agentic
-execution.
-**FAIL**|
-|**Incentives**
-_Incentives stay_
-_aligned?_|Fixed service contracts with state-managed
-asset recovery.|Bounty splits or private retention of seized digital
-assets rather than return to victims
-**FAIL**|
-|**De-confliction**
-_Intel equities_
-_survive?_|Mandatory pre-strike interagency
-clearinghouse clearance.|Siloed, uncoordinated private offensive strikes.
-**FAIL**|
+| Governance Factor | Pass If | Fail If | My Verdict |
+|---|---|---|---|
+| **Control** _Attribution survives delegation?_ | Direct state command-and-control with pre-approved targeting. | Post-hoc reporting or unmonitored private targeting. |  |
+| **Liability** _Allies/Public tolerate collateral?_ | Strict liability stack with full sovereign indemnity. | Private immunity shields that outsource legal risk. |  |
+| **Scope** _AI ops remain governable?_ | Narrowly defined targets with strict rules of engagement. | Broad target categories with unchecked agentic execution. |  |
+| **Incentives** _Incentives stay aligned?_ | Fixed service contracts with state-managed asset recovery. | Bounty splits or private retention of seized digital assets rather than return to victims |  |
+| **De-confliction** _Intel equities survive?_ | Mandatory pre-strike interagency clearinghouse clearance. | Siloed, uncoordinated private offensive strikes. |  |
 
 _Reflected above are non-comprehensive but illustrative elements most relevant to ongoing legislative and policy debates. Framework of factors around governance evaluation derived from: principal-agent theory (Jensen & Meckling, 1976) | Tallinn Manual Rule 17 | Thomson 1994 | Avant 2005 | RAND / Brookings AI governance scholarship_
-
-15
 
 ## Slide 16
 
@@ -330,32 +229,11 @@ Structure what the private sector is already doing informally
 
 Pass the five governance tests before you call it a solution
 
-16
-
 ## Slide 17
 
 # Thank you
 
 carole@penumbrastrategies.com
-
-17
-
-
-> Recovered by OCR — confidence 76/100 on the text kept, 55/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Thank you
-HIGH VALUE. HEAVILY ARMORED. [toa wir Se
-‘IGNORE.
-SECONDARY TARGET: ee
-SOFT. UNESCORTED. ..
-HIGH PAYLOAD. ae
-FINANCIAL RETURN: . ee a
-MAXIMUM. B
-‘ WHEN THE MONEY
-black hat
-2026 17
-```
 
 ## Slide 18
 
@@ -363,7 +241,7 @@ black hat
 
 ##### **Legislation**
 
-##### <u>H.R. 9697/S. 5000 (July 2026) | H.R. 4988 (August 2025)</u>
+<u>H.R. 9697/S. 5000 (July 2026) | H.R. 4988 (August 2025)</u>
 
 ##### **Policy & Strategy**
 
@@ -379,8 +257,9 @@ black hat
 
 ##### **Scholarly**
 
-<u>Weber, Politics as a Vocation (1919) | Jensen & Meckling, Theory of the Firm (1976) | Olson, Logic of Collective Action (1965) | Schelling, Arms and Influence (1966)</u> | Thomson, Mercenaries Pirates and Sovereigns (1994) | Avant, The Market for Force (2005) | Singer, Corporate Warriors (2003) **Adversary Analysis**
+<u>Weber, Politics as a Vocation (1919) | Jensen & Meckling, Theory of the Firm (1976) | Olson, Logic of Collective Action (1965) | Schelling, Arms and Influence (1966) | Thomson, Mercenaries Pirates and Sovereigns (1994) | Avant, The Market for Force (2005) | Singer, Corporate Warriors (2003)</u>
+
+##### **Adversary Analysis**
 
 <u>CSIS AMTI Maritime Militia | Naval War College, Chinese Maritime Militia (2020) | Atlantic Council 5x5 China Cyber | Sekoia iSoon Ecosystem Report (2024)</u>
 
-18
