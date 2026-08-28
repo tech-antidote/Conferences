@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 91.0
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 50
+vision_verified_pages: 56
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,7 +31,7 @@ converted_at: "2026-08-12T05:45:44Z"
 
 ## Slide 1
 
-Time for A C Krobatics
+Time for **ACK**robatics
 
 Leveraging TCP Timestamps to Improve Remote Timing Attacks
 
@@ -45,8 +47,6 @@ MtE
 
 padding
 
-4
-
 ## Slide 5
 
 MtE
@@ -55,19 +55,11 @@ padding
 jitter
 ~ 1 µs
 
-5
-
 ## Slide 6
-
-6
 
 ## Slide 7
 
-7
-
 ## Slide 8
-
-8
 
 ## Slide 9
 
@@ -91,19 +83,15 @@ Building Blocks
 
 **2.** Infer secret based on time
 
-11
-
 ## Slide 12
 
 ##### **Remote** Timing Attacks
 
-   **1.** Send request
+**1.** Send request
 
 **2.** Cry because of jitter
 
 **3.** Measure response time
-
-12
 
 ## Slide 13
 
@@ -113,23 +101,25 @@ Building Blocks
 
 2
 
-13
-
 ## Slide 14
 
 ##### **Example** Remote Timing Attacks
 
 1
 
+Joins private group
+
+Reports security vulnerability
+
+…
+
 2
 
-Joins private group Infers group membership Reports security vulnerability Leaks contents of report
+Infers group membership
+
+Leaks contents of report
 
 …
-
-…
-
-14
 
 ## Slide 15
 
@@ -137,34 +127,27 @@ Joins private group Infers group membership Reports security vulnerability Leaks
 
 Date Header<sup>[5]</sup> (HTTP)
 
-Server-Timing Header<sup>[4]</sup> (HTTP) Timeless Timing Attack<sup>[1]</sup> (TCP)
+Server-Timing Header<sup>[4]</sup> (HTTP)
 
-15
+Timeless Timing Attack<sup>[1]</sup> (TCP)
 
 ## Slide 16
 
 #### Enter: TCP Timestamps
 
-16
-
 ## Slide 17
 
 ##### **What** are TCP Timestamps
 
-17
+Client / Server
 
+TSval=x, TSecr=0 — SYN (Client → Server)
 
-> Recovered by OCR — confidence 86/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+TSval=y, TSecr=x — SYN/ACK (Server → Client)
 
-```text
-What are TCP Timestamps
-TSval=x, TSecr=0
-TSval=y, TSecr=x
-SYN/ACK
-TSval=x+8., TSecr=y
-v Vv
-17
-```
+TSval=x+δc, TSecr=y — ACK (Client → Server)
+
+δc
 
 ## Slide 18
 
@@ -178,8 +161,6 @@ v Vv
 
 **Reducing Time-Wait state**<sup>[13]</sup>
 
-18
-
 ## Slide 19
 
 ##### **Evolution** of TCP Timestamps
@@ -190,11 +171,9 @@ v Vv
 
 2023 - µs timestamps can be enabled using ip route option<sup>[10]</sup>
 
-19
-
 ## Slide 20
 
-# Attack Detail s
+# Attack Details
 
 ## Slide 21
 
@@ -202,17 +181,17 @@ v Vv
 
 Basic Attack
 
-21
+Client / Server
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Timing Attacks Leveraging TCP Timestamps
 3WHS
+
+ACK
+
+ACK
+
+δs
+
 FIN/RST
-21
-```
 
 ## Slide 22
 
@@ -220,64 +199,61 @@ FIN/RST
 
 Runtime Multiplication Enhancement
 
-22
+Client / Server
 
+3WHS
 
-> Recovered by OCR — confidence 91/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+ACK
 
-```text
-Timing Attacks Leveraging TCP Timestamps
-Runtime <——_
-Multiplication
+δ1
+
+ACK
+
+δ2
+
+ACK
+
+δ3
+
+ACK
+
+δ4
+
+ACK
+
+δ5
+
+ACK
+
 FIN/RST
-22
-```
 
 ## Slide 23
 
 ##### Attack **Preconditions**
 
-**>880k**
-
-Servers tested
-
-23
+**>880k** Servers tested
 
 ## Slide 24
 
 ##### Attack **Preconditions**
 
-## **>88%**
-
-TCP Timestamps enabled
-
-24
+**>88%** TCP Timestamps enabled
 
 ## Slide 25
 
 ##### Attack **Preconditions**
 
-## **>99%**
-
-Immediate ACKnowledgement
-
-25
+**>99%** Immediate ACKnowledgement
 
 ## Slide 26
 
 ##### Attack **Preconditions**
 
-## **>95%**
-
-Persistent connections
-
-26
+**>95%** Persistent connections
 
 ## Slide 27
 
-### **HTTP** Specif i cs
-
-27
+### **HTTP** Specifics
 
 ## Slide 28
 
@@ -285,13 +261,11 @@ Persistent connections
 
 Support for non-concurrency (e.g. HTTP/1.1)
 
-28
-
 ## Slide 29
 
 Coalescing **Practicalities** or: how to get all those requests to the server?
 
-29
+Nginx: 1000<sup>[7]</sup>
 
 ## Slide 30
 
@@ -299,11 +273,7 @@ Coalescing **Practicalities** or: how to get all those requests to the server?
 
 TCP segment
 
-30
-
 ## Slide 31
-
-31
 
 ## Slide 32
 
@@ -311,15 +281,11 @@ Coalescing **Practicalities** or: how to get all those requests to the server?
 
 TCP segment size (1,5KB; MSS)
 
-32
-
 ## Slide 33
 
 Coalescing **Practicalities** or: how to get all those requests to the server?
 
-###### TLS frame size (16KB)
-
-33
+TLS frame size (16KB)
 
 ## Slide 34
 
@@ -327,13 +293,9 @@ Coalescing **Practicalities** or: how to get all those requests to the server?
 
 Out-of-order TCP segments (6 MiB default @ AWS ubuntu)
 
-34
-
 ## Slide 35
 
 ##### **Distributed** Attack
-
-35
 
 ## Slide 36
 
@@ -341,13 +303,13 @@ Out-of-order TCP segments (6 MiB default @ AWS ubuntu)
 
 ms timestamps
 
-25 µs → 5 µs 25 µs: >10k requests → 200 requests
+25 µs → 5 µs
+
+25 µs: >10k requests → 200 requests
 
 µs timestamps
 
 25 µs → 750 ns
-
-36
 
 ## Slide 37
 
@@ -355,11 +317,7 @@ Case Studies
 
 ## Slide 38
 
-38
-
 ## Slide 39
-
-39
 
 ## Slide 40
 
@@ -371,35 +329,41 @@ padding
 jitter
 ~ 1 µs
 
-40
-
 ## Slide 41
 
 ##### Case Studies: **Lucky 13**
 
 **transatlantic**
 
-Client: **UK** Server: **USA** Timestamps: **µs** Target: **Embedded Linux Library CVE-2025-32998** assigned
+Client: **UK**
 
-41
+Server: **USA**
+
+Timestamps: **µs**
+
+Target: **Embedded Linux Library**
+
+**CVE-2025-32998** assigned
 
 ## Slide 42
 
 ##### Case Studies: **Lucky 13**
 
-Distinguish 0x00 and 0x01 byte **150ns** with 50k requests
+Distinguish 0x00 and 0x01 byte
+
+**150ns** with 50k requests
 
 Responsibly disclosed
 
 **no response** received
 
-42
-
 ## Slide 43
 
 ##### Case Studies: **OpenSSH**
 
-User enumeration OpenSSHd pre 7.3
+User enumeration
+
+OpenSSHd pre 7.3
 
 decryption<sup>[19]</sup>
 
@@ -407,73 +371,61 @@ bcrypt
 
 sha512
 
-43
-
 ## Slide 44
 
 ##### Case Studies: **OpenSSH**
 
-###### Multiple Clients Timestamps: **ms Distributed** evaluation
+Multiple Clients
 
-44
+Timestamps: **ms**
+
+**Distributed** evaluation
 
 ## Slide 45
 
 ##### Case Studies: **OpenSSH**
 
-Artificial load: **>900 req/s** Results: **Unchanged**
+Artificial load: **>900 req/s**
 
-45
+Results: **Unchanged**
 
 ## Slide 46
 
-Defense
-s
+Defenses
 
 ## Slide 47
 
 ##### Defenses
 
-Send TCP Timestamps **less often** (e.g. [11]) Only hinders the attack slightly
+Send TCP Timestamps **less often** (e.g. [11])
 
-47
+Only hinders the attack slightly
 
 ## Slide 48
 
 ##### Defenses
 
-**Disable** TCP Timestamps RTTM and PAWS stop working
+**Disable** TCP Timestamps
 
-48
+RTTM and PAWS stop working
 
 ## Slide 49
 
 ##### Defenses
 
-**Obfuscate** TCP Timestamps Requires kernel support & Potential middlebox impact
+**Obfuscate** TCP Timestamps
 
-49
+Requires kernel support & Potential middlebox impact
 
 ## Slide 50
 
 ##### Defenses
 
-###### Limited overhead: 20 entries → 95% of connections
-
-50
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Defenses
 Proportion of TCP connections
-N
-10° 10? 10? 10
+
 Estimated max unACKed packets in TCP connection
-Limited overhead: 20 entries » 95% of connections
-50
-```
+
+Limited overhead: 20 entries → 95% of connections
 
 ## Slide 51
 
@@ -483,19 +435,19 @@ Conclusion
 
 ##### Takeaway
 
-Timing Attacks are getting more performant This attack can be performed fully distributed Be careful when exposing time(-related) info
+Timing Attacks are getting more performant
 
-52
+This attack can be performed fully distributed
+
+Be careful when exposing time(-related) info
 
 ## Slide 53
 
 High time to check your servers: use our scripts
 
-53
-
 ## Slide 54
 
-Time for A C Krobatics
+Time for **ACK**robatics
 
 Leveraging TCP Timestamps to Improve Remote Timing Attacks
 
@@ -523,8 +475,6 @@ Leveraging TCP Timestamps to Improve Remote Timing Attacks
 
 <u>https://github.com/iproute2/iproute2/commit/a043bea750026</u>
 
-55
-
 ## Slide 56
 
 ##### Refs 2
@@ -533,20 +483,19 @@ Leveraging TCP Timestamps to Improve Remote Timing Attacks
 
 [12] D. Borman, R. T. Braden, V. Jacobson, and R. Scheffenegger, “TCP Extensions for High Performance,” RFC 7323, Sep. 2014. [Online]. Available: https://www.rfc-editor.org/info/rfc7323
 
-- [13] F. Gont, “Reducing the TIME-WAIT State Using TCP Timestamps,” RFC 6191, Apr. 2011. [Online]. Available: https://www.rfc-editor. org/info/rfc6191
+[13] F. Gont, “Reducing the TIME-WAIT State Using TCP Timestamps,” RFC 6191, Apr. 2011. [Online]. Available: https://www.rfc-editor. org/info/rfc6191
 
-- [14] S. Shalunov, G. Hazel, J. Iyengar, and M. Kuhlewind, “Low Extra ¨ Delay Background Transport (LEDBAT),” RFC 6817, Dec. 2012. [Online]. Available: https://www.rfc-editor.org/info/rfc6817
+[14] S. Shalunov, G. Hazel, J. Iyengar, and M. Kuhlewind, “Low Extra ¨ Delay Background Transport (LEDBAT),” RFC 6817, Dec. 2012. [Online]. Available: https://www.rfc-editor.org/info/rfc6817
 
-- [15] B. McDanel, “TCP Timestamping and Remotely gathering uptime information,” Mar. 2001, accessed: 06 sept 2024. [Online]. Available: https://seclists.org/bugtraq/2001/Mar/182
+[15] B. McDanel, “TCP Timestamping and Remotely gathering uptime information,” Mar. 2001, accessed: 06 sept 2024. [Online]. Available: https://seclists.org/bugtraq/2001/Mar/182
 
 [16] E. Bursztein, “TCP Timestamp to count hosts behind NAT,” Jan. 2005, accessed: 06 sept 2024. [Online]. Available: http://phrack.org/issues/63/3.html#:∼:text=[%20TCP% 20Timestamp%20To%20count%20Hosts%20behind%20NAT%20]
 
-- [17] G. Wicherski, F. Weingarten, and U. Meyer, “Ip agnostic real-time traffic filtering and host identification using tcp timestamps,” in 38th Annual IEEE Conference on Local Computer Networks, Oct 2013, pp. 647–654
+[17] G. Wicherski, F. Weingarten, and U. Meyer, “Ip agnostic real-time traffic filtering and host identification using tcp timestamps,” in 38th Annual IEEE Conference on Local Computer Networks, Oct 2013, pp. 647–654
 
-- [18] J. Giffin, R. Greenstadt, P. Litwack, and R. Tibbetts, “Covert messaging through tcp timestamps,” in Privacy Enhancing Technologies, R. Dingledine and P. Syverson, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2003, pp. 194–208.
+[18] J. Giffin, R. Greenstadt, P. Litwack, and R. Tibbetts, “Covert messaging through tcp timestamps,” in Privacy Enhancing Technologies, R. Dingledine and P. Syverson, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2003, pp. 194–208.
 
-- [19] <u>https://github.com/openssh/openssh-portable/commit/9286875a73b2de7736b5e50692739d314cd8d9dc</u>
+[19] <u>https://github.com/openssh/openssh-portable/commit/9286875a73b2de7736b5e50692739d314cd8d9dc</u>
 
 Icons used on slides: FontAwesome, <u>https://fontawesome.com/</u>
 
-56

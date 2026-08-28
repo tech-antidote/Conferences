@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4200 slides across 185 documents.**
+**4256 slides across 186 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 1997 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1663 | structure held; individual characters or lines wrong |
-| accurate | 512 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 1713 | structure held; individual characters or lines wrong |
+| accurate | 518 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -125,7 +125,7 @@ under more than one heading or under none. Counts are slides.
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
-### Firmware, hardware and embedded — 25 talks, 567 slides
+### Firmware, hardware and embedded — 26 talks, 623 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -147,6 +147,7 @@ under more than one heading or under none. Counts are slides.
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slides 1-81
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
+- **Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks** (Black Hat USA 2026) — slides 1-56
 - **BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft** (DEF CON 34) — slides 1-54
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Gone in 60 Frames - USB Video Exploitation** (DEF CON 34) — slides 1-30
@@ -304,6 +305,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | ThreatForest: Automated Attack Trees from Source Code | 1-23 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks | 1-56 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |
