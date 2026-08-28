@@ -14,7 +14,7 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 91.5
 ocr_unreliable_blocks: 0
-vision_verified_pages_changed: 43
+vision_verified_pages_changed: 1
 vision_verified_pages: 44
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -908,6 +908,8 @@ All prompts and tool calls are logged by the observability platform via OTEL and
 # DEMO
 
 ## Slide 40
+
+This slide carries no title or text of its own.
 
 ## Slide 41
 

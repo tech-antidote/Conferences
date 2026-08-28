@@ -8,9 +8,9 @@ judgement of the OCR text, not of the slide.
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2052 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2087 | structure held; individual characters or lines wrong |
-| accurate | 554 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2022 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2075 | structure held; individual characters or lines wrong |
+| accurate | 596 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -287,7 +287,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
 | Black Hat USA 2026 | Breaking the Seal Static Deobfuscation of Compiled V8 JavaScript Bytecode Malware | 1-78 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration | 1-31 | badly-mangled, minor-errors, accurate | 2 |
-| Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Chaos by Design The Death of Stochastic Race Conditions in HTTP3 | 1-22 | minor-errors | 0 |
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes | 1-25 | badly-mangled, minor-errors, accurate | 0 |
