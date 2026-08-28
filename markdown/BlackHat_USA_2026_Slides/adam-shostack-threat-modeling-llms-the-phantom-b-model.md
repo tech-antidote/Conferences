@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 91.5
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 56
+vision_verified_pages: 59
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 1
 companion_files: []
@@ -29,19 +31,20 @@ converted_at: "2026-08-12T05:27:08Z"
 
 ## Slide 1
 
-Threat Modeling LLMs The PHANTOM-B Approach Adam Shostack
+Threat Modeling LLMs
+The PHANTOM-B Approach
 
-**1**
+Adam Shostack
 
 ## Slide 2
 
-Threat Modeling LLMs The PHANTOM-B Approach
+Threat Modeling LLMs
+The PHANTOM-B Approach
 
-Blackhat USA August 2026
+Blackhat USA
+August 2026
 
-#### Adam Shostack
-
-**2**
+Adam Shostack
 
 ## Slide 3
 
@@ -61,26 +64,11 @@ The Emperor is most displeased with your lack of AI Progress
 
    - What is PHANTOM-B?
 
-**4**
-
 ## Slide 5
 
 ### About
 
 Don’t just understand security. Build it in.
-
-
-> Recovered by OCR — confidence 94/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-+ASSOCIATES
-Don’t just understand security.
-Build it in.
-About
-Ww
-UNIVERSITY of WASHINGTON
-modeling
-```
 
 ## Slide 6
 
@@ -98,11 +86,9 @@ Threat modeling context
 
 - Applies to LLMs you train or get from Huggingface
 
-**7**
-
 ## Slide 8
 
-How do we threat model?
+### How do we threat model?
 
 - Four Question Framework
 
@@ -120,8 +106,6 @@ How do we threat model?
 
 - Threatmodelingmanifesto.org + Shostack.org/whitepapers
 
-**8**
-
 ## Slide 9
 
 ### Why bother threat modeling LLMs
@@ -134,11 +118,9 @@ How do we threat model?
 
 - So why bother threat modeling LLMs?
 
-**9**
-
 ## Slide 10
 
-Your executives are really scared
+### Your executives are really scared
 
 - AI disruption is real
 
@@ -148,11 +130,9 @@ Your executives are really scared
 
 - We have to ship AI stuff!
 
-**10**
-
 ## Slide 11
 
-Business works better with threat modeling
+### Business works better with threat modeling
 
 - Your developers + leaders don’t understand what can go wrong
 
@@ -168,36 +148,34 @@ Business works better with threat modeling
 
 - Staying focused on what we’re working on is crucial
 
-**11**
-
 ## Slide 12
 
-Threat modeling is the security technique that best survives AI disruptions
-
-**12**
+Threat modeling
+is the security technique that
+best survives AI disruptions
 
 ## Slide 13
 
-Threat modeling can drive risk management
+### Threat modeling can drive risk management
 
-**13**
+**Threat Modeling**
 
+What can go wrong? → Easily Addressed?
 
-> Recovered by OCR — confidence 89/100 on the text kept, 66/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- No → (to Risk Management)
+- Yes → Fix it
 
-```text
-hreat modeling can drive risk management
-‘Threat Modeling Risk Management
-What can go Easily Nt
-Eliminate
-Transfer
-```
+**Risk Management**
+
+Very bad?
+
+- No → Accept
+- Yes → Eliminate / Transfer
 
 ## Slide 14
 
-## LLMs also disrupt threat modeling
-
-**14**
+LLMs also disrupt
+threat modeling
 
 ## Slide 15
 
@@ -219,17 +197,13 @@ Transfer
 
    - Reviewed and wrote at length about available threat catalogs
 
-**15**
-
 ## Slide 16
 
-## Threat modeling LLMs
-
-**17**
+Threat modeling LLMs
 
 ## Slide 17
 
-Four scenarios: Using AI in…
+### Four scenarios: Using AI in…
 
 - Offense (write me a phishing email/malware/etc)
 
@@ -240,11 +214,10 @@ Four scenarios: Using AI in…
 - Business (Today’s focus)
 
 Offense Defense Software Business
-18
 
 ## Slide 18
 
-What are we working on with AI?
+### What are we working on with AI?
 
 - Adding an LLM to our business
 
@@ -258,108 +231,91 @@ What are we working on with AI?
 
 - We should ask “what can go wrong?”
 
-**19**
-
 ## Slide 19
 
-You are here
+MODEL DEPLOYMENT
 
-Huggingface
-Not Here
-
-**20**
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-+
 NOT HERE
-MODEL
-DEPLOYMENT
-Huggingface
+
 YOU ARE HERE
-Test ;
-: est Tests
-: System System
-Fails Test
-20
-```
+
+Trained Model → Huggingface → Integrate model into system → Test ML-enabled System → Passes Tests → ML-enabled System
+
+Test Data (2) → Test ML-enabled System
+
+Test ML-enabled System → Fails Test → Integrate model into system
 
 ## Slide 20
 
-## What can go wrong with AI?
-
-**21**
+What can go wrong with AI?
 
 ## Slide 21
 
-Lots of sweeping talk about AI
-Threat
-Catalogs
-Laws Frameworks
-(EU AI Act) (NIST AI RMF)
-(Harms, Risks) (“Risks”)
-22
+### Lots of sweeping talk about AI
+
+Threat Catalogs
+
+Laws (EU AI Act) (Harms, Risks)
+
+Frameworks (NIST AI RMF) (“Risks”)
 
 ## Slide 22
 
-What are **WE** working on?
+### What are **WE** working on?
 
 Executives
-Laws Frameworks
-(EU AI Act) (NIST AI RMF)
-(Harms, Risks) (“Risks”)
-Threat
+
+Laws (EU AI Act) (Harms, Risks)
+
+Frameworks (NIST AI RMF) (“Risks”)
+
 Engineers
-Catalogs 23
+
+Threat Catalogs
 
 ## Slide 23
 
-Many AI threat catalogs — Ways to answer “what can go wrong”
+### Many AI threat catalogs —
+Ways to answer “what can go wrong”
 
 - Berryville’s ML + LLM Risk Analyses
 
-- • OWASP Top 10 LLMs
+- OWASP Top 10 LLMs
 
 - OWASP AI Exchange
 
-- • MITRE ATLAS
+- MITRE ATLAS
 
 - NIST AIML E2025
 
 - Google SAIF
 
--
-
 - …
 
-Threat
-Catalogs
+Threat Catalogs
 
-Structured ways to answer “What can go wrong” More organized than ”We’ll red team it”
+Structured ways to answer
+“What can go wrong”
+More organized than ”We’ll red team it”
 
 ## Slide 24
 
-## The PHANTOM-B Approach
-
-**25**
+The PHANTOM-B Approach
 
 ## Slide 25
 
-## Why PHANTOM-B?
-
-**26**
+Why PHANTOM-B?
 
 ## Slide 26
 
-## The alternatives suck All models are wrong, some models are useful.
-
-**27**
+~~The alternatives suck~~
+All models are wrong,
+some models are useful.
 
 ## Slide 27
 
-What goes wrong with TM structures? (Each “for some users”)
+### What goes wrong with TM structures?
+(Each “for some users”)
 
 - High training cost (learning is hard)
 
@@ -369,9 +325,9 @@ What goes wrong with TM structures? (Each “for some users”)
 
 - Duplicative/overlaps other frameworks/security work
 
-- • Raises threats which are irrelevant/can’t fix/won’t fix
+- Raises threats which are irrelevant/can’t fix/won’t fix
 
-- – “Academic”
+   - “Academic”
 
 - Low return on investment
 
@@ -381,34 +337,20 @@ What goes wrong with TM structures? (Each “for some users”)
 
 ### PHANTOM-B origin story (1/2)
 
-**29**
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-PHANTOM-B origin story (1/2)
-designing wo: security
-Al world
-EXPANDED AND REVISED
-SECOND EDITION
+threat modeling
+designing for security in an AI world
+EXPANDED AND REVISED SECOND EDITION
 Adam Shostack
 WILEY
-Threat Modeling: Designing for Security in an Al cy
-World
-by Adam Shostack (Author) Format: Paperback
-iy) Savings Pre-order Price Guarantee. Terms
+
+Threat Modeling: Designing for Security in an AI World
+by Adam Shostack (Author) | Format: Paperback
+
+Savings Pre-order Price Guarantee. Terms
+
 A major update to the definitive guide on threat modeling techniques for secure by design
-More than just a second edition, Threat Modeling: Designing for Security in an Al World
-thoroughly updates and expands on Adam Shostack's classic text and structured approach to
-analyzing and designing systems, software, and services for security flaws to address threats
-and technologies that didn’t exist when the first edition published. Most notably every reader
-will benefit from two new chapters covering using LLMs to threat model and exploring threats
-to LLMs, Als, and ML Models themselves. There’s a new deep focus on agile and an expansion
-of who's involved in threat modeling, now including non-technical product owners. All
-told, half of this edition is completely new or heavily revised.
-SHOSTACK 29
-```
+
+More than just a second edition, *Threat Modeling: Designing for Security in an AI World* thoroughly updates and expands on Adam Shostack’s classic text and structured approach to analyzing and designing systems, software, and services for security flaws to address threats and technologies that didn’t exist when the first edition published. Most notably every reader will benefit from two new chapters covering using LLMs to threat model and exploring threats to LLMs, AIs, and ML Models themselves. There’s a new deep focus on agile and an expansion of who’s involved in threat modeling, now including non-technical product owners. All told, half of this edition is completely new or heavily revised.
 
 ## Slide 29
 
@@ -426,8 +368,6 @@ SHOSTACK 29
 
    - PHANTOMED
 
-**30**
-
 ## Slide 30
 
 ### PHANTOM-B is inspired by STRIDE
@@ -438,43 +378,55 @@ SHOSTACK 29
 
 - STRIDE remains broadly applicable
 
-**31**
+STRIDE per Element
+
+| | Spoof | Tamper | Repudiate | Info Disclose | Deny Service | EoP |
+|---|---|---|---|---|---|---|
+| External Entity | ● | | ● | | | |
+| Process | ● | ● | ● | ● | ● | ● |
+| Data Store | | ● | ? | ● | ● | |
+| Dataflow | | ● | | ● | ● | |
+
+THREATS: What Every Engineer Should Learn From Star Wars
 
 ## Slide 31
 
-PHANTOM-B identifies: “What can go wrong deploying AI?”
+### PHANTOM-B identifies: “What can go wrong deploying AI?”
 
-Prompt injection Hallucination
+**P**rompt injection
+
+**H**allucination
+
+**A**nthropomorphization
+
+**N**on-explainable
+
+**T**raining issues
+
+**O**ver-reliance
+
+**M**issing security engineering
+
+**B**ias
 
 - Free to use (CC-BY)
 
 - Memorable
 
-Anthropomorphization
-
 - 100% threat-focused
-
-Non-explainable
-
-Training issues
-
-Over-reliance
-
-Missing security engineering Bias
 
 - Fits on a wallet card
 
 PHANTOM-B threat modeling framework
-> P rompt injection
-> H allucination
-> A nthropomorphization
-> N on-explainability
-> T raining issues (including data quality or “poison”)
-> O ver-reliance on the LLM
-> M issing security engineering
-> B iases
 
-**32**
+> **P**rompt injection
+> **H**allucination
+> **A**nthropomorphization
+> **N**on-explainability
+> **T**raining issues (including data quality or “poison”)
+> **O**ver-reliance on the LLM
+> **M**issing security engineering
+> **B**iases
 
 ## Slide 32
 
@@ -490,8 +442,6 @@ PHANTOM-B threat modeling framework
 
    - (Not useful for “using chatgpt.com in a browser”)
 
-**33**
-
 ## Slide 33
 
 ### Prompt injection
@@ -506,21 +456,17 @@ PHANTOM-B threat modeling framework
 
    - Unlike SQLi, no deterministic, proven defenses exist
 
-**34**
-
 ## Slide 34
 
 ### Hallucination
 
-- The LLM makes stuff up
+- ~~The LLM makes stuff up~~
 
 - The LLM makes up stuff we don’t like:
 
    - Bad code
 
    - False citations
-
-**35**
 
 ## Slide 35
 
@@ -542,32 +488,21 @@ PHANTOM-B threat modeling framework
 
 - No guilt, no learning, no desire to improve
 
-**36**
-
 ## Slide 36
+
+ByteDance and Alibaba to disable humanlike AI custom agents as new rules loom
+
+With Beijing’s rules on humanlike AI interaction services taking effect on July 15, Doubao and Qwen move to disable customised features
 
 Chew up tokens!
 
-**37**
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 92/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-ByteDance and Alibaba to disable humanlike AI
-custom agents as new rules loom
-With Beijing’s rules on humanlike AI interaction services
-taking effect on July 15, Doubao and Qwen move to disable
-customised features
 arXiv:2604.07729 (cs)
+
 [Submitted on 9 Apr 2026]
-Emotion Concepts and their Function ina
-Large Language Model
-Nicholas Sofroniew, Isaac Kauvar, William Saunders, Runjin Chen, Tom Henighan, Sasha
-Hydrie, Craig Citro, Adam Pearce, Julius Tarng, Wes Gurnee, Joshua Batson, Sam Zimmerman,
-Kelley Rivoire, Kyle Fish, Chris Olah, Jack Lindsey
-SHOSTACK 37
-```
+
+Emotion Concepts and their Function in a Large Language Model
+
+Nicholas Sofroniew, Isaac Kauvar, William Saunders, Runjin Chen, Tom Henighan, Sasha Hydrie, Craig Citro, Adam Pearce, Julius Tarng, Wes Gurnee, Joshua Batson, Sam Zimmerman, Kelley Rivoire, Kyle Fish, Chris Olah, Jack Lindsey
 
 ## Slide 37
 
@@ -591,8 +526,6 @@ SHOSTACK 37
 
    - Courts
 
-**38**
-
 ## Slide 38
 
 ### Training issues
@@ -606,8 +539,6 @@ SHOSTACK 37
 - Data poisoning is “scale invariant” with 250 documents
 
 Souly, et al, Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples, 8 October 2025, _https://arxiv.org/abs/2510.07192_
-
-**39**
 
 ## Slide 39
 
@@ -623,33 +554,17 @@ Souly, et al, Poisoning Attacks on LLMs Require a Near-constant Number of Poison
 
 - Hard to remain vigilant
 
-🤷
+- Your code, your brand 🤷
 
-- Your code, your brand
-
-🤯
-
-- Making decisions about hiring, college admissions, arrests…
-
-**40**
+- Making decisions about hiring, college admissions, arrests… 🤯
 
 ## Slide 40
 
-**41**
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
 Investigations | Jul 17 2026
-Black prisoners are assigned
-harsher living conditions in
-Ontario jails—thanks to Al
-Ontario jails are using a program that claims it can predict
-prisoners’ behaviour, disproportionately putting Black
-prisoners in higher-security facilities
-41
-```
+
+Black prisoners are assigned harsher living conditions in Ontario jails—thanks to AI
+
+Ontario jails are using a program that claims it can predict prisoners’ behaviour, disproportionately putting Black prisoners in higher-security facilities
 
 ## Slide 41
 
@@ -671,20 +586,13 @@ prisoners in higher-security facilities
 
    - Not included in PHANTOM-B because you have other security engineering
 
-**42**
-
 ## Slide 42
 
-**43**
+LLMS WRITE AND TEST OUR CODE
 
+YOU HAVE OTHER SECURITY ENGINEERING, RIGHT?
 
-> Recovered by OCR — confidence 79/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-LEMS WRITE YOU HAVE OTHER
-AND TEST OUR CODE ‘seeunrry ENGINEERING, RIGHT?
-43
-```
+RIGHT?
 
 ## Slide 43
 
@@ -706,13 +614,25 @@ AND TEST OUR CODE ‘seeunrry ENGINEERING, RIGHT?
 
 - Defined by law. Certain decisions have “protected groups”
 
-**44**
-
 ## Slide 44
 
-PHANTOM-B identifies: “What can go wrong deploying AI?” Prompt injection Hallucination Anthropomorphization Non-explainable Training issues Over-reliance Missing security engineering Bias
+### PHANTOM-B identifies: “What can go wrong deploying AI?”
 
-**45**
+**P**rompt injection
+
+**H**allucination
+
+**A**nthropomorphization
+
+**N**on-explainable
+
+**T**raining issues
+
+**O**ver-reliance
+
+**M**issing security engineering
+
+**B**ias
 
 ## Slide 45
 
@@ -724,15 +644,13 @@ PHANTOM-B identifies: “What can go wrong deploying AI?” Prompt injection Hal
 
 - Product-manager or exec suite
 
-**46**
-
 ## Slide 46
 
 ### PHANTOM-B illustrates why TM matters
 
 - Engineering requires tradeoffs between unsatisfiable constraints
 
-   - Features, reliability, speed, cost, quality ... and security
+   - Features, reliability, speed, cost, quality … and security
 
    - Building security in is better than bolting-on controls
 
@@ -744,8 +662,6 @@ PHANTOM-B identifies: “What can go wrong deploying AI?” Prompt injection Hal
 
 - This gives you the most options for what are we going to do
 
-**47**
-
 ## Slide 47
 
 ### Summary
@@ -755,8 +671,6 @@ PHANTOM-B identifies: “What can go wrong deploying AI?” Prompt injection Hal
 - What can go wrong with LLMs requires innovative approaches
 
 - PHANTOM-B balances coverage + accessibility
-
-**48**
 
 ## Slide 48
 
@@ -768,8 +682,6 @@ PHANTOM-B identifies: “What can go wrong deploying AI?” Prompt injection Hal
 
    - Noon tomorrow “The Convergence, Business Hall”
 
-**49**
-
 ## Slide 49
 
 Thank you!
@@ -777,31 +689,38 @@ Thank you!
 ## Slide 50
 
 PHANTOM-B approach to LLM TM
-Questions?
+
 Blackhat USA August 2026
-Slides:
-Shostack.org/blog
+
+Questions?
+
 adam@shostack.org
->  Prompt injection
->  Hallucination
->  Anthropomorphization
->  Non-explainability
->  Training issues (including data quality or “poison”)
->  Over-reliance on the LLM
->  Missing security engineering
->  Biases
-PHANTOM-B
-threat modeling framework
-Wallet cards, book signing at
-Bookstore, 12:45 PM today
-Meetup, The Convergence,
-Noon tomorrow
+
+Slides: Shostack.org/blog
+
+PHANTOM-B threat modeling framework
+
+> **P**rompt injection
+> **H**allucination
+> **A**nthropomorphization
+> **N**on-explainability
+> **T**raining issues (including data quality or “poison”)
+> **O**ver-reliance on the LLM
+> **M**issing security engineering
+> **B**iases
+
+Wallet cards, book signing at Bookstore, 12:45 PM today
+
+Meetup, The Convergence, Noon tomorrow
 
 ## Slide 51
 
-Supporting Materials Shostack + Associates Don’t just understand security. Build it in.
+Supporting Materials
 
-**52**
+Shostack + Associates
+
+Don’t just understand security.
+Build it in.
 
 ## Slide 52
 
@@ -818,8 +737,6 @@ Supporting Materials Shostack + Associates Don’t just understand security. Bui
 - Linkedin Learning
 
 Books free at your library/various subscriptions; Linkedin Learning via work
-
-**53**
 
 ## Slide 53
 
@@ -841,217 +758,107 @@ Books free at your library/various subscriptions; Linkedin Learning via work
 
 - Assessments + analysis
 
-**54**
-
 ## Slide 54
 
-## info@shostack.org shostack.org/contact
+info@shostack.org
 
-**55**
+shostack.org/contact
 
 ## Slide 55
 
-## backup
-
-**56**
+backup
 
 ## Slide 56
 
-**57**
+LLM01:2025 Prompt Injection
+A Prompt Injection Vulnerability occurs when user prompts alter the...
+Read More
 
+LLM02:2025 Sensitive Information Disclosure
+Sensitive information can affect both the LLM and its application...
+Read More
 
-> Recovered by OCR — confidence 94/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+LLM03:2025 Supply Chain
+LLM supply chains are susceptible to various vulnerabilities, which can...
+Read More
 
-```text
-LLM01:2025
-Prompt Injection
-A Prompt Injection
-Vulnerability occurs when
-user prompts alter the...
+LLM04:2025 Data and Model Poisoning
+Data poisoning occurs when pre-training, fine-tuning, or embedding data is...
 Read More
-Excessive
-Agency
-LLM06:2025
-Excessive Agency
-An LLM-based system is
-often granted a degree of
-agency...
+
+LLM05:2025 Improper Output Handling
+Improper Output Handling refers specifically to insufficient validation, sanitization, and...
 Read More
-Sensitive
-Information
-Disclosure
-LLM02:2025
-Sensitive
-Information
-Disclosure
-Sensitive information can
-affect both the LLM and its
-application...
+
+LLM06:2025 Excessive Agency
+An LLM-based system is often granted a degree of agency...
 Read More
-System
-Leakage
-LLM07:2025
-System Prompt
-Leakage
-The system prompt leakage
-vulnerability in LLMs refers
-to the...
+
+LLM07:2025 System Prompt Leakage
+The system prompt leakage vulnerability in LLMs refers to the...
 Read More
-LLM03:2025 Supply
-LLM supply chains are
-susceptible to various
-vulnerabilities, which can...
+
+LLM08:2025 Vector and Embedding Weaknesses
+Vectors and embeddings vulnerabilities present significant security risks in systems...
+
+LLM09:2025 Misinformation
+Misinformation from LLMs poses a core vulnerability for applications relying...
 Read More
-[uumos: 2025 )
-Vector and
-Embedding
-Weaknesses
-LLM08:2025 Vector
-and Embedding
-Weaknesses
-Vectors and embeddings
-vulnerabilities present
-significant security risks in
-systems...
-(umo4: 2028)
-Data and
-LLM04:2025 Data
-and Model
-Data poisoning occurs when
-pre-training, fine-tuning, or
-embedding data is...
+
+LLM10:2025 Unbounded Consumption
+Unbounded Consumption refers to the process where a Large Language...
 Read More
-Misinformation
-LLM09:2025
-Misinformation
-Misinformation from LLMs
-poses a core vulnerability for
-applications relying...
-Read More
-Improper
-Output
-Handling
-LLM05:2025
-Improper Output
-Handling
-Improper Output Handling
-refers specifically to
-insufficient validation,
-sanitization, and...
-Read More
-(mio: 2025 }
-Unbounded
-Consumption
-LLM10:2025
-Unbounded
-Consumption
-Unbounded Consumption
-refers to the process where
-a Large Language...
-Read More
-```
+
+https://genai.owasp.org/llm-top-10/
 
 ## Slide 57
 
-X
-
-X
-
-# X
-
-# X
-
-# X
-
-**58**
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-LLM01:2025
-Prompt Injection
-A Prompt Injection
-Vulnerability occurs when
-user prompts alter the...
+LLM01:2025 Prompt Injection
+A Prompt Injection Vulnerability occurs when user prompts alter the...
 Read More
-Excessive
-Agency
-LLM06:2025
-Excessive Agency
-An LLM-based system is
-often granted a degree of
-agency...
+
+~~LLM02:2025 Sensitive Information Disclosure~~
+Sensitive information can affect both the LLM and its application...
 Read More
-Sensitive
-Information
-Disclosure
-LLM02:2025
-Sensitive
-Information
-Disclosure
-affect bot! LLM and its
-applicati
+
+~~LLM03:2025 Supply Chain~~
+LLM supply chains are susceptible to various vulnerabilities, which can...
 Read More
-System
-Leakage
-LLM07:2025
-System Prompt
-Leakage
-The system pro leakage
-vulnerability in efers
-to the...
+
+LLM04:2025 Data and Model Poisoning
+Data poisoning occurs when pre-training, fine-tuning, or embedding data is...
 Read More
-LLM03:2025 Supply
-LLM supply chains are
-vulneral s, which can...
-[uumos: 2025 )
-Vector and
-Embedding
-Weaknesses
-LLM08:2025 Vector
-and Embedding
-Weaknesses
-Vectors and embeddings
-vulnerabilities present
-significant security risks in
-systems...
-(umo4: 2028)
-Data and
-LLM04:2025 Data
-and Model
-Data poisoning occurs when
-pre-training, fine-tuning, or
-embedding data is...
+
+~~LLM05:2025 Improper Output Handling~~
+Improper Output Handling refers specifically to insufficient validation, sanitization, and...
 Read More
-Misinformation
-LLM09:2025
-Misinformation
-Misinformation from LLMs
-poses a core vulnerability for
-applications relying...
+
+LLM06:2025 Excessive Agency
+An LLM-based system is often granted a degree of agency...
 Read More
-Improper
-Output
-Handling
-LLM05:2025
-Improper Output
-sanitization, and...
+
+~~LLM07:2025 System Prompt Leakage~~
+The system prompt leakage vulnerability in LLMs refers to the...
 Read More
-Unbounded
-Consumption
-LLM10:2025
-Unbounded
-Consumptio
-Unbounded Consugpti
-refers to the process where
-a Large Language...
+
+LLM08:2025 Vector and Embedding Weaknesses
+Vectors and embeddings vulnerabilities present significant security risks in systems...
+
+LLM09:2025 Misinformation
+Misinformation from LLMs poses a core vulnerability for applications relying...
 Read More
-```
+
+~~LLM10:2025 Unbounded Consumption~~
+Unbounded Consumption refers to the process where a Large Language...
+Read More
+
+https://genai.owasp.org/llm-top-10/
 
 ## Slide 58
 
-- Berryville Institute of Machine Learning • Think tank of security + ML experts studying machine learning sec <u>https://berryvilleiml.com/</u>
+### Berryville Institute of Machine Learning
+
+- Think tank of security + ML experts studying machine learning sec https://berryvilleiml.com/
 
 - Taxonomy of threats (2019)
 
@@ -1065,169 +872,102 @@ Read More
 
 - Elevation of ML card deck!
 
-https://agilestationery.com/collections/security/products /elevation-of-machine-learning-security-card-game
-
 - Annotated bibliography
 
-**59**
+https://agilestationery.com/collections/security/products/elevation-of-machine-learning-security-card-game
 
 ## Slide 59
 
-**60**
+ATLAS Matrix for AI Systems
 
+Subtechniques: Expand All | Collapse All
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Filter by Maturity: Feasible — Demonstrated
 
-```text
-ATLAS Matrix for Al Systems
-Reconnaissance®
-8 techniques
-Resource
-Development®
-13 techniques
-Initial
-Access®
-7 techniques
-Al Model
-Access
-4 techniques
-Execution®
-6 techniques
-Subtechniques
-Expand All
-Persistence®
-9 techniques
-Privilege
-Escalation®
-4 techniques
-Collapse All
-Defense
-Evasion®
-15 techniques
-Filler Dy Ivia@lLUrily
-Feasible Demons
-Access®
-6 techniques 9 techniques
-Active
-Gather RAG-Indexed
-Targets
-Gather Victim
-Identity
-Information &
-Search Application
-Repositories
-Search Open Al
-Vulnerability
-Analysis
-Search Open
-Technical
-Databases &
-Search Open
-Websites/Domains &
-Search Victim-
-Owned
-Acquire
-Infrastructure
-Acquire Public
-Al
-Artifacts
-Develop
-Capabilities &
-Establish
-Accounts &
-LLM Prompt
-Crafting
-Obtain
-Capabilities ®
-Poison
-Training
-Data
-Publish
-Hallucinated
-Entities
-Al Supply
-Compromise
-Drive-by
-Compromise &
-Evade Al
-Exploit Public-
-Facing
-Application ®
-Phishing & o
-Infiltration via
-Public-Facing
-Application
-Valid
-Accounts &
-Al Model
-Inference
-API
-Access
-Al-Enabled
-Product or
-Service
-Full Al
-Access
-Physical
-Environment
-Access
-Al Agent Al Agent Al Agent
-Clickbait Context Tool
-Poisoning Invocation
-Al Agent
-Tool Al Agent Tool Escape to
-Invocation Data Host &
-Command LLM
-and Al Agent Tool Jailbreak
-Scripting Poisoning
-Interpreter & Valid
-LLM Prompt A &
-Deploy Al Self-Replication counts
-Agent
-gen Manipulate Al
-LLM Model
-Injection Modify Al
-Agent
-User Configuration
-ion &
-Execution Poison Training
-Data
-Infiltration via
-Public-Facing
-Al Supply Chain
-Reputation
-Inflation
-Al Supply Chain
-Rug
-Pull
-Corrupt Al
-Delay Execution
-of LLM
-Instructions
-Evade Al
-Exploitation for
-Defense
-Evasion &
-False RAG Entry
-Impersonation &
-Al Agent Tool Cloud Service
-Credential Discovery &
-Harvesting
-Discover Al
-Credentials Agent
-from Al Configuration
-Agent
-Configuration piscover Al
-Exploitation
-for Discover Al
-Credential Model
-Access & Family
-Os Discover Al
-Credential Model
-RAG Discover Al
-Credential Model
-Unsecured Discover LLM
-Hallucinations
-Discover LLM |
-Credentials &
-```
+**Reconnaissance** (8 techniques)
+- Active Scanning
+- Gather RAG-Indexed Targets
+- Gather Victim Identity Information
+- Search Application Repositories
+- Search Open AI Vulnerability Analysis
+- Search Open Technical Databases
+- Search Open Websites/Domains
+- Search Victim-Owned
+
+**Resource Development** (13 techniques)
+- Acquire Infrastructure
+- Acquire Public AI Artifacts
+- Develop Capabilities
+- Establish Accounts
+- LLM Prompt Crafting
+- Obtain Capabilities
+- Poison Training Data
+- Publish Hallucinated Entities
+
+**Initial Access** (7 techniques)
+- AI Supply Chain Compromise
+- Drive-by Compromise
+- Evade AI Model
+- Exploit Public-Facing Application
+- Phishing
+- Prompt Infiltration via Public-Facing Application
+- Valid Accounts
+
+**AI Model Access** (4 techniques)
+- AI Model Inference API Access
+- AI-Enabled Product or Service
+- Full AI Model Access
+- Physical Environment Access
+
+**Execution** (6 techniques)
+- AI Agent Clickbait
+- AI Agent Tool Invocation
+- Command and Scripting Interpreter
+- Deploy AI Agent
+- LLM Prompt Injection
+- User Execution
+
+**Persistence** (9 techniques)
+- AI Agent Context Poisoning
+- AI Agent Tool Data Poisoning
+- AI Agent Tool Poisoning
+- LLM Prompt Self-Replication
+- Manipulate AI Model
+- Modify AI Agent Configuration
+- Poison Training Data
+- Prompt Infiltration via Public-Facing
+
+**Privilege Escalation** (4 techniques)
+- AI Agent Tool Invocation
+- Escape to Host
+- LLM Jailbreak
+- Valid Accounts
+
+**Defense Evasion** (15 techniques)
+- AI Supply Chain Reputation Inflation
+- AI Supply Chain Rug Pull
+- Corrupt AI Model
+- Delay Execution of LLM Instructions
+- Evade AI Model
+- Exploitation for Defense Evasion
+- False RAG Entry Injection
+- Impersonation
+
+**Credential Access** (6 techniques)
+- AI Agent Tool Credential Harvesting
+- Credentials from AI Agent Configuration
+- Exploitation for Credential Access
+- OS Credential Dumping
+- RAG Credential Harvesting
+- Unsecured Credentials
+
+**Discovery** (9 techniques)
+- Cloud Service Discovery
+- Discover AI Agent Configuration
+- Discover AI Artifacts
+- Discover AI Model Family
+- Discover AI Model Ontology
+- Discover AI Model Outputs
+- Discover LLM Hallucinations
+- Discover LLM System
+
