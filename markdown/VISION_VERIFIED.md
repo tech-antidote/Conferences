@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4118 slides across 183 documents.**
+**4175 slides across 184 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 1989 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1597 | structure held; individual characters or lines wrong |
-| accurate | 504 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 1652 | structure held; individual characters or lines wrong |
+| accurate | 506 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -79,7 +79,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 41 talks, 1267 slides
+### Zero-day, RCE and novel exploitation — 42 talks, 1324 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -106,6 +106,7 @@ under more than one heading or under none. Counts are slides.
 - **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slides 1-71
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
+- **Render Safe Reverse Engineering and Exploiting an EOD Robot** (Black Hat USA 2026) — slides 1-57
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **The Cost of Obscurity Exploiting the ATM Supply Chain** (Black Hat USA 2026) — slides 1-42
@@ -293,6 +294,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
+| Black Hat USA 2026 | Render Safe Reverse Engineering and Exploiting an EOD Robot | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Rules for Neural Traffic A New Defensive Layer for LLMs | 1-52 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Scambuster Social Engineering Scammers at Scale | 1-90 | badly-mangled, minor-errors | 0 |
