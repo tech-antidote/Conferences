@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4793 slides across 199 documents.**
+**4856 slides across 200 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2022 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2145 | structure held; individual characters or lines wrong |
+| badly-mangled | 2059 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2171 | structure held; individual characters or lines wrong |
 | accurate | 598 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -285,6 +285,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices | 1-24 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Breaking Multi-Tenancy Over and Over, and What We Can Learn From This | 1-63 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
 | Black Hat USA 2026 | Breaking the Seal Static Deobfuscation of Compiled V8 JavaScript Bytecode Malware | 1-78 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration | 1-31 | badly-mangled, minor-errors, accurate | 2 |

