@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 93.6
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 44
+vision_verified_pages: 46
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -33,82 +35,85 @@ converted_at: "2026-08-12T05:34:17Z"
 
 Roblox's Infrastructure for **Honoring** User Privacy Rights
 
-**ROBLOX INFOSEC**
-
 ## Slide 2
-
-**ROBLOX INFOSEC**
 
 #### **Who are we**
 
-**We build the infrastructure that operationalizes and fulfills user privacy rights at scale — safely, completely, and provably.**
+We build the infrastructure that operationalizes and fulfills user privacy rights at scale — safely, completely, and provably.
 
-**Hao Zhang Engineering Manager, Privacy Infrastructure**
+**Hao Zhang**
 
-**Yiwen Luo Principal Engineer, Privacy Infrastructure**
+Engineering Manager, Privacy Infrastructure
+
+**Yiwen Luo**
+
+Principal Engineer, Privacy Infrastructure
 
 ## Slide 3
 
 #### **Agenda**
 
-**1**
+**1** Problem Statement
 
-**Problem Statement**
+**2** Privacy infrastructure: A Redesigned Federated System
 
-- **2 Privacy infrastructure: A Redesigned Federated System**
+**3** New Experience: Privacy Workflows in Distributed Systems
 
-- **3 New Experience: Privacy Workflows in Distributed Systems**
+**4** Security Discussion: Threats, Reliability, and Trade-offs
 
-- **4 Security Discussion: Threats, Reliability, and Trade-offs**
-
-**5 Future work & Conclusion**
+**5** Future work & Conclusion
 
 ## Slide 4
 
-# **01 Problem Statement** The challenge that pushed us to rethink everything.
+# **01**
 
+**Problem Statement**
 
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-01
-Problem
-Statement
-The challenge that pushed us
-to rethink everything.
-```
+The challenge that pushed us to rethink everything.
 
 ## Slide 5
 
 ###### **PRIVACY RIGHTS SOUND SIMPLE**
 
 Delete me.
+
 Give me a copy.
+
 Correct my record.
-SIMPLE FOR THE USER
-Privacy rights are easy to ask for. They're extremely hard to execute.
+
+**SIMPLE FOR THE USER**
+
+**600 SERVICES**
+
+Chat · Payments · Friends · Marketplace · Safety · Analytics · Voice · Games · Backend Services · Storage · Data Lake · ... AND MORE
+
+**Where does this person's data actually live?**
+
+**ONE REQUEST → HUNDREDS OF SYSTEMS**
+
+Privacy rights are easy to ask for.   They're extremely hard to execute.
 
 ## Slide 6
 
 ###### **ROBLOX AT SCALE**
 
-= 1 service / datastore
-
-###### = Contains personal data (~20%)
-
-##### **132M**
+**132M**
 
 Daily active users · Q1 2026
 
-600+ 8
-services storage
-engines
-THE HARD WORK IS GROWING FASTER
-~1.6x ~3.5X
-YoY privacy request
-YoY user growth VS. growth SQL NoSQL Object Columnar Key Search Graph In-Memory
-Storage Warehouse Value Engine DB Store
-8 STORAGE ENGINES ACROSS THE FLEET
+**600+** services
+
+**8** storage engines
+
+**THE HARD WORK IS GROWING FASTER**
+
+**~1.6x** YoY user growth   vs.   **~3.5X** YoY privacy request growth
+
+= 1 service / datastore     = Contains personal data (~20%)
+
+SQL · NoSQL · Object Storage · Columnar Warehouse · Key Value · Search Engine · Graph DB · In-Memory Store
+
+**8 STORAGE ENGINES ACROSS THE FLEET**
 
 **THE WORKLOAD OUTRUNS THE PLATFORM.**
 
@@ -118,34 +123,11 @@ Storage Warehouse Value Engine DB Store
 
 Microservices at scale have complexity by design.
 
-$
-
-· · ·
-
 ## Slide 8
 
 ###### **MICROSERVICE SYSTEM, AND IT KEEPS GROWING**
 
 Microservices at scale have complexity by design.
-
-$
-
-· · ·
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 64/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-MICROSERVICE SYSTEM, AND IT KEEPS GROWING
-Microservices at scale have complexity by design.
-Iv
-©
-©
-oo
-© oo
-©
-S
-```
 
 ## Slide 9
 
@@ -153,26 +135,23 @@ S
 
 A deletion request must be executed everywhere.
 
-$
-
-**X**
-
 **…except one.**
 
 **Miss one = a breach.**
-
-· · ·
 
 ## Slide 10
 
 ###### **THE MACHINE WE BUILT IS THE ATTACK SURFACE**
 
-###### **WHAT WE BUILT**
+**WHAT WE BUILT**
 
-REQUEST ORCHESTRATION HANDLER EXPORT
+REQUEST → ORCHESTRATION → HANDLER → EXPORT
+
 Same machine. Same request.
-WHAT WE EXPOSED
-REQUEST ORCHESTRATION HANDLER EXPORT
+
+**WHAT WE EXPOSED**
+
+REQUEST → ORCHESTRATION → HANDLER → EXPORT
 
 **The same pipeline that protects data can be exploited to abuse it.**
 
@@ -180,18 +159,17 @@ REQUEST ORCHESTRATION HANDLER EXPORT
 
 ###### **REGULATORS RAISED THE BAR**
 
-“
 “We tried.”
-USED TO BE ENOUGH
 
-“
+**USED TO BE ENOUGH**
+
 “Prove it.”
-IS THE NEW STANDARD
+
+**IS THE NEW STANDARD**
 
 ###### **WHAT REGULATORS NOW REQUIRE**
 
-Verifiable Complete Consistent 30-Day Clock Increasing
-Evidence Audit Trail Enforcement Scrutiny
+Verifiable Evidence · Complete Audit Trail · Consistent Enforcement · 30-Day Clock · Increasing Scrutiny
 
 **At our scale, you can't produce proof by hand.   Infrastructure is the only way.**
 
@@ -199,56 +177,55 @@ Evidence Audit Trail Enforcement Scrutiny
 
 ###### **THE REAL QUESTION**
 
-THE CHALLENGE
-Payments Data Lake
-600+ Chat User Profile
-Friends Email How do you
-internal services
-coordinate a
-Voice Logs
-Search Notifications trustworthy privacy
-8
-Marketplace Reporting guarantee across over
-data storage systems
-Inventory Safety 600 autonomous
-Analytics Experiment services?
-~3.5x
-Ads Storage
-increase in privacy
-requests YoY · · · · · ·
-Incremental fixes
-Legacy Systems Scale  Operational
-Reached Their Limits. exploded. burden grew. weren't enough.
+**THE CHALLENGE**
+
+**600+** internal services
+
+**8** data storage systems
+
+**~3.5x** increase in privacy requests YoY
+
+Payments · Chat · Friends · Voice · Search · Marketplace · Inventory · Analytics · Ads · …
+
+Data Lake · User Profile · Email · Logs · Notifications · Reporting · Safety · Experiment · Storage · …
+
+**How do you coordinate a trustworthy privacy guarantee across over 600 autonomous services?**
+
+**Legacy Systems Reached Their Limits.**   Scale exploded.   Operational burden grew.   Incremental fixes weren't enough.
 
 ## Slide 13
 
 # **02**
 
-**Privacy infrastructure: A Redesigned Federated System** Building the foundation for privacy at scale.
+**Privacy infrastructure:**
+
+**A Redesigned Federated System**
+
+Building the foundation for privacy at scale.
 
 ## Slide 14
 
 ###### **CENTRALIZE CONTROL FLOW — NOT DATA**
 
-FEDERATED  +  CENTRAL COORDINATION
-Service N
-COORD
-signals
-· · ·
-Service A Service B Service C Service N
-signals out — each owner
-acts on its own data
-Data stays where it belongs. Autonomy remains.
+**CENTRALIZED – THE NAIVE MODEL**
 
-CENTRALIZED  –  THE NAIVE MODEL
-· · ·
-Service A Service B Service C Service N
-ONE
-ENGINE
-data in — bottleneck +
-single point of failure
-☆
-Only signals flow.
+Service A · Service B · Service C · … · Service N
+
+ONE ENGINE
+
+data in — bottleneck + single point of failure
+
+**FEDERATED + CENTRAL COORDINATION**
+
+COORD
+
+signals
+
+Service A · Service B · Service C · … · Service N
+
+signals out — each owner acts on its own data
+
+**Only signals flow.**   **Data stays where it belongs.**   **Autonomy remains.**
 
 ## Slide 15
 
@@ -256,35 +233,41 @@ Only signals flow.
 
 ###### **Privacy Ownership Follows Data Ownership.**
 
-GAME SVC CHAT SVC PAYMENTS SVC + 600 SERVICES
-•••
-Owns its Owns its Owns its Owns its
-privacy logic privacy logic privacy logic privacy logic
+**GAME SVC** — Owns its privacy logic
+
+**CHAT SVC** — Owns its privacy logic
+
+**PAYMENTS SVC** — Owns its privacy logic
+
+**+ 600 SERVICES** — Owns its privacy logic
+
 Therefore, each service should also own:
-How user data How data is How retention Downstream
-is deleted exported policies are enforced dependencies are
-respected
-The central platform does not execute logic directly.
-Instead, it delegates execution to service-owned privacy handlers.
+
+How user data is deleted · How data is exported · How retention policies are enforced · Downstream dependencies are respected
 
 **PLATFORM**
+
+The central platform does not execute logic directly. Instead, it delegates execution to service-owned privacy handlers.
 
 ## Slide 16
 
 ###### **CENTRAL ORCHESTRATION, FEDERATED EXECUTION**
 
-PRIVACY
-1 request  →  600+ sub-tasks
-REQUEST
-ORCHESTRATION LAYER
+**PRIVACY REQUEST** › **1 request → 600+ sub-tasks**
+
+**ORCHESTRATION LAYER**
+
 Temporal workflow engine
-Service Service Service Service • • •
-handler handler handler handler + 600
-• • •
-services
-Asynchronous Horizontally Scalable Fault-tolerant Fully Traceable
-Non-blocking Handles growth Retries, timeouts, End-to-end visibility
-by design with ease and recovery built-in and auditability
+
+Service handler · Service handler · Service handler · Service handler · • • • · + 600 services
+
+**Asynchronous** — Non-blocking by design
+
+**Horizontally Scalable** — Handles growth with ease
+
+**Fault-tolerant** — Retries, timeouts, and recovery built-in
+
+**Fully Traceable** — End-to-end visibility and auditability
 
 ## Slide 17
 
@@ -292,53 +275,53 @@ by design with ease and recovery built-in and auditability
 
 “where does this user’s data live?” is now **one query.**
 
-ID: 89f7a2c1
-> catalog.locate(user=260805) CATALOG SNAPSHOT
-7 stores found DynamoDB Owner Game Platform
-S3 User’s email,
-PI fields
-IP address, geolocation
-Redis
-Kafka Storage DynamoDB
-Postgres
-Retention policy 7 years
-Elastic
-Glacier Exemptions No
-One query. Full context. Discovery before execution —
-Every location. Daily, org-wide.
-you can’t delete what you can’t find.
+`> catalog.locate(user=260805)`
+
+**✓ 7 stores found**
+
+DynamoDB · S3 · Redis · Kafka · Postgres · Elastic · Glacier
+
+**CATALOG SNAPSHOT** · ID: 89f7a2c1
+
+| Field | Value |
+|---|---|
+| Owner | Game Platform |
+| PI fields | User’s email, IP address, geolocation |
+| Storage | DynamoDB |
+| Retention policy | 7 years |
+| Exemptions | No |
+
+**One query. Every location.**   **Full context. Daily, org-wide.**   **Discovery before execution — you can’t delete what you can’t find.**
 
 ## Slide 18
 
-**DISCOVERY, NOT DELETION.**
+###### **DISCOVERY, NOT DELETION.**
 
 **We bet on the wrong hard problem. You cannot automate what you cannot discover.**
 
-**Deletion is easy Discovery is hard once you know. and never static.**
+Databases · Object Storage · Caches · Search Indexes · Logs · Messaging · Backups · Streams · Analytics · Data Warehouses · Application Data
 
-**Continuous by design.**
-
-**Better discovery. Stronger guarantees.**
+**Deletion is easy once you know.**   **Discovery is hard and never static.**   **Continuous by design.**   **Better discovery. Stronger guarantees.**
 
 ## Slide 19
 
 ###### **CLASSIFICATION: ONE DEFINITION, EVERYWHERE**
 
-Discovery says where.
-game_svc.user. email PII
-Classification says
-what it means —
-chat_svc.profile. email PII
-the same way,
-everywhere.
-pay_svc.account. email PII
-Same field.  Same verdict.  Same way.
-ONE TAXONOMY.
-Every time.
-One Definition of PI.
-Uniform  Trustworthy
-Consistency Governed & Evolving
-Enforcement Automation
+**Discovery says where.**
+
+**Classification says what it means — the same way, everywhere.**
+
+**ONE TAXONOMY.** One Definition of PI.
+
+game_svc.user.email → PII
+
+chat_svc.profile.email → PII
+
+pay_svc.account.email → PII
+
+**Same field.  Same verdict.  Same way. Every time.**
+
+Consistency · Uniform Enforcement · Trustworthy Automation · Governed & Evolving
 
 ## Slide 20
 
@@ -346,118 +329,109 @@ Enforcement Automation
 
 New data appears constantly. Our process keeps coverage near **100%** — and doesn't decay.
 
-new PII store
+new PII store · new service · new field
 
-new service
-
-new field
+**AUTO-DISCOVER › CONFIG PR › ONBOARDED**
 
 **COVERAGE THAT STAYS HIGH**
 
 **~100%**
 
-AUTO-DISCOVER
+PII DISCOVERY COVERAGE — 100% / 75% / 50% / 25% / 0% · JAN FEB MAR APR MAY JUN
 
-CONFIG PR
+Near 100%. No decay. Governance scales.
 
-ONBOARDED
-
-PII DISCOVERY COVERAGE
-100%
-75%
-50%
-25%
-0%
-JAN FEB MAR APR MAY JUN
-Near 100%. No decay.
-Governance scales.
-
-**Always Current**
-
-**Self-service by Design**
-
-**Scales With Org Growth**
-
-**Stronger Guarantee**
+**Always Current** · **Self-service by Design** · **Scales With Org Growth** · **Stronger Guarantee**
 
 ## Slide 21
 
-**03 New Experience: Privacy Workflows in Distributed Systems** Making privacy seamless for users and systems.
+# **03**
 
+**New Experience:**
 
-> Recovered by OCR — confidence 95/100 on the text kept, 95/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Privacy Workflows in Distributed Systems**
 
-```text
-03
-New Experience:
-Privacy Workflows
-in Distributed Systems
-Making privacy seamless
-for users and systems.
-```
+Making privacy seamless for users and systems.
+
+Request → Process → Fulfill
 
 ## Slide 22
 
 ###### **A FEDERATED SOLUTION: FOR SCALABILITY**
 
-METADATA METADATA CATALOG (MC) AUTO ONBOARDING SERVICE TEAMS SERVICES (WEBHOOK HANDLERS) — FEDERATED
-INGESTION (PUBLISH) (PR GENERATION) (REVIEW & MERGE) Service A Service B Service C Service N
-Data Ownership
-PI Tagging ...
-Service Metadata RtA RtBF RtA RtBF RtA RtBF RtA RtBF
-ORCHESTRATOR
-Workflow Management Policy & SLA Results Management Execution Status
-Per Service
-Fan-out Track Enforce Collect Aggregate
-Requests Execution SLA Results Status
-CENTRALIZED AUDIT
-Request Execution Responses  Compliance
-Discrepancies
-Records Status & Artifacts Reports
+**METADATA INGESTION (PUBLISH)** → **METADATA CATALOG (MC)** → **AUTO ONBOARDING (PR GENERATION)** → **SERVICE TEAMS (REVIEW & MERGE)** → **SERVICES (WEBHOOK HANDLERS) — FEDERATED**
+
+METADATA CATALOG (MC): Data Ownership · PI Tagging · Service Metadata
+
+SERVICES (WEBHOOK HANDLERS) — FEDERATED: Service A · Service B · Service C · … · Service N (each with RtA, RtBF)
+
+**ORCHESTRATOR**
+
+Workflow Management: Fan-out Requests · Track Execution
+
+Policy & SLA: Enforce SLA
+
+Results Management: Collect Results · Aggregate Status
+
+Execution Status Per Service
+
+**CENTRALIZED AUDIT**
+
+Request Records · Execution Status · Responses & Artifacts · Discrepancies · Compliance Reports
 
 ## Slide 23
 
 ###### **A FEDERATED SOLUTION: FOR SCALABILITY**
 
-METADATA METADATA CATALOG (MC) AUTO ONBOARDING SERVICE TEAMS SERVICES (WEBHOOK HANDLERS) — FEDERATED
-INGESTION (PUBLISH) (PR GENERATION) (REVIEW & MERGE) Service A Service B Service C Service N
-Data Ownership
-PI Tagging ...
-Service Metadata RtA RtBF RtA RtBF RtA RtBF RtA RtBF
+**METADATA INGESTION (PUBLISH)** → **METADATA CATALOG (MC)** → **AUTO ONBOARDING (PR GENERATION)** → **SERVICE TEAMS (REVIEW & MERGE)** → **SERVICES (WEBHOOK HANDLERS) — FEDERATED**
+
+METADATA CATALOG (MC): Data Ownership · PI Tagging · Service Metadata
+
+SERVICES (WEBHOOK HANDLERS) — FEDERATED: Service A · Service B · Service C · … · Service N (each with RtA, RtBF)
 
 ## Slide 24
 
 ###### **A FEDERATED SOLUTION: FOR SCALABILITY**
 
-METADATA METADATA CATALOG (MC) AUTO ONBOARDING SERVICE TEAMS SERVICES (WEBHOOK HANDLERS) — FEDERATED
-INGESTION (PUBLISH) (PR GENERATION) (REVIEW & MERGE) Service A Service B Service C Service N
-Data Ownership
-PI Tagging ...
-Service Metadata RtA RtBF RtA RtBF RtA RtBF RtA RtBF
-ORCHESTRATOR
-Workflow Management Policy & SLA Results Management Execution Status
-Per Service
-Fan-out Track Enforce Collect Aggregate
-Requests Execution SLA Results Status
+**METADATA INGESTION (PUBLISH)** → **METADATA CATALOG (MC)** → **AUTO ONBOARDING (PR GENERATION)** → **SERVICE TEAMS (REVIEW & MERGE)** → **SERVICES (WEBHOOK HANDLERS) — FEDERATED**
+
+METADATA CATALOG (MC): Data Ownership · PI Tagging · Service Metadata
+
+SERVICES (WEBHOOK HANDLERS) — FEDERATED: Service A · Service B · Service C · … · Service N (each with RtA, RtBF)
+
+**ORCHESTRATOR**
+
+Workflow Management: Fan-out Requests · Track Execution
+
+Policy & SLA: Enforce SLA
+
+Results Management: Collect Results · Aggregate Status
+
+Execution Status Per Service
 
 ## Slide 25
 
 ###### **A FEDERATED SOLUTION: FOR SCALABILITY**
 
-METADATA METADATA CATALOG (MC) AUTO ONBOARDING SERVICE TEAMS SERVICES (WEBHOOK HANDLERS) — FEDERATED
-INGESTION (PUBLISH) (PR GENERATION) (REVIEW & MERGE) Service A Service B Service C Service N
-Data Ownership
-PI Tagging ...
-Service Metadata RtA RtBF RtA RtBF RtA RtBF RtA RtBF
-ORCHESTRATOR
-Workflow Management Policy & SLA Results Management Execution Status
-Per Service
-Fan-out Track Enforce Collect Aggregate
-Requests Execution SLA Results Status
-CENTRALIZED AUDIT
-Request Execution Responses  Compliance
-Discrepancies
-Records Status & Artifacts Reports
+**METADATA INGESTION (PUBLISH)** → **METADATA CATALOG (MC)** → **AUTO ONBOARDING (PR GENERATION)** → **SERVICE TEAMS (REVIEW & MERGE)** → **SERVICES (WEBHOOK HANDLERS) — FEDERATED**
+
+METADATA CATALOG (MC): Data Ownership · PI Tagging · Service Metadata
+
+SERVICES (WEBHOOK HANDLERS) — FEDERATED: Service A · Service B · Service C · … · Service N (each with RtA, RtBF)
+
+**ORCHESTRATOR**
+
+Workflow Management: Fan-out Requests · Track Execution
+
+Policy & SLA: Enforce SLA
+
+Results Management: Collect Results · Aggregate Status
+
+Execution Status Per Service
+
+**CENTRALIZED AUDIT**
+
+Request Records · Execution Status · Responses & Artifacts · Discrepancies · Compliance Reports
 
 ## Slide 26
 
@@ -465,46 +439,51 @@ Records Status & Artifacts Reports
 
 ###### **The system disappears into three workflows:**
 
-Engineers Privacy teams Compliance
-Build it. Ship it. Stay fast. Operate at scale. Reduce risk. Prove it. Every time.
-Plug in a SDK / API Central catalog and inventory End-to-end audit trails
-Use standard libraries Policy management Policy enforcement evidence
-and templates and taxonomy
-Get guardrails and defaults Monitor coverage and risk Reports in minutes,
-out of the box in real time not weeks
-Focus on features, Drive adoption Regulatory ready,
-not compliance with self-serve always
-Privacy is built-in. One source of truth. Provable, repeatable,
-No extra work. Actionable insights. and audit-ready.
+**Engineers** — Build it. Ship it. Stay fast.
+
+- Plug in a SDK / API
+- Use standard libraries and templates
+- Get guardrails and defaults out of the box
+- Focus on features, not compliance
+- **Privacy is built-in. No extra work.**
+
+**Privacy teams** — Operate at scale. Reduce risk.
+
+- Central catalog and inventory
+- Policy management and taxonomy
+- Monitor coverage and risk in real time
+- Drive adoption with self-serve
+- **One source of truth. Actionable insights.**
+
+**Compliance** — Prove it. Every time.
+
+- End-to-end audit trails
+- Policy enforcement evidence
+- Reports in minutes, not weeks
+- Regulatory ready, always
+- **Provable, repeatable, and audit-ready.**
 
 ## Slide 27
 
 ###### **FOR ENGINEERS: A FEW LINES, NOT A PROJECT**
 
-###### Integrate privacy in **minutes.** Not quarters.
+Integrate privacy in **minutes.** Not quarters.
 
-+5  −0
-PR #4213 add privacy integration Checks passed
+Tag your PII · Choose erasure · Choose export · Cover the full footprint · Validated by default
+
+**PR #4213** add privacy integration   +5 −0   ✓ Checks passed
+
 service.yaml
-120 ...
+
+```
+120   ...
 121 + privacy:
 122 +   pii: [email, ip_addr, dob]
-123 +   erasure: auto key based deletion        # or: custom _ api
+123 +   erasure: auto key based deletion        # or: custom_api
 124 +   export: spark_sql
 125 +   includes: [logs, caches, indexes]
-126 ...
-
-Tag your PII
-
-Choose erasure
-
-Choose export 122
-123
-124
-Cover the full footprint
-125
-126
-Validated by default
+126   ...
+```
 
 ## Slide 28
 
@@ -512,22 +491,35 @@ Validated by default
 
 From chasing tickets to operating the system.    |    Off the critical path. **In control.**
 
-BEFORE AFTER
-PRIVACY CONSOLE
+**BEFORE**
+
 ticket · chase service #1
-Export Filter Refresh
-ticket · chase service #2 RtBF › in progress on track
+
+ticket · chase service #2
+
 ticket · chase service #3
-RtA › in progress on track
+
 ticket · chase service #4
-failures › none stuck healthy
+
 ticket · chase service #5
-Services Workflows SLA Reliability
-600+ Auto-fanout On track Built-in
+
 ticket · chase service #6
-Manual.  Fragmented. You are the  Operate the engine.  Durable, observable, and scalable workflows.
-bottleneck.
-Generic webhook contract. Any service can join.
+
+**Manual. Fragmented. You are the bottleneck.**
+
+**AFTER**
+
+**PRIVACY CONSOLE** — Export · Filter · Refresh
+
+RtBF › in progress · on track
+
+RtA › in progress · on track
+
+failures › none stuck · healthy
+
+Services 600+ · Workflows Auto-fanout · SLA On track · Reliability Built-in
+
+**Operate the engine.** Durable, observable, and scalable workflows. Generic webhook contract. Any service can join.
 
 ## Slide 29
 
@@ -535,39 +527,17 @@ Generic webhook contract. Any service can join.
 
 One request. Hundreds of services. Five stages. Fully observable.
 
-**1**
+**1 Validate** — 2-step MFA
 
-###### **Validate**
+**2 Pre-process** — Fraud · Legal · ATO
 
-**2**
+**3 Orchestrate** — Register workers
 
-**Pre-process**
+**4 Execute** — Delete or export
 
-**3**
+**5 Respond** — Archive · RtA only
 
-**Orchestrate**
-
-**4**
-
-**Execute**
-
-**5** **Respond**
-
-**2-step MFA Fraud · Legal · ATO Register workers**
-
-**Delete or export**
-
-**Archive · RtA only**
-
-**End-to-end visibility**
-
-**Built for scale**
-
-**Fault-tolerant**
-
-**Privacy by design**
-
-**Measurable**
+**End-to-end visibility** · **Built for scale** · **Fault-tolerant** · **Privacy by design** · **Measurable**
 
 ## Slide 30
 
@@ -575,18 +545,15 @@ One request. Hundreds of services. Five stages. Fully observable.
 
 **FROM UNKNOWN TO PROVABLE: INCOMPLETE DELETION IS NOW DETECTABLE.**
 
-COVERAGE NEAR
-100%
-AND DOESN'T DECAY
+**COVERAGE NEAR 100% AND DOESN'T DECAY**
 
-AUDIT EXPOSURE FULFILLMENT TIME ONBOARDING OPERATIONAL RISK
-BEFORE AFTER BEFORE AFTER BEFORE AFTER BEFORE AFTER
-Periodic Continuous Days Hours Falling Behind Self-Service Unknown Gaps Known &
-Actionable
-Sampling Evidence Often > 3 days Often < 24 hrs Manual, Auto-discovered, Hard to find, Every gap
-ticket-driven self-onboarded easy to miss is visible
-Always ready. Audit anytime. Faster for users. Coverage scales with Less risk. More control.
-Lower operational risk. the organization. Provable compliance.
+**AUDIT EXPOSURE** — BEFORE: Periodic (Sampling) → AFTER: Continuous (Evidence). Always ready. Audit anytime.
+
+**FULFILLMENT TIME** — BEFORE: Days (Often > 3 days) → AFTER: Hours (Often < 24 hrs). Faster for users. Lower operational risk.
+
+**ONBOARDING** — BEFORE: Falling Behind (Manual, ticket-driven) → AFTER: Self-Service (Auto-discovered, self-onboarded). Coverage scales with the organization.
+
+**OPERATIONAL RISK** — BEFORE: Unknown Gaps (Hard to find, easy to miss) → AFTER: Known & Actionable (Every gap is visible). Less risk. More control. Provable compliance.
 
 ## Slide 31
 
@@ -594,34 +561,35 @@ Lower operational risk. the organization. Provable compliance.
 
 From anxiety to evidence. Every request leaves an audit-grade, immutable receipt.
 
-|**THE OLD WAY**|**AUDIT RECE**|**IPT**·   request #A7F3-2C|**IMMUTABLE**|
-|---|---|---|---|
-|**Did we actually comply?**||||
-||**type**|Right to be Forgotten (erasure)|**validated**|
-|**Email teams**|**2-step MFA**||**validated**|
-|**Assemble spreadsheets**|**checkpoint**|fraud · legal · risk — passed|**passed**|
-|**Days or weeks**|**executed**|600 services · 0 failures|**executed**|
-||**verified**|complete — no residual PII|**verified**|
-|From “Did we comply?”||||
-|to**“Here is the proof.”**|**signed**|2026-03-14T09:22Z · immutable||
+**THE OLD WAY**
+
+- Did we actually comply?
+- Email teams
+- Assemble spreadsheets
+- Days or weeks
+
+From “Did we comply?” to **“Here is the proof.”**
+
+**AUDIT RECEIPT** · request #A7F3-2C · **IMMUTABLE**
+
+| Step | Detail | Status |
+|---|---|---|
+| type | Right to be Forgotten (erasure) | validated |
+| 2-step MFA | | validated |
+| checkpoint | fraud · legal · risk — passed | passed |
+| executed | 600 services · 0 failures | executed |
+| verified | complete — no residual PII | verified |
+| signed | 2026-03-14T09:22Z · immutable | |
 
 ## Slide 32
 
-**04 Security Discussion: Threats, Reliability, and Trade-offs**
+# **04**
+
+**Security Discussion:**
+
+**Threats, Reliability, and Trade-offs**
 
 Securing the system while balancing scale and risk.
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-04
-Security Discussion:
-Threats, Reliability,
-and Trade-offs
-Securing the system while
-balancing scale and risk.
-```
 
 ## Slide 33
 
@@ -629,13 +597,9 @@ balancing scale and risk.
 
 the machine we built — from the defender's side
 
-1 2 3 4
-› › ›
-REQUEST ORCHESTRATION SERVICE EXPORT
-HANDLER ARTIFACT
+**1 REQUEST › 2 ORCHESTRATION › 3 SERVICE HANDLER › 4 EXPORT ARTIFACT**
 
-Built for protection.
-Designed for trust.
+**Built for protection. Designed for trust.**
 
 ## Slide 34
 
@@ -643,15 +607,21 @@ Designed for trust.
 
 the machine we built — from the defender's side
 
-**1 REQUEST**
+**1 REQUEST › 2 ORCHESTRATION › 3 SERVICE HANDLER › 4 EXPORT ARTIFACT**
 
-**ATTACKER VIEW FOUR SURFACES.**
-
-**2 3 4 › › ›** **ORCHESTRATION SERVICE EXPORT HANDLER ARTIFACT** **Same machine. Different intent. 1 2 3 4 › › › REQUEST ORCHESTRATION SERVICE EXPORT HANDLER ARTIFACT** Spoof or replay Forge or replay workflow Abuse delete/export APIs Harvest RtA archive — requests. signals to trigger erasure. as a privileged oracle. a gift-wrapped dossier.
+**Built for protection. Designed for trust.**
 
 **Same machine. Different intent.**
 
-**Built for protection. Designed for trust.**
+**ATTACKER VIEW — FOUR SURFACES.**
+
+**1 REQUEST** — Spoof or replay requests.
+
+**2 ORCHESTRATION** — Forge or replay workflow signals to trigger erasure.
+
+**3 SERVICE HANDLER** — Abuse delete/export APIs as a privileged oracle.
+
+**4 EXPORT ARTIFACT** — Harvest RtA archive — a gift-wrapped dossier.
 
 **Every hop is a target. Every target is an opportunity.**
 
@@ -663,11 +633,11 @@ the machine we built — from the defender's side
 
 **1 WEAPONIZED DELETION**
 
-File “delete me”
+Attacker hijacks an account → File “delete me” → Erases across 600 services
 
-Attacker hijacks File “delete me” Erases across an account 600 services
+Hijack an account → “delete me” erases them across 600 services.
 
-Hijack an account → “delete me” erases them across 600 services. ✓ ATO signals + **BLOCKED** step-up MFA
+**✓ BLOCKED** — ATO signals + step-up MFA
 
 ## Slide 36
 
@@ -677,21 +647,19 @@ Hijack an account → “delete me” erases them across 600 services. ✓ ATO s
 
 **1 WEAPONIZED DELETION**
 
-File “delete me”
-
-Attacker hijacks an account
-
-Erases across 600 services
-
-**2 EVIDENCE DESTRUCTION** Abuse the platform Self-delete via Fraud trail (fraud, harassment, etc.) RtBF vanishes
+Attacker hijacks an account → File “delete me” → Erases across 600 services
 
 Hijack an account → “delete me” erases them across 600 services.
 
+**✓ BLOCKED** — ATO signals + step-up MFA
+
+**2 EVIDENCE DESTRUCTION**
+
+Abuse the platform (fraud, harassment, etc.) → Self-delete via RtBF → Fraud trail vanishes
+
 Abuse, then self-delete → the fraud trail vanishes.
 
-✓ ATO signals + **BLOCKED** step-up MFA
-
-✓ Open-investigation **BLOCKED** holds
+**✓ BLOCKED** — Open-investigation holds
 
 ## Slide 37
 
@@ -701,25 +669,27 @@ Abuse, then self-delete → the fraud trail vanishes.
 
 **1 WEAPONIZED DELETION**
 
-File “delete me”
-
-Attacker hijacks an account
-
-Erases across 600 services
-
-**2 EVIDENCE DESTRUCTION** Abuse the platform Self-delete via Fraud trail (fraud, harassment, etc.) RtBF vanishes
+Attacker hijacks an account → File “delete me” → Erases across 600 services
 
 Hijack an account → “delete me” erases them across 600 services.
 
+**✓ BLOCKED** — ATO signals + step-up MFA
+
+**2 EVIDENCE DESTRUCTION**
+
+Abuse the platform (fraud, harassment, etc.) → Self-delete via RtBF → Fraud trail vanishes
+
 Abuse, then self-delete → the fraud trail vanishes.
 
-✓ ATO signals + **BLOCKED** step-up MFA
+**✓ BLOCKED** — Open-investigation holds
 
-✓ Open-investigation **BLOCKED** holds
+**3 DATA EXFILTRATION**
 
-**3 DATA EXFILTRATION** Stolen session Fire “give me Full PII (high-value account) a copy” (RtA) dossier A stolen session fires “give me a copy” → a full PII dossier.
+Stolen session (high-value account) → Fire “give me a copy” (RtA) → Full PII dossier
 
-Stolen session Fire “give me Full PII (high-value account) a copy” (RtA) dossier A stolen session fires “give me a copy” → a full PII dossier. ✓ Auth + risk checks **BLOCKED** + scoped buckets + audit
+A stolen session fires “give me a copy” → a full PII dossier.
+
+**✓ BLOCKED** — Auth + risk checks + scoped buckets + audit
 
 ## Slide 38
 
@@ -729,88 +699,90 @@ Stolen session Fire “give me Full PII (high-value account) a copy” (RtA) dos
 
 **1 WEAPONIZED DELETION**
 
-File “delete me”
-
-Attacker hijacks an account
-
-Erases across 600 services
-
-**2 EVIDENCE DESTRUCTION** Abuse the platform Self-delete via Fraud trail (fraud, harassment, etc.) RtBF vanishes
+Attacker hijacks an account → File “delete me” → Erases across 600 services
 
 Hijack an account → “delete me” erases them across 600 services.
 
+**✓ BLOCKED** — ATO signals + step-up MFA
+
+**2 EVIDENCE DESTRUCTION**
+
+Abuse the platform (fraud, harassment, etc.) → Self-delete via RtBF → Fraud trail vanishes
+
 Abuse, then self-delete → the fraud trail vanishes.
 
-✓ ATO signals + **BLOCKED** step-up MFA
+**✓ BLOCKED** — Open-investigation holds
 
-✓ Open-investigation **BLOCKED** holds
+**3 DATA EXFILTRATION**
 
-**3 DATA EXFILTRATION** Stolen session Fire “give me (high-value account) a copy” (RtA)
-
-Full PII dossier
+Stolen session (high-value account) → Fire “give me a copy” (RtA) → Full PII dossier
 
 A stolen session fires “give me a copy” → a full PII dossier.
 
-**4 THE LEGAL-HOLD TRAP** Account under active User files Tip them off investigation “delete me” (or lose evidence) Delete mid-investigation → destroy evidence, or tip them off.
+**✓ BLOCKED** — Auth + risk checks + scoped buckets + audit
 
-✓ Auth + risk checks **BLOCKED** + scoped buckets + audit
+**4 THE LEGAL-HOLD TRAP**
 
-✓ **BLOCKED**
+Account under active investigation → User files “delete me” → Tip them off (or lose evidence)
 
-Legal holds block it silently
+Delete mid-investigation → destroy evidence, or tip them off.
+
+**✓ BLOCKED** — Legal holds block it silently
 
 ## Slide 39
 
 ###### **NO SOFT INTERIOR**
 
-AUTHN / AUTHZ IDEMPOTENCY INTEGRITY
-Every handler
-Everything retries. No over-deletion.
-authenticates.
-Every orchestration  Every action is safe No under-deletion.
-message to run twice.
-is signed and scoped.
-No double-execution. Correct entity.
-No partial-state corruption. Correct scope.
+**AUTHN / AUTHZ**
+
+Every handler authenticates.
+
+Every orchestration message is signed and scoped.
+
+**IDEMPOTENCY**
+
+Everything retries.
+
+Every action is safe to run twice.
+
+**No double-execution. No partial-state corruption.**
+
+**INTEGRITY**
+
+No over-deletion.
+
+No under-deletion.
+
+**Correct entity. Correct scope.**
 
 ## Slide 40
 
 ###### **THREE OF FOUR ABUSES STOP AT ONE GATE**
 
-Do the dangerous thinking **ONCE** , at a single preprocessing checkpoint.
+Do the dangerous thinking **ONCE**, at a single preprocessing checkpoint.
 
-PROCEED
-Delete or export
-executes
-1
-VALIDATE
-HOLD  · silent
-REQUEST
-CHECKPOINT Request continues
-as “in progress”
-fraud · legal · risk · MFA
-THREE ABUSES CONVERGE HERE FRAUD
-LEGAL HOLDS
-Weaponized Evidence The legal-hold ACCOUNT RISK
-1 2 4
-deletion destruction trap
-MFA / STEP-UP
+REQUEST → **1 VALIDATE** → **CHECKPOINT** (fraud · legal · risk · MFA)
+
+**PROCEED** — Delete or export executes
+
+**HOLD · silent** — Request continues as “in progress”
+
+**THREE ABUSES CONVERGE HERE**
+
+1 Weaponized deletion · 2 Evidence destruction · 4 The legal-hold trap
+
+FRAUD · LEGAL HOLDS · ACCOUNT RISK · MFA / STEP-UP
 
 ## Slide 41
 
 ###### **EVERY SCALABILITY WIN IS A SECURITY COST**
 
-SCALABILITY WIN WHAT WE GAINED SECURITY COST
-Horizontal scale, team
-Federated ownership Distributed attack surface.
-autonomy, parallel delivery.
-Services choose how
-Service flexibility More contracts to validate.
-to integrate and evolve.
-High throughput,
-Automation speed faster fulfillment. More to authenticate.
-Platform grows with
-Platform scale users and services. Larger blast radius.
+| SCALABILITY WIN | WHAT WE GAINED | SECURITY COST |
+|---|---|---|
+| Federated ownership | Horizontal scale, team autonomy, parallel delivery. | Distributed attack surface. |
+| Service flexibility | Services choose how to integrate and evolve. | More contracts to validate. |
+| Automation speed | High throughput, faster fulfillment. | More to authenticate. |
+| Platform scale | Platform grows with users and services. | Larger blast radius. |
 
 ## Slide 42
 
@@ -866,11 +838,17 @@ Where we're headed and what we've learned.
 
 ###### **Not a roadmap. Open problems. You might be the ones to solve them.**
 
-STILL HARD STILL HARD OPEN
-SHADOW DATA CLASSIFICATION AT SCALE UNIFIED GOVERNANCE
-Systems we don't yet know Accurate, consistent labeling One control plane across
-exist, drifting out of across genuinely messy storage, pipelines, analytics —
-governance. storage. still fragmented today.
+**STILL HARD — SHADOW DATA**
+
+Systems we don't yet know exist, drifting out of governance.
+
+**STILL HARD — CLASSIFICATION AT SCALE**
+
+Accurate, consistent labeling across genuinely messy storage.
+
+**OPEN — UNIFIED GOVERNANCE**
+
+One control plane across storage, pipelines, analytics — still fragmented today.
 
 **THE ATTACK SURFACE KEEPS GROWING. THE DEFENSE HAS TO KEEP GROWING WITH IT.**
 
@@ -880,32 +858,25 @@ governance. storage. still fragmented today.
 
 ###### **PRIVACY RIGHTS REQUIRE INFRASTRUCTURE — NOT JUST POLICY.**
 
-That **“Delete me.”** we opened with?
-
-**Now: safe · complete · provable.**
+That **“Delete me.”** we opened with?   **Now: safe · complete · provable.**
 
 **Can your systems answer these — continuously, by design?**
 
-**What data Where is it do we have? stored?**
+What data do we have? · Where is it stored? · Who owns it? · How long should it exist?
 
-**Who owns How long should it? it exist?**
-
-**A POLICY MAKES A PROMISE.**
-
-**INFRASTRUCTURE KEEPS IT.**
+**A POLICY MAKES A PROMISE.**   **INFRASTRUCTURE KEEPS IT.**
 
 ## Slide 46
 
-Users First
-Privacy By Design
-
-Users First
-Privacy By Design Global Trust
-
 ## **Thank you!**
 
-**PRIVACY AT SCALE** Roblox's Infrastructure for Honoring User Privacy Rights
+**PRIVACY AT SCALE**
 
-**Hao Zhang Yiwen Luo** linkedin.com/in/haozhangcs linkedin.com/in/yiwen-luo
+Roblox's Infrastructure for Honoring User Privacy Rights
 
-Scalable Impact
+**Hao Zhang** — linkedin.com/in/haozhangcs
+
+**Yiwen Luo** — linkedin.com/in/yiwen-luo
+
+Users First · Global Trust · Scalable Impact · Privacy By Design
+
