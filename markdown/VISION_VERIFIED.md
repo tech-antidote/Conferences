@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5094 slides across 204 documents.**
+**5190 slides across 204 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2070 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2386 | structure held; individual characters or lines wrong |
-| accurate | 610 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2089 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2437 | structure held; individual characters or lines wrong |
+| accurate | 636 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -81,7 +81,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 44 talks, 1413 slides
+### Zero-day, RCE and novel exploitation — 44 talks, 1509 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -106,7 +106,7 @@ under more than one heading or under none. Counts are slides.
 - **Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes** (Black Hat USA 2026) — slides 1-25
 - **Cost-Effective, Private, Frontier-Grade AI Agent Exploitation with a Fine-Tuned OSS Model** (Black Hat USA 2026) — slides 1-64
 - **Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services** (Black Hat USA 2026) — slides 1-69
-- **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
+- **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 1-98
 - **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slides 1-71
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
@@ -299,7 +299,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone | 1-20 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting | 1-40 | badly-mangled, minor-errors | 0 |
-| Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
+| Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 1-98 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream | 1-46 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover | 1-50 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 1-54 | badly-mangled, minor-errors, accurate | 0 |

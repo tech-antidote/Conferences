@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 88.8
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 72
+vision_verified_pages: 98
 vision_verified_blocks: 2
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -34,7 +36,11 @@ converted_at: "2026-08-12T05:30:16Z"
 
 **Presenters:**
 
-Chris S. Lin Yuqin Yan Guozhen Ding
+Chris S. Lin
+
+Yuqin Yan
+
+Guozhen Ding
 
 **In collaboration with:**
 
@@ -44,30 +50,29 @@ Joyce Qu, Joseph Zhu, David Lie, and Gururaj Saileshwar
 
 ## Slide 2
 
-**GPU Chip VRAM (GDDR6)**
+**GPU Chip**
+
+**VRAM (GDDR6)**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
-
-
-> Recovered by OCR — confidence 87/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-VRAM
-(GDDR6)
-black hat
-2026 Chris S. Lin (Shaopeng.lin@cs.toronto.edu) Yugin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
-```
 
 ## Slide 3
 
 ### **Executive Summary of GPUBreach**
 
-Page
-Flip bits on GPU Memory to Corrupt Page Tables Table
-GPU
-Enables GPU Privilege Escalation Attacks VRAM
-DMA
+Flip bits on GPU Memory to Corrupt Page Tables
+
+Page Table
+
+Enables GPU Privilege Escalation Attacks
+
+GPU VRAM
+
 System-Wide Root Privileges on Host
+
+DMA
+
+CPU
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -95,13 +100,14 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **The Rowhammer Vulnerability**
 
+Repeated Accesses
+
 0 0 0 1 0 0 0 1 0 0
 0 1 0 1 0 0 1 0 0 0
-Repeated
-0  1  0  0  0  1 0  0 0 0
-Accesses
+0 1 0 0 0 1 0 0 0 0
 1 1 1 1 1 1 1 1 1 1
 …
+
 Rapid Accesses to Rows Can Flip Bits in its Neighbour!
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
@@ -112,21 +118,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ###### **Rowhammer Exploits are well-studied on CPUs**
 
-Kernel Exploit: NaCI Exploit:
-Page Table Tampering Corrupt Insturction
-jmp
-Page
-Page
-PageTables
-Mark Seaborn Tables
-Tables jmp rcx
-(Blackhat 2015) Root!
-And many more enabled by bit flips…
+Mark Seaborn
+(Blackhat 2015)
 
-NaCI Exploit:
+Kernel Exploit:
+Page Table Tampering
+
+Page Tables
+
+~$ whoami
+root
+
+Root!
+
+NaCl Exploit:
 Corrupt Insturction
+
 jmp rax
+
 jmp rcx
+
+And many more enabled by bit flips…
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -135,8 +147,16 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **State of Rowhammer**
 
 DDR3-5
+
 LPDDR3&4X
-All Vulnerable!
+
+**All Vulnerable!**
+
+Rowhammer Threshold (T_RH)
+
+139K   22K   18K   10K   4.8K   ?   ?
+
+DDR3 (2014)   DDR4 (2018)   LPDDR4 (2020)   LPDDR5, DDR5 (2023)   DDR6 …
 
 Still Not Fixed! And Getting Worse!
 
@@ -146,11 +166,14 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Rowhammer on GPUs**
 
-**GPUHammer [SEC’25]** Found bit flips on RTX A6000 GPU, GDDR6 Memory
+**GPUHammer [SEC’25]**
 
-###### Chris S. Lin,    Joyce Qu Gururaj Saileshwar
+Found bit flips on RTX A6000 GPU, GDDR6 Memory
 
-<u>https://www.utoronto.ca/news/how-three-u-t-researchers-discoveredgpu-vulnerability-threatened-ai-models</u>
+Chris S. Lin,    Joyce Qu
+Gururaj Saileshwar
+
+<u>https://www.utoronto.ca/news/how-three-u-t-researchers-discovered-gpu-vulnerability-threatened-ai-models</u>
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -170,12 +193,15 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **But GPU Rowhammer Has A Huge Gap…**
 
-Better
-Exploits?
-What about when:
-No time-slicing while sharing?
+Better Exploits?
+
+**What about when:**
+
+*No time-slicing while sharing?*
+
+*No sharing at all?*
+
 20+ Product Lines at Risk!
-No sharing at all?
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -190,20 +216,18 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Page Tables in GPU**
 
 Virtual Address
-GPU Memory
-0xABCD Management Unit
-( GMMU )
+0xABCD
+
+GPU Memory Management Unit (**GMMU**)
+
+Page Tables
+
 Physical Address
 0x0001
+
 GPU VRAM
 
 **Page Table Purpose:** Stores data for address translation.
-
-Page
-Page
-Page Tables
-Tables
-Tables
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -211,21 +235,28 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Page Tables in GPU**
 
-Frame
-16B PagePage
-Page Tables
-Tables
-(2MB)
-Tables
+16B
+
+Frame (2MB)
+
 PT (4KB)
-Frame
+
 8B
-8B (4KB)
+
+Frame (4KB)
+
+PD0 (4KB)
+
 8B
 8B
-Frame
-(64KB)
-PD0 (4KB) PT (256B)
+
+PT (256B)
+
+8B
+
+Frame (64KB)
+
+Page Tables
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -234,24 +265,44 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Page Tables in GPU: PTEs**
 
 We target the physical address bits.
-AD RO P E VOL A V
+
+63    55   53                                            7
+
+Type | Physical Address [:12] | AD | RO | P | E | VOL | A | V
+
+PTE Flags [7:0]
+
+64-bit PTE Format
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 16
 
-Page Table Tampering No need to thank me
-Step 1:  Step 2:  Step 3:
-Neighbor PT & Aggressor Corrupt PTE  Place PT in New Dest.
-Original
-Virtual
-Frame
-Address
-Page GPU
-0x1234 PTE
-Table VRAM
-Page
-Table
+### **Page Table Tampering**
+
+No need to thank me
+
+**Step 1:**
+Neighbor PT & Aggressor
+
+**Page Table**
+
+Virtual Address
+0x1234
+
+**Step 2:**
+Corrupt PTE
+
+PTE
+
+Original Frame
+
+**Step 3:**
+Place PT in New Dest.
+
+**Page Table**
+
+**GPU VRAM**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -259,7 +310,9 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Page Table Tampering**
 
-###### **From their own words (Blackhat ‘15):**
+**From their own words (Blackhat ‘15):**
+
+Mark was more clever: He simply put the system under memory pressure - when backed into a corner, the OS behaves nicely.
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -269,7 +322,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **From their own words (Blackhat ‘15):**
 
+Mark was more clever: He simply put the system under memory pressure - when backed into a corner, the OS behaves nicely.
+
 **Can’t Fill GPU VRAM with PTE like on Linux**
+
+Possible somehow. I spent a few afternoons fumbling around in the Linux physical page allocator. Not very fun code.
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -286,7 +343,9 @@ PD0
 200+ MBs
 DATA
 
-**Challenge:** Naively Filling PT Region Requires Allocating **256 GB** of Memory Initial PT Region is **Far Away (200+ MB)** from User Data
+**Challenge:** Naively Filling PT Region Requires Allocating **256 GB** of Memory
+
+Initial PT Region is **Far Away (200+ MB)** from User Data
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -302,14 +361,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Q1. How to Get More PT Regions?**
 
-cudaMalloc() cudaMallocManaged()
-4KB
-64KB
+cudaMalloc()
+
 2MB
-4KB PT
-256B PT
+
 16B PTE
-256GB 16GB 1GB
+
+256GB
+
+cudaMallocManaged()
+
+64KB
+
+256B PT
+
+16GB
+
+4KB
+
+4KB PT
+
+1GB
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -317,11 +389,13 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Q1. How to Get More PT Regions?**
 
-###### **Unified Virtual Memory (UVM)**
+**Unified Virtual Memory (UVM)**
 
-VRAM DRAM
+cudaMallocManaged()
 
-###### cudaMallocManaged()
+VRAM → DRAM
+
+CPU
 
 **CPU as Swap**
 
@@ -331,21 +405,37 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Q1. How to Get More PT Regions?**
 
-DNE?
-cudaMalloc() cudaMallocManaged()
-4KB
-64KB
+cudaMalloc()
+
 2MB
-4KB PT
-256B PT
+
 16B PTE
-256GB 16GB 1GB
+
+256GB
+
+cudaMallocManaged()
+
+64KB
+
+256B PT
+
+16GB
+
+DNE?
+
+4KB
+
+4KB PT
+
+1GB
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 24
 
-### **Getting 4KB Pages! (They thought it DNE…)** cudaMallocManaged(&ptr, **2 MB + 4 KB** )
+### **Getting 4KB Pages! (They thought it DNE…)**
+
+cudaMallocManaged(&ptr, **2 MB + 4 KB**)
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -353,7 +443,22 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Getting 4KB Pages!**
 
-###### cudaMallocManaged(&ptr, **2 MB + 4 KB** <u>)</u>
+cudaMallocManaged(&ptr, **2 MB + <u>4 KB</u>**)
+
+Page Type (y-axis): 2MB, 64KB, 4KB
+
+Allocation Size (x-axis): 0, 0.5MB, 1MB, 1.5MB, 2MB
+
+Legend: 2MB, 64KB, 4KB
+
+```text
+241-->PT@0x000c036000
+    0-->4KB-Page@0x001cc00000
+243-->PT@0x000c037000
+    0-->4KB-Page@0x001cc01000
+245-->PT@0x000c038000
+    0-->4KB-Page@0x001cc02000
+```
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -361,15 +466,49 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Getting 4KB Pages!**
 
-cudaMallocManaged(&ptr, **<u>2 MB + 4 KB</u>** )
+?
+
+cudaMallocManaged(&ptr, **<u>2 MB</u> + 4 KB**)
+
+Page Type (y-axis): 2MB, 64KB, 4KB
+
+Allocation Size (x-axis): 0, 0.5MB, 1MB, 1.5MB, 2MB
+
+Legend: 2MB, 64KB, 4KB
+
+```text
+241-->PT@0x000c036000
+    0-->4KB-Page@0x001cc00000
+243-->PT@0x000c037000
+    0-->4KB-Page@0x001cc01000
+245-->PT@0x000c038000
+    0-->4KB-Page@0x001cc02000
+```
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 27
 
-**Getting 4KB Pages!** cudaMallocManaged(&ptr, **<u>2 MB + 4 KB</u>** )
+### **Getting 4KB Pages!**
 
-**I am Lazy Loaded!**
+I am Lazy Loaded!
+
+cudaMallocManaged(&ptr, **<u>2 MB</u> + 4 KB**)
+
+Page Type (y-axis): 2MB, 64KB, 4KB
+
+Allocation Size (x-axis): 0, 0.5MB, 1MB, 1.5MB, 2MB
+
+Legend: 2MB, 64KB, 4KB
+
+```text
+241-->PT@0x000c036000
+    0-->4KB-Page@0x001cc00000
+243-->PT@0x000c037000
+    0-->4KB-Page@0x001cc01000
+245-->PT@0x000c038000
+    0-->4KB-Page@0x001cc02000
+```
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -377,9 +516,19 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Q2. How to Get Dense PT Regions?**
 
-4KB PT can efficiently allocate PT Regions **, but...**
+4KB PT can efficiently allocate PT Regions**, but...**
 
-4KB PT is Sparse… à Hard to Hit PTEs PTEs (3%) PT
+Page Type (y-axis): 2MB, 64KB, 4KB
+
+Allocation Size (x-axis): 0, 0.5MB, 1MB, 1.5MB, 2MB
+
+Legend: 2MB, 64KB, 4KB
+
+4KB PT is Sparse… → Hard to Hit PTEs
+
+PTEs (3%)
+
+PT
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -387,12 +536,18 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Q2. How to Get Dense PT Regions?**
 
-1. Access
-UVM Eviction!
+**1. Access**
+
+CPU
+
+**UVM Eviction!**
+
+2MB
+
 64KB
-64KB
-2MB 64KB
-97% 31X
+
+97%
+
 PT (256B)
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
@@ -402,13 +557,22 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Q2. How to Get Dense PT Regions?**
 
 1. Access
-UVM Eviction!
+
+CPU
+
+**UVM Eviction!**
+
+2MB
+
 64KB
+
+**2. Evict to CPU**
+
 64KB
-2MB 64KB
-64KB
-97% 31X
-2. Evict to CPU PT (256B)
+
+97%
+
+PT (256B)
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -417,41 +581,54 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Q2. How to Get Dense PT Regions?**
 
 1. Access
-UVM Eviction!
+
+CPU
+
+**UVM Eviction!**
+
+2MB
+
 64KB
+
+**2. Evict to CPU**
+
 64KB
-2MB 64KB
-64KB
-97% 31X
-2. Evict to CPU PT (256B)
+
+97%
+
+PT (256B)
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 32
 
-Q2. How to Get Dense PT Regions?
+### **Q2. How to Get Dense PT Regions?**
+
 1. Access
-UVM Eviction!
+
+CPU
+
+**UVM Eviction!**
+
+2MB
+
+**3. Converts**
+
 64KB
+
+2. Evict to CPU
+
 64KB
-2MB 64KB
-3. Converts
-64KB
-97% 31X
-2. Evict to CPU PT (256B)
+
+97%
+
+PT (256B)
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 33
 
-Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
-
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
-[Terminal window]
-
 # Before Eviction
 243-->PD0@0x000c035000
     48-->2MB-Page@0x001cc00000
@@ -463,20 +640,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
         1-->64KB-Page@0x001cc10000
         2-->64KB-Page@0x001cc20000
         3-->64KB-Page@0x001cc30000
-
-[A large red arrow points at the line "48-->2MB-Page@0x001cc00000"]
 ```
 
 ## Slide 34
 
-Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
-
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
-[Terminal window]
-
 # Before Eviction
 243-->PD0@0x000c035000
     48-->2MB-Page@0x001cc00000
@@ -488,8 +656,6 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
         1-->64KB-Page@0x001cc10000
         2-->64KB-Page@0x001cc20000
         3-->64KB-Page@0x001cc30000
-
-[A large red arrow points at the line "48-->PT@0x000c022100"]
 ```
 
 ## Slide 35
@@ -515,11 +681,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **How to Massage PTEs?**
 
 PT Region
+
 Target Memory
 
-Observation:
-PT Region and User Data
-use the SAME memory pool
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -527,10 +693,12 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **How to Massage PTEs?**
 
-Full PT Region PT Region
+Full PT Region
+
 Target Memory
 
-**Observation:** PT Region and User Data use the SAME memory pool
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -538,11 +706,14 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **How to Massage PTEs?**
 
-Full PT Region PT Region
-Target Memory Free Target
+Full PT Region
+
+Free Target
+
 Free
 
-**Observation:** PT Region and User Data use the SAME memory pool
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -550,9 +721,14 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **How to Massage PTEs?**
 
-**Full PT Region PT Region Target Memory** **Free Target Allocate Free**
+Full PT Region
 
-**Observation:** PT Region and User Data use the SAME memory pool
+Free Target
+
+Allocate
+
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -560,13 +736,14 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **How to Massage PTEs?**
 
-Full PT Region PT Region
-New PT Region Target MemoryFree Target
-Allocate Free
+Full PT Region
 
-Observation:
-PT Region and User Data
-use the SAME memory pool
+New PT Region
+
+Allocate
+
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -574,14 +751,17 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **How to Massage PTEs?**
 
-**Full PT Region PT Region** **New PT Region Target MemoryFree TargetFree Target**
+Full PT Region
 
-New PT Region Target MemoryFree TargetFree Target
-Allocate Free
+New PT Region
 
-**Observation:** PT Region and User Data use the SAME memory pool
+Allocate
 
-Question: **How do we know when PT Region is full?**
+**Observation:**
+PT Region and User Data use the <u>SAME</u> memory pool
+
+Question:
+**How do we know when PT Region is full?**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -591,7 +771,7 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **1 Efficient & Dense PT Region Allocation Technique!**
 
-- **2 Exhaust VRAM to Force Placement!**
+**2 Exhaust VRAM to Force Placement!**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -611,14 +791,19 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Identify PT Region Allocations**
 
-Silent
-Allocation
+Silent Allocation
+
+Full PT Region
+
+New PT Region
+
+Allocate
 
 We leverage **timing side-channel** in **Unified Virtual Memory (UVM)**
 
-Full PT Region
-New PT Region Free Target
-Allocate Evict
+Latency (ms) [y-axis]: 0.1, 0.3, 0.5
+
+Number of 2MB Allocations [x-axis]: 6000, 12000, 18000, 24000
 
 Allocations Above Memory Limit are **Evicted to CPU**
 
@@ -682,7 +867,11 @@ Repeat Evict and allocate **(Low Latency)**
 
 DATA
 
-**PT Region** Evicted / FreedAllocate DATA
+**PT Region**
+
+Allocate
+
+DATA
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -714,7 +903,11 @@ Repeat Evict and allocate **(Low Latency)**
 
 DATA
 
-**PT Region** Evicted / FreedAllocate DATA
+**PT Region**
+
+Allocate
+
+DATA
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -722,9 +915,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Eviction Timing Side-channel!**
 
-Repeat Evict and allocate New PT region needed Fill GPU memory full **(Low Latency) (High Latency!)** **PT Region PT Region Full Region** Evicted / FreedAllocate Evicted / Freed DATA DATA DATA
+Fill GPU memory full
+
+Repeat Evict and allocate **(Low Latency)**
 
 New PT region needed **(High Latency!)**
+
+**PT Region**
+
+DATA
+
+**PT Region**
+
+Allocate
+
+DATA
+
+**Full Region**
+
+Evicted / Freed
+
+DATA
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -732,13 +943,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Eviction Timing Side-channel!**
 
-Fill GPU memory full **PT Region**
+Fill GPU memory full
+
+Repeat Evict and allocate **(Low Latency)**
+
+New PT region needed **(High Latency!)**
+
+**PT Region**
 
 DATA
 
-Repeat Evict and allocate New PT region needed **(Low Latency) (High Latency!)** **PT Region Full Region** Evicted / FreedAllocate Evicted / FreedAllocate DATA DATA
+**PT Region**
 
-New PT region needed **(High Latency!)**
+Allocate
+
+DATA
+
+**Full Region**
+
+Allocate
+
+DATA
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -746,7 +971,29 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Eviction Timing Side-channel!**
 
-Repeat Evict and allocate New PT region needed Fill GPU memory full **(Low Latency) (High Latency!)** **PT Region PT Region Full Region** Evicted / FreedAllocate Evicted / FreedAllocate DATA DATA DATA **PT Region**
+Fill GPU memory full
+
+Repeat Evict and allocate **(Low Latency)**
+
+New PT region needed **(High Latency!)**
+
+**PT Region**
+
+DATA
+
+**PT Region**
+
+Allocate
+
+DATA
+
+**Full Region**
+
+Allocate
+
+DATA
+
+**PT Region**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -754,28 +1001,49 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Eviction Timing Side-channel!**
 
-Fill GPU memory full **PT Region**
+Fill GPU memory full
+
+Repeat Evict and allocate **(Low Latency)**
+
+New PT region needed **(High Latency!)**
+
+**PT Region**
 
 DATA
 
-Repeat Evict and allocate New PT region needed
-(Low Latency) (High Latency!)
-PT Region Full Region
-Evicted / FreedAllocate Evicted / FreedAllocate
-DATA DATA
-PT Region
-Eviction!
+**PT Region**
+
+Allocate
+
+DATA
+
+**Full Region**
+
+Allocate
+
+DATA
+
+**PT Region**
+
+**Eviction!**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 56
 
-Eviction Timing Side-channel!
-508 508 508 508
+### **Eviction Timing Side-channel!**
 
-PT Region
-Allocation
-We can  deterministically  predict PT Region Allocations.
+508  508  508  508
+
+420  928  1436  1944  2452
+
+Latency (ms)
+
+PT Region Allocation
+
+4KB Page Frames Allocated
+
+We can **deterministically** predict PT Region Allocations.
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -793,18 +1061,30 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ## Slide 58
 
-Page Table Tampering
-Step 1:  Step 2:  Step 3:
-Neighbor PT & Aggressor Corrupt PTE  Place PT in New Dest.
-Original
-Virtual
-Frame
-Address
-Page GPU
-0x1234 PTE
-Table VRAM
-Page
-Table
+### **Page Table Tampering**
+
+**Step 1:**
+Neighbor PT & Aggressor
+
+**Step 2:**
+Corrupt PTE
+
+**Step 3:**
+Place PT in New Dest.
+
+**Page Table**
+
+Virtual Address
+
+0x1234
+
+PTE
+
+Original Frame
+
+**Page Table**
+
+**GPU VRAM**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -848,6 +1128,13 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ML Model
 
+|  | Variant |
+| --- | --- |
+| Llama2 (7B) | Meta*<br>Nous<br>Meta, Chat |
+| Llama3 (8B) | Meta*<br>Nous<br>Meta, Instruct |
+| Mistral (7B) | v1.0*<br>Instruct v1.0<br>OpenHermes 2.5 |
+| Gemma (7B) | Google*<br>Google, Instruct |
+
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 64
@@ -855,6 +1142,20 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Exploit 1: Arbitrary Read on GPU**
 
 ML Model
+
+|  | Variant | Llama2 | Llama3 | Mistral | Gemma |
+| --- | --- | --- | --- | --- | --- |
+| Llama2 (7B) | Meta* | 0.99 | -0.20 | -0.05 | 0.29 |
+|  | Nous | 0.99 | -0.20 | -0.05 | 0.29 |
+|  | Meta, Chat | 0.99 | -0.20 | -0.05 | 0.29 |
+| Llama3 (8B) | Meta* | 0.06 | 1.00 | 0.07 | -0.02 |
+|  | Nous | 0.06 | 1.00 | 0.07 | -0.02 |
+|  | Meta, Instruct | 0.06 | 1.00 | 0.07 | -0.02 |
+| Mistral (7B) | v1.0* | 0.94 | -0.18 | 1.00 | 0.23 |
+|  | Instruct v1.0 | 0.94 | -0.18 | 1.00 | 0.25 |
+|  | OpenHermes 2.5 | 0.94 | -0.18 | 1.00 | 0.23 |
+| Gemma (7B) | Google* | -0.04 | -0.20 | -0.08 | 1.00 |
+|  | Google, Instruct | -0.03 | -0.16 | -0.04 | 0.97 |
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -873,7 +1174,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ML Model Crypto Keys
 
-<u>https://developer.nvidia.com/cupqc</u>
+**NVIDIA cuPQC**
+
+https://developer.nvidia.com/cupqc
+
+**NVIDIA cuPQC** is an SDK of GPU-optimized cryptographic math libraries for building both classical and next-generation high-performance cryptographic applications.
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -882,11 +1187,17 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 ### **Exploit 1: Arbitrary Read on GPU**
 
 ML Model Crypto Keys
+
 Where are the keys?
-Monitor GPU State Changed
-GPU State Start Dumping
-Key Exchange Key Exchange
-Starts Finishes
+
+Monitor GPU State
+
+GPU State Changed Start Dumping
+
+Key Exchange Starts
+
+Key Exchange Finishes
+
 ~6 ms
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
@@ -895,17 +1206,29 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 1: Arbitrary Read on GPU**
 
-###### **Approach 1:** Shared Library
+**Approach 1:** Shared Library
 
-**Approach 2:** Victim Page Profiling **Obs.** Memories are Zeroed on Free
+open-quantum-safe/**liboqs**
 
-###### **Attacker Key**
+**Attacker Key**
 
-Victim Key
+**Victim Key**
 
-**0x1234 0x1234** Physical Location Equivalent
+**0x1234** <-> **0x1234**
 
-0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF
+Physical Location Equivalent
+
+**Approach 2:** Victim Page Profiling
+
+**Obs.** Memories are Zeroed on Free
+
+0xFFFFFFFF
+
+0xFFFFFFFF
+
+0xFFFFFFFF
+
+0xFFFFFFFF
 
 Before
 
@@ -915,19 +1238,28 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 1: Arbitrary Read on GPU**
 
-###### **Approach 1:** Shared Library
+**Approach 1:** Shared Library
 
-Attacker Key Victim Key
+open-quantum-safe/**liboqs**
 
-**0x1234 0x1234** Physical Location Equivalent
+**Attacker Key**
 
-Approach 2:  Victim Page Profiling
-Obs.  Memories are Zeroed on Free
-0xFFFFFFFF 0xFFFFFFFF
-0xFFFFFFFF 0x0
-0xFFFFFFFF 0xFFFFFFFF
-0xFFFFFFFF 0x0
-Before After
+**Victim Key**
+
+**0x1234** <-> **0x1234**
+
+Physical Location Equivalent
+
+**Approach 2:** Victim Page Profiling
+
+**Obs.** Memories are Zeroed on Free
+
+| Before | After |
+| --- | --- |
+| 0xFFFFFFFF | 0xFFFFFFFF |
+| 0xFFFFFFFF | 0x0 |
+| 0xFFFFFFFF | 0xFFFFFFFF |
+| 0xFFFFFFFF | 0x0 |
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -969,10 +1301,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 2: Arbitrary Write on GPU**
 
-0% Model
-Accuracy
-Universal
-Degradation
+cuBLAS
+
+**0% Model Accuracy**
+
+**Universal Degradation**
 
 **But everything seems fine…**
 
@@ -984,6 +1317,18 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **Offline Phase:** Filter Critical Instructions
 
+```
+/* 0x0000011000000947, 0x003fde0003800000 */
+@P0 BRA 0x1d0 ;
+/* 0x0000000000007947, 0x003fde0003800000 */
+BRA 0xd0 ;
+...
+/* 0x0000000000007918, 0x000fc00000000000 */
+NOP;
+```
+
+PyTorch
+
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 75
@@ -993,6 +1338,16 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 **Offline Phase:** Filter Critical Instructions
 
 Identify Kernels
+
+```
+/* 0x0000011000000947, 0x003fde0003800000 */
+@P0 BRA 0x1d0 ;
+/* 0x0000000000007947, 0x003fde0003800000 */
+BRA 0xd0 ;
+...
+/* 0x0000000000007918, 0x000fc00000000000 */
+NOP;
+```
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1004,6 +1359,16 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 Branch in SASS
 
+```
+/* 0x0000011000000947, 0x003fde0003800000 */
+@P0 BRA 0x1d0 ;
+/* 0x0000000000007947, 0x003fde0003800000 */
+BRA 0xd0 ;
+...
+/* 0x0000000000007918, 0x000fc00000000000 */
+NOP;
+```
+
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
 ## Slide 77
@@ -1014,7 +1379,19 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **Goal:** Find Branch that
 
-(1) Degrade models universally (2) ~0% Runtime Impact
+(1) Degrade models universally
+
+(2) ~0% Runtime Impact
+
+```
+/* 0x0000011000000947, 0x003fde0003800000 */
+@P0 BRA 0x1d0 ;
+/* 0x0000000000007947, 0x003fde0003800000 */
+BRA 0xd0 ;
+...
+/* 0x0000000000007918, 0x000fc00000000000 */
+NOP;
+```
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1024,9 +1401,31 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 **Offline Phase:** Filter Critical Instructions
 
-**Goal:** Find Branch that (1) Degrade models universally (2) ~0% Runtime Impact
+**Goal:** Find Branch that
 
-Filter by this criteria at different granularity **Pages** SASS Template **Kernels Instructions**
+(1) Degrade models universally
+
+(2) ~0% Runtime Impact
+
+```
+/* 0x0000011000000947, 0x003fde0003800000 */
+@P0 BRA 0x1d0 ;
+/* 0x0000000000007947, 0x003fde0003800000 */
+BRA 0xd0 ;
+...
+/* 0x0000000000007918, 0x000fc00000000000 */
+NOP;
+```
+
+Filter by this criteria at different granularity
+
+**Pages**
+
+**Kernels**
+
+**Instructions**
+
+SASS Template
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1034,17 +1433,23 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 2: Arbitrary Write on GPU**
 
-**Offline Phase:** Filter Critical Instructions SASS Template
+**Offline Phase:** Filter Critical Instructions
+
+SASS Template
 
 **Online Phase:** Apply Template to Victim Code
 
-0% Model
-Accuracy
-Code
-Segment
-No
-(1) CPU-side Change
-(2) Runtime Change
+PyTorch
+
+**Code Segment**
+
+cuBLAS
+
+**0% Model Accuracy**
+
+**No**
+**(1) CPU-side Change**
+**(2) Runtime Change**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1086,18 +1491,36 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-CPU DRAM
+**Malicious DMA to Host DRAM**
 
-CPU DRAM
-Malicious DMA to Host DRAM
-Privilege Escalation to the Host!
+**Privilege Escalation to the Host!**
+
+CPU
+
+**CPU DRAM**
+
+A = 00
+
+**GPU VRAM**
+
+**CPU Memory**
+
 A = 11
-CPU Memory
-AD RO P E VOL A V
-Aperture:
-Select between GPU and CPU Memory
 
-A = 00 **GPU VRAM**
+63  55  53
+
+Type
+
+Physical Address [:12]
+
+7
+
+**PTE Flags [7:0]**
+
+AD | RO | P | E | VOL | A | V
+
+**Aperture:**
+Select between GPU and CPU Memory
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1105,11 +1528,15 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-**CPU DRAM Malicious DMA to Host DRAM**
+**Malicious DMA to Host DRAM**
 
-**IOMMU DisabledEnabled**
+CPU
 
-**Entire Host MemoryIOMMU Protected Host MemoryTamperable**
+**CPU DRAM**
+
+IOMMU **Enabled**
+
+**IOMMU Protected Host Memory**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1117,18 +1544,34 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-CPU DRAM
-Malicious DMA to Host DRAM
-Driver
-GPU Status Queue
-Unprotected
+**Malicious DMA to Host DRAM**
+
+CPU
+
+**CPU DRAM**
+
+**Driver**
+
+**Unprotected Region**
+
+**GPU Status Queue**
+
 Message
-Region
-Root Shell
-Buffer Overflow
-Staging Buffer Pointers
-IOMMU
-Protected Message
+
+**Buffer Overflow**
+
+**IOMMU Protected**
+
+**Staging Buffer**
+
+**Pointers**
+
+Message
+
+**Root Shell**
+
+~$ whoami
+root
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1148,12 +1591,25 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue Staging Buffer [16]
-Message Message
-1 st Entry 16 th
-elemCount =  16 … Entry
-Unsanitized
-Unprotected DMA Region IOMMU Protected
+**GPU Status Queue**
+
+Message
+
+1st Entry elemCount = **16**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**Unprotected DMA Region**
+
+**Staging Buffer [16]**
+
+Message
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1161,12 +1617,25 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue Staging Buffer [16]
-Message Message
-1 st Entry 16 th
-elemCount =  17 … Entry
-Unsanitized
-Unprotected DMA Region IOMMU Protected
+**GPU Status Queue**
+
+Message
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**Unprotected DMA Region**
+
+**Staging Buffer [16]**
+
+Message
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1174,12 +1643,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue Staging Buffer [16]
-Message Message
-1 st Entry 16 th
-elemCount =  17 … Entry
-Unsanitized 17 th Entry
-Unprotected DMA Region IOMMU Protected
+**GPU Status Queue**
+
+Message
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**17th Entry**
+
+**Unprotected DMA Region**
+
+**Staging Buffer [16]**
+
+Message
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1187,15 +1671,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue
+**GPU Status Queue**
+
 Message
-1 st Entry 16 th
-…
-Staging Buffer [16]
-elemCount =  17 Entry
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**17th Entry**
+
+**Unprotected DMA Region**
+
+**Staging Buffer [16]**
+
 Message
-Unsanitized 17 th Entry
-Unprotected DMA Region IOMMU Protected
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1203,13 +1699,27 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue
+**GPU Status Queue**
+
 Message
-1 st Entry 16 th
-elemCount =  17 … Entry
-Staging Buffer  [16] pMetadata
-Unsanitized 17 th Entry
-Unprotected DMA Region IOMMU Protected
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**17th Entry**
+
+**Unprotected DMA Region**
+
+Staging Buffer **[16]**
+
+**pMetadata**
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1217,15 +1727,33 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue
+**GPU Status Queue**
+
 Message
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**17th Entry**
+
+**Unprotected DMA Region**
+
 Writes to
-pReadOutgoing rxReadPtr
-1 st Entry 16 th
-elemCount =  17 … Entry
-Staging Buffer  [16] pMetadata
-Unsanitized 17 th Entry
-Unprotected DMA Region IOMMU Protected
+
+`pReadOutgoing`
+
+`rxReadPtr`
+
+Staging Buffer **[16]**
+
+**pMetadata**
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1233,15 +1761,37 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Exploit 3: CPU-side Privilege Escalation**
 
-GPU Status Queue
-_backendWrite32
-Message &EUID 0(Root)
-pReadOutgoing rxReadPtr
-1 st Entry 16 th
-elemCount =  17 … Entry
-Staging Buffer  [16] pMetadata
-Unsanitized 17 th Entry
-Unprotected DMA Region IOMMU Protected
+**GPU Status Queue**
+
+Message
+
+1st Entry elemCount = **17**
+
+...
+
+16th Entry
+
+**Unsanitized**
+
+**17th Entry**
+
+**Unprotected DMA Region**
+
+`_backendWrite32`
+
+`&EUID`
+
+`0(Root)`
+
+`pReadOutgoing`
+
+`rxReadPtr`
+
+Staging Buffer **[16]**
+
+**pMetadata**
+
+**IOMMU Protected**
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
 
@@ -1249,15 +1799,15 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Takeaways**
 
-###### **GPU Rowhammer is a real threat!**
+**GPU Rowhammer is a real threat!**
 
-- § We went from random corruption to targeted attacks that take over GPUs.
+- We went from random corruption to targeted attacks that take over GPUs.
 
 **CPU-side Driver is not safe from a malicious GPU.**
 
-- § GPUBreach extended the exploit to the host, gaining powerful primitives
+- GPUBreach extended the exploit to the host, gaining powerful primitives
 
-- § Driver’s lack of sanitization on input from the GPU is the main culprit.
+- Driver’s lack of sanitization on input from the GPU is the main culprit.
 
 **Rethinking GPU Security Assumptions**
 
@@ -1267,17 +1817,23 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 ### **Takeaways**
 
-PT Region
-DATA
-VRAM
-ECC
-GDDR
+CPU
 
 **Sanitize GPU-Side Inputs in Driver**
 
+PT Region
+
+DATA
+
 **Isolate GPU Page Tables from Data**
 
+VRAM
+
+ECC
+
 **Error Correction Codes in GPU DRAM**
+
+GDDR
 
 **Principled RH Defense in GPU DRAM**
 
@@ -1289,11 +1845,11 @@ Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding
 
 Responsibly disclosed to NVIDIA & Cloud Vendors
 
-###### **GPUBreach has been reported to respective parties.**
+**GPUBreach has been reported to respective parties.**
 
-§ **Vendor:** NVIDIA. **CSPs:** Google, Microsoft, etc
+- **Vendor:** NVIDIA. **CSPs:** Google, Microsoft, etc
 
-- § NVIDIA acknowledged the risks, while the CSPs are discussing mitigation approaches with their respective engineering teams.
+- NVIDIA acknowledged the risks, while the CSPs are discussing mitigation approaches with their respective engineering teams.
 
 Awarded **Google Bug Bounty**
 
@@ -1319,8 +1875,21 @@ www.gpubreach.ca
 
 #### **Contacts:**
 
-Chris: email: <u>shaopenglin@cs.toronto.edu</u> personal site: https://shaopenglin.github.io Yuqin: email: <u>me@yqyan.com</u>
+Chris:
 
-Guozhen: email: <u>gzh.ding@mail.utoronto.ca</u> personal site : <u>https://www.guozhen.dev/</u>
+email: shaopenglin@cs.toronto.edu
+
+personal site: https://shaopenglin.github.io
+
+Yuqin:
+
+email: me@yqyan.com
+
+Guozhen:
+
+email: gzh.ding@mail.utoronto.ca
+
+personal site : https://www.guozhen.dev/
 
 Chris S. Lin (shaopeng.lin@cs.toronto.edu) Yuqin Yan (me@yqyan.com) Guozhen Ding (gzh.ding@mail.utoronto.ca)
+
