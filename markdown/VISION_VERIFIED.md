@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4778 slides across 198 documents.**
+**4793 slides across 199 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 2022 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2131 | structure held; individual characters or lines wrong |
-| accurate | 597 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 2145 | structure held; individual characters or lines wrong |
+| accurate | 598 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -302,6 +302,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 1-81 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
+| Black Hat USA 2026 | Managing Security Culture Half Life | 1-15 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 1-71 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
