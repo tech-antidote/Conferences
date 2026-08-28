@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4338 slides across 189 documents.**
+**4386 slides across 189 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2009 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1779 | structure held; individual characters or lines wrong |
-| accurate | 522 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2008 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1810 | structure held; individual characters or lines wrong |
+| accurate | 540 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -291,7 +291,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | GitHub Can Tell You're Being Hacked. You're Just Not Listening Building EDR for GitHub from Its Own Event Stream | 1-46 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover | 1-50 | badly-mangled, minor-errors | 0 |
-| Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 11-12, 17, 35-37 | badly-mangled | 0 |
+| Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 1-54 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 1-81 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
