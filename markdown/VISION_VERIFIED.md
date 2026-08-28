@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4456 slides across 191 documents.**
+**4483 slides across 192 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2015 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1870 | structure held; individual characters or lines wrong |
+| badly-mangled | 2020 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1892 | structure held; individual characters or lines wrong |
 | accurate | 543 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -279,6 +279,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Attacking and Defending AI Browsers | 1-45 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures | 1-77 | badly-mangled, minor-errors | 1 |
 | Black Hat USA 2026 | Beam Me Up, Luke A Review of Teleport Attack Scenarios | 75, 87 | badly-mangled | 0 |
+| Black Hat USA 2026 | Beyond Detection What We Learned Testing Every AI Approach to Vulnerability Classification | 1-27 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices | 1-24 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
