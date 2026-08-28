@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5085 slides across 203 documents.**
+**5094 slides across 204 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 2070 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2378 | structure held; individual characters or lines wrong |
-| accurate | 609 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 2386 | structure held; individual characters or lines wrong |
+| accurate | 610 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -324,6 +324,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | The Crypto Caper Exposing a Sophisticated Multi-Cloud Bandit | 1-16 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Threat Modeling LLMs The PHANTOM-B model | 1-9 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Threat Modeling LLMs The PHANTOM-B model | 1-59 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | ThreatForest: Automated Attack Trees from Source Code | 1-23 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks | 1-56 | minor-errors, accurate | 0 |

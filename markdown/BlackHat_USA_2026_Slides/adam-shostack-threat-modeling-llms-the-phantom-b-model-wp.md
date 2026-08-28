@@ -14,6 +14,8 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 8
+vision_verified_pages: 9
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -83,10 +85,6 @@ Much like new songs are constantly appearing on Spotify, new instances of LLM se
 
 - Do we have one or more of each threat ?
 
-2
-
-shostack.org/contact
-
 ## Slide 3
 
 ### **Using PHANTOM-B**
@@ -126,10 +124,6 @@ When “what we’re working on” includes an LLM, PHANTOM-B can be used to ant
 
 - What biases does the LLM have, and are those acceptable in this use case?
 
-3
-
-shostack.org/contact
-
 ## Slide 4
 
 This is more focused than other methods, like STRIDE or even attack trees, which can be used broadly for threat modeling across an entire product or system. This is a design choice: Tools focused on a single goal can excel at that goal. By analogy, professional photographers invest in and use fixed-length lenses rather than ones which zoom. In this metaphor, PHANTOM-B is a fixed lens, which you use when you’re looking at an LLM.
@@ -157,10 +151,6 @@ It’s best to think of prompt injection as a demonstration of the failure of co
 If we assume a 2026 LLM is doing expense processing, and no other controls, your stay at the Ritz will sail on through. The possibilities are literally only bounded by what the LLM can do.
 
 As such, prompt injections are the AI equivalent of “popping calc.” (“Popping calc” is a traditional final stage for Windows proof-of-concept exploitation code. It’s a harmless demo that shows that something much worse is possible.)
-
-4
-
-shostack.org/contact
 
 ## Slide 5
 
@@ -192,10 +182,6 @@ Note that this section very carefully avoids saying _the LLM_ needs to explain t
 
 Further, LLMs are probabilistic, and it may be hard to get a new instance to emit the same tokens, making debugging harder.
 
-5
-
-shostack.org/contact
-
 ## Slide 6
 
 #### **Training issues including quality or poisoning**
@@ -206,7 +192,7 @@ LLM training involves gathering as much input as possible to derive the best wei
 
 This threat manifests two ways: Intentional data poisoning and accidental or incidental data poisoning.
 
-Intentional data poisoning can change LLM output in certain specific **training data, but you** scenarios such as “when this phrase appears, do this.” It can serve **can incorporate an** many motivations, including changing outputs or decreasing accuracy. **understanding of it...”** It requires roughly 250 documents across a very wide variety of model sizes and training data<sup>1</sup> . Intentional poisoning can target the LLM’s users for certain inputs, or it can degrade the LLM’s overall capacity, for example, the University of Chicago’s Nightshade and Glaze tools work to reduce the quality of image outputs or style mimicry prompts. But the hungry monster that is LLM training can bring in random corners of the internet, in-jokes, and other elements which emerge unexpectedly.
+Intentional data poisoning can change LLM output in certain specific scenarios such as “when this phrase appears, do this.” It can serve many motivations, including changing outputs or decreasing accuracy. It requires roughly 250 documents across a very wide variety of model sizes and training data<sup>1</sup> . Intentional poisoning can target the LLM’s users for certain inputs, or it can degrade the LLM’s overall capacity, for example, the University of Chicago’s Nightshade and Glaze tools work to reduce the quality of image outputs or style mimicry prompts. But the hungry monster that is LLM training can bring in random corners of the internet, in-jokes, and other elements which emerge unexpectedly.
 
 #### **Over-reliance on a model**
 
@@ -222,10 +208,6 @@ Missing security engineering is a catch all. Instead of eliminating the security
 
 > 1  Souly, et al, Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples, 8 October 2025, _https://arxiv.org/abs/2510.07192_
 
-6
-
-shostack.org/contact
-
 ## Slide 7
 
 #### **Biases**
@@ -234,7 +216,7 @@ LLMs accumulate various biases all along the creation pipeline, including the re
 
 As a caller, you inherit the biases of those who collected, filtered and refined data, along with those who did the training and tuning. While you can’t control those, you can test for relevant biases, including representation. Common biases can include gender, racial, ethnic or culturally biased responses to questions or generated content. For example, biases might be about race and job-type. Does the model’s bias mean it portrays the board of directors as white men? How about the janitorial staff? Data bias differs from training data poison in several important ways:
 
-**> Narrower** : Poison can have effects that are much more broad.
+- **Narrower** : Poison can have effects that are much more broad.
 
 - **Statistically based** : Bias is defining and deviating from baselines, while poison can impact a narrow set of conditions.
 
@@ -258,10 +240,6 @@ PHANTOM-B, like all models, aspires to usefulness, rather than perfection. By de
 
 - Not attempt to be the authoritative source on any threat.
 
-7
-
-shostack.org/contact
-
 ## Slide 8
 
 ### **How PHANTOM-B compares to...**
@@ -270,17 +248,14 @@ Deciding how to answer “What can go wrong” can be complicated. PHANTOM-B is 
 
 **The best way to decide if PHANTOM-B is right for you is to try it** . Its lightweight and accessible nature make that easy. If it’s not, this table offers some ways to consider alternatives.
 
-|**Tool**|**Sweet spot**|**Effort to learn**|**Effort to use**|**Threat**
-**uniqueness**|**Detail**|
+|**Tool**|**Sweet spot**|**Effort to learn**|**Effort to use**|**Threat uniqueness**|**Detail**|
 |---|---|---|---|---|---|
 |**PHANTOM-B**|LLM Users|Low|Low|High|Low|
 |**ATLAS**|LLM Users|High|High|Medium<sup>2</sup>|High|
 |**BIML ARA for LLMs**|LLM Trainers|High|High|High|High|
 |**AI Exchange**|Data scientists|Medium|Medium|High|Medium|
-|**OWASP Top 10 for**
-**LLM/GenAI**|Developers|Low|Medium|Low<sup>3</sup>|High|
-|**Google SAIF**|“Practitioners”
-(LLM engineers)|Medium|Low|High|High|
+|**OWASP Top 10 for LLM/GenAI**|Developers|Low|Medium|Low<sup>3</sup>|High|
+|**Google SAIF**|“Practitioners” (LLM engineers)|Medium|Low|High|High|
 |**Maestro**|Not evaluated|Very high<sup>4</sup>|High|Not evaluated|Not evaluated|
 
 **Table 1** : Tool comparisons
@@ -297,10 +272,6 @@ In contrast to more traditional software, LLM issues seem to be inherent, and th
 
 > 4 MAESTRO’s unique approach doesn’t leverage or align to the industry standard Four Question Framework.
 
-8
-
-shostack.org/contact
-
 ## Slide 9
 
 ##### **ABOUT SHOSTACK + ASSOCIATES**
@@ -309,13 +280,17 @@ shostack.org/contact
 
 Adam Shostack founded the company that bears his name in 2016. Shostack + Associates helps organizations bring security into product and engineering decisions earlier through threat modeling, secure design, training, and practical approaches to adoption. Our scaffolds enable customers to build security practices that teams can adopt, sustain, and use as part of everyday decision-making.
 
+The Shostack + Associates team includes expert practitioners in threat modeling, AI, organizational change, instructional design and delivery. You can meet our team at <u>shostack.org/about</u> and at leading industry events.
+
+#### **Get In Touch**
+
+If threat modeling isn’t delivering what you hope for, then it’s our hope that this paper will help. If we can help further, please don’t hesitate to reach out for a confidential consultation, at _info@shostack.org._
+
 ##### **ABOUT ADAM SHOSTACK**
 
 Adam is President and Distinguished Engineer at Shostack + Associates. He’s the author of _<u>Threat Modeling: Designing for Security</u>_ and _<u>Threats: What Every Engineer Should Learn from Star Wars</u>_ . He’s a leading expert on threat modeling and a game designer. He has decades of experience delivering security and ranges across the business world from founding startups to nearly a decade at Microsoft.
 
 His accomplishments include:
-
-The Shostack + Associates team includes expert practitioners in threat modeling, AI, organizational change, instructional design and delivery. You can meet our team at <u>shostack.org/about and</u> at leading industry events.
 
 - Helped create the CVE. Now an Emeritus member of the Advisory Board.
 
@@ -324,10 +299,6 @@ The Shostack + Associates team includes expert practitioners in threat modeling,
 - Led the design and delivery of the Microsoft SDL Threat Modeling Tool (v3)
 
 - Created the Elevation of Privilege threat modeling game
-
-#### **Get In Touch**
-
-If threat modeling isn’t delivering what you hope for, then it’s our hope that this paper will help. If we can help further, please don’t hesitate to reach out for a confidential consultation, at _info@shostack.org._
 
 - Co-authored The New School of Information Security
 
@@ -341,6 +312,3 @@ Thanks to Pete Bryan, Loren Kohnfelder, Karen Walsh, and several anonymous revie
 
 Copyright ©2026 Shostack + Associates. This is PHANTOM-B 1.0, Q3 2026. PHANTOM-B is licensed CC-BY.
 
-9
-
-shostack.org/contact
