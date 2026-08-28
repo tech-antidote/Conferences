@@ -14,6 +14,8 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 46
+vision_verified_pages: 46
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,25 +31,17 @@ converted_at: "2026-08-12T05:34:35Z"
 
 ## Slide 1
 
-### **B L A C K H A T U S A 2 0 2 6 · B R I E F I N G S Burning Tears of Burning Tears of PHP's Memory PHP's Memory Hardening Hardening**
+### **Burning Tears of PHP's Memory Hardening**
 
 A fully remote, generic exploit path that survives PHP's newest heap defenses, from one constrained byte.
 
 **Yifan Wu** · Xiaochuan Yu · Zhiyun Qian  ·  UC Riverside · UC San Diego
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 1
 
 ## Slide 2
 
 ###### **This research is 100% LLM-free.**
 
 (except for making these slides)
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 2
 
 ## Slide 3
 
@@ -58,7 +52,7 @@ nebula@blackhat: ~/talks/burning-tears
 \```
 
 \```
-nebula@blackhat:~$whoami
+nebula@blackhat:~$ whoami
 \```
 
 \```
@@ -72,61 +66,106 @@ Hacking XNU and Browsers
 \```
 
 \```
-nebula@blackhat:~$cat recent_work.md
+nebula@blackhat:~$ cat recent_work.md
 \```
 
 - `first public nginx RCE · remote, ASLR bypass, generic config`
 
-- `world’s first Android 17 root (GhostLock) · one URL, full device control`
+- `world's first Android 17 root (GhostLock) · one URL, full device control`
 
 - `first public Android browser → kernel full-chain (IonStack) in 7 years`
 
 \```
-nebula@blackhat:~$./burning_tears.sh--target=php --remote
+nebula@blackhat:~$ ./burning_tears.sh --target=php --remote
 \```
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 3
 
 ## Slide 4
 
 ###### **It started with a CTF.**
 
-###### **1 The CTF** An ordinary PHP challenge.
+r3kapig
+# securinets-ctf-quals-2024 › Pwn-I HATE PHP!
+
+Frank Wu ⚡NEBU 🪓PWN · 2024/10/13 03:10
+maybe we are close to aaw..
+
+\```
+RDI  0x76838d200040 ← 0
+RSI  0x76838d201060 → 0x76838d201090 → 0x76838d2010f0 → 0x76838d1f3e90 → 0x…f0ef5fa25 (_efree) ← ...
+R8   0
+\```
+
+👍 1
+
+Frank Wu ⚡NEBU 🪓PWN · 2024/10/13 03:41
+WT█
+
+\```
+4 months ago · Detect heap freelist corruption (...
+1278  #if ZEND_MM_HEAP_PROTECTION
+1279  /* We keep track of free slots by organizing them in a linked list, with the
+1280   * first word of every free slot being a pointer to the next one.
+1281   *
+1282   * In order to frustrate corruptions, we check the consistency of these pointers
+1283   * before dereference by comparing them with a shadow.
+1284   *
+1285   * The shadow is a copy of the pointer, stored at the end of the slot. It is
+1286   * XOR'ed with a random key, and converted to big-endian so that smaller
+1287   * corruptions affect the most significant bytes, which has a high chance of
+1288   * resulting in an invalid address instead of pointing to an adjacent slot.
+1289   */
+1290
+1291  #define ZEND_MM_FREE_SLOT_PTR_SHADOW(free_slot, bin_num) \
+1292      *((zend_mm_free_slot**)((char*)(free_slot) + bin_data_size[(bin_num)] - sizeof(zend_mm_free_slot*)))
+\```
+
+PROTECTION added right before 4 month
+
+**1**
+
+**The CTF**
+An ordinary PHP challenge.
 
 **2**
 
+**The 0-day**
+A real flaw. PHP patched it.
+
+AN UNPLANNED SIDE-FIND
+
 **3**
 
-**The 0‑day** A real flaw. PHP patched it. **AN UNPLANNED SIDE‑FIND**
-
-**The real question** One defense cracks, all four?
+**The real question**
+One defense cracks, all four?
 
 **Thank you Securinets CTF** 🥰🥰
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 4
 
 ## Slide 5
 
 ###### **One request. That's all you get.**
 
-**Browser pwn Kernel pwn** `for(let i=0;i<0x4000;i++){ foo(true); for(int i=0;i<N;i++) } msgsnd(qid[i],&msg,size,0); new ArrayBuffer(0x7f00000);`
+**Browser pwn**
+\```
+for(let i=0;i<0x4000;i++){
+    foo(true);
+}
+new ArrayBuffer(0x7f00000);
+\```
 
-PHP remote
+**Kernel pwn**
+\```
+for(int i=0;i<N;i++)
+  msgsnd(qid[i],&msg,size,0);
+\```
 
+**PHP remote**
 \```
 POST /upload.php HTTP/1.1
 Host: victim.tld
 Content-Length: 8192
+
 data=%00%02%be%ef...
 \```
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 5
 
 ## Slide 6
 
@@ -136,74 +175,80 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 ZendMM: singly-linked list
 \```
 
-overflow
+overflow →
 
-next next
-in-use buffer free slot free slot …
-0x… 30 0x…20
-victim victim
-chunk returned
-object object
-by allocator
+in-use buffer
+next 0x…30 · free slot
+next 0x…20 · free slot
+…
+
+victim object · chunk returned by allocator · victim object
 
 **read / write victim fields › leak & overwrite a function pointer › RCE**
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 6
 
 ## Slide 7
 
 ###### **Then PHP fought back.**
 
-Shadow Pointer Unlink Prevention RO Metadata
+**Shadow Pointer**
 checked on every alloc
-chunk A
-next zend_mm_heap
-encrypted write
-fd/bk
-_malloc
-chunk P
-free slot = _free
-fd/bk
-_realloc
-chunk B
+next
+encrypted
+free slot
 shadow
-encrypted P->fd->bk == P
-read-only at runtime
-P->bk->fd == P
-✕ freelist poisoning ✕ list-forgery writes ✕ metadata hook hijack
-CVE-2024-2961 CVE-2022-31626 public CTF chain
+encrypted
+=
+✕ freelist poisoning
 
-Heap Isolation
+**Unlink Prevention**
+chunk A
+fd/bk
+chunk P
+fd/bk
+chunk B
+P->fd->bk == P
+P->bk->fd == P
+✕ list-forgery writes
+
+**RO Metadata**
+write → ✕
+zend_mm_heap
+_malloc
+_free
+_realloc
+read-only at runtime
+✕ metadata hook hijack
+
+**Heap Isolation**
 request zone
 $_GET $_POST
+✕
 application heap
 objects, strings
 ✕ raw-request spray
 
+~~CVE-2024-2961~~  ~~CVE-2022-31626~~  ~~public CTF chain~~
+
 Aimed at the exact techniques every public PHP exploit relied on.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 7
 
 ## Slide 8
 
 ###### **The old exploits died.**
 
-`freelist next` **blocked by Shadow Pointer**
+`freelist next`
+✕
+**blocked by Shadow Pointer**
 
-metadata hooks
-blocked by Read-only
+`metadata hooks`
+✕
+**blocked by Read-only**
 
-`$_POST spray` **blocked by Heap Isolation**
+`$_POST spray`
+✕
+**blocked by Heap Isolation**
 
-Each new defense closes exactly one classic technique freelist, metadata, and raw spray all gone.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 8
+Each new defense closes exactly one classic technique
+freelist, metadata, and raw spray all gone.
 
 ## Slide 9
 
@@ -211,28 +256,21 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 How PHP allocates, and why that lets us shape the heap at all, remotely.
 
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 9
-
-#BHUSA
-
 ## Slide 10
 
 ###### **Same request, same heap.**
 
-\```
 request #1
-\```
+freed pages
+freelist
+0x…30 → 0x…80 → 0x…d0
 
-request #1 freed pages freelist
-0x…30 0x…80 0x…d0
-request #2 freed pages freelist
-0x…30 0x…80 0x…d0
+request #2
+freed pages
+freelist
+0x…30 → 0x…80 → 0x…d0
 
 Fresh chunk each request, best-fit + LIFO, no cross-request state, so identical requests build identical heaps.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 10
 
 ## Slide 11
 
@@ -244,31 +282,33 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 Both are hard under the new defenses. Earning them back is the rest of the talk.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 11
-
 ## Slide 12
 
 ###### **So we stopped touching the allocator.**
 
-00 01 CONTRIBUTION 02 03
+**00 · 1-byte OOB**
 1 byte past the edge
-fake zval ++ / −−
+buffer · neighbour
+the weakest possible bug
+
+**01 · Index Forgery** (CONTRIBUTION)
 index array
+BIG → fake
+corrupt a table index, not a pointer
+
+**02 · Arbitrary ++/−−**
+fake zval
+++ / −−
+value | type → *p
+read = *p++, write = *p−−
+
+**03 · ZOP**
 leak
-BIG fake value type *p
 probe
-buffer neighbour
 hijack
-1-byte OOB Index Forgery Arbitrary ++/−− ZOP
-the weakest possible bug corrupt a table index, not a pointer read = *p++, write = *p−− the interpreter is the gadget set
+the interpreter is the gadget set
 
-###### Every step lives in built-in PHP objects, never the allocator, never app classes.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 12
+Every step lives in built-in PHP objects, never the allocator, never app classes.
 
 ## Slide 13
 
@@ -278,31 +318,27 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 Turning the weakest possible bug, one constrained byte, into a strong primitive.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 13
-
 ## Slide 14
 
-One byte in.
-strong primitive
-arbitrary ++/--
-write anywhere
-fake zval
-a controlled object
-index forgery
-one integer
-1-byte OOB
+###### **One byte in.**
+
+**1-byte OOB**
 the input
 weakest bug
 
-1-byte overflow value constrained no OOB read
+**index forgery**
+one integer
+
+**fake zval**
+a controlled object
+
+**arbitrary ++/--**
+write anywhere
+strong primitive
+
+1-byte overflow · value constrained · no OOB read
 
 The nightmare bug, yet enough. Works here means it works for almost anything stronger.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 14
 
 ## Slide 15
 
@@ -327,228 +363,238 @@ flags byte: IS_TYPE_REFCOUNTED = 1<<0
 
 Every PHP value is 8 bytes plus a type tag. Control a zval, and you control what PHP believes memory is.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 15
-
 ## Slide 16
 
 ###### **The real target: arData.**
 
-**Z E N D_ A R R AY ( H AS H TA B L E )** `+0x00` **gc** · refcount `+0x0c` **nTableMask** `+0x10` **arData** → butterfly
+**ZEND_ARRAY (HASHTABLE)**
++0x00  **gc** · refcount
++0x0c  **nTableMask**
++0x10  **arData** → butterfly
++0x18  **nNumUsed** · size
++0x38  **pDestructor** · hijack target
 
-**A R DATA I S A B U T T E R F LY** A separate allocation the overflow reaches. arData points to the split: index array on the left half, buckets on the right.
+**ARDATA IS A BUTTERFLY**
+A *separate* allocation the overflow reaches. arData points to the split: index array on the left half, buckets on the right.
 
-**idx idx idx Bucket[0]Bucket[1]**
-
-`+0x18` **nNumUsed** · size
-
+idx idx idx Bucket[0] Bucket[1]
 ← index grows  |  arData →   buckets grow →
-
-`+0x38` **pDestructor** · hijack target
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 16
 
 ## Slide 17
 
-A normal lookup.
+###### **A normal lookup.**
+
 $t[$key]
+
 ARDATA BUFFER (BUTTERFLY) · INDEX | BUCKETS
+
 victim buf
-0x00 0x01 0x02 0x03
 overflow source
+
+0x00 0x01 0x02 0x03
+
 SPRAYED REGION
+
 arData
 Bucket[0] Bucket[1] Bucket[2] BUCKETS
 zval zval zval
+
 Bucket[0].value
 raw string bytes
 
 A zend_array reads from a separatearDatabuffer, index array in front of the buckets.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 17
-
 ## Slide 18
 
-A normal lookup.
+###### **A normal lookup.**
+
 $t[$key]
+
 ARDATA BUFFER (BUTTERFLY) · INDEX | BUCKETS
+
 victim buf
-0x00 0x01 0x02 0x03
 overflow source
+
+0x00 0x01 0x02 0x03
+0x00 → Bucket[0]
+
 SPRAYED REGION
+
 arData
 Bucket[0] Bucket[1] Bucket[2] BUCKETS
 zval zval zval
+
 Bucket[0].value
 raw string bytes
 
 hash(key) | mask → a slot → the integer there picks the Bucket. PHP never doubts that integer.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 18
-
 ## Slide 19
 
-One byte, one redirect.
+###### **One byte, one redirect.**
+
 $t[$key]
+
 ARDATA BUFFER (BUTTERFLY) · INDEX | BUCKETS
+
 victim buf
-0x4D 0x01 0x02 0x03
 overflow source
-1-byte OOB SPRAYED REGION
+
+1-byte OOB → 0x4D  0x01  0x02  0x03
+
+SPRAYED REGION
+
 arData
 Bucket[0] Bucket[1] Bucket[2] BUCKETS
 zval zval zval
+
 Bucket[0].value
 raw string bytes
 
 The overflow lands onindex[0], not a pointer, just a small integer. One byte moves it far.
 
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 19
-
-#BHUSA
-
 ## Slide 20
 
-One byte, one redirect.
+###### **One byte, one redirect.**
+
 $t[$key]
+
 ARDATA BUFFER (BUTTERFLY) · INDEX | BUCKETS
-victim buf sprayed, known offset
-0x4D 0x01 0x02 0x03
+
+victim buf
 overflow source
-1-byte OOB fake Bucket
+
+1-byte OOB → 0x4D  0x01  0x02  0x03
+
+sprayed, known offset
+fake Bucket
 fake zval
+
 arData
 Bucket[0] Bucket[1] Bucket[2] BUCKETS
 zval zval zval
+
 Bucket[0].value
 raw string bytes
 
 A large index reaches memorywe sprayed, a fake Bucket holding a fake zval we control.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 20
-
 ## Slide 21
 
 ###### **Make the fake pass.**
 
-HOW THE CHECK PASSES
-forged Bucket (sprayed)
+**forged Bucket (sprayed)**
++0x00  zval.value  you set
++0x08  zval.u1.type_info  you set
++0x10  h (hash)  MUST match
++0x18  key  MUST match
+
+**HOW THE CHECK PASSES**
+
 hash: DJBX33A is reversible
-+0x00 zval.value you set
 craft a string whose hash == the key we look up (Alg.1)
-+0x08 zval.u1.type_info you set
+
 key: reoccupy the residual key pointer
-+0x10 h (hash) MUST match spray the same key bytes so the compare succeeds
-+0x18 key MUST match
-lookup passes ✓
+spray the same key bytes so the compare succeeds
+
+**lookup passes ✔**
 $t[key] returns our fake zval
 
 PHP re-checks the bucket key and hash. We forge a match with the reversible DJBX33A hash, and the lookup passes.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 21
 
 ## Slide 22
 
 ###### **Now you own a zval.**
 
-read $t[$key] *target ++
 fake zval
-any address
 value -> *target
-write $t[$key]=$v *target --
+
+read $t[$key]      *target ++
+write $t[$key]=$v *target--
+
+any address
 
 Mark the fake zval refcounted, and a plain read/write does ++ / -- through your pointer, at any address.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 22
 
 ## Slide 23
 
 ###### **But the pointer is constrained.**
 
-###### **W H Y L I M I T E D**
+###### **WHY LIMITED**
 
-The value pointer is sprayed as a string, encoding-restricted. We control only its low bytes. So ++/-- lands near a chosen spot, not anywhere.
+The value pointer is sprayed as a string, encoding-restricted. We control only its low bytes.
 
-**value = 0x…?? low-byte overlap → nearby sprayed memory**
+So ++/-- lands *near* a chosen spot, not anywhere.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 23
+**value = 0x…??**
+low-byte overlap
+→ nearby sprayed memory
 
 ## Slide 24
 
 ###### **Lift to arbitrary.**
 
-###### **O N E E XT R A I N D I R E C T I O N**
+###### **ONE EXTRA INDIRECTION**
 
 Steer the constrained value at the type_flags of another zval in a sprayed array.
 
 ++/-- on a type tag → make any zval refcounted → decrement anywhere.
 
-**fake zval.value ─┐ low-byte steer**
-
-**└→ zval.type_flags limited ++/-- → arbitrary ++/--**
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 24
+fake zval.value
+low-byte steer
+└→ zval.type_flags
+limited ++/-- → arbitrary ++/--
 
 ## Slide 25
 
-One corrupted index. Four primitives.
+###### **One corrupted index. Four primitives.**
+
 the one operation
-$t[key] LARGE 2 0 5 Bucket[large] OOB the large index reaches out of bounds
+
+$t[key] → LARGE 2 0 5 → Bucket[large]
+OOB — the large index reaches out of bounds
 a corrupted index, the 1-byte overflow set index[0] to LARGE
-fake Bucket what Bucket[large] lands on
-ANY address
-+0x00 value low high IF low bytes steer the pointer whole Zend heap
+
+**fake Bucket** — what Bucket[large] lands on
++0x00  value    low | high
++0x08  type_info  uninit
++0x10  h  uninit
++0x18  key  ptr →
+
+🟩 written by a sprayed string   🟧 uninitialized (UBI)
+
+IF — low bytes steer the pointer
 arbitrary −− / free → anywhere
-Use of Uninitialized
-+0x08 type_info uninit UBI
+→ ANY address / whole Zend heap
+
+UBI — Use of Uninitialized
 type · h · key · value(high), residual bytes
-+0x10 h uninit
-freed zend_string
-+0x18 key ptr → UAF
+
+UAF → freed zend_string
 key is dereferenced here
-written by a sprayed string uninitialized (UBI)
 
 The **out-of-bounds** access lands on a fake Bucket that is mostly **uninitialized (UBI)** , only the low bytes of `value` are string-written; its `key` is dereferenced into a freed string ( **UAF** ), and steering that value pointer gives **IF** , an arbitrary decrement anywhere.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 25
 
 ## Slide 26
 
 ###### **OOB and UAF meet here.**
 
-OOB write
-leak
+**OOB write**
 via Index Forgery
-control a zval
-ZOP
-the shared waypoint probe
-UAF write
+
+**UAF write**
 reclaim a freed zval
+
+**control a zval**
+the shared waypoint
+
+**ZOP**
+
+leak
+probe
 PC control
+
 Different bugs, one waypoint. OOB via Index Forgery and UAF both reach a controlled zval, then run the same ZOP.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 26
 
 ## Slide 27
 
@@ -556,71 +602,63 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 Zend-Oriented Programming, the interpreter's own structures become the gadget set.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 27
-
 ## Slide 28
 
-##### **The interpreter is the gadget set. F R O M O N E P R I M I T I V E , E V E RY T H I N G arbitrary ++/--** → **leak** · **probe** · **hijack**
+###### **The interpreter is the gadget set.**
 
-**L E A K P R O B E H I JAC K** flip a type tag, PHP ++/-- as an oracle a destructor prints the pointer to defeat ASLR pointer you control
+**FROM ONE PRIMITIVE, EVERYTHING**
+arbitrary ++/-- → leak · probe · hijack
 
-#BHUSA
+**LEAK**
+flip a type tag, PHP prints the pointer
 
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 28
+**PROBE**
+++/-- as an oracle to defeat ASLR
+
+**HIJACK**
+a destructor pointer you control
 
 ## Slide 29
 
 ###### **Let PHP print the pointer.**
 
-value = 0x7ffff46123f0 6.9533461755114104e-310
+value = 0x7ffff46123f0
+type = IS_STRING (6)
+a heap pointer
+
 tag 6 -> 5
-type = IS_STRING (6) arb -- type = IS_DOUBLE (5)
-a heap pointer same bytes, a number
+arb --
+
+6.9533461755114104e-310
+type = IS_DOUBLE (5)
+same bytes, a number
+
 returned in JSON/XML -> Zend heap address leaked
 
 No OOB read. Flip a string zval to a double and the same bytes come back as a number in the response.
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 29
-
-#BHUSA
 
 ## Slide 30
 
 ###### **ASLR → just probing.**
 
 **PHP SIDE (NEED PHP-FPM / ZIF_SYSTEM)**
+php-fpm .text — 0x000059adca400000 — r-x
+near each other
+FPM_heap — 0x000059adf7410000 — rw-
 
 **LIBC SIDE (NEED SYSTEM)**
-
-\```
-0x000059adca4000000x00007ffff780d000
-php-fpm .textlibc.so.6
-r-xr-x
-near each othernear each other
-0x000059adf74100000x00007ffff4600000
-FPM_heapzend_heap
-rw-rw-
-\```
+libc.so.6 — 0x00007ffff780d000 — r-x
+near each other
+zend_heap — 0x00007ffff4600000 — rw-
 
 ###### **PROBE PAGE-BY-PAGE FROM A KNOWN HEAP ANCHOR**
 
-\```
 0x7ffff4600000 ->
-\```
+page ok  page ok  page ok  page ok  page ok  unmapped  unmapped  unmapped
 
-\```
-page okpage okpage okpage okpage okunmappedunmappedunmapped
-\```
-
-**crash -> 502 = boundary found**
+crash -> 502 = boundary found
 
 The heaps sit near known code, zend_heap by libc, FPM_heap by php-fpm, so we probe from an anchor until a page faults (502).
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 30
 
 ## Slide 31
 
@@ -628,52 +666,37 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 ###### **1 · A NESTED-ARRAY POINTER**
 
-###### **2 · REDIRECTED INTO A PACKED INTEGER ARRAY (SPRAY)**
-
-\```
 zval.value ->
 nested zend_array
-\```
 
-\```
 arb -- on low
-3 LSBytesintintint
-\```
+3 LSBytes
 
-\```
-int
-\```
+###### **2 · REDIRECTED INTO A PACKED INTEGER ARRAY (SPRAY)**
 
-\```
-intintint
-\```
+int int int int int int int
 
 ###### **3 · THOSE BYTES OVERLAP A FORGED ZEND_ARRAY**
 
-\```
-gc . refcount = 1replacement -> 1->0
-arData -> arg0argument controlled
-pDestructor -> pccall target controlled
-\```
+gc . refcount = 1
+replacement -> 1->0
+
+arData -> arg0
+argument controlled
+
+pDestructor -> pc
+call target controlled
 
 pc(arg0)
 4 · destructor fires -> hijack
 
-A forged array\'s refcount hits zero, PHP calls its destructor, and we control both the function and its argument.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 31
+A forged array's refcount hits zero, PHP calls its destructor, and we control both the function and its argument.
 
 ## Slide 32
 
 # **IV Doing it remotely**
 
 Everything so far needs a heap layout, built in one shot, with no raw bytes allowed.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 32
 
 ## Slide 33
 
@@ -682,34 +705,30 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 **USER-INPUT HEAP · ISOLATED**
 
 \```
-$_GET$_POST$_COOKIE
+$_GET  $_POST  $_COOKIE
 ✕ cannot shape the app heap
 decode
 \```
 
-**APPLICATION HEAP · WHERE THE BUG LIVES** `zend_string zend_array zend_object JSON / XML decode lands here ✓`
+**APPLICATION HEAP · WHERE THE BUG LIVES** `zend_string  zend_array  zend_object`
+JSON / XML decode lands here ✓
 
 Raw request fields are walled off, but the objects the app decodes from them land on the app heap, right where the bug is.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 33
-
 ## Slide 34
 
-Duplicate keys = a heap script.
+###### **Duplicate keys = a heap script.**
+
+\```
 {
   "k": "A"*0x3000,
   "k": "B"*0x4000,
   "k": target,
   "k": null
 }
+\```
 
 Each value is allocated, all-but-one freed, an alloc/free script inside one request.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 34
 
 ## Slide 35
 
@@ -718,16 +737,8 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 **A packed, integer-keyed array stores a flat run of zvals. Set each value → spray any 8-byte pattern.**
 
 \```
-0xdeadbeefdeadbeef0x41414141414141410x0700000000000001
+0xdeadbeefdeadbeef  0x4141414141414141  0x0700000000000001  …
 \```
-
-\```
-…
-\```
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 35
 
 ## Slide 36
 
@@ -737,58 +748,57 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 One real CVE, one constrained byte, fully remote, from HTTP request to shell.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 36
-
 ## Slide 37
 
 ###### **One real bug, fully remote.**
 
-###### **C V E -2 0 24 -2 9 6 1**
+###### **CVE-2024-2961**
 
-glibc iconv OOB via a normal PHP app. In practice: one byte, `0x48–0x4D` . value pinned to All four defenses on. No recon request.
+glibc iconv OOB via a normal PHP app. In practice: one byte, value pinned to `0x48-0x4D`.
 
-**W H E R E T H E WO R K L I V E S** The victim app is a few lines. The exploit is a heap program encoded entirely in one JSON body.
+All four defenses on. No recon request.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 37
+**WHERE THE WORK LIVES**
+The victim app is a few lines. The exploit is a heap program encoded entirely in one JSON body.
 
 ## Slide 38
 
-Build, place, trigger. Once.
-build
-place forge trigger
-spray fake
-page-level 1-byte IF → destructor
-bucket +
-fengshui fake zval → pc(arg0)
-zvals
-ONE HTTP REQUEST · SHARE-NOTHING RESET AFTER APPLICATION HEAP
+###### **Build, place, trigger. Once.**
+
+**build**
+spray fake bucket + zvals
+
+**place**
+page-level fengshui
+
+**forge**
+1-byte IF → fake zval
+
+**trigger**
+destructor → pc(arg0)
+
+ONE HTTP REQUEST · SHARE-NOTHING RESET AFTER
+APPLICATION HEAP
+
+{ }
+one JSON body
+dup keys = a heap script
+packed ints = raw bytes
+
 spray zvals / strings
 free (duplicate keys)
-{ }
-one JSON body arData victim buffer
-dup keys = a heap script
+arData victim buffer
 fake bucket + fake zval
-packed ints = raw bytes
 fake zend_array
-forged array refcount → 0  · destructor runs pc(arg0)
 
-###### Leak, layout, and hijack all fold into a single HTTP body, there is no second request.
+forged array refcount → 0 · destructor runs
+pc(arg0)
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 38
+Leak, layout, and hijack all fold into a single HTTP body, there is no second request.
 
 ## Slide 39
 
 ###### **Quick demo.**
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 39
-
-#BHUSA
 
 ## Slide 40
 
@@ -798,88 +808,77 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 Real CVEs, all defenses on, measured for reliability, not a one-off crash.
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 40
-
 ## Slide 41
 
 ###### **We revived the dead CVEs.**
-
-TARGET GOAL OLD OURS REQS SUCCESS
 
 |**TARGET**|**GOAL**|**OLD**|**OURS**|**REQS**|**SUCCESS**|
 |---|---|---|---|---|---|
 |CVE-2024-2961|RCE|**✗**|**✓**|246|**100%**|
 |CVE-2022-31626|RCE|**✗**|**✓**|285|**100%**|
 |CVE-2019-6977|SBE|**✗**|**✓**|2|**100%**|
-|CTF Case A|RCE|**✗**|**✓**|3|**100%**|
-|("I hate php" from SecurinetsCTF)||||||
-|CTF Case B("php master" from N1CTF)|RCE|**✗**|**✓**|371|**100%**|
+|CTF Case A ("I hate php" from SecurinetsCTF)|RCE|**✗**|**✓**|3|**100%**|
+|CTF Case B ("php master" from N1CTF)|RCE|**✗**|**✓**|371|**100%**|
 
 Old public exploits: dead under hardening. Rebuilt with IF + ZOP: revived, under 300 requests, 100% over 100 runs.
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 41
 
 ## Slide 42
 
 ###### **The roadmap, graded.**
 
-**Already merged & effective: Shadow Pointer · Unlink Abuse Prevention , they forced attackers off freelist poisoning**
+Already merged & effective: **Shadow Pointer** · **Unlink Abuse Prevention**, they forced attackers off freelist poisoning
 
-PROTOT YPE
+**PROTOTYPE**
+**Read-only Metadata**
+Metadata falls, but by then the write is already strong, and the ASLR probe exposes writable structs anyway.
+verdict: limited
 
-IN DEVELOPMENT
+**IN DEVELOPMENT**
+**Further Heap Isolation**
+Per-type dedicated heaps disrupt remote page-level shaping, the assumption our whole path rests on.
+verdict: strong
 
-PROPOSAL
+**PROPOSAL**
+**Guard Pages**
+Fixed-size gaps do little here. A randomized variant injects real page-level entropy.
+only if randomized
 
-**Further Heap Guard Pages Isolation** Fixed-size gaps do Per-type dedicated little here. A heaps disrupt remote randomized variant page-level shaping, injects real page-level the assumption our entropy. whole path rests on. **verdict: strong only if randomized**
+**PROPOSAL**
+**Freelist Randomization**
+Reorders slots in a freelist, but pagelevel spraying still walks past it.
+verdict: partial
 
-**Read-only Further Heap Metadata Isolation** Metadata falls, but by Per-type dedicated then the write is heaps disrupt remote already strong, and page-level shaping, the ASLR probe the assumption our exposes writable whole path rests on. structs anyway.
-
-**verdict: limited**
-
-PROPOSAL
-
-**Freelist Randomization** Reorders slots in a freelist, but pagelevel spraying still walks past it.
-
-**verdict: partial**
-
-**Isolation + randomization move the needle. Metadata protection helps least.**
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 42
+Isolation + randomization move the needle. Metadata protection helps least.
 
 ## Slide 43
 
 ###### **The smallest fix.**
 
-**PATC H - H AS H TA B L E** Check the index stays within `num_used` . Kills Index Forgery at the source. **0.17%** overhead
+**PATCH-HASHTABLE**
+Check the index stays within `num_used`. Kills Index Forgery at the source.
 
-**PATC H - R E F C N T** Validate the target is an `zend_refcounted` on aligned the PHP heap. Kills arbitrary ++/--. **8.86%** overhead
+**0.17%** overhead
 
-#BHUSA
+**PATCH-REFCNT**
+Validate the target is an aligned `zend_refcounted` on the PHP heap. Kills arbitrary ++/--.
 
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 43
+**8.86%** overhead
 
 ## Slide 44
 
 ###### **Good hardening works.**
 
-**WH AT PH P G OT RIG H T** Good freelist hardening. Attackers are forced off the allocator.
+**WHAT PHP GOT RIGHT**
+Good freelist hardening. Attackers are forced off the allocator.
 
-**WH AT 'S L E FT** Built-in objects and decoderdriven layout.
+**WHAT'S LEFT**
+Built-in objects and decoder-driven layout.
 
 **If you want a common defense, harden all common paths.**
 
-**Generic object hardening Object Randomization isolation**
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 44
+**Generic object hardening**
+**Object isolation**
+**Randomization**
 
 ## Slide 45
 
@@ -888,12 +887,10 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 **If you want a common defense, harden all common paths.**
 
 **Generic object hardening**
+**Object isolation**
+**Randomization**
 
-**Object isolation Randomization github.com/GhostFrankWu/ PHP-security-research**
-
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 45
+github.com/GhostFrankWu/PHP-security-research
 
 ## Slide 46
 
@@ -901,8 +898,8 @@ BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA �
 
 PHP's hardening moved the bar. We showed where it still needs to go, and shipped two fixes toward it.
 
-**Burning Tears of PHP's Memory Hardening** Yifan Wu · Xiaochuan Yu · Zhiyun Qian Artifact + Docker: one-click reproduction Black Hat USA 2026 Briefings
+**Burning Tears of PHP's Memory Hardening**
+Yifan Wu · Xiaochuan Yu · Zhiyun Qian
+Artifact + Docker: one-click reproduction
+Black Hat USA 2026 Briefings
 
-#BHUSA
-
-BLACK HAT USA 2026 BRIEFINGS · MANDALAY BAY · LAS VEGAS · AUG 5-6 · #BHUSA · 46
