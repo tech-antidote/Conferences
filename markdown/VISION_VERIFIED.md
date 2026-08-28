@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4175 slides across 184 documents.**
+**4200 slides across 185 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1989 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1652 | structure held; individual characters or lines wrong |
-| accurate | 506 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1997 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1663 | structure held; individual characters or lines wrong |
+| accurate | 512 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -79,7 +79,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 42 talks, 1324 slides
+### Zero-day, RCE and novel exploitation — 43 talks, 1349 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -101,6 +101,7 @@ under more than one heading or under none. Counts are slides.
 - **Lost in Translation Exploiting Unicode Normalization** (Black Hat USA 2025) — slides 20, 35-36, 50-51
 - **Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities** (Black Hat USA 2026) — slides 1-44
 - **Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure** (Black Hat USA 2026) — slides 1-94
+- **Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes** (Black Hat USA 2026) — slides 1-25
 - **Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services** (Black Hat USA 2026) — slides 1-69
 - **GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer** (Black Hat USA 2026) — slides 33-34
 - **No Tools Required Post-Injection Exploitation Across AI Agent Frameworks** (Black Hat USA 2026) — slides 1-46
@@ -282,6 +283,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Chaos by Design The Death of Stochastic Race Conditions in HTTP3 | 1-22 | minor-errors | 0 |
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | GPUBreach Privilege Escalation Attacks on GPUs Using Rowhammer | 33-34 | minor-errors | 0 |
 | Black Hat USA 2026 | Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover | 1-50 | badly-mangled, minor-errors | 0 |
