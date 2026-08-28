@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4023 slides across 180 documents.**
+**4046 slides across 181 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 1982 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 1515 | structure held; individual characters or lines wrong |
-| accurate | 498 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 1988 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 1526 | structure held; individual characters or lines wrong |
+| accurate | 504 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -77,7 +77,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 40 talks, 1244 slides
+### Zero-day, RCE and novel exploitation — 41 talks, 1267 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -107,6 +107,7 @@ under more than one heading or under none. Counts are slides.
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
 - **The Cost of Obscurity Exploiting the ATM Supply Chain** (Black Hat USA 2026) — slides 1-42
+- **ThreatForest: Automated Attack Trees from Source Code** (Black Hat USA 2026) — slides 1-23
 - **When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers** (Black Hat USA 2026) — slides 1-43
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (Black Hat USA 2026) — slides 1-47
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
@@ -294,6 +295,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android | 1-47 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The CoreBreak Attack Turning AI Agents into Credentials Exfiltration Vectors | 1-92 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | The Cost of Obscurity Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
+| Black Hat USA 2026 | ThreatForest: Automated Attack Trees from Source Code | 1-23 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |

@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 84.5
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 17
+vision_verified_pages: 23
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 content_note: "The source filename omits the separator between the speaker names and the title, gluing 'Leo' to 'ThreatForest'."
@@ -27,22 +29,23 @@ converted_at: "2026-08-12T05:30:45Z"
 **Conference:** Black Hat USA 2026  
 **Source:** `BlackHat_USA_2026_Slides/Daniel Begimher&Cristian LeoThreatForest Automated Attack Trees from Source Code.pdf` (23 pages)
 
-
 ## Slide 1
 
-B L A C K H A T U S A 2 0 2 6
+BLACK HAT USA 2026
 
 # THREATFOREST: AUTOMATED ATTACK TREES FROM SOURCE CODE
 
-Cristian Leo
+**Cristian Leo**
 
-Daniel Begimher
+Applied Scientist
 
-Applied Scientist AWS Security
+AWS Security
 
-Senior Security Engineer AWS Security
+**Daniel Begimher**
 
-© 2026 Black Hat
+Senior Security Engineer
+
+AWS Security
 
 ## Slide 2
 
@@ -60,150 +63,151 @@ Agents, trust boundaries, gates, evidence
 
 Repository → reviewable attack graph
 
-© 2026 Black Hat
-
 ## Slide 3
 
-# **SECTION 01** THREAT MODELING TODAY
+**SECTION 01**
 
-**© 2026 Black Hat** © 2026 Black Hat
+# THREAT MODELING TODAY
 
 ## Slide 4
 
 ### HOW ARE YOU THREAT MODELING TODAY?
 
-#### **Hands up: which description is closest?**
+**Hands up: which description is closest?**
 
-**A**
+**A** We threat-model every release
 
-**B**
+**B** We do it once, usually at design time
 
-**C**
-
-We threat-model every release
-
-We do it once, usually at design time
-
-We know we should - but rarely have time
-
-© 2026 Black Hat
+**C** We know we should - but rarely have time
 
 ## Slide 5
 
-## **THREAT MODELING TODAY**
+## THREAT MODELING TODAY
 
-###### **TRADITIONAL / WORKSHOP-LED**
+**TRADITIONAL / WORKSHOP-LED**
 
 Context-rich, but time- and expertise-intensive
 
-**Understand the system 01**
+**01 Understand the system**
 
 SME interviews • architecture • deployment context
 
-**Apply a framework 02**
+**02 Apply a framework**
 
 STRIDE • PASTA • LINDDUN
 
-**Prioritize threats & controls 03**
+**03 Prioritize threats & controls**
 
 Human judgment • ownership • accountability
 
-###### **COMMON ONE-SHOT LLM**
+**COMMON ONE-SHOT LLM**
 
 One prompt, one answer, little shared context
 
-###### **Ask once**
-
-**01**
+**01 Ask once**
 
 "Threat model this app."
 
-**Get an instant answer 02**
+**02 Get an instant answer**
 
 Threats • mitigations • recommendations
 
-**Use the draft**
-
-**03**
+**03 Use the draft**
 
 No SME interview • limited deployment context
 
-© 2026 Black Hat
+THE OPPORTUNITY: HUMAN CONTEXT AT MACHINE SPEED
 
 ## Slide 6
 
-## **A THREAT STATEMENT CAPTURES THE RISK**
+## A THREAT STATEMENT CAPTURES THE RISK
 
-© 2026 Black Hat
+**THREAT STATEMENT**
 
+An unauthorized user could supply a URL that causes the web application to request an unintended internal or metadata endpoint, potentially exposing sensitive data or temporary credentials.
 
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**THREAT STATEMENT CAPTURES**
 
-```text
-A THREAT STATEMENT CAPTURES THE RISK
-C) An unauthorized user could supply a URL that causes —
-the web application to request an unintended internal Cx) Z
-(Fy or metadata endpoint, potentially exposing sensitive . i
-data or temporary credentials. = x=
-THREAT STATEMENT CAPTURES ATTACK MAP ADDS
-actor * action « asset » impact branching paths » dependencies » choke points » downstream actions
-```
+actor • action • asset • impact
+
+**ATTACK MAP ADDS**
+
+branching paths • dependencies • choke points • downstream actions
 
 ## Slide 7
 
-## **AN ATTACK MAP SHOWS HOW SSRF COMPOUNDS**
+## AN ATTACK MAP SHOWS HOW SSRF COMPOUNDS
 
-###### **THE STATEMENT NAMES THE RISK. THE MAP REVEALS HOW IT COMPOUNDS.**
+Unauthorized user-supplied URL
 
-© 2026 Black Hat
+**SSRF**
 
+Web app makes server-side request
 
-> Recovered by OCR — confidence 84/100 on the text kept, 67/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**URL allowlist + egress controls**
 
-```text
-AN ATTACK MAP SHOWS HOW SSRF COMPOUNDS
-Secrets
-+ egress \
-controls
-() : Internal > Privileged
-} service 9 internal action
-a IFIAM 1 | “Launch compute /
-PERMITS j crypto miners
-URL ; I 2 Create admin
-principal /
-eg privilege escalation
+Secrets endpoint → Expose secret
+
+Internal service → Privileged internal action
+
+IMDSv1 169.254.169.254 → Temporary role credentials
+
+**Require IMDSv2**
+
+**IF IAM PERMITS**
+
+Launch compute / crypto miners
+
+Create admin principal / privilege escalation
+
 THE STATEMENT NAMES THE RISK. THE MAP REVEALS HOW IT COMPOUNDS.
-```
 
 ## Slide 8
 
-## **WHAT THREATFOREST DOES**
+## WHAT THREATFOREST DOES
 
-© 2026 Black Hat
+**WHO USES IT**
 
+Security engineer — Leads analysis and threat modeling
 
-> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+Application owner — Provides business and deployment context
 
-```text
-WHAT THREATFOREST DOES
-WHO USES IT WHAT IT READS WHAT IT PRODUCES
-</ > Source code ay S f (A\) Treat
-(: 2) Attack paths E Y
-REVIEWABLE,
-Configuration ? s : ( HUMAN GATE VERDICT
-Se ° | | Ik : Review and steer ©) Mitigations
-¢ before outputs
-Leads analysis and Sm business and see ® Evidence
-threat modeling deployment context
-AGENTIC
+**WHAT IT READS**
+
+Source code
+
+Infrastructure
+
+Configuration
+
+**AGENTIC ANALYSIS CORE**
+
+**HUMAN GATE** — Review and steer before outputs are published
+
+**WHAT IT PRODUCES**
+
+System context
+
+Threats
+
+Attack paths
+
+TTP mappings
+
+Mitigations
+
+Evidence
+
+REVIEWABLE, NOT AN AUTOMATIC VERDICT
+
 THREATFOREST TURNS A REPOSITORY INTO A REVIEWABLE ATTACK MAP.
-```
 
 ## Slide 9
 
-# **SECTION 02** INSIDE THREATFOREST
+**SECTION 02**
 
-**© 2026 Black Hat** © 2026 Black Hat
+# INSIDE THREATFOREST
 
 ## Slide 10
 
@@ -224,8 +228,6 @@ THREATFOREST TURNS A REPOSITORY INTO A REVIEWABLE ATTACK MAP.
 **02 Business impact**
 
 **03 Risk appetite**
-
-© 2026 Black Hat
 
 ## Slide 11
 
@@ -257,86 +259,83 @@ Human gate
 
 Agent + deterministic verifier
 
-© 2026 Black Hat
-
 ## Slide 12
 
-## **RUNNING EXAMPLE**
+## RUNNING EXAMPLE
 
-© 2026 Black Hat
+**AI KNOWLEDGE ASSISTANT**
 
+User → POST /ask → Bedrock agent → OpenSearch knowledge base
 
-> Recovered by OCR — confidence 88/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-RUNNING EXAMPLE
-° Al KNOWLEDGE ASSISTANT °
-POST /ask - es
-User Bedrock agent OpenSearch
-knowledge base
 Answers questions using product manuals
-2026
-```
 
 ## Slide 13
 
-## **BUILD A DRAFT MODEL**
+## BUILD A DRAFT MODEL
 
-###### **REPOSITORY EVIDENCE**
+**REPOSITORY EVIDENCE**
 
-###### **DRAFT SYSTEM MODEL**
+01 Source code
 
-**01 Source code AGENT ENTRY KNOWLEDGE → AGENT → → POINT BASE 02 Infrastructure** Extracts relationships **03 Configuration TRUST BOUNDARY**
+02 Infrastructure
 
-© 2026 Black Hat
+03 Configuration
+
+**AGENT**
+
+Extracts relationships
+
+**DRAFT SYSTEM MODEL**
+
+ENTRY POINT → AGENT → KNOWLEDGE BASE
+
+TRUST BOUNDARY
 
 ## Slide 14
 
-## **REVIEW CONTEXT**
+## REVIEW CONTEXT
 
 The interviewer asks only for what the repository cannot establish.
 
-###### **01 What lifecycle stage is this in?**
+**01 What lifecycle stage is this in?**
 
 Production, early design, or early development?
 
-**02 What infrastructure or controls live outside the repository?** Gateways, WAF, service authentication, runtime secrets
+**02 What infrastructure or controls live outside the repository?**
+
+Gateways, WAF, service authentication, runtime secrets
 
 **03 Who can access it—and how?**
 
-###### **04 What blind spots could the scanner not reach?**
-
 Public, internal, multi-tenant; SSO, MFA, roles
+
+**04 What blind spots could the scanner not reach?**
 
 Operations, incidents, external dependencies
 
 The agent asks 2–3 targeted follow-ups only when critical gaps remain.
 
-© 2026 Black Hat
-
 ## Slide 15
 
-## **FORMULATE THREATS**
+## FORMULATE THREATS
 
-###### **THREAT STATEMENT GENERATION**
+**THREAT STATEMENT GENERATION**
 
-###### **01 Identify the actor**
+**01 Identify the actor**
 
 Add the access or condition required to act
 
-###### **02 Trace the action**
+**02 Trace the action**
 
 Connect the abuse to the system behavior it triggers
 
-###### **RUNNING EXAMPLE**
-
-**A malicious user with authenticated access to POST /ask can inject instructions that cause the Bedrock agent to retrieve proprietary manuals, which leads to unauthorized disclosure, resulting in reduced confidentiality of those manuals.**
-
-###### **03 Name the impact**
+**03 Name the impact**
 
 State the affected asset and reduced CIA objective
 
-© 2026 Black Hat
+**RUNNING EXAMPLE**
+
+A malicious user with authenticated access to POST /ask can inject instructions that cause the Bedrock agent to retrieve proprietary manuals, which leads to unauthorized disclosure, resulting in reduced confidentiality of those manuals.
 
 ## Slide 16
 
@@ -354,59 +353,92 @@ The reviewer decides what should enter deeper attack-path analysis.
 
 Reprioritize  •  remove  •  add  •  proceed
 
-© 2026 Black Hat
-
 ## Slide 17
 
-## **BUILD THE ATTACK GRAPH**
+## BUILD THE ATTACK GRAPH
 
-###### **APPROVED THREAT STATEMENT**
+**APPROVED THREAT STATEMENT**
 
-**A malicious user with authenticated access to POST /ask can inject instructions that cause the Bedrock agent to retrieve proprietary manuals, which leads to unauthorized disclosure, resulting in reduced confidentiality of those manuals.**
+A malicious user with authenticated access to POST /ask can inject instructions that cause the Bedrock agent to retrieve proprietary manuals, which leads to unauthorized disclosure, resulting in reduced confidentiality of those manuals.
 
-© 2026 Black Hat
+**1. CONDITIONS**
+
+Untrusted input reaches agent
+
+**EVIDENCE** — User message can reach the agent
+
+**2. ACTIONS**
+
+Manipulate prompt → Retrieve manual content
+
+**3. BRANCH**
+
+Return content in response
+
+OR → Trigger chained request
+
+**ASSUMPTION** — Downstream service will process request
+
+**4. OUTCOME**
+
+Protected content exposed
 
 ## Slide 18
 
-## **WHY TACTICS, TECHNIQUES, AND PROCEDURES MATTER**
+## WHY TACTICS, TECHNIQUES, AND PROCEDURES MATTER
 
 Mappings turn each attack-tree step into reusable security knowledge.
 
-##### **01 Explain execution**
+**01 Explain execution**
 
-##### **02 Surface novelty signals**
+Show how an attacker could carry out the step—not only what outcome they want.
 
-Show how an attacker could carry out the step— not only what outcome they want.
+**02 Surface novelty signals**
 
 A weak or missing catalog match flags behavior that deserves expert review.
 
-##### **03 Expand the attack surface**
-
-##### **04 Connect mitigations**
+**03 Expand the attack surface**
 
 Related techniques reveal alternative routes, prerequisites, and adjacent behaviors.
 
-Technique mappings lead to relevant controls, evidence, telemetry, and tests.
+**04 Connect mitigations**
 
-© 2026 Black Hat
+Technique mappings lead to relevant controls, evidence, telemetry, and tests.
 
 ## Slide 19
 
-## **CALCULATE FEASIBILITY**
+## CALCULATE FEASIBILITY
 
 Each attack step gets a probability. The complete path compounds them.
 
-**01 FACTOR PRIOR 02 EVIDENCE UPDATE 03 PATH REACH reach(child) = p(child) × p** ₀ **= σ(−0.5 + factors) p = σ(logit(p** ₀ **) + evidence) reach(parent)** Skill required  •  access required TTP similarity can raise or lower the The fact node starts at 1.0. Detectability  •  exploit maturity score. Every required step compounds the Mitigations and contradictory evidence chain. lower it.
+**01 FACTOR PRIOR**
+
+p₀ = σ(−0.5 + factors)
+
+Skill required • access required
+Detectability • exploit maturity
+
+**02 EVIDENCE UPDATE**
+
+p = σ(logit(p₀) + evidence)
+
+TTP similarity can raise or lower the score.
+Mitigations and contradictory evidence lower it.
+
+**03 PATH REACH**
+
+reach(child) = p(child) × reach(parent)
+
+The fact node starts at 1.0.
+Every required step compounds the chain.
 
 **EXAMPLE PATH**
 
-**0.88  × 0.72  × 0.55  =  0.35**
-
-**MODEL ESTIMATE NOT EXPLOIT PROOF**
+0.88 × 0.72 × 0.55 = 0.35
 
 35% estimated reach to the outcome
 
-© 2026 Black Hat
+**MODEL ESTIMATE NOT EXPLOIT PROOF**
 
 ## Slide 20
 
@@ -428,13 +460,9 @@ Each attack step gets a probability. The complete path compounds them.
 
 **03 Implementation cost**
 
-© 2026 Black Hat
-
 ## Slide 21
 
-DEMO: CODE **→** TREE
-
-© 2026 Black Hat
+# DEMO: CODE → TREE
 
 ## Slide 22
 
@@ -454,16 +482,27 @@ DEMO: CODE **→** TREE
 
 **Scale expert judgment.** Developers can reuse and extend SME reasoning.
 
-© 2026 Black Hat
-
 ## Slide 23
 
-###### **SCAN FOR THREATFOREST**
+# Thank you
 
-**Cristian Leo** Applied Scientist AWS Security
+**SCAN FOR THREATFOREST**
+
+THREATFOREST
+
+**Cristian Leo**
+
+Applied Scientist
+
+AWS Security
 
 cristian-leo
 
-**Daniel Begimher** Senior Security Engineer AWS Security begimher
+**Daniel Begimher**
 
-**© 2026 Black Hat** © 2026 Black Hat
+Senior Security Engineer
+
+AWS Security
+
+begimher
+
