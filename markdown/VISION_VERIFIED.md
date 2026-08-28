@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5190 slides across 204 documents.**
+**5229 slides across 205 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2089 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2437 | structure held; individual characters or lines wrong |
-| accurate | 636 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2099 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2463 | structure held; individual characters or lines wrong |
+| accurate | 639 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -296,6 +296,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Closed Loop From Autonomous Exploit to Deployed Defense in Under 5 Minutes | 1-25 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Cost-Effective, Private, Frontier-Grade AI Agent Exploitation with a Fine-Tuned OSS Model | 1-64 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Cyberspace Pirates Outsourcing Cyberwar in the Age of AI and Ransomware | 1-18 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | Defensive V Offensive - How Do We Balance The Needs Of The Many | 1-39 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Deny. Disrupt. Dismantle. Breaking the Business Model of Cybercrime in the Gray Zone | 1-20 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Forgotten but Not Gone Unauthenticated RCEs and LPEs in Legacy Linux Services | 1-69 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | From Prompts to Pipelines Building Agentic Detection Engineering and Threat Hunting | 1-40 | badly-mangled, minor-errors | 0 |
