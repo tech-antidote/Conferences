@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4620 slides across 194 documents.**
+**4663 slides across 195 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2034 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2004 | structure held; individual characters or lines wrong |
+| badly-mangled | 2045 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2036 | structure held; individual characters or lines wrong |
 | accurate | 554 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -318,6 +318,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | ThreatForest: Automated Attack Trees from Source Code | 1-23 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks | 1-56 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
+| Black Hat USA 2026 | Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
