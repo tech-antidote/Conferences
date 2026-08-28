@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**4876 slides across 201 documents.**
+**4933 slides across 202 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 2063 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2187 | structure held; individual characters or lines wrong |
-| accurate | 598 | OCR was already correct; text confirmed, not changed |
+| minor-errors | 2242 | structure held; individual characters or lines wrong |
+| accurate | 600 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -311,6 +311,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 78 | badly-mangled | 0 |
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights | 1-46 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Render Safe Live EOD PackBot Demonstration | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Render Safe Reverse Engineering and Exploiting an EOD Robot | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Rules for Neural Traffic A New Defensive Layer for LLMs | 1-52 | badly-mangled, minor-errors, accurate | 0 |
