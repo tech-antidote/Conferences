@@ -9,7 +9,7 @@ _Snapshot: 2026-08-29 (UTC)._ Every deck listed as verified
 below has had its page images read against the converter output and the corrections
 applied and committed.
 
-## Fully verified end to end — 77 decks, 4,680 pages
+## Fully verified end to end — 78 decks, 4,854 pages
 
 Read cover to cover; corrections are in the tree, per-page detail in VISION_VERIFIED.md.
 
@@ -80,6 +80,7 @@ Read cover to cover; corrections are in the tree, per-page detail in VISION_VERI
 - `BlackHat_USA_2026_Slides/shay-shavit-handle-with-care-chaining-azure-automation-flaws-for-cross-tenant-identity-takeover.md` — 50pp
 - `BlackHat_USA_2026_Slides/shebin-mathew-bring-your-own-com-session-pivoting-and-lateral-movement-via-ephemeral-com-registration.md` — 31pp
 - `BlackHat_USA_2026_Slides/shoufu-luozhenda-hu-from-prompts-to-pipelines-building-agentic-detection-engineering-and-threat-hunting.md` — 40pp
+- `BlackHat_USA_2026_Slides/splitline-ng-born-corrupted-how-we-backdoored-trusted-language-binaries.md` — 174pp
 - `BlackHat_USA_2026_Slides/stanislav-dashevskyifrancesco-la-spina-zero-day-provisioning-chaining-tp-link-ztp-vulnerabilities-for-infiltrating-netwo.md` — 47pp
 - `BlackHat_USA_2026_Slides/sungwook-jangyoungmook-kangdaegyu-kangyounghwan-kimahyun-song-cracking-the-chains-accelerating-ransomware-recovery-via-l.md` — 38pp
 - `BlackHat_USA_2026_Slides/t0xodilemastersplinter-crlf-powered-desync-attacks-beheading-http-streams.md` — 111pp
@@ -106,7 +107,6 @@ converter output. Frontmatter carries `vision_verified_pages` and
 | `BlackHat_USA_2026_Slides/angelboy-yang-vulnerabilities-assembled-the-vulnerability-factory-inside-the-windows-kernel.md` | 110 | 211 | 111–211 | Sonnet | resuming now — rate-limit interrupt |
 | `BlackHat_USA_2026_Slides/ben-gardiner-tractor-ecu-re-when-a-noise-triggered-recall-is-also-a-security-patch-wp.md` | 34 | 179 | 35–179 | Opus | resuming now — rate-limit interrupt |
 | `BlackHat_USA_2026_Slides/dion-blazakisjosh-mainebruce-dang-apple-macos-kernel-exploitation-with-mie-building-on-the-ashes-of-100-vulnerabilities.md` | 44 | 58 | 45–58 | — | cyber-safeguard blocked on 45–58 (both models) — see UNVERIFIED.md |
-| `BlackHat_USA_2026_Slides/splitline-ng-born-corrupted-how-we-backdoored-trusted-language-binaries.md` | 102 | 174 | 103–174 | Sonnet | resuming now — rate-limit interrupt |
 | `BlackHat_USA_2026_Slides/tristan-madani-secure-a-single-wrong-negation-to-root-linux-and-escape-managed-containers.md` | 33 | 73 | 34–73 | — | earlier partial — re-extract and resume the range |
 
 ## Not yet started
