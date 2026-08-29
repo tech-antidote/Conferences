@@ -4,21 +4,21 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**6788 slides across 225 documents.**
+**7075 slides across 229 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2338 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3650 | structure held; individual characters or lines wrong |
-| accurate | 772 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 28 | reviewed before verdicts were recorded |
+| badly-mangled | 2445 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3753 | structure held; individual characters or lines wrong |
+| accurate | 848 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 29 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
 Grouped by keyword match on the talk title, so a talk can appear
 under more than one heading or under none. Counts are slides.
 
-### Windows, Active Directory and Entra — 15 talks, 240 slides
+### Windows, Active Directory and Entra — 16 talks, 350 slides
 
 - **A Glimpse Into The Protocol Fuzz Windows RDP Client For Fun And Profit** (Black Hat ASIA 2024) — slide 38
 - **(Mis)adventures with Copilot+ Attacking and Exploiting Windows NPU Drivers** (Black Hat ASIA 2025) — slide 81
@@ -33,6 +33,7 @@ under more than one heading or under none. Counts are slides.
 - **Vulnerability Haruspicy Picking Out Risk Signals from Scoring System Entrails** (Black Hat USA 2025) — slides 6-8
 - **Windows Hell No for Business** (Black Hat USA 2025) — slides 64-68
 - **Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover** (Black Hat USA 2026) — slides 1-83
+- **Vulnerabilities Assembled! The Vulnerability Factory Inside the Windows Kernel** (Black Hat USA 2026) — slides 1-110
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Plug And Pwn Weaponizing Windows PnP Auto-Install** (DEF CON 34) — slides 1-43
 
@@ -133,7 +134,7 @@ under more than one heading or under none. Counts are slides.
 - **Your WAF Blocked Us, That Was The Exploit - Remote Agent Takeover via Cloudflare, Sentry and C** (DEF CON 34) — slides 1-49
 - **Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks** (DEF CON 34) — slides 1-47
 
-### Firmware, hardware and embedded — 28 talks, 700 slides
+### Firmware, hardware and embedded — 29 talks, 810 slides
 
 - **Hand Me Your Secret MCU** (Black Hat ASIA 2023) — slides 59-61
 - **One Flip is All It Takes Identifying Syscall-Guard Variables for Data-Only Attacks** (Black Hat ASIA 2024) — slide 23
@@ -158,6 +159,7 @@ under more than one heading or under none. Counts are slides.
 - **Surveillance as a Service LightSpy's 72 Servers, Router Implants, and Operators Eating Out for Fried Chicken Forensics** (Black Hat USA 2026) — slides 1-57
 - **THREATFOREST: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping** (Black Hat USA 2026) — slides 1-20
 - **Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks** (Black Hat USA 2026) — slides 1-56
+- **Vulnerabilities Assembled! The Vulnerability Factory Inside the Windows Kernel** (Black Hat USA 2026) — slides 1-110
 - **BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft** (DEF CON 34) — slides 1-54
 - **Chaining Logical Bugs for Reliable Windows LPE** (DEF CON 34) — slides 1-80
 - **Gone in 60 Frames - USB Video Exploitation** (DEF CON 34) — slides 1-30
@@ -292,6 +294,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Beyond Normalization The Expanding Unicode Attack Surface | 1-158 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Beyond Seccomp Breaking and Rebuilding Syscall Filtering for Microservices | 1-24 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Blind Trust in the 6 GHz Band Weaponizing Wi-Fi Automated Frequency Coordination (AFC) | 1-56 | badly-mangled, minor-errors | 1 |
+| Black Hat USA 2026 | Born Corrupted How We Backdoored Trusted Language Binaries | 1-102 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Breaking Hardware CFI with Sigreturn | 1-68 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Breaking Multi-Tenancy Over and Over, and What We Can Learn From This | 1-63 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure | 1-94 | badly-mangled, minor-errors, accurate | 9 |
@@ -351,11 +354,13 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | ThreatForest: Automated Attack Trees from Source Code | 1-23 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Time for ACKrobatics Abusing TCP Timestamps to Improve Remote Timing Attacks | 1-56 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
+| Black Hat USA 2026 | Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch | 1-34 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Transformers Dark Side of the Type - Weaponizing the Conversion Layer | 1-53 | minor-errors | 0 |
 | Black Hat USA 2026 | Transformers Dark Side of the Type - Weaponizing the Conversion Layer | 1-67 | minor-errors | 0 |
 | Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 1-68 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Vulnerabilities Assembled! The Vulnerability Factory Inside the Windows Kernel | 1-110 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering | 1-86 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
@@ -371,6 +376,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Compounding Interest Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Locked-D | 1-47 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming | 1-140 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Dylib Hijacking on macOS Dead or Alive | 1-41 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Gone in 60 Frames - USB Video Exploitation | 1-30 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |

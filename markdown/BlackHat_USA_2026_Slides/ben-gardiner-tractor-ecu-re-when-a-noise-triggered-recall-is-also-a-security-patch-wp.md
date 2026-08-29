@@ -14,6 +14,9 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
+vision_unreviewed_pages: 145
+vision_verified_pages_changed: 34
+vision_verified_pages: 34
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -33,7 +36,7 @@ converted_at: "2026-08-12T05:32:58Z"
 
 ### **Technical Whitepaper — v0.1**
 
-Ben Gardiner, National Motor Freight Traf�c Association Inc.
+Ben Gardiner, National Motor Freight Traffic Association Inc.
 
 ### **Introduction**
 
@@ -43,44 +46,45 @@ Introduced circa 2001, the J2497 (aka ‘PLC4TRUCKS’) powerline databus remain
 
 Previous research on J2497 ECU security revealed that J2497 is wirelessly reachable and trailer brake controller ECUs implement diagnostics functions inside J1587 Data Link Escapes beyond FMVSS 121 requirements. However, current threat models assume tractor brake controllers only process necessary LAMP messages on J2497.
 
-The 2024 Bendix EC80 safety recall revealed safety impacts to tractor ECUs from J2497 reception, suggesting the EC80 processed J2497 traf�c beyond necessary LAMP messages. The safety recall was remediated via a �rmware update of the EC80 using the ‘ID9363’ updater executable.
+The 2024 Bendix EC80 safety recall revealed safety impacts to tractor ECUs from J2497 reception, suggesting the EC80 processed J2497 traffic beyond necessary LAMP messages. The safety recall was remediated via a firmware update of the EC80 using the ‘ID9363’ updater executable.
 
-We performed binary differential analysis on the S12X �rmware (FW) pre- and post-recall in 3 types of the EC80 (one for each OEM affected by the recall). Results show extensive processing of J1587 messages received by the tractor brake controller over J2497 in the removed code. This code contained vulnerabilities including hardcoded secrets protecting traction control con�guration, buffer overflows, and memory corruption leading to denial of service (of the vehicle) and remote code execution. Finally, we identi�ed the removal of PID handlers discoverable through simple fuzzing. This suggests the safety recall also functions as a security patch, preventing attackers with wireless, ‘adjacent’ access to J2497 from exploiting these vulnerabilities. This paper focuses exclusively on changes that were ‘�xed’ by this patch; no ‘0day’ vulnerabilities are revealed as all have been patched.
+We performed binary differential analysis on the S12X firmware (FW) pre- and post-recall in 3 types of the EC80 (one for each OEM affected by the recall). Results show extensive processing of J1587 messages received by the tractor brake controller over J2497 in the removed code. This code contained vulnerabilities including hardcoded secrets protecting traction control configuration, buffer overflows, and memory corruption leading to denial of service (of the vehicle) and remote code execution. Finally, we identified the removal of PID handlers discoverable through simple fuzzing. This suggests the safety recall also functions as a security patch, preventing attackers with wireless, ‘adjacent’ access to J2497 from exploiting these vulnerabilities. This paper focuses exclusively on changes that were ‘fixed’ by this patch; no ‘0day’ vulnerabilities are revealed as all have been patched.
 
 ### **Background**
 
-In late 2024, three Class 8 vehicle OEMs in North America issued a safety recall; these were the three OEMs that integrate the Bendix EC80 brake controller. Bendix identi�ed potential memory corruption causing the ECU to go offline and worked with OEMs to deploy a �rmware
-
-1
+In late 2024, three Class 8 vehicle OEMs in North America issued a safety recall; these were the three OEMs that integrate the Bendix EC80 brake controller. Bendix identified potential memory corruption causing the ECU to go offline and worked with OEMs to deploy a firmware
 
 ## Slide 2
 
 update for affected trucks – those with Electronic Stability Program (ESP) or Automatic Traction Control (ATC) features – estimated at 450,000 units at the time of this writing. The timeline of this recall is summarized below in Figure 1. The recall was later expanded in October 2025 to cover some units which were sold as aftermarket equipment (all NHTSA recalls for this same issue known at this time: 24V780000, 24V818000, 24V915000, 25E073000, 25E077000, 25E078000 and Transport Canada recalls: 2024-744, 2024-655, 2024-633, 2024-632).
 
-Bendix EC80 Recall Timeline
-Investigation Initial Recall 1st OEM & Remedies The
-Expansion
-2023 May Sep Oct Oct Oct Nov Dec Jan Oct
-2024 2024 2024 2024 2024 2024 2024 2025 2025
+**Bendix EC80 Recall Timeline**
+
+Investigation | Initial Recall | 1st OEM & Remedies | The Expansion
+
+2023 | May 2024 | Sep 2024 | Oct 2024 | Oct 2024 | Oct 2024 | Nov 2024 | Dec 2024 | Jan 2025 | Oct 2025
+
+Field Reports | Field Reports | Root Cause | Decision | Filing | Filing | Amended | Filing | Last | Expansion
+
+receives reports of issues | a OEM reports faults in doubles | High noise & low PLC signal | Recalls multiple EC80s | OEM files 24V-790 | OEM files 24V-818 | includes other OEM | OEM files 24V-915 | release last OEM Tech Bulletin | Recalls 25E073, 25E077, 25E078
+
 Figure 1: Bendix Recall Timeline.
 
-The �rmware update was distributed to fleets via a Windows executable, ‘ID9363’. We examine the ID9363 update process and the resulting �rmware changes in three EC80 ECUs (one per OEM).
+The firmware update was distributed to fleets via a Windows executable, ‘ID9363’. We examine the ID9363 update process and the resulting firmware changes in three EC80 ECUs (one per OEM).
 
-The �rmware update, or ‘patch’, purportedly prevents J2497 noise from triggering memory corruption. However, due to CVE-2022-26131, it is possible to wirelessly inject signals onto J2497. It is also possible to inject from compromised connected devices such as the increasingly common trailer telematics devices. We examine if these memory corruptions could be triggered by malicious actors using wireless (or wired) injection on J2497.
+The firmware update, or ‘patch’, purportedly prevents J2497 noise from triggering memory corruption. However, due to CVE-2022-26131, it is possible to wirelessly inject signals onto J2497. It is also possible to inject from compromised connected devices such as the increasingly common trailer telematics devices. We examine if these memory corruptions could be triggered by malicious actors using wireless (or wired) injection on J2497.
 
-J1587 serves as (roughly) the application layer for J2497, while J1708 de�nes the original physical and data link layers (i.e. “framing”). The J1708 physical layer is replaced with a Power Line Carrier (PLC) modulated over the 12V auxiliary power line in J2497, but it inherits the J1708 data link and J1587 application layers. A frame can only be a maximum of 21 bytes long and must end with a one-byte checksum (the two’s complement of the sum of the preceding bytes). In software, the frames are received byte-by-byte over a standard UART peripheral via a J1708 to J2497 converter chip (the Intellon SSCP485).
+J1587 serves as (roughly) the application layer for J2497, while J1708 defines the original physical and data link layers (i.e. “framing”). The J1708 physical layer is replaced with a Power Line Carrier (PLC) modulated over the 12V auxiliary power line in J2497, but it inherits the J1708 data link and J1587 application layers. A frame can only be a maximum of 21 bytes long and must end with a one-byte checksum (the two’s complement of the sum of the preceding bytes). In software, the frames are received byte-by-byte over a standard UART peripheral via a J1708 to J2497 converter chip (the Intellon SSCP485).
 
-For the J1587 application layer, the �rst byte is de�ned by J1708 and is the Message Identi�cation (MID), which identi�es the sender or the message type. MIDs 0x0A (LAMP ON), 0x0B (LAMP OFF), and 0x57 (Active Trailer ABS Event) are required by the J2497 standard. For other J1587 messages the bytes following the MID are Parameter Identi�cation (PID), which specify
-
-2
+For the J1587 application layer, the first byte is defined by J1708 and is the Message Identification (MID), which identifies the sender or the message type. MIDs 0x0A (LAMP ON), 0x0B (LAMP OFF), and 0x57 (Active Trailer ABS Event) are required by the J2497 standard. For other J1587 messages the bytes following the MID are Parameter Identification (PID), which specify
 
 ## Slide 3
 
-the type of attached data (e.g., VIN, wheel speed, diagnostics) followed by parameters (payload). Some PIDs have a �xed data length (like a 1-byte speed value), while others are variable length. PIDs data enables transmission of vehicle signals, diagnostic commands, and proprietary data.
+the type of attached data (e.g., VIN, wheel speed, diagnostics) followed by parameters (payload). Some PIDs have a fixed data length (like a 1-byte speed value), while others are variable length. PIDs data enables transmission of vehicle signals, diagnostic commands, and proprietary data.
 
 The Bendix EC80 is a heavy-duty vehicle Electronic Control Unit (ECU) responsible for Anti-lock Braking (ABS), ATC, and ESP functions. It controls pneumatic circuits through external pressure modulation valves connected to PCB-mounted FET drivers. During initialization, absent critical Diagnostic Trouble Codes (DTCs), modulators undergo individual testing, producing a ‘roll call’ of small air chuffs. In a bench environment the same successful power-on results in a clicking of a failsafe ‘diagonal’ relay.
 
-The table below provides an overview of the EC80 units acquired for this study. The complexity of the EC80 �rmware varies with the integrated features. The middle target, 2ec80, represents a medium complexity unit and was selected as the primary target for reverse engineering in this paper. All �ndings have been validated across all the target �rmwares.
+The table below provides an overview of the EC80 units acquired for this study. The complexity of the EC80 firmware varies with the integrated features. The middle target, 2ec80, represents a medium complexity unit and was selected as the primary target for reverse engineering in this paper. All findings have been validated across all the target firmwares.
 
 |Target Name|1ec80|2ec80|3ec80|
 |---|---|---|---|
@@ -96,155 +100,142 @@ The table below provides an overview of the EC80 units acquired for this study. 
 |HW Date Code|20220723|20230507|20221019|
 |SW Date Code|3H0922G|3E2323G|2F1423G|
 
-The EC80 units affected were released in April 2020. Given its role in preventing rollovers and maintaining stability, brake controllers are expected to have a high Automotive Safety Integrity Level (ASIL), likely ASIL C or D, to meet OEM safety targets. While speci�c ASIL targets for EC80 vehicles are unpublished, Hazard Analysis and Risk Assessment (HARA) of brake controllers identi�ed ASIL D scenarios. While focused on autonomous systems, this analysis notes the architecture applies to non-autonomous vehicles, stating the brake system is critical regardless of autonomy. Furthermore, the literature for a competing product, the mBSP, explicitly states compliance with ISO 26262 up to ASIL D.
+The EC80 units affected were released in April 2020. Given its role in preventing rollovers and maintaining stability, brake controllers are expected to have a high Automotive Safety Integrity Level (ASIL), likely ASIL C or D, to meet OEM safety targets. While specific ASIL targets for EC80 vehicles are unpublished, Hazard Analysis and Risk Assessment (HARA) of brake controllers identified ASIL D scenarios. While focused on autonomous systems, this analysis notes the architecture applies to non-autonomous vehicles, stating the brake system is critical regardless of autonomy. Furthermore, the literature for a competing product, the mBSP, explicitly states compliance with ISO 26262 up to ASIL D.
 
-A Threat and Risk Assessment (TARA) of Class 8 vehicles ranked brake controllers third, after telematics and gateway devices, for cybersecurity priority. The EC80 connects to multiple interfaces, including “Untrustworthy Network Domains” like J2497. Because it is not explicitly intended to transport, translate, or �lter traf�c, it is classi�ed as an “unintended gateway” device (although the ‘Z’ version which implements a ‘CAN Gateway’ could be considered a ‘(intentional) gateway device’). Consequently, it must satisfy cybersecurity requirements NGW-S-001 (Security Assurance), NGW-S-002 through -005 (Won’t Transport, Translate, Filter, etc.).
-
-3
+A Threat and Risk Assessment (TARA) of Class 8 vehicles ranked brake controllers third, after telematics and gateway devices, for cybersecurity priority. The EC80 connects to multiple interfaces, including “Untrustworthy Network Domains” like J2497. Because it is not explicitly intended to transport, translate, or filter traffic, it is classified as an “unintended gateway” device (although the ‘Z’ version which implements a ‘CAN Gateway’ could be considered a ‘(intentional) gateway device’). Consequently, it must satisfy cybersecurity requirements NGW-S-001 (Security Assurance), NGW-S-002 through -005 (Won’t Transport, Translate, Filter, etc.).
 
 ## Slide 4
 
-The EC80 uses two S12X microcontrollers (as can be seen in the PCBs pictured in Figure 2). Both are speci�cally the NXP MC9S12XEQ512, a 16-bit microcontroller from the S12X family; however, the ‘left’ MCU is in a smaller footprint 80-pin QFP package compared to the larger ‘right’ MCU in a 144-pin LQFP package.
+The EC80 uses two S12X microcontrollers (as can be seen in the PCBs pictured in Figure 2). Both are specifically the NXP MC9S12XEQ512, a 16-bit microcontroller from the S12X family; however, the ‘left’ MCU is in a smaller footprint 80-pin QFP package compared to the larger ‘right’ MCU in a 144-pin LQFP package.
 
 Figure 2: The PCBs of the three EC80s acquired and tested. A 0.1” header is installed for access to the BDM programming pins on the right S12X MCU. The added/removed components are highlighted in green/red, respectively.
 
-The S12X features an XGATE peripheral coprocessor to offload high-speed data transfer and logic processing from the main CPU12X core. The S12X employs a paging architecture using PPAGE, EPAGE, and RPAGE registers to map 16-bit logical windows into a 23-bit global address space. The device includes 512 KiB of PFLASH (Program Flash) residing at global addresses 0x780000 - 0x7FFFFF and 32 KiB of DFLASH (Data Flash) located at 0x100000 - 0x107FFF. Additionally, it features a 4 KiB Emulated EEPROM (EEE) buffer RAM mapped to global addresses 0x13F000 - 0x13FFFF, which allows the �rmware to treat the DFLASH as random-access nonvolatile memory.
+The S12X features an XGATE peripheral coprocessor to offload high-speed data transfer and logic processing from the main CPU12X core. The S12X employs a paging architecture using PPAGE, EPAGE, and RPAGE registers to map 16-bit logical windows into a 23-bit global address space. The device includes 512 KiB of PFLASH (Program Flash) residing at global addresses 0x780000 - 0x7FFFFF and 32 KiB of DFLASH (Data Flash) located at 0x100000 - 0x107FFF. Additionally, it features a 4 KiB Emulated EEPROM (EEE) buffer RAM mapped to global addresses 0x13F000 - 0x13FFFF, which allows the firmware to treat the DFLASH as random-access nonvolatile memory.
 
 ### **ID9363 Update Process**
 
-Byte Differences
-Prolog Estimates (3B1B)PPAGE Regions (16KiB) "Drive Block"  1 of 2 Skipped by ID9363 "Drive Block" 2 of 2
+Byte Differences | Prolog Estimates (3B1B) | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 2ec80_after
 2ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-File
 
-Figure 3: Comparison of the PFLASH of 2ec80 before and after ID9363 update. The unchanged extents illustrate that both the interrupt vector table at the end of PFLASH (0x7E8800) and the region 0x7E8800 - 0x7FC000 were skipped by the �rmware update. Many other locations where the PFLASH contents are unchanged were found to have value 0x3F ‘?’, the Software Interrupt (SWI) instruction, which we believe is used as a padding value. The number of 0x3F bytes increased, suggesting function deletion by the update. Function prolog estimate locations across the update suggest shifting to lower addresses which (also) suggests function deletion by the update.
+Figure 3: Comparison of the PFLASH of 2ec80 before and after ID9363 update. The unchanged extents illustrate that both the interrupt vector table at the end of PFLASH (0x7E8800) and the region 0x7E8800 - 0x7FC000 were skipped by the firmware update. Many other locations where the PFLASH contents are unchanged were found to have value 0x3F ‘?’, the Software Interrupt (SWI) instruction, which we believe is used as a padding value. The number of 0x3F bytes increased, suggesting function deletion by the update. Function prolog estimate locations across the update suggest shifting to lower addresses which (also) suggests function deletion by the update.
 
-We observed several EC80 �rmware updates. The new �rmware is readable in cleartext from
-
-4
+We observed several EC80 firmware updates. The new firmware is readable in cleartext from
 
 ## Slide 5
 
-CAN databus captures; however, analyzing the update requires the pre-update �rmware contents. While some ECUs offer a UDS ‘upload’ service, we con�rmed the EC80 does not. From the traf�c we reconstructed the seed-key exchange routine in closed-form for all DSC,SA sessions, con�rming no �rmware upload service exists in the observed sessions (DSC=2,SA=5) (DSC=3,SA=1) (DSC=3,SA=7) (DSC=3,SA=3) (memory leaks, other unintended upload functionality in the bootloader or application are out of the scope of this paper).
+CAN databus captures; however, analyzing the update requires the pre-update firmware contents. While some ECUs offer a UDS ‘upload’ service, we confirmed the EC80 does not. From the traffic we reconstructed the seed-key exchange routine in closed-form for all DSC,SA sessions, confirming no firmware upload service exists in the observed sessions (DSC=2,SA=5) (DSC=3,SA=1) (DSC=3,SA=7) (DSC=3,SA=3) (memory leaks, other unintended upload functionality in the bootloader or application are out of the scope of this paper).
 
-We used the BDM interface to dump PFLASH, DFLASH, and EEE (emulated in DFLASH) from both MCUs to obtain the pre-update �rmware. We found that both the XPROG tool and PROGS12Z worked well. XPROG creates flat binary �les of PFLASH, DFLASH and EEE which correspond to their global address extents. PROGS12Z creates .s19 �les which contain the global address extents of PFLASH, DFLASH, and EEE.
+We used the BDM interface to dump PFLASH, DFLASH, and EEE (emulated in DFLASH) from both MCUs to obtain the pre-update firmware. We found that both the XPROG tool and PROGS12Z worked well. XPROG creates flat binary files of PFLASH, DFLASH and EEE which correspond to their global address extents. PROGS12Z creates .s19 files which contain the global address extents of PFLASH, DFLASH, and EEE.
 
-We found that although the S12X used in the EC80 supports read-out protection, it was not enabled. We con�rmed that the data transferred over CAN matches the PFLASH contents after update. Only the ‘right’ MCU (larger package) receives code changes; the ‘left’ MCU’s PFLASH remained unchanged. While the ‘left’ MCU’s PFLASH (code) remains static, the update process does push changes to its DFLASH/EEE regions, implying shared state or con�guration data synchronization between the dual cores. We focus solely on the ‘right’ MCU’s code changes.
+We found that although the S12X used in the EC80 supports read-out protection, it was not enabled. We confirmed that the data transferred over CAN matches the PFLASH contents after update. Only the ‘right’ MCU (larger package) receives code changes; the ‘left’ MCU’s PFLASH remained unchanged. While the ‘left’ MCU’s PFLASH (code) remains static, the update process does push changes to its DFLASH/EEE regions, implying shared state or configuration data synchronization between the dual cores. We focus solely on the ‘right’ MCU’s code changes.
 
-A visualization of the byte-by-byte difference of PFLASH before and after update of a 2ec80 is presented in Figure 3. Byte differences are marked by pink �ll, red outline boxes, and are numerous (this is clearly not a micropatch). The “Drive Block”s 1 and 2 are labeled. The PPAGE numbers corresponding to the PFLASH offset are labeled at the bottom for reference. The same style of visualization will be reused throughout the paper to illustrate successive analysis steps. In this �gure function prolog estimates are plotted as green circles (in subsequent �gures the functions resulting from �rmware analysis will replace these).
+A visualization of the byte-by-byte difference of PFLASH before and after update of a 2ec80 is presented in Figure 3. Byte differences are marked by pink fill, red outline boxes, and are numerous (this is clearly not a micropatch). The “Drive Block”s 1 and 2 are labeled. The PPAGE numbers corresponding to the PFLASH offset are labeled at the bottom for reference. The same style of visualization will be reused throughout the paper to illustrate successive analysis steps. In this figure function prolog estimates are plotted as green circles (in subsequent figures the functions resulting from firmware analysis will replace these).
 
-Despite extensive byte differences, the high-level source code changes may be concise. Small machine code changes and linking order can cause massive byte differences. Byte-level analysis cannot reveal speci�c code changes or isolate areas of interest, as changes span ‘Drive Blocks’ 1 and 2. Understanding the changes requires disassembling and comparing the preand post-update images.
+Despite extensive byte differences, the high-level source code changes may be concise. Small machine code changes and linking order can cause massive byte differences. Byte-level analysis cannot reveal specific code changes or isolate areas of interest, as changes span ‘Drive Blocks’ 1 and 2. Understanding the changes requires disassembling and comparing the pre- and post-update images.
 
-The update process is executed by the ID9363 updater executable, where we captured the J1939 traf�c sent between it and the target ECU. The update process uses UDS on J1939; in all cases we observed the traf�c was unicast, default priority, between the vehicle diagnostic adapter at address 0xF9 and the brake controller at 0x0B: resulting in the two extended (29-bit) CAN IDs 0x18DA0BF9 and 0x18DAF90B. The CAN traf�c was �ltered on those two IDs and processed with Wireshark to reconstruct the ISO-TP multi frame messages used by UDS and then these were analyzed to reconstruct the ID9363 update process, a simpli�ed summary of which is reproduced below in the table of ID9363 Update Process Steps.
+The update process is executed by the ID9363 updater executable, where we captured the J1939 traffic sent between it and the target ECU. The update process uses UDS on J1939; in all cases we observed the traffic was unicast, default priority, between the vehicle diagnostic adapter at address 0xF9 and the brake controller at 0x0B: resulting in the two extended (29-bit) CAN IDs 0x18DA0BF9 and 0x18DAF90B. The CAN traffic was filtered on those two IDs and processed with Wireshark to reconstruct the ISO-TP multi frame messages used by UDS and then these were analyzed to reconstruct the ID9363 update process, a simplified summary of which is reproduced below in the table of ID9363 Update Process Steps.
 
 |Step|Description|
 |---|---|
-|1. Tester Present|2x Tester Present requests; many more periodically and all
-omitted below.|
-|2. Read DIDs (Start)|Read Data By Identi�er requests for: 0xF18A, 0xF192, 0xF18C,
-0xF194, 0xFDEA, 0xFDA0, 0xFDE8.|
-
-5
+|1. Tester Present|2x Tester Present requests; many more periodically and all omitted below.|
+|2. Read DIDs (Start)|Read Data By Identifier requests for: 0xF18A, 0xF192, 0xF18C, 0xF194, 0xFDEA, 0xFDA0, 0xFDE8.|
 
 ## Slide 6
 
 |Step|Description|
 |---|---|
-|3. Auth to Programming|Diagnostic Session Control (0x02) followed by Security Access
-(0x05) seed-key exchange.|
-|4. Fingerprint|Write Data By Identi�er (0xF184) to record Tool ID (contains
-“ID9363”). Always follows auth step; omitted in the following.|
-|5. Download Block 1 of 2|RoutineControl (Erase), RequestDownload, TransferData. Writes
-0x68800 bytes to PFLASH (0x780000 - 0x7E8800).|
-|6. Download Block 2 of 2|RoutineControl (Erase), RequestDownload, TransferData. Writes
-0x3800 bytes to PFLASH (0x7FC000 - 0x7FF7FF).|
-|7. Checksum & Reset|RoutineControl (0xFF01 checkProgrammingDependencies)
-without any extra parameters, followed by Hard Reset.|
-|8. Auth to Programming|Re-enter Programming Session (0x02) followed by Security
-Access (0x05). And �ngerprint.|
-|9. Download Dataset|RoutineControl (Erase), RequestDownload, TransferData. Writes
-0xC00 bytes of dataset/calibration data to EEE buffer at
-0x13F400.|
-|10. Checksum & Reset|RoutineControl (0xFF01) with extra parameters (4 bytes), followed
-by Hard Reset.|
-|11. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x01).
-And �ngerprint.|
-|12. Write Proprietary DID|Write Data By Identi�er (0xFDA0) with values from Step 2.|
-|13. Write Customer PN|Write Data By Identi�er (0xF191
-vehicleManufacturerECUHardwareNumberDataIdenti�er).|
-|14. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x07).
-And �ngerprint.|
-|15. Write Proprietary
-‘Revision’ DID|Write Data By Identi�er (0xFDEA) with revision data (e.g., ‘R011’).|
-|16. Update Proprietary
-DID|Read and Write Data By Identi�er (0xFDE8).|
-|17. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x03).
-And �ngerprint.|
-|18. ‘Commit Step’ & Reset|Proprietary Requests: 0xFE5C, 0xFE5D, 0xFE6A followed by hard
-reset.|
+|3. Auth to Programming|Diagnostic Session Control (0x02) followed by Security Access (0x05) seed-key exchange.|
+|4. Fingerprint|Write Data By Identifier (0xF184) to record Tool ID (contains “ID9363”). Always follows auth step; omitted in the following.|
+|5. Download Block 1 of 2|RoutineControl (Erase), RequestDownload, TransferData. Writes 0x68800 bytes to PFLASH (0x780000 - 0x7E8800).|
+|6. Download Block 2 of 2|RoutineControl (Erase), RequestDownload, TransferData. Writes 0x3800 bytes to PFLASH (0x7FC000 - 0x7FF7FF).|
+|7. Checksum & Reset|RoutineControl (0xFF01 checkProgrammingDependencies) without any extra parameters, followed by Hard Reset.|
+|8. Auth to Programming|Re-enter Programming Session (0x02) followed by Security Access (0x05). And fingerprint.|
+|9. Download Dataset|RoutineControl (Erase), RequestDownload, TransferData. Writes 0xC00 bytes of dataset/calibration data to EEE buffer at 0x13F400.|
+|10. Checksum & Reset|RoutineControl (0xFF01) with extra parameters (4 bytes), followed by Hard Reset.|
+|11. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x01). And fingerprint.|
+|12. Write Proprietary DID|Write Data By Identifier (0xFDA0) with values from Step 2.|
+|13. Write Customer PN|Write Data By Identifier (0xF191 vehicleManufacturerECUHardwareNumberDataIdentifier).|
+|14. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x07). And fingerprint.|
+|15. Write Proprietary ‘Revision’ DID|Write Data By Identifier (0xFDEA) with revision data (e.g., ‘R011’).|
+|16. Update Proprietary DID|Read and Write Data By Identifier (0xFDE8).|
+|17. Auth to Extended|Enter Extended Session (0x03) followed by Security Access (0x03). And fingerprint.|
+|18. ‘Commit Step’ & Reset|Proprietary Requests: 0xFE5C, 0xFE5D, 0xFE6A followed by hard reset.|
 |19. Clear DTCs||
-|20. Read DIDs (End)|Read Data By Identi�er requests (0xF192, 0xF194, 0xFDEA,
-0xF18C) to verify update.|
+|20. Read DIDs (End)|Read Data By Identifier requests (0xF192, 0xF194, 0xFDEA, 0xF18C) to verify update.|
 
 ### **EC80 Bootloaders and Application**
 
-Global PFLASH byte differences (Figure 3) and ID9363 updater traf�c analysis (see below) indicate a J1939 CAN UDS bootloader in the skipped region. We label this the ‘late’ bootloader as it does not contain the reset vector. Code between the reset vector and this late bootloader is
-
-6
+Global PFLASH byte differences (Figure 3) and ID9363 updater traffic analysis (see below) indicate a J1939 CAN UDS bootloader in the skipped region. We label this the ‘late’ bootloader as it does not contain the reset vector. Code between the reset vector and this late bootloader is
 
 ## Slide 7
 
-labeled the ‘early’ bootloader. Its code likely resides in some subset of PPAGE 0xFF (aka “Drive Block 2 of 2”) which has a �xed mapping in the S12X memory space.
+labeled the ‘early’ bootloader. Its code likely resides in some subset of PPAGE 0xFF (aka “Drive Block 2 of 2”) which has a fixed mapping in the S12X memory space.
 
-The bootloaders presumably hand-off to the ‘application’. Its code is very likely in the “Drive Block” 1 of 2 region, although it could have some code in the other “Drive Block” as well to make use of the �xed mapping of PPAGE 0xFF.
+The bootloaders presumably hand-off to the ‘application’. Its code is very likely in the “Drive Block” 1 of 2 region, although it could have some code in the other “Drive Block” as well to make use of the fixed mapping of PPAGE 0xFF.
 
 ### **Limitations of Static Analysis**
 
 IVBR=0xFF, Basic Analysis - 2ec80
-Byte Differences "Drive Block"  "Drive Block"
-Function Extents  1 of 2 Skipped by ID9363  2 of 2
-PPAGE Regions (16KiB)
+
+Byte Differences | Function Extents | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 2ec80_after
 2ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-File
 
 Figure 4: Visualization of what the IDA Pro auto-analysis achieved after creating entrypoints for each of the handlers in the default interrupt vector table. The lack of functions in all but the ‘early’ and ‘late bootloader’ regions illustrates that auto-analysis is not able to follow the exeution flow into the ‘application’ region.
 
-The S12X primarily uses a 16-bit memory space with banked windows (PPAGE, DPAGE, RPAGE) to access global memory, rather than direct global addressing (Figure 5) (although speci�c, slower execution, instructions exist for direct global address access). Disassemblers must model this mapping to correctly resolve page-dependent references to the global address space. Fixed mappings, like PPAGE 0xFF at 0xC000-0xFFFF, are straightforward. The reset vector is in this address so starting analysis with a disassembler is likewise straightforward. In all EC80 �rmwares, execution quickly encounters a call instruction with a 3-byte target: a 16-bit offset and a PPAGE. At this point the disassembler needs to have the code in the correct location in its memory model.
+The S12X primarily uses a 16-bit memory space with banked windows (PPAGE, DPAGE, RPAGE) to access global memory, rather than direct global addressing (Figure 5) (although specific, slower execution, instructions exist for direct global address access). Disassemblers must model this mapping to correctly resolve page-dependent references to the global address space. Fixed mappings, like PPAGE 0xFF at 0xC000-0xFFFF, are straightforward. The reset vector is in this address so starting analysis with a disassembler is likewise straightforward. In all EC80 firmwares, execution quickly encounters a call instruction with a 3-byte target: a 16-bit offset and a PPAGE. At this point the disassembler needs to have the code in the correct location in its memory model.
 
-#### Reset Vector
+Reset Vector
 
 Fixed PPAGE FF
 0xc000
 PFLASH Banked Window
-0x8000 RAM Banked Window
+0x8000
 Fixed PPAGE FD
+0x4000
+Fixed RPAGEs FE and FF
+0x2000
+
+RAM Banked Window
 0x1000
-0x4000 Fixed EPAGE FF
-Fixed RPAGEs FE and FF 0xc00
+Fixed EPAGE FF
+0xc00
 EEPROM Banked Window
-0x2000 0x800
+0x800
 Registers
 0x0
 
-Figure 5: Local 16-bit memory map of S12X by linkerscope. Green for �xed page areas and blue for paged windows.
+Figure 5: Local 16-bit memory map of S12X by linkerscope. Green for fixed page areas and blue for paged windows.
 
 There are not many examples of S12X architecture reversing available. Of course the seminal work of Miller and Valasek did include S12X reversing of a power assist steering module, and it did include uncovering the use of hardcoded passwords there for UDS seed-key exchange
 
-7
-
 ## Slide 8
 
-(the security access $27 service). But the ‘how’ of creating dumps of PFLASH, DFLASH, RAM and assembling it for a reverse engineering tool (e.g. IDA Pro as used by Miller and Valasek) are not available. The recent analysis by Pulse Security of a motorcycle ECU demonstrates a way to assemble an S12X target binary image for analysis in Ghidra before switching to hunting for numeric tables in Flash. Ghidra does not support the XGATE coprocessor, whereas IDA Pro does; therefore IDA Pro was selected for this analysis. The IDA Pro support team was kind enough to provide a code snippet of how PPAGE is modeled in the IDA linear address space model. It corresponds to how all of Ghidra, the HSW12 open source assembler, and the original S12X debugger, HiWave treat it: use PPAGE as the most signi�cant byte in a three-byte address (e.g. the gray boxes in Figure 6). The same is done for RPAGE and EPAGE. This causes IDA linear space collisions between EPAGE 0x10/0x13 and DFLASH global addresses. No workaround exists; users must be cautious if �rmware uses both. Because RPAGE and PPAGE windows are discontiguous in the 16-bit local space this does not cause collisions. This addressing scheme is very useful and will be used in the remainder of the paper (i.e. any three byte addresses other than global addresses imply the �rst byte is the page and the remaining bytes are the offset within it). The linear mapping scheme utilized—prepending PAGE indices to 16-bit offsets—results in unavoidable collisions between EPAGE 0x10/0x13 and the global DFLASH address space. Note that while RPAGE and PPAGE windows are discontiguous in the local 16-bit space, EPAGE mapping requires careful handling to avoid aliasing DFLASH globals. IDA also expects to be able to address the global memory space in the exact same address values in its linear memory map (the peach boxes in Figure 6); however, this is only used for instructions that do global memory space access.
+(the security access $27 service). But the ‘how’ of creating dumps of PFLASH, DFLASH, RAM and assembling it for a reverse engineering tool (e.g. IDA Pro as used by Miller and Valasek) are not available. The recent analysis by Pulse Security of a motorcycle ECU demonstrates a way to assemble an S12X target binary image for analysis in Ghidra before switching to hunting for numeric tables in Flash. Ghidra does not support the XGATE coprocessor, whereas IDA Pro does; therefore IDA Pro was selected for this analysis. The IDA Pro support team was kind enough to provide a code snippet of how PPAGE is modeled in the IDA linear address space model. It corresponds to how all of Ghidra, the HSW12 open source assembler, and the original S12X debugger, HiWave treat it: use PPAGE as the most significant byte in a three-byte address (e.g. the gray boxes in Figure 6). The same is done for RPAGE and EPAGE. This causes IDA linear space collisions between EPAGE 0x10/0x13 and DFLASH global addresses. No workaround exists; users must be cautious if firmware uses both. Because RPAGE and PPAGE windows are discontiguous in the 16-bit local space this does not cause collisions. This addressing scheme is very useful and will be used in the remainder of the paper (i.e. any three byte addresses other than global addresses imply the first byte is the page and the remaining bytes are the offset within it). The linear mapping scheme utilized—prepending PAGE indices to 16-bit offsets—results in unavoidable collisions between EPAGE 0x10/0x13 and the global DFLASH address space. Note that while RPAGE and PPAGE windows are discontiguous in the local 16-bit space, EPAGE mapping requires careful handling to avoid aliasing DFLASH globals. IDA also expects to be able to address the global memory space in the exact same address values in its linear memory map (the peach boxes in Figure 6); however, this is only used for instructions that do global memory space access.
 
 Total IDA Linear
+
 PPAGE FF
 0xff8000
 ...
@@ -252,73 +243,74 @@ PPAGE FD
 0xfd8000
 ...
 PPAGE E1
-Global PPAGE FF
 0xe18000
+PPAGE E0
+0xe08000
+
+Global PPAGE FF
 0x7fc000
 ...
-PPAGE E0
-Global PPAGE FD 0xe08000
+Global PPAGE FD
 0x7f4000
 ...
 Global PPAGE E1
 0x784000
-Fixed PPAGE FF
-0xc000
 Global PPAGE E0
 0x780000
+
+Fixed PPAGE FF
+0xc000
 Fixed PPAGE FD
 0x4000
 
 Figure 6: Illustration of the copies of PFLASH placed in the IDA Linear Address space memory map for some success in static analysis.
 
-We used IDA Pro Python scripts to map PFLASH to global addresses and copy it to high-byte and �xed PPAGE locations in the 16-bit local space (Figure 6). We then created an entrypoint for every interrupt vector in 0xFF80 - 0xFFFF, including reset, CAN, Programmable Interrupt Timer (PIT), Serial Communications Interface (SCI), and all other peripherals with an interrupt. IDA Pro analysis results are shown in Figure 4, with function extents replacing the prolog esti-
-
-8
+We used IDA Pro Python scripts to map PFLASH to global addresses and copy it to high-byte and fixed PPAGE locations in the 16-bit local space (Figure 6). We then created an entrypoint for every interrupt vector in 0xFF80 - 0xFFFF, including reset, CAN, Programmable Interrupt Timer (PIT), Serial Communications Interface (SCI), and all other peripherals with an interrupt. IDA Pro analysis results are shown in Figure 4, with function extents replacing the prolog esti-
 
 ## Slide 9
 
-#### mates used previously in Figure 3.
+mates used previously in Figure 3.
 
 IVBR=0xF7, Basic Analysis - 2ec80
-Byte Differences "Drive Block"  "Drive Block"
-Function Extents  1 of 2 Skipped by ID9363  2 of 2
-PPAGE Regions (16KiB)
+
+Byte Differences | Function Extents | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 2ec80_after
 2ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-File
 
-Figure 7: Visualization of what the IDA Pro auto-analysis achieved after creating entrypoints for each of the handlers in an interrupt vector table given by IVBR=0xF7. As compared to Figure 4 this now shows some functions in the ‘application’ region; however, they represent a small fraction of the �rmware’s total application code, the upper bound of which is given by the byte differences. Similar to the prologs in Figure 3 this now shows correlated, left-shifted function extents which (again) suggest code deletion by the update; however, the low overall coverage limits our con�dence.
+Figure 7: Visualization of what the IDA Pro auto-analysis achieved after creating entrypoints for each of the handlers in an interrupt vector table given by IVBR=0xF7. As compared to Figure 4 this now shows some functions in the ‘application’ region; however, they represent a small fraction of the firmware’s total application code, the upper bound of which is given by the byte differences. Similar to the prologs in Figure 3 this now shows correlated, left-shifted function extents which (again) suggest code deletion by the update; however, the low overall coverage limits our confidence.
 
-Analysis proceeds past three-byte calls, con�rming correct PPAGE installation. While analysis reaches the late bootloader, it fails to reach application code. Starting from the reset vector often yields incomplete coverage due to unresolved data-dependent jump or call targets in many �rmwares and the EC80 is no exception.
+Analysis proceeds past three-byte calls, confirming correct PPAGE installation. While analysis reaches the late bootloader, it fails to reach application code. Starting from the reset vector often yields incomplete coverage due to unresolved data-dependent jump or call targets in many firmwares and the EC80 is no exception.
 
 We focus on J2497 processing changes, so understanding the entire EC80 bootloader is unnecessary. The EC80 receives J2497 data via an Intellon SSCP485 chip connected to the S12X SCI2 peripheral. However, the SCI2 interrupt vector of the default table points to a dummy function, and no discovered functions reference SCI2 data registers.
 
 ### **J2497 Reception Architecture of EC80**
 
-The reception is driven by events from the SCI2 and PIT hardware peripherals as illustrated in Figure 8, PIT being used to manage timeouts. SCI2 is a UART that supports several interrupt event types and the receiver state machine makes use of ‘data ready’ (RDRF), IDLE, and edge (RXEDGIF) events. The entire state machine is distributed over several functions which all access address 0x3C52, a set of control bit�elds, summarized below. The table lists all control bits of the state tracked at address 0x3C52 and its client functions.
+The reception is driven by events from the SCI2 and PIT hardware peripherals as illustrated in Figure 8, PIT being used to manage timeouts. SCI2 is a UART that supports several interrupt event types and the receiver state machine makes use of ‘data ready’ (RDRF), IDLE, and edge (RXEDGIF) events. The entire state machine is distributed over several functions which all access address 0x3C52, a set of control bitfields, summarized below. The table lists all control bits of the state tracked at address 0x3C52 and its client functions.
 
 |Bit Mask|Control Name|Function Address(es)|
 |---|---|---|
 |0x01|**PENDING**|sub_EBBE13|
 |0x02|**IGNORE_RX**|sub_EBBB47|
-|0x04|**TIMEOUT**|sub_EBBB47,sub_EBBE13,
-sub_EC80B5,sub_EBBEDB|
-|0x08|**BUF_DONE**|sub_EBBB47,sub_EBBE13,
-sub_EC80B5|
-|0x10|**BUF_FULL**|sub_EBBB47,sub_EC803E|
-|0x20|**EDGE_TRIG**|sub_EC80D0,sub_EC80F8,
-sub_EBBEDB|
-
-9
+|0x04|**TIMEOUT**|sub_EBBB47, sub_EBBE13, sub_EC80B5, sub_EBBEDB|
+|0x08|**BUF_DONE**|sub_EBBB47, sub_EBBE13, sub_EC80B5|
+|0x10|**BUF_FULL**|sub_EBBB47, sub_EC803E|
+|0x20|**EDGE_TRIG**|sub_EC80D0, sub_EC80F8, sub_EBBEDB|
 
 ## Slide 10
 
-The state machine maintains a running checksum on every byte received and will mark a complete frame on an IDLE event if the checksum is correct and the frame length is between 3 and 21 (inclusive), matching the J1708 speci�cation’s “Total message length, including MID and checksum, shall not exceed 21 characters.” The state machine injects the length of the received frame minus 1 into the receive buffer 0x3BF5 at the byte preceding the current received frame (e.g., index 0 for the �rst frame) and increments the frame counter 0x3BF4. Further frames are stacked in this receive buffer for First-In, First Out (FIFO) processing outside the interrupt context up to a maximum size of 0x54 bytes (combined data and injected frame lengths).
+The state machine maintains a running checksum on every byte received and will mark a complete frame on an IDLE event if the checksum is correct and the frame length is between 3 and 21 (inclusive), matching the J1708 specification’s “Total message length, including MID and checksum, shall not exceed 21 characters.” The state machine injects the length of the received frame minus 1 into the receive buffer 0x3BF5 at the byte preceding the current received frame (e.g., index 0 for the first frame) and increments the frame counter 0x3BF4. Further frames are stacked in this receive buffer for First-In, First Out (FIFO) processing outside the interrupt context up to a maximum size of 0x54 bytes (combined data and injected frame lengths).
 
-There are two reads of the SCI2 Data Register Low (DRL), the �rst (in the ISR) is a necessary hardware ‘handshake’ to satisfy the peripheral’s requirement of two reads to clear its state, the real data read occurs within the state machine in sub_F1AFA7; it reads the data and catalogs all the errors which are detected by any given UART peripheral – but only the data byte is consumed by the callers, all error information is discarded. This means that all error detection is deferred to the correct checksum calculation described previously.
+There are two reads of the SCI2 Data Register Low (DRL), the first (in the ISR) is a necessary hardware ‘handshake’ to satisfy the peripheral’s requirement of two reads to clear its state, the real data read occurs within the state machine in sub_F1AFA7; it reads the data and catalogs all the errors which are detected by any given UART peripheral – but only the data byte is consumed by the callers, all error information is discarded. This means that all error detection is deferred to the correct checksum calculation described previously.
 
 The J2497 frame reception is realized by a state machine driven by the events as described above. As detailed in Section 6, the dataflow is straightforward: frames are appended to a receive buffer at 0x3BF5, and completion is signaled via the frame counter at 0x3BF4 (see Figure 9).
 
@@ -326,130 +318,194 @@ The J2497 frame reception is realized by a state machine driven by the events as
 
 Since static analysis failed to reveal SCI2 access, we used the unlocked BDM for dynamic analysis.
 
-The debugger software we had access to is HiWave. Breakpoints on SCI2 register reads were never triggered. We found that breakpoints cease functioning after the late bootloader entrypoint (0xFBADB1). The cause is unknown; possibilities include BGND instruction execution or resets triggered by the secondary (‘left’) processor. Attempts to reset both MCUs in tandem failed. Despite evidence of debug-aware �rmware (e.g. watchdog feeding after STOP), we abandoned further investigation to focus on the �rmware patch.
+The debugger software we had access to is HiWave. Breakpoints on SCI2 register reads were never triggered. We found that breakpoints cease functioning after the late bootloader entrypoint (0xFBADB1). The cause is unknown; possibilities include BGND instruction execution or resets triggered by the secondary (‘left’) processor. Attempts to reset both MCUs in tandem failed. Despite evidence of debug-aware firmware (e.g. watchdog feeding after STOP), we abandoned further investigation to focus on the firmware patch.
 
-BDM allows reading S12X address spaces without interrupting execution (mostly; BDM accesses global address space bypassing the MPU. It is non-intrusive only during free bus cycles, otherwise stealing cycles or stalling the CPU). We used HiWave’s scripting interface to create hexdumps and convert them to .s19 �les. This allowed us to read ‘live’ RAM and register contents without breakpoints and load them into IDA.
+BDM allows reading S12X address spaces without interrupting execution (mostly; BDM accesses global address space bypassing the MPU. It is non-intrusive only during free bus cycles, otherwise stealing cycles or stalling the CPU). We used HiWave’s scripting interface to create hexdumps and convert them to .s19 files. This allowed us to read ‘live’ RAM and register contents without breakpoints and load them into IDA.
 
 NOTE: you must set the hiwave command window’s cache limit to unlimited before running the script/commands below:
 
-DMM CACHINGOFF DMM WRITEREADBACKOFF HCS12X_MAP4000 RAM db 0x4000'L..0x7FFF'L db 0x0f8000'G..0x0FBFFF'G
-
-10
+```
+DMM CACHINGOFF
+DMM WRITEREADBACKOFF
+HCS12X_MAP4000 RAM
+db 0x4000'L..0x7FFF'L
+db 0x0f8000'G..0x0FBFFF'G
+```
 
 ## Slide 11
 
 Hardware Registers
+
+SCI2_ASR1 (Alt Status Register 1)
+SCI2_DRL (Data Register Low)
+SCI2 Interrupt
+SCI2_SR1 (Status Register 1)
+
 PIT Hardware
-SCI2_ASR1 SCI2_DRL SCI2 Interrupt SCI2_SR1 Channel 1 Timer
-(Alt Status Register 1) (Data Register Low) (Status Register 1)
-Read Status Handshake Read Status Read Status
+Channel 1 Timer
+
+Read Status | Handshake | Read Status | Read Status
+
 IVBR=0xF7 Interrupt Context
 sub_C12B (SCI2 ISR/Handler)
+
 RXEDGIF Branch
-RDRF Branch IDLE Branch
-Poll ASR1 (AMAP=1) Poll SR1 Poll SR1 sub_C93F
-If RXEDGIF=1 &  If RDRF=1 & RIE=1 If IDLE=1 & ILIE=1 (PIT Ch1 Handler)
-RXEDGIE=1
-via sub_F1B001 & via sub_F1B01B & Timeout
-Read Data sub_EC80EF sub_EC80D0 via sub_EC80DE
-Arg: 0x00 (RX) Arg: 0x01 (Idle) Arg: 0x02 (Timeout)
+Poll ASR1 (AMAP=1)
+If RXEDGIF=1 & RXEDGIE=1
+
+RDRF Branch
+Poll SR1
+If RDRF=1 & RIE=1
+
+IDLE Branch
+Poll SR1
+If IDLE=1 & ILIE=1
+
+sub_C93F
+(PIT Ch1 Handler)
+
+Read Data
+
+via sub_F1B001 & sub_EC80EF
+Arg: 0x00 (RX)
+
+via sub_F1B01B & sub_EC80D0
+Arg: 0x01 (Idle)
+
+Timeout
+via sub_EC80DE
+Arg: 0x02 (Timeout)
+
 sub_EBBB47
 (Main State Machine)
 Handles: RX, Idle, Timeout
-via  sub_EC8000
-via sub_F1B035 &
+
+via sub_EC8000
+
+via sub_F1B035 & sub_EC8106
+
 Frame/Timeout
-sub_EC8106
+
 sub_F1AFA7
+(SCIX Data Read and Error Checking)
+
 sub_EC81C7
-(SCIX Data Read and
 (Disable PIT & Call)
-Error Checking)
+
 Byte Received
 Pass Byte (B Reg)
-sub_F3A2F1 Increment on
-(Check Counter & Call) Frame Complete
-sub_EFBC09 sub_EC803E
-(Stateful UART data parser) (Append Rx Buf)
-Write Write Byte
+
+Increment on Frame Complete
+
+sub_F3A2F1
+(Check Counter & Call)
+
+sub_EFBC09
+(Stateful UART data parser)
+
+sub_EC803E
+(Append Rx Buf)
+
+Write | Write Byte
+
 Local Memory
 RAM
+
 Parser State Data
-Addr: 0x476E (parsing  FIFO Receive Buffer Frame Counter
-progress) Addr: 0x3BF5 Addr: 0x3BF4
-Addr: 0x476F (buffer index) (J2497 Frame Data) (Semaphor)
+Addr: 0x476E (parsing progress)
+Addr: 0x476F (buffer index)
 Addr: 0x4770 (status byte)
+
+FIFO Receive Buffer
+Addr: 0x3BF5
+(J2497 Frame Data)
+
+Frame Counter
+Addr: 0x3BF4
+(Semaphor)
 
 Figure 8: Dataflow diagram visualization of the handling of J2497 UART peripheral events: edge, idle, data and also of PIT peripheral events used for timeouts.
 
-11
-
 ## Slide 12
 
-Polling registers revealed that the application uses an IVBR of 0xF7, unlike the initial bootloader’s default 0xFF. The S12X has the capability to switch the location of its interrupt vector table (except for Power-on, Clock Monitor, and COP Watchdog reset vectors); although static analysis at the stage shown in Figure 4 missed the IVBR assignment, we had con�rmed the application uses an interrupt vector table at 0xF710-0xF7F9.
+Polling registers revealed that the application uses an IVBR of 0xF7, unlike the initial bootloader’s default 0xFF. The S12X has the capability to switch the location of its interrupt vector table (except for Power-on, Clock Monitor, and COP Watchdog reset vectors); although static analysis at the stage shown in Figure 4 missed the IVBR assignment, we had confirmed the application uses an interrupt vector table at 0xF710-0xF7F9.
 
 We updated the IDA Pro database with RAM dumps and entrypoints for the new vectors (Figure 7). Analysis still covers much of the late bootloader, as the application frequently calls back into it (e.g., for programming mode).
 
-We can now access application interrupt handlers. Target 2ec80 supports XGATE, PIT, CAN0, CAN4, Enhanced Capture Timer (ECT), SPI1, and SCI2. We analyzed XGATE code by mapping PFLASH and RAM in IDA. Analysis of the XGATE vector table (0xFF8500) reveals that only vectors 70-77 (ECT Channels) are populated with valid handlers in this target (2ec80); all others point to a dummy RTS stub (0x8584). This implies the XGATE is used exclusively for high-precision input capture/output compare offloading. It was irrelevant to J2497 reception, so analysis of XGATE ceased. Ghidra would have suf�ced here, but we had at this point invested in IDA-based automation. We focus solely on the ‘right’ MCU’s code changes. The SCI2 ISR, sub_C12B, calls functions where IDA Pro analysis fails due to lack of ‘register tracking’ for S12X. For now, we manually resolved data-dependent call instructions (e.g., call [-$2662,y]) that IDA failed to handle. We also manually resolved jump tables, which IDA Pro does not support on S12X.
+We can now access application interrupt handlers. Target 2ec80 supports XGATE, PIT, CAN0, CAN4, Enhanced Capture Timer (ECT), SPI1, and SCI2. We analyzed XGATE code by mapping PFLASH and RAM in IDA. Analysis of the XGATE vector table (0xFF8500) reveals that only vectors 70-77 (ECT Channels) are populated with valid handlers in this target (2ec80); all others point to a dummy RTS stub (0x8584). This implies the XGATE is used exclusively for high-precision input capture/output compare offloading. It was irrelevant to J2497 reception, so analysis of XGATE ceased. Ghidra would have sufficed here, but we had at this point invested in IDA-based automation. We focus solely on the ‘right’ MCU’s code changes. The SCI2 ISR, sub_C12B, calls functions where IDA Pro analysis fails due to lack of ‘register tracking’ for S12X. For now, we manually resolved data-dependent call instructions (e.g., call [-$2662,y]) that IDA failed to handle. We also manually resolved jump tables, which IDA Pro does not support on S12X.
 
-The �rmware exhibits preparation for debug management: every STOP opcode (0x183E) identi�ed is immediately followed by a ‘safety net’—typically a SEI followed by an in�nite loop ‘watchdog feedfer’ (or sometimes a branch back to the reset vector.) This ensures that if the MCU is con�gured to ignore STOP instructions the ECU enters a deterministic fail-safe state rather than executing arbitrary memory.
+The firmware exhibits preparation for debug management: every STOP opcode (0x183E) identified is immediately followed by a ‘safety net’—typically a SEI followed by an infinite loop ‘watchdog feedfer’ (or sometimes a branch back to the reset vector.) This ensures that if the MCU is configured to ignore STOP instructions the ECU enters a deterministic fail-safe state rather than executing arbitrary memory.
 
-Then IDA Pro analysis revealed the application’s J2497 message reception operation. One �rmware change is observable now but will be detailed in Section _Changes Made in Patching_ . The details of the receiver architecture are captured above; but the dataflow of received packets from the SCI2 peripheral to consumers is simpler: frames are built by appending to a receive buffer at 0x3BF5 and frame reception is signaled with the frame counter / semaphore at 0x3BF4. Figure 9 illustrates this dataflow. This IDA analysis identi�ed only the ‘publish’ side. No consumers of the frame counter or receive buffer were found. Firmware typically splits interrupt handling into a lightweight top-half and a main-thread bottom-half to minimize interrupt context cycles.
+Then IDA Pro analysis revealed the application’s J2497 message reception operation. One firmware change is observable now but will be detailed in Section _Changes Made in Patching_. The details of the receiver architecture are captured above; but the dataflow of received packets from the SCI2 peripheral to consumers is simpler: frames are built by appending to a receive buffer at 0x3BF5 and frame reception is signaled with the frame counter / semaphore at 0x3BF4. Figure 9 illustrates this dataflow. This IDA analysis identified only the ‘publish’ side. No consumers of the frame counter or receive buffer were found. Firmware typically splits interrupt handling into a lightweight top-half and a main-thread bottom-half to minimize interrupt context cycles.
 
 ### **J1587 PID Processing**
 
-The supported PIDs are listed in Appendix A. It lists J1587 PIDs supported by the before update �rmware. Here, ‘mm’ refers to any MID value except 0A, 0B, or 57, which are handled earlier in processing. Note that ‘supported’ here means that the target ECU will parse incoming payloads of these PIDs; in all cases on J2497 there is no response emitted (whereas there might be on the ECU’s J1708 interface).
+The supported PIDs are listed in Appendix A. It lists J1587 PIDs supported by the before update firmware. Here, ‘mm’ refers to any MID value except 0A, 0B, or 57, which are handled earlier in processing. Note that ‘supported’ here means that the target ECU will parse incoming payloads of these PIDs; in all cases on J2497 there is no response emitted (whereas there might be on the ECU’s J1708 interface).
 
-The PID (number) is the �rst byte of the PID payload and this is used to match a handler in PID handler tables at 0xD9DD (see below) along with a second-byte match (which can be 0xFF for
-
-12
+The PID (number) is the first byte of the PID payload and this is used to match a handler in PID handler tables at 0xD9DD (see below) along with a second-byte match (which can be 0xFF for
 
 ## Slide 13
 
 Interrupt Context
+
 sub_C12B
 (SCI2 ISR/Handler)
+
 via various
+
 sub_EBBB47
 (Main State Machine)
 Handles: RX, Idle, Timeout
+
+via sub_EC8000
+
 Byte Received
-via  sub_EC8000
 Pass Byte (B Reg)
+
+Increment on
+Frame Complete
+
 sub_F1AFA7
-sub_EC803E Increment on
 (SCI2 Data Read and
-(Append Rx Buf) Frame Complete
 Error Checking)
-Read Data Write Byte
-Hardware Registers Local Memory - RAM
-FIFO Receive Buffer Frame Counter
+
+sub_EC803E
+(Append Rx Buf)
+
+Read Data | Write Byte
+
+Hardware Registers
+
 SCI2_DRL
-Addr: 0x3BF5 Addr: 0x3BF4
 (Data Register Low)
-(J2497 Frame Data) (Semaphor)
+
+Local Memory - RAM
+
+FIFO Receive Buffer
+Addr: 0x3BF5
+(J2497 Frame Data)
+
+Frame Counter
+Addr: 0x3BF4
+(Semaphor)
 
 Figure 9: Diagram focusing on the dataflow of received J2497 data in the 2ec80 target. See Figure 8 for the details which are omitted here.
 
-13
-
 ## Slide 14
 
-a wildcard). The J1587 command dispatcher is implemented as a nested table structure. The root table handles standard MIDs, while entries for 0x00 and 0x80 point to sub-tables to handle J1587 Page 1 and Page 2 expansion PIDs (e.g., 0xFE, 0xFF). This table is accessed via a pointer in a ‘context structure’ (see below) and the PID handlers row can set a nested-context structure for any matched PID and second-byte match (e.g. this is how 0xFE data link escapes are handled in the �rmware).
+a wildcard). The J1587 command dispatcher is implemented as a nested table structure. The root table handles standard MIDs, while entries for 0x00 and 0x80 point to sub-tables to handle J1587 Page 1 and Page 2 expansion PIDs (e.g., 0xFE, 0xFF). This table is accessed via a pointer in a ‘context structure’ (see below) and the PID handlers row can set a nested-context structure for any matched PID and second-byte match (e.g. this is how 0xFE data link escapes are handled in the firmware).
 
 The table below describes the PID Handler data structure.
 
 |Offset|Size|Description|
 |---|---|---|
-|0x00|1|Primary identi�er for the PID.|
-|0x01|1|Secondary identi�er (0xFF indicates a wildcard/any).|
+|0x00|1|Primary identifier for the PID.|
+|0x01|1|Secondary identifier (0xFF indicates a wildcard/any).|
 |0x02|3|24-bit pointer to the handler function.|
 |0x05|1|Unused byte.|
-|0x06|2|16-bit word. If non-zero, it is treated as a pointer to a nested Context
-Structure (see below) for recursive matching and processing of the next
-bytes in the payload.|
+|0x06|2|16-bit word. If non-zero, it is treated as a pointer to a nested Context Structure (see below) for recursive matching and processing of the next bytes in the payload.|
 
-The function, sub_F096F9, also looks up periodic processing functions after the PIDs are processed. It uses an assumption of the rate it will be called by the parent functions and a perdevice count to �re periodic processing calls at rate and phase con�gured in the table linked from offset 0xB in the context structure. The call rate is 20Hz because sub_EEB98 contains an implementation of the J2497 lamp hysteresis speci�cation in state variables word_FD126F and flag 0x10 of byte_4466; the values taken by word_FD126F only match the speci�cation if the function is called at 20Hz. It also follows from this that the non-LAMP PID processing only consumes one J2497 frame per 50ms.
+The function, sub_F096F9, also looks up periodic processing functions after the PIDs are processed. It uses an assumption of the rate it will be called by the parent functions and a per-device count to fire periodic processing calls at rate and phase configured in the table linked from offset 0xB in the context structure. The call rate is 20Hz because sub_EEB98 contains an implementation of the J2497 lamp hysteresis specification in state variables word_FD126F and flag 0x10 of byte_4466; the values taken by word_FD126F only match the specification if the function is called at 20Hz. It also follows from this that the non-LAMP PID processing only consumes one J2497 frame per 50ms.
 
 The table below describes the Post Processing data structure.
 
@@ -460,11 +516,9 @@ The table below describes the Post Processing data structure.
 |0x04|3|24-bit pointer to the handler function.|
 |0x07|1|Unused byte.|
 
-The context structure (detailed in the table below) holds pointers to the PID handlers and postprocessing tables and total sizes (the post-processing entries are zero in the nested context structures). It also holds a limit for the clock-counter in post-processing (also unused in nested contexts) and a default handler when no PID is matched (implemented as a null subroutine in the �rmwares).
+The context structure (detailed in the table below) holds pointers to the PID handlers and post-processing tables and total sizes (the post-processing entries are zero in the nested context structures). It also holds a limit for the clock-counter in post-processing (also unused in nested contexts) and a default handler when no PID is matched (implemented as a null subroutine in the firmwares).
 
 The table below describes the Context (and nested context) data structure.
-
-14
 
 ## Slide 15
 
@@ -478,307 +532,846 @@ The table below describes the Context (and nested context) data structure.
 |0x0A|1|Number of entries in the PID Table.|
 |0x0B|1|Number of entries in the Post Processing Table.|
 
-The function pointers in these structures were already picked up by the automated function pointer discovery discussed in the next section ( _Binary Dif�ng_ ). Several pointed at the same address but there were unique and non-trivial handlers. We wrote a script to walk the table and name the functions with the information gleaned from the table context e.g. “pid_FF_any_ default_OR_pid_FE_88_default_OR_pid_80_any_default_OR_pid_00_any_default_OR_ nullsub_2_OR_pid_default_handler .” See below for the script used. The recursive tables were analyzed in all three before-update �rmwares and the PIDs supported were found to be the same. The supported PIDs are in the table above. Note that ‘supported’ here means that the target ECU will parse incoming payloads of these PIDs; in all cases on J2497 there is no response emitted (whereas there might be on the ECU’s J1708 interface).
+The function pointers in these structures were already picked up by the automated function pointer discovery discussed in the next section (_Binary Diffing_). Several pointed at the same address but there were unique and non-trivial handlers. We wrote a script to walk the table and name the functions with the information gleaned from the table context e.g. “pid_FF_any_default_OR_pid_FE_88_default_OR_pid_80_any_default_OR_pid_00_any_default_OR_nullsub_2_OR_pid_default_handler.” See below for the script used. The recursive tables were analyzed in all three before-update firmwares and the PIDs supported were found to be the same. The supported PIDs are in the table above. Note that ‘supported’ here means that the target ECU will parse incoming payloads of these PIDs; in all cases on J2497 there is no response emitted (whereas there might be on the ECU’s J1708 interface).
 
-_# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc. # # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and associated documentation files (the "Software"), to deal # in the Software without restriction, including without limitation the rights # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell # copies of the Software, and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: # # The above copyright notice and this permission notice shall be included in all # copies or substantial portions of the Software. # # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE # SOFTWARE._
+```python
+# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-import sys import idc import ida_lines import ida_offset import idaapi import ida_xref import ida_funcs **def** make_comment(ea, comment): idc.set_cmt(ea, comment, 0)
+import sys
+import idc
+import ida_lines
+import ida_offset
+import idaapi
+import ida_xref
+import ida_funcs
 
-15
+def make_comment(ea, comment):
+    idc.set_cmt(ea, comment, 0)
+```
 
 ## Slide 16
 
-**def** make_name(ea, name): name **=** name.replace(" ", "_").replace(".", "_") idc.set_name(ea, name, idc.SN_NOWARN) **def** format_24bit_pointer(ea): idc.create_word(ea) idc.create_byte(ea **+** 2) addr_part **=** idc.get_wide_word(ea) page_part **=** idc.get_wide_byte(ea **+** 2) func_ea **=** (page_part **<<** 16) **|** addr_part ida_xref.add_cref(ea, func_ea, ida_xref.fl_U) **return** func_ea, "IDA Linear: 0x **{:02X}{:04X}** ".format(page_part, addr_part) **def** ensure_function(ea): **if** ea **==** 0 **or** ea **==** 0xFFFFFF **or not** idaapi.is_loaded(ea): **return if not** idc.is_code(idc.get_full_flags(ea)): idc.del_items(ea, 1, idc.DELIT_SIMPLE) idc.create_insn(ea) **if not** idc.get_func_name(ea): idc.add_func(ea) **class** AnalysisReport: **def __init__** (self): self.pid_handlers **=** set() self.post_handlers **=** set() **def** add_pid_handler(self, ea): self.pid_handlers.add(ea) **def** add_post_handler(self, ea): self.post_handlers.add(ea) **def** print_summary(self): print("\n--- Analysis Summary ---") **for** title, handlers **in** [("PID Handlers", self.pid_handlers), ("Post-Processing Handlers", ↪ self.post_handlers)]: **if** handlers: print(f"\n--- **{** title **}** ---") **for** name **in** sorted(idc.get_name(ea) **or** f"sub_ **{** ea **:X}** " **for** ea **in** handlers): ↪ print(name) print("\n--- End of Summary ---") **def** make_unique_name(ea, base_name): base_name **=** base_name.replace(" ", "_").replace(".", "_") existing_name **=** idc.get_name(ea, idc.GN_VISIBLE) **if not** existing_name **or** existing_name.startswith("sub_") **or** existing_name.startswith("loc_"): name_to_try, counter **=** base_name, 1 **while** True: existing_ea **=** idc.get_name_ea_simple(name_to_try) **if** existing_ea **==** idc.BADADDR **or** existing_ea **==** ea: **break** name_to_try **=** f" **{** base_name **}** _ **{** counter **}** " counter **+=** 1 make_name(ea, name_to_try) **return** name_to_try **else** : suffix **=** next((s **for** s **in** ["_sub_dispatch_handler", "_handler"] **if** base_name.endswith(s) ↪ **and** existing_name.endswith(s)), "") base_part **=** base_name[: **-** len(suffix)] **if** suffix **else** base_name existing_part **=** existing_name[: **-** len(suffix)] **if** suffix **else** existing_name **if** base_part **in** existing_part.split("_OR_"): **return** existing_name new_name **=** f" **{** base_part **}** _OR_ **{** existing_part **}{** suffix **}** " **if** 'default' **in** existing_part **else** ↪ f" **{** existing_part **}** _OR_ **{** base_part **}{** suffix **}** " make_name(ea, new_name) **return** new_name
+```python
+def make_name(ea, name):
+    name = name.replace(" ", "_").replace(".", "_")
+    idc.set_name(ea, name, idc.SN_NOWARN)
 
-16
+def format_24bit_pointer(ea):
+    idc.create_word(ea)
+    idc.create_byte(ea + 2)
+    addr_part = idc.get_wide_word(ea)
+    page_part = idc.get_wide_byte(ea + 2)
+    func_ea = (page_part << 16) | addr_part
+    ida_xref.add_cref(ea, func_ea, ida_xref.fl_U)
+    return func_ea, "IDA Linear: 0x{:02X}{:04X}".format(page_part, addr_part)
+
+def ensure_function(ea):
+    if ea == 0 or ea == 0xFFFFFF or not idaapi.is_loaded(ea): return
+    if not idc.is_code(idc.get_full_flags(ea)):
+        idc.del_items(ea, 1, idc.DELIT_SIMPLE)
+        idc.create_insn(ea)
+    if not idc.get_func_name(ea): idc.add_func(ea)
+
+class AnalysisReport:
+    def __init__(self):
+        self.pid_handlers = set()
+        self.post_handlers = set()
+    def add_pid_handler(self, ea): self.pid_handlers.add(ea)
+    def add_post_handler(self, ea): self.post_handlers.add(ea)
+    def print_summary(self):
+        print("\n--- Analysis Summary ---")
+        for title, handlers in [("PID Handlers", self.pid_handlers), ("Post-Processing Handlers",
+     ↪  self.post_handlers)]:
+            if handlers:
+                print(f"\n--- {title} ---")
+                for name in sorted(idc.get_name(ea) or f"sub_{ea:X}" for ea in handlers):
+                ↪  print(name)
+        print("\n--- End of Summary ---")
+
+def make_unique_name(ea, base_name):
+    base_name = base_name.replace(" ", "_").replace(".", "_")
+    existing_name = idc.get_name(ea, idc.GN_VISIBLE)
+    if not existing_name or existing_name.startswith("sub_") or existing_name.startswith("loc_"):
+        name_to_try, counter = base_name, 1
+        while True:
+            existing_ea = idc.get_name_ea_simple(name_to_try)
+            if existing_ea == idc.BADADDR or existing_ea == ea: break
+            name_to_try = f"{base_name}_{counter}"
+            counter += 1
+        make_name(ea, name_to_try)
+        return name_to_try
+    else:
+        suffix = next((s for s in ["_sub_dispatch_handler", "_handler"] if base_name.endswith(s)
+     ↪  and existing_name.endswith(s)), "")
+        base_part = base_name[:-len(suffix)] if suffix else base_name
+        existing_part = existing_name[:-len(suffix)] if suffix else existing_name
+        if base_part in existing_part.split("_OR_"): return existing_name
+        new_name = f"{base_part}_OR_{existing_part}{suffix}" if 'default' in existing_part else
+     ↪  f"{existing_part}_OR_{base_part}{suffix}"
+        make_name(ea, new_name)
+        return new_name
+```
 
 ## Slide 17
 
-**def** add_pid_handler_comments(func_ea): cmt **=** "Arg1: Nested Table Address (or zero if n/a)\nArg3: Pointer to Payload + Len Structure" current_cmt **=** idc.get_func_cmt(func_ea, 1) **if not** current_cmt: idc.set_func_cmt(func_ea, cmt, 1) **elif** "Arg1: Nested Table Address" **not in** current_cmt: idc.set_func_cmt(func_ea, ↪ f" **{** current_cmt **}** \n **{** cmt **}** ", 1)
+```python
+def add_pid_handler_comments(func_ea):
+    cmt = "Arg1: Nested Table Address (or zero if n/a)\nArg3: Pointer to Payload + Len Structure"
+    current_cmt = idc.get_func_cmt(func_ea, 1)
+    if not current_cmt: idc.set_func_cmt(func_ea, cmt, 1)
+    elif "Arg1: Nested Table Address" not in current_cmt: idc.set_func_cmt(func_ea,
+     ↪  f"{current_cmt}\n{cmt}", 1)
 
-**def** process_pid_table(table_base, count, name_prefix **=** "", visited **=** None, report **=** None): print(f"Processing PID Table at 0x **{** table_base **:X}** (Count: **{** count **}** )") ENTRY_SIZE **=** 8 **for** i **in** range(count): entry_ea **=** table_base **+** (i ***** ENTRY_SIZE) idc.del_items(entry_ea, idc.DELIT_SIMPLE, ENTRY_SIZE) idc.create_byte(entry_ea) ida_lines.del_extra_cmt(entry_ea, ida_lines.E_PREV) ida_lines.add_extra_cmt(entry_ea, True, "-" ***** 50) pid_key **=** idc.get_wide_byte(entry_ea) make_comment(entry_ea, f"PID Key: 0x **{** pid_key **:02X}** ") idc.create_byte(entry_ea **+** 1) sub_key **=** idc.get_wide_byte(entry_ea **+** 1) make_comment(entry_ea **+** 1, f"Sub-PID: **{** 'Wildcard' **if** sub_key **==** 0xFF **else** ↪ f'0x **{** sub_key **:02X}** ' **}** ") func_ptr_ea **=** entry_ea **+** 2 func_target, global_cmt **=** format_24bit_pointer(func_ptr_ea) idc.create_byte(entry_ea **+** 5) arg_ea **=** entry_ea **+** 6 idc.create_word(arg_ea) arg_val **=** idc.get_wide_word(arg_ea) sub_str **=** 'any' **if** sub_key **==** 0xFF **else** f' **{** sub_key **:02X}** ' prefix_for_join **=** name_prefix[: **-** 4] **if** name_prefix.endswith("_any") **else** name_prefix handler_name_base **=** f" **{** prefix_for_join **}** _ **{** pid_key **:02X}** _ **{** sub_str **}** " **if** name_prefix **else** ↪ f"pid_ **{** pid_key **:02X}** _ **{** sub_str **}** " base_func_name **=** f" **{** handler_name_base **}** _sub_dispatch_handler" **if** arg_val **!=** 0 **else** ↪ f" **{** handler_name_base **}** _handler" ensure_function(func_target) final_func_name **=** make_unique_name(func_target, base_func_name) **if** report: report.add_pid_handler(func_target) add_pid_handler_comments(func_target) make_comment(func_ptr_ea, f" **{** global_cmt **}** -> **{** final_func_name **}** ") **if** arg_val **!=** 0: make_comment(arg_ea, f"Nested Context: 0x **{** arg_val **:04X}** ") ida_offset.op_plain_offset(arg_ea, 0, 0) analyze_pid_processing(arg_val, handler_name_base, visited, report)
+def process_pid_table(table_base, count, name_prefix="", visited=None, report=None):
+    print(f"Processing PID Table at 0x{table_base:X} (Count: {count})")
+    ENTRY_SIZE = 8
+    for i in range(count):
+        entry_ea = table_base + (i * ENTRY_SIZE)
+        idc.del_items(entry_ea, idc.DELIT_SIMPLE, ENTRY_SIZE)
+        idc.create_byte(entry_ea)
+        ida_lines.del_extra_cmt(entry_ea, ida_lines.E_PREV)
+        ida_lines.add_extra_cmt(entry_ea, True, "-" * 50)
 
-**def** process_post_table(table_base, count, name_prefix **=** "", report **=** None): print(f"Processing Post Processing Table at 0x **{** table_base **:X}** (Count: **{** count **}** )") ENTRY_SIZE **=** 8 **for** i **in** range(count): entry_ea **=** table_base **+** (i ***** ENTRY_SIZE) idc.del_items(entry_ea, idc.DELIT_SIMPLE, ENTRY_SIZE) idc.create_word(entry_ea) ida_lines.del_extra_cmt(entry_ea, ida_lines.E_PREV) ida_lines.add_extra_cmt(entry_ea, True, "-" ***** 50)
+        pid_key = idc.get_wide_byte(entry_ea)
+        make_comment(entry_ea, f"PID Key: 0x{pid_key:02X}")
+        idc.create_byte(entry_ea + 1)
+        sub_key = idc.get_wide_byte(entry_ea + 1)
+        make_comment(entry_ea + 1, f"Sub-PID: {'Wildcard' if sub_key == 0xFF else
+     ↪  f'0x{sub_key:02X}'}")
 
-17
+        func_ptr_ea = entry_ea + 2
+        func_target, global_cmt = format_24bit_pointer(func_ptr_ea)
+        idc.create_byte(entry_ea + 5)
+        arg_ea = entry_ea + 6
+        idc.create_word(arg_ea)
+        arg_val = idc.get_wide_word(arg_ea)
+
+        sub_str = 'any' if sub_key == 0xFF else f'{sub_key:02X}'
+        prefix_for_join = name_prefix[:-4] if name_prefix.endswith("_any") else name_prefix
+        handler_name_base = f"{prefix_for_join}_{pid_key:02X}_{sub_str}" if name_prefix else
+     ↪  f"pid_{pid_key:02X}_{sub_str}"
+        base_func_name = f"{handler_name_base}_sub_dispatch_handler" if arg_val != 0 else
+     ↪  f"{handler_name_base}_handler"
+
+        ensure_function(func_target)
+        final_func_name = make_unique_name(func_target, base_func_name)
+        if report: report.add_pid_handler(func_target)
+        add_pid_handler_comments(func_target)
+        make_comment(func_ptr_ea, f"{global_cmt} -> {final_func_name}")
+
+        if arg_val != 0:
+            make_comment(arg_ea, f"Nested Context: 0x{arg_val:04X}")
+            ida_offset.op_plain_offset(arg_ea, 0, 0)
+            analyze_pid_processing(arg_val, handler_name_base, visited, report)
+
+def process_post_table(table_base, count, name_prefix="", report=None):
+    print(f"Processing Post Processing Table at 0x{table_base:X} (Count: {count})")
+    ENTRY_SIZE = 8
+    for i in range(count):
+        entry_ea = table_base + (i * ENTRY_SIZE)
+        idc.del_items(entry_ea, idc.DELIT_SIMPLE, ENTRY_SIZE)
+        idc.create_word(entry_ea)
+        ida_lines.del_extra_cmt(entry_ea, ida_lines.E_PREV)
+        ida_lines.add_extra_cmt(entry_ea, True, "-" * 50)
+```
 
 ## Slide 18
 
-divisor **=** idc.get_wide_word(entry_ea) **if** divisor **>** 0: rate_hz, period_ms **=** 20.0 **/** divisor, divisor ***** 50 rate_desc, div_comment **=** f" **{** rate_hz **:g}** Hz".replace(".", "_"), f"Divisor: **{** divisor **}** ↪ (Rate: **{** rate_hz **:.2f}** Hz, Period: **{** period_ms **}** ms)" **else** : rate_desc, div_comment **=** "Inf_Hz", f"Divisor: **{** divisor **}** (Infinite Rate)" make_comment(entry_ea, div_comment) idc.create_word(entry_ea **+** 2) remainder **=** idc.get_wide_word(entry_ea **+** 2) phase_ms **=** remainder ***** 50 make_comment(entry_ea **+** 2, f"Remainder: **{** remainder **}** (Phase: **{** phase_ms **}** ms)") func_ptr_ea **=** entry_ea **+** 4 func_target, global_cmt **=** format_24bit_pointer(func_ptr_ea) idc.create_byte(entry_ea **+** 7) base_func_name **=** f" **{** name_prefix **}** _post_ **{** rate_desc **}** _phase_ **{** phase_ms **}** ms_handler" **if** ↪ name_prefix **else** f"post_ **{** rate_desc **}** _phase_ **{** phase_ms **}** ms_handler" ensure_function(func_target) final_func_name **=** make_unique_name(func_target, base_func_name) **if** report: report.add_post_handler(func_target) make_comment(func_ptr_ea, f" **{** global_cmt **}** -> **{** final_func_name **}** ")
+```python
+        divisor = idc.get_wide_word(entry_ea)
+        if divisor > 0:
+            rate_hz, period_ms = 20.0 / divisor, divisor * 50
+            rate_desc, div_comment = f"{rate_hz:g}Hz".replace(".", "_"), f"Divisor: {divisor}
+     ↪  (Rate: {rate_hz:.2f} Hz, Period: {period_ms} ms)"
+        else:
+            rate_desc, div_comment = "Inf_Hz", f"Divisor: {divisor} (Infinite Rate)"
+        make_comment(entry_ea, div_comment)
 
-**def** analyze_pid_processing(start_ea, name_prefix **=** "", visited **=** None, report **=** None): **if** visited **is** None: visited **=** set() **if** start_ea **in** visited: **return** visited.add(start_ea) print(f"--- Starting Analysis at Context 0x **{** start_ea **:X}** (Prefix: ' **{** name_prefix **}** ') ---") idc.del_items(start_ea, idc.DELIT_SIMPLE, 12) p_name **= lambda** n: f" **{** name_prefix **}** _ **{** n[4:] **}** " **if** name_prefix **and** n.startswith("pid_") **else** ↪ (f" **{** name_prefix **}** _ **{** n **}** " **if** name_prefix **else** n)
+        idc.create_word(entry_ea + 2)
+        remainder = idc.get_wide_word(entry_ea + 2)
+        phase_ms = remainder * 50
+        make_comment(entry_ea + 2, f"Remainder: {remainder} (Phase: {phase_ms} ms)")
 
-idc.create_word(start_ea) pid_table_ptr **=** idc.get_wide_word(start_ea) make_name(start_ea, p_name("ctx_PidTablePtr")) **if** pid_table_ptr **!=** 0: make_name(pid_table_ptr, p_name("PidTable")) ida_offset.op_plain_offset(start_ea, 0, 0)
+        func_ptr_ea = entry_ea + 4
+        func_target, global_cmt = format_24bit_pointer(func_ptr_ea)
+        idc.create_byte(entry_ea + 7)
 
-idc.create_word(start_ea **+** 2) post_table_ptr **=** idc.get_wide_word(start_ea **+** 2) make_name(start_ea **+** 2, p_name("ctx_PostProcessingTablePtr")) **if** post_table_ptr **!=** 0: make_name(post_table_ptr, p_name("PostProcessingTable")) ida_offset.op_plain_offset(start_ea **+** 2, 0, 0)
+        base_func_name = f"{name_prefix}_post_{rate_desc}_phase_{phase_ms}ms_handler" if
+     ↪  name_prefix else f"post_{rate_desc}_phase_{phase_ms}ms_handler"
+        ensure_function(func_target)
+        final_func_name = make_unique_name(func_target, base_func_name)
+        if report: report.add_post_handler(func_target)
+        make_comment(func_ptr_ea, f"{global_cmt} -> {final_func_name}")
 
-def_func_ptr_ea **=** start_ea **+** 4 def_func_target, def_global_cmt **=** format_24bit_pointer(def_func_ptr_ea) idc.create_byte(start_ea **+** 7) make_name(def_func_ptr_ea, p_name("ctx_DefaultHandler"))
+def analyze_pid_processing(start_ea, name_prefix="", visited=None, report=None):
+    if visited is None: visited = set()
+    if start_ea in visited: return
+    visited.add(start_ea)
+    print(f"--- Starting Analysis at Context 0x{start_ea:X} (Prefix: '{name_prefix}') ---")
 
-ensure_function(def_func_target) final_def_func_name **=** make_unique_name(def_func_target, p_name("pid_default_handler")) **if** report: report.add_pid_handler(def_func_target) add_pid_handler_comments(def_func_target) make_comment(def_func_ptr_ea, f" **{** def_global_cmt **}** -> **{** final_def_func_name **}** ")
+    idc.del_items(start_ea, idc.DELIT_SIMPLE, 12)
+    p_name = lambda n: f"{name_prefix}_{n[4:]}" if name_prefix and n.startswith("pid_") else
+     ↪  (f"{name_prefix}_{n}" if name_prefix else n)
 
-18
+    idc.create_word(start_ea)
+    pid_table_ptr = idc.get_wide_word(start_ea)
+    make_name(start_ea, p_name("ctx_PidTablePtr"))
+    if pid_table_ptr != 0:
+        make_name(pid_table_ptr, p_name("PidTable"))
+        ida_offset.op_plain_offset(start_ea, 0, 0)
+
+    idc.create_word(start_ea + 2)
+    post_table_ptr = idc.get_wide_word(start_ea + 2)
+    make_name(start_ea + 2, p_name("ctx_PostProcessingTablePtr"))
+    if post_table_ptr != 0:
+        make_name(post_table_ptr, p_name("PostProcessingTable"))
+        ida_offset.op_plain_offset(start_ea + 2, 0, 0)
+
+    def_func_ptr_ea = start_ea + 4
+    def_func_target, def_global_cmt = format_24bit_pointer(def_func_ptr_ea)
+    idc.create_byte(start_ea + 7)
+    make_name(def_func_ptr_ea, p_name("ctx_DefaultHandler"))
+
+    ensure_function(def_func_target)
+    final_def_func_name = make_unique_name(def_func_target, p_name("pid_default_handler"))
+    if report: report.add_pid_handler(def_func_target)
+    add_pid_handler_comments(def_func_target)
+    make_comment(def_func_ptr_ea, f"{def_global_cmt} -> {final_def_func_name}")
+```
 
 ## Slide 19
 
-idc.create_word(start_ea **+** 8) make_name(start_ea **+** 8, p_name("ctx_DevCounterLimit")) idc.create_byte(start_ea **+** 0xA) pid_count **=** idc.get_wide_byte(start_ea **+** 0xA) make_name(start_ea **+** 0xA, p_name("ctx_PidTableCount")) idc.create_byte(start_ea **+** 0xB) post_count **=** idc.get_wide_byte(start_ea **+** 0xB) make_name(start_ea **+** 0xB, p_name("ctx_PostProcessingTableCount")) **if** pid_table_ptr **!=** 0: process_pid_table(pid_table_ptr, pid_count, name_prefix, visited, ↪ report) **if** post_table_ptr **!=** 0: process_post_table(post_table_ptr, post_count, name_prefix, report) **def** main(): current_ea **=** idc.here() **if** current_ea **!=** 0xFFFFFFFF: report **=** AnalysisReport() analyze_pid_processing(current_ea, report **=** report) report.print_summary() **else** : print("Error: Invalid current address.") **if** __name__ **==** "__main__": main()
+```python
+    idc.create_word(start_ea + 8)
+    make_name(start_ea + 8, p_name("ctx_DevCounterLimit"))
+    idc.create_byte(start_ea + 0xA)
+    pid_count = idc.get_wide_byte(start_ea + 0xA)
+    make_name(start_ea + 0xA, p_name("ctx_PidTableCount"))
+    idc.create_byte(start_ea + 0xB)
+    post_count = idc.get_wide_byte(start_ea + 0xB)
+    make_name(start_ea + 0xB, p_name("ctx_PostProcessingTableCount"))
 
-### **Binary Dif�ng**
+    if pid_table_ptr != 0: process_pid_table(pid_table_ptr, pid_count, name_prefix, visited,
+     ↪  report)
+    if post_table_ptr != 0: process_post_table(post_table_ptr, post_count, name_prefix, report)
 
-Interrupt context execution was explored, but the main execution thread remained invisible. Analysis failed to trace the late bootloader hand-off to the application (presumably due to at least a data-dependent call target but possibly due to this and other reasons). Searching for function prolog byte sequences yielded excessive false positives. We observed function pointer arrays in ‘Drive Blocks’ 1 and 2. Indirect call instructions (e.g., call [-$2662,y]) read a 3-byte address (PPAGE offset + PPAGE value) from a resolved memory location. The compiler/linker used here always emits a trailing zero byte. Scanning for these patterns, �ltering for valid PPAGE values and offsets (0x8000-0xC000), signi�cantly reduced false positives. We further �ltered out isolated function pointers, as they typically occur in arrays. Then analysis discovered the main-thread bottom-half function for J2497 message processing at sub_EEB989 (see Figure 10).
+def main():
+    current_ea = idc.here()
+    if current_ea != 0xFFFFFFFF:
+        report = AnalysisReport()
+        analyze_pid_processing(current_ea, report=report)
+        report.print_summary()
+    else: print("Error: Invalid current address.")
 
-_# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc. # # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and associated documentation files (the "Software"), to deal # in the Software without restriction, including without limitation the rights # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell # copies of the Software, and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: # # The above copyright notice and this permission notice shall be included in all # copies or substantial portions of the Software. # # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE_
+if __name__ == "__main__": main()
+```
 
-19
+### **Binary Diffing**
+
+Interrupt context execution was explored, but the main execution thread remained invisible. Analysis failed to trace the late bootloader hand-off to the application (presumably due to at least a data-dependent call target but possibly due to this and other reasons). Searching for function prolog byte sequences yielded excessive false positives. We observed function pointer arrays in ‘Drive Blocks’ 1 and 2. Indirect call instructions (e.g., call [-$2662,y]) read a 3-byte address (PPAGE offset + PPAGE value) from a resolved memory location. The compiler/linker used here always emits a trailing zero byte. Scanning for these patterns, filtering for valid PPAGE values and offsets (0x8000-0xC000), significantly reduced false positives. We further filtered out isolated function pointers, as they typically occur in arrays. Then analysis discovered the main-thread bottom-half function for J2497 message processing at sub_EEB989 (see Figure 10).
+
+```python
+# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+```
 
 ## Slide 20
 
-_# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE # SOFTWARE._ import sys import ida_idaapi import logging from typing import Optional, List, Dict import ida_domain from ida_domain import Database from ida_domain.xrefs import XrefType import ida_xref import ida_bytes _# Simplified reference: only PFLASH segments needed for this script_ reference **=** [ ("PFLASH_FIX_FD", 0x4000, 0x7FFF), ("PFLASH_FIX_FF", 0xC000, 0xFFFF), ("PFLASH_GLOBAL", 0x78_0000, 0x7F_FFFF), ] **+** [ (f"PFLASH_ **{** ppage **:02X}** ", (ppage **<<** 16) **+** 0x8000, (ppage **<<** 16) **+** 0xBFFF) **for** ppage **in** [i **for** i **in** range(0xE0, 0x100) **if** i **not in** {0xFD, 0xFF}] ] **def** get_ida_segment_name(ida_linear_address: int) **->** str: **for** name, start, end **in** reference: **if** start **<=** ida_linear_address **<=** end: **return** name **return** "0" **def** find_potential_function_pointers_in_pflash_fix_ff(db_path: Optional[str] **=** None) **->** List[Dict]: **try** : **with** Database.open(path **=** db_path, save_on_close **=** True) as db: bytes_handler **=** db.bytes min_ea, max_ea **=** 0xC000, 0x10000 matches **=** [] current_ea **=** min_ea **while** current_ea **<** max_ea **-** 3: **if not** db.is_valid_ea(current_ea) **or not** ↪ ida_bytes.is_unknown(ida_bytes.get_flags(current_ea)): current_ea **+=** 1 **; continue** data **=** bytes_handler.get_bytes_at(current_ea, 4) **if** data **is** None **or** len(data) **<** 4: current_ea **+=** 1 **; continue** _# Pattern: [XX YY ZZ 00] where ZZ is PPAGE (E0-FF)_ byte_C, byte_D **=** data[2], data[3] byte_before **=** bytes_handler.get_bytes_at(current_ea **-** 1, 1)[0] byte_next_after **=** bytes_handler.get_bytes_at(current_ea **+** 7, 1)[0] **if** byte_D **==** 0x00 **and** (0xE0 **<=** byte_C **<=** 0xFF) **and** (byte_before **==** 0 **or** ↪ byte_next_after **==** 0): dest_addr **=** data[2] **<<** 16 **|** data[0] **<<** 8 **|** data[1] **if** db.is_valid_ea(dest_addr) **and** ↪ ida_bytes.is_unknown(ida_bytes.get_flags(dest_addr)) **and \** get_ida_segment_name(dest_addr).startswith('PFLASH'): matches.append({"address": current_ea, "destination": dest_addr}) current_ea **+=** 4 **; continue**
+```python
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-20
+import sys
+import ida_idaapi
+import logging
+from typing import Optional, List, Dict
+import ida_domain
+from ida_domain import Database
+from ida_domain.xrefs import XrefType
+import ida_xref
+import ida_bytes
+
+# Simplified reference: only PFLASH segments needed for this script
+reference = [
+    ("PFLASH_FIX_FD", 0x4000, 0x7FFF),
+    ("PFLASH_FIX_FF", 0xC000, 0xFFFF),
+    ("PFLASH_GLOBAL", 0x78_0000, 0x7F_FFFF),
+] + [
+    (f"PFLASH_{ppage:02X}", (ppage << 16) + 0x8000, (ppage << 16) + 0xBFFF)
+    for ppage in [i for i in range(0xE0, 0x100) if i not in {0xFD, 0xFF}]
+]
+
+def get_ida_segment_name(ida_linear_address: int) -> str:
+    for name, start, end in reference:
+        if start <= ida_linear_address <= end: return name
+    return "0"
+
+def find_potential_function_pointers_in_pflash_fix_ff(db_path: Optional[str] = None) -> List[Dict]:
+    try:
+        with Database.open(path=db_path, save_on_close=True) as db:
+            bytes_handler = db.bytes
+            min_ea, max_ea = 0xC000, 0x10000
+            matches = []
+            current_ea = min_ea
+
+            while current_ea < max_ea - 3:
+                if not db.is_valid_ea(current_ea) or not
+                ↪  ida_bytes.is_unknown(ida_bytes.get_flags(current_ea)):
+                    current_ea += 1; continue
+
+                data = bytes_handler.get_bytes_at(current_ea, 4)
+                if data is None or len(data) < 4: current_ea += 1; continue
+
+                # Pattern: [XX YY ZZ 00] where ZZ is PPAGE (E0-FF)
+                byte_C, byte_D = data[2], data[3]
+                byte_before = bytes_handler.get_bytes_at(current_ea - 1, 1)[0]
+                byte_next_after = bytes_handler.get_bytes_at(current_ea + 7, 1)[0]
+
+                if byte_D == 0x00 and (0xE0 <= byte_C <= 0xFF) and (byte_before == 0 or
+                ↪  byte_next_after == 0):
+                    dest_addr = data[2] << 16 | data[0] << 8 | data[1]
+                    if db.is_valid_ea(dest_addr) and
+                    ↪  ida_bytes.is_unknown(ida_bytes.get_flags(dest_addr)) and \
+                        get_ida_segment_name(dest_addr).startswith('PFLASH'):
+                        matches.append({"address": current_ea, "destination": dest_addr})
+                        current_ea += 4; continue
+```
 
 ## Slide 21
 
-current_ea **+=** 1 **if** matches: logging.info(f"\nFound **{** len(matches) **}** potential function pointers:") **for** match **in** matches: db.bytes.create_word_at(match['address']) ida_xref.add_cref(match['address'], match['destination'], ↪ XrefType.USER_SPECIFIED) db.comments.set_at(match['address'], f"fnptr detected -> ↪ **{** match['destination'] **:X}** ") db.functions.create(match['destination']) logging.info(f" 0x **{** match['address'] **:X}** -> 0x **{** match['destination'] **:X}** ") **return** matches **except** _Exception_ as e: print(f"Database operation failed: **{** e **}** ") **; return** [] **if** __name__ **==** "__main__": find_potential_function_pointers_in_pflash_fix_ff(db_path **=** '')
+```python
+                    current_ea += 1
+
+            if matches:
+                logging.info(f"\nFound {len(matches)} potential function pointers:")
+                for match in matches:
+                    db.bytes.create_word_at(match['address'])
+                    ida_xref.add_cref(match['address'], match['destination'],
+                ↪  XrefType.USER_SPECIFIED)
+                    db.comments.set_at(match['address'], f"fnptr detected ->
+                ↪  {match['destination']:X}")
+                    db.functions.create(match['destination'])
+                    logging.info(f"  0x{match['address']:X} -> 0x{match['destination']:X}")
+            return matches
+    except Exception as e: print(f"Database operation failed: {e}"); return []
+
+if __name__ == "__main__":
+    find_potential_function_pointers_in_pflash_fix_ff(db_path='')
+```
 
 The result was good enough to identify the functions that consume the receive buffer 0x3BF5 and Frame Counter 0x3BF4: sub_EEB98 and sub_F096F9; these are functions that check for LAMP messages and then process non-LAMP J1587 messages, respectively.
 
 The main thread processing in sub_EEB989, handles J2497 LAMP ON (0x0A), LAMP OFF (0x0B), and Active Trailer ABS Event (0x57) commands, ignoring payloads. It consumes contiguous 0x0A, 0x0B, or 0x57 messages. Messages with other MIDs are passed to sub_F096F9. J1587 messages can contain one or more PID payloads. This function splits J1587 messages into PID payloads and passes the payloads to sub_F2A3E1, which dispatches each to a handler from PFLASH tables starting at the 0xDC3D ‘context structure’ (see section _J1587 PID Processing_ for details). This data flow processing is illustrated in Figure 10.
 
-To analyze six �rmware images (three pairs) with BinDiff, we automated IDB creation, segment setup, interrupt vector de�nition, and function search.
+To analyze six firmware images (three pairs) with BinDiff, we automated IDB creation, segment setup, interrupt vector definition, and function search.
 
-_# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc. # # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and associated documentation files (the "Software"), to deal # in the Software without restriction, including without limitation the rights # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell # copies of the Software, and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: # # The above copyright notice and this permission notice shall be included in all # copies or substantial portions of the Software. # # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE # SOFTWARE._
+```python
+# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-import os import ida_bytes
-
-21
+import os
+import ida_bytes
+```
 
 ## Slide 22
 
 Local Memory
-RAM PFLASH
-FIFO Receive Buffer Frame Counter PID Handlers Table Post-Processing Table
-Addr: 0x3BF5 Addr: 0x3BF4 Addr: 0xD9DD Addr: 0xD87D
-(J2497 Frame Data) (Semaphor) (via Context 0xDC3D) (via Context 0xDC3D)
-Read Read (Polling)
+
+RAM
+
+FIFO Receive Buffer
+Addr: 0x3BF5
+(J2497 Frame Data)
+
+Frame Counter
+Addr: 0x3BF4
+(Semaphor)
+
+PFLASH
+
+PID Handlers Table
+Addr: 0xD9DD
+(via Context 0xDC3D)
+
+Post-Processing Table
+Addr: 0xD87D
+(via Context 0xDC3D)
+
+Read | Read (Polling)
+
 Main Thread
-sub_EEB989
+
 Read Base Addr
-(check LAMP ON OFF Read Table Rows
 Calculate Offset
+
+Read Table Rows
+
+sub_EEB989
+(check LAMP ON OFF
 and ABS event)
+
 Indirect Read via
-Fall-through Call Read Table Rows
 PayloadPtr
+
+Fall-through Call
+
+Read Table Rows
+
 sub_F096F9
 (PID payload splitting
- and periodic post-
-processing)
+and periodic post-processing)
+
 Call
-(Pass PayloadPtr: SP+0x17, e.g. Call
+(Pass PayloadPtr: SP+0x17,
 Len: SP+0x13)
-e.g. sub_ECBB3A
-sub_F2A3E1
-(send PID 0xC4 DTC
-(dispatch each PID payload)
-Counts)
+
 e.g. Call
+
+sub_F2A3E1
+(dispatch each PID payload)
+
+e.g. sub_ECBB3A
+(send PID 0xC4 DTC
+Counts)
+
+e.g. Call
+
 e.g. sub_F1B623
 (PID 0xC2 Handler)
 
 Figure 10: Diagram focusing on the dataflow of received J2497 messages in the 2ec80 target. This diagram picks up where Figure 9 left off.
 
-22
-
 ## Slide 23
 
-import ida_segment import idc import bincopy **def** consolidate_contiguous_blocks(chunks): **if not** chunks: **return** [] chunks.sort(key **=lambda** x: x[0]) consolidated **=** [] current_addr, current_data **=** chunks[0] **for** next_addr, next_data **in** chunks[1:]: **if** next_addr **==** current_addr **+** len(current_data): current_data **+=** next_data **else** : consolidated.append((current_addr, current_data)) **;** current_addr, current_data **=** ↪ next_addr, next_data consolidated.append((current_addr, current_data)) **return** consolidated **def** parse_s19_file(filepath): data_chunks **=** [] **try** : **with** open(filepath, "r", encoding **=** "utf-8") as f: **for** line **in** f: line **=** line.strip() **if not** line.startswith("S") **or** len(line) **<** 10: **continue** rec_type **=** line[0:2] **if** rec_type **not in** ["S1", "S2", "S3"]: **continue** addr_len **=** {"S1": 2, "S2": 3, "S3": 4}[rec_type] byte_count **=** int(line[2:4], 16) address **=** int(line[4:4 **+** addr_len ***** 2], 16) data_bytes **=** bytes.fromhex(line[4 **+** addr_len ***** 2 : 4 **+** addr_len ***** 2 **+** (byte_count ↪ **-** addr_len **-** 1) ***** 2]) data_chunks.append((address, data_bytes)) **except** _ValueError_ as e: print(f"Invalid hex: **{** e **}** ") **; return** None **return** consolidate_contiguous_blocks(data_chunks) **def** load_block_into_ida(blocks, delta, base_seg_name, seg_class, copy_offset **=** 0): **for** addr, data **in** blocks: **if** copy_offset **>=** len(data): **continue** data_to_load **=** data[copy_offset:] seg_start, seg_end **=** (addr **+** copy_offset) **+** delta, (addr **+** copy_offset) **+** delta **+** ↪ len(data_to_load) **if** idc.get_segm_start(seg_start) **!=** idc.BADADDR: idc.del_segm(seg_start, idc.SEGMOD_KILL) **if** ida_segment.add_segm(0, seg_start, seg_end, base_seg_name, seg_class, 0): ida_bytes.put_bytes(seg_start, data_to_load) **for** reg, val **in** [("rpage", 0xFD), ("epage", 0xFE), ("ppage", 0xFE), ("gpage", 0x00)]: idc.set_default_sreg_value(seg_start, reg, val) **break**
+```python
+import ida_segment
+import idc
+import bincopy
 
-**def** load_s19_into_ida(s19_path, start_address, name, segment_class): data_blocks **=** parse_s19_file(s19_path) load_block_into_ida(consolidate_contiguous_blocks(data_blocks), data_blocks[0][0] **-** ↪ start_address, name, segment_class)
+def consolidate_contiguous_blocks(chunks):
+    if not chunks: return []
+    chunks.sort(key=lambda x: x[0])
+    consolidated = []
+    current_addr, current_data = chunks[0]
+    for next_addr, next_data in chunks[1:]:
+        if next_addr == current_addr + len(current_data): current_data += next_data
+        else: consolidated.append((current_addr, current_data)); current_addr, current_data =
+     ↪  next_addr, next_data
+    consolidated.append((current_addr, current_data))
+    return consolidated
 
-**def** load_multi_s19s_into_ida(s19_paths, start_address, name, segment_class): datas **=** bytearray() **for** s19_path **in** s19_paths: datas **+=** parse_s19_file(s19_path)[0][1] load_block_into_ida([(start_address, bytes(datas))], 0, name, segment_class)
+def parse_s19_file(filepath):
+    data_chunks = []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line.startswith("S") or len(line) < 10: continue
+                rec_type = line[0:2]
+                if rec_type not in ["S1", "S2", "S3"]: continue
+                addr_len = {"S1": 2, "S2": 3, "S3": 4}[rec_type]
+                byte_count = int(line[2:4], 16)
+                address = int(line[4:4 + addr_len * 2], 16)
+                data_bytes = bytes.fromhex(line[4 + addr_len * 2 : 4 + addr_len * 2 + (byte_count
+     ↪  - addr_len - 1) * 2])
+                data_chunks.append((address, data_bytes))
+    except ValueError as e: print(f"Invalid hex: {e}"); return None
+    return consolidate_contiguous_blocks(data_chunks)
 
-**def** load_empty_segment_into_ida(start_address, segment_size, name, segment_class): load_block_into_ida([(start_address, b"\x00" ***** segment_size)], 0, name, segment_class)
+def load_block_into_ida(blocks, delta, base_seg_name, seg_class, copy_offset=0):
+    for addr, data in blocks:
+        if copy_offset >= len(data): continue
+        data_to_load = data[copy_offset:]
+        seg_start, seg_end = (addr + copy_offset) + delta, (addr + copy_offset) + delta +
+     ↪  len(data_to_load)
+        if idc.get_segm_start(seg_start) != idc.BADADDR: idc.del_segm(seg_start, idc.SEGMOD_KILL)
+        if ida_segment.add_segm(0, seg_start, seg_end, base_seg_name, seg_class, 0):
+            ida_bytes.put_bytes(seg_start, data_to_load)
+            for reg, val in [("rpage", 0xFD), ("epage", 0xFE), ("ppage", 0xFE), ("gpage", 0x00)]:
+                idc.set_default_sreg_value(seg_start, reg, val)
+        break
 
-23
+def load_s19_into_ida(s19_path, start_address, name, segment_class):
+    data_blocks = parse_s19_file(s19_path)
+    load_block_into_ida(consolidate_contiguous_blocks(data_blocks), data_blocks[0][0] -
+     ↪  start_address, name, segment_class)
+
+def load_multi_s19s_into_ida(s19_paths, start_address, name, segment_class):
+    datas = bytearray()
+    for s19_path in s19_paths: datas += parse_s19_file(s19_path)[0][1]
+    load_block_into_ida([(start_address, bytes(datas))], 0, name, segment_class)
+
+def load_empty_segment_into_ida(start_address, segment_size, name, segment_class):
+    load_block_into_ida([(start_address, b"\x00" * segment_size)], 0, name, segment_class)
+```
 
 ## Slide 24
 
-**def** load_copy_into_ida(src, dst, size, name, segment_class): load_block_into_ida([(dst, ida_bytes.get_bytes(src, size))], 0, name, segment_class)
+```python
+def load_copy_into_ida(src, dst, size, name, segment_class):
+    load_block_into_ida([(dst, ida_bytes.get_bytes(src, size))], 0, name, segment_class)
 
-**def** verify_segment(start, size, name, check_empty **=** None, copy_src **=** None): **if** ida_segment.get_segm_by_name(name) **is** None: **return** False **if** check_empty **is not** None: is_empty **=** all(ida_bytes.get_byte(a) **in** (0, 0xFF) **for** a **in** range(start, start **+** size)) **if** check_empty **!=** is_empty: print(f"ERROR: **{** name **}** empty check failed") **; return** False **if** copy_src: **if** any(ida_bytes.get_byte(start **+** k) **!=** ida_bytes.get_byte(copy_src **+** k) **for** k **in** ↪ range(size)): print(f"ERROR: **{** name **}** copy check failed") **; return** False **return** True
+def verify_segment(start, size, name, check_empty=None, copy_src=None):
+    if ida_segment.get_segm_by_name(name) is None: return False
+    if check_empty is not None:
+        is_empty = all(ida_bytes.get_byte(a) in (0, 0xFF) for a in range(start, start + size))
+        if check_empty != is_empty: print(f"ERROR: {name} empty check failed"); return False
+    if copy_src:
+        if any(ida_bytes.get_byte(start + k) != ida_bytes.get_byte(copy_src + k) for k in
+     ↪  range(size)):
+            print(f"ERROR: {name} copy check failed"); return False
+    return True
 
-**def** load_all_s12xeq512_segments(pflash, dflash, eee, ram_files, map4000_is_ram **=** False): _# Global Maps_ load_s19_into_ida(pflash, 0x780000, "PFLASH_GLOBAL", "CODE") load_s19_into_ida(dflash, 0x100000, "DFLASH_GLOBAL", "DATA") load_s19_into_ida(eee, 0x13F000, "EEE_BUFFER_GLOBAL", "DATA") load_multi_s19s_into_ida(ram_files, 0x0F8000, "RAM_GLOBAL", "DATA")
+def load_all_s12xeq512_segments(pflash, dflash, eee, ram_files, map4000_is_ram=False):
+    # Global Maps
+    load_s19_into_ida(pflash, 0x780000, "PFLASH_GLOBAL", "CODE")
+    load_s19_into_ida(dflash, 0x100000, "DFLASH_GLOBAL", "DATA")
+    load_s19_into_ida(eee, 0x13F000, "EEE_BUFFER_GLOBAL", "DATA")
+    load_multi_s19s_into_ida(ram_files, 0x0F8000, "RAM_GLOBAL", "DATA")
 
-_# Local Maps_
+    # Local Maps
+    load_empty_segment_into_ida(0x0000, 0x0100, "DIRECT", "DATA")
+    load_empty_segment_into_ida(0x0100, 0x0700, "REGISTERS", "DATA")
+    load_copy_into_ida(0x13FC00, 0x0C00, 0x400, "EEE_FIX_FF", "DATA")
 
-load_empty_segment_into_ida(0x0000, 0x0100, "DIRECT", "DATA") load_empty_segment_into_ida(0x0100, 0x0700, "REGISTERS", "DATA") load_copy_into_ida(0x13FC00, 0x0C00, 0x400, "EEE_FIX_FF", "DATA")
+    if not map4000_is_ram:
+        load_copy_into_ida(0x0FE000, 0x2000, 0x1000, "RAM_FIX_FE_L", "DATA")
+        load_copy_into_ida(0x0FF000, 0x3000, 0x1000, "RAM_FIX_FF_L", "DATA")
+        load_copy_into_ida(0x7F4000, 0x4000, 0x4000, "PFLASH_FIX_FD", "CODE")
+    else:
+        for i, rpage in enumerate(range(0xFA, 0x100)):
+            load_copy_into_ida(0x0F8000 + (rpage - 0xF8) * 0x1000, 0x2000 + i * 0x1000, 0x1000,
+     ↪  f"RAM_FIX_{rpage:02X}", "DATA")
 
-**if not** map4000_is_ram: load_copy_into_ida(0x0FE000, 0x2000, 0x1000, "RAM_FIX_FE_L", "DATA") load_copy_into_ida(0x0FF000, 0x3000, 0x1000, "RAM_FIX_FF_L", "DATA") load_copy_into_ida(0x7F4000, 0x4000, 0x4000, "PFLASH_FIX_FD", "CODE") **else** :
+    load_copy_into_ida(0x7FC000, 0xC000, 0x4000, "PFLASH_FIX_FF", "CODE")
 
-**for** i, rpage **in** enumerate(range(0xFA, 0x100)): load_copy_into_ida(0x0F8000 **+** (rpage **-** 0xF8) ***** 0x1000, 0x2000 **+** i ***** 0x1000, 0x1000, ↪ f"RAM_FIX_ **{** rpage **:02X}** ", "DATA")
+    # Paged Maps
+    for epage in [p for p in range(0x20) if p not in {0x10, 0x13}] + list(range(0xFC, 0x100)):
+        if epage == 0xFF: continue
+        load_copy_into_ida(0x13F000 + (epage - 0xFC) * 0x400, (epage << 16) + 0x0800, 0x400,
+     ↪  f"EEE_{epage:02X}", "DATA")
+    for rpage in [p for p in range(0xF8, 0x100) if p not in {0xFE, 0xFF}]:
+        load_copy_into_ida(0x0F8000 + (rpage - 0xF8) * 0x1000, (rpage << 16) + 0x1000, 0x1000,
+     ↪  f"RAM_{rpage:02X}", "DATA")
+    for ppage in [p for p in range(0xE0, 0x100) if p not in {0xFD, 0xFF}]:
+        start = (ppage << 16) + 0x8000
+        load_copy_into_ida(0x780000 + (ppage - 0xE0) * 0x4000, start, 0x4000,
+     ↪  f"PFLASH_{ppage:02X}", "CODE")
+        idc.set_default_sreg_value(start, "ppage", ppage)
 
-load_copy_into_ida(0x7FC000, 0xC000, 0x4000, "PFLASH_FIX_FF", "CODE")
-
-_# Paged Maps_ **for** epage **in** [p **for** p **in** range(0x20) **if** p **not in** {0x10, 0x13}] **+** list(range(0xFC, 0x100)): **if** epage **==** 0xFF: **continue** load_copy_into_ida(0x13F000 **+** (epage **-** 0xFC) ***** 0x400, (epage **<<** 16) **+** 0x0800, 0x400, ↪ f"EEE_ **{** epage **:02X}** ", "DATA") **for** rpage **in** [p **for** p **in** range(0xF8, 0x100) **if** p **not in** {0xFE, 0xFF}]: load_copy_into_ida(0x0F8000 **+** (rpage **-** 0xF8) ***** 0x1000, (rpage **<<** 16) **+** 0x1000, 0x1000, ↪ f"RAM_ **{** rpage **:02X}** ", "DATA") **for** ppage **in** [p **for** p **in** range(0xE0, 0x100) **if** p **not in** {0xFD, 0xFF}]: start **=** (ppage **<<** 16) **+** 0x8000 load_copy_into_ida(0x780000 **+** (ppage **-** 0xE0) ***** 0x4000, start, 0x4000,
-
-- ↪ f"PFLASH_ **{** ppage **:02X}** ", "CODE")
-
-idc.set_default_sreg_value(start, "ppage", ppage)
-
-- **def** load_xgate_s12xeq512_copies():
-
-load_copy_into_ida(0x000000, 0xFF0000, 0x0800, "XGATE_REGISTERS", "DATA") load_copy_into_ida(0x780800, 0xFF0800, 0x7800, "XGATE_FLASH", "CODE") idc.set_default_sreg_value(0xFF0800, "xg", 1) load_copy_into_ida(0x0F8000, 0xFF8000, 0x8000, "XGATE_RAM", "CODE") idc.set_default_sreg_value(0xFF8000, "xg", 1)
-
-24
+def load_xgate_s12xeq512_copies():
+    load_copy_into_ida(0x000000, 0xFF0000, 0x0800, "XGATE_REGISTERS", "DATA")
+    load_copy_into_ida(0x780800, 0xFF0800, 0x7800, "XGATE_FLASH", "CODE")
+    idc.set_default_sreg_value(0xFF0800, "xg", 1)
+    load_copy_into_ida(0x0F8000, 0xFF8000, 0x8000, "XGATE_RAM", "CODE")
+    idc.set_default_sreg_value(0xFF8000, "xg", 1)
+```
 
 ## Slide 25
 
-**def** main(): **try** : load_all_s12xeq512_segments("firmware_pflash.s19", "firmware_dflash.s19", ↪ "firmware_eee.s19", ["ram_page_f8.s19", "ram_page_f9.s19", "ram_page_fa.s19", ↪ "ram_page_fb.s19", "ram_page_fc.s19", "ram_local.s19"]) load_xgate_s12xeq512_copies() print("Segment setup complete.") **except** _Exception_ as e: print(f"Error: **{** e **}** ") **if** __name__ **==** "__main__": main()
+```python
+def main():
+    try:
+        load_all_s12xeq512_segments("firmware_pflash.s19", "firmware_dflash.s19",
+     ↪  "firmware_eee.s19",
+                                    ["ram_page_f8.s19", "ram_page_f9.s19", "ram_page_fa.s19",
+     ↪  "ram_page_fb.s19", "ram_page_fc.s19", "ram_local.s19"])
+        load_xgate_s12xeq512_copies()
+        print("Segment setup complete.")
+    except Exception as e: print(f"Error: {e}")
 
-As mentioned above, we scripted the identi�cation and marking of PID tables and handlers. We excluded the late bootloader to focus BinDiff on the application �rmware. Lack of ‘register tracking’ hindered automatic analysis, requiring manual resolution of indirect call targets. We implemented rudimentary concolic analysis to parse disassembly and symbolically track execution, substituting concrete values from PFLASH, DFLASH, or RAM when needed and where available. We also implemented basic jump table detection and creation by parsing disassembly and creating manual code xrefs (because the actual jump table operation “probably can’t be scripted” according to IDA Pro support).
+if __name__ == "__main__": main()
+```
 
-_# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc. # # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and associated documentation files (the "Software"), to deal # in the Software without restriction, including without limitation the rights # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell # copies of the Software, and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: # # The above copyright notice and this permission notice shall be included in all # copies or substantial portions of the Software. # # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE # SOFTWARE._ import sys import ida_idaapi import re import ida_domain import ida_xref import idc from ida_domain import Database from ida_domain.comments import CommentKind from ida_domain.xrefs import XrefsFlags, XrefType import ida_nalt import ida_ua import idaapi import ida_auto **def** ida_analysis_and_wait():
+As mentioned above, we scripted the identification and marking of PID tables and handlers. We excluded the late bootloader to focus BinDiff on the application firmware. Lack of ‘register tracking’ hindered automatic analysis, requiring manual resolution of indirect call targets. We implemented rudimentary concolic analysis to parse disassembly and symbolically track execution, substituting concrete values from PFLASH, DFLASH, or RAM when needed and where available. We also implemented basic jump table detection and creation by parsing disassembly and creating manual code xrefs (because the actual jump table operation “probably can’t be scripted” according to IDA Pro support).
 
-25
+```python
+# Copyright (c) 2025-2026 National Motor Freight Traffic Association Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+import sys
+import ida_idaapi
+import re
+import ida_domain
+import ida_xref
+import idc
+from ida_domain import Database
+from ida_domain.comments import CommentKind
+from ida_domain.xrefs import XrefsFlags, XrefType
+import ida_nalt
+import ida_ua
+import idaapi
+import ida_auto
+
+def ida_analysis_and_wait():
+```
 
 ## Slide 26
 
-**if not** ida_auto.is_auto_enabled(): ida_auto.enable_auto(True) ida_auto.auto_wait() ida_auto.enable_auto(False) **def** get_heads_backwalking(db, addr, steps **=** 16): addrs, current_ea, count **=** [], addr, 0 **while** len(addrs) **<=** steps: xrefs **=** list(db.xrefs.to_ea(current_ea, XrefsFlags.CODE)) **if not** xrefs: **break** prev_ea **=** xrefs[0].from_ea addrs.append(current_ea) count **+=** 1 **if** db.functions.get_at(prev_ea).start_ea **==** prev_ea **or** count **>** steps: **break** current_ea **=** prev_ea **return** addrs[:: **-** 1]
+```python
+    if not ida_auto.is_auto_enabled():
+        ida_auto.enable_auto(True)
+        ida_auto.auto_wait()
+        ida_auto.enable_auto(False)
 
-**def** parse_and_create_switch(db, addrs): low_case, num_cases, jmp_insn_ea, default_jump_ea, jtable_ea **=** 0, 0, ida_idaapi.BADADDR, ↪ ida_idaapi.BADADDR, ida_idaapi.BADADDR si **=** ida_nalt.switch_info_t() si.startea **=** addrs[0] **for** ea **in** addrs: insn **=** db.instructions.get_at(ea) mnem **=** insn.get_canon_mnem() **if** mnem.startswith("sub") **and** insn.Op1.type **==** ida_ua.o_imm: low_case **=** insn.Op1.value **elif** (mnem.startswith("cmp") **or** mnem.startswith("cpd")) **and** insn.Op1.type **==** ida_ua.o_imm: ↪ num_cases **=** insn.Op1.value **+** 1 **elif** "bcc" **in** mnem: default_jump_ea **=** insn.Op1.addr **elif** mnem **==** "lsld": si.set_jtable_element_size(2) **elif** mnem **==** "jmp": jmp_insn_ea **=** ea **;** jtable_ea **=** jmp_insn_ea **+** 2
+def get_heads_backwalking(db, addr, steps=16):
+    addrs, current_ea, count = [], addr, 0
+    while len(addrs) <= steps:
+        xrefs = list(db.xrefs.to_ea(current_ea, XrefsFlags.CODE))
+        if not xrefs: break
+        prev_ea = xrefs[0].from_ea
+        addrs.append(current_ea)
+        count += 1
+        if db.functions.get_at(prev_ea).start_ea == prev_ea or count > steps: break
+        current_ea = prev_ea
+    return addrs[::-1]
 
-si.ncases, si.regnum, si.lowcase, si.jumps, si.defjump **=** num_cases **-** 1, 2, low_case, jtable_ea, ↪ default_jump_ea si.flags, si.elbase **=** ida_nalt.SWI_ELBASE, jtable_ea **&** 0xFF0000
+def parse_and_create_switch(db, addrs):
+    low_case, num_cases, jmp_insn_ea, default_jump_ea, jtable_ea = 0, 0, ida_idaapi.BADADDR,
+     ↪  ida_idaapi.BADADDR, ida_idaapi.BADADDR
+    si = ida_nalt.switch_info_t()
+    si.startea = addrs[0]
 
-**if not** all([num_cases **>** 0, jmp_insn_ea **!=** ida_idaapi.BADADDR, jtable_ea **!=** ida_idaapi.BADADDR, ↪ default_jump_ea **!=** ida_idaapi.BADADDR]): **return if not** idaapi.set_switch_info(jmp_insn_ea, si): idc.create_insn(default_jump_ea) ida_xref.add_cref(jmp_insn_ea, default_jump_ea, XrefType.JUMP_FAR) **for** t **in** range(num_cases **-** 1): idc.create_word(jtable_ea **+** t ***** 2) target **=** idc.get_wide_word(jtable_ea **+** t ***** 2) **+** (jtable_ea **&** 0xFF0000) idc.create_insn(target) ida_xref.add_cref(jmp_insn_ea, target, XrefType.JUMP_FAR) db.comments.set_at(jmp_insn_ea, "jump table analyzed", comment_kind **=** CommentKind.REGULAR)
+    for ea in addrs:
+        insn = db.instructions.get_at(ea)
+        mnem = insn.get_canon_mnem()
+        if mnem.startswith("sub") and insn.Op1.type == ida_ua.o_imm: low_case = insn.Op1.value
+        elif (mnem.startswith("cmp") or mnem.startswith("cpd")) and insn.Op1.type == ida_ua.o_imm:
+        ↪  num_cases = insn.Op1.value + 1
+        elif "bcc" in mnem: default_jump_ea = insn.Op1.addr
+        elif mnem == "lsld": si.set_jtable_element_size(2)
+        elif mnem == "jmp": jmp_insn_ea = ea; jtable_ea = jmp_insn_ea + 2
 
-**def** resolve_and_analyze_all_jump_tables(db): prev_addrs **=** [] **while** True: addrs **=** [addr **for** addr **in** db.heads.get_all() **if** db.instructions.get_at(addr) **and** ↪ re.match(r"jmp\s **+** \[.,pc\]", db.instructions.get_disassembly(db.instructions.get_at(addr)))] **if** prev_addrs **==** addrs: **break for** addr **in** addrs: parse_and_create_switch(db, get_heads_backwalking(db, addr, 6)) ida_analysis_and_wait()
+    si.ncases, si.regnum, si.lowcase, si.jumps, si.defjump = num_cases - 1, 2, low_case, jtable_ea,
+     ↪  default_jump_ea
+    si.flags, si.elbase = ida_nalt.SWI_ELBASE, jtable_ea & 0xFF0000
 
-26
+    if not all([num_cases > 0, jmp_insn_ea != ida_idaapi.BADADDR, jtable_ea != ida_idaapi.BADADDR,
+     ↪  default_jump_ea != ida_idaapi.BADADDR]):
+        return
+
+    if not idaapi.set_switch_info(jmp_insn_ea, si):
+        idc.create_insn(default_jump_ea)
+        ida_xref.add_cref(jmp_insn_ea, default_jump_ea, XrefType.JUMP_FAR)
+        for t in range(num_cases - 1):
+            idc.create_word(jtable_ea + t * 2)
+            target = idc.get_wide_word(jtable_ea + t * 2) + (jtable_ea & 0xFF0000)
+            idc.create_insn(target)
+            ida_xref.add_cref(jmp_insn_ea, target, XrefType.JUMP_FAR)
+        db.comments.set_at(jmp_insn_ea, "jump table analyzed", comment_kind=CommentKind.REGULAR)
+
+def resolve_and_analyze_all_jump_tables(db):
+    prev_addrs = []
+    while True:
+        addrs = [addr for addr in db.heads.get_all() if db.instructions.get_at(addr) and
+     ↪  re.match(r"jmp\s+\[.,pc\]", db.instructions.get_disassembly(db.instructions.get_at(addr)))]
+        if prev_addrs == addrs: break
+        for addr in addrs: parse_and_create_switch(db, get_heads_backwalking(db, addr, 6))
+        ida_analysis_and_wait()
+```
 
 ## Slide 27
 
-**for** addr **in** addrs: **if** len(list(db.xrefs.from_ea(addr))) **==** 0: parse_and_create_switch(db, ↪ get_heads_backwalking(db, addr, 6)) prev_addrs **=** addrs **def** main(): **try** : **with** Database.open(path **=** '', save_on_close **=** True) as db: ↪ resolve_and_analyze_all_jump_tables(db) print("Jump table analysis complete.") **except** _Exception_ as e: print(f"Error: **{** e **}** ") **if** __name__ **==** "__main__": main()
+```python
+        for addr in addrs:
+            if len(list(db.xrefs.from_ea(addr))) == 0: parse_and_create_switch(db,
+        ↪  get_heads_backwalking(db, addr, 6))
+        prev_addrs = addrs
 
-To ensure BinDiff �delity, we aimed for zero disassembly errors. We found numerous disassembler errors in PPAGE 0xFD functions. Hiveplots of IDA Pro xrefs revealed invalid data writes to PPAGE 0xFD from functions in other PPAGEs. These writes are invalid as PFLASH requires sector erasure. Findings from live BDM memory polling also indicated that MMCCTL1 transitions from 0x05 (init) to 0x0F (runtime). This toggles RAMHM and ROMHM bits, remapping the 0x4000-0x7FFF window from PFLASH (Page 0xFD) to RAM. We adjusted the IDA database segment setup, as shown in Figure 11.
+def main():
+    try:
+        with Database.open(path='', save_on_close=True) as db:
+        ↪  resolve_and_analyze_all_jump_tables(db)
+        print("Jump table analysis complete.")
+    except Exception as e: print(f"Error: {e}")
 
-These steps achieved function coverage of 80% (1ec80), 60% (2ec80), and 75% (3ec80) of byte differences in PPAGEs E0-F9. We then automatically performed BinDiff on all three target pairs. Bindiff was able to support the S12X architecture and give reasonable insight; however, its shortcomings when applied to this �rmware caused spurious matches e.g. it matched the SCI2 handler in a before image with the SCI3 handler in an after image.
+if __name__ == "__main__": main()
+```
 
-We ultimately created a QBinDiff analysis, the results of which are in Figure 12. The key to successful QBinDiff analysis was to ‘anchor’ (force a match) all the interrupt handlers. This yielded improvements over the Bindiff results. Less than 1% of discovered functions were low-con�dence matches. Over 98% of functions remained unchanged, while ~110 - ~140 were modi�ed or deleted (see below). The table below shows the QBinDiff results summary of all three targets.
+To ensure BinDiff fidelity, we aimed for zero disassembly errors. We found numerous disassembler errors in PPAGE 0xFD functions. Hiveplots of IDA Pro xrefs revealed invalid data writes to PPAGE 0xFD from functions in other PPAGEs. These writes are invalid as PFLASH requires sector erasure. Findings from live BDM memory polling also indicated that MMCCTL1 transitions from 0x05 (init) to 0x0F (runtime). This toggles RAMHM and ROMHM bits, remapping the 0x4000-0x7FFF window from PFLASH (Page 0xFD) to RAM. We adjusted the IDA database segment setup, as shown in Figure 11.
+
+These steps achieved function coverage of 80% (1ec80), 60% (2ec80), and 75% (3ec80) of byte differences in PPAGEs E0-F9. We then automatically performed BinDiff on all three target pairs. Bindiff was able to support the S12X architecture and give reasonable insight; however, its shortcomings when applied to this firmware caused spurious matches e.g. it matched the SCI2 handler in a before image with the SCI3 handler in an after image.
+
+We ultimately created a QBinDiff analysis, the results of which are in Figure 12. The key to successful QBinDiff analysis was to ‘anchor’ (force a match) all the interrupt handlers. This yielded improvements over the Bindiff results. Less than 1% of discovered functions were low-confidence matches. Over 98% of functions remained unchanged, while ~110 - ~140 were modified or deleted (see below). The table below shows the QBinDiff results summary of all three targets.
 
 ||1ec80|2ec80|3ec80|
 |---|---|---|---|
 |New|0|0|0|
 |Deleted|104|127|123|
-|Modi�ed|11|12|13|
+|Modified|11|12|13|
 |Unchanged|1109|1100|1031|
-|Low Con�dence|12|13|14|
+|Low Confidence|12|13|14|
 
 Three-way BinDiff analysis showed that matched functions dropped from 968 (pre-update) to 878 (post-update) across all ‘Z’ versions, corroborating function deletion. The patch makes very similar changes in all three cases: of the deleted functions, 87 were common to all three updates. The next section analyzes these changes. Fewer functions were deleted in the 1ec80 update because it retained J1587 Transport Protocol (TP) management functions which were
 
-27
-
 ## Slide 28
 
-Figure 11: Hiveplot panel comparing IDA Pro analysis achieved before (above) and after (below) a change of the 0x4000 mapping from Flash to RAM. The cross-references (xrefs) are drawn as edges directed counter-clockwise (CCW); each region with executable code is doubled to show intra-region xrefs; the “Drive blocks” 1 and 2 are shown co-linearly and the skipped region is shown lifted above them; yellow edges are code xrefs, red edges are data reads, blue are data writes and black are interrupt vector references.
+FLASH_skipped
+FLASH_skipped
+FLASH_2of2
+FLASH_1of2
+FLASH_2of2
+RAM
+EEE_BUFFER
 
-28
+FLASH_skipped
+FLASH_skipped
+FLASH_2of2
+FLASH_1of2
+FLASH_2of2
+RAM
+EEE_BUFFER
+
+Figure 11: Hiveplot panel comparing IDA Pro analysis achieved before (above) and after (below) a change of the 0x4000 mapping from Flash to RAM. The cross-references (xrefs) are drawn as edges directed counter-clockwise (CCW); each region with executable code is doubled to show intra-region xrefs; the “Drive blocks” 1 and 2 are shown co-linearly and the skipped region is shown lifted above them; yellow edges are code xrefs, red edges are data reads, blue are data writes and black are interrupt vector references.
 
 ## Slide 29
 
 deleted in the others; presumably, because they are used due to the J1708 interface which 1ec80 has and the other targets do not.
 
-The table below de�nes the categories of functions used in Figure 12 and the analysis presented in Sections “Changes Made in Patching” and “Exploitability of Removed Functionality”.
+The table below defines the categories of functions used in Figure 12 and the analysis presented in Sections “Changes Made in Patching” and “Exploitability of Removed Functionality”.
 
-|Term|De�nition|BinDiff Terminology|
+|Term|Definition|BinDiff Terminology|
 |---|---|---|
-|**Function Extents (matched,**
-**unchanged)**|Functions present in both
-binaries with identical logic
-and structure.|Matched, Similarity = 1.0|
-|**Function Extents (matched,**
-**changed)**|Functions present in both
-binaries but with some
-modi�cations to instructions
-or structure.|Matched, Similarity < 1.0,
-Con�dence >= 0.95|
-|**Function Extents**
-**(unmatched)**|Functions present in one
-binary but not the other (new
-or deleted).|Unmatched
-(Primary/Secondary)|
-|**< 95% con�dence Function**
-**Extents**|Functions that might be
-matched but with low
-con�dence; ignored for
-high-assurance analysis.|Matched, Con�dence < 0.95|
+|**Function Extents (matched, unchanged)**|Functions present in both binaries with identical logic and structure.|Matched, Similarity = 1.0|
+|**Function Extents (matched, changed)**|Functions present in both binaries but with some modifications to instructions or structure.|Matched, Similarity < 1.0, Confidence >= 0.95|
+|**Function Extents (unmatched)**|Functions present in one binary but not the other (new or deleted).|Unmatched (Primary/Secondary)|
+|**< 95% confidence Function Extents**|Functions that might be matched but with low confidence; ignored for high-assurance analysis.|Matched, Confidence < 0.95|
 
 ### **Changes Made in Patching**
 
-Manual BinDiff analysis, validated by call tree analysis script, categorized all the deleted functions in all three �rmwares as one of:
+Manual BinDiff analysis, validated by call tree analysis script, categorized all the deleted functions in all three firmwares as one of:
 
-1. All J1587 PID processing present in the pre-update image (section _J1587 PID Processing_ ), excluding LAMP and active ABS event processing.
+1. All J1587 PID processing present in the pre-update image (section _J1587 PID Processing_), excluding LAMP and active ABS event processing.
+2. SCI2 UART EDGE interrupt handling (Section _J2497 Reception Architecture of EC80_).
+3. Secondary J1587 features, including the diagnostic code manager (sub_E9858A), J1587 Transport Protocol (TP) connection management (sub_EF905B), and TP timeouts (sub_EC8116). J1587 TP was not functional even before the update, confirmed with static analysis and testing.
 
-2. SCI2 UART EDGE interrupt handling (Section _J2497 Reception Architecture of EC80_ ).
-
-3. Secondary J1587 features, including the diagnostic code manager (sub_E9858A), J1587 Transport Protocol (TP) connection management (sub_EF905B), and TP timeouts (sub_EC8116). J1587 TP was not functional even before the update, con�rmed with static analysis and testing.
-
-Modi�ed functions primarily remove calls to these deleted functions:
+Modified functions primarily remove calls to these deleted functions:
 
 1. In sub_EEB989 (LAMP/ABS check), the call to sub_F096F9 and subsequent PID processing is removed (Figure 13, EBB 0xEEBA20), consequently removing all linked PID processing tables and functions.
-
 2. In sub_C12B (SCI2 ISR), the call to EDGE interrupt handling is removed (Figure 14), effectively eliminating the ‘RXEDGIF Branch’ (Figure 8) and related setup/processing.
 
 The bulk of the deletions were due to the removal of all PID processing on J2497 (see the table below for the full list). The disassembly of all deleted functions (for target 2ec80) is provided in an Appendix.
 
-29
-
 ## Slide 30
 
 Combined APPLICATION qbindiff Analysis
-Byte Differences
-<95% confidence Function Extents
-Function Extents (unmatched) "Drive Block"  "Drive Block"
-Function Extents (matched, changed)  1 of 2 Skipped by ID9363  2 of 2
-Function Extents (matched, unchanged)
-PPAGE Regions (16KiB)
+
+Byte Differences | <95% confidence Function Extents | Function Extents (unmatched) | Function Extents (matched, changed) | Function Extents (matched, unchanged) | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 3ec80_after
 3ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-Byte Differences
-<95% confidence Function Extents
-Function Extents (unmatched) "Drive Block"  "Drive Block"
-Function Extents (matched, changed)  1 of 2 Skipped by ID9363  2 of 2
-Function Extents (matched, unchanged)
-PPAGE Regions (16KiB)
+
+Byte Differences | <95% confidence Function Extents | Function Extents (unmatched) | Function Extents (matched, changed) | Function Extents (matched, unchanged) | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 2ec80_after
 2ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-Byte Differences
-<95% confidence Function Extents
-Function Extents (unmatched) "Drive Block"  "Drive Block"
-Function Extents (matched, changed)  1 of 2 Skipped by ID9363  2 of 2
-Function Extents (matched, unchanged)
-PPAGE Regions (16KiB)
+
+Byte Differences | <95% confidence Function Extents | Function Extents (unmatched) | Function Extents (matched, changed) | Function Extents (matched, unchanged) | PPAGE Regions (16KiB)
+
+"Drive Block" 1 of 2 | Skipped by ID9363 | "Drive Block" 2 of 2
+
+File
 1ec80_after
 1ec80_before
+
 E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF
+
 0x780000 0x790000 0x7A0000 0x7B0000 0x7C0000 0x7D0000 0x7E0000 0x7F0000 0x800000
+
 Global Address (Hexadecimal)
-File
-File
-File
 
-Figure 12: A visualization of the QBinDiff analyses of all three of the �rmware updates (when limited to the APPLICATION parts of the PFLASH), overlaid on the byte differences of each. The varying complexity of the �rmwares mentioned in the introduction is clearly illustrated here (compare to Table **??** ). Links between matched (by QBinDiff) functions are plotted across pre- and post-update. Despite noise from small/null function matches, the links show clear function shifting to lower addresses and numerous unmatched functions in the pre-update images (colored magenta), suggesting multiple function deletions. More conclusively: there are no (known) spurious matches and zero ‘new’ functions post-update: further suggesting multiple function deletions in the update.
-
-30
+Figure 12: A visualization of the QBinDiff analyses of all three of the firmware updates (when limited to the APPLICATION parts of the PFLASH), overlaid on the byte differences of each. The varying complexity of the firmwares mentioned in the introduction is clearly illustrated here (compare to Table **??**). Links between matched (by QBinDiff) functions are plotted across pre- and post-update. Despite noise from small/null function matches, the links show clear function shifting to lower addresses and numerous unmatched functions in the pre-update images (colored magenta), suggesting multiple function deletions. More conclusively: there are no (known) spurious matches and zero ‘new’ functions post-update: further suggesting multiple function deletions in the update.
 
 ## Slide 31
 
-Before: sub_eeb989 @ 0xeeb989 After: sub_f08000 @ 0xf08000
+Before: sub_eeb989 @ 0xeeb989
+After: sub_f08000 @ 0xf08000
+
 pshb ; Push Bleas -4,sp; Load effective address into SPclr 5+var_2,sp; Clear memorybra loc_EEB9FD; Branch always pshb ; Push Bleas -4,sp; Load effective address into SPclr 5+var_2,sp; Clear memorybra loc_F08065; Branch always
 ldab 5+var_1,sp; Load Bclra ; Clear Atfr d,y; Transfer register to registertst 0x3BF4,y; Test memory for zero or minusbeq loc_EEBA0C; Branch if equal ldab 5+var_1,sp; Load Bclra ; Clear Atfr d,y; Transfer register to registertst 0x2F62,y; Test memory for zero or minusbeq loc_F08074; Branch if equal
 tst 5+var_2,sp; Test memory for zero or minusbeq loc_EEB990; Branch if equal tst 5+var_2,sp; Test memory for zero or minusbeq loc_F08007; Branch if equal
@@ -815,38 +1408,68 @@ bitb #0x10; Bit test Bbne loc_EEBB0E; Branch if not equal bitb #0x10; Bit test B
 cli ; Clear I bit cli ; Clear I bit
 leas 5,sp; Load effective address into SPrtc ; Return from call leas 5,sp; Load effective address into SPrtc ; Return from call
 
-Figure 13: BinDiff of the LAMP etc check function before and after update. The modi�ed EBB has a two-line change: remove a call to sub_F096F (Process PID payloads) and remove load of an argument to that call. The deleted EBBs were removed because with the call to PID processing removed there is no longer any need to handle LAMP and Active ABS MIDs at a higher priority.
-
-31
+Figure 13: BinDiff of the LAMP etc check function before and after update. The modified EBB has a two-line change: remove a call to sub_F096F (Process PID payloads) and remove load of an argument to that call. The deleted EBBs were removed because with the call to PID processing removed there is no longer any need to handle LAMP and Active ABS MIDs at a higher priority.
 
 ## Slide 32
 
-Before: sub_c12b @ 0xc12b After: sub_c12b @ 0xc12b
-ldx MMC_RPAGE; Load X ldx MMC_RPAGE; Load X
-ldab MMC_GPAGE; Load B ldab MMC_GPAGE; Load B
-stx 3,-sp; Store X stx 3,-sp; Store X
-pshb ; Push B pshb ; Push B
-ldab SCI2_SR1; Load B ldab SCI2_SR1; Load B
-andb SCI2_CR2; AND B with memory andb SCI2_CR2; AND B with memory
-stab 4+var_1,sp; Store B stab 4+var_1,sp; Store B
-bitb #0x20 ; ' '; Bit test B bitb #0x20 ; ' '; Bit test B
-beq loc_C144; Branch if equal beq loc_C144; Branch if equal
-call SCI2_RX_Handler_F1B001,#0xF1; Call subroutine in expanded memory call sub_F1B071,#0xF1; Call subroutine in expanded memory
-ldab SCI2_DRL; Load B ldab SCI2_DRL; Load B
-brclr 4+var_1,sp,#0x10,loc_C14F; Branch if selected bits clear brclr 4+var_1,sp,#0x10,loc_C14F; Branch if selected bits clear
-call SCI2_IDLE_Handler_F1B01B,#0xF1; Call subroutine in expanded memory call sub_F1B08B,#0xF1; Call subroutine in expanded memory
+Before: sub_c12b @ 0xc12b
+
+ldx MMC_RPAGE; Load X
+ldab MMC_GPAGE; Load B
+stx 3,-sp; Store X
+pshb ; Push B
+ldab SCI2_SR1; Load B
+andb SCI2_CR2; AND B with memory
+stab 4+var_1,sp; Store B
+bitb #0x20 ; ' '; Bit test B
+beq loc_C144; Branch if equal
+
+call SCI2_RX_Handler_F1B001,#0xF1; Call subroutine in expanded memory
+
+ldab SCI2_DRL; Load B
+brclr 4+var_1,sp,#0x10,loc_C14F; Branch if selected bits clear
+
+call SCI2_IDLE_Handler_F1B01B,#0xF1; Call subroutine in expanded memory
+
 bset SCI2_SR2,#0x80; Set bits in memory
-ldab SCI2_BDH_AMAP_ASR1; Load B pulb ; Pull B
-andb SCI2_BDL_AMAP_ACR1; AND B with memory ldx 3,sp+; Load X
-stab 4+var_1,sp; Store B stx MMC_RPAGE; Store X
-bclr SCI2_SR2,#0x80; Clear bits in memory stab MMC_GPAGE; Store B
-bitb #0x80; Bit test B rti ; Return from interrupt
+ldab SCI2_BDH_AMAP_ASR1; Load B
+andb SCI2_BDL_AMAP_ACR1; AND B with memory
+stab 4+var_1,sp; Store B
+bclr SCI2_SR2,#0x80; Clear bits in memory
+bitb #0x80; Bit test B
 beq loc_C174; Branch if equal
+
 call gone_SCI2_EDGE_Handler_F1B035,#0xF1; Call subroutine in expanded memory
 bset SCI2_SR2,#0x80; Set bits in memory
 ldab #0x80; Load B
 stab SCI2_BDH_AMAP_ASR1; Store B
 bclr SCI2_SR2,#0x80; Clear bits in memory
+
+pulb ; Pull B
+ldx 3,sp+; Load X
+stx MMC_RPAGE; Store X
+stab MMC_GPAGE; Store B
+rti ; Return from interrupt
+
+After: sub_c12b @ 0xc12b
+
+ldx MMC_RPAGE; Load X
+ldab MMC_GPAGE; Load B
+stx 3,-sp; Store X
+pshb ; Push B
+ldab SCI2_SR1; Load B
+andb SCI2_CR2; AND B with memory
+stab 4+var_1,sp; Store B
+bitb #0x20 ; ' '; Bit test B
+beq loc_C144; Branch if equal
+
+call sub_F1B071,#0xF1; Call subroutine in expanded memory
+
+ldab SCI2_DRL; Load B
+brclr 4+var_1,sp,#0x10,loc_C14F; Branch if selected bits clear
+
+call sub_F1B08B,#0xF1; Call subroutine in expanded memory
+
 pulb ; Pull B
 ldx 3,sp+; Load X
 stx MMC_RPAGE; Store X
@@ -855,37 +1478,64 @@ rti ; Return from interrupt
 
 Figure 14: BinDiff of the SCI2 Handler before and after update. The deleted EBBs were responsible for servicing SCI2 EDGE interrupts.
 
-32
-
 ## Slide 33
 
 ### **Exploitability of Removed Functionality**
 
-We reviewed deleted functions (primarily PID handlers) for vulnerabilities using static and dynamic analysis. Dynamic analysis was limited to fuzzing due to breakpoint limitations. We identi�ed several vulnerabilities in the deleted code.
+We reviewed deleted functions (primarily PID handlers) for vulnerabilities using static and dynamic analysis. Dynamic analysis was limited to fuzzing due to breakpoint limitations. We identified several vulnerabilities in the deleted code.
 
-The PID 0xC2 handler was exploitable for Denial-of-Service (DoS) and Remote Code Execution (RCE); both veri�ed, see below. A DoS condition could be triggered by a J2497 message like 89C2FE, where a large ‘n’ parameter (0xFE) caused a crash. For RCE, the handler processes a length parameter specifying the total size of data following the length parameter. The data is copied to a 0x30-byte stack buffer without length check. The return address is 0x31 bytes from this buffer, creating a classic buffer overflow with one intervening byte: the count of a loop executed after the copy. While J2497 frame limits restrict direct attacker-controlled data to 18 bytes, the copy size is fully controllable.
+The PID 0xC2 handler was exploitable for Denial-of-Service (DoS) and Remote Code Execution (RCE); both verified, see below. A DoS condition could be triggered by a J2497 message like 89C2FE, where a large ‘n’ parameter (0xFE) caused a crash. For RCE, the handler processes a length parameter specifying the total size of data following the length parameter. The data is copied to a 0x30-byte stack buffer without length check. The return address is 0x31 bytes from this buffer, creating a classic buffer overflow with one intervening byte: the count of a loop executed after the copy. While J2497 frame limits restrict direct attacker-controlled data to 18 bytes, the copy size is fully controllable.
 
-Furthermore, the adjacent region is attacker-controlled, as J2497 frames are contiguous (with an injected frame-length byte) in a 0x54-byte FIFO buffer: an attacker can control the entire 0x53 byte copy by �rst sending a complete 0x52 byte buffer as a message (results in additional injected length byte and added checksum byte) starting with 89c280 which �lls the buffer at 0x3BF5 (but does not get passed to higher application layers because it is longer than 21 bytes) then sending 89c280 by itself. The second message will get written to the same location as the previous 89c280 bytes in the receive buffer and will be passed to higher layers (with the remaining buffer in-tact). The wrinkle here is that any reception of other messages on the J2497 databus will interfere with the layout in the buffer: messages received before will move the start position of the �rst and/or second messages, reducing available buffer space and messages received in-between will move the start of the second message, removing the adjacency of the attacker-controlled buffer. A typical J2497 databus does contain a stream of LAMP messages and e.g. 0xC2 and other lower priority messages. There is a means to inhibit reception: during the development of the keyhole mitigation the ideal standing sinusoid frequency was discovered to inhibit message reception. An attacker can transmit this sinusoid interference (to empty the buffer) and then transmit their exploit in a blanking of the sinusoid. They can also abuse the Intellon SSCP485 receiver feature where the pre-amble is superfluous to send the two body-only messages in a sequence quicker than ‘normal’ J2497 databus transmitters can achieve.
+Furthermore, the adjacent region is attacker-controlled, as J2497 frames are contiguous (with an injected frame-length byte) in a 0x54-byte FIFO buffer: an attacker can control the entire 0x53 byte copy by first sending a complete 0x52 byte buffer as a message (results in additional injected length byte and added checksum byte) starting with 89c280 which fills the buffer at 0x3BF5 (but does not get passed to higher application layers because it is longer than 21 bytes) then sending 89c280 by itself. The second message will get written to the same location as the previous 89c280 bytes in the receive buffer and will be passed to higher layers (with the remaining buffer in-tact). The wrinkle here is that any reception of other messages on the J2497 databus will interfere with the layout in the buffer: messages received before will move the start position of the first and/or second messages, reducing available buffer space and messages received in-between will move the start of the second message, removing the adjacency of the attacker-controlled buffer. A typical J2497 databus does contain a stream of LAMP messages and e.g. 0xC2 and other lower priority messages. There is a means to inhibit reception: during the development of the keyhole mitigation the ideal standing sinusoid frequency was discovered to inhibit message reception. An attacker can transmit this sinusoid interference (to empty the buffer) and then transmit their exploit in a blanking of the sinusoid. They can also abuse the Intellon SSCP485 receiver feature where the pre-amble is superfluous to send the two body-only messages in a sequence quicker than ‘normal’ J2497 databus transmitters can achieve.
 
-The RCE was con�rmed on the 2ec80 and 3ec80 targets in a bench environment. This con�rms that although the S12X has an MPU which could inhibit execution from data buffer and/or stack areas, it was not con�gured to do so. The following listing shows a simple proof of concept with NOP placeholders. The �rst code block is copied to the stack (as described above); the return address is overwritten with the address of the �rst code block in the receive FIFO 0x3BF5. Execution flows into the receive buffer original copy of the code block and jumps over the return address and intervening byte there to use an additional area for more code in the buffer.
+The RCE was confirmed on the 2ec80 and 3ec80 targets in a bench environment. This confirms that although the S12X has an MPU which could inhibit execution from data buffer and/or stack areas, it was not configured to do so. The following listing shows a simple proof of concept with NOP placeholders. The first code block is copied to the stack (as described above); the return address is overwritten with the address of the first code block in the receive FIFO 0x3BF5. Execution flows into the receive buffer original copy of the code block and jumps over the return address and intervening byte there to use an additional area for more code in the buffer.
 
-c2_cmd **=** [0x89, 0xc2, 0x30 _# buffer size_ **+** 1 _# 2nd loop limit_ **+** 3] _# ret addr on stack_ payload_in_buff **=** ( 0x3bf5 _# handy static address_ **+** 1 _# 1 for the injected length_ **+** len(c2_cmd) ) _# skip the c2 cmd_
-
-33
+```python
+c2_cmd          = [0x89, 0xc2,
+                   0x30      # buffer size
+                   + 1       # 2nd loop limit
+                   + 3]      # ret addr on stack
+payload_in_buff = ( 0x3bf5  # handy static address
+                    + 1  # 1 for the injected length
+                    + len(c2_cmd) )  # skip the c2 cmd
+```
 
 ## Slide 34
 
-code_1 **=** list(bytes.fromhex( "A7" _# 3BF9: NOP ; needed for jmp_ "1410" **+** _# 3BFA: SEI ; Disable ints_ "A7" ***** 43 **+** _# 3BFF: NOP NOP..._ "2004" _# 3C22: BRA 04 ; to CONTINUE # ; PC (3C29) + 4_ )) sec_loop_lim **=** [0x00] _# skip handler's 2nd loop_ ret_address **=** [0xf2, _# PPAGE for later return # to f2a462 via jump_ (payload_in_buff **>>** 8) **&** 0xFF, (payload_in_buff ) **&** 0xFF] code_2 **=** list(bytes.fromhex( _# CONTINUE:_ "A7" ***** 23 **+** _# 3C2D: NOP NOP... # ; Reduce this for resilience_ "10EF" _# CLI ; Enable Interrupts_ "06A462" _# JMP $A462 ; Return control_ ))
+```python
+code_1 = list(bytes.fromhex(
+  "A7"        # 3BF9: NOP          ; needed for jmp
+  "1410"    + # 3BFA: SEI          ; Disable ints
+  "A7" * 43 + # 3BFF: NOP NOP...
+  "2004"      # 3C22: BRA    04     ; to CONTINUE
+              #                     ; PC (3C29) + 4
+))
+sec_loop_lim = [0x00]   # skip handler's 2nd loop
+ret_address  = [0xf2,   # PPAGE for later return
+                        # to f2a462 via jump
+                (payload_in_buff>>8) & 0xFF,
+                (payload_in_buff    ) & 0xFF]
 
-tosend **=** bytearray(c2_cmd **+** code_1 **+** sec_loop_lim **+** ret_address **+** code_2) you_send(tosend) _# fills the entire 0x3bf5 buffer_ you_send(tosend[0:20]) _# small enough to trigger # reception of 89c2 command_
+code_2 = list(bytes.fromhex(
+              # CONTINUE:
+  "A7" * 23 + # 3C2D: NOP NOP...
+              #       ; Reduce this for resilience
+  "10EF"      # CLI            ; Enable Interrupts
+  "06A462"    # JMP    $A462  ; Return control
+))
 
-This PoC uses the receive FIFO buffer at 0x3BF5 as the location for hosting the executable code and only queues one message (the [0:20] slice above). If other bytes are received before the SEI is executed they will be written into the buffer after 0x3BF5+20. The interfering sinusoid mentioned above can be reasonably effective at accomplishing this. A more robust approach could use the stack only (if the SP address in the 0xC2 handler were known; it was not for us.) Because there was no dynamic analysis possible this PoC was developed iteratively in a crash/no-crash loop) or an approach could send multiple messages and skip over the injected length bytes. Long-running payloads will require feeding the watchdog peripheral and there are many examples of this in the �rmware.
+tosend = bytearray(c2_cmd + code_1
+         + sec_loop_lim + ret_address + code_2)
+you_send(tosend)  # fills the entire 0x3bf5 buffer
+you_send(tosend[0:20])  # small enough to trigger
+                        # reception of 89c2 command
+```
 
-The PoC leaves 66 bytes of usable payload; this is enough to transmit a valid J1939 CAN frame. The basic form of this is 85 bytes long using MOVB for data move. This can be reduced to 62 bytes by using STD 2,X+ instead. And it can be golfed into a 43 byte payload by abusing the stack for PULX. That is enough for a CAN-injection shellcode that directly sends data using the MSCAN peripheral registers. However, using PULX is not practical on the targets which use the XGATE coprocessor during their runtime (such as 2ec80) because the stack is shared. The payload can also be reduced to 39 bytes by re-using the �rmware’s CAN-sending function sub_E9919A. This was con�rmed using the HSW12 assembler and is demonstrated in Figure 15. Also possible is miscon�guring the CAN transceiver to a bad bps which will crash that CAN bus segment and this a much smaller payload. This will silence all ECUs on the bus – until bus recovery �xes the problem, if at all. More is possible. As is always the case with RCE: anything is possible. The space limitation here is also only a minor problem since an attacker can �nd many RAM areas to write longer payloads ‘in pieces’ as well.
+This PoC uses the receive FIFO buffer at 0x3BF5 as the location for hosting the executable code and only queues one message (the [0:20] slice above). If other bytes are received before the SEI is executed they will be written into the buffer after 0x3BF5+20. The interfering sinusoid mentioned above can be reasonably effective at accomplishing this. A more robust approach could use the stack only (if the SP address in the 0xC2 handler were known; it was not for us.) Because there was no dynamic analysis possible this PoC was developed iteratively in a crash/no-crash loop) or an approach could send multiple messages and skip over the injected length bytes. Long-running payloads will require feeding the watchdog peripheral and there are many examples of this in the firmware.
+
+The PoC leaves 66 bytes of usable payload; this is enough to transmit a valid J1939 CAN frame. The basic form of this is 85 bytes long using MOVB for data move. This can be reduced to 62 bytes by using STD 2,X+ instead. And it can be golfed into a 43 byte payload by abusing the stack for PULX. That is enough for a CAN-injection shellcode that directly sends data using the MSCAN peripheral registers. However, using PULX is not practical on the targets which use the XGATE coprocessor during their runtime (such as 2ec80) because the stack is shared. The payload can also be reduced to 39 bytes by re-using the firmware’s CAN-sending function sub_E9919A. This was confirmed using the HSW12 assembler and is demonstrated in Figure 15. Also possible is misconfiguring the CAN transceiver to a bad bps which will crash that CAN bus segment and this a much smaller payload. This will silence all ECUs on the bus – until bus recovery fixes the problem, if at all. More is possible. As is always the case with RCE: anything is possible. The space limitation here is also only a minor problem since an attacker can find many RAM areas to write longer payloads ‘in pieces’ as well.
 
 Returning to the vulnerabilities in the other deleted code, the PID 0xED handler (which is
-
-34
 
 ## Slide 35
 

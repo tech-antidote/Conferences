@@ -14,6 +14,9 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.6
 ocr_unreliable_blocks: 0
+vision_unreviewed_pages: 23
+vision_verified_pages_changed: 24
+vision_verified_pages: 41
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -124,23 +127,27 @@ If a malicious library is loaded into a trusted process, they inherit its privil
 
 ### **`History of dll/dylib hijacking`**
 
-\```
-2010: HD Moore
-public "discovery"
-\```
-
-\```
 early 2000s:
 Georgi Guninski
-\```
+
+2010: HD Moore
+public "discovery"
+
+When programs load DLL's, they search a sequence of directories looking for the DLL. It is important that penetrators can't insert a "fake" DLL in one of these directories where the search finds it before a legitimate DLL of the same name. Confusing this issue is that the different methods search different sequences of directories.
 
 1998: NSA
 (Window's NT Security guide)
+
+Microsoft Security Advisory 2269637
+Insecure Library Loading Could Allow Remote Code Execution
+Published: August 23, 2010 | Updated: May 13, 2014
+
 2015: P. Wardle
 public "discovery"
-RIP dylib hijacks?
 
 Apple's Mitigations
+
+RIP dylib hijacks?
 
 ## Slide 8
 
@@ -173,19 +180,10 @@ resolves dependencies, and then hands off execution.
 \```
 % otool -L /System/Applications/Calculator.app/Contents/MacOS/Calculator
 /usr/lib/libobjc.A.dylib
-\```
-
-\```
 /usr/lib/libSystem.B.dylib
-\```
-
-\```
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /System/Library/PrivateFrameworks/Calculate.framework/Versions/A/Calculate
 /System/Library/PrivateFrameworks/CalculateUI.framework/Versions/A/CalculateUI
-\```
-
-\```
 ....
 \```
 
@@ -199,32 +197,21 @@ Load command 17
 compatibility version 1.0.0
 \```
 
-\```
 each dependency described via a
 'LC_LOAD_DYLIB' load command
-\```
 
 malware analysis: insight into capabilities **`wifi scans webcam access monitoring for usbs`**
 
 \```
 % otool -L Malware/Mokes/A/Mokes
-\```
-
-\```
 ...
 /System/Library/Frameworks/CoreWLAN.framework/Versions/A/CoreWLAN
 /System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
 \```
 
-\```
-monitoring for usbs
-\```
-
-\```
 OSX.Mokes
 dependencies
-\```
 
 ## Slide 10
 
@@ -278,56 +265,77 @@ foo.dylib?
 
 hijackable apps on my box
 
+| Apple | Microsoft | Others |
+| --- | --- | --- |
+| iCloud Photos | Word | Google(drive) |
+| Xcode | Excel | Adobe (plugins) |
+| iMovie (plugins) | Powerpoint | GPG Tools |
+| Quicktime (plugins) | Upload Center | DropBox |
+
 ###### **`in everything was hijackable!`**
 
 \```
+Xcode: hijacked dylib loaded in /Applications/Xcode.app/Contents/MacOS/Xcode (65204
+\```
+
+code injection into Xcode
+(do you trust your compiler?)
+
+\```
 $ reboot
-\```
-
-\```
 $ lsof -p <pid of PhotoStreamAgent>
-\```
-
-\```
 /Applications/iPhoto.app/Contents/Library/LoginItems/
 PhotoFoundation.framework/Versions/A/PhotoFoundation
-\```
 
-\```
 /Applications/iPhoto.app/Contents/Frameworks/
 PhotoFoundation.framework/Versions/A/PhotoFoundation
 \```
 
-\```
 stealthy persistence
 (via Apple's PhotoStreamAgent)
-\```
 
 \```
-code injection into Xcode
-(do you trust your compiler?)
+Applications
+    Instruments.app
+Developer
+OtherFrameworks
+SharedFrameworks
+    CoreProfileDT.framework
+    CoreSimulator.framework
+        Versions
+            A
+                CoreSimulator
 \```
 
-\```
 Gatekeeper bypass via
 'externally' referenced dylibs
-\```
 
 ## Slide 14
 
 ### **`Always an Impact? only if vulnerable app is "useful"`**
 
-\```
-CVE-2025-56383 (Sept. 2025)
-"millions of [Windows] users at risk"
-\```
+Cyber Security News
 
-**`Ok, but really this only allows local`** 🤪 **`attackers to load a library in Notepad++`**
+DLL hijacking test
 
-\```
+DLL hijacking test
+
+确定
+
+Notepad++ DLL Hijacking Vulnerability
+Let Attackers Execute Malicious Code
+
+A newly discovered DLL hijacking vulnerability in Notepad++, the popular source code editor, could allow attackers to execute arbitrary code on a victim's machine. Tracked as CVE-2025-56383, the flaw exists in version 8.8.3 and potentially affects all installed versions of the software, putting millions of users at risk. The vulnerability enables a local attacker to achieve code execution by planting a malicious DLL file in a location where the application will load it.
+
+7:59 AM · Sep 29, 2025 · 143.2K Views
+
 infosec twitter (x)
 ...remains undefeated
-\```
+
+CVE-2025-56383 (Sept. 2025)
+"millions of [Windows] users at risk"
+
+**`Ok, but really this only allows local attackers to load a library in Notepad++`** 🤪
 
 ## Slide 15
 
@@ -340,6 +348,21 @@ infosec twitter (x)
 patch for CVE 2015-3715 (external dylibs)
 \```
 
+GATEKEEPER BYPASS 0x1 (CVE 2015-3715)
+(dylib) hijacking external content
+
+wasn't verified!
+
+verified, so can't modify
+
+<external>.dylib
+
+(signed) application
+
+gatekeeper only verified the app bundle!
+
+.dmg/.zip layout
+
 ###### **`external dylib hijack`**
 
 \```
@@ -349,14 +372,8 @@ $ classdump XprotectFramework
     NSMutableArray *_loadCommands;
     ....
 }
-\```
-
-\```
 + (BOOL)path:(id)arg1 isSafeWithBundle:(id)arg2;
 + (id)allowedLibraryPaths;
-\```
-
-\```
 - (BOOL)checkCommandsWithBundleURL:(id)arg1;
 \```
 
@@ -364,8 +381,7 @@ checks each dependency (e.g. **`LC_LOAD_DYLIB`** )
 
 \```
 01 if (![self path:dylib isSafeWithBundle:bundle]) {
-02
-//NOT SAFE: block/log "Fails dylib check"
+02 //NOT SAFE: block/log "Fails dylib check"
 03 }
 \```
 
@@ -378,6 +394,10 @@ checks each dependency (e.g. **`LC_LOAD_DYLIB`** )
 \```
 
 \```
+dylib in "allowed" dirs?
+\```
+
+\```
 01 if(YES != [dylib hasPrefix:appBundle]) {
 02 //NOT SAFE
 03 }
@@ -387,19 +407,25 @@ checks each dependency (e.g. **`LC_LOAD_DYLIB`** )
 dylib is in app bundle?
 \```
 
-\```
-dylib in "allowed" dirs?
-\```
-
 ## Slide 17
 
 ### **`"Remote" Mitigations (more generally) gatekeeper path randomization, a.k.a. 'translocation'`**
+
+Repackaging Problem
+
+App
+
+Malicious Content
+
+**`"`** **_`What's New in Security`_** **`" (WWDC 2016)`**
+
+* Any references to (untrusted) external content are therefore severed * 💥
 
 disk image, zip, etc.
 
 only bundle is copied ...then exec'd
 
-**`"`** **_`What's New in Security`_** **`" (WWDC 2016)`** * Any references to (untrusted) external content are therefore severed * 💥 **`bundle with external (hijackable?) content`**
+**`bundle with external (hijackable?) content`**
 
 \```
 isolated app
@@ -410,7 +436,27 @@ isolated app
 
 ### **`"Remote" Mitigations gatekeeper path randomization a.k.a. translocation`**
 
-**`# ./processMonitor { "event" : "ES_EVENT_TYPE_NOTIFY_EXEC",`** app executed from a translocated path **`"process" : { "pid" : 4112 .../AppTranslocation/... "name" : "Adobe Photoshop 2026", "path" : "/private/var/folders/tp/j1m5l84j72d4qdmqhbyr6j3c0000gn/T/AppTranslocation/ A73C93FD-0166-44D7-9A3A-C0DC91300BB3/d/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026", ... } } % ps 4112 PID   COMMAND 4112  /private/var/folders/tp/j1m5l84j72d4qdmqhbyr6j3c0000gn/T/AppTranslocation/ A73C93FD-0166-44D7-9A3A-C0DC91300BB3/d/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026`**
+\```
+# ./processMonitor
+{
+  "event" : "ES_EVENT_TYPE_NOTIFY_EXEC",
+  "process" : {
+      "pid" : 4112
+      "name" : "Adobe Photoshop 2026",
+      "path" : "/private/var/folders/tp/j1m5l84j72d4qdmqhbyr6j3c0000gn/T/AppTranslocation/
+                A73C93FD-0166-44D7-9A3A-C0DC91300BB3/d/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026",
+      ...
+  }
+}
+
+% ps 4112
+PID   COMMAND
+4112  /private/var/folders/tp/j1m5l84j72d4qdmqhbyr6j3c0000gn/T/AppTranslocation/
+      A73C93FD-0166-44D7-9A3A-C0DC91300BB3/d/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
+\```
+
+app executed from a translocated path
+.../AppTranslocation/...
 
 Learn more: "'Untranslocating' an App" objective-see.org/blog/blog_0x15.html
 
@@ -432,6 +478,14 @@ downloaded code, must be notarized!
 
 ###### **`developers must submit binaries for notarization prior to distribution`**
 
+Not Opened
+
+Apple could not verify is free of malware that may harm your Mac or compromise your privacy.
+
+Done
+
+Move to Trash
+
 \```
 notarization check
 \```
@@ -442,15 +496,29 @@ macOS will not load a hijacker dylib, even if it's "distributed" with a trusted 
 
 ### **`Local Mitigations "library validation" via the Hardened Runtime`**
 
-🤯
+SUGGESTIONS FOR APPLE
+perhaps how to harden os x/macOS
+
+prevent dylib proxying?
 
 \```
-in 2018 Apple listens!?
+$ codesign -dvv /Install OS X El Capitan.app
+Identifier=com.apple.InstallAssistant.ElCapitan
+Authority=Software Signing
+Authority=Apple Code Signing Certification Authority
+Authority=Apple Root CA
+TeamIdentifier=not set
 \```
 
-\```
+dumping 'Team ID'
+
 a suggestion (2016)
-\```
+
+Discussion
+
+The Hardened Runtime enables library validation by default. This security-hardening feature prevents a program from loading frameworks, plug-ins, or libraries unless they're either signed by Apple or signed with the same Team ID as the main executable. The macOS dynamic linker (dyld) provides a detailed error message when the system prevents code from loading due to library validation.
+
+in 2018 Apple listens!? 🤯
 
 even if a app is vulnerable to a dylib hijack macOS will no longer load the hijacker's dylib!
 
@@ -460,14 +528,28 @@ even if a app is vulnerable to a dylib hijack macOS will no longer load the hija
 
 ### **`Local Mitigations TCC/Gatekeeper improvements`**
 
-local attacker ...attempting app subversion (hijack?)
+Location attribution
+
+Gatekeeper improvements
+
+Launching Mac apps at login
 
 \```
 "What's New in Privacy"
 (WWDC 2022)
 \```
 
-**`vulnerable app (WWDC 2022)`** so now, even privileged (local) attackers cannot modify app bundles! **`"`** **_`Gatekeeper will validate the integrity of all notarized apps on first launch ...additionally, Gatekeeper will attempt to block unauthorized tampering attempts alerting the user`_** **`" -Brandon Dalton`**
+local attacker ...attempting app subversion (hijack?)
+
+would like to access data from other apps.
+
+Keeping app data separate makes it easier to manage your privacy and security.
+
+Don't Allow
+
+Allow
+
+**`vulnerable app`** so now, even privileged (local) attackers cannot modify app bundles! **`"`** **_`Gatekeeper will validate the integrity of all notarized apps on first launch ...additionally, Gatekeeper will attempt to block unauthorized tampering attempts alerting the user`_** **`" -Brandon Dalton`**
 
 ## Slide 22
 
@@ -479,7 +561,7 @@ Conclusions
 
 ### **`TAKEAWAYS`**
 
-"dylib hijacking" on macOS <u>was a massive security issue !</u>
+"dylib hijacking" on macOS <u>was</u> a massive security issue !
 
 But Apple responded ...quickly & resoundingly :
 
@@ -506,10 +588,34 @@ Dylib Hijacking **`Today (macOS 26)`**
 
 not translocated !
 
-disk image
-symlink + hidden bundle + external (?)
+\```
+"event" : "ES_EVENT_TYPE_NOTIFY_EXEC",
+"process" : {
+  "signing info (computed)" : {
+    "teamID" : "JQ525L2MZD",
+    "signatureID" : "com.adobe.Photoshop",
+    "signatureStatus" : 0,
+    "signatureSigner" : "Developer ID",
+    "signatureAuthorities" : [
+      "Developer ID Application: Adobe Inc. (JQ525L2MZD)",
+      "Developer ID Certification Authority",
+      "Apple Root CA"
+    ]
+  },
+  "uid" : 501,
+  "arguments" : [
+    "/Volumes/Adobe Photoshop 2025/Adobe Photoshop 2025/Adobe Photoshop 2025.app/Contents/MacOS/Adobe Photoshop 2025"
+  ],
+  "ppid" : 3433,
+  "ancestors" : [
+    438,
+    1
+\```
 
 app is *not* translocated
+
+disk image
+symlink + hidden bundle + external (?)
 
 \```
 If the user clicks the app, it gets translocated prior to launch
@@ -518,9 +624,23 @@ If the user clicks the app, it gets translocated prior to launch
 
 ## Slide 27
 
-**`"Remotely" Exploiting? "relative" external components still viable Create benign app with (reflective) "updater" dylib Submit for notarization`** 🤞 externally hijackable + w/ no library validation! **`Package up "updater" with an "externally" vulnerable but legitimate (trusted/notarized) app`** Anything that loads or runs external content (normally blocked by app translocation) is now fair game!
+### **`"Remotely" Exploiting? "relative" external components still viable`**
 
-For example: create an app that executes commands from a config file in its working directory, ...omit the file when notarizing, include it later during deployment!
+**`Create benign app with (reflective) "updater" dylib`**
+
+**`Submit for notarization`** 🤞
+
+externally hijackable + w/ no library validation!
+
+**`Package up "updater" with an "externally" vulnerable but legitimate (trusted/notarized) app`**
+
+Anything that loads or runs external content (normally blocked by app translocation) is now fair game!
+
+For example: create an app that executes commands from a config file in its working directory,
+
+...omit the file when notarizing, include it later during deployment!
+
+$5 million. We're also doubling or significantly increasing rewards in many other categories to encourage more intensive research. This includes $100,000 for a complete Gatekeeper bypass, and $1 million for broad unauthorized iCloud access, as no successful exploit has been demonstrated to date in either
 
 ## Slide 28
 
@@ -548,113 +668,91 @@ and loads the first dylib it finds that matches the dependency's name!
 
 ### **`Local Hijacks via Objective-See's "Dylib Hijack Scanner"`**
 
-\```
-//scan all LC_LOAD_DYLIBS
-for(NSString* loadDylib in binary.parserInstance.binaryInfo[KEY_LC_LOAD_DYLIBS]) {
-\```
+Dylib Hijack Scanner
+
+Dylib Hijack Scanner or DHS, is a simple utility that will scan your computer for applications that are either susceptible to dylib hijacking or have been hijacked.
+
+download
 
 \```
-01
-02
+01 //scan all LC_LOAD_DYLIBS
+02 for(NSString* loadDylib in binary.parserInstance.binaryInfo[KEY_LC_LOAD_DYLIBS]) {
 03
-04
-05
-06
-07
+04    //skip dylibs that are imported normally (e.g. without '@rpath')
+05    if(YES != [loadDylib hasPrefix:RUN_SEARCH_PATH]) {
+06       continue;
+07    }
 08
-09
-10
+09    //grab first run path directory
+10    firstRPathDirectory = [binary.parserInstance.binaryInfo[KEY_LC_RPATHS] firstObject];
 11
-12
-13
-14
+12    //"resolve" dylib path using run path
+13    absoluteDylib = [firstRPathDirectory stringByAppendingPathComponent:
+14                    [loadDylib substringFromIndex:"@rpath".length]];
 15
-16
-17
-18
-19
-20
-21
-22
+16        //is candidate
+17        // not found, not in dyld cache, not SIP'd etc
+18        if(YES == [self isCandidate:absoluteDylib]) {
+19            //"VULNERABILITY" DETECTED!
+20            // dylib isn't found in first run-path search directory!
+21        }
+22    ...
 \```
 
-\```
-   //skip dylibs that are imported normally (e.g. without '@rpath')
-if(YES != [loadDylib hasPrefix:RUN_SEARCH_PATH]) {
-      continue;
-   }
-\```
-
-\```
-   //grab first run path directory
-firstRPathDirectory = [binary.parserInstance.binaryInfo[KEY_LC_RPATHS] firstObject];
-\```
-
-\```
-   //"resolve" dylib path using run path
-absoluteDylib = [firstRPathDirectory stringByAppendingPathComponent:
-                    [loadDylib substringFromIndex:"@rpath".length]];
-\```
-
-\```
-        //is candidate
-\```
-
-\```
-        // not found, not in dyld cache, not SIP'd etc
-        if(YES == [self isCandidate:absoluteDylib]) {
-\```
-
-\```
-            //"VULNERABILITY" DETECTED!
-\```
-
-\```
-            // dylib isn't found in first run-path search directory!
-\```
-
-\```
-}
-\```
-
-\```
-    ...
-\```
-
-\```
 vulnerable application detection
-\```
 
 ## Slide 30
 
-\```
-Hijacking Photoshop (libtbb.12.6.dylib)
-...to craft a stealthy 'trusted' implant!
-\```
+### **`Hijacking Photoshop (libtbb.12.6.dylib) ...to craft a stealthy 'trusted' implant!`**
 
+\```
 % otool -l
  "Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026"
 ...
-a "run-path" dependency
 Load command 14
           cmd LC_LOAD_DYLIB
       cmdsize 56
          name @rpath/libtbb.12.6.dylib
 Load command 104
           cmd LC_RPATH
-multiple
-malicious
       cmdsize 32
-legit
- "run-paths"
-         path @executable_path  libtbb.12.6.dylib libtbb.12.6.dylib
+         path @executable_path
 ...
 Load command 106
           cmd LC_RPATH
       cmdsize 48
          path @executable_path/../Frameworks
+\```
+
+a "run-path" dependency
+
+multiple "run-paths"
+
 Disabled lib. validation
-Contents/MacOS Frameworks/
+
+\```
+{
+    "com.apple.security.application-groups" =     (
+        "JQ525L2MZD.com.adobe.NGL"
+    );
+    "com.apple.security.automation.apple-events" = 1;
+    "com.apple.security.cs.allow-dyld-environment-variables" = 1;
+    "com.apple.security.cs.allow-jit" = 1;
+    "com.apple.security.cs.allow-unsigned-executable-memory" = 1;
+    "com.apple.security.cs.disable-library-validation" = 1;
+    "com.apple.security.personal-information.addressbook" = 1;
+    "com.apple.security.personal-information.calendars" = 1;
+    "com.apple.security.personal-information.photos-library" = 1;
+}
+\```
+
+malicious
+libtbb.12.6.dylib
+Contents/MacOS
+
+legit
+libtbb.12.6.dylib
+Frameworks/
 
 \```
 Since the libtbb.12.6.dylib exists in a secondary location
@@ -686,37 +784,27 @@ the expected exports, otherwise the loader with throw an exception
 
 ### **`Crafting a Compatible Hijacker re-exporting exports to original library dylib`**
 
-- **`% dyld_info -exports "Adobe Photoshop 2026.app/Contents/Frameworks/libtbb.12.6.dylib” | c++filt offset      symbol`**
-
-- **`0x00018234  _TBB_runtime_interface_version`**
-
-- **`0x0001823F  _TBB_runtime_version`**
-
-- **`0x00013360  tbb::detail::r1::deallocate(tbb::detail::d1::small_object_pool&, void*, unsigned long)`**
-
-- **`0x0000402C  tbb::detail::r1::initialize(tbb::detail::d1::task_arena_base&)`**
-
-- **`0x0001801A  tbb::detail::r1::initialize(tbb::detail::d1::task_group_context&)`**
-
-- **`0x000125EE  tbb::detail::r1::try_acquire(tbb::detail::d1::queuing_rw_mutex&, tbb::detail::d1::queuing_rw_mutex::scoped_lock&, bool) 0x00012DE7  tbb::detail::r1::try_acquire(tbb::detail::d1::rtm_mutex&, tbb::detail::d1::rtm_mutex::scoped_lock&)`**
-
-- **`0x000122FE  tbb::detail::r1::itt_task_end(tbb::detail::d1::itt_domain_enum)`**
-
 \```
-  0x00012F1F  tbb::detail::r1::acquire_reader(tbb::detail::d1::rtm_rw_mutex&, tbb::detail::d1::rtm_rw_mutex::scoped_lock&, bool)
+% dyld_info -exports "Adobe Photoshop 2026.app/Contents/Frameworks/libtbb.12.6.dylib” | c++filt
+offset      symbol
+0x00018234  _TBB_runtime_interface_version
+0x0001823F  _TBB_runtime_version
+0x00013360  tbb::detail::r1::deallocate(tbb::detail::d1::small_object_pool&, void*, unsigned long)
+0x0000402C  tbb::detail::r1::initialize(tbb::detail::d1::task_arena_base&)
+0x0001801A  tbb::detail::r1::initialize(tbb::detail::d1::task_group_context&)
+0x000125EE  tbb::detail::r1::try_acquire(tbb::detail::d1::queuing_rw_mutex&, tbb::detail::d1::queuing_rw_mutex::scoped_lock&, bool)
+0x00012DE7  tbb::detail::r1::try_acquire(tbb::detail::d1::rtm_mutex&, tbb::detail::d1::rtm_mutex::scoped_lock&)
+0x000122FE  tbb::detail::r1::itt_task_end(tbb::detail::d1::itt_domain_enum)
+0x00012F1F  tbb::detail::r1::acquire_reader(tbb::detail::d1::rtm_rw_mutex&, tbb::detail::d1::rtm_rw_mutex::scoped_lock&, bool)
 \```
 
 ###### **`(legitimate) libtbb.12.6.dylib's exports`**
 
 "re-export"
 
-\```
 hijacker
-\```
 
-\```
 orignal
-\```
 
 \```
 At compile time:
@@ -733,15 +821,22 @@ absolute path
 
 ### **`Crafting a Compatible Hijacker re-exporting exports to original library dylib`**
 
+\```
 % tree "Adobe Photoshop 2026.app"
-Adobe Photoshop 2026.app        └── Contents  original:  Contents/Frameworks/libtbb.12.6.dylib
+Adobe Photoshop 2026.app
+       └── Contents
            ├── Frameworks
            │   ...
            │   ├── libtbb.12.6.dylib
            ├── Info.plist
-           ├── MacOS  hijacker:  Contents/MacOS/libtbb.12.6.dylib
+           ├── MacOS
            │   ├── Adobe Photoshop 2026
            │   ├── libtbb.12.6.dylib
+\```
+
+original: Contents/Frameworks/libtbb.12.6.dylib
+
+hijacker: Contents/MacOS/libtbb.12.6.dylib
 
 ###### **`Photoshop hijacked?`**
 
@@ -754,12 +849,13 @@ Load command 11
          name /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/Frameworks/libtbb.12.6.dylib
 \```
 
-"re-export" **`Frameworks/libtbb.12.6.dylib`**
-
-\```
 Photoshop
+
 MacOS/libtbb.12.6.dylib
-\```
+
+"re-export"
+
+Frameworks/libtbb.12.6.dylib
 
 ## Slide 34
 
@@ -770,7 +866,15 @@ MacOS/libtbb.12.6.dylib
 cp: /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/libtbb.12.6.dylib: Operation not permitted
 \```
 
-**`(even as root) cannot modify application directly`** "safe" to replace apps as **`/Applications /tmp`** they contain no (user) data! **`Copy via ditto Add hijacker dylib Copy back via ditto`**
+**`(even as root) cannot modify application directly`**
+
+"safe" to replace apps as they contain no (user) data!
+
+**`Copy via ditto Add hijacker dylib Copy back via ditto`**
+
+**`/Applications /tmp`**
+
+Verifying "Adobe Photoshop 2025"...
 
 \```
  ...but on launch, will (re)trigger a verification
@@ -778,90 +882,105 @@ cp: /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/l
 
 ## Slide 35
 
-
-> Recovered by OCR — confidence 85/100 on the text kept, 85/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-eco -zsh
+\```
 patrick@Patricks-MacBook-Air-2 DylibHijack % sudo ditto /tmp/Adobe\ Photoshop\ 2025.app /Applications/Adobe\ Photoshop\ 2025/Adobe\ Photoshop\ 2025.app
-patrick@Patricks-MacBook-Air-2 DylibHijack % less ~/Documents/secret.txtff
-```
+patrick@Patricks-MacBook-Air-2 DylibHijack % less ~/Documents/secret.txt
+\```
 
 ## Slide 36
 
+Verifying "Adobe Photoshop 2025"...
+
 was this vibe-coded?
-
-
-> Recovered by OCR — confidence 84/100 on the text kept, 77/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Verifying “Adobe Photoshop 2025"...
-ee was this vibe-coded?
-```
 
 ## Slide 37
 
-### **`Benefits of our Hijack stealthy "persistence" with a high level of inherited trust`** loaded hijacker dylib
+### **`Benefits of our Hijack stealthy "persistence" with a high level of inherited trust`**
 
-- **`% "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026"`**
-
-- **`[+] Injected fake libtbb.12.6.dylib loaded by:`**
+loaded hijacker dylib
 
 \```
+% "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026"
+
+[+] Injected fake libtbb.12.6.dylib loaded by:
 /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
 \```
 
-\```
-Access to files (TCC bypass):
-\```
+Adobe Photoshop
 
-\```
-Access to network (LuLu):
-\```
+Artwork by Guillermo Flores Pacheco
 
-\```
+© 1990-2025 Adobe. All rights reserved.
+For more details and legal notices, go to the About Photoshop screen.
+
+Reading preferences...
+
+Russell Preston Brown, Steve Snyder, Yukie Takahashi, Sarah Kong, David Howe, John Peterson, Kellisa Sandoval, Jonathan Lo, Adam Jerugim, Tom Attix, Yuko Kagita, Meredith Payne-Stotzner, Vinod Balakrishnan, Tai Luxon, Dave Dobish, Melissa Monroe, Chad Rolfs, Steve Guilhamet, Maria Yap, John Fitzgerald, Pam Clark, Foster Brereton, Daniel Presedo, David Hackel, Kevin Hopps, Pete Falco, Jesper Storm Bache, Aryan GD Singh, I-Ming Pao, Gaurishankar Kshirsagar, Ashish Anand, Norman Lei, Izzy Muerte, Michael Taylor, Prabal Kumar Ghosh
+
 no impact to functionality
-\```
+
+**`Access to files (TCC bypass):`**
+
+Files & Folders
+Allow the applications below to access files and folders.
+Adobe Lightroom Classic
+Adobe Photoshop 2025
+Desktop Folder
+Documents Folder
+Downloads Folder
+
+**`Access to network (LuLu):`**
+
+LuLu Rules
+Current Profile: Default
+All Rules
+Photoshop
+All Rules
+Rule
+Photoshop 2025
+com.adobe.Photoshop (signer: Developer ID Application: Adobe Inc. (JQ525L2MZD))
+any address:any port
+Allow
 
 ## Slide 38
 
-\```
-01
-02
-03
-04
-05
-06
-07
-\```
-
 ### **`Security Tools? dylib hijack vs. LuLu (firewall)`**
+
+LuLu Rules
+Current Profile: Default
+All Rules
+Photoshop
+All Rules
+Rule
+Photoshop 2025
+com.adobe.Photoshop (signer: Developer ID Application: Adobe Inc. (JQ525L2MZD))
+any address:any port
+Allow
 
 a LuLu rule: allow photoshop
 
 via **`SecCodeCopySigningInformation`** (audit token -> dynamic code ref) + verified with **`SecCodeCheckValidity`**
 
 \```
-//matched rule
+01 //matched rule
+02 // make sure code signing info (still) matches!
+03 if(YES != matchesCSInfo(process.csInfo, csInfo)) {
+04    os_log_error(logHandle, "ERROR: code signing mismatch:
+05                %{public}@ / %{public}@", process.csInfo, csInfo);
+06    goto bail;
+07 }
 \```
-
-- **`// make sure code signing info (still) matches!`**
-
-- **`if(YES != matchesCSInfo(process.csInfo, csInfo)) {`**
-
-- **`os_log_error(logHandle, "ERROR: code signing mismatch: %{public}@ / %{public}@", process.csInfo, csInfo);`**
-
-- **`goto bail; }`**
 
 \```
 01 BOOL matchesCSInfo(NSDictionary* csInfo_1, NSDictionary* csInfo_2) {
-02 //first check status (e.g. ensure we're still validly signed)!
-03 //then check signer and code signing ID and signing authorities
+02    //first check status (e.g. ensure we're still validly signed)!
+03    //then check signer and code signing ID and signing authorities
 04 }
-LuLu's code signing checks
 \```
 
-🤷 **`Apple's Runtime code signing APIs are limited to the main process`**
+LuLu's code signing checks
+
+**`Apple's Runtime code signing APIs are limited to the main process`** 🤷
 
 ## Slide 39
 
@@ -896,16 +1015,16 @@ responsible process: Photoshop
 
 ## Slide 40
 
-### **`Security Tools? dylib hijack vs. Santa (before hijacking) create Santa rule to allow Photoshop (e.g. via teamID)`**
+### **`Security Tools? dylib hijack vs. Santa`**
+
+**`(before hijacking) create Santa rule to allow Photoshop (e.g. via teamID)`**
 
 \```
 # santactl fileinfo "/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app"
 Path        : /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
 ...
 Team ID     : JQ525L2MZD
-\```
 
-\```
 # sudo santactl rule --allow --teamid --identifier JQ525L2MZD
 Added rule for Team ID: JQ525L2MZD.
 \```
@@ -916,9 +1035,7 @@ Added rule for Team ID: JQ525L2MZD.
 
 \```
 # tail -f /var/db/santa/santa.log
-\```
 
-\```
 santad: action=EXEC|decision=ALLOW|reason=TEAMID|sha256=c74fee63c5cd642bc90f52366992747effa9f797a1785cbe07578cffa65e3c31|
 cert_sha256=9ff4333283ec0a959965925f1ea235a6fe438ded8feab28d238d8a564195a0a4|cert_cn=Developer ID Application: Adobe Inc.
 (JQ525L2MZD)|teamid=JQ525L2MZD|pid=22808|pidversion=60782|ppid=1|uid=501|user=patrick|gid=20|group=staff|mode=M|path=/
@@ -934,16 +1051,37 @@ Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
 
 ### **`Observations`**
 
-\```
-Security decisions are made at the process level
+Security decisions are made <u>at the process level</u>
 ...and any libraries within it, are included in this.
+
 System tools and APIs provide limited visibility into
 a process's loaded libraries.
-\```
 
-loaded dylibs not shown :( …which affords a high level of stealth
+Activity Monitor
+All Processes
 
-🍎 **`-malware? Creating Implement it as a dylib!`**
+Photoshop
+
+| Process Name | % CPU | Kind | PID | User |
+| --- | --- | --- | --- | --- |
+| Adobe Photoshop 2026 | 1.3 | Apple | 22470 | patrick |
+| AutoFill (Adobe Photoshop 2026) | 0.0 | Apple | 22508 | patrick |
+| Adobe Photoshop 2026 Graphics and Media | 0.0 | Apple | 22499 | patrick |
+| QuickLookUIService (Open and Save Panel Service (Adobe... | 0.0 | Apple | 22669 | patrick |
+| Adobe Photoshop 2026 Networking | 0.0 | Apple | 22500 | patrick |
+| Open and Save Panel Service (Adobe Photoshop 2026) | 0.0 | Apple | 22668 | patrick |
+| Adobe Photoshop 2026 Web Content | 0.0 | Apple | 22506 | patrick |
+
+System: 8.96%
+User: 20.62%
+Idle: 70.43%
+CPU LOAD
+Threads: 4,069
+Processes: 720
+
+loaded dylibs not shown :( which affords a <u>high level of stealth</u>
+
+**`Creating`** 🍎 **`-malware? Implement it as a dylib!`**
 
 ## Slide 43
 
