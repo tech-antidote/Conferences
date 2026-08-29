@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.9
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 12
+vision_verified_pages: 12
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,67 +31,91 @@ converted_at: "2026-08-12T05:41:56Z"
 
 ## Slide 1
 
+# gpwn: Wiretapping Fiber ISP Deployments From the Comfort of Your Home
 
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-iber ISP Deployments
-From the Comfort of
-Your Home
 Rithvik Vibhu
+
 Rithwik Jayasimha
-black hat
-USA 2
-2026
-```
 
 ## Slide 2
 
+This slide carries no title or text of its own.
+
 ## Slide 3
+
+This slide carries no title or text of its own.
 
 ## Slide 4
 
+This slide carries no title or text of its own.
+
 ## Slide 5
+
+This slide carries no title or text of its own.
 
 ## Slide 6
 
+This slide carries no title or text of its own.
+
 ## Slide 7
+
+This slide carries no title or text of its own.
 
 ## Slide 8
 
+This slide carries no title or text of its own.
+
 ## Slide 9
+
+This slide carries no title or text of its own.
 
 ## Slide 10
 
+This slide carries no title or text of its own.
+
 ## Slide 11
+
+This slide carries no title or text of its own.
 
 ## Slide 12
 
+**Rithwik Jayasimha**  
+Guys  
+2/24/2026, 12:48:10 AM
 
-> Recovered by OCR — confidence 87/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Rithwik Jayasimha**  
+You arent going to believr what im discovering  
+2/24/2026, 12:48:24 AM
 
-```text
-Rithwik Jayasimbha
-I havent felt this excited in a while
-Rithwik Jayasimbha
-026, 1
-Rithwik Jayasimha
-Guys Holy shit hahaha
-) 1 Rithwik Jayasimba
-O26
-Its obvious in himdsight
-Rithwik Ja ya simbha
-You arent going to believr what im discovering
-O26 124838 AM Rithwik Jayasimha
-I suspect this is not as infeasible as we think
-Rithwik Jayasimha
-Optical fiber networks are TOTALLY different
-O26, 1 AM Rithwik Jayasimha
-My spidey instincts are tingling
-Rithwik Ja ya simbha
+**Rithwik Jayasimha**  
+Optical fiber networks are TOTALLY different  
+2/24/2026, 12:48:39 AM
+
+**Rithwik Jayasimha**  
+Than what we are used to  
+2/24/2026, 12:48:45 AM
+
+**Rithwik Jayasimha**  
+Holy shit hahaha  
+2/24/2026, 12:53:18 AM
+
+**Rithwik Jayasimha**  
+I havent felt this excited in a while  
+2/24/2026, 12:53:24 AM
+
+**Rithwik Jayasimha**  
+Its obvious in himdsight  
+2/24/2026, 12:53:39 AM
+
+**Rithwik Jayasimha**  
+If you compromised the keys for every router, you could in theory wiretap every single user along your fiber line  
+2/24/2026, 1:03:30 AM
+
+**Rithwik Jayasimha**  
+I suspect this is not as infeasible as we think  
+2/24/2026, 1:03:45 AM
+
+**Rithwik Jayasimha**  
+My spidey instincts are tingling  
 2/24/2026, 1:03:59 AM
-Than what we are used to
-Rithwik Jayasimha
-If you compromised the keys for every router, you could in theory wiretap every single user along
-your fiber line
-```
+

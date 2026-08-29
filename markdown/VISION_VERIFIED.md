@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**6126 slides across 218 documents.**
+**6138 slides across 219 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2259 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3115 | structure held; individual characters or lines wrong |
+| badly-mangled | 2260 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3126 | structure held; individual characters or lines wrong |
 | accurate | 724 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -349,6 +349,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | When Queues Become Vulnerabilities Reverse Engineering GCD, XPC Races, and macOS Detection Engineering | 1-86 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | gpwn Wiretapping Fiber ISP Deployments From the Comfort of Your Home | 1-12 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | 1.1 Million Cameras, One Wildcard Architectural Surveillance in an IoT Cloud | 1-54 | badly-mangled, minor-errors | 0 |
 | DEF CON 34 | BLE Theft Auto How a Dealer-Installed Anti-Theft System Exposes Over a Million Cars to Theft | 1-54 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Beyond the Ceremony The 2026 Passkey Attack Surface | 1-100 | badly-mangled, minor-errors, accurate | 0 |
