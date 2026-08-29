@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 89.5
 ocr_unreliable_blocks: 1
+vision_verified_pages_changed: 56
+vision_verified_pages: 56
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -29,15 +31,17 @@ converted_at: "2026-08-12T05:47:27Z"
 
 ## Slide 1
 
+This slide carries no title or text of its own.
+
 ## Slide 2
 
 BLIND TRUST IN THE 6 GHZ BAND
 
 Weaponizing Wi-Fi Automated Frequency Coordination (AFC)
 
-**Yilu Dong** , **Tianchang Yang** , Syed Rafiul Hussain — The Pennsylvania State University Arupjyoti Bhuyan — Idaho National Laboratory
+**Yilu Dong**, **Tianchang Yang**, Syed Rafiul Hussain — The Pennsylvania State University
 
-2
+Arupjyoti Bhuyan — Idaho National Laboratory
 
 ## Slide 3
 
@@ -47,7 +51,7 @@ Weaponizing Wi-Fi Automated Frequency Coordination (AFC)
 
 - Research Assistant, The Pennsylvania State University
 
-- • Wireless protocol and systems security, applied cryptography, vulnerability discovery: 5G systems, WiFi AFC systems
+- Wireless protocol and systems security, applied cryptography, vulnerability discovery: 5G systems, Wi-Fi AFC systems
 
 - <u>`yilud.me`</u>
 
@@ -59,78 +63,81 @@ Weaponizing Wi-Fi Automated Frequency Coordination (AFC)
 
 - <u>`tianchang-yang.github.io`</u>
 
-3
-
 ## Slide 4
 
 ###### Interference Broke a Life-Safety Network
 
-Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for 99.999% reliability . It couldn't go into service.
+Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for **99.999% reliability**. **It couldn't go into service.**
 
-\```
-NOV 2020DEC 20212022
-\```
+**NOV 2020**
 
-\```
-NOV 2022
-\```
+**Degradation detected.** In acceptance testing, the new link underperforms; kept out of service.
 
-**Degradation detected. ~1 year to find one source:** In acceptance testing, the an out-of-band device, hidden by new link underperforms; frequency hopping. kept out of service.
+**DEC 2021**
 
-**It re-offends; t** wo more interferers surface after months of additional investigation
+**~1 year to find one source:** an out-of-band device, hidden by frequency hopping.
+
+**2022**
+
+**It re-offends;** two more interferers surface after months of additional investigation
+
+**NOV 2022**
 
 Formal warning reaches **one** offender. **Two years on** – the interference still continuous and the **system continuous to suffer from harmful interference**
 
 <u>https://www.apcointl.org/~documents/filing/apco-ex-parte-6ghz-miami-dade-112222</u>
 
-**4**
-
 ## Slide 5
 
 ###### Interference Broke a Life-Safety Network
 
-Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for 99.999% reliability . It couldn't go into service.
+Miami-Dade built a new 6 GHz public-safety microwave system for first responders, engineered for **99.999% reliability**. **It couldn't go into service.**
 
-\```
-NOV 2020DEC 20212022NOV 2022
-\```
+**NOV 2020**
 
-**Degradation detected. ~1 year to find one source: It re-offends; t** wo more interferers Formal warning reaches **one** surface after months of additional offender. **Two years on** – the In acceptance testing, the an out-of-band device, hidden by new link underperforms; frequency hopping. investigation interference still continuous and the **system continuous to suffer from** kept out of service. **harmful interference**
+**Degradation detected.** In acceptance testing, the new link underperforms; kept out of service.
 
-AND THIS WAS AN ACCIDENT
+**DEC 2021**
 
-The offenders were unintentional and never hid What if an attacker induces the same interference on purpose, from a legally-authorized AP device/network transmitting within the rules — then stops and leaves nothing to trace
+**~1 year to find one source:** an out-of-band device, hidden by frequency hopping.
+
+**2022**
+
+**It re-offends;** two more interferers surface after months of additional investigation
+
+**NOV 2022**
+
+Formal warning reaches **one** offender. **Two years on** – the interference still continuous and the **system continuous to suffer from harmful interference**
+
+## AND THIS WAS AN ACCIDENT
+
+The offenders were unintentional and never hid
+
+What if an attacker induces the same interference on purpose, from a legally-authorized AP device/network transmitting within the rules — then stops and leaves nothing to trace
 
 <u>https://www.apcointl.org/~documents/filing/apco-ex-parte-6ghz-miami-dade-112222?layout=file</u>
-
-**5**
 
 ## Slide 6
 
 ###### The Biggest Spectrum Release in Decades font size
 
-2.4 GHZ 5 GHZ 6 GHZ
-~ 80 MHz · saturated ~ 500 MHz · congested 1,200 MHz · opened for unlicensed Wi-Fi
+**2.4 GHZ** — ~ 80 MHz · saturated
+
+**5 GHZ** — ~ 500 MHz · congested
+
+**6 GHZ** — 1,200 MHz · opened for unlicensed Wi-Fi
 
 In 2020 the FCC opened **1,200 MHz** at 6 GHz (5.925–7.125 GHz) for commercial use — more contiguous spectrum than everything below it combined, released almost overnight for Wi-Fi 6E and Wi-Fi 7.
-
-**6**
 
 ## Slide 7
 
 ###### The Biggest Spectrum Release in Decades font size
 
-2.4 GHZ
+**2.4 GHZ** — ~ 80 MHz · saturated
 
-- ~ 80 MHz · saturated
+**5 GHZ** — ~ 500 MHz · congested
 
-5 GHZ
-
-~ 500 MHz · congested
-
-6 GHZ
-
-- 1,200 MHz · opened for unlicensed Wi-Fi
+**6 GHZ** — 1,200 MHz · opened for unlicensed Wi-Fi
 
 In 2020 the FCC opened **1,200 MHz** at 6 GHz (5.925–7.125 GHz) for commercial use — more contiguous spectrum than everything below it combined, released almost overnight for Wi-Fi 6E and Wi-Fi 7.
 
@@ -146,8 +153,6 @@ Fixed Service (FS) microwave links have carried mission-critical traffic across 
 
 ###### MOBILE BACKHAUL
 
-**7**
-
 ## Slide 8
 
 ###### 40× Transmit Energy
@@ -158,21 +163,19 @@ Fixed Service (FS) microwave links have carried mission-critical traffic across 
 
 - So the FCC forbids an SP AP from transmitting until it **asks permission.**
 
-Low-power Indoor AP ≤30 dBm USRP B210 Jammer ~20 dBm **Standard Power Max 36 dBm**
+| Low-power Indoor AP | ≤30 dBm |
+| USRP B210 Jammer | ~20 dBm |
+| **Standard Power Max** | **36 dBm** |
 
-Every +3 dB doubles radiated power. 36 vs 20 dBm ≈ 40× the energy
-
-8
+Every +3 dB doubles radiated power. 36 vs 20 dBm ≈ **40× the energy**
 
 ## Slide 9
 
 ###### AFC: Automated Frequency Coordination
 
-Identity, Location, Antenna, Power Class
-Standard Power (SP)
-AFC SERVER
-Access Points (AP)
-Permitted Channels, Max Power
+**Standard Power (SP) Access Points (AP)** → Identity, Location, Antenna, Power Class → **AFC SERVER**
+
+**AFC SERVER** → Permitted Channels, Max Power → **Standard Power (SP) Access Points (AP)**
 
 - Simplifies and automates similar systems in other bands (e.g., CBRS in 3.5 GHz bands)
 
@@ -180,11 +183,9 @@ Permitted Channels, Max Power
 
 - The server checks that location against a **database of protected incumbent receivers** and a propagation model, and works out which channels and power levels won't interfere with them.
 
-- AFC returns an **allocation** : channels and the maximum power the AP is allowed to use.
+- AFC returns an **allocation**: channels and the maximum power the AP is allowed to use.
 
-- The allocation is a **lease valid for 24 hours** . When it expires, the AP has to ask again before it can keep transmitting.
-
-**9**
+- The allocation is a **lease valid for 24 hours**. When it expires, the AP has to ask again before it can keep transmitting.
 
 ## Slide 10
 
@@ -192,121 +193,131 @@ Permitted Channels, Max Power
 
 **AP → AFC: WHO AM I & WHERE I AM**
 
+```
+AVAILABLESPECTRUMINQUIRYREQUEST
+
+"location": { "ellipse": {
+    "center": { "latitude":  40.7935,
+                "longitude": -77.8684 },
+    "majorAxis": 41, "minorAxis": 41 } },
+"deviceDescriptor": { "serialNumber": … }
+```
+
 **AFC → AP: THE POWER & FREQUENCY YOU CAN USE**
 
-10
+```
+AVAILABLESPECTRUMINQUIRYRESPONSE
 
-
-> Recovered by OCR — confidence 84/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-AFC Request/Response Format
-AP — AFC: AVAILABLESPECTRUMINQUIRYREQUEST
-"location": { "ellipse": {
-"center": { "Latitude": 40.7935,
-"Longitude": -—77.8684 },
-“majorAxis": 41, “minorAxis": 41 } },
-"deviceDescriptor": { "serialNumber": .. }
-AFC > AP: AVAILABLESPECTRUMINQUIRYRESPONSE
-THE POWER & FREQUENCY "availableChannellInfo": [{
-YOU CAN USE
-"channelCfi": [1, 5, 9, 13, J],
-"maxEirp": [32.4, 32.4, «] }],
-"2025-09-18T18:58:562" // +24h
-2026 10
+"availableChannelInfo": [{
+    "channelCfi": [1, 5, 9, 13, …],
+    "maxEirp":    [32.4, 32.4, …] }],
+"availabilityExpireTime":
+    "2025-09-18T18:58:56Z"   // +24h
 ```
 
 ## Slide 11
 
 ## A SYSTEM WITH NOTHING TO BREAK
 
-11
-
 ## Slide 12
 
 ###### Simple Protocol & Secure Protection
 
-REQ 1 Mutual authentication  between the AP and the AFC server
-REQ 2
-Integrity  of the AFC's internal databases
-REQ 3
-Accurate interference protection  computed on the AFC server
+**REQ 1** — **Mutual authentication** between the AP and the AFC server
 
-REQ 1
-REQ 3
+**REQ 2** — **Integrity** of the AFC's internal databases
 
-REQ 2
+**REQ 3** — **Accurate interference protection** computed on the AFC server
 
-12
+**STANDARD POWER ACCESS POINT** → availableSpectrumInquiryReq · MUTUAL AUTH · TLS · availableSpectrumInquiryRsp → **AFC SERVER**
+
+AFC SERVER — KEY FUNCTIONS: Device Responder · Spectrum · Database Update · Activity Logging · Interference Protection · Internal Database
+
+NRA Incumbent Database · NRA Equipment Authorization Database
+
+**REQ 1** · **REQ 3** · **REQ 2**
 
 ## Slide 13
 
 ###### Four Assumptions Hold Up 6 GHz
 
-❶ HONEST ❷ HONEST ❸ UNTAMPERED LOCATION PARAMS CODE The AP reports its true Antenna height and power Firmware wasn't modified to geographic location. class match physical reality. falsify what it reports. Assumed. Assumed. Crypto ✓
+**① HONEST LOCATION**
 
-❹ AUTHENTIC CHANNEL The AP AFC link preserves authenticity + integrity. Crypto ✓
+The AP reports its true geographic location.
 
-The spec mandates ❸ and ❹ . It spends **nothing** verifying ❶ and ❷ .
+Assumed.
 
-13
+**② HONEST PARAMS**
+
+Antenna height and power class match physical reality.
+
+Assumed.
+
+**③ UNTAMPERED CODE**
+
+Firmware wasn't modified to falsify what it reports.
+
+Crypto ✓
+
+**④ AUTHENTIC CHANNEL**
+
+The AP↔AFC link preserves authenticity + integrity.
+
+Crypto ✓
+
+The spec mandates ③ and ④. It spends **nothing** verifying ① and ②.
 
 ## Slide 14
 
 ###### Threat Model 1
 
 Attacker
-SP AP AFC Server
 
-_Can an attacker still attack the system, controlling allocated frequency & power (to over/under allocate), even_ **_without physical access to the AP_** _?_
+SP AP ↔ AFC Server
 
-14
+_Can an attacker still attack the system, controlling allocated frequency & power (to over/under allocate), even_ **_without physical access to the AP_**_?_
 
 ## Slide 15
 
 ###### Location Spoofing Attacks against AFC Systems
 
-5 Interference
-4
-Spoofed Location
-2
-1 FS Receiver
-SP AP
-3
-Location Spoofer
-FS Transmitter
+① FS Transmitter
 
-15
+② SP AP
+
+③ Location Spoofer
+
+④ Spoofed Location
+
+⑤ Interference
+
+FS Receiver
 
 ## Slide 16
 
 ###### Overview of GPS Spoofing
 
-Satellite B
 Satellite A
-Location
-Spoofer
-GPS
-Victim
-Receiver
-Receiver
 
-16
+Satellite B
+
+GPS Receiver
+
+Victim Receiver
+
+Location Spoofer
 
 ## Slide 17
 
 ###### Wi-Fi Positioning Spoofing
 
-Location
-Server
-SP AP
-APs in New York City
-in Las Vegas
-retrieved from public
-database
-Location Spoofer
+SP AP in Las Vegas
 
-17
+Location Server
+
+APs in New York City retrieved from public database
+
+Location Spoofer
 
 ## Slide 18
 
@@ -322,7 +333,7 @@ Software:
 
 - gr-802-11 (Wi-Fi)
 
-- APs Tested:
+APs Tested:
 
 - HPE Aruba AP-634
 
@@ -332,77 +343,69 @@ Software:
 
 - ROG STRIX GS-BE18000
 
-18
+_GPS Spoofing Transmitter_
+
+_Victim AP w/ GPS Receiver_
 
 ## Slide 19
 
-DEMO: Wi-Fi Location Spoofing
-
-19
+###### DEMO: Wi-Fi Location Spoofing
 
 ## Slide 20
 
-20
+###### AP Shell
 
+###### Spoofer Shell
 
-> Recovered by OCR — confidence 91/100 on the text kept, 75/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+```
+ssh unifi_SyNSec@192.168.137.120
+unifi_SyNSec@192.168.137.120's password:
 
-```text
-ssh unifi_ SyNSec@192.168.137.120
+*********************** NOTICE ***********************
 * By logging in to, accessing, or using any Ubiquiti product, you are
-*
 * signifying that you have read our Terms of Service (ToS) and End User
-*
 * License Agreement (EULA), understand their terms, and agree to be
-*
 * fully bound to them. The use of SSH (Secure Shell) can potentially
-*
-* harm Ubiquiti devices and result in lost access to them and their data
-*
+* harm Ubiquiti devices and result in lost access to them and their data.
 * By proceeding, you acknowledge that the use of SSH to modify device(s)
-*
 * outside of their normal operational scope, or in any manner
-*
 * inconsistent with the ToS or EULA, will permanently and irrevocably
-*
 * void any applicable warranty.
-*
-| | | = /__| | PRODUCT: U7-Pro-Outdoor
-Ubiquiti Inc. (c) 2010-2026 https: //www.ui.com
+*****************************************************
+
+PRODUCT: U7-Pro-Outdoor
+MAC:
+VERSION: 8.4.6+18068.260111.0707
+Ubiquiti Inc. (c) 2010-2026    https://www.ui.com
 unifi_SyNSec@U7ProOutdoor:~# qtiwifilocation
-xamples
-2026
 ```
 
 ## Slide 21
 
 ###### DNS and NTP Attacks
 
-SP AP Internet
-DNS Query/Resp
-NTP Req/Resp
-Inject Packets
-Network Attacker
+SP AP ↔ Internet
 
-21
+DNS Query/Resp
+
+NTP Req/Resp
+
+Inject Packets
+
+Network Attacker
 
 ## Slide 22
 
 ###### Attack Summary
 
-A1 A2 A3 A4 A5 A6
-INTERFERE FOREIGN BAD TIME NTP DNS FORCE CVE
-HPE ARUBA AP-634
-GPS · Federated Wireless
-RUCKUS T670
-GPS · CommScope
-UBIQUITI U7 PRO OUTDOOR
-Wi-Fi · Qualcomm
-ROG STRIX GS-BE18000
-Wi-Fi · Wi-Fi Alliance
-ATTACK PRESENTS  NOT SUCCESSFUL
+| Device | A1 INTERFERE | A2 FOREIGN | A3 BAD TIME | A4 NTP | A5 DNS | A6 FORCE CVE |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **HPE ARUBA AP-634** (GPS · Federated Wireless) | ● | ● | ● | ● | ● | ● |
+| **RUCKUS T670** (GPS · CommScope) | ● | ● | ● | ○ | ● | ○ |
+| **UBIQUITI U7 PRO OUTDOOR** (Wi-Fi · Qualcomm) | ● | ● | ● | ● | ● | ○ |
+| **ROG STRIX GS-BE18000** (Wi-Fi · Wi-Fi Alliance) | ● | ● | ● | ● | ● | ○ |
 
-22
+● ATTACK PRESENTS   ○ NOT SUCCESSFUL
 
 ## Slide 23
 
@@ -412,66 +415,96 @@ ATTACK PRESENTS  NOT SUCCESSFUL
 
 - The AP send the request with the spoofed coordinate to the AFC server
 
-- • The server reply with **all channels available with maximum allowed power**
+- The server reply with **all channels available with maximum allowed power**
 
-23
+```
+Max EIRP of AFC channel
+20MHz channel      1    5    9   13   17   21   25   29   33   37   41   45   49   53   57   61   65   69   73   77   81
+Max Eirp        36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0
+20MHz channel     85   89   93  117  121  125  129  133  137  141  145  149  153  157  161  165  169  173  177  181
+Max Eirp        36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0
+40MHz channel      1    9   17   25   33   41   49   57   65   73   81   89  121  129  137  145  153  161  169  177
+Max Eirp        36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0
+80MHz channel      1   17   33   49   65   81  129  145  161
+Max Eirp        36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0 36.0
+160MHz channel     1   33   65  129
+Max Eirp        36.0 36.0 36.0 36.0
+320MHz_1 channel   1
+Max Eirp        36.0
+320MHz_1 channel  33
+Max Eirp        36.0
+```
 
 ## Slide 24
 
 ###### Denial-of-Service Attacks (A2-A5)
 
-Impact: No allowed channels in response, the AP cannot transmit in 6 GHz bands. **A2:** Spoof AP to an invalid location, e.g., a foreign country
+Impact: No allowed channels in response, the AP cannot transmit in 6 GHz bands.
+
+**A2:** Spoof AP to an invalid location, e.g., a foreign country
 
 **A3:** Send the GPS signal using invalid time
 
 **A4, A5:** DoS by NTP and DNS Spoofing
 
-24
+```
+Received afc channels
+---------------------
+PHY Type                Allowed Channels
+--------                ----------------
+6GHz                    None
+6GHz 40MHz              None
+6GHz 80MHz              None
+6GHz 160MHz             None
+6GHz 80+80MHz           None
+6GHz 320MHz_1           None
+6GHz 320MHz_2           None
+Present time            2025-06-20 11:36:04
+Expiry time             None
+Country code            None
+AFC channel expired     Yes
+AFC channel required    Yes
+```
 
 ## Slide 25
 
 ###### Force Location Update Attack (A6)
 
-Previous Channel
-Allocation Expires
-1
-Inject a Future Time
-Vulnerable AP Attacker
+Previous Channel Allocation Expires
 
-25
+Vulnerable AP
+
+① Inject a Future Time
+
+Attacker
 
 ## Slide 26
 
 ###### Force Location Update Attack (A6)
 
-AP Regains
-Accurate Time
-2
-Inject Current Time
-Vulnerable AP Attacker
+AP Regains Accurate Time
 
-26
+Vulnerable AP
+
+② Inject Current Time
+
+Attacker
 
 ## Slide 27
 
 ###### Force Location Update Attack (A6)
 
-##### Vulnerable AP
+Vulnerable AP
 
-3
-Inject Fake Location
+③ Inject Fake Location
 
 Attacker
 
 New AFC Request w/ Spoofed Location
 
-27
-
 ## Slide 28
 
 ### WHAT IF THE ATTACKER OWNS THE DEVICE?
-
-28
 
 ## Slide 29
 
@@ -481,47 +514,47 @@ New AFC Request w/ Spoofed Location
 
 ###### ROG STRIX GS-BE18000
 
-29
-
 ## Slide 30
 
-Threat Model 2
+###### Threat Model 2
 
-Attacker
-SP AP AFC Server
+SP AP ↔ AFC Server
+
+Attacker — Shell Access → SP AP
 
 With the **user-level access** to the AP, can an attacker attack the AFC system to **manipulate the frequency and power level** transmitted from the AP?
-
-30
 
 ## Slide 31
 
 ###### The Root of Trust
 
-##### **SP AP AFC Server** Verify Public KeyAccept and Encrypt Connection **Cert Store**
+SP AP ↔ AFC Server
 
-31
+SP AP → Cert Store
+
+Verify Public Key → Accept and Encrypt Connection
 
 ## Slide 32
 
 ###### The Root of Trust (Compromised)
 
-SP AP Attacker
-Verify Public KeyAccept and Encrypt Connection
-Inject New Root CA
-Cert Store
+SP AP ↔ Attacker
 
-32
+SP AP → Cert Store
+
+Verify Public Key → Accept and Encrypt Connection
+
+Attacker → Inject New Root CA → Cert Store
 
 ## Slide 33
 
 ###### Forge AFC Response
 
-AFC Query
-SP AP AFC Server
-Attacker
+SP AP · Attacker · AFC Server
 
-33
+AFC Query (SP AP ↔ AFC Server)
+
+AFC Query (SP AP ↔ Attacker)
 
 ## Slide 34
 
@@ -531,102 +564,116 @@ Only 20 MHz available
 
 Only 1 channel available
 
-34
-
-
-> Recovered by OCR — confidence 81/100 on the text kept, 68/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Force Channel
-Selection Attack
-"version": "1.4",
-"requestId": "2483720664",
-"response": {
-"responseCode": 0O,
-"shortDescription": "Success"
-"rulesetId": "US 47 CFR PART 15 SUBPART_E",
-. requencyRange":
-Only 20 MHz available "lowFrequency": 6845,
-"highFrequency": 6865
-Only 1 channel available nghannelefi": [181],
-"maxEirp": [36.0]
-"availabilityExpireTime": "2025-10-21T19:08:552"
-34
+```
+{
+  "version": "1.4",
+  "availableSpectrumInquiryResponses": [{
+    "requestId": "2483720664",
+    "response": {
+      "responseCode": 0,
+      "shortDescription": "Success"
+    },
+    "rulesetId": "US_47_CFR_PART_15_SUBPART_E",
+    "availableFrequencyInfo": [{
+      "frequencyRange": {
+        "lowFrequency": 6845,
+        "highFrequency": 6865
+      },
+      "maxPsd": 23
+    }],
+    "availableChannelInfo": [{
+      "globalOperatingClass": 131,
+      "channelCfi": [181],
+      "maxEirp": [36.0]
+    }],
+    "availabilityExpireTime": "2025-10-21T19:08:55Z"
+  }]
+}
 ```
 
 ## Slide 35
 
 ###### DEMO: Force Channel Selection Attack
 
-35
-
 ## Slide 36
 
-36
+###### AP Shell
 
+```
+ssh unifi_SyNSec@192.168.137.101
 
-> Recovered by OCR — confidence 95/100 on the text kept, 76/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+*********************** NOTICE ***********************
+* By logging in to, accessing, or using any Ubiquiti product, you are
+* signifying that you have read our Terms of Service (ToS) and End User
+* License Agreement (EULA), understand their terms, and agree to be
+* fully bound to them. The use of SSH (Secure Shell) can potentially
+* harm Ubiquiti devices and result in lost access to them and their data.
+* By proceeding, you acknowledge that the use of SSH to modify device(s)
+* outside of their normal operational scope, or in any manner
+* inconsistent with the ToS or EULA, will permanently and irrevocably
+* void any applicable warranty.
+*****************************************************
 
-```text
-void any applicable warranty.
-By logging in to, accessing, or using any Ubiquiti product, you are
-signifying that you have read our Terms of Service (ToS) and End User
-License Agreement (EULA), understand their terms, and agree to be
-fully bound to them. The use of SSH (Secure Shell) can potentially
-harm Ubiquiti devices and result in lost access to them and their data.
-By proceeding, you acknowledge that the use of SSH to modify device(s)
-outside of their normal operational scope, or in any manner
-inconsistent with the ToS or EULA, will permanently and irrevocably
-ssh unifi_ SyNSec@192.168.137.101
-Ubiquiti Inc. (c) 2010-2026
+PRODUCT: U7-Pro-Outdoor
 MAC:
 VERSION: 8.4.6+18068.260111.0707
-2026
+Ubiquiti Inc. (c) 2010-2026    https://www.ui.com
+unifi_SyNSec@U7ProOutdoor:~#
 ```
+
+###### Attacker Shell
+
+`gps-sdr-sim`
 
 ## Slide 37
 
 ###### Force Channel Selection Attack
 
-AP forced to use channel 181
+**AP forced to use channel 181**
 
-6 GHz channel disabled
+U7 Pro Outdoor — Connected To -
 
-37
+AirView
 
+TX Retries — Low (0%)
 
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+11:10 PM   11:10 AM   Now
 
-```text
-Force Channel Selection Attack
-U7 Pro Outdoor
-TX Retries
-9m 51s
-Ch. 11 (2.4 GHz, 20 MHz) 2x2 WiFi 7
-Ch. 48 (5 GHz, 40 MHz) 2x2 WiFi 7
-Ch. 181 (6 GHz, 20 MHz) 2x2 WiFi 7
-(6 GHz, 20 MHz) 2x2 WiFi 7
-AP forced to use channel 181
-U7 Pro Outdoor
-6 GHz is currently disabled. The AP did not
-receive an AFC response for this location and
-will automatically retry. Learn more
-TX Retries
-Ch. 11 (2.4 GHz, 20 MHz) 2x2 WiFi 7
-Ch. 48 (5 GHz, 40 MHz) 2x2 WiFi 7
-6 GHz channel disabled
-2026 37
-```
+↓ 512 bps   ↑ 3.13 Kbps      9m 51s
+
+Ch. 11 (2.4 GHz, 20 MHz)   2x2   WiFi 7   0
+Ch. 48 (5 GHz, 40 MHz)   2x2   WiFi 7   0
+Ch. 181 (6 GHz, 20 MHz)   2x2   WiFi 7   0
+
+**6 GHz channel disabled**
+
+U7 Pro Outdoor — Connected To -
+
+AirView
+
+⚠ 6 GHz is currently disabled. The AP did not receive an AFC response for this location and will automatically retry. Learn more
+
+TX Retries — Low (0%)
+
+11:05 PM   11:05 AM   Now
+
+↓ 1.22 Kbps   ↑ 38.8 Kbps      3m 35s
+
+Ch. 11 (2.4 GHz, 20 MHz)   2x2   WiFi 7   0
+Ch. 48 (5 GHz, 40 MHz)   2x2   WiFi 7   0
+Ch. Auto (6 GHz, 20 MHz)   2x2   WiFi 7   0
 
 ## Slide 38
 
 ###### Send Requests From Client to Server
 
-AFC Query
-SP AP AFC Server
-Attacker
+SP AP · Attacker · AFC Server
 
-38
+AFC Query (SP AP ↔ AFC Server)
+
+Credentials (SP AP ↔ Attacker)
+
+AFC Query (Attacker ↔ AFC Server)
 
 ## Slide 39
 
@@ -636,79 +683,67 @@ Attacker
 
 2. Extract the shared secret from the connection
 
-`TLS MitM  ·  U7-PRO-OUTDOOR  →  QUALCOMM` **`POST /device/0c18f25c-XXXX-XXXX-XXXX-XXXXXXXXXXXX/`** `api.qcs` **`{"api_version":1,"request_type":"request_authToken",`** ← the tuple **`"uid":"16165XXXXX","oem_id":"536","prd_id":"42662", "shared_secret":"HxnT5bXXXXXXXXXXXXXXXX",`** ← cleartext in the session **`"application":"AFC"}`**
-
 3. Use the shared secret to obtain JWT token
 
 4. Attach the JWT token to the AFC request
 
-**`HTTP/1.1 200 OK`** `Server: gunicorn {"status":"OK","auth_token":"eyJhbGciOiJIUzI1NiIs..."} JWT  header {"alg":"HS256","typ":"JWT"} claims {"exp":1767293788,` 30-day life `"app":"AFC", "uid":"7881175f-XXXX-XXXX-XXXXXXXXXXXX", "certs":[["CA","6545A-U7PROO"], ["US","SWX-U7PROO"]]}` **`POST /afc_client_api/afc_api/`** `afcapi.qcs` **`Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`** ← no Bearer
+```
+TLS MitM  ·  U7-PRO-OUTDOOR  →  QUALCOMM
+
+POST /device/0c18f25c-XXXX-XXXX-XXXX-XXXXXXXXXXXX/    api.qcs
+{"api_version":1,"request_type":"request_authToken",    ← the tuple
+ "uid":"16165XXXXX","oem_id":"536","prd_id":"42662",
+ "shared_secret":"HxnT5bXXXXXXXXXXXXXXXX",    ← cleartext in the session
+ "application":"AFC"}
+
+HTTP/1.1 200 OK    Server: gunicorn
+{"status":"OK","auth_token":"eyJhbGciOiJIUzI1NiIs..."}
+
+JWT   header {"alg":"HS256","typ":"JWT"}
+      claims {"exp":1767293788,    30-day life
+              "app":"AFC",
+              "uid":"7881175f-XXXX-XXXX-XXXXXXXXXXXX",
+              "certs":[["CA","6545A-U7PROO"],
+                       ["US","SWX-U7PROO"]]}
+
+POST /afc_client_api/afc_api/    afcapi.qcs
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...    ← no Bearer
+```
 
 Serial, shared secret, service path and token identity are masked.
-
-39
 
 ## Slide 40
 
 ###### The ASUS/Wi-Fi Alliance Approach: Mutual TLS
 
-\```
-ASUS GS-BE18000  ·  SHELL
-\```
-
 1. Find the HTTP endpoint for AFC
 
 2. Extract client certificate from the device
 
-\```
-admin@GS-BE18000-CB50:/# nvram show | grep afc_
-afc_cert_id=MSQ-XXXXXXXX
-\```
-
-\```
-afc_dev_serial_no=XXXXXXXXXXXXXXX
-\```
-
-\```
-afc_freq_range=5925,6425;6525,6875
-\```
-
-\```
-afc_geo_from=source_wifi
-\```
-
 3. Use the certificate to connect to the server
 
-\```
+```
+ASUS GS-BE18000  ·  SHELL
+
+admin@GS-BE18000-CB50:/# nvram show | grep afc_
+afc_cert_id=MSQ-XXXXXXXX
+afc_dev_serial_no=XXXXXXXXXXXXXXX
+afc_freq_range=5925,6425;6525,6875
+afc_geo_from=source_wifi
 afc_in_wifiaplist={"considerIp":"false","wifiAccessPoints":[
   {"macAddress":"XX:XX:XX:XX:XX:XX","signalStrength":-20}, ...
 afc_insecure=0
-\```
-
-\```
 afc_loc_height_type=AGL
-\```
-
-**`afc_mtls_cert=/jffs/.sys/afc/afc_mtls_cacert.pem`** ← cert path `afc_op_class=131,132,133,134,137`
-
-\```
+afc_mtls_cert=/jffs/.sys/afc/afc_mtls_cacert.pem    ← cert path
+afc_op_class=131,132,133,134,137
 afc_out_lat=XX.XXXXXXX
-\```
-
-\```
 afc_out_lng=-XX.XXXXXX
-\```
-
-\```
 afc_reg_rules=US_47_CFR_PART_15_SUBPART_E
 afc_sp=1
-\```
-
-**`afc_url=https://mtls-access.afc.wi-fi.com/api/XXXXXXXX`** ← endpoint
+afc_url=https://mtls-access.afc.wi-fi.com/api/XXXXXXXX    ← endpoint
+```
 
 Serial number, MAC addresses, coordinates and the API token are masked.
-
-40
 
 ## Slide 41
 
@@ -722,7 +757,7 @@ Serial number, MAC addresses, coordinates and the API token are masked.
 
 ###### Concurrent Requests VS. Response Time on Open AFC
 
-41
+Chart — X-axis: Number of requests (0–1000); Y-axis: Response time (s). Legend: Mean, Max, Min, Mean–Max spread, Min–Mean spread, 180s.
 
 ## Slide 42
 
@@ -738,296 +773,189 @@ Serial number, MAC addresses, coordinates and the API token are masked.
 
 **PEAK INTERFERENCE (I/N) INTO THE FS RECEIVER VS. DISTANCE**
 
- 20
-no client   no data tra  ic
-  0
-0
-            FCC  A  F        F    C
-  0
-0.   mi  .0 mi 3.0 mi  .  mi  .  mi
+| Distance | I/N (dB) |
+| --- | --- |
+| 275 m (0.17 mi) | +25.7 |
+| 1.6 km (1.0 mi) | +16.1 |
+| 4.8 km (3.0 mi) | +4.4 |
+| 8.9 km (5.5 mi) | -11.5 |
+| 9.4 km (5.8 mi) | -13.3 |
+
+beacons only · no client · no data traffic
+
+-6 dB I/N · FCC HARMFUL-INTERFERENCE LINE
+
+Fortson · Columbus
 
 <u>https://www.epri.com/research/programs/062333/results/3002022241</u>
-
-42
 
 ## Slide 43
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-43
+Miami-Dade 6 GHz Microwave Call Signs (list of call signs — redacted)
 
+**Federal Communications Commission — Universal Licensing System**
 
-> Recovered by OCR — confidence 90/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Miami-Dade 6 GHz Microwave Call Signs
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Ww
-Wi
-Wi
-Wi
-)
-23
-69
-79
-86
-88
-92
-95
-96
-99
-03
-05
-08
-14
-17
-7
-18
-Federal
-(or Communications
-Commission
-Universal Licensing System
 FCC > WTB > ULS > Online Systems > License Search
-License Search
-Search Results
-Q New Search Q Refine Search & Printable Page
-Specified Search
-Radio Service =|CF, MG, MW
-Name like MIAMI-DADE
-Status = Active
-Frequency Upper Band >= 5925
-Frequency Assigned <= 7125
-@ Query Download
-<'> Map Licenses
-2026 43
-```
+
+License Search — Search Results
+
+New Search · Refine Search · Printable Page · Query Download · Map Licenses
+
+Specified Search:
+- Radio Service = **CF, MG, MW**
+- Name like **MIAMI-DADE**
+- Status = **Active**
+- Frequency Upper Band >= **5925**
+- Frequency Assigned <= **7125**
 
 ## Slide 44
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-44
+Miami-Dade 6 GHz Microwave Call Signs (list of call signs — redacted)
 
+**Federal Communications Commission — Universal Licensing System** · FCC > WTB > ULS > Online Systems > License Search
 
-> Recovered by OCR — confidence 93/100 on the text kept, 89/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
+License Search — Search Results
 
-```text
-Communications
-Commission
-FE Federal FCC Home | Search | Updates | E-Filing | Initiatives | For Consumers | Find People
-Miami-Dade 6 GHz Microwave Call Signs
-9 Universal
-23 License Search
-Search Results
-169 Q New Search Q Re
-9
-Radio Service = CF, MG, MW
-186 Name like MIAMI-DADE
-Status = Active
-Frequency Upper Band >= 5925,
-Frequency Assigned <= 7125
-ending Application(s)
-fermination Pending
-Page 123
-Call Sign/Lease ID FRN Radio Service Status
-MIAMI-DADE COUNTY 0001802735 Active 10/17/2031
-Miami-Dade County 0001802735 Active 03/19/2029
-Miami-Dade County 0001802735 Active 03/19/2029
-MIAMI-DADE COUNTY 0001802735 Active 01/26/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-MIAMI-DADE COUNTY 0015402795 Active 09/30/2030
-Call Sign/Lease ID FRN i Status Expiration Date
-Page 123
-2026 44
-```
+New Search · Refine Search · Printable Page · Query Download · Map Licenses
+
+Specified Search: Radio Service = **CF, MG, MW**; Name like **MIAMI-DADE**; Status = **Active**; Frequency Upper Band >= **5925**; Frequency Assigned <= **7125**
+
+Matches 1-10 (of 27)
+
+| # | Call Sign/Lease ID | Name | FRN | Radio Service | Status | Expiration Date |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (redacted) | MIAMI-DADE COUNTY | 0001802735 | MW | Active | 10/17/2031 |
+| 2 | (redacted) | Miami-Dade County | 0001802735 | MW | Active | 03/19/2029 |
+| 3 | (redacted) | Miami-Dade County | 0001802735 | MW | Active | 03/19/2029 |
+| 4 | (redacted) | MIAMI-DADE COUNTY | 0001802735 | MW | Active | 01/26/2030 |
+| 5 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+| 6 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+| 7 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+| 8 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+| 9 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+| 10 | (redacted) | MIAMI-DADE COUNTY | 0015402795 | MW | Active | 09/30/2030 |
+
+PA = Pending Application(s) · TP = Termination Pending · L = Lease · Page 1 2 3
 
 ## Slide 45
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record
+**RECON** — **FS Record**: FS link information is public
 
-FS link information is public
+ULS License — **Microwave Public Safety Pool License - WP (redacted) - MIAMI-DADE COUNTY**
 
-45
+MAIN · ADMIN · LOCATIONS · PATHS · MAP
 
+New Search · Refine Search · Return to Results · Printable Page · Reference Copy · Map License
 
-> Recovered by OCR — confidence 88/100 on the text kept, 86/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+- Call Sign: (redacted) | Radio Service: MW - Microwave Public Safety Pool
+- Status: Active | Auth Type: Regular
 
-```text
-ULS License
-Microwave Public Safety Pool License - WP 2 - MIAMI-DADE COUNTY
-Q New Search Q Refine Search [jp Return to Results (By Printable Page fy Reference Copy <4» Map License
-ADMIN LOCATIONS
-Call Sign wr Radio Service MW - Microwave Public Safety Pool
-Status Active Auth Type Regular
-Dates
-Grant 09/24/2021 Expiration 10/17/2031
-Effective 12/29/2022 Cancellation
-Control Points
-None
-FRN og Governmental Entity
-(View Ownership Filing)
-Licensee
-5680 SW 87th Ave . p72
-MIAMI, FL 33173 dade.gov
-ATTN ITD Radio Communications Division
-Contact
-MIAMI-DADE COUNTY , B909
-Miguel D Luna t 396
-5680 SW 87th Ave ipjdade.gov
-MIAMI, FL 33173
-ATTN ITD Radio Division
-Microwave Data
-Oper Type Permanent Fixed Point to Point Station Class FXO - Operational Fixed
-Ownership and Qualifications
-Radio Service Type Fixed bl k al t
-USA
-2026 45
-```
+Dates: Grant 09/24/2021 | Expiration 10/17/2031 | Effective 12/29/2022 | Cancellation:
+
+Control Points: None
+
+Licensee: FRN (redacted) | Type: Governmental Entity
+
+MIAMI-DADE COUNTY, 5680 SW 87th Ave, MIAMI, FL 33173, ATTN ITD Radio Communications Division (phone/fax/email redacted)
+
+Contact: MIAMI-DADE COUNTY, Miguel D Luna, 5680 SW 87th Ave, MIAMI, FL 33173, ATTN ITD Radio Division (phone/fax/email redacted)
+
+Microwave Data: Oper Type Permanent Fixed Point to Point | Station Class FXO - Operational Fixed
+
+Ownership and Qualifications: Radio Service Type Fixed | Regulatory Status Private Comm | Interconnected No
 
 ## Slide 46
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-46
+MAIN · ADMIN · LOCATIONS · PATHS · MAP
 
+- Call Sign: WPJE410 | Radio Service: MW - Microwave Public Safety Pool
+- 2 Total Locations · 10 Locations per Summary Page
 
-> Recovered by OCR — confidence 94/100 on the text kept, 94/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+**Fixed Transmit Location 1:**
+- MIAM (redacted) GARAGE #4, MIAMI, FL, MIAMI-DADE County | Coordinates: 25-⋯ W (redacted)
+- Site Elevation (AMSL): 1.5m | Height w/o Appurtenances: 42.7m
+- ASR #/File #: N/A | Height w/ Appurtenances: 42.7m
+- Support Structure Type: | NEPA Required: | Quiet Zone Notification Date: | Quiet Zone Consent:
+- Is coordination with Canada required? | Is coordination with Mexico required?
+- Special Conditions: None
 
-```text
-LOCATIONS
-Call Sign WPJE410
-2 Total Locations
-< ions per Summary Page
-Fixed Transmit Location 1:
-MIAM GARAGE #4
-MIAMI, FL
-MIAMI-DADE County
-Site Elevation
-(AMSL)
-ASR #/File #
-Support Structure Type
-NEPA Required
-Quiet Zone Notification Date
-Is coordination with Canada required?
-Is coordination with Mexico required?
-Special Conditions
-Other Locations
-Location 2 : 1049
-Type
-Site Elevation
-(AMSL)
-ASR #/File #
-Receive Location
-3.0m
-N/A
-Radio Service MW - Microwave Public Safety Pool
-Coordinates
-Height w/o
-Appurtenances
-Height w/
-Appurtenances
-Quiet Zone Consent
-Coordinates
-Height w/o
-Appurtenances
-Height w/
-Appurtenances
-2026 46
-```
+**Other Locations — Location 2 : 1049**
+- Type: Receive Location | Coordinates: 25-⋯ W (redacted)
+- Site Elevation (AMSL): 3.0m | ASR #/File #: N/A
 
 ## Slide 47
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-47
+MAIN · ADMIN · LOCATIONS · PATHS · MAP
 
+Call Sign: (redacted) | Radio Service: MW - Microwave Public Safety Pool
 
-> Recovered by OCR — confidence 89/100 on the text kept, 87/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-(MAIN (ADMIN )( LOCATIONS PATHS MAP
-ve 10 adio Service MW - Microwave Public Safety Pool
-2026 47
-```
+**License Geography** — map of the FS microwave link path between its two endpoints
 
 ## Slide 48
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-`SPOOF` Side Channel Off-path spoofing of location/time side channel
+**SPOOF** — **Side Channel**: Off-path spoofing of location/time side channel
 
-`ATTACK` Re-query Wait for 24-hour AFC requery or force
-
-48
+**ATTACK** — **Re-query**: Wait for 24-hour AFC re-query or force
 
 ## Slide 49
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-`SPOOF` Side Channel Off-path spoofing of location/time side channel
+**SPOOF** — **Side Channel**: Off-path spoofing of location/time side channel
 
-`ATTACK` Re-query Wait for 24-hour AFC requery or force
+**ATTACK** — **Re-query**: Wait for 24-hour AFC re-query or force
 
-1 Interfere
+**1 Interfere**
 
-2 Coordinated
+**2 Coordinated**
 
-3 DoS
-
-49
+**3 DoS**
 
 ## Slide 50
 
 ###### How an Attacker May Exploit AFC?
 
-`RECON` FS Record FS link information is public
+**RECON** — **FS Record**: FS link information is public
 
-`SPOOF` Side Channel Off-path spoofing of location/time side channel
+**SPOOF** — **Side Channel**: Off-path spoofing of location/time side channel
 
-`ATTACK` Re-query Wait for 24-hour AFC requery or force
+**ATTACK** — **Re-query**: Wait for 24-hour AFC re-query or force
 
-`EXIT` Persist Effect Attacker can stop transmission while AP keeps broadcast/DoS
+**EXIT** — **Persist Effect**: Attacker can stop transmission while AP keeps broadcast/DoS
 
-1 Interfere
+**1 Interfere**
 
-2 Coordinated
+**2 Coordinated**
 
-3 DoS
-
-50
+**3 DoS**
 
 ## Slide 51
 
 # SOLUTIONS?
-
-51
 
 ## Slide 52
 
@@ -1039,47 +967,21 @@ ve 10 adio Service MW - Microwave Public Safety Pool
 
 - Discussed and recommended by some vendors
 
-52
-
 ## Slide 53
 
 ###### Securing Device and Server Implementations
 
-SP AP
+SP AP ↔ AFC SERVER
 
-###### AFC SERVER
+**ON THE AP** — **Lock down AFC parameters**: No user access to the certificate and key, or to the shared secrets.
 
-\```
-ON THE AP
-\```
+**ON THE TLS LINK** — **Certificate pinning**: The AP rejects any root CA an attacker injects into its store.
 
-\```
-ON THE TLS LINK
-\```
-
-\```
-ON THE AFC SERVER
-\```
-
-Lock down AFC parameters
-
-Certificate pinning
-
-Rate limit requests
-
-No user access to the certificate and key, or to the shared secrets.
-
-The AP rejects any root CA an attacker injects into its store.
-
-Per device and per IP address — one query costs 10–20 s of compute.
-
-53
+**ON THE AFC SERVER** — **Rate limit requests**: Per device and per IP address — one query costs 10–20 s of compute.
 
 ## Slide 54
 
 # TAKEAWAYS
-
-54
 
 ## Slide 55
 
@@ -1091,19 +993,15 @@ Per device and per IP address — one query costs 10–20 s of compute.
 
 - No device being tested is completely secure and can all lead to harmful interference and large-scale DoS attacks when attacked.
 
-55
-
 ## Slide 56
 
 ###### Acknowledgments
 
-\```
-DISCUSSIONS & TECHNICAL ASSISTANCE
-\```
+**DISCUSSIONS & TECHNICAL ASSISTANCE**
 
 - **EPRI:** David Waters, Tim Godfrey, Jay Herman
 
-▸ **Univ. of Notre Dame:** Dr. M. Rochman, Dr. M. Ghosh
+- **Univ. of Notre Dame:** Dr. M. Rochman, Dr. M. Ghosh
 
 - **AT&T Labs:** Dr. Thomas Willis
 
@@ -1111,14 +1009,11 @@ DISCUSSIONS & TECHNICAL ASSISTANCE
 
 - **INL:** John Beck, Nathaniel Bennett
 
-\```
-FUNDING & SUPPORT
-\```
+**FUNDING & SUPPORT**
 
 This work is supported by a research grant and collaboration from the following institutions:
 
-▸ **DOE CESER** Department of Energy Office of Cybersecurity, Energy Security, and Emergency Response
+- **DOE CESER** — Department of Energy Office of Cybersecurity, Energy Security, and Emergency Response
 
-▸ **INL** Idaho National Laboratory
+- **INL** — Idaho National Laboratory
 
-56
