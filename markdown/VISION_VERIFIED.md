@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**6138 slides across 219 documents.**
+**6211 slides across 220 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2260 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3126 | structure held; individual characters or lines wrong |
+| badly-mangled | 2265 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3194 | structure held; individual characters or lines wrong |
 | accurate | 724 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -322,6 +322,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware | 1-55 | badly-mangled, minor-errors, accurate | 1 |
 | Black Hat USA 2026 | PLaTypus Eliminating Code-Reuse at the Module Boundary | 1-130 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-71 | badly-mangled, minor-errors, accurate | 1 |
+| Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-73 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Pre-auth RCE in Enterprise Java When Middleware Becomes the Exploit | 1-48 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights | 1-46 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Render Safe Live EOD PackBot Demonstration | 1-57 | minor-errors, accurate | 0 |
