@@ -14,6 +14,8 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 140
+vision_verified_pages: 156
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: ["Christopher Domas_C and Its Consequences The Source Is Just a Suggestion_tools.txt"]
@@ -29,7 +31,9 @@ converted_at: "2026-08-12T05:31:02Z"
 
 ## Slide 1
 
-`C and its Consequences domas / @xoreaxeaxeax / Black Hat 2026` ｛
+C and its Consequences
+
+{ domas / @xoreaxeaxeax / Black Hat 2026
 
 ## Slide 2
 
@@ -193,165 +197,147 @@ find the vulnerability.
 
 ## Slide 12
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-\```
 
-\```
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-\```
-
-\```
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 13
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-uint8_t buffer[MAX_SIZE];
-\```
 
-\```
+uint8_t buffer[MAX_SIZE];
+
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 14
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-uint8_t buffer[MAX_SIZE];
-\```
 
-\```
+uint8_t buffer[MAX_SIZE];
+
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 15
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-uint8_t buffer[MAX_SIZE];
-\```
 
-\```
+uint8_t buffer[MAX_SIZE];
+
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 16
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
+
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 17
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
+
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-\```
-
-\```
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 18
 
@@ -375,6 +361,8 @@ TOCTOU
 \```
 
 ## Slide 20
+
+This slide carries no title or text of its own.
 
 ## Slide 21
 
@@ -411,101 +399,91 @@ C specifications
 
 ## Slide 23
 
-⊷ `C ISO standard – ~700 pages of rules`
+- C ISO standard – ~700 pages of rules
+- The _abstract machine_
+  - A theoretical machine
+  - What you’re really programming in C
+- Observable results
+  - Output, file writes, external calls
+  - Everything else is unwitnessed
+- The _as-if_ rule
+  - Program on real machine must reproduce observable behavior
+  - _as-if_ it had run on the abstract machine
+  - Nothing else has to match
 
-- ⊷ `The _` _`abstract machine`_ `_`
-
-   - ⊸ `A theoretical machine`
-
-   - ⊸ `What you’re really programming in C`
-
-- ⊷ `Observable results`
-
-   - ⊸ `Output, file writes, external calls`
-
-   - ⊸ `Everything else is unwitnessed`
-
-- ⊷ `The _` _`as-if`_ `_ rule`
-
-   - ⊸ `Program on real machine must reproduce observable behavior`
-
-   - ⊸ `_` _`as-if`_ `_ it had run on the abstract machine`
-
-   - ⊸ `Nothing else has to match`
-
-\```
 C specifications
-\```
 
 ## Slide 24
 
-⊷ `Compiler follows the _` _`as-if`_ `_ rule`
+- Compiler follows the _as-if_ rule
+  - Owes only the visible _result_
+  - The _what_ not the _how_
+  - Doesn’t have to follow _your_ “how”
+  - Unobservable can be reordered, merged, deleted
 
-- ⊸ `Owes only the visible _` _`result`_ `_`
-
-- ⊸ `The _` _`what`_ `_ not the _` _`how`_ `_`
-
-- ⊸ `Doesn’t have to follow` _`_your_`_ `“how”`
-
-- ⊸ `Unobservable can be reordered, merged, deleted`
-
-\```
 C specifications
-\```
 
 ## Slide 25
 
-- ⊷ `But what about our TOCTOU?` ⊷ `We removed the dangerous reload`
+- But what about our TOCTOU?
+- We removed the dangerous reload
+- Can the compiler undo this?
+- Reintroduce the dangerous load?
+- Check specification
+- Spec says ... nothing.
+- Loads aren't observable behavior
+- Read once, twice, never — spec's indifferent
+- If the spec is silent – compiler can do anything
+- Only the final result is owed
 
-- ⊷ `Can the compiler undo this?`
-
-- ⊷ `Reintroduce the dangerous load?`
-
-- ⊷ `Check specification`
-
-- ⊷ `Spec says ... nothing.`
-
-- ⊷ `Loads aren't observable behavior`
-
-- ⊷ `Read once, twice, never — spec's indifferent`
-
-- ⊷ `If the spec is silent – compiler can do anything`
-
-- ⊷ `Only the final result is owed`
-
-\```
 C specifications
-\```
 
 ## Slide 26
 
-⊷ `_` _`invented load`_ `_: extra reads, unrequested` ⊷ `Nothing in C forbids them`
+- _invented load_: extra reads, unrequested
+- Nothing in C forbids them
+- Could it _actually_ cause an "impossible" TOCTOU?
 
-⊷ `Could it _actually_ cause an "impossible" TOCTOU?`
-
-\```
 C specifications
-\```
 
 ## Slide 27
 
-`typedef struct { unsigned int length; uint8_t data[]; } packet_t; uint8_t buffer[MAX_SIZE]; /* kernel handler */ int receive(packet_t* pkt /* userspace data */) { /* copy size locally to prevent TOCTOU */ unsigned int local_length = pkt->length; if (local_length > MAX_SIZE) { return -1; } memcpy(buffer, pkt->data, local_length); return 0; }` pkt->length
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
+} packet_t;
+
+uint8_t buffer[MAX_SIZE];
+
+/* kernel handler */
+int receive(packet_t* pkt /* userspace data */)
+{
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
+    }
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
+}
+```
+
+Red handwritten annotations: the local copy (the comment and `unsigned int local_length = pkt->length;`) is struck out, and each use of `local_length` (in the `if` and in `memcpy`) is struck out and replaced with a handwritten `pkt->length`.
 
 ## Slide 28
 
-- ⊷ `Local copy would be in register.`
+- Local copy would be in register.
+- Replace two register reads with two memory reads.
+- This would make code _slower_.
+- An _optimizing_ compiler would never do this.
 
-- ⊷ `Replace two register reads with two memory reads.`
-
-- ⊷ `This would make code _slower_.`
-
-- ⊷ `An _optimizing_ compiler would never do this.`
-
-\```
 C specifications
-\```
 
 ## Slide 29
+
+This slide carries no title or text of its own.
 
 ## Slide 30
 
@@ -534,1983 +512,1751 @@ proof-of-concept
 
 ## Slide 32
 
-- ⊷ `Idea seems nonsensical`
+- Idea seems nonsensical
+- Source: read once, stash it in a register
+- Re-reading memory is slower
+- No reason to ever drop the local copy
+- Compiler would never do this ...
 
-- ⊷ `Source: read once, stash it in a register`
-
-- ⊷ `Re-reading memory is slower`
-
-- ⊷ `No reason to ever drop the local copy`
-
-- ⊷ `Compiler would never do this ...`
-
-# `proof-of-concept`
+proof-of-concept
 
 ## Slide 33
 
-⊷ _`...unless it runs out of registers`_
+- _...unless it runs out of registers_
+- If every GPR is in use by compiler
+- Compiler would need to _spill_ to the stack
+- Spilling costs a store and a load
+- Cheaper to just re-read the original
+- The invented load is the optimization
 
-⊷ `If every GPR is in use by compiler`
-
-⊷ `Compiler would need to _` _`spill`_ `_ to the stack`
-
-- ⊷ `Spilling costs a store and a load`
-
-- ⊷ `Cheaper to just re-read the original`
-
-⊷ `The invented load is the optimization`
-
-# `proof-of-concept`
+proof-of-concept
 
 ## Slide 34
 
-⊷ `Can we make it happen on purpose?` ⊷ `GCC 14.1`
+- Can we make it happen on purpose?
+- GCC 14.1
+- Manufacture register pressure
+- See if load reappears
 
-⊷ `Manufacture register pressure` ⊷ `See if load reappears`
-
-# `proof-of-concept`
+proof-of-concept
 
 ## Slide 35
 
-\```
-; gcc 14 –O0
-\```
-
-\```
+```c
 int x, y, z;
-voidf(void) {
+
+void f(void) {
     int t = x;
     y = t;
     z = t;
 }
-\```
+```
 
-\```
-moveax, DWORDPTR x[rip]
-movDWORDPTR [rbp-4], eax
-\```
+```asm
+; gcc 14 –O0
 
-\```
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR y[rip], eax
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR z[rip], eax
-\```
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR [rbp-4], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR y[rip], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 36
 
-\```
-; gcc 14 –O0
-\```
-
-\```
+```c
 int x, y, z;
-voidf(void) {
+
+void f(void) {
     int t = x;
     y = t;
     z = t;
 }
-\```
+```
 
-\```
-moveax, DWORDPTR x[rip]
-movDWORDPTR [rbp-4], eax
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR y[rip], eax
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR z[rip], eax
-\```
+```asm
+; gcc 14 –O0
+
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR [rbp-4], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR y[rip], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 37
 
-\```
-; gcc 14 –O0
-\```
-
-\```
+```c
 int x, y, z;
-\```
 
-\```
-voidf(void) {
+void f(void) {
     int t = x;
     y = t;
     z = t;
 }
-\```
+```
 
-\```
-moveax, DWORDPTR x[rip]
-movDWORDPTR [rbp-4], eax
-\```
+```asm
+; gcc 14 –O0
 
-\```
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR y[rip], eax
-moveax, DWORDPTR [rbp-4]
-movDWORDPTR z[rip], eax
-\```
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR [rbp-4], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR y[rip], eax
+
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 38
 
-\```
-int x, y, z;; gcc 14 –O1
-voidf(void) {moveax, DWORDPTR x[rip]
+```c
+int x, y, z;
+
+void f(void) {
     int t = x;
-    y = t;movDWORDPTR y[rip], eax
+    y = t;
     z = t;
-}movDWORDPTR z[rip], eax
-\```
+}
+```
+
+```asm
+; gcc 14 –O1
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 39
 
-\```
+```c
 int x, y, z;
-voidf(void) {
+
+void f(void) {
     int t = x;
     y = t;
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 40
 
-\```
+```c
 int x, y, z;
-voidf(void) {
+
+void f(void) {
     int t = x;
     y = t;
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 41
 
-#### `#define CLOBBER \`
-
-\```
+```c
+#define CLOBBER \
     ""
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-\```
 
-\```
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 42
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     ""
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 43
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     ""
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 44
 
-⊷ `Doesn’t have to be inline asm`
+- Doesn’t have to be inline asm
+- Code, variables, calls, etc.
+- Anything using registers will cause pressure
 
-⊷ `Code, variables, calls, etc.`
-
-- ⊷ `Anything using registers will cause pressure`
-
-# `proof-of-concept`
+proof-of-concept
 
 ## Slide 45
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     ""
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-\```
+
+mov     eax, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], eax
+
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 46
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     "rax"
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-movedx, DWORDPTR x[rip]
-movDWORDPTR y[rip], edx
-movDWORDPTR z[rip], edx
-\```
+
+mov     edx, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], edx
+
+mov     DWORD PTR z[rip], edx
+```
 
 ## Slide 47
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     "rax","rdx"
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-movecx, DWORDPTR x[rip]
-movDWORDPTR y[rip], ecx
-movDWORDPTR z[rip], ecx
-\```
+
+mov     ecx, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], ecx
+
+mov     DWORD PTR z[rip], ecx
+```
 
 ## Slide 48
 
-#### `#define CLOBBER \`
-
-\```
+```c
+#define CLOBBER \
     "rax","rdx","rcx"
-\```
 
-\```
-; gcc 14 –O1
-\```
-
-\```
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
-movesi, DWORDPTR x[rip]
-movDWORDPTR y[rip], esi
-movDWORDPTR z[rip], esi
-\```
+```asm
+; gcc 14 –O1
+
+mov     esi, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], esi
+
+mov     DWORD PTR z[rip], esi
+```
 
 ## Slide 49
 
-\```
-#defineCLOBBER \
-\```
-
-\```
+```c
+#define CLOBBER \
     "rax","rdx","rcx","rbx","rsi", \
     "rdi","rbp","r8","r9","r10",   \
     "r11","r12","r13","r14”
-\```
 
-\```
-; gcc 14 –O1
-\```
+int x, y, z;
 
-\```
-int x, y, z;movr15d, DWORDPTR x[rip]
-voidf(void) {movDWORDPTR y[rip], r15d
-int t = x;
-asmvolatile("" : : : CLOBBER);movDWORDPTR z[rip], r15d
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
+
+```asm
+; gcc 14 –O1
+
+mov     r15d, DWORD PTR x[rip]
+
+mov     DWORD PTR y[rip], r15d
+
+mov     DWORD PTR z[rip], r15d
+```
 
 ## Slide 50
 
-#### `#define CLOBBER \`
-
-\```
+```c
+#define CLOBBER \
     "rax","rdx","rcx","rbx","rsi", \
     "rdi","rbp","r8","r9","r10",   \
     "r11","r12","r13","r14","r15"
-\```
 
-\```
 int x, y, z;
-\```
 
-\```
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-\```
 
-\```
-moveax, DWORDPTR x[rip]
-movDWORDPTR y[rip], eax
-moveax, DWORDPTR x[rip]
-movDWORDPTR z[rip], eax
-\```
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR y[rip], eax
+
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 51
 
-\```
-#defineCLOBBER \
+```c
+#define CLOBBER \
     "rax","rdx","rcx","rbx","rsi", \
     "rdi","rbp","r8","r9","r10",   \
     "r11","r12","r13","r14","r15"
+
 int x, y, z;
-voidf(void) {
-int t = x;
-asmvolatile("" : : : CLOBBER);
+
+void f(void) {
+    int t = x;
+    asm volatile("" : : : CLOBBER);
     y = t;
-asmvolatile("" : : : CLOBBER);
+    asm volatile("" : : : CLOBBER);
     z = t;
 }
-\```
+```
 
-\```
+```asm
 ; gcc 14 –O1
-\```
 
-\```
-moveax, DWORD PTR x[rip]
-movDWORDPTR y[rip], eax
-moveax, DWORD PTR x[rip]
-movDWORDPTR z[rip], eax
-\```
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR y[rip], eax
+
+mov     eax, DWORD PTR x[rip]
+mov     DWORD PTR z[rip], eax
+```
 
 ## Slide 52
 
-- ⊷ `The as-if rule – only visible effects matter`
+- The as-if rule – only visible effects matter
+- Compiler makes pragmatic choice
+  - Eliminate local t, invent second load from x
+  - 2 loads vs. 3 loads in –O0 code
+- Confirmed feasible
+  - Optimizing compiler
+  - _can_ skip local value copy
+  - Duplicate memory load _not in the source_
+- Compiler invented loads
+  - Not a vulnerability by itself
+  - Almost always transparent
+  - Unless...
 
-- ⊷ `Compiler makes pragmatic choice`
-
-   - ⊸ `Eliminate local t, invent second load from x`
-
-   - ⊸ `2 loads vs. 3 loads in –O0 code`
-
-- ⊷ `Confirmed feasible`
-
-   - ⊸ `Optimizing compiler`
-
-   - ⊸ `_can_ skip local value copy`
-
-   - ⊸ `Duplicate memory load _not in the source_`
-
-- ⊷ `Compiler invented loads`
-
-   - ⊸ `Not a vulnerability by itself`
-
-   - ⊸ `Almost always transparent`
-
-   - ⊸ `Unless...`
-
-# `proof-of-concept`
+proof-of-concept
 
 ## Slide 53
 
-`typedef struct { unsigned int length; uint8_t data[]; } packet_t; uint8_t buffer[MAX_SIZE]; /* kernel handler */ int receive(packet_t* pkt /* userspace data */) { /* copy size locally to prevent TOCTOU */ unsigned int local_length = pkt->length; if (local_length > MAX_SIZE) { return -1; } memcpy(buffer, pkt->data, local_length); return 0; }` pkt->length
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
+} packet_t;
+
+uint8_t buffer[MAX_SIZE];
+
+/* kernel handler */
+int receive(packet_t* pkt /* userspace data */)
+{
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
+    }
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
+}
+```
+
+Red handwritten annotations: the local copy (the comment and `unsigned int local_length = pkt->length;`) is struck out, and each use of `local_length` (in the `if` and in `memcpy`) is struck out and replaced with a handwritten `pkt->length`.
 
 ## Slide 54
 
-⊷ `Impossible TOCTOU`
+- ~~Impossible~~ TOCTOU
 
-\```
 proof-of-concept
-\```
 
 ## Slide 55
 
+This slide carries no title or text of its own.
+
 ## Slide 56
 
-\```
 “
-\```
 
-\```
 Insane? Probably so.
-\```
 
-\```
 But there are compiler guys who swear by it.
-\```
 
-\```
 ”
-\```
 
-\```
 — Paul E. McKenney · lkml · 2008-02-04
-\```
 
 ## Slide 57
 
-\```
-impossible TOCTOU
-\```
+~~impossible~~ TOCTOU
 
 ## Slide 58
 
-⊷ `Mental model of what we’re _` _`supposed`_ `_ to do`
+- Mental model of what we’re _supposed_ to do
+- Copy untrusted value to a local
+- Validate the local — bounds check, etc.
+- Use the local, assuming it can't change
+- Compiler doesn’t care.
 
-- ⊷ `Copy untrusted value to a local`
-
-- ⊷ `Validate the local — bounds check, etc.`
-
-- ⊷ `Use the local, assuming it can't change`
-
-- ⊷ `Compiler doesn’t care.`
-
-\```
-impossible TOCTOU
-\```
+~~impossible~~ TOCTOU
 
 ## Slide 59
 
-- ⊷ `How do we get the compiler to listen?`
+- How do we get the compiler to listen?
+- volatile constrains arbitrary reads/writes
+- But unsettling issue...
+- Nothing in the source _asks_ for it
+- Widely omitted in the TOCTOU defense
 
-- ⊷ `volatile constrains arbitrary reads/writes`
-
-- ⊷ `But unsettling issue...`
-
-- ⊷ `Nothing in the source _` _`asks`_ `_ for it`
-
-- ⊷ `Widely omitted in the TOCTOU defense`
-
-\```
-impossible TOCTOU
-\```
+~~impossible~~ TOCTOU
 
 ## Slide 60
 
-- ⊷ `Unexplored in security`
+- Unexplored in security
+- New TOCTOU class
+- Negates standard TOCTOU-secure reasoning
+- Vulnerability is not in the source
+- Compiler decides, not the code
+- Must compile to find out
+- "Schrödinger's TOCTOU"
 
-- ⊷ `New TOCTOU class`
-
-- ⊷ `Negates standard TOCTOU-secure reasoning`
-
-- ⊷ `Vulnerability is not in the source`
-
-- ⊷ `Compiler decides, not the code`
-
-- ⊷ `Must compile to find out`
-
-- ⊷ `"Schrödinger's TOCTOU"`
-
-# `schrödinger's TOCTOU`
+schrödinger's TOCTOU
 
 ## Slide 61
 
+This slide carries no title or text of its own.
+
 ## Slide 62
 
-\```
 “
-\```
 
-\```
 Compilers that ‘optimize’ things
-\```
-
-\```
 to touch fields that aren’t touched by the source code
 are simply inherently buggy shit.
-\```
 
-\```
 ”
-\```
 
-\```
 — Linus Torvalds · lkml · 2014-12-04
-\```
 
 ## Slide 63
 
-\```
 semantic drift
-\```
 
 ## Slide 64
 
-⊷ `PoC: compiler` _`_can_`_ `emit "impossible" TOCTOU`
+- PoC: compiler _can_ emit "impossible" TOCTOU
+- But how often, in real code?
+- When do invented loads _really_ happen?
 
-- ⊷ `But how often, in real code?`
-
-- ⊷ `When do invented loads` _`_really_`_ `happen?`
-
-# `semantic drift`
+semantic drift
 
 ## Slide 65
 
-⊷ `Source says: copy to a local`
+- Source says: copy to a local
+- Transform is legal – copy disappears
+- Binary re-reads untrusted memory
+- Intent ≠ behavior → _semantic drift_
 
-⊷ `Transform is legal – copy disappears`
-
-⊷ `Binary re-reads untrusted memory` ⊷ `Intent ≠ behavior →` _`semantic drift`_
-
-# `semantic drift`
+semantic drift
 
 ## Slide 66
 
-- ⊷ `Review compiler source to find culprit?`
+- Review compiler source to find culprit?
+- Frontend → IR → regalloc → codegen
+- No clear single place responsible
+- Readable source ≠ explainable output
+- Treat compiler as black-box
+- RE compilation pipeline’s _emergent behavior_
+- Characterize when Schrödinger TOCTOU occurs
 
-- ⊷ `Frontend → IR → regalloc → codegen`
-
-- ⊷ `No clear single place responsible`
-
-- ⊷ `Readable source ≠ explainable output`
-
-- ⊷ `Treat compiler as black-box`
-
-- ⊷ `RE compilation pipeline’s _` _`emergent behavior`_ `_`
-
-- ⊷ `Characterize when Schrödinger TOCTOU occurs`
-
-# `semantic drift`
+semantic drift
 
 ## Slide 67
 
-\```
 static RE
-\```
 
 ## Slide 68
 
-- ⊷ `Manual trial and error`
+- Manual trial and error
+- Find simple code patterns that emit an invented load
+- A “cat-state”: minimal example of some mechanism triggering invented load
 
-- ⊷ `Find simple code patterns that emit an invented load`
-
-- ⊷ `A “cat-state”: minimal example of some mechanism triggering invented load`
-
-# `the cat-states`
+the cat-states
 
 ## Slide 69
 
-\```
-externintopaque(int a);
-externconstint x;
+```c
+extern int opaque(int a);
+extern const int x;
+
 int y, z, w;
-intg(int a) {
+
+int g(int a) {
     int t = x; // one read of x
     w = t;
     /* a dozen opaque() calls */
     y = t;
     z = t;
-return0;
+    return 0;
 }
-\```
+```
 
-\```
+```asm
 ; x86-64 gcc -O2
 ;   (also: icx, icc, clang, msvc)
-g:
-movedx, DWORD PTR x[rip]
-movDWORDPTR w[rip], edx
-    …
-moveax, DWORD PTR x[rip]
-movDWORDPTR y[rip], eax
-movDWORDPTR z[rip], eax
-    …
-\```
 
-\```
+g:
+    mov     edx, DWORD PTR x[rip]
+    mov     DWORD PTR w[rip], edx
+    …
+    mov     eax, DWORD PTR x[rip]
+    mov     DWORD PTR y[rip], eax
+    mov     DWORD PTR z[rip], eax
+    …
+```
+
 cat-state: rematerialization
-\```
 
 ## Slide 70
 
-\```
-; ARM gcc –O2
-;   (also: MIPS, –Og, -O1, -O2, -O3)
-unsignedintg(unsignedshort *p)f:
-{    …
-    short t = *p; // one read of *pldrshr2, [r3]
-return t < 0 ? 0u : (unsignedshort)t;ldrhr0, [r3]
-}cmpr2, #0
-it      lt
-movltr0, #0
-bxlr
-\```
+```c
+unsigned int g(unsigned short *p)
+{
+    short t = *p; // one read of *p
+    return t < 0 ? 0u : (unsigned short)t;
+}
+```
 
-\```
+```asm
+; ARM gcc -O2
+;   (also: MIPS, -Og, -O1, -O2, -O3)
+
+f:
+    …
+    ldrsh   r2, [r3]
+    ldrh    r0, [r3]
+    cmp     r2, #0
+    it      lt
+    movlt   r0, #0
+    bx      lr
+```
+
 cat-state: width-mismatch reload
-\```
 
 ## Slide 71
 
-\```
-typedefstruct {
-int  len;
-char data[12];
+```c
+typedef struct {
+    int  len;
+    char data[12];
 } S;
-S dst;
-intg(S *p) {
-    S u = *p; // one read of *p
-if (u.len > 0) {
-        dst = u;
-return1;
-    }
-return0;
-}
-\```
 
-\```
-; x86-64 gcc –O2
+S dst;
+
+int g(S *p) {
+    S u = *p; // one read of *p
+    if (u.len > 0) {
+        dst = u;
+        return 1;
+    }
+    return 0;
+}
+```
+
+```asm
+; x86-64 gcc -O2
 ;   (also aarch64, ppc64, mips64,
 ;    s390x, -O1/-O2/-O3/-Os)
-g:
-movedx, DWORD PTR [rdi]
-movdquxmm0, XMMWORD PTR [rdi]
-testedx, edx
-jg.L7
-ret
-.L7:
-movapsXMMWORDPTR dst[rip], xmm0
-moveax, 1
-ret
-\```
 
-\```
+g:
+    mov     edx, DWORD PTR [rdi]
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    test    edx, edx
+    jg      .L7
+    ret
+.L7:
+    movaps  XMMWORD PTR dst[rip], xmm0
+    mov     eax, 1
+    ret
+```
+
 cat-state: bulk-vs-scalar overlap
-\```
 
 ## Slide 72
 
-\```
-typedefunion {
-float as_float;
-; x86-64 gcc –O2
-longlong as_int;
-;   (also: s390x)
+```c
+typedef union {
+    float as_float;
+    long long as_int;
 } v_t;
-g:
+
 v_t x;
-    …
-addssxmm0, DWORD PTR [rdi]
-longlongg(v_t *p) {
-movrax, , QWORD PTR [rdi]
+
+long long g(v_t *p) {
     v_t u = *p; // one read of *p
-comissxmm0, xmm1
-if (u.as_float + 1.0f > 0.0f)
-cmovberax, , rdx
-return u.as_int;
-ret
-return0;
+    if (u.as_float + 1.0f > 0.0f)
+        return u.as_int;
+    return 0;
 }
-\```
+```
 
-\```
-addssxmm0, DWORD PTR [rdi]
-movrax, , QWORD PTR [rdi]
-comissxmm0, xmm1
-cmovberax, , rdx
-ret
-\```
+```asm
+; x86-64 gcc -O2
+;   (also: s390x)
 
-\```
+g:
+    …
+    addss   xmm0, DWORD PTR [rdi]
+    mov     rax, QWORD PTR [rdi]
+    comiss  xmm0, xmm1
+    cmovbe  rax, rdx
+    ret
+```
+
 cat-state: cross-class reload
-\```
 
 ## Slide 73
 
-\```
 variant analysis
-\```
 
 ## Slide 74
 
-\```
-typedefstruct {
-char target;
-char rest[16];
+```c
+typedef struct {
+    char target;
+    char rest[16];
 } S;
-\```
 
-\```
 S dst;
 int sink;
-\```
 
-\```
-voidg(S *p) {
-S u;
+void g(S *p) {
+    S u;
     memcpy(&u, p, sizeof(u)); // one read of *p
     sink = u.target * 3;
     dst  = u;
 }
-\```
+```
 
-\```
-memcpy
-\```
-
-\```
-; x86-64 gcc –O2
+```asm
+; x86-64 gcc -O2
 ;   (also: aarch64, -O1/-O2/-O3/-Os)
+
 g:
-movsxeax, BYTE PTR [rdi]
-movdquxmm0, XMMWORD PTR [rdi]
-movrdx, QWORDPTR [rdi+16]
-leaeax, [rax+rax*2]
-movapsXMMWORDPTR dst[rip], xmm0
-movDWORDPTR sink[rip], eax
-movQWORDPTR dst[rip+16], rdx
-ret
-\```
+    movsx   eax, BYTE PTR [rdi]
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    mov     rdx, QWORD PTR [rdi+16]
+    lea     eax, [rax+rax*2]
+    movaps  XMMWORD PTR dst[rip], xmm0
+    mov     DWORD PTR sink[rip], eax
+    mov     QWORD PTR dst[rip+16], rdx
+    ret
+```
+
+memcpy
 
 ## Slide 75
 
-\```
-typedefstruct {
-char target;
-char rest[16];
+```c
+typedef struct {
+    char target;
+    char rest[16];
 } S;
-\```
 
-\```
 S dst;
 int sink;
-\```
 
-\```
-voidg(volatileS *p) {
-S u;
+void g(volatile S *p) {
+    S u;
     memcpy(&u, p, sizeof(u)); // one read of *p
     sink = u.target * 3;
     dst  = u;
 }
-\```
+```
 
-\```
-volatile
-\```
-
-\```
-; x86-64 gcc –O2
+```asm
+; x86-64 gcc -O2
 ;   (also: aarch64, -O1/-O2/-O3/-Os)
+
 g:
-movsxeax, BYTE PTR [rdi]
-movdquxmm0, XMMWORD PTR [rdi]
-movrdx, QWORDPTR [rdi+16]
-leaeax, [rax+rax*2]
-movapsXMMWORDPTR dst[rip], xmm0
-movDWORDPTR sink[rip], eax
-movQWORDPTR dst[rip+16], rdx
-ret
-\```
+    movsx   eax, BYTE PTR [rdi]
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    mov     rdx, QWORD PTR [rdi+16]
+    lea     eax, [rax+rax*2]
+    movaps  XMMWORD PTR dst[rip], xmm0
+    mov     DWORD PTR sink[rip], eax
+    mov     QWORD PTR dst[rip+16], rdx
+    ret
+```
+
+volatile
 
 ## Slide 76
 
-\```
+```c
 // module_1.c
-typedefstruct { int  len; char data[12];} S;
+typedef struct { int  len; char data[12]; } S;
 S dst;
-\```
 
-\```
-; x86-64 gcc –O2 –flto
-;   (also: aarch64, ppc64, mips64, s390x)
-\```
+int  ok (const S *q);
+void use(const S *q);
 
-\```
-intok (constS *q);
-voiduse(const(constconstS *q); *q);
-\```
+int g(S *p) {
+    S u = *p;      // one read of *p
+    if (ok(&u))    // other TU – opaque
+        use(&u);   // other TU – opaque
+    return 0;
+}
 
-\```
-voiduse(const(constconstS *q); *q);g:
-movedx, DWORD PTR [rdi]
-intg(S *p) {movdquxmm0, XMMWORD PTR [rdi]
-S u = *p;// one read of *ptestedx, edx
-if (ok(&u))    // other TU – opaquejg.L7
-use(&u);   // other TU – opaqueret
-return0;.L7:
-}movapsXMMWORDPTR dst[rip], xmm0
-moveax, 1
-// module_2.cret
-\```
-
-\```
 // module_2.c
-intok (constS *q) { return q->len > 0; }
-voiduse(constS *q) { dst = *q; }
-\```
+int  ok (const S *q) { return q->len > 0; }
+void use(const S *q) { dst = *q; }
+```
 
-\```
+```asm
+; x86-64 gcc -O2 -flto
+;   (also: aarch64, ppc64, mips64, s390x)
+
+g:
+    mov     edx, DWORD PTR [rdi]
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    test    edx, edx
+    jg      .L7
+    ret
+.L7:
+    movaps  XMMWORD PTR dst[rip], xmm0
+    mov     eax, 1
+    ret
+```
+
 translation units
-\```
 
 ## Slide 77
 
-- ⊷ `~50 distinct cat-states`
+- ~50 distinct cat-states
+- Manufactured across _at least_ six independent compiler subsystems
+- Vulnerable vs. not-vulnerable depends on:
+  - compiler×version×architecture×flags
+  - register pressure
+  - structure layout
+  - type width & signedness
+  - float⇄int unions
+  - byte-order conversions
+  - auto-vectorization
+  - sub-word atomics
+  - CISC memory-operand folds
 
-- ⊷ `Manufactured across`
-
-      - _`_at least_`_ `six independent compiler subsystems`
-
-- ⊷ `Vulnerable vs. not-vulnerable depends on:`
-
-   - ⊸ `compiler×version×architecture×flags`
-
-   - ⊸ `register pressure`
-
-   - ⊸ `structure layout`
-
-   - ⊸ `type width & signedness`
-
-   - ⊸ `float` ⇄ `int unions`
-
-   - ⊸ `byte-order conversions`
-
-   - ⊸ `auto-vectorization`
-
-   - ⊸ `sub-word atomics`
-
-   - ⊸ `CISC memory-operand folds`
-
-# `manual RE results`
+manual RE results
 
 ## Slide 78
 
-⊷ `Static RE is insufficient`
+- Static RE is insufficient
 
-\```
 problem
-\```
 
 ## Slide 79
 
-\```
 dynamic RE
-\```
 
 ## Slide 80
 
-⊷ `Have initial datapoints, show _` _`can`_ `_ occur`
+- Have initial datapoints, show _can_ occur
+- Want to know _everywhere_
+- Goal: concretely resolve the boundaries of semantic drift
+- _Exact_ how/when/why a given code shape emits a TOCTOU
+  - compilers? code patterns? flags?
+- Then defeating should be feasible
 
-⊷ `Want to know _` _`everywhere`_ `_`
-
-⊷ `Goal: concretely resolve the boundaries of semantic drift`
-
-⊷ _`Exact`_ `how/when/why a given code shape emits a TOCTOU` ⊸ `compilers? code patterns? flags?`
-
-⊷ `Then defeating should be feasible`
-
-\```
-a semantic fuzzer
-\```
+a semantic _fuzzer_
 
 ## Slide 81
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-\```
 
-\```
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-\```
-
-\```
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 82
 
-### _`cat-state`_
+cat-state
 
-Matrix
-Mutation
-Runner
-Load Detector Flag Minimizer
-Engine
-compilers ×
-arch ×
-duplicated loads minimal flag set
-program variants flags ×
-...
-many many more filter filter
+→ Mutation Engine
+  program variants
 
-# `alpha-lab`
+many
+
+→ Matrix Runner
+  compilers ×
+  arch ×
+  flags ×
+  ...
+
+many more
+
+→ Load Detector
+  duplicated loads
+
+filter
+
+→ Flag Minimizer
+  minimal flag set
+
+filter
+
+alpha-lab
 
 ## Slide 83
 
-- ⊷ `systemic mutations of cat-states`
+- systemic mutations of cat-states
+- struct fields = explore offset dependencies
+- array size = block copy optimizations
+- local variables = impact register pressure
+- depth of function calls = function inlining
+- generate hundreds of mutations
 
-⊷ `struct fields = explore offset dependencies`
-
-- ⊷ `array size = block copy optimizations`
-
-- ⊷ `local variables = impact register pressure` ⊷ `depth of function calls = function inlining`
-
-- ⊷ `generate hundreds of mutations`
-
-# `mutation engine`
+mutation engine
 
 ## Slide 84
 
-- ⊷ `Local CE instance / 200 GB of compilers`
+- Local CE instance / 200 GB of compilers
+- Intake code from mutation engine
+- Sweep compiler×version×architecture×flags
+  - Compiler: 5 toolchains: GCC, Clang, ICC, ICX, MSVC
+  - Version: 200+ builds, ~20 years of releases
+  - Arch: x86-64, arm64, arm, RISC-V 32/64, m68k, MSP430
+  - Flags: opt × lto × fp × pic × pie × stack
+- 10,000+ compilations for each input
 
-- ⊷ `Intake code from mutation engine`
-
-- ⊷ `Sweep compiler×version×architecture×flags` ⊸ `Compiler: 5 toolchains: GCC, Clang, ICC, ICX, MSVC` ⊸ `Version: 200+ builds, ~20 years of releases` ⊸ `Arch: x86-64, arm64, arm, RISC-V 32/64, m68k, MSP430` ⊸ `Flags: opt × lto × fp × pic × pie × stack`
-
-- ⊷ `10,000+ compilations for each input`
-
-# `matrix runner`
+matrix runner
 
 ## Slide 85
 
-- ⊷ `1M+ outputs from matrix runner`
+- 1M+ outputs from matrix runner
+- Identify whether invented load exists
+- Obvious
+  - [r0] followed by [r0]
+- Non-obvious
+  - [edx] vs. [esi]
+  - Loops
+  - Conditionals
+  - Architectures
 
-- ⊷ `Identify whether invented load exists`
-
-- ⊷ `Obvious`
-
-   - ⊸ `[r0] followed by [r0]`
-
-- ⊷ `Non-obvious`
-
-   - ⊸ `[edx] vs. [esi]`
-
-   - ⊸ `Loops`
-
-   - ⊸ `Conditionals`
-
-   - ⊸ `Architectures`
-
-# `load detector`
+load detector
 
 ## Slide 86
 
-## ⊷ `Unicorn emulator`
+- Unicorn emulator
+- cat-state specifies C variable “x”
+- Unicorn traces memory accesses
+- Detect multiple reads from “x”
+- Auto-detect invented loads from matrix runner
+- Down-select to only invented load inputs
 
-- ⊷ `cat-state specifies C variable “x”`
-
-- ⊷ `Unicorn traces memory accesses`
-
-- ⊷ `Detect multiple reads from “x”`
-
-- ⊷ `Auto-detect invented loads from matrix runner`
-
-- ⊷ `Down-select to only invented load inputs`
-
-# `load detector`
+load detector
 
 ## Slide 87
 
-⊷ `Thousands of outputs from load detector`
+- Thousands of outputs from load detector
+- Mostly duplicates
+- Which caused the double-load?
+- What _combinations?_
+- ~250 optimizer flags, ~10^65 configurations
+- Delta debugging minimization
+- Additive sweep (–O0, –f…)
+- Subtractive sweep (–O3, –fno…)
 
-- ⊷ `Mostly duplicates`
-
-- ⊷ `Which caused the double-load?`
-
-- ⊷ `What` _`combinations?`_
-
-- ⊷ `~250 optimizer flags, ~10^65 configurations`
-
-- ⊷ `Delta debugging minimization`
-
-- ⊷ `Additive sweep (–O0, –f…)`
-
-- ⊷ `Subtractive sweep (–O3, –fno…)`
-
-# `flag minimizer`
+flag minimizer
 
 ## Slide 88
 
-⊷ `Example:`
+- Example:
+- Start with one cat-state
+- Feed to the alpha-lab pipeline
+- Characterize the _boundary conditions_
+- Defeat Schrödinger's TOCTOU?
 
-⊷ `Start with one cat-state`
-
-⊷ `Feed to the alpha-lab pipeline` ⊷ `Characterize the _` _`boundary conditions`_ `_` ⊷ `Defeat Schrödinger's TOCTOU?`
-
-\```
 dynamic RE
-\```
 
 ## Slide 89
 
+```c
 typedef struct {
-int  len;
-char data[12];
+    int  len;
+    char data[12];
 } S;
-Matrix
-Mutation  Load Flag
-Runner
-Engine Detector Minimizer
+
 S dst;
-compilers ×
-arch ×
-program  duplicated minimal
-flags ×
-variants loads flag set
-void g(S *p) { ...
+
+void g(S *p) {
     S u = *p;
-if (u.len > 0) many many more filter filter
+    if (u.len > 0)
         dst = u;
 }
+```
+
+→ Mutation Engine
+  program variants
+
+many
+
+→ Matrix Runner
+  compilers ×
+  arch ×
+  flags ×
+  ...
+
+many more
+
+→ Load Detector
+  duplicated loads
+
+filter
+
+→ Flag Minimizer
+  minimal flag set
+
+filter
 
 ## Slide 90
 
-## `/* safe/vuln changes at size threshold */`
+/* safe/vuln changes at size threshold */
 
-\```
-typedefstruct {
-int target;
-intrest[33];
+```c
+typedef struct {
+    int target;
+    int rest[33];
 } S;
 S dst;
-voidg(S *p) {
-Su = *p;
-if (u.target > 0) dst = u;
+void g(S *p) {
+    S u = *p;
+    if (u.target > 0) dst = u;
 }
-\```
 
-\```
-typedefstruct {
-int target;
-intrest[34];
+typedef struct {
+    int target;
+    int rest[34];
 } S;
 S dst;
-voidg(S *p) {
-Su = *p;
-if (u.target > 0) dst = u;
+void g(S *p) {
+    S u = *p;
+    if (u.target > 0) dst = u;
 }
-\```
+```
 
-\```
-; SAFE — sizeof(S) == 136(target read once)
-\```
+```asm
+; SAFE — sizeof(S) == 136 (target read once)
 
-\```
 g:
-movedx, DWORD PTR [rdi]
-testedx, edx
-jle.L1
-movdxmm4, DWORDPTR [rdi+28]
+    mov     edx, DWORD PTR [rdi]
+    test    edx, edx
+    jle     .L1
+    movd    xmm4, DWORD PTR [rdi+28]
     ...
 .L1:
-moveax, ecx
-ret
-\```
+    mov     eax, ecx
+    ret
 
-\```
-; VULN — sizeof(S) == 140(target read twice)
-\```
+; VULN — sizeof(S) == 140 (target read twice)
 
-\```
 g:
-moveax, DWORD PTR [rdi]
-movdquxmm7, XMMWORD PTR [rdi]
+    mov     eax, DWORD PTR [rdi]
+    movdqu  xmm7, XMMWORD PTR [rdi]
     ...
-testeax, eax
-jg.L7
+    test    eax, eax
+    jg      .L7
     ...
 .L7:
-movapsXMMWORDPTR dst[rip], xmm7
+    movaps  XMMWORD PTR dst[rip], xmm7
     ...
-ret
-\```
+    ret
+```
 
 ## Slide 91
 
-## `/* safe/vuln changes at field order */`
+/* safe/vuln changes at field order */
 
-\```
-typedefstruct {
-inttarget;
-intrest[5];
+```c
+typedef struct {
+    int target;
+    int rest[5];
 } S;
 S dst;
-voidg(S *p) {
-S u = *p;
-if (u.target > 0) dst = u;
+void g(S *p) {
+    S u = *p;
+    if (u.target > 0) dst = u;
 }
-\```
 
-\```
-typedefstruct {
-inthead[5];
-inttarget;
+typedef struct {
+    int head[5];
+    int target;
 } S;
 S dst;
-voidg(S *p) {
-S u = *p;
-if (u.target > 0) dst = u;
+void g(S *p) {
+    S u = *p;
+    if (u.target > 0) dst = u;
 }
-\```
+```
 
-\```
+```asm
 ; SAFE — accessed field is first
-\```
 
-\```
 g:
-\```
-
-\```
-moveax, DWORD PTR [rdi]
-testeax, eax
-jle.L1
+    mov     eax, DWORD PTR [rdi]
+    test    eax, eax
+    jle     .L1
     ...
-movdxmm0, eax
-movrdx, QWORDPTR [rdi+16]
+    movd    xmm0, eax
+    mov     rdx, QWORD PTR [rdi+16]
     ...
 .L1:
-ret
-\```
+    ret
 
-\```
 ; VULN — accessed field is second
-\```
 
-\```
 g:
-moveax, DWORD PTR [rdi+20]
-testeax, eax
-jle.L1
-movrax, QWORD PTR [rdi+16]
-movdquxmm0, XMMWORDPTR [rdi]
+    mov     eax, DWORD PTR [rdi+20]
+    test    eax, eax
+    jle     .L1
+    mov     rax, QWORD PTR [rdi+16]
+    movdqu  xmm0, XMMWORD PTR [rdi]
     ...
 .L1:
-ret
-\```
+    ret
+```
 
 ## Slide 92
 
-## `/* safe/vuln changes on compiler version */`
+/* safe/vuln changes on compiler version */
 
-\```
-; RISC-V64, gcc 14.3+ — SAFE (x read once)
-\```
-
-\```
-structS {
-unsigned a : 3;
-unsigned b : 29;
+```c
+struct S {
+    unsigned a : 3;
+    unsigned b : 29;
 };
-structS x;
-intf(void) {
-structSu = x;
-return u.a ? u.b : 0;
+
+struct S x;
+
+int f(void) {
+    struct S u = x;
+    return u.a ? u.b : 0;
 }
-\```
+```
 
-\```
+```asm
+; RISC-V64, gcc 14.3+ — SAFE (x read once)
+
 f:
-luia5, %hi(x)
-lwa5, %lo(x)(a5)
-lia0, 0
-andia4, a5, 7
-beqa4, zero, .L2
-srliwa0, a5, 3
+    lui     a5, %hi(x)
+    lw      a5, %lo(x)(a5)
+    li      a0, 0
+    andi    a4, a5, 7
+    beq     a4, zero, .L2
+    srliw   a0, a5, 3
 .L2:
-ret
+    ret
+
 ; RISC-V64, gcc 14.1 / 14.2 — VULN (x read twice)
-\```
 
-\```
 f:
-luia4, %hi(x)
-lwa5, %lo(x)(a4)
-lia0, 0
-andia5, a5, 7
-beqa5, zero, .L2
-lda0, %lo(x)(a4)
-srliwa0, a0, 3
+    lui     a4, %hi(x)
+    lw      a5, %lo(x)(a4)
+    li      a0, 0
+    andi    a5, a5, 7
+    beq     a5, zero, .L2
+    ld      a0, %lo(x)(a4)
+    srliw   a0, a0, 3
 .L2:
-ret
-\```
+    ret
+```
 
 ## Slide 93
 
-## `/* safe/vuln changes on flags */`
+/* safe/vuln changes on flags */
 
-\```
-typedefstruct {
-int len;
-char data[12];
+```c
+typedef struct {
+    int len;
+    char data[12];
 } S;   /* 16 B */
 S dst;
-\```
 
-\```
-intg(S *p) {
-Su = *p;
+int g(S *p) {
+    S u = *p;
     dst = u;
-return u.len;
+    return u.len;
 }
-\```
+```
 
-\```
+```asm
 ; gcc -O2 -fno-tree-sra (SRA off)
 ;   SAFE (len read once)
 g:
-\```
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    movd    eax, xmm0
+    movaps  XMMWORD PTR dst[rip], xmm0
+    ret
 
-\```
-movdquxmm0, XMMWORD PTR [rdi]
-movdeax, xmm0
-movapsXMMWORDPTR dst[rip], xmm0
-ret
-\```
-
-\```
 ; gcc -O2 (SRA on)
 ;   VULN (len read twice)
 g:
-\```
-
-\```
-movdquxmm0, XMMWORD PTR [rdi]
-moveax, DWORD PTR [rdi]
-movapsXMMWORDPTR dst[rip], xmm0
-ret
-\```
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    mov     eax, DWORD PTR [rdi]
+    movaps  XMMWORD PTR dst[rip], xmm0
+    ret
+```
 
 ## Slide 94
 
-\```
 /* safe/vuln changes on architecture tune */
-\```
 
-\```
+```c
+typedef struct {
+    int target;
+    int rest[19];
+} S;
+
+S dst;
+
+int g(S *p) {
+    S u = *p;
+    dst = u;
+    return u.target;
+}
+```
+
+```asm
 ; gcc -O2 -mtune=generic
 ; → SAFE (target read once)
-typedefstruct {g:
-int target;movdquxmm0, XMMWORD PTR [rdi]
-int rest[19];    ...
-} S;movdeax, xmm0
-ret
-S dst;
-intg(S *p) {; gcc -O2 -mtune=znver4
-Su = *p;; → VULN (target read twice)
-    dst = u;g:
-return u.target;movdquxmm4, XMMWORD PTR [rdi]
-}moveax, DWORD PTR [rdi]
+g:
+    movdqu  xmm0, XMMWORD PTR [rdi]
     ...
-ret
-\```
+    movd    eax, xmm0
+    ret
+
+; gcc -O2 -mtune=znver4
+; → VULN (target read twice)
+g:
+    movdqu  xmm4, XMMWORD PTR [rdi]
+    mov     eax, DWORD PTR [rdi]
+    ...
+    ret
+```
 
 ## Slide 95
 
-## `/* safe/vuln changes on sizeof ≡ 1 (mod 16) */`
+/* safe/vuln changes on sizeof ≡ 1 (mod 16) */
 
-\```
-typedefstruct {
-char head[16];
-char t;
+```c
+typedef struct {
+    char head[16];
+    char t;
 } S;
 S dst;
-charg(S *p) {
-S u = *p;
+char g(S *p) {
+    S u = *p;
     dst = u;
-return u.t;
+    return u.t;
 }
-typedefstruct {
-char head[17];
-char t;
+
+typedef struct {
+    char head[17];
+    char t;
 } S;
 S dst;
-charg(S *p) {
-S u = *p;
+char g(S *p) {
+    S u = *p;
     dst = u;
-return u.t;
+    return u.t;
 }
-\```
+```
 
-\```
+```asm
 ; sizeof = 17
 ; → SAFE (t read once)
 g:
-\```
+    ; bytes 0..15  (not t)
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    movzx   eax, BYTE PTR [rdi+16]
+    movaps  XMMWORD PTR dst[rip], xmm0
+    mov     BYTE PTR dst[rip+16], al
+    ret
 
-\```
-; bytes 0..15  (not t)
-movdquxmm0, XMMWORDPTR [rdi]
-movzxeax, BYTE PTR [rdi+16]
-movapsXMMWORDPTR dst[rip], xmm0
-movBYTEPTR dst[rip+16], al
-ret
-\```
-
-\```
 ; sizeof = 18
 ;  -> VULN (t read twice)
 g:
-movdquxmm0, XMMWORDPTR [rdi]
-movzxedx, WORD PTR [rdi+16]
-movzxeax, BYTE PTR [rdi+17]
-movWORDPTR dst[rip+16], dx
-ret
-\```
+    movdqu  xmm0, XMMWORD PTR [rdi]
+    movzx   edx, WORD PTR [rdi+16]
+    movzx   eax, BYTE PTR [rdi+17]
+    mov     WORD PTR dst[rip+16], dx
+    ret
+```
 
 ## Slide 96
 
-|`Compiler`|`cat-states`|`Architectures`|
+| Compiler | cat-states | Architectures |
 |---|---|---|
-|`GCC`|• `Rematerialization`
-• `Width-mismatch reload`
-• `Bulk-vs-scalar overlap`
-• `Cross-class reload`
-• `CISC mem-op fold`
-• `Byte-order reload`|`x86-64 · i386 · ARM · AArch64 ·`
-`MIPS · MIPS64 · RV32 · RV64 ·`
-`LoongArch64 · PPC64, SPARC ·`
-`s390x · m68k · VAX · MSP430 · AVR`
-`· HPPA · Xtensa`|
-|`Clang`|• `Rematerialization`
-• `Bulk-vs-scalar`
-• `CISC mem-op fold`|`x86-64 · AArch64 · PPC64 · MIPS64`
-`· RV64 · RV32 · 6502`|
-|`ICX`|• `Rematerialization`
-• `Bulk-vs-scalar`|`x86-64`|
-|`ICC`|• `Rematerialization`|`x86-64`|
-|`MSVC`|• `Rematerialization`
-• `Bulk-vs-scalar`|`x86-64`|
+| GCC | • Rematerialization<br>• Width-mismatch reload<br>• Bulk-vs-scalar overlap<br>• Cross-class reload<br>• CISC mem-op fold<br>• Byte-order reload | x86-64 · i386 · ARM · AArch64 · MIPS · MIPS64 · RV32 · RV64 · LoongArch64 · PPC64, SPARC · s390x · m68k · VAX · MSP430 · AVR · HPPA · Xtensa |
+| Clang | • Rematerialization<br>• Bulk-vs-scalar<br>• CISC mem-op fold | x86-64 · AArch64 · PPC64 · MIPS64 · RV64 · RV32 · 6502 |
+| ICX | • Rematerialization<br>• Bulk-vs-scalar | x86-64 |
+| ICC | • Rematerialization | x86-64 |
+| MSVC | • Rematerialization<br>• Bulk-vs-scalar | x86-64 |
 
-# `TOCTOU by compiler`
+TOCTOU by compiler
 
 ## Slide 97
 
-|`Architecture`|`ISA property that invites them`|
+| Architecture | ISA property that invites them |
 |---|---|
-|`x86-64`|`register-rich, cheap RIP-relative global reload, split FP/GPR files`|
-|`i386`|`single-instruction absolute global reload + register-poor 8-GPR file; bulk copy overlaps a`
-`scalar field load`|
-|`s390x`|`signed+unsigned 32→64 widening loads lgf/algf; an FP/GPR split, memory-operand ALU, and a `
-`byte-reversed load`|
-|`ARM (32-bit family)`|`rich narrow-load variants + pipelined loads; ldm bulk copy overlaps a scalar ldr`|
-|`AArch64`|`wide ldp/ldr q bulk copy and NEON ld2 de-interleave overlap a scalar field load`
-`(3); adrp+ldr addressing and free extend operand-modifiers suppress 1 and 2`|
-|`MIPS`|`rich narrow loads, like ARM; word-granular atomics word-load a neighbor on MIPS64`|
-|`RISC-V (RV64)`|`lw+ld bitfield reload; wide ld bulk copy vs scalar lw`|
-|`LoongArch64`|`wide ldptr.d bulk copy vs scalar ldptr.w field load`|
-|`PPC64`|`no unaligned vector load — a realigned wide load reloads each straddling aligned block`|
-|`SPARC`|`word-granular atomics only — a sub-word _Atomic RMW word-loads a neighbor via an ld+cas loop`|
-|`m68k / MSP430 / VAX`|`single-instruction global addressing; CISC memory-operand ALU add.l x,%d0`|
-|`6502`|`memory-operand ALU; the one non-GCC instance`|
+| x86-64 | register-rich, cheap RIP-relative global reload, split FP/GPR files |
+| i386 | single-instruction absolute global reload + register-poor 8-GPR file; bulk copy overlaps a scalar field load |
+| s390x | signed+unsigned 32→64 widening loads lgf/algf; an FP/GPR split, memory-operand ALU, and a byte-reversed load |
+| ARM (32-bit family) | rich narrow-load variants + pipelined loads; ldm bulk copy overlaps a scalar ldr |
+| AArch64 | wide ldp/ldr q bulk copy and NEON ld2 de-interleave overlap a scalar field load (3); adrp+ldr addressing and free extend operand-modifiers suppress 1 and 2 |
+| MIPS | rich narrow loads, like ARM; word-granular atomics word-load a neighbor on MIPS64 |
+| RISC-V (RV64) | lw+ld bitfield reload; wide ld bulk copy vs scalar lw |
+| LoongArch64 | wide ldptr.d bulk copy vs scalar ldptr.w field load |
+| PPC64 | no unaligned vector load — a realigned wide load reloads each straddling aligned block |
+| SPARC | word-granular atomics only — a sub-word _Atomic RMW word-loads a neighbor via an ld+cas loop |
+| m68k / MSP430 / VAX | single-instruction global addressing; CISC memory-operand ALU add.l x,%d0 |
+| 6502 | memory-operand ALU; the one non-GCC instance |
 
-# `TOCTOU by architecture`
+TOCTOU by architecture
 
 ## Slide 98
 
-⊷ `struct size/shape (17B/byte, 140B/dword)`
-
-⊷ `struct tail, field position (first vs. last)`
-
-⊷ `sizeof ≡ 1 (mod 16)`
-
-⊷ `Direction (4 → 8B = 2 reads, 8 → 4B = 1 read)` ⊷ `Optimization level (-O2 vs. –Os vs. –Og)`
-
-⊷ `Flags (-O2 vs. -ftree-sra vs.`
-
-\```
-“-fcode-hoisting+-ftree-ccp+-ftree-forwprop+ -ftree-fre+-ftree-pre+-ftree-vrp”)
-\```
-
-⊷ `Compiler version (gcc 14.3 vs 16.1)`
-
-⊷ `ISA extensions (512-bit zmm or RISC-V +zicond)`
-
-⊷ `Host CPU (–mtune)`
+- struct size/shape (17B/byte, 140B/dword)
+- struct tail, field position (first vs. last)
+- sizeof ≡ 1 (mod 16)
+- Direction (4 → 8B = 2 reads, 8 → 4B = 1 read)
+- Optimization level (-O2 vs. -Os vs. -Og)
+- Flags (-O2 vs. -ftree-sra vs. “-fcode-hoisting + -ftree-ccp + -ftree-forwprop + -ftree-fre + -ftree-pre + -ftree-vrp”)
+- Compiler version (gcc 14.3 vs 16.1)
+- ISA extensions (512-bit zmm or RISC-V +zicond)
+- Host CPU (-mtune)
 
 ## Slide 99
 
-⊷ `vulnerable or safe can depend on which machine compiled the code`
+- vulnerable or safe can depend on which machine compiled the code
+  - e.g. single read on Intel, double on AMD
+- compiler bump can turn safe into vulnerable
+  - e.g. MSVC 19.51, Clang 15; GCC 14.3 / 16.1 the other way
+- safety hangs on details that mean nothing
+  - e.g. one byte of struct size, sizeof mod 16, a trailing char[], field order, even which direction a union widens
+  - each silently flips safe to vulnerable
+- there is no single switch to turn it off
+- spans the whole ecosystem
+- search space is effectively unbounded
 
-⊸ `e.g. single read on Intel, double on AMD`
-
-- ⊷ `compiler bump can turn safe into vulnerable` ⊸ `e.g. MSVC 19.51, Clang 15; GCC 14.3 / 16.1 the other way`
-
-- ⊷ `safety hangs on details that mean nothing`
-
-⊸ `e.g. one byte of struct size, sizeof mod 16, a trailing char[], field order, even which direction a union widens`
-
-   - ⊸ `each silently flips safe to vulnerable`
-
-- ⊷ `there is no single switch to turn it off`
-
-- ⊷ `spans the whole ecosystem`
-
-- ⊷ `search space is effectively unbounded`
-
-# `alpha-lab conclusions`
+alpha-lab conclusions
 
 ## Slide 100
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-\```
 
-\```
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-\```
-
-\```
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 101
 
-⊷ `alpha-lab conclusion:` _`cannot`_ `predict outcome` ⊷ `No longer: _` _`does_`_ `a compiler do this` ⊷ `Now: _` _`can_`_ `a compiler do this` ⊷ `Schrödinger pattern =` _`_de facto vulnerable_`_
+- alpha-lab conclusion: _cannot_ predict outcome
+- No longer: _does_ a compiler do this
+- Now: _can_ a compiler do this
+- Schrödinger pattern = _de facto vulnerable_
 
-# `alpha-lab conclusions`
+alpha-lab conclusions
 
 ## Slide 102
 
+This slide carries no title or text of its own.
+
 ## Slide 103
 
-\```
 “
-\```
 
-\```
 When you have to go read the compiler sources
 to figure things like this out,
 you know you are too deep.
-\```
 
-\```
 ”
-\```
 
-\```
 — Linus Torvalds · lkml · 2021-09-13
-\```
 
 ## Slide 104
 
-\```
 attack surface
-\```
 
 ## Slide 105
 
-- ⊷ `Where should we search?`
+- Where should we search?
+- Anywhere data crosses a trust boundary and stays writable by the untrusted side
 
-- ⊷ `Anywhere data crosses a trust boundary and stays writable by the untrusted side`
-
-# `attack surface`
+attack surface
 
 ## Slide 106
 
-- ⊷ `User → kernel`
-
-   - ⊸ `syscall args, copy_from_user snapshots, io_uring shared rings`
-
-- ⊷ `Guest → host VMM`
-
-   - ⊸ `virtio rings, device emulation (AHCI/NVMe descriptors)`
-
-- ⊷ `Malicious host → confidential guest`
-
-   - ⊸ `SEV-SNP, TDX, Arm CCA; shared/bounce buffers`
-
-- ⊷ `Secure world & enclaves`
-
-   - ⊸ `SMM/SMI, TrustZone, SGX/TEE, EL3 monitor`
-
-- ⊷ `Devices & DMA`
-
-   - ⊸ `descriptor rings, MMIO, peripheral-writable buffers`
-
-- ⊷ `Coprocessors over shared DRAM`
-
-   - ⊸ `rpmsg/remoteproc, SCP/PSP, mailboxes, cross-VM shmem`
-
-- ⊷ `Untrusted-format parsers`
-
-   - ⊸ `mmap'd files, fonts/images/archives, on-disk DBs, IPC`
-
-- ⊷ `Network / wire protocols`
-
-   - ⊸ `RDMA, NVMe-oF, MCTP/PLDM/SPDM, NTP`
+- User → kernel
+  - syscall args, copy_from_user snapshots, io_uring shared rings
+- Guest → host VMM
+  - virtio rings, device emulation (AHCI/NVMe descriptors)
+- Malicious host → confidential guest
+  - SEV-SNP, TDX, Arm CCA; shared/bounce buffers
+- Secure world & enclaves
+  - SMM/SMI, TrustZone, SGX/TEE, EL3 monitor
+- Devices & DMA
+  - descriptor rings, MMIO, peripheral-writable buffers
+- Coprocessors over shared DRAM
+  - rpmsg/remoteproc, SCP/PSP, mailboxes, cross-VM shmem
+- Untrusted-format parsers
+  - mmap'd files, fonts/images/archives, on-disk DBs, IPC
+- Network / wire protocols
+  - RDMA, NVMe-oF, MCTP/PLDM/SPDM, NTP
 
 ## Slide 107
 
-⊷ `Search to find Schrödinger pattern (snapshot → validate → use)`
+- Search to find Schrödinger pattern (snapshot → validate → use)
+- ... where the C-specification _allows_ a TOCTOU
+- Not every case is susceptible to invented-TOCTOU
+- Certain barriers prevent emitting the second load
 
-⊷ `... where the C-specification _` _`allows`_ `_ a TOCTOU`
-
-⊷ `Not every case is susceptible to invented-TOCTOU`
-
-⊷ `Certain barriers prevent emitting the second load`
-
-\```
 attack surface
-\```
 
 ## Slide 108
 
-⊷ `Example: volatile`
+- Example: volatile
 
-# `barriers`
+barriers
 
 ## Slide 109
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
+
 uint8_t buffer[MAX_SIZE];
-\```
 
-\```
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-\```
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
 
-\```
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-\```
-
-\```
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 110
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-uint8_t buffer[MAX_SIZE];
-\```
 
-\```
+uint8_t buffer[MAX_SIZE];
+
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length = pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 111
 
-\```
-typedefstruct {
-unsignedint length;
-uint8_t data[];
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
 } packet_t;
-uint8_t buffer[MAX_SIZE];
-\```
 
-\```
+uint8_t buffer[MAX_SIZE];
+
 /* kernel handler */
-intreceive(packet_t* pkt /* userspace data */)
+int receive(packet_t* pkt /* userspace data */)
 {
-/* copy size locally to prevent TOCTOU */
-unsignedint local_length =
-        *(volatileunsignedint *)&pkt->length;
-if (local_length > MAX_SIZE) {
-return -1;
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length =
+        *(volatile unsigned int *)&pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
     }
-memcpy(buffer, pkt->data, local_length);
-return0;
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
 }
-\```
+```
 
 ## Slide 112
 
-⊷ `volatile — at the exact access site`
+- volatile — at the exact access site
+- atomic — pins + orders
+- "memory"-clobber barrier
+- opaque copy — asm/.S primitive
+- copy-then-unmap / physical-address-handle
+- read-only mapping
+- per-tenant encryption (TDX/SEV/CCA)
 
-- ⊷ `atomic — pins + orders`
-
-- ⊷ `"memory"-clobber barrier`
-
-- ⊷ `opaque copy — asm/.S primitive`
-
-- ⊷ `copy-then-unmap / physical-address-handle`
-
-- ⊷ `read-only mapping`
-
-- ⊷ `per-tenant encryption (TDX/SEV/CCA)`
-
-# `barriers`
+barriers
 
 ## Slide 113
 
-⊷ `This doesn’t scale`
+- This doesn't scale
+- Even for _small_ snippets of code
+- Outsourced to LLM-driven audit harness
+- “observer-effect”
 
-⊷ `Even for _` _`small`_ `_ snippets of code`
-
-⊷ `Outsourced to LLM-driven audit harness`
-
-⊷ `“observer-effect”`
-
-# `observer-effect`
+observer-effect
 
 ## Slide 114
 
-- ⊷ `Agent picks security-relevant open-source project`
+- Agent picks security-relevant open-source project
+- Syncs state and goals with other agents
+- Pulls source
+- Searches attacker-writable trust boundaries
+- Finds Schrödinger pattern: snapshot → validate → use
+- Evaluates: does C spec _permit_ the invented load?
+- Traces data flow to leaf for barriers
+- Tracks memories, mistakes, progress
+- Ranks impact, adversarial re-review, emit report
 
-- ⊷ `Syncs state and goals with other agents`
-
-- ⊷ `Pulls source`
-
-- ⊷ `Searches attacker-writable trust boundaries`
-
-- ⊷ `Finds Schrödinger pattern: snapshot → validate → use`
-
-- ⊷ `Evaluates: does C spec` _`_permit_`_ `the invented load?`
-
-- ⊷ `Traces data flow to leaf for barriers`
-
-- ⊷ `Tracks memories, mistakes, progress`
-
-- ⊷ `Ranks impact, adversarial re-review, emit report`
-
-# `observer-effect`
+observer-effect
 
 ## Slide 115
 
-⊷ `Point at range of security-critical open-source` ⊷ `Run for ~100 hours`
+- Point at range of security-critical open-source
+- Run for ~100 hours
 
-# `observer-effect`
+observer-effect
 
 ## Slide 116
 
+This slide carries no title or text of its own.
+
 ## Slide 117
 
-\```
 “
-\```
 
-\```
 People love to talk about ‘safe C’,
 but compiler people have
-\```
-
-\```
 actively tried to make C unsafer for decades.
 The C standards committee has been complicit.
-\```
 
-\```
 ”
-\```
 
-\```
 — Linus Torvalds · lkml · 2025-02-21
-\```
 
 ## Slide 118
 
-\```
 impact
-\```
 
 ## Slide 119
 
-\```
 100+ security-critical projects
 300+ Schrödinger TOCTOUs
-\```
 
 ## Slide 120
 
-## `compiler-invented load`
-
-\```
+compiler-invented load
 → compiler-invented consequences
-\```
 
 ## Slide 121
 
-\```
 compiler-invented VM escapes
-\```
 
 ## Slide 122
 
-\```
-uint16_tprdtl = le16_to_cpu(cmd->prdtl);          // 907  [SNAPSHOT] one read of guest header
-dma_addr_tprdt_len = (prdtl * sizeof(AHCI_SG));   // 910  use #1: size the PRDT mapping
+qemu
+
+```c
+uint16_t prdtl = le16_to_cpu(cmd->prdtl);          // 907  [SNAPSHOT] one read of guest header
+dma_addr_t prdt_len = (prdtl * sizeof(AHCI_SG));   // 910  use #1: size the PRDT mapping
 dma_addr_t real_prdt_len = prdt_len;               // 911
 /* ... */
-\```
-
-\```
 if (!(prdt = dma_memory_map(ad->hba->as, prdt_addr, &prdt_len,   // 929  map prdtl×16 bytes
                             DMA_DIRECTION_TO_DEVICE, MEMTXATTRS_UNSPECIFIED))){ /*...*/ }
-\```
-
-\```
 if (prdt_len < real_prdt_len) {                    // 936  [CHECK] confirm full region mapped
-/* ... */goto out;                            //        (bound tied to prdtl-at-910)
+    /* ... */ goto out;                            //        (bound tied to prdtl-at-910)
 }
 if (prdtl > 0) {
-\```
-
-\```
-AHCI_SG *tbl = (AHCI_SG *)prdt;
-\```
-
-\```
-for (i = 0; i < prdtl; i++) {                  // 948  [USE] walk bound over the mapping
-\```
-
-\```
+    AHCI_SG *tbl = (AHCI_SG *)prdt;
+    for (i = 0; i < prdtl; i++) {                  // 948  [USE] walk bound over the mapping
         tbl_entry_size = prdt_tbl_entry_size(&tbl[i]);     //     reads tbl[i] (mapped guest mem)
-/* ... */
+        /* ... */
     }
-\```
-
-\```
-qemu_sglist_init(sglist, qbus->parent, (prdtl - off_idx), ad->hba->as);  // 964 [USE] alloc hint
-for (i = off_idx + 1; i < prdtl && sglist->size < limit; i++) {          // 970 [USE] walk bound
-qemu_sglist_add(sglist, le64_to_cpu(tbl[i].addr), /*...*/);          // 971 OOB entry → DMA
+    qemu_sglist_init(sglist, qbus->parent, (prdtl - off_idx), ad->hba->as);  // 964 [USE] alloc hint
+    for (i = off_idx + 1; i < prdtl && sglist->size < limit; i++) {          // 970 [USE] walk bound
+        qemu_sglist_add(sglist, le64_to_cpu(tbl[i].addr), /*...*/);          // 971 OOB entry → DMA
     }
 }
-\```
-
-}
+```
 
 ## Slide 123
 
-\```
 compiler-invented root
-\```
 
 ## Slide 124
 
-\```
-rqe = &qp->recvq[qp->rq_get % qp->attrs.rq_size];  // 349  rqe -> userspace-shared
-\```
+linux/rdma
 
-\```
+```c
+rqe = &qp->recvq[qp->rq_get % qp->attrs.rq_size];  // 349  rqe -> userspace-shared
 }                                                      //      vmalloc_user recvq slot
 if (likely(rqe->flags == SIW_WQE_VALID)) {             // 351
-intnum_sge = rqe->num_sge;                        // 352  [SNAPSHOT] one read
-\```
+    int num_sge = rqe->num_sge;                        // 352  [SNAPSHOT] one read
 
-\```
-if (likely(num_sge <= SIW_MAX_SGE)) {              // 354  [CHECK] num_sge <= 6
-int i = 0;
-\```
+    if (likely(num_sge <= SIW_MAX_SGE)) {              // 354  [CHECK] num_sge <= 6
+        int i = 0;
 
-\```
         wqe = rx_wqe(&qp->rx_untagged);                // 357  kernel-private siw_wqe
-rx_type(wqe) = SIW_OP_RECEIVE;
-\```
+        rx_type(wqe) = SIW_OP_RECEIVE;
 
-\```
         wqe->wr_status = SIW_WR_INPROGRESS;
         wqe->bytes = 0;
         wqe->processed = 0;
-\```
 
-\```
         wqe->rqe.id = rqe->id;
-\```
 
-\```
         wqe->rqe.num_sge = num_sge;                    // 364
-\```
 
-\```
-while (i < num_sge) {                          // 366  [USE] bound -> fixed sge[6]/mem[6]
+        while (i < num_sge) {                          // 366  [USE] bound -> fixed sge[6]/mem[6]
             wqe->rqe.sge[i].laddr = rqe->sge[i].laddr; // 367  compiler may re-derive
             wqe->rqe.sge[i].lkey = rqe->sge[i].lkey;   //      `num_sge` from live rqe
             wqe->rqe.sge[i].length = rqe->sge[i].length;
-\```
+```
 
 ## Slide 125
 
-\```
 compiler-invented platform persistence
-\```
 
 ## Slide 126
 
-\```
+smm
+
+```c
 CopyMem (                                       // 199 [SNAPSHOT] copy attacker CommBuffer to stack local
     &TempLockBoxParameterRestore,
-\```
-
-\```
     LockBoxParameterRestore,
-sizeof (EFI_SMM_LOCK_BOX_PARAMETER_RESTORE));
-\```
+    sizeof (EFI_SMM_LOCK_BOX_PARAMETER_RESTORE));
 
-\```
 if (!SmmIsBufferOutsideSmmValid (               // 204 [CHECK] .Buffer/.Length must lie outside SMRAM
       (UINTN)TempLockBoxParameterRestore.Buffer,
       (UINTN)TempLockBoxParameterRestore.Length)) {
-DEBUG ((DEBUG_ERROR, "SmmLockBox Restore address in SMRAM or buffer overflow!\n"));
+    DEBUG ((DEBUG_ERROR, "SmmLockBox Restore address in SMRAM or buffer overflow!\n"));
     LockBoxParameterRestore->Header.ReturnStatus = (UINT64)EFI_ACCESS_DENIED;
-return;
+    return;
   }
-\```
 
-\```
 if ((TempLockBoxParameterRestore.Length == 0) && (TempLockBoxParameterRestore.Buffer == 0)) {
 /* ... */
-\```
-
-\```
   } else {
-\```
-
-\```
     Status = RestoreLockBox (                              // 220 [USE]
       &TempLockBoxParameterRestore.Guid,
-\```
-
-- `(VOID *)(UINTN)TempLockBoxParameterRestore.Buffer,   // 222 [USE] dest buffer`
-
-\```
-      (UINTN *)&TempLockBoxParameterRestore.Length// 223 [USE] in/out length, writes through
+      (VOID *)(UINTN)TempLockBoxParameterRestore.Buffer,   // 222 [USE] dest buffer
+      (UINTN *)&TempLockBoxParameterRestore.Length         // 223 [USE] in/out length, writes through
       );
-\```
+}
+```
 
 ## Slide 127
 
-\```
 compiler-invented root-of-trust
-\```
 
 ## Slide 128
 
-\```
+tpm
+
+```c
 UINT16         cipherSize = 0;  // size of ciphertext
 /* ... */
 // Retrieve encrypted data size.
@@ -2519,186 +2265,119 @@ if(UINT16_Unmarshal(                           // 949  [SNAPSHOT] one read of li
     &buffer,
     &bufferSize) != TPM_RC_SUCCESS)
 {
-return TPM_RC_INSUFFICIENT;
+    return TPM_RC_INSUFFICIENT;
 }
-\```
 
-\```
 if(cipherSize > bufferSize)                    // 954  [CHECK] validate against remaining buffer length
 {
-\```
-
-\```
-return TPM_RC_SIZE;
+    return TPM_RC_SIZE;
 }
 /* ... */
 if(session->symmetric.algorithm == TPM_ALG_XOR)
-CryptXORObfuscation(session->authHashAlg, &key.b, nonceCaller,
+    CryptXORObfuscation(session->authHashAlg, &key.b, nonceCaller,
                         &(session->nonceTPM.b),
                         (UINT32)cipherSize,    // 971  [USE] in-place decrypt LENGTH over live buffer
                         buffer);
-\```
+```
 
 ## Slide 129
 
-\```
 compiler-invented enclave breaches
-\```
 
 ## Slide 130
 
-\```
+sgx
+
+```c
 ms_foo_t* ms = SGX_CAST(ms_foo_t*, pms);   // ms -> UNTRUSTED, host-writable       CodeGen.ml:1671
 ms_foo_t  __in_ms;
-\```
 
-\```
 if (memcpy_s(&__in_ms, sizeof(ms_foo_t), ms, sizeof(ms_foo_t)))
-\```
+    return SGX_ERROR_UNEXPECTED;           // §4.3 stack copy, not a barrier
 
-\```
-return SGX_ERROR_UNEXPECTED;           // §4.3 stack copy, not a barrier
-\```
-
-\```
 void*  _tmp_buf = __in_ms.ms_buf;          // [SNAPSHOT] snapshot-once into local  CodeGen.ml:1607
-size_t_len_buf = __in_ms.ms_len;          // [SNAPSHOT] host-controlled length    CodeGen.ml:1607/1611
-\```
+size_t _len_buf = __in_ms.ms_len;          // [SNAPSHOT] host-controlled length    CodeGen.ml:1607/1611
 
-\```
 CHECK_UNIQUE_POINTER(_tmp_buf, _len_buf);  // [CHECK] -> if(_tmp_buf &&            CodeGen.ml:2334-2337
-//   !sgx_is_outside_enclave(_tmp_buf,_len_buf)) return ...
-\```
+                                            //   !sgx_is_outside_enclave(_tmp_buf,_len_buf)) return ...
 
-\```
 sgx_lfence();                              // §4.7 CPU-only LFENCE — pins NOTHING  CodeGen.ml:1039
-\```
 
-\```
 if (_tmp_buf != NULL && _len_buf != 0) {
-\```
-
-\```
     _in_buf = (void*)malloc(_len_buf);                       // [USE] alloc size   CodeGen.ml:1304
-if (_in_buf == NULL) { status = SGX_ERROR_OUT_OF_MEMORY; goto err; }
-\```
-
-\```
-if (memcpy_s(_in_buf, _len_buf, _tmp_buf, _len_buf)) {   // [USE] count + cap  CodeGen.ml:1309
+    if (_in_buf == NULL) { status = SGX_ERROR_OUT_OF_MEMORY; goto err; }
+    if (memcpy_s(_in_buf, _len_buf, _tmp_buf, _len_buf)) {   // [USE] count + cap  CodeGen.ml:1309
         status = SGX_ERROR_UNEXPECTED; goto err; }           //  compiler may re-derive _len_buf
 }
-\```
 
 foo((void*)_in_buf, __in_ms.ms_len);
-
-\```
-foo((void*)_in_buf, __in_ms.ms_len);
-\```
+```
 
 ## Slide 131
 
-\```
 compiler-invented .*
-\```
 
 ## Slide 132
 
-\```
+xen
+
+```c
 l1gpa = gfn_to_gaddr(guest_l2e_get_gfn(gw->l2e)) +
-guest_l1_table_offset(va) * sizeof(gw->l1e);
+        guest_l1_table_offset(va) * sizeof(gw->l1e);
 if ( !hvmemul_read_cache(v, l1gpa, &gw->l1e, sizeof(gw->l1e)) )
 {
-\```
-
-\```
-gw->l1e = l1p[guest_l1_table_offset(va)];               // 356 [SNAPSHOT] guest PTE (l1p → guest RAM)
-hvmemul_write_cache(v, l1gpa, &gw->l1e, sizeof(gw->l1e));
+    gw->l1e = l1p[guest_l1_table_offset(va)];               // 356 [SNAPSHOT] guest PTE (l1p → guest RAM)
+    hvmemul_write_cache(v, l1gpa, &gw->l1e, sizeof(gw->l1e));
 }
-\```
 
-\```
 gflags = guest_l1e_get_flags(gw->l1e);                      // 360 [CHECK] present/rights (guest_walk.c)
 if ( !(gflags & _PAGE_PRESENT) )
-\```
+    goto out;
 
-\```
-goto out;
-\```
-
-\```
 /* Check for reserved bits. */
-\```
-
-\```
 if ( guest_l1e_rsvd_bits(v, gw->l1e) )                      // 365 [CHECK] reserved bits (guest_walk.c)
 {
-\```
-
-\```
     gw->pfec |= PFEC_reserved_bit | PFEC_page_present;
-goto out;
+    goto out;
 }
 /* ... */
-\```
-
-\```
     guest_walk_to_gfn → guest_l1e_get_gfn(gw->l1e)          // [USE] frame selection (guest_pt.h)
-\```
+```
 
 ## Slide 133
 
-\```
+seL4
+
+```c
 nodeOffset  = getSyscallArg(4, buffer);                     // 62  [SNAPSHOT] crosses trust boundary
 nodeWindow  = getSyscallArg(5, buffer);                     // 63  [SNAPSHOT] crosses trust boundary
 /* ... */
-\```
-
-\```
 if (nodeOffset > nodeSize - 1) {                            // 136 [CHECK] offset within node
-/* ... */return EXCEPTION_SYSCALL_ERROR;
+    /* ... */ return EXCEPTION_SYSCALL_ERROR;
 }
-\```
-
-\```
 if (nodeWindow < 1 || nodeWindow > CONFIG_RETYPE_FAN_OUT_LIMIT) {  // 144 [CHECK] window range
-/* ... */return EXCEPTION_SYSCALL_ERROR;
+    /* ... */ return EXCEPTION_SYSCALL_ERROR;
 }
-\```
-
-\```
 if (nodeWindow > nodeSize - nodeOffset) {                   // 152 [CHECK] window fits the node
-/* ... */return EXCEPTION_SYSCALL_ERROR;
+    /* ... */ return EXCEPTION_SYSCALL_ERROR;
 }
-\```
-
-\```
 destCNode = CTE_PTR(cap_cnode_cap_get_capCNodePtr(nodeCap));
-\```
-
-\```
 for (i = nodeOffset; i < nodeOffset + nodeWindow; i++) {    // 162 [USE] slot-emptiness loop bound
-\```
-
-\```
     status = ensureEmptySlot(destCNode + i);                // 163       (opaque call between iterations)
-/* ... */
+    /* ... */
 }
-\```
-
-\```
 if ((untypedFreeBytes >> objectSize) < nodeWindow) {        // 203 [CHECK] enough memory for window
-/* ... */return EXCEPTION_SYSCALL_ERROR;
+    /* ... */ return EXCEPTION_SYSCALL_ERROR;
 }
-\```
-
-\```
-returninvokeUntyped_Retype(slot, reset, (void *)alignedFreeRef, newType, userObjSize,
+return invokeUntyped_Retype(slot, reset, (void *)alignedFreeRef, newType, userObjSize,
                             destCNode, nodeOffset, nodeWindow, deviceMemory);  // 229-231 [USE]
-\```
+```
 
 ## Slide 134
 
-\```
+glibc
+
+```c
 ElfW(Half) ndx = aux->vna_other & 0x7fff;                  // 306  [SNAPSHOT] one read of the mapped ELF
 /* In trace mode, dependencies may be missing.  */
 if (__glibc_likely (ndx < map->l_nversions))               // 308  [CHECK] gate ndx against table size
@@ -2708,304 +2387,227 @@ if (__glibc_likely (ndx < map->l_nversions))               // 308  [CHECK] gate 
     map->l_versions[ndx].name = &strtab[aux->vna_name];    // 312  [USE] writes an attacker pointer
     map->l_versions[ndx].filename = &strtab[ent->vn_file]; // 313  [USE] ndx
   }
-\```
+```
 
 ## Slide 135
 
-\```
-chunk_id = get_be32(table_of_contents);
-\```
+git
 
-\```
+```c
+chunk_id = get_be32(table_of_contents);
 chunk_offset = get_be64(table_of_contents + 4);          // 121 [SNAPSHOT] one read of the mmap
 /* ... terminating-id check ... */
-\```
-
-\```
 if (chunk_offset % expected_alignment != 0) {            // 127 [CHECK] alignment of snapshot
-/* ... error ... */return1;
+    /* ... error ... */ return 1;
 }
-\```
-
-\```
 table_of_contents += CHUNK_TOC_ENTRY_SIZE;               // 133 advance the live pointer
-\```
-
-\```
 next_chunk_offset = get_be64(table_of_contents + 4);     // 134 [SNAPSHOT] next offset
-\```
-
-\```
 if (next_chunk_offset < chunk_offset ||                  // 136 [CHECK] ordering + in-file bound
-\```
-
-\```
     next_chunk_offset > mfile_size - the_hash_algo->rawsz) {
-\```
-
-\```
-/* ... error ... */return -1;
+    /* ... error ... */ return -1;
 }
-\```
-
-\```
 for (i = 0; i < cf->chunks_nr; i++) {                    // 143 dup-id loop = register pressure
-if (cf->chunks[i].id == chunk_id) { /* ... */return -1; }
+    if (cf->chunks[i].id == chunk_id) { /* ... */ return -1; }
 }
-\```
-
-\```
 cf->chunks[cf->chunks_nr].id = chunk_id;                 // 151
-\```
-
-\```
 cf->chunks[cf->chunks_nr].start = mfile + chunk_offset;  // 152 [USE] chunk base ptr from offset
 cf->chunks[cf->chunks_nr].size = next_chunk_offset - chunk_offset;  // 153 [USE] chunk size
-\```
+```
 
 ## Slide 136
 
-\```
 *
-\```
 
 ## Slide 137
 
-\```
 Everything is vulnerable ...
-\```
-
-\```
 ... and everything is not.
-\```
 
 ## Slide 138
 
-- ⊷ `Schrödinger's TOCTOU is everywhere`
+- Schrödinger's TOCTOU is everywhere
+- Explored a _sample, not the boundary_
+- Exploitability is _not a property of the source_ – emergent property of compiler × version × arch × flags
+- Both safe _and_ vulnerable until built – then compiler decides
+- One optimizer tweak = TOCTOUs in thousands of deployed projects overnight
 
-- ⊷ `Explored a` _`sample, not the boundary`_
-
-- ⊷ `Exploitability is` _`not a property of the source`_ `– emergent property of compiler × version × arch × flags`
-
-- ⊷ `Both safe` _`and`_ `vulnerable until built – then compiler decides`
-
-- ⊷ `One optimizer tweak = TOCTOUs in thousands of deployed projects overnight`
-
-# `impact`
+impact
 
 ## Slide 139
 
+This slide carries no title or text of its own.
+
 ## Slide 140
 
-\```
 “
-\```
 
-\```
 I would very much prefer a compiler switch
-\```
-
-\```
 that instructs the compiler to not do bloody stupid things like this
 instead of marking every other load/store in the kernel with volatile.
-\```
 
-\```
 ”
-\```
 
-\```
 — Peter Zijlstra · lkml · 2015-06-17
-\```
 
 ## Slide 141
 
-\```
 solutions
-\```
 
 ## Slide 142
 
-## ⊷ `Who is the culprit?`
+- Who is the culprit?
+  - Blame the code: should have marked it volatile
+    - Coder: I wrote what I meant - blame the compiler
+  - Blame the compiler: ignored the obvious intent
+    - Compiler: it is legal and it is fast - blame the spec
+  - Blame the spec: too loose to write secure code
+    - Spec: we define effects, not methods - blame the code
+- A closed loop - all three are right
+- Maybe the problem is C itself
+- Treat Schrödinger pattern as de-facto vulnerable
 
-   - ⊸ `Blame the code: should have marked it volatile`
-
-      - ⊶ `Coder: I wrote what I meant - blame the compiler`
-
-   - ⊸ `Blame the compiler: ignored the obvious intent`
-
-      - ⊶ `Compiler: it is legal and it is fast - blame the spec`
-
-   - ⊸ `Blame the spec: too loose to write secure code`
-
-      - ⊶ `Spec: we define effects, not methods - blame the code`
-
-- ⊷ `A closed loop - all three are right`
-
-- ⊷ `Maybe the problem is C itself`
-
-- ⊷ `Treat Schrödinger pattern as de-facto vulnerable`
-
-# `solutions`
+solutions
 
 ## Slide 143
 
-### ⊷ `volatile`
+- volatile
+  - silently dropped at the first non-volatile parameter
+- READ_ONCE(), etc.
+  - opt-in, per-load - requires already knowing every bug
+- asm volatile("" ::: "memory"), barrier(), etc.
+  - position-dependent, unverified, decays as code moves
+- Opaque out-of-line call, atomic_read, RO buffers, etc.
+  - pays real performance, still guarantees nothing
 
-⊸ `silently dropped at the first non-volatile parameter` ⊷ `READ_ONCE(), etc.`
+Short term, this is what we have.
+All are manual, unchecked, and fail silently
 
-⊸ `opt-in, per-load - requires already knowing every bug` ⊷ `asm volatile("" ::: "memory"), barrier(), etc.` ⊸ `position-dependent, unverified, decays as code moves`
-
-⊷ `Opaque out-of-line call, atomic_read, RO buffers, etc.` ⊸ `pays real performance, still guarantees nothing Short term, this is what we have. All are manual, unchecked, and fail silently`
-
-\```
 short-term: code changes
-\```
 
 ## Slide 144
 
-⊷ `-fno-invented-loads flag`
+- -fno-invented-loads flag
+  - Challenge: pessimizes optimization
+- Propagating __untrusted qualifier
+  - Challenge: large language and toolchain change
 
-⊸ `Challenge: pessimizes optimization`
-
-⊷ `Propagating __untrusted qualifier` ⊸ `Challenge: large language and toolchain change`
-
-\```
 mid-term: compiler changes
-\```
 
 ## Slide 145
 
-- ⊷ `Memory-model change`
+- Memory-model change
+- C11 prohibited invented _stores_ to shared mem
+- Challenge: decade-scale change
 
-- ⊷ `C11 prohibited invented` _`_stores`_ `_ to shared mem` ⊷ `Challenge: decade-scale change`
-
-\```
 long-term: spec changes
-\```
 
 ## Slide 146
 
+This slide carries no title or text of its own.
+
 ## Slide 147
 
-\```
 “
-\```
 
-\```
 Now, hoping the compiler generates correct code
- is clearly not ideal and very dangerous indeed.
-\```
+is clearly not ideal and very dangerous indeed.
 
-\```
 “
-\```
 
-\```
 — Peter Zijlstra · lkml · 2020-10-06
-\```
 
 ## Slide 148
 
-\```
 implications
-\```
 
 ## Slide 149
 
-`typedef struct { unsigned int length; uint8_t data[]; } packet_t; uint8_t buffer[MAX_SIZE]; /* kernel handler */ int receive(packet_t* pkt /* userspace data */) { /* copy size locally to prevent TOCTOU */ unsigned int local_length = pkt->length; if (local_length > MAX_SIZE) { return -1; } memcpy(buffer, pkt->data, local_length); return 0; }` pkt->length
+```c
+typedef struct {
+    unsigned int length;
+    uint8_t data[];
+} packet_t;
+
+uint8_t buffer[MAX_SIZE];
+
+/* kernel handler */
+int receive(packet_t* pkt /* userspace data */)
+{
+    /* copy size locally to prevent TOCTOU */
+    unsigned int local_length = pkt->length;
+
+    if (local_length > MAX_SIZE) {
+        return -1;
+    }
+    memcpy(buffer, pkt->data, local_length);
+    return 0;
+}
+```
+
+Red handwritten annotations: the local copy (the comment and `unsigned int local_length = pkt->length;`) is struck out, and each use of `local_length` (in the `if` and in `memcpy`) is struck out and replaced with a handwritten `pkt->length`.
 
 ## Slide 150
 
-⊷ `Don’t trust the fix.`
+- Don’t trust the fix.
+- Don’t trust the source.
+- Don’t trust the build.
 
-⊷ `Don’t trust the source.`
-
-⊷ `Don’t trust the build.`
-
-# `implications`
+implications
 
 ## Slide 151
 
+This slide carries no title or text of its own.
+
 ## Slide 152
 
-\```
 "
-\```
 
-\```
 ... the definition of 'sane compiler' grows ever looser.
-\```
 
-\```
 "
-\```
 
-\```
 — Paul E. McKenney · lkml · 2024-09-30
-\```
 
 ## Slide 153
 
-\```
 try it.
-\```
 
 ## Slide 154
 
-### `github.com/xoreaxeaxeax/schrodingers-toctou`
+github.com/xoreaxeaxeax/schrodingers-toctou
 
-- _`; ARM gcc –O2`_
-
-\```
+```c
 /* compiler explorer */
-\```
 
-- _`;   (also: AARCH64/MIPS/MIPS64, -O[gs123])`_
-
-\```
-unsignedintg(unsignedshort *p)
+unsigned int g(unsigned short *p)
 {
-\```
-
-\```
-    shortt = *p;
-return (unsignedshort)t - t;
+    short t = *p;
+    return (unsigned short)t - t;
 }
-\```
+```
 
-\```
+```asm
+; ARM gcc -O2
+;   (also: AARCH64/MIPS/MIPS64, -O[gs123])
+
 g:
-ldrhr2, [r0]# load *p, once
-ldrshr0, [r0]# load *p, twice
-subsr0, r2, r0
-bxlr
-\```
+    ldrh    r2, [r0]   # load *p, once
+    ldrsh   r0, [r0]   # load *p, twice
+    subs    r0, r2, r0
+    bx      lr
+```
 
-\```
 try it.
-\```
 
 ## Slide 155
 
-\```
 C and its Consequences
-\```
 
-\```
 github.com/xoreaxeaxeax/schrodingers-toctou
-\```
 
-\```
 Black Hat 2026   ·   domas   ·   @xoreaxeaxeax
-\```
 
 ## Slide 156
 
-## Companion resources
+This slide carries no title or text of its own.
 
-### `Christopher Domas_C and Its Consequences The Source Is Just a Suggestion_tools.txt`
-
-```text
-https://github.com/xoreaxeaxeax/schrodingers-toctou/
-```
