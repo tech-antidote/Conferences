@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 88.4
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 38
+vision_verified_pages: 38
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -35,8 +37,6 @@ Accelerating Ransomware Recovery via LLM-Assisted Engineering and Verification
 
 SungWook Jang · YoungMook Kang Financial Security Institute (FSI) — CSIRT
 
-1
-
 ## Slide 2
 
 ## WHO WE ARE
@@ -49,8 +49,6 @@ Malware Analysis · Incident Response Financial Security Institute — CSIRT
 
 Malware Analysis · Incident Response Financial Security Institute — CSIRT
 
-2
-
 ## Slide 3
 
 ## A GUARANTEE SERVICE GOES DARK
@@ -62,8 +60,6 @@ PRESS   ·   JULY 14, 2025 Major guarantee insurer’s outage disrupts customers
 - The affected insurer, 14 July 2025
 
 Behind the outage: a hands-on ransomware attack — and the response that brought it all back
-
-3
 
 ## Slide 4
 
@@ -80,15 +76,11 @@ the fatal crypto mistake
 TOOL DEVELOPMENT RECOVERY
 LLM-assisted decryptor 100% in 81 hours
 
-4
-
 ## Slide 5
 
 # DAY 1 INITIAL RESPONSE
 
 Malware teardown and attribution — under the pressure of a live national outage
-
-5
 
 ## Slide 6
 
@@ -107,8 +99,6 @@ Malware teardown and attribution — under the pressure of a live national outag
 - Skips R3ADM3.txt note & .ENCRT files
 
 Decompiled option parser — argc, --device/--keystore/--ratio/--limit
-
-6
 
 ## Slide 7
 
@@ -134,8 +124,6 @@ TWO SKIP RULES
 
 - `if ( !strcasecmp(name, "R3ADM3.txt") ) { puts("Skipping R3ADM3.txt file"); return; }`
 
-7
-
 ## Slide 8
 
 ## ATTRIBUTION: THE GUNRA GROUP
@@ -154,19 +142,23 @@ IDENTIFIED FROM
 
 - Hands-on artifacts in /root/crypt
 
-8
-
 ## Slide 9
 
 ## STAGING GROUND: /root/crypt
 
 One directory dropped on every server — no C2, everything needed for the attack.
 
-Name Size Compre.. Modified Date
+| Name | Size | Compre.. | Modified Date |
+| --- | --- | --- | --- |
+| enc | 124 232 | 50 416 | 2025-07-14 03:48 |
+| issue.net | 1 903 |  | 2025-07-14 03:48 |
+| nohup.out | 236 |  | 2025-07-14 04:06 |
+| public.pem | 800 |  | 2025-07-14 03:48 |
+| s | 239 |  | 2025-07-13 00:06 |
+| _dev_sdc1.keystore | 512 |  | 2025-07-14 03:50 |
+| _dev_sdc1.progress | 8 |  | 2025-07-14 04:06 |
 
-###### enc (encryptor) · issue.net (note) · public.pem (RSA-4096) · s (script) · .keystore · .progress
-
-9
+enc (encryptor) · issue.net (note) · public.pem (RSA-4096) · s (script) · .keystore · .progress
 
 ## Slide 10
 
@@ -178,28 +170,21 @@ BUT THE BINARY REJECTED THOSE OPTIONS
 
 `unknown option --device —` the executed binary was a different build than the one they prepared
 
-10
-
 ## Slide 11
 
 # DAY 2 THE FATAL FLAW
 
 Two lines of broken C turned an unbreakable scheme into a 256-try guess
 
-11
-
 ## Slide 12
 
-## HYBRID CRYPTO – BUILD FAST
+## HYBRID CRYPTO — BUILD FAST
 
-ChaCha20 key + nonce .keystore
-RSA-4096 wrap
-32 B + 12 B 512 B
+ChaCha20 key + nonce (32 B + 12 B) → RSA-4096 wrap → .keystore (512 B)
+
 The ChaCha20 keystream XORs the disk; the key is sealed with RSA — normally unrecoverable
 
 Decompiled ChaCha20 keystream generation and XOR loop
-
-12
 
 ## Slide 13
 
@@ -213,8 +198,6 @@ RSA-4096 wrap .keystore
 bn_modexp · parse_pem_public_key 512 bytes on disk
 
 Without the attacker's RSA private key it's meaningless — the lock they trusted. But the key inside was already broken.
-
-13
 
 ## Slide 14
 
@@ -236,8 +219,6 @@ candidate seeds in a 4-hour window
 
 File timestamps pin the attack window — brute-forcing the seed is trivial
 
-14
-
 ## Slide 15
 
 ## FLAW #2: srand() INSIDE THE LOOP
@@ -247,8 +228,6 @@ The key generator re-seeds every iteration — so every byte is identical:
 `time()` is per-second; the loop runs in microseconds. Same seed → same `rand()` → the SAME byte.
 
 32-byte key · 12-byte nonce · all from the flawed generator.
-
-15
 
 ## Slide 16
 
@@ -262,8 +241,6 @@ A8 A8 A8 A8 A8 A8 A8 A8 A8 A8 A8 A8 A8 A8
 
 Effective keyspace 2^8 = 256 — guessable in 256 tries. PROOF: two identical files → the same hash
 
-16
-
 ## Slide 17
 
 INTERMITTENT ENCRYPTION 1 MB ON - 3 MB OFF
@@ -272,13 +249,9 @@ ratio=3 encrypts 1 MB then skips 3 MB. Block entropy maps the pattern and the re
 
 Entropy tool — encrypted blocks (8.00) vs normal plaintext, revealing the ratio
 
-17
-
 ## Slide 18
 
 DAY 3 BUILDING THE DECRYPTOR From proof-of-concept to a production recovery engine — LLM-assisted.
-
-18
 
 ## Slide 19
 
@@ -292,29 +265,25 @@ flag the srand bug keystream Python → C known-plaintext
 
 ###### Human insight + AI-assisted engineering + robust infrastructure, working in unison
 
-19
-
 ## Slide 20
 
 ## THE FIRST CRACK: TIMESTAMP KEYS
 
 Before the byte-repeat trick, the very first PoC exploited the predictable seed head-on:
 
-- THE PROOF
+THE PROOF
 
-- Encrypt two identical files → bitidentical output •  Same seed → same key & nonce → same ciphertext •  The seed is a Unix timestamp (seconds)
+- Encrypt two identical files → bit-identical output
+- Same seed → same key & nonce → same ciphertext
+- The seed is a Unix timestamp (seconds)
 
-- THE METHOD
+THE METHOD
 
 - Read file modified-times → a candidate window
-
 - Try each second in range as the srand seed
-
 - Validate: UTF-8 decode + entropy skew < 80%
 
 It worked — but timestamps can be altered and wide windows explode the seed count. So we went deeper.
-
-20
 
 ## Slide 21
 
@@ -334,8 +303,6 @@ WHAT WE ENGINEERED
 
 Decryptor CLI — --timestamp · --fixed-byte · --ratio · --limit · --dry-run · --threads
 
-21
-
 ## Slide 22
 
 ## REBUILDING THE KEYSTREAM
@@ -352,8 +319,6 @@ XOR → PLAINTEXT
 cipher ⊕ stream
 
 The malware's read → ChaCha20 → overwrite → skip loop, reversed.
-
-22
 
 ## Slide 23
 
@@ -375,8 +340,6 @@ ENC ENC ENC
 
    - 1 MB decrypt → 3 MB copy, block by block — the entropy map has to be perfect.
 
-23
-
 ## Slide 24
 
 ## WHEN ONE KEY WASN'T ENOUGH
@@ -392,8 +355,6 @@ double-key combos (256²) 16,777,216
 triple-key combos (256³)
 
 Each layer needs its own key — so we peel them one at a time
-
-24
 
 ## Slide 25
 
@@ -417,8 +378,6 @@ Brute-forcing millions of keys across GB-sized files sounds hopeless — until y
 
 - 8 bytes instead of a whole GB → double keys in seconds, triple in ~20 minutes
 
-25
-
 ## Slide 26
 
 ## IS THIS THE RIGHT KEY?
@@ -428,28 +387,19 @@ Testing 256 candidate bytes is trivial — knowing which one worked is the hard 
 THE VALIDATION PIPELINE
 
 - Entropy gate — sample entropy < 7.5
-
 - Magic bytes — PNG / PDF / ZIP / Oracle
-
 - ASCII ratio — human-readable text %
-
 - Byte diversity — null ratio & unique count
+- UTF-8 decode — no decode error
 
 WHY IT MATTERS
 
 - Wrong key → still high-entropy noise
-
 - XOR on plaintext would corrupt it
-
 - So the ratio & limit must match too
-
 - Score > threshold = the real key
 
-- UTF-8 decode — no decode error
-
 256 tries, auto-confirmed — no human eyeballing gigabytes of hex.
-
-26
 
 ## Slide 27
 
@@ -459,33 +409,29 @@ WHY IT MATTERS
 
 Time to decrypt 100 GB (log scale, lower = faster). AVX2-optimized C vs pure Python
 
-27
-
 ## Slide 28
 
-## WHY C WON — THE QUARTERROUND
+## WHY C WON — THE QUARTER-ROUND
 
 ChaCha20's core is a 32-bit rotation, run hundreds of millions of times — that's where Python dies:
 
-##### THE 32-BIT ROTATION
+THE 32-BIT ROTATION
 
-\```
-(x << n) | (x >> (32 -n))
-\```
+```
+(x << n) | (x >> (32 - n))
+```
 
-- C: fixed 32-bit int → one ROL CPU instruction •  Python: bigint → manual overflow + typing overhead
+- C: fixed 32-bit int → one ROL CPU instruction
+- Python: bigint → manual overflow + typing overhead
 
 THROUGHPUT — C VS PYTHON
 
 - Optimized C: 355–366 MiB/s (1 core)
-
 - SIMD AVX2: up to 2.19 GB/s
-
-- PyCryptodome: 70–85% of C •  Pure Python: 1–5% of C (GIL blocks threads)
+- PyCryptodome: 70–85% of C
+- Pure Python: 1–5% of C (GIL blocks threads)
 
 Port the verified logic to C + SIMD → 100 GB from 16 h to 147 s.
-
-28
 
 ## Slide 29
 
@@ -497,49 +443,30 @@ Port the verified logic to C + SIMD → 100 GB from 16 h to 147 s.
 
 The decrypted disk block reveals the Oracle **`ORCLDISK RECO`** header — a real, mountable database again.
 
-29
-
 ## Slide 30
 
 # DAY 4 RECOVERY
 
 Major services back in 81 hours — every DB server restored.
 
-30
-
 ## Slide 31
 
 ## 100% RESTORED IN 81 HOURS
 
-All DB servers recovered Public services resumed 81 hours after the attack — full restoration days later
-
-31
-
-
-> Recovered by OCR — confidence 88/100 on the text kept, 83/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-100% RESTORED IN 81 HOURS
 All DB servers recovered
+
 Public services resumed 81 hours after the attack — full restoration days later
-June 2025 July 14 5, 11:3
-+ Initial compromise + Last DB server + Discovery of ransomware «Creation of double and
-ransomware infection encryption logic flaws
-+ Creation of a large-capacity,
-triple encryption and high-speed decryption tool
-decryption and tools
-July 14, 2025, 23:00 July 16, 2025, 03:30 ily 17, 2025, 10:00 ly 22, 2025
-+ First DB server + Completion of initial
-+ Completion of decryption + Normalization of the
-ransomware infection malicious ransomware
-verification of encrypted affected institution's
-operation server files external services
-+ 100% restoration of
-DB servers
-code analysis
-black hat
-2026 31
-```
+
+- June 2025 — Initial compromise
+- July 14, 2025, 0:49 — First DB server ransomware infection
+- July 14, 2025, 04:38 — Last DB server ransomware infection
+- July 14, 2025, 23:00 — Completion of initial malicious ransomware code analysis
+- July 15, 2025, 15:00 — Discovery of ransomware encryption logic flaws
+- July 16, 2025, 03:30 — Completion of decryption verification of encrypted operation server files
+- July 16, 2025, 13:50 — Creation of double and triple encryption and decryption and tools
+- July 17, 2025, 10:00 — Normalization of the affected institution's external services
+- July 17, 2025, 11:30 — Creation of a large-capacity, high-speed decryption tool
+- July 22, 2025 — 100% restoration of DB servers
 
 ## Slide 32
 
@@ -547,15 +474,13 @@ black hat
 
 Why did a sophisticated crew ship broken crypto? They changed their whole toolkit at the last minute.
 
-2025.07.12  19:15 KST Legacy build
+2025.07.12 19:15 KST · Legacy build · bespoke, per-server toolsets
 
-2025.07.13  21:49 KST Unified binary
+2025.07.13 21:49 KST · Unified binary · the pivot — 26 h after the legacy build
 
-2025.07.14  00:49 KST Execution
+2025.07.14 00:49 KST · Execution · deployed at once — zero QA time
 
-bespoke, per-server toolsets the pivot — 26 h after the legacy build deployed at once — zero QA time A last-minute shift to a single unified routine — zero time for QA — introduced the flaw we exploited
-
-32
+A last-minute shift to a single unified routine — zero time for QA — introduced the flaw we exploited
 
 ## Slide 33
 
@@ -585,35 +510,29 @@ UNIFIED  (FLAWED)
 
 40+ target-specific builds collapsed into one hasty binary — the root of failure.
 
-33
-
 ## Slide 34
 
 ## IMPLICATIONS FOR DEFENDERS
 
-###### SERVER-INFILTRATION
+SERVER-INFILTRATION
+
+- Hands-on, not spray-and-pray
+- Custom scripts per target
+- Linux / Oracle DB in the crosshairs
 
 DOUBLE EXTORTION
 
-   - Exfiltrate before encrypting
-
-- Hands-on, not spray-and-pray
-
-   - Name-and-shame data-leak sites
-
-- Custom scripts per target
-
-- Linux / Oracle DB in the •  Pressure beyond the lockout crosshairs
+- Exfiltrate before encrypting
+- Name-and-shame data-leak sites
+- Pressure beyond the lockout
 
 RESILIENCE
 
 - Harden the attack surface
-
-- Offline, immutable backups •  Regular restore drills
+- Offline, immutable backups
+- Regular restore drills
 
 Detection matters — but recovery is engineered before the attack, and proven after it
-
-34
 
 ## Slide 35
 
@@ -633,8 +552,6 @@ DOUBLE EXTORTION
 
 Next-wave tooling staged on C2: `Sliver RAT (linux) · OpenSSH-Win64` — monitoring continues
 
-35
-
 ## Slide 36
 
 ## THE FULL PLAYBOOK
@@ -649,8 +566,6 @@ Operation Beyond Backups 2025 Ransomware Threat Response Report Financial Securi
 
 - A No-Ransom blueprint for defenders
 
-36
-
 ## Slide 37
 
 ### REDEFINING RANSOMWARE RESPONSE THROUGH TECHNICAL RIGOR
@@ -661,12 +576,9 @@ hands-on, double-extortion ransomware is an engineering challenge, not a lock. �
 
 The No-Ransom Blueprint human insight + AI-assisted engineering + robust infra, in unison.
 
-37
-
 ## Slide 38
 
 # THANK YOU
 
 Financial Security Institute — Code Analysis Team SungWook Jang · YoungMook Kang DaeGyu Kang · Younghwan Kim · Ahyun Song swjang@fsec.or.kr ·  #BHUSA  @BlackHatEvents kangyoungmook@fsec.or.kr kr · #BHUSA  @BlackHatEvents
 
-38
