@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5976 slides across 215 documents.**
+**6014 slides across 216 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2250 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3022 | structure held; individual characters or lines wrong |
-| accurate | 676 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2251 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3055 | structure held; individual characters or lines wrong |
+| accurate | 680 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -293,6 +293,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Breaking the Seal Static Deobfuscation of Compiled V8 JavaScript Bytecode Malware | 1-78 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Bring Your Own COM - Session Pivoting and Lateral Movement via Ephemeral COM Registration | 1-31 | badly-mangled, minor-errors, accurate | 2 |
 | Black Hat USA 2026 | Burning Tears of PHP's Memory Hardening | 1-46 | badly-mangled, minor-errors | 0 |
+| Black Hat USA 2026 | CSS The Bomb Inside Your Inbox | 1-38 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Caging the Agent How Roblox Built Multi-Layer Sandboxes to Secure Claude Code at Enterprise Scale | 1-44 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Chaos by Design The Death of Stochastic Race Conditions in HTTP3 | 1-22 | minor-errors | 0 |
 | Black Hat USA 2026 | ChatMate Remote Prompt Execution on AI Assistants through Sandbox Escaping | 1-80 | badly-mangled, minor-errors, accurate | 0 |
