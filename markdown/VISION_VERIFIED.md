@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**6672 slides across 224 documents.**
+**6788 slides across 225 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2323 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3581 | structure held; individual characters or lines wrong |
-| accurate | 740 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2338 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3650 | structure held; individual characters or lines wrong |
+| accurate | 772 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -82,7 +82,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 47 talks, 1840 slides
+### Zero-day, RCE and novel exploitation — 48 talks, 1956 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -102,6 +102,7 @@ under more than one heading or under none. Counts are slides.
 - **Splitting the Email Atom Exploiting Parsers to Bypass Access Controls** (Black Hat USA 2024) — slide 53
 - **UnOAuthorized A Technique to Privilege Escalation to Global Administrator** (Black Hat USA 2024) — slides 67, 85-100, 105-107, 109-110, 119, 131
 - **Lost in Translation Exploiting Unicode Normalization** (Black Hat USA 2025) — slides 20, 35-36, 50-51
+- **A 0-Click Exploit Chain for the Pixel 10** (Black Hat USA 2026) — slides 1-116
 - **Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities** (Black Hat USA 2026) — slides 1-44
 - **Breaking Trust Boundaries Exploiting Design Assumptions in Network Infrastructure** (Black Hat USA 2026) — slides 1-94
 - **C and Its Consequences The Source Is Just a Suggestion** (Black Hat USA 2026) — slides 1-156
@@ -282,6 +283,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2025 | Windows Hell No for Business | 64-68 | badly-mangled | 4 |
 | Black Hat USA 2025 | XUnprotect Reverse Engineering macOS XProtect Remediator | 28 | badly-mangled | 0 |
 | Black Hat USA 2026 | !secure A Single Wrong Negation to Root Linux and Escape Managed Containers | 1-33 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | A 0-Click Exploit Chain for the Pixel 10 | 1-116 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Apple macOS Kernel Exploitation with MIE Building on the Ashes of 100 Vulnerabilities | 1-44 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Attacking and Defending AI Browsers | 1-45 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Batch Me If You Can Breaking With the State‑of‑the‑Art of Fuzzing Cryptographic Architectures | 1-77 | badly-mangled, minor-errors | 1 |
